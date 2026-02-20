@@ -14,7 +14,7 @@
 | **Co-branding** | Placeholder space for operator logos |
 | **Logo** | Generate in Canva |
 | **Colors** | Navy #1B2838, Teal #00D4AA, Orange #FF6B35 |
-| **Pillars** | Sharp + Open |
+| **Pillars** | Open + Social |
 | **Tone** | Mixed by piece (playful for social, confident for print) |
 | **Taglines** | Mix and match per piece |
 | **CTAs** | Content drivers ("Read the breakdown", "See how it works") |
@@ -113,7 +113,7 @@ Show 3 variations on the page:
 
 ### 1A: "Hot Streak" Myth
 
-**Pillar:** Sharp | **Tagline:** "Know your game" | **CTA:** "Know your game →"
+**Pillar:** Open | **Tagline:** "Know your game" | **CTA:** "Know your game →"
 
 **Prompt:**
 
@@ -139,7 +139,7 @@ Footer (bottom):
 
 ### 1B: "Due for a Win" Myth
 
-**Pillar:** Sharp | **Tagline:** "Every game has math. Here's yours." | **CTA:** "See how it works →"
+**Pillar:** Open | **Tagline:** "Every game has math. Here's yours." | **CTA:** "See how it works →"
 
 **Prompt:**
 
@@ -193,7 +193,7 @@ Footer:
 
 ### 2A: House Edge Comparison Grid
 
-**Pillar:** Sharp | **Tagline:** "Every game has math. Here's yours." | **CTA:** "See all games →"
+**Pillar:** Open | **Tagline:** "Every game has math. Here's yours." | **CTA:** "See all games →"
 
 **Prompt:**
 
@@ -345,7 +345,7 @@ Footer: Full-width CTA — "Read the breakdown →" — navy on orange
 
 ## 4. Awareness Posters (18x24 inches, portrait)
 
-### 4A: "Know Your Game" — Sharp
+### 4A: "Know Your Game" — Open
 
 **Prompt:**
 
@@ -414,7 +414,7 @@ FOOTER:
 
 ---
 
-### 4C: "Test Your Game IQ" — Sharp + Social
+### 4C: "Test Your Game IQ" — Open + Social
 
 **Prompt:**
 
@@ -459,7 +459,7 @@ SLIDE 3 — The Solution:
 Headline: "Player education that players actually want". 3 points: "Woven into the experience, not bolted on" / "Entertainment-grade production quality" / "White-label: your brand, our system". Navy bg.
 
 SLIDE 4 — Brand Pillars:
-4 cards: Sharp ("Know your game" — game intelligence), Choice ("Your call" — player autonomy), Open ("No BS" — transparency), Social ("Worth sharing" — community). Teal pillar badges. Navy bg.
+2 cards: Open ("No fine print" — transparency), Social ("Worth sharing" — community). Teal pillar badges. Navy bg.
 
 SLIDE 5 — Color Palette:
 White bg. Large swatches: Primary #1B2838, Secondary #00D4AA, Accent #FF6B35, plus semantic and neutral colors with hex codes.
@@ -468,10 +468,10 @@ SLIDE 6 — Typography:
 White bg. Type specimens: Inter (heading), Source Sans 3 (body), Source Code Pro (mono). Show scale from Display 48px to Body 16px. Note: "Min body: 16px. Helpline numbers in monospace."
 
 SLIDE 7 — Voice & Tone:
-Navy bg. Headline: "The Insider". Subhead: "The friend who knows the game". Two columns: "We say" (teal) — player, smart play, tools, check in, take a break. "We don't say" (orange) — gambler, responsible gambling, interventions, self-assess, self-exclude.
+Navy bg. Headline: "The Sharp". Subhead: "The friend who knows the game". Two columns: "We say" (teal) — player, specific behaviors, tools, check in, take a break. "We don't say" (orange) — gambler, responsible gambling, interventions, self-assess, self-exclude.
 
 SLIDE 8 — Messaging:
-Navy bg. Taglines by pillar: Sharp: "Know your game" / "Every game has math." Choice: "Your play. Your way." / "Your limits. Your call." Open: "Here's how it actually works." / "No fine print." Social: "Share the smart play." / "Challenge your friends."
+Navy bg. Taglines by pillar: Open: "Here's how it actually works." / "No fine print." / "Every game has math. Here's yours." Social: "Share the facts." / "Challenge your friends." / "How well do you really know the odds?"
 
 SLIDE 9 — Collateral:
 Navy bg. Mockups of social cards, email templates, posters. Caption: "Every touchpoint gets equal design investment."

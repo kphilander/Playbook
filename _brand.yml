@@ -32,28 +32,13 @@ meta:
 
 
 # ─── BRAND PILLARS ───────────────────────────
-# These four pillars define what Playbook content is.
+# These two pillars define what Playbook content is.
 # Every piece of content should align with at least one.
 
 brand_pillars:
 
-  - name: "Sharp"
-    tagline: "Know your game"
-    description: >
-      Game intelligence. Playbook makes you a smarter player.
-      How odds actually work. What RNG does. Why 'hot streaks'
-      are a feeling, not a fact. When you understand the math,
-      you play on your terms.
-
-  - name: "Choice"
-    tagline: "Your call"
-    description: >
-      Player autonomy. Your limits, your pace, your budget,
-      your decision. Playbook puts tools in your hands and
-      gets out of the way. We inform. You choose.
-
   - name: "Open"
-    tagline: "No BS"
+    tagline: "No fine print"
     description: >
       Transparency about how things actually work. The house edge,
       the odds, the T&Cs, the stuff nobody reads. If it affects
@@ -243,22 +228,16 @@ legal:
 
 messaging:
   taglines:
-    sharp:
-      - "Know your game."
-      - "The smarter you play, the more you enjoy."
-      - "Every game has math. Here's yours."
-    choice:
-      - "Your play. Your way."
-      - "Your limits. Your call."
-      - "Play on your terms."
     open:
       - "Here's how it actually works."
       - "No fine print. Just facts."
       - "The odds are public. Now you know them."
+      - "Every game has math. Here's yours."
     social:
-      - "Share the smart play."
+      - "Share the facts."
       - "Challenge your friends."
       - "The best players know the game."
+      - "How well do you really know the odds?"
 
   ctas:
     primary:
@@ -282,13 +261,13 @@ messaging:
 tone:
   humor: "confident-wit"             # minimal | warm | confident-wit
   formality: "conversational"        # formal | balanced | conversational
-  voice_archetype: "insider"         # The friend who knows the game
+  voice_archetype: "the-sharp"        # The friend who knows the game
   gambling_culture: "selective"      # How much industry language to use
 
   # Tier 1 language preferences
   prefer:
     player: "player (not 'gambler')"
-    smart_play: "smart play (not 'responsible gambling')"
+    informed_play: "specific behaviors — e.g. 'set a budget', 'know the odds', 'check your session' (not 'responsible gambling' or 'smart play')"
     tools: "tools / features (not 'interventions')"
     check_in: "check in (not 'self-assess')"
     take_a_break: "take a break (not 'self-exclude' in Tier 1)"

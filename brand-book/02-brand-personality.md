@@ -13,98 +13,99 @@ Playbook sounds like somebody. This chapter tells you who.
 
 ---
 
-## The Insider Archetype (Primary)
+## The Sharp Archetype (Primary)
 
-Playbook's primary archetype is **The Insider** -- someone who knows the game
+Playbook's primary archetype is **The Sharp** -- someone who knows the game
 inside out, shares the real story, and respects you enough to give it straight.
 
-### Who The Insider Is
+### Who The Sharp Is
 
-The Insider isn't above you. They're at the table with you. They know the odds.
+The Sharp isn't above you. They're at the table with you. They know the odds.
 They've read the fine print. They understand the mechanics behind every game.
 But they don't lecture. They don't wag a finger. They don't treat you like a
 student or a patient. They treat you like a smart adult who deserves the full
 picture.
 
-The Insider is the friend who says, "Hey, you know that 'system' you've been
+The Sharp is the friend who says, "Hey, you know that 'system' you've been
 using? Let me show you why the math doesn't care about systems." Not to make
 you feel dumb -- to make you smarter.
 
-### Insider Traits
+### Sharp Traits
 
-- **Knowledgeable without being academic.** The Insider knows the math. They
+- **Knowledgeable without being academic.** The Sharp knows the math. They
   can explain house edge, RNG, expected value, and probability. But they
   explain it like they're telling you something interesting at a bar, not like
   they're presenting a research paper.
 
-- **Confident without being arrogant.** The Insider doesn't hedge or equivocate.
+- **Confident without being arrogant.** The Sharp doesn't hedge or equivocate.
   They know what they're talking about, and they say it clearly. But they never
   make you feel stupid for not knowing it already. Confidence directed outward,
   not downward.
 
-- **Generous with information.** The Insider shares what they know because they
+- **Generous with information.** The Sharp shares what they know because they
   think you should have it. Not because they're required to. Not because it's
   their job. Because information is better when it's shared, and players are
   better when they're informed.
 
-- **At the table, not in the booth.** The Insider is a player, not an observer.
+- **At the table, not in the booth.** The Sharp is a player, not an observer.
   They understand gambling because they understand entertainment, not because
   they studied it in a lab. The perspective is from inside the experience, not
   outside looking in.
 
-- **Respects your intelligence.** The Insider never dumbs things down to the
-  point of uselessness. They trust you to handle real information. They explain
-  complex things simply, but they don't pretend complex things are simple.
+- **Corrects you without judgment.** The Sharp will tell you your "system"
+  doesn't work — but never in a way that makes you feel stupid for trying it.
+  They respect your intelligence enough to give you the real information and
+  let you draw your own conclusions.
 
-### What The Insider Is NOT
+### What The Sharp Is NOT
 
-- **Not a teacher.** The Insider doesn't grade you, test you, or assign
+- **Not a teacher.** The Sharp doesn't grade you, test you, or assign
   homework. Learning happens, but it feels like conversation, not class.
 
-- **Not a doctor.** The Insider doesn't diagnose, evaluate, or prescribe. They
+- **Not a doctor.** The Sharp doesn't diagnose, evaluate, or prescribe. They
   share information. You decide what to do with it.
 
-- **Not a parent.** The Insider doesn't scold, worry, or "express concern."
+- **Not a parent.** The Sharp doesn't scold, worry, or "express concern."
   They give you what you need and trust you to be an adult.
 
-- **Not a regulator.** The Insider doesn't enforce rules. They explain how
+- **Not a regulator.** The Sharp doesn't enforce rules. They explain how
   things work within the rules. Big difference.
 
-- **Not a killjoy.** The Insider thinks gambling is fun. They enjoy it. They
+- **Not a killjoy.** The Sharp thinks gambling is fun. They enjoy it. They
   want you to enjoy it. They just want you to enjoy it with your eyes open.
 
 ---
 
-## The Wingman Archetype (Secondary)
+## The Good Friend Archetype (Secondary)
 
 When the conversation shifts from "let me explain how this works" to "let me
-help you set this up," Playbook shifts from Insider to **Wingman**.
+help you set this up," Playbook shifts from The Sharp to **The Good Friend**.
 
-### Who The Wingman Is
+### Who The Good Friend Is
 
-The Wingman has your back. They're the friend who helps you make smart choices
-while keeping things fun. They don't judge. They don't nag. They just have your
-information ready when you want it.
+The Good Friend has your back. They're the friend who helps you make informed
+choices while keeping things fun. They don't judge. They don't nag. They just
+have your information ready when you want it.
 
-The Wingman is the one who says, "Hey, you've been at the table for a while.
+The Good Friend is the one who says, "Hey, you've been at the table for a while.
 Want to set a reminder?" Not because they think you have a problem -- because
-that's what a good wingman does.
+that's what a good friend does.
 
-### Wingman Traits
+### Good Friend Traits
 
-- **Supportive without being pushy.** The Wingman offers. They don't insist.
+- **Supportive without being pushy.** The Good Friend offers. They don't insist.
   "Want to set a budget?" not "You need to set a budget."
 
-- **Practical without being clinical.** The Wingman helps you do things --
+- **Practical without being clinical.** The Good Friend helps you do things --
   set limits, check your activity, understand your spending. But it always
   feels like a feature, not a medical recommendation.
 
-- **Present without being intrusive.** The Wingman is always available. Always
-  findable. Always one tap away. But they don't follow you around. They don't
-  send daily reminders. They don't pop up every time you open the app.
+- **Present without being intrusive.** The Good Friend is always available.
+  Always findable. Always one tap away. But they don't follow you around. They
+  don't send daily reminders. They don't pop up every time you open the app.
 
 - **Knows when to be serious.** In Tier 2 contexts -- take-a-break features,
-  support referrals, crisis moments -- the Wingman drops the humor entirely.
+  support referrals, crisis moments -- the Good Friend drops the humor entirely.
   The tone becomes warm, direct, and clear. Still the same person. Just reading
   the room.
 
@@ -112,16 +113,16 @@ that's what a good wingman does.
 
 | Context | Archetype | Why |
 |---|---|---|
-| Myth-busting content | Insider | Knowledge and confidence are the point |
-| Educational articles | Insider | Explaining how things work is the Insider's job |
-| Odds explainers | Insider | Math and mechanics -- pure Insider territory |
-| Tool/feature descriptions | Wingman | Helping you set things up |
-| Check-in prompts | Wingman | Gentle, practical nudge |
-| Onboarding flows | Wingman | Getting you started with features |
-| Social media content | Insider | Confidence and wit play best on social |
-| Quiz results | Insider | "Here's what you know" energy |
-| Session reminders | Wingman | Practical check-in |
-| Tier 2 support content | Wingman (serious mode) | Warmth and clarity, no humor |
+| Myth-busting content | The Sharp | Knowledge and confidence are the point |
+| Educational articles | The Sharp | Explaining how things work is The Sharp's job |
+| Odds explainers | The Sharp | Math and mechanics -- pure Sharp territory |
+| Tool/feature descriptions | The Good Friend | Helping you set things up |
+| Check-in prompts | The Good Friend | Gentle, practical nudge |
+| Onboarding flows | The Good Friend | Getting you started with features |
+| Social media content | The Sharp | Confidence and wit play best on social |
+| Quiz results | The Sharp | "Here's what you know" energy |
+| Session reminders | The Good Friend | Practical check-in |
+| Tier 2 support content | The Good Friend (serious mode) | Warmth and clarity, no humor |
 
 ---
 
@@ -268,23 +269,6 @@ interactions, and copy that makes you want to keep reading.
 
 ---
 
-### Fun / Not Frivolous
-
-Playbook knows gambling is entertainment and leans into that energy. But it also
-knows when to be serious. Fun is not the same as flippant. The brand has range.
-
-**The line**: Fun in Tier 1 contexts (myth-busting, quizzes, educational
-content, social media). Appropriately serious in Tier 2 contexts (support
-referrals, take-a-break features, crisis moments). The brand personality
-doesn't disappear in serious moments -- it just adjusts its register. Same
-person, different conversation.
-
-*Example (fun)*: "You scored 8/10 on the odds quiz. You officially know more
-about slots than 90% of players. Share your score and challenge a friend."
-
-*Example (frivolous)*: Making jokes on a page where a player is trying to take
-a break from their account. Reading the room matters.
-
 ---
 
 ## The Humor Guidelines
@@ -299,7 +283,7 @@ player education program that reads like a compliance form. But humor has rules.
 |---|---|---|
 | **Myth-busting content** | High | This is Playbook at its most entertaining. Go for it. |
 | **Educational articles** | Medium | Humor opens the door. Information walks through. |
-| **Smart play tips** | Medium | Make the practical feel fun, not obligatory. |
+| **Informed play tips** | Medium | Make the practical feel fun, not obligatory. |
 | **Social media** | High | You're competing for attention. Earn it. |
 | **Quizzes and interactive content** | High | Gamification is inherently playful. Lean in. |
 | **General awareness content** | Medium | Confident and interesting, not silly. |
@@ -330,7 +314,7 @@ player education program that reads like a compliance form. But humor has rules.
   But if it makes you feel good, wear it. Just know the math doesn't care what
   you're wearing."
 
-- **Insider knowledge that makes the reader feel smart.** "Most players don't
+- **Knowledge that makes the reader feel smart.** "Most players don't
   know that the cash-out offer is calculated to save the bookmaker money, not to
   do you a favor. Now you do."
 
@@ -348,7 +332,7 @@ player education program that reads like a compliance form. But humor has rules.
 - **Gratuitously edgy content.** Playbook is confident, not provocative. There's
   a difference between wit and shock value. Know it.
 
-- **Sarcasm directed at the player.** The Insider is sarcastic about myths and
+- **Sarcasm directed at the player.** The Sharp is sarcastic about myths and
   misconceptions. Never about the person reading the content.
 
 ---
@@ -562,7 +546,7 @@ and that's the whole point.
 When you're unsure whether a piece of content has the right personality, run it
 through these five questions:
 
-1. **Would the Insider say this?** Does it sound like someone who knows the game
+1. **Would The Sharp say this?** Does it sound like someone who knows the game
    and respects the reader? Or does it sound like a compliance document?
 
 2. **Is it earning attention or demanding it?** Would a player choose to read

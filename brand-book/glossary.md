@@ -128,7 +128,7 @@ A person who gambles.
 ### Random Number Generator (RNG)
 The software or hardware that generates random outcomes in digital gambling games. Ensures every spin, hand, or draw is independent.
 
-**Playbook usage**: Core Sharp content. "RNG means every spin is independent. The machine doesn't know you exist. It doesn't know what happened on the last spin. It doesn't know how long you've been playing. Every result is random."
+**Playbook usage**: Core Open content. "RNG means every spin is independent. The machine doesn't know you exist. It doesn't know what happened on the last spin. It doesn't know how long you've been playing. Every result is random."
 
 ### Return to Player (RTP)
 The theoretical percentage of wagered money a game returns to players over time. An RTP of 96% means the game returns $96 for every $100 wagered on average. The inverse of the house edge.
@@ -149,10 +149,14 @@ A notification that tells a player how long they've been playing. Configurable b
 
 **Playbook usage**: Use "session reminder" or "time check." Avoid "reality check" — it implies the player has lost touch with reality. Frame it as a helpful feature: "Session reminders keep you aware without killing the vibe."
 
-### Smart play
-The Playbook-preferred alternative to "responsible gambling." Encompasses informed decision-making, using tools, understanding the math, and playing within your own limits.
+### Informed play (specific behaviors)
+Playbook avoids generic umbrella terms like "responsible gambling" or "smart
+play." Instead, name the specific behavior: setting a budget, knowing the odds,
+checking your session time, reading the T&Cs before claiming a bonus.
 
-**Playbook usage**: "Smart play" is aspirational — it's what knowledgeable players do. "Responsible gambling" implies the alternative is irresponsible, which stigmatizes.
+**Playbook usage**: Don't write "play responsibly" or "play smart." Write
+"set your budget before you start," "know the house edge," or "check your
+session time." Specificity drives action. Generic labels don't.
 
 ---
 

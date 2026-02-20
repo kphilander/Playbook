@@ -16,7 +16,7 @@ Playbook is CC0-licensed. Contributions are welcome from anyone — operators, r
 
 Every contribution should align with the Playbook brand:
 
-1. **Reno Model framing.** Gambling is entertainment. Most players are fine. Playbook helps them stay informed. Don't frame content around harm prevention or crisis intervention — that's Tier 2, and it has its own voice.
+1. **Informed choice framing.** Gambling is entertainment. Most players are fine. Playbook helps them stay informed. Don't frame content around harm prevention or crisis intervention — that's Tier 2, and it has its own voice.
 
 2. **Marketing-quality writing.** Would an operator's CMO put this next to their brand? If it reads like a government pamphlet, a clinical report, or a compliance checkbox, rewrite it.
 
@@ -43,7 +43,7 @@ Every contribution should align with the Playbook brand:
 5. Submit a pull request with:
    - What you're adding or changing
    - Sources/citations for regulatory content
-   - Which brand pillar(s) the content aligns with (Sharp, Choice, Open, Social)
+   - Which brand pillar(s) the content aligns with (Open, Social)
 
 ### Reporting issues
 
@@ -59,7 +59,7 @@ Open a GitHub issue for:
 |---|---|
 | Write for marketing teams | Write for clinicians |
 | Use "player" | Use "gambler" |
-| Use "smart play" | Use "responsible gambling" in Tier 1 |
+| Name specific behaviors (e.g. "set a budget") | Use "responsible gambling" or "smart play" in Tier 1 |
 | Use "tools" or "features" | Use "interventions" |
 | Be conversational | Be formal or academic |
 | Use humor where appropriate | Be preachy or condescending |
@@ -76,7 +76,7 @@ Open a GitHub issue for:
 
 1. **Content review**: Accurate, well-sourced, consistent with Playbook voice?
 2. **Structure review**: Follows existing file patterns and naming conventions?
-3. **Brand alignment**: Reno Model framing? Tier 1 language? Engaging tone?
+3. **Brand alignment**: Informed choice framing? Tier 1 language? Engaging tone?
 4. **Legal review** (jurisdiction modules): Regulatory info verified against primary sources?
 
 ## Code of conduct
