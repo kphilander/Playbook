@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; }
+
+    .poster {
+      width: 1800px;
+      height: 2400px;
+      position: relative;
+      background: #1B2838;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .accent-bar {
+      height: 16px;
+      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+      flex-shrink: 0;
+    }
+
+    .poster-header {
+      padding: 60px 80px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .poster-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 52px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .operator-placeholder {
+      width: 200px;
+      height: 80px;
+      border: 2px dashed rgba(255,255,255,0.3);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .poster-hero {
+      padding: 20px 80px 48px;
+      text-align: center;
+    }
+    .pillar-badge {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1B2838;
+      background: #00D4AA;
+      padding: 12px 36px;
+      border-radius: 100px;
+      margin-bottom: 40px;
+    }
+    .hero-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 80px;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+    .hero-subhead {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 34px;
+      line-height: 1.5;
+      color: #A8A8C0;
+    }
+
+    /* Quiz teaser cards */
+    .poster-content {
+      flex: 1;
+      padding: 0 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .quiz-card {
+      background: #2A3F56;
+      border-radius: 16px;
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+    .quiz-question {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 30px;
+      line-height: 1.5;
+      color: #A8A8C0;
+      flex: 1;
+    }
+    .quiz-question strong {
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+    .quiz-answer {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #00D4AA;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+    .quiz-hidden {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: #2A3F56;
+      background: linear-gradient(90deg, rgba(0,212,170,0.15), rgba(255,107,53,0.15));
+      padding: 8px 32px;
+      border-radius: 8px;
+      letter-spacing: 0.1em;
+    }
+
+    .poster-footer {
+      padding: 48px 80px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .qr-placeholder {
+      width: 140px;
+      height: 140px;
+      background: #FFFFFF;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 14px;
+      color: #1B2838;
+    }
+    .footer-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-cta-main {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #FF6B35;
+    }
+    .footer-cta-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+    .helpline-strip {
+      background: #2A3F56;
+      margin: 0 -80px;
+      padding: 24px 80px;
+      text-align: center;
+    }
+    .helpline-text {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 24px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+    .legal-strip {
+      padding: 16px 80px 24px;
+      margin: 0 -80px;
+      text-align: center;
+    }
+    .legal-text {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      color: #6B6B8A;
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <div class="accent-bar"></div>
+    <div class="poster-header">
+      <span class="poster-logo">Playbook</span>
+      <div class="operator-placeholder">Your logo here</div>
+    </div>
+    <div class="poster-hero">
+      <div class="pillar-badge">Sharp</div>
+      <div class="hero-headline">Think you know the odds?<br>Let's find out.</div>
+      <div class="hero-subhead">Take the game IQ quiz — and challenge your friends.</div>
+    </div>
+    <div class="poster-content">
+      <div class="quiz-card">
+        <div class="quiz-question"><strong>Q1:</strong> A slot machine hasn't paid out in 3 hours. The odds on the next spin are...</div>
+        <span class="quiz-answer">Scan to find out</span>
+      </div>
+      <div class="quiz-card">
+        <div class="quiz-question"><strong>Q2:</strong> What's the house edge on American roulette?</div>
+        <span class="quiz-hidden">? ? ?</span>
+      </div>
+      <div class="quiz-card">
+        <div class="quiz-question"><strong>Q3:</strong> You've won 5 hands in a row. Hand 6?</div>
+        <span class="quiz-hidden">? ? ?</span>
+      </div>
+    </div>
+    <div class="poster-footer">
+      <div class="footer-top">
+        <div class="qr-placeholder">QR</div>
+        <div class="footer-cta-group">
+          <span class="footer-cta-main">Scan to take the quiz</span>
+          <span class="footer-cta-sub">See how it works at playbook.org</span>
+        </div>
+      </div>
+      <div class="helpline-strip">
+        <span class="helpline-text">Free, confidential support 24/7: 1-800-522-4700</span>
+      </div>
+      <div class="legal-strip">
+        <span class="legal-text">You must be 21+ to gamble. Gambling involves risk. Play on your terms.</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
