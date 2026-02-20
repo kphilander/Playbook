@@ -1,6 +1,6 @@
 # Chapter 5: Messaging Framework
 
-This chapter provides the complete messaging system for {{PROGRAM_NAME}} — the taglines, calls to action, core messages, and content hierarchy that populate every touchpoint. Use this as your copy reference when creating any RG content.
+This chapter provides the complete messaging system for {{PROGRAM_NAME}} — the tagline system, calls to action, core messages, and interactive content briefs that populate every touchpoint. This is your copy reference when creating any Playbook content.
 
 ---
 
@@ -10,212 +10,286 @@ This chapter provides the complete messaging system for {{PROGRAM_NAME}} — the
 
 | Level | What it is | Where it appears | How often it changes |
 |---|---|---|---|
-| **Level 1: Primary tagline** | One sentence that captures the entire brand | Advertising, hero banners, logo lockups | Rarely (annual review) |
-| **Level 2: Secondary taglines** | 3-5 rotating messages that express different facets of the brand | Campaigns, social media, posters, digital banners | Occasionally (per campaign cycle) |
-| **Level 3: Contextual messages** | Specific to a touchpoint, audience, or action | Deposit screens, self-assessment invites, email subject lines | Frequently (per touchpoint update) |
-| **Level 4: Long-form content** | Educational, explanatory, or narrative copy | Blog posts, landing pages, brochures, FAQs | As needed |
-
-### Level 1: Primary tagline
-
-> **"Play with direction."**
-
-This is the default {{PROGRAM_NAME}} tagline. It works because:
-- "Play" frames gambling as entertainment, not a problem
-- "Direction" evokes the compass metaphor — knowing where you are and where you're going
-- It implies intentionality without preaching — having direction is a choice, not a rule
-- It's short (3 words), memorable, and works across channels
-
-**Usage**: The primary tagline appears alongside the logo, in advertising, on promotional materials, and as the default campaign line. It should always be set in the heading typeface.
-
-**When to customize**: If your organization has an established tagline that serves this purpose, use it. The primary tagline should be unique to your brand. The secondary taglines (Level 2) work well as-is for most operators.
-
-### Level 2: Secondary taglines
-
-These rotate across campaigns, channels, and touchpoints to keep messaging fresh while staying on-brand:
-
-| Tagline | Best context |
-|---|---|
-| "Know where you stand." | Self-assessment, activity summaries, financial tools |
-| "Your game. Your limits. Your call." | Deposit limits, session reminders, empowerment messaging |
-| "Checking in is a sign of strength." | Self-assessment, mental health awareness campaigns |
-| "Fun has no finish line — set your pace." | Session reminders, cool-off prompts, general awareness |
-| "Every player deserves a compass." | Brand awareness, equity campaigns, general positioning |
-
-### Level 3: Contextual messages
-
-See the [Core message architecture](#core-message-architecture) below for a complete library of contextual messages organized by intent.
-
-### Level 4: Long-form content
-
-Long-form content includes educational articles, how-gambling-works explainers, myth-busting features, and personal stories. These follow the voice guidelines in [Chapter 4](04-voice-and-tone.md) and typically appear on websites, in brochures, and in email campaigns. See the collateral templates in `collateral/` for specific formats.
+| **Level 1: Tagline system** | Interchangeable taglines organized by pillar | Advertising, hero banners, logo lockups, campaigns | Operators choose from the system; rarely change |
+| **Level 2: Pillar-aligned messages** | One core message per pillar | Campaign themes, content sections, landing pages | Per campaign cycle |
+| **Level 3: Contextual messages** | Specific to a touchpoint, audience, or action | Deposit screens, quiz intros, email subject lines, feature prompts | Per touchpoint update |
+| **Level 4: Long-form content** | Educational, explanatory, or interactive | Blog posts, articles, video scripts, quiz content | As needed |
 
 ---
 
-## Core message architecture
+## Level 1: The tagline system
 
-This table maps **message intent** (what you want to communicate) to **sample copy** (how to say it). Use these as starting points — adapt the specific wording to your brand voice while preserving the intent.
+Playbook uses a **tagline system** — not a single prescribed tagline. Operators choose from the options below, mix and match across campaigns and channels, or use the framework to write their own. The system is organized by the four brand pillars.
 
-### Awareness messages
+### Sharp — "Know your game"
 
-*Goal: Help players understand that RG tools and information exist.*
+| Tagline | Best context |
+|---|---|
+| "Know your game." | Universal — works everywhere |
+| "The smarter you play, the more you enjoy." | Educational content, onboarding |
+| "Every game has math. Here's yours." | Odds education, myth-busting |
+| "Think you know the odds? Let's find out." | Quiz and interactive content |
+
+### Choice — "Your call"
+
+| Tagline | Best context |
+|---|---|
+| "Your play. Your way." | General awareness, tool promotion |
+| "Your limits. Your call." | Deposit limits, session tools |
+| "Play on your terms." | Universal — brand awareness |
+| "Your game. Your rules." | Empowerment messaging |
+
+### Open — "No BS"
+
+| Tagline | Best context |
+|---|---|
+| "Here's how it actually works." | How-it-works content, odds explainers |
+| "No fine print. Just facts." | Transparency messaging, T&C explainers |
+| "The odds are public. Now you know them." | Odds education, game guides |
+| "Straight talk. Real numbers." | Data-driven content |
+
+### Social — "Worth sharing"
+
+| Tagline | Best context |
+|---|---|
+| "Share the smart play." | Social media, shareable content |
+| "Challenge your friends." | Quiz and interactive content |
+| "The best players know the game." | Community, social proof |
+| "How well do you really know the odds?" | Quiz hooks, social engagement |
+
+### Using the tagline system
+
+- **Choose 2–3 taglines** as your primary rotation for a campaign cycle
+- **Mix pillars** — a campaign can use a Sharp tagline for educational content and a Choice tagline for tool promotion
+- **Write your own** — the system is a starting point. As long as new taglines align with the pillar framework and Playbook voice, they're on-brand
+- **Never use "Gamble Responsibly"** as your tagline. It's the opposite of what Playbook stands for.
+
+---
+
+## Level 2: Core pillar messages
+
+Each pillar has a core message that expands the tagline into a full idea. These work as campaign headlines, content section intros, or landing page leads.
+
+### Sharp
+
+> "Think you know how slot machines work? Spoiler: the machine doesn't know you exist. Here's the actual math behind every spin."
+
+Use for: Myth-busting headers, educational content intros, quiz prompts, game guides.
+
+### Choice
+
+> "Your limits. Your pace. Your call. Playbook puts the tools in your hands and gets out of the way."
+
+Use for: Tool promotion, deposit limit features, session awareness, bankroll planners.
+
+### Open
+
+> "The house edge on blackjack is 0.5%. On slots, it's 2–15%. On American roulette, it's 5.26%. Now you know."
+
+Use for: Odds transparency, game comparisons, data-driven content, T&C explainers.
+
+### Social
+
+> "Share this with the friend who thinks they have a 'system.'"
+
+Use for: Social media hooks, quiz share prompts, myth-busting virality, challenge content.
+
+### Tools-as-features
+
+> "Deposit limits take 10 seconds to set. It's like a seatbelt for your bankroll — you set it once and it works in the background."
+
+Use for: Feature promotion across all tools — deposit limits, session reminders, activity dashboards.
+
+### Help availability (Tier 2 crossover)
+
+> "Need to talk? Free, confidential, 24/7. {{HELPLINE_NUMBER}}"
+
+Use for: Helpline display across all touchpoints. Always accessible from Tier 1 contexts, even though it's Tier 2 content. Light touch — present without being intrusive.
+
+---
+
+## Level 3: Contextual messages
+
+### Entertainment literacy messages
+
+*Goal: Help players understand how gambling actually works.*
 
 | Intent | Sample copy | Touchpoint |
 |---|---|---|
-| RG program exists | "{{PROGRAM_NAME}} gives you tools to play on your own terms." | Website, onboarding, marketing |
-| Tools are available | "Deposit limits, session reminders, self-assessment — all in your account settings." | Account settings, onboarding |
-| Help is available | "Free, confidential support is available 24/7. Call {{HELPLINE_NUMBER}}." | Footer, signage, all touchpoints |
-| For everyone | "{{PROGRAM_NAME}} is for every player — not just players with problems." | Brand awareness campaigns |
+| How odds work | "Every game has a house edge — it's how casinos stay in business. Here's what it means for your play." | Educational content, game guides |
+| RNG explained | "Each spin is independent. Your 'lucky machine' has no memory. Here's why that matters." | Myth-busting, slot guides |
+| Sports betting math | "A -110 line means you bet $110 to win $100. The $10 difference? That's the sportsbook's cut." | Sports betting education |
+| Promotional T&Cs | "That '200% match bonus' has a 30x wagering requirement. Here's what that actually means in real money." | Promotions education |
+| Bankroll framing | "Think of your gambling budget like an entertainment budget. It's the cost of the experience, not an investment." | Financial literacy, onboarding |
 
-### Empowerment messages
+### Tool promotion messages
 
-*Goal: Help players feel capable and in control.*
-
-| Intent | Sample copy | Touchpoint |
-|---|---|---|
-| Player agency | "You decide how much, how often, and how long. Your play, your rules." | Onboarding, general awareness |
-| Limit-setting | "Setting a limit before you play is one of the smartest things a player can do." | Deposit flow, limit prompts |
-| Positive framing | "Playing within your limits isn't about what you can't do — it's about making sure you enjoy every session." | Educational content, FAQ |
-| Control tools | "Take control of your experience. Set deposit limits, session reminders, and more." | Account settings, CTA banners |
-
-### Normalization messages
-
-*Goal: Make engagement with RG tools feel normal, not exceptional.*
+*Goal: Make players aware of features and position them as upgrades.*
 
 | Intent | Sample copy | Touchpoint |
 |---|---|---|
-| Self-assessment | "Lots of people check in on their play. It takes 2 minutes." | Self-assessment prompt |
-| Limits as normal | "Most experienced players set some kind of limit. It's part of playing smart." | Deposit limit prompt |
-| Help-seeking | "Calling a helpline doesn't mean something is wrong. It means you want to talk it through." | Helpline messaging |
-| Taking a break | "The best players know when to step away. Taking a break is always a winning move." | Session reminder, cool-off prompt |
+| Deposit limit | "Set your deposit limit in 10 seconds. Play without second-guessing." | Deposit flow, account settings |
+| Session awareness | "Lost track of time? Session reminders keep you aware without killing the vibe." | Session timer, settings |
+| Activity dashboard | "Your play stats are ready. See where your money goes — no surprises." | Account dashboard, monthly summary |
+| Bankroll planner | "How far can your $200 go this weekend? The bankroll planner has answers." | Feature promotion, educational content |
+| Quiz / game IQ | "How well do you know the odds? Take the quiz. Challenge your friends." | Social media, content hub |
 
-### Education messages
+### Smart play messages
 
-*Goal: Help players understand how gambling works.*
-
-| Intent | Sample copy | Touchpoint |
-|---|---|---|
-| Odds literacy | "Every game has a house edge — it's how casinos stay in business. Knowing the edge helps you set realistic expectations." | Educational content |
-| Randomness | "Each spin, hand, or draw is independent. Previous results don't affect future outcomes." | Myth-busting content |
-| Time awareness | "Time moves differently when you're playing. That's by design. Session reminders help you stay aware." | Reality check prompt |
-| Financial framing | "Think of your gambling budget the same way you'd think about an entertainment budget — it's the cost of the experience, not an investment." | Financial tools, onboarding |
-
-### Support messages
-
-*Goal: Connect players to help resources.*
+*Goal: Frame good habits as aspirational, not cautious.*
 
 | Intent | Sample copy | Touchpoint |
 |---|---|---|
-| Helpline | "Free, confidential support — no judgment, no pressure. Call {{HELPLINE_NUMBER}} or chat at {{CHAT_URL}}." | Helpline display |
-| Self-exclusion | "Need a longer break? You can pause your account for a period that works for you." | Self-exclusion entry point |
-| Concerned others | "Worried about someone's gambling? You're not alone, and you don't have to figure this out by yourself." | Friends/family resources page |
-| Post-limit reached | "You've reached your limit for this period. If you'd like to talk to someone, support is available right now." | Limit-reached notification |
-| Crisis | "If gambling is causing you distress right now, please reach out. Free, confidential help: {{HELPLINE_NUMBER}}." | Crisis touchpoints |
+| Budget setting | "Smart players decide their budget before they start. Set yours now." | Onboarding, deposit flow |
+| Time awareness | "Time moves differently when you're playing. That's by design. Stay aware." | Session reminder, general awareness |
+| Game selection | "Not all games are created equal. Here's how to pick the ones that match your style and budget." | Game guides, educational content |
+| Walking away | "The best players know when to call it. Walking away while you're enjoying yourself is a power move." | Session end, general awareness |
+
+### Support accessibility messages
+
+*Goal: Make help resources findable without being intrusive.*
+
+| Intent | Sample copy | Touchpoint |
+|---|---|---|
+| Helpline | "Free, confidential support — for any question about gambling. {{HELPLINE_NUMBER}}" | Footer, signage, all touchpoints |
+| Self-exclusion (light) | "Need a longer break? You can pause your account. Here's how." | Account settings, support page |
+| Concerned others | "Worried about someone's play? Here's how to start the conversation." | Support resources page |
+| Post-limit reached | "You've hit your limit for this period. It resets soon. Support is available if you want to talk." | Limit notification |
 
 ---
 
 ## CTA library
 
-Calls to action organized by function. Use the **primary** CTA in high-visibility placements (buttons, banners) and **secondary** CTAs in supporting contexts (links, inline text).
+Calls to action organized by function. These are the buttons, links, and prompts that drive player action.
 
-### Help-seeking CTAs
+### Entertainment literacy CTAs
 
-| CTA | Context | Priority |
-|---|---|---|
-| "Get support now" | General helpline access | Primary |
-| "Talk to someone — free and confidential" | Helpline in sensitive contexts | Primary |
-| "Chat with someone now" | Live chat access | Primary |
-| "Call {{HELPLINE_NUMBER}}" | Phone helpline | Primary |
-| "Find support near you" | Local services directory | Secondary |
-| "Learn about support options" | Resources overview page | Secondary |
+| CTA | Context |
+|---|---|
+| "Take the quiz" | Game IQ quiz, odds quiz, myth-busting quiz |
+| "Test your game IQ" | Quiz promotion, social media, onboarding |
+| "See the real odds" | Odds education, game comparisons |
+| "Read the breakdown" | Long-form educational content |
+| "Watch the explainer" | Video content |
+| "See how it works" | Game mechanics, RNG, house edge |
 
-### Self-assessment CTAs
+### Feature CTAs
 
-| CTA | Context | Priority |
-|---|---|---|
-| "Check your play" | Self-assessment tool entry | Primary |
-| "See where you stand" | Self-assessment in account settings | Primary |
-| "Take a 2-minute check-in" | Time-framed self-assessment prompt | Primary |
-| "How are your habits?" | Informal self-assessment prompt | Secondary |
+| CTA | Context |
+|---|---|
+| "Set your limits" | Deposit / loss / session limit setup |
+| "Try the bankroll planner" | Bankroll management tool |
+| "Check your stats" | Activity dashboard, play summary |
+| "Set a session reminder" | Session timer activation |
+| "See your activity" | Monthly / weekly activity summary |
 
-### Tool usage CTAs
+### Content CTAs
 
-| CTA | Context | Priority |
-|---|---|---|
-| "Set your limits" | Deposit/loss/session limit setup | Primary |
-| "Set a deposit limit" | Specific to deposit limits | Primary |
-| "Turn on session reminders" | Session timer activation | Primary |
-| "Review your activity" | Activity/spending summary | Secondary |
-| "Adjust your limits" | Existing limit modification | Secondary |
-| "Explore your tools" | RG tools overview | Secondary |
+| CTA | Context |
+|---|---|
+| "Share this" | Social sharing on quiz results, myth-busters, facts |
+| "Challenge a friend" | Quiz sharing, competitive content |
+| "Explore more" | Content hub, related articles |
+| "Get the facts" | Myth-busting content, odds explainers |
 
-### Self-exclusion CTAs
+### Support CTAs (Tier 2 crossover)
 
-| CTA | Context | Priority |
-|---|---|---|
-| "Take a break" | Self-exclusion entry (mild framing) | Primary |
-| "Pause your account" | Self-exclusion entry (direct) | Primary |
-| "I need a break from gambling" | Self-exclusion in help context | Primary |
-| "Learn about self-exclusion" | Informational, pre-decision | Secondary |
+| CTA | Context |
+|---|---|
+| "Talk to someone — free and confidential" | Helpline access |
+| "Call {{HELPLINE_NUMBER}}" | Direct phone helpline |
+| "Pause your account" | Self-exclusion entry point |
+| "Find support" | Support resources page |
 
-### Information CTAs
-
-| CTA | Context | Priority |
-|---|---|---|
-| "Learn how it works" | Educational content (odds, house edge, etc.) | Primary |
-| "Read the facts" | Myth-busting content | Primary |
-| "See how {{PROGRAM_NAME}} helps" | Brand overview | Secondary |
-| "Explore our resources" | Resources landing page | Secondary |
+**Note**: In Tier 1 contexts, support CTAs are present but not prominent. They're always one tap away, never the primary action on the page.
 
 ---
 
 ## Warning statement standards
 
-Many jurisdictions mandate specific warning statements. These regulatory requirements are non-negotiable — but they can still feel on-brand. Here's how to make mandatory messaging work within the {{PROGRAM_NAME}} voice:
+Many jurisdictions mandate specific warning statements. Playbook treats these as a design challenge, not a compliance burden.
 
 ### Principles for on-brand mandatory messaging
 
 1. **Meet the requirement exactly** — don't paraphrase legally mandated language
 2. **Add context around it** — place the required statement within a larger, on-brand content block
-3. **Give it visual dignity** — required messages should be legible and well-designed, not shrunk to the minimum allowable size
-4. **Pair with action** — wherever possible, follow a warning with a helpful CTA
+3. **Give it visual dignity** — required messages should be legible and well-designed, not shrunk to minimum size
+4. **Pair with action** — follow a warning with a helpful CTA whenever possible
 
 ### Example: Mandatory helpline display
 
 **Bare compliance** (what most operators do):
 > "If you or someone you know has a gambling problem, call 1-800-522-4700."
 
-**On-brand compliance** (the {{PROGRAM_NAME}} way):
+**On-brand compliance** (the Playbook way):
 > Free, confidential support is available 24/7 — for any question about gambling.
 > **Call 1-800-522-4700** | **Chat at ncpgambling.org/chat** | **Text 800522**
 
-Both meet the regulatory requirement. The second version is more inviting, provides more options, and frames the helpline as being "for any question" rather than only for people who already identify as having a problem.
+Both meet the regulatory requirement. The second version is more inviting, provides more options, and frames the helpline as "for any question" rather than only for people who already identify as having a problem.
 
 ### Jurisdiction-specific required statements
 
-See the `jurisdictions/` directory for the exact required messaging for each market:
-- `jurisdictions/united-kingdom/required-messaging.md`
-- `jurisdictions/united-states/required-messaging.md`
-- `jurisdictions/australia/required-messaging.md`
-- `jurisdictions/canada/required-messaging.md`
-- `jurisdictions/european-union/required-messaging.md`
+See the `jurisdictions/` directory for exact required messaging for each market.
 
 ---
 
-## Message testing guidance
+## Interactive content briefs
 
-Before deploying new messaging at scale, test it:
+Interactive content is where Playbook delivers the most value. These are concept specs — the frameworks that content teams use to build quizzes, calculators, and gamified educational experiences.
 
-### Quick comprehension test
-Show the message to 5 people unfamiliar with gambling terminology. Ask them to explain what it means in their own words. If any of the 5 can't, simplify.
+### Quiz framework: Game IQ
 
-### Stigma check
-Ask: "Would you feel uncomfortable if this message appeared on your screen while someone was looking over your shoulder?" If yes, revise — the message may inadvertently stigmatize.
+**Concept**: A short (7–10 question) quiz that tests the player's knowledge of how games actually work. Covers odds, RNG, house edge, myths, and smart play habits.
 
-### Action clarity test
-After reading the message, can the person identify what they should do next? If the CTA isn't obvious, strengthen it.
+**Format**: Multiple choice, one question per screen, instant feedback per answer.
 
-### Tone check
-Read the message aloud. Does it sound like something a trusted friend would say, or like something a compliance department would write? If the latter, revise.
+**Sample questions**:
+1. "A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?" → Same as always. Machines don't have memory.
+2. "What's the house edge on American roulette?" → 5.26%. Show comparison to other games.
+3. "You've won 5 hands of blackjack in a row. What does that mean for hand 6?" → Nothing. Each hand is independent.
+
+**End screen**: Score + personalized insight + share CTA. "You scored 8/10. You're sharper than most. Challenge a friend?"
+
+**Pillar alignment**: Sharp + Social
+
+### Calculator: Bankroll Planner
+
+**Concept**: An interactive tool where players input their budget and preferred games, and the tool shows estimated play time based on house edge and average bet.
+
+**Inputs**: Budget, game type, average bet size.
+**Outputs**: Estimated play time, expected loss range, comparison to other games.
+
+**Key message**: "This isn't about winning or losing — it's about knowing how far your budget goes."
+
+**Pillar alignment**: Sharp + Choice
+
+### Calculator: Odds Comparison
+
+**Concept**: A visual comparison tool showing house edge across game types. Players select games and see side-by-side comparisons.
+
+**Format**: Interactive chart or card-based comparison.
+
+**Key message**: "Not all games are created equal. Here's how they stack up."
+
+**Pillar alignment**: Sharp + Open
+
+---
+
+## Message testing
+
+Before deploying new messaging at scale:
+
+### The CMO test
+Show it to a marketing professional. Would they be proud to put this alongside their commercial brand? If it reads like a compliance department wrote it, revise.
+
+### The read-aloud test
+Read the message aloud. Does it sound like something a friend would say? Or does it sound like a regulatory filing? If the latter, revise.
+
+### The action clarity test
+After reading the message, can the reader identify what to do next? If the CTA isn't obvious, strengthen it.
+
+### The scroll test
+Put the message in its intended context (a mobile screen, an email, a poster). Would you stop scrolling to read it? If not, the hook isn't strong enough.
 
 ---
 

@@ -1,38 +1,50 @@
-# Compass
+# Playbook
 
-**Open-source responsible gambling brand guidelines — a CC0-licensed, white-label system any operator can deploy.**
+**Open-source brand guidelines for gambling entertainment literacy — CC0-licensed, white-label, built for operators.**
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](_brand.yml)
 
 ---
 
-## What is Compass?
+## What is Playbook?
 
-Compass is a complete, forkable brand guidelines system for responsible gambling (RG) programs. It provides everything an operator needs to build a consistent, evidence-informed, player-friendly RG brand: identity foundations, voice and tone guidelines, messaging frameworks, accessibility standards, multi-jurisdiction compliance modules, collateral templates, and design briefs.
+Playbook is a complete, forkable brand system for gambling entertainment literacy. It gives operators everything they need to build player-facing content that's actually worth engaging with: brand foundations, voice and tone, messaging frameworks, visual identity specs, multi-jurisdiction compliance modules, and ready-to-use collateral templates.
 
-Most RG content today feels like compliance fine print — warning labels that players learn to ignore. Compass takes a different approach. Inspired by modern wellness brands like Calm and Headspace, Compass treats responsible gambling as something players genuinely want to engage with: a resource, not a restriction. The result is an RG program that regulators respect and players actually use.
+Most gambling education content today fails in one of three ways: it's buried in fine print nobody reads, it's preachy and clinical, or it's so generic it says nothing. All three stem from the same root cause — operators don't treat player education as marketing. Playbook fixes that.
+
+Playbook is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the Reno Model of informed choice: most people who gamble do so without problems, gambling is entertainment, and smart players make better decisions when they understand the math, the odds, and the tools available to them.
+
+Think of it this way: Volvo made safety iconic by building beautiful cars that also happen to be the safest on the road. Playbook makes gambling literacy engaging by creating content that's genuinely interesting — and also happens to keep play sustainable.
 
 ## Who is this for?
 
-- **Casino operators and iGaming companies** who need a turnkey RG brand system
-- **Sports betting platforms** launching or upgrading their responsible gambling programs
-- **Gambling regulators** seeking a baseline standard they can recommend to licensees
-- **Non-profits and advocacy organizations** building RG outreach campaigns
-- **Designers and product teams** who need RG-specific component specs and copy
+- **Casino operators and iGaming companies** who want player education content their marketing team is proud to co-brand
+- **Sports betting platforms** building entertainment literacy programs that retain informed players
+- **Gambling regulators** looking for a quality baseline they can recommend to licensees
+- **Non-profits and advocacy organizations** creating engaging outreach content
+- **Marketing, product, and design teams** who need specs, copy frameworks, and design briefs for player-facing content
+
+## Why operators deploy Playbook
+
+**Player retention.** Informed players play longer and more sustainably. They understand the games, manage their bankrolls, and enjoy the experience more. They churn less.
+
+**Brand differentiation.** In a market where every operator's RG page looks the same, Playbook content stands out. It tells players: "We take you seriously."
+
+**Regulatory compliance.** Jurisdictions require player-facing education and messaging. Playbook makes compliance content that actually works — not just content that checks a box.
 
 ## Quick start
 
 1. **Fork this repository** to your own GitHub account
-2. **Edit [`_brand.yml`](_brand.yml)** — replace the program name, colors, fonts, and helpline numbers with your own. This single file drives the entire system.
-3. **Choose your jurisdictions** — keep the jurisdiction modules you operate in (e.g., `jurisdictions/united-kingdom/`), remove the rest
-4. **Customize messaging** — adapt the taglines, CTAs, and tone examples in `brand-book/05-messaging-framework.md` to your brand voice
-5. **Hand off design briefs** — give your designer the specs in `implementation/figma-briefs/` to create visual assets in Figma or your tool of choice
+2. **Edit [`_brand.yml`](_brand.yml)** — your program name, colors, fonts, helpline numbers, and taglines. This single file drives the entire system.
+3. **Choose your jurisdictions** — keep the modules you operate in (`jurisdictions/united-kingdom/`), delete the rest
+4. **Customize messaging** — pick from the tagline system, adapt tone examples, write your own
+5. **Hand off design briefs** — give your designer the specs in `implementation/figma-briefs/`
 
 ## Repository structure
 
 ```
-Compass/
+Playbook/
 ├── _brand.yml                       # White-label configuration engine
 ├── README.md                        # You are here
 ├── LICENSE                          # CC0 1.0 Universal
@@ -40,16 +52,16 @@ Compass/
 ├── CHANGELOG.md                     # Version history
 │
 ├── brand-book/                      # Core brand guidelines
-│   ├── 00-introduction.md           # Purpose and how to use this book
-│   ├── 01-brand-foundation.md       # Mission, vision, values, pillars
-│   ├── 02-brand-personality.md      # Archetypes, traits, emotional attributes
+│   ├── 00-introduction.md           # Purpose, the engagement gap, two-tier system
+│   ├── 01-brand-foundation.md       # Mission, vision, pillars (Sharp/Choice/Open/Social)
+│   ├── 02-brand-personality.md      # The Insider archetype, humor guidelines
 │   ├── 03-visual-identity.md        # Logo, color, typography, icons, photography
-│   ├── 04-voice-and-tone.md         # Voice principles, language guide
-│   ├── 05-messaging-framework.md    # Taglines, CTAs, message hierarchy
+│   ├── 04-voice-and-tone.md         # The confident myth-buster voice
+│   ├── 05-messaging-framework.md    # Tagline system, CTAs, interactive content briefs
 │   ├── 06-accessibility.md          # WCAG 2.1 AA, inclusive design
-│   ├── 07-application-guidelines.md # Cross-channel application rules
-│   ├── 08-governance.md             # Brand stewardship and versioning
-│   └── glossary.md                  # RG terminology guide
+│   ├── 07-application-guidelines.md # Cross-channel rules, co-branding, integration
+│   ├── 08-governance.md             # Stewardship, versioning, measuring adoption
+│   └── glossary.md                  # Gambling terms for marketing teams
 │
 ├── visual-identity/                 # Asset specs and placeholder directories
 │   ├── logo/                        # Logo usage rules and file placeholders
@@ -60,22 +72,21 @@ Compass/
 │   └── illustration/                # Illustration style guide
 │
 ├── messaging/                       # Messaging content library
-│   ├── core-messages.md             # Universal RG messages
+│   ├── core-messages.md             # Universal messages (jurisdiction-agnostic)
 │   ├── tagline-system.md            # Tagline hierarchy and rotation
 │   ├── calls-to-action.md           # CTA library by function
-│   ├── stigma-free-language.md      # Person-first language guide (30+ terms)
-│   ├── myth-busting.md              # Common gambling myths corrected
+│   ├── myth-busting.md              # Common gambling myths, debunked
 │   └── player-segments/             # Audience-specific messaging
 │
 ├── jurisdictions/                   # Regulatory compliance modules
 │   ├── _template/                   # Template for adding new jurisdictions
-│   ├── united-kingdom/              # UKGC, ASA/CAP, GAMSTOP, GambleAware
-│   ├── united-states/               # NCPG, AGA, 1-800-GAMBLER + state modules
-│   ├── australia/                   # ACMA, NCPF taglines
-│   ├── canada/                      # Provincial: BC (GameSense/BCLC), Ontario
-│   └── european-union/              # CEN 16259, Malta, Sweden, Germany, etc.
+│   ├── united-kingdom/              # UKGC, ASA/CAP, GAMSTOP
+│   ├── united-states/               # NCPG, AGA, state-specific modules
+│   ├── australia/                   # ACMA, state/territory modules
+│   ├── canada/                      # Provincial modules
+│   └── european-union/              # CEN 16259, country-specific
 │
-├── collateral/                      # Templates for every RG touchpoint
+├── collateral/                      # Templates for every touchpoint
 │   ├── digital/                     # Website, mobile app, email, social media
 │   ├── print/                       # Brochures, posters, rack cards, table tents
 │   ├── environmental/               # Venue signage, info centers, ATM areas
@@ -85,8 +96,8 @@ Compass/
 ├── implementation/                  # Adoption guides for operators
 │   ├── quick-start.md               # 30-minute quick-start guide
 │   ├── figma-briefs/                # Design briefs for Figma asset creation
-│   ├── checklist.md                 # Comprehensive launch checklist
-│   └── measurement-framework.md     # Measuring RG program effectiveness
+│   ├── checklist.md                 # Launch checklist
+│   └── measurement-framework.md     # Measuring adoption and engagement
 │
 └── examples/                        # Worked example with fictional operator
     └── fictional-operator/          # Complete brand application sample
@@ -94,33 +105,32 @@ Compass/
 
 ## How the white-label system works
 
-The [`_brand.yml`](_brand.yml) file is the engine. It contains every customizable value: your program name, color palette, typography, helpline numbers, taglines, and legal defaults. Throughout the repository, content files use `{{PLACEHOLDER}}` tokens (like `{{PROGRAM_NAME}}`, `{{HELPLINE_NUMBER}}`, `{{PRIMARY_TAGLINE}}`) that reference values in this config.
+The [`_brand.yml`](_brand.yml) file is the engine. It holds every customizable value: your program name, color palette, typography, helpline numbers, tagline system, and tone configuration. Throughout the repository, content files use `{{PLACEHOLDER}}` tokens that reference values in this config.
 
-When you fork the repo and edit `_brand.yml`, you're customizing the entire system in one place. Your brand colors, your helpline numbers, your voice — applied consistently across every touchpoint.
+Fork the repo. Edit `_brand.yml`. Your brand identity cascades everywhere.
 
-**The adaptive identity model**: Compass is designed to be *recognizable but adaptive*. The structural patterns (message hierarchy, layout principles, information architecture) stay consistent across operators, while the visual surface (colors, fonts, logo) adapts to each operator's brand. This means a player who encounters Compass-based RG content at one casino will intuitively understand the RG content at another — even though they look different.
+**The adaptive identity model.** Playbook is *recognizable but adaptive*. The structural patterns (message hierarchy, content architecture, layout principles) stay consistent across operators. The visual surface (colors, fonts, logo) adapts to each operator's brand. A player who encounters Playbook-based content at one platform will intuitively recognize the content structure at another — even though they look different.
+
+## Two-tier architecture
+
+Playbook uses a two-tier system:
+
+- **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, smart play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging — content players seek out. This is what operators co-brand with.
+
+- **Tier 2 (separate guide, 5%):** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, intervention messaging. Warm, direct, appropriately serious. Built in a later phase within this same repository.
 
 ## License
 
-This project is released under [CC0 1.0 Universal](LICENSE) — dedicated to the public domain. You can copy, modify, distribute, and use this work, even for commercial purposes, without asking permission or providing attribution.
+[CC0 1.0 Universal](LICENSE) — public domain. Copy, modify, distribute, and use this work for any purpose, including commercial, without permission or attribution.
 
-**Why CC0?** Responsible gambling is too important for licensing barriers. Every operator, regulator, and non-profit should be able to deploy effective RG programs without legal friction. CC0 means the entire industry can collaborate on a shared standard.
+**Why CC0?** Player education is too important for licensing friction. Every operator should be able to deploy quality content without legal barriers. CC0 means the entire industry can collaborate on one shared standard.
 
 ## Disclaimer
 
-This material is for informational and educational purposes only and does not constitute legal, medical, or professional advice. Gambling regulations vary by jurisdiction and change frequently. Operators should verify all compliance requirements with qualified legal counsel in their specific jurisdictions. While we strive for accuracy, we cannot guarantee that jurisdiction-specific information is current or complete.
+This material is for informational and educational purposes only and does not constitute legal, medical, or professional advice. Gambling regulations vary by jurisdiction and change frequently. Operators should verify all compliance requirements with qualified legal counsel. While we strive for accuracy, we cannot guarantee that jurisdiction-specific information is current or complete.
 
-## Acknowledgments
-
-Compass builds on the work of organizations advancing responsible gambling worldwide:
-
-- **[GameSense](https://gamesensema.com/)** (BCLC / Massachusetts Gaming Commission) — pioneered the four-pillar RG brand framework
-- **[National Council on Problem Gambling](https://www.ncpgambling.org/)** — 1-800-GAMBLER toolkit, person-first language guidance, campaign toolkits
-- **[GambleAware](https://www.gambleaware.org/)** (UK) — downloadable brand assets and public-facing RG gateway
-- **[American Gaming Association](https://www.americangaming.org/)** — Responsible Gaming Regulations and Statutes Guide, Responsible Marketing Code
-- **[Responsible Gambling Council](https://responsiblegambling.org/)** (Canada) — RG Check accreditation and research
-- **[International Center for Responsible Gaming](https://www.icrg.org/)** — foundational research on gambling disorder and responsible gambling
+This is not a clinical resource. Playbook does not diagnose, treat, or counsel. It is not anti-gambling. It is not a substitute for regulatory compliance.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute jurisdiction modules, messaging content, translations, or improvements to the brand system.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing jurisdiction modules, messaging content, translations, or improvements to the brand system.

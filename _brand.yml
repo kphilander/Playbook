@@ -1,181 +1,176 @@
-# =============================================================================
-# Compass — Responsible Gambling Brand Configuration
-# =============================================================================
+# _brand.yml — Playbook Brand Configuration
+# ============================================
+# This file drives the entire Playbook brand system.
+# Fork this repo, edit this file, and your brand identity
+# cascades across every touchpoint.
 #
-# This is the white-label configuration engine for your responsible gambling
-# program. Edit this file first — every document in this repository references
-# these values through {{PLACEHOLDER}} tokens.
+# Every {{PLACEHOLDER}} token in the documentation references
+# a value here. Change it once. It updates everywhere.
 #
 # Quick start:
-#   1. Replace "Compass" with your program name
-#   2. Replace "Your Organization" with your company name
+#   1. Replace "Playbook" with your program name
+#   2. Replace "Your Company Name" with your operator name
 #   3. Update colors to match your brand
 #   4. Set your jurisdiction helpline numbers
-#   5. Customize taglines and messaging
-#
-# All values below are Compass defaults. Override what you need; keep what works.
-# =============================================================================
+#   5. Pick your taglines from the system below (or write your own)
+# ============================================
 
-# -----------------------------------------------------------------------------
-# Program metadata
-# -----------------------------------------------------------------------------
+
+# ─── META ────────────────────────────────────
+
 meta:
-  program_name: "Compass"
-  organization: "Your Organization"
-  website: "https://example.com/responsible-gambling"
-  contact_email: "rg@example.com"
+  program_name: "Playbook"
+  organization: "Your Company Name"
+  website: "https://example.com/playbook"
+  contact_email: "playbook@example.com"
   year_established: 2025
   version: "0.1.0"
   license: "CC0-1.0"
   primary_jurisdictions:
     - united-states
     - united-kingdom
-    - australia
-    - canada
-    - european-union
 
-# -----------------------------------------------------------------------------
-# Brand pillars — the guiding principles of the program
-# Adapted from proven frameworks (GameSense, NCPG) with a modern wellness lens
-# -----------------------------------------------------------------------------
+
+# ─── BRAND PILLARS ───────────────────────────
+# These four pillars define what Playbook content is.
+# Every piece of content should align with at least one.
+
 brand_pillars:
-  - name: "Educational"
-    description: >
-      We help players understand how gambling works — odds, house edge,
-      randomness, and risk. Knowledge is the foundation of informed choices.
-    icon: "info-circle"
 
-  - name: "Supportive"
+  - name: "Sharp"
+    tagline: "Know your game"
     description: >
-      We connect players to help without judgment. Support is always available,
-      always free, and always confidential.
-    icon: "heart-hand"
+      Game intelligence. Playbook makes you a smarter player.
+      How odds actually work. What RNG does. Why 'hot streaks'
+      are a feeling, not a fact. When you understand the math,
+      you play on your terms.
 
-  - name: "Approachable"
+  - name: "Choice"
+    tagline: "Your call"
     description: >
-      We communicate like a trusted friend, not a warning label. Our tone is
-      warm, modern, and welcoming — inspired by the best wellness brands.
-    icon: "chat-bubble"
+      Player autonomy. Your limits, your pace, your budget,
+      your decision. Playbook puts tools in your hands and
+      gets out of the way. We inform. You choose.
 
-  - name: "Empowering"
+  - name: "Open"
+    tagline: "No BS"
     description: >
-      We give players tools and agency to stay in control. Setting limits,
-      checking in, and taking breaks are signs of strength, not weakness.
-    icon: "shield"
+      Transparency about how things actually work. The house edge,
+      the odds, the T&Cs, the stuff nobody reads. If it affects
+      your play, we'll tell you straight.
 
-# -----------------------------------------------------------------------------
-# Color palette
-# Default palette draws from modern wellness design: calming blues and teals
-# with warm accents. Every foreground/background combination must pass
-# WCAG 2.1 AA contrast requirements (4.5:1 for normal text, 3:1 for large text).
-# -----------------------------------------------------------------------------
+  - name: "Social"
+    tagline: "Worth sharing"
+    description: >
+      Content worth talking about. Quizzes, myth-busters, facts
+      that make you the smartest person at the table. Share it.
+      Challenge your friends. Start conversations.
+
+
+# ─── COLOR PALETTE ───────────────────────────
+# Modern lifestyle aesthetic. Should feel like it belongs
+# on a gaming platform, not a health website.
+#
+# Override with your operator brand colors.
+# All foreground/background combos must pass WCAG 2.1 AA
+# (4.5:1 for body text, 3:1 for large text and UI).
+
 color:
   palette:
     # Primary — brand identification
-    primary:          "#1B6B8A"     # Deep teal — trust, calm, depth
-    primary_light:    "#2A8FA8"     # Lighter teal — hover states, highlights
-    primary_dark:     "#0F4A61"     # Dark teal — high-contrast text on light bg
+    primary: "#1B2838"                    # Deep navy
+    primary_light: "#2A3F56"
+    primary_dark: "#0F1923"
 
-    # Secondary — supporting elements
-    secondary:        "#5AB5A0"     # Sage green — growth, balance, wellness
-    secondary_light:  "#7CCFBB"     # Light sage — backgrounds, cards
-    secondary_dark:   "#3E8A79"     # Dark sage — secondary text, borders
+    # Secondary — interactive, energetic
+    secondary: "#00D4AA"                  # Electric teal
+    secondary_light: "#33DDBB"
+    secondary_dark: "#00A888"
 
-    # Accent — calls to action, attention
-    accent:           "#F2A93B"     # Warm amber — energy, optimism, action
-    accent_light:     "#F7C370"     # Light amber — hover, secondary CTA
-    accent_dark:      "#D4891E"     # Dark amber — pressed state
+    # Accent — CTAs, highlights
+    accent: "#FF6B35"                     # Bold orange
+    accent_light: "#FF8A5C"
+    accent_dark: "#E55A2B"
 
-    # Neutrals — text, backgrounds, borders
-    neutral_900:      "#1A1D2E"     # Near-black — primary text
-    neutral_700:      "#3D4260"     # Dark gray — secondary text
-    neutral_500:      "#6B7194"     # Mid gray — placeholder text, captions
-    neutral_300:      "#A8AEC8"     # Light gray — borders, dividers
-    neutral_100:      "#E8EAF2"     # Very light — card backgrounds
-    neutral_50:       "#F5F6FA"     # Near-white — page background
+    # Neutrals
+    neutral_900: "#1A1A2E"
+    neutral_700: "#3D3D5C"
+    neutral_500: "#6B6B8A"
+    neutral_300: "#A8A8C0"
+    neutral_100: "#E8E8F0"
+    neutral_50: "#F5F5FA"
 
-    # Semantic — functional colors for RG-specific UI states
-    success:          "#2EAD6B"     # Limit set, positive action confirmed
-    warning:          "#E8943A"     # Approaching limit, caution
-    danger:           "#D64045"     # Over limit, critical alert
-    info:             "#4A90D9"     # Informational, educational content
+    # Semantic — functional
+    success: "#00C853"                    # Quiz passed, limit set
+    warning: "#FFB300"                    # Approaching limit
+    danger: "#FF3D00"                     # Tier 2 only
+    info: "#2979FF"                       # Informational
 
-    white:            "#FFFFFF"
-    black:            "#111119"
+    white: "#FFFFFF"
+    black: "#111111"
 
-  # Semantic color mapping — which palette color serves which purpose
   semantic:
-    background:             "neutral_50"
-    surface:                "white"
-    text_primary:           "neutral_900"
-    text_secondary:         "neutral_700"
-    text_muted:             "neutral_500"
-    link:                   "primary"
-    link_hover:             "primary_dark"
-    cta_primary_bg:         "accent"
-    cta_primary_text:       "white"
-    cta_secondary_bg:       "secondary"
-    cta_secondary_text:     "white"
-    helpline_highlight:     "primary"
-    warning_banner_bg:      "warning"
-    warning_banner_text:    "white"
-    self_exclusion_cta_bg:  "danger"
-    self_exclusion_cta_text: "white"
-    success_state:          "success"
-    info_state:             "info"
-    border:                 "neutral_300"
-    divider:                "neutral_100"
+    background: "neutral_50"
+    surface: "white"
+    text_primary: "neutral_900"
+    text_secondary: "neutral_700"
+    text_muted: "neutral_500"
+    link: "primary_light"                  # 10.80:1 on white (was secondary @ 1.91:1 — FAIL)
+    link_hover: "primary"                  # 14.92:1 on white (was secondary_dark @ 3.02:1 — FAIL)
+    cta_primary_bg: "accent"
+    cta_primary_text: "primary"            # 5.26:1 on accent (was white @ 2.84:1 — FAIL)
+    cta_secondary_bg: "secondary"
+    cta_secondary_text: "primary"          # 7.82:1 on secondary (was white @ 1.91:1 — FAIL)
+    quiz_correct: "success"
+    quiz_incorrect: "danger"
+    feature_highlight: "secondary"
+    helpline_banner: "primary"
+    border: "neutral_500"                  # 5.13:1 on white (was neutral_300 @ 2.33:1 — FAIL)
+    divider: "neutral_100"
 
-# -----------------------------------------------------------------------------
-# Typography
-# Defaults use open-source fonts available from Google Fonts.
-# Noto Sans is included for broad multi-language support (CJK, Cyrillic, etc.)
-# -----------------------------------------------------------------------------
+
+# ─── TYPOGRAPHY ──────────────────────────────
+# Open-source defaults from Google Fonts.
+# Operators should use fonts that match their brand.
+
 typography:
   fonts:
     heading:
       family: "Inter"
       source: "google"
-      fallback: "system-ui, -apple-system, sans-serif"
       weights: [400, 600, 700]
+      fallback: "system-ui, -apple-system, sans-serif"
     body:
       family: "Source Sans 3"
       source: "google"
-      fallback: "system-ui, -apple-system, sans-serif"
       weights: [300, 400, 600]
+      fallback: "system-ui, sans-serif"
     monospace:
       family: "Source Code Pro"
       source: "google"
-      fallback: "monospace"
       weights: [400]
-    i18n:
-      family: "Noto Sans"
-      source: "google"
-      fallback: "sans-serif"
-      weights: [400, 600]
-      note: "Use for CJK, Cyrillic, Arabic, and other non-Latin scripts"
+      fallback: "monospace"
 
-  # Type scale (rem units, base = 16px)
+  # Type scale (rem, base = 16px)
   scale:
-    display:    3.0       # 48px — hero headlines
-    h1:         2.5       # 40px — page titles
-    h2:         2.0       # 32px — section headings
-    h3:         1.5       # 24px — subsection headings
-    h4:         1.25      # 20px — card headings
+    display: 3.0          # 48px — hero headlines
+    h1: 2.5               # 40px
+    h2: 2.0               # 32px
+    h3: 1.5               # 24px
+    h4: 1.25              # 20px
     body_large: 1.125     # 18px — lead paragraphs
-    body:       1.0       # 16px — default body text
-    small:      0.875     # 14px — secondary text, metadata
-    caption:    0.75      # 12px — labels, legal fine print
+    body: 1.0             # 16px — minimum for accessibility
+    small: 0.875          # 14px — captions, metadata
+    caption: 0.75         # 12px — legal lines only
 
   line_height:
     heading: 1.2
     body: 1.6
     tight: 1.3
 
-# -----------------------------------------------------------------------------
-# Logo specifications
-# These define rules for logo usage. Actual logo files go in visual-identity/logo/
-# -----------------------------------------------------------------------------
+
+# ─── LOGO ────────────────────────────────────
+
 logo:
   primary_path: "visual-identity/logo/primary/"
   secondary_path: "visual-identity/logo/secondary/"
@@ -183,121 +178,128 @@ logo:
   helpline_badge_path: "visual-identity/logo/helpline-badge/"
   minimum_height: "0.25in"
   minimum_height_digital: "24px"
-  clear_space: "Minimum clear space equal to 1x the height of the logo mark on all sides"
-  approved_backgrounds:
-    - "white"
-    - "neutral_50"
-    - "primary"
-    - "primary_dark"
+  clear_space: "1x logo height on all sides"
   file_formats:
     - "SVG (preferred for digital)"
     - "PNG (with transparency, 2x and 3x)"
     - "EPS (for print)"
     - "PDF (for print)"
 
-# -----------------------------------------------------------------------------
-# Helpline numbers and support resources — per jurisdiction
-# Operators: update these for your licensed jurisdictions
-# -----------------------------------------------------------------------------
+
+# ─── HELPLINES ───────────────────────────────
+# Per-jurisdiction support numbers.
+# These are Tier 2 touchpoints but must be accessible
+# from any Tier 1 context.
+
 helplines:
   default:
     number: "1-800-XXX-XXXX"
-    text: "Text HELP to XXXXX"
+    text_number: "Text XXXXX"
     chat_url: "https://example.com/chat"
-    website: "example.com/help"
     label: "Free, confidential support 24/7"
-    hours: "24/7"
 
   united-states:
     number: "1-800-522-4700"
     alternate: "1-800-GAMBLER"
-    text: "Text 800522"
-    chat_url: "https://www.ncpgambling.org/chat"
+    text_number: "Text 800522"
     website: "www.ncpgambling.org"
     label: "National Problem Gambling Helpline"
-    hours: "24/7"
 
   united-kingdom:
     number: "0808 8020 133"
     website: "www.begambleaware.org"
-    chat_url: "https://www.begambleaware.org/chat"
     label: "GambleAware"
-    hours: "24/7"
-    self_exclusion:
-      name: "GAMSTOP"
-      website: "www.gamstop.co.uk"
+    self_exclusion: "www.gamstop.co.uk"
 
   australia:
     number: "1800 858 858"
     website: "www.gamblinghelponline.org.au"
-    chat_url: "https://www.gamblinghelponline.org.au/chat"
     label: "Gambling Help Online"
-    hours: "24/7"
 
   canada:
     number: "1-866-531-2600"
     website: "www.connexontario.ca"
     label: "ConnexOntario"
-    hours: "24/7"
-    provincial:
-      british_columbia:
-        number: "1-888-795-6111"
-        website: "www.bcresponsiblegambling.ca"
-        label: "GameSense"
-      ontario:
-        number: "1-866-531-2600"
-        website: "www.connexontario.ca"
 
   european-union:
-    note: "Helpline varies by member state — see jurisdictions/european-union/"
-    malta:
-      number: "+356 2388 5110"
-      website: "www.rgf.org.mt"
-      label: "Responsible Gaming Foundation"
-    sweden:
-      number: "020-819 100"
-      website: "www.stodlinjen.se"
-      label: "Stodlinjen"
+    note: "See jurisdictions/european-union/country-specific/ for local helplines"
 
-# -----------------------------------------------------------------------------
-# Legal defaults
-# Operators: verify against your specific jurisdiction requirements
-# -----------------------------------------------------------------------------
+
+# ─── LEGAL ───────────────────────────────────
+
 legal:
-  copyright_holder: "Your Organization"
-  disclaimer: >
-    This material is for informational and educational purposes only and does
-    not constitute legal, medical, or professional advice. Operators should
-    verify all requirements with qualified legal counsel in their jurisdictions.
+  copyright_holder: "Your Company Name"
   minimum_gambling_age:
     default: 18
     united-states: 21
-    united-kingdom: 18
-    australia: 18
-    canada: 19          # Varies by province; 18 in Alberta, Manitoba, Quebec
-  required_disclaimers:
-    age_restriction: "You must be {{MIN_AGE}}+ to gamble."
-    general_awareness: "Gambling can be harmful. Play within your means."
-    help_available: "Free, confidential help is available 24/7. Call {{HELPLINE_NUMBER}}."
+  disclaimers:
+    age: "You must be {{MIN_AGE}}+ to gamble."
+    general: "Gambling involves risk. Play on your terms."
 
-# -----------------------------------------------------------------------------
-# Messaging defaults
-# These populate collateral templates. See brand-book/05-messaging-framework.md
-# for the full message hierarchy and CTA library.
-# -----------------------------------------------------------------------------
+
+# ─── MESSAGING ───────────────────────────────
+# Tagline system — pick what fits your brand, or write your own.
+# See brand-book/05-messaging-framework.md for the full system.
+
 messaging:
-  primary_tagline: "Play with direction."
-  secondary_taglines:
-    - "Know where you stand."
-    - "Your game. Your limits. Your call."
-    - "Checking in is a sign of strength."
-    - "Fun has no finish line — set your pace."
-    - "Every player deserves a compass."
-  primary_cta: "Get support now"
+  taglines:
+    sharp:
+      - "Know your game."
+      - "The smarter you play, the more you enjoy."
+      - "Every game has math. Here's yours."
+    choice:
+      - "Your play. Your way."
+      - "Your limits. Your call."
+      - "Play on your terms."
+    open:
+      - "Here's how it actually works."
+      - "No fine print. Just facts."
+      - "The odds are public. Now you know them."
+    social:
+      - "Share the smart play."
+      - "Challenge your friends."
+      - "The best players know the game."
+
   ctas:
-    self_assessment: "Check your play"
-    set_limits: "Set your limits"
-    self_exclusion: "Take a break"
-    learn_more: "Learn how it works"
-    helpline: "Talk to someone — free and confidential"
-    reality_check: "How long have you been playing?"
+    primary:
+      - "Take the quiz"
+      - "Test your game IQ"
+      - "See the real odds"
+    features:
+      - "Set your limits"
+      - "Try the bankroll planner"
+      - "Check your stats"
+    content:
+      - "Read the breakdown"
+      - "Watch the explainer"
+      - "See how it works"
+
+
+# ─── TONE ────────────────────────────────────
+# Voice configuration. The Playbook default is
+# "confident myth-buster" — adapt to your brand.
+
+tone:
+  humor: "confident-wit"             # minimal | warm | confident-wit
+  formality: "conversational"        # formal | balanced | conversational
+  voice_archetype: "insider"         # The friend who knows the game
+  gambling_culture: "selective"      # How much industry language to use
+
+  # Tier 1 language preferences
+  prefer:
+    player: "player (not 'gambler')"
+    smart_play: "smart play (not 'responsible gambling')"
+    tools: "tools / features (not 'interventions')"
+    check_in: "check in (not 'self-assess')"
+    take_a_break: "take a break (not 'self-exclude' in Tier 1)"
+    your_limits: "your limits (not 'restrictions')"
+
+  avoid_in_tier_1:
+    - "responsible gambling"
+    - "problem gambler"
+    - "gambling addiction"
+    - "pathological"
+    - "intervention"
+    - "at-risk"
+    - "harm"
+    - "disorder"

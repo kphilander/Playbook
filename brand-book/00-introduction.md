@@ -1,85 +1,552 @@
 # Introduction
 
-> *"The best responsible gambling program is the one players actually use."*
-
-## Why this brand book exists
-
-Responsible gambling programs have a problem: nobody pays attention to them.
-
-Across the industry, RG content is treated as a compliance checkbox. A "Gamble Responsibly" tagline appended to an advertisement. A helpline number in 8-point font at the bottom of a webpage. A self-exclusion form buried three levels deep in account settings. The message is technically present — but functionally invisible.
-
-This isn't because operators don't care. Most invest significant resources in responsible gambling. The problem is *how* these programs communicate. When RG messaging looks and feels like a legal disclaimer, players treat it like one: something to scroll past, ignore, or dismiss.
-
-Compass exists to close this **engagement gap**.
-
-## The Compass philosophy
-
-Compass is built on a simple insight: responsible gambling should feel like **self-care, not a warning sign**.
-
-The wellness industry solved a similar problem. A decade ago, meditation was perceived as niche, clinical, and slightly uncomfortable to talk about. Brands like Calm and Headspace transformed that perception — making mindfulness feel accessible, modern, and something people *wanted* to integrate into their daily lives. They didn't change the practice; they changed the packaging.
-
-Compass applies the same principle to responsible gambling:
-
-- **Instead of warnings**, we provide information that helps players understand how gambling works
-- **Instead of restrictions**, we offer tools that give players control over their experience
-- **Instead of fine print**, we create content that players genuinely find useful
-- **Instead of stigma**, we normalize checking in on your habits as a sign of strength
-
-This isn't about softening the message. It's about delivering the message in a way that people actually receive it.
-
-## Who this book is for
-
-This brand book serves four primary audiences within an adopting organization:
-
-### Brand managers and marketing teams
-You'll use this book to ensure RG messaging is consistent, on-brand, and compliant across all channels. Start with [Chapter 4: Voice and Tone](04-voice-and-tone.md) and [Chapter 5: Messaging Framework](05-messaging-framework.md).
-
-### Product and UX teams
-You'll use this book to design RG features (deposit limits, reality checks, self-exclusion flows) that feel integrated into the product experience — not bolted on as an afterthought. Start with [Chapter 3: Visual Identity](03-visual-identity.md) and [Chapter 7: Application Guidelines](07-application-guidelines.md).
-
-### Compliance and legal teams
-You'll use the jurisdiction modules in `jurisdictions/` to verify that messaging meets regulatory requirements. Start with [Chapter 8: Governance](08-governance.md) and the relevant jurisdiction module for your market.
-
-### Designers
-You'll use the visual identity specifications and design briefs in `implementation/figma-briefs/` to create assets. Start with [Chapter 3: Visual Identity](03-visual-identity.md) for the system overview, then the specific brief for your deliverable.
-
-## How this book is organized
-
-| Chapter | What it covers | Start here if you... |
-|---|---|---|
-| [01 — Brand Foundation](01-brand-foundation.md) | Mission, vision, values, four brand pillars, positioning | ...are setting up the program for the first time |
-| [02 — Brand Personality](02-brand-personality.md) | Archetypes, personality traits, emotional attributes | ...need to understand the brand's character |
-| [03 — Visual Identity](03-visual-identity.md) | Logo, color, typography, icons, photography, illustration | ...are creating visual assets |
-| [04 — Voice and Tone](04-voice-and-tone.md) | Voice principles, tone spectrum, language do's/don'ts | ...are writing any RG content |
-| [05 — Messaging Framework](05-messaging-framework.md) | Taglines, CTAs, message hierarchy, core copy | ...need ready-to-use messaging |
-| [06 — Accessibility](06-accessibility.md) | WCAG 2.1 AA, inclusive design, multi-language support | ...are building digital products |
-| [07 — Application Guidelines](07-application-guidelines.md) | Cross-channel rules for digital, print, environmental, video | ...are applying the brand to a specific medium |
-| [08 — Governance](08-governance.md) | Brand stewardship, review cadence, version control | ...are managing the brand long-term |
-| [Glossary](glossary.md) | RG terminology with preferred and avoided forms | ...need to check the right term to use |
-
-## How to adapt this for your organization
-
-Compass is a white-label system. The defaults represent our best recommendations, but every element is designed to be customized:
-
-1. **Start with [`_brand.yml`](../_brand.yml)**: This configuration file drives the entire system. Update your program name, colors, fonts, helpline numbers, and jurisdictions here first.
-
-2. **Keep what works**: You don't have to change everything. The voice and tone guidelines, language guide, and messaging framework are evidence-based and work well as-is for most operators.
-
-3. **Customize the surface**: Most operators will want to adapt the visual identity (Chapter 3) to match their existing brand, while keeping the structural guidelines (Chapters 4-8) largely intact.
-
-4. **Add your jurisdictions**: Select the relevant jurisdiction modules from `jurisdictions/` and verify the regulatory information with your legal team.
-
-5. **Deploy incrementally**: You don't have to implement everything at once. Start with the messaging framework and voice guidelines — they deliver value immediately, even before you've created visual assets.
-
-## A note on scope
-
-This brand book does not cover:
-
-- **Clinical treatment protocols** — Compass is a communications and branding framework, not a clinical intervention. Refer players to qualified professionals for treatment.
-- **Legal compliance advice** — While jurisdiction modules provide regulatory information, they are reference guides, not legal opinions. Always verify requirements with qualified legal counsel.
-- **Technology implementation** — Compass defines *what* RG features should communicate, not *how* to build them technically. Product engineering teams should use these guidelines as requirements input.
-- **Gambling industry marketing** — Compass governs responsible gambling content only. It does not cover how to market gambling products themselves.
+> *"The gambling industry spends billions on player acquisition and retention.
+> It spends almost nothing on making player education actually good."*
 
 ---
 
-*Next: [Chapter 1 — Brand Foundation](01-brand-foundation.md)*
+## The Engagement Gap
+
+Responsible gambling content fails. Not sometimes. Not in edge cases.
+Systemically, across the industry, at every scale, in every market. It fails.
+
+It fails in three specific, measurable, predictable ways.
+
+### Failure 1: Invisible
+
+The content exists. Technically. A helpline number in 8-point type at the bottom
+of a terms page. A "Play Responsibly" tagline after sixty seconds of
+adrenaline-fueled advertising. A self-exclusion option buried four clicks deep
+in account settings, behind a submenu most players will never find.
+
+The content is present. It is also functionally invisible.
+
+A player scrolling past a legal footer isn't ignoring your message. They never
+saw it. There's a difference, and it matters.
+
+### Failure 2: Preachy
+
+When the content *is* visible, it reads like a warning label on a pack of
+cigarettes -- clinical, obligatory, and designed to satisfy a regulator, not
+reach a human being.
+
+"Pursuant to regulatory requirements, the following responsible gambling
+information is provided for your review."
+
+Nobody has ever read that sentence and thought, *I should pay attention to this.*
+
+The tone is wrong. It lectures. It moralizes. It talks down. It treats every
+player like a patient and every interaction like a clinical encounter. Players
+aren't patients. They're customers who chose to spend their entertainment budget
+on something they enjoy. Talk to them like it.
+
+### Failure 3: Generic
+
+Even when the content is visible and the tone is decent, it's almost always
+generic to the point of uselessness. The same boilerplate "Set a limit" prompt
+appears whether you're betting on the Super Bowl, playing penny slots, or buying
+a lottery ticket.
+
+A sports bettor facing a sixteen-leg parlay doesn't need the same messaging as a
+bingo player on a Tuesday afternoon. But they get it anyway, because the content
+wasn't built for either of them. It was built for a compliance checklist.
+
+### The Root Cause
+
+All three failures stem from the same structural problem: **operators don't
+treat player education as marketing.**
+
+The industry has brand teams for acquisition. It has brand teams for retention.
+It has brand teams for VIP. It has creative directors, copywriters, designers,
+and content strategists -- all dedicated to making the entertainment product as
+compelling as possible.
+
+And then it hands player education to compliance.
+
+Compliance teams are good at compliance. They ensure legal requirements are met.
+They are not, as a rule, trained to build brands, write engaging content, or
+create campaigns that people actually want to interact with. When you ask a
+compliance team to produce player education content, you get compliant content.
+You don't get good content.
+
+The result is a gap -- an **engagement gap** -- between the quality of the
+entertainment experience and the quality of the educational content around it.
+Players notice. They notice when one part of the product looks like it was
+designed by a world-class team and another part looks like it was generated by a
+legal template engine. They notice, and they scroll past.
+
+**Playbook closes that gap.**
+
+---
+
+## The Playbook Approach
+
+### The Foundation: The Reno Model
+
+Playbook is anchored in the Reno Model of informed choice (Blaszczynski,
+Ladouceur, & Shaffer, 2004). In plain language, the Reno Model says:
+
+1. **Most people who gamble do so without problems.** The majority of players
+   gamble recreationally, within their means, and walk away when they're done.
+   This is the norm, not the exception.
+
+2. **Gambling is entertainment.** It's a leisure activity. Like going to the
+   movies, eating out, or watching sports. It costs money. The value is the
+   experience, not a guaranteed financial return.
+
+3. **Problems arise from lack of information and lack of control** -- not from
+   the activity itself. When players understand how games work and have tools to
+   manage their play, the vast majority will make sound decisions.
+
+4. **Responsibility is shared.** Players make their own choices. Operators
+   provide accurate information and effective tools. Regulators set standards.
+   Support services exist for those who need them. No single party bears the
+   entire burden.
+
+This is not the public health model. The public health model starts from the
+premise that gambling is inherently hazardous and works backward from there.
+The Reno Model starts from the premise that gambling is entertainment and works
+forward -- what information and tools do players need to keep it that way?
+
+Playbook is built on the Reno Model because it produces better content. When you
+start from the assumption that your audience is made up of competent adults
+enjoying a leisure activity, you write differently. You design differently. You
+create content that respects the reader, and respected readers pay attention.
+
+### The Execution: A Content/Media Brand
+
+Playbook is not a wellness app. (If earlier drafts referenced Calm or Headspace
+as analogies, delete those references. They pointed in the wrong direction.)
+
+Playbook is a **content/media brand** -- the educational and awareness layer of
+the gambling experience. It creates marketing-quality content that helps players
+understand how gambling works, make smarter decisions, and get more enjoyment
+from their play.
+
+The better analogies:
+
+**Volvo made safety iconic.** For decades, Volvo has made "safety" the core of
+its brand identity. Safety isn't a disclaimer in their brochure -- it's the
+reason people buy the car. They didn't invent seatbelts and then hide them in
+the glove compartment. They made safety aspirational, desirable, and
+inseparable from the product's appeal.
+
+**Liquid Death made water cool.** It's water. In a can. With a skull on it. The
+product is identical to what comes out of your tap. But the branding is so good,
+so committed, so unapologetically entertaining that people pay a premium for it.
+Liquid Death proved that *any* category can be made engaging if you treat it like
+a real brand instead of a commodity.
+
+**Patagonia made environmental responsibility aspirational.** "Don't Buy This
+Jacket." Patagonia turned its environmental stance into a brand asset. It didn't
+hide its sustainability practices in a CSR report. It put them on the front
+page, made them part of the story, and attracted customers *because* of the
+mission, not in spite of it.
+
+**Playbook makes gambling literacy engaging.** The same playbook. Treat player
+education as a brand, not a burden. Invest in the content. Make it worth
+reading. Make it worth sharing. Make it something the operator is proud to put
+next to its entertainment product -- not something it buries in a footer.
+
+---
+
+## What Playbook Is (and Isn't)
+
+Clarity matters. Playbook has a specific scope, and understanding that scope
+prevents misapplication, misexpectation, and wasted effort.
+
+### Playbook IS:
+
+- **An entertainment literacy content brand.** It creates content about how
+  gambling works -- game mechanics, odds, smart play habits, entertainment
+  framing. Content that makes players smarter and more engaged.
+
+- **Anchored in the Reno Model.** Every piece of content starts from the premise
+  that most players gamble without problems and that gambling is entertainment.
+  The goal is informed choice, not abstinence.
+
+- **Marketing-quality.** The content is designed to the same standard as
+  acquisition and retention marketing. Professional copywriting. Professional
+  design. Professional strategy. This is not compliance filler.
+
+- **White-label.** Playbook is designed to be adopted, adapted, and deployed by
+  operators under their own brand. Fork the repo, edit `_brand.yml`, make it
+  yours.
+
+- **A content/media brand.** Specifically: the educational and awareness layer.
+  It produces articles, social posts, quizzes, myth-busters, feature
+  descriptions, onboarding flows, and in-product messaging.
+
+### Playbook IS NOT:
+
+- **A clinical or treatment resource.** Playbook does not diagnose, treat, or
+  counsel. It does not operate helplines. It does not provide therapy. If a
+  player needs clinical support, Playbook points them to qualified professionals
+  -- clearly, warmly, and immediately. But it does not attempt to be those
+  professionals.
+
+- **Anti-gambling.** Playbook is pro-player, not anti-gambling. It exists to
+  enhance the entertainment experience, not to discourage it. The goal is
+  smarter play, not less play.
+
+- **A regulator substitute.** Playbook does not set or enforce regulatory
+  standards. It operates within them. Compliance teams should use Playbook
+  content as a starting point and verify it against their jurisdiction's
+  specific requirements.
+
+- **A public health campaign.** Playbook is not trying to reduce gambling
+  prevalence. It's trying to ensure that people who choose to gamble have the
+  information and tools to do it well.
+
+---
+
+## Who This Book Is For
+
+This brand book is written for people who build brands and create content. It is
+not written for clinicians, researchers, or policymakers. They have their own
+literature. This is ours.
+
+### Marketing Teams (Primary Audience)
+
+You are the primary reader. This book gives you everything you need to produce
+Playbook content: voice and tone guidelines, messaging frameworks, visual
+identity specs, and application rules. If you can build a brand campaign, you
+can build Playbook content. The skills are the same. The standards are the same.
+The only difference is the subject matter.
+
+**Start with**: This introduction, then [Chapter 4: Voice and Tone](04-voice-and-tone.md)
+and [Chapter 5: Messaging Framework](05-messaging-framework.md).
+
+### Product Teams
+
+You design the features that Playbook content lives inside -- deposit limits,
+session timers, onboarding flows, reality checks. This book tells you what those
+features should say, how they should feel, and how to make them part of the
+experience rather than interruptions to it.
+
+**Start with**: [Chapter 1: Brand Foundation](01-brand-foundation.md) for the
+strategic context, then [Chapter 7: Application Guidelines](07-application-guidelines.md)
+for implementation specifics.
+
+### Compliance Teams
+
+You need to know that Playbook content meets regulatory requirements. This book
+isn't a compliance manual, but it's built with compliance in mind. The language
+guidelines in Chapter 4 are designed to be both engaging *and* defensible. The
+jurisdiction modules in `jurisdictions/` map Playbook content to specific
+regulatory frameworks.
+
+**Start with**: [Chapter 8: Governance](08-governance.md) and the relevant
+jurisdiction module.
+
+### Designers
+
+You create the visual assets. Chapter 3 gives you the identity system -- logo,
+color, typography, photography, illustration. The Figma briefs in
+`implementation/figma-briefs/` give you specific deliverable specs.
+
+**Start with**: [Chapter 3: Visual Identity](03-visual-identity.md).
+
+---
+
+## The Two-Tier System
+
+Playbook content operates on two tiers. Understanding the distinction is
+essential. Getting it wrong -- applying Tier 1 voice to Tier 2 situations, or
+Tier 2 gravity to Tier 1 content -- undermines both.
+
+### Tier 1: Entertainment Literacy (This Book -- 95% of Content)
+
+Tier 1 is the vast majority of Playbook content. It's the content most players
+will see, most of the time, in most contexts.
+
+**What it covers:**
+
+- Game mechanics and math (how odds work, what RNG does, why the house edge
+  exists)
+- Smart play habits (bankroll management, session planning, promo literacy)
+- Entertainment framing (getting more enjoyment from play, understanding value)
+- Myth-busting (hot streaks, due numbers, betting systems, lucky charms)
+- Tools and features (deposit limits, session reminders, spending trackers --
+  reframed as features that enhance the experience)
+- Quizzes, challenges, and social content (shareable, engaging, educational)
+
+**The voice:** Confident myth-buster. Witty. Self-assured. Engaging. Think
+Dollar Shave Club's confidence applied to gambling education. You know something
+the reader doesn't -- not because you're smarter, but because you've done the
+homework. And you're going to share it in a way that's actually fun to read.
+
+**The assumption:** The reader is a competent adult who enjoys gambling and wants
+to get more out of the experience. They're not in crisis. They're not
+struggling. They're here because the content is interesting, useful, or
+entertaining -- ideally all three.
+
+### Tier 2: Support and Crisis Touchpoints (Separate Guide -- 5% of Content)
+
+Tier 2 is a separate guide, to be developed in a later phase within this same
+repository. It covers the moments when entertainment literacy isn't enough --
+when a player needs support, wants to take a break, or is reaching out for help.
+
+**What it covers:**
+
+- Support service information and referrals
+- Take-a-break and cool-off features
+- Crisis touchpoints
+- Helpline integration
+- Content for friends and family of players who need support
+
+**The voice:** Warm. Direct. Appropriately serious. The confident myth-buster
+takes a step back. The wingman steps forward. No humor. No cleverness. Just
+clarity, compassion, and a clear path to help.
+
+**The assumption:** The reader may be in a vulnerable moment. Every word matters.
+Simplicity matters. Speed matters. This is not the time for brand personality --
+it's the time for human decency.
+
+### Why the Split Matters
+
+Tier 1 and Tier 2 serve different audiences in different emotional states with
+different needs. Mixing them -- putting crisis messaging in a myth-buster quiz,
+or putting witty copy on a self-exclusion confirmation -- doesn't just feel
+wrong. It actively undermines both messages.
+
+A player enjoying a fun quiz about poker odds doesn't want to be ambushed by
+dark messaging. A player trying to take a break doesn't want to be entertained.
+Respect the context. Match the tone.
+
+This book covers Tier 1. Tier 2 will have its own guide.
+
+---
+
+## Four Brand Pillars (Preview)
+
+Everything Playbook creates is built on four pillars. They're the filter through
+which every content decision passes. Full detail is in
+[Chapter 1: Brand Foundation](01-brand-foundation.md); here's the overview.
+
+### Sharp
+
+**Game intelligence.** Playbook makes players smarter. How odds work. What RNG
+actually does. Why the "hot machine" doesn't exist. Why your sixteen-leg parlay
+is a terrible bet (but we'll explain *why* it's terrible, not just tell you it
+is). Content that respects the reader's intelligence and rewards their
+curiosity.
+
+### Choice
+
+**Player autonomy.** Your limits. Your pace. Your budget. Your call. Playbook
+reframes tools -- deposit limits, session reminders, spending trackers -- as
+features that enhance the experience, not restrictions imposed on it. The Volvo
+insight: a seatbelt doesn't limit your freedom. It lets you drive faster.
+
+### Open
+
+**Transparency.** The house edge is public information. The odds are public
+information. The T&Cs should be public information. Playbook believes that when
+players have the full picture, they make better decisions. No fine print. No
+hidden math. No "we'd rather you didn't look too closely at that."
+
+### Social
+
+**Shareable content.** A myth-buster quiz you text to your friend. A "Did you
+know?" stat you post on social. A challenge you do with your crew before game
+day. Playbook content is designed to travel. It's not a pamphlet you take from a
+rack -- it's content you share because it's genuinely interesting. The Cards
+Against Humanity insight: if the content is good enough, people will distribute
+it for you.
+
+---
+
+## How to Use This Book
+
+This is a working document, not a coffee-table book. Here's how to find what
+you need.
+
+### Chapter-by-Chapter Roadmap
+
+| Chapter | What It Covers | Read This When You Need To... |
+|---|---|---|
+| **00 -- Introduction** *(you are here)* | The engagement gap, the Playbook approach, the two-tier system | Understand why Playbook exists and what it is |
+| **[01 -- Brand Foundation](01-brand-foundation.md)** | Mission, vision, pillars, positioning, audiences, content scope | Set strategic direction or brief a new team member |
+| **[02 -- Brand Personality](02-brand-personality.md)** | Archetypes, personality traits, humor, emotional attributes | Understand *who* Playbook is and how it behaves |
+| **[03 -- Visual Identity](03-visual-identity.md)** | Logo, color, typography, photography, illustration, iconography | Create any visual asset |
+| **[04 -- Voice and Tone](04-voice-and-tone.md)** | Voice principles, tone spectrum, language dos and don'ts | Write any Playbook content |
+| **[05 -- Messaging Framework](05-messaging-framework.md)** | Taglines, CTAs, message hierarchy, core copy blocks | Get ready-to-use messaging |
+| **[06 -- Accessibility](06-accessibility.md)** | WCAG 2.1 AA, inclusive design, multi-language support | Build accessible products |
+| **[07 -- Application Guidelines](07-application-guidelines.md)** | Channel-specific rules (digital, print, environmental, video) | Apply the brand to a specific medium |
+| **[08 -- Governance](08-governance.md)** | Brand stewardship, review cadence, version control | Manage the brand long-term |
+| **[Glossary](glossary.md)** | Terminology guide with preferred and avoided forms | Check whether a word or phrase is on-brand |
+
+### Quick Reference
+
+**"I need to write social media copy."**
+Start with [Chapter 4: Voice and Tone](04-voice-and-tone.md), then check
+[Chapter 5: Messaging Framework](05-messaging-framework.md) for ready-made
+templates, then [Chapter 7: Application Guidelines](07-application-guidelines.md)
+for channel-specific rules.
+
+**"I need to design a venue poster."**
+Start with [Chapter 3: Visual Identity](03-visual-identity.md) for specs, then
+[Chapter 5: Messaging Framework](05-messaging-framework.md) for headline
+options, then [Chapter 7: Application Guidelines](07-application-guidelines.md)
+for print guidelines.
+
+**"I need to write a deposit-limit feature description."**
+Start with [Chapter 2: Brand Personality](02-brand-personality.md) for the
+voice, then [Chapter 4: Voice and Tone](04-voice-and-tone.md) for the language
+rules, then [Chapter 7: Application Guidelines](07-application-guidelines.md)
+for in-product content patterns.
+
+**"I need to brief a new team member on Playbook."**
+Have them read this Introduction, then
+[Chapter 1: Brand Foundation](01-brand-foundation.md), then
+[Chapter 2: Brand Personality](02-brand-personality.md). Those three chapters
+cover the complete strategic picture.
+
+**"I need to verify regulatory compliance."**
+Start with [Chapter 8: Governance](08-governance.md), then the relevant
+jurisdiction module in `jurisdictions/`.
+
+**"I need to adapt Playbook for my organization."**
+Read the next section, then start with `_brand.yml`.
+
+---
+
+## How to Adapt for Your Organization
+
+Playbook is a white-label system. It's designed to be forked, customized, and
+deployed under your own brand. Here's the path.
+
+### Step 1: Fork and Configure
+
+Clone the repository. Open `_brand.yml`. This is the configuration file that
+drives the entire system.
+
+Update:
+
+- Program name (your brand name, replacing "Playbook" throughout)
+- Primary and secondary brand colors
+- Typography selections
+- Helpline and support service details
+- Jurisdiction-specific information
+- Operator-specific terminology
+
+Everything in this book that says "Playbook" is a placeholder for your brand
+name. The `_brand.yml` file makes the substitution systematic.
+
+### Step 2: Assess What to Keep
+
+Not everything needs to change. In fact, most of the system works well as-is:
+
+**Usually keep as-is:**
+
+- Voice and tone principles (Chapter 4) -- these are evidence-based and
+  extensively tested
+- Language dos and don'ts (Chapter 4) -- these reflect regulatory best practice
+  and player research
+- Messaging framework structures (Chapter 5) -- the hierarchy and patterns work
+  across brands
+- Accessibility standards (Chapter 6) -- these are universal
+- Governance processes (Chapter 8) -- these are operational best practice
+
+**Usually customize:**
+
+- Visual identity (Chapter 3) -- to match your existing brand
+- Specific messaging copy (Chapter 5) -- to reflect your brand voice and market
+- Application guidelines (Chapter 7) -- to match your channels and products
+- Jurisdiction modules -- to match your regulatory environment
+
+**Always customize:**
+
+- Brand name and program name
+- Helpline and support service information
+- Jurisdiction-specific legal requirements
+
+### Step 3: Progressive Adoption
+
+You don't have to implement everything at once. Here's a suggested adoption
+path:
+
+**Phase 1 -- Immediate Value:**
+Adopt the voice and tone guidelines and the language dos and don'ts. These
+deliver value immediately -- they change how your existing content reads without
+requiring any new assets. Train your content team on the Playbook voice. Start
+applying it to new content.
+
+**Phase 2 -- Quick Wins:**
+Implement the messaging framework. Use the ready-made taglines, CTAs, and
+message templates. Swap out existing boilerplate for Playbook-quality copy. This
+is the fastest way to close the engagement gap with your players.
+
+**Phase 3 -- Brand Build:**
+Roll out the visual identity. Update design assets. Create new content formats
+(quizzes, myth-busters, shareable social content). This is where Playbook starts
+to feel like a real brand, not just better copy.
+
+**Phase 4 -- Full Integration:**
+Integrate Playbook content into the product experience -- onboarding flows,
+deposit screens, session timers, account settings. At this stage, Playbook isn't
+a layer on top of the product. It's a feature of the product.
+
+### Step 4: Maintain and Evolve
+
+Playbook is a living system. Content should be reviewed quarterly, updated as
+regulations change, and refreshed as player expectations evolve. See
+[Chapter 8: Governance](08-governance.md) for the full maintenance framework.
+
+---
+
+## A Note on Language
+
+Throughout this book, you'll notice specific language choices. These are
+intentional.
+
+We say **"player"** not "gambler." *Player* emphasizes agency, participation,
+and entertainment. *Gambler* carries clinical and pejorative connotations.
+
+We say **"smart play"** not "responsible gambling." *Smart play* is something
+you'd want to do. *Responsible gambling* is something you're told to do. One
+is aspirational. The other is obligatory.
+
+We say **"tools and features"** not "interventions." *Tools* are things you
+choose to use. *Interventions* are things done to you. One respects autonomy.
+The other implies pathology.
+
+We say **"check in"** not "self-assess." *Checking in* is casual, normal, and
+something everyone does. *Self-assessing* sounds clinical and implies something
+might be wrong.
+
+We say **"take a break"** not "self-exclude." *Taking a break* is something
+healthy people do. *Self-excluding* sounds like a last resort.
+
+These choices aren't cosmetic. Language shapes perception. When players
+encounter clinical language, they assume the content isn't for them -- it's for
+people with problems. When they encounter natural, everyday language, they
+engage. The words matter. Use the right ones.
+
+The full language guide is in [Chapter 4: Voice and Tone](04-voice-and-tone.md).
+The [Glossary](glossary.md) provides a complete reference.
+
+---
+
+## Let's Build Something Players Actually Want to Read
+
+The gambling industry has tried warnings, disclaimers, fine print, and mandatory
+acknowledgment screens. It has tried clinical language, scare tactics, and
+buried helpline numbers.
+
+None of it has worked particularly well.
+
+Playbook tries something different: treat player education like a brand. Give it
+the same investment, the same creativity, the same craft that goes into every
+other part of the entertainment experience. Write content that's genuinely
+interesting. Design assets that are genuinely beautiful. Create features that
+players genuinely want to use.
+
+It's not complicated. It's just never been done well at scale.
+
+Until now.
+
+---
+
+*Next: [Chapter 1 -- Brand Foundation](01-brand-foundation.md)*
