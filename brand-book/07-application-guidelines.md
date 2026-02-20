@@ -1,6 +1,6 @@
 # Chapter 7: Application Guidelines
 
-This chapter defines how the {{PROGRAM_NAME}} brand system applies across channels and media — digital, print, environmental, and video/audio. The core principle: Compass content should be **woven into the player experience**, not siloed into a separate "responsible gambling" section that nobody visits.
+This chapter defines how the {{PROGRAM_NAME}} brand system applies across channels and media — digital, print, environmental, and video/audio. The core principle: Playbook content should be **woven into the player experience**, not siloed into a separate "responsible gambling" section that nobody visits.
 
 ---
 
@@ -8,16 +8,16 @@ This chapter defines how the {{PROGRAM_NAME}} brand system applies across channe
 
 The biggest mistake operators make with player education content is treating it as a bolt-on — a separate "RG page" buried in the footer, a compliance checkbox disconnected from the actual player experience.
 
-Compass takes the opposite approach: **integration over isolation**.
+Playbook takes the opposite approach: **integration over isolation**.
 
 | Isolated (don't do this) | Integrated (do this) |
 |---|---|
-| A dedicated "Responsible Gambling" page linked from the footer | Compass content woven into onboarding, account settings, game selection, and deposit flows |
+| A dedicated "Responsible Gambling" page linked from the footer | Playbook content woven into onboarding, account settings, game selection, and deposit flows |
 | A helpline number in 8pt type at the bottom of the page | A helpline strip visible on every screen, properly designed and readable |
 | A pop-up warning that players dismiss without reading | A session reminder that provides useful context (time played, spend so far) |
 | A static brochure PDF available for download | Interactive quizzes, odds calculators, and shareable content in the content hub |
 
-**The test**: If a player can use your platform for a full session without encountering any Compass content unless they actively go looking for it, the integration has failed.
+**The test**: If a player can use your platform for a full session without encountering any Playbook content unless they actively go looking for it, the integration has failed.
 
 ---
 
@@ -25,7 +25,7 @@ Compass takes the opposite approach: **integration over isolation**.
 
 ### 1. Equal design investment
 
-Compass content gets the same design quality as commercial content. Same typography, same color system, same spacing, same layout principles. If the promotional banner looks like it was designed by a world-class agency and the player education section looks like a compliance afterthought, players will treat it accordingly.
+Playbook content gets the same design quality as commercial content. Same typography, same color system, same spacing, same layout principles. If the promotional banner looks like it was designed by a world-class agency and the player education section looks like a compliance afterthought, players will treat it accordingly.
 
 ### 2. One interaction to help
 
@@ -33,11 +33,11 @@ On every screen, page, or surface — a player should be able to reach a helplin
 
 ### 3. Visible, not buried
 
-Compass content appears in primary navigation or settings — not in a submenu behind three clicks. Present in footers, account settings, and at key decision points (deposits, wager placement, session milestones).
+Playbook content appears in primary navigation or settings — not in a submenu behind three clicks. Present in footers, account settings, and at key decision points (deposits, wager placement, session milestones).
 
 ### 4. Consistent across channels
 
-A player should recognize Compass content whether they see it on mobile, on a poster, or in a TV ad. Visual identity and voice stay consistent — only the format adapts.
+A player should recognize Playbook content whether they see it on mobile, on a poster, or in a TV ad. Visual identity and voice stay consistent — only the format adapts.
 
 ---
 
@@ -45,7 +45,7 @@ A player should recognize Compass content whether they see it on mobile, on a po
 
 ### Website
 
-**Landing page**: Every operator site needs a Compass content hub — a dedicated section for educational content, tools, quizzes, odds explainers, and support resources.
+**Landing page**: Every operator site needs a Playbook content hub — a dedicated section for educational content, tools, quizzes, odds explainers, and support resources.
 
 | Element | Requirement |
 |---|---|
@@ -80,27 +80,27 @@ Mobile is where most players gamble (60%+ of traffic). The mobile experience mus
 - Touch targets: 44x44px minimum
 - Primary CTAs within thumb zone
 - One action per screen — don't overload
-- Compass tools accessible from hamburger menu or tab bar
+- Playbook tools accessible from hamburger menu or tab bar
 
 ### Email
 
-Compass messaging should be woven into the transactional email lifecycle:
+Playbook messaging should be woven into the transactional email lifecycle:
 
-| Email type | Compass integration |
+| Email type | Playbook integration |
 |---|---|
-| Welcome series | Introduce Compass, highlight tools, link to first quiz |
+| Welcome series | Introduce Playbook, highlight tools, link to first quiz |
 | Deposit confirmation | Include current limits and link to adjust |
-| Monthly statement | Activity summary with Compass messaging |
-| Reactivation | Sensitive re-engagement with prominent Compass tools |
+| Monthly statement | Activity summary with Playbook messaging |
+| Reactivation | Sensitive re-engagement with prominent Playbook tools |
 
 **Email rules**:
 - Helpline number in every email footer
-- Compass content uses the same font size and visual weight as commercial content
-- Never unsubscribe players from Compass communications
+- Playbook content uses the same font size and visual weight as commercial content
+- Never unsubscribe players from Playbook communications
 
 ### Social media
 
-Social media is where Compass content earns organic reach through genuine engagement.
+Social media is where Playbook content earns organic reach through genuine engagement.
 
 | Platform | Content approach |
 |---|---|
@@ -173,7 +173,7 @@ Print serves land-based venues (casinos, betting shops, lottery retailers) and c
 
 - Speak helpline numbers clearly and repeat
 - Use a natural, conversational voice — not announcer energy
-- Match the warmth and confidence of the Compass voice
+- Match the warmth and confidence of the Playbook voice
 
 ### Digital pre-roll
 
@@ -192,10 +192,10 @@ When {{PROGRAM_NAME}} content appears alongside the operator's brand:
 
 | Rule | Rationale |
 |---|---|
-| Compass logo no smaller than 60% of operator logo height | Prevents visual subordination |
+| Playbook logo no smaller than 60% of operator logo height | Prevents visual subordination |
 | Same or larger font size as surrounding commercial copy | Prevents the "fine print" effect |
 | Helpline numbers in bold or distinct weight | Ensures readability |
-| Adequate white space around Compass content | Prevents visual crowding |
+| Adequate white space around Playbook content | Prevents visual crowding |
 
 ### The adaptive identity in practice
 
@@ -206,14 +206,14 @@ A player who sets deposit limits on Platform A will recognize the same flow patt
 
 ### Non-RG marketing pairing
 
-Where jurisdictions require or operators desire Compass messaging alongside commercial advertising:
+Where jurisdictions require or operators desire Playbook messaging alongside commercial advertising:
 
-- Compass elements complement the promotion, not contradict it
+- Playbook elements complement the promotion, not contradict it
 - Helpline information is integrated, not tacked on as fine print
-- The transition between commercial and Compass messaging feels natural
-- Compass messaging uses the same production quality as the commercial content
+- The transition between commercial and Playbook messaging feels natural
+- Playbook messaging uses the same production quality as the commercial content
 
-**The goal**: A player seeing a promotional ad with Compass messaging should think "this brand takes me seriously" — not "here's the legal disclaimer."
+**The goal**: A player seeing a promotional ad with Playbook messaging should think "this brand takes me seriously" — not "here's the legal disclaimer."
 
 ---
 
@@ -230,7 +230,7 @@ Where jurisdictions require or operators desire Compass messaging alongside comm
 ### Responsive rules
 
 - **Helpline strip**: Collapses from full text to icon + number on mobile
-- **Navigation**: Compass section in hamburger menu on mobile; main nav on desktop
+- **Navigation**: Playbook section in hamburger menu on mobile; main nav on desktop
 - **CTAs**: Stack vertically on mobile; inline on desktop
 - **Tables**: Convert to card layouts on mobile
 

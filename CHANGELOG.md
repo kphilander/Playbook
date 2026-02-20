@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Compass are documented here.
+All notable changes to Playbook are documented here.
 
 Format follows [Semantic Versioning](https://semver.org/):
 - **MAJOR** = breaking changes to brand identity or architecture

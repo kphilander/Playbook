@@ -14,7 +14,7 @@ positioning whenever you're uncertain about scope.
 ## The Reno Model in Plain English
 
 Before we get to brand strategy, we need to establish the intellectual
-foundation. Compass isn't built on vibes. It's built on a specific, published
+foundation. Playbook isn't built on vibes. It's built on a specific, published
 framework for how to think about gambling and player education.
 
 ### The Core Premises
@@ -80,7 +80,7 @@ gambling. It does. But it frames the solution differently:
 | **Tone of resulting content** | Cautionary, clinical | Informative, empowering |
 | **Content feels like** | A health warning | A feature of the entertainment experience |
 
-Compass uses the Reno Model because it produces content that players actually
+Playbook uses the Reno Model because it produces content that players actually
 engage with. When your starting premise respects the audience, the audience
 respects the content.
 
@@ -94,39 +94,39 @@ with content that treats them like adults.
 
 ## Brand Scope
 
-### What Compass Is
+### What Playbook Is
 
-Compass is a **content/media brand**. Specifically, it's the **educational and
+Playbook is a **content/media brand**. Specifically, it's the **educational and
 awareness layer** of the gambling entertainment experience.
 
-That means Compass creates content. Articles, social posts, quizzes,
+That means Playbook creates content. Articles, social posts, quizzes,
 myth-busters, feature descriptions, onboarding copy, in-product messaging,
 venue signage, video scripts, infographics, interactive tools. Content that
 helps players understand how gambling works, make smarter decisions, and enjoy
 their play more.
 
-### What Compass Doesn't Do
+### What Playbook Doesn't Do
 
-Compass has clear boundaries. Respecting them keeps the brand focused and
-prevents scope creep into areas where Compass has no expertise and no business.
+Playbook has clear boundaries. Respecting them keeps the brand focused and
+prevents scope creep into areas where Playbook has no expertise and no business.
 
-**Compass doesn't operate helplines.** If a player needs to talk to someone,
-Compass provides the number. It doesn't answer the phone.
+**Playbook doesn't operate helplines.** If a player needs to talk to someone,
+Playbook provides the number. It doesn't answer the phone.
 
-**Compass doesn't provide treatment.** It's not therapy. It's not counseling.
-It's not a clinical program. If a player needs professional support, Compass
+**Playbook doesn't provide treatment.** It's not therapy. It's not counseling.
+It's not a clinical program. If a player needs professional support, Playbook
 points them there -- clearly, warmly, immediately. But it doesn't pretend to be
 a substitute for qualified professionals.
 
-**Compass doesn't enforce regulations.** It operates within regulatory
+**Playbook doesn't enforce regulations.** It operates within regulatory
 frameworks. It doesn't set them, interpret them, or enforce them. Compliance
-teams verify. Compass creates.
+teams verify. Playbook creates.
 
-**Compass doesn't discourage gambling.** It's pro-player, not anti-gambling. The
+**Playbook doesn't discourage gambling.** It's pro-player, not anti-gambling. The
 goal is smarter play, not less play. More informed entertainment, not less
 entertainment.
 
-Think of it this way: Compass is to gambling what a sports equipment brand's
+Think of it this way: Playbook is to gambling what a sports equipment brand's
 training content is to athletics. Nike doesn't tell you not to run. It helps
 you run better.
 
@@ -134,11 +134,11 @@ you run better.
 
 ## Mission
 
-> **Compass gives players the information and tools to gamble on their own terms
+> **Playbook gives players the information and tools to gamble on their own terms
 > -- making smart play feel natural, not forced.**
 
 This is the sentence that should be pinned to every content brief, every design
-review, every editorial calendar. Everything Compass creates should be traceable
+review, every editorial calendar. Everything Playbook creates should be traceable
 back to this statement.
 
 ### Unpacking the Mission
@@ -150,7 +150,7 @@ regulator. Not the brand. The player receives something of value.
 what the odds mean, why myths are myths) and tools (deposit limits, session
 timers, spending trackers -- reframed as features). Both are required.
 
-**"to gamble on their own terms"** -- Autonomy. The player decides. Compass
+**"to gamble on their own terms"** -- Autonomy. The player decides. Playbook
 doesn't set the terms. It provides the ingredients for the player to set their
 own.
 
@@ -217,7 +217,7 @@ treating it as a feature.
 
 ## Four Brand Pillars
 
-Everything Compass creates passes through four filters. If a piece of content
+Everything Playbook creates passes through four filters. If a piece of content
 doesn't serve at least one pillar, it doesn't ship. If it contradicts any
 pillar, it gets rewritten.
 
@@ -338,7 +338,7 @@ enable it. A seatbelt doesn't restrict your driving. It lets you drive
 confidently at higher speeds, in worse conditions, with less anxiety. The
 constraint is the enabler.
 
-Compass applies the same reframe to every player tool:
+Playbook applies the same reframe to every player tool:
 
 - A **deposit limit** isn't a restriction on your spending. It's a budget you
   set for your entertainment -- like deciding in advance what you'll spend on
@@ -505,7 +505,7 @@ advertise. It didn't need to. The product was so inherently shareable -- so fun
 to experience with friends, so conversation-generating -- that players became
 the distribution channel.
 
-Compass content should work the same way. Not all of it. But enough of it that
+Playbook content should work the same way. Not all of it. But enough of it that
 gambling literacy spreads through social networks rather than being pushed
 through compliance channels.
 
@@ -561,11 +561,11 @@ Before publishing any Social content, ask:
 
 ## Brand Positioning
 
-### Compass as a Feature, Not a Warning
+### Playbook as a Feature, Not a Warning
 
 This is the positioning statement that should guide every strategic decision:
 
-> **Compass is a feature of the entertainment experience, not a warning bolted
+> **Playbook is a feature of the entertainment experience, not a warning bolted
 > onto it.**
 
 Think about how Volvo positions safety. Safety isn't a disclaimer in the
@@ -578,15 +578,15 @@ environmental stance isn't a CSR page on the corporate website. It's the brand.
 "Don't Buy This Jacket." Customers choose Patagonia *because* of the mission,
 not in spite of it.
 
-Compass occupies the same territory for gambling. Smart play content isn't a
+Playbook occupies the same territory for gambling. Smart play content isn't a
 regulatory burden. It's a brand asset. It's the thing that makes players feel
 good about choosing your platform over the one that treats them like a revenue
 source and nothing more.
 
-### Where Compass Sits
+### Where Playbook Sits
 
 ```
-Entertainment brand          Compass                    Support services
+Entertainment brand          Playbook                    Support services
 (casino, sportsbook)        (entertainment literacy)    (helplines, counseling)
 
 "Come play!"            "Know your game."           "We're here when you
@@ -596,7 +596,7 @@ Excitement               Intelligence & features     Recovery & support
 Revenue-focused          Player-focused              Health-focused
 ```
 
-Compass is **not** the entertainment brand (it doesn't promote gambling) and
+Playbook is **not** the entertainment brand (it doesn't promote gambling) and
 it's **not** a support service (it doesn't provide clinical treatment). It's the
 **entertainment literacy layer** between the two -- the content that makes
 players smarter about the games they already enjoy and connects them to support
@@ -604,10 +604,10 @@ if they ever need it.
 
 ### Positioning Relative to the Operator
 
-Compass content should feel like a **feature** of the operator's brand -- not a
+Playbook content should feel like a **feature** of the operator's brand -- not a
 regulatory footnote bolted on:
 
-| Dimension | Entertainment Brand | Compass |
+| Dimension | Entertainment Brand | Playbook |
 |---|---|---|
 | **Purpose** | Engage players with entertainment | Help players get more from the experience |
 | **Tone** | Exciting, aspirational | Confident, witty, informative |
@@ -615,19 +615,19 @@ regulatory footnote bolted on:
 | **Placement** | Prominent | Visible and integrated, never buried |
 | **Design investment** | High | Equal |
 
-**The key test**: If the Compass content on your platform looks noticeably
+**The key test**: If the Playbook content on your platform looks noticeably
 cheaper, older, or less polished than the entertainment content, you have a
 brand equity problem. Players read quality signals instantly. When one part of
 the product looks like an afterthought, they treat it like one.
 
 ### Positioning Relative to the Industry
 
-| Existing Approach | Focus | How Compass Differs |
+| Existing Approach | Focus | How Playbook Differs |
 |---|---|---|
-| GameSense (BCLC/MGC) | On-site advisors, myth-busting | Compass is a deployable content brand, not an advisor program |
-| GambleAware (UK) | Public awareness campaigns, research | Compass provides operator-level implementation, not mass-market messaging |
-| NCPG (US) | Policy advocacy, helpline, campaign kits | Compass is a complete brand system, not a campaign toolkit |
-| Operator-built programs | Custom, variable quality | Compass is standardized, open-source, marketing-grade |
+| GameSense (BCLC/MGC) | On-site advisors, myth-busting | Playbook is a deployable content brand, not an advisor program |
+| GambleAware (UK) | Public awareness campaigns, research | Playbook provides operator-level implementation, not mass-market messaging |
+| NCPG (US) | Policy advocacy, helpline, campaign kits | Playbook is a complete brand system, not a campaign toolkit |
+| Operator-built programs | Custom, variable quality | Playbook is standardized, open-source, marketing-grade |
 
 ---
 
@@ -638,7 +638,7 @@ the product looks like an afterthought, they treat it like one.
 The player value proposition has three facets. They're the same thing from
 different angles:
 
-**Game intelligence.** "I understand how this works now." Compass content gives
+**Game intelligence.** "I understand how this works now." Playbook content gives
 players real knowledge about game mechanics, odds, and probability. Not
 abstract math -- practical intelligence they can use the next time they sit
 down.
@@ -669,17 +669,17 @@ player who comes back.
 
 **Brand differentiation** (lead with this too). In a market where every operator
 offers roughly the same games, the same odds, and the same promotions, brand
-is the differentiator. Compass gives operators a unique brand asset -- high-
+is the differentiator. Playbook gives operators a unique brand asset -- high-
 quality player education content that signals "we respect our players enough to
 invest in their experience." That signal matters. Especially to the growing
 segment of players who care about the brands they patronize.
 
-**Regulatory compliance** (table stakes, not the pitch). Yes, Compass content
+**Regulatory compliance** (table stakes, not the pitch). Yes, Playbook content
 satisfies regulatory requirements. But that's the floor, not the ceiling. Don't
 lead with compliance in your business case. Lead with retention and
 differentiation. Compliance is assumed.
 
-**The pitch**: "Compass doesn't just help you comply. It helps you compete. Your
+**The pitch**: "Playbook doesn't just help you comply. It helps you compete. Your
 player education content becomes a differentiator, not a cost center."
 
 ---
@@ -692,7 +692,7 @@ This is the vast majority of your audience and the default voice. These are
 people who gamble recreationally -- they enjoy it, they budget for it, they
 don't have significant difficulties with it. They are the norm.
 
-Compass content for this audience is:
+Playbook content for this audience is:
 
 - Informative (makes them smarter about the games they play)
 - Entertaining (worth reading on its own merits)
@@ -704,7 +704,7 @@ Compass content for this audience is:
 
 Some players want to take stock of their play -- not because they're in crisis,
 but because checking in is a smart thing to do. Like reviewing your monthly
-spending or checking your fitness stats. Compass content for this audience is:
+spending or checking your fitness stats. Playbook content for this audience is:
 
 - Normalizing ("Lots of players check in. It takes two minutes.")
 - Non-judgmental (checking in does not equal having a problem)
@@ -714,7 +714,7 @@ spending or checking your fitness stats. Compass content for this audience is:
 ### Friends and Family
 
 People who care about someone who gambles. They may have questions. They may
-want resources. Compass content for this audience is:
+want resources. Playbook content for this audience is:
 
 - Informative (here's how gambling works; here's what to look for)
 - Empowering (here's how to start a conversation without lecturing)
@@ -724,7 +724,7 @@ want resources. Compass content for this audience is:
 ### Staff
 
 Employees of gambling operators -- dealers, pit bosses, customer service reps,
-cashiers. They interact with players daily. Compass content for this audience
+cashiers. They interact with players daily. Playbook content for this audience
 is:
 
 - Training-oriented (practical scripts, conversation guides)
@@ -734,7 +734,7 @@ is:
 
 ### Regulators (Secondary)
 
-Regulators evaluate Compass content. They don't consume it as end users. Their
+Regulators evaluate Playbook content. They don't consume it as end users. Their
 concerns are:
 
 - Does this meet jurisdictional requirements?
@@ -748,7 +748,7 @@ Design for players. Verify for regulators. That's the order of operations.
 
 ## All Gambling Verticals
 
-Compass is **vertical-agnostic**. The pillars, voice, and brand identity apply
+Playbook is **vertical-agnostic**. The pillars, voice, and brand identity apply
 across all gambling product types:
 
 - **Casino** (slots, table games, live dealer)
@@ -758,13 +758,13 @@ across all gambling product types:
 - **Poker** (cash games, tournaments, online, live)
 
 Content should be adapted to each vertical's specific mechanics, terminology,
-and player behaviors, but the brand system remains consistent. A Compass quiz
-about poker odds should *feel* the same as a Compass quiz about slot RTP --
+and player behaviors, but the brand system remains consistent. A Playbook quiz
+about poker odds should *feel* the same as a Playbook quiz about slot RTP --
 same voice, same quality, same personality, different subject matter.
 
 When creating content, always specify the vertical. Generic "gambling" content
 that doesn't acknowledge the specific game type feels lazy and uninformed --
-exactly the kind of content Compass exists to replace.
+exactly the kind of content Playbook exists to replace.
 
 ---
 

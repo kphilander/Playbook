@@ -1,6 +1,6 @@
 # Chapter 5: Messaging Framework
 
-This chapter provides the complete messaging system for {{PROGRAM_NAME}} — the tagline system, calls to action, core messages, and interactive content briefs that populate every touchpoint. This is your copy reference when creating any Compass content.
+This chapter provides the complete messaging system for {{PROGRAM_NAME}} — the tagline system, calls to action, core messages, and interactive content briefs that populate every touchpoint. This is your copy reference when creating any Playbook content.
 
 ---
 
@@ -19,7 +19,7 @@ This chapter provides the complete messaging system for {{PROGRAM_NAME}} — the
 
 ## Level 1: The tagline system
 
-Compass uses a **tagline system** — not a single prescribed tagline. Operators choose from the options below, mix and match across campaigns and channels, or use the framework to write their own. The system is organized by the four brand pillars.
+Playbook uses a **tagline system** — not a single prescribed tagline. Operators choose from the options below, mix and match across campaigns and channels, or use the framework to write their own. The system is organized by the four brand pillars.
 
 ### Sharp — "Know your game"
 
@@ -61,8 +61,8 @@ Compass uses a **tagline system** — not a single prescribed tagline. Operators
 
 - **Choose 2–3 taglines** as your primary rotation for a campaign cycle
 - **Mix pillars** — a campaign can use a Sharp tagline for educational content and a Choice tagline for tool promotion
-- **Write your own** — the system is a starting point. As long as new taglines align with the pillar framework and Compass voice, they're on-brand
-- **Never use "Gamble Responsibly"** as your tagline. It's the opposite of what Compass stands for.
+- **Write your own** — the system is a starting point. As long as new taglines align with the pillar framework and Playbook voice, they're on-brand
+- **Never use "Gamble Responsibly"** as your tagline. It's the opposite of what Playbook stands for.
 
 ---
 
@@ -78,7 +78,7 @@ Use for: Myth-busting headers, educational content intros, quiz prompts, game gu
 
 ### Choice
 
-> "Your limits. Your pace. Your call. Compass puts the tools in your hands and gets out of the way."
+> "Your limits. Your pace. Your call. Playbook puts the tools in your hands and gets out of the way."
 
 Use for: Tool promotion, deposit limit features, session awareness, bankroll planners.
 
@@ -207,7 +207,7 @@ Calls to action organized by function. These are the buttons, links, and prompts
 
 ## Warning statement standards
 
-Many jurisdictions mandate specific warning statements. Compass treats these as a design challenge, not a compliance burden.
+Many jurisdictions mandate specific warning statements. Playbook treats these as a design challenge, not a compliance burden.
 
 ### Principles for on-brand mandatory messaging
 
@@ -221,7 +221,7 @@ Many jurisdictions mandate specific warning statements. Compass treats these as 
 **Bare compliance** (what most operators do):
 > "If you or someone you know has a gambling problem, call 1-800-522-4700."
 
-**On-brand compliance** (the Compass way):
+**On-brand compliance** (the Playbook way):
 > Free, confidential support is available 24/7 — for any question about gambling.
 > **Call 1-800-522-4700** | **Chat at ncpgambling.org/chat** | **Text 800522**
 
@@ -235,7 +235,7 @@ See the `jurisdictions/` directory for exact required messaging for each market.
 
 ## Interactive content briefs
 
-Interactive content is where Compass delivers the most value. These are concept specs — the frameworks that content teams use to build quizzes, calculators, and gamified educational experiences.
+Interactive content is where Playbook delivers the most value. These are concept specs — the frameworks that content teams use to build quizzes, calculators, and gamified educational experiences.
 
 ### Quiz framework: Game IQ
 

@@ -1,6 +1,6 @@
-# _brand.yml — Compass Brand Configuration
+# _brand.yml — Playbook Brand Configuration
 # ============================================
-# This file drives the entire Compass brand system.
+# This file drives the entire Playbook brand system.
 # Fork this repo, edit this file, and your brand identity
 # cascades across every touchpoint.
 #
@@ -8,7 +8,7 @@
 # a value here. Change it once. It updates everywhere.
 #
 # Quick start:
-#   1. Replace "Compass" with your program name
+#   1. Replace "Playbook" with your program name
 #   2. Replace "Your Company Name" with your operator name
 #   3. Update colors to match your brand
 #   4. Set your jurisdiction helpline numbers
@@ -19,10 +19,10 @@
 # ─── META ────────────────────────────────────
 
 meta:
-  program_name: "Compass"
+  program_name: "Playbook"
   organization: "Your Company Name"
-  website: "https://example.com/compass"
-  contact_email: "compass@example.com"
+  website: "https://example.com/playbook"
+  contact_email: "playbook@example.com"
   year_established: 2025
   version: "0.1.0"
   license: "CC0-1.0"
@@ -32,7 +32,7 @@ meta:
 
 
 # ─── BRAND PILLARS ───────────────────────────
-# These four pillars define what Compass content is.
+# These four pillars define what Playbook content is.
 # Every piece of content should align with at least one.
 
 brand_pillars:
@@ -40,7 +40,7 @@ brand_pillars:
   - name: "Sharp"
     tagline: "Know your game"
     description: >
-      Game intelligence. Compass makes you a smarter player.
+      Game intelligence. Playbook makes you a smarter player.
       How odds actually work. What RNG does. Why 'hot streaks'
       are a feeling, not a fact. When you understand the math,
       you play on your terms.
@@ -49,7 +49,7 @@ brand_pillars:
     tagline: "Your call"
     description: >
       Player autonomy. Your limits, your pace, your budget,
-      your decision. Compass puts tools in your hands and
+      your decision. Playbook puts tools in your hands and
       gets out of the way. We inform. You choose.
 
   - name: "Open"
@@ -276,7 +276,7 @@ messaging:
 
 
 # ─── TONE ────────────────────────────────────
-# Voice configuration. The Compass default is
+# Voice configuration. The Playbook default is
 # "confident myth-buster" — adapt to your brand.
 
 tone:

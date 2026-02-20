@@ -1,4 +1,4 @@
-# Compass
+# Playbook
 
 **Open-source brand guidelines for gambling entertainment literacy — CC0-licensed, white-label, built for operators.**
 
@@ -7,15 +7,15 @@
 
 ---
 
-## What is Compass?
+## What is Playbook?
 
-Compass is a complete, forkable brand system for gambling entertainment literacy. It gives operators everything they need to build player-facing content that's actually worth engaging with: brand foundations, voice and tone, messaging frameworks, visual identity specs, multi-jurisdiction compliance modules, and ready-to-use collateral templates.
+Playbook is a complete, forkable brand system for gambling entertainment literacy. It gives operators everything they need to build player-facing content that's actually worth engaging with: brand foundations, voice and tone, messaging frameworks, visual identity specs, multi-jurisdiction compliance modules, and ready-to-use collateral templates.
 
-Most gambling education content today fails in one of three ways: it's buried in fine print nobody reads, it's preachy and clinical, or it's so generic it says nothing. All three stem from the same root cause — operators don't treat player education as marketing. Compass fixes that.
+Most gambling education content today fails in one of three ways: it's buried in fine print nobody reads, it's preachy and clinical, or it's so generic it says nothing. All three stem from the same root cause — operators don't treat player education as marketing. Playbook fixes that.
 
-Compass is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the Reno Model of informed choice: most people who gamble do so without problems, gambling is entertainment, and smart players make better decisions when they understand the math, the odds, and the tools available to them.
+Playbook is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the Reno Model of informed choice: most people who gamble do so without problems, gambling is entertainment, and smart players make better decisions when they understand the math, the odds, and the tools available to them.
 
-Think of it this way: Volvo made safety iconic by building beautiful cars that also happen to be the safest on the road. Compass makes gambling literacy engaging by creating content that's genuinely interesting — and also happens to keep play sustainable.
+Think of it this way: Volvo made safety iconic by building beautiful cars that also happen to be the safest on the road. Playbook makes gambling literacy engaging by creating content that's genuinely interesting — and also happens to keep play sustainable.
 
 ## Who is this for?
 
@@ -25,13 +25,13 @@ Think of it this way: Volvo made safety iconic by building beautiful cars that a
 - **Non-profits and advocacy organizations** creating engaging outreach content
 - **Marketing, product, and design teams** who need specs, copy frameworks, and design briefs for player-facing content
 
-## Why operators deploy Compass
+## Why operators deploy Playbook
 
 **Player retention.** Informed players play longer and more sustainably. They understand the games, manage their bankrolls, and enjoy the experience more. They churn less.
 
-**Brand differentiation.** In a market where every operator's RG page looks the same, Compass content stands out. It tells players: "We take you seriously."
+**Brand differentiation.** In a market where every operator's RG page looks the same, Playbook content stands out. It tells players: "We take you seriously."
 
-**Regulatory compliance.** Jurisdictions require player-facing education and messaging. Compass makes compliance content that actually works — not just content that checks a box.
+**Regulatory compliance.** Jurisdictions require player-facing education and messaging. Playbook makes compliance content that actually works — not just content that checks a box.
 
 ## Quick start
 
@@ -44,7 +44,7 @@ Think of it this way: Volvo made safety iconic by building beautiful cars that a
 ## Repository structure
 
 ```
-Compass/
+Playbook/
 ├── _brand.yml                       # White-label configuration engine
 ├── README.md                        # You are here
 ├── LICENSE                          # CC0 1.0 Universal
@@ -109,11 +109,11 @@ The [`_brand.yml`](_brand.yml) file is the engine. It holds every customizable v
 
 Fork the repo. Edit `_brand.yml`. Your brand identity cascades everywhere.
 
-**The adaptive identity model.** Compass is *recognizable but adaptive*. The structural patterns (message hierarchy, content architecture, layout principles) stay consistent across operators. The visual surface (colors, fonts, logo) adapts to each operator's brand. A player who encounters Compass-based content at one platform will intuitively recognize the content structure at another — even though they look different.
+**The adaptive identity model.** Playbook is *recognizable but adaptive*. The structural patterns (message hierarchy, content architecture, layout principles) stay consistent across operators. The visual surface (colors, fonts, logo) adapts to each operator's brand. A player who encounters Playbook-based content at one platform will intuitively recognize the content structure at another — even though they look different.
 
 ## Two-tier architecture
 
-Compass uses a two-tier system:
+Playbook uses a two-tier system:
 
 - **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, smart play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging — content players seek out. This is what operators co-brand with.
 
@@ -129,7 +129,7 @@ Compass uses a two-tier system:
 
 This material is for informational and educational purposes only and does not constitute legal, medical, or professional advice. Gambling regulations vary by jurisdiction and change frequently. Operators should verify all compliance requirements with qualified legal counsel. While we strive for accuracy, we cannot guarantee that jurisdiction-specific information is current or complete.
 
-This is not a clinical resource. Compass does not diagnose, treat, or counsel. It is not anti-gambling. It is not a substitute for regulatory compliance.
+This is not a clinical resource. Playbook does not diagnose, treat, or counsel. It is not anti-gambling. It is not a substitute for regulatory compliance.
 
 ## Contributing
 

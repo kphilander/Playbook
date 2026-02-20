@@ -12,7 +12,7 @@ These six principles are non-negotiable. They apply to every piece of {{PROGRAM_
 
 ### 1. Informed, not alarming
 
-"Here's how it works" beats "Here's what could go wrong" — every time. Compass leads with knowledge, not warnings. The goal is to make players smarter, not more anxious.
+"Here's how it works" beats "Here's what could go wrong" — every time. Playbook leads with knowledge, not warnings. The goal is to make players smarter, not more anxious.
 
 - We say "The house edge on slots ranges from 2% to 15%"
 - We don't say "The odds are stacked against you"
@@ -23,7 +23,7 @@ These six principles are non-negotiable. They apply to every piece of {{PROGRAM_
 
 ### 2. Your choice, your tools
 
-We provide information and tools. You decide what to do with them. Compass never tells players what to do — it tells them what's available and lets them choose.
+We provide information and tools. You decide what to do with them. Playbook never tells players what to do — it tells them what's available and lets them choose.
 
 - We say "Set your deposit limit" — not "You should set a deposit limit"
 - We say "Your limits, your call" — not "You must limit your play"
@@ -34,7 +34,7 @@ We provide information and tools. You decide what to do with them. Compass never
 
 ### 3. Smart, not scared
 
-Compass frames smart play as intelligence, not caution. Knowing the odds is a competitive advantage. Setting limits is a power move. Understanding the math makes you a better player.
+Playbook frames smart play as intelligence, not caution. Knowing the odds is a competitive advantage. Setting limits is a power move. Understanding the math makes you a better player.
 
 - We say "Smart players know the house edge before they sit down"
 - We don't say "Be careful — the house always wins"
@@ -45,18 +45,18 @@ Compass frames smart play as intelligence, not caution. Knowing the odds is a co
 
 ### 4. Fun is the point
 
-Gambling is entertainment. Compass exists to help keep it that way. The content should reflect that gambling is something people enjoy — and that understanding it better makes it more enjoyable, not less.
+Gambling is entertainment. Playbook exists to help keep it that way. The content should reflect that gambling is something people enjoy — and that understanding it better makes it more enjoyable, not less.
 
 - We say "Know your game" — not "Know the risks"
 - We acknowledge that gambling is fun, social, and exciting
 - We don't treat gambling as an inherently dangerous activity that requires vigilance
-- We position Compass content as part of the entertainment, not a warning bolted onto it
+- We position Playbook content as part of the entertainment, not a warning bolted onto it
 
-**Why it matters**: If your RG content feels like it was written by someone who doesn't like gambling, players will tune out. Compass is written by people who get it.
+**Why it matters**: If your RG content feels like it was written by someone who doesn't like gambling, players will tune out. Playbook is written by people who get it.
 
 ### 5. Real talk
 
-No corporate hedging. No clinical jargon. No condescension. Compass talks to players the way people actually talk — direct, clear, and conversational.
+No corporate hedging. No clinical jargon. No condescension. Playbook talks to players the way people actually talk — direct, clear, and conversational.
 
 - We use short sentences (15–20 words average)
 - We use common words, not technical terms
@@ -68,7 +68,7 @@ No corporate hedging. No clinical jargon. No condescension. Compass talks to pla
 
 ### 6. Inclusive by default
 
-Compass works for everyone — across age, gender, culture, language ability, and gambling preference. We don't assume anything about who's reading.
+Playbook works for everyone — across age, gender, culture, language ability, and gambling preference. We don't assume anything about who's reading.
 
 - We use "you" and "they," not gendered defaults
 - We cover all verticals — online, land-based, sports, casino, lottery, poker, bingo
@@ -135,43 +135,43 @@ The voice is constant. The tone adapts to four registers:
 
 ## Sample rewrites
 
-The same message in "compliance voice" vs. "Compass voice":
+The same message in "compliance voice" vs. "Playbook voice":
 
 ### Deposit limit prompt
 
 **Compliance**: "In accordance with responsible gaming policies, players may elect to establish voluntary deposit restriction parameters via account settings."
 
-**Compass**: "Set your deposit limit. It takes 10 seconds. Go on, we'll wait."
+**Playbook**: "Set your deposit limit. It takes 10 seconds. Go on, we'll wait."
 
 ### Helpline display
 
 **Compliance**: "If you or someone you know has a gambling problem, call 1-800-522-4700."
 
-**Compass**: "Free, confidential support — for any question about gambling. Call 1-800-522-4700, text 800522, or chat at ncpgambling.org/chat."
+**Playbook**: "Free, confidential support — for any question about gambling. Call 1-800-522-4700, text 800522, or chat at ncpgambling.org/chat."
 
 ### Session awareness
 
 **Compliance**: "Pursuant to regulatory requirements, this notification is to inform you that you have been actively engaged in gambling for a period of 2 hours."
 
-**Compass**: "You've been playing for 2 hours. Most sessions average about 45 minutes. Set a session reminder?"
+**Playbook**: "You've been playing for 2 hours. Most sessions average about 45 minutes. Set a session reminder?"
 
 ### Self-assessment
 
 **Compliance**: "Are you concerned about your gambling behavior? Take a validated screening instrument to assess your risk level."
 
-**Compass**: "Curious about your play style? Take a 2-minute check-in. No judgment, just useful info."
+**Playbook**: "Curious about your play style? Take a 2-minute check-in. No judgment, just useful info."
 
 ### Limit reached
 
 **Compliance**: "Your account has been restricted. You have reached your self-imposed deposit limit. This limit will reset at the beginning of the next billing cycle."
 
-**Compass**: "You've hit your weekly limit. It resets Monday. That's you playing on your own terms."
+**Playbook**: "You've hit your weekly limit. It resets Monday. That's you playing on your own terms."
 
 ### Odds education
 
 **Compliance**: "Players should be aware that gambling outcomes are determined by random number generation and that the mathematical expectation is negative over extended periods of play."
 
-**Compass**: "Every game has a house edge — it's how casinos work. Knowing the edge helps you pick your games and set your budget. Here are the real numbers."
+**Playbook**: "Every game has a house edge — it's how casinos work. Knowing the edge helps you pick your games and set your budget. Here are the real numbers."
 
 ---
 
@@ -214,7 +214,7 @@ These terms are appropriate in clinical, regulatory, and Tier 2 contexts. In Tie
 
 ### Phrases to retire
 
-| Old phrase | Problem | Compass alternative |
+| Old phrase | Problem | Playbook alternative |
 |---|---|---|
 | "Gamble Responsibly" | Implies the player is being irresponsible. Nobody reads it. Zero actionable content. | "Know your game." / "Play on your terms." |
 | "When the fun stops, stop." | Assumes players can self-diagnose in the moment. Many players experiencing harm still report "fun." | "Set your limits before you play." |
@@ -253,7 +253,7 @@ These terms are appropriate in clinical, regulatory, and Tier 2 contexts. In Tie
 
 ### The read-aloud test
 
-Read every piece of Compass content aloud. If it sounds like:
+Read every piece of Playbook content aloud. If it sounds like:
 - A compliance department wrote it → rewrite
 - A doctor is talking to a patient → rewrite
 - A friend explaining something interesting → ship it

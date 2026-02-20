@@ -1,6 +1,6 @@
-# Contributing to Compass
+# Contributing to Playbook
 
-Compass is CC0-licensed. Contributions are welcome from anyone — operators, regulators, designers, writers, or players.
+Playbook is CC0-licensed. Contributions are welcome from anyone — operators, regulators, designers, writers, or players.
 
 ## What we're looking for
 
@@ -14,13 +14,13 @@ Compass is CC0-licensed. Contributions are welcome from anyone — operators, re
 
 ## Content standards
 
-Every contribution should align with the Compass brand:
+Every contribution should align with the Playbook brand:
 
-1. **Reno Model framing.** Gambling is entertainment. Most players are fine. Compass helps them stay informed. Don't frame content around harm prevention or crisis intervention — that's Tier 2, and it has its own voice.
+1. **Reno Model framing.** Gambling is entertainment. Most players are fine. Playbook helps them stay informed. Don't frame content around harm prevention or crisis intervention — that's Tier 2, and it has its own voice.
 
 2. **Marketing-quality writing.** Would an operator's CMO put this next to their brand? If it reads like a government pamphlet, a clinical report, or a compliance checkbox, rewrite it.
 
-3. **Confident wit.** Compass has personality. Educational content should be engaging, not dry. Humor is welcome in myth-busting and general awareness content. It's not appropriate for Tier 2 (crisis/support) contexts.
+3. **Confident wit.** Playbook has personality. Educational content should be engaging, not dry. Humor is welcome in myth-busting and general awareness content. It's not appropriate for Tier 2 (crisis/support) contexts.
 
 4. **Tier 1 language.** Avoid the terms listed in `_brand.yml > tone > avoid_in_tier_1`. Use the preferred alternatives. See [brand-book/04-voice-and-tone.md](brand-book/04-voice-and-tone.md) for the full guide.
 
@@ -74,7 +74,7 @@ Open a GitHub issue for:
 
 ## Review process
 
-1. **Content review**: Accurate, well-sourced, consistent with Compass voice?
+1. **Content review**: Accurate, well-sourced, consistent with Playbook voice?
 2. **Structure review**: Follows existing file patterns and naming conventions?
 3. **Brand alignment**: Reno Model framing? Tier 1 language? Engaging tone?
 4. **Legal review** (jurisdiction modules): Regulatory info verified against primary sources?

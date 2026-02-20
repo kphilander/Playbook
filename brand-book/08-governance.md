@@ -15,7 +15,7 @@ Every operator deploying {{PROGRAM_NAME}} should designate a **brand owner** —
 - Approving adaptations and exceptions
 - Coordinating with legal/compliance on jurisdiction-specific messaging
 - Training new team members on the brand system
-- Managing the relationship with the upstream Compass open-source project
+- Managing the relationship with the upstream Playbook open-source project
 
 ### Recommended ownership model
 
@@ -146,12 +146,12 @@ For content with jurisdiction-specific claims:
 
 ### Onboarding new team members
 
-When someone new joins a team that creates Compass content:
+When someone new joins a team that creates Playbook content:
 
 1. **Read the brand book** — at minimum, the Introduction (Chapter 0) and Voice and Tone (Chapter 4)
 2. **Review the glossary** — understand preferred and avoided terminology
 3. **Walk through `_brand.yml`** — understand how the white-label system works
-4. **Review existing content** — read 3 examples that embody the Compass voice
+4. **Review existing content** — read 3 examples that embody the Playbook voice
 5. **Write a test piece** — draft a short piece and have the brand owner review it
 
 **Estimated time**: 2–3 hours for thorough onboarding.
@@ -167,7 +167,7 @@ When someone new joins a team that creates Compass content:
 
 ## Upstream contributions
 
-If you've adopted Compass from the open-source repository and made improvements, consider contributing them back.
+If you've adopted Playbook from the open-source repository and made improvements, consider contributing them back.
 
 ### What to contribute
 
@@ -191,7 +191,7 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for the contribution workflow and cont
 
 ### North star: Operator adoption
 
-The primary success metric for Compass as an open-source project is **operator adoption** — the number of operators who fork, customize, and deploy the system.
+The primary success metric for Playbook as an open-source project is **operator adoption** — the number of operators who fork, customize, and deploy the system.
 
 | Metric | How to measure |
 |---|---|
@@ -202,12 +202,12 @@ The primary success metric for Compass as an open-source project is **operator a
 
 ### Downstream proof: Player engagement
 
-For individual operators, the proof that Compass works is **player engagement with the content**:
+For individual operators, the proof that Playbook works is **player engagement with the content**:
 
 | Metric | How to measure |
 |---|---|
 | Quiz completions | Number of players who start and finish quizzes |
-| Content engagement | Time on page, scroll depth, click-through on Compass content |
+| Content engagement | Time on page, scroll depth, click-through on Playbook content |
 | Tool adoption | Percentage of players with at least one active limit |
 | Feature usage | Session reminder activations, bankroll planner usage |
 | Share rate | How often players share quiz results or myth-busters |
@@ -226,10 +226,10 @@ For individual operators, the proof that Compass works is **player engagement wi
 
 ### What NOT to measure
 
-Compass is not a clinical intervention. Don't measure:
-- "Problem gambling reduction" (Compass doesn't treat conditions)
-- "Harm prevention" (Compass prevents nothing — it informs)
-- "At-risk player identification" (Compass doesn't diagnose)
+Playbook is not a clinical intervention. Don't measure:
+- "Problem gambling reduction" (Playbook doesn't treat conditions)
+- "Harm prevention" (Playbook prevents nothing — it informs)
+- "At-risk player identification" (Playbook doesn't diagnose)
 
 Measure engagement. Measure adoption. Measure whether players find the content useful and interesting. That's the standard.
 

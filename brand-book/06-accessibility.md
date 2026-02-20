@@ -72,7 +72,7 @@ Never use color as the only way to convey information:
 
 ## Cognitive accessibility
 
-Players come to Compass content in all kinds of states — relaxed and curious, stressed and looking for help, tired after a long session. Design for all of them.
+Players come to Playbook content in all kinds of states — relaxed and curious, stressed and looking for help, tired after a long session. Design for all of them.
 
 ### Plain language
 
@@ -165,7 +165,7 @@ All interactive elements must be fully operable with keyboard alone:
 ### Translation guidelines
 
 - **Translate meaning, not words**: Adapt for the target culture
-- **Maintain voice principles**: Translations must preserve the Compass tone
+- **Maintain voice principles**: Translations must preserve the Playbook tone
 - **Test with native speakers**: Machine translation is a draft, not a final product
 - **Account for text expansion**: Translated text is often 20–40% longer than English
 

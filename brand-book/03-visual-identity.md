@@ -2,9 +2,9 @@
 
 This chapter defines the visual system for {{PROGRAM_NAME}} — the logo, colors, typography, iconography, photography, and illustration guidelines that make the brand recognizable across every touchpoint.
 
-**The visual quality rule**: Compass content must match or exceed the production quality of the operator's commercial marketing. If the RG content looks cheaper, older, or more generic than the promotional content around it, players will treat it like fine print. Design it like you'd design a product launch — because that's what it is.
+**The visual quality rule**: Playbook content must match or exceed the production quality of the operator's commercial marketing. If the RG content looks cheaper, older, or more generic than the promotional content around it, players will treat it like fine print. Design it like you'd design a product launch — because that's what it is.
 
-**The adaptive identity model**: {{PROGRAM_NAME}} is designed to be recognizable but adaptive. Operators apply their own colors and fonts while keeping the structural identity (layout patterns, information hierarchy, icon system, spacing) consistent. A player who encounters Compass-based content at one platform will intuitively recognize the content structure at another — even though they look different.
+**The adaptive identity model**: {{PROGRAM_NAME}} is designed to be recognizable but adaptive. Operators apply their own colors and fonts while keeping the structural identity (layout patterns, information hierarchy, icon system, spacing) consistent. A player who encounters Playbook-based content at one platform will intuitively recognize the content structure at another — even though they look different.
 
 > All color values, fonts, and specifications reference the central configuration in [`_brand.yml`](../_brand.yml). Update that file to customize the visual identity for your organization.
 
@@ -19,7 +19,7 @@ The {{PROGRAM_NAME}} logo identifies gambling entertainment literacy content. It
 ### Logo components
 
 The {{PROGRAM_NAME}} logo consists of:
-- **Logomark**: A symbol (compass motif) that works independently at small sizes
+- **Logomark**: A symbol (open playbook / strategy diagram motif) that works independently at small sizes
 - **Wordmark**: The program name set in the brand typeface
 - **Lockup**: The logomark and wordmark combined (primary usage)
 
@@ -161,7 +161,7 @@ When customizing the palette:
 1. Replace primary/secondary/accent colors with your brand colors
 2. Keep the semantic palette (success/warning/danger/info) standard — players learn these associations
 3. Verify every new color combination against WCAG 2.1 AA
-4. Your Compass content should feel visually integrated with your commercial brand, not siloed into a separate "RG section" aesthetic
+4. Your Playbook content should feel visually integrated with your commercial brand, not siloed into a separate "RG section" aesthetic
 5. Update all values in `_brand.yml` so they cascade throughout the system
 
 ---
@@ -208,7 +208,7 @@ When customizing fonts:
 1. Choose fonts with broad weight support (minimum: regular and bold)
 2. Match the quality and modernity of your operator's commercial typography
 3. Ensure the font supports character sets for your operating jurisdictions
-4. Test readability at small sizes — Compass content often appears in constrained spaces
+4. Test readability at small sizes — Playbook content often appears in constrained spaces
 
 ---
 
@@ -234,7 +234,7 @@ Every {{PROGRAM_NAME}} implementation needs these:
 
 | Icon | Name | Usage |
 |---|---|---|
-| Compass | `icon-compass` | Brand identifier, navigation, home |
+| Playbook | `icon-playbook` | Brand identifier, navigation, home |
 | Timer/clock | `icon-timer` | Session awareness, play duration |
 | Gauge/limit | `icon-limit` | Deposit limits, loss limits, wagering limits |
 | Chart/graph | `icon-activity` | Activity tracking, play history, stats |
@@ -280,7 +280,7 @@ Photography in {{PROGRAM_NAME}} materials should feel like a lifestyle editorial
 
 ### The gambling environment question
 
-Unlike traditional RG programs that avoid all gambling imagery, Compass takes a different approach:
+Unlike traditional RG programs that avoid all gambling imagery, Playbook takes a different approach:
 
 - **Casino environments**: Can appear if the mood is social, fun, and energetic — people enjoying a night out. Not dim rooms with solitary players.
 - **Sports contexts**: Encouraged — friends watching games, stadium energy, sports culture
@@ -349,7 +349,7 @@ All dark mode combinations must pass WCAG 2.1 AA contrast requirements.
 
 ## 8. The visual integration test
 
-Before shipping any Compass content, apply this test:
+Before shipping any Playbook content, apply this test:
 
 1. **Place it next to the operator's commercial content.** Does it look like it belongs, or does it look like it was bolted on from a different brand?
 2. **Would a CMO put their name on this?** If it looks like a compliance department made it, redesign.
