@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — Email Template Examples</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../visual-identity/design-tokens.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--pb-font-body);
+      background: var(--pb-color-neutral-100);
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+    .page-title {
+      font-family: var(--pb-font-heading);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pb-color-neutral-500);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .email-row {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .email-block {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .email-label {
+      font-family: var(--pb-font-heading);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pb-color-neutral-500);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* ═══ EMAIL FRAME ═══ */
+    .email {
+      width: 480px;
+      background: var(--pb-color-white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(27,40,56,0.12);
+    }
+
+    /* Email header banner */
+    .email-hero {
+      background: var(--pb-color-primary);
+      padding: 36px 32px;
+      text-align: center;
+      position: relative;
+    }
+    .email-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--pb-color-secondary), var(--pb-color-accent));
+    }
+    .email-logo {
+      font-family: var(--pb-font-heading);
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--pb-color-white);
+      margin-bottom: 4px;
+      letter-spacing: -0.02em;
+    }
+    .email-logo-sub {
+      font-size: 12px;
+      color: var(--pb-color-neutral-500);
+    }
+    .email-hero h2 {
+      font-family: var(--pb-font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--pb-color-white);
+      margin-top: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .email-hero p {
+      font-size: 15px;
+      color: var(--pb-color-neutral-300);
+      margin-top: 8px;
+    }
+
+    /* Email body */
+    .email-body {
+      padding: 32px;
+    }
+    .email-body h3 {
+      font-family: var(--pb-font-heading);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--pb-color-primary);
+      margin-bottom: 8px;
+    }
+    .email-body p {
+      font-size: 15px;
+      color: var(--pb-color-neutral-700);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .email-body .highlight {
+      color: var(--pb-color-primary);
+      font-weight: 600;
+    }
+
+    .email-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-family: var(--pb-font-heading);
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      margin: 8px 0 20px;
+      transition: all 150ms;
+    }
+    .email-btn-accent {
+      background: var(--pb-color-accent);
+      color: var(--pb-color-primary);
+    }
+    .email-btn-secondary {
+      background: var(--pb-color-secondary);
+      color: var(--pb-color-primary);
+    }
+
+    /* Stat row in email */
+    .email-stats {
+      display: flex;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    .email-stat {
+      flex: 1;
+      background: var(--pb-color-neutral-50);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+    .email-stat-val {
+      font-family: var(--pb-font-mono);
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--pb-color-primary);
+    }
+    .email-stat-label {
+      font-size: 12px;
+      color: var(--pb-color-neutral-500);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Tip box */
+    .email-tip {
+      background: rgba(0,212,170,0.06);
+      border-left: 3px solid var(--pb-color-secondary);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .email-tip-label {
+      font-family: var(--pb-font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--pb-color-secondary-dark);
+      margin-bottom: 4px;
+    }
+    .email-tip p {
+      font-size: 14px;
+      color: var(--pb-color-neutral-700);
+      margin: 0;
+    }
+
+    /* Warning box */
+    .email-warning {
+      background: rgba(255,179,0,0.08);
+      border-left: 3px solid var(--pb-color-warning);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+    .email-warning-label {
+      font-family: var(--pb-font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #996B00;
+      margin-bottom: 4px;
+    }
+    .email-warning p {
+      font-size: 14px;
+      color: var(--pb-color-neutral-700);
+      margin: 0;
+    }
+
+    /* Odds table */
+    .email-odds-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+    }
+    .email-odds-table th {
+      font-family: var(--pb-font-heading);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--pb-color-neutral-500);
+      text-align: left;
+      padding: 8px 12px;
+      border-bottom: 2px solid var(--pb-color-neutral-100);
+    }
+    .email-odds-table td {
+      font-size: 14px;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--pb-color-neutral-50);
+      color: var(--pb-color-neutral-700);
+    }
+    .email-odds-table td:last-child {
+      font-family: var(--pb-font-mono);
+      font-weight: 600;
+      color: var(--pb-color-primary);
+    }
+
+    /* Email footer */
+    .email-footer {
+      background: var(--pb-color-primary);
+      padding: 24px 32px;
+      text-align: center;
+    }
+    .email-footer-help {
+      font-size: 13px;
+      color: var(--pb-color-neutral-300);
+      margin-bottom: 8px;
+    }
+    .email-footer-help strong {
+      font-family: var(--pb-font-mono);
+      color: var(--pb-color-white);
+      font-weight: 600;
+    }
+    .email-footer-help a {
+      color: var(--pb-color-secondary);
+      text-decoration: none;
+    }
+    .email-footer-meta {
+      font-size: 11px;
+      color: var(--pb-color-neutral-500);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<p class="page-title">Email Template Examples — Playbook Brand System</p>
+
+<div class="email-row">
+
+  <!-- ═══ EMAIL 1: Welcome / Onboarding ═══ -->
+  <div class="email-block">
+    <span class="email-label">Welcome Email (Onboarding)</span>
+    <div class="email">
+      <div class="email-hero">
+        <div class="email-logo">LuckyDraw</div>
+        <div class="email-logo-sub">Powered by Playbook</div>
+        <h2>Welcome. Let's set you up.</h2>
+        <p>3 things smart players do in their first 5 minutes.</p>
+      </div>
+      <div class="email-body">
+        <h3>1. Set your deposit limit</h3>
+        <p>Think of it as your entertainment budget. Pick an amount, pick a timeframe. Takes <span class="highlight">10 seconds</span>. Most players say it makes the experience better.</p>
+
+        <a href="#" class="email-btn email-btn-accent">Set your limit now &rarr;</a>
+
+        <h3>2. Know your odds</h3>
+        <p>Every game has a house edge. Knowing it helps you pick your games and manage your budget.</p>
+
+        <table class="email-odds-table">
+          <thead>
+            <tr><th>Game</th><th>House Edge</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Blackjack (basic strategy)</td><td>0.5%</td></tr>
+            <tr><td>European Roulette</td><td>2.7%</td></tr>
+            <tr><td>Slots (avg)</td><td>4-10%</td></tr>
+          </tbody>
+        </table>
+
+        <h3>3. Take the Game IQ quiz</h3>
+        <p>2 minutes, 8 questions. Find out what you know (and what most people get wrong) about how games work.</p>
+
+        <a href="#" class="email-btn email-btn-secondary">Take the quiz &rarr;</a>
+
+        <div class="email-tip">
+          <div class="email-tip-label">Smart play tip</div>
+          <p>Players who set deposit limits in their first session are 4x more likely to rate their experience as "enjoyable."</p>
+        </div>
+      </div>
+      <div class="email-footer">
+        <div class="email-footer-help">
+          Free, confidential support 24/7 &mdash; <strong>1-800-522-4700</strong> &bull; <a href="#">Chat now</a>
+        </div>
+        <div class="email-footer-meta">
+          You're receiving this because you signed up for LuckyDraw Casino.<br>
+          Smart Play program powered by Playbook (CC0 Public Domain).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ EMAIL 2: Weekly Summary ═══ -->
+  <div class="email-block">
+    <span class="email-label">Weekly Activity Summary</span>
+    <div class="email">
+      <div class="email-hero" style="padding: 28px 32px;">
+        <div class="email-logo">LuckyDraw</div>
+        <div class="email-logo-sub">Your weekly summary</div>
+        <h2 style="font-size: 22px; margin-top: 16px;">Here's your week at a glance</h2>
+        <p>Feb 10 &ndash; Feb 16, 2026</p>
+      </div>
+      <div class="email-body">
+        <div class="email-stats">
+          <div class="email-stat">
+            <div class="email-stat-val">4h 12m</div>
+            <div class="email-stat-label">Play time</div>
+          </div>
+          <div class="email-stat">
+            <div class="email-stat-val">$142</div>
+            <div class="email-stat-label">Net spend</div>
+          </div>
+          <div class="email-stat">
+            <div class="email-stat-val">$58</div>
+            <div class="email-stat-label">Remaining</div>
+          </div>
+        </div>
+
+        <p>You played <span class="highlight">3 sessions</span> this week, averaging 1h 24m each. Your most-played game was <span class="highlight">Blackjack</span> (house edge: 0.5%).</p>
+
+        <div class="email-tip">
+          <div class="email-tip-label">Your trend</div>
+          <p>Your average session length is down 15 minutes from last week. Nice &mdash; shorter sessions tend to be more enjoyable.</p>
+        </div>
+
+        <h3>Budget check</h3>
+        <p>You've used <span class="highlight">71%</span> of your $200 weekly deposit limit. Your limit resets on Monday.</p>
+
+        <!-- Budget bar -->
+        <div style="background: var(--pb-color-neutral-100); border-radius: 8px; height: 12px; margin: 12px 0 24px; overflow: hidden;">
+          <div style="background: linear-gradient(90deg, var(--pb-color-secondary), var(--pb-color-secondary-dark)); height: 100%; width: 71%; border-radius: 8px;"></div>
+        </div>
+
+        <h3>Did you know?</h3>
+        <p>The "near miss" effect on slots is a design feature, not a sign you're close to winning. Each spin is completely independent.</p>
+
+        <a href="#" class="email-btn email-btn-accent">See your full activity &rarr;</a>
+
+        <div class="email-warning" style="margin-top: 12px;">
+          <div class="email-warning-label">Adjust your limit?</div>
+          <p>If your budget doesn't feel right, you can change it anytime. Decreases are instant; increases take 24 hours.</p>
+        </div>
+      </div>
+      <div class="email-footer">
+        <div class="email-footer-help">
+          Free, confidential support 24/7 &mdash; <strong>1-800-522-4700</strong> &bull; <a href="#">Chat now</a>
+        </div>
+        <div class="email-footer-meta">
+          Weekly summary from LuckyDraw Casino Smart Play.<br>
+          Powered by Playbook (CC0 Public Domain).
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

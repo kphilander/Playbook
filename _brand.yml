@@ -115,17 +115,17 @@ color:
     text_primary: "neutral_900"
     text_secondary: "neutral_700"
     text_muted: "neutral_500"
-    link: "secondary"
-    link_hover: "secondary_dark"
+    link: "primary_light"                  # 10.80:1 on white (was secondary @ 1.91:1 — FAIL)
+    link_hover: "primary"                  # 14.92:1 on white (was secondary_dark @ 3.02:1 — FAIL)
     cta_primary_bg: "accent"
-    cta_primary_text: "white"
+    cta_primary_text: "primary"            # 5.26:1 on accent (was white @ 2.84:1 — FAIL)
     cta_secondary_bg: "secondary"
-    cta_secondary_text: "white"
+    cta_secondary_text: "primary"          # 7.82:1 on secondary (was white @ 1.91:1 — FAIL)
     quiz_correct: "success"
     quiz_incorrect: "danger"
     feature_highlight: "secondary"
     helpline_banner: "primary"
-    border: "neutral_300"
+    border: "neutral_500"                  # 5.13:1 on white (was neutral_300 @ 2.33:1 — FAIL)
     divider: "neutral_100"
 
 
