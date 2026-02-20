@@ -1,18 +1,18 @@
 # Chapter 8: Governance
 
-This chapter defines how to manage, maintain, and evolve the {{PROGRAM_NAME}} brand over time. A brand system is only as good as its stewardship — without clear ownership, regular review, and a process for updates, guidelines drift and consistency erodes.
+A brand system is only as good as its stewardship. Without clear ownership, regular review, and a process for updates, guidelines drift and consistency erodes. This chapter defines how to manage, maintain, and evolve the {{PROGRAM_NAME}} brand — and how to measure whether it's working.
 
 ---
 
 ## Brand stewardship
 
-### Who owns the RG brand
+### Who owns the brand
 
 Every operator deploying {{PROGRAM_NAME}} should designate a **brand owner** — a person or team responsible for:
 
-- Maintaining the brand guidelines and keeping them current
+- Maintaining the guidelines and keeping them current
 - Reviewing new content for brand consistency before publication
-- Approving adaptations and exceptions to the guidelines
+- Approving adaptations and exceptions
 - Coordinating with legal/compliance on jurisdiction-specific messaging
 - Training new team members on the brand system
 - Managing the relationship with the upstream Compass open-source project
@@ -22,13 +22,13 @@ Every operator deploying {{PROGRAM_NAME}} should designate a **brand owner** —
 | Organization size | Recommended owner |
 |---|---|
 | Small operator (< 50 employees) | Marketing lead or product manager |
-| Mid-size operator (50-500 employees) | Dedicated RG program manager |
-| Large operator (500+ employees) | RG team with brand manager, content strategist, and compliance liaison |
+| Mid-size operator (50–500 employees) | Dedicated program manager |
+| Large operator (500+ employees) | Team with brand manager, content strategist, and compliance liaison |
 | Regulator / non-profit | Communications director |
 
 ### Cross-functional involvement
 
-While one person or team owns the brand, these functions should be consulted on relevant decisions:
+While one person or team owns the brand, these functions should be consulted:
 
 | Function | Consulted on |
 |---|---|
@@ -36,8 +36,7 @@ While one person or team owns the brand, these functions should be consulted on 
 | **Product / UX** | Digital touchpoint design, feature placement, user flows |
 | **Customer service** | Scripts, training content, front-line messaging |
 | **Marketing** | Campaign messaging, co-branding, advertising |
-| **Research** | Messaging effectiveness, player feedback, behavior data |
-| **Responsible gambling team** | Program strategy, tool selection, player protection policies |
+| **Data / analytics** | Engagement metrics, content performance, player behavior |
 
 ---
 
@@ -45,20 +44,20 @@ While one person or team owns the brand, these functions should be consulted on 
 
 ### Annual brand review
 
-Conduct a comprehensive review of the brand guidelines once per year. This review should cover:
+Conduct a comprehensive review once per year:
 
 | Review area | What to check |
 |---|---|
 | **Brand foundation** | Do the mission, vision, and pillars still reflect the program's direction? |
-| **Visual identity** | Are assets current? Do colors and fonts still meet accessibility standards? Are there new platform requirements? |
-| **Voice and tone** | Is the language guide current with best practices? Are there new terms to add or retire? |
-| **Messaging** | Are taglines and CTAs still effective? Is the message architecture still comprehensive? |
-| **Accessibility** | Have WCAG standards been updated? Are there new accessibility requirements? |
-| **Jurisdictions** | Have regulatory requirements changed? Are all jurisdiction modules current? |
+| **Visual identity** | Are assets current? Do colors and fonts still meet accessibility standards? |
+| **Voice and tone** | Is the language guide current? Are there new terms to add or retire? |
+| **Messaging** | Are taglines and CTAs still effective? Is the content still engaging? |
+| **Accessibility** | Have WCAG standards been updated? New requirements? |
+| **Jurisdictions** | Have regulatory requirements changed? All modules current? |
 
 ### Quarterly regulatory check
 
-Gambling regulations change frequently. Every quarter, verify that:
+Gambling regulations change frequently. Every quarter, verify:
 
 - Jurisdiction-specific required messaging is still accurate
 - Helpline numbers and URLs are still active
@@ -68,15 +67,13 @@ Gambling regulations change frequently. Every quarter, verify that:
 
 ### Continuous updates
 
-Some changes don't wait for a review cycle:
-
 | Trigger | Action | Timeline |
 |---|---|---|
 | Regulatory change | Update affected jurisdiction module | Within 30 days of effective date |
-| Helpline number change | Update `_brand.yml` and all affected content | Immediately |
-| New jurisdiction launch | Create jurisdiction module from template | Before market launch |
-| Player feedback indicating confusion | Review and revise affected messaging | Within 2 weeks |
-| Accessibility issue discovered | Fix the issue | Within 1 week |
+| Helpline number change | Update `_brand.yml` and all content | Immediately |
+| New jurisdiction launch | Create module from template | Before market launch |
+| Content underperforming | Review and revise | Within 2 weeks |
+| Accessibility issue | Fix | Within 1 week |
 
 ---
 
@@ -88,44 +85,35 @@ Some changes don't wait for a review cycle:
 
 | Version component | When to increment | Example |
 |---|---|---|
-| **MAJOR** (X.0.0) | Breaking changes to brand identity, fundamental voice shifts, system architecture changes | Rebranding, new pillar system, structural reorganization |
-| **MINOR** (0.X.0) | New content that doesn't break existing usage — new chapters, jurisdiction modules, collateral templates | Adding Australia jurisdiction, new campaign messaging |
-| **PATCH** (0.0.X) | Corrections, clarifications, regulatory updates, typo fixes | Updated UK helpline number, corrected contrast ratio |
+| **MAJOR** (X.0.0) | Breaking changes to brand identity or architecture | Rebranding, new pillar system, structural reorganization |
+| **MINOR** (0.X.0) | New content that doesn't break existing usage | Adding jurisdiction, new collateral templates, new messaging |
+| **PATCH** (0.0.X) | Corrections, clarifications, regulatory updates | Updated helpline number, corrected contrast ratio, typo fix |
 
 ### CHANGELOG maintenance
 
-Every change to the brand guidelines must be documented in `CHANGELOG.md`:
+Every change must be documented in `CHANGELOG.md`:
 
 ```markdown
 ## [0.2.0] - YYYY-MM-DD
 
 ### Added
-- Jurisdiction module: Australia (ACMA requirements, state-territory modules)
-- Collateral template: Mobile app onboarding flow
+- Jurisdiction module: Australia (ACMA requirements)
+- Interactive content: Game IQ quiz framework
 
 ### Changed
-- Updated UK helpline number to reflect GambleAware rebrand
-- Revised self-exclusion messaging per user research findings
+- Updated UK helpline number
+- Revised session reminder messaging per A/B test results
 
 ### Fixed
 - Corrected contrast ratio for accent-on-white combination
-- Fixed broken link in Chapter 5 messaging framework
 ```
 
 ### Git workflow
 
-For organizations using Git to manage their brand guidelines:
-
-1. **Main branch** contains the current approved guidelines
-2. **Feature branches** for proposed changes (e.g., `update/uk-advertising-rules`)
-3. **Pull requests** for review before merging to main
+1. **Main branch** contains current approved guidelines
+2. **Feature branches** for proposed changes
+3. **Pull requests** for review before merging
 4. **Tags** for each version release (e.g., `v0.2.0`)
-
-This workflow provides:
-- Full history of every change and who made it
-- Ability to diff versions and see exactly what changed
-- Rollback capability if a change causes issues
-- Clear review process before changes go live
 
 ---
 
@@ -133,26 +121,24 @@ This workflow provides:
 
 ### Content approval levels
 
-Not all changes need the same level of review:
-
-| Change type | Approval required | Examples |
-|---|---|---|
-| **Typo / formatting fix** | Brand owner | Fixing a broken link, correcting a typo |
-| **Messaging update** | Brand owner + compliance | New tagline, revised CTA, updated self-assessment copy |
-| **Visual identity change** | Brand owner + design lead | New icon, color palette adjustment, logo modification |
-| **Jurisdiction module** | Brand owner + legal/compliance | New jurisdiction, updated regulatory requirements |
-| **Voice / tone change** | Brand owner + RG program lead | New language guidelines, retired phrases |
-| **Structural change** | Brand owner + executive sponsor | New brand pillars, architecture changes, major repositioning |
+| Change type | Approval required |
+|---|---|
+| Typo / formatting fix | Brand owner |
+| Messaging update | Brand owner + compliance |
+| Visual identity change | Brand owner + design lead |
+| Jurisdiction module | Brand owner + legal/compliance |
+| Voice / tone change | Brand owner + program lead |
+| Structural change | Brand owner + executive sponsor |
 
 ### Compliance sign-off
 
-For any content that includes jurisdiction-specific claims or required messaging:
+For content with jurisdiction-specific claims:
 
-1. Draft the content following the brand guidelines
+1. Draft content following brand guidelines
 2. Cross-reference against the relevant jurisdiction module
 3. Have legal/compliance verify regulatory accuracy
-4. Document the compliance review (date, reviewer, jurisdiction)
-5. Set a review date (typically quarterly) in the jurisdiction module's `last_updated` field
+4. Document the review (date, reviewer, jurisdiction)
+5. Set a review date in the jurisdiction module
 
 ---
 
@@ -160,90 +146,92 @@ For any content that includes jurisdiction-specific claims or required messaging
 
 ### Onboarding new team members
 
-When someone new joins a team that creates or manages RG content:
+When someone new joins a team that creates Compass content:
 
 1. **Read the brand book** — at minimum, the Introduction (Chapter 0) and Voice and Tone (Chapter 4)
 2. **Review the glossary** — understand preferred and avoided terminology
 3. **Walk through `_brand.yml`** — understand how the white-label system works
-4. **Review three examples** — look at existing content that exemplifies the brand
-5. **Write a test piece** — draft a short piece of RG content and have the brand owner review it
+4. **Review existing content** — read 3 examples that embody the Compass voice
+5. **Write a test piece** — draft a short piece and have the brand owner review it
 
-**Estimated time**: 2-3 hours for a thorough onboarding.
+**Estimated time**: 2–3 hours for thorough onboarding.
 
 ### Ongoing education
 
-- Share notable examples of good and bad RG messaging with the team (anonymized if necessary)
-- When the brand guidelines are updated, send a summary of changes to all content creators
-- Consider an annual "brand refresh" workshop where the team reviews the guidelines together
-- Monitor industry developments (new research on messaging effectiveness, regulatory changes) and share relevant findings
+- Share examples of good and bad player education messaging (anonymized)
+- When guidelines are updated, summarize changes for all content creators
+- Consider an annual brand refresh workshop
+- Monitor industry developments and share relevant findings
 
 ---
 
 ## Upstream contributions
 
-If you've adopted Compass from the open-source repository and made improvements, consider contributing them back:
+If you've adopted Compass from the open-source repository and made improvements, consider contributing them back.
 
 ### What to contribute
 
 | Contribution type | Impact |
 |---|---|
-| **New jurisdiction module** | High — helps operators in new markets |
-| **Translation** | High — expands accessibility |
-| **Messaging improvements backed by research** | High — evidence-based improvements benefit everyone |
-| **Accessibility improvements** | High — helps all players |
-| **Bug fixes** (broken links, typos, inaccuracies) | Medium — maintains quality |
-| **New collateral templates** | Medium — expands the toolkit |
+| New jurisdiction module | High — helps operators in new markets |
+| Translation | High — expands accessibility |
+| Messaging improvements backed by data | High — evidence-based improvements benefit everyone |
+| Accessibility improvements | High — helps all players |
+| Bug fixes (broken links, typos, inaccuracies) | Medium — maintains quality |
+| New collateral templates | Medium — expands the toolkit |
+| Interactive content concepts | Medium — new quiz/calculator ideas |
 
 ### How to contribute
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for the contribution workflow, content standards, and review process.
-
-### What not to contribute
-
-- Proprietary content specific to your operator
-- Content that promotes gambling
-- Unverified regulatory claims
-- Content that contradicts person-first language guidelines
+See [CONTRIBUTING.md](../CONTRIBUTING.md) for the contribution workflow and content standards.
 
 ---
 
-## Measuring brand effectiveness
+## Measuring success
 
-A brand system is only valuable if it achieves its goals. Measure {{PROGRAM_NAME}} effectiveness across three dimensions:
+### North star: Operator adoption
 
-### Awareness
-
-*Do players know the program exists?*
+The primary success metric for Compass as an open-source project is **operator adoption** — the number of operators who fork, customize, and deploy the system.
 
 | Metric | How to measure |
 |---|---|
-| Aided awareness | Survey: "Have you heard of {{PROGRAM_NAME}}?" |
-| Unaided awareness | Survey: "Can you name any RG programs?" |
-| Website traffic | Analytics: unique visits to RG landing page |
-| Social reach | Platform analytics: impressions on RG content |
+| Forks | GitHub fork count |
+| Deployments | Self-reported (operators who share their implementation) |
+| Contributions | PRs and issues from adopters |
+| Star count | GitHub stars as a proxy for interest |
 
-### Engagement
+### Downstream proof: Player engagement
 
-*Do players use the tools and content?*
+For individual operators, the proof that Compass works is **player engagement with the content**:
 
 | Metric | How to measure |
 |---|---|
+| Quiz completions | Number of players who start and finish quizzes |
+| Content engagement | Time on page, scroll depth, click-through on Compass content |
 | Tool adoption | Percentage of players with at least one active limit |
-| Self-assessment completion | Number of self-assessments started and completed |
-| Session reminder usage | Percentage of players with active session reminders |
-| Content engagement | Time on page, scroll depth, click-through on RG content |
-| Helpline referrals | Click/call tracking on helpline numbers from digital touchpoints |
+| Feature usage | Session reminder activations, bankroll planner usage |
+| Share rate | How often players share quiz results or myth-busters |
+| Return visits | How often players come back to the content hub |
 
-### Perception
+### Content performance
 
-*How do players feel about the program?*
-
-| Metric | How to measure |
+| Metric | What it tells you |
 |---|---|
-| Brand sentiment | Survey: "How would you describe {{PROGRAM_NAME}} in your own words?" |
-| Stigma reduction | Survey: "How comfortable would you be using RG tools?" (before/after) |
-| Helpfulness | Survey: "How helpful do you find the RG information on this platform?" |
-| Trust | Survey: "Do you trust that this operator cares about player wellbeing?" |
+| Quiz completion rate | Is the content engaging enough to finish? |
+| Share rate | Is the content interesting enough to share voluntarily? |
+| Helpline click-through | Are support resources findable when needed? |
+| Deposit limit adoption | Are tools framed effectively as features? |
+| Content hub return visits | Is the content worth coming back to? |
+| Social engagement rate | Does the content earn attention on social media? |
+
+### What NOT to measure
+
+Compass is not a clinical intervention. Don't measure:
+- "Problem gambling reduction" (Compass doesn't treat conditions)
+- "Harm prevention" (Compass prevents nothing — it informs)
+- "At-risk player identification" (Compass doesn't diagnose)
+
+Measure engagement. Measure adoption. Measure whether players find the content useful and interesting. That's the standard.
 
 See `implementation/measurement-framework.md` for a complete measurement plan template.
 
