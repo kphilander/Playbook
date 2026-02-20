@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; background: transparent; }
+
+    .story-card {
+      width: 1080px;
+      height: 1920px;
+      position: relative;
+      background: linear-gradient(180deg, #1B2838 0%, #0F1923 100%);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top accent bar */
+    .story-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #00D4AA, #FF6B35);
+    }
+
+    /* Subtle grid pattern overlay */
+    .story-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .story-header {
+      padding: 56px 48px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    .story-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .story-pillar {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1B2838;
+      background: #00D4AA;
+      padding: 8px 20px;
+      border-radius: 100px;
+    }
+
+    .story-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .myth-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FF6B35;
+      margin-bottom: 20px;
+    }
+    .myth-statement {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+    }
+    .myth-statement .strike {
+      text-decoration: line-through;
+      text-decoration-color: #FF6B35;
+      text-decoration-thickness: 5px;
+      color: #A8A8C0;
+    }
+    .fact-statement {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 30px;
+      line-height: 1.55;
+      color: #A8A8C0;
+    }
+    .fact-statement strong {
+      color: #00D4AA;
+      font-weight: 600;
+    }
+
+    .story-footer {
+      padding: 0 48px 48px;
+      position: relative;
+      z-index: 1;
+    }
+    .story-cta {
+      display: block;
+      width: 100%;
+      padding: 28px;
+      background: #FF6B35;
+      color: #1B2838;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      border-radius: 20px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="story-card">
+    <div class="story-header">
+      <span class="story-logo">Playbook</span>
+      <span class="story-pillar">Sharp</span>
+    </div>
+    <div class="story-body">
+      <div class="myth-label">Quick Myth</div>
+      <div class="myth-statement">
+        <span class="strike">"I'm on a hot streak"</span>
+      </div>
+      <div class="fact-statement">
+        Every spin is <strong>statistically independent</strong>.
+        Your brain sees patterns. The math doesn't.
+      </div>
+    </div>
+    <div class="story-footer">
+      <a href="#" class="story-cta">See how it works</a>
+    </div>
+  </div>
+</body>
+</html>
