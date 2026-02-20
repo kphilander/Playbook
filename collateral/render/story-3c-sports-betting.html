@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; background: transparent; }
+
+    .story-card {
+      width: 1080px;
+      height: 1920px;
+      position: relative;
+      background: #1B2838;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .story-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #00D4AA, #FF6B35);
+    }
+
+    .story-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .story-header {
+      padding: 56px 48px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    .story-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 30px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .story-pillar {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1B2838;
+      background: #00D4AA;
+      padding: 8px 20px;
+      border-radius: 100px;
+    }
+
+    .story-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .myth-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FF6B35;
+      margin-bottom: 20px;
+    }
+    .headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 60px;
+      letter-spacing: -0.02em;
+    }
+
+    .breakdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
+    .breakdown-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+      justify-content: center;
+    }
+    .breakdown-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 28px;
+      color: #A8A8C0;
+      width: 160px;
+      text-align: right;
+    }
+    .breakdown-amount {
+      font-family: 'Inter', sans-serif;
+      font-size: 88px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .breakdown-amount.white { color: #FFFFFF; }
+    .breakdown-amount.teal { color: #00D4AA; }
+    .breakdown-amount.orange { color: #FF6B35; }
+
+    .breakdown-arrow {
+      font-size: 48px;
+      color: #6B6B8A;
+      margin: 8px 0;
+    }
+
+    .breakdown-note {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 26px;
+      color: #A8A8C0;
+      text-align: center;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    .story-footer {
+      padding: 0 48px 48px;
+      position: relative;
+      z-index: 1;
+    }
+    .story-cta {
+      display: block;
+      width: 100%;
+      padding: 28px;
+      background: #FF6B35;
+      color: #1B2838;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+      border-radius: 20px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+  <div class="story-card">
+    <div class="story-header">
+      <span class="story-logo">Playbook</span>
+      <span class="story-pillar">Open</span>
+    </div>
+    <div class="story-body">
+      <div class="myth-label">Straight Talk</div>
+      <div class="headline">What -110 means</div>
+      <div class="breakdown">
+        <div class="breakdown-row">
+          <span class="breakdown-label">You bet</span>
+          <span class="breakdown-amount white">$110</span>
+        </div>
+        <div class="breakdown-arrow">↓</div>
+        <div class="breakdown-row">
+          <span class="breakdown-label">You win</span>
+          <span class="breakdown-amount teal">$100</span>
+        </div>
+        <div class="breakdown-arrow">↓</div>
+        <div class="breakdown-row">
+          <span class="breakdown-label">The cut</span>
+          <span class="breakdown-amount orange">$10</span>
+        </div>
+        <div class="breakdown-note">
+          That $10 is the sportsbook's cut.<br>On every single bet.
+        </div>
+      </div>
+    </div>
+    <div class="story-footer">
+      <a href="#" class="story-cta">Read the breakdown →</a>
+    </div>
+  </div>
+</body>
+</html>
