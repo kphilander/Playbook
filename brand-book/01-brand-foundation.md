@@ -11,16 +11,16 @@ positioning whenever you're uncertain about scope.
 
 ---
 
-## The Reno Model in Plain English
+## The Informed Choice Framework
 
 Before we get to brand strategy, we need to establish the intellectual
-foundation. Playbook isn't built on vibes. It's built on a specific, published
-framework for how to think about gambling and player education.
+foundation. Playbook isn't built on vibes. It's built on established research
+in gambling studies — specifically the informed choice model — for how to think
+about gambling and player education.
 
 ### The Core Premises
 
-The Reno Model of informed choice (Blaszczynski, Ladouceur, & Shaffer, 2004) is
-built on four premises:
+The informed choice framework is built on four premises:
 
 **1. Most people who gamble do so without problems.**
 
@@ -47,7 +47,7 @@ of an entertainment experience they've already chosen.
 **3. Difficulties arise from lack of information and lack of control -- not from
 the activity itself.**
 
-This is the critical distinction. The Reno Model doesn't treat gambling as
+This is the critical distinction. The informed choice model doesn't treat gambling as
 inherently hazardous. It treats it as an activity that requires information
 (how the games work, what the odds actually mean) and tools (budgeting, time
 management, limit-setting) to enjoy well. When those are missing, some players
@@ -69,10 +69,10 @@ The public health model starts from a different premise: that gambling is
 inherently hazardous (like tobacco or alcohol) and that the goal is to reduce
 its prevalence and mitigate population-level impacts.
 
-The Reno Model doesn't deny that some people experience difficulties with
-gambling. It does. But it frames the solution differently:
+The informed choice framework doesn't deny that some people experience
+difficulties with gambling. It does. But it frames the solution differently:
 
-| | Public Health Model | Reno Model |
+| | Public Health Model | Informed Choice Model |
 |---|---|---|
 | **Starting premise** | Gambling is inherently hazardous | Gambling is entertainment |
 | **Default assumption about players** | Potentially vulnerable | Competent adults |
@@ -80,9 +80,9 @@ gambling. It does. But it frames the solution differently:
 | **Tone of resulting content** | Cautionary, clinical | Informative, empowering |
 | **Content feels like** | A health warning | A feature of the entertainment experience |
 
-Playbook uses the Reno Model because it produces content that players actually
-engage with. When your starting premise respects the audience, the audience
-respects the content.
+Playbook uses the informed choice framework because it produces content that
+players actually engage with. When your starting premise respects the audience,
+the audience respects the content.
 
 This distinction isn't academic. It shapes every word you write. When you start
 from "gambling is entertainment and most players are fine," you write confident,
@@ -122,20 +122,20 @@ a substitute for qualified professionals.
 frameworks. It doesn't set them, interpret them, or enforce them. Compliance
 teams verify. Playbook creates.
 
-**Playbook doesn't discourage gambling.** It's pro-player, not anti-gambling. The
-goal is smarter play, not less play. More informed entertainment, not less
-entertainment.
+**Playbook is gambling-neutral.** It doesn't promote gambling and it doesn't
+discourage it. The goal is informed play, not more play or less play. Playbook
+provides information and tools — what players do with them is their call.
 
-Think of it this way: Playbook is to gambling what a sports equipment brand's
-training content is to athletics. Nike doesn't tell you not to run. It helps
-you run better.
+Think of it this way: Playbook is to gambling what a nutrition label is to food.
+It doesn't tell you what to eat. It gives you the information to make your own
+choices.
 
 ---
 
 ## Mission
 
 > **Playbook gives players the information and tools to gamble on their own terms
-> -- making smart play feel natural, not forced.**
+> -- making informed play feel natural, not forced.**
 
 This is the sentence that should be pinned to every content brief, every design
 review, every editorial calendar. Everything Playbook creates should be traceable
@@ -154,10 +154,10 @@ timers, spending trackers -- reframed as features). Both are required.
 doesn't set the terms. It provides the ingredients for the player to set their
 own.
 
-**"making smart play feel natural, not forced"** -- The experience goal. Smart
-play should feel like something you want to do -- like wearing a seatbelt,
-checking the weather, reading reviews before a purchase. Not something imposed
-on you by a compliance requirement.
+**"making informed play feel natural, not forced"** -- The experience goal.
+Knowing the odds, setting a budget, checking your session time — these should
+feel like things you want to do, like checking the weather or reading reviews
+before a purchase. Not something imposed on you by a compliance requirement.
 
 ### Customizing the Mission
 
@@ -181,27 +181,31 @@ feels]."*
 
 ## Vision
 
-> **Gambling literacy content as well-designed and engaging as the games
-> themselves.**
+> **An open-source marketing communications platform that any operator can adopt
+> to make gambling literacy a natural part of the player experience — reaching
+> more players, earlier, with content they actually engage with.**
 
-The vision is a quality standard. It says: the same craft that goes into game
-design -- the UX research, the visual polish, the behavioral psychology, the
-engagement optimization -- should go into player education content.
+The vision has three parts:
 
-### Why This Vision Matters
+**Open-source platform.** Playbook is designed to be forked, customized, and
+deployed by any operator in any market. The brand system, content frameworks,
+and design assets are freely available. This isn't a proprietary program locked
+behind a vendor relationship — it's shared infrastructure for an industry that
+needs it.
 
-Right now, there's a quality canyon between the entertainment product and the
-educational content around it. The slot game has world-class animation,
-sound design, and user experience. The player education page has a wall of
-text in 11-point font with a stock photo of someone looking pensive.
+**Reach more players, earlier.** Most gambling education reaches players too
+late — after problems have developed, after patterns have set in. By creating
+content that's genuinely engaging, Playbook reaches players during the
+entertainment experience itself, building awareness and literacy before it's
+urgent.
 
-Players notice the gap. They process it instantly: *the game is the real
-product; this other stuff is the legal obligation.* And they're right -- that's
-exactly how it was built.
-
-The vision says: close that gap. When the educational content is as polished as
-the entertainment content, players stop categorizing it as a warning and start
-treating it as a feature.
+**Content they actually engage with.** Right now, there's a quality canyon
+between the entertainment product and the educational content around it. The
+slot game has world-class animation, sound design, and user experience. The
+player education page has a wall of text in 11-point font with a stock photo
+of someone looking pensive. Players notice the gap. When the educational
+content matches the quality of the entertainment product, players stop
+categorizing it as a warning and start treating it as a feature.
 
 ### What the Vision Implies
 
@@ -212,13 +216,15 @@ treating it as a feature.
   haven't met the standard.
 - Engagement is the success metric. Not compliance. Not "did we publish it?"
   but "did players actually use it?"
+- The open-source model means improvements compound across the industry.
+  One operator's contribution benefits every other adopter.
 
 ---
 
-## Four Brand Pillars
+## Two Brand Pillars
 
-Everything Playbook creates passes through four filters. If a piece of content
-doesn't serve at least one pillar, it doesn't ship. If it contradicts any
+Everything Playbook creates passes through two filters. If a piece of content
+doesn't serve at least one pillar, it doesn't ship. If it contradicts either
 pillar, it gets rewritten.
 
 These are the pillars in full. The Introduction previewed them. This is the
@@ -227,193 +233,7 @@ writing immediately.
 
 ---
 
-### Pillar 1: SHARP -- "Know Your Game"
-
-**Game intelligence. Content that makes players smarter.**
-
-Sharp is the knowledge pillar. It's about giving players real, useful
-information about how gambling works -- the math, the mechanics, the psychology.
-Not to scare them. Not to discourage them. To equip them.
-
-A Sharp player knows:
-
-- That every casino game has a house edge, and roughly what it is
-- That RNG (random number generation) means every spin/hand/draw is independent
-- That "hot streaks" are pattern recognition, not predictive signals
-- That the odds of a sixteen-leg parlay actually paying out are vanishingly small
-- That bonus wagering requirements change the real value of a promotion
-- That "due" numbers don't exist -- not in roulette, not in lottery, not anywhere
-
-Sharp content doesn't just state these facts. It explains *why* they're true,
-*how* the mechanics work, and *what it means* for the player's experience. It
-turns abstract math into practical intelligence.
-
-#### Sharp Content by Vertical
-
-**Casino (slots, table games):**
-
-- How RNG works and why every spin is independent
-- House edge explained for every major game (blackjack, roulette, craps,
-  baccarat, slots)
-- Why "hot machines" and "cold machines" aren't real
-- How to read a slot paytable and what RTP actually means
-- The math behind side bets (spoiler: they're usually terrible value)
-- Blackjack basic strategy: the one thing that actually improves your odds
-- Why progressive jackpot odds are different from base game odds
-- The relationship between volatility and entertainment value
-
-**Sports betting:**
-
-- How bookmaker margins work and what the "vig" really costs you
-- Why accumulators/parlays are the bookmaker's best friend (and your worst)
-- How to read odds formats (decimal, fractional, American) and convert between
-  them
-- What "expected value" means and why it matters more than any tipster
-- In-play betting psychology: why the pace makes you less analytical
-- Cash-out offers: what you're really being offered (and what you're giving up)
-- Why "sure things" in sports betting are mathematically impossible
-- How promotional odds ("boosted" prices) actually work
-
-**Lottery:**
-
-- The actual odds of major lottery games (and what those numbers *feel* like in
-  human terms)
-- Why "systems" and "strategies" don't work for truly random draws
-- Scratch card odds vs. draw game odds: how to compare them fairly
-- What "expected return" means for lottery products
-- The difference between odds and probability (in plain English)
-- Why buying more tickets doesn't meaningfully improve your odds for large draws
-- The real cost of lottery play over time vs. other entertainment
-
-**Poker:**
-
-- How poker differs from other gambling (skill component, playing against
-  opponents not the house)
-- Position, pot odds, and expected value -- the three things that actually matter
-- Why tilt is the most expensive thing in poker (and how to recognize it in
-  yourself)
-- Tournament vs. cash game math: different games, different strategies
-- Bankroll management for poker players (the math of variance)
-- The rake: understanding the house's cut and how it affects your bottom line
-
-**Bingo:**
-
-- How bingo odds actually work (they depend on how many cards are in play, not
-  luck)
-- Why buying more cards changes your probability but doesn't guarantee anything
-- The social value of bingo and why "cost per session" is the right way to
-  think about it
-- Online bingo RNG vs. physical ball draws: same randomness, different format
-- Speed bingo and auto-daub: how format changes affect the experience and pace
-  of spending
-
-#### The Sharp Standard
-
-Before publishing any Sharp content, ask:
-
-1. **Is this factually accurate?** (Verify the math. Every time. No exceptions.)
-2. **Does it make the player smarter?** (If they read this, do they know
-   something useful they didn't know before?)
-3. **Is it interesting?** (Would you read this voluntarily, or only because
-   someone made you?)
-4. **Is it practical?** (Can the player do something with this information, or
-   is it trivia?)
-
-If any answer is no, revise.
-
----
-
-### Pillar 2: CHOICE -- "Your Call"
-
-**Player autonomy. Your limits, your pace, your budget, your decision.**
-
-Choice is the empowerment pillar. It's about framing every tool, every feature,
-and every piece of guidance as something the player chooses -- not something
-imposed on them.
-
-This is where the Volvo insight lives.
-
-Volvo's genius was understanding that safety features don't limit freedom -- they
-enable it. A seatbelt doesn't restrict your driving. It lets you drive
-confidently at higher speeds, in worse conditions, with less anxiety. The
-constraint is the enabler.
-
-Playbook applies the same reframe to every player tool:
-
-- A **deposit limit** isn't a restriction on your spending. It's a budget you
-  set for your entertainment -- like deciding in advance what you'll spend on
-  dinner.
-- A **session timer** isn't an interruption. It's a check-in that helps you
-  stay aware of time -- like a fitness tracker during a workout.
-- A **spending tracker** isn't surveillance. It's a dashboard that shows you
-  your own data -- like a banking app showing your transactions.
-- A **cool-off period** isn't a punishment. It's a strategic pause -- like
-  sitting out a hand in poker to reset.
-
-#### The Language of Choice
-
-The words matter. Here's how Choice shows up in copy:
-
-- **"Your" everything.** Your limits. Your pace. Your budget. Your data. Your
-  choice. The possessive pronoun is the most important word in Choice content.
-- **"Set" not "restrict."** You set a limit. You don't get restricted.
-- **"Feature" not "control."** It's a feature of your account. Not a control
-  on your behavior.
-- **"Adjust" not "modify your restrictions."** You can adjust your settings
-  anytime. Clean, simple, empowering.
-- **"Choose" not "comply."** You choose a limit that works for you. You don't
-  comply with a requirement.
-
-#### Choice in Practice
-
-**Deposit limit feature description:**
-
-*Instead of*: "Set a deposit limit to prevent yourself from depositing too much
-money."
-
-*Write*: "Set your weekly budget before you start. Most players say it makes the
-whole experience better -- you play without second-guessing, because you already
-decided what works for you."
-
-**Session timer feature:**
-
-*Instead of*: "Session time limits help you avoid excessive gambling sessions."
-
-*Write*: "Set a session reminder and play without watching the clock. You'll get
-a heads-up when your time is up -- like a workout timer, but for
-entertainment."
-
-**Reality check notification:**
-
-*Instead of*: "You have been gambling for 2 hours. Prolonged sessions may
-indicate a problem."
-
-*Write*: "You've been playing for 2 hours. Just a heads-up -- your net position
-is -$45. Want to keep going, take a break, or set a reminder for next time?
-Your call."
-
-**Spending tracker:**
-
-*Instead of*: "View your gambling expenditure report to monitor for signs of
-excessive play."
-
-*Write*: "Your play this week: 3 sessions, $127 wagered, $89 net spend. Here's
-how that compares to your average. Your data, at a glance."
-
-#### The Choice Standard
-
-Before publishing any Choice content, ask:
-
-1. **Does the player feel in control?** (Or does it feel like something is being
-   done to them?)
-2. **Is the tool framed as a feature?** (Or does it sound like a restriction?)
-3. **Is the language empowering?** (Would you feel good reading this about
-   yourself?)
-4. **Is there a choice?** (Does the player decide, or are they told?)
-
----
-
-### Pillar 3: OPEN -- "No Fine Print"
+### Pillar 1: OPEN -- "No Fine Print"
 
 **Transparency. The math is public. Now you know it.**
 
@@ -492,7 +312,7 @@ Before publishing any Open content, ask:
 
 ---
 
-### Pillar 4: SOCIAL -- "Worth Sharing"
+### Pillar 2: SOCIAL -- "Worth Sharing"
 
 **Shareable content. Content that creates community.**
 
@@ -578,10 +398,10 @@ environmental stance isn't a CSR page on the corporate website. It's the brand.
 "Don't Buy This Jacket." Customers choose Patagonia *because* of the mission,
 not in spite of it.
 
-Playbook occupies the same territory for gambling. Smart play content isn't a
-regulatory burden. It's a brand asset. It's the thing that makes players feel
-good about choosing your platform over the one that treats them like a revenue
-source and nothing more.
+Playbook occupies the same territory for gambling. Gambling literacy content
+isn't a regulatory burden. It's a brand asset. It's the thing that makes
+players feel good about choosing your platform over the one that treats them
+like a revenue source and nothing more.
 
 ### Where Playbook Sits
 
@@ -645,7 +465,7 @@ down.
 
 **Enhanced enjoyment.** "I'm getting more out of this." When players understand
 the games better, set budgets that work for them, and play with awareness rather
-than anxiety, the entertainment experience improves. Smart play isn't the
+than anxiety, the entertainment experience improves. Informed play isn't the
 opposite of fun -- it's a prerequisite for sustained fun.
 
 **Better decisions.** "I'm making choices I feel good about." Armed with
@@ -782,16 +602,17 @@ Includes: house edge, RTP, RNG, probability, odds formats, expected value,
 variance, wagering requirements, bookmaker margins, payout structures, jackpot
 odds, game-specific math for every major product type.
 
-### Smart Play Habits
+### Informed Play Habits
 
 Practical habits that enhance the entertainment experience. Framed as features
-of good play, not restrictions.
+of good play, not restrictions. Be specific — name the behavior, not a generic
+category.
 
-Includes: bankroll management ("your entertainment budget"), session planning
-("play on your schedule"), deposit limits (as budget-setting tools), session
-reminders (as time-awareness features), promotional literacy (reading T&Cs,
-understanding wagering requirements, evaluating real bonus value), the
-entertainment budget concept, pre-session planning, post-session review.
+Includes: setting a budget before you play, checking your session time, reading
+the odds before you bet, understanding wagering requirements before claiming a
+bonus, reviewing your activity summary, using deposit limits as budget-setting
+tools, using session reminders as time-awareness features, pre-session planning,
+post-session review.
 
 ### Entertainment Framing
 
@@ -814,7 +635,7 @@ it until it sounds like something a product team would ship.
 
 ### Myth-Busting
 
-Debunking common misconceptions. The bread and butter of Sharp content.
+Debunking common misconceptions. The bread and butter of Open content.
 The content type most likely to be shared, most likely to be read voluntarily,
 and most likely to make a player genuinely smarter.
 

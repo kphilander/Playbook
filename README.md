@@ -13,7 +13,7 @@ Playbook is a complete, forkable brand system for gambling entertainment literac
 
 Most gambling education content today fails in one of three ways: it's buried in fine print nobody reads, it's preachy and clinical, or it's so generic it says nothing. All three stem from the same root cause — operators don't treat player education as marketing. Playbook fixes that.
 
-Playbook is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the Reno Model of informed choice: most people who gamble do so without problems, gambling is entertainment, and smart players make better decisions when they understand the math, the odds, and the tools available to them.
+Playbook is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the informed choice model: most people who gamble do so without problems, gambling is entertainment, and players make better decisions when they understand the math, the odds, and the tools available to them.
 
 Think of it this way: Volvo made safety iconic by building beautiful cars that also happen to be the safest on the road. Playbook makes gambling literacy engaging by creating content that's genuinely interesting — and also happens to keep play sustainable.
 
@@ -53,8 +53,8 @@ Playbook/
 │
 ├── brand-book/                      # Core brand guidelines
 │   ├── 00-introduction.md           # Purpose, the engagement gap, two-tier system
-│   ├── 01-brand-foundation.md       # Mission, vision, pillars (Sharp/Choice/Open/Social)
-│   ├── 02-brand-personality.md      # The Insider archetype, humor guidelines
+│   ├── 01-brand-foundation.md       # Mission, vision, pillars (Open/Social)
+│   ├── 02-brand-personality.md      # The Sharp & Good Friend archetypes, humor guidelines
 │   ├── 03-visual-identity.md        # Logo, color, typography, icons, photography
 │   ├── 04-voice-and-tone.md         # The confident myth-buster voice
 │   ├── 05-messaging-framework.md    # Tagline system, CTAs, interactive content briefs
@@ -115,7 +115,7 @@ Fork the repo. Edit `_brand.yml`. Your brand identity cascades everywhere.
 
 Playbook uses a two-tier system:
 
-- **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, smart play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging — content players seek out. This is what operators co-brand with.
+- **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging — content players seek out. This is what operators co-brand with.
 
 - **Tier 2 (separate guide, 5%):** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, intervention messaging. Warm, direct, appropriately serious. Built in a later phase within this same repository.
 

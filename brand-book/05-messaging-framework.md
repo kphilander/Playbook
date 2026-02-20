@@ -19,40 +19,23 @@ This chapter provides the complete messaging system for {{PROGRAM_NAME}} — the
 
 ## Level 1: The tagline system
 
-Playbook uses a **tagline system** — not a single prescribed tagline. Operators choose from the options below, mix and match across campaigns and channels, or use the framework to write their own. The system is organized by the four brand pillars.
+Playbook uses a **tagline system** — not a single prescribed tagline. Operators choose from the options below, mix and match across campaigns and channels, or use the framework to write their own. The system is organized by the two brand pillars.
 
-### Sharp — "Know your game"
-
-| Tagline | Best context |
-|---|---|
-| "Know your game." | Universal — works everywhere |
-| "The smarter you play, the more you enjoy." | Educational content, onboarding |
-| "Every game has math. Here's yours." | Odds education, myth-busting |
-| "Think you know the odds? Let's find out." | Quiz and interactive content |
-
-### Choice — "Your call"
-
-| Tagline | Best context |
-|---|---|
-| "Your play. Your way." | General awareness, tool promotion |
-| "Your limits. Your call." | Deposit limits, session tools |
-| "Play on your terms." | Universal — brand awareness |
-| "Your game. Your rules." | Empowerment messaging |
-
-### Open — "No BS"
+### Open — "No fine print"
 
 | Tagline | Best context |
 |---|---|
 | "Here's how it actually works." | How-it-works content, odds explainers |
 | "No fine print. Just facts." | Transparency messaging, T&C explainers |
 | "The odds are public. Now you know them." | Odds education, game guides |
+| "Every game has math. Here's yours." | Odds education, myth-busting |
 | "Straight talk. Real numbers." | Data-driven content |
 
 ### Social — "Worth sharing"
 
 | Tagline | Best context |
 |---|---|
-| "Share the smart play." | Social media, shareable content |
+| "Share the facts." | Social media, shareable content |
 | "Challenge your friends." | Quiz and interactive content |
 | "The best players know the game." | Community, social proof |
 | "How well do you really know the odds?" | Quiz hooks, social engagement |
@@ -60,7 +43,7 @@ Playbook uses a **tagline system** — not a single prescribed tagline. Operator
 ### Using the tagline system
 
 - **Choose 2–3 taglines** as your primary rotation for a campaign cycle
-- **Mix pillars** — a campaign can use a Sharp tagline for educational content and a Choice tagline for tool promotion
+- **Mix pillars** — a campaign can use an Open tagline for educational content and a Social tagline for quiz promotion
 - **Write your own** — the system is a starting point. As long as new taglines align with the pillar framework and Playbook voice, they're on-brand
 - **Never use "Gamble Responsibly"** as your tagline. It's the opposite of what Playbook stands for.
 
@@ -70,23 +53,11 @@ Playbook uses a **tagline system** — not a single prescribed tagline. Operator
 
 Each pillar has a core message that expands the tagline into a full idea. These work as campaign headlines, content section intros, or landing page leads.
 
-### Sharp
-
-> "Think you know how slot machines work? Spoiler: the machine doesn't know you exist. Here's the actual math behind every spin."
-
-Use for: Myth-busting headers, educational content intros, quiz prompts, game guides.
-
-### Choice
-
-> "Your limits. Your pace. Your call. Playbook puts the tools in your hands and gets out of the way."
-
-Use for: Tool promotion, deposit limit features, session awareness, bankroll planners.
-
 ### Open
 
 > "The house edge on blackjack is 0.5%. On slots, it's 2–15%. On American roulette, it's 5.26%. Now you know."
 
-Use for: Odds transparency, game comparisons, data-driven content, T&C explainers.
+Use for: Odds transparency, game comparisons, myth-busting, data-driven content, T&C explainers, how-it-works content, game guides.
 
 ### Social
 
@@ -134,16 +105,16 @@ Use for: Helpline display across all touchpoints. Always accessible from Tier 1 
 | Bankroll planner | "How far can your $200 go this weekend? The bankroll planner has answers." | Feature promotion, educational content |
 | Quiz / game IQ | "How well do you know the odds? Take the quiz. Challenge your friends." | Social media, content hub |
 
-### Smart play messages
+### Informed play messages
 
-*Goal: Frame good habits as aspirational, not cautious.*
+*Goal: Name specific behaviors rather than generic categories.*
 
 | Intent | Sample copy | Touchpoint |
 |---|---|---|
-| Budget setting | "Smart players decide their budget before they start. Set yours now." | Onboarding, deposit flow |
-| Time awareness | "Time moves differently when you're playing. That's by design. Stay aware." | Session reminder, general awareness |
+| Budget setting | "Decide your budget before you start. Set yours now." | Onboarding, deposit flow |
+| Time awareness | "Time moves differently when you're playing. That's by design. Check your session." | Session reminder, general awareness |
 | Game selection | "Not all games are created equal. Here's how to pick the ones that match your style and budget." | Game guides, educational content |
-| Walking away | "The best players know when to call it. Walking away while you're enjoying yourself is a power move." | Session end, general awareness |
+| Walking away | "Walking away while you're still enjoying yourself is a power move. Set a session reminder." | Session end, general awareness |
 
 ### Support accessibility messages
 
@@ -239,7 +210,7 @@ Interactive content is where Playbook delivers the most value. These are concept
 
 ### Quiz framework: Game IQ
 
-**Concept**: A short (7–10 question) quiz that tests the player's knowledge of how games actually work. Covers odds, RNG, house edge, myths, and smart play habits.
+**Concept**: A short (7–10 question) quiz that tests the player's knowledge of how games actually work. Covers odds, RNG, house edge, myths, and informed play habits.
 
 **Format**: Multiple choice, one question per screen, instant feedback per answer.
 
@@ -250,7 +221,7 @@ Interactive content is where Playbook delivers the most value. These are concept
 
 **End screen**: Score + personalized insight + share CTA. "You scored 8/10. You're sharper than most. Challenge a friend?"
 
-**Pillar alignment**: Sharp + Social
+**Pillar alignment**: Open + Social
 
 ### Calculator: Bankroll Planner
 
@@ -261,7 +232,7 @@ Interactive content is where Playbook delivers the most value. These are concept
 
 **Key message**: "This isn't about winning or losing — it's about knowing how far your budget goes."
 
-**Pillar alignment**: Sharp + Choice
+**Pillar alignment**: Open
 
 ### Calculator: Odds Comparison
 
@@ -271,7 +242,7 @@ Interactive content is where Playbook delivers the most value. These are concept
 
 **Key message**: "Not all games are created equal. Here's how they stack up."
 
-**Pillar alignment**: Sharp + Open
+**Pillar alignment**: Open
 
 ---
 

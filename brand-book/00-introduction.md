@@ -24,7 +24,7 @@ The content is present. It is also functionally invisible.
 A player scrolling past a legal footer isn't ignoring your message. They never
 saw it. There's a difference, and it matters.
 
-### Failure 2: Preachy
+### Failure 2: Not Engaging Enough to Educate
 
 When the content *is* visible, it reads like a warning label on a pack of
 cigarettes -- clinical, obligatory, and designed to satisfy a regulator, not
@@ -51,23 +51,33 @@ A sports bettor facing a sixteen-leg parlay doesn't need the same messaging as a
 bingo player on a Tuesday afternoon. But they get it anyway, because the content
 wasn't built for either of them. It was built for a compliance checklist.
 
+### Failure 4: Disconnected from the Brand
+
+RG programs created by regulators, industry bodies, or external organizations
+don't integrate well with operators' in-house brands and marketing
+communications. They arrive as a separate identity — different logo, different
+tone, different design language — and get bolted onto the entertainment
+experience like an afterthought. Players read the disconnect instantly: *this
+isn't part of the product I chose; this is something someone else made them put
+here.* The result is the same as a banner ad you've trained yourself not to
+see. External RG brands compete for attention against the operator's own brand
+instead of working with it.
+
 ### The Root Cause
 
-All three failures stem from the same structural problem: **operators don't
-treat player education as marketing.**
+These failures stem from a structural gap: **player education hasn't been
+treated as a marketing communications challenge.**
 
 The industry has brand teams for acquisition. It has brand teams for retention.
 It has brand teams for VIP. It has creative directors, copywriters, designers,
 and content strategists -- all dedicated to making the entertainment product as
 compelling as possible.
 
-And then it hands player education to compliance.
-
-Compliance teams are good at compliance. They ensure legal requirements are met.
-They are not, as a rule, trained to build brands, write engaging content, or
-create campaigns that people actually want to interact with. When you ask a
-compliance team to produce player education content, you get compliant content.
-You don't get good content.
+Player education, by contrast, typically lives outside marketing — owned by
+compliance, legal, or external program providers. These teams are good at what
+they do. They ensure legal requirements are met. But they are not, as a rule,
+resourced or structured to build brands, write engaging content, or create
+campaigns that people actually want to interact with.
 
 The result is a gap -- an **engagement gap** -- between the quality of the
 entertainment experience and the quality of the educational content around it.
@@ -81,10 +91,10 @@ legal template engine. They notice, and they scroll past.
 
 ## The Playbook Approach
 
-### The Foundation: The Reno Model
+### The Foundation: Informed Choice
 
-Playbook is anchored in the Reno Model of informed choice (Blaszczynski,
-Ladouceur, & Shaffer, 2004). In plain language, the Reno Model says:
+Playbook is anchored in the informed choice model from gambling studies. In
+plain language, the framework says:
 
 1. **Most people who gamble do so without problems.** The majority of players
    gamble recreationally, within their means, and walk away when they're done.
@@ -105,13 +115,15 @@ Ladouceur, & Shaffer, 2004). In plain language, the Reno Model says:
 
 This is not the public health model. The public health model starts from the
 premise that gambling is inherently hazardous and works backward from there.
-The Reno Model starts from the premise that gambling is entertainment and works
-forward -- what information and tools do players need to keep it that way?
+The informed choice model starts from the premise that gambling is entertainment
+and works forward -- what information and tools do players need to keep it that
+way?
 
-Playbook is built on the Reno Model because it produces better content. When you
-start from the assumption that your audience is made up of competent adults
-enjoying a leisure activity, you write differently. You design differently. You
-create content that respects the reader, and respected readers pay attention.
+Playbook is built on the informed choice model because it produces better
+content. When you start from the assumption that your audience is made up of
+competent adults enjoying a leisure activity, you write differently. You design
+differently. You create content that respects the reader, and respected readers
+pay attention.
 
 ### The Execution: A Content/Media Brand
 
@@ -137,16 +149,17 @@ so committed, so unapologetically entertaining that people pay a premium for it.
 Liquid Death proved that *any* category can be made engaging if you treat it like
 a real brand instead of a commodity.
 
-**Patagonia made environmental responsibility aspirational.** "Don't Buy This
-Jacket." Patagonia turned its environmental stance into a brand asset. It didn't
-hide its sustainability practices in a CSR report. It put them on the front
-page, made them part of the story, and attracted customers *because* of the
-mission, not in spite of it.
+**Oatly made ingredient transparency a selling point.** Oatly doesn't hide its
+nutrition label -- it puts it front and center, explains how oat milk is made,
+and dares you to compare it to dairy. The education *is* the marketing. By
+helping consumers understand the product, Oatly created more demand for it, not
+less. Transparency became the competitive advantage.
 
-**Playbook makes gambling literacy engaging.** The same playbook. Treat player
-education as a brand, not a burden. Invest in the content. Make it worth
-reading. Make it worth sharing. Make it something the operator is proud to put
-next to its entertainment product -- not something it buries in a footer.
+**Playbook is an open platform for gambling literacy.** The same approach. Treat
+player education as a marketing communications challenge, not a compliance
+burden. Invest in the content. Make it worth reading. Make it worth sharing.
+Make it something the operator is proud to put next to its entertainment product
+-- not something it buries in a footer.
 
 ---
 
@@ -158,10 +171,10 @@ prevents misapplication, misexpectation, and wasted effort.
 ### Playbook IS:
 
 - **An entertainment literacy content brand.** It creates content about how
-  gambling works -- game mechanics, odds, smart play habits, entertainment
+  gambling works -- game mechanics, odds, informed play habits, entertainment
   framing. Content that makes players smarter and more engaged.
 
-- **Anchored in the Reno Model.** Every piece of content starts from the premise
+- **Anchored in informed choice.** Every piece of content starts from the premise
   that most players gamble without problems and that gambling is entertainment.
   The goal is informed choice, not abstinence.
 
@@ -185,9 +198,9 @@ prevents misapplication, misexpectation, and wasted effort.
   -- clearly, warmly, and immediately. But it does not attempt to be those
   professionals.
 
-- **Anti-gambling.** Playbook is pro-player, not anti-gambling. It exists to
-  enhance the entertainment experience, not to discourage it. The goal is
-  smarter play, not less play.
+- **Pro-gambling or anti-gambling.** Playbook is gambling-neutral. It doesn't
+  promote gambling and it doesn't discourage it. It provides information and
+  tools — what players do with them is their call.
 
 - **A regulator substitute.** Playbook does not set or enforce regulatory
   standards. It operates within them. Compliance teams should use Playbook
@@ -264,7 +277,7 @@ will see, most of the time, in most contexts.
 
 - Game mechanics and math (how odds work, what RNG does, why the house edge
   exists)
-- Smart play habits (bankroll management, session planning, promo literacy)
+- Informed play habits (bankroll management, session planning, promo literacy)
 - Entertainment framing (getting more enjoyment from play, understanding value)
 - Myth-busting (hot streaks, due numbers, betting systems, lucky charms)
 - Tools and features (deposit limits, session reminders, spending trackers --
@@ -296,7 +309,7 @@ when a player needs support, wants to take a break, or is reaching out for help.
 - Content for friends and family of players who need support
 
 **The voice:** Warm. Direct. Appropriately serious. The confident myth-buster
-takes a step back. The wingman steps forward. No humor. No cleverness. Just
+takes a step back. The Good Friend steps forward. No humor. No cleverness. Just
 clarity, compassion, and a clear path to help.
 
 **The assumption:** The reader may be in a vulnerable moment. Every word matters.
@@ -314,30 +327,39 @@ A player enjoying a fun quiz about poker odds doesn't want to be ambushed by
 dark messaging. A player trying to take a break doesn't want to be entertained.
 Respect the context. Match the tone.
 
+### Why Tier 1 Gets 95% of the Focus
+
+Three strategic reasons:
+
+1. **Early brand engagement.** Tier 1 content is how players first encounter
+   Playbook. If that first impression is engaging — a myth-buster quiz, an odds
+   explainer, a "did you know?" stat — they build a positive association with
+   the brand. That association matters if they ever need Tier 2.
+
+2. **Wider audience.** The vast majority of players will only ever interact with
+   Tier 1 content. By investing in entertainment literacy, Playbook reaches the
+   full player base — not just the small percentage who are already seeking
+   support.
+
+3. **Early education for prevention and risk awareness.** Players who understand
+   the math, recognize the myths, and know how tools work are better equipped
+   before problems develop. Tier 1 is upstream prevention through literacy.
+
+These three reasons map directly to the two brand personalities. **The Sharp**
+(primary archetype) drives Tier 1 — sharing knowledge, explaining the math,
+debunking myths. **The Good Friend** (secondary archetype) bridges Tier 1 and
+Tier 2 — helping players set up tools, checking in, and knowing when to shift
+to a more serious register.
+
 This book covers Tier 1. Tier 2 will have its own guide.
 
 ---
 
-## Four Brand Pillars (Preview)
+## Two Brand Pillars (Preview)
 
-Everything Playbook creates is built on four pillars. They're the filter through
+Everything Playbook creates is built on two pillars. They're the filter through
 which every content decision passes. Full detail is in
 [Chapter 1: Brand Foundation](01-brand-foundation.md); here's the overview.
-
-### Sharp
-
-**Game intelligence.** Playbook makes players smarter. How odds work. What RNG
-actually does. Why the "hot machine" doesn't exist. Why your sixteen-leg parlay
-is a terrible bet (but we'll explain *why* it's terrible, not just tell you it
-is). Content that respects the reader's intelligence and rewards their
-curiosity.
-
-### Choice
-
-**Player autonomy.** Your limits. Your pace. Your budget. Your call. Playbook
-reframes tools -- deposit limits, session reminders, spending trackers -- as
-features that enhance the experience, not restrictions imposed on it. The Volvo
-insight: a seatbelt doesn't limit your freedom. It lets you drive faster.
 
 ### Open
 
@@ -504,9 +526,10 @@ intentional.
 We say **"player"** not "gambler." *Player* emphasizes agency, participation,
 and entertainment. *Gambler* carries clinical and pejorative connotations.
 
-We say **"smart play"** not "responsible gambling." *Smart play* is something
-you'd want to do. *Responsible gambling* is something you're told to do. One
-is aspirational. The other is obligatory.
+We **name specific behaviors** instead of using generic labels. "Set a budget,"
+"know the odds," "check your session" — not "responsible gambling" or "smart
+play." Specific actions are things players can do. Labels are things they're
+told to be.
 
 We say **"tools and features"** not "interventions." *Tools* are things you
 choose to use. *Interventions* are things done to you. One respects autonomy.
@@ -529,23 +552,24 @@ The [Glossary](glossary.md) provides a complete reference.
 
 ---
 
-## Let's Build Something Players Actually Want to Read
+## An Open Platform for an Industry-Wide Problem
 
 The gambling industry has tried warnings, disclaimers, fine print, and mandatory
 acknowledgment screens. It has tried clinical language, scare tactics, and
-buried helpline numbers.
+buried helpline numbers. None of it has engaged players at scale.
 
-None of it has worked particularly well.
+Playbook tries something different: an open-source marketing communications
+platform that any operator can adopt, adapt, and deploy under their own brand.
+The brand system, content frameworks, and design assets are shared
+infrastructure — not a proprietary program locked behind a vendor.
 
-Playbook tries something different: treat player education like a brand. Give it
-the same investment, the same creativity, the same craft that goes into every
-other part of the entertainment experience. Write content that's genuinely
-interesting. Design assets that are genuinely beautiful. Create features that
-players genuinely want to use.
+The approach is simple: treat player education as a marketing communications
+challenge. Give it the same investment, creativity, and craft that goes into
+every other part of the entertainment experience. Make it transparent. Make it
+shareable. Make it something players actually want to engage with.
 
-It's not complicated. It's just never been done well at scale.
-
-Until now.
+**Open · Social.** Two pillars. One standard: content worth reading and worth
+sharing.
 
 ---
 

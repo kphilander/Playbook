@@ -32,16 +32,19 @@ We provide information and tools. You decide what to do with them. Playbook neve
 
 **Why it matters**: Autonomy drives action. When people feel in control, they're more likely to use tools. Paternalistic messaging triggers resistance.
 
-### 3. Smart, not scared
+### 3. Specific, not sloganeering
 
-Playbook frames smart play as intelligence, not caution. Knowing the odds is a competitive advantage. Setting limits is a power move. Understanding the math makes you a better player.
+Playbook names concrete behaviors — knowing the odds, setting a budget, checking
+your session time — instead of hiding behind generic labels like "responsible
+gambling" or "smart play." Specificity is what makes content actionable.
 
-- We say "Smart players know the house edge before they sit down"
-- We don't say "Be careful — the house always wins"
-- We make knowledge aspirational — something players want
+- We say "Know the house edge before you sit down"
+- We don't say "Be a responsible gambler" or "Play smart"
+- We name the behavior: "Set a budget," "Check the odds," "Review your session"
 - We frame tools as features that enhance the experience
 
-**Why it matters**: Nobody aspires to be "careful." Plenty of people aspire to be smart. Frame your content accordingly.
+**Why it matters**: Generic labels don't change behavior. Specific, concrete
+actions do. "Set your deposit limit" is actionable. "Play responsibly" is not.
 
 ### 4. Fun is the point
 
@@ -184,7 +187,7 @@ These are the key language preferences for Tier 1 content. They're configured in
 | Use this | Instead of this | Why |
 |---|---|---|
 | **Player** | Gambler | "Player" is inclusive and neutral. "Gambler" carries connotations. |
-| **Smart play** | Responsible gambling | "Responsible" implies the alternative is irresponsible. "Smart play" is aspirational. |
+| **Specific behaviors** (e.g. "set a budget," "know the odds," "check your session") | Responsible gambling / Smart play | Generic labels don't drive action. Name the specific behavior you want the player to take. |
 | **Tools / features** | Interventions / measures | "Tools" implies utility and choice. "Interventions" implies something done *to* you. |
 | **Check in** | Self-assess | "Check in" is casual and inviting. "Self-assess" sounds clinical. |
 | **Take a break** | Self-exclude (in Tier 1) | "Break" is temporary and voluntary. Use "self-exclusion" in Tier 2 and formal contexts. |
@@ -203,7 +206,8 @@ These are the key language preferences for Tier 1 content. They're configured in
 
 These terms are appropriate in clinical, regulatory, and Tier 2 contexts. In Tier 1 (entertainment literacy), avoid them:
 
-- "Responsible gambling" — use "smart play" or specific actions
+- "Responsible gambling" — use specific actions (e.g. "set a budget," "know the odds")
+- "Smart play" — too generic; name the specific behavior instead
 - "Problem gambler" — use "player" (Tier 1 doesn't diagnose)
 - "Gambling addiction" — clinical term; Tier 2 only
 - "Pathological" — outdated clinical term
@@ -216,7 +220,7 @@ These terms are appropriate in clinical, regulatory, and Tier 2 contexts. In Tie
 
 | Old phrase | Problem | Playbook alternative |
 |---|---|---|
-| "Gamble Responsibly" | Implies the player is being irresponsible. Nobody reads it. Zero actionable content. | "Know your game." / "Play on your terms." |
+| "Gamble Responsibly" | Implies the player is being irresponsible. Nobody reads it. Zero actionable content. | "Know the odds." / "Set your budget." / "Check your session." |
 | "When the fun stops, stop." | Assumes players can self-diagnose in the moment. Many players experiencing harm still report "fun." | "Set your limits before you play." |
 | "Bet with your head, not over it." | Clever wordplay, unclear meaning. What does "over it" mean? No path to action. | "Every game has math. Here's yours." |
 | "If you or someone you know has a gambling problem, call X." | Only reaches people who already identify a problem. Excludes everyone else. | "Free, confidential support — for any question about gambling. {{HELPLINE_NUMBER}}" |
