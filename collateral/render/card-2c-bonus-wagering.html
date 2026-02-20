@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; background: transparent; }
+
+    .social-card {
+      width: 1080px;
+      height: 1080px;
+      position: relative;
+      background: #1B2838;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .social-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 10px;
+      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    }
+
+    .social-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .card-header {
+      padding: 64px 72px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    .card-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .card-pillar {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1B2838;
+      background: #00D4AA;
+      padding: 10px 28px;
+      border-radius: 100px;
+    }
+
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .myth-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FF6B35;
+      margin-bottom: 16px;
+    }
+    .headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 48px;
+      letter-spacing: -0.02em;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .step {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid #2A3F56;
+    }
+    .step:last-child {
+      border-bottom: none;
+    }
+    .step-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #6B6B8A;
+      min-width: 40px;
+    }
+    .step-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 28px;
+      color: #A8A8C0;
+      flex: 1;
+    }
+    .step-amount {
+      font-family: 'Inter', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .step-amount.white { color: #FFFFFF; }
+    .step-amount.teal { color: #00D4AA; }
+    .step-amount.orange { color: #FF6B35; }
+
+    .wagering-note {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 28px;
+      color: #A8A8C0;
+      margin-top: 28px;
+      line-height: 1.5;
+    }
+
+    .card-footer {
+      padding: 0 72px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    .card-url {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 26px;
+      font-weight: 500;
+      color: #6B6B8A;
+    }
+    .card-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #FF6B35;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="social-card">
+    <div class="card-header">
+      <span class="card-logo">Playbook</span>
+      <span class="card-pillar">Open</span>
+    </div>
+    <div class="card-body">
+      <div class="myth-label">No Fine Print</div>
+      <div class="headline">That "200% match bonus" —<br>what it actually costs</div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <span class="step-label">You deposit</span>
+          <span class="step-amount white">$50</span>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <span class="step-label">You get</span>
+          <span class="step-amount teal">$100</span>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <span class="step-label">Wagering req: 30x</span>
+          <span class="step-amount orange">$3,000</span>
+        </div>
+      </div>
+      <div class="wagering-note">You need to wager $3,000 before withdrawing. That's 60x your deposit.</div>
+    </div>
+    <div class="card-footer">
+      <span class="card-url">playbook.org</span>
+      <span class="card-cta">Read the breakdown &rarr;</span>
+    </div>
+  </div>
+</body>
+</html>
