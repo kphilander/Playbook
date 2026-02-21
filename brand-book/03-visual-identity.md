@@ -16,12 +16,23 @@ This chapter defines the visual system for {{PROGRAM_NAME}} — the logo, colors
 
 The {{PROGRAM_NAME}} logo identifies gambling entertainment literacy content. It signals to players: *"This is where you get smarter about the game."* The logo should feel modern, confident, and premium — like it belongs on a lifestyle brand, not a government pamphlet.
 
-### Logo components
+### Logo design
 
-The {{PROGRAM_NAME}} logo consists of:
-- **Logomark**: A symbol (open playbook / strategy diagram motif) that works independently at small sizes
-- **Wordmark**: The program name set in the brand typeface
-- **Lockup**: The logomark and wordmark combined (primary usage)
+The {{PROGRAM_NAME}} logo is a text-based wordmark that splits "Playbook" into its two component concepts:
+
+- **Play** — set in Inter 800 (bold). Represents the entertainment side of gambling.
+- **book** — set in Inter 300 (light), uppercase, letter-spaced. Represents the knowledge and literacy side.
+
+The weight contrast between the two halves embodies the brand's core duality: enjoying the game *and* understanding it.
+
+### Logo layouts
+
+| Layout | Name | Best for |
+|---|---|---|
+| **Stacked** (B1) | Play over BOOK, two lines | App icons, social avatars, square formats, hero placements |
+| **Horizontal** (B2) | Playbook as one word | Navigation bars, headers, banners, inline references, small sizes |
+
+Both layouts are interchangeable — choose based on the available space and aspect ratio.
 
 ### Usage rules
 
@@ -47,14 +58,44 @@ Maintain a minimum clear space equal to **1x the height of the logomark** on all
 - **Digital**: Minimum 24px in height
 - Below these sizes, use the logomark only (no wordmark)
 
-#### Approved variants
+#### Approved color variants
 
-| Variant | Background | Usage |
-|---|---|---|
-| Full color | White, `neutral_50` | Default / primary usage |
-| Reversed (white) | `primary`, `primary_dark` | Dark backgrounds |
-| Monochrome (dark) | Light backgrounds | Single-color print, emboss |
-| Monochrome (light) | Dark backgrounds | Single-color on dark surfaces |
+Each layout (stacked and horizontal) is available in 5 color modes:
+
+| Variant | Play color | Book color | Background | File suffix |
+|---|---|---|---|---|
+| Full color | `primary` navy | `primary` navy | White | `-full-color` |
+| On light | `primary` navy | `secondary_dark` teal | `neutral_50` light | `-on-light` |
+| Reversed | White | `secondary` teal | `primary` navy | `-reversed` |
+| Mono white | White | `neutral_300` | Black / dark | `-mono-white` |
+| Mono dark | `primary` navy | `primary` navy | Light (single-color) | `-mono-dark` |
+
+### Logo files
+
+```
+visual-identity/logo/
+  primary/                          ← default use
+    logo-stacked-full-color.svg
+    logo-stacked-on-light.svg
+    logo-horizontal-full-color.svg
+    logo-horizontal-on-light.svg
+  secondary/                        ← dark backgrounds, mono
+    logo-stacked-reversed.svg
+    logo-stacked-mono-white.svg
+    logo-stacked-mono-dark.svg
+    logo-horizontal-reversed.svg
+    logo-horizontal-mono-white.svg
+    logo-horizontal-mono-dark.svg
+  favicon/
+    favicon.svg
+    favicon-reversed.svg
+    favicon-mono-white.svg
+  helpline-badge/
+    helpline-badge-light.svg
+    helpline-badge-dark.svg
+```
+
+Regenerate all logo files: `node collateral/render/build-logos.mjs`
 
 #### Prohibited modifications
 

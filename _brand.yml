@@ -157,6 +157,14 @@ typography:
 # ─── LOGO ────────────────────────────────────
 
 logo:
+  type: "text-based wordmark"
+  font: "Inter"
+  play_weight: 800
+  book_weight: 300
+  book_style: "uppercase, letter-spaced"
+  layouts:
+    stacked: "Play over BOOK (square format)"
+    horizontal: "Playbook as one word (wide format)"
   primary_path: "visual-identity/logo/primary/"
   secondary_path: "visual-identity/logo/secondary/"
   favicon_path: "visual-identity/logo/favicon/"
@@ -169,6 +177,7 @@ logo:
     - "PNG (with transparency, 2x and 3x)"
     - "EPS (for print)"
     - "PDF (for print)"
+  build_script: "collateral/render/build-logos.mjs"
 
 
 # ─── HELPLINES ───────────────────────────────

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;800');
+  </style>
+  
+  
+  <text x="32" y="34" text-anchor="middle"
+        font-family="'Inter', sans-serif" font-weight="800" font-size="28"
+        letter-spacing="-0.8" fill="#1B2838">Play</text>
+  <text x="32" y="52" text-anchor="middle"
+        font-family="'Inter', sans-serif" font-weight="300" font-size="14"
+        letter-spacing="2.1" fill="#1B2838">BOOK</text>
+</svg>
