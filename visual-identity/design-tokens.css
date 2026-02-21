@@ -79,8 +79,17 @@
   /* ─── Typography: Weights ─────────────── */
   --pb-weight-light: 300;
   --pb-weight-regular: 400;
+  --pb-weight-medium: 500;
   --pb-weight-semibold: 600;
   --pb-weight-bold: 700;
+  --pb-weight-extrabold: 800;
+  --pb-weight-black: 900;
+
+  /* ─── Typography: Letter Spacing ──────── */
+  --pb-tracking-tight: -0.02em;
+  --pb-tracking-normal: 0;
+  --pb-tracking-wide: 0.05em;
+  --pb-tracking-wider: 0.1em;
 
   /* ─── Typography: Line Heights ────────── */
   --pb-leading-heading: 1.2;

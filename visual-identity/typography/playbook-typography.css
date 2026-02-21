@@ -1,0 +1,323 @@
+/* ============================================
+   Playbook Typography — Drop-in Stylesheet
+   ============================================
+   Import this single file to get the full Playbook
+   type system: @font-face declarations, semantic
+   classes, and utility helpers.
+
+   Option A — Self-hosted fonts (recommended):
+     Serve the woff2 files from fonts/ alongside this CSS.
+
+   Option B — Google Fonts CDN:
+     Comment out the @font-face block below and add:
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+
+   Prefix: .pb-  (Playbook namespace)
+   ============================================ */
+
+
+/* ─── @font-face: Self-hosted variable fonts ── */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('fonts/source-sans-3-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url('fonts/source-code-pro-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* ─── Font stacks ─────────────────────────────── */
+
+:root {
+  --pb-font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --pb-font-body: 'Source Sans 3', system-ui, sans-serif;
+  --pb-font-mono: 'Source Code Pro', monospace;
+}
+
+
+/* ─── Type scale (rem, base = 16px) ───────────── */
+
+:root {
+  --pb-text-display: 3rem;      /* 48px */
+  --pb-text-h1: 2.5rem;         /* 40px */
+  --pb-text-h2: 2rem;           /* 32px */
+  --pb-text-h3: 1.5rem;         /* 24px */
+  --pb-text-h4: 1.25rem;        /* 20px */
+  --pb-text-body-lg: 1.125rem;  /* 18px */
+  --pb-text-body: 1rem;         /* 16px */
+  --pb-text-small: 0.875rem;    /* 14px */
+  --pb-text-caption: 0.75rem;   /* 12px */
+}
+
+
+/* ─── Font weights ────────────────────────────── */
+
+:root {
+  --pb-weight-light: 300;
+  --pb-weight-regular: 400;
+  --pb-weight-medium: 500;
+  --pb-weight-semibold: 600;
+  --pb-weight-bold: 700;
+  --pb-weight-extrabold: 800;
+  --pb-weight-black: 900;
+}
+
+
+/* ─── Line heights ────────────────────────────── */
+
+:root {
+  --pb-leading-heading: 1.2;
+  --pb-leading-tight: 1.3;
+  --pb-leading-body: 1.6;
+}
+
+
+/* ─── Letter spacing ──────────────────────────── */
+
+:root {
+  --pb-tracking-tight: -0.02em;    /* Display / hero headlines */
+  --pb-tracking-normal: 0;         /* Body text */
+  --pb-tracking-wide: 0.05em;      /* Labels, uppercase UI text */
+  --pb-tracking-wider: 0.1em;      /* Small caps, monospace headers */
+  --pb-tracking-logo-play: -0.03em; /* Logo "Play" half */
+  --pb-tracking-logo-book: 0.15em;  /* Logo "BOOK" half */
+}
+
+
+/* ─── Base typography reset ───────────────────── */
+
+.pb-type {
+  font-family: var(--pb-font-body);
+  font-size: var(--pb-text-body);
+  font-weight: var(--pb-weight-regular);
+  line-height: var(--pb-leading-body);
+  letter-spacing: var(--pb-tracking-normal);
+  color: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ─── Heading classes ─────────────────────────── */
+
+.pb-display {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-display);
+  font-weight: var(--pb-weight-bold);
+  line-height: var(--pb-leading-heading);
+  letter-spacing: var(--pb-tracking-tight);
+}
+
+.pb-h1 {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-h1);
+  font-weight: var(--pb-weight-bold);
+  line-height: var(--pb-leading-heading);
+  letter-spacing: var(--pb-tracking-tight);
+}
+
+.pb-h2 {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-h2);
+  font-weight: var(--pb-weight-semibold);
+  line-height: var(--pb-leading-heading);
+  letter-spacing: var(--pb-tracking-normal);
+}
+
+.pb-h3 {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-h3);
+  font-weight: var(--pb-weight-semibold);
+  line-height: var(--pb-leading-tight);
+  letter-spacing: var(--pb-tracking-normal);
+}
+
+.pb-h4 {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-h4);
+  font-weight: var(--pb-weight-semibold);
+  line-height: var(--pb-leading-tight);
+  letter-spacing: var(--pb-tracking-normal);
+}
+
+
+/* ─── Body text classes ───────────────────────── */
+
+.pb-body-lg {
+  font-family: var(--pb-font-body);
+  font-size: var(--pb-text-body-lg);
+  font-weight: var(--pb-weight-regular);
+  line-height: var(--pb-leading-body);
+}
+
+.pb-body {
+  font-family: var(--pb-font-body);
+  font-size: var(--pb-text-body);
+  font-weight: var(--pb-weight-regular);
+  line-height: var(--pb-leading-body);
+}
+
+.pb-small {
+  font-family: var(--pb-font-body);
+  font-size: var(--pb-text-small);
+  font-weight: var(--pb-weight-regular);
+  line-height: var(--pb-leading-body);
+}
+
+.pb-caption {
+  font-family: var(--pb-font-body);
+  font-size: var(--pb-text-caption);
+  font-weight: var(--pb-weight-regular);
+  line-height: 1.5;
+}
+
+
+/* ─── Monospace classes ───────────────────────── */
+
+.pb-mono {
+  font-family: var(--pb-font-mono);
+  font-size: var(--pb-text-body);
+  font-weight: var(--pb-weight-regular);
+  line-height: var(--pb-leading-body);
+  letter-spacing: var(--pb-tracking-normal);
+}
+
+.pb-mono-lg {
+  font-family: var(--pb-font-mono);
+  font-size: var(--pb-text-body-lg);
+  font-weight: var(--pb-weight-medium);
+  line-height: var(--pb-leading-body);
+}
+
+.pb-helpline {
+  font-family: var(--pb-font-mono);
+  font-size: var(--pb-text-body-lg);
+  font-weight: var(--pb-weight-semibold);
+  line-height: var(--pb-leading-tight);
+  letter-spacing: var(--pb-tracking-wide);
+}
+
+
+/* ─── Semantic classes ────────────────────────── */
+
+.pb-label {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-small);
+  font-weight: var(--pb-weight-semibold);
+  line-height: var(--pb-leading-tight);
+  letter-spacing: var(--pb-tracking-wide);
+  text-transform: uppercase;
+}
+
+.pb-stat {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-display);
+  font-weight: var(--pb-weight-extrabold);
+  line-height: 1;
+  letter-spacing: var(--pb-tracking-tight);
+}
+
+.pb-quiz-question {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-h3);
+  font-weight: var(--pb-weight-bold);
+  line-height: var(--pb-leading-tight);
+}
+
+.pb-cta {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-body);
+  font-weight: var(--pb-weight-semibold);
+  line-height: 1;
+  letter-spacing: var(--pb-tracking-wide);
+  text-transform: none;
+}
+
+.pb-eyebrow {
+  font-family: var(--pb-font-heading);
+  font-size: var(--pb-text-caption);
+  font-weight: var(--pb-weight-semibold);
+  line-height: var(--pb-leading-tight);
+  letter-spacing: var(--pb-tracking-wider);
+  text-transform: uppercase;
+}
+
+.pb-odds {
+  font-family: var(--pb-font-mono);
+  font-size: var(--pb-text-h3);
+  font-weight: var(--pb-weight-medium);
+  line-height: 1;
+  letter-spacing: var(--pb-tracking-wide);
+}
+
+
+/* ─── Weight modifiers ────────────────────────── */
+
+.pb-light     { font-weight: var(--pb-weight-light); }
+.pb-regular   { font-weight: var(--pb-weight-regular); }
+.pb-medium    { font-weight: var(--pb-weight-medium); }
+.pb-semibold  { font-weight: var(--pb-weight-semibold); }
+.pb-bold      { font-weight: var(--pb-weight-bold); }
+.pb-extrabold { font-weight: var(--pb-weight-extrabold); }
+.pb-black     { font-weight: var(--pb-weight-black); }
+
+
+/* ─── Font family modifiers ───────────────────── */
+
+.pb-font-heading { font-family: var(--pb-font-heading); }
+.pb-font-body    { font-family: var(--pb-font-body); }
+.pb-font-mono    { font-family: var(--pb-font-mono); }
+
+
+/* ─── Tracking modifiers ──────────────────────── */
+
+.pb-tracking-tight   { letter-spacing: var(--pb-tracking-tight); }
+.pb-tracking-normal  { letter-spacing: var(--pb-tracking-normal); }
+.pb-tracking-wide    { letter-spacing: var(--pb-tracking-wide); }
+.pb-tracking-wider   { letter-spacing: var(--pb-tracking-wider); }
+
+
+/* ─── Leading modifiers ──────────────────────── */
+
+.pb-leading-heading { line-height: var(--pb-leading-heading); }
+.pb-leading-tight   { line-height: var(--pb-leading-tight); }
+.pb-leading-body    { line-height: var(--pb-leading-body); }
+
+
+/* ─── Responsive adjustments ──────────────────── */
+
+@media (max-width: 768px) {
+  :root {
+    --pb-text-display: 2.25rem;   /* 36px (was 48) */
+    --pb-text-h1: 2rem;           /* 32px (was 40) */
+    --pb-text-h2: 1.5rem;         /* 24px (was 32) */
+    --pb-text-h3: 1.25rem;        /* 20px (was 24) */
+    --pb-text-h4: 1.125rem;       /* 18px (was 20) */
+  }
+}

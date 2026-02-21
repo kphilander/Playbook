@@ -123,18 +123,21 @@ typography:
     heading:
       family: "Inter"
       source: "google"
-      weights: [400, 600, 700]
+      weights: [300, 400, 600, 700, 800, 900]
       fallback: "system-ui, -apple-system, sans-serif"
+      file: "fonts/inter-latin.woff2"
     body:
       family: "Source Sans 3"
       source: "google"
       weights: [300, 400, 600]
       fallback: "system-ui, sans-serif"
+      file: "fonts/source-sans-3-latin.woff2"
     monospace:
       family: "Source Code Pro"
       source: "google"
-      weights: [400]
+      weights: [400, 500, 600]
       fallback: "monospace"
+      file: "fonts/source-code-pro-latin.woff2"
 
   # Type scale (rem, base = 16px)
   scale:

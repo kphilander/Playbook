@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — Type Specimen</title>
+  <link rel="stylesheet" href="playbook-typography.css">
+  <style>
+    /* ─── Specimen page styles ──────────────────── */
+    :root {
+      --pb-color-primary: #1B2838;
+      --pb-color-secondary: #00D4AA;
+      --pb-color-accent: #FF6B35;
+      --pb-color-neutral-50: #F5F5FA;
+      --pb-color-neutral-100: #E8E8F0;
+      --pb-color-neutral-300: #A8A8C0;
+      --pb-color-neutral-500: #6B6B8A;
+      --pb-color-neutral-700: #3D3D5C;
+      --pb-color-neutral-900: #1A1A2E;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--pb-font-body);
+      background: var(--pb-color-neutral-50);
+      color: var(--pb-color-neutral-900);
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 4rem;
+      border-bottom: 2px solid var(--pb-color-primary);
+      padding-bottom: 2rem;
+    }
+    header h1 {
+      font-family: var(--pb-font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.125rem;
+      color: var(--pb-color-neutral-500);
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-family: var(--pb-font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--pb-color-accent);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--pb-color-neutral-100);
+    }
+
+    .specimen-row {
+      display: flex;
+      align-items: baseline;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--pb-color-neutral-100);
+    }
+    .specimen-row:last-child { border-bottom: none; }
+
+    .specimen-meta {
+      flex: 0 0 140px;
+      font-family: var(--pb-font-mono);
+      font-size: 0.75rem;
+      color: var(--pb-color-neutral-500);
+      line-height: 1.6;
+    }
+    .specimen-meta .size {
+      font-weight: 600;
+      color: var(--pb-color-neutral-700);
+    }
+
+    .specimen-sample {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .weight-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .weight-item {
+      padding: 1.5rem 2rem;
+      flex: 1;
+      min-width: 200px;
+      border: 1px solid var(--pb-color-neutral-100);
+    }
+    .weight-item .weight-name {
+      font-family: var(--pb-font-mono);
+      font-size: 0.75rem;
+      color: var(--pb-color-neutral-500);
+      margin-bottom: 0.75rem;
+    }
+    .weight-item .weight-sample {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+    .weight-item .weight-number {
+      font-family: var(--pb-font-mono);
+      font-size: 0.625rem;
+      color: var(--pb-color-neutral-300);
+      margin-top: 0.5rem;
+    }
+
+    .dark-strip {
+      background: var(--pb-color-primary);
+      color: #fff;
+      padding: 3rem 2rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+    .dark-strip .specimen-meta { color: var(--pb-color-neutral-300); }
+    .dark-strip .specimen-meta .size { color: var(--pb-color-secondary); }
+
+    .class-ref {
+      display: inline-block;
+      font-family: var(--pb-font-mono);
+      font-size: 0.6875rem;
+      background: var(--pb-color-neutral-100);
+      color: var(--pb-color-neutral-700);
+      padding: 0.15em 0.5em;
+      border-radius: 3px;
+      margin-top: 0.25rem;
+    }
+    .dark-strip .class-ref {
+      background: rgba(255,255,255,0.1);
+      color: var(--pb-color-neutral-300);
+    }
+
+    .pangram { color: var(--pb-color-neutral-500); }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--pb-color-neutral-100);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .card-title {
+      font-family: var(--pb-font-heading);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pb-color-neutral-500);
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+    th {
+      text-align: left;
+      font-family: var(--pb-font-heading);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pb-color-neutral-500);
+      padding: 0.5rem 0.75rem;
+      border-bottom: 2px solid var(--pb-color-neutral-100);
+    }
+    td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--pb-color-neutral-100);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .color-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+
+    .usage-example {
+      background: #fff;
+      border: 1px solid var(--pb-color-neutral-100);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .usage-header {
+      background: var(--pb-color-neutral-100);
+      padding: 0.5rem 1rem;
+      font-family: var(--pb-font-mono);
+      font-size: 0.6875rem;
+      color: var(--pb-color-neutral-500);
+    }
+    .usage-body {
+      padding: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Playbook Type Specimen</h1>
+    <p>Inter / Source Sans 3 / Source Code Pro</p>
+  </header>
+
+
+  <!-- ─── FONT FAMILIES ──────────────────────── -->
+  <section>
+    <div class="section-title">Font Families</div>
+
+    <!-- Inter weight strip -->
+    <h3 style="font-family: var(--pb-font-heading); font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Inter <span style="font-weight: 400; color: var(--pb-color-neutral-500);">— Headings, UI, logo</span></h3>
+    <div class="weight-strip">
+      <div class="weight-item">
+        <div class="weight-name">Light</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-heading); font-weight: 300;">Aa Bb Cc 123</div>
+        <div class="weight-number">300</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Regular</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-heading); font-weight: 400;">Aa Bb Cc 123</div>
+        <div class="weight-number">400</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Semibold</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-heading); font-weight: 600;">Aa Bb Cc 123</div>
+        <div class="weight-number">600</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Bold</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-heading); font-weight: 700;">Aa Bb Cc 123</div>
+        <div class="weight-number">700</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Extrabold</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-heading); font-weight: 800;">Aa Bb Cc 123</div>
+        <div class="weight-number">800</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Black</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-heading); font-weight: 900;">Aa Bb Cc 123</div>
+        <div class="weight-number">900</div>
+      </div>
+    </div>
+    <p style="font-family: var(--pb-font-heading); font-size: 1.25rem; margin-top: 1rem; color: var(--pb-color-neutral-500);">The quick brown fox jumps over the lazy dog. 0123456789 !@#$%</p>
+
+    <div style="height: 2.5rem;"></div>
+
+    <!-- Source Sans 3 weight strip -->
+    <h3 style="font-family: var(--pb-font-heading); font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Source Sans 3 <span style="font-weight: 400; color: var(--pb-color-neutral-500);">— Body text</span></h3>
+    <div class="weight-strip">
+      <div class="weight-item">
+        <div class="weight-name">Light</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-body); font-weight: 300;">Aa Bb Cc 123</div>
+        <div class="weight-number">300</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Regular</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-body); font-weight: 400;">Aa Bb Cc 123</div>
+        <div class="weight-number">400</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Semibold</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-body); font-weight: 600;">Aa Bb Cc 123</div>
+        <div class="weight-number">600</div>
+      </div>
+    </div>
+    <p style="font-family: var(--pb-font-body); font-size: 1.125rem; margin-top: 1rem; color: var(--pb-color-neutral-500);">The quick brown fox jumps over the lazy dog. 0123456789 !@#$%</p>
+
+    <div style="height: 2.5rem;"></div>
+
+    <!-- Source Code Pro weight strip -->
+    <h3 style="font-family: var(--pb-font-heading); font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Source Code Pro <span style="font-weight: 400; color: var(--pb-color-neutral-500);">— Data, odds, helplines</span></h3>
+    <div class="weight-strip">
+      <div class="weight-item">
+        <div class="weight-name">Regular</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-mono); font-weight: 400;">Aa Bb Cc 123</div>
+        <div class="weight-number">400</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Medium</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-mono); font-weight: 500;">Aa Bb Cc 123</div>
+        <div class="weight-number">500</div>
+      </div>
+      <div class="weight-item">
+        <div class="weight-name">Semibold</div>
+        <div class="weight-sample" style="font-family: var(--pb-font-mono); font-weight: 600;">Aa Bb Cc 123</div>
+        <div class="weight-number">600</div>
+      </div>
+    </div>
+    <p style="font-family: var(--pb-font-mono); font-size: 1rem; margin-top: 1rem; color: var(--pb-color-neutral-500);">1-800-522-4700 | 0.5% | 5.26% | 1:37 | 00 0O 1l Il</p>
+  </section>
+
+
+  <!-- ─── TYPE SCALE ─────────────────────────── -->
+  <section>
+    <div class="section-title">Type Scale</div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">Display / 48px</div>
+        Inter 700<br>Leading 1.2<br>Tracking -0.02em
+        <br><span class="class-ref">.pb-display</span>
+      </div>
+      <div class="specimen-sample pb-display">Know your game.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">H1 / 40px</div>
+        Inter 700<br>Leading 1.2<br>Tracking -0.02em
+        <br><span class="class-ref">.pb-h1</span>
+      </div>
+      <div class="specimen-sample pb-h1">The smarter you play, the more you enjoy.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">H2 / 32px</div>
+        Inter 600<br>Leading 1.2
+        <br><span class="class-ref">.pb-h2</span>
+      </div>
+      <div class="specimen-sample pb-h2">Every game has math. Here's yours.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">H3 / 24px</div>
+        Inter 600<br>Leading 1.3
+        <br><span class="class-ref">.pb-h3</span>
+      </div>
+      <div class="specimen-sample pb-h3">Your limits. Your call.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">H4 / 20px</div>
+        Inter 600<br>Leading 1.3
+        <br><span class="class-ref">.pb-h4</span>
+      </div>
+      <div class="specimen-sample pb-h4">Here's how it actually works.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">Body large / 18px</div>
+        Source Sans 3 400<br>Leading 1.6
+        <br><span class="class-ref">.pb-body-lg</span>
+      </div>
+      <div class="specimen-sample pb-body-lg">Slot machines use a random number generator (RNG) to determine every outcome. The machine doesn't know — or care — how long you've been playing, how much you've spent, or whether it "owes" you a win.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">Body / 16px</div>
+        Source Sans 3 400<br>Leading 1.6
+        <br><span class="class-ref">.pb-body</span>
+      </div>
+      <div class="specimen-sample pb-body">Each spin is independent. The odds are identical whether you're on spin 1 or spin 1,000. A machine that just paid a jackpot has exactly the same probability of paying another one on the very next spin.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">Small / 14px</div>
+        Source Sans 3 400<br>Leading 1.6
+        <br><span class="class-ref">.pb-small</span>
+      </div>
+      <div class="specimen-sample pb-small">Secondary text, metadata, and supporting information. Use for timestamps, attribution, and supplementary details.</div>
+    </div>
+
+    <div class="specimen-row">
+      <div class="specimen-meta">
+        <div class="size">Caption / 12px</div>
+        Source Sans 3 400<br>Leading 1.5
+        <br><span class="class-ref">.pb-caption</span>
+      </div>
+      <div class="specimen-sample pb-caption">Legal text only. Never for content players should actually read. You must be 21+ to gamble. Gambling involves risk.</div>
+    </div>
+  </section>
+
+
+  <!-- ─── ON DARK ────────────────────────────── -->
+  <section>
+    <div class="section-title">On Dark Backgrounds</div>
+    <div class="dark-strip">
+      <div class="specimen-row" style="border-color: rgba(255,255,255,0.1);">
+        <div class="specimen-meta">
+          <div class="size">Display</div>
+          <span class="class-ref">.pb-display</span>
+        </div>
+        <div class="specimen-sample pb-display">No fine print. Just facts.</div>
+      </div>
+      <div class="specimen-row" style="border-color: rgba(255,255,255,0.1);">
+        <div class="specimen-meta">
+          <div class="size">H2</div>
+          <span class="class-ref">.pb-h2</span>
+        </div>
+        <div class="specimen-sample pb-h2">How well do you really know the odds?</div>
+      </div>
+      <div class="specimen-row" style="border-color: rgba(255,255,255,0.1);">
+        <div class="specimen-meta">
+          <div class="size">Body</div>
+          <span class="class-ref">.pb-body</span>
+        </div>
+        <div class="specimen-sample pb-body">The house edge on American roulette is 5.26%. On European roulette, it's 2.70%. That difference costs you almost half as much per bet over time.</div>
+      </div>
+      <div class="specimen-row" style="border-bottom: none;">
+        <div class="specimen-meta">
+          <div class="size">Helpline</div>
+          <span class="class-ref">.pb-helpline</span>
+        </div>
+        <div class="specimen-sample pb-helpline" style="color: var(--pb-color-secondary);">1-800-522-4700</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── SEMANTIC CLASSES ───────────────────── -->
+  <section>
+    <div class="section-title">Semantic Classes</div>
+    <div class="grid-2">
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-label</div>
+        <div class="usage-body">
+          <span class="pb-label" style="color: var(--pb-color-accent);">House Edge</span>
+        </div>
+      </div>
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-eyebrow</div>
+        <div class="usage-body">
+          <span class="pb-eyebrow" style="color: var(--pb-color-neutral-500);">Myth Buster</span>
+        </div>
+      </div>
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-stat</div>
+        <div class="usage-body">
+          <span class="pb-stat" style="color: var(--pb-color-primary);">5.26%</span>
+          <div class="pb-small" style="color: var(--pb-color-neutral-500); margin-top: 0.25rem;">American roulette house edge</div>
+        </div>
+      </div>
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-odds</div>
+        <div class="usage-body">
+          <span class="pb-odds" style="color: var(--pb-color-primary);">1 : 37</span>
+          <div class="pb-small" style="color: var(--pb-color-neutral-500); margin-top: 0.25rem;">Single number roulette odds</div>
+        </div>
+      </div>
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-quiz-question</div>
+        <div class="usage-body">
+          <span class="pb-quiz-question" style="color: var(--pb-color-primary);">What does "house edge" actually mean?</span>
+        </div>
+      </div>
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-cta</div>
+        <div class="usage-body">
+          <span class="pb-cta" style="display: inline-block; background: var(--pb-color-accent); color: var(--pb-color-primary); padding: 0.75rem 1.5rem; border-radius: 6px;">Take the quiz</span>
+        </div>
+      </div>
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-helpline</div>
+        <div class="usage-body">
+          <span class="pb-helpline" style="color: var(--pb-color-primary);">1-800-522-4700</span>
+        </div>
+      </div>
+
+      <div class="usage-example">
+        <div class="usage-header">.pb-mono</div>
+        <div class="usage-body">
+          <span class="pb-mono" style="color: var(--pb-color-neutral-700);">RTP: 96.50% | Variance: High | Paylines: 243</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ─── REFERENCE TABLES ───────────────────── -->
+  <section>
+    <div class="section-title">Quick Reference</div>
+    <div class="grid-2">
+
+      <div class="card">
+        <div class="card-title">Type Scale</div>
+        <table>
+          <tr><th>Level</th><th>Size</th><th>Weight</th><th>Leading</th></tr>
+          <tr><td>Display</td><td>48px / 3rem</td><td>700</td><td>1.2</td></tr>
+          <tr><td>H1</td><td>40px / 2.5rem</td><td>700</td><td>1.2</td></tr>
+          <tr><td>H2</td><td>32px / 2rem</td><td>600</td><td>1.2</td></tr>
+          <tr><td>H3</td><td>24px / 1.5rem</td><td>600</td><td>1.3</td></tr>
+          <tr><td>H4</td><td>20px / 1.25rem</td><td>600</td><td>1.3</td></tr>
+          <tr><td>Body lg</td><td>18px / 1.125rem</td><td>400</td><td>1.6</td></tr>
+          <tr><td>Body</td><td>16px / 1rem</td><td>400</td><td>1.6</td></tr>
+          <tr><td>Small</td><td>14px / 0.875rem</td><td>400</td><td>1.6</td></tr>
+          <tr><td>Caption</td><td>12px / 0.75rem</td><td>400</td><td>1.5</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Font Weights</div>
+        <table>
+          <tr><th>Name</th><th>Value</th><th>Token</th><th>Used by</th></tr>
+          <tr><td>Light</td><td>300</td><td>--pb-weight-light</td><td>Logo "BOOK", body light</td></tr>
+          <tr><td>Regular</td><td>400</td><td>--pb-weight-regular</td><td>Body text, labels</td></tr>
+          <tr><td>Medium</td><td>500</td><td>--pb-weight-medium</td><td>Mono data, odds</td></tr>
+          <tr><td>Semibold</td><td>600</td><td>--pb-weight-semibold</td><td>H2-H4, CTAs, labels</td></tr>
+          <tr><td>Bold</td><td>700</td><td>--pb-weight-bold</td><td>H1, Display, helpline</td></tr>
+          <tr><td>Extrabold</td><td>800</td><td>--pb-weight-extrabold</td><td>Logo "Play", hero stats</td></tr>
+          <tr><td>Black</td><td>900</td><td>--pb-weight-black</td><td>Campaign accent text</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Letter Spacing</div>
+        <table>
+          <tr><th>Name</th><th>Value</th><th>Token</th><th>Usage</th></tr>
+          <tr><td>Tight</td><td>-0.02em</td><td>--pb-tracking-tight</td><td>Display, H1</td></tr>
+          <tr><td>Normal</td><td>0</td><td>--pb-tracking-normal</td><td>Body text, H2-H4</td></tr>
+          <tr><td>Wide</td><td>0.05em</td><td>--pb-tracking-wide</td><td>Labels, CTAs</td></tr>
+          <tr><td>Wider</td><td>0.1em</td><td>--pb-tracking-wider</td><td>Eyebrows, small caps</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Responsive Scale (mobile)</div>
+        <table>
+          <tr><th>Level</th><th>Desktop</th><th>Mobile (&le;768px)</th></tr>
+          <tr><td>Display</td><td>48px</td><td>36px</td></tr>
+          <tr><td>H1</td><td>40px</td><td>32px</td></tr>
+          <tr><td>H2</td><td>32px</td><td>24px</td></tr>
+          <tr><td>H3</td><td>24px</td><td>20px</td></tr>
+          <tr><td>H4</td><td>20px</td><td>18px</td></tr>
+          <tr><td>Body+</td><td colspan="2">Unchanged</td></tr>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ─── LOGO TYPOGRAPHY ────────────────────── -->
+  <section>
+    <div class="section-title">Logo Typography</div>
+    <div style="display: flex; gap: 3rem; align-items: center; flex-wrap: wrap;">
+      <div>
+        <div style="font-family: var(--pb-font-heading); font-weight: 800; font-size: 4rem; line-height: 1; letter-spacing: -0.03em; color: var(--pb-color-primary);">Play</div>
+        <div style="font-family: var(--pb-font-heading); font-weight: 300; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--pb-color-primary);">BOOK</div>
+        <div class="pb-caption" style="color: var(--pb-color-neutral-500); margin-top: 0.5rem;">Stacked (B1)</div>
+      </div>
+      <div>
+        <div style="font-family: var(--pb-font-heading); font-size: 4rem; line-height: 1; letter-spacing: -0.03em; color: var(--pb-color-primary);"><span style="font-weight: 800;">Play</span><span style="font-weight: 300; letter-spacing: 0.02em;">book</span></div>
+        <div class="pb-caption" style="color: var(--pb-color-neutral-500); margin-top: 0.5rem;">Horizontal (B2)</div>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <table style="max-width: 500px;">
+        <tr><th>Element</th><th>Weight</th><th>Tracking</th><th>Style</th></tr>
+        <tr><td>"Play"</td><td>800 (Extrabold)</td><td>-0.03em</td><td>Title case</td></tr>
+        <tr><td>"BOOK" (stacked)</td><td>300 (Light)</td><td>0.15em</td><td>Uppercase</td></tr>
+        <tr><td>"book" (horizontal)</td><td>300 (Light)</td><td>0.02em</td><td>Lowercase</td></tr>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ─── CHARACTER DISAMBIGUATION ───────────── -->
+  <section>
+    <div class="section-title">Character Disambiguation (Helpline Numbers)</div>
+    <p class="pb-small" style="color: var(--pb-color-neutral-500); margin-bottom: 1rem;">Source Code Pro is chosen for helpline numbers because these characters are unambiguous:</p>
+    <div style="display: flex; gap: 3rem; flex-wrap: wrap;">
+      <div>
+        <div class="pb-small" style="color: var(--pb-color-neutral-500); margin-bottom: 0.25rem;">Monospace (Source Code Pro)</div>
+        <div style="font-family: var(--pb-font-mono); font-size: 2rem; font-weight: 500;">0 O o | 1 l I i</div>
+      </div>
+      <div>
+        <div class="pb-small" style="color: var(--pb-color-neutral-500); margin-bottom: 0.25rem;">Sans-serif (Inter) for comparison</div>
+        <div style="font-family: var(--pb-font-heading); font-size: 2rem; font-weight: 500;">0 O o | 1 l I i</div>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem;">
+      <div class="pb-small" style="color: var(--pb-color-neutral-500); margin-bottom: 0.25rem;">Helpline number at multiple sizes:</div>
+      <div style="font-family: var(--pb-font-mono); font-weight: 600; color: var(--pb-color-primary);">
+        <div style="font-size: 0.75rem; margin-bottom: 0.25rem;">12px: 1-800-522-4700</div>
+        <div style="font-size: 1rem; margin-bottom: 0.25rem;">16px: 1-800-522-4700</div>
+        <div style="font-size: 1.125rem; margin-bottom: 0.25rem;">18px: 1-800-522-4700</div>
+        <div style="font-size: 1.5rem;">24px: 1-800-522-4700</div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--pb-color-neutral-100); color: var(--pb-color-neutral-500); font-size: 0.75rem;">
+    Playbook Type Specimen &mdash; Generated from <code>_brand.yml</code><br>
+    Fonts: <a href="https://fonts.google.com/specimen/Inter" style="color: var(--pb-color-neutral-500);">Inter</a>,
+    <a href="https://fonts.google.com/specimen/Source+Sans+3" style="color: var(--pb-color-neutral-500);">Source Sans 3</a>,
+    <a href="https://fonts.google.com/specimen/Source+Code+Pro" style="color: var(--pb-color-neutral-500);">Source Code Pro</a>
+    &mdash; All available under the SIL Open Font License
+  </footer>
+
+</body>
+</html>

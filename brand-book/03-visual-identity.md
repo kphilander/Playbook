@@ -211,29 +211,59 @@ When customizing the palette:
 
 ### Type system
 
-The default type system uses open-source fonts available from Google Fonts — broad availability, zero licensing cost, modern aesthetic.
+The default type system uses open-source variable fonts from Google Fonts — broad availability, zero licensing cost, modern aesthetic. Self-hosted woff2 files are included for production use.
 
-| Role | Font | Weight(s) | Usage |
+| Role | Family | Weight(s) | Usage |
 |---|---|---|---|
-| Headings | **Inter** | 400, 600, 700 | Page titles, section headers, card headings, quiz questions |
-| Body | **Source Sans 3** | 300, 400, 600 | Paragraph text, descriptions, form labels |
-| Monospace | **Source Code Pro** | 400 | Helpline numbers (for clarity), odds displays, data |
+| Headings, UI, logo | **Inter** | 300, 400, 600, 700, 800, 900 | Headlines, section headers, card headings, quiz questions, logo, labels, CTAs |
+| Body text | **Source Sans 3** | 300, 400, 600 | Paragraph text, descriptions, form labels |
+| Data, odds, helplines | **Source Code Pro** | 400, 500, 600 | Helpline numbers (character disambiguation), odds displays, data, RTP values |
+
+**Why these fonts?** Inter has excellent screen readability and the broad weight range needed for the logo (800 vs 300 contrast). Source Code Pro disambiguates 0/O and 1/l/I — critical for helpline numbers.
 
 ### Type scale
 
 Based on a 16px base (1rem):
 
-| Level | Size (rem) | Size (px) | Weight | Line height | Usage |
-|---|---|---|---|---|---|
-| Display | 3.0 | 48 | 700 | 1.2 | Hero headlines, campaign headers |
-| H1 | 2.5 | 40 | 700 | 1.2 | Page titles |
-| H2 | 2.0 | 32 | 600 | 1.2 | Section headings |
-| H3 | 1.5 | 24 | 600 | 1.3 | Subsection headings |
-| H4 | 1.25 | 20 | 600 | 1.3 | Card headings, sidebar headers |
-| Body large | 1.125 | 18 | 400 | 1.6 | Lead paragraphs, important descriptions |
-| Body | 1.0 | 16 | 400 | 1.6 | Default body text |
-| Small | 0.875 | 14 | 400 | 1.6 | Secondary text, metadata |
-| Caption | 0.75 | 12 | 400 | 1.5 | Legal text only — never for content players should actually read |
+| Level | Size (rem) | Size (px) | Weight | Leading | Tracking | CSS class |
+|---|---|---|---|---|---|---|
+| Display | 3.0 | 48 | 700 | 1.2 | -0.02em | `.pb-display` |
+| H1 | 2.5 | 40 | 700 | 1.2 | -0.02em | `.pb-h1` |
+| H2 | 2.0 | 32 | 600 | 1.2 | 0 | `.pb-h2` |
+| H3 | 1.5 | 24 | 600 | 1.3 | 0 | `.pb-h3` |
+| H4 | 1.25 | 20 | 600 | 1.3 | 0 | `.pb-h4` |
+| Body large | 1.125 | 18 | 400 | 1.6 | 0 | `.pb-body-lg` |
+| Body | 1.0 | 16 | 400 | 1.6 | 0 | `.pb-body` |
+| Small | 0.875 | 14 | 400 | 1.6 | 0 | `.pb-small` |
+| Caption | 0.75 | 12 | 400 | 1.5 | 0 | `.pb-caption` |
+
+Headings scale down on mobile (≤768px): Display→36px, H1→32px, H2→24px, H3→20px, H4→18px. Body sizes stay fixed.
+
+### Font weights
+
+| Name | Value | Token | Primary usage |
+|---|---|---|---|
+| Light | 300 | `--pb-weight-light` | Logo "BOOK" half, body light |
+| Regular | 400 | `--pb-weight-regular` | Body text, form labels |
+| Medium | 500 | `--pb-weight-medium` | Mono data displays, odds |
+| Semibold | 600 | `--pb-weight-semibold` | H2–H4, CTAs, labels, UI elements |
+| Bold | 700 | `--pb-weight-bold` | H1, Display headlines, helpline numbers |
+| Extrabold | 800 | `--pb-weight-extrabold` | Logo "Play" half, hero statistics |
+| Black | 900 | `--pb-weight-black` | Campaign accent headlines |
+
+### Semantic type classes
+
+The drop-in CSS (`playbook-typography.css`) provides purpose-built classes for common Playbook content patterns:
+
+| Class | Description | Example |
+|---|---|---|
+| `.pb-stat` | Hero data number (Inter 800, 48px) | "5.26%" |
+| `.pb-odds` | Odds display (Source Code Pro 500, 24px) | "1 : 37" |
+| `.pb-quiz-question` | Quiz heading (Inter 700, 24px) | "What does house edge mean?" |
+| `.pb-helpline` | Helpline number (Source Code Pro 600, 18px) | "1-800-522-4700" |
+| `.pb-cta` | Button text (Inter 600, 16px) | "Take the quiz" |
+| `.pb-label` | Uppercase label (Inter 600, 14px) | "HOUSE EDGE" |
+| `.pb-eyebrow` | Tiny uppercase (Inter 600, 12px) | "MYTH BUSTER" |
 
 ### Typography rules
 
@@ -241,7 +271,21 @@ Based on a 16px base (1rem):
 - **Line length**: 50–75 characters per line for body text. Wider reduces readability.
 - **Paragraph spacing**: 1em (one blank line) between paragraphs.
 - **Left-aligned text**: Always. Justified text creates uneven word spacing.
-- **Helpline numbers**: Set in monospace or bold. Never use a font that makes similar characters ambiguous (1/l/I or 0/O).
+- **Helpline numbers**: Always in `.pb-helpline` (Source Code Pro 600). Never use a font where 1/l/I or 0/O are ambiguous.
+- **Caption text** (12px): Legal lines only. Never for content players should read.
+
+### Typography files
+
+```
+visual-identity/typography/
+  playbook-typography.css       ← drop-in CSS (self-hosted @font-face + classes)
+  type-specimen.html            ← visual reference page
+  typography.md                 ← detailed reference documentation
+  fonts/
+    inter-latin.woff2           ← variable weight 300–900
+    source-sans-3-latin.woff2   ← variable weight 300–600
+    source-code-pro-latin.woff2 ← variable weight 400–600
+```
 
 ### Adapting typography
 
@@ -250,6 +294,8 @@ When customizing fonts:
 2. Match the quality and modernity of your operator's commercial typography
 3. Ensure the font supports character sets for your operating jurisdictions
 4. Test readability at small sizes — Playbook content often appears in constrained spaces
+5. If replacing Inter, ensure your heading font has weight ≥700 for the logo and ≤300 for the "BOOK" contrast
+6. Update `_brand.yml` and regenerate `playbook-typography.css`
 
 ---
 
