@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 1st place (center, tallest) -->
+  <rect x="8" y="4" width="5" height="13"/>
+  <!-- 2nd place (left) -->
+  <rect x="2" y="9" width="6" height="8"/>
+  <!-- 3rd place (right) -->
+  <rect x="13" y="12" width="6" height="5"/>
+  <!-- Base -->
+  <line x1="2" y1="17" x2="22" y2="17"/>
+  <!-- Medal indicators -->
+  <line x1="10.5" y1="7" x2="10.5" y2="7"/>
+  <line x1="5" y1="11.5" x2="5" y2="11.5"/>
+  <line x1="16" y1="14" x2="16" y2="14"/>
+  <!-- Podium base -->
+  <line x1="2" y1="20" x2="22" y2="20"/>
+</svg>

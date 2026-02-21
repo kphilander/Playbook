@@ -228,29 +228,94 @@ When customizing fonts:
 | Canvas size | 24x24px (default) |
 | Optical sizes | 16px, 24px, 32px, 48px |
 
-### Core icons
+### Icon library (55 icons across 6 categories)
 
-Every {{PROGRAM_NAME}} implementation needs these:
+#### Game Types
 
 | Icon | Name | Usage |
 |---|---|---|
-| Playbook | `icon-playbook` | Brand identifier, navigation, home |
+| Playing cards | `icon-cards` | Card games, blackjack, general gambling |
+| Dice | `icon-dice` | Dice games, craps, randomness |
+| Roulette wheel | `icon-roulette` | Roulette, casino games, chance |
+| Slot machine | `icon-slots` | Slot machines, electronic gaming |
+| Chip stack | `icon-chips` | Betting chips, wagers, stakes |
+| Sports ball | `icon-sports` | Sports betting, live betting |
+| Lottery ticket | `icon-lottery` | Lottery, scratch cards, draws |
+| Poker hand | `icon-poker` | Poker, card strategy games |
+| Bingo grid | `icon-bingo` | Bingo, number games |
+| Table (top-down) | `icon-table` | Table games, blackjack, baccarat |
+
+#### Odds & Math
+
+| Icon | Name | Usage |
+|---|---|---|
+| Percent circle | `icon-percentage` | Probabilities, percentages, return rates |
+| Calculator | `icon-calculator` | Odds calculator, math tools |
+| Fraction | `icon-odds` | Odds display, fractional odds, ratios |
+| Shuffle arrows | `icon-rng` | Random number generators, independence |
+| Tilt scale | `icon-edge` | House edge, advantage, margin |
+| Trend up | `icon-trend-up` | Positive trends, growth |
+| Trend down | `icon-trend-down` | Negative trends, losses |
+| Equal circle | `icon-equal` | Independent events, equal probability |
+
+#### Player Tools
+
+| Icon | Name | Usage |
+|---|---|---|
+| Wallet | `icon-wallet` | Deposits, withdrawals, account balance |
+| Padlock | `icon-lock` | Account lock, security, self-exclusion |
+| Bell | `icon-bell` | Notifications, alerts, reminders |
+| Gear | `icon-settings` | Settings, preferences, configuration |
+| Clock arrow | `icon-history` | Play history, recent activity, session log |
+| Snowflake | `icon-cooloff` | Cool-off period, take a break, time-out |
+| Dollar circle | `icon-budget` | Entertainment budget, spending limits |
 | Timer/clock | `icon-timer` | Session awareness, play duration |
 | Gauge/limit | `icon-limit` | Deposit limits, loss limits, wagering limits |
-| Chart/graph | `icon-activity` | Activity tracking, play history, stats |
-| Info circle | `icon-info` | Educational content, tips, explainers |
-| Checkmark | `icon-check` | Confirmation, positive actions, quiz correct |
-| Brain/lightbulb | `icon-smart` | Myth-busting, game IQ, quiz |
-| Trophy | `icon-score` | Quiz results, achievements, game IQ score |
-| Share | `icon-share` | Social sharing, challenge friends |
-| Chat bubble | `icon-chat` | Live chat, support conversation |
-| Phone | `icon-phone` | Helpline number, call for support |
-| Shield | `icon-shield` | Account security, self-exclusion |
 | Pause | `icon-pause` | Take a break, cool-off |
 | Calendar | `icon-calendar` | Session scheduling, cool-off duration |
+| Shield | `icon-shield` | Account security, self-exclusion |
 | Person | `icon-person` | Player profile, account settings |
+| Checkmark | `icon-check` | Confirmation, positive actions, quiz correct |
+| Bar chart | `icon-activity` | Activity tracking, play history, stats |
 
-See `visual-identity/iconography/icon-library.md` for detailed specifications and `visual-identity/iconography/icons/` for SVG source files.
+#### Content & Education
+
+| Icon | Name | Usage |
+|---|---|---|
+| Question circle | `icon-quiz` | Quizzes, knowledge tests, trivia |
+| X-mark circle | `icon-myth` | Myth-busting, false claims, misconceptions |
+| Check circle | `icon-fact` | Facts, verified info, correct answers |
+| Open book | `icon-book` | Educational content, guides, learning |
+| Play rectangle | `icon-video` | Video content, tutorials, explainers |
+| Document | `icon-article` | Articles, blog posts, written content |
+| Lightbulb | `icon-smart` | Myth-busting, game IQ, quiz |
+| Info circle | `icon-info` | Educational content, tips, explainers |
+
+#### Social & Sharing
+
+| Icon | Name | Usage |
+|---|---|---|
+| Crossed swords | `icon-challenge` | Challenges, versus mode, competitions |
+| Podium | `icon-leaderboard` | Leaderboards, rankings, top players |
+| People group | `icon-group` | Groups, social features, community |
+| Chain link | `icon-link` | Links, URLs, connections |
+| QR code | `icon-qr` | QR codes, scan to access, mobile linking |
+| Share arrow | `icon-share` | Social sharing, challenge friends |
+| Trophy | `icon-score` | Quiz results, achievements, game IQ score |
+
+#### Support & Safety
+
+| Icon | Name | Usage |
+|---|---|---|
+| Heart | `icon-heart` | Wellbeing, self-care, mental health |
+| Warning triangle | `icon-warning` | Warnings, alerts, caution, risk |
+| Help lifeline | `icon-help` | Help resources, support services, crisis lines |
+| External arrow | `icon-external` | External links, leaving site, third-party |
+| Chat bubble | `icon-chat` | Live chat, support conversation |
+| Phone | `icon-phone` | Helpline number, call for support |
+| Playbook | `icon-playbook` | Brand identifier, navigation, home |
+
+See `visual-identity/iconography/icon-library.md` for detailed specifications, `visual-identity/iconography/icon-preview.html` for a visual preview, and `visual-identity/iconography/icons/` for SVG source files.
 
 ---
 
