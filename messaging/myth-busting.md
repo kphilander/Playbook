@@ -6,6 +6,69 @@ Ready-to-use copy for debunking the most common gambling misconceptions. Each my
 
 ---
 
+## Quick-scan index
+
+Find the right myth fast — by game type, by channel need, or by the cognitive bias you want to address.
+
+### By game type
+
+| # | Myth | One-liner | Campaigns |
+|---|---|---|---|
+| **Slots & Electronic Gaming** | | | |
+| 1 | [The Hot Streak](#myth-1-the-hot-streak) | Streaks are noise, not signal | Slots Myths, Game IQ |
+| 2 | [Due for a Win](#myth-2-due-for-a-win) | Machines don't keep score | Slots Myths, Game IQ |
+| 3 | [The Lucky Machine](#myth-3-the-lucky-machine) | Confirmation bias, not loyalty | Slots Myths, Luck & Lotteries |
+| 4 | [Near Misses Mean You're Close](#myth-4-near-misses-mean-youre-close) | A loss is a loss | Slots Myths, Game IQ |
+| 5 | [Time of Day Matters](#myth-5-time-of-day-matters) | RTP is set in software | Slots Myths, Game IQ |
+| 6 | [Higher Bets Improve Odds](#myth-6-higher-bets-improve-your-odds) | House edge is a percentage | Slots Myths, Money Myths |
+| **Table Games** | | | |
+| 7 | [Betting Systems Beat the House](#myth-7-betting-systems-beat-the-house) | Martingale = delayed ruin | Table Games, Game IQ |
+| 8 | [The Dealer Is Hot or Cold](#myth-8-the-dealer-is-hot-or-cold) | Dealers follow a script | Table Games |
+| 9 | [Card Counting Is Easy Money](#myth-9-card-counting-is-easy-money) | Real but tiny edge, huge effort | Table Games |
+| 10 | [Choosing "Your" Numbers](#myth-10-choosing-your-numbers-improves-odds) | The ball doesn't know you | Table Games, Luck & Lotteries |
+| **Sports Betting** | | | |
+| 11 | [Knowing the Sport = Winning](#myth-11-knowing-the-sport-means-youll-win) | The line already knows | Sports Betting, Game IQ |
+| 12 | [Parlays Are Smart](#myth-12-parlays-are-a-smart-strategy) | The vig compounds per leg | Sports Betting, Money Myths |
+| 13 | [Following Tipsters](#myth-13-following-tipsters-guarantees-profit) | Survivorship bias | Sports Betting, Game IQ |
+| 14 | [In-Play Edge](#myth-14-in-play-betting-gives-you-an-edge) | Algorithms are faster than you | Sports Betting |
+| **Lottery & Scratch Cards** | | | |
+| 15 | [Some Numbers Are Due](#myth-15-some-numbers-are-due) | Lottery balls have no memory | Luck & Lotteries, Game IQ |
+| 16 | [More Tickets = Better Odds](#myth-16-buying-more-tickets-dramatically-improves-odds) | 10x near-zero is near-zero | Luck & Lotteries |
+| **All Gambling** | | | |
+| 17 | [Win Back Your Losses](#myth-17-you-can-win-back-your-losses) | Sunk cost fallacy | Money Myths |
+| 18 | [Gambling as Income](#myth-18-gambling-is-a-way-to-make-money) | Entertainment, not investment | Money Myths, Game IQ |
+
+### By channel need
+
+**I need social posts (1080x1080 cards):** → Use the **Social card** copy from any myth. Pair with `collateral/render/card-1a` template format.
+
+**I need blog/article content:** → Use the **Article explainer** and expand. Combine 2–3 related myths into one article for more depth.
+
+**I need quiz questions:** → Use the **Quiz question** from any myth. See [Campaign 6: Game IQ Challenge](campaigns.md#campaign-6-game-iq-challenge) for a recommended 10-question set.
+
+**I need email content:** → See campaign briefs in [`campaigns.md`](campaigns.md) for email templates pairing myths with CTAs.
+
+**I need in-app tooltips or notifications:** → Pull the **STAT** line from any Social card — it works standalone at small sizes.
+
+### By cognitive bias
+
+| Bias | Myths | Explanation |
+|---|---|---|
+| Gambler's fallacy | 2, 7, 15 | Belief that past random events affect future ones |
+| Clustering illusion | 1, 8 | Seeing patterns in random sequences |
+| Near-miss effect | 4 | Treating "almost winning" as meaningful |
+| Anthropomorphism | 3, 8 | Giving machines or dealers human traits |
+| Illusion of control | 10, 14 | Believing personal choices affect random outcomes |
+| Overconfidence | 9, 11 | Overestimating one's ability to beat the system |
+| Sunk cost fallacy | 17 | Continuing because of past investment |
+| Survivorship bias | 13 | Only seeing the winners, not the losers |
+| Probability neglect | 12, 16 | Ignoring how small probabilities actually are |
+| Magical thinking | 3, 5 | Believing in luck, timing, or superstition |
+| Proportionality bias | 6 | Assuming bigger inputs = proportionally better outputs |
+| Optimism bias | 18 | Overestimating likelihood of positive outcomes |
+
+---
+
 ## How to use this file
 
 Each myth entry contains:
@@ -20,6 +83,8 @@ Each myth entry contains:
 - **Game type** — which vertical this myth belongs to
 - **Bias** — the underlying cognitive bias at work
 - **Pillar** — Open, Social, or both
+
+**Pre-built campaigns** using these myths are in [`campaigns.md`](campaigns.md).
 
 ---
 
