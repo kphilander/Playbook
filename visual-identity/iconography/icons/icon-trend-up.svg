@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Axes -->
-  <line x1="3" y1="20" x2="3" y2="4"/>
-  <line x1="3" y1="20" x2="21" y2="20"/>
-  <!-- Trend line going up -->
-  <polyline points="5 16 9 12 13 14 20 6"/>
-  <!-- Arrow head -->
-  <polyline points="16 6 20 6 20 10"/>
-</svg>

@@ -301,108 +301,103 @@ When customizing fonts:
 
 ## 4. Iconography
 
-### Icon style
+### Design philosophy: Weight contrast
 
-{{PROGRAM_NAME}} icons use a consistent outlined style with rounded line caps. The style should feel like part of a modern game UI — clean, contemporary, and integrated.
+The {{PROGRAM_NAME}} icon system mirrors the logo's typographic contrast — **Play** (800 weight) vs **BOOK** (300 weight) — through a dual stroke-weight system. Every icon contains two visual layers:
+
+- **Primary strokes (2px)**: Outer containers, main shapes, defining structure — the "Play" weight
+- **Detail strokes (1px)**: Inner details, accents, secondary elements — the "BOOK" weight
+
+This 2:1 ratio creates visual hierarchy within each icon and ties the icon system to the wordmark's design language. The weight contrast is visible at 24px and still perceptible at 16px.
+
+### Icon specifications
 
 | Property | Value |
 |---|---|
-| Style | Outlined (not filled) |
-| Stroke width | 1.5px (at 24px canvas) |
+| Style | Weight-contrast outlined (dual stroke) |
+| Primary stroke | 2px — containers, structure |
+| Detail stroke | 1px — accents, inner elements |
+| Stroke color | `currentColor` (inherits from parent) |
+| Fill | `none` |
 | Line cap | Round |
 | Line join | Round |
-| Corner radius | 2px |
-| Canvas size | 24x24px (default) |
+| Canvas size | 24x24px |
 | Optical sizes | 16px, 24px, 32px, 48px |
 
-### Icon library (55 icons across 6 categories)
+SVG structure — no `stroke-width` on root; weights set on `<g>` groups:
 
-#### Game Types
+```xml
+<svg ... fill="none" stroke="currentColor"
+     stroke-linecap="round" stroke-linejoin="round">
+  <g stroke-width="2"><!-- containers --></g>
+  <g stroke-width="1"><!-- details --></g>
+</svg>
+```
 
-| Icon | Name | Usage |
-|---|---|---|
-| Playing cards | `icon-cards` | Card games, blackjack, general gambling |
-| Dice | `icon-dice` | Dice games, craps, randomness |
-| Roulette wheel | `icon-roulette` | Roulette, casino games, chance |
-| Slot machine | `icon-slots` | Slot machines, electronic gaming |
-| Chip stack | `icon-chips` | Betting chips, wagers, stakes |
-| Sports ball | `icon-sports` | Sports betting, live betting |
-| Lottery ticket | `icon-lottery` | Lottery, scratch cards, draws |
-| Poker hand | `icon-poker` | Poker, card strategy games |
-| Bingo grid | `icon-bingo` | Bingo, number games |
-| Table (top-down) | `icon-table` | Table games, blackjack, baccarat |
+### Icon library (31 icons across 6 categories)
 
-#### Odds & Math
+#### Game Types (7)
 
-| Icon | Name | Usage |
-|---|---|---|
-| Percent circle | `icon-percentage` | Probabilities, percentages, return rates |
-| Calculator | `icon-calculator` | Odds calculator, math tools |
-| Fraction | `icon-odds` | Odds display, fractional odds, ratios |
-| Shuffle arrows | `icon-rng` | Random number generators, independence |
-| Tilt scale | `icon-edge` | House edge, advantage, margin |
-| Trend up | `icon-trend-up` | Positive trends, growth |
-| Trend down | `icon-trend-down` | Negative trends, losses |
-| Equal circle | `icon-equal` | Independent events, equal probability |
+| Icon | Name | Primary (2px) | Detail (1px) | Usage |
+|---|---|---|---|---|
+| Playing cards | `icon-cards` | Two card outlines | Suit symbol | Card games, blackjack |
+| Dice | `icon-dice` | Two die outlines | Pip dots | Dice games, craps |
+| Roulette wheel | `icon-roulette` | Outer + inner circles | 8 spokes, ball, pointer | Roulette, casino games |
+| Slot machine | `icon-slots` | Machine body | Reel windows, lever | Slot machines |
+| Sports ball | `icon-sports` | Ball circle | Horizontal + inward arcs | Sports betting |
+| Lottery ticket | `icon-lottery` | Ticket outline | Tear line, star | Lottery, scratch cards |
+| Table | `icon-table` | Table arc + rail | Dealer/player dots | Table games, baccarat |
 
-#### Player Tools
+#### Odds & Math (4)
 
-| Icon | Name | Usage |
-|---|---|---|
-| Wallet | `icon-wallet` | Deposits, withdrawals, account balance |
-| Padlock | `icon-lock` | Account lock, security, self-exclusion |
-| Bell | `icon-bell` | Notifications, alerts, reminders |
-| Gear | `icon-settings` | Settings, preferences, configuration |
-| Clock arrow | `icon-history` | Play history, recent activity, session log |
-| Snowflake | `icon-cooloff` | Cool-off period, take a break, time-out |
-| Dollar circle | `icon-budget` | Entertainment budget, spending limits |
-| Timer/clock | `icon-timer` | Session awareness, play duration |
-| Gauge/limit | `icon-limit` | Deposit limits, loss limits, wagering limits |
-| Pause | `icon-pause` | Take a break, cool-off |
-| Calendar | `icon-calendar` | Session scheduling, cool-off duration |
-| Shield | `icon-shield` | Account security, self-exclusion |
-| Person | `icon-person` | Player profile, account settings |
-| Checkmark | `icon-check` | Confirmation, positive actions, quiz correct |
-| Bar chart | `icon-activity` | Activity tracking, play history, stats |
+| Icon | Name | Primary (2px) | Detail (1px) | Usage |
+|---|---|---|---|---|
+| Percent circle | `icon-percentage` | Circle | Percent slash + dots | Probabilities, return rates |
+| Comparison bars | `icon-edge` | Two bars (tall/short) | Baseline, hash marks | House edge, advantage |
+| Shuffle arrows | `icon-rng` | Crossing paths | Arrowheads | RNG, independence |
+| Equal circle | `icon-equal` | Circle | Equal-sign lines | Equal probability, fairness |
 
-#### Content & Education
+#### Player Tools (7)
 
-| Icon | Name | Usage |
-|---|---|---|
-| Question circle | `icon-quiz` | Quizzes, knowledge tests, trivia |
-| X-mark circle | `icon-myth` | Myth-busting, false claims, misconceptions |
-| Check circle | `icon-fact` | Facts, verified info, correct answers |
-| Open book | `icon-book` | Educational content, guides, learning |
-| Play rectangle | `icon-video` | Video content, tutorials, explainers |
-| Document | `icon-article` | Articles, blog posts, written content |
-| Lightbulb | `icon-smart` | Myth-busting, game IQ, quiz |
-| Info circle | `icon-info` | Educational content, tips, explainers |
+| Icon | Name | Primary (2px) | Detail (1px) | Usage |
+|---|---|---|---|---|
+| Timer | `icon-timer` | Clock circle | Hands, knob | Session awareness |
+| Gauge | `icon-limit` | Gauge arc | Needle, ticks | Deposit/loss/wager limits |
+| Dollar circle | `icon-budget` | Circle | Dollar sign | Entertainment budget |
+| Bell | `icon-bell` | Bell body | Clapper | Notifications, reminders |
+| Clock arrow | `icon-history` | Clock circle | Hands, rewind arrow | Play history, session log |
+| Check box | `icon-check` | Rounded rectangle | Checkmark | Confirmation |
+| Bar chart | `icon-activity` | Chart axes | Bar lines | Activity tracking, stats |
 
-#### Social & Sharing
+#### Content & Education (4)
 
-| Icon | Name | Usage |
-|---|---|---|
-| Crossed swords | `icon-challenge` | Challenges, versus mode, competitions |
-| Podium | `icon-leaderboard` | Leaderboards, rankings, top players |
-| People group | `icon-group` | Groups, social features, community |
-| Chain link | `icon-link` | Links, URLs, connections |
-| QR code | `icon-qr` | QR codes, scan to access, mobile linking |
-| Share arrow | `icon-share` | Social sharing, challenge friends |
-| Trophy | `icon-score` | Quiz results, achievements, game IQ score |
+| Icon | Name | Primary (2px) | Detail (1px) | Usage |
+|---|---|---|---|---|
+| Question circle | `icon-quiz` | Circle | Question mark + dot | Quizzes, knowledge tests |
+| X-mark circle | `icon-myth` | Circle | X-mark lines | Myth-busting |
+| Check circle | `icon-fact` | Circle | Checkmark | Facts, verified info |
+| Info circle | `icon-info` | Circle | i-dot + i-stem | Tips, explainers |
 
-#### Support & Safety
+#### Social & Sharing (4)
 
-| Icon | Name | Usage |
-|---|---|---|
-| Heart | `icon-heart` | Wellbeing, self-care, mental health |
-| Warning triangle | `icon-warning` | Warnings, alerts, caution, risk |
-| Help lifeline | `icon-help` | Help resources, support services, crisis lines |
-| External arrow | `icon-external` | External links, leaving site, third-party |
-| Chat bubble | `icon-chat` | Live chat, support conversation |
-| Phone | `icon-phone` | Helpline number, call for support |
-| Playbook | `icon-playbook` | Brand identifier, navigation, home |
+| Icon | Name | Primary (2px) | Detail (1px) | Usage |
+|---|---|---|---|---|
+| Share arrow | `icon-share` | Box container | Arrow shaft + head | Social sharing |
+| Crossed swords | `icon-challenge` | Two diagonals | Handle/hilt lines | Challenges, versus mode |
+| Trophy | `icon-score` | Trophy cup | Handles, stem, base | Achievements, scores |
+| QR code | `icon-qr` | 3 finder blocks | Inner rects, data lines | QR codes, mobile linking |
 
-See `visual-identity/iconography/icon-library.md` for detailed specifications, `visual-identity/iconography/icon-preview.html` for a visual preview, and `visual-identity/iconography/icons/` for SVG source files.
+#### Support & Safety (5)
+
+| Icon | Name | Primary (2px) | Detail (1px) | Usage |
+|---|---|---|---|---|
+| Phone | `icon-phone` | Phone body | Signal arcs | Helpline, support |
+| Warning triangle | `icon-warning` | Triangle outline | Exclamation + dot | Warnings, caution |
+| First-aid cross | `icon-help` | Circle | Plus cross | Help resources, crisis lines |
+| External arrow | `icon-external` | Box | Arrow + diagonal | External links |
+| Playbook | `icon-playbook` | Open book + spine | Play triangle | Brand identifier, home |
+
+See `visual-identity/iconography/icon-library.md` for the complete spec, `visual-identity/iconography/icon-preview.html` for a visual preview at 16/24/32/48px, and `visual-identity/iconography/icons/` for the 31 SVG source files.
 
 ---
 
