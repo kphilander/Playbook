@@ -5,18 +5,6 @@ import { dirname, join } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const cards = [
-  { html: 'card-1a-hot-streak.html', output: 'card-1a-hot-streak.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1b-due-for-win.html', output: 'card-1b-due-for-win.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1c-lucky-machine.html', output: 'card-1c-lucky-machine.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'story-3a-hot-streak.html', output: 'story-3a-hot-streak.png', w: 1080, h: 1920, selector: '.story-card' },
-  { html: 'story-3b-house-edge.html', output: 'story-3b-house-edge.png', w: 1080, h: 1920, selector: '.story-card' },
-  { html: 'story-3c-sports-betting.html', output: 'story-3c-sports-betting.png', w: 1080, h: 1920, selector: '.story-card' },
-  { html: 'card-2a-house-edge.html', output: 'card-2a-house-edge.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2b-sports-betting.html', output: 'card-2b-sports-betting.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2c-bonus-wagering.html', output: 'card-2c-bonus-wagering.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'poster-4a-know-your-game.html', output: 'poster-4a-know-your-game.png', w: 1800, h: 2400, selector: '.poster' },
-  { html: 'poster-4b-no-fine-print.html', output: 'poster-4b-no-fine-print.png', w: 1800, h: 2400, selector: '.poster' },
-  { html: 'poster-4c-game-iq.html', output: 'poster-4c-game-iq.png', w: 1800, h: 2400, selector: '.poster' },
   { html: 'rack-card-5a.html', output: 'rack-card-5a.png', w: 800, h: 1800, selector: '.rack-card' },
   { html: 'table-tent-5b.html', output: 'table-tent-5b.png', w: 800, h: 1200, selector: '.table-tent' },
   { html: 'helpline-card-5c.html', output: 'helpline-card-5c.png', w: 700, h: 400, selector: '.helpline-card' },
