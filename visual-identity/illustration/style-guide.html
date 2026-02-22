@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — Illustration Style Guide</title>
+  <style>
+    /* ─── Brand color variables ──────────────── */
+    :root {
+      --pb-color-primary: #1B2838;
+      --pb-color-primary-light: #2A3F56;
+      --pb-color-primary-dark: #0F1923;
+      --pb-color-secondary: #00D4AA;
+      --pb-color-secondary-light: #33DDBB;
+      --pb-color-secondary-dark: #00A888;
+      --pb-color-accent: #FF6B35;
+      --pb-color-accent-light: #FF8A5C;
+      --pb-color-accent-dark: #E55A2B;
+      --pb-color-success: #00C853;
+      --pb-color-warning: #FFB300;
+      --pb-color-danger: #FF3D00;
+      --pb-color-info: #2979FF;
+      --pb-color-neutral-900: #1A1A2E;
+      --pb-color-neutral-700: #2E2E4A;
+      --pb-color-neutral-500: #6B6B8D;
+      --pb-color-neutral-300: #B0B0C8;
+      --pb-color-neutral-200: #D1D1E0;
+      --pb-color-neutral-100: #E8E8F0;
+      --pb-color-neutral-50: #F5F5FA;
+      --pb-color-white: #FFFFFF;
+      --pb-color-black: #111111;
+      --pb-font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Source Sans 3', system-ui, sans-serif;
+      --pb-font-mono: 'Source Code Pro', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--pb-font-body);
+      background: var(--pb-color-neutral-50);
+      color: var(--pb-color-neutral-900);
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Header ─────────────────────────────── */
+    header {
+      margin-bottom: 4rem;
+      border-bottom: 2px solid var(--pb-color-primary);
+      padding-bottom: 2rem;
+    }
+    header h1 {
+      font-family: var(--pb-font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: var(--pb-color-neutral-500);
+      font-size: 1.125rem;
+    }
+
+    /* ─── Section titles ─────────────────────── */
+    .section-title {
+      font-family: var(--pb-font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pb-color-accent);
+      margin-bottom: 1.5rem;
+      padding-top: 3rem;
+    }
+    section + section .section-title {
+      border-top: 1px solid var(--pb-color-neutral-200);
+    }
+
+    /* ─── Spec banner ────────────────────────── */
+    .spec-banner {
+      background: var(--pb-color-primary);
+      color: var(--pb-color-white);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .spec-banner div {
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .spec-banner strong {
+      display: block;
+      font-family: var(--pb-font-heading);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pb-color-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    /* ─── Cards & grid ───────────────────────── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: var(--pb-color-white);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .card-title {
+      font-family: var(--pb-font-heading);
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      color: var(--pb-color-primary);
+    }
+    .card-subtitle {
+      font-size: 0.8125rem;
+      color: var(--pb-color-neutral-500);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    /* ─── SVG demo containers ────────────────── */
+    .svg-demo {
+      background: var(--pb-color-white);
+      border: 1px solid var(--pb-color-neutral-200);
+      border-radius: 8px;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .svg-demo svg {
+      max-width: 100%;
+      height: auto;
+    }
+    .svg-demo-dark {
+      background: var(--pb-color-primary);
+      border-color: var(--pb-color-primary-dark);
+    }
+    .svg-label {
+      font-family: var(--pb-font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--pb-color-neutral-500);
+      margin-bottom: 0.5rem;
+    }
+    .svg-caption {
+      font-size: 0.8125rem;
+      color: var(--pb-color-neutral-500);
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    /* ─── Weight contrast demo ───────────────── */
+    .weight-demo {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .weight-example {
+      text-align: center;
+    }
+    .weight-example .svg-demo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.5rem;
+    }
+    .weight-label {
+      font-family: var(--pb-font-mono);
+      font-size: 0.75rem;
+      color: var(--pb-color-neutral-500);
+    }
+
+    /* ─── Color palette swatches ─────────────── */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+    .palette-swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .palette-color {
+      height: 60px;
+    }
+    .palette-info {
+      background: var(--pb-color-white);
+      padding: 0.5rem 0.75rem;
+    }
+    .palette-name {
+      font-family: var(--pb-font-heading);
+      font-size: 0.6875rem;
+      font-weight: 600;
+    }
+    .palette-hex {
+      font-family: var(--pb-font-mono);
+      font-size: 0.625rem;
+      color: var(--pb-color-neutral-500);
+    }
+
+    /* ─── Do / Don't grid ────────────────────── */
+    .dodont-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .dodont-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .dodont-visual {
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--pb-color-white);
+      min-height: 140px;
+    }
+    .dodont-do .dodont-visual { border-top: 3px solid var(--pb-color-success); }
+    .dodont-dont .dodont-visual { border-top: 3px solid var(--pb-color-danger); }
+    .dodont-body {
+      background: var(--pb-color-white);
+      padding: 1rem 1.5rem 1.25rem;
+      border-top: 1px solid var(--pb-color-neutral-100);
+    }
+    .dodont-badge {
+      display: inline-block;
+      font-family: var(--pb-font-heading);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      margin-bottom: 0.5rem;
+    }
+    .dodont-do .dodont-badge { background: rgba(0,200,83,0.12); color: var(--pb-color-success); }
+    .dodont-dont .dodont-badge { background: rgba(255,61,0,0.12); color: var(--pb-color-danger); }
+    .dodont-body p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--pb-color-neutral-700);
+    }
+
+    /* ─── Connection banner ──────────────────── */
+    .connection-banner {
+      background: var(--pb-color-neutral-100);
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    .connection-banner .icon-side,
+    .connection-banner .illus-side {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .connection-banner .arrow {
+      font-size: 1.5rem;
+      color: var(--pb-color-neutral-300);
+    }
+    .connection-banner .label {
+      font-family: var(--pb-font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pb-color-neutral-500);
+    }
+
+    /* ─── Footer ─────────────────────────────── */
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--pb-color-neutral-200);
+      font-size: 0.8125rem;
+      color: var(--pb-color-neutral-500);
+    }
+    footer a {
+      color: var(--pb-color-secondary-dark);
+      text-decoration: none;
+    }
+
+    /* ─── Responsive ─────────────────────────── */
+    @media (max-width: 768px) {
+      body { padding: 2rem 1rem; }
+      header h1 { font-size: 1.5rem; }
+      .spec-banner { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .weight-demo { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Playbook Illustration Style Guide</h1>
+    <p>Flat, modern illustrations with weight-contrast strokes (2px / 1px)</p>
+  </header>
+
+  <!-- ─── STYLE SPECS ────────────────────────── -->
+  <div class="spec-banner">
+    <div><strong>Approach</strong>Flat / semi-flat with subtle gradients; modern and clean</div>
+    <div><strong>Line Weight</strong>Dual stroke: 2px structural / 1px detail (matches icon system)</div>
+    <div><strong>Color</strong>Brand palette only — Primary, Secondary, Accent + approved combos</div>
+    <div><strong>Mood</strong>Confident, clear, smart — never cutesy or patronizing</div>
+    <div><strong>Strokes</strong>stroke-linecap: round; stroke-linejoin: round</div>
+    <div><strong>Principle</strong>Echoes logo weight contrast: Play (800) / BOOK (300)</div>
+  </div>
+
+
+  <!-- ─── WEIGHT CONTRAST ────────────────────── -->
+  <section>
+    <div class="section-title">Weight-Contrast Principle</div>
+
+    <div class="weight-demo">
+      <!-- 2px structural example -->
+      <div class="weight-example">
+        <div class="svg-demo">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke-width="2">
+              <rect x="10" y="10" width="60" height="60" rx="4"/>
+              <line x1="10" y1="35" x2="70" y2="35"/>
+            </g>
+          </svg>
+        </div>
+        <div class="weight-label">2px — Structure</div>
+      </div>
+
+      <div style="font-size: 1.5rem; color: var(--pb-color-neutral-300);">+</div>
+
+      <!-- 1px detail example -->
+      <div class="weight-example">
+        <div class="svg-demo">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke-width="1">
+              <line x1="22" y1="22" x2="58" y2="22"/>
+              <line x1="22" y1="28" x2="45" y2="28"/>
+              <line x1="22" y1="46" x2="58" y2="46"/>
+              <line x1="22" y1="52" x2="50" y2="52"/>
+              <line x1="22" y1="58" x2="42" y2="58"/>
+              <circle cx="55" cy="55" r="3" fill="#1B2838"/>
+            </g>
+          </svg>
+        </div>
+        <div class="weight-label">1px — Detail</div>
+      </div>
+
+      <div style="font-size: 1.5rem; color: var(--pb-color-neutral-300);">=</div>
+
+      <!-- Combined -->
+      <div class="weight-example">
+        <div class="svg-demo">
+          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round">
+            <g stroke-width="2">
+              <rect x="10" y="10" width="60" height="60" rx="4"/>
+              <line x1="10" y1="35" x2="70" y2="35"/>
+            </g>
+            <g stroke-width="1">
+              <line x1="22" y1="22" x2="58" y2="22"/>
+              <line x1="22" y1="28" x2="45" y2="28"/>
+              <line x1="22" y1="46" x2="58" y2="46"/>
+              <line x1="22" y1="52" x2="50" y2="52"/>
+              <line x1="22" y1="58" x2="42" y2="58"/>
+              <circle cx="55" cy="55" r="3" fill="#1B2838"/>
+            </g>
+          </svg>
+        </div>
+        <div class="weight-label">Combined</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── ICON → ILLUSTRATION CONNECTION ──────── -->
+  <section>
+    <div class="section-title">Icon System Connection</div>
+
+    <div class="connection-banner">
+      <div class="icon-side">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke-width="2"><circle cx="12" cy="12" r="10"/></g>
+          <g stroke-width="1">
+            <line x1="12" y1="7" x2="12" y2="13"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <circle cx="8" cy="9" r="0.5" fill="#1B2838"/>
+            <circle cx="16" cy="9" r="0.5" fill="#1B2838"/>
+          </g>
+        </svg>
+        <div>
+          <div class="label">Icon (24px)</div>
+          <span style="font-size: 0.8125rem; color: var(--pb-color-neutral-700);">Single concept, stroke-only, currentColor</span>
+        </div>
+      </div>
+
+      <div class="arrow">&#8594;</div>
+
+      <div class="illus-side">
+        <svg width="80" height="60" viewBox="0 0 80 60" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <g stroke="#1B2838" stroke-width="2">
+            <rect x="2" y="2" width="76" height="56" rx="4"/>
+          </g>
+          <g stroke="#6B6B8D" stroke-width="1" stroke-dasharray="4 4">
+            <line x1="2" y1="20" x2="78" y2="20"/>
+            <line x1="2" y1="38" x2="78" y2="38"/>
+          </g>
+          <rect x="14" y="24" width="12" height="28" rx="2" fill="#00D4AA" opacity="0.8"/>
+          <rect x="34" y="14" width="12" height="38" rx="2" fill="#FF6B35" opacity="0.8"/>
+          <rect x="54" y="30" width="12" height="22" rx="2" fill="#00A888" opacity="0.8"/>
+        </svg>
+        <div>
+          <div class="label">Illustration</div>
+          <span style="font-size: 0.8125rem; color: var(--pb-color-neutral-700);">Multi-element, brand colors, compositions</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="svg-caption" style="margin-bottom: 2rem;">Same weight-contrast principle scales from 24px icons to full illustrations. Structural elements (2px) define boundaries; details (1px) add information.</p>
+  </section>
+
+
+  <!-- ─── DATA VIZ: BAR CHART ────────────────── -->
+  <section>
+    <div class="section-title">Data Visualization — Bar Chart</div>
+
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-title">Know Your Odds</div>
+      <div class="card-subtitle">Bold, scannable layout. No gridlines — the bars and value labels do the work.</div>
+
+      <div class="svg-demo" style="padding: 2.5rem 2rem;">
+        <svg width="420" height="260" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+          <!-- Baseline only — 1px, no Y-axis, no gridlines -->
+          <line x1="30" y1="200" x2="400" y2="200" stroke="#D1D1E0" stroke-width="1"/>
+
+          <!-- Bars: simple rects, rounded top corners via large rx clipped -->
+          <!-- Blackjack 0.5% — bar height: 8 (minimum visible) -->
+          <rect x="42"  y="192" width="52" height="8"   rx="4" fill="#00D4AA"/>
+          <!-- Baccarat 1.06% — h=17 -->
+          <rect x="118" y="183" width="52" height="17"  rx="4" fill="#00D4AA"/>
+          <!-- Craps 1.41% — h=22 -->
+          <rect x="194" y="178" width="52" height="22"  rx="4" fill="#00D4AA"/>
+          <!-- European Roulette 2.7% — h=43 -->
+          <rect x="270" y="157" width="52" height="43"  rx="4" fill="#00A888"/>
+          <!-- American Roulette 5.26% — h=84 -->
+          <rect x="346" y="116" width="52" height="84"  rx="4" fill="#FF6B35"/>
+
+          <!-- Value labels — large, bold, above each bar -->
+          <g font-family="'Inter', system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+            <text x="68"  y="183" fill="#00D4AA">0.5%</text>
+            <text x="144" y="174" fill="#00D4AA">1%</text>
+            <text x="220" y="169" fill="#00D4AA">1.4%</text>
+            <text x="296" y="148" fill="#00A888">2.7%</text>
+            <text x="372" y="107" fill="#FF6B35">5.26%</text>
+          </g>
+
+          <!-- Game names — below baseline -->
+          <g font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500" fill="#1B2838" text-anchor="middle">
+            <text x="68"  y="220">Blackjack</text>
+            <text x="144" y="220">Baccarat</text>
+            <text x="220" y="220">Craps</text>
+            <text x="296" y="220">European</text>
+            <text x="372" y="220">American</text>
+          </g>
+          <g font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="500" fill="#1B2838" text-anchor="middle">
+            <text x="296" y="235">Roulette</text>
+            <text x="372" y="235">Roulette</text>
+          </g>
+        </svg>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.8125rem; color: var(--pb-color-neutral-700);">
+        <div><strong style="display:block; font-size: 0.6875rem; color: var(--pb-color-neutral-500); text-transform: uppercase; letter-spacing: 0.05em;">Baseline</strong>1px Neutral 200 — no axes, no gridlines</div>
+        <div><strong style="display:block; font-size: 0.6875rem; color: var(--pb-color-neutral-500); text-transform: uppercase; letter-spacing: 0.05em;">Values</strong>Large, bold, color-matched to bars</div>
+        <div><strong style="display:block; font-size: 0.6875rem; color: var(--pb-color-neutral-500); text-transform: uppercase; letter-spacing: 0.05em;">Bars</strong>52px wide, 4px top-radius</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── DATA VIZ: DONUT CHART ──────────────── -->
+  <section>
+    <div class="section-title">Data Visualization — Donut Chart</div>
+
+    <div class="card" style="margin-bottom: 1.5rem;">
+      <div class="card-title">Where Does the Edge Come From?</div>
+      <div class="card-subtitle">Bold center stat, color-matched legend labels, no axis chrome.</div>
+
+      <div class="svg-demo" style="padding: 2.5rem 2rem;">
+        <svg width="460" height="230" viewBox="0 0 460 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!--
+            European roulette: 37 pockets
+            Red 18 (48.65%), Black 18 (48.65%), Green 1 (2.70%)
+            r=80, center=(130,115). Circumference = 502.65
+          -->
+
+          <g transform="translate(130, 115)">
+            <!-- Background track -->
+            <circle cx="0" cy="0" r="80" stroke="#E8E8F0" stroke-width="32" fill="none"/>
+
+            <!-- Red / Accent segment — top-right half -->
+            <circle cx="0" cy="0" r="80" stroke="#FF6B35" stroke-width="32" fill="none"
+                    stroke-dasharray="242 261" stroke-dashoffset="126"
+                    stroke-linecap="butt"/>
+
+            <!-- Primary / Black segment — bottom-left half -->
+            <circle cx="0" cy="0" r="80" stroke="#1B2838" stroke-width="32" fill="none"
+                    stroke-dasharray="242 261" stroke-dashoffset="-118"
+                    stroke-linecap="butt"/>
+
+            <!-- Green / Secondary segment — small slice at top -->
+            <circle cx="0" cy="0" r="80" stroke="#00D4AA" stroke-width="32" fill="none"
+                    stroke-dasharray="12 491" stroke-dashoffset="132"
+                    stroke-linecap="butt"/>
+
+            <!-- Center stat -->
+            <text x="0" y="-4" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="36" font-weight="800" fill="#1B2838">37</text>
+            <text x="0" y="18" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#6B6B8D">pockets</text>
+          </g>
+
+          <!-- Legend — bold, color-matched, large -->
+          <g transform="translate(250, 40)">
+            <rect x="0" y="0" width="14" height="14" rx="3" fill="#FF6B35"/>
+            <text x="22" y="12" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="700" fill="#FF6B35">Red</text>
+            <text x="22" y="30" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#1B2838">18 pockets &middot; 48.6%</text>
+
+            <rect x="0" y="52" width="14" height="14" rx="3" fill="#1B2838"/>
+            <text x="22" y="64" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="700" fill="#1B2838">Black</text>
+            <text x="22" y="82" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#1B2838">18 pockets &middot; 48.6%</text>
+
+            <rect x="0" y="104" width="14" height="14" rx="3" fill="#00D4AA"/>
+            <text x="22" y="116" font-family="'Inter', system-ui, sans-serif" font-size="15" font-weight="700" fill="#00D4AA">Green (zero)</text>
+            <text x="22" y="134" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="500" fill="#1B2838">1 pocket &middot; 2.7%</text>
+            <text x="22" y="154" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="600" fill="#FF6B35">This is the house edge.</text>
+          </g>
+        </svg>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; font-size: 0.8125rem; color: var(--pb-color-neutral-700);">
+        <div><strong style="display:block; font-size: 0.6875rem; color: var(--pb-color-neutral-500); text-transform: uppercase; letter-spacing: 0.05em;">Ring</strong>32px stroke, r=80 — bold and scannable</div>
+        <div><strong style="display:block; font-size: 0.6875rem; color: var(--pb-color-neutral-500); text-transform: uppercase; letter-spacing: 0.05em;">Center</strong>Large stat (36px 800) — the hero number</div>
+        <div><strong style="display:block; font-size: 0.6875rem; color: var(--pb-color-neutral-500); text-transform: uppercase; letter-spacing: 0.05em;">Legend</strong>Color-matched labels, bold names, inline insight</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── DATA VIZ: COMPARISON ───────────────── -->
+  <section>
+    <div class="section-title">Data Visualization — Comparison Layout</div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Myth vs Fact</div>
+        <div class="card-subtitle">Side-by-side comparison using Accent (myth) and Secondary (fact)</div>
+        <div class="svg-demo">
+          <svg width="440" height="180" viewBox="0 0 440 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Myth side -->
+            <rect x="0" y="0" width="210" height="180" rx="6" fill="#FFF0E8" stroke="#FF6B35" stroke-width="2"/>
+            <rect x="0" y="0" width="210" height="36" rx="6" fill="#FF6B35"/>
+            <rect x="0" y="18" width="210" height="18" fill="#FF6B35"/>
+            <text x="105" y="24" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="700" fill="white">MYTH</text>
+
+            <!-- Myth icon: X -->
+            <g transform="translate(85, 60)" stroke="#FF6B35" stroke-width="2" stroke-linecap="round">
+              <circle cx="20" cy="20" r="18" stroke-width="2" fill="none"/>
+              <line x1="12" y1="12" x2="28" y2="28"/>
+              <line x1="28" y1="12" x2="12" y2="28"/>
+            </g>
+
+            <text x="105" y="118" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600" fill="#1B2838">"Slot machines are</text>
+            <text x="105" y="134" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600" fill="#1B2838">due to pay out after</text>
+            <text x="105" y="150" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600" fill="#1B2838">a losing streak."</text>
+
+            <!-- Fact side -->
+            <rect x="230" y="0" width="210" height="180" rx="6" fill="#E6FAF5" stroke="#00D4AA" stroke-width="2"/>
+            <rect x="230" y="0" width="210" height="36" rx="6" fill="#00D4AA"/>
+            <rect x="230" y="18" width="210" height="18" fill="#00D4AA"/>
+            <text x="335" y="24" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="12" font-weight="700" fill="white">FACT</text>
+
+            <!-- Fact icon: checkmark -->
+            <g transform="translate(315, 60)" stroke="#00D4AA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="20" cy="20" r="18" stroke-width="2" fill="none"/>
+              <polyline points="12,20 18,26 28,14"/>
+            </g>
+
+            <text x="335" y="118" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600" fill="#1B2838">Every spin uses a</text>
+            <text x="335" y="134" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600" fill="#1B2838">random number generator.</text>
+            <text x="335" y="150" text-anchor="middle" font-family="'Inter', system-ui, sans-serif" font-size="11" font-weight="600" fill="#1B2838">Each result is independent.</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Stat Card</div>
+        <div class="card-subtitle">Bold number with context — for social sharing and infographics</div>
+        <div class="svg-demo">
+          <svg width="280" height="180" viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="280" height="180" rx="8" fill="#1B2838"/>
+
+            <!-- Eyebrow label -->
+            <text x="24" y="36" font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="600" fill="#00D4AA" letter-spacing="0.1em">HOUSE EDGE</text>
+
+            <!-- Big stat number -->
+            <text x="24" y="92" font-family="'Inter', system-ui, sans-serif" font-size="48" font-weight="800" fill="white">5.26%</text>
+
+            <!-- Context -->
+            <line x1="24" y1="108" x2="256" y2="108" stroke="#2A3F56" stroke-width="1"/>
+            <text x="24" y="130" font-family="'Source Sans 3', system-ui, sans-serif" font-size="13" fill="#B0B0C8">American roulette has one of the</text>
+            <text x="24" y="148" font-family="'Source Sans 3', system-ui, sans-serif" font-size="13" fill="#B0B0C8">highest house edges in the casino.</text>
+
+            <!-- Accent bar -->
+            <rect x="0" y="170" width="280" height="10" rx="0" fill="#FF6B35"/>
+            <rect x="0" y="170" width="280" height="4" rx="0" fill="#FF6B35"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── PEOPLE = PHOTOGRAPHY ────────────────── -->
+  <section>
+    <div class="section-title">People in Visuals</div>
+
+    <div class="card" style="margin-bottom: 3rem; border-left: 4px solid var(--pb-color-accent);">
+      <div class="card-title">No illustrated people. Use photography.</div>
+      <p style="font-size: 0.9375rem; line-height: 1.7; color: var(--pb-color-neutral-700); max-width: 640px;">
+        Illustrations are for <strong>data, concepts, and diagrams</strong> — never for depicting people. When a visual needs to show a person or group, use photography following the <a href="../photography/photography.md" style="color: var(--pb-color-secondary-dark); text-decoration: none; font-weight: 600;">photography guidelines</a>.
+      </p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; max-width: 480px;">
+        <div style="background: rgba(0,200,83,0.08); border-radius: 6px; padding: 0.75rem 1rem;">
+          <div style="font-family: var(--pb-font-heading); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-success); margin-bottom: 0.5rem;">Illustration</div>
+          <div style="font-size: 0.8125rem; color: var(--pb-color-neutral-700); line-height: 1.5;">Charts, odds, probability, house edge, RNG, myth vs fact, quiz cards, stat graphics</div>
+        </div>
+        <div style="background: rgba(0,200,83,0.08); border-radius: 6px; padding: 0.75rem 1rem;">
+          <div style="font-family: var(--pb-font-heading); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-success); margin-bottom: 0.5rem;">Photography</div>
+          <div style="font-size: 0.8125rem; color: var(--pb-color-neutral-700); line-height: 1.5;">Friends, fans, social moments, casino environments, anyone using a device, any human presence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── COLOR PALETTE FOR ILLUSTRATIONS ────── -->
+  <section>
+    <div class="section-title">Illustration Color Palette</div>
+
+    <div class="palette-grid">
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #1B2838;"></div>
+        <div class="palette-info"><div class="palette-name">Primary</div><div class="palette-hex">#1B2838</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #2A3F56;"></div>
+        <div class="palette-info"><div class="palette-name">Primary Light</div><div class="palette-hex">#2A3F56</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #00D4AA;"></div>
+        <div class="palette-info"><div class="palette-name">Secondary</div><div class="palette-hex">#00D4AA</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #00A888;"></div>
+        <div class="palette-info"><div class="palette-name">Secondary Dark</div><div class="palette-hex">#00A888</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #FF6B35;"></div>
+        <div class="palette-info"><div class="palette-name">Accent</div><div class="palette-hex">#FF6B35</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #FF8A5C;"></div>
+        <div class="palette-info"><div class="palette-name">Accent Light</div><div class="palette-hex">#FF8A5C</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #00C853;"></div>
+        <div class="palette-info"><div class="palette-name">Success</div><div class="palette-hex">#00C853</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #FFB300;"></div>
+        <div class="palette-info"><div class="palette-name">Warning</div><div class="palette-hex">#FFB300</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #FF3D00;"></div>
+        <div class="palette-info"><div class="palette-name">Danger</div><div class="palette-hex">#FF3D00</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #6B6B8D;"></div>
+        <div class="palette-info"><div class="palette-name">Neutral 500</div><div class="palette-hex">#6B6B8D</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #D1D1E0;"></div>
+        <div class="palette-info"><div class="palette-name">Neutral 200</div><div class="palette-hex">#D1D1E0</div></div>
+      </div>
+      <div class="palette-swatch">
+        <div class="palette-color" style="background: #F5F5FA;"></div>
+        <div class="palette-info"><div class="palette-name">Neutral 50</div><div class="palette-hex">#F5F5FA</div></div>
+      </div>
+    </div>
+
+    <div class="svg-label">Approved Combinations</div>
+    <div class="grid-3" style="margin-top: 0.75rem;">
+      <div class="card" style="padding: 1rem;">
+        <div style="display: flex; gap: 4px; margin-bottom: 0.5rem;">
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #1B2838;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #00D4AA;"></div>
+        </div>
+        <div style="font-size: 0.75rem; font-weight: 600;">Primary + Secondary</div>
+        <div style="font-size: 0.6875rem; color: var(--pb-color-neutral-500);">Default data viz</div>
+      </div>
+      <div class="card" style="padding: 1rem;">
+        <div style="display: flex; gap: 4px; margin-bottom: 0.5rem;">
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #1B2838;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #FF6B35;"></div>
+        </div>
+        <div style="font-size: 0.75rem; font-weight: 600;">Primary + Accent</div>
+        <div style="font-size: 0.6875rem; color: var(--pb-color-neutral-500);">Warning / attention</div>
+      </div>
+      <div class="card" style="padding: 1rem;">
+        <div style="display: flex; gap: 4px; margin-bottom: 0.5rem;">
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #00D4AA;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #FF6B35;"></div>
+        </div>
+        <div style="font-size: 0.75rem; font-weight: 600;">Secondary + Accent</div>
+        <div style="font-size: 0.6875rem; color: var(--pb-color-neutral-500);">Comparison (myth vs fact)</div>
+      </div>
+      <div class="card" style="padding: 1rem;">
+        <div style="display: flex; gap: 4px; margin-bottom: 0.5rem;">
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #1B2838;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #00C853;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #FF3D00;"></div>
+        </div>
+        <div style="font-size: 0.75rem; font-weight: 600;">Primary + Success + Danger</div>
+        <div style="font-size: 0.6875rem; color: var(--pb-color-neutral-500);">Right/wrong, do/don't</div>
+      </div>
+      <div class="card" style="padding: 1rem;">
+        <div style="display: flex; gap: 4px; margin-bottom: 0.5rem;">
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #1B2838;"></div>
+          <div style="width: 24px; height: 24px; border-radius: 4px; background: #6B6B8D;"></div>
+        </div>
+        <div style="font-size: 0.75rem; font-weight: 600;">Primary + Neutral</div>
+        <div style="font-size: 0.6875rem; color: var(--pb-color-neutral-500);">Low-emphasis, background</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── DO / DON'T ─────────────────────────── -->
+  <section>
+    <div class="section-title">Do / Don't</div>
+
+    <div class="dodont-grid">
+      <div class="dodont-card dodont-do">
+        <div class="dodont-visual">
+          <svg width="180" height="100" viewBox="0 0 180 100" fill="none">
+            <!-- Clean bar chart — brand colors, bold values, minimal chrome -->
+            <line x1="20" y1="90" x2="160" y2="90" stroke="#D1D1E0" stroke-width="1"/>
+            <rect x="30"  y="62" width="28" height="28" rx="3" fill="#00D4AA"/>
+            <rect x="72"  y="30" width="28" height="60" rx="3" fill="#FF6B35"/>
+            <rect x="114" y="48" width="28" height="42" rx="3" fill="#00A888"/>
+            <text x="44"  y="56" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#00D4AA">3%</text>
+            <text x="86"  y="24" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#FF6B35">5%</text>
+            <text x="128" y="42" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="700" fill="#00A888">4%</text>
+          </svg>
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Do</span>
+          <p>Brand colors, bold value labels, minimal axis chrome. The data speaks — not the decoration.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-dont">
+        <div class="dodont-visual">
+          <svg width="180" height="100" viewBox="0 0 180 100" fill="none">
+            <!-- Garish, off-brand chart -->
+            <line x1="20" y1="90" x2="160" y2="90" stroke="#333" stroke-width="1"/>
+            <rect x="35" y="10" width="24" height="80" rx="0" fill="#FF00FF"/>
+            <rect x="70" y="20" width="24" height="70" rx="0" fill="#00FFFF"/>
+            <rect x="105" y="30" width="24" height="60" rx="0" fill="#FFFF00"/>
+            <rect x="140" y="40" width="24" height="50" rx="0" fill="#FF0000"/>
+            <!-- No labels, non-brand colors, no structure -->
+          </svg>
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Don't</span>
+          <p>Use non-brand colors, skip axes and labels, use sharp corners, or overcrowd with too many data points.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-do">
+        <div class="dodont-visual">
+          <svg width="120" height="100" viewBox="0 0 120 100" fill="none">
+            <!-- Simple concept illustration -->
+            <g stroke="#1B2838" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="10" y="10" width="100" height="80" rx="6"/>
+            </g>
+            <g stroke="#1B2838" stroke-width="1">
+              <text x="60" y="40" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="600" fill="#1B2838">One concept</text>
+              <text x="60" y="60" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#6B6B8D">per illustration</text>
+            </g>
+            <circle cx="60" cy="78" r="5" fill="#00D4AA"/>
+          </svg>
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Do</span>
+          <p>Keep one concept per illustration. Simple, focused, with the key insight obvious within 2 seconds.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-dont">
+        <div class="dodont-visual">
+          <svg width="120" height="100" viewBox="0 0 120 100" fill="none">
+            <!-- Overcomplicated mess -->
+            <circle cx="30" cy="30" r="15" stroke="#999" stroke-width="1" fill="none"/>
+            <circle cx="60" cy="40" r="10" stroke="#999" stroke-width="1" fill="none"/>
+            <circle cx="90" cy="25" r="12" stroke="#999" stroke-width="1" fill="none"/>
+            <line x1="30" y1="30" x2="60" y2="40" stroke="#999" stroke-width="0.5"/>
+            <line x1="60" y1="40" x2="90" y2="25" stroke="#999" stroke-width="0.5"/>
+            <rect x="10" y="60" width="100" height="30" rx="2" stroke="#999" stroke-width="0.5" fill="none"/>
+            <line x1="15" y1="68" x2="105" y2="68" stroke="#ccc" stroke-width="0.5"/>
+            <line x1="15" y1="73" x2="95" y2="73" stroke="#ccc" stroke-width="0.5"/>
+            <line x1="15" y1="78" x2="100" y2="78" stroke="#ccc" stroke-width="0.5"/>
+            <line x1="15" y1="83" x2="80" y2="83" stroke="#ccc" stroke-width="0.5"/>
+          </svg>
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Don't</span>
+          <p>Overcomplicate with multiple concepts, thin inconsistent strokes, or decorative elements that don't convey meaning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    Playbook Illustration Style Guide &mdash;
+    <a href="illustration.md">Markdown reference</a> &middot;
+    <a href="../iconography/icon-library.md">Icon library</a> &middot;
+    <a href="../../_brand.yml">_brand.yml</a> &middot;
+    <a href="../../brand-book/03-visual-identity.md">Brand book &sect;6</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — Photography Mood Board</title>
+  <style>
+    /* ─── Brand color variables ──────────────── */
+    :root {
+      --pb-color-primary: #1B2838;
+      --pb-color-primary-light: #2A3F56;
+      --pb-color-primary-dark: #0F1923;
+      --pb-color-secondary: #00D4AA;
+      --pb-color-secondary-light: #33DDBB;
+      --pb-color-secondary-dark: #00A888;
+      --pb-color-accent: #FF6B35;
+      --pb-color-accent-light: #FF8A5C;
+      --pb-color-accent-dark: #E55A2B;
+      --pb-color-success: #00C853;
+      --pb-color-warning: #FFB300;
+      --pb-color-danger: #FF3D00;
+      --pb-color-info: #2979FF;
+      --pb-color-neutral-900: #1A1A2E;
+      --pb-color-neutral-700: #2E2E4A;
+      --pb-color-neutral-500: #6B6B8D;
+      --pb-color-neutral-300: #B0B0C8;
+      --pb-color-neutral-200: #D1D1E0;
+      --pb-color-neutral-100: #E8E8F0;
+      --pb-color-neutral-50: #F5F5FA;
+      --pb-color-white: #FFFFFF;
+      --pb-color-black: #111111;
+      --pb-font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Source Sans 3', system-ui, sans-serif;
+      --pb-font-mono: 'Source Code Pro', monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: var(--pb-font-body);
+      background: var(--pb-color-neutral-50);
+      color: var(--pb-color-neutral-900);
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── Header ─────────────────────────────── */
+    header {
+      margin-bottom: 4rem;
+      border-bottom: 2px solid var(--pb-color-primary);
+      padding-bottom: 2rem;
+    }
+    header h1 {
+      font-family: var(--pb-font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      color: var(--pb-color-neutral-500);
+      font-size: 1.125rem;
+    }
+
+    /* ─── Section titles ─────────────────────── */
+    .section-title {
+      font-family: var(--pb-font-heading);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pb-color-accent);
+      margin-bottom: 1.5rem;
+      padding-top: 3rem;
+    }
+
+    section + section .section-title {
+      border-top: 1px solid var(--pb-color-neutral-200);
+    }
+
+    /* ─── Spec banner ────────────────────────── */
+    .spec-banner {
+      background: var(--pb-color-primary);
+      color: var(--pb-color-white);
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+    .spec-banner div {
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    .spec-banner strong {
+      display: block;
+      font-family: var(--pb-font-heading);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pb-color-secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    /* ─── Category cards ─────────────────────── */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .category-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .category-hero {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      position: relative;
+    }
+    .category-hero .label {
+      font-family: var(--pb-font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--pb-color-white);
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    .category-body {
+      background: var(--pb-color-white);
+      padding: 1.25rem 1.5rem;
+    }
+    .category-body p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--pb-color-neutral-700);
+      margin-bottom: 0.75rem;
+    }
+    .category-body .keywords {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.375rem;
+    }
+    .category-body .keyword {
+      font-family: var(--pb-font-mono);
+      font-size: 0.6875rem;
+      background: var(--pb-color-neutral-100);
+      color: var(--pb-color-neutral-700);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+    }
+
+    /* Category hero images — Pexels photos with gradient overlay for label */
+    .category-hero {
+      background-size: cover;
+      background-position: center;
+    }
+    .category-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27, 40, 56, 0.7) 0%, transparent 60%);
+    }
+    .cat-social {
+      background-image: url('https://images.pexels.com/photos/5935207/pexels-photo-5935207.jpeg?auto=compress&cs=tinysrgb&w=800');
+    }
+    .cat-sports {
+      background-image: url('https://images.pexels.com/photos/3131405/pexels-photo-3131405.jpeg?auto=compress&cs=tinysrgb&w=800');
+    }
+    .cat-mobile {
+      background-image: url('https://images.pexels.com/photos/3764496/pexels-photo-3764496.jpeg?auto=compress&cs=tinysrgb&w=800');
+    }
+    .cat-casino {
+      background-image: url('https://images.pexels.com/photos/7404655/pexels-photo-7404655.jpeg?auto=compress&cs=tinysrgb&w=800');
+    }
+
+    /* ─── Aspect ratio reference ─────────────── */
+    .aspect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .aspect-card {
+      text-align: center;
+    }
+    .aspect-box {
+      background: linear-gradient(135deg, var(--pb-color-primary-light), var(--pb-color-primary));
+      border-radius: 6px;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--pb-color-secondary);
+      font-family: var(--pb-font-mono);
+      font-size: 0.875rem;
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+    .aspect-box::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(0,212,170,0.2);
+      border-radius: 6px;
+    }
+    .aspect-16-9 { width: 100%; aspect-ratio: 16/9; }
+    .aspect-4-3  { width: 85%; aspect-ratio: 4/3; margin-inline: auto; }
+    .aspect-1-1  { width: 65%; aspect-ratio: 1/1; margin-inline: auto; }
+    .aspect-9-16 { width: 40%; aspect-ratio: 9/16; margin-inline: auto; max-height: 220px; }
+    .aspect-21-9 { width: 100%; aspect-ratio: 21/9; }
+    .aspect-3-2  { width: 80%; aspect-ratio: 3/2; margin-inline: auto; }
+
+    .aspect-label {
+      font-family: var(--pb-font-heading);
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 0.25rem;
+    }
+    .aspect-detail {
+      font-size: 0.75rem;
+      color: var(--pb-color-neutral-500);
+    }
+
+    /* ─── Text overlay examples ──────────────── */
+    .overlay-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .overlay-example {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .overlay-demo {
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      position: relative;
+    }
+    .overlay-demo-bg {
+      background: url('https://images.pexels.com/photos/3131405/pexels-photo-3131405.jpeg?auto=compress&cs=tinysrgb&w=800') center / cover no-repeat;
+    }
+
+    /* Dark overlay */
+    .overlay-dark .overlay-layer {
+      position: absolute;
+      inset: 0;
+      background: rgba(27, 40, 56, 0.65);
+    }
+    .overlay-dark .overlay-text {
+      position: relative; z-index: 1;
+    }
+    .overlay-dark .overlay-text h3 {
+      font-family: var(--pb-font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #FFFFFF;
+      margin-bottom: 0.375rem;
+    }
+    .overlay-dark .overlay-text p {
+      font-family: var(--pb-font-body);
+      font-size: 1rem;
+      color: #FFFFFF;
+      opacity: 0.9;
+    }
+
+    /* Light overlay */
+    .overlay-light .overlay-layer {
+      position: absolute;
+      inset: 0;
+      background: rgba(245, 245, 250, 0.80);
+    }
+    .overlay-light .overlay-text {
+      position: relative; z-index: 1;
+    }
+    .overlay-light .overlay-text h3 {
+      font-family: var(--pb-font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #1A1A2E;
+      margin-bottom: 0.375rem;
+    }
+    .overlay-light .overlay-text p {
+      font-family: var(--pb-font-body);
+      font-size: 1rem;
+      color: #1A1A2E;
+    }
+
+    /* Gradient overlay */
+    .overlay-gradient .overlay-layer {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27, 40, 56, 0.75) 0%, transparent 60%);
+    }
+    .overlay-gradient .overlay-text {
+      position: relative; z-index: 1;
+    }
+    .overlay-gradient .overlay-text h3 {
+      font-family: var(--pb-font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #FFFFFF;
+      margin-bottom: 0.375rem;
+    }
+    .overlay-gradient .overlay-text p {
+      font-family: var(--pb-font-body);
+      font-size: 1rem;
+      color: #FFFFFF;
+      opacity: 0.9;
+    }
+
+    /* Accent overlay */
+    .overlay-accent .overlay-layer {
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 107, 53, 0.90);
+    }
+    .overlay-accent .overlay-text {
+      position: relative; z-index: 1;
+    }
+    .overlay-accent .overlay-text h3 {
+      font-family: var(--pb-font-heading);
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #FFFFFF;
+      margin-bottom: 0.375rem;
+    }
+    .overlay-accent .overlay-text p {
+      font-family: var(--pb-font-body);
+      font-size: 1rem;
+      color: #FFFFFF;
+      opacity: 0.95;
+    }
+
+    .overlay-spec {
+      background: var(--pb-color-white);
+      padding: 1rem 1.5rem;
+    }
+    .overlay-spec table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8125rem;
+    }
+    .overlay-spec th {
+      text-align: left;
+      font-family: var(--pb-font-heading);
+      font-weight: 600;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pb-color-neutral-500);
+      padding: 0.25rem 0;
+    }
+    .overlay-spec td {
+      padding: 0.25rem 0;
+      color: var(--pb-color-neutral-700);
+    }
+    .overlay-spec code {
+      font-family: var(--pb-font-mono);
+      font-size: 0.75rem;
+      background: var(--pb-color-neutral-100);
+      padding: 0.125rem 0.375rem;
+      border-radius: 3px;
+    }
+    .contrast-pass {
+      color: var(--pb-color-success);
+      font-weight: 600;
+    }
+
+    /* ─── Do / Don't grid ────────────────────── */
+    .dodont-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .dodont-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .dodont-visual {
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      font-size: 0.875rem;
+      color: var(--pb-color-white);
+      font-family: var(--pb-font-heading);
+      font-weight: 600;
+    }
+    .dodont-do .dodont-visual {
+      border-top: 3px solid var(--pb-color-success);
+    }
+    .dodont-dont .dodont-visual {
+      border-top: 3px solid var(--pb-color-danger);
+    }
+
+    .dodont-body {
+      background: var(--pb-color-white);
+      padding: 1.25rem 1.5rem;
+    }
+    .dodont-badge {
+      display: inline-block;
+      font-family: var(--pb-font-heading);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      margin-bottom: 0.75rem;
+    }
+    .dodont-do .dodont-badge {
+      background: rgba(0,200,83,0.12);
+      color: var(--pb-color-success);
+    }
+    .dodont-dont .dodont-badge {
+      background: rgba(255,61,0,0.12);
+      color: var(--pb-color-danger);
+    }
+    .dodont-body p {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--pb-color-neutral-700);
+    }
+
+    /* ─── Keyword reference ──────────────────── */
+    .keyword-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .keyword-card {
+      background: var(--pb-color-white);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .keyword-card h4 {
+      font-family: var(--pb-font-heading);
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--pb-color-primary);
+    }
+    .keyword-group {
+      margin-bottom: 0.75rem;
+    }
+    .keyword-group-label {
+      font-family: var(--pb-font-heading);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pb-color-neutral-500);
+      margin-bottom: 0.375rem;
+    }
+    .keyword-group .keyword {
+      font-family: var(--pb-font-mono);
+      font-size: 0.6875rem;
+      background: var(--pb-color-neutral-100);
+      color: var(--pb-color-neutral-700);
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      display: inline-block;
+      margin: 0.125rem;
+    }
+    .keyword-exclude .keyword {
+      background: rgba(255,61,0,0.08);
+      color: var(--pb-color-danger);
+    }
+
+    /* ─── Color grading swatches ─────────────── */
+    .grading-strip {
+      display: flex;
+      gap: 0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      height: 80px;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.08);
+    }
+    .grading-swatch {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6875rem;
+      font-family: var(--pb-font-mono);
+    }
+    .grading-swatch span {
+      margin-top: 0.25rem;
+      font-size: 0.625rem;
+      opacity: 0.7;
+    }
+    .grading-desc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .grading-desc div {
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: var(--pb-color-neutral-700);
+    }
+    .grading-desc strong {
+      display: block;
+      font-family: var(--pb-font-heading);
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--pb-color-neutral-500);
+      margin-bottom: 0.25rem;
+    }
+
+    /* ─── Footer ─────────────────────────────── */
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--pb-color-neutral-200);
+      font-size: 0.8125rem;
+      color: var(--pb-color-neutral-500);
+    }
+    footer a {
+      color: var(--pb-color-secondary-dark);
+      text-decoration: none;
+    }
+
+    /* ─── Responsive ─────────────────────────── */
+    @media (max-width: 768px) {
+      body { padding: 2rem 1rem; }
+      header h1 { font-size: 1.5rem; }
+      .spec-banner { grid-template-columns: 1fr; }
+      .overlay-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Playbook Photography Mood Board</h1>
+    <p>Photo direction, composition, and overlay specifications</p>
+  </header>
+
+  <!-- ─── PHOTO STYLE SPECS ──────────────────── -->
+  <div class="spec-banner">
+    <div><strong>Lighting</strong>Natural or warm ambient; golden-hour feel; no flat flash</div>
+    <div><strong>Color Temp</strong>Warm (5000–6500K); golden tones, never clinical blue</div>
+    <div><strong>Depth of Field</strong>ƒ/2.0–ƒ/4.0 portraits; ƒ/5.6–ƒ/8.0 environments</div>
+    <div><strong>Post-Processing</strong>Light color grading; preserve skin tones; subtle contrast lift</div>
+    <div><strong>Mood</strong>Confident, social, energetic, real — never staged or solitary</div>
+    <div><strong>Subjects</strong>Diverse, 18+, candid body language, genuine moments</div>
+  </div>
+
+
+  <!-- ─── SUBJECT CATEGORIES ─────────────────── -->
+  <section>
+    <div class="section-title">Subject Categories</div>
+
+    <div class="category-grid">
+      <div class="category-card">
+        <div class="category-hero cat-social">
+          <span class="label">Social / Group</span>
+        </div>
+        <div class="category-body">
+          <p>Friends at events, shared experiences, genuine connection. Groups of 2–6, leaning in, laughing, engaged. Sports bars, rooftops, living rooms.</p>
+          <div class="keywords">
+            <span class="keyword">friends gathering</span>
+            <span class="keyword">social event</span>
+            <span class="keyword">group fun</span>
+            <span class="keyword">diverse</span>
+            <span class="keyword">candid</span>
+            <span class="keyword">warm lighting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-hero cat-sports">
+          <span class="label">Sports / Entertainment</span>
+        </div>
+        <div class="category-body">
+          <p>Stadium energy, watch parties, fan culture. Focus on the crowd experience, not athletes. Wide establishing shots + medium crowd reactions.</p>
+          <div class="keywords">
+            <span class="keyword">sports fans</span>
+            <span class="keyword">stadium crowd</span>
+            <span class="keyword">watch party</span>
+            <span class="keyword">cheering</span>
+            <span class="keyword">high-five</span>
+            <span class="keyword">excited</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-hero cat-mobile">
+          <span class="label">Mobile / Digital</span>
+        </div>
+        <div class="category-body">
+          <p>Casual phone use in everyday settings. Quick glance, relaxed posture, one-handed hold. Phone use is incidental, not obsessive. Café, commute, park.</p>
+          <div class="keywords">
+            <span class="keyword">person phone casual</span>
+            <span class="keyword">checking phone</span>
+            <span class="keyword">relaxed</span>
+            <span class="keyword">coffee shop</span>
+            <span class="keyword">smiling</span>
+            <span class="keyword">quick glance</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-card">
+        <div class="category-hero cat-casino">
+          <span class="label">Casino Environment</span>
+        </div>
+        <div class="category-body">
+          <p>Social, energetic, upscale. Groups together, dressed up, bright colorful lighting. Never dim, never seedy, never solitary players at machines.</p>
+          <div class="keywords">
+            <span class="keyword">casino social</span>
+            <span class="keyword">entertainment venue</span>
+            <span class="keyword">upscale</span>
+            <span class="keyword">bright</span>
+            <span class="keyword">group fun</span>
+            <span class="keyword">nightlife</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── ASPECT RATIOS ──────────────────────── -->
+  <section>
+    <div class="section-title">Aspect Ratio Reference</div>
+
+    <div class="aspect-grid">
+      <div class="aspect-card">
+        <div class="aspect-box aspect-16-9">16 : 9</div>
+        <div class="aspect-label">Hero Banner</div>
+        <div class="aspect-detail">2560 &times; 1440 &nbsp;(2&times;)</div>
+      </div>
+      <div class="aspect-card">
+        <div class="aspect-box aspect-4-3">4 : 3</div>
+        <div class="aspect-label">Card Image</div>
+        <div class="aspect-detail">1200 &times; 900 &nbsp;(2&times;)</div>
+      </div>
+      <div class="aspect-card">
+        <div class="aspect-box aspect-1-1">1 : 1</div>
+        <div class="aspect-label">Social Square</div>
+        <div class="aspect-detail">1080 &times; 1080</div>
+      </div>
+      <div class="aspect-card">
+        <div class="aspect-box aspect-9-16">9 : 16</div>
+        <div class="aspect-label">Story / Vertical</div>
+        <div class="aspect-detail">1080 &times; 1920</div>
+      </div>
+      <div class="aspect-card">
+        <div class="aspect-box aspect-21-9">21 : 9</div>
+        <div class="aspect-label">Wide Banner</div>
+        <div class="aspect-detail">2520 &times; 1080</div>
+      </div>
+      <div class="aspect-card">
+        <div class="aspect-box aspect-3-2">3 : 2</div>
+        <div class="aspect-label">Thumbnail</div>
+        <div class="aspect-detail">600 &times; 400</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── COLOR GRADING ──────────────────────── -->
+  <section>
+    <div class="section-title">Color Grading Direction</div>
+
+    <div class="grading-strip">
+      <div class="grading-swatch" style="background: #0F1923; color: #F5F5FA;">
+        Shadows<span>#0F1923</span>
+      </div>
+      <div class="grading-swatch" style="background: #1B2838; color: #F5F5FA;">
+        Shadow tint<span>#1B2838</span>
+      </div>
+      <div class="grading-swatch" style="background: #4A5568; color: #F5F5FA;">
+        Low-mid<span>Neutral</span>
+      </div>
+      <div class="grading-swatch" style="background: #8B7355; color: #F5F5FA;">
+        Midtones<span>Warm neutral</span>
+      </div>
+      <div class="grading-swatch" style="background: #C4956A; color: #1A1A2E;">
+        High-mid<span>Amber cast</span>
+      </div>
+      <div class="grading-swatch" style="background: #E8C4A0; color: #1A1A2E;">
+        Highlights<span>Warm</span>
+      </div>
+      <div class="grading-swatch" style="background: #F5F0EA; color: #1A1A2E;">
+        Peak white<span>#F5F0EA</span>
+      </div>
+    </div>
+
+    <div class="grading-desc">
+      <div><strong>Shadows</strong>Push toward Primary navy #1B2838 — adds depth without going cold</div>
+      <div><strong>Midtones</strong>Keep neutral to slightly warm; preserve natural skin tones</div>
+      <div><strong>Highlights</strong>Gentle warmth; slight amber cast aligned with Accent #FF6B35</div>
+      <div><strong>Contrast</strong>Medium-high (+10 to +20); add clarity without crushing blacks</div>
+      <div><strong>Saturation</strong>85–100% of natural; desaturate slightly for sophistication</div>
+      <div><strong>Blacks</strong>Lifted slightly (output level 10–15); no pure black</div>
+    </div>
+  </section>
+
+
+  <!-- ─── TEXT OVER IMAGE ────────────────────── -->
+  <section>
+    <div class="section-title">Text-Over-Image Overlays</div>
+
+    <div class="overlay-grid">
+      <!-- Dark overlay -->
+      <div class="overlay-example">
+        <div class="overlay-demo overlay-demo-bg overlay-dark">
+          <div class="overlay-layer"></div>
+          <div class="overlay-text">
+            <h3>Know Your Odds</h3>
+            <p>Understanding house edge helps you play smarter.</p>
+          </div>
+        </div>
+        <div class="overlay-spec">
+          <table>
+            <tr><th>Property</th><th>Value</th></tr>
+            <tr><td>Background</td><td><code>rgba(27, 40, 56, 0.65)</code></td></tr>
+            <tr><td>Text color</td><td><code>#FFFFFF</code></td></tr>
+            <tr><td>Contrast ratio</td><td><span class="contrast-pass">7.2:1 AA+AAA</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Light overlay -->
+      <div class="overlay-example">
+        <div class="overlay-demo overlay-demo-bg overlay-light">
+          <div class="overlay-layer"></div>
+          <div class="overlay-text">
+            <h3>Set Your Limits</h3>
+            <p>Budget tools help you stay in control of the fun.</p>
+          </div>
+        </div>
+        <div class="overlay-spec">
+          <table>
+            <tr><th>Property</th><th>Value</th></tr>
+            <tr><td>Background</td><td><code>rgba(245, 245, 250, 0.80)</code></td></tr>
+            <tr><td>Text color</td><td><code>#1A1A2E</code></td></tr>
+            <tr><td>Contrast ratio</td><td><span class="contrast-pass">9.8:1 AA+AAA</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Gradient overlay -->
+      <div class="overlay-example">
+        <div class="overlay-demo overlay-demo-bg overlay-gradient">
+          <div class="overlay-layer"></div>
+          <div class="overlay-text">
+            <h3>Play With Friends</h3>
+            <p>Social gaming is the best kind of gaming.</p>
+          </div>
+        </div>
+        <div class="overlay-spec">
+          <table>
+            <tr><th>Property</th><th>Value</th></tr>
+            <tr><td>Background</td><td><code>linear-gradient(transparent, rgba(27, 40, 56, 0.75))</code></td></tr>
+            <tr><td>Text color</td><td><code>#FFFFFF</code></td></tr>
+            <tr><td>Contrast (at text)</td><td><span class="contrast-pass">8.1:1 AA+AAA</span></td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Accent overlay -->
+      <div class="overlay-example">
+        <div class="overlay-demo overlay-demo-bg overlay-accent">
+          <div class="overlay-layer"></div>
+          <div class="overlay-text">
+            <h3>Myth Busted</h3>
+            <p>Slot machines don't have hot or cold streaks.</p>
+          </div>
+        </div>
+        <div class="overlay-spec">
+          <table>
+            <tr><th>Property</th><th>Value</th></tr>
+            <tr><td>Background</td><td><code>rgba(255, 107, 53, 0.90)</code></td></tr>
+            <tr><td>Text color</td><td><code>#FFFFFF</code></td></tr>
+            <tr><td>Contrast ratio</td><td><span class="contrast-pass">3.4:1 AA large</span></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── DO / DON'T ─────────────────────────── -->
+  <section>
+    <div class="section-title">Do / Don't</div>
+
+    <div class="dodont-grid">
+      <div class="dodont-card dodont-do">
+        <div class="dodont-visual" style="background: url('https://images.pexels.com/photos/5935207/pexels-photo-5935207.jpeg?auto=compress&cs=tinysrgb&w=600') center / cover no-repeat;">
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Do</span>
+          <p>Show real, diverse people having a genuine good time together. Warm lighting, social moments, candid body language.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-dont">
+        <div class="dodont-visual" style="background: linear-gradient(135deg, #2a2a3a 0%, #0a0a15 100%); color: var(--pb-color-neutral-500); font-size: 0.8125rem;">
+          Solitary figure, dim room, cold light
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Don't</span>
+          <p>Show distressed, solitary, or desperate-looking subjects. No dark rooms, empty wallets, or head-in-hands imagery.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-do">
+        <div class="dodont-visual" style="background: url('https://images.pexels.com/photos/3764496/pexels-photo-3764496.jpeg?auto=compress&cs=tinysrgb&w=600') center / cover no-repeat;">
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Do</span>
+          <p>Use candid, editorial-quality photography that feels authentic. Real moments, real settings, natural expressions.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-dont">
+        <div class="dodont-visual" style="background: linear-gradient(135deg, #6b6b8d 0%, #b0b0c8 100%); color: var(--pb-color-neutral-500); font-size: 0.8125rem;">
+          Generic, over-posed stock photo
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Don't</span>
+          <p>Use generic, lifeless stock photography that looks like a compliance department created it. No forced smiles or staged setups.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-do">
+        <div class="dodont-visual" style="background: url('https://images.pexels.com/photos/7404655/pexels-photo-7404655.jpeg?auto=compress&cs=tinysrgb&w=600') center / cover no-repeat;">
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Do</span>
+          <p>Show casino environments as bright, social, energetic spaces. Groups together, well-lit, upscale entertainment.</p>
+        </div>
+      </div>
+
+      <div class="dodont-card dodont-dont">
+        <div class="dodont-visual" style="background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%); color: var(--pb-color-neutral-500); font-size: 0.8125rem;">
+          Close-up of chips, money, solo player
+        </div>
+        <div class="dodont-body">
+          <span class="dodont-badge">Don't</span>
+          <p>Glamorize high-stakes play. No close-ups of large chip stacks, cash, or betting slips. No solitary players at machines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── SOURCING KEYWORDS ──────────────────── -->
+  <section>
+    <div class="section-title">Sourcing Keyword Reference</div>
+
+    <div class="keyword-grid">
+      <div class="keyword-card">
+        <h4>Social / Group</h4>
+        <div class="keyword-group">
+          <div class="keyword-group-label">Search</div>
+          <span class="keyword">friends gathering</span>
+          <span class="keyword">social event</span>
+          <span class="keyword">group fun</span>
+          <span class="keyword">diverse candid</span>
+          <span class="keyword">warm lighting laughing</span>
+        </div>
+        <div class="keyword-group keyword-exclude">
+          <div class="keyword-group-label">Exclude</div>
+          <span class="keyword">sad</span>
+          <span class="keyword">alone</span>
+          <span class="keyword">drunk</span>
+          <span class="keyword">gambling</span>
+        </div>
+      </div>
+
+      <div class="keyword-card">
+        <h4>Sports / Entertainment</h4>
+        <div class="keyword-group">
+          <div class="keyword-group-label">Search</div>
+          <span class="keyword">sports fans</span>
+          <span class="keyword">stadium crowd</span>
+          <span class="keyword">watch party</span>
+          <span class="keyword">cheering high-five</span>
+          <span class="keyword">excited diverse</span>
+        </div>
+        <div class="keyword-group keyword-exclude">
+          <div class="keyword-group-label">Exclude</div>
+          <span class="keyword">violence</span>
+          <span class="keyword">injury</span>
+          <span class="keyword">rioting</span>
+        </div>
+      </div>
+
+      <div class="keyword-card">
+        <h4>Mobile / Digital</h4>
+        <div class="keyword-group">
+          <div class="keyword-group-label">Search</div>
+          <span class="keyword">person phone casual</span>
+          <span class="keyword">checking phone</span>
+          <span class="keyword">relaxed</span>
+          <span class="keyword">coffee shop smiling</span>
+          <span class="keyword">quick glance</span>
+        </div>
+        <div class="keyword-group keyword-exclude">
+          <div class="keyword-group-label">Exclude</div>
+          <span class="keyword">obsessed</span>
+          <span class="keyword">screen addiction</span>
+          <span class="keyword">dark room</span>
+        </div>
+      </div>
+
+      <div class="keyword-card">
+        <h4>Casino Environment</h4>
+        <div class="keyword-group">
+          <div class="keyword-group-label">Search</div>
+          <span class="keyword">casino social</span>
+          <span class="keyword">entertainment venue</span>
+          <span class="keyword">nightlife upscale</span>
+          <span class="keyword">group bright colorful</span>
+        </div>
+        <div class="keyword-group keyword-exclude">
+          <div class="keyword-group-label">Exclude</div>
+          <span class="keyword">solitary gambler</span>
+          <span class="keyword">slot machine alone</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    Playbook Photography Mood Board &mdash;
+    <a href="photography.md">Markdown reference</a> &middot;
+    <a href="../../_brand.yml">_brand.yml</a> &middot;
+    <a href="../../brand-book/03-visual-identity.md">Brand book &sect;5</a>
+  </footer>
+
+</body>
+</html>
