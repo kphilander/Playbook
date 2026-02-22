@@ -1,0 +1,93 @@
+# _brand-canada.yml — Canada Provincial Overrides
+# ================================================
+# This file contains Canada-specific overrides for _brand.yml.
+# It covers provincial helplines, legal ages, and mandatory
+# messaging tokens.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in Canadian provinces. Each province has
+#   its own helpline, legal age, and (in some cases) mandatory
+#   messaging requirements.
+#
+# See: jurisdictions/canada/README.md for the full Canada overview
+# ================================================
+
+
+# ─── HELPLINES ───────────────────────────────
+# Provincial gambling helplines. Canada has no single national
+# helpline — each province operates its own support service.
+
+helplines:
+  canada:
+    british-columbia:
+      number: "1-888-795-6111"
+      website: "www.gamblingsupportbc.ca"
+      label: "Gambling Support BC"
+      hours: "24/7"
+      languages:
+        - English
+        - French
+        - Mandarin
+        - Cantonese
+        - Punjabi
+      notes: "Formerly known as the BC Responsible Gambling Program helpline"
+
+    ontario:
+      number: "1-866-531-2600"
+      website: "www.connexontario.ca"
+      label: "ConnexOntario"
+      hours: "24/7"
+      languages:
+        - English
+        - French
+      notes: "Also covers substance use and mental health"
+
+    alberta:
+      number: "1-866-332-2322"
+      website: "www.albertahealthservices.ca"
+      label: "Alberta Health Services Addiction Helpline"
+      hours: "24/7"
+      languages:
+        - English
+        - French
+      notes: "General addiction helpline; covers gambling"
+
+    quebec:
+      number: "1-800-461-0140"
+      website: "www.jeu-aidereference.qc.ca"
+      label: "Jeu: aide et référence"
+      hours: "8am–12am ET daily"
+      languages:
+        - French
+        - English
+      notes: "Gambling-specific helpline"
+
+
+# ─── LEGAL ───────────────────────────────────
+# Provincial minimum gambling ages.
+# 18: Alberta, Manitoba, Quebec
+# 19: All other provinces and territories
+
+legal:
+  minimum_gambling_age:
+    canada-british-columbia: 19
+    canada-ontario: 19
+    canada-alberta: 18
+    canada-quebec: 18
+    canada-manitoba: 18
+    canada-saskatchewan: 19
+    canada-nova-scotia: 19
+    canada-new-brunswick: 19
+    canada-prince-edward-island: 19
+    canada-newfoundland-and-labrador: 19
+
+
+# ─── MANDATORY MESSAGING ────────────────────
+# Province-specific mandatory statements.
+# These are word-for-word required messages that cannot
+# be paraphrased. Not all provinces have them.
+
+messaging:
+  mandatory:
+    canada-british-columbia: "Know your limit, play within it."

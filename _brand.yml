@@ -214,9 +214,16 @@ helplines:
     label: "Gambling Help Online"
 
   canada:
-    number: "1-866-531-2600"
-    website: "www.connexontario.ca"
-    label: "ConnexOntario"
+    british-columbia:
+      number: "1-888-795-6111"
+      website: "www.gamblingsupportbc.ca"
+      label: "Gambling Support BC"
+      hours: "24/7"
+    ontario:
+      number: "1-866-531-2600"
+      website: "www.connexontario.ca"
+      label: "ConnexOntario"
+      hours: "24/7"
 
   european-union:
     note: "See jurisdictions/european-union/country-specific/ for local helplines"
@@ -229,6 +236,7 @@ legal:
   minimum_gambling_age:
     default: 18
     united-states: 21
+    canada-british-columbia: 19
   disclaimers:
     age: "You must be {{MIN_AGE}}+ to gamble."
     general: "Gambling involves risk. Play on your terms."
