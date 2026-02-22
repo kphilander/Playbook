@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .story-card {
+    width: 1080px; height: 1920px;
+    background: linear-gradient(180deg, #1B2838, #0F1923);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, #FF6B35, #00D4AA); z-index: 2; }
+  .story-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
+  .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .story-logo { font-family: 'Inter', sans-serif; font-size: 28px; }
+  .story-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .story-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .story-pillar { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1B2838; background: #00D4AA; padding: 8px 20px; border-radius: 100px; }
+  .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
+  .eyebrow { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #00D4AA; margin-bottom: 20px; }
+  .headline { font-family: 'Inter', sans-serif; font-size: 48px; font-weight: 800; line-height: 1.15; color: #FFFFFF; margin-bottom: 40px; letter-spacing: -0.02em; }
+  .quiz-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 36px; margin-bottom: 40px; text-align: center; }
+  .quiz-box .question { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 26px; color: #FFFFFF; line-height: 1.4; font-style: italic; margin-bottom: 24px; }
+  .quiz-box .answer-label { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #FF6B35; margin-bottom: 12px; }
+  .quiz-box .answer { font-family: 'Source Sans 3', sans-serif; font-size: 22px; color: #A8A8C0; line-height: 1.5; }
+  .quiz-box .answer strong { color: #00D4AA; font-weight: 600; }
+  .breakdown-visual { display: flex; gap: 16px; margin-bottom: 40px; }
+  .money-block { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; text-align: center; }
+  .money-label { font-family: 'Source Sans 3', sans-serif; font-size: 18px; color: #A8A8C0; margin-bottom: 8px; }
+  .money-value { font-family: 'Source Code Pro', monospace; font-size: 40px; font-weight: 700; }
+  .money-value.green { color: #00D4AA; }
+  .money-value.white { color: #FFFFFF; }
+  .money-value.orange { color: #FF6B35; }
+  .money-note { font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #6B6B8A; margin-top: 6px; }
+  .story-cta { display: block; width: 100%; padding: 24px; background: #00D4AA; color: #1B2838; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 22px; text-align: center; border-radius: 16px; text-decoration: none; }
+  .story-footer { background: #2A3F56; padding: 24px 48px; text-align: center; position: relative; z-index: 1; }
+  .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 16px; color: #FFFFFF; }
+</style>
+</head>
+<body>
+<div class="story-card">
+  <div class="story-header">
+    <span class="story-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="story-pillar">Sharp</span>
+  </div>
+  <div class="story-body">
+    <div class="eyebrow">Friday Quiz</div>
+    <div class="headline">What does -110 mean in sports betting?</div>
+    <div class="breakdown-visual">
+      <div class="money-block">
+        <div class="money-label">You bet</div>
+        <div class="money-value green">$110</div>
+      </div>
+      <div class="money-block">
+        <div class="money-label">You win</div>
+        <div class="money-value white">$100</div>
+      </div>
+      <div class="money-block">
+        <div class="money-label">The cut</div>
+        <div class="money-value orange">$10</div>
+        <div class="money-note">~4.5% vig</div>
+      </div>
+    </div>
+    <div class="quiz-box">
+      <div class="answer-label">The answer</div>
+      <div class="answer">You bet <strong>$110 to win $100</strong>. The $10 is the sportsbook's cut. On every single bet.</div>
+    </div>
+    <a href="#" class="story-cta">Know the math behind every line</a>
+  </div>
+  <div class="story-footer">
+    <span class="footer-helpline">Free, confidential support 24/7: 1-800-522-4700</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .social-card {
+    width: 1080px; height: 1080px;
+    background: linear-gradient(145deg, #0F1923, #1B2838);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, #FF6B35, #00D4AA); }
+  .social-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
+  .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .card-logo { font-family: 'Inter', sans-serif; font-size: 32px; }
+  .card-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-label { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FF6B35; }
+  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
+  .headline { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; line-height: 1.15; color: #FFFFFF; margin-bottom: 36px; letter-spacing: -0.02em; }
+  .odds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .odds-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; }
+  .odds-game { font-family: 'Source Sans 3', sans-serif; font-size: 18px; color: #A8A8C0; margin-bottom: 8px; }
+  .odds-edge { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; letter-spacing: -0.02em; }
+  .odds-edge.teal { color: #00D4AA; }
+  .odds-edge.white { color: #FFFFFF; }
+  .odds-edge.orange { color: #FF6B35; }
+  .odds-note { font-family: 'Source Sans 3', sans-serif; font-size: 16px; color: #6B6B8A; margin-top: 4px; }
+  .card-footer { background: #2A3F56; padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 16px; color: #FFFFFF; }
+  .footer-legal { font-size: 13px; color: #A8A8C0; font-family: 'Source Sans 3', sans-serif; }
+</style>
+</head>
+<body>
+<div class="social-card">
+  <div class="card-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="section-label">Real Odds</span>
+  </div>
+  <div class="card-body">
+    <div class="headline">Every game has a house edge.<br>Here's what you're actually playing.</div>
+    <div class="odds-grid">
+      <div class="odds-item">
+        <div class="odds-game">Blackjack (basic strategy)</div>
+        <div class="odds-edge teal">0.5%</div>
+        <div class="odds-note">Best odds in the casino</div>
+      </div>
+      <div class="odds-item">
+        <div class="odds-game">European Roulette</div>
+        <div class="odds-edge white">2.7%</div>
+        <div class="odds-note">Single zero wheel</div>
+      </div>
+      <div class="odds-item">
+        <div class="odds-game">American Roulette</div>
+        <div class="odds-edge orange">5.26%</div>
+        <div class="odds-note">Double zero = double edge</div>
+      </div>
+      <div class="odds-item">
+        <div class="odds-game">Slots (average)</div>
+        <div class="odds-edge white">2-15%</div>
+        <div class="odds-note">Varies by machine</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <span class="footer-helpline">Free support 24/7: 1-800-522-4700</span>
+    <span class="footer-legal">21+ to gamble</span>
+  </div>
+</div>
+</body>
+</html>

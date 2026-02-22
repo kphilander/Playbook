@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .social-card {
+    width: 1080px; height: 1080px;
+    background: #1B2838;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, #FF6B35, #00D4AA); }
+  .social-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
+  .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .card-logo { font-family: 'Inter', sans-serif; font-size: 32px; }
+  .card-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-label { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FF6B35; }
+  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
+  .headline { font-family: 'Inter', sans-serif; font-size: 52px; font-weight: 800; line-height: 1.15; color: #FFFFFF; margin-bottom: 40px; letter-spacing: -0.02em; }
+  .breakdown { margin-bottom: 36px; }
+  .breakdown-line { font-family: 'Source Code Pro', monospace; font-size: 28px; font-weight: 600; color: #FFFFFF; line-height: 2; }
+  .breakdown-line .amount { color: #00D4AA; font-weight: 700; }
+  .breakdown-line .cut { color: #FF6B35; font-weight: 700; }
+  .explanation { font-family: 'Source Sans 3', sans-serif; font-size: 26px; line-height: 1.55; color: #A8A8C0; margin-bottom: 32px; }
+  .emphasis { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; color: #FF6B35; letter-spacing: 0.02em; }
+  .vig-strip { margin-top: 32px; display: flex; gap: 16px; }
+  .vig-card { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; text-align: center; }
+  .vig-label { font-family: 'Source Sans 3', sans-serif; font-size: 16px; color: #A8A8C0; margin-bottom: 8px; }
+  .vig-value { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 800; color: #FFFFFF; }
+  .vig-note { font-family: 'Source Sans 3', sans-serif; font-size: 14px; color: #6B6B8A; margin-top: 4px; }
+  .card-footer { background: #2A3F56; padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 16px; color: #FFFFFF; }
+  .footer-legal { font-size: 13px; color: #A8A8C0; font-family: 'Source Sans 3', sans-serif; }
+</style>
+</head>
+<body>
+<div class="social-card">
+  <div class="card-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="section-label">Real Odds</span>
+  </div>
+  <div class="card-body">
+    <div class="headline">What does -110 mean?</div>
+    <div class="breakdown">
+      <div class="breakdown-line">You bet <span class="amount">$110</span></div>
+      <div class="breakdown-line">You win <span class="amount">$100</span></div>
+      <div class="breakdown-line">The <span class="cut">$10</span> difference?</div>
+    </div>
+    <div class="explanation">That's the sportsbook's cut.</div>
+    <div class="emphasis">On every. Single. Bet.</div>
+    <div class="vig-strip">
+      <div class="vig-card">
+        <div class="vig-label">Standard line</div>
+        <div class="vig-value">-110</div>
+        <div class="vig-note">~4.5% vig</div>
+      </div>
+      <div class="vig-card">
+        <div class="vig-label">Heavy favorite</div>
+        <div class="vig-value">-150</div>
+        <div class="vig-note">Higher cut</div>
+      </div>
+      <div class="vig-card">
+        <div class="vig-label">Underdog</div>
+        <div class="vig-value">+200</div>
+        <div class="vig-note">Vig still applies</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <span class="footer-helpline">Free support 24/7: 1-800-522-4700</span>
+    <span class="footer-legal">21+ to gamble</span>
+  </div>
+</div>
+</body>
+</html>

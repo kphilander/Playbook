@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .poster {
+    width: 1800px; height: 2400px;
+    background: linear-gradient(180deg, #1B2838, #0F1923);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, #FF6B35, #00D4AA); z-index: 2; }
+  .poster::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
+  .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .poster-logo { font-family: 'Inter', sans-serif; font-size: 48px; }
+  .poster-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .poster-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .poster-pillar { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1B2838; background: #00D4AA; padding: 12px 28px; border-radius: 100px; }
+  .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
+  .eyebrow { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #00D4AA; margin-bottom: 28px; }
+  .headline { font-family: 'Inter', sans-serif; font-size: 80px; font-weight: 900; line-height: 1.1; color: #FFFFFF; margin-bottom: 24px; letter-spacing: -0.03em; }
+  .subhead { font-family: 'Source Sans 3', sans-serif; font-size: 36px; line-height: 1.5; color: #A8A8C0; margin-bottom: 64px; }
+  .stat-grid { display: flex; gap: 32px; margin-bottom: 64px; }
+  .stat-col { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px 36px; text-align: center; }
+  .stat-game { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; color: #FFFFFF; margin-bottom: 16px; }
+  .stat-edge { font-family: 'Source Code Pro', monospace; font-size: 64px; font-weight: 700; line-height: 1; margin-bottom: 12px; }
+  .stat-edge.teal { color: #00D4AA; }
+  .stat-edge.white { color: #FFFFFF; }
+  .stat-edge.orange { color: #FF6B35; }
+  .stat-note { font-family: 'Source Sans 3', sans-serif; font-size: 20px; color: #6B6B8A; }
+  .context { font-family: 'Source Sans 3', sans-serif; font-size: 32px; line-height: 1.5; color: #A8A8C0; margin-bottom: 48px; }
+  .context strong { color: #00D4AA; font-weight: 600; }
+  .qr-row { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; }
+  .qr-placeholder { width: 140px; height: 140px; background: #FFFFFF; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-family: 'Source Code Pro', monospace; font-size: 14px; color: #1B2838; font-weight: 600; }
+  .qr-label { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF; }
+  .qr-label span { display: block; font-family: 'Source Sans 3', sans-serif; font-weight: 400; font-size: 22px; color: #A8A8C0; margin-top: 6px; }
+  .poster-cta { display: block; width: 100%; padding: 36px; background: #00D4AA; color: #1B2838; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 32px; text-align: center; border-radius: 20px; text-decoration: none; letter-spacing: 0.02em; }
+  .poster-footer { background: #2A3F56; padding: 36px 96px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 24px; color: #FFFFFF; }
+  .footer-legal { font-family: 'Source Sans 3', sans-serif; font-size: 20px; color: #A8A8C0; }
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="poster-header">
+    <span class="poster-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="poster-pillar">Sharp</span>
+  </div>
+  <div class="poster-body">
+    <div class="eyebrow">Know the numbers</div>
+    <div class="headline">Know your game.<br>Play on your terms.</div>
+    <div class="subhead">Every game has a built-in house edge. Here's what it looks like.</div>
+    <div class="stat-grid">
+      <div class="stat-col">
+        <div class="stat-game">Blackjack</div>
+        <div class="stat-edge teal">0.5%</div>
+        <div class="stat-note">Basic strategy</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-game">Roulette</div>
+        <div class="stat-edge white">5.26%</div>
+        <div class="stat-note">American double-zero</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-game">Slots</div>
+        <div class="stat-edge orange">2-15%</div>
+        <div class="stat-note">Varies by machine</div>
+      </div>
+    </div>
+    <div class="context">The house edge is the <strong>percentage the casino keeps over time</strong>. Lower edge means your money lasts longer.</div>
+    <div class="qr-row">
+      <div class="qr-placeholder">QR</div>
+      <div class="qr-label">Scan for the full breakdown<span>Free odds calculator and game guides</span></div>
+    </div>
+    <a href="#" class="poster-cta">Explore all the tools at {{PROGRAM_URL}}</a>
+  </div>
+  <div class="poster-footer">
+    <span class="footer-helpline">Free, confidential support 24/7: 1-800-522-4700</span>
+    <span class="footer-legal">21+ to gamble</span>
+  </div>
+</div>
+</body>
+</html>
