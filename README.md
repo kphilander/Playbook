@@ -39,69 +39,104 @@ Think of it this way: Volvo made safety iconic by building beautiful cars that a
 2. **Edit [`_brand.yml`](_brand.yml)** — your program name, colors, fonts, helpline numbers, and taglines. This single file drives the entire system.
 3. **Choose your jurisdictions** — keep the modules you operate in (`jurisdictions/united-kingdom/`), delete the rest
 4. **Customize messaging** — pick from the tagline system, adapt tone examples, write your own
-5. **Hand off design briefs** — give your designer the specs in `implementation/figma-briefs/`
+5. **Build collateral** — use the HTML templates in `collateral/render/` and markdown specs across all channels
 
 ## Repository structure
 
 ```
 Playbook/
-├── _brand.yml                       # White-label configuration engine
-├── README.md                        # You are here
-├── LICENSE                          # CC0 1.0 Universal
-├── CONTRIBUTING.md                  # How to contribute
-├── CHANGELOG.md                     # Version history
+├── _brand.yml                        # White-label configuration engine
+├── README.md                         # You are here
+├── LICENSE                           # CC0 1.0 Universal
+├── CONTRIBUTING.md                   # How to contribute
+├── CHANGELOG.md                      # Version history
 │
-├── brand-book/                      # Core brand guidelines
-│   ├── 00-introduction.md           # Purpose, the engagement gap, two-tier system
-│   ├── 01-brand-foundation.md       # Mission, vision, pillars (Open/Social)
-│   ├── 02-brand-personality.md      # The Sharp & Good Friend archetypes, humor guidelines
-│   ├── 03-visual-identity.md        # Logo, color, typography, icons, photography
-│   ├── 04-voice-and-tone.md         # The confident myth-buster voice
-│   ├── 05-messaging-framework.md    # Tagline system, CTAs, interactive content briefs
-│   ├── 06-accessibility.md          # WCAG 2.1 AA, inclusive design
-│   ├── 07-application-guidelines.md # Cross-channel rules, co-branding, integration
-│   ├── 08-governance.md             # Stewardship, versioning, measuring adoption
-│   └── glossary.md                  # Gambling terms for marketing teams
+├── brand-book/                       # Core brand guidelines (10 chapters)
+│   ├── 00-introduction.md            # Purpose, the engagement gap, two-tier system
+│   ├── 01-brand-foundation.md        # Mission, vision, pillars (Open/Social/Sharp)
+│   ├── 02-brand-personality.md       # The Sharp & Good Friend archetypes, humor guidelines
+│   ├── 03-visual-identity.md         # Logo, color, typography, icons, photography
+│   ├── 04-voice-and-tone.md          # The confident myth-buster voice
+│   ├── 05-messaging-framework.md     # Tagline system, CTAs, interactive content briefs
+│   ├── 06-accessibility.md           # WCAG 2.1 AA, inclusive design
+│   ├── 07-application-guidelines.md  # Cross-channel rules, co-branding, integration
+│   ├── 08-governance.md              # Stewardship, versioning, measuring adoption
+│   └── glossary.md                   # Gambling terms for marketing teams
 │
-├── visual-identity/                 # Asset specs and placeholder directories
-│   ├── logo/                        # Logo usage rules and file placeholders
-│   ├── color/                       # Palette, accessibility matrix, semantic mapping
-│   ├── typography/                  # Type scale, font pairing, font files
-│   ├── iconography/                 # Icon style guide and SVG library
-│   ├── photography/                 # Photo direction and style guide
-│   └── illustration/                # Illustration style guide
+├── visual-identity/                  # Production-ready design assets
+│   ├── design-tokens.css             # CSS custom properties for the full system
+│   ├── logo/                         # 15 SVGs: primary, secondary, favicon, helpline badge
+│   │   ├── primary/                  # Full-color and on-light (horizontal + stacked)
+│   │   ├── secondary/                # Reversed, mono-white, mono-dark (horizontal + stacked)
+│   │   ├── favicon/                  # 3 favicon variants
+│   │   └── helpline-badge/           # Dark and light helpline badges
+│   ├── color/                        # Palette and accessibility contrast matrix
+│   ├── typography/                   # Type specimen, CSS, self-hosted font files (woff2)
+│   ├── iconography/                  # 31 SVG icons, style guide, interactive preview
+│   ├── photography/                  # Photo direction and mood board
+│   └── illustration/                 # Illustration style guide
 │
-├── messaging/                       # Messaging content library
-│   ├── core-messages.md             # Universal messages (jurisdiction-agnostic)
-│   ├── tagline-system.md            # Tagline hierarchy and rotation
-│   ├── calls-to-action.md           # CTA library by function
-│   ├── myth-busting.md              # Common gambling myths, debunked
-│   └── player-segments/             # Audience-specific messaging
+├── messaging/                        # Messaging content library
+│   ├── core-messages.md              # 74 tagged messages by touchpoint
+│   ├── tagline-system.md             # Tagline hierarchy and rotation
+│   ├── calls-to-action.md            # CTA library by function
+│   ├── myth-busting.md               # Common gambling myths, debunked
+│   ├── campaigns.md                  # Campaign frameworks
+│   ├── stigma-free-language.md       # Language guide
+│   ├── tone-examples.md              # Voice in action across scenarios
+│   └── player-segments/              # 6 audience-specific profiles
+│       ├── general-players.md
+│       ├── young-adults.md
+│       ├── sports-bettors.md
+│       ├── at-risk-players.md
+│       ├── friends-and-family.md
+│       └── help-seekers.md
 │
-├── jurisdictions/                   # Regulatory compliance modules
-│   ├── _template/                   # Template for adding new jurisdictions
-│   ├── united-kingdom/              # UKGC, ASA/CAP, GAMSTOP
-│   ├── united-states/               # NCPG, AGA, state-specific modules
-│   ├── australia/                   # ACMA, state/territory modules
-│   ├── canada/                      # Provincial modules
-│   └── european-union/              # CEN 16259, country-specific
+├── collateral/                       # Templates for every touchpoint
+│   ├── digital/                      # Website, mobile app, email, social media specs
+│   ├── print/                        # Brochure, rack card, table tent, helpline card specs
+│   ├── environmental/                # Venue signage and digital display specs
+│   ├── video-audio/                  # TV, radio, pre-roll, and hold message scripts
+│   ├── customer-service/             # Conversation scripts and staff FAQ
+│   └── render/                       # 28 HTML templates + PNG renders + build pipeline
+│       ├── render-cards.mjs          # Puppeteer manifest (HTML → PNG)
+│       ├── build-logos.mjs           # Logo SVG generator
+│       ├── build-icons.mjs           # Icon SVG generator
+│       ├── build-deck.mjs            # PPTX brand deck builder
+│       ├── card-*.html/.png          # 6 social cards (1080×1080)
+│       ├── story-*.html/.png         # 3 stories (1080×1920)
+│       ├── poster-*.html/.png        # 3 posters (1800×2400)
+│       ├── email-*.html/.png         # 4 email templates (600px wide)
+│       ├── brochure-*.html/.png      # 2 brochure panels (2400×1000)
+│       ├── sign-*.html/.png          # 5 venue signs (various sizes)
+│       ├── display-*.html/.png       # 2 digital displays (landscape + portrait)
+│       ├── rack-card-5a.html/.png    # Print: rack card (800×1800)
+│       ├── table-tent-5b.html/.png   # Print: table tent (800×1200)
+│       └── helpline-card-5c.html/.png # Print: helpline business card (700×400)
 │
-├── collateral/                      # Templates for every touchpoint
-│   ├── digital/                     # Website, mobile app, email, social media
-│   ├── print/                       # Brochures, posters, rack cards, table tents
-│   ├── environmental/               # Venue signage, info centers, ATM areas
-│   ├── video-audio/                 # TV/radio spots, pre-roll, hold messages
-│   └── customer-service/            # Scripts, training, staff FAQ
+├── jurisdictions/                    # 🔜 Regulatory compliance modules (planned)
 │
-├── implementation/                  # Adoption guides for operators
-│   ├── quick-start.md               # 30-minute quick-start guide
-│   ├── figma-briefs/                # Design briefs for Figma asset creation
-│   ├── checklist.md                 # Launch checklist
-│   └── measurement-framework.md     # Measuring adoption and engagement
-│
-└── examples/                        # Worked example with fictional operator
-    └── fictional-operator/          # Complete brand application sample
+└── implementation/                   # 🔜 Operator adoption guides (planned)
 ```
+
+## What's built
+
+| Area | Status | Contents |
+|------|--------|----------|
+| **Brand book** | Complete | 10 chapters covering foundations through governance |
+| **Visual identity** | Complete | 15 logo SVGs, 31 icon SVGs, design tokens CSS, typography system with self-hosted fonts, photography and illustration guides |
+| **Messaging** | Complete | 74 core messages, tagline system, CTA library, myth-busting, stigma-free language guide, tone examples, 6 player-segment profiles |
+| **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
+| **Collateral renders** | Complete | 28 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral |
+| **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
+
+## What's planned
+
+| Area | Description |
+|------|-------------|
+| **Jurisdictions** | Regulatory compliance modules for UK (UKGC, ASA/CAP), US (NCPG, AGA, state-specific), Australia (ACMA), Canada (provincial), and EU (CEN 16259). Each module maps Playbook messaging to local requirements. A `_template/` directory will let operators add new jurisdictions. |
+| **Implementation guides** | Operator adoption resources: 30-minute quick-start guide, Figma design briefs, launch checklist, and measurement framework for tracking content engagement and adoption metrics. |
+| **Examples** | Worked brand application with a fictional operator showing how to fork, configure `_brand.yml`, and deploy the full system. |
 
 ## How the white-label system works
 
@@ -110,6 +145,23 @@ The [`_brand.yml`](_brand.yml) file is the engine. It holds every customizable v
 Fork the repo. Edit `_brand.yml`. Your brand identity cascades everywhere.
 
 **The adaptive identity model.** Playbook is *recognizable but adaptive*. The structural patterns (message hierarchy, content architecture, layout principles) stay consistent across operators. The visual surface (colors, fonts, logo) adapts to each operator's brand. A player who encounters Playbook-based content at one platform will intuitively recognize the content structure at another — even though they look different.
+
+## Rendering collateral
+
+The `collateral/render/` directory contains a Puppeteer-based pipeline that renders HTML templates to PNG:
+
+```bash
+cd collateral/render
+npm install
+node render-cards.mjs              # Render all 28 templates
+node render-cards.mjs poster       # Render only poster templates
+node render-cards.mjs card-1a      # Render a specific template
+```
+
+Other build scripts:
+- `node build-logos.mjs` — Generate logo SVGs from brand config
+- `node build-icons.mjs` — Generate icon SVGs
+- `node build-deck.mjs` — Generate the PPTX brand deck
 
 ## Two-tier architecture
 
