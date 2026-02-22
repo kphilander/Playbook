@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; background: transparent; }
+
+    .rack-card {
+      width: 800px;
+      height: 1800px;
+      position: relative;
+      background: #1B2838;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top accent bar */
+    .rack-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    }
+
+    /* Subtle grid pattern overlay */
+    .rack-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .card-header {
+      padding: 48px 56px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    .card-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .card-pillar {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1B2838;
+      background: #00D4AA;
+      padding: 8px 22px;
+      border-radius: 100px;
+    }
+
+    .card-hero {
+      padding: 56px 56px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-subhead {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 24px;
+      line-height: 1.5;
+      color: #A8A8C0;
+    }
+
+    .stats-section {
+      flex: 1;
+      padding: 0 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-row {
+      padding: 32px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .stat-game {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 20px;
+      color: #A8A8C0;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .stat-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+    .stat-value.teal { color: #00D4AA; }
+    .stat-value.white { color: #FFFFFF; }
+    .stat-value.orange { color: #FF6B35; }
+    .stat-note {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      color: #6B6B8A;
+    }
+
+    .card-callout {
+      padding: 0 56px;
+      position: relative;
+      z-index: 1;
+    }
+    .callout-text {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 22px;
+      line-height: 1.5;
+      color: #A8A8C0;
+    }
+    .callout-text strong {
+      color: #00D4AA;
+      font-weight: 600;
+    }
+
+    .card-qr {
+      padding: 40px 56px 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .qr-placeholder {
+      width: 100px;
+      height: 100px;
+      background: #FFFFFF;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 14px;
+      color: #1B2838;
+      flex-shrink: 0;
+    }
+    .qr-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .helpline-strip {
+      margin-top: 40px;
+      background: #2A3F56;
+      padding: 24px 56px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .helpline-text {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 20px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .legal-strip {
+      padding: 16px 56px 24px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-text {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      color: #6B6B8A;
+    }
+  </style>
+</head>
+<body>
+  <div class="rack-card">
+    <div class="card-header">
+      <span class="card-logo">Playbook</span>
+      <span class="card-pillar">Open</span>
+    </div>
+    <div class="card-hero">
+      <div class="hero-headline">Every game has math.<br>Here's yours.</div>
+      <div class="hero-subhead">Know the house edge. Pick your games. Set your budget.</div>
+    </div>
+    <div class="stats-section">
+      <div class="stat-row">
+        <div class="stat-game">Blackjack (basic strategy)</div>
+        <div class="stat-value teal">0.5%</div>
+        <div class="stat-note">Best odds in the casino</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-game">American Roulette</div>
+        <div class="stat-value white">5.26%</div>
+        <div class="stat-note">Double zero = double edge</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-game">Slots (average)</div>
+        <div class="stat-value orange">2&ndash;15%</div>
+        <div class="stat-note">Varies by machine and casino</div>
+      </div>
+    </div>
+    <div class="card-callout">
+      <div class="callout-text"><strong>Knowing the edge</strong> helps you pick your games and set your budget.</div>
+    </div>
+    <div class="card-qr">
+      <div class="qr-placeholder">QR</div>
+      <span class="qr-label">Scan for the facts</span>
+    </div>
+    <div class="helpline-strip">
+      <span class="helpline-text">Free, confidential support 24/7: 1-800-522-4700</span>
+    </div>
+    <div class="legal-strip">
+      <span class="legal-text">You must be 21+ to gamble. Gambling involves risk.</span>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; background: transparent; }
+
+    .table-tent {
+      width: 800px;
+      height: 1200px;
+      position: relative;
+      background: #1B2838;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top accent bar */
+    .table-tent::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    }
+
+    /* Subtle grid pattern overlay */
+    .table-tent::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* Panel A — Odds fact */
+    .panel-a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 56px 32px;
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid #2A3F56;
+    }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+    .card-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .card-pillar {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1B2838;
+      background: #00D4AA;
+      padding: 6px 18px;
+      border-radius: 100px;
+    }
+
+    .odds-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FF6B35;
+      margin-bottom: 16px;
+    }
+    .odds-stat {
+      font-family: 'Inter', sans-serif;
+      font-size: 80px;
+      font-weight: 900;
+      color: #FF6B35;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    .odds-context {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 22px;
+      line-height: 1.5;
+      color: #A8A8C0;
+      margin-bottom: 20px;
+    }
+    .odds-callout {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+    .quiz-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: auto;
+    }
+    .qr-small {
+      width: 72px;
+      height: 72px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 12px;
+      color: #1B2838;
+      flex-shrink: 0;
+    }
+    .quiz-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #00D4AA;
+    }
+
+    /* Panel B — Helpline + CTA */
+    .panel-b {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 56px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .tools-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .tools-body {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+      color: #A8A8C0;
+      margin-bottom: 32px;
+    }
+
+    .helpline-block {
+      background: #2A3F56;
+      border-radius: 12px;
+      padding: 24px 28px;
+      text-align: center;
+    }
+    .helpline-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      color: #A8A8C0;
+      margin-bottom: 8px;
+    }
+    .helpline-number {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 32px;
+      font-weight: 600;
+      color: #00D4AA;
+      margin-bottom: 8px;
+    }
+    .helpline-sub {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      color: #6B6B8A;
+    }
+
+    .legal-row {
+      margin-top: auto;
+      text-align: center;
+      padding-top: 16px;
+    }
+    .legal-text {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      color: #6B6B8A;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-tent">
+    <!-- Panel A: Odds fact + quiz hook -->
+    <div class="panel-a">
+      <div class="panel-header">
+        <span class="card-logo">Playbook</span>
+        <span class="card-pillar">Sharp</span>
+      </div>
+      <div class="odds-label">Real Odds</div>
+      <div class="odds-stat">5.26%</div>
+      <div class="odds-context">That's the house edge on American roulette. Every $100 wagered, about $5.26 goes to the house over time.</div>
+      <div class="odds-callout">Know the edge. Pick your game.</div>
+      <div class="quiz-row">
+        <div class="qr-small">QR</div>
+        <span class="quiz-cta">Think you know the odds?<br>Scan to take the quiz</span>
+      </div>
+    </div>
+
+    <!-- Panel B: Helpline + tool CTA -->
+    <div class="panel-b">
+      <div class="tools-headline">Your tools. Your limits.<br>Your call.</div>
+      <div class="tools-body">Set your deposit limit, session reminders, and activity alerts in your account settings. Takes 10 seconds.</div>
+      <div class="helpline-block">
+        <div class="helpline-label">Need to talk? Free, confidential support.</div>
+        <div class="helpline-number">1-800-522-4700</div>
+        <div class="helpline-sub">24/7 &middot; No judgment &middot; Any question about gambling</div>
+      </div>
+      <div class="legal-row">
+        <span class="legal-text">You must be 21+ to gamble. Gambling involves risk.</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

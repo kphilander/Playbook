@@ -17,6 +17,10 @@ const cards = [
   { html: 'poster-4a-know-your-game.html', output: 'poster-4a-know-your-game.png', w: 1800, h: 2400, selector: '.poster' },
   { html: 'poster-4b-no-fine-print.html', output: 'poster-4b-no-fine-print.png', w: 1800, h: 2400, selector: '.poster' },
   { html: 'poster-4c-game-iq.html', output: 'poster-4c-game-iq.png', w: 1800, h: 2400, selector: '.poster' },
+  { html: 'rack-card-5a.html', output: 'rack-card-5a.png', w: 800, h: 1800, selector: '.rack-card' },
+  { html: 'table-tent-5b.html', output: 'table-tent-5b.png', w: 800, h: 1200, selector: '.table-tent' },
+  { html: 'helpline-card-5c.html', output: 'helpline-card-5c.png', w: 700, h: 400, selector: '.helpline-card' },
+  { html: 'display-landscape-6a.html', output: 'display-landscape-6a.png', w: 1920, h: 1080, selector: '.display-screen' },
 ];
 
 // Filter to only render files passed as CLI args, or all if none given

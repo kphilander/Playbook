@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; background: transparent; }
+
+    .display-screen {
+      width: 1920px;
+      height: 1080px;
+      position: relative;
+      background: linear-gradient(145deg, #0F1923, #1B2838);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top accent bar */
+    .display-screen::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    }
+
+    /* Subtle grid pattern overlay */
+    .display-screen::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .screen-header {
+      padding: 48px 72px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    .screen-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 36px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .operator-placeholder {
+      width: 160px;
+      height: 60px;
+      border: 2px dashed rgba(255,255,255,0.25);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .screen-body {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content-left {
+      flex: 1;
+    }
+    .pillar-badge {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #1B2838;
+      background: #00D4AA;
+      padding: 8px 24px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .screen-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 64px;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      max-width: 900px;
+    }
+    .screen-subhead {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 28px;
+      line-height: 1.5;
+      color: #A8A8C0;
+      max-width: 800px;
+      margin-bottom: 32px;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 48px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-game {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 18px;
+      color: #A8A8C0;
+      margin-bottom: 8px;
+    }
+    .stat-pct {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .stat-pct.teal { color: #00D4AA; }
+    .stat-pct.white { color: #FFFFFF; }
+    .stat-pct.orange { color: #FF6B35; }
+    .stat-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      color: #6B6B8A;
+      margin-top: 4px;
+    }
+
+    .content-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 72px;
+    }
+    .qr-box {
+      width: 180px;
+      height: 180px;
+      background: #FFFFFF;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 16px;
+      color: #1B2838;
+      margin-bottom: 12px;
+    }
+    .qr-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .helpline-strip {
+      background: #2A3F56;
+      padding: 20px 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .helpline-text {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 22px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .legal-strip {
+      padding: 12px 72px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-text {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+      color: #6B6B8A;
+    }
+  </style>
+</head>
+<body>
+  <div class="display-screen">
+    <div class="screen-header">
+      <span class="screen-logo">Playbook</span>
+      <div class="operator-placeholder">Your logo here</div>
+    </div>
+    <div class="screen-body">
+      <div class="content-left">
+        <div class="pillar-badge">Open</div>
+        <div class="screen-headline">Every game has math.<br>Here's yours.</div>
+        <div class="screen-subhead">Know the house edge. Pick your games. Set your budget.</div>
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-game">Blackjack</div>
+            <div class="stat-pct teal">0.5%</div>
+            <div class="stat-label">house edge</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-game">Roulette</div>
+            <div class="stat-pct white">5.26%</div>
+            <div class="stat-label">house edge</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-game">Slots</div>
+            <div class="stat-pct orange">2&ndash;15%</div>
+            <div class="stat-label">house edge</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-right">
+        <div class="qr-box">QR</div>
+        <span class="qr-label">Scan to<br>learn more</span>
+      </div>
+    </div>
+    <div class="helpline-strip">
+      <span class="helpline-text">Free, confidential support 24/7: 1-800-522-4700</span>
+    </div>
+    <div class="legal-strip">
+      <span class="legal-text">You must be 21+ to gamble. Gambling involves risk. Play on your terms.</span>
+    </div>
+  </div>
+</body>
+</html>

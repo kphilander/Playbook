@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 0; background: transparent; }
+
+    .helpline-card {
+      width: 700px;
+      height: 400px;
+      position: relative;
+      background: #1B2838;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top accent bar */
+    .helpline-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    }
+
+    /* Subtle grid pattern overlay */
+    .helpline-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 36px 48px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    .card-logo {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .operator-placeholder {
+      width: 80px;
+      height: 32px;
+      border: 1px dashed rgba(255,255,255,0.25);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 9px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .helpline-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .helpline-left {
+      flex: 1;
+    }
+    .helpline-headline {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .helpline-sub {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 15px;
+      color: #A8A8C0;
+      margin-bottom: 20px;
+    }
+    .helpline-number {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 36px;
+      font-weight: 600;
+      color: #00D4AA;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
+    .helpline-channels {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 14px;
+      color: #6B6B8A;
+    }
+    .helpline-channels strong {
+      color: #A8A8C0;
+      font-weight: 600;
+    }
+
+    .helpline-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 32px;
+    }
+    .qr-box {
+      width: 80px;
+      height: 80px;
+      background: #FFFFFF;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 12px;
+      color: #1B2838;
+      margin-bottom: 6px;
+    }
+    .qr-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px;
+      color: #6B6B8A;
+    }
+
+    .card-footer {
+      padding: 0 48px 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-text {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px;
+      color: #6B6B8A;
+    }
+    .availability {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #FF6B35;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="helpline-card">
+    <div class="card-content">
+      <div class="card-header">
+        <span class="card-logo">Playbook</span>
+        <div class="operator-placeholder">Your logo</div>
+      </div>
+      <div class="helpline-main">
+        <div class="helpline-left">
+          <div class="helpline-headline">Free, confidential support</div>
+          <div class="helpline-sub">For any question about gambling. No judgment. Ever.</div>
+          <div class="helpline-number">1-800-522-4700</div>
+          <div class="helpline-channels">
+            <strong>Text</strong> 800522 &nbsp;&middot;&nbsp;
+            <strong>Chat</strong> ncpgambling.org/chat
+          </div>
+        </div>
+        <div class="helpline-right">
+          <div class="qr-box">QR</div>
+          <span class="qr-label">Scan for support</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="availability">24/7</span>
+      <span class="legal-text">You must be 21+ to gamble.</span>
+    </div>
+  </div>
+</body>
+</html>
