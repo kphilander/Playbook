@@ -196,11 +196,24 @@ helplines:
     label: "Free, confidential support 24/7"
 
   united-states:
-    number: "1-800-522-4700"
-    alternate: "1-800-GAMBLER"
-    text_number: "Text 800522"
-    website: "www.ncpgambling.org"
-    label: "National Problem Gambling Helpline"
+    national:
+      number: "1-800-522-4700"
+      alternate: "1-800-GAMBLER"
+      new_primary: "1-800-MY-RESET"
+      text_number: "Text SUPPORT to 53342"
+      chat_url: "www.ncpgambling.org/chat"
+      website: "www.ncpgambling.org"
+      label: "National Council on Problem Gambling"
+      hours: "24/7"
+    nevada:
+      number: "1-800-522-4700"
+      alternate: "1-800-GAMBLER"
+      new_primary: "1-800-MY-RESET"
+      website: "www.ncpgambling.org"
+      label: "NCPG National Helpline"
+      state_resource: "Nevada Council on Problem Gambling"
+      state_website: "www.nevadacouncil.org"
+      notes: "No separate state helpline — uses NCPG national number"
 
   united-kingdom:
     number: "0808 8020 133"
@@ -236,6 +249,7 @@ legal:
   minimum_gambling_age:
     default: 18
     united-states: 21
+    united-states-nevada: 21
     canada-british-columbia: 19
   disclaimers:
     age: "You must be {{MIN_AGE}}+ to gamble."

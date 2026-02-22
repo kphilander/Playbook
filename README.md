@@ -120,10 +120,16 @@ Playbook/
 │   │   ├── jurisdiction-overview.md # Country-level scaffold
 │   │   ├── compliance-module.md     # Sub-jurisdiction scaffold
 │   │   └── collateral-adaptation.md # Collateral localization scaffold
-│   └── canada/                      # Canada (provincial model)
-│       ├── README.md                # Federal framework, provincial table
-│       ├── _brand-canada.yml        # Provincial config overrides
-│       └── british-columbia/        # BC compliance module
+│   ├── canada/                      # Canada (provincial model)
+│   │   ├── README.md                # Federal framework, provincial table
+│   │   ├── _brand-canada.yml        # Provincial config overrides
+│   │   └── british-columbia/        # BC compliance module
+│   │       ├── README.md            # Full compliance module
+│   │       └── advertising-rules.md # Advertising deep-dive
+│   └── united-states/               # United States (state-by-state model)
+│       ├── README.md                # Federal framework, state table
+│       ├── _brand-us.yml            # State config overrides
+│       └── nevada/                  # Nevada compliance module
 │           ├── README.md            # Full compliance module
 │           └── advertising-rules.md # Advertising deep-dive
 │
@@ -140,13 +146,13 @@ Playbook/
 | **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
 | **Collateral renders** | Complete | 28 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral |
 | **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
-| **Jurisdictions** | In progress | Template system, Canada/BC compliance module, advertising rules |
+| **Jurisdictions** | In progress | Template system, Canada/BC compliance module, US/Nevada compliance module, advertising rules |
 
 ## What's planned
 
 | Area | Description |
 |------|-------------|
-| **Jurisdictions** | Additional regulatory compliance modules: UK (UKGC, ASA/CAP), US (NCPG, AGA, state-specific), Australia (ACMA), remaining Canadian provinces, and EU (CEN 16259). The template system and Canada/BC module are complete — see `jurisdictions/`. |
+| **Jurisdictions** | Additional regulatory compliance modules: UK (UKGC, ASA/CAP), remaining US states, Australia (ACMA), remaining Canadian provinces, and EU (CEN 16259). The template system, Canada/BC module, and US/Nevada module are complete — see `jurisdictions/`. |
 | **Implementation guides** | Operator adoption resources: 30-minute quick-start guide, Figma design briefs, launch checklist, and measurement framework for tracking content engagement and adoption metrics. |
 | **Examples** | Worked brand application with a fictional operator showing how to fork, configure `_brand.yml`, and deploy the full system. |
 

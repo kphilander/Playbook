@@ -36,6 +36,14 @@ jurisdictions/
 │       ├── README.md                   # Full compliance module
 │       └── advertising-rules.md        # Deep-dive reference
 │
+├── united-states/                      # Layer 1: Country
+│   ├── README.md                       # Federal framework, state table
+│   ├── _brand-us.yml                   # Country-level config overrides
+│   │
+│   └── nevada/                         # Layer 2: Sub-jurisdiction
+│       ├── README.md                   # Full compliance module
+│       └── advertising-rules.md        # Deep-dive reference
+│
 └── README.md                           # You are here
 ```
 
@@ -66,6 +74,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 | Country | Sub-jurisdiction | Regulator | Status | Module |
 |---|---|---|---|---|
 | Canada | British Columbia | GPEB / IGCO (from April 2026) | Complete | [canada/british-columbia/](canada/british-columbia/) |
+| United States | Nevada | NGCB / NGC | Complete | [united-states/nevada/](united-states/nevada/) |
 
 ---
 
