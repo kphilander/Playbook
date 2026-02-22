@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { margin: 0; padding: 0; background: transparent; }
@@ -58,10 +58,17 @@
     }
     .card-logo {
       font-family: 'Inter', sans-serif;
-      font-weight: 800;
       font-size: 28px;
       color: #FFFFFF;
+    }
+    .card-logo .logo-play {
+      font-weight: 800;
       letter-spacing: -0.02em;
+    }
+    .card-logo .logo-book {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
     .card-pillar {
       font-family: 'Inter', sans-serif;
@@ -200,7 +207,7 @@
     <!-- Panel A: Odds fact + quiz hook -->
     <div class="panel-a">
       <div class="panel-header">
-        <span class="card-logo">Playbook</span>
+        <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
         <span class="card-pillar">Sharp</span>
       </div>
       <div class="odds-label">Real Odds</div>

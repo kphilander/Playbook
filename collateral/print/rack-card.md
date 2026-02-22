@@ -38,8 +38,8 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 |---|---|
 | **Background** | Navy `#1B2838` |
 | **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, white, top-left |
-| **Operator logo** | `[Your logo here]` placeholder, top-right |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg), top-left. Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Below 0.25", use logomark only. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Operator logo** | `[Your logo here]` placeholder, top-right. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 | **Pillar badge** | `OPEN` (teal pill) |
 | **Headline** | Every game has math. Here's yours. |
 | **Headline specs** | Inter 800, white, minimum 24pt |

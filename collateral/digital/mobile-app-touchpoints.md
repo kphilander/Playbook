@@ -4,6 +4,8 @@ Copy and layout specs for 6 key mobile screens where {{PROGRAM_NAME}} content in
 
 > **Operator note**: Replace all `{{PLACEHOLDER}}` tokens with values from `_brand.yml`. Touch targets must be 44x44px minimum. Primary CTAs should sit within the thumb zone (bottom 40% of screen). See [application guidelines](../../brand-book/07-application-guidelines.md#mobile-app) for integration principles.
 
+> **Logo usage**: Where the {{PROGRAM_NAME}} logo appears in-app (tab bar, navigation, content hub header), use the horizontal (B2) layout. On navy/dark backgrounds use the reversed variant (white Play + teal BOOK); on white/light backgrounds use the full-color variant (navy Play + navy BOOK) or on-light variant (navy Play + teal BOOK). Minimum height: 24px (digital). Maintain 1x logo-height clear space on all sides. Below 24px, use logomark only (no wordmark). Co-branding with operator logo: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system).
+
 ---
 
 ## Quick-scan index

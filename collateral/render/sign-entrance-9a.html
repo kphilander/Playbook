@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Entrance Sign — A2 Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .sign-entrance {
+    width: 900px;
+    height: 1200px;
+    background: #1B2838;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .sign-entrance::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+  .sign-entrance::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .sign-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 56px 0;
+    position: relative;
+    z-index: 1;
+  }
+  .card-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+  }
+  .card-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .co-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .co-brand-divider {
+    width: 1px;
+    height: 36px;
+    background: #A8A8C0;
+  }
+  .operator-placeholder {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #6B6B8A;
+    border: 2px dashed rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 8px 16px;
+  }
+
+  .sign-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 56px;
+    position: relative;
+    z-index: 1;
+  }
+  .sign-headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 56px;
+    color: #FFFFFF;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .sign-sub {
+    font-size: 22px;
+    color: #A8A8C0;
+    line-height: 1.5;
+    margin-bottom: 48px;
+    max-width: 600px;
+  }
+
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-placeholder {
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    color: #6B6B8A;
+    font-weight: 600;
+  }
+  .qr-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #A8A8C0;
+  }
+  .qr-text strong {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .sign-footer {
+    background: #2A3F56;
+    padding: 24px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-helpline {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+  }
+  .footer-legal {
+    font-size: 14px;
+    color: #A8A8C0;
+  }
+</style>
+</head>
+<body>
+<div class="sign-entrance">
+
+  <div class="sign-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <div class="co-brand">
+      <div class="co-brand-divider"></div>
+      <div class="operator-placeholder">Your logo here</div>
+    </div>
+  </div>
+
+  <div class="sign-content">
+    <div class="sign-headline">Know your game.<br>Play on your terms.</div>
+    <div class="sign-sub">Real odds, real tools, and free support — available anytime.</div>
+    <div class="qr-block">
+      <div class="qr-placeholder">QR Code</div>
+      <div class="qr-text"><strong>Scan for the facts</strong>Visit the Playbook content hub</div>
+    </div>
+  </div>
+
+  <div class="sign-footer">
+    <span class="footer-helpline">Free, confidential support 24/7: 1-800-522-4700</span>
+    <span class="footer-legal">21+ to gamble</span>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>Deposit Confirmed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    background: #FFFFFF;
+    color: #1A1A2E;
+  }
+  .accent-bar { height: 4px; background: linear-gradient(90deg, #FF6B35, #00D4AA); }
+  .hero {
+    background: #1B2838;
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  .hero-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+  .deposit-amount {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #00D4AA;
+    margin-bottom: 8px;
+  }
+  .deposit-date {
+    font-size: 16px;
+    color: #A8A8C0;
+  }
+  .section-white { padding: 40px 56px; background: #FFFFFF; }
+  .section-gray { padding: 40px 56px; background: #F5F5FA; }
+  .section-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1A1A2E;
+    margin-bottom: 24px;
+  }
+  .budget-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .budget-stat {
+    flex: 1;
+    background: #F5F5FA;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .budget-stat .label {
+    font-size: 13px;
+    color: #6B6B8A;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .budget-stat .value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: #1B2838;
+  }
+  .budget-stat .value.teal { color: #00D4AA; }
+  .budget-stat .value.orange { color: #FF6B35; }
+  .progress-bar-outer {
+    width: 100%;
+    height: 8px;
+    background: #E5E5F0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .progress-bar-inner {
+    width: 35%;
+    height: 8px;
+    background: linear-gradient(90deg, #00D4AA, #00B894);
+    border-radius: 4px;
+  }
+  .progress-label {
+    font-size: 14px;
+    color: #6B6B8A;
+    text-align: right;
+  }
+  .note {
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.6;
+    margin-top: 16px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #00D4AA;
+    color: #1B2838;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .tool-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid #E5E5F0;
+  }
+  .tool-row:last-child { border-bottom: none; }
+  .tool-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #00D4AA;
+    min-width: 10px;
+  }
+  .tool-dot.off { background: #A8A8C0; }
+  .tool-label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #1A1A2E;
+    flex: 1;
+  }
+  .tool-status {
+    font-size: 14px;
+    color: #6B6B8A;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+  }
+  .footer {
+    background: #0F1923;
+    padding: 36px 56px;
+    text-align: center;
+  }
+  .footer-support { font-size: 15px; color: #FFFFFF; font-weight: 600; margin-bottom: 10px; }
+  .footer-channels {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00D4AA;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  .footer-legal { font-size: 13px; color: #6B6B8A; line-height: 1.6; margin-bottom: 12px; }
+  .footer-logo { font-family: 'Inter', sans-serif; font-size: 14px; margin-top: 16px; display: inline-block; }
+  .footer-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>Deposit confirmed</h1>
+    <div class="deposit-amount">$50.00</div>
+    <div class="deposit-date">February 22, 2026</div>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">Your budget at a glance</div>
+    <div class="budget-grid">
+      <div class="budget-stat">
+        <div class="label">Weekly limit</div>
+        <div class="value">$200</div>
+      </div>
+      <div class="budget-stat">
+        <div class="label">Used</div>
+        <div class="value teal">$70</div>
+      </div>
+      <div class="budget-stat">
+        <div class="label">Remaining</div>
+        <div class="value">$130</div>
+      </div>
+    </div>
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner"></div>
+    </div>
+    <div class="progress-label">35% of weekly limit used</div>
+    <div class="note">Your limits are yours. Adjust anytime in account settings.</div>
+    <a href="#" class="cta-button">Adjust your limits</a>
+  </div>
+
+  <div class="section-gray">
+    <div class="section-heading">Your tools</div>
+    <div class="tool-row">
+      <div class="tool-dot"></div>
+      <div class="tool-label">Session reminders</div>
+      <div class="tool-status">Every 60 min</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-dot"></div>
+      <div class="tool-label">Activity dashboard</div>
+      <div class="tool-status">Updated live</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-dot off"></div>
+      <div class="tool-label">Bankroll planner</div>
+      <div class="tool-status">Not set up</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">See your dashboard</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">Free, confidential support — for any question about gambling.</div>
+    <div class="footer-channels">Call 1-800-522-4700 | Text 1-800-522-4700</div>
+    <div class="footer-legal">You must be 21+ to gamble. Gambling involves risk.</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+  </div>
+
+</div>
+</body>
+</html>

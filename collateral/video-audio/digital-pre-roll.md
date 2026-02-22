@@ -48,7 +48,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 | 0:00–0:02 | Navy background, numbers animate in | — | **Every game has a house edge.** |
 | 0:02–0:05 | Stats appear: Blackjack 0.5%, Roulette 5.26%, Slots 2–15% | — | **Blackjack: 0.5% / Roulette: 5.26% / Slots: 2–15%** |
 | 0:05–0:09 | Person at table, confident, checking phone | "Knowing the edge helps you pick your games and set your budget." | — |
-| 0:09–0:12 | {{PROGRAM_NAME}} logo + QR code | "The facts are free." | **Know your game →** / **{{CONTENT_HUB_URL}}** |
+| 0:09–0:12 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + teal BOOK on navy bg, min 24px height, 1x clear space) + QR code | "The facts are free." | **Know your game →** / **{{CONTENT_HUB_URL}}** |
 | 0:12–0:15 | Helpline frame | — | **Free, confidential support 24/7: {{HELPLINE_NUMBER}}** |
 
 **Persistent text**: `{{HELPLINE_NUMBER}}` visible in corner from 0:05 onward.
@@ -66,7 +66,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 | 0:02–0:05 | Options animate in like a quiz | — | **What are the odds on the next spin?** / A) Higher  B) Lower  C) Same |
 | 0:05–0:08 | Answer reveal: C lights up green | "Same as always. The machine doesn't have a memory." | **Same as always.** |
 | 0:08–0:12 | Score card: "Most people get this wrong. How about you?" | "Take the full quiz." | **Think you know the odds?** |
-| 0:12–0:15 | {{PROGRAM_NAME}} logo + QR code + helpline | — | **Take the quiz → {{QUIZ_URL}}** / **Support 24/7: {{HELPLINE_NUMBER}}** |
+| 0:12–0:15 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) + QR code + helpline | — | **Take the quiz → {{QUIZ_URL}}** / **Support 24/7: {{HELPLINE_NUMBER}}** |
 
 **Persistent text**: `{{HELPLINE_NUMBER}}` visible in corner from 0:05 onward.
 
@@ -82,7 +82,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 | 0:00–0:02 | Phone screen: deposit limit UI | — | **This takes 10 seconds.** |
 | 0:02–0:05 | Finger taps "Set limit" — confirmation appears | — | **Set your deposit limit. Done.** |
 | 0:05–0:09 | Montage: session reminder, dashboard, quiz | "Deposit limits. Session reminders. Activity dashboard. All built in." | — |
-| 0:09–0:12 | {{PROGRAM_NAME}} logo + "Your tools. Your limits. Your call." | "Your tools. Your call." | **Your tools. Your limits. Your call.** |
+| 0:09–0:12 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) + "Your tools. Your limits. Your call." | "Your tools. Your call." | **Your tools. Your limits. Your call.** |
 | 0:12–0:15 | Helpline frame + CTA | — | **Set your limits → {{CONTENT_HUB_URL}}** / **Support 24/7: {{HELPLINE_NUMBER}}** |
 
 **Persistent text**: `{{HELPLINE_NUMBER}}` visible in corner from 0:05 onward.
@@ -97,7 +97,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 | Time | Visual | Text overlay |
 |---|---|---|
 | 0:00–0:03 | Numbers animate in on navy bg | **Blackjack: 0.5% / Roulette: 5.26% / Slots: 2–15%** |
-| 0:03–0:06 | {{PROGRAM_NAME}} logo + helpline | **Every game has math. Here's yours.** / **{{HELPLINE_NUMBER}}** |
+| 0:03–0:06 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) + helpline | **Every game has math. Here's yours.** / **{{HELPLINE_NUMBER}}** |
 
 **No voiceover** — text-only. Works entirely without sound.
 
@@ -111,7 +111,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 | Time | Visual | Text overlay |
 |---|---|---|
 | 0:00–0:03 | Quiz question on navy bg | **"I'm on a hot streak" — True or False?** |
-| 0:03–0:06 | Answer: FALSE + {{PROGRAM_NAME}} logo | **FALSE. Every spin is independent.** / **Take the quiz → {{QUIZ_URL}}** |
+| 0:03–0:06 | Answer: FALSE + {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) | **FALSE. Every spin is independent.** / **Take the quiz → {{QUIZ_URL}}** |
 
 **No voiceover** — text-only. Works entirely without sound.
 
@@ -124,7 +124,7 @@ For pre-roll ads that support companion banners (YouTube desktop):
 | Property | Value |
 |---|---|
 | **Size** | 300 x 250px |
-| **Content** | {{PROGRAM_NAME}} logo + "Know your game" + CTA button |
+| **Content** | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant on navy bg or full-color on white bg, min 24px height, 1x clear space) + "Know your game" + CTA button |
 | **CTA** | `Take the quiz →` or `See the real odds →` |
 | **Helpline** | Text at bottom: `Support: {{HELPLINE_NUMBER}}` |
 
@@ -139,7 +139,7 @@ For pre-roll ads that support companion banners (YouTube desktop):
 - [ ] Delivered in 16:9, 1:1, and 9:16 aspect ratios
 - [ ] Closed captions provided
 - [ ] QR code scannable at screen distance (test on mobile and desktop)
-- [ ] {{PROGRAM_NAME}} and operator logos in final frame
+- [ ] {{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space) and operator logo (co-branding rules: min 60% height ratio, vertical divider) in final frame
 - [ ] No clinical language in any overlay text
 - [ ] Bumper ads require zero audio to deliver the message
 

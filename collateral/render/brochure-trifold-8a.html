@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tri-fold Brochure — Inside Spread</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .brochure-inside {
+    width: 2400px;
+    height: 1000px;
+    display: flex;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1A1A2E;
+    position: relative;
+  }
+
+  .panel {
+    width: 800px;
+    height: 1000px;
+    padding: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Panel 2 — Intro */
+  .panel-intro {
+    background: #FFFFFF;
+  }
+  .panel-intro::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+  .panel-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #1B2838;
+    margin-bottom: 20px;
+    margin-top: 24px;
+    line-height: 1.2;
+  }
+  .panel-body {
+    font-size: 17px;
+    color: #3D3D5C;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .principle {
+    margin-bottom: 24px;
+    padding-left: 20px;
+    border-left: 3px solid #00D4AA;
+  }
+  .principle-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1B2838;
+    margin-bottom: 6px;
+  }
+  .principle-body {
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.6;
+  }
+  .panel-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .panel-logo .logo-play { color: #1B2838; font-weight: 800; letter-spacing: -0.02em; }
+  .panel-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* Panel 3 — Odds */
+  .panel-odds {
+    background: #F5F5FA;
+    border-left: 1px solid #E5E5F0;
+  }
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+    margin-top: 24px;
+  }
+  .label-orange { color: #FF6B35; }
+  .label-teal { color: #00D4AA; }
+  .odds-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+  .odds-table th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6B6B8A;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 2px solid #D0D0E0;
+  }
+  .odds-table td {
+    font-size: 16px;
+    color: #1A1A2E;
+    padding: 12px 0;
+    border-bottom: 1px solid #E5E5F0;
+  }
+  .odds-table td:last-child {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1B2838;
+    text-align: right;
+  }
+  .callout {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 24px;
+    border-left: 4px solid #FF6B35;
+  }
+  .callout p {
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  .footnote {
+    font-size: 12px;
+    color: #6B6B8A;
+    margin-top: 16px;
+  }
+
+  /* Panel 4 — Tools */
+  .panel-tools {
+    background: #FFFFFF;
+    border-left: 1px solid #E5E5F0;
+  }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .tool-num {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    background: #00D4AA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    color: #1B2838;
+  }
+  .tool-item strong {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1A1A2E;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .tool-item span {
+    font-size: 14px;
+    color: #3D3D5C;
+    line-height: 1.5;
+  }
+  .panel-cta {
+    margin-top: 24px;
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.6;
+    padding: 16px 20px;
+    background: #F5F5FA;
+    border-radius: 10px;
+  }
+  .panel-cta strong {
+    color: #1B2838;
+    font-family: 'Inter', sans-serif;
+  }
+</style>
+</head>
+<body>
+<div class="brochure-inside">
+
+  <!-- Panel 2: Intro -->
+  <div class="panel panel-intro">
+    <div class="panel-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="panel-heading">What is Playbook?</div>
+    <div class="panel-body">Playbook gives you the facts and features to play on your terms. Not warnings. Not lectures. Just the real numbers behind the games you play — and the tools to manage your experience.</div>
+    <div class="principle">
+      <div class="principle-title">Know the odds</div>
+      <div class="principle-body">Every game has a house edge. We show you the actual numbers so you can make informed choices.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">Use the tools</div>
+      <div class="principle-body">Deposit limits, session reminders, activity dashboards — features designed to keep you in control.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">Play your way</div>
+      <div class="principle-body">Your money, your limits, your call. We give you information and tools. You decide what to do with them.</div>
+    </div>
+  </div>
+
+  <!-- Panel 3: Odds Literacy -->
+  <div class="panel panel-odds">
+    <div class="section-label label-orange">Real Odds</div>
+    <div class="panel-heading">The house edge — what it means for you</div>
+    <div class="panel-body" style="font-size:15px; margin-bottom:16px;">The house edge is the mathematical advantage built into every casino game. It's not hidden. It's how the business works. Knowing the edge helps you pick your games and set your budget.</div>
+    <table class="odds-table">
+      <thead>
+        <tr><th>Game</th><th style="text-align:right;">House edge</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Blackjack (basic strategy)</td><td>0.5%</td></tr>
+        <tr><td>Craps (pass/don't pass)</td><td>1.4%</td></tr>
+        <tr><td>European roulette</td><td>2.7%</td></tr>
+        <tr><td>American roulette</td><td>5.26%</td></tr>
+        <tr><td>Slots</td><td>2–15%</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <p>For every $100 you wager on American roulette, the casino keeps about $5.26 over time. That's the cost of the entertainment.</p>
+    </div>
+    <div class="footnote">House edge assumes optimal strategy where applicable.</div>
+  </div>
+
+  <!-- Panel 4: Tools Overview -->
+  <div class="panel panel-tools">
+    <div class="section-label label-teal">Your Tools</div>
+    <div class="panel-heading">Features that work for you</div>
+    <div class="tool-item">
+      <div class="tool-num">1</div>
+      <div><strong>Deposit limits</strong><span>Set your entertainment budget for the week or month. Takes 10 seconds. Adjust anytime.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num">2</div>
+      <div><strong>Session reminders</strong><span>Get a check-in at the interval you choose. Stay aware without killing the vibe.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num">3</div>
+      <div><strong>Activity dashboard</strong><span>See your play stats — sessions, time, spending. No surprises. Knowledge is a feature.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num">4</div>
+      <div><strong>Bankroll planner</strong><span>Enter your budget, pick your game, and see how far your money can go.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num">5</div>
+      <div><strong>Game IQ quiz</strong><span>Test your odds knowledge. 7 questions, 2 minutes. Challenge your friends.</span></div>
+    </div>
+    <div class="panel-cta">
+      <strong>Find these tools</strong> in your account settings or visit the Playbook content hub.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

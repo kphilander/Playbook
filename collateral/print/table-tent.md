@@ -40,7 +40,7 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 |---|---|
 | **Background** | Navy `#1B2838` |
 | **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, white, top-left, small |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg), top-left, small. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Pillar badge** | `SHARP` (teal pill), top-right |
 
 ### Odds fact
@@ -96,7 +96,7 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 | Element | Content |
 |---|---|
 | **Legal** | You must be {{MIN_AGE}}+ to gamble. |
-| **Operator logo** | `[Your logo here]` placeholder |
+| **Operator logo** | `[Your logo here]` placeholder. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos if side by side. Both logos min 0.25" height for print |
 
 ---
 

@@ -4,6 +4,8 @@ Frequently asked questions for customer-facing staff. Organized by topic with cl
 
 > **Operator note**: This document is for internal use only. Do not distribute to players. All staff who interact with players — CS agents, floor staff, hosts, reception, security — should be familiar with these answers. Replace all `{{PLACEHOLDER}}` tokens with values from `_brand.yml`. See the [language guide](../../brand-book/04-voice-and-tone.md#language-guide) for preferred terminology.
 
+> **Logo usage (internal reference)**: If this FAQ is printed as a staff handout or poster, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): full-color variant (navy Play + navy BOOK) on white/light backgrounds, reversed variant (white Play + teal BOOK) on dark backgrounds. Minimum height: 0.25" (print) or 24px (digital). Maintain 1x logo-height clear space. Co-branding with operator logo: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos.
+
 ---
 
 ## Quick-scan index

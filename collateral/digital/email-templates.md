@@ -53,8 +53,8 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 
 | Element | Content |
 |---|---|
-| **Logo** | {{PROGRAM_NAME}} wordmark, white |
-| **Headline** | Welcome. Here's what you should know. |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg). Min height 24px. Maintain 1x logo-height clear space on all sides. Co-branding: if operator logo is present, use vertical divider (neutral_300 `#A8A8C0`, 1px) between logos; {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Headline** | Welcome. A few things worth knowing. |
 | **Subheadline** | {{PROGRAM_NAME}} gives you the facts, the tools, and the real numbers behind the games you play. No fine print. |
 
 **Body section 1 — Tools intro** (white background):
@@ -82,7 +82,7 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 | **Helpline** | Free, confidential support — for any question about gambling. |
 | **Channels** | Call {{HELPLINE_NUMBER}} &#124; Text {{TEXT_NUMBER}} &#124; Chat at {{CHAT_URL}} |
 | **Legal** | You must be {{MIN_AGE}}+ to gamble. Gambling involves risk. |
-| **Logo** | {{PROGRAM_NAME}} logomark |
+| **Logo** | {{PROGRAM_NAME}} logomark, reversed variant (white Play + teal BOOK on navy `#0F1923` footer bg). Min height 24px. Below 24px, use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Unsubscribe** | Manage your preferences (note: {{PROGRAM_NAME}} emails cannot be fully unsubscribed per policy) |
 
 ---

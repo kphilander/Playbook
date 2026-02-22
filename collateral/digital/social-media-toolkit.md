@@ -40,7 +40,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 3–8s | Cut to person looking confident | "...has the emotional range of a toaster." |
 | 8–15s | Animated RNG visualization | "Every spin is calculated by a random number generator. It doesn't know you. It doesn't care. It doesn't remember your last spin." |
 | 15–22s | Quick stat cards flying in | "House edge on slots: 2–15%. Now you know." |
-| 22–30s | End card: {{PROGRAM_NAME}} logo + CTA | "Know your game. Link in bio." |
+| 22–30s | End card: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + teal BOOK on navy bg, min 24px height, 1x clear space) + CTA | "Know your game. Link in bio." |
 
 #### Reel 2 — "The -110 Explained" (Sports betting math)
 
@@ -50,7 +50,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 3–10s | Animated money breakdown | "You bet $110. You win $100. That $10 difference? That's the sportsbook's cut." |
 | 10–18s | Calculator visual | "On every. Single. Bet. It's how the business works." |
 | 18–25s | Comparison: -110 vs -150 vs +200 | "The bigger the favorite, the bigger the cut." |
-| 25–30s | End card | "Straight talk. Real numbers. Link in bio." |
+| 25–30s | End card: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + teal BOOK on navy bg, min 24px height, 1x clear space) | "Straight talk. Real numbers. Link in bio." |
 
 #### Reel 3 — "The Quiz Challenge" (Engagement driver)
 
@@ -61,7 +61,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 8–12s | Dramatic pause | "If you said 'higher'... wrong." |
 | 12–20s | Answer reveal with animation | "Same as always. The machine has no memory. Each spin is independent." |
 | 20–25s | Score reveal | "Most people get this wrong. What about you?" |
-| 25–30s | End card with QR code | "Take the full quiz. Challenge a friend. Link in bio." |
+| 25–30s | End card with QR code: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + teal BOOK on navy bg, min 24px height, 1x clear space) | "Take the full quiz. Challenge a friend. Link in bio." |
 
 ### Carousel layouts (10 slides)
 
@@ -69,7 +69,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 
 | Slide | Content |
 |---|---|
-| 1 (Cover) | "5 gambling myths the math doesn't support" — bold headline, {{PROGRAM_NAME}} branding |
+| 1 (Cover) | "5 gambling myths the math doesn't support" — bold headline, {{PROGRAM_NAME}} logo (stacked B1 or horizontal B2, reversed variant on dark bg / full-color on light bg; min 24px height, 1x clear space) |
 | 2 | Myth: "I'm due for a win" → Fact: Each outcome is independent. The gambler's fallacy. |
 | 3 | Myth: "Hot and cold machines" → Fact: RNG doesn't have moods. Every spin is independent. |
 | 4 | Myth: "Betting systems beat the house" → Fact: No strategy changes the house edge. |
@@ -78,7 +78,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 7 | "So what CAN you control?" |
 | 8 | Your budget. Your limits. Your session time. Your game choice. |
 | 9 | "Knowledge is a feature." — tools overview with icons |
-| 10 | CTA: "Take the quiz. Challenge your friends." + {{PROGRAM_NAME}} + helpline |
+| 10 | CTA: "Take the quiz. Challenge your friends." + {{PROGRAM_NAME}} logo (reversed variant on navy bg or full-color on white bg; min 24px height, 1x clear space) + helpline |
 
 #### Carousel 2 — "House Edge by Game"
 
@@ -93,7 +93,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 7 | Sports betting (vig): ~4.5% — "Built into every line" |
 | 8 | "The house edge is how the business works. Knowing the edge helps you pick your games." |
 | 9 | "Set your budget before you play." — tool CTA |
-| 10 | CTA + {{PROGRAM_NAME}} branding + helpline |
+| 10 | CTA + {{PROGRAM_NAME}} logo (reversed variant on navy bg or full-color on white bg; min 24px height, 1x clear space) + helpline |
 
 ### Story templates
 
@@ -126,7 +126,7 @@ Refer to existing rendered story templates for visual format:
 
 | Tweet | Content |
 |---|---|
-| 1 (Hook) | Your "lucky machine" has the emotional range of a toaster. Here's how slot machines actually work. A thread. 🧵 |
+| 1 (Hook) | Your "lucky machine" has the emotional range of a toaster. Here's how slot machines actually work. A thread. |
 | 2 | Every modern slot machine uses a random number generator (RNG). It picks a number the instant you press spin. Everything else — the spinning reels, the sounds — is just presentation. |
 | 3 | The RNG doesn't know your name. It doesn't know you've been sitting there for 3 hours. It doesn't know you "almost" won last time. Each spin is completely independent. |
 | 4 | The house edge on slots ranges from 2% to 15%. That's the math built into every machine. Over time, the casino keeps that percentage. That's how the business works. |
@@ -178,7 +178,7 @@ Refer to existing rendered story templates for visual format:
 
 #### Template 2 — Event tie-in (Super Bowl / major sports)
 
-> **Big game this weekend? Here's what you should know before you place a bet.**
+> **Big game this weekend? Here's what's worth knowing before you place a bet.**
 >
 > A -110 line means you bet $110 to win $100. That $10 difference? That's the sportsbook's cut — on every bet.
 >
@@ -205,17 +205,17 @@ Refer to existing rendered story templates for visual format:
 
 {{VIDEO_DESCRIPTION_PARAGRAPH}}
 
-🎯 Key takeaways:
+Key takeaways:
 - {{TAKEAWAY_1}}
 - {{TAKEAWAY_2}}
 - {{TAKEAWAY_3}}
 
-📊 Take the game IQ quiz: {{QUIZ_URL}}
-🔧 Set your deposit limit: {{TOOLS_URL}}
-📚 More facts: {{CONTENT_HUB_URL}}
+Take the game IQ quiz: {{QUIZ_URL}}
+Set your deposit limit: {{TOOLS_URL}}
+More facts: {{CONTENT_HUB_URL}}
 
 Free, confidential support — for any question about gambling:
-📞 {{HELPLINE_NUMBER}} | 💬 {{CHAT_URL}}
+Call {{HELPLINE_NUMBER}} | Chat {{CHAT_URL}}
 
 #KnowYourGame #{{PROGRAM_NAME}}
 ```

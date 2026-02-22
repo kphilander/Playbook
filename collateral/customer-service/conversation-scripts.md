@@ -4,6 +4,8 @@ Full dialogue trees for 8 customer service scenarios. Each script includes openi
 
 > **Operator note**: Replace all `{{PLACEHOLDER}}` tokens with values from `_brand.yml`. All agents should complete training on these scripts before handling player contacts. Tone should match the [voice and tone guide](../../brand-book/04-voice-and-tone.md) — warm, direct, never clinical or condescending. See the [language guide](../../brand-book/04-voice-and-tone.md#language-guide) for preferred terminology.
 
+> **Logo usage (not applicable to scripts)**: Conversation scripts are verbal/text interactions with no visual logo display. If printed as staff reference cards, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): full-color variant (navy Play + navy BOOK) on white/light backgrounds, reversed variant (white Play + teal BOOK) on dark backgrounds. Minimum height: 0.25" (print). Maintain 1x logo-height clear space.
+
 ---
 
 ## Quick-scan index

@@ -38,8 +38,8 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 |---|---|
 | **Background** | Navy `#1B2838` |
 | **Accent bar** | 3px gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, white, top-left |
-| **Operator logo** | `[Your logo here]` placeholder, top-right, small |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg), top-left. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. At business-card scale, the helpline badge lockup format ([Logomark] &#124; Free help 24/7: {{HELPLINE_NUMBER}}) may be used. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Operator logo** | `[Your logo here]` placeholder, top-right, small. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 
 ### Primary content
 
@@ -66,15 +66,15 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 
 | Channel | Display | Details |
 |---|---|---|
-| **Call** | 📞 Call | {{HELPLINE_NUMBER}} |
-| **Text** | 💬 Text | {{TEXT_NUMBER}} |
-| **Chat** | 🌐 Chat | {{CHAT_URL}} |
-| **Web** | 🔗 More info | {{CONTENT_HUB_URL}} |
+| **Call** | Call | {{HELPLINE_NUMBER}} |
+| **Text** | Text | {{TEXT_NUMBER}} |
+| **Chat** | Chat | {{CHAT_URL}} |
+| **Web** | More info | {{CONTENT_HUB_URL}} |
 
 | Element | Content |
 |---|---|
 | **Layout** | Vertical list, left-aligned, generous spacing |
-| **Icons** | Use icon system equivalents (not emoji — emoji shown here for illustration) |
+| **Icons** | Use icon system equivalents for each channel (phone, message, globe, link) |
 | **Typography** | Source Sans 3 for labels, Source Code Pro for numbers/URLs |
 | **Text color** | Navy `#1B2838` |
 

@@ -50,8 +50,8 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 
 | Element | Content |
 |---|---|
-| **Logo** | {{PROGRAM_NAME}} wordmark, white |
-| **Operator logo** | `[Your logo here]` placeholder |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg). Min height 0.25" (print) or 24px (digital display). Maintain 1x logo-height clear space on all sides. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Operator logo** | `[Your logo here]` placeholder. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 | **Headline** | Know your game. Play on your terms. |
 | **Subheadline** | Real odds, real tools, and free support — available anytime. |
 | **QR code** | Links to content hub |
@@ -164,7 +164,7 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 | **Number specs** | Large, bold, Source Code Pro — easily readable from arm's length |
 | **Additional** | Text {{TEXT_NUMBER}} &#124; Chat {{CHAT_URL}} |
 | **Availability** | 24/7. No judgment. |
-| **Logo** | {{PROGRAM_NAME}} logomark only (small, discreet) |
+| **Logo** | {{PROGRAM_NAME}} logomark only (small, discreet), reversed variant. Min height 0.25" (print). No wordmark at this scale — use logomark only per minimum size rules. Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 
 ### Copy — Stall card
 
@@ -176,7 +176,7 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 | **Text** | {{TEXT_NUMBER}} |
 | **Chat** | {{CHAT_URL}} |
 | **QR code** | Links to support page (small, 1" x 1") |
-| **Note** | No operator branding on stall cards — helpline and {{PROGRAM_NAME}} logomark only |
+| **Note** | No operator branding on stall cards — helpline and {{PROGRAM_NAME}} logomark only (reversed variant on dark bg, or full-color on light bg). Min height 0.25" (print). Below 0.25", use logomark only per minimum size rules |
 
 ---
 

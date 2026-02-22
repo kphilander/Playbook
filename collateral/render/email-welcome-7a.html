@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>Welcome to Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    background: #FFFFFF;
+    color: #1A1A2E;
+    position: relative;
+  }
+  .accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+  .hero {
+    background: #1B2838;
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  .hero-logo .logo-play {
+    color: #FFFFFF;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .hero-logo .logo-book {
+    color: #00D4AA;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: 16px;
+    color: #A8A8C0;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section-white {
+    padding: 40px 56px;
+    background: #FFFFFF;
+  }
+  .section-gray {
+    padding: 40px 56px;
+    background: #F5F5FA;
+  }
+  .section-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #1A1A2E;
+    margin-bottom: 24px;
+  }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .tool-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+    background: #E8FFF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    color: #00D4AA;
+  }
+  .tool-item strong {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1A1A2E;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .tool-item span {
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.5;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #00D4AA;
+    color: #1B2838;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 24px;
+    letter-spacing: 0.01em;
+  }
+  .stat-block {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .stat-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #1B2838;
+    margin-bottom: 8px;
+  }
+  .stat-number .teal { color: #00D4AA; }
+  .stat-number .orange { color: #FF6B35; }
+  .stat-context {
+    font-size: 16px;
+    color: #3D3D5C;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .footer {
+    background: #0F1923;
+    padding: 40px 56px;
+    text-align: center;
+  }
+  .footer-support {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .footer-channels {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00D4AA;
+    margin-bottom: 24px;
+    line-height: 1.8;
+  }
+  .footer-legal {
+    font-size: 13px;
+    color: #6B6B8A;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .footer-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .footer-logo .logo-play {
+    color: #FFFFFF;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .footer-logo .logo-book {
+    color: #00D4AA;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .footer-unsub {
+    font-size: 12px;
+    color: #6B6B8A;
+    margin-top: 16px;
+  }
+  .footer-unsub a {
+    color: #A8A8C0;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>Welcome. A few things worth knowing.</h1>
+    <p>Playbook gives you the facts, the tools, and the real numbers behind the games you play. No fine print.</p>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">Three things. 60 seconds.</div>
+    <div class="tool-item">
+      <div class="tool-icon">1</div>
+      <div>
+        <strong>Set your budget</strong>
+        <span>Pick your deposit limit. Weekly, monthly, whatever works. Takes 10 seconds.</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">2</div>
+      <div>
+        <strong>Set your pace</strong>
+        <span>Session reminders keep you aware. No buzzkill. Just a check-in.</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">3</div>
+      <div>
+        <strong>Know your game</strong>
+        <span>Take the odds quiz. 7 questions, 2 minutes. Challenge your friends after.</span>
+      </div>
+    </div>
+    <a href="#" class="cta-button">Get started</a>
+  </div>
+
+  <div class="section-gray">
+    <div class="stat-block">
+      <div class="stat-number"><span class="teal">0.5%</span> to <span class="orange">15%</span></div>
+      <div class="stat-context">That's the range of house edge across casino games. Knowing the edge helps you pick your games and set your budget.</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">See the real odds</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">Free, confidential support — for any question about gambling.</div>
+    <div class="footer-channels">
+      Call 1-800-522-4700<br>
+      Text 1-800-522-4700<br>
+      Chat at ncpgambling.org/chat
+    </div>
+    <div class="footer-legal">You must be 21+ to gamble. Gambling involves risk.</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-unsub">
+      <a href="#">Manage your preferences</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

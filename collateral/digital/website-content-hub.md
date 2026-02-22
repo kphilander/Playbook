@@ -193,7 +193,7 @@ Global component appearing on every page of the operator's site. Not unique to t
 
 | Element | Content |
 |---|---|
-| **Logomark** | {{PROGRAM_NAME}} logomark (or text identifier) |
+| **Logomark** | {{PROGRAM_NAME}} logomark, reversed variant (white Play + teal BOOK on dark bg). Min height 24px. Maintain 1x logo-height clear space on all sides. Below 24px, use logomark only (no wordmark). See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Helpline** | {{HELPLINE_NUMBER}} |
 | **Age notice** | You must be {{MIN_AGE}}+ to gamble. |
 | **Hub link** | `Know your game →` → links to content hub |

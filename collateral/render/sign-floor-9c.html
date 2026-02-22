@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gaming Floor Sign — Odds Fact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .sign-floor {
+    width: 900px;
+    height: 700px;
+    background: #1B2838;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .sign-floor::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+  .sign-floor::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .sign-layout {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .sign-left {
+    flex: 1;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sign-right {
+    width: 340px;
+    padding: 48px 48px 48px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #FF6B35;
+    margin-bottom: 12px;
+  }
+  .sign-headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .sign-body {
+    font-size: 18px;
+    color: #A8A8C0;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .qr-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    color: #6B6B8A;
+    font-weight: 600;
+  }
+  .qr-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #A8A8C0;
+  }
+
+  .odds-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .odds-game {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  .odds-edge {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .odds-edge.teal { color: #00D4AA; }
+  .odds-edge.white { color: #FFFFFF; }
+  .odds-edge.orange { color: #FF6B35; }
+
+  .sign-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2A3F56;
+    padding: 16px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+  .bottom-logo { font-family: 'Inter', sans-serif; font-size: 18px; }
+  .bottom-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .bottom-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .bottom-helpline {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
+</style>
+</head>
+<body>
+<div class="sign-floor">
+
+  <div class="sign-layout">
+    <div class="sign-left">
+      <div class="section-label">Real Odds</div>
+      <div class="sign-headline">Every game has<br>a house edge.</div>
+      <div class="sign-body">The house edge is how casinos work. Knowing the edge helps you pick your games and set your budget.</div>
+      <div class="qr-block">
+        <div class="qr-placeholder">QR Code</div>
+        <div class="qr-text">Scan to see all games</div>
+      </div>
+    </div>
+    <div class="sign-right">
+      <div class="odds-card">
+        <div class="odds-game">Blackjack</div>
+        <div class="odds-edge teal">0.5%</div>
+      </div>
+      <div class="odds-card">
+        <div class="odds-game">Roulette</div>
+        <div class="odds-edge white">5.26%</div>
+      </div>
+      <div class="odds-card">
+        <div class="odds-game">Slots</div>
+        <div class="odds-edge orange">2–15%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sign-bottom">
+    <span class="bottom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="bottom-helpline">Free support 24/7: 1-800-522-4700</span>
+  </div>
+
+</div>
+</body>
+</html>

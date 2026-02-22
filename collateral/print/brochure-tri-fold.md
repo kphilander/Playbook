@@ -60,8 +60,8 @@ INSIDE (face up):
 |---|---|
 | **Background** | Navy `#1B2838` (CMYK equivalent) |
 | **Accent bar** | 3mm gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, white, centered top third |
-| **Operator logo** | `[Your logo here]` placeholder, dashed border, below program logo |
+| **Logo** | {{PROGRAM_NAME}} wordmark, stacked (B1) layout, reversed variant (white Play + teal BOOK on navy bg). Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Centered top third. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Operator logo** | `[Your logo here]` placeholder, dashed border, below program logo. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos if side by side |
 | **Headline** | Every game has math. Here's yours. |
 | **Subheadline** | Real odds. Real tools. No fine print. |
 | **Visual** | Subtle grid overlay pattern |
@@ -184,7 +184,7 @@ INSIDE (face up):
 | **Helpline strip** | Full-width strip at bottom: navy `#2A3F56` background, white monospace text |
 | **Helpline text** | Free, confidential support 24/7: {{HELPLINE_NUMBER}} |
 | **Legal** | You must be {{MIN_AGE}}+ to gamble. Gambling involves risk. Play on your terms. |
-| **Operator logo** | `[Your logo here]` placeholder |
+| **Operator logo** | `[Your logo here]` placeholder. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos if side by side. Both logos min 0.25" height for print |
 
 ---
 

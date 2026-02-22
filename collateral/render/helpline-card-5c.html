@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { margin: 0; padding: 0; background: transparent; }
@@ -58,10 +58,27 @@
     }
     .card-logo {
       font-family: 'Inter', sans-serif;
-      font-weight: 800;
       font-size: 22px;
       color: #FFFFFF;
+    }
+    .card-logo .logo-play {
+      font-weight: 800;
       letter-spacing: -0.02em;
+    }
+    .card-logo .logo-book {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .co-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .co-brand-divider {
+      width: 1px;
+      height: 22px;
+      background: #A8A8C0;
     }
     .operator-placeholder {
       width: 80px;
@@ -164,8 +181,11 @@
   <div class="helpline-card">
     <div class="card-content">
       <div class="card-header">
-        <span class="card-logo">Playbook</span>
-        <div class="operator-placeholder">Your logo</div>
+        <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+        <div class="co-brand">
+          <div class="co-brand-divider"></div>
+          <div class="operator-placeholder">Your logo</div>
+        </div>
       </div>
       <div class="helpline-main">
         <div class="helpline-left">

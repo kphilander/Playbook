@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tri-fold Brochure — Outside (Cover + Back)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .brochure-outside {
+    width: 2400px;
+    height: 1000px;
+    display: flex;
+    font-family: 'Source Sans 3', sans-serif;
+    position: relative;
+  }
+
+  .panel {
+    width: 800px;
+    height: 1000px;
+    padding: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Panel 6 — Support Resources (Back right) */
+  .panel-support {
+    background: #1B2838;
+    color: #FFFFFF;
+  }
+  .panel-support::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+  .panel-support .heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .panel-support .body {
+    font-size: 17px;
+    color: #A8A8C0;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .channel-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .channel-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #A8A8C0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    width: 60px;
+  }
+  .channel-value {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 20px;
+    color: #00D4AA;
+  }
+  .support-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2A3F56;
+    padding: 20px 56px;
+    text-align: center;
+  }
+  .support-footer span {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+  }
+
+  /* Panel 5 — Quiz Hook (Back center) */
+  .panel-quiz {
+    background: #1B2838;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,0.08);
+  }
+  .panel-quiz::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .quiz-badge {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: #00D4AA;
+    color: #1B2838;
+    padding: 6px 20px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .quiz-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+  }
+  .quiz-body {
+    font-size: 17px;
+    color: #A8A8C0;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .quiz-question {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    max-width: 520px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-placeholder {
+    width: 100px;
+    height: 100px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 11px;
+    color: #6B6B8A;
+    font-weight: 600;
+  }
+  .qr-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #A8A8C0;
+    text-align: left;
+  }
+  .qr-label strong {
+    display: block;
+    color: #FFFFFF;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  /* Panel 1 — Cover (Front right) */
+  .panel-cover {
+    background: #1B2838;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,0.08);
+  }
+  .panel-cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+  .panel-cover::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+  .cover-logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .cover-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .cover-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-sub {
+    font-size: 20px;
+    color: #A8A8C0;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-operator {
+    width: 160px;
+    height: 48px;
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #6B6B8A;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-helpline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2A3F56;
+    padding: 16px 56px;
+    text-align: center;
+    z-index: 1;
+  }
+  .cover-helpline span {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 13px;
+    color: #FFFFFF;
+  }
+  .cover-legal {
+    font-size: 12px;
+    color: #6B6B8A;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+<div class="brochure-outside">
+
+  <!-- Panel 6: Support Resources -->
+  <div class="panel panel-support">
+    <div class="heading">Need to talk?</div>
+    <div class="body">Free, confidential support is available 24/7 — for any question about gambling. No judgment. Ever.</div>
+    <div class="channel-item">
+      <div class="channel-label">Call</div>
+      <div class="channel-value">1-800-522-4700</div>
+    </div>
+    <div class="channel-item">
+      <div class="channel-label">Text</div>
+      <div class="channel-value">1-800-522-4700</div>
+    </div>
+    <div class="channel-item">
+      <div class="channel-label">Chat</div>
+      <div class="channel-value">ncpgambling.org/chat</div>
+    </div>
+    <div class="channel-item">
+      <div class="channel-label">Web</div>
+      <div class="channel-value">ncpgambling.org</div>
+    </div>
+    <div class="support-footer">
+      <span>Free, confidential support 24/7: 1-800-522-4700</span>
+    </div>
+  </div>
+
+  <!-- Panel 5: Quiz Hook -->
+  <div class="panel panel-quiz">
+    <div class="quiz-badge">Sharp</div>
+    <div class="quiz-heading">Think you know<br>the odds?</div>
+    <div class="quiz-body">Take the 2-minute game IQ quiz. Most people get question 3 wrong.</div>
+    <div class="quiz-question">"A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?"</div>
+    <div class="qr-block">
+      <div class="qr-placeholder">QR Code</div>
+      <div class="qr-label"><strong>Scan to take the quiz</strong>Challenge your friends.</div>
+    </div>
+  </div>
+
+  <!-- Panel 1: Cover -->
+  <div class="panel panel-cover">
+    <div class="cover-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="cover-operator">Your logo here</div>
+    <div class="cover-heading">Every game has math.<br>Here's yours.</div>
+    <div class="cover-sub">Real odds. Real tools. No fine print.</div>
+    <div class="cover-legal">You must be 21+ to gamble.</div>
+    <div class="cover-helpline">
+      <span>Free, confidential support 24/7: 1-800-522-4700</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

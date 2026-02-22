@@ -4,6 +4,8 @@
 
 > **Operator note**: Replace all `{{PLACEHOLDER}}` tokens with values from `_brand.yml`. Music bed should be upbeat and modern — not corporate elevator music. See [voice and tone](../../brand-book/04-voice-and-tone.md) for voice direction.
 
+> **Logo usage (not applicable)**: Hold messages are audio-only. No visual logo is displayed. If the phone system has a visual IVR/screen component, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): reversed variant (white Play + teal BOOK) on dark backgrounds, full-color variant on light backgrounds. Minimum height: 24px (digital). Maintain 1x logo-height clear space on all sides.
+
 ---
 
 ## Quick-scan index

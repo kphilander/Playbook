@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { margin: 0; padding: 0; background: transparent; }
@@ -50,10 +50,27 @@
     }
     .screen-logo {
       font-family: 'Inter', sans-serif;
-      font-weight: 800;
       font-size: 36px;
       color: #FFFFFF;
+    }
+    .screen-logo .logo-play {
+      font-weight: 800;
       letter-spacing: -0.02em;
+    }
+    .screen-logo .logo-book {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .co-brand {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .co-brand-divider {
+      width: 1px;
+      height: 36px;
+      background: #A8A8C0;
     }
     .operator-placeholder {
       width: 160px;
@@ -201,8 +218,11 @@
 <body>
   <div class="display-screen">
     <div class="screen-header">
-      <span class="screen-logo">Playbook</span>
-      <div class="operator-placeholder">Your logo here</div>
+      <span class="screen-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+      <div class="co-brand">
+        <div class="co-brand-divider"></div>
+        <div class="operator-placeholder">Your logo here</div>
+      </div>
     </div>
     <div class="screen-body">
       <div class="content-left">

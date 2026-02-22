@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ATM Area Sign — A4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .sign-atm {
+    width: 700px;
+    height: 1000px;
+    background: #1B2838;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  .sign-atm::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+  .sign-atm::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+  }
+
+  .sign-header {
+    padding: 40px 48px 0;
+    position: relative;
+    z-index: 1;
+  }
+  .card-logo { font-family: 'Inter', sans-serif; font-size: 24px; }
+  .card-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .sign-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .sign-headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    color: #FFFFFF;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  .sign-body {
+    font-size: 20px;
+    color: #A8A8C0;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 520px;
+  }
+
+  .tool-highlight {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+  }
+  .tool-highlight-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #00D4AA;
+    margin-bottom: 12px;
+  }
+  .tool-highlight-stat {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .tool-highlight-body {
+    font-size: 17px;
+    color: #A8A8C0;
+    line-height: 1.5;
+  }
+
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-placeholder {
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    color: #6B6B8A;
+    font-weight: 600;
+  }
+  .qr-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #A8A8C0;
+  }
+
+  .sign-footer {
+    background: #2A3F56;
+    padding: 20px 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-helpline {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+  }
+  .footer-legal {
+    font-size: 13px;
+    color: #A8A8C0;
+  }
+</style>
+</head>
+<body>
+<div class="sign-atm">
+
+  <div class="sign-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+  </div>
+
+  <div class="sign-content">
+    <div class="sign-headline">Set your budget before you start.</div>
+    <div class="sign-body">Deposit limits take 10 seconds to set in your account. Your money. Your rules.</div>
+
+    <div class="tool-highlight">
+      <div class="tool-highlight-label">Deposit limits</div>
+      <div class="tool-highlight-stat">10 seconds</div>
+      <div class="tool-highlight-body">Set your weekly or monthly limit. Adjust anytime in account settings.</div>
+    </div>
+
+    <div class="qr-block">
+      <div class="qr-placeholder">QR Code</div>
+      <div class="qr-text">Scan to set your deposit limit</div>
+    </div>
+  </div>
+
+  <div class="sign-footer">
+    <div class="footer-helpline">Need to talk? Free, confidential support: 1-800-522-4700</div>
+    <div class="footer-legal">You must be 21+ to gamble.</div>
+  </div>
+
+</div>
+</body>
+</html>

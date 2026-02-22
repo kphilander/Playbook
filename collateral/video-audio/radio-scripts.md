@@ -4,6 +4,8 @@ Production-ready scripts for {{PROGRAM_NAME}} radio advertising. 3 x 30-second s
 
 > **Operator note**: Replace all `{{PLACEHOLDER}}` tokens with values from `_brand.yml`. Helpline number must be spoken clearly and repeated in every spot. Voice talent should sound natural and conversational — not announcer energy. See [application guidelines](../../brand-book/07-application-guidelines.md#radio-and-audio) for audio guidelines.
 
+> **Logo usage (companion visuals only)**: Radio spots are audio-only and have no on-screen logo. If companion digital banners or print ads run alongside radio spots, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): reversed variant (white Play + teal BOOK) on dark backgrounds, full-color variant on light backgrounds. Minimum size: 0.25" (print) or 24px (digital). Maintain 1x logo-height clear space. Co-branding with operator logo: vertical divider (neutral_300 `#A8A8C0`, 1px), {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height.
+
 ---
 
 ## Quick-scan index

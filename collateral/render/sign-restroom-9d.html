@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Restroom Mirror Cling — A5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .sign-restroom {
+    width: 560px;
+    height: 400px;
+    background: #1B2838;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Source Sans 3', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .sign-restroom::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+  }
+
+  .restroom-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+  }
+
+  .restroom-headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+  }
+  .restroom-body {
+    font-size: 18px;
+    color: #A8A8C0;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+  .restroom-number {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 48px;
+    color: #00D4AA;
+    margin-bottom: 16px;
+    letter-spacing: 0.04em;
+  }
+  .restroom-channels {
+    font-size: 16px;
+    color: #A8A8C0;
+    line-height: 1.8;
+  }
+  .restroom-channels strong {
+    color: #FFFFFF;
+    font-weight: 600;
+  }
+  .restroom-avail {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-top: 16px;
+  }
+
+  .restroom-logo {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    z-index: 1;
+  }
+  .restroom-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
+  .restroom-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+</head>
+<body>
+<div class="sign-restroom">
+
+  <div class="restroom-content">
+    <div class="restroom-headline">Need to talk?</div>
+    <div class="restroom-body">Free, confidential support — for any question about gambling.</div>
+    <div class="restroom-number">1-800-522-4700</div>
+    <div class="restroom-channels">
+      <strong>Text</strong> 1-800-522-4700 | <strong>Chat</strong> ncpgambling.org/chat
+    </div>
+    <div class="restroom-avail">24/7. No judgment.</div>
+  </div>
+
+  <div class="restroom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+
+</div>
+</body>
+</html>

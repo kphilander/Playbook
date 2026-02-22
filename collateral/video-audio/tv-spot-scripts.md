@@ -30,7 +30,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | **Color grade** | Warm, high-contrast. Navy/teal/orange palette reflected in wardrobe and set design. |
 | **Graphics** | Clean motion graphics for stats. Inter font. Gradient accents. Match brand system. |
 | **Helpline** | On-screen text, minimum 5 seconds, final frame. White text on navy or teal background. |
-| **Logo** | {{PROGRAM_NAME}} wordmark + operator logo in final frame |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg) + operator logo in final frame. Min height 24px (digital). Maintain 1x logo-height clear space. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 
 ---
 
@@ -49,7 +49,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | 0:14–0:18 | 5 | Person setting deposit limit on phone, smiling | "When you know the numbers, you play on your terms." | — |
 | 0:18–0:20 | 6 | Group of friends sharing phone, pointing at quiz | "The facts are free. The tools are built in." | — |
 | 0:20–0:25 | 7 | End card: {{PROGRAM_NAME}} logo, QR code, "Every game has math. Here's yours." | — | **Every game has math. Here's yours.** / **{{CONTENT_HUB_URL}}** |
-| 0:25–0:30 | 8 | Helpline frame: navy background | — | **Free, confidential support 24/7** / **{{HELPLINE_NUMBER}}** / **{{PROGRAM_NAME}} logo + operator logo** |
+| 0:25–0:30 | 8 | Helpline frame: navy background | — | **Free, confidential support 24/7** / **{{HELPLINE_NUMBER}}** / **{{PROGRAM_NAME}} logo (reversed variant, min 24px height, 1x clear space) + operator logo (co-branding with vertical divider)** |
 
 **Total**: 30 seconds. Helpline displayed: 5 seconds.
 
@@ -70,7 +70,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | 0:15–0:19 | 5 | Person with friends at a sports bar, having fun | "Your budget. Your limits. Your call." | **Your tools. Your limits. Your call.** |
 | 0:19–0:21 | 6 | Close-up: person smiles, taps phone | "Set yours in ten seconds." | — |
 | 0:21–0:25 | 7 | End card: {{PROGRAM_NAME}} logo, QR code | — | **Set your limits →** / **{{CONTENT_HUB_URL}}** |
-| 0:25–0:30 | 8 | Helpline frame | — | **Free, confidential support 24/7** / **{{HELPLINE_NUMBER}}** / **Logos** |
+| 0:25–0:30 | 8 | Helpline frame | — | **Free, confidential support 24/7** / **{{HELPLINE_NUMBER}}** / **{{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space) + operator logo (co-branding with vertical divider)** |
 
 **Total**: 30 seconds. Helpline displayed: 5 seconds.
 
@@ -91,7 +91,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | 0:14–0:17 | 5 | Friend reacts: "Wait, really?" Other friend smirks | "Most people get that wrong." | — |
 | 0:17–0:20 | 6 | Person shares phone, others lean in | "Seven questions. Two minutes. Think you can beat your friends?" | — |
 | 0:20–0:25 | 7 | End card: quiz QR code, "Test your game IQ" | — | **Think you know the odds?** / **Scan to take the quiz** / **{{CONTENT_HUB_URL}}** |
-| 0:25–0:30 | 8 | Helpline frame | — | **Free, confidential support 24/7** / **{{HELPLINE_NUMBER}}** / **Logos** |
+| 0:25–0:30 | 8 | Helpline frame | — | **Free, confidential support 24/7** / **{{HELPLINE_NUMBER}}** / **{{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space) + operator logo (co-branding with vertical divider)** |
 
 **Total**: 30 seconds. Helpline displayed: 5 seconds.
 
@@ -108,7 +108,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | 0:00–0:03 | 1 | Casino floor, person walking confidently | "Every game has a house edge." | — |
 | 0:03–0:07 | 2 | Motion graphic: numbers appear | "Blackjack: half a percent. Roulette: five-two-six. Slots: two to fifteen." | **0.5% / 5.26% / 2–15%** |
 | 0:07–0:10 | 3 | Person checks phone, nods | "Know the numbers. Play on your terms." | **Know your game.** |
-| 0:10–0:15 | 4 | End card + helpline | — | **{{PROGRAM_NAME}}** / **Free, confidential support 24/7: {{HELPLINE_NUMBER}}** / **Logos** |
+| 0:10–0:15 | 4 | End card + helpline | — | **{{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space)** / **Free, confidential support 24/7: {{HELPLINE_NUMBER}}** / **Operator logo (co-branding with vertical divider)** |
 
 **Total**: 15 seconds. Helpline displayed: 5 seconds.
 
@@ -125,7 +125,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | 0:00–0:03 | 1 | Close-up: phone screen, finger hovering | "Support is one tap away." | — |
 | 0:03–0:07 | 2 | Person taps phone, supportive voice on other end (implied) | "Free. Confidential. For any question about gambling." | **Free. Confidential. 24/7.** |
 | 0:07–0:10 | 3 | Person looks relieved, nods slightly | "Whenever you're ready." | — |
-| 0:10–0:15 | 4 | End card: helpline dominant | — | **{{HELPLINE_NUMBER}}** (large) / **Text {{TEXT_NUMBER}} &#124; Chat {{CHAT_URL}}** / **{{PROGRAM_NAME}} + operator logo** |
+| 0:10–0:15 | 4 | End card: helpline dominant | — | **{{HELPLINE_NUMBER}}** (large) / **Text {{TEXT_NUMBER}} &#124; Chat {{CHAT_URL}}** / **{{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space) + operator logo (co-branding with vertical divider)** |
 
 **Total**: 15 seconds. Helpline displayed: 5 seconds.
 
@@ -152,7 +152,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 - [ ] Settings are well-lit, modern, and positive
 - [ ] House edge numbers are accurate
 - [ ] Helpline displayed minimum 5 seconds at end
-- [ ] {{PROGRAM_NAME}} and operator logos in final frame
+- [ ] {{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space) and operator logo (co-branding rules) in final frame
 - [ ] QR code is scannable from TV screen distance (test)
 - [ ] Voiceover matches Playbook voice — not announcer, not clinical
 - [ ] Music is licensed and cleared for broadcast
