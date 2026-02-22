@@ -1,0 +1,78 @@
+# _brand-us.yml — United States State Overrides
+# ================================================
+# This file contains US-specific overrides for _brand.yml.
+# It covers state helplines, legal ages, and state-specific
+# configuration. Unlike Canada, most US states share a
+# national helpline (NCPG) rather than operating their own.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in US states. Each state may have
+#   different legal ages, permitted products, and regulatory
+#   requirements.
+#
+# See: jurisdictions/united-states/README.md for the full US overview
+# ================================================
+
+
+# ─── HELPLINES ───────────────────────────────
+# National helpline + state-specific overrides.
+# The NCPG operates the national helpline. Three numbers
+# are accepted as of January 2026 (NGCB Notice 2026-04):
+#   1-800-522-4700 (legacy)
+#   1-800-GAMBLER (vanity, commonly required by regulators)
+#   1-800-MY-RESET (new primary, January 2026 rebrand)
+#
+# Most states use the national number. States with their own
+# helplines get dedicated entries below.
+
+helplines:
+  united-states:
+    national:
+      number: "1-800-522-4700"
+      alternate: "1-800-GAMBLER"
+      new_primary: "1-800-MY-RESET"
+      text_number: "Text SUPPORT to 53342"
+      chat_url: "www.ncpgambling.org/chat"
+      website: "www.ncpgambling.org"
+      label: "National Council on Problem Gambling"
+      hours: "24/7"
+      languages:
+        - English
+        - Spanish
+      notes: "NCPG rebranded to 1-800-MY-RESET in January 2026; all three numbers remain active"
+
+    nevada:
+      number: "1-800-522-4700"
+      alternate: "1-800-GAMBLER"
+      new_primary: "1-800-MY-RESET"
+      website: "www.ncpgambling.org"
+      label: "NCPG National Helpline"
+      hours: "24/7"
+      state_resource: "Nevada Council on Problem Gambling"
+      state_website: "www.nevadacouncil.org"
+      notes: "Nevada has no separate state helpline — uses NCPG national number. All three numbers accepted per NGCB Notice 2026-04."
+
+
+# ─── LEGAL ───────────────────────────────────
+# State minimum gambling ages.
+# Most states with commercial casinos: 21
+# Some states for lottery/pari-mutuel only: 18
+# Nevada: 21 for all gambling (no lottery — constitutionally prohibited)
+
+legal:
+  minimum_gambling_age:
+    united-states-nevada: 21
+
+
+# ─── MANDATORY MESSAGING ────────────────────
+# State-specific mandatory statements.
+# Nevada does NOT require verbatim mandatory messaging.
+# Instead, Regulation 5.170 requires prominent posting of
+# problem gambling information and helpline numbers.
+# Other states may have specific required statements —
+# add them here as modules are built.
+
+messaging:
+  mandatory:
+    # nevada: (none — no verbatim requirement; see Reg 5.170 for display obligations)
