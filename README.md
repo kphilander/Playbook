@@ -63,6 +63,7 @@ Playbook/
 ├── _brand.yml                        # White-label configuration engine
 ├── README.md                         # You are here
 ├── LICENSE                           # CC0 1.0 Universal
+├── TERMS.md                         # Terms of use, indemnification, disclaimers
 ├── CONTRIBUTING.md                   # How to contribute
 ├── CHANGELOG.md                      # Version history
 │

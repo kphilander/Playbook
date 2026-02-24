@@ -264,6 +264,7 @@ helplines:
 # ─── LEGAL ───────────────────────────────────
 
 legal:
+  terms: "TERMS.md"                    # Indemnification, disclaimers, liability limits
   copyright_holder: "Your Company Name"
   minimum_gambling_age:
     default: 18

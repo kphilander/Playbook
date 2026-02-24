@@ -68,14 +68,14 @@ function stacked(playColor, bookColor, bg = null) {
 }
 
 /* ─── B2 Horizontal ─────────────────────────────────────────────── */
-// Playbook as one word, Play 800 + book 300, same size
+// PlayBOOK as one word, Play 800 + BOOK 300 uppercase spaced
 
 function horizontal(playColor, bookColor, bg = null) {
-  const w = 196;
+  const w = 242;
   const h = 56;
   const content = `
   <text y="40" font-family="'Inter', sans-serif" font-size="44" letter-spacing="-1.3">
-    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="0.9" fill="${bookColor}">book</tspan>
+    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="6.6" fill="${bookColor}">BOOK</tspan>
   </text>`;
   return svgWrap(w, h, content, bg);
 }
@@ -87,11 +87,11 @@ function helplineBadge(playColor, bookColor, dividerColor, labelColor, numberCol
   const h = 48;
   const content = `
   <text x="16" y="32" font-family="'Inter', sans-serif" font-size="22" letter-spacing="-0.7">
-    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="0.4" fill="${bookColor}">book</tspan>
+    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="3.3" fill="${bookColor}">BOOK</tspan>
   </text>
-  <line x1="128" y1="6" x2="128" y2="42" stroke="${dividerColor}" stroke-width="1.5" stroke-linecap="round"/>
-  <text x="140" y="20" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="${labelColor}">${hl.label ? 'Free help ' + (hl.hours || '24/7') : 'Free help 24/7'}</text>
-  <text x="140" y="36" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="${numberColor}">${hl.number}</text>`;
+  <line x1="148" y1="6" x2="148" y2="42" stroke="${dividerColor}" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="160" y="20" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="${labelColor}">${hl.label ? 'Free help ' + (hl.hours || '24/7') : 'Free help 24/7'}</text>
+  <text x="160" y="36" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="${numberColor}">${hl.number}</text>`;
   return svgWrap(w, h, content, bg);
 }
 
