@@ -1,25 +1,19 @@
 import PptxGenJS from "pptxgenjs";
 import { writeFileSync } from "fs";
+import { loadBrand } from "../../lib/brand-config.mjs";
 
-// ─── Brand tokens ───────────────────────────────────────────
-const C = {
-  navy:        "1B2838",
-  navyLight:   "2A3F56",
-  midnight:    "0F1923",
-  teal:        "00D4AA",
-  tealDark:    "00A888",
-  orange:      "FF6B35",
-  orangeLight: "FF8A5C",
-  white:       "FFFFFF",
-  n900:        "1A1A2E",
-  n700:        "3D3D5C",
-  n500:        "6B6B8A",
-  n300:        "A8A8C0",
-  n100:        "E8E8F0",
-  n50:         "F5F5FA",
-};
-
-const FONT = { head: "Inter", body: "Source Sans 3", mono: "Source Code Pro" };
+// ─── Brand tokens (from _brand.yml) ────────────────────────
+const brand = loadBrand();
+const C = brand.colorsRaw();
+const ff = brand.fontFamilies();
+const FONT = { head: ff.heading, body: ff.body, mono: ff.monospace };
+const PROGRAM = brand.meta?.program_name || "Playbook";
+const hl = brand.helpline();
+const pillars = brand.brand_pillars || [];
+const openPillar = pillars[0] || { name: "Open", tagline: "No fine print" };
+const socialPillar = pillars[1] || { name: "Social", tagline: "Worth sharing" };
+const taglines = brand.messaging?.taglines || {};
+const ctas = brand.messaging?.ctas || {};
 
 // ─── Helpers ────────────────────────────────────────────────
 const pres = new PptxGenJS();
@@ -89,7 +83,7 @@ function footerStrip(slide) {
     x: 0, y: 6.9, w: 13.33, h: 0.6,
     fill: { type: "solid", color: C.navyLight },
   });
-  slide.addText("Free, confidential support 24/7 — [HELPLINE NUMBER]  •  [CHAT URL]", {
+  slide.addText(`Free, confidential support ${hl.hours || '24/7'} — ${hl.number}  •  ${hl.chat_url || ''}`, {
     x: 0.6, y: 6.95, w: 12.13, h: 0.45,
     fontSize: 11, fontFace: FONT.mono, color: C.n300, align: "center", valign: "middle",
   });
@@ -98,7 +92,7 @@ function footerStrip(slide) {
 // ─── SLIDE 1: Title ─────────────────────────────────────────
 {
   const s = darkSlide();
-  s.addText("Playbook", {
+  s.addText(PROGRAM, {
     x: 0, y: 2.0, w: 13.33, h: 1.2,
     fontSize: 64, fontFace: FONT.head, bold: true, color: C.white,
     align: "center",
@@ -114,7 +108,7 @@ function footerStrip(slide) {
     align: "center",
   });
   // bottom brand line
-  s.addText("Open  ·  Social", {
+  s.addText(`${openPillar.name}  ·  ${socialPillar.name}`, {
     x: 0, y: 5.8, w: 13.33, h: 0.4,
     fontSize: 14, fontFace: FONT.head, bold: true, color: C.n500,
     align: "center", letterSpacing: 3,
@@ -236,8 +230,8 @@ function footerStrip(slide) {
     x: 0.8, y: 2.0, w: cardW, h: cardH, rectRadius: 0.12,
     fill: { type: "solid", color: C.navyLight },
   });
-  pillBadge(s, "Open", 1.2, 2.4);
-  s.addText('"No fine print."', {
+  pillBadge(s, openPillar.name, 1.2, 2.4);
+  s.addText(`"${openPillar.tagline}."`, {
     x: 1.2, y: 3.0, w: 4.6, h: 0.55,
     fontSize: 22, fontFace: FONT.head, bold: true, color: C.white, italic: true,
   });
@@ -252,8 +246,8 @@ function footerStrip(slide) {
     x: 7.0, y: 2.0, w: cardW, h: cardH, rectRadius: 0.12,
     fill: { type: "solid", color: C.navyLight },
   });
-  pillBadge(s, "Social", 7.4, 2.4);
-  s.addText('"Worth sharing."', {
+  pillBadge(s, socialPillar.name, 7.4, 2.4);
+  s.addText(`"${socialPillar.tagline}."`, {
     x: 7.4, y: 3.0, w: 4.6, h: 0.55,
     fontSize: 22, fontFace: FONT.head, bold: true, color: C.white, italic: true,
   });
@@ -478,7 +472,7 @@ function footerStrip(slide) {
     x: 7.8, y: 3.9, w: 4.2, h: 0.4,
     fontSize: 20, fontFace: FONT.mono, color: C.teal,
   });
-  s.addText("1-800-522-4700", {
+  s.addText(hl.number, {
     x: 7.8, y: 4.5, w: 4.2, h: 0.4,
     fontSize: 18, fontFace: FONT.mono, bold: true, color: C.orange,
   });
@@ -528,16 +522,21 @@ function footerStrip(slide) {
     line: { color: C.navyLight, width: 1 },
   });
 
-  const pairs = [
-    ["Player", "Gambler"],
-    ["Set a budget", "Responsible gambling"],
-    ["Know the odds", "Smart play"],
-    ["Tools / features", "Interventions / measures"],
-    ["Check in", "Self-assess"],
-    ["Take a break", "Self-exclude"],
-    ["Your limits", "Restrictions"],
-    ["Entertainment budget", "Losses / spending"],
-  ];
+  // Voice pairs derived from tone.prefer in _brand.yml
+  const prefer = brand.tone?.prefer || {};
+  const pairs = Object.entries(prefer).map(([key, desc]) => {
+    // Extract preferred term and the "not X" part
+    // Format: "player (not 'gambler')" → ["Player", "Gambler"]
+    const match = desc.match(/^(.+?)\s*\(not\s+['"]?(.+?)['"]?\s*(?:in Tier 1)?\)$/i);
+    if (match) {
+      const good = match[1].trim().replace(/^(\w)/, (_, c) => c.toUpperCase());
+      const bad = match[2].trim().replace(/^(\w)/, (_, c) => c.toUpperCase());
+      return [good, bad];
+    }
+    // Format: "specific behaviors — e.g. 'set a budget' ..." → use key as label
+    const shortMatch = desc.match(/^(.+?)(?:\s*—|\s*\()/);
+    return [shortMatch ? shortMatch[1].trim() : key, desc.includes('not') ? desc.split('not')[1]?.trim() : ''];
+  }).filter(([g, b]) => g && b && b.length < 40).slice(0, 8);
   pairs.forEach(([good, bad], i) => {
     const y = 2.45 + i * 0.55;
     // row bg
@@ -568,14 +567,9 @@ function footerStrip(slide) {
     fontSize: 36, fontFace: FONT.head, bold: true, color: C.white,
   });
 
-  // Open taglines
-  pillBadge(s, "Open", 0.8, 1.6);
-  const openTags = [
-    "Here's how it actually works.",
-    "No fine print. Just facts.",
-    "Every game has math. Here's yours.",
-    "The odds are public. Now you know them.",
-  ];
+  // Open taglines (from _brand.yml)
+  pillBadge(s, openPillar.name, 0.8, 1.6);
+  const openTags = (taglines.open || []).slice(0, 4);
   openTags.forEach((t, i) => {
     s.addText(`"${t}"`, {
       x: 0.8, y: 2.15 + i * 0.55, w: 5.5, h: 0.5,
@@ -583,14 +577,9 @@ function footerStrip(slide) {
     });
   });
 
-  // Social taglines
-  pillBadge(s, "Social", 7.0, 1.6);
-  const socialTags = [
-    "Share the facts. Start a conversation.",
-    "Challenge your friends.",
-    "How well do you really know the odds?",
-    "Worth sharing.",
-  ];
+  // Social taglines (from _brand.yml)
+  pillBadge(s, socialPillar.name, 7.0, 1.6);
+  const socialTags = (taglines.social || []).slice(0, 4);
   socialTags.forEach((t, i) => {
     s.addText(`"${t}"`, {
       x: 7.0, y: 2.15 + i * 0.55, w: 5.5, h: 0.5,
@@ -823,6 +812,7 @@ function footerStrip(slide) {
 }
 
 // ─── Write file ─────────────────────────────────────────────
-const outPath = "/Users/ksr/Branding/collateral/render/playbook-brand-deck.pptx";
+import { join as joinPath } from "path";
+const outPath = joinPath(brand.ROOT, "collateral", "render", "playbook-brand-deck.pptx");
 await pres.writeFile({ fileName: outPath });
 console.log(`✓ Written to ${outPath}`);

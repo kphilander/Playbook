@@ -12,7 +12,7 @@
     width: 2400px;
     height: 1000px;
     display: flex;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--pb-font-body);
     position: relative;
   }
 
@@ -26,28 +26,28 @@
 
   /* Panel 6 — Support Resources (Back right) */
   .panel-support {
-    background: #1B2838;
-    color: #FFFFFF;
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
   }
   .panel-support::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 6px;
-    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
   .panel-support .heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 36px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     margin-top: 24px;
     margin-bottom: 16px;
     line-height: 1.2;
   }
   .panel-support .body {
     font-size: 17px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.7;
     margin-bottom: 40px;
   }
@@ -58,40 +58,40 @@
     margin-bottom: 20px;
   }
   .channel-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 14px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     width: 60px;
   }
   .channel-value {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: 20px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
   .support-footer {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2A3F56;
+    background: var(--pb-color-primary-light);
     padding: 20px 56px;
     text-align: center;
   }
   .support-footer span {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: 15px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
   }
 
   /* Panel 5 — Quiz Hook (Back center) */
   .panel-quiz {
-    background: #1B2838;
-    color: #FFFFFF;
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -111,13 +111,13 @@
   }
   .quiz-badge {
     display: inline-block;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    background: #00D4AA;
-    color: #1B2838;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
     padding: 6px 20px;
     border-radius: 100px;
     margin-bottom: 24px;
@@ -125,10 +125,10 @@
     z-index: 1;
   }
   .quiz-heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 36px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     margin-bottom: 20px;
     line-height: 1.2;
     position: relative;
@@ -136,7 +136,7 @@
   }
   .quiz-body {
     font-size: 17px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.7;
     max-width: 500px;
     margin-bottom: 32px;
@@ -144,10 +144,10 @@
     z-index: 1;
   }
   .quiz-question {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 16px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 12px;
@@ -168,34 +168,34 @@
   .qr-placeholder {
     width: 100px;
     height: 100px;
-    background: #FFFFFF;
+    background: var(--pb-color-white);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 11px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     font-weight: 600;
   }
   .qr-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 15px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     text-align: left;
   }
   .qr-label strong {
     display: block;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     font-weight: 700;
     margin-bottom: 4px;
   }
 
   /* Panel 1 — Cover (Front right) */
   .panel-cover {
-    background: #1B2838;
-    color: #FFFFFF;
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -208,7 +208,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 6px;
-    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
   .panel-cover::after {
     content: '';
@@ -221,19 +221,19 @@
     pointer-events: none;
   }
   .cover-logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 48px;
     margin-bottom: 48px;
     position: relative;
     z-index: 1;
   }
-  .cover-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .cover-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .cover-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .cover-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .cover-heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 36px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     margin-bottom: 16px;
     line-height: 1.2;
     position: relative;
@@ -241,7 +241,7 @@
   }
   .cover-sub {
     font-size: 20px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     margin-bottom: 48px;
     position: relative;
     z-index: 1;
@@ -254,9 +254,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 12px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     margin-bottom: 40px;
     position: relative;
     z-index: 1;
@@ -266,25 +266,26 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2A3F56;
+    background: var(--pb-color-primary-light);
     padding: 16px 56px;
     text-align: center;
     z-index: 1;
   }
   .cover-helpline span {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: 13px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
   }
   .cover-legal {
     font-size: 12px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     position: relative;
     z-index: 1;
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="brochure-outside">
 
@@ -294,22 +295,22 @@
     <div class="body">Free, confidential support is available 24/7 — for any question about gambling. No judgment. Ever.</div>
     <div class="channel-item">
       <div class="channel-label">Call</div>
-      <div class="channel-value">1-800-522-4700</div>
+      <div class="channel-value">{{HELPLINE_NUMBER}}</div>
     </div>
     <div class="channel-item">
       <div class="channel-label">Text</div>
-      <div class="channel-value">1-800-522-4700</div>
+      <div class="channel-value">{{HELPLINE_NUMBER}}</div>
     </div>
     <div class="channel-item">
       <div class="channel-label">Chat</div>
-      <div class="channel-value">ncpgambling.org/chat</div>
+      <div class="channel-value">{{CHAT_URL}}</div>
     </div>
     <div class="channel-item">
       <div class="channel-label">Web</div>
       <div class="channel-value">ncpgambling.org</div>
     </div>
     <div class="support-footer">
-      <span>Free, confidential support 24/7: 1-800-522-4700</span>
+      <span>Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     </div>
   </div>
 
@@ -333,7 +334,7 @@
     <div class="cover-sub">Real odds. Real tools. No fine print.</div>
     <div class="cover-legal">You must be 21+ to gamble.</div>
     <div class="cover-helpline">
-      <span>Free, confidential support 24/7: 1-800-522-4700</span>
+      <span>Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     </div>
   </div>
 

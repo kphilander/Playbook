@@ -1,6 +1,8 @@
 import puppeteer from 'puppeteer';
+import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { resolveBrandTokens } from '../../lib/resolve-placeholders.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -37,6 +39,15 @@ const cards = [
   { html: 'sign-floor-9c.html', output: 'sign-floor-9c.png', w: 900, h: 700, selector: '.sign-floor' },
   { html: 'sign-restroom-9d.html', output: 'sign-restroom-9d.png', w: 560, h: 400, selector: '.sign-restroom' },
   { html: 'sign-staff-9e.html', output: 'sign-staff-9e.png', w: 900, h: 1200, selector: '.sign-staff' },
+  // Tier 2
+  { html: 'support-page-10a.html', output: 'support-page-10a.png', w: 800, h: 1200, selector: '.support-page' },
+  { html: 'self-exclusion-10b.html', output: 'self-exclusion-10b.png', w: 800, h: 1000, selector: '.self-exclusion' },
+  { html: 'session-summary-10c.html', output: 'session-summary-10c.png', w: 800, h: 1200, selector: '.session-summary' },
+  { html: 'limit-reached-10d.html', output: 'limit-reached-10d.png', w: 800, h: 600, selector: '.limit-reached' },
+  { html: 'cooldown-10e.html', output: 'cooldown-10e.png', w: 800, h: 1000, selector: '.cooldown-screen' },
+  { html: 'card-tier2-10f.html', output: 'card-tier2-10f.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'poster-tier2-10g.html', output: 'poster-tier2-10g.png', w: 1800, h: 2400, selector: '.poster' },
+  { html: 'email-support-10h.html', output: 'email-support-10h.png', w: 600, h: 1100, selector: '.email' },
 ];
 
 // Filter to only render files passed as CLI args, or all if none given
@@ -55,19 +66,29 @@ async function render() {
     const page = await browser.newPage();
     await page.setViewport({ width: card.w, height: card.h });
 
+    // Read HTML and resolve {{PLACEHOLDER}} brand tokens from _brand.yml
     const filePath = join(__dirname, card.html);
-    await page.goto(`file://${filePath}`, { waitUntil: 'networkidle0' });
+    const rawHtml = readFileSync(filePath, 'utf-8');
+    const resolvedHtml = resolveBrandTokens(rawHtml);
+
+    // Use file:// base URL so relative CSS links (brand-inject.css) still resolve
+    await page.goto(`file://${__dirname}/`, { waitUntil: 'domcontentloaded' });
+    await page.setContent(resolvedHtml, { waitUntil: 'networkidle0' });
 
     // Wait for Google Fonts to load
     await page.evaluateHandle('document.fonts.ready');
 
     const element = await page.$(card.selector);
-    await element.screenshot({
-      path: join(__dirname, card.output),
-      type: 'png',
-    });
+    if (element) {
+      await element.screenshot({
+        path: join(__dirname, card.output),
+        type: 'png',
+      });
+      console.log(`Rendered: ${card.output}`);
+    } else {
+      console.warn(`⚠ Selector "${card.selector}" not found in ${card.html}`);
+    }
 
-    console.log(`Rendered: ${card.output}`);
     await page.close();
   }
 

@@ -14,9 +14,9 @@
   .email {
     width: 600px;
     min-height: 800px;
-    background: #FFFFFF;
-    font-family: 'Source Sans 3', sans-serif;
-    color: #1B2838;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
     display: flex;
     flex-direction: column;
   }
@@ -24,7 +24,7 @@
   /* 3px teal top bar */
   .accent-bar {
     height: 3px;
-    background: #00D4AA;
+    background: var(--pb-color-secondary);
     flex-shrink: 0;
   }
 
@@ -34,19 +34,19 @@
     border-bottom: 1px solid #F0F0F5;
   }
   .logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 24px;
   }
   .logo-play {
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
   .logo-book {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
 
   /* Body content */
@@ -55,17 +55,17 @@
     flex: 1;
   }
   .heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 28px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 24px;
     line-height: 1.2;
     letter-spacing: -0.01em;
   }
   .body-text {
     font-size: 16px;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     line-height: 1.7;
     margin-bottom: 16px;
   }
@@ -82,19 +82,19 @@
     align-items: center;
     gap: 16px;
     padding: 18px 20px;
-    background: #F5F5FA;
+    background: var(--pb-color-neutral-50);
     border-radius: 12px;
   }
   .resource-icon {
     width: 44px;
     height: 44px;
     min-width: 44px;
-    background: #FFFFFF;
+    background: var(--pb-color-white);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
   .resource-icon svg {
     width: 20px;
@@ -104,19 +104,19 @@
     flex: 1;
   }
   .resource-title {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 16px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 2px;
   }
   .resource-desc {
     font-size: 14px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     line-height: 1.4;
   }
   .resource-arrow {
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
   .resource-arrow svg {
     width: 16px;
@@ -130,9 +130,9 @@
   }
   .cta-button {
     display: inline-block;
-    background: #00D4AA;
-    color: #1B2838;
-    font-family: 'Inter', sans-serif;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 16px;
     padding: 16px 40px;
@@ -143,21 +143,21 @@
 
   /* Footer */
   .footer {
-    background: #F5F5FA;
+    background: var(--pb-color-neutral-50);
     padding: 28px 56px;
     text-align: center;
-    border-top: 1px solid #E8E8F0;
+    border-top: 1px solid var(--pb-color-neutral-100);
   }
   .footer-helpline {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: 16px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 4px;
   }
   .footer-channels {
     font-size: 13px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     margin-bottom: 16px;
   }
   .footer-divider {
@@ -168,20 +168,21 @@
   }
   .footer-legal {
     font-size: 12px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.6;
     margin-bottom: 8px;
   }
   .footer-unsub {
     font-size: 12px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
   .footer-unsub a {
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     text-decoration: underline;
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="email">
 
@@ -209,7 +210,7 @@
         <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7 12.7 12.7 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.7 12.7 0 0 0 2.8.7A2 2 0 0 1 22 16.9z"/></g><g stroke-width="1"><path d="M17 2a5 5 0 0 1 5 5" fill="none"/><path d="M17 6a1 1 0 0 1 1 1" fill="none"/></g></svg></div>
         <div class="resource-info">
           <div class="resource-title">Call the helpline</div>
-          <div class="resource-desc">Talk with someone 24/7 at 1-800-522-4700</div>
+          <div class="resource-desc">Talk with someone 24/7 at {{HELPLINE_NUMBER}}</div>
         </div>
         <div class="resource-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
       </div>
@@ -237,8 +238,8 @@
   </div>
 
   <div class="footer">
-    <div class="footer-helpline">1-800-522-4700</div>
-    <div class="footer-channels">Text 800522 &middot; Chat ncpgambling.org/chat &middot; 24/7</div>
+    <div class="footer-helpline">{{HELPLINE_NUMBER}}</div>
+    <div class="footer-channels">Text 800522 &middot; Chat {{CHAT_URL}} &middot; 24/7</div>
     <div class="footer-divider"></div>
     <div class="footer-legal">You must be 21+ to gamble. Gambling involves risk.<br>If you or someone you know has a gambling problem, help is available.</div>
     <div class="footer-unsub"><a href="#">Unsubscribe</a> &middot; <a href="#">Manage preferences</a></div>

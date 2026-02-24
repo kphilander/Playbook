@@ -9,35 +9,36 @@
   body { margin: 0; background: transparent; }
   .story-card {
     width: 1080px; height: 1920px;
-    background: linear-gradient(180deg, #1B2838, #0F1923);
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, #FF6B35, #00D4AA); z-index: 2; }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .story-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .story-logo { font-family: 'Inter', sans-serif; font-size: 28px; }
-  .story-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .story-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .section-label { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FF6B35; }
+  .story-logo { font-family: var(--pb-font-heading); font-size: 28px; }
+  .story-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .story-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-label { font-family: var(--pb-font-heading); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
   .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
-  .eyebrow { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #00D4AA; margin-bottom: 20px; }
-  .headline { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; line-height: 1.2; color: #FFFFFF; margin-bottom: 40px; letter-spacing: -0.02em; }
-  .headline .teal { color: #00D4AA; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-secondary); margin-bottom: 20px; }
+  .headline { font-family: var(--pb-font-heading); font-size: 44px; font-weight: 800; line-height: 1.2; color: var(--pb-color-white); margin-bottom: 40px; letter-spacing: -0.02em; }
+  .headline .teal { color: var(--pb-color-secondary); }
   .odds-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
   .odds-row { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px 28px; }
-  .odds-row .game { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: #FFFFFF; }
-  .odds-row .note { font-family: 'Source Sans 3', sans-serif; font-size: 16px; color: #6B6B8A; margin-top: 4px; }
-  .odds-row .edge { font-family: 'Source Code Pro', monospace; font-size: 36px; font-weight: 700; }
-  .odds-row .edge.teal { color: #00D4AA; }
-  .odds-row .edge.white { color: #FFFFFF; }
-  .odds-row .edge.orange { color: #FF6B35; }
-  .context { font-family: 'Source Sans 3', sans-serif; font-size: 26px; line-height: 1.55; color: #A8A8C0; margin-bottom: 40px; }
-  .story-cta { display: block; width: 100%; padding: 24px; background: #00D4AA; color: #1B2838; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 22px; text-align: center; border-radius: 16px; text-decoration: none; }
-  .story-footer { background: #2A3F56; padding: 24px 48px; text-align: center; position: relative; z-index: 1; }
-  .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 16px; color: #FFFFFF; }
+  .odds-row .game { font-family: var(--pb-font-heading); font-size: 22px; font-weight: 600; color: var(--pb-color-white); }
+  .odds-row .note { font-family: var(--pb-font-body); font-size: 16px; color: var(--pb-color-neutral-500); margin-top: 4px; }
+  .odds-row .edge { font-family: var(--pb-font-mono); font-size: 36px; font-weight: 700; }
+  .odds-row .edge.teal { color: var(--pb-color-secondary); }
+  .odds-row .edge.white { color: var(--pb-color-white); }
+  .odds-row .edge.orange { color: var(--pb-color-accent); }
+  .context { font-family: var(--pb-font-body); font-size: 26px; line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 40px; }
+  .story-cta { display: block; width: 100%; padding: 24px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: 22px; text-align: center; border-radius: 16px; text-decoration: none; }
+  .story-footer { background: var(--pb-color-primary-light); padding: 24px 48px; text-align: center; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: 16px; color: var(--pb-color-white); }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="story-card">
   <div class="story-header">
@@ -69,7 +70,7 @@
     <a href="#" class="story-cta">See the full breakdown</a>
   </div>
   <div class="story-footer">
-    <span class="footer-helpline">Free, confidential support 24/7: 1-800-522-4700</span>
+    <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
   </div>
 </div>
 </body>

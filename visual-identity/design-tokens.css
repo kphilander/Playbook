@@ -1,9 +1,8 @@
 /* ============================================
    Playbook Design Tokens
    ============================================
-   Auto-generated from _brand.yml
-   Import this file into any web project to get
-   the full Playbook visual system.
+   Auto-generated from _brand.yml — DO NOT EDIT MANUALLY.
+   Run: node lib/generate-tokens.mjs
 
    Usage:
      color: var(--pb-color-primary);
@@ -51,13 +50,16 @@
   --pb-text-muted: var(--pb-color-neutral-500);
   --pb-link: var(--pb-color-primary-light);
   --pb-link-hover: var(--pb-color-primary);
-  --pb-border: var(--pb-color-neutral-500);
-  --pb-divider: var(--pb-color-neutral-100);
   --pb-cta-bg: var(--pb-color-accent);
   --pb-cta-text: var(--pb-color-primary);
   --pb-cta-secondary-bg: var(--pb-color-secondary);
   --pb-cta-secondary-text: var(--pb-color-primary);
+  --pb-quiz-correct: var(--pb-color-success);
+  --pb-quiz-incorrect: var(--pb-color-danger);
+  --pb-feature-highlight: var(--pb-color-secondary);
   --pb-helpline-banner-bg: var(--pb-color-primary);
+  --pb-border: var(--pb-color-neutral-500);
+  --pb-divider: var(--pb-color-neutral-100);
   --pb-helpline-banner-text: var(--pb-color-white);
 
   /* ─── Typography: Families ────────────── */
@@ -67,14 +69,14 @@
 
   /* ─── Typography: Scale ───────────────── */
   --pb-text-display: 3rem;      /* 48px */
-  --pb-text-h1: 2.5rem;         /* 40px */
-  --pb-text-h2: 2rem;           /* 32px */
-  --pb-text-h3: 1.5rem;         /* 24px */
-  --pb-text-h4: 1.25rem;        /* 20px */
-  --pb-text-body-lg: 1.125rem;  /* 18px */
-  --pb-text-body: 1rem;         /* 16px */
-  --pb-text-small: 0.875rem;    /* 14px */
-  --pb-text-caption: 0.75rem;   /* 12px */
+  --pb-text-h1: 2.5rem;      /* 40px */
+  --pb-text-h2: 2rem;      /* 32px */
+  --pb-text-h3: 1.5rem;      /* 24px */
+  --pb-text-h4: 1.25rem;      /* 20px */
+  --pb-text-body-lg: 1.125rem;      /* 18px */
+  --pb-text-body: 1rem;      /* 16px */
+  --pb-text-small: 0.875rem;      /* 14px */
+  --pb-text-caption: 0.75rem;      /* 12px */
 
   /* ─── Typography: Weights ─────────────── */
   --pb-weight-light: 300;
@@ -98,14 +100,14 @@
 
   /* ─── Spacing ─────────────────────────── */
   --pb-space-1: 0.25rem;   /* 4px */
-  --pb-space-2: 0.5rem;    /* 8px */
+  --pb-space-2: 0.5rem;   /* 8px */
   --pb-space-3: 0.75rem;   /* 12px */
-  --pb-space-4: 1rem;      /* 16px */
-  --pb-space-6: 1.5rem;    /* 24px */
-  --pb-space-8: 2rem;      /* 32px */
-  --pb-space-12: 3rem;     /* 48px */
-  --pb-space-16: 4rem;     /* 64px */
-  --pb-space-24: 6rem;     /* 96px */
+  --pb-space-4: 1rem;   /* 16px */
+  --pb-space-6: 1.5rem;   /* 24px */
+  --pb-space-8: 2rem;   /* 32px */
+  --pb-space-12: 3rem;   /* 48px */
+  --pb-space-16: 4rem;   /* 64px */
+  --pb-space-24: 6rem;   /* 96px */
 
   /* ─── Borders ─────────────────────────── */
   --pb-radius-sm: 4px;

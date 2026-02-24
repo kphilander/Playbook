@@ -94,6 +94,25 @@ color:
     white: "#FFFFFF"
     black: "#111111"
 
+  # Friendly aliases — maps short names used in build scripts to palette keys.
+  # Forkers: update these if you rename palette entries.
+  aliases:
+    navy: "primary"
+    navyLight: "primary_light"
+    midnight: "primary_dark"
+    teal: "secondary"
+    tealLight: "secondary_light"
+    tealDark: "secondary_dark"
+    orange: "accent"
+    orangeLight: "accent_light"
+    orangeDark: "accent_dark"
+    n900: "neutral_900"
+    n700: "neutral_700"
+    n500: "neutral_500"
+    n300: "neutral_300"
+    n100: "neutral_100"
+    n50: "neutral_50"
+
   semantic:
     background: "neutral_50"
     surface: "white"

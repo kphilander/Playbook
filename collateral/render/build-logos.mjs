@@ -17,9 +17,11 @@
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadBrand } from '../../lib/brand-config.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..', '..');
+const brand = loadBrand();
+const ROOT = brand.ROOT;
 const LOGO_DIR = join(ROOT, 'visual-identity', 'logo');
 const PRIMARY = join(LOGO_DIR, 'primary');
 const SECONDARY = join(LOGO_DIR, 'secondary');
@@ -28,16 +30,10 @@ const HELPLINE_DIR = join(LOGO_DIR, 'helpline-badge');
 
 [PRIMARY, SECONDARY, FAVICON_DIR, HELPLINE_DIR].forEach(d => mkdirSync(d, { recursive: true }));
 
-/* ─── Brand colors ──────────────────────────────────────────────── */
+/* ─── Brand colors (from _brand.yml) ────────────────────────────── */
 
-const C = {
-  navy:       '#1B2838',
-  tealDark:   '#00A888',
-  teal:       '#00D4AA',
-  white:      '#FFFFFF',
-  neutral300: '#A8A8C0',
-  neutral500: '#6B6B8A',
-};
+const C = brand.colorsHex();
+const hl = brand.helpline();
 
 /* ─── SVG builder helpers ───────────────────────────────────────── */
 
@@ -94,8 +90,8 @@ function helplineBadge(playColor, bookColor, dividerColor, labelColor, numberCol
     <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="0.4" fill="${bookColor}">book</tspan>
   </text>
   <line x1="128" y1="6" x2="128" y2="42" stroke="${dividerColor}" stroke-width="1.5" stroke-linecap="round"/>
-  <text x="140" y="20" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="${labelColor}">Free help 24/7</text>
-  <text x="140" y="36" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="${numberColor}">1-800-522-4700</text>`;
+  <text x="140" y="20" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="${labelColor}">${hl.label ? 'Free help ' + (hl.hours || '24/7') : 'Free help 24/7'}</text>
+  <text x="140" y="36" font-family="'Inter', sans-serif" font-weight="700" font-size="13" fill="${numberColor}">${hl.number}</text>`;
   return svgWrap(w, h, content, bg);
 }
 
@@ -144,7 +140,7 @@ write(SECONDARY, 'logo-stacked-reversed.svg',
   stacked(C.white, C.teal, C.navy));
 
 write(SECONDARY, 'logo-stacked-mono-white.svg',
-  stacked(C.white, C.neutral300, '#111111'));
+  stacked(C.white, C.n300, C.black));
 
 write(SECONDARY, 'logo-stacked-mono-dark.svg',
   stacked(C.navy, C.navy));
@@ -153,7 +149,7 @@ write(SECONDARY, 'logo-horizontal-reversed.svg',
   horizontal(C.white, C.teal, C.navy));
 
 write(SECONDARY, 'logo-horizontal-mono-white.svg',
-  horizontal(C.white, C.neutral300, '#111111'));
+  horizontal(C.white, C.n300, C.black));
 
 write(SECONDARY, 'logo-horizontal-mono-dark.svg',
   horizontal(C.navy, C.navy));
@@ -161,7 +157,7 @@ write(SECONDARY, 'logo-horizontal-mono-dark.svg',
 // ── Helpline badges ──
 
 write(HELPLINE_DIR, 'helpline-badge-light.svg',
-  helplineBadge(C.navy, C.navy, C.teal, C.neutral500, C.navy));
+  helplineBadge(C.navy, C.navy, C.teal, C.n500, C.navy));
 
 write(HELPLINE_DIR, 'helpline-badge-dark.svg',
   helplineBadge(C.white, C.teal, C.teal, 'rgba(255,255,255,0.6)', C.white, C.navy));
@@ -175,7 +171,7 @@ write(FAVICON_DIR, 'favicon-reversed.svg',
   favicon(C.white, C.teal, C.navy));
 
 write(FAVICON_DIR, 'favicon-mono-white.svg',
-  favicon(C.white, C.neutral300, '#111111'));
+  favicon(C.white, C.n300, C.black));
 
 /* ─── Summary ───────────────────────────────────────────────────── */
 

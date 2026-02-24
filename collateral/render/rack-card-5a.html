@@ -13,7 +13,7 @@
       width: 800px;
       height: 1800px;
       position: relative;
-      background: #1B2838;
+      background: var(--pb-color-primary);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -25,7 +25,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 8px;
-      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+      background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
     }
 
     /* Subtle grid pattern overlay */
@@ -49,9 +49,9 @@
       z-index: 1;
     }
     .card-logo {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 32px;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
     }
     .card-logo .logo-play {
       font-weight: 800;
@@ -70,7 +70,7 @@
     .co-brand-divider {
       width: 1px;
       height: 28px;
-      background: #A8A8C0;
+      background: var(--pb-color-neutral-300);
     }
     .operator-placeholder {
       width: 120px;
@@ -80,18 +80,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 11px;
       color: rgba(255,255,255,0.25);
     }
     .card-pillar {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 18px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #1B2838;
-      background: #00D4AA;
+      color: var(--pb-color-primary);
+      background: var(--pb-color-secondary);
       padding: 8px 22px;
       border-radius: 100px;
     }
@@ -102,19 +102,19 @@
       z-index: 1;
     }
     .hero-headline {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 48px;
       font-weight: 800;
       line-height: 1.15;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
       letter-spacing: -0.02em;
       margin-bottom: 16px;
     }
     .hero-subhead {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 24px;
       line-height: 1.5;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
     }
 
     .stats-section {
@@ -134,28 +134,28 @@
       border: 1px solid rgba(255,255,255,0.06);
     }
     .stat-game {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 20px;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
       margin-bottom: 8px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
     .stat-value {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 56px;
       font-weight: 900;
       line-height: 1;
       letter-spacing: -0.03em;
       margin-bottom: 8px;
     }
-    .stat-value.teal { color: #00D4AA; }
-    .stat-value.white { color: #FFFFFF; }
-    .stat-value.orange { color: #FF6B35; }
+    .stat-value.teal { color: var(--pb-color-secondary); }
+    .stat-value.white { color: var(--pb-color-white); }
+    .stat-value.orange { color: var(--pb-color-accent); }
     .stat-note {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 18px;
-      color: #6B6B8A;
+      color: var(--pb-color-neutral-500);
     }
 
     .card-callout {
@@ -164,13 +164,13 @@
       z-index: 1;
     }
     .callout-text {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 22px;
       line-height: 1.5;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
     }
     .callout-text strong {
-      color: #00D4AA;
+      color: var(--pb-color-secondary);
       font-weight: 600;
     }
 
@@ -185,36 +185,36 @@
     .qr-placeholder {
       width: 100px;
       height: 100px;
-      background: #FFFFFF;
+      background: var(--pb-color-white);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Source Code Pro', monospace;
+      font-family: var(--pb-font-mono);
       font-size: 14px;
-      color: #1B2838;
+      color: var(--pb-color-primary);
       flex-shrink: 0;
     }
     .qr-label {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 20px;
       font-weight: 600;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
     }
 
     .helpline-strip {
       margin-top: 40px;
-      background: #2A3F56;
+      background: var(--pb-color-primary-light);
       padding: 24px 56px;
       text-align: center;
       position: relative;
       z-index: 1;
     }
     .helpline-text {
-      font-family: 'Source Code Pro', monospace;
+      font-family: var(--pb-font-mono);
       font-size: 20px;
       font-weight: 600;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
     }
 
     .legal-strip {
@@ -224,12 +224,13 @@
       z-index: 1;
     }
     .legal-text {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 16px;
-      color: #6B6B8A;
+      color: var(--pb-color-neutral-500);
     }
   </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
   <div class="rack-card">
     <div class="card-header">
@@ -269,7 +270,7 @@
       <span class="qr-label">Scan for the facts</span>
     </div>
     <div class="helpline-strip">
-      <span class="helpline-text">Free, confidential support 24/7: 1-800-522-4700</span>
+      <span class="helpline-text">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     </div>
     <div class="legal-strip">
       <span class="legal-text">You must be 21+ to gamble. Gambling involves risk.</span>

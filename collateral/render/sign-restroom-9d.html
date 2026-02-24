@@ -11,10 +11,10 @@
   .sign-restroom {
     width: 560px;
     height: 400px;
-    background: #1B2838;
+    background: var(--pb-color-primary);
     position: relative;
     overflow: hidden;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--pb-font-body);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +26,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
 
   .restroom-content {
@@ -36,40 +36,40 @@
   }
 
   .restroom-headline {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 36px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     margin-bottom: 12px;
   }
   .restroom-body {
     font-size: 18px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.5;
     margin-bottom: 28px;
   }
   .restroom-number {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: 48px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     margin-bottom: 16px;
     letter-spacing: 0.04em;
   }
   .restroom-channels {
     font-size: 16px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.8;
   }
   .restroom-channels strong {
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     font-weight: 600;
   }
   .restroom-avail {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 15px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     margin-top: 16px;
   }
 
@@ -77,23 +77,24 @@
     position: absolute;
     bottom: 16px;
     right: 20px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 14px;
     z-index: 1;
   }
-  .restroom-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .restroom-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .restroom-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .restroom-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="sign-restroom">
 
   <div class="restroom-content">
     <div class="restroom-headline">Need to talk?</div>
     <div class="restroom-body">Free, confidential support — for any question about gambling.</div>
-    <div class="restroom-number">1-800-522-4700</div>
+    <div class="restroom-number">{{HELPLINE_NUMBER}}</div>
     <div class="restroom-channels">
-      <strong>Text</strong> 1-800-522-4700 | <strong>Chat</strong> ncpgambling.org/chat
+      <strong>Text</strong> {{HELPLINE_NUMBER}} | <strong>Chat</strong> {{CHAT_URL}}
     </div>
     <div class="restroom-avail">24/7. No judgment.</div>
   </div>

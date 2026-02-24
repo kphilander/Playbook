@@ -14,9 +14,9 @@
   .social-card {
     width: 1080px;
     height: 1080px;
-    background: #FFFFFF;
-    font-family: 'Source Sans 3', sans-serif;
-    color: #1B2838;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
   /* 6px teal accent top bar */
   .accent-bar {
     height: 6px;
-    background: #00D4AA;
+    background: var(--pb-color-secondary);
     flex-shrink: 0;
   }
 
@@ -38,19 +38,19 @@
     justify-content: space-between;
   }
   .logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 36px;
   }
   .logo-play {
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
   .logo-book {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
 
   /* Body */
@@ -64,17 +64,17 @@
   }
 
   .headline {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 900;
     font-size: 72px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: 20px;
   }
   .subline {
     font-size: 28px;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     line-height: 1.5;
     margin-bottom: 56px;
     max-width: 720px;
@@ -82,18 +82,18 @@
 
   /* Helpline */
   .helpline-number {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: 64px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     letter-spacing: 0.02em;
     margin-bottom: 12px;
   }
   .helpline-channels {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 26px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     letter-spacing: 0.04em;
     margin-bottom: 56px;
   }
@@ -107,20 +107,20 @@
   .qr-box {
     width: 100px;
     height: 100px;
-    background: #F5F5FA;
-    border: 1px solid #E8E8F0;
+    background: var(--pb-color-neutral-50);
+    border: 1px solid var(--pb-color-neutral-100);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 14px;
     font-weight: 600;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
   .qr-label {
     font-size: 16px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
   }
 
   /* Footer */
@@ -128,14 +128,15 @@
     padding: 0 80px 56px;
   }
   .footer-text {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 22px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     letter-spacing: 0.02em;
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="social-card">
 
@@ -149,7 +150,7 @@
     <div class="headline">No question<br>is too small.</div>
     <div class="subline">Free, confidential support for any question about gambling.</div>
 
-    <div class="helpline-number">1-800-522-4700</div>
+    <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
     <div class="helpline-channels">Call &middot; Text &middot; Chat</div>
 
     <div class="qr-row">

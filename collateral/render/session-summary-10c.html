@@ -14,11 +14,11 @@
   .card {
     width: 420px;
     min-height: 320px;
-    background: #FFFFFF;
-    border: 1px solid #E8E8F0;
+    background: var(--pb-color-white);
+    border: 1px solid var(--pb-color-neutral-100);
     border-radius: 16px;
-    font-family: 'Source Sans 3', sans-serif;
-    color: #1B2838;
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
     padding: 28px 28px 24px;
     display: flex;
     flex-direction: column;
@@ -26,10 +26,10 @@
 
   /* Heading */
   .card-heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 18px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 24px;
     display: flex;
     align-items: baseline;
@@ -38,7 +38,7 @@
   .card-heading .period {
     font-weight: 400;
     font-size: 14px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
   }
 
   /* Bar chart */
@@ -66,19 +66,19 @@
     min-height: 4px;
   }
   .bar.today {
-    background: #00D4AA;
+    background: var(--pb-color-secondary);
   }
   .bar-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 11px;
     font-weight: 600;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     margin-top: 6px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
   .bar-label.today {
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
 
   /* Stats row */
@@ -86,17 +86,17 @@
     display: flex;
     gap: 6px;
     align-items: center;
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 14px;
     font-weight: 500;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     margin-top: 16px;
     padding: 12px 0;
     border-top: 1px solid #F0F0F5;
     border-bottom: 1px solid #F0F0F5;
   }
   .stats-row .sep {
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
 
   /* Deposit limit */
@@ -109,19 +109,19 @@
   }
   .limit-label {
     font-size: 14px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
   }
   .limit-value {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: 14px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
   .limit-badge {
     display: inline-block;
     background: #E8FFF8;
-    color: #00D4AA;
-    font-family: 'Inter', sans-serif;
+    color: var(--pb-color-secondary);
+    font-family: var(--pb-font-heading);
     font-size: 11px;
     font-weight: 700;
     padding: 2px 8px;
@@ -133,10 +133,10 @@
 
   /* Manage link */
   .manage-link {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 14px;
     font-weight: 600;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     text-decoration: none;
     margin-top: auto;
     padding-top: 8px;
@@ -146,7 +146,8 @@
     color: #00B894;
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="card">
 

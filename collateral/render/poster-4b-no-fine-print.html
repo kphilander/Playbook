@@ -9,45 +9,46 @@
   body { margin: 0; background: transparent; }
   .poster {
     width: 1800px; height: 2400px;
-    background: linear-gradient(180deg, #1B2838, #0F1923);
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, #FF6B35, #00D4AA); z-index: 2; }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .poster::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .poster-logo { font-family: 'Inter', sans-serif; font-size: 48px; }
-  .poster-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .poster-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .section-label { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #FF6B35; }
+  .poster-logo { font-family: var(--pb-font-heading); font-size: 48px; }
+  .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .poster-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-label { font-family: var(--pb-font-heading); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
-  .eyebrow { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #00D4AA; margin-bottom: 28px; }
-  .headline { font-family: 'Inter', sans-serif; font-size: 76px; font-weight: 900; line-height: 1.1; color: #FFFFFF; margin-bottom: 24px; letter-spacing: -0.03em; }
-  .headline .teal { color: #00D4AA; }
-  .subhead { font-family: 'Source Sans 3', sans-serif; font-size: 34px; line-height: 1.5; color: #A8A8C0; margin-bottom: 56px; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--pb-color-secondary); margin-bottom: 28px; }
+  .headline { font-family: var(--pb-font-heading); font-size: 76px; font-weight: 900; line-height: 1.1; color: var(--pb-color-white); margin-bottom: 24px; letter-spacing: -0.03em; }
+  .headline .teal { color: var(--pb-color-secondary); }
+  .subhead { font-family: var(--pb-font-body); font-size: 34px; line-height: 1.5; color: var(--pb-color-neutral-300); margin-bottom: 56px; }
   .edge-list { display: flex; flex-direction: column; gap: 20px; margin-bottom: 56px; }
   .edge-row { display: flex; align-items: center; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 28px 36px; gap: 32px; }
   .edge-bar-wrap { flex: 1; }
-  .edge-game { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 700; color: #FFFFFF; margin-bottom: 12px; }
+  .edge-game { font-family: var(--pb-font-heading); font-size: 26px; font-weight: 700; color: var(--pb-color-white); margin-bottom: 12px; }
   .edge-bar { height: 20px; border-radius: 10px; }
-  .edge-bar.low { width: 10%; background: #00D4AA; }
-  .edge-bar.mid { width: 28%; background: #FFFFFF; }
-  .edge-bar.high { width: 53%; background: #FF6B35; }
-  .edge-bar.var { width: 75%; background: linear-gradient(90deg, #FF6B35, #FF6B35 30%, rgba(255,107,53,0.3)); }
-  .edge-pct { font-family: 'Source Code Pro', monospace; font-size: 40px; font-weight: 700; min-width: 180px; text-align: right; }
-  .edge-pct.teal { color: #00D4AA; }
-  .edge-pct.white { color: #FFFFFF; }
-  .edge-pct.orange { color: #FF6B35; }
-  .callout { background: rgba(255,107,53,0.08); border: 2px solid #FF6B35; border-radius: 20px; padding: 40px; text-align: center; margin-bottom: 56px; }
-  .callout-number { font-family: 'Inter', sans-serif; font-size: 72px; font-weight: 900; color: #FF6B35; line-height: 1; margin-bottom: 12px; }
-  .callout-text { font-family: 'Source Sans 3', sans-serif; font-size: 28px; color: #A8A8C0; line-height: 1.4; }
-  .callout-text strong { color: #FFFFFF; font-weight: 600; }
-  .poster-cta { display: block; width: 100%; padding: 36px; background: #00D4AA; color: #1B2838; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 32px; text-align: center; border-radius: 20px; text-decoration: none; letter-spacing: 0.02em; }
-  .poster-footer { background: #2A3F56; padding: 36px 96px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 24px; color: #FFFFFF; }
-  .footer-legal { font-family: 'Source Sans 3', sans-serif; font-size: 20px; color: #A8A8C0; }
+  .edge-bar.low { width: 10%; background: var(--pb-color-secondary); }
+  .edge-bar.mid { width: 28%; background: var(--pb-color-white); }
+  .edge-bar.high { width: 53%; background: var(--pb-color-accent); }
+  .edge-bar.var { width: 75%; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-accent) 30%, rgba(255,107,53,0.3)); }
+  .edge-pct { font-family: var(--pb-font-mono); font-size: 40px; font-weight: 700; min-width: 180px; text-align: right; }
+  .edge-pct.teal { color: var(--pb-color-secondary); }
+  .edge-pct.white { color: var(--pb-color-white); }
+  .edge-pct.orange { color: var(--pb-color-accent); }
+  .callout { background: rgba(255,107,53,0.08); border: 2px solid var(--pb-color-accent); border-radius: 20px; padding: 40px; text-align: center; margin-bottom: 56px; }
+  .callout-number { font-family: var(--pb-font-heading); font-size: 72px; font-weight: 900; color: var(--pb-color-accent); line-height: 1; margin-bottom: 12px; }
+  .callout-text { font-family: var(--pb-font-body); font-size: 28px; color: var(--pb-color-neutral-300); line-height: 1.4; }
+  .callout-text strong { color: var(--pb-color-white); font-weight: 600; }
+  .poster-cta { display: block; width: 100%; padding: 36px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: 32px; text-align: center; border-radius: 20px; text-decoration: none; letter-spacing: 0.02em; }
+  .poster-footer { background: var(--pb-color-primary-light); padding: 36px 96px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: 24px; color: var(--pb-color-white); }
+  .footer-legal { font-family: var(--pb-font-body); font-size: 20px; color: var(--pb-color-neutral-300); }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="poster">
   <div class="poster-header">
@@ -95,7 +96,7 @@
     <a href="#" class="poster-cta">See the full breakdown</a>
   </div>
   <div class="poster-footer">
-    <span class="footer-helpline">Free, confidential support 24/7: 1-800-522-4700</span>
+    <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">21+ to gamble</span>
   </div>
 </div>

@@ -1,0 +1,23 @@
+{
+  "name": "playbook-brand",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Playbook brand system — build pipeline driven by _brand.yml",
+  "license": "CC0-1.0",
+  "scripts": {
+    "generate": "npm run generate:tokens && npm run generate:tailwind && npm run generate:inject-css",
+    "generate:tokens": "node lib/generate-tokens.mjs",
+    "generate:tailwind": "node lib/generate-tailwind-theme.mjs",
+    "generate:inject-css": "node lib/generate-inject-css.mjs",
+    "build:logos": "node collateral/render/build-logos.mjs",
+    "build:icons": "node collateral/render/build-icons.mjs",
+    "build:deck": "node collateral/render/build-deck.mjs",
+    "build:cards": "node collateral/render/render-cards.mjs",
+    "build": "npm run generate && npm run build:logos && npm run build:icons",
+    "validate": "node lib/validate-brand.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

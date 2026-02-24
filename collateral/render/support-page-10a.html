@@ -14,9 +14,9 @@
   .support-page {
     width: 800px;
     min-height: 1000px;
-    background: #FFFFFF;
-    font-family: 'Source Sans 3', sans-serif;
-    color: #1B2838;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
   /* 3px solid teal top bar */
   .accent-bar {
     height: 3px;
-    background: #00D4AA;
+    background: var(--pb-color-secondary);
     flex-shrink: 0;
   }
 
@@ -38,19 +38,19 @@
     border-bottom: 1px solid #F0F0F5;
   }
   .logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 24px;
   }
   .logo-play {
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
   .logo-book {
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
   .co-brand {
     display: flex;
@@ -60,19 +60,19 @@
   .co-brand-divider {
     width: 1px;
     height: 24px;
-    background: #A8A8C0;
+    background: var(--pb-color-neutral-300);
   }
   .operator-placeholder {
     width: 100px;
     height: 36px;
-    border: 1.5px dashed #A8A8C0;
+    border: 1.5px dashed var(--pb-color-neutral-300);
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--pb-font-body);
     font-size: 11px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     letter-spacing: 0.02em;
   }
 
@@ -86,17 +86,17 @@
   }
 
   .page-heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 32px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 8px;
     line-height: 1.2;
     letter-spacing: -0.01em;
   }
   .page-subhead {
     font-size: 17px;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     line-height: 1.5;
     margin-bottom: 40px;
   }
@@ -110,7 +110,7 @@
     align-items: center;
     gap: 20px;
     padding: 20px 24px;
-    background: #F5F5FA;
+    background: var(--pb-color-neutral-50);
     border-radius: 12px;
     margin-bottom: 12px;
     cursor: pointer;
@@ -123,12 +123,12 @@
     width: 48px;
     height: 48px;
     min-width: 48px;
-    background: #FFFFFF;
+    background: var(--pb-color-white);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
   .channel-icon svg {
     width: 22px;
@@ -138,20 +138,20 @@
     flex: 1;
   }
   .channel-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 17px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 2px;
   }
   .channel-detail {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 15px;
     font-weight: 500;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
   }
   .channel-arrow {
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
   .channel-arrow svg {
     width: 16px;
@@ -167,12 +167,12 @@
 
   /* Secondary resources */
   .section-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     margin-bottom: 16px;
   }
   .resource-cards {
@@ -182,7 +182,7 @@
   }
   .resource-card {
     flex: 1;
-    border: 1px solid #E8E8F0;
+    border: 1px solid var(--pb-color-neutral-100);
     border-radius: 12px;
     padding: 24px 20px;
     text-align: center;
@@ -196,52 +196,53 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 12px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
   .resource-icon svg {
     width: 20px;
     height: 20px;
   }
   .resource-title {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 15px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 4px;
   }
   .resource-desc {
     font-size: 13px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     line-height: 1.4;
   }
 
   /* Footer */
   .footer {
-    background: #F5F5FA;
+    background: var(--pb-color-neutral-50);
     padding: 28px 80px;
     text-align: center;
-    border-top: 1px solid #E8E8F0;
+    border-top: 1px solid var(--pb-color-neutral-100);
   }
   .footer-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 13px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     margin-bottom: 6px;
   }
   .footer-helpline {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: 15px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
   .footer-channels {
     font-size: 13px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     margin-top: 4px;
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="support-page">
 
@@ -264,7 +265,7 @@
         <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7 12.7 12.7 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.7 12.7 0 0 0 2.8.7A2 2 0 0 1 22 16.9z"/></g><g stroke-width="1"><path d="M17 2a5 5 0 0 1 5 5" fill="none"/><path d="M17 6a1 1 0 0 1 1 1" fill="none"/></g></svg></div>
         <div class="channel-info">
           <div class="channel-label">Call</div>
-          <div class="channel-detail">1-800-522-4700</div>
+          <div class="channel-detail">{{HELPLINE_NUMBER}}</div>
         </div>
         <div class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
       </div>
@@ -280,7 +281,7 @@
         <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></g><g stroke-width="1"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></g></svg></div>
         <div class="channel-info">
           <div class="channel-label">Chat</div>
-          <div class="channel-detail">ncpgambling.org/chat</div>
+          <div class="channel-detail">{{CHAT_URL}}</div>
         </div>
         <div class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
       </div>
@@ -310,8 +311,8 @@
 
   <div class="footer">
     <div class="footer-label">National Council on Problem Gambling</div>
-    <div class="footer-helpline">1-800-522-4700</div>
-    <div class="footer-channels">Text 800522 &middot; Chat ncpgambling.org/chat &middot; Available 24/7</div>
+    <div class="footer-helpline">{{HELPLINE_NUMBER}}</div>
+    <div class="footer-channels">Text 800522 &middot; Chat {{CHAT_URL}} &middot; Available 24/7</div>
   </div>
 
 </div>
