@@ -141,6 +141,8 @@ For pre-roll ads that support companion banners (YouTube desktop):
 - [ ] QR code scannable at screen distance (test on mobile and desktop)
 - [ ] {{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space) and operator logo (co-branding rules: min 60% height ratio, vertical divider) in final frame
 - [ ] No clinical language in any overlay text
+- [ ] Lighting is cinematic/editorial — dramatic low-light is fine, dim ambient is not (see [photography lighting guide](../../visual-identity/photography/photography.md#lighting-guide))
+- [ ] Game closeups serve the message or CTA — cut any that are purely decorative filler
 - [ ] Bumper ads require zero audio to deliver the message
 
 ---

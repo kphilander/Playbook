@@ -13,7 +13,7 @@ Playbook photography captures the social, energetic side of entertainment and sp
 
 | Property | Specification |
 |----------|---------------|
-| **Lighting** | Natural or warm ambient; golden-hour feel preferred; avoid flat flash |
+| **Lighting** | Cinematic or warm ambient; golden-hour and dramatic editorial lighting both work; avoid flat flash and dim ambient (see [lighting guide](#lighting-guide) below) |
 | **Color temperature** | Warm (5000–6500K); lean toward golden tones, never clinical blue-white |
 | **Composition** | Rule of thirds; leave negative space for text overlay; clear focal point |
 | **Depth of field** | Moderate to shallow (ƒ/2.0–ƒ/4.0 for portraits, ƒ/5.6–ƒ/8.0 for environments) |
@@ -73,13 +73,79 @@ Social energy and entertainment — never the solitary gambler stereotype.
 
 | Aspect | Direction |
 |--------|-----------|
-| **Settings** | Well-lit casino floors, sports lounges, entertainment areas |
+| **Settings** | Casino floors, sports lounges, entertainment areas, gaming tables |
 | **Mood** | Upscale nightlife, social energy, fun — never dim or seedy |
 | **People** | Groups together, smiling, dressed up, enjoying themselves |
-| **Avoid** | Close-ups of chips/money, solitary players, empty machines |
-| **Lighting** | Bright, colorful, warm — never dingy fluorescent |
+| **Avoid** | Solitary players, empty machines, stacks of cash, dim ambient lighting |
+| **Lighting** | Cinematic or warm — dramatic editorial lighting is great; dim and dingy is not (see [lighting guide](#lighting-guide)) |
 
 **Example scenarios:** Friends at a roulette table laughing together, a group heading into a casino entertainment show, people socializing in a sportsbook lounge.
+
+### Game & equipment imagery
+
+Game closeups — slot interfaces, card tables, roulette wheels, chips — are a useful visual tool **when they serve the content.** They should never appear as generic decoration.
+
+| Context | OK? | Rationale |
+|---------|-----|-----------|
+| **Explaining game mechanics** (e.g., showing a slot interface to explain paylines or RTP) | Yes | The closeup IS the content — it teaches something |
+| **Illustrating a CTA** (e.g., cards on a table alongside "Know your game" messaging) | Yes | The imagery directly supports the message |
+| **Showing gameplay context** in an educational piece (e.g., chips on a felt table to set the scene for a house-edge explainer) | Yes | Purposeful context, not decoration |
+| **Atmospheric filler** — slot machines or tables with no connection to the message | No | Generic equipment shots read as gambling promotion, not education |
+| **Hero images or social posts** where the game equipment IS the entire subject | No | Puts the focus on the game, not the player or the insight |
+
+**The test:** If you removed the image, would the message or CTA lose context? If yes, the closeup earns its place. If nothing changes, cut it.
+
+### Reference examples
+
+**Purposeful closeups (good):**
+
+- [Pexels 30516010](https://www.pexels.com/photo/close-up-of-casino-slot-machine-interface-30516010/) — Slot machine interface detail. Works when used alongside content explaining paylines, RTP, or how slot machines function. The closeup IS the lesson.
+- [Pexels 7594307](https://www.pexels.com/photo/playing-cards-and-casino-chips-on-gaming-table-7594307/) — Cards and chips on a gaming table. Works for content explaining table game mechanics, hand rankings, or house edge by game. Provides purposeful visual context.
+
+**Decorative filler (bad):**
+
+- [Pexels 3021120](https://www.pexels.com/photo/slot-machines-3021120/) — Row of slot machines with no human context, no educational framing, no connection to a message. This is generic atmosphere that reads as gambling promotion. Cut it.
+
+---
+
+## Lighting guide
+
+Not all low-light is equal. The distinction is **intention** — cinematic lighting is deliberate and dramatic; dim lighting is just dark.
+
+### Cinematic lighting (good)
+
+Intentional, editorial-quality lighting that creates mood and visual interest — even in darker environments.
+
+| Property | Direction |
+|----------|-----------|
+| **Key light** | Clear directional source — window light, practicals, controlled spots |
+| **Contrast** | Strong but controlled; highlights and shadows are deliberate, not accidental |
+| **Skin tones** | Well-exposed faces even when the environment is dark; subjects are lit, backgrounds fall off |
+| **Color** | Intentional color temperature — warm golds, cool blues, or mixed — as long as it's designed |
+| **Feel** | Fashion editorial, lifestyle brand, modern nightlife photography |
+| **Reference** | Think Vogue, GQ, or high-end hospitality campaigns shot in evening settings |
+
+**Reference example:** [Pexels 9396741](https://www.pexels.com/photo/young-woman-in-checked-mini-dress-at-slot-machines-in-casino-9396741/) — Casino environment with cinematic, intentional lighting. Subject is well-lit with clear directional light; the slot machines provide colorful background bokeh rather than being the subject. This is the standard.
+
+### Dim ambient lighting (bad)
+
+Uncontrolled, flat, dark environments where the lighting is incidental rather than designed.
+
+| Property | Red flag |
+|----------|----------|
+| **No key light** | Faces are underexposed; details lost in shadow |
+| **Flat contrast** | Everything is uniformly dark — no visual hierarchy |
+| **Muddy color** | Mixed fluorescent and tungsten producing grey-green skin tones |
+| **Noise/grain** | High ISO visible — suggests cheap camera in poor conditions, not editorial intent |
+| **Feel** | Surveillance footage, phone camera in a bar, "you had to be there" snapshots |
+
+**Reference example:** [Pexels 5767461](https://www.pexels.com/photo/man-playing-arcade-game-with-beautiful-woman-at-his-side-5767461/) — Dim arcade/gaming environment where the lighting is incidental. Faces are underlit, the scene is uniformly dark, and the overall feel is dingy rather than dramatic. This fails the lighting test.
+
+### The lighting test
+
+**"Does this look like it was lit — or like it happened to be dark?"**
+
+A casino at night can be stunning if the photographer controlled the light. The same casino shot on a phone with no flash looks seedy. The setting isn't the problem — the lighting intent is.
 
 ---
 
@@ -211,7 +277,7 @@ All photos should feel consistent with the Playbook brand palette after grading.
 ### Do
 
 - **Show real, diverse people** having a genuine good time
-- **Use natural, warm lighting** — golden hour, ambient, inviting
+- **Use cinematic or warm lighting** — golden hour, dramatic editorial, intentional nightlife (see [lighting guide](#lighting-guide))
 - **Capture social moments** — friends together, shared experiences
 - **Show confident body language** — people in control, enjoying themselves
 - **Represent diversity** — age, ethnicity, gender, ability in every shoot
@@ -219,6 +285,7 @@ All photos should feel consistent with the Playbook brand palette after grading.
 - **Include environmental context** — show where people are, not just faces
 - **Color grade consistently** — warm shadows, lifted blacks, brand-aligned tones
 - **Leave text-overlay space** — plan compositions for design use
+- **Use game closeups purposefully** — when they explain mechanics or support the message (see [game & equipment imagery](#game--equipment-imagery))
 
 ### Don't
 
@@ -230,8 +297,10 @@ All photos should feel consistent with the Playbook brand palette after grading.
 - **Over-stage or over-pose** — should feel real, not corporate
 - **Glamorize high-stakes play** — no close-ups of large chip stacks or cash
 - **Show solitary gambling** — always social, never lonely
+- **Use dim ambient lighting** — dark ≠ cinematic; if it looks like a phone camera in a bar, it fails (see [lighting guide](#lighting-guide))
 - **Use cold, blue-tinted grading** — stays warm and inviting
 - **Overprocess or over-filter** — no heavy HDR, no Instagram-style filters
+- **Use game equipment as decorative filler** — slot machines and tables without purpose read as gambling promotion, not education
 
 ---
 
@@ -246,7 +315,8 @@ Use these keyword combinations when sourcing stock imagery.
 | **Social / Group** | friends gathering, social event, group fun | diverse, candid, warm lighting, laughing | sad, alone, drunk, gambling |
 | **Sports / Entertainment** | sports fans, stadium crowd, watch party | cheering, high-five, excited, diverse | violence, injury, rioting |
 | **Mobile / Digital** | person phone casual, checking phone | relaxed, coffee shop, smiling, quick glance | obsessed, screen addiction, dark room |
-| **Casino environment** | casino social, entertainment venue, nightlife | group, fun, upscale, bright, colorful | solitary gambler, slot machine alone |
+| **Casino environment** | casino social, entertainment venue, nightlife | group, fun, upscale, cinematic, editorial | solitary gambler, slot machine alone, dim, dark room |
+| **Game closeups** | casino table game, slot interface, roulette wheel | detail, close-up, colorful, well-lit | empty, generic, no context, dark, blurry |
 
 ### General sourcing rules
 
