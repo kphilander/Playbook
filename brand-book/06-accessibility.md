@@ -117,6 +117,22 @@ All interactive elements must be fully operable with keyboard alone:
 - **Spacing**: Minimum 8px between adjacent touch targets
 - **Critical CTAs** (helpline, self-exclusion): Consider 48x48px minimum
 
+### Mobile-specific accessibility
+
+Mobile is where 60%+ of players gamble. Mobile-specific accessibility requirements go beyond desktop patterns.
+
+| Requirement | Standard | Why it matters for Playbook |
+|---|---|---|
+| Touch targets | 44x44px minimum (48px recommended for critical CTAs) | Helpline buttons, self-exclusion, limit setting |
+| Thumb zone | Primary actions in bottom 2/3 of screen | One-handed play means CTAs must be reachable |
+| Orientation | Support both portrait and landscape | Some players lock orientation |
+| Zoom | Don't disable pinch-to-zoom (`user-scalable=yes`) | Players with low vision need to zoom |
+| Text scaling | Support system font size settings (up to 200%) | Respect OS-level accessibility preferences |
+| Haptic feedback | Use system haptics for confirmations (limit set, quiz answer) | Provides non-visual feedback |
+| Screen reader gestures | Don't override swipe gestures (VoiceOver uses them) | Custom swipe handlers break screen reader navigation |
+
+Test on real devices. Emulators don't accurately simulate touch targets, haptic feedback, or screen reader gesture conflicts.
+
 ---
 
 ## Screen reader compatibility
@@ -137,6 +153,23 @@ All interactive elements must be fully operable with keyboard alone:
 | Alert messages | `role="alert"` or `aria-live="assertive"` |
 | Modal dialogs | `role="dialog"`, `aria-labelledby` |
 | Form validation errors | `aria-invalid="true"`, `aria-describedby` |
+
+### ARIA landmark patterns
+
+Use semantic HTML landmarks as the foundation. ARIA landmarks are supplementary — they fill gaps where native HTML doesn't provide a role.
+
+| Pattern | HTML | ARIA | When to use |
+|---|---|---|---|
+| Main content | `<main>` | `role="main"` (implicit) | One per page. Contains the primary content. |
+| Navigation | `<nav aria-label="Playbook tools">` | — | Label each nav distinctly when multiple exist. |
+| Helpline banner | `<aside aria-label="Support">` | `role="complementary"` (implicit) | Persistent helpline strip. |
+| Quiz question | `<fieldset>` + `<legend>` | `role="group"` (implicit) | Each quiz question as a grouped field set. |
+| Modal dialog | `<dialog>` | `role="dialog"`, `aria-modal="true"` | Limit reached, session reminder, confirmation. |
+| Live notification | `<div role="status">` | `aria-live="polite"` | Toast messages, timer updates. |
+| Alert | `<div role="alert">` | `aria-live="assertive"` | Limit reached, self-exclusion confirmation. |
+| Progress | `<progress>` or `role="progressbar"` | `aria-valuenow`, `aria-valuemin`, `aria-valuemax` | Quiz progress, deposit limit usage bar. |
+
+Always test with at least two screen readers (VoiceOver + NVDA recommended). Different screen readers interpret ARIA differently — test, don't assume.
 
 ### Alternative text
 
@@ -175,6 +208,20 @@ All interactive elements must be fully operable with keyboard alone:
 - **RTL support**: Mirror layouts for Arabic, Hebrew, and other RTL languages
 - **Font support**: Use Noto Sans as fallback for non-Latin scripts
 - **Number formatting**: Adapt decimal separators, thousands separators, and currency symbols per locale
+
+### Critical accessibility findings
+
+The `visual-identity/color/accessibility-matrix.md` audit identified five critical failures in the default semantic color mappings. These must be addressed before deployment.
+
+| Finding | Issue | Impact | Fix |
+|---|---|---|---|
+| Link text on light backgrounds | Secondary (#00D4AA) on white = 1.91:1 | Links invisible to low-vision users | Use Primary Light (#2A3F56) for links on light backgrounds |
+| Link hover on light backgrounds | Secondary Dark (#00A888) on Neutral 50 = 2.78:1 | Hover state still fails AA | Use Primary (#1B2838) for hover |
+| Primary CTA button | White on Accent (#FF6B35) = 2.84:1 | CTA button text unreadable | Use Primary (#1B2838) text on Accent background |
+| Secondary CTA button | White on Secondary (#00D4AA) = 1.91:1 | Button text unreadable | Use Primary text on Secondary background |
+| Form borders | Neutral 300 (#A8A8C0) on White = 2.33:1 | Form inputs invisible (SC 1.4.11) | Use Neutral 500 (#6B6B8A) for form borders |
+
+These fixes are incorporated in the recommended `_brand.yml` changes in the accessibility matrix. Operators who customize colors must run their own contrast audit. See `visual-identity/color/accessibility-matrix.md` for the full matrix and all approved color pairings.
 
 ---
 

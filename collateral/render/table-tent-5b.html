@@ -13,7 +13,7 @@
       width: 800px;
       height: 1200px;
       position: relative;
-      background: #1B2838;
+      background: var(--pb-color-primary);
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -25,7 +25,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 8px;
-      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+      background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
     }
 
     /* Subtle grid pattern overlay */
@@ -48,7 +48,7 @@
       padding: 48px 56px 32px;
       position: relative;
       z-index: 1;
-      border-bottom: 1px solid #2A3F56;
+      border-bottom: 1px solid var(--pb-color-primary-light);
     }
     .panel-header {
       display: flex;
@@ -57,9 +57,9 @@
       margin-bottom: 32px;
     }
     .card-logo {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 28px;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
     }
     .card-logo .logo-play {
       font-weight: 800;
@@ -71,47 +71,47 @@
       letter-spacing: 0.08em;
     }
     .card-pillar {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 16px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #1B2838;
-      background: #00D4AA;
+      color: var(--pb-color-primary);
+      background: var(--pb-color-secondary);
       padding: 6px 18px;
       border-radius: 100px;
     }
 
     .odds-label {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 18px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: #FF6B35;
+      color: var(--pb-color-accent);
       margin-bottom: 16px;
     }
     .odds-stat {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 80px;
       font-weight: 900;
-      color: #FF6B35;
+      color: var(--pb-color-accent);
       line-height: 1;
       letter-spacing: -0.03em;
       margin-bottom: 12px;
     }
     .odds-context {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 22px;
       line-height: 1.5;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
       margin-bottom: 20px;
     }
     .odds-callout {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 20px;
       font-weight: 600;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
     }
     .quiz-row {
       display: flex;
@@ -122,21 +122,21 @@
     .qr-small {
       width: 72px;
       height: 72px;
-      background: #FFFFFF;
+      background: var(--pb-color-white);
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Source Code Pro', monospace;
+      font-family: var(--pb-font-mono);
       font-size: 12px;
-      color: #1B2838;
+      color: var(--pb-color-primary);
       flex-shrink: 0;
     }
     .quiz-cta {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 18px;
       font-weight: 600;
-      color: #00D4AA;
+      color: var(--pb-color-secondary);
     }
 
     /* Panel B — Helpline + CTA */
@@ -150,44 +150,44 @@
       z-index: 1;
     }
     .tools-headline {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 28px;
       font-weight: 800;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
       line-height: 1.2;
       margin-bottom: 16px;
     }
     .tools-body {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 20px;
       line-height: 1.5;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
       margin-bottom: 32px;
     }
 
     .helpline-block {
-      background: #2A3F56;
+      background: var(--pb-color-primary-light);
       border-radius: 12px;
       padding: 24px 28px;
       text-align: center;
     }
     .helpline-label {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 18px;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
       margin-bottom: 8px;
     }
     .helpline-number {
-      font-family: 'Source Code Pro', monospace;
+      font-family: var(--pb-font-mono);
       font-size: 32px;
       font-weight: 600;
-      color: #00D4AA;
+      color: var(--pb-color-secondary);
       margin-bottom: 8px;
     }
     .helpline-sub {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 16px;
-      color: #6B6B8A;
+      color: var(--pb-color-neutral-500);
     }
 
     .legal-row {
@@ -196,12 +196,13 @@
       padding-top: 16px;
     }
     .legal-text {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 14px;
-      color: #6B6B8A;
+      color: var(--pb-color-neutral-500);
     }
   </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
   <div class="table-tent">
     <!-- Panel A: Odds fact + quiz hook -->
@@ -226,7 +227,7 @@
       <div class="tools-body">Set your deposit limit, session reminders, and activity alerts in your account settings. Takes 10 seconds.</div>
       <div class="helpline-block">
         <div class="helpline-label">Need to talk? Free, confidential support.</div>
-        <div class="helpline-number">1-800-522-4700</div>
+        <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
         <div class="helpline-sub">24/7 &middot; No judgment &middot; Any question about gambling</div>
       </div>
       <div class="legal-row">

@@ -11,19 +11,19 @@
   .sign-entrance {
     width: 900px;
     height: 1200px;
-    background: #1B2838;
+    background: var(--pb-color-primary);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--pb-font-body);
   }
   .sign-entrance::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 8px;
-    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
   .sign-entrance::after {
     content: '';
@@ -45,11 +45,11 @@
     z-index: 1;
   }
   .card-logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 32px;
   }
-  .card-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .card-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .co-brand {
     display: flex;
     align-items: center;
@@ -58,12 +58,12 @@
   .co-brand-divider {
     width: 1px;
     height: 36px;
-    background: #A8A8C0;
+    background: var(--pb-color-neutral-300);
   }
   .operator-placeholder {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 12px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     border: 2px dashed rgba(255,255,255,0.15);
     border-radius: 6px;
     padding: 8px 16px;
@@ -79,16 +79,16 @@
     z-index: 1;
   }
   .sign-headline {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 56px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     line-height: 1.15;
     margin-bottom: 20px;
   }
   .sign-sub {
     font-size: 22px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.5;
     margin-bottom: 48px;
     max-width: 600px;
@@ -104,32 +104,32 @@
   .qr-placeholder {
     width: 120px;
     height: 120px;
-    background: #FFFFFF;
+    background: var(--pb-color-white);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 12px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     font-weight: 600;
   }
   .qr-text {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 18px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
   .qr-text strong {
     display: block;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 4px;
   }
 
   .sign-footer {
-    background: #2A3F56;
+    background: var(--pb-color-primary-light);
     padding: 24px 56px;
     display: flex;
     justify-content: space-between;
@@ -138,17 +138,18 @@
     z-index: 1;
   }
   .footer-helpline {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: 18px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
   }
   .footer-legal {
     font-size: 14px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="sign-entrance">
 
@@ -170,7 +171,7 @@
   </div>
 
   <div class="sign-footer">
-    <span class="footer-helpline">Free, confidential support 24/7: 1-800-522-4700</span>
+    <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">21+ to gamble</span>
   </div>
 

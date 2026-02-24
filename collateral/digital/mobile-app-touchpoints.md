@@ -256,4 +256,17 @@ Recommended deep link paths for in-app content:
 
 ---
 
+## Related renders
+
+These Tier 2 templates show what key mobile touchpoints look like when rendered:
+
+| Template | Screen | Preview |
+|---|---|---|
+| [Limit reached](../render/limit-reached-10d.html) | In-app notification when deposit/session limit is hit | ![Limit reached](../render/limit-reached-10d.png) |
+| [Session summary](../render/session-summary-10c.html) | Activity dashboard card — time, spend, sessions | ![Session summary](../render/session-summary-10c.png) |
+| [Cooldown](../render/cooldown-10e.html) | Account pause confirmation screen | ![Cooldown](../render/cooldown-10e.png) |
+| [Self-exclusion](../render/self-exclusion-10b.html) | Self-exclusion flow — duration selection | ![Self-exclusion](../render/self-exclusion-10b.png) |
+
+---
+
 *Cross-references: [Application Guidelines — Mobile](../../brand-book/07-application-guidelines.md#mobile-app) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*

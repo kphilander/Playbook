@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Social Card — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .social-card {
+    width: 1080px;
+    height: 1080px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* 6px teal accent top bar */
+  .accent-bar {
+    height: 6px;
+    background: var(--pb-color-secondary);
+    flex-shrink: 0;
+  }
+
+  /* Header */
+  .card-header {
+    padding: 56px 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--pb-font-heading);
+    font-size: 36px;
+  }
+  .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--pb-color-primary);
+  }
+  .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pb-color-secondary);
+  }
+
+  /* Body */
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+    max-width: 900px;
+  }
+
+  .headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 900;
+    font-size: 72px;
+    color: var(--pb-color-primary);
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+  .subline {
+    font-size: 28px;
+    color: var(--pb-color-neutral-700);
+    line-height: 1.5;
+    margin-bottom: 56px;
+    max-width: 720px;
+  }
+
+  /* Helpline */
+  .helpline-number {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: 64px;
+    color: var(--pb-color-secondary);
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  .helpline-channels {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: 26px;
+    color: var(--pb-color-neutral-500);
+    letter-spacing: 0.04em;
+    margin-bottom: 56px;
+  }
+
+  /* QR placeholder */
+  .qr-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .qr-box {
+    width: 100px;
+    height: 100px;
+    background: var(--pb-color-neutral-50);
+    border: 1px solid var(--pb-color-neutral-100);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-mono);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pb-color-neutral-300);
+  }
+  .qr-label {
+    font-size: 16px;
+    color: var(--pb-color-neutral-500);
+  }
+
+  /* Footer */
+  .card-footer {
+    padding: 0 80px 56px;
+  }
+  .footer-text {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--pb-color-neutral-300);
+    letter-spacing: 0.02em;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
+<body>
+<div class="social-card">
+
+  <div class="accent-bar"></div>
+
+  <div class="card-header">
+    <span class="logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+  </div>
+
+  <div class="card-body">
+    <div class="headline">No question<br>is too small.</div>
+    <div class="subline">Free, confidential support for any question about gambling.</div>
+
+    <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
+    <div class="helpline-channels">Call &middot; Text &middot; Chat</div>
+
+    <div class="qr-row">
+      <div class="qr-box">QR</div>
+      <div class="qr-label">Scan for support</div>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <div class="footer-text">24/7 &middot; No judgment &middot; Ever.</div>
+  </div>
+
+</div>
+</body>
+</html>

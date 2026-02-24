@@ -1,2 +1,8 @@
 node_modules/
 .DS_Store
+
+# Generated files (auto-generated from _brand.yml by build pipeline)
+# These are committed for convenience but can be regenerated with `npm run generate`
+# slide-deck/src/generated/
+# collateral/render/brand-inject.css
+# visual-identity/design-tokens.css

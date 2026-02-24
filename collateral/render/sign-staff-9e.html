@@ -11,11 +11,11 @@
   .sign-staff {
     width: 900px;
     height: 1200px;
-    background: #FFFFFF;
+    background: var(--pb-color-white);
     position: relative;
     overflow: hidden;
-    font-family: 'Source Sans 3', sans-serif;
-    color: #1A1A2E;
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-neutral-900);
     display: flex;
     flex-direction: column;
   }
@@ -24,11 +24,11 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 8px;
-    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
 
   .staff-header {
-    background: #1B2838;
+    background: var(--pb-color-primary);
     padding: 40px 56px;
     position: relative;
     z-index: 1;
@@ -39,25 +39,25 @@
     justify-content: space-between;
     margin-bottom: 24px;
   }
-  .card-logo { font-family: 'Inter', sans-serif; font-size: 24px; }
-  .card-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .card-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: 24px; }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .internal-badge {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #FF6B35;
+    color: var(--pb-color-accent);
     background: rgba(255,107,53,0.15);
     padding: 6px 14px;
     border-radius: 100px;
   }
   .staff-headline {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 36px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     line-height: 1.2;
   }
 
@@ -77,64 +77,65 @@
     height: 44px;
     min-width: 44px;
     border-radius: 50%;
-    background: #1B2838;
+    background: var(--pb-color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 18px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     margin-top: 2px;
   }
   .item-content strong {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 19px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     display: block;
     margin-bottom: 6px;
     line-height: 1.3;
   }
   .item-content p {
     font-size: 16px;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     line-height: 1.6;
   }
   .item-content .highlight {
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     font-weight: 600;
   }
   .item-content .term-swap {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 14px;
     font-weight: 600;
-    background: #F5F5FA;
+    background: var(--pb-color-neutral-50);
     padding: 2px 6px;
     border-radius: 4px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
 
   .staff-footer {
-    background: #1B2838;
+    background: var(--pb-color-primary);
     padding: 24px 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   .footer-helpline {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: 18px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
   .footer-note {
     font-size: 13px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     font-style: italic;
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="sign-staff">
 
@@ -167,7 +168,7 @@
       <div class="item-number">3</div>
       <div class="item-content">
         <strong>Know the helpline.</strong>
-        <p><span class="highlight">1-800-522-4700</span> — free, confidential, 24/7. For any question about gambling.</p>
+        <p><span class="highlight">{{HELPLINE_NUMBER}}</span> — free, confidential, 24/7. For any question about gambling.</p>
       </div>
     </div>
 
@@ -189,7 +190,7 @@
   </div>
 
   <div class="staff-footer">
-    <span class="footer-helpline">1-800-522-4700</span>
+    <span class="footer-helpline">{{HELPLINE_NUMBER}}</span>
     <span class="footer-note">Internal use only</span>
   </div>
 

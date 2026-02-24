@@ -9,38 +9,39 @@
   body { margin: 0; background: transparent; }
   .poster {
     width: 1800px; height: 2400px;
-    background: linear-gradient(180deg, #1B2838, #0F1923);
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, #FF6B35, #00D4AA); z-index: 2; }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .poster::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .poster-logo { font-family: 'Inter', sans-serif; font-size: 48px; }
-  .poster-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .poster-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .poster-pillar { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1B2838; background: #00D4AA; padding: 12px 28px; border-radius: 100px; }
+  .poster-logo { font-family: var(--pb-font-heading); font-size: 48px; }
+  .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .poster-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .poster-pillar { font-family: var(--pb-font-heading); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; }
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
-  .myth-label { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #FF6B35; margin-bottom: 32px; }
-  .myth-statement { font-family: 'Inter', sans-serif; font-size: 80px; font-weight: 900; line-height: 1.1; color: #FFFFFF; margin-bottom: 40px; letter-spacing: -0.03em; }
-  .myth-statement .strike { text-decoration: line-through; text-decoration-color: #FF6B35; text-decoration-thickness: 6px; color: #A8A8C0; }
-  .divider { width: 120px; height: 6px; background: linear-gradient(90deg, #FF6B35, #00D4AA); margin-bottom: 40px; border-radius: 3px; }
-  .fact-statement { font-family: 'Source Sans 3', sans-serif; font-size: 36px; line-height: 1.55; color: #A8A8C0; margin-bottom: 48px; }
-  .fact-statement strong { color: #00D4AA; font-weight: 600; }
+  .myth-label { font-family: var(--pb-font-heading); font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--pb-color-accent); margin-bottom: 32px; }
+  .myth-statement { font-family: var(--pb-font-heading); font-size: 80px; font-weight: 900; line-height: 1.1; color: var(--pb-color-white); margin-bottom: 40px; letter-spacing: -0.03em; }
+  .myth-statement .strike { text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 6px; color: var(--pb-color-neutral-300); }
+  .divider { width: 120px; height: 6px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); margin-bottom: 40px; border-radius: 3px; }
+  .fact-statement { font-family: var(--pb-font-body); font-size: 36px; line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 48px; }
+  .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
   .fact-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px; margin-bottom: 48px; }
-  .fact-box-title { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #00D4AA; margin-bottom: 20px; }
-  .fact-box-text { font-family: 'Source Sans 3', sans-serif; font-size: 28px; line-height: 1.55; color: #A8A8C0; }
-  .fact-box-text strong { color: #FFFFFF; font-weight: 600; }
+  .fact-box-title { font-family: var(--pb-font-heading); font-size: 24px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-secondary); margin-bottom: 20px; }
+  .fact-box-text { font-family: var(--pb-font-body); font-size: 28px; line-height: 1.55; color: var(--pb-color-neutral-300); }
+  .fact-box-text strong { color: var(--pb-color-white); font-weight: 600; }
   .stat-row { display: flex; gap: 32px; margin-bottom: 48px; }
   .stat-item { flex: 1; text-align: center; }
-  .stat-number { font-family: 'Inter', sans-serif; font-size: 80px; font-weight: 900; color: #FF6B35; line-height: 1; letter-spacing: -0.03em; margin-bottom: 12px; }
-  .stat-label { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; color: #A8A8C0; }
-  .quiz-cta { display: block; width: 100%; padding: 36px; background: #00D4AA; color: #1B2838; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 32px; text-align: center; border-radius: 20px; text-decoration: none; letter-spacing: 0.02em; }
-  .poster-footer { background: #2A3F56; padding: 36px 96px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 24px; color: #FFFFFF; }
-  .footer-legal { font-family: 'Source Sans 3', sans-serif; font-size: 20px; color: #A8A8C0; }
+  .stat-number { font-family: var(--pb-font-heading); font-size: 80px; font-weight: 900; color: var(--pb-color-accent); line-height: 1; letter-spacing: -0.03em; margin-bottom: 12px; }
+  .stat-label { font-family: var(--pb-font-heading); font-size: 22px; font-weight: 600; color: var(--pb-color-neutral-300); }
+  .quiz-cta { display: block; width: 100%; padding: 36px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: 32px; text-align: center; border-radius: 20px; text-decoration: none; letter-spacing: 0.02em; }
+  .poster-footer { background: var(--pb-color-primary-light); padding: 36px 96px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: 24px; color: var(--pb-color-white); }
+  .footer-legal { font-family: var(--pb-font-body); font-size: 20px; color: var(--pb-color-neutral-300); }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="poster">
   <div class="poster-header">
@@ -69,7 +70,7 @@
     <a href="#" class="quiz-cta">Test your Game IQ &mdash; take the quiz</a>
   </div>
   <div class="poster-footer">
-    <span class="footer-helpline">Free, confidential support 24/7: 1-800-522-4700</span>
+    <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">21+ to gamble</span>
   </div>
 </div>

@@ -11,64 +11,64 @@
   .email {
     width: 600px;
     font-family: 'Source Sans 3', Arial, sans-serif;
-    background: #FFFFFF;
-    color: #1A1A2E;
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
     position: relative;
   }
   .accent-bar {
     height: 4px;
-    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
   .hero {
-    background: #1B2838;
+    background: var(--pb-color-primary);
     padding: 48px 56px;
     text-align: center;
   }
   .hero-logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 28px;
     margin-bottom: 32px;
     display: inline-block;
   }
   .hero-logo .logo-play {
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     font-weight: 800;
     letter-spacing: -0.02em;
   }
   .hero-logo .logo-book {
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
   .hero h1 {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 32px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     margin-bottom: 12px;
     line-height: 1.2;
   }
   .hero p {
     font-size: 16px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.6;
     max-width: 480px;
     margin: 0 auto;
   }
   .section-white {
     padding: 40px 56px;
-    background: #FFFFFF;
+    background: var(--pb-color-white);
   }
   .section-gray {
     padding: 40px 56px;
-    background: #F5F5FA;
+    background: var(--pb-color-neutral-50);
   }
   .section-heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 22px;
-    color: #1A1A2E;
+    color: var(--pb-color-neutral-900);
     margin-bottom: 24px;
   }
   .tool-item {
@@ -86,29 +86,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 18px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
   }
   .tool-item strong {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 16px;
-    color: #1A1A2E;
+    color: var(--pb-color-neutral-900);
     display: block;
     margin-bottom: 4px;
   }
   .tool-item span {
     font-size: 15px;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     line-height: 1.5;
   }
   .cta-button {
     display: inline-block;
-    background: #00D4AA;
-    color: #1B2838;
-    font-family: 'Inter', sans-serif;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 16px;
     padding: 14px 32px;
@@ -122,74 +122,75 @@
     padding: 20px 0;
   }
   .stat-number {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 48px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
     margin-bottom: 8px;
   }
-  .stat-number .teal { color: #00D4AA; }
-  .stat-number .orange { color: #FF6B35; }
+  .stat-number .teal { color: var(--pb-color-secondary); }
+  .stat-number .orange { color: var(--pb-color-accent); }
   .stat-context {
     font-size: 16px;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     line-height: 1.6;
     max-width: 400px;
     margin: 0 auto;
   }
   .footer {
-    background: #0F1923;
+    background: var(--pb-color-primary-dark);
     padding: 40px 56px;
     text-align: center;
   }
   .footer-support {
     font-size: 16px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     font-weight: 600;
     margin-bottom: 12px;
   }
   .footer-channels {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 14px;
     font-weight: 600;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     margin-bottom: 24px;
     line-height: 1.8;
   }
   .footer-legal {
     font-size: 13px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     line-height: 1.6;
     margin-bottom: 16px;
   }
   .footer-logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 16px;
     margin-top: 20px;
     display: inline-block;
   }
   .footer-logo .logo-play {
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     font-weight: 800;
     letter-spacing: -0.02em;
   }
   .footer-logo .logo-book {
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 0.08em;
   }
   .footer-unsub {
     font-size: 12px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     margin-top: 16px;
   }
   .footer-unsub a {
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     text-decoration: underline;
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="email">
 
@@ -240,9 +241,9 @@
   <div class="footer">
     <div class="footer-support">Free, confidential support — for any question about gambling.</div>
     <div class="footer-channels">
-      Call 1-800-522-4700<br>
-      Text 1-800-522-4700<br>
-      Chat at ncpgambling.org/chat
+      Call {{HELPLINE_NUMBER}}<br>
+      Text {{HELPLINE_NUMBER}}<br>
+      Chat at {{CHAT_URL}}
     </div>
     <div class="footer-legal">You must be 21+ to gamble. Gambling involves risk.</div>
     <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>

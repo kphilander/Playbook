@@ -115,6 +115,58 @@ Social media is where Playbook content earns organic reach through genuine engag
 - Content is designed to earn engagement, not just check a box
 - Quiz results and myth-busters are the highest-performing formats — lead with them
 
+### Tier 2 digital touchpoints
+
+Tier 2 content (crisis/support) appears at specific moments in the player journey. These touchpoints use a different visual treatment — calmer, more white space, no playful elements. See `visual-identity/tier-2/tier-2-visual-guide.md` for the full visual specification.
+
+| Touchpoint | What to show | Visual treatment | Tone |
+|---|---|---|---|
+| Support/help page | Helpline (phone/text/chat), self-exclusion link, FAQ | White surface, navy text, teal CTA only, no orange | Warm / Direct |
+| Self-exclusion flow | Duration selection, confirmation, what happens next | Single column, 640px max, one action per screen | Warm / Direct |
+| Activity dashboard | Time played, amount spent, session count, trends | Muted data viz, no gamification, neutral palette | Confident / Informative |
+| Limit-reached notification | Current limit, when it resets, support resources | Clear banner, not dismissible for 5 seconds, helpline visible | Warm / Direct |
+| Cooldown/pause screen | Account paused confirmation, when it expires, support | Maximum white space, simple message, helpline prominent | Warm / Direct |
+| Post-session summary | Session duration, spend, limit usage, support link | Card format, muted colors, no celebratory elements | Confident / Informative |
+
+**The Tier 2 test**: Can a player in distress find help within one tap? Is the helpline number above the fold? Is there anything playful, witty, or gamified on the page? If yes to the first two and no to the third, the Tier 2 implementation is correct.
+
+#### Tier 2 implementation checklist
+
+Before launching any Tier 2 touchpoint, verify the following:
+
+| Check | Requirement | Pass criteria |
+|---|---|---|
+| Helpline visibility | {{HELPLINE_NUMBER}} appears above the fold | Visible without scrolling on all breakpoints |
+| Color compliance | No orange, no vibrant accent colors | Only navy, teal, and neutral grays used |
+| Typography scale | Body text at 16px minimum | Meets WCAG AAA for readability |
+| White space ratio | At least 40% of the viewport is white space | Visual breathing room is evident |
+| Animation | No spring, bounce, or celebratory motion | Only simple opacity fades permitted |
+| Gamification | No points, badges, streaks, or progress bars | Content is purely informational |
+| Iconography | Functional icons only | No decorative or playful illustrations |
+| Language | Warm and direct — no wit, no wordplay | Reviewed against Tier 2 voice guidelines |
+
+#### Tier 2 content hierarchy
+
+Every Tier 2 screen follows a strict information hierarchy:
+
+1. **Primary**: The support action — what the player can do right now (call, text, chat, self-exclude)
+2. **Secondary**: Context — what is happening and why (limit reached, session length, account status)
+3. **Tertiary**: Additional resources — links to FAQ, further reading, alternative support channels
+
+Never invert this hierarchy. The support action always comes first. Context explains, but never blocks the path to help.
+
+#### Transition between Tier 1 and Tier 2
+
+When a player moves from standard content (Tier 1) to a support context (Tier 2), the visual transition should be deliberate:
+
+- Background shifts from brand colors to white
+- Accent color shifts from orange to teal
+- Typography weight increases for body text (improved readability under stress)
+- Layout simplifies — single column, fewer elements per screen
+- Playful brand elements (illustrations, mascots, decorative patterns) are removed entirely
+
+This transition signals a shift in context. The player should feel that the platform is taking their situation seriously.
+
 ---
 
 ## Print applications
@@ -182,6 +234,56 @@ Print serves land-based venues (casinos, betting shops, lottery retailers) and c
 - Helpline number as persistent text
 - CTA links to content hub or quiz
 
+### Motion and animation
+
+Motion reinforces meaning and helps players understand system responses. All animation in {{PROGRAM_NAME}} content follows four principles: purposeful (every animation has a reason), fast (never make users wait), accessible (respect `prefers-reduced-motion`), and consistent (same patterns everywhere).
+
+| Pattern | Duration | Easing | Use case |
+|---|---|---|---|
+| Micro-interaction | 150-200ms | ease-out | Button press, toggle, selection |
+| Panel transition | 300-500ms | ease-out | Page navigation, drawer open |
+| Data visualization | 600-800ms | ease-out, staggered | Chart entrance, quiz results |
+| Modal/dialog | 200ms backdrop + 250ms content | ease-out, scale from 95% | Limit reached, session reminder |
+| Toast notification | 300ms slide-in, 5s display | ease-out | Confirmation messages |
+
+**Tier 2 motion**: Support contexts use slower, subtler animation — no spring/bounce easing, no celebratory motion, no staggered reveals. Simple fades only. See `visual-identity/motion/motion.md` for the complete specification including CSS custom properties.
+
+**Reduced motion**: All animation must respect the `prefers-reduced-motion` media query. When reduced motion is active, show all content instantly — keep opacity fades at 100ms but disable all transform-based animations.
+
+#### Animation do's and don'ts
+
+| Do | Don't |
+|---|---|
+| Use animation to confirm a player action (button press, limit saved) | Animate purely for decoration or visual flair |
+| Keep durations under 500ms for interactive elements | Use animations longer than 1 second for any UI response |
+| Stagger chart data entrance so players can follow the narrative | Animate all data points simultaneously (overwhelming) |
+| Fade content in when it enters the viewport | Use slide-up reveals that shift page layout |
+| Provide instant fallback when `prefers-reduced-motion` is active | Assume all users can tolerate motion |
+
+#### Loading and skeleton states
+
+When content loads asynchronously, use skeleton screens rather than spinners:
+
+- Skeleton blocks match the shape and position of incoming content
+- Use a subtle pulse animation (opacity 0.6 to 1.0, 1.5s duration, infinite loop)
+- Replace skeleton with real content using a 150ms crossfade
+- Never show a spinner for loads under 300ms — show nothing instead
+- For Tier 2 contexts, use static gray placeholder blocks (no pulse animation)
+
+#### Haptic feedback (mobile)
+
+On supported devices, pair micro-interactions with light haptic feedback:
+
+| Action | Haptic pattern |
+|---|---|
+| Limit saved successfully | Single light tap |
+| Self-exclusion confirmed | Single medium tap |
+| Quiz answer selected | Single light tap |
+| Error / validation failure | Double light tap |
+| Toggle switch | Single light tap on both on and off |
+
+Haptic feedback is always optional and respects system-level accessibility settings. Never use haptic patterns that could be interpreted as celebratory or rewarding in Tier 2 contexts.
+
 ---
 
 ## Co-branding rules
@@ -233,6 +335,93 @@ Where jurisdictions require or operators desire Playbook messaging alongside com
 - **Navigation**: Playbook section in hamburger menu on mobile; main nav on desktop
 - **CTAs**: Stack vertically on mobile; inline on desktop
 - **Tables**: Convert to card layouts on mobile
+
+### Component-level responsive behavior
+
+Beyond the basic breakpoints, specific {{PROGRAM_NAME}} components have defined responsive behaviors.
+
+| Component | Mobile (< 768px) | Tablet (768-1024px) | Desktop (> 1024px) |
+|---|---|---|---|
+| Helpline strip | Icon + number only | Full text, single line | Full text + multiple contact options |
+| Quiz card | Full width, swipe to advance | Centered, 600px max | Centered, 640px max, keyboard nav visible |
+| Activity dashboard | Stacked cards, sparklines | 2-column grid | 3-column grid, full charts |
+| Deposit limit control | Full-width slider | Inline slider + input | Inline slider + input + comparison |
+| Support resource block | Stacked, phone first | 2-column, all channels visible | 3-column with descriptions |
+| Social sharing card | Full-width preview | Side-by-side preview + share | Side-by-side with platform selection |
+| Session reminder | Bottom sheet | Centered modal | Centered modal, 480px max |
+
+Always test at each breakpoint. Component-level responsive behavior should be smooth — no layout jumps, no content disappearing, no touch targets shrinking below 44px at any size.
+
+#### Touch target specifications
+
+All interactive elements must meet minimum touch target sizes across breakpoints:
+
+| Element type | Minimum size | Minimum spacing | Notes |
+|---|---|---|---|
+| Primary CTA button | 48x48px | 8px from adjacent targets | Includes deposit limit save, self-exclude confirm |
+| Secondary button | 44x44px | 8px from adjacent targets | Includes cancel, back, learn more |
+| Icon button | 44x44px (hit area) | 12px from adjacent targets | Visual icon may be smaller; hit area must meet minimum |
+| Text link (inline) | 44px height (hit area) | N/A | Underline on focus/hover; sufficient line height |
+| Checkbox / radio | 44x44px (hit area) | 8px between options | Label is part of the hit area |
+| Slider thumb | 44x44px | N/A | Includes deposit limit slider, session reminder duration |
+
+On mobile, if two interactive elements cannot maintain 8px spacing, stack them vertically rather than reducing their size.
+
+#### Responsive image and media handling
+
+| Asset type | Mobile | Tablet | Desktop |
+|---|---|---|---|
+| Hero illustration | Hidden or simplified version | 50% width, right-aligned | 40% width, right-aligned |
+| Infographic | Stacked sections, scroll to reveal | Two-column layout | Full layout, side-by-side |
+| Data chart | Sparkline or simplified bar chart | Standard chart, horizontal scroll if needed | Full chart with legend and annotations |
+| Video embed | Full width, 16:9 aspect ratio | Centered, 80% width | Centered, max 960px width |
+| Quiz card image | Above question, 100% width | Inline left, 40% width | Inline left, 30% width |
+
+Always serve appropriately sized image assets per breakpoint. Use `srcset` and `sizes` attributes to prevent mobile devices from downloading desktop-sized images.
+
+#### Orientation handling
+
+Account for both portrait and landscape orientations on mobile and tablet:
+
+- **Portrait (default)**: Standard layouts as defined above
+- **Landscape mobile**: Reduce vertical padding, keep single-column layout, ensure helpline strip remains visible
+- **Landscape tablet**: Can switch to desktop-style two-column layouts where appropriate
+- Lock orientation only for the self-exclusion flow (portrait) to prevent accidental input errors during a critical process
+
+#### Testing protocol
+
+Before any {{PROGRAM_NAME}} implementation goes live, verify responsive behavior with the following device matrix:
+
+| Device category | Example devices | Test priority |
+|---|---|---|
+| Small phone | iPhone SE, Galaxy A series | High — smallest common viewport |
+| Standard phone | iPhone 15, Pixel 8 | High — most common viewport |
+| Large phone | iPhone 15 Pro Max, Galaxy S Ultra | Medium |
+| Tablet portrait | iPad 10th gen, Galaxy Tab S | High — breakpoint boundary |
+| Tablet landscape | iPad Pro 12.9" | Medium |
+| Small desktop | 1280x800 laptop | High — minimum desktop target |
+| Large desktop | 1920x1080 and above | Medium |
+
+Run each test scenario with assistive technologies active (screen reader, increased text size at 200%, high contrast mode) to confirm that responsive behavior does not break accessibility.
+
+---
+
+## Visual examples by channel
+
+Representative renders showing how the brand applies across channels. Click the template name to view the full HTML source. See `collateral/render/` for all 36 templates.
+
+| Channel | Template | Preview |
+|---|---|---|
+| **Email** | [Welcome series](../collateral/render/email-welcome-7a.html) | ![Welcome email](../collateral/render/email-welcome-7a.png) |
+| **Social card** | [House edge](../collateral/render/card-2a-house-edge.html) | ![Social card](../collateral/render/card-2a-house-edge.png) |
+| **Story** | [Sports betting](../collateral/render/story-3c-sports-betting.html) | ![Story](../collateral/render/story-3c-sports-betting.png) |
+| **Poster** | [No Fine Print](../collateral/render/poster-4b-no-fine-print.html) | ![Poster](../collateral/render/poster-4b-no-fine-print.png) |
+| **Print — brochure** | [Inside spread](../collateral/render/brochure-trifold-8a.html) | ![Brochure](../collateral/render/brochure-trifold-8a.png) |
+| **Print — rack card** | [Rack card](../collateral/render/rack-card-5a.html) | ![Rack card](../collateral/render/rack-card-5a.png) |
+| **Venue sign** | [Entrance sign](../collateral/render/sign-entrance-9a.html) | ![Entrance sign](../collateral/render/sign-entrance-9a.png) |
+| **Digital display** | [Landscape](../collateral/render/display-landscape-6a.html) | ![Display](../collateral/render/display-landscape-6a.png) |
+| **Tier 2 — support** | [Support page](../collateral/render/support-page-10a.html) | ![Support page](../collateral/render/support-page-10a.png) |
+| **Tier 2 — poster** | [Helpline poster](../collateral/render/poster-tier2-10g.html) | ![Tier 2 poster](../collateral/render/poster-tier2-10g.png) |
 
 ---
 

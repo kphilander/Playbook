@@ -13,7 +13,7 @@
       width: 1920px;
       height: 1080px;
       position: relative;
-      background: linear-gradient(145deg, #0F1923, #1B2838);
+      background: linear-gradient(145deg, var(--pb-color-primary-dark), var(--pb-color-primary));
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -25,7 +25,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 8px;
-      background: linear-gradient(90deg, #FF6B35, #00D4AA);
+      background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
     }
 
     /* Subtle grid pattern overlay */
@@ -49,9 +49,9 @@
       z-index: 1;
     }
     .screen-logo {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 36px;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
     }
     .screen-logo .logo-play {
       font-weight: 800;
@@ -70,7 +70,7 @@
     .co-brand-divider {
       width: 1px;
       height: 36px;
-      background: #A8A8C0;
+      background: var(--pb-color-neutral-300);
     }
     .operator-placeholder {
       width: 160px;
@@ -80,7 +80,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 14px;
       color: rgba(255,255,255,0.25);
     }
@@ -99,32 +99,32 @@
     }
     .pillar-badge {
       display: inline-block;
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 20px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #1B2838;
-      background: #00D4AA;
+      color: var(--pb-color-primary);
+      background: var(--pb-color-secondary);
       padding: 8px 24px;
       border-radius: 100px;
       margin-bottom: 28px;
     }
     .screen-headline {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 64px;
       font-weight: 800;
       line-height: 1.1;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
       letter-spacing: -0.02em;
       margin-bottom: 20px;
       max-width: 900px;
     }
     .screen-subhead {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 28px;
       line-height: 1.5;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
       max-width: 800px;
       margin-bottom: 32px;
     }
@@ -137,25 +137,25 @@
       text-align: center;
     }
     .stat-game {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 18px;
-      color: #A8A8C0;
+      color: var(--pb-color-neutral-300);
       margin-bottom: 8px;
     }
     .stat-pct {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 48px;
       font-weight: 900;
       line-height: 1;
       letter-spacing: -0.03em;
     }
-    .stat-pct.teal { color: #00D4AA; }
-    .stat-pct.white { color: #FFFFFF; }
-    .stat-pct.orange { color: #FF6B35; }
+    .stat-pct.teal { color: var(--pb-color-secondary); }
+    .stat-pct.white { color: var(--pb-color-white); }
+    .stat-pct.orange { color: var(--pb-color-accent); }
     .stat-label {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 16px;
-      color: #6B6B8A;
+      color: var(--pb-color-neutral-500);
       margin-top: 4px;
     }
 
@@ -168,26 +168,26 @@
     .qr-box {
       width: 180px;
       height: 180px;
-      background: #FFFFFF;
+      background: var(--pb-color-white);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Source Code Pro', monospace;
+      font-family: var(--pb-font-mono);
       font-size: 16px;
-      color: #1B2838;
+      color: var(--pb-color-primary);
       margin-bottom: 12px;
     }
     .qr-label {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--pb-font-heading);
       font-size: 18px;
       font-weight: 600;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
       text-align: center;
     }
 
     .helpline-strip {
-      background: #2A3F56;
+      background: var(--pb-color-primary-light);
       padding: 20px 72px;
       display: flex;
       align-items: center;
@@ -196,10 +196,10 @@
       z-index: 1;
     }
     .helpline-text {
-      font-family: 'Source Code Pro', monospace;
+      font-family: var(--pb-font-mono);
       font-size: 22px;
       font-weight: 600;
-      color: #FFFFFF;
+      color: var(--pb-color-white);
     }
 
     .legal-strip {
@@ -209,12 +209,13 @@
       z-index: 1;
     }
     .legal-text {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: var(--pb-font-body);
       font-size: 16px;
-      color: #6B6B8A;
+      color: var(--pb-color-neutral-500);
     }
   </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
   <div class="display-screen">
     <div class="screen-header">
@@ -253,7 +254,7 @@
       </div>
     </div>
     <div class="helpline-strip">
-      <span class="helpline-text">Free, confidential support 24/7: 1-800-522-4700</span>
+      <span class="helpline-text">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     </div>
     <div class="legal-strip">
       <span class="legal-text">You must be 21+ to gamble. Gambling involves risk. Play on your terms.</span>

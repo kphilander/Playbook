@@ -2,6 +2,8 @@
 
 Complete reference for all 31 icons in the Playbook brand system. Each icon uses a **dual stroke-weight system** that echoes the logo's typographic contrast (Play 800 / BOOK 300).
 
+![Full icon grid preview](icon-preview.png)
+
 ---
 
 ## Design philosophy: Weight contrast

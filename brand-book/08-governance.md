@@ -75,6 +75,21 @@ Gambling regulations change frequently. Every quarter, verify:
 | Content underperforming | Review and revise | Within 2 weeks |
 | Accessibility issue | Fix | Within 1 week |
 
+### Content review rubric
+
+Use this rubric when reviewing any new or updated {{PROGRAM_NAME}} content before publication. Score each dimension 1–3. Content must score 2+ on every dimension to ship.
+
+| Dimension | 1 — Needs work | 2 — Acceptable | 3 — Excellent |
+|---|---|---|---|
+| **Voice alignment** | Sounds like compliance or clinical copy | Follows Playbook voice but could be sharper | Unmistakably Playbook — a friend explaining something interesting |
+| **Specificity** | Uses generic phrases ("responsible gambling," "play smart") | Names some specific behaviors | Every sentence names a concrete action or fact |
+| **Stigma-free language** | Uses clinical/judgmental terms in Tier 1 | Mostly clean, one or two terms to swap | Fully aligned with stigma-free language guide |
+| **Accessibility** | Fails contrast, missing alt text, or broken keyboard nav | Passes WCAG AA, basic screen reader support | AAA where possible, tested on real devices |
+| **Actionability** | No clear CTA or next step | CTA present but could be stronger | CTA is obvious, specific, and compelling |
+| **Visual quality** | Looks like a compliance afterthought | Acceptable but not remarkable | Matches or exceeds commercial content quality |
+
+Any dimension scoring 1 is a blocker. Fix before publishing. The content review rubric is a complement to — not a replacement for — the content approval workflow.
+
 ---
 
 ## Version control
@@ -163,6 +178,57 @@ When someone new joins a team that creates Playbook content:
 - Consider an annual brand refresh workshop
 - Monitor industry developments and share relevant findings
 
+### Brand audit checklist
+
+Conduct a comprehensive brand audit annually, or when onboarding a new operator. This checklist covers every component of the {{PROGRAM_NAME}} system.
+
+#### Identity
+- [ ] Logo is used in an approved layout and minimum size
+- [ ] Color palette matches `_brand.yml` configuration
+- [ ] Typography uses specified font families and weights
+- [ ] Iconography follows the 2px stroke, rounded-cap style
+
+#### Voice and tone
+- [ ] All Tier 1 content passes the stigma-free language audit (8-point checklist)
+- [ ] All Tier 2 content uses warm/direct tone — no humor, no playful elements
+- [ ] Helpline framing is "for any question about gambling" (not crisis-only)
+- [ ] No instances of "responsible gambling," "gamble responsibly," or retired phrases
+
+#### Digital
+- [ ] Content hub is accessible from primary navigation
+- [ ] Helpline is visible above the fold on every page
+- [ ] Footer strip present on all pages (logomark + helpline + age restriction + content hub link)
+- [ ] All interactive elements are keyboard-accessible
+- [ ] All content passes WCAG 2.1 AA contrast requirements
+- [ ] Touch targets are 44x44px minimum on mobile
+
+#### Print and environmental
+- [ ] Print materials match digital design quality
+- [ ] Helpline numbers are minimum 14pt bold
+- [ ] QR codes link to correct URLs and have been tested
+- [ ] Venue signage is readable from 3 meters
+
+#### Governance
+- [ ] Brand owner is designated and active
+- [ ] Jurisdiction modules are current
+- [ ] CHANGELOG is up to date
+- [ ] Last quarterly regulatory check was within 90 days
+
+### Stewardship handoff process
+
+When brand ownership transfers — whether to a new team member, a new department, or a new organization — follow this handoff process to maintain consistency.
+
+| Step | Action | Timeline |
+|---|---|---|
+| 1. Knowledge transfer | Outgoing owner walks incoming owner through the entire brand book, _brand.yml, and key decisions made since launch | 1–2 sessions |
+| 2. Access transfer | Transfer access to: Git repository, design files, content management tools, analytics dashboards | Day 1 |
+| 3. Relationship mapping | Introduce the new owner to: compliance contacts, content creators, design team, jurisdiction specialists | Week 1 |
+| 4. First audit | New owner conducts a brand audit using the checklist above | Within 30 days |
+| 5. First review cycle | New owner leads a quarterly regulatory check and content review | Within 90 days |
+| 6. Signoff | New owner confirms readiness and formally accepts ownership | After step 5 |
+
+Document the handoff. The CHANGELOG should include: date, outgoing owner, incoming owner, and any decisions or exceptions that were in-flight during the transition.
+
 ---
 
 ## Upstream contributions
@@ -232,8 +298,6 @@ Playbook is not a clinical intervention. Don't measure:
 - "At-risk player identification" (Playbook doesn't diagnose)
 
 Measure engagement. Measure adoption. Measure whether players find the content useful and interesting. That's the standard.
-
-See `implementation/measurement-framework.md` for a complete measurement plan template.
 
 ---
 

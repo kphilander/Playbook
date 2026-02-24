@@ -11,17 +11,17 @@
   .sign-floor {
     width: 900px;
     height: 700px;
-    background: #1B2838;
+    background: var(--pb-color-primary);
     position: relative;
     overflow: hidden;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: var(--pb-font-body);
   }
   .sign-floor::before {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 6px;
-    background: linear-gradient(90deg, #FF6B35, #00D4AA);
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
   .sign-floor::after {
     content: '';
@@ -57,25 +57,25 @@
   }
 
   .section-label {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #FF6B35;
+    color: var(--pb-color-accent);
     margin-bottom: 12px;
   }
   .sign-headline {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 40px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     line-height: 1.15;
     margin-bottom: 20px;
   }
   .sign-body {
     font-size: 18px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
     line-height: 1.6;
     margin-bottom: 24px;
   }
@@ -87,21 +87,21 @@
   .qr-placeholder {
     width: 80px;
     height: 80px;
-    background: #FFFFFF;
+    background: var(--pb-color-white);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 10px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     font-weight: 600;
   }
   .qr-text {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 14px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
 
   .odds-card {
@@ -114,43 +114,44 @@
     align-items: center;
   }
   .odds-game {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: 16px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
   }
   .odds-edge {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: 24px;
   }
-  .odds-edge.teal { color: #00D4AA; }
-  .odds-edge.white { color: #FFFFFF; }
-  .odds-edge.orange { color: #FF6B35; }
+  .odds-edge.teal { color: var(--pb-color-secondary); }
+  .odds-edge.white { color: var(--pb-color-white); }
+  .odds-edge.orange { color: var(--pb-color-accent); }
 
   .sign-bottom {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #2A3F56;
+    background: var(--pb-color-primary-light);
     padding: 16px 48px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
   }
-  .bottom-logo { font-family: 'Inter', sans-serif; font-size: 18px; }
-  .bottom-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .bottom-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .bottom-logo { font-family: var(--pb-font-heading); font-size: 18px; }
+  .bottom-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .bottom-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .bottom-helpline {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: 14px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
   }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="sign-floor">
 
@@ -182,7 +183,7 @@
 
   <div class="sign-bottom">
     <span class="bottom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
-    <span class="bottom-helpline">Free support 24/7: 1-800-522-4700</span>
+    <span class="bottom-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
   </div>
 
 </div>

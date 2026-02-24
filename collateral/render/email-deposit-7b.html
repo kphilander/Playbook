@@ -11,48 +11,48 @@
   .email {
     width: 600px;
     font-family: 'Source Sans 3', Arial, sans-serif;
-    background: #FFFFFF;
-    color: #1A1A2E;
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
   }
-  .accent-bar { height: 4px; background: linear-gradient(90deg, #FF6B35, #00D4AA); }
+  .accent-bar { height: 4px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
   .hero {
-    background: #1B2838;
+    background: var(--pb-color-primary);
     padding: 48px 56px;
     text-align: center;
   }
   .hero-logo {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-size: 22px;
     margin-bottom: 32px;
     display: inline-block;
   }
-  .hero-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .hero-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .hero h1 {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 28px;
-    color: #FFFFFF;
+    color: var(--pb-color-white);
     margin-bottom: 20px;
   }
   .deposit-amount {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 48px;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     margin-bottom: 8px;
   }
   .deposit-date {
     font-size: 16px;
-    color: #A8A8C0;
+    color: var(--pb-color-neutral-300);
   }
-  .section-white { padding: 40px 56px; background: #FFFFFF; }
-  .section-gray { padding: 40px 56px; background: #F5F5FA; }
+  .section-white { padding: 40px 56px; background: var(--pb-color-white); }
+  .section-gray { padding: 40px 56px; background: var(--pb-color-neutral-50); }
   .section-heading {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 20px;
-    color: #1A1A2E;
+    color: var(--pb-color-neutral-900);
     margin-bottom: 24px;
   }
   .budget-grid {
@@ -62,28 +62,28 @@
   }
   .budget-stat {
     flex: 1;
-    background: #F5F5FA;
+    background: var(--pb-color-neutral-50);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
   }
   .budget-stat .label {
     font-size: 13px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 600;
     margin-bottom: 8px;
   }
   .budget-stat .value {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: 22px;
-    color: #1B2838;
+    color: var(--pb-color-primary);
   }
-  .budget-stat .value.teal { color: #00D4AA; }
-  .budget-stat .value.orange { color: #FF6B35; }
+  .budget-stat .value.teal { color: var(--pb-color-secondary); }
+  .budget-stat .value.orange { color: var(--pb-color-accent); }
   .progress-bar-outer {
     width: 100%;
     height: 8px;
@@ -94,25 +94,25 @@
   .progress-bar-inner {
     width: 35%;
     height: 8px;
-    background: linear-gradient(90deg, #00D4AA, #00B894);
+    background: linear-gradient(90deg, var(--pb-color-secondary), #00B894);
     border-radius: 4px;
   }
   .progress-label {
     font-size: 14px;
-    color: #6B6B8A;
+    color: var(--pb-color-neutral-500);
     text-align: right;
   }
   .note {
     font-size: 15px;
-    color: #3D3D5C;
+    color: var(--pb-color-neutral-700);
     line-height: 1.6;
     margin-top: 16px;
   }
   .cta-button {
     display: inline-block;
-    background: #00D4AA;
-    color: #1B2838;
-    font-family: 'Inter', sans-serif;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: 15px;
     padding: 12px 28px;
@@ -132,42 +132,43 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #00D4AA;
+    background: var(--pb-color-secondary);
     min-width: 10px;
   }
-  .tool-dot.off { background: #A8A8C0; }
+  .tool-dot.off { background: var(--pb-color-neutral-300); }
   .tool-label {
     font-weight: 600;
     font-size: 15px;
-    color: #1A1A2E;
+    color: var(--pb-color-neutral-900);
     flex: 1;
   }
   .tool-status {
     font-size: 14px;
-    color: #6B6B8A;
-    font-family: 'Source Code Pro', monospace;
+    color: var(--pb-color-neutral-500);
+    font-family: var(--pb-font-mono);
     font-weight: 500;
   }
   .footer {
-    background: #0F1923;
+    background: var(--pb-color-primary-dark);
     padding: 36px 56px;
     text-align: center;
   }
-  .footer-support { font-size: 15px; color: #FFFFFF; font-weight: 600; margin-bottom: 10px; }
+  .footer-support { font-size: 15px; color: var(--pb-color-white); font-weight: 600; margin-bottom: 10px; }
   .footer-channels {
-    font-family: 'Source Code Pro', monospace;
+    font-family: var(--pb-font-mono);
     font-size: 14px;
     font-weight: 600;
-    color: #00D4AA;
+    color: var(--pb-color-secondary);
     margin-bottom: 20px;
     line-height: 1.8;
   }
-  .footer-legal { font-size: 13px; color: #6B6B8A; line-height: 1.6; margin-bottom: 12px; }
-  .footer-logo { font-family: 'Inter', sans-serif; font-size: 14px; margin-top: 16px; display: inline-block; }
-  .footer-logo .logo-play { color: #FFFFFF; font-weight: 800; letter-spacing: -0.02em; }
-  .footer-logo .logo-book { color: #00D4AA; font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-legal { font-size: 13px; color: var(--pb-color-neutral-500); line-height: 1.6; margin-bottom: 12px; }
+  .footer-logo { font-family: var(--pb-font-heading); font-size: 14px; margin-top: 16px; display: inline-block; }
+  .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
 </style>
-</head>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
 <body>
 <div class="email">
 
@@ -228,7 +229,7 @@
 
   <div class="footer">
     <div class="footer-support">Free, confidential support — for any question about gambling.</div>
-    <div class="footer-channels">Call 1-800-522-4700 | Text 1-800-522-4700</div>
+    <div class="footer-channels">Call {{HELPLINE_NUMBER}} | Text {{HELPLINE_NUMBER}}</div>
     <div class="footer-legal">You must be 21+ to gamble. Gambling involves risk.</div>
     <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
   </div>

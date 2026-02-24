@@ -17,9 +17,11 @@
 import { writeFileSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadBrand } from '../../lib/brand-config.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..', '..');
+const brand = loadBrand();
+const ROOT = brand.ROOT;
 const ICONS_DIR = join(ROOT, 'visual-identity', 'iconography', 'icons');
 const PREVIEW_PATH = join(ROOT, 'visual-identity', 'iconography', 'icon-preview.html');
 
@@ -486,13 +488,13 @@ const previewHtml = `<!DOCTYPE html>
   <title>Playbook Icon Library — Weight Contrast Preview</title>
   <style>
     :root {
-      --pb-color-primary: #1B2838;
-      --pb-color-secondary: #00D4AA;
-      --pb-color-accent: #FF6B35;
-      --pb-color-neutral-50: #F5F5FA;
-      --pb-color-neutral-100: #E8E8F0;
-      --pb-color-neutral-500: #6B6B8A;
-      --pb-color-neutral-900: #1A1A2E;
+      --pb-color-primary: ${brand.color.palette.primary};
+      --pb-color-secondary: ${brand.color.palette.secondary};
+      --pb-color-accent: ${brand.color.palette.accent};
+      --pb-color-neutral-50: ${brand.color.palette.neutral_50};
+      --pb-color-neutral-100: ${brand.color.palette.neutral_100};
+      --pb-color-neutral-500: ${brand.color.palette.neutral_500};
+      --pb-color-neutral-900: ${brand.color.palette.neutral_900};
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {

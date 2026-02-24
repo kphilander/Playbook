@@ -97,6 +97,29 @@ visual-identity/logo/
 
 Regenerate all logo files: `node collateral/render/build-logos.mjs`
 
+### Logo previews
+
+**Primary layouts:**
+
+| Stacked | Horizontal |
+|---|---|
+| ![Stacked full-color](../visual-identity/logo/primary/logo-stacked-full-color.svg) | ![Horizontal full-color](../visual-identity/logo/primary/logo-horizontal-full-color.svg) |
+| ![Stacked on-light](../visual-identity/logo/primary/logo-stacked-on-light.svg) | ![Horizontal on-light](../visual-identity/logo/primary/logo-horizontal-on-light.svg) |
+
+**Secondary layouts:**
+
+| Stacked | Horizontal |
+|---|---|
+| ![Stacked reversed](../visual-identity/logo/secondary/logo-stacked-reversed.svg) | ![Horizontal reversed](../visual-identity/logo/secondary/logo-horizontal-reversed.svg) |
+| ![Stacked mono-dark](../visual-identity/logo/secondary/logo-stacked-mono-dark.svg) | ![Horizontal mono-dark](../visual-identity/logo/secondary/logo-horizontal-mono-dark.svg) |
+| ![Stacked mono-white](../visual-identity/logo/secondary/logo-stacked-mono-white.svg) | ![Horizontal mono-white](../visual-identity/logo/secondary/logo-horizontal-mono-white.svg) |
+
+**Favicon and helpline badge:**
+
+| Favicon | Favicon reversed | Helpline light | Helpline dark |
+|---|---|---|---|
+| ![Favicon](../visual-identity/logo/favicon/favicon.svg) | ![Favicon reversed](../visual-identity/logo/favicon/favicon-reversed.svg) | ![Helpline light](../visual-identity/logo/helpline-badge/helpline-badge-light.svg) | ![Helpline dark](../visual-identity/logo/helpline-badge/helpline-badge-dark.svg) |
+
 #### Prohibited modifications
 
 Do not:
@@ -480,17 +503,92 @@ For educational content (odds, probabilities, house edge comparisons):
 
 ## 7. Dark mode
 
-When the operator's platform supports dark mode, the {{PROGRAM_NAME}} color system should adapt:
+When the operator's platform supports dark mode, the {{PROGRAM_NAME}} color system should adapt. Dark mode isn't just an inverted light mode — it requires intentional color mapping to maintain readability, hierarchy, and brand identity.
 
-| Light mode | Dark mode adaptation |
+### When to auto-switch
+
+| Trigger | Behavior |
 |---|---|
-| `neutral_50` (background) | `neutral_900` (background) |
-| `neutral_900` (text) | `neutral_50` (text) |
-| `primary` (headers) | `primary_light` (lighter for contrast on dark bg) |
-| `white` (surface) | `neutral_700` (surface) |
-| Semantic colors | Slightly desaturated to reduce eye strain |
+| System preference (`prefers-color-scheme: dark`) | Auto-switch to dark mode. This is the default. |
+| User toggle in-app | Override system preference. Persist the choice. |
+| Scheduled (sunrise/sunset) | Only if the operator's platform supports it. |
+| Tier 2 support pages | Always use light mode — dark mode can feel isolating in crisis contexts. |
 
-All dark mode combinations must pass WCAG 2.1 AA contrast requirements.
+**Rule**: Never force dark mode. Always respect the user's system preference unless they've explicitly toggled within the app.
+
+### Semantic color mapping
+
+| Token | Light mode | Dark mode | Ratio on dark bg |
+|---|---|---|---|
+| `background` | `neutral_50` (#F5F5FA) | `neutral_900` (#1A1A2E) | — |
+| `surface` | `white` (#FFFFFF) | `neutral_700` (#3D3D5C) | — |
+| `text_primary` | `neutral_900` (#1A1A2E) | `neutral_50` (#F5F5FA) | 15.70:1 ✓ |
+| `text_secondary` | `neutral_700` (#3D3D5C) | `neutral_300` (#A8A8C0) | 7.33:1 ✓ |
+| `text_muted` | `neutral_500` (#6B6B8A) | `neutral_500` (#6B6B8A) | 3.33:1 (large text only) |
+| `headers` | `primary` (#1B2838) | `primary_light` (#2A3F56) | — |
+| `link` | `primary_light` (#2A3F56) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+| `border` | `neutral_500` (#6B6B8A) | `neutral_700` (#3D3D5C) | — |
+| `accent` (CTA) | `accent` (#FF6B35) | `accent_light` (#FF8A5C) | 7.34:1 ✓ |
+| `secondary` (CTA) | `secondary_dark` (#00A888) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+
+**Note on muted text in dark mode**: `neutral_500` on `neutral_900` produces only 3.33:1 — this passes for large text (3:1 threshold) but fails AA normal text (4.5:1). Use muted text sparingly in dark mode, and only at 18px+ or 14px+ bold.
+
+### Semantic status colors in dark mode
+
+Status colors (success, warning, danger, info) need adjustment for dark backgrounds:
+
+| Status | Light mode | Dark mode | Dark mode text | Ratio |
+|---|---|---|---|---|
+| Success | `#00C853` bg + `primary` text | `#00C853` bg + `primary` text | Same — dark text on green | 6.67:1 ✓ |
+| Warning | `#FFB300` bg + `primary` text | `#FFB300` bg + `primary` text | Same — dark text on amber | 8.31:1 ✓ |
+| Danger | `#FF3D00` bg + `black` text | `#FF3D00` bg + `black` text | Same — dark text on red | 5.32:1 ✓ |
+| Info | `#2979FF` bg + `black` text | `#2979FF` bg + `black` text | Same — dark text on blue | 4.74:1 ✓ |
+
+**Rule of thumb**: Always use dark text on chromatic status backgrounds, in both light and dark mode. Never use white text on these colors.
+
+### Image and media treatment
+
+| Asset type | Dark mode treatment |
+|---|---|
+| Photographs | Reduce brightness to 85-90% to prevent glare on dark backgrounds |
+| Illustrations / icons | Use light-on-dark variants (swap stroke and fill colors) |
+| Charts / data viz | Use light text and grid lines; reduce opacity of non-essential elements |
+| Screenshots | Add a subtle border (`neutral_700`, 1px) so edges don't bleed into the background |
+| Brand gradient bar | No change — the orange → teal gradient works on both light and dark |
+
+### CSS implementation
+
+```css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pb-bg: #1A1A2E;
+    --pb-surface: #3D3D5C;
+    --pb-text-primary: #F5F5FA;
+    --pb-text-secondary: #A8A8C0;
+    --pb-text-muted: #6B6B8A;
+    --pb-border: #3D3D5C;
+    --pb-link: #00D4AA;
+    --pb-accent: #FF8A5C;
+  }
+
+  img:not([src*=".svg"]) {
+    filter: brightness(0.88);
+  }
+}
+```
+
+Operators using `_brand.yml` can override these tokens. The CSS custom property names use the `--pb-` prefix (short for Playbook) to avoid collisions with operator stylesheets.
+
+### Testing requirements
+
+- [ ] Test with system dark mode on macOS, Windows, iOS, and Android
+- [ ] Verify all text meets WCAG 2.1 AA contrast on dark backgrounds
+- [ ] Check that images don't glare or blow out on dark surfaces
+- [ ] Confirm the user's preference persists across sessions
+- [ ] Verify Tier 2 pages remain in light mode regardless of system setting
+- [ ] Test the transition animation between modes (prefer `150ms ease-out` on `background-color` and `color`)
+
+All dark mode combinations must pass WCAG 2.1 AA contrast requirements. See `visual-identity/color/accessibility-matrix.md` for the full contrast ratio matrix on dark backgrounds.
 
 ---
 
@@ -504,6 +602,34 @@ Before shipping any Playbook content, apply this test:
 4. **Is it accessible?** Run the contrast ratios. Check the touch targets. Test with a screen reader.
 
 If it passes all four, ship it.
+
+---
+
+## What it looks like
+
+A curated selection of rendered templates showing the visual identity in action. Click the template name to view the full HTML source. See `collateral/render/` for all 36 templates.
+
+### Tier 1 — Entertainment literacy
+
+| Category | Template | Preview |
+|---|---|---|
+| Social card | [Hot streak myth-buster](../collateral/render/card-1a-hot-streak.html) | ![Social card](../collateral/render/card-1a-hot-streak.png) |
+| Story | [Hot streak story](../collateral/render/story-3a-hot-streak.html) | ![Story](../collateral/render/story-3a-hot-streak.png) |
+| Poster | [Know Your Game](../collateral/render/poster-4a-know-your-game.html) | ![Poster](../collateral/render/poster-4a-know-your-game.png) |
+| Email | [Welcome series](../collateral/render/email-welcome-7a.html) | ![Email](../collateral/render/email-welcome-7a.png) |
+| Venue sign | [Entrance sign](../collateral/render/sign-entrance-9a.html) | ![Sign](../collateral/render/sign-entrance-9a.png) |
+| Print | [Rack card](../collateral/render/rack-card-5a.html) | ![Rack card](../collateral/render/rack-card-5a.png) |
+| Digital display | [Landscape display](../collateral/render/display-landscape-6a.html) | ![Display](../collateral/render/display-landscape-6a.png) |
+
+### Tier 2 — Support and crisis
+
+| Category | Template | Preview |
+|---|---|---|
+| Support page | [Help/support landing](../collateral/render/support-page-10a.html) | ![Support page](../collateral/render/support-page-10a.png) |
+| Self-exclusion | [Pause account flow](../collateral/render/self-exclusion-10b.html) | ![Self-exclusion](../collateral/render/self-exclusion-10b.png) |
+| Poster | [Venue helpline poster](../collateral/render/poster-tier2-10g.html) | ![Tier 2 poster](../collateral/render/poster-tier2-10g.png) |
+
+See the [Tier 2 Visual Guide](../visual-identity/tier-2/tier-2-visual-guide.md) for the full visual specification and all 8 Tier 2 template previews.
 
 ---
 

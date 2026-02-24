@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Self-Exclusion — Duration Selection — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .screen {
+    width: 420px;
+    min-height: 680px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Step indicator */
+  .step-bar {
+    padding: 24px 32px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .step-back {
+    font-family: var(--pb-font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pb-color-neutral-500);
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .step-back:hover {
+    color: var(--pb-color-neutral-700);
+  }
+  .step-dots {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--pb-color-neutral-100);
+  }
+  .step-dot.done {
+    background: var(--pb-color-secondary);
+  }
+  .step-dot.active {
+    background: var(--pb-color-secondary);
+    width: 24px;
+    border-radius: 4px;
+  }
+  .step-label {
+    font-family: var(--pb-font-body);
+    font-size: 13px;
+    color: var(--pb-color-neutral-300);
+    margin-left: 8px;
+  }
+
+  /* Content */
+  .content {
+    padding: 36px 32px 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--pb-color-primary);
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .explanation {
+    font-size: 15px;
+    color: var(--pb-color-neutral-700);
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  /* Duration radio-cards */
+  .duration-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+    flex: 1;
+  }
+  .duration-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border: 1.5px solid var(--pb-color-neutral-100);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .duration-option:hover {
+    border-color: var(--pb-color-neutral-300);
+  }
+  .duration-option.selected {
+    border-color: var(--pb-color-secondary);
+    background: #F0FDF9;
+  }
+  .radio-circle {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--pb-color-neutral-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .selected .radio-circle {
+    border-color: var(--pb-color-secondary);
+  }
+  .radio-fill {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+  }
+  .selected .radio-fill {
+    background: var(--pb-color-secondary);
+  }
+  .duration-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--pb-color-primary);
+  }
+
+  /* CTA */
+  .cta-button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .back-link {
+    text-align: center;
+    font-family: var(--pb-font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pb-color-neutral-500);
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 8px;
+  }
+  .back-link:hover {
+    color: var(--pb-color-neutral-700);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
+<body>
+<div class="screen">
+
+  <div class="step-bar">
+    <a class="step-back">&larr;</a>
+    <div class="step-dots">
+      <div class="step-dot done"></div>
+      <div class="step-dot active"></div>
+      <div class="step-dot"></div>
+    </div>
+    <span class="step-label">Step 2 of 3</span>
+  </div>
+
+  <div class="content">
+    <h1 class="heading">How long would you like to pause?</h1>
+    <p class="explanation">Choose a duration that feels right. You can always reach out to support to adjust this later.</p>
+
+    <div class="duration-list">
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">24 hours</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">7 days</div>
+      </div>
+      <div class="duration-option selected">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">30 days</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">6 months</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">1 year</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">Indefinite</div>
+      </div>
+    </div>
+
+    <button class="cta-button">Continue</button>
+    <a class="back-link">Go back</a>
+  </div>
+
+</div>
+</body>
+</html>

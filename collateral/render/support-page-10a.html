@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<title>Support Page — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .support-page {
+    width: 800px;
+    min-height: 1000px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 3px solid teal top bar */
+  .accent-bar {
+    height: 3px;
+    background: var(--pb-color-secondary);
+    flex-shrink: 0;
+  }
+
+  /* Header: logo + co-brand */
+  .header {
+    padding: 32px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F0F0F5;
+  }
+  .logo {
+    font-family: var(--pb-font-heading);
+    font-size: 24px;
+  }
+  .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--pb-color-primary);
+  }
+  .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pb-color-secondary);
+  }
+  .co-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .co-brand-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--pb-color-neutral-300);
+  }
+  .operator-placeholder {
+    width: 100px;
+    height: 36px;
+    border: 1.5px dashed var(--pb-color-neutral-300);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-body);
+    font-size: 11px;
+    color: var(--pb-color-neutral-300);
+    letter-spacing: 0.02em;
+  }
+
+  /* Content area */
+  .content {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 80px 40px;
+    width: 100%;
+    flex: 1;
+  }
+
+  .page-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: 32px;
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .page-subhead {
+    font-size: 17px;
+    color: var(--pb-color-neutral-700);
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+  /* Contact channels */
+  .channel-list {
+    margin-bottom: 40px;
+  }
+  .channel-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--pb-color-neutral-50);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .channel-row:hover {
+    background: #EEEEF4;
+  }
+  .channel-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: var(--pb-color-white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--pb-color-primary);
+  }
+  .channel-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  .channel-info {
+    flex: 1;
+  }
+  .channel-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--pb-color-primary);
+    margin-bottom: 2px;
+  }
+  .channel-detail {
+    font-family: var(--pb-font-mono);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--pb-color-neutral-700);
+  }
+  .channel-arrow {
+    color: var(--pb-color-neutral-300);
+  }
+  .channel-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Separator */
+  .separator {
+    height: 1px;
+    background: #F0F0F5;
+    margin: 8px 0 32px;
+  }
+
+  /* Secondary resources */
+  .section-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pb-color-neutral-500);
+    margin-bottom: 16px;
+  }
+  .resource-cards {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .resource-card {
+    flex: 1;
+    border: 1px solid var(--pb-color-neutral-100);
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .resource-icon {
+    width: 44px;
+    height: 44px;
+    background: #E8FFF8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    color: var(--pb-color-secondary);
+  }
+  .resource-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .resource-title {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--pb-color-primary);
+    margin-bottom: 4px;
+  }
+  .resource-desc {
+    font-size: 13px;
+    color: var(--pb-color-neutral-500);
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--pb-color-neutral-50);
+    padding: 28px 80px;
+    text-align: center;
+    border-top: 1px solid var(--pb-color-neutral-100);
+  }
+  .footer-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--pb-color-neutral-500);
+    margin-bottom: 6px;
+  }
+  .footer-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--pb-color-primary);
+  }
+  .footer-channels {
+    font-size: 13px;
+    color: var(--pb-color-neutral-500);
+    margin-top: 4px;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
+<body>
+<div class="support-page">
+
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <span class="logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <div class="co-brand">
+      <div class="co-brand-divider"></div>
+      <div class="operator-placeholder">Your logo</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1 class="page-heading">Free, confidential support — 24/7</h1>
+    <p class="page-subhead">No judgment. No cost. Just real help, whenever you need it.</p>
+
+    <div class="channel-list">
+      <div class="channel-row">
+        <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7 12.7 12.7 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.7 12.7 0 0 0 2.8.7A2 2 0 0 1 22 16.9z"/></g><g stroke-width="1"><path d="M17 2a5 5 0 0 1 5 5" fill="none"/><path d="M17 6a1 1 0 0 1 1 1" fill="none"/></g></svg></div>
+        <div class="channel-info">
+          <div class="channel-label">Call</div>
+          <div class="channel-detail">{{HELPLINE_NUMBER}}</div>
+        </div>
+        <div class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></g><g stroke-width="1"><line x1="8" y1="9" x2="16" y2="9"/><line x1="8" y1="13" x2="13" y2="13"/></g></svg></div>
+        <div class="channel-info">
+          <div class="channel-label">Text</div>
+          <div class="channel-detail">800522</div>
+        </div>
+        <div class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/></g><g stroke-width="1"><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></g></svg></div>
+        <div class="channel-info">
+          <div class="channel-label">Chat</div>
+          <div class="channel-detail">{{CHAT_URL}}</div>
+        </div>
+        <div class="channel-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></div>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="section-label">More resources</div>
+    <div class="resource-cards">
+      <div class="resource-card">
+        <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="12" cy="13" r="8"/></g><g stroke-width="1"><polyline points="12 9 12 13 15 15"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="9" y1="2" x2="15" y2="2"/></g></svg></div>
+        <div class="resource-title">Self-Exclusion</div>
+        <div class="resource-desc">Take a break from your account for as long as you need.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="12" cy="12" r="9"/></g><g stroke-width="1"><path d="M12 6v12"/><path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2 3 2.5 3 1.1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"/></g></svg></div>
+        <div class="resource-title">Financial Counseling</div>
+        <div class="resource-desc">Free resources for managing finances and debt.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="7" r="3"/></g><g stroke-width="1"><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><path d="M17 11a4 4 0 0 1 4 4v2"/></g></svg></div>
+        <div class="resource-title">Peer Support</div>
+        <div class="resource-desc">Connect with others who understand what you're going through.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-label">National Council on Problem Gambling</div>
+    <div class="footer-helpline">{{HELPLINE_NUMBER}}</div>
+    <div class="footer-channels">Text 800522 &middot; Chat {{CHAT_URL}} &middot; Available 24/7</div>
+  </div>
+
+</div>
+</body>
+</html>

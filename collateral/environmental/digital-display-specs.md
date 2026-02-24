@@ -195,4 +195,13 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 
 ---
 
+## Rendered previews
+
+| Template | Orientation | Preview |
+|---|---|---|
+| [Landscape display](../render/display-landscape-6a.html) | 1920 x 1080 (16:9) | ![Landscape display](../render/display-landscape-6a.png) |
+| [Portrait display](../render/display-portrait-6b.html) | 1080 x 1920 (9:16) | ![Portrait display](../render/display-portrait-6b.png) |
+
+---
+
 *Cross-references: [Application Guidelines — Environmental](../../brand-book/07-application-guidelines.md#environmental-applications) | [Core Messages](../../messaging/core-messages.md) | [HTML template](../render/display-landscape-6a.html)*

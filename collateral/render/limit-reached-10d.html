@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Limit Reached Banner — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .banner {
+    width: 420px;
+    min-height: 160px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    position: relative;
+    border: 1px solid var(--pb-color-neutral-100);
+    border-left: 3px solid var(--pb-color-secondary);
+    border-radius: 0 12px 12px 0;
+    padding: 24px 44px 24px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  /* Info icon */
+  .icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: #E8FFF8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .icon-check {
+    color: var(--pb-color-secondary);
+  }
+  .icon-check svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Content */
+  .banner-content {
+    flex: 1;
+  }
+  .banner-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--pb-color-primary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .banner-body {
+    font-size: 15px;
+    color: var(--pb-color-neutral-700);
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .banner-link {
+    font-family: var(--pb-font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--pb-color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .banner-link:hover {
+    color: #00B894;
+  }
+
+  /* Dismiss X */
+  .dismiss {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--pb-color-neutral-300);
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1;
+  }
+  .dismiss:hover {
+    color: var(--pb-color-neutral-500);
+    background: var(--pb-color-neutral-50);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
+<body>
+<div class="banner">
+
+  <div class="icon">
+    <span class="icon-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g></svg></span>
+  </div>
+
+  <div class="banner-content">
+    <div class="banner-heading">Weekly deposit limit reached</div>
+    <div class="banner-body">Resets Monday, March 3. That's your budget working as designed.</div>
+    <a class="banner-link">View activity &rarr;</a>
+  </div>
+
+  <div class="dismiss">&times;</div>
+
+</div>
+</body>
+</html>
