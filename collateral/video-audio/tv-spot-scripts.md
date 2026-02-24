@@ -23,9 +23,9 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | Property | Guideline |
 |---|---|
 | **Casting** | Real, diverse people (age, ethnicity, gender). Not actors-playing-gamblers. People enjoying social settings. |
-| **Setting** | Modern, well-lit. Casino floors, sports bars, living rooms, phone screens. Not dark or clinical. |
+| **Setting** | Modern, cinematic. Casino floors, sports bars, living rooms, phone screens. Cinematic low-light is great; dim/dingy is not. See [photography lighting guide](../../visual-identity/photography/photography.md#lighting-guide). |
 | **Energy** | Confident, upbeat, informed. The Sharp energy — like a friend who knows the game. |
-| **Not** | Somber PSA. Warning tone. Preachy. Clinical. Black-and-white "someone in crisis" footage. |
+| **Not** | Somber PSA. Warning tone. Preachy. Clinical. Black-and-white "someone in crisis" footage. Dim ambient lighting. |
 | **Music** | Modern, upbeat, electronic or indie. Confident but not aggressive. See [music direction](#music--sound-direction). |
 | **Color grade** | Warm, high-contrast. Navy/teal/orange palette reflected in wardrobe and set design. |
 | **Graphics** | Clean motion graphics for stats. Inter font. Gradient accents. Match brand system. |
@@ -43,7 +43,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | Time | Shot | Visual | Voiceover | On-screen text |
 |---|---|---|---|---|
 | 0:00–0:03 | 1 | Casino floor — vibrant, busy, people enjoying themselves | "You know what makes a game more fun?" | — |
-| 0:03–0:05 | 2 | Close-up: roulette wheel spinning | "Knowing how it actually works." | — |
+| 0:03–0:05 | 2 | Close-up: roulette wheel spinning (purposeful — illustrates "how it works") | "Knowing how it actually works." | — |
 | 0:05–0:09 | 3 | Person at table, looking confident, checking phone | "Every casino game has a house edge. It's the math built into the game." | — |
 | 0:09–0:14 | 4 | Motion graphic: house edge numbers appear | "Blackjack: half a percent. Roulette: five point two six. Slots: anywhere from two to fifteen." | **Blackjack: 0.5%** / **Roulette: 5.26%** / **Slots: 2–15%** |
 | 0:14–0:18 | 5 | Person setting deposit limit on phone, smiling | "When you know the numbers, you play on your terms." | — |
@@ -149,7 +149,8 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 ## Production checklist
 
 - [ ] Cast is diverse (age, ethnicity, gender, ability)
-- [ ] Settings are well-lit, modern, and positive
+- [ ] Settings use cinematic lighting — dramatic/editorial is fine, dim/dingy is not
+- [ ] Game closeups serve the message (explain mechanics, support CTA) — cut any that are purely decorative
 - [ ] House edge numbers are accurate
 - [ ] Helpline displayed minimum 5 seconds at end
 - [ ] {{PROGRAM_NAME}} logo (reversed variant, min 24px, 1x clear space) and operator logo (co-branding rules) in final frame
