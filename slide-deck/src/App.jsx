@@ -18,6 +18,7 @@ import CTASlide from './slides/CTASlide';
 import DigitalAppsSlide from './slides/DigitalAppsSlide';
 import PrintSlide from './slides/PrintSlide';
 import PrintSamplesSlide from './slides/PrintSamplesSlide';
+import Tier2CollateralSlide from './slides/Tier2CollateralSlide';
 import CampaignSlide from './slides/CampaignSlide';
 import AccessibilitySlide from './slides/AccessibilitySlide';
 import GovernanceSlide from './slides/GovernanceSlide';
@@ -40,11 +41,12 @@ const slides = [
   CTASlide,            // 14 — CTA Library
   DigitalAppsSlide,    // 15 — Digital Applications
   PrintSlide,          // 16 — Print & Environmental
-  PrintSamplesSlide,   // 17 — Print Samples
-  CampaignSlide,       // 18 — Campaign Library
-  AccessibilitySlide,  // 19 — Accessibility
-  GovernanceSlide,     // 20 — Governance & Evolution
-  GetStartedSlide,     // 21 — Get Started
+  PrintSamplesSlide,      // 17 — Print Samples
+  Tier2CollateralSlide,   // 18 — Tier 2 Collateral
+  CampaignSlide,          // 19 — Campaign Library
+  AccessibilitySlide,     // 20 — Accessibility
+  GovernanceSlide,        // 21 — Governance & Evolution
+  GetStartedSlide,        // 22 — Get Started
 ];
 const TOTAL = slides.length;
 

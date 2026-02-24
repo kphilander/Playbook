@@ -19,6 +19,7 @@ When Playbook shifts from entertainment literacy to support and crisis contexts,
 | [Photography](#photography) | Image direction for support contexts |
 | [Component patterns](#component-patterns) | Reusable UI blocks for Tier 2 screens |
 | [The Tier 2 test](#the-tier-2-test) | Quality checklist |
+| [Rendered previews](#rendered-previews) | PNG previews of all 8 Tier 2 templates |
 
 ---
 
@@ -411,6 +412,30 @@ Before shipping any Tier 2 content, run this checklist:
 
 ---
 
+## Rendered previews
+
+All Tier 2 collateral templates with PNG previews. Click the template name to view the full HTML source.
+
+### Digital screens
+
+| Template | Description | Preview |
+|---|---|---|
+| [Support page](../../collateral/render/support-page-10a.html) | Help/support landing page — phone, text, chat channels | ![Support page](../../collateral/render/support-page-10a.png) |
+| [Self-exclusion](../../collateral/render/self-exclusion-10b.html) | Self-exclusion flow — duration selection, confirmation | ![Self-exclusion](../../collateral/render/self-exclusion-10b.png) |
+| [Session summary](../../collateral/render/session-summary-10c.html) | Activity dashboard card — time, spend, sessions | ![Session summary](../../collateral/render/session-summary-10c.png) |
+| [Limit reached](../../collateral/render/limit-reached-10d.html) | In-app notification banner — deposit limit hit | ![Limit reached](../../collateral/render/limit-reached-10d.png) |
+| [Cooldown](../../collateral/render/cooldown-10e.html) | Account pause confirmation screen | ![Cooldown](../../collateral/render/cooldown-10e.png) |
+
+### Outreach and communications
+
+| Template | Description | Preview |
+|---|---|---|
+| [Social card](../../collateral/render/card-tier2-10f.html) | Support-focused social media card (1080x1080) | ![Social card](../../collateral/render/card-tier2-10f.png) |
+| [Venue poster](../../collateral/render/poster-tier2-10g.html) | Helpline poster for restrooms/private areas (900x1200) | ![Venue poster](../../collateral/render/poster-tier2-10g.png) |
+| [Support email](../../collateral/render/email-support-10h.html) | Warm outreach email with help resources | ![Support email](../../collateral/render/email-support-10h.png) |
+
+---
+
 ## Cross-references
 
 - **Voice and tone**: [Chapter 4](../../brand-book/04-voice-and-tone.md) — Warm/Direct register, The Good Friend serious mode
@@ -418,7 +443,6 @@ Before shipping any Tier 2 content, run this checklist:
 - **Messaging for at-risk players**: [`messaging/player-segments/at-risk-players.md`](../../messaging/player-segments/at-risk-players.md)
 - **Stigma-free language**: [`messaging/stigma-free-language.md`](../../messaging/stigma-free-language.md)
 - **Color accessibility**: [`visual-identity/color/accessibility-matrix.md`](../color/accessibility-matrix.md)
-- **Tier 2 collateral renders**: `collateral/render/support-page-10a.*`, `self-exclusion-10b.*`, `session-summary-10c.*`, `limit-reached-10d.*`, `cooldown-10e.*`
 
 ---
 
