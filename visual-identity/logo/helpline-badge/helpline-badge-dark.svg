@@ -4,7 +4,7 @@
   </style>
   <rect width="320" height="48" fill="#1B2838"/>
   
-  <text y="22" font-family="'Inter', sans-serif" font-size="22" letter-spacing="-0.7">
+  <text y="30" font-family="'Inter', sans-serif" font-size="22" letter-spacing="-0.7">
     <tspan font-weight="800" fill="#FFFFFF">Play</tspan><tspan font-weight="300" letter-spacing="0.4" fill="#00D4AA">BOOK</tspan>
   </text>
   <line x1="128" y1="6" x2="128" y2="42" stroke="#00D4AA" stroke-width="1.5" stroke-linecap="round"/>
