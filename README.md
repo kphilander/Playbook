@@ -11,11 +11,7 @@
 
 Playbook is a complete, forkable brand system for gambling entertainment literacy. It gives operators everything they need to build player-facing content that's actually worth engaging with: brand foundations, voice and tone, messaging frameworks, visual identity specs, multi-jurisdiction compliance modules, and ready-to-use collateral templates.
 
-Most gambling education content today fails in one of three ways: it's buried in fine print nobody reads, it's preachy and clinical, or it's so generic it says nothing. All three stem from the same root cause — operators don't treat player education as marketing. Playbook fixes that.
-
 Playbook is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the informed choice model: most people who gamble do so without problems, gambling is entertainment, and players make better decisions when they understand the math, the odds, and the tools available to them.
-
-Think of it this way: Volvo made safety iconic by building beautiful cars that also happen to be the safest on the road. Playbook makes gambling literacy engaging by creating content that's genuinely interesting — and also happens to keep play sustainable.
 
 ## Who is this for?
 
