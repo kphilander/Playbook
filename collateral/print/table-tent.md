@@ -32,6 +32,8 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 
 > **Visual reference**: See [`render/table-tent-5b.html`](../render/table-tent-5b.html) for the HTML template render.
 
+![Table tent preview](../render/table-tent-5b.png)
+
 ---
 
 ## Side A — Odds fact + quiz hook

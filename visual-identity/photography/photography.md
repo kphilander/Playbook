@@ -3,6 +3,8 @@
 > Canonical source: [`_brand.yml`](../../_brand.yml)
 > Visual reference: [`mood-board.html`](mood-board.html)
 
+![Mood board preview](mood-board.png)
+
 ---
 
 ## Photo style overview

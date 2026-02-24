@@ -188,4 +188,15 @@ INSIDE (face up):
 
 ---
 
+## Rendered previews
+
+Click the template name to view the full HTML source.
+
+| Template | Description | Preview |
+|---|---|---|
+| [Brochure inside spread](../render/brochure-trifold-8a.html) | Inside 3-panel layout — intro, odds literacy, tools overview | ![Brochure inside](../render/brochure-trifold-8a.png) |
+| [Brochure cover spread](../render/brochure-cover-8b.html) | Outside 3-panel layout — cover, quiz hook, support resources | ![Brochure cover](../render/brochure-cover-8b.png) |
+
+---
+
 *Cross-references: [Application Guidelines — Print](../../brand-book/07-application-guidelines.md#print-applications) | [Core Messages](../../messaging/core-messages.md) | [Messaging Framework](../../brand-book/05-messaging-framework.md)*

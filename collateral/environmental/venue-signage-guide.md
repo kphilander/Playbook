@@ -241,4 +241,18 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 
 ---
 
+## Rendered previews
+
+Click the template name to view the full HTML source.
+
+| Template | Location | Preview |
+|---|---|---|
+| [Entrance sign](../render/sign-entrance-9a.html) | Main entrance / exit doors | ![Entrance sign](../render/sign-entrance-9a.png) |
+| [ATM sign](../render/sign-atm-9b.html) | Near ATMs and cashier windows | ![ATM sign](../render/sign-atm-9b.png) |
+| [Gaming floor sign](../render/sign-floor-9c.html) | Overhead or column-mounted on gaming floor | ![Floor sign](../render/sign-floor-9c.png) |
+| [Restroom sign](../render/sign-restroom-9d.html) | Mirror cling or stall card | ![Restroom sign](../render/sign-restroom-9d.png) |
+| [Staff break room sign](../render/sign-staff-9e.html) | Staff break room poster | ![Staff sign](../render/sign-staff-9e.png) |
+
+---
+
 *Cross-references: [Application Guidelines — Environmental](../../brand-book/07-application-guidelines.md#environmental-applications) | [Core Messages](../../messaging/core-messages.md) | [Stigma-Free Language](../../brand-book/04-voice-and-tone.md#language-guide)*

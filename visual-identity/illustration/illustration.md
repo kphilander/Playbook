@@ -4,6 +4,8 @@
 > Visual reference: [`style-guide.html`](style-guide.html)
 > Related: [`icon-library.md`](../iconography/icon-library.md) (shared weight-contrast principle)
 
+![Illustration style guide preview](style-guide.png)
+
 ---
 
 ## Illustration style overview

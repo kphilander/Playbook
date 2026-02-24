@@ -97,6 +97,29 @@ visual-identity/logo/
 
 Regenerate all logo files: `node collateral/render/build-logos.mjs`
 
+### Logo previews
+
+**Primary layouts:**
+
+| Stacked | Horizontal |
+|---|---|
+| ![Stacked full-color](../visual-identity/logo/primary/logo-stacked-full-color.svg) | ![Horizontal full-color](../visual-identity/logo/primary/logo-horizontal-full-color.svg) |
+| ![Stacked on-light](../visual-identity/logo/primary/logo-stacked-on-light.svg) | ![Horizontal on-light](../visual-identity/logo/primary/logo-horizontal-on-light.svg) |
+
+**Secondary layouts:**
+
+| Stacked | Horizontal |
+|---|---|
+| ![Stacked reversed](../visual-identity/logo/secondary/logo-stacked-reversed.svg) | ![Horizontal reversed](../visual-identity/logo/secondary/logo-horizontal-reversed.svg) |
+| ![Stacked mono-dark](../visual-identity/logo/secondary/logo-stacked-mono-dark.svg) | ![Horizontal mono-dark](../visual-identity/logo/secondary/logo-horizontal-mono-dark.svg) |
+| ![Stacked mono-white](../visual-identity/logo/secondary/logo-stacked-mono-white.svg) | ![Horizontal mono-white](../visual-identity/logo/secondary/logo-horizontal-mono-white.svg) |
+
+**Favicon and helpline badge:**
+
+| Favicon | Favicon reversed | Helpline light | Helpline dark |
+|---|---|---|---|
+| ![Favicon](../visual-identity/logo/favicon/favicon.svg) | ![Favicon reversed](../visual-identity/logo/favicon/favicon-reversed.svg) | ![Helpline light](../visual-identity/logo/helpline-badge/helpline-badge-light.svg) | ![Helpline dark](../visual-identity/logo/helpline-badge/helpline-badge-dark.svg) |
+
 #### Prohibited modifications
 
 Do not:
@@ -579,6 +602,34 @@ Before shipping any Playbook content, apply this test:
 4. **Is it accessible?** Run the contrast ratios. Check the touch targets. Test with a screen reader.
 
 If it passes all four, ship it.
+
+---
+
+## What it looks like
+
+A curated selection of rendered templates showing the visual identity in action. Click the template name to view the full HTML source. See `collateral/render/` for all 36 templates.
+
+### Tier 1 — Entertainment literacy
+
+| Category | Template | Preview |
+|---|---|---|
+| Social card | [Hot streak myth-buster](../collateral/render/card-1a-hot-streak.html) | ![Social card](../collateral/render/card-1a-hot-streak.png) |
+| Story | [Hot streak story](../collateral/render/story-3a-hot-streak.html) | ![Story](../collateral/render/story-3a-hot-streak.png) |
+| Poster | [Know Your Game](../collateral/render/poster-4a-know-your-game.html) | ![Poster](../collateral/render/poster-4a-know-your-game.png) |
+| Email | [Welcome series](../collateral/render/email-welcome-7a.html) | ![Email](../collateral/render/email-welcome-7a.png) |
+| Venue sign | [Entrance sign](../collateral/render/sign-entrance-9a.html) | ![Sign](../collateral/render/sign-entrance-9a.png) |
+| Print | [Rack card](../collateral/render/rack-card-5a.html) | ![Rack card](../collateral/render/rack-card-5a.png) |
+| Digital display | [Landscape display](../collateral/render/display-landscape-6a.html) | ![Display](../collateral/render/display-landscape-6a.png) |
+
+### Tier 2 — Support and crisis
+
+| Category | Template | Preview |
+|---|---|---|
+| Support page | [Help/support landing](../collateral/render/support-page-10a.html) | ![Support page](../collateral/render/support-page-10a.png) |
+| Self-exclusion | [Pause account flow](../collateral/render/self-exclusion-10b.html) | ![Self-exclusion](../collateral/render/self-exclusion-10b.png) |
+| Poster | [Venue helpline poster](../collateral/render/poster-tier2-10g.html) | ![Tier 2 poster](../collateral/render/poster-tier2-10g.png) |
+
+See the [Tier 2 Visual Guide](../visual-identity/tier-2/tier-2-visual-guide.md) for the full visual specification and all 8 Tier 2 template previews.
 
 ---
 

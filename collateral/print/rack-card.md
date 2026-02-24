@@ -30,6 +30,8 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 
 > **Visual reference**: See [`render/rack-card-5a.html`](../render/rack-card-5a.html) for the front-side HTML template render.
 
+![Rack card preview](../render/rack-card-5a.png)
+
 ---
 
 ## Front

@@ -4,6 +4,8 @@
 > Drop-in CSS: [`playbook-typography.css`](playbook-typography.css)
 > Visual reference: [`type-specimen.html`](type-specimen.html)
 
+![Type specimen preview](type-specimen.png)
+
 ---
 
 ## Font families

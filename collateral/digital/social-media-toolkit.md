@@ -352,4 +352,28 @@ Templates for responding to common comments and messages.
 
 ---
 
-*Existing visual templates: [Card series](../render/) | Cross-references: [Application Guidelines — Social](../../brand-book/07-application-guidelines.md#social-media) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*
+## Rendered previews
+
+### Social cards (1080 x 1080)
+
+| Template | Theme | Preview |
+|---|---|---|
+| [Hot streak myth](../render/card-1a-hot-streak.html) | Myth-buster — gambler's fallacy | ![Hot streak](../render/card-1a-hot-streak.png) |
+| [Due for a win](../render/card-1b-due-for-win.html) | Myth-buster — due-for-a-win fallacy | ![Due for a win](../render/card-1b-due-for-win.png) |
+| [Lucky machine](../render/card-1c-lucky-machine.html) | Myth-buster — machine memory myth | ![Lucky machine](../render/card-1c-lucky-machine.png) |
+| [House edge](../render/card-2a-house-edge.html) | Odds education — house edge explained | ![House edge](../render/card-2a-house-edge.png) |
+| [Sports betting](../render/card-2b-sports-betting.html) | Odds education — the -110 line | ![Sports betting](../render/card-2b-sports-betting.png) |
+| [Bonus wagering](../render/card-2c-bonus-wagering.html) | Odds education — wagering requirements | ![Bonus wagering](../render/card-2c-bonus-wagering.png) |
+| [Support card (Tier 2)](../render/card-tier2-10f.html) | Support-focused social card — Tier 2 visual treatment | ![Support card](../render/card-tier2-10f.png) |
+
+### Stories (1080 x 1920)
+
+| Template | Theme | Preview |
+|---|---|---|
+| [Hot streak story](../render/story-3a-hot-streak.html) | Myth-buster format | ![Hot streak story](../render/story-3a-hot-streak.png) |
+| [House edge story](../render/story-3b-house-edge.html) | Stats format | ![House edge story](../render/story-3b-house-edge.png) |
+| [Sports betting story](../render/story-3c-sports-betting.html) | Explainer format | ![Sports betting story](../render/story-3c-sports-betting.png) |
+
+---
+
+*Cross-references: [Application Guidelines — Social](../../brand-book/07-application-guidelines.md#social-media) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*

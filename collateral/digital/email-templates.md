@@ -241,4 +241,18 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 
 ---
 
+## Rendered previews
+
+Click the template name to view the full HTML source.
+
+| Template | Description | Preview |
+|---|---|---|
+| [Welcome series](../render/email-welcome-7a.html) | Account creation welcome with tools intro, odds fact, and helpline | ![Welcome email](../render/email-welcome-7a.png) |
+| [Deposit confirmation](../render/email-deposit-7b.html) | Deposit processed with budget-at-a-glance and tool reminder | ![Deposit email](../render/email-deposit-7b.png) |
+| [Monthly activity summary](../render/email-monthly-7c.html) | Monthly stats, limits recap, and content hook | ![Monthly email](../render/email-monthly-7c.png) |
+| [Reactivation](../render/email-reactivation-7d.html) | Warm re-engagement after 30+ days inactive | ![Reactivation email](../render/email-reactivation-7d.png) |
+| [Support email (Tier 2)](../render/email-support-10h.html) | Warm outreach with help resources — Tier 2 visual treatment | ![Support email](../render/email-support-10h.png) |
+
+---
+
 *Cross-references: [Application Guidelines — Email](../../brand-book/07-application-guidelines.md#email) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*

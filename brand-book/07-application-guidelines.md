@@ -406,4 +406,23 @@ Run each test scenario with assistive technologies active (screen reader, increa
 
 ---
 
+## Visual examples by channel
+
+Representative renders showing how the brand applies across channels. Click the template name to view the full HTML source. See `collateral/render/` for all 36 templates.
+
+| Channel | Template | Preview |
+|---|---|---|
+| **Email** | [Welcome series](../collateral/render/email-welcome-7a.html) | ![Welcome email](../collateral/render/email-welcome-7a.png) |
+| **Social card** | [House edge](../collateral/render/card-2a-house-edge.html) | ![Social card](../collateral/render/card-2a-house-edge.png) |
+| **Story** | [Sports betting](../collateral/render/story-3c-sports-betting.html) | ![Story](../collateral/render/story-3c-sports-betting.png) |
+| **Poster** | [No Fine Print](../collateral/render/poster-4b-no-fine-print.html) | ![Poster](../collateral/render/poster-4b-no-fine-print.png) |
+| **Print — brochure** | [Inside spread](../collateral/render/brochure-trifold-8a.html) | ![Brochure](../collateral/render/brochure-trifold-8a.png) |
+| **Print — rack card** | [Rack card](../collateral/render/rack-card-5a.html) | ![Rack card](../collateral/render/rack-card-5a.png) |
+| **Venue sign** | [Entrance sign](../collateral/render/sign-entrance-9a.html) | ![Entrance sign](../collateral/render/sign-entrance-9a.png) |
+| **Digital display** | [Landscape](../collateral/render/display-landscape-6a.html) | ![Display](../collateral/render/display-landscape-6a.png) |
+| **Tier 2 — support** | [Support page](../collateral/render/support-page-10a.html) | ![Support page](../collateral/render/support-page-10a.png) |
+| **Tier 2 — poster** | [Helpline poster](../collateral/render/poster-tier2-10g.html) | ![Tier 2 poster](../collateral/render/poster-tier2-10g.png) |
+
+---
+
 *Previous: [Chapter 6 — Accessibility](06-accessibility.md) | Next: [Chapter 8 — Governance](08-governance.md)*

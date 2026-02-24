@@ -41,6 +41,21 @@ Think of it this way: Volvo made safety iconic by building beautiful cars that a
 4. **Customize messaging** — pick from the tagline system, adapt tone examples, write your own
 5. **Build collateral** — use the HTML templates in `collateral/render/` and markdown specs across all channels
 
+## Preview
+
+A selection of the 36 ready-to-use templates in the brand system. Each template is available as HTML source and PNG render in `collateral/render/`.
+
+| | | |
+|---|---|---|
+| ![Social card](collateral/render/card-1a-hot-streak.png) | ![Email template](collateral/render/email-welcome-7a.png) | ![Venue poster](collateral/render/poster-4a-know-your-game.png) |
+| Social card — myth-buster | Email — welcome series | Poster — Know Your Game |
+| ![Rack card](collateral/render/rack-card-5a.png) | ![Digital display](collateral/render/display-landscape-6a.png) | ![Venue sign](collateral/render/sign-entrance-9a.png) |
+| Print — rack card | Digital display — landscape | Venue sign — entrance |
+| ![Support page](collateral/render/support-page-10a.png) | ![Helpline poster](collateral/render/poster-tier2-10g.png) | ![Brochure](collateral/render/brochure-trifold-8a.png) |
+| Tier 2 — support page | Tier 2 — helpline poster | Print — brochure inside |
+
+---
+
 ## Repository structure
 
 ```
@@ -98,7 +113,8 @@ Playbook/
 │   ├── environmental/                # Venue signage and digital display specs
 │   ├── video-audio/                  # TV, radio, pre-roll, and hold message scripts
 │   ├── customer-service/             # Conversation scripts and staff FAQ
-│   └── render/                       # 28 HTML templates + PNG renders + build pipeline
+│   ├── interactive/                   # Quiz framework
+│   └── render/                       # 36 HTML templates + PNG renders + build pipeline
 │       ├── render-cards.mjs          # Puppeteer manifest (HTML → PNG)
 │       ├── build-logos.mjs           # Logo SVG generator
 │       ├── build-icons.mjs           # Icon SVG generator
@@ -112,7 +128,8 @@ Playbook/
 │       ├── display-*.html/.png       # 2 digital displays (landscape + portrait)
 │       ├── rack-card-5a.html/.png    # Print: rack card (800×1800)
 │       ├── table-tent-5b.html/.png   # Print: table tent (800×1200)
-│       └── helpline-card-5c.html/.png # Print: helpline business card (700×400)
+│       ├── helpline-card-5c.html/.png # Print: helpline business card (700×400)
+│       └── *-10*.html/.png           # 8 Tier 2 support/crisis templates
 │
 ├── jurisdictions/                    # Regulatory compliance modules
 │   ├── README.md                    # How jurisdiction modules work
@@ -144,7 +161,7 @@ Playbook/
 | **Visual identity** | Complete | 15 logo SVGs, 31 icon SVGs, design tokens CSS, typography system with self-hosted fonts, photography and illustration guides |
 | **Messaging** | Complete | 74 core messages, tagline system, CTA library, myth-busting, stigma-free language guide, tone examples, 6 player-segment profiles |
 | **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
-| **Collateral renders** | Complete | 28 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral |
+| **Collateral renders** | Complete | 36 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, and 8 Tier 2 support/crisis templates |
 | **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
 | **Jurisdictions** | In progress | Template system, Canada/BC compliance module, US/Nevada compliance module, advertising rules |
 
@@ -171,7 +188,7 @@ The `collateral/render/` directory contains a Puppeteer-based pipeline that rend
 ```bash
 cd collateral/render
 npm install
-node render-cards.mjs              # Render all 28 templates
+node render-cards.mjs              # Render all 36 templates
 node render-cards.mjs poster       # Render only poster templates
 node render-cards.mjs card-1a      # Render a specific template
 ```
@@ -187,7 +204,7 @@ Playbook uses a two-tier system:
 
 - **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging — content players seek out. This is what operators co-brand with.
 
-- **Tier 2 (separate guide, 5%):** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, intervention messaging. Warm, direct, appropriately serious. Built in a later phase within this same repository.
+- **Tier 2 (5%):** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, cooldown screens, session summaries. Warm, direct, appropriately serious. See `visual-identity/tier-2/tier-2-visual-guide.md` for the full visual specification and 8 template renders.
 
 ## License
 

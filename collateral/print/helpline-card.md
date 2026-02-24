@@ -30,6 +30,8 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 
 > **Visual reference**: See [`render/helpline-card-5c.html`](../render/helpline-card-5c.html) for the HTML template render.
 
+![Helpline card preview](../render/helpline-card-5c.png)
+
 ---
 
 ## Front
