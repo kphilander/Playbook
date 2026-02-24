@@ -71,7 +71,7 @@ function stacked(playColor, bookColor, bg = null) {
 // Playbook as one word, Play 800 + book 300, same size
 
 function horizontal(playColor, bookColor, bg = null) {
-  const w = 280;
+  const w = 196;
   const h = 56;
   const content = `
   <text y="40" font-family="'Inter', sans-serif" font-size="44" letter-spacing="-1.3">
