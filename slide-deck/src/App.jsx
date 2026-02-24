@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import SlideContainer from './components/SlideContainer';
 import ProgressBar from './components/ProgressBar';
 import TitleSlide from './slides/TitleSlide';
@@ -111,17 +112,8 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [next, prev, goTo]);
 
-  function handleClick(e) {
-    const x = e.clientX / window.innerWidth;
-    if (x < 0.2) prev();
-    else if (x > 0.8) next();
-  }
-
   return (
-    <div
-      className="relative w-screen h-screen overflow-hidden bg-navy cursor-default"
-      onClick={handleClick}
-    >
+    <div className="relative w-screen h-screen overflow-hidden bg-navy cursor-default">
       {/* Scaled slide stage — fixed 1280×720 design resolution */}
       <div
         className="absolute top-1/2 left-1/2 overflow-hidden"
@@ -137,6 +129,28 @@ export default function App() {
           </SlideContainer>
         ))}
       </div>
+
+      {/* Navigation hover zones with arrow indicators */}
+      {current > 0 && (
+        <button
+          onClick={prev}
+          aria-label="Previous slide"
+          className="absolute left-0 top-0 w-[20%] h-full z-40 cursor-pointer border-0 bg-transparent group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <ChevronLeft className="absolute top-1/2 left-6 -translate-y-1/2 w-10 h-10 text-white/0 group-hover:text-white/70 transition-all duration-300 drop-shadow-lg" />
+        </button>
+      )}
+      {current < TOTAL - 1 && (
+        <button
+          onClick={next}
+          aria-label="Next slide"
+          className="absolute right-0 top-0 w-[20%] h-full z-40 cursor-pointer border-0 bg-transparent group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-l from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <ChevronRight className="absolute top-1/2 right-6 -translate-y-1/2 w-10 h-10 text-white/0 group-hover:text-white/70 transition-all duration-300 drop-shadow-lg" />
+        </button>
+      )}
 
       <ProgressBar total={TOTAL} current={current} onNavigate={goTo} />
 

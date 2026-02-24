@@ -1,4 +1,4 @@
-import { Play } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 import AccentBar from '../components/AccentBar';
 
 export default function TitleSlide() {
@@ -11,7 +11,7 @@ export default function TitleSlide() {
       <div className="relative z-10 flex flex-col items-center gap-2 px-8">
         <div className="mb-4 flex items-center gap-3">
           <div className="w-12 h-12 rounded-full bg-teal/20 flex items-center justify-center">
-            <Play className="w-6 h-6 text-teal" />
+            <BookOpen className="w-6 h-6 text-teal" />
           </div>
         </div>
 
