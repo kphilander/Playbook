@@ -86,7 +86,7 @@ function helplineBadge(playColor, bookColor, dividerColor, labelColor, numberCol
   const w = 320;
   const h = 48;
   const content = `
-  <text y="22" font-family="'Inter', sans-serif" font-size="22" letter-spacing="-0.7">
+  <text x="16" y="32" font-family="'Inter', sans-serif" font-size="22" letter-spacing="-0.7">
     <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="0.4" fill="${bookColor}">book</tspan>
   </text>
   <line x1="128" y1="6" x2="128" y2="42" stroke="${dividerColor}" stroke-width="1.5" stroke-linecap="round"/>
