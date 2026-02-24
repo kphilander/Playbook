@@ -95,6 +95,17 @@ Game closeups — slot interfaces, card tables, roulette wheels, chips — are a
 
 **The test:** If you removed the image, would the message or CTA lose context? If yes, the closeup earns its place. If nothing changes, cut it.
 
+### Reference examples
+
+**Purposeful closeups (good):**
+
+- [Pexels 30516010](https://www.pexels.com/photo/close-up-of-casino-slot-machine-interface-30516010/) — Slot machine interface detail. Works when used alongside content explaining paylines, RTP, or how slot machines function. The closeup IS the lesson.
+- [Pexels 7594307](https://www.pexels.com/photo/playing-cards-and-casino-chips-on-gaming-table-7594307/) — Cards and chips on a gaming table. Works for content explaining table game mechanics, hand rankings, or house edge by game. Provides purposeful visual context.
+
+**Decorative filler (bad):**
+
+- [Pexels 3021120](https://www.pexels.com/photo/slot-machines-3021120/) — Row of slot machines with no human context, no educational framing, no connection to a message. This is generic atmosphere that reads as gambling promotion. Cut it.
+
 ---
 
 ## Lighting guide
@@ -114,6 +125,8 @@ Intentional, editorial-quality lighting that creates mood and visual interest �
 | **Feel** | Fashion editorial, lifestyle brand, modern nightlife photography |
 | **Reference** | Think Vogue, GQ, or high-end hospitality campaigns shot in evening settings |
 
+**Reference example:** [Pexels 9396741](https://www.pexels.com/photo/young-woman-in-checked-mini-dress-at-slot-machines-in-casino-9396741/) — Casino environment with cinematic, intentional lighting. Subject is well-lit with clear directional light; the slot machines provide colorful background bokeh rather than being the subject. This is the standard.
+
 ### Dim ambient lighting (bad)
 
 Uncontrolled, flat, dark environments where the lighting is incidental rather than designed.
@@ -125,6 +138,8 @@ Uncontrolled, flat, dark environments where the lighting is incidental rather th
 | **Muddy color** | Mixed fluorescent and tungsten producing grey-green skin tones |
 | **Noise/grain** | High ISO visible — suggests cheap camera in poor conditions, not editorial intent |
 | **Feel** | Surveillance footage, phone camera in a bar, "you had to be there" snapshots |
+
+**Reference example:** [Pexels 5767461](https://www.pexels.com/photo/man-playing-arcade-game-with-beautiful-woman-at-his-side-5767461/) — Dim arcade/gaming environment where the lighting is incidental. Faces are underlit, the scene is uniformly dark, and the overall feel is dingy rather than dramatic. This fails the lighting test.
 
 ### The lighting test
 
