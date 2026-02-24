@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Activity Dashboard Card — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .card {
+    width: 420px;
+    min-height: 320px;
+    background: #FFFFFF;
+    border: 1px solid #E8E8F0;
+    border-radius: 16px;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1B2838;
+    padding: 28px 28px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Heading */
+  .card-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #1B2838;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .card-heading .period {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6B6B8A;
+  }
+
+  /* Bar chart */
+  .chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 100px;
+    margin-bottom: 8px;
+    padding: 0 4px;
+  }
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  .bar {
+    width: 100%;
+    max-width: 36px;
+    border-radius: 4px 4px 0 0;
+    background: #E0E0EA;
+    min-height: 4px;
+  }
+  .bar.today {
+    background: #00D4AA;
+  }
+  .bar-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #A8A8C0;
+    margin-top: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .bar-label.today {
+    color: #00D4AA;
+  }
+
+  /* Stats row */
+  .stats-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    font-weight: 500;
+    color: #3D3D5C;
+    margin-top: 16px;
+    padding: 12px 0;
+    border-top: 1px solid #F0F0F5;
+    border-bottom: 1px solid #F0F0F5;
+  }
+  .stats-row .sep {
+    color: #A8A8C0;
+  }
+
+  /* Deposit limit */
+  .limit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    margin-top: 4px;
+  }
+  .limit-label {
+    font-size: 14px;
+    color: #6B6B8A;
+  }
+  .limit-value {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1B2838;
+  }
+  .limit-badge {
+    display: inline-block;
+    background: #E8FFF8;
+    color: #00D4AA;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  /* Manage link */
+  .manage-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00D4AA;
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+  .manage-link:hover {
+    color: #00B894;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="card-heading">
+    Your Activity <span class="period">— Last 7 Days</span>
+  </div>
+
+  <div class="chart">
+    <div class="bar-col">
+      <div class="bar" style="height: 60%;"></div>
+      <div class="bar-label">Mon</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 35%;"></div>
+      <div class="bar-label">Tue</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 0; min-height: 4px;"></div>
+      <div class="bar-label">Wed</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 80%;"></div>
+      <div class="bar-label">Thu</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 0; min-height: 4px;"></div>
+      <div class="bar-label">Fri</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 50%;"></div>
+      <div class="bar-label">Sat</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar today" style="height: 45%;"></div>
+      <div class="bar-label today">Sun</div>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    Sessions: 4 <span class="sep">&middot;</span> Time: 3h 22m <span class="sep">&middot;</span> Avg: 50m
+  </div>
+
+  <div class="limit-row">
+    <span class="limit-label">Deposit limit</span>
+    <span class="limit-value">$200/week <span class="limit-badge">Active</span></span>
+  </div>
+
+  <a class="manage-link">Manage settings &rarr;</a>
+
+</div>
+</body>
+</html>

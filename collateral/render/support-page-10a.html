@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=800">
+<title>Support Page — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .support-page {
+    width: 800px;
+    min-height: 1000px;
+    background: #FFFFFF;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1B2838;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 3px solid teal top bar */
+  .accent-bar {
+    height: 3px;
+    background: #00D4AA;
+    flex-shrink: 0;
+  }
+
+  /* Header: logo + co-brand */
+  .header {
+    padding: 32px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #F0F0F5;
+  }
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+  }
+  .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #1B2838;
+  }
+  .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #00D4AA;
+  }
+  .co-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .co-brand-divider {
+    width: 1px;
+    height: 24px;
+    background: #A8A8C0;
+  }
+  .operator-placeholder {
+    width: 100px;
+    height: 36px;
+    border: 1.5px dashed #A8A8C0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: #A8A8C0;
+    letter-spacing: 0.02em;
+  }
+
+  /* Content area */
+  .content {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 80px 40px;
+    width: 100%;
+    flex: 1;
+  }
+
+  .page-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #1B2838;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .page-subhead {
+    font-size: 17px;
+    color: #3D3D5C;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+
+  /* Contact channels */
+  .channel-list {
+    margin-bottom: 40px;
+  }
+  .channel-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: #F5F5FA;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .channel-row:hover {
+    background: #EEEEF4;
+  }
+  .channel-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  .channel-info {
+    flex: 1;
+  }
+  .channel-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: #1B2838;
+    margin-bottom: 2px;
+  }
+  .channel-detail {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3D3D5C;
+  }
+  .channel-arrow {
+    font-size: 18px;
+    color: #A8A8C0;
+  }
+
+  /* Separator */
+  .separator {
+    height: 1px;
+    background: #F0F0F5;
+    margin: 8px 0 32px;
+  }
+
+  /* Secondary resources */
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6B6B8A;
+    margin-bottom: 16px;
+  }
+  .resource-cards {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .resource-card {
+    flex: 1;
+    border: 1px solid #E8E8F0;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .resource-icon {
+    width: 44px;
+    height: 44px;
+    background: #E8FFF8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 20px;
+  }
+  .resource-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #1B2838;
+    margin-bottom: 4px;
+  }
+  .resource-desc {
+    font-size: 13px;
+    color: #6B6B8A;
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  .footer {
+    background: #F5F5FA;
+    padding: 28px 80px;
+    text-align: center;
+    border-top: 1px solid #E8E8F0;
+  }
+  .footer-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #6B6B8A;
+    margin-bottom: 6px;
+  }
+  .footer-helpline {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1B2838;
+  }
+  .footer-channels {
+    font-size: 13px;
+    color: #6B6B8A;
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="support-page">
+
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <span class="logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <div class="co-brand">
+      <div class="co-brand-divider"></div>
+      <div class="operator-placeholder">Your logo</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h1 class="page-heading">Free, confidential support — 24/7</h1>
+    <p class="page-subhead">No judgment. No cost. Just real help, whenever you need it.</p>
+
+    <div class="channel-list">
+      <div class="channel-row">
+        <div class="channel-icon">&#x1F4DE;</div>
+        <div class="channel-info">
+          <div class="channel-label">Call</div>
+          <div class="channel-detail">1-800-522-4700</div>
+        </div>
+        <div class="channel-arrow">&#x203A;</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-icon">&#x1F4AC;</div>
+        <div class="channel-info">
+          <div class="channel-label">Text</div>
+          <div class="channel-detail">800522</div>
+        </div>
+        <div class="channel-arrow">&#x203A;</div>
+      </div>
+      <div class="channel-row">
+        <div class="channel-icon">&#x1F310;</div>
+        <div class="channel-info">
+          <div class="channel-label">Chat</div>
+          <div class="channel-detail">ncpgambling.org/chat</div>
+        </div>
+        <div class="channel-arrow">&#x203A;</div>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="section-label">More resources</div>
+    <div class="resource-cards">
+      <div class="resource-card">
+        <div class="resource-icon">&#x23F8;</div>
+        <div class="resource-title">Self-Exclusion</div>
+        <div class="resource-desc">Take a break from your account for as long as you need.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">&#x1F4B0;</div>
+        <div class="resource-title">Financial Counseling</div>
+        <div class="resource-desc">Free resources for managing finances and debt.</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">&#x1F91D;</div>
+        <div class="resource-title">Peer Support</div>
+        <div class="resource-desc">Connect with others who understand what you're going through.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-label">National Council on Problem Gambling</div>
+    <div class="footer-helpline">1-800-522-4700</div>
+    <div class="footer-channels">Text 800522 &middot; Chat ncpgambling.org/chat &middot; Available 24/7</div>
+  </div>
+
+</div>
+</body>
+</html>

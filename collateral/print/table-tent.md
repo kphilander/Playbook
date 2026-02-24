@@ -127,4 +127,56 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 
 ---
 
+## Venue-specific variants
+
+The default table tent uses an American roulette odds fact. These variants adapt content for specific placement contexts.
+
+### Gaming floor variant (default)
+
+Uses the default Side A content (roulette house edge). Best for table game areas.
+
+### Bar / restaurant variant
+
+| Element | Content change from default |
+|---|---|
+| **Side A label** | DID YOU KNOW? (orange, uppercase) |
+| **Side A stat** | 45 min |
+| **Side A context** | That's the average casino session. Time moves differently when you're playing. Set a session reminder. |
+| **Side A callout** | Your time. Your awareness. |
+| **QR link** | Links to session reminder setup page |
+
+### Sports bar variant
+
+| Element | Content change from default |
+|---|---|
+| **Side A label** | PARLAY MATH (orange, uppercase) |
+| **Side A stat** | 6.25% |
+| **Side A context** | That's the hit rate on a 4-leg parlay at -110. The payout looks big because the odds are tiny. |
+| **Side A callout** | Know the math. Bet on your terms. |
+| **QR link** | Links to parlay odds calculator |
+
+### Helpline variant (Tier 2)
+
+| Element | Content change from default |
+|---|---|
+| **Side A background** | White (not navy — Tier 2 visual treatment) |
+| **Side A content** | "Need to talk?" with helpline number as primary focus |
+| **Side B** | Multiple contact channels + QR to support page |
+| **Visual treatment** | See `visual-identity/tier-2/tier-2-visual-guide.md` |
+
+---
+
+## QR code placement rules
+
+| Rule | Rationale |
+|---|---|
+| Minimum 0.75" x 0.75" | Smaller QR codes fail to scan from arm's length |
+| White quiet zone (4 modules minimum) | Scanner needs clear boundary to detect the code |
+| Test on 3+ phone models before print | QR rendering varies; test with older phones too |
+| Use a URL shortener or redirect | Long URLs create dense QR patterns that are harder to scan |
+| Include a text URL fallback | Some players won't scan — print the URL in small text below |
+| Link to mobile-optimized page | The QR destination must work on a phone screen |
+
+---
+
 *Cross-references: [Application Guidelines — Print](../../brand-book/07-application-guidelines.md#print-applications) | [Core Messages](../../messaging/core-messages.md) | [HTML template](../render/table-tent-5b.html)*

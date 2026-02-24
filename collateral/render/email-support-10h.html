@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>Support Email — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .email {
+    width: 600px;
+    min-height: 800px;
+    background: #FFFFFF;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1B2838;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 3px teal top bar */
+  .accent-bar {
+    height: 3px;
+    background: #00D4AA;
+    flex-shrink: 0;
+  }
+
+  /* Logo header */
+  .header {
+    padding: 36px 56px;
+    border-bottom: 1px solid #F0F0F5;
+  }
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+  }
+  .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #1B2838;
+  }
+  .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #00D4AA;
+  }
+
+  /* Body content */
+  .body-content {
+    padding: 44px 56px 36px;
+    flex: 1;
+  }
+  .heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    color: #1B2838;
+    margin-bottom: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .body-text {
+    font-size: 16px;
+    color: #3D3D5C;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* Resource cards */
+  .resource-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 32px 0;
+  }
+  .resource-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    background: #F5F5FA;
+    border-radius: 12px;
+  }
+  .resource-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  .resource-info {
+    flex: 1;
+  }
+  .resource-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1B2838;
+    margin-bottom: 2px;
+  }
+  .resource-desc {
+    font-size: 14px;
+    color: #6B6B8A;
+    line-height: 1.4;
+  }
+  .resource-arrow {
+    font-size: 16px;
+    color: #A8A8C0;
+  }
+
+  /* CTA button */
+  .cta-wrap {
+    text-align: center;
+    padding: 8px 0 16px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #00D4AA;
+    color: #1B2838;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+
+  /* Footer */
+  .footer {
+    background: #F5F5FA;
+    padding: 28px 56px;
+    text-align: center;
+    border-top: 1px solid #E8E8F0;
+  }
+  .footer-helpline {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1B2838;
+    margin-bottom: 4px;
+  }
+  .footer-channels {
+    font-size: 13px;
+    color: #6B6B8A;
+    margin-bottom: 16px;
+  }
+  .footer-divider {
+    height: 1px;
+    background: #E0E0EA;
+    margin: 16px auto;
+    max-width: 240px;
+  }
+  .footer-legal {
+    font-size: 12px;
+    color: #A8A8C0;
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+  .footer-unsub {
+    font-size: 12px;
+    color: #A8A8C0;
+  }
+  .footer-unsub a {
+    color: #6B6B8A;
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <span class="logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+  </div>
+
+  <div class="body-content">
+    <h1 class="heading">We're here if you need us.</h1>
+
+    <p class="body-text">
+      Whether you have a question, need a break, or just want to talk — support is always available. No appointments. No cost. No judgment.
+    </p>
+    <p class="body-text">
+      You're in control of your experience, and we're here to make sure it stays that way. Every tool is optional, and every conversation is confidential.
+    </p>
+    <p class="body-text">
+      Here are a few ways to get started:
+    </p>
+
+    <div class="resource-cards">
+      <div class="resource-card">
+        <div class="resource-icon">&#x1F4DE;</div>
+        <div class="resource-info">
+          <div class="resource-title">Call the helpline</div>
+          <div class="resource-desc">Talk with someone 24/7 at 1-800-522-4700</div>
+        </div>
+        <div class="resource-arrow">&#x203A;</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">&#x23F8;</div>
+        <div class="resource-info">
+          <div class="resource-title">Take a break</div>
+          <div class="resource-desc">Pause your account for a day, a week, or longer</div>
+        </div>
+        <div class="resource-arrow">&#x203A;</div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-icon">&#x1F4CA;</div>
+        <div class="resource-info">
+          <div class="resource-title">Review your activity</div>
+          <div class="resource-desc">See your sessions, time, and limits at a glance</div>
+        </div>
+        <div class="resource-arrow">&#x203A;</div>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a href="#" class="cta-button">Get support now</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-helpline">1-800-522-4700</div>
+    <div class="footer-channels">Text 800522 &middot; Chat ncpgambling.org/chat &middot; 24/7</div>
+    <div class="footer-divider"></div>
+    <div class="footer-legal">You must be 21+ to gamble. Gambling involves risk.<br>If you or someone you know has a gambling problem, help is available.</div>
+    <div class="footer-unsub"><a href="#">Unsubscribe</a> &middot; <a href="#">Manage preferences</a></div>
+  </div>
+
+</div>
+</body>
+</html>

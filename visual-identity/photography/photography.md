@@ -283,6 +283,58 @@ Write alt text that describes the scene and emotional context, not just objects.
 
 ---
 
+## Tier 2 photography
+
+When photography appears in Tier 2 contexts — support pages, help resources, self-exclusion flows, reactivation screens — the direction changes fundamentally. Tier 1 shows "people who enjoy life and make smart choices." Tier 2 shows **calm, human warmth without gambling context.**
+
+See the [Tier 2 Visual Guide](../tier-2/tier-2-visual-guide.md) for the complete Tier 2 visual identity.
+
+### Do
+
+- Show **hands** — holding a cup of coffee, resting on a table, holding a phone (not showing a gambling screen)
+- Show **quiet environments** — parks, morning light, open spaces, home settings
+- Show **everyday calm** — reading, walking, conversation over coffee with a friend
+- Use **warm, natural lighting** — golden hour, soft daylight, no harsh studio light
+- Show **diversity** — same diversity standards as Tier 1 photography
+- Consider **abstract warmth** — soft-focus nature textures, sunlight through trees, calm water
+
+### Don't
+
+- Show gambling environments, screens, or equipment in any form
+- Show people who look distressed, crying, or defeated
+- Show clinical settings (doctor's office, therapy room) — support should feel accessible, not medical
+- Show isolation — a person alone in a dark room reinforces stigma
+- Show crowds or high-energy social scenes — the tone should be quiet
+- Use the same photos as Tier 1 promotional content — the contexts are too different
+
+### When to use photography in Tier 2
+
+Photography is optional in most Tier 2 screens. The priority is clarity and speed, not visual richness.
+
+| Context | Photography? | Why |
+|---|---|---|
+| Support page hero | Optional — a warm environmental image can set tone | Only if it doesn't slow page load or push helpline below fold |
+| Self-exclusion flow | No | Screens should be clean, text-focused, fast |
+| Activity dashboard | No | Data and tools only |
+| Limit-reached notification | No | Compact, utilitarian |
+| Cooldown confirmation | Optional — a calm environmental image below the confirmation | Adds warmth after a potentially stressful action |
+| Reactivation welcome | Optional — a fresh, optimistic environmental image | "Welcome back" energy, but gentle |
+
+### The Tier 2 photo test
+
+Ask: **"If a player in crisis sees this image, does it feel like a safe place?"**
+
+If the image creates any tension, anxiety, or association with gambling, it fails. When in doubt, omit the photo — Tier 2 screens work well with just typography and white space.
+
+### Color grading for Tier 2
+
+- **Slightly desaturated** compared to Tier 1 — reduce vibrancy by 10–15%
+- **Warm midtones** — not cold or clinical
+- **Soft contrast** — no harsh shadows, no dramatic lighting
+- **Light backgrounds preferred** — images that work well with white/near-white page surfaces
+
+---
+
 ## Operator customization
 
 1. **Local talent:** Replace stock photography with locally shot images reflecting your market's demographics

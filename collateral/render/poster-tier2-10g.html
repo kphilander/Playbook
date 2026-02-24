@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=900">
+<title>Venue Poster — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .poster {
+    width: 900px;
+    height: 1200px;
+    background: #1B2838;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* 6px solid teal top bar */
+  .accent-bar {
+    height: 6px;
+    background: #00D4AA;
+    flex-shrink: 0;
+  }
+
+  /* Header */
+  .poster-header {
+    padding: 48px 64px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+  }
+  .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
+  }
+  .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #00D4AA;
+  }
+
+  /* Body */
+  .poster-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 64px;
+    text-align: center;
+  }
+
+  .headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    color: #FFFFFF;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+  .subhead {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 26px;
+    color: #A8A8C0;
+    line-height: 1.5;
+    margin-bottom: 56px;
+  }
+
+  /* Large helpline number */
+  .helpline-number {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 72px;
+    color: #00D4AA;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
+  .helpline-channels {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #A8A8C0;
+    letter-spacing: 0.04em;
+    margin-bottom: 48px;
+  }
+  .helpline-channels strong {
+    color: #FFFFFF;
+    font-weight: 700;
+  }
+
+  /* QR code */
+  .qr-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  .qr-box {
+    width: 120px;
+    height: 120px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1B2838;
+  }
+  .qr-label {
+    text-align: left;
+  }
+  .qr-label-main {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+  }
+  .qr-label-sub {
+    font-size: 15px;
+    color: #6B6B8A;
+  }
+
+  /* Footer */
+  .poster-footer {
+    padding: 32px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .operator-placeholder {
+    width: 120px;
+    height: 40px;
+    border: 1.5px dashed rgba(255,255,255,0.2);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.02em;
+  }
+  .footer-legal {
+    font-size: 13px;
+    color: #6B6B8A;
+    text-align: right;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="accent-bar"></div>
+
+  <div class="poster-header">
+    <span class="logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+  </div>
+
+  <div class="poster-body">
+    <div class="headline">Need to talk?</div>
+    <div class="subhead">Free. Confidential. No judgment.</div>
+
+    <div class="helpline-number">1-800-522-4700</div>
+    <div class="helpline-channels">
+      <strong>Text</strong> 800522 &nbsp;&middot;&nbsp; <strong>Chat</strong> ncpgambling.org/chat
+    </div>
+
+    <div class="qr-row">
+      <div class="qr-box">QR</div>
+      <div class="qr-label">
+        <div class="qr-label-main">Scan for support</div>
+        <div class="qr-label-sub">ncpgambling.org/chat</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="poster-footer">
+    <div class="operator-placeholder">Your logo</div>
+    <div class="footer-legal">
+      You must be 21+ to gamble. Gambling involves risk.<br>
+      If you or someone you know has a gambling problem, help is available.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

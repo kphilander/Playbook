@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Limit Reached Banner — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .banner {
+    width: 420px;
+    min-height: 160px;
+    background: #FFFFFF;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1B2838;
+    position: relative;
+    border: 1px solid #E8E8F0;
+    border-left: 3px solid #00D4AA;
+    border-radius: 0 12px 12px 0;
+    padding: 24px 44px 24px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  /* Info icon */
+  .icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: #E8FFF8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .icon-check {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: #00D4AA;
+    line-height: 1;
+  }
+
+  /* Content */
+  .banner-content {
+    flex: 1;
+  }
+  .banner-heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: #1B2838;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .banner-body {
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .banner-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #00D4AA;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .banner-link:hover {
+    color: #00B894;
+  }
+
+  /* Dismiss X */
+  .dismiss {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #A8A8C0;
+    cursor: pointer;
+    border-radius: 4px;
+    line-height: 1;
+  }
+  .dismiss:hover {
+    color: #6B6B8A;
+    background: #F5F5FA;
+  }
+</style>
+</head>
+<body>
+<div class="banner">
+
+  <div class="icon">
+    <span class="icon-check">&#x2713;</span>
+  </div>
+
+  <div class="banner-content">
+    <div class="banner-heading">Weekly deposit limit reached</div>
+    <div class="banner-body">Resets Monday, March 3. That's your budget working as designed.</div>
+    <a class="banner-link">View activity &rarr;</a>
+  </div>
+
+  <div class="dismiss">&times;</div>
+
+</div>
+</body>
+</html>

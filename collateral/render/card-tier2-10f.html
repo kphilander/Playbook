@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>Social Card — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .social-card {
+    width: 1080px;
+    height: 1080px;
+    background: #FFFFFF;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1B2838;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* 6px teal accent top bar */
+  .accent-bar {
+    height: 6px;
+    background: #00D4AA;
+    flex-shrink: 0;
+  }
+
+  /* Header */
+  .card-header {
+    padding: 56px 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+  }
+  .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #1B2838;
+  }
+  .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #00D4AA;
+  }
+
+  /* Body */
+  .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 80px;
+    max-width: 900px;
+  }
+
+  .headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    color: #1B2838;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+  .subline {
+    font-size: 28px;
+    color: #3D3D5C;
+    line-height: 1.5;
+    margin-bottom: 56px;
+    max-width: 720px;
+  }
+
+  /* Helpline */
+  .helpline-number {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 64px;
+    color: #00D4AA;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+  }
+  .helpline-channels {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    color: #6B6B8A;
+    letter-spacing: 0.04em;
+    margin-bottom: 56px;
+  }
+
+  /* QR placeholder */
+  .qr-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .qr-box {
+    width: 100px;
+    height: 100px;
+    background: #F5F5FA;
+    border: 1px solid #E8E8F0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    font-weight: 600;
+    color: #A8A8C0;
+  }
+  .qr-label {
+    font-size: 16px;
+    color: #6B6B8A;
+  }
+
+  /* Footer */
+  .card-footer {
+    padding: 0 80px 56px;
+  }
+  .footer-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #A8A8C0;
+    letter-spacing: 0.02em;
+  }
+</style>
+</head>
+<body>
+<div class="social-card">
+
+  <div class="accent-bar"></div>
+
+  <div class="card-header">
+    <span class="logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+  </div>
+
+  <div class="card-body">
+    <div class="headline">No question<br>is too small.</div>
+    <div class="subline">Free, confidential support for any question about gambling.</div>
+
+    <div class="helpline-number">1-800-522-4700</div>
+    <div class="helpline-channels">Call &middot; Text &middot; Chat</div>
+
+    <div class="qr-row">
+      <div class="qr-box">QR</div>
+      <div class="qr-label">Scan for support</div>
+    </div>
+  </div>
+
+  <div class="card-footer">
+    <div class="footer-text">24/7 &middot; No judgment &middot; Ever.</div>
+  </div>
+
+</div>
+</body>
+</html>

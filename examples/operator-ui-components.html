@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — Operator UI Components</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../visual-identity/design-tokens.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--pb-font-body);
+      background: var(--pb-color-neutral-100);
+      color: var(--pb-color-neutral-900);
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+    .page-title {
+      font-family: var(--pb-font-heading);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--pb-color-neutral-500);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .demo-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .demo-block {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .demo-label {
+      font-family: var(--pb-font-heading);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pb-color-neutral-500);
+      font-weight: 600;
+    }
+    @media (max-width: 900px) {
+      .demo-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ DEPOSIT LIMIT MODAL ═══ */
+    .modal-backdrop {
+      background: rgba(15, 25, 35, 0.65);
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 520px;
+    }
+    .modal {
+      background: var(--pb-color-white);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(15, 25, 35, 0.35);
+    }
+    .modal-accent {
+      height: 4px;
+      background: linear-gradient(90deg, var(--pb-color-secondary), var(--pb-color-accent));
+    }
+    .modal-content {
+      padding: 32px;
+    }
+    .modal-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(0, 212, 170, 0.12), rgba(0, 212, 170, 0.04));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .modal-icon svg { color: var(--pb-color-secondary-dark); }
+    .modal h3 {
+      font-family: var(--pb-font-heading);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--pb-color-primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .modal p {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--pb-color-neutral-700);
+      margin-bottom: 24px;
+    }
+
+    .input-group {
+      margin-bottom: 16px;
+    }
+    .input-label {
+      display: block;
+      font-family: var(--pb-font-heading);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--pb-color-neutral-700);
+      margin-bottom: 6px;
+    }
+    .input-field {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--pb-color-neutral-100);
+      border-radius: 10px;
+      font-family: var(--pb-font-mono);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--pb-color-primary);
+      background: var(--pb-color-neutral-50);
+      outline: none;
+      transition: border-color 150ms ease;
+    }
+    .input-field:focus {
+      border-color: var(--pb-color-secondary);
+      background: var(--pb-color-white);
+    }
+    .input-field::placeholder {
+      color: var(--pb-color-neutral-300);
+      font-weight: 500;
+    }
+    .input-prefix {
+      position: relative;
+    }
+    .input-prefix::before {
+      content: '$';
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--pb-font-mono);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--pb-color-neutral-300);
+    }
+    .input-prefix .input-field {
+      padding-left: 32px;
+    }
+
+    .period-chips {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .chip {
+      flex: 1;
+      padding: 10px 8px;
+      border: 2px solid var(--pb-color-neutral-100);
+      border-radius: 10px;
+      background: var(--pb-color-white);
+      font-family: var(--pb-font-heading);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--pb-color-neutral-500);
+      text-align: center;
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .chip.active {
+      border-color: var(--pb-color-secondary);
+      background: rgba(0, 212, 170, 0.08);
+      color: var(--pb-color-primary);
+    }
+    .chip:hover:not(.active) {
+      border-color: var(--pb-color-neutral-300);
+    }
+
+    .btn-modal {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--pb-font-heading);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .btn-modal-primary {
+      background: var(--pb-color-accent);
+      color: var(--pb-color-primary);
+      margin-bottom: 10px;
+    }
+    .btn-modal-primary:hover { background: var(--pb-color-accent-dark); }
+    .btn-modal-ghost {
+      background: transparent;
+      color: var(--pb-color-neutral-500);
+    }
+    .btn-modal-ghost:hover { color: var(--pb-color-primary); }
+
+    .modal-footer-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--pb-color-neutral-300);
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* ═══ SESSION AWARENESS BANNER ═══ */
+    .session-banner-wrap {
+      background: rgba(15, 25, 35, 0.65);
+      border-radius: 16px;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      min-height: 520px;
+      justify-content: center;
+    }
+    .session-banner {
+      width: 100%;
+      max-width: 480px;
+      background: var(--pb-color-white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(15, 25, 35, 0.25);
+    }
+    .session-top {
+      background: var(--pb-color-primary);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .session-icon-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .session-icon-wrap svg { color: var(--pb-color-secondary); }
+    .session-text h4 {
+      font-family: var(--pb-font-heading);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--pb-color-white);
+      margin-bottom: 2px;
+    }
+    .session-text p {
+      font-size: 13px;
+      color: var(--pb-color-neutral-300);
+      margin: 0;
+    }
+    .session-stats {
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-val {
+      font-family: var(--pb-font-mono);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--pb-color-primary);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: var(--pb-color-neutral-500);
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .session-actions {
+      padding: 0 24px 20px;
+      display: flex;
+      gap: 10px;
+    }
+    .btn-session {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-family: var(--pb-font-heading);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 150ms ease;
+    }
+    .btn-session-primary {
+      background: var(--pb-color-secondary);
+      color: var(--pb-color-primary);
+    }
+    .btn-session-outline {
+      background: transparent;
+      color: var(--pb-color-neutral-500);
+      border: 2px solid var(--pb-color-neutral-100);
+    }
+
+    /* ═══ HELPLINE FOOTER ═══ */
+    .helpline-demo-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .helpline-footer {
+      background: var(--pb-color-primary);
+      border-radius: 12px;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .helpline-footer-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(0, 212, 170, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .helpline-footer-icon svg { color: var(--pb-color-secondary); width: 18px; height: 18px; }
+    .helpline-footer-text {
+      flex: 1;
+    }
+    .helpline-footer-text p {
+      font-size: 14px;
+      color: var(--pb-color-neutral-300);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .helpline-footer-text strong {
+      color: var(--pb-color-white);
+      font-family: var(--pb-font-mono);
+      font-weight: 600;
+    }
+    .helpline-footer-text a {
+      color: var(--pb-color-secondary);
+      text-decoration: none;
+    }
+
+    /* Minimal inline helpline */
+    .helpline-inline {
+      background: var(--pb-color-neutral-50);
+      border-radius: 12px;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid var(--pb-color-neutral-100);
+    }
+    .helpline-inline svg {
+      width: 18px; height: 18px;
+      color: var(--pb-color-primary);
+      flex-shrink: 0;
+    }
+    .helpline-inline p {
+      font-size: 13px;
+      color: var(--pb-color-neutral-700);
+      margin: 0;
+    }
+    .helpline-inline strong {
+      font-family: var(--pb-font-mono);
+      font-weight: 600;
+      color: var(--pb-color-primary);
+    }
+    .helpline-inline a {
+      color: var(--pb-color-primary-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* ═══ NOTIFICATION TOAST ═══ */
+    .toast-wrap {
+      background: rgba(15, 25, 35, 0.65);
+      border-radius: 16px;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      min-height: 520px;
+      justify-content: center;
+    }
+    .toast {
+      width: 100%;
+      max-width: 380px;
+      background: var(--pb-color-white);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(15, 25, 35, 0.25);
+      display: flex;
+      align-items: stretch;
+    }
+    .toast-accent {
+      width: 4px;
+      flex-shrink: 0;
+    }
+    .toast-accent-info { background: var(--pb-color-info); }
+    .toast-accent-success { background: var(--pb-color-success); }
+    .toast-accent-warning { background: var(--pb-color-warning); }
+    .toast-body {
+      padding: 16px 20px;
+      flex: 1;
+    }
+    .toast-title {
+      font-family: var(--pb-font-heading);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--pb-color-primary);
+      margin-bottom: 4px;
+    }
+    .toast-msg {
+      font-size: 13px;
+      color: var(--pb-color-neutral-700);
+      line-height: 1.5;
+    }
+    .toast-action {
+      font-family: var(--pb-font-heading);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--pb-color-accent);
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<p class="page-title">Operator UI Components — Playbook Brand Integration</p>
+
+<div class="demo-grid">
+
+  <!-- ═══ DEPOSIT LIMIT MODAL ═══ -->
+  <div class="demo-block">
+    <span class="demo-label">Deposit Limit Modal (Open pillar)</span>
+    <div class="modal-backdrop">
+      <div class="modal">
+        <div class="modal-accent"></div>
+        <div class="modal-content">
+          <div class="modal-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="6" x2="12" y2="12"/>
+              <line x1="12" y1="12" x2="16" y2="14"/>
+            </svg>
+          </div>
+          <h3>Set your deposit limit</h3>
+          <p>Your entertainment budget, decided in advance. Takes 10 seconds. You can change it any time.</p>
+
+          <div class="input-group">
+            <label class="input-label">Amount</label>
+            <div class="input-prefix">
+              <input type="text" class="input-field" value="200" readonly>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label class="input-label">Period</label>
+            <div class="period-chips">
+              <div class="chip">Daily</div>
+              <div class="chip active">Weekly</div>
+              <div class="chip">Monthly</div>
+            </div>
+          </div>
+
+          <button class="btn-modal btn-modal-primary">Set my limit</button>
+          <button class="btn-modal btn-modal-ghost">I'll do this later</button>
+
+          <p class="modal-footer-note">
+            You can adjust your limit at any time from Account Settings.
+            Decreases take effect immediately. Increases have a 24h cooling period.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ SESSION AWARENESS ═══ -->
+  <div class="demo-block">
+    <span class="demo-label">Session Awareness Prompt (Open pillar)</span>
+    <div class="session-banner-wrap">
+      <div class="session-banner">
+        <div class="session-top">
+          <div class="session-icon-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="session-text">
+            <h4>You've been playing for 2 hours</h4>
+            <p>Most sessions average about 45 minutes.</p>
+          </div>
+        </div>
+        <div class="session-stats">
+          <div class="stat-item">
+            <div class="stat-val">2:03</div>
+            <div class="stat-label">Duration</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">$85</div>
+            <div class="stat-label">Spent</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">$115</div>
+            <div class="stat-label">Remaining</div>
+          </div>
+        </div>
+        <div class="session-actions">
+          <button class="btn-session btn-session-primary">Set a reminder</button>
+          <button class="btn-session btn-session-outline">Keep playing</button>
+        </div>
+      </div>
+
+      <!-- Second banner — approaching limit -->
+      <div class="session-banner" style="border: 2px solid var(--pb-color-warning);">
+        <div class="session-top" style="background: linear-gradient(135deg, #3D2A00, var(--pb-color-primary));">
+          <div class="session-icon-wrap" style="background: rgba(255, 179, 0, 0.2);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFB300" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="session-text">
+            <h4 style="color: var(--pb-color-warning);">Approaching your limit</h4>
+            <p>You've used $180 of your $200 weekly budget.</p>
+          </div>
+        </div>
+        <div class="session-stats">
+          <div class="stat-item">
+            <div class="stat-val" style="color: var(--pb-color-warning);">$20</div>
+            <div class="stat-label">Remaining</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">3 days</div>
+            <div class="stat-label">Until Reset</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">90%</div>
+            <div class="stat-label">Budget Used</div>
+          </div>
+        </div>
+        <div class="session-actions">
+          <button class="btn-session btn-session-outline" style="flex:1;">View my history</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ HELPLINE FOOTERS ═══ -->
+  <div class="demo-block">
+    <span class="demo-label">Helpline Footers (always-visible, never hidden)</span>
+    <div class="helpline-demo-wrap">
+      <!-- Dark footer variant -->
+      <div class="helpline-footer">
+        <div class="helpline-footer-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div class="helpline-footer-text">
+          <p>Free, confidential support 24/7 &mdash; <strong>1-800-522-4700</strong> &bull; Text <strong>800522</strong> &bull; <a href="#">ncpgambling.org/chat</a></p>
+        </div>
+      </div>
+
+      <!-- Light inline variant -->
+      <div class="helpline-inline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <p>Need support? Call <strong>1-800-522-4700</strong> or <a href="#">chat now</a> &mdash; free and confidential.</p>
+      </div>
+
+      <!-- Minimal text-only variant -->
+      <div style="text-align: center; padding: 12px; font-size: 13px; color: var(--pb-color-neutral-500); border-top: 1px solid var(--pb-color-neutral-100);">
+        Gambling should be entertainment, not income. Support: <span style="font-family: var(--pb-font-mono); font-weight: 600; color: var(--pb-color-primary);">1-800-522-4700</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NOTIFICATION TOASTS ═══ -->
+  <div class="demo-block">
+    <span class="demo-label">Notification Toasts (contextual messaging)</span>
+    <div class="toast-wrap">
+      <!-- Info toast -->
+      <div class="toast">
+        <div class="toast-accent toast-accent-info"></div>
+        <div class="toast-body">
+          <div class="toast-title">Did you know?</div>
+          <div class="toast-msg">The house edge on this game is 2.7%. That means for every $100 wagered, the casino keeps $2.70 on average.</div>
+          <a href="#" class="toast-action">See all odds &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Success toast -->
+      <div class="toast">
+        <div class="toast-accent toast-accent-success"></div>
+        <div class="toast-body">
+          <div class="toast-title">Limit set!</div>
+          <div class="toast-msg">Your weekly deposit limit is now $200. You can change this anytime in Settings.</div>
+        </div>
+      </div>
+
+      <!-- Warning toast -->
+      <div class="toast">
+        <div class="toast-accent toast-accent-warning"></div>
+        <div class="toast-body">
+          <div class="toast-title">Session reminder</div>
+          <div class="toast-msg">You've been playing for 1 hour &mdash; the reminder you set. Take a breather?</div>
+          <a href="#" class="toast-action">Take a 15-min break &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

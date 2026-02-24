@@ -124,4 +124,63 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 
 ---
 
+## Copy variants
+
+The default rack card uses "Know Your Game" odds literacy content. These variants swap the front-side content for different campaign focuses while keeping the back side (tools + support) unchanged.
+
+### Myth-buster variant
+
+| Element | Content |
+|---|---|
+| **Pillar badge** | `SHARP` (teal pill) |
+| **Headline** | Your slot machine has the emotional range of a toaster. |
+| **Stat 1** | **0%** — The chance your machine "remembers" the last spin |
+| **Stat 2** | **1,000+** — Random outcomes generated per second |
+| **Stat 3** | **0** — The number of hot streaks that are real |
+| **Callout** | Every spin is independent. The math doesn't care about streaks. |
+| **QR label** | Scan to bust more myths |
+
+### Tool-promotion variant
+
+| Element | Content |
+|---|---|
+| **Pillar badge** | `OPEN` (teal pill) |
+| **Headline** | Your tools. Your limits. Your call. |
+| **Feature 1** | **Deposit limits** — Set your entertainment budget in 10 seconds |
+| **Feature 2** | **Session reminders** — Stay aware without killing the vibe |
+| **Feature 3** | **Activity dashboard** — Your play stats, no surprises |
+| **Callout** | All free. All in your account settings. |
+| **QR label** | Scan to set up your tools |
+
+### Helpline variant
+
+| Element | Content |
+|---|---|
+| **Pillar badge** | None — Tier 2 visual treatment |
+| **Background** | White (not navy — Tier 2 uses calmer surfaces) |
+| **Headline** | Free, confidential support |
+| **Body** | For any question about gambling — big or small. No judgment. Ever. |
+| **Helpline display** | {{HELPLINE_NUMBER}} — large, bold, Inter 900 |
+| **Channels** | Call · Text · Chat — all listed with contact details |
+| **QR label** | Scan for support resources |
+| **Visual treatment** | See `visual-identity/tier-2/tier-2-visual-guide.md` |
+
+---
+
+## Spanish translation example
+
+Front-side translation for US Hispanic markets. Back-side structure unchanged — translate copy per locale.
+
+| Element | English | Spanish |
+|---|---|---|
+| **Headline** | Every game has math. Here's yours. | Cada juego tiene su matemática. Aquí está la tuya. |
+| **Stat context (blackjack)** | Blackjack house edge — best odds in the casino | Ventaja de la casa en blackjack — las mejores probabilidades del casino |
+| **Callout** | Knowing the edge helps you pick your games and set your budget. | Conocer la ventaja te ayuda a elegir tus juegos y fijar tu presupuesto. |
+| **QR label** | Scan for the facts | Escanea para conocer los datos |
+| **Helpline** | Free, confidential support 24/7 | Apoyo gratuito y confidencial 24/7 |
+
+**Translation rules**: Translate meaning, not words. Spanish copy is typically 20-30% longer — adjust font sizes accordingly. Test with native speakers before print. See `brand-book/06-accessibility.md` for full translation guidelines.
+
+---
+
 *Cross-references: [Application Guidelines — Print](../../brand-book/07-application-guidelines.md#print-applications) | [Core Messages](../../messaging/core-messages.md) | [HTML template](../render/rack-card-5a.html)*

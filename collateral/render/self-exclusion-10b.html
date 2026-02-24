@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Self-Exclusion — Duration Selection — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .screen {
+    width: 420px;
+    min-height: 680px;
+    background: #FFFFFF;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1B2838;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Step indicator */
+  .step-bar {
+    padding: 24px 32px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .step-back {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6B6B8A;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .step-back:hover {
+    color: #3D3D5C;
+  }
+  .step-dots {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #E8E8F0;
+  }
+  .step-dot.done {
+    background: #00D4AA;
+  }
+  .step-dot.active {
+    background: #00D4AA;
+    width: 24px;
+    border-radius: 4px;
+  }
+  .step-label {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    color: #A8A8C0;
+    margin-left: 8px;
+  }
+
+  /* Content */
+  .content {
+    padding: 36px 32px 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: #1B2838;
+    line-height: 1.2;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .explanation {
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.5;
+    margin-bottom: 28px;
+  }
+
+  /* Duration radio-cards */
+  .duration-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+    flex: 1;
+  }
+  .duration-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border: 1.5px solid #E8E8F0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .duration-option:hover {
+    border-color: #A8A8C0;
+  }
+  .duration-option.selected {
+    border-color: #00D4AA;
+    background: #F0FDF9;
+  }
+  .radio-circle {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    border: 2px solid #A8A8C0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .selected .radio-circle {
+    border-color: #00D4AA;
+  }
+  .radio-fill {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+  }
+  .selected .radio-fill {
+    background: #00D4AA;
+  }
+  .duration-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1B2838;
+  }
+
+  /* CTA */
+  .cta-button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: #00D4AA;
+    color: #1B2838;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+    margin-bottom: 16px;
+  }
+
+  .back-link {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6B6B8A;
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: 8px;
+  }
+  .back-link:hover {
+    color: #3D3D5C;
+  }
+</style>
+</head>
+<body>
+<div class="screen">
+
+  <div class="step-bar">
+    <a class="step-back">&larr;</a>
+    <div class="step-dots">
+      <div class="step-dot done"></div>
+      <div class="step-dot active"></div>
+      <div class="step-dot"></div>
+    </div>
+    <span class="step-label">Step 2 of 3</span>
+  </div>
+
+  <div class="content">
+    <h1 class="heading">How long would you like to pause?</h1>
+    <p class="explanation">Choose a duration that feels right. You can always reach out to support to adjust this later.</p>
+
+    <div class="duration-list">
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">24 hours</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">7 days</div>
+      </div>
+      <div class="duration-option selected">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">30 days</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">6 months</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">1 year</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">Indefinite</div>
+      </div>
+    </div>
+
+    <button class="cta-button">Continue</button>
+    <a class="back-link">Go back</a>
+  </div>
+
+</div>
+</body>
+</html>

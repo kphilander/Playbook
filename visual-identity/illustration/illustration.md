@@ -283,6 +283,64 @@ When color alone is insufficient (especially for red-green combinations), add pa
 
 ---
 
+## Tier 2 data visualization
+
+When illustrations and data visualizations appear in Tier 2 contexts (support pages, activity dashboards, session summaries), the style shifts from educational and engaging to **neutral and reflective.** The player is reviewing their own behavior, not learning about house edges. The visual tone must match.
+
+See the [Tier 2 Visual Guide](../tier-2/tier-2-visual-guide.md) for the complete Tier 2 visual identity.
+
+### Palette shift
+
+| Element | Tier 1 | Tier 2 |
+|---|---|---|
+| Default bar/line color | Secondary (`#00D4AA`) or Accent (`#FF6B35`) | `neutral_300` (`#A8A8C0`) |
+| Highlight / current period | Secondary (`#00D4AA`) | Secondary (`#00D4AA`) — same, but used sparingly |
+| Gridlines | `neutral_300` (`#A8A8C0`) | `neutral_100` (`#E8E8F0`) — lighter |
+| Labels and annotations | `neutral_700` (`#3D3D5C`) | `neutral_500` (`#6B6B8A`) — softer |
+| Container background | Navy (`#1B2838`) or card surface | White (`#FFFFFF`) or `neutral_50` (`#F5F5FA`) |
+
+### Chart types for Tier 2
+
+| Chart type | Recommended? | Use case |
+|---|---|---|
+| **Bar chart** | Yes | Session counts, weekly deposit totals, time-played by day |
+| **Line chart** | Yes | Spending trend over time, session duration trend |
+| **Sparkline** | Yes | Compact activity summaries in cards |
+| **Donut chart** | Avoid | Too decorative; use simple stat blocks instead |
+| **Comparative bar** | Avoid | Comparisons can feel judgmental in Tier 2 |
+| **Infographic** | No | Too editorial for reflection contexts |
+
+### Tier 2 chart rules
+
+1. **No editorial annotations.** Tier 1 might label a bar "That's 3x the average!" — Tier 2 just shows the number.
+2. **No color-coded value judgments.** Don't use green for "low spending" and red for "high spending." All bars are `neutral_300` with one `secondary` highlight for the current/selected period.
+3. **No animation.** Tier 1 charts can animate on entrance. Tier 2 charts render statically.
+4. **No gamification.** No badges, scores, streaks, or achievement overlays on activity data.
+5. **Muted chrome.** Thin borders (`neutral_100`), no drop shadows, no gradient fills.
+
+### Activity summary pattern
+
+The canonical Tier 2 data visualization — a compact card showing recent player activity:
+
+```
+┌───────────────────────────────────────────┐
+│  Your Activity — Last 7 Days              │
+│                                           │
+│  ██▓░░██░  (bar chart: 7 days, neutral    │
+│  M T W T F S S   with today highlighted   │
+│                   in teal)                 │
+│                                           │
+│  Sessions: 4  ·  Time: 3h 22m  ·  Avg: 50m│
+│                                           │
+│  Your deposit limit: $200/week (active)   │
+│  [Manage settings →]                      │
+└───────────────────────────────────────────┘
+```
+
+Bars: `neutral_300` default, `secondary` for today. No Y-axis. Value labels above bars only if space permits. Single text row for key stats.
+
+---
+
 ## Operator customization
 
 1. **Local data:** Replace example statistics with data relevant to your market and games offered

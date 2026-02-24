@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Cooldown Confirmation — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .screen {
+    width: 420px;
+    min-height: 520px;
+    background: #FFFFFF;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #1B2838;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 3px teal top bar */
+  .accent-bar {
+    height: 3px;
+    background: #00D4AA;
+    flex-shrink: 0;
+  }
+
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 48px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Checkmark circle */
+  .check-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #00C853;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .check-icon {
+    font-size: 36px;
+    color: #FFFFFF;
+    line-height: 1;
+  }
+
+  .heading {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: #1B2838;
+    margin-bottom: 8px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .subhead {
+    font-size: 16px;
+    color: #3D3D5C;
+    margin-bottom: 24px;
+  }
+
+  /* Duration callout */
+  .duration-box {
+    background: #F5F5FA;
+    border-radius: 10px;
+    padding: 14px 24px;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 340px;
+  }
+  .duration-text {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 15px;
+    color: #1B2838;
+  }
+  .duration-until {
+    font-size: 13px;
+    color: #6B6B8A;
+    margin-top: 4px;
+  }
+
+  /* Bullet list */
+  .info-list {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 28px;
+    padding: 0;
+  }
+  .info-list li {
+    font-size: 15px;
+    color: #3D3D5C;
+    line-height: 1.5;
+    padding: 6px 0;
+    padding-left: 20px;
+    position: relative;
+  }
+  .info-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #A8A8C0;
+  }
+
+  /* Helpline block */
+  .helpline-block {
+    background: #F5F5FA;
+    border-radius: 10px;
+    padding: 18px 24px;
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .helpline-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6B6B8A;
+    margin-bottom: 6px;
+  }
+  .helpline-number {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1B2838;
+  }
+  .helpline-channels {
+    font-size: 13px;
+    color: #6B6B8A;
+    margin-top: 4px;
+  }
+
+  /* Done button */
+  .done-button {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    padding: 16px;
+    background: #00D4AA;
+    color: #1B2838;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 0.01em;
+  }
+</style>
+</head>
+<body>
+<div class="screen">
+
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="check-circle">
+      <span class="check-icon">&#x2713;</span>
+    </div>
+
+    <h1 class="heading">Your account is paused</h1>
+    <p class="subhead">Take all the time you need.</p>
+
+    <div class="duration-box">
+      <div class="duration-text">Paused for 30 days</div>
+      <div class="duration-until">Until April 24, 2026</div>
+    </div>
+
+    <ul class="info-list">
+      <li>You won't be able to log in or place wagers</li>
+      <li>Your balance is safe and will be here when you return</li>
+      <li>Support is always available if you need to talk</li>
+    </ul>
+
+    <div class="helpline-block">
+      <div class="helpline-label">24/7 Support</div>
+      <div class="helpline-number">1-800-522-4700</div>
+      <div class="helpline-channels">Text 800522 &middot; Chat ncpgambling.org/chat</div>
+    </div>
+
+    <button class="done-button">Done</button>
+  </div>
+
+</div>
+</body>
+</html>

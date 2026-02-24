@@ -134,6 +134,58 @@ The voice is constant. The tone adapts to four registers:
 
 > "Deposit limit updated. Your money, your rules."
 
+### Tier 1 vs. Tier 2 tone
+
+The same brand voice powers both tiers, but the tone shifts significantly. This table captures the key dimensions:
+
+| Dimension | Tier 1 | Tier 2 |
+|---|---|---|
+| Energy | Confident, energetic, witty | Calm, steady, warm |
+| Humor | Appropriate — cheeky, self-aware | Never — empathy only |
+| Sentence length | 15-20 words avg | 10-15 words avg (shorter under stress) |
+| CTAs | "Take the quiz" / "See the odds" | "Call now" / "You're not alone" |
+| Pronouns | "You" (empowerment) | "You" (connection) |
+| Helpline framing | "For any question about gambling" | "Free, confidential, 24/7" |
+| Metaphors | "Seatbelt for your bankroll" | None — literal language only |
+
+The boundary between Tier 1 and Tier 2 is **tone**, not topic. A helpline number in a footer is Tier 1 (present, not prominent). A helpline number on a self-exclusion page is Tier 2 (warm, direct, and prominent). See `visual-identity/tier-2/tier-2-visual-guide.md` for the visual treatment.
+
+**Tier 1 example** — helpline in a footer:
+
+> "Questions about gambling? Free, confidential support: {{HELPLINE_NUMBER}}"
+
+**Tier 2 example** — helpline on a self-exclusion page:
+
+> "You're not alone. Free, confidential support is available right now — 24 hours a day, 7 days a week. Call {{HELPLINE_NUMBER}}."
+
+Notice that the information is identical — the same phone number, the same service. What changes is the emotional register: Tier 1 is matter-of-fact; Tier 2 is warm and direct. Both are honest. Neither is clinical.
+
+When in doubt, ask: *Is the player browsing or reaching out?* Browsing is Tier 1. Reaching out is Tier 2.
+
+#### Common mistakes at the tier boundary
+
+Writers often misjudge the tier in these situations:
+
+- **Session reminders** — Tier 1. The player is browsing. Keep the tone light and factual: "You've been playing for 2 hours. Most sessions average about 45 minutes."
+- **Deposit limit confirmation** — Tier 1 (celebratory register). The player just took a positive action: "Deposit limit set. That's you playing on your terms."
+- **Deposit limit reached** — Still Tier 1, but shift to the Confident / Informative register. The player is not in crisis; they planned for this: "You've hit your weekly limit. It resets Monday."
+- **Self-exclusion landing page** — Tier 2. The player is reaching out for help. Drop all humor and metaphor: "You can pause your account for as long as you need. Here's how."
+- **Post-self-exclusion check-in email** — Tier 2. The player is in a support context: "Just checking in. Your account is still paused. If you need anything, support is here for you."
+- **Odds education article** — Tier 1. Pure information: "The house edge on blackjack is 0.5%. On American roulette, it's 5.26%."
+- **Helpline number in a quiz result** — Tier 1. It's present but not prominent. Don't wrap it in warm language; just include it factually.
+- **Helpline number on a "need support?" page** — Tier 2. Make it warm, direct, and prominent: "Free, confidential support — 24/7. Call {{HELPLINE_NUMBER}}."
+
+#### Writer's checklist for tier assignment
+
+Before writing any piece of content, answer these four questions:
+
+1. **What is the player doing right now?** Browsing, playing, searching for help, or recovering from a session?
+2. **What emotional state are they likely in?** Curious, relaxed, stressed, anxious, or in crisis?
+3. **What action do we want them to take?** Learn something, use a tool, contact support, or feel reassured?
+4. **Would humor feel appropriate here?** If the answer is "maybe not," it is Tier 2.
+
+If the player is browsing or playing and the goal is education or tool adoption, write in Tier 1. If the player is seeking help, experiencing distress, or engaging with support resources, write in Tier 2. When the answer is ambiguous, default to the warmer tone — it is always safe to be kind, never safe to be glib.
+
 ---
 
 ## Sample rewrites
@@ -224,6 +276,85 @@ These terms are appropriate in clinical, regulatory, and Tier 2 contexts. In Tie
 | "When the fun stops, stop." | Assumes players can self-diagnose in the moment. Many players experiencing harm still report "fun." | "Set your limits before you play." |
 | "Bet with your head, not over it." | Clever wordplay, unclear meaning. What does "over it" mean? No path to action. | "Every game has math. Here's yours." |
 | "If you or someone you know has a gambling problem, call X." | Only reaches people who already identify a problem. Excludes everyone else. | "Free, confidential support — for any question about gambling. {{HELPLINE_NUMBER}}" |
+
+### Stigma-free quick reference
+
+The following table captures the ten most common language swaps. These apply to all Tier 1 content — social posts, app copy, email, print, and in-venue signage.
+
+| # | Don't write | Write instead |
+|---|---|---|
+| 1 | Problem gambler | Player |
+| 2 | Responsible gambling | Set a budget / Know the odds / Check your session |
+| 3 | Gambler | Player |
+| 4 | Gambling addiction | Difficulty with gambling (or describe, don't label) |
+| 5 | Self-exclude | Take a break / Pause your account |
+| 6 | Intervention | Feature / Tool |
+| 7 | Reality check | Session reminder |
+| 8 | You should | You can |
+| 9 | WARNING | Heads up |
+| 10 | Odds are against you | The house edge is [specific number] |
+
+**Why these swaps matter**: Language shapes perception. When a player reads "problem gambler," they see a label — and labels push people away from engagement. When they read "player," they see themselves. The goal is not to avoid difficult topics; it is to discuss them without stigmatizing the audience.
+
+A useful test: read the sentence aloud and ask whether a player who has never experienced difficulty with gambling would feel spoken to — and whether a player who *has* experienced difficulty would feel judged. If either answer is wrong, revise.
+
+Note that these swaps apply to Tier 1 content. In Tier 2 (crisis and support contexts), some clinical terms are appropriate when used with care — a counselor-facing resource may use "gambling disorder" because precision matters in that context. The rule is: match the language to the audience and the setting, and always default to the less stigmatizing option when in doubt.
+
+**Quick self-edit workflow**: After writing any piece of Tier 1 copy, search the text for each term in the "Don't write" column. If you find one, swap it. This takes less than a minute and catches the most common tone problems before review.
+
+For the complete 35-term guide with rationale and in-context examples, see `messaging/stigma-free-language.md`.
+
+### Channel-specific tone shifts
+
+The same core message adapts across channels. The information stays constant; the length, energy, and format shift to match what the player expects in each context.
+
+**Core message**: "Deposit limits are available."
+
+| Channel | Adapted copy |
+|---|---|
+| Push notification | "Your deposit limit tools are ready. Set yours in 10 seconds." |
+| Email | "Did you know you can set a deposit limit in your account? It takes 10 seconds and works in the background — like a seatbelt for your bankroll." |
+| Social media | "Deposit limits: 10 seconds to set, works in the background, adjustable anytime. Your bankroll, your rules." |
+| In-app modal | "Set your deposit limit. Pick your amount, pick your timeframe, and play without second-guessing." |
+| Help article | "A deposit limit is your entertainment budget, decided in advance. You pick the amount. You pick the timeframe." |
+
+Notice the pattern: push notifications are the shortest and most direct. Emails have room for a metaphor. Social media uses rhythm and parallel structure. In-app modals focus on the immediate action. Help articles explain the concept plainly.
+
+The voice stays the same across every row — informed, specific, player-first. Only the format and depth change.
+
+Here is a second example using a Tier 2 message to show how channel adaptation works when the tone is warm and direct.
+
+**Core message**: "Support is available."
+
+| Channel | Adapted copy |
+|---|---|
+| Push notification | "Need to talk? Free, confidential support — 24/7. Call {{HELPLINE_NUMBER}}." |
+| Email | "If gambling isn't feeling like entertainment anymore, you're not alone. Free, confidential support is available anytime — day or night. Call {{HELPLINE_NUMBER}}." |
+| Social media | "Free. Confidential. 24/7. If you need to talk about gambling, call {{HELPLINE_NUMBER}}." |
+| In-app modal | "You don't have to figure this out alone. Free, confidential support: {{HELPLINE_NUMBER}}." |
+| Help article | "Support is free, confidential, and available 24 hours a day, 7 days a week. You can call {{HELPLINE_NUMBER}}, or chat online." |
+
+Notice the difference from the Tier 1 example above. There are no metaphors, no cheeky asides, no playful rhythm. Every word is chosen for clarity and warmth. The sentence length is shorter. The CTA is immediate and unambiguous.
+
+The two examples above — deposit limits (Tier 1) and support (Tier 2) — illustrate the full range. Most {{PROGRAM_NAME}} content falls somewhere between them. The key principle is that channel format changes but voice does not. A push notification and a help article should sound like they were written by the same person — just at different lengths.
+
+When writing for a new channel, start by asking: *How much time does the player have?* A push notification gets 2-3 seconds. An email gets 10-15. A help article gets as long as the player needs. Let the available attention window determine the depth, not the importance of the message.
+
+#### Adapting for character limits
+
+Some channels impose strict limits. Here are practical guidelines:
+
+- **Push notifications**: 50-80 characters ideal. Lead with the action or the offer, never with a preamble.
+- **SMS**: 160 characters max. One message, one idea, one CTA.
+- **Social media (organic)**: Platform-dependent, but front-load the first line — it may be all the player sees before "read more."
+- **Subject lines**: 40-60 characters. Specificity wins over cleverness: "Your deposit limit tools" beats "Take control today."
+- **In-app banners**: 1-2 short sentences. The player is mid-session; respect their attention.
+
+When adapting across channels, always write the longest version first (typically email or help article), then cut down. It is easier to trim a complete thought than to expand a fragment. Each shorter version should preserve the core information and the CTA, even if it drops the supporting detail or metaphor.
+
+If a message cannot be meaningfully condensed below a channel's character limit, split it into two messages or link to a longer resource rather than compressing the language into something unclear. Clarity always beats brevity.
+
+For 40+ before/after pairs organized by tone problem (compliance, clinical, preachy, generic, alarming), see `messaging/tone-examples.md`.
 
 ---
 

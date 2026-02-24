@@ -128,4 +128,65 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 
 ---
 
+## Wallet-size variant
+
+A narrower version designed to fit in a wallet or phone case.
+
+| Property | Standard | Wallet-size |
+|---|---|---|
+| **Size** | 3.5 x 2" (89 x 51mm) | 3.375 x 2.125" (86 x 54mm) — credit card size |
+| **Corners** | Rounded (0.125") | Rounded (0.125") |
+| **Content** | Full helpline + 4 contact channels | Helpline + phone + text only (reduced channels) |
+| **QR code** | 0.6" | 0.5" (slightly smaller) |
+| **Paper** | 16pt matte | 16pt matte or plastic (more durable for wallet carry) |
+
+**Design adjustment**: At wallet size, the back reduces to two contact channels (call + text) and the QR code. Chat URL is omitted due to space constraints. All text sizes maintain minimums (helpline still 16pt).
+
+---
+
+## Multi-language layout
+
+For jurisdictions requiring multiple languages on the same card.
+
+### Dual-language card (e.g., English/Spanish)
+
+| Side | Language | Content |
+|---|---|---|
+| Front | English | Standard front layout |
+| Back | Spanish | Translated contact channels + QR |
+
+**Design rules for dual-language**:
+- Each language gets a full side — don't mix languages on the same side
+- Both sides maintain the same visual hierarchy
+- Helpline number is universal (same on both sides)
+- QR code on both sides (can link to language-specific support page)
+
+### Tri-language card (e.g., English/Spanish/Chinese)
+
+For venues serving diverse communities, use a tri-fold card (slightly wider, scored for Z-fold):
+
+| Property | Value |
+|---|---|
+| **Size** | 7 x 2" (178 x 51mm), scored at 2.33" intervals |
+| **Panels** | 3 equal panels, one language per panel |
+| **Fold** | Z-fold to standard business card size |
+
+---
+
+## Tier 2 design treatment
+
+The default helpline card already uses a support-focused tone. For enhanced Tier 2 alignment:
+
+| Element | Default | Enhanced Tier 2 |
+|---|---|---|
+| **Front background** | Navy (#1B2838) | White — calmer, less enclosing |
+| **Text color** | White on navy | Navy (#1B2838) on white |
+| **Accent** | Teal helpline number | Teal CTA button style |
+| **Gradient bar** | Orange → teal | Omit — Tier 2 avoids the playful gradient |
+| **Tone** | "Free, confidential support" | "You're not alone. Help is here." |
+
+See `visual-identity/tier-2/tier-2-visual-guide.md` for the full Tier 2 visual specification.
+
+---
+
 *Cross-references: [Application Guidelines — Print](../../brand-book/07-application-guidelines.md#print-applications) | [Core Messages — Help](../../messaging/core-messages.md#help--support-without-barriers) | [HTML template](../render/helpline-card-5c.html)*

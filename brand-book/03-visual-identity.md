@@ -480,17 +480,92 @@ For educational content (odds, probabilities, house edge comparisons):
 
 ## 7. Dark mode
 
-When the operator's platform supports dark mode, the {{PROGRAM_NAME}} color system should adapt:
+When the operator's platform supports dark mode, the {{PROGRAM_NAME}} color system should adapt. Dark mode isn't just an inverted light mode — it requires intentional color mapping to maintain readability, hierarchy, and brand identity.
 
-| Light mode | Dark mode adaptation |
+### When to auto-switch
+
+| Trigger | Behavior |
 |---|---|
-| `neutral_50` (background) | `neutral_900` (background) |
-| `neutral_900` (text) | `neutral_50` (text) |
-| `primary` (headers) | `primary_light` (lighter for contrast on dark bg) |
-| `white` (surface) | `neutral_700` (surface) |
-| Semantic colors | Slightly desaturated to reduce eye strain |
+| System preference (`prefers-color-scheme: dark`) | Auto-switch to dark mode. This is the default. |
+| User toggle in-app | Override system preference. Persist the choice. |
+| Scheduled (sunrise/sunset) | Only if the operator's platform supports it. |
+| Tier 2 support pages | Always use light mode — dark mode can feel isolating in crisis contexts. |
 
-All dark mode combinations must pass WCAG 2.1 AA contrast requirements.
+**Rule**: Never force dark mode. Always respect the user's system preference unless they've explicitly toggled within the app.
+
+### Semantic color mapping
+
+| Token | Light mode | Dark mode | Ratio on dark bg |
+|---|---|---|---|
+| `background` | `neutral_50` (#F5F5FA) | `neutral_900` (#1A1A2E) | — |
+| `surface` | `white` (#FFFFFF) | `neutral_700` (#3D3D5C) | — |
+| `text_primary` | `neutral_900` (#1A1A2E) | `neutral_50` (#F5F5FA) | 15.70:1 ✓ |
+| `text_secondary` | `neutral_700` (#3D3D5C) | `neutral_300` (#A8A8C0) | 7.33:1 ✓ |
+| `text_muted` | `neutral_500` (#6B6B8A) | `neutral_500` (#6B6B8A) | 3.33:1 (large text only) |
+| `headers` | `primary` (#1B2838) | `primary_light` (#2A3F56) | — |
+| `link` | `primary_light` (#2A3F56) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+| `border` | `neutral_500` (#6B6B8A) | `neutral_700` (#3D3D5C) | — |
+| `accent` (CTA) | `accent` (#FF6B35) | `accent_light` (#FF8A5C) | 7.34:1 ✓ |
+| `secondary` (CTA) | `secondary_dark` (#00A888) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+
+**Note on muted text in dark mode**: `neutral_500` on `neutral_900` produces only 3.33:1 — this passes for large text (3:1 threshold) but fails AA normal text (4.5:1). Use muted text sparingly in dark mode, and only at 18px+ or 14px+ bold.
+
+### Semantic status colors in dark mode
+
+Status colors (success, warning, danger, info) need adjustment for dark backgrounds:
+
+| Status | Light mode | Dark mode | Dark mode text | Ratio |
+|---|---|---|---|---|
+| Success | `#00C853` bg + `primary` text | `#00C853` bg + `primary` text | Same — dark text on green | 6.67:1 ✓ |
+| Warning | `#FFB300` bg + `primary` text | `#FFB300` bg + `primary` text | Same — dark text on amber | 8.31:1 ✓ |
+| Danger | `#FF3D00` bg + `black` text | `#FF3D00` bg + `black` text | Same — dark text on red | 5.32:1 ✓ |
+| Info | `#2979FF` bg + `black` text | `#2979FF` bg + `black` text | Same — dark text on blue | 4.74:1 ✓ |
+
+**Rule of thumb**: Always use dark text on chromatic status backgrounds, in both light and dark mode. Never use white text on these colors.
+
+### Image and media treatment
+
+| Asset type | Dark mode treatment |
+|---|---|
+| Photographs | Reduce brightness to 85-90% to prevent glare on dark backgrounds |
+| Illustrations / icons | Use light-on-dark variants (swap stroke and fill colors) |
+| Charts / data viz | Use light text and grid lines; reduce opacity of non-essential elements |
+| Screenshots | Add a subtle border (`neutral_700`, 1px) so edges don't bleed into the background |
+| Brand gradient bar | No change — the orange → teal gradient works on both light and dark |
+
+### CSS implementation
+
+```css
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pb-bg: #1A1A2E;
+    --pb-surface: #3D3D5C;
+    --pb-text-primary: #F5F5FA;
+    --pb-text-secondary: #A8A8C0;
+    --pb-text-muted: #6B6B8A;
+    --pb-border: #3D3D5C;
+    --pb-link: #00D4AA;
+    --pb-accent: #FF8A5C;
+  }
+
+  img:not([src*=".svg"]) {
+    filter: brightness(0.88);
+  }
+}
+```
+
+Operators using `_brand.yml` can override these tokens. The CSS custom property names use the `--pb-` prefix (short for Playbook) to avoid collisions with operator stylesheets.
+
+### Testing requirements
+
+- [ ] Test with system dark mode on macOS, Windows, iOS, and Android
+- [ ] Verify all text meets WCAG 2.1 AA contrast on dark backgrounds
+- [ ] Check that images don't glare or blow out on dark surfaces
+- [ ] Confirm the user's preference persists across sessions
+- [ ] Verify Tier 2 pages remain in light mode regardless of system setting
+- [ ] Test the transition animation between modes (prefer `150ms ease-out` on `background-color` and `color`)
+
+All dark mode combinations must pass WCAG 2.1 AA contrast requirements. See `visual-identity/color/accessibility-matrix.md` for the full contrast ratio matrix on dark backgrounds.
 
 ---
 
