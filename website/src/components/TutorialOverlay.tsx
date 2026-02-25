@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { colors } from '@/lib/brand-tokens';
+import { colors, fonts, radius } from '@/lib/brand-tokens';
+import BrandIcon from '@/components/BrandIcon';
 import type { WheelType } from '@/lib/roulette-engine';
 import { getHouseEdge, getPocketCount } from '@/lib/roulette-engine';
 
@@ -31,43 +32,43 @@ function getSteps(wheelType: WheelType): TutorialStep[] {
       title: 'Welcome to the Roulette Demo',
       content: `This interactive demo shows you exactly how roulette works — and why the house always wins over time. No real money involved. Let's walk through the basics.`,
       highlight: 'none',
-      icon: '🎰',
+      icon: 'roulette',
     },
     {
       title: 'The Wheel',
       content: `This ${wheelType === 'european' ? 'European' : 'American'} roulette wheel has ${pockets} pockets: numbers 1–36 in red and black, plus ${zeros}. Those green pocket${wheelType === 'american' ? 's are' : ' is'} the source of the house's mathematical advantage.`,
       highlight: 'wheel',
-      icon: '🎡',
+      icon: 'roulette',
     },
     {
       title: 'Inside Bets — High Risk, High Payout',
       content: `Click any single number to make a "straight" bet — it pays 35:1 but only has a ${(1/pockets*100).toFixed(1)}% chance of winning. You can also bet on splits (2 numbers, 17:1), streets (3 numbers, 11:1), corners (4 numbers, 8:1), and six-lines (6 numbers, 5:1).`,
       highlight: 'table',
-      icon: '🎯',
+      icon: 'percentage',
     },
     {
       title: 'Outside Bets — Lower Risk, Lower Payout',
       content: `The bottom rows are "outside" bets: Red/Black, Odd/Even, and High/Low all pay 1:1 and cover nearly half the wheel. Dozens and Columns pay 2:1 and cover 12 numbers each. Hover any bet to see its exact odds.`,
       highlight: 'table',
-      icon: '📊',
+      icon: 'percentage',
     },
     {
       title: 'Try It — Place a Bet',
       content: `Select a chip size on the right, then click "Red" on the table to bet on all red numbers. This is the most common beginner bet and a great way to see the math in action.`,
       highlight: 'bets',
-      icon: '🪙',
+      icon: 'budget',
     },
     {
       title: 'The House Edge',
       content: `Here's the key insight: Red covers 18 out of ${pockets} pockets = ${(18/pockets*100).toFixed(1)}% win chance. But it pays 1:1 as if it were 50/50. That gap — ${(50 - 18/pockets*100).toFixed(1)} percentage points — is the house edge of ${edge}%. Every bet on this wheel has the same mathematical disadvantage.`,
       highlight: 'none',
-      icon: '🔑',
+      icon: 'edge',
     },
     {
       title: 'You\'re Ready!',
       content: `Place bets, spin the wheel, and watch your results. Use the "Simulate 1,000 Spins" button in the stats panel to see how results always converge to the house edge over time. The short term is wild — the long term is math.`,
       highlight: 'stats',
-      icon: '🚀',
+      icon: 'check',
     },
   ];
 }
@@ -160,8 +161,8 @@ export default function TutorialOverlay({ wheelType, onComplete, visible }: Tuto
         </div>
 
         {/* Icon */}
-        <div style={{ fontSize: 40, textAlign: 'center', marginBottom: 16 }}>
-          {currentStep.icon}
+        <div style={{ textAlign: 'center', marginBottom: 16, display: 'flex', justifyContent: 'center' }}>
+          <BrandIcon name={currentStep.icon} size={40} style={{ color: colors.secondary }} />
         </div>
 
         {/* Title */}
@@ -172,7 +173,7 @@ export default function TutorialOverlay({ wheelType, onComplete, visible }: Tuto
             color: colors.white,
             textAlign: 'center',
             marginBottom: 12,
-            fontFamily: 'system-ui',
+            fontFamily: fonts.heading,
             margin: '0 0 12px',
           }}
         >
@@ -191,7 +192,7 @@ export default function TutorialOverlay({ wheelType, onComplete, visible }: Tuto
               style={{
                 display: 'inline-block',
                 padding: '4px 12px',
-                borderRadius: 12,
+                borderRadius: radius.lg,
                 background: `${colors.secondary}20`,
                 color: colors.secondary,
                 fontSize: 11,
@@ -225,14 +226,14 @@ export default function TutorialOverlay({ wheelType, onComplete, visible }: Tuto
               onClick={handleSkip}
               style={{
                 padding: '10px 24px',
-                borderRadius: 8,
+                borderRadius: radius.md,
                 border: `1px solid ${colors.neutral700}`,
                 background: 'transparent',
                 color: colors.neutral500,
                 fontSize: 14,
                 fontWeight: 600,
                 cursor: 'pointer',
-                fontFamily: 'system-ui',
+                fontFamily: fonts.heading,
               }}
             >
               Skip Tutorial
@@ -243,14 +244,14 @@ export default function TutorialOverlay({ wheelType, onComplete, visible }: Tuto
               onClick={() => setStep(s => s - 1)}
               style={{
                 padding: '10px 24px',
-                borderRadius: 8,
+                borderRadius: radius.md,
                 border: `1px solid ${colors.neutral700}`,
                 background: 'transparent',
                 color: colors.neutral300,
                 fontSize: 14,
                 fontWeight: 600,
                 cursor: 'pointer',
-                fontFamily: 'system-ui',
+                fontFamily: fonts.heading,
               }}
             >
               Back
@@ -260,14 +261,14 @@ export default function TutorialOverlay({ wheelType, onComplete, visible }: Tuto
             onClick={handleNext}
             style={{
               padding: '10px 32px',
-              borderRadius: 8,
+              borderRadius: radius.md,
               border: 'none',
               background: isLast ? colors.secondary : colors.accent,
               color: isLast ? colors.primary : colors.white,
               fontSize: 14,
               fontWeight: 700,
               cursor: 'pointer',
-              fontFamily: 'system-ui',
+              fontFamily: fonts.heading,
               transition: 'all 0.15s ease',
             }}
           >

@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
-import { colors } from '@/lib/brand-tokens';
+import { colors, fonts, radius } from '@/lib/brand-tokens';
 import {
   spin,
   resolveBets,
@@ -21,6 +21,7 @@ import type {
   GameStats,
 } from '@/lib/roulette-engine';
 
+import BrandIcon from '@/components/BrandIcon';
 import RouletteWheel from '@/components/RouletteWheel';
 import RouletteTable from '@/components/RouletteTable';
 import BetPanel from '@/components/BetPanel';
@@ -31,14 +32,14 @@ const STARTING_BALANCE = 1000;
 
 /* ─── Rotating educational fact cards ─── */
 const EDUCATIONAL_FACTS = [
-  { icon: '🟢', text: 'The green zero is what gives the house its edge. Without it, roulette would be a fair game.' },
-  { icon: '🎲', text: 'Every spin is independent. The wheel has no memory — past results don\'t change future odds.' },
-  { icon: '📉', text: 'Doubling your bet after a loss (Martingale) doesn\'t change the house edge — it just increases variance.' },
-  { icon: '🔢', text: 'All bets on the same wheel type have the same house edge. There\'s no "better" bet mathematically.' },
-  { icon: '🇪🇺', text: 'European roulette (2.7% edge) is better for the player than American (5.26%). One fewer zero makes a big difference.' },
-  { icon: '⏰', text: 'The longer you play, the closer your results get to the theoretical house edge. The house always wins given enough time.' },
-  { icon: '💡', text: '"Due" numbers don\'t exist. If red hit 10 times in a row, red and black are still equally likely on the next spin.' },
-  { icon: '🏦', text: 'Casinos don\'t need to cheat. The math is built into the game — every bet favors the house by design.' },
+  { icon: 'roulette', text: 'The green zero is what gives the house its edge. Without it, roulette would be a fair game.' },
+  { icon: 'dice', text: 'Every spin is independent. The wheel has no memory — past results don\'t change future odds.' },
+  { icon: 'edge', text: 'Doubling your bet after a loss (Martingale) doesn\'t change the house edge — it just increases variance.' },
+  { icon: 'equal', text: 'All bets on the same wheel type have the same house edge. There\'s no "better" bet mathematically.' },
+  { icon: 'info', text: 'European roulette (2.7% edge) is better for the player than American (5.26%). One fewer zero makes a big difference.' },
+  { icon: 'timer', text: 'The longer you play, the closer your results get to the theoretical house edge. The house always wins given enough time.' },
+  { icon: 'myth', text: '"Due" numbers don\'t exist. If red hit 10 times in a row, red and black are still equally likely on the next spin.' },
+  { icon: 'fact', text: 'Casinos don\'t need to cheat. The math is built into the game — every bet favors the house by design.' },
 ];
 
 export default function RoulettePage() {
@@ -173,7 +174,7 @@ export default function RoulettePage() {
       >
         <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 12 }}>
           <span style={{ fontSize: 24, fontWeight: 800, color: colors.white }}>Play</span>
-          <span style={{ fontSize: 24, fontWeight: 300, color: colors.secondary, textTransform: 'uppercase', letterSpacing: '0.08em' }}>book</span>
+          <span style={{ fontSize: 24, fontWeight: 300, color: colors.secondary, textTransform: 'uppercase', letterSpacing: '-0.03em' }}>book</span>
         </Link>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
@@ -182,7 +183,7 @@ export default function RoulettePage() {
             style={{
               display: 'flex',
               background: colors.primaryDark,
-              borderRadius: 8,
+              borderRadius: radius.md,
               padding: 3,
               gap: 2,
             }}
@@ -194,7 +195,7 @@ export default function RoulettePage() {
                 disabled={spinning}
                 style={{
                   padding: '8px 16px',
-                  borderRadius: 6,
+                  borderRadius: radius.sm,
                   border: 'none',
                   background: wheelType === type ? colors.primaryLight : 'transparent',
                   color: wheelType === type ? colors.white : colors.neutral500,
@@ -202,7 +203,7 @@ export default function RoulettePage() {
                   fontWeight: 700,
                   cursor: spinning ? 'default' : 'pointer',
                   transition: 'all 0.15s ease',
-                  fontFamily: 'system-ui',
+                  fontFamily: fonts.heading,
                 }}
               >
                 {type === 'european' ? 'European' : 'American'}
@@ -218,14 +219,14 @@ export default function RoulettePage() {
             disabled={spinning}
             style={{
               padding: '8px 16px',
-              borderRadius: 8,
+              borderRadius: radius.md,
               border: `1px solid ${colors.neutral700}`,
               background: 'transparent',
               color: colors.neutral300,
               fontSize: 13,
               fontWeight: 600,
               cursor: spinning ? 'default' : 'pointer',
-              fontFamily: 'system-ui',
+              fontFamily: fonts.heading,
             }}
           >
             Reset
@@ -234,14 +235,14 @@ export default function RoulettePage() {
             onClick={handleShowTutorial}
             style={{
               padding: '8px 12px',
-              borderRadius: 8,
+              borderRadius: radius.md,
               border: `1px solid ${colors.neutral700}`,
               background: 'transparent',
               color: colors.neutral500,
               fontSize: 13,
               fontWeight: 600,
               cursor: 'pointer',
-              fontFamily: 'system-ui',
+              fontFamily: fonts.heading,
             }}
             title="Replay tutorial"
           >
@@ -272,7 +273,7 @@ export default function RoulettePage() {
               gap: 24,
               padding: '12px 24px',
               background: colors.primaryDark,
-              borderRadius: 8,
+              borderRadius: radius.md,
               width: '100%',
               maxWidth: 720,
             }}
@@ -313,7 +314,7 @@ export default function RoulettePage() {
               width: '100%',
               padding: 16,
               background: colors.primaryDark,
-              borderRadius: 12,
+              borderRadius: radius.lg,
               borderLeft: `4px solid ${colors.secondary}`,
               display: 'flex',
               alignItems: 'flex-start',
@@ -321,7 +322,7 @@ export default function RoulettePage() {
               minHeight: 68,
             }}
           >
-            <span style={{ fontSize: 22, lineHeight: 1 }}>{EDUCATIONAL_FACTS[currentFact].icon}</span>
+            <BrandIcon name={EDUCATIONAL_FACTS[currentFact].icon} size={22} style={{ color: colors.secondary, flexShrink: 0 }} />
             <div>
               <div style={{ fontSize: 10, fontWeight: 700, color: colors.secondary, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 }}>
                 Did you know?

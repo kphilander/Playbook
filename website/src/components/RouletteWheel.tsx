@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { colors } from '@/lib/brand-tokens';
-import { rouletteColors } from '@/lib/brand-tokens';
+import { colors, fonts, rouletteColors } from '@/lib/brand-tokens';
 import type { Pocket, WheelType } from '@/lib/roulette-engine';
 import { EUROPEAN_WHEEL, AMERICAN_WHEEL_ORDER } from '@/lib/roulette-engine';
 
@@ -137,7 +136,7 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
                   fill={colors.white}
                   fontSize={pocketCount > 37 ? 9 : 10}
                   fontWeight={700}
-                  fontFamily="system-ui"
+                  fontFamily="Inter, system-ui, sans-serif"
                   textAnchor="middle"
                   dominantBaseline="central"
                   transform={`rotate(${textRotation} ${tx} ${ty})`}
@@ -223,7 +222,7 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
               boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
             }}
           >
-            <span style={{ color: colors.white, fontWeight: 800, fontSize: 14, fontFamily: 'system-ui' }}>
+            <span style={{ color: colors.white, fontWeight: 800, fontSize: 14, fontFamily: fonts.heading }}>
               {result.number}
             </span>
           </div>

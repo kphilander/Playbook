@@ -47,3 +47,52 @@ export const rouletteColors = {
   chipBlack: '#212121',
   chipOrange: '#FF6B35',
 } as const;
+
+// Spacing scale (px values as numbers for inline styles)
+export const spacing = {
+  xs: 4,
+  sm: 8,
+  md: 12,
+  base: 16,
+  lg: 24,
+  xl: 32,
+  '2xl': 48,
+  '3xl': 64,
+  '4xl': 96,
+} as const;
+
+// Border radius scale
+export const radius = {
+  sm: 4,
+  md: 8,
+  lg: 12,
+  full: 9999,
+} as const;
+
+// Shadow tokens (brand-spec: neutral-900 based)
+export const shadows = {
+  sm: '0 1px 2px rgba(26,26,46,0.06)',
+  md: '0 4px 12px rgba(26,26,46,0.08)',
+  lg: '0 8px 24px rgba(26,26,46,0.12)',
+} as const;
+
+// Typography presets
+export const typography = {
+  display: { fontSize: 48, fontWeight: 700, fontFamily: fonts.heading },
+  h1: { fontSize: 40, fontWeight: 700, fontFamily: fonts.heading },
+  h2: { fontSize: 32, fontWeight: 600, fontFamily: fonts.heading },
+  h3: { fontSize: 24, fontWeight: 600, fontFamily: fonts.heading },
+  h4: { fontSize: 20, fontWeight: 600, fontFamily: fonts.heading },
+  bodyLg: { fontSize: 18, fontWeight: 400, fontFamily: fonts.body },
+  body: { fontSize: 16, fontWeight: 400, fontFamily: fonts.body },
+  small: { fontSize: 14, fontWeight: 400, fontFamily: fonts.body },
+  caption: { fontSize: 12, fontWeight: 400, fontFamily: fonts.body },
+  label: { fontSize: 12, fontWeight: 700, fontFamily: fonts.heading, textTransform: 'uppercase' as const, letterSpacing: 1 },
+  mono: { fontFamily: fonts.mono },
+} as const;
+
+// Transition tokens
+export const transitions = {
+  fast: '150ms ease',
+  base: '250ms ease',
+} as const;

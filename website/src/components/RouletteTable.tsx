@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback } from 'react';
-import { colors, rouletteColors } from '@/lib/brand-tokens';
+import { colors, fonts, rouletteColors, radius } from '@/lib/brand-tokens';
 import type { BetDefinition, WheelType, Pocket } from '@/lib/roulette-engine';
 import { OUTSIDE_BETS, straightBet, getBetTooltip } from '@/lib/roulette-engine';
 
@@ -25,7 +25,7 @@ function BetTooltip({ bet, wheelType, x, y }: { bet: BetDefinition; wheelType: W
         transform: 'translate(-50%, -100%)',
         background: colors.primaryDark,
         border: `1px solid ${colors.primaryLight}`,
-        borderRadius: 8,
+        borderRadius: radius.md,
         padding: '10px 14px',
         zIndex: 100,
         pointerEvents: 'none',
@@ -82,7 +82,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
     justifyContent: 'center',
     fontSize: 16,
     fontWeight: 700,
-    fontFamily: 'system-ui',
+    fontFamily: fonts.mono,
     color: colors.white,
     background: isWin
       ? colors.accent
@@ -103,7 +103,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
     justifyContent: 'center',
     fontSize: 13,
     fontWeight: 700,
-    fontFamily: 'system-ui',
+    fontFamily: fonts.heading,
     color: isActive ? colors.primary : colors.neutral300,
     background: isWin ? colors.accent : isActive ? colors.secondary : colors.primaryLight,
     border: `1px solid ${colors.primaryLight}`,
@@ -157,7 +157,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   };
 
   return (
-    <div style={{ background: colors.primaryDark, borderRadius: 12, padding: 16, display: 'inline-block' }}>
+    <div style={{ background: colors.primaryDark, borderRadius: radius.lg, padding: 16, display: 'inline-block' }}>
       <div style={{ display: 'flex', gap: 0 }}>
         {/* Zero column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>

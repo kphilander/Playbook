@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import { colors } from '@/lib/brand-tokens';
+import { colors, fonts, rouletteColors, radius } from '@/lib/brand-tokens';
 import type { GameStats, SpinResult, WheelType } from '@/lib/roulette-engine';
 import { simulateBatch } from '@/lib/roulette-engine';
 
@@ -28,7 +28,7 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
       <div
         style={{
           background: colors.primaryDark,
-          borderRadius: 12,
+          borderRadius: radius.lg,
           padding: 24,
           display: 'flex',
           flexDirection: 'column',
@@ -50,14 +50,14 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
             style={{
               width: '100%',
               padding: '10px 16px',
-              borderRadius: 8,
+              borderRadius: radius.md,
               border: `1px solid ${colors.secondary}40`,
               background: simData ? colors.primary : `${colors.secondary}15`,
               color: colors.secondary,
               fontSize: 13,
               fontWeight: 700,
               cursor: simulating ? 'default' : 'pointer',
-              fontFamily: 'system-ui',
+              fontFamily: fonts.heading,
               transition: 'all 0.15s ease',
             }}
           >
@@ -121,7 +121,7 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
         <div
           style={{
             padding: 12,
-            borderRadius: 8,
+            borderRadius: radius.md,
             background: colors.primary,
             fontSize: 12,
             color: colors.neutral500,
@@ -170,7 +170,7 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
     <div
       style={{
         background: colors.primaryDark,
-        borderRadius: 12,
+        borderRadius: radius.lg,
         padding: 24,
         display: 'flex',
         flexDirection: 'column',
@@ -249,14 +249,14 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
           style={{
             width: '100%',
             padding: '10px 16px',
-            borderRadius: 8,
+            borderRadius: radius.md,
             border: `1px solid ${colors.secondary}40`,
             background: simData ? colors.primary : `${colors.secondary}15`,
             color: colors.secondary,
             fontSize: 13,
             fontWeight: 700,
             cursor: simulating ? 'default' : 'pointer',
-            fontFamily: 'system-ui',
+            fontFamily: fonts.heading,
             transition: 'all 0.15s ease',
           }}
         >
@@ -331,10 +331,10 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
               style={{
                 width: 24,
                 height: 24,
-                borderRadius: 4,
+                borderRadius: radius.sm,
                 background:
-                  result.pocket.color === 'green' ? '#2E7D32' :
-                  result.pocket.color === 'red' ? '#D32F2F' : '#212121',
+                  result.pocket.color === 'green' ? rouletteColors.green :
+                  result.pocket.color === 'red' ? rouletteColors.red : rouletteColors.black,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -353,7 +353,7 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
       <div
         style={{
           padding: 12,
-          borderRadius: 8,
+          borderRadius: radius.md,
           background: colors.primary,
           fontSize: 12,
           color: colors.neutral500,
@@ -399,7 +399,7 @@ function StatBox({ label, value, color }: { label: string; value: string; color:
     <div
       style={{
         background: colors.primary,
-        borderRadius: 8,
+        borderRadius: radius.md,
         padding: '10px 12px',
         textAlign: 'center',
       }}
@@ -407,7 +407,7 @@ function StatBox({ label, value, color }: { label: string; value: string; color:
       <div style={{ fontSize: 10, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 4 }}>
         {label}
       </div>
-      <div style={{ fontSize: 18, fontWeight: 800, color, fontFamily: 'system-ui' }}>
+      <div style={{ fontSize: 18, fontWeight: 800, color, fontFamily: fonts.mono }}>
         {value}
       </div>
     </div>

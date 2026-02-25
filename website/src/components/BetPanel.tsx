@@ -1,6 +1,6 @@
 'use client';
 
-import { colors } from '@/lib/brand-tokens';
+import { colors, fonts, radius } from '@/lib/brand-tokens';
 import type { PlacedBet, Pocket, WheelType } from '@/lib/roulette-engine';
 import { getHouseEdge, getPocketCount } from '@/lib/roulette-engine';
 
@@ -38,7 +38,7 @@ export default function BetPanel({
     <div
       style={{
         background: colors.primaryDark,
-        borderRadius: 12,
+        borderRadius: radius.lg,
         padding: 24,
         minWidth: 280,
         display: 'flex',
@@ -78,7 +78,7 @@ export default function BetPanel({
                 fontWeight: 700,
                 cursor: spinning ? 'default' : 'pointer',
                 transition: 'all 0.15s ease',
-                fontFamily: 'system-ui',
+                fontFamily: fonts.heading,
               }}
             >
               ${size}
@@ -109,7 +109,7 @@ export default function BetPanel({
                   color: colors.neutral300,
                   padding: '4px 8px',
                   background: colors.primary,
-                  borderRadius: 6,
+                  borderRadius: radius.sm,
                 }}
               >
                 <span>{bet.definition.label}</span>
@@ -143,7 +143,7 @@ export default function BetPanel({
           style={{
             flex: 1,
             padding: '12px 16px',
-            borderRadius: 8,
+            borderRadius: radius.md,
             border: `1px solid ${colors.neutral700}`,
             background: 'transparent',
             color: colors.neutral300,
@@ -151,7 +151,7 @@ export default function BetPanel({
             fontWeight: 600,
             cursor: spinning || currentBets.length === 0 ? 'default' : 'pointer',
             opacity: spinning || currentBets.length === 0 ? 0.4 : 1,
-            fontFamily: 'system-ui',
+            fontFamily: fonts.heading,
           }}
         >
           Clear
@@ -162,7 +162,7 @@ export default function BetPanel({
           style={{
             flex: 2,
             padding: '12px 16px',
-            borderRadius: 8,
+            borderRadius: radius.md,
             border: 'none',
             background: canSpin ? colors.accent : colors.neutral700,
             color: canSpin ? colors.white : colors.neutral500,
@@ -170,7 +170,7 @@ export default function BetPanel({
             fontWeight: 800,
             cursor: canSpin ? 'pointer' : 'default',
             transition: 'all 0.15s ease',
-            fontFamily: 'system-ui',
+            fontFamily: fonts.heading,
           }}
         >
           {spinning ? 'Spinning...' : 'Spin'}
@@ -182,7 +182,7 @@ export default function BetPanel({
         <div
           style={{
             padding: 16,
-            borderRadius: 8,
+            borderRadius: radius.md,
             background: lastWin > 0 ? `${colors.success}15` : `${colors.danger}15`,
             border: `1px solid ${lastWin > 0 ? colors.success : colors.danger}30`,
           }}
@@ -209,7 +209,7 @@ export default function BetPanel({
                     color: colors.neutral300,
                     padding: '4px 8px',
                     background: `${colors.primary}80`,
-                    borderRadius: 4,
+                    borderRadius: radius.sm,
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
@@ -239,7 +239,7 @@ export default function BetPanel({
       <div
         style={{
           padding: 12,
-          borderRadius: 8,
+          borderRadius: radius.md,
           background: colors.primary,
           fontSize: 12,
           color: colors.neutral500,
