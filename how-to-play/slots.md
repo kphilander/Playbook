@@ -24,6 +24,10 @@ Everything you need to know about slot machines — how they work, what the numb
 
 ---
 
+![Slots — How It Works](../collateral/render/htp-card-slots.png)
+
+---
+
 ## The 30-second version
 
 > Slots are pure chance. You press a button, a random number generator picks the outcome, and the reels display the result. There's no strategy that changes the math. The house edge ranges from `2%` to `15%` depending on the machine. Check the paytable before you play — it takes 30 seconds and tells you everything the machine won't.
@@ -69,6 +73,8 @@ Slots don't have bet types the way table games do. What you control is the **siz
 ---
 
 ## The math
+
+![RTP and volatility compared across slot machine types](diagrams/slots-rtp-volatility.svg)
 
 ### House edge and RTP
 

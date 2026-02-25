@@ -24,6 +24,10 @@ Everything you need to know about roulette — the wheel, the bets, and why the 
 
 ---
 
+![Roulette — How It Works](../collateral/render/htp-card-roulette.png)
+
+---
+
 ## The 30-second version
 
 > Roulette is pure chance. A ball lands on a random number, and you win if you bet on that number (or a group containing it). No decision you make changes the odds. The only decision that matters is which wheel you play: European (one zero, `2.70%` house edge) or American (two zeros, `5.26%` house edge). That single zero nearly doubles the house's advantage.
@@ -88,6 +92,8 @@ Bets placed on larger groups. Lower risk, lower payout.
 ---
 
 ## The math
+
+![European vs. American roulette — wheel comparison](diagrams/roulette-wheel-comparison.svg)
 
 ### House edge by wheel type
 

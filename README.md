@@ -96,6 +96,11 @@ Playbook/
 │   ├── blackjack.md                  # Blackjack guide
 │   ├── roulette.md                   # Roulette guide
 │   ├── sports-betting.md             # Sports Betting guide
+│   ├── diagrams/                     # SVG diagrams embedded in game guides
+│   │   ├── slots-rtp-volatility.svg
+│   │   ├── blackjack-strategy-overview.svg
+│   │   ├── roulette-wheel-comparison.svg
+│   │   └── sports-betting-vig-explained.svg
 │   └── quick-reference/              # Condensed single-card summaries
 │       ├── slots-quick-ref.md
 │       ├── blackjack-quick-ref.md
@@ -125,7 +130,7 @@ Playbook/
 │   ├── video-audio/                  # TV, radio, pre-roll, and hold message scripts
 │   ├── customer-service/             # Conversation scripts and staff FAQ
 │   ├── interactive/                   # Quiz framework
-│   └── render/                       # 36 HTML templates + PNG renders + build pipeline
+│   └── render/                       # 41 HTML templates + PNG renders + build pipeline
 │       ├── render-cards.mjs          # Puppeteer manifest (HTML → PNG)
 │       ├── build-logos.mjs           # Logo SVG generator
 │       ├── build-icons.mjs           # Icon SVG generator
@@ -174,7 +179,7 @@ Playbook/
 | **How to Play** | In progress | 4 game guides (slots, blackjack, roulette, sports betting), quick-reference cards, odds comparison, 5 social card templates. Template ready for 6 more games. |
 | **Messaging** | Complete | 74 core messages, tagline system, CTA library, myth-busting, stigma-free language guide, tone examples, 6 player-segment profiles |
 | **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
-| **Collateral renders** | Complete | 41 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, 8 Tier 2 support/crisis templates, and 5 how-to-play cards |
+| **Collateral renders** | Complete | 41 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, 8 Tier 2 support/crisis templates, 5 how-to-play cards, and 4 educational SVG diagrams |
 | **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
 | **Jurisdictions** | In progress | Template system, Canada/BC compliance module, US/Nevada compliance module, advertising rules |
 

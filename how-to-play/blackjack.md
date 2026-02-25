@@ -8,6 +8,10 @@ Everything you need to know about blackjack — the rules, the decisions, and wh
 
 ---
 
+![Blackjack — How It Works](../collateral/render/htp-card-blackjack.png)
+
+---
+
 ## Quick-scan index
 
 | Section | What it covers |
@@ -109,6 +113,8 @@ The difference between knowing basic strategy and not knowing it is the differen
 ---
 
 ## Basic strategy
+
+![Basic strategy at a glance — visual chart](diagrams/blackjack-strategy-overview.svg)
 
 Basic strategy is the mathematically optimal decision for every possible hand combination. It was figured out by running millions of simulated hands through computers. It's not a "system" or a "trick" — it's just the math.
 

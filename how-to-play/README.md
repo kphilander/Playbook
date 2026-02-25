@@ -39,7 +39,7 @@ Side-by-side house edge comparison across all major games: [odds-at-a-glance.md]
 
 **Creating quizzes?** → Quiz questions in each guide follow the [quiz framework](../collateral/interactive/quiz-framework.md) format. Combine across games for a comprehensive Game IQ quiz.
 
-**Printing venue materials?** → Quick-reference cards are designed for print, table tents, and in-app cards. See `collateral/render/htp-ref-*` templates.
+**Printing venue materials?** → Quick-reference cards are designed for print, table tents, and in-app cards. Pair with `collateral/render/htp-card-*` social card templates.
 
 **Need myth-busting content?** → Each guide cross-references related myths from [`myth-busting.md`](../messaging/myth-busting.md). The guides explain how games work; the myths explain what people get wrong about them.
 

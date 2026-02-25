@@ -8,6 +8,10 @@ Everything you need to know about sports betting — how odds work, what the dif
 
 ---
 
+![Sports Betting — How It Works](../collateral/render/htp-card-sports.png)
+
+---
+
 ## Quick-scan index
 
 | Section | What it covers |
@@ -190,6 +194,8 @@ Bets placed after the event has started, with odds that update in real time.
 ---
 
 ## The math
+
+![How the vig works — visual breakdown](diagrams/sports-betting-vig-explained.svg)
 
 ### The vig in practice
 
