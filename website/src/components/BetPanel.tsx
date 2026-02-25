@@ -2,7 +2,7 @@
 
 import { colors } from '@/lib/brand-tokens';
 import type { PlacedBet, Pocket, WheelType } from '@/lib/roulette-engine';
-import { getHouseEdge } from '@/lib/roulette-engine';
+import { getHouseEdge, getPocketCount } from '@/lib/roulette-engine';
 
 interface BetPanelProps {
   balance: number;
@@ -177,7 +177,7 @@ export default function BetPanel({
         </button>
       </div>
 
-      {/* Last result */}
+      {/* Post-spin breakdown */}
       {result && !spinning && (
         <div
           style={{
@@ -185,14 +185,52 @@ export default function BetPanel({
             borderRadius: 8,
             background: lastWin > 0 ? `${colors.success}15` : `${colors.danger}15`,
             border: `1px solid ${lastWin > 0 ? colors.success : colors.danger}30`,
-            textAlign: 'center',
           }}
         >
-          <div style={{ fontSize: 12, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1 }}>
-            {lastWin > 0 ? 'Winner!' : 'No win'}
+          <div style={{ textAlign: 'center', marginBottom: 10 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1 }}>
+              {lastWin > 0 ? 'Winner!' : 'No win'}
+            </div>
+            <div style={{ fontSize: 24, fontWeight: 800, color: lastWin > 0 ? colors.success : colors.danger }}>
+              {lastWin > 0 ? `+$${lastWin}` : `-$${totalBet}`}
+            </div>
           </div>
-          <div style={{ fontSize: 24, fontWeight: 800, color: lastWin > 0 ? colors.success : colors.danger }}>
-            {lastWin > 0 ? `+$${lastWin}` : `-$${totalBet}`}
+          {/* Per-bet breakdown */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {currentBets.map((bet, i) => {
+              const won = bet.definition.numbers.includes(result.number);
+              const pocketCount = getPocketCount(wheelType);
+              const prob = bet.definition.numbers.length / pocketCount;
+              return (
+                <div
+                  key={i}
+                  style={{
+                    fontSize: 11,
+                    color: colors.neutral300,
+                    padding: '4px 8px',
+                    background: `${colors.primary}80`,
+                    borderRadius: 4,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    gap: 6,
+                  }}
+                >
+                  <span style={{ flex: 1 }}>
+                    <span style={{ fontWeight: 700, color: won ? colors.success : colors.neutral500 }}>
+                      {won ? '✓' : '✗'}
+                    </span>{' '}
+                    ${bet.amount} on {bet.definition.label}
+                  </span>
+                  <span style={{ fontSize: 10, color: colors.neutral500 }}>
+                    {bet.definition.payout}:1 · {(prob * 100).toFixed(0)}%
+                  </span>
+                  <span style={{ fontWeight: 700, color: won ? colors.success : colors.danger, minWidth: 40, textAlign: 'right' }}>
+                    {won ? `+$${bet.amount * bet.definition.payout}` : `-$${bet.amount}`}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       )}

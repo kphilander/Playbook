@@ -36,17 +36,17 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
 
     // Spin the wheel multiple full rotations + land on target pocket
     const targetAngle = targetIndex * pocketAngle;
-    const fullSpins = 5 + Math.random() * 3; // 5-8 full rotations
+    const fullSpins = 2 + Math.random() * 1; // 2-3 full rotations
     const totalRotation = fullSpins * 360 + (360 - targetAngle);
 
     // Ball spins in opposite direction
-    const ballSpins = fullSpins + 2;
+    const ballSpins = fullSpins + 1;
     const ballTarget = targetAngle;
     const totalBallRotation = ballSpins * 360 + ballTarget;
 
     const startRotation = rotation;
     const startBall = ballAngle;
-    const duration = 4000; // 4 seconds
+    const duration = 1500; // 1.5 seconds
     const start = performance.now();
 
     function animate(now: number) {

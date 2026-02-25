@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/playbook',
+  basePath: '/tools/playbook/roulette',
   images: { unoptimized: true },
 };
 

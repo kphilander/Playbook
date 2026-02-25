@@ -1,8 +1,9 @@
 'use client';
 
+import { useState, useRef, useCallback } from 'react';
 import { colors, rouletteColors } from '@/lib/brand-tokens';
 import type { BetDefinition, WheelType, Pocket } from '@/lib/roulette-engine';
-import { OUTSIDE_BETS, straightBet } from '@/lib/roulette-engine';
+import { OUTSIDE_BETS, straightBet, getBetTooltip } from '@/lib/roulette-engine';
 
 interface RouletteTableProps {
   wheelType: WheelType;
@@ -12,6 +13,43 @@ interface RouletteTableProps {
   disabled: boolean;
 }
 
+/* ─── Tooltip Component ─── */
+function BetTooltip({ bet, wheelType, x, y }: { bet: BetDefinition; wheelType: WheelType; x: number; y: number }) {
+  const info = getBetTooltip(bet, wheelType);
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        left: x,
+        top: y - 8,
+        transform: 'translate(-50%, -100%)',
+        background: colors.primaryDark,
+        border: `1px solid ${colors.primaryLight}`,
+        borderRadius: 8,
+        padding: '10px 14px',
+        zIndex: 100,
+        pointerEvents: 'none',
+        minWidth: 200,
+        boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+      }}
+    >
+      <div style={{ fontSize: 13, fontWeight: 700, color: colors.white, marginBottom: 6 }}>
+        {info.name}
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '3px 12px', fontSize: 12 }}>
+        <span style={{ color: colors.neutral500 }}>Payout</span>
+        <span style={{ color: colors.accent, fontWeight: 700 }}>{info.payout}</span>
+        <span style={{ color: colors.neutral500 }}>Win chance</span>
+        <span style={{ color: colors.secondary, fontWeight: 700 }}>
+          {info.probability} ({info.coverageCount}/{info.totalPockets})
+        </span>
+        <span style={{ color: colors.neutral500 }}>Avg. loss</span>
+        <span style={{ color: colors.danger, fontWeight: 600 }}>{info.expectedLoss}</span>
+      </div>
+    </div>
+  );
+}
+
 const RED_NUMBERS = new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 
 const CELL_W = 52;
@@ -19,6 +57,21 @@ const CELL_H = 44;
 const ZERO_W = 52;
 
 export default function RouletteTable({ wheelType, onBetPlace, activeBets, result, disabled }: RouletteTableProps) {
+  const [tooltipBet, setTooltipBet] = useState<BetDefinition | null>(null);
+  const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
+  const tooltipTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleMouseEnter = useCallback((bet: BetDefinition, e: React.MouseEvent) => {
+    if (tooltipTimeout.current) clearTimeout(tooltipTimeout.current);
+    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+    setTooltipPos({ x: rect.left + rect.width / 2, y: rect.top });
+    setTooltipBet(bet);
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    tooltipTimeout.current = setTimeout(() => setTooltipBet(null), 100);
+  }, []);
+
   const isWinner = (numbers: string[]) => result && numbers.includes(result.number);
 
   const cellStyle = (num: number, isActive: boolean, isWin: boolean): React.CSSProperties => ({
@@ -111,6 +164,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
           {/* Zero */}
           <div
             onClick={() => handleClick(straightBet('0'))}
+            onMouseEnter={(e) => handleMouseEnter(straightBet('0'), e)}
+            onMouseLeave={handleMouseLeave}
             style={{
               ...cellStyle(0, activeBets.has(getBetKey(straightBet('0'))), !!isWinner(['0'])),
               background: isWinner(['0']) ? colors.accent
@@ -128,6 +183,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
           {wheelType === 'american' && (
             <div
               onClick={() => handleClick(straightBet('00'))}
+              onMouseEnter={(e) => handleMouseEnter(straightBet('00'), e)}
+              onMouseLeave={handleMouseLeave}
               style={{
                 ...cellStyle(0, activeBets.has(getBetKey(straightBet('00'))), !!isWinner(['00'])),
                 background: isWinner(['00']) ? colors.accent
@@ -155,6 +212,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                   <div
                     key={num}
                     onClick={() => handleClick(bet)}
+                    onMouseEnter={(e) => handleMouseEnter(bet, e)}
+                    onMouseLeave={handleMouseLeave}
                     style={{ ...cellStyle(num, activeBets.has(betKey), !!isWinner([String(num)])), position: 'relative' }}
                   >
                     {num}
@@ -177,6 +236,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                 <div
                   key={bet.type}
                   onClick={() => handleClick(bet)}
+                  onMouseEnter={(e) => handleMouseEnter(bet, e)}
+                  onMouseLeave={handleMouseLeave}
                   style={{ ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)), width: CELL_W * 4, position: 'relative' }}
                 >
                   {bet.label}
@@ -202,6 +263,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                 <div
                   key={bet.type}
                   onClick={() => handleClick(bet)}
+                  onMouseEnter={(e) => handleMouseEnter(bet, e)}
+                  onMouseLeave={handleMouseLeave}
                   style={{
                     ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)),
                     width: CELL_W * 2,
@@ -235,6 +298,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
               <div
                 key={bet.type}
                 onClick={() => handleClick(bet)}
+                onMouseEnter={(e) => handleMouseEnter(bet, e)}
+                onMouseLeave={handleMouseLeave}
                 style={{
                   ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)),
                   width: 48,
@@ -251,6 +316,11 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
           })}
         </div>
       </div>
+
+      {/* Tooltip */}
+      {tooltipBet && (
+        <BetTooltip bet={tooltipBet} wheelType={wheelType} x={tooltipPos.x} y={tooltipPos.y} />
+      )}
     </div>
   );
 }
