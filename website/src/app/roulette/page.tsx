@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { colors } from '@/lib/brand-tokens';
 import {
@@ -25,8 +25,21 @@ import RouletteWheel from '@/components/RouletteWheel';
 import RouletteTable from '@/components/RouletteTable';
 import BetPanel from '@/components/BetPanel';
 import StatsTracker from '@/components/StatsTracker';
+import TutorialOverlay, { resetTutorial } from '@/components/TutorialOverlay';
 
 const STARTING_BALANCE = 1000;
+
+/* ─── Rotating educational fact cards ─── */
+const EDUCATIONAL_FACTS = [
+  { icon: '🟢', text: 'The green zero is what gives the house its edge. Without it, roulette would be a fair game.' },
+  { icon: '🎲', text: 'Every spin is independent. The wheel has no memory — past results don\'t change future odds.' },
+  { icon: '📉', text: 'Doubling your bet after a loss (Martingale) doesn\'t change the house edge — it just increases variance.' },
+  { icon: '🔢', text: 'All bets on the same wheel type have the same house edge. There\'s no "better" bet mathematically.' },
+  { icon: '🇪🇺', text: 'European roulette (2.7% edge) is better for the player than American (5.26%). One fewer zero makes a big difference.' },
+  { icon: '⏰', text: 'The longer you play, the closer your results get to the theoretical house edge. The house always wins given enough time.' },
+  { icon: '💡', text: '"Due" numbers don\'t exist. If red hit 10 times in a row, red and black are still equally likely on the next spin.' },
+  { icon: '🏦', text: 'Casinos don\'t need to cheat. The math is built into the game — every bet favors the house by design.' },
+];
 
 export default function RoulettePage() {
   const [wheelType, setWheelType] = useState<WheelType>('european');
@@ -37,6 +50,16 @@ export default function RoulettePage() {
   const [result, setResult] = useState<Pocket | null>(null);
   const [lastWin, setLastWin] = useState(0);
   const [stats, setStats] = useState<GameStats>(createStats(wheelType));
+  const [showTutorial, setShowTutorial] = useState(true);
+  const [currentFact, setCurrentFact] = useState(0);
+
+  // Rotate educational facts every 12 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFact(f => (f + 1) % EDUCATIONAL_FACTS.length);
+    }, 12000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Bet key for deduplication
   const betKey = (bet: BetDefinition) => `${bet.type}:${bet.numbers.join(',')}`;
@@ -120,8 +143,24 @@ export default function RoulettePage() {
     setStats(createStats(wheelType));
   }, [spinning, wheelType]);
 
+  const handleTutorialComplete = useCallback(() => {
+    setShowTutorial(false);
+  }, []);
+
+  const handleShowTutorial = useCallback(() => {
+    resetTutorial();
+    setShowTutorial(true);
+  }, []);
+
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      {/* Tutorial Overlay */}
+      <TutorialOverlay
+        wheelType={wheelType}
+        onComplete={handleTutorialComplete}
+        visible={showTutorial}
+      />
+
       {/* Header */}
       <header
         style={{
@@ -191,6 +230,23 @@ export default function RoulettePage() {
           >
             Reset
           </button>
+          <button
+            onClick={handleShowTutorial}
+            style={{
+              padding: '8px 12px',
+              borderRadius: 8,
+              border: `1px solid ${colors.neutral700}`,
+              background: 'transparent',
+              color: colors.neutral500,
+              fontSize: 13,
+              fontWeight: 600,
+              cursor: 'pointer',
+              fontFamily: 'system-ui',
+            }}
+            title="Replay tutorial"
+          >
+            ?
+          </button>
         </div>
       </header>
 
@@ -250,26 +306,35 @@ export default function RoulettePage() {
             disabled={spinning}
           />
 
-          {/* Educational callout */}
+          {/* Educational fact card — rotating */}
           <div
             style={{
               maxWidth: 720,
               width: '100%',
-              padding: 20,
+              padding: 16,
               background: colors.primaryDark,
               borderRadius: 12,
               borderLeft: `4px solid ${colors.secondary}`,
+              display: 'flex',
+              alignItems: 'flex-start',
+              gap: 12,
+              minHeight: 68,
             }}
           >
-            <div style={{ fontSize: 14, fontWeight: 700, color: colors.secondary, marginBottom: 8 }}>
-              This is a demo — not real gambling
+            <span style={{ fontSize: 22, lineHeight: 1 }}>{EDUCATIONAL_FACTS[currentFact].icon}</span>
+            <div>
+              <div style={{ fontSize: 10, fontWeight: 700, color: colors.secondary, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 }}>
+                Did you know?
+              </div>
+              <div style={{ fontSize: 13, color: colors.neutral300, lineHeight: 1.6 }}>
+                {EDUCATIONAL_FACTS[currentFact].text}
+              </div>
             </div>
-            <div style={{ fontSize: 13, color: colors.neutral300, lineHeight: 1.6 }}>
-              No real money is involved. This simulator uses the same random math as a real roulette wheel.
-              Watch your results over many spins — they&apos;ll converge toward the house edge of{' '}
-              <strong style={{ color: colors.accent }}>{getHouseEdge(wheelType)}%</strong>.
-              That&apos;s the math. No strategy changes it. The only choice that matters is the wheel type.
-            </div>
+          </div>
+
+          {/* Demo disclaimer */}
+          <div style={{ maxWidth: 720, width: '100%', fontSize: 11, color: colors.neutral500, textAlign: 'center' }}>
+            This is a demo — no real money involved. Same random math as a real roulette wheel.
           </div>
         </div>
 
@@ -287,7 +352,7 @@ export default function RoulettePage() {
             lastWin={lastWin}
             wheelType={wheelType}
           />
-          <StatsTracker stats={stats} />
+          <StatsTracker stats={stats} wheelType={wheelType} />
         </div>
       </main>
 

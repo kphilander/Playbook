@@ -1,13 +1,28 @@
 'use client';
 
+import { useState, useCallback } from 'react';
 import { colors } from '@/lib/brand-tokens';
-import type { GameStats, SpinResult } from '@/lib/roulette-engine';
+import type { GameStats, SpinResult, WheelType } from '@/lib/roulette-engine';
+import { simulateBatch } from '@/lib/roulette-engine';
 
 interface StatsTrackerProps {
   stats: GameStats;
+  wheelType?: WheelType;
 }
 
-export default function StatsTracker({ stats }: StatsTrackerProps) {
+export default function StatsTracker({ stats, wheelType = 'european' }: StatsTrackerProps) {
+  const [simData, setSimData] = useState<{ spin: number; actual: number; expected: number }[] | null>(null);
+  const [simulating, setSimulating] = useState(false);
+
+  const handleSimulate = useCallback(() => {
+    setSimulating(true);
+    // Use requestAnimationFrame to allow the UI to show "Simulating..." before heavy computation
+    requestAnimationFrame(() => {
+      const data = simulateBatch(wheelType, 1000);
+      setSimData(data);
+      setSimulating(false);
+    });
+  }, [wheelType]);
   if (stats.spins === 0) {
     return (
       <div
@@ -15,13 +30,108 @@ export default function StatsTracker({ stats }: StatsTrackerProps) {
           background: colors.primaryDark,
           borderRadius: 12,
           padding: 24,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 16,
         }}
       >
-        <div style={{ fontSize: 14, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>
+        <div style={{ fontSize: 14, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1 }}>
           Session Stats
         </div>
         <div style={{ fontSize: 14, color: colors.neutral500, fontStyle: 'italic' }}>
           Place bets and spin to start tracking your results against the house edge.
+        </div>
+
+        {/* Simulate button available even before first spin */}
+        <div>
+          <button
+            onClick={handleSimulate}
+            disabled={simulating}
+            style={{
+              width: '100%',
+              padding: '10px 16px',
+              borderRadius: 8,
+              border: `1px solid ${colors.secondary}40`,
+              background: simData ? colors.primary : `${colors.secondary}15`,
+              color: colors.secondary,
+              fontSize: 13,
+              fontWeight: 700,
+              cursor: simulating ? 'default' : 'pointer',
+              fontFamily: 'system-ui',
+              transition: 'all 0.15s ease',
+            }}
+          >
+            {simulating ? 'Simulating...' : simData ? '↻ Re-simulate 1,000 Spins' : '⚡ Simulate 1,000 Spins'}
+          </button>
+          {!simData && (
+            <div style={{ fontSize: 11, color: colors.neutral500, marginTop: 6, lineHeight: 1.5 }}>
+              See how results converge to the house edge over 1,000 spins — instant, no animation.
+            </div>
+          )}
+        </div>
+
+        {/* Simulation chart (if run) */}
+        {simData && (() => {
+          const simChartW = 280;
+          const simChartH = 100;
+          const maxSpin = simData[simData.length - 1].spin;
+          const allVals = simData.map(d => d.actual);
+          const simMaxEdge = Math.max(20, ...allVals);
+          const simMinEdge = Math.min(-20, ...allVals);
+          const simRange = simMaxEdge - simMinEdge;
+          const simToX = (s: number) => (s / maxSpin) * simChartW;
+          const simToY = (val: number) => simChartH - ((val - simMinEdge) / simRange) * simChartH;
+          const simExpectedY = simToY(stats.expectedEdge);
+          const simZeroY = simToY(0);
+          const simPath = simData
+            .map((d, i) => `${i === 0 ? 'M' : 'L'} ${simToX(d.spin).toFixed(1)} ${simToY(d.actual).toFixed(1)}`)
+            .join(' ');
+          return (
+            <div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 }}>
+                1,000-Spin Simulation ($10 on Red)
+              </div>
+              <div style={{ fontSize: 11, color: colors.neutral300, marginBottom: 8, lineHeight: 1.5 }}>
+                Over many spins, losses converge to ~{stats.expectedEdge}%. Short term is wild — long term is math.
+              </div>
+              <svg viewBox={`-4 -4 ${simChartW + 8} ${simChartH + 8}`} width="100%" height={simChartH + 8} style={{ overflow: 'visible' }}>
+                <line x1={0} y1={simZeroY} x2={simChartW} y2={simZeroY} stroke={colors.neutral700} strokeWidth={0.5} strokeDasharray="4,4" />
+                <line x1={0} y1={simExpectedY} x2={simChartW} y2={simExpectedY} stroke={colors.secondary} strokeWidth={1.5} strokeDasharray="6,3" opacity={0.7} />
+                <path d={simPath} fill="none" stroke={colors.info} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" opacity={0.8} />
+                <text x={simChartW + 4} y={simExpectedY + 3} fill={colors.secondary} fontSize={9} fontWeight={600}>
+                  {stats.expectedEdge.toFixed(1)}%
+                </text>
+                <text x={simChartW + 4} y={simZeroY + 3} fill={colors.neutral500} fontSize={9}>0%</text>
+              </svg>
+              <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
+                <span style={{ fontSize: 10, color: colors.neutral500 }}>
+                  <span style={{ display: 'inline-block', width: 12, height: 2, background: colors.info, marginRight: 4, verticalAlign: 'middle' }}></span>
+                  Simulated
+                </span>
+                <span style={{ fontSize: 10, color: colors.neutral500 }}>
+                  <span style={{ display: 'inline-block', width: 12, height: 2, background: colors.secondary, marginRight: 4, verticalAlign: 'middle' }}></span>
+                  House edge ({stats.expectedEdge}%)
+                </span>
+              </div>
+            </div>
+          );
+        })()}
+
+        {/* Front-loaded educational message */}
+        <div
+          style={{
+            padding: 12,
+            borderRadius: 8,
+            background: colors.primary,
+            fontSize: 12,
+            color: colors.neutral500,
+            lineHeight: 1.6,
+            borderLeft: `3px solid ${colors.secondary}`,
+          }}
+        >
+          <strong style={{ color: colors.secondary }}>The math never changes.</strong>{' '}
+          Over thousands of spins, your losses will average {stats.expectedEdge}% of every dollar wagered.
+          In the short term, anything can happen — but the house edge is built into every single bet.
         </div>
       </div>
     );
@@ -131,6 +241,84 @@ export default function StatsTracker({ stats }: StatsTrackerProps) {
         </div>
       )}
 
+      {/* Simulate 1,000 Spins */}
+      <div>
+        <button
+          onClick={handleSimulate}
+          disabled={simulating}
+          style={{
+            width: '100%',
+            padding: '10px 16px',
+            borderRadius: 8,
+            border: `1px solid ${colors.secondary}40`,
+            background: simData ? colors.primary : `${colors.secondary}15`,
+            color: colors.secondary,
+            fontSize: 13,
+            fontWeight: 700,
+            cursor: simulating ? 'default' : 'pointer',
+            fontFamily: 'system-ui',
+            transition: 'all 0.15s ease',
+          }}
+        >
+          {simulating ? 'Simulating...' : simData ? '↻ Re-simulate 1,000 Spins' : '⚡ Simulate 1,000 Spins'}
+        </button>
+        {!simData && (
+          <div style={{ fontSize: 11, color: colors.neutral500, marginTop: 6, lineHeight: 1.5 }}>
+            See how results converge to the house edge over 1,000 spins — instant, no animation.
+          </div>
+        )}
+      </div>
+
+      {/* Simulation convergence chart */}
+      {simData && (
+        <div>
+          <div style={{ fontSize: 11, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 }}>
+            1,000-Spin Simulation ($10 on Red)
+          </div>
+          <div style={{ fontSize: 11, color: colors.neutral300, marginBottom: 8, lineHeight: 1.5 }}>
+            Over many spins, your losses always converge to ~{stats.expectedEdge}%. The short term swings wildly — the long term is math.
+          </div>
+          {(() => {
+            const simChartW = 280;
+            const simChartH = 100;
+            const maxSpin = simData[simData.length - 1].spin;
+            const allVals = simData.map(d => d.actual);
+            const simMaxEdge = Math.max(20, ...allVals);
+            const simMinEdge = Math.min(-20, ...allVals);
+            const simRange = simMaxEdge - simMinEdge;
+            const simToX = (spin: number) => (spin / maxSpin) * simChartW;
+            const simToY = (val: number) => simChartH - ((val - simMinEdge) / simRange) * simChartH;
+            const simExpectedY = simToY(stats.expectedEdge);
+            const simZeroY = simToY(0);
+            const simPath = simData
+              .map((d, i) => `${i === 0 ? 'M' : 'L'} ${simToX(d.spin).toFixed(1)} ${simToY(d.actual).toFixed(1)}`)
+              .join(' ');
+
+            return (
+              <svg viewBox={`-4 -4 ${simChartW + 8} ${simChartH + 8}`} width="100%" height={simChartH + 8} style={{ overflow: 'visible' }}>
+                <line x1={0} y1={simZeroY} x2={simChartW} y2={simZeroY} stroke={colors.neutral700} strokeWidth={0.5} strokeDasharray="4,4" />
+                <line x1={0} y1={simExpectedY} x2={simChartW} y2={simExpectedY} stroke={colors.secondary} strokeWidth={1.5} strokeDasharray="6,3" opacity={0.7} />
+                <path d={simPath} fill="none" stroke={colors.info} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" opacity={0.8} />
+                <text x={simChartW + 4} y={simExpectedY + 3} fill={colors.secondary} fontSize={9} fontWeight={600}>
+                  {stats.expectedEdge.toFixed(1)}%
+                </text>
+                <text x={simChartW + 4} y={simZeroY + 3} fill={colors.neutral500} fontSize={9}>0%</text>
+              </svg>
+            );
+          })()}
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: 4 }}>
+            <span style={{ fontSize: 10, color: colors.neutral500 }}>
+              <span style={{ display: 'inline-block', width: 12, height: 2, background: colors.info, marginRight: 4, verticalAlign: 'middle' }}></span>
+              Simulated (1,000 spins)
+            </span>
+            <span style={{ fontSize: 10, color: colors.neutral500 }}>
+              <span style={{ display: 'inline-block', width: 12, height: 2, background: colors.secondary, marginRight: 4, verticalAlign: 'middle' }}></span>
+              House edge ({stats.expectedEdge}%)
+            </span>
+          </div>
+        </div>
+      )}
+
       {/* Recent results strip */}
       <div>
         <div style={{ fontSize: 11, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 }}>
@@ -161,41 +349,47 @@ export default function StatsTracker({ stats }: StatsTrackerProps) {
         </div>
       </div>
 
-      {/* Educational note */}
-      {stats.spins >= 10 && (
-        <div
-          style={{
-            padding: 12,
-            borderRadius: 8,
-            background: colors.primary,
-            fontSize: 12,
-            color: colors.neutral500,
-            lineHeight: 1.6,
-            borderLeft: `3px solid ${colors.secondary}`,
-          }}
-        >
-          {stats.spins < 50 ? (
-            <>
-              <strong style={{ color: colors.secondary }}>Early results swing wildly.</strong>{' '}
-              With only {stats.spins} spins, your actual edge ({stats.actualEdge.toFixed(1)}%) can be far from the
-              theoretical {stats.expectedEdge}%. Keep spinning — the math converges over time.
-            </>
-          ) : stats.spins < 200 ? (
-            <>
-              <strong style={{ color: colors.secondary }}>Getting closer.</strong>{' '}
-              After {stats.spins} spins, your results are starting to settle. The gap between your actual edge
-              ({stats.actualEdge.toFixed(1)}%) and the theoretical ({stats.expectedEdge}%) narrows with more spins.
-            </>
-          ) : (
-            <>
-              <strong style={{ color: colors.secondary }}>The math is showing.</strong>{' '}
-              After {stats.spins} spins, your actual edge ({stats.actualEdge.toFixed(1)}%) is converging toward
-              the theoretical {stats.expectedEdge}%. This is the law of large numbers in action — no strategy
-              changes this math.
-            </>
-          )}
-        </div>
-      )}
+      {/* Educational note — reframed to front-load the lesson */}
+      <div
+        style={{
+          padding: 12,
+          borderRadius: 8,
+          background: colors.primary,
+          fontSize: 12,
+          color: colors.neutral500,
+          lineHeight: 1.6,
+          borderLeft: `3px solid ${colors.secondary}`,
+        }}
+      >
+        {stats.spins === 0 ? (
+          <>
+            <strong style={{ color: colors.secondary }}>The math never changes.</strong>{' '}
+            Over thousands of spins, your losses will average {stats.expectedEdge}% of every dollar wagered.
+            In the short term, anything can happen — but the house edge is built into every single bet.
+            {!simData && ' Try the "Simulate 1,000 Spins" button to see it.'}
+          </>
+        ) : stats.spins < 20 ? (
+          <>
+            <strong style={{ color: colors.secondary }}>Short-term swings are the trap.</strong>{' '}
+            After {stats.spins} spin{stats.spins > 1 ? 's' : ''}, you&apos;re {stats.netResult >= 0 ? 'up' : 'down'} — but that&apos;s
+            just variance. The house edge of {stats.expectedEdge}% doesn&apos;t show up in a handful of bets.
+            That&apos;s what makes gambling feel winnable.
+          </>
+        ) : stats.spins < 100 ? (
+          <>
+            <strong style={{ color: colors.secondary }}>Patterns aren&apos;t predictive.</strong>{' '}
+            After {stats.spins} spins, your edge is {stats.actualEdge.toFixed(1)}% vs. the theoretical {stats.expectedEdge}%.
+            Every spin is independent — past results don&apos;t change future odds. No strategy overcomes the house edge.
+          </>
+        ) : (
+          <>
+            <strong style={{ color: colors.secondary }}>The law of large numbers.</strong>{' '}
+            After {stats.spins} spins, your actual edge ({stats.actualEdge.toFixed(1)}%) is {
+              Math.abs(stats.actualEdge - stats.expectedEdge) < 2 ? 'close to' : 'approaching'
+            } the theoretical {stats.expectedEdge}%. This always happens given enough time — it&apos;s math, not luck.
+          </>
+        )}
+      </div>
     </div>
   );
 }

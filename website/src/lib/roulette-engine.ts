@@ -216,6 +216,64 @@ export function createStats(wheelType: WheelType): GameStats {
   };
 }
 
+/**
+ * Run a batch simulation of N spins with a fixed bet (e.g. $10 on Red).
+ * Returns an array of cumulative edge values for convergence charting.
+ */
+export function simulateBatch(
+  wheelType: WheelType,
+  numSpins: number,
+  betDef?: BetDefinition,
+  betAmount: number = 10,
+): { spin: number; actual: number; expected: number }[] {
+  const bet = betDef || OUTSIDE_BETS.find(b => b.type === 'red')!;
+  const expectedEdge = getHouseEdge(wheelType);
+  const results: { spin: number; actual: number; expected: number }[] = [];
+  let cumWagered = 0;
+  let cumWon = 0;
+
+  for (let i = 0; i < numSpins; i++) {
+    const pocket = spin(wheelType);
+    const placedBets: PlacedBet[] = [{ definition: bet, amount: betAmount }];
+    const resolved = resolveBets(pocket, placedBets);
+    cumWagered += resolved.totalWagered;
+    cumWon += resolved.totalWon;
+    const actual = cumWagered > 0 ? ((cumWagered - cumWon) / cumWagered) * 100 : 0;
+    // Sample every 10 spins for performance (or every spin if < 100)
+    if (numSpins <= 100 || (i + 1) % Math.max(1, Math.floor(numSpins / 200)) === 0 || i === numSpins - 1) {
+      results.push({ spin: i + 1, actual, expected: expectedEdge });
+    }
+  }
+  return results;
+}
+
+/**
+ * Get tooltip info for a bet definition: name, payout, probability, expected loss.
+ */
+export function getBetTooltip(bet: BetDefinition, wheelType: WheelType): {
+  name: string;
+  payout: string;
+  probability: string;
+  expectedLoss: string;
+  coverageCount: number;
+  totalPockets: number;
+} {
+  const totalPockets = getPocketCount(wheelType);
+  const coverageCount = bet.numbers.length;
+  const prob = coverageCount / totalPockets;
+  const expectedReturn = prob * (bet.payout + 1); // prob of winning * (payout + original bet back)
+  const expectedLossPerDollar = 1 - expectedReturn;
+
+  return {
+    name: bet.description || bet.label,
+    payout: `${bet.payout}:1`,
+    probability: `${(prob * 100).toFixed(1)}%`,
+    expectedLoss: `$${(expectedLossPerDollar * 100).toFixed(2)} per $100`,
+    coverageCount,
+    totalPockets,
+  };
+}
+
 export function updateStats(stats: GameStats, result: SpinResult, wheelType: WheelType): GameStats {
   const newStats = { ...stats };
   newStats.spins += 1;
