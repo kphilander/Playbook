@@ -4,7 +4,7 @@ Quizzes are the highest-performing engagement format in player education. They c
 
 Important: quizzes are not tests. There is no pass/fail. Every answer — right or wrong — leads to an explanation. The goal is learning, not scoring. Frame every quiz as a conversation starter, not an exam.
 
-> **How to use this file**: This is the structural and design reference for building quizzes within the {{PROGRAM_NAME}} system. For quiz content (questions, answers, explanations), see [`myth-busting.md`](../../messaging/myth-busting.md). For campaign integration, see [`campaigns.md`](../../messaging/campaigns.md). Visual styling follows [`_brand.yml`](../../_brand.yml).
+> **How to use this file**: This is the structural and design reference for building quizzes within the {{PROGRAM_NAME}} system. For quiz content (questions, answers, explanations), see [`myth-busting.md`](../../messaging/myth-busting.md) and the [How to Play guides](../../how-to-play/) (each guide includes 3 game-specific quiz questions). For campaign integration, see [`campaigns.md`](../../messaging/campaigns.md). Visual styling follows [`_brand.yml`](../../_brand.yml).
 
 ---
 

@@ -1,6 +1,6 @@
 # Campaign Briefs
 
-Six ready-to-run myth-busting campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`.
+Seven ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`.
 
 > **How to use this file**: Pick a campaign, customize the copy for your brand (replace `{{PROGRAM_NAME}}` and `{{HELPLINE_NUMBER}}`), produce the assets using the referenced templates, and schedule according to the calendar. Adjust timing to fit your content calendar — the sequence matters more than the exact days.
 
@@ -16,6 +16,7 @@ Six ready-to-run myth-busting campaigns. Each brief includes a theme, day-by-day
 | 4 | [Luck, Numbers & Lotteries](#campaign-4-luck-numbers--lotteries) | 1 week | 3, 10, 15, 16 | Social + in-app | Lottery operators, casual gaming |
 | 5 | [The Money Myths](#campaign-5-the-money-myths) | 10 days | 6, 12, 17, 18 | Email + social | All operators, responsible play teams |
 | 6 | [Game IQ Challenge](#campaign-6-game-iq-challenge) | 1 week | All | Social + interactive | All operators, engagement-focused |
+| 7 | [Know Your Game](#campaign-7-know-your-game) | 2 weeks | How to Play guides | Social + blog + email | All operators, game education |
 
 ---
 
@@ -385,6 +386,86 @@ Pull these from `myth-busting.md` quiz questions:
 
 ---
 
+## Campaign 7: Know Your Game
+
+**Theme**: Game education — teach players how the games they love actually work.
+
+**Duration**: 2 weeks
+
+**Source content**: [How to Play guides](../how-to-play/) (slots, blackjack, roulette, sports betting)
+
+**Primary channels**: Social cards, blog articles, email series
+
+**Audience**: All player segments — particularly new-to-game and casual players
+
+### Concept
+
+This campaign flips the script from myth-busting ("that's not true") to game education ("here's how it actually works"). Instead of correcting misconceptions, it proactively teaches players the rules, bet types, and math behind their favorite games. The tone is empowering, not corrective — players finish feeling smarter, not scolded.
+
+Each game gets 2–3 days of content. The campaign opens with a universal hook ("Do you know how your favorite game works?"), cycles through game-specific education, and closes with the odds comparison infographic as a capstone.
+
+### Schedule
+
+| Day | Content | Channel | Source | Template |
+|-----|---------|---------|--------|----------|
+| 1 | Launch: "Know Your Game — how much do you really know?" | Social + email | — | `htp-odds-comparison` |
+| 2 | Slots: What RTP and volatility mean for your play | Social | `slots.md` §3–4 | `htp-card-slots` |
+| 3 | Slots: The most common bet types explained | Blog | `slots.md` §5–6 | — |
+| 4 | Slots quiz: 3 questions to test your knowledge | Social (poll/quiz) | `slots.md` §8 | — |
+| 5 | Blackjack: Why basic strategy matters | Social | `blackjack.md` §3–4 | `htp-card-blackjack` |
+| 6 | Blackjack: Every move explained — hit, stand, split, double | Blog | `blackjack.md` §5–6 | — |
+| 7 | Blackjack quiz + weekend recap carousel | Social | `blackjack.md` §8 | — |
+| 8 | Roulette: Inside bets vs. outside bets | Social | `roulette.md` §3–5 | `htp-card-roulette` |
+| 9 | Roulette: The math behind the wheel (house edge deep dive) | Blog | `roulette.md` §4, §6 | — |
+| 10 | Roulette quiz + mid-campaign email | Social + email | `roulette.md` §8 | — |
+| 11 | Sports betting: How odds and vig work | Social | `sports-betting.md` §3–4 | `htp-card-sports` |
+| 12 | Sports betting: Bet types from spreads to parlays | Blog | `sports-betting.md` §5–6 | — |
+| 13 | Sports betting quiz | Social (poll/quiz) | `sports-betting.md` §8 | — |
+| 14 | Capstone: Odds comparison across all 4 games + wrap-up email | Social + email | `odds-at-a-glance.md` | `htp-odds-comparison` |
+
+### Social card captions
+
+**Day 1 (Launch)**
+> How much do you really know about the games you play? This week we're breaking down the rules, the math, and the bets — game by game. Follow along. 🎓 #KnowYourGame
+
+**Day 2 (Slots — RTP)**
+> Every slot machine has a Return to Player percentage. It's not a promise — it's a long-run average across millions of spins. Here's what it means for your session. #KnowYourGame
+
+**Day 5 (Blackjack — Strategy)**
+> Blackjack is the only casino game where your decisions change the math. Basic strategy cuts the house edge to under 1%. Here's why it matters. #KnowYourGame
+
+**Day 8 (Roulette — Bets)**
+> Inside bets pay more. Outside bets hit more often. Neither changes the house edge. Here's the full breakdown of every bet on the table. #KnowYourGame
+
+**Day 11 (Sports — Odds)**
+> Odds aren't predictions — they're prices. And like any price, they include a markup (the vig). Understanding that changes how you evaluate every bet. #KnowYourGame
+
+**Day 14 (Capstone)**
+> Slots, blackjack, roulette, sports betting — four games, four different edges. Now you know the math behind all of them. Play informed. #KnowYourGame
+
+### Email — Campaign launch
+
+> **Subject line**: How well do you know your favorite game?
+>
+> **Preview text**: 2 weeks. 4 games. Every rule, bet, and number explained.
+>
+> **Body**:
+> - Hero: Odds comparison infographic
+> - "We're launching Know Your Game — a 2-week series breaking down the rules, bets, and math behind the most popular games."
+> - Game preview tiles: Slots → Blackjack → Roulette → Sports Betting
+> - CTA: "Follow along" → social channels / blog
+> - Footer: {{HELPLINE_NUMBER}} | {{PROGRAM_NAME}}
+
+### KPIs
+
+- Blog traffic from social cards (primary metric)
+- Social engagement rate on game-specific cards
+- Email open + click-through rates
+- Quiz completion rates (Days 4, 7, 10, 13)
+- Cross-game engagement (players who engage with 3+ game posts)
+
+---
+
 ## Campaign sequencing
 
 For operators running multiple campaigns, this order maximizes impact:
@@ -392,11 +473,12 @@ For operators running multiple campaigns, this order maximizes impact:
 | Order | Campaign | Why this sequence |
 |---|---|---|
 | 1st | Game IQ Challenge | Builds engagement and audience. Social-first. Low barrier. |
-| 2nd | Slots Myths Week | Largest player segment. High relatability. |
-| 3rd | Sports Betting Reality Check | Time to a major sporting event. |
-| 4th | The Money Myths | Builds on literacy established in campaigns 1–3. |
-| 5th | Luck, Numbers & Lotteries | Lighter tone. Good palette cleanser. |
-| 6th | Beat the House? Table Games | Most niche audience. Deploy to engaged segment. |
+| 2nd | Know Your Game | Proactive education while audience is engaged. Pairs well with quiz. |
+| 3rd | Slots Myths Week | Largest player segment. High relatability. |
+| 4th | Sports Betting Reality Check | Time to a major sporting event. |
+| 5th | The Money Myths | Builds on literacy established in campaigns 1–4. |
+| 6th | Luck, Numbers & Lotteries | Lighter tone. Good palette cleanser. |
+| 7th | Beat the House? Table Games | Most niche audience. Deploy to engaged segment. |
 
 **Cadence**: Allow 1–2 weeks between campaigns to avoid fatigue. Mix myth-busting with tool promotion and general brand content between campaigns.
 

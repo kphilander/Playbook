@@ -50,6 +50,8 @@ Find the right myth fast — by game type, by channel need, or by the cognitive 
 
 **I need in-app tooltips or notifications:** → Pull the **STAT** line from any Social card — it works standalone at small sizes.
 
+**I need game education content (how games work, rules, odds):** → See the [How to Play guides](../how-to-play/) — full game breakdowns with rules, bet types, house edge math, quiz questions, and social snippets for slots, blackjack, roulette, and sports betting.
+
 ### By cognitive bias
 
 | Bias | Myths | Explanation |

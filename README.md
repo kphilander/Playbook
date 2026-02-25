@@ -39,7 +39,7 @@ Playbook is a **content and media brand** — the educational and awareness laye
 
 ## Preview
 
-A selection of the 36 ready-to-use templates in the brand system. Each template is available as HTML source and PNG render in `collateral/render/`.
+A selection of the 41 ready-to-use templates in the brand system. Each template is available as HTML source and PNG render in `collateral/render/`.
 
 | | | |
 |---|---|---|
@@ -88,6 +88,25 @@ Playbook/
 │   ├── photography/                  # Photo direction and mood board
 │   └── illustration/                 # Illustration style guide
 │
+├── how-to-play/                      # Game education content library
+│   ├── README.md                     # Index and navigation
+│   ├── _game-guide-template.md       # Authoring scaffold for new guides
+│   ├── odds-at-a-glance.md           # Cross-game house edge comparison
+│   ├── slots.md                      # Slots / Electronic Gaming guide
+│   ├── blackjack.md                  # Blackjack guide
+│   ├── roulette.md                   # Roulette guide
+│   ├── sports-betting.md             # Sports Betting guide
+│   ├── diagrams/                     # SVG diagrams embedded in game guides
+│   │   ├── slots-rtp-volatility.svg
+│   │   ├── blackjack-strategy-overview.svg
+│   │   ├── roulette-wheel-comparison.svg
+│   │   └── sports-betting-vig-explained.svg
+│   └── quick-reference/              # Condensed single-card summaries
+│       ├── slots-quick-ref.md
+│       ├── blackjack-quick-ref.md
+│       ├── roulette-quick-ref.md
+│       └── sports-betting-quick-ref.md
+│
 ├── messaging/                        # Messaging content library
 │   ├── core-messages.md              # 74 tagged messages by touchpoint
 │   ├── tagline-system.md             # Tagline hierarchy and rotation
@@ -111,11 +130,12 @@ Playbook/
 │   ├── video-audio/                  # TV, radio, pre-roll, and hold message scripts
 │   ├── customer-service/             # Conversation scripts and staff FAQ
 │   ├── interactive/                   # Quiz framework
-│   └── render/                       # 36 HTML templates + PNG renders + build pipeline
+│   └── render/                       # 41 HTML templates + PNG renders + build pipeline
 │       ├── render-cards.mjs          # Puppeteer manifest (HTML → PNG)
 │       ├── build-logos.mjs           # Logo SVG generator
 │       ├── build-icons.mjs           # Icon SVG generator
 │       ├── build-deck.mjs            # PPTX brand deck builder
+│       ├── htp-*.html/.png           # 5 how-to-play cards (1080×1080)
 │       ├── card-*.html/.png          # 6 social cards (1080×1080)
 │       ├── story-*.html/.png         # 3 stories (1080×1920)
 │       ├── poster-*.html/.png        # 3 posters (1800×2400)
@@ -156,9 +176,10 @@ Playbook/
 |------|--------|----------|
 | **Brand book** | Complete | 10 chapters covering foundations through governance |
 | **Visual identity** | Complete | 15 logo SVGs, 31 icon SVGs, design tokens CSS, typography system with self-hosted fonts, photography and illustration guides |
+| **How to Play** | In progress | 4 game guides (slots, blackjack, roulette, sports betting), quick-reference cards, odds comparison, 5 social card templates. Template ready for 6 more games. |
 | **Messaging** | Complete | 74 core messages, tagline system, CTA library, myth-busting, stigma-free language guide, tone examples, 6 player-segment profiles |
 | **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
-| **Collateral renders** | Complete | 36 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, and 8 Tier 2 support/crisis templates |
+| **Collateral renders** | Complete | 41 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, 8 Tier 2 support/crisis templates, 5 how-to-play cards, and 4 educational SVG diagrams |
 | **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
 | **Jurisdictions** | In progress | Template system, Canada/BC compliance module, US/Nevada compliance module, advertising rules |
 
@@ -185,7 +206,7 @@ The `collateral/render/` directory contains a Puppeteer-based pipeline that rend
 ```bash
 cd collateral/render
 npm install
-node render-cards.mjs              # Render all 36 templates
+node render-cards.mjs              # Render all 41 templates
 node render-cards.mjs poster       # Render only poster templates
 node render-cards.mjs card-1a      # Render a specific template
 ```

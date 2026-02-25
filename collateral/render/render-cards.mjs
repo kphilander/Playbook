@@ -48,6 +48,12 @@ const cards = [
   { html: 'card-tier2-10f.html', output: 'card-tier2-10f.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'poster-tier2-10g.html', output: 'poster-tier2-10g.png', w: 1800, h: 2400, selector: '.poster' },
   { html: 'email-support-10h.html', output: 'email-support-10h.png', w: 600, h: 1100, selector: '.email' },
+  // How to Play — social cards (1080x1080)
+  { html: 'htp-card-slots.html', output: 'htp-card-slots.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-blackjack.html', output: 'htp-card-blackjack.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-roulette.html', output: 'htp-card-roulette.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-sports.html', output: 'htp-card-sports.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-odds-comparison.html', output: 'htp-odds-comparison.png', w: 1080, h: 1080, selector: '.social-card' },
 ];
 
 // Filter to only render files passed as CLI args, or all if none given

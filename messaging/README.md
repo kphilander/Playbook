@@ -32,3 +32,7 @@ Targeted messaging profiles for specific audiences. Each profile includes demogr
 - **Writing new content?** Start with [Core Messages](core-messages.md) for ready-to-use copy, then check [Tone Examples](tone-examples.md) for voice alignment.
 - **Planning a campaign?** [Campaigns](campaigns.md) has six complete briefs. Mix with taglines from [Tagline System](tagline-system.md) and CTAs from [Calls to Action](calls-to-action.md).
 - **Targeting a specific audience?** The [player-segments/](player-segments/) profiles have tailored messaging for each group.
+
+## Related
+
+- [How to Play guides](../how-to-play/) — game education content library (slots, blackjack, roulette, sports betting) with full rules, math breakdowns, quiz questions, and social snippets

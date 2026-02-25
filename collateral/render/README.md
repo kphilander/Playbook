@@ -6,7 +6,7 @@ HTML templates, PNG renders, and build scripts for all Playbook collateral. This
 
 | Script | What it does |
 |--------|-------------|
-| [render-cards.mjs](render-cards.mjs) | Puppeteer pipeline that renders all 36 HTML templates to PNG |
+| [render-cards.mjs](render-cards.mjs) | Puppeteer pipeline that renders all 41 HTML templates to PNG |
 | [build-logos.mjs](build-logos.mjs) | Generates 15 logo SVGs from brand config |
 | [build-icons.mjs](build-icons.mjs) | Generates 31 icon SVGs across 7 categories |
 | [build-deck.mjs](build-deck.mjs) | Generates the PPTX brand overview deck |
@@ -16,7 +16,7 @@ HTML templates, PNG renders, and build scripts for all Playbook collateral. This
 
 ```bash
 npm install                           # Install puppeteer + pptxgenjs
-node render-cards.mjs                 # Render all 36 templates
+node render-cards.mjs                 # Render all 41 templates
 node render-cards.mjs poster          # Render only poster templates
 node render-cards.mjs card-1a         # Render a specific template
 node build-logos.mjs                  # Generate logo SVGs
@@ -24,7 +24,7 @@ node build-icons.mjs                  # Generate icon SVGs
 node build-deck.mjs                   # Generate PPTX deck
 ```
 
-## Templates (36 total)
+## Templates (41 total)
 
 ### Tier 1 — Entertainment Literacy
 
@@ -71,6 +71,16 @@ node build-deck.mjs                   # Generate PPTX deck
 | `card-tier2-10f` | Support card | 1080 x 1080 |
 | `poster-tier2-10g` | Support poster | 1800 x 2400 |
 | `email-support-10h` | Support email | 600 x 1100 |
+
+### How to Play — Game Education
+
+| Template | Format | Size |
+|----------|--------|------|
+| `htp-card-slots` | Social card | 1080 x 1080 |
+| `htp-card-blackjack` | Social card | 1080 x 1080 |
+| `htp-card-roulette` | Social card | 1080 x 1080 |
+| `htp-card-sports` | Social card | 1080 x 1080 |
+| `htp-odds-comparison` | Infographic | 1080 x 1080 |
 
 ## How it works
 
