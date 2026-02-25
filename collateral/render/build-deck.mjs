@@ -1,5 +1,5 @@
 import PptxGenJS from "pptxgenjs";
-import { writeFileSync } from "fs";
+import { join } from "path";
 import { loadBrand } from "../../lib/brand-config.mjs";
 
 // ─── Brand tokens (from _brand.yml) ────────────────────────
@@ -42,7 +42,7 @@ function accentBar(slide) {
   });
 }
 
-function darkSlide(title) {
+function darkSlide() {
   const s = pres.addSlide();
   s.background = { fill: C.navy };
   accentBar(s);
@@ -812,7 +812,6 @@ function footerStrip(slide) {
 }
 
 // ─── Write file ─────────────────────────────────────────────
-import { join as joinPath } from "path";
-const outPath = joinPath(brand.ROOT, "collateral", "render", "playbook-brand-deck.pptx");
+const outPath = join(brand.ROOT, "collateral", "render", "playbook-brand-deck.pptx");
 await pres.writeFile({ fileName: outPath });
 console.log(`✓ Written to ${outPath}`);
