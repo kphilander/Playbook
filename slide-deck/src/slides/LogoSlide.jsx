@@ -13,7 +13,7 @@ function LogoDemo({ variant, dark }) {
       <span className={`font-heading text-2xl font-extrabold ${playClass}`}>
         Play
       </span>
-      <span className={`font-heading text-2xl font-light tracking-[0.2em] uppercase ${bookClass}`}>
+      <span className={`font-heading text-2xl font-light tracking-[-0.03em] uppercase ${bookClass}`}>
         BOOK
       </span>
     </div>
@@ -36,7 +36,7 @@ export default function LogoSlide() {
       <div className="flex justify-center mt-8">
         <div className="flex items-baseline">
           <span className="font-heading text-[80px] font-extrabold text-white leading-none">Play</span>
-          <span className="font-heading text-[80px] font-light tracking-[0.15em] text-teal leading-none">BOOK</span>
+          <span className="font-heading text-[80px] font-light tracking-[-0.03em] text-teal leading-none">BOOK</span>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ export default function LogoSlide() {
         <div className="flex items-center gap-5">
           <div className="w-24 h-24 rounded-xl bg-navy-light flex flex-col items-center justify-center">
             <span className="font-heading text-xl font-extrabold text-white leading-none">Play</span>
-            <span className="font-heading text-lg font-light tracking-[0.15em] text-teal leading-tight">BOOK</span>
+            <span className="font-heading text-lg font-light tracking-[-0.03em] text-teal leading-tight">BOOK</span>
           </div>
           <div>
             <p className="font-heading text-base font-bold text-white">Stacked</p>
@@ -73,7 +73,7 @@ export default function LogoSlide() {
         <div className="flex items-center gap-5">
           <div className="w-40 h-16 rounded-xl bg-navy-light flex items-center justify-center">
             <span className="font-heading text-xl font-extrabold text-white leading-none">Play</span>
-            <span className="font-heading text-xl font-light tracking-[0.15em] text-teal leading-none">BOOK</span>
+            <span className="font-heading text-xl font-light tracking-[-0.03em] text-teal leading-none">BOOK</span>
           </div>
           <div>
             <p className="font-heading text-base font-bold text-white">Horizontal</p>

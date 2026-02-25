@@ -16,7 +16,7 @@ export default function TitleSlide() {
         </div>
 
         <h1 className="font-heading text-[64px] leading-none text-white">
-          <span className="font-extrabold tracking-[-0.03em]">Play</span><span className="font-light tracking-[0.15em]">BOOK</span>
+          <span className="font-extrabold tracking-[-0.03em]">Play</span><span className="font-light tracking-[-0.03em]">BOOK</span>
         </h1>
 
         <p className="font-heading text-2xl text-teal font-normal mt-1">

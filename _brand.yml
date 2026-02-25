@@ -183,7 +183,7 @@ logo:
   font: "Inter"
   play_weight: 800
   book_weight: 300
-  book_style: "uppercase, letter-spaced"
+  book_style: "uppercase, tight-spaced"
   layouts:
     stacked: "Play over BOOK (square format)"
     horizontal: "Playbook as one word (wide format)"
