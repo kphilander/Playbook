@@ -13,7 +13,7 @@ function PosterMockup() {
           <p className="font-body text-sm text-neutral-500 mt-1">Entrances, restrooms, ATMs</p>
           <div className="mt-5 bg-navy rounded-xl p-8 flex flex-col items-center">
             <span className="font-heading text-2xl font-extrabold text-white">Play</span>
-            <span className="font-heading text-xl font-light tracking-[0.15em] text-teal">BOOK</span>
+            <span className="font-heading text-xl font-light tracking-[-0.03em] text-teal">BOOK</span>
             <h3 className="font-heading text-2xl font-bold text-white text-center mt-6 leading-snug">
               Think you&apos;ve got<br />a system?
             </h3>
@@ -49,7 +49,7 @@ function RackCardMockup() {
           <p className="font-body text-sm text-neutral-500 mt-1">Exits, host desks</p>
           <div className="mt-5 bg-navy rounded-xl p-6 flex flex-col items-center max-w-[240px] mx-auto">
             <span className="font-heading text-2xl font-extrabold text-white">Play</span>
-            <span className="font-heading text-xl font-light tracking-[0.15em] text-teal">BOOK</span>
+            <span className="font-heading text-xl font-light tracking-[-0.03em] text-teal">BOOK</span>
             <h3 className="font-heading text-xl font-bold text-white text-center mt-5 leading-snug">
               Think &ldquo;hot&rdquo;<br />machines pay more?
             </h3>

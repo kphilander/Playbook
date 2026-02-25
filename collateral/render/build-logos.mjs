@@ -63,7 +63,7 @@ function stacked(playColor, bookColor, bg = null) {
         letter-spacing="-1.3" fill="${playColor}">Play</text>
   <text x="${cx}" y="68" text-anchor="middle"
         font-family="'Inter', sans-serif" font-weight="300" font-size="22"
-        letter-spacing="3.3" fill="${bookColor}">BOOK</text>`;
+        letter-spacing="-1.0" fill="${bookColor}">BOOK</text>`;
   return svgWrap(w, h, content, bg);
 }
 
@@ -75,7 +75,7 @@ function horizontal(playColor, bookColor, bg = null) {
   const h = 56;
   const content = `
   <text y="40" font-family="'Inter', sans-serif" font-size="44" letter-spacing="-1.3">
-    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="6.6" fill="${bookColor}">BOOK</tspan>
+    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="-1.0" fill="${bookColor}">BOOK</tspan>
   </text>`;
   return svgWrap(w, h, content, bg);
 }
@@ -87,7 +87,7 @@ function helplineBadge(playColor, bookColor, dividerColor, labelColor, numberCol
   const h = 48;
   const content = `
   <text x="16" y="32" font-family="'Inter', sans-serif" font-size="22" letter-spacing="-0.7">
-    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="3.3" fill="${bookColor}">BOOK</tspan>
+    <tspan font-weight="800" fill="${playColor}">Play</tspan><tspan font-weight="300" letter-spacing="-0.5" fill="${bookColor}">BOOK</tspan>
   </text>
   <line x1="148" y1="6" x2="148" y2="42" stroke="${dividerColor}" stroke-width="1.5" stroke-linecap="round"/>
   <text x="160" y="20" font-family="'Inter', sans-serif" font-weight="400" font-size="11" fill="${labelColor}">${hl.label ? 'Free help ' + (hl.hours || '24/7') : 'Free help 24/7'}</text>
@@ -106,7 +106,7 @@ function favicon(playColor, bookColor, bg = null) {
         letter-spacing="-0.8" fill="${playColor}">Play</text>
   <text x="${cx}" y="52" text-anchor="middle"
         font-family="'Inter', sans-serif" font-weight="300" font-size="14"
-        letter-spacing="2.1" fill="${bookColor}">BOOK</text>`;
+        letter-spacing="-0.6" fill="${bookColor}">BOOK</text>`;
   return svgWrap(s, s, content, bg);
 }
 
