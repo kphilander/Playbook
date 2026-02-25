@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .social-card {
+    width: 1080px; height: 1080px;
+    background: var(--pb-color-primary);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .social-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .social-card::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .card-header { padding: 48px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: 32px; }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card-pillar { font-family: var(--pb-font-heading); font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; }
+  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
+  .htp-label { font-family: var(--pb-font-heading); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 16px; }
+  .card-title { font-family: var(--pb-font-heading); font-size: 44px; font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
+  .odds-table { width: 100%; border-collapse: collapse; }
+  .odds-table th { font-family: var(--pb-font-heading); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-neutral-500); text-align: left; padding: 0 0 12px 0; border-bottom: 2px solid var(--pb-color-primary-light); }
+  .odds-table th:last-child { text-align: right; }
+  .odds-table td { font-family: var(--pb-font-body); font-size: 22px; color: var(--pb-color-neutral-300); padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .odds-table td:first-child { font-weight: 600; color: var(--pb-color-white); }
+  .odds-table td:last-child { text-align: right; font-family: var(--pb-font-mono); font-weight: 600; font-size: 22px; color: var(--pb-color-accent); }
+  .odds-table tr:last-child td { border-bottom: none; }
+  .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: 16px; color: var(--pb-color-white); }
+  .footer-legal { font-size: 13px; color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
+<body>
+<div class="social-card">
+  <div class="card-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="card-pillar">Open</span>
+  </div>
+  <div class="card-body">
+    <div class="htp-label">Know Your Game</div>
+    <div class="card-title">Odds at a Glance</div>
+    <table class="odds-table">
+      <thead>
+        <tr><th>Game</th><th>Best bet</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Blackjack (basic strategy)</td><td>0.5%</td></tr>
+        <tr><td>Baccarat (banker)</td><td>1.06%</td></tr>
+        <tr><td>Craps (don't pass)</td><td>1.36%</td></tr>
+        <tr><td>Roulette (European)</td><td>2.70%</td></tr>
+        <tr><td>Sports Betting (std. vig)</td><td>4.5%</td></tr>
+        <tr><td>Roulette (American)</td><td>5.26%</td></tr>
+        <tr><td>Slots</td><td>2–15%</td></tr>
+        <tr><td>Lottery</td><td>40–55%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-footer">
+    <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">House edge = what the house keeps per $100 wagered over time</span>
+  </div>
+</div>
+</body>
+</html>
