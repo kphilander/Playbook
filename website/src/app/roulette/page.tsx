@@ -302,78 +302,52 @@ export default function RoulettePage() {
           </div>
         </div>
 
-        {/* Mobile: compact info strip */}
-        {isMobile && (
+        {/* Wheel row: Info bar + Wheel side by side (info bar above betting board only) */}
+        <div style={{ display: 'flex', gap: isMobile ? 12 : 24, alignItems: 'center', justifyContent: 'center' }}>
+          {/* Info bar — to the left of wheel */}
           <div
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 12,
-              padding: '8px 12px',
+              padding: isMobile ? '10px 12px' : '16px 20px',
               background: colors.primaryDark,
               borderRadius: radius.md,
-              justifyContent: 'space-between',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: isMobile ? 8 : 12,
+              flexShrink: 0,
             }}
           >
-            <span style={{ fontSize: 14, fontWeight: 800, color: colors.white }}>
+            <div style={{ fontSize: isMobile ? 14 : 18, fontWeight: 800, color: colors.white, lineHeight: 1.2 }}>
               {wheelType === 'european' ? 'European' : 'American'}
-            </span>
-            <div style={{ display: 'flex', gap: 12, fontSize: 12, color: colors.neutral300 }}>
+              {!isMobile && <><br />Roulette</>}
+            </div>
+            <div style={{ fontSize: isMobile ? 11 : 13, color: colors.neutral300, display: 'flex', flexDirection: 'column', gap: isMobile ? 4 : 6 }}>
               <span><strong style={{ color: colors.accent }}>{getPocketCount(wheelType)}</strong> pockets</span>
-              <span><strong style={{ color: colors.accent }}>{getHouseEdge(wheelType)}%</strong> edge</span>
+              {!isMobile && <span><strong style={{ color: colors.accent }}>{wheelType === 'european' ? '1' : '2'}</strong> zero{wheelType === 'american' ? 's' : ''}</span>}
+              <span><strong style={{ color: colors.accent }}>{getHouseEdge(wheelType)}%</strong> house edge</span>
             </div>
           </div>
-        )}
 
-        {/* Game area: Info + Wheel + Table */}
-        <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start', flexDirection: isMobile ? 'column' : 'row' }}>
-          {/* Info bar — vertical, to the left of wheel (desktop only) */}
-          {!isMobile && (
-            <div
-              style={{
-                padding: '16px 20px',
-                background: colors.primaryDark,
-                borderRadius: radius.md,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 12,
-                flexShrink: 0,
-                minWidth: 160,
-              }}
-            >
-              <div style={{ fontSize: 18, fontWeight: 800, color: colors.white, lineHeight: 1.2 }}>
-                {wheelType === 'european' ? 'European' : 'American'}
-                <br />Roulette
-              </div>
-              <div style={{ fontSize: 13, color: colors.neutral300, display: 'flex', flexDirection: 'column', gap: 6 }}>
-                <span><strong style={{ color: colors.accent }}>{getPocketCount(wheelType)}</strong> pockets</span>
-                <span><strong style={{ color: colors.accent }}>{wheelType === 'european' ? '1' : '2'}</strong> zero{wheelType === 'american' ? 's' : ''}</span>
-                <span><strong style={{ color: colors.accent }}>{getHouseEdge(wheelType)}%</strong> house edge</span>
-              </div>
-            </div>
-          )}
-
-          {/* Wheel + Table stacked */}
-          <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: isMobile ? 12 : 20, width: '100%' }}>
-            <RouletteWheel
-              wheelType={wheelType}
-              result={result}
-              spinning={spinning}
-              onSpinComplete={handleSpinComplete}
-            />
-            <div style={{ width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' as const }}>
-              <RouletteTable
-                wheelType={wheelType}
-                onBetPlace={handleBetPlace}
-                activeBets={activeBetsMap}
-                result={spinning ? null : result}
-                disabled={spinning}
-              />
-            </div>
-          </div>
+          {/* Wheel */}
+          <RouletteWheel
+            wheelType={wheelType}
+            result={result}
+            spinning={spinning}
+            onSpinComplete={handleSpinComplete}
+          />
         </div>
 
-        {/* Bottom row: Bet Panel + Stats — side by side on desktop, stacked on mobile */}
+        {/* Betting board — full width */}
+        <div style={{ width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' as const }}>
+          <RouletteTable
+            wheelType={wheelType}
+            onBetPlace={handleBetPlace}
+            activeBets={activeBetsMap}
+            result={spinning ? null : result}
+            disabled={spinning}
+          />
+        </div>
+
+        {/* Bottom row: Bet Panel + Stats side by side */}
         <div style={{ display: 'flex', gap: isMobile ? 12 : 24, flexDirection: isMobile ? 'column' : 'row' }}>
           <div style={{ flex: 1 }}>
             <BetPanel
