@@ -321,7 +321,7 @@ export default function RoulettePage() {
                 activeBets={activeBetsMap}
                 result={spinning ? null : result}
                 disabled={spinning}
-                compact
+                size="compact"
               />
             </div>
 
@@ -343,53 +343,47 @@ export default function RoulettePage() {
             <StatsTracker stats={stats} wheelType={wheelType} />
           </>
         ) : (
-          /* ─── Desktop: 3-column layout ─── */
-          <>
-            {/* Row 1: BetPanel | Wheel (centered) | Stats */}
-            <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start', width: '100%' }}>
-              {/* BetPanel — left */}
-              <div style={{ flexShrink: 0, width: 300 }}>
-                <BetPanel
-                  balance={balance}
-                  chipSize={chipSize}
-                  onChipSizeChange={setChipSize}
-                  currentBets={currentBets}
-                  onClearBets={handleClearBets}
-                  onSpin={handleSpin}
-                  spinning={spinning}
-                  result={spinning ? null : result}
-                  lastWin={lastWin}
-                  wheelType={wheelType}
-                />
-              </div>
-
-              {/* Wheel — centered */}
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-                <RouletteWheel
-                  wheelType={wheelType}
-                  result={result}
-                  spinning={spinning}
-                  onSpinComplete={handleSpinComplete}
-                />
-              </div>
-
-              {/* Stats — right, same width as BetPanel */}
-              <div style={{ flexShrink: 0, width: 300 }}>
-                <StatsTracker stats={stats} wheelType={wheelType} />
-              </div>
+          /* ─── Desktop: 3-column layout — panels flank wheel+table ─── */
+          <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start', width: '100%' }}>
+            {/* BetPanel — left */}
+            <div style={{ flexShrink: 0, width: 280 }}>
+              <BetPanel
+                balance={balance}
+                chipSize={chipSize}
+                onChipSizeChange={setChipSize}
+                currentBets={currentBets}
+                onClearBets={handleClearBets}
+                onSpin={handleSpin}
+                spinning={spinning}
+                result={spinning ? null : result}
+                lastWin={lastWin}
+                wheelType={wheelType}
+              />
             </div>
 
-            {/* Row 2: Table — centered */}
-            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+            {/* Center — Wheel + Table stacked */}
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
+              <RouletteWheel
+                wheelType={wheelType}
+                result={result}
+                spinning={spinning}
+                onSpinComplete={handleSpinComplete}
+              />
               <RouletteTable
                 wheelType={wheelType}
                 onBetPlace={handleBetPlace}
                 activeBets={activeBetsMap}
                 result={spinning ? null : result}
                 disabled={spinning}
+                size="medium"
               />
             </div>
-          </>
+
+            {/* Stats — right, same width as BetPanel */}
+            <div style={{ flexShrink: 0, width: 280 }}>
+              <StatsTracker stats={stats} wheelType={wheelType} />
+            </div>
+          </div>
         )}
 
         {/* Demo disclaimer */}

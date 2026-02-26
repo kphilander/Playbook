@@ -5,13 +5,15 @@ import { colors, fonts, rouletteColors, radius } from '@/lib/brand-tokens';
 import type { BetDefinition, WheelType, Pocket } from '@/lib/roulette-engine';
 import { OUTSIDE_BETS, straightBet, getBetTooltip } from '@/lib/roulette-engine';
 
+type TableSize = 'normal' | 'medium' | 'compact';
+
 interface RouletteTableProps {
   wheelType: WheelType;
   onBetPlace: (bet: BetDefinition) => void;
   activeBets: Map<string, number>;  // bet type key -> amount
   result: Pocket | null;
   disabled: boolean;
-  compact?: boolean;
+  size?: TableSize;
 }
 
 /* ─── Tooltip Component ─── */
@@ -53,24 +55,24 @@ function BetTooltip({ bet, wheelType, x, y }: { bet: BetDefinition; wheelType: W
 
 const RED_NUMBERS = new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 
-const CELL_W = 52;
-const CELL_H = 44;
-const ZERO_W = 52;
+const SIZES = {
+  normal:  { cellW: 52, cellH: 44, zeroW: 52, colBetW: 48, numFont: 16, outsideFont: 13, chipDot: 18, chipFont: 9, pad: 16, colFont: 11 },
+  medium:  { cellW: 38, cellH: 34, zeroW: 38, colBetW: 36, numFont: 13, outsideFont: 11, chipDot: 16, chipFont: 8, pad: 12, colFont: 10 },
+  compact: { cellW: 24, cellH: 28, zeroW: 24, colBetW: 22, numFont: 11, outsideFont: 9,  chipDot: 14, chipFont: 7, pad: 6,  colFont: 8  },
+} as const;
 
-const COMPACT_CELL_W = 24;
-const COMPACT_CELL_H = 28;
-const COMPACT_ZERO_W = 24;
-
-export default function RouletteTable({ wheelType, onBetPlace, activeBets, result, disabled, compact = false }: RouletteTableProps) {
-  const cellW = compact ? COMPACT_CELL_W : CELL_W;
-  const cellH = compact ? COMPACT_CELL_H : CELL_H;
-  const zeroW = compact ? COMPACT_ZERO_W : ZERO_W;
-  const colBetW = compact ? 22 : 48;
-  const numFont = compact ? 11 : 16;
-  const outsideFont = compact ? 9 : 13;
-  const chipDotSize = compact ? 14 : 18;
-  const chipDotFont = compact ? 7 : 9;
-  const tablePad = compact ? 6 : 16;
+export default function RouletteTable({ wheelType, onBetPlace, activeBets, result, disabled, size = 'normal' }: RouletteTableProps) {
+  const s = SIZES[size];
+  const cellW = s.cellW;
+  const cellH = s.cellH;
+  const zeroW = s.zeroW;
+  const colBetW = s.colBetW;
+  const numFont = s.numFont;
+  const outsideFont = s.outsideFont;
+  const chipDotSize = s.chipDot;
+  const chipDotFont = s.chipFont;
+  const tablePad = s.pad;
+  const isCompact = size === 'compact';
   const [tooltipBet, setTooltipBet] = useState<BetDefinition | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const tooltipTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -123,7 +125,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
     border: `1px solid ${colors.primaryLight}`,
     cursor: disabled ? 'default' : 'pointer',
     transition: 'all 0.15s ease',
-    padding: compact ? '0 2px' : '0 8px',
+    padding: isCompact ? '0 2px' : '0 8px',
     userSelect: 'none' as const,
   });
 
@@ -149,8 +151,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
       <div
         style={{
           position: 'absolute',
-          top: compact ? -2 : -4,
-          right: compact ? -2 : -4,
+          top: isCompact ? -2 : -4,
+          right: isCompact ? -2 : -4,
           width: chipDotSize,
           height: chipDotSize,
           borderRadius: '50%',
@@ -161,7 +163,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          border: `${compact ? 1 : 2}px solid ${colors.primaryDark}`,
+          border: `${isCompact ? 1 : 2}px solid ${colors.primaryDark}`,
           zIndex: 2,
         }}
       >
@@ -171,7 +173,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   };
 
   return (
-    <div style={{ background: colors.primaryDark, borderRadius: compact ? radius.sm : radius.lg, padding: tablePad, display: 'inline-block' }}>
+    <div style={{ background: colors.primaryDark, borderRadius: isCompact ? radius.sm : radius.lg, padding: tablePad, display: 'inline-block' }}>
       <div style={{ display: 'flex', gap: 0 }}>
         {/* Zero column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
@@ -320,7 +322,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                   height: cellH,
                   position: 'relative',
                   writingMode: 'vertical-rl',
-                  fontSize: compact ? 8 : 11,
+                  fontSize: s.colFont,
                 }}
               >
                 {bet.label}
