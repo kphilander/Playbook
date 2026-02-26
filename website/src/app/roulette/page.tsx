@@ -302,9 +302,9 @@ export default function RoulettePage() {
           </div>
         </div>
 
-        {/* Wheel row: Info bar + Wheel side by side (info bar above betting board only) */}
-        <div style={{ display: 'flex', gap: isMobile ? 12 : 24, alignItems: 'center', justifyContent: 'center' }}>
-          {/* Info bar — to the left of wheel */}
+        {/* Wheel row: Info bar (left-aligned) + Wheel (centered in remaining space) */}
+        <div style={{ display: 'flex', gap: isMobile ? 12 : 24, alignItems: 'center', width: '100%' }}>
+          {/* Info bar — left edge */}
           <div
             style={{
               padding: isMobile ? '10px 12px' : '16px 20px',
@@ -327,13 +327,15 @@ export default function RoulettePage() {
             </div>
           </div>
 
-          {/* Wheel */}
-          <RouletteWheel
-            wheelType={wheelType}
-            result={result}
-            spinning={spinning}
-            onSpinComplete={handleSpinComplete}
-          />
+          {/* Wheel — centered in remaining space */}
+          <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+            <RouletteWheel
+              wheelType={wheelType}
+              result={result}
+              spinning={spinning}
+              onSpinComplete={handleSpinComplete}
+            />
+          </div>
         </div>
 
         {/* Betting board — full width */}
