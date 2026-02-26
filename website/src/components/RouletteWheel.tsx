@@ -80,11 +80,11 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
   };
 
   return (
-    <div style={{ position: 'relative', width: WHEEL_SIZE, height: WHEEL_SIZE }}>
+    <div style={{ position: 'relative', width: '100%', maxWidth: WHEEL_SIZE, aspectRatio: '1' }}>
       <svg
         viewBox={`0 0 ${WHEEL_SIZE} ${WHEEL_SIZE}`}
-        width={WHEEL_SIZE}
-        height={WHEEL_SIZE}
+        width="100%"
+        height="100%"
         style={{ filter: 'drop-shadow(0 4px 24px rgba(0,0,0,0.5))' }}
       >
         {/* Outer rim */}
