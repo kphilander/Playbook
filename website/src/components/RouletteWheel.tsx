@@ -85,10 +85,32 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
         viewBox={`0 0 ${WHEEL_SIZE} ${WHEEL_SIZE}`}
         width="100%"
         height="100%"
-        style={{ filter: 'drop-shadow(0 4px 24px rgba(0,0,0,0.5))' }}
+        style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.3)) drop-shadow(0 8px 32px rgba(0,0,0,0.5))' }}
       >
+        {/* SVG Gradient Definitions */}
+        <defs>
+          <radialGradient id="hubGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor={colors.primaryLight} />
+            <stop offset="100%" stopColor={colors.primaryDark} />
+          </radialGradient>
+          <radialGradient id="ballGradient" cx="35%" cy="35%" r="60%">
+            <stop offset="0%" stopColor="#FFFFFF" />
+            <stop offset="50%" stopColor={colors.neutral100} />
+            <stop offset="100%" stopColor={colors.neutral300} />
+          </radialGradient>
+          <linearGradient id="rimGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor={colors.neutral500} />
+            <stop offset="100%" stopColor={colors.neutral700} />
+          </linearGradient>
+          <radialGradient id="pocketSheen" cx="50%" cy="30%" r="70%">
+            <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.15} />
+            <stop offset="100%" stopColor="#FFFFFF" stopOpacity={0} />
+          </radialGradient>
+        </defs>
+
         {/* Outer rim */}
-        <circle cx={CENTER} cy={CENTER} r={OUTER_R + 8} fill={colors.neutral700} />
+        <circle cx={CENTER} cy={CENTER} r={OUTER_R + 8} fill="url(#rimGradient)" />
+        <circle cx={CENTER} cy={CENTER} r={OUTER_R + 6} fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth={1} />
         <circle cx={CENTER} cy={CENTER} r={OUTER_R + 4} fill={colors.neutral500} />
 
         {/* Wheel group (rotates) */}
@@ -130,6 +152,11 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
                   stroke={colors.primaryDark}
                   strokeWidth={0.5}
                 />
+                <path
+                  d={d}
+                  fill="url(#pocketSheen)"
+                  pointerEvents="none"
+                />
                 <text
                   x={tx}
                   y={ty}
@@ -149,7 +176,7 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
 
           {/* Inner circle (hub) */}
           <circle cx={CENTER} cy={CENTER} r={INNER_R - 2} fill={colors.primaryDark} />
-          <circle cx={CENTER} cy={CENTER} r={INNER_R - 8} fill={colors.primary} />
+          <circle cx={CENTER} cy={CENTER} r={INNER_R - 8} fill="url(#hubGradient)" />
 
           {/* Decorative spokes */}
           {pockets.map((_, i) => {
@@ -180,13 +207,22 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
             cx={CENTER}
             cy={CENTER - BALL_R}
             r={7}
-            fill={colors.neutral100}
+            fill="url(#ballGradient)"
             stroke={colors.white}
             strokeWidth={1}
             style={{
               filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.5))',
               opacity: spinning || result ? 1 : 0.3,
             }}
+          />
+          {/* Specular highlight */}
+          <circle
+            cx={CENTER - 2}
+            cy={CENTER - BALL_R - 2}
+            r={2.5}
+            fill="#FFFFFF"
+            opacity={spinning || result ? 0.6 : 0.2}
+            pointerEvents="none"
           />
         </g>
 
@@ -200,29 +236,32 @@ export default function RouletteWheel({ wheelType, result, spinning, onSpinCompl
       {/* Result display overlay */}
       {result && !spinning && (
         <div
+          key={result.number}
           style={{
             position: 'absolute',
             top: '50%',
             left: '50%',
-            transform: 'translate(-50%, -50%)',
+            transform: 'translate(-50%, -50%) scale(0)',
             textAlign: 'center',
+            animation: 'resultPopIn 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards',
+            opacity: 0,
           }}
         >
           <div
             style={{
-              width: 36,
-              height: 36,
+              width: 44,
+              height: 44,
               borderRadius: '50%',
               background: pocketColor(result),
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               margin: '0 auto',
-              border: `2px solid ${colors.white}`,
-              boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
+              border: `3px solid ${colors.white}`,
+              boxShadow: `0 2px 12px rgba(0,0,0,0.5), 0 0 20px ${pocketColor(result)}60`,
             }}
           >
-            <span style={{ color: colors.white, fontWeight: 800, fontSize: 14, fontFamily: fonts.heading }}>
+            <span style={{ color: colors.white, fontWeight: 800, fontSize: 16, fontFamily: fonts.heading }}>
               {result.number}
             </span>
           </div>

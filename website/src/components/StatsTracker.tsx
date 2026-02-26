@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { colors, fonts, rouletteColors, radius } from '@/lib/brand-tokens';
 import type { GameStats, SpinResult, WheelType } from '@/lib/roulette-engine';
 import { simulateBatch } from '@/lib/roulette-engine';
@@ -13,6 +13,7 @@ interface StatsTrackerProps {
 export default function StatsTracker({ stats, wheelType = 'european' }: StatsTrackerProps) {
   const [simData, setSimData] = useState<{ spin: number; actual: number; expected: number }[] | null>(null);
   const [simulating, setSimulating] = useState(false);
+  const [simHovered, setSimHovered] = useState(false);
 
   const handleSimulate = useCallback(() => {
     setSimulating(true);
@@ -33,6 +34,8 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
           display: 'flex',
           flexDirection: 'column',
           gap: 16,
+          boxShadow: '0 4px 12px rgba(15,25,35,0.4)',
+          border: `1px solid ${colors.primaryLight}`,
         }}
       >
         <div style={{ fontSize: 14, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1 }}>
@@ -47,18 +50,22 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
           <button
             onClick={handleSimulate}
             disabled={simulating}
+            onMouseEnter={() => setSimHovered(true)}
+            onMouseLeave={() => setSimHovered(false)}
             style={{
               width: '100%',
               padding: '10px 16px',
               borderRadius: radius.md,
               border: `1px solid ${colors.secondary}40`,
-              background: simData ? colors.primary : `${colors.secondary}15`,
+              background: simHovered && !simulating ? `${colors.secondary}25` : simData ? colors.primary : `${colors.secondary}15`,
               color: colors.secondary,
               fontSize: 13,
               fontWeight: 700,
-              cursor: simulating ? 'default' : 'pointer',
+              cursor: simulating ? 'not-allowed' : 'pointer',
               fontFamily: fonts.heading,
               transition: 'all 0.15s ease',
+              transform: simHovered && !simulating ? 'translateY(-1px)' : 'none',
+              boxShadow: simHovered && !simulating ? `0 4px 12px ${colors.secondary}20` : 'none',
             }}
           >
             {simulating ? 'Simulating...' : simData ? '↻ Re-simulate 1,000 Spins' : '⚡ Simulate 1,000 Spins'}
@@ -97,7 +104,9 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
               <svg viewBox={`-4 -4 ${simChartW + 8} ${simChartH + 8}`} width="100%" height={simChartH + 8} style={{ overflow: 'visible' }}>
                 <line x1={0} y1={simZeroY} x2={simChartW} y2={simZeroY} stroke={colors.neutral700} strokeWidth={0.5} strokeDasharray="4,4" />
                 <line x1={0} y1={simExpectedY} x2={simChartW} y2={simExpectedY} stroke={colors.secondary} strokeWidth={1.5} strokeDasharray="6,3" opacity={0.7} />
+                <path d={`${simPath} L ${simToX(simData[simData.length - 1].spin).toFixed(1)} ${simChartH} L 0 ${simChartH} Z`} fill={colors.info} opacity={0.08} />
                 <path d={simPath} fill="none" stroke={colors.info} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" opacity={0.8} />
+                <circle cx={simToX(simData[simData.length - 1].spin)} cy={simToY(simData[simData.length - 1].actual)} r={3} fill={colors.info} stroke={colors.primaryDark} strokeWidth={1.5} />
                 <text x={simChartW + 4} y={simExpectedY + 3} fill={colors.secondary} fontSize={9} fontWeight={600}>
                   {stats.expectedEdge.toFixed(1)}%
                 </text>
@@ -175,6 +184,8 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
         display: 'flex',
         flexDirection: 'column',
         gap: 16,
+        boxShadow: '0 4px 12px rgba(15,25,35,0.4)',
+        border: `1px solid ${colors.primaryLight}`,
       }}
     >
       <div style={{ fontSize: 14, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1 }}>
@@ -219,8 +230,14 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
             {/* Expected edge line */}
             <line x1={0} y1={expectedY} x2={chartW} y2={expectedY} stroke={colors.secondary} strokeWidth={1.5} strokeDasharray="6,3" opacity={0.7} />
 
+            {/* Area fill under actual edge line */}
+            <path d={`${actualPath} L ${toX(edgeHistory.length - 1).toFixed(1)} ${chartH} L 0 ${chartH} Z`} fill={colors.accent} opacity={0.08} />
+
             {/* Actual edge line */}
             <path d={actualPath} fill="none" stroke={colors.accent} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+
+            {/* End dot */}
+            <circle cx={toX(edgeHistory.length - 1)} cy={toY(edgeHistory[edgeHistory.length - 1].actual)} r={3} fill={colors.accent} stroke={colors.primaryDark} strokeWidth={1.5} />
 
             {/* Labels */}
             <text x={chartW + 4} y={expectedY + 3} fill={colors.secondary} fontSize={9} fontWeight={600}>
@@ -246,18 +263,22 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
         <button
           onClick={handleSimulate}
           disabled={simulating}
+          onMouseEnter={() => setSimHovered(true)}
+          onMouseLeave={() => setSimHovered(false)}
           style={{
             width: '100%',
             padding: '10px 16px',
             borderRadius: radius.md,
             border: `1px solid ${colors.secondary}40`,
-            background: simData ? colors.primary : `${colors.secondary}15`,
+            background: simHovered && !simulating ? `${colors.secondary}25` : simData ? colors.primary : `${colors.secondary}15`,
             color: colors.secondary,
             fontSize: 13,
             fontWeight: 700,
-            cursor: simulating ? 'default' : 'pointer',
+            cursor: simulating ? 'not-allowed' : 'pointer',
             fontFamily: fonts.heading,
             transition: 'all 0.15s ease',
+            transform: simHovered && !simulating ? 'translateY(-1px)' : 'none',
+            boxShadow: simHovered && !simulating ? `0 4px 12px ${colors.secondary}20` : 'none',
           }}
         >
           {simulating ? 'Simulating...' : simData ? '↻ Re-simulate 1,000 Spins' : '⚡ Simulate 1,000 Spins'}
@@ -298,7 +319,9 @@ export default function StatsTracker({ stats, wheelType = 'european' }: StatsTra
               <svg viewBox={`-4 -4 ${simChartW + 8} ${simChartH + 8}`} width="100%" height={simChartH + 8} style={{ overflow: 'visible' }}>
                 <line x1={0} y1={simZeroY} x2={simChartW} y2={simZeroY} stroke={colors.neutral700} strokeWidth={0.5} strokeDasharray="4,4" />
                 <line x1={0} y1={simExpectedY} x2={simChartW} y2={simExpectedY} stroke={colors.secondary} strokeWidth={1.5} strokeDasharray="6,3" opacity={0.7} />
+                <path d={`${simPath} L ${simToX(simData[simData.length - 1].spin).toFixed(1)} ${simChartH} L 0 ${simChartH} Z`} fill={colors.info} opacity={0.08} />
                 <path d={simPath} fill="none" stroke={colors.info} strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" opacity={0.8} />
+                <circle cx={simToX(simData[simData.length - 1].spin)} cy={simToY(simData[simData.length - 1].actual)} r={3} fill={colors.info} stroke={colors.primaryDark} strokeWidth={1.5} />
                 <text x={simChartW + 4} y={simExpectedY + 3} fill={colors.secondary} fontSize={9} fontWeight={600}>
                   {stats.expectedEdge.toFixed(1)}%
                 </text>
@@ -402,6 +425,8 @@ function StatBox({ label, value, color }: { label: string; value: string; color:
         borderRadius: radius.md,
         padding: '10px 12px',
         textAlign: 'center',
+        boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.04)',
+        border: `1px solid ${colors.primaryLight}`,
       }}
     >
       <div style={{ fontSize: 10, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 4 }}>

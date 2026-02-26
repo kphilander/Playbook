@@ -76,21 +76,24 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   const [tooltipBet, setTooltipBet] = useState<BetDefinition | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const tooltipTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [hoveredCell, setHoveredCell] = useState<string | null>(null);
 
   const handleMouseEnter = useCallback((bet: BetDefinition, e: React.MouseEvent) => {
     if (tooltipTimeout.current) clearTimeout(tooltipTimeout.current);
     const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
     setTooltipPos({ x: rect.left + rect.width / 2, y: rect.top });
     setTooltipBet(bet);
+    setHoveredCell(getBetKey(bet));
   }, []);
 
   const handleMouseLeave = useCallback(() => {
     tooltipTimeout.current = setTimeout(() => setTooltipBet(null), 100);
+    setHoveredCell(null);
   }, []);
 
   const isWinner = (numbers: string[]) => result && numbers.includes(result.number);
 
-  const cellStyle = (num: number, isActive: boolean, isWin: boolean): React.CSSProperties => ({
+  const cellStyle = (num: number, isActive: boolean, isWin: boolean, betKey?: string): React.CSSProperties => ({
     boxSizing: 'border-box' as const,
     width: cellW,
     height: cellH,
@@ -111,9 +114,13 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
     transition: 'all 0.15s ease',
     position: 'relative' as const,
     userSelect: 'none' as const,
+    filter: betKey && hoveredCell === betKey && !disabled ? 'brightness(1.25)' : 'none',
+    transform: betKey && hoveredCell === betKey && !disabled ? 'scale(1.02)' : 'none',
+    zIndex: betKey && hoveredCell === betKey ? 1 : 0,
+    boxShadow: isWin ? `0 0 0 2px ${colors.accent}, 0 0 12px ${colors.accent}60` : 'none',
   });
 
-  const outsideStyle = (isActive: boolean, isWin: boolean): React.CSSProperties => ({
+  const outsideStyle = (isActive: boolean, isWin: boolean, betKey?: string): React.CSSProperties => ({
     boxSizing: 'border-box' as const,
     height: cellH,
     display: 'flex',
@@ -129,6 +136,10 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
     transition: 'all 0.15s ease',
     padding: isCompact ? '0 2px' : '0 8px',
     userSelect: 'none' as const,
+    filter: betKey && hoveredCell === betKey && !disabled ? 'brightness(1.25)' : 'none',
+    transform: betKey && hoveredCell === betKey && !disabled ? 'scale(1.02)' : 'none',
+    zIndex: betKey && hoveredCell === betKey ? 1 : 0,
+    boxShadow: isWin ? `0 0 0 2px ${colors.accent}, 0 0 12px ${colors.accent}60` : 'none',
   });
 
   // Build number grid (3 rows x 12 columns)
@@ -167,6 +178,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
           justifyContent: 'center',
           border: `${isCompact ? 1 : 2}px solid ${colors.primaryDark}`,
           zIndex: 2,
+          animation: 'chipPopIn 0.2s ease forwards',
         }}
       >
         {amount}
@@ -175,7 +187,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   };
 
   return (
-    <div style={{ background: colors.primaryDark, borderRadius: isCompact ? radius.sm : radius.lg, padding: tablePad, display: 'inline-block' }}>
+    <div style={{ background: colors.primaryDark, borderRadius: isCompact ? radius.sm : radius.lg, padding: tablePad, display: 'inline-block', boxShadow: '0 4px 12px rgba(15,25,35,0.4)', border: `1px solid ${colors.primaryLight}` }}>
       <div style={{ display: 'flex', gap: 0 }}>
         {/* Zero column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
@@ -232,7 +244,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                     onClick={() => handleClick(bet)}
                     onMouseEnter={(e) => handleMouseEnter(bet, e)}
                     onMouseLeave={handleMouseLeave}
-                    style={{ ...cellStyle(num, activeBets.has(betKey), !!isWinner([String(num)])), position: 'relative' }}
+                    style={{ ...cellStyle(num, activeBets.has(betKey), !!isWinner([String(num)]), betKey), position: 'relative' }}
                   >
                     {num}
                     {chipDot(betKey)}
@@ -256,7 +268,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                   onClick={() => handleClick(bet)}
                   onMouseEnter={(e) => handleMouseEnter(bet, e)}
                   onMouseLeave={handleMouseLeave}
-                  style={{ ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)), width: cellW * 4, position: 'relative' }}
+                  style={{ ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers), betKey), width: cellW * 4, position: 'relative' }}
                 >
                   {bet.label}
                   {chipDot(betKey)}
@@ -284,7 +296,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                   onMouseEnter={(e) => handleMouseEnter(bet, e)}
                   onMouseLeave={handleMouseLeave}
                   style={{
-                    ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)),
+                    ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers), betKey),
                     width: cellW * 2,
                     position: 'relative',
                     background: isWinner(bet.numbers) ? colors.accent
@@ -319,7 +331,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                 onMouseEnter={(e) => handleMouseEnter(bet, e)}
                 onMouseLeave={handleMouseLeave}
                 style={{
-                  ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)),
+                  ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers), betKey),
                   width: colBetW,
                   height: cellH,
                   position: 'relative',

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect, useRef } from 'react';
 import { colors, fonts, radius } from '@/lib/brand-tokens';
 import type { PlacedBet, Pocket, WheelType } from '@/lib/roulette-engine';
 import { getHouseEdge, getPocketCount } from '@/lib/roulette-engine';
@@ -34,6 +35,31 @@ export default function BetPanel({
   const totalBet = currentBets.reduce((sum, b) => sum + b.amount, 0);
   const canSpin = currentBets.length > 0 && !spinning && totalBet <= balance;
 
+  // Hover states
+  const [spinHovered, setSpinHovered] = useState(false);
+  const [clearHovered, setClearHovered] = useState(false);
+  const [hoveredChip, setHoveredChip] = useState<number | null>(null);
+
+  // Balance count-up animation
+  const [displayBalance, setDisplayBalance] = useState(balance);
+  const prevBalance = useRef(balance);
+  useEffect(() => {
+    const from = prevBalance.current;
+    const to = balance;
+    prevBalance.current = to;
+    if (from === to) return;
+    const duration = 400;
+    const start = performance.now();
+    function tick(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplayBalance(Math.round(from + (to - from) * eased));
+      if (progress < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }, [balance]);
+
   return (
     <div
       style={{
@@ -44,6 +70,8 @@ export default function BetPanel({
         display: 'flex',
         flexDirection: 'column',
         gap: 20,
+        boxShadow: '0 4px 12px rgba(15,25,35,0.4)',
+        border: `1px solid ${colors.primaryLight}`,
       }}
     >
       {/* Wheel type info */}
@@ -66,7 +94,7 @@ export default function BetPanel({
           Demo Balance
         </div>
         <div style={{ fontSize: 32, fontWeight: 800, color: colors.white, fontFamily: fonts.heading }}>
-          ${balance.toLocaleString()}
+          ${displayBalance.toLocaleString()}
         </div>
       </div>
 
@@ -76,28 +104,36 @@ export default function BetPanel({
           Chip Size
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
-          {CHIP_SIZES.map((size) => (
-            <button
-              key={size}
-              onClick={() => onChipSizeChange(size)}
-              disabled={spinning}
-              style={{
-                width: 44,
-                height: 44,
-                borderRadius: '50%',
-                border: chipSize === size ? `3px solid ${colors.secondary}` : `2px solid ${colors.neutral700}`,
-                background: chipSize === size ? colors.primaryLight : colors.primary,
-                color: chipSize === size ? colors.secondary : colors.neutral300,
-                fontSize: 13,
-                fontWeight: 700,
-                cursor: spinning ? 'default' : 'pointer',
-                transition: 'all 0.15s ease',
-                fontFamily: fonts.heading,
-              }}
-            >
-              ${size}
-            </button>
-          ))}
+          {CHIP_SIZES.map((size) => {
+            const isSelected = chipSize === size;
+            const isHovered = hoveredChip === size && !isSelected && !spinning;
+            return (
+              <button
+                key={size}
+                onClick={() => onChipSizeChange(size)}
+                disabled={spinning}
+                onMouseEnter={() => setHoveredChip(size)}
+                onMouseLeave={() => setHoveredChip(null)}
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: '50%',
+                  border: isSelected ? `3px solid ${colors.secondary}` : `2px solid ${colors.neutral700}`,
+                  background: isSelected ? colors.primaryLight : colors.primary,
+                  color: isSelected ? colors.secondary : colors.neutral300,
+                  fontSize: 13,
+                  fontWeight: 700,
+                  cursor: spinning ? 'not-allowed' : 'pointer',
+                  transition: 'all 0.15s ease',
+                  fontFamily: fonts.heading,
+                  transform: isHovered ? 'scale(1.1)' : 'scale(1)',
+                  boxShadow: isHovered ? `0 0 0 2px ${colors.secondary}40` : 'none',
+                }}
+              >
+                ${size}
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -154,18 +190,21 @@ export default function BetPanel({
         <button
           onClick={onClearBets}
           disabled={spinning || currentBets.length === 0}
+          onMouseEnter={() => setClearHovered(true)}
+          onMouseLeave={() => setClearHovered(false)}
           style={{
             flex: 1,
             padding: '12px 16px',
             borderRadius: radius.md,
-            border: `1px solid ${colors.neutral700}`,
-            background: 'transparent',
+            border: `1px solid ${clearHovered && !(spinning || currentBets.length === 0) ? colors.neutral500 : colors.neutral700}`,
+            background: clearHovered && !(spinning || currentBets.length === 0) ? colors.primaryLight : 'transparent',
             color: colors.neutral300,
             fontSize: 14,
             fontWeight: 600,
-            cursor: spinning || currentBets.length === 0 ? 'default' : 'pointer',
-            opacity: spinning || currentBets.length === 0 ? 0.4 : 1,
+            cursor: spinning || currentBets.length === 0 ? 'not-allowed' : 'pointer',
+            opacity: spinning || currentBets.length === 0 ? 0.5 : 1,
             fontFamily: fonts.heading,
+            transition: 'all 0.15s ease',
           }}
         >
           Clear
@@ -173,18 +212,26 @@ export default function BetPanel({
         <button
           onClick={onSpin}
           disabled={!canSpin}
+          onMouseEnter={() => setSpinHovered(true)}
+          onMouseLeave={() => setSpinHovered(false)}
           style={{
             flex: 2,
             padding: '12px 16px',
             borderRadius: radius.md,
             border: 'none',
-            background: canSpin ? colors.accent : colors.neutral700,
+            background: canSpin
+              ? (spinHovered ? colors.accentLight : colors.accent)
+              : colors.neutral700,
             color: canSpin ? colors.white : colors.neutral500,
             fontSize: 16,
             fontWeight: 800,
-            cursor: canSpin ? 'pointer' : 'default',
+            cursor: canSpin ? 'pointer' : 'not-allowed',
             transition: 'all 0.15s ease',
             fontFamily: fonts.heading,
+            transform: canSpin && spinHovered ? 'translateY(-1px)' : 'none',
+            boxShadow: canSpin
+              ? (spinHovered ? '0 4px 12px rgba(255,107,53,0.4)' : '0 2px 8px rgba(255,107,53,0.2)')
+              : 'none',
           }}
         >
           {spinning ? 'Spinning...' : 'Spin'}
@@ -194,11 +241,13 @@ export default function BetPanel({
       {/* Post-spin breakdown */}
       {result && !spinning && (
         <div
+          key={result.number}
           style={{
             padding: 16,
             borderRadius: radius.md,
             background: lastWin > 0 ? `${colors.success}15` : `${colors.danger}15`,
             border: `1px solid ${lastWin > 0 ? colors.success : colors.danger}30`,
+            animation: 'winPulse 0.5s ease forwards',
           }}
         >
           <div style={{ textAlign: 'center', marginBottom: 10 }}>

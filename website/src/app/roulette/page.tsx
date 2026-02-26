@@ -180,6 +180,7 @@ export default function RoulettePage() {
           justifyContent: 'space-between',
           padding: isMobile ? '12px 16px' : '16px 32px',
           borderBottom: `1px solid ${colors.primaryLight}`,
+          background: `linear-gradient(180deg, ${colors.primaryDark} 0%, transparent 100%)`,
           flexWrap: isMobile ? 'wrap' : 'nowrap',
           gap: isMobile ? 8 : 0,
         }}
@@ -284,6 +285,7 @@ export default function RoulettePage() {
             background: colors.primaryDark,
             borderRadius: radius.md,
             borderLeft: `4px solid ${colors.secondary}`,
+            boxShadow: '0 1px 2px rgba(15,25,35,0.3)',
             display: 'flex',
             alignItems: isMobile ? 'flex-start' : 'center',
             gap: isMobile ? 8 : 12,
@@ -294,7 +296,10 @@ export default function RoulettePage() {
             <span style={{ fontSize: isMobile ? 9 : 10, fontWeight: 700, color: colors.secondary, textTransform: 'uppercase', letterSpacing: 1, flexShrink: 0 }}>
               Did you know?
             </span>
-            <span style={{ fontSize: isMobile ? 12 : 13, color: colors.neutral300, lineHeight: 1.5 }}>
+            <span
+              key={currentFact}
+              style={{ fontSize: isMobile ? 12 : 13, color: colors.neutral300, lineHeight: 1.5, animation: 'fadeSlideIn 0.3s ease forwards' }}
+            >
               {EDUCATIONAL_FACTS[currentFact].text}
             </span>
           </div>
