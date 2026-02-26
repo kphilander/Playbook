@@ -57,7 +57,7 @@ const RED_NUMBERS = new Set([1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]);
 
 const SIZES = {
   normal:  { cellW: 52, cellH: 44, zeroW: 52, colBetW: 48, numFont: 16, outsideFont: 13, chipDot: 18, chipFont: 9, pad: 16, colFont: 11 },
-  medium:  { cellW: 38, cellH: 34, zeroW: 38, colBetW: 36, numFont: 13, outsideFont: 11, chipDot: 16, chipFont: 8, pad: 12, colFont: 10 },
+  medium:  { cellW: 34, cellH: 32, zeroW: 34, colBetW: 30, numFont: 13, outsideFont: 10, chipDot: 16, chipFont: 8, pad: 10, colFont: 9 },
   compact: { cellW: 24, cellH: 28, zeroW: 24, colBetW: 22, numFont: 11, outsideFont: 9,  chipDot: 14, chipFont: 7, pad: 6,  colFont: 8  },
 } as const;
 
@@ -91,6 +91,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   const isWinner = (numbers: string[]) => result && numbers.includes(result.number);
 
   const cellStyle = (num: number, isActive: boolean, isWin: boolean): React.CSSProperties => ({
+    boxSizing: 'border-box' as const,
     width: cellW,
     height: cellH,
     display: 'flex',
@@ -113,6 +114,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   });
 
   const outsideStyle = (isActive: boolean, isWin: boolean): React.CSSProperties => ({
+    boxSizing: 'border-box' as const,
     height: cellH,
     display: 'flex',
     alignItems: 'center',

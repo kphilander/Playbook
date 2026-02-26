@@ -346,7 +346,7 @@ export default function RoulettePage() {
           /* ─── Desktop: 3-column layout — panels flank wheel+table ─── */
           <div style={{ display: 'flex', gap: 20, alignItems: 'flex-start', width: '100%' }}>
             {/* BetPanel — left */}
-            <div style={{ flexShrink: 0, width: 280 }}>
+            <div style={{ flexShrink: 0, width: 260 }}>
               <BetPanel
                 balance={balance}
                 chipSize={chipSize}
@@ -362,25 +362,29 @@ export default function RoulettePage() {
             </div>
 
             {/* Center — Wheel + Table stacked */}
-            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-              <RouletteWheel
-                wheelType={wheelType}
-                result={result}
-                spinning={spinning}
-                onSpinComplete={handleSpinComplete}
-              />
-              <RouletteTable
-                wheelType={wheelType}
-                onBetPlace={handleBetPlace}
-                activeBets={activeBetsMap}
-                result={spinning ? null : result}
-                disabled={spinning}
-                size="medium"
-              />
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20, overflow: 'hidden' }}>
+              <div style={{ width: '100%', maxWidth: 380 }}>
+                <RouletteWheel
+                  wheelType={wheelType}
+                  result={result}
+                  spinning={spinning}
+                  onSpinComplete={handleSpinComplete}
+                />
+              </div>
+              <div style={{ width: 'fit-content', maxWidth: '100%' }}>
+                <RouletteTable
+                  wheelType={wheelType}
+                  onBetPlace={handleBetPlace}
+                  activeBets={activeBetsMap}
+                  result={spinning ? null : result}
+                  disabled={spinning}
+                  size="medium"
+                />
+              </div>
             </div>
 
             {/* Stats — right, same width as BetPanel */}
-            <div style={{ flexShrink: 0, width: 280 }}>
+            <div style={{ flexShrink: 0, width: 260 }}>
               <StatsTracker stats={stats} wheelType={wheelType} />
             </div>
           </div>
