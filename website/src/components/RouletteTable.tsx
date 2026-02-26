@@ -11,6 +11,7 @@ interface RouletteTableProps {
   activeBets: Map<string, number>;  // bet type key -> amount
   result: Pocket | null;
   disabled: boolean;
+  compact?: boolean;
 }
 
 /* ─── Tooltip Component ─── */
@@ -56,7 +57,20 @@ const CELL_W = 52;
 const CELL_H = 44;
 const ZERO_W = 52;
 
-export default function RouletteTable({ wheelType, onBetPlace, activeBets, result, disabled }: RouletteTableProps) {
+const COMPACT_CELL_W = 24;
+const COMPACT_CELL_H = 28;
+const COMPACT_ZERO_W = 24;
+
+export default function RouletteTable({ wheelType, onBetPlace, activeBets, result, disabled, compact = false }: RouletteTableProps) {
+  const cellW = compact ? COMPACT_CELL_W : CELL_W;
+  const cellH = compact ? COMPACT_CELL_H : CELL_H;
+  const zeroW = compact ? COMPACT_ZERO_W : ZERO_W;
+  const colBetW = compact ? 22 : 48;
+  const numFont = compact ? 11 : 16;
+  const outsideFont = compact ? 9 : 13;
+  const chipDotSize = compact ? 14 : 18;
+  const chipDotFont = compact ? 7 : 9;
+  const tablePad = compact ? 6 : 16;
   const [tooltipBet, setTooltipBet] = useState<BetDefinition | null>(null);
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const tooltipTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -75,12 +89,12 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   const isWinner = (numbers: string[]) => result && numbers.includes(result.number);
 
   const cellStyle = (num: number, isActive: boolean, isWin: boolean): React.CSSProperties => ({
-    width: CELL_W,
-    height: CELL_H,
+    width: cellW,
+    height: cellH,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 16,
+    fontSize: numFont,
     fontWeight: 700,
     fontFamily: fonts.mono,
     color: colors.white,
@@ -97,11 +111,11 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   });
 
   const outsideStyle = (isActive: boolean, isWin: boolean): React.CSSProperties => ({
-    height: CELL_H,
+    height: cellH,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 13,
+    fontSize: outsideFont,
     fontWeight: 700,
     fontFamily: fonts.heading,
     color: isActive ? colors.primary : colors.neutral300,
@@ -109,7 +123,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
     border: `1px solid ${colors.primaryLight}`,
     cursor: disabled ? 'default' : 'pointer',
     transition: 'all 0.15s ease',
-    padding: '0 8px',
+    padding: compact ? '0 2px' : '0 8px',
     userSelect: 'none' as const,
   });
 
@@ -135,19 +149,19 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
       <div
         style={{
           position: 'absolute',
-          top: -4,
-          right: -4,
-          width: 18,
-          height: 18,
+          top: compact ? -2 : -4,
+          right: compact ? -2 : -4,
+          width: chipDotSize,
+          height: chipDotSize,
           borderRadius: '50%',
           background: colors.accent,
           color: colors.white,
-          fontSize: 9,
+          fontSize: chipDotFont,
           fontWeight: 800,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          border: `2px solid ${colors.primaryDark}`,
+          border: `${compact ? 1 : 2}px solid ${colors.primaryDark}`,
           zIndex: 2,
         }}
       >
@@ -157,7 +171,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
   };
 
   return (
-    <div style={{ background: colors.primaryDark, borderRadius: radius.lg, padding: 16, display: 'inline-block' }}>
+    <div style={{ background: colors.primaryDark, borderRadius: compact ? radius.sm : radius.lg, padding: tablePad, display: 'inline-block' }}>
       <div style={{ display: 'flex', gap: 0 }}>
         {/* Zero column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
@@ -171,8 +185,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
               background: isWinner(['0']) ? colors.accent
                 : activeBets.has(getBetKey(straightBet('0'))) ? colors.secondaryDark
                 : rouletteColors.green,
-              width: ZERO_W,
-              height: wheelType === 'american' ? CELL_H * 1.5 : CELL_H * 3 + 2,
+              width: zeroW,
+              height: wheelType === 'american' ? cellH * 1.5 : cellH * 3 + 2,
               position: 'relative',
             }}
           >
@@ -190,8 +204,8 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                 background: isWinner(['00']) ? colors.accent
                   : activeBets.has(getBetKey(straightBet('00'))) ? colors.secondaryDark
                   : rouletteColors.green,
-                width: ZERO_W,
-                height: CELL_H * 1.5,
+                width: zeroW,
+                height: cellH * 1.5,
                 position: 'relative',
               }}
             >
@@ -238,7 +252,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                   onClick={() => handleClick(bet)}
                   onMouseEnter={(e) => handleMouseEnter(bet, e)}
                   onMouseLeave={handleMouseLeave}
-                  style={{ ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)), width: CELL_W * 4, position: 'relative' }}
+                  style={{ ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)), width: cellW * 4, position: 'relative' }}
                 >
                   {bet.label}
                   {chipDot(betKey)}
@@ -267,7 +281,7 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                   onMouseLeave={handleMouseLeave}
                   style={{
                     ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)),
-                    width: CELL_W * 2,
+                    width: cellW * 2,
                     position: 'relative',
                     background: isWinner(bet.numbers) ? colors.accent
                       : activeBets.has(betKey)
@@ -302,11 +316,11 @@ export default function RouletteTable({ wheelType, onBetPlace, activeBets, resul
                 onMouseLeave={handleMouseLeave}
                 style={{
                   ...outsideStyle(activeBets.has(betKey), !!isWinner(bet.numbers)),
-                  width: 48,
-                  height: CELL_H,
+                  width: colBetW,
+                  height: cellH,
                   position: 'relative',
                   writingMode: 'vertical-rl',
-                  fontSize: 11,
+                  fontSize: compact ? 8 : 11,
                 }}
               >
                 {bet.label}

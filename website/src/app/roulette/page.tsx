@@ -9,9 +9,6 @@ import {
   createStats,
   updateStats,
   getHouseEdge,
-  getPocketCount,
-  straightBet,
-  OUTSIDE_BETS,
 } from '@/lib/roulette-engine';
 import type {
   WheelType,
@@ -276,9 +273,10 @@ export default function RoulettePage() {
           maxWidth: 1400,
           margin: '0 auto',
           width: '100%',
+          boxSizing: 'border-box' as const,
         }}
       >
-        {/* Educational fact banner — full width at top */}
+        {/* Educational fact banner — full width */}
         <div
           style={{
             width: '100%',
@@ -302,56 +300,32 @@ export default function RoulettePage() {
           </div>
         </div>
 
-        {/* Wheel row: Info bar (left-aligned) + Wheel (centered in remaining space) */}
-        <div style={{ display: 'flex', gap: isMobile ? 12 : 24, alignItems: 'center', width: '100%' }}>
-          {/* Info bar — left edge */}
-          <div
-            style={{
-              padding: isMobile ? '10px 12px' : '16px 20px',
-              background: colors.primaryDark,
-              borderRadius: radius.md,
-              display: 'flex',
-              flexDirection: 'column',
-              gap: isMobile ? 8 : 12,
-              flexShrink: 0,
-            }}
-          >
-            <div style={{ fontSize: isMobile ? 14 : 18, fontWeight: 800, color: colors.white, lineHeight: 1.2 }}>
-              {wheelType === 'european' ? 'European' : 'American'}
-              {!isMobile && <><br />Roulette</>}
+        {isMobile ? (
+          /* ─── Mobile: single-column stack ─── */
+          <>
+            {/* Wheel */}
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+              <RouletteWheel
+                wheelType={wheelType}
+                result={result}
+                spinning={spinning}
+                onSpinComplete={handleSpinComplete}
+              />
             </div>
-            <div style={{ fontSize: isMobile ? 11 : 13, color: colors.neutral300, display: 'flex', flexDirection: 'column', gap: isMobile ? 4 : 6 }}>
-              <span><strong style={{ color: colors.accent }}>{getPocketCount(wheelType)}</strong> pockets</span>
-              {!isMobile && <span><strong style={{ color: colors.accent }}>{wheelType === 'european' ? '1' : '2'}</strong> zero{wheelType === 'american' ? 's' : ''}</span>}
-              <span><strong style={{ color: colors.accent }}>{getHouseEdge(wheelType)}%</strong> house edge</span>
+
+            {/* Betting table (compact for mobile) */}
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+              <RouletteTable
+                wheelType={wheelType}
+                onBetPlace={handleBetPlace}
+                activeBets={activeBetsMap}
+                result={spinning ? null : result}
+                disabled={spinning}
+                compact
+              />
             </div>
-          </div>
 
-          {/* Wheel — centered in remaining space */}
-          <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-            <RouletteWheel
-              wheelType={wheelType}
-              result={result}
-              spinning={spinning}
-              onSpinComplete={handleSpinComplete}
-            />
-          </div>
-        </div>
-
-        {/* Betting board — full width */}
-        <div style={{ width: '100%', overflowX: 'auto', WebkitOverflowScrolling: 'touch' as const }}>
-          <RouletteTable
-            wheelType={wheelType}
-            onBetPlace={handleBetPlace}
-            activeBets={activeBetsMap}
-            result={spinning ? null : result}
-            disabled={spinning}
-          />
-        </div>
-
-        {/* Bottom row: Bet Panel + Stats side by side */}
-        <div style={{ display: 'flex', gap: isMobile ? 12 : 24, flexDirection: isMobile ? 'column' : 'row' }}>
-          <div style={{ flex: 1 }}>
+            {/* Bet Panel (with info merged in) */}
             <BetPanel
               balance={balance}
               chipSize={chipSize}
@@ -364,11 +338,59 @@ export default function RoulettePage() {
               lastWin={lastWin}
               wheelType={wheelType}
             />
-          </div>
-          <div style={{ flex: 1 }}>
+
+            {/* Session Stats */}
             <StatsTracker stats={stats} wheelType={wheelType} />
-          </div>
-        </div>
+          </>
+        ) : (
+          /* ─── Desktop: 3-column layout ─── */
+          <>
+            {/* Row 1: BetPanel | Wheel (centered) | Stats */}
+            <div style={{ display: 'flex', gap: 24, alignItems: 'flex-start', width: '100%' }}>
+              {/* BetPanel — left */}
+              <div style={{ flexShrink: 0, width: 300 }}>
+                <BetPanel
+                  balance={balance}
+                  chipSize={chipSize}
+                  onChipSizeChange={setChipSize}
+                  currentBets={currentBets}
+                  onClearBets={handleClearBets}
+                  onSpin={handleSpin}
+                  spinning={spinning}
+                  result={spinning ? null : result}
+                  lastWin={lastWin}
+                  wheelType={wheelType}
+                />
+              </div>
+
+              {/* Wheel — centered */}
+              <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                <RouletteWheel
+                  wheelType={wheelType}
+                  result={result}
+                  spinning={spinning}
+                  onSpinComplete={handleSpinComplete}
+                />
+              </div>
+
+              {/* Stats — right, same width as BetPanel */}
+              <div style={{ flexShrink: 0, width: 300 }}>
+                <StatsTracker stats={stats} wheelType={wheelType} />
+              </div>
+            </div>
+
+            {/* Row 2: Table — centered */}
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
+              <RouletteTable
+                wheelType={wheelType}
+                onBetPlace={handleBetPlace}
+                activeBets={activeBetsMap}
+                result={spinning ? null : result}
+                disabled={spinning}
+              />
+            </div>
+          </>
+        )}
 
         {/* Demo disclaimer */}
         <div style={{ fontSize: 11, color: colors.neutral500, textAlign: 'center' }}>

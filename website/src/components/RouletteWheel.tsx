@@ -12,11 +12,11 @@ interface RouletteWheelProps {
   onSpinComplete?: () => void;
 }
 
-const WHEEL_SIZE = 380;
+const WHEEL_SIZE = 480;
 const CENTER = WHEEL_SIZE / 2;
-const OUTER_R = 170;
-const INNER_R = 120;
-const BALL_R = 155;
+const OUTER_R = 215;
+const INNER_R = 152;
+const BALL_R = 196;
 
 export default function RouletteWheel({ wheelType, result, spinning, onSpinComplete }: RouletteWheelProps) {
   const [rotation, setRotation] = useState(0);

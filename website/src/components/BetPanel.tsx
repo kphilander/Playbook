@@ -46,12 +46,26 @@ export default function BetPanel({
         gap: 20,
       }}
     >
+      {/* Wheel type info */}
+      <div>
+        <div style={{ fontSize: 18, fontWeight: 800, color: colors.white, lineHeight: 1.2, fontFamily: fonts.heading }}>
+          {wheelType === 'european' ? 'European' : 'American'} Roulette
+        </div>
+        <div style={{ fontSize: 13, color: colors.neutral300, marginTop: 4, display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          <span><strong style={{ color: colors.accent }}>{getPocketCount(wheelType)}</strong> pockets</span>
+          <span>·</span>
+          <span><strong style={{ color: colors.accent }}>{wheelType === 'european' ? '1' : '2'}</strong> zero{wheelType === 'american' ? 's' : ''}</span>
+          <span>·</span>
+          <span><strong style={{ color: colors.accent }}>{getHouseEdge(wheelType)}%</strong> edge</span>
+        </div>
+      </div>
+
       {/* Balance */}
       <div>
         <div style={{ fontSize: 12, fontWeight: 700, color: colors.neutral500, textTransform: 'uppercase', letterSpacing: 1 }}>
           Demo Balance
         </div>
-        <div style={{ fontSize: 32, fontWeight: 800, color: colors.white, fontFamily: 'system-ui' }}>
+        <div style={{ fontSize: 32, fontWeight: 800, color: colors.white, fontFamily: fonts.heading }}>
           ${balance.toLocaleString()}
         </div>
       </div>
