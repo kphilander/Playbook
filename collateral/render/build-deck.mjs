@@ -326,11 +326,11 @@ function footerStrip(slide) {
     x: 7.0, y: 4.6, w: 0.06, h: 2.0,
     fill: { type: "solid", color: C.orange },
   });
-  s.addText("THE GOOD FRIEND", {
+  s.addText("SAM — SUPPORTIVE MODE", {
     x: 7.4, y: 4.85, w: 4.8, h: 0.3,
     fontSize: 11, fontFace: FONT.head, bold: true, color: C.orange, letterSpacing: 2,
   });
-  s.addText("Secondary archetype — warm, supportive.\nSteps in for Tier 2 (support/crisis) content.", {
+  s.addText("Sam's warm, supportive register.\nSteps in for Tier 2 (support/crisis) content.", {
     x: 7.4, y: 5.2, w: 4.8, h: 0.5,
     fontSize: 14, fontFace: FONT.body, color: C.n300, lineSpacingMultiple: 1.3,
   });

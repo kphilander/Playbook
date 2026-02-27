@@ -76,7 +76,7 @@ you feel dumb -- to make you smarter.
 
 ---
 
-## When Sam Gets Serious
+## Sam in Support Mode
 
 Sam is one character with two modes. Most of the time, Sam explains, educates,
 and entertains -- that's the default. But when the conversation shifts from

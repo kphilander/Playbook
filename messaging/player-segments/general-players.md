@@ -92,7 +92,7 @@ This segment gets the full Playbook personality. Humor works. Confidence works. 
 | **Warm / Direct** | Onboarding, session check-ins, limit-reached moments |
 | **Celebratory** | Quiz results, first limit set, tool activation milestones |
 
-**Secondary archetype**: Sam — supportive mode — for feature onboarding and practical tool setup.
+**Secondary register**: Sam — supportive mode — for feature onboarding and practical tool setup.
 
 ---
 

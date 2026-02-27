@@ -6,7 +6,7 @@ The adapted visual system for Playbook support and crisis content. When the bran
 
 | Document | Description |
 |----------|-------------|
-| [tier-2-visual-guide.md](tier-2-visual-guide.md) | Complete Tier 2 visual specification — adapted color palette, typography adjustments, layout guidelines, and the "Good Friend — serious mode" voice |
+| [tier-2-visual-guide.md](tier-2-visual-guide.md) | Complete Tier 2 visual specification — adapted color palette, typography adjustments, layout guidelines, and Sam's supportive mode voice |
 
 ## Tier 2 templates
 
