@@ -1,0 +1,219 @@
+name: Research Findings
+description: Share player testing results back to the Playbook project
+title: "[Research] "
+labels: ["research", "player-testing"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your player testing results using the protocol from
+        [`research/player-testing-protocol.md`](../../research/player-testing-protocol.md).
+        Structured fields help us compare findings across markets.
+
+  - type: dropdown
+    id: survey-type
+    attributes:
+      label: Survey type
+      options:
+        - Pulse (3 items)
+        - Full (7 items)
+        - Recall
+        - Cultural Fit A/B
+    validations:
+      required: true
+
+  - type: input
+    id: operator
+    attributes:
+      label: Operator
+      placeholder: "e.g., Operator name or 'anonymous'"
+    validations:
+      required: true
+
+  - type: input
+    id: content-tested
+    attributes:
+      label: Content tested
+      description: Title and file reference if possible.
+      placeholder: "e.g., Slots Myths Week card-1a, Campaign 3 email"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: player-segment
+    attributes:
+      label: Player segment
+      options:
+        - general-players
+        - young-adults
+        - sports-bettors
+        - friends-and-family
+        - mixed / unknown
+    validations:
+      required: true
+
+  - type: input
+    id: sample-size
+    attributes:
+      label: Sample size
+      placeholder: "e.g., 47"
+    validations:
+      required: true
+
+  - type: input
+    id: test-dates
+    attributes:
+      label: Test dates
+      placeholder: "e.g., 2026-02-15 to 2026-02-28"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Cultural profile
+        Select the cultural profile of the market where this test was run.
+        See [`localization/cultural-adaptation-guide.md`](../../localization/cultural-adaptation-guide.md) for spectrum definitions.
+
+  - type: dropdown
+    id: voice
+    attributes:
+      label: Voice
+      options:
+        - peer
+        - authority
+        - elder
+    validations:
+      required: true
+
+  - type: dropdown
+    id: framing
+    attributes:
+      label: Framing
+      options:
+        - individual
+        - communal
+    validations:
+      required: true
+
+  - type: dropdown
+    id: humor
+    attributes:
+      label: Humor
+      options:
+        - irreverent
+        - warm
+        - understated
+        - minimal
+    validations:
+      required: true
+
+  - type: dropdown
+    id: directness
+    attributes:
+      label: Directness
+      options:
+        - blunt
+        - diplomatic
+        - contextual
+    validations:
+      required: true
+
+  - type: dropdown
+    id: comfort
+    attributes:
+      label: Comfort
+      options:
+        - open
+        - reserved
+        - private
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Scores
+        Enter averages. Leave blank if not applicable to your survey type.
+
+  - type: input
+    id: nps
+    attributes:
+      label: NPS
+      description: "% Promoters (9-10) minus % Detractors (0-6)"
+      placeholder: "e.g., 34"
+    validations:
+      required: true
+
+  - type: input
+    id: forgettable-memorable
+    attributes:
+      label: "Forgettable -- Memorable (1-7)"
+      placeholder: "e.g., 5.2"
+    validations:
+      required: true
+
+  - type: input
+    id: boring-engaging
+    attributes:
+      label: "Boring -- Engaging (1-7, Full survey only)"
+      placeholder: "e.g., 5.4"
+
+  - type: input
+    id: preachy-respectful
+    attributes:
+      label: "Preachy -- Respectful (1-7, Full survey only)"
+      placeholder: "e.g., 5.8"
+
+  - type: input
+    id: confusing-clear
+    attributes:
+      label: "Confusing -- Clear (1-7, Full survey only)"
+      placeholder: "e.g., 5.6"
+
+  - type: input
+    id: generic-made-for-me
+    attributes:
+      label: "Generic -- Made for me (1-7, Full survey only)"
+      placeholder: "e.g., 4.9"
+
+  - type: input
+    id: recall-accuracy
+    attributes:
+      label: "Recall: true/false accuracy (%, Recall survey only)"
+      placeholder: "e.g., 72%"
+
+  - type: input
+    id: recall-behavioral
+    attributes:
+      label: "Recall: took any follow-up action (%, Recall survey only)"
+      placeholder: "e.g., 38%"
+
+  - type: textarea
+    id: qualitative
+    attributes:
+      label: Qualitative insights
+      description: Patterns from open-ended responses. 2-3 sentences.
+      placeholder: |
+        Players consistently mentioned...
+        The most common critique was...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: recommendation
+    attributes:
+      label: Recommendation
+      options:
+        - Ship -- content works as-is
+        - Revise and retest -- specific issues identified
+        - Escalate to brand owner -- potential brand DNA drift
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Methodology notes, distribution channel, comparison to previous tests, etc.
+      placeholder: "e.g., Survey distributed via in-app intercept after quiz completion..."

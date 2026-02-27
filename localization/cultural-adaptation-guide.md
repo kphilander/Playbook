@@ -288,6 +288,10 @@ cultural_profile:
 adaptation_status: adapted
 ```
 
+### Step 5: Test the adaptation
+
+After deploying adapted content, test whether the adaptation improved the player experience using the Cultural Fit A/B test in the [Player Testing Protocol](../research/player-testing-protocol.md#cultural-fit-testing). File results using the [Research Findings issue template](https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml) to share findings back to the project.
+
 ---
 
 ## Presentation tags

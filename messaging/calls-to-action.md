@@ -196,6 +196,8 @@ Not sure which CTA will perform best? Test these recommended variants.
 3. **Measure action, not clicks.** The goal is whether the player completes the intended action (sets a limit, finishes the quiz), not just whether they click.
 4. **Document results.** Add winning variants back to this file for the team.
 
+> **Beyond CTA testing:** For broader content resonance, recall, and cultural fit testing, see the [Player Testing Protocol](../research/player-testing-protocol.md).
+
 ---
 
 ## Accessibility

@@ -167,6 +167,10 @@ Playbook/
 │           ├── README.md            # Full compliance module
 │           └── advertising-rules.md # Advertising deep-dive
 │
+├── research/                         # Player testing protocol and findings
+│   ├── README.md                    # Testing overview and navigation
+│   └── player-testing-protocol.md   # Resonance, recall, and cultural fit testing
+│
 └── implementation/                   # 🔜 Operator adoption guides (planned)
 ```
 
@@ -181,6 +185,7 @@ Playbook/
 | **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
 | **Collateral renders** | Complete | 41 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, 8 Tier 2 support/crisis templates, 5 how-to-play cards, and 4 educational SVG diagrams |
 | **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
+| **Research** | Complete | Player testing protocol with Pulse (3-item) and Full (7-item) surveys using NPS and semantic differentials, delayed recall survey, cultural fit A/B testing, scoring guides, standard reporting format, and GitHub issue template for sharing findings |
 | **Jurisdictions** | In progress | Template system, Canada/BC compliance module, US/Nevada compliance module, advertising rules |
 
 ## What's planned
