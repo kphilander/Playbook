@@ -2,7 +2,7 @@
 
 The complete game education library for {{PROGRAM_NAME}}. Each guide explains how a game works, what you're betting on, and the real math behind it — in plain language, at a Grade 6–8 reading level.
 
-> **Operator note**: Statistics cited are general industry figures and may vary by jurisdiction, game variant, or platform configuration. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
+> **Operator note**: Statistics cited are general industry figures and may vary by jurisdiction, game variant, or platform configuration. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (default Playbook voice).
 
 ---
 

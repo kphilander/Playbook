@@ -267,8 +267,8 @@ function footerStrip(slide) {
     fontSize: 36, fontFace: FONT.head, bold: true, color: C.white,
   });
 
-  // Sam
-  s.addText("SAM", {
+  // Playbook Voice
+  s.addText("PLAYBOOK VOICE", {
     x: 0.8, y: 1.5, w: 4, h: 0.4,
     fontSize: 13, fontFace: FONT.head, bold: true, color: C.teal, letterSpacing: 3,
   });
@@ -308,7 +308,7 @@ function footerStrip(slide) {
     x: 7.0, y: 1.8, w: 0.06, h: 2.4,
     fill: { type: "solid", color: C.teal },
   });
-  s.addText("SAM VOICE", {
+  s.addText("PLAYBOOK VOICE", {
     x: 7.4, y: 2.1, w: 4.8, h: 0.3,
     fontSize: 11, fontFace: FONT.head, bold: true, color: C.teal, letterSpacing: 2,
   });
@@ -317,7 +317,7 @@ function footerStrip(slide) {
     fontSize: 18, fontFace: FONT.body, italic: true, color: C.white, lineSpacingMultiple: 1.4,
   });
 
-  // Sam — supportive mode
+  // Support voice
   s.addShape(pres.ShapeType.roundRect, {
     x: 7.0, y: 4.6, w: 5.5, h: 2.0, rectRadius: 0.12,
     fill: { type: "solid", color: C.navyLight },
@@ -326,11 +326,11 @@ function footerStrip(slide) {
     x: 7.0, y: 4.6, w: 0.06, h: 2.0,
     fill: { type: "solid", color: C.orange },
   });
-  s.addText("SAM — SUPPORTIVE MODE", {
+  s.addText("SUPPORT VOICE", {
     x: 7.4, y: 4.85, w: 4.8, h: 0.3,
     fontSize: 11, fontFace: FONT.head, bold: true, color: C.orange, letterSpacing: 2,
   });
-  s.addText("Sam's warm, supportive register.\nSteps in for Tier 2 (support/crisis) content.", {
+  s.addText("Warm, supportive register.\nSteps in for Tier 2 (support/crisis) content.", {
     x: 7.4, y: 5.2, w: 4.8, h: 0.5,
     fontSize: 14, fontFace: FONT.body, color: C.n300, lineSpacingMultiple: 1.3,
   });
@@ -606,7 +606,7 @@ function footerStrip(slide) {
     x: 1.2, y: 5.65, w: 5.5, h: 0.35,
     fontSize: 15, fontFace: FONT.head, bold: true, color: C.white,
   });
-  s.addText("Odds, myths, how games work. Voice: Sam. Engaging, shareable, fun.", {
+  s.addText("Odds, myths, how games work. Voice: Playbook voice. Engaging, shareable, fun.", {
     x: 1.2, y: 6.0, w: 5.5, h: 0.35,
     fontSize: 13, fontFace: FONT.body, color: C.n300,
   });
@@ -614,7 +614,7 @@ function footerStrip(slide) {
     x: 7.0, y: 5.65, w: 5.5, h: 0.35,
     fontSize: 15, fontFace: FONT.head, bold: true, color: C.white,
   });
-  s.addText("Helplines, self-assessment, cooling off. Voice: Sam — supportive mode. Warm, non-judgmental.", {
+  s.addText("Helplines, self-assessment, cooling off. Voice: support voice. Warm, non-judgmental.", {
     x: 7.0, y: 6.0, w: 5.5, h: 0.35,
     fontSize: 13, fontFace: FONT.body, color: C.n300,
   });

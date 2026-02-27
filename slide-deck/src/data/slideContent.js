@@ -38,7 +38,7 @@ export const twoTiers = {
     label: 'Tier 1',
     pct: '95%',
     title: 'Entertainment Literacy',
-    voice: 'Sam — confident myth-buster',
+    voice: 'Playbook voice — confident myth-buster',
     items: [
       'Game mechanics & math',
       'Myth-busting content',
@@ -50,7 +50,7 @@ export const twoTiers = {
     label: 'Tier 2',
     pct: '5%',
     title: 'Support & Crisis',
-    voice: 'Sam — warm, direct',
+    voice: 'Support voice — warm, direct',
     items: [
       'Support service referrals',
       'Take-a-break flows',
@@ -85,7 +85,7 @@ export const pillars = {
 
 export const archetypes = {
   sharp: {
-    name: 'Sam',
+    name: 'Playbook Voice',
     role: 'Primary',
     tagline: 'Knows the game. Shares the real story.',
     traits: [
@@ -97,7 +97,7 @@ export const archetypes = {
     example: '"Think you\'ve got a \'system\' that beats the house? Cool. The house has a system too. It\'s called math."',
   },
   friend: {
-    name: 'Sam — supportive mode',
+    name: 'Support Voice',
     role: 'Secondary',
     tagline: 'Has your back. No judgment.',
     traits: [

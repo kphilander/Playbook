@@ -81,7 +81,7 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: Sam — supportive mode. Warm and direct. No humor. No wit. No cleverness.
+**Voice**: Support voice. Warm and direct. No humor. No wit. No cleverness.
 
 | Register | When to use with this segment |
 |---|---|

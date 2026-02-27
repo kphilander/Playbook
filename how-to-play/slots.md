@@ -36,7 +36,7 @@ last_updated: 2025-02-25
 
 Everything you need to know about slot machines — how they work, what the numbers mean, and why no strategy changes the math. No fine print.
 
-> **Operator note**: RTP percentages, paytable structures, and bonus mechanics vary by machine, software provider, and jurisdiction. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
+> **Operator note**: RTP percentages, paytable structures, and bonus mechanics vary by machine, software provider, and jurisdiction. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (default Playbook voice).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 

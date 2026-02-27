@@ -6,7 +6,7 @@ The adapted visual system for Playbook support and crisis content. When the bran
 
 | Document | Description |
 |----------|-------------|
-| [tier-2-visual-guide.md](tier-2-visual-guide.md) | Complete Tier 2 visual specification — adapted color palette, typography adjustments, layout guidelines, and Sam's supportive mode voice |
+| [tier-2-visual-guide.md](tier-2-visual-guide.md) | Complete Tier 2 visual specification — adapted color palette, typography adjustments, layout guidelines, and the support voice |
 
 ## Tier 2 templates
 
@@ -25,5 +25,5 @@ Eight Tier 2 templates are rendered in [`collateral/render/`](../../collateral/r
 
 ## Related
 
-- Brand personality (Sam — supportive mode): [Brand Book — Brand Personality](../../brand-book/02-brand-personality.md)
+- Brand personality (the support voice): [Brand Book — Brand Personality](../../brand-book/02-brand-personality.md)
 - Two-tier content model: [Brand Book — Introduction](../../brand-book/00-introduction.md)
