@@ -4,7 +4,7 @@ Condensed, single-card summaries of each game — designed for print cards, in-a
 
 Each card follows a consistent format: **Game name → What it is → Key stat → One tip**. Approximately 100 words each. For full guides, see the [How to Play index](../README.md).
 
-> **Operator note**: These condensed summaries complement the `collateral/render/htp-card-*` social card templates. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: These condensed summaries complement the `collateral/render/htp-card-*` social card templates. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 ---
 

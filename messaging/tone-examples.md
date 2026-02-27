@@ -1,3 +1,29 @@
+---
+content_type: tone-guide
+title: "Tone Examples"
+pillar: [open, social]
+tier: [1]
+tone: [playful-witty, confident-informative, warm-direct, celebratory]
+reading_level: grade-6-8
+audience: [general]
+channel: [social-media, blog, email, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Before/after examples use irreverent humor as the target.
+  For non-irreverent profiles, the "after" examples themselves
+  need adaptation to the target humor register.
+last_updated: 2025-02-25
+---
+
 # Tone Examples
 
 Concrete before/after pairs showing the {{PROGRAM_NAME}} voice transformation. Use these as reference when writing new content or reviewing existing copy for tone alignment.

@@ -66,7 +66,7 @@ Playbook/
 ├── brand-book/                       # Core brand guidelines (10 chapters)
 │   ├── 00-introduction.md            # Purpose, the engagement gap, two-tier system
 │   ├── 01-brand-foundation.md        # Mission, vision, pillars (Open/Social/Sharp)
-│   ├── 02-brand-personality.md       # The Sharp & Good Friend archetypes, humor guidelines
+│   ├── 02-brand-personality.md       # Sam archetype, humor guidelines
 │   ├── 03-visual-identity.md         # Logo, color, typography, icons, photography
 │   ├── 04-voice-and-tone.md          # The confident myth-buster voice
 │   ├── 05-messaging-framework.md     # Tagline system, CTAs, interactive content briefs

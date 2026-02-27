@@ -1,3 +1,34 @@
+---
+content_type: jurisdiction-module
+title: "British Columbia — Compliance Module"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-9-12
+game_type: [slots, blackjack, roulette, sports-betting, poker, lottery]
+audience: [general]
+channel: [blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: cad
+  sports_culture: us-major-leagues
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  BC module uses CAD currency context. Mandatory messaging ("Know your
+  limit, play within it.") is jurisdiction-specific and cannot be
+  adapted. On-brand messaging examples need cultural adaptation for
+  non-North-American deployments. GameSense compatibility section is
+  BC-specific. GPEB → IGCO transition (April 2026) needs monitoring.
+last_updated: 2026-02-22
+---
+
 # British Columbia — Compliance Module
 
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in British Columbia. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. BC has a mandatory awareness message ("Know your limit, play within it"), a provincial helpline (Gambling Support BC: 1-888-795-6111), and an active player education program (GameSense) that {{PROGRAM_NAME}} needs to work alongside.

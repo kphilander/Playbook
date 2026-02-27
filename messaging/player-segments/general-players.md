@@ -1,3 +1,25 @@
+---
+content_type: player-segment
+title: "General Players"
+pillar: [open, social]
+tier: [1]
+audience: [general]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Broadly applicable. Main adaptations: framing (individual
+  vs. communal), humor register, and sports/game references.
+last_updated: 2025-02-25
+---
+
 # General Players
 
 Default audience messaging for entertainment-motivated recreational players. This is the largest segment and the primary audience for all Tier 1 {{PROGRAM_NAME}} content.
@@ -59,9 +81,9 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Sharp (Playful / Witty and Confident / Informative)
+**Primary archetype**: Sam (Playful / Witty and Confident / Informative)
 
-This segment gets the full Playbook personality. Humor works. Confidence works. Wit works. The Sharp is at the table with them, sharing interesting knowledge because it makes the game better.
+This segment gets the full Playbook personality. Humor works. Confidence works. Wit works. Sam is at the table with them, sharing interesting knowledge because it makes the game better.
 
 | Register | When to use with this segment |
 |---|---|
@@ -70,7 +92,7 @@ This segment gets the full Playbook personality. Humor works. Confidence works. 
 | **Warm / Direct** | Onboarding, session check-ins, limit-reached moments |
 | **Celebratory** | Quiz results, first limit set, tool activation milestones |
 
-**Secondary archetype**: The Good Friend — for feature onboarding and practical tool setup.
+**Secondary register**: Sam — supportive mode — for feature onboarding and practical tool setup.
 
 ---
 

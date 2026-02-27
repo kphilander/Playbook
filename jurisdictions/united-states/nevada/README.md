@@ -1,3 +1,34 @@
+---
+content_type: jurisdiction-module
+title: "Nevada — Compliance Module"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-9-12
+game_type: [slots, blackjack, roulette, sports-betting, video-poker, poker]
+audience: [general]
+channel: [blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: us-major-leagues
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Nevada module is written for the US market (peer/individual/irreverent/
+  blunt/open). On-brand messaging examples throughout need adaptation
+  for non-US deployments. Currency is USD. Helpline numbers are US
+  national (NCPG). Self-exclusion is property-by-property — unique to
+  Nevada. AGA code references are US-specific.
+last_updated: 2026-02-22
+---
+
 # Nevada — Compliance Module
 
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Nevada. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Nevada has no mandatory verbatim messaging (unlike BC's "Know your limit, play within it") but does require prominent posting of problem gambling information and helpline numbers under Regulation 5.170. Nevada uses a property-by-property self-exclusion model — there is no centralized statewide program.

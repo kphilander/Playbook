@@ -1,3 +1,33 @@
+---
+content_type: jurisdiction-module
+title: "{{JURISDICTION_NAME}} — Compliance Module"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-9-12
+game_type: []
+audience: [general]
+channel: [blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: "{{SPORTS_CULTURE}}"
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Compliance modules contain jurisdiction-specific regulatory content.
+  On-brand messaging examples need cultural adaptation (voice, humor,
+  directness). Helpline display, mandatory messaging, and tool
+  descriptions should match the deployed market's cultural profile.
+last_updated: "{{YYYY-MM-DD}}"
+---
+
 # {{JURISDICTION_NAME}} — Compliance Module
 
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in {{JURISDICTION_NAME}}. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Replace all `{{PLACEHOLDER}}` tokens with values from your `_brand.yml` and jurisdiction research.

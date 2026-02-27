@@ -1,3 +1,27 @@
+---
+content_type: player-segment
+title: "Friends and Family"
+pillar: [open, social]
+tier: [2]
+audience: [friends-and-family]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Communal framing is natural here. In collectivist cultures,
+  this segment may be the PRIMARY audience (rather than the
+  player themselves). Conversation starters may need
+  cultural adjustment for directness level.
+last_updated: 2025-02-25
+---
+
 # Friends and Family
 
 Messaging for people concerned about someone else's gambling. This audience needs guidance on how to help without enabling or confronting — and clear pathways to support for themselves.
@@ -55,7 +79,7 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Good Friend (Warm / Direct)
+**Primary archetype**: Sam — supportive mode (Warm / Direct)
 
 This segment gets warmth, empathy, and practical help. No humor. No wit. No odds education. They're not here for entertainment content — they're here because they're worried about someone.
 

@@ -315,7 +315,7 @@ messaging:
 tone:
   humor: "confident-wit"             # minimal | warm | confident-wit
   formality: "conversational"        # formal | balanced | conversational
-  voice_archetype: "the-sharp"        # The friend who knows the game
+  voice_archetype: "sam"               # The friend who knows the game
   gambling_culture: "selective"      # How much industry language to use
 
   # Tier 1 language preferences

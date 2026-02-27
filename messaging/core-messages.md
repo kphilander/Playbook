@@ -1,3 +1,33 @@
+---
+content_type: core-message
+title: "Core Messages"
+pillar: [open, social, tools, help]
+tier: [1, 2]
+tone: [playful-witty, confident-informative, warm-direct, celebratory]
+reading_level: grade-6-8
+audience: [general]
+channel: [social-media, blog, email, in-app, push-notification, print]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Currency: Dollar examples need local currency conversion.
+  Seasonal events: Super Bowl, March Madness, Responsible Gambling
+  Week are US-specific. Replace with local sporting calendar and
+  awareness events.
+  Humor: Several messages use irreverent tone. Warm/understated
+  profiles need rewrites for messages like S-1 ("Share this with
+  the friend who thinks they have a 'system'").
+last_updated: 2025-02-25
+---
+
 # Core Messages
 
 Jurisdiction-agnostic messages organized by use case, ready to deploy at any touchpoint. Each message is tagged with its pillar, tone register, tier, and maximum character count.

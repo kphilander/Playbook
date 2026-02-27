@@ -42,7 +42,7 @@ export default function PersonalitySlide() {
         Brand Personality
       </h2>
       <p className="font-body text-lg text-neutral-300 mt-3">
-        Two archetypes. One voice. Always consistent.
+        One voice. Two modes. Always consistent.
       </p>
 
       <div className="flex-1 flex gap-6 mt-6">

@@ -1,8 +1,35 @@
+---
+content_type: game-guide
+title: "How to Play: {{GAME_NAME}}"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: ["{{GAME_SLUG}}"]
+audience: [general]
+channel: [blog, social-media, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: "{{SPORTS_CULTURE}}"
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  {{ADAPTATION_GUIDANCE}}
+last_updated: "{{YYYY-MM-DD}}"
+---
+
 # How to Play: [Game Name]
 
 Everything you need to know about [game] — how it works, what you're betting on, and the real math behind it. No fine print.
 
-> **Operator note**: All statistics cited are general industry figures. Verify specific numbers for your game variants, RTP configurations, and jurisdiction requirements before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: All statistics cited are general industry figures. Verify specific numbers for your game variants, RTP configurations, and jurisdiction requirements before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 
@@ -71,7 +98,9 @@ Everything you need to know about [game] — how it works, what you're betting o
 
 ### What this means for your wallet
 
+<!-- ADAPT: currency -->
 For every `$100` you bet over time, you'd lose about `$[X]` on average. That's the long-run math — any single session can go either way.
+<!-- /ADAPT -->
 
 **Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).
 

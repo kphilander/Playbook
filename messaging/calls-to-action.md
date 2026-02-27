@@ -1,3 +1,29 @@
+---
+content_type: cta-library
+title: "Calls to Action"
+pillar: [open, social, tools, help]
+tier: [1, 2]
+tone: [playful-witty, confident-informative, warm-direct]
+reading_level: grade-6-8
+audience: [general]
+channel: [social-media, blog, email, in-app, print]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  CTAs are largely universal. Main adaptation: framing
+  (individual vs. communal) for action language.
+  "Challenge your friends" may not work in all cultures.
+last_updated: 2025-02-25
+---
+
 # Calls to Action
 
 Comprehensive CTA reference organized by what you want the player to do. Every CTA includes label text, maximum character count, context, tone register, and recommended tagline pairings.

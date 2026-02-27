@@ -25,7 +25,7 @@ Production-ready scripts for {{PROGRAM_NAME}} radio advertising. 3 x 30-second s
 | Property | Guideline |
 |---|---|
 | **Voice type** | Natural, conversational. Like a smart friend explaining something interesting. |
-| **Energy** | The Sharp — confident, direct, a little knowing. Not announcer-read. |
+| **Energy** | Sam — confident, direct, a little knowing. Not announcer-read. |
 | **Pace** | Moderate. Let the facts land. Don't rush the numbers. |
 | **Not** | PSA tone. Medical disclaimer voice. Condescending. Dramatic. Urgent. |
 | **Emphasis** | Marked with **bold** in scripts below. Light emphasis — don't overdo it. |

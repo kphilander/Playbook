@@ -1,3 +1,27 @@
+---
+content_type: player-segment
+title: "Help Seekers"
+pillar: [open, social]
+tier: [2]
+audience: [help-seekers]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Helpline numbers and support services are jurisdiction-
+  specific (handled by _brand.yml tokens). The warm, non-
+  judgmental tone translates well but help-seeking barriers
+  differ by culture (stigma, face, awareness).
+last_updated: 2025-02-25
+---
+
 # Help-Seekers
 
 Messaging for players actively looking for support or considering self-exclusion. This segment has self-identified a concern — speed, clarity, and zero judgment are critical.
@@ -57,7 +81,7 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Good Friend — serious mode. Warm and direct. No humor. No wit. No cleverness.
+**Primary archetype**: Sam — supportive mode. Warm and direct. No humor. No wit. No cleverness.
 
 | Register | When to use with this segment |
 |---|---|

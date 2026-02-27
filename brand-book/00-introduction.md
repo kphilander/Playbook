@@ -309,7 +309,7 @@ when a player needs support, wants to take a break, or is reaching out for help.
 - Content for friends and family of players who need support
 
 **The voice:** Warm. Direct. Appropriately serious. The confident myth-buster
-takes a step back. The Good Friend steps forward. No humor. No cleverness. Just
+takes a step back. Sam shifts to supportive mode. No humor. No cleverness. Just
 clarity, compassion, and a clear path to help.
 
 **The assumption:** The reader may be in a vulnerable moment. Every word matters.
@@ -345,9 +345,9 @@ Three strategic reasons:
    the math, recognize the myths, and know how tools work are better equipped
    before problems develop. Tier 1 is upstream prevention through literacy.
 
-These three reasons map directly to the two brand personalities. **The Sharp**
+These three reasons map directly to the brand personality. **Sam**
 (primary archetype) drives Tier 1 — sharing knowledge, explaining the math,
-debunking myths. **The Good Friend** (secondary archetype) bridges Tier 1 and
+debunking myths. **Sam — supportive mode** bridges Tier 1 and
 Tier 2 — helping players set up tools, checking in, and knowing when to shift
 to a more serious register.
 

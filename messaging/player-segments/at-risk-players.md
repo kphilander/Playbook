@@ -1,3 +1,28 @@
+---
+content_type: player-segment
+title: "At-Risk Players"
+pillar: [open, social]
+tier: [2]
+audience: [at-risk]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Non-pathologizing approach is universal but implementation
+  varies. In face-sensitive cultures, even the existence of
+  this segment profile must be handled with extreme care.
+  Tool adoption framing ("your tools") works across cultures
+  but the specific tools referenced may differ.
+last_updated: 2025-02-25
+---
+
 # At-Risk Players
 
 Messaging for players showing early behavioral indicators — increased frequency, chasing losses, exceeding self-set limits. This segment is defined by behavior, not demographics or self-identification.
@@ -57,9 +82,9 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Good Friend (Warm / Direct)
+**Primary archetype**: Sam — supportive mode (Warm / Direct)
 
-This segment gets the supportive, practical side of Playbook. Humor is minimal. The Good Friend checks in, offers tools, and steps back. No lectures, no concern, no "we noticed that" surveillance language.
+This segment gets the supportive, practical side of Playbook. Humor is minimal. Sam checks in, offers tools, and steps back. No lectures, no concern, no "we noticed that" surveillance language.
 
 | Register | When to use with this segment |
 |---|---|
@@ -143,7 +168,7 @@ This segment sits at the boundary between Tier 1 (entertainment literacy) and Ti
 | Use clinical language | "Gambling behavior," "intervention," "harm reduction" — all signal that something is wrong. | "Play patterns," "features," "your tools." |
 | Label or diagnose | "You might have a problem" will be met with denial and disengagement. | "Here are your tools. They're here whenever you want them." |
 | Add shame | "This is your third limit increase this month" — counting and calling out creates shame. | "Limit increase requested. Changes take effect in {{COOLING_PERIOD}}." |
-| Use humor in triggered messages | A limit-reached notification is not the time for wit. | Warm, direct, factual. The Good Friend reads the room. |
+| Use humor in triggered messages | A limit-reached notification is not the time for wit. | Warm, direct, factual. Sam reads the room. |
 | Make help the primary CTA | If "Get help" is the main button, the player feels cornered. | Make it secondary. Primary CTA is the tool action; help is visible but not prominent. |
 | Use "you" accusatively | "You exceeded your limit" assigns blame. | "Your limit has been reached" is factual without pointing fingers. |
 

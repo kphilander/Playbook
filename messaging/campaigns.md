@@ -1,3 +1,30 @@
+---
+content_type: campaign
+title: "Campaign Briefs"
+pillar: [open, social]
+tier: [1]
+tone: [playful-witty, confident-informative]
+reading_level: grade-6-8
+audience: [general, sports-bettors, young-adults]
+channel: [social-media, blog, email]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Sports campaigns: Replace NFL/NBA/MLB with local leagues.
+  Hashtags: Assess platform usage per market.
+  Campaign 4 (Luck/Lotteries): Add local lottery references.
+  Campaign 6 (Game IQ): Quiz uses American odds — adapt format.
+last_updated: 2025-02-25
+---
+
 # Campaign Briefs
 
 Seven ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`.
@@ -250,7 +277,7 @@ Best deployed during NFL/NBA/Premier League season openers, March Madness, World
 **Pillar**: Open
 **Audience**: All players, especially those who view gambling as a potential income source
 **Myths used**: 6 (Higher Bets), 12 (Parlays), 17 (Chasing Losses), 18 (Gambling as Income)
-**Tone note**: This campaign covers the most financially consequential myths. Tone stays confident and factual (The Sharp) — never preachy or alarming. The goal is clarity, not finger-wagging.
+**Tone note**: This campaign covers the most financially consequential myths. Tone stays confident and factual (Sam) — never preachy or alarming. The goal is clarity, not finger-wagging.
 
 ### Schedule
 
@@ -291,9 +318,9 @@ Best deployed during NFL/NBA/Premier League season openers, March Madness, World
 ### Tone guidance
 
 This is the campaign where it's easiest to slip into preachiness. Check every piece of copy against the brand voice:
-- **Do**: "Here's the math. Now you know." (The Sharp)
+- **Do**: "Here's the math. Now you know." (Sam)
 - **Don't**: "Please be careful with your money." (compliance voice)
-- **Do**: "Set your limit before you play — it's a power move." (The Good Friend)
+- **Do**: "Set your limit before you play — it's a power move." (Sam — supportive mode)
 - **Don't**: "Problem gambling can lead to financial hardship." (public health voice)
 
 ### KPIs

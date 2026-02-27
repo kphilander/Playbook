@@ -1,8 +1,40 @@
+---
+content_type: game-guide
+title: "How to Play: Blackjack"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: [blackjack]
+audience: [general]
+channel: [blog, social-media, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: null
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Currency: All examples use USD ($10 bet, $15 vs $12 payouts, etc.).
+  Replace with local currency and recalculate.
+  Side bet naming: "Perfect Pairs," "21+3" may differ by market.
+  Insurance terminology: Universal concept but phrasing varies.
+  6:5 vs 3:2: This distinction is universal but dollar examples
+  need local currency.
+last_updated: 2025-02-25
+---
+
 # How to Play: Blackjack
 
 Everything you need to know about blackjack — the rules, the decisions, and why basic strategy is the difference between the best odds in the casino and average ones. No fine print.
 
-> **Operator note**: Rules vary by table, casino, and jurisdiction (number of decks, dealer stand rules, doubling restrictions, surrender availability). Verify specific rules and house edge calculations for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: Rules vary by table, casino, and jurisdiction (number of decks, dealer stand rules, doubling restrictions, surrender availability). Verify specific rules and house edge calculations for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 
@@ -87,7 +119,9 @@ The dealer can't double down, can't split, can't surrender. The dealer just foll
 
 **Key point:** Insurance and most side bets carry a much higher house edge than the base game. Insurance in particular is almost always a bad deal mathematically. Basic strategy says: skip it.
 
+<!-- ADAPT: currency -->
 **6:5 vs. 3:2 blackjack:** Some tables pay `6:5` on a natural blackjack instead of `3:2`. On a `$10` bet, that's `$12` instead of `$15`. This single rule change increases the house edge by about `1.4%`. Check the table sign before you sit down.
+<!-- /ADAPT -->
 
 ---
 
@@ -104,7 +138,9 @@ The dealer can't double down, can't split, can't surrender. The dealer just foll
 
 ### What this means for your wallet
 
+<!-- ADAPT: currency -->
 With basic strategy at a standard table, the house edge is about `0.5%`. For every `$100` you bet over time, you'd lose about `50 cents` on average. Without basic strategy, that climbs to about `$2–$2.50` per `$100`.
+<!-- /ADAPT -->
 
 The difference between knowing basic strategy and not knowing it is the difference between the best odds in the casino and average ones. The strategy itself takes about 20 minutes to learn.
 
@@ -179,7 +215,9 @@ The strategy depends on your hand total and the dealer's upcard. Here's a simpli
 1. **Learn basic strategy.** It takes about 20 minutes and cuts the house edge in half. It's the single most impactful thing you can do at a blackjack table. Free charts are available everywhere.
 2. **Check the table rules before you sit down.** Look for `3:2` blackjack payout (not `6:5`), and check whether the dealer stands or hits on soft 17. These details change the math significantly.
 3. **Skip insurance.** The math doesn't support it at a `7.7%` house edge. Basic strategy says decline it every time.
+<!-- ADAPT: currency, framing -->
 4. **Set your budget before you play.** Decide on a session bankroll and a bet size. A common guideline: your bet should be about `1–2%` of your session budget, giving you enough hands to let the strategy work.
+<!-- /ADAPT -->
 5. **Don't worry about other players.** The person next to you making a "bad" play doesn't affect your odds. Each hand plays out against the dealer independently.
 
 ---
@@ -267,9 +305,11 @@ The strategy depends on your hand total and the dealer's upcard. Here's a simpli
 
 **Pillar:** Open | **Template:** `collateral/render/htp-card-blackjack.html`
 
+<!-- ADAPT: currency -->
 > **HOOK:** 6:5 vs. 3:2. Three characters that cost you real money.
 > **FACT:** A table that pays 6:5 on blackjack instead of 3:2 increases the house edge by about 1.4%. Check the sign before you sit down.
 > **STAT:** On a `$10` bet: `$15` at 3:2 vs. `$12` at 6:5. That `$3` adds up.
+<!-- /ADAPT -->
 
 ### Snippet 3
 

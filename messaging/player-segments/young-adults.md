@@ -1,3 +1,27 @@
+---
+content_type: player-segment
+title: "Young Adults (18-25)"
+pillar: [open, social]
+tier: [1]
+audience: [young-adults]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Channel assumptions (Instagram, TikTok, Twitter/X) may
+  vary by market. Platform dominance differs globally.
+  "Free-to-play to real-money" framing assumes Western
+  gaming progression. Adjust for local context.
+last_updated: 2025-02-25
+---
+
 # Young Adults
 
 Messaging for {{MIN_AGE}}–25 players — digital-native, social-media-fluent, often new to real-money gambling. First experiences shape long-term habits, so education works best before patterns form.
@@ -59,9 +83,9 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Sharp (Playful / Witty → Confident / Informative)
+**Primary archetype**: Sam (Playful / Witty → Confident / Informative)
 
-Young adults respond to confidence and authenticity. They can spot corporate-speak instantly. The Sharp treats them as equals who just happen to not know this particular thing yet.
+Young adults respond to confidence and authenticity. They can spot corporate-speak instantly. Sam treats them as equals who just happen to not know this particular thing yet.
 
 | Register | When to use with this segment |
 |---|---|

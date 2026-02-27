@@ -1,8 +1,37 @@
+---
+content_type: quick-reference
+title: "Odds at a Glance"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: [slots, blackjack, roulette, sports-betting, baccarat, craps, video-poker]
+audience: [general]
+channel: [blog, in-app, print]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: null
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Currency: All dollar examples need local currency conversion.
+  Game selection: Table includes games not available in all markets.
+  Adjust game list for local availability.
+last_updated: 2025-02-25
+---
+
 # Odds at a Glance
 
 Every game has a house edge — the built-in mathematical advantage that keeps the business running. This table puts them side by side so you can compare before you play.
 
-> **Operator note**: These are general industry figures. Actual house edge and RTP vary by game variant, paytable, bet type, and jurisdiction. Verify against your specific products. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: These are general industry figures. Actual house edge and RTP vary by game variant, paytable, bet type, and jurisdiction. Verify against your specific products. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 

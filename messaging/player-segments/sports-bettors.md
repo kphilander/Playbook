@@ -1,8 +1,33 @@
+---
+content_type: player-segment
+title: "Sports Bettors"
+pillar: [open, social]
+tier: [1]
+audience: [sports-bettors]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Sports references assume US major leagues throughout.
+  Replace with locally relevant sports and bet types.
+  Odds format examples use American odds.
+  "Fantasy sports" is US-centric — remove or replace
+  with local equivalent.
+last_updated: 2025-02-25
+---
+
 # Sports Bettors
 
 Messaging for sports fans who bet — often with strong opinions about their sport knowledge and high confidence in their analysis. This segment requires respect for what they know while adding the mathematical context most bettors lack.
 
-> **Operator note**: Sports bettors are the segment most likely to believe they have an edge. They know their sport. They follow the news. They do research. The challenge is helping them understand that sport knowledge and betting edge are not the same thing — without insulting the knowledge they genuinely have. The Sharp archetype at Confident / Informative is your primary register. See [Voice and Tone](../../brand-book/04-voice-and-tone.md) for the full framework.
+> **Operator note**: Sports bettors are the segment most likely to believe they have an edge. They know their sport. They follow the news. They do research. The challenge is helping them understand that sport knowledge and betting edge are not the same thing — without insulting the knowledge they genuinely have. Sam at Confident / Informative is your primary register. See [Voice and Tone](../../brand-book/04-voice-and-tone.md) for the full framework.
 
 ---
 
@@ -60,9 +85,9 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Sharp (Confident / Informative)
+**Primary archetype**: Sam (Confident / Informative)
 
-Respect their knowledge. Add to it. Never talk down. The Sharp is someone who knows the sport *and* the math — and shares the math part because it completes the picture.
+Respect their knowledge. Add to it. Never talk down. Sam is someone who knows the sport *and* the math — and shares the math part because it completes the picture.
 
 | Register | When to use with this segment |
 |---|---|

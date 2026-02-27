@@ -1,8 +1,42 @@
+---
+content_type: game-guide
+title: "How to Play: Slots"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: [slots]
+audience: [general, young-adults]
+channel: [blog, social-media, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: null
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Currency: All examples use USD ($100, $0.50/spin, $600/hr).
+  Replace with local currency and recalculate round numbers.
+  Game naming: "Slots" is universal except Australia ("pokies").
+  Use local term in title and body.
+  Humor: "emotional range of a toaster" — test for irreverent profiles.
+  Understated/warm/minimal profiles need rewrites.
+  RTP disclosure: Requirements vary. In some markets, RTP must be
+  displayed prominently. In others, it's not publicly disclosed.
+last_updated: 2025-02-25
+---
+
 # How to Play: Slots
 
 Everything you need to know about slot machines — how they work, what the numbers mean, and why no strategy changes the math. No fine print.
 
-> **Operator note**: RTP percentages, paytable structures, and bonus mechanics vary by machine, software provider, and jurisdiction. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: RTP percentages, paytable structures, and bonus mechanics vary by machine, software provider, and jurisdiction. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 
@@ -66,9 +100,13 @@ Slots don't have bet types the way table games do. What you control is the **siz
 | **Bet per line** | The amount wagered on each active payline | Win size — payouts are multiplied by your bet per line |
 | **Number of lines** | How many paylines are active this spin | Win frequency — more lines means more chances to match, but higher total bet |
 | **Max bet** | Activates all paylines at maximum bet per line | Required for some progressive jackpots — check the paytable |
+<!-- ADAPT: currency -->
 | **Coin denomination** | The base value of each credit (e.g., $0.01, $0.25, $1.00) | Sets the scale of everything — bets, wins, and losses |
+<!-- /ADAPT -->
 
+<!-- ADAPT: currency -->
 **Key point:** Betting more per spin does not improve your odds. The house edge is a percentage — it applies equally whether you bet `$0.25` or `$25`. Bigger bets mean bigger potential wins *and* bigger potential losses at the same rate.
+<!-- /ADAPT -->
 
 ---
 
@@ -82,14 +120,18 @@ Every slot machine has a programmed **return to player (RTP)** — the percentag
 
 | Metric | Typical range | What it means |
 |--------|--------------|---------------|
+<!-- ADAPT: currency -->
 | **RTP** | `85–98%` | For every `$100` wagered in total, the machine pays back `$85` to `$98` |
 | **House edge** | `2–15%` | The casino's cut — what the machine keeps |
+<!-- /ADAPT -->
 
 Most online slots sit in the `92–97%` RTP range. Physical casino machines tend to run `85–95%`. These numbers are set in the game software and regulated by gaming authorities.
 
 ### What this means for your wallet
 
+<!-- ADAPT: currency -->
 A slot with `95%` RTP has a `5%` house edge. For every `$100` you bet over time, you'd lose about `$5` on average. That's the long-run math — any single session can swing wildly in either direction.
+<!-- /ADAPT -->
 
 ### Volatility
 
@@ -129,7 +171,9 @@ Two machines can have the same `95%` RTP but play completely differently. A low-
 1. **Check the paytable before you play.** It takes 30 seconds. You'll see the RTP, payline structure, and what triggers bonuses. If a machine doesn't show its RTP, that's worth knowing too.
 2. **Understand what "max bet required" means.** Some progressive jackpots only pay if you're betting the maximum. If you're not going to max bet, you may want a non-progressive machine where every bet has the same proportional chance.
 3. **Pick your volatility, not your theme.** Two machines with cartoon themes can play completely differently. Low volatility stretches your session. High volatility creates bigger swings. Neither is better — they're different experiences.
+<!-- ADAPT: currency, framing -->
 4. **Set your budget before you press spin.** Decide what you're willing to spend for the session and stick to it. Slots move fast — a `$0.50` bet every 3 seconds adds up to `$600` per hour.
+<!-- /ADAPT -->
 5. **Know that every spin is independent.** What happened on the last spin — or the last 1,000 spins — has zero effect on the next one. The RNG doesn't keep score.
 
 ---
@@ -212,9 +256,11 @@ Two machines can have the same `95%` RTP but play completely differently. A low-
 
 **Pillar:** Open | **Template:** `collateral/render/htp-card-slots.html`
 
+<!-- ADAPT: humor -->
 > **HOOK:** Your slot machine has the emotional range of a toaster.
 > **FACT:** Every spin is decided by a random number generator before the reels even move. No memory. No patterns. No hot streaks.
 > **STAT:** The result is determined in under `1 millisecond`.
+<!-- /ADAPT -->
 
 ### Snippet 2
 
@@ -228,6 +274,8 @@ Two machines can have the same `95%` RTP but play completely differently. A low-
 
 **Pillar:** Open | **Template:** `collateral/render/htp-card-slots.html`
 
+<!-- ADAPT: currency -->
 > **HOOK:** A $0.50 bet every 3 seconds.
 > **FACT:** That's how fast modern slots play. At that pace, you're wagering about $600 per hour — even on a "penny" machine.
 > **STAT:** `$600/hour` at $0.50 per spin, one spin every 3 seconds.
+<!-- /ADAPT -->

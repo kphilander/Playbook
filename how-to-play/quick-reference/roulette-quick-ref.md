@@ -1,3 +1,28 @@
+---
+content_type: quick-reference
+title: "Roulette Quick Reference"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: [roulette]
+audience: [general]
+channel: [print, in-app, social-media]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: null
+  language: en-us
+adaptation_status: base
+last_updated: 2025-02-25
+---
+
 # Roulette — Quick Reference
 
 ## How it works
