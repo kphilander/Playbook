@@ -90,6 +90,8 @@ Use this rubric when reviewing any new or updated {{PROGRAM_NAME}} content befor
 
 Any dimension scoring 1 is a blocker. Fix before publishing. The content review rubric is a complement to — not a replacement for — the content approval workflow.
 
+> **Post-deployment testing:** The rubric evaluates content *before* publication. For testing how content performs *with players* after publication, see the [Player Testing Protocol](../research/player-testing-protocol.md).
+
 ---
 
 ## Version control
@@ -278,6 +280,8 @@ For individual operators, the proof that Playbook works is **player engagement w
 | Feature usage | Session reminder activations, bankroll planner usage |
 | Share rate | How often players share quiz results or myth-busters |
 | Return visits | How often players come back to the content hub |
+
+> **Qualitative complement:** These metrics tell you *what* players do. For *why* — whether content resonated, what they remember, and whether cultural adaptations improved the experience — see the [Player Testing Protocol](../research/player-testing-protocol.md).
 
 ### Content performance
 

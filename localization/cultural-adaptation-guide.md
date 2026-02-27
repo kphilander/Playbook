@@ -288,6 +288,10 @@ cultural_profile:
 adaptation_status: adapted
 ```
 
+### Step 5: Test the adaptation
+
+After deploying adapted content, test whether the adaptation improved the player experience using the Cultural Fit A/B test in the [Player Testing Protocol](../research/player-testing-protocol.md#cultural-fit-testing). File results using the [Research Findings issue template](https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml) to share findings back to the project.
+
 ---
 
 ## Presentation tags
@@ -353,8 +357,8 @@ The five spectrums are grounded in established cross-cultural research framework
 
 - Raylu, N. & Oei, T.P.S. (2004). Role of culture in gambling and problem gambling. *Clinical Psychology Review*, 23(8), 1087-1114. — Systematic review of how cultural values and beliefs influence gambling behavior and attitudes.
 
-- Loo, J.M.Y., Raylu, N., & Oei, T.P.S. (2022). Unpacking the root causes of gambling in the Asian community: Contesting the myth of the Asian gambling culture. *Frontiers in Public Health*, 10, 956956. — Research on gambling stigma, face sensitivity, and help-seeking barriers in Asian communities.
+- Colby, M.H., Hires, B., Le, L., Sauma, D., Yau, M.Y.Y., Chu, M.T., & Rubin, H.L. (2022). Unpacking the root causes of gambling in the Asian community: Contesting the myth of the Asian gambling culture. *Frontiers in Public Health*, 10, 956956. — Research on gambling stigma, face sensitivity, and help-seeking barriers in Asian communities.
 
 - Binde, P. (2005). Gambling Across Cultures: Mapping Worldwide Occurrence and Learning from Ethnographic Comparison. *International Gambling Studies*, 5(1), 1-27. — Anthropological perspective on gambling as a culturally situated activity.
 
-- Gainsbury, S.M., Aro, D., Ball, D., Tobar, C., & Russell, A. (2018). Strategies to customize responsible gambling messages: A review and focus group study. *BMC Public Health*, 18, 1381. — Evidence that language and tonality in gambling messages have varying impact depending on cultural context.
+- Gainsbury, S.M., Abarbanel, B.L.L., Philander, K.S., & Butler, J.V. (2018). Strategies to customize responsible gambling messages: A review and focus group study. *BMC Public Health*, 18, 1381. — Evidence that language and tonality in gambling messages have varying impact depending on cultural context.
