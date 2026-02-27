@@ -1,3 +1,34 @@
+---
+content_type: jurisdiction-module
+title: "British Columbia — Advertising Rules"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-9-12
+game_type: [slots, blackjack, roulette, sports-betting, poker, lottery]
+audience: [general]
+channel: [blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: cad
+  sports_culture: us-major-leagues
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Advertising rules layer provincial (GPEB/IGCO), BCLC, and national
+  (Canadian Gambling Advertising Code) requirements. On-brand disclosure
+  examples need cultural adaptation for non-North-American markets.
+  Canadian Gambling Advertising Code (January 2026) provisions are
+  Canada-wide and apply in all provinces.
+last_updated: 2026-02-22
+---
+
 # British Columbia — Advertising Rules
 
 > **Operator note**: This is the detailed advertising reference for British Columbia. It covers provincial rules (GPEB/IGCO conditions, BCLC standards), the national Canadian Gambling Advertising Code (January 2026), channel-by-channel rules, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [BC compliance module](README.md) for complete coverage.

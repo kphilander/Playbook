@@ -1,3 +1,29 @@
+---
+content_type: core-message
+title: "Tagline System"
+pillar: [open, social, tools, help]
+tier: [1, 2]
+tone: [playful-witty, confident-informative, warm-direct]
+reading_level: grade-6-8
+audience: [general]
+channel: [social-media, blog, email, in-app, print]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Taglines are voice-dependent. "No fine print. Just facts."
+  works for peer/blunt profiles. Authority/diplomatic profiles
+  need alternative taglines that convey the same pillar.
+last_updated: 2025-02-25
+---
+
 # Tagline System
 
 The complete tagline hierarchy, rotation guidance, and operational framework for {{PROGRAM_NAME}}. Playbook uses a tagline *system* — not a single prescribed tagline. Operators choose from the inventory, mix and match across campaigns, or use the framework to write their own.

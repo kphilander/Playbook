@@ -1,3 +1,36 @@
+---
+content_type: game-guide
+title: "How to Play: Roulette"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: [roulette]
+audience: [general]
+channel: [blog, social-media, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: null
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Currency: All examples use USD ($100, $2.70, $5.26).
+  Replace with local currency.
+  Wheel emphasis: Current content lists American roulette
+  prominently. For non-US markets, lead with European/French
+  as the default and note American as a variant.
+  Directness: "Avoid it" (re: five-number bet) is blunt.
+  Diplomatic profiles may prefer softer framing.
+last_updated: 2025-02-25
+---
+
 # How to Play: Roulette
 
 Everything you need to know about roulette — the wheel, the bets, and why the number of zeros changes everything. No fine print.
@@ -87,7 +120,9 @@ Bets placed on larger groups. Lower risk, lower payout.
 | **Dozens** | First 12 (`1–12`), second 12 (`13–24`), or third 12 (`25–36`) | `2:1` | `12` |
 | **Columns** | One of three vertical columns on the layout | `2:1` | `12` |
 
-**Key point:** Every bet on a standard roulette table has the same house edge — whether you bet on a single number or red/black. The payouts are calibrated so the house edge is consistent across all bets. The only exception: the five-number bet (`0`, `00`, `1`, `2`, `3`) on American roulette, which has a higher edge of `7.89%`. Avoid it.
+**Key point:** Every bet on a standard roulette table has the same house edge — whether you bet on a single number or red/black. The payouts are calibrated so the house edge is consistent across all bets. <!-- ADAPT: directness -->
+The only exception: the five-number bet (`0`, `00`, `1`, `2`, `3`) on American roulette, which has a higher edge of `7.89%`. Avoid it.
+<!-- /ADAPT -->
 
 ---
 
@@ -111,9 +146,11 @@ On American roulette, it's `1 in 38` with the same `35:1` payout. The gap is wid
 
 ### What this means for your wallet
 
+<!-- ADAPT: currency -->
 On a European wheel with a `2.70%` house edge: for every `$100` you bet over time, you'd lose about `$2.70` on average.
 
 On an American wheel at `5.26%`: that same `$100` costs you about `$5.26` over time.
+<!-- /ADAPT -->
 
 That's nearly double — for the same game, the same bets, the same experience. The only difference is one extra green pocket.
 
@@ -141,7 +178,9 @@ That's nearly double — for the same game, the same bets, the same experience. 
 1. **Check the wheel type before you play.** European (one zero) has a `2.70%` edge. American (two zeros) has `5.26%`. If both are available, the math favors European. Every time.
 2. **Look for la partage or en prison rules.** If a table offers French rules on even-money bets, the house edge drops to `1.35%` — the lowest in roulette.
 3. **Know that every spin is independent.** The ball landed on red five times in a row? The odds on the next spin are exactly the same. Electronic scoreboards showing past results are entertainment, not information.
+<!-- ADAPT: directness -->
 4. **Skip the five-number bet on American roulette.** The bet covering `0`, `00`, `1`, `2`, `3` carries a `7.89%` house edge — the worst bet on the table.
+<!-- /ADAPT -->
 5. **Set your budget per session.** Roulette moves at a moderate pace (about 30–40 spins per hour at a physical table, faster online). Decide what your session is worth as entertainment before you start.
 
 ---

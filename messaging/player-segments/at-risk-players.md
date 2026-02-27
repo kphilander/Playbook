@@ -1,3 +1,28 @@
+---
+content_type: player-segment
+title: "At-Risk Players"
+pillar: [open, social]
+tier: [2]
+audience: [at-risk]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Non-pathologizing approach is universal but implementation
+  varies. In face-sensitive cultures, even the existence of
+  this segment profile must be handled with extreme care.
+  Tool adoption framing ("your tools") works across cultures
+  but the specific tools referenced may differ.
+last_updated: 2025-02-25
+---
+
 # At-Risk Players
 
 Messaging for players showing early behavioral indicators — increased frequency, chasing losses, exceeding self-set limits. This segment is defined by behavior, not demographics or self-identification.

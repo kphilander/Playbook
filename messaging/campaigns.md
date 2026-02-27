@@ -1,3 +1,30 @@
+---
+content_type: campaign
+title: "Campaign Briefs"
+pillar: [open, social]
+tier: [1]
+tone: [playful-witty, confident-informative]
+reading_level: grade-6-8
+audience: [general, sports-bettors, young-adults]
+channel: [social-media, blog, email]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Sports campaigns: Replace NFL/NBA/MLB with local leagues.
+  Hashtags: Assess platform usage per market.
+  Campaign 4 (Luck/Lotteries): Add local lottery references.
+  Campaign 6 (Game IQ): Quiz uses American odds — adapt format.
+last_updated: 2025-02-25
+---
+
 # Campaign Briefs
 
 Seven ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`.

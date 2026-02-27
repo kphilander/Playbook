@@ -1,0 +1,178 @@
+# _taxonomy.yml — Playbook Content Taxonomy
+# ============================================
+# Defines all valid tag values for content frontmatter.
+# This file is the single source of truth for the tagging system.
+#
+# This file is NOT operator-customizable (unlike _brand.yml).
+# It defines the shared vocabulary across all Playbook deployments.
+# Operators extend it by adding new values — they don't remove
+# or rename existing ones.
+# ============================================
+
+version: "1.0"
+
+# ─── CONTENT TAGS ───────────────────────────
+
+content_type:
+  - game-guide
+  - quick-reference
+  - core-message
+  - campaign
+  - myth-bust
+  - cta-library
+  - player-segment
+  - tone-guide
+  - language-guide
+  - jurisdiction-module
+
+pillar:
+  - open           # Transparency, odds literacy
+  - social         # Shareable, community
+  - tools          # Player features, limits
+  - help           # Tier 2 support crossover
+
+tier:
+  - 1              # Entertainment literacy (default)
+  - 2              # Support / crisis
+
+tone:
+  - playful-witty
+  - confident-informative
+  - warm-direct
+  - celebratory
+
+reading_level:
+  - grade-4-5      # Simple, very accessible
+  - grade-6-8      # Default Playbook target
+  - grade-9-12     # More complex
+  - adult          # Regulatory, technical
+
+# Game types include future market-specific games
+# to support content planning and adaptation tracking.
+game_type:
+  # Currently documented
+  - slots
+  - blackjack
+  - roulette
+  - sports-betting
+  # Documented in odds-at-a-glance but no full guide yet
+  - baccarat
+  - craps
+  - video-poker
+  - poker
+  - bingo
+  - lottery
+  - scratch-cards
+  # Future market-specific games (no content yet)
+  - pachinko
+  - mahjong
+  - horse-racing
+  - pokies            # Australian term for slots
+  - football-pools
+  - cricket-betting
+
+audience:
+  - general
+  - young-adults
+  - sports-bettors
+  - at-risk
+  - help-seekers
+  - friends-and-family
+
+channel:
+  - social-media
+  - blog
+  - email
+  - in-app
+  - print
+  - environmental      # Signage, venue displays
+  - push-notification
+  - video
+
+adaptation_status:
+  - base               # Original content (default)
+  - adaptation-needed   # Identified for adaptation, not yet done
+  - in-progress        # Adaptation underway
+  - adapted            # Fully adapted for target profile
+  - reviewed           # Adapted and reviewed by local expert
+  - not-applicable     # Content is universal
+
+# ─── CULTURAL PROFILE ───────────────────────
+# Five plain-language spectrums for cultural adaptation.
+# Operators pick one value per spectrum.
+# See localization/cultural-adaptation-guide.md for detailed
+# guidance on each value, with before/after examples.
+
+cultural_profile:
+
+  # Who's talking?
+  voice:
+    - peer             # An equal — someone at the table with you
+    - authority        # A credentialed expert — institutional trust
+    - elder            # A respected community figure — warm, earned trust
+
+  # Who benefits?
+  framing:
+    - individual       # "Protect YOUR bankroll" — personal agency
+    - communal         # "Protect what matters most" — family, community
+
+  # What humor register?
+  humor:
+    - irreverent       # Bold, sarcastic, confident — current Playbook default
+    - warm             # Inclusive, gentle, bonding — no targets, no edge
+    - understated      # Dry, wry — implies rather than states
+    - minimal          # Facts speak for themselves — little personality
+
+  # How do you deliver hard truths?
+  directness:
+    - blunt            # "This bet is terrible. Here's why."
+    - diplomatic       # "This bet carries a higher cost than most expect."
+    - contextual       # Arrives at the conclusion through story or analogy
+
+  # How openly is gambling discussed?
+  comfort:
+    - open             # Gambling is entertainment — talk freely
+    - reserved         # Acknowledged but not celebrated — financial literacy framing
+    - private          # Socially sensitive — never imply the reader is a gambler
+
+# ─── PRESENTATION ───────────────────────────
+# Format and localization tags.
+# These are mechanical — they change examples and formatting,
+# not voice or cultural framing.
+
+presentation:
+
+  odds_format:
+    - american         # -110, +150
+    - decimal          # 1.91, 2.50
+    - fractional       # 5/1, 2/5
+    - mixed            # Shows multiple formats
+
+  currency:
+    - usd
+    - gbp
+    - eur
+    - aud
+    - cad
+    - brl
+    - jpy
+    - inr
+    - generic          # Uses "units" or no currency symbol
+
+  sports_culture:
+    - us-major-leagues       # NFL, NBA, MLB, NHL
+    - football-global        # Soccer/football as primary sport
+    - cricket-racing         # Cricket, horse racing, rugby
+    - horse-racing-primary   # Horse racing as dominant betting sport
+    - pachinko-mahjong       # Japanese/East Asian gaming culture
+    - multi-sport            # Not tied to any specific sport
+
+  language:
+    - en-us
+    - en-gb
+    - en-au
+    - pt-br
+    - ja
+    - fr-ca
+    - es
+    - hi

@@ -1,3 +1,40 @@
+---
+content_type: game-guide
+title: "How to Play: Sports Betting"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: [sports-betting]
+audience: [general, sports-bettors, young-adults]
+channel: [blog, social-media, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: us-major-leagues
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  HEAVIEST ADAPTATION NEEDED of all game guides.
+  Odds format: American odds (-110, +150) used throughout as primary.
+  For non-US markets, lead with decimal odds and show American
+  as a variant. Fractional for UK.
+  Currency: All dollar examples ($100, $110, $150).
+  Sports culture: Point spreads assume US-style football/basketball.
+  Replace with locally relevant sports and bet types.
+  Props: "Total strikeouts by a pitcher" is MLB-specific.
+  Terminology: "Moneyline" is US term. UK uses "match odds."
+  "Parlay" is US; UK/Australia use "accumulator" or "multi."
+  The vig/juice concept is universal but naming varies.
+last_updated: 2025-02-25
+---
+
 # How to Play: Sports Betting
 
 Everything you need to know about sports betting — how odds work, what the different bet types mean, and where the sportsbook makes its money. No fine print.
@@ -31,7 +68,9 @@ Everything you need to know about sports betting — how odds work, what the dif
 
 ## The 30-second version
 
-> Sports betting is wagering on the outcome of sporting events. Unlike casino games, knowledge and analysis can inform your bets — but the sportsbook builds in a margin (the vig) on every line. At standard `-110` odds, you need to win `52.4%` of your bets just to break even. The sportsbook's line already accounts for everything you know. Beating it consistently is harder than it looks.
+> Sports betting is wagering on the outcome of sporting events. Unlike casino games, knowledge and analysis can inform your bets — but the sportsbook builds in a margin (the vig) on every line. <!-- ADAPT: odds_format, currency -->
+At standard `-110` odds, you need to win `52.4%` of your bets just to break even.
+<!-- /ADAPT --> The sportsbook's line already accounts for everything you know. Beating it consistently is harder than it looks.
 
 ---
 
@@ -47,7 +86,9 @@ The key difference between sports betting and casino games: **the odds aren't fi
 
 The sportsbook's profit comes from the **vig** (also called the juice or margin) — a built-in commission on every bet. Here's how it works:
 
+<!-- ADAPT: odds_format, currency -->
 Imagine a coin flip. True odds would be `+100` on each side (bet `$100` to win `$100`). But a sportsbook might price both sides at `-110` — meaning you bet `$110` to win `$100`. If the sportsbook takes equal action on both sides, they pay out `$100` to the winner and keep the `$10` difference from the loser. That's the vig.
+<!-- /ADAPT -->
 
 The vig means **you need to win more than 50% of your bets to profit.** At standard `-110` odds, the break-even rate is `52.4%`.
 
@@ -57,6 +98,7 @@ The vig means **you need to win more than 50% of your bets to profit.** At stand
 
 Sports betting uses three odds formats. They all express the same thing differently: how much you win relative to your stake, and the implied probability of the outcome.
 
+<!-- ADAPT: odds_format, currency -->
 ### American odds (moneyline)
 
 The standard format in the US. Uses plus (+) and minus (−) signs.
@@ -67,6 +109,7 @@ The standard format in the US. Uses plus (+) and minus (−) signs.
 | **+150** (underdog) | Bet `$100` to win `$150` profit | Risk `$100`, get back `$250` total if you win |
 | **−110** (standard vig) | Bet `$110` to win `$100` profit | The most common line — the sportsbook's standard margin |
 | **+100** (even money) | Bet `$100` to win `$100` profit | True coin-flip odds, no built-in margin |
+<!-- /ADAPT -->
 
 **The minus sign** means that team is the favorite — you risk more than you stand to win.
 **The plus sign** means that team is the underdog — you risk less than you stand to win.
@@ -162,10 +205,12 @@ Bets on specific events within a game, not the final outcome.
 
 | Examples |
 |---------|
+<!-- ADAPT: sports_culture -->
 | Player X scores over/under `24.5` points |
 | First team to score |
 | Total strikeouts by a pitcher |
 | Will there be overtime? |
+<!-- /ADAPT -->
 
 Props often carry a wider vig than standard bets because the lines are harder for sportsbooks to set precisely — and for bettors to evaluate.
 
@@ -348,6 +393,8 @@ Professional sports bettors — the ones who actually profit long-term — typic
 
 **Pillar:** Open | **Template:** `collateral/render/htp-card-sports.html`
 
+<!-- ADAPT: humor, directness -->
 > **HOOK:** The line already knows what you know.
 > **FACT:** Sportsbook odds are set by algorithms processing more data than any individual bettor. Your sports knowledge is already priced into the line. Beating it consistently means finding what the market missed.
 > **STAT:** Sportsbook lines move within `seconds` of new information.
+<!-- /ADAPT -->

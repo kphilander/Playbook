@@ -1,3 +1,33 @@
+---
+content_type: jurisdiction-module
+title: "Nevada — Advertising Rules"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-9-12
+game_type: [slots, blackjack, roulette, sports-betting, video-poker, poker]
+audience: [general]
+channel: [blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: us-major-leagues
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Advertising rules are jurisdiction-specific regulatory content.
+  Comparison tables reference BC and UK — useful for cross-market
+  operators. On-brand disclosure examples need cultural adaptation
+  for non-US markets.
+last_updated: 2026-02-22
+---
+
 # Nevada — Advertising Rules
 
 > **Operator note**: This is the detailed advertising reference for Nevada. It covers Nevada's principles-based standard (Regulation 5.011(4)), the AGA Responsible Gaming Code overlay, interactive gaming advertising rules (Regulation 5A), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Nevada compliance module](README.md) for complete coverage.

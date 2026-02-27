@@ -1,3 +1,30 @@
+---
+content_type: language-guide
+title: "Stigma-Free Language Guide"
+pillar: [open, social, tools, help]
+tier: [1, 2]
+tone: [confident-informative]
+reading_level: grade-6-8
+audience: [general]
+channel: [social-media, blog, email, in-app, print]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Largely universal across cultures. The principle of
+  avoiding stigmatizing language applies everywhere.
+  Specific preferred terms may need local equivalents
+  in non-English adaptations.
+last_updated: 2025-02-25
+---
+
 # Stigma-Free Language Guide
 
 Person-first language reference for all {{PROGRAM_NAME}} content. 35 terms with preferred alternatives, rationale, and examples in context. This guide ensures that every piece of Playbook messaging respects players, avoids pathologizing, and stays true to the brand voice.

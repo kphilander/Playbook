@@ -1,3 +1,29 @@
+---
+content_type: myth-bust
+title: "Myth Busting"
+pillar: [open, social]
+tier: [1]
+tone: [playful-witty, confident-informative]
+reading_level: grade-6-8
+audience: [general]
+channel: [social-media, blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Game-specific myths: Some reference US casino culture.
+  Humor: One-liners use irreverent tone. Adapt for profile.
+  Format: Social card copy may need cultural adjustment.
+last_updated: 2025-02-25
+---
+
 # Myth-Busting Content Library
 
 Ready-to-use copy for debunking the most common gambling misconceptions. Each myth includes three formats: social card copy, article explainer, and quiz question.

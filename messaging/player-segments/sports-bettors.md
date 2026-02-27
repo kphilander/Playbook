@@ -1,3 +1,28 @@
+---
+content_type: player-segment
+title: "Sports Bettors"
+pillar: [open, social]
+tier: [1]
+audience: [sports-bettors]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Sports references assume US major leagues throughout.
+  Replace with locally relevant sports and bet types.
+  Odds format examples use American odds.
+  "Fantasy sports" is US-centric — remove or replace
+  with local equivalent.
+last_updated: 2025-02-25
+---
+
 # Sports Bettors
 
 Messaging for sports fans who bet — often with strong opinions about their sport knowledge and high confidence in their analysis. This segment requires respect for what they know while adding the mathematical context most bettors lack.

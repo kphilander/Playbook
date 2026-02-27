@@ -1,3 +1,32 @@
+---
+content_type: jurisdiction-module
+title: "{{COUNTRY_NAME}} — Jurisdiction Overview"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-9-12
+game_type: []
+audience: [general]
+channel: [blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: "{{SPORTS_CULTURE}}"
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Jurisdiction overviews are structural/regulatory. Cultural adaptation
+  is minimal — primarily currency and legal terminology. Localize
+  helpline numbers, age thresholds, and regulatory body names.
+last_updated: "{{YYYY-MM-DD}}"
+---
+
 # {{COUNTRY_NAME}} — Jurisdiction Overview
 
 > **Operator note**: This is the country-level overview for {{COUNTRY_NAME}}. It covers the national regulatory framework and lists all sub-jurisdictions with their regulators and key facts. For sub-jurisdiction compliance details, see the individual modules linked below.

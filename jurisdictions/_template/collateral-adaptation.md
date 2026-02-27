@@ -1,3 +1,32 @@
+---
+content_type: jurisdiction-module
+title: "Collateral Adaptation Guide — {{JURISDICTION_NAME}}"
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-9-12
+game_type: []
+audience: [general]
+channel: [blog, in-app]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  sports_culture: "{{SPORTS_CULTURE}}"
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Collateral adaptation guides are structural references. Cultural
+  adaptation needed for on-brand messaging examples within each
+  collateral row. Token values are jurisdiction-specific.
+last_updated: "{{YYYY-MM-DD}}"
+---
+
 # Collateral Adaptation Guide — {{JURISDICTION_NAME}}
 
 > **Operator note**: This guide maps every {{PROGRAM_NAME}} collateral piece to jurisdiction-specific adaptations. Use it alongside the compliance module to ensure every touchpoint meets {{JURISDICTION_NAME}} requirements. Each row tells you what to change and which `_brand.yml` token drives the change.

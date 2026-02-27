@@ -1,3 +1,25 @@
+---
+content_type: player-segment
+title: "General Players"
+pillar: [open, social]
+tier: [1]
+audience: [general]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  currency: usd
+  language: en-us
+adaptation_status: base
+adaptation_notes: |
+  Broadly applicable. Main adaptations: framing (individual
+  vs. communal), humor register, and sports/game references.
+last_updated: 2025-02-25
+---
+
 # General Players
 
 Default audience messaging for entertainment-motivated recreational players. This is the largest segment and the primary audience for all Tier 1 {{PROGRAM_NAME}} content.

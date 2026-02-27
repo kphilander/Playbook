@@ -7,6 +7,7 @@ Playbook is CC0-licensed. Contributions are welcome from anyone — operators, r
 - **Jurisdiction modules** — new jurisdictions or updates to existing ones
 - **Messaging content** — taglines, CTAs, myth-busting content, quiz concepts
 - **Translations** — adapting content for non-English markets
+- **Cultural adaptations** — adapting content for different cultural profiles (see [localization/](localization/))
 - **Visual identity** — icon SVGs, design templates, placeholder assets
 - **Collateral templates** — new touchpoint templates or improvements
 - **Interactive content concepts** — quiz frameworks, calculator specs, gamification ideas
@@ -25,6 +26,49 @@ Every contribution should align with the Playbook brand:
 4. **Tier 1 language.** Avoid the terms listed in `_brand.yml > tone > avoid_in_tier_1`. Use the preferred alternatives. See [brand-book/04-voice-and-tone.md](brand-book/04-voice-and-tone.md) for the full guide.
 
 5. **Jurisdiction accuracy.** Regulatory content must cite specific legislation, codes, or official guidance. Include a `last_updated` date. Flag anything you're uncertain about.
+
+## Tagging your content
+
+Every content file should include YAML frontmatter with tags from [`_taxonomy.yml`](_taxonomy.yml). This makes content discoverable and filterable across the repository.
+
+```yaml
+---
+content_type: game-guide
+pillar: [open]
+tier: 1
+tone: [confident-informative]
+reading_level: grade-6-8
+game_type: [roulette]
+audience: [general]
+cultural_profile:
+  voice: peer
+  framing: individual
+  humor: irreverent
+  directness: blunt
+  comfort: open
+presentation:
+  odds_format: american
+  currency: usd
+  language: en-us
+adaptation_status: base
+---
+```
+
+See [`_taxonomy.yml`](_taxonomy.yml) for all valid values.
+
+## Cultural adaptation
+
+Playbook content is written in a specific cultural voice. When adapting for different markets, use the five cultural profile spectrums defined in [`_taxonomy.yml`](_taxonomy.yml) and documented in detail in the [Cultural Adaptation Guide](localization/cultural-adaptation-guide.md).
+
+When writing or editing content, flag passages that need cultural attention with inline markers:
+
+```markdown
+<!-- ADAPT: humor -->
+Your slot machine has the emotional range of a toaster.
+<!-- /ADAPT -->
+```
+
+Valid marker types: `humor`, `currency`, `odds_format`, `sports_culture`, `framing`, `directness`, `comfort`. These are invisible in rendered markdown but searchable in source files.
 
 ## How to contribute
 
@@ -78,6 +122,7 @@ Open a GitHub issue for:
 2. **Structure review**: Follows existing file patterns and naming conventions?
 3. **Brand alignment**: Informed choice framing? Tier 1 language? Engaging tone?
 4. **Legal review** (jurisdiction modules): Regulatory info verified against primary sources?
+5. **Tag review**: Frontmatter tags present and valid per [`_taxonomy.yml`](_taxonomy.yml)?
 
 ## Code of conduct
 
