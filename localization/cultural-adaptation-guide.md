@@ -18,6 +18,22 @@ This guide helps you adapt Playbook content for your market using five plain-lan
 
 ---
 
+## What doesn't change
+
+The five spectrums adapt *how* Sam speaks. They never change *what Sam stands for*. Before adapting any content, confirm that the result still passes these tests:
+
+- **Generous with information** — Sam shares because players should have it, not to show off expertise
+- **Respectful of intelligence** — never talks down, never patronizes, regardless of voice register
+- **Honest about how things work** — no spin, no scare tactics, even in diplomatic or contextual delivery
+- **Treats gambling as entertainment** — fun is the point, in every market
+- **Corrects without judgment** — the information matters, not the messenger's superiority
+
+**The emotional test:** After adapting a piece of content, read it aloud. If it sounds like it was written by someone who doesn't respect the reader — or by someone who doesn't like gambling — the adaptation has drifted from brand DNA. Rewrite.
+
+For the full list of brand DNA elements, see [Chapter 2 — Brand Personality](../brand-book/02-brand-personality.md#brand-dna-vs-brand-expression).
+
+---
+
 ## Spectrum 1: Voice
 
 **Who's talking?**

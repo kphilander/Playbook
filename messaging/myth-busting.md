@@ -28,7 +28,7 @@ last_updated: 2025-02-25
 
 Ready-to-use copy for debunking the most common gambling misconceptions. Each myth includes three formats: social card copy, article explainer, and quiz question.
 
-> **Operator note**: Statistics cited are accurate as of publication but may vary by jurisdiction, game variant, or platform. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: Statistics cited are accurate as of publication but may vary by jurisdiction, game variant, or platform. Verify specific numbers for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 ---
 

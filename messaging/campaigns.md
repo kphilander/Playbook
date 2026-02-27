@@ -277,7 +277,7 @@ Best deployed during NFL/NBA/Premier League season openers, March Madness, World
 **Pillar**: Open
 **Audience**: All players, especially those who view gambling as a potential income source
 **Myths used**: 6 (Higher Bets), 12 (Parlays), 17 (Chasing Losses), 18 (Gambling as Income)
-**Tone note**: This campaign covers the most financially consequential myths. Tone stays confident and factual (The Sharp) — never preachy or alarming. The goal is clarity, not finger-wagging.
+**Tone note**: This campaign covers the most financially consequential myths. Tone stays confident and factual (Sam) — never preachy or alarming. The goal is clarity, not finger-wagging.
 
 ### Schedule
 
@@ -318,9 +318,9 @@ Best deployed during NFL/NBA/Premier League season openers, March Madness, World
 ### Tone guidance
 
 This is the campaign where it's easiest to slip into preachiness. Check every piece of copy against the brand voice:
-- **Do**: "Here's the math. Now you know." (The Sharp)
+- **Do**: "Here's the math. Now you know." (Sam)
 - **Don't**: "Please be careful with your money." (compliance voice)
-- **Do**: "Set your limit before you play — it's a power move." (The Good Friend)
+- **Do**: "Set your limit before you play — it's a power move." (Sam — supportive mode)
 - **Don't**: "Problem gambling can lead to financial hardship." (public health voice)
 
 ### KPIs

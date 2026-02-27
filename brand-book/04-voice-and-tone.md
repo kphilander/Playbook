@@ -10,6 +10,8 @@ This is the most important chapter in the brand book. The words you choose — a
 
 These six principles are non-negotiable. They apply to every piece of {{PROGRAM_NAME}} content — from a push notification to a casino floor poster to a social media post.
 
+> **A note on cultural adaptation:** The six principles describe *what the voice achieves* — they are universal. They do not prescribe the exact register, humor level, or directness style used to achieve it. A market that adapts "Informed, not alarming" through an elder voice register and diplomatic directness is still honoring the principle — it's delivering knowledge without fear, just in a different dialect. See the [Cultural Adaptation Guide](../localization/cultural-adaptation-guide.md) for how expression varies across markets while these principles hold constant.
+
 ### 1. Informed, not alarming
 
 "Here's how it works" beats "Here's what could go wrong" — every time. Playbook leads with knowledge, not warnings. The goal is to make players smarter, not more anxious.

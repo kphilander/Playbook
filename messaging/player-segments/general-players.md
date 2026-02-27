@@ -81,9 +81,9 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Sharp (Playful / Witty and Confident / Informative)
+**Primary archetype**: Sam (Playful / Witty and Confident / Informative)
 
-This segment gets the full Playbook personality. Humor works. Confidence works. Wit works. The Sharp is at the table with them, sharing interesting knowledge because it makes the game better.
+This segment gets the full Playbook personality. Humor works. Confidence works. Wit works. Sam is at the table with them, sharing interesting knowledge because it makes the game better.
 
 | Register | When to use with this segment |
 |---|---|
@@ -92,7 +92,7 @@ This segment gets the full Playbook personality. Humor works. Confidence works. 
 | **Warm / Direct** | Onboarding, session check-ins, limit-reached moments |
 | **Celebratory** | Quiz results, first limit set, tool activation milestones |
 
-**Secondary archetype**: The Good Friend — for feature onboarding and practical tool setup.
+**Secondary archetype**: Sam — supportive mode — for feature onboarding and practical tool setup.
 
 ---
 

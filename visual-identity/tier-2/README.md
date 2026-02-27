@@ -25,5 +25,5 @@ Eight Tier 2 templates are rendered in [`collateral/render/`](../../collateral/r
 
 ## Related
 
-- Brand personality (The Good Friend archetype): [Brand Book — Brand Personality](../../brand-book/02-brand-personality.md)
+- Brand personality (Sam — supportive mode): [Brand Book — Brand Personality](../../brand-book/02-brand-personality.md)
 - Two-tier content model: [Brand Book — Introduction](../../brand-book/00-introduction.md)

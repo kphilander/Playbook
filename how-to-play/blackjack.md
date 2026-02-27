@@ -34,7 +34,7 @@ last_updated: 2025-02-25
 
 Everything you need to know about blackjack — the rules, the decisions, and why basic strategy is the difference between the best odds in the casino and average ones. No fine print.
 
-> **Operator note**: Rules vary by table, casino, and jurisdiction (number of decks, dealer stand rules, doubling restrictions, surrender availability). Verify specific rules and house edge calculations for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: Rules vary by table, casino, and jurisdiction (number of decks, dealer stand rules, doubling restrictions, surrender availability). Verify specific rules and house edge calculations for your products before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 

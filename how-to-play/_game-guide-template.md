@@ -29,7 +29,7 @@ last_updated: "{{YYYY-MM-DD}}"
 
 Everything you need to know about [game] — how it works, what you're betting on, and the real math behind it. No fine print.
 
-> **Operator note**: All statistics cited are general industry figures. Verify specific numbers for your game variants, RTP configurations, and jurisdiction requirements before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: All statistics cited are general industry figures. Verify specific numbers for your game variants, RTP configurations, and jurisdiction requirements before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 

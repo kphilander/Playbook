@@ -81,7 +81,7 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Good Friend — serious mode. Warm and direct. No humor. No wit. No cleverness.
+**Primary archetype**: Sam — supportive mode. Warm and direct. No humor. No wit. No cleverness.
 
 | Register | When to use with this segment |
 |---|---|

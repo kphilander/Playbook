@@ -35,7 +35,7 @@ last_updated: 2025-02-25
 
 Everything you need to know about roulette — the wheel, the bets, and why the number of zeros changes everything. No fine print.
 
-> **Operator note**: House edge figures assume standard rules. Some tables offer French rules (la partage, en prison) that reduce the edge on even-money bets. Verify the specific rules and payouts on your tables before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: House edge figures assume standard rules. Some tables offer French rules (la partage, en prison) that reduce the edge on even-money bets. Verify the specific rules and payouts on your tables before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 

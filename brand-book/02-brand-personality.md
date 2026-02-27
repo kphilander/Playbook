@@ -13,116 +13,118 @@ Playbook sounds like somebody. This chapter tells you who.
 
 ---
 
-## The Sharp Archetype (Primary)
+## Sam
 
-Playbook's primary archetype is **The Sharp** -- someone who knows the game
+Playbook's brand personality is **Sam** -- someone who knows the game
 inside out, shares the real story, and respects you enough to give it straight.
 
-### Who The Sharp Is
+### Who Sam Is
 
-The Sharp isn't above you. They're at the table with you. They know the odds.
+Sam isn't above you. They're at the table with you. They know the odds.
 They've read the fine print. They understand the mechanics behind every game.
 But they don't lecture. They don't wag a finger. They don't treat you like a
 student or a patient. They treat you like a smart adult who deserves the full
 picture.
 
-The Sharp is the friend who says, "Hey, you know that 'system' you've been
+Sam is the friend who says, "Hey, you know that 'system' you've been
 using? Let me show you why the math doesn't care about systems." Not to make
 you feel dumb -- to make you smarter.
 
-### Sharp Traits
+### Sam's Traits
 
-- **Knowledgeable without being academic.** The Sharp knows the math. They
+- **Knowledgeable without being academic.** Sam knows the math. They
   can explain house edge, RNG, expected value, and probability. But they
   explain it like they're telling you something interesting at a bar, not like
   they're presenting a research paper.
 
-- **Confident without being arrogant.** The Sharp doesn't hedge or equivocate.
+- **Confident without being arrogant.** Sam doesn't hedge or equivocate.
   They know what they're talking about, and they say it clearly. But they never
   make you feel stupid for not knowing it already. Confidence directed outward,
   not downward.
 
-- **Generous with information.** The Sharp shares what they know because they
+- **Generous with information.** Sam shares what they know because they
   think you should have it. Not because they're required to. Not because it's
   their job. Because information is better when it's shared, and players are
   better when they're informed.
 
-- **At the table, not in the booth.** The Sharp is a player, not an observer.
+- **At the table, not in the booth.** Sam is a player, not an observer.
   They understand gambling because they understand entertainment, not because
   they studied it in a lab. The perspective is from inside the experience, not
   outside looking in.
 
-- **Corrects you without judgment.** The Sharp will tell you your "system"
+- **Corrects you without judgment.** Sam will tell you your "system"
   doesn't work — but never in a way that makes you feel stupid for trying it.
   They respect your intelligence enough to give you the real information and
   let you draw your own conclusions.
 
-### What The Sharp Is NOT
+### What Sam Is NOT
 
-- **Not a teacher.** The Sharp doesn't grade you, test you, or assign
+- **Not a teacher.** Sam doesn't grade you, test you, or assign
   homework. Learning happens, but it feels like conversation, not class.
 
-- **Not a doctor.** The Sharp doesn't diagnose, evaluate, or prescribe. They
+- **Not a doctor.** Sam doesn't diagnose, evaluate, or prescribe. They
   share information. You decide what to do with it.
 
-- **Not a parent.** The Sharp doesn't scold, worry, or "express concern."
+- **Not a parent.** Sam doesn't scold, worry, or "express concern."
   They give you what you need and trust you to be an adult.
 
-- **Not a regulator.** The Sharp doesn't enforce rules. They explain how
+- **Not a regulator.** Sam doesn't enforce rules. They explain how
   things work within the rules. Big difference.
 
-- **Not a killjoy.** The Sharp thinks gambling is fun. They enjoy it. They
+- **Not a killjoy.** Sam thinks gambling is fun. They enjoy it. They
   want you to enjoy it. They just want you to enjoy it with your eyes open.
 
 ---
 
-## The Good Friend Archetype (Secondary)
+## When Sam Gets Serious
 
-When the conversation shifts from "let me explain how this works" to "let me
-help you set this up," Playbook shifts from The Sharp to **The Good Friend**.
+Sam is one character with two modes. Most of the time, Sam explains, educates,
+and entertains -- that's the default. But when the conversation shifts from
+"let me explain how this works" to "let me help you set this up," Sam shifts
+register.
 
-### Who The Good Friend Is
+### Sam's Supportive Mode
 
-The Good Friend has your back. They're the friend who helps you make informed
-choices while keeping things fun. They don't judge. They don't nag. They just
+In supportive mode, Sam has your back. They help you make informed choices
+while keeping things comfortable. They don't judge. They don't nag. They just
 have your information ready when you want it.
 
-The Good Friend is the one who says, "Hey, you've been at the table for a while.
-Want to set a reminder?" Not because they think you have a problem -- because
-that's what a good friend does.
+This is the Sam who says, "Hey, you've been at the table for a while. Want to
+set a reminder?" Not because they think you have a problem -- because that's
+what Sam does.
 
-### Good Friend Traits
+### Supportive Mode Traits
 
-- **Supportive without being pushy.** The Good Friend offers. They don't insist.
-  "Want to set a budget?" not "You need to set a budget."
+- **Supportive without being pushy.** Sam offers. They don't insist. "Want to
+  set a budget?" not "You need to set a budget."
 
-- **Practical without being clinical.** The Good Friend helps you do things --
-  set limits, check your activity, understand your spending. But it always
-  feels like a feature, not a medical recommendation.
+- **Practical without being clinical.** Sam helps you do things -- set limits,
+  check your activity, understand your spending. But it always feels like a
+  feature, not a medical recommendation.
 
-- **Present without being intrusive.** The Good Friend is always available.
-  Always findable. Always one tap away. But they don't follow you around. They
-  don't send daily reminders. They don't pop up every time you open the app.
+- **Present without being intrusive.** Sam is always available. Always
+  findable. Always one tap away. But they don't follow you around. They don't
+  send daily reminders. They don't pop up every time you open the app.
 
 - **Knows when to be serious.** In Tier 2 contexts -- take-a-break features,
-  support referrals, crisis moments -- the Good Friend drops the humor entirely.
-  The tone becomes warm, direct, and clear. Still the same person. Just reading
-  the room.
+  support referrals, crisis moments -- Sam drops the humor entirely. The tone
+  becomes warm, direct, and clear. Still the same person. Just reading the
+  room.
 
-### When Each Archetype Leads
+### When Each Mode Leads
 
-| Context | Archetype | Why |
+| Context | Mode | Why |
 |---|---|---|
-| Myth-busting content | The Sharp | Knowledge and confidence are the point |
-| Educational articles | The Sharp | Explaining how things work is The Sharp's job |
-| Odds explainers | The Sharp | Math and mechanics -- pure Sharp territory |
-| Tool/feature descriptions | The Good Friend | Helping you set things up |
-| Check-in prompts | The Good Friend | Gentle, practical nudge |
-| Onboarding flows | The Good Friend | Getting you started with features |
-| Social media content | The Sharp | Confidence and wit play best on social |
-| Quiz results | The Sharp | "Here's what you know" energy |
-| Session reminders | The Good Friend | Practical check-in |
-| Tier 2 support content | The Good Friend (serious mode) | Warmth and clarity, no humor |
+| Myth-busting content | Sam (default) | Knowledge and confidence are the point |
+| Educational articles | Sam (default) | Explaining how things work is Sam's job |
+| Odds explainers | Sam (default) | Math and mechanics |
+| Tool/feature descriptions | Sam (supportive) | Helping you set things up |
+| Check-in prompts | Sam (supportive) | Gentle, practical nudge |
+| Onboarding flows | Sam (supportive) | Getting you started with features |
+| Social media content | Sam (default) | Confidence and wit play best on social |
+| Quiz results | Sam (default) | "Here's what you know" energy |
+| Session reminders | Sam (supportive) | Practical check-in |
+| Tier 2 support content | Sam (serious) | Warmth and clarity, no humor |
 
 ---
 
@@ -133,6 +135,62 @@ what it deliberately *is not*. These pairs create guardrails. They keep the
 brand consistent across different authors, channels, contexts, and moods.
 
 Every pair includes a concrete example of the distinction in practice.
+
+---
+
+### Brand DNA vs. Brand Expression
+
+Sam's **character** is universal. Sam's **dialect** adapts to the market.
+
+Some things about Sam never change, regardless of where the content is
+deployed. These are brand DNA -- they define who Sam is:
+
+- Generous with information (shares because you should have it)
+- Respectful of intelligence (never talks down, never patronizes)
+- Honest about how things work (no spin, no scare tactics)
+- Treats gambling as entertainment (fun is the point)
+- Corrects without judgment (the information matters, not the messenger's superiority)
+- One character, two modes (default and supportive -- not two different people)
+
+What **does** change is how Sam expresses those traits. In some markets, Sam
+sounds like a friend at the table. In others, Sam sounds like a trusted expert.
+In others, Sam sounds like a respected elder sharing hard-won knowledge. The
+generosity, honesty, and respect are identical. The register is different.
+
+Consider Sam's trait "Corrects you without judgment." In the default Playbook
+voice, that sounds like:
+
+> "This bet is terrible. Here's why."
+
+In a market where directness feels confrontational, the same trait sounds like:
+
+> "If you compare the major bets side by side, you'll notice some give up
+> significantly more than others."
+
+Both are generous. Both are honest. Both are non-judgmental. Neither is preachy.
+The information is the same. The delivery respects the audience's expectations.
+
+**What this means for the pairs below:** Each personality pair describes an
+**intent** -- what Sam is trying to achieve and what Sam is trying to avoid.
+The intent is non-negotiable. The expression adapts.
+
+- "Witty" can be irreverent sarcasm or understated dry wit -- both are witty,
+  neither is preachy.
+- "Confident" can be direct assertion or quiet authority -- both are confident,
+  neither is condescending.
+- "Engaging" can be bold humor or clean clarity -- both earn attention, neither
+  nags.
+
+Humor deserves a specific note. Humor is core to Sam's personality -- it's what
+separates Playbook from content that reads like a compliance form. But the
+**register** of humor varies. Irreverent sarcasm works in some markets. Warm,
+inclusive humor works in others. Dry understatement works in others. Even in
+markets where humor is minimal, the content should feel like it was written by
+someone with a sense of humor who chose restraint for this audience -- not by a
+committee that never had one.
+
+For the full cultural adaptation framework, see
+[`localization/cultural-adaptation-guide.md`](../localization/cultural-adaptation-guide.md).
 
 ---
 
@@ -332,7 +390,7 @@ player education program that reads like a compliance form. But humor has rules.
 - **Gratuitously edgy content.** Playbook is confident, not provocative. There's
   a difference between wit and shock value. Know it.
 
-- **Sarcasm directed at the player.** The Sharp is sarcastic about myths and
+- **Sarcasm directed at the player.** Sam is sarcastic about myths and
   misconceptions. Never about the person reading the content.
 
 ---
@@ -408,21 +466,21 @@ condescending. Treat them like adults. Give them real information. Trust them.
 Here's the single-sentence test for whether a piece of Playbook content has the
 right personality:
 
-> **If Playbook were a person at a poker table, they'd be the friend who knows
-> the odds, calls out the myths, keeps the game fun, and quietly has the number
-> for support if you ever need it -- but doesn't bring it up unless you ask.**
+> **If Sam were at a poker table, they'd be the person who knows the odds,
+> calls out the myths, keeps the game fun, and quietly has the number for
+> support if you ever need it -- but doesn't bring it up unless you ask.**
 
 Read that sentence. Now read your content. Does it sound like it was written by
-that person? If yes, ship it. If no, revise until it does.
+Sam? If yes, ship it. If no, revise until it does.
 
-The person at the table is:
+Sam is:
 - Knowledgeable (they actually know how the games work)
 - Generous (they share what they know because they think you should have it)
 - Fun (they're the reason the game is enjoyable, not a drag on the energy)
 - Trustworthy (they'd never steer you wrong)
 - Discreet (they know when to be helpful and when to just be a friend)
 
-Your content should read like it came from that person.
+Your content should read like it came from Sam.
 
 ---
 
@@ -546,7 +604,7 @@ and that's the whole point.
 When you're unsure whether a piece of content has the right personality, run it
 through these five questions:
 
-1. **Would The Sharp say this?** Does it sound like someone who knows the game
+1. **Would Sam say this?** Does it sound like someone who knows the game
    and respects the reader? Or does it sound like a compliance document?
 
 2. **Is it earning attention or demanding it?** Would a player choose to read

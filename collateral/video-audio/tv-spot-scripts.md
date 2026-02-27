@@ -24,7 +24,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 |---|---|
 | **Casting** | Real, diverse people (age, ethnicity, gender). Not actors-playing-gamblers. People enjoying social settings. |
 | **Setting** | Modern, cinematic. Casino floors, sports bars, living rooms, phone screens. Cinematic low-light is great; dim/dingy is not. See [photography lighting guide](../../visual-identity/photography/photography.md#lighting-guide). |
-| **Energy** | Confident, upbeat, informed. The Sharp energy — like a friend who knows the game. |
+| **Energy** | Confident, upbeat, informed. Sam energy — like a friend who knows the game. |
 | **Not** | Somber PSA. Warning tone. Preachy. Clinical. Black-and-white "someone in crisis" footage. Dim ambient lighting. |
 | **Music** | Modern, upbeat, electronic or indie. Confident but not aggressive. See [music direction](#music--sound-direction). |
 | **Color grade** | Warm, high-contrast. Navy/teal/orange palette reflected in wardrobe and set design. |

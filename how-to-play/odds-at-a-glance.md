@@ -31,7 +31,7 @@ last_updated: 2025-02-25
 
 Every game has a house edge — the built-in mathematical advantage that keeps the business running. This table puts them side by side so you can compare before you play.
 
-> **Operator note**: These are general industry figures. Actual house edge and RTP vary by game variant, paytable, bet type, and jurisdiction. Verify against your specific products. All copy follows {{PROGRAM_NAME}} Tier 1 voice (The Sharp).
+> **Operator note**: These are general industry figures. Actual house edge and RTP vary by game variant, paytable, bet type, and jurisdiction. Verify against your specific products. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 

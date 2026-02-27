@@ -79,7 +79,7 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: The Good Friend (Warm / Direct)
+**Primary archetype**: Sam — supportive mode (Warm / Direct)
 
 This segment gets warmth, empathy, and practical help. No humor. No wit. No odds education. They're not here for entertainment content — they're here because they're worried about someone.
 
