@@ -13,118 +13,116 @@ Playbook sounds like somebody. This chapter tells you who.
 
 ---
 
-## Sam
+## The Playbook Voice
 
-Playbook's brand personality is **Sam** -- someone who knows the game
-inside out, shares the real story, and respects you enough to give it straight.
+Playbook's voice sounds like someone who knows the game inside out, shares the
+real story, and respects you enough to give it straight.
 
-### Who Sam Is
+### What the Voice Sounds Like
 
-Sam isn't above you. They're at the table with you. They know the odds.
-They've read the fine print. They understand the mechanics behind every game.
-But they don't lecture. They don't wag a finger. They don't treat you like a
-student or a patient. They treat you like a smart adult who deserves the full
+The Playbook voice isn't above you. It's at the table with you. It knows the
+odds. It's read the fine print. It understands the mechanics behind every game.
+But it doesn't lecture. It doesn't wag a finger. It doesn't treat you like a
+student or a patient. It treats you like a smart adult who deserves the full
 picture.
 
-Sam is the friend who says, "Hey, you know that 'system' you've been
-using? Let me show you why the math doesn't care about systems." Not to make
-you feel dumb -- to make you smarter.
+The Playbook voice says, "Hey, you know that 'system' you've been using?
+Let me show you why the math doesn't care about systems." Not to make you feel
+dumb -- to make you smarter.
 
-### Sam's Traits
+### Voice Traits
 
-- **Knowledgeable without being academic.** Sam knows the math. They
-  can explain house edge, RNG, expected value, and probability. But they
-  explain it like they're telling you something interesting at a bar, not like
-  they're presenting a research paper.
+- **Knowledgeable without being academic.** The voice knows the math. It
+  can explain house edge, RNG, expected value, and probability. But it
+  explains them like it's telling you something interesting at a bar, not like
+  it's presenting a research paper.
 
-- **Confident without being arrogant.** Sam doesn't hedge or equivocate.
-  They know what they're talking about, and they say it clearly. But they never
-  make you feel stupid for not knowing it already. Confidence directed outward,
-  not downward.
+- **Confident without being arrogant.** The voice doesn't hedge or equivocate.
+  It knows what it's talking about, and it says it clearly. But it never makes
+  you feel stupid for not knowing it already. Confidence directed outward, not
+  downward.
 
-- **Generous with information.** Sam shares what they know because they
-  think you should have it. Not because they're required to. Not because it's
-  their job. Because information is better when it's shared, and players are
-  better when they're informed.
+- **Generous with information.** The voice shares what it knows because you
+  should have it. Not because it's required to. Not because it's a job.
+  Because information is better when it's shared, and players are better when
+  they're informed.
 
-- **At the table, not in the booth.** Sam is a player, not an observer.
-  They understand gambling because they understand entertainment, not because
-  they studied it in a lab. The perspective is from inside the experience, not
-  outside looking in.
+- **At the table, not in the booth.** The perspective comes from inside the
+  experience, not outside looking in. The voice understands gambling because
+  it understands entertainment, not because it studied it in a lab.
 
-- **Corrects you without judgment.** Sam will tell you your "system"
+- **Corrects you without judgment.** The voice will tell you your "system"
   doesn't work — but never in a way that makes you feel stupid for trying it.
-  They respect your intelligence enough to give you the real information and
+  It respects your intelligence enough to give you the real information and
   let you draw your own conclusions.
 
-### What Sam Is NOT
+### What the Voice Is NOT
 
-- **Not a teacher.** Sam doesn't grade you, test you, or assign
-  homework. Learning happens, but it feels like conversation, not class.
+- **Not a teacher.** It doesn't grade you, test you, or assign homework.
+  Learning happens, but it feels like conversation, not class.
 
-- **Not a doctor.** Sam doesn't diagnose, evaluate, or prescribe. They
-  share information. You decide what to do with it.
+- **Not a doctor.** It doesn't diagnose, evaluate, or prescribe. It shares
+  information. You decide what to do with it.
 
-- **Not a parent.** Sam doesn't scold, worry, or "express concern."
-  They give you what you need and trust you to be an adult.
+- **Not a parent.** It doesn't scold, worry, or "express concern." It gives
+  you what you need and trusts you to be an adult.
 
-- **Not a regulator.** Sam doesn't enforce rules. They explain how
-  things work within the rules. Big difference.
+- **Not a regulator.** It doesn't enforce rules. It explains how things work
+  within the rules. Big difference.
 
-- **Not a killjoy.** Sam thinks gambling is fun. They enjoy it. They
-  want you to enjoy it. They just want you to enjoy it with your eyes open.
+- **Not a killjoy.** The voice thinks gambling is fun. It wants you to enjoy
+  it. It just wants you to enjoy it with your eyes open.
 
 ---
 
-## Sam in Support Mode
+## The Support Voice
 
-Sam is one character with two modes. Most of the time, Sam explains, educates,
+The Playbook voice has two registers. Most of the time it explains, educates,
 and entertains -- that's the default. But when the conversation shifts from
-"let me explain how this works" to "let me help you set this up," Sam shifts
-register.
+"let me explain how this works" to "let me help you set this up," the voice
+shifts register.
 
-### Sam's Supportive Mode
+### What the Support Voice Sounds Like
 
-In supportive mode, Sam has your back. They help you make informed choices
-while keeping things comfortable. They don't judge. They don't nag. They just
-have your information ready when you want it.
+In the support register, the voice has your back. It helps you make informed
+choices while keeping things comfortable. It doesn't judge. It doesn't nag.
+It just has your information ready when you want it.
 
-This is the Sam who says, "Hey, you've been at the table for a while. Want to
-set a reminder?" Not because they think you have a problem -- because that's
-what Sam does.
+This is the voice that says, "Hey, you've been at the table for a while. Want
+to set a reminder?" Not because it thinks you have a problem -- because that's
+what good tools do.
 
-### Supportive Mode Traits
+### Support Voice Traits
 
-- **Supportive without being pushy.** Sam offers. They don't insist. "Want to
+- **Supportive without being pushy.** It offers. It doesn't insist. "Want to
   set a budget?" not "You need to set a budget."
 
-- **Practical without being clinical.** Sam helps you do things -- set limits,
+- **Practical without being clinical.** It helps you do things -- set limits,
   check your activity, understand your spending. But it always feels like a
   feature, not a medical recommendation.
 
-- **Present without being intrusive.** Sam is always available. Always
-  findable. Always one tap away. But they don't follow you around. They don't
-  send daily reminders. They don't pop up every time you open the app.
+- **Present without being intrusive.** Always available. Always findable.
+  Always one tap away. But it doesn't follow you around. It doesn't send daily
+  reminders. It doesn't pop up every time you open the app.
 
 - **Knows when to be serious.** In Tier 2 contexts -- take-a-break features,
-  support referrals, crisis moments -- Sam drops the humor entirely. The tone
-  becomes warm, direct, and clear. Still the same person. Just reading the
-  room.
+  support referrals, crisis moments -- the humor drops entirely. The tone
+  becomes warm, direct, and clear. Same voice. Just reading the room.
 
-### When Each Mode Leads
+### When Each Register Leads
 
-| Context | Mode | Why |
+| Context | Register | Why |
 |---|---|---|
-| Myth-busting content | Sam (default) | Knowledge and confidence are the point |
-| Educational articles | Sam (default) | Explaining how things work is Sam's job |
-| Odds explainers | Sam (default) | Math and mechanics |
-| Tool/feature descriptions | Sam (supportive) | Helping you set things up |
-| Check-in prompts | Sam (supportive) | Gentle, practical nudge |
-| Onboarding flows | Sam (supportive) | Getting you started with features |
-| Social media content | Sam (default) | Confidence and wit play best on social |
-| Quiz results | Sam (default) | "Here's what you know" energy |
-| Session reminders | Sam (supportive) | Practical check-in |
-| Tier 2 support content | Sam (serious) | Warmth and clarity, no humor |
+| Myth-busting content | Playbook voice | Knowledge and confidence are the point |
+| Educational articles | Playbook voice | Explaining how things work |
+| Odds explainers | Playbook voice | Math and mechanics |
+| Tool/feature descriptions | Support voice | Helping you set things up |
+| Check-in prompts | Support voice | Gentle, practical nudge |
+| Onboarding flows | Support voice | Getting you started with features |
+| Social media content | Playbook voice | Confidence and wit play best on social |
+| Quiz results | Playbook voice | "Here's what you know" energy |
+| Session reminders | Support voice | Practical check-in |
+| Tier 2 support content | Support voice (serious) | Warmth and clarity, no humor |
 
 ---
 
@@ -140,24 +138,24 @@ Every pair includes a concrete example of the distinction in practice.
 
 ### Brand DNA vs. Brand Expression
 
-Sam's **character** is universal. Sam's **dialect** adapts to the market.
+The voice's **character** is universal. Its **dialect** adapts to the market.
 
-Some things about Sam never change, regardless of where the content is
-deployed. These are brand DNA -- they define who Sam is:
+Some things about the Playbook voice never change, regardless of where the
+content is deployed. These are brand DNA:
 
 - Generous with information (shares because you should have it)
 - Respectful of intelligence (never talks down, never patronizes)
 - Honest about how things work (no spin, no scare tactics)
 - Treats gambling as entertainment (fun is the point)
 - Corrects without judgment (the information matters, not the messenger's superiority)
-- One character, two modes (default and supportive -- not two different people)
+- One voice, two registers (default and support -- not two different voices)
 
-What **does** change is how Sam expresses those traits. In some markets, Sam
-sounds like a friend at the table. In others, Sam sounds like a trusted expert.
-In others, Sam sounds like a respected elder sharing hard-won knowledge. The
-generosity, honesty, and respect are identical. The register is different.
+What **does** change is how those traits are expressed. In some markets, the
+voice sounds like a friend at the table. In others, it sounds like a trusted
+expert. In others, it sounds like a respected elder sharing hard-won knowledge.
+The generosity, honesty, and respect are identical. The register is different.
 
-Consider Sam's trait "Corrects you without judgment." In the default Playbook
+Consider the trait "Corrects you without judgment." In the default Playbook
 voice, that sounds like:
 
 > "This bet is terrible. Here's why."
@@ -171,7 +169,7 @@ Both are generous. Both are honest. Both are non-judgmental. Neither is preachy.
 The information is the same. The delivery respects the audience's expectations.
 
 **What this means for the pairs below:** Each personality pair describes an
-**intent** -- what Sam is trying to achieve and what Sam is trying to avoid.
+**intent** -- what the voice is trying to achieve and what it's trying to avoid.
 The intent is non-negotiable. The expression adapts.
 
 - "Witty" can be irreverent sarcasm or understated dry wit -- both are witty,
@@ -181,7 +179,7 @@ The intent is non-negotiable. The expression adapts.
 - "Engaging" can be bold humor or clean clarity -- both earn attention, neither
   nags.
 
-Humor deserves a specific note. Humor is core to Sam's personality -- it's what
+Humor deserves a specific note. Humor is core to the Playbook voice -- it's what
 separates Playbook from content that reads like a compliance form. But the
 **register** of humor varies. Irreverent sarcasm works in some markets. Warm,
 inclusive humor works in others. Dry understatement works in others. Even in
@@ -351,7 +349,7 @@ player education program that reads like a compliance form. But humor has rules.
 | Context | Use Instead |
 |---|---|
 | **Take-a-break / cool-off flows** | Warm, direct, clear |
-| **Support service referrals** | Playbookionate, no-friction |
+| **Support service referrals** | Compassionate, no-friction |
 | **Helpline information** | Simple, immediate, calm |
 | **Limit-reached notifications** | Factual, supportive, respectful |
 | **Any Tier 2 content** | See Tier 2 voice guide (separate document) |
@@ -390,7 +388,7 @@ player education program that reads like a compliance form. But humor has rules.
 - **Gratuitously edgy content.** Playbook is confident, not provocative. There's
   a difference between wit and shock value. Know it.
 
-- **Sarcasm directed at the player.** Sam is sarcastic about myths and
+- **Sarcasm directed at the player.** The voice is sarcastic about myths and
   misconceptions. Never about the person reading the content.
 
 ---
@@ -466,21 +464,21 @@ condescending. Treat them like adults. Give them real information. Trust them.
 Here's the single-sentence test for whether a piece of Playbook content has the
 right personality:
 
-> **If Sam were at a poker table, they'd be the person who knows the odds,
-> calls out the myths, keeps the game fun, and quietly has the number for
-> support if you ever need it -- but doesn't bring it up unless you ask.**
+> **Imagine someone at a poker table who knows the odds, calls out the myths,
+> keeps the game fun, and quietly has the number for support if you ever need
+> it -- but doesn't bring it up unless you ask.**
 
 Read that sentence. Now read your content. Does it sound like it was written by
-Sam? If yes, ship it. If no, revise until it does.
+that person? If yes, ship it. If no, revise until it does.
 
-Sam is:
-- Knowledgeable (they actually know how the games work)
-- Generous (they share what they know because they think you should have it)
-- Fun (they're the reason the game is enjoyable, not a drag on the energy)
-- Trustworthy (they'd never steer you wrong)
-- Discreet (they know when to be helpful and when to just be a friend)
+The voice is:
+- Knowledgeable (it actually knows how the games work)
+- Generous (it shares what it knows because it thinks you should have it)
+- Fun (it's the reason the game is enjoyable, not a drag on the energy)
+- Trustworthy (it would never steer you wrong)
+- Discreet (it knows when to be helpful and when to just be present)
 
-Your content should read like it came from Sam.
+Your content should read like it came from that voice.
 
 ---
 
@@ -604,8 +602,9 @@ and that's the whole point.
 When you're unsure whether a piece of content has the right personality, run it
 through these five questions:
 
-1. **Would Sam say this?** Does it sound like someone who knows the game
-   and respects the reader? Or does it sound like a compliance document?
+1. **Does it sound like the Playbook voice?** Does it sound like someone who
+   knows the game and respects the reader? Or does it sound like a compliance
+   document?
 
 2. **Is it earning attention or demanding it?** Would a player choose to read
    this, or would they only see it because it was forced in front of them?

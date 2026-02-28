@@ -39,7 +39,7 @@ last_updated: 2025-02-25
 
 Everything you need to know about sports betting — how odds work, what the different bet types mean, and where the sportsbook makes its money. No fine print.
 
-> **Operator note**: Odds formats, bet type availability, and regulatory requirements vary by jurisdiction and platform. Verify specific product offerings before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (Sam).
+> **Operator note**: Odds formats, bet type availability, and regulatory requirements vary by jurisdiction and platform. Verify specific product offerings before deploying. All copy follows {{PROGRAM_NAME}} Tier 1 voice (default Playbook voice).
 
 **Pillar:** Open | **Reading level:** Grade 6–8 | **Tone:** Confident / Informative
 

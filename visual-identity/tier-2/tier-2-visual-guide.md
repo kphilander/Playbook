@@ -1,6 +1,6 @@
 # Tier 2 Visual Identity Guide
 
-When Playbook shifts from entertainment literacy to support and crisis contexts, the visual identity shifts with it. The voice chapter calls this "Sam's supportive mode." This guide defines what that looks like.
+When Playbook shifts from entertainment literacy to support and crisis contexts, the visual identity shifts with it. The voice chapter calls this "the support voice." This guide defines what that looks like.
 
 > **Operator note**: Tier 2 content represents approximately 5% of total Playbook output but 100% of the moments that matter most. Every pixel in a Tier 2 context should reduce friction and increase clarity. If a player in distress encounters a playful chart, a witty headline, or an entertainment-grade color palette on a support page, the brand has failed them. This guide exists to prevent that.
 
@@ -438,7 +438,7 @@ All Tier 2 collateral templates with PNG previews. Click the template name to vi
 
 ## Cross-references
 
-- **Voice and tone**: [Chapter 4](../../brand-book/04-voice-and-tone.md) — Warm/Direct register, Sam's supportive mode
+- **Voice and tone**: [Chapter 4](../../brand-book/04-voice-and-tone.md) — Warm/Direct register, the support voice
 - **Messaging for help-seekers**: [`messaging/player-segments/help-seekers.md`](../../messaging/player-segments/help-seekers.md)
 - **Messaging for at-risk players**: [`messaging/player-segments/at-risk-players.md`](../../messaging/player-segments/at-risk-players.md)
 - **Stigma-free language**: [`messaging/stigma-free-language.md`](../../messaging/stigma-free-language.md)

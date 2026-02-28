@@ -81,9 +81,9 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: Sam (Playful / Witty and Confident / Informative)
+**Voice**: Playbook voice (Playful / Witty and Confident / Informative)
 
-This segment gets the full Playbook personality. Humor works. Confidence works. Wit works. Sam is at the table with them, sharing interesting knowledge because it makes the game better.
+This segment gets the full Playbook personality. Humor works. Confidence works. Wit works. The voice is at the table with them, sharing interesting knowledge because it makes the game better.
 
 | Register | When to use with this segment |
 |---|---|
@@ -92,7 +92,7 @@ This segment gets the full Playbook personality. Humor works. Confidence works. 
 | **Warm / Direct** | Onboarding, session check-ins, limit-reached moments |
 | **Celebratory** | Quiz results, first limit set, tool activation milestones |
 
-**Secondary register**: Sam — supportive mode — for feature onboarding and practical tool setup.
+**Secondary register**: Support voice — for feature onboarding and practical tool setup.
 
 ---
 

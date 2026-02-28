@@ -83,9 +83,9 @@ In order of importance for this segment:
 
 ## Tone guidance
 
-**Primary archetype**: Sam (Playful / Witty → Confident / Informative)
+**Voice**: Playbook voice (Playful / Witty → Confident / Informative)
 
-Young adults respond to confidence and authenticity. They can spot corporate-speak instantly. Sam treats them as equals who just happen to not know this particular thing yet.
+Young adults respond to confidence and authenticity. They can spot corporate-speak instantly. The voice treats them as equals who just happen to not know this particular thing yet.
 
 | Register | When to use with this segment |
 |---|---|

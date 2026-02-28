@@ -8,7 +8,7 @@ The complete brand guidelines for Playbook, organized as 10 sequential chapters.
 |---|---------|----------------|
 | 0 | [Introduction](00-introduction.md) | Purpose, the engagement gap, two-tier content system |
 | 1 | [Brand Foundation](01-brand-foundation.md) | Mission, vision, pillars (Open / Social), positioning |
-| 2 | [Brand Personality](02-brand-personality.md) | Sam archetype, humor guidelines |
+| 2 | [Brand Personality](02-brand-personality.md) | Playbook voice, humor guidelines |
 | 3 | [Visual Identity](03-visual-identity.md) | Logo, color, typography, iconography, photography, illustration |
 | 4 | [Voice and Tone](04-voice-and-tone.md) | The confident myth-buster voice, do/don't examples |
 | 5 | [Messaging Framework](05-messaging-framework.md) | Tagline system, CTAs, core messages, interactive content briefs |

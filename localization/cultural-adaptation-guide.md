@@ -20,9 +20,9 @@ This guide helps you adapt Playbook content for your market using five plain-lan
 
 ## What doesn't change
 
-The five spectrums adapt *how* Sam speaks. They never change *what Sam stands for*. Before adapting any content, confirm that the result still passes these tests:
+The five spectrums adapt *how the Playbook voice speaks*. They never change *what the voice stands for*. Before adapting any content, confirm that the result still passes these tests:
 
-- **Generous with information** — Sam shares because players should have it, not to show off expertise
+- **Generous with information** — the voice shares because players should have it, not to show off expertise
 - **Respectful of intelligence** — never talks down, never patronizes, regardless of voice register
 - **Honest about how things work** — no spin, no scare tactics, even in diplomatic or contextual delivery
 - **Treats gambling as entertainment** — fun is the point, in every market
