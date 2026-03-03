@@ -595,6 +595,56 @@ respects the player's time. The quiz tease at the end creates curiosity and
 engagement. "Have fun" is the sign-off -- because gambling is entertainment,
 and that's the whole point.
 
+### Example 7: Lottery Myth-Buster (Social Media)
+
+> **"Your 'lucky numbers' aren't lucky. They're just numbers."**
+>
+> Every combination in a 6/49 draw has the exact same odds: 1 in 13,983,816.
+> Your birthday? Same odds. Quick pick? Same odds. The numbers your dad always
+> played? Same. Odds.
+>
+> The lottery doesn't know or care which numbers you picked. Here's what the
+> math actually looks like [link].
+
+**Why it works**: Uses the same confident, myth-busting voice as the slots and
+sports examples — but the reference points are native to lottery players. "The
+numbers your dad always played" meets the audience where they are without
+mocking the sentiment. The math does the work.
+
+### Example 8: Esports Betting (Discord / Social)
+
+> **"Your favorite streamer's win rate isn't your win rate."**
+>
+> Sponsored streams use house money. Highlight reels show the wins. Your
+> account has a real balance, a real house edge, and no editor cutting the
+> losses.
+>
+> Esports odds work exactly like sports odds — the vig is built in, and the
+> bookmaker always gets paid. Know the math before you bet the match.
+> [link]
+
+**Why it works**: Speaks to a digital-native audience in their language —
+streamers, highlights, Discord. The voice is the same (confident, generous,
+no finger-wagging), but the examples would be meaningless to someone who's
+never watched a Twitch stream. That's the point. Different audience, same
+honesty.
+
+### Example 9: Bingo Hall Poster
+
+> **"Every card has the same chance."**
+>
+> **Your lucky seat doesn't change the odds.**
+> **Your lucky dauber doesn't change the odds.**
+> **But knowing how prize pools work? That changes the game.**
+>
+> **Ask at the counter for the real numbers.**
+
+**Why it works**: Same structure as the venue poster example (Example 5) —
+short, punchy, escalating. But it's written for a bingo hall, not a casino
+floor. It respects the audience's rituals ("your lucky seat") without
+dismissing them, then redirects to actionable information. The CTA works in a
+venue where the player is standing up, not scrolling.
+
 ---
 
 ## Applying the Personality: A Decision Framework

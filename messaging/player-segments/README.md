@@ -1,13 +1,14 @@
 # Player Segments
 
-Targeted messaging profiles for six key audiences. Each profile includes demographics, motivations, messaging priorities, tone adjustments, and ready-to-use copy examples.
+Targeted messaging profiles for seven key audiences. Each profile includes demographics, motivations, messaging priorities, tone adjustments, and ready-to-use copy examples.
 
 ## Segments
 
 | Segment | Description |
 |---------|-------------|
 | [General Players](general-players.md) | The broad audience — recreational gamblers who play for entertainment |
-| [Young Adults](young-adults.md) | 18-25 demographic — mobile-first, social-media-native, sports betting and iGaming focused |
+| [Young Adults](young-adults.md) | 18–25 demographic — mobile-first, social-media-native, esports/crypto/sports betting |
+| [Traditional Players](traditional-players.md) | Lottery, bingo, horse racing, and venue-based players — often community-oriented |
 | [Sports Bettors](sports-bettors.md) | Skill-oriented audience who value data, analysis, and informed decision-making |
 | [At-Risk Players](at-risk-players.md) | Players showing early warning signs — escalating spend, chasing losses, schedule disruption |
 | [Friends and Family](friends-and-family.md) | People concerned about someone else's gambling — partners, parents, friends |

@@ -67,6 +67,21 @@ Young adults have grown up with free-to-play games, loot boxes, and social casin
 
 The opportunity: reach them early with genuinely useful information, framed as insider knowledge rather than safety warnings. If Playbook content is the first thing they learn about gambling, they'll build better habits from the start.
 
+### Digital-native gambling verticals
+
+For many in this segment, the first gambling experience isn't a sportsbook or a slot machine — it's one of these:
+
+| Vertical | What it looks like | Why it matters |
+|---|---|---|
+| **Esports betting** | Wagering on CS2, League of Legends, Valorant, and Dota 2 matches via licensed or offshore sportsbooks | Feels like an extension of gaming fandom. Many don't identify it as "gambling" because it involves knowledge of a game they already play. |
+| **Skin gambling** | Betting CS2 skins, in-game items, or virtual currencies on third-party platforms | Often unregulated. The items have real-world value but the platforms may not have the consumer protections of a licensed operator. |
+| **Loot boxes / gacha** | Paying real money for randomized in-game items with variable value | The psychological mechanics (variable ratio reinforcement, near-miss effects) are identical to slot machines. Many players don't recognize this. |
+| **Crypto gambling** | Betting on crypto-native platforms using Bitcoin, Ethereum, or stablecoins | Often marketed as "provably fair" — a real cryptographic concept that does not mean the odds are better. Volatility of the currency adds a second layer of risk. |
+| **Streamer-promoted betting** | Following Twitch/YouTube gambling streamers who play sponsored sessions | The streamer's results are not representative. Sponsored sessions often use house money, inflated balances, or cherry-picked highlights. The viewer sees wins; the math hasn't changed. |
+| **Social casino → real-money** | Transitioning from free-to-play social casino apps to real-money platforms | The games feel identical but the economics are fundamentally different. Free-to-play apps are tuned for engagement; real-money games have a house edge. |
+
+**Messaging implication:** If your content only references blackjack, roulette, and sports betting, this audience correctly concludes it wasn't made for them. Use their reference points. Explain loot box probability the way you'd explain RTP. Explain skin market mechanics the way you'd explain the house edge. The math is the same — the vocabulary is different.
+
 ---
 
 ## Message priorities
@@ -135,6 +150,18 @@ Young adults respond to confidence and authenticity. They can spot corporate-spe
 > "Your friend thinks they know more about odds than you. There's one way to settle this. Take the quiz."
 
 > "Only 23% of players got this question right. Think you can? [link]"
+
+### Digital-native verticals
+
+> "That Twitch streamer's 'hot streak'? Sponsored session, house money, highlight reel. Your account doesn't work like that. Here's how sponsored streams actually work. [link]"
+
+> "Loot box drop rates work exactly like slot machines — variable ratio reinforcement. The difference? Slots are regulated. Here's the math behind the box. [link]"
+
+> "CS2 skins have real value. Skin gambling sites have real house edges. Some also have zero regulation. Know what you're playing on."
+
+> "'Provably fair' means the algorithm is verifiable. It does not mean the odds are in your favor. The house edge is still the house edge — it's just on a blockchain."
+
+> "Free-to-play casino apps are tuned to make you feel like you're winning. Real-money apps are tuned to make money. Same interface, different math."
 
 ### Session reminder
 
