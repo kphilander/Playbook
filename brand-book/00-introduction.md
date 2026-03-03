@@ -309,7 +309,7 @@ when a player needs support, wants to take a break, or is reaching out for help.
 - Content for friends and family of players who need support
 
 **The voice:** Warm. Direct. Appropriately serious. The confident myth-buster
-takes a step back. The voice shifts to supportive mode. No humor. No cleverness. Just
+takes a step back. The support voice takes over. No humor. No cleverness. Just
 clarity, compassion, and a clear path to help.
 
 **The assumption:** The reader may be in a vulnerable moment. Every word matters.

@@ -65,7 +65,7 @@ Playbook/
 │
 ├── brand-book/                       # Core brand guidelines (10 chapters)
 │   ├── 00-introduction.md            # Purpose, the engagement gap, two-tier system
-│   ├── 01-brand-foundation.md        # Mission, vision, pillars (Open/Social/Sharp)
+│   ├── 01-brand-foundation.md        # Mission, vision, pillars (Open / Social)
 │   ├── 02-brand-personality.md       # Playbook voice, humor guidelines
 │   ├── 03-visual-identity.md         # Logo, color, typography, icons, photography
 │   ├── 04-voice-and-tone.md          # The confident myth-buster voice
