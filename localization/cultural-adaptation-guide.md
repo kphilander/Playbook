@@ -294,6 +294,65 @@ After deploying adapted content, test whether the adaptation improved the player
 
 ---
 
+## Demographic adaptation
+
+The five spectrums above address geographic and cultural variation. But **generational context** also shifts how the Playbook voice lands — and the gap can be just as large as the gap between countries.
+
+The Playbook default profile (peer / individual / irreverent / blunt / open) works well for a broad middle — roughly 25–50, digitally comfortable, familiar with casino or sports betting. At the demographic edges, the same voice can feel irrelevant even when the information is right. Not because the brand DNA changes, but because the **reference points** and **channels** don't match the audience's reality.
+
+### Digital-native players (18–24)
+
+**Who they are:** Grew up with free-to-play games, loot boxes, social casino apps, and streamer culture. Many have gambled — through esports betting, skin trading, crypto platforms, or influencer-promoted betting — before they ever walked into a regulated environment. Mobile-first and social-media-fluent.
+
+**What to adapt:**
+
+| Area | Default assumption | This audience's reality |
+|------|-------------------|------------------------|
+| Gambling entry point | Sports betting or casino | Esports betting, skin gambling, loot boxes, crypto platforms, streamer-promoted links |
+| Reference points | Slots, blackjack, roulette | CS2 skins, Twitch streams, crypto volatility, loot box drop rates |
+| Channels | Email, venue posters, blog articles | TikTok, YouTube Shorts, Discord, Twitch, in-app |
+| Credibility signal | Institutional expertise | Peer authenticity, meme literacy, platform-native format |
+| Myth landscape | "Hot machines," "due numbers" | "This streamer always wins," "crypto gambling is unregulated so odds are better," "skins aren't real money" |
+
+**Voice note:** The default Playbook voice (peer, irreverent) already works for this audience. The problem isn't tone — it's **content relevance**. If every example references blackjack and deposit limits, digital-native players correctly conclude the content wasn't made for them. Use their gambling reference points. Explain loot box probability the same way you'd explain RTP. Explain skin market mechanics the same way you'd explain the house edge.
+
+**The credibility test:** Would this content make sense on a gaming Discord? If it reads like something a compliance team wrote about "the youth," it fails. If it reads like something a knowledgeable gamer would post, it passes.
+
+### Traditional players (55+)
+
+**Who they are:** Long-standing recreational gamblers whose primary activity is lottery, bingo, horse racing, or land-based casino play. Gambling is often social — syndicate groups, bingo nights, race day with friends. Many have gambled for decades. They are not confused, vulnerable, or behind — they simply gamble in forms and venues that most digital-first content ignores.
+
+**What to adapt:**
+
+| Area | Default assumption | This audience's reality |
+|------|-------------------|------------------------|
+| Gambling venue | Online / mobile app | Bingo hall, lottery retailer, race track, casino floor |
+| Products | Sports betting, online slots | Lottery draws, scratch cards, bingo, horse racing, table games |
+| Tool relevance | Deposit limits, session timers | Spend awareness for repeat small purchases, venue visit budgeting |
+| Channels | Social media, push notifications, email | Venue signage, TV, print, direct mail, radio |
+| Social context | Individual activity on a phone | Community activity — syndicates, bingo groups, race day friends |
+| Myth landscape | "Hot machines," "systems" | "Lucky numbers," "due draws," form guides as guarantees, "my seat" at bingo |
+
+**Voice note:** The Playbook voice works here too, but the **register** may need to shift. Irreverent sarcasm about myths can feel disrespectful when the audience has been playing for 30 years. Warm humor (spectrum value: `warm`) and straightforward directness (spectrum value: `diplomatic`) often land better. The voice should sound like a knowledgeable friend who respects their experience, not a young person explaining technology to them.
+
+**The credibility test:** Would this content make sense on a poster at a bingo hall or in a racing program? If it reads like a mobile app onboarding screen, it fails. If it reads like something a fellow player would appreciate, it passes.
+
+### What doesn't change across demographics
+
+Regardless of age, the brand DNA holds:
+
+- Generous with information (shares because players should have it)
+- Respectful of intelligence (never talks down — to a 19-year-old or a 75-year-old)
+- Honest about how things work (whether it's loot box drop rates or lottery odds)
+- Treats gambling as entertainment (bingo night is fun; that's the point)
+- Corrects without judgment (the math doesn't care about your age)
+
+For segment-specific messaging guidance, see:
+- [`messaging/player-segments/young-adults.md`](../messaging/player-segments/young-adults.md)
+- [`messaging/player-segments/traditional-players.md`](../messaging/player-segments/traditional-players.md)
+
+---
+
 ## Presentation tags
 
 Presentation tags handle mechanical localization — format and reference changes that don't require cultural judgment. These are defined in [`_taxonomy.yml`](../_taxonomy.yml) under `presentation`.

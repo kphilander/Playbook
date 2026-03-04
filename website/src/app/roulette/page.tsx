@@ -185,9 +185,12 @@ export default function RoulettePage() {
           gap: isMobile ? 8 : 0,
         }}
       >
-        <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
-          <span style={{ fontSize: isMobile ? 20 : 24, fontWeight: 800, color: colors.white }}>Play</span><span style={{ fontSize: isMobile ? 20 : 24, fontWeight: 300, color: colors.secondary, textTransform: 'uppercase', letterSpacing: '-0.03em' }}>book</span>
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center' }}>
+            <span style={{ fontSize: isMobile ? 20 : 24, fontWeight: 800, color: colors.white }}>Play</span><span style={{ fontSize: isMobile ? 20 : 24, fontWeight: 300, color: colors.secondary, textTransform: 'uppercase', letterSpacing: '-0.03em' }}>book</span>
+          </Link>
+          <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.06em', padding: '2px 8px', borderRadius: 4, background: 'rgba(255,107,53,0.15)', color: colors.accent }}>BETA</span>
+        </div>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 8 : 16 }}>
           {/* Wheel type toggle */}

@@ -54,6 +54,11 @@ const cards = [
   { html: 'htp-card-roulette.html', output: 'htp-card-roulette.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'htp-card-sports.html', output: 'htp-card-sports.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'htp-odds-comparison.html', output: 'htp-odds-comparison.png', w: 1080, h: 1080, selector: '.social-card' },
+  // Demographic-specific collateral
+  { html: 'poster-4d-lottery-odds.html', output: 'poster-4d-lottery-odds.png', w: 1800, h: 2400, selector: '.poster' },
+  { html: 'poster-4e-bingo-hall.html', output: 'poster-4e-bingo-hall.png', w: 1800, h: 2400, selector: '.poster' },
+  { html: 'card-11a-streamer-myth.html', output: 'card-11a-streamer-myth.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-11b-lucky-numbers.html', output: 'card-11b-lucky-numbers.png', w: 1080, h: 1080, selector: '.social-card' },
 ];
 
 // Filter to only render files passed as CLI args, or all if none given

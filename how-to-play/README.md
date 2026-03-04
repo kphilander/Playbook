@@ -14,10 +14,13 @@ The complete game education library for {{PROGRAM_NAME}}. Each guide explains ho
 | Blackjack | [blackjack.md](blackjack.md) | `0.5–2%` | [7–9](../messaging/myth-busting.md#table-games) | Intermediate |
 | Roulette | [roulette.md](roulette.md) | `1.35–5.26%` | [7, 10](../messaging/myth-busting.md#table-games) | Beginner |
 | Sports Betting | [sports-betting.md](sports-betting.md) | `4.5–10%+` | [11–14](../messaging/myth-busting.md#sports-betting) | Intermediate |
+| Lottery | [lottery.md](lottery.md) | `35–50%` | Lucky numbers, due draws, systems | Beginner |
+| Bingo | [bingo.md](bingo.md) | `5–25%` | Lucky seats, due numbers | Beginner |
+| Horse Racing | [horse-racing.md](horse-racing.md) | `15–25%` (takeout) | Tipster accuracy, form as guarantee | Intermediate |
 
 ### Coming soon
 
-Craps, baccarat, poker, video poker, lottery, and bingo. Use [`_game-guide-template.md`](_game-guide-template.md) to create new guides.
+Craps, baccarat, poker, video poker, keno, esports betting. Use [`_game-guide-template.md`](_game-guide-template.md) to create new guides.
 
 ---
 
