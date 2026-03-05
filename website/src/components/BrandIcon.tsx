@@ -127,6 +127,43 @@ const icons: Record<string, React.ReactNode> = {
       </g>
     </g>
   ),
+  'video-poker': (
+    <g>
+      <g strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/></g>
+      <g strokeWidth="1">
+        <rect x="4.5" y="7" width="3" height="5" rx="0.75"/><rect x="8.5" y="7" width="3" height="5" rx="0.75"/>
+        <rect x="12.5" y="7" width="3" height="5" rx="0.75"/><rect x="16.5" y="7" width="3" height="5" rx="0.75"/>
+        <line x1="4" y1="16" x2="20" y2="16"/>
+        <text x="6" y="11" fontSize="3.5" fill="currentColor" stroke="none" fontWeight="800">J</text>
+        <text x="10" y="11" fontSize="3.5" fill="currentColor" stroke="none" fontWeight="800">Q</text>
+        <text x="14" y="11" fontSize="3.5" fill="currentColor" stroke="none" fontWeight="800">K</text>
+        <text x="18" y="11" fontSize="3.5" fill="currentColor" stroke="none" fontWeight="800">A</text>
+      </g>
+    </g>
+  ),
+  sports: (
+    <g>
+      <g strokeWidth="2"><circle cx="12" cy="12" r="9"/></g>
+      <g strokeWidth="1">
+        <path d="M12 3c-2 3-2 6 0 9s2 6 0 9"/>
+        <path d="M12 3c2 3 2 6 0 9s-2 6 0 9"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+      </g>
+    </g>
+  ),
+  baccarat: (
+    <g>
+      <g strokeWidth="2">
+        <rect x="2" y="5" width="8" height="12" rx="1.5"/>
+        <rect x="14" y="5" width="8" height="12" rx="1.5"/>
+      </g>
+      <g strokeWidth="1">
+        <text x="6" y="13" textAnchor="middle" fontSize="6" fill="currentColor" stroke="none" fontWeight="800">9</text>
+        <text x="18" y="13" textAnchor="middle" fontSize="6" fill="currentColor" stroke="none" fontWeight="800">7</text>
+        <line x1="11" y1="8" x2="13" y2="8"/><line x1="12" y1="7" x2="12" y2="9"/>
+      </g>
+    </g>
+  ),
 };
 
 export default function BrandIcon({ name, size = 24, className, style }: BrandIconProps) {

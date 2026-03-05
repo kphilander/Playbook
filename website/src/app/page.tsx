@@ -66,7 +66,8 @@ export default function Home() {
           <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game →</div>
         </Link>
 
-        <div
+        <Link
+          href="/video-poker"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -76,14 +77,99 @@ export default function Home() {
             background: colors.primaryDark,
             borderRadius: radius.lg,
             border: `1px solid ${colors.primaryLight}`,
-            opacity: 0.4,
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
             minWidth: 200,
           }}
         >
-          <BrandIcon name="cards" size={48} style={{ color: colors.neutral500 }} />
+          <BrandIcon name="video-poker" size={48} style={{ color: colors.secondary }} />
+          <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Video Poker</div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game &rarr;</div>
+        </Link>
+
+        <Link
+          href="/baccarat"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 12,
+            padding: '32px 40px',
+            background: colors.primaryDark,
+            borderRadius: radius.lg,
+            border: `1px solid ${colors.primaryLight}`,
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
+            minWidth: 200,
+          }}
+        >
+          <BrandIcon name="baccarat" size={48} style={{ color: colors.secondary }} />
+          <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Baccarat</div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game &rarr;</div>
+        </Link>
+
+        <Link
+          href="/blackjack"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 12,
+            padding: '32px 40px',
+            background: colors.primaryDark,
+            borderRadius: radius.lg,
+            border: `1px solid ${colors.primaryLight}`,
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
+            minWidth: 200,
+          }}
+        >
+          <BrandIcon name="cards" size={48} style={{ color: colors.secondary }} />
           <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Blackjack</div>
-          <div style={{ fontSize: 14, color: colors.neutral500, fontWeight: 600 }}>Coming soon</div>
-        </div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game &rarr;</div>
+        </Link>
+
+        <Link
+          href="/sports-betting"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 12,
+            padding: '32px 40px',
+            background: colors.primaryDark,
+            borderRadius: radius.lg,
+            border: `1px solid ${colors.primaryLight}`,
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
+            minWidth: 200,
+          }}
+        >
+          <BrandIcon name="sports" size={48} style={{ color: colors.secondary }} />
+          <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Sports Betting</div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game &rarr;</div>
+        </Link>
+
+        <Link
+          href="/craps"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: 12,
+            padding: '32px 40px',
+            background: colors.primaryDark,
+            borderRadius: radius.lg,
+            border: `1px solid ${colors.primaryLight}`,
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
+            minWidth: 200,
+          }}
+        >
+          <BrandIcon name="dice" size={48} style={{ color: colors.secondary }} />
+          <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Craps</div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game &rarr;</div>
+        </Link>
       </div>
     </div>
   );
