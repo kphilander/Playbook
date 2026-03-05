@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { colors, fonts, radius } from '@/lib/brand-tokens';
 import ScrollyChapter from '@/components/slots/ScrollyChapter';
-import type { Slide } from '@/components/slots/ScrollyChapter';
+import type { Slide, TermDef } from '@/components/slots/ScrollyChapter';
 import RouletteVisuals from '@/components/roulette/RouletteVisuals';
 import RouletteQuiz from '@/components/roulette/RouletteQuiz';
 
@@ -300,6 +300,7 @@ export default function RoulettePage() {
         title="How the Game Works"
         slides={HOW_IT_WORKS}
         VisualsComponent={RouletteVisuals}
+        terms={KEY_TERMS}
       />
 
       <div style={{ maxWidth: 120, margin: '0 auto', height: 1, background: `linear-gradient(90deg, transparent, ${colors.primaryLight}, transparent)` }} />
@@ -310,6 +311,7 @@ export default function RoulettePage() {
         title="Bet Types"
         slides={BET_TYPES}
         VisualsComponent={RouletteVisuals}
+        terms={KEY_TERMS}
       />
 
       <div style={{ maxWidth: 120, margin: '0 auto', height: 1, background: `linear-gradient(90deg, transparent, ${colors.primaryLight}, transparent)` }} />
@@ -320,6 +322,7 @@ export default function RoulettePage() {
         title="The Math"
         slides={THE_MATH}
         VisualsComponent={RouletteVisuals}
+        terms={KEY_TERMS}
       />
 
       <div style={{ maxWidth: 120, margin: '0 auto', height: 1, background: `linear-gradient(90deg, transparent, ${colors.primaryLight}, transparent)` }} />
@@ -330,6 +333,7 @@ export default function RoulettePage() {
         title="Tips for Informed Play"
         slides={TIPS}
         VisualsComponent={RouletteVisuals}
+        terms={KEY_TERMS}
       />
 
       <div style={{ maxWidth: 120, margin: '0 auto', height: 1, background: `linear-gradient(90deg, transparent, ${colors.primaryLight}, transparent)` }} />
@@ -340,6 +344,7 @@ export default function RoulettePage() {
         title="Common Myths"
         slides={MYTHS}
         VisualsComponent={RouletteVisuals}
+        terms={KEY_TERMS}
       />
 
       {/* ─── Key Terms ─── */}

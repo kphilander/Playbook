@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { colors, fonts, radius } from '@/lib/brand-tokens';
 import ScrollyChapter from '@/components/slots/ScrollyChapter';
-import type { Slide } from '@/components/slots/ScrollyChapter';
+import type { Slide, TermDef } from '@/components/slots/ScrollyChapter';
 import QuizSection from '@/components/slots/QuizSection';
 
 const MOBILE_BP = 768;
@@ -297,6 +297,7 @@ export default function SlotsPage() {
         label="Chapter 1"
         title="How the Game Works"
         slides={HOW_IT_WORKS}
+        terms={KEY_TERMS}
       />
 
       {/* Divider */}
@@ -307,6 +308,7 @@ export default function SlotsPage() {
         label="Chapter 2"
         title="Bet Types"
         slides={BET_TYPES}
+        terms={KEY_TERMS}
       />
 
       <div style={{ maxWidth: 120, margin: '0 auto', height: 1, background: `linear-gradient(90deg, transparent, ${colors.primaryLight}, transparent)` }} />
@@ -316,6 +318,7 @@ export default function SlotsPage() {
         label="Chapter 3"
         title="The Math"
         slides={THE_MATH}
+        terms={KEY_TERMS}
       />
 
       <div style={{ maxWidth: 120, margin: '0 auto', height: 1, background: `linear-gradient(90deg, transparent, ${colors.primaryLight}, transparent)` }} />
@@ -325,6 +328,7 @@ export default function SlotsPage() {
         label="Chapter 4"
         title="Tips for Informed Play"
         slides={TIPS}
+        terms={KEY_TERMS}
       />
 
       <div style={{ maxWidth: 120, margin: '0 auto', height: 1, background: `linear-gradient(90deg, transparent, ${colors.primaryLight}, transparent)` }} />
@@ -334,6 +338,7 @@ export default function SlotsPage() {
         label="Chapter 5"
         title="Common Myths"
         slides={MYTHS}
+        terms={KEY_TERMS}
       />
 
       {/* ─── Key Terms ─── */}

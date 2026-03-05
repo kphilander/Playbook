@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { colors, fonts, radius } from '@/lib/brand-tokens';
 import SlotVisuals from './SlotVisuals';
 
@@ -8,6 +8,11 @@ export interface Slide {
   title: string;
   body: string;
   highlight?: string;
+}
+
+export interface TermDef {
+  term: string;
+  def: string;
 }
 
 interface VisualsComponentProps {
@@ -21,6 +26,147 @@ interface ScrollyChapterProps {
   title: string;
   slides: Slide[];
   VisualsComponent?: React.ComponentType<VisualsComponentProps>;
+  terms?: TermDef[];
+}
+
+/* ─── Term tooltip ─── */
+
+function TermTooltip({ term, definition }: { term: string; definition: string }) {
+  const [show, setShow] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setShow(true);
+  };
+  const handleLeave = () => {
+    timeoutRef.current = setTimeout(() => setShow(false), 150);
+  };
+  const handleTap = (e: React.MouseEvent | React.TouchEvent) => {
+    e.preventDefault();
+    setShow(prev => !prev);
+  };
+
+  return (
+    <span
+      onMouseEnter={handleEnter}
+      onMouseLeave={handleLeave}
+      onClick={handleTap}
+      style={{
+        position: 'relative',
+        borderBottom: `1px dashed ${colors.secondary}`,
+        color: colors.secondary,
+        cursor: 'help',
+        fontWeight: 600,
+      }}
+    >
+      {term}
+      {show && (
+        <span
+          onMouseEnter={handleEnter}
+          onMouseLeave={handleLeave}
+          style={{
+            position: 'absolute',
+            bottom: 'calc(100% + 8px)',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 220,
+            padding: '10px 12px',
+            borderRadius: 8,
+            background: colors.primaryDark,
+            border: `1px solid ${colors.primaryLight}`,
+            boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+            zIndex: 50,
+            pointerEvents: 'auto',
+          }}
+        >
+          <span style={{
+            display: 'block',
+            fontSize: 11,
+            fontWeight: 700,
+            color: colors.secondary,
+            fontFamily: fonts.heading,
+            marginBottom: 4,
+          }}>
+            {term}
+          </span>
+          <span style={{
+            display: 'block',
+            fontSize: 12,
+            color: colors.neutral300,
+            fontFamily: fonts.body,
+            lineHeight: 1.5,
+            fontWeight: 400,
+          }}>
+            {definition}
+          </span>
+          {/* Arrow */}
+          <span style={{
+            position: 'absolute',
+            bottom: -5,
+            left: '50%',
+            transform: 'translateX(-50%) rotate(45deg)',
+            width: 10,
+            height: 10,
+            background: colors.primaryDark,
+            borderRight: `1px solid ${colors.primaryLight}`,
+            borderBottom: `1px solid ${colors.primaryLight}`,
+          }} />
+        </span>
+      )}
+    </span>
+  );
+}
+
+/* ─── Text with highlighted terms ─── */
+
+function highlightTerms(text: string, terms: TermDef[]): React.ReactNode {
+  if (!terms.length) return text;
+
+  // Sort by length descending so longer terms match first (e.g. "house edge" before "edge")
+  const sorted = [...terms].sort((a, b) => b.term.length - a.term.length);
+
+  // Build regex matching any term (case-insensitive, word boundary)
+  const pattern = sorted
+    .map(t => t.term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+    .join('|');
+  const regex = new RegExp(`\\b(${pattern})\\b`, 'gi');
+
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  const seen = new Set<string>();
+
+  while ((match = regex.exec(text)) !== null) {
+    const matchedText = match[0];
+    const key = matchedText.toLowerCase();
+
+    // Only highlight the first occurrence of each term per slide
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    // Text before this match
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+
+    // Find the definition
+    const termDef = sorted.find(t => t.term.toLowerCase() === key);
+    if (termDef) {
+      parts.push(
+        <TermTooltip key={match.index} term={matchedText} definition={termDef.def} />
+      );
+    }
+
+    lastIndex = match.index + matchedText.length;
+  }
+
+  // Remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length ? parts : text;
 }
 
 function useIsMobile() {
@@ -34,7 +180,7 @@ function useIsMobile() {
   return isMobile;
 }
 
-export default function ScrollyChapter({ id, label, title, slides, VisualsComponent }: ScrollyChapterProps) {
+export default function ScrollyChapter({ id, label, title, slides, VisualsComponent, terms }: ScrollyChapterProps) {
   const Visuals = VisualsComponent || SlotVisuals;
   const [activeSlide, setActiveSlide] = useState(0);
   const isMobile = useIsMobile();
@@ -187,7 +333,7 @@ export default function ScrollyChapter({ id, label, title, slides, VisualsCompon
                   fontSize: isMobile ? 14 : 16, color: colors.neutral300,
                   fontFamily: fonts.body, margin: 0, lineHeight: 1.65,
                 }}>
-                  {slide.body}
+                  {terms ? highlightTerms(slide.body, terms) : slide.body}
                 </p>
 
                 {/* Highlight stat */}
