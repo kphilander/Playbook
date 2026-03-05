@@ -42,7 +42,7 @@ export default function Home() {
         >
           <BrandIcon name="roulette" size={48} style={{ color: colors.secondary }} />
           <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Roulette</div>
-          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Play demo →</div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game →</div>
         </Link>
 
         <Link
@@ -63,7 +63,7 @@ export default function Home() {
         >
           <BrandIcon name="slots" size={48} style={{ color: colors.secondary }} />
           <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Slots</div>
-          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Read guide →</div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Learn the game →</div>
         </Link>
 
         <div
