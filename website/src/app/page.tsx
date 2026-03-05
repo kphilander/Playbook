@@ -45,7 +45,8 @@ export default function Home() {
           <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Play demo →</div>
         </Link>
 
-        <div
+        <Link
+          href="/slots"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -55,14 +56,15 @@ export default function Home() {
             background: colors.primaryDark,
             borderRadius: radius.lg,
             border: `1px solid ${colors.primaryLight}`,
-            opacity: 0.4,
+            textDecoration: 'none',
+            transition: 'all 0.2s ease',
             minWidth: 200,
           }}
         >
-          <BrandIcon name="slots" size={48} style={{ color: colors.neutral500 }} />
+          <BrandIcon name="slots" size={48} style={{ color: colors.secondary }} />
           <div style={{ fontSize: 20, fontWeight: 700, color: colors.white }}>Slots</div>
-          <div style={{ fontSize: 14, color: colors.neutral500, fontWeight: 600 }}>Coming soon</div>
-        </div>
+          <div style={{ fontSize: 14, color: colors.secondary, fontWeight: 600 }}>Read guide →</div>
+        </Link>
 
         <div
           style={{
