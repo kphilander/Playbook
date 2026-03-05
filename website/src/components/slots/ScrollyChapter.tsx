@@ -10,11 +10,17 @@ export interface Slide {
   highlight?: string;
 }
 
+interface VisualsComponentProps {
+  chapterId: string;
+  slideIndex: number;
+}
+
 interface ScrollyChapterProps {
   id: string;
   label: string;
   title: string;
   slides: Slide[];
+  VisualsComponent?: React.ComponentType<VisualsComponentProps>;
 }
 
 function useIsMobile() {
@@ -28,7 +34,8 @@ function useIsMobile() {
   return isMobile;
 }
 
-export default function ScrollyChapter({ id, label, title, slides }: ScrollyChapterProps) {
+export default function ScrollyChapter({ id, label, title, slides, VisualsComponent }: ScrollyChapterProps) {
+  const Visuals = VisualsComponent || SlotVisuals;
   const [activeSlide, setActiveSlide] = useState(0);
   const isMobile = useIsMobile();
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -126,7 +133,7 @@ export default function ScrollyChapter({ id, label, title, slides }: ScrollyChap
               overflow: 'hidden',
               background: '#0D1B2A',
             }}>
-              <SlotVisuals chapterId={id} slideIndex={activeSlide} />
+              <Visuals chapterId={id} slideIndex={activeSlide} />
             </div>
           </div>
         </div>
