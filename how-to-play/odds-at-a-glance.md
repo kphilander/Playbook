@@ -42,9 +42,9 @@ Every game has a house edge — the built-in mathematical advantage that keeps t
 | Game | Best bet (lowest edge) | Typical range | What determines outcome | Guide |
 |------|----------------------|---------------|------------------------|-------|
 | **Blackjack** | `0.5%` (basic strategy) | `0.5–2%` | Skill + chance | [blackjack.md](blackjack.md) |
-| **Baccarat** | `1.06%` (banker bet) | `1.06–14.4%` | Chance | — |
+| **Baccarat** | `1.06%` (banker bet) | `1.06–14.4%` | Chance | [baccarat.md](baccarat.md) |
 | **Craps** | `1.36%` (don't pass/don't come) | `1.36–16.7%` | Chance | — |
-| **Video Poker** | `0.5%` (Jacks or Better, optimal play) | `0.5–5%` | Skill + chance | — |
+| **Video Poker** | `0.5%` (Jacks or Better, optimal play) | `0.5–5%` | Skill + chance | [video-poker.md](video-poker.md) |
 | **Roulette (European)** | `2.70%` (single zero) | `2.70%` | Chance | [roulette.md](roulette.md) |
 | **Roulette (American)** | `5.26%` (double zero) | `5.26%` | Chance | [roulette.md](roulette.md) |
 | **Sports Betting** | `4.5%` (standard vig) | `4.5–10%+` | Skill + chance | [sports-betting.md](sports-betting.md) |
