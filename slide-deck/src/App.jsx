@@ -1,163 +1,82 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import SlideContainer from './components/SlideContainer';
-import ProgressBar from './components/ProgressBar';
-import TitleSlide from './slides/TitleSlide';
-import EngagementGap from './slides/EngagementGap';
-import SolutionSlide from './slides/SolutionSlide';
-import TwoTierSlide from './slides/TwoTierSlide';
-import PillarsSlide from './slides/PillarsSlide';
-import PersonalitySlide from './slides/PersonalitySlide';
-import VoiceToneSlide from './slides/VoiceToneSlide';
-import LogoSlide from './slides/LogoSlide';
-import ColorSlide from './slides/ColorSlide';
-import TypographySlide from './slides/TypographySlide';
-import IconSystemSlide from './slides/IconSystemSlide';
-import PhotographySlide from './slides/PhotographySlide';
-import MessagingSlide from './slides/MessagingSlide';
-import CTASlide from './slides/CTASlide';
-import DigitalAppsSlide from './slides/DigitalAppsSlide';
-import PrintSlide from './slides/PrintSlide';
-import PrintSamplesSlide from './slides/PrintSamplesSlide';
-import Tier2CollateralSlide from './slides/Tier2CollateralSlide';
-import CampaignSlide from './slides/CampaignSlide';
-import AccessibilitySlide from './slides/AccessibilitySlide';
-import GovernanceSlide from './slides/GovernanceSlide';
-import GetStartedSlide from './slides/GetStartedSlide';
+import { useState, useEffect } from 'react';
+import Sidebar from './components/Sidebar';
+import HeroSection from './sections/HeroSection';
+import BrandStorySection from './sections/BrandStorySection';
+import FoundationSection from './sections/FoundationSection';
+import LogoSection from './sections/LogoSection';
+import ColorSection from './sections/ColorSection';
+import TypographySection from './sections/TypographySection';
+import IconSection from './sections/IconSection';
+import PhotographySection from './sections/PhotographySection';
+import MessagingSection from './sections/MessagingSection';
+import CollateralSection from './sections/CollateralSection';
+import AccessibilitySection from './sections/AccessibilitySection';
+import GovernanceSection from './sections/GovernanceSection';
+import GetStartedSection from './sections/GetStartedSection';
 
-const slides = [
-  TitleSlide,          // 1  — Cover
-  EngagementGap,       // 2  — The Problem
-  SolutionSlide,       // 3  — The Approach
-  TwoTierSlide,        // 4  — Two-Tier System
-  PillarsSlide,        // 5  — Brand Pillars
-  PersonalitySlide,    // 6  — Brand Personality
-  VoiceToneSlide,      // 7  — Voice & Tone
-  LogoSlide,           // 8  — Logo System
-  ColorSlide,          // 9  — Color Palette
-  TypographySlide,     // 10 — Typography
-  IconSystemSlide,     // 11 — Icon System
-  PhotographySlide,    // 12 — Photography & Illustration
-  MessagingSlide,      // 13 — Messaging Framework
-  CTASlide,            // 14 — CTA Library
-  DigitalAppsSlide,    // 15 — Digital Applications
-  PrintSlide,          // 16 — Print & Environmental
-  PrintSamplesSlide,      // 17 — Print Samples
-  Tier2CollateralSlide,   // 18 — Tier 2 Collateral
-  CampaignSlide,          // 19 — Campaign Library
-  AccessibilitySlide,     // 20 — Accessibility
-  GovernanceSlide,        // 21 — Governance & Evolution
-  GetStartedSlide,        // 22 — Get Started
+const sections = [
+  { id: 'hero', label: 'Playbook', Component: HeroSection },
+  { id: 'brand-story', label: 'Brand Story', Component: BrandStorySection },
+  { id: 'foundation', label: 'Foundation', Component: FoundationSection },
+  { id: 'logo', label: 'Logo System', Component: LogoSection },
+  { id: 'color', label: 'Color', Component: ColorSection },
+  { id: 'typography', label: 'Typography', Component: TypographySection },
+  { id: 'icons', label: 'Icons', Component: IconSection },
+  { id: 'photography', label: 'Photography', Component: PhotographySection },
+  { id: 'messaging', label: 'Messaging', Component: MessagingSection },
+  { id: 'collateral', label: 'Collateral', Component: CollateralSection },
+  { id: 'accessibility', label: 'Accessibility', Component: AccessibilitySection },
+  { id: 'governance', label: 'Governance', Component: GovernanceSection },
+  { id: 'get-started', label: 'Get Started', Component: GetStartedSection },
 ];
-const TOTAL = slides.length;
-
-/* Fixed design resolution — scales to fit any viewport */
-const DESIGN_W = 1280;
-const DESIGN_H = 720;
 
 export default function App() {
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState('forward');
-  const transitioning = useRef(false);
-  const [scale, setScale] = useState(1);
+  const [activeSection, setActiveSection] = useState('hero');
 
+  // Scroll-spy: track which section is in view
   useEffect(() => {
-    function updateScale() {
-      const sw = window.innerWidth / DESIGN_W;
-      const sh = window.innerHeight / DESIGN_H;
-      setScale(Math.min(sw, sh));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+            history.replaceState(null, '', `#${entry.target.id}`);
+          }
+        }
+      },
+      { rootMargin: '-20% 0px -60% 0px', threshold: 0 }
+    );
+
+    for (const s of sections) {
+      const el = document.getElementById(s.id);
+      if (el) observer.observe(el);
     }
-    updateScale();
-    window.addEventListener('resize', updateScale);
-    return () => window.removeEventListener('resize', updateScale);
+
+    return () => observer.disconnect();
   }, []);
 
-  const goTo = useCallback((index) => {
-    if (transitioning.current) return;
-    if (index < 0 || index >= TOTAL || index === current) return;
-    transitioning.current = true;
-    setDirection(index > current ? 'forward' : 'backward');
-    setCurrent(index);
-    setTimeout(() => { transitioning.current = false; }, 500);
-  }, [current]);
-
-  const next = useCallback(() => goTo(current + 1), [current, goTo]);
-  const prev = useCallback(() => goTo(current - 1), [current, goTo]);
-
+  // Handle initial hash on load
   useEffect(() => {
-    function handleKey(e) {
-      switch (e.key) {
-        case 'ArrowRight':
-        case ' ':
-        case 'PageDown':
-          e.preventDefault();
-          next();
-          break;
-        case 'ArrowLeft':
-        case 'PageUp':
-          e.preventDefault();
-          prev();
-          break;
-        case 'Home':
-          e.preventDefault();
-          goTo(0);
-          break;
-        case 'End':
-          e.preventDefault();
-          goTo(TOTAL - 1);
-          break;
-      }
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      requestAnimationFrame(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      });
     }
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
-  }, [next, prev, goTo]);
+  }, []);
 
   return (
-    <div className="relative w-screen h-screen overflow-hidden bg-navy cursor-default">
-      {/* Scaled slide stage — fixed 1280×720 design resolution */}
-      <div
-        className="absolute top-1/2 left-1/2 overflow-hidden"
-        style={{
-          width: DESIGN_W,
-          height: DESIGN_H,
-          transform: `translate(-50%, -50%) scale(${scale})`,
-        }}
-      >
-        {slides.map((Slide, i) => (
-          <SlideContainer key={i} isActive={i === current} direction={direction}>
-            <Slide />
-          </SlideContainer>
+    <div className="min-h-screen bg-navy">
+      <Sidebar sections={sections} activeSection={activeSection} />
+
+      <main className="lg:ml-64">
+        {sections.map(({ id, Component }) => (
+          <section key={id} id={id}>
+            <Component />
+          </section>
         ))}
-      </div>
-
-      {/* Navigation hover zones with arrow indicators */}
-      {current > 0 && (
-        <button
-          onClick={prev}
-          aria-label="Previous slide"
-          className="absolute left-0 top-0 w-[20%] h-full z-40 cursor-pointer border-0 bg-transparent group"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <ChevronLeft className="absolute top-1/2 left-6 -translate-y-1/2 w-10 h-10 text-white/0 group-hover:text-white/70 transition-all duration-300 drop-shadow-lg" />
-        </button>
-      )}
-      {current < TOTAL - 1 && (
-        <button
-          onClick={next}
-          aria-label="Next slide"
-          className="absolute right-0 top-0 w-[20%] h-full z-40 cursor-pointer border-0 bg-transparent group"
-        >
-          <div className="absolute inset-0 bg-gradient-to-l from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <ChevronRight className="absolute top-1/2 right-6 -translate-y-1/2 w-10 h-10 text-white/0 group-hover:text-white/70 transition-all duration-300 drop-shadow-lg" />
-        </button>
-      )}
-
-      <ProgressBar total={TOTAL} current={current} onNavigate={goTo} />
-
-      {/* Slide counter */}
-      <div className="absolute bottom-6 right-8 font-mono text-xs text-neutral-500 z-50">
-        {current + 1} / {TOTAL}
-      </div>
+      </main>
     </div>
   );
 }
