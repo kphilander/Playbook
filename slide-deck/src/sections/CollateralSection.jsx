@@ -1,10 +1,60 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
 import { digitalTouchpoints, printFormats, campaigns } from '../data/slideContent';
 import { X } from 'lucide-react';
 
 const BASE = import.meta.env.BASE_URL || '/';
+
+function Lightbox({ item, onClose }) {
+  // Close on Escape key
+  const handleKey = useCallback((e) => {
+    if (e.key === 'Escape') onClose();
+  }, [onClose]);
+
+  useEffect(() => {
+    if (!item) return;
+    document.addEventListener('keydown', handleKey);
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.removeEventListener('keydown', handleKey);
+      document.body.style.overflow = '';
+    };
+  }, [item, handleKey]);
+
+  if (!item) return null;
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${item.name} — full size preview`}
+      className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 sm:p-8"
+      onClick={onClose}
+    >
+      <button
+        onClick={onClose}
+        autoFocus
+        className="absolute top-4 right-4 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center
+          text-white hover:bg-white/20 transition-colors z-10"
+        aria-label="Close preview"
+      >
+        <X size={20} />
+      </button>
+      <img
+        src={`${BASE}assets/collateral/${item.file}`}
+        alt={item.name}
+        className="max-w-full max-h-[85vh] object-contain rounded-lg"
+        onClick={(e) => e.stopPropagation()}
+      />
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-navy/90 backdrop-blur
+        rounded-lg px-4 py-2 text-center" aria-live="polite">
+        <p className="font-heading text-sm font-bold text-white">{item.name}</p>
+        <p className="font-mono text-[10px] text-n500">{item.category}</p>
+      </div>
+    </div>
+  );
+}
 
 const collateralItems = [
   // Campaign cards
@@ -168,32 +218,8 @@ export default function CollateralSection() {
         ))}
       </div>
 
-      {/* Lightbox */}
-      {lightboxItem && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 sm:p-8"
-          onClick={() => setLightboxItem(null)}
-        >
-          <button
-            onClick={() => setLightboxItem(null)}
-            className="absolute top-4 right-4 w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center
-              text-white hover:bg-white/20 transition-colors z-10"
-          >
-            <X size={20} />
-          </button>
-          <img
-            src={`${BASE}assets/collateral/${lightboxItem.file}`}
-            alt={lightboxItem.name}
-            className="max-w-full max-h-[85vh] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-navy/90 backdrop-blur
-            rounded-lg px-4 py-2 text-center">
-            <p className="font-heading text-sm font-bold text-white">{lightboxItem.name}</p>
-            <p className="font-mono text-[10px] text-n500">{lightboxItem.category}</p>
-          </div>
-        </div>
-      )}
+      {/* Lightbox (accessible modal) */}
+      <Lightbox item={lightboxItem} onClose={() => setLightboxItem(null)} />
     </div>
   );
 }

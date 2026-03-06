@@ -68,9 +68,13 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-navy">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
       <Sidebar sections={sections} activeSection={activeSection} />
 
-      <main className="lg:ml-64">
+      <main id="main-content" className="lg:ml-64" role="main">
         {sections.map(({ id, Component }) => (
           <section key={id} id={id}>
             <Component />

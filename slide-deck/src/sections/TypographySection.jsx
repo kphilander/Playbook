@@ -66,10 +66,11 @@ export default function TypographySection() {
           {/* Sliders */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <div>
-              <label className="font-mono text-xs text-n500 block mb-2">
+              <label htmlFor="weight-slider" className="font-mono text-xs text-n500 block mb-2">
                 Weight: <span className="text-teal">{weight}</span>
               </label>
               <input
+                id="weight-slider"
                 type="range"
                 min={100}
                 max={900}
@@ -77,13 +78,15 @@ export default function TypographySection() {
                 value={weight}
                 onChange={(e) => setWeight(Number(e.target.value))}
                 className="w-full accent-teal"
+                aria-label={`Font weight: ${weight}`}
               />
             </div>
             <div>
-              <label className="font-mono text-xs text-n500 block mb-2">
+              <label htmlFor="size-slider" className="font-mono text-xs text-n500 block mb-2">
                 Size: <span className="text-teal">{size}px</span>
               </label>
               <input
+                id="size-slider"
                 type="range"
                 min={12}
                 max={72}
@@ -91,6 +94,7 @@ export default function TypographySection() {
                 value={size}
                 onChange={(e) => setSize(Number(e.target.value))}
                 className="w-full accent-teal"
+                aria-label={`Font size: ${size} pixels`}
               />
             </div>
           </div>
@@ -101,6 +105,7 @@ export default function TypographySection() {
             value={previewText}
             onChange={(e) => setPreviewText(e.target.value)}
             placeholder="Type something..."
+            aria-label="Type specimen preview text"
             className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3
               font-body text-sm text-n300 placeholder:text-n700
               focus:outline-none focus:ring-2 focus:ring-teal/50 mb-6"

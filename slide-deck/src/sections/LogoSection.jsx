@@ -32,16 +32,16 @@ function LogoCard({ logo }) {
       <div className={`${logo.bg} p-8 flex items-center justify-center min-h-[120px] relative`}>
         <img
           src={`${BASE}assets/logos/${logo.file}`}
-          alt={logo.name}
+          alt={`${logo.name} logo variant`}
           className="max-h-16 max-w-full object-contain"
         />
-        {/* Download overlay */}
+        {/* Download overlay — visible on hover AND focus */}
         <a
           href={`${BASE}assets/logos/${logo.file}`}
           download={logo.file}
           className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0
-            group-hover:opacity-100 transition-opacity duration-200"
-          title={`Download ${logo.file}`}
+            group-hover:opacity-100 focus-visible:opacity-100 transition-opacity duration-200"
+          aria-label={`Download ${logo.name} (${logo.file})`}
         >
           <Download size={20} className="text-white" />
         </a>
