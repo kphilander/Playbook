@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "game": "roulette",
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "how-to-play/roulette.md"
+  },
+  "slug": "roulette",
+  "title": "How to Play: Roulette",
+  "summary": null,
+  "frontmatter": {
+    "content_type": "game-guide",
+    "title": "How to Play: Roulette",
+    "pillar": [
+      "open"
+    ],
+    "tier": 1,
+    "tone": [
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "game_type": [
+      "roulette"
+    ],
+    "audience": [
+      "general"
+    ],
+    "channel": [
+      "blog",
+      "social-media",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "odds_format": "american",
+      "currency": "usd",
+      "sports_culture": null,
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Currency: All examples use USD ($100, $2.70, $5.26).\nReplace with local currency.\nWheel emphasis: Current content lists American roulette\nprominently. For non-US markets, lead with European/French\nas the default and note American as a variant.\nDirectness: \"Avoid it\" (re: five-number bet) is blunt.\nDiplomatic profiles may prefer softer framing.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "heading": "The 30-second version",
+      "content": "> Roulette is pure chance. A ball lands on a random number, and you win if you bet on that number (or a group containing it). No decision you make changes the odds. The only decision that matters is which wheel you play: European (one zero, `2.70%` house edge) or American (two zeros, `5.26%` house edge). That single zero nearly doubles the house's advantage.\n\n---"
+    },
+    {
+      "heading": "How the game works",
+      "content": "### The wheel\n\nA roulette wheel has numbered pockets where a ball can land. The numbers are `1` through `36`, alternating red and black, plus one or two green zeros:\n\n| Wheel type | Pockets | Zeros | Numbers |\n|-----------|---------|-------|---------|\n| **European** | `37` | Single zero (`0`) | `0–36` |\n| **American** | `38` | Double zero (`0`, `00`) | `0`, `00`, `1–36` |\n| **French** | `37` | Single zero with la partage/en prison rules | `0–36` |\n\nThe green zero(s) are what give the house its edge. Without them, every bet would be perfectly fair.\n\n### Playing a round\n\n1. **Place your bets.** Put your chips on the table layout — on numbers, groups of numbers, colors, or other options. You can place multiple bets at once.\n2. **The dealer spins the wheel** and launches the ball in the opposite direction.\n3. **\"No more bets.\"** The dealer calls this when the ball is about to drop. After this, no chips can be placed or moved.\n4. **The ball lands.** It settles into a numbered pocket. That number and its color are the result.\n5. **Payouts.** The dealer clears losing bets and pays winners. Payouts depend on the type of bet (see below).\n6. **Next round.** Place your bets again.\n\nEvery spin is independent. The wheel doesn't remember previous results. The electronic boards showing \"hot\" and \"cold\" numbers are for entertainment — they have zero predictive value.\n\n---"
+    },
+    {
+      "heading": "Bet types",
+      "content": "### Inside bets\n\nBets placed directly on specific numbers. Higher risk, higher payout.\n\n| Bet | What it means | Payout | Numbers covered |\n|-----|--------------|--------|----------------|\n| **Straight up** | A single number | `35:1` | `1` |\n| **Split** | Two adjacent numbers | `17:1` | `2` |\n| **Street** | Three numbers in a row | `11:1` | `3` |\n| **Corner** | Four numbers that share a corner | `8:1` | `4` |\n| **Six line** | Two adjacent rows (six numbers) | `5:1` | `6` |\n\n### Outside bets\n\nBets placed on larger groups. Lower risk, lower payout.\n\n| Bet | What it means | Payout | Numbers covered |\n|-----|--------------|--------|----------------|\n| **Red / Black** | The winning number's color | `1:1` | `18` |\n| **Odd / Even** | Whether the winning number is odd or even | `1:1` | `18` |\n| **High / Low** | `1–18` (low) or `19–36` (high) | `1:1` | `18` |\n| **Dozens** | First 12 (`1–12`), second 12 (`13–24`), or third 12 (`25–36`) | `2:1` | `12` |\n| **Columns** | One of three vertical columns on the layout | `2:1` | `12` |\n\n**Key point:** Every bet on a standard roulette table has the same house edge — whether you bet on a single number or red/black. The payouts are calibrated so the house edge is consistent across all bets. <!-- ADAPT: directness -->\nThe only exception: the five-number bet (`0`, `00`, `1`, `2`, `3`) on American roulette, which has a higher edge of `7.89%`. Avoid it.\n<!-- /ADAPT -->\n\n---"
+    },
+    {
+      "heading": "The math",
+      "content": "![European vs. American roulette — wheel comparison](diagrams/roulette-wheel-comparison.svg)\n\n### House edge by wheel type\n\n| Wheel | House edge | Why |\n|-------|-----------|-----|\n| **European** (single zero) | `2.70%` | 37 pockets, payouts based on 36. The zero is the house's margin. |\n| **American** (double zero) | `5.26%` | 38 pockets, payouts still based on 36. Two zeros = nearly double the edge. |\n| **French** (with la partage) | `1.35%` on even-money bets | If the ball lands on zero, you get half your even-money bet back. |\n\n### How the house edge works\n\nTake a straight-up bet on European roulette. You pick one number out of `37` possible pockets. Your chance of winning is `1 in 37` (about `2.70%`). But the payout is `35:1` — as if there were only 36 pockets. That gap between the real odds (`1 in 37`) and the payout odds (`35:1`) is the house edge.\n\nOn American roulette, it's `1 in 38` with the same `35:1` payout. The gap is wider. The house keeps more.\n\n### What this means for your wallet\n\n<!-- ADAPT: currency -->\nOn a European wheel with a `2.70%` house edge: for every `$100` you bet over time, you'd lose about `$2.70` on average.\n\nOn an American wheel at `5.26%`: that same `$100` costs you about `$5.26` over time.\n<!-- /ADAPT -->\n\nThat's nearly double — for the same game, the same bets, the same experience. The only difference is one extra green pocket.\n\n**Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).\n\n---"
+    },
+    {
+      "heading": "Tips for informed play",
+      "content": "1. **Check the wheel type before you play.** European (one zero) has a `2.70%` edge. American (two zeros) has `5.26%`. If both are available, the math favors European. Every time.\n2. **Look for la partage or en prison rules.** If a table offers French rules on even-money bets, the house edge drops to `1.35%` — the lowest in roulette.\n3. **Know that every spin is independent.** The ball landed on red five times in a row? The odds on the next spin are exactly the same. Electronic scoreboards showing past results are entertainment, not information.\n<!-- ADAPT: directness -->\n4. **Skip the five-number bet on American roulette.** The bet covering `0`, `00`, `1`, `2`, `3` carries a `7.89%` house edge — the worst bet on the table.\n<!-- /ADAPT -->\n5. **Set your budget per session.** Roulette moves at a moderate pace (about 30–40 spins per hour at a physical table, faster online). Decide what your session is worth as entertainment before you start.\n\n---"
+    },
+    {
+      "heading": "Common myths",
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Betting Systems Beat the House | Martingale = delayed ruin | [Myth 7](../messaging/myth-busting.md#myth-7-betting-systems-beat-the-house) |\n| Choosing \"Your\" Numbers | The ball doesn't know you | [Myth 10](../messaging/myth-busting.md#myth-10-choosing-your-numbers-improves-odds) |\n\n---"
+    }
+  ],
+  "keyTerms": [
+    {
+      "term": "**Inside bet**",
+      "definition": "A bet placed on specific numbers on the inside of the table layout. Higher payouts, lower probability."
+    },
+    {
+      "term": "**Outside bet**",
+      "definition": "A bet placed on large groups (red/black, odd/even, dozens) on the outside of the layout. Lower payouts, higher probability."
+    },
+    {
+      "term": "**Straight up**",
+      "definition": "A bet on a single number. Pays `35:1`."
+    },
+    {
+      "term": "**Zero (0)**",
+      "definition": "The green pocket that gives the house its edge. European wheels have one."
+    },
+    {
+      "term": "**Double zero (00)**",
+      "definition": "The second green pocket on American wheels. Nearly doubles the house edge."
+    },
+    {
+      "term": "**La partage**",
+      "definition": "A French roulette rule: if the ball lands on zero, even-money bets lose only half. Cuts the house edge to `1.35%`."
+    },
+    {
+      "term": "**En prison**",
+      "definition": "A French roulette rule: if the ball lands on zero, even-money bets are \"imprisoned\" — held for the next spin. If your bet wins on the next spin, you get it back (but no winnings). Effectively the same edge reduction as la partage."
+    },
+    {
+      "term": "**Croupier**",
+      "definition": "The dealer at a roulette table. Spins the wheel, calls the result, handles bets and payouts."
+    }
+  ],
+  "quiz": [],
+  "socialSnippets": []
+}

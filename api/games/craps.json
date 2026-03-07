@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "game": "craps",
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "how-to-play/craps.md"
+  },
+  "slug": "craps",
+  "title": "How to Play: Craps",
+  "summary": null,
+  "frontmatter": {
+    "content_type": "game-guide",
+    "title": "How to Play: Craps",
+    "pillar": [
+      "open"
+    ],
+    "tier": 1,
+    "tone": [
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "game_type": [
+      "craps"
+    ],
+    "audience": [
+      "general"
+    ],
+    "channel": [
+      "blog",
+      "social-media",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "odds_format": "american",
+      "currency": "usd",
+      "sports_culture": null,
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Currency: All examples use USD ($5 bet, $10 odds, etc.).\nReplace with local currency and recalculate.\nTable minimums: Vary by market. \"$5 minimum\" is US-centric.\nOdds multiples: 3-4-5x odds is common in the US. Other markets\nmay offer different maximums.\nTerminology: \"Don't pass\" and \"don't come\" are universal.\n\"Crapless craps\" variant exists in some markets.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "heading": "The 30-second version",
+      "content": "> Craps is a dice game where one player (the shooter) rolls two dice. The core bet — the pass line — has a `1.41%` house edge, one of the lowest in the casino. After a point is set, you can place an \"odds bet\" behind your pass line bet. The odds bet pays true odds with `0%` house edge — the only bet in the casino with no built-in margin. Stick to pass line plus odds, and skip the proposition bets in the center of the table (`9–16%+` house edge).\n\n---"
+    },
+    {
+      "heading": "How the game works",
+      "content": "### The basics\n\nCraps is played with two dice. One player — the \"shooter\" — throws the dice. Everyone at the table bets on the outcome. The game moves in rounds with two phases: the come-out roll and the point phase.\n\n### The come-out roll\n\nThe first roll of a new round is called the come-out roll. Three things can happen:\n\n| Result | Numbers | What happens |\n|--------|---------|-------------|\n| **Natural** | `7` or `11` | Pass line wins. Round over. |\n| **Craps** | `2`, `3`, or `12` | Pass line loses. Round over. |\n| **Point** | `4`, `5`, `6`, `8`, `9`, or `10` | That number becomes \"the point.\" The round continues. |\n\n### The point phase\n\nOnce a point is established, the shooter keeps rolling until one of two things happens:\n\n- **Hit the point:** The shooter rolls the point number again. Pass line wins. The round ends and a new come-out roll begins.\n- **Seven out:** The shooter rolls a `7`. Pass line loses. The dice pass to the next shooter.\n\nThat's the entire structure. Come-out roll → point set → roll until point or 7 → repeat.\n\n### Dice combinations\n\nTwo dice produce `36` possible outcomes. The probability of each total:\n\n| Total | Ways to roll it | Probability |\n|-------|----------------|------------|\n| `2` | 1 | `2.78%` |\n| `3` | 2 | `5.56%` |\n| `4` | 3 | `8.33%` |\n| `5` | 4 | `11.11%` |\n| `6` | 5 | `13.89%` |\n| `7` | 6 | `16.67%` |\n| `8` | 5 | `13.89%` |\n| `9` | 4 | `11.11%` |\n| `10` | 3 | `8.33%` |\n| `11` | 2 | `5.56%` |\n| `12` | 1 | `2.78%` |\n\n**Key fact:** `7` is the most common roll. There are 6 ways to make it out of 36 possible combinations. This is why the seven-out ends the round — it's the most likely number.\n\n---"
+    },
+    {
+      "heading": "Bet types",
+      "content": "### Pass line / Don't pass\n\nThe foundation of craps. Most players start (and stay) here.\n\n| Bet | What it means | House edge |\n|-----|--------------|-----------|\n| **Pass line** | Bet with the shooter. Win on come-out 7/11. Lose on 2/3/12. After a point, win if point hits before 7. | `1.41%` |\n| **Don't pass** | Bet against the shooter. Win on come-out 2/3. Push on 12. Lose on 7/11. After a point, win if 7 comes before the point. | `1.36%` |\n\nDon't pass has a slightly lower house edge. Socially, it's \"betting against the table\" — some players avoid it for that reason. Mathematically, it's the better bet.\n\n### Odds bets (free odds)\n\nThe most important bet in craps — and the best bet in the entire casino.\n\nAfter a point is established, you can place an additional bet behind your pass or don't pass bet. This is the odds bet. It pays at **true mathematical odds** with **zero house edge**.\n\n| Point | True odds (pass) | True odds (don't pass) |\n|-------|------------------|----------------------|\n| `4` or `10` | `2:1` | `1:2` |\n| `5` or `9` | `3:2` | `2:3` |\n| `6` or `8` | `6:5` | `5:6` |\n\n**How much can you bet?** Casinos cap odds bets at a multiple of your pass line bet — typically `3x`, `4x`, `5x`, or sometimes `10x` or `100x`. The higher the multiple you're allowed, the lower your effective house edge becomes.\n\n### Come / Don't come\n\nIdentical to pass/don't pass, but placed after a point is already established. The next roll becomes your personal \"come-out roll,\" and if a point is set, you track your own separate point.\n\n| Bet | House edge |\n|-----|-----------|\n| **Come** | `1.41%` |\n| **Don't come** | `1.36%` |\n\nYou can also place odds behind come and don't come bets.\n\n### Place bets\n\nBet that a specific number (`4`, `5`, `6`, `8`, `9`, or `10`) will be rolled before a `7`.\n\n| Number | Payout | House edge |\n|--------|--------|-----------|\n| `6` or `8` | `7:6` | `1.52%` |\n| `5` or `9` | `7:5` | `4.00%` |\n| `4` or `10` | `9:5` | `6.67%` |\n\nPlace `6` and `8` are reasonable bets at `1.52%`. Place `4` and `10` are expensive.\n\n### Proposition bets (the center of the table)\n\nThe flashy bets in the middle of the layout. High payouts, massive house edges.\n\n| Bet | Payout | House edge |\n|-----|--------|-----------|\n| **Any 7** | `4:1` | `16.67%` |\n| **Any craps** (2, 3, or 12) | `7:1` | `11.11%` |\n| **Hard 6 / Hard 8** | `9:1` | `9.09%` |\n| **Hard 4 / Hard 10** | `7:1` | `11.11%` |\n| **Yo (11)** | `15:1` | `11.11%` |\n| **Snake eyes (2) / Boxcars (12)** | `30:1` | `13.89%` |\n\n**Bottom line:** The center of the table is where the casino makes its money on craps. The house edges range from `9%` to nearly `17%`. These bets are entertainment, not strategy.\n\n---"
+    },
+    {
+      "heading": "The math",
+      "content": "### House edge comparison\n\n| Bet | House edge | Verdict |\n|-----|-----------|---------|\n| Odds bet (behind pass/don't pass) | `0%` | The only fair bet in the casino |\n| Don't pass / Don't come | `1.36%` | Best base bet |\n| Pass / Come | `1.41%` | Standard starting bet |\n| Place 6/8 | `1.52%` | Reasonable |\n| Place 5/9 | `4.00%` | Elevated |\n| Place 4/10 | `6.67%` | Expensive |\n| Hard 6/8 | `9.09%` | Skip it |\n| Any craps | `11.11%` | Skip it |\n| Any 7 | `16.67%` | The worst bet on the table |\n\n### Why odds bets matter\n\nThe odds bet is unique: it pays true mathematical odds with no house margin. When you combine a pass line bet with odds, you dilute the house edge.\n\n<!-- ADAPT: currency -->\n| Pass line bet | Odds multiple | Effective house edge |\n|--------------|--------------|---------------------|\n| `$5` | No odds | `1.41%` |\n| `$5` + `$5` odds (1x) | 1x | `0.85%` |\n| `$5` + `$10` odds (2x) | 2x | `0.61%` |\n| `$5` + `$25` odds (5x) | 5x | `0.33%` |\n| `$5` + `$50` odds (10x) | 10x | `0.18%` |\n<!-- /ADAPT -->\n\nThe more you bet in odds (relative to your pass line bet), the closer your effective edge approaches zero. This is why craps with high odds multiples offers some of the best expected value in the casino.\n\n### What this means for your wallet\n\n<!-- ADAPT: currency -->\nWith a pass line bet only, for every `$100` you wager, you'd lose about `$1.41` on average. Add maximum odds at a `5x` table, and that drops to about `$0.33` per `$100`. Compare that to American roulette at `$5.26` per `$100` or slots at `$5–$15+` per `$100`.\n<!-- /ADAPT -->\n\n**Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).\n\n---"
+    },
+    {
+      "heading": "Tips for informed play",
+      "content": "1. **Start with pass line + odds.** This is the bread and butter of craps strategy. The pass line at `1.41%` plus odds at `0%` gives you the best combined edge available.\n2. **Put more of your wager in odds (within your budget).** The more of your total wager you put in odds (vs. the pass line), the lower your effective house edge. If the table allows `5x` or `10x` odds and your budget supports it, shifting more to odds reduces the edge.\n3. **Skip the center of the table.** Proposition bets are where the casino makes its money. Edges of `9–17%` mean you're paying a massive premium for a one-roll thrill.\n4. **Place 6 and 8 if you want more action.** At `1.52%`, they're reasonable additions to pass + odds. Avoid place 4/10 at `6.67%`.\n<!-- ADAPT: currency, framing -->\n5. **Set your budget before you play.** Craps is social and fast-paced. The energy at the table can drive overcommitment. Decide on a session amount and bet size before your first roll.\n<!-- /ADAPT -->\n\n---"
+    },
+    {
+      "heading": "Common myths",
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Dice Control Works | The bumpy rubber walls say otherwise | [Myth 15](../messaging/myth-busting.md#myth-15-dice-control-works) |\n| The Shooter Is Hot | Each roll is 36 independent combinations | [Myth 16](../messaging/myth-busting.md#myth-16-the-shooter-is-hot) |\n| Certain Numbers Are Due | 36 combinations, every single roll | [Myth 17](../messaging/myth-busting.md#myth-17-certain-numbers-are-due) |\n\n---"
+    }
+  ],
+  "keyTerms": [
+    {
+      "term": "**Shooter**",
+      "definition": "The player who rolls the dice. Rotates around the table."
+    },
+    {
+      "term": "**Come-out roll**",
+      "definition": "The first roll of a new round. Determines whether a point is set."
+    },
+    {
+      "term": "**Point**",
+      "definition": "A number (`4`, `5`, `6`, `8`, `9`, or `10`) established on the come-out roll. The shooter tries to hit it again before rolling `7`."
+    },
+    {
+      "term": "**Seven out**",
+      "definition": "Rolling a `7` after a point is established. Pass line loses. Dice pass to the next shooter."
+    },
+    {
+      "term": "**Pass line**",
+      "definition": "The most common bet. Win on come-out `7`/`11`. Lose on `2`/`3`/`12`. After a point, win if point comes before `7`. House edge: `1.41%`."
+    },
+    {
+      "term": "**Don't pass**",
+      "definition": "The opposite of pass. Win on come-out `2`/`3`. Push on `12`. After a point, win if `7` comes before the point. House edge: `1.36%`."
+    },
+    {
+      "term": "**Odds bet**",
+      "definition": "A bet placed behind pass/don't pass after a point is set. Pays true odds with `0%` house edge. The only fair bet in the casino."
+    },
+    {
+      "term": "**Proposition bet**",
+      "definition": "High-payout, high-edge bets in the center of the table (any 7, hardways, etc.). House edge: `9–17%`."
+    },
+    {
+      "term": "**Hardway**",
+      "definition": "Betting that a number will be rolled as a double (e.g., hard 8 = two 4s) before a 7 or the \"easy\" way."
+    },
+    {
+      "term": "**Natural**",
+      "definition": "Rolling `7` or `11` on the come-out roll. Pass line wins immediately."
+    },
+    {
+      "term": "**Craps**",
+      "definition": "Rolling `2`, `3`, or `12` on the come-out roll. Pass line loses immediately. Also the name of the game itself."
+    }
+  ],
+  "quiz": [],
+  "socialSnippets": []
+}
