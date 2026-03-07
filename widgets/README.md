@@ -2,19 +2,20 @@
 
 Embeddable Web Components for the Playbook responsible gambling system. Drop a single `<script>` tag into any page — no framework or build tools required.
 
+> **Regulatory note**: These widgets help operators surface responsible gambling information, but they do not guarantee regulatory compliance. Each jurisdiction has different requirements for helpline display, age verification, self-exclusion, and mandatory disclosures. Operators are responsible for ensuring their implementation meets the specific requirements of every jurisdiction in which they operate.
+
 ## Components
 
 | Component | Tag | Description |
 |-----------|-----|-------------|
 | Helpline | `<playbook-helpline>` | Helpline banner or badge with phone, text, and chat links |
 | Myth Card | `<playbook-myth>` | Random myth-buster card with "Next myth" cycling |
-| Age Gate | `<playbook-age-gate>` | Age verification modal with localStorage persistence |
 | Odds Card | `<playbook-odds>` | Game odds quick reference (house edge, RTP, key facts) |
 
 ## Quick start
 
 ```html
-<!-- Load the bundle (24 KB) -->
+<!-- Load the bundle (~19 KB) -->
 <script src="https://gpconsulting.com/tools/playbook/widgets/playbook-widgets.js"></script>
 
 <!-- Use any component -->
@@ -33,7 +34,7 @@ Embeddable Web Components for the Playbook responsible gambling system. Drop a s
 | `chat-url` | — | Chat support URL |
 | `label` | `Free 24/7 support` | Banner label text |
 | `theme` | `dark` | `dark`, `light`, or `minimal` |
-| `mode` | `banner` | `banner` (full-width) or `badge` (compact) |
+| `mode` | `banner` (full-width) or `badge` (compact) |
 
 ### `<playbook-myth>`
 | Attribute | Default | Description |
@@ -41,14 +42,6 @@ Embeddable Web Components for the Playbook responsible gambling system. Drop a s
 | `api-url` | — | URL to `myths.json` feed |
 | `category` | — | Filter by category (e.g. `slots`) |
 | `myth-id` | — | Show a specific myth by index |
-| `theme` | `dark` | `dark` or `light` |
-
-### `<playbook-age-gate>`
-| Attribute | Default | Description |
-|-----------|---------|-------------|
-| `min-age` | `21` | Minimum age requirement |
-| `redirect` | — | URL to redirect if declined |
-| `program-name` | `Playbook` | Program name in prompt text |
 | `theme` | `dark` | `dark` or `light` |
 
 ### `<playbook-odds>`
@@ -85,13 +78,11 @@ widgets/
   src/                   # Source files (one per component)
     playbook-helpline.js
     playbook-myth.js
-    playbook-age-gate.js
     playbook-odds.js
   dist/                  # Built output (committed for CDN hosting)
     playbook-widgets.js  # Combined bundle
     playbook-helpline.js # Individual components
     playbook-myth.js
-    playbook-age-gate.js
     playbook-odds.js
 ```
 

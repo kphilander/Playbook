@@ -39,6 +39,10 @@ const { messages } = await resp.json();
 const openMessages = messages.filter(m => m.pillar === 'open');
 ```
 
+## Regulatory note
+
+Playbook content is designed to help operators meet common responsible gambling requirements — helpline display, odds transparency, informed-play messaging, and player education. However, **Playbook does not constitute legal or regulatory advice**. Gambling regulations vary significantly by jurisdiction, and requirements change frequently. Operators are solely responsible for ensuring their implementation complies with all applicable laws, licensing conditions, and regulatory guidance in every jurisdiction where they operate. When in doubt, consult your compliance team or legal counsel.
+
 ## License
 
 CC0-1.0 — public domain. Use freely, no attribution required.

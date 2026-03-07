@@ -8,7 +8,6 @@ Source files for Playbook Web Components. Each file defines a single custom elem
 |------|---------------|-------------|
 | [playbook-helpline.js](playbook-helpline.js) | `<playbook-helpline>` | Helpline banner/badge — self-contained, no API fetch needed |
 | [playbook-myth.js](playbook-myth.js) | `<playbook-myth>` | Myth-buster card — fetches from `myths.json` API, cycles randomly |
-| [playbook-age-gate.js](playbook-age-gate.js) | `<playbook-age-gate>` | Age verification modal — localStorage persistence, custom events |
 | [playbook-odds.js](playbook-odds.js) | `<playbook-odds>` | Game odds reference — embedded data for 9 games, no fetch needed |
 
 ## Architecture
@@ -25,7 +24,6 @@ Each component follows the same pattern:
 
 - **Helpline** and **Odds** embed their data directly (no network requests)
 - **Myth** fetches from a JSON API endpoint (configurable via `api-url` attribute)
-- **Age Gate** stores verification state in `localStorage`
 
 ## Editing
 

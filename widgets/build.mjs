@@ -20,7 +20,6 @@ mkdirSync(OUT_DIR, { recursive: true });
 const widgets = [
   'playbook-helpline.js',
   'playbook-myth.js',
-  'playbook-age-gate.js',
   'playbook-odds.js',
 ];
 
