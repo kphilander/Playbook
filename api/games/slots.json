@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "game": "slots",
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "how-to-play/slots.md"
+  },
+  "slug": "slots",
+  "title": "How to Play: Slots",
+  "summary": null,
+  "frontmatter": {
+    "content_type": "game-guide",
+    "title": "How to Play: Slots",
+    "pillar": [
+      "open"
+    ],
+    "tier": 1,
+    "tone": [
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "game_type": [
+      "slots"
+    ],
+    "audience": [
+      "general",
+      "young-adults"
+    ],
+    "channel": [
+      "blog",
+      "social-media",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "odds_format": "american",
+      "currency": "usd",
+      "sports_culture": null,
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Currency: All examples use USD ($100, $0.50/spin, $600/hr).\nReplace with local currency and recalculate round numbers.\nGame naming: \"Slots\" is universal except Australia (\"pokies\").\nUse local term in title and body.\nHumor: \"emotional range of a toaster\" — test for irreverent profiles.\nUnderstated/warm/minimal profiles need rewrites.\nRTP disclosure: Requirements vary. In some markets, RTP must be\ndisplayed prominently. In others, it's not publicly disclosed.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "heading": "The 30-second version",
+      "content": "> Slots are pure chance. You press a button, a random number generator picks the outcome, and the reels display the result. There's no strategy that changes the math. The house edge ranges from `2%` to `15%` depending on the machine. Check the paytable before you play — it takes 30 seconds and tells you everything the machine won't.\n\n---"
+    },
+    {
+      "heading": "How the game works",
+      "content": "### The basics\n\nEvery modern slot machine — whether it's a physical cabinet in a casino or a game on your phone — runs on a **random number generator (RNG)**. The RNG produces a random result the instant you hit spin. The spinning reels are just the show.\n\n### Playing a spin\n\n1. **Choose your bet.** You set two things: how many paylines to activate (some machines let you choose; others fix all lines) and how much to bet per line. Your total bet = lines × bet per line.\n2. **Press spin.** The RNG generates a random number. That number maps to a specific combination of symbols on the reels.\n3. **Reels display the result.** The animation plays out, but the outcome was already decided before the reels started moving.\n4. **Wins are paid automatically.** If the symbols on an active payline match a winning combination listed in the paytable, you get paid. If not, the bet is lost.\n\n### Bonus features\n\nMany modern slots include bonus mechanics that trigger under specific conditions:\n\n- **Free spins** — land a certain number of scatter symbols and you get extra spins at no cost. The game still uses the same RNG.\n- **Bonus rounds** — a separate screen with a pick-a-prize or wheel-spin mechanic. Still RNG. Still random.\n- **Progressive jackpots** — a small percentage of every bet goes into a shared prize pool. The jackpot grows until someone wins it. The odds of hitting a progressive are typically between `1 in 1 million` and `1 in 50 million`.\n\n---"
+    },
+    {
+      "heading": "Bet types",
+      "content": "Slots don't have bet types the way table games do. What you control is the **size** of your bet.\n\n| Setting | What it means | What it affects |\n|---------|--------------|----------------|\n| **Bet per line** | The amount wagered on each active payline | Win size — payouts are multiplied by your bet per line |\n| **Number of lines** | How many paylines are active this spin | Win frequency — more lines means more chances to match, but higher total bet |\n| **Max bet** | Activates all paylines at maximum bet per line | Required for some progressive jackpots — check the paytable |\n<!-- ADAPT: currency -->\n| **Coin denomination** | The base value of each credit (e.g., $0.01, $0.25, $1.00) | Sets the scale of everything — bets, wins, and losses |\n<!-- /ADAPT -->\n\n<!-- ADAPT: currency -->\n**Key point:** Betting more per spin does not improve your odds. The house edge is a percentage — it applies equally whether you bet `$0.25` or `$25`. Bigger bets mean bigger potential wins *and* bigger potential losses at the same rate.\n<!-- /ADAPT -->\n\n---"
+    },
+    {
+      "heading": "The math",
+      "content": "![RTP and volatility compared across slot machine types](diagrams/slots-rtp-volatility.svg)\n\n### House edge and RTP\n\nEvery slot machine has a programmed **return to player (RTP)** — the percentage of all money wagered that the machine pays back to players over its lifetime. The **house edge** is what's left over.\n\n| Metric | Typical range | What it means |\n|--------|--------------|---------------|\n<!-- ADAPT: currency -->\n| **RTP** | `85–98%` | For every `$100` wagered in total, the machine pays back `$85` to `$98` |\n| **House edge** | `2–15%` | The casino's cut — what the machine keeps |\n<!-- /ADAPT -->\n\nMost online slots sit in the `92–97%` RTP range. Physical casino machines tend to run `85–95%`. These numbers are set in the game software and regulated by gaming authorities.\n\n### What this means for your wallet\n\n<!-- ADAPT: currency -->\nA slot with `95%` RTP has a `5%` house edge. For every `$100` you bet over time, you'd lose about `$5` on average. That's the long-run math — any single session can swing wildly in either direction.\n<!-- /ADAPT -->\n\n### Volatility\n\nRTP tells you the long-run average. **Volatility** tells you what the ride feels like.\n\n| Volatility | What it means | Example |\n|-----------|---------------|---------|\n| **Low** | Frequent small wins, fewer dry spells | Steady — your balance changes slowly |\n| **Medium** | Mix of small and medium wins | Balanced — some swings, some stability |\n| **High** | Rare but larger wins, longer losing streaks | Roller coaster — long droughts punctuated by big hits |\n\nTwo machines can have the same `95%` RTP but play completely differently. A low-volatility machine pays out often in small amounts. A high-volatility machine might eat your budget for 50 spins and then pay a large win. Same math, different experience.\n\n**Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).\n\n---"
+    },
+    {
+      "heading": "Tips for informed play",
+      "content": "1. **Check the paytable before you play.** It takes 30 seconds. You'll see the RTP, payline structure, and what triggers bonuses. If a machine doesn't show its RTP, that's worth knowing too.\n2. **Understand what \"max bet required\" means.** Some progressive jackpots only pay if you're betting the maximum. If you're not going to max bet, you may want a non-progressive machine where every bet has the same proportional chance.\n3. **Pick your volatility, not your theme.** Two machines with cartoon themes can play completely differently. Low volatility stretches your session. High volatility creates bigger swings. Neither is better — they're different experiences.\n<!-- ADAPT: currency, framing -->\n4. **Set your budget before you press spin.** Decide what you're willing to spend for the session and stick to it. Slots move fast — a `$0.50` bet every 3 seconds adds up to `$600` per hour.\n<!-- /ADAPT -->\n5. **Know that every spin is independent.** What happened on the last spin — or the last 1,000 spins — has zero effect on the next one. The RNG doesn't keep score.\n\n---"
+    },
+    {
+      "heading": "Common myths",
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| The Hot Streak | Streaks are noise, not signal | [Myth 1](../messaging/myth-busting.md#myth-1-the-hot-streak) |\n| Due for a Win | Machines don't keep score | [Myth 2](../messaging/myth-busting.md#myth-2-due-for-a-win) |\n| The Lucky Machine | Confirmation bias, not loyalty | [Myth 3](../messaging/myth-busting.md#myth-3-the-lucky-machine) |\n| Near Misses Mean You're Close | A loss is a loss | [Myth 4](../messaging/myth-busting.md#myth-4-near-misses-mean-youre-close) |\n| Time of Day Matters | RTP is set in software | [Myth 5](../messaging/myth-busting.md#myth-5-time-of-day-matters) |\n| Higher Bets Improve Odds | House edge is a percentage | [Myth 6](../messaging/myth-busting.md#myth-6-higher-bets-improve-your-odds) |\n\n---"
+    }
+  ],
+  "keyTerms": [
+    {
+      "term": "**RNG** (random number generator)",
+      "definition": "The software that produces a random outcome for every spin. It runs continuously, even when nobody is playing. See [glossary](../brand-book/glossary.md#rng)."
+    },
+    {
+      "term": "**RTP** (return to player)",
+      "definition": "The percentage of total money wagered that a machine pays back over its lifetime. `95%` RTP means a `5%` house edge. See [glossary](../brand-book/glossary.md#rtp)."
+    },
+    {
+      "term": "**Payline**",
+      "definition": "A line across the reels where matching symbols must land to count as a win. Modern slots can have `1` to `1,000+` paylines."
+    },
+    {
+      "term": "**Paytable**",
+      "definition": "The chart that shows every winning combination and its payout. Usually accessible via an info button on the machine."
+    },
+    {
+      "term": "**Scatter**",
+      "definition": "A special symbol that triggers a bonus (usually free spins) regardless of its position on the reels — it doesn't need to land on a payline."
+    },
+    {
+      "term": "**Wild**",
+      "definition": "A symbol that substitutes for other symbols to complete winning combinations. Works like a joker in cards."
+    },
+    {
+      "term": "**Volatility**",
+      "definition": "How a slot's payouts are distributed. Low volatility = frequent small wins. High volatility = rare big wins. Also called variance. See [glossary](../brand-book/glossary.md#volatility)."
+    },
+    {
+      "term": "**Progressive jackpot**",
+      "definition": "A prize pool that grows with every bet placed across linked machines. Resets to a base amount after someone wins."
+    },
+    {
+      "term": "**Free spins**",
+      "definition": "Extra spins awarded during play, usually triggered by landing scatter symbols. You don't pay for these spins, but the game's RNG still determines results."
+    },
+    {
+      "term": "**Multiplier**",
+      "definition": "A feature that multiplies your win by a set factor (e.g., 2x, 5x, 10x). Appears in base games and bonus rounds."
+    }
+  ],
+  "quiz": [],
+  "socialSnippets": []
+}

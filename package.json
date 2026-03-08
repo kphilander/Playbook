@@ -14,7 +14,10 @@
     "build:icons": "node collateral/render/build-icons.mjs",
     "build:deck": "node collateral/render/build-deck.mjs",
     "build:cards": "node collateral/render/render-cards.mjs",
-    "build": "npm run generate && npm run build:logos && npm run build:icons",
+    "build:widgets": "node widgets/build.mjs",
+    "generate:content-api": "node lib/generate-content-api.mjs",
+    "generate:assets": "node lib/generate-asset-manifest.mjs",
+    "build": "npm run generate && npm run build:logos && npm run build:icons && npm run generate:content-api && npm run generate:assets && npm run build:widgets",
     "validate": "node lib/validate-brand.mjs"
   },
   "dependencies": {

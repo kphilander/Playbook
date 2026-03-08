@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "game": "sports-betting",
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "how-to-play/sports-betting.md"
+  },
+  "slug": "sports-betting",
+  "title": "How to Play: Sports Betting",
+  "summary": null,
+  "frontmatter": {
+    "content_type": "game-guide",
+    "title": "How to Play: Sports Betting",
+    "pillar": [
+      "open"
+    ],
+    "tier": 1,
+    "tone": [
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "game_type": [
+      "sports-betting"
+    ],
+    "audience": [
+      "general",
+      "sports-bettors",
+      "young-adults"
+    ],
+    "channel": [
+      "blog",
+      "social-media",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "odds_format": "american",
+      "currency": "usd",
+      "sports_culture": "us-major-leagues",
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "HEAVIEST ADAPTATION NEEDED of all game guides.\nOdds format: American odds (-110, +150) used throughout as primary.\nFor non-US markets, lead with decimal odds and show American\nas a variant. Fractional for UK.\nCurrency: All dollar examples ($100, $110, $150).\nSports culture: Point spreads assume US-style football/basketball.\nReplace with locally relevant sports and bet types.\nProps: \"Total strikeouts by a pitcher\" is MLB-specific.\nTerminology: \"Moneyline\" is US term. UK uses \"match odds.\"\n\"Parlay\" is US; UK/Australia use \"accumulator\" or \"multi.\"\nThe vig/juice concept is universal but naming varies.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "heading": "The 30-second version",
+      "content": "> Sports betting is wagering on the outcome of sporting events. Unlike casino games, knowledge and analysis can inform your bets — but the sportsbook builds in a margin (the vig) on every line. <!-- ADAPT: odds_format, currency -->\nAt standard `-110` odds, you need to win `52.4%` of your bets just to break even.\n<!-- /ADAPT --> The sportsbook's line already accounts for everything you know. Beating it consistently is harder than it looks.\n\n---"
+    },
+    {
+      "heading": "How it works",
+      "content": "### The basics\n\nA sportsbook sets **odds** on sporting events — who will win, by how much, and what the total score might be. You place a bet. If you're right, you get paid based on the odds. If you're wrong, you lose your stake.\n\nThe key difference between sports betting and casino games: **the odds aren't fixed by mathematics**. In roulette, the house edge is baked into the wheel. In sports betting, the odds are set by the sportsbook based on probabilities, market demand, and risk management. The line moves.\n\n### Where the sportsbook makes money\n\nThe sportsbook's profit comes from the **vig** (also called the juice or margin) — a built-in commission on every bet. Here's how it works:\n\n<!-- ADAPT: odds_format, currency -->\nImagine a coin flip. True odds would be `+100` on each side (bet `$100` to win `$100`). But a sportsbook might price both sides at `-110` — meaning you bet `$110` to win `$100`. If the sportsbook takes equal action on both sides, they pay out `$100` to the winner and keep the `$10` difference from the loser. That's the vig.\n<!-- /ADAPT -->\n\nThe vig means **you need to win more than 50% of your bets to profit.** At standard `-110` odds, the break-even rate is `52.4%`.\n\n---"
+    },
+    {
+      "heading": "Reading the odds",
+      "content": "Sports betting uses three odds formats. They all express the same thing differently: how much you win relative to your stake, and the implied probability of the outcome.\n\n<!-- ADAPT: odds_format, currency -->\n### American odds (moneyline)\n\nThe standard format in the US. Uses plus (+) and minus (−) signs.\n\n| Odds | What it means | Example ($100 stake) |\n|------|--------------|---------------------|\n| **−150** (favorite) | Bet `$150` to win `$100` profit | Risk `$150`, get back `$250` total if you win |\n| **+150** (underdog) | Bet `$100` to win `$150` profit | Risk `$100`, get back `$250` total if you win |\n| **−110** (standard vig) | Bet `$110` to win `$100` profit | The most common line — the sportsbook's standard margin |\n| **+100** (even money) | Bet `$100` to win `$100` profit | True coin-flip odds, no built-in margin |\n<!-- /ADAPT -->\n\n**The minus sign** means that team is the favorite — you risk more than you stand to win.\n**The plus sign** means that team is the underdog — you risk less than you stand to win.\n\n### Decimal odds\n\nStandard in Europe, Australia, and most international sportsbooks. The number is your total return per dollar bet (stake included).\n\n| Decimal | American equivalent | $100 bet returns |\n|---------|-------------------|-----------------|\n| `1.50` | `−200` | `$150` (profit: `$50`) |\n| `2.00` | `+100` | `$200` (profit: `$100`) |\n| `3.00` | `+200` | `$300` (profit: `$200`) |\n| `1.91` | `−110` | `$191` (profit: `$91`) |\n\n**How to read it:** Multiply your stake by the decimal. That's your total return. Subtract your stake to get profit.\n\n### Fractional odds\n\nTraditional in the UK and Ireland. Shown as a fraction (e.g., `5/1`, `2/5`).\n\n| Fractional | Decimal | American | Meaning |\n|-----------|---------|----------|---------|\n| `5/1` | `6.00` | `+500` | Win `$5` for every `$1` bet |\n| `2/1` | `3.00` | `+200` | Win `$2` for every `$1` bet |\n| `1/1` (evens) | `2.00` | `+100` | Win `$1` for every `$1` bet |\n| `2/5` | `1.40` | `−250` | Win `$2` for every `$5` bet |\n\n**How to read it:** The first number is your profit, the second is your stake. `5/1` = \"five to one.\"\n\n### Converting odds to implied probability\n\nOdds reflect how likely the sportsbook thinks an outcome is (plus their vig). To find the implied probability:\n\n| American odds | Formula | Example |\n|--------------|---------|---------|\n| Negative (−150) | Odds / (Odds + 100) | 150 / 250 = `60%` |\n| Positive (+200) | 100 / (Odds + 100) | 100 / 300 = `33.3%` |\n\nIf you add up the implied probabilities of all outcomes in a market, the total will be **more than 100%**. The amount over 100% is the sportsbook's margin (the vig).\n\n---"
+    },
+    {
+      "heading": "Bet types",
+      "content": "### Moneyline\n\nThe simplest bet: pick who wins. That's it.\n\n| Example | What it means |\n|---------|--------------|\n| Team A: `−150` | Favored to win. Bet `$150` to win `$100` profit. |\n| Team B: `+130` | Underdog. Bet `$100` to win `$130` profit. |\n\nNo point spread, no score margin — just the winner.\n\n### Point spread\n\nThe sportsbook sets a margin of victory. The favorite has to win by more than the spread; the underdog can lose by less than the spread (or win outright) and still \"cover.\"\n\n| Example | What it means |\n|---------|--------------|\n| Team A: `−6.5` (−110) | Must win by 7+ points to cover |\n| Team B: `+6.5` (−110) | Must lose by 6 or fewer (or win) to cover |\n\nThe half-point (`.5`) eliminates ties. Both sides are typically priced at `−110` — that's where the vig lives.\n\n### Totals (Over/Under)\n\nA bet on the combined score of both teams, not who wins.\n\n| Example | What it means |\n|---------|--------------|\n| Over `48.5` (−110) | You win if the combined score is `49` or more |\n| Under `48.5` (−110) | You win if the combined score is `48` or fewer |\n\n### Parlays\n\nA single bet combining multiple selections. All picks must win for the parlay to pay. The payout increases with each added selection — but so does the difficulty.\n\n| Legs | Approximate payout | Approximate probability (at −110 each) |\n|------|--------------------|-----------------------------------------|\n| `2` | `~2.6:1` | `~1 in 4` |\n| `3` | `~6:1` | `~1 in 8` |\n| `5` | `~25:1` | `~1 in 32` |\n| `10` | `~700:1` | `~1 in 1,024` |\n\n**Key point:** The vig compounds with each leg. A 2-leg parlay has a higher effective house edge than two individual bets. A 10-leg parlay has a massive built-in margin. Parlays are the sportsbook's most profitable product.\n\n### Props (proposition bets)\n\nBets on specific events within a game, not the final outcome.\n\n| Examples |\n|---------|\n<!-- ADAPT: sports_culture -->\n| Player X scores over/under `24.5` points |\n| First team to score |\n| Total strikeouts by a pitcher |\n| Will there be overtime? |\n<!-- /ADAPT -->\n\nProps often carry a wider vig than standard bets because the lines are harder for sportsbooks to set precisely — and for bettors to evaluate.\n\n### Futures\n\nBets on outcomes decided in the future — often weeks or months away.\n\n| Examples |\n|---------|\n| Who will win the championship |\n| Season win totals (over/under) |\n| Award winners (MVP, Rookie of the Year) |\n\nFutures typically carry a large built-in margin because the sportsbook is pricing in uncertainty over a long time horizon. Your money is also locked up until the outcome is decided.\n\n### In-play (live betting)\n\nBets placed after the event has started, with odds that update in real time.\n\n| Key facts |\n|----------|\n| Odds change rapidly — you're betting against algorithms that process data faster than any human |\n| The vig on in-play bets is often wider than pre-game |\n| Speed matters more than analysis — the line moves in seconds |\n\n---"
+    },
+    {
+      "heading": "The math",
+      "content": "![How the vig works — visual breakdown](diagrams/sports-betting-vig-explained.svg)\n\n### The vig in practice\n\n| Standard line | Implied probability (each side) | Combined | Vig |\n|--------------|-------------------------------|----------|-----|\n| Both sides at `−110` | `52.4%` each | `104.8%` | `~4.5%` |\n| Favorite `−150` / Underdog `+130` | `60%` + `43.5%` | `103.5%` | `~3.4%` |\n| Favorite `−200` / Underdog `+170` | `66.7%` + `37%` | `103.7%` | `~3.6%` |\n\nThe combined implied probability always exceeds 100%. The overage is the sportsbook's margin.\n\n### Break-even win rates\n\n| Odds on each bet | Win rate needed to break even |\n|-----------------|-------------------------------|\n| `−110` | `52.4%` |\n| `−120` | `54.5%` |\n| `−150` | `60.0%` |\n| `+100` | `50.0%` |\n| `+150` | `40.0%` |\n\n### What this means for your wallet\n\nAt standard `−110` odds, the vig is about `4.5%`. For every `$110` you bet, you need to win `$100` back plus your stake. Over time, if you win at a 50% rate (coin flip), you'd lose about `$4.50` per `$100` wagered.\n\nProfessional sports bettors — the ones who actually profit long-term — typically hit win rates of `53–56%` on spread bets. That razor-thin margin above `52.4%` is the difference between making money and losing it.\n\n**Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).\n\n---"
+    },
+    {
+      "heading": "Tips for informed play",
+      "content": "1. **Understand the vig before you bet.** At `−110`, you need to win `52.4%` of your bets to break even. Know the break-even rate for any odds you're taking.\n2. **Compare odds across sportsbooks.** Lines vary between platforms. Shopping for the best line is the easiest way to reduce the vig's impact. A half-point or ten cents of odds difference adds up over hundreds of bets.\n3. **Know what a parlay actually costs you.** The vig compounds with each leg. A 5-leg parlay doesn't just require getting 5 things right — it carries a significantly higher effective margin than 5 individual bets. Parlays are entertainment, not strategy.\n4. **Set your bankroll and bet size.** A common guideline: wager `1–3%` of your total bankroll per bet. This gives you enough bets to let your edge (if you have one) play out, and protects against losing streaks.\n5. **The line already knows what you know.** Sportsbook odds are set using vast amounts of data, modeling, and market efficiency. Your knowledge of the sport is priced in. Consistently beating the line requires finding inefficiencies the market has missed — which is genuinely difficult.\n\n---"
+    },
+    {
+      "heading": "Common myths",
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Knowing the Sport = Winning | The line already knows | [Myth 11](../messaging/myth-busting.md#myth-11-knowing-the-sport-means-youll-win) |\n| Parlays Are Smart | The vig compounds per leg | [Myth 12](../messaging/myth-busting.md#myth-12-parlays-are-a-smart-strategy) |\n| Following Tipsters | Survivorship bias | [Myth 13](../messaging/myth-busting.md#myth-13-following-tipsters-guarantees-profit) |\n| In-Play Edge | Algorithms are faster than you | [Myth 14](../messaging/myth-busting.md#myth-14-in-play-betting-gives-you-an-edge) |\n\n---"
+    }
+  ],
+  "keyTerms": [
+    {
+      "term": "**Moneyline**",
+      "definition": "A bet on which team or player wins, with no point spread. Payouts vary based on each side's odds."
+    },
+    {
+      "term": "**Spread** (point spread)",
+      "definition": "A margin of victory set by the sportsbook. The favorite must win by more than the spread to cover. See [glossary](../brand-book/glossary.md#spread)."
+    },
+    {
+      "term": "**Vig** (vigorish / juice)",
+      "definition": "The sportsbook's built-in commission on every bet. At `−110` odds, the vig is about `4.5%`. See [glossary](../brand-book/glossary.md#bookmaker-margin-vig--juice)."
+    },
+    {
+      "term": "**Parlay** (accumulator)",
+      "definition": "A single bet combining multiple selections. All must win. Higher payouts but the vig compounds per leg. See [glossary](../brand-book/glossary.md#accumulator-acca)."
+    },
+    {
+      "term": "**Over/Under** (total)",
+      "definition": "A bet on the combined score of both teams. You bet whether the total will be over or under the sportsbook's line."
+    },
+    {
+      "term": "**Prop** (proposition bet)",
+      "definition": "A bet on a specific event within a game (e.g., player stats, first scorer), not the final result."
+    },
+    {
+      "term": "**Futures**",
+      "definition": "Bets on outcomes decided weeks or months later (e.g., championship winner). Money is locked until resolved."
+    },
+    {
+      "term": "**In-play** (live betting)",
+      "definition": "Betting after the event has started, with odds that update in real time."
+    },
+    {
+      "term": "**Line**",
+      "definition": "The odds or point spread set by the sportsbook. \"The line on the game\" = the current odds and spread."
+    },
+    {
+      "term": "**Implied probability**",
+      "definition": "The likelihood of an outcome as suggested by the odds. Convert odds to a percentage to see what the sportsbook \"thinks\" will happen."
+    },
+    {
+      "term": "**Handle**",
+      "definition": "The total amount of money wagered on a market. Higher handle typically means tighter, more efficient lines."
+    },
+    {
+      "term": "**Sharp**",
+      "definition": "A professional or highly informed bettor. When sharps move money, lines often adjust."
+    }
+  ],
+  "quiz": [],
+  "socialSnippets": []
+}
