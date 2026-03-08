@@ -270,19 +270,6 @@ export default function VideoPokerPage() {
           The game where your choices change the math. Five cards, your decisions, and why the paytable is everything.
         </p>
 
-        <div style={{
-          display: 'inline-flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center',
-        }}>
-          <span style={{ padding: '6px 14px', borderRadius: 6, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: colors.neutral300, fontFamily: fonts.heading, fontWeight: 600 }}>
-            Pillar: Open
-          </span>
-          <span style={{ padding: '6px 14px', borderRadius: 6, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: colors.neutral300, fontFamily: fonts.heading, fontWeight: 600 }}>
-            Grade 6-8 reading level
-          </span>
-          <span style={{ padding: '6px 14px', borderRadius: 6, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: colors.neutral300, fontFamily: fonts.heading, fontWeight: 600 }}>
-            7 min read
-          </span>
-        </div>
       </section>
 
       {/* ─── TL;DR ─── */}

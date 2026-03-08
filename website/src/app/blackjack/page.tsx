@@ -233,15 +233,6 @@ export default function BlackjackPage() {
           The rules, the decisions, and why basic strategy is the difference between the best odds in the casino and average ones.
         </p>
 
-        <div style={{ display: 'inline-flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
-          {['Pillar: Open', 'Grade 6-8 reading level', '6 min read'].map(tag => (
-            <span key={tag} style={{
-              padding: '6px 14px', borderRadius: 6, background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: colors.neutral300,
-              fontFamily: fonts.heading, fontWeight: 600,
-            }}>{tag}</span>
-          ))}
-        </div>
       </section>
 
       {/* ─── TL;DR ─── */}

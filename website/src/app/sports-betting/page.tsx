@@ -237,15 +237,6 @@ export default function SportsBettingPage() {
           How odds work, what the bet types mean, and where the sportsbook makes its money. Everything you need before you place a bet.
         </p>
 
-        <div style={{ display: 'inline-flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
-          {['Pillar: Open', 'Grade 6-8 reading level', '7 min read'].map(tag => (
-            <span key={tag} style={{
-              padding: '6px 14px', borderRadius: 6, background: 'rgba(255,255,255,0.04)',
-              border: '1px solid rgba(255,255,255,0.08)', fontSize: 12, color: colors.neutral300,
-              fontFamily: fonts.heading, fontWeight: 600,
-            }}>{tag}</span>
-          ))}
-        </div>
       </section>
 
       {/* ─── TL;DR ─── */}
