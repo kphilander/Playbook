@@ -712,24 +712,54 @@ body {
 .rg-guide-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 18px;
   font-family: var(--rg-font-heading);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--rg-secondary-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--rg-secondary);
+  text-decoration: none;
+  border: 2px solid var(--rg-secondary);
+  border-radius: 999px;
+  background: transparent;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.01em;
+}
+.rg-guide-link:hover {
+  background: var(--rg-secondary);
+  color: var(--rg-primary-dark);
+  box-shadow: 0 4px 12px rgba(0,212,170,0.25);
   text-decoration: none;
 }
-.rg-guide-link:hover { color: var(--rg-secondary); text-decoration: underline; }
-.rg-guide-link svg { width: 16px; height: 16px; }
+.rg-guide-link:focus-visible {
+  outline: 2px solid var(--rg-secondary);
+  outline-offset: 2px;
+}
+.rg-guide-link svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-/* === Tier 2 Overrides (Break / Support — constrained palette) === */
-.rg-section-tier2 { background: var(--rg-surface); color: var(--rg-text-dark); }
+/* === Tier 2 Overrides (Break / Support — constrained palette, calmer register) === */
+.rg-section-tier2 {
+  background: var(--rg-surface);
+  color: var(--rg-text-dark);
+  padding: 100px 0;
+}
+.rg-section-tier2 .rg-container {
+  max-width: 720px;
+}
 .rg-section-tier2 .rg-accent-line {
   background: var(--rg-secondary);
   height: 3px;
 }
-.rg-section-tier2 .rg-section-header p { color: var(--rg-text-dark-muted); }
+.rg-section-tier2 .rg-section-header h2 {
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+}
+.rg-section-tier2 .rg-section-header p {
+  color: var(--rg-text-dark-muted);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
 .rg-section-tier2 .rg-btn-primary {
   background: var(--rg-secondary);
   color: var(--rg-primary-dark);
@@ -745,17 +775,26 @@ body {
 .rg-section-tier2 .rg-btn-ghost-light:hover {
   background: rgba(0,212,170,0.06);
 }
+.rg-section-tier2.rg-section-tier2-alt {
+  background: var(--rg-surface-alt);
+}
 .rg-section-tier2 .rg-support-normalizer {
   color: var(--rg-text-dark-muted);
   font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
 .rg-section-tier2 .rg-support-card {
-  background: var(--rg-surface-alt);
+  background: var(--rg-surface);
   border: 1px solid var(--rg-divider-light);
 }
 .rg-section-tier2 .rg-support-card:hover { border-color: var(--rg-secondary); }
 .rg-section-tier2 .rg-support-card h3 { color: var(--rg-text-dark); }
 .rg-section-tier2 .rg-support-card p { color: var(--rg-text-dark-muted); }
+.rg-section-tier2 .rg-break-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
 
 /* === Term Tooltips === */
 .rg-term {
@@ -1175,8 +1214,8 @@ body {
   </div>
 </section>
 
-<!-- Section: Talk to Someone (Tier 2 — constrained palette) -->
-<section class="rg-section rg-section-tier2" id="support">
+<!-- Section: Talk to Someone (Tier 2 — constrained palette, alt surface) -->
+<section class="rg-section rg-section-tier2 rg-section-tier2-alt" id="support">
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>

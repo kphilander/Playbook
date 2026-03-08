@@ -91,9 +91,9 @@ class PlaybookHelpline extends HTMLElement {
       <div class="helpline" role="complementary" aria-label="Support resources">
         <span class="label">${escapeHtml(label)}</span>
         <div class="contacts">
-          <a href="tel:${number.replace(/[^+\d]/g, '')}" aria-label="Call ${number}">📞 ${escapeHtml(number)}</a>
-          ${textNumber ? `<span class="sep">|</span><a href="sms:${textNumber}" aria-label="Text ${textNumber}">💬 Text ${escapeHtml(textNumber)}</a>` : ''}
-          ${chatUrl ? `<span class="sep">|</span><a href="${escapeHtml(chatUrl)}" target="_blank" rel="noopener" aria-label="Live chat support">💻 Live Chat</a>` : ''}
+          <a href="tel:${number.replace(/[^+\d]/g, '')}" aria-label="Call ${number}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.4 2.1L8 9.7a16 16 0 0 0 6.3 6.3l1.3-1.4a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.7 2z"/></svg>${escapeHtml(number)}</a>
+          ${textNumber ? `<span class="sep">|</span><a href="sms:${textNumber}" aria-label="Text ${textNumber}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text ${escapeHtml(textNumber)}</a>` : ''}
+          ${chatUrl ? `<span class="sep">|</span><a href="${escapeHtml(chatUrl)}" target="_blank" rel="noopener" aria-label="Live chat support"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Live Chat</a>` : ''}
         </div>
       </div>
     `;
