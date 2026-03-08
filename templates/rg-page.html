@@ -398,12 +398,12 @@ body {
   gap: 20px;
   min-height: 100px;
 }
-.rg-odds-grid playbook-odds {
+.rg-odds-item playbook-odds {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.4s var(--rg-reveal-ease), transform 0.4s var(--rg-reveal-ease);
 }
-.rg-odds-grid playbook-odds.shown {
+.rg-odds-item playbook-odds.shown {
   opacity: 1;
   transform: scale(1);
 }
@@ -703,6 +703,90 @@ body {
   line-height: 1.5;
 }
 
+/* === Brand SVG Icons === */
+.rg-tool-icon svg, .rg-break-card-icon svg { width: 22px; height: 22px; color: inherit; }
+.rg-game-chip svg { width: 18px; height: 18px; }
+.rg-game-chip[aria-checked="true"] svg { color: var(--rg-primary-dark); }
+
+/* === Guide Cards === */
+.rg-guide-card {
+  background: var(--rg-surface);
+  border: 1px solid var(--rg-divider-light);
+  border-top: 3px solid var(--rg-secondary);
+  border-radius: var(--rg-radius-sm);
+  padding: 20px 24px;
+  margin-top: 12px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+.rg-guide-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--rg-font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--rg-text-dark);
+  margin-bottom: 12px;
+}
+.rg-guide-header svg { width: 20px; height: 20px; color: var(--rg-secondary-dark); flex-shrink: 0; }
+.rg-guide-summary {
+  color: var(--rg-text-dark-muted);
+  margin-bottom: 16px;
+}
+.rg-guide-summary blockquote {
+  border-left: 3px solid var(--rg-secondary);
+  padding-left: 16px;
+  margin: 0;
+  color: var(--rg-text-dark);
+}
+.rg-guide-summary code {
+  font-family: var(--rg-font-mono);
+  background: rgba(0,212,170,0.08);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: var(--rg-secondary-dark);
+}
+.rg-guide-tips { margin-bottom: 16px; }
+.rg-guide-tips strong { color: var(--rg-text-dark); }
+.rg-guide-tips ul { margin: 8px 0 0 20px; color: var(--rg-text-dark-muted); }
+.rg-guide-tips li { margin-bottom: 4px; }
+
+/* === Term Tooltips === */
+.rg-term {
+  border-bottom: 1px dashed var(--rg-secondary);
+  cursor: help;
+  position: relative;
+}
+.rg-tooltip {
+  position: absolute;
+  background: var(--rg-primary);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-family: var(--rg-font-body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 280px;
+  z-index: 150;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.rg-tooltip.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.rg-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--rg-primary);
+}
+
 /* === Progress Ring === */
 .rg-progress-ring {
   position: fixed;
@@ -789,6 +873,74 @@ body {
 </style>
 </head>
 <body>
+
+<!-- Playbook Brand Icon Sprite Sheet -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="pb-icon-slots" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/></g>
+    <g stroke-width="1"><rect x="5.5" y="7" width="3.5" height="6" rx="1"/><rect x="10.25" y="7" width="3.5" height="6" rx="1"/><rect x="15" y="7" width="3.5" height="6" rx="1"/><line x1="22" y1="7" x2="22" y2="11"/><circle cx="22" cy="6.5" r="1"/><line x1="5" y1="16" x2="19" y2="16"/></g>
+  </symbol>
+  <symbol id="pb-icon-cards" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><rect x="3" y="3" width="11" height="15" rx="2"/><rect x="8" y="6" width="11" height="15" rx="2"/></g>
+    <g stroke-width="1"><path d="M13.5 11.5c.8-1.5 2.5-1.5 2.5 0s-2.5 2.5-2.5 2.5-2.5-1-2.5-2.5 1.7-1.5 2.5 0z"/></g>
+  </symbol>
+  <symbol id="pb-icon-roulette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></g>
+    <g stroke-width="1"><line x1="12" y1="3" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="21"/><line x1="3" y1="12" x2="8" y2="12"/><line x1="16" y1="12" x2="21" y2="12"/><line x1="5.6" y1="5.6" x2="9.2" y2="9.2"/><line x1="14.8" y1="14.8" x2="18.4" y2="18.4"/><line x1="18.4" y1="5.6" x2="14.8" y2="9.2"/><line x1="5.6" y1="18.4" x2="9.2" y2="14.8"/><circle cx="17" cy="5.5" r="1" fill="currentColor" stroke="none"/><path d="M12 1.5l-1.2 2h2.4z" fill="currentColor" stroke="none"/></g>
+  </symbol>
+  <symbol id="pb-icon-sports" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="12" r="9"/></g>
+    <g stroke-width="1"><line x1="3" y1="12" x2="21" y2="12"/><path d="M9 3.5Q11 12 9 20.5"/><path d="M15 3.5Q13 12 15 20.5"/></g>
+  </symbol>
+  <symbol id="pb-icon-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><path d="M3 16a9 9 0 0 1 18 0"/><line x1="3" y1="16" x2="21" y2="16"/><path d="M3 16v3a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/></g>
+    <g stroke-width="1"><circle cx="12" cy="8.5" r="1" fill="currentColor" stroke="none"/><circle cx="6" cy="13.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="9.5" cy="10.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="14.5" cy="10.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="18" cy="13.5" r="0.75" fill="currentColor" stroke="none"/></g>
+  </symbol>
+  <symbol id="pb-icon-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></g>
+    <g stroke-width="1"><circle cx="6.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="19.5" cy="15.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="15.5" cy="19.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="19.5" cy="19.5" r="0.75" fill="currentColor" stroke="none"/></g>
+  </symbol>
+  <symbol id="pb-icon-lottery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3a2 2 0 0 0 0-4V7z"/></g>
+    <g stroke-width="1"><line x1="9" y1="5" x2="9" y2="7" stroke-dasharray="2 1.5"/><line x1="9" y1="10" x2="9" y2="14" stroke-dasharray="2 1.5"/><line x1="9" y1="17" x2="9" y2="19" stroke-dasharray="2 1.5"/><path d="M15 9l1 2h2l-1.5 1.5.5 2-2-1-2 1 .5-2L12 11h2z"/></g>
+  </symbol>
+  <symbol id="pb-icon-budget" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="12" r="9"/></g>
+    <g stroke-width="1"><path d="M12 6v12"/><path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2 3 2.5 3 1.1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"/></g>
+  </symbol>
+  <symbol id="pb-icon-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="13" r="8"/></g>
+    <g stroke-width="1"><polyline points="12 9 12 13 15 15"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="9" y1="2" x2="15" y2="2"/></g>
+  </symbol>
+  <symbol id="pb-icon-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><line x1="4" y1="4" x2="4" y2="20"/><line x1="4" y1="20" x2="20" y2="20"/></g>
+    <g stroke-width="1"><line x1="8" y1="20" x2="8" y2="12"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="16" y1="20" x2="16" y2="14"/></g>
+  </symbol>
+  <symbol id="pb-icon-limit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><path d="M4.2 16.5A9 9 0 0 1 12 3a9 9 0 0 1 7.8 13.5"/></g>
+    <g stroke-width="1"><line x1="12" y1="12" x2="16.5" y2="7.5"/><circle cx="12" cy="12" r="1"/><line x1="5.5" y1="16" x2="6.5" y2="15"/><line x1="4.5" y1="12" x2="5.5" y2="12"/><line x1="6" y1="8" x2="7" y2="8.5"/><line x1="9" y1="5.5" x2="9.5" y2="6.5"/><line x1="14.5" y1="5.5" x2="14" y2="6.5"/><line x1="17.5" y1="8" x2="17" y2="8.5"/><line x1="19.5" y1="12" x2="18.5" y2="12"/><line x1="18.5" y1="16" x2="17.5" y2="15"/></g>
+  </symbol>
+  <symbol id="pb-icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></g>
+    <g stroke-width="1"><path d="M13.7 21a2 2 0 0 1-3.4 0"/></g>
+  </symbol>
+  <symbol id="pb-icon-edge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><rect x="3" y="5" width="7" height="15" rx="1.5"/><rect x="14" y="10" width="7" height="10" rx="1.5"/></g>
+    <g stroke-width="1"><line x1="2" y1="20" x2="22" y2="20"/><line x1="5" y1="9" x2="8" y2="9"/><line x1="5" y1="13" x2="8" y2="13"/><line x1="16" y1="14" x2="19" y2="14"/></g>
+  </symbol>
+  <symbol id="pb-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g>
+    <g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g>
+  </symbol>
+  <symbol id="pb-icon-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="12" r="9"/></g>
+    <g stroke-width="1"><line x1="12" y1="7" x2="12" y2="17"/><line x1="7" y1="12" x2="17" y2="12"/></g>
+  </symbol>
+  <symbol id="pb-icon-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="12" r="9"/></g>
+    <g stroke-width="1"><circle cx="12" cy="8" r="0.5" fill="currentColor" stroke="none"/><line x1="12" y1="11" x2="12" y2="16"/></g>
+  </symbol>
+</svg>
 
 <!-- Persistent Helpline Strip -->
 <div class="rg-helpline-strip">
@@ -888,7 +1040,7 @@ body {
 
       <div class="rg-tool-card rg-reveal" aria-expanded="false">
         <button class="rg-tool-toggle" aria-controls="tool1">
-          <div class="rg-tool-icon">&#x1F4B0;</div>
+          <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-budget"/></svg></div>
           <div class="rg-tool-info">
             <div class="rg-tool-name">Budget lock</div>
             <div class="rg-tool-hook">Set your entertainment spend before you start.</div>
@@ -903,7 +1055,7 @@ body {
 
       <div class="rg-tool-card rg-reveal" aria-expanded="false">
         <button class="rg-tool-toggle" aria-controls="tool2">
-          <div class="rg-tool-icon">&#x23F1;</div>
+          <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-timer"/></svg></div>
           <div class="rg-tool-info">
             <div class="rg-tool-name">Session timer</div>
             <div class="rg-tool-hook">Get a nudge when your chosen time is up.</div>
@@ -918,7 +1070,7 @@ body {
 
       <div class="rg-tool-card rg-reveal" aria-expanded="false">
         <button class="rg-tool-toggle" aria-controls="tool3">
-          <div class="rg-tool-icon">&#x1F4CA;</div>
+          <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-activity"/></svg></div>
           <div class="rg-tool-info">
             <div class="rg-tool-name">Play dashboard</div>
             <div class="rg-tool-hook">Full visibility into your play. No surprises.</div>
@@ -933,7 +1085,7 @@ body {
 
       <div class="rg-tool-card rg-reveal" aria-expanded="false">
         <button class="rg-tool-toggle" aria-controls="tool4">
-          <div class="rg-tool-icon">&#x1F6E1;</div>
+          <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-limit"/></svg></div>
           <div class="rg-tool-info">
             <div class="rg-tool-name">Safety net</div>
             <div class="rg-tool-hook">Set a floor. If you hit it, play pauses.</div>
@@ -948,7 +1100,7 @@ body {
 
       <div class="rg-tool-card rg-reveal" aria-expanded="false">
         <button class="rg-tool-toggle" aria-controls="tool5">
-          <div class="rg-tool-icon">&#x1F4AC;</div>
+          <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-bell"/></svg></div>
           <div class="rg-tool-info">
             <div class="rg-tool-name">Reality check</div>
             <div class="rg-tool-hook">Quick updates on time and spend while you play.</div>
@@ -963,7 +1115,7 @@ body {
 
       <div class="rg-tool-card rg-reveal" aria-expanded="false">
         <button class="rg-tool-toggle" aria-controls="tool6">
-          <div class="rg-tool-icon">&#x1F9EE;</div>
+          <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-edge"/></svg></div>
           <div class="rg-tool-info">
             <div class="rg-tool-name">Budget planner</div>
             <div class="rg-tool-hook">Do the math first, play after.</div>
@@ -991,30 +1143,30 @@ body {
       <div class="rg-accent-line"></div>
       <div class="rg-label">Your Call</div>
       <h2>Need some time away? It's one click.</h2>
-      <p>If you want a break &mdash; for any reason, for any length &mdash; self-exclusion lets you step away on your terms. No forms. No questions asked.</p>
+      <p>If you want a break &mdash; for any reason, for any length &mdash; you can step away on your terms. No forms. No questions asked.</p>
     </div>
 
     <div class="rg-break-grid rg-stagger">
       <div class="rg-break-card rg-reveal">
-        <div class="rg-break-card-icon">&#x1F4C5;</div>
+        <div class="rg-break-card-icon"><svg width="24" height="24"><use href="#pb-icon-timer"/></svg></div>
         <h3>Choose your timeframe</h3>
         <p>Options range from a few months to permanent. Pick what feels right. You can always revisit later.</p>
       </div>
       <div class="rg-break-card rg-reveal">
-        <div class="rg-break-card-icon">&#x23F8;</div>
+        <div class="rg-break-card-icon"><svg width="24" height="24"><use href="#pb-icon-check"/></svg></div>
         <h3>Everything pauses</h3>
         <p>Your account pauses. Marketing stops. No deposits, no bets. A clean break from play while you want it.</p>
       </div>
       <div class="rg-break-card rg-reveal">
-        <div class="rg-break-card-icon">&#x1F91D;</div>
+        <div class="rg-break-card-icon"><svg width="24" height="24"><use href="#pb-icon-help"/></svg></div>
         <h3>You're not alone</h3>
         <p>Support stays available throughout. Helplines, chat, counseling &mdash; none of that goes away when you take a break.</p>
       </div>
     </div>
 
     <div class="rg-break-ctas rg-reveal">
-      <a href="{{SELF_EXCLUSION_URL}}" class="rg-btn rg-btn-primary">Start self-exclusion &rarr;</a>
-      <a href="{{SUPPORT_ORG_URL}}" class="rg-btn rg-btn-ghost-light">{{SELF_EXCLUSION_NAME}} &rarr;</a>
+      <a href="{{SELF_EXCLUSION_URL}}" class="rg-btn rg-btn-primary">Take a break &rarr;</a>
+      <a href="{{SELF_EXCLUSION_URL}}" class="rg-btn rg-btn-ghost-light">{{SELF_EXCLUSION_NAME}} &rarr;</a>
     </div>
   </div>
 </section>
@@ -1100,16 +1252,20 @@ body {
 
   // ========== Game data for insight calculations ==========
   var GAMES = {
-    slots:           { name: 'Slots',          icon: '\uD83C\uDFB0', edgeLow: 2,    edgeHigh: 15,  edgeMid: 7 },
-    blackjack:       { name: 'Blackjack',      icon: '\uD83C\uDCCF', edgeLow: 0.5,  edgeHigh: 2,   edgeMid: 0.5 },
-    roulette:        { name: 'Roulette',       icon: '\uD83C\uDFAF', edgeLow: 2.7,  edgeHigh: 5.3, edgeMid: 5.26 },
-    'sports-betting':{ name: 'Sports Betting', icon: '\u26BD',       edgeLow: 4,    edgeHigh: 10,  edgeMid: 5 },
-    baccarat:        { name: 'Baccarat',       icon: '\uD83C\uDC04', edgeLow: 1.06, edgeHigh: 14.4,edgeMid: 1.06 },
-    'video-poker':   { name: 'Video Poker',    icon: '\uD83C\uDCCE', edgeLow: 0.5,  edgeHigh: 5,   edgeMid: 0.5 },
-    craps:           { name: 'Craps',          icon: '\uD83C\uDFB2', edgeLow: 1.4,  edgeHigh: 16.7,edgeMid: 1.41 },
-    lottery:         { name: 'Lottery',         icon: '\uD83C\uDFAB', edgeLow: 40,   edgeHigh: 55,  edgeMid: 50 },
-    bingo:           { name: 'Bingo',          icon: '\uD83D\uDD22', edgeLow: 5,    edgeHigh: 25,  edgeMid: 10 }
+    slots:           { name: 'Slots',          icon: 'slots',    edgeLow: 2,    edgeHigh: 15,  edgeMid: 7 },
+    blackjack:       { name: 'Blackjack',      icon: 'cards',    edgeLow: 0.5,  edgeHigh: 2,   edgeMid: 0.5 },
+    roulette:        { name: 'Roulette',       icon: 'roulette', edgeLow: 2.7,  edgeHigh: 5.3, edgeMid: 5.26 },
+    'sports-betting':{ name: 'Sports Betting', icon: 'sports',   edgeLow: 4,    edgeHigh: 10,  edgeMid: 5 },
+    baccarat:        { name: 'Baccarat',       icon: 'table',    edgeLow: 1.06, edgeHigh: 14.4,edgeMid: 1.06 },
+    'video-poker':   { name: 'Video Poker',    icon: 'cards',    edgeLow: 0.5,  edgeHigh: 5,   edgeMid: 0.5 },
+    craps:           { name: 'Craps',          icon: 'dice',     edgeLow: 1.4,  edgeHigh: 16.7,edgeMid: 1.41 },
+    lottery:         { name: 'Lottery',         icon: 'lottery',  edgeLow: 40,   edgeHigh: 55,  edgeMid: 50 },
+    bingo:           { name: 'Bingo',          icon: 'dice',     edgeLow: 5,    edgeHigh: 25,  edgeMid: 10 }
   };
+
+  function gameIcon(slug) {
+    return '<svg width="18" height="18"><use href="#pb-icon-' + slug + '"/></svg>';
+  }
 
   // ========== ScrollReveal ==========
   var ScrollReveal = {
@@ -1243,6 +1399,195 @@ body {
     }
   };
 
+  // ========== Term Tooltips ==========
+  var TermTooltips = {
+    baseTerms: {
+      'house edge': 'The mathematical advantage the casino has over the player, expressed as a percentage. A 5% house edge means the casino expects to keep $5 of every $100 wagered over time.',
+      'rtp': 'Return to Player \u2014 the percentage of wagered money a game returns to players over time. An RTP of 96% means the game returns $96 for every $100 wagered on average.',
+      'rng': 'Random Number Generator \u2014 software that ensures every spin, hand, or draw is completely independent and random.',
+      'bankroll': 'The amount of money a player has set aside for gambling \u2014 like an entertainment budget.',
+      'volatility': 'How much a game\u2019s outcomes swing in the short term. High volatility = bigger wins and losses, less frequent payouts.',
+      'expected value': 'The mathematical average outcome of a bet if placed infinite times. A negative EV means the house has an edge.',
+      'paytable': 'A chart showing the payouts for each winning combination on a slot or video poker game.',
+      'wagering requirement': 'The number of times a bonus must be wagered before it can be withdrawn as cash.',
+      'deposit limit': 'A maximum amount you can deposit into your account over a set period. You set the number.',
+      'parlay': 'A single bet combining multiple selections. All selections must win for the bet to pay out.',
+      'tilt': 'A state of emotional frustration that leads to poor decision-making \u2014 when emotion takes over from math.',
+      'cool-off period': 'A short-term voluntary break from gambling, typically 24 hours to 30 days.'
+    },
+    activeTerms: {},
+    tooltipEl: null,
+    hoverTimer: null,
+
+    init: function() {
+      this.activeTerms = Object.assign({}, this.baseTerms);
+      this.tooltipEl = document.createElement('div');
+      this.tooltipEl.className = 'rg-tooltip';
+      this.tooltipEl.setAttribute('role', 'tooltip');
+      document.body.appendChild(this.tooltipEl);
+
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.rg-term') && !e.target.closest('.rg-tooltip')) {
+          TermTooltips.hide();
+        }
+      });
+    },
+
+    mergeTerms: function(keyTerms) {
+      if (!keyTerms || !keyTerms.length) return;
+      keyTerms.forEach(function(kt) {
+        var term = kt.term.replace(/\*\*/g, '').toLowerCase();
+        var def = kt.definition.replace(/\*\*/g, '').replace(/`/g, '');
+        if (!TermTooltips.activeTerms[term]) {
+          TermTooltips.activeTerms[term] = def;
+        }
+      });
+    },
+
+    annotate: function(container) {
+      if (!container) return;
+      var terms = Object.keys(this.activeTerms);
+      terms.sort(function(a, b) { return b.length - a.length; });
+
+      var annotated = {};
+      var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null, false);
+      var textNodes = [];
+      while (walker.nextNode()) {
+        var parent = walker.currentNode.parentNode;
+        if (parent && (parent.tagName === 'A' || parent.tagName === 'BUTTON' ||
+            parent.tagName === 'H1' || parent.tagName === 'H2' || parent.tagName === 'H3' ||
+            parent.classList.contains('rg-term') || parent.closest('.rg-term'))) continue;
+        textNodes.push(walker.currentNode);
+      }
+
+      textNodes.forEach(function(node) {
+        var text = node.textContent;
+        for (var t = 0; t < terms.length; t++) {
+          var term = terms[t];
+          if (annotated[term]) continue;
+          var regex = new RegExp('\\b(' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')\\b', 'i');
+          var match = text.match(regex);
+          if (match) {
+            var span = document.createElement('span');
+            span.className = 'rg-term';
+            span.setAttribute('data-def', TermTooltips.activeTerms[term]);
+            span.setAttribute('tabindex', '0');
+            span.textContent = match[1];
+
+            var before = document.createTextNode(text.substring(0, match.index));
+            var after = document.createTextNode(text.substring(match.index + match[1].length));
+
+            var parent = node.parentNode;
+            parent.insertBefore(before, node);
+            parent.insertBefore(span, node);
+            parent.insertBefore(after, node);
+            parent.removeChild(node);
+
+            span.addEventListener('mouseenter', function() {
+              var el = this;
+              TermTooltips.hoverTimer = setTimeout(function() { TermTooltips.show(el); }, 200);
+            });
+            span.addEventListener('mouseleave', function() {
+              clearTimeout(TermTooltips.hoverTimer);
+              TermTooltips.hide();
+            });
+            span.addEventListener('click', function(e) {
+              e.preventDefault();
+              TermTooltips.show(this);
+            });
+            span.addEventListener('focus', function() { TermTooltips.show(this); });
+            span.addEventListener('blur', function() { TermTooltips.hide(); });
+
+            annotated[term] = true;
+            break;
+          }
+        }
+      });
+    },
+
+    show: function(el) {
+      var def = el.getAttribute('data-def');
+      this.tooltipEl.textContent = def;
+      this.tooltipEl.classList.add('visible');
+
+      var rect = el.getBoundingClientRect();
+      var tipRect = this.tooltipEl.getBoundingClientRect();
+      var left = rect.left + (rect.width / 2) - (tipRect.width / 2);
+      var top = rect.top - tipRect.height - 10 + window.scrollY;
+
+      if (left < 8) left = 8;
+      if (left + tipRect.width > window.innerWidth - 8) left = window.innerWidth - tipRect.width - 8;
+      if (top < window.scrollY + 8) top = rect.bottom + 10 + window.scrollY;
+
+      this.tooltipEl.style.left = left + 'px';
+      this.tooltipEl.style.top = top + 'px';
+    },
+
+    hide: function() {
+      clearTimeout(this.hoverTimer);
+      this.tooltipEl.classList.remove('visible');
+    }
+  };
+
+  // ========== Game Guides ==========
+  var GameGuides = {
+    cache: {},
+
+    fetch: function(slug) {
+      if (this.cache[slug] !== undefined) return Promise.resolve(this.cache[slug]);
+      return fetch('../api/games/' + slug + '.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(data) { GameGuides.cache[slug] = data; return data; })
+        .catch(function() { GameGuides.cache[slug] = null; return null; });
+    },
+
+    renderCard: function(slug, data) {
+      if (!data || !data.sections || !data.sections.length) return null;
+
+      var summary = '';
+      var tips = [];
+      data.sections.forEach(function(s) {
+        if (s.heading && s.heading.toLowerCase().indexOf('30-second') >= 0) {
+          summary = s.content;
+        }
+        if (s.heading && s.heading.toLowerCase().indexOf('tips') >= 0) {
+          var lines = s.content.split('\n');
+          lines.forEach(function(line) {
+            var m = line.match(/^\d+\.\s+\*\*(.+?)\.\*\*\s*(.+)/);
+            if (m && tips.length < 3) tips.push(m[1] + '. ' + m[2].split('.')[0] + '.');
+          });
+        }
+      });
+
+      if (!summary) return null;
+
+      var html = '<div class="rg-guide-card">';
+      html += '<div class="rg-guide-header"><svg width="20" height="20"><use href="#pb-icon-info"/></svg>';
+      html += '<span>How to Play: ' + (data.title ? data.title.replace('How to Play: ', '') : slug) + '</span></div>';
+      html += '<div class="rg-guide-summary">' + this.renderMarkdown(summary) + '</div>';
+
+      if (tips.length) {
+        html += '<div class="rg-guide-tips"><strong>Quick tips:</strong><ul>';
+        tips.forEach(function(t) { html += '<li>' + t + '</li>'; });
+        html += '</ul></div>';
+      }
+
+      html += '<a href="../guides/' + slug + '.html" class="rg-btn rg-btn-ghost rg-btn-small">Read the full guide \u2192</a>';
+      html += '</div>';
+      return html;
+    },
+
+    renderMarkdown: function(md) {
+      return md
+        .replace(/^>\s*(.+)/gm, '<blockquote>$1</blockquote>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/`(.+?)`/g, '<code>$1</code>')
+        .replace(/---/g, '')
+        .replace(/\n\n+/g, '<br>')
+        .trim();
+    }
+  };
+
   // ========== OddsExplorer ==========
   var OddsExplorer = {
     init: function() {
@@ -1254,7 +1599,7 @@ body {
         btn.className = 'rg-game-chip';
         btn.setAttribute('role', 'switch');
         btn.setAttribute('aria-checked', state.selectedGames.indexOf(key) >= 0 ? 'true' : 'false');
-        btn.innerHTML = '<span>' + g.icon + '</span> ' + g.name;
+        btn.innerHTML = gameIcon(g.icon) + ' ' + g.name;
         btn.addEventListener('click', function() { OddsExplorer.toggle(key, btn); });
         chipsEl.appendChild(btn);
       });
@@ -1284,12 +1629,34 @@ body {
       }
 
       state.selectedGames.forEach(function(game) {
+        var wrapper = document.createElement('div');
+        wrapper.className = 'rg-odds-item';
+
         var el = document.createElement('playbook-odds');
         el.setAttribute('game', game);
         el.setAttribute('theme', 'light');
-        grid.appendChild(el);
+        wrapper.appendChild(el);
+        grid.appendChild(wrapper);
+
         requestAnimationFrame(function() {
           requestAnimationFrame(function() { el.classList.add('shown'); });
+        });
+
+        // Fetch and render game guide card
+        GameGuides.fetch(game).then(function(data) {
+          if (data) {
+            // Merge game terms for tooltips
+            TermTooltips.mergeTerms(data.keyTerms);
+
+            var cardHtml = GameGuides.renderCard(game, data);
+            if (cardHtml) {
+              var guideDiv = document.createElement('div');
+              guideDiv.innerHTML = cardHtml;
+              wrapper.appendChild(guideDiv.firstChild);
+              // Annotate terms in the guide card
+              TermTooltips.annotate(wrapper.querySelector('.rg-guide-card'));
+            }
+          }
         });
       });
 
@@ -1312,6 +1679,9 @@ body {
         bestLoss + '</strong> on ' + best.data.name + ' vs. <strong>$' + worstLoss + '</strong> on ' + worst.data.name +
         '. Same budget, very different math.';
       insight.classList.add('visible');
+
+      // Annotate terms in the insight callout
+      TermTooltips.annotate(insight);
     }
   };
 
@@ -1462,8 +1832,13 @@ body {
     ScrollReveal.init();
     NavController.init();
     ProgressTracker.init();
+    TermTooltips.init();
     OddsExplorer.init();
     ToolShowcase.init();
+
+    // Annotate terms in static sections
+    TermTooltips.annotate(document.getElementById('tools'));
+    TermTooltips.annotate(document.getElementById('break'));
 
     // Load myths for hero quiz and quiz walkthrough
     fetch('../api/myths.json')
