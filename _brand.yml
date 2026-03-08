@@ -261,6 +261,48 @@ helplines:
     note: "See jurisdictions/european-union/country-specific/ for local helplines"
 
 
+# ─── OPERATOR INTEGRATION ───────────────────
+# These tokens are used in the deployable RG page template.
+# The Playbook configurator fills them based on the operator's setup.
+
+integration:
+  limits_url: "{{LIMITS_URL}}"              # Operator's limit-setting page
+  self_exclusion_url: "{{SELF_EXCLUSION_URL}}"  # Self-exclusion page or external program
+  self_exclusion_name: "{{SELF_EXCLUSION_NAME}}" # Program name (e.g., GamStop, GAMBAN)
+  support_org_name: "{{SUPPORT_ORG_NAME}}"  # Primary support org (e.g., NCPG, GambleAware)
+  support_org_url: "{{SUPPORT_ORG_URL}}"    # Support org website
+
+  # Common self-exclusion programs by jurisdiction (for configurator dropdown)
+  self_exclusion_programs:
+    united-states:
+      name: "State self-exclusion program"
+      url: ""  # Varies by state
+    united-kingdom:
+      name: "GamStop"
+      url: "https://www.gamstop.co.uk"
+    australia:
+      name: "BetStop"
+      url: "https://www.betstop.gov.au"
+    canada:
+      name: "Provincial self-exclusion"
+      url: ""  # Varies by province
+
+  # Common support organizations by jurisdiction
+  support_orgs:
+    united-states:
+      name: "National Council on Problem Gambling"
+      url: "https://www.ncpgambling.org"
+    united-kingdom:
+      name: "GambleAware"
+      url: "https://www.begambleaware.org"
+    australia:
+      name: "Gambling Help Online"
+      url: "https://www.gamblinghelponline.org.au"
+    canada:
+      name: "Responsible Gambling Council"
+      url: "https://www.responsiblegambling.org"
+
+
 # ─── LEGAL ───────────────────────────────────
 
 legal:
