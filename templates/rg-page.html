@@ -708,50 +708,54 @@ body {
 .rg-game-chip svg { width: 18px; height: 18px; }
 .rg-game-chip[aria-checked="true"] svg { color: var(--rg-primary-dark); }
 
-/* === Guide Cards === */
-.rg-guide-card {
-  background: var(--rg-surface);
-  border: 1px solid var(--rg-divider-light);
-  border-top: 3px solid var(--rg-secondary);
-  border-radius: var(--rg-radius-sm);
-  padding: 20px 24px;
-  margin-top: 12px;
-  font-size: 0.92rem;
-  line-height: 1.6;
-}
-.rg-guide-header {
-  display: flex;
+/* === Guide Link (below odds widget) === */
+.rg-guide-link {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  margin-top: 10px;
   font-family: var(--rg-font-heading);
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--rg-text-dark);
-  margin-bottom: 12px;
-}
-.rg-guide-header svg { width: 20px; height: 20px; color: var(--rg-secondary-dark); flex-shrink: 0; }
-.rg-guide-summary {
-  color: var(--rg-text-dark-muted);
-  margin-bottom: 16px;
-}
-.rg-guide-summary blockquote {
-  border-left: 3px solid var(--rg-secondary);
-  padding-left: 16px;
-  margin: 0;
-  color: var(--rg-text-dark);
-}
-.rg-guide-summary code {
-  font-family: var(--rg-font-mono);
-  background: rgba(0,212,170,0.08);
-  padding: 1px 5px;
-  border-radius: 3px;
-  font-size: 0.9em;
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--rg-secondary-dark);
+  text-decoration: none;
 }
-.rg-guide-tips { margin-bottom: 16px; }
-.rg-guide-tips strong { color: var(--rg-text-dark); }
-.rg-guide-tips ul { margin: 8px 0 0 20px; color: var(--rg-text-dark-muted); }
-.rg-guide-tips li { margin-bottom: 4px; }
+.rg-guide-link:hover { color: var(--rg-secondary); text-decoration: underline; }
+.rg-guide-link svg { width: 16px; height: 16px; }
+
+/* === Tier 2 Overrides (Break / Support — constrained palette) === */
+.rg-section-tier2 { background: var(--rg-surface); color: var(--rg-text-dark); }
+.rg-section-tier2 .rg-accent-line {
+  background: var(--rg-secondary);
+  height: 3px;
+}
+.rg-section-tier2 .rg-section-header p { color: var(--rg-text-dark-muted); }
+.rg-section-tier2 .rg-btn-primary {
+  background: var(--rg-secondary);
+  color: var(--rg-primary-dark);
+  box-shadow: 0 4px 16px rgba(0,212,170,0.25);
+}
+.rg-section-tier2 .rg-btn-primary:hover {
+  box-shadow: 0 6px 24px rgba(0,212,170,0.35);
+}
+.rg-section-tier2 .rg-btn-ghost-light {
+  color: var(--rg-secondary);
+  border-color: var(--rg-secondary);
+}
+.rg-section-tier2 .rg-btn-ghost-light:hover {
+  background: rgba(0,212,170,0.06);
+}
+.rg-section-tier2 .rg-support-normalizer {
+  color: var(--rg-text-dark-muted);
+  font-style: italic;
+}
+.rg-section-tier2 .rg-support-card {
+  background: var(--rg-surface-alt);
+  border: 1px solid var(--rg-divider-light);
+}
+.rg-section-tier2 .rg-support-card:hover { border-color: var(--rg-secondary); }
+.rg-section-tier2 .rg-support-card h3 { color: var(--rg-text-dark); }
+.rg-section-tier2 .rg-support-card p { color: var(--rg-text-dark-muted); }
 
 /* === Term Tooltips === */
 .rg-term {
@@ -1136,8 +1140,8 @@ body {
   </div>
 </section>
 
-<!-- Section: Take a Break -->
-<section class="rg-section" id="break">
+<!-- Section: Take a Break (Tier 2 — constrained palette) -->
+<section class="rg-section rg-section-tier2" id="break">
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>
@@ -1171,8 +1175,8 @@ body {
   </div>
 </section>
 
-<!-- Section: Talk to Someone -->
-<section class="rg-section rg-section-dark" id="support">
+<!-- Section: Talk to Someone (Tier 2 — constrained palette) -->
+<section class="rg-section rg-section-tier2" id="support">
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>
@@ -1189,12 +1193,12 @@ body {
         text-number="{{TEXT_NUMBER}}"
         chat-url="{{CHAT_URL}}"
         label="Free, confidential support"
-        theme="dark"
+        theme="light"
         mode="banner">
       </playbook-helpline>
     </div>
 
-    <h3 style="text-align:center; color:var(--rg-text); font-family:var(--rg-font-heading); font-size:1.1rem; font-weight:600; margin-bottom:16px;" class="rg-reveal">Additional resources</h3>
+    <h3 style="text-align:center; color:var(--rg-text-dark); font-family:var(--rg-font-heading); font-size:1.1rem; font-weight:600; margin-bottom:16px;" class="rg-reveal">Additional resources</h3>
     <div class="rg-support-grid rg-stagger">
       <a href="{{SUPPORT_ORG_URL}}" class="rg-support-card rg-reveal">
         <h3>{{SUPPORT_ORG_NAME}}</h3>
@@ -1529,9 +1533,11 @@ body {
     }
   };
 
-  // ========== Game Guides ==========
+  // ========== Game Guides (fetch for tooltip terms + link to scrolly pages) ==========
   var GameGuides = {
     cache: {},
+    // Games that have scrolly guide pages at ../games/{slug}.html
+    hasGuide: { blackjack:1, slots:1, roulette:1, craps:1, baccarat:1, 'sports-betting':1, 'video-poker':1 },
 
     fetch: function(slug) {
       if (this.cache[slug] !== undefined) return Promise.resolve(this.cache[slug]);
@@ -1539,52 +1545,6 @@ body {
         .then(function(r) { return r.ok ? r.json() : null; })
         .then(function(data) { GameGuides.cache[slug] = data; return data; })
         .catch(function() { GameGuides.cache[slug] = null; return null; });
-    },
-
-    renderCard: function(slug, data) {
-      if (!data || !data.sections || !data.sections.length) return null;
-
-      var summary = '';
-      var tips = [];
-      data.sections.forEach(function(s) {
-        if (s.heading && s.heading.toLowerCase().indexOf('30-second') >= 0) {
-          summary = s.content;
-        }
-        if (s.heading && s.heading.toLowerCase().indexOf('tips') >= 0) {
-          var lines = s.content.split('\n');
-          lines.forEach(function(line) {
-            var m = line.match(/^\d+\.\s+\*\*(.+?)\.\*\*\s*(.+)/);
-            if (m && tips.length < 3) tips.push(m[1] + '. ' + m[2].split('.')[0] + '.');
-          });
-        }
-      });
-
-      if (!summary) return null;
-
-      var html = '<div class="rg-guide-card">';
-      html += '<div class="rg-guide-header"><svg width="20" height="20"><use href="#pb-icon-info"/></svg>';
-      html += '<span>How to Play: ' + (data.title ? data.title.replace('How to Play: ', '') : slug) + '</span></div>';
-      html += '<div class="rg-guide-summary">' + this.renderMarkdown(summary) + '</div>';
-
-      if (tips.length) {
-        html += '<div class="rg-guide-tips"><strong>Quick tips:</strong><ul>';
-        tips.forEach(function(t) { html += '<li>' + t + '</li>'; });
-        html += '</ul></div>';
-      }
-
-      html += '<a href="../guides/' + slug + '.html" class="rg-btn rg-btn-ghost rg-btn-small">Read the full guide \u2192</a>';
-      html += '</div>';
-      return html;
-    },
-
-    renderMarkdown: function(md) {
-      return md
-        .replace(/^>\s*(.+)/gm, '<blockquote>$1</blockquote>')
-        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-        .replace(/`(.+?)`/g, '<code>$1</code>')
-        .replace(/---/g, '')
-        .replace(/\n\n+/g, '<br>')
-        .trim();
     }
   };
 
@@ -1642,22 +1602,18 @@ body {
           requestAnimationFrame(function() { el.classList.add('shown'); });
         });
 
-        // Fetch and render game guide card
+        // Fetch guide data for tooltip terms + add "How to play" link
         GameGuides.fetch(game).then(function(data) {
-          if (data) {
-            // Merge game terms for tooltips
-            TermTooltips.mergeTerms(data.keyTerms);
-
-            var cardHtml = GameGuides.renderCard(game, data);
-            if (cardHtml) {
-              var guideDiv = document.createElement('div');
-              guideDiv.innerHTML = cardHtml;
-              wrapper.appendChild(guideDiv.firstChild);
-              // Annotate terms in the guide card
-              TermTooltips.annotate(wrapper.querySelector('.rg-guide-card'));
-            }
-          }
+          if (data) { TermTooltips.mergeTerms(data.keyTerms); }
         });
+        // Link to scrolly game guide page (if one exists)
+        if (GameGuides.hasGuide[game]) {
+          var link = document.createElement('a');
+          link.className = 'rg-guide-link';
+          link.href = '../games/' + game + '.html';
+          link.innerHTML = '<svg width="16" height="16"><use href="#pb-icon-info"/></svg> How to play ' + GAMES[game].name + ' \u2192';
+          wrapper.appendChild(link);
+        }
       });
 
       this.updateInsight();
