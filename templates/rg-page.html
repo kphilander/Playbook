@@ -738,10 +738,10 @@ body {
 }
 .rg-guide-link svg { width: 16px; height: 16px; flex-shrink: 0; }
 
-/* === Tier 2 Overrides (Break / Support — constrained palette, calmer register) === */
+/* === Tier 2 Overrides (Break / Support — dark bg, light cards, calmer register) === */
 .rg-section-tier2 {
-  background: var(--rg-surface);
-  color: var(--rg-text-dark);
+  background: var(--rg-primary);
+  color: var(--rg-text);
   padding: 100px 0;
 }
 .rg-section-tier2 .rg-container {
@@ -754,9 +754,10 @@ body {
 .rg-section-tier2 .rg-section-header h2 {
   font-weight: 600;
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  color: var(--rg-text);
 }
 .rg-section-tier2 .rg-section-header p {
-  color: var(--rg-text-dark-muted);
+  color: var(--rg-text-muted);
   font-size: 1.1rem;
   line-height: 1.75;
 }
@@ -773,15 +774,29 @@ body {
   border-color: var(--rg-secondary);
 }
 .rg-section-tier2 .rg-btn-ghost-light:hover {
-  background: rgba(0,212,170,0.06);
+  background: rgba(0,212,170,0.08);
 }
 .rg-section-tier2.rg-section-tier2-alt {
-  background: var(--rg-surface-alt);
+  background: var(--rg-primary-dark);
+}
+.rg-section-tier2 .rg-section-label {
+  color: var(--rg-secondary);
 }
 .rg-section-tier2 .rg-support-normalizer {
-  color: var(--rg-text-dark-muted);
+  color: var(--rg-text-muted);
   font-style: italic;
   font-size: 1.05rem;
+  line-height: 1.7;
+}
+/* Light cards on dark Tier 2 backgrounds */
+.rg-section-tier2 .rg-break-card {
+  background: var(--rg-surface);
+  border-color: var(--rg-divider-light);
+}
+.rg-section-tier2 .rg-break-card h3 { color: var(--rg-text-dark); }
+.rg-section-tier2 .rg-break-card p {
+  color: var(--rg-text-dark-muted);
+  font-size: 1rem;
   line-height: 1.7;
 }
 .rg-section-tier2 .rg-support-card {
@@ -791,10 +806,6 @@ body {
 .rg-section-tier2 .rg-support-card:hover { border-color: var(--rg-secondary); }
 .rg-section-tier2 .rg-support-card h3 { color: var(--rg-text-dark); }
 .rg-section-tier2 .rg-support-card p { color: var(--rg-text-dark-muted); }
-.rg-section-tier2 .rg-break-card p {
-  font-size: 1rem;
-  line-height: 1.7;
-}
 
 /* === Term Tooltips === */
 .rg-term {
@@ -1232,12 +1243,12 @@ body {
         text-number="{{TEXT_NUMBER}}"
         chat-url="{{CHAT_URL}}"
         label="Free, confidential support"
-        theme="light"
+        theme="dark"
         mode="banner">
       </playbook-helpline>
     </div>
 
-    <h3 style="text-align:center; color:var(--rg-text-dark); font-family:var(--rg-font-heading); font-size:1.1rem; font-weight:600; margin-bottom:16px;" class="rg-reveal">Additional resources</h3>
+    <h3 style="text-align:center; color:var(--rg-text); font-family:var(--rg-font-heading); font-size:1.1rem; font-weight:600; margin-bottom:16px;" class="rg-reveal">Additional resources</h3>
     <div class="rg-support-grid rg-stagger">
       <a href="{{SUPPORT_ORG_URL}}" class="rg-support-card rg-reveal">
         <h3>{{SUPPORT_ORG_NAME}}</h3>
