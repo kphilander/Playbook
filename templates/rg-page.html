@@ -996,6 +996,11 @@ body {
   </symbol>
 </svg>
 
+<!-- Demo Mode Banner (shown above helpline strip when active) -->
+<div class="demo-banner" id="demoBanner">
+  <strong>Operator Demo Mode</strong><span>|</span>Click the teal hotspots on each section to see what it does, why it's here, and how to customize it.
+</div>
+
 <!-- Persistent Helpline Strip -->
 <div class="rg-helpline-strip">
   Free, confidential support 24/7
@@ -1865,6 +1870,499 @@ body {
   } else {
     init();
   }
+})();
+</script>
+
+<!-- ============================================================
+     OPERATOR DEMO MODE — Hover Annotations for Prospective Operators
+     ============================================================ -->
+<style>
+/* ---- Demo Mode Toggle ---- */
+.demo-toggle {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: #1B2838;
+  color: #E8ECF1;
+  border: 2px solid rgba(0,212,170,0.4);
+  border-radius: 999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transition: all 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+.demo-toggle:hover {
+  border-color: #00D4AA;
+  box-shadow: 0 8px 32px rgba(0,212,170,0.2);
+}
+.demo-toggle.active {
+  background: #00D4AA;
+  color: #0F1923;
+  border-color: #00D4AA;
+}
+.demo-toggle-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transition: background 0.25s ease;
+}
+.demo-toggle.active .demo-toggle-dot {
+  background: #0F1923;
+  box-shadow: 0 0 0 3px rgba(15,25,35,0.3);
+}
+
+/* ---- Annotation Hotspots ---- */
+.demo-hotspot {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 500;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #00D4AA;
+  color: #0F1923;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow: 0 4px 16px rgba(0,212,170,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: demo-pulse 2s ease-in-out infinite;
+}
+.demo-hotspot:hover {
+  transform: scale(1.15);
+  box-shadow: 0 6px 24px rgba(0,212,170,0.5);
+  animation: none;
+}
+body.demo-mode .demo-hotspot { display: flex; align-items: center; justify-content: center; }
+
+@keyframes demo-pulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0,212,170,0.4); }
+  50% { box-shadow: 0 4px 16px rgba(0,212,170,0.4), 0 0 0 8px rgba(0,212,170,0.15); }
+}
+
+/* ---- Section highlight border in demo mode ---- */
+body.demo-mode .demo-annotated {
+  position: relative;
+  outline: 2px dashed rgba(0,212,170,0.3);
+  outline-offset: -2px;
+}
+body.demo-mode .demo-annotated:hover {
+  outline-color: rgba(0,212,170,0.6);
+}
+
+/* ---- Overlay Panel ---- */
+.demo-overlay {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  z-index: 10000;
+  width: min(560px, calc(100vw - 48px));
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  background: #1B2838;
+  border: 1px solid rgba(0,212,170,0.25);
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  color: #E8ECF1;
+  font-family: 'Inter', system-ui, sans-serif;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+.demo-overlay.visible {
+  display: block;
+}
+.demo-overlay.shown {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.demo-overlay-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.demo-overlay-backdrop.visible { display: block; }
+.demo-overlay-backdrop.shown { opacity: 1; }
+
+.demo-overlay-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #9AA8B8;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.demo-overlay-close:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+.demo-overlay-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00D4AA;
+  margin-bottom: 12px;
+}
+.demo-overlay h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+.demo-overlay-body p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #9AA8B8;
+  margin-bottom: 14px;
+}
+.demo-overlay-body p:last-child { margin-bottom: 0; }
+
+.demo-overlay-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.demo-overlay-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FF6B35;
+  margin-bottom: 10px;
+}
+.demo-overlay-section p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #9AA8B8;
+}
+
+.demo-overlay-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.demo-overlay-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(0,212,170,0.12);
+  color: #00D4AA;
+}
+
+/* ---- Demo Mode Banner ---- */
+.demo-banner {
+  display: none;
+  background: linear-gradient(90deg, #1B2838 0%, #0F1923 100%);
+  border-bottom: 2px solid rgba(0,212,170,0.3);
+  padding: 14px 24px;
+  text-align: center;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem;
+  color: #9AA8B8;
+  position: relative;
+  z-index: 300;
+}
+body.demo-mode .demo-banner { display: block; }
+.demo-banner strong { color: #00D4AA; }
+.demo-banner span { color: rgba(255,255,255,0.4); margin: 0 8px; }
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .demo-toggle { bottom: 16px; left: 16px; padding: 10px 16px; font-size: 0.82rem; }
+  .demo-overlay { padding: 28px 24px; }
+  .demo-overlay h3 { font-size: 1.15rem; }
+  .demo-hotspot { width: 30px; height: 30px; font-size: 0.72rem; top: 12px; right: 12px; }
+}
+</style>
+
+<!-- Overlay Backdrop -->
+<div class="demo-overlay-backdrop" id="demoBackdrop"></div>
+
+<!-- Overlay Panel (content populated by JS) -->
+<div class="demo-overlay" id="demoOverlay" role="dialog" aria-modal="true">
+  <button class="demo-overlay-close" id="demoClose" aria-label="Close">&times;</button>
+  <div class="demo-overlay-badge" id="demoOverlayBadge"></div>
+  <h3 id="demoOverlayTitle"></h3>
+  <div class="demo-overlay-body" id="demoOverlayBody"></div>
+</div>
+
+<!-- Demo Mode Toggle Button -->
+<button class="demo-toggle" id="demoToggle" title="Toggle Operator Demo Mode">
+  <span class="demo-toggle-dot"></span>
+  Operator Demo
+</button>
+
+<script>
+(function() {
+  'use strict';
+
+  // ========== Annotation Data ==========
+  var annotations = [
+    {
+      section: 'helpline-strip',
+      selector: '.rg-helpline-strip',
+      badge: 'Persistent UI',
+      title: 'Always-Visible Helpline Strip',
+      body: '<p>A sticky banner at the very top of every page displaying your helpline number and live chat link. It stays visible as the player scrolls, ensuring help is always one tap away.</p>' +
+            '<p>Most jurisdictions require visible helpline information. This exceeds the minimum by making it persistent rather than buried in a footer.</p>',
+      customize: '<p>Replace <code>{{HELPLINE_NUMBER}}</code> and <code>{{CHAT_URL}}</code> with your jurisdiction\'s support contacts. Supports phone, text, and chat links. Colors inherit from your brand configuration.</p>',
+      tags: ['Compliance', 'Helpline', 'Sticky UI']
+    },
+    {
+      section: 'nav',
+      selector: '.rg-nav',
+      badge: 'Navigation',
+      title: 'Sticky Section Nav with Progress Bar',
+      body: '<p>A fixed navigation bar that follows the player down the page. Section links highlight as the player scrolls, and a gradient progress bar shows how much of the page they\'ve explored.</p>' +
+            '<p>RG pages are often long and overwhelming. The nav and progress bar transform it into a guided experience players actually engage with. The progress ring in the corner creates a subtle completion incentive.</p>',
+      customize: '<p>Section labels update automatically based on your content. The progress gradient uses your brand\'s accent and secondary colors. Add or remove nav items by editing the HTML anchors.</p>',
+      tags: ['UX', 'Navigation', 'Engagement']
+    },
+    {
+      section: 'hero',
+      selector: '.rg-hero',
+      badge: 'Engagement Hook',
+      title: 'Interactive Hero Quiz',
+      body: '<p>Instead of a generic "Play Responsibly" headline, the hero opens with a real question drawn from the myth library \u2014 like "Can you improve your odds at slots by switching machines?" Players choose an answer and get immediate math-based feedback.</p>' +
+            '<p>This flips the RG page from a compliance checkbox into something players actually interact with. Data shows curiosity-driven openings dramatically increase scroll depth and time on page versus static messaging.</p>',
+      customize: '<p>Quiz questions are pulled from the Playbook API (<code>myths.json</code>). Add your own questions or curate the existing library. The fallback headline activates if the API is unavailable, so the page always works.</p>',
+      tags: ['Interactive', 'Myth Busting', 'API-Driven']
+    },
+    {
+      section: 'odds',
+      selector: '#odds',
+      badge: 'Transparency Tool',
+      title: 'Interactive Odds Explorer',
+      body: '<p>Players tap the games they actually play and see real house edge ranges, expected loss per session, and side-by-side comparisons. It reframes gambling math as practical information rather than a warning.</p>' +
+            '<p>Odds transparency is increasingly required by regulators and expected by informed players. Presenting it interactively \u2014 letting players choose their games \u2014 makes the information personally relevant rather than abstract.</p>',
+      customize: '<p>Game data (house edges, bet types, expected loss calculations) can be customized per your offering. The visual layout, colors, and game icons all inherit from your brand theme. Add or remove games from the selector.</p>',
+      tags: ['Odds', 'Transparency', 'Interactive', 'Per-Game']
+    },
+    {
+      section: 'myths',
+      selector: '#myths',
+      badge: 'Educational Content',
+      title: 'Myth vs. Math Quiz Walkthrough',
+      body: '<p>A swipeable card-based quiz that challenges common gambling myths \u2014 hot streaks, lucky seats, timing spins. Players see the real math behind each misconception, with clear sourced explanations.</p>' +
+            '<p>Myth correction is one of the most evidence-supported RG interventions. This section uses a quiz format rather than a lecture because active engagement with misinformation is more effective at changing beliefs than passive reading.</p>',
+      customize: '<p>Myths are pulled from the Playbook API and can be filtered by game category. Add your own myths or curate the selection. The dark theme section can be swapped to light. Falls back to the <code>&lt;playbook-myth&gt;</code> web component if the API is unavailable.</p>',
+      tags: ['Evidence-Based', 'Quiz', 'Myth Correction']
+    },
+    {
+      section: 'tools',
+      selector: '#tools',
+      badge: 'Player Controls',
+      title: 'Responsible Gaming Tools Showcase',
+      body: '<p>Six expandable cards presenting your platform\'s player protection tools \u2014 budget locks, session timers, play dashboards, loss limits, reality checks, and budget planners. Each is framed as a benefit, not a restriction.</p>' +
+            '<p>Most operators list their RG tools in dense text blocks that nobody reads. This card-based layout presents each tool with a clear value proposition ("Set your entertainment spend before you start") and a direct link to activate it. The benefit framing matters: "Budget lock" is more engaging than "Deposit limit."</p>',
+      customize: '<p>Edit tool names, descriptions, icons, and activation links (<code>{{LIMITS_URL}}</code>) to match your platform\'s actual features. Remove tools you don\'t offer or add new ones. Each card\'s icon uses SVG symbols that can be replaced.</p>',
+      tags: ['Player Tools', 'Limit Setting', 'Benefit-Framed']
+    },
+    {
+      section: 'break',
+      selector: '#break',
+      badge: 'Self-Exclusion',
+      title: 'Take a Break — Self-Exclusion Pathway',
+      body: '<p>A clearly designed pathway to self-exclusion and temporary account suspension. Three cards explain the process simply: choose your timeframe, everything pauses, support stays available.</p>' +
+            '<p>Self-exclusion is a critical harm reduction tool, but it\'s often hard to find and poorly explained. This section uses a constrained "Tier 2" visual palette \u2014 less colorful, more direct \u2014 to signal that this content serves a different purpose than the educational sections above.</p>',
+      customize: '<p>Replace <code>{{SELF_EXCLUSION_URL}}</code> and <code>{{SELF_EXCLUSION_NAME}}</code> with your program\'s details. The timeframe options and process description can be edited to match your exact self-exclusion flow. The Tier 2 palette adapts to your brand colors.</p>',
+      tags: ['Self-Exclusion', 'Harm Reduction', 'Tier 2']
+    },
+    {
+      section: 'support',
+      selector: '#support',
+      badge: 'Support Resources',
+      title: 'Talk to Someone — Support Hub',
+      body: '<p>A normalized, stigma-reducing support section with the embedded <code>&lt;playbook-helpline&gt;</code> web component (phone, text, chat) and links to external support organizations including Gamblers Anonymous and GamTalk.</p>' +
+            '<p>The "normalizer" text ("Thousands of people reach out every day") is deliberate \u2014 research shows that normalizing help-seeking behavior reduces the barrier to action. The section uses a slightly different surface tone to feel distinct from the educational content above.</p>',
+      customize: '<p>The helpline widget auto-configures from your template variables (<code>{{HELPLINE_NUMBER}}</code>, <code>{{TEXT_NUMBER}}</code>, <code>{{CHAT_URL}}</code>). Add your jurisdiction\'s support organizations via <code>{{SUPPORT_ORG_NAME}}</code> and <code>{{SUPPORT_ORG_URL}}</code>. The widget supports dark and light themes.</p>',
+      tags: ['Helpline', 'Widget', 'Stigma Reduction']
+    },
+    {
+      section: 'footer',
+      selector: '.rg-footer',
+      badge: 'Compliance',
+      title: 'Footer with Final Helpline Prompt',
+      body: '<p>A final display of the helpline number in large text, with call/text/chat links and legal notices. The "If gambling isn\'t fun anymore, help is available" messaging provides a last touchpoint.</p>' +
+            '<p>Even if a player scrolls past everything else, the footer ensures they see the helpline before leaving. The large number display is intentional \u2014 it\'s the last thing on the page and the easiest to remember.</p>',
+      customize: '<p>All template variables (<code>{{HELPLINE_NUMBER}}</code>, <code>{{MIN_AGE}}</code>, <code>{{ORGANIZATION}}</code>, <code>{{WEBSITE}}</code>) are replaced during deployment. Add additional legal disclaimers or compliance text as needed. The Playbook attribution is optional under the CC0 license.</p>',
+      tags: ['Footer', 'Legal', 'Helpline']
+    },
+    {
+      section: 'progress',
+      selector: '.rg-progress-ring',
+      badge: 'Engagement Mechanic',
+      title: 'Page Exploration Progress Ring',
+      body: '<p>A floating progress indicator in the bottom-right corner that fills as the player scrolls through and views each section. It tracks which sections have been seen and displays a percentage.</p>' +
+            '<p>The progress ring creates a subtle completion incentive without being gamified. It encourages players to explore the full page rather than bouncing after the first section. Analytics show progress indicators increase page completion rates.</p>',
+      customize: '<p>The ring color uses your brand\'s secondary color. It tracks the five main sections (odds, myths, tools, break, support) and updates on scroll. Can be hidden via CSS if you prefer a simpler experience.</p>',
+      tags: ['Engagement', 'Progress', 'Scroll Tracking']
+    }
+  ];
+
+  // ========== DOM References ==========
+  var toggle = document.getElementById('demoToggle');
+  var overlay = document.getElementById('demoOverlay');
+  var backdrop = document.getElementById('demoBackdrop');
+  var closeBtn = document.getElementById('demoClose');
+  var banner = document.getElementById('demoBanner');
+  var overlayBadge = document.getElementById('demoOverlayBadge');
+  var overlayTitle = document.getElementById('demoOverlayTitle');
+  var overlayBody = document.getElementById('demoOverlayBody');
+
+  var isActive = false;
+  var hotspots = [];
+
+  // ========== Hotspot position overrides for compact sections ==========
+  var hotspotPositions = {
+    'helpline-strip': { top: '50%', right: '20px', transform: 'translateY(-50%)' },
+    'nav':            { top: '50%', right: '60px', transform: 'translateY(-50%)' },
+    'hero':           { top: '20px', right: '20px', transform: 'none' },
+    'progress':       { top: '-8px', right: '-8px', transform: 'none' }
+  };
+
+  // ========== Create Hotspots ==========
+  function createHotspots() {
+    annotations.forEach(function(ann, i) {
+      var target = document.querySelector(ann.selector);
+      if (!target) return;
+
+      // Make section positioned for hotspot placement
+      if (getComputedStyle(target).position === 'static') {
+        target.style.position = 'relative';
+      }
+      target.classList.add('demo-annotated');
+
+      // Create hotspot button
+      var btn = document.createElement('button');
+      btn.className = 'demo-hotspot';
+      btn.textContent = (i + 1);
+      btn.setAttribute('aria-label', 'Learn about: ' + ann.title);
+      btn.setAttribute('data-demo-index', i);
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        showOverlay(i);
+      });
+
+      // Apply custom positioning for compact sections
+      var pos = hotspotPositions[ann.section];
+      if (pos) {
+        btn.style.top = pos.top;
+        btn.style.right = pos.right;
+        btn.style.transform = pos.transform;
+      }
+
+      target.appendChild(btn);
+      hotspots.push(btn);
+    });
+  }
+
+  // ========== Show/Hide Overlay ==========
+  function showOverlay(index) {
+    var ann = annotations[index];
+    overlayBadge.textContent = ann.badge;
+    overlayTitle.textContent = ann.title;
+
+    var html = '<div>' + ann.body + '</div>';
+
+    // Add customization section
+    html += '<div class="demo-overlay-section">';
+    html += '<div class="demo-overlay-section-label">How to Customize</div>';
+    html += ann.customize;
+    html += '</div>';
+
+    // Add tags
+    html += '<div class="demo-overlay-tags">';
+    ann.tags.forEach(function(tag) {
+      html += '<span class="demo-overlay-tag">' + tag + '</span>';
+    });
+    html += '</div>';
+
+    overlayBody.innerHTML = html;
+
+    backdrop.classList.add('visible');
+    overlay.classList.add('visible');
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        backdrop.classList.add('shown');
+        overlay.classList.add('shown');
+      });
+    });
+
+    // Trap focus
+    overlay.focus();
+  }
+
+  function hideOverlay() {
+    backdrop.classList.remove('shown');
+    overlay.classList.remove('shown');
+    setTimeout(function() {
+      backdrop.classList.remove('visible');
+      overlay.classList.remove('visible');
+    }, 250);
+  }
+
+  // ========== Toggle Demo Mode ==========
+  function toggleDemoMode() {
+    isActive = !isActive;
+    document.body.classList.toggle('demo-mode', isActive);
+    toggle.classList.toggle('active', isActive);
+
+    if (isActive) {
+      toggle.innerHTML = '<span class="demo-toggle-dot"></span> Demo Mode On';
+      // Scroll banner into view
+      banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } else {
+      toggle.innerHTML = '<span class="demo-toggle-dot"></span> Operator Demo';
+      hideOverlay();
+    }
+  }
+
+  // ========== Event Listeners ==========
+  toggle.addEventListener('click', toggleDemoMode);
+  closeBtn.addEventListener('click', hideOverlay);
+  backdrop.addEventListener('click', hideOverlay);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') hideOverlay();
+  });
+
+  // ========== Initialize ==========
+  createHotspots();
 })();
 </script>
 </body>
