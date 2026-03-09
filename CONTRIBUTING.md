@@ -7,7 +7,7 @@ Playbook is CC0-licensed. Contributions are welcome from anyone — operators, r
 - **Jurisdiction modules** — new jurisdictions or updates to existing ones
 - **Messaging content** — taglines, CTAs, myth-busting content, quiz concepts
 - **Translations** — adapting content for non-English markets
-- **Cultural adaptations** — adapting content for different cultural profiles (see [localization/](localization/))
+- **Cultural adaptations** — adapting content for different cultural profiles (see [brand-book/09-cultural-adaptation.md](brand-book/09-cultural-adaptation.md))
 - **Visual identity** — icon SVGs, design templates, placeholder assets
 - **Collateral templates** — new touchpoint templates or improvements
 - **Interactive content concepts** — quiz frameworks, calculator specs, gamification ideas
@@ -58,7 +58,7 @@ See [`_taxonomy.yml`](_taxonomy.yml) for all valid values.
 
 ## Cultural adaptation
 
-Playbook content is written in a specific cultural voice. When adapting for different markets, use the five cultural profile spectrums defined in [`_taxonomy.yml`](_taxonomy.yml) and documented in detail in the [Cultural Adaptation Guide](localization/cultural-adaptation-guide.md).
+Playbook content is written in a specific cultural voice. When adapting for different markets, use the five cultural profile spectrums defined in [`_taxonomy.yml`](_taxonomy.yml) and documented in detail in the [Cultural Adaptation Guide](brand-book/09-cultural-adaptation.md).
 
 When writing or editing content, flag passages that need cultural attention with inline markers:
 

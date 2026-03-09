@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Share your player testing results using the protocol from
-        [`research/player-testing-protocol.md`](../../research/player-testing-protocol.md).
+        [`docs/player-testing-protocol.md`](../../docs/player-testing-protocol.md).
         Structured fields help us compare findings across markets.
 
   - type: dropdown
@@ -73,7 +73,7 @@ body:
       value: |
         ### Cultural profile
         Select the cultural profile of the market where this test was run.
-        See [`localization/cultural-adaptation-guide.md`](../../localization/cultural-adaptation-guide.md) for spectrum definitions.
+        See [`brand-book/09-cultural-adaptation.md`](../../brand-book/09-cultural-adaptation.md) for spectrum definitions.
 
   - type: dropdown
     id: voice
