@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulatory Alignment — Playbook</title>
+<meta name="description" content="Map Playbook responsible gambling content to regulatory requirements across jurisdictions. Select your regulator, review specific requirements, and verify coverage.">
+<meta name="theme-color" content="#1B2838">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Regulatory Alignment Matrix — Playbook">
+<meta property="og:description" content="See how Playbook's responsible gambling content maps to regulatory requirements across 11 jurisdictions. Honest coverage ratings backed by repo audit.">
+<meta property="og:image" content="https://raw.githubusercontent.com/kphilander/Playbook/main/collateral/render/poster-4a-know-your-game.png">
+<meta property="og:url" content="https://www.gamblingpolicy.com/tools/playbook/compliance.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Regulatory Alignment Matrix — Playbook">
+<meta name="twitter:description" content="See how Playbook's responsible gambling content maps to regulatory requirements across 11 jurisdictions.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/kphilander/Playbook/main/collateral/render/poster-4a-know-your-game.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/tools/playbook/design-tokens.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8RKL2CEM2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S8RKL2CEM2');
+</script>
+
+<style>
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body { font-family: var(--pb-font-body, 'Source Sans 3', sans-serif); color: var(--pb-text, #1B2838); background: #fff; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; transition: color 0.2s; }
+a:focus-visible { outline: 2px solid var(--pb-color-secondary, #00D4AA); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-height: 1.25; }
+
+/* === Back Bar === */
+.pb-back-bar { background: #0F1923; padding: 14px 40px; }
+.pb-back-bar a { color: rgba(255,255,255,0.55); font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; text-decoration: underline; }
+.pb-back-bar a:hover { color: rgba(255,255,255,0.9); }
+
+/* === Container === */
+.pb-container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+.pb-container-wide { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+
+/* === Hero === */
+.pb-hero {
+  background: linear-gradient(135deg, #0F1923 0%, #1B2838 50%, #243447 100%);
+  padding: 80px 0 64px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.pb-hero::before {
+  content: ''; position: absolute; top: -40%; right: -15%;
+  width: 500px; height: 500px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,212,170,0.06) 0%, transparent 70%);
+}
+.pb-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800;
+  color: #fff; margin-bottom: 16px; position: relative;
+}
+.pb-hero h1 span { color: #00D4AA; }
+.pb-hero p {
+  font-size: clamp(1rem, 1.8vw, 1.1rem); color: rgba(255,255,255,0.6);
+  max-width: 620px; margin: 0 auto; position: relative; line-height: 1.7;
+}
+
+/* === Disclaimer Banner (closeable) === */
+.pb-disclaimer-banner {
+  background: rgba(255,107,53,0.06);
+  border: 2px solid #FF6B35;
+  border-radius: 10px;
+  padding: 20px 48px 20px 24px;
+  margin: 40px auto;
+  max-width: 1000px;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: #1B2838;
+  position: relative;
+  transition: opacity 0.3s, max-height 0.4s;
+  overflow: hidden;
+}
+.pb-disclaimer-banner.hidden { opacity: 0; max-height: 0; padding: 0; margin: 0; border: 0; }
+.pb-disclaimer-banner strong {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #FF6B35;
+  margin-bottom: 6px;
+}
+.pb-disclaimer-close {
+  position: absolute; top: 14px; right: 14px;
+  background: none; border: none; cursor: pointer;
+  font-size: 1.2rem; color: #FF6B35; line-height: 1;
+  padding: 4px; opacity: 0.7; transition: opacity 0.2s;
+}
+.pb-disclaimer-close:hover { opacity: 1; }
+
+/* === Floating Request Button === */
+.request-fab {
+  position: fixed; bottom: 32px; right: 32px; z-index: 199;
+  background: #00D4AA; color: #0F1923;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.82rem;
+  padding: 12px 20px; border-radius: 50px; border: none; cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none; display: inline-block;
+}
+.request-fab:hover { background: #00eabb; transform: translateY(-2px); }
+
+/* === Collapsible Region Headers === */
+.reg-region-header {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer; user-select: none;
+  padding: 10px 0; margin-top: 24px;
+}
+.reg-region-header:first-of-type { margin-top: 0; }
+.reg-region-chevron {
+  font-size: 0.7rem; color: #5a6a7a; transition: transform 0.3s;
+  flex-shrink: 0; width: 16px; text-align: center;
+}
+.reg-region-header.collapsed .reg-region-chevron { transform: rotate(-90deg); }
+.reg-region-header + .reg-grid { transition: max-height 0.4s ease, opacity 0.3s ease; overflow: hidden; }
+.reg-region-header.collapsed + .reg-grid { max-height: 0 !important; opacity: 0; margin: 0; padding: 0; }
+.reg-region-count {
+  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600;
+  color: #8a95a0; margin-left: auto;
+}
+
+/* === Coming Soon / In Development Cards === */
+.reg-card-cs {
+  background: #f7f8fa; border: 1px dashed #d0d7de; border-radius: 10px;
+  padding: 14px 16px; opacity: 0.55; cursor: default;
+}
+.reg-card-cs .reg-card-name {
+  font-family: 'Inter', sans-serif; font-weight: 600;
+  font-size: 0.82rem; color: #5a6a7a;
+}
+.reg-card-cs .reg-card-juris {
+  font-size: 0.72rem; color: #8a95a0; margin-top: 2px;
+}
+
+/* === Feedback Form === */
+.feedback-section {
+  background: linear-gradient(135deg, #0F1923 0%, #1B2838 100%);
+  padding: 64px 0;
+}
+.feedback-inner {
+  max-width: 640px; margin: 0 auto; text-align: center;
+}
+.feedback-inner h3 {
+  font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 8px;
+}
+.feedback-inner p {
+  color: rgba(255,255,255,0.55); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px;
+}
+.feedback-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  text-align: left; margin-bottom: 16px;
+}
+.feedback-grid label {
+  font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: rgba(255,255,255,0.7); display: block; margin-bottom: 4px;
+}
+.feedback-grid input, .feedback-grid select {
+  width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06); color: #fff; font-size: 0.88rem;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.feedback-grid input::placeholder { color: rgba(255,255,255,0.3); }
+.feedback-grid input:focus, .feedback-grid select:focus {
+  outline: none; border-color: #00D4AA;
+}
+.feedback-grid select option { background: #1B2838; color: #fff; }
+.feedback-msg-wrap {
+  text-align: left; margin-bottom: 16px;
+}
+.feedback-msg-wrap label {
+  font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
+  color: rgba(255,255,255,0.7); display: block; margin-bottom: 4px;
+}
+.feedback-msg-wrap textarea {
+  width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06); color: #fff; font-size: 0.88rem;
+  font-family: 'Source Sans 3', sans-serif; min-height: 80px; resize: vertical;
+}
+.feedback-msg-wrap textarea::placeholder { color: rgba(255,255,255,0.3); }
+.feedback-msg-wrap textarea:focus { outline: none; border-color: #00D4AA; }
+.feedback-submit {
+  display: inline-block; background: #00D4AA; color: #0F1923;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.88rem;
+  padding: 12px 32px; border-radius: 8px; border: none; cursor: pointer;
+  transition: background 0.2s;
+}
+.feedback-submit:hover { background: #00eabb; }
+.feedback-success {
+  display: none; color: #00D4AA; font-family: 'Inter', sans-serif;
+  font-weight: 600; font-size: 0.95rem; margin-top: 16px;
+}
+@media (max-width: 480px) {
+  .feedback-grid { grid-template-columns: 1fr; }
+}
+
+/* === Section === */
+.pb-section { padding: 64px 0; }
+.pb-section-alt { background: #f7f8fa; }
+.pb-section-label {
+  font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.15em;
+  color: #00D4AA; margin-bottom: 12px;
+}
+.pb-section-title {
+  font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800;
+  color: #1B2838; margin-bottom: 8px;
+}
+.pb-section-sub {
+  font-size: 1.05rem; color: #5a6a7a; max-width: 680px; margin-bottom: 40px; line-height: 1.7;
+}
+
+/* === Step Indicator === */
+.pb-step-indicator {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 28px;
+}
+.pb-step-num {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: #00D4AA; color: #0F1923;
+  font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.pb-step-label {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 1.1rem; color: #1B2838;
+}
+
+/* === Regulator Selector === */
+.reg-region-title {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.95rem; color: #1B2838;
+  margin: 28px 0 12px; padding-bottom: 8px;
+  border-bottom: 1px solid #e2e6ea;
+}
+.reg-region-title:first-of-type { margin-top: 0; }
+.reg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px;
+}
+.reg-card {
+  border: 2px solid #e2e6ea;
+  border-radius: 8px;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  position: relative;
+  user-select: none;
+}
+.reg-card:hover { border-color: #b0bac4; background: #f7f8fa; }
+.reg-card.selected {
+  border-color: #00D4AA;
+  background: rgba(0,212,170,0.06);
+  box-shadow: 0 0 0 1px #00D4AA;
+}
+.reg-card.selected::after {
+  content: '\2713'; position: absolute; top: 10px; right: 12px;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: #00D4AA; color: #0F1923;
+  font-size: 0.75rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+}
+.reg-card-name {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.88rem; color: #1B2838; margin-bottom: 3px;
+}
+.reg-card-juris {
+  font-family: 'Inter', sans-serif; font-weight: 500;
+  font-size: 0.75rem; color: #00997a; margin-bottom: 4px;
+}
+.reg-card-desc {
+  font-size: 0.82rem; color: #5a6a7a; line-height: 1.5;
+}
+
+/* === Vertical/Channel Selector === */
+.vert-grid {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-top: 8px;
+}
+.vert-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px;
+  border: 2px solid #e2e6ea;
+  border-radius: 50px;
+  cursor: pointer;
+  user-select: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #5a6a7a;
+  background: #fff;
+  transition: border-color 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.vert-chip:hover { border-color: #b0bac4; background: #f7f8fa; }
+.vert-chip.selected {
+  border-color: #00D4AA;
+  background: rgba(0,212,170,0.06);
+  color: #00997a;
+  box-shadow: 0 0 0 1px #00D4AA;
+}
+.vert-chip.coming-soon {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+  border-style: dashed;
+}
+.vert-chip.coming-soon .cs-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8a95a0;
+}
+
+.vert-hint {
+  font-size: 0.82rem; color: #8a95a0; margin-top: 10px; line-height: 1.5;
+}
+
+/* === Jurisdiction Notice === */
+.juris-notice {
+  background: rgba(255,180,50,0.08);
+  border: 1px solid rgba(255,180,50,0.35);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-top: 16px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #5a6a7a;
+}
+.juris-notice strong {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #b88a00;
+}
+
+/* === Floating Action Button === */
+.fab-container {
+  position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+  z-index: 200; opacity: 0; pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.fab-container.visible { opacity: 1; pointer-events: auto; }
+.fab-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px; border-radius: 50px; border: none;
+  background: #00D4AA; color: #0F1923;
+  font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.92rem;
+  cursor: pointer; box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.fab-btn:hover { transform: scale(1.04); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+.fab-clear {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 10px 20px; border-radius: 50px; border: 2px solid rgba(15,25,35,0.2);
+  background: #fff; color: #1B2838;
+  font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.82rem;
+  cursor: pointer; margin-left: 8px;
+  transition: border-color 0.2s;
+}
+.fab-clear:hover { border-color: #FF6B35; }
+
+/* === Requirements Matrix === */
+#requirements-matrix {
+  display: none;
+}
+#requirements-matrix.visible { display: block; }
+
+.theme-card {
+  background: #fff;
+  border: 1px solid #e2e6ea;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.theme-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.theme-header {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+.theme-header:hover { background: #f7f8fa; }
+.theme-num {
+  width: 32px; height: 32px; border-radius: 8px;
+  background: #1B2838; color: #fff;
+  font-family: 'Inter', sans-serif; font-weight: 800; font-size: 0.8rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.theme-title {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 1rem; color: #1B2838; flex: 1;
+}
+.theme-badge {
+  font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 4px 12px; border-radius: 50px;
+}
+.theme-badge.strong { background: rgba(0,212,170,0.15); color: #00997a; }
+.theme-badge.partial { background: rgba(255,180,50,0.15); color: #b88a00; }
+.theme-badge.light { background: rgba(255,107,53,0.12); color: #cc5520; }
+.theme-chevron {
+  font-size: 1.2rem; color: #b0bac4;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+.theme-card.expanded .theme-chevron { transform: rotate(180deg); }
+.theme-body {
+  display: none;
+  padding: 0 24px 24px;
+  border-top: 1px solid #e8ecf0;
+}
+.theme-card.expanded .theme-body { display: block; }
+
+/* === Requirement sub-sections === */
+.req-section { margin-top: 24px; }
+.req-section-title {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.82rem; text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.req-section-title.citations { color: #FF6B35; }
+.req-section-title.coverage { color: #00D4AA; }
+.req-section-title.gaps { color: #b88a00; }
+
+.citation-card {
+  background: #f7f8fa;
+  border-left: 3px solid #FF6B35;
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+  margin-bottom: 10px;
+}
+.citation-card.matched { border-left-color: #00D4AA; background: rgba(0,212,170,0.04); }
+.citation-reg {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.8rem; color: #1B2838; margin-bottom: 2px;
+}
+.citation-ref {
+  font-family: 'Source Code Pro', monospace; font-size: 0.75rem;
+  color: #5a6a7a; margin-bottom: 6px;
+}
+.citation-text {
+  font-size: 0.88rem; line-height: 1.6; color: #3a4a5a;
+}
+.citation-source {
+  margin-top: 6px;
+}
+.citation-source a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #00997a;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.citation-source a:hover {
+  color: #00D4AA;
+  text-decoration: underline;
+}
+.reg-tag {
+  display: inline-block; font-family: 'Inter', sans-serif;
+  font-size: 0.65rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  padding: 2px 8px; border-radius: 3px;
+  background: #e2e6ea; color: #5a6a7a;
+  margin-right: 4px; margin-bottom: 4px;
+}
+.reg-tag.active { background: rgba(0,212,170,0.15); color: #00997a; }
+.vert-tag {
+  display: inline-block; font-family: 'Inter', sans-serif;
+  font-size: 0.6rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  padding: 2px 6px; border-radius: 3px;
+  background: rgba(41,121,255,0.08); color: #2979FF;
+  margin-right: 3px; margin-bottom: 3px;
+}
+
+/* === Asset Thumbnails === */
+.thumb-grid {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 12px 0;
+}
+.thumb-item {
+  width: 110px; border: 1px solid #e2e6ea;
+  border-radius: 6px; overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #f7f8fa;
+}
+.thumb-item:hover { transform: scale(1.08); box-shadow: 0 4px 16px rgba(0,0,0,0.12); z-index: 2; position: relative; }
+.thumb-item img { width: 100%; height: auto; display: block; }
+.thumb-label {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.6rem; padding: 4px 6px;
+  color: #5a6a7a; text-align: center;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+/* === Message Quotes === */
+.msg-quote {
+  background: rgba(27,40,56,0.04);
+  border-left: 3px solid #00D4AA;
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+  margin: 8px 0;
+}
+.msg-quote-id {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.7rem; color: #5a6a7a; margin-bottom: 4px;
+}
+.msg-quote-text {
+  font-size: 0.92rem; line-height: 1.6; color: #1B2838;
+  font-style: italic;
+}
+
+/* === Asset List === */
+.asset-list { list-style: none; margin: 8px 0; }
+.asset-list li {
+  padding: 6px 0; font-size: 0.9rem; color: #1B2838;
+  border-bottom: 1px solid #f0f2f4;
+  display: flex; align-items: baseline; gap: 8px;
+}
+.asset-list li::before {
+  content: '\2713'; color: #00D4AA; font-weight: 700; font-size: 0.8rem;
+  flex-shrink: 0;
+}
+.asset-count {
+  font-family: 'Inter', sans-serif; font-weight: 800;
+  color: #00D4AA; font-size: 1.1rem;
+}
+
+/* === Gap box === */
+.asset-list a {
+  color: #00997a; font-weight: 600; text-decoration: none;
+}
+.asset-list a:hover { text-decoration: underline; color: #00D4AA; }
+.gap-box {
+  background: rgba(255,180,50,0.06);
+  border: 1px solid rgba(255,180,50,0.3);
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #5a6a7a;
+}
+
+/* === Coverage Summary === */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px; margin: 24px 0;
+}
+.summary-stat {
+  background: #fff; border: 1px solid #e2e6ea;
+  border-radius: 10px; padding: 24px; text-align: center;
+}
+.summary-stat-num {
+  font-family: 'Inter', sans-serif; font-weight: 800;
+  font-size: 2rem; color: #00D4AA;
+}
+.summary-stat-label {
+  font-family: 'Inter', sans-serif; font-weight: 600;
+  font-size: 0.82rem; color: #5a6a7a; margin-top: 4px;
+}
+.summary-scope {
+  background: rgba(27,40,56,0.04);
+  border-radius: 10px; padding: 24px 28px;
+  margin: 24px 0;
+}
+.summary-scope h4 {
+  font-size: 0.95rem; font-weight: 700; margin-bottom: 12px;
+}
+.scope-cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.scope-col h5 {
+  font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.scope-col.yes h5 { color: #00D4AA; }
+.scope-col.no h5 { color: #FF6B35; }
+.scope-col ul { list-style: none; }
+.scope-col ul li {
+  font-size: 0.88rem; padding: 4px 0; color: #3a4a5a;
+}
+.scope-col.yes ul li::before { content: '\2713 '; color: #00D4AA; font-weight: 700; }
+.scope-col.no ul li::before { content: '\2717 '; color: #FF6B35; font-weight: 700; }
+
+/* === Jurisdiction Detail Cards === */
+.juris-card {
+  border: 1px solid #e2e6ea;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.juris-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px; cursor: pointer;
+  user-select: none;
+}
+.juris-header:hover { background: #f7f8fa; }
+.juris-name {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.92rem; color: #1B2838; flex: 1;
+}
+.juris-chevron {
+  color: #b0bac4; transition: transform 0.3s; font-size: 1rem;
+}
+.juris-card.expanded .juris-chevron { transform: rotate(180deg); }
+.juris-body {
+  display: none; padding: 0 20px 20px;
+  border-top: 1px solid #e8ecf0;
+  font-size: 0.88rem; line-height: 1.7;
+}
+.juris-card.expanded .juris-body { display: block; }
+.juris-body dt {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.06em; color: #5a6a7a;
+  margin-top: 14px;
+}
+.juris-body dd { color: #3a4a5a; margin-top: 4px; }
+.juris-body dd a {
+  color: #00997a; font-weight: 600; text-decoration: none;
+}
+.juris-body dd a:hover { text-decoration: underline; color: #00D4AA; }
+
+/* === Bottom Disclaimer === */
+.pb-bottom-disclaimer {
+  background: #0F1923; color: rgba(255,255,255,0.6);
+  padding: 48px 0; font-size: 0.88rem; line-height: 1.7;
+}
+.pb-bottom-disclaimer strong {
+  color: #FF6B35; display: block; margin-bottom: 8px;
+  font-family: 'Inter', sans-serif; font-size: 0.8rem;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* === Scroll Reveal === */
+.sr { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.sr.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .sr { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .pb-back-bar { padding: 12px 20px; }
+  .pb-container, .pb-container-wide { padding: 0 20px; }
+  .pb-hero { padding: 56px 20px 48px; }
+  .pb-disclaimer-banner { margin: 24px 20px; }
+  .reg-grid { grid-template-columns: 1fr; }
+  .scope-cols { grid-template-columns: 1fr; }
+  .summary-grid { grid-template-columns: 1fr 1fr; }
+  .theme-header { padding: 16px; }
+  .theme-body { padding: 0 16px 16px; }
+  .thumb-item { width: 90px; }
+  .vert-grid { gap: 6px; }
+  .vert-chip { padding: 6px 14px; font-size: 0.78rem; }
+}
+@media (max-width: 480px) {
+  .summary-grid { grid-template-columns: 1fr; }
+  .fab-btn { padding: 12px 20px; font-size: 0.82rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Back Bar -->
+<div class="pb-back-bar"><a href="/tools/playbook/">&larr; Back to Playbook</a></div>
+
+<!-- Hero -->
+<section class="pb-hero">
+  <div class="pb-container">
+    <h1>Regulatory <span>Alignment</span></h1>
+    <p>See exactly how Playbook content maps to the regulatory requirements in your jurisdiction. Select your regulator, review specific requirements, and verify coverage&nbsp;&mdash; then confirm with your legal team.</p>
+  </div>
+</section>
+
+<!-- Disclaimer Banner (closeable) -->
+<div class="pb-container">
+  <div class="pb-disclaimer-banner sr" id="disclaimer-banner">
+    <button class="pb-disclaimer-close" onclick="document.getElementById('disclaimer-banner').classList.add('hidden')" aria-label="Close disclaimer">&times;</button>
+    <strong>Important Disclaimer</strong>
+    This page is for informational purposes only and does not constitute legal advice. Operators are solely responsible for verifying compliance with all applicable laws and licence conditions. Always verify against current regulatory guidance with qualified legal counsel.
+  </div>
+</div>
+
+<!-- Floating Request Button -->
+<a href="#feedback" class="request-fab" id="request-fab">Request a jurisdiction</a>
+
+<!-- STEP 1: Regulator Selector -->
+<section class="pb-section" id="step-1">
+  <div class="pb-container-wide">
+    <div class="pb-step-indicator sr">
+      <div class="pb-step-num">1</div>
+      <div class="pb-step-label">Select Your Regulator</div>
+    </div>
+    <p class="pb-section-sub sr">Click one or more regulators below. The requirements matrix will show only the themes and citations relevant to your selections.</p>
+
+    <!-- United States (starts expanded) -->
+    <div class="reg-region-header sr" onclick="this.classList.toggle('collapsed')">
+      <span class="reg-region-chevron">&#9660;</span>
+      <span class="reg-region-title" style="margin:0;">United States</span>
+      <span class="reg-region-count">5 regulators + 3 in development</span>
+    </div>
+    <div class="reg-grid sr" style="max-height:900px;">
+      <div class="reg-card" data-reg="ngc">
+        <div class="reg-card-name">Nevada Gaming Control Board (NGC)</div>
+        <div class="reg-card-juris">Nevada, United States</div>
+        <div class="reg-card-desc">NRS Chapter 463; NGC Regulations 5, 5A, 5.170</div>
+      </div>
+      <div class="reg-card" data-reg="njdge">
+        <div class="reg-card-name">New Jersey DGE</div>
+        <div class="reg-card-juris">New Jersey, United States</div>
+        <div class="reg-card-desc">NJAC 13:69G; Casino Control Act</div>
+      </div>
+      <div class="reg-card" data-reg="mgc">
+        <div class="reg-card-name">Massachusetts Gaming Commission (MGC)</div>
+        <div class="reg-card-juris">Massachusetts, United States</div>
+        <div class="reg-card-desc">M.G.L. Chapter 23K; 205 CMR 133, 248.16, 256</div>
+      </div>
+      <div class="reg-card" data-reg="occc">
+        <div class="reg-card-name">Ohio Casino Control Commission (OCCC)</div>
+        <div class="reg-card-juris">Ohio, United States</div>
+        <div class="reg-card-desc">ORC Chapter 3772; OAC 3772-12</div>
+      </div>
+      <div class="reg-card" data-reg="ca">
+        <div class="reg-card-name">California (Tribal Compacts)</div>
+        <div class="reg-card-juris">California, United States</div>
+        <div class="reg-card-desc">Individual Tribal-State Compacts; IGRA. Land-based tribal casinos only.</div>
+      </div>
+      <div class="reg-card-cs"><div class="reg-card-name">Pennsylvania PGCB</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">Michigan MGCB</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">Illinois IGB</div><div class="reg-card-juris">In development</div></div>
+    </div>
+
+    <!-- Canada (starts collapsed) -->
+    <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
+      <span class="reg-region-chevron">&#9660;</span>
+      <span class="reg-region-title" style="margin:0;">Canada</span>
+      <span class="reg-region-count">2 regulators + 2 in development</span>
+    </div>
+    <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
+      <div class="reg-card" data-reg="agco">
+        <div class="reg-card-name">AGCO (Ontario)</div>
+        <div class="reg-card-juris">Ontario, Canada</div>
+        <div class="reg-card-desc">iGaming Ontario RG Standards; Gaming Control Act</div>
+      </div>
+      <div class="reg-card" data-reg="aglc">
+        <div class="reg-card-name">AGLC (Alberta)</div>
+        <div class="reg-card-juris">Alberta, Canada</div>
+        <div class="reg-card-desc">Gaming, Liquor and Cannabis Act; iGaming Alberta Act</div>
+      </div>
+      <div class="reg-card-cs"><div class="reg-card-name">BCLC (British Columbia)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">Loto-Qu&eacute;bec</div><div class="reg-card-juris">In development</div></div>
+    </div>
+
+    <!-- Asia-Pacific (starts collapsed) -->
+    <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
+      <span class="reg-region-chevron">&#9660;</span>
+      <span class="reg-region-title" style="margin:0;">Asia-Pacific</span>
+      <span class="reg-region-count">2 regulators + 4 in development</span>
+    </div>
+    <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
+      <div class="reg-card" data-reg="dicj">
+        <div class="reg-card-name">DICJ (Macau)</div>
+        <div class="reg-card-juris">Macau SAR</div>
+        <div class="reg-card-desc">Law No. 16/2001 (amended by Law 7/2022); Law No. 10/2012. Land-based casino only.</div>
+      </div>
+      <div class="reg-card" data-reg="gra_sg">
+        <div class="reg-card-name">GRA (Singapore)</div>
+        <div class="reg-card-juris">Singapore</div>
+        <div class="reg-card-desc">Casino Control Act 2006; Gambling Control Act 2022. Land-based casino only (2 integrated resorts).</div>
+      </div>
+      <div class="reg-card-cs"><div class="reg-card-name">PAGCOR (Philippines)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">ACMA / NCPF (Australia)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">NZGC (New Zealand)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">MECC (Japan)</div><div class="reg-card-juris">In development</div></div>
+    </div>
+
+    <!-- Europe (starts collapsed) -->
+    <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
+      <span class="reg-region-chevron">&#9660;</span>
+      <span class="reg-region-title" style="margin:0;">Europe</span>
+      <span class="reg-region-count">2 regulators + 7 in development</span>
+    </div>
+    <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
+      <div class="reg-card" data-reg="ukgc">
+        <div class="reg-card-name">UKGC (Gambling Commission)</div>
+        <div class="reg-card-juris">United Kingdom</div>
+        <div class="reg-card-desc">Gambling Act 2005; Licence Conditions and Codes of Practice (LCCP)</div>
+      </div>
+      <div class="reg-card" data-reg="spillem">
+        <div class="reg-card-name">Spillemyndigheden (Denmark)</div>
+        <div class="reg-card-juris">Denmark</div>
+        <div class="reg-card-desc">Spilleloven; Executive Orders 1274/1276</div>
+      </div>
+      <div class="reg-card-cs"><div class="reg-card-name">MGA (Malta)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">Spelinspektionen (Sweden)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">ANJ (France)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">KSA (Netherlands)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">GGL (Germany)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">ADM (Italy)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">DGOJ (Spain)</div><div class="reg-card-juris">In development</div></div>
+    </div>
+
+    <!-- Latin America (starts collapsed) -->
+    <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
+      <span class="reg-region-chevron">&#9660;</span>
+      <span class="reg-region-title" style="margin:0;">Latin America</span>
+      <span class="reg-region-count">Coming soon</span>
+    </div>
+    <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
+      <div class="reg-card-cs"><div class="reg-card-name">Coljuegos (Colombia)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">LOTBA (Argentina)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">SBJ / LOTERJ (Brazil)</div><div class="reg-card-juris">In development</div></div>
+    </div>
+
+    <!-- Africa (starts collapsed) -->
+    <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
+      <span class="reg-region-chevron">&#9660;</span>
+      <span class="reg-region-title" style="margin:0;">Africa</span>
+      <span class="reg-region-count">Coming soon</span>
+    </div>
+    <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
+      <div class="reg-card-cs"><div class="reg-card-name">NGB (South Africa)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">NLRC (Nigeria)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card-cs"><div class="reg-card-name">BCLB (Kenya)</div><div class="reg-card-juris">In development</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: Vertical Selector -->
+<section class="pb-section pb-section-alt" id="step-1b">
+  <div class="pb-container-wide">
+    <div class="pb-step-indicator sr">
+      <div class="pb-step-num">2</div>
+      <div class="pb-step-label">Select Your Verticals / Channels</div>
+    </div>
+    <p class="pb-section-sub sr">Narrow results to the gambling verticals you operate in. If none are selected, all verticals are shown.</p>
+
+    <div class="vert-grid sr">
+      <div class="vert-chip" data-vert="casino">Land-based Casino</div>
+      <div class="vert-chip" data-vert="online">Online Casino / iGaming</div>
+      <div class="vert-chip" data-vert="sports">Sports Betting</div>
+      <div class="vert-chip coming-soon">Lottery <span class="cs-label">Coming soon</span></div>
+      <div class="vert-chip coming-soon">Bingo / VLT <span class="cs-label">Coming soon</span></div>
+      <div class="vert-chip coming-soon">Horse Racing <span class="cs-label">Coming soon</span></div>
+    </div>
+    <div class="vert-hint sr">Slots, table games, physical venue signage -- Online slots, RNG table games, live dealer -- Retail and online sportsbook</div>
+
+    <div id="juris-notices"></div>
+  </div>
+</section>
+
+<!-- Floating Action Buttons -->
+<div class="fab-container" id="fab">
+  <button class="fab-btn" id="fab-view" onclick="showRequirements()">View <span id="fab-count">0</span> requirements &rarr;</button>
+  <button class="fab-clear" onclick="clearSelection()">Clear</button>
+</div>
+
+<!-- STEP 3: Requirements Matrix -->
+<section class="pb-section" id="step-2">
+  <div class="pb-container-wide">
+    <div class="pb-step-indicator sr">
+      <div class="pb-step-num">3</div>
+      <div class="pb-step-label">Requirements Matrix</div>
+    </div>
+
+    <div id="requirements-placeholder">
+      <p class="pb-section-sub">Select at least one regulator in Step&nbsp;1, then click "View Requirements" to see the full matrix.</p>
+    </div>
+
+    <div id="requirements-matrix"></div>
+  </div>
+</section>
+
+<!-- STEP 4: Coverage Summary -->
+<section class="pb-section pb-section-alt" id="step-3" style="display:none;">
+  <div class="pb-container-wide">
+    <div class="pb-step-indicator sr">
+      <div class="pb-step-num">4</div>
+      <div class="pb-step-label">Coverage Summary</div>
+    </div>
+
+    <div class="summary-grid sr" id="summary-stats"></div>
+
+    <div class="summary-scope sr">
+      <h4>Playbook Scope -- What Is (and Isn't) Included</h4>
+      <div class="scope-cols">
+        <div class="scope-col yes">
+          <h5>Playbook Covers</h5>
+          <ul>
+            <li>Player education content (game guides, odds tables)</li>
+            <li>Responsible gambling messaging (74 core messages)</li>
+            <li>Helpline display and crisis support templates</li>
+            <li>Self-exclusion communication templates</li>
+            <li>Limit-setting promotional messaging and UX mockups</li>
+            <li>Advertising copy and campaign briefs (Nevada-specific only)</li>
+            <li>Age restriction display templates with configurable min_age token</li>
+            <li>Venue and environmental signage templates (HTML/PNG renders)</li>
+            <li>Staff conversation scripts and FAQs (reference materials)</li>
+            <li>Activity statement communication mockups</li>
+          </ul>
+        </div>
+        <div class="scope-col no">
+          <h5>Operator Provides</h5>
+          <ul>
+            <li>Legal review and compliance certification</li>
+            <li>Platform features (deposit limits, self-exclusion infrastructure)</li>
+            <li>Age verification technology</li>
+            <li>Activity statement data pipelines</li>
+            <li>Jurisdiction-specific mandatory verbatim text</li>
+            <li>Advertising pre-clearance and media buying</li>
+            <li>Staff training program, e-learning, and certification</li>
+            <li>Game-specific RTP values from their platform</li>
+            <li>Self-exclusion enrollment mechanics and scheme integration</li>
+            <li>Session tracking and monitoring systems</li>
+            <li>Press-ready production files from signage templates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STEP 5: Jurisdiction Detail Cards -->
+<section class="pb-section" id="step-4" style="display:none;">
+  <div class="pb-container-wide">
+    <div class="pb-step-indicator sr">
+      <div class="pb-step-num">5</div>
+      <div class="pb-step-label">Jurisdiction Details</div>
+    </div>
+    <p class="pb-section-sub sr">Expand each selected regulator for key legislation, unique requirements, and notable provisions.</p>
+    <div id="juris-cards"></div>
+
+    <div class="configurator-cta sr" style="text-align:center; margin-top:48px; padding:40px 32px; background:linear-gradient(135deg,#0F1923 0%,#1B2838 100%); border-radius:12px;">
+      <h4 style="font-family:'Inter',sans-serif; font-size:1.3rem; color:#fff; margin-bottom:8px;">Ready to configure Playbook for your jurisdiction?</h4>
+      <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin-bottom:24px; max-width:540px; margin-left:auto; margin-right:auto;">Set your operator name, helpline number, minimum age, and brand tokens in the configurator. Generate a white-label build in minutes.</p>
+      <a href="/tools/playbook/configurator" style="display:inline-block; padding:14px 36px; background:#00D4AA; color:#0F1923; font-family:'Inter',sans-serif; font-weight:700; font-size:0.95rem; border-radius:8px; text-decoration:none; transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='#00eabb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#00D4AA';this.style.transform='none'">Open the Brand Configurator</a>
+    </div>
+  </div>
+</section>
+
+<!-- Feedback / Request Section -->
+<section class="feedback-section" id="feedback">
+  <div class="pb-container">
+    <div class="feedback-inner">
+      <h3>Report an Error or Request a Jurisdiction</h3>
+      <p>Found an inaccurate citation? Need a jurisdiction we haven't covered yet? Let us know and we'll prioritize it.</p>
+      <form id="feedback-form" onsubmit="return submitFeedback(event)">
+        <div class="feedback-grid">
+          <div>
+            <label for="fb-email">Email</label>
+            <input type="email" id="fb-email" name="email" placeholder="you@operator.com" required>
+          </div>
+          <div>
+            <label for="fb-type">Type</label>
+            <select id="fb-type" name="type">
+              <option value="jurisdiction-request">Request a jurisdiction</option>
+              <option value="citation-error">Report a citation error</option>
+              <option value="coverage-feedback">Coverage feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="feedback-msg-wrap">
+          <label for="fb-message">Details</label>
+          <textarea id="fb-message" name="message" placeholder="Which jurisdiction do you need? Or describe the error you found..." required></textarea>
+        </div>
+        <button type="submit" class="feedback-submit">Submit</button>
+      </form>
+      <div class="feedback-success" id="feedback-success">Thanks! We've received your submission and will follow up.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Disclaimer -->
+<footer class="pb-bottom-disclaimer">
+  <div class="pb-container">
+    <strong>Legal Disclaimer</strong>
+    <p>Playbook is the content and communications layer of your responsible gambling program. It provides messaging, templates, and educational content&nbsp;&mdash; not legal analysis, compliance certification, or platform features. Your legal and compliance team should review all content before deployment.</p>
+    <p style="margin-top:12px;">This page is for informational purposes only and does not constitute legal advice. Operators are solely responsible for verifying compliance with all applicable laws and licence conditions. Requirements change frequently&nbsp;&mdash; always verify against current regulatory guidance with qualified legal counsel.</p>
+    <p style="margin-top:16px;font-size:0.78rem;color:rgba(255,255,255,0.35);">&copy; Playbook. Built for operators, reviewed by experts.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+
+/* ======================================================================
+   DATA: All themes, citations, assets
+   ====================================================================== */
+var GITHUB_RAW = 'https://raw.githubusercontent.com/kphilander/Playbook/main/collateral/render/';
+
+/* Source URLs for every regulator / code */
+var SOURCES = {
+  'ngc-reg5':          'https://gaming.nv.gov/contentassets/d6342a488e944e6aa02337fa9d3c94e5/regulation-5-as-of-09-25.pdf',
+  'njdge-69g':         'https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69G.pdf',
+  'njdge-69n':         'https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69N.pdf',
+  'njdge-69o':         'https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69O-1-2',
+  'njdge-bestprac':    'https://www.nj.gov/oag/ge/docs/BestPractices/AdvertisingBestPractices.pdf',
+  'mgc-vse':           'https://www.mass.gov/regulations/205-CMR-13300-voluntary-self-exclusion',
+  'mgc-ads':           'https://www.mass.gov/regulations/205-CMR-25600-sports-wagering-advertising',
+  'occc-admin':        'https://codes.ohio.gov/ohio-administrative-code/chapter-3772-12',
+  'occc-sports-ads':   'https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-08',
+  'occc-sports-acct':  'https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-03',
+  'ca-compacts':       'https://www.cgcc.ca.gov/?pageID=compacts',
+  'agco-rg':           'https://www.agco.ca/en/lottery-and-gaming/standards-and-requirements/2-responsible-gaming',
+  'aglc-rg':           'https://aglc.ca/gaming/responsible-gambling',
+  'aglc-se':           'https://aglc.ca/gaming/self-exclusion',
+  'dicj-rg':           'https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html',
+  'gra-sg-cca':        'https://sso.agc.gov.sg/Act/CCA2006',
+  'gra-sg-ads':        'https://www.gra.gov.sg/harm-minimisation/responsible-gambling-advertising-promotion',
+  'ukgc-331':          'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-3-1-responsible-gambling-information',
+  'ukgc-355':          'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-5-5-remote-multi-operator-sr-code',
+  'ukgc-3211':         'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-2-11-remote-sr-code',
+  'ukgc-516':          'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/5-1-6-compliance-with-advertising-codes',
+  'ukgc-341':          'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-1-customer-interaction',
+  'ukgc-343':          'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-3-remote-customer-interaction',
+  'spillem-rg':        'https://www.spillemyndigheden.dk/en/responsible-gambling',
+  'spillem-guide':     'https://www.spillemyndigheden.dk/uploads/2022-12/The%20Danish%20Gambling%20Authority%E2%80%99s%20guide%20on%20responsible%20gambling%20version%201.4.pdf'
+};
+
+/* Verticals */
+var VERTICALS = [
+  { id: 'casino', label: 'Land-based Casino' },
+  { id: 'online', label: 'Online Casino / iGaming' },
+  { id: 'sports', label: 'Sports Betting' }
+];
+
+/* Regulators that are land-based only */
+var LAND_BASED_ONLY = { ca: true, dicj: true, gra_sg: true };
+
+/* Regulators with no online/sports */
+var NO_ONLINE_SPORTS = {
+  ca: 'California does not currently permit online casino gaming or sports betting. Requirements shown are for tribal land-based casinos under individual compacts.',
+  dicj: 'Macau does not permit legal online gambling. Requirements shown are for land-based casinos only.',
+  gra_sg: 'Singapore largely prohibits online gambling. Requirements shown are for land-based casinos at the two integrated resorts only.'
+};
+
+/* ======================================================================
+   THEMES DATA
+   ====================================================================== */
+var THEMES = [
+/* ------- THEME 1: Game Information & Odds Disclosure ------- */
+{
+  id: 1,
+  title: 'Game Information & Odds Disclosure',
+  badge: 'strong',
+  regs: ['ngc','njdge','ca','mgc','occc','ukgc','agco','dicj','gra_sg','spillem'],
+  citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Nonrestricted licensees shall develop a program including making information available to patrons.' },
+    { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69O-1.2 / DGE Guidance', src:'njdge-69o', verticals:['casino','online','sports'],
+      text:'Responsible gaming information including game rules must be made available to patrons.' },
+    { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
+      text:'Compacts typically require tribes to provide information about games, including rules and odds, to patrons.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 138', src:'mgc-vse', verticals:['casino'],
+      text:'Gaming establishments must make game rules and odds information available to patrons.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06', src:'occc-admin', verticals:['casino'],
+      text:'Problem gambling plan must include patron information about games and responsible gambling.' },
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino','online','sports'],
+      text:'Licensees must make responsible gambling information readily available to customers.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'Provide clear and accurate information about how games work, including the odds of winning.' },
+    { reg:'dicj', label:'DICJ (Macau)', ref:'Article 42-A, Law 16/2001 (amended by Law 7/2022)', src:'dicj-rg', verticals:['casino'],
+      text:'Concessionaires must adopt measures to prevent and mitigate adverse gambling impacts.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'Casino Control (Responsible Gambling) Regulations 2013', src:'gra-sg-cca', verticals:['casino'],
+      text:'Operators must provide responsible gambling information.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Responsible Gambling Guide v1.4', src:'spillem-guide', verticals:['casino','online','sports'],
+      text:'Operators must provide game information.' }
+  ],
+  assets: '<ul class="asset-list"><li><span class="asset-count">11</span> <a href="https://github.com/kphilander/Playbook/tree/main/how-to-play" target="_blank" rel="noopener">game guides</a> with house edge / RTP data at grade 6-8 reading level</li><li><span class="asset-count">1</span> <a href="https://github.com/kphilander/Playbook/blob/main/how-to-play/odds-at-a-glance.md" target="_blank" rel="noopener">odds comparison table</a> covering 11 games with house edge ranges</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">HTP card templates</a> (print-ready HTML)</li><li><a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-odds.js" target="_blank" rel="noopener">Odds explorer widget</a></li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('htp-card-slots.png','HTP Slots') +
+    thumb('htp-card-blackjack.png','HTP Blackjack') +
+    thumb('htp-card-roulette.png','HTP Roulette') +
+    thumb('htp-card-sports.png','HTP Sports') +
+    thumb('htp-odds-comparison.png','Odds Table') +
+    '</div>',
+  gap: 'Game-specific RTP values if different from published ranges; any jurisdiction-mandated display format for odds.'
+},
+/* ------- THEME 2: RG Messaging ------- */
+{
+  id: 2,
+  title: 'Responsible Gambling Messaging',
+  badge: 'partial',
+  regs: ['ngc','njdge','ca','mgc','occc','ukgc','spillem','aglc','agco'],
+  citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(4)', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Advertising must conform to prevailing community standards.' },
+    { reg:'njdge', label:'NJ DGE', ref:'DGE Advertising Best Practices', src:'njdge-bestprac', verticals:['casino','online','sports'],
+      text:'Responsible gambling messaging required in all advertising.' },
+    { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
+      text:'Recent compacts require responsible gambling messages in advertising materials and patron communications.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256', src:'mgc-ads', verticals:['sports'],
+      text:'Sports wagering ads must clearly convey material conditions.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3775-16-08', src:'occc-sports-ads', verticals:['sports'],
+      text:'Sports gaming advertising must include problem gambling prevention messages and helpline.' },
+    { reg:'ukgc', label:'UKGC', ref:'LCCP SR Code 5.1.6', src:'ukgc-516', verticals:['casino','online','sports'],
+      text:'Compliance with ASA/CAP advertising codes.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Guide on Duty of Disclosure in Marketing', src:'spillem-guide', verticals:['casino','online','sports'],
+      text:'Marketing must present winning chances correctly, show age limit and ROFUS info.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Standards', src:'aglc-rg', verticals:['casino','online','sports'],
+      text:'Cannot target minors, high-risk, or vulnerable individuals.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'Marketing must not target minors or self-excluded persons.' }
+  ],
+  assets: '<ul class="asset-list"><li><span class="asset-count">74</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a> tagged by pillar, tier, tone, and audience</li><li><span class="asset-count">18</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/myth-busting.md" target="_blank" rel="noopener">myth-busting entries</a> in 3 formats each</li><li><span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a> organized by function</li><li>Messages are jurisdiction-agnostic; <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> supports mandatory text tokens but none are wired for the current target jurisdictions</li></ul>',
+  gap: 'Each jurisdiction may require specific verbatim statements. Playbook provides the messaging framework but mandatory verbatim text (specific to NV, NJ, MA, OH, CA, ON, AB, Macau, Singapore, UK, or Denmark) is NOT pre-configured. Messages are not tagged by jurisdiction. Operators must configure jurisdiction-specific mandatory text themselves via _brand.yml tokens.'
+},
+/* ------- THEME 3: Helpline & Crisis Support ------- */
+{
+  id: 3,
+  title: 'Helpline & Crisis Support',
+  badge: 'strong',
+  regs: ['ngc','njdge','ca','mgc','occc','ukgc','gra_sg','spillem','aglc','dicj','agco'],
+  citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Prominently post problem gambling information and helpline number.' },
+    { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69N / 13:69O-1.2', src:'njdge-69n', verticals:['casino','online','sports'],
+      text:'1-800-GAMBLER helpline must be prominently displayed on all platforms and advertisements.' },
+    { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
+      text:'Compacts typically require display of the 1-800-GAMBLER helpline and referral information.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino','sports'],
+      text:'Massachusetts Problem Gambling Helpline: 1-800-327-5050 required display.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06 / OAC 3775-16-08', src:'occc-admin', verticals:['casino','sports'],
+      text:'Problem gambling plan must include signage with responsible gambling information and helpline.' },
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino','online','sports'],
+      text:'Must provide contact details for at least one organization providing counselling on problem gambling.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA / NCPG', src:'gra-sg-cca', verticals:['casino'],
+      text:'National helpline 1800-6-668-668 must be displayed.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'RG Guide', src:'spillem-rg', verticals:['casino','online','sports'],
+      text:'StopSpillet helpline must be referenced on all platforms and marketing.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC / GameSense', src:'aglc-rg', verticals:['casino','online','sports'],
+      text:'GameSense posters and helpline numbers at every venue; integrated into PlayAlberta online.' },
+    { reg:'dicj', label:'DICJ (Macau)', ref:'DICJ RG Standards', src:'dicj-rg', verticals:['casino'],
+      text:'24-hour Gambling Counseling Hotline displayed on ATM screensavers at all casinos.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'Connex Ontario helpline information must be available, visible, and accessible at all gaming sites.' }
+  ],
+  assets: '<ul class="asset-list"><li>Multi-jurisdiction helpline config in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> (US national, US-Nevada, UK, Australia, Canada provinces)</li><li>Working <a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-helpline.js" target="_blank" rel="noopener">&lt;playbook-helpline&gt;</a> web component</li><li>Sticky helpline strip on <a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a></li><li>Dedicated support section</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Helpline card template</a></li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('helpline-card-5c.png','Helpline Card') +
+    thumb('poster-tier2-10g.png','Tier 2 Poster') +
+    thumb('support-page-10a.png','Support Page') +
+    '</div>',
+  gap: 'No helpline data configured for Massachusetts, Ohio, Macau, Singapore, Denmark, or Alberta yet. _brand.yml would need updating with those jurisdiction-specific helpline numbers.'
+},
+/* ------- THEME 4: Self-Exclusion ------- */
+{
+  id: 4,
+  title: 'Self-Exclusion Program Communications',
+  badge: 'partial',
+  regs: ['ukgc','ngc','njdge','ca','mgc','occc','gra_sg','spillem','agco','aglc','dicj'],
+  citations: [
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 3.5.5 (GAMSTOP)', src:'ukgc-355', verticals:['online','sports'],
+      text:'Must participate in GAMSTOP multi-operator remote self-exclusion scheme.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Make information about self-exclusion available to patrons. Property-by-property model.' },
+    { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69G-2', src:'njdge-69g', verticals:['casino','online','sports'],
+      text:'Statewide self-exclusion program: 1-year, 5-year, or lifetime options covering all licensed operators.' },
+    { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
+      text:'Many tribes maintain self-exclusion lists under tribal gaming ordinances. Not state-mandated; varies by compact.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino','sports'],
+      text:'Statewide VSE program. Duration: 1, 3, 5 years, or lifetime.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12', src:'occc-admin', verticals:['casino','sports'],
+      text:'Statewide voluntary exclusion covering casinos and sports gaming. Duration: 1, 5 years, or lifetime.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA ss. 165-166', src:'gra-sg-cca', verticals:['casino'],
+      text:'Self-exclusion, family exclusion orders, visit limit scheme. Criminal penalties for violations.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'ROFUS', src:'spillem-rg', verticals:['casino','online','sports'],
+      text:'National self-exclusion register. All licence holders MUST connect to ROFUS. Options: 24-hour break, 1/3/6 months, permanent.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'OLG / iGO Self-Exclusion', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'Common self-exclusion program covering casino, iGaming, and applicable online channels.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Self-Exclusion', src:'aglc-se', verticals:['casino','online'],
+      text:'Exclusion from all Alberta casinos, RECs, and PlayAlberta. 6mo/1yr/2yr/3yr.' },
+    { reg:'dicj', label:'DICJ (Macau)', ref:'Law 10/2012 (amended by Law 17/2018)', src:'dicj-rg', verticals:['casino'],
+      text:'Self-exclusion and third-party exclusion from all or specific casinos. Max 2 years.' }
+  ],
+  assets: '<ul class="asset-list"><li>Self-exclusion tokens in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a>: <code>{{SELF_EXCLUSION_URL}}</code>, <code>{{SELF_EXCLUSION_NAME}}</code></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Need a Break?" section</li><li>UI mockup for self-exclusion flow</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Cooldown screen template</a></li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('self-exclusion-10b.png','Self-Exclusion') +
+    thumb('cooldown-10e.png','Cooldown Screen') +
+    '</div>',
+  gap: 'No program-specific content for different schemes (GAMSTOP, GameSense, ROFUS, NCPG family exclusion, etc.). Generic templates only, not jurisdiction-adaptive. Operators must integrate their specific self-exclusion scheme details.'
+},
+/* ------- THEME 5: Limit-Setting & Player Controls ------- */
+{
+  id: 5,
+  title: 'Limit-Setting & Player Controls',
+  badge: 'partial',
+  regs: ['ukgc','njdge','mgc','occc','gra_sg','spillem','agco','aglc'],
+  citations: [
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 3.2.11', src:'ukgc-3211', verticals:['online','sports'],
+      text:'Must offer customer-led financial limits on gambling activity.' },
+    { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69O-1.2', src:'njdge-69o', verticals:['online','sports'],
+      text:'Internet gaming operators must offer deposit limits, session time limits, and loss limits.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 248.16', src:'mgc-ads', verticals:['sports'],
+      text:'Must offer daily/weekly/monthly deposit and wager limits.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3775-16-03', src:'occc-sports-acct', verticals:['sports'],
+      text:'Sports gaming accounts must offer deposit, wager, and time-based limits.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'Casino Control (RG) Regs 2013', src:'gra-sg-cca', verticals:['casino'],
+      text:'Systems for patrons to set expenditure and time limits.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Exec Orders 1274/1276', src:'spillem-rg', verticals:['online','sports'],
+      text:'Players MUST set deposit limit before beginning play (mandatory, player-set).' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards for Internet Gaming', src:'agco-rg', verticals:['online','sports'],
+      text:'Mandatory deposit limits for all iGaming operators.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'PlayAlberta Standards', src:'aglc-rg', verticals:['online','sports'],
+      text:'Deposit and loss limits, reality checks, voluntary breaks.' }
+  ],
+  assets: '<ul class="asset-list"><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Your Tools" section with limit-setting promotion</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Limit-reached notification mockup</a></li><li>Session summary mockup</li><li>Cooldown screen mockup</li><li>Tools pillar messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages library</a></li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('limit-reached-10d.png','Limit Reached') +
+    thumb('session-summary-10c.png','Session Summary') +
+    '</div>',
+  gap: 'These are UX specs and mockups, not functional widgets. Operator must build the actual limit-setting tools, session tracking, and deposit limit infrastructure.'
+},
+/* ------- THEME 6: Advertising Compliance ------- */
+{
+  id: 6,
+  title: 'Advertising Compliance',
+  badge: 'partial',
+  regs: ['ngc','njdge','mgc','occc','ukgc','gra_sg','spillem','agco','aglc','dicj'],
+  citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(4) / 5A', src:'ngc-reg5', verticals:['casino','online','sports'],
+      text:'Advertising must conform to community standards; Reg 5A for interactive gaming.' },
+    { reg:'njdge', label:'NJ DGE', ref:'DGE Advertising Best Practices', src:'njdge-bestprac', verticals:['casino','online','sports'],
+      text:'All advertising must include responsible gambling messaging and 1-800-GAMBLER.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256', src:'mgc-ads', verticals:['sports'],
+      text:'No targeting minors or vulnerable adults; no encouraging specific wagers.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3775-16-08', src:'occc-sports-ads', verticals:['sports'],
+      text:'All sports gaming ads must include problem gambling prevention messages and helpline.' },
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 5.1.6', src:'ukgc-516', verticals:['casino','online','sports'],
+      text:'Must comply with ASA/CAP advertising codes.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'Casino Control (Advertising) Regs 2010', src:'gra-sg-ads', verticals:['casino'],
+      text:'All casino advertising must be GRA-approved.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Marketing Guide', src:'spillem-guide', verticals:['casino','online','sports'],
+      text:'Under-25 ban in ads, age limit + ROFUS required in all marketing, proximity bans near schools, live sports ad ban.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'Advertising must not target minors or self-excluded persons.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Standards', src:'aglc-rg', verticals:['casino','online','sports'],
+      text:'Cannot target minors, high-risk, or vulnerable individuals.' },
+    { reg:'dicj', label:'DICJ (Macau)', ref:'Law 7/2022 (amending Law 16/2001)', src:'dicj-rg', verticals:['casino'],
+      text:'Advertising and promotional activities must comply with DICJ guidelines; restrictions on targeting vulnerable populations.' }
+  ],
+  assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/07-application-guidelines.md" target="_blank" rel="noopener">Application guidelines</a></strong> with channel-specific rules for digital, print, broadcast, environmental</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Stigma-free language guide</a> with 35 term pairs</li><li><span class="asset-count">74</span> pre-vetted <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a>, <span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a>, <span class="asset-count">7</span> campaign briefs</li><li>Legal disclaimers configured in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a></li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Email templates</a> and social cards</li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('email-welcome-7a.png','Welcome Email') +
+    thumb('email-deposit-7b.png','Deposit Email') +
+    thumb('email-monthly-7c.png','Monthly Email') +
+    '</div>',
+  gap: 'Playbook has detailed advertising rules for Nevada only among the target jurisdictions. No UK, Denmark, Ontario, Massachusetts, Ohio, Singapore, Macau, or Alberta advertising modules. Operators must build jurisdiction-specific advertising compliance for their markets.'
+},
+/* ------- THEME 7: Age Restriction ------- */
+{
+  id: 7,
+  title: 'Age Restriction Display',
+  badge: 'strong',
+  regs: ['ngc','njdge','ca','mgc','occc','gra_sg','dicj','ukgc','spillem','agco','aglc'],
+  citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'NRS 463.350', src:'ngc-reg5', verticals:['casino','online','sports'],
+      text:'21+ minimum gambling age.' },
+    { reg:'njdge', label:'NJ DGE', ref:'NJSA 5:12-119', src:'njdge-69g', verticals:['casino','online','sports'],
+      text:'21+ minimum gambling age for casino, internet gaming, and sports wagering.' },
+    { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
+      text:'18+ or 21+ depending on tribal compact and whether casino serves alcohol. Most casinos with alcohol licenses require 21+.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'M.G.L. c. 23K', src:'mgc-vse', verticals:['casino','sports'],
+      text:'21+ for casino gaming and sports wagering.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'ORC 3772 / ORC 3775', src:'occc-admin', verticals:['casino','sports'],
+      text:'21+ for casinos and sports gaming.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA', src:'gra-sg-cca', verticals:['casino'],
+      text:'21+ to enter casino premises.' },
+    { reg:'dicj', label:'DICJ (Macau)', ref:'Law 10/2012', src:'dicj-rg', verticals:['casino'],
+      text:'21+ to enter casinos.' },
+    { reg:'ukgc', label:'UKGC', ref:'Gambling Act 2005', src:'ukgc-331', verticals:['casino','online','sports'],
+      text:'18+ for all gambling.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Spilleloven', src:'spillem-rg', verticals:['casino','online','sports'],
+      text:'18+ for most gambling.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Gaming Control Act, 1992', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'19+ in Ontario.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'Gaming, Liquor and Cannabis Act', src:'aglc-rg', verticals:['casino','online','sports'],
+      text:'18+ in Alberta.' }
+  ],
+  assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> <code>legal.min_age</code></strong> configurable per jurisdiction (18, 19, or 21)</li><li><code>{{MIN_AGE}}</code> token used throughout all templates and <a href="https://github.com/kphilander/Playbook/tree/main/collateral" target="_blank" rel="noopener">collateral</a></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> footer displays age automatically from config</li><li>All collateral templates include age messaging where applicable</li></ul>',
+  gap: 'Actual age verification infrastructure (this is a platform feature, not a content feature).'
+},
+/* ------- THEME 8: Venue & Environmental Signage ------- */
+{
+  id: 8,
+  title: 'Venue & Environmental Signage',
+  badge: 'strong',
+  regs: ['ngc','njdge','ca','mgc','occc','dicj','gra_sg','aglc','ukgc','agco'],
+  citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Post information near ATMs and at the cage.' },
+    { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69N / DGE Guidance', src:'njdge-69n', verticals:['casino','sports'],
+      text:'Responsible gambling signage required at casino entrances, near ATMs, cashier cages, and in sportsbook lounges.' },
+    { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
+      text:'Compacts typically require signage with problem gambling resources and age restrictions at casino entrances and gaming floors.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino'],
+      text:'GameSense Info Centers required on-site at all casinos.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06', src:'occc-admin', verticals:['casino'],
+      text:'Signage with responsible gambling information required.' },
+    { reg:'dicj', label:'DICJ (Macau)', ref:'DICJ Standards', src:'dicj-rg', verticals:['casino'],
+      text:'RG messages in promotional pamphlets, kiosks on casino floors.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA RG Regs', src:'gra-sg-cca', verticals:['casino'],
+      text:'Display of responsible gambling messages required.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC / GameSense Alberta', src:'aglc-rg', verticals:['casino'],
+      text:'GameSense posters and information booths at all casinos and RECs.' },
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino'],
+      text:'Making responsible gambling information available in premises.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino'],
+      text:'Responsible gambling information must be available, visible, and accessible at gaming sites.' }
+  ],
+  assets: '<ul class="asset-list"><li><span class="asset-count">5</span> <a href="https://github.com/kphilander/Playbook/tree/main/collateral/environmental" target="_blank" rel="noopener">venue sign templates</a> (entrance, ATM, floor, restroom, staff area)</li><li><span class="asset-count">5</span> poster templates</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Print collateral</a>: rack card, table tent, helpline card, tri-fold brochure</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/digital" target="_blank" rel="noopener">Digital displays</a>: landscape and portrait formats</li><li>All <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">rendered as HTML + PNG</a></li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('sign-entrance-9a.png','Entrance') +
+    thumb('sign-atm-9b.png','ATM') +
+    thumb('sign-floor-9c.png','Floor') +
+    thumb('sign-restroom-9d.png','Restroom') +
+    thumb('sign-staff-9e.png','Staff') +
+    '</div>' +
+    '<div class="thumb-grid" style="margin-top:4px;">' +
+    thumb('poster-4a-know-your-game.png','Know Your Game') +
+    thumb('poster-4b-no-fine-print.png','No Fine Print') +
+    thumb('poster-4c-game-iq.png','Game IQ') +
+    '</div>' +
+    '<div class="thumb-grid" style="margin-top:4px;">' +
+    thumb('rack-card-5a.png','Rack Card') +
+    thumb('table-tent-5b.png','Table Tent') +
+    thumb('brochure-trifold-8a.png','Brochure') +
+    '</div>',
+  gap: 'HTML/PNG renders only, not press-ready output. Operators would need to recreate in design tools for production printing.'
+},
+/* ------- THEME 9: Staff Training ------- */
+{
+  id: 9,
+  title: 'Staff Training & Customer Interaction',
+  badge: 'partial',
+  regs: ['ukgc','ngc','njdge','mgc','occc','gra_sg','aglc','agco'],
+  citations: [
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 3.4.1 (premises) / 3.4.3 (remote)', src:'ukgc-341', verticals:['casino','online','sports'],
+      text:'Customer interaction requirements for identifying at-risk players. Separate codes for premises-based and remote gambling.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Train employees to provide problem gambling information.' },
+    { reg:'njdge', label:'NJ DGE', ref:'DGE Guidance / NJAC 13:69N', src:'njdge-69n', verticals:['casino','online','sports'],
+      text:'Employees must be trained to recognize signs of problem gambling and know referral procedures.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino'],
+      text:'Designated agents must complete Commission-approved training. GameSense Advisors on-site.' },
+    { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06', src:'occc-admin', verticals:['casino'],
+      text:'Problem gambling plan must include staff training on identifying and assisting problem gamblers.' },
+    { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA RG Regs', src:'gra-sg-cca', verticals:['casino'],
+      text:'Compulsory staff training to identify and assist problem gamblers.' },
+    { reg:'aglc', label:'AGLC (Alberta)', ref:'Deal Us In', src:'aglc-rg', verticals:['casino'],
+      text:'Mandatory certification for all gaming workers. Expires after 5 years.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'Responsible gambling training required for all employees interacting with players.' }
+  ],
+  assets: '<ul class="asset-list"><li><span class="asset-count">8</span> <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/conversation-scripts.md" target="_blank" rel="noopener">conversation scripts</a> (helpline referral, self-exclusion enrollment, deposit limit setting, distressed player interaction)</li><li><span class="asset-count">30</span>-question <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/staff-faq.md" target="_blank" rel="noopener">staff FAQ</a></li><li>At-risk player segment profile with messaging guidance</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Tier 2 messaging guidelines</a> for support contexts</li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('support-page-10a.png','Support Page') +
+    '</div>',
+  gap: 'These are reference materials, NOT a training program. No e-learning, no curriculum, no certification. Operator must build actual training infrastructure.'
+},
+/* ------- THEME 10: Activity Statements & Transparency ------- */
+{
+  id: 10,
+  title: 'Activity Statements & Transparency',
+  badge: 'light',
+  regs: ['ukgc','mgc','spillem','agco'],
+  citations: [
+    { reg:'ukgc', label:'UKGC', ref:'LCCP 3.2.11', src:'ukgc-3211', verticals:['online','sports'],
+      text:'Operators must provide account information and remind customers to review transaction history.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'M.G.L. c. 23K s. 29', src:'mgc-vse', verticals:['casino'],
+      text:'Monthly win/loss statements for reward cardholders.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Exec Orders', src:'spillem-rg', verticals:['online','sports'],
+      text:'Activity monitoring and player-set limits.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards for Internet Gaming', src:'agco-rg', verticals:['online','sports'],
+      text:'Behavioural monitoring and player activity information requirements for iGaming operators.' }
+  ],
+  assets: '<ul class="asset-list"><li>Static <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">session summary mockup</a></li><li>Dashboard messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">"Open" pillar</a></li></ul>' +
+    '<div class="thumb-grid">' +
+    thumb('session-summary-10c.png','Session Summary') +
+    '</div>',
+  gap: 'Playbook has a static mockup only, not a data-driven template. Activity statement data generation (spending data, session duration, net position) and delivery infrastructure (email, in-app) must come from the operator platform.'
+}
+];
+
+/* ======================================================================
+   JURISDICTION DETAIL DATA
+   ====================================================================== */
+var JURISDICTIONS = {
+  ngc: {
+    name: 'Nevada Gaming Control Board (NGC)',
+    jurisdiction: 'Nevada, United States',
+    legislation: 'NRS Chapter 463; NGC Regulations 5, 5A, 5.170',
+    unique: 'Property-by-property self-exclusion (no centralized statewide program); Regulation 5.170 specifically mandates posting near ATMs and at the cage; Regulation 5A applies to interactive gaming; 21+ minimum age.',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    source: 'https://gaming.nv.gov/contentassets/d6342a488e944e6aa02337fa9d3c94e5/regulation-5-as-of-09-25.pdf'
+  },
+  njdge: {
+    name: 'New Jersey DGE',
+    jurisdiction: 'New Jersey, United States',
+    legislation: 'NJAC 13:69G; Casino Control Act',
+    unique: 'One of the earliest US states with legal online gaming; Detailed responsible gambling requirements for internet gaming operators; Advertising best practices published.',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    source: 'https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69G.pdf'
+  },
+  mgc: {
+    name: 'Massachusetts Gaming Commission (MGC)',
+    jurisdiction: 'Massachusetts, United States',
+    legislation: 'M.G.L. Chapter 23K; 205 CMR 133, 248.16, 256',
+    unique: 'Statewide VSE program with 1/3/5 year and lifetime options; GameSense Info Centers required at all casinos; Mandatory deposit/wager limits for sports wagering; Problem Gambling Helpline: 1-800-327-5050.',
+    verticals: 'Land-based Casino, Sports Betting',
+    source: 'https://www.mass.gov/regulations/205-CMR-13300-voluntary-self-exclusion'
+  },
+  occc: {
+    name: 'Ohio Casino Control Commission (OCCC)',
+    jurisdiction: 'Ohio, United States',
+    legislation: 'ORC Chapter 3772; OAC 3772-12',
+    unique: 'Statewide voluntary exclusion with 1/5 year and lifetime options; All sports ads must include problem gambling prevention messages and helpline; Signage requirements for all casino venues.',
+    verticals: 'Land-based Casino, Sports Betting',
+    source: 'https://codes.ohio.gov/ohio-administrative-code/chapter-3772-12'
+  },
+  ca: {
+    name: 'California (Tribal Compacts)',
+    jurisdiction: 'California, United States',
+    legislation: 'Individual Tribal-State Compacts; IGRA',
+    unique: 'No legal online casino or sports betting in California. Land-based tribal casinos only. Requirements vary by individual tribal compact. Each tribe negotiates its own compact with the state, so responsible gambling provisions differ across properties.',
+    verticals: 'Land-based Casino only',
+    source: 'https://www.cgcc.ca.gov/?pageID=compacts'
+  },
+  agco: {
+    name: 'AGCO (Ontario)',
+    jurisdiction: 'Ontario, Canada',
+    legislation: 'iGaming Ontario RG Standards; Gaming Control Act',
+    unique: 'Mandatory deposit limits for all iGaming operators; iGO self-exclusion program; 19+ minimum age; Relatively new market (launched April 2022) with evolving standards; Advertising must not target minors.',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    source: 'https://www.agco.ca/en/lottery-and-gaming/standards-and-requirements/2-responsible-gaming'
+  },
+  aglc: {
+    name: 'AGLC (Alberta)',
+    jurisdiction: 'Alberta, Canada',
+    legislation: 'Gaming, Liquor and Cannabis Act; iGaming Alberta Act',
+    unique: 'GameSense program at all casinos and RECs; Deal Us In mandatory certification for all gaming workers; Self-exclusion: 6mo/1yr/2yr/3yr from all Alberta venues; 18+ minimum age; PlayAlberta standards for online include deposit/loss limits and reality checks.',
+    verticals: 'Land-based Casino, Online Casino',
+    source: 'https://aglc.ca/gaming/responsible-gambling'
+  },
+  dicj: {
+    name: 'DICJ (Macau)',
+    jurisdiction: 'Macau SAR',
+    legislation: 'Law No. 16/2001 (amended by Law 7/2022); Law No. 10/2012',
+    unique: 'Land-based casino only -- no legal online gambling. 21+ minimum age. Self-exclusion and third-party exclusion from all or specific casinos (max 2 years). 24-hour Gambling Counseling Hotline displayed on ATM screensavers. RG messages required in promotional pamphlets and on kiosks.',
+    verticals: 'Land-based Casino only',
+    source: 'https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html'
+  },
+  gra_sg: {
+    name: 'GRA (Singapore)',
+    jurisdiction: 'Singapore',
+    legislation: 'Casino Control Act 2006; Gambling Control Act 2022',
+    unique: 'Land-based casino only (2 integrated resorts) -- online gambling largely prohibited. 21+ minimum age. Self-exclusion, family exclusion orders, and visit limit scheme with criminal penalties for violations. All casino advertising must be GRA-approved. Compulsory staff training. National helpline: 1800-6-668-668.',
+    verticals: 'Land-based Casino only',
+    source: 'https://sso.agc.gov.sg/Act/CCA2006'
+  },
+  ukgc: {
+    name: 'UKGC (Gambling Commission)',
+    jurisdiction: 'United Kingdom',
+    legislation: 'Gambling Act 2005; Licence Conditions and Codes of Practice (LCCP)',
+    unique: 'GAMSTOP national self-exclusion scheme; LCCP social responsibility codes are licence conditions (breach = enforcement action); Strong focus on customer interaction (SR Code 3.4.3); Must offer financial limits; Must comply with ASA/CAP advertising codes; 18+ minimum age.',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    source: 'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/7-1-1-fair-and-transparent-terms-and-practices'
+  },
+  spillem: {
+    name: 'Spillemyndigheden (Denmark)',
+    jurisdiction: 'Denmark',
+    legislation: 'Spilleloven; Executive Orders 1274/1276',
+    unique: 'ROFUS national self-exclusion register (all licence holders must connect); Players MUST set deposit limit before beginning play; Under-25 ban in advertising; Age limit + ROFUS info required in all marketing; Proximity bans near schools; Live sports ad ban; StopSpillet helpline required; 18+ minimum age.',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    source: 'https://www.spillemyndigheden.dk/en/responsible-gambling'
+  }
+};
+
+/* ======================================================================
+   HELPER: build thumbnail HTML
+   ====================================================================== */
+function thumb(file, label) {
+  return '<div class="thumb-item"><img src="' + GITHUB_RAW + file + '" alt="' + label + '" loading="lazy"><div class="thumb-label">' + label + '</div></div>';
+}
+
+/* ======================================================================
+   HELPER: vertical label lookup
+   ====================================================================== */
+var VERT_LABELS = {};
+VERTICALS.forEach(function(v) { VERT_LABELS[v.id] = v.label; });
+
+/* ======================================================================
+   STATE
+   ====================================================================== */
+var selectedRegs = new Set();
+var selectedVerts = new Set();
+
+/* ======================================================================
+   REGULATOR SELECTOR
+   ====================================================================== */
+document.querySelectorAll('.reg-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    var reg = this.dataset.reg;
+    if (selectedRegs.has(reg)) {
+      selectedRegs.delete(reg);
+      this.classList.remove('selected');
+    } else {
+      selectedRegs.add(reg);
+      this.classList.add('selected');
+    }
+    updateFab();
+    updateJurisNotices();
+  });
+});
+
+/* ======================================================================
+   VERTICAL SELECTOR
+   ====================================================================== */
+document.querySelectorAll('.vert-chip:not(.coming-soon)').forEach(function(chip) {
+  chip.addEventListener('click', function() {
+    var vert = this.dataset.vert;
+    if (selectedVerts.has(vert)) {
+      selectedVerts.delete(vert);
+      this.classList.remove('selected');
+    } else {
+      selectedVerts.add(vert);
+      this.classList.add('selected');
+    }
+    updateFab();
+    updateJurisNotices();
+  });
+});
+
+/* ======================================================================
+   JURISDICTION NOTICES (California, Macau, Singapore)
+   ====================================================================== */
+function updateJurisNotices() {
+  var container = document.getElementById('juris-notices');
+  container.innerHTML = '';
+  var hasOnlineOrSports = selectedVerts.size === 0 || selectedVerts.has('online') || selectedVerts.has('sports');
+  if (!hasOnlineOrSports) return;
+
+  Object.keys(NO_ONLINE_SPORTS).forEach(function(regId) {
+    if (selectedRegs.has(regId) && hasOnlineOrSports) {
+      var note = document.createElement('div');
+      note.className = 'juris-notice';
+      var regName = JURISDICTIONS[regId] ? JURISDICTIONS[regId].name : regId;
+      note.innerHTML = '<strong>' + regName + '</strong><br>' + NO_ONLINE_SPORTS[regId];
+      container.appendChild(note);
+    }
+  });
+}
+
+/* ======================================================================
+   UPDATE FAB
+   ====================================================================== */
+function updateFab() {
+  var fab = document.getElementById('fab');
+  var count = document.getElementById('fab-count');
+  if (selectedRegs.size > 0) {
+    fab.classList.add('visible');
+    var matchCount = THEMES.filter(function(t) {
+      return themeMatchesFilters(t);
+    }).length;
+    count.textContent = matchCount;
+  } else {
+    fab.classList.remove('visible');
+  }
+}
+
+/* Does a theme match current regulator + vertical filters? */
+function themeMatchesFilters(theme) {
+  var hasRegMatch = theme.regs.some(function(r) { return selectedRegs.has(r); });
+  if (!hasRegMatch) return false;
+  if (selectedVerts.size === 0) return true;
+  return theme.citations.some(function(c) {
+    if (!selectedRegs.has(c.reg)) return false;
+    if (!c.verticals || c.verticals.length === 0) return true;
+    return c.verticals.some(function(v) { return selectedVerts.has(v); });
+  });
+}
+
+/* Does a single citation pass the vertical filter? */
+function citationMatchesVerticals(c) {
+  if (selectedVerts.size === 0) return true;
+  if (!c.verticals || c.verticals.length === 0) return true;
+  return c.verticals.some(function(v) { return selectedVerts.has(v); });
+}
+
+/* ======================================================================
+   CLEAR SELECTION
+   ====================================================================== */
+window.clearSelection = function() {
+  selectedRegs.clear();
+  selectedVerts.clear();
+  document.querySelectorAll('.reg-card.selected').forEach(function(c) {
+    c.classList.remove('selected');
+  });
+  document.querySelectorAll('.vert-chip.selected').forEach(function(c) {
+    c.classList.remove('selected');
+  });
+  updateFab();
+  document.getElementById('juris-notices').innerHTML = '';
+  document.getElementById('requirements-matrix').classList.remove('visible');
+  document.getElementById('requirements-matrix').innerHTML = '';
+  document.getElementById('requirements-placeholder').style.display = '';
+  document.getElementById('step-3').style.display = 'none';
+  document.getElementById('step-4').style.display = 'none';
+};
+
+/* ======================================================================
+   SHOW REQUIREMENTS
+   ====================================================================== */
+window.showRequirements = function() {
+  if (selectedRegs.size === 0) return;
+
+  var container = document.getElementById('requirements-matrix');
+  var placeholder = document.getElementById('requirements-placeholder');
+  placeholder.style.display = 'none';
+  container.innerHTML = '';
+  container.classList.add('visible');
+
+  var matchedThemes = THEMES.filter(function(t) {
+    return themeMatchesFilters(t);
+  });
+
+  matchedThemes.forEach(function(theme) {
+    var card = document.createElement('div');
+    card.className = 'theme-card sr';
+
+    /* Header */
+    var header = document.createElement('div');
+    header.className = 'theme-header';
+    header.innerHTML =
+      '<div class="theme-num">' + theme.id + '</div>' +
+      '<div class="theme-title">' + theme.title + '</div>' +
+      '<span class="theme-badge ' + theme.badge + '">' + theme.badge + '</span>' +
+      '<span class="theme-chevron">\u25BC</span>';
+    header.addEventListener('click', function() {
+      card.classList.toggle('expanded');
+    });
+    card.appendChild(header);
+
+    /* Body */
+    var body = document.createElement('div');
+    body.className = 'theme-body';
+
+    /* A) Citations */
+    var matchedCitations = theme.citations.filter(function(c) {
+      return selectedRegs.has(c.reg) && citationMatchesVerticals(c);
+    });
+    var citHTML = '<div class="req-section"><div class="req-section-title citations">Regulatory Requirements (' + matchedCitations.length + ')</div>';
+    if (matchedCitations.length > 0) {
+      matchedCitations.forEach(function(c) {
+        var sourceUrl = SOURCES[c.src] || '';
+        var vertTags = '';
+        if (c.verticals && c.verticals.length > 0) {
+          c.verticals.forEach(function(v) {
+            vertTags += '<span class="vert-tag">' + (VERT_LABELS[v] || v) + '</span>';
+          });
+        }
+        citHTML += '<div class="citation-card matched">' +
+          '<div class="citation-reg">' + c.label + ' <span class="reg-tag active">' + c.reg.toUpperCase() + '</span></div>' +
+          '<div class="citation-ref">' + c.ref + '</div>' +
+          (vertTags ? '<div style="margin-bottom:6px;">' + vertTags + '</div>' : '') +
+          '<div class="citation-text">' + c.text + '</div>' +
+          (sourceUrl ? '<div class="citation-source"><a href="' + sourceUrl + '" target="_blank" rel="noopener">View source \u2192</a></div>' : '') +
+          '</div>';
+      });
+    } else {
+      citHTML += '<div class="citation-card"><div class="citation-text" style="color:#888;">No specific citations on file for this theme from your selected regulators and verticals. The requirement may still apply -- check with your regulator directly.</div></div>';
+    }
+    citHTML += '</div>';
+
+    /* B) Coverage */
+    var covHTML = '<div class="req-section"><div class="req-section-title coverage">Playbook Coverage</div>' +
+      theme.assets + '</div>';
+
+    /* C) Gaps */
+    var gapHTML = '<div class="req-section"><div class="req-section-title gaps">What You Still Need</div>' +
+      '<div class="gap-box">' + theme.gap + '</div></div>';
+
+    body.innerHTML = citHTML + covHTML + gapHTML;
+    card.appendChild(body);
+    container.appendChild(card);
+  });
+
+  /* Show summary and jurisdiction sections */
+  buildSummary(matchedThemes);
+  buildJurisdictionCards();
+
+  /* Scroll to matrix */
+  document.getElementById('step-2').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  /* Trigger scroll reveal on new elements */
+  setTimeout(function() { initScrollReveal(); }, 100);
+};
+
+/* ======================================================================
+   BUILD COVERAGE SUMMARY
+   ====================================================================== */
+function buildSummary(matchedThemes) {
+  var step3 = document.getElementById('step-3');
+  step3.style.display = '';
+  var stats = document.getElementById('summary-stats');
+
+  var strong = matchedThemes.filter(function(t){ return t.badge==='strong'; }).length;
+  var partial = matchedThemes.filter(function(t){ return t.badge==='partial'; }).length;
+  var light = matchedThemes.filter(function(t){ return t.badge==='light'; }).length;
+
+  stats.innerHTML =
+    '<div class="summary-stat"><div class="summary-stat-num">' + matchedThemes.length + '</div><div class="summary-stat-label">Themes Matched</div></div>' +
+    '<div class="summary-stat"><div class="summary-stat-num" style="color:#00997a;">' + strong + '</div><div class="summary-stat-label">Strong Coverage</div></div>' +
+    '<div class="summary-stat"><div class="summary-stat-num" style="color:#b88a00;">' + partial + '</div><div class="summary-stat-label">Partial Coverage</div></div>' +
+    '<div class="summary-stat"><div class="summary-stat-num" style="color:#cc5520;">' + light + '</div><div class="summary-stat-label">Light Coverage</div></div>';
+}
+
+/* ======================================================================
+   BUILD JURISDICTION DETAIL CARDS
+   ====================================================================== */
+function buildJurisdictionCards() {
+  var step4 = document.getElementById('step-4');
+  step4.style.display = '';
+  var container = document.getElementById('juris-cards');
+  container.innerHTML = '';
+
+  selectedRegs.forEach(function(regId) {
+    var j = JURISDICTIONS[regId];
+    if (!j) return;
+
+    var card = document.createElement('div');
+    card.className = 'juris-card sr';
+
+    var header = document.createElement('div');
+    header.className = 'juris-header';
+    header.innerHTML =
+      '<span class="juris-name">' + j.name + '</span>' +
+      '<span class="juris-chevron">\u25BC</span>';
+    header.addEventListener('click', function() {
+      card.classList.toggle('expanded');
+    });
+    card.appendChild(header);
+
+    var body = document.createElement('div');
+    body.className = 'juris-body';
+    body.innerHTML =
+      '<dl>' +
+      '<dt>Jurisdiction</dt><dd>' + j.jurisdiction + '</dd>' +
+      '<dt>Key Legislation / Codes</dt><dd>' + j.legislation + '</dd>' +
+      '<dt>Notable Unique Requirements</dt><dd>' + j.unique + '</dd>' +
+      '<dt>Supported Verticals</dt><dd>' + j.verticals + '</dd>' +
+      '<dt>Primary Regulatory Source</dt><dd><a href="' + j.source + '" target="_blank" rel="noopener">' + j.source + '</a></dd>' +
+      '</dl>';
+    card.appendChild(body);
+    container.appendChild(card);
+  });
+}
+
+/* ======================================================================
+   SCROLL REVEAL
+   ====================================================================== */
+function initScrollReveal() {
+  var elements = document.querySelectorAll('.sr:not(.visible)');
+  if (!elements.length) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    elements.forEach(function(el) { el.classList.add('visible'); });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  elements.forEach(function(el) { observer.observe(el); });
+}
+
+initScrollReveal();
+
+/* ======================================================================
+   COLLAPSIBLE REGION TOGGLE (all regions)
+   ====================================================================== */
+document.querySelectorAll('.reg-region-header').forEach(function(header) {
+  var grid = header.nextElementSibling;
+  if (!grid) return;
+  header.removeAttribute('onclick');
+  header.addEventListener('click', function() {
+    this.classList.toggle('collapsed');
+    if (this.classList.contains('collapsed')) {
+      grid.style.maxHeight = '0';
+      grid.style.opacity = '0';
+    } else {
+      grid.style.maxHeight = grid.scrollHeight + 'px';
+      grid.style.opacity = '1';
+    }
+  });
+});
+
+/* ======================================================================
+   FEEDBACK FORM
+   ====================================================================== */
+window.submitFeedback = function(e) {
+  e.preventDefault();
+  var form = document.getElementById('feedback-form');
+  var email = document.getElementById('fb-email').value;
+  var type = document.getElementById('fb-type').value;
+  var message = document.getElementById('fb-message').value;
+  /* Build URL-encoded body matching Netlify contact-form function */
+  var params = new URLSearchParams();
+  params.append('name', 'Compliance Page Feedback');
+  params.append('email', email);
+  params.append('subject', 'responsible-gambling');
+  params.append('message', '[' + type + '] ' + message);
+  /* Post to Netlify Functions endpoint, mailto fallback on error */
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: params.toString()
+  }).then(function(res) {
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('feedback-success').style.display = 'block';
+    } else {
+      window.location.href = 'mailto:hello@gamblingpolicy.com?subject=' +
+        encodeURIComponent('[Playbook Compliance] ' + type) +
+        '&body=' + encodeURIComponent(message + '\n\nFrom: ' + email);
+    }
+  }).catch(function() {
+    window.location.href = 'mailto:hello@gamblingpolicy.com?subject=' +
+      encodeURIComponent('[Playbook Compliance] ' + type) +
+      '&body=' + encodeURIComponent(message + '\n\nFrom: ' + email);
+  });
+  return false;
+};
+
+})();
+</script>
+</body>
+</html>
