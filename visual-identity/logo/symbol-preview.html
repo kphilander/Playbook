@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook Symbol Mark Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #F5F5FA;
+      color: #1A1A2E;
+      padding: 40px;
+    }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { color: #6B6B8A; margin-bottom: 40px; font-size: 16px; }
+    .section { margin-bottom: 48px; }
+    .section h2 { font-size: 18px; font-weight: 600; margin-bottom: 16px; color: #3D3D5C; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .card.dark {
+      background: #1B2838;
+      color: #E8E8F0;
+    }
+    .card.checker {
+      background: repeating-conic-gradient(#e8e8f0 0% 25%, white 0% 50%) 50% / 16px 16px;
+    }
+    .card img { display: block; }
+    .label { font-size: 13px; font-weight: 500; text-align: center; }
+    .sublabel { font-size: 11px; color: #6B6B8A; text-align: center; }
+    .card.dark .sublabel { color: #A8A8C0; }
+    .sizes {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .size-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .size-label { font-size: 11px; color: #6B6B8A; font-weight: 500; }
+    hr { border: none; border-top: 1px solid #E8E8F0; margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h1>Playbook Symbol Mark</h1>
+  <p class="subtitle">Open book + play triangle — the "Playbook" concept as pure geometry</p>
+
+  <!-- Primary symbol at multiple sizes -->
+  <div class="section">
+    <h2>Primary — at scale</h2>
+    <div class="sizes">
+      <div class="size-item">
+        <img src="symbol/symbol-mark.svg" width="16" height="16" alt="16px">
+        <span class="size-label">16px</span>
+      </div>
+      <div class="size-item">
+        <img src="symbol/symbol-mark.svg" width="24" height="24" alt="24px">
+        <span class="size-label">24px</span>
+      </div>
+      <div class="size-item">
+        <img src="symbol/symbol-mark.svg" width="32" height="32" alt="32px">
+        <span class="size-label">32px</span>
+      </div>
+      <div class="size-item">
+        <img src="symbol/symbol-mark.svg" width="48" height="48" alt="48px">
+        <span class="size-label">48px</span>
+      </div>
+      <div class="size-item">
+        <img src="symbol/symbol-mark.svg" width="64" height="64" alt="64px">
+        <span class="size-label">64px</span>
+      </div>
+      <div class="size-item">
+        <img src="symbol/symbol-mark.svg" width="128" height="128" alt="128px">
+        <span class="size-label">128px</span>
+      </div>
+      <div class="size-item">
+        <img src="symbol/symbol-mark.svg" width="256" height="256" alt="256px">
+        <span class="size-label">256px</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- All 5 variants -->
+  <div class="section">
+    <h2>All variants</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="symbol/symbol-mark.svg" width="96" height="96" alt="Primary">
+        <div class="label">symbol-mark.svg</div>
+        <div class="sublabel">Navy bg · White book · Teal play</div>
+      </div>
+      <div class="card checker">
+        <img src="symbol/symbol-mark-on-light.svg" width="96" height="96" alt="On light">
+        <div class="label">symbol-mark-on-light.svg</div>
+        <div class="sublabel">Navy book · Teal play · No container</div>
+      </div>
+      <div class="card dark">
+        <img src="symbol/symbol-mark-on-dark.svg" width="96" height="96" alt="On dark">
+        <div class="label">symbol-mark-on-dark.svg</div>
+        <div class="sublabel">White book · Teal play · No container</div>
+      </div>
+      <div class="card checker">
+        <img src="symbol/symbol-mark-mono-dark.svg" width="96" height="96" alt="Mono dark">
+        <div class="label">symbol-mark-mono-dark.svg</div>
+        <div class="sublabel">All navy · No container</div>
+      </div>
+      <div class="card dark">
+        <img src="symbol/symbol-mark-mono-white.svg" width="96" height="96" alt="Mono white">
+        <div class="label">symbol-mark-mono-white.svg</div>
+        <div class="sublabel">All white · Black container</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Context: alongside wordmark -->
+  <div class="section">
+    <h2>In context — alongside wordmark</h2>
+    <div class="grid">
+      <div class="card" style="flex-direction: row; gap: 16px; justify-content: center;">
+        <img src="symbol/symbol-mark.svg" width="48" height="48" alt="Symbol">
+        <img src="primary/logo-horizontal-full-color.svg" height="48" alt="Wordmark">
+      </div>
+      <div class="card dark" style="flex-direction: row; gap: 16px; justify-content: center;">
+        <img src="symbol/symbol-mark-on-dark.svg" width="48" height="48" alt="Symbol">
+        <img src="secondary/logo-horizontal-reversed.svg" height="48" alt="Wordmark">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
