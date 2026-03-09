@@ -113,23 +113,19 @@ function favicon(playColor, bookColor, bg = null) {
 }
 
 /* ─── Symbol mark ──────────────────────────────────────────────── */
-// Text-free brand icon: open book + play triangle.
-// Uses filled shapes (not strokes) for legibility at small sizes.
-// The book echoes the logo's weight contrast — thick page edges,
-// thin spine — and the play triangle adds the "Play" half of the name.
+// Text-free brand icon: left page (rectangle) + right page (play triangle).
+// Two bold geometric shapes sharing a spine edge — reads as both
+// "book" and "play" in one unified mark. Pure geometry, no curves.
 
 function symbolMark(bookColor, playColor, bg = null) {
   const s = 64;
   const bgRect = bg ? `<rect width="${s}" height="${s}" rx="14" fill="${bg}"/>` : '';
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${s}" height="${s}" viewBox="0 0 ${s} ${s}">
   ${bgRect}
-  <!-- Open book: two pages meeting at center spine -->
-  <path d="M32 14 C28 14 16 16 12 18 L12 48 C16 46 28 44 32 44 Z" fill="${bookColor}" opacity="0.9"/>
-  <path d="M32 14 C36 14 48 16 52 18 L52 48 C48 46 36 44 32 44 Z" fill="${bookColor}" opacity="0.9"/>
-  <!-- Spine (thin center line, lighter) -->
-  <rect x="31" y="14" width="2" height="30" fill="${bookColor}" opacity="0.4"/>
-  <!-- Play triangle on right page -->
-  <polygon points="38,24 38,38 49,31" fill="${playColor}"/>
+  <!-- Left page -->
+  <rect x="14" y="14" width="16" height="36" rx="2" fill="${bookColor}"/>
+  <!-- Right page = play triangle -->
+  <polygon points="34,14 54,32 34,50" fill="${playColor}"/>
 </svg>
 `;
 }
