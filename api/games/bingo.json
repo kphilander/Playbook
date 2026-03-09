@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "game": "bingo",
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "how-to-play/bingo.md"
+  },
+  "slug": "bingo",
+  "title": "How to Play: Bingo",
+  "summary": null,
+  "frontmatter": {
+    "content_type": "game-guide",
+    "title": "How to Play: Bingo",
+    "pillar": [
+      "open"
+    ],
+    "tier": 1,
+    "tone": [
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "game_type": [
+      "bingo"
+    ],
+    "audience": [
+      "general",
+      "traditional-players"
+    ],
+    "channel": [
+      "blog",
+      "social-media",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "odds_format": "american",
+      "currency": "usd",
+      "sports_culture": null,
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Currency: All examples use USD ($1/card, $100 session).\nReplace with local currency and recalculate round numbers.\nGame format: 75-ball (US) and 90-ball (UK/international) are both\ncovered. Lead with the locally dominant format.\nTerminology: \"Bingo hall\" vs. \"bingo club\" varies by market.\nOnline bingo: Auto-daub, chat games, and side games are\ncommon online but not universal. Verify features for your platform.\nPrize structures vary widely by venue, operator, and jurisdiction.\n",
+    "last_updated": "2026-03-01T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "heading": "The 30-second version",
+      "content": "> Bingo is a random draw game. Numbers are called, you mark them on your card, and the first player to complete the required pattern wins. Every card in the game has the same chance of winning. The house edge comes from the gap between total ticket sales and total prizes paid out — the operator keeps the difference. More cards give you more chances, but also cost more.\n\n---"
+    },
+    {
+      "heading": "How the game works",
+      "content": "### The basics\n\nBingo is simple: a caller draws numbers at random, you mark (daub) matching numbers on your card, and the first player to complete a specific pattern wins. The draw is random — physical ball machines in venues, certified RNGs online. Every number has an equal chance of being called.\n\n### Playing a session\n\n1. **Buy your cards.** Each card has a grid of randomly arranged numbers. In a room of 100 players, each card has the same chance of winning. You can buy multiple cards to increase your chances.\n2. **Listen for the call.** Numbers are drawn one at a time, at random. In a venue, a caller announces each number. Online, numbers appear on screen and auto-daub features mark them for you.\n3. **Daub your matches.** When a called number appears on your card, you mark it.\n4. **Complete the pattern.** The first player to complete the required pattern — a line, a full house, or a specific shape — wins. Call \"Bingo\" (in a venue) or the system detects it automatically (online).\n5. **Prize is awarded.** If multiple players complete the pattern on the same call, the prize is typically split equally.\n\n### Variants\n\n**75-ball bingo (US standard)**\n- 5×5 grid with a free center square\n- Numbers 1–75, organized by column: B (1–15), I (16–30), N (31–45), G (46–60), O (61–75)\n- Common patterns: single line (horizontal, vertical, diagonal), four corners, X-pattern, full card (blackout)\n\n**90-ball bingo (UK/international standard)**\n- 9×3 grid with 15 numbers and 12 blank spaces per card\n- Numbers 1–90\n- Three stages of winning: one line, two lines, full house — each with a separate prize\n\n**Speed bingo / 30-ball bingo**\n- 3×3 grid, 9 numbers\n- Fast rounds, typically online\n- Full house only — first to fill the card wins\n\n---"
+    },
+    {
+      "heading": "Bet types",
+      "content": "<!-- ADAPT: currency -->\n| Type | What it means | Typical cost | What it gets you |\n|------|--------------|-------------|-----------------|\n| **Single card** | One card for one game | `$0.25–$3` per card | One chance to win per game |\n| **Multi-card** | Multiple cards for one game | Per-card price × quantity | More chances to win, proportionally higher cost |\n| **Card strips** (90-ball) | A set of cards that together cover all 90 numbers | Varies by venue | Guarantees you'll daub every number called — but so does everyone else with a strip |\n| **Progressive jackpot games** | A jackpot that grows until someone wins within a set number of calls (e.g., full house in 50 calls or fewer) | Premium card price, often `$1–$5` | Shot at a large rolling jackpot — but the required pattern must be completed within the call limit |\n| **Side games** | Additional games running alongside the main session — often slots, instant wins, or mini-games (primarily online) | Varies | Separate odds and RTPs from the main bingo game — check each one individually |\n<!-- /ADAPT -->\n\n---"
+    },
+    {
+      "heading": "The math",
+      "content": "### House edge\n\nBingo's house edge is baked into the prize structure, not into the draw itself. The draw is fair — every card has an equal chance. The house takes its cut from the gap between what players pay for cards and what's paid out in prizes.\n\n**The formula:**\n\n```\nHouse edge = (total card sales − total prizes) / total card sales\n```\n\n| Example | Total card sales | Total prizes | House edge |\n|---------|-----------------|-------------|-----------|\n<!-- ADAPT: currency -->\n| Community hall | `$500` | `$400` | `20%` |\n| Commercial bingo club | `$10,000` | `$8,500` | `15%` |\n| Online bingo room | `$5,000` | `$4,500` | `10%` |\n<!-- /ADAPT -->\n\n### Typical house edge range\n\nThe house edge in bingo typically runs `5–15%` for online games and `10–25%` for venue-based games. This varies significantly by operator, jurisdiction, and prize structure. Some promotional games run at lower margins; some side games run much higher.\n\n### What this means for your wallet\n\n<!-- ADAPT: currency -->\nIf a bingo session has a `15%` house edge and you spend `$100` on cards, you'd expect to get back about `$85` in prizes over time. That's the long-run average — any single session you might win big, win nothing, or land somewhere in between. The math is a percentage of your total spend, not a guarantee about any individual game.\n<!-- /ADAPT -->\n\n### Card quantity math\n\nBuying more cards improves your odds of winning proportionally, but it doesn't change the house edge.\n\n<!-- ADAPT: currency -->\n| Cards in play (total room) | Your cards | Your win probability | Your cost |\n|---------------------------|-----------|---------------------|----------|\n| `100` | `1` | `1%` | `$1` |\n| `100` | `5` | `5%` | `$5` |\n| `100` | `10` | `10%` | `$10` |\n| `100` | `50` | `50%` | `$50` |\n<!-- /ADAPT -->\n\nYour odds improve linearly with each card — but your spending does too. The expected return per dollar spent stays the same.\n\n**Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).\n\n---"
+    },
+    {
+      "heading": "Tips for informed play",
+      "content": "<!-- ADAPT: currency -->\n1. **Know your per-session budget and stick to it.** More cards means more chances, but also more cost. Decide what you're spending before you buy cards, not during the session. A \"just one more strip\" habit adds up fast.\n2. **The house edge is in the prize pool, not the draw.** Every card in the game has an equal chance of winning. The operator makes money from the gap between total card sales and total prizes. The draw itself is fair — it's the payout structure that favors the house.\n3. **Off-peak sessions have fewer players — which means better individual odds per card.** If 50 people play instead of 200, your one card goes from `1-in-200` to `1-in-50` chance. The total prize pool may be smaller, but your probability of winning each game is higher.\n4. **Side games often have worse odds than the main game.** Online bingo platforms frequently offer slots, instant wins, and other side games alongside bingo. These are separate products with their own RTPs — and those RTPs are often lower than the main bingo game. Check before you play.\n5. **Auto-daub doesn't improve your odds — it prevents you from missing a win.** Online, use auto-daub so you never accidentally skip a called number. In venues, play only as many cards as you can track accurately.\n<!-- /ADAPT -->\n\n---"
+    },
+    {
+      "heading": "Common myths",
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Lucky seats win more | The seat doesn't affect the draw | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Lucky daubers or rituals | Superstition is pattern-seeking, not probability | <!-- TODO: Link to myth-busting.md entry once created --> |\n| \"That number is due\" | Every call is independent — the machine has no memory | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Certain cards are luckier | Every card has an identical chance in a given game | <!-- TODO: Link to myth-busting.md entry once created --> |\n| More experienced players win more | Experience doesn't change a random draw — it just means you daub faster | <!-- TODO: Link to myth-busting.md entry once created --> |\n\n---"
+    }
+  ],
+  "keyTerms": [
+    {
+      "term": "**Caller**",
+      "definition": "The person (or automated system) who draws and announces each number."
+    },
+    {
+      "term": "**Daub** (mark, dab)",
+      "definition": "To mark a called number on your card. Online, auto-daub does this automatically."
+    },
+    {
+      "term": "**Full house** (blackout, coverall)",
+      "definition": "Completing every number on your card. The biggest standard prize in most bingo formats."
+    },
+    {
+      "term": "**Line**",
+      "definition": "A completed row of numbers — horizontal, vertical, or diagonal depending on the format. Often the first prize awarded in a game."
+    },
+    {
+      "term": "**Pattern**",
+      "definition": "The specific arrangement of marked numbers required to win (e.g., line, X-shape, four corners, full house)."
+    },
+    {
+      "term": "**Auto-daub**",
+      "definition": "An online feature that automatically marks called numbers on your cards. Ensures you never miss a number."
+    },
+    {
+      "term": "**Progressive jackpot**",
+      "definition": "A prize pool that grows until someone completes a full house within a set number of calls. Resets after a win."
+    },
+    {
+      "term": "**Strip** (90-ball)",
+      "definition": "A set of bingo cards that together contain all 90 numbers. Commonly sold as a unit."
+    },
+    {
+      "term": "**Side games**",
+      "definition": "Additional games (often instant wins or mini-slots) offered alongside bingo, especially online. These have their own separate odds and RTP."
+    },
+    {
+      "term": "**Free space** (75-ball)",
+      "definition": "The center square on a 75-ball card. It's automatically marked — every player starts with it."
+    }
+  ],
+  "quiz": [],
+  "socialSnippets": []
+}

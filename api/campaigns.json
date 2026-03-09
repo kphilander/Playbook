@@ -1,0 +1,946 @@
+{
+  "meta": {
+    "count": 7,
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "messaging/campaigns.md"
+  },
+  "frontmatter": {
+    "content_type": "campaign",
+    "title": "Campaign Briefs",
+    "pillar": [
+      "open",
+      "social"
+    ],
+    "tier": [
+      1
+    ],
+    "tone": [
+      "playful-witty",
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "audience": [
+      "general",
+      "sports-bettors",
+      "young-adults"
+    ],
+    "channel": [
+      "social-media",
+      "blog",
+      "email"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "currency": "usd",
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "campaigns": [
+    {
+      "id": 1,
+      "name": "Slots Myths Week",
+      "theme": "Debunking the six most common slot machine misconceptions.",
+      "tagline": "Your slot machine has the emotional range of a toaster.",
+      "duration": "2 weeks (10 posts across channels)",
+      "pillar": "open",
+      "audience": [
+        "slots players",
+        "casino app users",
+        "general casino audience"
+      ],
+      "mythsUsed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "schedule": [
+        {
+          "day": "Mon 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "1",
+          "copy_source": "`myth-busting.md` → Myth 1 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Tue 1",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "1",
+          "copy_source": "`myth-busting.md` → Myth 1 → Article explainer",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "2",
+          "copy_source": "`myth-busting.md` → Myth 2 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1b` format"
+        },
+        {
+          "day": "Fri 1",
+          "channel": "Instagram Stories",
+          "content_type": "Story card",
+          "myth": "1+2",
+          "copy_source": "Combined stat highlights from Myths 1 & 2",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-3a` format"
+        },
+        {
+          "day": "Mon 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "3",
+          "copy_source": "`myth-busting.md` → Myth 3 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1c` format"
+        },
+        {
+          "day": "Tue 2",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "3+4",
+          "copy_source": "Combine Myths 3 & 4 into one article: \"Your Lucky Machine and the Near-Miss Trap\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "4",
+          "copy_source": "`myth-busting.md` → Myth 4 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Thu 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "5",
+          "copy_source": "`myth-busting.md` → Myth 5 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Fri 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "6",
+          "copy_source": "`myth-busting.md` → Myth 6 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Sat 2",
+          "channel": "All social",
+          "content_type": "Quiz CTA",
+          "myth": "1–6",
+          "copy_source": "\"Think you know how slots actually work? Take the quiz.\" + link",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4c` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Myth 1 post",
+          "text": "You're on a hot streak. The machine is not. Every spin is independent — your brain sees patterns, the math doesn't. #KnowYourGame"
+        },
+        {
+          "label": "Myth 2 post",
+          "text": "This machine hasn't paid in hours. It's NOT due. Each spin starts from scratch. #NoFinePrint"
+        },
+        {
+          "label": "Myth 3 post",
+          "text": "Your 'lucky machine' doesn't know you. It has the emotional range of a toaster. #KnowYourGame"
+        },
+        {
+          "label": "Myth 4 post",
+          "text": "Two cherries and a blank isn't 'almost winning.' The result was decided before the reels even moved. #NoFinePrint"
+        },
+        {
+          "label": "Myth 5 post",
+          "text": "Slots don't pay more at night. Payout is set in software and regulated. Time of day is irrelevant. #KnowYourGame"
+        },
+        {
+          "label": "Myth 6 post",
+          "text": "Bigger bets = bigger swings. Not better odds. The house edge is a percentage — it doesn't care about your bet size. #NoFinePrint"
+        },
+        {
+          "label": "Quiz CTA post",
+          "text": "You just read 6 slot myths. How many did you already know? Take the Game IQ quiz and find out. Link in bio."
+        }
+      ],
+      "email": {
+        "subject": "The 6 things your slot machine wants you to know (just kidding — it doesn't care)",
+        "previewText": "Every spin is independent. Here's what that actually means.",
+        "bodyStructure": [
+          "Hero: Myth 1 social card image",
+          "3 myth/fact pairs (Myths 1, 2, 3 — short versions)",
+          "CTA: \"See all 6 myths\" → links to blog article",
+          "Footer: \"Test your game IQ\" → quiz link"
+        ]
+      },
+      "kpis": [
+        "Social engagement rate (target: 2x baseline for educational content)",
+        "Blog article read-through rate",
+        "Quiz completions from campaign CTAs",
+        "Share/save rate on myth cards"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 2,
+      "name": "Beat the House? Table Game Truths",
+      "theme": "Busting the most persistent table game strategies and superstitions.",
+      "tagline": "The dealer follows a script. Literally — it's printed on the felt.",
+      "duration": "10 days (8 posts)",
+      "pillar": "open",
+      "audience": [
+        "blackjack and roulette players",
+        "casino regulars"
+      ],
+      "mythsUsed": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "schedule": [
+        {
+          "day": "Mon 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "7",
+          "copy_source": "`myth-busting.md` → Myth 7 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Wed 1",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "7",
+          "copy_source": "`myth-busting.md` → Myth 7 → Article explainer. Expand with Martingale math table.",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Thu 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "8",
+          "copy_source": "`myth-busting.md` → Myth 8 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Mon 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "9",
+          "copy_source": "`myth-busting.md` → Myth 9 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Tue 2",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "9",
+          "copy_source": "`myth-busting.md` → Myth 9 → Article. Title: \"Card Counting: What the Movies Got Wrong\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed 2",
+          "channel": "Instagram Stories",
+          "content_type": "Infographic",
+          "myth": "—",
+          "copy_source": "House edge comparison: Blackjack 0.5% vs. Roulette 2.7%/5.26% vs. Baccarat 1.06%",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-3b` format"
+        },
+        {
+          "day": "Thu 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "10",
+          "copy_source": "`myth-busting.md` → Myth 10 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Fri 2",
+          "channel": "All social",
+          "content_type": "Quiz CTA",
+          "myth": "7–10",
+          "copy_source": "\"How well do you know the real odds at the table? Take the quiz.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4c` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Myth 7 post",
+          "text": "The Martingale system: double your bet after every loss and you'll always win. Except when table limits exist. And bankrolls are finite. And math is math. #KnowYourGame"
+        },
+        {
+          "label": "Myth 8 post",
+          "text": "Switch tables — that dealer is too hot.' The dealer follows mandatory rules with zero discretion. A 'hot dealer' is just variance with a face. #NoFinePrint"
+        },
+        {
+          "label": "Myth 9 post",
+          "text": "Card counting: real math, terrible movie premise. A skilled counter's edge is 0.5–1.5%. That's thousands of hands for pocket change. #KnowYourGame"
+        },
+        {
+          "label": "Myth 10 post",
+          "text": "Number 17 is not your lucky number. It's a number. On a wheel. With 36 others. All equally likely. #NoFinePrint"
+        }
+      ],
+      "email": {
+        "subject": "Your Martingale system called. It has some bad news.",
+        "previewText": "Betting systems, hot dealers, and other table game myths — debunked.",
+        "bodyStructure": [
+          "Hero: Myth 7 card image (Martingale escalation visual)",
+          "Myth 7 + Myth 8 as short myth/fact pairs",
+          "House edge comparison infographic",
+          "CTA: \"Read the full breakdown\" → blog",
+          "CTA: \"Take the table games quiz\" → quiz"
+        ]
+      },
+      "kpis": [
+        "Social engagement rate on myth cards",
+        "Blog read-through (especially Martingale article — expect high interest)",
+        "Quiz completion rate",
+        "House edge infographic saves/shares"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 3,
+      "name": "Sports Betting Reality Check",
+      "theme": "What sports knowledge does and doesn't give you as a bettor.",
+      "tagline": "You know the sport. The sportsbook knows the math.",
+      "duration": "2 weeks (10 posts). Best timed around a major sporting event or season opener.",
+      "pillar": "open + social",
+      "audience": [
+        "sports bettors",
+        "fantasy sports players",
+        "casual punters"
+      ],
+      "mythsUsed": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "schedule": [
+        {
+          "day": "Mon 1",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "11",
+          "copy_source": "`myth-busting.md` → Myth 11 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-2b` format"
+        },
+        {
+          "day": "Wed 1",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "11",
+          "copy_source": "Title: \"You Know the Sport. Here's Why That Isn't Enough.\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Thu 1",
+          "channel": "Instagram Stories",
+          "content_type": "Poll",
+          "myth": "—",
+          "copy_source": "\"What win rate do you think you need on -110 bets to break even? A) 50% B) 52.4% C) 55%\"",
+          "asset_format": "1080 x 1920",
+          "template_reference": "Story poll native"
+        },
+        {
+          "day": "Fri 1",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "12",
+          "copy_source": "`myth-busting.md` → Myth 12 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-2c` format"
+        },
+        {
+          "day": "Mon 2",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "13",
+          "copy_source": "`myth-busting.md` → Myth 13 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Tue 2",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "13",
+          "copy_source": "Title: \"Why Your Favourite Tipster's Record Doesn't Mean What You Think\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed 2",
+          "channel": "Instagram Stories",
+          "content_type": "Infographic",
+          "myth": "—",
+          "copy_source": "Parlay math: how the vig compounds per leg. Visual escalation.",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-3c` format"
+        },
+        {
+          "day": "Thu 2",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "14",
+          "copy_source": "`myth-busting.md` → Myth 14 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Fri 2",
+          "channel": "Twitter / Instagram",
+          "content_type": "Carousel",
+          "myth": "11–14",
+          "copy_source": "\"4 sports betting myths in 4 slides\" — one myth/fact per slide",
+          "asset_format": "1080 x 1080 carousel",
+          "template_reference": "Adapt `card-1a` format x4"
+        },
+        {
+          "day": "Sat 2",
+          "channel": "All social",
+          "content_type": "Quiz CTA",
+          "myth": "11–14",
+          "copy_source": "\"Think you can beat the book? Test your sports betting IQ.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4c` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Myth 11 post",
+          "text": "You've watched every game this season. The sportsbook's algorithms have watched every game ever. And they set the line before you saw it. #KnowYourGame"
+        },
+        {
+          "label": "Myth 12 post",
+          "text": "A 4-leg parlay: 6.25% chance of hitting, ~20% house edge. The payout looks big because the odds are tiny. #NoFinePrint"
+        },
+        {
+          "label": "Myth 13 post",
+          "text": "This tipster is 8 for 10 this week! Cool. With 10,000 tipsters posting, someone's always on a streak right now. That's not skill — it's statistics. #KnowYourGame"
+        },
+        {
+          "label": "Myth 14 post",
+          "text": "You saw the momentum shift. The algorithm saw it 3 seconds ago and moved the line. In-play is exciting. It's not an edge. #NoFinePrint"
+        }
+      ],
+      "email": {
+        "subject": "You know the sport. The sportsbook knows the math.",
+        "previewText": "4 things every sports bettor should understand about how odds actually work.",
+        "bodyStructure": [
+          "Hero: \"52.4%\" stat graphic",
+          "Myth 11 + Myth 12 as myth/fact pairs",
+          "Parlay math infographic",
+          "CTA: \"Take the sports betting quiz\" → quiz",
+          "CTA: \"Share this with someone who has a 'system'\" → social share"
+        ]
+      },
+      "kpis": [
+        "Social engagement rate (expect high on sports content)",
+        "Poll participation (Stories)",
+        "Quiz completions",
+        "Share rate (sports bettors share competitive content)"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 4,
+      "name": "Luck, Numbers & Lotteries",
+      "theme": "How pattern-seeking brains misread random events.",
+      "tagline": "The ball doesn't know it's your birthday.",
+      "duration": "1 week (6 posts)",
+      "pillar": "open",
+      "audience": [
+        "lottery players",
+        "casual casino audience",
+        "general public"
+      ],
+      "mythsUsed": [
+        3,
+        10,
+        15,
+        16
+      ],
+      "schedule": [
+        {
+          "day": "Mon",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "15",
+          "copy_source": "`myth-busting.md` → Myth 15 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Tue",
+          "channel": "Instagram Stories",
+          "content_type": "Poll",
+          "myth": "—",
+          "copy_source": "\"Number 42 hasn't appeared in 6 months. Is it more likely next draw? Yes / No / Depends\"",
+          "asset_format": "1080 x 1920",
+          "template_reference": "Story poll native"
+        },
+        {
+          "day": "Wed",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "10",
+          "copy_source": "`myth-busting.md` → Myth 10 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Thu",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "15+10",
+          "copy_source": "Combined: \"Your Lucky Numbers Aren't Lucky — Here's Why Your Brain Thinks They Are\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Fri",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "16",
+          "copy_source": "`myth-busting.md` → Myth 16 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Sat",
+          "channel": "All social",
+          "content_type": "Quiz CTA",
+          "myth": "3, 10, 15, 16",
+          "copy_source": "\"How much do you really know about luck and randomness? Take the quiz.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4c` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Myth 15 post",
+          "text": "Number 23 hasn't come up in months. It's overdue, right? Wrong. Lottery balls don't keep track. Every draw starts from scratch. #KnowYourGame"
+        },
+        {
+          "label": "Myth 10 post",
+          "text": "Your lucky number has a 1-in-37 chance. So does every other number. The roulette ball doesn't know it's your birthday. #NoFinePrint"
+        },
+        {
+          "label": "Myth 16 post",
+          "text": "10 lottery tickets = 10x the chance? Sure. 10 x almost-zero = still almost-zero. You went from 0.000007% to 0.00007%. #KnowYourGame"
+        }
+      ],
+      "email": {
+        "subject": "The ball doesn't know it's your birthday",
+        "previewText": "Why your lucky numbers, lucky machines, and lucky feelings aren't actually lucky.",
+        "bodyStructure": []
+      },
+      "kpis": [
+        "Poll participation rate",
+        "Article read-through",
+        "Quiz completions",
+        "Social saves (lottery content has high save rates)"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 5,
+      "name": "The Money Myths",
+      "theme": "Misconceptions about betting strategy, budgets, and \"winning it back.\"",
+      "tagline": "The house edge doesn't care about your strategy.",
+      "duration": "10 days (8 posts)",
+      "pillar": "open",
+      "audience": [
+        "all players",
+        "especially those who view gambling as a potential income source"
+      ],
+      "mythsUsed": [
+        6,
+        12,
+        17,
+        18
+      ],
+      "schedule": [
+        {
+          "day": "Mon 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "18",
+          "copy_source": "`myth-busting.md` → Myth 18 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Wed 1",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "18",
+          "copy_source": "Title: \"Gambling Is Entertainment. Here's What That Actually Means.\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Thu 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "17",
+          "copy_source": "`myth-busting.md` → Myth 17 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Fri 1",
+          "channel": "Instagram Stories",
+          "content_type": "Infographic",
+          "myth": "—",
+          "copy_source": "\"What does the house edge cost you?\" Visual: $100 wagered per game type → expected loss",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-3b` format"
+        },
+        {
+          "day": "Mon 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "6",
+          "copy_source": "`myth-busting.md` → Myth 6 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Wed 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "12",
+          "copy_source": "`myth-busting.md` → Myth 12 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-2c` format"
+        },
+        {
+          "day": "Thu 2",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "17",
+          "copy_source": "Title: \"Chasing Losses: The Most Expensive Habit in Gambling\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Fri 2",
+          "channel": "All social",
+          "content_type": "Tool promotion",
+          "myth": "—",
+          "copy_source": "\"Know your budget before you play. Set a deposit limit in 10 seconds.\" + feature CTA",
+          "asset_format": "1080 x 1080",
+          "template_reference": "Adapt `card-2a` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Myth 18 post",
+          "text": "Can you make a living from gambling? A tiny number of people do. They treat it like a job with spreadsheets, bankroll rules, and bad weeks. For 99%+ of players, gambling is entertainment — with a cost. That's fine. Just know which one you are. #KnowYourGame"
+        },
+        {
+          "label": "Myth 17 post",
+          "text": "Down $200? Chasing it means making more bets at a mathematical disadvantage. On average, that digs the hole deeper. Set your limit before you play. #NoFinePrint"
+        },
+        {
+          "label": "Myth 6 post",
+          "text": "Betting max doesn't unlock better odds. A 5% house edge takes 5 cents per dollar whether you bet $1 or $100. Bigger bets = louder volume, not better math. #KnowYourGame"
+        },
+        {
+          "label": "Tool promotion post",
+          "text": "Your entertainment budget is yours to set. Deposit limits take 10 seconds. It's like a seatbelt for your bankroll — set it once and forget it. Link in bio."
+        }
+      ],
+      "email": {
+        "subject": "What does the house edge actually cost you?",
+        "previewText": "We did the math. Here's what $100 wagered looks like across 6 games.",
+        "bodyStructure": [
+          "Hero: House edge cost infographic",
+          "Myth 18 + Myth 17 as myth/fact pairs",
+          "\"Set your entertainment budget\" tool promotion",
+          "CTA: \"Set your deposit limit\" → feature link",
+          "CTA: \"See how it works\" → odds explainer"
+        ]
+      },
+      "kpis": [
+        "Feature adoption: deposit limit setup rate from campaign CTAs",
+        "Social engagement (expect high comment volume — money topics generate discussion)",
+        "Blog read-through on chasing losses article",
+        "Email click-through to limit-setting feature"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 6,
+      "name": "Game IQ Challenge",
+      "theme": "Social quiz campaign pulling from all myth categories. Focus on shareability and competition.",
+      "tagline": "Think you know the odds? Prove it.",
+      "duration": "1 week (7 posts)",
+      "pillar": "social + open",
+      "audience": [
+        "all players",
+        "especially socially active and competitive segments"
+      ],
+      "mythsUsed": [
+        18
+      ],
+      "schedule": [
+        {
+          "day": "Mon",
+          "channel": "Instagram / Twitter",
+          "content_type": "Teaser",
+          "source": "\"How well do you really know the odds? We're about to find out. Game IQ quiz drops Wednesday.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4c` format"
+        },
+        {
+          "day": "Tue",
+          "channel": "Instagram Stories",
+          "content_type": "3-question poll series",
+          "source": "Myth 1, 11, 15 quiz questions as Instagram polls. Reveal answer on next slide.",
+          "asset_format": "1080 x 1920",
+          "template_reference": "Story poll native"
+        },
+        {
+          "day": "Wed",
+          "channel": "All channels",
+          "content_type": "Quiz launch",
+          "source": "\"The Game IQ quiz is live. 10 questions. How sharp are you?\" + quiz link",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4c` format"
+        },
+        {
+          "day": "Thu",
+          "channel": "Instagram / Twitter",
+          "content_type": "Results tease",
+          "source": "\"The average score is 6/10. Think you can beat it? Link in bio.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "Adapt `card-1a` format"
+        },
+        {
+          "day": "Fri",
+          "channel": "Instagram / Twitter",
+          "content_type": "\"Hardest question\"",
+          "source": "Post the question with the lowest correct-answer rate. \"Only 23% got this right. Can you?\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "Adapt `card-1a` format"
+        },
+        {
+          "day": "Sat",
+          "channel": "All channels",
+          "content_type": "Share prompt",
+          "source": "\"Challenge a friend. Share your score. Tag someone who thinks they have a 'system.'\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "Adapt `card-1a` format"
+        },
+        {
+          "day": "Sun",
+          "channel": "Instagram Stories",
+          "content_type": "Leaderboard / recap",
+          "source": "Top scores, most-missed questions, fun stats. \"This week, 4,200 people learned that near misses aren't real.\"",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-3a` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Teaser",
+          "text": "10 questions. No trick answers. Just the math behind the games you play. Game IQ quiz drops Wednesday."
+        },
+        {
+          "label": "Launch",
+          "text": "The Game IQ quiz is live. How well do you actually know the odds? 2 minutes, 10 questions. Link in bio."
+        },
+        {
+          "label": "Results tease",
+          "text": "Average score so far: 6/10. Most missed question? What the Martingale system actually does. Think you know? Link in bio."
+        },
+        {
+          "label": "Share prompt",
+          "text": "Share your score. Challenge your friends. Tag someone who thinks they've got a 'system' that beats the house."
+        }
+      ],
+      "email": {
+        "subject": "Think you know the odds? Prove it.",
+        "previewText": "10 questions. 2 minutes. The Game IQ quiz is live.",
+        "bodyStructure": [
+          "Hero: Quiz card visual",
+          "2 sample questions with answers hidden (\"tap to reveal\" or \"take the full quiz to find out\")",
+          "CTA: \"Take the Game IQ quiz\" → quiz link",
+          "Social proof: \"X players have taken the quiz this week\"",
+          "Share CTA: \"Challenge a friend\""
+        ]
+      },
+      "kpis": [
+        "Quiz completions (primary metric)",
+        "Share rate from results screen",
+        "Social mentions / tags",
+        "Return visits to quiz (replay rate)",
+        "Follow-on engagement with educational content"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 7,
+      "name": "Know Your Game",
+      "theme": "Game education — teach players how the games they love actually work.",
+      "tagline": null,
+      "duration": "2 weeks",
+      "pillar": null,
+      "audience": [
+        "all player segments — particularly new-to-game and casual players"
+      ],
+      "mythsUsed": [],
+      "schedule": [
+        {
+          "day": "1",
+          "content": "Launch: \"Know Your Game — how much do you really know?\"",
+          "channel": "Social + email",
+          "source": "—",
+          "template": "`htp-odds-comparison`"
+        },
+        {
+          "day": "2",
+          "content": "Slots: What RTP and volatility mean for your play",
+          "channel": "Social",
+          "source": "`slots.md` §3–4",
+          "template": "`htp-card-slots`"
+        },
+        {
+          "day": "3",
+          "content": "Slots: The most common bet types explained",
+          "channel": "Blog",
+          "source": "`slots.md` §5–6",
+          "template": "—"
+        },
+        {
+          "day": "4",
+          "content": "Slots quiz: 3 questions to test your knowledge",
+          "channel": "Social (poll/quiz)",
+          "source": "`slots.md` §8",
+          "template": "—"
+        },
+        {
+          "day": "5",
+          "content": "Blackjack: Why basic strategy matters",
+          "channel": "Social",
+          "source": "`blackjack.md` §3–4",
+          "template": "`htp-card-blackjack`"
+        },
+        {
+          "day": "6",
+          "content": "Blackjack: Every move explained — hit, stand, split, double",
+          "channel": "Blog",
+          "source": "`blackjack.md` §5–6",
+          "template": "—"
+        },
+        {
+          "day": "7",
+          "content": "Blackjack quiz + weekend recap carousel",
+          "channel": "Social",
+          "source": "`blackjack.md` §8",
+          "template": "—"
+        },
+        {
+          "day": "8",
+          "content": "Roulette: Inside bets vs. outside bets",
+          "channel": "Social",
+          "source": "`roulette.md` §3–5",
+          "template": "`htp-card-roulette`"
+        },
+        {
+          "day": "9",
+          "content": "Roulette: The math behind the wheel (house edge deep dive)",
+          "channel": "Blog",
+          "source": "`roulette.md` §4, §6",
+          "template": "—"
+        },
+        {
+          "day": "10",
+          "content": "Roulette quiz + mid-campaign email",
+          "channel": "Social + email",
+          "source": "`roulette.md` §8",
+          "template": "—"
+        },
+        {
+          "day": "11",
+          "content": "Sports betting: How odds and vig work",
+          "channel": "Social",
+          "source": "`sports-betting.md` §3–4",
+          "template": "`htp-card-sports`"
+        },
+        {
+          "day": "12",
+          "content": "Sports betting: Bet types from spreads to parlays",
+          "channel": "Blog",
+          "source": "`sports-betting.md` §5–6",
+          "template": "—"
+        },
+        {
+          "day": "13",
+          "content": "Sports betting quiz",
+          "channel": "Social (poll/quiz)",
+          "source": "`sports-betting.md` §8",
+          "template": "—"
+        },
+        {
+          "day": "14",
+          "content": "Capstone: Odds comparison across all 4 games + wrap-up email",
+          "channel": "Social + email",
+          "source": "`odds-at-a-glance.md`",
+          "template": "`htp-odds-comparison`"
+        }
+      ],
+      "captions": [],
+      "email": null,
+      "kpis": [
+        "Blog traffic from social cards (primary metric)",
+        "Social engagement rate on game-specific cards",
+        "Email open + click-through rates",
+        "Quiz completion rates (Days 4, 7, 10, 13)",
+        "Cross-game engagement (players who engage with 3+ game posts)"
+      ],
+      "tokens": []
+    }
+  ]
+}

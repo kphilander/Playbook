@@ -1,0 +1,66 @@
+{
+  "name": "Playbook Content API",
+  "version": "0.1.0",
+  "generated": "2026-03-07T03:29:15.142Z",
+  "license": "CC0-1.0",
+  "description": "Structured content feeds for the Playbook responsible gambling brand system. All content is CC0-licensed and free to use.",
+  "endpoints": {
+    "messages": {
+      "url": "messages.json",
+      "description": "Core messages by pillar and touchpoint"
+    },
+    "myths": {
+      "url": "myths.json",
+      "description": "Myth-busting content in 3 formats (social card, article, quiz)"
+    },
+    "ctas": {
+      "url": "ctas.json",
+      "description": "Calls-to-action by function and urgency level"
+    },
+    "campaigns": {
+      "url": "campaigns.json",
+      "description": "Ready-to-run campaign briefs with schedules"
+    },
+    "assets": {
+      "url": "assets.json",
+      "description": "Asset manifest with URLs, dimensions, and metadata"
+    },
+    "games": {
+      "url": "games/",
+      "description": "Game education guides (one JSON file per game)"
+    }
+  },
+  "brand": {
+    "programName": "Playbook",
+    "organization": "Your Company Name",
+    "colors": {
+      "primary": "#1B2838",
+      "secondary": "#00D4AA",
+      "accent": "#FF6B35"
+    },
+    "helpline": {
+      "number": "1-800-522-4700",
+      "alternate": "1-800-GAMBLER",
+      "new_primary": "1-800-MY-RESET",
+      "text_number": "Text SUPPORT to 53342",
+      "chat_url": "www.ncpgambling.org/chat",
+      "website": "www.ncpgambling.org",
+      "label": "National Council on Problem Gambling",
+      "hours": "24/7"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Source Sans 3",
+      "monospace": "Source Code Pro"
+    }
+  },
+  "tokens": [
+    "{{PROGRAM_NAME}}",
+    "{{ORGANIZATION}}",
+    "{{HELPLINE_NUMBER}}",
+    "{{TEXT_NUMBER}}",
+    "{{CHAT_URL}}",
+    "{{MIN_AGE}}"
+  ],
+  "tokenDescription": "Content contains placeholder tokens in {{DOUBLE_BRACES}}. Replace with your operator values before deploying."
+}

@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "game": "video-poker",
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "how-to-play/video-poker.md"
+  },
+  "slug": "video-poker",
+  "title": "How to Play: Video Poker",
+  "summary": null,
+  "frontmatter": {
+    "content_type": "game-guide",
+    "title": "How to Play: Video Poker",
+    "pillar": [
+      "open"
+    ],
+    "tier": 1,
+    "tone": [
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "game_type": [
+      "video-poker"
+    ],
+    "audience": [
+      "general"
+    ],
+    "channel": [
+      "blog",
+      "social-media",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "odds_format": "american",
+      "currency": "usd",
+      "sports_culture": null,
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Currency: All examples use USD ($1/credit, $100 wallet example).\nReplace with local currency and recalculate round numbers.\nGame naming: \"Video poker\" is universal. Some markets group it\nwith slot machines or electronic gaming machines (EGMs).\nVariant naming: Jacks or Better, Deuces Wild, etc. are\ninternationally consistent.\nPaytable availability: In some jurisdictions, paytable/RTP\ninformation is prominently displayed. In others, it's not\npublicly disclosed. Adapt \"check the paytable\" tips accordingly.\nStrategy cards: Legal in most US casinos. Verify local rules.\n",
+    "last_updated": "2026-03-05T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "heading": "The 30-second version",
+      "content": "> Video poker is one of the few casino games where your decisions change the odds. You're dealt five cards, you choose which to keep, and the machine draws replacements. With optimal strategy on a full-pay Jacks or Better machine, the house edge drops to about `0.46%` — one of the lowest in the casino. The catch: the paytable varies from machine to machine, and a worse paytable means a worse edge. Check it before you play.\n\n---"
+    },
+    {
+      "heading": "How the game works",
+      "content": "### The basics\n\nVideo poker looks like a slot machine. It isn't. A slot machine uses a random number generator that could produce any result from any combination of symbols. Video poker deals from a standard `52`-card deck (or `53` with a joker, depending on the variant). The probabilities are the same as a physical deck of cards — and your decisions about which cards to hold change the math.\n\n### Playing a hand\n\n1. **Insert credits and set your bet.** You choose how many credits to wager per hand — typically `1` to `5`. More on why this matters below.\n2. **Press deal.** The machine deals you five cards from a randomly shuffled `52`-card deck.\n3. **Choose which cards to hold.** This is where the game lives. You decide which cards to keep and which to discard. Tap or press the hold button under each card you want to keep.\n4. **Press draw.** The machine replaces your discarded cards with new cards from the same deck. Your final five-card hand is the result.\n5. **Payout.** If your final hand matches a winning combination on the paytable, you get paid. If not, the bet is lost.\n\nThat hold/draw decision is what separates video poker from every other electronic game in the casino. The machine deals random cards — but you decide what to do with them.\n\n### Common variants\n\n| Variant | Key difference | Typical full-pay RTP |\n|---------|---------------|---------------------|\n| **Jacks or Better** | The standard. Pair of jacks or higher wins. | `99.54%` |\n| **Deuces Wild** | All 2s are wild cards. Minimum winning hand is three of a kind. | `100.76%` (full-pay) |\n| **Bonus Poker** | Higher payouts for four-of-a-kind hands. | `99.17%` |\n| **Double Bonus Poker** | Even larger four-of-a-kind bonuses, lower pair payouts. | `100.17%` (full-pay) |\n| **Joker Poker** | Uses a `53`-card deck with one joker as wild. | `100.64%` (full-pay, kings or better) |\n\nA few variants actually exceed `100%` RTP with perfect play. That doesn't mean free money — those machines are rare, the strategy is demanding, and the variance is high.\n\n---"
+    },
+    {
+      "heading": "Bet types",
+      "content": "Video poker doesn't have multiple bet types the way table games do. What you control is the **size** of your wager.\n\n<!-- ADAPT: currency -->\n| Setting | What it means | What it affects |\n|---------|--------------|----------------|\n| **Credits per hand** | How many coins/credits you wager (`1–5`) | Win size — payouts are multiplied by credits bet |\n| **Coin denomination** | The dollar value of each credit (`$0.25`, `$0.50`, `$1.00`, etc.) | Sets the scale of everything — bets, wins, and losses |\n| **Max bet (5 credits)** | Wagers the maximum credits per hand | Usually required for the full royal flush payout — check the paytable |\n<!-- /ADAPT -->\n\n**Key point:** On most video poker machines, the royal flush payout jumps disproportionately at `5` credits. A `1`-credit royal might pay `250`. A `5`-credit royal pays `4,000` — not `1,250`. That bonus payout is a significant part of the game's overall RTP. If you play fewer than `5` credits, the effective house edge increases.\n\n---"
+    },
+    {
+      "heading": "The math",
+      "content": "### House edge and RTP\n\nEvery video poker machine has a paytable that determines its RTP. Two machines sitting side by side can have identical graphics and different math.\n\n| Jacks or Better paytable | Full house / Flush payout | RTP | House edge |\n|--------------------------|--------------------------|-----|-----------|\n| **Full-pay (9/6)** | `9`-for-`1` / `6`-for-`1` | `99.54%` | `0.46%` |\n| **8/5** | `8`-for-`1` / `5`-for-`1` | `97.30%` | `2.70%` |\n| **7/5** | `7`-for-`1` / `5`-for-`1` | `96.15%` | `3.85%` |\n| **6/5** | `6`-for-`1` / `5`-for-`1` | `95.00%` | `5.00%` |\n\nThe shorthand \"9/6\" refers to the full house and flush payouts. That's the fastest way to compare machines: check those two numbers on the paytable. Every step down costs you.\n\n### What this means for your wallet\n\n<!-- ADAPT: currency -->\nOn a full-pay 9/6 Jacks or Better machine with optimal strategy, the house edge is `0.46%`. For every `$100` you bet over time, you'd lose about `46 cents` on average. Drop to a 6/5 machine and that same `$100` costs you `$5` — more than `10` times as much, for a game that looks identical.\n<!-- /ADAPT -->\n\n### Volatility\n\nVideo poker has moderate-to-high volatility. The royal flush makes up a significant portion of the RTP, but it hits roughly once every `40,000` hands. That means:\n\n- Your session-to-session results will swing more than the house edge suggests.\n- Short sessions are dominated by luck. Long-run math only shows up over thousands of hands.\n- High-bonus variants (Double Bonus, Deuces Wild) are more volatile than Jacks or Better.\n\n**Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).\n\n---"
+    },
+    {
+      "heading": "Basic strategy",
+      "content": "Video poker strategy is the set of mathematically optimal hold/discard decisions for every possible hand. Like blackjack basic strategy, it was figured out by computing the expected value of every possible combination. It's not a hunch — it's the math.\n\n### Jacks or Better — simplified strategy\n\nHold the best combination available, in this priority order:\n\n| Priority | Hand to hold | Example |\n|----------|-------------|---------|\n| `1` | Royal flush, straight flush, four of a kind | Hold all five |\n| `2` | Four to a royal flush | K-Q-J-10 of spades + discard the fifth card |\n| `3` | Full house, flush, straight | Hold all five |\n| `4` | Three of a kind | Hold the three, discard two |\n| `5` | Four to a straight flush | Hold the four, draw one |\n| `6` | Two pair | Hold both pairs, discard one |\n| `7` | High pair (jacks or better) | Hold the pair, discard three |\n| `8` | Three to a royal flush | Hold the three, discard two |\n| `9` | Four to a flush | Hold the four, draw one |\n| `10` | Low pair (tens or below) | Hold the pair, discard three |\n| `11` | Four to an outside straight | Hold the four, draw one |\n| `12` | Two suited high cards | Hold the two, discard three |\n| `13` | Three to a straight flush | Hold the three, discard two |\n| `14` | Two unsuited high cards (pick lowest two) | Hold two, discard three |\n| `15` | One high card (J, Q, K, or A) | Hold one, discard four |\n| `16` | Nothing | Discard all five |\n\n**Key decisions most players get wrong:**\n\n- **Never hold a kicker.** If you have a pair of queens and an ace, hold the pair only — discard the ace and two others. The kicker doesn't help.\n- **Break a flush to draw to a royal.** If you have four to a royal flush inside a made flush, break the flush. The royal draw has higher expected value.\n- **A low pair beats a single high card.** A pair of 4s has more expected value than holding a lone ace.\n\n> **Note:** Strategy varies by variant. Deuces Wild, Bonus Poker, and other games have different optimal holds. Full strategy charts for each variant are widely available — and unlike blackjack, you can use them at the machine.\n\n---"
+    },
+    {
+      "heading": "Tips for informed play",
+      "content": "1. **Check the paytable before you sit down.** Look at the full house and flush payouts. On Jacks or Better, `9/6` is full-pay. Anything less costs you real money over time — and the machine won't tell you it's giving you worse odds.\n2. **Play max credits if you can afford the denomination.** The royal flush bonus at `5` credits is a meaningful part of the RTP. If `5` credits at `$1` is too rich, find a `$0.25` machine and play max there.\n3. **Learn the strategy for your variant.** Strategy cards are available for every video poker variant. You can use them at the machine — unlike blackjack, nobody cares. Twenty minutes of study cuts the house edge significantly.\n4. **Don't treat it like a slot machine.** Every hold decision has a mathematically correct answer. Holding cards based on gut feeling instead of strategy is leaving money on the table.\n<!-- ADAPT: currency -->\n5. **Set your session budget.** Video poker plays at a moderate pace — about `200–400` hands per hour depending on speed. At `$1.25` per hand (`$0.25` × `5` credits), that's `$250–$500` per hour in total wagers. Know the pace before you start.\n<!-- /ADAPT -->\n\n---"
+    },
+    {
+      "heading": "Common myths",
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Betting Systems Beat the House | Martingale = delayed ruin | [Myth 7](../messaging/myth-busting.md#myth-7-betting-systems-beat-the-house) |\n| The Hot Streak | Streaks are noise, not signal | [Myth 1](../messaging/myth-busting.md#myth-1-the-hot-streak) |\n| Due for a Win | Machines don't keep score | [Myth 2](../messaging/myth-busting.md#myth-2-due-for-a-win) |\n| Near Misses Mean You're Close | A loss is a loss | [Myth 4](../messaging/myth-busting.md#myth-4-near-misses-mean-youre-close) |\n| Higher Bets Improve Odds | House edge is a percentage (but check the royal flush bonus) | [Myth 6](../messaging/myth-busting.md#myth-6-higher-bets-improve-your-odds) |\n\n---"
+    }
+  ],
+  "keyTerms": [
+    {
+      "term": "**Paytable**",
+      "definition": "The chart on the machine showing payouts for each winning hand. Two machines with the same name can have different paytables — and different RTPs. See [glossary](../brand-book/glossary.md#paytable)."
+    },
+    {
+      "term": "**Full-pay**",
+      "definition": "A machine with the best available paytable for its variant. For Jacks or Better, that's 9/6 (9-for-1 on a full house, 6-for-1 on a flush)."
+    },
+    {
+      "term": "**Short-pay**",
+      "definition": "Any paytable below full-pay. An 8/5 Jacks or Better is short-pay — same game, worse math."
+    },
+    {
+      "term": "**Hold / Draw**",
+      "definition": "Keep selected cards (hold) and replace the rest (draw). Your only decision point in the game."
+    },
+    {
+      "term": "**Royal flush**",
+      "definition": "A-K-Q-J-10 of the same suit. The top payout, typically `800`-for-`1` at max bet. Occurs roughly once every `40,000` hands with optimal play."
+    },
+    {
+      "term": "**Wild card**",
+      "definition": "A card that substitutes for any other card. In Deuces Wild, all 2s are wild. Changes the strategy and the paytable completely."
+    },
+    {
+      "term": "**Expected value (EV)**",
+      "definition": "The mathematical average outcome of a decision over infinite repetitions. Strategy charts are built by comparing the EV of every possible hold combination."
+    },
+    {
+      "term": "**Credits**",
+      "definition": "The unit of wager on a video poker machine. Max bet is typically `5` credits. The coin denomination sets the dollar value of each credit."
+    },
+    {
+      "term": "**Kicker**",
+      "definition": "An unpaired high card held alongside a pair. Never hold a kicker — it reduces your draws without improving expected value."
+    },
+    {
+      "term": "**Variance**",
+      "definition": "How much results swing in the short term. Video poker is moderate-to-high variance because the royal flush contributes significantly to the RTP but hits rarely. See [glossary](../brand-book/glossary.md#volatility)."
+    }
+  ],
+  "quiz": [],
+  "socialSnippets": []
+}

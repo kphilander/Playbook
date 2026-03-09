@@ -1,0 +1,684 @@
+{
+  "meta": {
+    "count": 50,
+    "sections": 6,
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "messaging/calls-to-action.md"
+  },
+  "frontmatter": {
+    "content_type": "cta-library",
+    "title": "Calls to Action",
+    "pillar": [
+      "open",
+      "social",
+      "tools",
+      "help"
+    ],
+    "tier": [
+      1,
+      2
+    ],
+    "tone": [
+      "playful-witty",
+      "confident-informative",
+      "warm-direct"
+    ],
+    "reading_level": "grade-6-8",
+    "audience": [
+      "general"
+    ],
+    "channel": [
+      "social-media",
+      "blog",
+      "email",
+      "in-app",
+      "print"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "currency": "usd",
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "CTAs are largely universal. Main adaptation: framing\n(individual vs. communal) for action language.\n\"Challenge your friends\" may not work in all cultures.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "name": "Entertainment literacy",
+      "description": "CTAs that drive players to learn how games actually work.",
+      "ctas": [
+        {
+          "id": "EL-1",
+          "label": "Take the quiz",
+          "maxChars": 14,
+          "context": "Game IQ quiz, odds quiz, myth-busting quiz",
+          "tone": "Playful / Witty",
+          "pairWith": [
+            "S-4",
+            "S-8"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-2",
+          "label": "Test your game IQ",
+          "maxChars": 19,
+          "context": "Quiz promotion, social media, onboarding",
+          "tone": "Playful / Witty",
+          "pairWith": [
+            "S-4",
+            "S-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-3",
+          "label": "See the real odds",
+          "maxChars": 18,
+          "context": "Odds education, game comparisons",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-3",
+            "O-4"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-4",
+          "label": "Read the breakdown",
+          "maxChars": 19,
+          "context": "Long-form educational content, articles",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-1",
+            "O-5"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-5",
+          "label": "Watch the explainer",
+          "maxChars": 21,
+          "context": "Video content, visual guides",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-1",
+            "O-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-6",
+          "label": "See how it works",
+          "maxChars": 17,
+          "context": "Game mechanics, RNG explainers, house edge",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-1",
+            "O-6"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-7",
+          "label": "Get the facts",
+          "maxChars": 14,
+          "context": "Myth-busting content, odds explainers",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-2",
+            "O-5"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-8",
+          "label": "Compare the odds",
+          "maxChars": 17,
+          "context": "Odds comparison tool, game selection",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-3",
+            "O-4"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-9",
+          "label": "See the math",
+          "maxChars": 13,
+          "context": "Detailed odds breakdowns, data visualizations",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-4",
+            "O-5"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "EL-10",
+          "label": "Try the odds calculator",
+          "maxChars": 23,
+          "context": "Interactive odds/bankroll tools",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-6",
+            "O-8"
+          ],
+          "tokens": []
+        }
+      ]
+    },
+    {
+      "name": "Tool adoption",
+      "description": "CTAs that get players to activate and use features.",
+      "ctas": [
+        {
+          "id": "TA-1",
+          "label": "Set your limits",
+          "maxChars": 16,
+          "context": "Deposit / loss / session limit setup, onboarding",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1",
+            "T-3"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-2",
+          "label": "Try the bankroll planner",
+          "maxChars": 25,
+          "context": "Bankroll management tool promotion",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-8",
+            "T-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-3",
+          "label": "Check your stats",
+          "maxChars": 17,
+          "context": "Activity dashboard, play summary",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1",
+            "O-7"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-4",
+          "label": "Set a session reminder",
+          "maxChars": 23,
+          "context": "Session timer activation, settings",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "T-2",
+            "T-3"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-5",
+          "label": "See your activity",
+          "maxChars": 18,
+          "context": "Monthly/weekly activity summary",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1",
+            "T-4"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-6",
+          "label": "Set your budget",
+          "maxChars": 16,
+          "context": "Deposit flow, onboarding, first session",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "T-3",
+            "O-8"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-7",
+          "label": "Update your limits",
+          "maxChars": 19,
+          "context": "Account settings, limit adjustment",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1",
+            "T-3"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-8",
+          "label": "Turn on session reminders",
+          "maxChars": 27,
+          "context": "Settings, onboarding flow",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "T-2",
+            "T-4"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-9",
+          "label": "Open your dashboard",
+          "maxChars": 20,
+          "context": "Navigation, in-app prompt",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1",
+            "T-4"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "TA-10",
+          "label": "Activate your tools",
+          "maxChars": 20,
+          "context": "Onboarding, first-time setup",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1",
+            "T-3"
+          ],
+          "tokens": []
+        }
+      ]
+    },
+    {
+      "name": "Content engagement",
+      "description": "CTAs that drive deeper exploration of {{PROGRAM_NAME}} content.",
+      "ctas": [
+        {
+          "id": "CE-1",
+          "label": "Explore more",
+          "maxChars": 13,
+          "context": "Content hub, related articles, end of articles",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "S-5",
+            "O-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "CE-2",
+          "label": "Read the full article",
+          "maxChars": 22,
+          "context": "Social media post linking to blog, email teaser",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-1",
+            "O-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "CE-3",
+          "label": "See all myths",
+          "maxChars": 15,
+          "context": "Myth-busting hub, campaign landing page",
+          "tone": "Playful / Witty",
+          "pairWith": [
+            "O-4",
+            "S-5"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "CE-4",
+          "label": "Watch the video",
+          "maxChars": 17,
+          "context": "Video content promotion, multimedia pages",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-1",
+            "S-5"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "CE-5",
+          "label": "Keep reading",
+          "maxChars": 13,
+          "context": "In-article continuation, multi-part content",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-1",
+            "O-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "CE-6",
+          "label": "See related topics",
+          "maxChars": 19,
+          "context": "End of article, sidebar recommendations",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "S-5",
+            "O-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "CE-7",
+          "label": "Browse by game type",
+          "maxChars": 20,
+          "context": "Content hub, game-specific navigation",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-3",
+            "O-7"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "CE-8",
+          "label": "Start from the beginning",
+          "maxChars": 26,
+          "context": "Series content, multi-part guides",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "O-1",
+            "O-6"
+          ],
+          "tokens": []
+        }
+      ]
+    },
+    {
+      "name": "Social sharing",
+      "description": "CTAs that turn players into content distributors.",
+      "ctas": [
+        {
+          "id": "SS-1",
+          "label": "Share this",
+          "maxChars": 11,
+          "context": "Quiz results, myth-busters, fact cards",
+          "tone": "Playful / Witty",
+          "pairWith": [
+            "S-1",
+            "S-5"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "SS-2",
+          "label": "Challenge a friend",
+          "maxChars": 19,
+          "context": "Quiz sharing, competitive content",
+          "tone": "Playful / Witty",
+          "pairWith": [
+            "S-2",
+            "S-8"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "SS-3",
+          "label": "Send to a friend",
+          "maxChars": 17,
+          "context": "Educational content, useful guides",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "S-6",
+            "S-1"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "SS-4",
+          "label": "Share your score",
+          "maxChars": 17,
+          "context": "Quiz results screen, leaderboards",
+          "tone": "Playful / Witty",
+          "pairWith": [
+            "S-8",
+            "S-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "SS-5",
+          "label": "Tag someone who needs this",
+          "maxChars": 28,
+          "context": "Social media posts, myth-busters",
+          "tone": "Playful / Witty",
+          "pairWith": [
+            "S-6",
+            "S-1"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "SS-6",
+          "label": "Post your result",
+          "maxChars": 17,
+          "context": "Quiz completion, achievement unlock",
+          "tone": "Celebratory",
+          "pairWith": [
+            "S-8",
+            "S-4"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "SS-7",
+          "label": "Share the facts",
+          "maxChars": 16,
+          "context": "Educational content, data visualizations",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "S-1",
+            "S-5"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "SS-8",
+          "label": "Spread the word",
+          "maxChars": 17,
+          "context": "Awareness campaigns, launch announcements",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "S-5",
+            "S-7"
+          ],
+          "tokens": []
+        }
+      ]
+    },
+    {
+      "name": "Help-seeking",
+      "description": "CTAs that make support resources findable without being intrusive. These are Tier 2 crossover — always present, never the primary action in Tier 1 contexts.",
+      "ctas": [
+        {
+          "id": "HS-1",
+          "label": "Talk to someone — free and confidential",
+          "maxChars": 42,
+          "context": "Helpline access, support page",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-1",
+            "H-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "HS-2",
+          "label": "Call {{HELPLINE_NUMBER}}",
+          "maxChars": null,
+          "context": "Direct phone helpline, footer",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-1"
+          ],
+          "tokens": [
+            "{{HELPLINE_NUMBER}}"
+          ]
+        },
+        {
+          "id": "HS-3",
+          "label": "Pause your account",
+          "maxChars": 19,
+          "context": "Self-exclusion entry point, account settings",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-3"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "HS-4",
+          "label": "Find support",
+          "maxChars": 13,
+          "context": "Support resources page, help section",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-1",
+            "H-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "HS-5",
+          "label": "Chat with someone now",
+          "maxChars": 22,
+          "context": "Live chat support link",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-1"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "HS-6",
+          "label": "Take a break",
+          "maxChars": 13,
+          "context": "Cool-off period activation",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-3"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "HS-7",
+          "label": "See your options",
+          "maxChars": 17,
+          "context": "Support resources overview, help menu",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-1",
+            "H-2"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "HS-8",
+          "label": "Get confidential support",
+          "maxChars": 26,
+          "context": "Help page, crisis content",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "H-2"
+          ],
+          "tokens": []
+        }
+      ]
+    },
+    {
+      "name": "Account management",
+      "description": "CTAs for player account and settings workflows.",
+      "ctas": [
+        {
+          "id": "AM-1",
+          "label": "Go to settings",
+          "maxChars": 15,
+          "context": "Account management, navigation",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "AM-2",
+          "label": "Review your account",
+          "maxChars": 20,
+          "context": "Account overview, periodic check-in",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "AM-3",
+          "label": "Update your preferences",
+          "maxChars": 24,
+          "context": "Settings page, preference management",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1",
+            "T-3"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "AM-4",
+          "label": "Manage your tools",
+          "maxChars": 18,
+          "context": "Tool settings overview",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-1"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "AM-5",
+          "label": "Download your activity",
+          "maxChars": 23,
+          "context": "Data export, activity history",
+          "tone": "Confident / Informative",
+          "pairWith": [
+            "T-4"
+          ],
+          "tokens": []
+        },
+        {
+          "id": "AM-6",
+          "label": "Complete your setup",
+          "maxChars": 20,
+          "context": "Onboarding completion, partial setup",
+          "tone": "Warm / Direct",
+          "pairWith": [
+            "T-1",
+            "T-3"
+          ],
+          "tokens": []
+        }
+      ]
+    }
+  ]
+}

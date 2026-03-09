@@ -1,0 +1,32 @@
+/* brand-inject.css — Auto-generated from _brand.yml */
+/* Run: node lib/generate-inject-css.mjs */
+
+:root {
+  /* ─── Colors ───────────────────────── */
+  --pb-color-primary: #1B2838;
+  --pb-color-primary-light: #2A3F56;
+  --pb-color-primary-dark: #0F1923;
+  --pb-color-secondary: #00D4AA;
+  --pb-color-secondary-light: #33DDBB;
+  --pb-color-secondary-dark: #00A888;
+  --pb-color-accent: #FF6B35;
+  --pb-color-accent-light: #FF8A5C;
+  --pb-color-accent-dark: #E55A2B;
+  --pb-color-neutral-900: #1A1A2E;
+  --pb-color-neutral-700: #3D3D5C;
+  --pb-color-neutral-500: #6B6B8A;
+  --pb-color-neutral-300: #A8A8C0;
+  --pb-color-neutral-100: #E8E8F0;
+  --pb-color-neutral-50: #F5F5FA;
+  --pb-color-success: #00C853;
+  --pb-color-warning: #FFB300;
+  --pb-color-danger: #FF3D00;
+  --pb-color-info: #2979FF;
+  --pb-color-white: #FFFFFF;
+  --pb-color-black: #111111;
+
+  /* ─── Fonts ────────────────────────── */
+  --pb-font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --pb-font-body: 'Source Sans 3', system-ui, sans-serif;
+  --pb-font-mono: 'Source Code Pro', monospace;
+}

@@ -6,12 +6,3 @@ website/tsconfig.tsbuildinfo
 website/.next/
 website/out/
 slide-deck/.vite/
-
-# Generated files (regenerate with `npm run build`)
-# Note: collateral/render/*.png are committed for README preview images
-api/*.json
-api/games/*.json
-collateral/render/brand-inject.css
-visual-identity/design-tokens.css
-widgets/dist/
-slide-deck/src/generated/

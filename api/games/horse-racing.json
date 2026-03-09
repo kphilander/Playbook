@@ -1,0 +1,125 @@
+{
+  "meta": {
+    "game": "horse-racing",
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "how-to-play/horse-racing.md"
+  },
+  "slug": "horse-racing",
+  "title": "How to Play: Horse Racing",
+  "summary": null,
+  "frontmatter": {
+    "content_type": "game-guide",
+    "title": "How to Play: Horse Racing",
+    "pillar": [
+      "open"
+    ],
+    "tier": 1,
+    "tone": [
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "game_type": [
+      "horse-racing"
+    ],
+    "audience": [
+      "general",
+      "traditional-players"
+    ],
+    "channel": [
+      "blog",
+      "social-media",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "odds_format": "american",
+      "currency": "usd",
+      "sports_culture": null,
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "HEAVY ADAPTATION NEEDED for this guide.\nOdds format: American odds used as primary. UK/Ireland/Australia\nuse fractional or decimal — lead with local format.\nCurrency: All examples use USD ($2 minimum, $100 wallet example).\nReplace with local currency.\nBet terminology: US uses win/place/show. UK/Ireland use win/each-way.\nAustralia uses win/place. Adapt bet types table to local conventions.\nRace culture: US Triple Crown references, pari-mutuel focus.\nReplace with locally relevant events (Grand National, Melbourne Cup,\nPrix de l'Arc de Triomphe, etc.).\nTakeout rates vary by jurisdiction and bet type — verify local rates.\nFixed-odds vs. pari-mutuel balance varies by market. UK/Australia\nare primarily fixed-odds; US is primarily pari-mutuel.\n",
+    "last_updated": "2026-03-01T00:00:00.000Z"
+  },
+  "sections": [
+    {
+      "heading": "The 30-second version",
+      "content": "> Horse racing betting combines skill elements — form, conditions, jockey, track — with significant uncertainty. You're not betting against the house the way you are in a casino. You're betting into a pool against other bettors. The house takes its cut before anyone gets paid. That cut is called the **takeout**, and it typically runs `15–25%` depending on the bet type. Simple bets give back more. Exotic bets cost the most.\n\n---"
+    },
+    {
+      "heading": "How the game works",
+      "content": "### The basics\n\nIn most horse racing markets, betting works through one of two systems — or a mix of both.\n\n**Pari-mutuel (tote) betting**\n\nAll bets on a race go into a shared pool. The track takes its percentage (the takeout) off the top, and the remaining pool is divided among the winners. The odds aren't set until all bets are in — they're determined by how much money has been bet on each horse relative to the total pool.\n\nThis means:\n- If a lot of people bet on one horse, its payout goes down.\n- If few people bet on a horse and it wins, the payout is higher.\n- The odds you see before the race are estimates. Final odds are calculated at post time.\n\n**Fixed-odds betting**\n\nThe bookmaker sets odds on each horse, and you lock in those odds when you place your bet. Your payout is determined at the moment you bet, regardless of how the rest of the market moves. The bookmaker's margin is built into the odds they offer — they set prices that give them an edge across all outcomes.\n\n### How a race works\n\n1. **Check the race card.** The race card lists every horse running, their jockey, trainer, weight carried, recent form, and the morning line (preliminary odds estimate).\n2. **Place your bet.** Choose your bet type (win, place, exacta, etc.), select your horse(s), and set your wager amount.\n3. **Horses run the race.** The outcome depends on a complex mix of horse ability, jockey skill, track conditions, distance, pace, positioning, and plain luck.\n4. **Results are official.** Once stewards confirm the finishing order (and check for fouls or objections), winning bets are paid.\n\n<!-- TODO: Add section on how to read a race card / form guide — consider a visual diagram -->\n\n---"
+    },
+    {
+      "heading": "Bet types",
+      "content": "### Straight bets\n\n<!-- ADAPT: currency -->\n| Bet | What it means | Typical minimum | Takeout range |\n|-----|--------------|----------------|---------------|\n| **Win** | Your horse finishes first | `$2` | `15–18%` |\n| **Place** | Your horse finishes first or second | `$2` | `15–18%` |\n| **Show** | Your horse finishes first, second, or third | `$2` | `15–18%` |\n| **Each-way** (UK/international) | Two bets in one: a win bet and a place bet on the same horse | 2× your unit stake | Varies by bookmaker |\n| **Across the board** | Three bets: win, place, and show on the same horse | `$6` (`$2` each) | `15–18%` per pool |\n<!-- /ADAPT -->\n\n### Exotic bets\n\n<!-- ADAPT: currency -->\n| Bet | What it means | Typical minimum | Takeout range |\n|-----|--------------|----------------|---------------|\n| **Exacta** (forecast) | Pick the top two finishers in exact order | `$1–$2` | `20–25%` |\n| **Trifecta** (tricast) | Pick the top three finishers in exact order | `$0.50–$1` | `20–25%` |\n| **Superfecta** | Pick the top four finishers in exact order | `$0.10–$1` | `20–25%` |\n| **Quinella** (reverse forecast) | Pick the top two finishers in any order | `$1–$2` | `20–25%` |\n<!-- /ADAPT -->\n\n### Multi-race bets\n\n| Bet | What it means | Takeout range |\n|-----|--------------|---------------|\n| **Daily double** | Pick the winner of two consecutive designated races | `20–25%` |\n| **Pick 3 / Pick 4** | Pick the winners of 3 or 4 consecutive races | `20–25%` |\n| **Pick 6** | Pick the winners of 6 consecutive races | `20–25%` (often higher) |\n| **Accumulator** (parlay) | A single bet linking selections across multiple races — all must win | Margin compounds per leg (fixed-odds) |\n\n**Key point:** Notice the pattern. Simple bets (win, place, show) have the lowest takeout — typically `15–18%`. Exotic and multi-race bets carry `20–25%` or more. The more complex the bet, the bigger the cut before you get paid.\n\n---"
+    },
+    {
+      "heading": "The math",
+      "content": "### Takeout rates\n\nThe takeout is the track's (or bookmaker's) cut. In pari-mutuel betting, it's taken from the pool before winnings are distributed. In fixed-odds betting, it's built into the odds offered.\n\n| Bet type | Typical takeout | What's left for bettors |\n|----------|----------------|------------------------|\n| Win / Place / Show | `15–18%` | `82–85%` |\n| Exacta / Quinella | `20–22%` | `78–80%` |\n| Trifecta / Superfecta | `22–25%` | `75–78%` |\n| Pick 6 / multi-race | `20–30%` | `70–80%` |\n\n### What this means for your wallet\n\n<!-- ADAPT: currency -->\nFor every `$100` you bet on win bets over time, you'd expect to get back about `$82–$85` on average — the track keeps `$15–$18`. Switch to trifectas, and you'd expect to get back about `$75–$78` per `$100`. The takeout is a percentage of every dollar wagered, applied before any winnings are calculated.\n<!-- /ADAPT -->\n\n### How pari-mutuel odds work\n\n<!-- ADAPT: currency -->\nHere's a simplified example:\n\n| Horse | Total bet on this horse | Share of pool |\n|-------|------------------------|---------------|\n| Horse A | `$500` | `50%` |\n| Horse B | `$300` | `30%` |\n| Horse C | `$200` | `20%` |\n| **Total pool** | **`$1,000`** | |\n\nWith a `20%` takeout, the payout pool is `$800`. If Horse C wins:\n- `$800 ÷ $200` (bet on Horse C) = `$4` returned for every `$1` bet\n- That's a `3-to-1` payout (your `$1` back plus `$3` profit)\n\nIf Horse A wins:\n- `$800 ÷ $500` = `$1.60` returned per `$1` bet\n- A favorite that pays less because more money was wagered on it\n<!-- /ADAPT -->\n\nThe less popular the horse, the higher the payout — but popularity often reflects genuine probability. Longshots pay more precisely because they're less likely to win.\n\n**Compared to other games:** See [Odds at a Glance](odds-at-a-glance.md).\n\n---"
+    },
+    {
+      "heading": "Tips for informed play",
+      "content": "1. **Takeout varies by bet type — simple bets give back more.** Win and place bets typically carry `15–18%` takeout. Trifectas and pick-6 bets carry `20–30%`. Over time, the lower takeout on simple bets makes a significant difference to your expected return.\n2. **Form guides are informative, not predictive.** A horse's past performance tells you about its ability under certain conditions. But conditions change — track surface, distance, field size, pace, weather. Form is a useful data point, not a guarantee. Treat it as context, not prophecy.\n3. **Exotic bets have the worst takeout rates.** Trifectas, superfectas, and pick-6 bets feel exciting because the payouts can be large. But the track takes `20–25%` (or more) off the top before anyone is paid. The bigger the potential payout, the higher the cut.\n4. **\"Tips\" from insiders are entertainment, not investment advice.** Tipsters, touts, and racing pundits provide opinions, not certainties. If someone could reliably pick winners, they'd be betting, not selling tips. Track record claims are subject to survivorship bias — you only hear from the ones who got it right recently.\n<!-- ADAPT: currency -->\n5. **Set a session budget and track your actual spending.** Racing cards can have 8–12 races. At `$2–$10` per bet across a full card, a day at the track can cost `$50–$150` in wagers before you've counted food and drinks. Decide your total spend before the first race, not after the fifth.\n<!-- /ADAPT -->\n\n---"
+    },
+    {
+      "heading": "Common myths",
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Tipsters have consistent accuracy | Survivorship bias — you hear about the wins, not the losses | <!-- TODO: Link to myth-busting.md entry once created --> |\n| \"Sure things\" exist in racing | No outcome in horse racing is certain — that's why there are odds | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Past form guarantees future results | Form is context, not prediction — conditions change every race | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Lighter jockeys make horses faster | Weight matters, but it's one variable among many — track, distance, pace, and horse fitness matter more | <!-- TODO: Link to myth-busting.md entry once created --> |\n| You can \"read\" the paddock and know the winner | Paddock appearance is subjective and unreliable — a calm horse isn't necessarily a fast horse | <!-- TODO: Link to myth-busting.md entry once created --> |\n\n---"
+    }
+  ],
+  "keyTerms": [
+    {
+      "term": "**Takeout** (track take)",
+      "definition": "The percentage removed from the betting pool before winnings are distributed. The house's cut. See [glossary](../brand-book/glossary.md#takeout)."
+    },
+    {
+      "term": "**Pari-mutuel** (tote)",
+      "definition": "A betting system where all wagers go into a pool. The track takes its cut, and the rest is divided among winners. Odds are final at post time."
+    },
+    {
+      "term": "**Fixed-odds**",
+      "definition": "Odds locked in at the time you place your bet. Your payout doesn't change regardless of later market movement."
+    },
+    {
+      "term": "**Form guide**",
+      "definition": "A record of each horse's recent racing history — finishes, times, conditions, distances, jockeys. Informative, but not predictive."
+    },
+    {
+      "term": "**Morning line**",
+      "definition": "Preliminary odds set by the track handicapper before any betting starts. An estimate, not a guarantee — actual odds change as bets come in."
+    },
+    {
+      "term": "**Post time**",
+      "definition": "The scheduled start time of the race. In pari-mutuel betting, final odds are set at post time."
+    },
+    {
+      "term": "**Each-way**",
+      "definition": "A UK/international bet type: two bets in one — a win bet and a place bet on the same horse. You pay double the unit stake."
+    },
+    {
+      "term": "**Accumulator** (parlay)",
+      "definition": "A single bet linking multiple selections across different races. All must win. Payouts grow with each leg, but so does the effective margin."
+    },
+    {
+      "term": "**Handicap race**",
+      "definition": "A race where horses carry different weights to equalize the competition. Heavier weight is assigned to stronger horses."
+    },
+    {
+      "term": "**Going** (track condition)",
+      "definition": "The state of the racing surface — firm, good, soft, heavy (turf) or fast, good, muddy, sloppy (dirt). Affects different horses differently."
+    },
+    {
+      "term": "**Stewards**",
+      "definition": "Officials who oversee the race, rule on fouls, and confirm final results."
+    }
+  ],
+  "quiz": [],
+  "socialSnippets": []
+}

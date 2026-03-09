@@ -1,0 +1,48 @@
+/* brand-theme.css — Auto-generated from _brand.yml */
+/* Run: node lib/generate-tailwind-theme.mjs */
+/* DO NOT EDIT MANUALLY */
+
+@theme {
+  /* ─── Brand Colors ─────────────────────── */
+  --color-navy: #1B2838;
+  --color-navy-light: #2A3F56;
+  --color-midnight: #0F1923;
+  --color-teal: #00D4AA;
+  --color-teal-light: #33DDBB;
+  --color-teal-dark: #00A888;
+  --color-orange: #FF6B35;
+  --color-orange-light: #FF8A5C;
+  --color-orange-dark: #E55A2B;
+  --color-n900: #1A1A2E;
+  --color-n700: #3D3D5C;
+  --color-n500: #6B6B8A;
+  --color-n300: #A8A8C0;
+  --color-n100: #E8E8F0;
+  --color-n50: #F5F5FA;
+  --color-primary: #1B2838;
+  --color-primary-light: #2A3F56;
+  --color-primary-dark: #0F1923;
+  --color-secondary: #00D4AA;
+  --color-secondary-light: #33DDBB;
+  --color-secondary-dark: #00A888;
+  --color-accent: #FF6B35;
+  --color-accent-light: #FF8A5C;
+  --color-accent-dark: #E55A2B;
+  --color-neutral-900: #1A1A2E;
+  --color-neutral-700: #3D3D5C;
+  --color-neutral-500: #6B6B8A;
+  --color-neutral-300: #A8A8C0;
+  --color-neutral-100: #E8E8F0;
+  --color-neutral-50: #F5F5FA;
+  --color-success: #00C853;
+  --color-warning: #FFB300;
+  --color-danger: #FF3D00;
+  --color-info: #2979FF;
+  --color-white: #FFFFFF;
+  --color-black: #111111;
+
+  /* ─── Brand Fonts ──────────────────────── */
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-mono: 'Source Code Pro', monospace;
+}
