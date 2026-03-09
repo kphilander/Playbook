@@ -850,7 +850,7 @@ body {
   height: 44px;
   border-radius: 50%;
   background: conic-gradient(
-    var(--rg-secondary) calc(var(--progress, 0) * 1%),
+    var(--rg-ring-color, var(--rg-secondary)) calc(var(--progress, 0) * 1%),
     rgba(0,0,0,0.1) 0%
   );
   display: flex;
@@ -858,8 +858,26 @@ body {
   justify-content: center;
   z-index: 50;
   cursor: default;
-  transition: opacity var(--rg-transition);
+  transition: opacity var(--rg-transition), transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.rg-progress-ring.ring-pulse {
+  animation: ring-pop 0.5s ease;
+}
+.rg-progress-ring.ring-complete {
+  box-shadow: 0 4px 20px rgba(0,212,170,0.5);
+  animation: ring-celebrate 0.8s ease;
+}
+@keyframes ring-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+@keyframes ring-celebrate {
+  0% { transform: scale(1); box-shadow: 0 2px 12px rgba(0,0,0,0.15); }
+  30% { transform: scale(1.3); box-shadow: 0 6px 28px rgba(0,212,170,0.6); }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); box-shadow: 0 4px 20px rgba(0,212,170,0.5); }
 }
 .rg-progress-ring::after {
   content: '';
@@ -1392,18 +1410,39 @@ body {
 
   // ========== ProgressTracker ==========
   var ProgressTracker = {
+    prevPct: 0,
+    getMilestoneLabel: function(pct) {
+      if (pct === 100) return 'All explored!';
+      if (pct >= 80) return 'Almost there \u2014 ' + pct + '%';
+      if (pct >= 40) return 'Making progress \u2014 ' + pct + '%';
+      if (pct > 0) return 'Getting started \u2014 ' + pct + '%';
+      return '0% explored';
+    },
     init: function() {
+      var self = this;
       var ring = document.getElementById('progressRing');
       var sectionIds = ['odds', 'myths', 'tools', 'break', 'support'];
       var obs = new IntersectionObserver(function(entries) {
         entries.forEach(function(e) {
-          if (e.isIntersecting) {
+          if (e.isIntersecting && !state.sectionsViewed[e.target.id]) {
             state.sectionsViewed[e.target.id] = true;
             var count = Object.keys(state.sectionsViewed).length;
             var pct = Math.round((count / sectionIds.length) * 100);
             ring.style.setProperty('--progress', pct);
             ring.setAttribute('aria-valuenow', pct);
-            ring.setAttribute('data-label', pct + '% explored');
+            ring.setAttribute('data-label', self.getMilestoneLabel(pct));
+
+            // Pulse animation on new section
+            if (pct > self.prevPct) {
+              ring.classList.remove('ring-pulse', 'ring-complete');
+              void ring.offsetWidth; // trigger reflow
+              if (pct === 100) {
+                ring.classList.add('ring-complete');
+              } else {
+                ring.classList.add('ring-pulse');
+              }
+            }
+            self.prevPct = pct;
           }
         });
       }, { threshold: 0.3 });
@@ -1472,7 +1511,13 @@ body {
       'deposit limit': 'A maximum amount you can deposit into your account over a set period. You set the number.',
       'parlay': 'A single bet combining multiple selections. All selections must win for the bet to pay out.',
       'tilt': 'A state of emotional frustration that leads to poor decision-making \u2014 when emotion takes over from math.',
-      'cool-off period': 'A short-term voluntary break from gambling, typically 24 hours to 30 days.'
+      'cool-off period': 'A short-term voluntary break from gambling, typically 24 hours to 30 days.',
+      'ggr': 'Gross Gaming Revenue \u2014 the total amount wagered minus the total amount paid out to players. The operator\u2019s top-line income.',
+      'ev': 'Expected Value \u2014 the average amount a player can expect to win or lose per bet over many plays.',
+      'self-exclusion': 'A voluntary program that lets players ban themselves from gambling venues or platforms for a set period.',
+      'session limit': 'A time limit you set on how long you play in a single session. A nudge when your time is up.',
+      'loss limit': 'A cap on how much you can lose within a set period. Once hit, play pauses automatically.',
+      'reality check': 'A periodic pop-up that reminds you how long you\u2019ve been playing and how much you\u2019ve spent.'
     },
     activeTerms: {},
     tooltipEl: null,
@@ -1848,8 +1893,11 @@ body {
     ToolShowcase.init();
 
     // Annotate terms in static sections
+    TermTooltips.annotate(document.getElementById('odds'));
+    TermTooltips.annotate(document.getElementById('myths'));
     TermTooltips.annotate(document.getElementById('tools'));
     TermTooltips.annotate(document.getElementById('break'));
+    TermTooltips.annotate(document.getElementById('support'));
 
     // Load myths for hero quiz and quiz walkthrough
     fetch('../api/myths.json')
@@ -2244,7 +2292,7 @@ body.demo-mode .demo-banner { display: block; }
   var overlayTitle = document.getElementById('demoOverlayTitle');
   var overlayBody = document.getElementById('demoOverlayBody');
 
-  var isActive = false;
+  var isActive = true;
   var hotspots = [];
 
   // ========== Hotspot position overrides for compact sections ==========
@@ -2363,6 +2411,12 @@ body.demo-mode .demo-banner { display: block; }
 
   // ========== Initialize ==========
   createHotspots();
+
+  // Launch with demo mode active
+  document.body.classList.add('demo-mode');
+  toggle.classList.add('active');
+  toggle.innerHTML = '<span class="demo-toggle-dot"></span> Demo Mode On';
+  toggle.style.display = 'flex';
 })();
 </script>
 </body>

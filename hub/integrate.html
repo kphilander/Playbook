@@ -131,14 +131,14 @@
   .rg-preview-dot:nth-child(3) { background: #28C840; }
   .rg-preview-url {
     flex: 1; text-align: center; font-family: var(--pb-font-mono);
-    font-size: 0.75rem; color: rgba(255,255,255,0.35);
+    font-size: 0.75rem; color: rgba(255,255,255,0.55);
   }
   .rg-preview-body { padding: 32px; text-align: center; }
   .rg-preview-body h3 {
     font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 8px;
   }
   .rg-preview-body h3 span { color: var(--pb-color-secondary); }
-  .rg-preview-body p { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 24px; }
+  .rg-preview-body p { color: rgba(255,255,255,0.75); font-size: 0.9rem; margin-bottom: 24px; }
   .rg-preview-sections {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 10px; margin-bottom: 24px;
@@ -147,9 +147,9 @@
     background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
     border-radius: 8px; padding: 12px 8px;
     font-family: var(--pb-font-heading); font-size: 0.78rem; font-weight: 600;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.85);
   }
-  .rg-preview-pill .emoji { display: block; font-size: 1.2rem; margin-bottom: 4px; }
+  .rg-preview-pill .pb-pill-icon { display: block; margin: 0 auto 4px; color: var(--pb-color-secondary); }
 
   /* === Feature list === */
   .feature-list { list-style: none; margin-bottom: 32px; }
@@ -224,7 +224,7 @@
     color: var(--pb-color-accent); margin-bottom: 8px;
   }
   .usecase-card h3 { font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
-  .usecase-card p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.6; margin-bottom: 16px; }
+  .usecase-card p { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.6; margin-bottom: 16px; }
   .usecase-code {
     background: rgba(0,0,0,0.3); border-radius: 8px; padding: 14px 16px;
     font-family: var(--pb-font-mono); font-size: 0.75rem;
@@ -349,6 +349,30 @@
 </head>
 <body>
 
+<!-- Playbook Brand Icon Sprite Sheet (subset for preview pills) -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="pb-icon-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></g>
+    <g stroke-width="1"><circle cx="6.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="19.5" cy="15.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="15.5" cy="19.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="19.5" cy="19.5" r="0.75" fill="currentColor" stroke="none"/></g>
+  </symbol>
+  <symbol id="pb-icon-limit" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><path d="M4.2 16.5A9 9 0 0 1 12 3a9 9 0 0 1 7.8 13.5"/></g>
+    <g stroke-width="1"><line x1="12" y1="12" x2="16.5" y2="7.5"/><circle cx="12" cy="12" r="1"/><line x1="5.5" y1="16" x2="6.5" y2="15"/><line x1="4.5" y1="12" x2="5.5" y2="12"/><line x1="6" y1="8" x2="7" y2="8.5"/><line x1="9" y1="5.5" x2="9.5" y2="6.5"/><line x1="14.5" y1="5.5" x2="14" y2="6.5"/><line x1="17.5" y1="8" x2="17" y2="8.5"/><line x1="19.5" y1="12" x2="18.5" y2="12"/><line x1="18.5" y1="16" x2="17.5" y2="15"/></g>
+  </symbol>
+  <symbol id="pb-icon-myth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="12" r="9"/></g>
+    <g stroke-width="1"><line x1="8" y1="8" x2="16" y2="16"/><line x1="16" y1="8" x2="8" y2="16"/></g>
+  </symbol>
+  <symbol id="pb-icon-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><circle cx="12" cy="13" r="8"/></g>
+    <g stroke-width="1"><polyline points="12 9 12 13 15 15"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="9" y1="2" x2="15" y2="2"/></g>
+  </symbol>
+  <symbol id="pb-icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7 12.7 12.7 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L8 9.7a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5 12.7 12.7 0 0 0 2.8.7A2 2 0 0 1 22 16.9z"/></g>
+    <g stroke-width="1"><path d="M17 2a5 5 0 0 1 5 5" fill="none"/><path d="M17 6a1 1 0 0 1 1 1" fill="none"/></g>
+  </symbol>
+</svg>
+
 <!-- ===== Back Bar ===== -->
 <nav class="pb-back-bar">
   <a href="/playbook">&larr; Back to Playbook</a>
@@ -399,11 +423,11 @@
         <h3>Play on <span>your terms.</span></h3>
         <p>Every game has math. Every player has choices.</p>
         <div class="rg-preview-sections">
-          <div class="rg-preview-pill"><span class="emoji">🎲</span> Know the Odds</div>
-          <div class="rg-preview-pill"><span class="emoji">🔒</span> Set Your Limits</div>
-          <div class="rg-preview-pill"><span class="emoji">🧠</span> Myths vs. Math</div>
-          <div class="rg-preview-pill"><span class="emoji">⏸️</span> Take a Break</div>
-          <div class="rg-preview-pill"><span class="emoji">📞</span> Get Support</div>
+          <div class="rg-preview-pill"><svg class="pb-pill-icon" width="20" height="20"><use href="#pb-icon-dice"/></svg> Know the Odds</div>
+          <div class="rg-preview-pill"><svg class="pb-pill-icon" width="20" height="20"><use href="#pb-icon-limit"/></svg> Set Your Limits</div>
+          <div class="rg-preview-pill"><svg class="pb-pill-icon" width="20" height="20"><use href="#pb-icon-myth"/></svg> Myths vs. Math</div>
+          <div class="rg-preview-pill"><svg class="pb-pill-icon" width="20" height="20"><use href="#pb-icon-timer"/></svg> Take a Break</div>
+          <div class="rg-preview-pill"><svg class="pb-pill-icon" width="20" height="20"><use href="#pb-icon-phone"/></svg> Get Support</div>
         </div>
       </div>
     </div>
@@ -470,7 +494,7 @@
       <span class="pb-gradient-line" style="margin: 0 auto 24px;"></span>
       <div class="pb-section-label">Beyond the Page</div>
       <h2>Components for every touchpoint.</h2>
-      <p class="pb-section-desc" style="margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.55);">
+      <p class="pb-section-desc" style="margin-left: auto; margin-right: auto; color: rgba(255,255,255,0.75);">
         The RG page is the foundation. These components scatter responsible gambling touchpoints across your entire platform — emails, game pages, blogs, and print.
       </p>
     </div>
@@ -517,7 +541,7 @@ See <span style="color: var(--pb-color-secondary);">collateral/render/</span> in
     </div>
 
     <div class="pb-reveal" style="text-align: center; margin-top: 32px;">
-      <a href="https://github.com/kphilander/Playbook/tree/main/widgets" target="_blank" rel="noopener" class="pb-github-link" style="color: rgba(255,255,255,0.5);">All widgets and collateral on GitHub &rarr;</a>
+      <a href="https://github.com/kphilander/Playbook/tree/main/widgets" target="_blank" rel="noopener" class="pb-github-link" style="color: rgba(255,255,255,0.7);">All widgets and collateral on GitHub &rarr;</a>
     </div>
   </div>
 </section>
