@@ -1,8 +1,17 @@
 node_modules/
 .DS_Store
 
-# Generated files (auto-generated from _brand.yml by build pipeline)
-# These are committed for convenience but can be regenerated with `npm run generate`
-# slide-deck/src/generated/
-# collateral/render/brand-inject.css
-# visual-identity/design-tokens.css
+# Build artifacts
+website/tsconfig.tsbuildinfo
+website/.next/
+website/out/
+slide-deck/.vite/
+
+# Generated files (regenerate with `npm run build`)
+# Note: collateral/render/*.png are committed for README preview images
+api/*.json
+api/games/*.json
+collateral/render/brand-inject.css
+visual-identity/design-tokens.css
+widgets/dist/
+slide-deck/src/generated/

@@ -336,8 +336,8 @@ See `messaging/myth-busting.md` for the full library with pre-written copy in al
 
 Each myth in the library includes three pre-written content formats:
 
-- **Social card copy** (50–80 words). A punchy, shareable debunk designed for Instagram, X/Twitter, or in-app cards. Includes a hook, the myth stated plainly, the truth with a supporting number, and a CTA. Pair with the social card template from `collateral/templates/social-cards/`.
-- **Article explainer** (300–500 words). A short-form article that explains the math behind the myth, provides context, and links to related tools or quizzes. Designed for the content hub, blog, or email newsletter. Pair with the article template from `collateral/templates/articles/`.
+- **Social card copy** (50–80 words). A punchy, shareable debunk designed for Instagram, X/Twitter, or in-app cards. Includes a hook, the myth stated plainly, the truth with a supporting number, and a CTA. Pair with the social card templates in `collateral/render/` (e.g. `card-1a-hot-streak.html`).
+- **Article explainer** (300–500 words). A short-form article that explains the math behind the myth, provides context, and links to related tools or quizzes. Designed for the content hub, blog, or email newsletter. Pair with the content hub spec in `collateral/digital/website-content-hub.md`.
 - **Quiz question** (single question, four answer options, instant feedback). Designed to slot into the Game IQ quiz or standalone myth-busting quizzes. Each question includes the correct answer, a brief explanation shown on answer reveal, and a "learn more" link to the corresponding article.
 
 #### Using the myth-busting library

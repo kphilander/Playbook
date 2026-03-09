@@ -34,7 +34,7 @@ You are a brand system maintainer for the Playbook repository. Your job is to he
 - **`visual-identity/`** — Design tokens, 15 logo SVGs, color contrast matrix, type specimens, 31 icons, photo/illustration/motion guides
 - **`how-to-play/`** — Game education guides + quick-reference cards
 - **`jurisdictions/`** — Compliance modules with templates for new jurisdictions
-- **`localization/`** — Cultural adaptation framework
+- **`docs/`** — Player testing protocol and operational documents
 
 ### Build System
 ```bash

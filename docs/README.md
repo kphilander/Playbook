@@ -1,4 +1,4 @@
-# Research
+# Docs
 
 Player testing instruments for operators deploying {{PROGRAM_NAME}} content. This is brand effectiveness testing -- not clinical research.
 
@@ -21,7 +21,7 @@ Player testing instruments for operators deploying {{PROGRAM_NAME}} content. Thi
 | This protocol... | Connects to... |
 |-----------------|----------------|
 | NPS + semantic differentials | Brand DNA in [Chapter 2](../brand-book/02-brand-personality.md#brand-dna-vs-brand-expression) |
-| Cultural fit (A/B) | Five spectrums in [Cultural Adaptation Guide](../localization/cultural-adaptation-guide.md) |
+| Cultural fit (A/B) | Five spectrums in [Cultural Adaptation Guide](../brand-book/09-cultural-adaptation.md) |
 | A/B testing rules | Testing guidance in [calls-to-action.md](../messaging/calls-to-action.md#ab-testing-guidance) |
 | Reporting format | KPI framework in [Chapter 8](../brand-book/08-governance.md#measuring-success) |
 
