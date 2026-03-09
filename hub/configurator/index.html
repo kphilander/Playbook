@@ -1,0 +1,2389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand Configurator — Playbook | GP Consulting</title>
+<meta name="description" content="Customize the Playbook brand system for your organization. No coding required — pick your colors, fonts, and messaging, then download your brand files.">
+<meta name="theme-color" content="#1B2838">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link id="font-link" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500;600&family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;400;600;700&family=DM+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;600;700;800&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8RKL2CEM2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S8RKL2CEM2');
+</script>
+
+<style>
+  /* === Reset === */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; }
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #f0f2f5; color: #1a2a3a; line-height: 1.6; }
+
+  /* === Header === */
+  .page-header { background: linear-gradient(180deg, #1B2838, #0F1923); color: #fff; padding: 28px 40px 24px; }
+  .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .header-logo { font-family: 'Inter', sans-serif; font-size: 22px; }
+  .header-logo .logo-play { font-weight: 800; color: #fff; }
+  .header-logo .logo-book { font-weight: 300; color: #00D4AA; text-transform: uppercase; letter-spacing: 0.08em; }
+  .header-back { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
+  .header-back:hover { color: rgba(255,255,255,0.9); }
+  .page-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .page-header p { font-size: 14px; color: rgba(255,255,255,0.7); max-width: 600px; }
+
+  /* === Layout === */
+  .layout { display: flex; min-height: calc(100vh - 110px); align-items: flex-start; }
+
+  /* === Wizard Panel === */
+  .wizard-panel { width: 440px; min-width: 440px; background: #fff; border-right: 1px solid #d2dce6; padding: 28px 28px 40px; overflow-y: auto; position: sticky; top: 0; max-height: 100vh; }
+  .progress-bar { height: 4px; background: #e2e8f0; border-radius: 2px; margin-bottom: 24px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, #00D4AA, #FF6B35); border-radius: 2px; transition: width 0.4s ease; }
+  .step-indicator { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: #718096; margin-bottom: 6px; font-weight: 600; }
+  .step-title { font-size: 20px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .step-desc { font-size: 13px; color: #718096; margin-bottom: 24px; line-height: 1.5; }
+
+  /* === Form Elements === */
+  .form-group { margin-bottom: 20px; }
+  .form-label { display: block; font-size: 12px; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .form-input { width: 100%; padding: 10px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; color: #2d3748; transition: border-color 0.15s; }
+  .form-input:focus { outline: none; border-color: #00D4AA; }
+  .form-select { width: 100%; padding: 10px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; color: #2d3748; background: #fff; cursor: pointer; }
+  .form-select:focus { outline: none; border-color: #00D4AA; }
+
+  /* === Logo Upload === */
+  .logo-upload-zone { border: 2px dashed #d2dce6; border-radius: 12px; padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s; background: #f7fafc; position: relative; }
+  .logo-upload-zone:hover, .logo-upload-zone.dragover { border-color: #00D4AA; background: #f0fff4; }
+  .logo-upload-zone.has-logo { border-style: solid; border-color: #e2e8f0; padding: 16px; }
+  .logo-upload-icon { font-size: 28px; margin-bottom: 8px; color: #a0aec0; }
+  .logo-upload-text { font-size: 13px; color: #718096; }
+  .logo-upload-text strong { color: #4a5568; }
+  .logo-upload-input { display: none; }
+  .logo-preview-row { display: flex; align-items: center; gap: 16px; }
+  .logo-thumb { max-width: 120px; max-height: 60px; object-fit: contain; border-radius: 6px; }
+  .logo-info { flex: 1; font-size: 12px; color: #718096; }
+  .logo-info strong { display: block; color: #2d3748; font-size: 13px; margin-bottom: 2px; }
+  .logo-remove { background: none; border: none; color: #e53e3e; font-size: 12px; font-weight: 600; cursor: pointer; padding: 4px 8px; border-radius: 4px; }
+  .logo-remove:hover { background: #fff5f5; }
+
+  /* Extracted color swatches */
+  .extracted-colors { margin-top: 12px; }
+  .extracted-colors-label { font-size: 11px; font-weight: 600; color: #718096; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .swatch-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .swatch { width: 36px; height: 36px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; position: relative; }
+  .swatch:hover { transform: scale(1.15); border-color: #4a5568; }
+  .swatch-hex { display: none; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 9px; color: #718096; white-space: nowrap; background: #fff; padding: 1px 4px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .swatch:hover .swatch-hex { display: block; }
+
+  /* === Wordmark Preview === */
+  .wordmark-preview { margin-top: 8px; padding: 16px 20px; background: #1B2838; border-radius: 10px; display: flex; align-items: center; justify-content: center; min-height: 64px; }
+  .wordmark-preview .wm-play { font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+  .wordmark-preview .wm-book { font-weight: 300; color: #00D4AA; text-transform: uppercase; letter-spacing: 0.08em; }
+  .wordmark-preview .wm-full { font-weight: 600; color: #fff; }
+  .split-slider-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+  .split-slider-row input[type="range"] { flex: 1; accent-color: #00D4AA; }
+  .split-slider-row .split-pos { font-size: 12px; color: #718096; font-weight: 600; min-width: 60px; }
+  .no-split-row { margin-top: 6px; display: flex; align-items: center; gap: 8px; }
+  .no-split-row label { font-size: 12px; color: #718096; cursor: pointer; }
+  .no-split-row input[type="checkbox"] { accent-color: #00D4AA; }
+
+  /* === Palette Suggestion === */
+  .palette-suggestion { margin-bottom: 20px; padding: 16px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; }
+  .palette-suggestion.hidden { display: none; }
+  .palette-suggestion-label { font-size: 11px; font-weight: 600; color: #718096; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .palette-suggestion-desc { font-size: 12px; color: #718096; line-height: 1.5; margin-bottom: 12px; }
+  .palette-accent-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+  .palette-accent-swatch { width: 36px; height: 36px; border-radius: 8px; border: 2px solid transparent; cursor: pointer; transition: all 0.15s; }
+  .palette-accent-swatch:hover { transform: scale(1.12); border-color: #4a5568; }
+  .palette-accent-swatch.selected { border-color: #1B2838; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1B2838; }
+  .palette-apply { background: #00D4AA; color: #1B2838; border: none; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+  .palette-apply:hover { background: #00C09A; }
+
+  /* Color picker row */
+  .color-row { display: flex; align-items: center; gap: 12px; }
+  .color-picker { width: 48px; height: 40px; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; padding: 2px; }
+  .color-picker::-webkit-color-swatch-wrapper { padding: 0; }
+  .color-picker::-webkit-color-swatch { border: none; border-radius: 4px; }
+  .color-hex { flex: 1; }
+  .contrast-badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 12px; white-space: nowrap; }
+  .contrast-pass { background: #c6f6d5; color: #276749; }
+  .contrast-fail { background: #fed7d7; color: #9b2c2c; }
+  .contrast-info { font-size: 11px; color: #a0aec0; margin-top: 4px; }
+  .accent-dark-warning { font-size: 11px; color: #c05621; background: #fffbeb; border: 1px solid #f6e05e; padding: 6px 10px; border-radius: 6px; margin-top: 6px; line-height: 1.4; }
+  .accent-dark-warning.hidden { display: none; }
+
+  /* Font preview */
+  .font-specimen { margin-top: 8px; padding: 12px 16px; background: #f7fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+  .font-specimen-heading { font-size: 22px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .font-specimen-body { font-size: 14px; color: #4a5568; line-height: 1.5; }
+
+  /* Helpline presets */
+  .preset-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 12px; background: #ebf8ff; color: #2b6cb0; font-weight: 600; cursor: pointer; margin-right: 6px; margin-bottom: 6px; transition: all 0.15s; border: 1px solid transparent; }
+  .preset-tag:hover { background: #bee3f8; }
+  .preset-tag.active { background: #2b6cb0; color: #fff; }
+
+  /* === Nav Buttons === */
+  .wizard-nav { margin-top: 28px; display: flex; gap: 10px; }
+  .wizard-nav button { padding: 11px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-back { background: #e2e8f0; color: #4a5568; }
+  .btn-back:hover { background: #cbd5e0; }
+  .btn-next { background: #00D4AA; color: #1B2838; }
+  .btn-next:hover { background: #00C09A; }
+
+  /* === Preview Panel === */
+  .preview-panel { flex: 1; padding: 20px 24px; overflow-y: auto; background: #f7f8fa; }
+  .preview-title { font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: #718096; font-weight: 600; margin-bottom: 16px; }
+  .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Scaled preview cards */
+  .preview-frame { background: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
+  .preview-frame-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #a0aec0; margin-bottom: 8px; }
+
+  /* Inline preview cards */
+  .pv-card {
+    width: 100%; aspect-ratio: 1 / 1;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .pv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA)); z-index: 2; }
+  .pv-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 30px 30px; z-index: 0; }
+  .pv-card .card-header { padding: 28px 32px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .pv-card .card-logo { font-size: 16px; }
+  .pv-card .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
+  .pv-card .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .pv-card .card-pillar { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 11px; border-radius: 100px; }
+  .pv-card .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 32px; position: relative; z-index: 1; }
+  .pv-card .myth-label { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
+  .pv-card .myth-statement { font-size: 26px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; }
+  .pv-card .myth-statement .strike { text-decoration: line-through; text-decoration-thickness: 3px; }
+  .pv-card .fact-statement { font-size: 13px; line-height: 1.55; }
+  .pv-card .fact-statement strong { font-weight: 600; }
+  .pv-card .stat-block { margin-top: 20px; display: flex; align-items: baseline; gap: 8px; }
+  .pv-card .stat-number { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; }
+  .pv-card .stat-unit { font-size: 12px; font-weight: 600; line-height: 1.3; }
+  .pv-card .card-footer { padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .pv-card .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 8px; }
+  .pv-card .footer-legal { font-size: 7px; }
+
+  /* Tier 2 Support Card */
+  .pv-card-tier2 { background: #fff !important; }
+  .pv-card-tier2::before { background: var(--cfg-secondary, #00D4AA) !important; height: 6px; }
+  .pv-card-tier2::after { display: none; }
+  .pv-card-tier2 .card-body { justify-content: center; padding: 0 32px; }
+  .pv-card-tier2 .t2-headline { font-size: 26px; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 10px; }
+  .pv-card-tier2 .t2-subline { font-size: 12px; line-height: 1.5; margin-bottom: 24px; max-width: 85%; }
+  .pv-card-tier2 .t2-helpline { font-family: 'Source Code Pro', monospace; font-weight: 600; font-size: 28px; letter-spacing: 0.02em; margin-bottom: 6px; }
+  .pv-card-tier2 .t2-channels { font-weight: 600; font-size: 11px; letter-spacing: 0.04em; margin-bottom: 0; }
+  .pv-card-tier2 .card-footer { background: transparent; border-top: 1px solid #e2e8f0; }
+  .pv-card-tier2 .t2-footer-text { font-weight: 700; font-size: 9px; letter-spacing: 0.02em; }
+
+  /* Co-brand lockup */
+  .pv-card .co-brand { display: flex; align-items: center; gap: 10px; }
+  .pv-card .co-brand-divider { width: 1px; height: 20px; background: #A8A8C0; opacity: 0.4; }
+  .pv-card .operator-logo-img { max-height: 22px; max-width: 80px; object-fit: contain; }
+  .pv-card .operator-placeholder-text { font-size: 8px; color: #6B6B8A; font-style: italic; }
+
+  /* Fact Sheet — letter-sized portrait (8.5×11), header + body + sidebar */
+  .pv-factsheet { width: 100%; max-width: 560px; position: relative; overflow: hidden; display: flex; flex-direction: column; border-radius: 4px; }
+  .pv-factsheet::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA)); z-index: 2; }
+  .pv-factsheet .fs-header { padding: 10px 18px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .pv-factsheet .fs-header .co-brand { display: flex; align-items: center; gap: 8px; }
+  .pv-factsheet .fs-header .co-brand .co-brand-divider { width: 1px; height: 18px; background: #A8A8C0; opacity: 0.4; }
+  .pv-factsheet .fs-header .card-logo { font-size: 12px; }
+  .pv-factsheet .fs-header .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
+  .pv-factsheet .fs-header .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .pv-factsheet .fs-header .operator-logo-img { max-height: 20px; max-width: 70px; object-fit: contain; }
+  .pv-factsheet .fs-badge { font-size: 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 100px; }
+  .pv-factsheet .fs-hero { padding: 12px 18px 10px; position: relative; z-index: 1; }
+  .pv-factsheet .fs-title { font-size: 15px; font-weight: 800; line-height: 1.25; margin-bottom: 6px; letter-spacing: -0.01em; }
+  .pv-factsheet .fs-subtitle { font-size: 7.5px; line-height: 1.6; }
+  .pv-factsheet .fs-content { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 0; padding: 0 18px 8px; position: relative; z-index: 1; overflow: hidden; }
+  .pv-factsheet .fs-main { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; min-width: 0; padding: 0 10px 10px 0; border-right: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .pv-factsheet .fs-sidebar { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; gap: 4px; padding: 0 0 10px 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .pv-factsheet .fs-sample { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; padding: 10px 10px 0 0; border-right: 1px solid rgba(255,255,255,0.1); }
+  .pv-factsheet .fs-lifecycle { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; padding: 10px 0 0 10px; }
+  .pv-factsheet .fs-section-label { font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; margin-top: 10px; }
+  .pv-factsheet .fs-section-label:first-child { margin-top: 0; }
+  .pv-factsheet .fs-text { font-size: 7px; line-height: 1.6; margin-bottom: 0; }
+  .pv-factsheet .fs-callout { background: rgba(255,255,255,0.04); border-left: 2px solid var(--cfg-secondary, #00D4AA); padding: 5px 8px; margin: 6px 0 3px; border-radius: 0 4px 4px 0; }
+  .pv-factsheet .fs-callout-text { font-size: 7px; font-weight: 600; line-height: 1.45; }
+  .pv-factsheet .fs-example-label { font-size: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; text-align: center; padding: 2px 0; margin-top: 3px; }
+  /* Mini myth-buster card */
+  .pv-factsheet .fs-mini-myth { aspect-ratio: 1 / 1; display: flex; flex-direction: column; position: relative; overflow: hidden; border-radius: 3px; }
+  .pv-factsheet .fs-mini-myth::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA)); z-index: 1; }
+  .pv-factsheet .fs-mini-myth .mini-header { padding: 6px 8px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .pv-factsheet .fs-mini-myth .mini-logo { font-size: 7px; }
+  .pv-factsheet .fs-mini-myth .mini-logo .logo-play { font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+  .pv-factsheet .fs-mini-myth .mini-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .pv-factsheet .fs-mini-myth .mini-pillar { font-size: 4.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 100px; }
+  .pv-factsheet .fs-mini-myth .mini-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 8px; position: relative; z-index: 1; }
+  .pv-factsheet .fs-mini-myth .mini-myth-label { font-size: 4.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+  .pv-factsheet .fs-mini-myth .mini-myth-statement { font-size: 10px; font-weight: 800; line-height: 1.15; margin-bottom: 4px; letter-spacing: -0.02em; }
+  .pv-factsheet .fs-mini-myth .mini-myth-statement .strike { text-decoration: line-through; text-decoration-thickness: 1.5px; }
+  .pv-factsheet .fs-mini-myth .mini-fact { font-size: 6px; line-height: 1.45; }
+  .pv-factsheet .fs-mini-myth .mini-fact strong { font-weight: 600; }
+  .pv-factsheet .fs-mini-myth .mini-stat { margin-top: 4px; display: flex; align-items: baseline; gap: 3px; }
+  .pv-factsheet .fs-mini-myth .mini-stat-number { font-size: 17px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; }
+  .pv-factsheet .fs-mini-myth .mini-stat-unit { font-size: 5.5px; font-weight: 600; line-height: 1.3; }
+  .pv-factsheet .fs-mini-myth .mini-footer { padding: 4px 8px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .pv-factsheet .fs-mini-myth .mini-footer-text { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 4px; }
+  .pv-factsheet .fs-mini-myth .mini-footer-legal { font-size: 3.5px; }
+  /* Lifecycle 2×2 cycle diagram */
+  .pv-factsheet .fs-cycle { display: grid; grid-template-columns: 1fr auto 1fr; grid-template-rows: 1fr auto 1fr; gap: 3px; margin-top: 5px; flex: 1; align-content: stretch; }
+  .pv-factsheet .fs-cycle-step { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; padding: 10px 8px 8px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .pv-factsheet .fs-cycle-step:nth-child(1) { grid-column: 1; grid-row: 1; }
+  .pv-factsheet .fs-cycle-step:nth-child(3) { grid-column: 3; grid-row: 1; }
+  .pv-factsheet .fs-cycle-step:nth-child(6) { grid-column: 1; grid-row: 3; }
+  .pv-factsheet .fs-cycle-step:nth-child(8) { grid-column: 3; grid-row: 3; }
+  .pv-factsheet .fs-cycle-arrow { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; line-height: 1; }
+  .pv-factsheet .fs-arrow-right { grid-column: 2; grid-row: 1; }
+  .pv-factsheet .fs-arrow-down-left { grid-column: 1; grid-row: 2; font-size: 12px; }
+  .pv-factsheet .fs-arrow-down-right { grid-column: 3; grid-row: 2; font-size: 10px; }
+  .pv-factsheet .fs-arrow-left { grid-column: 2; grid-row: 3; }
+  .pv-factsheet .fs-cycle-icon { font-size: 16px; margin-bottom: 3px; }
+  .pv-factsheet .fs-cycle-label { font-size: 9px; font-weight: 700; line-height: 1.2; }
+  .pv-factsheet .fs-cycle-desc { font-size: 6.5px; line-height: 1.35; margin-top: 3px; }
+  .pv-factsheet .fs-text-sm { font-size: 6.5px; line-height: 1.5; }
+  .pv-factsheet .fs-quote { font-size: 6.5px; line-height: 1.5; padding: 5px 8px; background: rgba(255,255,255,0.03); border-radius: 4px; border-left: 2px solid var(--cfg-secondary, #00D4AA); font-style: italic; }
+  .pv-factsheet .fs-tag { display: inline-block; font-size: 6.5px; font-weight: 600; padding: 3px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.15); margin: 0 3px 4px 0; }
+  .pv-factsheet .fs-attr { margin-bottom: 5px; }
+  .pv-factsheet .fs-attr-name { font-size: 6.5px; font-weight: 700; line-height: 1.2; }
+  .pv-factsheet .fs-attr-desc { font-size: 5px; font-weight: 400; color: #A8A8C0; line-height: 1.4; margin-top: 1px; }
+  .pv-factsheet .fs-info-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 7px 8px; margin-top: 4px; }
+  .pv-factsheet .fs-info-label { font-size: 5.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1px; }
+  .pv-factsheet .fs-info-value { font-size: 7px; font-weight: 600; word-break: break-all; }
+  .pv-factsheet .fs-learn-more { display: flex; flex-direction: column; gap: 4px; margin-top: auto; }
+  .pv-factsheet .fs-link-tile { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 6px 8px; }
+  .pv-factsheet .fs-link-tile-label { font-size: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1px; }
+  .pv-factsheet .fs-link-tile-url { font-size: 6px; font-weight: 600; word-break: break-all; }
+  .pv-factsheet .fs-footer { padding: 5px 18px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; margin-top: auto; }
+  .pv-factsheet .footer-text { font-size: 5.5px; }
+
+  /* Partner Announcement — Instagram post with feed chrome */
+  .pv-announce { width: 100%; max-width: 480px; margin: 0 auto; position: relative; overflow: hidden; display: flex; flex-direction: column; border-radius: 4px; background: #fff; border: 1px solid #dbdbdb; }
+  .ig-top-bar { display: flex; align-items: center; gap: 7px; padding: 8px 10px; background: #fff; border-bottom: 1px solid #efefef; }
+  .ig-avatar { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 7px; font-weight: 800; color: #fff; flex-shrink: 0; }
+  .ig-username { font-size: 9px; font-weight: 600; color: #262626; flex: 1; }
+  .ig-dots { color: #262626; font-size: 12px; letter-spacing: 1px; line-height: 1; }
+  .ig-image { width: 100%; aspect-ratio: 1 / 1; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+  .ig-image::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; }
+  .pv-announce .announce-content { position: relative; z-index: 1; padding: 0 24px; max-width: 92%; }
+  .pv-announce .announce-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
+  .pv-announce .announce-cobrand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 14px; }
+  .pv-announce .announce-cobrand .co-brand-divider { width: 1px; height: 20px; background: #A8A8C0; opacity: 0.4; }
+  .pv-announce .announce-cobrand .card-logo { font-size: 18px; }
+  .pv-announce .announce-cobrand .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
+  .pv-announce .announce-cobrand .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .pv-announce .announce-cobrand .operator-logo-img { max-height: 24px; max-width: 90px; object-fit: contain; }
+  .pv-announce .announce-divider { width: 32px; height: 2px; margin: 0 auto 12px; border-radius: 1px; }
+  .pv-announce .announce-headline { font-size: 16px; font-weight: 800; line-height: 1.25; margin-bottom: 8px; letter-spacing: -0.02em; }
+  .pv-announce .announce-url { font-size: 12px; font-weight: 700; letter-spacing: 0.02em; }
+  .ig-actions { display: flex; align-items: center; padding: 8px 10px 4px; background: #fff; gap: 10px; }
+  .ig-action-icon { width: 16px; height: 16px; }
+  .ig-action-icon svg { width: 100%; height: 100%; }
+  .ig-bookmark { margin-left: auto; }
+  .ig-likes { padding: 0 10px 2px; background: #fff; font-size: 8px; font-weight: 600; color: #262626; }
+  .ig-caption { padding: 2px 10px 8px; background: #fff; }
+  .ig-caption-text { font-size: 8px; color: #262626; line-height: 1.4; }
+  .ig-caption-text strong { font-weight: 600; }
+
+  /* Helpline badge preview */
+  .pv-badge { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-radius: 12px; }
+  .pv-badge .badge-logo { font-size: 14px; }
+  .pv-badge .badge-logo .logo-play { font-weight: 800; }
+  .pv-badge .badge-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .pv-badge .badge-divider { width: 1px; height: 32px; opacity: 0.3; }
+  .pv-badge .badge-text { font-size: 11px; font-weight: 600; }
+  .pv-badge .badge-number { font-family: 'Source Code Pro', monospace; font-size: 14px; font-weight: 700; margin-top: 2px; }
+  .pv-badge .operator-logo-img { max-height: 28px; max-width: 100px; object-fit: contain; }
+
+  /* === Download Section === */
+  .download-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .download-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 20px; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; text-decoration: none; }
+  .download-btn-primary { background: #00D4AA; color: #1B2838; }
+  .download-btn-primary:hover { background: #00C09A; }
+  .download-btn-secondary { background: #1B2838; color: #fff; }
+  .download-btn-secondary:hover { background: #2A3F56; }
+  .download-btn svg { width: 18px; height: 18px; }
+
+  .samples-section { margin-bottom: 24px; padding: 20px; background: linear-gradient(135deg, #f0fff4 0%, #ebf8ff 100%); border: 1px solid #c6f6d5; border-radius: 12px; text-align: center; }
+  .samples-section h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .samples-section p { font-size: 13px; color: #4a5568; margin-bottom: 14px; }
+  .samples-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .sample-dl-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 6px; border-radius: 8px; font-size: 11px; font-weight: 600; cursor: pointer; border: 1px solid #c6f6d5; background: #fff; color: #1B2838; transition: all 0.15s; }
+  .sample-dl-btn:hover { background: #f0fff4; border-color: #00D4AA; }
+  .sample-dl-btn svg { width: 16px; height: 16px; color: #00D4AA; }
+  .sample-dl-btn span { font-size: 9px; color: #718096; font-weight: 400; }
+
+  /* === Next Steps === */
+  .next-steps { margin-top: 24px; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .next-steps h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 12px; }
+  .next-steps ol { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .next-steps li { margin-bottom: 8px; line-height: 1.5; }
+  .next-steps code { background: #f0f2f5; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-family: 'Source Code Pro', monospace; }
+  .next-steps .cta-box { margin-top: 16px; padding: 16px; background: linear-gradient(135deg, #ebf8ff 0%, #f0fff4 100%); border: 1px solid #bee3f8; border-radius: 10px; }
+  .next-steps .cta-box p { font-size: 13px; color: #2c5282; margin: 0; }
+  .next-steps .cta-box a { color: #2b6cb0; font-weight: 600; text-decoration: underline; }
+
+  /* === Content Kit Section === */
+  .content-kit-section { margin-top: 24px; padding: 24px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1px solid #f6e05e; border-radius: 12px; }
+  .content-kit-section h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .content-kit-section p { font-size: 13px; color: #4a5568; margin-bottom: 14px; line-height: 1.5; }
+  .content-kit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+  .content-kit-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 16px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; background: #1B2838; color: #fff; }
+  .content-kit-btn:hover { background: #2A3F56; }
+  .content-kit-btn.kit-primary { background: #FF6B35; color: #fff; grid-column: 1 / -1; font-size: 14px; padding: 16px; }
+  .content-kit-btn.kit-primary:hover { background: #e55a25; }
+  .content-kit-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+  .content-kit-btn .btn-sub { font-size: 10px; font-weight: 400; opacity: 0.8; }
+  .format-toggle { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4a5568; margin-bottom: 12px; }
+  .format-toggle label { cursor: pointer; font-weight: 500; }
+  .format-toggle input[type="checkbox"] { accent-color: #FF6B35; }
+
+  /* Embed Code Section */
+  .embed-section { margin-top: 24px; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .embed-section h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .embed-section p { font-size: 13px; color: #4a5568; margin-bottom: 14px; line-height: 1.5; }
+  .embed-tabs { display: flex; gap: 0; margin-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
+  .embed-tab { padding: 8px 16px; font-size: 12px; font-weight: 600; color: #718096; cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s; }
+  .embed-tab:hover { color: #4a5568; }
+  .embed-tab.active { color: #1B2838; border-bottom-color: #FF6B35; }
+  .embed-code-block { position: relative; background: #1B2838; border-radius: 8px; padding: 16px; overflow: hidden; }
+  .embed-code-block pre { margin: 0; font-family: 'Source Code Pro', monospace; font-size: 11px; color: #e2e8f0; line-height: 1.6; white-space: pre-wrap; word-break: break-all; max-height: 200px; overflow-y: auto; }
+  .embed-copy-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.15); color: #fff; border: none; padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+  .embed-copy-btn:hover { background: rgba(255,255,255,0.25); }
+  .embed-copy-btn.copied { background: #00D4AA; color: #1B2838; }
+  .embed-pane { display: none; }
+  .embed-pane.active { display: block; }
+
+  /* === Step visibility === */
+  .step { display: none; }
+  .step.active { display: block; }
+
+  /* === Responsive === */
+  @media (max-width: 900px) {
+    .layout { flex-direction: column; }
+    .wizard-panel { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid #d2dce6; position: static; max-height: none; }
+    .preview-grid { grid-template-columns: 1fr; }
+    .preview-frame[style*="grid-column"] { grid-column: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="page-header">
+  <div class="header-top">
+    <span class="header-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <a href="/tools/playbook/" class="header-back">&larr; Back to Playbook Hub</a>
+  </div>
+  <h1>Brand Configurator</h1>
+  <p>Customize the Playbook brand system for your organization. Pick your colors, fonts, and messaging — then download your brand files.</p>
+</div>
+
+<div class="layout">
+  <!-- Left: Wizard Panel -->
+  <div class="wizard-panel">
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 25%"></div></div>
+
+    <!-- Step 1: Brand Identity -->
+    <div class="step active" id="step1">
+      <div class="step-indicator">Step 1 of 4</div>
+      <div class="step-title">Brand Identity</div>
+      <div class="step-desc">Upload your logo and name your program.</div>
+
+      <div class="form-group">
+        <label class="form-label">Operator Logo</label>
+        <div class="logo-upload-zone" id="logoUploadZone">
+          <div id="logoUploadEmpty">
+            <div class="logo-upload-icon">&#128247;</div>
+            <div class="logo-upload-text"><strong>Drop your logo here</strong> or click to browse<br>PNG, JPG, or SVG</div>
+            <div style="font-size: 11px; color: #a0aec0; margin-top: 6px;">Horizontal lockup on a transparent background works best</div>
+          </div>
+          <div id="logoUploadFilled" style="display:none;">
+            <div class="logo-preview-row">
+              <img id="logoThumb" class="logo-thumb" src="" alt="Logo preview">
+              <div class="logo-info">
+                <strong id="logoFileName">logo.png</strong>
+                <span id="logoFileSize">—</span>
+              </div>
+              <button class="logo-remove" onclick="removeLogo(event)">&times; Remove</button>
+            </div>
+          </div>
+          <input type="file" class="logo-upload-input" id="logoFileInput" accept="image/png,image/jpeg,image/svg+xml">
+        </div>
+        <div class="extracted-colors" id="extractedColors" style="display:none;">
+          <div class="extracted-colors-label">Colors found in your logo</div>
+          <div class="swatch-row" id="swatchRow"></div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Program Name</label>
+        <input type="text" class="form-input" id="programName" value="Playbook" placeholder="e.g. BetWise, GameSmart, PlaySafe">
+        <div class="wordmark-preview" id="wordmarkPreview">
+          <span style="font-family: 'Inter', sans-serif; font-size: 28px;">
+            <span class="wm-play" id="wmPlay">Play</span><span class="wm-book" id="wmBook">book</span>
+          </span>
+        </div>
+        <div class="split-slider-row" id="splitSliderRow">
+          <input type="range" id="splitSlider" min="0" max="8" value="4">
+          <span class="split-pos" id="splitPos">Split: 4</span>
+        </div>
+        <div class="no-split-row">
+          <input type="checkbox" id="noSplitCheck">
+          <label for="noSplitCheck">No split (single weight)</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Organization</label>
+        <input type="text" class="form-input" id="orgName" value="" placeholder="e.g. Lucky Spins Casino">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Website URL</label>
+        <input type="url" class="form-input" id="websiteUrl" value="" placeholder="https://example.com/playbook">
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn-next" onclick="goToStep(2)">Next: Colors &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Colors -->
+    <div class="step" id="step2">
+      <div class="step-indicator">Step 2 of 4</div>
+      <div class="step-title">Color Palette</div>
+      <div class="step-desc">Pick three brand colors. We'll generate the rest.</div>
+
+      <div class="palette-suggestion hidden" id="paletteSuggestion">
+        <div class="palette-suggestion-label">Your brand accent</div>
+        <div class="palette-suggestion-desc">We recommend keeping the Playbook navy &amp; teal as your primary and secondary colors. Pick one of your logo colors below as your accent — it'll be used for buttons, stats, and calls to action.</div>
+        <div class="palette-accent-row" id="paletteAccentRow"></div>
+        <button class="palette-apply" onclick="applyAccentFromLogo()">Use as Accent Color</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Primary (dark background)</label>
+        <div class="color-row">
+          <input type="color" class="color-picker" id="colorPrimary" value="#1B2838">
+          <input type="text" class="form-input color-hex" id="colorPrimaryHex" value="#1B2838" maxlength="7">
+          <span class="contrast-badge" id="contrastPrimary"></span>
+        </div>
+        <div class="contrast-info">Used for headers, cards, and backgrounds</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Secondary (interactive elements)</label>
+        <div class="color-row">
+          <input type="color" class="color-picker" id="colorSecondary" value="#00D4AA">
+          <input type="text" class="form-input color-hex" id="colorSecondaryHex" value="#00D4AA" maxlength="7">
+          <span class="contrast-badge" id="contrastSecondary"></span>
+        </div>
+        <div class="contrast-info">Used for highlights, pillar badges, and emphasis text</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Accent (CTAs &amp; stats)</label>
+        <div class="color-row">
+          <input type="color" class="color-picker" id="colorAccent" value="#FF6B35">
+          <input type="text" class="form-input color-hex" id="colorAccentHex" value="#FF6B35" maxlength="7">
+          <span class="contrast-badge" id="contrastAccent"></span>
+        </div>
+        <div class="contrast-info">Used for buttons, stat numbers, and call-to-action elements</div>
+        <div class="accent-dark-warning hidden" id="accentDarkWarning">⚠ This accent color may be hard to see on dark backgrounds. Consider a brighter or more saturated shade.</div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goToStep(1)">&larr; Back</button>
+        <button class="btn-next" onclick="goToStep(3)">Next: Fonts &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Typography -->
+    <div class="step" id="step3">
+      <div class="step-indicator">Step 3 of 4</div>
+      <div class="step-title">Typography</div>
+      <div class="step-desc">Choose heading and body fonts from Google Fonts.</div>
+
+      <div class="form-group">
+        <label class="form-label">Heading Font</label>
+        <select class="form-select" id="fontHeading">
+          <option value="Inter" selected>Inter (default)</option>
+          <option value="Montserrat">Montserrat</option>
+          <option value="Poppins">Poppins</option>
+          <option value="Space Grotesk">Space Grotesk</option>
+          <option value="DM Sans">DM Sans</option>
+          <option value="Raleway">Raleway</option>
+        </select>
+        <div class="font-specimen" id="headingSpecimen">
+          <div class="font-specimen-heading" style="font-family: 'Inter', sans-serif;">Every game has a house edge.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Body Font</label>
+        <select class="form-select" id="fontBody">
+          <option value="Source Sans 3" selected>Source Sans 3 (default)</option>
+          <option value="Inter">Inter</option>
+          <option value="Lato">Lato</option>
+          <option value="Open Sans">Open Sans</option>
+          <option value="Nunito">Nunito</option>
+        </select>
+        <div class="font-specimen" id="bodySpecimen">
+          <div class="font-specimen-body" style="font-family: 'Source Sans 3', sans-serif;">Your brain sees patterns. The math doesn't. Every spin is independent — past results have zero effect on the next one.</div>
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goToStep(2)">&larr; Back</button>
+        <button class="btn-next" onclick="goToStep(4)">Next: Helpline &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Helpline & Legal -->
+    <div class="step" id="step4">
+      <div class="step-indicator">Step 4 of 4</div>
+      <div class="step-title">Helpline &amp; Legal</div>
+      <div class="step-desc">Configure your jurisdiction's support information.</div>
+
+      <div class="form-group">
+        <label class="form-label">Jurisdiction Preset</label>
+        <div id="jurisdictionPresets">
+          <span class="preset-tag active" data-j="us">United States</span>
+          <span class="preset-tag" data-j="uk">United Kingdom</span>
+          <span class="preset-tag" data-j="au">Australia</span>
+          <span class="preset-tag" data-j="ca">Canada</span>
+          <span class="preset-tag" data-j="custom">Custom</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Helpline Number</label>
+        <input type="text" class="form-input" id="helplineNumber" value="1-800-522-4700" placeholder="e.g. 1-800-522-4700">
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div class="form-group">
+          <label class="form-label">Text Support Number</label>
+          <input type="text" class="form-input" id="textNumber" value="Text SUPPORT to 53342" placeholder="e.g. Text HOME to 741741">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Live Chat URL</label>
+          <input type="url" class="form-input" id="chatUrl" value="https://www.ncpgambling.org/chat" placeholder="https://...">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Minimum Gambling Age</label>
+        <input type="number" class="form-input" id="minAge" value="21" min="18" max="25" style="width: 100px;">
+      </div>
+
+      <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
+      <div style="font-size: 12px; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Operator Links</div>
+
+      <div class="form-group">
+        <label class="form-label">Limits Page URL</label>
+        <input type="url" class="form-input" id="limitsUrl" value="" placeholder="https://yoursite.com/account/limits">
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div class="form-group">
+          <label class="form-label">Self-Exclusion Program</label>
+          <input type="text" class="form-input" id="selfExclusionName" value="State self-exclusion program" placeholder="e.g. GamStop">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Self-Exclusion URL</label>
+          <input type="url" class="form-input" id="selfExclusionUrl" value="" placeholder="https://...">
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+        <div class="form-group">
+          <label class="form-label">Support Organization</label>
+          <input type="text" class="form-input" id="supportOrgName" value="National Council on Problem Gambling" placeholder="e.g. GambleAware">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Support Org URL</label>
+          <input type="url" class="form-input" id="supportOrgUrl" value="https://www.ncpgambling.org" placeholder="https://...">
+        </div>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goToStep(3)">&larr; Back</button>
+        <button class="btn-next" onclick="goToStep(5)">Preview &amp; Download &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Download -->
+    <div class="step" id="step5">
+      <div class="step-indicator">Done</div>
+      <div class="step-title">Your Brand Kit</div>
+      <div class="step-desc">Download your customized Playbook files below.</div>
+
+      <div class="samples-section">
+        <h3>Just want the samples?</h3>
+        <p>Download your configured preview cards as ready-to-use PNG images.</p>
+        <div class="samples-grid">
+          <button class="sample-dl-btn" onclick="downloadSample('pvCard1', 'myth-buster-card')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Myth-Buster
+            <span>1080 &times; 1080</span>
+          </button>
+          <button class="sample-dl-btn" onclick="downloadSample('pvCard2', 'support-card')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Support Card
+            <span>1080 &times; 1080</span>
+          </button>
+          <button class="sample-dl-btn" onclick="downloadSample('pvFactSheet', 'fact-sheet')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Fact Sheet
+            <span>Letter size</span>
+          </button>
+          <button class="sample-dl-btn" onclick="downloadSample('pvAnnounce', 'instagram-post')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            IG Post
+            <span>1080 &times; 1080</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="download-grid">
+        <button class="download-btn download-btn-primary" onclick="downloadYaml()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          _brand.yml
+        </button>
+        <button class="download-btn download-btn-secondary" onclick="downloadCss()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          brand-inject.css
+        </button>
+      </div>
+
+      <!-- Content Kit -->
+      <div class="content-kit-section">
+        <h3>📦 Content Kit</h3>
+        <p>Download your entire Playbook content library as structured data — messages, myth-busters, CTAs, and campaigns — with your brand values pre-filled. Ready to import into any CMS, email platform, or app.</p>
+        <p style="font-size: 11px; color: #92400e; line-height: 1.5; margin-bottom: 14px;">Playbook content is designed to support responsible gambling programs, not replace regulatory compliance. Requirements for mandatory disclosures, helpline display, and player communications vary by jurisdiction. Operators should review all content with their compliance team before deployment.</p>
+        <div class="format-toggle">
+          <input type="checkbox" id="csvToggle">
+          <label for="csvToggle">Export messaging as CSV (for spreadsheet workflows)</label>
+        </div>
+        <div class="content-kit-grid">
+          <button class="content-kit-btn kit-primary" onclick="downloadContentKit()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Content Kit (.zip)
+          </button>
+          <button class="content-kit-btn" onclick="downloadSingleJson('messages')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Messages
+          </button>
+          <button class="content-kit-btn" onclick="downloadSingleJson('myths')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Myths
+          </button>
+          <button class="content-kit-btn" onclick="downloadSingleJson('ctas')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            CTAs
+          </button>
+          <button class="content-kit-btn" onclick="downloadSingleJson('campaigns')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Campaigns
+          </button>
+        </div>
+      </div>
+
+      <!-- Embed Code Generator -->
+      <div class="embed-section">
+        <h3>Embed Widgets</h3>
+        <p>Drop these Web Components into any page — they auto-style using your brand tokens. No build tools required.</p>
+        <p style="font-size: 11px; color: #718096; line-height: 1.5; margin-bottom: 14px;">Playbook widgets help surface responsible gambling information, but they do not guarantee regulatory compliance. Requirements vary by jurisdiction — always verify that your implementation meets all applicable laws and licensing conditions.</p>
+        <div class="embed-tabs">
+          <button class="embed-tab active" onclick="showEmbedPane('helpline')">Helpline (emails, headers)</button>
+          <button class="embed-tab" onclick="showEmbedPane('myth')">Myth Card (blog, education)</button>
+          <button class="embed-tab" onclick="showEmbedPane('odds')">Odds Card (game pages)</button>
+        </div>
+        <div class="embed-pane active" id="embedHelpline">
+          <div class="embed-code-block">
+            <button class="embed-copy-btn" onclick="copyEmbedCode('helpline')">Copy</button>
+            <pre id="embedCodeHelpline"></pre>
+          </div>
+        </div>
+        <div class="embed-pane" id="embedMyth">
+          <div class="embed-code-block">
+            <button class="embed-copy-btn" onclick="copyEmbedCode('myth')">Copy</button>
+            <pre id="embedCodeMyth"></pre>
+          </div>
+        </div>
+        <div class="embed-pane" id="embedOdds">
+          <div class="embed-code-block">
+            <button class="embed-copy-btn" onclick="copyEmbedCode('odds')">Copy</button>
+            <pre id="embedCodeOdds"></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="next-steps">
+        <h3>What's Next?</h3>
+        <ol>
+          <li><strong>Fork the Playbook repo</strong> on <a href="https://github.com/kphilander/Playbook" target="_blank" rel="noopener">GitHub</a></li>
+          <li>Replace <code>_brand.yml</code> with the file you just downloaded</li>
+          <li>Place your logo file in <code>visual-identity/logo/operator/</code></li>
+          <li>Run <code>npm install &amp;&amp; npm run build</code> to regenerate all assets</li>
+          <li>Run <code>cd collateral/render &amp;&amp; npm install &amp;&amp; node render-cards.mjs</code> to render all 45 templates as PNGs</li>
+        </ol>
+        <div class="cta-box">
+          <p>Not technical? <a href="mailto:info@gamblingpolicy.com?subject=Playbook%20white-label%20setup">Contact GP Consulting</a> — we'll set up your branded Playbook for you.</p>
+        </div>
+      </div>
+
+      <div class="wizard-nav" style="margin-top: 20px;">
+        <button class="btn-back" onclick="goToStep(4)">&larr; Back to Edit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Live Preview -->
+  <div class="preview-panel">
+    <div class="preview-title">Live Preview</div>
+    <div class="preview-grid">
+
+      <!-- Preview Card 1: Myth Buster -->
+      <div class="preview-frame">
+        <div class="preview-frame-label">Myth-Buster Card</div>
+        <div class="pv-card" id="pvCard1" style="background: var(--cfg-primary, #1B2838);">
+          <div class="card-header">
+            <span class="card-logo" id="pvLogo1"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+            <span class="card-pillar" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
+          </div>
+          <div class="card-body">
+            <div class="myth-label" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
+            <div class="myth-statement" style="color: #fff;"><span class="strike" style="text-decoration-color: var(--cfg-accent, #FF6B35); color: #A8A8C0;">"I'm on a hot streak"</span></div>
+            <div class="fact-statement" style="color: #A8A8C0;">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn't.</div>
+            <div class="stat-block">
+              <span class="stat-number" style="color: var(--cfg-accent, #FF6B35);">0%</span>
+              <span class="stat-unit" style="color: #A8A8C0;">chance past results<br>affect the next spin</span>
+            </div>
+          </div>
+          <div class="card-footer" style="background: var(--cfg-primary-light, #2A3F56);">
+            <span class="footer-helpline" style="color: #fff;" id="pvHelpline1">Free support 24/7: 1-800-522-4700</span>
+            <span class="footer-legal" style="color: #A8A8C0;" id="pvLegal1">21+ to gamble</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview Card 2: Tier 2 Support Card -->
+      <div class="preview-frame">
+        <div class="preview-frame-label">Tier 2 Support Card</div>
+        <div class="pv-card pv-card-tier2" id="pvCard2">
+          <div class="card-header" style="padding: 28px 32px 0;">
+            <span class="card-logo" id="pvLogo2"><span class="logo-play" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+          </div>
+          <div class="card-body">
+            <div class="t2-headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
+            <div class="t2-subline" style="color: #6B6B8A;">Free, confidential support for any question about gambling.</div>
+            <div class="t2-helpline" style="color: var(--cfg-secondary, #00D4AA);" id="pvT2Helpline">1-800-522-4700</div>
+            <div class="t2-channels" style="color: #A8A8C0;">Call &middot; Text &middot; Chat</div>
+          </div>
+          <div class="card-footer">
+            <span class="t2-footer-text" style="color: #A8A8C0;">24/7 &middot; No judgment &middot; Ever.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview Card 3: Program Fact Sheet -->
+      <div class="preview-frame" style="grid-column: 1 / -1;">
+        <div class="preview-frame-label">Program Fact Sheet</div>
+        <div class="pv-factsheet" id="pvFactSheet" style="background: var(--cfg-primary, #1B2838);">
+          <div class="fs-header">
+            <div class="co-brand" id="pvCoBrand">
+              <span id="pvOperatorSlot" class="operator-placeholder-text">Your logo</span>
+              <div class="co-brand-divider"></div>
+              <span class="card-logo" id="pvLogo3"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+            </div>
+            <span class="fs-badge" id="pvFsBadge" style="background: var(--cfg-secondary, #00D4AA); color: var(--cfg-primary, #1B2838);">Responsible Gambling Program</span>
+          </div>
+          <div class="fs-hero">
+            <div class="fs-title" style="color: #fff;" id="pvFsTitle">Why Your Organization should adopt Playbook</div>
+            <div class="fs-subtitle" style="color: #A8A8C0;" id="pvFsSubtitle"><span class="fs-program-name">Playbook</span> is an open-source responsible gambling brand system grounded in the informed choice framework. It was designed by a researcher and practitioner in responsible gambling, and is actively maintained so that new research can be incorporated as the field evolves.</div>
+          </div>
+          <div class="fs-content">
+            <div class="fs-main">
+              <div class="fs-section-label" style="color: var(--cfg-secondary, #00D4AA);">Why choose <span class="fs-program-name">Playbook</span></div>
+              <div class="fs-text" style="color: #A8A8C0;">Most responsible gambling materials are produced ad hoc &mdash; inconsistent design, unreviewed claims, and little grounding in what actually influences player behavior. <span class="fs-program-name">Playbook</span> replaces that approach with a professionally designed brand system built from peer-reviewed research. Every message, template, and visual asset is designed to communicate gambling mechanics in ways players understand and retain.</div>
+
+              <div class="fs-callout">
+                <div class="fs-callout-text" style="color: #fff;">Open-source (CC0 1.0) &mdash; no licensing fees, no vendor lock-in, fully customizable to your brand</div>
+              </div>
+              <div class="fs-callout" style="border-left-color: var(--cfg-accent, #FF6B35);">
+                <div class="fs-callout-text" style="color: #fff;">Actively maintained by researchers &mdash; content evolves as the science of player education advances</div>
+              </div>
+              <div class="fs-callout">
+                <div class="fs-callout-text" style="color: #fff;">Built on the informed choice framework &mdash; giving players knowledge to make their own decisions</div>
+              </div>
+              <div class="fs-callout" style="border-left-color: var(--cfg-accent, #FF6B35);">
+                <div class="fs-callout-text" style="color: #fff;">Multi-format content library &mdash; social cards, support pages, print materials, and digital badges ready to deploy</div>
+              </div>
+
+            </div>
+            <!-- Bottom-left: Sample Content -->
+            <div class="fs-sample">
+              <div class="fs-section-label" style="color: var(--cfg-secondary, #00D4AA);">Sample Content</div>
+              <div class="fs-mini-myth" style="background: var(--cfg-primary, #1B2838);">
+                <div class="mini-header">
+                  <span class="mini-logo" id="pvFsMiniLogo1"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+                  <span class="mini-pillar" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
+                </div>
+                <div class="mini-body">
+                  <div class="mini-myth-label" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
+                  <div class="mini-myth-statement" style="color: #fff;"><span class="strike" style="text-decoration-color: var(--cfg-accent, #FF6B35); color: #A8A8C0;">&ldquo;I&rsquo;m on a hot streak&rdquo;</span></div>
+                  <div class="mini-fact" style="color: #A8A8C0;">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn&rsquo;t.</div>
+                  <div class="mini-stat">
+                    <span class="mini-stat-number" style="color: var(--cfg-accent, #FF6B35);">0%</span>
+                    <span class="mini-stat-unit" style="color: #A8A8C0;">chance past results<br>affect the next spin</span>
+                  </div>
+                </div>
+                <div class="mini-footer" style="background: var(--cfg-primary-light, #2A3F56);">
+                  <span class="mini-footer-text" style="color: #fff;" id="pvFsMiniHelpline1">Free support 24/7: 1-800-522-4700</span>
+                  <span class="mini-footer-legal" style="color: #A8A8C0;" id="pvFsMiniLegal1">21+ to gamble</span>
+                </div>
+              </div>
+              <div class="fs-example-label" style="color: var(--cfg-secondary, #00D4AA);">Tier 1 &mdash; Myth-Buster Card</div>
+            </div>
+            <!-- Bottom-right: Open-Source Lifecycle -->
+            <div class="fs-lifecycle">
+              <div class="fs-section-label" style="color: var(--cfg-secondary, #00D4AA);">Open-Source Lifecycle</div>
+              <div class="fs-cycle">
+                <div class="fs-cycle-step" style="border-color: var(--cfg-secondary, #00D4AA);">
+                  <div class="fs-cycle-icon" style="color: var(--cfg-secondary, #00D4AA);">&#9881;</div>
+                  <div class="fs-cycle-label" style="color: var(--cfg-secondary, #00D4AA);">Playbook Repo</div>
+                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Generic, evidence-based content maintained by researchers &mdash; reviewed and updated as the science evolves</div>
+                </div>
+                <div class="fs-cycle-arrow fs-arrow-right" style="color: var(--cfg-secondary, #00D4AA);">&rarr;</div>
+                <div class="fs-cycle-step" style="border-color: var(--cfg-accent, #FF6B35);">
+                  <div class="fs-cycle-icon" style="color: var(--cfg-accent, #FF6B35);">&#9998;</div>
+                  <div class="fs-cycle-label" style="color: var(--cfg-accent, #FF6B35);">Adapt</div>
+                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Apply your operator brand, colours, and helpline &mdash; the configurator generates print-ready assets</div>
+                </div>
+                <div class="fs-cycle-arrow fs-arrow-down-left" style="color: var(--cfg-secondary, #00D4AA);">&#x21ba;</div>
+                <div class="fs-cycle-arrow fs-arrow-down-right" style="color: var(--cfg-accent, #FF6B35);">&darr;</div>
+                <div class="fs-cycle-step" style="border-color: var(--cfg-secondary, #00D4AA);">
+                  <div class="fs-cycle-icon" style="color: var(--cfg-secondary, #00D4AA);">&#8634;</div>
+                  <div class="fs-cycle-label" style="color: var(--cfg-secondary, #00D4AA);">Contribute</div>
+                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Share field insights and new research back to the open-source repository for everyone</div>
+                </div>
+                <div class="fs-cycle-arrow fs-arrow-left" style="color: var(--cfg-accent, #FF6B35);">&larr;</div>
+                <div class="fs-cycle-step" style="border-color: var(--cfg-accent, #FF6B35);">
+                  <div class="fs-cycle-icon" style="color: var(--cfg-accent, #FF6B35);">&#9654;</div>
+                  <div class="fs-cycle-label" style="color: var(--cfg-accent, #FF6B35);">Deploy</div>
+                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Distribute branded cards, pages, and badges across digital and physical channels</div>
+                </div>
+              </div>
+            </div>
+            <div class="fs-sidebar">
+              <div class="fs-info-label" style="color: var(--cfg-secondary, #00D4AA);">Key attributes</div>
+              <div class="fs-attr">
+                <div class="fs-attr-name" style="color: var(--cfg-secondary, #00D4AA);">Evidence-Based</div>
+                <div class="fs-attr-desc">Grounded in peer-reviewed research on player behaviour</div>
+              </div>
+              <div class="fs-attr">
+                <div class="fs-attr-name" style="color: var(--cfg-secondary, #00D4AA);">Open Source</div>
+                <div class="fs-attr-desc">CC0 1.0 &mdash; free to use, modify, and redistribute</div>
+              </div>
+              <div class="fs-attr">
+                <div class="fs-attr-name" style="color: var(--cfg-accent, #FF6B35);">Co-Brandable</div>
+                <div class="fs-attr-desc">Apply your colours, logo, and helpline in minutes</div>
+              </div>
+              <div class="fs-attr">
+                <div class="fs-attr-name" style="color: var(--cfg-accent, #FF6B35);">Multi-Jurisdiction</div>
+                <div class="fs-attr-desc">Locale-aware content for US, UK, AU, CA, and custom</div>
+              </div>
+              <div class="fs-attr">
+                <div class="fs-attr-name" style="color: #A8A8C0;">Print &amp; Digital</div>
+                <div class="fs-attr-desc">Cards, pages, badges, and social assets included</div>
+              </div>
+              <div class="fs-attr">
+                <div class="fs-attr-name" style="color: #A8A8C0;">Researcher-Maintained</div>
+                <div class="fs-attr-desc">Content updated as the science evolves</div>
+              </div>
+              <div class="fs-learn-more">
+                <div class="fs-info-label" style="color: var(--cfg-secondary, #00D4AA);">Learn more</div>
+                <div class="fs-link-tile">
+                  <div class="fs-link-tile-label" style="color: var(--cfg-secondary, #00D4AA);">Website</div>
+                  <div class="fs-link-tile-url" style="color: #fff;">gamblingpolicy.com/playbook</div>
+                </div>
+                <div class="fs-link-tile">
+                  <div class="fs-link-tile-label" style="color: var(--cfg-secondary, #00D4AA);">Source Code</div>
+                  <div class="fs-link-tile-url" style="color: #fff;">github.com/gamblingpolicy/playbook</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fs-footer" style="background: var(--cfg-primary-light, #2A3F56);">
+            <span class="footer-text" style="color: #A8A8C0;">Open-source responsible gambling brand system &bull; CC0 1.0 License</span>
+            <span class="footer-text" style="color: #A8A8C0;">gamblingpolicy.com/playbook</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview Card 4: Partner Announcement (Instagram Post) -->
+      <div class="preview-frame" style="grid-column: 1 / -1;">
+        <div class="preview-frame-label">Partner Announcement (Instagram Post)</div>
+        <div class="pv-announce" id="pvAnnounce">
+          <div class="ig-top-bar">
+            <div class="ig-avatar" id="igAvatar" style="background: var(--cfg-primary, #1B2838);"><span id="igAvatarLetter">P</span></div>
+            <div class="ig-username" id="igUsername">your_brand</div>
+            <div class="ig-dots">&bull;&bull;&bull;</div>
+          </div>
+          <div class="ig-image" style="background: var(--cfg-primary, #1B2838);">
+            <div class="announce-content">
+              <div class="announce-label" style="color: var(--cfg-secondary, #00D4AA);">Proudly adopting</div>
+              <div class="announce-cobrand">
+                <span id="pvAnnounceOperator" class="operator-placeholder-text" style="font-size: 8px; color: #6B6B8A; font-style: italic;">Your logo</span>
+                <div class="co-brand-divider"></div>
+                <span class="card-logo" id="pvLogoAnnounce"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+              </div>
+              <div class="announce-divider" style="background: var(--cfg-accent, #FF6B35);"></div>
+              <div class="announce-headline" style="color: #fff;" id="pvAnnounceHeadline">Real odds. Real tools. No fine print.</div>
+              <div class="announce-url" style="color: var(--cfg-secondary, #00D4AA);" id="pvAnnounceUrl">example.com/playbook</div>
+            </div>
+          </div>
+          <div class="ig-actions">
+            <span class="ig-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+            <span class="ig-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <span class="ig-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+            <span class="ig-action-icon ig-bookmark"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
+          </div>
+          <div class="ig-likes">1,247 likes</div>
+          <div class="ig-caption">
+            <div class="ig-caption-text"><strong id="igCaptionName">your_brand</strong> We&rsquo;re proud to announce that we&rsquo;ve adopted <span class="fs-program-name" id="igProgramName">Playbook</span> as our responsible gambling program &mdash; an evidence-based brand system designed by researchers and practitioners. Learn more at <strong id="igCaptionUrl">example.com/playbook</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Preview: Co-brand Helpline Badge -->
+      <div class="preview-frame" style="grid-column: 1 / -1;">
+        <div class="preview-frame-label">Co-Brand Helpline Badge</div>
+        <div class="pv-badge" id="pvBadge" style="background: var(--cfg-primary, #1B2838);">
+          <span id="pvBadgeOperator"></span>
+          <div class="badge-divider" style="background: var(--cfg-secondary, #00D4AA);" id="pvBadgeCoDivider"></div>
+          <span class="badge-logo" id="pvLogoBadge"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+          <div class="badge-divider" style="background: #A8A8C0;"></div>
+          <div>
+            <div class="badge-text" style="color: #A8A8C0;" id="pvBadgeLabel">Free, confidential support 24/7</div>
+            <div class="badge-number" style="color: #fff;" id="pvBadgeNumber">1-800-522-4700</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Hidden canvas for color extraction -->
+<canvas id="colorCanvas" style="display:none;"></canvas>
+
+<script>
+// === State ===
+let currentStep = 1;
+let uploadedLogoDataUrl = null;
+let extractedColors = [];
+let suggestedPalette = null;
+
+const JURISDICTION_PRESETS = {
+  us: { number: '1-800-522-4700', textNumber: 'Text SUPPORT to 53342', chatUrl: 'https://www.ncpgambling.org/chat', label: 'National Council on Problem Gambling', age: 21, selfExclusionName: 'State self-exclusion program', selfExclusionUrl: '', supportOrgName: 'National Council on Problem Gambling', supportOrgUrl: 'https://www.ncpgambling.org' },
+  uk: { number: '0808 8020 133', textNumber: '', chatUrl: '', label: 'GambleAware', age: 18, selfExclusionName: 'GamStop', selfExclusionUrl: 'https://www.gamstop.co.uk', supportOrgName: 'GambleAware', supportOrgUrl: 'https://www.begambleaware.org' },
+  au: { number: '1800 858 858', textNumber: '', chatUrl: '', label: 'Gambling Help Online', age: 18, selfExclusionName: 'BetStop', selfExclusionUrl: 'https://www.betstop.gov.au', supportOrgName: 'Gambling Help Online', supportOrgUrl: 'https://www.gamblinghelponline.org.au' },
+  ca: { number: '1-888-795-6111', textNumber: '', chatUrl: '', label: 'Gambling Support BC', age: 19, selfExclusionName: 'Provincial self-exclusion', selfExclusionUrl: '', supportOrgName: 'Responsible Gambling Council', supportOrgUrl: 'https://www.responsiblegambling.org' },
+  custom: { number: '', textNumber: '', chatUrl: '', label: '', age: 18, selfExclusionName: '', selfExclusionUrl: '', supportOrgName: '', supportOrgUrl: '' },
+};
+
+// === Navigation ===
+function goToStep(n) {
+  document.getElementById('step' + currentStep).classList.remove('active');
+  document.getElementById('step' + n).classList.add('active');
+  currentStep = n;
+  document.getElementById('progressFill').style.width = (n / 5 * 100) + '%';
+  updatePreview();
+}
+
+// === Color Utilities ===
+function hexToRgb(hex) {
+  hex = hex.replace('#', '');
+  if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+  const n = parseInt(hex, 16);
+  return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+}
+
+function rgbToHex(r, g, b) {
+  return '#' + [r, g, b].map(c => Math.round(c).toString(16).padStart(2, '0')).join('');
+}
+
+function rgbToHsl(r, g, b) {
+  r /= 255; g /= 255; b /= 255;
+  const max = Math.max(r, g, b), min = Math.min(r, g, b);
+  let h, s, l = (max + min) / 2;
+  if (max === min) { h = s = 0; }
+  else {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch(max) {
+      case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+      case g: h = ((b - r) / d + 2) / 6; break;
+      case b: h = ((r - g) / d + 4) / 6; break;
+    }
+  }
+  return [h * 360, s * 100, l * 100];
+}
+
+function hslToHex(h, s, l) {
+  h /= 360; s /= 100; l /= 100;
+  let r, g, b;
+  if (s === 0) { r = g = b = l; }
+  else {
+    const hue2rgb = (p, q, t) => { if (t < 0) t += 1; if (t > 1) t -= 1; if (t < 1/6) return p + (q - p) * 6 * t; if (t < 1/2) return q; if (t < 2/3) return p + (q - p) * (2/3 - t) * 6; return p; };
+    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    const p = 2 * l - q;
+    r = hue2rgb(p, q, h + 1/3);
+    g = hue2rgb(p, q, h);
+    b = hue2rgb(p, q, h - 1/3);
+  }
+  return rgbToHex(r * 255, g * 255, b * 255);
+}
+
+function luminance(r, g, b) {
+  const [rs, gs, bs] = [r, g, b].map(c => {
+    c = c / 255;
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  });
+  return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+}
+
+function contrastRatio(hex1, hex2) {
+  const [r1, g1, b1] = hexToRgb(hex1);
+  const [r2, g2, b2] = hexToRgb(hex2);
+  const l1 = luminance(r1, g1, b1);
+  const l2 = luminance(r2, g2, b2);
+  return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+}
+
+function lighten(hex, amount) {
+  const [r, g, b] = hexToRgb(hex);
+  return rgbToHex(
+    Math.min(255, r + Math.round((255 - r) * amount)),
+    Math.min(255, g + Math.round((255 - g) * amount)),
+    Math.min(255, b + Math.round((255 - b) * amount))
+  );
+}
+
+function darken(hex, amount) {
+  const [r, g, b] = hexToRgb(hex);
+  return rgbToHex(
+    Math.max(0, Math.round(r * (1 - amount))),
+    Math.max(0, Math.round(g * (1 - amount))),
+    Math.max(0, Math.round(b * (1 - amount)))
+  );
+}
+
+// === Logo Upload & Color Extraction ===
+function initLogoUpload() {
+  const zone = document.getElementById('logoUploadZone');
+  const input = document.getElementById('logoFileInput');
+
+  zone.addEventListener('click', (e) => {
+    if (e.target.closest('.logo-remove')) return;
+    input.click();
+  });
+  zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.classList.add('dragover'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+  zone.addEventListener('drop', (e) => {
+    e.preventDefault(); zone.classList.remove('dragover');
+    if (e.dataTransfer.files.length) handleLogoFile(e.dataTransfer.files[0]);
+  });
+  input.addEventListener('change', () => { if (input.files.length) handleLogoFile(input.files[0]); });
+}
+
+function handleLogoFile(file) {
+  if (!file.type.match(/^image\/(png|jpeg|svg\+xml)$/)) return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    uploadedLogoDataUrl = e.target.result;
+    document.getElementById('logoThumb').src = uploadedLogoDataUrl;
+    document.getElementById('logoFileName').textContent = file.name;
+    document.getElementById('logoFileSize').textContent = (file.size / 1024).toFixed(1) + ' KB';
+    document.getElementById('logoUploadEmpty').style.display = 'none';
+    document.getElementById('logoUploadFilled').style.display = 'block';
+    document.getElementById('logoUploadZone').classList.add('has-logo');
+    extractColorsFromImage(uploadedLogoDataUrl);
+    updatePreview();
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeLogo(e) {
+  e.stopPropagation();
+  uploadedLogoDataUrl = null;
+  extractedColors = [];
+  suggestedPalette = null;
+  document.getElementById('logoUploadEmpty').style.display = '';
+  document.getElementById('logoUploadFilled').style.display = 'none';
+  document.getElementById('logoUploadZone').classList.remove('has-logo');
+  document.getElementById('extractedColors').style.display = 'none';
+  document.getElementById('paletteSuggestion').classList.add('hidden');
+  document.getElementById('logoFileInput').value = '';
+  updatePreview();
+}
+
+function extractColorsFromImage(dataUrl) {
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = () => {
+    const canvas = document.getElementById('colorCanvas');
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
+    const size = 80;
+    canvas.width = size; canvas.height = size;
+    ctx.drawImage(img, 0, 0, size, size);
+    const data = ctx.getImageData(0, 0, size, size).data;
+
+    // Collect non-white, non-black, non-transparent pixels
+    const pixels = [];
+    for (let i = 0; i < data.length; i += 4) {
+      const [r, g, b, a] = [data[i], data[i+1], data[i+2], data[i+3]];
+      if (a < 128) continue; // skip transparent
+      const lum = luminance(r, g, b);
+      if (lum > 0.85 || lum < 0.03) continue; // skip near-white/black
+      pixels.push([r, g, b]);
+    }
+
+    if (pixels.length < 10) {
+      extractedColors = [];
+      document.getElementById('extractedColors').style.display = 'none';
+      return;
+    }
+
+    // Simple k-means (k=5)
+    extractedColors = kMeansColors(pixels, 5);
+    showExtractedColors();
+    generateSuggestedPalette();
+  };
+  img.src = dataUrl;
+}
+
+function kMeansColors(pixels, k) {
+  // Initialize centroids by evenly sampling
+  let centroids = [];
+  const step = Math.floor(pixels.length / k);
+  for (let i = 0; i < k; i++) centroids.push([...pixels[i * step]]);
+
+  for (let iter = 0; iter < 10; iter++) {
+    const clusters = Array.from({length: k}, () => []);
+    for (const px of pixels) {
+      let minDist = Infinity, minIdx = 0;
+      for (let c = 0; c < k; c++) {
+        const d = (px[0]-centroids[c][0])**2 + (px[1]-centroids[c][1])**2 + (px[2]-centroids[c][2])**2;
+        if (d < minDist) { minDist = d; minIdx = c; }
+      }
+      clusters[minIdx].push(px);
+    }
+    for (let c = 0; c < k; c++) {
+      if (clusters[c].length === 0) continue;
+      centroids[c] = [
+        clusters[c].reduce((s, p) => s + p[0], 0) / clusters[c].length,
+        clusters[c].reduce((s, p) => s + p[1], 0) / clusters[c].length,
+        clusters[c].reduce((s, p) => s + p[2], 0) / clusters[c].length,
+      ];
+    }
+  }
+
+  // Sort by frequency (re-cluster to count)
+  const counts = Array.from({length: k}, () => 0);
+  for (const px of pixels) {
+    let minDist = Infinity, minIdx = 0;
+    for (let c = 0; c < k; c++) {
+      const d = (px[0]-centroids[c][0])**2 + (px[1]-centroids[c][1])**2 + (px[2]-centroids[c][2])**2;
+      if (d < minDist) { minDist = d; minIdx = c; }
+    }
+    counts[minIdx]++;
+  }
+
+  return centroids
+    .map((c, i) => ({ hex: rgbToHex(c[0], c[1], c[2]), count: counts[i] }))
+    .sort((a, b) => b.count - a.count)
+    .map(c => c.hex);
+}
+
+function showExtractedColors() {
+  const container = document.getElementById('extractedColors');
+  const row = document.getElementById('swatchRow');
+  row.innerHTML = '';
+  extractedColors.forEach(hex => {
+    const swatch = document.createElement('div');
+    swatch.className = 'swatch';
+    swatch.style.background = hex;
+    swatch.title = hex;
+    swatch.innerHTML = '<span class="swatch-hex">' + hex + '</span>';
+    swatch.addEventListener('click', () => {
+      // Determine best target: darkest → primary, brightest vivid → secondary, warmest → accent
+      // Simple: cycle through primary → secondary → accent on repeated clicks
+      const targets = ['colorPrimary', 'colorSecondary', 'colorAccent'];
+      const hexTargets = ['colorPrimaryHex', 'colorSecondaryHex', 'colorAccentHex'];
+      // Find the slot whose current color is most different from the clicked swatch
+      let bestIdx = 0, bestDiff = 0;
+      for (let i = 0; i < targets.length; i++) {
+        const cur = document.getElementById(targets[i]).value;
+        const [r1,g1,b1] = hexToRgb(cur);
+        const [r2,g2,b2] = hexToRgb(hex);
+        const diff = Math.abs(r1-r2) + Math.abs(g1-g2) + Math.abs(b1-b2);
+        if (diff > bestDiff) { bestDiff = diff; bestIdx = i; }
+      }
+      document.getElementById(targets[bestIdx]).value = hex;
+      document.getElementById(hexTargets[bestIdx]).value = hex;
+      updatePreview();
+    });
+    row.appendChild(swatch);
+  });
+  container.style.display = extractedColors.length > 0 ? '' : 'none';
+}
+
+// === Palette Suggestion ===
+function generateSuggestedPalette() {
+  if (extractedColors.length < 1) return;
+
+  // New approach: show extracted colors as accent candidates
+  // Keep Playbook navy (#1B2838) and teal (#00D4AA) as primary/secondary
+  const row = document.getElementById('paletteAccentRow');
+  row.innerHTML = '';
+
+  // Filter to colors that would work as accents (visible on dark bg, not too dark, not too light)
+  const candidates = extractedColors.filter(hex => {
+    const [r, g, b] = hexToRgb(hex);
+    const [h, s, l] = rgbToHsl(r, g, b);
+    return s > 15 && l > 25 && l < 80; // skip near-gray, near-black, near-white
+  });
+
+  // If no good candidates, use all extracted
+  const colors = candidates.length > 0 ? candidates : extractedColors;
+
+  // Sort by saturation (most vivid first — best accent candidates)
+  const sorted = [...colors].sort((a, b) => {
+    const [,,sa] = rgbToHsl(...hexToRgb(a));
+    const [,,sb] = rgbToHsl(...hexToRgb(b));
+    return sb - sa;
+  });
+
+  // Pre-select the most saturated as default
+  suggestedPalette = sorted[0] || null;
+
+  sorted.forEach((hex, i) => {
+    const swatch = document.createElement('div');
+    swatch.className = 'palette-accent-swatch' + (i === 0 ? ' selected' : '');
+    swatch.style.background = hex;
+    swatch.title = hex;
+    swatch.addEventListener('click', () => {
+      row.querySelectorAll('.palette-accent-swatch').forEach(s => s.classList.remove('selected'));
+      swatch.classList.add('selected');
+      suggestedPalette = hex;
+    });
+    row.appendChild(swatch);
+  });
+
+  document.getElementById('paletteSuggestion').classList.remove('hidden');
+}
+
+function applyAccentFromLogo() {
+  if (!suggestedPalette) return;
+  // Only change the accent — leave primary and secondary at Playbook defaults
+  document.getElementById('colorAccent').value = suggestedPalette;
+  document.getElementById('colorAccentHex').value = suggestedPalette;
+  updatePreview();
+}
+
+// === Program Name Split ===
+function autoSplit(name) {
+  if (!name || name.length <= 2) return 0;
+  // 1. CamelCase boundary
+  for (let i = 1; i < name.length; i++) {
+    if (name[i] === name[i].toUpperCase() && name[i] !== name[i].toLowerCase() && name[i-1] === name[i-1].toLowerCase()) {
+      return i;
+    }
+  }
+  // 2. Space boundary
+  const spaceIdx = name.indexOf(' ');
+  if (spaceIdx > 0) return spaceIdx;
+  // 3. For short names, split at midpoint
+  if (name.length <= 10) return Math.ceil(name.length / 2);
+  // 4. Long names: no split
+  return 0;
+}
+
+function updateSplitSlider() {
+  const name = document.getElementById('programName').value || 'Playbook';
+  const slider = document.getElementById('splitSlider');
+  const noSplit = document.getElementById('noSplitCheck').checked;
+
+  slider.max = name.length;
+  if (!noSplit) {
+    const auto = autoSplit(name);
+    slider.value = auto;
+  }
+  updateWordmarkPreview();
+}
+
+function updateWordmarkPreview() {
+  const name = document.getElementById('programName').value || 'Playbook';
+  const slider = document.getElementById('splitSlider');
+  const noSplit = document.getElementById('noSplitCheck').checked;
+  const headingFont = document.getElementById('fontHeading').value;
+  const splitAt = noSplit ? 0 : parseInt(slider.value);
+
+  const wmPlay = document.getElementById('wmPlay');
+  const wmBook = document.getElementById('wmBook');
+  const posLabel = document.getElementById('splitPos');
+  const previewEl = document.getElementById('wordmarkPreview').querySelector('span');
+  previewEl.style.fontFamily = `'${headingFont}', sans-serif`;
+
+  // Update the preview background to use configured primary
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  document.getElementById('wordmarkPreview').style.background = primary;
+  wmBook.style.color = secondary;
+
+  if (noSplit || splitAt === 0) {
+    wmPlay.textContent = '';
+    wmPlay.style.display = 'none';
+    wmBook.textContent = name;
+    wmBook.style.fontWeight = '600';
+    wmBook.style.textTransform = 'none';
+    wmBook.style.letterSpacing = '-0.02em';
+    wmBook.className = 'wm-full';
+    posLabel.textContent = 'No split';
+  } else {
+    wmPlay.style.display = '';
+    wmPlay.textContent = name.slice(0, splitAt);
+    wmPlay.className = 'wm-play';
+    wmBook.textContent = name.slice(splitAt);
+    wmBook.style.fontWeight = '300';
+    wmBook.style.textTransform = 'uppercase';
+    wmBook.style.letterSpacing = '0.08em';
+    wmBook.className = 'wm-book';
+    posLabel.textContent = 'Split: ' + splitAt;
+  }
+
+  slider.disabled = noSplit;
+}
+
+function getNameParts() {
+  const name = document.getElementById('programName').value || 'Playbook';
+  const noSplit = document.getElementById('noSplitCheck').checked;
+  const splitAt = noSplit ? 0 : parseInt(document.getElementById('splitSlider').value);
+
+  if (noSplit || splitAt === 0) {
+    return [name, ''];
+  }
+  return [name.slice(0, splitAt), name.slice(splitAt)];
+}
+
+// === Update Preview ===
+function updatePreview() {
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+  const primaryLight = lighten(primary, 0.15);
+  const primaryDark = darken(primary, 0.3);
+  const headingFont = document.getElementById('fontHeading').value;
+  const bodyFont = document.getElementById('fontBody').value;
+  const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
+  const minAge = document.getElementById('minAge').value || '21';
+  const orgName = document.getElementById('orgName').value;
+  const websiteUrl = document.getElementById('websiteUrl').value;
+  const programName = document.getElementById('programName').value || 'Playbook';
+
+  // Set CSS custom properties
+  const root = document.documentElement;
+  root.style.setProperty('--cfg-primary', primary);
+  root.style.setProperty('--cfg-primary-light', primaryLight);
+  root.style.setProperty('--cfg-primary-dark', primaryDark);
+  root.style.setProperty('--cfg-secondary', secondary);
+  root.style.setProperty('--cfg-accent', accent);
+
+  // Update fonts on preview cards
+  document.querySelectorAll('.pv-card, .pv-badge, .pv-factsheet, .pv-announce').forEach(el => {
+    el.style.fontFamily = `'${bodyFont}', sans-serif`;
+  });
+  document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-channels, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo, .pv-factsheet .card-logo, .pv-factsheet .mini-logo, .pv-factsheet .fs-title, .pv-factsheet .fs-section-label, .pv-factsheet .fs-callout-text, .pv-factsheet .fs-flow-step-label, .pv-factsheet .mini-myth-statement, .pv-factsheet .mini-stat-number, .pv-factsheet .fs-cycle-label, .pv-announce .card-logo, .pv-announce .announce-headline').forEach(el => {
+    el.style.fontFamily = `'${headingFont}', sans-serif`;
+  });
+
+  // Update program name in logos
+  const nameParts = getNameParts();
+  document.querySelectorAll('.pv-card .card-logo, .pv-badge .badge-logo, .pv-factsheet .card-logo, .pv-factsheet .mini-logo, .pv-announce .card-logo').forEach(el => {
+    const play = el.querySelector('.logo-play');
+    const book = el.querySelector('.logo-book');
+    if (play && book) {
+      if (nameParts[1]) {
+        play.textContent = nameParts[0];
+        play.style.display = '';
+        book.textContent = nameParts[1];
+        book.style.fontWeight = '300';
+        book.style.textTransform = 'uppercase';
+        book.style.letterSpacing = '0.08em';
+      } else {
+        play.style.display = 'none';
+        book.textContent = nameParts[0];
+        book.style.fontWeight = '600';
+        book.style.textTransform = 'none';
+        book.style.letterSpacing = '-0.02em';
+      }
+    }
+  });
+
+  // Update helpline and legal
+  document.querySelectorAll('[id^="pvHelpline"]').forEach(el => {
+    el.textContent = 'Free support 24/7: ' + helpline;
+  });
+  document.querySelectorAll('[id^="pvLegal"]').forEach(el => {
+    el.textContent = minAge + '+ to gamble';
+  });
+  const badgeLabel = document.getElementById('pvBadgeLabel');
+  if (badgeLabel) badgeLabel.textContent = 'Free, confidential support 24/7';
+  const badgeNumber = document.getElementById('pvBadgeNumber');
+  if (badgeNumber) badgeNumber.textContent = helpline;
+  const t2Helpline = document.getElementById('pvT2Helpline');
+  if (t2Helpline) t2Helpline.textContent = helpline;
+  // Mini cards in fact sheet
+  const fsMiniHelpline1 = document.getElementById('pvFsMiniHelpline1');
+  if (fsMiniHelpline1) fsMiniHelpline1.textContent = 'Free support 24/7: ' + helpline;
+  const fsMiniLegal1 = document.getElementById('pvFsMiniLegal1');
+  if (fsMiniLegal1) fsMiniLegal1.textContent = minAge + '+ to gamble';
+  // Update fact sheet card
+  const fsTitle = document.getElementById('pvFsTitle');
+  if (fsTitle) fsTitle.textContent = orgName ? 'Why ' + orgName + ' should adopt ' + programName : 'Why adopt ' + programName;
+  const displayUrl = websiteUrl ? websiteUrl.replace(/^https?:\/\//, '') : 'example.com/playbook';
+  // Update program name references in fact sheet body text
+  document.querySelectorAll('.fs-program-name').forEach(el => {
+    el.textContent = programName;
+  });
+
+  // Update partner announcement card (Instagram post)
+  const announceUrl = document.getElementById('pvAnnounceUrl');
+  if (announceUrl) announceUrl.textContent = displayUrl;
+  // Instagram chrome: username, avatar, caption
+  const igSlug = orgName ? orgName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '') : 'your_brand';
+  const igUsername = document.getElementById('igUsername');
+  if (igUsername) igUsername.textContent = igSlug;
+  const igCaptionName = document.getElementById('igCaptionName');
+  if (igCaptionName) igCaptionName.textContent = igSlug;
+  const igAvatarLetter = document.getElementById('igAvatarLetter');
+  if (igAvatarLetter) igAvatarLetter.textContent = orgName ? orgName.charAt(0).toUpperCase() : 'P';
+  const igProgramName = document.getElementById('igProgramName');
+  if (igProgramName) igProgramName.textContent = programName;
+  const igCaptionUrl = document.getElementById('igCaptionUrl');
+  if (igCaptionUrl) igCaptionUrl.textContent = displayUrl;
+
+  // Update operator logo in all previews
+  const operatorSlot = document.getElementById('pvOperatorSlot');
+  const announceOperator = document.getElementById('pvAnnounceOperator');
+  const badgeOperator = document.getElementById('pvBadgeOperator');
+  const allCoDividers = document.querySelectorAll('#pvCoBrand .co-brand-divider, .announce-cobrand .co-brand-divider, #pvBadgeCoDivider');
+
+  if (uploadedLogoDataUrl) {
+    if (operatorSlot) { operatorSlot.className = ''; operatorSlot.style.cssText = ''; operatorSlot.innerHTML = '<img class="operator-logo-img" src="' + uploadedLogoDataUrl + '" alt="Operator logo">'; }
+    if (announceOperator) { announceOperator.className = ''; announceOperator.style.cssText = ''; announceOperator.innerHTML = '<img class="operator-logo-img" src="' + uploadedLogoDataUrl + '" alt="Operator logo">'; }
+    if (badgeOperator) { badgeOperator.innerHTML = '<img class="operator-logo-img" src="' + uploadedLogoDataUrl + '" alt="Operator logo">'; }
+    allCoDividers.forEach(d => d.style.display = '');
+  } else {
+    if (operatorSlot) { operatorSlot.innerHTML = ''; operatorSlot.className = 'operator-placeholder-text'; operatorSlot.style.cssText = ''; operatorSlot.textContent = 'Your logo'; }
+    if (announceOperator) { announceOperator.innerHTML = ''; announceOperator.className = 'operator-placeholder-text'; announceOperator.style.cssText = 'font-size: 8px; color: #6B6B8A; font-style: italic;'; announceOperator.textContent = 'Your logo'; }
+    if (badgeOperator) { badgeOperator.innerHTML = ''; }
+    allCoDividers.forEach(d => d.style.display = 'none');
+  }
+
+  // Update wordmark preview
+  updateWordmarkPreview();
+
+  // Update contrast badges
+  updateContrast();
+
+  // Update font specimens
+  const headingSpec = document.querySelector('#headingSpecimen .font-specimen-heading');
+  if (headingSpec) headingSpec.style.fontFamily = `'${headingFont}', sans-serif`;
+  const bodySpec = document.querySelector('#bodySpecimen .font-specimen-body');
+  if (bodySpec) bodySpec.style.fontFamily = `'${bodyFont}', sans-serif`;
+}
+
+function updateContrast() {
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+
+  const cPrimary = contrastRatio('#ffffff', primary);
+  const elPrimary = document.getElementById('contrastPrimary');
+  elPrimary.textContent = cPrimary.toFixed(1) + ':1';
+  elPrimary.className = 'contrast-badge ' + (cPrimary >= 4.5 ? 'contrast-pass' : 'contrast-fail');
+
+  const cSecondary = contrastRatio(primary, secondary);
+  const elSecondary = document.getElementById('contrastSecondary');
+  elSecondary.textContent = cSecondary.toFixed(1) + ':1';
+  elSecondary.className = 'contrast-badge ' + (cSecondary >= 3 ? 'contrast-pass' : 'contrast-fail');
+
+  const cAccent = contrastRatio(accent, primary);
+  const elAccent = document.getElementById('contrastAccent');
+  elAccent.textContent = cAccent.toFixed(1) + ':1';
+  elAccent.className = 'contrast-badge ' + (cAccent >= 3 ? 'contrast-pass' : 'contrast-fail');
+
+  // Dark accent warning
+  const [ar, ag, ab] = hexToRgb(accent);
+  const [, , accentLum] = rgbToHsl(ar, ag, ab);
+  const darkWarning = document.getElementById('accentDarkWarning');
+  if (darkWarning) {
+    if (accentLum < 35 || cAccent < 2) {
+      darkWarning.classList.remove('hidden');
+    } else {
+      darkWarning.classList.add('hidden');
+    }
+  }
+}
+
+// === Sync color pickers and hex inputs ===
+function syncColor(pickerId, hexId) {
+  const picker = document.getElementById(pickerId);
+  const hex = document.getElementById(hexId);
+  picker.addEventListener('input', () => { hex.value = picker.value; updatePreview(); });
+  hex.addEventListener('input', () => {
+    const v = hex.value;
+    if (/^#[0-9a-fA-F]{6}$/.test(v)) { picker.value = v; updatePreview(); }
+  });
+}
+
+// === Jurisdiction Presets ===
+function getActiveJurisdiction() {
+  const active = document.querySelector('.preset-tag.active');
+  return active ? active.dataset.j : 'us';
+}
+
+function initPresets() {
+  document.querySelectorAll('.preset-tag').forEach(tag => {
+    tag.addEventListener('click', () => {
+      document.querySelectorAll('.preset-tag').forEach(t => t.classList.remove('active'));
+      tag.classList.add('active');
+      const j = tag.dataset.j;
+      const preset = JURISDICTION_PRESETS[j];
+      document.getElementById('helplineNumber').value = preset.number;
+      document.getElementById('minAge').value = preset.age;
+      document.getElementById('textNumber').value = preset.textNumber || '';
+      document.getElementById('chatUrl').value = preset.chatUrl || '';
+      document.getElementById('selfExclusionName').value = preset.selfExclusionName || '';
+      document.getElementById('selfExclusionUrl').value = preset.selfExclusionUrl || '';
+      document.getElementById('limitsUrl').value = '';
+      document.getElementById('supportOrgName').value = preset.supportOrgName || '';
+      document.getElementById('supportOrgUrl').value = preset.supportOrgUrl || '';
+      updatePreview();
+    });
+  });
+}
+
+// === Download Functions ===
+function downloadYaml() {
+  const name = document.getElementById('programName').value || 'Playbook';
+  const org = document.getElementById('orgName').value || 'Your Company Name';
+  const url = document.getElementById('websiteUrl').value || 'https://example.com/playbook';
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+  const headingFont = document.getElementById('fontHeading').value;
+  const bodyFont = document.getElementById('fontBody').value;
+  const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
+  const minAge = document.getElementById('minAge').value || '21';
+  const jKey = getActiveJurisdiction();
+  const helplineLabel = JURISDICTION_PRESETS[jKey]?.label || 'Support Helpline';
+  const primaryLight = lighten(primary, 0.15);
+  const primaryDark = darken(primary, 0.3);
+  const secondaryLight = lighten(secondary, 0.15);
+  const secondaryDark = darken(secondary, 0.2);
+  const accentLight = lighten(accent, 0.15);
+  const accentDark = darken(accent, 0.15);
+
+  const yaml = `# _brand.yml \u2014 Generated by Playbook Brand Configurator
+# ============================================
+# Edit this file to customize your brand.
+# Every {{PLACEHOLDER}} in the documentation references a value here.
+# ============================================
+
+meta:
+  program_name: "${name}"
+  organization: "${org}"
+  website: "${url}"
+  contact_email: "info@example.com"
+  year_established: ${new Date().getFullYear()}
+  version: "0.1.0"
+  license: "CC0-1.0"
+  primary_jurisdictions:
+    - united-states
+
+brand_pillars:
+  - name: "Open"
+    tagline: "No fine print"
+    description: >
+      Transparency about how things actually work. The house edge,
+      the odds, the T&Cs, the stuff nobody reads.
+
+  - name: "Social"
+    tagline: "Worth sharing"
+    description: >
+      Content worth talking about. Quizzes, myth-busters, facts
+      that make you the smartest person at the table.
+
+color:
+  palette:
+    primary: "${primary}"
+    primary_light: "${primaryLight}"
+    primary_dark: "${primaryDark}"
+    secondary: "${secondary}"
+    secondary_light: "${secondaryLight}"
+    secondary_dark: "${secondaryDark}"
+    accent: "${accent}"
+    accent_light: "${accentLight}"
+    accent_dark: "${accentDark}"
+    neutral_900: "#1A1A2E"
+    neutral_700: "#3D3D5C"
+    neutral_500: "#6B6B8A"
+    neutral_300: "#A8A8C0"
+    neutral_100: "#E8E8F0"
+    neutral_50: "#F5F5FA"
+    success: "#00C853"
+    warning: "#FFB300"
+    danger: "#FF3D00"
+    info: "#2979FF"
+    white: "#FFFFFF"
+    black: "#111111"
+
+  aliases:
+    navy: "primary"
+    navyLight: "primary_light"
+    midnight: "primary_dark"
+    teal: "secondary"
+    tealLight: "secondary_light"
+    tealDark: "secondary_dark"
+    orange: "accent"
+    orangeLight: "accent_light"
+    orangeDark: "accent_dark"
+    n900: "neutral_900"
+    n700: "neutral_700"
+    n500: "neutral_500"
+    n300: "neutral_300"
+    n100: "neutral_100"
+    n50: "neutral_50"
+
+  semantic:
+    background: "neutral_50"
+    surface: "white"
+    text_primary: "neutral_900"
+    text_secondary: "neutral_700"
+    text_muted: "neutral_500"
+    link: "primary_light"
+    link_hover: "primary"
+    cta_primary_bg: "accent"
+    cta_primary_text: "primary"
+    cta_secondary_bg: "secondary"
+    cta_secondary_text: "primary"
+    quiz_correct: "success"
+    quiz_incorrect: "danger"
+    feature_highlight: "secondary"
+    helpline_banner: "primary"
+    border: "neutral_500"
+    divider: "neutral_100"
+
+typography:
+  fonts:
+    heading:
+      family: "${headingFont}"
+      source: "google"
+      weights: [300, 400, 600, 700, 800, 900]
+      fallback: "system-ui, -apple-system, sans-serif"
+    body:
+      family: "${bodyFont}"
+      source: "google"
+      weights: [300, 400, 600]
+      fallback: "system-ui, sans-serif"
+    monospace:
+      family: "Source Code Pro"
+      source: "google"
+      weights: [400, 500, 600]
+      fallback: "monospace"
+
+  scale:
+    display: 3.0
+    h1: 2.5
+    h2: 2.0
+    h3: 1.5
+    h4: 1.25
+    body_large: 1.125
+    body: 1.0
+    small: 0.875
+    caption: 0.75
+
+  line_height:
+    heading: 1.2
+    body: 1.6
+    tight: 1.3
+
+logo:
+  type: "text-based wordmark"
+  font: "${headingFont}"
+  play_weight: 800
+  book_weight: 300
+  book_style: "uppercase, tight-spaced"
+  # Place your operator logo in visual-identity/logo/operator/
+  # Co-branding: operator logo left, program logo right, vertical divider between
+
+helplines:
+  default:
+    number: "${helpline}"
+    label: "${helplineLabel}"
+    hours: "24/7"
+
+legal:
+  copyright_holder: "${org}"
+  minimum_gambling_age:
+    default: ${minAge}
+  disclaimers:
+    age: "You must be {{MIN_AGE}}+ to gamble."
+    general: "Gambling involves risk. Play on your terms."
+
+messaging:
+  taglines:
+    open:
+      - "Here's how it actually works."
+      - "No fine print. Just facts."
+      - "The odds are public. Now you know them."
+    social:
+      - "Share the facts."
+      - "Challenge your friends."
+      - "The best players know the game."
+  ctas:
+    primary:
+      - "Take the quiz"
+      - "Test your game IQ"
+      - "See the real odds"
+    features:
+      - "Set your limits"
+      - "Try the bankroll planner"
+
+tone:
+  humor: "confident-wit"
+  formality: "conversational"
+  voice_archetype: "playbook-voice"
+  gambling_culture: "selective"
+  prefer:
+    player: "player (not 'gambler')"
+    informed_play: "specific behaviors"
+    tools: "tools / features (not 'interventions')"
+  avoid_in_tier_1:
+    - "responsible gambling"
+    - "problem gambler"
+    - "gambling addiction"
+    - "pathological"
+    - "intervention"
+`;
+
+  downloadFile('_brand.yml', yaml, 'text/yaml');
+}
+
+function downloadCss() {
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+  const primaryLight = lighten(primary, 0.15);
+  const primaryDark = darken(primary, 0.3);
+  const secondaryLight = lighten(secondary, 0.15);
+  const secondaryDark = darken(secondary, 0.2);
+  const accentLight = lighten(accent, 0.15);
+  const accentDark = darken(accent, 0.15);
+  const headingFont = document.getElementById('fontHeading').value;
+  const bodyFont = document.getElementById('fontBody').value;
+
+  const css = `/* brand-inject.css \u2014 Generated by Playbook Brand Configurator */
+:root {
+  --pb-color-primary: ${primary};
+  --pb-color-primary-light: ${primaryLight};
+  --pb-color-primary-dark: ${primaryDark};
+  --pb-color-secondary: ${secondary};
+  --pb-color-secondary-light: ${secondaryLight};
+  --pb-color-secondary-dark: ${secondaryDark};
+  --pb-color-accent: ${accent};
+  --pb-color-accent-light: ${accentLight};
+  --pb-color-accent-dark: ${accentDark};
+  --pb-color-neutral-900: #1A1A2E;
+  --pb-color-neutral-700: #3D3D5C;
+  --pb-color-neutral-500: #6B6B8A;
+  --pb-color-neutral-300: #A8A8C0;
+  --pb-color-neutral-100: #E8E8F0;
+  --pb-color-neutral-50: #F5F5FA;
+  --pb-color-success: #00C853;
+  --pb-color-warning: #FFB300;
+  --pb-color-danger: #FF3D00;
+  --pb-color-info: #2979FF;
+  --pb-color-white: #FFFFFF;
+  --pb-color-black: #111111;
+  --pb-font-heading: '${headingFont}', system-ui, -apple-system, sans-serif;
+  --pb-font-body: '${bodyFont}', system-ui, sans-serif;
+  --pb-font-mono: 'Source Code Pro', monospace;
+}
+`;
+
+  downloadFile('brand-inject.css', css, 'text/css');
+}
+
+function downloadFile(filename, content, type) {
+  const blob = new Blob([content], { type });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function downloadSample(elementId, filename) {
+  const el = document.getElementById(elementId);
+  if (!el) return;
+  const btn = event.currentTarget;
+  const origText = btn.innerHTML;
+  btn.innerHTML = '<span style="font-size:11px;">Rendering&hellip;</span>';
+  btn.disabled = true;
+  const scale = elementId === 'pvFactSheet' ? 3 : (1080 / el.offsetWidth);
+  html2canvas(el, { scale: scale, useCORS: true, backgroundColor: null, logging: false }).then(function(canvas) {
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL('image/png');
+    a.download = filename + '.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    btn.innerHTML = origText;
+    btn.disabled = false;
+  }).catch(function(err) {
+    console.error('Render failed:', err);
+    btn.innerHTML = origText;
+    btn.disabled = false;
+  });
+}
+
+// === Content Kit Functions ===
+const CONTENT_API_BASE = '/tools/playbook/api';
+
+function getOperatorTokens() {
+  return {
+    '{{PROGRAM_NAME}}': document.getElementById('programName').value || 'Playbook',
+    '{{ORGANIZATION}}': document.getElementById('orgName').value || 'Your Company',
+    '{{HELPLINE_NUMBER}}': document.getElementById('helplineNumber').value || '1-800-522-4700',
+    '{{MIN_AGE}}': document.getElementById('minAge').value || '21',
+    '{{WEBSITE}}': document.getElementById('websiteUrl').value || 'https://example.com',
+    '{{TEXT_NUMBER}}': document.getElementById('textNumber').value || '',
+    '{{CHAT_URL}}': document.getElementById('chatUrl').value || '',
+    '{{LIMITS_URL}}': document.getElementById('limitsUrl').value || '#limits',
+    '{{SELF_EXCLUSION_URL}}': document.getElementById('selfExclusionUrl').value || '#self-exclusion',
+    '{{SELF_EXCLUSION_NAME}}': document.getElementById('selfExclusionName').value || 'Self-exclusion program',
+    '{{SUPPORT_ORG_NAME}}': document.getElementById('supportOrgName').value || 'Support Organization',
+    '{{SUPPORT_ORG_URL}}': document.getElementById('supportOrgUrl').value || '#',
+    '{{RESET_DATE}}': '',
+    '{{DURATION}}': '',
+    '{{PERIOD}}': '',
+    '{{LIMIT_AMOUNT}}': '',
+    '{{TOTAL_SESSIONS}}': '',
+    '{{TOTAL_TIME}}': '',
+    '{{JURISDICTION}}': getActiveJurisdiction(),
+    '{{REGULATOR_URL}}': '',
+  };
+}
+
+function resolveTokens(text, tokens) {
+  if (!text || typeof text !== 'string') return text;
+  let resolved = text;
+  for (const [token, value] of Object.entries(tokens)) {
+    resolved = resolved.split(token).join(value || token);
+  }
+  return resolved;
+}
+
+function resolveTokensDeep(obj, tokens) {
+  if (typeof obj === 'string') return resolveTokens(obj, tokens);
+  if (Array.isArray(obj)) return obj.map(item => resolveTokensDeep(item, tokens));
+  if (obj && typeof obj === 'object') {
+    const result = {};
+    for (const [key, val] of Object.entries(obj)) {
+      result[key] = resolveTokensDeep(val, tokens);
+    }
+    return result;
+  }
+  return obj;
+}
+
+async function fetchContentJson(endpoint) {
+  const resp = await fetch(`${CONTENT_API_BASE}/${endpoint}`);
+  if (!resp.ok) throw new Error(`Failed to fetch ${endpoint}: ${resp.status}`);
+  return resp.json();
+}
+
+function jsonToCsv(items, columns) {
+  const header = columns.map(c => c.label || c.key).join(',');
+  const rows = items.map(item => {
+    return columns.map(c => {
+      let val = c.key.split('.').reduce((o, k) => (o && o[k] !== undefined ? o[k] : ''), item);
+      if (Array.isArray(val)) val = val.join('; ');
+      if (typeof val === 'object' && val !== null) val = JSON.stringify(val);
+      val = String(val ?? '');
+      if (val.includes(',') || val.includes('"') || val.includes('\n')) {
+        val = '"' + val.replace(/"/g, '""') + '"';
+      }
+      return val;
+    }).join(',');
+  });
+  return [header, ...rows].join('\n');
+}
+
+async function downloadContentKit() {
+  const btn = event.currentTarget;
+  const origHTML = btn.innerHTML;
+  btn.innerHTML = '<span style="font-size:12px;">Building kit&hellip;</span>';
+  btn.disabled = true;
+
+  try {
+    const tokens = getOperatorTokens();
+    const programName = tokens['{{PROGRAM_NAME}}'];
+    const useCSV = document.getElementById('csvToggle').checked;
+
+    // Fetch all content feeds in parallel
+    const [messages, myths, ctas, campaigns] = await Promise.all([
+      fetchContentJson('messages.json'),
+      fetchContentJson('myths.json'),
+      fetchContentJson('ctas.json'),
+      fetchContentJson('campaigns.json'),
+    ]);
+
+    // Resolve tokens
+    const resolvedMessages = resolveTokensDeep(messages, tokens);
+    const resolvedMyths = resolveTokensDeep(myths, tokens);
+    const resolvedCtas = resolveTokensDeep(ctas, tokens);
+    const resolvedCampaigns = resolveTokensDeep(campaigns, tokens);
+
+    const zip = new JSZip();
+    const folder = zip.folder(`${slugifyName(programName)}-content-kit`);
+
+    // Add JSON files
+    folder.file('messages.json', JSON.stringify(resolvedMessages, null, 2));
+    folder.file('myths.json', JSON.stringify(resolvedMyths, null, 2));
+    folder.file('ctas.json', JSON.stringify(resolvedCtas, null, 2));
+    folder.file('campaigns.json', JSON.stringify(resolvedCampaigns, null, 2));
+
+    // Add CSV if toggled
+    if (useCSV) {
+      const msgItems = resolvedMessages.messages || [];
+      const msgCsv = jsonToCsv(msgItems, [
+        { key: 'id', label: 'ID' },
+        { key: 'pillar', label: 'Pillar' },
+        { key: 'section', label: 'Section' },
+        { key: 'subsection', label: 'Subsection' },
+        { key: 'message', label: 'Message' },
+        { key: 'context', label: 'Context' },
+        { key: 'tone', label: 'Tone' },
+        { key: 'tier', label: 'Tier' },
+        { key: 'maxChars', label: 'Max Chars' },
+      ]);
+      folder.file('messages.csv', msgCsv);
+
+      const ctaItems = resolvedCtas.ctas || [];
+      const ctaCsv = jsonToCsv(ctaItems, [
+        { key: 'id', label: 'ID' },
+        { key: 'section', label: 'Section' },
+        { key: 'label', label: 'Label' },
+        { key: 'maxChars', label: 'Max Chars' },
+        { key: 'context', label: 'Context' },
+        { key: 'tone', label: 'Tone' },
+        { key: 'pairWith', label: 'Pair With' },
+      ]);
+      folder.file('ctas.csv', ctaCsv);
+    }
+
+    // Generate _brand.yml (reuse existing function logic inline)
+    const yamlContent = generateYamlContent();
+    folder.file('_brand.yml', yamlContent);
+
+    // Generate brand-inject.css
+    const cssContent = generateCssContent();
+    folder.file('brand-inject.css', cssContent);
+
+    // Add widget embed snippet
+    const embedSnippet = generateAllEmbedSnippets(tokens);
+    folder.file('widget-embed.html', embedSnippet);
+
+    // Fetch and resolve the RG page template
+    try {
+      const rgResp = await fetch('/tools/playbook/templates/rg-page.html');
+      if (rgResp.ok) {
+        const rgTemplate = await rgResp.text();
+        const rgResolved = resolveTokens(rgTemplate, tokens);
+        folder.file('rg-page.html', rgResolved);
+      }
+    } catch (e) { console.warn('Could not include RG page template:', e); }
+
+    // Include widget bundle for self-hosting
+    try {
+      const wResp = await fetch('/tools/playbook/widgets/playbook-widgets.js');
+      if (wResp.ok) {
+        const wBundle = await wResp.text();
+        folder.file('playbook-widgets.js', wBundle);
+      }
+    } catch (e) { console.warn('Could not include widget bundle:', e); }
+
+    // Include myths.json for the myth widget (referenced by rg-page.html)
+    folder.file('myths.json', JSON.stringify(resolvedMyths, null, 2));
+
+    // Add README
+    const readme = generateReadme(programName, tokens);
+    folder.file('README.md', readme);
+
+    // Generate and download ZIP
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${slugifyName(programName)}-content-kit.zip`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    btn.innerHTML = '<span style="font-size:12px;">✓ Downloaded!</span>';
+    setTimeout(() => { btn.innerHTML = origHTML; btn.disabled = false; }, 2000);
+  } catch (err) {
+    console.error('Content Kit build failed:', err);
+    btn.innerHTML = '<span style="font-size:12px;">Error — try again</span>';
+    setTimeout(() => { btn.innerHTML = origHTML; btn.disabled = false; }, 3000);
+  }
+}
+
+async function downloadSingleJson(type) {
+  const btn = event.currentTarget;
+  const origHTML = btn.innerHTML;
+  btn.innerHTML = '<span style="font-size:11px;">Loading&hellip;</span>';
+  btn.disabled = true;
+
+  try {
+    const tokens = getOperatorTokens();
+    const useCSV = document.getElementById('csvToggle').checked;
+    const data = await fetchContentJson(`${type}.json`);
+    const resolved = resolveTokensDeep(data, tokens);
+
+    if (useCSV && (type === 'messages' || type === 'ctas')) {
+      const items = type === 'messages' ? resolved.messages : resolved.ctas;
+      const cols = type === 'messages'
+        ? [{ key: 'id', label: 'ID' }, { key: 'pillar', label: 'Pillar' }, { key: 'section', label: 'Section' }, { key: 'message', label: 'Message' }, { key: 'context', label: 'Context' }, { key: 'tone', label: 'Tone' }, { key: 'tier', label: 'Tier' }, { key: 'maxChars', label: 'Max Chars' }]
+        : [{ key: 'id', label: 'ID' }, { key: 'section', label: 'Section' }, { key: 'label', label: 'Label' }, { key: 'maxChars', label: 'Max Chars' }, { key: 'context', label: 'Context' }, { key: 'tone', label: 'Tone' }];
+      const csv = jsonToCsv(items || [], cols);
+      downloadFile(`${type}.csv`, csv, 'text/csv');
+    } else {
+      downloadFile(`${type}.json`, JSON.stringify(resolved, null, 2), 'application/json');
+    }
+    btn.innerHTML = origHTML;
+    btn.disabled = false;
+  } catch (err) {
+    console.error(`Download ${type} failed:`, err);
+    btn.innerHTML = '<span style="font-size:11px;">Error</span>';
+    setTimeout(() => { btn.innerHTML = origHTML; btn.disabled = false; }, 2000);
+  }
+}
+
+function slugifyName(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'playbook';
+}
+
+function generateYamlContent() {
+  const name = document.getElementById('programName').value || 'Playbook';
+  const org = document.getElementById('orgName').value || 'Your Company Name';
+  const url = document.getElementById('websiteUrl').value || 'https://example.com/playbook';
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+  const headingFont = document.getElementById('fontHeading').value;
+  const bodyFont = document.getElementById('fontBody').value;
+  const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
+  const minAge = document.getElementById('minAge').value || '21';
+  const jKey = getActiveJurisdiction();
+  const helplineLabel = JURISDICTION_PRESETS[jKey]?.label || 'Support Helpline';
+  const primaryLight = lighten(primary, 0.15);
+  const primaryDark = darken(primary, 0.3);
+  const secondaryLight = lighten(secondary, 0.15);
+  const secondaryDark = darken(secondary, 0.2);
+  const accentLight = lighten(accent, 0.15);
+  const accentDark = darken(accent, 0.15);
+
+  return `# _brand.yml — Generated by Playbook Brand Configurator
+# ============================================
+meta:
+  program_name: "${name}"
+  organization: "${org}"
+  website: "${url}"
+  contact_email: "info@example.com"
+  year_established: ${new Date().getFullYear()}
+  version: "0.1.0"
+  license: "CC0-1.0"
+
+color:
+  palette:
+    primary: "${primary}"
+    primary_light: "${primaryLight}"
+    primary_dark: "${primaryDark}"
+    secondary: "${secondary}"
+    secondary_light: "${secondaryLight}"
+    secondary_dark: "${secondaryDark}"
+    accent: "${accent}"
+    accent_light: "${accentLight}"
+    accent_dark: "${accentDark}"
+
+typography:
+  fonts:
+    heading:
+      family: "${headingFont}"
+      source: "google"
+    body:
+      family: "${bodyFont}"
+      source: "google"
+
+helplines:
+  default:
+    number: "${helpline}"
+    label: "${helplineLabel}"
+    hours: "24/7"
+
+legal:
+  copyright_holder: "${org}"
+  minimum_gambling_age:
+    default: ${minAge}
+`;
+}
+
+function generateCssContent() {
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+  const headingFont = document.getElementById('fontHeading').value;
+  const bodyFont = document.getElementById('fontBody').value;
+  return `/* brand-inject.css — Generated by Playbook Brand Configurator */
+:root {
+  --pb-color-primary: ${primary};
+  --pb-color-primary-light: ${lighten(primary, 0.15)};
+  --pb-color-primary-dark: ${darken(primary, 0.3)};
+  --pb-color-secondary: ${secondary};
+  --pb-color-secondary-light: ${lighten(secondary, 0.15)};
+  --pb-color-secondary-dark: ${darken(secondary, 0.2)};
+  --pb-color-accent: ${accent};
+  --pb-color-accent-light: ${lighten(accent, 0.15)};
+  --pb-color-accent-dark: ${darken(accent, 0.15)};
+  --pb-font-heading: '${headingFont}', system-ui, -apple-system, sans-serif;
+  --pb-font-body: '${bodyFont}', system-ui, sans-serif;
+  --pb-font-mono: 'Source Code Pro', monospace;
+}
+`;
+}
+
+function generateAllEmbedSnippets(tokens) {
+  const helpline = tokens['{{HELPLINE_NUMBER}}'];
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playbook Widget Examples</title>
+  <style>
+    :root {
+      --pb-primary: ${primary};
+      --pb-secondary: ${secondary};
+      --pb-accent: ${accent};
+    }
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; }
+    h2 { margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <h1>Playbook Widgets</h1>
+
+  <!-- Load widget bundle -->
+  <script src="https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/widgets/dist/playbook-widgets.js"><\/script>
+
+  <h2>Helpline Banner</h2>
+  <playbook-helpline number="${helpline}" label="Free 24/7 support" theme="dark" mode="banner"></playbook-helpline>
+
+  <h2>Myth Card</h2>
+  <playbook-myth category="slots" api-url="https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/api/myths.json"></playbook-myth>
+
+  <h2>Odds Card</h2>
+  <playbook-odds game="blackjack"></playbook-odds>
+</body>
+</html>
+`;
+}
+
+function generateReadme(programName, tokens) {
+  return `# ${programName} — Content Kit
+
+Generated by the [Playbook Brand Configurator](https://github.com/kphilander/Playbook).
+
+## What's Inside
+
+| File | Description |
+|------|-------------|
+| \`rg-page.html\` | **Your complete responsible gambling page** — deploy directly on your site |
+| \`playbook-widgets.js\` | Widget bundle for interactive components (helpline, myths, odds) |
+| \`brand-inject.css\` | CSS custom properties for your brand tokens |
+| \`_brand.yml\` | Brand configuration (colors, fonts, helpline, legal) |
+| \`messages.json\` | ${programName} core messages (pillar, contextual, seasonal, compliance) |
+| \`myths.json\` | Myth-buster content (social cards, explainers, quiz questions) |
+| \`ctas.json\` | Calls to action by section |
+| \`campaigns.json\` | Campaign briefs with schedules and templates |
+| \`widget-embed.html\` | Widget embed examples for emails, product pages, etc. |
+
+## Deploy Your RG Page
+
+The quickest path to a complete responsible gambling page:
+
+1. Upload \`rg-page.html\`, \`playbook-widgets.js\`, \`brand-inject.css\`, and \`myths.json\` to your server
+2. Link to \`rg-page.html\` from your site navigation, footer, or account area
+3. Update any remaining placeholder URLs (limits page, self-exclusion) if needed
+
+The page includes: odds transparency, limit-setting tools, myth-busters, self-exclusion info,
+helpline resources, and support organizations — all with your brand tokens pre-filled.
+
+## Embed Components Elsewhere
+
+Use the individual widgets across your platform:
+
+- **Email footers / headers** — \`<playbook-helpline>\` for persistent helpline access
+- **Game pages / lobby** — \`<playbook-odds>\` for odds transparency next to each game
+- **Blog / educational content** — \`<playbook-myth>\` for interactive myth-busting
+
+See \`widget-embed.html\` for copy-paste examples.
+
+## Content API
+
+Live JSON feeds (with default Playbook tokens — use the kit files for your resolved versions):
+- \`https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/api/messages.json\`
+- \`https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/api/myths.json\`
+- \`https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/api/ctas.json\`
+- \`https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/api/campaigns.json\`
+
+## Compliance Note
+
+Playbook content helps operators meet common responsible gambling requirements, but it does not
+constitute legal or regulatory advice. Requirements vary by jurisdiction and change frequently.
+Review all content with your compliance team before deployment.
+
+## License
+
+Content: CC0-1.0 (Public Domain) — use freely, no attribution required.
+Source: [github.com/kphilander/Playbook](https://github.com/kphilander/Playbook)
+`;
+}
+
+// === Embed Code Generator ===
+function showEmbedPane(type) {
+  document.querySelectorAll('.embed-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.embed-pane').forEach(p => p.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+
+  const paneMap = { helpline: 'embedHelpline', myth: 'embedMyth', odds: 'embedOdds' };
+  document.getElementById(paneMap[type]).classList.add('active');
+}
+
+function updateEmbedCodes() {
+  const helpline = document.getElementById('helplineNumber').value || '1-800-522-4700';
+  const minAge = document.getElementById('minAge').value || '21';
+  const primary = document.getElementById('colorPrimary').value;
+  const secondary = document.getElementById('colorSecondary').value;
+  const accent = document.getElementById('colorAccent').value;
+  const widgetSrc = 'https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/widgets/dist/playbook-widgets.js';
+
+  document.getElementById('embedCodeHelpline').textContent =
+`<script src="${widgetSrc}"><\/script>
+
+<playbook-helpline
+  number="${helpline}"
+  label="Free 24/7 support"
+  theme="dark"
+  mode="banner">
+</playbook-helpline>`;
+
+  document.getElementById('embedCodeMyth').textContent =
+`<script src="${widgetSrc}"><\/script>
+
+<playbook-myth
+  category="slots"
+  api-url="https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/api/myths.json">
+</playbook-myth>`;
+
+  document.getElementById('embedCodeOdds').textContent =
+`<script src="${widgetSrc}"><\/script>
+
+<playbook-odds
+  game="blackjack"
+  theme="dark">
+</playbook-odds>`;
+}
+
+function copyEmbedCode(type) {
+  const codeMap = {
+    helpline: 'embedCodeHelpline',
+    myth: 'embedCodeMyth',
+    odds: 'embedCodeOdds',
+  };
+  const code = document.getElementById(codeMap[type]).textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    const btn = event.currentTarget;
+    btn.textContent = 'Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
+  });
+}
+
+// === No-op: cards now use responsive sizing ===
+function scalePreviewCards() {}
+
+// === Init ===
+document.addEventListener('DOMContentLoaded', () => {
+  syncColor('colorPrimary', 'colorPrimaryHex');
+  syncColor('colorSecondary', 'colorSecondaryHex');
+  syncColor('colorAccent', 'colorAccentHex');
+  initPresets();
+  initLogoUpload();
+
+  // Split slider events
+  const nameInput = document.getElementById('programName');
+  const splitSlider = document.getElementById('splitSlider');
+  const noSplitCheck = document.getElementById('noSplitCheck');
+  nameInput.addEventListener('input', () => { updateSplitSlider(); updatePreview(); });
+  splitSlider.addEventListener('input', () => { updateWordmarkPreview(); updatePreview(); });
+  noSplitCheck.addEventListener('change', () => { updateWordmarkPreview(); updatePreview(); });
+
+  // Listen for all input changes
+  document.querySelectorAll('input, select').forEach(el => {
+    el.addEventListener('input', () => { updatePreview(); updateEmbedCodes(); });
+    el.addEventListener('change', () => { updatePreview(); updateEmbedCodes(); });
+  });
+
+  updateSplitSlider();
+  updatePreview();
+  updateEmbedCodes();
+  scalePreviewCards();
+  window.addEventListener('resize', scalePreviewCards);
+});
+</script>
+
+</body>
+</html>
