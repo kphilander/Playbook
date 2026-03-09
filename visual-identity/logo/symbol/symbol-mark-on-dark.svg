@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  
+  <!-- Left page -->
+  <rect x="14" y="14" width="16" height="36" rx="2" fill="#FFFFFF"/>
+  <!-- Right page = play triangle -->
+  <polygon points="34,14 54,32 34,50" fill="#00D4AA"/>
+</svg>

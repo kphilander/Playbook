@@ -7,6 +7,7 @@
  *   B2 (horizontal) × 5 color modes
  *   Helpline badge × 2
  *   Favicon (stacked compact)
+ *   Symbol mark (text-free brand icon) × 5
  *
  * Font: Inter (must be installed or loaded via CSS for rendering).
  * For production distribution, convert text to outlines in your design tool.
@@ -27,8 +28,9 @@ const PRIMARY = join(LOGO_DIR, 'primary');
 const SECONDARY = join(LOGO_DIR, 'secondary');
 const FAVICON_DIR = join(LOGO_DIR, 'favicon');
 const HELPLINE_DIR = join(LOGO_DIR, 'helpline-badge');
+const SYMBOL_DIR = join(LOGO_DIR, 'symbol');
 
-[PRIMARY, SECONDARY, FAVICON_DIR, HELPLINE_DIR].forEach(d => mkdirSync(d, { recursive: true }));
+[PRIMARY, SECONDARY, FAVICON_DIR, HELPLINE_DIR, SYMBOL_DIR].forEach(d => mkdirSync(d, { recursive: true }));
 
 /* ─── Brand colors (from _brand.yml) ────────────────────────────── */
 
@@ -110,6 +112,24 @@ function favicon(playColor, bookColor, bg = null) {
   return svgWrap(s, s, content, bg);
 }
 
+/* ─── Symbol mark ──────────────────────────────────────────────── */
+// Text-free brand icon: left page (rectangle) + right page (play triangle).
+// Two bold geometric shapes sharing a spine edge — reads as both
+// "book" and "play" in one unified mark. Pure geometry, no curves.
+
+function symbolMark(bookColor, playColor, bg = null) {
+  const s = 64;
+  const bgRect = bg ? `<rect width="${s}" height="${s}" rx="14" fill="${bg}"/>` : '';
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${s}" height="${s}" viewBox="0 0 ${s} ${s}">
+  ${bgRect}
+  <!-- Left page -->
+  <rect x="14" y="14" width="16" height="36" rx="2" fill="${bookColor}"/>
+  <!-- Right page = play triangle -->
+  <polygon points="34,14 54,32 34,50" fill="${playColor}"/>
+</svg>
+`;
+}
+
 /* ─── Generate all variants ─────────────────────────────────────── */
 
 const files = [];
@@ -173,6 +193,23 @@ write(FAVICON_DIR, 'favicon-reversed.svg',
 write(FAVICON_DIR, 'favicon-mono-white.svg',
   favicon(C.white, C.n300, C.black));
 
+// ── Symbol mark (text-free brand icon) ──
+
+write(SYMBOL_DIR, 'symbol-mark.svg',
+  symbolMark(C.white, C.teal, C.navy));
+
+write(SYMBOL_DIR, 'symbol-mark-on-light.svg',
+  symbolMark(C.navy, C.teal));
+
+write(SYMBOL_DIR, 'symbol-mark-on-dark.svg',
+  symbolMark(C.white, C.teal));
+
+write(SYMBOL_DIR, 'symbol-mark-mono-dark.svg',
+  symbolMark(C.navy, C.navy));
+
+write(SYMBOL_DIR, 'symbol-mark-mono-white.svg',
+  symbolMark(C.white, C.white, C.black));
+
 /* ─── Summary ───────────────────────────────────────────────────── */
 
 console.log(`✓ Generated ${files.length} logo files:\n`);
@@ -184,6 +221,9 @@ console.log('\n  Helpline badge:');
 files.filter(f => f.includes('/helpline-badge/')).forEach(f => console.log(`    ${f}`));
 console.log('\n  Favicon:');
 files.filter(f => f.includes('/favicon/')).forEach(f => console.log(`    ${f}`));
+console.log('\n  Symbol mark (text-free brand icon):');
+files.filter(f => f.includes('/symbol/')).forEach(f => console.log(`    ${f}`));
 console.log(`\nTotal: ${files.length} files`);
-console.log('\nNote: SVGs use Inter via Google Fonts @import. For production');
+console.log('\nNote: Wordmark SVGs use Inter via Google Fonts @import. For production');
 console.log('distribution, convert text to outlines in your design tool.');
+console.log('Symbol marks are pure geometry — no font dependencies.');
