@@ -947,6 +947,67 @@
     .pb-demo-launch-btn { padding: 14px 36px; font-size: 1rem; }
   }
 
+  /* === RG Page Preview Card === */
+  .pb-rg-page-card {
+    background: var(--pb-color-primary);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(26,26,46,0.18);
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .pb-rg-page-header {
+    padding: 16px 20px;
+    background: var(--pb-color-primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pb-rg-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+  }
+  .pb-rg-dot:first-child { background: #FF5F57; }
+  .pb-rg-dot:nth-child(2) { background: #FEBC2E; }
+  .pb-rg-dot:nth-child(3) { background: #28C840; }
+  .pb-rg-page-url {
+    flex: 1; text-align: center;
+    font-family: var(--pb-font-mono);
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.4);
+  }
+  .pb-rg-page-body {
+    padding: 32px;
+    text-align: center;
+  }
+  .pb-rg-page-body h3 {
+    font-size: 1.5rem; font-weight: 800;
+    color: #fff; margin-bottom: 8px;
+  }
+  .pb-rg-page-body p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    max-width: 480px;
+    margin-left: auto; margin-right: auto;
+  }
+  .pb-rg-page-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .pb-rg-page-pill {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: var(--pb-font-heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+  }
+
   /* === Collateral Gallery — Compact Strips === */
   .pb-gallery-compact {
     display: flex;
@@ -1816,6 +1877,7 @@
     <a href="#messaging">Messages</a>
     <a href="#identity">Identity</a>
     <a href="#adaptation">Adaptation</a>
+    <a href="#rg-page">RG Page</a>
     <a href="#collateral">Templates</a>
     <a href="/tools/playbook/about.html">About Playbook</a>
     <a href="#testing">Testing</a>
@@ -1882,9 +1944,9 @@
       <div class="pb-container">
         <div class="pb-reveal">
           <div class="pb-section-label">Messaging Library</div>
-          <h2 class="pb-section-heading">Two Pillars. 74 Messages.</h2>
+          <h2 class="pb-section-heading">Two Pillars. Coded for Every Touchpoint.</h2>
           <p class="pb-section-desc">
-            Every piece of Playbook content flows from two brand pillars. They set the tone, frame the message, and keep everything on-brand across touchpoints.
+            Every piece of Playbook content flows from two brand pillars &mdash; Open and Social. Each message carries a pillar code, tone register, and tier tag, so teams can mix, filter, and deploy the right message for any channel.
           </p>
         </div>
 
@@ -2156,14 +2218,51 @@
       </div>
     </section>
 
+    <!-- ===== Section 6b: Operator RG Page ===== -->
+    <section class="pb-section-alt" id="rg-page">
+      <div class="pb-container">
+        <div class="pb-reveal" style="text-align: center;">
+          <div class="pb-section-label">Operator Template</div>
+          <h2 class="pb-section-heading">Your Responsible Gambling Page</h2>
+          <p class="pb-section-desc">
+            A complete, deployable responsible gambling page with odds transparency, limit-setting tools, myth-busters, self-exclusion pathways, and helpline resources &mdash; all customizable through the configurator.
+          </p>
+        </div>
+
+        <div class="pb-rg-page-card pb-reveal">
+          <div class="pb-rg-page-header">
+            <span class="pb-rg-dot"></span>
+            <span class="pb-rg-dot"></span>
+            <span class="pb-rg-dot"></span>
+            <span class="pb-rg-page-url">yoursite.com/responsible-gambling</span>
+          </div>
+          <div class="pb-rg-page-body">
+            <h3>Play on <span style="color: var(--pb-color-secondary);">your terms.</span></h3>
+            <p>Every game has math. Every player has choices. Know the odds, use the tools, and decide what works for you.</p>
+            <div class="pb-rg-page-sections">
+              <span class="pb-rg-page-pill">Know the Odds</span>
+              <span class="pb-rg-page-pill">Set Your Limits</span>
+              <span class="pb-rg-page-pill">Myths vs. Math</span>
+              <span class="pb-rg-page-pill">Take a Break</span>
+              <span class="pb-rg-page-pill">Get Support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pb-reveal" style="text-align: center; margin-top: 32px;">
+          <a href="/tools/playbook/templates/rg-page" style="display: inline-flex; align-items: center; gap: 8px; padding: 13px 28px; border-radius: 8px; font-family: var(--pb-font-heading); font-weight: 700; font-size: 0.9rem; background: var(--pb-color-accent); color: var(--pb-color-primary); transition: transform 0.2s, box-shadow 0.2s;">View the RG Page Template &rarr;</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Section 7: Collateral Gallery ===== -->
     <section class="pb-section" id="collateral">
       <div class="pb-container">
         <div class="pb-reveal">
           <div class="pb-section-label">Collateral Templates</div>
-          <h2 class="pb-section-heading">41 Ready-to-Deploy Templates</h2>
+          <h2 class="pb-section-heading">Ready-to-Deploy Templates</h2>
           <p class="pb-section-desc">
-            Social cards, story templates, posters, email templates, venue signage, digital displays, print materials, and support/crisis screens. Each template has a production-ready HTML source and PNG render.
+            A constantly growing library of social cards, story templates, posters, email templates, venue signage, digital displays, print materials, and support screens. Each template ships with a production-ready HTML source and PNG render.
           </p>
         </div>
 
