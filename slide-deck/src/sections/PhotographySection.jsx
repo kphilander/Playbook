@@ -21,7 +21,8 @@ export default function PhotographySection() {
     <div className="px-6 sm:px-10 lg:px-16 py-24 lg:py-32 max-w-6xl mx-auto">
       <SectionHeading
         label="Visual Identity"
-        title="Photography & Illustration"
+        title="Photography &"
+        titleAccent="Illustration"
         subtitle="Real people, real moments. Natural lighting. Social settings. No stereotypes, no stock cliches."
       />
 

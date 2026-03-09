@@ -66,7 +66,7 @@ export default function AccessibilitySection() {
             {legalFrameworks.map((f, i) => (
               <div key={i} className="text-center">
                 <p className="font-heading text-lg font-bold text-teal">{f.region}</p>
-                <p className="font-mono text-[10px] text-n500 mt-1">{f.law}</p>
+                <p className="font-mono text-[10px] text-n300 mt-1">{f.law}</p>
               </div>
             ))}
           </div>

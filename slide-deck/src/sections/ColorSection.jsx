@@ -6,7 +6,7 @@ import { colorPalette } from '../data/slideContent';
 function SwatchGroup({ title, swatches, accentColor }) {
   return (
     <div>
-      <h3 className="font-heading text-sm font-bold text-n500 tracking-wider uppercase mb-4">{title}</h3>
+      <h3 className="font-heading text-sm font-bold text-n300 tracking-wider uppercase mb-4">{title}</h3>
       <div className="space-y-3">
         {swatches.map((s, i) => (
           <div key={i} className="flex items-center gap-4 group">
@@ -17,7 +17,7 @@ function SwatchGroup({ title, swatches, accentColor }) {
             />
             <div className="flex-1 min-w-0">
               <p className="font-heading text-sm font-bold text-white">{s.name}</p>
-              <p className="font-body text-xs text-n500">{s.role}</p>
+              <p className="font-body text-xs text-n300">{s.role}</p>
             </div>
             <CopyButton value={s.hex} />
           </div>
@@ -34,7 +34,7 @@ function ContrastDemo({ fg, bg, fgLabel, bgLabel, ratio, pass }) {
         <span className="font-heading text-lg font-bold">Aa</span>
       </div>
       <div className="px-4 py-3 bg-white/[0.02] flex items-center justify-between">
-        <span className="font-mono text-[10px] text-n500">{fgLabel} on {bgLabel}</span>
+        <span className="font-mono text-[10px] text-n300">{fgLabel} on {bgLabel}</span>
         <span className={`font-mono text-[10px] font-bold px-2 py-0.5 rounded-full
           ${pass ? 'bg-success/20 text-success' : 'bg-danger/20 text-danger'}`}>
           {ratio} {pass ? 'AA' : 'FAIL'}
@@ -49,7 +49,8 @@ export default function ColorSection() {
     <div className="px-6 sm:px-10 lg:px-16 py-24 lg:py-32 max-w-6xl mx-auto">
       <SectionHeading
         label="Visual Identity"
-        title="Color System"
+        title="Color"
+        titleAccent="System"
         subtitle="A three-tone palette: deep navy for trust, electric teal for action, bold orange for attention. Click any hex code to copy."
       />
 
@@ -68,7 +69,7 @@ export default function ColorSection() {
 
       {/* Semantic colors */}
       <ScrollReveal className="mb-16">
-        <h3 className="font-heading text-sm font-bold text-n500 tracking-wider uppercase mb-4">Semantic</h3>
+        <h3 className="font-heading text-sm font-bold text-n300 tracking-wider uppercase mb-4">Semantic</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {colorPalette.semantic.map((s, i) => (
             <div key={i} className="rounded-xl border border-white/[0.06] overflow-hidden">
@@ -84,7 +85,7 @@ export default function ColorSection() {
 
       {/* Contrast reference */}
       <ScrollReveal>
-        <h3 className="font-heading text-sm font-bold text-n500 tracking-wider uppercase mb-4">
+        <h3 className="font-heading text-sm font-bold text-n300 tracking-wider uppercase mb-4">
           Contrast Reference — WCAG 2.1 AA
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">

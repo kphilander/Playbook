@@ -48,7 +48,7 @@ function LogoCard({ logo }) {
       </div>
       <div className="px-4 py-3 bg-white/[0.02]">
         <p className="font-heading text-xs font-medium text-n300">{logo.name}</p>
-        <p className="font-mono text-[10px] text-n700 mt-0.5">{logo.file}</p>
+        <p className="font-mono text-[10px] text-n500 mt-0.5">{logo.file}</p>
       </div>
     </div>
   );
@@ -59,7 +59,8 @@ export default function LogoSection() {
     <div className="px-6 sm:px-10 lg:px-16 py-24 lg:py-32 max-w-6xl mx-auto">
       <SectionHeading
         label="Visual Identity"
-        title="Logo System"
+        title="Logo"
+        titleAccent="System"
         subtitle="The PlayBOOK wordmark combines bold confidence (Play) with open accessibility (BOOK). Available in 10 primary variants plus favicons and badges."
       />
 
@@ -70,9 +71,9 @@ export default function LogoSection() {
             <span className="font-extrabold text-white">Play</span>
             <span className="font-light text-teal">BOOK</span>
           </h1>
-          <div className="flex items-center justify-center gap-8 text-xs font-mono text-n500">
+          <div className="flex items-center justify-center gap-8 text-xs font-mono text-n300">
             <span><span className="text-white font-bold">Play</span> — Inter 800</span>
-            <span className="text-n700">|</span>
+            <span className="text-n500">|</span>
             <span><span className="text-teal font-light">BOOK</span> — Inter 300</span>
           </div>
         </div>
