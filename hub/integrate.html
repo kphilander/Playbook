@@ -298,6 +298,7 @@
     border-radius: 12px; padding: 28px 24px;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex; flex-direction: column;
+    min-width: 0;
   }
   .path-card:hover { transform: translateY(-4px); box-shadow: var(--pb-shadow-lg); }
   .path-card::before {
@@ -311,7 +312,7 @@
   }
   .path-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
   .path-card p { font-size: 0.88rem; color: var(--pb-text-secondary); line-height: 1.6; margin-bottom: 16px; }
-  .path-card .pb-code-block { font-size: 0.75rem; padding: 14px 16px; margin: 12px 0 0; }
+  .path-card .pb-code-block { font-size: 0.75rem; padding: 14px 16px; margin: 12px 0 0; overflow-x: auto; }
   .path-card > a:last-child { color: var(--pb-color-secondary); font-weight: 600; font-size: 0.88rem; margin-top: auto; display: inline-block; padding-top: 12px; }
   .path-card a { color: var(--pb-color-secondary); font-weight: 600; font-size: 0.88rem; }
 
