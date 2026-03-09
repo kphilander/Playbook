@@ -16,7 +16,8 @@ export default function MessagingSection() {
     <div className="px-6 sm:px-10 lg:px-16 py-24 lg:py-32 max-w-6xl mx-auto">
       <SectionHeading
         label="Messaging"
-        title="Voice in Action"
+        title="Voice in"
+        titleAccent="Action"
         subtitle="How the brand pillars translate into taglines, rewrites, and calls-to-action."
       />
 
@@ -69,7 +70,7 @@ export default function MessagingSection() {
           <ScrollReveal key={i} delay={i * 100}>
             <div className="rounded-xl border border-white/[0.06] overflow-hidden">
               <div className="px-5 py-3 bg-white/[0.03] border-b border-white/[0.06]">
-                <span className="font-heading text-xs font-bold text-n500 tracking-wider uppercase">{r.label}</span>
+                <span className="font-heading text-xs font-bold text-n300 tracking-wider uppercase">{r.label}</span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="p-5 border-b md:border-b-0 md:border-r border-white/[0.06]">
@@ -77,7 +78,7 @@ export default function MessagingSection() {
                     <X size={14} className="text-orange" />
                     <span className="font-heading text-xs font-bold text-orange uppercase">Before</span>
                   </div>
-                  <p className="font-body text-sm text-n500 italic leading-relaxed">{r.before}</p>
+                  <p className="font-body text-sm text-n300 italic leading-relaxed">{r.before}</p>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">

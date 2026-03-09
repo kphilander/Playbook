@@ -52,7 +52,7 @@ export default function Sidebar({ sections, activeSection }) {
               <span className="font-heading text-xl font-extrabold text-white">Play</span>
               <span className="font-heading text-xl font-light text-teal">BOOK</span>
             </div>
-            <p className="font-body text-xs text-n500 tracking-wide uppercase">Brand Guide</p>
+            <p className="font-body text-xs text-n300 tracking-wide uppercase">Brand Guide</p>
           </a>
         </div>
 
@@ -69,7 +69,7 @@ export default function Sidebar({ sections, activeSection }) {
                 border-l-2
                 ${s.id === activeSection
                   ? 'text-teal border-teal bg-teal/[0.06]'
-                  : 'text-n500 hover:text-n300 border-transparent hover:border-white/10'
+                  : 'text-n300 hover:text-white border-transparent hover:border-white/10'
                 }`}
             >
               {s.label}
@@ -79,7 +79,7 @@ export default function Sidebar({ sections, activeSection }) {
 
         {/* Footer */}
         <div className="px-6 py-4 border-t border-white/[0.06]">
-          <p className="font-mono text-[11px] text-n700">Creative Commons</p>
+          <p className="font-mono text-[11px] text-n500">Creative Commons</p>
         </div>
       </nav>
 

@@ -10,7 +10,8 @@ export default function BrandStorySection() {
       {/* ── The Engagement Gap ── */}
       <SectionHeading
         label="The Problem"
-        title="The Engagement Gap"
+        title="The Engagement"
+        titleAccent="Gap"
         subtitle="Responsible gambling materials are invisible — buried, clinical, and ignored. Here's what exists vs. what's needed."
       />
 
@@ -109,7 +110,7 @@ export default function BrandStorySection() {
                   {tier.pct}
                 </span>
                 <div>
-                  <span className="font-heading text-xs font-bold tracking-wider uppercase text-n500 block">
+                  <span className="font-heading text-xs font-bold tracking-wider uppercase text-n300 block">
                     {tier.label}
                   </span>
                   <span className="font-heading text-lg font-bold text-white">
@@ -117,7 +118,7 @@ export default function BrandStorySection() {
                   </span>
                 </div>
               </div>
-              <p className="font-body text-sm text-n500 italic mb-4">{tier.voice}</p>
+              <p className="font-body text-sm text-n300 italic mb-4">{tier.voice}</p>
               <ul className="space-y-2">
                 {tier.items.map((item, j) => (
                   <li key={j} className="flex items-start gap-2 font-body text-sm text-n300">

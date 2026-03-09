@@ -8,7 +8,8 @@ export default function GovernanceSection() {
     <div className="px-6 sm:px-10 lg:px-16 py-24 lg:py-32 max-w-6xl mx-auto">
       <SectionHeading
         label="Operations"
-        title="Governance & Evolution"
+        title="Governance &"
+        titleAccent="Evolution"
         subtitle="Open source means you control the brand. Expert-maintained upstream means you don't have to do it alone."
       />
 
@@ -65,9 +66,9 @@ export default function GovernanceSection() {
             <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 relative">
               <span className="font-mono text-3xl font-bold text-teal/20">{p.phase}</span>
               <h4 className="font-heading text-sm font-bold text-white mt-2 mb-1">{p.name}</h4>
-              <p className="font-body text-xs text-n500 leading-relaxed">{p.desc}</p>
+              <p className="font-body text-xs text-n300 leading-relaxed">{p.desc}</p>
               {i < adoptionPhases.length - 1 && (
-                <ArrowRight size={16} className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 text-n700" />
+                <ArrowRight size={16} className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 text-n500" />
               )}
             </div>
           ))}

@@ -9,7 +9,8 @@ export default function GetStartedSection() {
     <div className="px-6 sm:px-10 lg:px-16 py-24 lg:py-32 max-w-6xl mx-auto">
       <SectionHeading
         label="Get Started"
-        title="Start building."
+        title="Start"
+        titleAccent="building."
         subtitle="Four steps from fork to launch. No licensing, no fees, no permission needed."
       />
 
@@ -34,7 +35,7 @@ export default function GetStartedSection() {
       {/* URL callout */}
       <ScrollReveal className="mb-16">
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 sm:p-12 text-center">
-          <p className="font-mono text-sm text-n500 mb-2">Visit</p>
+          <p className="font-mono text-sm text-n300 mb-2">Visit</p>
           <p className="font-mono text-2xl sm:text-3xl font-bold text-teal">
             gamblingpolicy.com/playbook
           </p>
@@ -76,13 +77,13 @@ export default function GetStartedSection() {
       {/* Helpline footer */}
       <ScrollReveal>
         <div className="rounded-xl bg-navy-light border border-white/[0.06] p-6 text-center">
-          <p className="font-body text-sm text-n500 mb-1">
+          <p className="font-body text-sm text-n300 mb-1">
             If you or someone you know needs support:
           </p>
           <p className="font-mono text-lg font-bold text-white">
             1-800-522-4700
           </p>
-          <p className="font-body text-xs text-n700 mt-1">
+          <p className="font-body text-xs text-n500 mt-1">
             National Council on Problem Gambling &mdash; 24/7, free, confidential
           </p>
         </div>

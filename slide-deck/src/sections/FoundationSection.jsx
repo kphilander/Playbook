@@ -10,7 +10,8 @@ export default function FoundationSection() {
       {/* ── Brand Pillars ── */}
       <SectionHeading
         label="Foundation"
-        title="Two pillars. One philosophy."
+        title="Two pillars."
+        titleAccent="One philosophy."
         subtitle="Every piece of Playbook content is built on two ideas: radical transparency and social shareability."
       />
 
@@ -90,7 +91,7 @@ export default function FoundationSection() {
                     ${i === 0 ? 'text-teal' : 'text-orange'}`}>{arch.role}</span>
                 </div>
               </div>
-              <p className="font-body text-sm text-n500 italic mb-4">{arch.tagline}</p>
+              <p className="font-body text-sm text-n300 italic mb-4">{arch.tagline}</p>
               <ul className="space-y-2 mb-5">
                 {arch.traits.map((trait, j) => (
                   <li key={j} className="font-body text-sm text-n300">&bull; {trait}</li>
@@ -108,7 +109,7 @@ export default function FoundationSection() {
       {/* Personality Spectrum */}
       <ScrollReveal>
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8 mb-24">
-          <h4 className="font-heading text-sm font-bold text-n500 tracking-wider uppercase mb-6">
+          <h4 className="font-heading text-sm font-bold text-n300 tracking-wider uppercase mb-6">
             Personality Spectrum
           </h4>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
