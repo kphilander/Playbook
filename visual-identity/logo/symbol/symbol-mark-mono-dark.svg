@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  
+  <!-- Open book: two pages meeting at center spine -->
+  <path d="M32 14 C28 14 16 16 12 18 L12 48 C16 46 28 44 32 44 Z" fill="#1B2838" opacity="0.9"/>
+  <path d="M32 14 C36 14 48 16 52 18 L52 48 C48 46 36 44 32 44 Z" fill="#1B2838" opacity="0.9"/>
+  <!-- Spine (thin center line, lighter) -->
+  <rect x="31" y="14" width="2" height="30" fill="#1B2838" opacity="0.4"/>
+  <!-- Play triangle on right page -->
+  <polygon points="38,24 38,38 49,31" fill="#1B2838"/>
+</svg>

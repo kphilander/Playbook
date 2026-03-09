@@ -1,6 +1,6 @@
 # Logo
 
-15 SVG logo variants organized by use case. All logos are generated from [`_brand.yml`](../../_brand.yml) by running `node collateral/render/build-logos.mjs`.
+20 SVG logo variants organized by use case. All logos are generated from [`_brand.yml`](../../_brand.yml) by running `node collateral/render/build-logos.mjs`.
 
 ## Variants
 
@@ -39,7 +39,20 @@
 | [helpline-badge-light.svg](helpline-badge/helpline-badge-light.svg) | Light backgrounds |
 | [helpline-badge-dark.svg](helpline-badge/helpline-badge-dark.svg) | Dark backgrounds |
 
+### [Symbol Mark](symbol/) — Text-free brand icon
+
+An open book with a play triangle — the "Playbook" concept as pure geometry. No font dependencies. Works at any size from 16px favicons to 512px app icons.
+
+| File | Use |
+|------|-----|
+| [symbol-mark.svg](symbol/symbol-mark.svg) | Primary — navy container, white book, teal play triangle |
+| [symbol-mark-on-light.svg](symbol/symbol-mark-on-light.svg) | Light backgrounds — navy book, teal play, no container |
+| [symbol-mark-on-dark.svg](symbol/symbol-mark-on-dark.svg) | Dark backgrounds — white book, teal play, no container |
+| [symbol-mark-mono-dark.svg](symbol/symbol-mark-mono-dark.svg) | Monochrome dark — all navy, no container |
+| [symbol-mark-mono-white.svg](symbol/symbol-mark-mono-white.svg) | Monochrome white — white on black container |
+
 ## Notes
 
-- SVGs use Inter via Google Fonts `@import`. For production distribution, convert text to outlines in your design tool.
+- Wordmark SVGs use Inter via Google Fonts `@import`. For production distribution, convert text to outlines in your design tool.
+- Symbol marks are pure geometry — no font dependencies.
 - Logo usage rules are in [Brand Book — Visual Identity](../../brand-book/03-visual-identity.md).
