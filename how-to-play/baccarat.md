@@ -64,7 +64,7 @@ Everything you need to know about baccarat — the rules, the three bets, and wh
 
 ---
 
-<!-- TODO: Add hero image once collateral/render/htp-card-baccarat.png is created -->
+![Baccarat](../collateral/render/htp-card-baccarat.png)
 
 ---
 
@@ -206,9 +206,9 @@ When a Tie occurs and you bet Banker or Player, your main bet is returned (it's 
 |------|-----------|-----------|
 | Betting Systems Beat the House | Martingale = delayed ruin | [Myth 7](../messaging/myth-busting.md#myth-7-betting-systems-beat-the-house) |
 | The Dealer Is Hot or Cold | Dealers follow a script | [Myth 8](../messaging/myth-busting.md#myth-8-the-dealer-is-hot-or-cold) |
-| Scorecards reveal patterns | Past hands don't influence future hands — each deal is independent | <!-- TODO: Link to myth-busting.md entry once created --> |
-| The Banker bet "always" wins | Banker wins 50.68% of decided hands — slightly more, not always | <!-- TODO: Link to myth-busting.md entry once created --> |
-| No-commission tables are better | They compensate with modified payouts — check the actual house edge | <!-- TODO: Link to myth-busting.md entry once created --> |
+| Scorecards reveal patterns | Past hands don't influence future hands — each deal is independent | |
+| The Banker bet "always" wins | Banker wins 50.68% of decided hands — slightly more, not always | |
+| No-commission tables are better | They compensate with modified payouts — check the actual house edge | |
 
 ---
 

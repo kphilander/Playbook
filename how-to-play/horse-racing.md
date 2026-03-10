@@ -63,7 +63,7 @@ Everything you need to know about betting on horse racing — how the odds work,
 
 ---
 
-<!-- TODO: Add hero image once collateral/render/htp-card-horse-racing.png is created -->
+![Horse Racing](../collateral/render/htp-card-horse-racing.png)
 
 ---
 
@@ -98,8 +98,6 @@ The bookmaker sets odds on each horse, and you lock in those odds when you place
 2. **Place your bet.** Choose your bet type (win, place, exacta, etc.), select your horse(s), and set your wager amount.
 3. **Horses run the race.** The outcome depends on a complex mix of horse ability, jockey skill, track conditions, distance, pace, positioning, and plain luck.
 4. **Results are official.** Once stewards confirm the finishing order (and check for fouls or objections), winning bets are paid.
-
-<!-- TODO: Add section on how to read a race card / form guide — consider a visual diagram -->
 
 ---
 
@@ -221,11 +219,11 @@ The less popular the horse, the higher the payout — but popularity often refle
 
 | Myth | One-liner | Full entry |
 |------|-----------|-----------|
-| Tipsters have consistent accuracy | Survivorship bias — you hear about the wins, not the losses | <!-- TODO: Link to myth-busting.md entry once created --> |
-| "Sure things" exist in racing | No outcome in horse racing is certain — that's why there are odds | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Past form guarantees future results | Form is context, not prediction — conditions change every race | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Lighter jockeys make horses faster | Weight matters, but it's one variable among many — track, distance, pace, and horse fitness matter more | <!-- TODO: Link to myth-busting.md entry once created --> |
-| You can "read" the paddock and know the winner | Paddock appearance is subjective and unreliable — a calm horse isn't necessarily a fast horse | <!-- TODO: Link to myth-busting.md entry once created --> |
+| Tipsters have consistent accuracy | Survivorship bias — you hear about the wins, not the losses | |
+| "Sure things" exist in racing | No outcome in horse racing is certain — that's why there are odds | |
+| Past form guarantees future results | Form is context, not prediction — conditions change every race | |
+| Lighter jockeys make horses faster | Weight matters, but it's one variable among many — track, distance, pace, and horse fitness matter more | |
+| You can "read" the paddock and know the winner | Paddock appearance is subjective and unreliable — a calm horse isn't necessarily a fast horse | |
 
 ---
 

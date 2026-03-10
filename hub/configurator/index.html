@@ -13,6 +13,7 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
+<link rel="stylesheet" href="/tools/playbook/hub/hub-shared.css">
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8RKL2CEM2"></script>
@@ -24,10 +25,8 @@
 </script>
 
 <style>
-  /* === Reset === */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 16px; }
-  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #f0f2f5; color: #1a2a3a; line-height: 1.6; }
+  /* === Page-specific base === */
+  body { background: #f0f2f5; color: #1a2a3a; line-height: 1.6; }
 
   /* === Header === */
   .page-header { background: linear-gradient(180deg, #1B2838, #0F1923); color: #fff; padding: 28px 40px 24px; }
@@ -191,109 +190,6 @@
   .pv-card .operator-logo-img { max-height: 22px; max-width: 80px; object-fit: contain; }
   .pv-card .operator-placeholder-text { font-size: 8px; color: #6B6B8A; font-style: italic; }
 
-  /* Fact Sheet — letter-sized portrait (8.5×11), header + body + sidebar */
-  .pv-factsheet { width: 100%; max-width: 560px; position: relative; overflow: hidden; display: flex; flex-direction: column; border-radius: 4px; }
-  .pv-factsheet::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA)); z-index: 2; }
-  .pv-factsheet .fs-header { padding: 10px 18px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .pv-factsheet .fs-header .co-brand { display: flex; align-items: center; gap: 8px; }
-  .pv-factsheet .fs-header .co-brand .co-brand-divider { width: 1px; height: 18px; background: #A8A8C0; opacity: 0.4; }
-  .pv-factsheet .fs-header .card-logo { font-size: 12px; }
-  .pv-factsheet .fs-header .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
-  .pv-factsheet .fs-header .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .pv-factsheet .fs-header .operator-logo-img { max-height: 20px; max-width: 70px; object-fit: contain; }
-  .pv-factsheet .fs-badge { font-size: 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 100px; }
-  .pv-factsheet .fs-hero { padding: 12px 18px 10px; position: relative; z-index: 1; }
-  .pv-factsheet .fs-title { font-size: 15px; font-weight: 800; line-height: 1.25; margin-bottom: 6px; letter-spacing: -0.01em; }
-  .pv-factsheet .fs-subtitle { font-size: 7.5px; line-height: 1.6; }
-  .pv-factsheet .fs-content { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; gap: 0; padding: 0 18px 8px; position: relative; z-index: 1; overflow: hidden; }
-  .pv-factsheet .fs-main { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; min-width: 0; padding: 0 10px 10px 0; border-right: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .pv-factsheet .fs-sidebar { grid-column: 2; grid-row: 1; display: flex; flex-direction: column; gap: 4px; padding: 0 0 10px 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-  .pv-factsheet .fs-sample { grid-column: 1; grid-row: 2; display: flex; flex-direction: column; padding: 10px 10px 0 0; border-right: 1px solid rgba(255,255,255,0.1); }
-  .pv-factsheet .fs-lifecycle { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; padding: 10px 0 0 10px; }
-  .pv-factsheet .fs-section-label { font-size: 7px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; margin-top: 10px; }
-  .pv-factsheet .fs-section-label:first-child { margin-top: 0; }
-  .pv-factsheet .fs-text { font-size: 7px; line-height: 1.6; margin-bottom: 0; }
-  .pv-factsheet .fs-callout { background: rgba(255,255,255,0.04); border-left: 2px solid var(--cfg-secondary, #00D4AA); padding: 5px 8px; margin: 6px 0 3px; border-radius: 0 4px 4px 0; }
-  .pv-factsheet .fs-callout-text { font-size: 7px; font-weight: 600; line-height: 1.45; }
-  .pv-factsheet .fs-example-label { font-size: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; text-align: center; padding: 2px 0; margin-top: 3px; }
-  /* Mini myth-buster card */
-  .pv-factsheet .fs-mini-myth { aspect-ratio: 1 / 1; display: flex; flex-direction: column; position: relative; overflow: hidden; border-radius: 3px; }
-  .pv-factsheet .fs-mini-myth::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA)); z-index: 1; }
-  .pv-factsheet .fs-mini-myth .mini-header { padding: 6px 8px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .pv-factsheet .fs-mini-myth .mini-logo { font-size: 7px; }
-  .pv-factsheet .fs-mini-myth .mini-logo .logo-play { font-weight: 800; color: #fff; letter-spacing: -0.02em; }
-  .pv-factsheet .fs-mini-myth .mini-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .pv-factsheet .fs-mini-myth .mini-pillar { font-size: 4.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 100px; }
-  .pv-factsheet .fs-mini-myth .mini-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 8px; position: relative; z-index: 1; }
-  .pv-factsheet .fs-mini-myth .mini-myth-label { font-size: 4.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
-  .pv-factsheet .fs-mini-myth .mini-myth-statement { font-size: 10px; font-weight: 800; line-height: 1.15; margin-bottom: 4px; letter-spacing: -0.02em; }
-  .pv-factsheet .fs-mini-myth .mini-myth-statement .strike { text-decoration: line-through; text-decoration-thickness: 1.5px; }
-  .pv-factsheet .fs-mini-myth .mini-fact { font-size: 6px; line-height: 1.45; }
-  .pv-factsheet .fs-mini-myth .mini-fact strong { font-weight: 600; }
-  .pv-factsheet .fs-mini-myth .mini-stat { margin-top: 4px; display: flex; align-items: baseline; gap: 3px; }
-  .pv-factsheet .fs-mini-myth .mini-stat-number { font-size: 17px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; }
-  .pv-factsheet .fs-mini-myth .mini-stat-unit { font-size: 5.5px; font-weight: 600; line-height: 1.3; }
-  .pv-factsheet .fs-mini-myth .mini-footer { padding: 4px 8px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .pv-factsheet .fs-mini-myth .mini-footer-text { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 4px; }
-  .pv-factsheet .fs-mini-myth .mini-footer-legal { font-size: 3.5px; }
-  /* Lifecycle 2×2 cycle diagram */
-  .pv-factsheet .fs-cycle { display: grid; grid-template-columns: 1fr auto 1fr; grid-template-rows: 1fr auto 1fr; gap: 3px; margin-top: 5px; flex: 1; align-content: stretch; }
-  .pv-factsheet .fs-cycle-step { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 5px; padding: 10px 8px 8px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-  .pv-factsheet .fs-cycle-step:nth-child(1) { grid-column: 1; grid-row: 1; }
-  .pv-factsheet .fs-cycle-step:nth-child(3) { grid-column: 3; grid-row: 1; }
-  .pv-factsheet .fs-cycle-step:nth-child(6) { grid-column: 1; grid-row: 3; }
-  .pv-factsheet .fs-cycle-step:nth-child(8) { grid-column: 3; grid-row: 3; }
-  .pv-factsheet .fs-cycle-arrow { display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; line-height: 1; }
-  .pv-factsheet .fs-arrow-right { grid-column: 2; grid-row: 1; }
-  .pv-factsheet .fs-arrow-down-left { grid-column: 1; grid-row: 2; font-size: 12px; }
-  .pv-factsheet .fs-arrow-down-right { grid-column: 3; grid-row: 2; font-size: 10px; }
-  .pv-factsheet .fs-arrow-left { grid-column: 2; grid-row: 3; }
-  .pv-factsheet .fs-cycle-icon { font-size: 16px; margin-bottom: 3px; }
-  .pv-factsheet .fs-cycle-label { font-size: 9px; font-weight: 700; line-height: 1.2; }
-  .pv-factsheet .fs-cycle-desc { font-size: 6.5px; line-height: 1.35; margin-top: 3px; }
-  .pv-factsheet .fs-text-sm { font-size: 6.5px; line-height: 1.5; }
-  .pv-factsheet .fs-quote { font-size: 6.5px; line-height: 1.5; padding: 5px 8px; background: rgba(255,255,255,0.03); border-radius: 4px; border-left: 2px solid var(--cfg-secondary, #00D4AA); font-style: italic; }
-  .pv-factsheet .fs-tag { display: inline-block; font-size: 6.5px; font-weight: 600; padding: 3px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.15); margin: 0 3px 4px 0; }
-  .pv-factsheet .fs-attr { margin-bottom: 5px; }
-  .pv-factsheet .fs-attr-name { font-size: 6.5px; font-weight: 700; line-height: 1.2; }
-  .pv-factsheet .fs-attr-desc { font-size: 5px; font-weight: 400; color: #A8A8C0; line-height: 1.4; margin-top: 1px; }
-  .pv-factsheet .fs-info-box { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 7px 8px; margin-top: 4px; }
-  .pv-factsheet .fs-info-label { font-size: 5.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1px; }
-  .pv-factsheet .fs-info-value { font-size: 7px; font-weight: 600; word-break: break-all; }
-  .pv-factsheet .fs-learn-more { display: flex; flex-direction: column; gap: 4px; margin-top: auto; }
-  .pv-factsheet .fs-link-tile { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 6px 8px; }
-  .pv-factsheet .fs-link-tile-label { font-size: 5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1px; }
-  .pv-factsheet .fs-link-tile-url { font-size: 6px; font-weight: 600; word-break: break-all; }
-  .pv-factsheet .fs-footer { padding: 5px 18px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; margin-top: auto; }
-  .pv-factsheet .footer-text { font-size: 5.5px; }
-
-  /* Partner Announcement — Instagram post with feed chrome */
-  .pv-announce { width: 100%; max-width: 480px; margin: 0 auto; position: relative; overflow: hidden; display: flex; flex-direction: column; border-radius: 4px; background: #fff; border: 1px solid #dbdbdb; }
-  .ig-top-bar { display: flex; align-items: center; gap: 7px; padding: 8px 10px; background: #fff; border-bottom: 1px solid #efefef; }
-  .ig-avatar { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 7px; font-weight: 800; color: #fff; flex-shrink: 0; }
-  .ig-username { font-size: 9px; font-weight: 600; color: #262626; flex: 1; }
-  .ig-dots { color: #262626; font-size: 12px; letter-spacing: 1px; line-height: 1; }
-  .ig-image { width: 100%; aspect-ratio: 1 / 1; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-  .ig-image::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; }
-  .pv-announce .announce-content { position: relative; z-index: 1; padding: 0 24px; max-width: 92%; }
-  .pv-announce .announce-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
-  .pv-announce .announce-cobrand { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 14px; }
-  .pv-announce .announce-cobrand .co-brand-divider { width: 1px; height: 20px; background: #A8A8C0; opacity: 0.4; }
-  .pv-announce .announce-cobrand .card-logo { font-size: 18px; }
-  .pv-announce .announce-cobrand .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
-  .pv-announce .announce-cobrand .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .pv-announce .announce-cobrand .operator-logo-img { max-height: 24px; max-width: 90px; object-fit: contain; }
-  .pv-announce .announce-divider { width: 32px; height: 2px; margin: 0 auto 12px; border-radius: 1px; }
-  .pv-announce .announce-headline { font-size: 16px; font-weight: 800; line-height: 1.25; margin-bottom: 8px; letter-spacing: -0.02em; }
-  .pv-announce .announce-url { font-size: 12px; font-weight: 700; letter-spacing: 0.02em; }
-  .ig-actions { display: flex; align-items: center; padding: 8px 10px 4px; background: #fff; gap: 10px; }
-  .ig-action-icon { width: 16px; height: 16px; }
-  .ig-action-icon svg { width: 100%; height: 100%; }
-  .ig-bookmark { margin-left: auto; }
-  .ig-likes { padding: 0 10px 2px; background: #fff; font-size: 8px; font-weight: 600; color: #262626; }
-  .ig-caption { padding: 2px 10px 8px; background: #fff; }
-  .ig-caption-text { font-size: 8px; color: #262626; line-height: 1.4; }
-  .ig-caption-text strong { font-weight: 600; }
 
   /* Helpline badge preview */
   .pv-badge { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-radius: 12px; }
@@ -628,7 +524,7 @@
       <div class="samples-section">
         <h3>Just want the samples?</h3>
         <p>Download your configured preview cards as ready-to-use PNG images.</p>
-        <div class="samples-grid">
+        <div class="samples-grid" style="grid-template-columns: repeat(3, 1fr);">
           <button class="sample-dl-btn" onclick="downloadSample('pvCard1', 'myth-buster-card')">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Myth-Buster
@@ -639,15 +535,10 @@
             Support Card
             <span>1080 &times; 1080</span>
           </button>
-          <button class="sample-dl-btn" onclick="downloadSample('pvFactSheet', 'fact-sheet')">
+          <button class="sample-dl-btn" onclick="downloadSample('pvBadge', 'helpline-badge')">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Fact Sheet
-            <span>Letter size</span>
-          </button>
-          <button class="sample-dl-btn" onclick="downloadSample('pvAnnounce', 'instagram-post')">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            IG Post
-            <span>1080 &times; 1080</span>
+            Helpline Badge
+            <span>Banner</span>
           </button>
         </div>
       </div>
@@ -794,175 +685,6 @@
         </div>
       </div>
 
-      <!-- Preview Card 3: Program Fact Sheet -->
-      <div class="preview-frame" style="grid-column: 1 / -1;">
-        <div class="preview-frame-label">Program Fact Sheet</div>
-        <div class="pv-factsheet" id="pvFactSheet" style="background: var(--cfg-primary, #1B2838);">
-          <div class="fs-header">
-            <div class="co-brand" id="pvCoBrand">
-              <span id="pvOperatorSlot" class="operator-placeholder-text">Your logo</span>
-              <div class="co-brand-divider"></div>
-              <span class="card-logo" id="pvLogo3"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
-            </div>
-            <span class="fs-badge" id="pvFsBadge" style="background: var(--cfg-secondary, #00D4AA); color: var(--cfg-primary, #1B2838);">Responsible Gambling Program</span>
-          </div>
-          <div class="fs-hero">
-            <div class="fs-title" style="color: #fff;" id="pvFsTitle">Why Your Organization should adopt Playbook</div>
-            <div class="fs-subtitle" style="color: #A8A8C0;" id="pvFsSubtitle"><span class="fs-program-name">Playbook</span> is an open-source responsible gambling brand system grounded in the informed choice framework. It was designed by a researcher and practitioner in responsible gambling, and is actively maintained so that new research can be incorporated as the field evolves.</div>
-          </div>
-          <div class="fs-content">
-            <div class="fs-main">
-              <div class="fs-section-label" style="color: var(--cfg-secondary, #00D4AA);">Why choose <span class="fs-program-name">Playbook</span></div>
-              <div class="fs-text" style="color: #A8A8C0;">Most responsible gambling materials are produced ad hoc &mdash; inconsistent design, unreviewed claims, and little grounding in what actually influences player behavior. <span class="fs-program-name">Playbook</span> replaces that approach with a professionally designed brand system built from peer-reviewed research. Every message, template, and visual asset is designed to communicate gambling mechanics in ways players understand and retain.</div>
-
-              <div class="fs-callout">
-                <div class="fs-callout-text" style="color: #fff;">Open-source (CC0 1.0) &mdash; no licensing fees, no vendor lock-in, fully customizable to your brand</div>
-              </div>
-              <div class="fs-callout" style="border-left-color: var(--cfg-accent, #FF6B35);">
-                <div class="fs-callout-text" style="color: #fff;">Actively maintained by researchers &mdash; content evolves as the science of player education advances</div>
-              </div>
-              <div class="fs-callout">
-                <div class="fs-callout-text" style="color: #fff;">Built on the informed choice framework &mdash; giving players knowledge to make their own decisions</div>
-              </div>
-              <div class="fs-callout" style="border-left-color: var(--cfg-accent, #FF6B35);">
-                <div class="fs-callout-text" style="color: #fff;">Multi-format content library &mdash; social cards, support pages, print materials, and digital badges ready to deploy</div>
-              </div>
-
-            </div>
-            <!-- Bottom-left: Sample Content -->
-            <div class="fs-sample">
-              <div class="fs-section-label" style="color: var(--cfg-secondary, #00D4AA);">Sample Content</div>
-              <div class="fs-mini-myth" style="background: var(--cfg-primary, #1B2838);">
-                <div class="mini-header">
-                  <span class="mini-logo" id="pvFsMiniLogo1"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
-                  <span class="mini-pillar" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
-                </div>
-                <div class="mini-body">
-                  <div class="mini-myth-label" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
-                  <div class="mini-myth-statement" style="color: #fff;"><span class="strike" style="text-decoration-color: var(--cfg-accent, #FF6B35); color: #A8A8C0;">&ldquo;I&rsquo;m on a hot streak&rdquo;</span></div>
-                  <div class="mini-fact" style="color: #A8A8C0;">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn&rsquo;t.</div>
-                  <div class="mini-stat">
-                    <span class="mini-stat-number" style="color: var(--cfg-accent, #FF6B35);">0%</span>
-                    <span class="mini-stat-unit" style="color: #A8A8C0;">chance past results<br>affect the next spin</span>
-                  </div>
-                </div>
-                <div class="mini-footer" style="background: var(--cfg-primary-light, #2A3F56);">
-                  <span class="mini-footer-text" style="color: #fff;" id="pvFsMiniHelpline1">Free support 24/7: 1-800-522-4700</span>
-                  <span class="mini-footer-legal" style="color: #A8A8C0;" id="pvFsMiniLegal1">21+ to gamble</span>
-                </div>
-              </div>
-              <div class="fs-example-label" style="color: var(--cfg-secondary, #00D4AA);">Tier 1 &mdash; Myth-Buster Card</div>
-            </div>
-            <!-- Bottom-right: Open-Source Lifecycle -->
-            <div class="fs-lifecycle">
-              <div class="fs-section-label" style="color: var(--cfg-secondary, #00D4AA);">Open-Source Lifecycle</div>
-              <div class="fs-cycle">
-                <div class="fs-cycle-step" style="border-color: var(--cfg-secondary, #00D4AA);">
-                  <div class="fs-cycle-icon" style="color: var(--cfg-secondary, #00D4AA);">&#9881;</div>
-                  <div class="fs-cycle-label" style="color: var(--cfg-secondary, #00D4AA);">Playbook Repo</div>
-                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Generic, evidence-based content maintained by researchers &mdash; reviewed and updated as the science evolves</div>
-                </div>
-                <div class="fs-cycle-arrow fs-arrow-right" style="color: var(--cfg-secondary, #00D4AA);">&rarr;</div>
-                <div class="fs-cycle-step" style="border-color: var(--cfg-accent, #FF6B35);">
-                  <div class="fs-cycle-icon" style="color: var(--cfg-accent, #FF6B35);">&#9998;</div>
-                  <div class="fs-cycle-label" style="color: var(--cfg-accent, #FF6B35);">Adapt</div>
-                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Apply your operator brand, colours, and helpline &mdash; the configurator generates print-ready assets</div>
-                </div>
-                <div class="fs-cycle-arrow fs-arrow-down-left" style="color: var(--cfg-secondary, #00D4AA);">&#x21ba;</div>
-                <div class="fs-cycle-arrow fs-arrow-down-right" style="color: var(--cfg-accent, #FF6B35);">&darr;</div>
-                <div class="fs-cycle-step" style="border-color: var(--cfg-secondary, #00D4AA);">
-                  <div class="fs-cycle-icon" style="color: var(--cfg-secondary, #00D4AA);">&#8634;</div>
-                  <div class="fs-cycle-label" style="color: var(--cfg-secondary, #00D4AA);">Contribute</div>
-                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Share field insights and new research back to the open-source repository for everyone</div>
-                </div>
-                <div class="fs-cycle-arrow fs-arrow-left" style="color: var(--cfg-accent, #FF6B35);">&larr;</div>
-                <div class="fs-cycle-step" style="border-color: var(--cfg-accent, #FF6B35);">
-                  <div class="fs-cycle-icon" style="color: var(--cfg-accent, #FF6B35);">&#9654;</div>
-                  <div class="fs-cycle-label" style="color: var(--cfg-accent, #FF6B35);">Deploy</div>
-                  <div class="fs-cycle-desc" style="color: #A8A8C0;">Distribute branded cards, pages, and badges across digital and physical channels</div>
-                </div>
-              </div>
-            </div>
-            <div class="fs-sidebar">
-              <div class="fs-info-label" style="color: var(--cfg-secondary, #00D4AA);">Key attributes</div>
-              <div class="fs-attr">
-                <div class="fs-attr-name" style="color: var(--cfg-secondary, #00D4AA);">Evidence-Based</div>
-                <div class="fs-attr-desc">Grounded in peer-reviewed research on player behaviour</div>
-              </div>
-              <div class="fs-attr">
-                <div class="fs-attr-name" style="color: var(--cfg-secondary, #00D4AA);">Open Source</div>
-                <div class="fs-attr-desc">CC0 1.0 &mdash; free to use, modify, and redistribute</div>
-              </div>
-              <div class="fs-attr">
-                <div class="fs-attr-name" style="color: var(--cfg-accent, #FF6B35);">Co-Brandable</div>
-                <div class="fs-attr-desc">Apply your colours, logo, and helpline in minutes</div>
-              </div>
-              <div class="fs-attr">
-                <div class="fs-attr-name" style="color: var(--cfg-accent, #FF6B35);">Multi-Jurisdiction</div>
-                <div class="fs-attr-desc">Locale-aware content for US, UK, AU, CA, and custom</div>
-              </div>
-              <div class="fs-attr">
-                <div class="fs-attr-name" style="color: #A8A8C0;">Print &amp; Digital</div>
-                <div class="fs-attr-desc">Cards, pages, badges, and social assets included</div>
-              </div>
-              <div class="fs-attr">
-                <div class="fs-attr-name" style="color: #A8A8C0;">Researcher-Maintained</div>
-                <div class="fs-attr-desc">Content updated as the science evolves</div>
-              </div>
-              <div class="fs-learn-more">
-                <div class="fs-info-label" style="color: var(--cfg-secondary, #00D4AA);">Learn more</div>
-                <div class="fs-link-tile">
-                  <div class="fs-link-tile-label" style="color: var(--cfg-secondary, #00D4AA);">Website</div>
-                  <div class="fs-link-tile-url" style="color: #fff;">gamblingpolicy.com/playbook</div>
-                </div>
-                <div class="fs-link-tile">
-                  <div class="fs-link-tile-label" style="color: var(--cfg-secondary, #00D4AA);">Source Code</div>
-                  <div class="fs-link-tile-url" style="color: #fff;">github.com/gamblingpolicy/playbook</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="fs-footer" style="background: var(--cfg-primary-light, #2A3F56);">
-            <span class="footer-text" style="color: #A8A8C0;">Open-source responsible gambling brand system &bull; CC0 1.0 License</span>
-            <span class="footer-text" style="color: #A8A8C0;">gamblingpolicy.com/playbook</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Preview Card 4: Partner Announcement (Instagram Post) -->
-      <div class="preview-frame" style="grid-column: 1 / -1;">
-        <div class="preview-frame-label">Partner Announcement (Instagram Post)</div>
-        <div class="pv-announce" id="pvAnnounce">
-          <div class="ig-top-bar">
-            <div class="ig-avatar" id="igAvatar" style="background: var(--cfg-primary, #1B2838);"><span id="igAvatarLetter">P</span></div>
-            <div class="ig-username" id="igUsername">your_brand</div>
-            <div class="ig-dots">&bull;&bull;&bull;</div>
-          </div>
-          <div class="ig-image" style="background: var(--cfg-primary, #1B2838);">
-            <div class="announce-content">
-              <div class="announce-label" style="color: var(--cfg-secondary, #00D4AA);">Proudly adopting</div>
-              <div class="announce-cobrand">
-                <span id="pvAnnounceOperator" class="operator-placeholder-text" style="font-size: 8px; color: #6B6B8A; font-style: italic;">Your logo</span>
-                <div class="co-brand-divider"></div>
-                <span class="card-logo" id="pvLogoAnnounce"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
-              </div>
-              <div class="announce-divider" style="background: var(--cfg-accent, #FF6B35);"></div>
-              <div class="announce-headline" style="color: #fff;" id="pvAnnounceHeadline">Real odds. Real tools. No fine print.</div>
-              <div class="announce-url" style="color: var(--cfg-secondary, #00D4AA);" id="pvAnnounceUrl">example.com/playbook</div>
-            </div>
-          </div>
-          <div class="ig-actions">
-            <span class="ig-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-            <span class="ig-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-            <span class="ig-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
-            <span class="ig-action-icon ig-bookmark"><svg viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></span>
-          </div>
-          <div class="ig-likes">1,247 likes</div>
-          <div class="ig-caption">
-            <div class="ig-caption-text"><strong id="igCaptionName">your_brand</strong> We&rsquo;re proud to announce that we&rsquo;ve adopted <span class="fs-program-name" id="igProgramName">Playbook</span> as our responsible gambling program &mdash; an evidence-based brand system designed by researchers and practitioners. Learn more at <strong id="igCaptionUrl">example.com/playbook</strong></div>
-          </div>
-        </div>
-      </div>
 
       <!-- Preview: Co-brand Helpline Badge -->
       <div class="preview-frame" style="grid-column: 1 / -1;">
@@ -1410,16 +1132,16 @@ function updatePreview() {
   root.style.setProperty('--cfg-accent', accent);
 
   // Update fonts on preview cards
-  document.querySelectorAll('.pv-card, .pv-badge, .pv-factsheet, .pv-announce').forEach(el => {
+  document.querySelectorAll('.pv-card, .pv-badge').forEach(el => {
     el.style.fontFamily = `'${bodyFont}', sans-serif`;
   });
-  document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-channels, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo, .pv-factsheet .card-logo, .pv-factsheet .mini-logo, .pv-factsheet .fs-title, .pv-factsheet .fs-section-label, .pv-factsheet .fs-callout-text, .pv-factsheet .fs-flow-step-label, .pv-factsheet .mini-myth-statement, .pv-factsheet .mini-stat-number, .pv-factsheet .fs-cycle-label, .pv-announce .card-logo, .pv-announce .announce-headline').forEach(el => {
+  document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-channels, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo').forEach(el => {
     el.style.fontFamily = `'${headingFont}', sans-serif`;
   });
 
   // Update program name in logos
   const nameParts = getNameParts();
-  document.querySelectorAll('.pv-card .card-logo, .pv-badge .badge-logo, .pv-factsheet .card-logo, .pv-factsheet .mini-logo, .pv-announce .card-logo').forEach(el => {
+  document.querySelectorAll('.pv-card .card-logo, .pv-badge .badge-logo').forEach(el => {
     const play = el.querySelector('.logo-play');
     const book = el.querySelector('.logo-book');
     if (play && book) {
@@ -1453,52 +1175,16 @@ function updatePreview() {
   if (badgeNumber) badgeNumber.textContent = helpline;
   const t2Helpline = document.getElementById('pvT2Helpline');
   if (t2Helpline) t2Helpline.textContent = helpline;
-  // Mini cards in fact sheet
-  const fsMiniHelpline1 = document.getElementById('pvFsMiniHelpline1');
-  if (fsMiniHelpline1) fsMiniHelpline1.textContent = 'Free support 24/7: ' + helpline;
-  const fsMiniLegal1 = document.getElementById('pvFsMiniLegal1');
-  if (fsMiniLegal1) fsMiniLegal1.textContent = minAge + '+ to gamble';
-  // Update fact sheet card
-  const fsTitle = document.getElementById('pvFsTitle');
-  if (fsTitle) fsTitle.textContent = orgName ? 'Why ' + orgName + ' should adopt ' + programName : 'Why adopt ' + programName;
-  const displayUrl = websiteUrl ? websiteUrl.replace(/^https?:\/\//, '') : 'example.com/playbook';
-  // Update program name references in fact sheet body text
-  document.querySelectorAll('.fs-program-name').forEach(el => {
-    el.textContent = programName;
-  });
-
-  // Update partner announcement card (Instagram post)
-  const announceUrl = document.getElementById('pvAnnounceUrl');
-  if (announceUrl) announceUrl.textContent = displayUrl;
-  // Instagram chrome: username, avatar, caption
-  const igSlug = orgName ? orgName.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '') : 'your_brand';
-  const igUsername = document.getElementById('igUsername');
-  if (igUsername) igUsername.textContent = igSlug;
-  const igCaptionName = document.getElementById('igCaptionName');
-  if (igCaptionName) igCaptionName.textContent = igSlug;
-  const igAvatarLetter = document.getElementById('igAvatarLetter');
-  if (igAvatarLetter) igAvatarLetter.textContent = orgName ? orgName.charAt(0).toUpperCase() : 'P';
-  const igProgramName = document.getElementById('igProgramName');
-  if (igProgramName) igProgramName.textContent = programName;
-  const igCaptionUrl = document.getElementById('igCaptionUrl');
-  if (igCaptionUrl) igCaptionUrl.textContent = displayUrl;
-
-  // Update operator logo in all previews
-  const operatorSlot = document.getElementById('pvOperatorSlot');
-  const announceOperator = document.getElementById('pvAnnounceOperator');
+  // Update operator logo in badge preview
   const badgeOperator = document.getElementById('pvBadgeOperator');
-  const allCoDividers = document.querySelectorAll('#pvCoBrand .co-brand-divider, .announce-cobrand .co-brand-divider, #pvBadgeCoDivider');
+  const badgeCoDivider = document.getElementById('pvBadgeCoDivider');
 
   if (uploadedLogoDataUrl) {
-    if (operatorSlot) { operatorSlot.className = ''; operatorSlot.style.cssText = ''; operatorSlot.innerHTML = '<img class="operator-logo-img" src="' + uploadedLogoDataUrl + '" alt="Operator logo">'; }
-    if (announceOperator) { announceOperator.className = ''; announceOperator.style.cssText = ''; announceOperator.innerHTML = '<img class="operator-logo-img" src="' + uploadedLogoDataUrl + '" alt="Operator logo">'; }
     if (badgeOperator) { badgeOperator.innerHTML = '<img class="operator-logo-img" src="' + uploadedLogoDataUrl + '" alt="Operator logo">'; }
-    allCoDividers.forEach(d => d.style.display = '');
+    if (badgeCoDivider) badgeCoDivider.style.display = '';
   } else {
-    if (operatorSlot) { operatorSlot.innerHTML = ''; operatorSlot.className = 'operator-placeholder-text'; operatorSlot.style.cssText = ''; operatorSlot.textContent = 'Your logo'; }
-    if (announceOperator) { announceOperator.innerHTML = ''; announceOperator.className = 'operator-placeholder-text'; announceOperator.style.cssText = 'font-size: 8px; color: #6B6B8A; font-style: italic;'; announceOperator.textContent = 'Your logo'; }
     if (badgeOperator) { badgeOperator.innerHTML = ''; }
-    allCoDividers.forEach(d => d.style.display = 'none');
+    if (badgeCoDivider) badgeCoDivider.style.display = 'none';
   }
 
   // Update wordmark preview
@@ -2384,6 +2070,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', scalePreviewCards);
 });
 </script>
+<script src="/tools/playbook/hub/hub-shared.js" defer></script>
 
 </body>
 </html>

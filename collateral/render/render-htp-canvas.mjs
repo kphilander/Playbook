@@ -201,6 +201,54 @@ const gameCards = [
     statNumber: '52.4%',
     statUnit: ['break-even win rate', 'at −110 odds'],
   },
+  {
+    file: 'htp-card-video-poker.png',
+    label: 'HOW IT WORKS',
+    title: 'Video Poker',
+    fact: 'Unlike slots, **your decisions change the math**. A full-pay 9/6 Jacks or Better machine returns 99.54% with perfect strategy.',
+    statNumber: '0.46%',
+    statUnit: ['house edge on full-pay', '9/6 Jacks or Better'],
+  },
+  {
+    file: 'htp-card-baccarat.png',
+    label: 'HOW IT WORKS',
+    title: 'Baccarat',
+    fact: 'The drawing rules are automatic — **no decisions to make**. Banker bet carries the lowest house edge on the table.',
+    statNumber: '1.06%',
+    statUnit: ['house edge on', 'the Banker bet'],
+  },
+  {
+    file: 'htp-card-craps.png',
+    label: 'HOW IT WORKS',
+    title: 'Craps',
+    fact: 'The Odds bet is the only wager in the casino with **zero house edge**. It\'s not marked on the table — you have to know to ask.',
+    statNumber: '0%',
+    statUnit: ['house edge on', 'the Odds bet'],
+  },
+  {
+    file: 'htp-card-bingo.png',
+    label: 'HOW IT WORKS',
+    title: 'Bingo',
+    fact: 'Every card has the same chance of winning. **Buying more cards** is the only way to improve your odds — not choosing "lucky" ones.',
+    statNumber: '5–25%',
+    statUnit: ['house edge range', 'varies by venue'],
+  },
+  {
+    file: 'htp-card-lottery.png',
+    label: 'HOW IT WORKS',
+    title: 'Lottery',
+    fact: 'Every combination is equally likely. **No system, sequence, or lucky number** changes the odds. The math is the same every draw.',
+    statNumber: '50–65%',
+    statUnit: ['typical RTP on', 'major draw games'],
+  },
+  {
+    file: 'htp-card-horse-racing.png',
+    label: 'HOW IT WORKS',
+    title: 'Horse Racing',
+    fact: 'Odds are set by the pool — **other bettors decide the payout**, not the track. The takeout comes off the top before anyone gets paid.',
+    statNumber: '15–25%',
+    statUnit: ['takeout rate', 'depending on bet type'],
+  },
 ];
 
 // ─── Render game cards ──────────────────────────────────
@@ -330,4 +378,4 @@ for (const card of gameCards) {
   console.log('Rendered: htp-odds-comparison.png');
 }
 
-console.log('Done — 5 HTP PNGs rendered.');
+console.log('Done — 11 HTP PNGs rendered.');
