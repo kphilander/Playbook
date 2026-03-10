@@ -1,24 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { colors, fonts, radius } from '@/lib/brand-tokens';
-import ScrollyChapter from '@/components/slots/ScrollyChapter';
-import type { Slide, TermDef } from '@/components/slots/ScrollyChapter';
+import useIsMobile from '@/lib/useIsMobile';
+import ScrollyChapter from '@/components/shared/ScrollyChapter';
+import type { Slide, TermDef } from '@/components/shared/ScrollyChapter';
+import SlotVisuals from '@/components/slots/SlotVisuals';
 import QuizSection from '@/components/slots/QuizSection';
-
-const MOBILE_BP = 768;
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < MOBILE_BP);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
-  return isMobile;
-}
+import MobileNav from '@/components/shared/MobileNav';
 
 /* ─── Chapter data ─── */
 
@@ -197,6 +186,7 @@ export default function SlotsPage() {
           </nav>
         )}
       </header>
+      {isMobile && <MobileNav sections={NAV_SECTIONS} />}
 
       {/* ─── Hero ─── */}
       <section style={{
@@ -284,6 +274,7 @@ export default function SlotsPage() {
         label="Chapter 1"
         title="How the Game Works"
         slides={HOW_IT_WORKS}
+        VisualsComponent={SlotVisuals}
         terms={KEY_TERMS}
       />
 
@@ -295,6 +286,7 @@ export default function SlotsPage() {
         label="Chapter 2"
         title="Bet Types"
         slides={BET_TYPES}
+        VisualsComponent={SlotVisuals}
         terms={KEY_TERMS}
       />
 
@@ -305,6 +297,7 @@ export default function SlotsPage() {
         label="Chapter 3"
         title="The Math"
         slides={THE_MATH}
+        VisualsComponent={SlotVisuals}
         terms={KEY_TERMS}
       />
 
@@ -315,6 +308,7 @@ export default function SlotsPage() {
         label="Chapter 4"
         title="Tips for Informed Play"
         slides={TIPS}
+        VisualsComponent={SlotVisuals}
         terms={KEY_TERMS}
       />
 
@@ -325,6 +319,7 @@ export default function SlotsPage() {
         label="Chapter 5"
         title="Common Myths"
         slides={MYTHS}
+        VisualsComponent={SlotVisuals}
         terms={KEY_TERMS}
       />
 

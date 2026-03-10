@@ -1,25 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { colors, fonts, radius } from '@/lib/brand-tokens';
-import ScrollyChapter from '@/components/slots/ScrollyChapter';
-import type { Slide, TermDef } from '@/components/slots/ScrollyChapter';
+import useIsMobile from '@/lib/useIsMobile';
+import ScrollyChapter from '@/components/shared/ScrollyChapter';
+import type { Slide, TermDef } from '@/components/shared/ScrollyChapter';
 import BlackjackVisuals from '@/components/blackjack/BlackjackVisuals';
 import BlackjackQuiz from '@/components/blackjack/BlackjackQuiz';
-
-const MOBILE_BP = 768;
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < MOBILE_BP);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
-  return isMobile;
-}
+import MobileNav from '@/components/shared/MobileNav';
 
 /* ─── Chapter data ─── */
 
@@ -181,11 +169,13 @@ export default function BlackjackPage() {
                 padding: '6px 12px', borderRadius: 6,
                 fontSize: 12, fontWeight: 600, color: colors.neutral300,
                 textDecoration: 'none', fontFamily: fonts.heading,
+                transition: 'color 0.15s ease',
               }}>{s.label}</a>
             ))}
           </nav>
         )}
       </header>
+      {isMobile && <MobileNav sections={NAV_SECTIONS} />}
 
       {/* ─── Hero ─── */}
       <section style={{
