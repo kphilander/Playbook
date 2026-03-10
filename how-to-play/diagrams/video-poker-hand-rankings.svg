@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="480" rx="12" fill="#1B2838"/>
+
+  <!-- Title -->
+  <text x="40" y="44" fill="#FF6B35" font-size="13" font-weight="700" letter-spacing="1.5">JACKS OR BETTER PAYTABLE COMPARISON</text>
+  <line x1="40" y1="56" x2="760" y2="56" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="40" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">HAND</text>
+  <text x="340" y="88" fill="#00D4AA" font-size="12" font-weight="700" letter-spacing="1">9/6 (FULL PAY)</text>
+  <text x="530" y="88" fill="#FFB300" font-size="12" font-weight="700" letter-spacing="1">8/5</text>
+  <text x="660" y="88" fill="#FF6B35" font-size="12" font-weight="700" letter-spacing="1">6/5</text>
+
+  <!-- Row 1: Royal Flush -->
+  <text x="40" y="122" fill="#FFFFFF" font-size="14" font-weight="600">Royal Flush</text>
+  <text x="340" y="122" fill="#A8A8C0" font-size="14">800</text>
+  <text x="530" y="122" fill="#A8A8C0" font-size="14">800</text>
+  <text x="660" y="122" fill="#A8A8C0" font-size="14">800</text>
+
+  <!-- Row 2 -->
+  <line x1="40" y1="136" x2="760" y2="136" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="158" fill="#FFFFFF" font-size="14" font-weight="600">Straight Flush</text>
+  <text x="340" y="158" fill="#A8A8C0" font-size="14">50</text>
+  <text x="530" y="158" fill="#A8A8C0" font-size="14">50</text>
+  <text x="660" y="158" fill="#A8A8C0" font-size="14">50</text>
+
+  <!-- Row 3 -->
+  <line x1="40" y1="172" x2="760" y2="172" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="194" fill="#FFFFFF" font-size="14" font-weight="600">Four of a Kind</text>
+  <text x="340" y="194" fill="#A8A8C0" font-size="14">25</text>
+  <text x="530" y="194" fill="#A8A8C0" font-size="14">25</text>
+  <text x="660" y="194" fill="#A8A8C0" font-size="14">25</text>
+
+  <!-- Row 4: Full House (the key difference) -->
+  <line x1="40" y1="208" x2="760" y2="208" stroke="#2A3F56" stroke-width="0.5"/>
+  <rect x="30" y="214" width="740" height="28" rx="4" fill="rgba(0,212,170,0.08)"/>
+  <text x="40" y="234" fill="#FFFFFF" font-size="14" font-weight="700">Full House</text>
+  <text x="340" y="234" fill="#00D4AA" font-size="16" font-weight="700">9</text>
+  <text x="530" y="234" fill="#FFB300" font-size="16" font-weight="700">8</text>
+  <text x="660" y="234" fill="#FF6B35" font-size="16" font-weight="700">6</text>
+
+  <!-- Row 5: Flush (the other key difference) -->
+  <rect x="30" y="248" width="740" height="28" rx="4" fill="rgba(0,212,170,0.08)"/>
+  <text x="40" y="268" fill="#FFFFFF" font-size="14" font-weight="700">Flush</text>
+  <text x="340" y="268" fill="#00D4AA" font-size="16" font-weight="700">6</text>
+  <text x="530" y="268" fill="#FFB300" font-size="16" font-weight="700">5</text>
+  <text x="660" y="268" fill="#FF6B35" font-size="16" font-weight="700">5</text>
+
+  <!-- Row 6 -->
+  <text x="40" y="300" fill="#FFFFFF" font-size="14" font-weight="600">Straight</text>
+  <text x="340" y="300" fill="#A8A8C0" font-size="14">4</text>
+  <text x="530" y="300" fill="#A8A8C0" font-size="14">4</text>
+  <text x="660" y="300" fill="#A8A8C0" font-size="14">4</text>
+
+  <!-- Row 7 -->
+  <line x1="40" y1="314" x2="760" y2="314" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="336" fill="#FFFFFF" font-size="14" font-weight="600">Three of a Kind</text>
+  <text x="340" y="336" fill="#A8A8C0" font-size="14">3</text>
+  <text x="530" y="336" fill="#A8A8C0" font-size="14">3</text>
+  <text x="660" y="336" fill="#A8A8C0" font-size="14">3</text>
+
+  <!-- Row 8 -->
+  <line x1="40" y1="350" x2="760" y2="350" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="372" fill="#FFFFFF" font-size="14" font-weight="600">Two Pair / Jacks+</text>
+  <text x="340" y="372" fill="#A8A8C0" font-size="14">2 / 1</text>
+  <text x="530" y="372" fill="#A8A8C0" font-size="14">2 / 1</text>
+  <text x="660" y="372" fill="#A8A8C0" font-size="14">2 / 1</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="394" x2="760" y2="394" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Bottom: house edge comparison -->
+  <text x="40" y="424" fill="#FFFFFF" font-size="14" font-weight="700">House edge</text>
+  <text x="340" y="424" fill="#00D4AA" font-size="18" font-weight="900">0.46%</text>
+  <text x="530" y="424" fill="#FFB300" font-size="18" font-weight="900">2.70%</text>
+  <text x="660" y="424" fill="#FF6B35" font-size="18" font-weight="900">5.00%</text>
+
+  <text x="40" y="456" fill="#A8A8C0" font-size="13">The machines look identical. Check the full house and flush payouts before you play.</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="480" rx="12" fill="#1B2838"/>
+
+  <!-- Title -->
+  <text x="40" y="44" fill="#FF6B35" font-size="13" font-weight="700" letter-spacing="1.5">LOTTERY ODDS IN PERSPECTIVE</text>
+  <line x1="40" y1="56" x2="760" y2="56" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="40" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">EVENT</text>
+  <text x="440" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">ODDS</text>
+
+  <!-- Row 1: Coin flip -->
+  <text x="40" y="126" fill="#FFFFFF" font-size="15" font-weight="600">Coin flip (heads)</text>
+  <text x="440" y="126" fill="#00D4AA" font-size="15" font-weight="700">1 in 2</text>
+  <rect x="620" y="114" width="140" height="16" rx="3" fill="#00D4AA"/>
+
+  <!-- Row 2 -->
+  <line x1="40" y1="146" x2="760" y2="146" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="174" fill="#FFFFFF" font-size="15" font-weight="600">Dealt a royal flush in poker</text>
+  <text x="440" y="174" fill="#00D4AA" font-size="15" font-weight="700">1 in 649,740</text>
+  <rect x="620" y="162" width="140" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="620" y="162" width="4" height="16" rx="2" fill="#00D4AA"/>
+
+  <!-- Row 3 -->
+  <line x1="40" y1="194" x2="760" y2="194" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="222" fill="#FFFFFF" font-size="15" font-weight="600">Struck by lightning (lifetime)</text>
+  <text x="440" y="222" fill="#FFB300" font-size="15" font-weight="700">1 in 15,300</text>
+  <rect x="620" y="210" width="140" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="620" y="210" width="8" height="16" rx="3" fill="#FFB300"/>
+
+  <!-- Row 4 -->
+  <line x1="40" y1="242" x2="760" y2="242" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="270" fill="#FFFFFF" font-size="15" font-weight="600">State lottery jackpot</text>
+  <text x="440" y="270" fill="#FF6B35" font-size="15" font-weight="700">1 in 14 million</text>
+  <rect x="620" y="258" width="140" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="620" y="258" width="1" height="16" rx="1" fill="#FF6B35"/>
+
+  <!-- Row 5 -->
+  <line x1="40" y1="290" x2="760" y2="290" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="318" fill="#FFFFFF" font-size="15" font-weight="600">Powerball jackpot</text>
+  <text x="440" y="318" fill="#FF3D00" font-size="15" font-weight="700">1 in 292 million</text>
+  <rect x="620" y="306" width="140" height="16" rx="3" fill="#2A3F56"/>
+
+  <!-- Row 6 -->
+  <line x1="40" y1="338" x2="760" y2="338" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="366" fill="#FFFFFF" font-size="15" font-weight="600">Mega Millions jackpot</text>
+  <text x="440" y="366" fill="#FF3D00" font-size="15" font-weight="700">1 in 302 million</text>
+  <rect x="620" y="354" width="140" height="16" rx="3" fill="#2A3F56"/>
+
+  <!-- Divider -->
+  <line x1="40" y1="390" x2="760" y2="390" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Key takeaway -->
+  <text x="40" y="420" fill="#FFFFFF" font-size="14" font-weight="700">Return to player</text>
+  <text x="40" y="444" fill="#A8A8C0" font-size="13">Draw games return 50-55 cents per dollar. Scratch cards return 60-75 cents.</text>
+  <text x="40" y="466" fill="#A8A8C0" font-size="13">Every number combination has identical odds. "Lucky" numbers don't change the math.</text>
+</svg>

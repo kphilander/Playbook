@@ -53,6 +53,12 @@ const cards = [
   { html: 'htp-card-blackjack.html', output: 'htp-card-blackjack.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'htp-card-roulette.html', output: 'htp-card-roulette.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'htp-card-sports.html', output: 'htp-card-sports.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-baccarat.html', output: 'htp-card-baccarat.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-video-poker.html', output: 'htp-card-video-poker.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-craps.html', output: 'htp-card-craps.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-bingo.html', output: 'htp-card-bingo.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-horse-racing.html', output: 'htp-card-horse-racing.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-lottery.html', output: 'htp-card-lottery.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'htp-odds-comparison.html', output: 'htp-odds-comparison.png', w: 1080, h: 1080, selector: '.social-card' },
   // Demographic-specific collateral
   { html: 'poster-4d-lottery-odds.html', output: 'poster-4d-lottery-odds.png', w: 1800, h: 2400, selector: '.poster' },

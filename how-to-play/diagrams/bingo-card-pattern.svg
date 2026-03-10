@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="400" rx="12" fill="#1B2838"/>
+
+  <!-- Title -->
+  <text x="40" y="44" fill="#FF6B35" font-size="13" font-weight="700" letter-spacing="1.5">BINGO ODDS AT A GLANCE</text>
+  <line x1="40" y1="56" x2="760" y2="56" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="40" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">SCENARIO</text>
+  <text x="320" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">PLAYERS</text>
+  <text x="460" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">YOUR ODDS (1 CARD)</text>
+  <text x="660" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">EDGE</text>
+
+  <!-- Row 1: Off-peak -->
+  <text x="40" y="126" fill="#FFFFFF" font-size="15" font-weight="600">Off-peak session</text>
+  <text x="320" y="126" fill="#A8A8C0" font-size="15">30</text>
+  <text x="460" y="126" fill="#00D4AA" font-size="15" font-weight="700">1 in 30</text>
+  <rect x="660" y="114" width="100" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="660" y="114" width="80" height="16" rx="3" fill="#00D4AA"/>
+  <text x="668" y="126" fill="#1B2838" font-size="10" font-weight="700">BEST</text>
+
+  <!-- Row 2 -->
+  <line x1="40" y1="146" x2="760" y2="146" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="176" fill="#FFFFFF" font-size="15" font-weight="600">Regular session</text>
+  <text x="320" y="176" fill="#A8A8C0" font-size="15">100</text>
+  <text x="460" y="176" fill="#FFB300" font-size="15" font-weight="700">1 in 100</text>
+  <rect x="660" y="164" width="100" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="660" y="164" width="40" height="16" rx="3" fill="#FFB300"/>
+
+  <!-- Row 3 -->
+  <line x1="40" y1="196" x2="760" y2="196" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="226" fill="#FFFFFF" font-size="15" font-weight="600">Peak / jackpot night</text>
+  <text x="320" y="226" fill="#A8A8C0" font-size="15">300</text>
+  <text x="460" y="226" fill="#FF6B35" font-size="15" font-weight="700">1 in 300</text>
+  <rect x="660" y="214" width="100" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="660" y="214" width="15" height="16" rx="3" fill="#FF6B35"/>
+
+  <!-- Row 4 -->
+  <line x1="40" y1="246" x2="760" y2="246" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="276" fill="#FFFFFF" font-size="15" font-weight="600">Large online room</text>
+  <text x="320" y="276" fill="#A8A8C0" font-size="15">1,000+</text>
+  <text x="460" y="276" fill="#FF3D00" font-size="15" font-weight="700">1 in 1,000</text>
+  <rect x="660" y="264" width="100" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="660" y="264" width="5" height="16" rx="3" fill="#FF3D00"/>
+
+  <!-- Divider -->
+  <line x1="40" y1="306" x2="760" y2="306" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Key takeaway -->
+  <text x="40" y="336" fill="#FFFFFF" font-size="14" font-weight="700">Key takeaway</text>
+  <text x="40" y="360" fill="#A8A8C0" font-size="13">Fewer players = better individual odds. Off-peak sessions have smaller prizes but significantly better chances per card.</text>
+  <text x="40" y="382" fill="#A8A8C0" font-size="13">Buying more cards in the same session improves your share of the odds but increases total spend proportionally.</text>
+</svg>
