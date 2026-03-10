@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/tools/playbook/design-tokens.css">
+<link rel="stylesheet" href="/tools/playbook/hub/hub-shared.css">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
 <!-- Google Analytics 4 -->
@@ -23,32 +24,9 @@
 </script>
 
 <style>
-  /* === Force light mode (design-tokens.css dark override clashes with hardcoded backgrounds) === */
-  :root {
-    --pb-bg: var(--pb-color-neutral-50) !important;
-    --pb-surface: var(--pb-color-white) !important;
-    --pb-text: var(--pb-color-neutral-900) !important;
-    --pb-text-secondary: var(--pb-color-neutral-700) !important;
-    --pb-text-muted: var(--pb-color-neutral-500) !important;
-    --pb-link: var(--pb-color-primary-light) !important;
-    --pb-link-hover: var(--pb-color-primary) !important;
-    --pb-border: var(--pb-color-neutral-500) !important;
-    --pb-divider: var(--pb-color-neutral-100) !important;
-  }
-
-  /* === Reset === */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { font-size: 16px; scroll-behavior: smooth; }
-  body { font-family: var(--pb-font-body, 'Source Sans 3', sans-serif); color: var(--pb-text); background: #fff; line-height: 1.7; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-  img { max-width: 100%; height: auto; display: block; }
-  a { text-decoration: none; transition: color 0.2s; }
-  a:focus-visible { outline: 2px solid var(--pb-color-secondary); outline-offset: 2px; border-radius: 4px; }
+  /* === Page-specific base === */
+  body { font-family: var(--pb-font-body, 'Source Sans 3', sans-serif); color: var(--pb-text); background: var(--pb-color-white); }
   h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-height: var(--pb-leading-heading); }
-
-  /* === Back Bar === */
-  .pb-back-bar { background: var(--pb-color-primary-dark); padding: 14px 40px; }
-  .pb-back-bar a { color: rgba(255,255,255,0.55); font-family: var(--pb-font-heading); font-size: 13px; font-weight: 500; text-decoration: underline; }
-  .pb-back-bar a:hover { color: rgba(255,255,255,0.9); }
 
   /* === Sticky TOC === */
   .pb-toc {
@@ -104,7 +82,7 @@
 
   /* === Section layout === */
   .pb-section { padding: 80px 0; }
-  .pb-section-alt { background: var(--pb-bg); }
+  .pb-section-alt { background: var(--pb-color-neutral-50); }
   .pb-section-dark { background: var(--pb-color-primary); color: #fff; }
   .pb-section-label {
     font-family: var(--pb-font-heading); font-size: 0.78rem; font-weight: 700;
@@ -352,11 +330,6 @@
     .path-grid { grid-template-columns: 1fr; }
     .usecase-grid { grid-template-columns: 1fr; }
     .rg-preview-sections { grid-template-columns: repeat(3, 1fr); }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .pb-reveal { opacity: 1; transform: none; transition: none; }
-    html { scroll-behavior: auto; }
   }
 </style>
 </head>
@@ -653,23 +626,10 @@ npm install && npm run build</pre></div>
   <a href="/">GP Consulting</a>
 </footer>
 
-
+<script src="/tools/playbook/hub/hub-shared.js" defer></script>
 <script>
 (function() {
   'use strict';
-
-  // === Scroll Reveal ===
-  var revealEls = document.querySelectorAll('.pb-reveal');
-  if ('IntersectionObserver' in window) {
-    var obs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(function(el) { obs.observe(el); });
-  } else {
-    revealEls.forEach(function(el) { el.classList.add('revealed'); });
-  }
 
   // === TOC Active State ===
   var toc = document.getElementById('pb-toc');

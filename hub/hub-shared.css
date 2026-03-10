@@ -1,0 +1,179 @@
+/* ============================================================
+   hub-shared.css — Shared styles for Playbook hub pages
+   ============================================================ */
+
+/* === Reset === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; transition: color 0.2s ease; }
+a:focus-visible { outline: 2px solid var(--pb-color-secondary); outline-offset: 2px; border-radius: 4px; }
+
+/* === Back Bar === */
+.pb-back-bar {
+  background: var(--pb-color-primary-dark, #0F1923);
+  padding: 14px 40px;
+}
+.pb-back-bar a {
+  color: rgba(255,255,255,0.55);
+  font-family: var(--pb-font-heading, 'Inter', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.pb-back-bar a:hover { color: rgba(255,255,255,0.9); }
+
+/* === Container === */
+.pb-container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+/* === Gradient Accent Divider === */
+.pb-gradient-line {
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pb-color-secondary), var(--pb-color-accent));
+  margin: 0 auto;
+  border-radius: 1px;
+}
+.pb-section > .pb-gradient-line,
+.pb-section-alt > .pb-gradient-line {
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* === Section Layout === */
+.pb-section { padding: 120px 0; position: relative; }
+.pb-section-alt { padding: 120px 0; background: var(--pb-color-neutral-50); position: relative; }
+.pb-section-label {
+  font-family: var(--pb-font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--pb-color-secondary);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.pb-section-heading {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--pb-color-primary);
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.pb-section-desc {
+  font-size: var(--pb-text-body-lg);
+  color: var(--pb-color-neutral-700);
+  max-width: 640px;
+  margin-bottom: 48px;
+  line-height: 1.7;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Scroll Reveal System === */
+.pb-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.pb-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pb-reveal-stagger {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i, 0) * 100ms);
+}
+.pb-reveal-stagger.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Hero Base === */
+.pb-hero {
+  background: linear-gradient(-45deg, #0F1923, #1B2838, #2A3F56, #1B2838, #0F1923, #1B2838);
+  background-size: 400% 400%;
+  animation: pb-gradient-shift 20s ease infinite;
+  color: #fff;
+  padding: 120px 0 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.pb-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 50%, rgba(0,212,170,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 350px at 80% 30%, rgba(255,107,53,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+@keyframes pb-gradient-shift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+.pb-hero h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+  color: #fff;
+  line-height: 1.1;
+}
+.pb-hero .pb-hero-sub {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.65);
+  max-width: 600px;
+  margin: 0 auto 56px;
+  line-height: 1.7;
+}
+
+/* === Footer Strip === */
+.pb-footer {
+  text-align: center;
+  padding: 28px 0;
+  font-size: 0.82rem;
+  color: var(--pb-color-neutral-500);
+}
+.pb-footer a { text-decoration: underline; }
+
+/* === Responsive: Shared Elements === */
+@media (max-width: 768px) {
+  .pb-back-bar { padding: 12px 20px; }
+  .pb-container { padding: 0 24px; }
+  .pb-section, .pb-section-alt { padding: 72px 0; }
+  .pb-hero { padding: 72px 0 56px; }
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  .pb-hero { animation: none; }
+  .pb-reveal, .pb-reveal-stagger {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html { scroll-behavior: auto; }
+}
