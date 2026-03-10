@@ -188,7 +188,7 @@ function MythCard({ myth, truth }: { myth: string; truth: string }) {
 function HowItWorksVisual({ slide }: { slide: number }) {
   if (slide === 0) {
     return (
-      <VisualLayout label="The Wheel" caption="Numbers 1\u201336 in red & black, plus green zero(s)">
+      <VisualLayout label="The Wheel" caption="Numbers 1–36 in red & black, plus green zero(s)">
         <div style={{ display: 'flex', gap: 16 }}>
           <div style={{ textAlign: 'center' }}>
             <MiniWheel pockets={37} zeros={1} />

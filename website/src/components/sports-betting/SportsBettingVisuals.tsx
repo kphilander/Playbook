@@ -86,7 +86,7 @@ function HowItWorksVisual({ slide }: { slide: number }) {
                 <div style={{ fontSize: 12, fontWeight: 700, color: colors.white, fontFamily: fonts.heading }}>Team A</div>
                 <div style={{ fontSize: 9, color: colors.neutral500, fontFamily: fonts.body }}>Favorite</div>
               </div>
-              <OddsBadge odds="\u2212150" color={colors.accent} />
+              <OddsBadge odds="−150" color={colors.accent} />
             </div>
           </div>
           <div style={{ textAlign: 'center' }}>
@@ -149,7 +149,7 @@ function HowItWorksVisual({ slide }: { slide: number }) {
 
   // slide === 2
   return (
-    <VisualLayout label="The Vig" caption="The sportsbook\u2019s built-in commission">
+    <VisualLayout label="The Vig" caption="The sportsbook’s built-in commission">
       <div style={{ width: '85%', display: 'flex', flexDirection: 'column', gap: 8 }}>
         <div style={{
           padding: '10px 14px', borderRadius: 8,
@@ -180,11 +180,11 @@ function HowItWorksVisual({ slide }: { slide: number }) {
           <div style={{ display: 'flex', justifyContent: 'center', gap: 16, marginTop: 6 }}>
             <div>
               <div style={{ fontSize: 11, color: colors.neutral300, fontFamily: fonts.body }}>Heads</div>
-              <OddsBadge odds="\u2212110" color={colors.accent} />
+              <OddsBadge odds="−110" color={colors.accent} />
             </div>
             <div>
               <div style={{ fontSize: 11, color: colors.neutral300, fontFamily: fonts.body }}>Tails</div>
-              <OddsBadge odds="\u2212110" color={colors.accent} />
+              <OddsBadge odds="−110" color={colors.accent} />
             </div>
           </div>
           <div style={{ fontSize: 10, color: colors.neutral300, fontFamily: fonts.body, marginTop: 6 }}>
@@ -340,7 +340,7 @@ function BetTypesVisual({ slide }: { slide: number }) {
               Just pick the winner. That&apos;s it.
             </div>
             <div style={{ display: 'flex', gap: 8, marginTop: 6 }}>
-              <OddsBadge odds="\u2212150" color={colors.accent} />
+              <OddsBadge odds="−150" color={colors.accent} />
               <span style={{ fontSize: 10, color: colors.neutral500, fontFamily: fonts.body }}>vs</span>
               <OddsBadge odds="+130" color={colors.secondary} />
             </div>
@@ -376,11 +376,11 @@ function BetTypesVisual({ slide }: { slide: number }) {
             <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
               <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: 11, color: colors.neutral300, fontFamily: fonts.body }}>Over 48.5</div>
-                <OddsBadge odds="\u2212110" color={colors.secondary} />
+                <OddsBadge odds="−110" color={colors.secondary} />
               </div>
               <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: 11, color: colors.neutral300, fontFamily: fonts.body }}>Under 48.5</div>
-                <OddsBadge odds="\u2212110" color={colors.accent} />
+                <OddsBadge odds="−110" color={colors.accent} />
               </div>
             </div>
           </div>
@@ -615,7 +615,7 @@ function MythsVisual({ slide }: { slide: number }) {
 
   // slide === 2
   return (
-    <VisualLayout label="Busted" caption="Past tips don\u2019t predict future results">
+    <VisualLayout label="Busted" caption="Past tips don’t predict future results">
       <div style={{ width: '85%', display: 'flex', flexDirection: 'column', gap: 10 }}>
         <MythCard
           myth="Following Tipsters Guarantees Profit"
