@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="grad-takeout" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF8A5C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" rx="12" fill="#1B2838"/>
+
+  <!-- Title -->
+  <text x="40" y="44" fill="#FF6B35" font-size="13" font-weight="700" letter-spacing="1.5">TAKEOUT BY BET TYPE</text>
+  <line x1="40" y1="56" x2="760" y2="56" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Column headers -->
+  <text x="40" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">BET TYPE</text>
+  <text x="300" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">TAKEOUT</text>
+  <text x="440" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">RETURNED PER $100</text>
+  <text x="640" y="88" fill="#6B6B8A" font-size="12" font-weight="700" letter-spacing="1">VISUAL</text>
+
+  <!-- Row 1: Win/Place/Show -->
+  <text x="40" y="130" fill="#FFFFFF" font-size="15" font-weight="600">Win / Place / Show</text>
+  <text x="300" y="130" fill="#00D4AA" font-size="16" font-weight="700">15-18%</text>
+  <text x="440" y="130" fill="#00D4AA" font-size="15" font-weight="600">$82-$85</text>
+  <rect x="640" y="118" width="120" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="640" y="118" width="22" height="16" rx="3" fill="#00D4AA"/>
+
+  <!-- Row 2: Exacta / Quinella -->
+  <line x1="40" y1="150" x2="760" y2="150" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="180" fill="#FFFFFF" font-size="15" font-weight="600">Exacta / Quinella</text>
+  <text x="300" y="180" fill="#FFB300" font-size="16" font-weight="700">20-22%</text>
+  <text x="440" y="180" fill="#FFB300" font-size="15" font-weight="600">$78-$80</text>
+  <rect x="640" y="168" width="120" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="640" y="168" width="30" height="16" rx="3" fill="#FFB300"/>
+
+  <!-- Row 3: Trifecta / Superfecta -->
+  <line x1="40" y1="200" x2="760" y2="200" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="230" fill="#FFFFFF" font-size="15" font-weight="600">Trifecta / Superfecta</text>
+  <text x="300" y="230" fill="#FF6B35" font-size="16" font-weight="700">22-25%</text>
+  <text x="440" y="230" fill="#FF6B35" font-size="15" font-weight="600">$75-$78</text>
+  <rect x="640" y="218" width="120" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="640" y="218" width="36" height="16" rx="3" fill="url(#grad-takeout)"/>
+
+  <!-- Row 4: Pick 6 / Multi-race -->
+  <line x1="40" y1="250" x2="760" y2="250" stroke="#2A3F56" stroke-width="0.5"/>
+  <text x="40" y="280" fill="#FFFFFF" font-size="15" font-weight="600">Pick 6 / Multi-race</text>
+  <text x="300" y="280" fill="#FF3D00" font-size="16" font-weight="700">20-30%</text>
+  <text x="440" y="280" fill="#FF3D00" font-size="15" font-weight="600">$70-$80</text>
+  <rect x="640" y="268" width="120" height="16" rx="3" fill="#2A3F56"/>
+  <rect x="640" y="268" width="42" height="16" rx="3" fill="#FF3D00"/>
+
+  <!-- Divider -->
+  <line x1="40" y1="310" x2="760" y2="310" stroke="#2A3F56" stroke-width="1"/>
+
+  <!-- Key takeaway -->
+  <text x="40" y="342" fill="#FFFFFF" font-size="14" font-weight="700">Key takeaway</text>
+  <text x="40" y="366" fill="#A8A8C0" font-size="13">Simpler bets return more per dollar. A Win bet gives back ~$85 per $100; a Trifecta gives back ~$75.</text>
+  <text x="40" y="388" fill="#A8A8C0" font-size="13">The excitement of exotic bets comes at a mathematical cost: a bigger takeout from the betting pool.</text>
+</svg>
