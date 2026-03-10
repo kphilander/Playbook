@@ -1,25 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { colors, fonts, radius } from '@/lib/brand-tokens';
-import ScrollyChapter from '@/components/slots/ScrollyChapter';
-import type { Slide, TermDef } from '@/components/slots/ScrollyChapter';
+import useIsMobile from '@/lib/useIsMobile';
+import ScrollyChapter from '@/components/shared/ScrollyChapter';
+import type { Slide, TermDef } from '@/components/shared/ScrollyChapter';
 import SportsBettingVisuals from '@/components/sports-betting/SportsBettingVisuals';
 import SportsBettingQuiz from '@/components/sports-betting/SportsBettingQuiz';
-
-const MOBILE_BP = 768;
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < MOBILE_BP);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
-  }, []);
-  return isMobile;
-}
+import MobileNav from '@/components/shared/MobileNav';
 
 /* ─── Chapter data ─── */
 
@@ -27,6 +15,7 @@ const HOW_IT_WORKS: Slide[] = [
   {
     title: 'The Basics',
     body: 'A sportsbook sets odds on sporting events \u2014 who will win, by how much, and what the total score might be. You place a bet. If you\u2019re right, you get paid based on the odds. If you\u2019re wrong, you lose your stake. Simple as that.',
+    highlight: 'Pick an outcome, place a stake, get paid based on the odds',
   },
   {
     title: 'The Key Difference',
@@ -185,11 +174,13 @@ export default function SportsBettingPage() {
                 padding: '6px 12px', borderRadius: 6,
                 fontSize: 12, fontWeight: 600, color: colors.neutral300,
                 textDecoration: 'none', fontFamily: fonts.heading,
+                transition: 'color 0.15s ease',
               }}>{s.label}</a>
             ))}
           </nav>
         )}
       </header>
+      {isMobile && <MobileNav sections={NAV_SECTIONS} />}
 
       {/* ─── Hero ─── */}
       <section style={{

@@ -381,7 +381,7 @@ function TheMathVisual({ slide }: { slide: number }) {
 
   // slide === 2
   return (
-    <VisualLayout label="Dealer Busts" caption="The dealer\u2019s fixed rules work against them">
+    <VisualLayout label="Dealer Busts" caption="The dealer’s fixed rules work against them">
       <div style={{ width: '85%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
         <div style={{
           width: 100, height: 100, borderRadius: 50,
@@ -447,7 +447,7 @@ function StrategyVisual({ slide }: { slide: number }) {
       { hand: '17+', weak: 'Stand', strong: 'Stand' },
     ];
     return (
-      <VisualLayout label="Hard Hands" caption="When you don\u2019t have a usable ace">
+      <VisualLayout label="Hard Hands" caption="When you don’t have a usable ace">
         <div style={{ width: '90%' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
             <span style={{ fontSize: 9, color: colors.neutral500, fontFamily: fonts.heading, letterSpacing: 1 }}>YOUR HAND</span>
@@ -536,7 +536,7 @@ function StrategyVisual({ slide }: { slide: number }) {
 function MythsVisual({ slide }: { slide: number }) {
   if (slide === 0) {
     return (
-      <VisualLayout label="Busted" caption="House edge doesn\u2019t change with bet sizing">
+      <VisualLayout label="Busted" caption="House edge doesn’t change with bet sizing">
         <div style={{ width: '85%', display: 'flex', flexDirection: 'column', gap: 10 }}>
           <MythCard
             myth="Martingale System"
@@ -567,7 +567,7 @@ function MythsVisual({ slide }: { slide: number }) {
 
   // slide === 1
   return (
-    <VisualLayout label="Busted" caption="Your hand vs. the dealer. That\u2019s it.">
+    <VisualLayout label="Busted" caption="Your hand vs. the dealer. That’s it.">
       <div style={{ width: '85%', display: 'flex', flexDirection: 'column', gap: 10 }}>
         <MythCard
           myth="Other Players Affect Your Odds"

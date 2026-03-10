@@ -210,7 +210,7 @@ function HowItWorksVisual({ slide }: { slide: number }) {
 
   // slide === 3
   return (
-    <VisualLayout label="Dice Probabilities" caption="7 is king \u2014 6 ways out of 36">
+    <VisualLayout label="Dice Probabilities" caption="7 is king — 6 ways out of 36">
       <div style={{ width: '88%' }}>
         {[
           { total: '7', ways: 6, bar: 100, color: colors.secondary },
@@ -238,7 +238,7 @@ function HowItWorksVisual({ slide }: { slide: number }) {
 function BetTypesVisual({ slide }: { slide: number }) {
   if (slide === 0) {
     return (
-      <VisualLayout label="Pass / Don\u2019t Pass" caption="The foundation of craps">
+      <VisualLayout label="Pass / Don’t Pass" caption="The foundation of craps">
         <div style={{ width: '85%', display: 'flex', flexDirection: 'column', gap: 8 }}>
           <div style={{
             padding: '10px 14px', borderRadius: 8,
@@ -319,7 +319,7 @@ function BetTypesVisual({ slide }: { slide: number }) {
 
   if (slide === 2) {
     return (
-      <VisualLayout label="Come / Don\u2019t Come" caption="Same as pass/don\u2019t pass, placed after a point">
+      <VisualLayout label="Come / Don’t Come" caption="Same as pass/don’t pass, placed after a point">
         <div style={{ width: '85%', display: 'flex', flexDirection: 'column', gap: 8 }}>
           <div style={{
             padding: '10px 14px', borderRadius: 8,
@@ -375,7 +375,7 @@ function BetTypesVisual({ slide }: { slide: number }) {
 function TheMathVisual({ slide }: { slide: number }) {
   if (slide === 0) {
     return (
-      <VisualLayout label="House Edge Spectrum" caption="From 0% to 16.67% \u2014 all on the same table">
+      <VisualLayout label="House Edge Spectrum" caption="From 0% to 16.67% — all on the same table">
         <div style={{ width: '85%', display: 'flex', flexDirection: 'column', gap: 6 }}>
           {[
             { bet: 'Odds bet', edge: '0%', bar: 0.5, color: colors.success },
