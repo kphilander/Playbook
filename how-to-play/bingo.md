@@ -58,7 +58,7 @@ Everything you need to know about bingo — how it works, why every card has the
 
 ---
 
-<!-- TODO: Add hero image once collateral/render/htp-card-bingo.png is created -->
+![Bingo](../collateral/render/htp-card-bingo.png)
 
 ---
 
@@ -197,11 +197,11 @@ Your odds improve linearly with each card — but your spending does too. The ex
 
 | Myth | One-liner | Full entry |
 |------|-----------|-----------|
-| Lucky seats win more | The seat doesn't affect the draw | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Lucky daubers or rituals | Superstition is pattern-seeking, not probability | <!-- TODO: Link to myth-busting.md entry once created --> |
-| "That number is due" | Every call is independent — the machine has no memory | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Certain cards are luckier | Every card has an identical chance in a given game | <!-- TODO: Link to myth-busting.md entry once created --> |
-| More experienced players win more | Experience doesn't change a random draw — it just means you daub faster | <!-- TODO: Link to myth-busting.md entry once created --> |
+| Lucky seats win more | The seat doesn't affect the draw | |
+| Lucky daubers or rituals | Superstition is pattern-seeking, not probability | |
+| "That number is due" | Every call is independent — the machine has no memory | |
+| Certain cards are luckier | Every card has an identical chance in a given game | |
+| More experienced players win more | Experience doesn't change a random draw — it just means you daub faster | |
 
 ---
 

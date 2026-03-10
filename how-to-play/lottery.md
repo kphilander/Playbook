@@ -59,7 +59,7 @@ Everything you need to know about lotteries — how they work, what the odds act
 
 ---
 
-<!-- TODO: Add hero image once collateral/render/htp-card-lottery.png is created -->
+![Lottery](../collateral/render/htp-card-lottery.png)
 
 ---
 
@@ -173,12 +173,12 @@ Scratch cards vary more than draw games. Each game publishes its overall odds an
 
 | Myth | One-liner | Full entry |
 |------|-----------|-----------|
-| Lucky numbers exist | Numbers don't have memories or feelings | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Numbers that haven't come up are "due" | The gambler's fallacy — every draw is independent | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Hot and cold numbers | Past draws don't influence future draws | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Systems can pick winning numbers | No system beats a random draw | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Buying more tickets is a "strategy" | It improves your odds linearly, but the expected return is still negative | <!-- TODO: Link to myth-busting.md entry once created --> |
-| Quick picks win less than self-picked numbers | They win in proportion to how many are sold — roughly 70–80% of jackpots go to quick picks because roughly 70–80% of tickets are quick picks | <!-- TODO: Link to myth-busting.md entry once created --> |
+| Lucky numbers exist | Numbers don't have memories or feelings | |
+| Numbers that haven't come up are "due" | The gambler's fallacy — every draw is independent | |
+| Hot and cold numbers | Past draws don't influence future draws | |
+| Systems can pick winning numbers | No system beats a random draw | |
+| Buying more tickets is a "strategy" | It improves your odds linearly, but the expected return is still negative | |
+| Quick picks win less than self-picked numbers | They win in proportion to how many are sold — roughly 70–80% of jackpots go to quick picks because roughly 70–80% of tickets are quick picks | |
 
 ---
 

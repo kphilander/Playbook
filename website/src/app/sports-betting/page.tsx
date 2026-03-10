@@ -222,7 +222,7 @@ export default function SportsBettingPage() {
         </div>
 
         <h1 style={{
-          fontSize: isMobile ? 36 : 56, fontWeight: 800,
+          fontSize: isMobile ? 44 : 64, fontWeight: 800,
           fontFamily: fonts.heading, margin: '0 0 16px', lineHeight: 1.1,
           background: `linear-gradient(135deg, ${colors.white} 0%, ${colors.secondary} 100%)`,
           WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
