@@ -61,7 +61,7 @@ Everything you need to know about video poker — the game where your choices ac
 
 ---
 
-<!-- TODO: Add hero image once collateral/render/htp-card-video-poker.png is created -->
+![Video Poker](../collateral/render/htp-card-video-poker.png)
 
 ---
 
