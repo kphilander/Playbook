@@ -50,7 +50,7 @@ function Lightbox({ item, onClose }) {
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-navy/90 backdrop-blur
         rounded-lg px-4 py-2 text-center" aria-live="polite">
         <p className="font-heading text-sm font-bold text-white">{item.name}</p>
-        <p className="font-mono text-[10px] text-n500">{item.category}</p>
+        <p className="font-mono text-[10px] text-n300">{item.category}</p>
       </div>
     </div>
   );
@@ -137,7 +137,8 @@ export default function CollateralSection() {
     <div className="px-6 sm:px-10 lg:px-16 py-24 lg:py-32 max-w-6xl mx-auto">
       <SectionHeading
         label="Collateral"
-        title="44 deployable templates"
+        title="44 deployable"
+        titleAccent="templates"
         subtitle="Campaign cards, posters, signage, email templates, player tools, and how-to-play guides. Click any item to view full-size."
       />
 
@@ -148,7 +149,7 @@ export default function CollateralSection() {
           {digitalTouchpoints.map((d, i) => (
             <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
               <h4 className="font-heading text-sm font-bold text-teal mb-2">{d.channel}</h4>
-              <p className="font-body text-xs text-n500 leading-relaxed">{d.integration}</p>
+              <p className="font-body text-xs text-n300 leading-relaxed">{d.integration}</p>
             </div>
           ))}
         </div>
@@ -163,11 +164,11 @@ export default function CollateralSection() {
               <h4 className="font-heading text-sm font-bold text-white mb-1">{c.name}</h4>
               <div className="flex gap-2 mb-2">
                 <span className="font-mono text-[10px] text-teal">{c.duration}</span>
-                <span className="text-n700">&bull;</span>
-                <span className="font-mono text-[10px] text-n500">{c.posts} posts</span>
+                <span className="text-n500">&bull;</span>
+                <span className="font-mono text-[10px] text-n300">{c.posts} posts</span>
               </div>
-              <p className="font-body text-xs text-n500 leading-relaxed mb-2">{c.desc}</p>
-              <p className="font-mono text-[10px] text-n700">{c.channels}</p>
+              <p className="font-body text-xs text-n300 leading-relaxed mb-2">{c.desc}</p>
+              <p className="font-mono text-[10px] text-n500">{c.channels}</p>
             </div>
           ))}
         </div>
@@ -187,7 +188,7 @@ export default function CollateralSection() {
             className={`px-3 py-2 rounded-lg font-heading text-[11px] font-bold transition-colors whitespace-nowrap
               ${activeFilter === tab.key
                 ? 'bg-teal text-navy'
-                : 'bg-white/[0.06] text-n500 hover:text-white'}`}
+                : 'bg-white/[0.06] text-n300 hover:text-white'}`}
           >
             {tab.label}
           </button>

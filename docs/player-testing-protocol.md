@@ -170,7 +170,7 @@ Not a separate instrument -- run the **Full survey** as an A/B test.
 |---------------|--------------------------|--------|
 | B >= A | B higher on 2+ pairs | Adaptation works. Deploy adapted version. Share findings. |
 | B >= A | B ~= A (within 0.3) | Adaptation is neutral. Default may be fine for this market. |
-| B < A | Any | Adaptation may have drifted from brand DNA. Review against [What doesn't change](../localization/cultural-adaptation-guide.md#what-doesnt-change). |
+| B < A | Any | Adaptation may have drifted from brand DNA. Review against [What doesn't change](../brand-book/09-cultural-adaptation.md#what-doesnt-change). |
 
 ---
 
@@ -279,7 +279,7 @@ The survey questions are the same for every segment. Distribution channel and fr
 
 - [Brand personality and DNA](../brand-book/02-brand-personality.md#brand-dna-vs-brand-expression) -- What the semantic differential pairs are anchored to
 - [Voice principles](../brand-book/04-voice-and-tone.md#voice-principles) -- The non-negotiable standards adapted content must meet
-- [Cultural adaptation guide](../localization/cultural-adaptation-guide.md) -- The five spectrums and cultural profiles
+- [Cultural adaptation guide](../brand-book/09-cultural-adaptation.md) -- The five spectrums and cultural profiles
 - [A/B testing guidance](../messaging/calls-to-action.md#ab-testing-guidance) -- Testing rules the cultural fit protocol follows
 - [Measuring success](../brand-book/08-governance.md#measuring-success) -- Quantitative KPIs this protocol complements
 - [Campaign KPIs](../messaging/campaigns.md) -- Per-campaign metrics to pair with survey data

@@ -66,7 +66,7 @@ export default function TypographySection() {
           {/* Sliders */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <div>
-              <label htmlFor="weight-slider" className="font-mono text-xs text-n500 block mb-2">
+              <label htmlFor="weight-slider" className="font-mono text-xs text-n300 block mb-2">
                 Weight: <span className="text-teal">{weight}</span>
               </label>
               <input
@@ -82,7 +82,7 @@ export default function TypographySection() {
               />
             </div>
             <div>
-              <label htmlFor="size-slider" className="font-mono text-xs text-n500 block mb-2">
+              <label htmlFor="size-slider" className="font-mono text-xs text-n300 block mb-2">
                 Size: <span className="text-teal">{size}px</span>
               </label>
               <input
@@ -107,7 +107,7 @@ export default function TypographySection() {
             placeholder="Type something..."
             aria-label="Type specimen preview text"
             className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3
-              font-body text-sm text-n300 placeholder:text-n700
+              font-body text-sm text-n300 placeholder:text-n500
               focus:outline-none focus:ring-2 focus:ring-teal/50 mb-6"
           />
 
@@ -128,7 +128,7 @@ export default function TypographySection() {
           {typeScale.map((t, i) => (
             <div key={i} className="flex items-baseline gap-4 group">
               <div className="w-16 shrink-0 text-right">
-                <span className="font-mono text-[10px] text-n700">{t.size}</span>
+                <span className="font-mono text-[10px] text-n500">{t.size}</span>
               </div>
               <div
                 className="font-heading text-white"
@@ -136,7 +136,7 @@ export default function TypographySection() {
               >
                 {t.level}
               </div>
-              <span className="font-mono text-[10px] text-n700 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="font-mono text-[10px] text-n500 opacity-0 group-hover:opacity-100 transition-opacity">
                 {t.weight}
               </span>
             </div>

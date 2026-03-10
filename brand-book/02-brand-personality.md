@@ -188,7 +188,7 @@ someone with a sense of humor who chose restraint for this audience -- not by a
 committee that never had one.
 
 For the full cultural adaptation framework, see
-[`localization/cultural-adaptation-guide.md`](../localization/cultural-adaptation-guide.md).
+[Cultural Adaptation Guide](09-cultural-adaptation.md).
 
 ---
 

@@ -1709,7 +1709,7 @@ async function downloadContentKit() {
 
     // Fetch and resolve the RG page template
     try {
-      const rgResp = await fetch('/tools/playbook/templates/rg-page.html');
+      const rgResp = await fetch('/tools/playbook/collateral/rg-page.html');
       if (rgResp.ok) {
         const rgTemplate = await rgResp.text();
         const rgResolved = resolveTokens(rgTemplate, tokens);
