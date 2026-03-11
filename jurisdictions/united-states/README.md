@@ -89,7 +89,7 @@ The **National Council on Problem Gambling (NCPG)** operates the primary US gamb
 
 | Resource | Contact | Description |
 |---|---|---|
-| **NCPG text line** | Text "SUPPORT" to 53342 | Text-based support |
+| **NCPG text line** | Text 800GAM | Text-based support |
 | **NCPG chat** | www.ncpgambling.org/chat | Online chat support |
 | **988 Suicide & Crisis Lifeline** | Call/text 988 | Not gambling-specific; for crisis situations |
 
@@ -145,7 +145,7 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 | Louisiana | LGCB | 21 | Legal | Legal | No | No | Yes | Planned |
 | Maine | GSBME | 21 | Legal (2) | Legal | No | No | Yes | Planned |
 | Maryland | MLGCC | 21 | Legal (6) | Legal | No | No | Yes | Planned |
-| Massachusetts | MGC | 21 | Legal (3) | Legal | No | No | Yes | Planned |
+| **Massachusetts** | MGC | 21 | Legal (3) | Legal | No | No | Yes | [Complete](massachusetts/) |
 | Michigan | MGCB | 21 | Legal (tribal + 3 commercial) | Legal | Legal | Legal | Yes | Planned |
 | Minnesota | MGRB | 18 (lottery/racing), 21 (tribal) | Tribal | No | No | No | Yes | Planned |
 | Mississippi | MGC | 21 | Legal | Legal (in-person) | No | No | Yes | Planned |

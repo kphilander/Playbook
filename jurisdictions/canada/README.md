@@ -85,8 +85,8 @@ The national code aligns with {{PROGRAM_NAME}}'s existing approach — transpare
 
 | Province/Territory | Regulator | Operator | Legal age | Online gambling | Helpline | Module status |
 |---|---|---|---|---|---|---|
-| **British Columbia** | GPEB → IGCO (April 2026) | BCLC | 19 | PlayNow.com (BCLC) | 1-888-795-6111 | [Complete](british-columbia/) |
-| **Ontario** | AGCO / iGO | OLG + private (iGaming) | 19 | Open market (April 2022) | 1-866-531-2600 | Planned |
+| **British Columbia** | GPEB → IGCO (April 2026) | BCLC | 19 | PlayNow.com (BCLC) | 1-888-795-6111 | Planned |
+| **Ontario** | AGCO / iGO | OLG + private (iGaming) | 19 | Open market (April 2022) | 1-866-531-2600 | [Complete](ontario/) |
 | **Alberta** | AGLC | AGLC / PlayAlberta | 18 | PlayAlberta.ca | 1-866-332-2322 | Planned |
 | **Quebec** | Loto-Québec / RAJ | Loto-Québec | 18 | Espacejeux.com | 1-800-461-0140 | Planned |
 | **Manitoba** | LGA (Manitoba) | Manitoba Liquor & Lotteries | 18 | PlayNow.com (MLL) | 1-800-463-1554 | Planned |

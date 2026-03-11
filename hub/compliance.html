@@ -725,7 +725,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
       <div class="reg-card" data-reg="ngc">
         <div class="reg-card-name">Nevada Gaming Control Board (NGC)</div>
         <div class="reg-card-juris">Nevada, United States</div>
-        <div class="reg-card-desc">NRS Chapter 463; NGC Regulations 5, 5A, 5.170</div>
+        <div class="reg-card-desc">NRS Chapter 463; NGC Regulation 5 (Rev. 12/24), Regulation 5A (Rev. 05/24)</div>
       </div>
       <div class="reg-card" data-reg="njdge">
         <div class="reg-card-name">New Jersey DGE</div>
@@ -735,7 +735,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
       <div class="reg-card" data-reg="mgc">
         <div class="reg-card-name">Massachusetts Gaming Commission (MGC)</div>
         <div class="reg-card-juris">Massachusetts, United States</div>
-        <div class="reg-card-desc">M.G.L. Chapter 23K; 205 CMR 133, 248.16, 256</div>
+        <div class="reg-card-desc">M.G.L. Chapter 23K / 23N; 205 CMR 133, 233, 248, 256</div>
       </div>
       <div class="reg-card" data-reg="occc">
         <div class="reg-card-name">Ohio Casino Control Commission (OCCC)</div>
@@ -762,7 +762,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
       <div class="reg-card" data-reg="agco">
         <div class="reg-card-name">AGCO (Ontario)</div>
         <div class="reg-card-juris">Ontario, Canada</div>
-        <div class="reg-card-desc">iGaming Ontario RG Standards; Gaming Control Act</div>
+        <div class="reg-card-desc">Gaming Control Act, 1992; Registrar's Standards for Internet Gaming</div>
       </div>
       <div class="reg-card" data-reg="aglc">
         <div class="reg-card-name">AGLC (Alberta)</div>
@@ -1016,18 +1016,25 @@ var GITHUB_RAW = 'https://raw.githubusercontent.com/kphilander/Playbook/main/col
 
 /* Source URLs for every regulator / code */
 var SOURCES = {
-  'ngc-reg5':          'https://gaming.nv.gov/contentassets/d6342a488e944e6aa02337fa9d3c94e5/regulation-5-as-of-09-25.pdf',
+  'ngc-reg5':          'https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5Operation.pdf',
+  'ngc-reg5a':         'https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5A.pdf',
+  'ngc-nrs463':        'https://www.leg.state.nv.us/nrs/nrs-463.html',
   'njdge-69g':         'https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69G.pdf',
   'njdge-69n':         'https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69N.pdf',
   'njdge-69o':         'https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69O-1-2',
   'njdge-bestprac':    'https://www.nj.gov/oag/ge/docs/BestPractices/AdvertisingBestPractices.pdf',
   'mgc-vse':           'https://www.mass.gov/regulations/205-CMR-13300-voluntary-self-exclusion',
   'mgc-ads':           'https://www.mass.gov/regulations/205-CMR-25600-sports-wagering-advertising',
+  'mgc-cmr233':        'https://www.mass.gov/regulations/205-CMR-23300-sports-wagering-voluntary-self-exclusion',
+  'mgc-cmr248':        'https://www.mass.gov/regulations/205-CMR-24800-sports-wagering-account-management',
   'occc-admin':        'https://codes.ohio.gov/ohio-administrative-code/chapter-3772-12',
   'occc-sports-ads':   'https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-08',
   'occc-sports-acct':  'https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-03',
   'ca-compacts':       'https://www.cgcc.ca.gov/?pageID=compacts',
   'agco-rg':           'https://www.agco.ca/en/lottery-and-gaming/standards-and-requirements/2-responsible-gaming',
+  'agco-ig':          'https://www.agco.ca/en/book/export/html/245361',
+  'agco-ads':         'https://www.agco.ca/en/lottery-and-gaming/responsible-gambling/marketing-and-advertising',
+  'agco-cse':         'https://www.agco.ca/en/news/information-bulletin-agco-sets-igaming-standards-centralized-self-exclusion-program',
   'aglc-rg':           'https://aglc.ca/gaming/responsible-gambling',
   'aglc-se':           'https://aglc.ca/gaming/self-exclusion',
   'dicj-rg':           'https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html',
@@ -1071,20 +1078,20 @@ var THEMES = [
   badge: 'strong',
   regs: ['ngc','njdge','ca','mgc','occc','ukgc','agco','dicj','gra_sg','spillem'],
   citations: [
-    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
-      text:'Nonrestricted licensees shall develop a program including making information available to patrons.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2); Reg 5A.150', src:'ngc-reg5', verticals:['casino','online','sports'],
+      text:'Post problem gambling information including resources in gaming areas. Interactive gaming operators must prominently display operator identity, license number, responsible gambling links, and house rules before play begins.' },
     { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69O-1.2 / DGE Guidance', src:'njdge-69o', verticals:['casino','online','sports'],
       text:'Responsible gaming information including game rules must be made available to patrons.' },
     { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
       text:'Compacts typically require tribes to provide information about games, including rules and odds, to patrons.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 138', src:'mgc-vse', verticals:['casino'],
-      text:'Gaming establishments must make game rules and odds information available to patrons.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 138; 205 CMR 256.04(3)', src:'mgc-vse', verticals:['casino','sports'],
+      text:'Casino internal controls must include game rules and odds for patrons (205 CMR 138). Sports wagering ads must clearly convey material conditions including cost to participate and odds of winning (205 CMR 256.04(3)).' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06', src:'occc-admin', verticals:['casino'],
       text:'Problem gambling plan must include patron information about games and responsible gambling.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino','online','sports'],
       text:'Licensees must make responsible gambling information readily available to customers.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'Provide clear and accurate information about how games work, including the odds of winning.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.08 / 4.05 / 4.06', src:'agco-ig', verticals:['casino','online','sports'],
+      text:'Game specifications must document objectives, odds of winning, and operator advantage. Players receive pre-bet information on winning chances and payout details through accessible help sections.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'Article 42-A, Law 16/2001 (amended by Law 7/2022)', src:'dicj-rg', verticals:['casino'],
       text:'Concessionaires must adopt measures to prevent and mitigate adverse gambling impacts.' },
     { reg:'gra_sg', label:'GRA (Singapore)', ref:'Casino Control (Responsible Gambling) Regulations 2013', src:'gra-sg-cca', verticals:['casino'],
@@ -1109,14 +1116,14 @@ var THEMES = [
   badge: 'partial',
   regs: ['ngc','njdge','ca','mgc','occc','ukgc','spillem','aglc','agco'],
   citations: [
-    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(4)', src:'ngc-reg5', verticals:['casino','sports'],
-      text:'Advertising must conform to prevailing community standards.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5.225(18)(b)', src:'ngc-reg5', verticals:['casino','online','sports'],
+      text:'Advertising must conform to standards of decency, dignity, good taste, honesty, and inoffensiveness. Wagering account operators must display a prescribed responsible gambling message with the NCPG helpline number.' },
     { reg:'njdge', label:'NJ DGE', ref:'DGE Advertising Best Practices', src:'njdge-bestprac', verticals:['casino','online','sports'],
       text:'Responsible gambling messaging required in all advertising.' },
     { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
       text:'Recent compacts require responsible gambling messages in advertising materials and patron communications.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256', src:'mgc-ads', verticals:['sports'],
-      text:'Sports wagering ads must clearly convey material conditions.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256.06(2); 256.04(6)', src:'mgc-ads', verticals:['sports'],
+      text:'All sports wagering ads must include Massachusetts Problem Gambling Helpline (1-800-327-5050) link and phone number using DPH-provided language. Ads must not promote irresponsible play, imply risk-free wagering, or encourage chasing losses.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3775-16-08', src:'occc-sports-ads', verticals:['sports'],
       text:'Sports gaming advertising must include problem gambling prevention messages and helpline.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP SR Code 5.1.6', src:'ukgc-516', verticals:['casino','online','sports'],
@@ -1125,8 +1132,8 @@ var THEMES = [
       text:'Marketing must present winning chances correctly, show age limit and ROFUS info.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Standards', src:'aglc-rg', verticals:['casino','online','sports'],
       text:'Cannot target minors, high-risk, or vulnerable individuals.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'Marketing must not target minors or self-excluded persons.' }
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.03 / 2.04 / 2.05', src:'agco-ads', verticals:['casino','online','sports'],
+      text:'Marketing must not target minors, self-excluded, or high-risk persons and must be truthful. Public advertising of sport betting inducements, bonuses, and credits is prohibited except on-site or with active player consent.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">74</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a> tagged by pillar, tier, tone, and audience</li><li><span class="asset-count">18</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/myth-busting.md" target="_blank" rel="noopener">myth-busting entries</a> in 3 formats each</li><li><span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a> organized by function</li><li>Messages are jurisdiction-agnostic; <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> supports mandatory text tokens but none are wired for the current target jurisdictions</li></ul>',
   gap: 'Each jurisdiction may require specific verbatim statements. Playbook provides the messaging framework but mandatory verbatim text (specific to NV, NJ, MA, OH, CA, ON, AB, Macau, Singapore, UK, or Denmark) is NOT pre-configured. Messages are not tagged by jurisdiction. Operators must configure jurisdiction-specific mandatory text themselves via _brand.yml tokens.'
@@ -1138,14 +1145,14 @@ var THEMES = [
   badge: 'strong',
   regs: ['ngc','njdge','ca','mgc','occc','ukgc','gra_sg','spillem','aglc','dicj','agco'],
   citations: [
-    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
-      text:'Prominently post problem gambling information and helpline number.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2)', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Prominently post the toll-free NCPG helpline number in or near gaming areas, cage areas, and at cash dispensing machines in gaming areas.' },
     { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69N / 13:69O-1.2', src:'njdge-69n', verticals:['casino','online','sports'],
       text:'1-800-GAMBLER helpline must be prominently displayed on all platforms and advertisements.' },
     { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
       text:'Compacts typically require display of the 1-800-GAMBLER helpline and referral information.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino','sports'],
-      text:'Massachusetts Problem Gambling Helpline: 1-800-327-5050 required display.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256.06(2); M.G.L. c. 23K', src:'mgc-ads', verticals:['casino','sports'],
+      text:'Massachusetts Problem Gambling Helpline: 1-800-327-5050 (text GAMB to 800327). Required in all sports wagering ads with prescribed font sizing (205 CMR 256.06(4)). GameSense Info Centers at all three casinos.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06 / OAC 3775-16-08', src:'occc-admin', verticals:['casino','sports'],
       text:'Problem gambling plan must include signage with responsible gambling information and helpline.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino','online','sports'],
@@ -1158,8 +1165,8 @@ var THEMES = [
       text:'GameSense posters and helpline numbers at every venue; integrated into PlayAlberta online.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'DICJ RG Standards', src:'dicj-rg', verticals:['casino'],
       text:'24-hour Gambling Counseling Hotline displayed on ATM screensavers at all casinos.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'Connex Ontario helpline information must be available, visible, and accessible at all gaming sites.' }
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.09 / 2.11', src:'agco-ig', verticals:['casino','online','sports'],
+      text:'ConnexOntario (1-866-531-2600) must be prominently displayed on registration pages. iGaming operators must provide 24/7 live customer support and contact information for Ontario harm-treatment organizations.' }
   ],
   assets: '<ul class="asset-list"><li>Multi-jurisdiction helpline config in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> (US national, US-Nevada, UK, Australia, Canada provinces)</li><li>Working <a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-helpline.js" target="_blank" rel="noopener">&lt;playbook-helpline&gt;</a> web component</li><li>Sticky helpline strip on <a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a></li><li>Dedicated support section</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Helpline card template</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1167,7 +1174,7 @@ var THEMES = [
     thumb('poster-tier2-10g.png','Tier 2 Poster') +
     thumb('support-page-10a.png','Support Page') +
     '</div>',
-  gap: 'No helpline data configured for Massachusetts, Ohio, Macau, Singapore, Denmark, or Alberta yet. _brand.yml would need updating with those jurisdiction-specific helpline numbers.'
+  gap: 'No helpline data configured for Ohio, Macau, Singapore, Denmark, or Alberta yet. _brand.yml would need updating with those jurisdiction-specific helpline numbers.'
 },
 /* ------- THEME 4: Self-Exclusion ------- */
 {
@@ -1178,22 +1185,22 @@ var THEMES = [
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.5.5 (GAMSTOP)', src:'ukgc-355', verticals:['online','sports'],
       text:'Must participate in GAMSTOP multi-operator remote self-exclusion scheme.' },
-    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
-      text:'Make information about self-exclusion available to patrons. Property-by-property model.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(4); Reg 5A.130', src:'ngc-reg5', verticals:['casino','online','sports'],
+      text:'Land-based: property-by-property self-limitation covering credit, check-cashing, and direct mail. Interactive gaming: operator must close accounts of self-excluded players, stop marketing, and enforce minimum 30-day exclusion period before reinstatement.' },
     { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69G-2', src:'njdge-69g', verticals:['casino','online','sports'],
       text:'Statewide self-exclusion program: 1-year, 5-year, or lifetime options covering all licensed operators.' },
     { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
       text:'Many tribes maintain self-exclusion lists under tribal gaming ordinances. Not state-mandated; varies by compact.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino','sports'],
-      text:'Statewide VSE program. Duration: 1, 3, 5 years, or lifetime.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133; 205 CMR 233', src:'mgc-vse', verticals:['casino','sports'],
+      text:'Two separate VSE programs: casino (205 CMR 133) and sports wagering (205 CMR 233). Duration: 1, 3, 5 years, or lifetime (lifetime requires prior 6 months on list). Reinstatement session required. Casino list updated every 72 hours; sports wagering list every 24 hours.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12', src:'occc-admin', verticals:['casino','sports'],
       text:'Statewide voluntary exclusion covering casinos and sports gaming. Duration: 1, 5 years, or lifetime.' },
     { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA ss. 165-166', src:'gra-sg-cca', verticals:['casino'],
       text:'Self-exclusion, family exclusion orders, visit limit scheme. Criminal penalties for violations.' },
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'ROFUS', src:'spillem-rg', verticals:['casino','online','sports'],
       text:'National self-exclusion register. All licence holders MUST connect to ROFUS. Options: 24-hour break, 1/3/6 months, permanent.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'OLG / iGO Self-Exclusion', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'Common self-exclusion program covering casino, iGaming, and applicable online channels.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.14 / 2.14.1', src:'agco-cse', verticals:['casino','online','sports'],
+      text:'Voluntary self-exclusion with 6-month, 1-year, and 5-year options. Centralized Self-Exclusion (Std 2.14.1) launching 2026 covers all regulated iGaming sites through a single enrollment. Self-excluded persons removed from all marketing within 24 hours.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Self-Exclusion', src:'aglc-se', verticals:['casino','online'],
       text:'Exclusion from all Alberta casinos, RECs, and PlayAlberta. 6mo/1yr/2yr/3yr.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'Law 10/2012 (amended by Law 17/2018)', src:'dicj-rg', verticals:['casino'],
@@ -1211,22 +1218,24 @@ var THEMES = [
   id: 5,
   title: 'Limit-Setting & Player Controls',
   badge: 'partial',
-  regs: ['ukgc','njdge','mgc','occc','gra_sg','spillem','agco','aglc'],
+  regs: ['ngc','ukgc','njdge','mgc','occc','gra_sg','spillem','agco','aglc'],
   citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(18)(a)', src:'ngc-reg5a', verticals:['online','sports'],
+      text:'Interactive gaming accounts must offer loss limits, deposit limits, tournament limits, buy-in limits, play-time limits, and time-based exclusion. Wagering accounts must provide deposit limits.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.2.11', src:'ukgc-3211', verticals:['online','sports'],
       text:'Must offer customer-led financial limits on gambling activity.' },
     { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69O-1.2', src:'njdge-69o', verticals:['online','sports'],
       text:'Internet gaming operators must offer deposit limits, session time limits, and loss limits.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 248.16', src:'mgc-ads', verticals:['sports'],
-      text:'Must offer daily/weekly/monthly deposit and wager limits.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 248.16', src:'mgc-cmr248', verticals:['sports'],
+      text:'Daily, weekly, and monthly deposit and wager limits required. Limits displayed before registration, first deposit, and first wager. Restrictive changes effective immediately; relaxing requires next business day after period expires plus patron reaffirmation.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3775-16-03', src:'occc-sports-acct', verticals:['sports'],
       text:'Sports gaming accounts must offer deposit, wager, and time-based limits.' },
     { reg:'gra_sg', label:'GRA (Singapore)', ref:'Casino Control (RG) Regs 2013', src:'gra-sg-cca', verticals:['casino'],
       text:'Systems for patrons to set expenditure and time limits.' },
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Exec Orders 1274/1276', src:'spillem-rg', verticals:['online','sports'],
       text:'Players MUST set deposit limit before beginning play (mandatory, player-set).' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards for Internet Gaming', src:'agco-rg', verticals:['online','sports'],
-      text:'Mandatory deposit limits for all iGaming operators.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.23 / 2.24 / 2.13', src:'agco-ig', verticals:['online','sports'],
+      text:'Mandatory deposit and loss limits with 24-hour, 7-day, and 1-month periods. 24-hour cooling-off period before limits can be relaxed or removed. Short-term break options of 1 day to 3 months. Slot auto-play prohibited.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'PlayAlberta Standards', src:'aglc-rg', verticals:['online','sports'],
       text:'Deposit and loss limits, reality checks, voluntary breaks.' }
   ],
@@ -1244,12 +1253,12 @@ var THEMES = [
   badge: 'partial',
   regs: ['ngc','njdge','mgc','occc','ukgc','gra_sg','spillem','agco','aglc','dicj'],
   citations: [
-    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(4) / 5A', src:'ngc-reg5', verticals:['casino','online','sports'],
-      text:'Advertising must conform to community standards; Reg 5A for interactive gaming.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5A.155', src:'ngc-reg5', verticals:['casino','online','sports'],
+      text:'Advertising must conform to prevailing community standards of decency, dignity, good taste, honesty, and inoffensiveness. Interactive gaming advertising must be truthful and non-deceptive with clear promotion terms.' },
     { reg:'njdge', label:'NJ DGE', ref:'DGE Advertising Best Practices', src:'njdge-bestprac', verticals:['casino','online','sports'],
       text:'All advertising must include responsible gambling messaging and 1-800-GAMBLER.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256', src:'mgc-ads', verticals:['sports'],
-      text:'No targeting minors or vulnerable adults; no encouraging specific wagers.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256.04-256.09', src:'mgc-ads', verticals:['sports'],
+      text:'Comprehensive: no deceptive ads, no targeting under-21 (25% audience threshold), no targeting at-risk gamblers, helpline required with font size minimums (2% print, 5% billboard, 8% video end screen), no revenue-share affiliate deals, no encouraging specific wagers, records kept 6 years.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3775-16-08', src:'occc-sports-ads', verticals:['sports'],
       text:'All sports gaming ads must include problem gambling prevention messages and helpline.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP 5.1.6', src:'ukgc-516', verticals:['casino','online','sports'],
@@ -1258,8 +1267,8 @@ var THEMES = [
       text:'All casino advertising must be GRA-approved.' },
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Marketing Guide', src:'spillem-guide', verticals:['casino','online','sports'],
       text:'Under-25 ban in ads, age limit + ROFUS required in all marketing, proximity bans near schools, live sports ad ban.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'Advertising must not target minors or self-excluded persons.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.03–2.07', src:'agco-ads', verticals:['casino','online','sports'],
+      text:'No targeting minors, self-excluded, or high-risk persons. No athlete endorsements except for responsible gambling advocacy. Sport betting inducements prohibited in public advertising. Inducement disclosures must include all material conditions. Opt-in consent required for direct inducement marketing.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Standards', src:'aglc-rg', verticals:['casino','online','sports'],
       text:'Cannot target minors, high-risk, or vulnerable individuals.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'Law 7/2022 (amending Law 16/2001)', src:'dicj-rg', verticals:['casino'],
@@ -1280,14 +1289,14 @@ var THEMES = [
   badge: 'strong',
   regs: ['ngc','njdge','ca','mgc','occc','gra_sg','dicj','ukgc','spillem','agco','aglc'],
   citations: [
-    { reg:'ngc', label:'NGC (Nevada)', ref:'NRS 463.350', src:'ngc-reg5', verticals:['casino','online','sports'],
-      text:'21+ minimum gambling age.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'NRS 463.350; Reg 5A.110(2)(b)', src:'ngc-nrs463', verticals:['casino','online','sports'],
+      text:'21+ minimum gambling age for all products. Interactive gaming registration requires date of birth confirming player is 21 or older.' },
     { reg:'njdge', label:'NJ DGE', ref:'NJSA 5:12-119', src:'njdge-69g', verticals:['casino','online','sports'],
       text:'21+ minimum gambling age for casino, internet gaming, and sports wagering.' },
     { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
       text:'18+ or 21+ depending on tribal compact and whether casino serves alcohol. Most casinos with alcohol licenses require 21+.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'M.G.L. c. 23K', src:'mgc-vse', verticals:['casino','sports'],
-      text:'21+ for casino gaming and sports wagering.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'M.G.L. c. 23K; 205 CMR 248.04', src:'mgc-vse', verticals:['casino','sports'],
+      text:'21+ for casino gaming and sports wagering. Sports wagering accounts require electronic identity verification with Commission-approved national reference company and knowledge-based authentication (205 CMR 248.04(2)(4)).' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'ORC 3772 / ORC 3775', src:'occc-admin', verticals:['casino','sports'],
       text:'21+ for casinos and sports gaming.' },
     { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA', src:'gra-sg-cca', verticals:['casino'],
@@ -1298,8 +1307,8 @@ var THEMES = [
       text:'18+ for all gambling.' },
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Spilleloven', src:'spillem-rg', verticals:['casino','online','sports'],
       text:'18+ for most gambling.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Gaming Control Act, 1992', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'19+ in Ontario.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Gaming Control Act, 1992, s.22; Registrar\'s Stds Std 3.01', src:'agco-ig', verticals:['casino','online','sports'],
+      text:'Minimum gambling age is 19+ for all products. iGaming: minors prohibited from creating accounts; registration requires date of birth verification.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'Gaming, Liquor and Cannabis Act', src:'aglc-rg', verticals:['casino','online','sports'],
       text:'18+ in Alberta.' }
   ],
@@ -1313,14 +1322,14 @@ var THEMES = [
   badge: 'strong',
   regs: ['ngc','njdge','ca','mgc','occc','dicj','gra_sg','aglc','ukgc','agco'],
   citations: [
-    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
-      text:'Post information near ATMs and at the cage.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2)', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Post written materials on the nature and symptoms of problem gambling and the NCPG helpline in conspicuous places in or near gaming areas, cage areas, and at cash dispensing machines.' },
     { reg:'njdge', label:'NJ DGE', ref:'NJAC 13:69N / DGE Guidance', src:'njdge-69n', verticals:['casino','sports'],
       text:'Responsible gambling signage required at casino entrances, near ATMs, cashier cages, and in sportsbook lounges.' },
     { reg:'ca', label:'California (Tribal)', ref:'Tribal-State Compacts', src:'ca-compacts', verticals:['casino'],
       text:'Compacts typically require signage with problem gambling resources and age restrictions at casino entrances and gaming floors.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino'],
-      text:'GameSense Info Centers required on-site at all casinos.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133.02(2); M.G.L. c. 23K', src:'mgc-vse', verticals:['casino'],
+      text:'GameSense Info Centers required at all three casinos (MGM Springfield, Encore Boston Harbor, Plainridge Park). VSE applications available at designated locations on and off premises.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06', src:'occc-admin', verticals:['casino'],
       text:'Signage with responsible gambling information required.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'DICJ Standards', src:'dicj-rg', verticals:['casino'],
@@ -1331,8 +1340,8 @@ var THEMES = [
       text:'GameSense posters and information booths at all casinos and RECs.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino'],
       text:'Making responsible gambling information available in premises.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino'],
-      text:'Responsible gambling information must be available, visible, and accessible at gaming sites.' }
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Gaming, Std 2.3', src:'agco-rg', verticals:['casino'],
+      text:'Responsible gambling information, ConnexOntario helpline, betting limits, and self-exclusion program details must be readily available to all patrons at gaming sites.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">5</span> <a href="https://github.com/kphilander/Playbook/tree/main/collateral/environmental" target="_blank" rel="noopener">venue sign templates</a> (entrance, ATM, floor, restroom, staff area)</li><li><span class="asset-count">5</span> poster templates</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Print collateral</a>: rack card, table tent, helpline card, tri-fold brochure</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/digital" target="_blank" rel="noopener">Digital displays</a>: landscape and portrait formats</li><li>All <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">rendered as HTML + PNG</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1363,20 +1372,20 @@ var THEMES = [
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.4.1 (premises) / 3.4.3 (remote)', src:'ukgc-341', verticals:['casino','online','sports'],
       text:'Customer interaction requirements for identifying at-risk players. Separate codes for premises-based and remote gambling.' },
-    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170', src:'ngc-reg5', verticals:['casino','sports'],
-      text:'Train employees to provide problem gambling information.' },
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(3)', src:'ngc-reg5', verticals:['casino','sports'],
+      text:'Implement training for all employees who directly interact with gaming patrons on problem gambling symptoms and assisting patrons with resources. NCPG-NV certified programs presumed adequate.' },
     { reg:'njdge', label:'NJ DGE', ref:'DGE Guidance / NJAC 13:69N', src:'njdge-69n', verticals:['casino','online','sports'],
       text:'Employees must be trained to recognize signs of problem gambling and know referral procedures.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133', src:'mgc-vse', verticals:['casino'],
-      text:'Designated agents must complete Commission-approved training. GameSense Advisors on-site.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 133.02(3); 133.06(9)(f)', src:'mgc-vse', verticals:['casino','sports'],
+      text:'Designated agents must complete Commission-approved training on VSE program, problem gambling, and confidentiality (133.02(3)). Gaming licensee staff trained on VSE in conjunction with problem gambling training program (133.06(9)(f)). GameSense Advisors on-site at all casinos.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06', src:'occc-admin', verticals:['casino'],
       text:'Problem gambling plan must include staff training on identifying and assisting problem gamblers.' },
     { reg:'gra_sg', label:'GRA (Singapore)', ref:'CCA RG Regs', src:'gra-sg-cca', verticals:['casino'],
       text:'Compulsory staff training to identify and assist problem gamblers.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'Deal Us In', src:'aglc-rg', verticals:['casino'],
       text:'Mandatory certification for all gaming workers. Expires after 5 years.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards, Section 2', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'Responsible gambling training required for all employees interacting with players.' }
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Std 2.12; Gaming Std 2.5', src:'agco-rg', verticals:['casino','online','sports'],
+      text:'All employees interacting with players must receive mandatory responsible gambling training on problem gambling identification and response. As of July 2025, AGCO no longer requires pre-approval of training programs (outcomes-based approach).' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">8</span> <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/conversation-scripts.md" target="_blank" rel="noopener">conversation scripts</a> (helpline referral, self-exclusion enrollment, deposit limit setting, distressed player interaction)</li><li><span class="asset-count">30</span>-question <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/staff-faq.md" target="_blank" rel="noopener">staff FAQ</a></li><li>At-risk player segment profile with messaging guidance</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Tier 2 messaging guidelines</a> for support contexts</li></ul>' +
     '<div class="thumb-grid">' +
@@ -1389,16 +1398,18 @@ var THEMES = [
   id: 10,
   title: 'Activity Statements & Transparency',
   badge: 'light',
-  regs: ['ukgc','mgc','spillem','agco'],
+  regs: ['ngc','ukgc','mgc','spillem','agco'],
   citations: [
+    { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(17-18)', src:'ngc-reg5a', verticals:['online','sports'],
+      text:'Interactive gaming operators must maintain complete game history for every game played. Wagering account licensees must record and maintain all deposits, withdrawals, credits, and debits for 5 years.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.2.11', src:'ukgc-3211', verticals:['online','sports'],
       text:'Operators must provide account information and remind customers to review transaction history.' },
-    { reg:'mgc', label:'MGC (Massachusetts)', ref:'M.G.L. c. 23K s. 29', src:'mgc-vse', verticals:['casino'],
-      text:'Monthly win/loss statements for reward cardholders.' },
+    { reg:'mgc', label:'MGC (Massachusetts)', ref:'M.G.L. c. 23K s. 29; 205 CMR 248.15', src:'mgc-cmr248', verticals:['casino','sports'],
+      text:'Monthly win/loss statements for casino reward cardholders (M.G.L. c. 23K s. 29). Sports wagering operators must provide account history for past year upon request (205 CMR 248.15).' },
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Exec Orders', src:'spillem-rg', verticals:['online','sports'],
       text:'Activity monitoring and player-set limits.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Standards for Internet Gaming', src:'agco-rg', verticals:['online','sports'],
-      text:'Behavioural monitoring and player activity information requirements for iGaming operators.' }
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 3.15 / 2.10', src:'agco-ig', verticals:['online','sports'],
+      text:'Players must access deposit/withdrawal history, login records, gaming transaction history, total wagered amounts, and session balance. Real-time behavioural monitoring required to detect signs of player harm, with mandatory intervention when risk indicators are identified.' }
   ],
   assets: '<ul class="asset-list"><li>Static <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">session summary mockup</a></li><li>Dashboard messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">"Open" pillar</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1413,12 +1424,12 @@ var THEMES = [
    ====================================================================== */
 var JURISDICTIONS = {
   ngc: {
-    name: 'Nevada Gaming Control Board (NGC)',
+    name: 'Nevada Gaming Control Board / Nevada Gaming Commission',
     jurisdiction: 'Nevada, United States',
-    legislation: 'NRS Chapter 463; NGC Regulations 5, 5A, 5.170',
-    unique: 'Property-by-property self-exclusion (no centralized statewide program); Regulation 5.170 specifically mandates posting near ATMs and at the cage; Regulation 5A applies to interactive gaming; 21+ minimum age.',
-    verticals: 'Land-based Casino, Online Casino, Sports Betting',
-    source: 'https://gaming.nv.gov/contentassets/d6342a488e944e6aa02337fa9d3c94e5/regulation-5-as-of-09-25.pdf'
+    legislation: 'NRS Chapter 463 (Nevada Gaming Control Act); NGC Regulation 5 (Rev. 12/24); NGC Regulation 5A (Rev. 05/24)',
+    unique: 'Two-tier regulatory model (NGCB investigates, NGC decides). Property-by-property self-exclusion — no centralized statewide program. Reg 5.170 mandates posting near ATMs and at the cage. Reg 5A governs interactive gaming (online poker, mobile sports betting). Reg 5.225(18)(b) prescribes a verbatim responsible gambling message for wagering accounts. 21+ minimum age for all products. Online casino not legal; lottery constitutionally prohibited.',
+    verticals: 'Land-based Casino, Sports Betting',
+    source: 'https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5Operation.pdf'
   },
   njdge: {
     name: 'New Jersey DGE',
@@ -1431,10 +1442,10 @@ var JURISDICTIONS = {
   mgc: {
     name: 'Massachusetts Gaming Commission (MGC)',
     jurisdiction: 'Massachusetts, United States',
-    legislation: 'M.G.L. Chapter 23K; 205 CMR 133, 248.16, 256',
-    unique: 'Statewide VSE program with 1/3/5 year and lifetime options; GameSense Info Centers required at all casinos; Mandatory deposit/wager limits for sports wagering; Problem Gambling Helpline: 1-800-327-5050.',
+    legislation: 'M.G.L. Chapter 23K (Expanded Gaming Act); M.G.L. Chapter 23N (Sports Wagering Act); 205 CMR 133 (Casino VSE); 205 CMR 233 (Sports Wagering VSE); 205 CMR 248 (Sports Wagering Accounts); 205 CMR 256 (Sports Wagering Advertising)',
+    unique: 'Separate regulatory regimes for casino gaming (Chapter 23K) and sports wagering (Chapter 23N). Statewide VSE with 1/3/5 year and lifetime options across both verticals. GameSense Info Centers at all three casinos (MGM Springfield, Encore Boston Harbor, Plainridge Park). Mandatory daily/weekly/monthly deposit and wager limits for sports wagering (205 CMR 248.16). Prescriptive advertising rules with font size minimums (205 CMR 256). 1-800-327-5050 helpline. No online casino.',
     verticals: 'Land-based Casino, Sports Betting',
-    source: 'https://www.mass.gov/regulations/205-CMR-13300-voluntary-self-exclusion'
+    source: 'https://www.mass.gov/orgs/massachusetts-gaming-commission'
   },
   occc: {
     name: 'Ohio Casino Control Commission (OCCC)',
@@ -1455,10 +1466,10 @@ var JURISDICTIONS = {
   agco: {
     name: 'AGCO (Ontario)',
     jurisdiction: 'Ontario, Canada',
-    legislation: 'iGaming Ontario RG Standards; Gaming Control Act',
-    unique: 'Mandatory deposit limits for all iGaming operators; iGO self-exclusion program; 19+ minimum age; Relatively new market (launched April 2022) with evolving standards; Advertising must not target minors.',
+    legislation: 'Gaming Control Act, 1992; Registrar\'s Standards for Internet Gaming; Registrar\'s Standards for Gaming and Lottery',
+    unique: 'Open competitive iGaming market (April 2022) with 70+ registered operators. Mandatory deposit/loss limits and real-time behavioural monitoring for all iGaming operators. Public advertising of sport betting inducements prohibited. Centralized Self-Exclusion program launching 2026. No mandatory verbatim statement, but ConnexOntario must be prominently displayed.',
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
-    source: 'https://www.agco.ca/en/lottery-and-gaming/standards-and-requirements/2-responsible-gaming'
+    source: 'https://www.agco.ca/en/lottery-and-gaming/guides/registrars-standards-internet-gaming'
   },
   aglc: {
     name: 'AGLC (Alberta)',
