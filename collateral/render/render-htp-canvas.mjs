@@ -11,8 +11,15 @@ import { createCanvas } from 'canvas';
 import { writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { loadBrand } from '../../lib/brand-config.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Resolve helpline and age from _brand.yml
+const brand = loadBrand();
+const tokens = brand.brandTokens();
+const HELPLINE_NUMBER = tokens['{{HELPLINE_NUMBER}}'] || '1-800-522-4700';
+const MIN_AGE = tokens['{{MIN_AGE}}'] || '21';
 
 // Brand palette (from brand-inject.css)
 const C = {
@@ -300,7 +307,7 @@ for (const card of gameCards) {
   ctx.fillText(card.statUnit[1], PAD_X + numW + 16, statY + 4);
 
   // Footer
-  drawFooter(ctx, 'Free support 24/7: 1-800-522-4700', '21+ to gamble');
+  drawFooter(ctx, `Free support 24/7: ${HELPLINE_NUMBER}`, `${MIN_AGE}+ to gamble`);
 
   writeFileSync(join(__dirname, card.file), canvas.toBuffer('image/png'));
   console.log(`Rendered: ${card.file}`);
@@ -372,7 +379,7 @@ for (const card of gameCards) {
     rowY += 48;
   }
 
-  drawFooter(ctx, 'Free support 24/7: 1-800-522-4700', 'House edge = what the house keeps per $100 wagered over time');
+  drawFooter(ctx, `Free support 24/7: ${HELPLINE_NUMBER}`, 'House edge = what the house keeps per $100 wagered over time');
 
   writeFileSync(join(__dirname, 'htp-odds-comparison.png'), canvas.toBuffer('image/png'));
   console.log('Rendered: htp-odds-comparison.png');
