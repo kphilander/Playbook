@@ -73,7 +73,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 
 | Country | Sub-jurisdiction | Regulator | Status | Module |
 |---|---|---|---|---|
-| Canada | British Columbia | GPEB / IGCO (from April 2026) | Complete | [canada/british-columbia/](canada/british-columbia/) |
+| Canada | Ontario | AGCO / iGO | Complete | [canada/ontario/](canada/ontario/) |
 | United States | Nevada | NGCB / NGC | Complete | [united-states/nevada/](united-states/nevada/) |
 
 ---

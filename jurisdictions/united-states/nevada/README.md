@@ -26,15 +26,15 @@ adaptation_notes: |
   for non-US deployments. Currency is USD. Helpline numbers are US
   national (NCPG). Self-exclusion is property-by-property — unique to
   Nevada. AGA code references are US-specific.
-last_updated: 2026-02-22
+last_updated: 2026-03-10
 ---
 
 # Nevada — Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Nevada. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Nevada has no mandatory verbatim messaging (unlike BC's "Know your limit, play within it") but does require prominent posting of problem gambling information and helpline numbers under Regulation 5.170. Nevada uses a property-by-property self-exclusion model — there is no centralized statewide program.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Nevada. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Nevada uses an obligation-based model for most player-facing signage (Reg 5.170 — no prescribed phrasing) but does prescribe a verbatim responsible gambling message for wagering accounts (Reg 5.225(18)(b)). Nevada uses a property-by-property self-exclusion model — there is no centralized statewide program.
 
-> **Last verified**: 2026-02-22
-> **Next review due**: 2026-05-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-03-10
+> **Next review due**: 2026-06-10 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -44,13 +44,13 @@ last_updated: 2026-02-22
 |---|---|
 | [Regulatory authority](#regulatory-authority) | NGCB + NGC two-tier structure |
 | [Legal requirements](#legal-requirements) | 21+, permitted products, licensing |
-| [Helpline](#helpline) | NCPG national helpline, all three accepted numbers |
-| [Messaging requirements](#messaging-requirements) | No verbatim mandate — what IS required |
-| [Advertising restrictions](#advertising-restrictions) | Principles-based standard (Reg 5.011(4)) |
-| [Self-exclusion](#self-exclusion) | Property-by-property model (Reg 5.170) |
+| [Helpline](#helpline) | NCPG national helpline, display rules |
+| [Messaging requirements](#messaging-requirements) | Obligation-based signage + verbatim wagering account message |
+| [Advertising restrictions](#advertising-restrictions) | Principles-based standard (Reg 5.011(1)(d)) + Reg 5A.155 |
+| [Self-exclusion](#self-exclusion) | Property-by-property model (Reg 5.170(4)) + interactive (Reg 5A.130) |
 | [Player protection tools](#player-protection-tools) | Land-based vs. interactive gaming |
 | [Age verification](#age-verification) | 21+ requirements |
-| [AML/KYC](#amlkyc) | FinCEN/BSA requirements, pending Reg 5/25 amendments |
+| [AML/KYC](#amlkyc) | FinCEN/BSA requirements |
 | [Collateral adaptation](#collateral-adaptation) | Quick reference for all touchpoints |
 | [`_brand.yml` updates](#brandyml-updates) | Config values to add |
 | [Compliance checklist](#compliance-checklist) | Pre-launch verification |
@@ -65,7 +65,7 @@ last_updated: 2026-02-22
 | **Investigative body** | Nevada Gaming Control Board (NGCB) |
 | **Decision body** | Nevada Gaming Commission (NGC) |
 | **Governing legislation** | Nevada Revised Statutes (NRS) Chapter 463 — Nevada Gaming Control Act |
-| **Regulations** | Nevada Gaming Commission Regulations (Chapters 1–27) |
+| **Regulations** | NGC Regulation 5 (Operation of Gaming Establishments, Rev. 12/24); NGC Regulation 5A (Operation of Interactive Gaming, Rev. 05/24) |
 | **Established** | 1955 (oldest state gaming regulatory framework in the US) |
 
 ### Two-tier structure
@@ -84,7 +84,7 @@ Nevada's regulatory framework uses a **two-tier system** that separates investig
 3. **NGC decides** — approves, denies, or conditions licenses and regulatory changes
 4. **NGCB enforces** — monitors ongoing compliance and takes enforcement action
 
-This separation is designed to ensure independence — the body that investigates does not make the final decision.
+This separation ensures independence — the body that investigates does not make the final decision.
 
 ### Key divisions within NGCB
 
@@ -95,6 +95,14 @@ This separation is designed to ensure independence — the body that investigate
 | **Investigations** | Licensing background checks — not directly relevant to {{PROGRAM_NAME}} content |
 | **Tax and License** | Revenue reporting — not directly relevant to {{PROGRAM_NAME}} content |
 
+### Primary sources
+
+| Document | URL | Relevance |
+|---|---|---|
+| NRS Chapter 463 | [leg.state.nv.us/nrs/nrs-463.html](https://www.leg.state.nv.us/nrs/nrs-463.html) | Nevada Gaming Control Act — governs all gambling in Nevada |
+| NGC Regulation 5 (Rev. 12/24) | [gaming.nv.gov — Regulation 5](https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5Operation.pdf) | Operation of Gaming Establishments — includes 5.011 (advertising), 5.170 (problem gambling programs), 5.225 (wagering accounts) |
+| NGC Regulation 5A (Rev. 05/24) | [gaming.nv.gov — Regulation 5A](https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5A.pdf) | Operation of Interactive Gaming — online poker and mobile sports betting |
+
 ---
 
 ## Legal requirements
@@ -103,7 +111,7 @@ This separation is designed to ensure independence — the body that investigate
 |---|---|
 | **Minimum gambling age** | 21+ (all gambling products — no exceptions) |
 | **Legal framework** | State-licensed operators under NRS Chapter 463 |
-| **Online gambling** | Online poker legal (since 2013); mobile sports betting legal (in-person registration required); online casino NOT legal |
+| **Online gambling** | Online poker legal (since 2013); mobile sports betting legal; online casino NOT legal |
 | **Lottery** | Constitutionally prohibited (Nevada Constitution, Article 4, § 24) |
 
 ### Permitted products
@@ -111,7 +119,7 @@ This separation is designed to ensure independence — the body that investigate
 | Product | Legal status | Regulator | Notes |
 |---|---|---|---|
 | Casino (slots, table games) | Legal | NGCB/NGC | Nevada's primary gambling industry; ~200 nonrestricted licensees |
-| Sports betting | Legal | NGCB/NGC | Land-based and mobile; in-person registration required for mobile accounts |
+| Sports betting | Legal | NGCB/NGC | Land-based and mobile |
 | Online poker | Legal | NGCB/NGC | Legal since 2013 under AB 114; interstate compact with Delaware |
 | Online casino | **Not legal** | — | Not authorized under current Nevada law |
 | Lottery | **Constitutionally prohibited** | — | Nevada Constitution prohibits state lotteries |
@@ -126,14 +134,13 @@ Nevada uses a **detailed licensing system**:
 |---|---|
 | **Nonrestricted** | Full casino operations (15+ slot machines or any table games) |
 | **Restricted** | Limited slot operations (up to 15 machines, no table games) — bars, grocery stores, etc. |
-| **Interactive gaming** | Online poker and mobile sports betting operators |
+| **Interactive gaming** | Online poker and mobile sports betting operators (NRS 463.750; Reg 5A.030) |
 | **Manufacturer/Distributor** | Gaming equipment manufacturers and distributors |
 | **Service provider** | Companies providing services to licensees |
 
 ### Key regulatory notes
 
 - Nevada operates a **licensing model**, not a monopoly model — multiple private operators hold licenses
-- This differs from BC's BCLC monopoly — in Nevada, {{PROGRAM_NAME}} may be deployed by any licensed operator
 - Operators must be licensed by NGCB/NGC before offering any gambling product
 - {{PROGRAM_NAME}} content itself does not require a license, but the operator deploying it must be licensed
 
@@ -147,13 +154,14 @@ Nevada does not operate a separate state gambling helpline. Operators use the **
 
 | Field | Value |
 |---|---|
-| **Primary number** | 1-800-522-4700 |
+| **Primary number** | 1-800-MY-RESET (1-800-697-3738) |
 | **Vanity number** | 1-800-GAMBLER |
-| **New branded number** | 1-800-MY-RESET (January 2026) |
-| **Text support** | Text "SUPPORT" to 53342 |
+| **Legacy number** | 1-800-522-4700 |
+| **Text support** | Text 800GAM |
 | **Online chat** | www.ncpgambling.org/chat |
-| **Hours** | 24/7 |
+| **Hours** | 24/7/365 |
 | **Cost** | Free |
+| **Languages** | 240+ via Language Line Solutions |
 | **Regulatory reference** | NGCB Notice 2026-04 — all three numbers accepted |
 
 ### Nevada Council on Problem Gambling
@@ -167,14 +175,16 @@ Nevada does not operate a separate state gambling helpline. Operators use the **
 
 The Nevada Council on Problem Gambling is a **nonprofit** organization — it is not a state agency and does not operate a separate helpline. It provides education, training, and advocacy within Nevada and refers to the national NCPG helpline.
 
-### Display rules
+### Display rules (Regulation 5.170(2))
 
-Under **Regulation 5.170**, Nevada licensees must:
+Under **Regulation 5.170(2)**, Nevada licensees must:
 
-- **Prominently post** problem gambling information and the gambling helpline number
-- Post information in areas accessible to patrons (casino floor, near ATMs, at cage)
-- Make information about self-exclusion available to patrons who request it
-- Train employees to provide information about problem gambling resources
+> Each licensee shall post or provide in conspicuous places in or near gaming and cage areas and cash dispensing machines located in gaming areas written materials concerning the nature and symptoms of problem gambling and the toll-free telephone number of the National Council on Problem Gambling or a similar entity approved by the Board Chair that provides information and referral services for problem gamblers.
+
+This means:
+- **Prominently post** problem gambling information and the NCPG helpline number
+- Post in areas including: casino floor, near ATMs, at cage
+- Materials must cover nature and symptoms of problem gambling (not just the helpline number)
 
 ### Helpline number transition
 
@@ -182,9 +192,9 @@ As of January 2026, NCPG has rebranded to **1-800-MY-RESET**. Per **NGCB Notice 
 
 | Number | Status | Recommendation |
 |---|---|---|
-| 1-800-MY-RESET | New primary (2026) | Use as the prominently displayed number going forward |
-| 1-800-522-4700 | Still active | Acceptable for compliance; retain as secondary |
-| 1-800-GAMBLER | Still active | Acceptable for compliance; widely recognized |
+| 1-800-MY-RESET | New primary (January 2026) | Use as the prominently displayed number going forward |
+| 1-800-GAMBLER | Still active | Widely recognized; commonly required by regulators |
+| 1-800-522-4700 | Still active | Legacy number; acceptable for compliance |
 
 **{{PROGRAM_NAME}} recommendation**: Display **1-800-GAMBLER** as primary (most widely recognized and commonly required), with **1-800-MY-RESET** as the updated branded number. Include both where space permits.
 
@@ -205,28 +215,37 @@ Both meet the Regulation 5.170 requirement. The second version provides multiple
 
 ## Messaging requirements
 
-### No verbatim mandatory messaging
+### Two messaging regimes
 
-| Field | Value |
-|---|---|
-| **Verbatim required statement** | **None** — Nevada does not require a specific word-for-word message |
-| **What IS required** | Prominent posting of problem gambling information and helpline number (Reg 5.170) |
-| **Contrast with BC** | BC requires "Know your limit, play within it." (exact wording); Nevada requires information posting but no specific phrasing |
+Nevada has **two distinct messaging regimes** — one for general signage and one for wagering accounts:
 
-### What Regulation 5.170 requires
+| Regime | Requirement | Source |
+|---|---|---|
+| **General signage** | Obligation-based — post problem gambling info and helpline, but no prescribed phrasing | Reg 5.170(2) |
+| **Wagering accounts** | **Verbatim message prescribed** — must be conspicuously displayed upon account access | Reg 5.225(18)(b) |
 
-Nevada's approach is **obligation-based rather than message-based**. Operators must:
+### Wagering account mandatory message (Regulation 5.225(18)(b))
 
-1. **Post problem gambling information** prominently in gambling areas
+Operators with wagering accounts (including mobile sports betting and online poker) must display the following message:
+
+> [Licensee's name] encourages you to gamble responsibly. For problem gambling information and assistance, call the 24-hour confidential Problem Gamblers HelpLine at 1-800-522-4700, or visit www.WhenTheFunStops.org.
+
+**Important**: The regulation allows the Board Chair to administratively approve alternative helpline numbers or website addresses if they change. Given the NCPG rebrand to 1-800-MY-RESET, check with NGCB for current approved alternatives.
+
+### General signage obligations (Regulation 5.170)
+
+For non-wagering-account contexts, Nevada's approach is **obligation-based rather than message-based**. Operators must:
+
+1. **Post problem gambling information** prominently in/near gaming areas, cage areas, and at ATMs (Reg 5.170(2))
 2. **Display the helpline number** (1-800-GAMBLER / 1-800-MY-RESET / 1-800-522-4700)
-3. **Make self-exclusion information available** to patrons who request it
-4. **Train employees** to recognize signs of problem gambling and provide resources
+3. **Make self-exclusion information available** to patrons who request it (Reg 5.170(4))
+4. **Train employees** to recognize symptoms of problem gambling and provide resources (Reg 5.170(3))
 
-The regulation does not prescribe what the information must say — only that it must be prominent, visible, and available.
+The regulation does not prescribe what the general signage must say — only that it must cover nature and symptoms of problem gambling and include the helpline number.
 
 ### On-brand integration
 
-Because Nevada has no mandated phrasing, operators have flexibility to use {{PROGRAM_NAME}} messaging natively:
+Because general signage has no mandated phrasing, operators have flexibility to use {{PROGRAM_NAME}} messaging natively:
 
 **Generic operator approach:**
 > "If gambling is a problem, call 1-800-GAMBLER."
@@ -239,21 +258,20 @@ Because Nevada has no mandated phrasing, operators have flexibility to use {{PRO
 > **Every game has math. Here's yours.** Your session, your budget, your call. Tools and info available at the cage or at {{PROGRAM_NAME}}.
 > Need to talk? **1-800-GAMBLER** — free, confidential, 24/7.
 
-This flexibility is a significant advantage — {{PROGRAM_NAME}} content in Nevada can fully express its brand voice without the constraint of working around a mandatory statement.
-
 ### Placement guidance
 
-Although Nevada does not mandate specific placements the way BC does, Regulation 5.170 requires prominent posting. {{PROGRAM_NAME}} recommends:
-
-| Touchpoint | Recommended placement | Notes |
+| Touchpoint | Recommended placement | Regulatory basis |
 |---|---|---|
-| Website / app | Footer of every page, deposit screen, account settings | Helpline + on-brand RG message |
-| Social media | Profile/bio | Helpline number |
-| Print collateral | Back panel or footer | Helpline + on-brand message |
-| Venue signage | Entry, floor, near ATMs, at cage | Helpline + problem gambling info |
-| TV/video | End card (3+ seconds) | Helpline |
-| Radio | Spoken helpline reference | At normal pace |
-| Email | Footer of every email | Helpline + on-brand message |
+| Casino floor | Conspicuous places in/near gaming areas | Reg 5.170(2) |
+| Cage area | Conspicuous places in/near cage areas | Reg 5.170(2) |
+| ATMs in gaming areas | At cash dispensing machines | Reg 5.170(2) |
+| Website / app (wagering accounts) | Conspicuously displayed upon account access | Reg 5.225(18)(b) |
+| Interactive gaming platform | Prominent display before play begins | Reg 5A.150 |
+| Social media | Profile/bio | Best practice |
+| Print collateral | Back panel or footer | Best practice |
+| TV/video | End card (3+ seconds) | Best practice |
+| Radio | Spoken helpline reference | Best practice |
+| Email | Footer of every email | Best practice |
 
 ---
 
@@ -261,33 +279,34 @@ Although Nevada does not mandate specific placements the way BC does, Regulation
 
 ### Nevada's principles-based standard
 
-Nevada's advertising regulation takes a **principles-based approach** rather than the prescriptive rules found in jurisdictions like BC or the UK.
+Nevada's advertising regulation takes a **principles-based approach** rather than the prescriptive rules found in jurisdictions like Ontario or the UK.
 
 | Field | Value |
 |---|---|
-| **Primary regulation** | NGC Regulation 5.011(4) |
+| **Primary regulation** | NGC Regulation 5.011(1)(d) |
 | **Standard** | Advertising must conform to "decency, dignity, good taste, honesty, and inoffensiveness" |
+| **Interactive gaming** | Reg 5A.155 — truthful and non-deceptive; promotion terms must be clear and concise |
 | **Approach** | Principles-based — no itemized list of prohibited content |
 | **Enforcement** | NGCB Enforcement Division reviews complaints and may initiate action |
 
-### Regulation 5.011(4)
+### Regulation 5.011(1)(d) — full text
 
-The full regulatory language:
+> Failure to conduct advertising and public relations activities in accordance with decency, dignity, good taste, honesty and inoffensiveness, including, but not limited to, advertising that is false or materially misleading.
 
-> All advertising and marketing materials used by a licensee must conform to prevailing community standards of decency, dignity, good taste, honesty, and inoffensiveness.
+This is listed as a ground for disciplinary action, giving NGCB/NGC flexibility to evaluate advertising on a case-by-case basis.
 
-This is deliberately broad — it gives NGCB/NGC flexibility to evaluate advertising on a case-by-case basis rather than against a checklist.
+### Regulation 5A.155 — interactive gaming advertising
+
+> An operator, including its employees or agents, shall be truthful and non-deceptive in all aspects of its interactive gaming advertising and promotions. An operator which engages in any promotion related to interactive gaming shall clearly and concisely explain the terms of the promotion and adhere to such terms.
 
 ### Practical interpretation
-
-While the regulation is principles-based, NGCB has historically enforced it to mean:
 
 | Principle | Practical application |
 |---|---|
 | **Decency** | No sexually explicit or gratuitously violent imagery |
 | **Dignity** | Advertising treats gambling as entertainment, not desperation |
 | **Good taste** | No content that reasonable people would find offensive |
-| **Honesty** | No misleading claims about odds, winnings, or guaranteed outcomes |
+| **Honesty** | No misleading claims about odds, winnings, or guaranteed outcomes; promotion terms must be clear |
 | **Inoffensiveness** | No content targeting vulnerable populations or trivializing problem gambling |
 
 ### Additional restrictions
@@ -295,8 +314,9 @@ While the regulation is principles-based, NGCB has historically enforced it to m
 | Rule | Source | Details |
 |---|---|---|
 | **No targeting minors** | NRS 463.0129 (public policy) | Advertising must not appeal to persons under 21 |
-| **No targeting self-excluded** | Reg 5.170 | Marketing to property self-excluded patrons is prohibited |
-| **Honest odds claims** | Reg 5.011(4) | Any reference to odds, probabilities, or winning must be accurate |
+| **No targeting self-excluded** | Reg 5.170(4) | Marketing to property self-excluded patrons is prohibited |
+| **Honest odds claims** | Reg 5.011(1)(d) | Any reference to odds, probabilities, or winning must be accurate and not materially misleading |
+| **Clear promotion terms** | Reg 5A.155 | Interactive gaming promotion terms must be clear, concise, and adhered to |
 | **FTC compliance** | Federal | Standard truth-in-advertising rules apply to all gambling advertising |
 
 For a detailed advertising reference, see [advertising-rules.md](advertising-rules.md).
@@ -305,49 +325,59 @@ For a detailed advertising reference, see [advertising-rules.md](advertising-rul
 
 ## Self-exclusion
 
-### Property-by-property model
+### Two self-exclusion regimes
+
+Nevada has **separate self-exclusion requirements** for land-based and interactive gaming:
+
+| Regime | Model | Source |
+|---|---|---|
+| **Land-based** | Property-by-property self-limitation (credit, check-cashing, direct mail) | Reg 5.170(4) |
+| **Interactive gaming** | Operator-level self-exclusion with account closure | Reg 5A.130 |
+
+### Land-based: Property-by-property model (Regulation 5.170(4))
 
 | Field | Value |
 |---|---|
-| **Model** | Property-by-property (each casino/operator separately) |
+| **Model** | Property-by-property |
 | **Centralized state program** | **None** — Nevada does not operate a statewide self-exclusion registry |
-| **Regulatory basis** | NGC Regulation 5.170 |
-| **Typical durations** | 1 year, 5 years, lifetime (varies by property) |
-| **Scope** | Individual property or operator group only |
-| **Contrast with BC** | BC has Game Break (province-wide, all BCLC properties); Nevada requires each property to maintain its own program |
+| **Scope** | Credit, check-cashing, and direct mail self-limitation at individual licensee |
+| **Required elements** | Written materials explaining program; enrollment forms; standards/procedures; removal from direct marketing |
 
-### How Nevada self-exclusion works
+Under Reg 5.170(4), licensees that engage in credit issuance, check cashing, or direct mail marketing must implement a program that:
+- Allows patrons to self-limit access to credit, check cashing, and direct mail marketing
+- Provides written materials explaining the program
+- Uses written enrollment forms
+- Removes enrolled patrons from direct mailing and marketing
 
-1. Player requests exclusion **at a specific property or operator group**
-2. Player selects duration (typically 1 year, 5 years, or lifetime — varies by operator)
-3. Player is banned from **that property/operator group only** — not from all Nevada casinos
-4. Marketing communications from that operator are stopped
-5. If the player enters a property they are excluded from, they may be removed and forfeit any winnings
-6. To exclude from multiple properties, the player must enroll at **each one separately**
+### Interactive gaming: Operator-level self-exclusion (Regulation 5A.130)
+
+| Field | Value |
+|---|---|
+| **Model** | Operator-level (applies to that operator's interactive gaming platform) |
+| **Minimum exclusion period** | 30 days before reinstatement permitted |
+| **Account action** | Account closed upon self-exclusion |
+| **Marketing** | All reasonable steps to prevent marketing to self-excluded individuals |
+| **Employee training** | Required to enforce policies and procedures |
+
+Under Reg 5A.130, operators must:
+1. Maintain a register of self-excluded individuals (name, address, account details)
+2. Close the interactive gaming account of anyone who self-excludes
+3. Train employees on enforcement
+4. Enforce a minimum 30-day exclusion before reinstatement is permitted
+5. Take all reasonable steps to prevent marketing to self-excluded individuals
 
 ### Why there is no centralized program
 
-Nevada's gaming industry predates modern centralized self-exclusion systems. With ~200 nonrestricted licensees (ranging from major Strip resorts to small rural casinos), the state has historically relied on individual operators to manage their own patron exclusion lists. Efforts to create a centralized registry have been discussed but not enacted.
+Nevada's gaming industry predates modern centralized self-exclusion systems. With ~200 nonrestricted licensees, the state has historically relied on individual operators to manage their own patron exclusion lists.
 
 ### {{PROGRAM_NAME}} language mapping
 
 | Context | {{PROGRAM_NAME}} term | Formal term | When to use formal term |
 |---|---|---|---|
 | Tier 1 (casual) | "Take a break from [property name]" | "Self-exclusion" / "Voluntary exclusion" | Never in Tier 1 — use {{PROGRAM_NAME}} language |
-| Tier 2 (formal) | "Self-exclusion" / "Voluntary exclusion program" | "Self-exclusion" per Reg 5.170 | Legal documents, formal enrollment, support referrals |
-| Staff training | Both | "Self-exclusion" / "Voluntary exclusion" | When explaining the program and training on enrollment |
+| Tier 2 (formal) | "Self-exclusion" / "Voluntary exclusion program" | Per Reg 5.170(4) / 5A.130 | Legal documents, formal enrollment, support referrals |
 | Website/app | "Need a break from playing here?" | "Self-exclusion program" | On the self-exclusion enrollment page itself |
 | Print/signage | "Need a break from gambling?" | "Self-exclusion" | Venue self-exclusion information areas |
-
-### Staff FAQ addition
-
-Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.md):
-
-> **Q: How does self-exclusion work in Nevada?**
->
-> Nevada uses a property-by-property self-exclusion model — there is no statewide program. A player who wants to self-exclude must enroll at each property or operator group separately. Typical options are 1 year, 5 years, or lifetime (durations vary by operator). When a player self-excludes from our property, they are banned from entering our gambling areas, removed from our marketing lists, and any winnings earned while excluded may be forfeited. Self-exclusion from our property does not affect their ability to visit other Nevada casinos. If a player asks about broader exclusion, explain that they would need to enroll at each property individually — there is no single sign-up that covers all Nevada casinos.
->
-> In casual conversation, say "take a break" or "step away for a while." Use "self-exclusion" when referring to the formal program or during enrollment.
 
 ### Multi-property operators
 
@@ -361,44 +391,49 @@ Large operators (e.g., MGM Resorts, Caesars Entertainment) typically apply self-
 
 ## Player protection tools
 
-### Land-based gaming (minimal mandate)
+### Land-based gaming (Regulation 5.170)
 
-Nevada's land-based player protection requirements are minimal compared to jurisdictions like BC:
+Nevada's land-based player protection requirements are obligation-based:
 
-| Tool | Required in Nevada? | Details |
-|---|---|---|
-| **Deposit limits** | Not applicable (land-based) | No cash-in limits for walk-in patrons |
-| **Session time tracking** | No | Not required; some operators offer voluntarily |
-| **Credit/check-cashing self-limitation** | Yes (Reg 5.170) | Players can request to be barred from obtaining credit or cashing checks |
-| **Activity statements** | No | Not required for land-based |
-| **Self-exclusion** | Yes (property-level) | See [above](#self-exclusion) |
-| **Information posting** | Yes (Reg 5.170) | Problem gambling info and helpline must be prominently posted |
+| Tool | Required? | Regulatory basis | Details |
+|---|---|---|---|
+| **Problem gambling information** | Yes | Reg 5.170(2) | Written materials on nature/symptoms of problem gambling posted prominently |
+| **Helpline display** | Yes | Reg 5.170(2) | NCPG toll-free number in gaming areas, at cage, at ATMs |
+| **Employee training** | Yes | Reg 5.170(3) | Training on problem gambling symptoms; NCPG-NV certified programs presumed adequate |
+| **Credit/check/mail self-limitation** | Yes | Reg 5.170(4) | Players can self-limit access to credit, check-cashing, and direct mail marketing |
+| **Deposit limits** | N/A (land-based) | — | Not applicable for walk-in cash play |
+| **Session time tracking** | No | — | Not required; some operators offer voluntarily |
+| **Activity statements** | No | — | Not required for land-based |
 
-### Interactive gaming (Regulation 5A — stronger protections)
+### Interactive gaming (Regulation 5A.120(4) and 5.225(18))
 
-Nevada's interactive gaming regulations (Regulation 5A, covering online poker and mobile sports betting) require significantly more player protection than land-based operations:
+Nevada's interactive gaming regulations require significantly more player protection:
 
-| Tool | Required? | Details |
-|---|---|---|
-| **Deposit limits** | Yes | Players must be able to set deposit limits |
-| **Play-time / session limits** | Yes | Players must be able to set session duration limits |
-| **Buy-in limits** | Yes (online poker) | Players must be able to set buy-in limits |
-| **Cool-off periods** | Yes | Temporary account suspension available |
-| **Activity statements** | Yes | Play history and transaction records available to players |
-| **Self-exclusion** | Yes | From the interactive gaming platform |
-| **Responsible gaming information** | Yes | Problem gambling resources prominently displayed |
-| **Age verification** | Yes (see [below](#age-verification)) | Identity verified before play |
+| Tool | Required? | Regulatory basis | Details |
+|---|---|---|---|
+| **Loss limits** | Yes | Reg 5A.120(4)(a) | Net loss limits within a specified period |
+| **Deposit limits** | Yes | Reg 5A.120(4)(b) / 5.225(18)(a) | Total deposit limits within a specified period |
+| **Tournament limits** | Yes | Reg 5A.120(4)(c) | Total tournament entry dollar limits within a specified period |
+| **Buy-in limits** | Yes (poker) | Reg 5A.120(4)(d) | Total buy-in limits for poker play within a specified period |
+| **Play-time limits** | Yes | Reg 5A.120(4)(e) | Total time available for play during a specified period |
+| **Time-based exclusion** | Yes | Reg 5A.120(4)(f) | Self-exclusion from gambling settings for a time period |
+| **Responsible gambling message** | Yes | Reg 5.225(18)(b) | Verbatim message displayed upon account access |
+| **Self-exclusion** | Yes | Reg 5A.130 | Account closure, 30-day minimum, marketing cessation |
+| **Single account** | Yes | Reg 5A.120(2)(a) | One interactive gaming account per operator |
+| **No credit extension** | Yes | Reg 5A.120(3) | No credit for interactive gaming; no deposit from operator-extended credit |
+| **Game history** | Yes | Reg 5A.190(6) | Complete game history maintained for every game played |
+| **Records retention** | Yes | Reg 5A.190 | All records maintained for at least 5 years |
 
 ### {{PROGRAM_NAME}} tool messaging for Nevada
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
-| Credit self-limitation | "Don't want credit at the tables? Tell the cage — it's that simple." | Land-based (Reg 5.170) |
-| Deposit limits | "Set your deposit limit — play on your terms. Takes 10 seconds." | Interactive gaming (Reg 5A) |
-| Session limits | "Set a session reminder — your dashboard, your rules." | Interactive gaming (Reg 5A) |
-| Buy-in limits | "Cap your buy-ins — set it once and play without thinking about it." | Online poker (Reg 5A) |
-| Activity dashboard | "Your play stats are ready. No surprises — just the facts." | Interactive gaming (Reg 5A) |
-| Self-exclusion | "Need a break from playing here? We can set that up." | Both (Reg 5.170 / Reg 5A) |
+| Credit self-limitation | "Don't want credit at the tables? Tell the cage — it's that simple." | Land-based (Reg 5.170(4)) |
+| Deposit limits | "Set your deposit limit — play on your terms. Takes 10 seconds." | Interactive gaming (Reg 5A.120(4)(b)) |
+| Loss limits | "Set a loss limit — no surprises at the end of a session." | Interactive gaming (Reg 5A.120(4)(a)) |
+| Session limits | "Set a session reminder — your dashboard, your rules." | Interactive gaming (Reg 5A.120(4)(e)) |
+| Buy-in limits | "Cap your buy-ins — set it once and play without thinking about it." | Online poker (Reg 5A.120(4)(d)) |
+| Self-exclusion | "Need a break from playing here? We can set that up." | Both (Reg 5.170(4) / Reg 5A.130) |
 
 ---
 
@@ -410,31 +445,24 @@ Nevada's interactive gaming regulations (Regulation 5A, covering online poker an
 | **`_brand.yml` key** | `legal.minimum_gambling_age.united-states-nevada` |
 | **`{{MIN_AGE}}` token value** | 21 |
 | **Verification (casino floor)** | Government-issued photo ID; checked at entry to gaming areas and/or at table/machine |
-| **Verification (interactive gaming)** | Multi-step: SSN-based verification, government-issued ID, 30-day window to complete |
+| **Verification (interactive gaming)** | Multi-step per Reg 5A.110 |
 | **Products with different ages** | None — 21+ applies to all gambling in Nevada |
+| **Statutory basis** | NRS 463.350 |
 
-### Interactive gaming age verification (Regulation 5A)
+### Interactive gaming registration (Regulation 5A.110)
 
-Online poker and mobile sports betting operators must verify age through a **multi-step process**:
+Online poker and mobile sports betting operators must verify identity through a **multi-step process**:
 
-| Step | Requirement |
-|---|---|
-| **Initial registration** | Name, date of birth, SSN (last 4 or full), address |
-| **Identity verification** | Automated verification through third-party service (e.g., GDC, Aristotle) |
-| **Document backup** | If automated verification fails, government-issued photo ID required |
-| **30-day window** | Account may be provisionally active for up to 30 days while verification completes |
-| **Geolocation** | Player must be physically located in Nevada during play |
-
-### Acceptable identification
-
-| ID type | Accepted? |
-|---|---|
-| Nevada driver's license | Yes |
-| US passport | Yes |
-| US military ID | Yes |
-| State-issued ID card (any US state) | Yes |
-| Tribal ID | Varies by property |
-| Foreign passport | Yes (with additional documentation) |
+| Step | Requirement | Source |
+|---|---|---|
+| **Required information** | Identity, date of birth (21+), physical address, last 4 digits of SSN | Reg 5A.110(2)(a-d) |
+| **Self-exclusion check** | Confirm player has not previously self-excluded with operator | Reg 5A.110(2)(e) |
+| **Excluded persons check** | Confirm player is not on the NRS 463.151 excluded persons list | Reg 5A.110(2)(f) |
+| **Player affirmations** | Accuracy of information, house rules acknowledgment, account exclusivity, geolocation awareness | Reg 5A.110(3) |
+| **Verification window** | Operator must verify information within 30 days of registration | Reg 5A.110(5) |
+| **Pre-verification limits** | Max $5,000 deposit; no withdrawals until verified | Reg 5A.110(5)(a-b) |
+| **Verification failure** | Account suspended; winnings retained by operator; deposits refunded | Reg 5A.110(6) |
+| **Remote registration** | Permitted — in-person not required for account creation | Reg 5A.110(4) |
 
 ### Age messaging
 
@@ -457,22 +485,13 @@ Nevada casinos are classified as **financial institutions** under the Bank Secre
 | **Currency Transaction Report (CTR)** | $10,000+ (single transaction or aggregate in 24 hours) | Player must provide ID; transaction reported to FinCEN |
 | **Suspicious Activity Report (SAR)** | Any amount | No direct player notification — internal reporting |
 | **Player identification (casino)** | $10,000+ cash transactions | Government-issued photo ID required |
-| **Player identification (interactive)** | All accounts | Full identity verification required for account opening |
+| **Player identification (interactive)** | All accounts | Full identity verification per Reg 5A.110 |
 | **Source of funds** | Large or unusual transactions | Player may be asked about the origin of funds |
 | **Record keeping** | $3,000+ (cash purchases of chips, TITO) | Operator must record and retain transaction details |
 
-### Pending Regulation 5 and 25 amendments (February 2026)
+### Interactive gaming AML (Regulation 5A.080)
 
-NGCB has proposed amendments to **Regulations 5 and 25** that would enhance AML requirements:
-
-| Change | Impact |
-|---|---|
-| **Individual accountability** | Named compliance officers personally accountable for AML program effectiveness |
-| **Enhanced due diligence** | Expanded requirements for high-risk patrons and transactions |
-| **Technology requirements** | Updated standards for AML monitoring systems |
-| **Training mandates** | More specific employee AML training requirements |
-
-**{{PROGRAM_NAME}} note**: These amendments are pending as of February 2026. Monitor NGCB's regulation tracker for final adoption. They primarily affect back-office compliance operations rather than player-facing content, but operators should ensure {{PROGRAM_NAME}} AML/KYC messaging aligns with any new player-facing disclosure requirements.
+> Each operator shall implement procedures that are designed to detect and prevent transactions that may be associated with money laundering, fraud and other criminal activities and to ensure compliance with all federal laws related to money laundering.
 
 ### Player-facing messaging
 
@@ -494,25 +513,24 @@ Quick-reference table mapping every collateral category to Nevada-specific adapt
 |---|---|---|---|
 | **Digital** | Website footer | NCPG helpline: 1-800-GAMBLER / 1-800-MY-RESET + on-brand RG message | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Age gate | Set to 21+ | `{{MIN_AGE}}` = 21 |
+| **Digital** | Wagering account access | Verbatim Reg 5.225(18)(b) message | See [messaging requirements](#wagering-account-mandatory-message-regulation-522518b) |
+| **Digital** | Interactive gaming pre-play | Operator identity, NGC license, 21+, geolocation, links per Reg 5A.150 | Multiple tokens |
 | **Digital** | Self-exclusion page | Explain property-by-property model; link to operator's enrollment | — |
-| **Digital** | Deposit screen | Helpline + on-brand message (no mandatory statement required) | `{{HELPLINE_NUMBER}}` |
+| **Digital** | Deposit screen | Helpline + on-brand message; deposit limit option prominently displayed | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Social media bio | Include 1-800-GAMBLER | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Email footer | Helpline + on-brand RG message in every email | `{{HELPLINE_NUMBER}}` |
 | **Print** | Brochure | National helpline (both numbers), 21+ notice | All tokens |
 | **Print** | Rack card | Helpline, on-brand message | `{{HELPLINE_NUMBER}}` |
 | **Print** | Table tent | Helpline + on-brand message | `{{HELPLINE_NUMBER}}` |
 | **Print** | Helpline card | NCPG 1-800-GAMBLER, 1-800-MY-RESET, ncpgambling.org | All helpline tokens |
-| **Environmental** | Entry signage | 21+ age notice, helpline, on-brand RG message | `{{MIN_AGE}}`, `{{HELPLINE_NUMBER}}` |
-| **Environmental** | Floor / ATM area | Helpline number, problem gambling info | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | Gaming areas | Problem gambling info + helpline per Reg 5.170(2) | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | Cage area | Problem gambling info + helpline per Reg 5.170(2) | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | ATMs in gaming areas | Problem gambling info + helpline per Reg 5.170(2) | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Digital display | On-brand RG message in rotation, helpline | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | TV spot end card | Helpline (3-second minimum recommended) | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | Radio spot | Spoken helpline reference | `{{HELPLINE_NUMBER}}` |
 | **Customer service** | Scripts | NCPG helpline in all referral scripts, self-exclusion enrollment in scripts | `{{HELPLINE_NUMBER}}` |
 | **Customer service** | Staff FAQ | Add property-level self-exclusion Q&A, update helpline to NCPG | — |
-
-### Key difference from BC
-
-Nevada collateral does **not** require a mandatory statement (`{{MANDATORY_STATEMENT}}`). This simplifies adaptation — operators only need to ensure helpline display and age notice. {{PROGRAM_NAME}} on-brand messaging can be used freely without working around required phrasing.
 
 For the detailed collateral adaptation template, see [collateral-adaptation.md](../../_template/collateral-adaptation.md).
 
@@ -530,10 +548,12 @@ helplines:
       number: "1-800-522-4700"
       alternate: "1-800-GAMBLER"
       new_primary: "1-800-MY-RESET"
-      text_number: "Text SUPPORT to 53342"
+      text_number: "Text 800GAM"
       chat_url: "www.ncpgambling.org/chat"
       website: "www.ncpgambling.org"
       label: "National Council on Problem Gambling"
+      hours: "24/7/365"
+      languages: "240+ via Language Line Solutions"
     nevada:
       number: "1-800-522-4700"
       alternate: "1-800-GAMBLER"
@@ -548,9 +568,18 @@ helplines:
 legal:
   minimum_gambling_age:
     united-states-nevada: 21
+
+# ─── MANDATORY MESSAGING ────────────────────
+messaging:
+  mandatory:
+    united-states-nevada-wagering: |
+      [Licensee's name] encourages you to gamble responsibly.
+      For problem gambling information and assistance, call the
+      24-hour confidential Problem Gamblers HelpLine at
+      1-800-522-4700, or visit www.WhenTheFunStops.org.
 ```
 
-Note: Nevada has **no mandatory messaging token** — there is no `messaging.mandatory.united-states-nevada` entry because no verbatim statement is required.
+Note: The wagering account message is prescribed by Reg 5.225(18)(b). The Board Chair may approve alternative helpline numbers/URLs. General signage has no verbatim requirement.
 
 Also see the full [US config overrides](../_brand-us.yml) for the complete state structure.
 
@@ -563,79 +592,84 @@ Complete before launching {{PROGRAM_NAME}} in Nevada.
 ### Regulatory
 - [ ] Confirmed NGCB/NGC two-tier regulatory structure
 - [ ] Understood licensing model (operator must hold valid Nevada gaming license)
-- [ ] Verified legal gambling age: 21+ for all products
+- [ ] Verified legal gambling age: 21+ for all products (NRS 463.350)
 - [ ] Reviewed permitted products table (no online casino, no lottery)
-- [ ] Reviewed NRS Chapter 463 and relevant NGC Regulations (5, 5A, 5.170)
+- [ ] Reviewed NRS Chapter 463, NGC Regulation 5 (Rev. 12/24), and Regulation 5A (Rev. 05/24)
 - [ ] Identified whether deployment is land-based, interactive gaming, or both
 
 ### Helpline
-- [ ] NCPG helpline displayed prominently per Regulation 5.170
+- [ ] NCPG helpline displayed prominently per Reg 5.170(2)
 - [ ] All three accepted numbers known (1-800-522-4700, 1-800-GAMBLER, 1-800-MY-RESET)
 - [ ] Primary display number selected (1-800-GAMBLER recommended)
-- [ ] Helpline displayed in all required areas (casino floor, near ATMs, at cage)
-- [ ] Interactive gaming platform displays helpline prominently
+- [ ] Helpline posted in conspicuous places in/near gaming areas, cage areas, and at ATMs
+- [ ] Interactive gaming platform displays helpline prominently (Reg 5A.150)
 - [ ] Nevada Council on Problem Gambling referenced where appropriate
 
 ### Messaging
-- [ ] Confirmed: no verbatim mandatory statement required in Nevada
-- [ ] Problem gambling information prominently posted per Reg 5.170
-- [ ] On-brand {{PROGRAM_NAME}} messaging used (not just bare compliance)
+- [ ] Wagering account displays verbatim Reg 5.225(18)(b) message upon account access
+- [ ] Confirmed with NGCB whether alternative helpline numbers/URLs are approved for the Reg 5.225(18)(b) message
+- [ ] Problem gambling information prominently posted per Reg 5.170(2) — nature and symptoms, plus helpline
 - [ ] 21+ age notice on all player-facing content
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Nevada values
 
 ### Advertising
-- [ ] Advertising content reviewed against Reg 5.011(4) principles ("decency, dignity, good taste, honesty, inoffensiveness")
+- [ ] Advertising content reviewed against Reg 5.011(1)(d) principles ("decency, dignity, good taste, honesty, inoffensiveness")
+- [ ] Interactive gaming advertising reviewed against Reg 5A.155 (truthful, non-deceptive, clear promotion terms)
 - [ ] No content targeting or appealing to persons under 21
 - [ ] No misleading claims about odds, winning likelihood, or prize amounts
-- [ ] No marketing to property self-excluded patrons
-- [ ] Interactive gaming advertising reviewed against Reg 5A requirements
+- [ ] No marketing to property self-excluded patrons (Reg 5.170(4))
 - [ ] AGA Responsible Gaming Code of Conduct alignment verified
 - [ ] Advertising reviewed per [advertising-rules.md](advertising-rules.md)
 
 ### Self-exclusion
-- [ ] Property-by-property self-exclusion program in place per Reg 5.170
-- [ ] Self-exclusion information available to patrons who request it
-- [ ] Self-exclusion enrollment process documented
+- [ ] Land-based: Credit/check-cashing/direct mail self-limitation program per Reg 5.170(4)
+- [ ] Interactive gaming: Self-exclusion with account closure per Reg 5A.130
+- [ ] Interactive gaming: 30-day minimum exclusion period enforced
 - [ ] Self-excluded patrons removed from all marketing lists
-- [ ] Staff trained on self-exclusion enrollment and patron handling
+- [ ] Employee register of self-excluded individuals maintained
+- [ ] Staff trained on self-exclusion enrollment and enforcement
 - [ ] Self-exclusion language mapped to {{PROGRAM_NAME}} Tier 1/Tier 2 language
-- [ ] Staff FAQ updated with Nevada self-exclusion Q&A
 
 ### Player protection
-- [ ] Credit/check-cashing self-limitation available (Reg 5.170)
-- [ ] Interactive gaming: deposit limits implemented (Reg 5A)
-- [ ] Interactive gaming: session/play-time limits implemented (Reg 5A)
-- [ ] Interactive gaming: buy-in limits implemented for poker (Reg 5A)
-- [ ] Interactive gaming: cool-off periods available (Reg 5A)
-- [ ] Interactive gaming: activity statements available (Reg 5A)
-- [ ] Problem gambling information prominently posted (Reg 5.170)
+- [ ] Interactive gaming: Loss limits implemented (Reg 5A.120(4)(a))
+- [ ] Interactive gaming: Deposit limits implemented (Reg 5A.120(4)(b) / 5.225(18)(a))
+- [ ] Interactive gaming: Tournament limits implemented (Reg 5A.120(4)(c))
+- [ ] Interactive gaming: Buy-in limits implemented for poker (Reg 5A.120(4)(d))
+- [ ] Interactive gaming: Play-time limits implemented (Reg 5A.120(4)(e))
+- [ ] Interactive gaming: Time-based exclusion available (Reg 5A.120(4)(f))
+- [ ] Interactive gaming: Single account per operator enforced (Reg 5A.120(2)(a))
+- [ ] Interactive gaming: No credit extension for interactive gaming (Reg 5A.120(3))
+- [ ] Problem gambling information prominently posted (Reg 5.170(2))
 
 ### Age verification
-- [ ] 21+ age verification at all gambling touchpoints
-- [ ] Interactive gaming: multi-step verification (SSN, ID, geolocation) per Reg 5A
-- [ ] Acceptable ID types documented and staff trained
+- [ ] 21+ age verification at all gambling touchpoints (NRS 463.350)
+- [ ] Interactive gaming: Registration per Reg 5A.110 (identity, DOB, address, SSN last 4)
+- [ ] Interactive gaming: Self-exclusion and excluded persons checks (Reg 5A.110(2)(e-f))
+- [ ] Interactive gaming: 30-day verification window enforced (Reg 5A.110(5))
+- [ ] Interactive gaming: $5K deposit cap before verification (Reg 5A.110(5)(a))
+- [ ] Interactive gaming: Geolocation requirement communicated (Reg 5A.110(3)(d))
 
 ### AML/KYC
 - [ ] FinCEN/BSA compliance program in place
 - [ ] CTR filing procedures for $10,000+ transactions
 - [ ] SAR filing procedures operational
+- [ ] Interactive gaming: AML procedures per Reg 5A.080
 - [ ] Player-facing AML messaging uses {{PROGRAM_NAME}} voice
-- [ ] Monitoring pending Regulation 5/25 amendments (individual accountability)
 
 ### Content
 - [ ] All collateral adapted per [collateral adaptation table](#collateral-adaptation)
 - [ ] Staff FAQ updated with Nevada self-exclusion Q&A
 - [ ] Conversation scripts updated with NCPG helpline references
 - [ ] AML/KYC player-facing messaging uses {{PROGRAM_NAME}} voice
+- [ ] Interactive gaming: Reg 5A.150 website display requirements met (operator name, license, 21+, geolocation, links)
 
 ### Governance
-- [ ] `_brand.yml` updated with Nevada values (helpline, age)
+- [ ] `_brand.yml` updated with Nevada values (helpline, age, wagering account message)
 - [ ] `_brand-us.yml` reviewed
 - [ ] `Last verified` date set on this module
 - [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
-- [ ] Regulation 5/25 amendment monitoring plan in place
 
 ---
 

@@ -35,12 +35,14 @@ helplines:
 
     ontario:
       number: "1-866-531-2600"
+      text_number: "Text CONNEX to 247247"
       website: "www.connexontario.ca"
       label: "ConnexOntario"
       hours: "24/7"
       languages:
         - English
         - French
+        - "100+ via interpretation services"
       notes: "Also covers substance use and mental health"
 
     alberta:
