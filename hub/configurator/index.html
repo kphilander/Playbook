@@ -26,7 +26,7 @@
 
 <style>
   /* === Page-specific base === */
-  body { background: #f0f2f5; color: #1a2a3a; line-height: 1.6; }
+  body { background: #F5F5FA; color: #1B2838; line-height: 1.6; font-family: 'Source Sans 3', 'Inter', system-ui, sans-serif; }
 
   /* === Header === */
   .page-header { background: linear-gradient(180deg, #1B2838, #0F1923); color: #fff; padding: 28px 40px 24px; }
@@ -36,50 +36,50 @@
   .header-logo .logo-book { font-weight: 300; color: #00D4AA; text-transform: uppercase; letter-spacing: 0.08em; }
   .header-back { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; text-decoration: none; transition: color 0.2s; }
   .header-back:hover { color: rgba(255,255,255,0.9); }
-  .page-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .page-header h1 { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 4px; }
   .page-header p { font-size: 14px; color: rgba(255,255,255,0.7); max-width: 600px; }
 
   /* === Layout === */
   .layout { display: flex; min-height: calc(100vh - 110px); align-items: flex-start; }
 
   /* === Wizard Panel === */
-  .wizard-panel { width: 440px; min-width: 440px; background: #fff; border-right: 1px solid #d2dce6; padding: 28px 28px 40px; overflow-y: auto; position: sticky; top: 0; max-height: 100vh; }
-  .progress-bar { height: 4px; background: #e2e8f0; border-radius: 2px; margin-bottom: 24px; overflow: hidden; }
+  .wizard-panel { width: 440px; min-width: 440px; background: #fff; border-right: 1px solid #E8E8F0; padding: 28px 28px 40px; overflow-y: auto; position: sticky; top: 0; max-height: 100vh; }
+  .progress-bar { height: 4px; background: #E8E8F0; border-radius: 2px; margin-bottom: 24px; overflow: hidden; }
   .progress-fill { height: 100%; background: linear-gradient(90deg, #00D4AA, #FF6B35); border-radius: 2px; transition: width 0.4s ease; }
-  .step-indicator { font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: #718096; margin-bottom: 6px; font-weight: 600; }
-  .step-title { font-size: 20px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
-  .step-desc { font-size: 13px; color: #718096; margin-bottom: 24px; line-height: 1.5; }
+  .step-indicator { font-family: 'Inter', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: #A8A8C0; margin-bottom: 6px; font-weight: 600; }
+  .step-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .step-desc { font-size: 13px; color: #A8A8C0; margin-bottom: 24px; line-height: 1.5; }
 
   /* === Form Elements === */
   .form-group { margin-bottom: 20px; }
-  .form-label { display: block; font-size: 12px; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-  .form-input { width: 100%; padding: 10px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; color: #2d3748; transition: border-color 0.15s; }
+  .form-label { display: block; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: #6B6B8A; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .form-input { width: 100%; padding: 10px 14px; border: 2px solid #E8E8F0; border-radius: 8px; font-size: 14px; font-family: inherit; color: #1B2838; transition: border-color 0.15s; }
   .form-input:focus { outline: none; border-color: #00D4AA; }
-  .form-select { width: 100%; padding: 10px 14px; border: 2px solid #e2e8f0; border-radius: 8px; font-size: 14px; font-family: inherit; color: #2d3748; background: #fff; cursor: pointer; }
+  .form-select { width: 100%; padding: 10px 14px; border: 2px solid #E8E8F0; border-radius: 8px; font-size: 14px; font-family: inherit; color: #1B2838; background: #fff; cursor: pointer; }
   .form-select:focus { outline: none; border-color: #00D4AA; }
 
   /* === Logo Upload === */
-  .logo-upload-zone { border: 2px dashed #d2dce6; border-radius: 12px; padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s; background: #f7fafc; position: relative; }
-  .logo-upload-zone:hover, .logo-upload-zone.dragover { border-color: #00D4AA; background: #f0fff4; }
-  .logo-upload-zone.has-logo { border-style: solid; border-color: #e2e8f0; padding: 16px; }
-  .logo-upload-icon { font-size: 28px; margin-bottom: 8px; color: #a0aec0; }
-  .logo-upload-text { font-size: 13px; color: #718096; }
-  .logo-upload-text strong { color: #4a5568; }
+  .logo-upload-zone { border: 2px dashed #E8E8F0; border-radius: 12px; padding: 24px; text-align: center; cursor: pointer; transition: all 0.2s; background: #F5F5FA; position: relative; }
+  .logo-upload-zone:hover, .logo-upload-zone.dragover { border-color: #00D4AA; background: rgba(0,212,170,0.06); }
+  .logo-upload-zone.has-logo { border-style: solid; border-color: #E8E8F0; padding: 16px; }
+  .logo-upload-icon { font-size: 28px; margin-bottom: 8px; color: #A8A8C0; }
+  .logo-upload-text { font-size: 13px; color: #A8A8C0; }
+  .logo-upload-text strong { color: #6B6B8A; }
   .logo-upload-input { display: none; }
   .logo-preview-row { display: flex; align-items: center; gap: 16px; }
   .logo-thumb { max-width: 120px; max-height: 60px; object-fit: contain; border-radius: 6px; }
-  .logo-info { flex: 1; font-size: 12px; color: #718096; }
-  .logo-info strong { display: block; color: #2d3748; font-size: 13px; margin-bottom: 2px; }
+  .logo-info { flex: 1; font-size: 12px; color: #A8A8C0; }
+  .logo-info strong { display: block; color: #1B2838; font-size: 13px; margin-bottom: 2px; }
   .logo-remove { background: none; border: none; color: #e53e3e; font-size: 12px; font-weight: 600; cursor: pointer; padding: 4px 8px; border-radius: 4px; }
   .logo-remove:hover { background: #fff5f5; }
 
   /* Extracted color swatches */
   .extracted-colors { margin-top: 12px; }
-  .extracted-colors-label { font-size: 11px; font-weight: 600; color: #718096; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  .extracted-colors-label { font-size: 11px; font-weight: 600; color: #A8A8C0; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
   .swatch-row { display: flex; gap: 6px; flex-wrap: wrap; }
   .swatch { width: 36px; height: 36px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.15s; position: relative; }
-  .swatch:hover { transform: scale(1.15); border-color: #4a5568; }
-  .swatch-hex { display: none; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 9px; color: #718096; white-space: nowrap; background: #fff; padding: 1px 4px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .swatch:hover { transform: scale(1.15); border-color: #6B6B8A; }
+  .swatch-hex { display: none; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-size: 9px; color: #A8A8C0; white-space: nowrap; background: #fff; padding: 1px 4px; border-radius: 3px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
   .swatch:hover .swatch-hex { display: block; }
 
   /* === Wordmark Preview === */
@@ -89,62 +89,72 @@
   .wordmark-preview .wm-full { font-weight: 600; color: #fff; }
   .split-slider-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
   .split-slider-row input[type="range"] { flex: 1; accent-color: #00D4AA; }
-  .split-slider-row .split-pos { font-size: 12px; color: #718096; font-weight: 600; min-width: 60px; }
+  .split-slider-row .split-pos { font-size: 12px; color: #A8A8C0; font-weight: 600; min-width: 60px; }
   .no-split-row { margin-top: 6px; display: flex; align-items: center; gap: 8px; }
-  .no-split-row label { font-size: 12px; color: #718096; cursor: pointer; }
+  .no-split-row label { font-size: 12px; color: #A8A8C0; cursor: pointer; }
   .no-split-row input[type="checkbox"] { accent-color: #00D4AA; }
 
   /* === Palette Suggestion === */
-  .palette-suggestion { margin-bottom: 20px; padding: 16px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 10px; }
+  .palette-suggestion { margin-bottom: 20px; padding: 16px; background: #F5F5FA; border: 1px solid #E8E8F0; border-radius: 10px; }
   .palette-suggestion.hidden { display: none; }
-  .palette-suggestion-label { font-size: 11px; font-weight: 600; color: #718096; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-  .palette-suggestion-desc { font-size: 12px; color: #718096; line-height: 1.5; margin-bottom: 12px; }
+  .palette-suggestion-label { font-size: 11px; font-weight: 600; color: #A8A8C0; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .palette-suggestion-desc { font-size: 12px; color: #A8A8C0; line-height: 1.5; margin-bottom: 12px; }
   .palette-accent-row { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
   .palette-accent-swatch { width: 36px; height: 36px; border-radius: 8px; border: 2px solid transparent; cursor: pointer; transition: all 0.15s; }
-  .palette-accent-swatch:hover { transform: scale(1.12); border-color: #4a5568; }
+  .palette-accent-swatch:hover { transform: scale(1.12); border-color: #6B6B8A; }
   .palette-accent-swatch.selected { border-color: #1B2838; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #1B2838; }
   .palette-apply { background: #00D4AA; color: #1B2838; border: none; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
   .palette-apply:hover { background: #00C09A; }
 
   /* Color picker row */
   .color-row { display: flex; align-items: center; gap: 12px; }
-  .color-picker { width: 48px; height: 40px; border: 2px solid #e2e8f0; border-radius: 8px; cursor: pointer; padding: 2px; }
+  .color-picker { width: 48px; height: 40px; border: 2px solid #E8E8F0; border-radius: 8px; cursor: pointer; padding: 2px; }
   .color-picker::-webkit-color-swatch-wrapper { padding: 0; }
   .color-picker::-webkit-color-swatch { border: none; border-radius: 4px; }
   .color-hex { flex: 1; }
   .contrast-badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 12px; white-space: nowrap; }
   .contrast-pass { background: #c6f6d5; color: #276749; }
   .contrast-fail { background: #fed7d7; color: #9b2c2c; }
-  .contrast-info { font-size: 11px; color: #a0aec0; margin-top: 4px; }
+  .contrast-info { font-size: 11px; color: #A8A8C0; margin-top: 4px; }
   .accent-dark-warning { font-size: 11px; color: #c05621; background: #fffbeb; border: 1px solid #f6e05e; padding: 6px 10px; border-radius: 6px; margin-top: 6px; line-height: 1.4; }
   .accent-dark-warning.hidden { display: none; }
 
   /* Font preview */
-  .font-specimen { margin-top: 8px; padding: 12px 16px; background: #f7fafc; border-radius: 8px; border: 1px solid #e2e8f0; }
+  .font-specimen { margin-top: 8px; padding: 12px 16px; background: #F5F5FA; border-radius: 8px; border: 1px solid #E8E8F0; }
   .font-specimen-heading { font-size: 22px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
-  .font-specimen-body { font-size: 14px; color: #4a5568; line-height: 1.5; }
+  .font-specimen-body { font-size: 14px; color: #6B6B8A; line-height: 1.5; }
 
   /* Helpline presets */
-  .preset-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 12px; background: #ebf8ff; color: #2b6cb0; font-weight: 600; cursor: pointer; margin-right: 6px; margin-bottom: 6px; transition: all 0.15s; border: 1px solid transparent; }
-  .preset-tag:hover { background: #bee3f8; }
-  .preset-tag.active { background: #2b6cb0; color: #fff; }
+  .preset-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 12px; background: rgba(0,212,170,0.1); color: #1B2838; font-weight: 600; cursor: pointer; margin-right: 6px; margin-bottom: 6px; transition: all 0.15s; border: 1px solid rgba(0,212,170,0.25); }
+  .preset-tag:hover { background: rgba(0,212,170,0.2); }
+  .preset-tag.active { background: #1B2838; color: #fff; border-color: #1B2838; }
+  #subJurisdictions { margin-top: 6px; display: none; }
+  #subJurisdictions.visible { display: block; }
+  .sub-preset-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; background: rgba(0,212,170,0.08); color: #1B2838; font-weight: 600; cursor: pointer; margin-right: 5px; margin-bottom: 5px; transition: all 0.15s; border: 1px solid rgba(0,212,170,0.2); }
+  .sub-preset-tag:hover { background: rgba(0,212,170,0.18); }
+  .sub-preset-tag.active { background: #00D4AA; color: #1B2838; border-color: #00D4AA; }
+  .jurisdiction-info { margin-top: 10px; padding: 10px 12px; background: #F5F5FA; border: 1px solid #E8E8F0; border-radius: 6px; font-size: 11px; line-height: 1.5; color: #6B6B8A; display: none; }
+  .jurisdiction-info.visible { display: block; }
+  .jurisdiction-info strong { color: #1B2838; }
+  .jurisdiction-info a { color: #00D4AA; text-decoration: none; }
+  .jurisdiction-info a:hover { text-decoration: underline; }
 
   /* === Nav Buttons === */
   .wizard-nav { margin-top: 28px; display: flex; gap: 10px; }
-  .wizard-nav button { padding: 11px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
-  .btn-back { background: #e2e8f0; color: #4a5568; }
-  .btn-back:hover { background: #cbd5e0; }
+  .wizard-nav button { padding: 11px 24px; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; }
+  .btn-back { background: #E8E8F0; color: #6B6B8A; }
+  .btn-back:hover { background: #d8d8e4; }
   .btn-next { background: #00D4AA; color: #1B2838; }
   .btn-next:hover { background: #00C09A; }
 
   /* === Preview Panel === */
-  .preview-panel { flex: 1; padding: 20px 24px; overflow-y: auto; background: #f7f8fa; }
-  .preview-title { font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: #718096; font-weight: 600; margin-bottom: 16px; }
+  .preview-panel { flex: 1; padding: 20px 24px; overflow-y: auto; background: #F5F5FA; }
+  .preview-title { font-family: 'Inter', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: #A8A8C0; font-weight: 600; margin-bottom: 16px; }
   .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
   /* Scaled preview cards */
   .preview-frame { background: #fff; border-radius: 12px; padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); overflow: hidden; }
-  .preview-frame-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #a0aec0; margin-bottom: 8px; }
+  .preview-frame-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #A8A8C0; margin-bottom: 8px; }
 
   /* Inline preview cards */
   .pv-card {
@@ -179,9 +189,11 @@
   .pv-card-tier2 .card-body { justify-content: center; padding: 0 32px; }
   .pv-card-tier2 .t2-headline { font-size: 26px; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 10px; }
   .pv-card-tier2 .t2-subline { font-size: 12px; line-height: 1.5; margin-bottom: 24px; max-width: 85%; }
-  .pv-card-tier2 .t2-helpline { font-family: 'Source Code Pro', monospace; font-weight: 600; font-size: 28px; letter-spacing: 0.02em; margin-bottom: 6px; }
-  .pv-card-tier2 .t2-channels { font-weight: 600; font-size: 11px; letter-spacing: 0.04em; margin-bottom: 0; }
-  .pv-card-tier2 .card-footer { background: transparent; border-top: 1px solid #e2e8f0; }
+  .pv-card-tier2 .t2-contact-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .pv-card-tier2 .t2-contact-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; min-width: 32px; }
+  .pv-card-tier2 .t2-contact-value { font-family: 'Source Code Pro', monospace; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; }
+  .pv-card-tier2 .t2-contact-value.t2-phone { font-size: 24px; }
+  .pv-card-tier2 .card-footer { background: transparent; border-top: 1px solid #E8E8F0; }
   .pv-card-tier2 .t2-footer-text { font-weight: 700; font-size: 9px; letter-spacing: 0.02em; }
 
   /* Co-brand lockup */
@@ -210,29 +222,29 @@
   .download-btn-secondary:hover { background: #2A3F56; }
   .download-btn svg { width: 18px; height: 18px; }
 
-  .samples-section { margin-bottom: 24px; padding: 20px; background: linear-gradient(135deg, #f0fff4 0%, #ebf8ff 100%); border: 1px solid #c6f6d5; border-radius: 12px; text-align: center; }
-  .samples-section h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
-  .samples-section p { font-size: 13px; color: #4a5568; margin-bottom: 14px; }
+  .samples-section { margin-bottom: 24px; padding: 20px; background: linear-gradient(135deg, rgba(0,212,170,0.06) 0%, rgba(27,40,56,0.04) 100%); border: 1px solid #E8E8F0; border-radius: 12px; text-align: center; }
+  .samples-section h3 { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .samples-section p { font-size: 13px; color: #6B6B8A; margin-bottom: 14px; }
   .samples-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-  .sample-dl-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 6px; border-radius: 8px; font-size: 11px; font-weight: 600; cursor: pointer; border: 1px solid #c6f6d5; background: #fff; color: #1B2838; transition: all 0.15s; }
-  .sample-dl-btn:hover { background: #f0fff4; border-color: #00D4AA; }
+  .sample-dl-btn { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 6px; border-radius: 8px; font-size: 11px; font-weight: 600; cursor: pointer; border: 1px solid #E8E8F0; background: #fff; color: #1B2838; transition: all 0.15s; }
+  .sample-dl-btn:hover { background: rgba(0,212,170,0.06); border-color: #00D4AA; }
   .sample-dl-btn svg { width: 16px; height: 16px; color: #00D4AA; }
-  .sample-dl-btn span { font-size: 9px; color: #718096; font-weight: 400; }
+  .sample-dl-btn span { font-size: 9px; color: #A8A8C0; font-weight: 400; }
 
   /* === Next Steps === */
   .next-steps { margin-top: 24px; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .next-steps h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 12px; }
-  .next-steps ol { padding-left: 20px; font-size: 13px; color: #4a5568; }
+  .next-steps h3 { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 12px; }
+  .next-steps ol { padding-left: 20px; font-size: 13px; color: #6B6B8A; }
   .next-steps li { margin-bottom: 8px; line-height: 1.5; }
-  .next-steps code { background: #f0f2f5; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-family: 'Source Code Pro', monospace; }
-  .next-steps .cta-box { margin-top: 16px; padding: 16px; background: linear-gradient(135deg, #ebf8ff 0%, #f0fff4 100%); border: 1px solid #bee3f8; border-radius: 10px; }
-  .next-steps .cta-box p { font-size: 13px; color: #2c5282; margin: 0; }
-  .next-steps .cta-box a { color: #2b6cb0; font-weight: 600; text-decoration: underline; }
+  .next-steps code { background: #F5F5FA; padding: 2px 6px; border-radius: 4px; font-size: 12px; font-family: 'Source Code Pro', monospace; }
+  .next-steps .cta-box { margin-top: 16px; padding: 16px; background: linear-gradient(135deg, rgba(0,212,170,0.06) 0%, rgba(27,40,56,0.04) 100%); border: 1px solid #E8E8F0; border-radius: 10px; }
+  .next-steps .cta-box p { font-size: 13px; color: #1B2838; margin: 0; }
+  .next-steps .cta-box a { color: #00D4AA; font-weight: 600; text-decoration: underline; }
 
   /* === Content Kit Section === */
-  .content-kit-section { margin-top: 24px; padding: 24px; background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%); border: 1px solid #f6e05e; border-radius: 12px; }
-  .content-kit-section h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
-  .content-kit-section p { font-size: 13px; color: #4a5568; margin-bottom: 14px; line-height: 1.5; }
+  .content-kit-section { margin-top: 24px; padding: 24px; background: linear-gradient(135deg, rgba(255,107,53,0.06) 0%, rgba(255,107,53,0.03) 100%); border: 1px solid #E8E8F0; border-radius: 12px; }
+  .content-kit-section h3 { font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
+  .content-kit-section p { font-size: 13px; color: #6B6B8A; margin-bottom: 14px; line-height: 1.5; }
   .content-kit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
   .content-kit-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 16px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; border: none; transition: all 0.15s; background: #1B2838; color: #fff; }
   .content-kit-btn:hover { background: #2A3F56; }
@@ -240,25 +252,9 @@
   .content-kit-btn.kit-primary:hover { background: #e55a25; }
   .content-kit-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
   .content-kit-btn .btn-sub { font-size: 10px; font-weight: 400; opacity: 0.8; }
-  .format-toggle { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4a5568; margin-bottom: 12px; }
+  .format-toggle { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #6B6B8A; margin-bottom: 12px; }
   .format-toggle label { cursor: pointer; font-weight: 500; }
   .format-toggle input[type="checkbox"] { accent-color: #FF6B35; }
-
-  /* Embed Code Section */
-  .embed-section { margin-top: 24px; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
-  .embed-section h3 { font-size: 16px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
-  .embed-section p { font-size: 13px; color: #4a5568; margin-bottom: 14px; line-height: 1.5; }
-  .embed-tabs { display: flex; gap: 0; margin-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
-  .embed-tab { padding: 8px 16px; font-size: 12px; font-weight: 600; color: #718096; cursor: pointer; border: none; background: none; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s; }
-  .embed-tab:hover { color: #4a5568; }
-  .embed-tab.active { color: #1B2838; border-bottom-color: #FF6B35; }
-  .embed-code-block { position: relative; background: #1B2838; border-radius: 8px; padding: 16px; overflow: hidden; }
-  .embed-code-block pre { margin: 0; font-family: 'Source Code Pro', monospace; font-size: 11px; color: #e2e8f0; line-height: 1.6; white-space: pre-wrap; word-break: break-all; max-height: 200px; overflow-y: auto; }
-  .embed-copy-btn { position: absolute; top: 8px; right: 8px; background: rgba(255,255,255,0.15); color: #fff; border: none; padding: 5px 12px; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
-  .embed-copy-btn:hover { background: rgba(255,255,255,0.25); }
-  .embed-copy-btn.copied { background: #00D4AA; color: #1B2838; }
-  .embed-pane { display: none; }
-  .embed-pane.active { display: block; }
 
   /* === Step visibility === */
   .step { display: none; }
@@ -267,7 +263,7 @@
   /* === Responsive === */
   @media (max-width: 900px) {
     .layout { flex-direction: column; }
-    .wizard-panel { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid #d2dce6; position: static; max-height: none; }
+    .wizard-panel { width: 100%; min-width: unset; border-right: none; border-bottom: 1px solid #E8E8F0; position: static; max-height: none; }
     .preview-grid { grid-template-columns: 1fr; }
     .preview-frame[style*="grid-column"] { grid-column: auto; }
   }
@@ -302,7 +298,7 @@
           <div id="logoUploadEmpty">
             <div class="logo-upload-icon">&#128247;</div>
             <div class="logo-upload-text"><strong>Drop your logo here</strong> or click to browse<br>PNG, JPG, or SVG</div>
-            <div style="font-size: 11px; color: #a0aec0; margin-top: 6px;">Horizontal lockup on a transparent background works best</div>
+            <div style="font-size: 11px; color: #A8A8C0; margin-top: 6px;">Horizontal lockup on a transparent background works best</div>
           </div>
           <div id="logoUploadFilled" style="display:none;">
             <div class="logo-preview-row">
@@ -441,25 +437,27 @@
 
       <div class="wizard-nav">
         <button class="btn-back" onclick="goToStep(2)">&larr; Back</button>
-        <button class="btn-next" onclick="goToStep(4)">Next: Helpline &rarr;</button>
+        <button class="btn-next" onclick="goToStep(4)">Next: Jurisdiction &rarr;</button>
       </div>
     </div>
 
-    <!-- Step 4: Helpline & Legal -->
+    <!-- Step 4: Jurisdiction & Support -->
     <div class="step" id="step4">
       <div class="step-indicator">Step 4 of 4</div>
-      <div class="step-title">Helpline &amp; Legal</div>
-      <div class="step-desc">Configure your jurisdiction's support information.</div>
+      <div class="step-title">Jurisdiction &amp; Support</div>
+      <div class="step-desc">Configure your jurisdiction's regulatory and support information.</div>
 
       <div class="form-group">
         <label class="form-label">Jurisdiction Preset</label>
         <div id="jurisdictionPresets">
-          <span class="preset-tag active" data-j="us">United States</span>
+          <span class="preset-tag active" data-j="us" data-group="us">United States</span>
           <span class="preset-tag" data-j="uk">United Kingdom</span>
           <span class="preset-tag" data-j="au">Australia</span>
-          <span class="preset-tag" data-j="ca">Canada</span>
+          <span class="preset-tag" data-j="ca" data-group="ca">Canada</span>
           <span class="preset-tag" data-j="custom">Custom</span>
         </div>
+        <div id="subJurisdictions"></div>
+        <div id="jurisdictionInfo" class="jurisdiction-info"></div>
       </div>
 
       <div class="form-group">
@@ -469,7 +467,7 @@
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
         <div class="form-group">
           <label class="form-label">Text Support Number</label>
-          <input type="text" class="form-input" id="textNumber" value="Text SUPPORT to 53342" placeholder="e.g. Text HOME to 741741">
+          <input type="text" class="form-input" id="textNumber" value="Text 800GAM" placeholder="e.g. Text HOME to 741741">
         </div>
         <div class="form-group">
           <label class="form-label">Live Chat URL</label>
@@ -481,8 +479,8 @@
         <input type="number" class="form-input" id="minAge" value="21" min="18" max="25" style="width: 100px;">
       </div>
 
-      <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 20px 0;">
-      <div style="font-size: 12px; font-weight: 600; color: #4a5568; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Operator Links</div>
+      <hr style="border: none; border-top: 1px solid #E8E8F0; margin: 20px 0;">
+      <div style="font-size: 12px; font-weight: 600; color: #6B6B8A; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Operator Links</div>
 
       <div class="form-group">
         <label class="form-label">Limits Page URL</label>
@@ -587,36 +585,6 @@
         </div>
       </div>
 
-      <!-- Embed Code Generator -->
-      <div class="embed-section">
-        <h3>Embed Widgets</h3>
-        <p>Drop these Web Components into any page — they auto-style using your brand tokens. No build tools required.</p>
-        <p style="font-size: 11px; color: #718096; line-height: 1.5; margin-bottom: 14px;">Playbook widgets help surface responsible gambling information, but they do not guarantee regulatory compliance. Requirements vary by jurisdiction — always verify that your implementation meets all applicable laws and licensing conditions.</p>
-        <div class="embed-tabs">
-          <button class="embed-tab active" onclick="showEmbedPane('helpline')">Helpline (emails, headers)</button>
-          <button class="embed-tab" onclick="showEmbedPane('myth')">Myth Card (blog, education)</button>
-          <button class="embed-tab" onclick="showEmbedPane('odds')">Odds Card (game pages)</button>
-        </div>
-        <div class="embed-pane active" id="embedHelpline">
-          <div class="embed-code-block">
-            <button class="embed-copy-btn" onclick="copyEmbedCode('helpline')">Copy</button>
-            <pre id="embedCodeHelpline"></pre>
-          </div>
-        </div>
-        <div class="embed-pane" id="embedMyth">
-          <div class="embed-code-block">
-            <button class="embed-copy-btn" onclick="copyEmbedCode('myth')">Copy</button>
-            <pre id="embedCodeMyth"></pre>
-          </div>
-        </div>
-        <div class="embed-pane" id="embedOdds">
-          <div class="embed-code-block">
-            <button class="embed-copy-btn" onclick="copyEmbedCode('odds')">Copy</button>
-            <pre id="embedCodeOdds"></pre>
-          </div>
-        </div>
-      </div>
-
       <div class="next-steps">
         <h3>What's Next?</h3>
         <ol>
@@ -676,8 +644,12 @@
           <div class="card-body">
             <div class="t2-headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
             <div class="t2-subline" style="color: #6B6B8A;">Free, confidential support for any question about gambling.</div>
-            <div class="t2-helpline" style="color: var(--cfg-secondary, #00D4AA);" id="pvT2Helpline">1-800-522-4700</div>
-            <div class="t2-channels" style="color: #A8A8C0;">Call &middot; Text &middot; Chat</div>
+            <div id="pvT2ContactBlock">
+              <div class="t2-contact-row">
+                <span class="t2-contact-label" style="color: #A8A8C0;">Call</span>
+                <span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);" id="pvT2Phone">1-800-522-4700</span>
+              </div>
+            </div>
           </div>
           <div class="card-footer">
             <span class="t2-footer-text" style="color: #A8A8C0;">24/7 &middot; No judgment &middot; Ever.</span>
@@ -716,11 +688,113 @@ let extractedColors = [];
 let suggestedPalette = null;
 
 const JURISDICTION_PRESETS = {
-  us: { number: '1-800-522-4700', textNumber: 'Text SUPPORT to 53342', chatUrl: 'https://www.ncpgambling.org/chat', label: 'National Council on Problem Gambling', age: 21, selfExclusionName: 'State self-exclusion program', selfExclusionUrl: '', supportOrgName: 'National Council on Problem Gambling', supportOrgUrl: 'https://www.ncpgambling.org' },
-  uk: { number: '0808 8020 133', textNumber: '', chatUrl: '', label: 'GambleAware', age: 18, selfExclusionName: 'GamStop', selfExclusionUrl: 'https://www.gamstop.co.uk', supportOrgName: 'GambleAware', supportOrgUrl: 'https://www.begambleaware.org' },
-  au: { number: '1800 858 858', textNumber: '', chatUrl: '', label: 'Gambling Help Online', age: 18, selfExclusionName: 'BetStop', selfExclusionUrl: 'https://www.betstop.gov.au', supportOrgName: 'Gambling Help Online', supportOrgUrl: 'https://www.gamblinghelponline.org.au' },
-  ca: { number: '1-888-795-6111', textNumber: '', chatUrl: '', label: 'Gambling Support BC', age: 19, selfExclusionName: 'Provincial self-exclusion', selfExclusionUrl: '', supportOrgName: 'Responsible Gambling Council', supportOrgUrl: 'https://www.responsiblegambling.org' },
-  custom: { number: '', textNumber: '', chatUrl: '', label: '', age: 18, selfExclusionName: '', selfExclusionUrl: '', supportOrgName: '', supportOrgUrl: '' },
+  // --- United States ---
+  us: {
+    number: '1-800-522-4700', textNumber: 'Text 800GAM', chatUrl: 'https://www.ncpgambling.org/chat',
+    label: 'National Council on Problem Gambling', helplineWebsite: 'www.ncpgambling.org',
+    age: 21, regulatorName: '', regulatorUrl: '',
+    selfExclusionName: 'State self-exclusion program', selfExclusionUrl: '',
+    supportOrgName: 'National Council on Problem Gambling', supportOrgUrl: 'https://www.ncpgambling.org',
+    verticals: 'Varies by state', mandatoryMessaging: '',
+    jurisdictionKey: 'united-states',
+    notes: 'National defaults. Select a state below for state-specific helplines, regulators, and requirements.'
+  },
+  'us-nv': {
+    number: '1-800-522-4700', textNumber: 'Text 800GAM', chatUrl: 'https://www.ncpgambling.org/chat',
+    label: 'NCPG National Helpline', helplineWebsite: 'www.ncpgambling.org',
+    age: 21, regulatorName: 'Nevada Gaming Control Board / Nevada Gaming Commission',
+    regulatorUrl: 'https://gaming.nv.gov',
+    selfExclusionName: 'Property-level self-limitation (no statewide program)',
+    selfExclusionUrl: '',
+    supportOrgName: 'Nevada Council on Problem Gambling', supportOrgUrl: 'https://www.nevadacouncil.org',
+    verticals: 'Land-based Casino, Sports Betting',
+    mandatoryMessaging: 'Wagering accounts: verbatim message required per Reg 5.225(18)(b)',
+    jurisdictionKey: 'united-states-nevada',
+    notes: 'Nevada uses the NCPG national helpline (no separate state helpline). Two regulatory regimes: Reg 5 (land-based) and Reg 5A (interactive gaming). No online casino; no lottery.'
+  },
+  'us-ma': {
+    number: '1-800-327-5050', textNumber: 'Text GAMB to 800327', chatUrl: '',
+    label: 'Massachusetts Problem Gambling Helpline', helplineWebsite: 'gamblinghelplinema.org',
+    age: 21, regulatorName: 'Massachusetts Gaming Commission (MGC)',
+    regulatorUrl: 'https://www.mass.gov/orgs/massachusetts-gaming-commission',
+    selfExclusionName: 'Massachusetts Voluntary Self-Exclusion (statewide)',
+    selfExclusionUrl: 'https://massgaming.com/about/responsible-gaming/self-exclusion/',
+    supportOrgName: 'GameSense', supportOrgUrl: 'https://gamesensema.com',
+    verticals: 'Land-based Casino, Sports Betting',
+    mandatoryMessaging: 'Sports ads: helpline required per 205 CMR 256.06(2) with font size minimums. DPH provides language.',
+    jurisdictionKey: 'united-states-massachusetts',
+    notes: 'Massachusetts has its own state helpline (not NCPG). Separate regimes: Chapter 23K (casino) and Chapter 23N (sports wagering). GameSense Info Centers at all three casinos. No online casino.'
+  },
+  // --- Canada ---
+  ca: {
+    number: '1-866-531-2600', textNumber: '', chatUrl: '',
+    label: 'ConnexOntario', helplineWebsite: 'www.connexontario.ca',
+    age: 19, regulatorName: '', regulatorUrl: '',
+    selfExclusionName: 'Provincial self-exclusion', selfExclusionUrl: '',
+    supportOrgName: 'Responsible Gambling Council', supportOrgUrl: 'https://www.responsiblegambling.org',
+    verticals: 'Varies by province', mandatoryMessaging: '',
+    jurisdictionKey: 'canada',
+    notes: 'Gambling regulated provincially. Select a province below for specific requirements.'
+  },
+  'ca-on': {
+    number: '1-866-531-2600', textNumber: '', chatUrl: 'https://www.connexontario.ca/en-ca/chat',
+    label: 'ConnexOntario', helplineWebsite: 'www.connexontario.ca',
+    age: 19, regulatorName: 'Alcohol and Gaming Commission of Ontario (AGCO)',
+    regulatorUrl: 'https://www.agco.ca',
+    selfExclusionName: 'AGCO Centralized Self-Exclusion (launching 2026)',
+    selfExclusionUrl: 'https://www.agco.ca/en/lottery-and-gaming/responsible-gambling/self-exclusion',
+    supportOrgName: 'ConnexOntario', supportOrgUrl: 'https://www.connexontario.ca',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    mandatoryMessaging: 'ConnexOntario must be prominently displayed on iGaming registration pages. Sport betting inducements prohibited in public advertising.',
+    jurisdictionKey: 'canada-ontario',
+    notes: 'Open competitive iGaming market (April 2022) with 70+ registered operators. Prescriptive Registrar\'s Standards for Internet Gaming. No mandatory verbatim statement but ConnexOntario display required.'
+  },
+  // --- Other countries ---
+  uk: {
+    number: '0808 8020 133', textNumber: '', chatUrl: '',
+    label: 'GambleAware', helplineWebsite: 'www.begambleaware.org',
+    age: 18, regulatorName: 'UK Gambling Commission (UKGC)',
+    regulatorUrl: 'https://www.gamblingcommission.gov.uk',
+    selfExclusionName: 'GAMSTOP', selfExclusionUrl: 'https://www.gamstop.co.uk',
+    supportOrgName: 'GambleAware', supportOrgUrl: 'https://www.begambleaware.org',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    mandatoryMessaging: 'Must comply with ASA/CAP advertising codes. GAMSTOP participation required for remote operators.',
+    jurisdictionKey: 'united-kingdom',
+    notes: ''
+  },
+  au: {
+    number: '1800 858 858', textNumber: '', chatUrl: '',
+    label: 'Gambling Help Online', helplineWebsite: 'www.gamblinghelponline.org.au',
+    age: 18, regulatorName: 'Australian Communications and Media Authority (ACMA)',
+    regulatorUrl: 'https://www.acma.gov.au',
+    selfExclusionName: 'BetStop', selfExclusionUrl: 'https://www.betstop.gov.au',
+    supportOrgName: 'Gambling Help Online', supportOrgUrl: 'https://www.gamblinghelponline.org.au',
+    verticals: 'Land-based Casino, Sports Betting (online casino prohibited)',
+    mandatoryMessaging: '',
+    jurisdictionKey: 'australia',
+    notes: ''
+  },
+  custom: {
+    number: '', textNumber: '', chatUrl: '',
+    label: '', helplineWebsite: '',
+    age: 18, regulatorName: '', regulatorUrl: '',
+    selfExclusionName: '', selfExclusionUrl: '',
+    supportOrgName: '', supportOrgUrl: '',
+    verticals: '', mandatoryMessaging: '',
+    jurisdictionKey: '',
+    notes: ''
+  }
+};
+
+const JURISDICTION_CHILDREN = {
+  us: [
+    { id: 'us', label: 'National (NCPG)' },
+    { id: 'us-nv', label: 'Nevada' },
+    { id: 'us-ma', label: 'Massachusetts' }
+  ],
+  ca: [
+    { id: 'ca-on', label: 'Ontario' }
+  ]
 };
 
 // === Navigation ===
@@ -1135,7 +1209,7 @@ function updatePreview() {
   document.querySelectorAll('.pv-card, .pv-badge').forEach(el => {
     el.style.fontFamily = `'${bodyFont}', sans-serif`;
   });
-  document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-channels, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo').forEach(el => {
+  document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-contact-label, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo').forEach(el => {
     el.style.fontFamily = `'${headingFont}', sans-serif`;
   });
 
@@ -1162,19 +1236,57 @@ function updatePreview() {
     }
   });
 
+  // Resolve jurisdiction data
+  const preset = JURISDICTION_PRESETS[activeJurisdictionId] || {};
+  const textNum = document.getElementById('textNumber').value || preset.textNumber || '';
+
   // Update helpline and legal
   document.querySelectorAll('[id^="pvHelpline"]').forEach(el => {
-    el.textContent = 'Free support 24/7: ' + helpline;
+    let footerText = 'Free support 24/7: ' + helpline;
+    if (textNum) footerText += '  |  ' + textNum;
+    el.textContent = footerText;
   });
   document.querySelectorAll('[id^="pvLegal"]').forEach(el => {
     el.textContent = minAge + '+ to gamble';
   });
-  const badgeLabel = document.getElementById('pvBadgeLabel');
-  if (badgeLabel) badgeLabel.textContent = 'Free, confidential support 24/7';
   const badgeNumber = document.getElementById('pvBadgeNumber');
-  if (badgeNumber) badgeNumber.textContent = helpline;
-  const t2Helpline = document.getElementById('pvT2Helpline');
-  if (t2Helpline) t2Helpline.textContent = helpline;
+  const chatUrlVal = document.getElementById('chatUrl').value || preset.chatUrl || '';
+  const contactBlock = document.getElementById('pvT2ContactBlock');
+  if (contactBlock) {
+    let html = '';
+    html += '<div class="t2-contact-row">';
+    html += '<span class="t2-contact-label" style="color: #A8A8C0;">Call</span>';
+    html += '<span class="t2-contact-value t2-phone" style="color: var(--cfg-secondary, #00D4AA);">' + helpline + '</span>';
+    html += '</div>';
+    if (textNum) {
+      html += '<div class="t2-contact-row">';
+      html += '<span class="t2-contact-label" style="color: #A8A8C0;">Text</span>';
+      html += '<span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);">' + textNum + '</span>';
+      html += '</div>';
+    }
+    if (chatUrlVal) {
+      const chatDisplay = chatUrlVal.replace(/^https?:\/\//, '').replace(/\/$/, '');
+      html += '<div class="t2-contact-row">';
+      html += '<span class="t2-contact-label" style="color: #A8A8C0;">Chat</span>';
+      html += '<span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);">' + chatDisplay + '</span>';
+      html += '</div>';
+    }
+    contactBlock.innerHTML = html;
+  }
+
+  // Update badge with helpline org and channels
+  const badgeLabel = document.getElementById('pvBadgeLabel');
+  if (badgeLabel) {
+    const badgeParts = [preset.label || 'Free, confidential support'];
+    badgeParts.push('24/7');
+    badgeLabel.textContent = badgeParts.join(' \u2014 ');
+  }
+  if (badgeNumber) {
+    let badgeContact = helpline;
+    if (textNum) badgeContact += '  |  ' + textNum;
+    badgeNumber.textContent = badgeContact;
+  }
+
   // Update operator logo in badge preview
   const badgeOperator = document.getElementById('pvBadgeOperator');
   const badgeCoDivider = document.getElementById('pvBadgeCoDivider');
@@ -1245,30 +1357,87 @@ function syncColor(pickerId, hexId) {
 }
 
 // === Jurisdiction Presets ===
+let activeJurisdictionId = 'us';
+
 function getActiveJurisdiction() {
-  const active = document.querySelector('.preset-tag.active');
-  return active ? active.dataset.j : 'us';
+  return activeJurisdictionId;
+}
+
+function applyPreset(id) {
+  activeJurisdictionId = id;
+  const preset = JURISDICTION_PRESETS[id];
+  if (!preset) return;
+  document.getElementById('helplineNumber').value = preset.number;
+  document.getElementById('minAge').value = preset.age;
+  document.getElementById('textNumber').value = preset.textNumber || '';
+  document.getElementById('chatUrl').value = preset.chatUrl || '';
+  document.getElementById('selfExclusionName').value = preset.selfExclusionName || '';
+  document.getElementById('selfExclusionUrl').value = preset.selfExclusionUrl || '';
+  document.getElementById('limitsUrl').value = '';
+  document.getElementById('supportOrgName').value = preset.supportOrgName || '';
+  document.getElementById('supportOrgUrl').value = preset.supportOrgUrl || '';
+  updateJurisdictionInfo(preset);
+  updatePreview();
+}
+
+function updateJurisdictionInfo(preset) {
+  const infoEl = document.getElementById('jurisdictionInfo');
+  const parts = [];
+  if (preset.regulatorName) {
+    const regLink = preset.regulatorUrl
+      ? '<a href="' + preset.regulatorUrl + '" target="_blank" rel="noopener">' + preset.regulatorName + '</a>'
+      : preset.regulatorName;
+    parts.push('<strong>Regulator:</strong> ' + regLink);
+  }
+  if (preset.verticals) parts.push('<strong>Verticals:</strong> ' + preset.verticals);
+  if (preset.mandatoryMessaging) parts.push('<strong>Mandatory messaging:</strong> ' + preset.mandatoryMessaging);
+  if (preset.notes) parts.push(preset.notes);
+  if (parts.length > 0) {
+    infoEl.innerHTML = parts.join('<br>');
+    infoEl.classList.add('visible');
+  } else {
+    infoEl.classList.remove('visible');
+  }
+}
+
+function showSubJurisdictions(groupId) {
+  const subEl = document.getElementById('subJurisdictions');
+  const children = JURISDICTION_CHILDREN[groupId];
+  if (!children) { subEl.classList.remove('visible'); subEl.innerHTML = ''; return; }
+  subEl.innerHTML = children.map(function(c) {
+    return '<span class="sub-preset-tag" data-j="' + c.id + '">' + c.label + '</span>';
+  }).join('');
+  subEl.classList.add('visible');
+  subEl.querySelectorAll('.sub-preset-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      subEl.querySelectorAll('.sub-preset-tag').forEach(function(t) { t.classList.remove('active'); });
+      tag.classList.add('active');
+      applyPreset(tag.dataset.j);
+    });
+  });
 }
 
 function initPresets() {
-  document.querySelectorAll('.preset-tag').forEach(tag => {
-    tag.addEventListener('click', () => {
-      document.querySelectorAll('.preset-tag').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.preset-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      document.querySelectorAll('.preset-tag').forEach(function(t) { t.classList.remove('active'); });
       tag.classList.add('active');
-      const j = tag.dataset.j;
-      const preset = JURISDICTION_PRESETS[j];
-      document.getElementById('helplineNumber').value = preset.number;
-      document.getElementById('minAge').value = preset.age;
-      document.getElementById('textNumber').value = preset.textNumber || '';
-      document.getElementById('chatUrl').value = preset.chatUrl || '';
-      document.getElementById('selfExclusionName').value = preset.selfExclusionName || '';
-      document.getElementById('selfExclusionUrl').value = preset.selfExclusionUrl || '';
-      document.getElementById('limitsUrl').value = '';
-      document.getElementById('supportOrgName').value = preset.supportOrgName || '';
-      document.getElementById('supportOrgUrl').value = preset.supportOrgUrl || '';
-      updatePreview();
+      var j = tag.dataset.j;
+      var groupId = tag.dataset.group;
+      if (groupId && JURISDICTION_CHILDREN[groupId]) {
+        showSubJurisdictions(groupId);
+        // Apply the parent preset as default
+        applyPreset(j);
+      } else {
+        document.getElementById('subJurisdictions').classList.remove('visible');
+        document.getElementById('subJurisdictions').innerHTML = '';
+        applyPreset(j);
+      }
     });
   });
+  // Show US sub-jurisdictions on load (US is default active)
+  showSubJurisdictions('us');
+  updateJurisdictionInfo(JURISDICTION_PRESETS['us']);
 }
 
 // === Download Functions ===
@@ -1283,8 +1452,20 @@ function downloadYaml() {
   const bodyFont = document.getElementById('fontBody').value;
   const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
   const minAge = document.getElementById('minAge').value || '21';
+  const textNum = document.getElementById('textNumber').value || '';
+  const chatUrlVal = document.getElementById('chatUrl').value || '';
+  const limitsUrl = document.getElementById('limitsUrl').value || '';
+  const selfExclusionName = document.getElementById('selfExclusionName').value || '';
+  const selfExclusionUrl = document.getElementById('selfExclusionUrl').value || '';
+  const supportOrgName = document.getElementById('supportOrgName').value || '';
+  const supportOrgUrl = document.getElementById('supportOrgUrl').value || '';
   const jKey = getActiveJurisdiction();
-  const helplineLabel = JURISDICTION_PRESETS[jKey]?.label || 'Support Helpline';
+  const preset = JURISDICTION_PRESETS[jKey] || {};
+  const helplineLabel = preset.label || 'Support Helpline';
+  const helplineWebsite = preset.helplineWebsite || '';
+  const regulatorName = preset.regulatorName || '';
+  const regulatorUrl = preset.regulatorUrl || '';
+  const jurisdictionKey = preset.jurisdictionKey || 'custom';
   const primaryLight = lighten(primary, 0.15);
   const primaryDark = darken(primary, 0.3);
   const secondaryLight = lighten(secondary, 0.15);
@@ -1307,7 +1488,7 @@ meta:
   version: "0.1.0"
   license: "CC0-1.0"
   primary_jurisdictions:
-    - united-states
+    - ${jurisdictionKey || 'united-states'}
 
 brand_pillars:
   - name: "Open"
@@ -1429,7 +1610,21 @@ helplines:
   default:
     number: "${helpline}"
     label: "${helplineLabel}"
-    hours: "24/7"
+    hours: "24/7"` + (textNum ? `
+    text_number: "${textNum}"` : '') + (chatUrlVal ? `
+    chat_url: "${chatUrlVal}"` : '') + (helplineWebsite ? `
+    website: "${helplineWebsite}"` : '') + `
+` + (regulatorName ? `
+regulator:
+  name: "${regulatorName}"` + (regulatorUrl ? `
+  url: "${regulatorUrl}"` : '') + `
+` : '') + `
+integration:
+  limits_url: "${limitsUrl || '{{LIMITS_URL}}'}"
+  self_exclusion_url: "${selfExclusionUrl || '{{SELF_EXCLUSION_URL}}'}"
+  self_exclusion_name: "${selfExclusionName || '{{SELF_EXCLUSION_NAME}}'}"
+  support_org_name: "${supportOrgName || '{{SUPPORT_ORG_NAME}}'}"
+  support_org_url: "${supportOrgUrl || '{{SUPPORT_ORG_URL}}'}"
 
 legal:
   copyright_holder: "${org}"
@@ -1582,8 +1777,8 @@ function getOperatorTokens() {
     '{{LIMIT_AMOUNT}}': '',
     '{{TOTAL_SESSIONS}}': '',
     '{{TOTAL_TIME}}': '',
-    '{{JURISDICTION}}': getActiveJurisdiction(),
-    '{{REGULATOR_URL}}': '',
+    '{{JURISDICTION}}': (JURISDICTION_PRESETS[getActiveJurisdiction()] || {}).jurisdictionKey || getActiveJurisdiction(),
+    '{{REGULATOR_URL}}': (JURISDICTION_PRESETS[getActiveJurisdiction()] || {}).regulatorUrl || '',
   };
 }
 
@@ -1799,8 +1994,20 @@ function generateYamlContent() {
   const bodyFont = document.getElementById('fontBody').value;
   const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
   const minAge = document.getElementById('minAge').value || '21';
+  const textNum = document.getElementById('textNumber').value || '';
+  const chatUrlVal = document.getElementById('chatUrl').value || '';
+  const limitsUrl = document.getElementById('limitsUrl').value || '';
+  const selfExclusionName = document.getElementById('selfExclusionName').value || '';
+  const selfExclusionUrl = document.getElementById('selfExclusionUrl').value || '';
+  const supportOrgName = document.getElementById('supportOrgName').value || '';
+  const supportOrgUrl = document.getElementById('supportOrgUrl').value || '';
   const jKey = getActiveJurisdiction();
-  const helplineLabel = JURISDICTION_PRESETS[jKey]?.label || 'Support Helpline';
+  const preset = JURISDICTION_PRESETS[jKey] || {};
+  const helplineLabel = preset.label || 'Support Helpline';
+  const helplineWebsite = preset.helplineWebsite || '';
+  const regulatorName = preset.regulatorName || '';
+  const regulatorUrl = preset.regulatorUrl || '';
+  const jurisdictionKey = preset.jurisdictionKey || 'custom';
   const primaryLight = lighten(primary, 0.15);
   const primaryDark = darken(primary, 0.3);
   const secondaryLight = lighten(secondary, 0.15);
@@ -1818,6 +2025,8 @@ meta:
   year_established: ${new Date().getFullYear()}
   version: "0.1.0"
   license: "CC0-1.0"
+  primary_jurisdictions:
+    - ${jurisdictionKey || 'united-states'}
 
 color:
   palette:
@@ -1844,7 +2053,21 @@ helplines:
   default:
     number: "${helpline}"
     label: "${helplineLabel}"
-    hours: "24/7"
+    hours: "24/7"` + (textNum ? `
+    text_number: "${textNum}"` : '') + (chatUrlVal ? `
+    chat_url: "${chatUrlVal}"` : '') + (helplineWebsite ? `
+    website: "${helplineWebsite}"` : '') + `
+` + (regulatorName ? `
+regulator:
+  name: "${regulatorName}"` + (regulatorUrl ? `
+  url: "${regulatorUrl}"` : '') + `
+` : '') + `
+integration:
+  limits_url: "${limitsUrl || '{{LIMITS_URL}}'}"
+  self_exclusion_url: "${selfExclusionUrl || '{{SELF_EXCLUSION_URL}}'}"
+  self_exclusion_name: "${selfExclusionName || '{{SELF_EXCLUSION_NAME}}'}"
+  support_org_name: "${supportOrgName || '{{SUPPORT_ORG_NAME}}'}"
+  support_org_url: "${supportOrgUrl || '{{SUPPORT_ORG_URL}}'}"
 
 legal:
   copyright_holder: "${org}"
@@ -1978,66 +2201,6 @@ Source: [github.com/kphilander/Playbook](https://github.com/kphilander/Playbook)
 `;
 }
 
-// === Embed Code Generator ===
-function showEmbedPane(type) {
-  document.querySelectorAll('.embed-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.embed-pane').forEach(p => p.classList.remove('active'));
-  event.currentTarget.classList.add('active');
-
-  const paneMap = { helpline: 'embedHelpline', myth: 'embedMyth', odds: 'embedOdds' };
-  document.getElementById(paneMap[type]).classList.add('active');
-}
-
-function updateEmbedCodes() {
-  const helpline = document.getElementById('helplineNumber').value || '1-800-522-4700';
-  const minAge = document.getElementById('minAge').value || '21';
-  const primary = document.getElementById('colorPrimary').value;
-  const secondary = document.getElementById('colorSecondary').value;
-  const accent = document.getElementById('colorAccent').value;
-  const widgetSrc = 'https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/widgets/dist/playbook-widgets.js';
-
-  document.getElementById('embedCodeHelpline').textContent =
-`<script src="${widgetSrc}"><\/script>
-
-<playbook-helpline
-  number="${helpline}"
-  label="Free 24/7 support"
-  theme="dark"
-  mode="banner">
-</playbook-helpline>`;
-
-  document.getElementById('embedCodeMyth').textContent =
-`<script src="${widgetSrc}"><\/script>
-
-<playbook-myth
-  category="slots"
-  api-url="https://cdn.jsdelivr.net/gh/kphilander/Playbook@main/api/myths.json">
-</playbook-myth>`;
-
-  document.getElementById('embedCodeOdds').textContent =
-`<script src="${widgetSrc}"><\/script>
-
-<playbook-odds
-  game="blackjack"
-  theme="dark">
-</playbook-odds>`;
-}
-
-function copyEmbedCode(type) {
-  const codeMap = {
-    helpline: 'embedCodeHelpline',
-    myth: 'embedCodeMyth',
-    odds: 'embedCodeOdds',
-  };
-  const code = document.getElementById(codeMap[type]).textContent;
-  navigator.clipboard.writeText(code).then(() => {
-    const btn = event.currentTarget;
-    btn.textContent = 'Copied!';
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
-  });
-}
-
 // === No-op: cards now use responsive sizing ===
 function scalePreviewCards() {}
 
@@ -2059,13 +2222,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Listen for all input changes
   document.querySelectorAll('input, select').forEach(el => {
-    el.addEventListener('input', () => { updatePreview(); updateEmbedCodes(); });
-    el.addEventListener('change', () => { updatePreview(); updateEmbedCodes(); });
+    el.addEventListener('input', () => { updatePreview(); });
+    el.addEventListener('change', () => { updatePreview(); });
   });
 
   updateSplitSlider();
   updatePreview();
-  updateEmbedCodes();
   scalePreviewCards();
   window.addEventListener('resize', scalePreviewCards);
 });
