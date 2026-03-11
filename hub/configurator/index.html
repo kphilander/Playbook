@@ -128,6 +128,16 @@
   .preset-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 12px; background: #ebf8ff; color: #2b6cb0; font-weight: 600; cursor: pointer; margin-right: 6px; margin-bottom: 6px; transition: all 0.15s; border: 1px solid transparent; }
   .preset-tag:hover { background: #bee3f8; }
   .preset-tag.active { background: #2b6cb0; color: #fff; }
+  #subJurisdictions { margin-top: 6px; display: none; }
+  #subJurisdictions.visible { display: block; }
+  .sub-preset-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; background: #f0fff4; color: #276749; font-weight: 600; cursor: pointer; margin-right: 5px; margin-bottom: 5px; transition: all 0.15s; border: 1px solid #c6f6d5; }
+  .sub-preset-tag:hover { background: #c6f6d5; }
+  .sub-preset-tag.active { background: #276749; color: #fff; border-color: #276749; }
+  .jurisdiction-info { margin-top: 10px; padding: 10px 12px; background: #f7fafc; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 11px; line-height: 1.5; color: #4a5568; display: none; }
+  .jurisdiction-info.visible { display: block; }
+  .jurisdiction-info strong { color: #2d3748; }
+  .jurisdiction-info a { color: #2b6cb0; text-decoration: none; }
+  .jurisdiction-info a:hover { text-decoration: underline; }
 
   /* === Nav Buttons === */
   .wizard-nav { margin-top: 28px; display: flex; gap: 10px; }
@@ -454,12 +464,14 @@
       <div class="form-group">
         <label class="form-label">Jurisdiction Preset</label>
         <div id="jurisdictionPresets">
-          <span class="preset-tag active" data-j="us">United States</span>
+          <span class="preset-tag active" data-j="us" data-group="us">United States</span>
           <span class="preset-tag" data-j="uk">United Kingdom</span>
           <span class="preset-tag" data-j="au">Australia</span>
-          <span class="preset-tag" data-j="ca">Canada</span>
+          <span class="preset-tag" data-j="ca" data-group="ca">Canada</span>
           <span class="preset-tag" data-j="custom">Custom</span>
         </div>
+        <div id="subJurisdictions"></div>
+        <div id="jurisdictionInfo" class="jurisdiction-info"></div>
       </div>
 
       <div class="form-group">
@@ -469,7 +481,7 @@
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
         <div class="form-group">
           <label class="form-label">Text Support Number</label>
-          <input type="text" class="form-input" id="textNumber" value="Text SUPPORT to 53342" placeholder="e.g. Text HOME to 741741">
+          <input type="text" class="form-input" id="textNumber" value="Text 800GAM" placeholder="e.g. Text HOME to 741741">
         </div>
         <div class="form-group">
           <label class="form-label">Live Chat URL</label>
@@ -716,11 +728,113 @@ let extractedColors = [];
 let suggestedPalette = null;
 
 const JURISDICTION_PRESETS = {
-  us: { number: '1-800-522-4700', textNumber: 'Text SUPPORT to 53342', chatUrl: 'https://www.ncpgambling.org/chat', label: 'National Council on Problem Gambling', age: 21, selfExclusionName: 'State self-exclusion program', selfExclusionUrl: '', supportOrgName: 'National Council on Problem Gambling', supportOrgUrl: 'https://www.ncpgambling.org' },
-  uk: { number: '0808 8020 133', textNumber: '', chatUrl: '', label: 'GambleAware', age: 18, selfExclusionName: 'GamStop', selfExclusionUrl: 'https://www.gamstop.co.uk', supportOrgName: 'GambleAware', supportOrgUrl: 'https://www.begambleaware.org' },
-  au: { number: '1800 858 858', textNumber: '', chatUrl: '', label: 'Gambling Help Online', age: 18, selfExclusionName: 'BetStop', selfExclusionUrl: 'https://www.betstop.gov.au', supportOrgName: 'Gambling Help Online', supportOrgUrl: 'https://www.gamblinghelponline.org.au' },
-  ca: { number: '1-888-795-6111', textNumber: '', chatUrl: '', label: 'Gambling Support BC', age: 19, selfExclusionName: 'Provincial self-exclusion', selfExclusionUrl: '', supportOrgName: 'Responsible Gambling Council', supportOrgUrl: 'https://www.responsiblegambling.org' },
-  custom: { number: '', textNumber: '', chatUrl: '', label: '', age: 18, selfExclusionName: '', selfExclusionUrl: '', supportOrgName: '', supportOrgUrl: '' },
+  // --- United States ---
+  us: {
+    number: '1-800-522-4700', textNumber: 'Text 800GAM', chatUrl: 'https://www.ncpgambling.org/chat',
+    label: 'National Council on Problem Gambling', helplineWebsite: 'www.ncpgambling.org',
+    age: 21, regulatorName: '', regulatorUrl: '',
+    selfExclusionName: 'State self-exclusion program', selfExclusionUrl: '',
+    supportOrgName: 'National Council on Problem Gambling', supportOrgUrl: 'https://www.ncpgambling.org',
+    verticals: 'Varies by state', mandatoryMessaging: '',
+    jurisdictionKey: 'united-states',
+    notes: 'National defaults. Select a state below for state-specific helplines, regulators, and requirements.'
+  },
+  'us-nv': {
+    number: '1-800-522-4700', textNumber: 'Text 800GAM', chatUrl: 'https://www.ncpgambling.org/chat',
+    label: 'NCPG National Helpline', helplineWebsite: 'www.ncpgambling.org',
+    age: 21, regulatorName: 'Nevada Gaming Control Board / Nevada Gaming Commission',
+    regulatorUrl: 'https://gaming.nv.gov',
+    selfExclusionName: 'Property-level self-limitation (no statewide program)',
+    selfExclusionUrl: '',
+    supportOrgName: 'Nevada Council on Problem Gambling', supportOrgUrl: 'https://www.nevadacouncil.org',
+    verticals: 'Land-based Casino, Sports Betting',
+    mandatoryMessaging: 'Wagering accounts: verbatim message required per Reg 5.225(18)(b)',
+    jurisdictionKey: 'united-states-nevada',
+    notes: 'Nevada uses the NCPG national helpline (no separate state helpline). Two regulatory regimes: Reg 5 (land-based) and Reg 5A (interactive gaming). No online casino; no lottery.'
+  },
+  'us-ma': {
+    number: '1-800-327-5050', textNumber: 'Text GAMB to 800327', chatUrl: '',
+    label: 'Massachusetts Problem Gambling Helpline', helplineWebsite: 'gamblinghelplinema.org',
+    age: 21, regulatorName: 'Massachusetts Gaming Commission (MGC)',
+    regulatorUrl: 'https://www.mass.gov/orgs/massachusetts-gaming-commission',
+    selfExclusionName: 'Massachusetts Voluntary Self-Exclusion (statewide)',
+    selfExclusionUrl: 'https://massgaming.com/about/responsible-gaming/self-exclusion/',
+    supportOrgName: 'GameSense', supportOrgUrl: 'https://gamesensema.com',
+    verticals: 'Land-based Casino, Sports Betting',
+    mandatoryMessaging: 'Sports ads: helpline required per 205 CMR 256.06(2) with font size minimums. DPH provides language.',
+    jurisdictionKey: 'united-states-massachusetts',
+    notes: 'Massachusetts has its own state helpline (not NCPG). Separate regimes: Chapter 23K (casino) and Chapter 23N (sports wagering). GameSense Info Centers at all three casinos. No online casino.'
+  },
+  // --- Canada ---
+  ca: {
+    number: '1-866-531-2600', textNumber: '', chatUrl: '',
+    label: 'ConnexOntario', helplineWebsite: 'www.connexontario.ca',
+    age: 19, regulatorName: '', regulatorUrl: '',
+    selfExclusionName: 'Provincial self-exclusion', selfExclusionUrl: '',
+    supportOrgName: 'Responsible Gambling Council', supportOrgUrl: 'https://www.responsiblegambling.org',
+    verticals: 'Varies by province', mandatoryMessaging: '',
+    jurisdictionKey: 'canada',
+    notes: 'Gambling regulated provincially. Select a province below for specific requirements.'
+  },
+  'ca-on': {
+    number: '1-866-531-2600', textNumber: '', chatUrl: 'https://www.connexontario.ca/en-ca/chat',
+    label: 'ConnexOntario', helplineWebsite: 'www.connexontario.ca',
+    age: 19, regulatorName: 'Alcohol and Gaming Commission of Ontario (AGCO)',
+    regulatorUrl: 'https://www.agco.ca',
+    selfExclusionName: 'AGCO Centralized Self-Exclusion (launching 2026)',
+    selfExclusionUrl: 'https://www.agco.ca/en/lottery-and-gaming/responsible-gambling/self-exclusion',
+    supportOrgName: 'ConnexOntario', supportOrgUrl: 'https://www.connexontario.ca',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    mandatoryMessaging: 'ConnexOntario must be prominently displayed on iGaming registration pages. Sport betting inducements prohibited in public advertising.',
+    jurisdictionKey: 'canada-ontario',
+    notes: 'Open competitive iGaming market (April 2022) with 70+ registered operators. Prescriptive Registrar\'s Standards for Internet Gaming. No mandatory verbatim statement but ConnexOntario display required.'
+  },
+  // --- Other countries ---
+  uk: {
+    number: '0808 8020 133', textNumber: '', chatUrl: '',
+    label: 'GambleAware', helplineWebsite: 'www.begambleaware.org',
+    age: 18, regulatorName: 'UK Gambling Commission (UKGC)',
+    regulatorUrl: 'https://www.gamblingcommission.gov.uk',
+    selfExclusionName: 'GAMSTOP', selfExclusionUrl: 'https://www.gamstop.co.uk',
+    supportOrgName: 'GambleAware', supportOrgUrl: 'https://www.begambleaware.org',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    mandatoryMessaging: 'Must comply with ASA/CAP advertising codes. GAMSTOP participation required for remote operators.',
+    jurisdictionKey: 'united-kingdom',
+    notes: ''
+  },
+  au: {
+    number: '1800 858 858', textNumber: '', chatUrl: '',
+    label: 'Gambling Help Online', helplineWebsite: 'www.gamblinghelponline.org.au',
+    age: 18, regulatorName: 'Australian Communications and Media Authority (ACMA)',
+    regulatorUrl: 'https://www.acma.gov.au',
+    selfExclusionName: 'BetStop', selfExclusionUrl: 'https://www.betstop.gov.au',
+    supportOrgName: 'Gambling Help Online', supportOrgUrl: 'https://www.gamblinghelponline.org.au',
+    verticals: 'Land-based Casino, Sports Betting (online casino prohibited)',
+    mandatoryMessaging: '',
+    jurisdictionKey: 'australia',
+    notes: ''
+  },
+  custom: {
+    number: '', textNumber: '', chatUrl: '',
+    label: '', helplineWebsite: '',
+    age: 18, regulatorName: '', regulatorUrl: '',
+    selfExclusionName: '', selfExclusionUrl: '',
+    supportOrgName: '', supportOrgUrl: '',
+    verticals: '', mandatoryMessaging: '',
+    jurisdictionKey: '',
+    notes: ''
+  }
+};
+
+const JURISDICTION_CHILDREN = {
+  us: [
+    { id: 'us', label: 'National (NCPG)' },
+    { id: 'us-nv', label: 'Nevada' },
+    { id: 'us-ma', label: 'Massachusetts' }
+  ],
+  ca: [
+    { id: 'ca-on', label: 'Ontario' }
+  ]
 };
 
 // === Navigation ===
@@ -1245,30 +1359,87 @@ function syncColor(pickerId, hexId) {
 }
 
 // === Jurisdiction Presets ===
+let activeJurisdictionId = 'us';
+
 function getActiveJurisdiction() {
-  const active = document.querySelector('.preset-tag.active');
-  return active ? active.dataset.j : 'us';
+  return activeJurisdictionId;
+}
+
+function applyPreset(id) {
+  activeJurisdictionId = id;
+  const preset = JURISDICTION_PRESETS[id];
+  if (!preset) return;
+  document.getElementById('helplineNumber').value = preset.number;
+  document.getElementById('minAge').value = preset.age;
+  document.getElementById('textNumber').value = preset.textNumber || '';
+  document.getElementById('chatUrl').value = preset.chatUrl || '';
+  document.getElementById('selfExclusionName').value = preset.selfExclusionName || '';
+  document.getElementById('selfExclusionUrl').value = preset.selfExclusionUrl || '';
+  document.getElementById('limitsUrl').value = '';
+  document.getElementById('supportOrgName').value = preset.supportOrgName || '';
+  document.getElementById('supportOrgUrl').value = preset.supportOrgUrl || '';
+  updateJurisdictionInfo(preset);
+  updatePreview();
+}
+
+function updateJurisdictionInfo(preset) {
+  const infoEl = document.getElementById('jurisdictionInfo');
+  const parts = [];
+  if (preset.regulatorName) {
+    const regLink = preset.regulatorUrl
+      ? '<a href="' + preset.regulatorUrl + '" target="_blank" rel="noopener">' + preset.regulatorName + '</a>'
+      : preset.regulatorName;
+    parts.push('<strong>Regulator:</strong> ' + regLink);
+  }
+  if (preset.verticals) parts.push('<strong>Verticals:</strong> ' + preset.verticals);
+  if (preset.mandatoryMessaging) parts.push('<strong>Mandatory messaging:</strong> ' + preset.mandatoryMessaging);
+  if (preset.notes) parts.push(preset.notes);
+  if (parts.length > 0) {
+    infoEl.innerHTML = parts.join('<br>');
+    infoEl.classList.add('visible');
+  } else {
+    infoEl.classList.remove('visible');
+  }
+}
+
+function showSubJurisdictions(groupId) {
+  const subEl = document.getElementById('subJurisdictions');
+  const children = JURISDICTION_CHILDREN[groupId];
+  if (!children) { subEl.classList.remove('visible'); subEl.innerHTML = ''; return; }
+  subEl.innerHTML = children.map(function(c) {
+    return '<span class="sub-preset-tag" data-j="' + c.id + '">' + c.label + '</span>';
+  }).join('');
+  subEl.classList.add('visible');
+  subEl.querySelectorAll('.sub-preset-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      subEl.querySelectorAll('.sub-preset-tag').forEach(function(t) { t.classList.remove('active'); });
+      tag.classList.add('active');
+      applyPreset(tag.dataset.j);
+    });
+  });
 }
 
 function initPresets() {
-  document.querySelectorAll('.preset-tag').forEach(tag => {
-    tag.addEventListener('click', () => {
-      document.querySelectorAll('.preset-tag').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.preset-tag').forEach(function(tag) {
+    tag.addEventListener('click', function() {
+      document.querySelectorAll('.preset-tag').forEach(function(t) { t.classList.remove('active'); });
       tag.classList.add('active');
-      const j = tag.dataset.j;
-      const preset = JURISDICTION_PRESETS[j];
-      document.getElementById('helplineNumber').value = preset.number;
-      document.getElementById('minAge').value = preset.age;
-      document.getElementById('textNumber').value = preset.textNumber || '';
-      document.getElementById('chatUrl').value = preset.chatUrl || '';
-      document.getElementById('selfExclusionName').value = preset.selfExclusionName || '';
-      document.getElementById('selfExclusionUrl').value = preset.selfExclusionUrl || '';
-      document.getElementById('limitsUrl').value = '';
-      document.getElementById('supportOrgName').value = preset.supportOrgName || '';
-      document.getElementById('supportOrgUrl').value = preset.supportOrgUrl || '';
-      updatePreview();
+      var j = tag.dataset.j;
+      var groupId = tag.dataset.group;
+      if (groupId && JURISDICTION_CHILDREN[groupId]) {
+        showSubJurisdictions(groupId);
+        // Apply the parent preset as default
+        applyPreset(j);
+      } else {
+        document.getElementById('subJurisdictions').classList.remove('visible');
+        document.getElementById('subJurisdictions').innerHTML = '';
+        applyPreset(j);
+      }
     });
   });
+  // Show US sub-jurisdictions on load (US is default active)
+  showSubJurisdictions('us');
+  updateJurisdictionInfo(JURISDICTION_PRESETS['us']);
 }
 
 // === Download Functions ===
@@ -1283,8 +1454,15 @@ function downloadYaml() {
   const bodyFont = document.getElementById('fontBody').value;
   const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
   const minAge = document.getElementById('minAge').value || '21';
+  const textNum = document.getElementById('textNumber').value || '';
+  const chatUrlVal = document.getElementById('chatUrl').value || '';
   const jKey = getActiveJurisdiction();
-  const helplineLabel = JURISDICTION_PRESETS[jKey]?.label || 'Support Helpline';
+  const preset = JURISDICTION_PRESETS[jKey] || {};
+  const helplineLabel = preset.label || 'Support Helpline';
+  const helplineWebsite = preset.helplineWebsite || '';
+  const regulatorName = preset.regulatorName || '';
+  const regulatorUrl = preset.regulatorUrl || '';
+  const jurisdictionKey = preset.jurisdictionKey || 'custom';
   const primaryLight = lighten(primary, 0.15);
   const primaryDark = darken(primary, 0.3);
   const secondaryLight = lighten(secondary, 0.15);
@@ -1307,7 +1485,7 @@ meta:
   version: "0.1.0"
   license: "CC0-1.0"
   primary_jurisdictions:
-    - united-states
+    - ${jurisdictionKey || 'united-states'}
 
 brand_pillars:
   - name: "Open"
@@ -1429,8 +1607,15 @@ helplines:
   default:
     number: "${helpline}"
     label: "${helplineLabel}"
-    hours: "24/7"
-
+    hours: "24/7"` + (textNum ? `
+    text_number: "${textNum}"` : '') + (chatUrlVal ? `
+    chat_url: "${chatUrlVal}"` : '') + (helplineWebsite ? `
+    website: "${helplineWebsite}"` : '') + `
+` + (regulatorName ? `
+regulator:
+  name: "${regulatorName}"` + (regulatorUrl ? `
+  url: "${regulatorUrl}"` : '') + `
+` : '') + `
 legal:
   copyright_holder: "${org}"
   minimum_gambling_age:
@@ -1582,8 +1767,8 @@ function getOperatorTokens() {
     '{{LIMIT_AMOUNT}}': '',
     '{{TOTAL_SESSIONS}}': '',
     '{{TOTAL_TIME}}': '',
-    '{{JURISDICTION}}': getActiveJurisdiction(),
-    '{{REGULATOR_URL}}': '',
+    '{{JURISDICTION}}': (JURISDICTION_PRESETS[getActiveJurisdiction()] || {}).jurisdictionKey || getActiveJurisdiction(),
+    '{{REGULATOR_URL}}': (JURISDICTION_PRESETS[getActiveJurisdiction()] || {}).regulatorUrl || '',
   };
 }
 
@@ -1799,8 +1984,15 @@ function generateYamlContent() {
   const bodyFont = document.getElementById('fontBody').value;
   const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
   const minAge = document.getElementById('minAge').value || '21';
+  const textNum = document.getElementById('textNumber').value || '';
+  const chatUrlVal = document.getElementById('chatUrl').value || '';
   const jKey = getActiveJurisdiction();
-  const helplineLabel = JURISDICTION_PRESETS[jKey]?.label || 'Support Helpline';
+  const preset = JURISDICTION_PRESETS[jKey] || {};
+  const helplineLabel = preset.label || 'Support Helpline';
+  const helplineWebsite = preset.helplineWebsite || '';
+  const regulatorName = preset.regulatorName || '';
+  const regulatorUrl = preset.regulatorUrl || '';
+  const jurisdictionKey = preset.jurisdictionKey || 'custom';
   const primaryLight = lighten(primary, 0.15);
   const primaryDark = darken(primary, 0.3);
   const secondaryLight = lighten(secondary, 0.15);
@@ -1818,6 +2010,8 @@ meta:
   year_established: ${new Date().getFullYear()}
   version: "0.1.0"
   license: "CC0-1.0"
+  primary_jurisdictions:
+    - ${jurisdictionKey || 'united-states'}
 
 color:
   palette:
@@ -1844,8 +2038,15 @@ helplines:
   default:
     number: "${helpline}"
     label: "${helplineLabel}"
-    hours: "24/7"
-
+    hours: "24/7"` + (textNum ? `
+    text_number: "${textNum}"` : '') + (chatUrlVal ? `
+    chat_url: "${chatUrlVal}"` : '') + (helplineWebsite ? `
+    website: "${helplineWebsite}"` : '') + `
+` + (regulatorName ? `
+regulator:
+  name: "${regulatorName}"` + (regulatorUrl ? `
+  url: "${regulatorUrl}"` : '') + `
+` : '') + `
 legal:
   copyright_holder: "${org}"
   minimum_gambling_age:
