@@ -303,6 +303,19 @@ integration:
       url: "https://www.responsiblegambling.org"
 
 
+# ─── CULTURAL PROFILE ───────────────────────
+# Five-dimension cultural adapter. Pick one value per spectrum.
+# See _taxonomy.yml for all valid values and brand-book/09-cultural-adaptation.md
+# for detailed guidance with before/after examples.
+
+cultural_profile:
+  voice: "peer"              # peer | authority | elder
+  framing: "individual"      # individual | communal
+  humor: "irreverent"        # irreverent | warm | understated | minimal
+  directness: "blunt"        # blunt | diplomatic | contextual
+  comfort: "open"            # open | reserved | private
+
+
 # ─── LEGAL ───────────────────────────────────
 
 legal:
