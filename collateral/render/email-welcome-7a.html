@@ -26,7 +26,7 @@
   }
   .hero-logo {
     font-family: var(--pb-font-heading);
-    font-size: 28px;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     margin-bottom: 32px;
     display: inline-block;
   }
@@ -44,13 +44,13 @@
   .hero h1 {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 32px;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-bottom: 12px;
     line-height: 1.2;
   }
   .hero p {
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.6;
     max-width: 480px;
@@ -67,7 +67,7 @@
   .section-heading {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 22px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-900);
     margin-bottom: 24px;
   }
@@ -88,19 +88,19 @@
     justify-content: center;
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 18px;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
   }
   .tool-item strong {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-900);
     display: block;
     margin-bottom: 4px;
   }
   .tool-item span {
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.5;
   }
@@ -110,7 +110,7 @@
     color: var(--pb-color-primary);
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     padding: 14px 32px;
     border-radius: 6px;
     text-decoration: none;
@@ -124,14 +124,14 @@
   .stat-number {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 48px;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 8px;
   }
   .stat-number .teal { color: var(--pb-color-secondary); }
   .stat-number .orange { color: var(--pb-color-accent); }
   .stat-context {
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.6;
     max-width: 400px;
@@ -143,28 +143,28 @@
     text-align: center;
   }
   .footer-support {
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     font-weight: 600;
     margin-bottom: 12px;
   }
   .footer-channels {
     font-family: var(--pb-font-mono);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-secondary);
     margin-bottom: 24px;
     line-height: 1.8;
   }
   .footer-legal {
-    font-size: 13px;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     line-height: 1.6;
     margin-bottom: 16px;
   }
   .footer-logo {
     font-family: var(--pb-font-heading);
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     margin-top: 20px;
     display: inline-block;
   }
@@ -180,7 +180,7 @@
     letter-spacing: 0.08em;
   }
   .footer-unsub {
-    font-size: 12px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     margin-top: 16px;
   }
@@ -245,7 +245,7 @@
       Text {{HELPLINE_NUMBER}}<br>
       Chat at {{CHAT_URL}}
     </div>
-    <div class="footer-legal">You must be {{MIN_AGE}}+ to gamble. Gambling involves risk.</div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
     <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
     <div class="footer-unsub">
       <a href="#">Manage your preferences</a>

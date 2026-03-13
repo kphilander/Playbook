@@ -58,7 +58,7 @@
     }
     .card-logo {
       font-family: var(--pb-font-heading);
-      font-size: 28px;
+      font-size: calc(28px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-white);
     }
     .card-logo .logo-play {
@@ -72,7 +72,7 @@
     }
     .card-pillar {
       font-family: var(--pb-font-heading);
-      font-size: 16px;
+      font-size: calc(16px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -88,7 +88,7 @@
 
     .odds-label {
       font-family: var(--pb-font-heading);
-      font-size: 18px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -97,7 +97,7 @@
     }
     .odds-stat {
       font-family: var(--pb-font-heading);
-      font-size: 80px;
+      font-size: calc(80px * var(--pb-template-text-scale, 1));
       font-weight: 900;
       color: var(--pb-color-accent);
       line-height: 1;
@@ -106,14 +106,14 @@
     }
     .odds-context {
       font-family: var(--pb-font-body);
-      font-size: 22px;
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
       line-height: 1.5;
       color: var(--pb-color-neutral-300);
       margin-bottom: 20px;
     }
     .odds-callout {
       font-family: var(--pb-font-heading);
-      font-size: 20px;
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-white);
     }
@@ -132,13 +132,13 @@
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-mono);
-      font-size: 12px;
+      font-size: calc(12px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-primary);
       flex-shrink: 0;
     }
     .quiz-cta {
       font-family: var(--pb-font-heading);
-      font-size: 18px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-secondary);
     }
@@ -155,7 +155,7 @@
     }
     .tools-headline {
       font-family: var(--pb-font-heading);
-      font-size: 28px;
+      font-size: calc(28px * var(--pb-template-text-scale, 1));
       font-weight: 800;
       color: var(--pb-color-white);
       line-height: 1.2;
@@ -163,7 +163,7 @@
     }
     .tools-body {
       font-family: var(--pb-font-body);
-      font-size: 20px;
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       line-height: 1.5;
       color: var(--pb-color-neutral-300);
       margin-bottom: 32px;
@@ -177,20 +177,20 @@
     }
     .helpline-label {
       font-family: var(--pb-font-body);
-      font-size: 18px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-300);
       margin-bottom: 8px;
     }
     .helpline-number {
       font-family: var(--pb-font-mono);
-      font-size: 32px;
+      font-size: calc(32px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-secondary);
       margin-bottom: 8px;
     }
     .helpline-sub {
       font-family: var(--pb-font-body);
-      font-size: 16px;
+      font-size: calc(16px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
 
@@ -201,7 +201,7 @@
     }
     .legal-text {
       font-family: var(--pb-font-body);
-      font-size: 14px;
+      font-size: calc(14px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
   </style>
@@ -235,7 +235,7 @@
         <div class="helpline-sub">24/7 &middot; No judgment &middot; Any question about gambling</div>
       </div>
       <div class="legal-row">
-        <span class="legal-text">You must be {{MIN_AGE}}+ to gamble. Gambling involves risk.</span>
+        <span class="legal-text">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</span>
       </div>
     </div>
   </div>

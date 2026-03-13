@@ -35,7 +35,7 @@
   }
   .logo {
     font-family: var(--pb-font-heading);
-    font-size: 24px;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
   }
   .logo-play {
     font-weight: 800;
@@ -57,14 +57,14 @@
   .heading {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 28px;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 24px;
     line-height: 1.2;
     letter-spacing: -0.01em;
   }
   .body-text {
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.7;
     margin-bottom: 16px;
@@ -106,12 +106,12 @@
   .resource-title {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 2px;
   }
   .resource-desc {
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     line-height: 1.4;
   }
@@ -134,7 +134,7 @@
     color: var(--pb-color-primary);
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     padding: 16px 40px;
     border-radius: 8px;
     text-decoration: none;
@@ -151,12 +151,12 @@
   .footer-helpline {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 4px;
   }
   .footer-channels {
-    font-size: 13px;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     margin-bottom: 16px;
   }
@@ -167,13 +167,13 @@
     max-width: 240px;
   }
   .footer-legal {
-    font-size: 12px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.6;
     margin-bottom: 8px;
   }
   .footer-unsub {
-    font-size: 12px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
   }
   .footer-unsub a {
@@ -241,7 +241,7 @@
     <div class="footer-helpline">{{HELPLINE_NUMBER}}</div>
     <div class="footer-channels">{{TEXT_NUMBER}} &middot; Chat {{CHAT_URL}} &middot; 24/7</div>
     <div class="footer-divider"></div>
-    <div class="footer-legal">You must be {{MIN_AGE}}+ to gamble. Gambling involves risk.<br>If you or someone you know has a gambling problem, help is available.</div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}<br>If you or someone you know has a gambling problem, help is available.</div>
     <div class="footer-unsub"><a href="#">Unsubscribe</a> &middot; <a href="#">Manage preferences</a></div>
   </div>
 

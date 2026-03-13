@@ -39,7 +39,7 @@
   }
   .logo {
     font-family: var(--pb-font-heading);
-    font-size: 36px;
+    font-size: calc(36px * var(--pb-template-text-scale, 1));
   }
   .logo-play {
     font-weight: 800;
@@ -66,14 +66,14 @@
   .headline {
     font-family: var(--pb-font-heading);
     font-weight: 900;
-    font-size: 72px;
+    font-size: calc(72px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     line-height: 1.1;
     letter-spacing: -0.03em;
     margin-bottom: 20px;
   }
   .subline {
-    font-size: 28px;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.5;
     margin-bottom: 56px;
@@ -84,7 +84,7 @@
   .helpline-number {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: 64px;
+    font-size: calc(64px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
     letter-spacing: 0.02em;
     margin-bottom: 12px;
@@ -92,7 +92,7 @@
   .helpline-channels {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 26px;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     letter-spacing: 0.04em;
     margin-bottom: 56px;
@@ -114,12 +114,12 @@
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-mono);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-neutral-300);
   }
   .qr-label {
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
   }
 
@@ -130,7 +130,7 @@
   .footer-text {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 22px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     letter-spacing: 0.02em;
   }

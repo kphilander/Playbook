@@ -39,14 +39,14 @@
   .panel-support .heading {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 36px;
+    font-size: calc(36px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-top: 24px;
     margin-bottom: 16px;
     line-height: 1.2;
   }
   .panel-support .body {
-    font-size: 17px;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.7;
     margin-bottom: 40px;
@@ -60,7 +60,7 @@
   .channel-label {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -69,7 +69,7 @@
   .channel-value {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
   }
   .support-footer {
@@ -84,7 +84,7 @@
   .support-footer span {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
   }
 
@@ -113,7 +113,7 @@
     display: inline-block;
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 13px;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     text-transform: uppercase;
     letter-spacing: 0.08em;
     background: var(--pb-color-secondary);
@@ -127,7 +127,7 @@
   .quiz-heading {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 36px;
+    font-size: calc(36px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-bottom: 20px;
     line-height: 1.2;
@@ -135,7 +135,7 @@
     z-index: 1;
   }
   .quiz-body {
-    font-size: 17px;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.7;
     max-width: 500px;
@@ -146,7 +146,7 @@
   .quiz-question {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.08);
@@ -174,14 +174,14 @@
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-mono);
-    font-size: 11px;
+    font-size: calc(11px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     font-weight: 600;
   }
   .qr-label {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     text-align: left;
   }
@@ -222,7 +222,7 @@
   }
   .cover-logo {
     font-family: var(--pb-font-heading);
-    font-size: 48px;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
     margin-bottom: 48px;
     position: relative;
     z-index: 1;
@@ -232,7 +232,7 @@
   .cover-heading {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 36px;
+    font-size: calc(36px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-bottom: 16px;
     line-height: 1.2;
@@ -240,7 +240,7 @@
     z-index: 1;
   }
   .cover-sub {
-    font-size: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     margin-bottom: 48px;
     position: relative;
@@ -255,7 +255,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-heading);
-    font-size: 12px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     margin-bottom: 40px;
     position: relative;
@@ -274,11 +274,11 @@
   .cover-helpline span {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: 13px;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
   }
   .cover-legal {
-    font-size: 12px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     position: relative;
     z-index: 1;
@@ -332,7 +332,7 @@
     <div class="cover-operator">Your logo here</div>
     <div class="cover-heading">Every game has math.<br>Here's yours.</div>
     <div class="cover-sub">Real odds. Real tools. No fine print.</div>
-    <div class="cover-legal">You must be {{MIN_AGE}}+ to gamble.</div>
+    <div class="cover-legal">{{AGE_DISCLAIMER}}</div>
     <div class="cover-helpline">
       <span>Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     </div>

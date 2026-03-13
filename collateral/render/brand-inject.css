@@ -45,4 +45,7 @@
   --pb-leading-heading: 1.2;
   --pb-leading-body: 1.6;
   --pb-leading-tight: 1.3;
+
+  /* ─── Template Scale ────────────────── */
+  --pb-template-text-scale: 1;
 }

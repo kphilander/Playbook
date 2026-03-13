@@ -50,7 +50,7 @@
     }
     .card-logo {
       font-family: var(--pb-font-heading);
-      font-size: 32px;
+      font-size: calc(32px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-white);
     }
     .card-logo .logo-play {
@@ -81,12 +81,12 @@
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-body);
-      font-size: 11px;
+      font-size: calc(11px * var(--pb-template-text-scale, 1));
       color: rgba(255,255,255,0.25);
     }
     .card-pillar {
       font-family: var(--pb-font-heading);
-      font-size: 18px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -107,7 +107,7 @@
     }
     .hero-headline {
       font-family: var(--pb-font-heading);
-      font-size: 48px;
+      font-size: calc(48px * var(--pb-template-text-scale, 1));
       font-weight: 800;
       line-height: 1.15;
       color: var(--pb-color-white);
@@ -116,7 +116,7 @@
     }
     .hero-subhead {
       font-family: var(--pb-font-body);
-      font-size: 24px;
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
       line-height: 1.5;
       color: var(--pb-color-neutral-300);
     }
@@ -139,7 +139,7 @@
     }
     .stat-game {
       font-family: var(--pb-font-body);
-      font-size: 20px;
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-300);
       margin-bottom: 8px;
       text-transform: uppercase;
@@ -147,7 +147,7 @@
     }
     .stat-value {
       font-family: var(--pb-font-heading);
-      font-size: 56px;
+      font-size: calc(56px * var(--pb-template-text-scale, 1));
       font-weight: 900;
       line-height: 1;
       letter-spacing: -0.03em;
@@ -158,7 +158,7 @@
     .stat-value.orange { color: var(--pb-color-accent); }
     .stat-note {
       font-family: var(--pb-font-body);
-      font-size: 18px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
 
@@ -169,7 +169,7 @@
     }
     .callout-text {
       font-family: var(--pb-font-body);
-      font-size: 22px;
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
       line-height: 1.5;
       color: var(--pb-color-neutral-300);
     }
@@ -195,13 +195,13 @@
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-mono);
-      font-size: 14px;
+      font-size: calc(14px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-primary);
       flex-shrink: 0;
     }
     .qr-label {
       font-family: var(--pb-font-heading);
-      font-size: 20px;
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-white);
     }
@@ -216,7 +216,7 @@
     }
     .helpline-text {
       font-family: var(--pb-font-mono);
-      font-size: 20px;
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-white);
     }
@@ -229,7 +229,7 @@
     }
     .legal-text {
       font-family: var(--pb-font-body);
-      font-size: 16px;
+      font-size: calc(16px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
   </style>
@@ -277,7 +277,7 @@
       <span class="helpline-text">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     </div>
     <div class="legal-strip">
-      <span class="legal-text">You must be {{MIN_AGE}}+ to gamble. Gambling involves risk.</span>
+      <span class="legal-text">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</span>
     </div>
   </div>
 </body>
