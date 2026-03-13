@@ -9,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link id="font-link" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500;600&family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;400;600;700&family=DM+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;600;700;800&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link id="font-link" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500;600&family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;400;600;700&family=DM+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;600;700;800&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Sora:wght@300;400;600;700;800&family=Manrope:wght@300;400;600;700;800&family=Urbanist:wght@300;400;600;700;800&family=Work+Sans:wght@300;400;600;700;800&family=Rubik:wght@300;400;600;700&family=Barlow:wght@300;400;600;700&family=Figtree:wght@300;400;600;700;800&family=Albert+Sans:wght@300;400;600;700;800&family=Lexend:wght@300;400;600;700&family=Cabin:wght@400;600;700&family=Karla:wght@300;400;600;700&family=Josefin+Sans:wght@300;400;600;700&family=Bitter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;600;700;800&family=Libre+Baskerville:wght@400;700&family=Roboto+Slab:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
@@ -119,10 +119,35 @@
   .accent-dark-warning { font-size: 11px; color: #c05621; background: #fffbeb; border: 1px solid #f6e05e; padding: 6px 10px; border-radius: 6px; margin-top: 6px; line-height: 1.4; }
   .accent-dark-warning.hidden { display: none; }
 
+  /* === Advanced Colors === */
+  .advanced-toggle { font-size: 12px; font-weight: 600; color: #6B6B8A; cursor: pointer; padding: 8px 0; user-select: none; transition: color 0.15s; }
+  .advanced-toggle:hover { color: #1B2838; }
+  .advanced-toggle.open { color: #1B2838; }
+  .advanced-section { display: none; padding: 16px 0 0; border-top: 1px solid #E8E8F0; margin-top: 8px; }
+  .advanced-section.visible { display: block; }
+  .neutral-strip { display: flex; gap: 4px; margin-top: 8px; }
+  .neutral-strip .ns { flex: 1; height: 28px; border-radius: 4px; border: 1px solid #E8E8F0; }
+  .neutral-strip-labels { display: flex; gap: 4px; margin-top: 2px; }
+  .neutral-strip-labels span { flex: 1; font-size: 8px; color: #A8A8C0; text-align: center; font-family: 'Source Code Pro', monospace; }
+  .semantic-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .btn-autotint { padding: 6px 14px; border-radius: 6px; border: none; background: #1B2838; color: #fff; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 0.15s; }
+  .btn-autotint:hover { background: #2A3F56; }
+  .semantic-group .form-label { font-size: 10px; margin-bottom: 4px; }
+  .semantic-group .color-row { gap: 6px; }
+  .semantic-group .color-picker { width: 36px; height: 32px; }
+  .semantic-group .form-input { font-size: 11px; padding: 6px 8px; }
+
   /* Font preview */
   .font-specimen { margin-top: 8px; padding: 12px 16px; background: #F5F5FA; border-radius: 8px; border: 1px solid #E8E8F0; }
   .font-specimen-heading { font-size: 22px; font-weight: 700; color: #1B2838; margin-bottom: 4px; }
   .font-specimen-body { font-size: 14px; color: #6B6B8A; line-height: 1.5; }
+  .form-select optgroup { font-weight: 700; font-size: 12px; color: #6B6B8A; }
+  .font-tag { display: inline-block; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 6px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+  .font-tag-geo { background: rgba(0,212,170,0.12); color: #00A888; }
+  .font-tag-modern { background: rgba(41,121,255,0.12); color: #2979FF; }
+  .font-tag-classic { background: rgba(255,107,53,0.12); color: #E55A2B; }
+  .font-tag-tech { background: rgba(107,107,138,0.12); color: #6B6B8A; }
+  .font-meta { font-size: 11px; color: #A8A8C0; margin-top: 4px; }
 
   /* Helpline presets */
   .preset-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 12px; background: rgba(0,212,170,0.1); color: #1B2838; font-weight: 600; cursor: pointer; margin-right: 6px; margin-bottom: 6px; transition: all 0.15s; border: 1px solid rgba(0,212,170,0.25); }
@@ -168,7 +193,7 @@
   .pv-card .card-logo { font-size: 16px; }
   .pv-card .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
   .pv-card .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .pv-card .card-pillar { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 11px; border-radius: 100px; }
+  .pv-card .card-pillar { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 11px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
   .pv-card .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 32px; position: relative; z-index: 1; }
   .pv-card .myth-label { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
   .pv-card .myth-statement { font-size: 26px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; }
@@ -179,7 +204,7 @@
   .pv-card .stat-number { font-size: 40px; font-weight: 900; line-height: 1; letter-spacing: -0.03em; }
   .pv-card .stat-unit { font-size: 12px; font-weight: 600; line-height: 1.3; }
   .pv-card .card-footer { padding: 10px 32px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .pv-card .footer-helpline { font-family: 'Source Code Pro', monospace; font-weight: 700; font-size: 8px; }
+  .pv-card .footer-helpline { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-weight: 700; font-size: 8px; }
   .pv-card .footer-legal { font-size: 7px; }
 
   /* Tier 2 Support Card */
@@ -191,7 +216,7 @@
   .pv-card-tier2 .t2-subline { font-size: 12px; line-height: 1.5; margin-bottom: 24px; max-width: 85%; }
   .pv-card-tier2 .t2-contact-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
   .pv-card-tier2 .t2-contact-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; min-width: 32px; }
-  .pv-card-tier2 .t2-contact-value { font-family: 'Source Code Pro', monospace; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; }
+  .pv-card-tier2 .t2-contact-value { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; }
   .pv-card-tier2 .t2-contact-value.t2-phone { font-size: 24px; }
   .pv-card-tier2 .card-footer { background: transparent; border-top: 1px solid #E8E8F0; }
   .pv-card-tier2 .t2-footer-text { font-weight: 700; font-size: 9px; letter-spacing: 0.02em; }
@@ -209,8 +234,8 @@
   .pv-badge .badge-logo .logo-play { font-weight: 800; }
   .pv-badge .badge-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .pv-badge .badge-divider { width: 1px; height: 32px; opacity: 0.3; }
-  .pv-badge .badge-text { font-size: 11px; font-weight: 600; }
-  .pv-badge .badge-number { font-family: 'Source Code Pro', monospace; font-size: 14px; font-weight: 700; margin-top: 2px; }
+  .pv-badge .badge-text { font-size: 11px; font-weight: 600; line-height: 1.2; }
+  .pv-badge .badge-number { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-size: 14px; font-weight: 700; margin-top: 2px; line-height: 1; }
   .pv-badge .operator-logo-img { max-height: 28px; max-width: 100px; object-fit: contain; }
 
   /* === Download Section === */
@@ -256,6 +281,37 @@
   .format-toggle label { cursor: pointer; font-weight: 500; }
   .format-toggle input[type="checkbox"] { accent-color: #FF6B35; }
 
+  /* === Tagline/CTA rows (Messaging step) === */
+  .tagline-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+  .tagline-row input { flex: 1; }
+  .tagline-remove { background: none; border: none; color: #e53e3e; font-size: 16px; cursor: pointer; padding: 2px 6px; border-radius: 4px; line-height: 1; }
+  .tagline-remove:hover { background: #fff5f5; }
+  .btn-add-row { background: none; border: 1px dashed #E8E8F0; color: #6B6B8A; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 6px; cursor: pointer; width: 100%; margin-top: 4px; transition: all 0.15s; }
+  .btn-add-row:hover { border-color: #00D4AA; color: #00D4AA; }
+
+  /* === Type scale presets === */
+  .scale-presets { display: flex; gap: 8px; margin-bottom: 12px; }
+  .scale-preset { flex: 1; padding: 10px 12px; border-radius: 8px; border: 1px solid #E8E8F0; background: #fff; text-align: center; cursor: pointer; transition: all 0.15s; }
+  .scale-preset:hover { border-color: #00D4AA; }
+  .scale-preset.active { background: #1B2838; color: #fff; border-color: #1B2838; }
+  .scale-preset strong { display: block; font-size: 13px; }
+  .scale-preset span { font-size: 10px; color: #A8A8C0; }
+  .scale-preset.active span { color: rgba(255,255,255,0.6); }
+
+  /* === YAML / CSS Preview === */
+  .preview-tabs { display: flex; gap: 0; margin-bottom: 16px; border-bottom: 2px solid #E8E8F0; }
+  .preview-tab { background: none; border: none; padding: 10px 16px; font-size: 13px; font-weight: 600; color: #A8A8C0; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s; font-family: 'Inter', sans-serif; }
+  .preview-tab:hover { color: #6B6B8A; }
+  .preview-tab.active { color: #1B2838; border-bottom-color: #00D4AA; }
+  .preview-tab-content { display: none; }
+  .preview-tab-content.active { display: block; }
+  .yaml-code { background: #1A1A2E; color: #E8E8F0; padding: 20px; border-radius: 10px; font-family: 'Source Code Pro', monospace; font-size: 11px; line-height: 1.6; overflow-x: auto; max-height: 500px; overflow-y: auto; white-space: pre; tab-size: 2; margin-bottom: 12px; }
+  .yaml-code .yk { color: #7ecbff; }
+  .yaml-code .yv { color: #a5d6a7; }
+  .yaml-code .yc { color: #6B6B8A; }
+  .copy-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px; border: 1px solid #E8E8F0; background: #fff; font-size: 12px; font-weight: 600; color: #1B2838; cursor: pointer; transition: all 0.15s; }
+  .copy-btn:hover { border-color: #00D4AA; color: #00D4AA; }
+
   /* === Step visibility === */
   .step { display: none; }
   .step.active { display: block; }
@@ -284,11 +340,11 @@
 <div class="layout">
   <!-- Left: Wizard Panel -->
   <div class="wizard-panel">
-    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 25%"></div></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width: 14.3%"></div></div>
 
     <!-- Step 1: Brand Identity -->
     <div class="step active" id="step1">
-      <div class="step-indicator">Step 1 of 4</div>
+      <div class="step-indicator">Step 1 of 6</div>
       <div class="step-title">Brand Identity</div>
       <div class="step-desc">Upload your logo and name your program.</div>
 
@@ -344,6 +400,10 @@
         <label class="form-label">Website URL</label>
         <input type="url" class="form-input" id="websiteUrl" value="" placeholder="https://example.com/playbook">
       </div>
+      <div class="form-group">
+        <label class="form-label">Contact Email</label>
+        <input type="email" class="form-input" id="contactEmail" value="" placeholder="info@yourcompany.com">
+      </div>
 
       <div class="wizard-nav">
         <button class="btn-next" onclick="goToStep(2)">Next: Colors &rarr;</button>
@@ -352,7 +412,7 @@
 
     <!-- Step 2: Colors -->
     <div class="step" id="step2">
-      <div class="step-indicator">Step 2 of 4</div>
+      <div class="step-indicator">Step 2 of 6</div>
       <div class="step-title">Color Palette</div>
       <div class="step-desc">Pick three brand colors. We'll generate the rest.</div>
 
@@ -394,6 +454,104 @@
         <div class="accent-dark-warning hidden" id="accentDarkWarning">⚠ This accent color may be hard to see on dark backgrounds. Consider a brighter or more saturated shade.</div>
       </div>
 
+      <div class="advanced-toggle" id="advancedToggle" onclick="toggleAdvanced()">&#9654; Text, background &amp; UI colors</div>
+      <div class="advanced-section" id="advancedColors">
+
+        <div class="form-group">
+          <label class="form-label">Auto-tint from base color</label>
+          <div class="color-row">
+            <input type="color" class="color-picker" id="colorNeutralTint" value="#1A1A2E">
+            <input type="text" class="form-input color-hex" id="colorNeutralTintHex" value="#1A1A2E" maxlength="7">
+            <button class="btn-autotint" id="btnAutoTint" onclick="autoTintFromBase()" title="Generate all text/UI colors from this base">Apply</button>
+          </div>
+          <div class="contrast-info">Pick a dark base color, then click Apply to generate all text and background colors below</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Text Colors</label>
+          <div class="contrast-info" style="margin-bottom:10px">Body copy, headings, captions, and muted text on cards and pages</div>
+          <div class="semantic-row">
+            <div class="semantic-group">
+              <label class="form-label">Headings</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorN900" value="#1A1A2E">
+                <input type="text" class="form-input color-hex" id="colorN900Hex" value="#1A1A2E" maxlength="7">
+              </div>
+            </div>
+            <div class="semantic-group">
+              <label class="form-label">Body text</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorN700" value="#3D3D5C">
+                <input type="text" class="form-input color-hex" id="colorN700Hex" value="#3D3D5C" maxlength="7">
+              </div>
+            </div>
+            <div class="semantic-group">
+              <label class="form-label">Captions</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorN500" value="#6B6B8A">
+                <input type="text" class="form-input color-hex" id="colorN500Hex" value="#6B6B8A" maxlength="7">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">UI Colors</label>
+          <div class="contrast-info" style="margin-bottom:10px">Light text on dark cards, borders, and page backgrounds</div>
+          <div class="semantic-row">
+            <div class="semantic-group">
+              <label class="form-label">Light text</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorN300" value="#A8A8C0">
+                <input type="text" class="form-input color-hex" id="colorN300Hex" value="#A8A8C0" maxlength="7">
+              </div>
+            </div>
+            <div class="semantic-group">
+              <label class="form-label">Borders</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorN100" value="#E8E8F0">
+                <input type="text" class="form-input color-hex" id="colorN100Hex" value="#E8E8F0" maxlength="7">
+              </div>
+            </div>
+            <div class="semantic-group">
+              <label class="form-label">Background</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorN50" value="#F5F5FA">
+                <input type="text" class="form-input color-hex" id="colorN50Hex" value="#F5F5FA" maxlength="7">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Status Colors</label>
+          <div class="contrast-info" style="margin-bottom:10px">Quiz results, limit warnings, and crisis alerts</div>
+          <div class="semantic-row">
+            <div class="semantic-group">
+              <label class="form-label">Success</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorSuccess" value="#00C853">
+                <input type="text" class="form-input color-hex" id="colorSuccessHex" value="#00C853" maxlength="7">
+              </div>
+            </div>
+            <div class="semantic-group">
+              <label class="form-label">Warning</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorWarning" value="#FFB300">
+                <input type="text" class="form-input color-hex" id="colorWarningHex" value="#FFB300" maxlength="7">
+              </div>
+            </div>
+            <div class="semantic-group">
+              <label class="form-label">Danger</label>
+              <div class="color-row">
+                <input type="color" class="color-picker" id="colorDanger" value="#FF3D00">
+                <input type="text" class="form-input color-hex" id="colorDangerHex" value="#FF3D00" maxlength="7">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="wizard-nav">
         <button class="btn-back" onclick="goToStep(1)">&larr; Back</button>
         <button class="btn-next" onclick="goToStep(3)">Next: Fonts &rarr;</button>
@@ -402,19 +560,47 @@
 
     <!-- Step 3: Typography -->
     <div class="step" id="step3">
-      <div class="step-indicator">Step 3 of 4</div>
+      <div class="step-indicator">Step 3 of 6</div>
       <div class="step-title">Typography</div>
       <div class="step-desc">Choose heading and body fonts from Google Fonts.</div>
 
       <div class="form-group">
         <label class="form-label">Heading Font</label>
         <select class="form-select" id="fontHeading">
-          <option value="Inter" selected>Inter (default)</option>
-          <option value="Montserrat">Montserrat</option>
-          <option value="Poppins">Poppins</option>
-          <option value="Space Grotesk">Space Grotesk</option>
-          <option value="DM Sans">DM Sans</option>
-          <option value="Raleway">Raleway</option>
+          <optgroup label="Geometric / Clean">
+            <option value="Inter" selected>Inter (default) — neutral, data-friendly</option>
+            <option value="DM Sans">DM Sans — soft geometric</option>
+            <option value="Outfit">Outfit — rounded, friendly</option>
+            <option value="Figtree">Figtree — open, approachable</option>
+            <option value="Albert Sans">Albert Sans — clean, modern</option>
+          </optgroup>
+          <optgroup label="Modern / Bold">
+            <option value="Montserrat">Montserrat — strong, confident</option>
+            <option value="Poppins">Poppins — bold, geometric</option>
+            <option value="Plus Jakarta Sans">Plus Jakarta Sans — fresh, premium</option>
+            <option value="Sora">Sora — sharp, tech-forward</option>
+            <option value="Urbanist">Urbanist — sleek, minimal</option>
+            <option value="Manrope">Manrope — distinctive, modern</option>
+          </optgroup>
+          <optgroup label="Professional / Corporate">
+            <option value="Work Sans">Work Sans — sturdy, reliable</option>
+            <option value="Barlow">Barlow — industrial, clear</option>
+            <option value="Raleway">Raleway — elegant, refined</option>
+            <option value="IBM Plex Sans">IBM Plex Sans — authoritative, precise</option>
+            <option value="Lexend">Lexend — optimized readability</option>
+          </optgroup>
+          <optgroup label="Tech / Gaming">
+            <option value="Space Grotesk">Space Grotesk — techy, distinctive</option>
+            <option value="Rubik">Rubik — playful, rounded</option>
+            <option value="Josefin Sans">Josefin Sans — stylish, editorial</option>
+          </optgroup>
+          <optgroup label="Serif / Editorial">
+            <option value="Playfair Display">Playfair Display — luxurious, high-end</option>
+            <option value="Bitter">Bitter — warm, readable serif</option>
+            <option value="Merriweather">Merriweather — classic, trustworthy</option>
+            <option value="Libre Baskerville">Libre Baskerville — traditional, elegant</option>
+            <option value="Roboto Slab">Roboto Slab — modern slab serif</option>
+          </optgroup>
         </select>
         <div class="font-specimen" id="headingSpecimen">
           <div class="font-specimen-heading" style="font-family: 'Inter', sans-serif;">Every game has a house edge.</div>
@@ -424,26 +610,199 @@
       <div class="form-group">
         <label class="form-label">Body Font</label>
         <select class="form-select" id="fontBody">
-          <option value="Source Sans 3" selected>Source Sans 3 (default)</option>
-          <option value="Inter">Inter</option>
-          <option value="Lato">Lato</option>
-          <option value="Open Sans">Open Sans</option>
-          <option value="Nunito">Nunito</option>
+          <optgroup label="Optimized for Reading">
+            <option value="Source Sans 3" selected>Source Sans 3 (default) — open, airy</option>
+            <option value="Inter">Inter — versatile, neutral</option>
+            <option value="Lato">Lato — warm, humanist</option>
+            <option value="Open Sans">Open Sans — clear, universal</option>
+            <option value="Nunito">Nunito — soft, friendly</option>
+            <option value="Lexend">Lexend — designed for readability</option>
+          </optgroup>
+          <optgroup label="Modern / Clean">
+            <option value="DM Sans">DM Sans — compact, geometric</option>
+            <option value="Figtree">Figtree — open, approachable</option>
+            <option value="Albert Sans">Albert Sans — clean, modern</option>
+            <option value="Outfit">Outfit — rounded, casual</option>
+            <option value="Cabin">Cabin — humanist, natural</option>
+            <option value="Karla">Karla — distinctive, grotesque</option>
+          </optgroup>
+          <optgroup label="Professional">
+            <option value="Work Sans">Work Sans — sturdy, reliable</option>
+            <option value="Barlow">Barlow — clear, industrial</option>
+            <option value="IBM Plex Sans">IBM Plex Sans — authoritative</option>
+            <option value="Manrope">Manrope — modern, versatile</option>
+          </optgroup>
+          <optgroup label="Serif (for a premium feel)">
+            <option value="Bitter">Bitter — readable, warm</option>
+            <option value="Merriweather">Merriweather — classic, elegant</option>
+            <option value="Libre Baskerville">Libre Baskerville — traditional</option>
+          </optgroup>
         </select>
         <div class="font-specimen" id="bodySpecimen">
           <div class="font-specimen-body" style="font-family: 'Source Sans 3', sans-serif;">Your brain sees patterns. The math doesn't. Every spin is independent — past results have zero effect on the next one.</div>
         </div>
       </div>
 
+      <div class="form-group">
+        <label class="form-label">Monospace Font</label>
+        <div class="contrast-info" style="margin-bottom:6px">Used for stats, odds, and helpline numbers</div>
+        <select class="form-select" id="fontMono" onchange="updatePreview()">
+          <option value="Source Code Pro" selected>Source Code Pro (default)</option>
+          <option value="IBM Plex Mono">IBM Plex Mono — authoritative</option>
+          <option value="JetBrains Mono">JetBrains Mono — sharp, technical</option>
+          <option value="Fira Code">Fira Code — distinctive, developer-friendly</option>
+        </select>
+        <div class="font-specimen" id="monoSpecimen">
+          <div class="font-specimen-body" style="font-family: 'Source Code Pro', monospace; font-weight: 600;">1-800-522-4700 &nbsp; 5.26% &nbsp; $110 in &rarr; $100 out</div>
+        </div>
+      </div>
+
+      <hr style="border: none; border-top: 1px solid #E8E8F0; margin: 20px 0;">
+      <div class="form-group">
+        <label class="form-label">Type Scale</label>
+        <div class="contrast-info" style="margin-bottom:8px">Controls the size of all headings and text across your brand.</div>
+        <div class="scale-presets" id="scalePresets">
+          <div class="scale-preset" data-scale="compact" onclick="applyTypeScale('compact')">
+            <strong>Compact</strong>
+            <span>Dense layouts</span>
+          </div>
+          <div class="scale-preset active" data-scale="default" onclick="applyTypeScale('default')">
+            <strong>Default</strong>
+            <span>Balanced</span>
+          </div>
+          <div class="scale-preset" data-scale="spacious" onclick="applyTypeScale('spacious')">
+            <strong>Spacious</strong>
+            <span>Large type</span>
+          </div>
+        </div>
+      </div>
+      <div class="advanced-toggle" id="typeScaleToggle" onclick="toggleTypeScale()">&#9654; Individual scale values</div>
+      <div class="advanced-section" id="typeScaleDetails">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group"><label class="form-label">Display (rem)</label><input type="number" class="form-input" id="scaleDisplay" value="3.0" step="0.125" min="1.5" max="5" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">H1 (rem)</label><input type="number" class="form-input" id="scaleH1" value="2.5" step="0.125" min="1.5" max="4" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">H2 (rem)</label><input type="number" class="form-input" id="scaleH2" value="2.0" step="0.125" min="1" max="3.5" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">H3 (rem)</label><input type="number" class="form-input" id="scaleH3" value="1.5" step="0.125" min="0.875" max="2.5" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">H4 (rem)</label><input type="number" class="form-input" id="scaleH4" value="1.25" step="0.125" min="0.875" max="2" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">Body Large (rem)</label><input type="number" class="form-input" id="scaleBodyLarge" value="1.125" step="0.0625" min="0.875" max="1.5" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">Body (rem)</label><input type="number" class="form-input" id="scaleBody" value="1.0" step="0.0625" min="0.875" max="1.25" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">Small (rem)</label><input type="number" class="form-input" id="scaleSmall" value="0.875" step="0.0625" min="0.75" max="1" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">Caption (rem)</label><input type="number" class="form-input" id="scaleCaption" value="0.75" step="0.0625" min="0.625" max="0.875" onchange="updatePreview()"></div>
+        </div>
+        <hr style="border: none; border-top: 1px solid #E8E8F0; margin: 16px 0 10px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+          <div class="form-group"><label class="form-label">Heading Line-Height</label><input type="number" class="form-input" id="lhHeading" value="1.2" step="0.05" min="1" max="1.6" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">Body Line-Height</label><input type="number" class="form-input" id="lhBody" value="1.6" step="0.05" min="1.3" max="2" onchange="updatePreview()"></div>
+          <div class="form-group"><label class="form-label">Tight Line-Height</label><input type="number" class="form-input" id="lhTight" value="1.3" step="0.05" min="1" max="1.5" onchange="updatePreview()"></div>
+        </div>
+      </div>
+
       <div class="wizard-nav">
         <button class="btn-back" onclick="goToStep(2)">&larr; Back</button>
-        <button class="btn-next" onclick="goToStep(4)">Next: Jurisdiction &rarr;</button>
+        <button class="btn-next" onclick="goToStep(4)">Next: Cultural Profile &rarr;</button>
       </div>
     </div>
 
-    <!-- Step 4: Jurisdiction & Support -->
+    <!-- Step 4: Cultural Profile -->
     <div class="step" id="step4">
-      <div class="step-indicator">Step 4 of 4</div>
+      <div class="step-indicator">Step 4 of 6</div>
+      <div class="step-title">Cultural Profile</div>
+      <div class="step-desc">Five dimensions that shape how your content reads across cultures. Defaults match the Playbook base profile (Western, individualist, direct).</div>
+
+      <div class="form-group">
+        <label class="form-label">Voice — Who's talking?</label>
+        <select class="form-select" id="cultureVoice" onchange="updatePreview()">
+          <option value="peer" selected>Peer — an equal, someone at the table with you</option>
+          <option value="authority">Authority — a credentialed expert, institutional trust</option>
+          <option value="elder">Elder — a respected community figure, warm earned trust</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Framing — Who benefits?</label>
+        <select class="form-select" id="cultureFraming" onchange="updatePreview()">
+          <option value="individual" selected>Individual — "Protect YOUR bankroll"</option>
+          <option value="communal">Communal — "Protect what matters most" (family, community)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Humor — What register?</label>
+        <select class="form-select" id="cultureHumor" onchange="updatePreview()">
+          <option value="irreverent" selected>Irreverent — bold, sarcastic, confident (Playbook default)</option>
+          <option value="warm">Warm — inclusive, gentle, bonding</option>
+          <option value="understated">Understated — dry, wry, implies rather than states</option>
+          <option value="minimal">Minimal — facts speak for themselves</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Directness — How are hard truths delivered?</label>
+        <select class="form-select" id="cultureDirectness" onchange="updatePreview()">
+          <option value="blunt" selected>Blunt — "This bet is terrible. Here's why."</option>
+          <option value="diplomatic">Diplomatic — "This bet carries a higher cost than most expect."</option>
+          <option value="contextual">Contextual — arrives at the conclusion through story or analogy</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Comfort — How openly is gambling discussed?</label>
+        <select class="form-select" id="cultureComfort" onchange="updatePreview()">
+          <option value="open" selected>Open — gambling is entertainment, talk freely</option>
+          <option value="reserved">Reserved — acknowledged but not celebrated, financial literacy framing</option>
+          <option value="private">Private — socially sensitive, never imply the reader is a gambler</option>
+        </select>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goToStep(3)">&larr; Back</button>
+        <button class="btn-next" onclick="goToStep(5)">Next: Messaging &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 5: Messaging -->
+    <div class="step" id="step5">
+      <div class="step-indicator">Step 5 of 6</div>
+      <div class="step-title">Messaging</div>
+      <div class="step-desc">Taglines and calls to action for your brand.</div>
+
+      <div class="form-group">
+        <label class="form-label">Open Taglines</label>
+        <div class="contrast-info" style="margin-bottom:6px">Transparency-focused taglines for your "Open" pillar.</div>
+        <div id="openTaglines"></div>
+        <button class="btn-add-row" onclick="addTagline('open')">+ Add tagline</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Social Taglines</label>
+        <div class="contrast-info" style="margin-bottom:6px">Social/sharing-focused taglines for your "Social" pillar.</div>
+        <div id="socialTaglines"></div>
+        <button class="btn-add-row" onclick="addTagline('social')">+ Add tagline</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Primary CTAs</label>
+        <div class="contrast-info" style="margin-bottom:6px">Button labels and calls to action across your brand.</div>
+        <div id="primaryCtas"></div>
+        <button class="btn-add-row" onclick="addCta('primary')">+ Add CTA</button>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Feature CTAs</label>
+        <div class="contrast-info" style="margin-bottom:6px">CTAs for tools and features (limit-setting, calculators, etc.).</div>
+        <div id="featuresCtas"></div>
+        <button class="btn-add-row" onclick="addCta('features')">+ Add CTA</button>
+      </div>
+
+      <div class="wizard-nav">
+        <button class="btn-back" onclick="goToStep(4)">&larr; Back</button>
+        <button class="btn-next" onclick="goToStep(6)">Next: Jurisdiction &rarr;</button>
+      </div>
+    </div>
+
+    <!-- Step 6: Jurisdiction & Support -->
+    <div class="step" id="step6">
+      <div class="step-indicator">Step 6 of 6</div>
       <div class="step-title">Jurisdiction &amp; Support</div>
       <div class="step-desc">Configure your jurisdiction's regulatory and support information.</div>
 
@@ -507,18 +866,38 @@
         </div>
       </div>
 
+      <hr style="border: none; border-top: 1px solid #E8E8F0; margin: 20px 0;">
+      <div style="font-size: 12px; font-weight: 600; color: #6B6B8A; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">Legal Disclaimers</div>
+
+      <div class="form-group">
+        <label class="form-label">Age Disclaimer</label>
+        <input type="text" class="form-input" id="disclaimerAge" value="You must be {{MIN_AGE}}+ to gamble." placeholder="You must be {{MIN_AGE}}+ to gamble.">
+        <div class="contrast-info">Use {{MIN_AGE}} to auto-fill the gambling age above</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">General Disclaimer</label>
+        <textarea class="form-input" id="disclaimerGeneral" rows="2" style="resize: vertical; font-family: inherit;" placeholder="Gambling involves risk. Play on your terms.">Gambling involves risk. Play on your terms.</textarea>
+      </div>
+
       <div class="wizard-nav">
-        <button class="btn-back" onclick="goToStep(3)">&larr; Back</button>
-        <button class="btn-next" onclick="goToStep(5)">Preview &amp; Download &rarr;</button>
+        <button class="btn-back" onclick="goToStep(5)">&larr; Back</button>
+        <button class="btn-next" onclick="goToStep(7)">Review &amp; Download &rarr;</button>
       </div>
     </div>
 
-    <!-- Step 5: Download -->
-    <div class="step" id="step5">
+    <!-- Step 7: Review & Download -->
+    <div class="step" id="step7">
       <div class="step-indicator">Done</div>
-      <div class="step-title">Your Brand Kit</div>
-      <div class="step-desc">Download your customized Playbook files below.</div>
+      <div class="step-title">Review &amp; Download</div>
+      <div class="step-desc">Preview your configuration, then download your brand files.</div>
 
+      <div class="preview-tabs">
+        <button class="preview-tab active" onclick="showOutputTab('downloads')">Downloads</button>
+        <button class="preview-tab" onclick="showOutputTab('yaml')">Preview _brand.yml</button>
+        <button class="preview-tab" onclick="showOutputTab('css')">Preview CSS</button>
+      </div>
+
+      <div class="preview-tab-content active" id="tabDownloads">
       <div class="samples-section">
         <h3>Just want the samples?</h3>
         <p>Download your configured preview cards as ready-to-use PNG images.</p>
@@ -598,9 +977,20 @@
           <p>Not technical? <a href="mailto:info@gamblingpolicy.com?subject=Playbook%20white-label%20setup">Contact GP Consulting</a> — we'll set up your branded Playbook for you.</p>
         </div>
       </div>
+      </div><!-- /tabDownloads -->
+
+      <div class="preview-tab-content" id="tabYaml">
+        <pre class="yaml-code" id="yamlPreviewCode"></pre>
+        <button class="copy-btn" onclick="copyPreviewCode('yamlPreviewCode')">Copy to clipboard</button>
+      </div>
+
+      <div class="preview-tab-content" id="tabCss">
+        <pre class="yaml-code" id="cssPreviewCode"></pre>
+        <button class="copy-btn" onclick="copyPreviewCode('cssPreviewCode')">Copy to clipboard</button>
+      </div>
 
       <div class="wizard-nav" style="margin-top: 20px;">
-        <button class="btn-back" onclick="goToStep(4)">&larr; Back to Edit</button>
+        <button class="btn-back" onclick="goToStep(6)">&larr; Back to Edit</button>
       </div>
     </div>
   </div>
@@ -619,9 +1009,9 @@
             <span class="card-pillar" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
           </div>
           <div class="card-body">
-            <div class="myth-label" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
-            <div class="myth-statement" style="color: #fff;"><span class="strike" style="text-decoration-color: var(--cfg-accent, #FF6B35); color: #A8A8C0;">"I'm on a hot streak"</span></div>
-            <div class="fact-statement" style="color: #A8A8C0;">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn't.</div>
+            <div class="myth-label" id="pvMythLabel" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
+            <div class="myth-statement" id="pvMythStatement" style="color: #fff;"><span class="strike" style="text-decoration-color: var(--cfg-accent, #FF6B35); color: #A8A8C0;">"I'm on a hot streak"</span></div>
+            <div class="fact-statement" id="pvFactStatement" style="color: #A8A8C0;">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn't.</div>
             <div class="stat-block">
               <span class="stat-number" style="color: var(--cfg-accent, #FF6B35);">0%</span>
               <span class="stat-unit" style="color: #A8A8C0;">chance past results<br>affect the next spin</span>
@@ -642,8 +1032,8 @@
             <span class="card-logo" id="pvLogo2"><span class="logo-play" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
           </div>
           <div class="card-body">
-            <div class="t2-headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
-            <div class="t2-subline" style="color: #6B6B8A;">Free, confidential support for any question about gambling.</div>
+            <div class="t2-headline" id="pvT2Headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
+            <div class="t2-subline" id="pvT2Subline" style="color: #6B6B8A;">Free, confidential support for any question about gambling.</div>
             <div id="pvT2ContactBlock">
               <div class="t2-contact-row">
                 <span class="t2-contact-label" style="color: #A8A8C0;">Call</span>
@@ -802,7 +1192,7 @@ function goToStep(n) {
   document.getElementById('step' + currentStep).classList.remove('active');
   document.getElementById('step' + n).classList.add('active');
   currentStep = n;
-  document.getElementById('progressFill').style.width = (n / 5 * 100) + '%';
+  document.getElementById('progressFill').style.width = (n / 7 * 100) + '%';
   updatePreview();
 }
 
@@ -882,6 +1272,67 @@ function darken(hex, amount) {
     Math.max(0, Math.round(g * (1 - amount))),
     Math.max(0, Math.round(b * (1 - amount)))
   );
+}
+
+// === Advanced Colors ===
+function toggleAdvanced() {
+  const section = document.getElementById('advancedColors');
+  const toggle = document.getElementById('advancedToggle');
+  const isOpen = section.classList.contains('visible');
+  section.classList.toggle('visible');
+  toggle.classList.toggle('open');
+  toggle.innerHTML = (isOpen ? '&#9654;' : '&#9660;') + ' Advanced: Neutral scale &amp; semantic colors';
+}
+
+function generateNeutrals(tintHex) {
+  const [r, g, b] = hexToRgb(tintHex);
+  const [h, s] = rgbToHsl(r, g, b);
+  const stops = [
+    { label: '900', l: 14, s: Math.min(s, 25) },
+    { label: '700', l: 30, s: Math.min(s, 20) },
+    { label: '500', l: 48, s: Math.min(s, 15) },
+    { label: '300', l: 74, s: Math.min(s, 12) },
+    { label: '100', l: 92, s: Math.min(s, 8) },
+    { label: '50',  l: 97, s: Math.min(s, 5) },
+  ];
+  return stops.map(({ label, l, s: newS }) => ({
+    label,
+    hex: hslToHex(h, newS, l),
+  }));
+}
+
+function autoTintFromBase() {
+  const tint = document.getElementById('colorNeutralTint').value;
+  const neutrals = generateNeutrals(tint);
+  const ids = ['colorN900', 'colorN700', 'colorN500', 'colorN300', 'colorN100', 'colorN50'];
+  neutrals.forEach((n, i) => {
+    document.getElementById(ids[i]).value = n.hex;
+    document.getElementById(ids[i] + 'Hex').value = n.hex;
+  });
+  updatePreview();
+}
+
+function getNeutrals() {
+  return [
+    { label: '900', hex: document.getElementById('colorN900').value },
+    { label: '700', hex: document.getElementById('colorN700').value },
+    { label: '500', hex: document.getElementById('colorN500').value },
+    { label: '300', hex: document.getElementById('colorN300').value },
+    { label: '100', hex: document.getElementById('colorN100').value },
+    { label: '50',  hex: document.getElementById('colorN50').value },
+  ];
+}
+
+function updateNeutralPreview() {
+  // no-op — individual pickers replace the strip preview
+}
+
+function getSemanticColors() {
+  return {
+    success: document.getElementById('colorSuccess').value,
+    warning: document.getElementById('colorWarning').value,
+    danger: document.getElementById('colorDanger').value,
+  };
 }
 
 // === Logo Upload & Color Extraction ===
@@ -1204,14 +1655,81 @@ function updatePreview() {
   root.style.setProperty('--cfg-primary-dark', primaryDark);
   root.style.setProperty('--cfg-secondary', secondary);
   root.style.setProperty('--cfg-accent', accent);
+  root.style.setProperty('--cfg-font-mono', `'${document.getElementById('fontMono').value}'`);
+
+  // Apply neutral scale
+  const neutrals = getNeutrals();
+  neutrals.forEach(n => {
+    root.style.setProperty('--cfg-neutral-' + n.label, n.hex);
+  });
+  updateNeutralPreview();
+
+  // Apply semantic colors
+  const semantic = getSemanticColors();
+  root.style.setProperty('--cfg-success', semantic.success);
+  root.style.setProperty('--cfg-warning', semantic.warning);
+  root.style.setProperty('--cfg-danger', semantic.danger);
+
+  // Apply neutral colors to preview card elements
+  const n300 = neutrals[3].hex;
+  const n500 = neutrals[2].hex;
+  document.querySelectorAll('.pv-card .fact-statement, .pv-card .stat-unit, .pv-card .footer-legal').forEach(el => { el.style.color = n300; });
+  document.querySelectorAll('.pv-card .myth-statement .strike').forEach(el => { el.style.color = n300; });
+  document.querySelectorAll('.pv-card-tier2 .t2-subline').forEach(el => { el.style.color = n500; });
+  document.querySelectorAll('.pv-card-tier2 .t2-contact-label').forEach(el => { el.style.color = n300; });
+  document.querySelectorAll('.pv-card-tier2 .t2-footer-text').forEach(el => { el.style.color = n300; });
+  document.querySelectorAll('.pv-badge .badge-text').forEach(el => { el.style.color = n300; });
+  document.querySelectorAll('.pv-card .co-brand-divider').forEach(el => { el.style.background = n300; el.style.opacity = '0.4'; });
 
   // Update fonts on preview cards
+  const monoFont = document.getElementById('fontMono').value;
   document.querySelectorAll('.pv-card, .pv-badge').forEach(el => {
     el.style.fontFamily = `'${bodyFont}', sans-serif`;
   });
   document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-contact-label, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo').forEach(el => {
     el.style.fontFamily = `'${headingFont}', sans-serif`;
   });
+  document.querySelectorAll('.pv-card .footer-helpline, .pv-card-tier2 .t2-contact-value, .pv-badge .badge-number').forEach(el => {
+    el.style.fontFamily = `'${monoFont}', monospace`;
+  });
+
+  // Update font specimens (with type scale)
+  const ts = getTypeScale();
+  const headingSpec = document.querySelector('#headingSpecimen .font-specimen-heading');
+  if (headingSpec) { headingSpec.style.fontFamily = `'${headingFont}', sans-serif`; headingSpec.style.fontSize = `${ts.h2 * 11}px`; headingSpec.style.lineHeight = String(ts.lhHeading); }
+  const bodySpec = document.querySelector('#bodySpecimen .font-specimen-body');
+  if (bodySpec) { bodySpec.style.fontFamily = `'${bodyFont}', sans-serif`; bodySpec.style.lineHeight = String(ts.lhBody); }
+  const monoSpec = document.querySelector('#monoSpecimen .font-specimen-body');
+  if (monoSpec) monoSpec.style.fontFamily = `'${monoFont}', monospace`;
+
+  // Apply type scale to preview cards
+  // Each element maps to a scale level; ratio vs default gives the multiplier
+  const def = TYPE_SCALE_PRESETS.default;
+  const scaleMap = [
+    { sel: '.pv-card .myth-statement, .pv-card-tier2 .t2-headline', base: 26, level: 'h2', defVal: def.h2 },
+    { sel: '.pv-card .myth-label', base: 8, level: 'caption', defVal: def.caption },
+    { sel: '.pv-card .fact-statement, .pv-card-tier2 .t2-subline', base: 13, level: 'body', defVal: def.body },
+    { sel: '.pv-card .stat-number', base: 40, level: 'display', defVal: def.display },
+    { sel: '.pv-card .stat-unit', base: 12, level: 'small', defVal: def.small },
+    { sel: '.pv-card .card-logo, .pv-badge .badge-logo', base: 16, level: 'h4', defVal: def.h4 },
+    { sel: '.pv-card .card-pillar', base: 9, level: 'caption', defVal: def.caption },
+    { sel: '.pv-card .footer-helpline', base: 8, level: 'caption', defVal: def.caption },
+    { sel: '.pv-card .footer-legal', base: 7, level: 'caption', defVal: def.caption },
+    { sel: '.pv-card-tier2 .t2-contact-label, .pv-card-tier2 .t2-footer-text', base: 9, level: 'caption', defVal: def.caption },
+    { sel: '.pv-card-tier2 .t2-contact-value', base: 18, level: 'h3', defVal: def.h3 },
+    { sel: '.pv-card-tier2 .t2-contact-value.t2-phone', base: 24, level: 'h2', defVal: def.h2 },
+    { sel: '.pv-badge .badge-text', base: 11, level: 'small', defVal: def.small },
+    { sel: '.pv-badge .badge-number', base: 14, level: 'body', defVal: def.body },
+  ];
+  const tsValues = { display: ts.display, h1: ts.h1, h2: ts.h2, h3: ts.h3, h4: ts.h4, bodyLarge: ts.bodyLarge, body: ts.body, small: ts.small, caption: ts.caption };
+  scaleMap.forEach(({ sel, base, level, defVal }) => {
+    const ratio = tsValues[level] / defVal;
+    const px = Math.round(base * ratio * 10) / 10;
+    document.querySelectorAll(sel).forEach(el => { el.style.fontSize = px + 'px'; });
+  });
+  // Apply line heights to preview cards
+  document.querySelectorAll('.pv-card .myth-statement, .pv-card-tier2 .t2-headline').forEach(el => { el.style.lineHeight = String(ts.lhHeading); });
+  document.querySelectorAll('.pv-card .fact-statement, .pv-card-tier2 .t2-subline').forEach(el => { el.style.lineHeight = String(ts.lhBody); });
 
   // Update program name in logos
   const nameParts = getNameParts();
@@ -1246,8 +1764,9 @@ function updatePreview() {
     if (textNum) footerText += '  |  ' + textNum;
     el.textContent = footerText;
   });
+  const ageDisclaimer = (document.getElementById('disclaimerAge').value || '{{MIN_AGE}}+ to gamble').replace(/\{\{MIN_AGE\}\}/g, minAge);
   document.querySelectorAll('[id^="pvLegal"]').forEach(el => {
-    el.textContent = minAge + '+ to gamble';
+    el.textContent = ageDisclaimer;
   });
   const badgeNumber = document.getElementById('pvBadgeNumber');
   const chatUrlVal = document.getElementById('chatUrl').value || preset.chatUrl || '';
@@ -1299,17 +1818,14 @@ function updatePreview() {
     if (badgeCoDivider) badgeCoDivider.style.display = 'none';
   }
 
+  // Update card content based on cultural profile
+  updateCultureContent();
+
   // Update wordmark preview
   updateWordmarkPreview();
 
   // Update contrast badges
   updateContrast();
-
-  // Update font specimens
-  const headingSpec = document.querySelector('#headingSpecimen .font-specimen-heading');
-  if (headingSpec) headingSpec.style.fontFamily = `'${headingFont}', sans-serif`;
-  const bodySpec = document.querySelector('#bodySpecimen .font-specimen-body');
-  if (bodySpec) bodySpec.style.fontFamily = `'${bodyFont}', sans-serif`;
 }
 
 function updateContrast() {
@@ -1440,16 +1956,256 @@ function initPresets() {
   updateJurisdictionInfo(JURISDICTION_PRESETS['us']);
 }
 
-// === Download Functions ===
-function downloadYaml() {
+// === Type Scale Presets ===
+const TYPE_SCALE_PRESETS = {
+  compact:  { display: 2.5, h1: 2.0, h2: 1.75, h3: 1.25, h4: 1.125, bodyLarge: 1.0, body: 0.9375, small: 0.8125, caption: 0.6875, lhHeading: 1.15, lhBody: 1.5, lhTight: 1.25 },
+  default:  { display: 3.0, h1: 2.5, h2: 2.0, h3: 1.5, h4: 1.25, bodyLarge: 1.125, body: 1.0, small: 0.875, caption: 0.75, lhHeading: 1.2, lhBody: 1.6, lhTight: 1.3 },
+  spacious: { display: 3.5, h1: 2.75, h2: 2.25, h3: 1.75, h4: 1.375, bodyLarge: 1.25, body: 1.0625, small: 0.9375, caption: 0.8125, lhHeading: 1.3, lhBody: 1.7, lhTight: 1.4 },
+};
+
+function applyTypeScale(presetName) {
+  const p = TYPE_SCALE_PRESETS[presetName];
+  if (!p) return;
+  document.getElementById('scaleDisplay').value = p.display;
+  document.getElementById('scaleH1').value = p.h1;
+  document.getElementById('scaleH2').value = p.h2;
+  document.getElementById('scaleH3').value = p.h3;
+  document.getElementById('scaleH4').value = p.h4;
+  document.getElementById('scaleBodyLarge').value = p.bodyLarge;
+  document.getElementById('scaleBody').value = p.body;
+  document.getElementById('scaleSmall').value = p.small;
+  document.getElementById('scaleCaption').value = p.caption;
+  document.getElementById('lhHeading').value = p.lhHeading;
+  document.getElementById('lhBody').value = p.lhBody;
+  document.getElementById('lhTight').value = p.lhTight;
+  document.querySelectorAll('.scale-preset').forEach(el => el.classList.remove('active'));
+  document.querySelector(`.scale-preset[data-scale="${presetName}"]`).classList.add('active');
+  updatePreview();
+}
+
+function toggleTypeScale() {
+  const section = document.getElementById('typeScaleDetails');
+  const toggle = document.getElementById('typeScaleToggle');
+  if (section.style.display === 'block') {
+    section.style.display = 'none';
+    toggle.innerHTML = '&#9654; Individual scale values';
+  } else {
+    section.style.display = 'block';
+    toggle.innerHTML = '&#9660; Individual scale values';
+  }
+}
+
+function getTypeScale() {
+  return {
+    display: parseFloat(document.getElementById('scaleDisplay').value) || 3.0,
+    h1: parseFloat(document.getElementById('scaleH1').value) || 2.5,
+    h2: parseFloat(document.getElementById('scaleH2').value) || 2.0,
+    h3: parseFloat(document.getElementById('scaleH3').value) || 1.5,
+    h4: parseFloat(document.getElementById('scaleH4').value) || 1.25,
+    bodyLarge: parseFloat(document.getElementById('scaleBodyLarge').value) || 1.125,
+    body: parseFloat(document.getElementById('scaleBody').value) || 1.0,
+    small: parseFloat(document.getElementById('scaleSmall').value) || 0.875,
+    caption: parseFloat(document.getElementById('scaleCaption').value) || 0.75,
+    lhHeading: parseFloat(document.getElementById('lhHeading').value) || 1.2,
+    lhBody: parseFloat(document.getElementById('lhBody').value) || 1.6,
+    lhTight: parseFloat(document.getElementById('lhTight').value) || 1.3,
+  };
+}
+
+// === Messaging & Tone State ===
+let messagingState = {
+  openTaglines: ["Here's how it actually works.", "No fine print. Just facts.", "The odds are public. Now you know them."],
+  socialTaglines: ["Share the facts.", "Challenge your friends.", "The best players know the game."],
+  primaryCtas: ["Take the quiz", "Test your game IQ", "See the real odds"],
+  featuresCtas: ["Set your limits", "Try the bankroll planner"],
+};
+
+function renderTaglines(type) {
+  const arr = type === 'open' ? messagingState.openTaglines : messagingState.socialTaglines;
+  const container = document.getElementById(type + 'Taglines');
+  container.innerHTML = arr.map((val, i) =>
+    `<div class="tagline-row"><input type="text" class="form-input" value="${val.replace(/"/g, '&quot;')}" oninput="updateTagline('${type}', ${i}, this.value)"><button class="tagline-remove" onclick="removeTagline('${type}', ${i})">&times;</button></div>`
+  ).join('');
+}
+
+function updateTagline(type, index, value) {
+  const arr = type === 'open' ? messagingState.openTaglines : messagingState.socialTaglines;
+  arr[index] = value;
+}
+
+function addTagline(type) {
+  const arr = type === 'open' ? messagingState.openTaglines : messagingState.socialTaglines;
+  arr.push('');
+  renderTaglines(type);
+  const container = document.getElementById(type + 'Taglines');
+  const inputs = container.querySelectorAll('input');
+  if (inputs.length) inputs[inputs.length - 1].focus();
+}
+
+function removeTagline(type, index) {
+  const arr = type === 'open' ? messagingState.openTaglines : messagingState.socialTaglines;
+  arr.splice(index, 1);
+  renderTaglines(type);
+}
+
+function renderCtas(type) {
+  const arr = type === 'primary' ? messagingState.primaryCtas : messagingState.featuresCtas;
+  const container = document.getElementById(type + 'Ctas');
+  container.innerHTML = arr.map((val, i) =>
+    `<div class="tagline-row"><input type="text" class="form-input" value="${val.replace(/"/g, '&quot;')}" oninput="updateCta('${type}', ${i}, this.value)"><button class="tagline-remove" onclick="removeCta('${type}', ${i})">&times;</button></div>`
+  ).join('');
+}
+
+function updateCta(type, index, value) {
+  const arr = type === 'primary' ? messagingState.primaryCtas : messagingState.featuresCtas;
+  arr[index] = value;
+}
+
+function addCta(type) {
+  const arr = type === 'primary' ? messagingState.primaryCtas : messagingState.featuresCtas;
+  arr.push('');
+  renderCtas(type);
+  const container = document.getElementById(type + 'Ctas');
+  const inputs = container.querySelectorAll('input');
+  if (inputs.length) inputs[inputs.length - 1].focus();
+}
+
+function removeCta(type, index) {
+  const arr = type === 'primary' ? messagingState.primaryCtas : messagingState.featuresCtas;
+  arr.splice(index, 1);
+  renderCtas(type);
+}
+
+function yamlEscape(str) {
+  if (/[:"'#\[\]{}&*!|>%@`]/.test(str) || str.trim() !== str) {
+    return '"' + str.replace(/\\/g, '\\\\').replace(/"/g, '\\"') + '"';
+  }
+  return '"' + str + '"';
+}
+
+function yamlList(arr, indent) {
+  return arr.filter(s => s.trim()).map(s => indent + '- ' + yamlEscape(s)).join('\n');
+}
+
+// === Output Tab Switching ===
+function showOutputTab(tab) {
+  document.querySelectorAll('.preview-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.preview-tab-content').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const tabMap = { downloads: 'tabDownloads', yaml: 'tabYaml', css: 'tabCss' };
+  document.getElementById(tabMap[tab]).classList.add('active');
+  if (tab === 'yaml') {
+    document.getElementById('yamlPreviewCode').textContent = generateFullYaml();
+  } else if (tab === 'css') {
+    document.getElementById('cssPreviewCode').textContent = generateFullCss();
+  }
+}
+
+function copyPreviewCode(elementId) {
+  const text = document.getElementById(elementId).textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.currentTarget;
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => { btn.textContent = orig; }, 1500);
+  });
+}
+
+// === Culture-adapted preview content ===
+const CULTURE_CONTENT = {
+  // Myth-buster card — varies by humor + directness
+  mythLabel: {
+    _default: 'Myth vs. Math',
+  },
+  mythStatement: {
+    irreverent:  '<span class="strike">"I\'m on a hot streak"</span>',
+    warm:        '<span class="strike">"I\'m due for a win"</span>',
+    understated: '<span class="strike">"Patterns don\'t lie"</span>',
+    minimal:     '<span class="strike">"Past results predict future outcomes"</span>',
+  },
+  factStatement: {
+    // keyed by directness
+    blunt: {
+      individual: 'Every spin is independent. <strong>Your brain sees patterns. The math doesn\'t.</strong>',
+      communal:   'Every spin is independent. <strong>Knowing this protects the people who count on you.</strong>',
+    },
+    diplomatic: {
+      individual: 'Each outcome is statistically independent. <strong>What feels like a pattern is a cognitive shortcut, not a signal.</strong>',
+      communal:   'Each outcome is statistically independent. <strong>Understanding this helps you make decisions your family can rely on.</strong>',
+    },
+    contextual: {
+      individual: 'Imagine flipping a coin 10 times. Getting 7 heads doesn\'t make tails "due." <strong>Slots work the same way.</strong>',
+      communal:   'Imagine flipping a coin with someone you love watching. <strong>The coin doesn\'t know you need it to land heads.</strong>',
+    },
+  },
+  // Tier 2 card — varies by comfort + voice
+  t2Headline: {
+    open:     { peer: 'No question<br>is too small.', authority: 'Support is<br>always available.', elder: 'We\'re here<br>whenever you\'re ready.' },
+    reserved: { peer: 'Need a<br>second opinion?', authority: 'Confidential<br>guidance available.', elder: 'There\'s no wrong time<br>to ask.' },
+    private:  { peer: 'Your next step,<br>your terms.', authority: 'Private, professional<br>support.', elder: 'A conversation<br>just between us.' },
+  },
+  t2Subline: {
+    open:     { peer: 'Free, confidential support for any question about gambling.', authority: 'Trained counselors available 24/7 for gambling-related concerns.', elder: 'A trusted place to talk about gambling, no matter the question.' },
+    reserved: { peer: 'Free guidance on budgeting, limits, and financial wellness.', authority: 'Professional support for managing entertainment spending.', elder: 'A caring ear for questions about money, limits, and wellbeing.' },
+    private:  { peer: 'Private, no-judgment support. Your call, your pace.', authority: 'Strictly confidential assistance from certified professionals.', elder: 'A safe conversation whenever you need it. Always private.' },
+  },
+};
+
+function updateCultureContent() {
+  const humor = document.getElementById('cultureHumor').value;
+  const directness = document.getElementById('cultureDirectness').value;
+  const framing = document.getElementById('cultureFraming').value;
+  const comfort = document.getElementById('cultureComfort').value;
+  const voice = document.getElementById('cultureVoice').value;
+
+  const accent = document.getElementById('colorAccent').value || '#FF6B35';
+  const secondary = document.getElementById('colorSecondary').value || '#00D4AA';
+
+  // Myth-buster card
+  const mythStmt = document.getElementById('pvMythStatement');
+  if (mythStmt) {
+    const strikeHtml = CULTURE_CONTENT.mythStatement[humor] || CULTURE_CONTENT.mythStatement.irreverent;
+    mythStmt.innerHTML = strikeHtml;
+    // Re-apply colors to the strike span
+    const strike = mythStmt.querySelector('.strike');
+    if (strike) { strike.style.textDecorationColor = accent; strike.style.color = '#A8A8C0'; }
+  }
+
+  const factStmt = document.getElementById('pvFactStatement');
+  if (factStmt) {
+    const dirObj = CULTURE_CONTENT.factStatement[directness] || CULTURE_CONTENT.factStatement.blunt;
+    const html = dirObj[framing] || dirObj.individual;
+    factStmt.innerHTML = html;
+    const strong = factStmt.querySelector('strong');
+    if (strong) strong.style.color = secondary;
+  }
+
+  // Tier 2 card
+  const t2Head = document.getElementById('pvT2Headline');
+  if (t2Head) {
+    const comfortObj = CULTURE_CONTENT.t2Headline[comfort] || CULTURE_CONTENT.t2Headline.open;
+    t2Head.innerHTML = comfortObj[voice] || comfortObj.peer;
+  }
+
+  const t2Sub = document.getElementById('pvT2Subline');
+  if (t2Sub) {
+    const comfortObj = CULTURE_CONTENT.t2Subline[comfort] || CULTURE_CONTENT.t2Subline.open;
+    t2Sub.textContent = comfortObj[voice] || comfortObj.peer;
+  }
+}
+
+// === Shared YAML/CSS Generation (used by download + preview) ===
+function generateFullYaml() {
   const name = document.getElementById('programName').value || 'Playbook';
   const org = document.getElementById('orgName').value || 'Your Company Name';
   const url = document.getElementById('websiteUrl').value || 'https://example.com/playbook';
+  const email = document.getElementById('contactEmail').value || 'info@example.com';
   const primary = document.getElementById('colorPrimary').value;
   const secondary = document.getElementById('colorSecondary').value;
   const accent = document.getElementById('colorAccent').value;
   const headingFont = document.getElementById('fontHeading').value;
   const bodyFont = document.getElementById('fontBody').value;
+  const monoFont = document.getElementById('fontMono').value;
   const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
   const minAge = document.getElementById('minAge').value || '21';
   const textNum = document.getElementById('textNumber').value || '';
@@ -1472,8 +2228,18 @@ function downloadYaml() {
   const secondaryDark = darken(secondary, 0.2);
   const accentLight = lighten(accent, 0.15);
   const accentDark = darken(accent, 0.15);
+  const neutrals = getNeutrals();
+  const semantic = getSemanticColors();
+  const ts = getTypeScale();
+  const cpVoice = document.getElementById('cultureVoice').value;
+  const cpFraming = document.getElementById('cultureFraming').value;
+  const cpHumor = document.getElementById('cultureHumor').value;
+  const cpDirectness = document.getElementById('cultureDirectness').value;
+  const cpComfort = document.getElementById('cultureComfort').value;
+  const disclaimerAge = document.getElementById('disclaimerAge').value || 'You must be {{MIN_AGE}}+ to gamble.';
+  const disclaimerGeneral = document.getElementById('disclaimerGeneral').value || 'Gambling involves risk. Play on your terms.';
 
-  const yaml = `# _brand.yml \u2014 Generated by Playbook Brand Configurator
+  return `# _brand.yml \u2014 Generated by Playbook Brand Configurator
 # ============================================
 # Edit this file to customize your brand.
 # Every {{PLACEHOLDER}} in the documentation references a value here.
@@ -1483,7 +2249,7 @@ meta:
   program_name: "${name}"
   organization: "${org}"
   website: "${url}"
-  contact_email: "info@example.com"
+  contact_email: "${email}"
   year_established: ${new Date().getFullYear()}
   version: "0.1.0"
   license: "CC0-1.0"
@@ -1514,15 +2280,15 @@ color:
     accent: "${accent}"
     accent_light: "${accentLight}"
     accent_dark: "${accentDark}"
-    neutral_900: "#1A1A2E"
-    neutral_700: "#3D3D5C"
-    neutral_500: "#6B6B8A"
-    neutral_300: "#A8A8C0"
-    neutral_100: "#E8E8F0"
-    neutral_50: "#F5F5FA"
-    success: "#00C853"
-    warning: "#FFB300"
-    danger: "#FF3D00"
+    neutral_900: "${neutrals[0].hex}"
+    neutral_700: "${neutrals[1].hex}"
+    neutral_500: "${neutrals[2].hex}"
+    neutral_300: "${neutrals[3].hex}"
+    neutral_100: "${neutrals[4].hex}"
+    neutral_50: "${neutrals[5].hex}"
+    success: "${semantic.success}"
+    warning: "${semantic.warning}"
+    danger: "${semantic.danger}"
     info: "#2979FF"
     white: "#FFFFFF"
     black: "#111111"
@@ -1576,26 +2342,26 @@ typography:
       weights: [300, 400, 600]
       fallback: "system-ui, sans-serif"
     monospace:
-      family: "Source Code Pro"
+      family: "${monoFont}"
       source: "google"
       weights: [400, 500, 600]
       fallback: "monospace"
 
   scale:
-    display: 3.0
-    h1: 2.5
-    h2: 2.0
-    h3: 1.5
-    h4: 1.25
-    body_large: 1.125
-    body: 1.0
-    small: 0.875
-    caption: 0.75
+    display: ${ts.display}
+    h1: ${ts.h1}
+    h2: ${ts.h2}
+    h3: ${ts.h3}
+    h4: ${ts.h4}
+    body_large: ${ts.bodyLarge}
+    body: ${ts.body}
+    small: ${ts.small}
+    caption: ${ts.caption}
 
   line_height:
-    heading: 1.2
-    body: 1.6
-    tight: 1.3
+    heading: ${ts.lhHeading}
+    body: ${ts.lhBody}
+    tight: ${ts.lhTight}
 
 logo:
   type: "text-based wordmark"
@@ -1631,33 +2397,29 @@ legal:
   minimum_gambling_age:
     default: ${minAge}
   disclaimers:
-    age: "You must be {{MIN_AGE}}+ to gamble."
-    general: "Gambling involves risk. Play on your terms."
+    age: ${yamlEscape(disclaimerAge)}
+    general: ${yamlEscape(disclaimerGeneral)}
 
 messaging:
   taglines:
     open:
-      - "Here's how it actually works."
-      - "No fine print. Just facts."
-      - "The odds are public. Now you know them."
+${yamlList(messagingState.openTaglines, '      ')}
     social:
-      - "Share the facts."
-      - "Challenge your friends."
-      - "The best players know the game."
+${yamlList(messagingState.socialTaglines, '      ')}
   ctas:
     primary:
-      - "Take the quiz"
-      - "Test your game IQ"
-      - "See the real odds"
+${yamlList(messagingState.primaryCtas, '      ')}
     features:
-      - "Set your limits"
-      - "Try the bankroll planner"
+${yamlList(messagingState.featuresCtas, '      ')}
+
+cultural_profile:
+  voice: "${cpVoice}"
+  framing: "${cpFraming}"
+  humor: "${cpHumor}"
+  directness: "${cpDirectness}"
+  comfort: "${cpComfort}"
 
 tone:
-  humor: "confident-wit"
-  formality: "conversational"
-  voice_archetype: "playbook-voice"
-  gambling_culture: "selective"
   prefer:
     player: "player (not 'gambler')"
     informed_play: "specific behaviors"
@@ -1669,11 +2431,9 @@ tone:
     - "pathological"
     - "intervention"
 `;
-
-  downloadFile('_brand.yml', yaml, 'text/yaml');
 }
 
-function downloadCss() {
+function generateFullCss() {
   const primary = document.getElementById('colorPrimary').value;
   const secondary = document.getElementById('colorSecondary').value;
   const accent = document.getElementById('colorAccent').value;
@@ -1683,11 +2443,16 @@ function downloadCss() {
   const secondaryDark = darken(secondary, 0.2);
   const accentLight = lighten(accent, 0.15);
   const accentDark = darken(accent, 0.15);
+  const neutrals = getNeutrals();
+  const semantic = getSemanticColors();
   const headingFont = document.getElementById('fontHeading').value;
   const bodyFont = document.getElementById('fontBody').value;
+  const monoFont = document.getElementById('fontMono').value;
+  const ts = getTypeScale();
 
-  const css = `/* brand-inject.css \u2014 Generated by Playbook Brand Configurator */
+  return `/* brand-inject.css \u2014 Generated by Playbook Brand Configurator */
 :root {
+  /* Colors */
   --pb-color-primary: ${primary};
   --pb-color-primary-light: ${primaryLight};
   --pb-color-primary-dark: ${primaryDark};
@@ -1697,25 +2462,50 @@ function downloadCss() {
   --pb-color-accent: ${accent};
   --pb-color-accent-light: ${accentLight};
   --pb-color-accent-dark: ${accentDark};
-  --pb-color-neutral-900: #1A1A2E;
-  --pb-color-neutral-700: #3D3D5C;
-  --pb-color-neutral-500: #6B6B8A;
-  --pb-color-neutral-300: #A8A8C0;
-  --pb-color-neutral-100: #E8E8F0;
-  --pb-color-neutral-50: #F5F5FA;
-  --pb-color-success: #00C853;
-  --pb-color-warning: #FFB300;
-  --pb-color-danger: #FF3D00;
+  --pb-color-neutral-900: ${neutrals[0].hex};
+  --pb-color-neutral-700: ${neutrals[1].hex};
+  --pb-color-neutral-500: ${neutrals[2].hex};
+  --pb-color-neutral-300: ${neutrals[3].hex};
+  --pb-color-neutral-100: ${neutrals[4].hex};
+  --pb-color-neutral-50: ${neutrals[5].hex};
+  --pb-color-success: ${semantic.success};
+  --pb-color-warning: ${semantic.warning};
+  --pb-color-danger: ${semantic.danger};
   --pb-color-info: #2979FF;
   --pb-color-white: #FFFFFF;
   --pb-color-black: #111111;
+
+  /* Fonts */
   --pb-font-heading: '${headingFont}', system-ui, -apple-system, sans-serif;
   --pb-font-body: '${bodyFont}', system-ui, sans-serif;
-  --pb-font-mono: 'Source Code Pro', monospace;
+  --pb-font-mono: '${monoFont}', monospace;
+
+  /* Type Scale */
+  --pb-scale-display: ${ts.display}rem;
+  --pb-scale-h1: ${ts.h1}rem;
+  --pb-scale-h2: ${ts.h2}rem;
+  --pb-scale-h3: ${ts.h3}rem;
+  --pb-scale-h4: ${ts.h4}rem;
+  --pb-scale-body-large: ${ts.bodyLarge}rem;
+  --pb-scale-body: ${ts.body}rem;
+  --pb-scale-small: ${ts.small}rem;
+  --pb-scale-caption: ${ts.caption}rem;
+
+  /* Line Heights */
+  --pb-line-height-heading: ${ts.lhHeading};
+  --pb-line-height-body: ${ts.lhBody};
+  --pb-line-height-tight: ${ts.lhTight};
 }
 `;
+}
 
-  downloadFile('brand-inject.css', css, 'text/css');
+// === Download Functions ===
+function downloadYaml() {
+  downloadFile('_brand.yml', generateFullYaml(), 'text/yaml');
+}
+
+function downloadCss() {
+  downloadFile('brand-inject.css', generateFullCss(), 'text/css');
 }
 
 function downloadFile(filename, content, type) {
@@ -1779,6 +2569,8 @@ function getOperatorTokens() {
     '{{TOTAL_TIME}}': '',
     '{{JURISDICTION}}': (JURISDICTION_PRESETS[getActiveJurisdiction()] || {}).jurisdictionKey || getActiveJurisdiction(),
     '{{REGULATOR_URL}}': (JURISDICTION_PRESETS[getActiveJurisdiction()] || {}).regulatorUrl || '',
+    '{{CONTACT_EMAIL}}': document.getElementById('contactEmail').value || 'info@example.com',
+    '{{PROGRAM_URL}}': document.getElementById('websiteUrl').value || 'https://example.com',
   };
 }
 
@@ -1984,120 +2776,11 @@ function slugifyName(name) {
 }
 
 function generateYamlContent() {
-  const name = document.getElementById('programName').value || 'Playbook';
-  const org = document.getElementById('orgName').value || 'Your Company Name';
-  const url = document.getElementById('websiteUrl').value || 'https://example.com/playbook';
-  const primary = document.getElementById('colorPrimary').value;
-  const secondary = document.getElementById('colorSecondary').value;
-  const accent = document.getElementById('colorAccent').value;
-  const headingFont = document.getElementById('fontHeading').value;
-  const bodyFont = document.getElementById('fontBody').value;
-  const helpline = document.getElementById('helplineNumber').value || '1-800-XXX-XXXX';
-  const minAge = document.getElementById('minAge').value || '21';
-  const textNum = document.getElementById('textNumber').value || '';
-  const chatUrlVal = document.getElementById('chatUrl').value || '';
-  const limitsUrl = document.getElementById('limitsUrl').value || '';
-  const selfExclusionName = document.getElementById('selfExclusionName').value || '';
-  const selfExclusionUrl = document.getElementById('selfExclusionUrl').value || '';
-  const supportOrgName = document.getElementById('supportOrgName').value || '';
-  const supportOrgUrl = document.getElementById('supportOrgUrl').value || '';
-  const jKey = getActiveJurisdiction();
-  const preset = JURISDICTION_PRESETS[jKey] || {};
-  const helplineLabel = preset.label || 'Support Helpline';
-  const helplineWebsite = preset.helplineWebsite || '';
-  const regulatorName = preset.regulatorName || '';
-  const regulatorUrl = preset.regulatorUrl || '';
-  const jurisdictionKey = preset.jurisdictionKey || 'custom';
-  const primaryLight = lighten(primary, 0.15);
-  const primaryDark = darken(primary, 0.3);
-  const secondaryLight = lighten(secondary, 0.15);
-  const secondaryDark = darken(secondary, 0.2);
-  const accentLight = lighten(accent, 0.15);
-  const accentDark = darken(accent, 0.15);
-
-  return `# _brand.yml — Generated by Playbook Brand Configurator
-# ============================================
-meta:
-  program_name: "${name}"
-  organization: "${org}"
-  website: "${url}"
-  contact_email: "info@example.com"
-  year_established: ${new Date().getFullYear()}
-  version: "0.1.0"
-  license: "CC0-1.0"
-  primary_jurisdictions:
-    - ${jurisdictionKey || 'united-states'}
-
-color:
-  palette:
-    primary: "${primary}"
-    primary_light: "${primaryLight}"
-    primary_dark: "${primaryDark}"
-    secondary: "${secondary}"
-    secondary_light: "${secondaryLight}"
-    secondary_dark: "${secondaryDark}"
-    accent: "${accent}"
-    accent_light: "${accentLight}"
-    accent_dark: "${accentDark}"
-
-typography:
-  fonts:
-    heading:
-      family: "${headingFont}"
-      source: "google"
-    body:
-      family: "${bodyFont}"
-      source: "google"
-
-helplines:
-  default:
-    number: "${helpline}"
-    label: "${helplineLabel}"
-    hours: "24/7"` + (textNum ? `
-    text_number: "${textNum}"` : '') + (chatUrlVal ? `
-    chat_url: "${chatUrlVal}"` : '') + (helplineWebsite ? `
-    website: "${helplineWebsite}"` : '') + `
-` + (regulatorName ? `
-regulator:
-  name: "${regulatorName}"` + (regulatorUrl ? `
-  url: "${regulatorUrl}"` : '') + `
-` : '') + `
-integration:
-  limits_url: "${limitsUrl || '{{LIMITS_URL}}'}"
-  self_exclusion_url: "${selfExclusionUrl || '{{SELF_EXCLUSION_URL}}'}"
-  self_exclusion_name: "${selfExclusionName || '{{SELF_EXCLUSION_NAME}}'}"
-  support_org_name: "${supportOrgName || '{{SUPPORT_ORG_NAME}}'}"
-  support_org_url: "${supportOrgUrl || '{{SUPPORT_ORG_URL}}'}"
-
-legal:
-  copyright_holder: "${org}"
-  minimum_gambling_age:
-    default: ${minAge}
-`;
+  return generateFullYaml();
 }
 
 function generateCssContent() {
-  const primary = document.getElementById('colorPrimary').value;
-  const secondary = document.getElementById('colorSecondary').value;
-  const accent = document.getElementById('colorAccent').value;
-  const headingFont = document.getElementById('fontHeading').value;
-  const bodyFont = document.getElementById('fontBody').value;
-  return `/* brand-inject.css — Generated by Playbook Brand Configurator */
-:root {
-  --pb-color-primary: ${primary};
-  --pb-color-primary-light: ${lighten(primary, 0.15)};
-  --pb-color-primary-dark: ${darken(primary, 0.3)};
-  --pb-color-secondary: ${secondary};
-  --pb-color-secondary-light: ${lighten(secondary, 0.15)};
-  --pb-color-secondary-dark: ${darken(secondary, 0.2)};
-  --pb-color-accent: ${accent};
-  --pb-color-accent-light: ${lighten(accent, 0.15)};
-  --pb-color-accent-dark: ${darken(accent, 0.15)};
-  --pb-font-heading: '${headingFont}', system-ui, -apple-system, sans-serif;
-  --pb-font-body: '${bodyFont}', system-ui, sans-serif;
-  --pb-font-mono: 'Source Code Pro', monospace;
-}
-`;
+  return generateFullCss();
 }
 
 function generateAllEmbedSnippets(tokens) {
@@ -2209,8 +2892,24 @@ document.addEventListener('DOMContentLoaded', () => {
   syncColor('colorPrimary', 'colorPrimaryHex');
   syncColor('colorSecondary', 'colorSecondaryHex');
   syncColor('colorAccent', 'colorAccentHex');
+  syncColor('colorNeutralTint', 'colorNeutralTintHex');
+  syncColor('colorN900', 'colorN900Hex');
+  syncColor('colorN700', 'colorN700Hex');
+  syncColor('colorN500', 'colorN500Hex');
+  syncColor('colorN300', 'colorN300Hex');
+  syncColor('colorN100', 'colorN100Hex');
+  syncColor('colorN50', 'colorN50Hex');
+  syncColor('colorSuccess', 'colorSuccessHex');
+  syncColor('colorWarning', 'colorWarningHex');
+  syncColor('colorDanger', 'colorDangerHex');
   initPresets();
   initLogoUpload();
+
+  // Initialize messaging lists
+  renderTaglines('open');
+  renderTaglines('social');
+  renderCtas('primary');
+  renderCtas('features');
 
   // Split slider events
   const nameInput = document.getElementById('programName');
@@ -2221,7 +2920,7 @@ document.addEventListener('DOMContentLoaded', () => {
   noSplitCheck.addEventListener('change', () => { updateWordmarkPreview(); updatePreview(); });
 
   // Listen for all input changes
-  document.querySelectorAll('input, select').forEach(el => {
+  document.querySelectorAll('input, select, textarea').forEach(el => {
     el.addEventListener('input', () => { updatePreview(); });
     el.addEventListener('change', () => { updatePreview(); });
   });
