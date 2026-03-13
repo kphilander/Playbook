@@ -18,6 +18,64 @@ This guide helps you adapt Playbook content for your market using five plain-lan
 
 ---
 
+## Variant libraries
+
+The Playbook default voice — peer, individual, irreverent, blunt, open — is the recommended starting point. It's been designed, tested, and proven in markets where gambling is openly discussed, informal communication resonates, and individual empowerment is the natural frame.
+
+For operators whose markets differ on one or more cultural dimensions, Playbook provides pre-written adaptation variants across the full content library:
+
+| Library | Content | File |
+|---------|---------|------|
+| Tagline variants | 26 taglines × 5 dimensions | [`messaging/tagline-variants.yml`](../messaging/tagline-variants.yml) |
+| CTA variants | 50 calls-to-action × key dimensions | [`messaging/cta-variants.yml`](../messaging/cta-variants.yml) |
+| Core message variants | 74 core messages × 5 dimensions | [`messaging/core-message-variants.yml`](../messaging/core-message-variants.yml) |
+| Game guide notes | Phrase-level variants for 10 game guides | [`how-to-play/cultural-adaptation-notes.yml`](../how-to-play/cultural-adaptation-notes.yml) |
+
+### Brand Personality Switcher
+
+Before diving into the YAML files, use the interactive **[Brand Personality Switcher](../collateral/render/personality-switcher.html)** to preview how your brand would sound across all 217 messages. Set your five dimensions and see every tagline, CTA, core message, and game guide phrase update in real time — with the Playbook default shown alongside for comparison.
+
+To regenerate after editing variant files: `node collateral/render/build-personality-switcher.mjs`
+
+### How to use
+
+1. **Set your profile** in `_brand.yml` under `cultural_profile`
+2. **Preview your voice** using the [Brand Personality Switcher](../collateral/render/personality-switcher.html) to see all messages in your selected profile
+3. **Open the relevant variant file** for the content you're deploying
+4. **Find your message by ID** (e.g., O-1, EL-3, T-1)
+5. **Look up the dimension** where your profile differs from the default
+6. **Use the variant text** — it preserves the original's factual content while adapting voice, framing, or delivery
+
+**Example:** If your cultural profile uses `voice: authority` and `humor: minimal`:
+
+```yaml
+# From tagline-variants.yml
+O-2:
+  default: "No fine print. Just facts."
+  voice:
+    authority: "Complete transparency. Verified facts."
+  humor:
+    minimal: "The facts, as they are."
+```
+
+### Why some messages don't have all five dimensions
+
+Dimensions are only listed when they materially change the message. If a dimension isn't listed, the default works across all values of that dimension.
+
+Some examples of why a dimension gets skipped:
+
+- **Humor** is omitted from Help/Support messages (H-1 through H-4, HS-\*, PL-3) — Tier 2 content never uses humor per the brand book
+- **Directness** is omitted when a message is already so concise that blunt vs. diplomatic wouldn't change the wording (most CTAs, short login messages)
+- **Comfort** is omitted when a message doesn't reference gambling, betting, or anything stigma-adjacent — there's nothing to neutralize
+- **Framing** is omitted when there's no individual-vs-collective tension — e.g., "Go to settings" doesn't change for communal cultures
+- **Humor** is omitted from CTAs because calls-to-action are action phrases — humor rarely changes a 3-word button label
+
+This is intentional. Every variant that exists represents a genuine adaptation, not a forced distinction.
+
+> **Operator note:** The default Playbook voice works in most English-speaking markets. Start with the default and adapt only the dimensions where your audience research shows a meaningful difference. Over-adapting dilutes brand identity without improving resonance.
+
+---
+
 ## What doesn't change
 
 The five spectrums adapt *how the Playbook voice speaks*. They never change *what the voice stands for*. Before adapting any content, confirm that the result still passes these tests:
@@ -273,6 +331,8 @@ The marker types correspond to taxonomy values:
 | `<!-- ADAPT: framing -->` | Individual-focused benefit language |
 | `<!-- ADAPT: directness -->` | Blunt evaluative statements |
 | `<!-- ADAPT: comfort -->` | Language that assumes open comfort with gambling |
+
+In addition to ADAPT markers, operators can consult the **variant libraries** for pre-written alternatives. The [tagline](../messaging/tagline-variants.yml), [CTA](../messaging/cta-variants.yml), [core message](../messaging/core-message-variants.yml), and [game guide](../how-to-play/cultural-adaptation-notes.yml) variant files provide ready-to-use text for each cultural dimension, eliminating the need to rewrite flagged passages from scratch.
 
 ### Step 4: Adapt and tag
 

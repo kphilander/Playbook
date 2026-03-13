@@ -1,0 +1,393 @@
+# Tagline Cultural Variants
+# ==========================
+# Adapted versions of Playbook taglines for different cultural profiles.
+#
+# Default voice: peer / individual / irreverent / blunt / open
+# The default is the recommended Playbook voice — tested, proven, and designed
+# to work in markets where gambling is openly discussed and informal
+# communication resonates.
+#
+# These variants let operators adapt taglines when their market differs
+# on one or more cultural dimensions. Pick the variant that matches your
+# cultural_profile setting in _brand.yml.
+#
+# Dimensions are only listed when they materially change the tagline.
+# If a dimension isn't listed for a tagline, the default works across
+# all values of that dimension.
+#
+# See brand-book/09-cultural-adaptation.md for full dimension definitions.
+
+# ============================================================================
+# OPEN PILLAR — Entertainment literacy, transparency, math-first messaging
+# ============================================================================
+
+O-1:
+  default: "Here's how it actually works."
+  voice:
+    authority: "Understanding how it works — backed by the data."
+    elder: "Let me show you how this really works."
+  humor:
+    warm: "We've all wondered how it works. Turns out, it's worth knowing."
+    understated: "It works a certain way. We thought you might like to see."
+    minimal: "How it works."
+  framing:
+    communal: "Here's how it works — and why it matters beyond the table."
+  directness:
+    diplomatic: "A closer look at how it really works."
+    contextual: "Most players never look into how it works. The ones who do tend to play differently."
+  comfort:
+    reserved: "Here's what the numbers actually say."
+    private: "Understanding the mechanics behind the math."
+
+O-2:
+  default: "No fine print. Just facts."
+  voice:
+    authority: "Full transparency. Verified facts."
+    elder: "No tricks, no fine print — just the truth."
+  humor:
+    warm: "We left the fine print out. Put the facts in instead."
+    understated: "Fine print: none. Facts: present."
+    minimal: "Facts without fine print."
+  directness:
+    diplomatic: "Everything up front. Nothing hidden."
+    contextual: "Some places bury the details. Some put them up front. Here they are."
+  comfort:
+    reserved: "No fine print. Just numbers."
+    private: "Clear information. No hidden terms."
+
+O-3:
+  default: "The odds are public. Now you know them."
+  voice:
+    authority: "These odds are published and verified. Review them here."
+    elder: "The odds have always been there. Now let me walk you through them."
+  humor:
+    warm: "The odds have been public this whole time. We thought we'd make the introductions."
+    understated: "The odds have always been public. They just weren't expecting company."
+    minimal: "Published odds. Full access."
+  framing:
+    communal: "The odds are public. Now you can share what they mean."
+  directness:
+    diplomatic: "The odds are publicly available — here's what they mean for you."
+    contextual: "Every game publishes its odds somewhere. We've gathered them so you don't have to."
+  comfort:
+    reserved: "The numbers are public. Now you know them."
+    private: "The probabilities are published. Here's what they mean."
+
+O-4:
+  default: "Every game has math. Here's yours."
+  voice:
+    authority: "Every game is built on mathematics. Here's the analysis."
+    elder: "There's math behind every game. Let me share what I've learned."
+  humor:
+    warm: "Every game has math. Once you see yours, you'll be glad you looked."
+    understated: "Every game has math. Yours is not, it turns out, optional."
+    minimal: "The mathematics of your game."
+  framing:
+    communal: "Every game has math. Here's why it matters beyond the table."
+  directness:
+    diplomatic: "There's mathematics at the heart of every game. Here's a closer look."
+    contextual: "You play the game. The game runs on math. Seems worth knowing that math."
+  comfort:
+    reserved: "Every game has math. Here are the numbers."
+    private: "Every system has math. Here's how to read it."
+
+O-5:
+  default: "Straight talk. Real numbers."
+  voice:
+    authority: "Evidence-based analysis. Verified data."
+    elder: "Honest talk. Real numbers. The way it should be."
+  humor:
+    warm: "Straight talk and real numbers. That's the whole thing."
+    understated: "Straight talk. Real numbers. Nothing else seemed necessary."
+    minimal: "Direct analysis. Verified data."
+  framing:
+    communal: "Straight talk. Real numbers. For more than just your own sake."
+  comfort:
+    reserved: "Straight talk. Real data."
+    private: "Clear explanations. Verified numbers."
+
+O-6:
+  default: "The house always has an edge. Now you know what it is."
+  voice:
+    authority: "The house edge is a mathematical certainty. Here are the precise figures."
+    elder: "I've seen enough to know — the house always has an edge. Let me show you what it is."
+  humor:
+    warm: "The house has an edge. We've all heard that. Here's what it actually looks like."
+    understated: "The house, it's fair to say, has done the maths. Here are the results."
+    minimal: "The house edge, quantified."
+  framing:
+    communal: "The house always has an edge. The people counting on you deserve to know what it is."
+  directness:
+    diplomatic: "Every game is designed with a house advantage. Here's how it breaks down."
+    contextual: "You've heard 'the house always wins.' There's a specific number behind that phrase."
+  comfort:
+    reserved: "Every business has a margin. Here's this one."
+    private: "Every system has a built-in advantage. Here are the numbers."
+
+O-7:
+  default: "Your game. Your odds. Your call."
+  voice:
+    authority: "Informed decisions require accurate data. Here are yours."
+    elder: "Your game. Your odds. And it's always your call."
+  humor:
+    warm: "Your game, your odds. Nobody decides but you."
+    understated: "Your game. Your odds. We simply thought you'd want them."
+    minimal: "Your game. Your odds. Your decision."
+  framing:
+    communal: "Your game. Your odds. And the people around you benefit when you know them."
+  directness:
+    diplomatic: "Your game. Your odds. A decision that's always yours to make."
+    contextual: "It's your game and your money. The odds are here when you want them."
+  comfort:
+    reserved: "Your choice. Your numbers. Your decision."
+    private: "Your interests. Your data. Your decision."
+
+O-8:
+  default: "Know the math. Play your way."
+  voice:
+    authority: "Understand the mathematics. Make informed decisions."
+    elder: "Learn the math first. Then play however feels right."
+  humor:
+    warm: "Know the math first. After that, it's your evening."
+    understated: "Know the math. What you do with it is entirely your affair."
+    minimal: "Understand the math. Decide accordingly."
+  framing:
+    communal: "Know the math. Play knowing it protects more than just your bankroll."
+  directness:
+    diplomatic: "When you understand the math, you can play with confidence."
+    contextual: "The math is there whether you look at it or not. Here it is, if you're curious."
+  comfort:
+    reserved: "Know the numbers. Choose your way."
+    private: "Understand the math. Make your own choices."
+
+# ============================================================================
+# SOCIAL PILLAR — Sharing, challenges, social proof, community engagement
+# ============================================================================
+
+S-1:
+  default: "Share the facts."
+  voice:
+    authority: "Distribute verified information."
+    elder: "Pass along what you've learned."
+  framing:
+    communal: "Facts worth passing along to the people who matter."
+  comfort:
+    reserved: "Share what you've learned."
+    private: "Pass along the knowledge."
+
+S-2:
+  default: "Challenge your friends."
+  voice:
+    authority: "Test your peers' knowledge."
+    elder: "See what your friends really know."
+  humor:
+    warm: "Challenge your friends. See who's been paying attention."
+    understated: "Challenge your friends. They'll handle it."
+  framing:
+    communal: "Challenge someone you care about."
+  comfort:
+    reserved: "Test each other's knowledge."
+    private: "See who knows more."
+
+S-3:
+  default: "The best players know the game."
+  voice:
+    authority: "Informed participants make better decisions."
+    elder: "The wisest players always understood the game first."
+  humor:
+    warm: "The best players all seem to have one thing in common. They looked things up."
+    understated: "The best players also know the most. Not a coincidence, as it happens."
+    minimal: "Knowledge correlates with better decisions."
+  framing:
+    communal: "The best players look out for more than just themselves."
+  comfort:
+    reserved: "The smartest decisions start with knowledge."
+    private: "The best decisions come from understanding."
+
+S-4:
+  default: "How well do you really know the odds?"
+  voice:
+    authority: "Assess your understanding of probability."
+    elder: "Think you know the odds? You might be surprised."
+  humor:
+    warm: "Most of us think we know the odds. The quiz is where we find out."
+    understated: "You may well know the odds. Then again."
+  framing:
+    communal: "How well do the people around you know the odds?"
+  directness:
+    diplomatic: "Most people are surprised by what they don't know about the odds."
+    contextual: "Everyone thinks they know the odds. The data tells a different story."
+  comfort:
+    reserved: "How well do you really know the numbers?"
+    private: "How well do you understand probability?"
+
+S-5:
+  default: "Facts worth sharing."
+  voice:
+    authority: "Evidence worth disseminating."
+    elder: "Knowledge worth passing on."
+  humor:
+    warm: "The kind of facts you end up telling someone about over dinner."
+    understated: "Facts that, on reflection, seem worth passing along."
+  framing:
+    communal: "Facts that matter beyond just your own game."
+  comfort:
+    reserved: "Information worth sharing."
+    private: "Knowledge worth passing along."
+
+S-6:
+  default: "Send this to someone who needs it."
+  voice:
+    authority: "Forward this resource to someone who would benefit."
+    elder: "Know someone who could use this? Send it their way."
+  humor:
+    warm: "Someone in your life could use this. You already know who."
+    understated: "A specific person just came to mind. Send it to them."
+  framing:
+    communal: "Someone in your life could use this. You know who."
+  comfort:
+    reserved: "Send this to someone who'd find it useful."
+    private: "Share this with someone who'd appreciate it."
+
+S-7:
+  default: "Smarter together."
+  voice:
+    authority: "Collective knowledge improves outcomes."
+    elder: "We've always been smarter when we learn together."
+  humor:
+    warm: "We all know a bit. Together, we know enough."
+    understated: "Smarter together. By a not insignificant margin."
+  framing:
+    communal: "What you learn here ripples further than you think."
+  comfort:
+    reserved: "Better informed together."
+    private: "Learning together."
+
+S-8:
+  default: "Think you know? Prove it."
+  voice:
+    authority: "Confident in your knowledge? Verify it."
+    elder: "Think you've got it figured out? Let's see."
+  humor:
+    warm: "Think you know? Only one way to find out."
+    understated: "Think you know? A verifiable claim, as it happens."
+    minimal: "Test your knowledge."
+  framing:
+    communal: "Think you know? Prove it — then pass it on."
+  directness:
+    diplomatic: "If you think you know, here's a chance to confirm it."
+    contextual: "Most people think they know. Most people are surprised by the results."
+  comfort:
+    reserved: "Think you know the numbers? Prove it."
+    private: "Think you understand? Test yourself."
+
+# ============================================================================
+# TOOLS PILLAR — Player tools, limits, dashboards, self-management
+# ============================================================================
+
+T-1:
+  default: "Your tools. Your rules."
+  voice:
+    authority: "Professional-grade tools. Player-defined settings."
+    elder: "These are your tools. You set the rules."
+  humor:
+    warm: "We built the tools. You set the rules. Seems fair."
+    understated: "Your tools. Your rules. We didn't see the need to complicate it."
+    minimal: "Your tools. Your parameters."
+  framing:
+    communal: "Tools that protect more than just your bankroll."
+  comfort:
+    reserved: "Your tools. Your boundaries."
+    private: "Your resources. Your preferences."
+
+T-2:
+  default: "Set it. Forget it. Play."
+  voice:
+    authority: "Set once. Maintained automatically."
+    elder: "Set it up once, then relax and enjoy."
+  humor:
+    warm: "Set it once. Then stop thinking about it."
+    understated: "Set it. Forget it. The system, unlike you, will remember."
+    minimal: "Configure once. Runs automatically."
+  framing:
+    communal: "Set it once. Play knowing what matters most is covered."
+  comfort:
+    reserved: "Set it. Forget it. Done."
+    private: "Configure once. It runs from there."
+
+T-3:
+  default: "Play on your terms."
+  voice:
+    authority: "Engage on terms you define."
+    elder: "Play the way that feels right for you."
+  humor:
+    warm: "Your terms. That's how this should work."
+    understated: "Play on your terms. A not unreasonable expectation."
+  framing:
+    communal: "Play on terms that protect what matters beyond the game."
+  comfort:
+    reserved: "Participate on your terms."
+    private: "Engage on your own terms."
+
+T-4:
+  default: "Built for players, by players."
+  voice:
+    authority: "Designed by experts with direct user input."
+    elder: "Built by people who've been where you are."
+  humor:
+    warm: "Built by people who play. You can tell."
+    understated: "Built by players, for players. The logic was not especially complicated."
+  framing:
+    communal: "Built for players who care about more than just the game."
+  comfort:
+    reserved: "Built for users, by users."
+    private: "Designed for people like you, by people like you."
+
+# ============================================================================
+# HELP PILLAR — Support, harm reduction, help-seeking encouragement
+# ============================================================================
+
+H-1:
+  default: "Here when you need us."
+  voice:
+    authority: "Professional support is available whenever you need it."
+    elder: "We're right here whenever you're ready."
+  humor:
+    warm: "We're here. Whenever the time is right, so are we."
+  framing:
+    communal: "Here when you need us — for your sake and theirs."
+  directness:
+    diplomatic: "Support is here whenever the time is right."
+    contextual: "Sometimes you need someone. We're here for that."
+  comfort:
+    reserved: "Support available whenever you need it."
+    private: "Resources are here whenever you need them."
+
+H-2:
+  default: "No judgment. Just support."
+  voice:
+    authority: "Confidential, non-judgmental professional support."
+    elder: "No judgment here. Just people who care."
+  humor:
+    warm: "No judgment. Just people who've been doing this a while."
+  framing:
+    communal: "No judgment. Just support for what you're going through."
+  directness:
+    diplomatic: "A safe space with no judgment — only support."
+    contextual: "Everyone's situation is different. What's the same is that support is here, with no judgment attached."
+  comfort:
+    reserved: "No judgment. Just guidance."
+    private: "Confidential. Non-judgmental. Here for you."
+
+H-3:
+  default: "One tap away. Always."
+  voice:
+    authority: "Immediate access to support. Available 24/7."
+    elder: "Help is just one tap away, any time."
+  humor:
+    warm: "One tap. That's all it takes."
+  framing:
+    communal: "One tap away — for you or someone you care about."
+  comfort:
+    reserved: "Support is one tap away. Always."
+    private: "Resources are one tap away. Always."
