@@ -1,0 +1,549 @@
+# CTA Cultural Variants
+# ==========================
+# Adapted versions of Playbook calls-to-action for different cultural profiles.
+#
+# Default voice: peer / individual / irreverent / blunt / open
+# The default is the recommended Playbook voice — tested, proven, and designed
+# to work in markets where gambling is openly discussed and informal
+# communication resonates.
+#
+# These variants let operators adapt CTAs when their market differs
+# on one or more cultural dimensions. Pick the variant that matches your
+# cultural_profile setting in _brand.yml.
+#
+# CTAs are short action phrases, so the primary dimensions that change them
+# are voice, framing, and comfort. Humor and directness are included only
+# where they genuinely alter the CTA text.
+#
+# Dimensions are only listed when they materially change the CTA.
+# If a dimension isn't listed, the default works across all values
+# of that dimension.
+#
+# See brand-book/09-cultural-adaptation.md for full dimension definitions.
+
+# ============================================================================
+# ENTERTAINMENT LITERACY — Quizzes, explainers, odds breakdowns
+# ============================================================================
+
+EL-1:
+  default: "Take the quiz"
+  voice:
+    authority: "Complete the assessment"
+    elder: "Give the quiz a try"
+  framing:
+    communal: "Take the quiz — and pass it along"
+  comfort:
+    reserved: "Test your knowledge"
+    private: "Explore the questions"
+
+EL-2:
+  default: "Test your game IQ"
+  voice:
+    authority: "Evaluate your understanding"
+    elder: "See how much you know"
+  framing:
+    communal: "Test your game IQ — then see who else should"
+  comfort:
+    reserved: "Test your number IQ"
+    private: "Test your knowledge"
+
+EL-3:
+  default: "See the real odds"
+  voice:
+    authority: "Review verified odds data"
+    elder: "Take a look at the real odds"
+  framing:
+    communal: "See the odds — especially when others are counting on you"
+  comfort:
+    reserved: "See the real numbers"
+    private: "See the actual probabilities"
+
+EL-4:
+  default: "Read the breakdown"
+  voice:
+    authority: "Review the full analysis"
+    elder: "Read through the breakdown"
+  comfort:
+    reserved: "Read the analysis"
+    private: "Read the explanation"
+
+EL-5:
+  default: "Watch the explainer"
+  voice:
+    authority: "View the educational overview"
+    elder: "Watch the walkthrough"
+  framing:
+    communal: "Watch the explainer — then pass it along"
+  comfort:
+    private: "Watch the overview"
+
+EL-6:
+  default: "See how it works"
+  voice:
+    authority: "Review the methodology"
+    elder: "Let me show you how it works"
+  comfort:
+    reserved: "See how the numbers work"
+    private: "See how the system works"
+
+EL-7:
+  default: "Get the facts"
+  voice:
+    authority: "Review the verified data"
+    elder: "Here are the facts"
+  framing:
+    communal: "Get the facts — for more than just your own sake"
+  comfort:
+    reserved: "Get the numbers"
+    private: "Get the information"
+
+EL-8:
+  default: "Compare the odds"
+  voice:
+    authority: "Conduct a comparative analysis"
+    elder: "Compare the odds for yourself"
+  framing:
+    communal: "Compare the odds — and share what you find"
+  comfort:
+    reserved: "Compare the numbers"
+    private: "Compare the probabilities"
+
+EL-9:
+  default: "See the math"
+  voice:
+    authority: "Review the mathematical analysis"
+    elder: "Take a look at the math"
+  comfort:
+    reserved: "See the calculations"
+    private: "See the mathematics"
+
+EL-10:
+  default: "Try the odds calculator"
+  voice:
+    authority: "Use the probability calculator"
+    elder: "Give the odds calculator a try"
+  framing:
+    communal: "Try the odds calculator — it's worth sharing"
+  comfort:
+    reserved: "Try the number calculator"
+    private: "Try the probability calculator"
+
+# ============================================================================
+# TOOL ADOPTION — Limits, budgets, session controls, dashboards
+# ============================================================================
+
+TA-1:
+  default: "Set your limits"
+  voice:
+    authority: "Establish your limits"
+    elder: "Set the limits that feel right for you"
+  framing:
+    communal: "Set limits that protect what matters"
+  comfort:
+    reserved: "Set your boundaries"
+    private: "Set your preferences"
+
+TA-2:
+  default: "Try the bankroll planner"
+  voice:
+    authority: "Open the financial planning tool"
+    elder: "Give the bankroll planner a try"
+  framing:
+    communal: "Plan a budget that looks after more than the game"
+  comfort:
+    reserved: "Try the budget planner"
+    private: "Try the spending planner"
+
+TA-3:
+  default: "Check your stats"
+  voice:
+    authority: "Review your activity metrics"
+    elder: "Take a look at your stats"
+  framing:
+    communal: "Check your stats — they affect more than just you"
+  comfort:
+    reserved: "Check your numbers"
+    private: "Review your activity"
+
+TA-4:
+  default: "Set a session reminder"
+  voice:
+    authority: "Set up session alerts"
+    elder: "Set a reminder so you stay on track"
+  framing:
+    communal: "Set reminders — for your sake and theirs"
+  comfort:
+    reserved: "Set a time reminder"
+    private: "Set a personal reminder"
+
+TA-5:
+  default: "See your activity"
+  voice:
+    authority: "Review your usage report"
+    elder: "Take a look at your activity"
+  comfort:
+    reserved: "See your history"
+    private: "Review your history"
+
+TA-6:
+  default: "Set your budget"
+  voice:
+    authority: "Define your spending limits"
+    elder: "Set a budget that works for you"
+  framing:
+    communal: "Set a budget that protects what matters most"
+  comfort:
+    reserved: "Set your spending limit"
+    private: "Set your financial boundaries"
+
+TA-7:
+  default: "Update your limits"
+  voice:
+    authority: "Adjust your established limits"
+    elder: "Update your limits whenever you need to"
+  comfort:
+    reserved: "Update your boundaries"
+    private: "Update your preferences"
+
+TA-8:
+  default: "Turn on session reminders"
+  voice:
+    authority: "Activate session alerts"
+    elder: "Turn on reminders — they really help"
+  framing:
+    communal: "Turn on reminders — the people around you will notice"
+  comfort:
+    reserved: "Turn on time reminders"
+    private: "Enable personal reminders"
+
+TA-9:
+  default: "Open your dashboard"
+  voice:
+    authority: "Open your control panel"
+    elder: "Open your dashboard and take a look"
+  comfort:
+    reserved: "Open your overview"
+    private: "Open your personal overview"
+
+TA-10:
+  default: "Activate your tools"
+  voice:
+    authority: "Activate your player tools"
+    elder: "Get your tools set up"
+  framing:
+    communal: "Activate tools that look after more than just the game"
+  comfort:
+    reserved: "Activate your features"
+    private: "Enable your personal tools"
+
+# ============================================================================
+# CONTENT ENGAGEMENT — Reading, browsing, navigation
+# ============================================================================
+
+CE-1:
+  default: "Explore more"
+  voice:
+    authority: "View additional resources"
+    elder: "There's more to explore"
+  framing:
+    communal: "Explore more — and share what stands out"
+
+CE-2:
+  default: "Read the full article"
+  voice:
+    authority: "Read the complete publication"
+    elder: "Read the full piece — it's worth it"
+
+CE-3:
+  default: "See all myths"
+  voice:
+    authority: "Review the complete myth index"
+    elder: "See all the myths we've covered"
+  humor:
+    warm: "See the full list. Some of these are hard to let go of."
+    understated: "See all the myths. It's not a short list."
+  comfort:
+    reserved: "See all misconceptions"
+    private: "See common misconceptions"
+
+CE-4:
+  default: "Watch the video"
+  voice:
+    authority: "View the educational video"
+    elder: "Watch the video — it explains it well"
+  framing:
+    communal: "Watch the video — it's worth passing along"
+
+CE-5:
+  default: "Keep reading"
+  voice:
+    authority: "Continue reading"
+    elder: "Keep going — it gets better"
+
+CE-6:
+  default: "See related topics"
+  voice:
+    authority: "Browse related research"
+    elder: "See what else we've covered"
+  comfort:
+    reserved: "See related information"
+    private: "Explore related content"
+
+CE-7:
+  default: "Browse by game type"
+  voice:
+    authority: "Filter by category"
+    elder: "Pick the game you're curious about"
+  comfort:
+    reserved: "Browse by category"
+    private: "Browse by topic"
+
+CE-8:
+  default: "Start from the beginning"
+  voice:
+    authority: "Begin the introductory module"
+    elder: "Start from the top — it builds on itself"
+
+# ============================================================================
+# SOCIAL SHARING — Sharing scores, facts, and content with others
+# ============================================================================
+
+SS-1:
+  default: "Share this"
+  voice:
+    authority: "Distribute this resource"
+    elder: "Pass this along"
+  framing:
+    communal: "Share this with someone who matters"
+
+SS-2:
+  default: "Challenge a friend"
+  voice:
+    authority: "Invite someone to take the challenge"
+    elder: "Challenge someone you know"
+  framing:
+    communal: "Challenge someone you care about"
+  comfort:
+    reserved: "Challenge a friend's knowledge"
+    private: "See who knows more"
+
+SS-3:
+  default: "Send to a friend"
+  voice:
+    authority: "Forward to someone you know"
+    elder: "Send this to someone you care about"
+  framing:
+    communal: "Send to someone who should see this"
+
+SS-4:
+  default: "Share your score"
+  voice:
+    authority: "Publish your results"
+    elder: "Show others how you did"
+  framing:
+    communal: "Share your score with someone who'd care"
+  comfort:
+    reserved: "Share your results"
+    private: "Share how you did"
+
+SS-5:
+  default: "Tag someone who needs this"
+  voice:
+    authority: "Forward to a relevant contact"
+    elder: "Send this to someone who'd benefit"
+  framing:
+    communal: "Tag someone who needs to see this"
+  comfort:
+    reserved: "Tag someone who'd find this useful"
+    private: "Share with someone who'd appreciate this"
+
+SS-6:
+  default: "Post your result"
+  voice:
+    authority: "Publish your assessment result"
+    elder: "Share how you did"
+  framing:
+    communal: "Post your result — see who it reaches"
+  comfort:
+    reserved: "Post your score"
+    private: "Share your result"
+
+SS-7:
+  default: "Share the facts"
+  voice:
+    authority: "Distribute the verified data"
+    elder: "Pass the facts along"
+  framing:
+    communal: "Share the facts with someone who matters"
+  comfort:
+    reserved: "Share what you've learned"
+    private: "Share the information"
+
+SS-8:
+  default: "Spread the word"
+  voice:
+    authority: "Help raise awareness"
+    elder: "Help us spread the word"
+  framing:
+    communal: "Spread the word to the people who matter"
+  comfort:
+    reserved: "Help others learn"
+    private: "Help share the knowledge"
+
+# ============================================================================
+# HELP-SEEKING — Support access, pausing, confidential help
+# ============================================================================
+
+HS-1:
+  default: "Talk to someone — free and confidential"
+  voice:
+    authority: "Reach free, confidential professional support"
+    elder: "Talk to someone who understands — it's free and private"
+  framing:
+    communal: "Help is here — for your sake and for those counting on you"
+  directness:
+    diplomatic: "Free, confidential support is available when you're ready"
+    contextual: "Sometimes it helps to talk. It's free and completely confidential"
+  comfort:
+    reserved: "Speak with a trained advisor — free and confidential"
+    private: "Confidential support is available — free, anytime"
+
+HS-2:
+  default: "Call {{HELPLINE_NUMBER}}"
+  voice:
+    authority: "Contact the support helpline: {{HELPLINE_NUMBER}}"
+    elder: "Give them a call — {{HELPLINE_NUMBER}}"
+  framing:
+    communal: "Call {{HELPLINE_NUMBER}} — for you or someone you love"
+  comfort:
+    reserved: "Call the support line: {{HELPLINE_NUMBER}}"
+    private: "Confidential helpline: {{HELPLINE_NUMBER}}"
+
+HS-3:
+  default: "Pause your account"
+  voice:
+    authority: "Initiate a voluntary account suspension"
+    elder: "Take a pause — you can always come back"
+  framing:
+    communal: "Pause your account — the people around you will notice"
+  directness:
+    diplomatic: "You can pause your account anytime"
+    contextual: "Need a break? Pausing your account is easy and reversible"
+  comfort:
+    reserved: "Pause your account"
+    private: "Take a pause"
+
+HS-4:
+  default: "Find support"
+  voice:
+    authority: "Locate professional support services"
+    elder: "Find the support that's right for you"
+  framing:
+    communal: "Find support — for your sake and theirs"
+  comfort:
+    reserved: "Find guidance"
+    private: "Find resources"
+
+HS-5:
+  default: "Chat with someone now"
+  voice:
+    authority: "Connect with a support advisor now"
+    elder: "Chat with someone who cares — right now"
+  framing:
+    communal: "Chat with someone — it matters beyond just you"
+  comfort:
+    reserved: "Chat with an advisor now"
+    private: "Start a confidential chat"
+
+HS-6:
+  default: "Take a break"
+  voice:
+    authority: "Initiate a cooling-off period"
+    elder: "Take a break — there's no rush"
+  humor:
+    warm: "Take a break. We'll still be here."
+  framing:
+    communal: "Take a break — the people around you will notice"
+  comfort:
+    reserved: "Take a break"
+    private: "Step away for a while"
+
+HS-7:
+  default: "See your options"
+  voice:
+    authority: "Review available support options"
+    elder: "See what's available — there's more than you think"
+  framing:
+    communal: "See your options — they protect more than just you"
+  comfort:
+    reserved: "See your options"
+    private: "Explore available resources"
+
+HS-8:
+  default: "Get confidential support"
+  voice:
+    authority: "Reach confidential professional services"
+    elder: "Get support — completely private, completely free"
+  framing:
+    communal: "Confidential support — for your sake and for those counting on you"
+  comfort:
+    reserved: "Get confidential guidance"
+    private: "Access private support"
+
+# ============================================================================
+# ACCOUNT MANAGEMENT — Settings, preferences, activity downloads
+# ============================================================================
+
+AM-1:
+  default: "Go to settings"
+  voice:
+    authority: "Open account settings"
+    elder: "Head to your settings"
+
+AM-2:
+  default: "Review your account"
+  voice:
+    authority: "Conduct an account review"
+    elder: "Take a moment to review your account"
+  framing:
+    communal: "Review your account — it affects more than just you"
+  comfort:
+    reserved: "Review your profile"
+    private: "Review your information"
+
+AM-3:
+  default: "Update your preferences"
+  voice:
+    authority: "Modify account preferences"
+    elder: "Update your preferences whenever you like"
+
+AM-4:
+  default: "Manage your tools"
+  voice:
+    authority: "Manage your player tools"
+    elder: "Manage your tools — keep them working for you"
+  comfort:
+    reserved: "Manage your features"
+    private: "Manage your personal tools"
+
+AM-5:
+  default: "Download your activity"
+  voice:
+    authority: "Export your activity report"
+    elder: "Download your activity — it's good to keep track"
+  framing:
+    communal: "Download your activity — it's worth knowing the full picture"
+  comfort:
+    reserved: "Download your history"
+    private: "Download your records"
+
+AM-6:
+  default: "Complete your setup"
+  voice:
+    authority: "Finalize your account setup"
+    elder: "Finish setting things up — it only takes a minute"
+  framing:
+    communal: "Complete your setup — it protects more than just the game"
+  comfort:
+    reserved: "Complete your profile setup"
+    private: "Finish your personal setup"

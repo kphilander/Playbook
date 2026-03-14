@@ -23,23 +23,23 @@
     background-size: 60px 60px;
   }
   .card-header { padding: 48px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .card-logo { font-family: var(--pb-font-heading); font-size: 32px; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); }
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .card-pillar { font-family: var(--pb-font-heading); font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+  .card-pillar { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
-  .htp-label { font-family: var(--pb-font-heading); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 16px; }
-  .card-title { font-family: var(--pb-font-heading); font-size: 44px; font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
+  .htp-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 16px; }
+  .card-title { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
   .odds-table { width: 100%; border-collapse: collapse; }
-  .odds-table th { font-family: var(--pb-font-heading); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-neutral-500); text-align: left; padding: 0 0 12px 0; border-bottom: 2px solid var(--pb-color-primary-light); }
+  .odds-table th { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-neutral-500); text-align: left; padding: 0 0 12px 0; border-bottom: 2px solid var(--pb-color-primary-light); }
   .odds-table th:last-child { text-align: right; }
-  .odds-table td { font-family: var(--pb-font-body); font-size: 22px; color: var(--pb-color-neutral-300); padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .odds-table td { font-family: var(--pb-font-body); font-size: calc(22px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .odds-table td:first-child { font-weight: 600; color: var(--pb-color-white); }
-  .odds-table td:last-child { text-align: right; font-family: var(--pb-font-mono); font-weight: 600; font-size: 22px; color: var(--pb-color-accent); }
+  .odds-table td:last-child { text-align: right; font-family: var(--pb-font-mono); font-weight: 600; font-size: calc(22px * var(--pb-template-text-scale, 1)); color: var(--pb-color-accent); }
   .odds-table tr:last-child td { border-bottom: none; }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: 16px; color: var(--pb-color-white); }
-  .footer-legal { font-size: 13px; color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>

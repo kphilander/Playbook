@@ -58,7 +58,7 @@
     }
     .card-logo {
       font-family: var(--pb-font-heading);
-      font-size: 22px;
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-white);
     }
     .card-logo .logo-play {
@@ -89,7 +89,7 @@
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-body);
-      font-size: 9px;
+      font-size: calc(9px * var(--pb-template-text-scale, 1));
       color: rgba(255,255,255,0.25);
     }
 
@@ -104,20 +104,20 @@
     }
     .helpline-headline {
       font-family: var(--pb-font-heading);
-      font-size: 24px;
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       color: var(--pb-color-white);
       margin-bottom: 6px;
     }
     .helpline-sub {
       font-family: var(--pb-font-body);
-      font-size: 15px;
+      font-size: calc(15px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-300);
       margin-bottom: 20px;
     }
     .helpline-number {
       font-family: var(--pb-font-mono);
-      font-size: 36px;
+      font-size: calc(36px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-secondary);
       letter-spacing: 0.02em;
@@ -125,7 +125,7 @@
     }
     .helpline-channels {
       font-family: var(--pb-font-body);
-      font-size: 14px;
+      font-size: calc(14px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
     .helpline-channels strong {
@@ -148,13 +148,13 @@
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-mono);
-      font-size: 12px;
+      font-size: calc(12px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-primary);
       margin-bottom: 6px;
     }
     .qr-label {
       font-family: var(--pb-font-body);
-      font-size: 11px;
+      font-size: calc(11px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
 
@@ -165,12 +165,12 @@
     }
     .legal-text {
       font-family: var(--pb-font-body);
-      font-size: 11px;
+      font-size: calc(11px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
     .availability {
       font-family: var(--pb-font-heading);
-      font-size: 13px;
+      font-size: calc(13px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-accent);
       float: right;
@@ -206,7 +206,7 @@
     </div>
     <div class="card-footer">
       <span class="availability">24/7</span>
-      <span class="legal-text">You must be {{MIN_AGE}}+ to gamble.</span>
+      <span class="legal-text">{{AGE_DISCLAIMER}}</span>
     </div>
   </div>
 </body>

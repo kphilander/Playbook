@@ -50,7 +50,7 @@
     }
     .screen-logo {
       font-family: var(--pb-font-heading);
-      font-size: 36px;
+      font-size: calc(36px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-white);
     }
     .screen-logo .logo-play {
@@ -81,7 +81,7 @@
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-body);
-      font-size: 14px;
+      font-size: calc(14px * var(--pb-template-text-scale, 1));
       color: rgba(255,255,255,0.25);
     }
 
@@ -103,7 +103,7 @@
       justify-content: center;
       line-height: 1;
       font-family: var(--pb-font-heading);
-      font-size: 20px;
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -115,7 +115,7 @@
     }
     .screen-headline {
       font-family: var(--pb-font-heading);
-      font-size: 64px;
+      font-size: calc(64px * var(--pb-template-text-scale, 1));
       font-weight: 800;
       line-height: 1.1;
       color: var(--pb-color-white);
@@ -125,7 +125,7 @@
     }
     .screen-subhead {
       font-family: var(--pb-font-body);
-      font-size: 28px;
+      font-size: calc(28px * var(--pb-template-text-scale, 1));
       line-height: 1.5;
       color: var(--pb-color-neutral-300);
       max-width: 800px;
@@ -141,13 +141,13 @@
     }
     .stat-game {
       font-family: var(--pb-font-body);
-      font-size: 18px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-300);
       margin-bottom: 8px;
     }
     .stat-pct {
       font-family: var(--pb-font-heading);
-      font-size: 48px;
+      font-size: calc(48px * var(--pb-template-text-scale, 1));
       font-weight: 900;
       line-height: 1;
       letter-spacing: -0.03em;
@@ -157,7 +157,7 @@
     .stat-pct.orange { color: var(--pb-color-accent); }
     .stat-label {
       font-family: var(--pb-font-body);
-      font-size: 16px;
+      font-size: calc(16px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
       margin-top: 4px;
     }
@@ -177,13 +177,13 @@
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-mono);
-      font-size: 16px;
+      font-size: calc(16px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-primary);
       margin-bottom: 12px;
     }
     .qr-label {
       font-family: var(--pb-font-heading);
-      font-size: 18px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-white);
       text-align: center;
@@ -200,7 +200,7 @@
     }
     .helpline-text {
       font-family: var(--pb-font-mono);
-      font-size: 22px;
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
       font-weight: 600;
       color: var(--pb-color-white);
     }
@@ -213,7 +213,7 @@
     }
     .legal-text {
       font-family: var(--pb-font-body);
-      font-size: 16px;
+      font-size: calc(16px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
   </style>
@@ -260,7 +260,7 @@
       <span class="helpline-text">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     </div>
     <div class="legal-strip">
-      <span class="legal-text">You must be {{MIN_AGE}}+ to gamble. Gambling involves risk. Play on your terms.</span>
+      <span class="legal-text">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</span>
     </div>
   </div>
 </body>

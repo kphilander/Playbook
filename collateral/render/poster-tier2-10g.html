@@ -39,7 +39,7 @@
   }
   .logo {
     font-family: var(--pb-font-heading);
-    font-size: 32px;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
   }
   .logo-play {
     font-weight: 800;
@@ -66,7 +66,7 @@
   .headline {
     font-family: var(--pb-font-heading);
     font-weight: 900;
-    font-size: 72px;
+    font-size: calc(72px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     line-height: 1.1;
     letter-spacing: -0.03em;
@@ -74,7 +74,7 @@
   }
   .subhead {
     font-family: var(--pb-font-body);
-    font-size: 26px;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.5;
     margin-bottom: 56px;
@@ -84,7 +84,7 @@
   .helpline-number {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: 72px;
+    font-size: calc(72px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
     letter-spacing: 0.02em;
     margin-bottom: 16px;
@@ -92,7 +92,7 @@
   .helpline-channels {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 22px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     letter-spacing: 0.04em;
     margin-bottom: 48px;
@@ -119,7 +119,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-mono);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-primary);
   }
@@ -129,12 +129,12 @@
   .qr-label-main {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 4px;
   }
   .qr-label-sub {
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
   }
 
@@ -155,12 +155,12 @@
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-body);
-    font-size: 11px;
+    font-size: calc(11px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     letter-spacing: 0.02em;
   }
   .footer-legal {
-    font-size: 13px;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     text-align: right;
     line-height: 1.5;
@@ -198,7 +198,7 @@
   <div class="poster-footer">
     <div class="operator-placeholder">Your logo</div>
     <div class="footer-legal">
-      You must be {{MIN_AGE}}+ to gamble. Gambling involves risk.<br>
+      {{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}<br>
       If you or someone you know has a gambling problem, help is available.
     </div>
   </div>

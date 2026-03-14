@@ -45,7 +45,7 @@
     position: relative;
     z-index: 1;
   }
-  .card-logo { font-family: var(--pb-font-heading); font-size: 36px; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(36px * var(--pb-template-text-scale, 1)); }
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .co-brand {
@@ -60,7 +60,7 @@
   }
   .operator-placeholder {
     font-family: var(--pb-font-heading);
-    font-size: 13px;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     border: 2px dashed rgba(255,255,255,0.15);
     border-radius: 6px;
@@ -84,7 +84,7 @@
     line-height: 1;
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     text-transform: uppercase;
     letter-spacing: 0.08em;
     background: var(--pb-color-secondary);
@@ -98,13 +98,13 @@
   .display-headline {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 72px;
+    font-size: calc(72px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     line-height: 1.1;
     margin-bottom: 24px;
   }
   .display-sub {
-    font-size: 32px;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.4;
     margin-bottom: 64px;
@@ -128,21 +128,21 @@
   .odds-game {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     margin-bottom: 12px;
   }
   .odds-edge {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: 48px;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
   }
   .odds-edge.teal { color: var(--pb-color-secondary); }
   .odds-edge.white { color: var(--pb-color-white); }
   .odds-edge.orange { color: var(--pb-color-accent); }
 
   .display-body {
-    font-size: 28px;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.5;
     margin-bottom: 48px;
@@ -160,7 +160,7 @@
   .quiz-question p {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 28px;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     line-height: 1.4;
     font-style: italic;
@@ -180,7 +180,7 @@
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-mono);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     font-weight: 600;
   }
@@ -190,12 +190,12 @@
   .qr-text strong {
     display: block;
     font-weight: 700;
-    font-size: 24px;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-bottom: 8px;
   }
   .qr-text span {
-    font-size: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
   }
 
@@ -210,12 +210,12 @@
   .helpline-headline {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 56px;
+    font-size: calc(56px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-bottom: 16px;
   }
   .helpline-body {
-    font-size: 26px;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     margin-bottom: 32px;
     line-height: 1.5;
@@ -223,13 +223,13 @@
   .helpline-number {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: 72px;
+    font-size: calc(72px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
     margin-bottom: 16px;
     letter-spacing: 0.04em;
   }
   .helpline-channels {
-    font-size: 24px;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     margin-bottom: 16px;
   }
@@ -244,7 +244,7 @@
   .display-footer span {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: 22px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
   }
 </style>

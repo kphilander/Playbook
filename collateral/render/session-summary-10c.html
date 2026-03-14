@@ -28,7 +28,7 @@
   .card-heading {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 18px;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 24px;
     display: flex;
@@ -37,7 +37,7 @@
   }
   .card-heading .period {
     font-weight: 400;
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
   }
 
@@ -70,7 +70,7 @@
   }
   .bar-label {
     font-family: var(--pb-font-heading);
-    font-size: 11px;
+    font-size: calc(11px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-neutral-300);
     margin-top: 6px;
@@ -87,7 +87,7 @@
     gap: 6px;
     align-items: center;
     font-family: var(--pb-font-mono);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 500;
     color: var(--pb-color-neutral-700);
     margin-top: 16px;
@@ -108,13 +108,13 @@
     margin-top: 4px;
   }
   .limit-label {
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
   }
   .limit-value {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
   }
   .limit-badge {
@@ -122,7 +122,7 @@
     background: #E8FFF8;
     color: var(--pb-color-secondary);
     font-family: var(--pb-font-heading);
-    font-size: 11px;
+    font-size: calc(11px * var(--pb-template-text-scale, 1));
     font-weight: 700;
     padding: 2px 8px;
     border-radius: 4px;
@@ -134,7 +134,7 @@
   /* Manage link */
   .manage-link {
     font-family: var(--pb-font-heading);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-secondary);
     text-decoration: none;

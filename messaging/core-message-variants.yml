@@ -1,0 +1,1216 @@
+# Core Message Cultural Variants
+# ================================
+# Adapted versions of all 74 Playbook core messages for different cultural profiles.
+#
+# Default voice: peer / individual / irreverent / blunt / open
+# The default is the recommended Playbook voice — tested, proven, and designed
+# to work in markets where gambling is openly discussed and informal
+# communication resonates.
+#
+# Variants are organized by message ID matching core-messages.md.
+# Each dimension is only listed when it materially changes the message.
+#
+# Dimensions:
+#   voice:       peer (default) / authority / elder
+#   framing:     individual (default) / communal
+#   humor:       irreverent (default) / warm / understated / minimal
+#   directness:  blunt (default) / diplomatic / contextual
+#   comfort:     open (default) / reserved / private
+#
+# See brand-book/09-cultural-adaptation.md for dimension definitions.
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# PILLAR MESSAGES (16)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# ─── OPEN (Transparency) ─────────────────────────
+
+O-1:
+  default: "The house edge on blackjack is 0.5%. On slots, it's 2–15%. On American roulette, it's 5.26%. Now you know."
+  voice:
+    authority: "Industry-standard return rates: blackjack retains 0.5%, slot machines 2–15%, and American roulette 5.26%. These are the published figures."
+    elder: "I've watched people play for years without knowing these numbers. Blackjack takes 0.5%. Slots take 2–15%. American roulette takes 5.26%. Worth knowing before you sit down."
+  humor:
+    warm: "We love this stuff. Blackjack keeps 0.5%, slots keep 2–15%, American roulette keeps 5.26%. Numbers like these are oddly satisfying once you know them."
+    understated: "Blackjack: 0.5%. Slots: 2–15%. American roulette: 5.26%. The house did the maths some time ago."
+    minimal: "House edge — blackjack: 0.5%. Slots: 2–15%. American roulette: 5.26%."
+  framing:
+    communal: "The house edge on blackjack is 0.5%, on slots it's 2–15%, and on American roulette it's 5.26%. Numbers worth knowing — especially when your plans extend beyond the table."
+  directness:
+    diplomatic: "It helps to know the numbers behind each game. Blackjack carries a 0.5% house edge, slots range from 2–15%, and American roulette sits at 5.26%."
+    contextual: "Every game is designed to earn revenue over time. The house edge on blackjack is 0.5%, slots range from 2–15%, and American roulette is 5.26%. Side by side, the differences are worth noticing."
+  comfort:
+    reserved: "Every entertainment option has a cost structure — just like a subscription fee or a service charge. Some retain as little as 0.5%, others up to 15%. Understanding the margin helps you budget smarter across all your spending."
+    private: "Cost structures are everywhere — streaming services, loyalty programs, financial products. Some take 0.5%, others up to 15%. Understanding how margins work helps you make better decisions about where your money goes."
+
+O-2:
+  default: "Every game has a house edge. It's how the business works. Knowing the edge helps you pick your games and set your budget."
+  voice:
+    authority: "All games operate with a built-in margin known as the house edge. Understanding this margin is essential for informed game selection and budget planning."
+    elder: "Every game takes its cut — that's just how it's always worked. But once you know that, you can make smarter choices about what you play and what you spend."
+  humor:
+    warm: "Every game takes its cut — that's how the lights stay on. But once you know the number, you can make it work for you. That's the real advantage."
+    understated: "Every game has a margin. It's not hidden. Knowing what it is just happens to make every decision after that a better one."
+    minimal: "Every game has a house edge. Use it to choose games and set your budget."
+  framing:
+    communal: "Every game has a house edge — it's how the industry works. Understanding the margin helps you make choices that protect more than just your bankroll."
+  directness:
+    diplomatic: "Games are designed with a built-in margin. Being aware of it can help you make more informed choices about what to play and how much to spend."
+    contextual: "The house edge exists because operators need revenue to run the business. The margin varies — some games retain 0.5%, others retain 15%. The difference between those two numbers shapes a very different evening."
+  comfort:
+    reserved: "Every entertainment product has a built-in margin — the same way a restaurant marks up ingredients or a streaming service prices its plan. Understanding that margin helps you make informed spending decisions."
+    private: "Every product and service you pay for has a built-in cost structure. Understanding how margins work — whether in subscriptions, insurance, or entertainment — helps you budget with clarity and confidence."
+
+O-3:
+  default: "No fine print. Just the real numbers behind the games you play."
+  voice:
+    authority: "Full transparency. Complete odds disclosure for every game on the platform."
+    elder: "No tricks, no buried details. Just the honest numbers behind every game — the way it should be."
+  humor:
+    warm: "We figured you'd rather just see the numbers than wade through the fine print. So that's what we did."
+    understated: "The real numbers. No fine print. Not a complicated idea, really."
+    minimal: "Real numbers. No fine print. Full transparency."
+  framing:
+    communal: "No fine print. Just the real numbers behind the games — because knowing them protects the things that matter most."
+  directness:
+    diplomatic: "We believe in making the numbers behind every game clear and accessible to you."
+    contextual: "The real odds exist in every game's documentation. Most players never encounter them. We publish them here, plainly."
+  comfort:
+    reserved: "Clear information about how costs work across entertainment options — no hidden details, just the real numbers behind each one."
+    private: "Straightforward breakdowns of cost structures across the things you spend on. No hidden fees, no surprises — just clear information to help you decide."
+
+O-4:
+  default: "The odds are public information. We just make them interesting."
+  voice:
+    authority: "Game odds are publicly available data. Our role is to present them in accessible, engaging formats."
+    elder: "The odds have always been out there. We've put them in a format that's actually worth your time."
+  humor:
+    warm: "The odds have always been out there — just not in a form anyone wanted to read. We fixed that part."
+    understated: "The odds are public record. We just made them less tedious."
+    minimal: "The odds are public information, presented clearly."
+  framing:
+    communal: "The odds are public information. We make them easy to understand — because what you know at the table affects more than just the table."
+  directness:
+    diplomatic: "Game odds are available to anyone who looks. We aim to present them in a way that's genuinely useful."
+    contextual: "Regulators require odds to be published. Most players never see them. Here they are, in one place."
+  comfort:
+    reserved: "The numbers behind entertainment products are publicly available — just like nutritional labels or interest rates. We present them in a way that's actually useful."
+    private: "Probability data is published across many industries — from insurance to consumer products. We make those numbers easy to understand so you can apply them to your own decisions."
+
+# ─── SOCIAL (Engagement & Sharing) ───────────────
+
+S-1:
+  default: "Share this with the friend who thinks they have a 'system.'"
+  voice:
+    authority: "Share these resources with anyone who could benefit from a clearer understanding of game mathematics."
+    elder: "We all know someone who's convinced they've cracked the code. Send them this — it might open their eyes."
+  humor:
+    warm: "We've all got that friend who's cracked the code. Send them this — they'll still love their system, but they'll know what it's up against."
+    understated: "For the friend with the system. The maths have some thoughts."
+    minimal: "Share this with someone who would benefit from the facts."
+  framing:
+    communal: "Know someone who thinks they've figured out the system? Share this — the people around you benefit when the math is out in the open."
+  directness:
+    diplomatic: "If you know someone who believes in a winning system, this might be a helpful share."
+    contextual: "Betting systems remain popular because the math behind the games isn't always visible. Here are the numbers — what someone does with them is up to them."
+  comfort:
+    reserved: "Know someone who could benefit from understanding how cost structures and probability work? Pass this along."
+    private: "Share this with someone who'd appreciate a clearer picture of how probability shapes everyday decisions — from pricing to promotions."
+
+S-2:
+  default: "The best players know the game. Now you can too."
+  voice:
+    authority: "Informed participation leads to better outcomes. Review the knowledge that experienced players rely on."
+    elder: "Experience taught the best players to understand the game before they play it. Now you don't have to learn the hard way."
+  humor:
+    warm: "The players who have the most fun tend to know exactly what they're walking into. Now you can too — and it's more interesting than you'd expect."
+    understated: "The best players know the game. Not a coincidence."
+    minimal: "Informed players make better decisions. The information is here."
+  framing:
+    communal: "The smartest players all know the same thing: the math. Knowing it yourself protects more than just your next session."
+  directness:
+    diplomatic: "Understanding the game is a big part of enjoying it. Here's what experienced players already know."
+    contextual: "Players who look into the math tend to manage their spending differently and report enjoying the experience more. Here's what they looked at."
+  comfort:
+    reserved: "Understanding how things work helps you make better choices. Here's what experienced participants know."
+    private: "The people who enjoy entertainment most tend to understand how it works. Here's the knowledge they rely on."
+
+S-3:
+  default: "How well do you really know the odds? There's one way to find out."
+  voice:
+    authority: "Test your knowledge of game probabilities. Most players overestimate their understanding."
+    elder: "Think you know the odds? I've seen plenty of people surprised by what they didn't know. Why not find out?"
+  humor:
+    warm: "Most of us think we know the odds better than we do. There's a quick way to find out — and it's kind of fun to be wrong."
+    understated: "You may know the odds. You may not. One way to find out."
+    minimal: "Test your knowledge of the odds. Take the quiz."
+  framing:
+    communal: "How well do you really know the odds? Find out — and pass it along to someone who'd benefit."
+  directness:
+    diplomatic: "Many players are surprised by what they don't know about the odds. A quick quiz can help you find out where you stand."
+    contextual: "In studies, most players estimated the odds differently from the actual figures. A quick quiz shows where the gaps tend to appear."
+  comfort:
+    reserved: "How well do you understand the numbers behind everyday products and entertainment? There's a quick way to check."
+    private: "How well do you really understand probability? Most people overestimate. Take a quick quiz to find out where you stand."
+
+S-4:
+  default: "Facts worth sharing. Knowledge worth having."
+  voice:
+    authority: "Evidence-based information. Shared for the benefit of all players."
+    elder: "Good information is worth passing along. Always has been."
+  humor:
+    warm: "The kind of facts that come up at dinner and make everyone a little smarter. Worth passing along."
+    understated: "Facts that seem, on reflection, not entirely useless to pass along."
+    minimal: "Facts worth sharing. Knowledge worth having."
+  framing:
+    communal: "Facts worth sharing — especially with the people who matter most to you."
+  directness:
+    diplomatic: "Reliable information that can genuinely help. Worth sharing with people you care about."
+    contextual: "Accurate information about the games rarely comes up in casual conversation. These are the numbers that tend to surprise people."
+  comfort:
+    reserved: "Useful information worth passing along."
+    private: "Practical knowledge about entertainment spending. Worth keeping — and sharing."
+
+# ─── TOOLS (Player Controls) ─────────────────────
+
+T-1:
+  default: "Deposit limits take 10 seconds to set. It's like a seatbelt for your bankroll — you set it once and it works in the background."
+  voice:
+    authority: "Deposit limits can be set in approximately 10 seconds. Once active, they enforce your budget automatically across all sessions."
+    elder: "Setting a deposit limit takes about 10 seconds and it runs quietly in the background from there. Think of it as a simple safeguard you only have to set once."
+  humor:
+    warm: "Ten seconds to set a deposit limit, and then it runs in the background while you get on with things. One of those small decisions that does a lot of heavy lifting."
+    understated: "Ten seconds. Deposit limit set. It does the rest. You'd barely notice it's there, which is the point."
+    minimal: "Deposit limits take 10 seconds to set and enforce your budget automatically."
+  framing:
+    communal: "Deposit limits take 10 seconds to set. They protect more than just your session — they keep the rest of your week on track."
+  directness:
+    diplomatic: "You can set a deposit limit in about 10 seconds. It works in the background to help you stay within the budget you've chosen."
+    contextual: "Most in-the-moment spending decisions happen differently from planned ones. A deposit limit takes 10 seconds to set and runs in the background from there."
+  comfort:
+    reserved: "Spending limits take 10 seconds to set — like setting a cap on any entertainment subscription. Once active, they manage your budget automatically."
+    private: "Budget controls take 10 seconds to configure. Like any good financial tool, they run in the background so your spending stays within the amount you choose."
+
+T-2:
+  default: "Your tools. Your limits. Your call."
+  voice:
+    authority: "A full suite of player controls is at your disposal. Budget limits, session management, and activity tracking — all at your discretion."
+    elder: "These tools are yours. The limits are yours. What you do with them is entirely your decision."
+  humor:
+    warm: "We built the tools. You set the limits. That's the whole arrangement — and it works."
+    understated: "Your tools. Your limits. Your call. We're not involved in that part."
+    minimal: "Your tools. Your limits. Your choice."
+  framing:
+    communal: "Your tools. Your limits. Your call — and the people counting on you benefit from every limit you set."
+  directness:
+    diplomatic: "We provide the tools and you decide how to use them. Limits, reminders, and controls are all within your reach."
+    contextual: "Every player's budget and comfort level is different. The control tools are here — limits, reminders, and tracking — ready to be configured."
+  comfort:
+    reserved: "Your controls. Your spending limits. Your decision — the same way you'd manage any entertainment budget."
+    private: "Your financial tools. Your preferences. Entirely your choice — just like managing any other part of your budget."
+
+T-3:
+  default: "Set your budget before you play. It's the one decision that makes every other decision easier."
+  voice:
+    authority: "Establishing a pre-session budget is the single most effective tool for responsible play. It simplifies every subsequent decision."
+    elder: "Here's something I wish more people knew earlier: set your budget before you start. It takes the pressure off every choice after that."
+  humor:
+    warm: "Set your budget before you play. It's one decision, and it takes the pressure off every decision after it. Weirdly freeing."
+    understated: "Set your budget first. Everything after that gets noticeably simpler."
+    minimal: "Set your budget before you play. It simplifies every subsequent decision."
+  framing:
+    communal: "Setting a budget before playing helps protect the things that matter most — the plans, people, and priorities beyond the game."
+  directness:
+    diplomatic: "Consider setting your budget before you begin. Many players find it takes the guesswork out of everything else."
+    contextual: "Players who set a budget in advance and players who don't show very different spending patterns over time. The budget takes a few seconds to set."
+  comfort:
+    reserved: "Setting your spending limit in advance is the one step that simplifies every choice that follows."
+    private: "Decide on your entertainment budget before you start. It's the one choice that makes everything else straightforward."
+
+T-4:
+  default: "Play stats, session history, spending patterns — it's all in your dashboard. No surprises."
+  voice:
+    authority: "Comprehensive analytics are available in your dashboard: session data, spending trends, and play statistics. Full visibility at all times."
+    elder: "Your dashboard has everything — how long you've played, what you've spent, the patterns over time. No guessing, no surprises."
+  humor:
+    warm: "Play stats, session history, spending patterns — your dashboard keeps track of all of it so you don't have to do the maths yourself."
+    understated: "Stats. History. Spending. All in the dashboard. Nothing left to wonder about."
+    minimal: "Play stats, session history, and spending patterns are in your dashboard."
+  framing:
+    communal: "Play stats, session history, spending patterns — all in your dashboard. Knowing where your money goes protects the plans that matter most."
+  directness:
+    diplomatic: "Your dashboard offers a clear view of your play stats, session history, and spending patterns — so you can stay informed."
+    contextual: "Play stats, session history, and spending patterns — they exist whether you look at them or not. Your dashboard puts them all in one place."
+  comfort:
+    reserved: "Spending insights, usage history, and trends — available in your account anytime, like checking any financial summary."
+    private: "Your spending summary, time usage, and budget tracking are all in one place. Full visibility into how you use your entertainment budget — always."
+
+# ─── HELP (Support & Resources) ──────────────────
+# Tone is already warm/direct. Variants focus mainly on voice and comfort.
+
+H-1:
+  default: "Need to talk? Free, confidential, 24/7. {{HELPLINE_NUMBER}}"
+  voice:
+    authority: "Professional support is available free of charge, 24 hours a day, 7 days a week. All calls are confidential. {{HELPLINE_NUMBER}}"
+    elder: "If you need someone to talk to, there are people ready to listen — any time, day or night. It's free and completely confidential. {{HELPLINE_NUMBER}}"
+  framing:
+    communal: "Free, confidential support is here — for you, or for someone you're looking out for. 24/7. {{HELPLINE_NUMBER}}"
+  comfort:
+    reserved: "Confidential support is available anytime, at no cost. {{HELPLINE_NUMBER}}"
+    private: "Need to talk to someone? Free, confidential support available 24/7. {{HELPLINE_NUMBER}}"
+
+H-2:
+  default: "Free, confidential support — for any question about gambling. No judgment. Ever."
+  voice:
+    authority: "Confidential, no-cost support services are available for any question related to gambling. There is no judgment involved."
+    elder: "Whatever your question is, you can ask it. Support is free, confidential, and there's never any judgment. That's a promise."
+  framing:
+    communal: "Free, confidential support — for you, or for someone close to you. No judgment. Ever."
+  comfort:
+    reserved: "Free, confidential support — for any question about your spending or habits. No judgment, no pressure."
+    private: "Free, confidential support for any question about your habits or wellbeing. No judgment. Ever."
+
+H-3:
+  default: "You can pause your account for as long as you need. Here's how."
+  voice:
+    authority: "Account suspension is available for any duration you choose. The process is straightforward and takes effect immediately."
+    elder: "If you need a break — for a day, a week, or longer — you can pause anytime. When you're ready to come back, everything will be right here."
+  framing:
+    communal: "You can pause your account for as long as you need. Sometimes stepping back is the best thing you can do — for yourself and for those counting on you."
+  directness:
+    diplomatic: "Taking a break is always an option. You can pause your account for any length of time — here's how to do it."
+    contextual: "Account pauses are available for any duration and take effect immediately. A day, a week, longer — the option is here whenever you want it."
+  comfort:
+    reserved: "You can pause your account at any time, for any duration. Here's how."
+    private: "You can take a break from your account at any time, for as long as you need. Here's how to set it up."
+
+H-4:
+  default: "Support is one tap away. Whenever you're ready."
+  voice:
+    authority: "Support services are immediately accessible through your account. Available whenever you choose to engage."
+    elder: "Help is right here whenever you want it. One tap. No hoops, no waiting."
+  framing:
+    communal: "Support is one tap away — for you or anyone you're looking out for. Whenever the time is right."
+  comfort:
+    reserved: "Support is easily accessible. Available whenever you need it."
+    private: "Confidential support is one tap away. On your terms, on your timeline."
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# CONTEXTUAL MESSAGES (36)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# ─── DEPOSIT SCREEN ──────────────────────────────
+
+D-1:
+  default: "Setting a deposit limit? Smart move. Pick your number and play without second-guessing."
+  voice:
+    authority: "Configuring a deposit limit is a recommended first step. Select your preferred amount and proceed with confidence."
+    elder: "Setting a deposit limit is one of the smartest things you can do. Choose your number and you won't have to think about it again."
+  humor:
+    warm: "A deposit limit is one of those things that feels like nothing when you set it and everything when it works. Pick your number."
+    understated: "Setting a deposit limit. Not a bad instinct. Pick your number."
+    minimal: "Set your deposit limit. Choose your amount."
+  framing:
+    communal: "A deposit limit protects more than just your session — it keeps the rest of your week on track. Pick your number."
+  directness:
+    diplomatic: "Setting a deposit limit is a great way to play with confidence. Choose an amount that works for you."
+    contextual: "Players who set deposit limits and players who don't describe their experience quite differently. Pick your number — it takes a few seconds."
+  comfort:
+    reserved: "Setting a spending limit is a smart step — like capping any entertainment subscription. Choose your amount and proceed with confidence."
+    private: "Setting a budget cap is straightforward — the same principle as any financial tool that keeps spending in check. Pick your number and move on with confidence."
+
+D-2:
+  default: "Think of this as your entertainment budget for the week. You pick the number."
+  voice:
+    authority: "This deposit limit represents your entertainment allocation for the specified period. The amount is entirely your decision."
+    elder: "Think of this the way you'd think about any entertainment budget — a number you're comfortable with for the week. You choose it."
+  humor:
+    warm: "Think of it like any other entertainment budget — dinner out, a film, this. You pick the number. It's yours."
+    understated: "Your entertainment budget for the week. You pick the number. That's it."
+    minimal: "Weekly entertainment budget. Set your preferred amount."
+  framing:
+    communal: "Think of this as your entertainment budget for the week — the number that keeps the rest of your plans on track. You pick it."
+  directness:
+    diplomatic: "Consider this your entertainment budget for the period. Choose an amount you're comfortable with."
+    contextual: "Just like a movie or dining-out budget, this is your entertainment allowance for the week. Pick a number that fits your finances."
+  comfort:
+    reserved: "This is your entertainment spending limit for the week. Choose the amount that suits you."
+    private: "This is your weekly entertainment budget. Set the amount that works for your finances."
+
+D-3:
+  default: "Your deposit limit is set. Adjust it anytime in settings."
+  voice:
+    authority: "Your deposit limit has been set successfully. Adjustments can be made at any time through your account settings."
+    elder: "Good move — your deposit limit is locked in. I've seen how much easier things get once that number is set. You can adjust it anytime in settings."
+  humor:
+    warm: "Done. Your deposit limit is in place — one less thing to think about. You can adjust it in settings whenever you like."
+    understated: "Deposit limit set. Adjust in settings if needed. That was painless."
+    minimal: "Deposit limit active. Adjust in settings at any time."
+  framing:
+    communal: "Your deposit limit is set — the things beyond the game are taken care of. Adjust anytime in settings."
+  directness:
+    diplomatic: "Your deposit limit is now active. Feel free to adjust it in your settings whenever you'd like."
+  comfort:
+    reserved: "Your spending limit is set. You can adjust it anytime in your account settings."
+    private: "Your budget limit is active. Adjustments are available anytime in your account."
+
+D-4:
+  default: "You've hit your deposit limit for this period. It resets {{RESET_DATE}}. That's you playing on your own terms."
+  voice:
+    authority: "Your deposit limit for this period has been reached. It will reset on {{RESET_DATE}}. This is your budget management working as intended."
+    elder: "You've reached your limit for this period — it resets {{RESET_DATE}}. That's not a bad thing. That's your plan working exactly the way you set it up."
+  humor:
+    warm: "You've reached your deposit limit for this period. It resets {{RESET_DATE}}. That's your plan doing exactly what you asked it to."
+    understated: "Deposit limit reached. Resets {{RESET_DATE}}. The system is, by all accounts, working."
+    minimal: "Deposit limit reached. Resets {{RESET_DATE}}."
+  framing:
+    communal: "You've reached your deposit limit for this period. It resets {{RESET_DATE}}. That's what sticking to a plan looks like."
+  directness:
+    diplomatic: "Your deposit limit for this period has been reached. It will reset on {{RESET_DATE}}. This is your budget working as you set it."
+    contextual: "You set a limit. The limit held. It resets {{RESET_DATE}}. That's how the system works."
+  comfort:
+    reserved: "You've reached your spending limit for this period. It resets {{RESET_DATE}}. Your budget is working as planned."
+    private: "Your budget limit for this period has been reached. It resets {{RESET_DATE}}. Your financial plan is on track."
+
+# ─── SESSION REMINDER ────────────────────────────
+
+SR-1:
+  default: "You've been playing for {{DURATION}}. Most sessions average about 45 minutes. Keep going or take a break?"
+  voice:
+    authority: "Session duration: {{DURATION}}. Average session length across the platform is approximately 45 minutes. You may continue or take a break."
+    elder: "You've been at this for {{DURATION}} now. Most people play for about 45 minutes. No pressure — just worth knowing so you can decide."
+  humor:
+    warm: "{{DURATION}} so far — and most sessions run about 45 minutes. No pressure either way. Just figured you'd want to know."
+    understated: "{{DURATION}} in. Average session: about 45 minutes. Do with that what you will."
+    minimal: "Session time: {{DURATION}}. Average session: 45 minutes."
+  framing:
+    communal: "You've been playing for {{DURATION}}. Keep going, or take a break? Most players average about 45 minutes."
+  directness:
+    diplomatic: "Just a heads up — you've been playing for {{DURATION}}. Most sessions run about 45 minutes. Would you like to keep going or take a break?"
+    contextual: "Time passes faster during play — that's by design. You've been at it for {{DURATION}}. Most sessions average about 45 minutes."
+  comfort:
+    reserved: "You've been using this for {{DURATION}}. The average across all users is about 45 minutes. Would you like to continue or take a break?"
+    private: "You've been here for {{DURATION}}. Most people spend about 45 minutes per visit on activities like this. Continue or take a break?"
+
+SR-2:
+  default: "Quick check-in: you've been at it for {{DURATION}}. How's it going?"
+  voice:
+    authority: "Session check-in: your current session has been active for {{DURATION}}. Please assess whether you'd like to continue."
+    elder: "Just checking in — you've been going for {{DURATION}}. How are you feeling about things?"
+  humor:
+    warm: "{{DURATION}} so far. Still having fun? That's the only question that matters."
+    understated: "{{DURATION}}. Just checking in."
+    minimal: "Check-in: {{DURATION}} elapsed."
+  framing:
+    communal: "Quick check-in: you've been at it for {{DURATION}}. How are you feeling — and how does the rest of your day look?"
+  directness:
+    diplomatic: "A gentle check-in: you've been at this for {{DURATION}}. How are you feeling?"
+    contextual: "You've been at this for {{DURATION}}. Time tends to feel different during immersive activities than it does afterward."
+  comfort:
+    reserved: "Check-in: you've been here for {{DURATION}}. Would you like to continue?"
+    private: "Quick check-in: {{DURATION}} elapsed. How are things going?"
+
+SR-3:
+  default: "Time flies when you're playing. That's by design. Here's your session update."
+  voice:
+    authority: "Games are engineered to reduce time awareness. This session update is designed to restore it."
+    elder: "Time has a way of slipping by when you're playing — that's no accident. Here's where your session stands."
+  humor:
+    warm: "Time does move differently when you're playing — and that's not an accident. Games are built that way. Here's your session update."
+    understated: "Time flies during play. By design, not by coincidence. Here's your update."
+    minimal: "Session update. Time awareness decreases during play. Current session details below."
+  framing:
+    communal: "Time flies during play — games are designed that way. Here's your session update, so the plans beyond the game stay on track."
+  directness:
+    diplomatic: "It's easy to lose track of time during play — the experience is designed to be immersive. Here's your session update to help."
+    contextual: "Game designers use visual and audio cues specifically to reduce time awareness. Here's your session update."
+  comfort:
+    reserved: "It's easy to lose track of time during any engaging activity. Here's a quick update on how long you've been here."
+    private: "Immersive experiences are designed to make time feel shorter than it is. Here's an update to help you stay aware."
+
+SR-4:
+  default: "Session update: {{DURATION}} so far. Want to set a reminder for next time?"
+  voice:
+    authority: "Current session length: {{DURATION}}. You have the option to set a session reminder for future sessions."
+    elder: "{{DURATION}} so far. A session reminder saves you from watching the clock — set one for next time and you can just focus on playing."
+  humor:
+    warm: "{{DURATION}} so far. If you'd rather not keep track yourself next time, a session reminder does it for you."
+    understated: "{{DURATION}}. Reminders exist for next time, if you'd prefer not to count."
+    minimal: "Session: {{DURATION}}. Session reminders available for future sessions."
+  framing:
+    communal: "Session update: {{DURATION}} so far. Many players set reminders to stay on track — want to join them?"
+  directness:
+    diplomatic: "Your session is at {{DURATION}}. If you'd find it helpful, you can configure a reminder for your next session."
+    contextual: "Most players estimate their session length at roughly half the actual time. You're at {{DURATION}}. Reminders are available for future sessions."
+  comfort:
+    reserved: "Time spent: {{DURATION}}. Would you like to set a time reminder for your next visit?"
+    private: "You've been here for {{DURATION}}. You can set a time reminder for future visits if you'd find it helpful."
+
+# ─── ACTIVITY DASHBOARD ──────────────────────────
+
+AD-1:
+  default: "Your play stats are ready. See where your money goes — no surprises."
+  voice:
+    authority: "Your activity report has been generated. Review your complete spending and session data — full transparency, as always."
+    elder: "Your play stats are ready to look at. It's always better to see where your money's been going — no surprises that way."
+  humor:
+    warm: "Your play stats are ready. There's something satisfying about seeing exactly where everything went."
+    understated: "Play stats are ready. Just the numbers. Nothing in there that wasn't already true."
+    minimal: "Play stats available. Review your spending data."
+  framing:
+    communal: "Your play stats are ready. Knowing where your money goes helps protect the things that matter most beyond the game."
+  directness:
+    diplomatic: "Your play statistics are now available for review. A clear view of your spending, with no surprises."
+    contextual: "Most people don't track entertainment spending. Your play stats are ready whenever you'd like to look."
+  comfort:
+    reserved: "Your spending insights are ready — useful for managing any entertainment budget. Full visibility, no surprises."
+    private: "Your personal spending summary is ready. A clear view of how your entertainment budget has been used."
+
+AD-2:
+  default: "Here's your activity summary for {{PERIOD}}. Knowledge is a feature."
+  voice:
+    authority: "Your activity report for {{PERIOD}} is available for review. Full transparency into your play history is a standard you should expect."
+    elder: "Here's your activity summary for {{PERIOD}}. I've always believed the more you know about your own habits, the better off you are."
+  humor:
+    warm: "Your activity summary for {{PERIOD}} is ready. Knowing where things stand is half the job — the tools handle the other half."
+    understated: "Activity summary for {{PERIOD}}. The data was there either way. Now it's readable."
+    minimal: "Activity summary for {{PERIOD}} available."
+  framing:
+    communal: "Your activity summary for {{PERIOD}} is ready. Staying informed protects more than just your next session."
+  directness:
+    diplomatic: "Your activity summary for {{PERIOD}} is ready. Having this information available helps you make informed decisions."
+    contextual: "Tracking your activity over time reveals patterns that single sessions don't. Your summary for {{PERIOD}} is ready."
+  comfort:
+    reserved: "Your spending summary for {{PERIOD}} is ready. Worth a quick review — like checking any financial statement."
+    private: "Your personal spending summary for {{PERIOD}} is ready. A clear view of how you've used your entertainment budget."
+
+AD-3:
+  default: "Your monthly activity summary is in. Take a look — it takes 30 seconds."
+  voice:
+    authority: "Your monthly activity report has been published. A brief review — approximately 30 seconds — provides valuable spending insight."
+    elder: "Your monthly summary just came in. Take half a minute to look at it — you'd be surprised what a quick glance can tell you."
+  humor:
+    warm: "Your monthly summary is in. Takes about 30 seconds to read — shorter than most things that are actually useful."
+    understated: "Monthly summary ready. Thirty seconds. Not a bad trade."
+    minimal: "Monthly activity summary available. Approximately 30 seconds to review."
+  framing:
+    communal: "Your monthly summary is in. A 30-second review helps you stay on track with the plans that matter most."
+  directness:
+    diplomatic: "Your monthly activity summary is available. A quick 30-second review can give you useful insight into your patterns."
+    contextual: "Individual sessions look different from monthly totals. Yours is ready — it takes about 30 seconds to review."
+  comfort:
+    reserved: "Your monthly activity summary is ready. A quick review takes about 30 seconds."
+    private: "Your monthly entertainment summary is available. Takes about 30 seconds to review."
+
+AD-4:
+  default: "{{TOTAL_SESSIONS}} sessions this month. {{TOTAL_TIME}} total play time. Here's the full picture."
+  voice:
+    authority: "Monthly usage data: {{TOTAL_SESSIONS}} sessions, {{TOTAL_TIME}} cumulative duration. View your full activity report for detailed analysis."
+    elder: "This month you've had {{TOTAL_SESSIONS}} sessions and spent {{TOTAL_TIME}} playing. Here's the full picture — it's good to see it all laid out."
+  humor:
+    warm: "{{TOTAL_SESSIONS}} sessions, {{TOTAL_TIME}} total this month. It's all there in one place — no mental arithmetic required."
+    understated: "{{TOTAL_SESSIONS}} sessions. {{TOTAL_TIME}}. The report has the rest, if you're curious."
+    minimal: "{{TOTAL_SESSIONS}} sessions. {{TOTAL_TIME}} total. Full report available."
+  framing:
+    communal: "{{TOTAL_SESSIONS}} sessions this month, {{TOTAL_TIME}} total. Seeing the full picture helps you protect what matters beyond the game."
+  directness:
+    diplomatic: "This month you've had {{TOTAL_SESSIONS}} sessions totaling {{TOTAL_TIME}}. Your full activity summary is available for review."
+    contextual: "Individual sessions can blur together. Here's the monthly view: {{TOTAL_SESSIONS}} sessions, {{TOTAL_TIME}} total play time."
+  comfort:
+    reserved: "{{TOTAL_SESSIONS}} sessions this month. {{TOTAL_TIME}} total activity time. Full summary available."
+    private: "This month: {{TOTAL_SESSIONS}} sessions, {{TOTAL_TIME}} total. Your complete entertainment summary is available."
+
+# ─── LOGIN / WELCOME ─────────────────────────────
+
+LI-1:
+  default: "Welcome back. Your limits are active and your dashboard is up to date."
+  voice:
+    authority: "Welcome back. All established limits remain active. Your dashboard has been updated with your latest activity data."
+    elder: "Good to see you again. Your limits are right where you left them, and your dashboard is current."
+  humor:
+    warm: "Welcome back. Everything's just as you left it — limits running, dashboard current. Good to have you."
+    understated: "Welcome back. Limits on. Dashboard current. Nothing to report."
+    minimal: "Welcome back. Limits active. Dashboard updated."
+  framing:
+    communal: "Welcome back. Your limits are active and your dashboard is current — the things beyond the game are taken care of."
+  directness:
+    diplomatic: "Welcome back. Your limits and dashboard are up to date and ready for you."
+  comfort:
+    reserved: "Welcome back. Your settings are active and your summary is up to date."
+    private: "Welcome back. Your preferences are active and your account is up to date."
+
+LI-2:
+  default: "Good to see you. Quick reminder: your deposit limit is set to {{LIMIT_AMOUNT}} this {{PERIOD}}."
+  voice:
+    authority: "Welcome. For your reference: your current deposit limit is {{LIMIT_AMOUNT}} for this {{PERIOD}}."
+    elder: "Good to have you back. Just a friendly reminder — you've set your deposit limit at {{LIMIT_AMOUNT}} for this {{PERIOD}}."
+  humor:
+    warm: "Good to see you. Your deposit limit is {{LIMIT_AMOUNT}} for this {{PERIOD}} — just so it's front of mind."
+    understated: "Welcome. Deposit limit: {{LIMIT_AMOUNT}} this {{PERIOD}}."
+    minimal: "Deposit limit: {{LIMIT_AMOUNT}} this {{PERIOD}}."
+  framing:
+    communal: "Welcome back. Your deposit limit is {{LIMIT_AMOUNT}} this {{PERIOD}} — keeping your plans beyond the game on track."
+  directness:
+    diplomatic: "Good to see you. A gentle reminder: your deposit limit is currently set to {{LIMIT_AMOUNT}} for this {{PERIOD}}."
+    contextual: "Your deposit limit is {{LIMIT_AMOUNT}} this {{PERIOD}}. That's the number you chose."
+  comfort:
+    reserved: "Welcome. Your spending limit is set to {{LIMIT_AMOUNT}} for this {{PERIOD}}."
+    private: "Welcome back. Your budget limit is {{LIMIT_AMOUNT}} for this {{PERIOD}}."
+
+LI-3:
+  default: "You're back. Your tools are ready. Have fun."
+  voice:
+    authority: "Welcome. All player tools and controls are active and available. Enjoy your session."
+    elder: "Welcome back. Everything's set up and waiting for you. Go have a good time."
+  humor:
+    warm: "You're back. Tools are ready, limits are set. Go enjoy yourself."
+    understated: "Back again. Tools ready. Off you go."
+    minimal: "Welcome back. Tools active. Enjoy your session."
+  framing:
+    communal: "Welcome back. Your limits and tools are set — the things beyond the game are taken care of."
+  comfort:
+    reserved: "Welcome back. Everything's set up and ready. Enjoy."
+    private: "Welcome back. Your preferences and settings are all active. Enjoy."
+
+# ─── POST-LOSS ───────────────────────────────────
+
+PL-1:
+  default: "Tough session. Your activity summary is in your dashboard if you want to review it."
+  voice:
+    authority: "Your session data indicates a net loss. A detailed activity summary is available in your dashboard for review."
+    elder: "Not every session goes your way — that's part of it. Your activity summary is in the dashboard whenever you're ready to look."
+  humor:
+    warm: "Not the session you were hoping for. Your activity summary is in the dashboard whenever you're ready — no rush."
+    understated: "Tough session. The summary is in your dashboard, if and when."
+    minimal: "Session complete. Activity summary in your dashboard."
+  framing:
+    communal: "Not every session goes as planned. Your activity summary is in your dashboard — reviewing it helps you stay on course."
+  directness:
+    diplomatic: "That was a difficult session. If you'd like, your activity summary is available in your dashboard."
+    contextual: "Losses are part of how games with a house edge work over time. Your activity summary is in your dashboard whenever you'd like to look."
+  comfort:
+    reserved: "Not every outcome goes as planned — that's true of any entertainment spending. Your spending summary is in your account whenever you're ready."
+    private: "Your spending summary is ready whenever you'd like to review it."
+
+PL-2:
+  default: "Every session has a cost — that's how entertainment works. Your budget helps you manage it."
+  voice:
+    authority: "All forms of entertainment have an associated cost. Your budget controls are the most effective tool for managing session expenditure."
+    elder: "Every session costs something — that's just the nature of it, like any entertainment. Your budget is there to make sure the cost stays where you're comfortable."
+  humor:
+    warm: "Every session has a cost, same as a film or a meal out. Your budget keeps it in the range you chose — that's all it needs to do."
+    understated: "Sessions cost something. That's entertainment. The budget exists for exactly this."
+    minimal: "Every session has a cost. Your budget manages it."
+  framing:
+    communal: "Every session has a cost — that's how entertainment works. Your budget keeps it from reaching the things that matter most."
+  directness:
+    diplomatic: "Like any form of entertainment, each session comes with a cost. Your budget tools are there to help you keep it comfortable."
+    contextual: "The house edge means every session is likely to have a net cost over time. That's how the math works. Your budget tools and activity summary are in your dashboard."
+  comfort:
+    reserved: "Every form of entertainment has a cost — the same way a subscription or a night out does. Your budget tools help keep spending within your comfort zone."
+    private: "All entertainment has a cost structure. Your budget tools help you manage spending the same way any financial planning tool would."
+
+PL-3:
+  # Tone is already warm/direct — variants focus on voice and comfort.
+  default: "Want to talk it through? Free, confidential support: {{HELPLINE_NUMBER}}"
+  voice:
+    authority: "Professional, confidential support is available at no cost if you'd like to discuss your experience. {{HELPLINE_NUMBER}}"
+    elder: "If you want to talk to someone about how things are going, there are people who understand. Free and confidential. {{HELPLINE_NUMBER}}"
+  framing:
+    communal: "Want to talk it through — for yourself or someone you care about? Free, confidential support: {{HELPLINE_NUMBER}}"
+  comfort:
+    reserved: "Confidential support is available if you'd like to talk. {{HELPLINE_NUMBER}}"
+    private: "If you'd like to talk to someone, free and confidential support is available. {{HELPLINE_NUMBER}}"
+
+# ─── WIN CELEBRATION ─────────────────────────────
+
+WC-1:
+  default: "Nice win. Quick reminder: the house edge is still the house edge. Enjoy the moment."
+  voice:
+    authority: "Congratulations on your win. Please note that the statistical house edge remains unchanged regardless of individual session outcomes."
+    elder: "That's a nice win — enjoy it. Just remember, the house edge doesn't change because you're on a streak. Savor the moment."
+  humor:
+    warm: "Nice win. Enjoy it — you should. The house edge hasn't changed, but that doesn't mean tonight wasn't yours."
+    understated: "Nice win. The house edge, for its part, remains entirely indifferent. Enjoy the moment."
+    minimal: "Nice win. House edge unchanged. Enjoy."
+  framing:
+    communal: "Great win — enjoy it. The house edge hasn't changed, so keep your limits in place. The plans beyond the game are worth protecting."
+  directness:
+    diplomatic: "Congratulations on a good session. It's worth remembering that the house edge remains constant, regardless of short-term results."
+    contextual: "After a win, the house edge is exactly the same as it was before the win. Your limits are still active. Enjoy the moment."
+  comfort:
+    reserved: "Nice result. Worth remembering: the underlying probabilities don't change based on individual outcomes. Enjoy the moment."
+    private: "Good result. The underlying probabilities remain the same regardless of individual outcomes. Enjoy."
+
+WC-2:
+  default: "You're up. This is a great time to check your limits or call it a session."
+  voice:
+    authority: "Your session is currently positive. This is an optimal time to review your limits or consider concluding your session."
+    elder: "You're ahead right now — and that's a great place to be. If there was ever a good time to check your limits or step away, this is it."
+  humor:
+    warm: "You're up — and there's something to be said for stopping while that's still true. Check your limits or call it a win."
+    understated: "You're up. Not a bad time to stop being up. Limits are in settings."
+    minimal: "Session positive. Review limits or end session."
+  framing:
+    communal: "You're up — and experienced players will tell you this is the best time to check your limits or call it a day."
+  directness:
+    diplomatic: "You're having a good session. This could be a great moment to review your limits or consider wrapping up."
+    contextual: "After a win, the impulse to keep going tends to be at its peak. The house edge, meanwhile, doesn't change based on your last result. What you do with that information is up to you."
+  comfort:
+    reserved: "You're in a good position. A good moment to review your settings or wrap up."
+    private: "You're ahead. Consider reviewing your budget or wrapping up for now."
+
+WC-3:
+  default: "Great session. Your activity summary has the full breakdown."
+  voice:
+    authority: "Positive session recorded. A complete breakdown is available in your activity summary."
+    elder: "That was a good session. Your full breakdown is in the activity summary if you'd like to see how it all played out."
+  humor:
+    warm: "Great session. Your full breakdown is in the activity summary — the numbers are worth a look when you're in a good mood."
+    understated: "Good session. The breakdown is in the summary, if you'd like the details."
+    minimal: "Session complete. Breakdown available in activity summary."
+  framing:
+    communal: "Great session. Your activity summary has the full breakdown — and sharing your experience can help others set realistic expectations."
+  directness:
+    diplomatic: "That was a positive session. Your activity summary is available with the full details."
+    contextual: "Individual wins look different when placed alongside your overall play patterns. Full breakdown in your summary."
+  comfort:
+    reserved: "Good result. Your full spending summary is available for review."
+    private: "Good result. Your detailed summary is available in your account."
+
+# ─── ACCOUNT SETTINGS ────────────────────────────
+
+AS-1:
+  default: "Your tools live here. Deposit limits, session reminders, activity summary — all in one place."
+  voice:
+    authority: "Your player tools are consolidated here. Deposit limits, session reminders, and activity summaries — all in one place for easy oversight."
+    elder: "Everything you need is right here: your deposit limits, session reminders, activity summary. One place for all of it."
+  humor:
+    warm: "Everything lives here — deposit limits, session reminders, activity summary. One place, nothing to hunt for."
+    understated: "Deposit limits. Session reminders. Activity summary. All here. Nowhere else to look."
+    minimal: "Deposit limits, session reminders, activity summary. All here."
+  framing:
+    communal: "Your tools live here. Deposit limits, session reminders, activity summary — protecting your game and the plans beyond it."
+  directness:
+    diplomatic: "Your player tools are all located here: deposit limits, session reminders, and your activity summary."
+    contextual: "Deposit limits, session reminders, and activity summary — all in one place. Everything is here."
+  comfort:
+    reserved: "Your account controls are here. Spending limits, time reminders, activity summary — all in one place."
+    private: "Your personal settings are here. Budget limits, reminders, and activity summary — centralized for easy access."
+
+AS-2:
+  default: "Manage your limits, review your activity, or update your preferences. Your account, your rules."
+  voice:
+    authority: "Set limits, review activity reports, and manage preferences. All account settings are under your control."
+    elder: "This is where you manage your limits, review your activity, and update your preferences. Your account, your way."
+  humor:
+    warm: "Limits, activity, preferences — all yours to manage. We just keep the lights on."
+    understated: "Limits. Activity. Preferences. Your account does what you tell it."
+    minimal: "Manage limits, review activity, update preferences."
+  framing:
+    communal: "Manage limits, review activity, update preferences. Your account, your rules — and the people around you benefit too."
+  directness:
+    diplomatic: "You can manage your limits, review your activity, and update your preferences here. Everything is in your hands."
+  comfort:
+    reserved: "Manage your settings, review your activity, or update your preferences. Your account, your control."
+    private: "Adjust your budget, review your usage, or update preferences. Everything here is under your control."
+
+# ─── ONBOARDING ──────────────────────────────────
+
+OB-1:
+  default: "Welcome. Before you dive in, here are three things that take less than a minute and make everything better."
+  voice:
+    authority: "Welcome. Three brief steps before you begin — each under one minute — that give you greater control from the start."
+    elder: "Welcome — glad you're here. Before you jump in, there are three quick things I'd recommend. Each takes less than a minute, and they'll make a real difference."
+  humor:
+    warm: "Welcome. Three things before you start — less than a minute total — and you'll be glad you did them."
+    understated: "Welcome. Three things. Under a minute. You won't regret it."
+    minimal: "Welcome. Three setup steps, each under one minute."
+  framing:
+    communal: "Welcome. Before you start, three quick steps — less than a minute total — that protect your game and the things that matter beyond it."
+  directness:
+    diplomatic: "Welcome. Three brief setup steps before you begin. Each takes under a minute and genuinely improves your experience."
+    contextual: "There are three setup steps. They take less than a minute total. Players who complete them and players who skip them describe their first sessions quite differently."
+  comfort:
+    reserved: "Welcome. Three quick setup steps before you begin. Each takes less than a minute."
+    private: "Welcome. Before you start, here are three quick steps to personalize your experience. Under a minute total."
+
+OB-2:
+  default: "Step 1: Set your budget. Step 2: Set your pace. Step 3: Check your game IQ. That's it. You're ready."
+  voice:
+    authority: "Step 1: Set your budget limit. Step 2: Define your session settings. Step 3: Complete the odds knowledge assessment. Setup is now complete."
+    elder: "Here's all you need to do: set your budget, set your pace, and take a quick quiz to see how well you know the games. That's it — you're good to go."
+  humor:
+    warm: "Budget, pace, game IQ quiz. Three steps, and then you're genuinely ready — not just technically ready."
+    understated: "Budget. Pace. Game IQ quiz. That's setup. Shorter than most terms and conditions."
+    minimal: "Step 1: Budget. Step 2: Session pace. Step 3: Odds quiz. Setup complete."
+  framing:
+    communal: "Three steps: set your budget, set your pace, check your game IQ. That's it — you're set, and so are the plans counting on you."
+  directness:
+    diplomatic: "Three simple steps to get started: set a budget, choose your session pace, and test your game knowledge. Then you're ready."
+    contextual: "Budget first, then pace, then a quick game IQ check. Each step is backed by research on player outcomes. Ready when you are."
+  comfort:
+    reserved: "Step 1: Set your spending limit. Step 2: Set your time preferences. Step 3: Take the knowledge quiz. You're all set."
+    private: "Step 1: Set your entertainment budget. Step 2: Choose your time preferences. Step 3: Quick knowledge check. Done."
+
+OB-3:
+  default: "New here? Start with the 60-second odds quiz. Most people get question 3 wrong."
+  voice:
+    authority: "New here? Begin with the odds assessment. It takes 60 seconds. A majority of participants answer question 3 incorrectly."
+    elder: "If you're new, start with the 60-second odds quiz. I'll tell you this much — most people miss question 3. See how you do."
+  humor:
+    warm: "New here? The 60-second odds quiz is a good place to start. Most people get question 3 wrong — and most people are surprised that they did."
+    understated: "New? Sixty-second odds quiz. Question 3 has a remarkably low pass rate."
+    minimal: "Start with the 60-second odds quiz."
+  framing:
+    communal: "New here? Start with the 60-second odds quiz — and see how you stack up. Most people get question 3 wrong."
+  directness:
+    diplomatic: "If you're new, the 60-second odds quiz is a great place to start. You might be surprised by question 3."
+    contextual: "The odds quiz takes 60 seconds. Most players are surprised by at least one answer. Question 3 is the one most people miss."
+  comfort:
+    reserved: "New here? Try the 60-second knowledge quiz. It's a useful starting point."
+    private: "New here? Start with a quick 60-second quiz about how entertainment activities work. Most people learn something new."
+
+# ─── EXIT / SESSION END ──────────────────────────
+
+EX-1:
+  default: "Walking away while you're still enjoying yourself is a power move. See you next time."
+  voice:
+    authority: "Ending a session while the experience is still positive is a strong practice. We look forward to your next visit."
+    elder: "Knowing when to walk away — especially when you're still having fun — is one of the smartest things a player can do. See you next time."
+  humor:
+    warm: "Walking away while you're still enjoying yourself — that's a skill most people underestimate. See you next time."
+    understated: "Stopping while it's still fun. Most people don't. See you."
+    minimal: "Session ended. See you next time."
+  framing:
+    communal: "Walking away while you're still enjoying it is the move that experienced players respect most. See you next time."
+  directness:
+    diplomatic: "Choosing to end your session while you're still enjoying it is a great habit. See you next time."
+    contextual: "Games are designed with features that encourage longer sessions. You've chosen to stop while you're still enjoying yourself. See you next time."
+  comfort:
+    reserved: "Choosing to stop while you're ahead is always a strong move. See you next time."
+    private: "Knowing when to step away on your own terms — that's real self-management. See you next time."
+
+EX-2:
+  default: "Session over. Your activity summary is ready for review."
+  voice:
+    authority: "Session concluded. Your complete activity summary is now available for review in your dashboard."
+    elder: "That's your session done. Your activity summary is there whenever you want to look it over."
+  humor:
+    warm: "Session over. Your activity summary is waiting whenever you're ready for it."
+    understated: "Session done. Summary ready. Take your time."
+    minimal: "Session complete. Activity summary available."
+  framing:
+    communal: "Session over. Your activity summary is ready — a quick look helps you stay on track with what matters most."
+  directness:
+    diplomatic: "Your session has ended. Your activity summary is available in your dashboard whenever you'd like to review it."
+  comfort:
+    reserved: "All done. Your activity summary is ready."
+    private: "All done. Your personal summary is available for review."
+
+EX-3:
+  default: "Thanks for playing. Your limits and tools are always here when you come back."
+  voice:
+    authority: "Thank you for your session. All established limits and player tools will remain active for your next visit."
+    elder: "Thanks for playing. When you come back, everything will be right where you left it — your limits, your tools, all ready to go."
+  humor:
+    warm: "Thanks for playing. Your limits and tools will be exactly where you left them next time."
+    understated: "Thanks. Limits and tools persist. They'll be here."
+    minimal: "Thank you. Limits and tools remain active."
+  framing:
+    communal: "Thanks for playing. Your limits and tools stay active — the things beyond the game are taken care of until next time."
+  directness:
+    diplomatic: "Thank you for your session. Your limits and tools will remain in place and ready for your next visit."
+  comfort:
+    reserved: "Thank you. Your settings and tools remain active for your next visit."
+    private: "Thank you. Your preferences and budget controls stay active and will be ready when you return."
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SEASONAL MESSAGES (12)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# ─── SPORTS EVENTS ───────────────────────────────
+
+SE-1:
+  default: "Big game coming up. Know the odds before you place the bet — here's how the lines actually work."
+  voice:
+    authority: "A major sporting event is approaching. Before placing any wagers, review how betting lines and odds are structured."
+    elder: "Big game on the horizon. Before you put anything down, take a minute to understand how the lines actually work — it'll change how you see the odds."
+  humor:
+    warm: "Big game coming up. Before you place anything, it's worth knowing how the lines actually work — and once you do, the whole thing gets more interesting."
+    understated: "Big game soon. The lines are not entirely straightforward. Worth a look."
+    minimal: "Major event approaching. Review betting line mechanics before placing wagers."
+  framing:
+    communal: "Big game coming up. Before placing a bet, it's worth knowing how the lines actually work — especially when your weekend plans depend on it."
+  directness:
+    diplomatic: "With a major event approaching, it's a good time to understand how betting lines and odds are set. Here's a helpful guide."
+    contextual: "Sportsbooks set lines to balance their risk, not to predict outcomes. With a big game coming up, here's how the odds actually work."
+  comfort:
+    reserved: "A major event is approaching. Understanding how the numbers behind it work is useful whether or not you plan to participate."
+    private: "A major event is coming up. Here's how the probability and pricing structures behind large events work — useful context for any consumer."
+
+SE-2:
+  default: "Bracket season is here. Before you fill yours out, here's what the math says about your chances."
+  voice:
+    authority: "Tournament bracket season has arrived. Before submitting your predictions, review the mathematical probabilities associated with bracket accuracy."
+    elder: "Bracket season again. Before you fill yours out, here's what the numbers actually say about anyone's chances of getting it right."
+  humor:
+    warm: "Bracket season is here. Before you fill yours out, the maths on anyone's chances are worth seeing — humbling, but genuinely fun to know."
+    understated: "Bracket season. The probability of getting yours right is not zero. It is, however, adjacent."
+    minimal: "Bracket season. Review the probabilities before completing predictions."
+  framing:
+    communal: "Bracket season is here. Before you fill yours out, the math on your chances is worth knowing — especially if there's money involved."
+  directness:
+    diplomatic: "As bracket season begins, you might find it useful to see what the mathematics say about the probability of predicting outcomes correctly."
+    contextual: "The odds of a perfect bracket are roughly 1 in 9.2 quintillion. Bracket season is here — and the math behind it is worth a look."
+  comfort:
+    reserved: "Tournament prediction season is here. Here's what the probability data says about accuracy."
+    private: "Prediction season is here. Before you participate, here's what the numbers say about the odds of getting it right."
+
+SE-3:
+  default: "The whole world is watching. Here's what you should know about betting on the beautiful game."
+  voice:
+    authority: "Global football events attract significant betting activity. Before participating, review these essential facts about football betting markets."
+    elder: "When the whole world is watching, the betting market gets bigger than ever. Here's what you should know before you get involved."
+  humor:
+    warm: "The whole world is watching — and a lot of the world is betting. Here's what's worth knowing about the markets before you join them."
+    understated: "Global tournament. Very large betting market. The two facts are not unrelated."
+    minimal: "Major football event. Review betting market facts before participating."
+  framing:
+    communal: "The whole world is watching. Here's what's worth knowing about the betting markets — before the stakes affect more than the match."
+  directness:
+    diplomatic: "With a major global football event underway, it's helpful to understand how the associated betting markets operate."
+    contextual: "Major tournaments drive a surge in betting, much of it from people who don't usually bet on football. Here's what you should know about how the markets work."
+  comfort:
+    reserved: "A major global sporting event is underway. Here's useful information about the associated markets."
+    private: "A major global event is drawing attention. If you're considering participating in related activities, here's what the numbers look like."
+
+SE-4:
+  default: "Big race day? Know your odds. A 10/1 shot means exactly what it says — here's the breakdown."
+  voice:
+    authority: "Major racing events feature complex odds structures. A 10/1 probability means precisely what the notation indicates. Review the full breakdown."
+    elder: "Big race coming up? Let me break down what those odds actually mean. A 10/1 shot means exactly what it sounds like — and here's why that matters."
+  humor:
+    warm: "Race day. Before you pick your horse, it's worth knowing what 10/1 actually means in practice — the number is honest, even when the tipsters aren't."
+    understated: "Race day. A 10/1 shot means what it says. The breakdown is here for those who'd like to check."
+    minimal: "Race day. A 10/1 shot: 10/1 probability. Full odds breakdown available."
+  framing:
+    communal: "Race day. A 10/1 shot means exactly what it says. Worth understanding — especially when the bet involves money that matters beyond the track."
+  directness:
+    diplomatic: "With a major race approaching, it helps to understand what the odds mean. A 10/1 shot, for instance, means exactly what the notation says."
+    contextual: "Race day odds look simple but are often misunderstood. A 10/1 shot has a roughly 9% implied probability. Here's the full breakdown."
+  comfort:
+    reserved: "Major race approaching. Here's a clear explanation of how the odds notation works."
+    private: "An event with odds-based outcomes is coming up. Here's how to read the numbers — for example, what a 10/1 outcome really means."
+
+# ─── NEW YEAR ────────────────────────────────────
+
+NY-1:
+  default: "New year, same math. But here's a resolution that actually works: set your entertainment budget before you play."
+  voice:
+    authority: "The new year does not alter game mathematics. An effective resolution: establish your entertainment budget prior to each session."
+    elder: "New year, but the math hasn't changed. Here's a resolution that actually sticks: decide on your entertainment budget before you sit down to play."
+  humor:
+    warm: "Happy new year. The maths haven't changed, but here's a resolution that doesn't require willpower — just set your budget before you play."
+    understated: "New year. Same maths. One resolution that doesn't rely on optimism: set your budget first."
+    minimal: "New year. Game mathematics unchanged. Set your entertainment budget in advance."
+  framing:
+    communal: "New year, same math. A resolution that actually works: set your entertainment budget before you play. The people counting on you will feel the difference."
+  directness:
+    diplomatic: "As the new year begins, the math behind the games stays the same. A meaningful resolution: set your entertainment budget before each session."
+    contextual: "Most resolutions rely on willpower. A budget set before you play runs on a system instead — the tools enforce the number you choose."
+  comfort:
+    reserved: "The new year doesn't change how costs work. A practical resolution: set your entertainment budget before you spend — the same principle behind any good financial habit."
+    private: "New year, same math behind every purchase. A practical resolution: set your entertainment budget before each outing. It's the simplest financial habit that actually works."
+
+NY-2:
+  default: "Start the year with your limits set and your tools active. It takes 30 seconds."
+  voice:
+    authority: "Begin the new year by configuring your player controls. Budget limits and session tools can be activated in approximately 30 seconds."
+    elder: "Best way to start the year: make sure your limits are set and your tools are on. Takes half a minute. You'll be glad you did."
+  humor:
+    warm: "Start the year with your limits set and tools on. Thirty seconds and you're sorted for the whole year."
+    understated: "Limits and tools. Thirty seconds. A resolution you can actually finish."
+    minimal: "Activate limits and tools. Approximately 30 seconds."
+  framing:
+    communal: "Start the year with your limits set and tools active. Thirty seconds — and the plans beyond the game are covered for the year."
+  directness:
+    diplomatic: "A great way to start the year: ensure your limits and tools are configured. It only takes about 30 seconds."
+    contextual: "Players who set limits at the start of the year are more likely to stay within their budget all year. It takes 30 seconds."
+  comfort:
+    reserved: "Start the year with your spending limits and account tools active. Setup takes 30 seconds."
+    private: "Start the year with your budget controls configured. Takes about 30 seconds."
+
+# ─── AWARENESS WEEK / MONTH ──────────────────────
+
+AW-1:
+  default: "This week is about knowing the facts, using the tools, and playing on your terms. Here's how to get started."
+  voice:
+    authority: "This awareness period focuses on three pillars: factual knowledge, tool utilization, and informed play. Here is how to begin."
+    elder: "This week is a good reminder to focus on what matters: knowing the facts, using the tools available to you, and playing the way you want to. Here's how to start."
+  humor:
+    warm: "This week: the facts, the tools, and playing on your own terms. Three things, and they all work better together."
+    understated: "Facts. Tools. Your terms. That's the week. Getting started below."
+    minimal: "This week: facts, tools, informed play. Getting started guide below."
+  framing:
+    communal: "This week: knowing the facts, using the tools, and playing on your terms. The people around you benefit when you play informed. Here's how to start."
+  directness:
+    diplomatic: "This week highlights three important areas: understanding the facts, using available tools, and playing within your own boundaries. Here's a starting point."
+    contextual: "This week has three parts: learn the facts, activate your tools, and set your terms. Here's step one."
+  comfort:
+    reserved: "This week focuses on informed decision-making, useful tools, and personal control. Here's how to get started."
+    private: "This week is about understanding your options, using helpful tools, and making decisions on your own terms. Here's how to begin."
+
+AW-2:
+  # Tone is already warm/direct. Variants focus on voice and comfort.
+  default: "Free, confidential support is available 24/7 — for any question about gambling. {{HELPLINE_NUMBER}}"
+  voice:
+    authority: "Professional support services are available around the clock, free of charge and fully confidential, for any gambling-related inquiry. {{HELPLINE_NUMBER}}"
+    elder: "If you have any questions at all about gambling — big or small — free, confidential help is available anytime. {{HELPLINE_NUMBER}}"
+  framing:
+    communal: "Free, confidential support is here — for you, or for someone you're looking out for. 24/7. {{HELPLINE_NUMBER}}"
+  comfort:
+    reserved: "Free, confidential support available 24/7 for any question. {{HELPLINE_NUMBER}}"
+    private: "Free, confidential support is available around the clock — for any question about entertainment habits. {{HELPLINE_NUMBER}}"
+
+AW-3:
+  default: "This month, we're sharing the numbers behind the games. No scare tactics. Just facts you can use."
+  voice:
+    authority: "This month's focus: transparent disclosure of game mathematics and probabilities. Evidence-based information, presented without sensationalism."
+    elder: "This month we're laying out the real numbers behind the games. No fear-mongering — just honest facts you can actually use."
+  humor:
+    warm: "This month we're sharing the real numbers behind the games. No scare tactics — just the kind of facts that are useful to know and easy to share."
+    understated: "The numbers behind the games. All month. No dramatics. Just the maths."
+    minimal: "This month: game mathematics and probabilities. Facts only."
+  framing:
+    communal: "This month, we're sharing the numbers behind the games. No scare tactics — just facts that help you protect what matters most."
+  directness:
+    diplomatic: "Throughout this month, we'll be sharing the mathematics behind the games. Our approach is factual, not alarmist — just information you can use."
+    contextual: "Most gambling awareness content relies on fear. This month, we're sharing the actual numbers behind the games instead."
+  comfort:
+    reserved: "This month, we're sharing the real numbers behind how entertainment products are priced and structured. Facts, not scare tactics."
+    private: "This month, we're publishing clear information about cost structures and probability across everyday decisions. Practical facts, not alarmist messaging."
+
+AW-4:
+  # Tone is already warm/direct. Variants focus on voice and comfort.
+  default: "Your mental health matters more than any game. If gambling doesn't feel fun, it's okay to step back. {{HELPLINE_NUMBER}}"
+  voice:
+    authority: "Mental health takes priority over any form of entertainment. If gambling no longer feels enjoyable, stepping back is a valid and recommended response. {{HELPLINE_NUMBER}}"
+    elder: "Your wellbeing matters more than any game ever will. If it stops feeling fun, it's not just okay to step back — it's the right thing to do. {{HELPLINE_NUMBER}}"
+  framing:
+    communal: "Your wellbeing matters more than any game. If it stops being fun — for you, or for someone close to you — it's okay to step back. {{HELPLINE_NUMBER}}"
+  comfort:
+    reserved: "Your wellbeing comes first. If the experience stops feeling enjoyable, stepping back is always the right choice. {{HELPLINE_NUMBER}}"
+    private: "Your mental health matters more than any activity. If something doesn't feel fun anymore, it's okay to step back. Support is available. {{HELPLINE_NUMBER}}"
+
+# ─── HOLIDAY PERIOD ──────────────────────────────
+
+HP-1:
+  default: "Holiday entertainment budget: set it before the fun starts. Your future self will thank you."
+  voice:
+    authority: "Establishing an entertainment budget before the holiday period is a proven strategy for financial wellbeing. Set your limits in advance."
+    elder: "Before the holidays ramp up, set your entertainment budget. I've seen too many people wish they'd done it sooner. Your future self will be grateful."
+  humor:
+    warm: "Before the holidays get going, set your entertainment budget. It's a small favour to your future self — the one who has to look at the bank statement in January."
+    understated: "Holiday entertainment budget. Best set before the holidays start. January you will understand."
+    minimal: "Set your holiday entertainment budget in advance."
+  framing:
+    communal: "Set your entertainment budget before the holidays start. Your future self — and the people counting on you — will be grateful."
+  directness:
+    diplomatic: "As the holidays approach, consider setting your entertainment budget ahead of time. It's a decision you'll appreciate later."
+    contextual: "Holiday spending tends to spike across all categories — including entertainment. Your budget tools are available before the season starts."
+  comfort:
+    reserved: "Set your holiday entertainment budget before the season begins. A small step that pays off."
+    private: "Before the holiday season, set your entertainment budget. It's a small decision that your future self will appreciate."
+
+HP-2:
+  default: "More time off means more time to play. Set a session reminder so you stay in control of your schedule."
+  voice:
+    authority: "Extended leisure periods correlate with increased session frequency. Set session reminders to maintain control over your schedule."
+    elder: "More free time often means more play time — it's natural. Set a session reminder so you stay in charge of your own schedule."
+  humor:
+    warm: "More time off usually means longer sessions — not because anyone plans it, just because the hours are there. A session reminder keeps you honest."
+    understated: "More time off. Longer sessions. A predictable pattern. Session reminders exist for exactly this."
+    minimal: "Extended free time increases session length. Set a session reminder."
+  framing:
+    communal: "More time off means more time to play. A session reminder keeps you on schedule — so the rest of your plans don't slip."
+  directness:
+    diplomatic: "With more free time, it's easy for sessions to run longer than planned. A session reminder can help you stay on track."
+    contextual: "Data shows session lengths increase significantly during holidays. Session reminders are available in your settings."
+  comfort:
+    reserved: "Extended time off can change spending patterns across all entertainment. A time reminder helps you manage your schedule."
+    private: "More free time can shift how you spend across all activities. A reminder helps you stay aware of time and stay in control of your schedule."
+
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# REGULATORY COMPLIANCE (10)
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Many of these contain mandated content. Variants adapt tone and framing
+# while preserving all required information and placeholder tokens.
+
+RC-1:
+  default: "You must be {{MIN_AGE}}+ to gamble. It's the law — and it's here to protect you."
+  voice:
+    authority: "Gambling is restricted to individuals aged {{MIN_AGE}} and over, as required by law. This regulation exists for your protection."
+    elder: "You have to be {{MIN_AGE}} or older to gamble. That's the law, and it exists for a good reason — to protect people."
+  humor:
+    warm: "You need to be {{MIN_AGE}}+ to gamble. It's the law, and it's one of the good ones — it's there to protect people."
+    understated: "{{MIN_AGE}}+ to gamble. The law. Not a complicated one."
+    minimal: "Minimum gambling age: {{MIN_AGE}}. Legal requirement for your protection."
+  framing:
+    communal: "Gambling is for adults aged {{MIN_AGE}} and over. It's the law — and it protects the young people who look up to you."
+  directness:
+    diplomatic: "Legal gambling requires you to be at least {{MIN_AGE}} years old. This regulation is in place for your protection."
+    contextual: "Research on gambling-related harm shows a clear pattern with age. The minimum age is {{MIN_AGE}}, and regulations reflect what the data shows."
+  comfort:
+    reserved: "Participation requires a minimum age of {{MIN_AGE}}. This legal requirement exists for your protection."
+    private: "You must be {{MIN_AGE}} or older to participate. This is a legal requirement designed to protect younger individuals."
+
+RC-2:
+  default: "This platform is for players aged {{MIN_AGE}} and over. Age verification is required to play."
+  voice:
+    authority: "This platform is restricted to verified individuals aged {{MIN_AGE}} and above. Mandatory age verification is required prior to participation."
+    elder: "This platform is meant for adults — {{MIN_AGE}} and older. We check everyone's age, and that's a good thing."
+  humor:
+    warm: "This platform is for players {{MIN_AGE}} and over. Age verification is part of how we keep it that way."
+    understated: "{{MIN_AGE}}+. Age verification required. Non-negotiable."
+    minimal: "Platform restricted to ages {{MIN_AGE}}+. Age verification required."
+  framing:
+    communal: "This platform is for adults aged {{MIN_AGE}} and over. Age verification is there to protect the people who matter most."
+  directness:
+    diplomatic: "This platform welcomes players aged {{MIN_AGE}} and over. Age verification is a required step before you can begin."
+  comfort:
+    reserved: "This platform is for participants aged {{MIN_AGE}} and over. Identity verification is required."
+    private: "Access is limited to verified adults aged {{MIN_AGE}}+. Verification is required before participation."
+
+RC-3:
+  default: "Gambling involves risk. Play on your terms — with your budget, your limits, and the facts."
+  voice:
+    authority: "Gambling carries inherent financial risk. Utilize available tools — budget controls, limits, and factual game information — to manage your participation."
+    elder: "Gambling always involves risk — there's no getting around that. But you can manage it: set your budget, use your limits, and know the facts."
+  humor:
+    warm: "Gambling involves risk — that's baked in. But your budget, your limits, and the facts give you a real way to manage it."
+    understated: "Gambling involves risk. Your budget, limits, and the facts exist to keep it manageable."
+    minimal: "Gambling involves risk. Manage it with your budget, limits, and game information."
+  framing:
+    communal: "Gambling involves risk. Play on your terms — with your budget, your limits, and the facts — because your choices ripple beyond the game."
+  directness:
+    diplomatic: "Gambling carries financial risk. Your budget, limits, and access to accurate information help you play in a way that works for you."
+    contextual: "The house edge means the expected outcome of gambling is a net cost over time. Your budget tools, limits, and the facts behind each game are all available here."
+  comfort:
+    reserved: "This activity involves financial risk. Manage it with your budget, your limits, and informed decision-making."
+    private: "This activity involves financial risk. Use your budget tools, personal limits, and factual information to stay in control."
+
+RC-4:
+  default: "Before you play, here's what you should know: the odds, the costs, and the tools available to you."
+  voice:
+    authority: "Prior to participation, please review the following: game odds, associated costs, and available player protection tools."
+    elder: "Before you start, there are three things worth knowing: the odds of each game, what it's likely to cost, and the tools you have at your disposal."
+  humor:
+    warm: "Before you play: the odds, the costs, and the tools available to you. It takes a minute, and it changes how the whole thing feels."
+    understated: "Before you play: odds, costs, tools. Brief and worth it."
+    minimal: "Pre-play information: game odds, costs, and available tools."
+  framing:
+    communal: "Before you play, here's what's worth knowing: the odds, the costs, and the tools available to you. What you know protects more than just your bankroll."
+  directness:
+    diplomatic: "Three things worth reviewing before playing: the game odds, the potential costs, and the tools at your disposal."
+    contextual: "Before you play, three things are available: the odds behind each game, the costs involved, and the tools you can use. They're all here."
+  comfort:
+    reserved: "Before you begin, please review: the probabilities, the costs, and the controls available to you."
+    private: "Before you participate, here's what to review: the outcome probabilities, the associated costs, and the management tools at your disposal."
+
+RC-5:
+  # Tone is already warm/direct. Variants focus on voice and comfort.
+  default: "Free, confidential support is available 24/7 — for any question about gambling. {{HELPLINE_NUMBER}}"
+  voice:
+    authority: "Complimentary, confidential support services are available 24 hours a day, 7 days a week, for any gambling-related question. {{HELPLINE_NUMBER}}"
+    elder: "Anytime you have a question about gambling — no matter how big or small — free, confidential help is there for you. {{HELPLINE_NUMBER}}"
+  framing:
+    communal: "Free, confidential support is available around the clock — for you, or for someone you're looking out for. {{HELPLINE_NUMBER}}"
+  comfort:
+    reserved: "Free, confidential support is available 24/7. {{HELPLINE_NUMBER}}"
+    private: "Free, confidential support is available around the clock for any question. {{HELPLINE_NUMBER}}"
+
+RC-6:
+  # Contact information is mandated. Variants adapt only the implicit tone.
+  default: "Call {{HELPLINE_NUMBER}} | Text {{TEXT_NUMBER}} | Chat at {{CHAT_URL}}"
+  voice:
+    authority: "Support contact options — Phone: {{HELPLINE_NUMBER}} | Text: {{TEXT_NUMBER}} | Online chat: {{CHAT_URL}}"
+    elder: "Reach out however feels most comfortable — call {{HELPLINE_NUMBER}}, text {{TEXT_NUMBER}}, or chat online at {{CHAT_URL}}."
+  framing:
+    communal: "Support for you and your loved ones — Call {{HELPLINE_NUMBER}} | Text {{TEXT_NUMBER}} | Chat at {{CHAT_URL}}"
+  comfort:
+    reserved: "Support options — Call: {{HELPLINE_NUMBER}} | Text: {{TEXT_NUMBER}} | Chat: {{CHAT_URL}}"
+    private: "Confidential support options — Call: {{HELPLINE_NUMBER}} | Text: {{TEXT_NUMBER}} | Chat: {{CHAT_URL}}"
+
+RC-7:
+  # Mandated content — variants adjust tone only.
+  default: "{{PROGRAM_NAME}} is operated by {{ORGANIZATION}} and licensed in {{JURISDICTION}}."
+  voice:
+    authority: "{{PROGRAM_NAME}} is operated and maintained by {{ORGANIZATION}}, holding a valid license issued in {{JURISDICTION}}."
+    elder: "{{PROGRAM_NAME}} is run by {{ORGANIZATION}} and fully licensed in {{JURISDICTION}} — so you know it's above board."
+  framing:
+    communal: "{{PROGRAM_NAME}} is operated by {{ORGANIZATION}} and licensed in {{JURISDICTION}} — accountability for the benefit of all players."
+  directness:
+    diplomatic: "{{PROGRAM_NAME}} is operated by {{ORGANIZATION}} under license in {{JURISDICTION}}."
+    contextual: "Licensed operators are subject to regulatory oversight and public accountability standards. {{PROGRAM_NAME}} is operated by {{ORGANIZATION}} and licensed in {{JURISDICTION}}."
+  comfort:
+    reserved: "{{PROGRAM_NAME}} is operated by {{ORGANIZATION}}, licensed in {{JURISDICTION}}."
+    private: "{{PROGRAM_NAME}} is operated by {{ORGANIZATION}} and licensed in {{JURISDICTION}}."
+
+RC-8:
+  default: "Gambling is regulated in your jurisdiction. For more information, visit {{REGULATOR_URL}}."
+  voice:
+    authority: "Gambling activities in your jurisdiction are subject to regulatory oversight. Detailed information is available at {{REGULATOR_URL}}."
+    elder: "Gambling is regulated where you are, which means there are rules and protections in place. You can learn more at {{REGULATOR_URL}}."
+  humor:
+    warm: "Gambling is regulated in your jurisdiction, which means there are real protections in place. More at {{REGULATOR_URL}}."
+    understated: "Regulated jurisdiction. Details at {{REGULATOR_URL}}."
+    minimal: "Gambling is regulated in your jurisdiction. Details: {{REGULATOR_URL}}."
+  framing:
+    communal: "Gambling is regulated in your jurisdiction — protections that apply to every player. Learn more at {{REGULATOR_URL}}."
+  directness:
+    diplomatic: "Gambling in your jurisdiction is subject to regulation. For more details, you can visit {{REGULATOR_URL}}."
+    contextual: "Regulation means operators must meet standards for fairness, transparency, and player protection. Learn more about your jurisdiction's rules at {{REGULATOR_URL}}."
+  comfort:
+    reserved: "This activity is regulated in your jurisdiction. More information: {{REGULATOR_URL}}."
+    private: "Activities in this category are regulated in your jurisdiction. Details available at {{REGULATOR_URL}}."
+
+RC-9:
+  default: "Promotional terms apply. Read the full T&Cs before opting in — we've made them readable."
+  voice:
+    authority: "All promotional offers are subject to terms and conditions. Please review the complete terms prior to opting in. They have been written in plain language."
+    elder: "There are terms and conditions attached to every promotion. Read them before you opt in — we've written them so they're actually understandable."
+  humor:
+    warm: "Promotional terms apply. We wrote the T&Cs in plain language — they're genuinely readable. Worth a look before you opt in."
+    understated: "Terms apply. The T&Cs are, unusually, written to be read. Have a look before opting in."
+    minimal: "Promotional terms apply. Read T&Cs before opting in."
+  framing:
+    communal: "Promotional terms apply. Read the full T&Cs before opting in — knowing what you're agreeing to protects more than just your next session."
+  directness:
+    diplomatic: "Promotions come with terms and conditions. Review them before opting in — they've been written in clear, accessible language."
+    contextual: "Promotional headlines and promotional terms don't always tell the same story. Ours are written in plain language. The T&Cs are here."
+  comfort:
+    reserved: "Promotional terms apply. Please review the terms and conditions before participating. They are written in plain language."
+    private: "Terms apply to all offers. Please review the conditions before participating — they're written clearly."
+
+RC-10:
+  default: "That '200% match bonus' has a 30x wagering requirement. Here's what that actually means in real money."
+  voice:
+    authority: "A 200% match bonus with a 30x wagering requirement carries significant conditions. Here is a breakdown of the actual financial implications."
+    elder: "That '200% match bonus' sounds fantastic — until you see the 30x wagering requirement. Let me show you what that actually costs in real money."
+  humor:
+    warm: "That '200% match bonus' comes with a 30x wagering requirement. The headline is exciting. The maths are more interesting. Here's the real cost."
+    understated: "200% match bonus. 30x wagering requirement. The headline and the reality are not close neighbours."
+    minimal: "200% match bonus with 30x wagering requirement. Actual cost breakdown below."
+  framing:
+    communal: "That '200% match bonus' has a 30x wagering requirement. Here's what that actually means in real money — worth knowing before it affects the plans beyond the game."
+  directness:
+    diplomatic: "Promotional bonuses like a 200% match often come with conditions — such as a 30x wagering requirement. Here's what that means in practical terms."
+    contextual: "Bonuses are marketing tools designed to increase play volume. A 200% match with 30x wagering means you must wager far more than you receive. Here's the real math."
+  comfort:
+    reserved: "A '200% match' with a 30x requirement has specific financial implications. Here's the breakdown."
+    private: "Promotional offers often carry conditions that affect real costs. A 200% match with 30x requirements — here's what the math actually looks like."

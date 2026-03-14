@@ -1,0 +1,856 @@
+# Game Guide Cultural Adaptation Notes
+# ======================================
+# Phrase-level adaptation variants for how-to-play game guides.
+#
+# Each entry identifies a culture-dependent phrase in a game guide
+# and provides variants for the relevant cultural dimensions.
+#
+# Default voice: peer / individual / irreverent / blunt / open
+#
+# Usage: When adapting a game guide, find the section by guide name,
+# locate the original phrase, and replace with the appropriate variant.
+#
+# Dimensions:
+#   voice:       peer (default) | authority | elder
+#   framing:     individual (default) | communal
+#   humor:       irreverent (default) | warm | understated | minimal
+#   directness:  blunt (default) | diplomatic | contextual
+#   comfort:     open (default) | reserved | private
+
+# ──────────────────────────────────────────────────────────────────────────────
+# SHARED PHRASES
+# The following phrases appear identically across all game guides.
+# They are listed once here for reference rather than repeated per game.
+#
+# "No fine print." (Introduction / header)
+#   humor:
+#     warm: "We wrote it all down. The whole thing."
+#     understated: "The details. All of them, for once."
+#     minimal: "Full disclosure provided."
+#   voice:
+#     authority: "Full transparency on game mechanics and odds."
+#     elder: "Everything you need to know, laid out honestly."
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ==========================================================================
+# SLOTS
+# ==========================================================================
+slots:
+  title: "Slots"
+  file: "how-to-play/slots.md"
+  phrases:
+
+    # --- Humor-dependent ---
+
+    - original: "Your slot machine has the emotional range of a toaster."
+      section: "Social snippets — Snippet 1"
+      dimensions:
+        humor:
+          warm: "The machine doesn't pick sides. It treats every spin the same way it treated the last one."
+          understated: "The machine does not have an opinion about your strategy. It does not have opinions."
+          minimal: "The machine does not respond to previous results or player behavior."
+        comfort:
+          reserved: "The random number generator treats every outcome identically."
+          private: "Each outcome is generated independently by the system."
+
+    - original: "TL;DR for the impatient"
+      section: "Quick-scan index"
+      dimensions:
+        humor:
+          warm: "Short on time? Here's everything that matters."
+          understated: "For those disinclined to linger"
+          minimal: "Summary"
+        voice:
+          authority: "Executive summary"
+          elder: "The key points at a glance"
+
+    - original: "The spinning reels are just the show."
+      section: "How the game works — The basics"
+      dimensions:
+        humor:
+          warm: "By the time the reels spin, the result is already settled. The show is for us."
+          understated: "The reels are, at that point, performing. The decision was made earlier."
+          minimal: "The reel animation displays a result already determined by the RNG."
+        voice:
+          authority: "The reel animation serves as a visual display mechanism for the predetermined outcome."
+
+    # --- Individual-framing ---
+
+    - original: "Set your budget before you press spin."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        framing:
+          communal: "Setting a budget before playing helps protect the plans, people, and priorities beyond the game."
+        voice:
+          authority: "Players are advised to establish a session budget prior to commencing play."
+          elder: "Before you start, it's worth deciding what you're comfortable spending — it helps you enjoy the game without second-guessing later."
+
+    - original: "Decide what you're willing to spend for the session and stick to it."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        framing:
+          communal: "Decide what's comfortable given the commitments beyond the game, and keep to it."
+        voice:
+          authority: "Establish a predetermined session limit and adhere to it throughout play."
+
+    # --- Blunt evaluative ---
+
+    - original: "Every spin is independent. What happened on the last spin — or the last 1,000 spins — has zero effect on the next one. The RNG doesn't keep score."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        directness:
+          diplomatic: "Each spin is a fresh, independent event. Previous outcomes have no influence on future results — the RNG treats every spin as if it were the first."
+          contextual: "Something worth understanding about the RNG: it generates each outcome independently. Whether you've had ten wins or a thousand losses, the next spin is determined the same way as the very first one."
+        voice:
+          authority: "Each spin constitutes an independent random event. Prior outcomes bear no statistical relationship to subsequent results."
+
+    # --- Currency-dependent ---
+
+    - original: "A $0.50 bet every 3 seconds."
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        # Note: Replace currency values with local equivalents.
+        # This entry flags the phrase for adaptation.
+        humor:
+          warm: "Most people don't clock the speed until they do the maths."
+          understated: "Three seconds per spin. Not without a certain urgency."
+          minimal: "Slot play operates at a high wagering pace."
+
+    - original: "That's how fast modern slots play. At that pace, you're wagering about $600 per hour — even on a \"penny\" machine."
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        framing:
+          communal: "At that pace, spending can add up in ways that reach beyond the session — even on low-denomination machines."
+        directness:
+          diplomatic: "At that pace, total wagers can accumulate to a meaningful amount per hour, even on lower-denomination machines."
+
+    - original: "Betting more per spin does not improve your odds."
+      section: "Bet types — Key point"
+      dimensions:
+        directness:
+          diplomatic: "The house edge applies as a percentage regardless of bet size — larger bets produce proportionally larger wins and losses at the same rate."
+          contextual: "Whether you compare a smaller wager to a larger one, the percentage the machine retains is identical. The scale changes; the math does not."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about slot machines — how they work, what the numbers mean, and why no strategy changes the math."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A clear look at how slot machines operate — the mechanics, the numbers, and the mathematics behind every spin."
+          private: "Understanding how random number generation works in electronic gaming — the mechanics and mathematics that determine outcomes."
+
+# ==========================================================================
+# BLACKJACK
+# ==========================================================================
+blackjack:
+  title: "Blackjack"
+  file: "how-to-play/blackjack.md"
+  phrases:
+
+    # --- Blunt evaluative ---
+
+    - original: "Insurance in particular is almost always a bad deal mathematically."
+      section: "Bet types — Key point"
+      dimensions:
+        directness:
+          diplomatic: "Insurance carries a significantly higher house edge than the base game, making it a less favorable option for most players."
+          contextual: "The house edge on insurance is 7.7%. The house edge on the base game is 0.5%. Side by side, the difference is substantial."
+        voice:
+          authority: "Statistical analysis consistently demonstrates that the insurance bet offers unfavorable expected value, with a house edge of approximately 7.7%."
+          elder: "Insurance might feel like a safety net, but when you look at the numbers — a 7.7% house edge versus 0.5% on the main game — most experienced players pass on it."
+
+    - original: "Basic strategy says: skip it."
+      section: "Bet types — Key point"
+      dimensions:
+        directness:
+          diplomatic: "Basic strategy recommends declining insurance in virtually all situations."
+          contextual: "Basic strategy is built on expected value calculations. Its position on insurance follows from the same math."
+        humor:
+          warm: "Basic strategy has a one-word answer here: pass."
+          understated: "Basic strategy's position on insurance is not, shall we say, ambiguous."
+          minimal: "Basic strategy recommends declining insurance."
+
+    - original: "The dealer has no choices. None."
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        humor:
+          warm: "The dealer follows a script. You're the only one at the table making choices."
+          understated: "The dealer follows the rules. All of them. Every time. Without exception."
+          minimal: "The dealer follows fixed rules with no decision-making discretion."
+        voice:
+          authority: "Dealer play is entirely governed by predetermined house rules, with no discretionary decisions."
+
+    - original: "That's the math, not a mood."
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        humor:
+          warm: "That's just what the numbers do. Every time, same answer."
+          understated: "Arithmetic, not attitude."
+          minimal: "This is a statistical average derived from standard dealing rules."
+
+    # --- Individual-framing ---
+
+    - original: "Set your budget before you play."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        framing:
+          communal: "Setting a budget before playing helps protect the plans and priorities that matter most — the ones beyond the table."
+
+    - original: "Decide on a session bankroll and a bet size."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        framing:
+          communal: "Settle on a session amount that leaves room for the commitments that matter most."
+        voice:
+          authority: "Establish predetermined session and unit-bet limits prior to play."
+
+    - original: "Don't worry about other players."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Your hand plays out against the dealer alone — what matters is making decisions you're comfortable with when you step away from the table."
+        directness:
+          diplomatic: "Each hand plays out against the dealer independently, so other players' decisions have no mathematical effect on your outcome."
+
+    # --- Currency examples ---
+
+    - original: "On a $10 bet, that's $12 instead of $15."
+      section: "Bet types — 6:5 vs. 3:2 blackjack"
+      dimensions:
+        directness:
+          diplomatic: "The difference in payout may seem small on a single hand, but it compounds meaningfully over a session."
+          contextual: "Comparing the two payout structures side by side reveals a meaningful difference that grows with each natural blackjack dealt."
+
+    - original: "This single rule change increases the house edge by about 1.4%. Check the table sign before you sit down."
+      section: "Bet types — 6:5 vs. 3:2 blackjack"
+      dimensions:
+        directness:
+          diplomatic: "This rule difference increases the house edge by about 1.4%, which is worth checking before choosing a table."
+          contextual: "The posted payout ratio is visible on the table sign. It varies from table to table, and a 1.4% difference in house edge follows from it."
+
+# ==========================================================================
+# ROULETTE
+# ==========================================================================
+roulette:
+  title: "Roulette"
+  file: "how-to-play/roulette.md"
+  phrases:
+
+    # --- Blunt evaluative ---
+
+    - original: "Avoid it."
+      section: "Bet types — Key point (re: five-number bet)"
+      dimensions:
+        directness:
+          diplomatic: "Most experienced players choose other bets with a lower house edge."
+          contextual: "When compared to every other bet on the table, the five-number bet carries a noticeably higher house edge — 7.89% versus the standard 5.26%."
+        voice:
+          authority: "This bet is not recommended based on its unfavorable house edge of 7.89%."
+          elder: "It's worth knowing that this particular bet costs more than any other option on the table — and there's no strategic reason to take it."
+
+    - original: "Skip the five-number bet on American roulette."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        directness:
+          diplomatic: "The five-number bet on American roulette carries a higher house edge than any other bet on the table — 7.89% versus 5.26%."
+          contextual: "Among all the bets available on an American roulette table, one stands apart: the five-number bet, at 7.89%, carries a measurably higher cost than the standard 5.26%."
+        voice:
+          authority: "The five-number bet (0, 00, 1, 2, 3) carries a 7.89% house edge — the highest on the table — and is not recommended under any strategy."
+
+    - original: "The worst bet on the table."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        directness:
+          diplomatic: "The most expensive bet on the table in terms of house edge."
+          contextual: "The bet with the highest mathematical cost to the player."
+        humor:
+          warm: "Of all the bets on the table, this one costs the most. Worth knowing before you place it."
+          understated: "Not the table's strongest offering, mathematically speaking."
+          minimal: "The highest house edge available on the table."
+
+    # --- Humor-dependent ---
+
+    - original: "Those \"hot number\" boards? Pure entertainment."
+      section: "Social snippets — Snippet 2"
+      dimensions:
+        humor:
+          warm: "Those boards are fun to watch. They just can't tell you what's coming next."
+          understated: "The displays are thorough records of what has happened. What happens next, they cannot say."
+          minimal: "Electronic result displays have no predictive value for future spins."
+        voice:
+          authority: "Electronic result displays provide historical data only. They have no predictive value for future outcomes."
+
+    # --- Individual-framing ---
+
+    - original: "Set your budget per session."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Setting a session budget helps ensure the evening's entertainment stays within what's comfortable for you and those counting on you."
+        voice:
+          authority: "Players should establish a predetermined budget for each session prior to play."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about roulette — the wheel, the bets, and why the number of zeros changes everything."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A clear guide to roulette mechanics — wheel types, bet structures, and how the mathematics differ between game variants."
+          private: "Understanding how probability works in wheel-based games — the mechanics, bet structures, and mathematics behind each variant."
+
+# ==========================================================================
+# SPORTS BETTING
+# ==========================================================================
+sports_betting:
+  title: "Sports Betting"
+  file: "how-to-play/sports-betting.md"
+  phrases:
+
+    # --- Humor / directness ---
+
+    - original: "The line already knows what you know."
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        humor:
+          warm: "Whatever you've read about the game, the line read it first."
+          understated: "The market has, it's fair to say, been paying attention."
+          minimal: "Sportsbook odds incorporate all publicly available information."
+        directness:
+          diplomatic: "Sportsbook lines are set using extensive data analysis and market efficiency. The information most bettors use is already reflected in the odds."
+          contextual: "When you consider the data feeds, modeling, and market activity that go into setting a line, it becomes clear that the odds already account for most of what any individual bettor knows."
+        voice:
+          authority: "Sportsbook odds are determined through algorithmic analysis of comprehensive data sets. Publicly available information is already incorporated into the line."
+
+    - original: "Parlays are entertainment, not strategy."
+      section: "Bet types — Parlays / Key point"
+      dimensions:
+        directness:
+          diplomatic: "Parlays offer exciting potential payouts, but the compounding vig means they carry a higher effective house edge than individual bets."
+          contextual: "Comparing the effective margin on a parlay to the margin on its individual legs reveals a meaningful difference — one that grows with each selection added."
+        humor:
+          warm: "Parlays make a Saturday more interesting. The maths, though, are worth understanding before you build one."
+          understated: "The parlay payout table is generous in appearance. The underlying arithmetic, less so."
+          minimal: "Vigorish compounds with each additional parlay leg, increasing the effective margin."
+
+    - original: "Parlays are the sportsbook's most profitable product."
+      section: "Bet types — Parlays"
+      dimensions:
+        directness:
+          diplomatic: "Parlays tend to generate higher margins for the sportsbook than standard single bets."
+          contextual: "When sportsbooks report their revenue by product type, parlays consistently appear among the highest-margin offerings."
+
+    # --- Individual-framing ---
+
+    - original: "Set your bankroll and bet size."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        framing:
+          communal: "Decide on a betting budget that leaves the things beyond the bet — the plans, the people — untouched."
+        voice:
+          authority: "Establish a designated bankroll and a fixed percentage for individual wagers prior to placing bets."
+
+    - original: "The line already knows what you know."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "The odds already reflect what's publicly known — chasing an edge that isn't there can cost more than the bet itself."
+
+    # --- Sports-culture-dependent ---
+
+    - original: "Player X scores over/under 24.5 points"
+      section: "Bet types — Props"
+      dimensions:
+        # Note: Replace with locally relevant sport props.
+        # Basketball points example is US-centric.
+        humor:
+          minimal: "Player performance markets (e.g., goals, runs, points)"
+
+    - original: "Total strikeouts by a pitcher"
+      section: "Bet types — Props"
+      dimensions:
+        # Note: MLB-specific. Replace with local sport equivalent.
+        humor:
+          minimal: "Individual player performance markets"
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about sports betting — how odds work, what the different bet types mean, and where the sportsbook makes its money."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A guide to how sports wagering odds function — bet types, odds formats, and the mechanics behind sportsbook pricing."
+          private: "Understanding probability and pricing in competitive markets — how odds are set, what they represent, and how margins are built in."
+
+    # --- Odds format ---
+
+    - original: "At standard -110 odds, you need to win 52.4% of your bets just to break even."
+      section: "The 30-second version"
+      dimensions:
+        # Note: Convert -110 to decimal (1.91) or fractional (10/11) for non-US markets.
+        voice:
+          authority: "At standard odds of -110 (decimal 1.91), the break-even win rate is 52.4%, reflecting the sportsbook's built-in margin."
+
+# ==========================================================================
+# BACCARAT
+# ==========================================================================
+baccarat:
+  title: "Baccarat"
+  file: "how-to-play/baccarat.md"
+  phrases:
+
+    # --- Blunt evaluative ---
+
+    - original: "Skip the Tie bet."
+      section: "Tips for informed play — Tip 2"
+      dimensions:
+        directness:
+          diplomatic: "The Tie bet offers a notably higher house edge than the main bets — 14.4% compared to 1.06% for Banker."
+          contextual: "Comparing the three available bets side by side, the Tie bet's 14.4% house edge stands in sharp contrast to the Banker bet's 1.06% and the Player bet's 1.24%."
+        voice:
+          authority: "The Tie bet carries a 14.4% house edge and is not recommended by standard probability analysis."
+          elder: "The Tie payout might look appealing at 8:1, but when you see that it hits only about 9.5% of the time, the cost becomes clear."
+
+    - original: "The 8:1 payout looks attractive. The 14.4% house edge isn't."
+      section: "Tips for informed play — Tip 2"
+      dimensions:
+        directness:
+          diplomatic: "The 8:1 payout on the Tie bet is appealing, but the underlying probability makes it significantly more expensive than the main bets."
+          contextual: "An 8:1 payout naturally draws attention. Ties occur about 9.5% of the time; the payout would need them to occur about 11.1% of the time to break even. That gap is where the 14.4% house edge lives."
+        humor:
+          warm: "8:1 looks good on the felt. The 14.4% house edge is the part that doesn't make the sign."
+          understated: "The 8:1 is prominently displayed. The 14.4% house edge, one notices, somewhat less so."
+          minimal: "The Tie bet pays 8:1 with a 14.4% house edge. Actual tie frequency is 9.5%; break-even requires 11.1%."
+
+    - original: "The Tie bet pays 8:1. The house edge is 14.4%."
+      section: "Social snippets — Snippet 2"
+      dimensions:
+        directness:
+          diplomatic: "The Tie bet's 8:1 payout comes with a 14.4% house edge — notably higher than the main bets."
+          contextual: "Side by side, the numbers on the Tie bet reveal a significant gap: an 8:1 payout, but a 14.4% house edge. The Banker bet, by comparison, sits at 1.06%."
+
+    - original: "That's roughly 13 times worse than the Banker bet — on the same table, in the same game."
+      section: "The math — What this means for your wallet"
+      dimensions:
+        directness:
+          diplomatic: "The difference between the Tie and Banker house edges is significant — more than a tenfold increase, despite being bets on the same table."
+          contextual: "Placing these numbers next to each other makes the scale of the difference clear: $14.40 per $100 wagered on Tie, versus $1.06 per $100 on Banker."
+
+    # --- Humor-dependent ---
+
+    - original: "Those scorecards? Entertainment, not prediction."
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        humor:
+          warm: "Scorecards are part of the ritual. They show you where you've been, not where you're going."
+          understated: "The scorecards are meticulous historians. Prophets, they are not."
+          minimal: "Scorecards record past results. They have no predictive value."
+        voice:
+          authority: "Baccarat scorecards document historical outcomes. Each hand is an independent event; previous results have no statistical bearing on future hands."
+
+    # --- Individual-framing ---
+
+    - original: "Set your session budget."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Setting a session budget helps ensure the evening stays enjoyable without affecting the commitments that matter most."
+        voice:
+          authority: "Players should establish a predetermined session budget based on the expected pace of play and unit bet size."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about baccarat — the rules, the three bets, and why the simplest game on the floor has some of the best odds."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A guide to baccarat mechanics — the rules, bet types, and the mathematics that make it one of the most favorable table games."
+          private: "Understanding probability in card comparison games — the rules, decision structure, and mathematical expectations."
+
+# ==========================================================================
+# CRAPS
+# ==========================================================================
+craps:
+  title: "Craps"
+  file: "how-to-play/craps.md"
+  phrases:
+
+    # --- Blunt evaluative ---
+
+    - original: "Skip it"
+      section: "The math — House edge comparison (Verdict column for Hard 6/8, Any craps)"
+      dimensions:
+        directness:
+          diplomatic: "Higher-cost bet — consider alternatives with a lower house edge."
+          contextual: "When placed alongside the pass line or odds bets, the difference in house edge becomes substantial."
+
+    - original: "The worst bet on the table"
+      section: "The math — House edge comparison (Verdict for Any 7)"
+      dimensions:
+        directness:
+          diplomatic: "The highest house edge available on the craps layout."
+          contextual: "At 16.67%, Any 7 carries a house edge roughly twelve times higher than the pass line bet."
+
+    - original: "The center of the table is where the casino makes its money on craps."
+      section: "Bet types — Proposition bets"
+      dimensions:
+        directness:
+          diplomatic: "Proposition bets in the center of the table carry significantly higher house edges than the perimeter bets."
+          contextual: "Comparing the proposition bets at the center of the layout (9–17% house edge) to the pass line and odds bets at the perimeter (0–1.41%) reveals where the largest mathematical gap lies."
+        humor:
+          warm: "The center bets are where the excitement is. Also where the largest house edges are. That's not a coincidence."
+          understated: "The center of the table is, perhaps predictably, where the house margin is most comfortable."
+          minimal: "Proposition bets carry 9-17% house edges versus 0-1.41% for pass line and odds bets."
+
+    - original: "These bets are entertainment, not strategy."
+      section: "Bet types — Proposition bets"
+      dimensions:
+        directness:
+          diplomatic: "These bets offer high payouts but at a significantly higher mathematical cost than the perimeter bets."
+          contextual: "For players focused on maximizing expected value, the pass line and odds bets offer a markedly different mathematical profile than the proposition bets."
+        humor:
+          warm: "They make the table louder. The maths, though, are a different conversation."
+          minimal: "These wagers carry substantially higher house edges than pass/don't pass and odds bets."
+
+    # --- Humor-dependent ---
+
+    - original: "The bumpy rubber walls say otherwise"
+      section: "Common myths — Dice Control (one-liner)"
+      dimensions:
+        humor:
+          warm: "The casino put a lot of engineering into those bumpy rubber walls. They had a reason."
+          understated: "The pyramid-studded rubber walls would, one imagines, like a word."
+          minimal: "Casino table surfaces and wall features are engineered to randomize dice outcomes."
+        voice:
+          authority: "Casino craps tables employ textured rubber backstop surfaces specifically engineered to randomize dice trajectory upon impact."
+
+    # --- Individual-framing ---
+
+    - original: "Set your budget before you play. Craps is social and fast-paced. The energy at the table can drive overcommitment."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Setting a budget before you play helps ensure the excitement of the table doesn't lead to spending that reaches beyond the game. The energy is part of the fun — a clear limit lets you stay in the moment without second thoughts later."
+        voice:
+          authority: "Set a session budget before you play. The pace and social energy of craps can lead to higher spending than planned."
+          elder: "The energy at a craps table is contagious — that's part of what makes it enjoyable. Deciding on your budget before the first roll helps you stay in the moment without worrying later."
+
+    - original: "Decide on a session amount and bet size before your first roll."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Settle on a session amount that respects the commitments waiting outside the casino, and set your bet size before the first roll."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about craps — the rolls, the bets, and why the odds bet is the only fair wager in the casino."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A guide to craps mechanics — the roll structure, bet types, and the mathematics behind the only zero-margin wager on the floor."
+          private: "Understanding probability in dice games — how outcomes are distributed, how different wagers are priced, and where the mathematical margin lives."
+
+# ==========================================================================
+# VIDEO POKER
+# ==========================================================================
+video_poker:
+  title: "Video Poker"
+  file: "how-to-play/video-poker.md"
+  phrases:
+
+    # --- Humor-dependent ---
+
+    - original: "You can bring a cheat sheet. Seriously."
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        humor:
+          warm: "You can use a strategy card right at the machine. Nobody minds. We checked."
+          understated: "Strategy cards at the machine are, it may interest you to know, entirely permitted."
+          minimal: "Strategy cards may be used at the machine during play."
+        voice:
+          authority: "Strategy reference cards may be used during play in most jurisdictions. Verify local regulations."
+
+    - original: "Twenty minutes of study is worth more than any \"lucky feeling.\""
+      section: "Social snippets — Snippet 3"
+      dimensions:
+        humor:
+          warm: "Twenty minutes with a strategy chart. That's genuinely all it takes to change the numbers."
+          understated: "Twenty minutes of preparation versus a lifetime of hunches. The maths are not close."
+          minimal: "Twenty minutes of strategy study measurably improves expected outcomes."
+
+    - original: "It looks like a slot machine. It isn't."
+      section: "Social snippets — Snippet 1"
+      dimensions:
+        humor:
+          warm: "Same cabinet. Completely different game. Your decisions actually change the maths here."
+          understated: "The resemblance to a slot machine ends, rather abruptly, at the cabinet."
+          minimal: "Despite visual similarities, video poker involves decisions that affect the mathematical outcome."
+        voice:
+          authority: "Although video poker machines share a form factor with slot machines, the underlying game mechanics differ substantially."
+
+    - original: "Don't treat it like a slot machine."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        humor:
+          warm: "Every hold decision has a right answer. That's what makes this a different game."
+          understated: "Treating it like a slot machine is an option. An expensive one."
+          minimal: "Strategic hold decisions are required. Playing without strategy increases the effective house edge."
+
+    # --- Blunt evaluative ---
+
+    - original: "Holding cards based on gut feeling instead of strategy is leaving money on the table."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        directness:
+          diplomatic: "Using a strategy chart rather than intuition leads to measurably better outcomes over time."
+          contextual: "Comparing the expected value of strategy-based holds to intuition-based holds reveals a significant gap — the kind that compounds over hundreds of hands."
+        humor:
+          warm: "The right hold is knowable, every time. A strategy chart makes that simple."
+          minimal: "Optimal strategy produces measurably better expected value than intuitive decisions."
+
+    - original: "If a machine doesn't show its RTP, that's worth knowing too."
+      section: "Tips for informed play — Tip 1 (implied)"
+      dimensions:
+        directness:
+          diplomatic: "If the RTP isn't displayed, it may be worth checking with the operator or choosing a machine where it is."
+          contextual: "Some machines display their RTP prominently. Others don't. That difference is itself a piece of information."
+
+    # --- Individual-framing ---
+
+    - original: "Set your session budget."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Setting a session budget helps ensure the time and money spent playing don't touch the plans that matter most."
+        voice:
+          authority: "Players should establish a fixed session budget based on pace of play and credit denomination."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about video poker — the game where your choices actually change the math."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A guide to video poker mechanics — how hold decisions affect expected value and what the paytable reveals about each machine."
+          private: "Understanding decision-based probability in electronic card games — how strategic choices change the mathematical expectation of each hand."
+
+# ==========================================================================
+# LOTTERY
+# ==========================================================================
+lottery:
+  title: "Lottery"
+  file: "how-to-play/lottery.md"
+  phrases:
+
+    # --- Blunt evaluative ---
+
+    - original: "Lotteries are entertainment with a dream attached, not an investment."
+      section: "The 30-second version"
+      dimensions:
+        directness:
+          diplomatic: "Lotteries offer entertainment value and the possibility of a life-changing prize, though the long-run return is lower than most other forms of gambling."
+          contextual: "When lottery RTP is placed alongside casino games (85–99%) and sports betting (95–96%), the 50–65% range tells its own story about where lottery fits in the spectrum of gambling products."
+        humor:
+          warm: "A lottery ticket buys you a dream for a few days. That's the product. It's worth knowing the rest."
+          understated: "As investments go, lottery tickets are not without ambition."
+          minimal: "Lotteries are low-probability, high-reward products with expected returns below most other gambling formats."
+
+    - original: "The lottery keeps 35–50% of all ticket revenue."
+      section: "The math — What this means for your wallet"
+      dimensions:
+        directness:
+          diplomatic: "Between 35–50% of total ticket revenue goes to the operator, government programs, and good causes — with the remainder distributed as prizes."
+          contextual: "Lottery revenue is typically divided between prize pools (50–65%), operator costs, and contributions to government programs or community initiatives. The player's share is the prize pool percentage."
+
+    - original: "\"Systems\" don't change the math."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        directness:
+          diplomatic: "No analysis system or software can improve the odds of a truly random draw."
+          contextual: "Each lottery draw is an independent random event — the machine has no memory of previous results. Strategies based on past draws are working from that same set of numbers."
+        humor:
+          warm: "The numbers don't remember what came before. No system can change that."
+          understated: "Past draws and future draws have not been introduced."
+          minimal: "Draw outcomes are independent events. No system can improve selection probability."
+
+    - original: "Software, books, and services that claim to improve your lottery odds are selling hope, not probability."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        directness:
+          diplomatic: "Products that claim to improve lottery odds are unable to change the underlying mathematics of a random draw."
+          contextual: "Each draw is independent and random — the machine generates results with no connection to previous outcomes. Products that claim to find patterns in past draws are working from those same past numbers."
+        voice:
+          authority: "No commercially available system or service can alter the probability of a random draw. Claims to the contrary are inconsistent with established probability theory."
+
+    # --- Humor-dependent ---
+
+    - original: "The lottery doesn't know your birthday."
+      section: "Social snippets — Snippet 1"
+      dimensions:
+        humor:
+          warm: "Every number has the same chance. The machine doesn't know which ones matter to you."
+          understated: "The drawing machine is not aware of your birthday. Nor anyone else's."
+          minimal: "All numbers have identical draw probability regardless of personal significance."
+        voice:
+          authority: "Number selection based on personal significance has no effect on draw probability. All numbers have equal likelihood."
+
+    # --- Individual-framing ---
+
+    - original: "Budget for lottery like entertainment, not investment."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        framing:
+          communal: "Budgeting for lottery as entertainment — rather than as an income strategy — helps protect the financial commitments that matter beyond the ticket."
+        voice:
+          authority: "Lottery expenditure should be categorized as entertainment spending rather than investment, given the expected return of 50–65%."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about lotteries — how they work, what the odds actually are, and why no system changes the math."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A clear guide to how lotteries function — draw mechanics, prize structures, and the mathematics behind the odds."
+          private: "Understanding probability in random-draw systems — how outcomes are generated, what the numbers mean, and why patterns in past draws don't predict future results."
+
+    - original: "You're more likely to be struck by lightning twice"
+      section: "The math — Jackpot odds"
+      dimensions:
+        humor:
+          warm: "The odds are long in a way that's hard to picture. That's part of the appeal, and worth understanding."
+          understated: "The probability is, to put it gently, small."
+          minimal: "Major jackpot probability typically ranges from 1 in 100 million to 1 in 300 million."
+
+# ==========================================================================
+# BINGO
+# ==========================================================================
+bingo:
+  title: "Bingo"
+  file: "how-to-play/bingo.md"
+  phrases:
+
+    # --- Blunt evaluative ---
+
+    - original: "A \"just one more strip\" habit adds up fast."
+      section: "Tips for informed play — Tip 1"
+      dimensions:
+        directness:
+          diplomatic: "Incremental card purchases during a session can accumulate to a meaningful total."
+          contextual: "When the per-card cost is low, it's easy to underestimate how additional strips add up over the course of a session."
+        humor:
+          warm: "One more strip never feels like much. A running tally tells a clearer story."
+          understated: "The per-card cost is modest. Cumulatively, less so."
+          minimal: "Incremental card purchases accumulate over a session. Tracking total spend prevents overruns."
+        framing:
+          communal: "Keeping track of total spending during a session helps ensure bingo night stays fun without reaching into what matters beyond the hall."
+
+    - original: "Side games often have worse odds than the main game."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        directness:
+          diplomatic: "Side games typically operate with different RTPs than the main bingo game — and those RTPs are often lower."
+          contextual: "Comparing the RTP of the main bingo game to the RTPs of the side games offered alongside it often reveals a meaningful difference."
+
+    # --- Individual-framing ---
+
+    - original: "Know your per-session budget and stick to it."
+      section: "Tips for informed play — Tip 1"
+      dimensions:
+        framing:
+          communal: "Agreeing on a session budget before arriving helps keep bingo night enjoyable without affecting commitments beyond the hall."
+        voice:
+          authority: "Players should establish a fixed session budget prior to purchasing cards."
+          elder: "Deciding what you're comfortable spending before you arrive is a simple habit that keeps the evening stress-free."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about bingo — how it works, why every card has the same chance, and where the house edge actually lives."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A guide to bingo mechanics — how draws work, what determines the house edge, and how card quantity affects your probability."
+          private: "Understanding probability in random-draw games — how outcomes are generated, what determines the operator's margin, and how participation levels affect individual odds."
+
+    - original: "More experienced players win more"
+      section: "Common myths"
+      dimensions:
+        directness:
+          diplomatic: "Experience helps with card management and daubing speed, but doesn't change the odds of any given card winning."
+
+# ==========================================================================
+# HORSE RACING
+# ==========================================================================
+horse_racing:
+  title: "Horse Racing"
+  file: "how-to-play/horse-racing.md"
+  phrases:
+
+    # --- Humor-dependent ---
+
+    - original: "If tipsters could pick winners, they wouldn't need to sell tips."
+      section: "Social snippets — Snippet 2"
+      dimensions:
+        humor:
+          warm: "Tipsters study the form and share what they think. Nobody, though, has cracked the code on picking winners."
+          understated: "A reliable system for picking winners would, one imagines, be worth rather more than a subscription fee."
+          minimal: "Tipster accuracy is subject to survivorship bias. Reliable long-term profitability has not been demonstrated."
+        voice:
+          authority: "Tipster track records are subject to survivorship bias and publication bias. No commercial tipping service has demonstrated statistically reliable long-term profitability."
+          elder: "It's worth asking: if someone truly had a reliable way to pick winners, would they sell that knowledge or use it themselves? That question tells you most of what you need to know."
+
+    # --- Blunt evaluative ---
+
+    - original: "The more complex the bet, the bigger the cut before you get paid."
+      section: "Bet types — Key point"
+      dimensions:
+        directness:
+          diplomatic: "Bet complexity and takeout rates tend to move together — simpler bets generally retain a larger share of the wagered amount."
+          contextual: "Placing the takeout rates for simple and exotic bets side by side reveals a consistent pattern: win bets at 15–18%, trifectas at 22–25%. The difference compounds over time."
+
+    - original: "Tipsters, touts, and racing pundits provide opinions, not certainties."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        directness:
+          diplomatic: "Racing analysis and tips reflect opinions informed by data, but they cannot guarantee outcomes in a sport with as many variables as horse racing."
+          contextual: "Form analysis is a valuable tool for understanding likely outcomes, but the number of variables in any given race — surface, weather, pace, field dynamics — means that even well-informed opinions carry significant uncertainty."
+        voice:
+          authority: "Racing commentary and tipping services provide probabilistic assessments. No individual or service can reliably predict outcomes in a multivariate competitive event."
+
+    - original: "Track record claims are subject to survivorship bias — you only hear from the ones who got it right recently."
+      section: "Tips for informed play — Tip 4"
+      dimensions:
+        directness:
+          diplomatic: "Published track records tend to highlight successes — the full record, including misses, is often harder to find."
+          contextual: "Published tipster records may reflect a complete history or a curated selection of their best calls. The distinction between those two things is significant."
+
+    # --- Individual-framing ---
+
+    - original: "Set a session budget and track your actual spending."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Setting a budget for a day at the track — and keeping track of actual spending — helps ensure race day stays enjoyable without affecting what's waiting at home."
+        voice:
+          authority: "Bettors should establish a fixed session budget and maintain an accurate record of all wagers placed during the race card."
+
+    - original: "Decide your total spend before the first race, not after the fifth."
+      section: "Tips for informed play — Tip 5"
+      dimensions:
+        framing:
+          communal: "Deciding on a total budget before the first race — rather than adjusting during the card — protects the plans that matter beyond the track."
+        directness:
+          diplomatic: "Having a clear total budget before the first race helps avoid incremental spending decisions that can add up over a full card."
+
+    # --- Comfort-dependent ---
+
+    - original: "Everything you need to know about betting on horse racing — how the odds work, what the takeout is, and why form guides are information, not crystal balls."
+      section: "Introduction"
+      dimensions:
+        comfort:
+          reserved: "A guide to horse racing wagering mechanics — how pari-mutuel and fixed-odds systems work, what the takeout means, and how to interpret form data."
+          private: "Understanding probability and market mechanics in competitive events — how odds are set, what margins look like, and how historical data informs but doesn't predict outcomes."
+        humor:
+          warm: "How the odds work, what the track keeps, and why the form guide helps but doesn't promise."
+          understated: "How odds work, what the takeout is, and why form guides are informative rather than prophetic."
+          minimal: "Horse racing wagering guide: odds mechanics, takeout rates, bet types, and form analysis limitations."

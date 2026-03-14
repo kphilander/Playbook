@@ -16,23 +16,23 @@
   .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
   .social-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .card-logo { font-family: var(--pb-font-heading); font-size: 32px; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); }
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .section-label { font-family: var(--pb-font-heading); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
+  .section-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
-  .headline { font-family: var(--pb-font-heading); font-size: 44px; font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
   .odds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .odds-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; }
-  .odds-game { font-family: var(--pb-font-body); font-size: 18px; color: var(--pb-color-neutral-300); margin-bottom: 8px; }
-  .odds-edge { font-family: var(--pb-font-heading); font-size: 44px; font-weight: 800; letter-spacing: -0.02em; }
+  .odds-game { font-family: var(--pb-font-body); font-size: calc(18px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 8px; }
+  .odds-edge { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; letter-spacing: -0.02em; }
   .odds-edge.teal { color: var(--pb-color-secondary); }
   .odds-edge.white { color: var(--pb-color-white); }
   .odds-edge.orange { color: var(--pb-color-accent); }
-  .odds-note { font-family: var(--pb-font-body); font-size: 16px; color: var(--pb-color-neutral-500); margin-top: 4px; }
+  .odds-note { font-family: var(--pb-font-body); font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 4px; }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: 16px; color: var(--pb-color-white); }
-  .footer-legal { font-size: 13px; color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -69,7 +69,7 @@
   </div>
   <div class="card-footer">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
-    <span class="footer-legal">{{MIN_AGE}}+ to gamble</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 </div>
 </body>

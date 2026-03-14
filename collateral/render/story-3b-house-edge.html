@@ -16,26 +16,26 @@
   .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .story-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .story-logo { font-family: var(--pb-font-heading); font-size: 28px; }
+  .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); }
   .story-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .story-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .section-label { font-family: var(--pb-font-heading); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
+  .section-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
   .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
-  .eyebrow { font-family: var(--pb-font-heading); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-secondary); margin-bottom: 20px; }
-  .headline { font-family: var(--pb-font-heading); font-size: 44px; font-weight: 800; line-height: 1.2; color: var(--pb-color-white); margin-bottom: 40px; letter-spacing: -0.02em; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-secondary); margin-bottom: 20px; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.2; color: var(--pb-color-white); margin-bottom: 40px; letter-spacing: -0.02em; }
   .headline .teal { color: var(--pb-color-secondary); }
   .odds-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
   .odds-row { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px 28px; }
-  .odds-row .game { font-family: var(--pb-font-heading); font-size: 22px; font-weight: 600; color: var(--pb-color-white); }
-  .odds-row .note { font-family: var(--pb-font-body); font-size: 16px; color: var(--pb-color-neutral-500); margin-top: 4px; }
-  .odds-row .edge { font-family: var(--pb-font-mono); font-size: 36px; font-weight: 700; }
+  .odds-row .game { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-white); }
+  .odds-row .note { font-family: var(--pb-font-body); font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 4px; }
+  .odds-row .edge { font-family: var(--pb-font-mono); font-size: calc(36px * var(--pb-template-text-scale, 1)); font-weight: 700; }
   .odds-row .edge.teal { color: var(--pb-color-secondary); }
   .odds-row .edge.white { color: var(--pb-color-white); }
   .odds-row .edge.orange { color: var(--pb-color-accent); }
-  .context { font-family: var(--pb-font-body); font-size: 26px; line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 40px; }
-  .story-cta { display: block; width: 100%; padding: 24px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: 22px; text-align: center; border-radius: 16px; text-decoration: none; }
+  .context { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 40px; }
+  .story-cta { display: block; width: 100%; padding: 24px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(22px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 16px; text-decoration: none; }
   .story-footer { background: var(--pb-color-primary-light); padding: 24px 48px; text-align: center; position: relative; z-index: 1; }
-  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: 16px; color: var(--pb-color-white); }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>

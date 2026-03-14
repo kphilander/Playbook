@@ -22,7 +22,7 @@
   }
   .hero-logo {
     font-family: var(--pb-font-heading);
-    font-size: 22px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     margin-bottom: 32px;
     display: inline-block;
   }
@@ -31,19 +31,19 @@
   .hero h1 {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 28px;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-bottom: 20px;
   }
   .deposit-amount {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 48px;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
     margin-bottom: 8px;
   }
   .deposit-date {
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
   }
   .section-white { padding: 40px 56px; background: var(--pb-color-white); }
@@ -51,7 +51,7 @@
   .section-heading {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-900);
     margin-bottom: 24px;
   }
@@ -68,7 +68,7 @@
     text-align: center;
   }
   .budget-stat .label {
-    font-size: 13px;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -79,7 +79,7 @@
   .budget-stat .value {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 22px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
   }
   .budget-stat .value.teal { color: var(--pb-color-secondary); }
@@ -98,12 +98,12 @@
     border-radius: 4px;
   }
   .progress-label {
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     text-align: right;
   }
   .note {
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.6;
     margin-top: 16px;
@@ -114,7 +114,7 @@
     color: var(--pb-color-primary);
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     padding: 12px 28px;
     border-radius: 6px;
     text-decoration: none;
@@ -138,12 +138,12 @@
   .tool-dot.off { background: var(--pb-color-neutral-300); }
   .tool-label {
     font-weight: 600;
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-900);
     flex: 1;
   }
   .tool-status {
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     font-family: var(--pb-font-mono);
     font-weight: 500;
@@ -153,17 +153,17 @@
     padding: 36px 56px;
     text-align: center;
   }
-  .footer-support { font-size: 15px; color: var(--pb-color-white); font-weight: 600; margin-bottom: 10px; }
+  .footer-support { font-size: calc(15px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); font-weight: 600; margin-bottom: 10px; }
   .footer-channels {
     font-family: var(--pb-font-mono);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-secondary);
     margin-bottom: 20px;
     line-height: 1.8;
   }
-  .footer-legal { font-size: 13px; color: var(--pb-color-neutral-500); line-height: 1.6; margin-bottom: 12px; }
-  .footer-logo { font-family: var(--pb-font-heading); font-size: 14px; margin-top: 16px; display: inline-block; }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.6; margin-bottom: 12px; }
+  .footer-logo { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; }
   .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
 </style>
@@ -230,7 +230,7 @@
   <div class="footer">
     <div class="footer-support">Free, confidential support — for any question about gambling.</div>
     <div class="footer-channels">Call {{HELPLINE_NUMBER}} | Text {{HELPLINE_NUMBER}}</div>
-    <div class="footer-legal">You must be {{MIN_AGE}}+ to gamble. Gambling involves risk.</div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
     <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
   </div>
 

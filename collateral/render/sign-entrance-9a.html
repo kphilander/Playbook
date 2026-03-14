@@ -46,7 +46,7 @@
   }
   .card-logo {
     font-family: var(--pb-font-heading);
-    font-size: 32px;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
@@ -62,7 +62,7 @@
   }
   .operator-placeholder {
     font-family: var(--pb-font-heading);
-    font-size: 12px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     border: 2px dashed rgba(255,255,255,0.15);
     border-radius: 6px;
@@ -81,13 +81,13 @@
   .sign-headline {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 56px;
+    font-size: calc(56px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     line-height: 1.15;
     margin-bottom: 20px;
   }
   .sign-sub {
-    font-size: 22px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.5;
     margin-bottom: 48px;
@@ -110,21 +110,21 @@
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-mono);
-    font-size: 12px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     font-weight: 600;
   }
   .qr-text {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: 18px;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
   }
   .qr-text strong {
     display: block;
     color: var(--pb-color-white);
     font-weight: 700;
-    font-size: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     margin-bottom: 4px;
   }
 
@@ -140,11 +140,11 @@
   .footer-helpline {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: 18px;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
   }
   .footer-legal {
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
   }
 </style>
@@ -172,7 +172,7 @@
 
   <div class="sign-footer">
     <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
-    <span class="footer-legal">{{MIN_AGE}}+ to gamble</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 
 </div>

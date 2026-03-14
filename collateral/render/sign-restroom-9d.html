@@ -38,12 +38,12 @@
   .restroom-headline {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: 36px;
+    font-size: calc(36px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-bottom: 12px;
   }
   .restroom-body {
-    font-size: 18px;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.5;
     margin-bottom: 28px;
@@ -51,13 +51,13 @@
   .restroom-number {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: 48px;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
     margin-bottom: 16px;
     letter-spacing: 0.04em;
   }
   .restroom-channels {
-    font-size: 16px;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     line-height: 1.8;
   }
@@ -68,7 +68,7 @@
   .restroom-avail {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: 15px;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     margin-top: 16px;
   }
@@ -78,7 +78,7 @@
     bottom: 16px;
     right: 20px;
     font-family: var(--pb-font-heading);
-    font-size: 14px;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     z-index: 1;
   }
   .restroom-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
