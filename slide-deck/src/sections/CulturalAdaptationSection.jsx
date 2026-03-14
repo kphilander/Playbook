@@ -86,7 +86,7 @@ export default function CulturalAdaptationSection() {
           <div className="flex flex-wrap gap-x-6 gap-y-4 mb-8 pb-6 border-b border-white/[0.06]">
             {dimensions.map((dim) => (
               <div key={dim.key} className="flex flex-col gap-1.5">
-                <span className="font-heading text-[10px] font-bold text-n500 tracking-[0.15em] uppercase">
+                <span className="font-heading text-xs font-bold text-n300 tracking-[0.15em] uppercase">
                   {dim.label}
                 </span>
                 <div className="flex gap-1">
@@ -94,10 +94,10 @@ export default function CulturalAdaptationSection() {
                     <button
                       key={opt}
                       onClick={() => handleChange(dim.key, opt)}
-                      className={`px-2.5 py-1 rounded text-[11px] font-heading font-semibold transition-all duration-200 cursor-pointer
+                      className={`px-2.5 py-1 rounded text-xs font-heading font-semibold transition-all duration-200 cursor-pointer
                         ${opt === profile[dim.key]
                           ? 'bg-teal text-navy'
-                          : 'bg-navy-light text-n500 hover:text-n300'
+                          : 'bg-navy-light text-n300 hover:text-n300'
                         }`}
                     >
                       {opt}
@@ -110,7 +110,7 @@ export default function CulturalAdaptationSection() {
             {!isDefault && (
               <button
                 onClick={() => setProfile({ voice: 'peer', framing: 'individual', humor: 'irreverent', directness: 'blunt', comfort: 'open' })}
-                className="self-end font-heading text-[11px] text-n500 hover:text-teal transition-colors cursor-pointer"
+                className="self-end font-heading text-xs text-n300 hover:text-teal transition-colors cursor-pointer"
               >
                 Reset
               </button>
@@ -130,21 +130,21 @@ export default function CulturalAdaptationSection() {
                   }`}
                 >
                   <div className="flex items-center gap-3 mb-1.5">
-                    <span className="font-mono text-[10px] text-n500">{msg.id}</span>
-                    <span className="font-heading text-[10px] text-n500 tracking-[0.1em] uppercase">{msg.label}</span>
+                    <span className="font-mono text-xs text-n300">{msg.id}</span>
+                    <span className="font-heading text-xs text-n300 tracking-[0.1em] uppercase">{msg.label}</span>
                     {changed && (
-                      <span className="font-heading text-[10px] font-semibold text-teal tracking-[0.1em] uppercase ml-auto">
+                      <span className="font-heading text-xs font-semibold text-teal tracking-[0.1em] uppercase ml-auto">
                         {resolved.dim}: {resolved.val}
                       </span>
                     )}
                   </div>
-                  <p className={`font-body text-sm leading-relaxed transition-colors duration-300 ${
+                  <p className={`font-body text-base leading-relaxed transition-colors duration-300 ${
                     changed ? 'text-white' : 'text-n300'
                   }`}>
                     {resolved.text}
                   </p>
                   {changed && (
-                    <p className="font-body text-xs text-n500 mt-1.5 italic">
+                    <p className="font-body text-xs text-n300 mt-1.5 italic">
                       Default: {msg.default}
                     </p>
                   )}
@@ -156,7 +156,7 @@ export default function CulturalAdaptationSection() {
           {/* Stats footer */}
           <div className="flex items-center gap-2 mt-6 pt-4 border-t border-white/[0.06]">
             <Globe size={14} className="text-teal" />
-            <span className="font-mono text-xs text-n500">
+            <span className="font-mono text-xs text-n300">
               217 messages &middot; 1,254 variants across 5 dimensions
             </span>
           </div>

@@ -25,7 +25,7 @@ export default function GovernanceSection() {
               ${card.color === 'teal' ? 'border-teal/20 bg-teal/[0.03]' : 'border-orange/20 bg-orange/[0.03]'}`}>
               <card.icon size={24} className={card.color === 'teal' ? 'text-teal mb-4' : 'text-orange mb-4'} />
               <h3 className="font-heading text-base font-bold text-white mb-2">{card.title}</h3>
-              <p className="font-body text-sm text-n300 leading-relaxed">{card.desc}</p>
+              <p className="font-body text-base text-n300 leading-relaxed">{card.desc}</p>
             </div>
           </ScrollReveal>
         ))}
@@ -38,7 +38,7 @@ export default function GovernanceSection() {
           {governanceModel.versioning.map((v, i) => (
             <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
               <span className="font-mono text-xs font-bold text-teal">{v.level}</span>
-              <p className="font-body text-sm text-n300 mt-2">{v.trigger}</p>
+              <p className="font-body text-base text-n300 mt-2">{v.trigger}</p>
             </div>
           ))}
         </div>
@@ -52,9 +52,9 @@ export default function GovernanceSection() {
             <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 relative">
               <span className="font-mono text-3xl font-bold text-teal/20">{p.phase}</span>
               <h4 className="font-heading text-sm font-bold text-white mt-2 mb-1">{p.name}</h4>
-              <p className="font-body text-xs text-n300 leading-relaxed">{p.desc}</p>
+              <p className="font-body text-base text-n300 leading-relaxed">{p.desc}</p>
               {i < adoptionPhases.length - 1 && (
-                <ArrowRight size={16} className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 text-n500" />
+                <ArrowRight size={16} className="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 text-n300" />
               )}
             </div>
           ))}

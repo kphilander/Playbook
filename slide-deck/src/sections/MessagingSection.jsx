@@ -31,7 +31,7 @@ export default function MessagingSection() {
             <div className="space-y-3">
               {taglineSystem.open.map((t, i) => (
                 <div key={i} className="flex items-center justify-between gap-4">
-                  <p className="font-body text-sm text-n300 italic">&ldquo;{t}&rdquo;</p>
+                  <p className="font-body text-base text-n300 italic">&ldquo;{t}&rdquo;</p>
                   <CopyButton value={t} label="" />
                 </div>
               ))}
@@ -46,7 +46,7 @@ export default function MessagingSection() {
             <div className="space-y-3">
               {taglineSystem.social.map((t, i) => (
                 <div key={i} className="flex items-center justify-between gap-4">
-                  <p className="font-body text-sm text-n300 italic">&ldquo;{t}&rdquo;</p>
+                  <p className="font-body text-base text-n300 italic">&ldquo;{t}&rdquo;</p>
                   <CopyButton value={t} label="" />
                 </div>
               ))}
@@ -78,14 +78,14 @@ export default function MessagingSection() {
                     <X size={14} className="text-orange" />
                     <span className="font-heading text-xs font-bold text-orange uppercase">Before</span>
                   </div>
-                  <p className="font-body text-sm text-n300 italic leading-relaxed">{r.before}</p>
+                  <p className="font-body text-base text-n300 italic leading-relaxed">{r.before}</p>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <Check size={14} className="text-teal" />
                     <span className="font-heading text-xs font-bold text-teal uppercase">After</span>
                   </div>
-                  <p className="font-body text-sm text-n300 italic leading-relaxed">{r.after}</p>
+                  <p className="font-body text-base text-n300 italic leading-relaxed">{r.after}</p>
                 </div>
               </div>
             </div>

@@ -27,7 +27,7 @@ export default function BrandStorySection() {
             </div>
             <ul className="space-y-3">
               {engagementGap.exists.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 font-body text-sm text-n300 leading-relaxed">
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
                   <span className="text-orange/60 mt-1 shrink-0">&mdash;</span>
                   {item}
                 </li>
@@ -47,7 +47,7 @@ export default function BrandStorySection() {
             </div>
             <ul className="space-y-3">
               {engagementGap.needed.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 font-body text-sm text-n300 leading-relaxed">
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
                   <span className="text-teal/60 mt-1 shrink-0">&mdash;</span>
                   {item}
                 </li>
@@ -82,7 +82,7 @@ export default function BrandStorySection() {
             </div>
             <ul className="space-y-3">
               {knowledgeGap.reality.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 font-body text-sm text-n300 leading-relaxed">
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
                   <span className="text-orange/60 mt-1 shrink-0">&mdash;</span>
                   {item}
                 </li>
@@ -102,7 +102,7 @@ export default function BrandStorySection() {
             </div>
             <ul className="space-y-3">
               {knowledgeGap.provides.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 font-body text-sm text-n300 leading-relaxed">
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
                   <span className="text-teal/60 mt-1 shrink-0">&mdash;</span>
                   {item}
                 </li>
@@ -136,7 +136,7 @@ export default function BrandStorySection() {
                 ${card.accent === 'teal' ? 'text-teal' : 'text-orange'}`}>
                 {card.title}
               </h4>
-              <p className="font-body text-sm text-n300 leading-relaxed">
+              <p className="font-body text-base text-n300 leading-relaxed">
                 {card.body}
               </p>
             </div>
@@ -173,10 +173,10 @@ export default function BrandStorySection() {
                   </span>
                 </div>
               </div>
-              <p className="font-body text-sm text-n300 italic mb-4">{tier.voice}</p>
+              <p className="font-body text-base text-n300 italic mb-4">{tier.voice}</p>
               <ul className="space-y-2">
                 {tier.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 font-body text-sm text-n300">
+                  <li key={j} className="flex items-start gap-2 font-body text-base text-n300">
                     <ArrowRight size={14} className={`mt-0.5 shrink-0
                       ${i === 0 ? 'text-teal/60' : 'text-orange/60'}`} />
                     {item}

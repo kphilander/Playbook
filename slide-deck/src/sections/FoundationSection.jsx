@@ -28,10 +28,10 @@ export default function FoundationSection() {
                 <p className="font-heading text-sm text-teal italic">{pillars.open.tagline}</p>
               </div>
             </div>
-            <p className="font-body text-sm text-n300 leading-relaxed mb-4">{pillars.open.description}</p>
+            <p className="font-body text-base text-n300 leading-relaxed mb-4">{pillars.open.description}</p>
             <ul className="space-y-2">
               {pillars.open.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 font-body text-sm text-n300">
+                <li key={i} className="flex items-start gap-2 font-body text-base text-n300">
                   <span className="text-teal mt-0.5 shrink-0">&#x2713;</span>
                   {item}
                 </li>
@@ -52,10 +52,10 @@ export default function FoundationSection() {
                 <p className="font-heading text-sm text-orange italic">{pillars.social.tagline}</p>
               </div>
             </div>
-            <p className="font-body text-sm text-n300 leading-relaxed mb-4">{pillars.social.description}</p>
+            <p className="font-body text-base text-n300 leading-relaxed mb-4">{pillars.social.description}</p>
             <ul className="space-y-2">
               {pillars.social.items.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 font-body text-sm text-n300">
+                <li key={i} className="flex items-start gap-2 font-body text-base text-n300">
                   <span className="text-orange mt-0.5 shrink-0">&#x2713;</span>
                   {item}
                 </li>
@@ -91,15 +91,15 @@ export default function FoundationSection() {
                     ${i === 0 ? 'text-teal' : 'text-orange'}`}>{arch.role}</span>
                 </div>
               </div>
-              <p className="font-body text-sm text-n300 italic mb-4">{arch.tagline}</p>
+              <p className="font-body text-base text-n300 italic mb-4">{arch.tagline}</p>
               <ul className="space-y-2 mb-5">
                 {arch.traits.map((trait, j) => (
-                  <li key={j} className="font-body text-sm text-n300">&bull; {trait}</li>
+                  <li key={j} className="font-body text-base text-n300">&bull; {trait}</li>
                 ))}
               </ul>
               <div className={`rounded-lg p-4 border
                 ${i === 0 ? 'border-teal/10 bg-teal/[0.04]' : 'border-orange/10 bg-orange/[0.04]'}`}>
-                <p className="font-body text-sm text-n300 italic leading-relaxed">{arch.example}</p>
+                <p className="font-body text-base text-n300 italic leading-relaxed">{arch.example}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -140,7 +140,7 @@ export default function FoundationSection() {
             <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 h-full">
               <span className="font-mono text-xs text-teal/60 block mb-2">{p.num}</span>
               <h4 className="font-heading text-base font-bold text-white mb-2">{p.title}</h4>
-              <p className="font-body text-sm text-n300 leading-relaxed">{p.desc}</p>
+              <p className="font-body text-base text-n300 leading-relaxed">{p.desc}</p>
             </div>
           </ScrollReveal>
         ))}

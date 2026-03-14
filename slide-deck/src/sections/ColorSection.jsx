@@ -17,7 +17,7 @@ function SwatchGroup({ title, swatches, accentColor }) {
             />
             <div className="flex-1 min-w-0">
               <p className="font-heading text-sm font-bold text-white">{s.name}</p>
-              <p className="font-body text-xs text-n300">{s.role}</p>
+              <p className="font-body text-sm text-n300">{s.role}</p>
             </div>
             <CopyButton value={s.hex} />
           </div>
@@ -34,8 +34,8 @@ function ContrastDemo({ fg, bg, fgLabel, bgLabel, ratio, pass }) {
         <span className="font-heading text-lg font-bold">Aa</span>
       </div>
       <div className="px-4 py-3 bg-white/[0.02] flex items-center justify-between">
-        <span className="font-mono text-[10px] text-n300">{fgLabel} on {bgLabel}</span>
-        <span className={`font-mono text-[10px] font-bold px-2 py-0.5 rounded-full
+        <span className="font-mono text-sm text-n300">{fgLabel} on {bgLabel}</span>
+        <span className={`font-mono text-xs font-bold px-2 py-0.5 rounded-full
           ${pass ? 'bg-success/20 text-success' : 'bg-danger/20 text-danger'}`}>
           {ratio} {pass ? 'AA' : 'FAIL'}
         </span>

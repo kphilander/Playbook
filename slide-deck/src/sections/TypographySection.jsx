@@ -107,7 +107,7 @@ export default function TypographySection() {
             placeholder="Type something..."
             aria-label="Type specimen preview text"
             className="w-full bg-white/[0.04] border border-white/10 rounded-lg px-4 py-3
-              font-body text-sm text-n300 placeholder:text-n500
+              font-body text-sm text-white placeholder:text-n300
               focus:outline-none focus:ring-2 focus:ring-teal/50 mb-6"
           />
 
@@ -128,7 +128,7 @@ export default function TypographySection() {
           {typeScale.map((t, i) => (
             <div key={i} className="flex items-baseline gap-4 group">
               <div className="w-16 shrink-0 text-right">
-                <span className="font-mono text-[10px] text-n500">{t.size}</span>
+                <span className="font-mono text-xs text-n300">{t.size}</span>
               </div>
               <div
                 className="font-heading text-white"
@@ -136,7 +136,7 @@ export default function TypographySection() {
               >
                 {t.level}
               </div>
-              <span className="font-mono text-[10px] text-n500 opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="font-mono text-xs text-n300 opacity-0 group-hover:opacity-100 transition-opacity">
                 {t.weight}
               </span>
             </div>

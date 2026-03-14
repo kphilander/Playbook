@@ -50,7 +50,7 @@ function Lightbox({ item, onClose }) {
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-navy/90 backdrop-blur
         rounded-lg px-4 py-2 text-center" aria-live="polite">
         <p className="font-heading text-sm font-bold text-white">{item.name}</p>
-        <p className="font-mono text-[10px] text-n300">{item.category}</p>
+        <p className="font-mono text-xs text-n300">{item.category}</p>
       </div>
     </div>
   );
@@ -149,7 +149,7 @@ export default function CollateralSection() {
           {digitalTouchpoints.map((d, i) => (
             <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
               <h4 className="font-heading text-sm font-bold text-teal mb-2">{d.channel}</h4>
-              <p className="font-body text-xs text-n300 leading-relaxed">{d.integration}</p>
+              <p className="font-body text-base text-n300 leading-relaxed">{d.integration}</p>
             </div>
           ))}
         </div>
@@ -163,12 +163,12 @@ export default function CollateralSection() {
             <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5">
               <h4 className="font-heading text-sm font-bold text-white mb-1">{c.name}</h4>
               <div className="flex gap-2 mb-2">
-                <span className="font-mono text-[10px] text-teal">{c.duration}</span>
-                <span className="text-n500">&bull;</span>
-                <span className="font-mono text-[10px] text-n300">{c.posts} posts</span>
+                <span className="font-mono text-xs text-teal">{c.duration}</span>
+                <span className="text-n300">&bull;</span>
+                <span className="font-mono text-xs text-n300">{c.posts} posts</span>
               </div>
-              <p className="font-body text-xs text-n300 leading-relaxed mb-2">{c.desc}</p>
-              <p className="font-mono text-[10px] text-n500">{c.channels}</p>
+              <p className="font-body text-base text-n300 leading-relaxed mb-2">{c.desc}</p>
+              <p className="font-mono text-xs text-n300">{c.channels}</p>
             </div>
           ))}
         </div>
@@ -185,7 +185,7 @@ export default function CollateralSection() {
           <button
             key={tab.key}
             onClick={() => setActiveFilter(tab.key)}
-            className={`px-3 py-2 rounded-lg font-heading text-[11px] font-bold transition-colors whitespace-nowrap
+            className={`px-3 py-2 rounded-lg font-heading text-xs font-bold transition-colors whitespace-nowrap
               ${activeFilter === tab.key
                 ? 'bg-teal text-navy'
                 : 'bg-white/[0.06] text-n300 hover:text-white'}`}
@@ -213,7 +213,7 @@ export default function CollateralSection() {
               />
             </div>
             <div className="px-3 py-2 bg-white/[0.02]">
-              <p className="font-heading text-[11px] font-medium text-n300 truncate">{item.name}</p>
+              <p className="font-heading text-xs font-medium text-n300 truncate">{item.name}</p>
             </div>
           </button>
         ))}

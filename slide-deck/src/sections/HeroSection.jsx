@@ -56,7 +56,7 @@ export default function HeroSection() {
           <span className="px-4 py-1.5 rounded-full border border-teal/30 text-teal font-heading text-xs font-semibold tracking-wider uppercase">
             Open
           </span>
-          <span className="text-n500 text-xs">/</span>
+          <span className="text-n300 text-xs">/</span>
           <span className="px-4 py-1.5 rounded-full border border-orange/30 text-orange font-heading text-xs font-semibold tracking-wider uppercase">
             Social
           </span>
@@ -67,8 +67,8 @@ export default function HeroSection() {
       <div className={`absolute bottom-8 left-1/2 -translate-x-1/2
         transition-all duration-1000 delay-1000
         ${loaded ? 'opacity-100' : 'opacity-0'}`}>
-        <div className="flex flex-col items-center gap-2 text-n500">
-          <span className="font-mono text-[10px] tracking-widest uppercase">Scroll</span>
+        <div className="flex flex-col items-center gap-2 text-n300">
+          <span className="font-mono text-xs tracking-widest uppercase">Scroll</span>
           <div className="w-px h-8 bg-gradient-to-b from-n700 to-transparent animate-pulse" />
         </div>
       </div>

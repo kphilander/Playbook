@@ -11,7 +11,6 @@ import IconSection from './sections/IconSection';
 import PhotographySection from './sections/PhotographySection';
 import MessagingSection from './sections/MessagingSection';
 import CollateralSection from './sections/CollateralSection';
-import AccessibilitySection from './sections/AccessibilitySection';
 import GovernanceSection from './sections/GovernanceSection';
 import GetStartedSection from './sections/GetStartedSection';
 
@@ -27,7 +26,6 @@ const sections = [
   { id: 'photography', label: 'Photography', Component: PhotographySection },
   { id: 'messaging', label: 'Messaging', Component: MessagingSection },
   { id: 'collateral', label: 'Collateral', Component: CollateralSection },
-  { id: 'accessibility', label: 'Accessibility', Component: AccessibilitySection },
   { id: 'governance', label: 'Governance', Component: GovernanceSection },
   { id: 'get-started', label: 'Get Started', Component: GetStartedSection },
 ];

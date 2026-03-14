@@ -41,7 +41,7 @@ export default function PhotographySection() {
                 loading="lazy"
               />
               <div className="px-4 py-3 bg-teal/[0.04]">
-                <p className="font-body text-xs text-n300">{p.caption}</p>
+                <p className="font-body text-base text-n300">{p.caption}</p>
               </div>
             </div>
           ))}
@@ -60,7 +60,7 @@ export default function PhotographySection() {
                 loading="lazy"
               />
               <div className="px-4 py-3 bg-orange/[0.04]">
-                <p className="font-body text-xs text-n300">{p.caption}</p>
+                <p className="font-body text-base text-n300">{p.caption}</p>
               </div>
             </div>
           ))}
@@ -76,7 +76,7 @@ export default function PhotographySection() {
             </h3>
             <ul className="space-y-3">
               {photographyDos.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 font-body text-sm text-n300">
+                <li key={i} className="flex items-start gap-2 font-body text-base text-n300">
                   <Check size={14} className="text-teal shrink-0 mt-0.5" />
                   {item}
                 </li>
@@ -92,7 +92,7 @@ export default function PhotographySection() {
             </h3>
             <ul className="space-y-3">
               {photographyDonts.map((item, i) => (
-                <li key={i} className="flex items-start gap-2 font-body text-sm text-n300">
+                <li key={i} className="flex items-start gap-2 font-body text-base text-n300">
                   <X size={14} className="text-orange shrink-0 mt-0.5" />
                   {item}
                 </li>
@@ -106,7 +106,7 @@ export default function PhotographySection() {
       <ScrollReveal className="mt-16">
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8">
           <h3 className="font-heading text-lg font-bold text-white mb-4">Color Overlay Treatments</h3>
-          <p className="font-body text-sm text-n300 mb-6 leading-relaxed">
+          <p className="font-body text-base text-n300 mb-6 leading-relaxed">
             When text appears over photography, apply a color overlay for contrast and brand consistency.
           </p>
           <div className="grid grid-cols-3 gap-4">
@@ -125,7 +125,7 @@ export default function PhotographySection() {
                   style={{ background: o.color }}>
                   <div className="text-center">
                     <p className="font-heading text-sm font-bold text-white">{o.name} Overlay</p>
-                    <p className="font-mono text-[10px] text-white/70">{o.color}</p>
+                    <p className="font-mono text-xs text-white/70">{o.color}</p>
                   </div>
                 </div>
               </div>
