@@ -1,7 +1,7 @@
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
 import { getStartedSteps } from '../data/slideContent';
-import { ArrowRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowRight, Github, ExternalLink, Palette } from 'lucide-react';
 import AccentBar from '../components/AccentBar';
 
 export default function GetStartedSection() {
@@ -23,7 +23,7 @@ export default function GetStartedSection() {
                 <span className="font-mono text-sm font-bold text-teal">{step.num}</span>
               </div>
               <h3 className="font-heading text-base font-bold text-white mb-2">{step.title}</h3>
-              <p className="font-body text-sm text-n300 leading-relaxed">{step.desc}</p>
+              <p className="font-body text-base text-n300 leading-relaxed">{step.desc}</p>
               {i < getStartedSteps.length - 1 && (
                 <ArrowRight size={16} className="hidden lg:block absolute top-1/2 -right-4 -translate-y-1/2 text-teal/40" />
               )}
@@ -35,11 +35,20 @@ export default function GetStartedSection() {
       {/* URL callout */}
       <ScrollReveal className="mb-16">
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 sm:p-12 text-center">
-          <p className="font-mono text-sm text-n300 mb-2">Visit</p>
+          <p className="font-mono text-base text-n300 mb-2">Visit</p>
           <p className="font-mono text-2xl sm:text-3xl font-bold text-teal">
             gamblingpolicy.com/playbook
           </p>
-          <div className="flex items-center justify-center gap-4 mt-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-6">
+            <a
+              href="https://gamblingpolicy.com/tools/playbook/configurator/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal text-navy
+                font-heading text-sm font-bold transition-opacity hover:opacity-90"
+            >
+              <Palette size={16} /> Brand Configurator
+            </a>
             <a
               href="https://github.com/kphilander/Playbook"
               target="_blank"
@@ -53,8 +62,8 @@ export default function GetStartedSection() {
               href="https://gamblingpolicy.com/tools/playbook/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-teal text-navy
-                font-heading text-sm font-bold transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/[0.06]
+                text-n300 hover:text-white font-heading text-sm font-medium transition-colors"
             >
               <ExternalLink size={16} /> Explore Playbook
             </a>
@@ -77,13 +86,13 @@ export default function GetStartedSection() {
       {/* Helpline footer */}
       <ScrollReveal>
         <div className="rounded-xl bg-navy-light border border-white/[0.06] p-6 text-center">
-          <p className="font-body text-sm text-n300 mb-1">
+          <p className="font-body text-base text-n300 mb-1">
             If you or someone you know needs support:
           </p>
           <p className="font-mono text-lg font-bold text-white">
             1-800-522-4700
           </p>
-          <p className="font-body text-xs text-n500 mt-1">
+          <p className="font-body text-xs text-n300 mt-1">
             National Council on Problem Gambling &mdash; 24/7, free, confidential
           </p>
         </div>

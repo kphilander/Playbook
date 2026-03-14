@@ -114,7 +114,7 @@ export default function IconSection() {
       <ScrollReveal className="mb-6">
         <div className="flex flex-col sm:flex-row gap-4">
           <div className="relative flex-1">
-            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-n500" aria-hidden="true" />
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-n300" aria-hidden="true" />
             <input
               type="text"
               value={search}
@@ -122,7 +122,7 @@ export default function IconSection() {
               placeholder="Search icons..."
               aria-label="Search icons by name"
               className="w-full bg-white/[0.04] border border-white/10 rounded-lg pl-9 pr-4 py-2.5
-                font-body text-sm text-n300 placeholder:text-n500
+                font-body text-sm text-white placeholder:text-n300
                 focus:outline-none focus:ring-2 focus:ring-teal/50"
             />
           </div>
@@ -132,7 +132,7 @@ export default function IconSection() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 aria-pressed={activeCategory === cat}
-                className={`px-3 py-2 rounded-lg font-heading text-[11px] font-bold transition-colors whitespace-nowrap
+                className={`px-3 py-2 rounded-lg font-heading text-xs font-bold transition-colors whitespace-nowrap
                   ${activeCategory === cat
                     ? 'bg-teal text-navy'
                     : 'bg-white/[0.06] text-n300 hover:text-white'}`}
@@ -147,7 +147,7 @@ export default function IconSection() {
       {/* Color selector */}
       <ScrollReveal className="mb-8">
         <div className="flex items-center gap-3">
-          <span className="font-mono text-[10px] text-n300 uppercase tracking-wider">Preview color</span>
+          <span className="font-mono text-xs text-n300 uppercase tracking-wider">Preview color</span>
           <div className="flex gap-2" role="radiogroup" aria-label="Icon preview color">
             {brandColors.map((c) => (
               <button
@@ -182,7 +182,7 @@ export default function IconSection() {
             aria-label={`Download ${icon.name} icon`}
           >
             <InlineIcon name={icon.name} color={activeColor} />
-            <span className="font-mono text-[9px] text-n500 group-hover:text-n300 transition-colors truncate w-full text-center">
+            <span className="font-mono text-xs text-n300 group-hover:text-white transition-colors truncate w-full text-center">
               {icon.name}
             </span>
           </a>
@@ -205,7 +205,7 @@ export default function IconSection() {
               { label: 'Color', value: 'currentColor' },
             ].map((spec, i) => (
               <div key={i}>
-                <p className="font-mono text-[10px] text-n500 uppercase">{spec.label}</p>
+                <p className="font-mono text-xs text-n300 uppercase">{spec.label}</p>
                 <p className="font-heading text-sm font-bold text-white mt-1">{spec.value}</p>
               </div>
             ))}

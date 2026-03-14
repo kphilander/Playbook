@@ -79,7 +79,7 @@ export default function Sidebar({ sections, activeSection }) {
 
         {/* Footer */}
         <div className="px-6 py-4 border-t border-white/[0.06]">
-          <p className="font-mono text-[11px] text-n500">Creative Commons</p>
+          <p className="font-mono text-xs text-n300">Creative Commons</p>
         </div>
       </nav>
 

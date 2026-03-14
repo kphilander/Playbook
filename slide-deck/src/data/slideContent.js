@@ -15,6 +15,23 @@ export const engagementGap = {
   ],
 };
 
+export const knowledgeGap = {
+  reality: [
+    'RG expertise is niche — most operators have zero specialists on staff',
+    'Content written by compliance teams, not brand or content teams',
+    'Best practices locked in academic papers and clinical journals',
+    'Each operator reinvents the wheel independently',
+    'Knowledge stays siloed — academic, regulatory, or clinical',
+  ],
+  provides: [
+    'Research-backed content, ready to deploy under your brand',
+    'CC0 Public Domain — no licensing, no fees, no permission needed',
+    'Open source — every operator improvement benefits the whole industry',
+    'Maintained by RG researchers and practitioners',
+    'One shared foundation, infinite brand expressions',
+  ],
+};
+
 export const solutionCards = [
   {
     title: 'Woven In, Not Bolted On',
@@ -262,11 +279,6 @@ export const accessibilityChecklist = [
 ];
 
 export const governanceModel = {
-  reviews: [
-    { cadence: 'Annual', scope: 'Full brand review — foundation, visual identity, voice, messaging' },
-    { cadence: 'Quarterly', scope: 'Regulatory check — jurisdiction requirements, helpline numbers, ad rules' },
-    { cadence: 'Continuous', scope: 'Content performance — underperforming content revised within 2 weeks' },
-  ],
   versioning: [
     { level: 'MAJOR', trigger: 'Breaking changes — rebrand, new pillar system' },
     { level: 'MINOR', trigger: 'New content — jurisdiction module, collateral templates' },

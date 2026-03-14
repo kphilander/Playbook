@@ -19,11 +19,11 @@ const logoVariants = [
 ];
 
 const specialLogos = [
-  { file: 'favicon.svg', name: 'Favicon', bg: 'bg-navy' },
-  { file: 'favicon-reversed.svg', name: 'Favicon Reversed', bg: 'bg-white' },
+  { file: 'favicon.svg', name: 'Favicon', bg: 'bg-white' },
+  { file: 'favicon-reversed.svg', name: 'Favicon Reversed', bg: 'bg-navy' },
   { file: 'favicon-mono-white.svg', name: 'Favicon Mono', bg: 'bg-navy' },
-  { file: 'helpline-badge-light.svg', name: 'Helpline Badge — Light', bg: 'bg-navy' },
-  { file: 'helpline-badge-dark.svg', name: 'Helpline Badge — Dark', bg: 'bg-white' },
+  { file: 'helpline-badge-light.svg', name: 'Helpline Badge — Light', bg: 'bg-white' },
+  { file: 'helpline-badge-dark.svg', name: 'Helpline Badge — Dark', bg: 'bg-navy' },
 ];
 
 function LogoCard({ logo }) {
@@ -48,7 +48,7 @@ function LogoCard({ logo }) {
       </div>
       <div className="px-4 py-3 bg-white/[0.02]">
         <p className="font-heading text-xs font-medium text-n300">{logo.name}</p>
-        <p className="font-mono text-[10px] text-n500 mt-0.5">{logo.file}</p>
+        <p className="font-mono text-xs text-n300 mt-0.5">{logo.file}</p>
       </div>
     </div>
   );
@@ -73,7 +73,7 @@ export default function LogoSection() {
           </h1>
           <div className="flex items-center justify-center gap-8 text-xs font-mono text-n300">
             <span><span className="text-white font-bold">Play</span> — Inter 800</span>
-            <span className="text-n500">|</span>
+            <span className="text-n300">|</span>
             <span><span className="text-teal font-light">BOOK</span> — Inter 300</span>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function LogoSection() {
       <ScrollReveal>
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8">
           <h3 className="font-heading text-lg font-bold text-white mb-4">Clear Space</h3>
-          <p className="font-body text-sm text-n300 leading-relaxed mb-6">
+          <p className="font-body text-base text-n300 leading-relaxed mb-6">
             Maintain a minimum clear space equal to the height of the "B" in BOOK on all sides of the logo.
             Never crop, rotate, distort, or add effects to the wordmark.
           </p>

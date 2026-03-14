@@ -1,7 +1,7 @@
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
-import { engagementGap, solutionCards, twoTiers } from '../data/slideContent';
-import { AlertTriangle, Zap, Eye, Share2, ArrowRight } from 'lucide-react';
+import { engagementGap, knowledgeGap, solutionCards, twoTiers } from '../data/slideContent';
+import { AlertTriangle, BookOpen, Zap, Eye, Share2, ArrowRight } from 'lucide-react';
 
 export default function BrandStorySection() {
   return (
@@ -27,7 +27,7 @@ export default function BrandStorySection() {
             </div>
             <ul className="space-y-3">
               {engagementGap.exists.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 font-body text-sm text-n300 leading-relaxed">
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
                   <span className="text-orange/60 mt-1 shrink-0">&mdash;</span>
                   {item}
                 </li>
@@ -47,7 +47,62 @@ export default function BrandStorySection() {
             </div>
             <ul className="space-y-3">
               {engagementGap.needed.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 font-body text-sm text-n300 leading-relaxed">
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
+                  <span className="text-teal/60 mt-1 shrink-0">&mdash;</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </ScrollReveal>
+      </div>
+
+      {/* ── The Knowledge Gap ── */}
+      <ScrollReveal className="mb-12 lg:mb-16">
+        <span className="font-heading text-sm font-bold text-teal tracking-[0.15em] uppercase block mb-3">
+          The Deeper Problem
+        </span>
+        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white max-w-3xl leading-tight">
+          The Knowledge <span className="text-teal">Gap</span>
+        </h2>
+        <p className="font-body text-lg lg:text-xl text-n300 mt-4 max-w-3xl leading-relaxed">
+          Even operators who want better player education face a harder problem: the expertise barely exists inside most organizations.
+        </p>
+      </ScrollReveal>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        {/* The Reality */}
+        <ScrollReveal delay={100}>
+          <div className="rounded-xl border border-orange/20 bg-orange/[0.03] p-6 sm:p-8">
+            <div className="flex items-center gap-2 mb-5">
+              <BookOpen size={18} className="text-orange" />
+              <h3 className="font-heading text-sm font-bold text-orange tracking-wider uppercase">
+                The Reality
+              </h3>
+            </div>
+            <ul className="space-y-3">
+              {knowledgeGap.reality.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
+                  <span className="text-orange/60 mt-1 shrink-0">&mdash;</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </ScrollReveal>
+
+        {/* What Playbook Provides */}
+        <ScrollReveal delay={200}>
+          <div className="rounded-xl border border-teal/20 bg-teal/[0.03] p-6 sm:p-8">
+            <div className="flex items-center gap-2 mb-5">
+              <Zap size={18} className="text-teal" />
+              <h3 className="font-heading text-sm font-bold text-teal tracking-wider uppercase">
+                What Playbook Provides
+              </h3>
+            </div>
+            <ul className="space-y-3">
+              {knowledgeGap.provides.map((item, i) => (
+                <li key={i} className="flex items-start gap-3 font-body text-base text-n300 leading-relaxed">
                   <span className="text-teal/60 mt-1 shrink-0">&mdash;</span>
                   {item}
                 </li>
@@ -81,7 +136,7 @@ export default function BrandStorySection() {
                 ${card.accent === 'teal' ? 'text-teal' : 'text-orange'}`}>
                 {card.title}
               </h4>
-              <p className="font-body text-sm text-n300 leading-relaxed">
+              <p className="font-body text-base text-n300 leading-relaxed">
                 {card.body}
               </p>
             </div>
@@ -118,10 +173,10 @@ export default function BrandStorySection() {
                   </span>
                 </div>
               </div>
-              <p className="font-body text-sm text-n300 italic mb-4">{tier.voice}</p>
+              <p className="font-body text-base text-n300 italic mb-4">{tier.voice}</p>
               <ul className="space-y-2">
                 {tier.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-2 font-body text-sm text-n300">
+                  <li key={j} className="flex items-start gap-2 font-body text-base text-n300">
                     <ArrowRight size={14} className={`mt-0.5 shrink-0
                       ${i === 0 ? 'text-teal/60' : 'text-orange/60'}`} />
                     {item}
