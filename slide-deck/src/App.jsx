@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar';
 import HeroSection from './sections/HeroSection';
 import BrandStorySection from './sections/BrandStorySection';
 import FoundationSection from './sections/FoundationSection';
+import CulturalAdaptationSection from './sections/CulturalAdaptationSection';
 import LogoSection from './sections/LogoSection';
 import ColorSection from './sections/ColorSection';
 import TypographySection from './sections/TypographySection';
@@ -18,6 +19,7 @@ const sections = [
   { id: 'hero', label: 'Playbook', Component: HeroSection },
   { id: 'brand-story', label: 'Brand Story', Component: BrandStorySection },
   { id: 'foundation', label: 'Foundation', Component: FoundationSection },
+  { id: 'cultural-adaptation', label: 'Localization', Component: CulturalAdaptationSection },
   { id: 'logo', label: 'Logo System', Component: LogoSection },
   { id: 'color', label: 'Color', Component: ColorSection },
   { id: 'typography', label: 'Typography', Component: TypographySection },

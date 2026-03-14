@@ -31,20 +31,6 @@ export default function GovernanceSection() {
         ))}
       </div>
 
-      {/* Review cadence */}
-      <ScrollReveal className="mb-16">
-        <h3 className="font-heading text-lg font-bold text-white mb-6">Review Cadence</h3>
-        <div className="rounded-xl border border-white/[0.06] overflow-hidden">
-          {governanceModel.reviews.map((r, i) => (
-            <div key={i} className={`flex items-start gap-4 p-5
-              ${i < governanceModel.reviews.length - 1 ? 'border-b border-white/[0.06]' : ''}`}>
-              <span className="font-heading text-sm font-bold text-teal w-24 shrink-0">{r.cadence}</span>
-              <span className="font-body text-sm text-n300">{r.scope}</span>
-            </div>
-          ))}
-        </div>
-      </ScrollReveal>
-
       {/* Versioning */}
       <ScrollReveal className="mb-16">
         <h3 className="font-heading text-lg font-bold text-white mb-6">Versioning</h3>
