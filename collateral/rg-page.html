@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/svg+xml" href="/tools/playbook/favicon.svg" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{PROGRAM_NAME}} — Play on Your Terms</title>
@@ -1986,19 +1987,51 @@ body {
   font-size: 0.82rem;
   font-weight: 800;
   box-shadow: 0 4px 16px rgba(0,212,170,0.4);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  animation: demo-pulse 2s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
+  opacity: 0.4;
 }
 .demo-hotspot:hover {
   transform: scale(1.15);
   box-shadow: 0 6px 24px rgba(0,212,170,0.5);
-  animation: none;
+}
+.demo-hotspot.active-step {
+  opacity: 1;
+  animation: demo-pulse 1.5s ease-in-out infinite;
+}
+.demo-hotspot.visited {
+  opacity: 0.35;
+  background: #2A3F56;
+  color: #6B8299;
+  box-shadow: none;
 }
 body.demo-mode .demo-hotspot { display: flex; align-items: center; justify-content: center; }
 
 @keyframes demo-pulse {
   0%, 100% { box-shadow: 0 4px 16px rgba(0,212,170,0.4); }
-  50% { box-shadow: 0 4px 16px rgba(0,212,170,0.4), 0 0 0 8px rgba(0,212,170,0.15); }
+  50% { box-shadow: 0 4px 16px rgba(0,212,170,0.4), 0 0 0 12px rgba(0,212,170,0.2); }
+}
+
+/* Start here tooltip on first hotspot */
+.demo-hotspot.active-step[data-demo-index="0"]::after {
+  content: 'Start here';
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #00D4AA;
+  background: #0F1923;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,212,170,0.3);
+  pointer-events: none;
+  animation: demo-tooltip-fade 2s ease-in-out infinite;
+}
+@keyframes demo-tooltip-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
 
 /* ---- Section highlight border in demo mode ---- */
@@ -2072,6 +2105,34 @@ body.demo-mode .demo-annotated:hover {
   transition: background 0.2s, color 0.2s;
 }
 .demo-overlay-close:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+.demo-overlay-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.demo-overlay-nav button {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,212,170,0.3);
+  background: transparent;
+  color: #00D4AA;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.demo-overlay-nav button:hover { background: rgba(0,212,170,0.1); }
+.demo-overlay-nav button:disabled { opacity: 0.25; cursor: default; }
+.demo-overlay-nav .demo-step-count {
+  font-size: 0.78rem;
+  color: #6B8299;
+  font-weight: 500;
+}
 
 .demo-overlay-badge {
   display: inline-block;
@@ -2153,7 +2214,9 @@ body.demo-mode .demo-banner { display: block; }
   .demo-toggle { bottom: 16px; left: 16px; padding: 10px 16px; font-size: 0.82rem; }
   .demo-overlay { padding: 28px 24px; }
   .demo-overlay h3 { font-size: 1.15rem; }
-  .demo-hotspot { width: 30px; height: 30px; font-size: 0.72rem; top: 12px; right: 12px; }
+  .demo-hotspot { width: 30px; height: 30px; font-size: 0.72rem; }
+  .demo-hotspot.active-step[data-demo-index="0"]::after { left: auto; right: calc(100% + 8px); }
+  .demo-overlay-nav button { padding: 6px 12px; font-size: 0.78rem; }
 }
 </style>
 
@@ -2166,6 +2229,11 @@ body.demo-mode .demo-banner { display: block; }
   <div class="demo-overlay-badge" id="demoOverlayBadge"></div>
   <h3 id="demoOverlayTitle"></h3>
   <div class="demo-overlay-body" id="demoOverlayBody"></div>
+  <div class="demo-overlay-nav">
+    <button id="demoPrev">&larr; Previous</button>
+    <span class="demo-step-count" id="demoStepCount"></span>
+    <button id="demoNext">Next &rarr;</button>
+  </div>
 </div>
 
 <!-- Demo Mode Toggle Button -->
@@ -2297,10 +2365,16 @@ body.demo-mode .demo-banner { display: block; }
 
   // ========== Hotspot position overrides for compact sections ==========
   var hotspotPositions = {
-    'helpline-strip': { top: '50%', right: '20px', transform: 'translateY(-50%)' },
-    'nav':            { top: '50%', right: '60px', transform: 'translateY(-50%)' },
-    'hero':           { top: '20px', right: '20px', transform: 'none' },
-    'progress':       { top: '-8px', right: '-8px', transform: 'none' }
+    'helpline-strip': { top: '50%', left: 'auto', right: '120px', transform: 'translateY(-50%)' },
+    'nav':            { top: '50%', left: 'auto', right: '20px', transform: 'translateY(-50%)' },
+    'hero':           { top: '60px', left: 'auto', right: '40px', transform: 'none' },
+    'odds':           { top: '20px', left: '20px', right: 'auto', transform: 'none' },
+    'myths':          { top: '20px', left: '20px', right: 'auto', transform: 'none' },
+    'tools':          { top: '20px', left: '20px', right: 'auto', transform: 'none' },
+    'break':          { top: '20px', left: '20px', right: 'auto', transform: 'none' },
+    'support':        { top: '20px', left: '20px', right: 'auto', transform: 'none' },
+    'footer':         { top: '20px', left: '20px', right: 'auto', transform: 'none' },
+    'progress':       { top: '-8px', left: 'auto', right: '-8px', transform: 'none' }
   };
 
   // ========== Create Hotspots ==========
@@ -2326,23 +2400,47 @@ body.demo-mode .demo-banner { display: block; }
         showOverlay(i);
       });
 
-      // Apply custom positioning for compact sections
+      // Apply custom positioning
       var pos = hotspotPositions[ann.section];
       if (pos) {
         btn.style.top = pos.top;
         btn.style.right = pos.right;
+        if (pos.left) { btn.style.left = pos.left; btn.style.right = pos.right; }
         btn.style.transform = pos.transform;
       }
 
       target.appendChild(btn);
       hotspots.push(btn);
     });
+    // Activate first step
+    updateActiveStep();
+  }
+
+  var currentStep = 0;
+  var visitedSteps = [];
+
+  function updateActiveStep() {
+    hotspots.forEach(function(h, i) {
+      h.classList.remove('active-step');
+      if (visitedSteps.indexOf(i) !== -1) {
+        h.classList.add('visited');
+      }
+    });
+    if (currentStep < hotspots.length) {
+      hotspots[currentStep].classList.add('active-step');
+      hotspots[currentStep].classList.remove('visited');
+    }
   }
 
   // ========== Show/Hide Overlay ==========
   function showOverlay(index) {
+    // Mark as visited and advance step
+    if (visitedSteps.indexOf(index) === -1) visitedSteps.push(index);
+    if (index >= currentStep) currentStep = index + 1;
+    updateActiveStep();
+
     var ann = annotations[index];
-    overlayBadge.textContent = ann.badge;
+    overlayBadge.textContent = (index + 1) + ' of ' + annotations.length + ' \u2014 ' + ann.badge;
     overlayTitle.textContent = ann.title;
 
     var html = '<div>' + ann.body + '</div>';
@@ -2392,13 +2490,51 @@ body.demo-mode .demo-banner { display: block; }
 
     if (isActive) {
       toggle.innerHTML = '<span class="demo-toggle-dot"></span> Demo Mode On';
-      // Scroll banner into view
+      // Reset step progression
+      currentStep = 0;
+      visitedSteps = [];
+      hotspots.forEach(function(h) { h.classList.remove('visited'); });
+      updateActiveStep();
       banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } else {
       toggle.innerHTML = '<span class="demo-toggle-dot"></span> Operator Demo';
       hideOverlay();
     }
   }
+
+  // ========== Overlay navigation ==========
+  var currentOverlayIndex = 0;
+  var prevBtn = document.getElementById('demoPrev');
+  var nextBtn = document.getElementById('demoNext');
+  var stepCount = document.getElementById('demoStepCount');
+
+  function updateNavButtons() {
+    prevBtn.disabled = currentOverlayIndex <= 0;
+    nextBtn.disabled = currentOverlayIndex >= annotations.length - 1;
+    stepCount.textContent = (currentOverlayIndex + 1) + ' / ' + annotations.length;
+  }
+
+  function navigateOverlay(dir) {
+    var newIndex = currentOverlayIndex + dir;
+    if (newIndex < 0 || newIndex >= annotations.length) return;
+    currentOverlayIndex = newIndex;
+    showOverlay(currentOverlayIndex);
+    updateNavButtons();
+    // Scroll the target section into view
+    var target = document.querySelector(annotations[currentOverlayIndex].selector);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  // Patch showOverlay to track current index for nav
+  var _origShowOverlay = showOverlay;
+  showOverlay = function(index) {
+    currentOverlayIndex = index;
+    _origShowOverlay(index);
+    updateNavButtons();
+  };
+
+  prevBtn.addEventListener('click', function() { navigateOverlay(-1); });
+  nextBtn.addEventListener('click', function() { navigateOverlay(1); });
 
   // ========== Event Listeners ==========
   toggle.addEventListener('click', toggleDemoMode);
@@ -2407,6 +2543,10 @@ body.demo-mode .demo-banner { display: block; }
 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') hideOverlay();
+    if (overlay.classList.contains('visible')) {
+      if (e.key === 'ArrowLeft') navigateOverlay(-1);
+      if (e.key === 'ArrowRight') navigateOverlay(1);
+    }
   });
 
   // ========== Initialize ==========
