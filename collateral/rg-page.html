@@ -1976,23 +1976,95 @@ body {
   top: 20px;
   right: 20px;
   z-index: 500;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #00D4AA;
   color: #0F1923;
-  border: none;
+  border: 3px solid rgba(255,255,255,0.3);
   cursor: pointer;
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.92rem;
   font-weight: 800;
   box-shadow: 0 4px 16px rgba(0,212,170,0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
   opacity: 0.4;
 }
 .demo-hotspot:hover {
-  transform: scale(1.15);
+  transform: scale(1.12);
   box-shadow: 0 6px 24px rgba(0,212,170,0.5);
+}
+
+/* ---- Intro shade ---- */
+.demo-intro-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(15,25,35,0.75);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.demo-intro-shade.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.demo-intro-shade .intro-card {
+  background: #1B2838;
+  border: 1px solid rgba(0,212,170,0.3);
+  border-radius: 16px;
+  padding: 32px 40px;
+  text-align: center;
+  max-width: 420px;
+  font-family: 'Inter', system-ui, sans-serif;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+}
+.demo-intro-shade .intro-card h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.demo-intro-shade .intro-card p {
+  font-size: 0.9rem;
+  color: #9AA8B8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.demo-intro-shade .intro-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #0F1923;
+  background: #00D4AA;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.demo-intro-shade .intro-btn:hover { background: #33DDBB; }
+.demo-intro-shade .intro-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #0F1923;
+  color: #00D4AA;
+  font-size: 0.82rem;
+  font-weight: 800;
 }
 .demo-hotspot.active-step {
   opacity: 1;
@@ -2214,13 +2286,23 @@ body.demo-mode .demo-banner { display: block; }
   .demo-toggle { bottom: 16px; left: 16px; padding: 10px 16px; font-size: 0.82rem; }
   .demo-overlay { padding: 28px 24px; }
   .demo-overlay h3 { font-size: 1.15rem; }
-  .demo-hotspot { width: 30px; height: 30px; font-size: 0.72rem; }
+  .demo-hotspot { width: 36px; height: 36px; font-size: 0.78rem; border-width: 2px; }
+  .demo-intro-shade .intro-card { margin: 0 20px; padding: 24px 28px; }
   .demo-hotspot.active-step[data-demo-index="0"]::after { left: auto; right: calc(100% + 8px); }
   .demo-overlay-nav button { padding: 6px 12px; font-size: 0.78rem; }
 }
 </style>
 
 <!-- Overlay Backdrop -->
+<!-- Demo intro shade -->
+<div class="demo-intro-shade" id="demoIntroShade">
+  <div class="intro-card">
+    <h3>Operator Demo Mode</h3>
+    <p>This is a sample responsible gambling page built with Playbook. Click through the numbered hotspots to learn what each section does and how to customize it.</p>
+    <button class="intro-btn" id="introStart"><span class="intro-num">1</span> Start the tour</button>
+  </div>
+</div>
+
 <div class="demo-overlay-backdrop" id="demoBackdrop"></div>
 
 <!-- Overlay Panel (content populated by JS) -->
@@ -2557,6 +2639,28 @@ body.demo-mode .demo-banner { display: block; }
   toggle.classList.add('active');
   toggle.innerHTML = '<span class="demo-toggle-dot"></span> Demo Mode On';
   toggle.style.display = 'flex';
+
+  // Show intro shade on first load
+  var introShade = document.getElementById('demoIntroShade');
+  var introBtn = document.getElementById('introStart');
+  setTimeout(function() { introShade.classList.add('visible'); }, 400);
+
+  function dismissIntro() {
+    introShade.classList.remove('visible');
+    setTimeout(function() { introShade.remove(); }, 400);
+    // Scroll to first hotspot and open it
+    if (hotspots.length > 0) {
+      var firstTarget = document.querySelector(annotations[0].selector);
+      if (firstTarget) {
+        firstTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }
+
+  introBtn.addEventListener('click', dismissIntro);
+  introShade.addEventListener('click', function(e) {
+    if (e.target === introShade) dismissIntro();
+  });
 })();
 </script>
 </body>
