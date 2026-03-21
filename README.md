@@ -170,7 +170,7 @@ Playbook/
 │
 ├── docs/                             # Player testing protocol and operational documents
 │   ├── README.md                    # Testing overview and navigation
-│   └── player-testing-protocol.md   # Resonance, recall, and cultural fit testing
+│   └── content-scorecard.md          # Content performance surveys, scoring, and decision framework
 │
 └── implementation/                   # 🔜 Operator adoption guides (planned)
 ```
