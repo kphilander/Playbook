@@ -1294,13 +1294,12 @@ body {
 <footer class="rg-footer">
   <div class="rg-footer-helpline">{{HELPLINE_NUMBER}}</div>
   <p>
-    If gambling isn't fun anymore, help is available.<br>
     <a href="tel:{{HELPLINE_NUMBER}}">Call</a> &middot;
     {{TEXT_NUMBER}} &middot;
     <a href="{{CHAT_URL}}">Chat</a>
   </p>
   <p class="rg-footer-legal">
-    {{MIN_AGE}}+ only. Please play within your means.<br>
+    {{MIN_AGE}}+ only.<br>
     &copy; {{ORGANIZATION}} &middot; <a href="{{WEBSITE}}">{{WEBSITE}}</a><br>
     Powered by <a href="https://github.com/kphilander/Playbook">Playbook</a> (CC0)
   </p>
@@ -2415,7 +2414,7 @@ body.demo-mode .demo-banner { display: block; }
       selector: '.rg-footer',
       badge: 'Compliance',
       title: 'Footer with Final Helpline Prompt',
-      body: '<p>A final display of the helpline number in large text, with call/text/chat links and legal notices. The "If gambling isn\'t fun anymore, help is available" messaging provides a last touchpoint.</p>' +
+      body: '<p>A final display of the helpline number in large text, with call/text/chat links and legal notices.</p>' +
             '<p>Even if a player scrolls past everything else, the footer ensures they see the helpline before leaving. The large number display is intentional \u2014 it\'s the last thing on the page and the easiest to remember.</p>',
       customize: '<p>All template variables (<code>{{HELPLINE_NUMBER}}</code>, <code>{{MIN_AGE}}</code>, <code>{{ORGANIZATION}}</code>, <code>{{WEBSITE}}</code>) are replaced during deployment. Add additional legal disclaimers or compliance text as needed. The Playbook attribution is optional under the CC0 license.</p>',
       tags: ['Footer', 'Legal', 'Helpline']

@@ -314,7 +314,7 @@ export default function CrapsPage() {
         justifyContent: 'space-between', alignItems: isMobile ? 'flex-start' : 'center',
         gap: isMobile ? 6 : 0, fontSize: 12, color: colors.neutral500,
       }}>
-        <span>Playbook &mdash; Open-source gambling entertainment literacy</span>
+        <span>Powered by Playbook (CC0)</span>
         <span>Free, confidential support 24/7: <strong style={{ color: colors.white }}>1-800-522-4700</strong></span>
       </footer>
     </div>
