@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Scorecard Survey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/tools/playbook/design-tokens.css">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--pb-color-neutral-50); font-family: var(--pb-font-body); color: var(--pb-color-neutral-900); line-height: 1.6; }
+
+  .widget {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  /* Header */
+  .widget-header {
+    background: var(--pb-color-primary);
+    border-radius: 12px 12px 0 0;
+    padding: 24px 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .widget-header::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .widget-logo { font-family: var(--pb-font-heading); font-size: 20px; margin-bottom: 4px; }
+  .widget-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .widget-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .widget-subtitle { color: var(--pb-color-neutral-300); font-size: 14px; }
+
+  /* Survey selector */
+  .survey-selector {
+    background: var(--pb-color-white);
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--pb-color-neutral-100);
+  }
+  .selector-label { font-family: var(--pb-font-heading); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--pb-color-neutral-500); margin-bottom: 10px; }
+  .selector-buttons { display: flex; gap: 8px; }
+  .selector-btn {
+    flex: 1;
+    padding: 10px 16px;
+    border: 2px solid var(--pb-color-neutral-100);
+    border-radius: 8px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--pb-color-neutral-700);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+  }
+  .selector-btn:hover { border-color: var(--pb-color-secondary); }
+  .selector-btn.active {
+    border-color: var(--pb-color-secondary);
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+  }
+  .selector-btn .btn-meta {
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    font-family: var(--pb-font-body);
+    color: inherit;
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+
+  /* Survey body */
+  .survey-body {
+    background: var(--pb-color-white);
+    padding: 28px;
+    border-radius: 0 0 12px 12px;
+  }
+
+  /* Questions */
+  .question {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--pb-color-neutral-100);
+  }
+  .question:last-of-type { border-bottom: none; margin-bottom: 16px; }
+  .question-number {
+    font-family: var(--pb-font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pb-color-accent);
+    margin-bottom: 6px;
+  }
+  .question-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--pb-color-primary);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  /* NPS scale */
+  .nps-scale {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+  .nps-btn {
+    flex: 1;
+    height: 48px;
+    border: 2px solid var(--pb-color-neutral-100);
+    border-radius: 8px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--pb-color-neutral-700);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .nps-btn:hover { border-color: var(--pb-color-secondary); }
+  .nps-btn.selected {
+    border-color: var(--pb-color-secondary);
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+  }
+  .nps-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--pb-color-neutral-500);
+  }
+
+  /* Semantic differential scale */
+  .semantic-row { margin-bottom: 16px; }
+  .semantic-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .semantic-label-left {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--pb-color-neutral-500);
+    font-family: var(--pb-font-heading);
+  }
+  .semantic-label-right {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--pb-color-secondary);
+    font-family: var(--pb-font-heading);
+  }
+  .semantic-scale {
+    display: flex;
+    gap: 4px;
+  }
+  .semantic-btn {
+    flex: 1;
+    height: 44px;
+    border: 2px solid var(--pb-color-neutral-100);
+    border-radius: 8px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--pb-color-neutral-700);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+  .semantic-btn:hover { border-color: var(--pb-color-secondary); }
+  .semantic-btn.selected {
+    border-color: var(--pb-color-secondary);
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+  }
+
+  /* Open text */
+  .open-text {
+    width: 100%;
+    min-height: 80px;
+    border: 2px solid var(--pb-color-neutral-100);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: var(--pb-font-body);
+    font-size: 15px;
+    color: var(--pb-color-neutral-900);
+    resize: vertical;
+    transition: border-color 0.15s ease;
+  }
+  .open-text:focus { outline: none; border-color: var(--pb-color-secondary); }
+  .open-text::placeholder { color: var(--pb-color-neutral-300); }
+
+  /* Submit */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 24px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    margin-top: 8px;
+  }
+  .submit-btn:hover { background: var(--pb-color-secondary-dark); }
+  .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  /* Results panel */
+  .results { display: none; }
+  .results.visible { display: block; }
+  .results-header {
+    font-family: var(--pb-font-heading);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--pb-color-primary);
+    margin-bottom: 4px;
+  }
+  .results-subheader {
+    font-size: 13px;
+    color: var(--pb-color-neutral-500);
+    margin-bottom: 20px;
+  }
+  .result-card {
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+  .result-card.strong { background: #E8F5E9; border-left: 4px solid var(--pb-color-success); }
+  .result-card.acceptable { background: #FFF8E1; border-left: 4px solid var(--pb-color-warning); }
+  .result-card.problem { background: #FFF3F0; border-left: 4px solid var(--pb-color-danger); }
+  .result-metric {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--pb-color-neutral-700);
+    margin-bottom: 4px;
+  }
+  .result-score {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -0.02em;
+  }
+  .result-card.strong .result-score { color: var(--pb-color-success); }
+  .result-card.acceptable .result-score { color: #F9A825; }
+  .result-card.problem .result-score { color: var(--pb-color-danger); }
+  .result-reading {
+    font-size: 13px;
+    color: var(--pb-color-neutral-700);
+    margin-top: 4px;
+  }
+
+  .result-recommendation {
+    background: var(--pb-color-primary);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 20px;
+    color: var(--pb-color-white);
+  }
+  .result-recommendation h3 {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--pb-color-secondary);
+    margin-bottom: 8px;
+  }
+  .result-recommendation p { font-size: 15px; line-height: 1.5; }
+
+  .result-export {
+    margin-top: 16px;
+  }
+  .export-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--pb-color-accent);
+    color: var(--pb-color-white);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .export-btn:hover { background: var(--pb-color-accent-dark); }
+  .export-text {
+    display: none;
+    margin-top: 12px;
+    background: var(--pb-color-neutral-50);
+    border-radius: 8px;
+    padding: 16px;
+    font-family: var(--pb-font-mono);
+    font-size: 12px;
+    white-space: pre-wrap;
+    color: var(--pb-color-neutral-700);
+    line-height: 1.6;
+  }
+
+  .reset-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--pb-color-neutral-100);
+    color: var(--pb-color-neutral-700);
+    border: none;
+    border-radius: 8px;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  .reset-btn:hover { background: var(--pb-color-neutral-300); }
+
+  /* Thank you (single-response mode) */
+  .thankyou { display: none; text-align: center; padding: 40px 20px; }
+  .thankyou.visible { display: block; }
+  .thankyou h2 { font-family: var(--pb-font-heading); font-size: 24px; font-weight: 800; color: var(--pb-color-primary); margin-bottom: 8px; justify-content: center; }
+  .thankyou p { font-size: 16px; color: var(--pb-color-neutral-500); }
+
+  /* Utility */
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<div class="widget">
+
+  <!-- Header -->
+  <div class="widget-header">
+    <div class="widget-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="widget-subtitle">Content Scorecard Survey</div>
+  </div>
+
+  <!-- Survey Selector (operator view) -->
+  <div class="survey-selector" id="surveySelector">
+    <div class="selector-label">Survey type</div>
+    <div class="selector-buttons">
+      <button class="selector-btn active" data-survey="pulse" onclick="selectSurvey('pulse')">
+        Pulse
+        <span class="btn-meta">3 Qs &middot; &lt;1 min</span>
+      </button>
+      <button class="selector-btn" data-survey="full" onclick="selectSurvey('full')">
+        Full
+        <span class="btn-meta">7 Qs &middot; ~2 min</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Survey Body -->
+  <div class="survey-body" id="surveyBody">
+
+    <!-- Q1: NPS -->
+    <div class="question" id="qNps">
+      <div class="question-number">Question 1</div>
+      <div class="question-text">How likely would you be to recommend this content to a friend who gambles?</div>
+      <div class="nps-scale" id="npsScale"></div>
+      <div class="nps-labels">
+        <span>Not at all likely</span>
+        <span>Extremely likely</span>
+      </div>
+    </div>
+
+    <!-- Q2: Forgettable-Memorable (always shown) -->
+    <div class="question" id="qMemorable">
+      <div class="question-number">Question 2</div>
+      <div class="question-text">Rate this content:</div>
+      <div class="semantic-row">
+        <div class="semantic-labels">
+          <span class="semantic-label-left">Forgettable</span>
+          <span class="semantic-label-right">Memorable</span>
+        </div>
+        <div class="semantic-scale" id="scaleMemorable"></div>
+      </div>
+    </div>
+
+    <!-- Full survey pairs (hidden in Pulse mode) -->
+    <div class="question full-only" id="qPairs">
+      <div class="question-number">Questions 3&ndash;6</div>
+      <div class="question-text">Rate this content on each scale:</div>
+
+      <div class="semantic-row">
+        <div class="semantic-labels">
+          <span class="semantic-label-left">Boring</span>
+          <span class="semantic-label-right">Engaging</span>
+        </div>
+        <div class="semantic-scale" id="scaleEngaging"></div>
+      </div>
+
+      <div class="semantic-row">
+        <div class="semantic-labels">
+          <span class="semantic-label-left">Preachy</span>
+          <span class="semantic-label-right">Respectful</span>
+        </div>
+        <div class="semantic-scale" id="scaleRespectful"></div>
+      </div>
+
+      <div class="semantic-row">
+        <div class="semantic-labels">
+          <span class="semantic-label-left">Confusing</span>
+          <span class="semantic-label-right">Clear</span>
+        </div>
+        <div class="semantic-scale" id="scaleClear"></div>
+      </div>
+
+      <div class="semantic-row">
+        <div class="semantic-labels">
+          <span class="semantic-label-left">Generic</span>
+          <span class="semantic-label-right">Made for me</span>
+        </div>
+        <div class="semantic-scale" id="scaleMadeForMe"></div>
+      </div>
+    </div>
+
+    <!-- Open text -->
+    <div class="question" id="qOpen">
+      <div class="question-number" id="openLabel">Question 3</div>
+      <div class="question-text">What's one thing you'd change? <span style="color: var(--pb-color-neutral-300); font-weight: 400;">(optional)</span></div>
+      <textarea class="open-text" id="openText" placeholder="Your feedback..."></textarea>
+    </div>
+
+    <button class="submit-btn" id="submitBtn" onclick="submitSurvey()">Submit</button>
+
+    <!-- Thank you (player view) -->
+    <div class="thankyou" id="thankYou">
+      <h2>Thanks for your feedback</h2>
+      <p>Your response helps us make this content better.</p>
+    </div>
+  </div>
+
+  <!-- Results Panel (operator view) -->
+  <div class="results" id="resultsPanel">
+    <div class="results-header">Internal Scorecard</div>
+    <div class="results-subheader">For your team only &mdash; not shown to survey respondents.</div>
+    <div id="resultsCards"></div>
+    <div class="result-recommendation" id="resultsRecommendation"></div>
+    <div class="result-export">
+      <button class="export-btn" onclick="toggleExport()">Copy report</button>
+      <button class="reset-btn" onclick="resetSurvey()">New response</button>
+      <div class="export-text" id="exportText"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// State
+let surveyType = 'pulse';
+let responses = [];
+const scales = {};
+
+// Build NPS buttons
+const npsContainer = document.getElementById('npsScale');
+for (let i = 0; i <= 10; i++) {
+  const btn = document.createElement('button');
+  btn.className = 'nps-btn';
+  btn.textContent = i;
+  btn.onclick = function() { selectNps(i); };
+  npsContainer.appendChild(btn);
+}
+
+// Build semantic differential scales
+const semanticPairs = [
+  { id: 'scaleMemorable', key: 'memorable' },
+  { id: 'scaleEngaging', key: 'engaging' },
+  { id: 'scaleRespectful', key: 'respectful' },
+  { id: 'scaleClear', key: 'clear' },
+  { id: 'scaleMadeForMe', key: 'madeForMe' }
+];
+
+semanticPairs.forEach(function(pair) {
+  const container = document.getElementById(pair.id);
+  for (let i = 1; i <= 7; i++) {
+    const btn = document.createElement('button');
+    btn.className = 'semantic-btn';
+    btn.textContent = i;
+    btn.onclick = function() { selectSemantic(pair.key, i); };
+    container.appendChild(btn);
+  }
+});
+
+// Survey type selector
+function selectSurvey(type) {
+  surveyType = type;
+  document.querySelectorAll('.selector-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.survey === type);
+  });
+
+  const fullOnly = document.querySelectorAll('.full-only');
+  fullOnly.forEach(function(el) {
+    el.classList.toggle('hidden', type === 'pulse');
+  });
+
+  // Update open-text question number
+  document.getElementById('openLabel').textContent = type === 'pulse' ? 'Question 3' : 'Question 7';
+}
+
+// NPS selection
+let npsValue = null;
+function selectNps(val) {
+  npsValue = val;
+  document.querySelectorAll('.nps-btn').forEach(function(btn, i) {
+    btn.classList.toggle('selected', i === val);
+  });
+}
+
+// Semantic selection
+const semanticValues = {};
+function selectSemantic(key, val) {
+  semanticValues[key] = val;
+  const container = document.getElementById(
+    semanticPairs.find(function(p) { return p.key === key; }).id
+  );
+  container.querySelectorAll('.semantic-btn').forEach(function(btn, i) {
+    btn.classList.toggle('selected', i === val - 1);
+  });
+}
+
+// Submit
+function submitSurvey() {
+  // Validate required fields
+  if (npsValue === null) { alert('Please answer the NPS question.'); return; }
+  if (!semanticValues.memorable) { alert('Please rate Forgettable-Memorable.'); return; }
+  if (surveyType === 'full') {
+    if (!semanticValues.engaging || !semanticValues.respectful || !semanticValues.clear || !semanticValues.madeForMe) {
+      alert('Please rate all scales.'); return;
+    }
+  }
+
+  // Store response
+  var response = {
+    nps: npsValue,
+    memorable: semanticValues.memorable,
+    openText: document.getElementById('openText').value,
+    surveyType: surveyType,
+    timestamp: new Date().toISOString()
+  };
+  if (surveyType === 'full') {
+    response.engaging = semanticValues.engaging;
+    response.respectful = semanticValues.respectful;
+    response.clear = semanticValues.clear;
+    response.madeForMe = semanticValues.madeForMe;
+  }
+  responses.push(response);
+
+  // Hide survey, show results
+  document.querySelectorAll('.question').forEach(function(q) { q.classList.add('hidden'); });
+  document.getElementById('submitBtn').classList.add('hidden');
+  document.getElementById('thankYou').classList.add('visible');
+
+  showResults();
+}
+
+function showResults() {
+  var panel = document.getElementById('resultsPanel');
+  panel.classList.add('visible');
+
+  var n = responses.length;
+
+  // Calculate NPS
+  var promoters = responses.filter(function(r) { return r.nps >= 9; }).length;
+  var detractors = responses.filter(function(r) { return r.nps <= 6; }).length;
+  var nps = Math.round((promoters / n - detractors / n) * 100);
+
+  // Calculate averages
+  var avgMemorable = avg(responses.map(function(r) { return r.memorable; }));
+  var pairs = [
+    { key: 'memorable', label: 'Forgettable \u2014 Memorable', avg: avgMemorable }
+  ];
+
+  if (surveyType === 'full' || responses.some(function(r) { return r.engaging; })) {
+    var fullResponses = responses.filter(function(r) { return r.engaging; });
+    if (fullResponses.length > 0) {
+      pairs.push({ key: 'engaging', label: 'Boring \u2014 Engaging', avg: avg(fullResponses.map(function(r) { return r.engaging; })) });
+      pairs.push({ key: 'respectful', label: 'Preachy \u2014 Respectful', avg: avg(fullResponses.map(function(r) { return r.respectful; })) });
+      pairs.push({ key: 'clear', label: 'Confusing \u2014 Clear', avg: avg(fullResponses.map(function(r) { return r.clear; })) });
+      pairs.push({ key: 'madeForMe', label: 'Generic \u2014 Made for me', avg: avg(fullResponses.map(function(r) { return r.madeForMe; })) });
+    }
+  }
+
+  // Build result cards
+  var html = '';
+
+  // NPS card
+  var npsClass = nps >= 30 ? 'strong' : nps >= 0 ? 'acceptable' : 'problem';
+  var npsReading = nps >= 50 ? 'Exceptional \u2014 content spreading organically' :
+                   nps >= 30 ? 'Strong \u2014 content connects with audience' :
+                   nps >= 0  ? 'Acceptable \u2014 room to improve' :
+                               'Problem \u2014 more detractors than promoters';
+  html += '<div class="result-card ' + npsClass + '">';
+  html += '<div class="result-metric">NPS (' + n + ' response' + (n === 1 ? '' : 's') + ')</div>';
+  html += '<div class="result-score">' + nps + '</div>';
+  html += '<div class="result-reading">' + npsReading + '</div>';
+  html += '</div>';
+
+  // Semantic pair cards
+  pairs.forEach(function(pair) {
+    var cls = pair.avg >= 5.5 ? 'strong' : pair.avg >= 4.0 ? 'acceptable' : 'problem';
+    var reading = pair.avg >= 5.5 ? 'Strong signal' :
+                  pair.avg >= 4.0 ? 'Acceptable' :
+                  pair.avg >= 3.0 ? 'Below midpoint \u2014 investigate' :
+                                    'Red flag \u2014 content may be failing';
+    // Brand DNA alarm
+    if (pair.key === 'respectful' && pair.avg < 4.0) {
+      reading = 'BRAND DNA ALARM \u2014 content may be lecturing players';
+      cls = 'problem';
+    }
+    html += '<div class="result-card ' + cls + '">';
+    html += '<div class="result-metric">' + pair.label + '</div>';
+    html += '<div class="result-score">' + pair.avg.toFixed(1) + '</div>';
+    html += '<div class="result-reading">' + reading + '</div>';
+    html += '</div>';
+  });
+
+  document.getElementById('resultsCards').innerHTML = html;
+
+  // Recommendation
+  var hasAlarm = pairs.some(function(p) { return p.avg < 4.0; });
+  var allStrong = nps >= 30 && pairs.every(function(p) { return p.avg >= 4.0; });
+  var recHtml = '<h3>Recommendation</h3>';
+  if (nps < 0 || pairs.some(function(p) { return p.avg < 3.0; })) {
+    recHtml += '<p>Revise content before shipping. Check open-ended responses for specific issues. Review against voice principles if Preachy\u2014Respectful is low.</p>';
+  } else if (hasAlarm || nps < 30) {
+    recHtml += '<p>Run the Full survey for diagnostics. Identify which dimensions need improvement and iterate.</p>';
+  } else {
+    recHtml += '<p>Content is performing well. Ship it and schedule a Recall survey in 7\u201414 days to confirm retention.</p>';
+  }
+  if (n < 30) {
+    recHtml += '<p style="margin-top: 8px; opacity: 0.7; font-size: 13px;">Note: ' + n + ' response' + (n === 1 ? '' : 's') + ' collected. Target 30 for reliable results.</p>';
+  }
+  document.getElementById('resultsRecommendation').innerHTML = recHtml;
+
+  // Build export text
+  var exportLines = [];
+  exportLines.push('Survey type:       ' + surveyType.charAt(0).toUpperCase() + surveyType.slice(1));
+  exportLines.push('Sample size:       ' + n);
+  exportLines.push('Date:              ' + new Date().toISOString().split('T')[0]);
+  exportLines.push('');
+  exportLines.push('NPS:               ' + nps);
+  pairs.forEach(function(pair) {
+    var label = pair.label.replace(' \u2014 ', '/').padEnd(19);
+    exportLines.push(label + ' ' + pair.avg.toFixed(1));
+  });
+  var openResponses = responses.map(function(r) { return r.openText; }).filter(function(t) { return t && t.trim(); });
+  if (openResponses.length > 0) {
+    exportLines.push('');
+    exportLines.push('Open-ended responses:');
+    openResponses.forEach(function(t) { exportLines.push('  - ' + t); });
+  }
+  exportLines.push('');
+  exportLines.push('Recommendation:    ' + (nps < 0 ? 'Revise and retest' : !allStrong ? 'Run Full for diagnostics' : 'Ship'));
+
+  document.getElementById('exportText').textContent = exportLines.join('\n');
+}
+
+function avg(arr) {
+  if (arr.length === 0) return 0;
+  return arr.reduce(function(a, b) { return a + b; }, 0) / arr.length;
+}
+
+function toggleExport() {
+  var el = document.getElementById('exportText');
+  if (el.style.display === 'block') {
+    el.style.display = 'none';
+  } else {
+    el.style.display = 'block';
+    // Copy to clipboard
+    navigator.clipboard.writeText(el.textContent).then(function() {
+      document.querySelector('.export-btn').textContent = 'Copied!';
+      setTimeout(function() { document.querySelector('.export-btn').textContent = 'Copy report'; }, 2000);
+    });
+  }
+}
+
+function resetSurvey() {
+  // Reset UI
+  npsValue = null;
+  Object.keys(semanticValues).forEach(function(k) { delete semanticValues[k]; });
+  document.querySelectorAll('.nps-btn, .semantic-btn').forEach(function(btn) { btn.classList.remove('selected'); });
+  document.getElementById('openText').value = '';
+  document.querySelectorAll('.question').forEach(function(q) { q.classList.remove('hidden'); });
+  document.getElementById('submitBtn').classList.remove('hidden');
+  document.getElementById('thankYou').classList.remove('visible');
+  // Keep results visible and accumulating
+  selectSurvey(surveyType);
+}
+
+// Initialize
+selectSurvey('pulse');
+</script>
+</body>
+</html>

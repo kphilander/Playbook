@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Scorecard — Playbook</title>
+<meta name="description" content="Measure whether your literacy content is working — the same way you'd measure any marketing campaign. Surveys, auto-scoring, and a decision framework.">
+<meta name="theme-color" content="#1B2838">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/tools/playbook/design-tokens.css">
+<link rel="stylesheet" href="/tools/playbook/hub/hub-shared.css">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8RKL2CEM2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S8RKL2CEM2');
+</script>
+
+<style>
+  body { font-family: var(--pb-font-body, 'Source Sans 3', sans-serif); color: var(--pb-text); background: var(--pb-color-white); }
+  h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-height: var(--pb-leading-heading); }
+
+  /* === Sticky TOC === */
+  .pb-toc {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--pb-color-primary-dark);
+    border-bottom: 1px solid rgba(0,212,170,0.12);
+    padding: 0 40px;
+    display: flex; gap: 0; overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .pb-toc::-webkit-scrollbar { display: none; }
+  .pb-toc a {
+    padding: 14px 16px; font-size: 0.78rem; font-weight: 600;
+    font-family: var(--pb-font-heading);
+    color: rgba(255,255,255,0.4); white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .pb-toc a:hover { color: rgba(255,255,255,0.75); }
+  .pb-toc a.active { color: var(--pb-color-secondary); border-bottom-color: var(--pb-color-secondary); }
+
+  /* === Container === */
+  .pb-container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+
+  /* === Hero === */
+  .pb-hero-compact {
+    background: linear-gradient(135deg, var(--pb-color-primary-dark) 0%, var(--pb-color-primary) 50%, var(--pb-color-primary-light) 100%);
+    padding: 80px 0 64px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .pb-hero-compact::before {
+    content: ''; position: absolute; top: -40%; right: -15%;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,212,170,0.06) 0%, transparent 70%);
+  }
+  .pb-hero-compact h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800;
+    color: #fff; margin-bottom: 16px; position: relative;
+  }
+  .pb-hero-compact h1 span { color: var(--pb-color-secondary); }
+  .pb-hero-compact p {
+    font-size: clamp(1rem, 1.8vw, 1.1rem); color: rgba(255,255,255,0.6);
+    max-width: 620px; margin: 0 auto 32px; position: relative; line-height: 1.7;
+  }
+  .pb-hero-compact .pb-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 28px; border-radius: 8px;
+    font-family: var(--pb-font-heading); font-weight: 700; font-size: 0.9rem;
+    background: var(--pb-color-accent); color: #fff;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s; position: relative;
+  }
+  .pb-hero-compact .pb-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+
+  /* === Sections === */
+  .pb-section { padding: 80px 0; }
+  .pb-section-alt { background: var(--pb-color-neutral-50); }
+  .pb-section-dark { background: var(--pb-color-primary); color: #fff; }
+  .pb-section-label {
+    font-family: var(--pb-font-heading); font-size: 0.78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.15em;
+    color: var(--pb-color-secondary); margin-bottom: 12px;
+    text-align: center;
+  }
+  .pb-section h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800;
+    margin-bottom: 16px; letter-spacing: -0.02em;
+    text-align: center;
+  }
+  .pb-section h2 .accent { color: var(--pb-color-secondary); }
+  .pb-section-desc {
+    font-size: 1.05rem; color: var(--pb-text-secondary, #6B6B8A);
+    max-width: 620px; line-height: 1.7; margin-bottom: 40px;
+    text-align: center; margin-left: auto; margin-right: auto;
+  }
+  .pb-gradient-line {
+    display: block; width: 64px; height: 4px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    margin-bottom: 24px;
+    margin-left: auto; margin-right: auto;
+  }
+
+  /* === Philosophy banner === */
+  .philosophy-banner {
+    background: var(--pb-color-primary);
+    border-radius: 12px;
+    padding: 28px 32px;
+    color: #fff;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .philosophy-banner::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .philosophy-banner strong { color: var(--pb-color-secondary); }
+  .philosophy-banner .philosophy-sub {
+    font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-top: 12px; font-style: italic;
+  }
+
+  /* === Tool cards === */
+  .tool-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+  .tool-card {
+    border: 2px solid var(--pb-color-neutral-100, #E8E8F0);
+    border-radius: 12px;
+    padding: 28px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .tool-card:hover {
+    border-color: var(--pb-color-secondary);
+    box-shadow: 0 8px 24px rgba(0,212,170,0.1);
+  }
+  .tool-card h3 {
+    font-size: 1.15rem; font-weight: 800; margin-bottom: 8px;
+    color: var(--pb-color-primary);
+  }
+  .tool-card .tool-meta {
+    font-size: 0.82rem; font-weight: 600;
+    font-family: var(--pb-font-heading);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    color: var(--pb-color-accent);
+    margin-bottom: 10px;
+  }
+  .tool-card p {
+    font-size: 0.95rem;
+    color: var(--pb-text-secondary, #6B6B8A);
+    line-height: 1.6;
+  }
+
+  /* === Survey cards (compact) === */
+  .survey-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+  .survey-card {
+    background: var(--pb-color-primary);
+    border-radius: 12px;
+    padding: 24px;
+    color: #fff;
+  }
+  .survey-card h3 {
+    font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 4px;
+  }
+  .survey-card .survey-meta {
+    font-size: 0.82rem; color: var(--pb-color-secondary);
+    font-family: var(--pb-font-heading); font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .survey-card ul {
+    list-style: none; padding: 0;
+  }
+  .survey-card li {
+    font-size: 0.9rem; color: rgba(255,255,255,0.7);
+    padding: 4px 0; line-height: 1.5;
+  }
+  .survey-card li::before {
+    content: '\2022'; color: var(--pb-color-secondary);
+    margin-right: 8px; font-weight: 700;
+  }
+
+  /* === NPS benchmark bar === */
+  .nps-benchmarks { display: flex; gap: 8px; margin-bottom: 32px; }
+  .nps-bar {
+    flex: 1; border-radius: 10px; padding: 16px 12px; text-align: center;
+    font-family: var(--pb-font-heading);
+  }
+  .nps-bar .nps-range { display: block; font-size: 1.6rem; font-weight: 900; margin-bottom: 2px; }
+  .nps-bar .nps-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* === Comparison table === */
+  .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; }
+  .compare-table th {
+    text-align: left; padding: 10px 16px;
+    background: var(--pb-color-primary); color: #fff;
+    font-family: var(--pb-font-heading); font-size: 0.8rem;
+    text-transform: uppercase; letter-spacing: 0.06em;
+  }
+  .compare-table td {
+    padding: 10px 16px; border-bottom: 1px solid var(--pb-color-neutral-100, #E8E8F0);
+    font-size: 0.95rem;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table .highlight td { background: rgba(0,212,170,0.06); font-weight: 600; }
+  .compare-table .muted { color: var(--pb-color-danger, #FF3D00); }
+
+  /* === Semantic pairs grid === */
+  .pairs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 48px; }
+  .pair-card {
+    background: var(--pb-color-neutral-50, #F5F5FA);
+    border-radius: 10px; padding: 16px 20px; text-align: center;
+  }
+  .pair-card .pair-labels {
+    font-family: var(--pb-font-heading); font-size: 0.82rem; font-weight: 700;
+    color: var(--pb-color-primary); margin-bottom: 6px;
+  }
+  .pair-card .pair-tests {
+    font-size: 0.8rem; color: var(--pb-text-secondary, #6B6B8A);
+  }
+
+  /* === Alarm callout === */
+  .alarm-callout {
+    background: #FFF3F0;
+    border-left: 4px solid var(--pb-color-danger, #FF3D00);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 24px;
+    margin-bottom: 48px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .alarm-callout strong { color: var(--pb-color-danger, #FF3D00); }
+
+  /* === Embed code block === */
+  .embed-block {
+    background: var(--pb-color-primary-dark);
+    border-radius: 10px; padding: 20px 24px;
+    font-family: var(--pb-font-mono); font-size: 0.85rem;
+    color: var(--pb-color-neutral-300, #A8A8C0);
+    overflow-x: auto; margin-bottom: 16px;
+  }
+  .embed-block .tag { color: var(--pb-color-accent); }
+  .embed-block .attr { color: var(--pb-color-secondary); }
+  .embed-block .val { color: #FFB300; }
+
+  /* === Decision flow === */
+  .decision-flow {
+    display: flex; align-items: flex-start; gap: 16px;
+    flex-wrap: wrap; margin-bottom: 48px;
+    justify-content: center;
+  }
+  .flow-step {
+    text-align: center; flex: 1; min-width: 140px; max-width: 180px;
+  }
+  .flow-box {
+    border-radius: 10px; padding: 16px 12px;
+    font-family: var(--pb-font-heading);
+    font-weight: 700; font-size: 0.9rem; line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .flow-detail {
+    font-size: 0.78rem; color: var(--pb-text-secondary, #6B6B8A);
+  }
+  .flow-arrow {
+    font-size: 1.5rem; color: var(--pb-color-neutral-300, #A8A8C0);
+    padding-top: 12px; flex-shrink: 0;
+  }
+  .flow-start .flow-box { background: var(--pb-color-primary); color: #fff; }
+  .flow-green .flow-box { background: var(--pb-color-success, #00C853); color: #fff; }
+  .flow-yellow .flow-box { background: var(--pb-color-warning, #FFB300); color: var(--pb-color-primary); }
+  .flow-red .flow-box { background: var(--pb-color-danger, #FF3D00); color: #fff; }
+  .flow-blue .flow-box { background: var(--pb-color-info, #2979FF); color: #fff; }
+
+  /* === Back nav === */
+  .pb-back {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: rgba(255,255,255,0.5); font-size: 0.85rem;
+    text-decoration: none; margin-bottom: 16px; position: relative;
+  }
+  .pb-back:hover { color: var(--pb-color-secondary); }
+
+  /* === Footer === */
+  .pb-footer {
+    background: var(--pb-color-primary-dark); padding: 40px; text-align: center;
+    color: rgba(255,255,255,0.4); font-size: 0.85rem;
+  }
+  .pb-footer a { color: var(--pb-color-secondary); text-decoration: none; }
+
+  @media (max-width: 768px) {
+    .survey-cards { grid-template-columns: 1fr; }
+    .nps-benchmarks { flex-wrap: wrap; }
+    .nps-bar { min-width: 45%; }
+    .decision-flow { flex-direction: column; align-items: center; }
+    .flow-arrow { transform: rotate(90deg); }
+    .pb-container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Sticky TOC -->
+  <nav class="pb-toc">
+    <a href="#philosophy">Philosophy</a>
+    <a href="#surveys">Surveys</a>
+    <a href="#benchmarks">Benchmarks</a>
+    <a href="#decision">Decision Tree</a>
+    <a href="#deploy">Deploy</a>
+    <a href="/tools/playbook/">&#8592; Playbook Hub</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pb-hero-compact">
+    <div class="pb-container">
+      <a href="/tools/playbook/" class="pb-back">&larr; Back to Playbook</a>
+      <h1>Content <span>Scorecard</span></h1>
+      <p>Measure whether your literacy content is working &mdash; the same way you'd measure any marketing campaign. Three surveys, auto-scored benchmarks, and a clear ship-or-revise decision.</p>
+      <a href="#deploy" class="pb-btn">Try the Survey Widget &darr;</a>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="pb-section" id="philosophy">
+    <div class="pb-container">
+      <div class="philosophy-banner">
+        <strong>Tier 1 content is a product, not a pamphlet.</strong> It competes for the same player attention as your sportsbook promos, your casino loyalty emails, your brand campaigns. If you'd measure those with NPS, measure this with NPS. The quality bar is commercial-grade, not "good enough for compliance."
+        <div class="philosophy-sub">You already A/B test email subject lines and measure campaign engagement. This is the same process for your literacy content &mdash; same tools, same rigor, same time investment.</div>
+      </div>
+
+      <span class="pb-gradient-line"></span>
+      <div class="pb-section-label">Research Tools</div>
+      <h2>Everything you need to <span class="accent">measure and iterate</span></h2>
+      <p class="pb-section-desc">Three tools, one purpose: treat your literacy content like the product it is. Pick the one that fits where you are.</p>
+
+      <div class="tool-cards">
+        <a href="#deploy" class="tool-card">
+          <div class="tool-meta">Interactive</div>
+          <h3>Survey Widget</h3>
+          <p>Self-contained survey you can embed in your content hub. Supports Pulse and Full modes. Auto-calculates NPS and all semantic pairs with color-coded results.</p>
+        </a>
+        <a href="/tools/playbook/research/quickref.html" class="tool-card">
+          <div class="tool-meta">Printable</div>
+          <h3>Quick-Reference Card</h3>
+          <p>One-page decision tree with all benchmarks. Tape it to your monitor or print for your team. Everything at a glance.</p>
+        </a>
+        <a href="https://github.com/kphilander/Playbook/blob/main/docs/content-scorecard.md" class="tool-card" target="_blank" rel="noopener">
+          <div class="tool-meta">Full Guide</div>
+          <h3>Content Scorecard</h3>
+          <p>Complete documentation: survey questions, methodology sources, cultural fit A/B testing, platform setup guides, reporting format, and segment notes.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Surveys -->
+  <section class="pb-section-alt pb-section" id="surveys">
+    <div class="pb-container">
+      <span class="pb-gradient-line"></span>
+      <div class="pb-section-label">Instruments</div>
+      <h2>Three surveys. <span class="accent">Pick one.</span></h2>
+      <p class="pb-section-desc">All grounded in validated marketing research methodology (Reichheld 2003, Osgood et al. 1957, Dillard et al. 2007). No research expertise required.</p>
+
+      <div class="survey-cards">
+        <div class="survey-card">
+          <h3>Pulse</h3>
+          <div class="survey-meta">3 items &middot; under 1 min &middot; 30 responses</div>
+          <ul>
+            <li>NPS (0&ndash;10): Would you recommend?</li>
+            <li>Forgettable&ndash;Memorable (1&ndash;7)</li>
+            <li>Open-ended: one thing you'd change</li>
+          </ul>
+        </div>
+        <div class="survey-card">
+          <h3>Full</h3>
+          <div class="survey-meta">7 items &middot; ~2 min &middot; 30 responses</div>
+          <ul>
+            <li>NPS (0&ndash;10)</li>
+            <li>Forgettable&ndash;Memorable</li>
+            <li>Boring&ndash;Engaging</li>
+            <li>Preachy&ndash;Respectful</li>
+            <li>Confusing&ndash;Clear</li>
+            <li>Generic&ndash;Made for me</li>
+            <li>Open-ended feedback</li>
+          </ul>
+        </div>
+        <div class="survey-card">
+          <h3>Recall</h3>
+          <div class="survey-meta">4 items &middot; 7&ndash;14 days later &middot; 25 responses</div>
+          <ul>
+            <li>Free recall: what do you remember?</li>
+            <li>True/false knowledge check #1</li>
+            <li>True/false knowledge check #2</li>
+            <li>Behavioral follow-through checklist</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="font-size: 1.1rem; margin-bottom: 16px;">What the five pairs measure</h3>
+      <div class="pairs-grid">
+        <div class="pair-card">
+          <div class="pair-labels">Forgettable &harr; Memorable</div>
+          <div class="pair-tests">Message stickiness</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-labels">Boring &harr; Engaging</div>
+          <div class="pair-tests">Entertainment value</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-labels">Preachy &harr; Respectful</div>
+          <div class="pair-tests">Voice register</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-labels">Confusing &harr; Clear</div>
+          <div class="pair-tests">Comprehension</div>
+        </div>
+        <div class="pair-card">
+          <div class="pair-labels">Generic &harr; Made for me</div>
+          <div class="pair-tests">Cultural resonance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benchmarks -->
+  <section class="pb-section" id="benchmarks">
+    <div class="pb-container">
+      <span class="pb-gradient-line"></span>
+      <div class="pb-section-label">Benchmarks</div>
+      <h2>How your content <span class="accent">compares</span></h2>
+      <p class="pb-section-desc">Playbook targets the same NPS range as the products it sits alongside. Traditional compliance content doesn't even ask.</p>
+
+      <div class="nps-benchmarks">
+        <div class="nps-bar" style="background: var(--pb-color-success); color: white;">
+          <span class="nps-range">50+</span>
+          <span class="nps-label">Exceptional</span>
+        </div>
+        <div class="nps-bar" style="background: #00A888; color: white;">
+          <span class="nps-range">30&ndash;49</span>
+          <span class="nps-label">Strong</span>
+        </div>
+        <div class="nps-bar" style="background: var(--pb-color-warning); color: var(--pb-color-primary);">
+          <span class="nps-range">0&ndash;29</span>
+          <span class="nps-label">Improve</span>
+        </div>
+        <div class="nps-bar" style="background: var(--pb-color-danger); color: white;">
+          <span class="nps-range">&lt; 0</span>
+          <span class="nps-label">Problem</span>
+        </div>
+      </div>
+
+      <table class="compare-table">
+        <tr><th>Category</th><th>Typical NPS</th></tr>
+        <tr><td>Streaming entertainment (Netflix, Spotify)</td><td style="color: var(--pb-color-success); font-weight: 700;">50&ndash;70</td></tr>
+        <tr><td>Gaming / sportsbook apps</td><td style="color: var(--pb-color-success); font-weight: 700;">30&ndash;50</td></tr>
+        <tr class="highlight"><td>Playbook &ldquo;Strong&rdquo; target</td><td>30&ndash;49</td></tr>
+        <tr><td>Traditional compliance content</td><td class="muted">Unmeasured</td></tr>
+      </table>
+
+      <h3 style="font-size: 1.1rem; margin-bottom: 16px;">Semantic pair scoring (1&ndash;7 scale)</h3>
+      <table class="compare-table">
+        <tr><th>Average</th><th>Signal</th><th>Action</th></tr>
+        <tr><td style="color: var(--pb-color-success); font-weight: 700;">5.5+</td><td>Strong</td><td>Ship</td></tr>
+        <tr><td style="color: #F9A825; font-weight: 700;">4.0&ndash;5.4</td><td>Acceptable</td><td>Improve if possible</td></tr>
+        <tr><td style="color: var(--pb-color-danger); font-weight: 700;">&lt; 4.0</td><td>Investigate</td><td>Check open-ended feedback</td></tr>
+        <tr><td style="color: var(--pb-color-danger); font-weight: 700;">&lt; 3.0</td><td>Red flag</td><td>Content failing on this dimension</td></tr>
+      </table>
+
+      <div class="alarm-callout">
+        <strong>Brand DNA alarm:</strong> If Preachy&ndash;Respectful scores below 4.0, the content may be lecturing players. Revise against <a href="/tools/playbook/brand-book/index.html" style="color: var(--pb-color-accent);">voice principles</a> before shipping.
+      </div>
+    </div>
+  </section>
+
+  <!-- Decision Tree -->
+  <section class="pb-section-alt pb-section" id="decision">
+    <div class="pb-container">
+      <span class="pb-gradient-line"></span>
+      <div class="pb-section-label">Decision Framework</div>
+      <h2>After any <span class="accent">content launch</span></h2>
+      <p class="pb-section-desc">Send the Pulse survey. Read the scores. Make the call.</p>
+
+      <div class="decision-flow">
+        <div class="flow-step flow-start">
+          <div class="flow-box">Send Pulse</div>
+          <div class="flow-detail">3 Qs &middot; &lt;1 min<br>30 responses min</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step flow-green">
+          <div class="flow-box">NPS 30+<br>All pairs 4.0+</div>
+          <div class="flow-detail">Ship it</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step flow-blue">
+          <div class="flow-box">Send Recall</div>
+          <div class="flow-detail">7&ndash;14 days later<br>Did it stick?</div>
+        </div>
+      </div>
+      <div class="decision-flow">
+        <div class="flow-step flow-yellow">
+          <div class="flow-box">NPS 0&ndash;29<br>or pair &lt; 4.0</div>
+          <div class="flow-detail">Run Full survey for diagnostics</div>
+        </div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-step flow-red">
+          <div class="flow-box">NPS &lt; 0<br>or Preachy &lt; 3.0</div>
+          <div class="flow-detail">Stop &amp; revise content</div>
+        </div>
+      </div>
+
+      <p style="text-align: center; color: var(--pb-text-secondary, #6B6B8A); margin-top: 24px; font-size: 0.95rem;">
+        <strong>Total effort:</strong> 3&ndash;4 hours spread across 2 weeks.
+      </p>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="/tools/playbook/research/quickref.html" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: 8px; font-family: var(--pb-font-heading); font-weight: 700; font-size: 0.95rem; background: var(--pb-color-accent); color: #fff; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Print the Quick-Reference Card &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deploy -->
+  <section class="pb-section" id="deploy">
+    <div class="pb-container">
+      <span class="pb-gradient-line"></span>
+      <div class="pb-section-label">Deploy</div>
+      <h2>Try the <span class="accent">survey widget</span></h2>
+      <p class="pb-section-desc">Self-contained, no backend, auto-scores everything. Embed it in your content hub with one line of HTML.</p>
+
+      <div class="embed-block">
+        <span class="tag">&lt;iframe</span> <span class="attr">src</span>=<span class="val">"/tools/playbook/research/survey.html"</span> <span class="attr">width</span>=<span class="val">"100%"</span> <span class="attr">height</span>=<span class="val">"700"</span> <span class="attr">frameborder</span>=<span class="val">"0"</span><span class="tag">&gt;&lt;/iframe&gt;</span>
+      </div>
+
+      <div style="border: 2px solid var(--pb-color-neutral-100, #E8E8F0); border-radius: 12px; overflow: hidden; margin-top: 24px;">
+        <iframe src="/tools/playbook/research/survey.html" width="100%" height="700" frameborder="0" style="display: block;"></iframe>
+      </div>
+
+      <div style="margin-top: 32px; text-align: center;">
+        <a href="/tools/playbook/research/survey.html" class="pb-btn" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; border-radius: 8px; font-family: var(--pb-font-heading); font-weight: 700; font-size: 0.9rem; background: var(--pb-color-secondary); color: var(--pb-color-primary); text-decoration: none;">Open full-screen &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bespoke CTA -->
+  <section class="pb-section-dark pb-section">
+    <div class="pb-container" style="text-align: center;">
+      <h2 style="color: #fff;">Need something <span class="accent">more bespoke?</span></h2>
+      <p style="color: rgba(255,255,255,0.6); font-size: 1.05rem; line-height: 1.7; max-width: 560px; margin: 0 auto 32px;">
+        Share the <a href="https://github.com/kphilander/Playbook/blob/main/docs/content-scorecard.md" target="_blank" rel="noopener" style="color: var(--pb-color-secondary); font-weight: 600;">full research guide</a> with your research team for custom instrument design, larger-scale studies, or cross-market analysis. Or <a href="/about#contact" style="color: var(--pb-color-accent); font-weight: 600;">contact us</a> to discuss a tailored measurement program.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pb-footer">
+    <p>
+      <a href="/tools/playbook/">Playbook Hub</a> &middot;
+      <a href="https://github.com/kphilander/Playbook/blob/main/docs/content-scorecard.md" target="_blank" rel="noopener">Full Guide on GitHub</a> &middot;
+      <a href="https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml" target="_blank" rel="noopener">Share Findings</a>
+    </p>
+  </footer>
+
+<script src="/tools/playbook/hub/hub-shared.js"></script>
+<script>
+  // TOC active state on scroll
+  const tocLinks = document.querySelectorAll('.pb-toc a[href^="#"]');
+  const sections = [...tocLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+  function updateToc() {
+    let current = '';
+    sections.forEach(s => {
+      if (s.getBoundingClientRect().top <= 80) current = s.id;
+    });
+    tocLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', updateToc, { passive: true });
+  updateToc();
+</script>
+</body>
+</html>

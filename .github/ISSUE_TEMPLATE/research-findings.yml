@@ -6,8 +6,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Share your player testing results using the protocol from
-        [`docs/player-testing-protocol.md`](../../docs/player-testing-protocol.md).
+        Share your content performance results using the scorecard from
+        [`docs/content-scorecard.md`](../../docs/content-scorecard.md).
         Structured fields help us compare findings across markets.
 
   - type: dropdown

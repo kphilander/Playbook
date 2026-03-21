@@ -1,24 +1,24 @@
 # Docs
 
-Player testing instruments for operators deploying {{PROGRAM_NAME}} content. This is brand effectiveness testing -- not clinical research.
+Content performance measurement for operators deploying {{PROGRAM_NAME}} content. Same tools and standards you use for any marketing campaign -- NPS, A/B testing, engagement benchmarks.
 
 ## What's here
 
 | File | Purpose |
 |------|---------|
-| [player-testing-protocol.md](player-testing-protocol.md) | Pulse (3 items) and Full (7 items) resonance surveys, delayed recall survey, cultural fit A/B testing, scoring guides, and a standard reporting format |
+| [content-scorecard.md](content-scorecard.md) | Pulse (3 items) and Full (7 items) surveys, delayed recall survey, cultural fit A/B testing, scoring guides, survey templates, and a standard reporting format |
 
 ## How it works
 
 1. **Pick a survey** -- Pulse for quick signal, Full for diagnostics or cultural adaptation testing
-2. **Copy the questions** into your survey tool
+2. **Deploy it** -- Use the [embeddable widget](../collateral/render/survey-widget.html), set up from the [platform templates](content-scorecard.md#survey-templates), or copy-paste the questions
 3. **Collect 30+ responses** (60+ for cultural fit A/B tests)
-4. **Score and interpret** using the benchmarks in the protocol
+4. **Score and interpret** using the benchmarks in the scorecard (auto-calculated if using the widget)
 5. **Share findings** using the [Research Findings issue template](https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml)
 
 ## How it connects
 
-| This protocol... | Connects to... |
+| The scorecard... | Connects to... |
 |-----------------|----------------|
 | NPS + semantic differentials | Brand DNA in [Chapter 2](../brand-book/02-brand-personality.md#brand-dna-vs-brand-expression) |
 | Cultural fit (A/B) | Five spectrums in [Cultural Adaptation Guide](../brand-book/09-cultural-adaptation.md) |

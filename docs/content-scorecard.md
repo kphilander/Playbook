@@ -1,18 +1,43 @@
 ---
-title: "Player Testing Protocol"
+title: "Content Scorecard"
 ---
 
-# Player Testing Protocol
+# Content Scorecard
 
-Surveys for testing whether {{PROGRAM_NAME}} content resonates with players, what they remember, and whether cultural adaptations improve the experience. Designed for marketing teams -- no research expertise required.
-
-This is brand effectiveness testing, not clinical research. We measure engagement and resonance, not harm reduction outcomes. See [Chapter 8 -- Governance](../brand-book/08-governance.md#what-not-to-measure) for that distinction.
+How to measure whether your {{PROGRAM_NAME}} content is working -- the same way you'd measure any marketing campaign. Three surveys, auto-scored benchmarks, and a decision framework. Designed for marketing teams; no research expertise required.
 
 ---
 
-## Instruments and sources
+## Tier 1 content is a product, not a pamphlet
 
-This protocol uses established instruments and methodology. Where we've adapted questions for the Playbook context, that's noted explicitly.
+Most operators treat literacy content as a compliance checkbox -- something to publish and forget. {{PROGRAM_NAME}} treats it as a product. It competes for the same player attention as your sportsbook promos, your casino loyalty emails, your brand campaigns. If you'd measure those with NPS, measure this with NPS.
+
+The quality bar is commercial-grade, not "good enough for compliance." Products have defined audiences, performance targets, iteration cycles, and quality standards. That's why {{PROGRAM_NAME}} uses the same measurement tools -- NPS, engagement rates, A/B testing -- that product and marketing teams already use.
+
+> You already A/B test email subject lines and measure campaign engagement. This is the same process for your literacy content -- same tools, same rigor, same time investment.
+
+---
+
+## Why NPS?
+
+Net Promoter Score is the standard for measuring whether a product earns genuine advocacy. We use it for {{PROGRAM_NAME}} content because Tier 1 content should hit the same targets as any other player-facing product.
+
+**How it compares:**
+
+| Category | Typical NPS range |
+|---|---|
+| Streaming entertainment (Netflix, Spotify) | 50--70 |
+| Gaming / sportsbook apps | 30--50 |
+| **{{PROGRAM_NAME}} "Strong" target** | **30--49** |
+| Traditional compliance content | Unmeasured (or negative) |
+
+The punchline: {{PROGRAM_NAME}} targets the same range as the products it sits alongside. Traditional compliance content doesn't even ask.
+
+---
+
+## Methodology and sources
+
+This scorecard uses established marketing research tools. Where we've adapted questions for the {{PROGRAM_NAME}} context, that's noted explicitly.
 
 | Component | Status | Source |
 |-----------|--------|--------|
@@ -35,7 +60,7 @@ Use after any content launch, campaign wave, or quiz deployment. Distribute via 
 
 **Sample size:** 30 responses minimum.
 
-Copy-paste these questions into your survey tool:
+Copy-paste these questions into your survey tool, or use the [ready-to-deploy survey templates](#survey-templates) below:
 
 ```
 1. How likely would you be to recommend this content to a friend
@@ -178,14 +203,14 @@ Not a separate instrument -- run the **Full survey** as an A/B test.
 
 ### NPS
 
-Standard NPS tiers apply. Score = % Promoters (9--10) minus % Detractors (0--6).
+Standard NPS scoring: % Promoters (9--10) minus % Detractors (0--6). These are the same tiers used for any consumer product -- because that's what this content is.
 
-| NPS | Reading |
-|-----|---------|
-| 50+ | Exceptional -- content is spreading organically |
-| 30--49 | Strong -- content connects with this audience |
-| 0--29 | Acceptable -- room to improve |
-| Below 0 | Problem -- more players would discourage than recommend |
+| NPS | Reading | Product comparison |
+|-----|---------|-------------------|
+| 50+ | Exceptional -- content is spreading organically | Best-in-class consumer products |
+| 30--49 | Strong -- content connects with this audience | Competitive with gaming/sportsbook apps |
+| 0--29 | Acceptable -- room to improve | Below product standard -- iterate |
+| Below 0 | Problem -- more players would discourage than recommend | Would not ship a product feature at this score |
 
 ### Semantic differentials
 
@@ -215,10 +240,13 @@ If true/false accuracy is low but NPS was high, the content is entertaining but 
 ## Running a test
 
 1. **Pick your survey.** Pulse for quick signal. Full for diagnostics or cultural fit testing. Recall for follow-up.
-2. **Copy the questions** into your survey tool (Google Forms, SurveyMonkey, Typeform, or your platform's built-in survey).
+2. **Deploy it.** Three options:
+   - **Fastest:** Use the [embeddable survey widget](../collateral/render/survey-widget.html) -- drop it into your content hub or embed via iframe. Auto-scores results.
+   - **Your platform:** Copy from the [survey templates](#survey-templates) below into Google Forms, SurveyMonkey, Typeform, or your built-in survey tool.
+   - **Manual:** Copy-paste the questions from the survey sections above.
 3. **Customize** recall true/false items for your content. Set distribution channel (in-app, email, QR code).
 4. **Collect responses.** Close when you hit your target sample size or after 2 weeks, whichever comes first.
-5. **Report.** Calculate averages, read the open-ended responses for patterns, and file a [Research Findings issue](https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml) to share back.
+5. **Report.** Calculate averages (the widget does this automatically), read the open-ended responses for patterns, and file a [Research Findings issue](https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml) to share back.
 
 **Total effort:** 3--4 hours spread across 2 weeks.
 
@@ -265,6 +293,104 @@ The survey questions are the same for every segment. Distribution channel and fr
 
 ---
 
+## Quick-reference decision tree
+
+Tape this to your monitor. See the [printable version](../collateral/render/scorecard-quickref.html).
+
+```
+After any content launch:
+                                    ┌──────────────────┐
+                                    │   Send PULSE      │
+                                    │   (3 Qs, <1 min)  │
+                                    └────────┬─────────┘
+                                             │
+                              ┌──────────────┼──────────────┐
+                              ▼              ▼              ▼
+                        NPS 30+         NPS 0--29       NPS < 0
+                     All pairs 4.0+   or pair < 4.0    or Preachy < 3.0
+                              │              │              │
+                              ▼              ▼              ▼
+                         ┌────────┐   ┌────────────┐  ┌──────────┐
+                         │  SHIP  │   │ Run FULL   │  │  STOP    │
+                         │  ✓     │   │ survey for │  │  Revise  │
+                         └────┬───┘   │ diagnostics│  │  content │
+                              │       └────────────┘  └──────────┘
+                              ▼
+                    ┌───────────────────┐
+                    │ Send RECALL       │
+                    │ (7--14 days later)│
+                    │ Did it stick?     │
+                    └───────────────────┘
+```
+
+**Color guide for scores:**
+
+| Score | Signal | Action |
+|-------|--------|--------|
+| NPS 30+ and all pairs 5.0+ | Strong -- ship and share | No changes needed |
+| NPS 0--29 or any pair 4.0--4.9 | Acceptable -- room to improve | Run Full survey, identify weak dimensions |
+| NPS < 0 or any pair < 4.0 | Investigate immediately | Check open-ended responses, review against voice principles |
+| Preachy--Respectful < 4.0 | Brand DNA alarm | Content may be lecturing -- revise before shipping |
+
+---
+
+## Survey templates
+
+Ready-to-use configurations for popular survey platforms. Copy the setup, customize for your content, and deploy.
+
+### Google Forms
+
+**Pulse survey:**
+1. Create a new Google Form
+2. Add a **Linear scale** question (0--10): "How likely would you be to recommend this content to a friend who gambles?"
+3. Add a **Linear scale** question (1--7) with label "Forgettable" on left and "Memorable" on right
+4. Add a **Short answer** question: "What's one thing you'd change?" (mark as optional)
+
+**Full survey:**
+1. Follow Pulse steps 1--2 above
+2. Add four more **Linear scale** questions (1--7) with these label pairs:
+   - Boring / Engaging
+   - Preachy / Respectful
+   - Confusing / Clear
+   - Generic / Made for me
+3. Add the optional open-ended question
+
+**Recall survey:**
+1. Create a new Google Form
+2. Add a **Short answer**: "What's the main thing you remember?"
+3. Add two **Multiple choice** questions with True / False / Not sure (customize the statements for your content)
+4. Add a **Checkbox** question: "Since seeing the content, have you..." with the four behavioral options
+
+### Typeform
+
+**Pulse survey:**
+1. Create a new Typeform
+2. Add an **Opinion Scale** block (0--10) for NPS
+3. Add an **Opinion Scale** block (1--7) with custom labels: Forgettable / Memorable
+4. Add a **Short Text** block for open-ended feedback (optional)
+
+**Full survey:** Same as Pulse, plus four additional Opinion Scale blocks (1--7) for each semantic pair.
+
+### SurveyMonkey
+
+**Pulse survey:**
+1. Create a new survey
+2. Add an **NPS** question type (built-in, auto-calculates score)
+3. Add a **Matrix/Rating Scale** question (1--7) for Forgettable--Memorable
+4. Add an **Open-Ended** question for feedback
+
+**Full survey:** Same as Pulse, plus four additional Matrix rows for the remaining pairs.
+
+### Embeddable widget (no survey tool needed)
+
+Use the self-contained [survey widget](../collateral/render/survey-widget.html). It runs in-browser, requires no backend, and auto-calculates all scores with color-coded benchmarks. Embed via iframe or link directly:
+
+```html
+<iframe src="survey-widget.html" width="100%" height="700" frameborder="0"></iframe>
+```
+
+---
+
 ## References
 
 **Methodology:**
@@ -281,5 +407,7 @@ The survey questions are the same for every segment. Distribution channel and fr
 - [Voice principles](../brand-book/04-voice-and-tone.md#voice-principles) -- The non-negotiable standards adapted content must meet
 - [Cultural adaptation guide](../brand-book/09-cultural-adaptation.md) -- The five spectrums and cultural profiles
 - [A/B testing guidance](../messaging/calls-to-action.md#ab-testing-guidance) -- Testing rules the cultural fit protocol follows
-- [Measuring success](../brand-book/08-governance.md#measuring-success) -- Quantitative KPIs this protocol complements
+- [Measuring success](../brand-book/08-governance.md#measuring-success) -- Quantitative KPIs this scorecard complements
 - [Campaign KPIs](../messaging/campaigns.md) -- Per-campaign metrics to pair with survey data
+- [Embeddable survey widget](../collateral/render/survey-widget.html) -- Deploy surveys without a third-party tool
+- [Quick-reference card](../collateral/render/scorecard-quickref.html) -- Printable one-page decision tree

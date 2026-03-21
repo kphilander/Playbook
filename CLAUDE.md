@@ -18,7 +18,7 @@ It is **not** a clinical resource, not pro- or anti-gambling, and not a regulato
 - **`collateral/`** — 41 production-ready HTML/PNG templates across digital, print, environmental, video/audio, customer service, and interactive formats.
 - **`how-to-play/`** — Game education guides and quick-reference cards.
 - **`jurisdictions/`** — Regulatory compliance modules (US/Nevada, Canada/BC, with templates for new jurisdictions).
-- **`docs/`** — Player testing protocol and operational documents.
+- **`docs/`** — Content scorecard (survey instruments, scoring, decision framework) and operational documents.
 - **`lib/`** — Node.js build scripts (token generation, Tailwind theme, placeholder resolution, validation).
 
 ## Two-Tier System
