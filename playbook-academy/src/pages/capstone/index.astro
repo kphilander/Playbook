@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CapstoneBuilder from '../../components/CapstoneBuilder.tsx';
+---
+
+<BaseLayout title="Capstone: Deploy Your Playbook">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="mb-8 text-center">
+      <h1 class="text-4xl font-heading font-bold text-navy">Deploy Your Playbook</h1>
+      <p class="text-n500 mt-3 text-lg max-w-2xl mx-auto">
+        Fork the repo, configure your brand, select your templates, and write your first touchpoint. This is practical — everything you build is downloadable.
+      </p>
+    </div>
+    <CapstoneBuilder client:visible />
+  </div>
+</BaseLayout>

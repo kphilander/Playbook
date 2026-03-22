@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "program_name": "Playbook",
+    "organization": "Your Company Name",
+    "website": "https://example.com/playbook",
+    "contact_email": "info@gamblingpolicy.com",
+    "year_established": 2025,
+    "version": "0.1.0",
+    "license": "CC0-1.0",
+    "primary_jurisdictions": [
+      "united-states",
+      "united-kingdom"
+    ]
+  },
+  "pillars": [
+    {
+      "name": "Open",
+      "tagline": "No fine print",
+      "description": "Transparency about how things actually work. The house edge, the odds, the T&Cs, the stuff nobody reads. If it affects your play, we'll tell you straight."
+    },
+    {
+      "name": "Social",
+      "tagline": "Worth sharing",
+      "description": "Content worth talking about. Quizzes, myth-busters, facts that make you the smartest person at the table. Share it. Challenge your friends. Start conversations."
+    }
+  ],
+  "colors": {
+    "palette": {
+      "primary": "#1B2838",
+      "primary_light": "#2A3F56",
+      "primary_dark": "#0F1923",
+      "secondary": "#00D4AA",
+      "secondary_light": "#33DDBB",
+      "secondary_dark": "#00A888",
+      "accent": "#FF6B35",
+      "accent_light": "#FF8A5C",
+      "accent_dark": "#E55A2B",
+      "neutral_900": "#1A1A2E",
+      "neutral_700": "#3D3D5C",
+      "neutral_500": "#6B6B8A",
+      "neutral_300": "#A8A8C0",
+      "neutral_100": "#E8E8F0",
+      "neutral_50": "#F5F5FA",
+      "success": "#00C853",
+      "warning": "#FFB300",
+      "danger": "#FF3D00",
+      "info": "#2979FF",
+      "white": "#FFFFFF",
+      "black": "#111111"
+    },
+    "aliases": {
+      "navy": "primary",
+      "navyLight": "primary_light",
+      "midnight": "primary_dark",
+      "teal": "secondary",
+      "tealLight": "secondary_light",
+      "tealDark": "secondary_dark",
+      "orange": "accent",
+      "orangeLight": "accent_light",
+      "orangeDark": "accent_dark",
+      "n900": "neutral_900",
+      "n700": "neutral_700",
+      "n500": "neutral_500",
+      "n300": "neutral_300",
+      "n100": "neutral_100",
+      "n50": "neutral_50"
+    },
+    "semantic": {
+      "background": "neutral_50",
+      "surface": "white",
+      "text_primary": "neutral_900",
+      "text_secondary": "neutral_700",
+      "text_muted": "neutral_500",
+      "link": "primary_light",
+      "link_hover": "primary",
+      "cta_primary_bg": "accent",
+      "cta_primary_text": "primary",
+      "cta_secondary_bg": "secondary",
+      "cta_secondary_text": "primary",
+      "quiz_correct": "success",
+      "quiz_incorrect": "danger",
+      "feature_highlight": "secondary",
+      "helpline_banner": "primary",
+      "border": "neutral_500",
+      "divider": "neutral_100"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": {
+        "family": "Inter",
+        "source": "google",
+        "weights": [
+          300,
+          400,
+          600,
+          700,
+          800,
+          900
+        ],
+        "fallback": "system-ui, -apple-system, sans-serif",
+        "file": "fonts/inter-latin.woff2"
+      },
+      "body": {
+        "family": "Source Sans 3",
+        "source": "google",
+        "weights": [
+          300,
+          400,
+          600
+        ],
+        "fallback": "system-ui, sans-serif",
+        "file": "fonts/source-sans-3-latin.woff2"
+      },
+      "monospace": {
+        "family": "Source Code Pro",
+        "source": "google",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "fallback": "monospace",
+        "file": "fonts/source-code-pro-latin.woff2"
+      }
+    },
+    "scale": {
+      "display": 3,
+      "h1": 2.5,
+      "h2": 2,
+      "h3": 1.5,
+      "h4": 1.25,
+      "body_large": 1.125,
+      "body": 1,
+      "small": 0.875,
+      "caption": 0.75
+    },
+    "lineHeight": {
+      "heading": 1.2,
+      "body": 1.6,
+      "tight": 1.3
+    }
+  },
+  "helplines": {
+    "default": {
+      "number": "1-800-XXX-XXXX",
+      "text_number": "Text XXXXX",
+      "chat_url": "https://example.com/chat",
+      "label": "Free, confidential support 24/7"
+    },
+    "jurisdictions": [
+      "united-states",
+      "united-kingdom",
+      "australia",
+      "canada",
+      "european-union"
+    ]
+  },
+  "culturalProfile": {
+    "voice": "peer",
+    "framing": "individual",
+    "humor": "irreverent",
+    "directness": "blunt",
+    "comfort": "open"
+  },
+  "messaging": {
+    "taglines": {
+      "open": [
+        "Here's how it actually works.",
+        "No fine print. Just facts.",
+        "The odds are public. Now you know them.",
+        "Every game has math. Here's yours."
+      ],
+      "social": [
+        "Share the facts.",
+        "Challenge your friends.",
+        "The best players know the game.",
+        "How well do you really know the odds?"
+      ]
+    },
+    "ctas": {
+      "primary": [
+        "Take the quiz",
+        "Test your game IQ",
+        "See the real odds"
+      ],
+      "features": [
+        "Set your limits",
+        "Try the bankroll planner",
+        "Check your stats"
+      ],
+      "content": [
+        "Read the breakdown",
+        "Watch the explainer",
+        "See how it works"
+      ]
+    }
+  },
+  "tone": {
+    "humor": "confident-wit",
+    "formality": "conversational",
+    "voice_archetype": "playbook-voice",
+    "gambling_culture": "selective",
+    "prefer": {
+      "player": "player (not 'gambler')",
+      "informed_play": "specific behaviors — e.g. 'set a budget', 'know the odds', 'check your session' (not 'responsible gambling' or 'smart play')",
+      "tools": "tools / features (not 'interventions')",
+      "check_in": "check in (not 'self-assess')",
+      "take_a_break": "take a break (not 'self-exclude' in Tier 1)",
+      "your_limits": "your limits (not 'restrictions')"
+    },
+    "avoidInTier1": [
+      "responsible gambling",
+      "problem gambler",
+      "gambling addiction",
+      "pathological",
+      "intervention",
+      "at-risk",
+      "harm",
+      "disorder"
+    ]
+  },
+  "legal": {
+    "terms": "\"TERMS.md\"                    # Indemnification, disclaimers, liability limits",
+    "copyright_holder": "Your Company Name",
+    "minimum_gambling_age": {
+      "default": 18,
+      "united-states": 21,
+      "united-states-nevada": 21,
+      "canada-british-columbia": 19
+    },
+    "disclaimers": {
+      "age": "You must be {{MIN_AGE}}+ to gamble.",
+      "general": "Gambling involves risk. Play on your terms."
+    }
+  }
+}

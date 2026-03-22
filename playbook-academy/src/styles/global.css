@@ -1,0 +1,766 @@
+@import "tailwindcss";
+
+/* ─── Dark mode: use .dark class, not OS preference ── */
+@variant dark (&:where(.dark, .dark *));
+
+/* ─── Playbook Brand Tokens ─────────────────────── */
+@theme {
+  --color-navy: #1B2838;
+  --color-navy-light: #2A3F56;
+  --color-navy-dark: #0F1923;
+  --color-teal: #00D4AA;
+  --color-teal-light: #33DDBB;
+  --color-teal-dark: #00A888;
+  --color-teal-text: #007A63; /* WCAG AA 4.5:1+ on white for text usage */
+  --color-orange: #FF6B35;
+  --color-orange-light: #FF8A5C;
+  --color-orange-dark: #E55A2B;
+  --color-n900: #1A1A2E;
+  --color-n700: #3D3D5C;
+  --color-n600: #515175;
+  --color-n500: #6B6B8A;
+  --color-n400: #8A8AA5;
+  --color-n300: #A8A8C0;
+  --color-n200: #CFD0E0;
+  --color-n100: #E8E8F0;
+  --color-n50: #F5F5FA;
+  --color-success: #00C853;
+  --color-warning: #B07D00; /* WCAG AA 4.5:1+ on white — darkened from #FFB300 */
+  --color-danger: #FF3D00;
+  --color-info: #2979FF;
+
+  --font-heading: "Inter", system-ui, -apple-system, sans-serif;
+  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-mono: "Source Code Pro", monospace;
+}
+
+/* ─── Scroll-Driven Reading Progress ─────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-teal);
+  transform-origin: left;
+  transform: scaleX(0);
+  z-index: 100;
+  animation: scroll-progress linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scroll-progress {
+  to { transform: scaleX(1); }
+}
+
+/* ─── Base Styles ───────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus-visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Remove outline for mouse/touch */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-n900);
+  background: var(--color-n50);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* ─── Reveal.js Overrides ───────────────────────── */
+.reveal-wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+.reveal .slides section {
+  font-family: var(--font-body);
+}
+
+.reveal .slides h1,
+.reveal .slides h2,
+.reveal .slides h3 {
+  font-family: var(--font-heading);
+  color: var(--color-navy);
+}
+
+/* ─── Module Prose Styles ───────────────────────── */
+.prose h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-navy); letter-spacing: -0.01em; }
+.prose h2 { font-size: 1.75rem; font-weight: 600; margin-top: 2.5rem; margin-bottom: 0.75rem; color: var(--color-navy); letter-spacing: -0.01em; }
+.prose h3 { font-size: 1.35rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.5rem; color: var(--color-navy-light); letter-spacing: -0.005em; }
+
+/* Preserve white/teal text inside navy-background containers within prose */
+.prose .bg-navy h3,
+.prose .bg-navy .text-white {
+  color: white;
+}
+.prose .bg-navy .text-teal {
+  color: var(--color-teal);
+}
+
+/* ─── Section Headers ─────────────────────────── */
+.prose h3[id] {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  padding: 0 0 0.75rem 0;
+  border-bottom: 1px solid var(--color-n100);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  scroll-margin-top: 6rem;
+}
+.prose p { margin-bottom: 1.25rem; line-height: 1.75; }
+.prose ul, .prose ol { margin-bottom: 1rem; padding-left: 1.5rem; line-height: 1.75; }
+.prose li { margin-bottom: 0.35rem; }
+.prose table { font-size: 0.95rem; }
+
+/* List cards — styled containers for lists that match the KeyConcept/KeyTakeaway visual language */
+.prose .list-card {
+  background: white;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-n100);
+  border-left: 3px solid var(--color-teal);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.prose .list-card ul,
+.prose .list-card ol {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.prose .list-card li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-n100);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+.prose .list-card li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.prose .list-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-teal);
+}
+.prose .list-card ol {
+  counter-reset: list-counter;
+}
+.prose .list-card ol li {
+  counter-increment: list-counter;
+}
+.prose .list-card ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-teal-dark);
+  font-family: var(--font-heading);
+}
+
+/* Dark mode list cards */
+.dark .prose .list-card {
+  background: var(--color-navy);
+  border-color: var(--color-navy-light);
+  border-left-color: var(--color-teal);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+.dark .prose .list-card li {
+  border-bottom-color: var(--color-navy-light);
+}
+.prose blockquote {
+  border-left: 4px solid var(--color-teal);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--color-n50);
+  border-radius: 0 0.5rem 0.5rem 0;
+  color: var(--color-n700);
+}
+.prose code {
+  background: var(--color-n100);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+.prose pre {
+  background: var(--color-navy-dark);
+  color: var(--color-n100);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 768px) {
+  .prose table { display: table; }
+}
+.prose th {
+  background: var(--color-navy);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+.prose td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-n100);
+}
+.prose tr:hover td {
+  background: white;
+}
+.prose strong { color: var(--color-navy); }
+.prose a {
+  color: var(--color-navy-light);
+  text-decoration: underline;
+  text-decoration-color: var(--color-teal);
+  text-underline-offset: 2px;
+}
+.prose a:hover {
+  color: var(--color-navy);
+}
+
+/* ─── Dark Mode ────────────────────────────────── */
+.dark body {
+  background: var(--color-navy-dark);
+  color: var(--color-n100);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: white;
+}
+
+.dark .prose h1,
+.dark .prose h2 {
+  color: white;
+}
+
+.dark .prose h3 {
+  color: var(--color-n300);
+}
+
+/* Dark mode section headers */
+.dark .prose h3[id] {
+  color: var(--color-n100);
+  border-bottom-color: var(--color-navy-light);
+}
+
+.dark .prose p,
+.dark .prose li {
+  color: var(--color-n100);
+}
+
+.dark .prose strong {
+  color: var(--color-teal);
+}
+
+.dark .prose a {
+  color: var(--color-teal);
+  text-decoration-color: var(--color-teal-dark);
+}
+
+.dark .prose a:hover {
+  color: var(--color-teal-light);
+}
+
+.dark .prose blockquote {
+  background: var(--color-navy);
+  color: var(--color-n300);
+}
+
+.dark .prose code {
+  background: var(--color-navy-light);
+  color: var(--color-n100);
+}
+
+.dark .prose pre {
+  background: var(--color-navy-dark);
+  color: var(--color-n100);
+}
+
+.dark .prose th {
+  background: var(--color-navy-light);
+  color: white;
+}
+
+.dark .prose td {
+  border-bottom-color: var(--color-navy-light);
+}
+
+.dark .prose tr:hover td {
+  background: var(--color-navy);
+}
+
+/* Dark mode surfaces / cards — elevated depth */
+.dark [class*="bg-white"],
+.dark .card,
+.dark .surface {
+  background: var(--color-navy);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+/* Dark mode specific border overrides */
+.dark .callout-card,
+.dark .card,
+.dark .surface {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Dark mode: teal accent glow on interactive elements */
+.dark .bg-teal,
+.dark [class*="bg-teal/"] {
+  box-shadow: 0 0 12px rgba(0, 212, 170, 0.2);
+}
+
+.dark .border-teal,
+.dark [class*="border-teal"] {
+  box-shadow: 0 0 8px rgba(0, 212, 170, 0.1);
+}
+
+/* Dark mode: module section narrating glow */
+.dark .module-section.is-narrating {
+  background-color: rgba(0, 212, 170, 0.05);
+  box-shadow: inset 3px 0 8px -3px rgba(0, 212, 170, 0.15);
+}
+
+.dark .prose blockquote {
+  border-left-color: var(--color-teal);
+}
+
+/* ─── Animation Keyframes ──────────────────────── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(-50vh) rotate(180deg) translateX(30px);
+  }
+  50% {
+    transform: translateY(0) rotate(360deg) translateX(-20px);
+  }
+  75% {
+    transform: translateY(50vh) rotate(540deg) translateX(15px);
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg) translateX(-10px);
+    opacity: 0;
+  }
+}
+
+/* ─── Animation Utility Classes ────────────────── */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out both;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out both;
+}
+
+/* ─── Section Narration UX ────────────────────── */
+
+/* Section entrance animation */
+@keyframes sectionEnter {
+  from { opacity: 0.4; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.module-section {
+  opacity: 1;
+  position: relative;
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.4s ease, background-color 0.4s ease;
+}
+
+/* Dimmed state applied by JS before entrance animation */
+.module-section.awaiting-entrance {
+  opacity: 0.6;
+}
+
+.module-section.has-entered {
+  animation: sectionEnter 0.5s ease-out both;
+}
+
+/* Active section indicator — shown during narration */
+.module-section.is-narrating {
+  border-left-color: var(--color-teal);
+  background-color: rgba(0, 212, 170, 0.03);
+}
+
+/* Audio progress marker along left border */
+.module-section::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0;
+  width: 3px;
+  height: var(--audio-progress, 0%);
+  background: var(--color-teal);
+  border-radius: 0 0 2px 2px;
+  transition: height 0.3s linear;
+  z-index: 1;
+}
+
+/* Exercise pulse highlight */
+@keyframes tealPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 170, 0); }
+  50% { box-shadow: 0 0 0 8px rgba(0, 212, 170, 0.15); }
+}
+
+.exercise-highlight {
+  animation: tealPulse 1.2s ease-in-out 2;
+  border-radius: 0.75rem;
+}
+
+/* Continue toast countdown ring */
+@keyframes countdownRing {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 94.25; }
+}
+
+.countdown-ring {
+  animation: countdownRing 2s linear forwards;
+}
+
+/* Continue Lesson floating button */
+@keyframes continueBtnEnter {
+  from { opacity: 0; transform: translate(-50%, 16px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.continue-lesson-btn {
+  animation: continueBtnEnter 0.35s ease-out both;
+}
+
+/* Scroll-gate banner */
+@keyframes gateSlideDown {
+  from { opacity: 0; transform: translate(-50%, -100%); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.scroll-gate-banner {
+  animation: gateSlideDown 0.25s ease-out both;
+}
+
+.scroll-gate-banner button {
+  transition: background-color 0.15s, transform 0.1s;
+}
+
+.scroll-gate-banner button:active {
+  transform: scale(0.95);
+}
+
+/* ─── Reduced Motion ───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .module-section {
+    opacity: 1 !important;
+  }
+}
+
+/* ─── Whitespace Improvements ───────────────────── */
+
+.prose h2 {
+  margin-top: 3rem;
+}
+
+.prose h3:not([id]) {
+  margin-top: 2.5rem;
+}
+
+/* scroll-snap removed — degrades long-form reading UX */
+
+/* Mobile: smaller section headers */
+@media (max-width: 640px) {
+  .prose h3[id] {
+    font-size: 1.15rem;
+    margin-top: 2.5rem;
+  }
+}
+
+.prose section + section {
+  margin-top: 3rem;
+}
+
+/* Section divider: thin line with centered Playbook mark */
+.prose .module-section + .module-section {
+  border-top: 1px solid var(--color-n100);
+}
+
+.prose .module-section + .module-section::after {
+  content: '';
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-n50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 36'%3E%3Crect x='0' y='0' width='14' height='36' rx='2' fill='%231B2838'/%3E%3Cpolygon points='18,0 38,18 18,36' fill='%2300D4AA'/%3E%3C/svg%3E") center/16px auto no-repeat;
+  opacity: 0.35;
+  z-index: 2;
+}
+
+.dark .prose .module-section + .module-section {
+  border-top-color: var(--color-navy-light);
+}
+
+.dark .prose .module-section + .module-section::after {
+  background-color: var(--color-navy-dark);
+}
+
+.prose section {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* No top padding on the very first section — it follows the intro card */
+.prose .module-section:first-of-type {
+  padding-top: 0;
+}
+
+.callout-card {
+  padding: 1.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-n100);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: white;
+}
+
+.dark .callout-card {
+  background: var(--color-navy);
+  border-color: var(--color-navy-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ─── Table scroll indicator on mobile ──────────── */
+.prose table {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-n300) transparent;
+}
+.prose table::-webkit-scrollbar {
+  height: 4px;
+}
+.prose table::-webkit-scrollbar-thumb {
+  background: var(--color-n300);
+  border-radius: 2px;
+}
+
+/* ─── Tab bar title truncation on mobile ────────── */
+@media (max-width: 640px) {
+  [role="tab"] {
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* ─── Dark mode: mobile lesson drawer ────────────── */
+.dark #mobile-drawer-panel {
+  background: var(--color-navy);
+  border-color: var(--color-navy-light);
+}
+
+.dark #mobile-drawer-panel .sidebar-lesson-link,
+.dark #mobile-drawer-panel .mobile-lesson-link {
+  color: var(--color-n300);
+}
+
+/* ─── Hero bottom fade ──────────────────────────── */
+.hero-bottom-fade {
+  background: linear-gradient(to bottom, transparent, var(--color-n50));
+}
+.dark .hero-bottom-fade {
+  background: linear-gradient(to bottom, transparent, var(--color-navy-dark));
+}
+
+/* ─── Dark mode: tab bar ─────────────────────────── */
+.dark [role="tablist"] {
+  background: var(--color-navy);
+  border-color: var(--color-navy-light);
+}
+
+/* ─── Dark mode: exercise card headers stand out ──── */
+/* Scope: only exercise headers inside cards, not hero/player bars */
+.dark .rounded-xl > .bg-navy {
+  background: var(--color-navy-light);
+}
+
+/* ─── Dark mode: text legibility in cards/menus ───── */
+/* Card text: navy → light */
+.dark .prose .text-navy,
+.dark [class*="rounded-xl"] .text-navy,
+.dark [class*="rounded-lg"] .text-navy,
+.dark nav .text-navy {
+  color: var(--color-n100);
+}
+
+.dark .prose .text-navy-light,
+.dark [class*="rounded-xl"] .text-navy-light {
+  color: var(--color-n300);
+}
+
+/* Body text in cards */
+.dark [class*="rounded-xl"] .text-n700,
+.dark [class*="rounded-lg"] .text-n700 {
+  color: var(--color-n300);
+}
+
+.dark [class*="rounded-xl"] .text-n900,
+.dark [class*="rounded-lg"] .text-n900 {
+  color: var(--color-n100);
+}
+
+/* Muted text in cards and navs */
+.dark [class*="rounded-xl"] .text-n500,
+.dark [class*="rounded-lg"] .text-n500,
+.dark nav .text-n500 {
+  color: var(--color-n300);
+}
+
+/* Surface backgrounds */
+.dark .prose .bg-n50,
+.dark [class*="rounded-xl"] .bg-n50 {
+  background: var(--color-navy);
+}
+
+.dark [class*="rounded-xl"] .bg-n100,
+.dark [class*="rounded-lg"] .bg-n100 {
+  background: var(--color-navy-light);
+}
+
+/* Borders inside cards */
+.dark [class*="rounded-xl"] .border-n100,
+.dark [class*="rounded-lg"] .border-n100 {
+  border-color: var(--color-navy-light);
+}
+
+.dark [class*="rounded-xl"] .border-n200,
+.dark [class*="rounded-lg"] .border-n200 {
+  border-color: var(--color-navy-light);
+}
+
+/* Sidebar / menu panel dark mode */
+.dark #sidebar-module-list {
+  background: var(--color-navy);
+  border-color: var(--color-navy-light);
+}
+
+.dark #sidebar-module-list .text-n500 {
+  color: var(--color-n300);
+}
+
+.dark #sidebar-module-list .bg-n100 {
+  background: var(--color-navy-light);
+}

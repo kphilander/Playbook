@@ -1,0 +1,19 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = 'Key Takeaway' } = Astro.props;
+---
+
+<div class="my-8 rounded-xl border border-teal/20 bg-gradient-to-r from-teal/5 to-transparent p-6">
+  <h4 class="font-heading font-bold text-navy text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+    <svg class="w-5 h-5 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    {title}
+  </h4>
+  <div class="text-n700 text-[0.95rem] leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0 [&>ul]:space-y-1 [&>ul]:list-disc [&>ul]:pl-5">
+    <slot />
+  </div>
+</div>

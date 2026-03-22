@@ -1,0 +1,122 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+import ProgressBar from '../components/ProgressBar';
+import DarkModeToggle from '../components/DarkModeToggle.tsx';
+
+interface Props {
+  title: string;
+  description?: string;
+  showProgress?: boolean;
+}
+
+const { title, description = 'Learn how to deploy Playbook — the open-source player education brand system.', showProgress = true } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Sans+3:wght@400;600&family=Source+Code+Pro:wght@400&display=swap" media="print" onload="this.media='all'" />
+    <title>{title} | Playbook Academy</title>
+    <ClientRouter />
+    <slot name="head" />
+    <script is:inline>
+      // Sync dark mode before first paint to prevent flash
+      // Default is light mode — only go dark if explicitly opted in
+      if (localStorage.getItem('playbook-dark-mode') === 'true') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-n50">
+    <!-- Scroll-driven reading progress bar (CSS only, no JS) -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <!-- Skip to content -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-teal focus:text-navy focus:rounded-lg focus:font-heading focus:font-semibold">
+      Skip to content
+    </a>
+
+    <!-- Top Navigation -->
+    <nav aria-label="Main navigation" class="sticky top-0 z-50 bg-navy text-white shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href={`${base}/`} class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <span class="font-heading text-xl">
+              <span class="font-extrabold">Play</span><span class="font-light tracking-tight uppercase">BOOK</span>
+            </span>
+            <span class="text-teal font-heading text-sm font-semibold tracking-wider uppercase">Academy</span>
+          </a>
+          <div class="hidden sm:flex items-center gap-6">
+            <a href={`${base}/intro/`} class="text-sm text-n300 hover:text-white transition-colors">Intro Deck</a>
+            <a href={`${base}/modules/1-rg-foundations`} class="text-sm text-n300 hover:text-white transition-colors">Modules</a>
+            <a href={`${base}/capstone/`} class="text-sm text-n300 hover:text-white transition-colors">Capstone</a>
+            <a href={`${base}/certificate/`} class="text-sm text-n300 hover:text-white transition-colors">Certificate</a>
+            <a href="https://github.com/kphilander/Branding" target="_blank" rel="noopener" class="text-sm text-n300 hover:text-white transition-colors">GitHub</a>
+            <DarkModeToggle client:idle />
+          </div>
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="sm:hidden text-n300 hover:text-white" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden sm:hidden border-t border-navy-light">
+        <div class="px-4 py-3 space-y-2">
+          <a href={`${base}/intro/`} class="block text-sm text-n300 hover:text-white py-1">Intro Deck</a>
+          <a href={`${base}/modules/1-rg-foundations`} class="block text-sm text-n300 hover:text-white py-1">Modules</a>
+          <a href={`${base}/capstone/`} class="block text-sm text-n300 hover:text-white py-1">Capstone</a>
+          <a href={`${base}/certificate/`} class="block text-sm text-n300 hover:text-white py-1">Certificate</a>
+          <a href="https://github.com/kphilander/Branding" target="_blank" rel="noopener" class="block text-sm text-n300 hover:text-white py-1">GitHub</a>
+          <DarkModeToggle client:idle />
+        </div>
+      </div>
+      {showProgress && <ProgressBar client:idle />}
+    </nav>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" class="bg-navy text-n300 py-12 mt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+          <div>
+            <span class="font-heading text-white text-lg">
+              <span class="font-extrabold">Play</span><span class="font-light tracking-tight uppercase">BOOK</span>
+              <span class="text-teal ml-2 text-sm font-semibold tracking-wider uppercase">Academy</span>
+            </span>
+            <p class="mt-2 text-sm max-w-md">
+              Learn how to deploy Playbook — the open-source, CC0-licensed brand system for gambling entertainment literacy and player education.
+            </p>
+          </div>
+          <div class="text-sm space-y-1">
+            <p>Playbook brand system: CC0 1.0 Universal</p>
+            <p>Academy training content: © {new Date().getFullYear()} All rights reserved</p>
+            <p>Part of the <a href="https://github.com/kphilander/Branding" class="text-teal hover:text-teal-light transition-colors">Playbook</a> project</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => {
+        const isHidden = menu?.classList.toggle('hidden');
+        btn?.setAttribute('aria-expanded', String(!isHidden));
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,615 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AudioPlayer from '../../components/AudioPlayer.tsx';
+import { saveProgress } from '../../lib/progress';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const tracks = [
+  {
+    slideIndex: 0,
+    src: `${base}/audio/intro-01-welcome.mp3`,
+    transcript: 'Welcome to Playbook Academy. Playbook is an open-source, CC0-licensed brand system for gambling entertainment literacy and player education. If you\'re a copywriter, designer, product manager, or customer service lead about to deploy Playbook, this five minute introduction will give you the foundation you need.',
+  },
+  {
+    slideIndex: 1,
+    src: `${base}/audio/intro-02-engagement-gap.mp3`,
+    transcript: 'Let\'s start with the problem. Every gambling operator spends millions on player acquisition — sleek ads, generous bonuses, polished apps. But the player education content? A wall of text buried in the footer, written by compliance, designed by nobody. This is the engagement gap.',
+  },
+  {
+    slideIndex: 2,
+    src: `${base}/audio/intro-03-informed-choice.mp3`,
+    transcript: 'Playbook is built on an informed choice model. That means that people have the resources and understanding to make the right decisions, at any point in their gambling journey. Gambling is a complicated product — probability, house edge, variance, game mechanics, and other product-specific features. Operators understand this math but most players don\'t. That Information Gap is what Playbook closes. Four premises: most people gamble without problems, gambling is entertainment with a cost, difficulties arise from a lack of information not the activity itself, and responsibility is shared across multiple stakeholders. Compliance, public health, and informed choice aren\'t competing approaches — they\'re complementary layers. Playbook operates at the informed choice layer.',
+  },
+  {
+    slideIndex: 3,
+    src: `${base}/audio/intro-04-meet-your-players.mp3`,
+    transcript: 'Playbook uses six relationship-based player segments — not demographics, but stages in a player\'s relationship to gambling.',
+  },
+  {
+    slideIndex: 4,
+    src: `${base}/audio/intro-05-customer-journey.mp3`,
+    transcript: 'Playbook maps five journey phases: Awareness, Onboarding, Active Play, Ongoing Engagement, and Support Seeking. Not every player moves through every phase — many stay in Ongoing Engagement for years, and that\'s perfectly fine. The journey isn\'t a funnel. It\'s non-linear. At each phase, different Playbook content serves a different purpose.',
+  },
+  {
+    slideIndex: 5,
+    src: `${base}/audio/intro-06-getting-started.mp3`,
+    transcript: 'Here\'s how to get started. The Academy has 6 modules that take you from foundations through deployment and measurement. Phase 1, your MVP, ships in 2 to 4 weeks — focus on New/Novice and Recreational segments with 6 mobile touchpoints, 4 email templates, and the Game IQ Quiz. Fork the repo, configure your brand, and start with Module 1.',
+  },
+];
+---
+
+<BaseLayout title="Narrated Introduction" showProgress={true}>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1: Hero                                              -->
+  <!-- ============================================================ -->
+  <section id="intro-section-0" class="intro-section relative overflow-hidden bg-navy min-h-[85vh] flex items-center justify-center">
+    <!-- Decorative background pattern -->
+    <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+    <!-- Gradient orbs -->
+    <div class="absolute top-1/4 -left-32 w-96 h-96 bg-teal/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 -right-32 w-96 h-96 bg-orange/10 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-n300 text-sm font-heading mb-10 animate-fade-in">
+        <span class="w-2 h-2 rounded-full bg-teal animate-pulse"></span>
+        Built on the open-source Playbook brand
+      </div>
+
+      <!-- Logo -->
+      <div class="mb-6 animate-fade-in" style="animation-delay: 0.1s;">
+        <span class="text-7xl sm:text-8xl font-heading tracking-tight">
+          <span class="font-extrabold text-white">Play</span><span class="font-light uppercase text-teal">BOOK</span>
+        </span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl font-heading font-bold text-teal mb-6 tracking-wide uppercase animate-fade-in" style="animation-delay: 0.2s;">
+        Academy
+      </h1>
+
+      <p class="text-xl sm:text-2xl text-n300 max-w-2xl mx-auto leading-relaxed mb-4 animate-fade-in" style="animation-delay: 0.3s;">
+        Learn how to deploy the brand system for gambling entertainment literacy and player education.
+      </p>
+
+      <p class="text-sm text-n500 mb-10 animate-fade-in" style="animation-delay: 0.4s;">
+        For copywriters, designers, product managers, and customer service leads
+      </p>
+
+      <!-- Scroll indicator -->
+      <div class="animate-fade-in" style="animation-delay: 0.6s;">
+        <a href="#intro-section-1" class="inline-flex flex-col items-center gap-2 text-n500 hover:text-teal transition-colors group">
+          <span class="text-xs font-heading uppercase tracking-widest">Scroll to begin</span>
+          <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2: The Engagement Gap                                -->
+  <!-- ============================================================ -->
+  <section id="intro-section-1" class="intro-section relative py-24 sm:py-32 bg-navy-dark overflow-hidden">
+    <!-- Subtle diagonal line decoration -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: repeating-linear-gradient(135deg, transparent, transparent 40px, white 40px, white 41px);"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-orange bg-orange/10 px-3 py-1.5 rounded-full mb-4">The Problem</span>
+        <h2 class="text-4xl sm:text-5xl font-heading font-bold text-white mb-4">The Engagement Gap</h2>
+        <p class="text-lg text-n300 max-w-2xl mx-auto">Every operator invests millions in commercial content. Player education gets the leftovers.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+        <!-- Commercial content card -->
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange/20 to-orange/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all opacity-60"></div>
+          <div class="relative bg-navy/80 backdrop-blur rounded-2xl border border-orange/20 p-8 h-full">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center">
+                <svg class="w-6 h-6 text-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-orange">Commercial Content</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-orange/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                <span class="text-n300">Sleek, on-brand, meticulously designed</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-orange/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                <span class="text-n300">A/B tested, performance-optimized</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-orange/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                <span class="text-n300">Billions in global spend</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-orange/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-orange" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></span>
+                <span class="text-n300">Full creative teams dedicated</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Player education card -->
+        <div class="relative group">
+          <div class="absolute inset-0 bg-gradient-to-br from-n500/20 to-n500/5 rounded-2xl blur-xl group-hover:blur-2xl transition-all opacity-60"></div>
+          <div class="relative bg-navy/80 backdrop-blur rounded-2xl border border-n700 p-8 h-full">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-12 h-12 rounded-xl bg-n700/50 flex items-center justify-center">
+                <svg class="w-6 h-6 text-n500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+              </div>
+              <h3 class="text-xl font-heading font-bold text-n500">Player Education</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-danger/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></span>
+                <span class="text-n500">Wall of text buried in the footer</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-danger/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></span>
+                <span class="text-n500">Written by compliance, designed by nobody</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-danger/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></span>
+                <span class="text-n500">Never tested, never measured</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 w-5 h-5 rounded-full bg-danger/10 flex items-center justify-center shrink-0"><svg class="w-3 h-3 text-danger" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></span>
+                <span class="text-n500">Near-zero investment</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Punchline -->
+      <div class="text-center">
+        <div class="inline-flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-teal/10 to-teal/5 border border-teal/20">
+          <svg class="w-6 h-6 text-teal shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+          <p class="text-xl font-heading font-semibold text-white">Playbook closes this gap.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3: Informed Choice Model                             -->
+  <!-- ============================================================ -->
+  <section id="intro-section-2" class="intro-section relative py-24 sm:py-32 bg-navy overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent to-teal/30"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-teal bg-teal/10 px-3 py-1.5 rounded-full mb-4">The Foundation</span>
+        <h2 class="text-4xl sm:text-5xl font-heading font-bold text-white mb-4">The Information Gap</h2>
+        <p class="text-lg text-n300 max-w-2xl mx-auto">RG ultimately means one thing: helping players manage how they spend their <strong class="text-white">time and money</strong> on gambling. How you get there depends on your approach.</p>
+      </div>
+
+      <!-- Gambling as complicated product -->
+      <div class="max-w-3xl mx-auto mb-12">
+        <div class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+          <h3 class="font-heading font-semibold text-teal text-lg mb-3">Gambling is a complicated product.</h3>
+          <p class="text-n300 leading-relaxed mb-3">Playbook is built on an informed choice model. A fully informed player needs to understand probability, house edge, variance, game-specific mechanics, and other product-specific features. None of it is intuitive. Operators understand this math deeply but their business model depends on it. Most players don't. That Information Gap means players can't make fully informed choices.</p>
+          <p class="text-n300 leading-relaxed">People make better decisions when they can do so rationally — with accurate information and the right tools. Close the Information Gap, and the vast majority of players manage their time and money just fine.</p>
+        </div>
+      </div>
+
+      <!-- Four premises -->
+      <div class="space-y-5 max-w-3xl mx-auto mb-16">
+        <h3 class="text-center font-heading font-semibold text-white text-xl mb-2">Four premises</h3>
+        <div class="flex items-start gap-5 p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.05] transition-colors">
+          <span class="shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center text-navy font-heading font-bold text-xl shadow-lg shadow-teal/20">1</span>
+          <div>
+            <h3 class="font-heading font-semibold text-white text-lg mb-1">Most people who gamble do so without problems.</h3>
+            <p class="text-n300">The majority gamble recreationally, within their means. Content should be designed for them — not exclusively for the small percentage who develop difficulties.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.05] transition-colors">
+          <span class="shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center text-navy font-heading font-bold text-xl shadow-lg shadow-teal/20">2</span>
+          <div>
+            <h3 class="font-heading font-semibold text-white text-lg mb-1">Gambling is entertainment. The house edge is the cost.</h3>
+            <p class="text-n300">It's a leisure activity with a price — like a movie ticket. Understanding that cost doesn't ruin the experience. It makes it informed.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.05] transition-colors">
+          <span class="shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center text-navy font-heading font-bold text-xl shadow-lg shadow-teal/20">3</span>
+          <div>
+            <h3 class="font-heading font-semibold text-white text-lg mb-1">Difficulties arise from lack of information and lack of control — not from the activity itself.</h3>
+            <p class="text-n300">When players understand how games work and have tools to manage their play, the vast majority make sound decisions.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-5 p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.05] transition-colors">
+          <span class="shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center text-navy font-heading font-bold text-xl shadow-lg shadow-teal/20">4</span>
+          <div>
+            <h3 class="font-heading font-semibold text-white text-lg mb-1">Responsibility is shared across multiple stakeholders.</h3>
+            <p class="text-n300">Players make their own choices. Operators provide accurate information and tools. Regulators set standards. Support services exist for those who need them. No single party bears the entire burden.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Three layers -->
+      <div class="max-w-4xl mx-auto mb-16">
+        <h3 class="text-center font-heading font-semibold text-white text-xl mb-6">Three complementary layers</h3>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="p-5 rounded-2xl bg-white/[0.03] border border-n700 text-center">
+            <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-n500 bg-n700/50 px-2 py-0.5 rounded mb-3">Floor</span>
+            <p class="font-heading font-semibold text-white mb-1">Compliance</p>
+            <p class="text-n500 text-sm">Mandatory requirements. Regulators drive it. Helplines, age gates, self-exclusion.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white/[0.03] border border-info/20 text-center">
+            <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-info bg-info/10 px-2 py-0.5 rounded mb-3">Population</span>
+            <p class="font-heading font-semibold text-white mb-1">Public Health</p>
+            <p class="text-n500 text-sm">Population outcomes. Research, advertising restrictions, harm monitoring.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-white/[0.03] border border-teal/20 text-center">
+            <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-teal bg-teal/10 px-2 py-0.5 rounded mb-3">Consumer</span>
+            <p class="font-heading font-semibold text-white mb-1">Informed Choice</p>
+            <p class="text-n500 text-sm">Consumer content. Operators drive it — through education, tools, and content. <strong class="text-teal">This is where Playbook lives.</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tier split -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+        <div class="text-center">
+          <div class="relative inline-block">
+            <div class="absolute inset-0 bg-teal/20 rounded-full blur-2xl"></div>
+            <span class="relative block text-7xl font-heading font-bold text-teal">95%</span>
+          </div>
+          <div class="mt-3">
+            <span class="block font-heading font-semibold text-white text-lg">Tier 1</span>
+            <span class="text-n300 text-sm">Rational play with good information</span>
+          </div>
+          <p class="text-n500 text-xs mt-2 max-w-[220px]">How to play, how games work, where risks exist. Odds, tools, myth-busting.</p>
+        </div>
+
+        <div class="hidden sm:block w-px h-24 bg-gradient-to-b from-transparent via-n700 to-transparent"></div>
+        <div class="sm:hidden w-24 h-px bg-gradient-to-r from-transparent via-n700 to-transparent"></div>
+
+        <div class="text-center">
+          <div class="relative inline-block">
+            <div class="absolute inset-0 bg-orange/20 rounded-full blur-2xl"></div>
+            <span class="relative block text-7xl font-heading font-bold text-orange">5%</span>
+          </div>
+          <div class="mt-3">
+            <span class="block font-heading font-semibold text-white text-lg">Tier 2</span>
+            <span class="text-n300 text-sm">Players in difficulty</span>
+          </div>
+          <p class="text-n500 text-xs mt-2 max-w-[220px]">Helplines, self-exclusion, crisis pathways. Zero friction, maximum care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 4: Six Segments                                      -->
+  <!-- ============================================================ -->
+  <section id="intro-section-3" class="intro-section relative py-24 sm:py-32 overflow-hidden" style="background: linear-gradient(180deg, #0F1923 0%, #1B2838 50%, #0F1923 100%);">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-teal bg-teal/10 px-3 py-1.5 rounded-full mb-4">Your Audience</span>
+        <h2 class="text-4xl sm:text-5xl font-heading font-bold text-white mb-4">Six Relationship-Based Segments</h2>
+        <p class="text-lg text-n300 max-w-2xl mx-auto">Not demographics — stages in a player's relationship to gambling. Product verticals (Sports, Casino, Lottery) overlay on top.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Segment 1: New/Novice -->
+        <div class="group relative rounded-2xl overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-teal/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative bg-navy/60 backdrop-blur border border-teal/20 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal/20 to-teal/5 flex items-center justify-center border border-teal/20">
+                <span class="text-teal font-heading font-bold text-sm">01</span>
+              </div>
+              <h3 class="font-heading font-bold text-teal text-lg">New / Novice</h3>
+            </div>
+            <p class="text-n300 text-sm leading-relaxed">New to gambling or a specific product. Highest impact-per-touchpoint — first impressions shape habits.</p>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <span class="text-xs text-n500 font-heading uppercase tracking-wider">Tone: </span>
+              <span class="text-xs text-teal">Confident / Informative</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segment 2: Recreational -->
+        <div class="group relative rounded-2xl overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-teal/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative bg-navy/60 backdrop-blur border border-teal/20 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal/20 to-teal/5 flex items-center justify-center border border-teal/20">
+                <span class="text-teal font-heading font-bold text-sm">02</span>
+              </div>
+              <h3 class="font-heading font-bold text-teal text-lg">Recreational</h3>
+            </div>
+            <p class="text-n300 text-sm leading-relaxed">The majority. Gamble for entertainment within their means on occasion. Primary audience for Tier 1 content.</p>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <span class="text-xs text-n500 font-heading uppercase tracking-wider">Tone: </span>
+              <span class="text-xs text-teal">Playful / Witty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segment 3: Enthusiast -->
+        <div class="group relative rounded-2xl overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-teal/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative bg-navy/60 backdrop-blur border border-teal/20 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal/20 to-teal/5 flex items-center justify-center border border-teal/20">
+                <span class="text-teal font-heading font-bold text-sm">03</span>
+              </div>
+              <h3 class="font-heading font-bold text-teal text-lg">Enthusiast</h3>
+            </div>
+            <p class="text-n300 text-sm leading-relaxed">High engagement and knowledge, not problematic. Need advanced content, not warnings.</p>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <span class="text-xs text-n500 font-heading uppercase tracking-wider">Tone: </span>
+              <span class="text-xs text-teal">Playful / Witty (peer level)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segment 4: At-Risk -->
+        <div class="group relative rounded-2xl overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative bg-navy/60 backdrop-blur border border-orange/20 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange/20 to-orange/5 flex items-center justify-center border border-orange/20">
+                <span class="text-orange font-heading font-bold text-sm">04</span>
+              </div>
+              <h3 class="font-heading font-bold text-orange text-lg">At-Risk</h3>
+            </div>
+            <p class="text-n300 text-sm leading-relaxed">Behavioral indicators of players in difficulty. Non-judgmental tool visibility, not diagnosis.</p>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <span class="text-xs text-n500 font-heading uppercase tracking-wider">Tone: </span>
+              <span class="text-xs text-orange">Warm / Direct</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segment 5: In-Crisis -->
+        <div class="group relative rounded-2xl overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative bg-navy/60 backdrop-blur border border-orange/20 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange/20 to-orange/5 flex items-center justify-center border border-orange/20">
+                <span class="text-orange font-heading font-bold text-sm">05</span>
+              </div>
+              <h3 class="font-heading font-bold text-orange text-lg">In-Crisis</h3>
+            </div>
+            <p class="text-n300 text-sm leading-relaxed">Actively seeking help. Speed, clarity, zero friction. Tier 2 territory — no cleverness, maximum care.</p>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <span class="text-xs text-n500 font-heading uppercase tracking-wider">Tone: </span>
+              <span class="text-xs text-orange">Warm / Direct (serious)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Segment 6: Friends & Family -->
+        <div class="group relative rounded-2xl overflow-hidden">
+          <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative bg-navy/60 backdrop-blur border border-n700 rounded-2xl p-6 h-full">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-n500/20 to-n500/5 flex items-center justify-center border border-n700">
+                <span class="text-n300 font-heading font-bold text-sm">06</span>
+              </div>
+              <h3 class="font-heading font-bold text-white text-lg">Friends & Family</h3>
+            </div>
+            <p class="text-n300 text-sm leading-relaxed">Concerned about someone else. Separate entry point, conversation starters, support resources.</p>
+            <div class="mt-4 pt-3 border-t border-white/5">
+              <span class="text-xs text-n500 font-heading uppercase tracking-wider">Tone: </span>
+              <span class="text-xs text-n300">Warm / Direct</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 5: Customer Journey                                  -->
+  <!-- ============================================================ -->
+  <section id="intro-section-4" class="intro-section relative py-24 sm:py-32 bg-navy overflow-hidden">
+    <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 1px 1px, white 1px, transparent 0); background-size: 48px 48px;"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-teal bg-teal/10 px-3 py-1.5 rounded-full mb-4">The Framework</span>
+        <h2 class="text-4xl sm:text-5xl font-heading font-bold text-white mb-4">The Customer Journey</h2>
+        <p class="text-lg text-n300 max-w-2xl mx-auto">Five phases — but not every player moves through every one. The journey isn't a funnel. Content appears at natural moments, not as interruptions.</p>
+      </div>
+
+      <!-- Journey timeline -->
+      <div class="relative">
+        <!-- Connecting line -->
+        <div class="hidden lg:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-teal/40 via-teal/20 to-orange/40"></div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+          <div class="text-center group">
+            <div class="relative mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center mb-4 shadow-lg shadow-teal/20 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-white text-sm mb-1">Awareness</h3>
+            <p class="text-n500 text-xs leading-relaxed">Pre-signup. Establish credibility.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="relative mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center mb-4 shadow-lg shadow-teal/20 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-white text-sm mb-1">Onboarding</h3>
+            <p class="text-n500 text-xs leading-relaxed">First deposit. Normalize tools.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="relative mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center mb-4 shadow-lg shadow-teal/20 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-white text-sm mb-1">Active Play</h3>
+            <p class="text-n500 text-xs leading-relaxed">In-session awareness.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="relative mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-dark to-navy-light flex items-center justify-center mb-4 shadow-lg shadow-teal/10 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-white text-sm mb-1">Engagement</h3>
+            <p class="text-n500 text-xs leading-relaxed">Between sessions. Campaigns.</p>
+          </div>
+
+          <div class="text-center group col-span-2 sm:col-span-1">
+            <div class="relative mx-auto w-16 h-16 rounded-2xl bg-gradient-to-br from-orange to-orange-dark flex items-center justify-center mb-4 shadow-lg shadow-orange/20 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-white text-sm mb-1">Support</h3>
+            <p class="text-n500 text-xs leading-relaxed">Zero friction. Immediate help.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key insight -->
+      <div class="mt-16 text-center">
+        <div class="inline-block max-w-xl p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+          <p class="text-lg text-n300 leading-relaxed">
+            <strong class="text-white">Key insight:</strong> A deposit screen is a natural moment for budget-setting. A session reminder is a natural moment for activity awareness. Many players cycle between Active Play and Engagement for years. <span class="text-teal">Playbook adds value in context — wherever players actually are.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 6: Getting Started                                   -->
+  <!-- ============================================================ -->
+  <section id="intro-section-5" class="intro-section relative py-24 sm:py-32 overflow-hidden" style="background: linear-gradient(180deg, #0F1923 0%, #1B2838 100%);">
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-teal/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-widest text-teal bg-teal/10 px-3 py-1.5 rounded-full mb-4">Your Roadmap</span>
+        <h2 class="text-4xl sm:text-5xl font-heading font-bold text-white mb-4">Getting Started</h2>
+        <p class="text-lg text-n300 max-w-2xl mx-auto">6 modules take you from foundations to measurement. Three deployment phases: start small, learn fast, expand with data.</p>
+      </div>
+
+      <!-- Phase cards -->
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="relative group">
+          <div class="absolute -inset-0.5 bg-gradient-to-br from-teal to-teal-dark rounded-2xl opacity-30 group-hover:opacity-50 transition-opacity blur-sm"></div>
+          <div class="relative bg-navy rounded-2xl p-6 h-full border border-teal/20">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl font-heading font-bold text-teal">01</span>
+              <div class="h-px flex-1 bg-teal/20"></div>
+              <span class="text-xs text-teal font-heading font-semibold bg-teal/10 px-2.5 py-1 rounded-full">2-4 weeks</span>
+            </div>
+            <h3 class="font-heading font-bold text-white text-xl mb-3">MVP</h3>
+            <ul class="space-y-2.5 text-sm text-n300">
+              <li class="flex items-start gap-2"><span class="text-teal mt-0.5">→</span> New/Novice + Recreational</li>
+              <li class="flex items-start gap-2"><span class="text-teal mt-0.5">→</span> 6 mobile touchpoints</li>
+              <li class="flex items-start gap-2"><span class="text-teal mt-0.5">→</span> 4 email templates</li>
+              <li class="flex items-start gap-2"><span class="text-teal mt-0.5">→</span> Game IQ Quiz launch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="relative bg-navy rounded-2xl p-6 h-full border border-n700 hover:border-n500 transition-colors">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl font-heading font-bold text-n500">02</span>
+            <div class="h-px flex-1 bg-n700"></div>
+            <span class="text-xs text-n500 font-heading font-semibold bg-n700/50 px-2.5 py-1 rounded-full">Months 2-3</span>
+          </div>
+          <h3 class="font-heading font-bold text-white text-xl mb-3">Expansion</h3>
+          <ul class="space-y-2.5 text-sm text-n300">
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> Enthusiast content</li>
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> At-Risk behavioral triggers</li>
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> First myth-busting campaign</li>
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> Activity summary emails</li>
+          </ul>
+        </div>
+
+        <div class="relative bg-navy rounded-2xl p-6 h-full border border-n700 hover:border-n500 transition-colors">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl font-heading font-bold text-n500">03</span>
+            <div class="h-px flex-1 bg-n700"></div>
+            <span class="text-xs text-n500 font-heading font-semibold bg-n700/50 px-2.5 py-1 rounded-full">Months 4-6</span>
+          </div>
+          <h3 class="font-heading font-bold text-white text-xl mb-3">Full Deploy</h3>
+          <ul class="space-y-2.5 text-sm text-n300">
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> All 6 segments active</li>
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> Campaign rotation</li>
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> Staff training complete</li>
+            <li class="flex items-start gap-2"><span class="text-n500 mt-0.5">→</span> Quarterly reviews</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center">
+        <p class="text-xl text-n300 font-heading mb-8">Ready to dive deeper?</p>
+        <a
+          href={`${base}/modules/1-rg-foundations`}
+          class="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-teal to-teal-dark text-navy font-heading font-bold rounded-2xl hover:shadow-lg hover:shadow-teal/25 hover:-translate-y-0.5 transition-all text-lg"
+        >
+          Start Module 1: RG Foundations
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        <p class="mt-4 text-sm text-n500">6 modules · ~4 hours total · Self-paced</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audio Player -->
+  <AudioPlayer client:load tracks={tracks} />
+
+  <!-- Section observer for audio sync + progress tracking -->
+  <script>
+    // Sync audio player with scroll sections
+    const sections = document.querySelectorAll('.intro-section');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = Array.from(sections).indexOf(entry.target as Element);
+          if (index >= 0) {
+            window.dispatchEvent(new CustomEvent('reveal-slide-changed', {
+              detail: { indexh: index }
+            }));
+          }
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach((section) => observer.observe(section));
+
+    // Listen for audio player section changes → scroll to section
+    window.addEventListener('audio-slide-change', ((e: CustomEvent) => {
+      const slideIndex = e.detail?.slideIndex ?? 0;
+      const target = sections[slideIndex];
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }) as EventListener);
+
+    // Mark intro as started
+    const progress = JSON.parse(localStorage.getItem('playbook-academy-progress') || '{}');
+    if (!progress['intro']) {
+      progress['intro'] = { completed: false, quizScore: null, lastLesson: 0, timeSpent: 0, completedLessons: [] };
+      localStorage.setItem('playbook-academy-progress', JSON.stringify(progress));
+      window.dispatchEvent(new Event('progress-updated'));
+    }
+
+    // Mark complete when last section is visible
+    const lastSection = sections[sections.length - 1];
+    const completionObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        const p = JSON.parse(localStorage.getItem('playbook-academy-progress') || '{}');
+        p['intro'] = { ...p['intro'], completed: true, completedLessons: [] };
+        localStorage.setItem('playbook-academy-progress', JSON.stringify(p));
+        window.dispatchEvent(new Event('progress-updated'));
+      }
+    }, { threshold: 0.5 });
+    if (lastSection) completionObserver.observe(lastSection);
+  </script>
+</BaseLayout>

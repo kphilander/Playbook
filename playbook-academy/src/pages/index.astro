@@ -1,0 +1,290 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ModuleCard from '../components/ModuleCard.astro';
+import ProgressTracker from '../components/ProgressTracker.tsx';
+import ContinueBanner from '../components/ContinueBanner.tsx';
+import PortfolioExport from '../components/PortfolioExport.tsx';
+import ReviewDeck from '../components/ReviewDeck.tsx';
+import { LESSON_MAP } from '../lib/progress';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout title="Home" showProgress={true}>
+  <!-- Hero -->
+  <section class="bg-navy text-white py-20 sm:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="mb-6">
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-heading font-semibold bg-teal/10 text-teal border border-teal/20">
+          For implementation teams
+        </span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
+        Learn how to deploy
+        <span class="text-teal"> Playbook</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-n300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        Playbook is an open-source brand system for player education. This academy teaches your team how to understand player segments, map the customer journey, and deploy content that players actually engage with.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href={`${base}/intro/`}
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-teal text-navy font-heading font-bold rounded-lg hover:bg-teal-light transition-colors text-lg"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Watch the intro
+          <span class="text-sm font-normal opacity-75 ml-1">5 min</span>
+        </a>
+        <a
+          href={`${base}/modules/1-rg-foundations`}
+          class="inline-flex items-center justify-center px-8 py-4 border-2 border-n500 text-white font-heading font-semibold rounded-lg hover:border-white transition-colors text-lg"
+        >
+          Jump to modules
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Credentials Strip -->
+  <div class="bg-white border-y border-n100 py-3">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-0 text-xs text-n500 font-heading">
+        <span>Associate Professor, Washington State University</span>
+        <span class="hidden sm:inline mx-3 text-n200">│</span>
+        <span>2× NCPG Research of the Year Award Winner</span>
+        <span class="hidden sm:inline mx-3 text-n200">│</span>
+        <span>Co-developer, GameSense, Positive Play Scale & RG Check</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress / Continue Section — navy band -->
+  <section class="py-10 bg-navy">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ContinueBanner client:idle />
+      <ProgressTracker client:idle />
+    </div>
+  </section>
+
+  <!-- Spaced Retrieval Review Deck -->
+  <section class="py-8 bg-n50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ReviewDeck client:idle />
+    </div>
+  </section>
+
+  <!-- What you'll learn -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-heading font-bold text-navy mb-3">What you'll learn</h2>
+        <p class="text-n700 max-w-2xl mx-auto">
+          From understanding why Playbook exists to deploying your first campaign. Each module builds on the last — or jump to what you need.
+        </p>
+      </div>
+
+      <!-- Intro Deck Card -->
+      <div class="mb-8">
+        <a
+          href={`${base}/intro/`}
+          class="group block bg-navy rounded-xl shadow-sm border border-navy-light hover:shadow-lg transition-all overflow-hidden"
+        >
+          <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+            <div class="flex items-center justify-center w-16 h-16 rounded-xl bg-teal/10 text-teal shrink-0">
+              <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center gap-3 mb-1">
+                <h3 class="text-xl font-heading font-bold text-white group-hover:text-teal transition-colors">
+                  Start here: Narrated Introduction
+                </h3>
+                <span class="text-sm text-n300 font-heading">5 min</span>
+              </div>
+              <p class="text-n300 text-sm">
+                A guided walkthrough of what Playbook is, why it exists, who your players are, and where to start. AI-narrated with transcripts available.
+              </p>
+            </div>
+            <svg class="w-6 h-6 text-n500 group-hover:text-teal group-hover:translate-x-1 transition-all shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <!-- Module Grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <ModuleCard
+          number={1}
+          title="RG Foundations"
+          duration="20 min"
+          description={`${LESSON_MAP['1-rg-foundations'].length} lessons. What responsible gambling actually means, the Information Gap, and the two-tier Playbook system that structures all content.`}
+          href={`${base}/modules/1-rg-foundations`}
+          icon="shield"
+          accentColor="teal"
+          moduleId="1-rg-foundations"
+        />
+        <ModuleCard
+          number={2}
+          title="Visual Identity & Design"
+          duration="20 min"
+          description={`${LESSON_MAP['2-visual-identity'].length} lessons. The adaptive identity model, Tier 1 vs Tier 2 visual rules, color system, typography, and accessibility requirements.`}
+          href={`${base}/modules/2-visual-identity`}
+          icon="palette"
+          accentColor="orange"
+          moduleId="2-visual-identity"
+        />
+        <ModuleCard
+          number={3}
+          title="Voice & Tone"
+          duration="25 min"
+          description={`${LESSON_MAP['3-voice-and-tone'].length} lessons. The Playbook voice, stigma-free language, tone spectrum with practice rewrites, and cultural adaptation across markets.`}
+          href={`${base}/modules/3-voice-and-tone`}
+          icon="message-circle"
+          accentColor="teal"
+          moduleId="3-voice-and-tone"
+        />
+        <ModuleCard
+          number={4}
+          title="Player Segmentation"
+          duration="20 min"
+          description={`${LESSON_MAP['4-player-segmentation'].length} lessons. A relationship-based segmentation model: 6 segments by player knowledge and behavior, with product vertical overlay and scenario practice.`}
+          href={`${base}/modules/4-player-segmentation`}
+          isCore={true}
+          icon="users"
+          accentColor="teal"
+          moduleId="4-player-segmentation"
+        />
+        <ModuleCard
+          number={5}
+          title="Customer Journey"
+          duration="25 min"
+          description={`${LESSON_MAP['5-customer-journey'].length} lessons. The player journey framework, touchpoints, campaigns, and myth-busting as a content engine.`}
+          href={`${base}/modules/5-customer-journey`}
+          isCore={true}
+          icon="map"
+          accentColor="teal"
+          moduleId="5-customer-journey"
+        />
+        <ModuleCard
+          number={6}
+          title="Measuring Success"
+          duration="20 min"
+          description={`${LESSON_MAP['6-measuring-success'].length} lessons. The Content Scorecard — NPS, semantic pairs, three survey instruments, and a ship-or-revise decision tree.`}
+          href={`${base}/modules/6-measuring-success`}
+          icon="bar-chart"
+          accentColor="teal"
+          moduleId="6-measuring-success"
+        />
+      </div>
+
+      <!-- Capstone & Certificate -->
+      <div class="grid sm:grid-cols-2 gap-6 mt-8">
+        <a
+          href={`${base}/capstone/`}
+          class="group block bg-white rounded-xl shadow-sm border border-n100 hover:shadow-md hover:border-teal/30 transition-all overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-navy text-white font-heading font-bold text-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </span>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-navy group-hover:text-navy-light transition-colors mb-2">
+              Capstone: Build Your MVP Plan
+            </h3>
+            <p class="text-n700 text-sm leading-relaxed">
+              Apply everything you've learned across all 6 modules. Build a complete MVP deployment plan for your operation.
+            </p>
+          </div>
+          <div class="px-6 py-3 bg-n50 border-t border-n100 flex items-center justify-between">
+            <span class="text-sm text-n500 font-heading">Start capstone</span>
+            <svg class="w-5 h-5 text-n300 group-hover:text-teal group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+
+        <a
+          href={`${base}/certificate/`}
+          class="group block bg-white rounded-xl shadow-sm border border-n100 hover:shadow-md hover:border-teal/30 transition-all overflow-hidden"
+        >
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="flex items-center justify-center w-10 h-10 rounded-full bg-teal text-navy font-heading font-bold text-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </span>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-navy group-hover:text-navy-light transition-colors mb-2">
+              Certificate
+            </h3>
+            <p class="text-n700 text-sm leading-relaxed">
+              Complete all modules and the capstone to earn your Playbook Academy certificate of completion.
+            </p>
+          </div>
+          <div class="px-6 py-3 bg-n50 border-t border-n100 flex items-center justify-between">
+            <span class="text-sm text-n500 font-heading">View certificate</span>
+            <svg class="w-5 h-5 text-n300 group-hover:text-teal group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Export -->
+  <section class="py-16 bg-n50 border-t border-n100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PortfolioExport client:visible />
+    </div>
+  </section>
+
+  <!-- Who this is for -->
+  <section class="py-16 bg-n50 border-t border-n100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-heading font-bold text-navy mb-8 text-center">Who this is for</h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl bg-white border border-n100 border-l-4 border-l-teal shadow-sm">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-teal/10 text-teal">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+            </span>
+            <h3 class="font-heading font-semibold text-navy">Copywriters & content creators</h3>
+          </div>
+          <p class="text-sm text-n700">Learn the Playbook voice, understand player segments, and write messages that players actually read.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-n100 border-l-4 border-l-orange shadow-sm">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-orange/10 text-orange">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>
+            </span>
+            <h3 class="font-heading font-semibold text-navy">Product managers</h3>
+          </div>
+          <p class="text-sm text-n700">Map player segments to product touchpoints and know which messages to deploy where in the customer journey.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-n100 border-l-4 border-l-info shadow-sm">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-info/10 text-info">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
+            </span>
+            <h3 class="font-heading font-semibold text-navy">Designers</h3>
+          </div>
+          <p class="text-sm text-n700">Understand the visual identity system, design tokens, and how to create collateral that meets accessibility standards.</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white border border-n100 border-l-4 border-l-success shadow-sm">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-success/10 text-success">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </span>
+            <h3 class="font-heading font-semibold text-navy">Customer service leads</h3>
+          </div>
+          <p class="text-sm text-n700">Train your team on stigma-free language, conversation scripts, and how to handle distressed players with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

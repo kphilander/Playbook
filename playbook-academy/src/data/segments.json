@@ -1,0 +1,257 @@
+[
+  {
+    "id": "new-novice",
+    "name": "New/Novice",
+    "description": "Players with low knowledge of a SPECIFIC product. This is product-contextual, not person-level. A seasoned slots player trying sports betting for the first time is New/Novice for sports betting but Recreational for slots. These players need education most — first impressions during onboarding shape long-term behavior and tool adoption.",
+    "keyInsight": "New/Novice is not an age or experience category — it's a relationship to a specific product. Everyone is New/Novice at something. Education at this stage has the highest impact-per-touchpoint because first impressions shape long-term habits.",
+    "characteristics": {
+      "Who": "Players new to a specific gambling product — regardless of experience with other products",
+      "Defining signal": "First registration, first deposit, or first session within a product vertical",
+      "Knowledge level": "Low for THIS product. May be high for others.",
+      "Motivations": "Curiosity, entertainment, social influence, trying something new",
+      "Relationship to tools": "Haven't set up limits, session reminders, or dashboards yet — or don't know they exist",
+      "Emotional state": "Excited, curious, possibly overconfident ('How hard can it be?')",
+      "Content receptivity": "High for practical 'how it works' content. Low for anything that feels like a lecture."
+    },
+    "messagePriorities": [
+      {
+        "priority": "How the product works",
+        "description": "Mechanics, odds, house edge for THIS specific product. Framed as interesting information that makes the experience better, not cautionary tales."
+      },
+      {
+        "priority": "Tool onboarding",
+        "description": "Set up deposit limits, session reminders, and activity dashboards as part of the welcome experience. Frame as features, not safety nets."
+      },
+      {
+        "priority": "Budget-first mindset",
+        "description": "Establish the entertainment budget concept from day one. 'Set your budget before you start' as the default, not a response to a problem."
+      },
+      {
+        "priority": "Common misconceptions",
+        "description": "Address the myths specific to this product vertical early — before they form habits based on wrong assumptions."
+      },
+      {
+        "priority": "Content hub introduction",
+        "description": "Show them the content hub exists. Make it a destination, not a footnote."
+      }
+    ],
+    "voiceGuidance": "Playbook voice (Confident / Informative → Playful / Witty). Teach without talking down.",
+    "pillar": ["open", "social"],
+    "tier": [1],
+    "audience": ["new-novice"],
+    "verticalNote": "New/Novice content adapts by product vertical. A New/Novice sports bettor needs vig education; a New/Novice slots player needs RNG and house edge.",
+    "lastUpdated": "2026-03-16"
+  },
+  {
+    "id": "recreational",
+    "name": "Recreational",
+    "description": "Players who gamble within their means with moderate knowledge — the majority of your player base. They see gambling as entertainment, not a source of income. This is your primary audience for ongoing engagement content: myth-busting campaigns, quiz challenges, content hub articles, and tool-as-feature messaging.",
+    "keyInsight": "They're having fun and managing their money. Don't treat them like they need fixing. Messaging should reinforce the entertainment framing while adding information that makes the experience better — odds literacy, myth-busting, and tools-as-features.",
+    "characteristics": {
+      "Who": "Recreational players who gamble for entertainment — the bulk of your active player base",
+      "Demographics": "Broad — all ages, all genders, all income levels",
+      "Motivations": "Fun, excitement, social activity, the thrill of chance",
+      "Relationship to gambling": "Entertainment expense, like movies or dining out",
+      "Frequency": "Casual to regular — weekly to monthly sessions",
+      "Knowledge level": "Moderate. They know the basics but may hold common misconceptions.",
+      "Self-perception": "'I enjoy gambling. It's fun. I know my limits.'"
+    },
+    "messagePriorities": [
+      {
+        "priority": "Odds literacy",
+        "description": "How games actually work, house edge, RNG, probability. Framed as interesting information, not cautionary tales."
+      },
+      {
+        "priority": "Tool awareness",
+        "description": "Deposit limits, session reminders, activity dashboards. Framed as features that enhance the experience, not safety nets."
+      },
+      {
+        "priority": "Entertainment framing",
+        "description": "Gambling as a cost-of-entertainment model. 'Your entertainment budget' not 'your gambling money.'"
+      },
+      {
+        "priority": "Myth-busting",
+        "description": "Common misconceptions about how games work. Playful, confident, shareable."
+      },
+      {
+        "priority": "Social proof",
+        "description": "Facts and knowledge that make the player feel smart and informed. Content worth sharing."
+      }
+    ],
+    "voiceGuidance": "Playbook voice (Playful / Witty and Confident / Informative). This is where the brand personality shines brightest.",
+    "pillar": ["open", "social"],
+    "tier": [1],
+    "audience": ["recreational"],
+    "verticalNote": "Recreational players exist across all product verticals. Messaging adapts by vertical (sports odds vs. slots RNG vs. lottery probability) while maintaining the entertainment framing.",
+    "lastUpdated": "2026-03-16"
+  },
+  {
+    "id": "enthusiast",
+    "name": "Enthusiast",
+    "description": "Players with high engagement and deep product knowledge who are NOT exhibiting problematic behavior. They play frequently, know the mechanics, and often consider themselves skilled. They need advanced content that respects their knowledge while filling genuine gaps — like how market efficiency works or why long-term EV matters.",
+    "keyInsight": "High engagement is not the same as problematic behavior. Enthusiasts are knowledgeable, engaged, and managing their play. They need advanced content, not warnings. Respect what they know while adding the mathematical context most lack.",
+    "characteristics": {
+      "Who": "Frequent, knowledgeable players who engage deeply with their chosen products",
+      "Knowledge level": "High. They understand mechanics, follow the industry, and have opinions.",
+      "Motivations": "The challenge, strategy, mastery, social status among peers, potential profit (sports/poker)",
+      "Frequency": "Regular to frequent — multiple sessions per week",
+      "Products": "Often specialists: serious sports bettors, poker players, casino regulars",
+      "Social behavior": "Active in communities, share picks/analysis, follow tipsters or experts",
+      "Self-perception": "'I know what I'm doing. I've done the research.'"
+    },
+    "messagePriorities": [
+      {
+        "priority": "Advanced content",
+        "description": "EV calculators, market efficiency explainers, advanced odds breakdowns, strategy deep-dives. Content that adds to what they already know."
+      },
+      {
+        "priority": "Mathematical context",
+        "description": "Sport knowledge ≠ betting edge. The line prices in everything you know. Vig compounds on parlays. Long-term EV is negative. Teach the math they haven't done."
+      },
+      {
+        "priority": "Bankroll management",
+        "description": "Unit sizing, session budgets, seasonal budgets. Frame as professional discipline, not as a safety measure."
+      },
+      {
+        "priority": "Myth-busting (advanced)",
+        "description": "Survivorship bias in tipster records, parlay math, in-play vs. pre-match edge. Myths that sophisticated players still hold."
+      },
+      {
+        "priority": "Self-monitoring tools",
+        "description": "Activity dashboards, P&L tracking, session analytics. Frame as performance tools, not surveillance."
+      }
+    ],
+    "voiceGuidance": "Playbook voice (Confident / Informative). Peer-to-peer. Never talk down. Respect their knowledge, then add to it.",
+    "pillar": ["open", "social"],
+    "tier": [1],
+    "audience": ["enthusiast"],
+    "verticalNote": "Enthusiast content is highly vertical-specific. A poker Enthusiast needs different advanced content than a sports betting Enthusiast. Phase 2 deployment priority.",
+    "lastUpdated": "2026-03-16"
+  },
+  {
+    "id": "at-risk",
+    "name": "At-Risk",
+    "description": "Players whose behavioral patterns suggest they may be in difficulty — increased frequency, chasing losses, exceeding self-set limits, longer sessions, reduced breaks. This segment is defined by BEHAVIOR, not demographics or self-identification. They may not recognize the pattern themselves.",
+    "keyInsight": "They may not self-identify. Messaging must be non-judgmental and tool-focused. The goal is to make features visible and easy to use — not to diagnose or label. Normalize tool use so it doesn't feel like an intervention.",
+    "characteristics": {
+      "Who": "Players whose behavior patterns have shifted — not a demographic category",
+      "Defining signals": "Increased frequency, higher deposits, chasing losses, exceeding self-set limits, longer sessions, reduced breaks between sessions",
+      "Self-perception": "'I'm fine. I just had a bad run.' / 'I'm about to turn it around.'",
+      "Relationship to tools": "May not have activated any tools yet, or may have adjusted limits upward",
+      "Emotional state": "Frustration, determination, denial, or genuine unawareness",
+      "Content receptivity": "Low for anything that feels like a warning; moderate for information framed as features"
+    },
+    "messagePriorities": [
+      {
+        "priority": "Normalize tool use",
+        "description": "Position deposit limits, session reminders, and activity dashboards as things every player uses. Not emergency measures."
+      },
+      {
+        "priority": "Provide check-in moments",
+        "description": "Non-judgmental pauses that give the player a moment to decide what they want to do next. No pressure."
+      },
+      {
+        "priority": "Make limits feel like features",
+        "description": "'Your budget is working as designed' not 'you've been restricted.'"
+      },
+      {
+        "priority": "Quiet accessibility",
+        "description": "Help resources are always visible but never the primary message. One tap away, not in their face."
+      },
+      {
+        "priority": "Activity visibility",
+        "description": "Make play patterns visible through dashboards and summaries so the player can self-assess without being told to."
+      }
+    ],
+    "voiceGuidance": "Support voice (Warm / Direct). Non-judgmental. Tool-focused. Never diagnostic.",
+    "pillar": ["open", "social"],
+    "tier": [1, 2],
+    "audience": ["at-risk"],
+    "verticalNote": "At-Risk behavioral indicators manifest differently by vertical (chasing losses in sports vs. session length in slots). Detection requires vertical-specific triggers if data is available.",
+    "lastUpdated": "2026-03-16"
+  },
+  {
+    "id": "in-crisis",
+    "name": "In-Crisis / Help Seeker",
+    "description": "Players actively looking for support or considering self-exclusion. This segment has self-identified a concern — speed, clarity, and zero judgment are critical. This is Tier 2 territory. Every extra click, every extra word, every moment of hesitation costs.",
+    "keyInsight": "Speed, clarity, and zero judgment. This is Tier 2. Every extra click, every extra word, every moment of hesitation costs. They don't need education — they need pathways to help. NOW.",
+    "characteristics": {
+      "Who": "Players who have self-identified a concern about their gambling",
+      "State of mind": "May be in crisis, may be reflective, may be exploring options calmly",
+      "What they need": "Clear pathways to help. Fast. No barriers.",
+      "What they're feeling": "Vulnerability, uncertainty, possibly shame or anxiety",
+      "Relationship to tools": "May have used them, may have avoided them. Doesn't matter now.",
+      "Content receptivity": "High for practical help. Zero for educational content, quizzes, or entertainment."
+    },
+    "messagePriorities": [
+      {
+        "priority": "Clear pathways to help",
+        "description": "Phone, text, chat, self-exclusion. Visible, prominent, immediate."
+      },
+      {
+        "priority": "Validation",
+        "description": "'You're doing the right thing.' 'This is a brave step.' Brief, genuine, non-patronizing."
+      },
+      {
+        "priority": "Confidentiality assurance",
+        "description": "'Free. Confidential. No judgment.' Repeat as needed. It matters."
+      },
+      {
+        "priority": "Simplicity",
+        "description": "One action per screen. No choices that don't matter. No distractions."
+      },
+      {
+        "priority": "Continuity",
+        "description": "What happens next? What to expect after calling, after self-excluding, after pausing."
+      }
+    ],
+    "voiceGuidance": "Support voice. Warm and direct. No humor. No wit. No cleverness.",
+    "pillar": ["open", "social"],
+    "tier": [2],
+    "audience": ["in-crisis"],
+    "verticalNote": "In-Crisis support is product-agnostic. The same helplines, self-exclusion flows, and support pathways serve all verticals.",
+    "lastUpdated": "2026-03-16"
+  },
+  {
+    "id": "friends-family",
+    "name": "Friends & Family",
+    "description": "People concerned about someone else's gambling. This audience needs guidance on how to help without enabling or confronting — and clear pathways to support for themselves. They are not players. They are a separate entry point with a different content track.",
+    "keyInsight": "They need guidance on how to help without enabling or confronting. Recognition of behavioral changes — not diagnostic checklists. Conversation starters — not ultimatum scripts. Support for themselves — not just for the person they're worried about.",
+    "characteristics": {
+      "Who": "Partners, parents, children, siblings, friends of someone whose gambling concerns them",
+      "Demographics": "Broad — any age, any background",
+      "Relationship to gambling": "Non-players or light players. Not here for themselves.",
+      "State of mind": "Worried, frustrated, unsure, possibly exhausted from trying to help",
+      "What they need": "Recognition signs (behavioral, not diagnostic), conversation guidance, support resources",
+      "Content receptivity": "High for practical guidance. Low for clinical checklists."
+    },
+    "messagePriorities": [
+      {
+        "priority": "Behavioral recognition",
+        "description": "What changes to notice. Framed as behavioral patterns, not clinical symptoms. 'Changes you might see' not 'warning signs.'"
+      },
+      {
+        "priority": "Conversation guidance",
+        "description": "How to start a conversation. What to say. What not to say. Practical scripts, not theoretical advice."
+      },
+      {
+        "priority": "Support for themselves",
+        "description": "Friends and family need their own support. Counseling, peer groups, helplines that serve concerned others."
+      },
+      {
+        "priority": "Boundaries",
+        "description": "How to be supportive without enabling. This is hard and important."
+      },
+      {
+        "priority": "Self-care",
+        "description": "Caring about someone's gambling is stressful. Their wellbeing matters too."
+      }
+    ],
+    "voiceGuidance": "Support voice (Warm / Direct). Empathetic, practical, never clinical.",
+    "pillar": ["open", "social"],
+    "tier": [2],
+    "audience": ["friends-family"],
+    "verticalNote": "Friends & Family content is product-agnostic. The behavioral patterns and support resources are the same regardless of what the person gambles on.",
+    "lastUpdated": "2026-03-16"
+  }
+]
