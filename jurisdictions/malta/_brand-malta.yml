@@ -1,0 +1,91 @@
+# _brand-malta.yml -- Malta (MGA) Overrides
+# ================================================
+# This file contains Malta-specific overrides for _brand.yml.
+# Malta is a national jurisdiction with no sub-divisions --
+# all gambling is regulated by the Malta Gaming Authority (MGA).
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in Malta. Malta has a single national
+#   regulator and helpline, but a dual age threshold for
+#   land-based casinos (25+ Maltese citizens, 18+ all others).
+#
+# See: jurisdictions/malta/README.md for the full compliance module
+# ================================================
+
+
+# --- HELPLINES -----------------------------------------
+# Malta's national gambling helpline is operated by the
+# Responsible Gaming Foundation (RGF). The alternative
+# Sedqa helpline (179) covers broader addiction services.
+
+helplines:
+  malta:
+    number: "1777"
+    website: "www.rgf.org.mt"
+    label: "Responsible Gaming Foundation (RGF) Supportline"
+    hours: "8am-8pm daily"
+    languages:
+      - English
+      - Maltese
+    notes: "Free and confidential. Chat support also available via rgf.org.mt."
+
+    alternative:
+      number: "179"
+      website: "www.sedqa.gov.mt"
+      label: "Agenzija Sedqa"
+      hours: "24/7"
+      notes: "General addiction helpline; covers gambling"
+
+
+# --- LEGAL ---------------------------------------------
+# Malta has a dual age regime for land-based casinos:
+#   - 25+ for Maltese citizens
+#   - 18+ for non-Maltese citizens
+# Online and all other gambling: 18+
+
+legal:
+  minimum_gambling_age:
+    malta: 18
+    malta-casino-maltese: 25
+  regulator:
+    name: "Malta Gaming Authority (MGA)"
+    website: "https://www.mga.org.mt/"
+  self_exclusion:
+    land_based:
+      name: "Self-Barring"
+      url: "https://www.mga.org.mt/player-hub/self-barring/"
+      durations: "6 months, 12 months, or 12 months with auto-renewal"
+    interactive:
+      name: "Self-Exclusion"
+      durations: "Definite or indefinite (per operator)"
+
+
+# --- MESSAGING -----------------------------------------
+# Malta has NO verbatim mandatory statements.
+# All requirements are obligation-based, giving operators
+# flexibility to use {{PROGRAM_NAME}} voice. The obligations
+# that must be met are:
+#
+# 1. A responsible gaming message explaining gaming can be
+#    harmful if not controlled
+# 2. Pre-deposit information about all available RG tools
+# 3. Underage gaming prohibition sign
+# 4. Link to help organisation within one click
+# 5. MGA dynamic seal/kite mark
+# 6. In all ads: licensee name, licence number, 18+, RG info
+
+messaging:
+  mandatory:
+    malta-general: "Gaming should be fun -- not stressful. Set your limits and play on your terms. Need help? Call 1777 (free, confidential) or visit rgf.org.mt."
+    malta-pre-deposit: "Before you start: set your deposit limit, check the reality check tool, and know where to find help. All your tools are one click away."
+
+
+# --- PRESENTATION --------------------------------------
+# Malta uses European conventions.
+
+presentation:
+  odds_format: decimal
+  currency: eur
+  currency_symbol: "EUR"
+  language: en-mt

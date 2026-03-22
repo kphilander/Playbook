@@ -1,0 +1,142 @@
+# _brand-denmark.yml -- Denmark Overrides
+# ================================================
+# This file contains Denmark-specific overrides for _brand.yml.
+# Denmark has a centralized national regulatory model -- no
+# sub-jurisdictions for gambling purposes.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in Denmark. Denmark has a single national
+#   helpline (StopSpillet), a single self-exclusion system (ROFUS),
+#   and national advertising rules enforced by Spillemyndigheden.
+#
+# Key features:
+#   - Mandatory deposit limit before play (since Jan 2020)
+#   - ROFUS national self-exclusion register
+#   - StopSpillet helpline
+#   - Prescriptive advertising rules (under-25 ban, proximity
+#     bans, live sports ban from 2027)
+#
+# See: jurisdictions/denmark/README.md for the full Denmark module
+# ================================================
+
+
+# --- HELPLINES ---------------------------------
+# Denmark operates a single national helpline: StopSpillet,
+# administered by the Danish Gambling Authority (Spillemyndigheden).
+# Free, confidential counselling for players, relatives, and
+# professionals.
+
+helplines:
+  denmark:
+    number: "+45 70 22 28 25"
+    website: "https://stopspillet.dk"
+    label: "StopSpillet"
+    hours: "Mon-Thu 9am-9pm; Fri 9am-5pm"
+    chat_hours: "Mon-Thu 5pm-9pm (via StopSpillet.dk)"
+    languages:
+      - Danish
+    cost: "Free"
+    operated_by: "Spillemyndigheden (Danish Gambling Authority)"
+    notes: "Also provides anonymous self-assessment tool for evaluating gambling habits. 13 treatment centres across Denmark offer free gambling addiction services."
+
+
+# --- LEGAL -------------------------------------
+# 18+ for all liberalised gambling (online casino, betting,
+# land-based casinos, gaming machines).
+# Exception: 16+ for monopoly lotteries (Danske Lotteri Spil)
+# and charity lotteries.
+
+legal:
+  minimum_gambling_age:
+    denmark: 18
+
+
+# --- MANDATORY MESSAGING ----------------------
+# Denmark does NOT have verbatim mandatory statements.
+# All requirements are obligation-based:
+#   - 18+ age limit must be displayed
+#   - ROFUS self-exclusion info must be included
+#   - StopSpillet helpline must be referenced
+#   - Winning chances presented correctly
+#   - Bonus conditions disclosed alongside offers
+#
+# The deposit limit prompt is the closest to a "mandatory
+# statement" -- players must be required to set a deposit
+# limit before they can play.
+
+messaging:
+  mandatory:
+    # No verbatim mandatory statement in Danish gambling law.
+    # The following are the key obligation-based requirements:
+
+    denmark-deposit-limit-da: "Du skal saette en indbetalingsgraense, foer du kan spille."
+    denmark-deposit-limit-en: "You must set a deposit limit before you can play."
+
+    denmark-age-limit: "18+"
+
+    denmark-disclosure-template-da: "18+ | ROFUS.dk | StopSpillet: 70 22 28 25"
+    denmark-disclosure-template-en: "18+ | ROFUS.dk | StopSpillet: 70 22 28 25"
+
+  # On-brand versions of required disclosures
+  on_brand:
+    denmark-helpline: "Need to talk? StopSpillet is free, confidential, and staffed by professionals. Call 70 22 28 25 or chat at StopSpillet.dk."
+    denmark-self-exclusion: "Need a break? Register with ROFUS for 24 hours up to permanently. One registration covers all Danish operators."
+    denmark-deposit-limit: "Set your deposit limit -- it's required before you start, and it keeps you in control."
+
+
+# --- SELF-EXCLUSION ----------------------------
+# ROFUS (Register over Frivilligt Udelukkede Spillere) is
+# Denmark's national self-exclusion register. All licensed
+# operators must connect to it.
+
+self_exclusion:
+  denmark:
+    program_name: "ROFUS"
+    full_name: "Register over Frivilligt Udelukkede Spillere"
+    url: "https://rofusweb.spillemyndigheden.dk"
+    info_url: "https://www.spillemyndigheden.dk/en/rofus"
+    durations:
+      - "24 hours"
+      - "1 month"
+      - "3 months"
+      - "6 months"
+      - "Permanent"
+    scope: "All Danish-licensed online operators, all land-based casinos, physical betting retailers (since Oct 2023)"
+    enrollment_methods:
+      - "Online via MitID at rofusweb.spillemyndigheden.dk"
+      - "Paper form (9-01) mailed to Spillemyndigheden"
+    reinstatement: "Temporary exclusions expire automatically. Permanent exclusion: removal request possible after 1 year via MitID."
+    marketing_cessation: "Automatic 'No thank you to marketing' for all registered players"
+    operator_obligations:
+      - "Check ROFUS at login and account creation"
+      - "Close accounts for permanently excluded players"
+      - "Refund deposits to excluded players"
+      - "Stop all marketing to registered players"
+
+
+# --- PRESENTATION ------------------------------
+# Denmark uses decimal odds, DKK currency, and European
+# football as the primary sports culture reference.
+
+presentation:
+  odds_format: decimal
+  currency: dkk
+  currency_symbol: "kr."
+  sports_culture: european-football
+  language: da
+  locale: da-DK
+
+
+# --- REGULATOR ---------------------------------
+# Reference information for the Danish Gambling Authority.
+
+regulator:
+  denmark:
+    name: "Spillemyndigheden"
+    name_en: "Danish Gambling Authority"
+    website: "https://www.spillemyndigheden.dk/en"
+    email: "mail@spillemyndigheden.dk"
+    phone: "+45 72 38 79 13"
+    address: "Lerchesgade 35, 6, 5000 Odense C, Denmark"
+    cvr: "34730415"

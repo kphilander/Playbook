@@ -1,0 +1,103 @@
+# _brand-macau.yml -- Macau SAR Overrides
+# ================================================
+# This file contains Macau-specific overrides for _brand.yml.
+# Macau is a standalone jurisdiction (Special Administrative Region
+# of China) with a single regulatory body (DICJ) and no
+# sub-jurisdictions for gambling regulation.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in Macau SAR. Macau is land-based casino
+#   only -- online gambling is strictly prohibited.
+#
+# See: jurisdictions/macau/README.md for the full compliance module
+# ================================================
+
+
+# --- HELPLINES ---
+# Macau operates a 24-hour gambling counseling hotline
+# commissioned by the Social Welfare Bureau (IAS) and
+# operated by Sheng Kung Hui Macau Social Service
+# Coordination Office.
+
+helplines:
+  macau:
+    primary:
+      number: "(853) 2823 0101"
+      website: "https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html"
+      label: "24-hour Gambling Counseling Hotline"
+      hours: "24/7"
+      languages:
+        - Chinese (Cantonese)
+        - Chinese (Mandarin)
+        - Portuguese
+        - English
+      operator: "Sheng Kung Hui Macau Social Service Coordination Office"
+      notes: "Displayed on ATM screensavers at all casinos"
+
+    yat_on:
+      number: "(853) 2821 0033"
+      label: "Yat On Responsible Gambling Counselling Centre"
+      hours: "Office hours"
+      notes: "Specialized problem gambling counseling"
+
+    resilience_centre:
+      number: "(853) 2832 3998"
+      label: "Problem Gambling Prevention and Treatment Division (Resilience Centre)"
+      hours: "Office hours"
+      notes: "IAS-affiliated treatment center"
+
+    dicj:
+      number: "(853) 2856 9262"
+      label: "Gaming Inspection and Coordination Bureau (DICJ)"
+      hours: "Mon-Thu 9am-5:45pm; Fri 9am-5:30pm"
+      notes: "Regulatory inquiries, self-exclusion applications"
+
+
+# --- LEGAL ---
+# 21+ for casino entry (Law 10/2012)
+# 18+ for pari-mutuel and public lottery
+
+legal:
+  minimum_gambling_age:
+    macau: 21
+  online_gambling:
+    macau: prohibited
+
+
+# --- SELF-EXCLUSION ---
+self_exclusion:
+  macau:
+    program_name: "Self-Exclusion and Third-Party Exclusion"
+    administrator: "DICJ"
+    url: "https://www.gov.mo/en/services/ps-1408/"
+    duration_options:
+      - "Up to 2 years (maximum)"
+    scope: "All or specific casinos in Macau SAR"
+    enrollment_methods:
+      - "In-person at DICJ office"
+      - "Via Responsible Gambling Information Kiosks (19 locations)"
+    third_party:
+      allowed: true
+      eligible: "Spouse, parent, child, or sibling (2nd degree kinship)"
+      confirmation_required: true
+    violation_penalty: "Crime of disobedience: up to 1-year imprisonment or 120-day fine"
+
+
+# --- MESSAGING ---
+# Macau uses an obligation-based messaging approach.
+# No verbatim statements are prescribed. Concessionaires must
+# include RG messages in promotional pamphlets and provide
+# RG information via kiosks, but exact wording is flexible.
+
+messaging:
+  mandatory:
+    macau: null  # No verbatim statement required
+  regime_type:
+    macau: "obligation-based"
+  notes:
+    macau: |
+      Obligation-based: concessionaires must include RG messages in
+      gaming-related promotional pamphlets and provide RG information
+      via kiosks. No prescribed wording -- full flexibility to use
+      {{PROGRAM_NAME}} messaging as long as the obligation is met.
