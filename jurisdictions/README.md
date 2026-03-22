@@ -32,15 +32,63 @@ jurisdictions/
 │   ├── README.md                       # Federal framework, provincial table
 │   ├── _brand-canada.yml               # Country-level config overrides
 │   │
-│   └── british-columbia/               # Layer 2: Sub-jurisdiction
+│   ├── alberta/                        # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
+│   └── ontario/                        # Layer 2: Sub-jurisdiction
 │       ├── README.md                   # Full compliance module
 │       └── advertising-rules.md        # Deep-dive reference
+│
+├── denmark/                            # National jurisdiction
+│   ├── README.md                       # Full compliance module
+│   ├── _brand-denmark.yml              # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference
+│
+├── macau/                              # Standalone jurisdiction (SAR)
+│   ├── README.md                       # Full compliance module
+│   └── _brand-macau.yml               # Jurisdiction config overrides
+│
+├── malta/                              # National jurisdiction (EU licensing hub)
+│   ├── README.md                       # Full compliance module
+│   ├── _brand-malta.yml                # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference
+│
+├── singapore/                          # Standalone jurisdiction (city-state)
+│   ├── README.md                       # Full compliance module
+│   └── _brand-singapore.yml            # Jurisdiction config overrides
+│
+├── united-kingdom/                     # National jurisdiction (no sub-jurisdictions)
+│   ├── README.md                       # Full compliance module
+│   ├── _brand-uk.yml                   # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference (complex UK ad rules)
 │
 ├── united-states/                      # Layer 1: Country
 │   ├── README.md                       # Federal framework, state table
 │   ├── _brand-us.yml                   # Country-level config overrides
 │   │
-│   └── nevada/                         # Layer 2: Sub-jurisdiction
+│   ├── california/                     # Layer 2: Sub-jurisdiction
+│   │   └── README.md                   # Full compliance module (tribal compacts)
+│   │
+│   ├── massachusetts/                  # Layer 2: Sub-jurisdiction
+│   │   └── README.md                   # Full compliance module
+│   │
+│   ├── michigan/                       # Layer 2: Sub-jurisdiction
+│   │   └── README.md                   # Full compliance module
+│   │
+│   ├── nevada/                         # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
+│   ├── new-jersey/                     # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
+│   ├── ohio/                           # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
+│   └── pennsylvania/                   # Layer 2: Sub-jurisdiction
 │       ├── README.md                   # Full compliance module
 │       └── advertising-rules.md        # Deep-dive reference
 │
@@ -71,10 +119,22 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 
 ## Available jurisdictions
 
-| Country | Sub-jurisdiction | Regulator | Status | Module |
+| Country / Territory | Sub-jurisdiction | Regulator | Status | Module |
 |---|---|---|---|---|
+| Canada | Alberta | AGLC | Complete | [canada/alberta/](canada/alberta/) |
 | Canada | Ontario | AGCO / iGO | Complete | [canada/ontario/](canada/ontario/) |
+| Denmark | -- (national) | Spillemyndigheden | Complete | [denmark/](denmark/) |
+| Macau SAR | -- (standalone) | DICJ | Complete | [macau/](macau/) |
+| Malta | -- (national) | MGA | Complete | [malta/](malta/) |
+| Singapore | -- (standalone) | GRA | Complete | [singapore/](singapore/) |
+| United Kingdom | -- (national) | Gambling Commission (UKGC) | Complete | [united-kingdom/](united-kingdom/) |
+| United States | California | CGCC / Tribal Gaming Commissions | Complete | [united-states/california/](united-states/california/) |
+| United States | Massachusetts | MGC | Complete | [united-states/massachusetts/](united-states/massachusetts/) |
+| United States | Michigan | MGCB | Complete | [united-states/michigan/](united-states/michigan/) |
 | United States | Nevada | NGCB / NGC | Complete | [united-states/nevada/](united-states/nevada/) |
+| United States | New Jersey | DGE / CCC | Complete | [united-states/new-jersey/](united-states/new-jersey/) |
+| United States | Ohio | OCCC | Complete | [united-states/ohio/](united-states/ohio/) |
+| United States | Pennsylvania | PGCB | Complete | [united-states/pennsylvania/](united-states/pennsylvania/) |
 
 ---
 

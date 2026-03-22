@@ -16,5 +16,7 @@ See the [Jurisdictions README](../README.md#adding-a-new-jurisdiction) for the c
 
 ## Existing examples
 
+- [Canada / Alberta](../canada/alberta/) — complete compliance module
 - [Canada / British Columbia](../canada/british-columbia/) — complete compliance module
+- [Canada / Ontario](../canada/ontario/) — complete compliance module
 - [United States / Nevada](../united-states/nevada/) — complete compliance module

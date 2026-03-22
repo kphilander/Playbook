@@ -87,7 +87,7 @@ The national code aligns with {{PROGRAM_NAME}}'s existing approach — transpare
 |---|---|---|---|---|---|---|
 | **British Columbia** | GPEB → IGCO (April 2026) | BCLC | 19 | PlayNow.com (BCLC) | 1-888-795-6111 | Planned |
 | **Ontario** | AGCO / iGO | OLG + private (iGaming) | 19 | Open market (April 2022) | 1-866-531-2600 | [Complete](ontario/) |
-| **Alberta** | AGLC | AGLC / PlayAlberta | 18 | PlayAlberta.ca | 1-866-332-2322 | Planned |
+| **Alberta** | AGLC / AiGC | AGLC + private (iGaming, mid-2026) | 18 | PlayAlberta.ca; open market launching mid-2026 | 1-866-332-2322 | [Complete](alberta/) |
 | **Quebec** | Loto-Québec / RAJ | Loto-Québec | 18 | Espacejeux.com | 1-800-461-0140 | Planned |
 | **Manitoba** | LGA (Manitoba) | Manitoba Liquor & Lotteries | 18 | PlayNow.com (MLL) | 1-800-463-1554 | Planned |
 | **Saskatchewan** | SLGA | Sask Gaming / SaskGaming | 19 | PlayNow.com (WCLC) | 1-800-306-6789 | Planned |
@@ -178,4 +178,4 @@ This structure scales as new provincial modules are added.
 
 ---
 
-*Cross-references: [`_brand.yml`](../../_brand.yml) | [Governance — Quarterly Regulatory Check](../../brand-book/08-governance.md) | [Jurisdictions README](../README.md) | [British Columbia module](british-columbia/)*
+*Cross-references: [`_brand.yml`](../../_brand.yml) | [Governance -- Quarterly Regulatory Check](../../brand-book/08-governance.md) | [Jurisdictions README](../README.md) | [Alberta module](alberta/) | [British Columbia module](british-columbia/) | [Ontario module](ontario/)*

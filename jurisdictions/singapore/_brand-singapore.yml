@@ -1,0 +1,145 @@
+# _brand-singapore.yml -- Singapore Overrides
+# ================================================
+# This file contains Singapore-specific overrides for _brand.yml.
+# Singapore is a standalone jurisdiction (city-state) with a
+# single national regulatory regime under the GRA.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   Playbook at Singapore's integrated resort casinos
+#   (Marina Bay Sands, Resorts World Sentosa).
+#
+# See: jurisdictions/singapore/README.md for the full compliance module
+# ================================================
+
+
+# --- HELPLINES ---------------------------------
+# Singapore has a single national helpline operated by the
+# National Council on Problem Gambling (NCPG), under the
+# Ministry of Social and Family Development (MSF).
+
+helplines:
+  singapore:
+    national:
+      number: "1800-6-668-668"
+      website: "https://www.ncpg.org.sg"
+      label: "NCPG (National Council on Problem Gambling)"
+      hours: "Daily 8am-11pm"
+      languages:
+        - English
+        - Mandarin
+        - Malay
+        - Tamil
+      additional_services:
+        - "Webchat (daily 8am-11pm via ncpg.org.sg)"
+        - "E-counselling (anonymous)"
+        - "Face-to-face counselling via The Resilienz Clinic"
+      notes: >
+        NCPG also administers all casino exclusion orders and
+        visit limits (self-exclusion, family exclusion, third-party
+        exclusion, exclusion by law, voluntary visit limit, family
+        visit limit).
+
+
+# --- LEGAL -------------------------------------
+# 21+ minimum age for casino entry.
+# Online gambling is prohibited under the Gambling Control Act 2022.
+
+legal:
+  minimum_gambling_age:
+    singapore: 21
+
+  entry_levy:
+    singapore:
+      daily: 150          # S$150 per 24-hour period
+      annual: 3000        # S$3,000 annual membership
+      currency: "SGD"
+      applies_to: "Singapore citizens and permanent residents"
+      exempt: "Foreign passport holders"
+      notes: >
+        Entry levy amounts were increased from S$100/S$2,000 to
+        S$150/S$3,000 in April 2019. Revenue is paid to the
+        Singapore Totalisator Board for social/charitable purposes.
+
+
+# --- MANDATORY MESSAGING ----------------------
+# Singapore uses obligation-based messaging (no verbatim
+# prescribed statements). The following are suggested minimum
+# messages that meet the regulatory obligation.
+
+messaging:
+  mandatory:
+    singapore-helpline: "If you or someone you know has a gambling problem, call 1800-6-668-668."
+    singapore-age: "You must be 21 or older to enter the casino."
+    singapore-entry-levy: "Singapore citizens and permanent residents: entry levy of S$150 (24 hours) or S$3,000 (annual) applies."
+    # Note: All messaging in Singapore casinos is subject to GRA
+    # approval as part of the responsible gambling programme.
+    # These are not verbatim regulatory requirements but
+    # obligation-based minimum messages.
+
+
+# --- REGULATOR --------------------------------
+# Reference information for the primary regulator.
+
+regulator:
+  singapore:
+    name: "Gambling Regulatory Authority (GRA)"
+    website: "https://www.gra.gov.sg"
+    parent: "Ministry of Home Affairs (MHA)"
+    harm_minimisation_body: "National Council on Problem Gambling (NCPG)"
+    harm_minimisation_website: "https://www.ncpg.org.sg"
+    key_legislation:
+      - "Casino Control Act 2006"
+      - "Gambling Control Act 2022"
+      - "Gambling Regulatory Authority of Singapore Act 2022"
+      - "Casino Control (Responsible Gambling) Regulations 2013"
+      - "Casino Control (Advertising) Regulations 2010"
+      - "Casino Control (Amendment) Act 2024"
+
+
+# --- SELF-EXCLUSION ---------------------------
+# NCPG-administered multi-tier exclusion system.
+
+self_exclusion:
+  singapore:
+    program_name: "NCPG Self-Exclusion"
+    administrator: "National Council on Problem Gambling (NCPG)"
+    portal: "https://ces.ncpg.org.sg/CES/public.do"
+    types:
+      - name: "Self-Exclusion"
+        duration: "Minimum 1 year"
+        scope: "All casinos, jackpot rooms, Singapore Pools online"
+        initiated_by: "Individual"
+        criminal_penalty: false
+      - name: "Voluntary Visit Limit"
+        duration: "Ongoing"
+        scope: "Limits casino visits per month"
+        initiated_by: "Individual"
+        criminal_penalty: false
+      - name: "Family Exclusion Order"
+        duration: "As determined by NCPG"
+        scope: "All casinos"
+        initiated_by: "Family member"
+        criminal_penalty: false
+      - name: "Family Visit Limit"
+        duration: "As determined by NCPG"
+        scope: "Limits casino visits per month"
+        initiated_by: "Family member"
+        criminal_penalty: true
+        penalty: "Up to S$10,000 fine or 12 months imprisonment or both"
+      - name: "Third-Party Exclusion Order"
+        duration: "As determined by NCPG"
+        scope: "All casinos"
+        initiated_by: "NCPG (without application)"
+        criminal_penalty: true
+        penalty: "Up to S$10,000 fine or 12 months imprisonment or both"
+      - name: "Exclusion by Law"
+        duration: "Duration of qualifying condition"
+        scope: "All casinos, jackpot rooms, Singapore Pools online"
+        initiated_by: "Automatic"
+        criminal_penalty: true
+        qualifying_conditions:
+          - "Undischarged bankrupts"
+          - "ComCare recipients (Public Assistance, Medium/Short Term)"
+          - "HDB Public Rental Scheme occupants/tenants"
+          - "Legal Aid Bureau recipients"

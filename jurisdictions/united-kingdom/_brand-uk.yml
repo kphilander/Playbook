@@ -1,0 +1,117 @@
+# _brand-uk.yml — United Kingdom Overrides
+# ================================================
+# This file contains UK-specific overrides for _brand.yml.
+# The UK is regulated nationally by the Gambling Commission
+# under the Gambling Act 2005 and LCCP. There are no
+# sub-jurisdictions — these values apply across England,
+# Scotland, Wales, and Northern Ireland.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in the United Kingdom. The UK has a
+#   single national regulatory framework, so one set of
+#   values covers the entire jurisdiction.
+#
+# See: jurisdictions/united-kingdom/README.md for the full UK module
+# ================================================
+
+
+# ─── HELPLINES ───────────────────────────────
+# National Gambling Helpline operated by GamCare.
+# GambleAware (www.begambleaware.org) is winding down by
+# March 2026 as the statutory levy system takes over.
+# GamCare continues as the primary helpline operator.
+
+helplines:
+  united-kingdom:
+    number: "0808 8020 133"
+    website: "www.gamcare.org.uk"
+    label: "National Gambling Helpline (GamCare)"
+    hours: "24/7"
+    languages:
+      - English
+    chat: "www.gamcare.org.uk"
+    whatsapp: "0808 8020 133"
+    notes: >
+      GamCare operates the National Gambling Helpline.
+      GambleAware (www.begambleaware.org) is winding down
+      by March 2026 as the UK transitions to the statutory
+      gambling levy system. The helpline number remains the
+      same. References to GambleAware should be reviewed
+      and updated as the transition completes.
+
+
+# ─── SELF-EXCLUSION ──────────────────────────
+# GAMSTOP is mandatory for all UK-licensed remote operators
+# under LCCP SR 3.5.5.
+
+self_exclusion:
+  united-kingdom:
+    name: "GAMSTOP"
+    url: "https://www.gamstop.co.uk"
+    scope: "All UK-licensed remote (online) gambling operators"
+    durations:
+      - "6 months"
+      - "1 year"
+      - "5 years"
+      - "5 years with auto-renewal"
+    notes: >
+      GAMSTOP covers remote gambling only. For premises-based
+      self-exclusion, each venue offers individual self-exclusion
+      (LCCP SR 3.5.1) and participates in multi-operator local
+      schemes (LCCP SR 3.5.6).
+
+
+# ─── AWARENESS ───────────────────────────────
+# GambleAware is transitioning to the statutory system.
+# Include both GambleAware and GamCare references during
+# the transition period.
+
+awareness:
+  united-kingdom:
+    name: "GambleAware"
+    url: "https://www.begambleaware.org"
+    transition_note: >
+      GambleAware will cease operations by 31 March 2026.
+      New statutory commissioners for research, prevention,
+      and treatment will take over under the Gambling Levy
+      Regulations 2025.
+
+
+# ─── LEGAL ───────────────────────────────────
+# 18+ for all gambling (16+ for lotteries and football pools).
+# Single national age — no variation by region or product
+# (except lottery).
+
+legal:
+  minimum_gambling_age:
+    united-kingdom: 18
+  minimum_lottery_age:
+    united-kingdom: 16
+
+
+# ─── MANDATORY MESSAGING ────────────────────
+# The UK has NO verbatim mandatory statement. Operators
+# must display responsible gambling information and helpline
+# details (LCCP SR 3.3.1) but the specific wording is
+# flexible.
+#
+# "When the fun stops, stop" and "BeGambleAware.org" are
+# widely used industry phrases but are NOT legally required.
+# {{PROGRAM_NAME}} operators can use their own messaging
+# as long as the obligation under SR 3.3.1 is met.
+
+# messaging:
+#   mandatory:
+#     united-kingdom: (none — no verbatim requirement)
+
+
+# ─── PRESENTATION ───────────────────────────
+# UK-specific display preferences.
+
+presentation:
+  odds_format: decimal       # UK uses decimal odds (e.g., 2.50) not American (+150)
+  currency: gbp              # British Pound Sterling
+  currency_symbol: "£"
+  language: en-gb            # British English (licence, behaviour, organisation)
+  sports_culture: football-premier-league

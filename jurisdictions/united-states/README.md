@@ -129,7 +129,7 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 | Alaska | — | 21 | No | No | No | No | No | Planned |
 | Arizona | ADG | 21 | Tribal | Legal | No | No | Yes | Planned |
 | Arkansas | ARC | 21 | Legal (4 casinos) | Legal | No | No | Yes | Planned |
-| California | CGCC | 21 (cardrooms), 18 (lottery/racing) | Tribal + cardrooms | No | No | No | Yes | Planned |
+| **California** | CGCC / Tribal Gaming Commissions | 21 (alcohol casinos), 18 (non-alcohol casinos/lottery/racing) | Tribal (66 casinos) + cardrooms | No | No | No | Yes | [Complete](california/) |
 | Colorado | DORA/DGE | 21 | Legal | Legal | No | No | Yes | Planned |
 | Connecticut | DCP | 21 | Tribal (2) | Legal | Legal | No | Yes | Planned |
 | Delaware | DLO | 21 | Legal (3 racinos) | Legal | Legal | Legal | Yes | Planned |
@@ -146,22 +146,22 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 | Maine | GSBME | 21 | Legal (2) | Legal | No | No | Yes | Planned |
 | Maryland | MLGCC | 21 | Legal (6) | Legal | No | No | Yes | Planned |
 | **Massachusetts** | MGC | 21 | Legal (3) | Legal | No | No | Yes | [Complete](massachusetts/) |
-| Michigan | MGCB | 21 | Legal (tribal + 3 commercial) | Legal | Legal | Legal | Yes | Planned |
+| **Michigan** | MGCB | 21 | Legal (tribal + 3 commercial) | Legal | Legal | Legal | Yes | [Complete](michigan/) |
 | Minnesota | MGRB | 18 (lottery/racing), 21 (tribal) | Tribal | No | No | No | Yes | Planned |
 | Mississippi | MGC | 21 | Legal | Legal (in-person) | No | No | Yes | Planned |
 | Missouri | MGC | 21 | Legal (13 riverboat) | No | No | No | Yes | Planned |
 | Montana | DOJ Gambling Control | 18 | Limited (tavern) | Legal (lottery-run) | No | No | Yes | Planned |
 | Nebraska | NGCC | 21 | Legal (6, new 2023+) | No | No | No | Yes | Planned |
 | New Hampshire | NHLC | 18 (lottery), 21 (casino) | Legal (2) | Legal | No | No | Yes | Planned |
-| New Jersey | DGE/CCC | 21 | Legal (9 Atlantic City) | Legal | Legal | Legal | Yes | Planned |
+| **New Jersey** | DGE/CCC | 21 | Legal (9 Atlantic City) | Legal | Legal | Legal | Yes | [Complete](new-jersey/) |
 | New Mexico | NGC | 21 | Tribal + racinos | No | No | No | Yes | Planned |
 | New York | NYGC | 21 (casinos), 18 (lottery/racing) | Legal (commercial + tribal) | Legal | Legal (2025+) | No | Yes | Planned |
 | North Carolina | NCGS / NCLC | 21 (casinos), 18 (lottery) | Tribal | Legal | No | No | Yes | Planned |
 | North Dakota | AG Office | 21 | Tribal | Legal | No | No | Yes | Planned |
-| Ohio | OCCC | 21 | Legal (4 + 7 racinos) | Legal | No | No | Yes | Planned |
+| **Ohio** | OCCC | 21 | Legal (4 + 7 racinos) | Legal | No | No | Yes | [Complete](ohio/) |
 | Oklahoma | OHRC | 18 (tribal/pari-mutuel) | Tribal | No | No | No | Yes | Planned |
 | Oregon | OLCC / OLC | 21 (tribal), 18 (lottery) | Tribal | Legal (lottery-run) | No | No | Yes | Planned |
-| Pennsylvania | PGCB | 21 | Legal (16 + mini-casinos) | Legal | Legal | Legal | Yes | Planned |
+| **Pennsylvania** | PGCB | 21 | Legal (16 + mini-casinos) | Legal | Legal | Legal | Yes | [Complete](pennsylvania/) |
 | Rhode Island | DBR | 18 | Legal (2) | Legal | Legal | No | Yes | Planned |
 | South Carolina | — | — (lottery only, 18) | No | No | No | No | Yes (education lottery) | Planned |
 | South Dakota | SDCGC | 21 | Legal (Deadwood + tribal) | Legal | No | No | Yes | Planned |

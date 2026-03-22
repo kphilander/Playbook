@@ -62,6 +62,66 @@ helplines:
       state_website: "gamesensema.com"
       notes: "Massachusetts operates its own state helpline separate from the NCPG national number. 205 CMR 256.06(2) requires this number in all sports wagering advertising using DPH-provided language."
 
+    california:
+      number: "1-800-GAMBLER"
+      text_number: "Text SUPPORT to 53342"
+      website: "calpg.org"
+      label: "California Council on Problem Gambling (CALPG)"
+      hours: "24/7"
+      cost: "Free"
+      state_resource: "California Office of Problem Gambling (CDPH)"
+      state_website: "cdph.ca.gov/Programs/OPG"
+      notes: "1-800-GAMBLER is staffed in California by CALPG with master's-level counselors (since 1998). NCPG national numbers (1-800-522-4700, 1-800-MY-RESET) also work. No online gambling or sports betting — tribal land-based casinos only."
+
+    new-jersey:
+      number: "1-800-GAMBLER"
+      number_numeric: "1-800-426-2537"
+      website: "800gambler.org"
+      label: "Council on Compulsive Gambling of New Jersey"
+      hours: "Mon-Fri 9am-5pm (office); 24/7 via NCPG national"
+      cost: "Free"
+      state_resource: "Council on Compulsive Gambling of New Jersey (CCGNJ)"
+      state_website: "800gambler.org"
+      notes: "NJ-specific helpline operated by CCGNJ. NCPG national resources (1-800-MY-RESET, text 800GAM, ncpgambling.org/chat) also available 24/7. NJAC 13:69O-1.2 prescribes verbatim message on internet gaming login/logout screens."
+
+    ohio:
+      number: "1-800-589-9966"
+      text_number: "Text 4hope to 741741"
+      chat_url: "gamblinghelpohio.org"
+      website: "gamblinghelpohio.org"
+      label: "Ohio Problem Gambling Helpline"
+      hours: "24/7"
+      cost: "Free"
+      state_resource: "Problem Gambling Network of Ohio (PGNO)"
+      state_website: "pgnohio.org"
+      telehealth: "Ohio Gambling Telehealth Network (OGTN) — ohiogtn.org"
+      vep: "Time Out Ohio — timeoutohio.com"
+      notes: "Ohio operates its own state helpline separate from the NCPG national number. NCPG national numbers (1-800-GAMBLER, 1-800-MY-RESET) also accepted in sports gaming ads per OAC 3775-16-08."
+
+    pennsylvania:
+      number: "1-800-GAMBLER"
+      website: "responsibleplay.pa.gov"
+      label: "Pennsylvania Problem Gambling Helpline"
+      hours: "24/7"
+      cost: "Free"
+      state_resource: "Council on Compulsive Gambling of Pennsylvania (CCGP)"
+      ocpg_contact: "(717) 346-8300"
+      ocpg_email: "problemgambling@pa.gov"
+      notes: "Pennsylvania requires 1-800-GAMBLER in all gaming ads (58 Pa. Code 501a.7(d)) and on all iGaming login/logout screens (58 Pa. Code 814a.1). OCPG within PGCB oversees responsible gambling programs."
+
+    michigan:
+      number: "1-800-GAMBLER"
+      alternate: "1-800-270-7117"
+      text_number: "Text 800GAM"
+      chat_url: "www.1800gamblerchat.org"
+      website: "www.ncpgambling.org"
+      label: "1-800-GAMBLER (routed to Michigan DHHS)"
+      hours: "24/7"
+      cost: "Free and confidential"
+      mgcb_rg_section: "888-223-3044"
+      campaign_site: "dontregretthebet.org"
+      notes: "MGCB adopted 1-800-GAMBLER as statewide helpline February 2024. Calls from Michigan routed to DHHS. Legacy MDHHS helpline 1-800-270-7117 remains operational."
+
 
 # ─── LEGAL ───────────────────────────────────
 # State minimum gambling ages.
@@ -73,6 +133,11 @@ legal:
   minimum_gambling_age:
     united-states-nevada: 21
     united-states-massachusetts: 21
+    united-states-california: 21  # Default to 21; ~43 of 63 casinos require 21+ (alcohol). ~20 admit 18+.
+    united-states-new-jersey: 21
+    united-states-ohio: 21
+    united-states-pennsylvania: 21
+    united-states-michigan: 21
 
 
 # ─── MANDATORY MESSAGING ────────────────────
@@ -97,3 +162,29 @@ messaging:
     # massachusetts-sports-ads: Obligation-based — must include MA Problem Gambling
     #   Helpline link and phone number per 205 CMR 256.06(2) with font size requirements
     #   per 205 CMR 256.06(4). DPH provides the language.
+    # california-general: (none — no verbatim requirement; obligation-based under
+    #   individual tribal-state compacts. Post-2011 compacts require responsible
+    #   gambling messages and helpline in advertising materials, but do not prescribe
+    #   exact text. Each tribal gaming commission may set additional requirements.)
+    united-states-new-jersey-online: |
+      If you or someone you know has a gambling problem
+      and wants help, call 1-800-Gambler.
+    united-states-new-jersey-advertising: |
+      Bet With Your Head, Not Over It.
+    # new-jersey-general: (obligation-based — must post RG info and helpline per
+    #   DGE Guidance; no verbatim requirement for land-based general signage)
+    # ohio-general: (none — no verbatim requirement; OAC 3772-12-06 requires signs
+    #   with gambling treatment info and voluntary exclusion, but does not prescribe
+    #   exact wording)
+    # ohio-sports-ads: Standard-based — must include problem gambling prevention
+    #   messages and helpline per OAC 3775-16-08 but exact text is not prescribed.
+    #   NCPG helpline or Ohio Problem Gambling Helpline (1-800-589-9966) accepted.
+    united-states-pennsylvania-igaming: |
+      IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM,
+      HELP IS AVAILABLE, CALL 1-800-GAMBLER
+    # pennsylvania-general: Obligation-based — all ads must include gambling
+    #   assistance message with DDAP helpline (1-800-GAMBLER) per 58 Pa. Code
+    #   501a.7(d). Font size standards: 2% print, 5% billboard, 2-8% video/TV.
+    # michigan-general: (none — no verbatim requirement; obligation-based approach)
+    # michigan-online: Standard-based — must display MGCB-approved RG logo, helpline
+    #   (1-800-GAMBLER), and link to MGCB website per R 432.654/R 432.754.
