@@ -1,0 +1,315 @@
+---
+/**
+ * SpotTheGap — Astro exercise component (no React)
+ * Shows 3 real-world RG content examples with clickable gap indicators.
+ * All data is hardcoded; no props required.
+ */
+---
+
+<div class="exercise-wrapper" id="stg-root">
+  <!-- Header -->
+  <div class="exercise-header flex items-center justify-between">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-teal/20 text-teal rounded-full text-xs font-heading font-bold uppercase tracking-wider">
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Interactive Exercise
+      </span>
+      <h3 class="text-white font-heading font-bold text-lg m-0">Spot the Gap</h3>
+    </div>
+    <!-- Example navigation tabs -->
+    <div class="flex items-center gap-2" id="stg-tabs">
+      <button class="stg-tab w-8 h-8 rounded-full text-xs font-heading font-bold transition-all bg-teal text-navy" data-index="0">1</button>
+      <button class="stg-tab w-8 h-8 rounded-full text-xs font-heading font-bold transition-all bg-navy-light text-white/60 hover:text-white" data-index="1">2</button>
+      <button class="stg-tab w-8 h-8 rounded-full text-xs font-heading font-bold transition-all bg-navy-light text-white/60 hover:text-white" data-index="2">3</button>
+    </div>
+  </div>
+
+  <div class="p-5 sm:p-6">
+    <!-- Example title -->
+    <p class="font-heading font-semibold text-navy text-lg mb-4" id="stg-title"></p>
+
+    <!-- Before / After cards -->
+    <div class="grid sm:grid-cols-2 gap-4 mb-6">
+      <div class="rounded-lg border-2 border-warning/40 bg-warning/5 p-4">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-warning mb-2">Before</span>
+        <p class="text-n700 text-sm leading-relaxed" id="stg-before"></p>
+      </div>
+      <div class="rounded-lg border-2 border-success/40 bg-success/5 p-4">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-success mb-2">After &mdash; Playbook</span>
+        <p class="text-n700 text-sm leading-relaxed" id="stg-after"></p>
+      </div>
+    </div>
+
+    <!-- Prompt -->
+    <p class="font-heading font-semibold text-n700 text-sm mb-3">
+      What&rsquo;s wrong in the Before version? Click each gap to reveal the explanation.
+    </p>
+
+    <!-- Gap items container -->
+    <div class="space-y-3 mb-4" id="stg-gaps"></div>
+
+    <!-- Score footer -->
+    <div class="flex items-center justify-between pt-3 border-t border-n100">
+      <span class="text-sm text-n500 font-heading" id="stg-score">0 of 3 gaps spotted</span>
+      <span class="text-sm font-heading font-bold text-teal-text hidden" id="stg-praise">Sharp eye.</span>
+    </div>
+
+    <!-- Skip -->
+    <button
+      id="stg-skip"
+      class="mt-3 text-xs text-n400 hover:text-n600 transition-colors underline"
+    >
+      Skip exercise &mdash; continue audio
+    </button>
+  </div>
+</div>
+
+<style>
+  .stg-gap-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #E8E8F0;
+    background: white;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .stg-gap-btn:not(.revealed):hover {
+    border-color: #00D4AA;
+    background: rgba(0, 212, 170, 0.05);
+  }
+  .stg-gap-btn:not(.revealed) .stg-circle {
+    animation: stg-pulse 2s ease-in-out infinite;
+  }
+  .stg-gap-btn.revealed {
+    border-color: rgba(0, 200, 83, 0.3);
+    background: rgba(0, 200, 83, 0.05);
+    cursor: default;
+  }
+  .stg-circle {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .stg-circle.empty { border: 2px solid #9CA3AF; }
+  .stg-circle.checked { background: #00C853; color: white; }
+  .stg-explanation {
+    margin-left: 2.25rem;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(0, 200, 83, 0.2);
+    padding-bottom: 0.25rem;
+  }
+  .stg-explanation p {
+    color: #4A4A5A;
+    font-size: 0.875rem;
+    line-height: 1.625;
+  }
+  @keyframes stg-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 212, 170, 0.4); }
+    50% { box-shadow: 0 0 0 6px rgba(0, 212, 170, 0); }
+  }
+  @keyframes stg-fade-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .stg-explanation { animation: stg-fade-in 0.25s ease-out; }
+</style>
+
+<script is:inline>
+  (function () {
+    var root = document.getElementById('stg-root');
+    if (!root) return;
+
+    var EXAMPLES = [
+      {
+        id: 'footer',
+        title: 'The Helpline Footer',
+        before: 'A tiny footer link in 10px gray text: "If you have a gambling problem, call 1-800-GAMBLER"',
+        after: 'A prominent footer strip with helpline number, chat link, and text option \u2014 visible on every page, accessible in one tap',
+        gaps: [
+          { id: 'visibility', label: 'Almost invisible', explanation: 'Tiny gray text that players will never see. Tier 2 accessibility means the helpline must be findable in one tap from any screen \u2014 not buried.' },
+          { id: 'framing', label: '\u201CGambling problem\u201D framing', explanation: '\u201CIf you have a gambling problem\u201D is stigmatizing. Playbook uses: \u201CSupport is here \u2014 call, chat, or text anytime.\u201D No labels, no judgment.' },
+          { id: 'options', label: 'Phone only', explanation: 'Many people \u2014 especially younger players \u2014 won\u2019t call. Offering chat and text dramatically increases accessibility.' }
+        ]
+      },
+      {
+        id: 'deposit',
+        title: 'The Deposit Screen',
+        before: 'Standard deposit form with amount field, payment method, and a "Gamble Responsibly" checkbox at the bottom',
+        after: 'Deposit form with an integrated budget setter: \u201CSet your weekly entertainment budget\u201D with a visual slider, plus a brief note on what the deposit limit does',
+        gaps: [
+          { id: 'checkbox', label: '\u201CGamble Responsibly\u201D checkbox', explanation: 'A checkbox nobody reads. It\u2019s compliance theater. Playbook replaces this with an actual tool prompt \u2014 setting a deposit limit \u2014 framed as a feature.' },
+          { id: 'noTool', label: 'No tool integration', explanation: 'The deposit moment is a NATURAL moment for budget-setting. Instead of a meaningless checkbox, prompt the player to set their entertainment budget.' },
+          { id: 'language', label: '\u201CGamble Responsibly\u201D language', explanation: '\u201CGamble Responsibly\u201D is a slogan, not information. It tells the player nothing useful. Playbook replaces slogans with tools and information.' }
+        ]
+      },
+      {
+        id: 'content',
+        title: 'The RG Content Page',
+        before: 'A page titled "Responsible Gambling" with 2000 words of legal text, links to external organizations, and a "Warning Signs" section listing clinical diagnostic criteria',
+        after: 'A content hub with quiz challenges, myth-busting articles, odds explainers, and tool setup guides \u2014 organized by topic, not by problem severity',
+        gaps: [
+          { id: 'wall', label: 'Wall of text', explanation: 'Nobody reads 2000 words of legal text. Playbook content is chunked, visual, interactive, and designed to be actually engaging.' },
+          { id: 'clinical', label: 'Clinical \u201Cwarning signs\u201D', explanation: 'Listing DSM diagnostic criteria on a gambling site helps nobody. Players don\u2019t self-diagnose from clinical checklists. Playbook uses behavioral descriptions: \u201Cspending more than you planned\u201D not \u201Cpersistent and recurrent problematic gambling behavior.\u201D' },
+          { id: 'deficit', label: 'Only deficit-focused', explanation: 'The entire page is about problems. Where\u2019s the 95% Tier 1 content? Where\u2019s the odds literacy, myth-busting, and tool education that serves the majority?' }
+        ]
+      }
+    ];
+
+    var currentExample = 0;
+    // revealedGaps: { exampleId: { gapId: true } }
+    var revealedGaps = {};
+    var exerciseDispatched = false;
+
+    var titleEl = document.getElementById('stg-title');
+    var beforeEl = document.getElementById('stg-before');
+    var afterEl = document.getElementById('stg-after');
+    var gapsEl = document.getElementById('stg-gaps');
+    var scoreEl = document.getElementById('stg-score');
+    var praiseEl = document.getElementById('stg-praise');
+    var tabs = root.querySelectorAll('.stg-tab');
+    var skipBtn = document.getElementById('stg-skip');
+
+    function getRevealed(exId) {
+      if (!revealedGaps[exId]) revealedGaps[exId] = {};
+      return revealedGaps[exId];
+    }
+
+    function countRevealed(exId) {
+      var r = revealedGaps[exId];
+      if (!r) return 0;
+      var c = 0;
+      for (var k in r) { if (r.hasOwnProperty(k)) c++; }
+      return c;
+    }
+
+    function allComplete() {
+      for (var i = 0; i < EXAMPLES.length; i++) {
+        if (countRevealed(EXAMPLES[i].id) < EXAMPLES[i].gaps.length) return false;
+      }
+      return true;
+    }
+
+    function render() {
+      var ex = EXAMPLES[currentExample];
+      var rev = getRevealed(ex.id);
+      var found = countRevealed(ex.id);
+      var total = ex.gaps.length;
+
+      titleEl.textContent = ex.title;
+      beforeEl.textContent = ex.before;
+      afterEl.textContent = ex.after;
+
+      // Update tabs
+      for (var t = 0; t < tabs.length; t++) {
+        var tab = tabs[t];
+        if (t === currentExample) {
+          tab.className = 'stg-tab w-8 h-8 rounded-full text-xs font-heading font-bold transition-all bg-teal text-navy';
+        } else {
+          tab.className = 'stg-tab w-8 h-8 rounded-full text-xs font-heading font-bold transition-all bg-navy-light text-white/60 hover:text-white';
+        }
+      }
+
+      // Build gap buttons
+      gapsEl.innerHTML = '';
+      for (var g = 0; g < ex.gaps.length; g++) {
+        var gap = ex.gaps[g];
+        var isRevealed = !!rev[gap.id];
+
+        var wrapper = document.createElement('div');
+
+        var btn = document.createElement('button');
+        btn.className = 'stg-gap-btn' + (isRevealed ? ' revealed' : '');
+        btn.setAttribute('data-gap-id', gap.id);
+        btn.setAttribute('aria-expanded', isRevealed ? 'true' : 'false');
+
+        // Circle
+        var circle = document.createElement('span');
+        circle.className = 'stg-circle ' + (isRevealed ? 'checked' : 'empty');
+        if (isRevealed) {
+          circle.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>';
+        }
+        btn.appendChild(circle);
+
+        // Label
+        var label = document.createElement('span');
+        label.className = 'font-heading font-semibold ' + (isRevealed ? 'text-success' : 'text-navy');
+        label.textContent = gap.label;
+        btn.appendChild(label);
+
+        wrapper.appendChild(btn);
+
+        // Explanation
+        if (isRevealed) {
+          var expDiv = document.createElement('div');
+          expDiv.className = 'stg-explanation';
+          expDiv.setAttribute('aria-live', 'polite');
+          var expP = document.createElement('p');
+          expP.textContent = gap.explanation;
+          expDiv.appendChild(expP);
+          wrapper.appendChild(expDiv);
+        }
+
+        gapsEl.appendChild(wrapper);
+      }
+
+      // Score
+      scoreEl.textContent = found + ' of ' + total + ' gaps spotted';
+
+      // Praise
+      if (found === total) {
+        praiseEl.classList.remove('hidden');
+      } else {
+        praiseEl.classList.add('hidden');
+      }
+
+      // Dispatch completion
+      if (allComplete() && !exerciseDispatched) {
+        exerciseDispatched = true;
+        window.dispatchEvent(new CustomEvent('exercise-complete'));
+      }
+    }
+
+    // Tab clicks
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].addEventListener('click', function () {
+        currentExample = parseInt(this.getAttribute('data-index'), 10);
+        render();
+      });
+    }
+
+    // Gap clicks (delegated)
+    gapsEl.addEventListener('click', function (e) {
+      var btn = e.target.closest('.stg-gap-btn');
+      if (!btn || btn.classList.contains('revealed')) return;
+      var gapId = btn.getAttribute('data-gap-id');
+      var ex = EXAMPLES[currentExample];
+      getRevealed(ex.id)[gapId] = true;
+      render();
+    });
+
+    // Skip
+    if (skipBtn) {
+      skipBtn.addEventListener('click', function () {
+        window.dispatchEvent(new CustomEvent('exercise-complete'));
+      });
+    }
+
+    // Initial render
+    render();
+  })();
+</script>

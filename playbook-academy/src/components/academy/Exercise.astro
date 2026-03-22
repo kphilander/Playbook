@@ -1,0 +1,39 @@
+---
+interface Props {
+  name: string;
+  type: string;
+  instructions: string;
+}
+
+const { name, type, instructions } = Astro.props;
+---
+
+<div class="exercise-wrapper">
+  <div class="exercise-header flex items-center justify-between flex-wrap gap-2">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-teal/20 text-teal rounded-full text-xs font-heading font-bold uppercase tracking-wider">
+        <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Interactive Exercise
+      </span>
+      <h3 class="text-white font-heading font-bold text-lg m-0">{name}</h3>
+    </div>
+    <span class="px-2.5 py-0.5 bg-white/10 text-white/70 rounded-full text-xs font-heading font-semibold uppercase tracking-wider">
+      {type}
+    </span>
+  </div>
+
+  <div class="p-5 sm:p-6">
+    {instructions && (
+      <div class="mb-5 p-4 rounded-lg bg-n50 dark:bg-navy-light/50 border border-n100 dark:border-navy-light">
+        <p class="text-sm text-n700 dark:text-n300 font-body leading-relaxed">
+          <span class="font-heading font-semibold text-navy dark:text-white">Instructions: </span>
+          {instructions}
+        </p>
+      </div>
+    )}
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,337 @@
+---
+import Exercise from '../Exercise.astro';
+
+interface DragItem {
+  content: string;
+  correctCategory: string;
+  feedbackCorrect: string;
+  feedbackIncorrect: string;
+}
+
+interface Props {
+  items: DragItem[];
+  categories: string[];
+}
+
+const { items, categories } = Astro.props;
+
+// Shuffle items for display (deterministic based on content length as seed)
+const shuffledItems = [...items].sort((a, b) => a.content.localeCompare(b.content));
+---
+
+<Exercise
+  name="Categorization Exercise"
+  type="Drag & Drop"
+  instructions="Drag each item to the correct category. On mobile, tap an item then tap the category where it belongs."
+>
+  <div
+    id="dragdrop-exercise"
+    data-items={JSON.stringify(items)}
+    data-categories={JSON.stringify(categories)}
+  >
+    <!-- Score tracker -->
+    <div class="flex items-center justify-between mb-5">
+      <div class="text-sm text-n500 dark:text-n400 font-heading" id="dd-score" aria-live="polite">
+        0 of {items.length} placed
+      </div>
+      <button
+        id="dd-reset"
+        class="hidden text-sm text-teal hover:text-teal-dark font-heading font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 dark:focus:ring-offset-navy rounded px-2 py-1"
+        aria-label="Reset exercise"
+      >
+        Reset
+      </button>
+    </div>
+
+    <!-- Items pool -->
+    <div class="mb-6">
+      <p class="text-xs font-heading font-semibold uppercase tracking-wider text-n500 dark:text-n300 mb-3">Items to categorize</p>
+      <div id="dd-items-pool" class="flex flex-wrap gap-2" role="listbox" aria-label="Items to categorize">
+        {shuffledItems.map((item, i) => (
+          <div
+            class="dd-item inline-flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-n100 dark:border-navy-light bg-white dark:bg-navy text-sm font-body text-n700 dark:text-n300 cursor-grab active:cursor-grabbing select-none transition-all hover:border-teal hover:shadow-sm"
+            draggable="true"
+            data-item-index={i}
+            data-content={item.content}
+            data-correct-category={item.correctCategory}
+            data-feedback-correct={item.feedbackCorrect}
+            data-feedback-incorrect={item.feedbackIncorrect}
+            role="option"
+            tabindex="0"
+            aria-label={item.content + '. Drag to a category or tap to select.'}
+          >
+            <svg class="w-3.5 h-3.5 text-n300 dark:text-n500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+            <span>{item.content}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Category drop zones -->
+    <div class="grid gap-4" style={`grid-template-columns: repeat(${Math.min(categories.length, 3)}, 1fr);`}>
+      {categories.map((cat) => (
+        <div
+          class="dd-category rounded-xl border-2 border-dashed border-n200 dark:border-navy-light bg-n50/50 dark:bg-navy-dark/50 min-h-[120px] p-3 transition-colors"
+          data-category={cat}
+          role="region"
+          aria-label={'Drop zone: ' + cat}
+        >
+          <p class="text-xs font-heading font-bold uppercase tracking-wider text-navy dark:text-white mb-3 text-center pb-2 border-b border-n100 dark:border-navy-light">
+            {cat}
+          </p>
+          <div class="dd-category-items space-y-2" data-category-items={cat}></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Feedback toast -->
+    <div
+      id="dd-feedback"
+      class="hidden fixed bottom-20 left-1/2 -translate-x-1/2 max-w-sm w-[90vw] rounded-lg shadow-lg p-4 text-sm z-50 transition-all"
+      role="alert"
+      aria-live="assertive"
+    >
+      <p class="font-heading font-semibold mb-0.5" id="dd-feedback-label"></p>
+      <p class="font-body leading-relaxed" id="dd-feedback-text"></p>
+    </div>
+
+    <!-- Completion message -->
+    <div id="dd-complete" class="hidden mt-6 text-center py-6 rounded-xl bg-success/10 border border-success/20">
+      <svg class="w-12 h-12 text-success mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <p class="font-heading font-bold text-lg text-navy dark:text-white mb-1">Exercise Complete!</p>
+      <p class="text-sm text-n700 dark:text-n300 font-body" id="dd-final-score"></p>
+    </div>
+  </div>
+</Exercise>
+
+<style>
+  .dd-item.selected {
+    border-color: #00D4AA;
+    background: rgba(0, 212, 170, 0.08);
+    box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.15);
+  }
+  .dd-category.drag-over {
+    border-color: #00D4AA;
+    background: rgba(0, 212, 170, 0.05);
+    border-style: solid;
+  }
+  .dd-item.placed-correct {
+    border-color: #00C853;
+    background: rgba(0, 200, 83, 0.08);
+    cursor: default;
+    opacity: 0.8;
+  }
+  .dd-item.placed-incorrect {
+    border-color: #FF3D00;
+    background: rgba(255, 61, 0, 0.08);
+    cursor: default;
+    opacity: 0.8;
+  }
+  .dd-item.placed-correct svg, .dd-item.placed-incorrect svg { display: none; }
+</style>
+
+<script is:inline>
+  (function() {
+    var container = document.getElementById('dragdrop-exercise');
+    if (!container) return;
+
+    var items = JSON.parse(container.dataset.items || '[]');
+    var total = items.length;
+    var correctCount = 0;
+    var placedCount = 0;
+    var selectedItem = null;
+    var feedbackTimer = null;
+
+    var pool = document.getElementById('dd-items-pool');
+    var scoreEl = document.getElementById('dd-score');
+    var resetBtn = document.getElementById('dd-reset');
+    var feedbackEl = document.getElementById('dd-feedback');
+    var feedbackLabel = document.getElementById('dd-feedback-label');
+    var feedbackText = document.getElementById('dd-feedback-text');
+    var completeEl = document.getElementById('dd-complete');
+    var finalScoreEl = document.getElementById('dd-final-score');
+
+    function updateScore() {
+      if (scoreEl) scoreEl.textContent = placedCount + ' of ' + total + ' placed (' + correctCount + ' correct)';
+    }
+
+    function showFeedback(isCorrect, text) {
+      if (!feedbackEl) return;
+      clearTimeout(feedbackTimer);
+      feedbackEl.classList.remove('hidden');
+      feedbackEl.className = 'fixed bottom-20 left-1/2 -translate-x-1/2 max-w-sm w-[90vw] rounded-lg shadow-lg p-4 text-sm z-50 transition-all ' +
+        (isCorrect ? 'bg-success/10 border border-success/20' : 'bg-danger/10 border border-danger/20');
+      if (feedbackLabel) {
+        feedbackLabel.textContent = isCorrect ? 'Correct!' : 'Not quite';
+        feedbackLabel.className = 'font-heading font-semibold mb-0.5 ' + (isCorrect ? 'text-success' : 'text-danger');
+      }
+      if (feedbackText) feedbackText.textContent = text;
+      feedbackTimer = setTimeout(function() {
+        feedbackEl.classList.add('hidden');
+      }, 3000);
+    }
+
+    function placeItem(itemEl, categoryEl) {
+      var correctCat = itemEl.dataset.correctCategory;
+      var targetCat = categoryEl.dataset.category;
+      var isCorrect = correctCat === targetCat;
+
+      placedCount++;
+      if (isCorrect) correctCount++;
+
+      // Move the item to the category
+      var catItems = categoryEl.querySelector('[data-category-items]');
+      if (catItems) {
+        var clone = itemEl.cloneNode(true);
+        clone.setAttribute('draggable', 'false');
+        clone.classList.remove('hover:border-teal', 'hover:shadow-sm', 'cursor-grab', 'active:cursor-grabbing', 'selected');
+        clone.classList.add(isCorrect ? 'placed-correct' : 'placed-incorrect');
+        clone.removeAttribute('tabindex');
+        clone.setAttribute('aria-label', itemEl.dataset.content + (isCorrect ? ' - correctly placed' : ' - incorrectly placed'));
+        catItems.appendChild(clone);
+      }
+
+      // Remove from pool
+      itemEl.remove();
+
+      // Show feedback
+      showFeedback(isCorrect, isCorrect ? itemEl.dataset.feedbackCorrect : itemEl.dataset.feedbackIncorrect);
+      updateScore();
+
+      // Show reset button after first placement
+      if (resetBtn) resetBtn.classList.remove('hidden');
+
+      // Check completion
+      if (placedCount === total) {
+        if (completeEl) completeEl.classList.remove('hidden');
+        if (finalScoreEl) finalScoreEl.textContent = correctCount + ' of ' + total + ' correct (' + Math.round((correctCount / total) * 100) + '%)';
+      }
+
+      selectedItem = null;
+    }
+
+    // --- Drag and Drop (desktop) ---
+    container.addEventListener('dragstart', function(e) {
+      var item = e.target.closest('.dd-item');
+      if (!item || item.classList.contains('placed-correct') || item.classList.contains('placed-incorrect')) return;
+      e.dataTransfer.setData('text/plain', item.dataset.itemIndex);
+      e.dataTransfer.effectAllowed = 'move';
+      item.style.opacity = '0.5';
+    });
+
+    container.addEventListener('dragend', function(e) {
+      var item = e.target.closest('.dd-item');
+      if (item) item.style.opacity = '';
+    });
+
+    container.querySelectorAll('.dd-category').forEach(function(cat) {
+      cat.addEventListener('dragover', function(e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        cat.classList.add('drag-over');
+      });
+
+      cat.addEventListener('dragleave', function() {
+        cat.classList.remove('drag-over');
+      });
+
+      cat.addEventListener('drop', function(e) {
+        e.preventDefault();
+        cat.classList.remove('drag-over');
+        var index = e.dataTransfer.getData('text/plain');
+        var itemEl = pool.querySelector('[data-item-index="' + index + '"]');
+        if (itemEl) placeItem(itemEl, cat);
+      });
+    });
+
+    // --- Tap to select (mobile-friendly) ---
+    container.addEventListener('click', function(e) {
+      var item = e.target.closest('.dd-item');
+      var category = e.target.closest('.dd-category');
+
+      // If clicking an item in the pool
+      if (item && pool.contains(item) && !item.classList.contains('placed-correct') && !item.classList.contains('placed-incorrect')) {
+        // Deselect previous
+        if (selectedItem) selectedItem.classList.remove('selected');
+        // Select this one
+        if (selectedItem === item) {
+          selectedItem = null;
+        } else {
+          selectedItem = item;
+          item.classList.add('selected');
+        }
+        return;
+      }
+
+      // If clicking a category and we have a selected item
+      if (category && selectedItem) {
+        placeItem(selectedItem, category);
+      }
+    });
+
+    // Keyboard support
+    container.addEventListener('keydown', function(e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var item = e.target.closest('.dd-item');
+      var category = e.target.closest('.dd-category');
+
+      if (item && pool.contains(item)) {
+        e.preventDefault();
+        if (selectedItem) selectedItem.classList.remove('selected');
+        if (selectedItem === item) {
+          selectedItem = null;
+        } else {
+          selectedItem = item;
+          item.classList.add('selected');
+        }
+      } else if (category && selectedItem) {
+        e.preventDefault();
+        placeItem(selectedItem, category);
+      }
+    });
+
+    // Reset button
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        correctCount = 0;
+        placedCount = 0;
+        selectedItem = null;
+
+        // Remove placed items from categories
+        container.querySelectorAll('[data-category-items]').forEach(function(ci) {
+          ci.innerHTML = '';
+        });
+
+        // Re-populate pool
+        pool.innerHTML = '';
+        var allItems = container.querySelectorAll ? items : [];
+        items.forEach(function(item, i) {
+          var el = document.createElement('div');
+          el.className = 'dd-item inline-flex items-center gap-2 px-3 py-2 rounded-lg border-2 border-n100 dark:border-navy-light bg-white dark:bg-navy text-sm font-body text-n700 dark:text-n300 cursor-grab active:cursor-grabbing select-none transition-all hover:border-teal hover:shadow-sm';
+          el.setAttribute('draggable', 'true');
+          el.dataset.itemIndex = i;
+          el.dataset.content = item.content;
+          el.dataset.correctCategory = item.correctCategory;
+          el.dataset.feedbackCorrect = item.feedbackCorrect;
+          el.dataset.feedbackIncorrect = item.feedbackIncorrect;
+          el.setAttribute('role', 'option');
+          el.setAttribute('tabindex', '0');
+          el.setAttribute('aria-label', item.content + '. Drag to a category or tap to select.');
+          el.innerHTML = '<svg class="w-3.5 h-3.5 text-n300 dark:text-n500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16"/></svg><span>' + item.content + '</span>';
+          pool.appendChild(el);
+        });
+
+        // Hide completion
+        if (completeEl) completeEl.classList.add('hidden');
+        resetBtn.classList.add('hidden');
+        updateScore();
+      });
+    }
+
+    updateScore();
+  })();
+</script>

@@ -1,32 +1,18 @@
 {
   "name": "playbook-academy",
   "type": "module",
-  "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playbook Academy — LMS training curriculum for operator staff",
   "scripts": {
-    "dev": "astro dev --port 4000",
+    "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.0",
-    "@astrojs/react": "^5.0.0",
-    "@tailwindcss/vite": "^4.2.1",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "astro": "^6.0.4",
-    "docx": "^9.6.1",
-    "framer-motion": "^12.37.0",
-    "jspdf": "^4.2.0",
-    "lucide-react": "^0.577.0",
-    "node-edge-tts": "^1.2.10",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "recharts": "^3.8.0",
-    "reveal.js": "^6.0.0",
-    "tailwindcss": "^4.2.1"
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^6.0.8",
+    "edge-tts": "^1.0.1",
+    "tailwindcss": "^3.4.19"
   }
 }
