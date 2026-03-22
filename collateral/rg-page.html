@@ -2290,6 +2290,103 @@ body.demo-mode .demo-banner { display: block; }
   .demo-intro-shade .intro-card { margin: 0 20px; padding: 24px 28px; }
   .demo-hotspot.active-step[data-demo-index="0"]::after { left: auto; right: calc(100% + 8px); }
   .demo-overlay-nav button { padding: 6px 12px; font-size: 0.78rem; }
+  .demo-link-card { padding: 28px 24px 24px; }
+  .demo-link-card h4 { font-size: 1.05rem; }
+}
+
+/* ---- Demo Link Explanation Popup ---- */
+.demo-link-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+}
+.demo-link-shade.visible { pointer-events: auto; }
+.demo-link-shade.shown { opacity: 1; }
+
+.demo-link-card {
+  position: fixed;
+  z-index: 10001;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: min(440px, calc(100vw - 40px));
+  background: #1B2838;
+  border: 1px solid rgba(0, 212, 170, 0.3);
+  border-radius: 16px;
+  padding: 32px 28px 28px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.3), 0 24px 80px rgba(0,0,0,0.5), 0 0 40px rgba(0,212,170,0.08);
+  opacity: 0;
+  transition: opacity 250ms ease, transform 250ms ease;
+  pointer-events: none;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.demo-link-card.visible { pointer-events: auto; }
+.demo-link-card.shown { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+
+.demo-link-card-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #6B8299;
+  font-size: 1.4rem;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 150ms ease, color 150ms ease;
+}
+.demo-link-card-close:hover { background: rgba(255,255,255,0.08); color: #fff; }
+
+.demo-link-card-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00D4AA;
+  margin-bottom: 10px;
+}
+.demo-link-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.demo-link-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: #9AA8B8;
+  margin-bottom: 0;
+}
+.demo-link-card-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.demo-link-card-section p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #9AA8B8;
+}
+.demo-link-card-section code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.82rem;
+  background: rgba(0,212,170,0.1);
+  color: #00D4AA;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 </style>
 
@@ -2323,6 +2420,19 @@ body.demo-mode .demo-banner { display: block; }
   <span class="demo-toggle-dot"></span>
   Operator Demo
 </button>
+
+<!-- Demo Link Explanation Popup -->
+<div class="demo-link-shade" id="linkShade"></div>
+<div class="demo-link-card" id="linkCard" role="dialog" aria-modal="true">
+  <button class="demo-link-card-close" id="linkCardClose" aria-label="Close">&times;</button>
+  <div class="demo-link-card-badge" id="linkCardBadge"></div>
+  <h4 id="linkCardTitle"></h4>
+  <p class="demo-link-card-desc" id="linkCardDesc"></p>
+  <div class="demo-link-card-section">
+    <div class="demo-overlay-section-label">How to Customize</div>
+    <p id="linkCardCustomize"></p>
+  </div>
+</div>
 
 <script>
 (function() {
@@ -2660,6 +2770,116 @@ body.demo-mode .demo-banner { display: block; }
   introBtn.addEventListener('click', dismissIntro);
   introShade.addEventListener('click', function(e) {
     if (e.target === introShade) dismissIntro();
+  });
+})();
+</script>
+
+<!-- Template-link explanation popups -->
+<script>
+(function() {
+  'use strict';
+
+  var linkInfo = {
+    'HELPLINE_NUMBER': {
+      title: 'Helpline Phone Number',
+      badge: 'Helpline',
+      desc: 'This calls your jurisdiction\u2019s problem gambling helpline \u2014 a free, confidential support line available 24/7.',
+      customize: 'Replace <code>{{HELPLINE_NUMBER}}</code> with your local helpline (e.g., 1-800-522-4700 in the US, 1-800-463-1554 in Canada).'
+    },
+    'CHAT_URL': {
+      title: 'Live Chat Support',
+      badge: 'Support Channel',
+      desc: 'Opens your organization\u2019s live chat support service for immediate, text-based counseling.',
+      customize: 'Replace <code>{{CHAT_URL}}</code> with your chat platform URL (e.g., ncpgambling.org/chat).'
+    },
+    'TEXT_NUMBER': {
+      title: 'Text Support Line',
+      badge: 'Support Channel',
+      desc: 'Sends a text message to your jurisdiction\u2019s problem gambling text support line.',
+      customize: 'Replace <code>{{TEXT_NUMBER}}</code> with your SMS support number (e.g., 800-522-4700 in the US).'
+    },
+    'LIMITS_URL': {
+      title: 'Player Limits & Controls',
+      badge: 'Player Tools',
+      desc: 'Links to your platform\u2019s responsible gambling settings page where players can configure deposit limits, session timers, loss limits, and other controls.',
+      customize: 'Replace <code>{{LIMITS_URL}}</code> with your platform\u2019s RG tools or account settings URL.'
+    },
+    'SELF_EXCLUSION_URL': {
+      title: 'Self-Exclusion Program',
+      badge: 'Harm Reduction',
+      desc: 'Takes the player to your self-exclusion enrollment page, where they can voluntarily suspend their account for a chosen period.',
+      customize: 'Replace <code>{{SELF_EXCLUSION_URL}}</code> with your self-exclusion program\u2019s enrollment page.'
+    },
+    'SUPPORT_ORG_URL': {
+      title: 'Support Organization',
+      badge: 'External Resource',
+      desc: 'Links to your jurisdiction\u2019s primary problem gambling support organization for counseling, resources, and referrals.',
+      customize: 'Replace <code>{{SUPPORT_ORG_URL}}</code> and <code>{{SUPPORT_ORG_NAME}}</code> with your local organization\u2019s details.'
+    },
+    'WEBSITE': {
+      title: 'Operator Website',
+      badge: 'Navigation',
+      desc: 'Links back to your main website or homepage.',
+      customize: 'Replace <code>{{WEBSITE}}</code> with your organization\u2019s URL.'
+    }
+  };
+
+  var shade = document.getElementById('linkShade');
+  var card = document.getElementById('linkCard');
+  var closeBtn = document.getElementById('linkCardClose');
+  var badgeEl = document.getElementById('linkCardBadge');
+  var titleEl = document.getElementById('linkCardTitle');
+  var descEl = document.getElementById('linkCardDesc');
+  var customizeEl = document.getElementById('linkCardCustomize');
+
+  function showLinkPopup(info) {
+    badgeEl.textContent = info.badge;
+    titleEl.textContent = info.title;
+    descEl.textContent = info.desc;
+    customizeEl.innerHTML = info.customize;
+
+    shade.classList.add('visible');
+    card.classList.add('visible');
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        shade.classList.add('shown');
+        card.classList.add('shown');
+      });
+    });
+  }
+
+  function hideLinkPopup() {
+    shade.classList.remove('shown');
+    card.classList.remove('shown');
+    setTimeout(function() {
+      shade.classList.remove('visible');
+      card.classList.remove('visible');
+    }, 250);
+  }
+
+  // Intercept clicks on any link whose href contains a template placeholder
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a');
+    if (!link) return;
+
+    var href = link.getAttribute('href') || '';
+    var keys = Object.keys(linkInfo);
+    for (var i = 0; i < keys.length; i++) {
+      if (href.indexOf('{{' + keys[i] + '}}') !== -1) {
+        e.preventDefault();
+        e.stopPropagation();
+        showLinkPopup(linkInfo[keys[i]]);
+        return;
+      }
+    }
+  });
+
+  closeBtn.addEventListener('click', hideLinkPopup);
+  shade.addEventListener('click', hideLinkPopup);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && card.classList.contains('visible')) {
+      hideLinkPopup();
+    }
   });
 })();
 </script>
