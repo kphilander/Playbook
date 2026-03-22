@@ -1,0 +1,841 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import LessonPaginator from '../components/LessonPaginator.tsx';
+import AudioPlayer from '../components/AudioPlayer.tsx';
+import TranscriptDrawer from '../components/TranscriptDrawer.tsx';
+import moduleThemes from '../data/module-themes.json';
+import { MODULE_IDS, LESSON_MAP, MODULE_TITLES, LESSON_TITLES } from '../lib/progress';
+
+interface AudioTrack {
+  slideIndex: number;
+  src: string;
+  transcript: string;
+  duration?: number;
+}
+
+interface ModuleInfo {
+  id: string;
+  number: number;
+  title: string;
+  duration: string;
+  lessons: { title: string; slug: string }[];
+}
+
+interface Props {
+  module: ModuleInfo;
+  currentLesson?: number;
+  panelMode?: boolean;
+  tracks?: AudioTrack[];
+}
+
+const MODULE_DURATIONS: Record<string, string> = {
+  '1-rg-foundations': '20 min',
+  '2-visual-identity': '20 min',
+  '3-voice-and-tone': '25 min',
+  '4-player-segmentation': '20 min',
+  '5-customer-journey': '25 min',
+  '6-measuring-success': '20 min',
+};
+
+// Derive modules from the canonical data in progress.ts — single source of truth
+const modules: ModuleInfo[] = MODULE_IDS.map((id, i) => ({
+  id,
+  number: i + 1,
+  title: MODULE_TITLES[id],
+  duration: MODULE_DURATIONS[id] || '20 min',
+  lessons: LESSON_MAP[id].map(slug => ({
+    title: LESSON_TITLES[id]?.[slug] || slug,
+    slug,
+  })),
+}));
+
+const { module, currentLesson = 0, panelMode = false, tracks = [] } = Astro.props;
+const theme = moduleThemes.find((t: any) => t.id === module.id);
+const currentModuleIndex = modules.findIndex(m => m.id === module.id);
+const prevModule = currentModuleIndex > 0 ? modules[currentModuleIndex - 1] : null;
+const nextModule = currentModuleIndex < modules.length - 1 ? modules[currentModuleIndex + 1] : null;
+
+/* ── Map Tailwind gradient classes to inline CSS gradients ── */
+const colorMap: Record<string, string> = {
+  'navy':       '#1B2838',
+  'navy-light': '#2A3F56',
+  'navy-dark':  '#0F1923',
+};
+
+function resolveColor(token: string): string {
+  // Handle Tailwind arbitrary values like [#1a3045]
+  if (token.startsWith('[') && token.endsWith(']')) {
+    return token.slice(1, -1);
+  }
+  return colorMap[token] || '#1B2838';
+}
+
+function buildGradient(tw: string): string {
+  const parts = tw.split(/\s+/);
+  let from = '#1B2838', via = '', to = '#0F1923';
+  for (const p of parts) {
+    if (p.startsWith('from-')) from = resolveColor(p.replace('from-', ''));
+    else if (p.startsWith('via-')) via = resolveColor(p.replace('via-', ''));
+    else if (p.startsWith('to-')) to = resolveColor(p.replace('to-', ''));
+  }
+  if (via) {
+    return `linear-gradient(135deg, ${from} 0%, ${via} 50%, ${to} 100%)`;
+  }
+  return `linear-gradient(135deg, ${from} 0%, ${to} 100%)`;
+}
+
+const accentColorMap: Record<string, { main: string; dark: string; glow: string }> = {
+  teal:   { main: '#00D4AA', dark: '#00A888', glow: 'rgba(0, 212, 170, 0.15)' },
+  orange: { main: '#FF6B35', dark: '#E55A2B', glow: 'rgba(255, 107, 53, 0.15)' },
+};
+
+const heroGradientCSS = theme?.heroGradient ? buildGradient(theme.heroGradient) : 'linear-gradient(135deg, #1B2838 0%, #0F1923 100%)';
+const accent = accentColorMap[theme?.accentColor || 'teal'] || accentColorMap.teal;
+
+/* ── SVG icons keyed by theme icon name ── */
+const iconSVGs: Record<string, string> = {
+  'shield':         '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  'message-circle': '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>',
+  'users':          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>',
+  'palette':        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-1 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-5.17-4.49-9-10-9z"/><circle cx="7.5" cy="11.5" r="1.5" fill="currentColor"/><circle cx="10.5" cy="7.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="7.5" r="1.5" fill="currentColor"/><circle cx="18" cy="11.5" r="1.5" fill="currentColor"/>',
+  'map':            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4zM8 2v16M16 6v16"/>',
+  'zap':            '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>',
+  'rocket':         '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09zM12 15l-3-3M22 2l-7.5 7.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.13 11.87a6.27 6.27 0 018.87-8.87l.27.27a6.27 6.27 0 010 8.87L15 15l-3-3-2.87-0.13z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 15l3 3M9 12l-3-3"/>',
+  'bar-chart':      '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 20V10M18 20V4M6 20v-4"/>',
+};
+
+const iconPath = iconSVGs[theme?.icon || 'shield'] || iconSVGs['shield'];
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const nextModulePrefetch = nextModule ? `${base}/modules/${nextModule.id}` : null;
+---
+
+<BaseLayout title={`Module ${module.number}: ${module.title}`}>
+  {nextModulePrefetch && <link rel="prefetch" href={nextModulePrefetch} slot="head" />}
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex gap-8">
+      <!-- Sidebar (desktop) — menu bar style -->
+      <aside class="hidden lg:block shrink-0 transition-all duration-300" id="desktop-sidebar" style="width: 16rem;">
+        <div class="sticky top-24" id="sidebar-nav">
+          <!-- Menu header with collapse toggle -->
+          <button
+            id="sidebar-collapse-toggle"
+            class="w-full flex items-center justify-between px-3 py-2.5 rounded-t-lg bg-navy text-white font-heading text-xs font-bold uppercase tracking-wider hover:bg-navy-light transition-colors"
+            aria-label="Toggle sidebar"
+          >
+            <span class="sidebar-text" id="sidebar-collapse-label">Modules</span>
+            <svg class="w-4 h-4 transition-transform" id="sidebar-collapse-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <!-- Module list -->
+          <nav class="bg-white border border-t-0 border-n200 rounded-b-lg shadow-sm overflow-hidden" id="sidebar-module-list">
+            {modules.map((m) => {
+              const isCurrent = m.id === module.id;
+              return (
+                <div class={isCurrent ? 'border-l-3 border-l-teal bg-teal/5' : 'border-l-3 border-l-transparent hover:bg-n50'}>
+                  <a
+                    href={`${base}/modules/${m.id}`}
+                    class={`flex items-center gap-2.5 px-3 py-2 text-sm font-heading transition-colors ${
+                      isCurrent ? 'text-navy font-bold' : 'text-n500 hover:text-navy font-medium'
+                    }`}
+                  >
+                    <span class={`flex items-center justify-center w-6 h-6 rounded-md text-xs font-bold shrink-0 ${
+                      isCurrent ? 'bg-teal text-navy' : 'bg-n100 text-n500'
+                    }`}>
+                      {m.number}
+                    </span>
+                    <span class="sidebar-text truncate">{m.title}</span>
+                  </a>
+                  {isCurrent && (
+                    <div class="sidebar-text pb-2" id="sidebar-lessons">
+                      {m.lessons.map((lesson) => (
+                        <a
+                          href={`#${lesson.slug}`}
+                          data-lesson-slug={lesson.slug}
+                          class="sidebar-lesson-link flex items-center gap-2 pl-11 pr-3 py-1.5 text-xs font-heading transition-colors text-n500 hover:text-navy hover:bg-teal/5"
+                        >
+                          <span class="w-1 h-1 rounded-full bg-n300 shrink-0 sidebar-lesson-dot"></span>
+                          <span class="truncate">{lesson.title}</span>
+                        </a>
+                      ))}
+                      <a href="#knowledge-check" data-lesson-slug="knowledge-check" class="sidebar-lesson-link flex items-center gap-2 pl-11 pr-3 py-1.5 text-xs font-heading text-n500 hover:text-navy hover:bg-teal/5">
+                        <span class="w-1 h-1 rounded-full bg-n300 shrink-0 sidebar-lesson-dot"></span>
+                        <span class="truncate">Knowledge Check</span>
+                      </a>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </nav>
+        </div>
+      </aside>
+
+      <!-- Mobile lesson stepper + drawer toggle -->
+      <div class="lg:hidden fixed bottom-6 left-4 right-4 z-40 flex items-center gap-2" id="mobile-stepper-bar">
+        <!-- Prev button -->
+        <button
+          id="mobile-prev-lesson"
+          class="w-10 h-10 rounded-full bg-navy/80 text-white shadow-lg hover:bg-navy transition-colors flex items-center justify-center shrink-0 disabled:opacity-30"
+          aria-label="Previous lesson"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+
+        <!-- Center: lesson indicator + drawer toggle -->
+        <button
+          id="mobile-lesson-toggle"
+          class="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-full bg-navy text-white shadow-lg hover:bg-navy-light transition-colors font-heading text-sm font-semibold min-w-0"
+          aria-label="Show lesson list"
+          aria-expanded="false"
+          aria-controls="mobile-lesson-drawer"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+          <span id="mobile-lesson-label" class="truncate">Lesson 1 of {module.lessons.length}</span>
+        </button>
+
+        <!-- Next button -->
+        <button
+          id="mobile-next-lesson"
+          class="w-10 h-10 rounded-full bg-navy/80 text-white shadow-lg hover:bg-navy transition-colors flex items-center justify-center shrink-0 disabled:opacity-30"
+          aria-label="Next lesson"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+      </div>
+
+      <!-- Mobile lesson drawer -->
+      <div
+        id="mobile-lesson-drawer"
+        class="lg:hidden fixed inset-0 z-50 hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Lesson navigation"
+      >
+        <!-- Backdrop -->
+        <div id="mobile-drawer-backdrop" class="absolute inset-0 bg-navy/60 backdrop-blur-sm"></div>
+        <!-- Panel -->
+        <div class="absolute left-0 top-0 bottom-0 w-72 bg-white shadow-xl overflow-y-auto transform transition-transform" id="mobile-drawer-panel">
+          <div class="flex items-center justify-between px-5 py-4 border-b border-n100">
+            <span class="font-heading font-semibold text-navy">Lessons</span>
+            <button id="mobile-drawer-close" class="text-n500 hover:text-navy" aria-label="Close lesson drawer">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <nav class="px-5 py-4 space-y-4">
+            {modules.map((m) => {
+              const isCurrent = m.id === module.id;
+              return (
+                <div>
+                  <a
+                    href={`${base}/modules/${m.id}`}
+                    class={`flex items-center gap-3 text-sm font-heading font-semibold transition-colors ${
+                      isCurrent ? 'text-navy' : 'text-n500 hover:text-navy-light'
+                    }`}
+                  >
+                    <span class={`flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
+                      isCurrent ? 'bg-teal text-navy' : 'bg-n100 text-n500'
+                    }`}>
+                      {m.number}
+                    </span>
+                    {m.title}
+                  </a>
+                  {isCurrent && (
+                    <ul class="mt-2 ml-9 space-y-1" id="mobile-sidebar-lessons">
+                      {m.lessons.map((lesson) => (
+                        <li>
+                          <a
+                            href={`#${lesson.slug}`}
+                            data-lesson-slug={lesson.slug}
+                            class="mobile-lesson-link block text-sm py-1.5 pl-3 border-l-2 border-transparent transition-colors text-n500 hover:text-navy-light"
+                          >
+                            {lesson.title}
+                          </a>
+                        </li>
+                      ))}
+                      <li>
+                        <a href="#knowledge-check" data-lesson-slug="knowledge-check" class="mobile-lesson-link block text-sm py-1.5 pl-3 border-l-2 border-transparent text-n500 hover:text-navy-light">
+                          Knowledge Check
+                        </a>
+                      </li>
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 min-w-0">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-1.5 text-xs font-heading text-n400 mb-4 px-1" aria-label="Breadcrumb">
+          <a href={base + '/'} class="hover:text-navy transition-colors">Home</a>
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          <span class="text-navy font-medium">Module {module.number}: {module.title}</span>
+        </nav>
+
+        <!-- Module Hero -->
+        <div class="rounded-xl overflow-hidden mb-8" style={`background: ${heroGradientCSS};`}>
+          <div class="px-6 py-8 sm:py-10 flex items-center gap-5">
+            <div class="shrink-0 flex items-center justify-center w-14 h-14 rounded-xl bg-white/10" style={`color: ${accent.main};`}>
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={iconPath} />
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-3 mb-1">
+                <span class="text-xs font-heading font-bold uppercase tracking-wider" style={`color: ${accent.main};`}>Module {module.number}</span>
+                <span class="text-xs font-heading text-white/60">{module.duration}</span>
+              </div>
+              <h1 class="text-2xl sm:text-3xl font-heading font-bold text-white truncate">
+                {module.title}
+              </h1>
+              {theme?.tagline && (
+                <p class="text-sm text-white/70 mt-1">{theme.tagline}</p>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <!-- Lesson Content -->
+        {!panelMode && <LessonPaginator client:idle moduleId={module.id} lessons={module.lessons} />}
+        <div class:list={['prose max-w-none', panelMode && 'pb-24']}>
+          <slot />
+        </div>
+
+        <!-- Module Navigation -->
+        <div class="flex justify-between items-center mt-16 pt-8 border-t border-n100 dark:border-navy-light">
+          {prevModule ? (
+            <a href={`${base}/modules/${prevModule.id}`} class="flex items-center gap-2 text-n500 dark:text-n300 hover:text-navy dark:hover:text-white transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+              <span class="text-sm font-heading">{prevModule.title}</span>
+            </a>
+          ) : <div />}
+          {nextModule ? (
+            <a href={`${base}/modules/${nextModule.id}`} class="flex items-center gap-2 text-n500 dark:text-n300 hover:text-navy dark:hover:text-white transition-colors">
+              <span class="text-sm font-heading">{nextModule.title}</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </a>
+          ) : <div />}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Panel mode: AudioPlayer at bottom + scroll sync + Transcript drawer */}
+  {panelMode && tracks.length > 0 && (
+    <>
+      <TranscriptDrawer client:load tracks={tracks} />
+      <AudioPlayer client:load tracks={tracks} />
+    </>
+  )}
+
+  <!-- Scroll-to-top button -->
+  <button
+    id="scroll-to-top"
+    class="fixed bottom-6 right-6 z-40 w-10 h-10 rounded-full bg-navy text-white shadow-lg hover:bg-navy-light transition-all opacity-0 translate-y-4 pointer-events-none flex items-center justify-center"
+    aria-label="Scroll to top"
+    style="transition: opacity 0.3s ease, transform 0.3s ease;"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Sidebar ↔ Paginator sync + Mobile drawer logic -->
+  <script>
+    // --- Sidebar lesson link click → dispatch lesson-navigate event ---
+    function setupSidebarSync() {
+      const allLinks = document.querySelectorAll<HTMLAnchorElement>(
+        '.sidebar-lesson-link, .mobile-lesson-link'
+      );
+
+      allLinks.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const slug = link.dataset.lessonSlug;
+          if (slug) {
+            window.dispatchEvent(
+              new CustomEvent('lesson-navigate', { detail: { slug } })
+            );
+            // Close mobile drawer if open
+            const drawer = document.getElementById('mobile-lesson-drawer');
+            if (drawer && !drawer.classList.contains('hidden')) {
+              drawer.classList.add('hidden');
+              document.getElementById('mobile-lesson-toggle')?.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+      });
+
+      // --- Listen for lesson-changed to highlight active sidebar link ---
+      window.addEventListener('lesson-changed', ((e: CustomEvent) => {
+        const slug = e.detail?.slug;
+        if (!slug) return;
+
+        // Update desktop sidebar
+        document.querySelectorAll<HTMLAnchorElement>('.sidebar-lesson-link').forEach((link) => {
+          const isActive = link.dataset.lessonSlug === slug;
+          link.classList.toggle('text-navy', isActive);
+          link.classList.toggle('font-semibold', isActive);
+          link.classList.toggle('text-n500', !isActive);
+          // Update the dot indicator
+          const dot = link.querySelector('.sidebar-lesson-dot');
+          if (dot) {
+            dot.classList.toggle('bg-teal', isActive);
+            dot.classList.toggle('w-1.5', isActive);
+            dot.classList.toggle('h-1.5', isActive);
+            dot.classList.toggle('bg-n300', !isActive);
+            dot.classList.toggle('w-1', !isActive);
+            dot.classList.toggle('h-1', !isActive);
+          }
+        });
+
+        // Update mobile sidebar
+        document.querySelectorAll<HTMLAnchorElement>('.mobile-lesson-link').forEach((link) => {
+          const isActive = link.dataset.lessonSlug === slug;
+          link.classList.toggle('text-navy', isActive);
+          link.classList.toggle('font-semibold', isActive);
+          link.classList.toggle('text-n500', !isActive);
+          const dot = link.querySelector('.sidebar-lesson-dot');
+          if (dot) {
+            dot.classList.toggle('bg-teal', isActive);
+            dot.classList.toggle('w-1.5', isActive);
+            dot.classList.toggle('h-1.5', isActive);
+            dot.classList.toggle('bg-n300', !isActive);
+            dot.classList.toggle('w-1', !isActive);
+            dot.classList.toggle('h-1', !isActive);
+          }
+        });
+
+        // Update mobile FAB label
+        const label = document.getElementById('mobile-lesson-label');
+        const activeLink = document.querySelector<HTMLAnchorElement>(
+          `.mobile-lesson-link[data-lesson-slug="${slug}"]`
+        );
+        if (label && activeLink) {
+          label.textContent = activeLink.textContent?.trim() || 'Lessons';
+        }
+      }) as EventListener);
+    }
+
+    // --- Mobile drawer open/close + stepper ---
+    function setupMobileDrawer() {
+      const toggle = document.getElementById('mobile-lesson-toggle');
+      const drawer = document.getElementById('mobile-lesson-drawer');
+      const closeBtn = document.getElementById('mobile-drawer-close');
+      const backdrop = document.getElementById('mobile-drawer-backdrop');
+      const prevBtn = document.getElementById('mobile-prev-lesson');
+      const nextBtn = document.getElementById('mobile-next-lesson');
+      const label = document.getElementById('mobile-lesson-label');
+
+      // Lesson slugs from the DOM
+      const lessonLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('.mobile-lesson-link[data-lesson-slug]'));
+      const slugs = lessonLinks.map(l => l.dataset.lessonSlug!);
+      let currentLessonIdx = 0;
+
+      function openDrawer() {
+        drawer?.classList.remove('hidden');
+        toggle?.setAttribute('aria-expanded', 'true');
+        // Set inert on main content for focus trap
+        const main = document.getElementById('main-content');
+        if (main) main.setAttribute('inert', '');
+        // Focus first link in drawer
+        const panel = document.getElementById('mobile-drawer-panel');
+        const firstLink = panel?.querySelector<HTMLElement>('a, button');
+        firstLink?.focus();
+      }
+      function closeDrawer() {
+        drawer?.classList.add('hidden');
+        toggle?.setAttribute('aria-expanded', 'false');
+        // Remove inert from main content
+        const main = document.getElementById('main-content');
+        if (main) main.removeAttribute('inert');
+        toggle?.focus();
+      }
+
+      function updateStepperLabel(slug?: string) {
+        if (slug) {
+          const idx = slugs.indexOf(slug);
+          if (idx >= 0) currentLessonIdx = idx;
+        }
+        if (label) {
+          label.textContent = `Lesson ${currentLessonIdx + 1} of ${slugs.length}`;
+        }
+        if (prevBtn) (prevBtn as HTMLButtonElement).disabled = currentLessonIdx <= 0;
+        if (nextBtn) (nextBtn as HTMLButtonElement).disabled = currentLessonIdx >= slugs.length - 1;
+      }
+
+      function navigateToLesson(idx: number) {
+        if (idx < 0 || idx >= slugs.length) return;
+        currentLessonIdx = idx;
+        const slug = slugs[idx];
+        window.dispatchEvent(new CustomEvent('lesson-navigate', { detail: { slug } }));
+        updateStepperLabel(slug);
+      }
+
+      toggle?.addEventListener('click', openDrawer);
+      closeBtn?.addEventListener('click', closeDrawer);
+      backdrop?.addEventListener('click', closeDrawer);
+      prevBtn?.addEventListener('click', () => navigateToLesson(currentLessonIdx - 1));
+      nextBtn?.addEventListener('click', () => navigateToLesson(currentLessonIdx + 1));
+
+      // Listen for lesson changes to update stepper
+      window.addEventListener('lesson-changed', ((e: CustomEvent) => {
+        updateStepperLabel(e.detail?.slug);
+      }) as EventListener);
+
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && drawer && !drawer.classList.contains('hidden')) {
+          closeDrawer();
+        }
+      });
+
+      updateStepperLabel();
+    }
+
+    setupSidebarSync();
+    setupMobileDrawer();
+
+    // --- Collapsible sidebar ---
+    function setupSidebarCollapse() {
+      const sidebar = document.getElementById('desktop-sidebar');
+      const toggle = document.getElementById('sidebar-collapse-toggle');
+      const icon = document.getElementById('sidebar-collapse-icon');
+      const moduleList = document.getElementById('sidebar-module-list');
+      const texts = document.querySelectorAll('.sidebar-text');
+      if (!sidebar || !toggle) return;
+
+      let collapsed = localStorage.getItem('sidebar-collapsed') === 'true';
+
+      function applyState() {
+        if (collapsed) {
+          sidebar!.style.width = '3rem';
+          texts.forEach(el => (el as HTMLElement).style.display = 'none');
+          if (moduleList) moduleList.style.display = 'none';
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        } else {
+          sidebar!.style.width = '16rem';
+          texts.forEach(el => (el as HTMLElement).style.display = '');
+          if (moduleList) moduleList.style.display = '';
+          if (icon) icon.style.transform = '';
+        }
+      }
+
+      applyState();
+      toggle.addEventListener('click', () => {
+        collapsed = !collapsed;
+        localStorage.setItem('sidebar-collapsed', String(collapsed));
+        applyState();
+      });
+    }
+
+    setupSidebarCollapse();
+
+    // --- Panel mode: scroll ↔ audio sync ---
+    function setupPanelSync() {
+      const sections = document.querySelectorAll<HTMLElement>('.module-section');
+      if (sections.length === 0) return;
+
+      // --- State ---
+      let isAudioPlaying = false;
+      let currentSlideIndex = 0;
+      // (debounceTimer removed — scroll gating replaces debounce)
+
+      // Track audio play/pause state
+      window.addEventListener('audio-playing', () => {
+        isAudioPlaying = true;
+        // Re-apply active indicator
+        sections.forEach((s) => {
+          const idx = parseInt(s.dataset.slideIndex || '-1', 10);
+          s.classList.toggle('is-narrating', idx === currentSlideIndex);
+        });
+      });
+      window.addEventListener('audio-paused', () => {
+        isAudioPlaying = false;
+        removeScrollGate();
+        // Remove active indicator
+        sections.forEach((s) => s.classList.remove('is-narrating'));
+      });
+
+      // --- Section → Audio sync (with scroll gating during playback) ---
+      const dispatchSlideChange = (slideIndex: number, slug: string | null) => {
+        currentSlideIndex = slideIndex;
+        window.dispatchEvent(new CustomEvent('reveal-slide-changed', {
+          detail: { indexh: slideIndex }
+        }));
+        // Update active indicator
+        sections.forEach((s) => {
+          const idx = parseInt(s.dataset.slideIndex || '-1', 10);
+          s.classList.toggle('is-narrating', isAudioPlaying && idx === slideIndex);
+        });
+        // Update sidebar
+        if (slug) {
+          window.dispatchEvent(new CustomEvent('lesson-changed', { detail: { slug } }));
+        }
+      };
+
+      // --- Scroll gate UI ---
+      let scrollGateBanner: HTMLElement | null = null;
+      let scrollGateTarget: { idx: number; slug: string } | null = null;
+
+      function showScrollGate(targetIdx: number, targetSlug: string) {
+        // Don't re-show for same target
+        if (scrollGateBanner && scrollGateTarget?.idx === targetIdx) return;
+        removeScrollGate();
+
+        scrollGateTarget = { idx: targetIdx, slug: targetSlug };
+
+        // Find the name of the section currently playing audio
+        const activeSection = document.querySelector<HTMLElement>(`.module-section[data-slide-index="${currentSlideIndex}"]`);
+        const activeHeading = activeSection?.querySelector('h2, h3');
+        const sectionName = activeHeading?.textContent?.trim() || 'this section';
+
+        const banner = document.createElement('div');
+        banner.className = 'scroll-gate-banner fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-5 py-3 bg-navy/95 backdrop-blur rounded-b-xl shadow-xl border border-navy-light border-t-0';
+
+        // Build banner content via DOM API (avoids innerHTML XSS)
+        const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        icon.setAttribute('class', 'w-5 h-5 text-teal shrink-0');
+        icon.setAttribute('fill', 'none');
+        icon.setAttribute('stroke', 'currentColor');
+        icon.setAttribute('viewBox', '0 0 24 24');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('stroke-linecap', 'round');
+        path.setAttribute('stroke-linejoin', 'round');
+        path.setAttribute('stroke-width', '2');
+        path.setAttribute('d', 'M13 7l5 5m0 0l-5 5m5-5H6');
+        icon.appendChild(path);
+        banner.appendChild(icon);
+
+        const label = document.createElement('span');
+        label.className = 'text-sm text-white font-heading';
+        label.textContent = 'Audio is still playing ';
+        const strong = document.createElement('strong');
+        strong.textContent = sectionName;
+        label.appendChild(strong);
+        banner.appendChild(label);
+
+        const skipBtn = document.createElement('button');
+        skipBtn.className = 'gate-skip-btn px-3 py-1.5 text-xs font-heading font-bold text-navy bg-teal rounded-lg hover:bg-teal-light';
+        skipBtn.textContent = 'Skip ahead';
+        banner.appendChild(skipBtn);
+
+        const dismissBtn = document.createElement('button');
+        dismissBtn.className = 'gate-dismiss-btn p-1 text-n400 hover:text-white';
+        dismissBtn.setAttribute('aria-label', 'Dismiss');
+        const dismissIcon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        dismissIcon.setAttribute('class', 'w-4 h-4');
+        dismissIcon.setAttribute('fill', 'none');
+        dismissIcon.setAttribute('stroke', 'currentColor');
+        dismissIcon.setAttribute('viewBox', '0 0 24 24');
+        const dismissPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        dismissPath.setAttribute('stroke-linecap', 'round');
+        dismissPath.setAttribute('stroke-linejoin', 'round');
+        dismissPath.setAttribute('stroke-width', '2');
+        dismissPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+        dismissIcon.appendChild(dismissPath);
+        dismissBtn.appendChild(dismissIcon);
+        banner.appendChild(dismissBtn);
+
+        // Skip ahead: dispatch slide change and continue lesson
+        banner.querySelector('.gate-skip-btn')!.addEventListener('click', () => {
+          if (scrollGateTarget) {
+            dispatchSlideChange(scrollGateTarget.idx, scrollGateTarget.slug);
+            window.dispatchEvent(new CustomEvent('continue-lesson'));
+          }
+          removeScrollGate();
+        });
+
+        // Dismiss: just close the banner
+        banner.querySelector('.gate-dismiss-btn')!.addEventListener('click', () => {
+          removeScrollGate();
+        });
+
+        document.body.appendChild(banner);
+        scrollGateBanner = banner;
+      }
+
+      function removeScrollGate() {
+        if (scrollGateBanner) {
+          scrollGateBanner.remove();
+          scrollGateBanner = null;
+          scrollGateTarget = null;
+        }
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          const slideIndex = el.dataset.slideIndex;
+          if (slideIndex === undefined) return;
+          const idx = parseInt(slideIndex, 10);
+          const slug = el.dataset.lessonSlug || el.id;
+
+          if (isAudioPlaying) {
+            if (idx !== currentSlideIndex) {
+              // User scrolled to a different section while audio plays — show gate
+              showScrollGate(idx, slug);
+            } else {
+              // Back in current section — remove gate if shown
+              removeScrollGate();
+            }
+            // Do NOT dispatch slide change while audio is playing
+          } else {
+            // Not playing: switch immediately
+            dispatchSlideChange(idx, slug);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      sections.forEach((section) => observer.observe(section));
+
+      // --- Section entrance animation ---
+      const entranceObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('awaiting-entrance');
+            entry.target.classList.add('has-entered');
+            entranceObserver.unobserve(entry.target); // Only animate once
+          }
+        });
+      }, { threshold: 0.15 });
+
+      sections.forEach((section, i) => {
+        if (i === 0) {
+          section.classList.add('has-entered'); // First section visible immediately
+        } else {
+          section.classList.add('awaiting-entrance'); // Dim until scrolled into view
+          entranceObserver.observe(section);
+        }
+      });
+
+      // --- Audio progress → section progress markers ---
+      window.addEventListener('audio-progress', ((e: CustomEvent) => {
+        const { trackIndex } = e.detail || {};
+        const pct = e.detail?.duration > 0
+          ? (e.detail.currentTime / e.detail.duration) * 100
+          : 0;
+
+        // Find all sections for this track's slideIndex
+        // Clear progress on non-active sections
+        sections.forEach((s) => {
+          const idx = parseInt(s.dataset.slideIndex || '-1', 10);
+          if (idx === currentSlideIndex) {
+            s.style.setProperty('--audio-progress', `${pct}%`);
+          } else {
+            s.style.setProperty('--audio-progress', '0%');
+          }
+        });
+      }) as EventListener);
+
+      // --- Audio → Section scroll ---
+      window.addEventListener('audio-slide-change', ((e: CustomEvent) => {
+        const slideIndex = e.detail?.slideIndex ?? 0;
+        // Sync currentSlideIndex so the IntersectionObserver doesn't gate during programmatic scroll
+        currentSlideIndex = slideIndex;
+        removeScrollGate();
+        const target = document.querySelector<HTMLElement>(`.module-section[data-slide-index="${slideIndex}"]`);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }) as EventListener);
+
+      // --- Sidebar lesson-navigate → scroll ---
+      window.addEventListener('lesson-navigate', ((e: CustomEvent) => {
+        const slug = e.detail?.slug;
+        if (!slug) return;
+        const target = document.getElementById(slug) || document.querySelector<HTMLElement>(`.module-section[data-lesson-slug="${slug}"]`);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }) as EventListener);
+
+      // --- Exercise pause: pulse highlight (no floating prompt) ---
+      window.addEventListener('exercise-pause', ((e: CustomEvent) => {
+        const slideIndex = e.detail?.slideIndex;
+        const section = document.querySelector<HTMLElement>(
+          `.module-section[data-slide-index="${slideIndex}"][data-has-exercise]`
+        );
+        if (!section) return;
+
+        // Find the interactive exercise component — the card wrapper with the navy header
+        const exercise = section.querySelector<HTMLElement>(
+          'astro-island > [class*="rounded-xl"], [class*="my-10"][class*="rounded-xl"]'
+        );
+
+        // Scroll exercise into view and add pulse highlight
+        if (exercise) {
+          exercise.classList.add('exercise-highlight');
+          // Scroll so the exercise header is visible near the top
+          const rect = exercise.getBoundingClientRect();
+          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+          const targetY = scrollTop + rect.top - 100; // 100px from top for comfortable reading
+          window.scrollTo({ top: targetY, behavior: 'smooth' });
+        }
+
+        // Tell AudioPlayer to show exercise-paused UI
+        window.dispatchEvent(new CustomEvent('exercise-pause-ui'));
+
+        // Clean up when exercise completes
+        const cleanup = () => {
+          exercise?.classList.remove('exercise-highlight');
+          window.removeEventListener('exercise-complete', cleanup);
+        };
+        window.addEventListener('exercise-complete', cleanup);
+      }) as EventListener);
+    }
+
+    setupPanelSync();
+
+    // --- Scroll-to-top button ---
+    function setupScrollToTop() {
+      const btn = document.getElementById('scroll-to-top');
+      if (!btn) return;
+
+      let visible = false;
+      const threshold = 400;
+
+      function updateVisibility() {
+        const shouldShow = window.scrollY > threshold;
+        if (shouldShow !== visible) {
+          visible = shouldShow;
+          if (visible) {
+            btn!.style.opacity = '1';
+            btn!.style.transform = 'translateY(0)';
+            btn!.style.pointerEvents = 'auto';
+          } else {
+            btn!.style.opacity = '0';
+            btn!.style.transform = 'translateY(1rem)';
+            btn!.style.pointerEvents = 'none';
+          }
+        }
+      }
+
+      window.addEventListener('scroll', updateVisibility, { passive: true });
+      btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    setupScrollToTop();
+
+    // Re-initialize after Astro view transitions (SPA navigation)
+    document.addEventListener('astro:page-load', () => {
+      setupSidebarSync();
+      setupMobileDrawer();
+      setupSidebarCollapse();
+      setupPanelSync();
+      setupScrollToTop();
+    });
+  </script>
+</BaseLayout>

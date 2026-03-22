@@ -1,0 +1,415 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import KnowledgeCheck from '../../components/KnowledgeCheck.tsx';
+import KeyTakeaway from '../../components/KeyTakeaway.astro';
+import KeyConcept from '../../components/KeyConcept.astro';
+import ScorecardSimulator from '../../components/ScorecardSimulator.tsx';
+import GenerativeExercise from '../../components/GenerativeExercise.tsx';
+
+const module = {
+  id: '6-measuring-success',
+  number: 6,
+  title: 'Measuring Success',
+  duration: '20 min',
+  lessons: [
+    { title: 'The Content Scorecard', slug: 'content-scorecard' },
+    { title: 'Running a Scorecard', slug: 'running-a-scorecard' },
+  ],
+};
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const tracks = [
+  { slideIndex: 0, src: `${base}/audio/modules/m6-content-scorecard.mp3`, transcript: 'You A/B test email subject lines. You measure campaign net promoter score. Your Playbook material should get the same treatment. Because Tier 1 material is a product, not a pamphlet. Playbook material competes for the same player attention as your sportsbook promos, casino loyalty emails, and brand campaigns. If you would measure those with net promoter score, measure this with net promoter score. The quality bar is commercial-grade, not good enough for compliance. The anchor metric is one question. How likely would you recommend this material to a friend who gambles. Scored zero to ten, calculated as percent Promoters, which are nines and tens, minus percent Detractors, which are zeros through sixes. Here are the benchmarks. Fifty or above is Exceptional. Players are sharing the material organically. Thirty to forty-nine is Strong, on par with gaming and sportsbook apps. Zero to twenty-nine is positive but below target. Run diagnostics. Below zero means more detractors than promoters. Revise before shipping. For perspective, streaming apps like Netflix and Spotify score fifty to seventy. Gaming and sportsbook apps score thirty to fifty. Traditional compliance material is unmeasured. Nobody even asks players what they think. Playbook targets the same range as the products it sits alongside. Net promoter score tells you whether material is working. The semantic pairs tell you why, or why not. There are five pairs, each scored one to seven. Forgettable versus Memorable measures stickiness. Boring versus Engaging measures entertainment value. Preachy versus Respectful measures voice register, and this is the critical pair. Confusing versus Clear measures comprehension. Generic versus Made for me measures cultural resonance. If Preachy versus Respectful scores below four point zero, stop. Your material may be lecturing players. This is the Brand D-N-A alarm. It overrides an otherwise strong scorecard. Revise against the voice principles from Module 3 before shipping. Now try the Scorecard Simulator below. Drag the sliders to see how the decision tree responds in real time.' },
+  { slideIndex: 1, src: `${base}/audio/modules/m6-running-a-scorecard.mp3`, transcript: 'Three surveys. One decision tree. The entire process takes three to four hours spread across two weeks. The Pulse is your default. Three items, under a minute, target thirty responses. It gives you the net promoter score, the Forgettable versus Memorable pair, and one open-ended question. Send it after every launch. The Full is your diagnostic. Seven items, about two minutes, target thirty responses or sixty if you are A/B testing two versions. It adds all five semantic pairs so you can pinpoint which dimension needs work. Run it when the Pulse flags a problem. The Recall goes out seven to fourteen days after players saw the material. It tests three things the other surveys cannot measure. Free recall, which is simply asking what do you remember. True-or-false knowledge checks. And behavioral follow-through, which asks did you actually do anything differently. Material that scores well on Pulse but fails on Recall is engaging but not memorable. The decision tree is straightforward. Step one, send the Pulse. Step two-A, if net promoter score is thirty or above and all pairs are four point zero or above, ship it. Schedule the Recall survey in seven to fourteen days. Step two-B, if net promoter score is zero to twenty-nine or any pair is below four, run the Full to diagnose. Step two-C, if net promoter score is below zero or if Preachy versus Respectful is below three point zero, stop shipping and revise. Sample sizes matter. Target thirty responses for reliable results. If you are comparing two versions of the same material, you need sixty, which is thirty per variant. Playbook ships a ready-to-use survey widget that auto-calculates scores with color-coded results. You can embed it as an iframe in about five minutes. Or use Google Forms in about ten minutes with manual scoring. Or use Typeform or SurveyMonkey in about fifteen minutes for a polished experience. Try the actual survey widget below to see how it works.' },
+  { slideIndex: 2, src: `${base}/audio/modules/m6-knowledge-check.mp3`, transcript: 'Time to test what you have learned. Five questions on the Scorecard framework. You need eighty percent to mark this module complete. Take your time.' },
+];
+
+const questions = [
+  {
+    id: 'q1',
+    question: 'What does the NPS question in the Content Scorecard ask players?',
+    options: [
+      '"Did you find this material useful?"',
+      '"How likely would you recommend this material to a friend who gambles?"',
+      '"Would you read this material again?"',
+      '"How satisfied are you with our responsible gambling program?"',
+    ],
+    correctIndex: 1,
+    explanation: 'The NPS question is: "How likely would you recommend this material to a friend who gambles?" It\'s the same recommendation metric used for commercial products — because Tier 1 material is a product.',
+    reviewSlug: 'content-scorecard',
+  },
+  {
+    id: 'q2',
+    question: 'What is the minimum NPS score needed to ship without further investigation?',
+    options: ['10', '20', '30', '50'],
+    correctIndex: 2,
+    explanation: 'NPS 30+ with all semantic pairs at 4.0+ means you can ship. This matches the "Strong" NPS range for gaming and sportsbook apps — because your literacy material competes for the same player attention.',
+    reviewSlug: 'content-scorecard',
+  },
+  {
+    id: 'q3',
+    question: 'Which semantic pair triggers the "Brand DNA alarm" when it scores below 4.0?',
+    options: [
+      'Forgettable — Memorable',
+      'Boring — Engaging',
+      'Preachy — Respectful',
+      'Generic — Made for me',
+    ],
+    correctIndex: 2,
+    explanation: 'Preachy–Respectful below 4.0 is the Brand DNA alarm. It means your material is lecturing players — the single biggest failure mode for literacy material. Revise against voice principles (Module 3) before shipping.',
+    reviewSlug: 'content-scorecard',
+  },
+  {
+    id: 'q4',
+    question: 'Your Pulse survey returns NPS 22 and Memorable 5.2. What\'s the next step?',
+    options: [
+      'Ship it — 22 is a positive NPS',
+      'Run the Full survey to diagnose which dimensions need work',
+      'Send the Recall survey to check retention',
+      'Revise the material immediately — this is a failing score',
+    ],
+    correctIndex: 1,
+    explanation: 'NPS 22 is below the 30+ threshold for shipping. It\'s not a crisis (NPS is positive), but it needs diagnostics. Run the Full survey with all five semantic pairs to identify exactly which dimensions are dragging the score down.',
+    reviewSlug: 'running-a-scorecard',
+  },
+  {
+    id: 'q5',
+    question: 'What does the Recall survey measure that Pulse and Full surveys do not?',
+    options: [
+      'Whether players enjoyed the material in the moment',
+      'Which semantic pairs scored lowest',
+      'Whether players remember key messages and changed behavior 7–14 days later',
+      'How many players completed the survey',
+    ],
+    correctIndex: 2,
+    explanation: 'The Recall survey goes out 7–14 days after exposure. It tests three things the other surveys can\'t: free recall (what do you remember?), knowledge retention (true/false checks), and behavioral follow-through (did you actually do anything differently?). Material that scores well on Pulse but fails on Recall is engaging but not memorable.',
+    reviewSlug: 'running-a-scorecard',
+  },
+];
+---
+
+<ModuleLayout module={module} panelMode={true} tracks={tracks}>
+
+  <!-- Module intro -->
+  <div class="mb-8 p-5 rounded-xl bg-navy/5 border border-navy/10">
+    <p class="text-sm text-navy font-heading mb-2">
+      <strong>Measuring Success</strong> — The Content Scorecard framework: NPS, semantic pairs, survey instruments, and a ship-or-revise decision tree.
+    </p>
+    <p class="text-sm text-navy mb-3 font-heading"><strong>By the end of this module, you will be able to:</strong></p>
+    <ul class="text-sm text-n700 mb-4 space-y-1.5 pl-4 list-disc">
+      <li>Explain the NPS + semantic pairs Content Scorecard framework</li>
+      <li>Run a Pulse, Full, or Recall survey using the correct instrument for each stage</li>
+      <li>Apply the ship-or-revise decision tree to real scorecard results</li>
+    </ul>
+    <button
+      id="start-narration-btn"
+      class="inline-flex items-center gap-2 px-4 py-2 bg-teal text-navy font-heading font-bold rounded-lg hover:bg-teal-light transition-colors text-sm"
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      Play Audio Guide
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('start-narration-btn')?.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('start-playback'));
+    });
+  </script>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 6.1: The Content Scorecard              -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="content-scorecard" data-slide-index="0" data-lesson-slug="content-scorecard" data-has-exercise class="module-section py-16">
+    <h2>The Content Scorecard</h2>
+
+    <p class="text-lg text-n600 mb-6">You A/B test email subject lines. You measure campaign NPS. Your Playbook material should get the same treatment — because Tier 1 material is a product, not a pamphlet.</p>
+
+    <KeyConcept title="The Philosophy">
+      <p>Playbook material competes for the same player attention as your sportsbook promos, casino loyalty emails, and brand campaigns. If you'd measure those with NPS, measure this with NPS. The quality bar is commercial-grade, not "good enough for compliance."</p>
+    </KeyConcept>
+
+    <h3>NPS: the anchor metric</h3>
+
+    <p>One question: <strong>"How likely would you recommend this material to a friend who gambles?"</strong> Scored 0–10, calculated as % Promoters (9–10) minus % Detractors (0–6). The same metric you'd use for your app, your loyalty program, or your sportsbook UX.</p>
+
+    <table>
+      <thead><tr><th>NPS</th><th>Signal</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td><strong>50+</strong></td><td>Exceptional</td><td>Players are sharing this material organically — on par with Netflix/Spotify (50–70 NPS)</td></tr>
+        <tr><td><strong>30–49</strong></td><td>Strong</td><td>Matches gaming/sportsbook app benchmarks (30–50 NPS). Ship confidently.</td></tr>
+        <tr><td><strong>0–29</strong></td><td>Improve</td><td>Positive but below target. Run diagnostics with the Full survey.</td></tr>
+        <tr><td><strong>Below 0</strong></td><td>Problem</td><td>More detractors than promoters. Revise before shipping.</td></tr>
+      </tbody>
+    </table>
+
+    <blockquote>
+      <p>Traditional compliance material is unmeasured — nobody even asks players what they think. Playbook targets the same NPS range as the products it sits alongside. That's the difference between a pamphlet and a product.</p>
+    </blockquote>
+
+    <h3>The five semantic pairs</h3>
+
+    <p>NPS tells you <em>whether</em> material is working. The semantic pairs tell you <em>why</em> — or why not. Each pair is a 1–7 scale measuring a different dimension of quality:</p>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 my-6">
+      <div class="rounded-xl border border-n100 bg-n50 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Forgettable — Memorable</p>
+        <p class="text-sm text-n600">Message stickiness. Will players remember this tomorrow?</p>
+      </div>
+      <div class="rounded-xl border border-n100 bg-n50 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Boring — Engaging</p>
+        <p class="text-sm text-n600">Entertainment value. Did it hold attention or feel like homework?</p>
+      </div>
+      <div class="rounded-xl border-2 border-orange/30 bg-orange/5 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Preachy — Respectful</p>
+        <p class="text-sm text-n600">Voice register. This is the critical pair — it catches material that lectures.</p>
+        <p class="text-xs text-orange font-heading font-semibold mt-2">Brand DNA Alarm trigger</p>
+      </div>
+      <div class="rounded-xl border border-n100 bg-n50 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Confusing — Clear</p>
+        <p class="text-sm text-n600">Comprehension. Can players understand the message on first read?</p>
+      </div>
+      <div class="rounded-xl border border-n100 bg-n50 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Generic — Made for me</p>
+        <p class="text-sm text-n600">Cultural resonance. Does it feel targeted or one-size-fits-all?</p>
+      </div>
+    </div>
+
+    <p>These pairs are grounded in validated research methodology: semantic differential scales (Osgood et al., 1957), NPS (Reichheld, 2003), and perceived message effectiveness (Dillard et al., 2007). You don't need a research background to use them — players score each pair and the numbers do the talking.</p>
+
+    <h3>Scoring thresholds</h3>
+
+    <table>
+      <thead><tr><th>Average score</th><th>Signal</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><strong>5.5+</strong></td><td>Strong</td><td>Ship — this dimension is working</td></tr>
+        <tr><td><strong>4.0–5.4</strong></td><td>Acceptable</td><td>Improve if possible, but not blocking</td></tr>
+        <tr><td><strong>Below 4.0</strong></td><td>Investigate</td><td>Check open-ended feedback for this dimension</td></tr>
+        <tr><td><strong>Below 3.0</strong></td><td>Red flag</td><td>Material is failing on this dimension — revise</td></tr>
+      </tbody>
+    </table>
+
+    <KeyConcept title="Brand DNA Alarm">
+      <p><strong>If Preachy–Respectful scores below 4.0, stop.</strong> Your material may be lecturing players — the single biggest failure mode for literacy material. This pair can override an otherwise strong scorecard. Revise against the voice principles from Module 3 before shipping.</p>
+    </KeyConcept>
+
+    <h3>Try it: Scorecard Simulator</h3>
+
+    <p>Drag the sliders to see how the decision tree responds. Try setting Preachy–Respectful below 3.0, or NPS above 30 with all pairs above 4.0.</p>
+
+    <ScorecardSimulator client:visible />
+
+    <GenerativeExercise
+      client:visible
+      title="Score a Sample Message"
+      context="Your team produced this deposit-limit reminder: 'WARNING: You are approaching your deposit limit. Responsible gamblers set limits and stick to them. If you are struggling with gambling, please call 1-800-GAMBLER immediately.'"
+      prompt="This message would score poorly on the Content Scorecard. Write a revised version that would score well — then check your revision against the rubric."
+      rubric={[
+        { label: 'Removed stigmatizing language', description: 'No "WARNING," "responsible gamblers," "struggling with gambling," or clinical labels' },
+        { label: 'Agency framing', description: 'Uses "you can" not "you should" — the player controls the action' },
+        { label: 'Specific and tool-oriented', description: 'References a concrete tool or action, not a generic helpline-first approach' },
+        { label: 'Would pass Preachy-Respectful ≥ 4.0', description: 'Reads as respectful information, not a lecture or warning' },
+        { label: 'Appropriate tone register', description: 'Confident/Informative — factual, clear, not playful (this is a limit notification)' },
+      ]}
+      modelAnswer="Heads up — you've used 80% of your weekly budget. You can adjust your limit, review your session history, or keep playing within your current setting. Your tools, your call."
+    />
+
+    <KeyTakeaway>
+      The Content Scorecard uses two metrics: NPS (are players recommending this?) and five semantic pairs (why or why not?). NPS 30+ with all pairs at 4.0+ means ship. Preachy–Respectful below 4.0 is an automatic hold — regardless of what the other scores say.
+    </KeyTakeaway>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 6.2: Running a Scorecard                -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="running-a-scorecard" data-slide-index="1" data-lesson-slug="running-a-scorecard" class="module-section py-16">
+    <h2>Running a Scorecard</h2>
+
+    <p class="text-lg text-n600 mb-6">Three surveys. One decision tree. The entire process takes 3–4 hours spread across two weeks.</p>
+
+    <h3>The three instruments</h3>
+
+    <div class="grid gap-4 sm:grid-cols-3 my-6">
+      <div class="rounded-xl border-2 border-teal/30 bg-teal/5 p-5">
+        <p class="font-heading font-bold text-navy text-lg mb-1">Pulse</p>
+        <p class="text-xs text-n500 font-heading mb-3">3 items · under 1 min · 30 responses</p>
+        <ul class="text-sm text-n600 space-y-1.5">
+          <li>NPS (0–10)</li>
+          <li>Forgettable–Memorable (1–7)</li>
+          <li>Open-ended: one thing you'd change</li>
+        </ul>
+        <p class="text-xs text-teal-dark font-heading font-semibold mt-3">Your default — send after every launch</p>
+      </div>
+      <div class="rounded-xl border-2 border-navy/15 bg-navy/5 p-5">
+        <p class="font-heading font-bold text-navy text-lg mb-1">Full</p>
+        <p class="text-xs text-n500 font-heading mb-3">7 items · ~2 min · 30 responses (60 for A/B)</p>
+        <ul class="text-sm text-n600 space-y-1.5">
+          <li>NPS (0–10)</li>
+          <li>All five semantic pairs (1–7)</li>
+          <li>Open-ended feedback</li>
+        </ul>
+        <p class="text-xs text-navy font-heading font-semibold mt-3">Your diagnostic — when Pulse flags issues</p>
+      </div>
+      <div class="rounded-xl border-2 border-orange/30 bg-orange/5 p-5">
+        <p class="font-heading font-bold text-navy text-lg mb-1">Recall</p>
+        <p class="text-xs text-n500 font-heading mb-3">4 items · 7–14 days later · 25 responses</p>
+        <ul class="text-sm text-n600 space-y-1.5">
+          <li>Free recall: "What do you remember?"</li>
+          <li>True/false knowledge checks</li>
+          <li>Behavioral follow-through checklist</li>
+          <li><em>"Did you do anything differently?"</em></li>
+        </ul>
+        <p class="text-xs text-orange font-heading font-semibold mt-3">Your retention check — did it actually stick?</p>
+      </div>
+    </div>
+
+    <blockquote>
+      <p><strong>Sample sizes matter.</strong> Target 30 responses for reliable Pulse and Full results. If you're A/B testing two versions of the same material, you need 60 (30 per variant). The Recall survey can work with 25 because you're looking at open-ended patterns, not precise averages.</p>
+    </blockquote>
+
+    <h3>The decision tree</h3>
+
+    <p>After every launch, follow this flow:</p>
+
+    <div class="my-6 space-y-4">
+      <div class="flex items-start gap-3">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-navy text-white font-heading font-bold text-sm flex items-center justify-center mt-0.5">1</span>
+        <div>
+          <p class="font-heading font-semibold text-navy">Send the Pulse survey</p>
+          <p class="text-sm text-n600">Three questions, under a minute, target 30 responses. This is your first read on any piece of material.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-success text-white font-heading font-bold text-sm flex items-center justify-center mt-0.5">2a</span>
+        <div>
+          <p class="font-heading font-semibold text-navy">NPS 30+ and all pairs 4.0+ → Ship</p>
+          <p class="text-sm text-n600">Material is performing. Schedule the Recall survey 7–14 days later to confirm it sticks.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-warning text-navy font-heading font-bold text-sm flex items-center justify-center mt-0.5">2b</span>
+        <div>
+          <p class="font-heading font-semibold text-navy">NPS 0–29 or any pair below 4.0 → Run Full</p>
+          <p class="text-sm text-n600">Something's off. The Full survey with all five pairs will pinpoint which dimension needs work.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-danger text-white font-heading font-bold text-sm flex items-center justify-center mt-0.5">2c</span>
+        <div>
+          <p class="font-heading font-semibold text-navy">NPS below 0 or Preachy–Respectful below 3.0 → Revise</p>
+          <p class="text-sm text-n600">Stop shipping. Revise against Module 3 voice principles and retest.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Worked example</h3>
+
+    <p>Your team just launched a myth-busting campaign about slots RNG. Here are the Pulse results from 35 responses:</p>
+
+    <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="rounded-xl border border-n200 bg-white p-5 shadow-sm">
+        <p class="text-xs text-n500 font-heading uppercase tracking-wide mb-1">NPS</p>
+        <p class="font-heading font-bold text-3xl text-navy mb-1">+38</p>
+        <p class="text-sm text-success font-heading font-medium">Strong — above 30 threshold</p>
+      </div>
+      <div class="rounded-xl border border-n200 bg-white p-5 shadow-sm">
+        <p class="text-xs text-n500 font-heading uppercase tracking-wide mb-1">Forgettable–Memorable</p>
+        <p class="font-heading font-bold text-3xl text-navy mb-1">5.8</p>
+        <p class="text-sm text-success font-heading font-medium">Strong — above 5.5</p>
+      </div>
+    </div>
+
+    <p><strong>Reading:</strong> NPS 38 is in the Strong range. Memorable at 5.8 is also strong. This material ships. Schedule the Recall survey in 10 days to confirm retention.</p>
+
+    <p>Now imagine the Pulse came back differently:</p>
+
+    <div class="my-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="rounded-xl border border-warning/50 bg-warning/5 p-5">
+        <p class="text-xs text-n500 font-heading uppercase tracking-wide mb-1">NPS</p>
+        <p class="font-heading font-bold text-3xl text-navy mb-1">+14</p>
+        <p class="text-sm text-warning font-heading font-medium">Below 30 — needs investigation</p>
+      </div>
+      <div class="rounded-xl border border-n200 bg-white p-5 shadow-sm">
+        <p class="text-xs text-n500 font-heading uppercase tracking-wide mb-1">Forgettable–Memorable</p>
+        <p class="font-heading font-bold text-3xl text-navy mb-1">4.2</p>
+        <p class="text-sm text-n500 font-heading font-medium">Acceptable — not strong</p>
+      </div>
+    </div>
+
+    <p><strong>Reading:</strong> NPS 14 is positive but below the 30+ shipping threshold. Run the Full survey. The Full results show Preachy–Respectful at 3.6 and Generic–Made for me at 3.4. Diagnosis: the material is lecturing and it doesn't feel targeted. The Brand DNA alarm confirms it — revise the voice and add segment-specific framing before shipping.</p>
+
+    <h3>Cadence</h3>
+
+    <table>
+      <thead><tr><th>When</th><th>Survey</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Every launch</strong></td><td>Pulse</td><td>First read — non-negotiable</td></tr>
+        <tr><td><strong>When Pulse flags issues</strong></td><td>Full</td><td>Diagnostic — find which dimensions need work</td></tr>
+        <tr><td><strong>7–14 days after launch</strong></td><td>Recall</td><td>Retention check for flagship material</td></tr>
+        <tr><td><strong>Quarterly</strong></td><td>Full</td><td>Drift check on highest-traffic material</td></tr>
+      </tbody>
+    </table>
+
+    <p>Total effort per launch: 3–4 hours spread across two weeks. One hour to set up and distribute the Pulse. One hour to collect and read results. One hour for Recall setup. One hour for the final read.</p>
+
+    <h3>Deploy the survey</h3>
+
+    <p>Playbook ships a ready-to-use survey widget that auto-calculates NPS and all semantic pair scores with color-coded results. Choose whichever deployment method fits your stack:</p>
+
+    <div class="overflow-x-auto">
+      <table>
+        <thead><tr><th>Method</th><th>Setup time</th><th>Best for</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Embed widget</strong></td>
+            <td>5 min</td>
+            <td>Drop an iframe into any page. Auto-scoring, export-ready. Recommended.</td>
+          </tr>
+          <tr>
+            <td><strong>Google Forms</strong></td>
+            <td>10 min</td>
+            <td>Free, familiar. Manual scoring in a spreadsheet.</td>
+          </tr>
+          <tr>
+            <td><strong>Typeform / SurveyMonkey</strong></td>
+            <td>15 min</td>
+            <td>Polished UX, built-in analytics. Paid plans may be needed.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Try the survey widget</h3>
+
+    <p>This is the actual embeddable survey widget. Try filling it out — it auto-calculates NPS and semantic pair scores, detects the Brand DNA alarm, and generates a copyable report.</p>
+
+    <div class="my-6 rounded-lg border border-n200 dark:border-navy-light overflow-hidden bg-white" style="height: 700px">
+      <iframe
+        src="https://gamblingpolicy.com/tools/playbook/research/survey.html"
+        title="Content Scorecard survey widget"
+        class="w-full h-full border-0"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <p class="text-xs text-n500 mt-2 italic">
+      This is the same widget you'd embed on your site. Players see the survey; you see the color-coded results and the export report.
+      <a href="https://gamblingpolicy.com/tools/playbook/research/" target="_blank" rel="noopener noreferrer" class="text-teal hover:text-teal-dark font-heading font-semibold ml-1">
+        View full methodology →
+      </a>
+    </p>
+
+    <KeyTakeaway>
+      The process is: Pulse every launch, Full when you need diagnostics, Recall for flagship material. NPS 30+ and all pairs 4.0+ means ship. Target 30 responses (60 for A/B tests). The whole thing costs 3–4 hours across two weeks — less time than you spend on a single campaign brief.
+    </KeyTakeaway>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- KNOWLEDGE CHECK                                -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="knowledge-check" data-slide-index="2" data-lesson-slug="knowledge-check" class="module-section py-16 border-t border-n100">
+    <h2>Knowledge Check</h2>
+    <p class="mb-8 text-n700">Five questions on the Content Scorecard framework. You need 80% to mark this module complete.</p>
+    <KnowledgeCheck client:visible moduleId="6-measuring-success" questions={questions} passingScore={80} nextModuleHref={`${base}/capstone/`} nextModuleTitle="Capstone: Build Your MVP Plan" />
+  </section>
+</ModuleLayout>

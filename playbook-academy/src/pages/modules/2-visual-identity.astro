@@ -1,0 +1,973 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import KnowledgeCheck from '../../components/KnowledgeCheck.tsx';
+import KeyTakeaway from '../../components/KeyTakeaway.astro';
+import KeyConcept from '../../components/KeyConcept.astro';
+import TierToggle from '../../components/TierToggle.tsx';
+import AccessibilityChecker from '../../components/AccessibilityChecker.tsx';
+import Glossary from '../../components/Glossary.astro';
+import GenerativeExercise from '../../components/GenerativeExercise.tsx';
+
+const module = {
+  id: '2-visual-identity',
+  number: 2,
+  title: 'Visual Identity & Design',
+  duration: '20 min',
+  lessons: [
+    { title: 'Visual System Principles', slug: 'visual-system-principles' },
+    { title: 'Tier 1 vs Tier 2 Visual Rules', slug: 'tier-visual-rules' },
+    { title: 'Accessibility Requirements', slug: 'accessibility-requirements' },
+  ],
+};
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const tracks = [
+  { slideIndex: 0, src: `${base}/audio/modules/m4-visual-system-principles.mp3`, transcript: "Playbook's visual system uses three core colors. Navy, the primary brand color, conveys trust and authority. Teal is the accent for interactive elements, links, and calls to action. Bold orange brings energy to Tier 1 material, but disappears completely in Tier 2. The visual system is designed for maximum contrast and accessibility. Every color combination must meet WCAG double-A standards. The typography uses a heading font for hierarchy and a body font for readability. Icons follow a consistent line-weight style. The system is deliberately restrained. Visual noise is the enemy of player education." },
+  { slideIndex: 1, src: `${base}/audio/modules/m4-tier-visual-rules.mp3`, transcript: "Tier 1 and Tier 2 use the same brand quality. The difference is restraint, not quality. Tier 1 gets the full visual system. Navy backgrounds, teal accents, bold orange highlights, playful iconography, and branded illustrations. This is where the personality lives. Tier 2 strips everything back. Orange disappears. Decorative elements disappear. The palette reduces to neutrals plus teal for essential actions. Layout goes single-column, maximum six-forty pixels wide. White space increases dramatically. And critically, Tier 2 always renders in light mode, even if the user has dark mode enabled. When someone needs help, every unnecessary visual element is friction." },
+  { slideIndex: 2, src: `${base}/audio/modules/m4-accessibility-requirements.mp3`, transcript: "Accessibility isn't optional. It's the foundation of inclusive player education. Every layout must support keyboard navigation and screen readers. Color contrast ratios must meet WCAG double-A minimum. Four-point-five to one for body text, three to one for large text. Never use color alone to convey meaning. All images need descriptive alt text. Touch targets on mobile must be at least forty-four pixels. Interactive elements need visible focus indicators. And Tier 2 pages always render in light mode, because dark mode can feel isolating in crisis contexts. The goal is simple. Every player, regardless of ability, can access every piece of material." },
+  { slideIndex: 3, src: `${base}/audio/modules/m4-knowledge-check.mp3`, transcript: "LuckyDraw Casino redesigned their responsible gambling page using the tier-based visual system. Before. Cluttered layout. Gray text on white with poor contrast. Decorative gambling imagery mixed with support information. Helpline buried at the bottom. Accessibility score: forty-seven out of one hundred. After. Clean layout with Tier 1 tools and literacy material using the full brand visual system. And a dedicated Tier 2 support section with stripped-back design. No orange, no decoration, maximum restraint. Accessibility score: ninety-four out of one hundred. The information was reorganized, not rewritten. Visual design did the heavy lifting." },
+];
+
+const questions = [
+  {
+    id: 'q1',
+    question: 'What is the "visual quality rule" for Playbook content?',
+    options: [
+      'Playbook content should use a distinct, clinical aesthetic to differentiate it from commercial content',
+      'Playbook content must match the production quality of the operator\'s commercial marketing',
+      'Playbook content should be minimalist so it doesn\'t compete with the operator\'s brand',
+      'Playbook content should follow government health communication design standards',
+    ],
+    correctIndex: 1,
+    explanation: 'If the Playbook content looks generic, dated, or lower-quality than the promotional content around it, players will treat it like fine print. Design it like you\'d design a product launch — because that\'s what it is.',
+    reviewSlug: 'visual-system-principles',
+  },
+  {
+    id: 'q2',
+    question: 'What is the "adaptive identity model"?',
+    options: [
+      'A system where Playbook looks identical across all operators',
+      'A system where operators keep Playbook\'s structural identity (layout, hierarchy, icons) but apply their own colors and fonts',
+      'A system that automatically changes based on the player\'s segment',
+      'A system that uses AI to generate custom designs per market',
+    ],
+    correctIndex: 1,
+    explanation: 'Operators customize colors and fonts to match their brand, but the structural elements — layout patterns, information hierarchy, icon system, spacing — stay consistent. A player who encounters Playbook content at one platform will recognize the structure at another.',
+    reviewSlug: 'visual-system-principles',
+  },
+  {
+    id: 'q3',
+    question: 'How should Tier 2 (support/crisis) content differ visually from Tier 1?',
+    options: [
+      'Use red and warning colors throughout to signal urgency',
+      'Make it visually sparse — no brand styling at all',
+      'Same brand quality but strip back to essentials: clean layout, generous white space, maximum contrast, zero visual noise',
+      'Use a completely different design system from Tier 1',
+    ],
+    correctIndex: 2,
+    explanation: 'Tier 2 uses the same brand quality and design system but with maximum restraint: clean layout, generous white space, high contrast, no decoration. The goal is zero friction — nothing competes with the support information. And Tier 2 should always render in light mode, even if the user has dark mode enabled.',
+    reviewSlug: 'tier-visual-rules',
+  },
+  {
+    id: 'q4',
+    question: 'What is the minimum contrast ratio for normal text under WCAG 2.1 AA?',
+    options: [
+      '2:1',
+      '3:1',
+      '4.5:1',
+      '7:1',
+    ],
+    correctIndex: 2,
+    explanation: '4.5:1 is the minimum for normal text (under 18px or under 14px bold). Large text needs 3:1. UI components and graphical objects need 3:1. These are non-negotiable — accessibility isn\'t a feature, it\'s a requirement.',
+    reviewSlug: 'accessibility-requirements',
+  },
+  {
+    id: 'q5',
+    question: 'Why does Playbook use Source Code Pro for helpline numbers?',
+    options: [
+      'It looks more modern than other fonts',
+      'It\'s the brand\'s primary font',
+      'It disambiguates similar characters — 0/O and 1/l/I are visually distinct',
+      'It\'s required by gambling regulators',
+    ],
+    correctIndex: 2,
+    explanation: 'When someone is trying to call a helpline, confusing a 0 with an O or a 1 with an l could mean dialing the wrong number. Source Code Pro makes every character visually distinct. This is a functional design decision, not an aesthetic one.',
+    reviewSlug: 'visual-system-principles',
+  },
+];
+---
+
+<ModuleLayout module={module} panelMode={true} tracks={tracks}>
+
+  <!-- Module intro -->
+  <div class="mb-8 p-5 rounded-xl bg-navy/5 border border-navy/10">
+    <p class="text-sm text-navy font-heading mb-2">
+      <strong>Visual Identity & Design</strong> — The adaptive identity model, Tier 1 vs Tier 2 visual rules, color system, typography, and accessibility requirements.
+    </p>
+    <p class="text-sm text-navy mb-3 font-heading"><strong>By the end of this module, you will be able to:</strong></p>
+    <ul class="text-sm text-n700 mb-4 space-y-1.5 pl-4 list-disc">
+      <li>Explain the adaptive identity model and how operators customize Playbook</li>
+      <li>Apply Tier 1 and Tier 2 visual rules to any piece of player-facing content</li>
+      <li>Verify WCAG 2.1 AA compliance for contrast, touch targets, and font choices</li>
+    </ul>
+    <button
+      id="start-narration-btn"
+      class="inline-flex items-center gap-2 px-4 py-2 bg-teal text-navy font-heading font-bold rounded-lg hover:bg-teal-light transition-colors text-sm"
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      Play Audio Guide
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('start-narration-btn')?.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('start-playback'));
+    });
+  </script>
+
+  <!-- Lightbox for collateral images -->
+  <script>
+    document.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest('.collateral-lightbox') as HTMLElement | null;
+      if (!btn) return;
+      const src = btn.dataset.src;
+      const title = btn.dataset.title || '';
+      if (!src) return;
+
+      const overlay = document.createElement('div');
+      overlay.className = 'fixed inset-0 z-[100] flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm cursor-zoom-out';
+      overlay.style.animation = 'fadeIn 0.2s ease-out';
+      overlay.innerHTML = `
+        <div class="relative max-w-3xl w-full">
+          <img src="${src}" alt="${title}" class="w-full rounded-xl shadow-2xl" />
+          ${title ? `<p class="text-center text-white/80 text-sm font-heading mt-3">${title}</p>` : ''}
+          <button class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-navy text-white flex items-center justify-center hover:bg-navy-light transition-colors shadow-lg" aria-label="Close">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      `;
+      overlay.addEventListener('click', (ev) => {
+        if (ev.target === overlay || (ev.target as HTMLElement).closest('button[aria-label="Close"]')) {
+          overlay.remove();
+        }
+      });
+      document.addEventListener('keydown', function handler(ev) {
+        if (ev.key === 'Escape') { overlay.remove(); document.removeEventListener('keydown', handler); }
+      });
+      document.body.appendChild(overlay);
+    });
+  </script>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 1: Visual System Principles             -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="visual-system-principles" data-slide-index="0" data-lesson-slug="visual-system-principles" class="module-section py-16">
+    <h2>Visual System Principles</h2>
+
+    <p class="text-lg text-n600 mb-6">
+      Most responsible gambling content looks like it was designed by a compliance department. Because it usually was. Playbook takes a different approach: player education content should be <strong>visually indistinguishable in quality</strong> from the operator's commercial content.
+    </p>
+
+    <blockquote>
+      <p><strong>The visual quality rule:</strong> Playbook content must match the production quality of the operator's commercial marketing. If the Playbook content looks generic, players will treat it like fine print.</p>
+    </blockquote>
+
+    <div class="my-8 flex justify-center">
+      <div class="rounded-xl bg-white border border-n100 shadow-sm px-10 py-8 inline-flex flex-col items-center gap-4">
+        <svg width="200" height="46" viewBox="0 0 242 56" class="block">
+          <text y="40" font-family="Inter, sans-serif" font-size="44" letter-spacing="-1.3">
+            <tspan font-weight="800" fill="#1B2838">Play</tspan><tspan font-weight="300" letter-spacing="-1.0" fill="#1B2838">BOOK</tspan>
+          </text>
+        </svg>
+        <p class="text-xs text-n500 font-heading">The typographic contrast — <strong class="text-navy">800 weight</strong> vs <span class="font-light text-navy">300 weight</span> — defines the entire visual system</p>
+      </div>
+    </div>
+
+    <h3 id="the-adaptive-identity-model">The adaptive identity model</h3>
+
+    <p>
+      Playbook isn't a rigid visual system that every operator copies identically. It's an <strong>adaptive identity</strong> — operators keep their own colors and fonts, but the structural elements stay consistent:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>What operators customize</th>
+          <th>What stays consistent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Color palette (primary, secondary, accent)</td>
+          <td>Layout patterns and spacing</td>
+        </tr>
+        <tr>
+          <td>Typography (heading + body fonts)</td>
+          <td>Information hierarchy</td>
+        </tr>
+        <tr>
+          <td>Logo and co-branding</td>
+          <td>Icon system (dual stroke-weight)</td>
+        </tr>
+        <tr>
+          <td>Photography style</td>
+          <td>Component structure</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      The result: a player who encounters Playbook-based content at one operator will intuitively recognize the content structure at another — even though they look different. It's recognizable without being identical.
+    </p>
+
+    <KeyConcept title="Adaptive Identity">
+      <p>Operators customize colors and fonts to match their brand, but the structural elements — layout patterns, information hierarchy, icon system, spacing — stay consistent. A player who encounters Playbook content at one platform will recognize the structure at another.</p>
+    </KeyConcept>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 1b: Default Palette & Typography        -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="default-palette" data-slide-index="0" data-lesson-slug="visual-system-principles" class="module-section py-16">
+    <h3 id="the-default-palette">The default palette</h3>
+
+    <p>
+      Playbook's default colors are chosen to feel like a lifestyle brand, not a health program:
+    </p>
+
+    <div class="grid grid-cols-3 gap-4 my-6">
+      <div class="rounded-xl overflow-hidden shadow-sm border border-n100">
+        <div class="h-20 bg-navy"></div>
+        <div class="p-3 bg-white">
+          <p class="font-heading font-bold text-navy text-sm">Deep Navy</p>
+          <p class="font-mono text-xs text-n500">#1B2838</p>
+          <p class="text-xs text-n500 mt-1">Primary — headers, backgrounds</p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-sm border border-n100">
+        <div class="h-20 bg-teal"></div>
+        <div class="p-3 bg-white">
+          <p class="font-heading font-bold text-navy text-sm">Electric Teal</p>
+          <p class="font-mono text-xs text-n500">#00D4AA</p>
+          <p class="text-xs text-n500 mt-1">Secondary — interactive, highlights</p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow-sm border border-n100">
+        <div class="h-20 bg-orange"></div>
+        <div class="p-3 bg-white">
+          <p class="font-heading font-bold text-navy text-sm">Bold Orange</p>
+          <p class="font-mono text-xs text-n500">#FF6B35</p>
+          <p class="text-xs text-n500 mt-1">Accent — CTAs, attention</p>
+        </div>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Color</th>
+          <th>Hex</th>
+          <th>Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Primary</strong></td>
+          <td>Deep navy</td>
+          <td>#1B2838</td>
+          <td>Brand identity, headers, backgrounds — authority and sophistication</td>
+        </tr>
+        <tr>
+          <td><strong>Secondary</strong></td>
+          <td>Electric teal</td>
+          <td>#00D4AA</td>
+          <td>Interactive elements, highlights — energy and modernity</td>
+        </tr>
+        <tr>
+          <td><strong>Accent</strong></td>
+          <td>Bold orange</td>
+          <td>#FF6B35</td>
+          <td>CTAs, attention — action and urgency</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      Plus a semantic palette that communicates specific states consistently:
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+      <div class="rounded-lg overflow-hidden border border-n100 shadow-sm">
+        <div class="h-10" style="background:#00C853"></div>
+        <div class="p-2.5 bg-white">
+          <p class="font-heading font-semibold text-sm text-navy">Success</p>
+          <p class="font-mono text-xs text-n500">#00C853</p>
+          <p class="text-xs text-n500">Quiz passed, limit set</p>
+        </div>
+      </div>
+      <div class="rounded-lg overflow-hidden border border-n100 shadow-sm">
+        <div class="h-10" style="background:#FFB300"></div>
+        <div class="p-2.5 bg-white">
+          <p class="font-heading font-semibold text-sm text-navy">Warning</p>
+          <p class="font-mono text-xs text-n500">#FFB300</p>
+          <p class="text-xs text-n500">Approaching limit</p>
+        </div>
+      </div>
+      <div class="rounded-lg overflow-hidden border border-n100 shadow-sm">
+        <div class="h-10" style="background:#FF3D00"></div>
+        <div class="p-2.5 bg-white">
+          <p class="font-heading font-semibold text-sm text-navy">Danger</p>
+          <p class="font-mono text-xs text-n500">#FF3D00</p>
+          <p class="text-xs text-n500">Tier 2 only — crisis</p>
+        </div>
+      </div>
+      <div class="rounded-lg overflow-hidden border border-n100 shadow-sm">
+        <div class="h-10" style="background:#2979FF"></div>
+        <div class="p-2.5 bg-white">
+          <p class="font-heading font-semibold text-sm text-navy">Info</p>
+          <p class="font-mono text-xs text-n500">#2979FF</p>
+          <p class="text-xs text-n500">Tips, explainers</p>
+        </div>
+      </div>
+    </div>
+
+    <KeyConcept title="Semantic Colors Are Functional">
+      <p>When customizing the palette, keep the semantic colors (success/warning/danger/info) standard. Players learn these associations across products and platforms. Your brand colors express identity; semantic colors express function. Mixing the two creates confusion — a red CTA button next to a red danger alert loses its signal.</p>
+    </KeyConcept>
+
+    <h3 id="typography-system">Typography system</h3>
+
+    <p>
+      The type system uses three font families, each with a specific purpose:
+    </p>
+
+    <div class="grid gap-4 sm:grid-cols-3 my-6">
+      <div class="rounded-xl border border-n100 bg-n50 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Headings & UI</p>
+        <p class="text-sm text-n600 mb-2"><strong>Inter</strong> (300-900)</p>
+        <p class="text-sm text-n500">Headlines, section headers, quiz questions, CTAs, logo</p>
+      </div>
+      <div class="rounded-xl border border-n100 bg-n50 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Body text</p>
+        <p class="text-sm text-n600 mb-2"><strong>Source Sans 3</strong> (300-600)</p>
+        <p class="text-sm text-n500">Paragraph text, descriptions, form labels</p>
+      </div>
+      <div class="rounded-xl border border-n100 bg-n50 p-5">
+        <p class="font-heading font-semibold text-navy mb-1">Data & helplines</p>
+        <p class="text-sm text-n600 mb-2"><strong>Source Code Pro</strong> (400-600)</p>
+        <p class="text-sm text-n500">Helpline numbers, odds displays, RTP values, data</p>
+      </div>
+    </div>
+
+    <p>
+      <strong>Why Source Code Pro for helpline numbers?</strong> It disambiguates 0/O and 1/l/I. When someone is trying to reach a helpline, those distinctions can be the difference between getting help and dialing a wrong number. This is a functional choice, not an aesthetic one.
+    </p>
+
+    <h3 id="iconography-the-weight-contrast-system">Iconography: the weight-contrast system</h3>
+
+    <p>
+      The Playbook icon system mirrors the logo's typographic contrast — <strong>Play</strong> (800 weight) vs <strong>BOOK</strong> (300 weight) — through dual stroke weights:
+    </p>
+
+    <div class="list-card">
+      <ul>
+        <li><strong>Primary strokes (2px)</strong> — outer containers, main shapes, defining structure</li>
+        <li><strong>Detail strokes (1px)</strong> — inner details, accents, secondary elements</li>
+      </ul>
+    </div>
+
+    <div class="my-6 rounded-xl border border-n100 bg-white shadow-sm p-5">
+      <p class="font-heading font-semibold text-navy text-sm mb-4">Playbook icon library — dual stroke-weight system</p>
+      <div class="grid grid-cols-4 sm:grid-cols-8 gap-4">
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></g><g stroke-width="1"><circle cx="6.5" cy="6.5" r="0.75" fill="#1B2838" stroke="none"/><circle cx="15.5" cy="15.5" r="0.75" fill="#1B2838" stroke="none"/><circle cx="19.5" cy="15.5" r="0.75" fill="#1B2838" stroke="none"/><circle cx="15.5" cy="19.5" r="0.75" fill="#1B2838" stroke="none"/><circle cx="19.5" cy="19.5" r="0.75" fill="#1B2838" stroke="none"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">Dice</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="5" width="7" height="15" rx="1.5"/><rect x="14" y="10" width="7" height="10" rx="1.5"/></g><g stroke-width="1"><line x1="2" y1="20" x2="22" y2="20"/><line x1="5" y1="9" x2="8" y2="9"/><line x1="5" y1="13" x2="8" y2="13"/><line x1="16" y1="14" x2="19" y2="14"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">Edge</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="12" cy="12" r="9"/></g><g stroke-width="1"><path d="M9 9c0-1.7 1.3-3 3-3s3 1.3 3 3c0 2-3 2-3 4"/><circle cx="12" cy="17" r="0.5" fill="#1B2838" stroke="none"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">Quiz</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M3 8h4l6 8h4"/><path d="M3 16h4l6-8h4"/></g><g stroke-width="1"><polyline points="18 6 21 8 18 10"/><polyline points="18 14 21 16 18 18"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">RNG</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="12" cy="12" r="9"/></g><g stroke-width="1"><line x1="12" y1="7" x2="12" y2="17"/><line x1="7" y1="12" x2="17" y2="12"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">Help</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/></g><g stroke-width="1"><line x1="12" y1="3" x2="12" y2="15"/><polyline points="8 7 12 3 16 7"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">Share</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></g><g stroke-width="1"><polyline points="9 12 11 14 15 10"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">Limit</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <div class="w-12 h-12 rounded-lg bg-n50 flex items-center justify-center">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B2838" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="12" cy="12" r="9"/></g><g stroke-width="1"><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></g></svg>
+          </div>
+          <span class="text-xs text-n500">Warning</span>
+        </div>
+      </div>
+      <p class="text-xs text-n500 mt-4">Notice the dual stroke weights: 2px for outer structure, 1px for inner details — mirroring the <strong class="text-navy">Play</strong><span class="font-light">BOOK</span> wordmark contrast.</p>
+    </div>
+
+    <p>
+      This 2:1 ratio creates visual hierarchy within each icon and connects the icon system to the wordmark. The icon library covers 31 icons across 6 categories: game types, odds & math, player tools, content & education, social & sharing, and support & safety.
+    </p>
+
+    <h3 id="photography-direction">Photography direction</h3>
+
+    <p>
+      Playbook photography should feel like a lifestyle editorial — candid, editorial-quality shots with cinematic lighting and an energetic mood. The key question: <em>"Does this image make gambling look like fun entertainment among friends, or does it make it look like an isolated, high-stakes activity?"</em>
+    </p>
+
+    <div class="my-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+        <div class="rounded-xl overflow-hidden border-2 border-success/30">
+          <img src={`${base}/images/photography/cinematic-lighting-good.jpg`} alt="Young woman with cinematic lighting in gaming venue — warm, confident, natural" class="w-full aspect-[3/4] object-cover" />
+          <div class="px-3 py-2 bg-success/5">
+            <p class="text-xs font-heading font-bold text-success uppercase tracking-wider flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              Do
+            </p>
+            <p class="text-sm text-navy mt-0.5">Cinematic lighting, warm tone, directional light, real person</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border-2 border-success/30">
+          <img src={`${base}/images/photography/closeup-cards-chips-good.jpg`} alt="Close-up detail shot of cards and chips on blackjack table" class="w-full aspect-[3/4] object-cover" />
+          <div class="px-3 py-2 bg-success/5">
+            <p class="text-xs font-heading font-bold text-success uppercase tracking-wider flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              Do
+            </p>
+            <p class="text-sm text-navy mt-0.5">Close-up detail, player perspective, natural context</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border-2 border-success/30">
+          <img src={`${base}/images/photography/closeup-slot-interface-good.jpg`} alt="Player's hand on slot machine interface — real interaction perspective" class="w-full aspect-[3/4] object-cover" />
+          <div class="px-3 py-2 bg-success/5">
+            <p class="text-xs font-heading font-bold text-success uppercase tracking-wider flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+              Do
+            </p>
+            <p class="text-sm text-navy mt-0.5">Real interface, player's POV, action-oriented</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="rounded-xl overflow-hidden border-2 border-danger/30">
+          <img src={`${base}/images/photography/dim-lighting-bad.jpg`} alt="Dim moody lighting in arcade — too dark, isolating atmosphere" class="w-full aspect-[16/9] object-cover" />
+          <div class="px-3 py-2 bg-danger/5">
+            <p class="text-xs font-heading font-bold text-danger uppercase tracking-wider flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+              Don't
+            </p>
+            <p class="text-sm text-navy mt-0.5">Dim, moody lighting that feels isolating or exclusionary</p>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden border-2 border-danger/30">
+          <img src={`${base}/images/photography/slot-machines-filler-bad.jpg`} alt="Generic slot machine stock photo — no people, no story" class="w-full aspect-[16/9] object-cover" />
+          <div class="px-3 py-2 bg-danger/5">
+            <p class="text-xs font-heading font-bold text-danger uppercase tracking-wider flex items-center gap-1">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+              Don't
+            </p>
+            <p class="text-sm text-navy mt-0.5">Generic stock filler — no people, no story, no context</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 id="text-overlay-rules">Text overlay rules</h3>
+
+    <p>
+      When placing text over photography, Playbook uses gradient overlays to ensure WCAG AA contrast compliance. Never place white text directly on unprocessed photography.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6">
+      <div class="rounded-xl overflow-hidden border border-n100 shadow-sm">
+        <div class="h-28 relative" style="background: linear-gradient(to top, #1B2838 30%, #1B283880 70%, transparent)">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#1B2838] via-[#1B2838]/60 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 p-3">
+            <p class="text-white font-heading font-bold text-sm">Know Your Odds</p>
+            <p class="text-white/70 text-xs">Every game has a house edge</p>
+          </div>
+        </div>
+        <div class="p-2.5 bg-white">
+          <p class="font-heading font-semibold text-navy text-xs">Navy Gradient</p>
+          <p class="text-xs text-n500">Primary overlay — most text treatments</p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-n100 shadow-sm">
+        <div class="h-28 relative bg-gradient-to-t from-[#00D4AA] via-[#00D4AA]/60 to-transparent">
+          <div class="absolute bottom-0 left-0 p-3">
+            <p class="text-navy font-heading font-bold text-sm">Set Your Limits</p>
+            <p class="text-navy/70 text-xs">Your budget, your rules</p>
+          </div>
+        </div>
+        <div class="p-2.5 bg-white">
+          <p class="font-heading font-semibold text-navy text-xs">Teal Gradient</p>
+          <p class="text-xs text-n500">Positive, action-oriented messaging</p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden border border-n100 shadow-sm">
+        <div class="h-28 relative bg-gradient-to-t from-[#1B2838] via-[#1B2838]/70 to-[#1B2838]/30">
+          <div class="absolute bottom-0 left-0 p-3">
+            <p class="text-white font-heading font-bold text-sm">Myth: <span style="color:#FF6B35">Hot Streaks</span></p>
+            <p class="text-white/70 text-xs">The math says otherwise</p>
+          </div>
+        </div>
+        <div class="p-2.5 bg-white">
+          <p class="font-heading font-semibold text-navy text-xs">Navy + Orange Accent</p>
+          <p class="text-xs text-n500">Myth-busting content</p>
+        </div>
+      </div>
+    </div>
+
+    <KeyTakeaway title="Keep semantic colors standard">
+      <p>
+        When customizing the palette, keep the semantic colors (success/warning/danger/info) standard. Players learn these associations, and changing them creates confusion. Your brand colors are for identity; semantic colors are for function.
+      </p>
+    </KeyTakeaway>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 2: Tier 1 vs Tier 2 Visual Rules        -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="tier-visual-rules" data-slide-index="1" data-lesson-slug="tier-visual-rules" class="module-section py-16">
+    <h2>Tier 1 vs Tier 2 Visual Rules</h2>
+
+    <p class="text-lg text-n600 mb-6">
+      The two tiers don't just differ in content — they differ in visual treatment. Both use the same design system, but with very different levels of restraint.
+    </p>
+
+    <h3 id="tier-1-entertainment-literacy">Tier 1: Entertainment literacy</h3>
+
+    <p>
+      Tier 1 content is the majority (~95%) of Playbook output. It should be visually engaging, dynamic, and brand-forward — full color palette, rich layouts, photography, animation, and personality. Here's what that looks like in practice:
+    </p>
+
+    <div class="my-6 grid grid-cols-2 gap-4">
+      <button class="collateral-lightbox rounded-xl overflow-hidden border border-n100 shadow-sm text-left hover:shadow-md hover:border-teal/30 transition-all cursor-zoom-in group" data-src={`${base}/images/collateral/card-1a-hot-streak.png`} data-title="Tier 1 — Social Card: Myth-buster campaign">
+        <img src={`${base}/images/collateral/card-1a-hot-streak.png`} alt="Tier 1 social card — Myth vs Math hot streak campaign" class="w-full group-hover:scale-[1.02] transition-transform" />
+        <div class="px-3 py-2 bg-white">
+          <p class="text-xs font-heading font-semibold text-navy">Social Card</p>
+          <p class="text-xs text-n500">Myth-buster campaign</p>
+        </div>
+      </button>
+      <button class="collateral-lightbox rounded-xl overflow-hidden border border-n100 shadow-sm text-left hover:shadow-md hover:border-teal/30 transition-all cursor-zoom-in group" data-src={`${base}/images/collateral/card-2a-house-edge.png`} data-title="Tier 1 — Education Card: Real odds breakdown">
+        <img src={`${base}/images/collateral/card-2a-house-edge.png`} alt="Tier 1 education card — House edge comparison across games" class="w-full group-hover:scale-[1.02] transition-transform" />
+        <div class="px-3 py-2 bg-white">
+          <p class="text-xs font-heading font-semibold text-navy">Education Card</p>
+          <p class="text-xs text-n500">Real odds breakdown</p>
+        </div>
+      </button>
+    </div>
+
+    <p>
+      Notice the shared DNA: navy backgrounds, teal accents, Inter headings, the PlayBOOK wordmark, orange for attention. Tier 1 templates span social cards, story formats, posters, emails, venue signage, rack cards, and digital displays — each designed to compete with the operator's best commercial content.
+    </p>
+
+    <h3 id="tier-2-support-and-crisis">Tier 2: Support and crisis</h3>
+
+    <p>
+      Tier 2 is where visual restraint becomes critical. The design goal is <strong>zero friction</strong> — nothing competes with the support information. Compare these with the Tier 1 examples above:
+    </p>
+
+    <div class="my-6 grid grid-cols-2 gap-4">
+      <button class="collateral-lightbox rounded-xl overflow-hidden border border-n100 shadow-sm text-left hover:shadow-md hover:border-teal/30 transition-all cursor-zoom-in group" data-src={`${base}/images/collateral/card-tier2-10f.png`} data-title="Tier 2 — Support Card: Clean, sparse, direct">
+        <img src={`${base}/images/collateral/card-tier2-10f.png`} alt="Tier 2 support card — clean white layout with prominent helpline number" class="w-full group-hover:scale-[1.02] transition-transform" />
+        <div class="px-3 py-2 bg-white">
+          <p class="text-xs font-heading font-semibold text-navy">Support Card</p>
+          <p class="text-xs text-n500">Clean, sparse, direct</p>
+        </div>
+      </button>
+      <button class="collateral-lightbox rounded-xl overflow-hidden border border-n100 shadow-sm text-left hover:shadow-md hover:border-teal/30 transition-all cursor-zoom-in group" data-src={`${base}/images/collateral/support-page-10a.png`} data-title="Tier 2 — Support Page: Large targets, single column">
+        <img src={`${base}/images/collateral/support-page-10a.png`} alt="Tier 2 support page — call, text, chat options with large touch targets" class="w-full group-hover:scale-[1.02] transition-transform" />
+        <div class="px-3 py-2 bg-white">
+          <p class="text-xs font-heading font-semibold text-navy">Support Page</p>
+          <p class="text-xs text-n500">Large targets, single column</p>
+        </div>
+      </button>
+    </div>
+
+    <p>
+      The contrast is deliberate: strip back to essentials, maximum contrast, no decorative elements, minimal color, large touch targets, and <strong>always light mode</strong> — dark mode can feel isolating in crisis contexts.</p>
+
+    <p class="font-heading font-semibold text-navy text-lg mt-6 mb-2">Visual elements comparison</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Tier 1 treatment</th>
+          <th>Tier 2 treatment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Color</strong></td>
+          <td>Full palette, rich combinations</td>
+          <td>Neutral + teal only, maximum contrast</td>
+        </tr>
+        <tr>
+          <td><strong>Typography</strong></td>
+          <td>Full type scale, varied weights</td>
+          <td>Large, clear, minimal hierarchy</td>
+        </tr>
+        <tr>
+          <td><strong>Layout</strong></td>
+          <td>Dynamic grids, cards, visual variety</td>
+          <td>Single column, generous spacing</td>
+        </tr>
+        <tr>
+          <td><strong>Imagery</strong></td>
+          <td>Photography, illustration, data viz</td>
+          <td>None. Text and links only.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="font-heading font-semibold text-navy text-lg mt-6 mb-2">Interaction and mode comparison</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Tier 1 treatment</th>
+          <th>Tier 2 treatment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Interaction</strong></td>
+          <td>Quizzes, tools, animations</td>
+          <td>Simple buttons. No steps. No friction.</td>
+        </tr>
+        <tr>
+          <td><strong>Tone</strong></td>
+          <td>Playful, confident, witty</td>
+          <td>Warm, direct, serious. Zero cleverness.</td>
+        </tr>
+        <tr>
+          <td><strong>Dark mode</strong></td>
+          <td>Follows system preference</td>
+          <td>Always light mode</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <KeyTakeaway>
+      <p>
+        Both tiers use the same brand quality. The difference is restraint, not quality. Tier 2 isn't "uglier Tier 1" — it's deliberately sparse because visual noise is friction when someone needs help.
+      </p>
+    </KeyTakeaway>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 2b: Tier Toggle & Integration Test      -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="tier-toggle-exercise" data-slide-index="1" data-lesson-slug="tier-visual-rules" data-has-exercise class="module-section py-16">
+    <h3 id="see-it-in-action">See it in action</h3>
+
+    <p>
+      Toggle between Tier 1 and Tier 2 to see how the same touchpoint changes when a player may need support. Notice what disappears, what stays, and how the tone shifts.
+    </p>
+
+    <TierToggle client:visible />
+
+    <h3 id="the-visual-integration-test">The visual integration test</h3>
+
+    <p>
+      Before shipping any Playbook content, apply this four-point test. If it passes all four, ship it.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
+      <div class="rounded-xl border-2 border-navy/10 bg-white p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white font-heading font-bold text-xs">1</span>
+          <p class="font-heading font-bold text-navy text-sm">Does it belong?</p>
+        </div>
+        <p class="text-sm text-n600 leading-relaxed">Place it next to the operator's commercial content. Does it look like it belongs, or does it look bolted on from a different brand?</p>
+      </div>
+      <div class="rounded-xl border-2 border-navy/10 bg-white p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white font-heading font-bold text-xs">2</span>
+          <p class="font-heading font-bold text-navy text-sm">Would a CMO sign off?</p>
+        </div>
+        <p class="text-sm text-n600 leading-relaxed">If it looks like a compliance department made it, redesign. The bar is marketing-quality production, not regulatory checkbox.</p>
+      </div>
+      <div class="rounded-xl border-2 border-navy/10 bg-white p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white font-heading font-bold text-xs">3</span>
+          <p class="font-heading font-bold text-navy text-sm">Does it feel modern?</p>
+        </div>
+        <p class="text-sm text-n600 leading-relaxed">If it could have been designed in 2010, it's not good enough. Players consume cutting-edge digital content daily — your education content competes for the same attention.</p>
+      </div>
+      <div class="rounded-xl border-2 border-navy/10 bg-white p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white font-heading font-bold text-xs">4</span>
+          <p class="font-heading font-bold text-navy text-sm">Is it accessible?</p>
+        </div>
+        <p class="text-sm text-n600 leading-relaxed">Run the contrast ratios. Check the touch targets. Test with a screen reader. Accessibility is a prerequisite, not an afterthought.</p>
+      </div>
+    </div>
+
+    <KeyTakeaway>
+      <p>
+        Apply the four-point visual integration test before shipping: does it belong next to commercial content, would a CMO sign off, does it feel modern, and is it accessible? If yes to all four, ship it.
+      </p>
+    </KeyTakeaway>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 3: Accessibility Requirements           -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="accessibility-requirements" data-slide-index="2" data-lesson-slug="accessibility-requirements" class="module-section py-16">
+    <h2>Accessibility Requirements</h2>
+
+    <p class="text-lg text-n600 mb-6">
+      Accessibility isn't a nice-to-have. If a player can't access your content because of a disability, a device limitation, or a situational constraint (bright sunlight, noisy venue), your education content fails them the same way buried compliance text does. Different barrier, same result: the player doesn't get the information they need.
+    </p>
+
+    <h3 id="wcag-21-aa-the-recommended-baseline">WCAG 2.1 AA: the recommended baseline</h3>
+
+    <p>
+      Every Playbook touchpoint should meet <Glossary term="WCAG" definition="Web Content Accessibility Guidelines — international standards for making web content accessible to people with disabilities" /> 2.1 AA. Here's what that means in practice:
+    </p>
+
+    <p class="font-heading font-semibold text-navy text-lg mt-6 mb-2">Visual requirements</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Requirement</th>
+          <th>Standard</th>
+          <th>What it means</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Color contrast (text)</strong></td>
+          <td>4.5:1 for normal text, 3:1 for large text</td>
+          <td>All foreground/background text combinations must be measurably readable</td>
+        </tr>
+        <tr>
+          <td><strong>Color contrast (UI)</strong></td>
+          <td>3:1 for components and graphical objects</td>
+          <td>Buttons, icons, charts, and controls must be distinguishable from their backgrounds</td>
+        </tr>
+        <tr>
+          <td><strong>Touch targets</strong></td>
+          <td>Minimum 44x44px</td>
+          <td>All interactive elements — buttons, links, form fields — must be easily tappable</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="font-heading font-semibold text-navy text-lg mt-6 mb-2">Structural and interaction requirements</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Requirement</th>
+          <th>Standard</th>
+          <th>What it means</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Keyboard navigation</strong></td>
+          <td>All interactive content must be keyboard-accessible</td>
+          <td>Tab order makes sense. Focus states are visible. No keyboard traps.</td>
+        </tr>
+        <tr>
+          <td><strong>Screen reader support</strong></td>
+          <td>Semantic HTML, ARIA labels where needed</td>
+          <td>Content structure is clear to assistive technology</td>
+        </tr>
+        <tr>
+          <td><strong>Text sizing</strong></td>
+          <td>Minimum 16px (1rem) body text</td>
+          <td>No exceptions. Content people should read must be readable.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="my-6 rounded-xl border border-n100 bg-white shadow-sm p-5">
+      <p class="font-heading font-semibold text-navy text-sm mb-4">Contrast ratio in practice</p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="rounded-lg overflow-hidden">
+          <div class="bg-navy p-3 text-center">
+            <p class="text-white text-sm font-heading font-semibold">White on Navy</p>
+            <p class="text-teal text-xs font-mono mt-1">13.5:1 ✓</p>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden">
+          <div class="bg-navy p-3 text-center">
+            <p class="text-teal text-sm font-heading font-semibold">Teal on Navy</p>
+            <p class="text-teal text-xs font-mono mt-1">7.2:1 ✓</p>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden border border-n100">
+          <div class="bg-white p-3 text-center">
+            <p class="text-navy text-sm font-heading font-semibold">Navy on White</p>
+            <p class="text-teal text-xs font-mono mt-1">13.5:1 ✓</p>
+          </div>
+        </div>
+        <div class="rounded-lg overflow-hidden border-2 border-danger/30">
+          <div class="p-3 text-center" style="background:#E8E8F0">
+            <p class="text-sm font-heading font-semibold" style="color:#A8A8C0">Light on Light</p>
+            <p class="text-xs font-mono mt-1" style="color:#FF3D00">1.4:1 ✗</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <KeyConcept title="WCAG 2.1 AA Is the Floor">
+      <p>4.5:1 contrast for normal text, 3:1 for large text, 44x44px minimum touch targets, full keyboard navigation, and screen reader support. These are non-negotiable — if your contrast fails, your content fails the people who need it most.</p>
+    </KeyConcept>
+
+    <KeyTakeaway>
+      Accessibility is a prerequisite, not a feature. WCAG 2.1 AA sets the minimum bar: sufficient contrast, tappable targets, keyboard access, and screen reader support. If a player can't reach the information, it doesn't matter how good the content is.
+    </KeyTakeaway>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 3b: Dark Mode & Checklist               -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="dark-mode-checklist" data-slide-index="2" data-lesson-slug="accessibility-requirements" class="module-section py-16">
+    <h3 id="dark-mode-accessibility">Dark mode accessibility</h3>
+
+    <p>
+      Dark mode introduces specific accessibility challenges. Key rules:
+    </p>
+
+    <div class="list-card">
+      <ul>
+        <li><strong>Muted text on dark backgrounds</strong> — neutral_500 (#6B6B8A) on neutral_900 (#1A1A2E) only achieves 3.33:1. This passes for large text but fails for normal text. Use muted text sparingly in dark mode and only at 18px+ or 14px+ bold.</li>
+        <li><strong>Status colors</strong> — always use dark text on chromatic status backgrounds (success, warning, danger, info), in both light and dark mode. Never use white text on these colors.</li>
+        <li><strong>Images</strong> — reduce brightness to 85-90% to prevent glare on dark backgrounds.</li>
+        <li><strong>Tier 2 pages always render in light mode</strong> — dark mode can feel isolating in crisis contexts.</li>
+      </ul>
+    </div>
+
+    <h3 id="the-playbook-accessibility-checklist">The Playbook accessibility checklist</h3>
+
+    <p>
+      Run through this before any content ships:
+    </p>
+
+    <div class="my-6 rounded-xl border border-n100 bg-white shadow-sm overflow-hidden">
+      <div class="bg-navy px-4 py-3">
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-teal">Pre-Ship Checklist</span>
+        <p class="text-white font-heading font-bold text-sm mt-0.5">Accessibility Requirements</p>
+      </div>
+      <div class="p-4">
+        <p class="text-xs font-heading font-bold uppercase tracking-wider text-n400 mb-2">Visual & Contrast</p>
+        <div class="space-y-1 mb-4">
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>Contrast ratios verified</strong> — every text/background combination meets 4.5:1 (normal) or 3:1 (large)</span>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>Touch targets measured</strong> — all interactive elements are 44x44px minimum</span>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>No color-only information</strong> — meaning is conveyed by text, icons, or patterns alongside color</span>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>Helpline numbers in Source Code Pro</strong> — 0/O and 1/l/I character disambiguation verified</span>
+          </label>
+        </div>
+        <p class="text-xs font-heading font-bold uppercase tracking-wider text-n400 mb-2">Interaction & Devices</p>
+        <div class="space-y-1">
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>Keyboard tested</strong> — every action can be completed without a mouse</span>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>Screen reader tested</strong> — content makes sense when read linearly</span>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>Alt text on all images</strong> — descriptive for informational images, empty for decorative</span>
+          </label>
+          <label class="flex items-start gap-3 p-2.5 rounded-lg hover:bg-n50 transition-colors cursor-pointer">
+            <input type="checkbox" class="mt-0.5 w-4 h-4 rounded border-2 border-n300 text-teal accent-[#00D4AA] flex-shrink-0" />
+            <span class="text-sm text-navy"><strong>Responsive tested</strong> — works on mobile, tablet, desktop, and assistive devices</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LESSON 3c: Accessibility Exercise              -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="accessibility-exercise" data-slide-index="2" data-lesson-slug="accessibility-requirements" data-has-exercise class="module-section py-16">
+    <h3 id="practice-spot-the-failures">Practice: spot the failures</h3>
+
+    <p>
+      Apply what you've learned. Each layout below has accessibility issues — see how many you can identify.
+    </p>
+
+    <AccessibilityChecker client:visible />
+
+    <KeyTakeaway>
+      <p>
+        Accessibility is especially important for Playbook because the people most likely to need help are also most likely to be in stressful situations where cognitive load is high and patience is low. Accessible design isn't charity — it's effective design.
+      </p>
+    </KeyTakeaway>
+
+    <GenerativeExercise
+      client:visible
+      title="Write a Tier 2 Support Page Brief"
+      prompt="A player clicks 'I need help' on your operator's app. Write a design brief (3–5 sentences) describing what the support landing page should look like. Apply the Tier 2 visual rules you learned: no decoration, maximum white space, light mode only, clear hierarchy, and zero friction to resources."
+      placeholder="Describe the visual design of the support landing page…"
+      rubric={[
+        'Specifies light mode only — no dark mode for Tier 2',
+        'Describes a minimal layout with generous white space',
+        'Removes all decorative elements and branding flair',
+        'Prioritizes helpline number and self-exclusion link above the fold',
+        'Mentions accessibility requirements (contrast, font size, touch targets)',
+      ]}
+      modelAnswer="The support page opens in forced light mode with a white background and maximum white space. No decorative elements, no brand illustrations, no orange accent — only navy text on white with the teal helpline number as the sole color accent. The helpline number and 'Pause your account' button sit above the fold at minimum 18px type, with 48px touch targets. Layout is a single centered column — no sidebar, no navigation distractions. Every link opens in the same window. The entire page loads in under 1 second with zero JavaScript dependencies."
+    />
+  </section>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- KNOWLEDGE CHECK                                -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <section id="knowledge-check" data-slide-index="3" data-lesson-slug="knowledge-check" class="module-section py-16">
+    <h2>Knowledge Check</h2>
+    <p class="mb-8 text-n700">Five questions covering all three lessons. You need 80% to mark this module complete.</p>
+    <KnowledgeCheck client:visible moduleId="2-visual-identity" questions={questions} passingScore={80} nextModuleHref={`${base}/modules/3-voice-and-tone`} nextModuleTitle="Module 3: Voice & Tone" />
+  </section>
+</ModuleLayout>

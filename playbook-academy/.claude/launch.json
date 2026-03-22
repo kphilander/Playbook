@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "playbook-academy",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["astro", "dev"],
+      "cwd": "/Users/ksr/Branding/playbook-academy",
+      "port": 4321
+    }
+  ]
+}

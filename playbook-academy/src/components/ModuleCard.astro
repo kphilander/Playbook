@@ -1,0 +1,168 @@
+---
+interface Props {
+  number: number;
+  title: string;
+  duration: string;
+  description: string;
+  href: string;
+  isCore?: boolean;
+  icon?: string;
+  accentColor?: 'teal' | 'orange';
+  moduleId?: string;
+}
+
+const { number, title, duration, description, href, isCore = false, icon, accentColor = 'teal', moduleId } = Astro.props;
+
+/* ── SVG icon paths (matching module-themes.json icons) ── */
+const iconSVGs: Record<string, string> = {
+  'shield':         '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  'message-circle': '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>',
+  'users':          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>',
+  'palette':        '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-1 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-5.17-4.49-9-10-9z"/><circle cx="7.5" cy="11.5" r="1.5" fill="currentColor"/><circle cx="10.5" cy="7.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="7.5" r="1.5" fill="currentColor"/><circle cx="18" cy="11.5" r="1.5" fill="currentColor"/>',
+  'map':            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4zM8 2v16M16 6v16"/>',
+  'zap':            '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>',
+  'bar-chart':      '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 20V10M18 20V4M6 20v-4"/>',
+};
+
+const iconPath = icon ? (iconSVGs[icon] || '') : '';
+
+const accentClasses = {
+  teal: {
+    iconBg: 'bg-teal/10',
+    iconText: 'text-teal',
+    progressBg: 'bg-teal',
+    coreBadgeBg: 'bg-teal/10',
+    coreBadgeText: 'text-teal-dark',
+  },
+  orange: {
+    iconBg: 'bg-orange/10',
+    iconText: 'text-orange',
+    progressBg: 'bg-orange',
+    coreBadgeBg: 'bg-orange/10',
+    coreBadgeText: 'text-orange-dark',
+  },
+};
+
+const ac = accentClasses[accentColor];
+---
+
+<a
+  href={href}
+  class="group block bg-white rounded-xl shadow-sm border border-n100 hover:shadow-md hover:border-teal/30 transition-all overflow-hidden"
+  data-module-card={moduleId || ''}
+>
+  <div class="p-6">
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center gap-3">
+        {iconPath ? (
+          <span class={`flex items-center justify-center w-10 h-10 rounded-lg ${ac.iconBg} ${ac.iconText}`}>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={iconPath} />
+          </span>
+        ) : (
+          <span class={`flex items-center justify-center w-10 h-10 rounded-full font-heading font-bold text-lg ${
+            isCore ? 'bg-teal text-navy' : 'bg-n100 text-n500'
+          }`}>
+            {number}
+          </span>
+        )}
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-heading font-semibold text-n400 uppercase tracking-wide">Module {number}</span>
+          {isCore && (
+            <span class={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-heading font-semibold ${ac.coreBadgeBg} ${ac.coreBadgeText}`}>
+              Core
+            </span>
+          )}
+        </div>
+      </div>
+      <span class="text-sm text-n500 font-heading">{duration}</span>
+    </div>
+    <h3 class="text-xl font-heading font-bold text-navy group-hover:text-navy-light transition-colors mb-2">
+      {title}
+    </h3>
+    <p class="text-n700 text-sm leading-relaxed">
+      {description}
+    </p>
+  </div>
+
+  <!-- Progress bar (populated by client-side script) -->
+  {moduleId && (
+    <div class="px-6 pb-0 hidden" data-module-progress={moduleId}>
+      <div class="flex items-center justify-between mb-1.5">
+        <span class="text-xs text-n500 font-heading" data-progress-label></span>
+        <span class="text-xs text-n400 font-heading" data-progress-pct></span>
+      </div>
+      <div class="h-1.5 bg-n100 rounded-full overflow-hidden">
+        <div class={`h-full ${ac.progressBg} rounded-full transition-all duration-500`} data-progress-bar style="width: 0%"></div>
+      </div>
+    </div>
+  )}
+
+  <div class="px-6 py-3 bg-n50 border-t border-n100 flex items-center justify-between mt-auto">
+    <span class="text-sm text-n500 font-heading" data-module-cta>Start module</span>
+    <svg class="w-5 h-5 text-n300 group-hover:text-teal group-hover:translate-x-1 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+</a>
+
+<script>
+  // Hydrate progress bars on module cards
+  function hydrateModuleCards() {
+    const PROGRESS_KEY = 'playbook-academy-progress';
+    const LESSON_MAP: Record<string, string[]> = {
+      '1-rg-foundations': ['what-does-rg-mean', 'informed-choice-model', 'two-tier-system', 'case-study'],
+      '2-visual-identity': ['visual-system-principles', 'tier-visual-rules', 'accessibility-requirements', 'case-study'],
+      '3-voice-and-tone': ['playbook-voice', 'stigma-free-language', 'tone-spectrum', 'cultural-adaptation', 'case-study'],
+      '4-player-segmentation': ['new-segmentation-model', 'product-vertical-overlay', 'identifying-segments', 'adapting-messages', 'case-study'],
+      '5-customer-journey': ['player-journey', 'content-and-campaigns', 'case-study'],
+      '6-measuring-success': ['content-scorecard', 'running-a-scorecard'],
+    };
+
+    let progress: Record<string, any> = {};
+    try {
+      const raw = localStorage.getItem(PROGRESS_KEY);
+      if (raw) progress = JSON.parse(raw);
+    } catch {}
+
+    document.querySelectorAll<HTMLElement>('[data-module-progress]').forEach((el) => {
+      const moduleId = el.dataset.moduleProgress!;
+      const mp = progress[moduleId];
+      if (!mp) return; // No progress — keep hidden
+
+      const lessons = LESSON_MAP[moduleId] || [];
+      const completed = (mp.completedLessons || []).length;
+      const total = lessons.length;
+      if (total === 0) return;
+
+      const pct = Math.round((completed / total) * 100);
+
+      // Show the progress container
+      el.classList.remove('hidden');
+      el.classList.add('pb-4');
+
+      const label = el.querySelector('[data-progress-label]');
+      const pctEl = el.querySelector('[data-progress-pct]');
+      const bar = el.querySelector<HTMLElement>('[data-progress-bar]');
+
+      if (mp.completed) {
+        if (label) label.textContent = 'Complete';
+        if (pctEl) pctEl.textContent = mp.quizScore ? `${mp.quizScore}%` : '100%';
+        if (bar) bar.style.width = '100%';
+      } else {
+        if (label) label.textContent = `${completed} of ${total} lessons`;
+        if (pctEl) pctEl.textContent = `${pct}%`;
+        if (bar) bar.style.width = `${pct}%`;
+      }
+
+      // Update CTA text
+      const card = el.closest('[data-module-card]');
+      const cta = card?.querySelector('[data-module-cta]');
+      if (cta) {
+        cta.textContent = mp.completed ? 'Review module' : 'Continue module';
+      }
+    });
+  }
+
+  hydrateModuleCards();
+  window.addEventListener('progress-updated', hydrateModuleCards);
+</script>

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "1-rg-foundations",
+    "number": 1,
+    "title": "RG Foundations",
+    "heroGradient": "from-navy to-navy-dark",
+    "accentColor": "teal",
+    "icon": "shield",
+    "tagline": "The philosophy behind the system"
+  },
+  {
+    "id": "2-visual-identity",
+    "number": 2,
+    "title": "Visual Identity & Design",
+    "heroGradient": "from-navy to-navy-dark",
+    "accentColor": "orange",
+    "icon": "palette",
+    "tagline": "How Playbook looks — and why"
+  },
+  {
+    "id": "3-voice-and-tone",
+    "number": 3,
+    "title": "Voice & Tone",
+    "heroGradient": "from-navy to-navy-dark",
+    "accentColor": "teal",
+    "icon": "message-circle",
+    "tagline": "How Playbook sounds — and why it matters"
+  },
+  {
+    "id": "4-player-segmentation",
+    "number": 4,
+    "title": "Player Segmentation",
+    "heroGradient": "from-navy to-navy-dark",
+    "accentColor": "teal",
+    "icon": "users",
+    "tagline": "Who you're writing for"
+  },
+  {
+    "id": "5-customer-journey",
+    "number": 5,
+    "title": "Customer Journey",
+    "heroGradient": "from-navy to-navy-dark",
+    "accentColor": "teal",
+    "icon": "map",
+    "tagline": "Where content goes — and when"
+  },
+  {
+    "id": "6-measuring-success",
+    "number": 6,
+    "title": "Measuring Success",
+    "heroGradient": "from-navy to-navy-dark",
+    "accentColor": "teal",
+    "icon": "bar-chart",
+    "tagline": "How to know it's working"
+  }
+]

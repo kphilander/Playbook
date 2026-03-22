@@ -1,0 +1,835 @@
+---
+import ModuleLayout from '../../layouts/ModuleLayout.astro';
+import KnowledgeCheck from '../../components/KnowledgeCheck.tsx';
+import KeyTakeaway from '../../components/KeyTakeaway.astro';
+import KeyConcept from '../../components/KeyConcept.astro';
+import StigmaFreeSearch from '../../components/StigmaFreeSearch.tsx';
+import StigmaSwapGame from '../../components/StigmaSwapGame.tsx';
+import ToneMatcher from '../../components/ToneMatcher.tsx';
+import CulturalDial from '../../components/CulturalDial.tsx';
+import GenerativeExercise from '../../components/GenerativeExercise.tsx';
+
+const module = {
+  id: '3-voice-and-tone',
+  number: 3,
+  title: 'Voice & Tone',
+  duration: '25 min',
+  lessons: [
+    { title: 'The Playbook Voice', slug: 'playbook-voice' },
+    { title: 'Stigma-Free Language', slug: 'stigma-free-language' },
+    { title: 'Tone Spectrum & Practice', slug: 'tone-spectrum' },
+    { title: 'Cultural Adaptation', slug: 'cultural-adaptation' },
+  ],
+};
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const tracks = [
+  { slideIndex: 0, src: `${base}/audio/modules/m2-playbook-voice.mp3`, transcript: 'Most player education sounds like it was written by a committee of lawyers told to "make it sound helpful." The result: material nobody reads, nobody shares, and nobody acts on. Playbook sounds like somebody. Specifically, it sounds like a knowledgeable friend at the table with you — someone who knows the odds, has read the fine print, understands the math behind every game, but doesn\'t lecture. Five traits define this voice. Knowledgeable — it knows the math but explains it like something interesting at a bar. Confident — it doesn\'t hedge or equivocate. Generous — it shares information because you should have it. At the table — the perspective comes from inside the experience. And non-judgmental — it will tell you your system doesn\'t work, but never makes you feel stupid for trying it. Then there\'s what the voice is NOT. Not a teacher — this is conversation, not class. Not a doctor — it shares information, you decide. Not a parent — it trusts you to be an adult. And not a killjoy — gambling is fun, eyes open. Beyond those traits, five voice dimensions shape how Playbook sounds in practice. Voice — peer, not authority. Framing — opportunity, not warning. Humor — witty, not preachy. And here\'s an important guardrail: humor is on for Tier 1 education material and completely off for Tier 2 support and crisis material. Directness — blunt, not hedging. And Comfort — open and comfortable, not stigmatizing. Each dimension has a default setting and a guardrail. Read through the examples and comparisons on the page now. When you\'re ready, scroll down or press the forward button to continue to the next lesson.' },
+  { slideIndex: 1, src: `${base}/audio/modules/m2-stigma-free-language.mp3`, transcript: 'Language shapes perception. When players encounter clinical terms like "problem gambler," "warning signs," or "gambling addiction," they assume the material isn\'t for them. So they leave. This isn\'t about being polite — it\'s about being effective. The gambling industry relies on language that stigmatizes players and puts the burden on the individual. Playbook replaces that with stigma-free alternatives. Instead of "problem gambler," say "player." Instead of "responsible gambling," use specific actions — "set a budget," "know the odds," "check your session." Instead of "gambling addiction," say "difficulty with gambling." Instead of "self-exclude," say "take a break" or "pause your account." These aren\'t cosmetic changes. Research shows stigmatizing language makes people less likely to seek help. When someone reads "If you have a gambling problem, call this number," they have to self-identify as having a problem before they can pick up the phone. That\'s a barrier. "Free, confidential support — for any question about gambling" removes that barrier entirely. There are ten essential swaps that apply to all Tier 1 material — social posts, app copy, emails, print, in-venue signage. Work through the interactive swap game now to learn them, then explore the full 35-term reference tool below it.' },
+  { slideIndex: 2, src: `${base}/audio/modules/m2-tone-spectrum.mp3`, transcript: 'Playbook has one voice but four tone registers. Same person, different conversations. Knowing when to use each one is what separates competent brand writing from great brand writing. The four registers. Playful and Witty — your myth-busting, quiz, and social media register. The personality shines here. Sarcasm, wordplay, and confident challenges earn attention instead of demanding it. This register is Tier 1 only. Confident and Informative — your educational workhorse. Odds explanations, game guides, how-to material. Clear, direct, no fluff. Warm and Direct — Tier 2 territory. Support pages, session reminders, check-in moments. This is where humor drops to zero. The voice stays generous and non-judgmental, but the tone is plain, clear, and immediate. No jokes. No cleverness. Just the information the player needs. This is one of the most important guardrails in the system: humor is on for education, off for support. And Celebratory — for quiz results, milestones, and positive moments. Restrained enthusiasm. "You scored nine out of ten. Sharper than most. Challenge a friend?" Not "Amazing! You\'re a champion!" Matching registers to the situation isn\'t a creative choice — it follows rules. Myth-busting gets Playful. Odds education gets Confident. Self-exclusion pages get Warm and Direct. Quiz results get Celebratory. The voice never changes; the register always matches the moment. Now try the tone matching exercise below to build your ear for the difference.' },
+  { slideIndex: 3, src: `${base}/audio/modules/m2-cultural-adaptation.mp3`, transcript: 'The Playbook voice principles are universal. The expression adapts to the market. Five things never change regardless of audience, language, or geography — the Brand DNA: generous with information, respectful of intelligence, honest about how things work, treats gambling as entertainment, and corrects without judgment. What adapts is how those traits are expressed. Two dimensions matter most: humor register and directness level. Humor can be bold — irreverent sarcasm common in Australia and the US. It can be understated — dry wit for the UK. Or minimal — warm and clean for Asian and Nordic markets. All three registers are valid as long as the material doesn\'t read like a compliance form. Directness follows a similar spectrum. Direct markets like Australia and the Nordics get plain facts with no softening: "This bet is terrible. Here\'s why." Diplomatic markets like the UK and parts of Asia get the same information wrapped in comparison: "If you compare the major bets side by side, you\'ll notice some give up significantly more." Contextual markets like Japan frame information through social proof. Same information, different cultural wrapping. Use the Cultural Dial tool below to see how the same message adapts across these dimensions. Try the market presets, then adjust the sliders to find your own market\'s sweet spot.' },
+  { slideIndex: 4, src: `${base}/audio/modules/m2-knowledge-check.mp3`, transcript: 'Time to test what you\'ve learned. Five questions covering the Playbook voice, stigma-free language, tone registers, and cultural adaptation. You need 80 percent to mark this module complete. Take your time and think about the principles behind each answer.' },
+];
+
+const questions = [
+  {
+    id: 'q1',
+    question: 'Which of these best describes the Playbook voice?',
+    options: [
+      'An authority figure explaining rules players must follow',
+      'Someone who knows the game, shares the real story, and respects you enough to give it straight',
+      'A clinical expert presenting research findings to patients',
+      'A friend who avoids difficult topics to keep things light',
+    ],
+    correctIndex: 1,
+    explanation: 'The Playbook voice is knowledgeable without being academic, confident without being arrogant, and generous with information. It\'s at the table with you, not looking down from a lectern.',
+    reviewSlug: 'playbook-voice',
+  },
+  {
+    id: 'q2',
+    question: 'What\'s the difference between "Witty / Not Preachy"?',
+    options: [
+      'Witty content uses jokes; preachy content uses facts',
+      'Witty content earns attention through insight and humor; preachy content demands attention through moral authority',
+      'Witty content is for social media only; preachy content is for serious topics',
+      'There is no meaningful difference — both are forms of persuasion',
+    ],
+    correctIndex: 1,
+    explanation: 'Wit respects the reader — "I\'m going to make this interesting for you." Preachiness disrespects the reader — "I know better than you, and you need to listen." Playbook uses humor directed at myths and misconceptions, never at players.',
+    reviewSlug: 'playbook-voice',
+  },
+  {
+    id: 'q3',
+    question: 'Which of these follows Playbook\'s stigma-free language guidelines?',
+    options: [
+      '"If you have a gambling problem, call our helpline"',
+      '"Free, confidential support is available 24/7 — for any question about gambling"',
+      '"Gamble responsibly — set limits to protect yourself"',
+      '"Warning: gambling can lead to addiction"',
+    ],
+    correctIndex: 1,
+    explanation: 'Option B frames the helpline as accessible to everyone ("for any question"), doesn\'t require the player to self-identify as having a "problem," and uses inviting language ("free, confidential, available") rather than warning language.',
+    reviewSlug: 'stigma-free-language',
+  },
+  {
+    id: 'q4',
+    question: 'A player just completed the Game IQ quiz and scored 9/10. What tone register should the result screen use?',
+    options: [
+      'Warm / Direct',
+      'Confident / Informative',
+      'Celebratory (restrained)',
+      'Playful / Witty',
+    ],
+    correctIndex: 2,
+    explanation: 'Achievement moments use the Celebratory register — but restrained. "You scored 9/10. You\'re sharper than most. Challenge a friend?" This acknowledges the accomplishment without being over-the-top.',
+    reviewSlug: 'tone-spectrum',
+  },
+  {
+    id: 'q5',
+    question: 'When adapting the Playbook voice for a market where direct humor feels confrontational, what changes and what stays the same?',
+    options: [
+      'Everything changes — each market needs its own brand voice',
+      'The humor level stays the same but the topics change',
+      'The intent stays the same (generous, honest, non-judgmental) but the expression adapts (dry wit instead of cheeky sarcasm)',
+      'You should remove humor entirely for sensitive markets',
+    ],
+    correctIndex: 2,
+    explanation: 'Brand DNA is universal: generosity, honesty, respect for intelligence. Brand expression adapts. "This bet is terrible" works in direct markets. "Comparing the major bets side by side, you\'ll notice some give up significantly more" achieves the same intent in markets where directness feels confrontational.',
+    reviewSlug: 'cultural-adaptation',
+  },
+];
+---
+
+<ModuleLayout module={module} panelMode={true} tracks={tracks}>
+
+  <!-- Module intro -->
+  <div class="mb-8 p-5 rounded-xl bg-navy/5 border border-navy/10">
+    <p class="text-sm text-navy font-heading mb-2">
+      <strong>Voice & Tone</strong> — The Playbook voice, stigma-free language, tone spectrum with practice rewrites, and cultural adaptation across markets.
+    </p>
+    <p class="text-sm text-navy mb-3 font-heading"><strong>By the end of this module, you will be able to:</strong></p>
+    <ul class="text-sm text-n700 mb-4 space-y-1.5 pl-4 list-disc">
+      <li>Write content using the five Playbook voice dimensions</li>
+      <li>Replace stigmatizing language with the 10 core Playbook substitutions</li>
+      <li>Select the correct tone register for any given content context</li>
+      <li>Adapt voice and tone for different cultural markets</li>
+    </ul>
+    <button
+      id="start-narration-btn"
+      class="inline-flex items-center gap-2 px-4 py-2 bg-teal text-navy font-heading font-bold rounded-lg hover:bg-teal-light transition-colors text-sm"
+    >
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      Play Audio Guide
+    </button>
+  </div>
+
+  <script>
+    document.getElementById('start-narration-btn')?.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('start-playback'));
+    });
+  </script>
+
+
+  <!-- ================================================================== -->
+  <!-- Lesson 1: The Playbook Voice                                       -->
+  <!-- ================================================================== -->
+  <section id="playbook-voice" data-slide-index="0" data-lesson-slug="playbook-voice" class="module-section py-16">
+    <h2>The Playbook Voice</h2>
+
+    <p class="text-lg text-n600 mb-6">
+      Most player education content has no personality. Playbook sounds like somebody. This lesson tells you who.
+    </p>
+
+    <p>
+      It reads like it was written by a committee of lawyers told to "make it sound helpful." The result: content that sounds like nobody — generic, cautious, and forgettable.
+    </p>
+
+    <h3 id="at-the-table-not-in-the-booth">At the table, not in the booth</h3>
+
+    <p>
+      The Playbook voice isn't above you. It's at the table with you. It knows the odds. It's read
+      the fine print. It understands the mechanics behind every game. But it doesn't lecture. It
+      doesn't wag a finger. It doesn't treat you like a student or a patient. It treats you like a
+      smart adult who deserves the full picture.
+    </p>
+
+    <KeyConcept title="The Personality Test" icon="target">
+      <p>
+        Imagine someone at a poker table who knows the odds, calls out the myths, keeps the game
+        fun, and quietly has the number for support if you ever need it — but doesn't bring it up
+        unless you hint at needing it. Does your content sound like it was written by that person? If yes, ship it.
+      </p>
+    </KeyConcept>
+
+    <h3 id="five-voice-traits">Five voice traits</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 my-6">
+      <div class="rounded-xl border border-teal/20 bg-teal/5 p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy text-sm">Knowledgeable</p>
+        </div>
+        <p class="text-sm text-n700 leading-relaxed">Knows the math — house edge, RNG, probability — but explains it like something interesting at a bar, not a research paper.</p>
+      </div>
+      <div class="rounded-xl border border-teal/20 bg-teal/5 p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy text-sm">Confident</p>
+        </div>
+        <p class="text-sm text-n700 leading-relaxed">Doesn't hedge or equivocate. Knows what it's talking about — but never makes you feel stupid for not knowing already.</p>
+      </div>
+      <div class="rounded-xl border border-teal/20 bg-teal/5 p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy text-sm">Generous</p>
+        </div>
+        <p class="text-sm text-n700 leading-relaxed">Shares because you should have it. Not because it's required to. Because information is better when shared.</p>
+      </div>
+      <div class="rounded-xl border border-teal/20 bg-teal/5 p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy text-sm">At the table</p>
+        </div>
+        <p class="text-sm text-n700 leading-relaxed">The perspective comes from inside the experience, not outside looking in. Understands gambling as entertainment, not a lab subject.</p>
+      </div>
+      <div class="rounded-xl border border-teal/20 bg-teal/5 p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-teal/15 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-teal-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy text-sm">Non-judgmental</p>
+        </div>
+        <p class="text-sm text-n700 leading-relaxed">Will tell you your "system" doesn't work — but never in a way that makes you feel stupid for trying it.</p>
+      </div>
+    </div>
+
+    <h3 id="what-the-voice-is-not">What the voice is NOT</h3>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 my-6">
+      <div class="rounded-xl border border-danger/15 bg-danger/5 p-3 text-center">
+        <span class="inline-flex w-8 h-8 rounded-full bg-danger/10 items-center justify-center mx-auto mb-2">
+          <svg class="w-4 h-4 text-danger" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </span>
+        <p class="font-heading font-bold text-navy text-sm mb-1">Not a teacher</p>
+        <p class="text-sm text-n600 leading-snug">Conversation, not class.</p>
+      </div>
+      <div class="rounded-xl border border-danger/15 bg-danger/5 p-3 text-center">
+        <span class="inline-flex w-8 h-8 rounded-full bg-danger/10 items-center justify-center mx-auto mb-2">
+          <svg class="w-4 h-4 text-danger" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </span>
+        <p class="font-heading font-bold text-navy text-sm mb-1">Not a doctor</p>
+        <p class="text-sm text-n600 leading-snug">Shares info. You decide.</p>
+      </div>
+      <div class="rounded-xl border border-danger/15 bg-danger/5 p-3 text-center">
+        <span class="inline-flex w-8 h-8 rounded-full bg-danger/10 items-center justify-center mx-auto mb-2">
+          <svg class="w-4 h-4 text-danger" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </span>
+        <p class="font-heading font-bold text-navy text-sm mb-1">Not a parent</p>
+        <p class="text-sm text-n600 leading-snug">Trusts you to be an adult.</p>
+      </div>
+      <div class="rounded-xl border border-danger/15 bg-danger/5 p-3 text-center">
+        <span class="inline-flex w-8 h-8 rounded-full bg-danger/10 items-center justify-center mx-auto mb-2">
+          <svg class="w-4 h-4 text-danger" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </span>
+        <p class="font-heading font-bold text-navy text-sm mb-1">Not a killjoy</p>
+        <p class="text-sm text-n600 leading-snug">Gambling is fun. Eyes open.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-section: Five voice dimensions -->
+  <section id="the-five-voice-dimensions" data-slide-index="0" data-lesson-slug="playbook-voice" class="module-section py-16">
+    <h3 id="five-voice-dimensions-heading">The five voice dimensions</h3>
+
+    <p>
+      The brand book defines five dimensions that shape how Playbook sounds. Each one is a spectrum
+      with a default setting and guardrails. Internalize all five and you can write on-brand content
+      for any context.
+    </p>
+
+    <h3 id="1-voice">1. Voice — how the brand sounds</h3>
+
+    <p>
+      Playbook sounds like a peer — someone at the table with you. Confident, conversational,
+      no credentials cited. Not an authority lecturing from a podium, not a clinician reading from
+      a chart. Trust is built through relatability, not titles.
+    </p>
+
+    <p>
+      <strong>The line:</strong> "Here's how it works" is peer voice. "Many players don't realize..."
+      is authority voice pretending to be helpful. The first shares information. The second implies
+      the reader is behind.
+    </p>
+
+    <KeyConcept title="Authority vs Peer Voice">
+      <p>
+        <strong>Authority / Clinical:</strong> "Contrary to what many players believe, slot machine outcomes are determined by random number generators, not by previous results."
+      </p>
+      <p>
+        <strong>Peer:</strong> "Here's how slot machines actually decide what to show you. It's called RNG, and it's more interesting than you'd think."
+      </p>
+    </KeyConcept>
+
+    <h3 id="2-framing">2. Framing — how information is presented</h3>
+
+    <p>
+      Playbook frames information as a personal opportunity, not a collective warning. "Your bankroll,"
+      "your odds," "your decision." The reader is an autonomous agent making choices — not a patient
+      receiving a diagnosis.
+    </p>
+
+    <p>
+      <strong>The line:</strong> Frame benefits as things the reader gains, not harms the reader avoids.
+      "Know the odds so you can play smarter" is opportunity. "Be aware that gambling can lead to
+      financial harm" is warning.
+    </p>
+
+    <KeyConcept title="Warning vs Opportunity Framing">
+      <p>
+        <strong>Warning framing:</strong> "Be aware that continued gambling may result in financial losses that exceed your budget."
+      </p>
+      <p>
+        <strong>Opportunity framing:</strong> "Set a budget before you play. Decide what you're comfortable spending — and stop when you reach it. Your bankroll, your call."
+      </p>
+    </KeyConcept>
+
+    <h3 id="3-humor">3. Humor — how and when wit is used</h3>
+
+    <p>
+      Playbook uses humor to earn attention and make information memorable. It does <em>not</em> use
+      moral authority to lecture players about what they should do. In Tier 1 content (education,
+      social, quizzes), the default register is irreverent. In Tier 2 content (support, crisis,
+      take-a-break), humor drops to zero.
+    </p>
+
+    <p>
+      <strong>The line:</strong> Humor directed at myths, misconceptions, and the absurdity of
+      superstitions. Never humor directed at players who are struggling.
+    </p>
+
+    <KeyConcept title="Preachy vs Witty">
+      <p>
+        <strong>Preachy:</strong> "Players should be aware that no gambling system can overcome the mathematical house advantage in the long run."
+      </p>
+      <p>
+        <strong>Witty:</strong> "Think you've got a 'system' that beats the house? Cool. The house has a system too. It's called math. Let's compare notes."
+      </p>
+    </KeyConcept>
+
+    <h3 id="4-directness">4. Directness — how blunt or soft the delivery is</h3>
+
+    <p>
+      Playbook's default is blunt. It states conclusions plainly and backs them with evidence.
+      No softening, no hedging. "This bet is terrible. Here's why." The reader gets the facts
+      first and decides what to do with them.
+    </p>
+
+    <p>
+      <strong>The line:</strong> Blunt is honest and clear. Harsh is judgmental. "This is one of the
+      worst bets on the floor" is blunt. "Only a fool would take this bet" is harsh.
+    </p>
+
+    <KeyConcept title="Hedging vs Blunt">
+      <p>
+        <strong>Hedging:</strong> "Some players may find it useful to consider that certain wagers carry a higher expected cost, and it may be worth researching the differences."
+      </p>
+      <p>
+        <strong>Blunt:</strong> "The house edge on American roulette is 5.26%. That's one of the worst bets on the casino floor. Now you know."
+      </p>
+    </KeyConcept>
+
+    <h3 id="5-comfort">5. Comfort — how the brand handles sensitive topics</h3>
+
+    <p>
+      Playbook treats gambling as entertainment — discussed the way you'd discuss movies, sports,
+      or dining out. The words "gambling," "betting," and "playing" appear freely. Content assumes
+      the reader is an active player, and that's fine. It normalizes without dramatizing.
+    </p>
+
+    <p>
+      <strong>The line:</strong> Open and comfortable is not the same as flippant. Gambling is fun,
+      and the content reflects that — but it never dismisses the reality that some players need
+      support. It holds both truths without making either one weird.
+    </p>
+
+    <KeyConcept title="Stigmatizing vs Comfortable">
+      <p>
+        <strong>Stigmatizing:</strong> "WARNING: Gambling can be addictive. If you or someone you know has a gambling problem, call the helpline immediately."
+      </p>
+      <p>
+        <strong>Comfortable:</strong> "Every time you play, you're making decisions. Some are better than others. This guide helps you see which is which. And if you ever want to talk, free support is available 24/7."
+      </p>
+    </KeyConcept>
+
+    <KeyTakeaway>
+      <p>
+        The Playbook voice is one person: knowledgeable, confident, generous, at the table with you.
+        It corrects without judgment and treats gambling as entertainment. Five dimensions define how
+        it sounds: Voice (peer, not authority), Framing (opportunity, not warning), Humor (witty, not
+        preachy), Directness (blunt, not hedging), and Comfort (open, not stigmatizing). Get all five
+        right and the content writes itself.
+      </p>
+    </KeyTakeaway>
+  </section>
+
+  <!-- ================================================================== -->
+  <!-- Lesson 2: Stigma-Free Language                                     -->
+  <!-- ================================================================== -->
+  <section id="stigma-free-language" data-slide-index="1" data-lesson-slug="stigma-free-language" class="module-section py-16">
+    <h2>Stigma-Free Language</h2>
+
+    <p class="text-lg text-n600 mb-6">
+      Language shapes perception. The words on the screen decide whether someone stays or clicks away. When players encounter clinical language — "problem gambler," "warning signs," "gambling addiction" — they assume the content isn't for them. So they leave. This isn't about political correctness. It's about effectiveness.
+    </p>
+
+    <h3 id="the-10-essential-swaps">The 10 essential swaps</h3>
+
+    <p>These apply to all Tier 1 content — social posts, app copy, email, print, in-venue signage:</p>
+
+    <StigmaSwapGame client:visible />
+
+    <h3 id="phrases-to-retire">Phrases to retire</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6">
+      <div class="rounded-xl border-2 border-danger/30 bg-danger/5 p-4 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-danger bg-danger/10 px-2 py-0.5 rounded mb-2">Retire</span>
+        <p class="font-heading font-semibold text-navy mb-1.5">"Gamble Responsibly"</p>
+        <p class="text-sm text-n700 mb-2">Nobody has ever changed behavior because of this phrase. Zero actionable content.</p>
+        <div class="pt-2 border-t border-danger/15">
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-teal-dark mb-0.5">Replace with</p>
+          <p class="text-sm text-navy font-semibold">"Know the odds." / "Set your budget." / "Check your session."</p>
+        </div>
+      </div>
+      <div class="rounded-xl border-2 border-orange/30 bg-orange/5 p-4 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-orange bg-orange/10 px-2 py-0.5 rounded mb-2">Retire</span>
+        <p class="font-heading font-semibold text-navy mb-1.5">"When the fun stops, stop."</p>
+        <p class="text-sm text-n700 mb-2">Assumes players can self-diagnose in the moment. Many players experiencing difficulty still report "fun."</p>
+        <div class="pt-2 border-t border-orange/15">
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-teal-dark mb-0.5">Replace with</p>
+          <p class="text-sm text-navy font-semibold">"Set your limits before you play."</p>
+        </div>
+      </div>
+      <div class="rounded-xl border-2 border-warning/30 bg-warning/5 p-4 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-warning bg-warning/10 px-2 py-0.5 rounded mb-2">Retire</span>
+        <p class="font-heading font-semibold text-navy mb-1.5">"If you or someone you know has a gambling problem, call X."</p>
+        <p class="text-sm text-n700 mb-2">Only reaches people who already identify a problem. Excludes everyone else.</p>
+        <div class="pt-2 border-t border-warning/15">
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-teal-dark mb-0.5">Replace with</p>
+          <p class="text-sm text-navy font-semibold">"Free, confidential support — for any question about gambling."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sub-section: Stigma-free reference (with exercise) -->
+  <section id="full-stigma-free-reference" data-slide-index="1" data-lesson-slug="stigma-free-language" data-has-exercise class="module-section py-16">
+    <h3 id="stigma-free-reference-heading">Full stigma-free reference</h3>
+
+    <p>
+      The 10 swaps above cover the essentials. The searchable tool below contains all 35 terms in
+      the Playbook stigma-free language guide — organized by category with explanations and
+      rationale.
+    </p>
+
+    <StigmaFreeSearch client:visible />
+
+    <KeyTakeaway>
+      <p>
+        Stigma-free language isn't about being "nice." It's about being effective. Clinical terms
+        create a wall between the content and the 95% of players who are fine. Person-first,
+        action-specific, non-diagnostic language keeps the door open for everyone.
+      </p>
+    </KeyTakeaway>
+  </section>
+
+  <!-- ================================================================== -->
+  <!-- Lesson 3: Tone Spectrum & Practice                                 -->
+  <!-- ================================================================== -->
+  <section id="tone-spectrum" data-slide-index="2" data-lesson-slug="tone-spectrum" class="module-section py-16">
+    <h2>Tone Spectrum & Practice</h2>
+
+    <p class="text-lg text-n600 mb-6">
+      Playbook has one voice but four tone registers. Same person, different conversations. This lesson teaches you when to use each one.
+    </p>
+
+    <h3 id="the-four-registers">The four registers</h3>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
+      <!-- Playful / Witty -->
+      <div class="rounded-xl border-l-4 border-teal bg-white shadow-sm p-4">
+        <div class="flex items-center gap-2.5 mb-1.5">
+          <span class="w-8 h-8 rounded-lg bg-teal/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy">Playful / Witty</p>
+          <span class="text-sm text-n400 ml-auto">Tier 1</span>
+        </div>
+        <p class="text-sm text-n700 mb-1">Myth-busting, quizzes, social cards, hook content</p>
+        <p class="text-sm text-n500 italic">"Share this with the friend who thinks they have a 'system.'"</p>
+      </div>
+      <!-- Confident / Informative -->
+      <div class="rounded-xl border-l-4 border-navy bg-white shadow-sm p-4">
+        <div class="flex items-center gap-2.5 mb-1.5">
+          <span class="w-8 h-8 rounded-lg bg-navy/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-navy" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy">Confident / Informative</p>
+          <span class="text-sm text-n400 ml-auto">Tier 1</span>
+        </div>
+        <p class="text-sm text-n700 mb-1">Odds education, tool explanations, how-it-works, game guides</p>
+        <p class="text-sm text-n500 italic">"The house edge on blackjack is 0.5%. On slots, it's 2–15%. Now you know."</p>
+      </div>
+      <!-- Warm / Direct -->
+      <div class="rounded-xl border-l-4 border-orange bg-white shadow-sm p-4">
+        <div class="flex items-center gap-2.5 mb-1.5">
+          <span class="w-8 h-8 rounded-lg bg-orange/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-orange" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy">Warm / Direct</p>
+          <span class="text-sm text-n400 ml-auto">Tier 2</span>
+        </div>
+        <p class="text-sm text-n700 mb-1">Check-ins, support access, limit notifications, at-risk touchpoints</p>
+        <p class="text-sm text-n500 italic">"Need to talk? Free, confidential, 24/7."</p>
+      </div>
+      <!-- Celebratory -->
+      <div class="rounded-xl border-l-4 border-success bg-white shadow-sm p-4">
+        <div class="flex items-center gap-2.5 mb-1.5">
+          <span class="w-8 h-8 rounded-lg bg-success/10 flex items-center justify-center flex-shrink-0">
+            <svg class="w-4 h-4 text-success" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </span>
+          <p class="font-heading font-bold text-navy">Celebratory</p>
+          <span class="text-sm text-n400 ml-auto">Tier 1</span>
+        </div>
+        <p class="text-sm text-n700 mb-1">Quiz results, limit set confirmation, achievement moments</p>
+        <p class="text-sm text-n500 italic">"You scored 8/10. Sharper than most. Challenge a friend?"</p>
+      </div>
+    </div>
+
+    <h3 id="matching-registers-to-context">Matching registers to context</h3>
+
+    <p>
+      The register isn't random. It follows the context. Here's a quick decision guide:
+    </p>
+
+    <table>
+      <thead><tr><th>Context</th><th>Register</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Myth-busting article / social post</td><td>Playful / Witty</td><td>Competing for attention — earn it with insight</td></tr>
+        <tr><td>Odds explainer / onboarding / tool description</td><td>Confident / Informative</td><td>Math, mechanics, and setup — clarity matters</td></tr>
+        <tr><td>Session reminder</td><td>Warm / Direct</td><td>Practical check-in, gentle nudge</td></tr>
+        <tr><td>Self-exclusion page</td><td>Warm / Direct (serious)</td><td>Zero humor, maximum clarity</td></tr>
+        <tr><td>Quiz results / achievement moments</td><td>Celebratory</td><td>"Here's what you know" energy</td></tr>
+      </tbody>
+    </table>
+
+    <KeyConcept title="One rule for Warm / Direct" icon="bolt">
+      <p>
+        When the register is Warm / Direct, humor drops to zero. This is Tier 2 territory — support
+        access, crisis moments, take-a-break flows. The voice stays the same (generous, honest,
+        non-judgmental) but the tone is plain, clear, and immediate. No jokes. No cleverness. Just
+        the information the player needs.
+      </p>
+    </KeyConcept>
+  </section>
+
+  <!-- Sub-section: Tone practice exercise -->
+  <section id="practice-match-the-tone" data-slide-index="2" data-lesson-slug="tone-spectrum" data-has-exercise class="module-section py-16">
+    <h3 id="tone-practice-heading">Practice: Match the tone</h3>
+
+    <p>
+      Read each message and decide which register it belongs to. This exercise builds your ear for
+      the difference between registers — so you can deploy the right one instinctively.
+    </p>
+
+    <ToneMatcher client:visible />
+
+    <GenerativeExercise
+      client:visible
+      title="Write in the Playbook Voice"
+      context="A recreational casino player just hit a 10-session losing streak. They haven't increased their deposits or shown any at-risk behavior — they're just having bad luck. They visit the responsible gambling page."
+      prompt="Write a short message (2-3 sentences) that this player would see on the RG page. Use the Confident/Informative register. Remember: inform without alarming, empower without prescribing."
+      rubric={[
+        { label: 'Uses "you can" not "you should"', description: 'Agency framing — the player controls the narrative' },
+        { label: 'Mentions a specific tool', description: 'References a concrete feature (budget setter, session timer, etc.) not a vague suggestion' },
+        { label: 'No stigmatizing language', description: 'No "problem," "addiction," "warning," or clinical labels' },
+        { label: 'Confident/Informative register', description: 'Clear, factual, educational — not playful, not warm/crisis' },
+      ]}
+      modelAnswer="Your session history is yours to review anytime. You can set a weekly entertainment budget, check your win/loss summary, or adjust your deposit limits — all from your account settings. These tools are here whenever you want them."
+    />
+
+    <KeyTakeaway>
+      <p>
+        One voice, four registers. Playful/Witty earns attention. Confident/Informative delivers
+        clarity. Warm/Direct provides support. Celebratory rewards achievement. The voice (who
+        Playbook is) never changes. The tone (how it speaks right now) always matches the moment.
+      </p>
+    </KeyTakeaway>
+  </section>
+
+  <!-- ================================================================== -->
+  <!-- Lesson 4: Cultural Adaptation                                      -->
+  <!-- ================================================================== -->
+  <section id="cultural-adaptation" data-slide-index="3" data-lesson-slug="cultural-adaptation" class="module-section py-16">
+    <h2>Cultural Adaptation</h2>
+
+    <p class="text-lg text-n600 mb-6">
+      The Playbook voice principles are universal. The expression adapts to the market. The character never changes; the dialect does.
+    </p>
+
+    <h3 id="what-never-changes-brand-dna">What never changes (Brand DNA)</h3>
+
+    <p>
+      Regardless of market, audience, or language, five things stay fixed:
+    </p>
+
+    <div class="my-6 relative" id="brand-dna-wrapper">
+      <svg width="100%" viewBox="0 0 600 300" class="max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .dna-node { cursor: pointer; }
+          .dna-node:hover rect { stroke-width: 3; filter: drop-shadow(0 2px 4px rgba(0,212,170,0.3)); }
+        </style>
+
+        <!-- Connecting lines (drawn first, behind nodes) -->
+        <line x1="300" y1="150" x2="300" y2="32" stroke="#00D4AA" stroke-width="2" opacity="0.4"/>
+        <line x1="300" y1="150" x2="510" y2="85" stroke="#00D4AA" stroke-width="2" opacity="0.4"/>
+        <line x1="300" y1="150" x2="460" y2="250" stroke="#00D4AA" stroke-width="2" opacity="0.4"/>
+        <line x1="300" y1="150" x2="140" y2="250" stroke="#00D4AA" stroke-width="2" opacity="0.4"/>
+        <line x1="300" y1="150" x2="90" y2="85" stroke="#00D4AA" stroke-width="2" opacity="0.4"/>
+
+        <!-- Center hub -->
+        <circle cx="300" cy="150" r="42" fill="#1B2838" stroke="#00D4AA" stroke-width="2.5"/>
+        <text x="300" y="144" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#00D4AA" font-weight="700" letter-spacing="0.08em">BRAND</text>
+        <text x="300" y="158" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#00D4AA" font-weight="700" letter-spacing="0.08em">DNA</text>
+
+        <!-- Node 1: Top — Generous -->
+        <g class="dna-node" data-tip="Shares because you should have it — not to show off. Information is better when shared, and players are better when informed.">
+          <rect x="220" y="8" width="160" height="48" rx="24" fill="white" stroke="#00D4AA" stroke-width="2"/>
+          <text x="300" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">Generous with</text>
+          <text x="300" y="44" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">information</text>
+        </g>
+
+        <!-- Node 2: Upper-right — Respectful -->
+        <g class="dna-node" data-tip="Never talks down, in any language. The reader is a smart adult who deserves the full picture.">
+          <rect x="430" y="61" width="160" height="48" rx="24" fill="white" stroke="#00D4AA" stroke-width="2"/>
+          <text x="510" y="81" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">Respectful of</text>
+          <text x="510" y="97" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">intelligence</text>
+        </g>
+
+        <!-- Node 3: Lower-right — Honest -->
+        <g class="dna-node" data-tip="No spin, no scare tactics. States how things actually work — even when wrapped in diplomacy for different markets.">
+          <rect x="380" y="226" width="160" height="48" rx="24" fill="white" stroke="#00D4AA" stroke-width="2"/>
+          <text x="460" y="246" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">Honest about</text>
+          <text x="460" y="262" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">how things work</text>
+        </g>
+
+        <!-- Node 4: Lower-left — Entertainment -->
+        <g class="dna-node" data-tip="Fun is the point, everywhere. The voice thinks gambling is entertainment — discussed the way you'd discuss movies or dining out.">
+          <rect x="60" y="226" width="160" height="48" rx="24" fill="white" stroke="#00D4AA" stroke-width="2"/>
+          <text x="140" y="246" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">Treats gambling</text>
+          <text x="140" y="262" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">as entertainment</text>
+        </g>
+
+        <!-- Node 5: Upper-left — Corrects -->
+        <g class="dna-node" data-tip="Will tell you your 'system' doesn't work — but never in a way that makes you feel stupid for trying it. The information matters, not the messenger's superiority.">
+          <rect x="10" y="61" width="160" height="48" rx="24" fill="white" stroke="#00D4AA" stroke-width="2"/>
+          <text x="90" y="81" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">Corrects without</text>
+          <text x="90" y="97" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#1B2838" font-weight="700">judgment</text>
+        </g>
+      </svg>
+      <div id="dna-tooltip" class="absolute hidden pointer-events-none z-10 max-w-[240px] px-3 py-2 rounded-lg bg-navy text-white text-sm leading-snug shadow-lg"></div>
+      <p class="text-xs text-n400 text-center mt-1 italic">Hover over each node for details</p>
+    </div>
+
+    <script>
+      const wrapper = document.getElementById('brand-dna-wrapper');
+      const tooltip = document.getElementById('dna-tooltip');
+      if (wrapper && tooltip) {
+        const nodes = wrapper.querySelectorAll('.dna-node');
+        nodes.forEach(node => {
+          node.addEventListener('mouseenter', (e) => {
+            const tip = node.getAttribute('data-tip');
+            if (!tip) return;
+            tooltip.textContent = tip;
+            tooltip.classList.remove('hidden');
+          });
+          node.addEventListener('mousemove', (e) => {
+            const rect = wrapper.getBoundingClientRect();
+            const x = (e as MouseEvent).clientX - rect.left + 12;
+            const y = (e as MouseEvent).clientY - rect.top - 8;
+            tooltip.style.left = x + 'px';
+            tooltip.style.top = y + 'px';
+          });
+          node.addEventListener('mouseleave', () => {
+            tooltip.classList.add('hidden');
+          });
+        });
+      }
+    </script>
+
+    <KeyConcept title="The emotional test" icon="mic">
+      <p>
+        After adapting content for a market, read it aloud. If it sounds like it was written by
+        someone who doesn't respect the reader — or by someone who doesn't like gambling — the
+        adaptation has drifted from brand DNA. Rewrite.
+      </p>
+    </KeyConcept>
+
+    <h3 id="what-adapts-brand-expression">What adapts (Brand Expression)</h3>
+
+    <p>
+      How those traits are expressed varies by market. Two dimensions matter most:
+    </p>
+
+    <h3 id="the-humor-register">The humor register</h3>
+
+    <p>
+      Humor is core to Playbook — it separates the brand from compliance content. But the
+      <strong>register</strong> of humor varies:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+      <div class="rounded-xl border-2 border-orange/30 bg-orange/5 p-5 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-orange bg-orange/10 px-2 py-0.5 rounded mb-3">Bold</span>
+        <p class="font-heading font-semibold text-navy text-lg mb-2">Australia, US</p>
+        <p class="text-sm text-n700 mb-3">Irreverent sarcasm, direct challenges. The humor hits hard and fast.</p>
+        <p class="text-sm text-n500 italic">"Think you can beat the house? Cute."</p>
+      </div>
+      <div class="rounded-xl border-2 border-info/30 bg-info/5 p-5 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-info bg-info/10 px-2 py-0.5 rounded mb-3">Understated</span>
+        <p class="font-heading font-semibold text-navy text-lg mb-2">UK</p>
+        <p class="text-sm text-n700 mb-3">Dry wit, knowing understatement. The humor is there if you're looking for it.</p>
+        <p class="text-sm text-n500 italic">"The house edge doesn't care about your lucky shirt. But wear it if you like."</p>
+      </div>
+      <div class="rounded-xl border-2 border-n300/30 bg-white p-5 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-n500 bg-n100 px-2 py-0.5 rounded mb-3">Minimal</span>
+        <p class="font-heading font-semibold text-navy text-lg mb-2">Asia, Nordic</p>
+        <p class="text-sm text-n700 mb-3">Warm, clean, restrained. Written by someone with a sense of humor who chose restraint — not by a committee that never had one.</p>
+        <p class="text-sm text-n500 italic">"Understanding the math behind each game helps you make better choices."</p>
+      </div>
+    </div>
+
+    <h3 id="the-directness-level">The directness level</h3>
+
+    <p>
+      How directly can you deliver hard truths?
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+      <div class="rounded-xl border-2 border-teal/30 bg-teal/5 p-5 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-teal-dark bg-teal/10 px-2 py-0.5 rounded mb-3">Direct</span>
+        <p class="font-heading font-semibold text-navy text-lg mb-2">Australia, Nordic</p>
+        <p class="text-sm text-n700 mb-3">Plain facts, no softening. The reader gets the conclusion first and the evidence second.</p>
+        <p class="text-sm text-n500 italic">"This bet is terrible. Here's why."</p>
+      </div>
+      <div class="rounded-xl border-2 border-info/30 bg-info/5 p-5 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-info bg-info/10 px-2 py-0.5 rounded mb-3">Diplomatic</span>
+        <p class="font-heading font-semibold text-navy text-lg mb-2">UK, parts of Asia</p>
+        <p class="text-sm text-n700 mb-3">Same information, wrapped in comparison. The reader draws their own conclusion from the evidence.</p>
+        <p class="text-sm text-n500 italic">"If you compare the major bets side by side, you'll notice some give up significantly more than others."</p>
+      </div>
+      <div class="rounded-xl border-2 border-orange/30 bg-orange/5 p-5 shadow-sm">
+        <span class="inline-block text-xs font-heading font-bold uppercase tracking-wider text-orange bg-orange/10 px-2 py-0.5 rounded mb-3">Contextual</span>
+        <p class="font-heading font-semibold text-navy text-lg mb-2">Japan, communal markets</p>
+        <p class="text-sm text-n700 mb-3">Information framed through social proof. The reader learns what experienced people already know.</p>
+        <p class="text-sm text-n500 italic">"The experienced players at the table know which bets cost the most. Here's what they know."</p>
+      </div>
+    </div>
+
+    <p>
+      All three versions are generous, honest, and non-judgmental. The information is identical. The
+      delivery respects the audience's communication expectations.
+    </p>
+  </section>
+
+  <!-- Sub-section: Cultural Dial exercise -->
+  <section id="see-it-in-action" data-slide-index="3" data-lesson-slug="cultural-adaptation" data-has-exercise class="module-section py-16">
+    <h3 id="cultural-dial-heading">See it in action</h3>
+
+    <p>
+      Use the Cultural Dial to see how the same message adapts across all five dimensions.
+      Try the market presets to see typical profiles, then toggle individual dimensions to find your
+      market's sweet spot.
+    </p>
+
+    <CulturalDial client:visible />
+
+    <h3 id="adapting-for-your-market">Adapting for your market</h3>
+
+    <p>
+      When deploying Playbook in a new market, ask four questions:
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-6">
+      <div class="rounded-xl border border-n100 bg-white p-4 shadow-sm">
+        <div class="flex items-start gap-3">
+          <span class="flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white text-sm font-heading font-bold shrink-0">1</span>
+          <div>
+            <p class="font-heading font-bold text-navy text-sm mb-1">How direct can we be?</p>
+            <p class="text-sm text-n600 leading-relaxed">Can we say "This bet is terrible" or should we show the comparison and let the reader draw conclusions?</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-n100 bg-white p-4 shadow-sm">
+        <div class="flex items-start gap-3">
+          <span class="flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white text-sm font-heading font-bold shrink-0">2</span>
+          <div>
+            <p class="font-heading font-bold text-navy text-sm mb-1">What's the humor ceiling?</p>
+            <p class="text-sm text-n600 leading-relaxed">Can we be cheeky? Dry? Or should humor be almost invisible?</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-n100 bg-white p-4 shadow-sm">
+        <div class="flex items-start gap-3">
+          <span class="flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white text-sm font-heading font-bold shrink-0">3</span>
+          <div>
+            <p class="font-heading font-bold text-navy text-sm mb-1">How is gambling culturally framed?</p>
+            <p class="text-sm text-n600 leading-relaxed">As entertainment? As a social activity? As something private? The cultural frame affects which voice traits to emphasize.</p>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border border-n100 bg-white p-4 shadow-sm">
+        <div class="flex items-start gap-3">
+          <span class="flex items-center justify-center w-7 h-7 rounded-full bg-navy text-white text-sm font-heading font-bold shrink-0">4</span>
+          <div>
+            <p class="font-heading font-bold text-navy text-sm mb-1">What pronouns and perspective feel natural?</p>
+            <p class="text-sm text-n600 leading-relaxed">"You" is universal, but some markets prefer "we" (communal) or third-person framing for sensitive topics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-sm text-n500 mt-4">
+      The brand book's Cultural Adaptation Guide (Chapter 9) provides the full five-spectrum
+      framework — Voice, Framing, Humor, Directness, and Comfort — with pre-written variant
+      libraries covering 217+ messages across all dimensions.
+    </p>
+
+    <KeyTakeaway>
+      <p>
+        The voice is universal. The expression adapts. Humor can be bold, understated, or minimal —
+        all are valid as long as the content doesn't read like a compliance form. Directness can be
+        blunt, diplomatic, or contextual — all are honest. Adapt the dialect, never the character.
+      </p>
+    </KeyTakeaway>
+  </section>
+
+  <!-- ================================================================== -->
+  <!-- Knowledge Check                                                    -->
+  <!-- ================================================================== -->
+  <section id="knowledge-check" data-slide-index="4" data-lesson-slug="knowledge-check" class="module-section py-16">
+    <h2>Knowledge Check</h2>
+    <p class="mb-8 text-n700">
+      Test your understanding of Playbook voice and tone. You need 80% to mark this module complete.
+    </p>
+    <KnowledgeCheck client:visible moduleId="3-voice-and-tone" questions={questions} passingScore={80} nextModuleHref={`${base}/modules/4-player-segmentation`} nextModuleTitle="Module 4: Player Segmentation" />
+  </section>
+</ModuleLayout>
