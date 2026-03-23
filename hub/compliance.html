@@ -1123,7 +1123,15 @@ var THEMES = [
     { reg:'gra_sg', label:'GRA (Singapore)', ref:'Casino Control (Responsible Gambling) Regulations 2013', src:'gra-sg-cca', verticals:['casino'],
       text:'Operators must provide responsible gambling information.' },
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Responsible Gambling Guide v1.4', src:'spillem-guide', verticals:['casino','online','sports'],
-      text:'Operators must provide game information.' }
+      text:'Operators must provide game information.' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.2; \u00A7 814a.1', src:'pgcb-814a', verticals:['casino','online','sports'],
+      text:'Compulsive and problem gambling plan must include provision of printed material to educate patrons about gambling (501a.2). Interactive gaming protection pages must include information on gambling risks, disorder symptoms, and responsible gaming rules (814a.1).' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4', src:'mga-ppd', verticals:['casino','online','sports'],
+      text:'B2C licensees must provide responsible gambling information including game rules and odds. Remote operators must display a responsible gaming page within one click from anywhere on the site, covering all player protection tools and game information.' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.5; \u00A7 501a.7(d); \u00A7 814a.1', src:'pgcb-501a', verticals:['casino','online','sports'],
+      text:'At least 20 signs with gambling assistance message within 50 feet of entrances/exits and at ATMs/cash dispensing machines (\u00A7 501a.5). All ads must include 1-800-GAMBLER with prescribed font sizing (\u00A7 501a.7(d)). iGaming platforms must display helpline on login/logout screens and link to Council on Compulsive Gambling of PA (\u00A7 814a.1).' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4(1)(e)', src:'mga-ppd', verticals:['casino','online','sports'],
+      text:'Operators must display a link to one or more gambling help organisations. Responsible Gaming Foundation (RGF) Supportline 1777 (8am-8pm daily, free and confidential). Additional support via Sedqa helpline 179. Remote operators must provide this within one click from anywhere on the website.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">11</span> <a href="https://github.com/kphilander/Playbook/tree/main/how-to-play" target="_blank" rel="noopener">game guides</a> with house edge / RTP data at grade 6-8 reading level</li><li><span class="asset-count">1</span> <a href="https://github.com/kphilander/Playbook/blob/main/how-to-play/odds-at-a-glance.md" target="_blank" rel="noopener">odds comparison table</a> covering 11 games with house edge ranges</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">HTP card templates</a> (print-ready HTML)</li><li><a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-odds.js" target="_blank" rel="noopener">Odds explorer widget</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1133,11 +1141,6 @@ var THEMES = [
     thumb('htp-card-sports.png','HTP Sports') +
     thumb('htp-odds-comparison.png','Odds Table') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.2; \u00A7 814a.1', src:'pgcb-814a', verticals:['casino','online','sports'],
-      text:'Compulsive and problem gambling plan must include provision of printed material to educate patrons about gambling (501a.2). Interactive gaming protection pages must include information on gambling risks, disorder symptoms, and responsible gaming rules (814a.1).' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'B2C licensees must provide responsible gambling information including game rules and odds. Remote operators must display a responsible gaming page within one click from anywhere on the site, covering all player protection tools and game information.' },
-
   gap: 'Game-specific RTP values if different from published ranges; any jurisdiction-mandated display format for odds.'
 },
 /* ------- THEME 2: RG Messaging ------- */
@@ -1166,13 +1169,13 @@ var THEMES = [
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Standards', src:'aglc-rg', verticals:['casino','online','sports'],
       text:'Cannot target minors, high-risk, or vulnerable individuals.' },
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.03 / 2.04 / 2.05', src:'agco-ads', verticals:['casino','online','sports'],
-      text:'Marketing must not target minors, self-excluded, or high-risk persons and must be truthful. Public advertising of sport betting inducements, bonuses, and credits is prohibited except on-site or with active player consent.' }
-  ],
-  assets: '<ul class="asset-list"><li><span class="asset-count">74</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a> tagged by pillar, tier, tone, and audience</li><li><span class="asset-count">18</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/myth-busting.md" target="_blank" rel="noopener">myth-busting entries</a> in 3 formats each</li><li><span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a> organized by function</li><li>Messages are jurisdiction-agnostic; <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> supports mandatory text tokens but none are wired for the current target jurisdictions</li></ul>',
+      text:'Marketing must not target minors, self-excluded, or high-risk persons and must be truthful. Public advertising of sport betting inducements, bonuses, and credits is prohibited except on-site or with active player consent.' },
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.7(d); \u00A7 814a.1', src:'pgcb-501a', verticals:['casino','online','sports'],
       text:'All gaming advertisements must include a gambling assistance message with the DDAP helpline number (1-800-GAMBLER). Interactive gaming platforms must prominently display "IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, HELP IS AVAILABLE, CALL 1-800-GAMBLER" on login/logout screens.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3-4; Gaming Commercial Communications Regs (S.L. 583.09)', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'A responsible gaming message must be displayed explaining that gaming can be harmful if not controlled. Before a player\'s first deposit, operators must provide information about all available responsible gaming tools. All advertising must include the licensee name, licence number, minimum age, and responsible gaming information.' },
+      text:'A responsible gaming message must be displayed explaining that gaming can be harmful if not controlled. Before a player\'s first deposit, operators must provide information about all available responsible gaming tools. All advertising must include the licensee name, licence number, minimum age, and responsible gaming information.' }
+  ],
+  assets: '<ul class="asset-list"><li><span class="asset-count">74</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a> tagged by pillar, tier, tone, and audience</li><li><span class="asset-count">18</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/myth-busting.md" target="_blank" rel="noopener">myth-busting entries</a> in 3 formats each</li><li><span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a> organized by function</li><li>Messages are jurisdiction-agnostic; <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> supports mandatory text tokens but none are wired for the current target jurisdictions</li></ul>',
 
   gap: 'Each jurisdiction may require specific verbatim statements. Playbook provides the messaging framework but mandatory verbatim text (specific to NV, NJ, MA, OH, CA, ON, AB, Macau, Singapore, UK, or Denmark) is NOT pre-configured. Messages are not tagged by jurisdiction. Operators must configure jurisdiction-specific mandatory text themselves via _brand.yml tokens.'
 },
@@ -1214,10 +1217,6 @@ var THEMES = [
     thumb('poster-tier2-10g.png','Tier 2 Poster') +
     thumb('support-page-10a.png','Support Page') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.5; \u00A7 501a.7(d); \u00A7 814a.1', src:'pgcb-501a', verticals:['casino','online','sports'],
-      text:'At least 20 signs with gambling assistance message within 50 feet of entrances/exits and at ATMs/cash dispensing machines (\u00A7 501a.5). All ads must include 1-800-GAMBLER with prescribed font sizing (\u00A7 501a.7(d)). iGaming platforms must display helpline on login/logout screens and link to Council on Compulsive Gambling of PA (\u00A7 814a.1).' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4(1)(e)', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'Operators must display a link to one or more gambling help organisations. Responsible Gaming Foundation (RGF) Supportline 1777 (8am-8pm daily, free and confidential). Additional support via Sedqa helpline 179. Remote operators must provide this within one click from anywhere on the website.' },
 
   gap: 'No helpline data configured for Ohio, Macau, Singapore, Denmark, or Alberta yet. _brand.yml would need updating with those jurisdiction-specific helpline numbers.'
 },
@@ -1251,17 +1250,17 @@ var THEMES = [
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Self-Exclusion', src:'aglc-se', verticals:['casino','online'],
       text:'Exclusion from all Alberta casinos, RECs, and PlayAlberta. 6mo/1yr/2yr/3yr.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'Law 10/2012 (amended by Law 17/2018)', src:'dicj-rg', verticals:['casino'],
-      text:'Self-exclusion and third-party exclusion from all or specific casinos. Max 2 years.' }
+      text:'Self-exclusion and third-party exclusion from all or specific casinos. Max 2 years.' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 503a; \u00A7 815a', src:'pgcb-503a', verticals:['casino','online','sports'],
+      text:'Separate statewide self-exclusion programs for casino (\u00A7 503a) and interactive gaming (\u00A7 815a). Duration: 1 year, 5 years, or lifetime. Lifetime petitions for removal after 10 years with treatment documentation. Winnings forfeited to PGCB for compulsive gambling programs. Marketing cessation required. Sports wagering covered via \u00A7 1410a.1 cross-reference to casino and interactive programs.' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 5; MGA Self-Barring', src:'mga-selfbar', verticals:['casino','online','sports'],
+      text:'Land-based: self-barring from all gambling premises for 6 months, 12 months, or 12 months with auto-renewal. Cannot be removed until timeframe expires. Remote: operators must offer self-exclusion for definite or indefinite period; requests implemented immediately with no inducement to continue. If excluded for gambling problems, must be excluded from all brands operated by the licensee.' }
   ],
   assets: '<ul class="asset-list"><li>Self-exclusion tokens in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a>: <code>{{SELF_EXCLUSION_URL}}</code>, <code>{{SELF_EXCLUSION_NAME}}</code></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Need a Break?" section</li><li>UI mockup for self-exclusion flow</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Cooldown screen template</a></li></ul>' +
     '<div class="thumb-grid">' +
     thumb('self-exclusion-10b.png','Self-Exclusion') +
     thumb('cooldown-10e.png','Cooldown Screen') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 503a; \u00A7 815a', src:'pgcb-503a', verticals:['casino','online','sports'],
-      text:'Separate statewide self-exclusion programs for casino (\u00A7 503a) and interactive gaming (\u00A7 815a). Duration: 1 year, 5 years, or lifetime. Lifetime petitions for removal after 10 years with treatment documentation. Winnings forfeited to PGCB for compulsive gambling programs. Marketing cessation required. Sports wagering covered via \u00A7 1410a.1 cross-reference to casino and interactive programs.' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 5; MGA Self-Barring', src:'mga-selfbar', verticals:['casino','online','sports'],
-      text:'Land-based: self-barring from all gambling premises for 6 months, 12 months, or 12 months with auto-renewal. Cannot be removed until timeframe expires. Remote: operators must offer self-exclusion for definite or indefinite period; requests implemented immediately with no inducement to continue. If excluded for gambling problems, must be excluded from all brands operated by the licensee.' },
 
   gap: 'No program-specific content for different schemes (GAMSTOP, GameSense, ROFUS, NCPG family exclusion, etc.). Generic templates only, not jurisdiction-adaptive. Operators must integrate their specific self-exclusion scheme details.'
 },
@@ -1291,17 +1290,17 @@ var THEMES = [
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.23 / 2.24 / 2.13', src:'agco-ig', verticals:['online','sports'],
       text:'Mandatory deposit and loss limits with 24-hour, 7-day, and 1-month periods. 24-hour cooling-off period before limits can be relaxed or removed. Short-term break options of 1 day to 3 months. Slot auto-play prohibited.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'PlayAlberta Standards', src:'aglc-rg', verticals:['online','sports'],
-      text:'Deposit and loss limits, reality checks, voluntary breaks.' }
+      text:'Deposit and loss limits, reality checks, voluntary breaks.' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 814a.2', src:'pgcb-814a', verticals:['online','sports'],
+      text:'Interactive gaming operators must offer daily/weekly/monthly deposit limits, daily/weekly/monthly loss limits, single wager caps, session time limits (with hourly pop-ups showing time and money wagered), peer-to-peer table limits, and temporary account suspension (minimum 72 hours). Decreases effective immediately; increases require previous limit expiration and reaffirmation.' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4(2)-(3)', src:'mga-rg-faq', verticals:['online','sports'],
+      text:'Remote operators must offer either deposit limits or wagering limits (both encouraged). Reality checks must be offered. Before first deposit or during registration, players must be given the opportunity to set limits. Operators are also encouraged to offer loss limits, session/time limits, and time-outs (24 hours to 30 days).' }
   ],
   assets: '<ul class="asset-list"><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Your Tools" section with limit-setting promotion</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Limit-reached notification mockup</a></li><li>Session summary mockup</li><li>Cooldown screen mockup</li><li>Tools pillar messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages library</a></li></ul>' +
     '<div class="thumb-grid">' +
     thumb('limit-reached-10d.png','Limit Reached') +
     thumb('session-summary-10c.png','Session Summary') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 814a.2', src:'pgcb-814a', verticals:['online','sports'],
-      text:'Interactive gaming operators must offer daily/weekly/monthly deposit limits, daily/weekly/monthly loss limits, single wager caps, session time limits (with hourly pop-ups showing time and money wagered), peer-to-peer table limits, and temporary account suspension (minimum 72 hours). Decreases effective immediately; increases require previous limit expiration and reaffirmation.' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4(2)-(3)', src:'mga-rg-faq', verticals:['online','sports'],
-      text:'Remote operators must offer either deposit limits or wagering limits (both encouraged). Reality checks must be offered. Before first deposit or during registration, players must be given the opportunity to set limits. Operators are also encouraged to offer loss limits, session/time limits, and time-outs (24 hours to 30 days).' },
 
   gap: 'These are UX specs and mockups, not functional widgets. Operator must build the actual limit-setting tools, session tracking, and deposit limit infrastructure.'
 },
@@ -1333,7 +1332,11 @@ var THEMES = [
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Standards', src:'aglc-rg', verticals:['casino','online','sports'],
       text:'Cannot target minors, high-risk, or vulnerable individuals.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'Law 7/2022 (amending Law 16/2001)', src:'dicj-rg', verticals:['casino'],
-      text:'Advertising and promotional activities must comply with DICJ guidelines; restrictions on targeting vulnerable populations.' }
+      text:'Advertising and promotional activities must comply with DICJ guidelines; restrictions on targeting vulnerable populations.' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.7; \u00A7 813a.2', src:'pgcb-501a', verticals:['casino','online','sports'],
+      text:'All ads must include gambling assistance message with 1-800-GAMBLER and DDAP helpline. Font size minimums: 2% print, 5% billboard, 2-8% video/TV. No false information; conditions and limitations must be clearly disclosed. iGaming ads must be co-branded (certificate holder and operator equally). OCPG can order immediate discontinuation of harmful ads. No employing individuals to persuade patrons on the gaming floor.' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Gaming Commercial Communications Regs (S.L. 583.09); CCC Guidelines', src:'mga-ccc', verticals:['casino','online','sports'],
+      text:'Ads must display licensee name, licence number, minimum age, and responsible gaming information. Broad prohibition on gambling ads in public places (except tourist locations, airports, hotels). No targeting minors or vulnerable persons. No suggesting gambling solves financial or social problems. Broadcast restrictions: no gambling ads during or adjacent to children\'s programmes. Penalties up to EUR 25,000 per breach.' }
   ],
   assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/07-application-guidelines.md" target="_blank" rel="noopener">Application guidelines</a></strong> with channel-specific rules for digital, print, broadcast, environmental</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Stigma-free language guide</a> with 35 term pairs</li><li><span class="asset-count">74</span> pre-vetted <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a>, <span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a>, <span class="asset-count">7</span> campaign briefs</li><li>Legal disclaimers configured in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a></li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Email templates</a> and social cards</li></ul>' +
     '<div class="thumb-grid">' +
@@ -1341,10 +1344,6 @@ var THEMES = [
     thumb('email-deposit-7b.png','Deposit Email') +
     thumb('email-monthly-7c.png','Monthly Email') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.7; \u00A7 813a.2', src:'pgcb-501a', verticals:['casino','online','sports'],
-      text:'All ads must include gambling assistance message with 1-800-GAMBLER and DDAP helpline. Font size minimums: 2% print, 5% billboard, 2-8% video/TV. No false information; conditions and limitations must be clearly disclosed. iGaming ads must be co-branded (certificate holder and operator equally). OCPG can order immediate discontinuation of harmful ads. No employing individuals to persuade patrons on the gaming floor.' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Gaming Commercial Communications Regs (S.L. 583.09); CCC Guidelines', src:'mga-ccc', verticals:['casino','online','sports'],
-      text:'Ads must display licensee name, licence number, minimum age, and responsible gaming information. Broad prohibition on gambling ads in public places (except tourist locations, airports, hotels). No targeting minors or vulnerable persons. No suggesting gambling solves financial or social problems. Broadcast restrictions: no gambling ads during or adjacent to children\'s programmes. Penalties up to EUR 25,000 per breach.' },
 
   gap: 'Playbook has detailed advertising rules for Nevada only among the target jurisdictions. No UK, Denmark, Ontario, Massachusetts, Ohio, Singapore, Macau, or Alberta advertising modules. Operators must build jurisdiction-specific advertising compliance for their markets.'
 },
@@ -1378,13 +1377,13 @@ var THEMES = [
     { reg:'agco', label:'AGCO (Ontario)', ref:'Gaming Control Act, 1992, s.22; Registrar\'s Stds Std 3.01', src:'agco-ig', verticals:['casino','online','sports'],
       text:'Minimum gambling age is 19+ for all products. iGaming: minors prohibited from creating accounts; registration requires date of birth verification.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'Gaming, Liquor and Cannabis Act', src:'aglc-rg', verticals:['casino','online','sports'],
-      text:'18+ in Alberta.' }
-  ],
-  assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> <code>legal.min_age</code></strong> configurable per jurisdiction (18, 19, or 21)</li><li><code>{{MIN_AGE}}</code> token used throughout all templates and <a href="https://github.com/kphilander/Playbook/tree/main/collateral" target="_blank" rel="noopener">collateral</a></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> footer displays age automatically from config</li><li>All collateral templates include age messaging where applicable</li></ul>',
+      text:'18+ in Alberta.' },
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'4 Pa.C.S. \u00A7 1207; 58 Pa. Code \u00A7 513a', src:'pgcb-501a', verticals:['casino','online','sports'],
       text:'21+ minimum gambling age for all products including casino, interactive gaming, and sports wagering. Underage gaming provisions under Chapter 513a; facilities must prevent minors from accessing gaming floors and interactive platforms.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Gaming Act (Cap. 583), Art. 7; Player Protection Directive', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'18+ for online and non-casino land-based gambling. Land-based casinos: 18+ for non-Maltese citizens, 25+ for Maltese citizens. Underage gaming sign must be displayed on all remote gaming sites. All advertising must include minimum age to participate.' },
+      text:'18+ for online and non-casino land-based gambling. Land-based casinos: 18+ for non-Maltese citizens, 25+ for Maltese citizens. Underage gaming sign must be displayed on all remote gaming sites. All advertising must include minimum age to participate.' }
+  ],
+  assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> <code>legal.min_age</code></strong> configurable per jurisdiction (18, 19, or 21)</li><li><code>{{MIN_AGE}}</code> token used throughout all templates and <a href="https://github.com/kphilander/Playbook/tree/main/collateral" target="_blank" rel="noopener">collateral</a></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> footer displays age automatically from config</li><li>All collateral templates include age messaging where applicable</li></ul>',
 
   gap: 'Actual age verification infrastructure (this is a platform feature, not a content feature).'
 },
@@ -1416,7 +1415,11 @@ var THEMES = [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino'],
       text:'Making responsible gambling information available in premises.' },
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Gaming, Std 2.3', src:'agco-rg', verticals:['casino'],
-      text:'Responsible gambling information, ConnexOntario helpline, betting limits, and self-exclusion program details must be readily available to all patrons at gaming sites.' }
+      text:'Responsible gambling information, ConnexOntario helpline, betting limits, and self-exclusion program details must be readily available to all patrons at gaming sites.' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.5', src:'pgcb-501a', verticals:['casino'],
+      text:'At least 20 signs with OCPG-approved gambling assistance message required. Signs must be posted within 50 feet of each entrance and exit, and above or below cash dispensing openings on ATMs, voucher/coupon redemption machines, and other cash-dispensing equipment.' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4; Gaming Act (Cap. 583)', src:'mga-pp', verticals:['casino'],
+      text:'Land-based casinos must display responsible gaming information and self-barring details. Age restriction signage required at all casino entrances (25+ for Maltese citizens, 18+ for non-Maltese). Responsible Gaming Foundation materials and helpline 1777 must be accessible to patrons.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">5</span> <a href="https://github.com/kphilander/Playbook/tree/main/collateral/environmental" target="_blank" rel="noopener">venue sign templates</a> (entrance, ATM, floor, restroom, staff area)</li><li><span class="asset-count">5</span> poster templates</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Print collateral</a>: rack card, table tent, helpline card, tri-fold brochure</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/digital" target="_blank" rel="noopener">Digital displays</a>: landscape and portrait formats</li><li>All <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">rendered as HTML + PNG</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1436,10 +1439,6 @@ var THEMES = [
     thumb('table-tent-5b.png','Table Tent') +
     thumb('brochure-trifold-8a.png','Brochure') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.5', src:'pgcb-501a', verticals:['casino'],
-      text:'At least 20 signs with OCPG-approved gambling assistance message required. Signs must be posted within 50 feet of each entrance and exit, and above or below cash dispensing openings on ATMs, voucher/coupon redemption machines, and other cash-dispensing equipment.' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4; Gaming Act (Cap. 583)', src:'mga-pp', verticals:['casino'],
-      text:'Land-based casinos must display responsible gaming information and self-barring details. Age restriction signage required at all casino entrances (25+ for Maltese citizens, 18+ for non-Maltese). Responsible Gaming Foundation materials and helpline 1777 must be accessible to patrons.' },
 
   gap: 'HTML/PNG renders only, not press-ready output. Operators would need to recreate in design tools for production printing.'
 },
@@ -1467,16 +1466,16 @@ var THEMES = [
     { reg:'aglc', label:'AGLC (Alberta)', ref:'Deal Us In', src:'aglc-rg', verticals:['casino'],
       text:'Mandatory certification for all gaming workers. Expires after 5 years.' },
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Std 2.12; Gaming Std 2.5', src:'agco-rg', verticals:['casino','online','sports'],
-      text:'All employees interacting with players must receive mandatory responsible gambling training on problem gambling identification and response. As of July 2025, AGCO no longer requires pre-approval of training programs (outcomes-based approach).' }
+      text:'All employees interacting with players must receive mandatory responsible gambling training on problem gambling identification and response. As of July 2025, AGCO no longer requires pre-approval of training programs (outcomes-based approach).' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.3; \u00A7 814a.4', src:'pgcb-501a', verticals:['casino','online','sports'],
+      text:'Mandatory employee training on compulsive gambling symptoms, intervention techniques, self-exclusion materials, preventing marketing to excluded persons, and alcohol/gaming protocols (\u00A7 501a.3). Training by qualified specialist at orientation with annual reinforcement; documented in personnel files. iGaming operators must train staff to identify and report excluded persons (\u00A7 814a.4).' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3(2)', src:'mga-ppd', verticals:['casino','online','sports'],
+      text:'Employees dealing with responsible gaming matters or player interactions must be routinely trained in responsible gaming procedures. Staff must be qualified to identify signs of gambling-related harm. Operators must retain records of all player interactions and investigations conducted.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">8</span> <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/conversation-scripts.md" target="_blank" rel="noopener">conversation scripts</a> (helpline referral, self-exclusion enrollment, deposit limit setting, distressed player interaction)</li><li><span class="asset-count">30</span>-question <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/staff-faq.md" target="_blank" rel="noopener">staff FAQ</a></li><li>At-risk player segment profile with messaging guidance</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Tier 2 messaging guidelines</a> for support contexts</li></ul>' +
     '<div class="thumb-grid">' +
     thumb('support-page-10a.png','Support Page') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.3; \u00A7 814a.4', src:'pgcb-501a', verticals:['casino','online','sports'],
-      text:'Mandatory employee training on compulsive gambling symptoms, intervention techniques, self-exclusion materials, preventing marketing to excluded persons, and alcohol/gaming protocols (\u00A7 501a.3). Training by qualified specialist at orientation with annual reinforcement; documented in personnel files. iGaming operators must train staff to identify and report excluded persons (\u00A7 814a.4).' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3(2)', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'Employees dealing with responsible gaming matters or player interactions must be routinely trained in responsible gaming procedures. Staff must be qualified to identify signs of gambling-related harm. Operators must retain records of all player interactions and investigations conducted.' },
 
   gap: 'These are reference materials, NOT a training program. No e-learning, no curriculum, no certification. Operator must build actual training infrastructure.'
 },
@@ -1498,16 +1497,16 @@ var THEMES = [
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Exec Orders', src:'spillem-rg', verticals:['online','sports'],
       text:'Activity monitoring and player-set limits.' },
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 3.15 / 2.10', src:'agco-ig', verticals:['online','sports'],
-      text:'Players must access deposit/withdrawal history, login records, gaming transaction history, total wagered amounts, and session balance. Real-time behavioural monitoring required to detect signs of player harm, with mandatory intervention when risk indicators are identified.' }
+      text:'Players must access deposit/withdrawal history, login records, gaming transaction history, total wagered amounts, and session balance. Real-time behavioural monitoring required to detect signs of player harm, with mandatory intervention when risk indicators are identified.' },
+    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 814a.1; \u00A7 813a.5', src:'pgcb-814a', verticals:['online','sports'],
+      text:'Interactive gaming systems must display current local time, elapsed session duration, and hourly pop-up notifications showing time spent and money wagered (\u00A7 814a.1). Previous login date/time displayed upon account access. Operators must maintain electronic records of all bonuses and promotional offers with detailed logs (\u00A7 813a.5).' },
+    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3; Gaming Authorisations Directive (Directive 3 of 2018)', src:'mga-ppd', verticals:['online','sports'],
+      text:'B2C licensees must document compliance with responsible gaming policies and retain evidence of investigations and player interactions. Operators must monitor player gambling habits and maintain records for MGA review. Reality checks must be offered to help players track session duration.' }
   ],
   assets: '<ul class="asset-list"><li>Static <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">session summary mockup</a></li><li>Dashboard messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">"Open" pillar</a></li></ul>' +
     '<div class="thumb-grid">' +
     thumb('session-summary-10c.png','Session Summary') +
     '</div>',
-    { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 814a.1; \u00A7 813a.5', src:'pgcb-814a', verticals:['online','sports'],
-      text:'Interactive gaming systems must display current local time, elapsed session duration, and hourly pop-up notifications showing time spent and money wagered (\u00A7 814a.1). Previous login date/time displayed upon account access. Operators must maintain electronic records of all bonuses and promotional offers with detailed logs (\u00A7 813a.5).' },
-    { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3; Gaming Authorisations Directive (Directive 3 of 2018)', src:'mga-ppd', verticals:['online','sports'],
-      text:'B2C licensees must document compliance with responsible gaming policies and retain evidence of investigations and player interactions. Operators must monitor player gambling habits and maintain records for MGA review. Reality checks must be offered to help players track session duration.' },
 
   gap: 'Playbook has a static mockup only, not a data-driven template. Activity statement data generation (spending data, session duration, net position) and delivery infrastructure (email, in-app) must come from the operator platform.'
 }
