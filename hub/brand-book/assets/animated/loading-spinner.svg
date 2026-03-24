@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+  <!-- Outer ring -->
+  <circle cx="40" cy="40" r="35" fill="none" stroke="#2A3F54" stroke-width="3"/>
+
+  <!-- Spinning arc -->
+  <circle cx="40" cy="40" r="35" fill="none" stroke="#00D4AA" stroke-width="3"
+          stroke-dasharray="55 165" stroke-linecap="round">
+    <animateTransform attributeName="transform" type="rotate" from="0 40 40" to="360 40 40" dur="1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Center Playbook mark - subtle pulse -->
+  <g opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="1.5s" repeatCount="indefinite"/>
+    <rect x="28" y="28" width="10" height="24" rx="2" fill="#FFFFFF"/>
+    <polygon points="40,28 52,40 40,52" fill="#00D4AA"/>
+  </g>
+</svg>

@@ -1,0 +1,2185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playbook — Brand Book</title>
+  <meta name="description" content="Playbook brand guide — an open-source, white-label responsible gambling brand system." />
+  <meta property="og:title" content="Playbook — Brand Book" />
+  <meta property="og:description" content="An open-source, white-label responsible gambling brand system. Colors, typography, icons, collateral templates, and deployment guidelines." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gamblingpolicy.com/tools/playbook/brand-book/" />
+  <meta property="og:image" content="https://gamblingpolicy.com/tools/playbook/brand-book/assets/collateral/poster-4a-know-your-game.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Playbook — Brand Book" />
+  <meta name="twitter:description" content="Open-source responsible gambling brand system. CC0 licensed." />
+  <link rel="icon" type="image/svg+xml" href="/tools/playbook/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    // Prevent flash: set theme before CSS paints
+    (function(){var s=localStorage.getItem('playbook-theme');if(s==='dark'){document.documentElement.setAttribute('data-theme','dark');}else if(!s&&window.matchMedia('(prefers-color-scheme:dark)').matches){document.documentElement.setAttribute('data-theme','dark');}})();
+  </script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      /* Brand (constant across themes) */
+      --navy: #1B2838;
+      --navy-light: #2A3F54;
+      --teal: #00D4AA;
+      --teal-dark: #00A888;
+      --orange: #FF6B35;
+      --orange-dark: #E55A2B;
+
+      /* Semantic (light mode defaults) */
+      --bg: #FFFFFF;
+      --bg-surface: #F5F5FA;
+      --bg-card: #FFFFFF;
+      --bg-sidebar: #F5F5FA;
+      --bg-deep: #F0F0F6;
+      --text-primary: #1B2838;
+      --text-secondary: #3D5468;
+      --text-tertiary: #4A6580;
+      --heading-color: #1B2838;
+      --border-color: #DDE3EA;
+      --overlay-bg: rgba(0,0,0,0.6);
+      --sticky-bg: rgba(255,255,255,0.95);
+
+      /* Legacy aliases (theme-dependent) */
+      --surface: #F5F5FA;
+      --white: #1B2838;
+      --muted: #4A6580;
+      --dim: #5C7080;
+      --card: #FFFFFF;
+      --border: #DDE3EA;
+      --sidebar-w: 220px;
+    }
+    [data-theme="dark"] {
+      --bg: #1B2838;
+      --bg-surface: #0F1A26;
+      --bg-card: #0F1A26;
+      --bg-sidebar: #0D1620;
+      --bg-deep: #0A1018;
+      --text-primary: #E0E8F0;
+      --text-secondary: #C8D4E0;
+      --text-tertiary: #A0B4C8;
+      --heading-color: #FFFFFF;
+      --border-color: #1E3044;
+      --overlay-bg: rgba(11,22,32,0.92);
+      --sticky-bg: rgba(15,26,38,0.95);
+
+      --white: #FFFFFF;
+      --muted: #8899AA;
+      --dim: #7A8FA3;
+      --card: #0F1A26;
+      --border: #1E3044;
+    }
+    /* Lock dark theme for demo contexts */
+    .demo-dark {
+      --heading-color: #FFFFFF;
+      --text-secondary: #C8D4E0;
+      --text-tertiary: #A0B4C8;
+      --white: #FFFFFF;
+      --muted: #8899AA;
+      --dim: #7A8FA3;
+      --card: #0F1A26;
+      --border: #1E3044;
+    }
+    html { scroll-behavior: smooth; scroll-padding-top: 32px; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text-secondary);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: fixed; top: 0; left: 0;
+      width: var(--sidebar-w); height: 100vh;
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      padding: 28px 0;
+      display: flex; flex-direction: column;
+      z-index: 100; overflow-y: auto;
+    }
+    .sidebar-brand {
+      display: flex; align-items: center; gap: 10px;
+      padding: 0 24px 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    .sidebar-brand svg { flex-shrink: 0; }
+    .sidebar-brand span { font-size: 15px; font-weight: 800; color: var(--heading-color); letter-spacing: -0.5px; }
+    .sidebar-brand span em { font-style: normal; font-weight: 300; color: var(--teal); }
+    .nav-group { padding: 0 16px; margin-bottom: 8px; }
+    .nav-group-label {
+      font-size: 9px; font-weight: 700; color: var(--dim);
+      letter-spacing: 2px; padding: 8px; text-transform: uppercase;
+    }
+    .nav-link {
+      display: block; font-size: 13px; font-weight: 500; color: var(--muted);
+      text-decoration: none; padding: 7px 12px; border-radius: 8px; transition: all 0.15s;
+    }
+    .nav-link:hover { color: var(--heading-color); background: rgba(128,128,128,0.08); }
+    .nav-link.active { color: var(--teal-dark); background: rgba(0,212,170,0.08); }
+    [data-theme="dark"] .nav-link.active { color: var(--teal); }
+
+    /* ── Main ── */
+    .main { margin-left: var(--sidebar-w); min-height: 100vh; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; opacity: 0.3;
+      background: url('assets/decorative/brand-pattern.svg') repeat center center;
+      background-size: 200px;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; padding: 40px; }
+    .hero h1 {
+      font-size: 18px; font-weight: 400; color: var(--text-tertiary);
+      letter-spacing: 0.3px; line-height: 1.7; max-width: 520px; margin: 0 auto;
+    }
+    .hero h1 strong { color: var(--heading-color); font-weight: 600; }
+
+    /* ── Section ── */
+    .section { padding: 80px 56px 96px; border-top: 1px solid var(--border); position: relative; }
+    .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 12px; }
+    .section-header h2 { font-size: 32px; font-weight: 800; color: var(--heading-color); letter-spacing: -0.8px; }
+    .section-num { font-family: 'Source Code Pro', monospace; font-size: 12px; font-weight: 500; color: var(--teal-dark); }
+    [data-theme="dark"] .section-num { color: var(--teal); }
+    .section-lead { font-size: 16px; color: var(--text-tertiary); max-width: 600px; margin-bottom: 48px; line-height: 1.7; }
+
+    .sub-label {
+      font-size: 10px; font-weight: 700; color: var(--teal-dark);
+      letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    [data-theme="dark"] .sub-label { color: var(--teal); }
+    .sub-title { font-size: 20px; font-weight: 700; color: var(--heading-color); margin-bottom: 8px; letter-spacing: -0.3px; }
+    .sub-desc { font-size: 14px; color: var(--text-tertiary); max-width: 520px; margin-bottom: 32px; }
+
+    /* ── Grids ── */
+    .row { display: flex; gap: 32px; flex-wrap: wrap; }
+    .row > * { flex: 1; min-width: 260px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .mt-48 { margin-top: 48px; }
+    .mt-64 { margin-top: 64px; }
+    .mb-16 { margin-bottom: 16px; }
+    .mb-24 { margin-bottom: 24px; }
+    .mb-32 { margin-bottom: 32px; }
+    .mb-48 { margin-bottom: 48px; }
+
+    /* ── Cards ── */
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+    .card:hover { border-color: var(--muted); }
+    .card-preview { display: flex; align-items: center; justify-content: center; padding: 28px; min-height: 140px; }
+    .card-preview.dark { background: var(--navy); }
+    .card-preview.light { background: var(--surface); }
+    .card-body { padding: 16px 20px; }
+    .card-label { font-size: 12px; font-weight: 600; color: var(--text-tertiary); }
+    .card-sub { font-size: 11px; color: var(--dim); margin-top: 2px; }
+
+    /* ── Gap columns ── */
+    .gap-col {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 28px; flex: 1; min-width: 260px;
+    }
+    .gap-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+    .gap-col ul { list-style: none; font-size: 13px; line-height: 1.8; }
+    .gap-col ul li { padding-left: 20px; position: relative; }
+    .gap-col ul li::before {
+      content: ''; position: absolute; left: 0; top: 10px;
+      width: 8px; height: 8px; border-radius: 50%;
+    }
+    .gap-col.problem h4 { color: var(--orange); }
+    .gap-col.problem ul li { color: #C89080; }
+    .gap-col.problem ul li::before { background: var(--orange); opacity: 0.4; }
+    .gap-col.solution h4 { color: var(--teal); }
+    .gap-col.solution ul li { color: #80C8B8; }
+    .gap-col.solution ul li::before { background: var(--teal); opacity: 0.4; }
+
+    /* ── Pillar cards ── */
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 32px; flex: 1; min-width: 260px;
+    }
+    .pillar-icon { font-size: 28px; margin-bottom: 12px; }
+    .pillar h3 { font-size: 18px; font-weight: 800; color: var(--heading-color); margin-bottom: 4px; }
+    .pillar .motto { font-size: 13px; font-weight: 600; margin-bottom: 10px; }
+    .pillar p { font-size: 14px; color: var(--text-tertiary); margin-bottom: 14px; line-height: 1.6; }
+    .pillar ul { list-style: none; font-size: 13px; color: var(--text-tertiary); }
+    .pillar ul li { padding: 3px 0 3px 18px; position: relative; }
+    .pillar ul li::before {
+      content: ''; position: absolute; left: 0; top: 10px;
+      width: 6px; height: 6px; border-radius: 50%;
+    }
+
+    /* ── Swatches ── */
+    .swatch { border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+    .swatch-color { height: 100px; }
+    .swatch-info { padding: 14px 16px; background: var(--bg-card); }
+    .swatch-name { font-size: 13px; font-weight: 700; color: var(--heading-color); }
+    .swatch-hex { font-family: 'Source Code Pro', monospace; font-size: 11px; color: var(--dim); margin-top: 2px; }
+    .swatch-role { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+    /* ── Logo ── */
+    .logo-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 32px; display: flex; align-items: center; justify-content: center;
+      min-height: 120px; transition: border-color 0.2s;
+    }
+    .logo-card:hover { border-color: var(--muted); }
+    .logo-card.clickable { cursor: pointer; }
+    .logo-card.on-dark { background: var(--navy); }
+    .logo-card.on-light { background: var(--surface); }
+    .logo-card img { max-width: 180px; max-height: 56px; }
+
+    /* ── Icons ── */
+    .icon-category-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase; margin: 32px 0 12px; padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .icon-category-label:first-of-type { margin-top: 0; }
+    .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 12px; }
+    .icon-cell {
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      padding: 18px 8px 14px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+      transition: border-color 0.2s;
+    }
+    .icon-cell:hover { border-color: var(--muted); }
+    .icon-cell span {
+      font-size: 11px; font-weight: 600; color: var(--text-tertiary);
+      text-transform: capitalize; letter-spacing: 0.2px;
+    }
+
+    /* ── Typography ── */
+    .type-table { width: 100%; border-collapse: collapse; max-width: 720px; }
+    .type-table td { padding: 16px 0; border-bottom: 1px solid var(--border); vertical-align: baseline; }
+    .type-table td:first-child {
+      width: 130px; font-family: 'Source Code Pro', monospace;
+      font-size: 11px; color: var(--dim); padding-right: 24px; white-space: nowrap;
+    }
+
+    /* ── Photography ── */
+    .photo-card { border-radius: 14px; overflow: hidden; position: relative; border: 1px solid var(--border); }
+    .photo-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+    .photo-overlay {
+      position: absolute; inset: 0; display: flex; align-items: flex-start;
+      padding: 12px; pointer-events: none;
+    }
+    .photo-overlay.good { background: linear-gradient(180deg, rgba(0,212,170,0.2) 0%, transparent 40%); }
+    .photo-overlay.bad { background: linear-gradient(180deg, rgba(255,107,53,0.25) 0%, transparent 40%); }
+    .photo-badge {
+      font-size: 11px; font-weight: 800; padding: 6px 14px; border-radius: 8px;
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+    .photo-badge.good { background: var(--teal); color: var(--navy); }
+    .photo-badge.bad { background: var(--orange); color: var(--white); }
+    .photo-caption {
+      padding: 12px 16px; background: var(--bg-card);
+      font-size: 12px; color: var(--text-tertiary);
+    }
+
+    /* ── Collateral ── */
+    .collateral-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+    .collateral-item {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; transition: border-color 0.2s, transform 0.2s;
+    }
+    .collateral-item:hover { border-color: var(--muted); transform: translateY(-2px); }
+    .collateral-item { cursor: pointer; }
+    .collateral-item .img-wrap { aspect-ratio: 4/3; overflow: hidden; background: var(--bg-deep); }
+    .collateral-item img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .collateral-item .label { padding: 10px 14px; font-size: 11px; font-weight: 600; color: var(--text-tertiary); }
+
+    /* ── Lightbox ── */
+    .lightbox {
+      position: fixed; inset: 0; z-index: 1000;
+      background: var(--overlay-bg);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      display: none; align-items: center; justify-content: center;
+      padding: 40px;
+      opacity: 0; transition: opacity 0.25s ease;
+    }
+    .lightbox.open { display: flex; opacity: 1; }
+    .lightbox-inner {
+      position: relative; max-width: 900px; max-height: 90vh; width: 100%;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .lightbox-inner img {
+      max-width: 100%; max-height: 80vh; border-radius: 12px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+    .lightbox-caption {
+      margin-top: 16px; font-size: 14px; font-weight: 600;
+      color: var(--muted); text-align: center;
+    }
+    .lightbox-close {
+      position: absolute; top: -36px; right: 0;
+      width: 32px; height: 32px; border-radius: 8px;
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted); font-size: 18px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.15); color: var(--white); }
+    .lightbox-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      color: var(--muted); font-size: 20px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.15s;
+    }
+    .lightbox-nav:hover { background: rgba(255,255,255,0.12); color: var(--white); }
+    .lightbox-nav.prev { left: -56px; }
+    .lightbox-nav.next { right: -56px; }
+    @media (max-width: 640px) {
+      .lightbox { padding: 20px; }
+      .lightbox-nav.prev { left: 4px; }
+      .lightbox-nav.next { right: 4px; }
+    }
+
+    /* ── Voice cards ── */
+    .voice-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 28px;
+    }
+    .voice-card h3 { font-size: 16px; font-weight: 700; color: var(--heading-color); margin-bottom: 6px; }
+    .voice-card .tag {
+      display: inline-block; font-size: 10px; font-weight: 600;
+      padding: 3px 10px; border-radius: 6px; margin-bottom: 14px;
+    }
+    .voice-card blockquote {
+      font-size: 15px; font-style: italic; color: var(--text-tertiary);
+      border-left: 3px solid var(--teal); padding-left: 16px;
+      margin: 16px 0; line-height: 1.6;
+    }
+
+    /* ── Spectrum bar ── */
+    .spectrum-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    .spectrum-row .left { width: 120px; text-align: right; color: var(--teal); font-weight: 600; }
+    .spectrum-bar {
+      flex: 1; height: 6px; border-radius: 3px;
+      background: linear-gradient(90deg, var(--teal) 0%, var(--navy-light) 50%, var(--orange) 100%);
+      position: relative;
+    }
+    .spectrum-bar::after {
+      content: ''; position: absolute; left: 22%; top: -3px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--white); border: 2px solid var(--teal);
+    }
+    .spectrum-row .right { width: 120px; color: var(--orange); font-weight: 600; }
+
+    /* ── Dimension pills ── */
+    .dim-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .dim-label { width: 100px; font-size: 13px; font-weight: 700; color: var(--heading-color); flex-shrink: 0; }
+    .dim-options { display: flex; gap: 8px; flex-wrap: wrap; }
+    .dim-pill {
+      font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px;
+      background: rgba(0,212,170,0.08); color: var(--teal); border: 1px solid rgba(0,212,170,0.2);
+      cursor: pointer; transition: all 0.15s; user-select: none;
+    }
+    .dim-pill:hover { background: rgba(0,212,170,0.15); }
+    .dim-pill.active { background: var(--teal); color: var(--navy); border-color: var(--teal); }
+    .live-msg {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 24px; transition: opacity 0.2s;
+    }
+    .live-msg .msg-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--dim);
+      text-transform: uppercase; margin-bottom: 10px;
+    }
+    .live-msg blockquote {
+      font-size: 17px; font-weight: 600; color: var(--heading-color); line-height: 1.5;
+      border-left: 3px solid var(--teal); padding-left: 16px; margin: 0;
+      font-style: normal; transition: opacity 0.2s;
+    }
+
+    /* ── Steps ── */
+    .step-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .step {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 24px; position: relative;
+    }
+    .step-num {
+      font-family: 'Source Code Pro', monospace; font-size: 32px;
+      font-weight: 600; color: var(--teal-dark); opacity: 0.4; margin-bottom: 8px;
+    }
+    [data-theme="dark"] .step-num { color: var(--teal); opacity: 0.25; }
+    .step h4 { font-size: 14px; font-weight: 700; color: var(--heading-color); margin-bottom: 6px; }
+    .step p { font-size: 13px; color: var(--text-tertiary); line-height: 1.6; }
+
+    /* ── Guidelines ── */
+    .guideline-list { list-style: none; font-size: 14px; }
+    .guideline-list li {
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      display: flex; align-items: flex-start; gap: 10px; color: var(--text-tertiary);
+    }
+    .guideline-list li .icon { flex-shrink: 0; width: 20px; text-align: center; font-size: 13px; }
+    .guideline-list li .icon.do { color: var(--teal); }
+    .guideline-list li .icon.dont { color: var(--orange); }
+
+    /* ── Decorative ── */
+    .deco { position: absolute; pointer-events: none; opacity: 0.12; }
+
+    /* ── Footer ── */
+    .footer {
+      padding: 40px 56px; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-text { font-size: 12px; color: var(--text-tertiary); }
+    .footer a { color: var(--text-tertiary); text-decoration: none; font-size: 12px; }
+    .footer a:hover { color: var(--teal); }
+
+    /* ── Scroll fade-in ── */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Mobile nav ── */
+    .mobile-toggle {
+      display: none; position: fixed; top: 16px; left: 16px; z-index: 200;
+      width: 40px; height: 40px; border-radius: 10px;
+      background: var(--bg-sidebar); border: 1px solid var(--border);
+      color: var(--muted); font-size: 20px; cursor: pointer;
+      align-items: center; justify-content: center;
+    }
+    .sidebar.mobile-open { transform: translateX(0); }
+
+    /* ── Logo card labels ── */
+    .logo-card { flex-direction: column; gap: 12px; }
+    .logo-label { font-size: 10px; font-weight: 600; color: var(--dim); text-align: center; letter-spacing: 0.3px; }
+    .logo-card.on-dark .logo-label { color: #8899AA; }
+
+    /* ── Swatch click-to-copy ── */
+    .swatch { cursor: pointer; position: relative; }
+    .swatch-copied {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      background: var(--bg); color: var(--teal-dark); font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 6px; pointer-events: none;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .swatch-copied.show { opacity: 1; }
+
+    /* ── Icon bg toggle ── */
+    .icon-bg-toggle {
+      display: inline-flex; gap: 4px; margin-bottom: 20px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 3px;
+    }
+    .icon-bg-btn {
+      font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 6px;
+      border: none; cursor: pointer; transition: all 0.15s; color: var(--muted); background: none;
+    }
+    .icon-bg-btn.active { background: var(--navy-light); color: #FFFFFF; }
+    .icon-section.light-bg .icon-cell { background: var(--surface); border-color: #E0E0E8; }
+    .icon-section.light-bg .icon-cell img { filter: brightness(0) !important; }
+    .icon-section.light-bg .icon-cell span { color: #4A5568; }
+
+    /* In light mode, default icon cells need dark icons */
+    :root:not([data-theme="dark"]) .icon-cell:not(.light-bg .icon-cell) img { filter: brightness(0) saturate(100%) !important; }
+    :root:not([data-theme="dark"]) .icon-section.light-bg .icon-cell img { filter: brightness(0) !important; }
+
+    /* ── Icon click-to-copy ── */
+    .icon-cell { cursor: pointer; position: relative; }
+    .icon-toast {
+      position: absolute; top: 4px; right: 4px;
+      font-size: 9px; font-weight: 700; color: var(--teal-dark);
+      background: var(--bg); padding: 2px 6px; border-radius: 4px;
+      opacity: 0; transition: opacity 0.2s; pointer-events: none;
+    }
+    .icon-toast.show { opacity: 1; }
+
+    /* ── Collateral filters ── */
+    .filter-bar {
+      display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 24px;
+    }
+    .filter-btn {
+      font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px;
+      border: 1px solid var(--border); background: var(--bg-card); color: var(--muted);
+      cursor: pointer; transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: var(--muted); color: var(--heading-color); }
+    .filter-btn.active { background: var(--teal); color: var(--navy); border-color: var(--teal); }
+    .collateral-group { transition: max-height 0.3s ease, opacity 0.3s ease; overflow: hidden; }
+    .collateral-group.hidden { max-height: 0; opacity: 0; margin: 0 !important; padding: 0; }
+    .collateral-group .sub-label { margin-top: 0; }
+
+    /* ── Contrast preview ── */
+    .contrast-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .contrast-cell {
+      padding: 16px; border-radius: 10px; text-align: center;
+      font-size: 14px; font-weight: 700; border: 1px solid var(--border);
+    }
+    .contrast-aa {
+      font-size: 9px; font-weight: 700; letter-spacing: 1px;
+      margin-top: 6px; opacity: 0.7;
+    }
+
+    /* ── Clear-space diagram ── */
+    .clearspace-wrap { display: flex; align-items: center; gap: 32px; margin-bottom: 32px; color: var(--heading-color); }
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {
+      .sidebar { transform: translateX(-100%); transition: transform 0.3s ease; }
+      .mobile-toggle { display: flex; }
+      .main { margin-left: 0; }
+      .section { padding: 56px 28px 72px; }
+      .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr 1fr; }
+      .step-grid { grid-template-columns: 1fr 1fr; }
+      .hero-content { padding: 32px 24px; }
+      .row { flex-direction: column; }
+      .footer { padding: 32px 28px; }
+      .contrast-grid { grid-template-columns: repeat(2, 1fr); }
+      .misuse-grid { grid-template-columns: 1fr 1fr; }
+      .qr-card { grid-template-columns: 1fr; gap: 24px; }
+      .clearspace-wrap { flex-direction: column; align-items: flex-start; }
+      .clearspace-wrap svg { width: 100%; max-width: 280px; }
+      #dim-controls { width: 100% !important; }
+      .collateral-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+      .filter-bar { gap: 4px; }
+      .filter-btn { font-size: 10px; padding: 4px 10px; }
+      .lightbox-nav.prev { left: 8px; }
+      .lightbox-nav.next { right: 8px; }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 40px 20px 56px; }
+      .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+      .step-grid { grid-template-columns: 1fr; }
+      .section-header h2 { font-size: 26px; }
+      .contrast-grid { grid-template-columns: 1fr; }
+      .misuse-grid { grid-template-columns: 1fr 1fr; }
+      .hero { min-height: 80vh; }
+      .hero-logo img, .hero .hero-content > div:first-child img { width: 200px; height: 200px; }
+      .section-lead { font-size: 14px; }
+      .icon-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 8px; }
+      .icon-cell { padding: 14px 6px 10px; }
+      .icon-search { width: 100%; }
+      .logo-card { padding: 20px; min-height: 90px; }
+      .logo-card img { max-width: 140px; }
+      .type-table td:first-child { width: 100px; font-size: 10px; }
+      .photo-card img { height: 160px; }
+      .collateral-grid { grid-template-columns: 1fr 1fr; }
+      .back-to-top { bottom: 16px; right: 16px; width: 38px; height: 38px; }
+      .filter-bar.sticky { padding: 8px 20px; }
+      .dim-label { width: 70px; font-size: 11px; }
+      .dim-pill { font-size: 10px; padding: 4px 10px; }
+      .spectrum-row .left, .spectrum-row .right { width: 80px; font-size: 11px; }
+      .scale-table td { font-size: 11px; padding: 6px 0; }
+      .scale-table td:nth-child(2), .scale-table td:nth-child(3) { font-size: 10px; }
+      .voice-card { padding: 20px; }
+      .voice-card blockquote { font-size: 14px; }
+      .live-msg blockquote { font-size: 15px; }
+      .footer { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── Print ── */
+    /* ── Progress bar ── */
+    .progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px; z-index: 300;
+      background: var(--teal); width: 0%; transition: width 0.1s linear;
+      pointer-events: none;
+    }
+
+    /* ── Back to top ── */
+    .back-to-top {
+      position: fixed; bottom: 28px; right: 28px; z-index: 200;
+      width: 44px; height: 44px; border-radius: 12px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      opacity: 0; transform: translateY(12px);
+      transition: opacity 0.3s, transform 0.3s, background 0.15s;
+      pointer-events: none;
+    }
+    .back-to-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .back-to-top:hover { background: var(--bg-surface); }
+    [data-theme="dark"] .back-to-top:hover { background: var(--navy-light); }
+
+    /* ── Sidebar badge ── */
+    .nav-badge {
+      font-size: 10px; font-weight: 600; color: var(--dim);
+      margin-left: 4px;
+    }
+
+    /* ── Sticky filter bar ── */
+    .filter-bar.sticky {
+      position: fixed; top: 0; left: var(--sidebar-w); right: 0;
+      z-index: 150; background: var(--sticky-bg);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      padding: 12px 56px; border-bottom: 1px solid var(--border);
+      margin-bottom: 0;
+    }
+    @media (max-width: 960px) {
+      .filter-bar.sticky { left: 0; padding: 12px 28px; }
+    }
+
+    /* ── Logo misuse ── */
+    .misuse-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .misuse-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 24px; display: flex; flex-direction: column; align-items: center;
+      gap: 12px; position: relative; color: var(--heading-color);
+    }
+    .misuse-badge {
+      position: absolute; top: 8px; right: 8px;
+      font-size: 9px; font-weight: 800; color: var(--orange);
+      background: rgba(255,107,53,0.12); padding: 3px 8px; border-radius: 5px;
+      letter-spacing: 0.5px;
+    }
+    .misuse-label { font-size: 11px; color: var(--text-tertiary); text-align: center; }
+
+    /* ── Type scale ref ── */
+    .scale-table { width: 100%; max-width: 520px; border-collapse: collapse; }
+    .scale-table td {
+      padding: 8px 0; border-bottom: 1px solid var(--border);
+      font-size: 12px; color: var(--text-tertiary);
+    }
+    .scale-table td:first-child { font-weight: 700; color: var(--heading-color); width: 60px; }
+    .scale-table td:nth-child(2) { font-family: 'Source Code Pro', monospace; font-size: 11px; color: var(--dim); width: 80px; }
+    .scale-table td:nth-child(3) { font-family: 'Source Code Pro', monospace; font-size: 11px; color: var(--dim); width: 80px; }
+
+    /* ── Forbidden combos ── */
+    .forbidden-cell {
+      padding: 16px; border-radius: 10px; text-align: center;
+      font-size: 14px; font-weight: 700; border: 1px solid var(--border);
+      position: relative;
+    }
+    .forbidden-badge {
+      position: absolute; top: 6px; right: 6px;
+      font-size: 9px; font-weight: 800; color: var(--orange);
+      background: rgba(255,107,53,0.15); padding: 2px 6px; border-radius: 4px;
+    }
+
+    /* ── Quick ref card ── */
+    .qr-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    }
+    .qr-section h4 {
+      font-size: 10px; font-weight: 700; color: var(--teal-dark);
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;
+    }
+    .qr-swatches { display: flex; gap: 6px; }
+    .qr-swatch { width: 28px; height: 28px; border-radius: 6px; border: 1px solid var(--border); }
+    .qr-font { font-size: 13px; color: var(--muted); line-height: 1.8; }
+    .qr-voice { font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+    /* ── Icon search ── */
+    .icon-search {
+      font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+      color: var(--text-secondary); padding: 7px 14px 7px 32px; width: 200px;
+      outline: none; transition: border-color 0.15s;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236B8299' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: 10px center;
+    }
+    .icon-search:focus { border-color: var(--teal-dark); }
+    .icon-search::placeholder { color: var(--dim); }
+    [data-theme="dark"] .icon-search:focus { border-color: var(--teal); }
+    .icon-cell.hidden { display: none; }
+
+    /* ── Section divider ── */
+    .section-divider {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; padding: 24px 0; opacity: 0.4;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Collateral empty state ── */
+    .collateral-empty {
+      display: none; flex-direction: column; align-items: center;
+      gap: 12px; padding: 48px; color: var(--text-tertiary); font-size: 13px;
+    }
+    .collateral-empty.show { display: flex; }
+
+    /* ── Theme toggle ── */
+    .theme-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      color: var(--muted); cursor: pointer;
+      transition: all 0.15s; margin: 0 24px 16px;
+    }
+    .theme-toggle:hover { color: var(--teal-dark); border-color: var(--teal-dark); }
+    [data-theme="dark"] .theme-toggle:hover { color: var(--teal); border-color: var(--teal); }
+    .icon-moon { display: none; }
+    [data-theme="dark"] .icon-sun { display: none; }
+    [data-theme="dark"] .icon-moon { display: block; }
+
+    /* ── Typography specimen swap ── */
+    .type-specimen-dark { display: none; }
+    [data-theme="dark"] .type-specimen-light { display: none; }
+    [data-theme="dark"] .type-specimen-dark { display: block; }
+
+    /* ── Smooth transitions ── */
+    body, .sidebar, .card, .voice-card, .step, .pillar, .swatch-info, .gap-col,
+    .icon-cell, .collateral-item, .live-msg, .filter-btn, .footer, .qr-card,
+    .icon-bg-toggle, .icon-search, .back-to-top, .misuse-card, .logo-card,
+    .photo-caption, .theme-toggle {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    @media print {
+      .sidebar, .mobile-toggle, .filter-bar, .icon-bg-toggle, .lightbox,
+      .progress-bar, .back-to-top, .icon-search, .section-divider { display: none !important; }
+      .main { margin-left: 0; }
+      .section { padding: 32px 0; break-inside: avoid; border-top: 1px solid #ddd; }
+      body { background: #fff; color: #1a1a1a; }
+      .section-header h2 { color: #1a1a1a; }
+      .section-lead, .sub-desc, .card-label, .card-sub, .voice-card p, .voice-card blockquote { color: #444; }
+      .sub-label { color: #00A888; }
+      .swatch-color { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .hero { min-height: auto; padding: 48px 0; }
+      .hero-bg { display: none; }
+      .collateral-grid { grid-template-columns: repeat(3, 1fr); }
+      .icon-grid { grid-template-columns: repeat(8, 1fr); }
+      .icon-cell img { filter: none !important; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Progress bar -->
+<div class="progress-bar" id="progress-bar"></div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+  <svg width="20" height="20" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF" opacity="0.6"/><polygon points="34,14 54,32 34,50" fill="#00D4AA" opacity="0.8"/></svg>
+</button>
+
+<!-- Mobile nav toggle -->
+<button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">&#9776;</button>
+
+<!-- ═══════════════════ SIDEBAR ═══════════════════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <svg width="28" height="28" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+    <span>Play<em>BOOK</em></span>
+  </div>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  <div class="nav-group">
+    <div class="nav-group-label">Foundation</div>
+    <a href="#brand-story" class="nav-link active">Brand Story</a>
+    <a href="#logo" class="nav-link">Logo System</a>
+    <a href="#color" class="nav-link">Color</a>
+    <a href="#typography" class="nav-link">Typography</a>
+    <a href="#icons" class="nav-link">Icons <span class="nav-badge">39</span></a>
+    <a href="#photography" class="nav-link">Photography</a>
+  </div>
+  <div class="nav-group">
+    <div class="nav-group-label">Application</div>
+    <a href="#voice" class="nav-link">Voice &amp; Tone</a>
+    <a href="#localization" class="nav-link">Localization</a>
+    <a href="#campaign" class="nav-link">Campaign Library <span class="nav-badge">44</span></a>
+    <a href="#get-started" class="nav-link">Get Started</a>
+    <a href="#quick-ref" class="nav-link">Quick Reference</a>
+  </div>
+</nav>
+
+<div class="main">
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" id="brand-story">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div style="margin-bottom:32px;">
+      <img src="assets/animated/hero-logo-animated.svg" alt="Playbook" width="300" height="300">
+    </div>
+    <h1>
+      <strong>A white-label responsible gambling brand system.</strong>
+      Designed, tested, and deployed at the same quality as the games themselves.
+      Open source, CC0 &mdash; no licensing, no fees.
+    </h1>
+  </div>
+</section>
+
+
+<!-- ═══════════════════ LOGO ═══════════════════ -->
+<section class="section" id="logo">
+  <span class="section-num">01</span>
+  <div class="section-header"><h2>Logo System</h2></div>
+  <p class="section-lead">
+    The PlayBOOK wordmark combines <strong style="color:var(--heading-color)">bold confidence</strong> (Play) with <strong style="color:var(--heading-color)">open accessibility</strong> (BOOK). Ten variants ensure it works on any background.
+  </p>
+
+  <div class="sub-label">Horizontal</div>
+  <div class="grid-3 mb-32">
+    <div class="logo-card on-light"><img src="assets/logos/logo-horizontal-full-color.svg" alt="Full Color"><div class="logo-label">Full Color</div></div>
+    <div class="logo-card on-light"><img src="assets/logos/logo-horizontal-on-light.svg" alt="On Light"><div class="logo-label">On Light</div></div>
+    <div class="logo-card on-dark"><img src="assets/logos/logo-horizontal-reversed.svg" alt="Reversed"><div class="logo-label">Reversed</div></div>
+    <div class="logo-card on-light"><img src="assets/logos/logo-horizontal-mono-dark.svg" alt="Mono Dark"><div class="logo-label">Mono Dark</div></div>
+    <div class="logo-card on-dark"><img src="assets/logos/logo-horizontal-mono-white.svg" alt="Mono White"><div class="logo-label">Mono White</div></div>
+  </div>
+
+  <div class="sub-label">Stacked</div>
+  <div class="grid-5 mb-32">
+    <div class="logo-card on-light"><img src="assets/logos/logo-stacked-full-color.svg" alt="Full Color"><div class="logo-label">Full Color</div></div>
+    <div class="logo-card on-light"><img src="assets/logos/logo-stacked-on-light.svg" alt="On Light"><div class="logo-label">On Light</div></div>
+    <div class="logo-card on-dark"><img src="assets/logos/logo-stacked-reversed.svg" alt="Reversed"><div class="logo-label">Reversed</div></div>
+    <div class="logo-card on-light"><img src="assets/logos/logo-stacked-mono-dark.svg" alt="Mono Dark"><div class="logo-label">Mono Dark</div></div>
+    <div class="logo-card on-dark"><img src="assets/logos/logo-stacked-mono-white.svg" alt="Mono White"><div class="logo-label">Mono White</div></div>
+  </div>
+
+  <div class="sub-label">Symbol Mark &amp; Favicons</div>
+  <div class="grid-5 mb-48">
+    <div class="logo-card on-dark">
+      <svg width="48" height="48" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+      <div class="logo-label">Primary</div>
+    </div>
+    <div class="logo-card on-light">
+      <svg width="48" height="48" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#1B2838"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+      <div class="logo-label">On Light</div>
+    </div>
+    <div class="logo-card on-dark">
+      <svg width="48" height="48" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+      <div class="logo-label">On Dark</div>
+    </div>
+    <div class="logo-card on-dark"><img src="assets/logos/favicon-mono-white.svg" alt="Favicon Mono" style="max-width:48px;max-height:48px;"><div class="logo-label">Favicon Mono</div></div>
+    <div class="logo-card on-dark"><img src="assets/logos/favicon-reversed.svg" alt="Favicon Reversed" style="max-width:48px;max-height:48px;"><div class="logo-label">Favicon Reversed</div></div>
+  </div>
+
+  <div class="sub-label">Helpline Badges</div>
+  <div class="grid-3 mb-48">
+    <div class="logo-card on-light"><img src="assets/logos/helpline-badge-light.svg" alt="Helpline Badge Light" style="max-width:120px;max-height:80px;"><div class="logo-label">Light Background</div></div>
+    <div class="logo-card on-dark"><img src="assets/logos/helpline-badge-dark.svg" alt="Helpline Badge Dark" style="max-width:120px;max-height:80px;"><div class="logo-label">Dark Background</div></div>
+  </div>
+
+  <div class="sub-label">Clear Space</div>
+  <div class="clearspace-wrap">
+    <svg width="260" height="130" viewBox="0 0 260 130" style="flex-shrink:0;">
+      <!-- Clear space zone -->
+      <rect x="20" y="15" width="220" height="100" rx="8" fill="none" stroke="#00D4AA" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+      <!-- Inner logo area -->
+      <rect x="60" y="35" width="140" height="60" rx="4" fill="var(--card)" stroke="var(--border)" stroke-width="1"/>
+      <text x="130" y="70" text-anchor="middle" font-family="'Inter',sans-serif" font-size="24" letter-spacing="-0.8">
+        <tspan font-weight="800" fill="currentColor">Play</tspan><tspan font-weight="300" fill="#00D4AA">BOOK</tspan>
+      </text>
+      <!-- Dimension arrows -->
+      <line x1="60" y1="10" x2="60" y2="35" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
+      <line x1="200" y1="10" x2="200" y2="35" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
+      <text x="130" y="10" text-anchor="middle" font-family="'Source Code Pro',monospace" font-size="8" fill="#00D4AA" opacity="0.8">1&times; BOOK width</text>
+      <line x1="10" y1="35" x2="60" y2="35" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
+      <line x1="10" y1="95" x2="60" y2="95" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
+    </svg>
+    <ul class="guideline-list" style="flex:1;">
+      <li><span class="icon do">&#10003;</span> Maintain 1 "BOOK" width clear space on all sides</li>
+      <li><span class="icon do">&#10003;</span> Use approved color variants only</li>
+      <li><span class="icon dont">&#10005;</span> Never crop, rotate, distort, or add effects to the wordmark</li>
+      <li><span class="icon dont">&#10005;</span> Never place logo on busy or low-contrast backgrounds</li>
+    </ul>
+  </div>
+
+  <div class="mt-48">
+    <div class="sub-label">Logo Misuse</div>
+    <div class="misuse-grid">
+      <div class="misuse-card">
+        <span class="misuse-badge">&#10005; DON'T</span>
+        <svg width="140" height="40" viewBox="0 0 242 56"><text y="40" font-family="'Inter',sans-serif" font-size="44" letter-spacing="-1.3" transform="scale(1.4,0.7) translate(-24,12)"><tspan font-weight="800" fill="currentColor">Play</tspan><tspan font-weight="300" fill="#00D4AA">BOOK</tspan></text></svg>
+        <div class="misuse-label">Stretched or distorted</div>
+      </div>
+      <div class="misuse-card">
+        <span class="misuse-badge">&#10005; DON'T</span>
+        <svg width="140" height="40" viewBox="0 0 242 56"><text y="40" font-family="'Inter',sans-serif" font-size="44" letter-spacing="-1.3"><tspan font-weight="800" fill="#FF6B35">Play</tspan><tspan font-weight="300" fill="#FFB300">BOOK</tspan></text></svg>
+        <div class="misuse-label">Unapproved colors</div>
+      </div>
+      <div class="misuse-card">
+        <span class="misuse-badge">&#10005; DON'T</span>
+        <svg width="140" height="40" viewBox="0 0 242 56"><g transform="rotate(-15 121 28)"><text y="40" font-family="'Inter',sans-serif" font-size="44" letter-spacing="-1.3"><tspan font-weight="800" fill="currentColor">Play</tspan><tspan font-weight="300" fill="#00D4AA">BOOK</tspan></text></g></svg>
+        <div class="misuse-label">Rotated or angled</div>
+      </div>
+      <div class="misuse-card" style="background:repeating-conic-gradient(#1a2535 0% 25%,#0F1A26 0% 50%) 50%/12px 12px;">
+        <span class="misuse-badge">&#10005; DON'T</span>
+        <svg width="140" height="40" viewBox="0 0 242 56"><text y="40" font-family="'Inter',sans-serif" font-size="44" letter-spacing="-1.3"><tspan font-weight="800" fill="rgba(255,255,255,0.4)">Play</tspan><tspan font-weight="300" fill="rgba(0,212,170,0.4)">BOOK</tspan></text></svg>
+        <div class="misuse-label">On busy backgrounds</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ COLOR ═══════════════════ -->
+<section class="section" id="color">
+  <span class="section-num">02</span>
+  <div class="section-header"><h2>Color</h2></div>
+  <p class="section-lead">
+    Three-tone system: <strong style="color:var(--heading-color)">deep navy</strong> for trust, <strong style="color:var(--teal-dark)">electric teal</strong> for action, <strong style="color:var(--orange)">bold orange</strong> for attention. All combinations are WCAG AA compliant.
+  </p>
+
+  <div class="sub-label">Core Palette</div>
+  <div class="grid-5 mb-48">
+    <div class="swatch"><div class="swatch-color" style="background:#1B2838;"></div><div class="swatch-info"><div class="swatch-name">Navy</div><div class="swatch-hex">#1B2838</div><div class="swatch-role">Primary &middot; backgrounds, trust</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#00D4AA;"></div><div class="swatch-info"><div class="swatch-name">Teal</div><div class="swatch-hex">#00D4AA</div><div class="swatch-role">Action &middot; CTAs, links, accents</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#FF6B35;"></div><div class="swatch-info"><div class="swatch-name">Orange</div><div class="swatch-hex">#FF6B35</div><div class="swatch-role">Attention &middot; alerts, highlights</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#F5F5FA;border-bottom:1px solid #E0E0E8;"></div><div class="swatch-info"><div class="swatch-name">Surface</div><div class="swatch-hex">#F5F5FA</div><div class="swatch-role">Light backgrounds, cards</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#FFFFFF;border-bottom:1px solid #E0E0E8;"></div><div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-role">Content, clean space</div></div></div>
+  </div>
+
+  <div class="sub-label">Extended Palette</div>
+  <div class="grid-4 mb-48">
+    <div class="swatch"><div class="swatch-color" style="background:#0F1923;"></div><div class="swatch-info"><div class="swatch-name">Navy Deep</div><div class="swatch-hex">#0F1923</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#2A3F56;"></div><div class="swatch-info"><div class="swatch-name">Navy Light</div><div class="swatch-hex">#2A3F56</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#00A888;"></div><div class="swatch-info"><div class="swatch-name">Teal Dark</div><div class="swatch-hex">#00A888</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#33DDBB;"></div><div class="swatch-info"><div class="swatch-name">Teal Bright</div><div class="swatch-hex">#33DDBB</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#E55A2B;"></div><div class="swatch-info"><div class="swatch-name">Orange Dark</div><div class="swatch-hex">#E55A2B</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#FF8A5C;"></div><div class="swatch-info"><div class="swatch-name">Orange Light</div><div class="swatch-hex">#FF8A5C</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#FFB300;"></div><div class="swatch-info"><div class="swatch-name">Alert</div><div class="swatch-hex">#FFB300</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#2979FF;"></div><div class="swatch-info"><div class="swatch-name">Info</div><div class="swatch-hex">#2979FF</div></div></div>
+  </div>
+
+  <div class="mt-48">
+    <div class="sub-label">Contrast Preview &mdash; WCAG AA</div>
+    <div class="contrast-grid">
+      <div class="contrast-cell" style="background:#1B2838;color:#00D4AA;">Teal on Navy<div class="contrast-aa">AA &check; 7.2:1</div></div>
+      <div class="contrast-cell" style="background:#1B2838;color:#FFFFFF;">White on Navy<div class="contrast-aa">AA &check; 14.5:1</div></div>
+      <div class="contrast-cell" style="background:#1B2838;color:#FF6B35;">Orange on Navy<div class="contrast-aa">AA &check; 5.1:1</div></div>
+      <div class="contrast-cell" style="background:#00D4AA;color:#1B2838;">Navy on Teal<div class="contrast-aa">AA &check; 7.2:1</div></div>
+      <div class="contrast-cell" style="background:#F5F5FA;color:#1B2838;">Navy on Surface<div class="contrast-aa">AA &check; 13.8:1</div></div>
+      <div class="contrast-cell" style="background:#FFFFFF;color:#1B2838;border-color:#E0E0E8;">Navy on White<div class="contrast-aa">AA &check; 14.5:1</div></div>
+    </div>
+  </div>
+
+  <div class="mt-48">
+    <div class="sub-label">Forbidden Combinations</div>
+    <div class="contrast-grid">
+      <div class="forbidden-cell" style="background:#00D4AA;color:#FF6B35;">
+        <span class="forbidden-badge">&#10005; FAIL</span>
+        Orange on Teal<div class="contrast-aa">2.1:1 &mdash; illegible</div>
+      </div>
+      <div class="forbidden-cell" style="background:#F5F5FA;color:#C8D0D8;border-color:#E0E0E8;">
+        <span class="forbidden-badge">&#10005; FAIL</span>
+        Light on Surface<div class="contrast-aa">1.4:1 &mdash; invisible</div>
+      </div>
+      <div class="forbidden-cell" style="background:#FFFFFF;color:#00D4AA;border-color:#E0E0E8;">
+        <span class="forbidden-badge">&#10005; FAIL</span>
+        Teal on White<div class="contrast-aa">2.5:1 &mdash; too faint</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ TYPOGRAPHY ═══════════════════ -->
+<section class="section" id="typography">
+  <span class="section-num">03</span>
+  <div class="section-header"><h2>Typography</h2></div>
+  <p class="section-lead">Three font families with distinct roles: authority, readability, and precision.</p>
+
+  <div class="card mb-48" style="max-width:540px;">
+    <div class="card-preview dark" style="padding:24px 28px;justify-content:flex-start;">
+      <img src="assets/decorative/typography-specimen-light.svg" alt="Typography specimen" style="width:100%;" class="type-specimen-light">
+      <img src="assets/decorative/typography-specimen.svg" alt="Typography specimen" style="width:100%;" class="type-specimen-dark">
+    </div>
+  </div>
+
+  <div class="sub-label">Inter &mdash; Authority</div>
+  <p class="sub-desc">Headings, UI elements, the logo wordmark. Sharp geometry at every weight.</p>
+  <table class="type-table mb-48">
+    <tr><td>900 Black</td><td style="font-weight:900;font-size:32px;color:var(--heading-color);letter-spacing:-0.8px;">The quick brown fox</td></tr>
+    <tr><td>800 ExtraBold</td><td style="font-weight:800;font-size:28px;color:var(--heading-color);letter-spacing:-0.6px;">The quick brown fox</td></tr>
+    <tr><td>700 Bold</td><td style="font-weight:700;font-size:24px;color:var(--text-tertiary);">The quick brown fox</td></tr>
+    <tr><td>600 Semibold</td><td style="font-weight:600;font-size:20px;color:var(--text-tertiary);">The quick brown fox</td></tr>
+    <tr><td>400 Regular</td><td style="font-weight:400;font-size:16px;color:var(--muted);">The quick brown fox</td></tr>
+    <tr><td>300 Light</td><td style="font-weight:300;font-size:16px;color:var(--dim);">The quick brown fox</td></tr>
+  </table>
+
+  <div class="sub-label">Type Scale</div>
+  <table class="scale-table mb-48">
+    <tr><td>H1</td><td>48px</td><td>Inter 900</td><td style="font-size:14px;">Page titles, hero headlines</td></tr>
+    <tr><td>H2</td><td>32px</td><td>Inter 800</td><td style="font-size:14px;">Section headers</td></tr>
+    <tr><td>H3</td><td>20px</td><td>Inter 700</td><td style="font-size:14px;">Subsections, card titles</td></tr>
+    <tr><td>Body</td><td>16px</td><td>Source Sans 400</td><td style="font-size:14px;">Paragraphs, descriptions</td></tr>
+    <tr><td>Small</td><td>14px</td><td>Inter 400</td><td style="font-size:14px;">Captions, labels, UI</td></tr>
+    <tr><td>Code</td><td>13px</td><td>Source Code 400</td><td style="font-size:14px;">Hex values, tokens, data</td></tr>
+    <tr><td>Micro</td><td>10px</td><td>Inter 700</td><td style="font-size:14px;">Badges, overlines, tags</td></tr>
+  </table>
+
+  <div class="row">
+    <div>
+      <div class="sub-label">Source Sans 3 &mdash; Readability</div>
+      <p class="sub-desc">Body copy, accessible long-form communication.</p>
+      <p style="font-family:'Source Sans 3',sans-serif;font-size:16px;color:var(--text-tertiary);line-height:1.8;max-width:400px;">
+        Every piece of Playbook content is built on two ideas: radical transparency and social shareability. Content should inform without lecturing.
+      </p>
+    </div>
+    <div>
+      <div class="sub-label">Source Code Pro &mdash; Precision</div>
+      <p class="sub-desc">Data, hex values, code, tokens.</p>
+      <div style="font-family:'Source Code Pro',monospace;font-size:13px;color:var(--dim);line-height:2;background:var(--card);padding:20px 24px;border-radius:12px;border:1px solid var(--border);">
+        <span style="color:var(--teal);">--color-navy:</span> #1B2838;<br>
+        <span style="color:var(--teal);">--color-teal:</span> #00D4AA;<br>
+        <span style="color:var(--teal);">--color-orange:</span> #FF6B35;<br>
+        <span style="color:var(--teal);">--font-heading:</span> 'Inter';<br>
+        <span style="color:var(--teal);">--font-body:</span> 'Source Sans 3';
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ICONS ═══════════════════ -->
+<section class="section" id="icons">
+  <span class="section-num">04</span>
+  <div class="section-header"><h2>Icons</h2></div>
+  <p class="section-lead">
+    39 custom icons across 7 categories. 24&times;24 canvas, 2px primary stroke, 1px detail stroke. Pure SVG, <code style="font-family:'Source Code Pro',monospace;font-size:13px;color:var(--teal);">currentColor</code> ready.
+  </p>
+
+  <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;">
+    <input type="text" class="icon-search" id="icon-search" placeholder="Search icons...">
+    <div class="icon-bg-toggle" style="margin-bottom:0;">
+    <button class="icon-bg-btn active" data-bg="dark">Dark</button>
+    <button class="icon-bg-btn" data-bg="light">Light</button>
+  </div>
+  </div>
+
+  <div class="icon-section" id="icon-section">
+  <!-- Game Types -->
+  <div class="icon-category-label" style="color:var(--teal);">Game Types <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 8 icons</span></div>
+  <div class="icon-grid mb-24">
+    <div class="icon-cell"><img src="assets/icons/icon-cards.svg" alt="Cards" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Cards</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-dice.svg" alt="Dice" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Dice</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-roulette.svg" alt="Roulette" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Roulette</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-slots.svg" alt="Slots" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Slots</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-sports.svg" alt="Sports" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Sports</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-lottery.svg" alt="Lottery" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Lottery</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-table.svg" alt="Table" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Table</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-jackpot.svg" alt="Jackpot" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);"><span>Jackpot</span></div>
+  </div>
+
+  <!-- Financial -->
+  <div class="icon-category-label" style="color:#33DDBB;">Financial <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 3 icons</span></div>
+  <div class="icon-grid mb-24">
+    <div class="icon-cell"><img src="assets/icons/icon-deposit.svg" alt="Deposit" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Deposit</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-withdrawal.svg" alt="Withdrawal" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Withdrawal</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-bonus.svg" alt="Bonus" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Bonus</span></div>
+  </div>
+
+  <!-- Odds & Math -->
+  <div class="icon-category-label" style="color:var(--orange);">Odds &amp; Math <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 4 icons</span></div>
+  <div class="icon-grid mb-24">
+    <div class="icon-cell"><img src="assets/icons/icon-percentage.svg" alt="Percentage" style="filter:brightness(0) saturate(100%) invert(55%) sepia(76%) saturate(1000%) hue-rotate(339deg);"><span>Percentage</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-edge.svg" alt="House Edge" style="filter:brightness(0) saturate(100%) invert(55%) sepia(76%) saturate(1000%) hue-rotate(339deg);"><span>House Edge</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-rng.svg" alt="RNG" style="filter:brightness(0) saturate(100%) invert(55%) sepia(76%) saturate(1000%) hue-rotate(339deg);"><span>RNG</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-equal.svg" alt="Equal" style="filter:brightness(0) saturate(100%) invert(55%) sepia(76%) saturate(1000%) hue-rotate(339deg);"><span>Equal</span></div>
+  </div>
+
+  <!-- Player Tools -->
+  <div class="icon-category-label" style="color:#33DDBB;">Player Tools <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 8 icons</span></div>
+  <div class="icon-grid mb-24">
+    <div class="icon-cell"><img src="assets/icons/icon-timer.svg" alt="Timer" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Timer</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-limit.svg" alt="Limit" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Limit</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-budget.svg" alt="Budget" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Budget</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-bell.svg" alt="Bell" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Bell</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-history.svg" alt="History" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>History</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-check.svg" alt="Check" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Check</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-activity.svg" alt="Activity" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Activity</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-profile.svg" alt="Profile" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Profile</span></div>
+  </div>
+
+  <!-- Content & Education -->
+  <div class="icon-category-label" style="color:#FFB300;">Content &amp; Education <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 4 icons</span></div>
+  <div class="icon-grid mb-24">
+    <div class="icon-cell"><img src="assets/icons/icon-quiz.svg" alt="Quiz" style="filter:brightness(0) saturate(100%) invert(75%) sepia(60%) saturate(600%) hue-rotate(5deg);"><span>Quiz</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-myth.svg" alt="Myth" style="filter:brightness(0) saturate(100%) invert(75%) sepia(60%) saturate(600%) hue-rotate(5deg);"><span>Myth</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-fact.svg" alt="Fact" style="filter:brightness(0) saturate(100%) invert(75%) sepia(60%) saturate(600%) hue-rotate(5deg);"><span>Fact</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-info.svg" alt="Info" style="filter:brightness(0) saturate(100%) invert(75%) sepia(60%) saturate(600%) hue-rotate(5deg);"><span>Info</span></div>
+  </div>
+
+  <!-- Social & Sharing -->
+  <div class="icon-category-label" style="color:#2979FF;">Social &amp; Sharing <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 4 icons</span></div>
+  <div class="icon-grid mb-24">
+    <div class="icon-cell"><img src="assets/icons/icon-share.svg" alt="Share" style="filter:brightness(0) saturate(100%) invert(45%) sepia(80%) saturate(600%) hue-rotate(197deg);"><span>Share</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-challenge.svg" alt="Challenge" style="filter:brightness(0) saturate(100%) invert(45%) sepia(80%) saturate(600%) hue-rotate(197deg);"><span>Challenge</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-score.svg" alt="Score" style="filter:brightness(0) saturate(100%) invert(45%) sepia(80%) saturate(600%) hue-rotate(197deg);"><span>Score</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-qr.svg" alt="QR" style="filter:brightness(0) saturate(100%) invert(45%) sepia(80%) saturate(600%) hue-rotate(197deg);"><span>QR</span></div>
+  </div>
+
+  <!-- Support & Safety -->
+  <div class="icon-category-label" style="color:#FF8A5C;">Support &amp; Safety <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 8 icons</span></div>
+  <div class="icon-grid mb-24">
+    <div class="icon-cell"><img src="assets/icons/icon-phone.svg" alt="Phone" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>Phone</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-warning.svg" alt="Warning" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>Warning</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-help.svg" alt="Help" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>Help</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-external.svg" alt="External" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>External</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-playbook.svg" alt="Playbook" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>Playbook</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-shield.svg" alt="Shield" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>Shield</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-exclusion.svg" alt="Exclusion" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>Exclusion</span></div>
+    <div class="icon-cell"><img src="assets/icons/icon-pause.svg" alt="Pause" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);"><span>Pause</span></div>
+  </div>
+  </div><!-- .icon-section -->
+</section>
+
+<!-- ═══════════════════ PHOTOGRAPHY ═══════════════════ -->
+<section class="section" id="photography">
+  <span class="section-num">05</span>
+  <div class="section-header"><h2>Photography</h2></div>
+  <p class="section-lead">
+    Candid, editorial-quality shots. Cinematic lighting, energetic mood, real player perspective. Avoid dim stock filler.
+  </p>
+
+  <div class="sub-label">Style Direction</div>
+  <div class="grid-3 mb-24">
+    <div class="photo-card">
+      <img src="assets/photography/cinematic-lighting-good.jpg" alt="Cinematic lighting">
+      <div class="photo-overlay good"><span class="photo-badge good">&#10003; DO</span></div>
+      <div class="photo-caption">Cinematic lighting &middot; warm tone, directional light</div>
+    </div>
+    <div class="photo-card">
+      <img src="assets/photography/closeup-cards-chips-good.jpg" alt="Close-up cards and chips">
+      <div class="photo-overlay good"><span class="photo-badge good">&#10003; DO</span></div>
+      <div class="photo-caption">Close-up detail &middot; cards, chips, textures</div>
+    </div>
+    <div class="photo-card">
+      <img src="assets/photography/closeup-slot-interface-good.jpg" alt="Slot interface">
+      <div class="photo-overlay good"><span class="photo-badge good">&#10003; DO</span></div>
+      <div class="photo-caption">Real interface &middot; player perspective</div>
+    </div>
+  </div>
+  <div class="grid-3 mb-48">
+    <div class="photo-card">
+      <img src="assets/photography/dim-lighting-bad.jpg" alt="Dim lighting example">
+      <div class="photo-overlay bad"><span class="photo-badge bad">&#10005; DON'T</span></div>
+      <div class="photo-caption">Dim, moody &middot; feels exclusionary</div>
+    </div>
+    <div class="photo-card">
+      <img src="assets/photography/slot-machines-filler-bad.jpg" alt="Slot filler example">
+      <div class="photo-overlay bad"><span class="photo-badge bad">&#10005; DON'T</span></div>
+      <div class="photo-caption">Generic stock filler &middot; no story, no context</div>
+    </div>
+  </div>
+
+  <div class="sub-label">Color Overlay Treatments</div>
+  <p class="sub-desc">When text appears over photography, apply a brand overlay for contrast and consistency. Always maintain WCAG AA readability.</p>
+
+  <div class="grid-3 mb-48">
+    <!-- Navy overlay -->
+    <div style="border-radius:14px;overflow:hidden;position:relative;height:220px;border:1px solid var(--border);">
+      <img src="assets/photography/cinematic-lighting-good.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,40,56,0.5) 0%,rgba(27,40,56,0.92) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;">
+        <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:2px;margin-bottom:6px;">NAVY GRADIENT</div>
+        <div style="font-size:18px;font-weight:800;color:var(--white);line-height:1.3;margin-bottom:4px;">Know Your Odds</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.85);">The house edge is real. Here's what the math actually says.</div>
+      </div>
+    </div>
+    <!-- Teal tint -->
+    <div style="border-radius:14px;overflow:hidden;position:relative;height:220px;border:1px solid var(--border);">
+      <img src="assets/photography/closeup-cards-chips-good.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,168,136,0.35) 0%,rgba(0,168,136,0.92) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;">
+        <div style="font-size:9px;font-weight:700;color:var(--navy);letter-spacing:2px;margin-bottom:6px;">TEAL GRADIENT</div>
+        <div style="font-size:18px;font-weight:800;color:var(--navy);line-height:1.3;margin-bottom:4px;">Set Your Limits</div>
+        <div style="font-size:12px;color:rgba(27,40,56,0.9);">Stay in control with deposit limits, session timers, and cooldown periods.</div>
+      </div>
+    </div>
+    <!-- Orange accent -->
+    <div style="border-radius:14px;overflow:hidden;position:relative;height:220px;border:1px solid var(--border);">
+      <img src="assets/photography/closeup-slot-interface-good.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,40,56,0.5) 0%,rgba(27,40,56,0.94) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;">
+        <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:2px;margin-bottom:6px;">NAVY + ORANGE ACCENT</div>
+        <div style="font-size:18px;font-weight:800;color:var(--white);line-height:1.3;margin-bottom:4px;">Myth: <span style="color:var(--orange);">Hot Streaks</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.85);">Every spin is independent. Previous results don't change future odds.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-label">Overlay Rules</div>
+  <ul class="guideline-list" style="max-width:560px;">
+    <li><span class="icon do">&#10003;</span> Use navy gradient (bottom-heavy) for most text-over-photo treatments</li>
+    <li><span class="icon do">&#10003;</span> Teal gradient works for positive, action-oriented messaging</li>
+    <li><span class="icon do">&#10003;</span> Orange as accent color within navy overlays for myth-busting content</li>
+    <li><span class="icon do">&#10003;</span> Always ensure text meets WCAG AA contrast over the overlay</li>
+    <li><span class="icon dont">&#10005;</span> Never place white text directly on unprocessed photography</li>
+    <li><span class="icon dont">&#10005;</span> Never use solid color blocks — always use gradients for depth</li>
+  </ul>
+</section>
+
+<div class="section-divider">
+  <img src="assets/animated/dice-roll.svg" alt="" width="56">
+  <img src="assets/animated/card-shuffle.svg" alt="" width="56">
+</div>
+
+<!-- ═══════════════════ VOICE & TONE ═══════════════════ -->
+<section class="section" id="voice">
+  <span class="section-num">06</span>
+  <div class="section-header"><h2>Voice &amp; Tone</h2></div>
+  <p class="section-lead">
+    Two voices, one mission. Gambling is entertainment &mdash; content should reflect that. Provide information and tools. Never tell players what to do.
+  </p>
+
+  <!-- Two voices -->
+  <div class="grid-2 mb-48">
+    <div class="voice-card" style="border-top:3px solid var(--teal);">
+      <span class="tag" style="background:rgba(0,212,170,0.12);color:var(--teal);">PLAYBOOK VOICE</span>
+      <h3>Confident Myth-Buster</h3>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">
+        Authentic, accessible, confident without being arrogant.
+        For myth-busting reels, quiz hooks, odds breakdowns, community content.
+      </p>
+      <blockquote>
+        "I've seen enough to know &mdash; the house always has an edge. Let me show you what it is."
+      </blockquote>
+    </div>
+    <div class="voice-card" style="border-top:3px solid var(--orange);">
+      <span class="tag" style="background:rgba(255,107,53,0.12);color:var(--orange);">SUPPORT VOICE</span>
+      <h3>Warm, Direct</h3>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">
+        Confident, warm, relaxed body language.
+        For help resources, helpline information, support pages.
+      </p>
+      <blockquote style="border-color:var(--orange);">
+        "Sometimes it helps to talk. It's free and completely confidential."
+      </blockquote>
+    </div>
+  </div>
+
+  <!-- Six principles -->
+  <div class="sub-label">Six Guiding Principles</div>
+  <div class="grid-3 mb-48">
+    <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;border-left:3px solid var(--teal);">
+      <div style="font-size:14px;font-weight:700;color:var(--heading-color);margin-bottom:4px;">Informed, Not Alarming</div>
+      <div style="font-size:12px;color:var(--muted);">Facts, not fear. Numbers, not scare tactics.</div>
+    </div>
+    <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;border-left:3px solid var(--teal);">
+      <div style="font-size:14px;font-weight:700;color:var(--heading-color);margin-bottom:4px;">Your Choice, Your Tools</div>
+      <div style="font-size:12px;color:var(--muted);">Empower, don't lecture. Tools over rules.</div>
+    </div>
+    <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;border-left:3px solid var(--teal);">
+      <div style="font-size:14px;font-weight:700;color:var(--heading-color);margin-bottom:4px;">Specific, Not Sloganeering</div>
+      <div style="font-size:12px;color:var(--muted);">Real numbers. No vague "gamble responsibly."</div>
+    </div>
+    <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;border-left:3px solid var(--orange);">
+      <div style="font-size:14px;font-weight:700;color:var(--heading-color);margin-bottom:4px;">Fun Is the Point</div>
+      <div style="font-size:12px;color:var(--muted);">Entertainment first. Content worth sharing.</div>
+    </div>
+    <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;border-left:3px solid var(--orange);">
+      <div style="font-size:14px;font-weight:700;color:var(--heading-color);margin-bottom:4px;">Real Talk</div>
+      <div style="font-size:12px;color:var(--muted);">Direct and honest. Zero corporate-speak.</div>
+    </div>
+    <div style="padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;border-left:3px solid var(--orange);">
+      <div style="font-size:14px;font-weight:700;color:var(--heading-color);margin-bottom:4px;">Inclusive by Default</div>
+      <div style="font-size:12px;color:var(--muted);">Every player, every culture, every language.</div>
+    </div>
+  </div>
+
+  <!-- We say / We don't say — side-by-side message examples -->
+  <div class="sub-label">We Say / We Don't Say</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin-bottom:48px;">
+
+    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
+      <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"The house edge on this game is 5.26%. Here's what that means over 100 spins."</div>
+    </div>
+    <div style="padding:16px 20px;background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:1.5px;margin-bottom:8px;">&#10005; WE DON'T SAY</div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.5;">"Please gamble responsibly."</div>
+    </div>
+
+    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
+      <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"You've been playing for 2 hours. Quick check-in &mdash; how's it going?"</div>
+    </div>
+    <div style="padding:16px 20px;background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:1.5px;margin-bottom:8px;">&#10005; WE DON'T SAY</div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.5;">"WARNING: You have been gambling for an extended period."</div>
+    </div>
+
+    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
+      <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"Every spin starts fresh. Your brain sees streaks. The math doesn't."</div>
+    </div>
+    <div style="padding:16px 20px;background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:1.5px;margin-bottom:8px;">&#10005; WE DON'T SAY</div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.5;">"Be aware that gambling can lead to addiction and financial problems."</div>
+    </div>
+
+    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
+      <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"Need to talk? Free, confidential, 24/7."</div>
+    </div>
+    <div style="padding:16px 20px;background:rgba(255,107,53,0.06);border:1px solid rgba(255,107,53,0.15);border-radius:12px;">
+      <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:1.5px;margin-bottom:8px;">&#10005; WE DON'T SAY</div>
+      <div style="font-size:14px;color:var(--muted);line-height:1.5;">"If you or someone you know has a gambling problem, call..."</div>
+    </div>
+  </div>
+
+  <!-- Content formats — where voice shows up -->
+  <div class="sub-label">Where the Voice Shows Up</div>
+  <div class="grid-4" style="margin-bottom:0;">
+    <div style="text-align:center;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;">
+      <img src="assets/icons/icon-myth.svg" alt="" width="28" height="28" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:var(--heading-color);margin-bottom:2px;">Myth-Busters</div>
+      <div style="font-size:11px;color:var(--dim);">Social cards, reels, stories</div>
+    </div>
+    <div style="text-align:center;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;">
+      <img src="assets/icons/icon-quiz.svg" alt="" width="28" height="28" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:var(--heading-color);margin-bottom:2px;">Quizzes &amp; Hooks</div>
+      <div style="font-size:11px;color:var(--dim);">Interactive, shareable</div>
+    </div>
+    <div style="text-align:center;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;">
+      <img src="assets/icons/icon-edge.svg" alt="" width="28" height="28" style="filter:brightness(0) saturate(100%) invert(55%) sepia(76%) saturate(1000%) hue-rotate(339deg);margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:var(--heading-color);margin-bottom:2px;">Odds Breakdowns</div>
+      <div style="font-size:11px;color:var(--dim);">Game guides, how-to-play</div>
+    </div>
+    <div style="text-align:center;padding:20px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;">
+      <img src="assets/icons/icon-help.svg" alt="" width="28" height="28" style="filter:brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(330deg);margin-bottom:10px;">
+      <div style="font-size:13px;font-weight:700;color:var(--heading-color);margin-bottom:2px;">Support Pages</div>
+      <div style="font-size:11px;color:var(--dim);">Helpline, self-exclusion</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════ LOCALIZATION ═══════════════════ -->
+<section class="section" id="localization">
+  <span class="section-num">07</span>
+  <div class="section-header"><h2>Cultural <span style="color:var(--teal);">Adaptation</span></h2></div>
+  <p class="section-lead">
+    Five dimensions adapt how the voice speaks. They never change what it stands for. Toggle each dimension to see the voice shift in real time.
+  </p>
+
+  <div class="row" style="gap:48px;align-items:flex-start;">
+    <!-- Dimension toggles -->
+    <div style="flex:0 0 auto;width:420px;" id="dim-controls">
+      <div class="dim-row">
+        <div class="dim-label">Voice</div>
+        <div class="dim-options" data-dim="voice">
+          <span class="dim-pill active" data-val="peer">Peer</span>
+          <span class="dim-pill" data-val="authority">Authority</span>
+          <span class="dim-pill" data-val="elder">Elder</span>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-label">Framing</div>
+        <div class="dim-options" data-dim="framing">
+          <span class="dim-pill active" data-val="individual">Individual</span>
+          <span class="dim-pill" data-val="communal">Communal</span>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-label">Humor</div>
+        <div class="dim-options" data-dim="humor">
+          <span class="dim-pill active" data-val="irreverent">Irreverent</span>
+          <span class="dim-pill" data-val="warm">Warm</span>
+          <span class="dim-pill" data-val="understated">Understated</span>
+          <span class="dim-pill" data-val="minimal">Minimal</span>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-label">Directness</div>
+        <div class="dim-options" data-dim="directness">
+          <span class="dim-pill active" data-val="blunt">Blunt</span>
+          <span class="dim-pill" data-val="diplomatic">Diplomatic</span>
+          <span class="dim-pill" data-val="contextual">Contextual</span>
+        </div>
+      </div>
+      <div class="dim-row">
+        <div class="dim-label">Comfort</div>
+        <div class="dim-options" data-dim="comfort">
+          <span class="dim-pill active" data-val="open">Open</span>
+          <span class="dim-pill" data-val="reserved">Reserved</span>
+          <span class="dim-pill" data-val="private">Private</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live message preview -->
+    <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:16px;" id="live-messages">
+      <div class="live-msg">
+        <div class="msg-label">House Edge</div>
+        <blockquote id="msg-edge"></blockquote>
+      </div>
+      <div class="live-msg">
+        <div class="msg-label">Session Reminder</div>
+        <blockquote id="msg-session"></blockquote>
+      </div>
+      <div class="live-msg">
+        <div class="msg-label">Helpline</div>
+        <blockquote id="msg-help"></blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-64">
+    <div class="sub-label">Language Adaptation</div>
+    <p class="sub-desc">Same card, four languages. Visual identity holds &mdash; the language and cultural framing shift.</p>
+
+    <!-- Four language cards: EN, ES, AR, ZH -->
+    <div class="grid-4" style="margin-bottom:32px;">
+
+      <!-- English -->
+      <div class="demo-dark" style="border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#0F1923;display:flex;flex-direction:column;">
+        <div style="flex:1;padding:22px 20px 16px;display:flex;flex-direction:column;">
+          <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:2px;margin-bottom:10px;">MYTH VS. MATH</div>
+          <div style="font-size:17px;font-weight:800;color:var(--white);line-height:1.25;margin-bottom:10px;">&ldquo;I'm on a hot streak&rdquo;</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55;margin-bottom:16px;">Every spin, hand, and roll is statistically independent. Your brain sees patterns. The math doesn't.</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span style="font-size:36px;font-weight:900;color:var(--teal);line-height:1;">0%</span>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.4;margin-bottom:auto;">chance past results<br>affect the next spin</div>
+        </div>
+        <div style="padding:12px 20px;border-top:1px solid var(--border);font-size:9px;color:var(--dim);line-height:1.5;">
+          Free support 24/7: 1-800-522-4700<br>
+          <span style="color:var(--dim);">21+ to gamble</span>
+        </div>
+        <div style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <span style="font-size:9px;font-weight:800;color:var(--white);letter-spacing:-0.3px;">Play<span style="font-weight:300;color:var(--teal);">BOOK</span></span>
+          </div>
+          <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
+        </div>
+      </div>
+
+      <!-- Espa&ntilde;ol -->
+      <div class="demo-dark" style="border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#0F1923;display:flex;flex-direction:column;">
+        <div style="flex:1;padding:22px 20px 16px;display:flex;flex-direction:column;">
+          <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:2px;margin-bottom:10px;">MITO VS. MATEM&Aacute;TICAS</div>
+          <div style="font-size:17px;font-weight:800;color:var(--white);line-height:1.25;margin-bottom:10px;">&ldquo;Estoy en racha&rdquo;</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.55;margin-bottom:16px;">Cada jugada empieza de cero. Tu cerebro ve patrones. Las matem&aacute;ticas no.</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span style="font-size:36px;font-weight:900;color:var(--teal);line-height:1;">0%</span>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.4;margin-bottom:auto;">posibilidad de que jugadas<br>pasadas cambien la siguiente</div>
+        </div>
+        <div style="padding:12px 20px;border-top:1px solid var(--border);font-size:9px;color:var(--dim);line-height:1.5;">
+          Ayuda 24/7: 1-800-522-4700<br>
+          <span style="color:var(--dim);">21+ para apostar</span>
+        </div>
+        <div style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <span style="font-size:9px;font-weight:800;color:var(--white);letter-spacing:-0.3px;">Play<span style="font-weight:300;color:var(--teal);">BOOK</span></span>
+          </div>
+          <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
+        </div>
+      </div>
+
+      <!-- Arabic (RTL) -->
+      <div class="demo-dark" dir="rtl" style="border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#0F1923;display:flex;flex-direction:column;">
+        <div style="flex:1;padding:22px 20px 16px;display:flex;flex-direction:column;">
+          <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:2px;margin-bottom:10px;">&#1575;&#1604;&#1582;&#1585;&#1575;&#1601;&#1577; &#1605;&#1602;&#1575;&#1576;&#1604; &#1575;&#1604;&#1585;&#1610;&#1575;&#1590;&#1610;&#1575;&#1578;</div>
+          <div style="font-size:17px;font-weight:800;color:var(--white);line-height:1.35;margin-bottom:10px;">&ldquo;&#1581;&#1592;&#1610; &#1605;&#1575;&#1588;&#1610;&rdquo;</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:16px;">&#1603;&#1604; &#1604;&#1593;&#1576;&#1577; &#1578;&#1576;&#1583;&#1571; &#1605;&#1606; &#1575;&#1604;&#1589;&#1601;&#1585;. &#1593;&#1602;&#1604;&#1603; &#1610;&#1588;&#1608;&#1601; &#1578;&#1603;&#1585;&#1575;&#1585;. &#1575;&#1604;&#1571;&#1585;&#1602;&#1575;&#1605; &#1604;&#1575;.</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span style="font-size:36px;font-weight:900;color:var(--teal);line-height:1;">0%</span>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.5;margin-bottom:auto;">&#1601;&#1585;&#1589;&#1577; &#1571;&#1606; &#1575;&#1604;&#1604;&#1593;&#1576;&#1577; &#1575;&#1604;&#1587;&#1575;&#1576;&#1602;&#1577;<br>&#1578;&#1594;&#1610;&#1617;&#1585; &#1575;&#1604;&#1604;&#1610; &#1576;&#1593;&#1583;&#1607;&#1575;</div>
+        </div>
+        <div style="padding:12px 20px;border-top:1px solid var(--border);font-size:9px;color:var(--dim);line-height:1.5;">
+          &#1583;&#1593;&#1605; &#1605;&#1580;&#1575;&#1606;&#1610; 24/7: 800 2365<br>
+          <span style="color:var(--dim);">21+ &#1604;&#1604;&#1605;&#1588;&#1575;&#1585;&#1603;&#1577;</span>
+        </div>
+        <div dir="ltr" style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <span style="font-size:9px;font-weight:800;color:var(--white);letter-spacing:-0.3px;">Play<span style="font-weight:300;color:var(--teal);">BOOK</span></span>
+          </div>
+          <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
+        </div>
+      </div>
+
+      <!-- Chinese -->
+      <div class="demo-dark" style="border-radius:14px;overflow:hidden;border:1px solid var(--border);background:#0F1923;display:flex;flex-direction:column;">
+        <div style="flex:1;padding:22px 20px 16px;display:flex;flex-direction:column;">
+          <div style="font-size:9px;font-weight:700;color:var(--orange);letter-spacing:2px;margin-bottom:10px;">&#35823;&#21306; &#23545; &#25968;&#23398;</div>
+          <div style="font-size:17px;font-weight:800;color:var(--white);line-height:1.35;margin-bottom:10px;">&ldquo;&#25105;&#36816;&#27668;&#27491;&#26106;&rdquo;</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:16px;">&#27599;&#27425;&#26059;&#36716;&#37117;&#20174;&#38646;&#24320;&#22987;&#12290;&#20320;&#30340;&#22823;&#33041;&#30475;&#21040;&#35268;&#24459;&#65292;&#25968;&#23398;&#19981;&#36825;&#26679;&#30475;&#12290;</div>
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;">
+            <span style="font-size:36px;font-weight:900;color:var(--teal);line-height:1;">0%</span>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.5;margin-bottom:auto;">&#19978;&#27425;&#30340;&#32467;&#26524;&#24433;&#21709;<br>&#19979;&#27425;&#26059;&#36716;&#30340;&#21487;&#33021;&#24615;</div>
+        </div>
+        <div style="padding:12px 20px;border-top:1px solid var(--border);font-size:9px;color:var(--dim);line-height:1.5;">
+          &#20840;&#22825;&#25903;&#25345; 24/7: 2823 0101<br>
+          <span style="color:var(--dim);">21&#23681;&#20197;&#19978;&#26041;&#21487;&#21442;&#19982;</span>
+        </div>
+        <div style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <span style="font-size:9px;font-weight:800;color:var(--white);letter-spacing:-0.3px;">Play<span style="font-weight:300;color:var(--teal);">BOOK</span></span>
+          </div>
+          <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="font-size:13px;color:var(--dim);max-width:600px;line-height:1.6;">
+      Four languages, one visual system. Layout, color, typography hierarchy, and brand mark stay identical. The Arabic card flips to RTL. Helpline numbers localize per jurisdiction.
+    </p>
+  </div>
+
+  <div class="mt-48" style="padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;max-width:640px;">
+    <div style="font-size:14px;color:var(--text-tertiary);line-height:1.7;">
+      <strong style="color:var(--heading-color);">217 messages</strong> with <strong style="color:var(--heading-color);">1,254 variants</strong> across 5 dimensions &mdash; ready to deploy, culturally adapted, research-backed.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CAMPAIGN LIBRARY ═══════════════════ -->
+<section class="section" id="campaign">
+  <span class="section-num">08</span>
+  <div class="section-header"><h2>Campaign Library</h2></div>
+  <p class="section-lead">
+    Deployment-ready collateral: campaign cards, posters, signage, emails, player tools, and how-to-play guides.
+  </p>
+  <div class="collateral-empty" id="collateral-empty">
+    <img src="assets/animated/loading-spinner.svg" alt="" width="40">
+    <span>No collateral in this category.</span>
+  </div>
+
+  <div class="filter-bar" id="collateral-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="cards">Cards</button>
+    <button class="filter-btn" data-filter="social">Social</button>
+    <button class="filter-btn" data-filter="posters">Posters</button>
+    <button class="filter-btn" data-filter="guides">Guides</button>
+    <button class="filter-btn" data-filter="email">Email</button>
+    <button class="filter-btn" data-filter="player">Player Tools</button>
+    <button class="filter-btn" data-filter="print">Print</button>
+  </div>
+
+  <div class="collateral-group mb-48" data-group="cards">
+  <div class="sub-label mb-16">Myth-Busting &amp; Education Cards</div>
+  <div class="collateral-grid mb-48">
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/card-1a-hot-streak.png" alt="Hot Streak"></div><div class="label">Hot Streak Myth</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/card-1b-due-for-win.png" alt="Due for Win"></div><div class="label">Due for Win Myth</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/card-1c-lucky-machine.png" alt="Lucky Machine"></div><div class="label">Lucky Machine Myth</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/card-2a-house-edge.png" alt="House Edge"></div><div class="label">House Edge</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/card-2b-sports-betting.png" alt="Sports Betting"></div><div class="label">Sports Betting</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/card-2c-bonus-wagering.png" alt="Bonus Wagering"></div><div class="label">Bonus Wagering</div></div>
+  </div>
+  </div>
+
+  <div class="collateral-group mb-48" data-group="social">
+  <div class="sub-label mb-16">Social &amp; Stories</div>
+  <div class="collateral-grid mb-48">
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/story-3a-hot-streak.png" alt="Story: Hot Streak"></div><div class="label">Story &mdash; Hot Streak</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/story-3b-house-edge.png" alt="Story: House Edge"></div><div class="label">Story &mdash; House Edge</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/story-3c-sports-betting.png" alt="Story: Sports"></div><div class="label">Story &mdash; Sports</div></div>
+  </div>
+  </div>
+
+  <div class="collateral-group mb-48" data-group="posters">
+  <div class="sub-label mb-16">Posters &amp; Signage</div>
+  <div class="collateral-grid mb-48">
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/poster-4a-know-your-game.png" alt="Know Your Game"></div><div class="label">Know Your Game</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/poster-4b-no-fine-print.png" alt="No Fine Print"></div><div class="label">No Fine Print</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/poster-4c-game-iq.png" alt="Game IQ"></div><div class="label">Game IQ</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/sign-entrance-9a.png" alt="Entrance Sign"></div><div class="label">Entrance Sign</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/sign-floor-9c.png" alt="Floor Sign"></div><div class="label">Floor Sign</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/sign-atm-9b.png" alt="ATM Sign"></div><div class="label">ATM Sign</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/sign-restroom-9d.png" alt="Restroom Sign"></div><div class="label">Restroom Sign</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/sign-staff-9e.png" alt="Staff Sign"></div><div class="label">Staff Sign</div></div>
+  </div>
+  </div>
+
+  <div class="collateral-group mb-48" data-group="guides">
+  <div class="sub-label mb-16">How-to-Play Guides</div>
+  <div class="collateral-grid mb-48">
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-card-blackjack.png" alt="Blackjack"></div><div class="label">Blackjack</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-card-roulette.png" alt="Roulette"></div><div class="label">Roulette</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-card-slots.png" alt="Slots"></div><div class="label">Slots</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-card-craps.png" alt="Craps"></div><div class="label">Craps</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-card-baccarat.png" alt="Baccarat"></div><div class="label">Baccarat</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-card-sports.png" alt="Sports"></div><div class="label">Sports</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-card-video-poker.png" alt="Video Poker"></div><div class="label">Video Poker</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/htp-odds-comparison.png" alt="Odds Comparison"></div><div class="label">Odds Comparison</div></div>
+  </div>
+  </div>
+
+  <div class="collateral-group mb-48" data-group="email">
+  <div class="sub-label mb-16">Email Templates</div>
+  <div class="collateral-grid mb-48">
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/email-welcome-7a.png" alt="Welcome"></div><div class="label">Welcome</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/email-deposit-7b.png" alt="Deposit"></div><div class="label">Deposit</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/email-monthly-7c.png" alt="Monthly"></div><div class="label">Monthly</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/email-reactivation-7d.png" alt="Reactivation"></div><div class="label">Reactivation</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/email-support-10h.png" alt="Support"></div><div class="label">Support</div></div>
+  </div>
+  </div>
+
+  <div class="collateral-group mb-48" data-group="player">
+  <div class="sub-label mb-16">Player Controls &amp; Support</div>
+  <div class="collateral-grid mb-48">
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/self-exclusion-10b.png" alt="Self-Exclusion"></div><div class="label">Self-Exclusion</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/session-summary-10c.png" alt="Session Summary"></div><div class="label">Session Summary</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/cooldown-10e.png" alt="Cooldown"></div><div class="label">Cooldown</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/limit-reached-10d.png" alt="Limit Reached"></div><div class="label">Limit Reached</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/support-page-10a.png" alt="Support Page"></div><div class="label">Support Page</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/helpline-card-5c.png" alt="Helpline Card"></div><div class="label">Helpline Card</div></div>
+  </div>
+  </div>
+
+  <div class="collateral-group" data-group="print">
+  <div class="sub-label mb-16">Print &amp; Display</div>
+  <div class="collateral-grid">
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/brochure-cover-8b.png" alt="Brochure Cover"></div><div class="label">Brochure Cover</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/brochure-trifold-8a.png" alt="Brochure Trifold"></div><div class="label">Brochure Trifold</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/display-landscape-6a.png" alt="Landscape Display"></div><div class="label">Landscape Display</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/display-portrait-6b.png" alt="Portrait Display"></div><div class="label">Portrait Display</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/table-tent-5b.png" alt="Table Tent"></div><div class="label">Table Tent</div></div>
+    <div class="collateral-item"><div class="img-wrap"><img src="assets/collateral/rack-card-5a.png" alt="Rack Card"></div><div class="label">Rack Card</div></div>
+  </div>
+  </div>
+</section>
+
+<div class="section-divider">
+  <img src="assets/animated/dice-roll.svg" alt="" width="56">
+  <img src="assets/animated/card-shuffle.svg" alt="" width="56">
+</div>
+
+<!-- ═══════════════════ GET STARTED ═══════════════════ -->
+<section class="section" id="get-started">
+  <span class="section-num">09</span>
+  <div class="section-header"><h2>Start <span style="color:var(--teal);">Building.</span></h2></div>
+  <p class="section-lead">
+    Four steps from fork to launch. No licensing, no fees, no permission needed.
+  </p>
+
+  <div class="step-grid mb-48">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h4>Fork the Repo</h4>
+      <p>Clone the Playbook repository to your own GitHub.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h4>Edit _brand.yml</h4>
+      <p>Set your colors, fonts, logo, and program name.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h4>Customize Messaging</h4>
+      <p>Adapt taglines and copy for your market.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h4>Design &amp; Deploy</h4>
+      <p>Generate collateral and launch across channels.</p>
+    </div>
+  </div>
+
+  <div class="row mb-48">
+    <div class="voice-card" style="text-align:center;">
+      <span class="tag" style="background:rgba(0,212,170,0.12);color:var(--teal);">CONFIGURATOR</span>
+      <h3>Try It Live</h3>
+      <p style="font-size:14px;color:var(--muted);margin:8px 0 20px;">Preview your brand in the Playbook configurator &mdash; set colors, upload your logo, and see instant results.</p>
+      <a href="https://gamblingpolicy.com/tools/playbook/configurator/" style="display:inline-block;font-size:14px;font-weight:700;color:var(--navy);background:var(--teal);padding:10px 28px;border-radius:10px;text-decoration:none;">Open Configurator</a>
+    </div>
+    <div class="voice-card" style="text-align:center;">
+      <span class="tag" style="background:rgba(255,107,53,0.12);color:var(--orange);">OPEN SOURCE</span>
+      <h3>View on GitHub</h3>
+      <p style="font-size:14px;color:var(--muted);margin:8px 0 20px;">CC0 Public Domain. Fork, modify, deploy &mdash; no attribution required. Community maintained.</p>
+      <a href="https://github.com/kphilander/Playbook" style="display:inline-block;font-size:14px;font-weight:700;color:#FFFFFF;background:var(--navy-light);padding:10px 28px;border-radius:10px;text-decoration:none;border:1px solid var(--border);">GitHub Repo</a>
+    </div>
+  </div>
+
+  <!-- Helpline -->
+  <div class="mt-48" style="padding:24px 28px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;display:flex;align-items:center;gap:16px;max-width:640px;">
+    <img src="assets/icons/icon-phone.svg" alt="" width="24" height="24" style="filter:brightness(0) saturate(100%) invert(71%) sepia(98%) saturate(350%) hue-rotate(117deg);flex-shrink:0;">
+    <div>
+      <div style="font-size:14px;font-weight:700;color:var(--heading-color);">1-800-522-4700</div>
+      <div style="font-size:12px;color:var(--muted);">National Council on Problem Gambling &mdash; 24/7, free, confidential</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ QUICK REFERENCE ═══════════════════ -->
+<section class="section" id="quick-ref" style="padding-bottom:64px;">
+  <span class="section-num">10</span>
+  <div class="section-header"><h2>Quick Reference</h2></div>
+  <p class="section-lead">Screenshot this. Print it. Pin it to your wall.</p>
+
+  <button id="download-qr" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--teal-dark);background:var(--bg-card);border:1px solid rgba(0,212,170,0.3);padding:8px 18px;border-radius:8px;cursor:pointer;margin-bottom:20px;transition:all 0.15s;">
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v7m0 0L4.5 6.5M7 9l2.5-2.5M2 11h10"/></svg>
+    Download SVG
+  </button>
+
+  <div class="qr-card" id="qr-card-el">
+    <div class="qr-section">
+      <h4>Colors</h4>
+      <div class="qr-swatches" style="margin-bottom:8px;">
+        <div class="qr-swatch" style="background:#1B2838;" title="#1B2838"></div>
+        <div class="qr-swatch" style="background:#00D4AA;" title="#00D4AA"></div>
+        <div class="qr-swatch" style="background:#FF6B35;" title="#FF6B35"></div>
+        <div class="qr-swatch" style="background:#F5F5FA;border-color:#E0E0E8;" title="#F5F5FA"></div>
+        <div class="qr-swatch" style="background:#FFFFFF;border-color:#E0E0E8;" title="#FFFFFF"></div>
+      </div>
+      <div style="font-family:'Source Code Pro',monospace;font-size:11px;color:var(--dim);line-height:1.8;">
+        Navy #1B2838 &middot; Teal #00D4AA &middot; Orange #FF6B35
+      </div>
+    </div>
+    <div class="qr-section">
+      <h4>Typography</h4>
+      <div class="qr-font">
+        <strong style="color:var(--heading-color);">Inter</strong> &mdash; headings, UI, logo<br>
+        <strong style="color:var(--heading-color);">Source Sans 3</strong> &mdash; body text<br>
+        <strong style="color:var(--heading-color);">Source Code Pro</strong> &mdash; data, tokens
+      </div>
+    </div>
+    <div class="qr-section">
+      <h4>Voice</h4>
+      <div class="qr-voice">
+        <strong style="color:var(--teal);">Playbook:</strong> Confident myth-buster. Inform, don't lecture.<br>
+        <strong style="color:var(--orange);">Support:</strong> Warm, direct. Free, confidential help.
+      </div>
+    </div>
+    <div class="qr-section">
+      <h4>Links</h4>
+      <div style="font-size:13px;line-height:2;">
+        <a href="https://gamblingpolicy.com/tools/playbook/configurator/" style="color:var(--teal);text-decoration:none;">Brand Configurator</a><br>
+        <a href="https://github.com/kphilander/Playbook" style="color:var(--teal);text-decoration:none;">GitHub Repository</a><br>
+        <a href="https://gamblingpolicy.com/playbook" style="color:var(--teal);text-decoration:none;">Playbook Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer">
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="assets/animated/loading-spinner.svg" alt="" width="28" height="28">
+    <span class="footer-text">Playbook Brand Book &mdash; CC0 Open Source</span>
+  </div>
+  <div style="display:flex;gap:20px;">
+    <a href="https://gamblingpolicy.com/playbook">Playbook Home</a>
+    <a href="https://github.com/kphilander/Playbook">GitHub</a>
+  </div>
+</footer>
+
+</div><!-- .main -->
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lb-close">&times;</button>
+    <button class="lightbox-nav prev" id="lb-prev">&#8249;</button>
+    <button class="lightbox-nav next" id="lb-next">&#8250;</button>
+    <img id="lb-img" src="" alt="">
+    <div class="lightbox-caption" id="lb-caption"></div>
+  </div>
+</div>
+
+<script>
+// Theme toggle
+(function() {
+  var html = document.documentElement;
+  var saved = localStorage.getItem('playbook-theme');
+  if (saved === 'dark') {
+    html.setAttribute('data-theme', 'dark');
+  } else if (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    html.setAttribute('data-theme', 'dark');
+  }
+  var toggle = document.getElementById('theme-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      var isDark = html.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('playbook-theme', 'light');
+      } else {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('playbook-theme', 'dark');
+      }
+    });
+  }
+})();
+
+// Progress bar + back-to-top
+(function() {
+  var bar = document.getElementById('progress-bar');
+  var btn = document.getElementById('back-to-top');
+  function update() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = pct + '%';
+    btn.classList.toggle('show', window.scrollY > window.innerHeight);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  update();
+})();
+
+// Sticky campaign filter bar
+(function() {
+  var bar = document.getElementById('collateral-filters');
+  if (!bar) return;
+  var section = bar.closest('.section');
+  var placeholder = document.createElement('div');
+  placeholder.style.display = 'none';
+  bar.parentNode.insertBefore(placeholder, bar);
+  function update() {
+    var sRect = section.getBoundingClientRect();
+    var inSection = sRect.top < 0 && sRect.bottom > 100;
+    if (inSection && !bar.classList.contains('sticky')) {
+      placeholder.style.display = 'block';
+      placeholder.style.height = bar.offsetHeight + 'px';
+      bar.classList.add('sticky');
+    } else if (!inSection && bar.classList.contains('sticky')) {
+      bar.classList.remove('sticky');
+      placeholder.style.display = 'none';
+    }
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
+// Icon search
+(function() {
+  var input = document.getElementById('icon-search');
+  if (!input) return;
+  var cells = document.querySelectorAll('#icon-section .icon-cell');
+  var cats = document.querySelectorAll('#icon-section .icon-category-label');
+  input.addEventListener('input', function() {
+    var q = input.value.toLowerCase().trim();
+    cells.forEach(function(cell) {
+      var name = cell.querySelector('span').textContent.toLowerCase();
+      cell.classList.toggle('hidden', q.length > 0 && name.indexOf(q) === -1);
+    });
+    // Hide empty category headers
+    cats.forEach(function(cat) {
+      var grid = cat.nextElementSibling;
+      if (!grid) return;
+      var visible = grid.querySelectorAll('.icon-cell:not(.hidden)');
+      cat.style.display = visible.length === 0 ? 'none' : '';
+      grid.style.display = visible.length === 0 ? 'none' : '';
+    });
+  });
+})();
+
+// Scroll reveal
+(function() {
+  var els = document.querySelectorAll('.section, .hero');
+  els.forEach(function(el) { el.classList.add('reveal'); });
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(function(el) { obs.observe(el); });
+})();
+
+// Mobile nav
+(function() {
+  var btn = document.getElementById('mobile-toggle');
+  var sidebar = document.getElementById('sidebar');
+  btn.addEventListener('click', function() {
+    sidebar.classList.toggle('mobile-open');
+    btn.textContent = sidebar.classList.contains('mobile-open') ? '\u2715' : '\u2630';
+  });
+  sidebar.addEventListener('click', function(e) {
+    if (e.target.classList.contains('nav-link')) {
+      sidebar.classList.remove('mobile-open');
+      btn.textContent = '\u2630';
+    }
+  });
+})();
+
+// Icon bg toggle
+(function() {
+  var btns = document.querySelectorAll('.icon-bg-btn');
+  var section = document.getElementById('icon-section');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      section.classList.toggle('light-bg', btn.getAttribute('data-bg') === 'light');
+    });
+  });
+})();
+
+// Icon click-to-copy
+(function() {
+  document.querySelectorAll('.icon-cell').forEach(function(cell) {
+    var toast = document.createElement('div');
+    toast.className = 'icon-toast';
+    toast.textContent = 'Copied';
+    cell.appendChild(toast);
+    cell.addEventListener('click', function() {
+      var img = cell.querySelector('img');
+      var name = img.getAttribute('alt').toLowerCase().replace(/\s+/g, '-');
+      var tag = '<img src="assets/icons/icon-' + name + '.svg" alt="' + img.alt + '" width="24" height="24">';
+      navigator.clipboard.writeText(tag).then(function() {
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 1200);
+      });
+    });
+  });
+})();
+
+// Swatch click-to-copy
+(function() {
+  document.querySelectorAll('.swatch').forEach(function(sw) {
+    var hex = sw.querySelector('.swatch-hex');
+    if (!hex) return;
+    var toast = document.createElement('div');
+    toast.className = 'swatch-copied';
+    toast.textContent = 'Copied!';
+    sw.appendChild(toast);
+    sw.addEventListener('click', function() {
+      navigator.clipboard.writeText(hex.textContent).then(function() {
+        toast.classList.add('show');
+        setTimeout(function() { toast.classList.remove('show'); }, 1200);
+      });
+    });
+  });
+})();
+
+// Collateral filters
+(function() {
+  var bar = document.getElementById('collateral-filters');
+  if (!bar) return;
+  var btns = bar.querySelectorAll('.filter-btn');
+  var groups = document.querySelectorAll('.collateral-group');
+  btns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      btns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      groups.forEach(function(g) {
+        if (filter === 'all' || g.getAttribute('data-group') === filter) {
+          g.classList.remove('hidden');
+        } else {
+          g.classList.add('hidden');
+        }
+      });
+    });
+  });
+})();
+
+// Lightbox — handles both collateral items and logo cards
+(function() {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lb-img');
+  var lbCap = document.getElementById('lb-caption');
+
+  // Build unified items list: collateral + logo cards with <img> children
+  var collateral = Array.from(document.querySelectorAll('.collateral-item'));
+  var logoCards = Array.from(document.querySelectorAll('.logo-card')).filter(function(c) {
+    return c.querySelector('img');
+  });
+  logoCards.forEach(function(c) { c.classList.add('clickable'); });
+  var items = logoCards.concat(collateral);
+  var current = 0;
+
+  function getInfo(item) {
+    var img = item.querySelector('img');
+    var label = item.querySelector('.label') || item.querySelector('.logo-label');
+    return { src: img ? img.src : '', alt: img ? img.alt : '', caption: label ? label.textContent : (img ? img.alt : '') };
+  }
+
+  function show(i) {
+    current = i;
+    var info = getInfo(items[i]);
+    lbImg.src = info.src;
+    lbImg.alt = info.alt;
+    lbCap.textContent = info.caption;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function hide() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function prev() { show(current > 0 ? current - 1 : items.length - 1); }
+  function next() { show(current < items.length - 1 ? current + 1 : 0); }
+
+  items.forEach(function(item, i) {
+    item.addEventListener('click', function() { show(i); });
+  });
+  document.getElementById('lb-close').addEventListener('click', hide);
+  document.getElementById('lb-prev').addEventListener('click', prev);
+  document.getElementById('lb-next').addEventListener('click', next);
+  lb.addEventListener('click', function(e) { if (e.target === lb) hide(); });
+  document.addEventListener('keydown', function(e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') hide();
+    if (e.key === 'ArrowLeft') prev();
+    if (e.key === 'ArrowRight') next();
+  });
+})();
+
+// Dimension toggles
+(function() {
+  var state = { voice:'peer', framing:'individual', humor:'irreverent', directness:'blunt', comfort:'open' };
+
+  // Message variants keyed by most-influential dimensions
+  var msgs = {
+    edge: {
+      _base: "The house always has an edge. Here's what it actually means for your wallet.",
+      authority: "Research consistently shows the house maintains a mathematical advantage. Here's what the data tells us.",
+      elder: "Let me walk you through how the house edge works \u2014 it's something every player should understand.",
+      communal: "The house edge affects all of us the same way. Here's what it means for the table.",
+      diplomatic: "Understanding the house advantage can help inform your choices. Here are the key numbers.",
+      contextual: "Before your next session, it's worth knowing how the house edge shapes the game over time.",
+      warm: "We've all wondered if the odds are fair. Here's the honest math \u2014 it's actually worth knowing.",
+      understated: "The house has a built-in margin. The numbers are straightforward.",
+      minimal: "The house edge is a fixed mathematical fact. Here are the percentages.",
+      reserved: "You might find it useful to know the house always holds a statistical edge.",
+      private: "For your own reference: every game has a built-in house advantage. Here's a breakdown."
+    },
+    session: {
+      _base: "You've been playing for 2 hours. Take a sec \u2014 check in with yourself.",
+      authority: "Research shows that session awareness improves decision-making. You've been playing for 2 hours.",
+      elder: "Two hours in \u2014 a good moment to pause and reflect on how you're feeling.",
+      communal: "Two hours at the table. Your friends and family are thinking of you \u2014 take a quick break.",
+      diplomatic: "A gentle reminder: you've been playing for 2 hours. A pause can help you stay sharp.",
+      contextual: "It's been 2 hours since you started. Here's a good moment to step back and check your plan.",
+      warm: "Hey, 2 hours already! Time flies when you're focused. Quick breather?",
+      understated: "Two-hour mark. Worth a pause.",
+      minimal: "Session: 2 hours.",
+      reserved: "Just a note \u2014 you've been active for 2 hours.",
+      private: "This is a private reminder: your current session has reached 2 hours."
+    },
+    help: {
+      _base: "Need to talk? Free, confidential support is one call away. 1-800-522-4700.",
+      authority: "Professional support is available 24/7. The National Council on Problem Gambling: 1-800-522-4700.",
+      elder: "If something doesn't feel right, there are people who understand. They're ready when you are.",
+      communal: "You're not in this alone. Reaching out helps you and the people counting on you.",
+      diplomatic: "Support is always available if you'd like to speak with someone. Free and completely confidential.",
+      contextual: "If gambling is feeling less like fun, talking can help. Confidential support is one call away.",
+      warm: "Sometimes it just helps to talk it through. No judgement, totally free. 1-800-522-4700.",
+      understated: "Free, confidential support: 1-800-522-4700. Available 24/7.",
+      minimal: "Helpline: 1-800-522-4700. Free. Confidential. 24/7.",
+      reserved: "If you ever need it \u2014 confidential help is available: 1-800-522-4700.",
+      private: "This information is just for you: free, confidential support at 1-800-522-4700."
+    }
+  };
+
+  function resolve(topic) {
+    var m = msgs[topic];
+    // Priority: voice > framing > humor > directness > comfort
+    return m[state.voice] || m[state.framing] || m[state.humor] || m[state.directness] || m[state.comfort] || m._base;
+  }
+
+  function update() {
+    var el;
+    el = document.getElementById('msg-edge'); if (el) el.textContent = '\u201C' + resolve('edge') + '\u201D';
+    el = document.getElementById('msg-session'); if (el) el.textContent = '\u201C' + resolve('session') + '\u201D';
+    el = document.getElementById('msg-help'); if (el) el.textContent = '\u201C' + resolve('help') + '\u201D';
+  }
+
+  document.getElementById('dim-controls').addEventListener('click', function(e) {
+    var pill = e.target.closest('.dim-pill');
+    if (!pill) return;
+    var row = pill.closest('.dim-options');
+    var dim = row.getAttribute('data-dim');
+    var val = pill.getAttribute('data-val');
+    row.querySelectorAll('.dim-pill').forEach(function(p) { p.classList.remove('active'); });
+    pill.classList.add('active');
+    state[dim] = val;
+    // Animate the message transition
+    var cards = document.querySelectorAll('.live-msg blockquote');
+    cards.forEach(function(c) { c.style.opacity = '0'; });
+    setTimeout(function() { update(); cards.forEach(function(c) { c.style.opacity = '1'; }); }, 150);
+  });
+
+  update();
+})();
+
+// Download Quick Reference — renders a clean standalone SVG
+(function() {
+  var btn = document.getElementById('download-qr');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var svg = [
+      '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">',
+      '<defs><style>@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&amp;family=Source+Code+Pro:wght@400");</style></defs>',
+      '<rect width="800" height="420" rx="16" fill="#0F1A26"/>',
+      '<rect width="800" height="420" rx="16" fill="none" stroke="#1E3044" stroke-width="1"/>',
+      // Title
+      '<text x="36" y="40" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#00D4AA" letter-spacing="2">PLAYBOOK QUICK REFERENCE</text>',
+      // Colors section
+      '<text x="36" y="80" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">COLORS</text>',
+      '<rect x="36" y="92" width="28" height="28" rx="6" fill="#1B2838" stroke="#1E3044"/>',
+      '<rect x="70" y="92" width="28" height="28" rx="6" fill="#00D4AA"/>',
+      '<rect x="104" y="92" width="28" height="28" rx="6" fill="#FF6B35"/>',
+      '<rect x="138" y="92" width="28" height="28" rx="6" fill="#F5F5FA" stroke="#E0E0E8"/>',
+      '<rect x="172" y="92" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#E0E0E8"/>',
+      '<text x="36" y="140" font-family="Source Code Pro,monospace" font-size="11" fill="#4A6070">Navy #1B2838  Teal #00D4AA  Orange #FF6B35</text>',
+      // Typography section
+      '<text x="36" y="180" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">TYPOGRAPHY</text>',
+      '<text x="36" y="202" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#C8D4E0">Inter</tspan> \u2014 headings, UI, logo</text>',
+      '<text x="36" y="222" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#C8D4E0">Source Sans 3</tspan> \u2014 body text</text>',
+      '<text x="36" y="242" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#C8D4E0">Source Code Pro</tspan> \u2014 data, tokens</text>',
+      // Voice section
+      '<text x="420" y="80" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">VOICE</text>',
+      '<text x="420" y="102" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#00D4AA">Playbook:</tspan> Confident myth-buster.</text>',
+      '<text x="420" y="122" font-family="Inter,sans-serif" font-size="13" fill="#6B8299">Inform, don\u2019t lecture.</text>',
+      '<text x="420" y="152" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#FF6B35">Support:</tspan> Warm, direct.</text>',
+      '<text x="420" y="172" font-family="Inter,sans-serif" font-size="13" fill="#6B8299">Free, confidential help.</text>',
+      // Principles
+      '<text x="420" y="212" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">PRINCIPLES</text>',
+      '<text x="420" y="234" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Informed, not alarming</text>',
+      '<text x="420" y="252" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Your choice, your tools</text>',
+      '<text x="420" y="270" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Specific, not sloganeering</text>',
+      '<text x="420" y="288" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Fun is the point</text>',
+      '<text x="420" y="306" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Real talk</text>',
+      '<text x="420" y="324" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Inclusive by default</text>',
+      // Links
+      '<text x="36" y="290" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">LINKS</text>',
+      '<text x="36" y="312" font-family="Inter,sans-serif" font-size="13" fill="#00D4AA">gamblingpolicy.com/tools/playbook/configurator</text>',
+      '<text x="36" y="332" font-family="Inter,sans-serif" font-size="13" fill="#00D4AA">github.com/kphilander/Playbook</text>',
+      '<text x="36" y="352" font-family="Inter,sans-serif" font-size="13" fill="#00D4AA">gamblingpolicy.com/playbook</text>',
+      // Symbol mark + footer
+      '<rect x="36" y="384" width="20" height="20" rx="4" fill="#1B2838" stroke="#1E3044"/>',
+      '<rect x="40" y="388" width="5" height="12" rx="0.5" fill="#FFF"/>',
+      '<polygon points="46,388 53,394 46,400" fill="#00D4AA"/>',
+      '<text x="62" y="398" font-family="Inter,sans-serif" font-size="12"><tspan font-weight="800" fill="#FFF">Play</tspan><tspan font-weight="300" fill="#00D4AA">BOOK</tspan></text>',
+      '<text x="764" y="398" font-family="Inter,sans-serif" font-size="11" fill="#4A6070" text-anchor="end">CC0 Open Source</text>',
+      '</svg>'
+    ].join('\n');
+    var blob = new Blob([svg], { type: 'image/svg+xml' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'playbook-quick-reference.svg';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+})();
+
+// Scroll spy
+(function() {
+  var links = document.querySelectorAll('.nav-link');
+  var sections = [];
+  links.forEach(function(link) {
+    var id = link.getAttribute('href');
+    if (!id || id.charAt(0) !== '#') return;
+    var el = document.getElementById(id.slice(1));
+    if (el) sections.push({ el: el, link: link });
+  });
+  function update() {
+    var scrollY = window.scrollY + 120;
+    var current = sections[0];
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].el.offsetTop <= scrollY) current = sections[i];
+    }
+    links.forEach(function(l) { l.classList.remove('active'); });
+    if (current) current.link.classList.add('active');
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+</script>
+</body>
+</html>

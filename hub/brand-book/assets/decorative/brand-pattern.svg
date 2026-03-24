@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <pattern id="pbMark" width="80" height="80" patternUnits="userSpaceOnUse">
+      <!-- Mini Playbook symbol -->
+      <rect x="28" y="28" width="10" height="24" rx="2" fill="#FFFFFF" opacity="0.04"/>
+      <polygon points="40,28 52,40 40,52" fill="#00D4AA" opacity="0.04"/>
+    </pattern>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="0.5" fill="#00D4AA" opacity="0.15"/>
+    </pattern>
+  </defs>
+
+  <rect width="400" height="400" fill="none"/>
+  <rect width="400" height="400" fill="url(#grid)"/>
+  <rect width="400" height="400" fill="url(#pbMark)"/>
+
+  <!-- Corner accents -->
+  <path d="M0,0 L60,0 L0,60 Z" fill="#00D4AA" opacity="0.06"/>
+  <path d="M400,400 L340,400 L400,340 Z" fill="#00D4AA" opacity="0.06"/>
+  <path d="M400,0 L340,0 L400,60 Z" fill="#FF6B35" opacity="0.04"/>
+  <path d="M0,400 L60,400 L0,340 Z" fill="#FF6B35" opacity="0.04"/>
+
+  <!-- Subtle diagonal lines -->
+  <g stroke="#00D4AA" stroke-width="0.3" opacity="0.08">
+    <line x1="0" y1="100" x2="100" y2="0"/>
+    <line x1="0" y1="200" x2="200" y2="0"/>
+    <line x1="0" y1="300" x2="300" y2="0"/>
+    <line x1="0" y1="400" x2="400" y2="0"/>
+    <line x1="100" y1="400" x2="400" y2="100"/>
+    <line x1="200" y1="400" x2="400" y2="200"/>
+    <line x1="300" y1="400" x2="400" y2="300"/>
+  </g>
+</svg>

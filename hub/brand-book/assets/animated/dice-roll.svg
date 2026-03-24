@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Die 1 - tumbling -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="0 70 100;360 70 100" dur="3s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="1.5s" repeatCount="indefinite"/>
+      <rect x="40" y="70" width="60" height="60" rx="10" fill="#1B2838" stroke="#00D4AA" stroke-width="2"/>
+      <!-- Face: 5 -->
+      <circle cx="55" cy="85" r="4" fill="#FFFFFF"/>
+      <circle cx="85" cy="85" r="4" fill="#FFFFFF"/>
+      <circle cx="70" cy="100" r="4" fill="#00D4AA"/>
+      <circle cx="55" cy="115" r="4" fill="#FFFFFF"/>
+      <circle cx="85" cy="115" r="4" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- Die 2 - tumbling opposite direction -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" values="360 130 100;0 130 100" dur="2.5s" repeatCount="indefinite"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-12;0,0" dur="1.25s" repeatCount="indefinite"/>
+      <rect x="100" y="70" width="60" height="60" rx="10" fill="#1B2838" stroke="#FF6B35" stroke-width="2"/>
+      <!-- Face: 3 -->
+      <circle cx="118" cy="85" r="4" fill="#FFFFFF"/>
+      <circle cx="130" cy="100" r="4" fill="#FF6B35"/>
+      <circle cx="142" cy="115" r="4" fill="#FFFFFF"/>
+    </g>
+  </g>
+
+  <!-- Shadow -->
+  <ellipse cx="100" cy="170" rx="60" ry="6" fill="#1B2838" opacity="0.2">
+    <animate attributeName="rx" values="60;50;60" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.1;0.2" dur="1.5s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>
