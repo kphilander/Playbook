@@ -11,87 +11,6 @@ positioning whenever you're uncertain about scope.
 
 ---
 
-## The Informed Choice Framework
-
-Before we get to brand strategy, we need to establish the intellectual
-foundation. Playbook isn't built on vibes. It's built on established research
-in gambling studies — specifically the informed choice model — for how to think
-about gambling and player education.
-
-### The Core Premises
-
-The informed choice framework is built on four premises:
-
-**1. Most people who gamble do so without problems.**
-
-This is not wishful thinking. It's demographic reality. The vast majority of
-people who place bets, buy lottery tickets, play slots, or wager on sports do so
-recreationally, within their means, and without developing any significant
-difficulties. They enjoy it. They budget for it. They stop when they're done.
-
-This matters for content strategy because it defines your audience. You're
-writing for the majority -- people who are fine -- not for a clinical minority.
-Your default voice should reflect that.
-
-**2. Gambling is entertainment.**
-
-It's a leisure activity. It costs money, like going to a concert, eating at a
-restaurant, or subscribing to a streaming service. The value is the experience
--- the excitement, the social component, the engagement -- not a guaranteed
-financial return.
-
-When you internalize this, it changes how you frame everything. You're not
-warning people away from a dangerous activity. You're helping them get more out
-of an entertainment experience they've already chosen.
-
-**3. Difficulties arise from lack of information and lack of control -- not from
-the activity itself.**
-
-This is the critical distinction. The informed choice model doesn't treat gambling as
-inherently hazardous. It treats it as an activity that requires information
-(how the games work, what the odds actually mean) and tools (budgeting, time
-management, limit-setting) to enjoy well. When those are missing, some players
-run into trouble. When they're present, the vast majority don't.
-
-Content implication: your job is to provide the information and promote the
-tools. Not to scare people. Not to discourage play. To equip players.
-
-**4. Responsibility is shared.**
-
-Players make their own choices -- and that autonomy is respected. Operators
-provide accurate information and effective tools. Regulators set standards and
-enforce them. Support services exist for those who need them. No single party
-owns the entire responsibility. No single party gets a pass.
-
-### What This Is NOT: The Public Health Model
-
-The public health model starts from a different premise: that gambling is
-inherently hazardous (like tobacco or alcohol) and that the goal is to reduce
-its prevalence and mitigate population-level impacts.
-
-The informed choice framework doesn't deny that some people experience
-difficulties with gambling. It does. But it frames the solution differently:
-
-| | Public Health Model | Informed Choice Model |
-|---|---|---|
-| **Starting premise** | Gambling is inherently hazardous | Gambling is entertainment |
-| **Default assumption about players** | Potentially vulnerable | Competent adults |
-| **Primary goal** | Reduce prevalence and population-level impact | Enable informed choice |
-| **Tone of resulting content** | Cautionary, clinical | Informative, empowering |
-| **Content feels like** | A health warning | A feature of the entertainment experience |
-
-Playbook uses the informed choice framework because it produces content that
-players actually engage with. When your starting premise respects the audience,
-the audience respects the content.
-
-This distinction isn't academic. It shapes every word you write. When you start
-from "gambling is entertainment and most players are fine," you write confident,
-engaging, useful content. When you start from "gambling is a public health
-concern," you write warnings. Players don't engage with warnings. They engage
-with content that treats them like adults.
-
----
-
 ## Brand Scope
 
 ### What Playbook Is
@@ -132,7 +51,7 @@ choices.
 
 ---
 
-## Mission
+## Intent
 
 > **Playbook gives players the information and tools to gamble on their own terms
 > -- making informed play feel natural, not forced.**
@@ -141,7 +60,7 @@ This is the sentence that should be pinned to every content brief, every design
 review, every editorial calendar. Everything Playbook creates should be traceable
 back to this statement.
 
-### Unpacking the Mission
+### Unpacking the Intent
 
 **"gives players"** -- The player is the subject. Not the operator. Not the
 regulator. Not the brand. The player receives something of value.
