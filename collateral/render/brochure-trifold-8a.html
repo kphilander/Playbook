@@ -191,6 +191,28 @@
     color: var(--pb-color-primary);
     font-family: var(--pb-font-heading);
   }
+  .helpline-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--pb-color-primary);
+    padding: 16px 56px;
+    text-align: center;
+    z-index: 1;
+  }
+  .helpline-text {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+  }
+  .legal-text {
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-family: var(--pb-font-body);
+    margin-left: 16px;
+  }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -266,6 +288,11 @@
     <div class="panel-cta">
       <strong>Find these tools</strong> in your account settings or visit the Playbook content hub.
     </div>
+  </div>
+
+  <div class="helpline-strip">
+    <span class="helpline-text">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
+    <span class="legal-text">{{AGE_DISCLAIMER}}</span>
   </div>
 
 </div>

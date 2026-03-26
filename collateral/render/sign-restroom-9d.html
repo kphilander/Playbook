@@ -83,6 +83,15 @@
   }
   .restroom-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .restroom-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .restroom-legal {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    font-family: var(--pb-font-body);
+    z-index: 1;
+  }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -100,6 +109,7 @@
   </div>
 
   <div class="restroom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+  <div class="restroom-legal">{{AGE_DISCLAIMER}}</div>
 
 </div>
 </body>

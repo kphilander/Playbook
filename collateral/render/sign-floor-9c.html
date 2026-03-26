@@ -149,6 +149,11 @@
     font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
   }
+  .bottom-legal {
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    font-family: var(--pb-font-body);
+  }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -184,6 +189,7 @@
   <div class="sign-bottom">
     <span class="bottom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
     <span class="bottom-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
+    <span class="bottom-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 
 </div>
