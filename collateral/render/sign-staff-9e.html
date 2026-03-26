@@ -133,6 +133,11 @@
     color: var(--pb-color-neutral-500);
     font-style: italic;
   }
+  .footer-legal {
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-family: var(--pb-font-body);
+  }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -191,6 +196,7 @@
 
   <div class="staff-footer">
     <span class="footer-helpline">{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
     <span class="footer-note">Internal use only</span>
   </div>
 
