@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link id="font-link" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@400;500;600&family=Montserrat:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;400;600;700&family=DM+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;600;700;800&family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Sora:wght@300;400;600;700;800&family=Manrope:wght@300;400;600;700;800&family=Urbanist:wght@300;400;600;700;800&family=Work+Sans:wght@300;400;600;700;800&family=Rubik:wght@300;400;600;700&family=Barlow:wght@300;400;600;700&family=Figtree:wght@300;400;600;700;800&family=Albert+Sans:wght@300;400;600;700;800&family=Lexend:wght@300;400;600;700&family=Cabin:wght@400;600;700&family=Karla:wght@300;400;600;700&family=Josefin+Sans:wght@300;400;600;700&family=Bitter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;600;700;800&family=Libre+Baskerville:wght@400;700&family=Roboto+Slab:wght@300;400;600;700&family=IBM+Plex+Sans:wght@300;400;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="/tools/playbook/favicon.svg">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" defer></script>
 <link rel="stylesheet" href="/tools/playbook/hub/hub-shared.css">
@@ -149,6 +149,14 @@
   .font-tag-tech { background: rgba(107,107,138,0.12); color: #6B6B8A; }
   .font-meta { font-size: 11px; color: #A8A8C0; margin-top: 4px; }
 
+  /* Custom font upload */
+  .font-upload-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .font-upload-row input[type="file"] { font-size: 12px; }
+  .font-upload-row .form-input { flex: 1; min-width: 160px; }
+  .font-upload-info { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: #F5F5FA; border: 1px solid #E8E8F0; border-radius: 8px; margin-top: 8px; }
+  .font-upload-info .font-name { font-weight: 600; color: #1B2838; font-size: 13px; }
+  .font-upload-info .font-file { font-size: 11px; color: #A8A8C0; }
+
   /* Helpline presets */
   .preset-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 12px; background: rgba(0,212,170,0.1); color: #1B2838; font-weight: 600; cursor: pointer; margin-right: 6px; margin-bottom: 6px; transition: all 0.15s; border: 1px solid rgba(0,212,170,0.25); }
   .preset-tag:hover { background: rgba(0,212,170,0.2); }
@@ -188,11 +196,11 @@
     display: flex; flex-direction: column;
   }
   .pv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA)); z-index: 2; }
-  .pv-card::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 30px 30px; z-index: 0; }
   .pv-card .card-header { padding: 28px 32px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .pv-card .card-logo { font-size: 16px; }
+  .pv-card .card-logo { font-size: 16px; display: inline-flex; align-items: center; }
   .pv-card .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
   .pv-card .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .pv-card .card-logo .logo-replace-img { height: 1.4em; max-width: 120px; object-fit: contain; display: none; }
   .pv-card .card-pillar { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 11px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
   .pv-card .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 32px; position: relative; z-index: 1; }
   .pv-card .myth-label { font-size: 8px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 10px; }
@@ -218,7 +226,7 @@
   .pv-card-tier2 .t2-contact-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; min-width: 32px; }
   .pv-card-tier2 .t2-contact-value { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; }
   .pv-card-tier2 .t2-contact-value.t2-phone { font-size: 24px; }
-  .pv-card-tier2 .card-footer { background: transparent; border-top: 1px solid #E8E8F0; }
+  .pv-card-tier2 .card-footer { background: transparent; border-top: 1px solid var(--cfg-neutral-100, #E8E8F0); }
   .pv-card-tier2 .t2-footer-text { font-weight: 700; font-size: 9px; letter-spacing: 0.02em; }
 
   /* Co-brand lockup */
@@ -230,9 +238,10 @@
 
   /* Helpline badge preview */
   .pv-badge { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-radius: 12px; }
-  .pv-badge .badge-logo { font-size: 14px; }
+  .pv-badge .badge-logo { font-size: 14px; display: inline-flex; align-items: center; }
   .pv-badge .badge-logo .logo-play { font-weight: 800; }
   .pv-badge .badge-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .pv-badge .badge-logo .logo-replace-img { height: 1.2em; max-width: 100px; object-fit: contain; display: none; }
   .pv-badge .badge-divider { width: 1px; height: 32px; opacity: 0.3; }
   .pv-badge .badge-text { font-size: 11px; font-weight: 600; line-height: 1.2; }
   .pv-badge .badge-number { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-size: 14px; font-weight: 700; margin-top: 2px; line-height: 1; }
@@ -371,6 +380,18 @@
         <div class="extracted-colors" id="extractedColors" style="display:none;">
           <div class="extracted-colors-label">Colors found in your logo</div>
           <div class="swatch-row" id="swatchRow"></div>
+        </div>
+        <div id="logoModeToggle" style="display:none; margin-top:12px; padding:12px 14px; background:#F5F5FA; border-radius:8px; border:1px solid #E8E8F0;">
+          <label class="form-label" style="margin-bottom:8px;">Logo Usage</label>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <label style="font-size:13px; color:#3D3D5C; cursor:pointer; display:flex; align-items:center; gap:6px;">
+              <input type="radio" name="logoMode" value="cobrand" checked style="accent-color:#00D4AA;"> Co-brand badge only
+            </label>
+            <label style="font-size:13px; color:#3D3D5C; cursor:pointer; display:flex; align-items:center; gap:6px;">
+              <input type="radio" name="logoMode" value="replace" style="accent-color:#00D4AA;"> Replace text wordmark
+            </label>
+          </div>
+          <div class="contrast-info" style="margin-top:6px;">Replace substitutes your logo for the "Playbook" text across all collateral.</div>
         </div>
       </div>
 
@@ -550,6 +571,16 @@
             </div>
           </div>
         </div>
+
+        <div class="form-group">
+          <label class="form-label">Card Footer Bar</label>
+          <div class="contrast-info" style="margin-bottom:10px">Background color of the footer strip on dark cards. Auto-derived from primary by default.</div>
+          <div class="color-row">
+            <input type="color" class="color-picker" id="colorFooterBar" value="#2A3F56">
+            <input type="text" class="form-input color-hex" id="colorFooterBarHex" value="#2A3F56" maxlength="7">
+            <a href="#" id="footerBarResetLink" style="font-size:11px; color:#00D4AA; margin-left:8px; display:none; white-space:nowrap;" onclick="resetFooterBarColor(event)">Reset to auto</a>
+          </div>
+        </div>
       </div>
 
       <div class="wizard-nav">
@@ -562,7 +593,31 @@
     <div class="step" id="step3">
       <div class="step-indicator">Step 3 of 6</div>
       <div class="step-title">Typography</div>
-      <div class="step-desc">Choose heading and body fonts from Google Fonts.</div>
+      <div class="step-desc">Choose heading and body fonts from Google Fonts, or upload your own.</div>
+
+      <div class="form-group">
+        <label class="form-label">Custom Font (optional)</label>
+        <div class="contrast-info" style="margin-bottom:6px">Upload a .woff or .woff2 file to add your own font to all selectors below.</div>
+        <div class="font-upload-row">
+          <input type="file" id="fontFileInput" accept=".woff,.woff2" style="font-size:12px;">
+        </div>
+        <div id="customFontInfo" style="display:none;">
+          <div class="font-upload-info">
+            <div>
+              <span class="font-name" id="customFontFileName">—</span>
+              <span class="font-file" id="customFontFileSize">—</span>
+            </div>
+            <button class="logo-remove" onclick="removeCustomFont()" style="margin-left:auto;">&times; Remove</button>
+          </div>
+          <div style="margin-top:8px;">
+            <label class="form-label" style="margin-bottom:4px;">Font Family Name</label>
+            <input type="text" class="form-input" id="customFontName" placeholder="e.g. GameSense Sans" style="font-size:13px;">
+          </div>
+          <div class="font-specimen" id="customFontSpecimen" style="margin-top:8px;">
+            <div class="font-specimen-heading" id="customFontPreview">The quick brown fox jumps over the lazy dog.</div>
+          </div>
+        </div>
+      </div>
 
       <div class="form-group">
         <label class="form-label">Heading Font</label>
@@ -712,7 +767,7 @@
       <div class="form-group">
         <label class="form-label">Voice — Who's talking?</label>
         <select class="form-select" id="cultureVoice" onchange="updatePreview()">
-          <option value="peer" selected>Peer — an equal, someone at the table with you (default)</option>
+          <option value="peer" selected>Peer — an equal, someone at the table with you</option>
           <option value="authority">Authority — a credentialed expert, institutional trust</option>
           <option value="elder">Elder — a respected community figure, warm earned trust</option>
         </select>
@@ -721,7 +776,7 @@
       <div class="form-group">
         <label class="form-label">Framing — Who benefits?</label>
         <select class="form-select" id="cultureFraming" onchange="updatePreview()">
-          <option value="individual" selected>Individual — "Protect YOUR bankroll" (default)</option>
+          <option value="individual" selected>Individual — "Protect YOUR bankroll"</option>
           <option value="communal">Communal — "Protect what matters most" (family, community)</option>
         </select>
       </div>
@@ -729,7 +784,7 @@
       <div class="form-group">
         <label class="form-label">Humor — What register?</label>
         <select class="form-select" id="cultureHumor" onchange="updatePreview()">
-          <option value="irreverent" selected>Irreverent — bold, sarcastic, confident (default)</option>
+          <option value="irreverent" selected>Irreverent — bold, sarcastic, confident (Playbook default)</option>
           <option value="warm">Warm — inclusive, gentle, bonding</option>
           <option value="understated">Understated — dry, wry, implies rather than states</option>
           <option value="minimal">Minimal — facts speak for themselves</option>
@@ -739,7 +794,7 @@
       <div class="form-group">
         <label class="form-label">Directness — How are hard truths delivered?</label>
         <select class="form-select" id="cultureDirectness" onchange="updatePreview()">
-          <option value="blunt" selected>Blunt — "This bet is terrible. Here's why." (default)</option>
+          <option value="blunt" selected>Blunt — "This bet is terrible. Here's why."</option>
           <option value="diplomatic">Diplomatic — "This bet carries a higher cost than most expect."</option>
           <option value="contextual">Contextual — arrives at the conclusion through story or analogy</option>
         </select>
@@ -748,7 +803,7 @@
       <div class="form-group">
         <label class="form-label">Comfort — How openly is gambling discussed?</label>
         <select class="form-select" id="cultureComfort" onchange="updatePreview()">
-          <option value="open" selected>Open — gambling is entertainment, talk freely (default)</option>
+          <option value="open" selected>Open — gambling is entertainment, talk freely</option>
           <option value="reserved">Reserved — acknowledged but not celebrated, financial literacy framing</option>
           <option value="private">Private — socially sensitive, never imply the reader is a gambler</option>
         </select>
@@ -756,7 +811,7 @@
 
       <div class="culture-preview-link" style="margin-top:16px;padding:14px 16px;background:rgba(0,212,170,0.08);border:1px solid rgba(0,212,170,0.2);border-radius:10px;font-size:13px;color:#6B6B8A;line-height:1.5;">
         <strong style="color:#1B2838;">Want to see how these choices affect your messaging?</strong><br>
-        The <a href="/tools/playbook/brand-book/#cultural-adaptation" target="_blank" rel="noopener" style="color:#00D4AA;font-weight:600;text-decoration:none;">Cultural Adaptation</a> section in the brand book previews how these choices affect your messaging in real time — toggle each dimension to see taglines, CTAs, and core messages shift.
+        The <a href="/tools/playbook/brand-book/" target="_blank" rel="noopener" style="color:#00D4AA;font-weight:600;text-decoration:none;">Cultural Adaptation slide</a> in the brand book previews how messages change across all five dimensions — toggle each one to see your voice come to life.
       </div>
 
       <div class="wizard-nav">
@@ -1010,7 +1065,7 @@
         <div class="preview-frame-label">Myth-Buster Card</div>
         <div class="pv-card" id="pvCard1" style="background: var(--cfg-primary, #1B2838);">
           <div class="card-header">
-            <span class="card-logo" id="pvLogo1"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+            <span class="card-logo" id="pvLogo1"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
             <span class="card-pillar" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
           </div>
           <div class="card-body">
@@ -1034,7 +1089,7 @@
         <div class="preview-frame-label">Tier 2 Support Card</div>
         <div class="pv-card pv-card-tier2" id="pvCard2">
           <div class="card-header" style="padding: 28px 32px 0;">
-            <span class="card-logo" id="pvLogo2"><span class="logo-play" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+            <span class="card-logo" id="pvLogo2"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
           </div>
           <div class="card-body">
             <div class="t2-headline" id="pvT2Headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
@@ -1059,7 +1114,7 @@
         <div class="pv-badge" id="pvBadge" style="background: var(--cfg-primary, #1B2838);">
           <span id="pvBadgeOperator"></span>
           <div class="badge-divider" style="background: var(--cfg-secondary, #00D4AA);" id="pvBadgeCoDivider"></div>
-          <span class="badge-logo" id="pvLogoBadge"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+          <span class="badge-logo" id="pvLogoBadge"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
           <div class="badge-divider" style="background: #A8A8C0;"></div>
           <div>
             <div class="badge-text" style="color: #A8A8C0;" id="pvBadgeLabel">Free, confidential support 24/7</div>
@@ -1081,6 +1136,9 @@ let currentStep = 1;
 let uploadedLogoDataUrl = null;
 let extractedColors = [];
 let suggestedPalette = null;
+let footerColorManual = false;
+let customFontDataUrl = null;
+let customFontName = '';
 
 const JURISDICTION_PRESETS = {
   // --- United States ---
@@ -1370,6 +1428,7 @@ function handleLogoFile(file) {
     document.getElementById('logoUploadFilled').style.display = 'block';
     document.getElementById('logoUploadZone').classList.add('has-logo');
     extractColorsFromImage(uploadedLogoDataUrl);
+    document.getElementById('logoModeToggle').style.display = '';
     updatePreview();
   };
   reader.readAsDataURL(file);
@@ -1386,6 +1445,115 @@ function removeLogo(e) {
   document.getElementById('extractedColors').style.display = 'none';
   document.getElementById('paletteSuggestion').classList.add('hidden');
   document.getElementById('logoFileInput').value = '';
+  // Reset logo mode to co-brand and hide toggle
+  document.getElementById('logoModeToggle').style.display = 'none';
+  document.querySelector('input[name="logoMode"][value="cobrand"]').checked = true;
+  updatePreview();
+}
+
+function getLogoMode() {
+  const radio = document.querySelector('input[name="logoMode"]:checked');
+  return radio ? radio.value : 'cobrand';
+}
+
+// === Custom Font Upload ===
+function handleFontFile(file) {
+  const ext = file.name.split('.').pop().toLowerCase();
+  if (ext !== 'woff' && ext !== 'woff2') return;
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    customFontDataUrl = e.target.result;
+    // Derive a default family name from the filename
+    const baseName = file.name.replace(/\.(woff2?|otf|ttf)$/i, '').replace(/[-_]/g, ' ');
+    customFontName = baseName;
+
+    // Inject @font-face into the page
+    let styleEl = document.getElementById('customFontFace');
+    if (!styleEl) { styleEl = document.createElement('style'); styleEl.id = 'customFontFace'; document.head.appendChild(styleEl); }
+    const format = ext === 'woff2' ? 'woff2' : 'woff';
+    styleEl.textContent = `@font-face { font-family: '${baseName}'; src: url('${customFontDataUrl}') format('${format}'); font-weight: 100 900; font-display: swap; }`;
+
+    // Update UI
+    document.getElementById('customFontInfo').style.display = '';
+    document.getElementById('customFontFileName').textContent = file.name;
+    document.getElementById('customFontFileSize').textContent = (file.size / 1024).toFixed(1) + ' KB';
+    document.getElementById('customFontName').value = baseName;
+    document.getElementById('customFontPreview').style.fontFamily = `'${baseName}', sans-serif`;
+
+    // Add custom font as first option in all three font selectors
+    addCustomFontOption('fontHeading', baseName);
+    addCustomFontOption('fontBody', baseName);
+    addCustomFontOption('fontMono', baseName);
+
+    updatePreview();
+  };
+  reader.readAsDataURL(file);
+}
+
+function addCustomFontOption(selectId, fontName) {
+  const select = document.getElementById(selectId);
+  // Remove any previously added custom option
+  const existing = select.querySelector('option[data-custom-font]');
+  if (existing) existing.remove();
+  const existingGroup = select.querySelector('optgroup[data-custom-font]');
+  if (existingGroup) existingGroup.remove();
+  // Add at top
+  const group = document.createElement('optgroup');
+  group.label = 'Custom Upload';
+  group.setAttribute('data-custom-font', 'true');
+  const opt = document.createElement('option');
+  opt.value = fontName;
+  opt.textContent = fontName + ' (uploaded)';
+  opt.setAttribute('data-custom-font', 'true');
+  group.appendChild(opt);
+  select.insertBefore(group, select.firstChild);
+}
+
+function removeCustomFont() {
+  customFontDataUrl = null;
+  customFontName = '';
+  // Remove @font-face
+  const styleEl = document.getElementById('customFontFace');
+  if (styleEl) styleEl.remove();
+  // Hide UI
+  document.getElementById('customFontInfo').style.display = 'none';
+  document.getElementById('fontFileInput').value = '';
+  // Remove custom options from selectors
+  ['fontHeading', 'fontBody', 'fontMono'].forEach(id => {
+    const sel = document.getElementById(id);
+    const opt = sel.querySelector('option[data-custom-font]');
+    if (opt) { if (opt.selected) sel.selectedIndex = 0; opt.remove(); }
+    const grp = sel.querySelector('optgroup[data-custom-font]');
+    if (grp) grp.remove();
+  });
+  updatePreview();
+}
+
+function updateCustomFontFace() {
+  const nameInput = document.getElementById('customFontName');
+  if (!nameInput || !customFontDataUrl) return;
+  const name = nameInput.value.trim();
+  if (!name) return;
+  const oldName = customFontName;
+  customFontName = name;
+  // Update @font-face
+  const styleEl = document.getElementById('customFontFace');
+  if (styleEl) {
+    const ext = customFontDataUrl.includes('woff2') ? 'woff2' : 'woff';
+    styleEl.textContent = `@font-face { font-family: '${name}'; src: url('${customFontDataUrl}') format('${ext}'); font-weight: 100 900; font-display: swap; }`;
+  }
+  // Update dropdown options
+  ['fontHeading', 'fontBody', 'fontMono'].forEach(id => {
+    const sel = document.getElementById(id);
+    const opt = sel.querySelector('option[data-custom-font]');
+    if (opt) {
+      const wasSelected = opt.selected;
+      opt.value = name;
+      opt.textContent = name + ' (uploaded)';
+      if (wasSelected) sel.value = name;
+    }
+  });
+  document.getElementById('customFontPreview').style.fontFamily = `'${name}', sans-serif`;
   updatePreview();
 }
 
@@ -1643,7 +1811,13 @@ function updatePreview() {
   const primary = document.getElementById('colorPrimary').value;
   const secondary = document.getElementById('colorSecondary').value;
   const accent = document.getElementById('colorAccent').value;
-  const primaryLight = lighten(primary, 0.15);
+  const primaryLightAuto = lighten(primary, 0.15);
+  // Auto-update footer bar color when primary changes (unless manually overridden)
+  if (!footerColorManual) {
+    document.getElementById('colorFooterBar').value = primaryLightAuto;
+    document.getElementById('colorFooterBarHex').value = primaryLightAuto;
+  }
+  const primaryLight = document.getElementById('colorFooterBar').value;
   const primaryDark = darken(primary, 0.3);
   const headingFont = document.getElementById('fontHeading').value;
   const bodyFont = document.getElementById('fontBody').value;
@@ -1676,8 +1850,10 @@ function updatePreview() {
   root.style.setProperty('--cfg-danger', semantic.danger);
 
   // Apply neutral colors to preview card elements
+  const n100 = neutrals[4].hex;
   const n300 = neutrals[3].hex;
   const n500 = neutrals[2].hex;
+  const n50 = neutrals[5].hex;
   document.querySelectorAll('.pv-card .fact-statement, .pv-card .stat-unit, .pv-card .footer-legal').forEach(el => { el.style.color = n300; });
   document.querySelectorAll('.pv-card .myth-statement .strike').forEach(el => { el.style.color = n300; });
   document.querySelectorAll('.pv-card-tier2 .t2-subline').forEach(el => { el.style.color = n500; });
@@ -1685,6 +1861,14 @@ function updatePreview() {
   document.querySelectorAll('.pv-card-tier2 .t2-footer-text').forEach(el => { el.style.color = n300; });
   document.querySelectorAll('.pv-badge .badge-text').forEach(el => { el.style.color = n300; });
   document.querySelectorAll('.pv-card .co-brand-divider').forEach(el => { el.style.background = n300; el.style.opacity = '0.4'; });
+  // White text on dark primary backgrounds
+  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .myth-statement').forEach(el => { if (!el.querySelector('.strike')) return; el.style.color = '#FFFFFF'; });
+  document.querySelectorAll('.pv-card .footer-helpline').forEach(el => { el.style.color = '#FFFFFF'; });
+  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .card-logo .logo-play').forEach(el => { el.style.color = '#FFFFFF'; });
+  document.querySelectorAll('.pv-badge .badge-number').forEach(el => { el.style.color = '#FFFFFF'; });
+  document.querySelectorAll('.pv-badge .badge-logo .logo-play').forEach(el => { el.style.color = '#FFFFFF'; });
+  // Badge divider (non-co-brand)
+  document.querySelectorAll('.pv-badge .badge-divider').forEach(el => { if (!el.id) el.style.background = n300; });
 
   // Update fonts on preview cards
   const monoFont = document.getElementById('fontMono').value;
@@ -1736,25 +1920,37 @@ function updatePreview() {
   document.querySelectorAll('.pv-card .myth-statement, .pv-card-tier2 .t2-headline').forEach(el => { el.style.lineHeight = String(ts.lhHeading); });
   document.querySelectorAll('.pv-card .fact-statement, .pv-card-tier2 .t2-subline').forEach(el => { el.style.lineHeight = String(ts.lhBody); });
 
-  // Update program name in logos
+  // Update program name in logos (text or image replacement)
   const nameParts = getNameParts();
+  const logoMode = getLogoMode();
+  const replaceWithImage = logoMode === 'replace' && uploadedLogoDataUrl;
   document.querySelectorAll('.pv-card .card-logo, .pv-badge .badge-logo').forEach(el => {
     const play = el.querySelector('.logo-play');
     const book = el.querySelector('.logo-book');
-    if (play && book) {
-      if (nameParts[1]) {
-        play.textContent = nameParts[0];
-        play.style.display = '';
-        book.textContent = nameParts[1];
-        book.style.fontWeight = '300';
-        book.style.textTransform = 'uppercase';
-        book.style.letterSpacing = '0.08em';
-      } else {
-        play.style.display = 'none';
-        book.textContent = nameParts[0];
-        book.style.fontWeight = '600';
-        book.style.textTransform = 'none';
-        book.style.letterSpacing = '-0.02em';
+    const img = el.querySelector('.logo-replace-img');
+    if (replaceWithImage) {
+      // Hide text, show uploaded logo image
+      if (play) play.style.display = 'none';
+      if (book) book.style.display = 'none';
+      if (img) { img.src = uploadedLogoDataUrl; img.style.display = 'inline-block'; }
+    } else {
+      // Show text wordmark, hide replacement image
+      if (img) { img.style.display = 'none'; }
+      if (play && book) {
+        if (nameParts[1]) {
+          play.textContent = nameParts[0];
+          play.style.display = '';
+          book.textContent = nameParts[1];
+          book.style.fontWeight = '300';
+          book.style.textTransform = 'uppercase';
+          book.style.letterSpacing = '0.08em';
+        } else {
+          play.style.display = 'none';
+          book.textContent = nameParts[0];
+          book.style.fontWeight = '600';
+          book.style.textTransform = 'none';
+          book.style.letterSpacing = '-0.02em';
+        }
       }
     }
   });
@@ -1779,19 +1975,19 @@ function updatePreview() {
   if (contactBlock) {
     let html = '';
     html += '<div class="t2-contact-row">';
-    html += '<span class="t2-contact-label" style="color: #A8A8C0;">Call</span>';
+    html += '<span class="t2-contact-label" style="color: ' + n300 + ';">Call</span>';
     html += '<span class="t2-contact-value t2-phone" style="color: var(--cfg-secondary, #00D4AA);">' + helpline + '</span>';
     html += '</div>';
     if (textNum) {
       html += '<div class="t2-contact-row">';
-      html += '<span class="t2-contact-label" style="color: #A8A8C0;">Text</span>';
+      html += '<span class="t2-contact-label" style="color: ' + n300 + ';">Text</span>';
       html += '<span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);">' + textNum + '</span>';
       html += '</div>';
     }
     if (chatUrlVal) {
       const chatDisplay = chatUrlVal.replace(/^https?:\/\//, '').replace(/\/$/, '');
       html += '<div class="t2-contact-row">';
-      html += '<span class="t2-contact-label" style="color: #A8A8C0;">Chat</span>';
+      html += '<span class="t2-contact-label" style="color: ' + n300 + ';">Chat</span>';
       html += '<span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);">' + chatDisplay + '</span>';
       html += '</div>';
     }
@@ -1815,10 +2011,12 @@ function updatePreview() {
   const badgeOperator = document.getElementById('pvBadgeOperator');
   const badgeCoDivider = document.getElementById('pvBadgeCoDivider');
 
-  if (uploadedLogoDataUrl) {
+  if (uploadedLogoDataUrl && !replaceWithImage) {
+    // Co-brand mode: operator logo + divider + Playbook text
     if (badgeOperator) { badgeOperator.innerHTML = '<img class="operator-logo-img" src="' + uploadedLogoDataUrl + '" alt="Operator logo">'; }
     if (badgeCoDivider) badgeCoDivider.style.display = '';
   } else {
+    // No logo, or replace mode (logo already shown as the wordmark)
     if (badgeOperator) { badgeOperator.innerHTML = ''; }
     if (badgeCoDivider) badgeCoDivider.style.display = 'none';
   }
@@ -1864,6 +2062,17 @@ function updateContrast() {
       darkWarning.classList.add('hidden');
     }
   }
+}
+
+function resetFooterBarColor(e) {
+  if (e) e.preventDefault();
+  footerColorManual = false;
+  const primary = document.getElementById('colorPrimary').value;
+  const auto = lighten(primary, 0.15);
+  document.getElementById('colorFooterBar').value = auto;
+  document.getElementById('colorFooterBarHex').value = auto;
+  document.getElementById('footerBarResetLink').style.display = 'none';
+  updatePreview();
 }
 
 // === Sync color pickers and hex inputs ===
@@ -2227,7 +2436,7 @@ function generateFullYaml() {
   const regulatorName = preset.regulatorName || '';
   const regulatorUrl = preset.regulatorUrl || '';
   const jurisdictionKey = preset.jurisdictionKey || 'custom';
-  const primaryLight = lighten(primary, 0.15);
+  const primaryLight = document.getElementById('colorFooterBar').value;
   const primaryDark = darken(primary, 0.3);
   const secondaryLight = lighten(secondary, 0.15);
   const secondaryDark = darken(secondary, 0.2);
@@ -2350,7 +2559,12 @@ typography:
       family: "${monoFont}"
       source: "google"
       weights: [400, 500, 600]
-      fallback: "monospace"
+      fallback: "monospace"` + (customFontName ? `
+    custom:
+      family: "${customFontName}"
+      source: "local"
+      file: "${customFontName.replace(/\\s+/g, '-').toLowerCase()}.woff2"
+      weights: [100, 900]` : '') + `
 
   scale:
     display: ${ts.display}
@@ -2369,13 +2583,18 @@ typography:
     tight: ${ts.lhTight}
 
 logo:
+  mode: "${getLogoMode() === 'replace' ? 'image-replacement' : 'text-wordmark'}"
   type: "text-based wordmark"
   font: "${headingFont}"
   play_weight: 800
   book_weight: 300
-  book_style: "uppercase, tight-spaced"
+  book_style: "uppercase, tight-spaced"` + (getLogoMode() === 'replace' ? `
+  image_replacement:
+    enabled: true
+    file: "operator-logo.svg"  # Place your logo file alongside brand-inject.css
+    height: "1.4em"` : `
   # Place your operator logo in visual-identity/logo/operator/
-  # Co-branding: operator logo left, program logo right, vertical divider between
+  # Co-branding: operator logo left, program logo right, vertical divider between`) + `
 
 helplines:
   default:
@@ -2442,7 +2661,7 @@ function generateFullCss() {
   const primary = document.getElementById('colorPrimary').value;
   const secondary = document.getElementById('colorSecondary').value;
   const accent = document.getElementById('colorAccent').value;
-  const primaryLight = lighten(primary, 0.15);
+  const primaryLight = document.getElementById('colorFooterBar').value;
   const primaryDark = darken(primary, 0.3);
   const secondaryLight = lighten(secondary, 0.15);
   const secondaryDark = darken(secondary, 0.2);
@@ -2455,7 +2674,23 @@ function generateFullCss() {
   const monoFont = document.getElementById('fontMono').value;
   const ts = getTypeScale();
 
-  return `/* brand-inject.css \u2014 Generated by Playbook Brand Configurator */
+  // Custom font @font-face block
+  let fontFaceBlock = '';
+  if (customFontDataUrl && customFontName) {
+    const fmt = customFontDataUrl.includes('woff2') ? 'woff2' : 'woff';
+    fontFaceBlock = `/* Custom font */
+@font-face {
+  font-family: '${customFontName}';
+  src: url('${customFontName.replace(/\s+/g, '-').toLowerCase()}.${fmt}') format('${fmt}');
+  font-weight: 100 900;
+  font-display: swap;
+}
+/* NOTE: Place your ${fmt} file alongside this CSS, named ${customFontName.replace(/\s+/g, '-').toLowerCase()}.${fmt} */
+
+`;
+  }
+
+  return fontFaceBlock + `/* brand-inject.css \u2014 Generated by Playbook Brand Configurator */
 :root {
   /* Colors */
   --pb-color-primary: ${primary};
@@ -2501,7 +2736,32 @@ function generateFullCss() {
   --pb-line-height-body: ${ts.lhBody};
   --pb-line-height-tight: ${ts.lhTight};
 }
-`;
+
+/* Logo image replacement — toggles text wordmark to an uploaded image */
+.logo-play, .logo-book {
+  display: var(--pb-logo-text-display, inline);
+}
+.card-logo, .badge-logo, .widget-logo, .guide-logo {
+  display: inline-flex;
+  align-items: center;
+}
+.card-logo::after, .badge-logo::after, .widget-logo::after, .guide-logo::after {
+  content: '';
+  display: var(--pb-logo-image-display, none);
+  height: var(--pb-logo-image-height, 1.4em);
+  background: var(--pb-logo-image, none) no-repeat left center / contain;
+  min-width: 4em;
+}
+` + (getLogoMode() === 'replace' && uploadedLogoDataUrl ? `
+/* Operator logo replaces text wordmark */
+:root {
+  --pb-logo-text-display: none;
+  --pb-logo-image-display: inline-block;
+  --pb-logo-image: url('operator-logo.svg');
+  --pb-logo-image-height: 1.4em;
+}
+/* NOTE: Replace the url above with the path to your hosted logo file. */
+` : '') + ``;
 }
 
 // === Download Functions ===
@@ -2907,8 +3167,41 @@ document.addEventListener('DOMContentLoaded', () => {
   syncColor('colorSuccess', 'colorSuccessHex');
   syncColor('colorWarning', 'colorWarningHex');
   syncColor('colorDanger', 'colorDangerHex');
+
+  // Footer bar color — track manual override
+  const footerPicker = document.getElementById('colorFooterBar');
+  const footerHex = document.getElementById('colorFooterBarHex');
+  footerPicker.addEventListener('input', () => {
+    footerColorManual = true;
+    footerHex.value = footerPicker.value;
+    document.getElementById('footerBarResetLink').style.display = '';
+    updatePreview();
+  });
+  footerHex.addEventListener('input', () => {
+    const v = footerHex.value;
+    if (/^#[0-9a-fA-F]{6}$/.test(v)) {
+      footerColorManual = true;
+      footerPicker.value = v;
+      document.getElementById('footerBarResetLink').style.display = '';
+      updatePreview();
+    }
+  });
+
   initPresets();
   initLogoUpload();
+
+  // Logo mode radio listeners
+  document.querySelectorAll('input[name="logoMode"]').forEach(r => {
+    r.addEventListener('change', () => { updatePreview(); });
+  });
+
+  // Custom font upload
+  document.getElementById('fontFileInput').addEventListener('change', (e) => {
+    if (e.target.files[0]) handleFontFile(e.target.files[0]);
+  });
+  document.getElementById('customFontName').addEventListener('input', () => {
+    updateCustomFontFace();
+  });
 
   // Initialize messaging lists
   renderTaglines('open');
