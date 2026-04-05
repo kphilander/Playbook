@@ -13,6 +13,12 @@ Playbook is a complete, forkable brand system for gambling entertainment literac
 
 Playbook is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the informed choice model: most people who gamble do so without problems, gambling is entertainment, and players make better decisions when they understand the math, the odds, and the tools available to them.
 
+## Created by
+
+Playbook was created by [Kahlil Simeon-Rose, Ph.D.](https://kahlil.co), a tenured Associate Professor at Washington State University.
+
+His career spans gambling research, policy, and industry practice — from directing social responsibility at BCLC (where he co-developed GameSense, later licensed by multiple jurisdictions and private operators), to co-developing the Positive Play Scale (the first standardized measure of responsible gambling behavior), to co-developing RG Check for iGaming at the Responsible Gambling Council. He has served as a consultant to casino operators, lotteries, sports betting platforms, regulators, and courts across North America, Europe, and Australasia. His research has been recognized with two National Council on Problem Gambling Annual Research Awards (2015, 2021), and he serves on the inaugural advisory committee of the Responsible Online Gaming Association (ROGA).
+
 ## Who is this for?
 
 - **Casino operators and iGaming companies** who want player education content their marketing team is proud to co-brand
