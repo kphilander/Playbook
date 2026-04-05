@@ -11,7 +11,7 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { margin: 0; padding: 0; background: transparent; }
 
-  .banner {
+  .limit-reached {
     width: 420px;
     min-height: 160px;
     background: var(--pb-color-white);
@@ -60,9 +60,9 @@
     line-height: 1.3;
   }
   .banner-body {
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
-    line-height: 1.5;
+    line-height: 1.7;
     margin-bottom: 10px;
   }
   .banner-link {
@@ -103,7 +103,7 @@
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="banner">
+<div class="limit-reached">
 
   <div class="icon">
     <span class="icon-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g></svg></span>

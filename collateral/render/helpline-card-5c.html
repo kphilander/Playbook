@@ -7,37 +7,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { margin: 0; padding: 0; background: transparent; }
+    body { margin: 0; padding: 24px; background: var(--pb-color-white); }
 
     .helpline-card {
       width: 700px;
       height: 400px;
       position: relative;
-      background: var(--pb-color-primary);
+      background: var(--pb-color-white);
+      font-family: var(--pb-font-body);
+      color: var(--pb-color-primary);
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
 
-    /* Top accent bar */
-    .helpline-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 6px;
-      background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
-    }
-
-    /* Subtle grid pattern overlay */
-    .helpline-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
+    /* 3px solid teal top bar — Tier 2 */
+    .accent-bar {
+      height: 3px;
+      background: var(--pb-color-secondary);
+      flex-shrink: 0;
     }
 
     .card-content {
@@ -45,30 +33,29 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 36px 48px;
-      position: relative;
-      z-index: 1;
+      padding: 32px 48px;
     }
 
     .card-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .card-logo {
       font-family: var(--pb-font-heading);
       font-size: calc(22px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-white);
     }
     .card-logo .logo-play {
       font-weight: 800;
       letter-spacing: -0.02em;
+      color: var(--pb-color-primary);
     }
     .card-logo .logo-book {
       font-weight: 300;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      color: var(--pb-color-secondary);
     }
     .co-brand {
       display: flex;
@@ -83,14 +70,14 @@
     .operator-placeholder {
       width: 80px;
       height: 32px;
-      border: 1px dashed rgba(255,255,255,0.25);
+      border: 1.5px dashed var(--pb-color-neutral-300);
       border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-body);
       font-size: calc(9px * var(--pb-template-text-scale, 1));
-      color: rgba(255,255,255,0.25);
+      color: var(--pb-color-neutral-300);
     }
 
     .helpline-main {
@@ -106,14 +93,15 @@
       font-family: var(--pb-font-heading);
       font-size: calc(24px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-white);
+      color: var(--pb-color-primary);
       margin-bottom: 6px;
     }
     .helpline-sub {
       font-family: var(--pb-font-body);
-      font-size: calc(15px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-neutral-300);
-      margin-bottom: 20px;
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-700);
+      line-height: 1.7;
+      margin-bottom: 18px;
     }
     .helpline-number {
       font-family: var(--pb-font-mono);
@@ -129,7 +117,7 @@
       color: var(--pb-color-neutral-500);
     }
     .helpline-channels strong {
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-color-neutral-700);
       font-weight: 600;
     }
 
@@ -142,14 +130,15 @@
     .qr-box {
       width: 80px;
       height: 80px;
-      background: var(--pb-color-white);
+      background: var(--pb-color-neutral-50);
+      border: 1px solid var(--pb-color-neutral-100);
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-mono);
       font-size: calc(12px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-primary);
+      color: var(--pb-color-neutral-300);
       margin-bottom: 6px;
     }
     .qr-label {
@@ -160,8 +149,9 @@
 
     .card-footer {
       padding: 0 48px 16px;
-      position: relative;
-      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
     .legal-text {
       font-family: var(--pb-font-body);
@@ -172,14 +162,14 @@
       font-family: var(--pb-font-heading);
       font-size: calc(13px * var(--pb-template-text-scale, 1));
       font-weight: 600;
-      color: var(--pb-color-accent);
-      float: right;
+      color: var(--pb-color-secondary);
     }
   </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
   <div class="helpline-card">
+    <div class="accent-bar"></div>
     <div class="card-content">
       <div class="card-header">
         <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
@@ -205,8 +195,8 @@
       </div>
     </div>
     <div class="card-footer">
-      <span class="availability">24/7</span>
       <span class="legal-text">{{AGE_DISCLAIMER}}</span>
+      <span class="availability">24/7</span>
     </div>
   </div>
 </body>
