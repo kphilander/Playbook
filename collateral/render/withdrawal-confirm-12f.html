@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=420">
-<title>Withdrawal Confirmation — Tier 2</title>
+<title>Withdrawal Confirmation — Tier 1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
@@ -14,18 +14,34 @@
   .withdrawal-confirm {
     width: 420px;
     min-height: 812px;
-    background: var(--pb-color-white);
+    background: var(--pb-color-primary);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
   }
 
-  /* 3px teal top bar */
+  /* Grid overlay */
+  .withdrawal-confirm::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* 8px gradient accent bar (orange→teal) */
   .accent-bar {
-    height: 3px;
-    background: var(--pb-color-secondary);
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
   }
 
   /* Content */
@@ -36,9 +52,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
-  /* Logo */
+  /* Logo — dark variant (white Play, teal BOOK) */
   .logo {
     font-family: var(--pb-font-heading);
     font-size: calc(22px * var(--pb-template-text-scale, 1));
@@ -48,7 +66,7 @@
   .logo .logo-play {
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
   }
   .logo .logo-book {
     font-weight: 300;
@@ -80,7 +98,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
     margin-bottom: 16px;
     line-height: 1.2;
     letter-spacing: -0.01em;
@@ -90,14 +108,14 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(32px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-color-secondary);
     margin-bottom: 12px;
     line-height: 1.2;
   }
 
   .subhead {
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-700);
+    color: var(--pb-color-neutral-300);
     line-height: 1.6;
     margin-bottom: 32px;
     max-width: 340px;
@@ -108,7 +126,7 @@
     width: 100%;
     max-width: 340px;
     height: 1px;
-    background: var(--pb-color-neutral-100);
+    background: rgba(255,255,255,0.1);
     margin-bottom: 24px;
   }
 
@@ -119,7 +137,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--pb-color-neutral-500);
+    color: var(--pb-color-neutral-300);
     margin-bottom: 16px;
   }
 
@@ -127,18 +145,18 @@
     font-family: var(--pb-font-mono);
     font-weight: 500;
     font-size: calc(15px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-color-neutral-300);
     margin-bottom: 32px;
     line-height: 1.5;
   }
   .stats-row .stat-sep {
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-color-neutral-500);
     margin: 0 6px;
   }
 
-  /* Helpline block */
+  /* Helpline block — dark bg variant */
   .helpline-block {
-    background: var(--pb-color-neutral-50);
+    background: var(--pb-color-primary-light);
     border-radius: 10px;
     padding: 18px 24px;
     width: 100%;
@@ -152,18 +170,18 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--pb-color-neutral-500);
+    color: var(--pb-color-neutral-300);
     margin-bottom: 6px;
   }
   .helpline-number {
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
   }
   .helpline-channels {
     font-size: calc(13px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-500);
+    color: var(--pb-color-neutral-300);
     margin-top: 4px;
   }
 

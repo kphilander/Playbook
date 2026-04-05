@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=420">
-<title>Deposit Interstitial — Limit Setting — Tier 2</title>
+<title>Deposit Interstitial — Limit Setting — Tier 1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
@@ -14,17 +14,28 @@
   .deposit-interstitial {
     width: 420px;
     height: 812px;
-    background: var(--pb-color-white);
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
     display: flex;
     flex-direction: column;
+    position: relative;
+  }
+  .deposit-interstitial::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
   }
 
   /* Accent bar */
   .accent-bar {
-    height: 3px;
-    background: var(--pb-color-secondary);
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
     flex-shrink: 0;
   }
 
@@ -37,7 +48,7 @@
     font-size: calc(24px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play {
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -60,7 +71,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(28px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
     line-height: 1.2;
     margin-bottom: 12px;
     letter-spacing: -0.01em;
@@ -68,7 +79,7 @@
   .body-text {
     font-family: var(--pb-font-body);
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-700);
+    color: var(--pb-color-neutral-300);
     line-height: 1.6;
     margin-bottom: 32px;
   }
@@ -85,24 +96,24 @@
     align-items: center;
     gap: 14px;
     padding: 16px 20px;
-    border: 1.5px solid var(--pb-color-neutral-100);
+    border: 1.5px solid rgba(255,255,255,0.1);
     border-radius: 12px;
     cursor: pointer;
     transition: border-color 0.15s, background 0.15s;
   }
   .limit-option:hover {
-    border-color: var(--pb-color-neutral-300);
+    border-color: rgba(255,255,255,0.25);
   }
   .limit-option.selected {
     border-color: var(--pb-color-secondary);
-    background: #F0FDF9;
+    background: rgba(0,212,170,0.1);
   }
   .radio-circle {
     width: 22px;
     height: 22px;
     min-width: 22px;
     border-radius: 50%;
-    border: 2px solid var(--pb-color-neutral-300);
+    border: 2px solid rgba(255,255,255,0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,7 +134,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
   }
 
   /* CTA */
@@ -150,14 +161,14 @@
     font-family: var(--pb-font-heading);
     font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 600;
-    color: var(--pb-color-neutral-500);
+    color: var(--pb-color-neutral-300);
     text-decoration: none;
     cursor: pointer;
     display: block;
     padding-bottom: 8px;
   }
   .skip-link:hover {
-    color: var(--pb-color-neutral-700);
+    color: var(--pb-color-white);
   }
 
   /* Footer */
@@ -169,7 +180,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(13px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-500);
+    color: var(--pb-color-neutral-300);
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
@@ -185,7 +196,7 @@
 
   <div class="content">
     <h1 class="heading">Before you deposit</h1>
-    <p class="body-text">Setting a limit takes 10 seconds and keeps you in control.</p>
+    <p class="body-text">Setting a limit takes 10 seconds — pick your budget and you're set.</p>
 
     <div class="limit-list">
       <div class="limit-option">

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=420">
-<title>In-Play Overlay — Session Check-in — Tier 2</title>
+<title>In-Play Overlay — Session Check-in — Tier 1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
@@ -14,18 +14,30 @@
   .in-play-overlay {
     width: 420px;
     height: 280px;
-    background: var(--pb-color-white);
+    background: var(--pb-color-primary);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
     display: flex;
     flex-direction: column;
-    border-top: 3px solid var(--pb-color-primary);
+    position: relative;
+  }
+
+  /* Grid overlay */
+  .in-play-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px);
+    background-size: 24px 24px;
+    pointer-events: none;
   }
 
   /* Accent bar */
   .accent-bar {
-    height: 3px;
-    background: var(--pb-color-secondary);
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
     flex-shrink: 0;
   }
 
@@ -48,7 +60,7 @@
     font-size: calc(16px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play {
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -63,7 +75,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(20px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-color-white);
     line-height: 1.2;
   }
 
@@ -72,7 +84,7 @@
     font-family: var(--pb-font-mono);
     font-size: calc(14px * var(--pb-template-text-scale, 1));
     font-weight: 500;
-    color: var(--pb-color-neutral-700);
+    color: var(--pb-color-neutral-300);
     margin-bottom: 20px;
     line-height: 1.4;
   }
@@ -97,8 +109,8 @@
   }
   .btn-outline {
     background: transparent;
-    border: 1.5px solid var(--pb-color-neutral-300);
-    color: var(--pb-color-primary);
+    border: 1.5px solid var(--pb-color-white);
+    color: var(--pb-color-white);
   }
   .btn-primary {
     background: var(--pb-color-secondary);
@@ -114,7 +126,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 500;
     font-size: calc(12px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-500);
+    color: var(--pb-color-neutral-300);
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
