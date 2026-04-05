@@ -280,6 +280,35 @@
   .pb-footer a { color: rgba(255,255,255,0.5); }
   .pb-footer a:hover { color: rgba(255,255,255,0.8); }
 
+  /* === Credentials Grid === */
+  .about-credentials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .about-credential-item {
+    padding: 28px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--pb-radius-lg, 12px);
+  }
+  .about-credential-label {
+    font-family: var(--pb-font-heading, 'Inter', sans-serif);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pb-color-secondary, #00D4AA);
+    margin-bottom: 8px;
+  }
+  .about-credential-text {
+    font-family: var(--pb-font-body, 'Source Sans 3', sans-serif);
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.7;
+  }
+
   /* === Responsive === */
   @media (max-width: 768px) {
     .about-hero { padding: 72px 0 56px; }
@@ -300,6 +329,9 @@
     }
     .about-creator-photo img {
       width: 120px;
+    }
+    .about-credentials {
+      grid-template-columns: 1fr;
     }
   }
 </style>
@@ -330,17 +362,11 @@
       <div class="pb-container">
         <div class="about-story pb-reveal">
           <div class="about-story-text">
-            <p class="about-label">The Story</p>
-            <h2 class="about-section-heading"><span>Creative Commons</span></h2>
+            <p class="about-label">The Creator</p>
+            <h2 class="about-section-heading">Why <span>This Exists</span></h2>
             <div class="about-prose">
               <p>
-                Most gambling operators want to promote responsible gambling. But building a dedicated brand for it &mdash; visual identity, messaging, player-facing materials &mdash; requires design resources, messaging expertise, and regulatory knowledge that many simply don&rsquo;t have.
-              </p>
-              <p>
-                This is especially true for smaller operators, foreign organizations, and regulators in emerging markets, who face the same expectations as large commercial operators with a fraction of the resources. The expertise exists, but the tools don&rsquo;t.
-              </p>
-              <p>
-                Kahlil Simeon-Rose has spent his career at the intersection of gambling research, policy, and industry practice &mdash; and has seen this pattern at every stop. He led the redevelopment of a major responsible gambling brand so it could be licensed by casino operators, lotteries, and regulators. He co-authored the most widely used tool for measuring responsible gambling behaviors among players. He built the leading responsible gambling certification program for online gaming. His research has been recognized with multiple national awards.
+                Kahlil Simeon-Rose is a tenured Associate Professor at Washington State University whose career spans gambling research, policy, and industry practice &mdash; and has seen this pattern at every stop. As Director of Social Responsibility at BCLC, he co-developed GameSense &mdash; a responsible gambling program subsequently licensed by multiple jurisdictions and private operators. He co-developed the Positive Play Scale, the first standardized measure of responsible gambling behavior, now adopted by leading operators across North America and Europe. He co-developed RG Check for iGaming at the Responsible Gambling Council &mdash; the gold standard for responsible gambling accreditation. He has served as a consultant to casino operators, lotteries, sports betting platforms, regulators, and courts across North America, Europe, and Australasia. His research has been recognized with two National Council on Problem Gambling Annual Research Awards (2015, 2021), and he was named to Global Gaming Business&rsquo;s Emerging Leaders of Gaming &ldquo;40 Under 40.&rdquo;
               </p>
               <p>
                 Playbook draws on all of it. A complete, deployable brand system &mdash; identity, messaging library, templates, interactive game guides, and jurisdiction modules &mdash; released under a Creative Commons license so anyone can use it, customize it, and ship it without asking permission. It&rsquo;s the tool he wished had existed years ago.
@@ -353,12 +379,48 @@
             </div>
             <div class="about-creator-info">
               <h3>Kahlil Simeon-Rose, Ph.D.</h3>
-              <p class="about-creator-role">Associate Professor (Tenured)<br>Washington State University<span class="about-creator-formerly">formerly published as Kahlil Philander</span></p>
+              <p class="about-creator-role">Associate Professor (Tenured)<br>Washington State University</p>
               <div class="about-creator-links">
                 <a href="https://kahlil.co" target="_blank" rel="noopener">kahlil.co</a>
                 <a href="https://github.com/kphilander" target="_blank" rel="noopener">GitHub</a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <span class="pb-gradient-line" style="margin-top: 48px;"></span>
+    </section>
+
+    <!-- Credentials at a Glance -->
+    <section class="about-section">
+      <div class="pb-container about-content">
+        <p class="about-label pb-reveal">Credentials</p>
+        <h2 class="about-section-heading pb-reveal">At a <span>Glance</span></h2>
+
+        <div class="about-credentials pb-reveal">
+          <div class="about-credential-item">
+            <p class="about-credential-label">Research Awards</p>
+            <p class="about-credential-text">Two <a href="https://www.ncpgambling.org/membership/award-history/" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">National Council on Problem Gambling Annual Research Awards</a> (2015, 2021) &mdash; the leading U.S. recognition for gambling studies research. Named to <a href="https://ggbmagazine.com/article/40-under-40-standing-up-for-gaming/" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">Global Gaming Business&rsquo;s Emerging Leaders of Gaming &ldquo;40 Under 40.&rdquo;</a></p>
+          </div>
+          <div class="about-credential-item">
+            <p class="about-credential-label">Positive Play Scale</p>
+            <p class="about-credential-text">Co-developed the first standardized measure of responsible gambling behavior. Adopted by leading operators across North America and Europe. <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.00227/full" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">Read the paper</a>.</p>
+          </div>
+          <div class="about-credential-item">
+            <p class="about-credential-label">GameSense</p>
+            <p class="about-credential-text">Co-developed as Director of Social Responsibility at <a href="https://www.bclc.com" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">BCLC</a>. Subsequently licensed by multiple jurisdictions and private operators.</p>
+          </div>
+          <div class="about-credential-item">
+            <p class="about-credential-label">RG Check for iGaming</p>
+            <p class="about-credential-text">Co-developed at the <a href="https://www.responsiblegambling.org" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">Responsible Gambling Council</a> of Canada. Considered the gold standard for responsible gambling accreditation worldwide.</p>
+          </div>
+          <div class="about-credential-item">
+            <p class="about-credential-label">Consulting</p>
+            <p class="about-credential-text">Consultant to casino operators, lotteries, sports betting platforms, regulators, and courts across North America, Europe, and Australasia.</p>
+          </div>
+          <div class="about-credential-item">
+            <p class="about-credential-label">Advisory &amp; Academic</p>
+            <p class="about-credential-text"><a href="https://www.responsibleonlinegaming.org" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">Responsible Online Gaming Association</a> Advisory Committee. <a href="https://www.gluecksspielforschung.de" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">German Foundation on Gambling Research</a> (scientific advisory board). <a href="https://www.canadiangaming.ca" target="_blank" rel="noopener" style="color: var(--pb-color-secondary, #00D4AA);">Canadian Gaming Association</a> RG subcommittee.</p>
           </div>
         </div>
       </div>
