@@ -1,0 +1,233 @@
+---
+import AcademyLayout from '../layouts/AcademyLayout.astro';
+
+interface ProgramCard {
+  name: string;
+  badge: string;
+  duration: string;
+  description: string;
+  href: string;
+  color: 'teal' | 'orange' | 'info';
+  icon: string;
+}
+
+const programs: ProgramCard[] = [
+  {
+    name: 'All Employees',
+    badge: 'Foundation',
+    duration: '~25 min',
+    description: 'Every team member starts here. Covers the Playbook brand, the Knowledge Gap, informed choice model, and the two-tier communication system.',
+    href: '/tools/playbook/academy/all-employees/',
+    color: 'teal',
+    icon: 'users',
+  },
+  {
+    name: 'Frontline',
+    badge: 'Customer-Facing',
+    duration: '~55 min',
+    description: 'For staff who interact with players directly. Player tools, stigma-free language, Tier 1 conversation techniques, and escalation basics.',
+    href: '/tools/playbook/academy/frontline/',
+    color: 'teal',
+    icon: 'chat',
+  },
+  {
+    name: 'Tier 2 Support',
+    badge: 'Support Specialist',
+    duration: '~85 min',
+    description: 'For support specialists handling sensitive situations. Escalation signals, de-escalation techniques, referral protocols, and Tier 2 voice.',
+    href: '/tools/playbook/academy/tier-2-support/',
+    color: 'orange',
+    icon: 'shield',
+  },
+  {
+    name: 'Compliance',
+    badge: 'Legal/Regulatory',
+    duration: '~55 min',
+    description: 'For legal, compliance, and regulatory teams. Responsible gambling landscape, advertising rules, audit processes, and jurisdictional requirements.',
+    href: '/tools/playbook/academy/compliance/',
+    color: 'info',
+    icon: 'scale',
+  },
+  {
+    name: 'Marcomm',
+    badge: 'Marketing/Creative',
+    duration: '~180 min',
+    description: 'The deep dive for marketing and creative teams. Full brand system, content creation, campaign development, tone calibration, and collateral production.',
+    href: '/tools/playbook/academy/marcomm/',
+    color: 'teal',
+    icon: 'pen',
+  },
+  {
+    name: 'Executive Briefing',
+    badge: 'Leadership',
+    duration: '~30 min',
+    description: 'Strategic overview for leadership. Brand positioning, ROI framework, risk mitigation, competitive advantage, and governance model.',
+    href: '/tools/playbook/academy/executive-briefing/',
+    color: 'teal',
+    icon: 'briefcase',
+  },
+  {
+    name: 'Brand Foundations',
+    badge: 'Implementation',
+    duration: '~130 min',
+    description: 'The full Playbook brand system. RG foundations, visual identity, voice & tone, player segmentation, customer journey, and measuring success.',
+    href: '/tools/playbook/academy/brand-foundations/',
+    color: 'teal',
+    icon: 'book',
+  },
+];
+
+const colorMap = {
+  teal: { badge: 'bg-teal/20 text-teal', border: 'hover:border-teal/40', accent: 'text-teal' },
+  orange: { badge: 'bg-orange/20 text-orange', border: 'hover:border-orange/40', accent: 'text-orange' },
+  info: { badge: 'bg-info/20 text-info', border: 'hover:border-info/40', accent: 'text-info' },
+};
+---
+
+<AcademyLayout title="Programs">
+  <!-- Hero -->
+  <section class="bg-navy text-white py-20 relative overflow-hidden">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-40 h-40 border border-white rounded-full"></div>
+      <div class="absolute bottom-10 right-20 w-60 h-60 border border-white rounded-full"></div>
+      <div class="absolute top-1/2 left-1/3 w-20 h-20 border border-white rounded-full"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+      <div class="inline-flex items-center gap-2 mb-6">
+        <svg class="w-10 h-10" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="#1B2838"/>
+          <rect x="14" y="14" width="16" height="36" rx="2" fill="#FFFFFF"/>
+          <polygon points="34,14 54,32 34,50" fill="#00D4AA"/>
+        </svg>
+        <span class="font-heading font-black text-2xl tracking-tight">Playbook Academy</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-black mb-4 leading-tight">
+        Operator Staff Training
+      </h1>
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-orange/20 border border-orange/40 rounded-full mb-4">
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-orange">Beta</span>
+      </div>
+      <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed font-body">
+        Structured training programs for the Playbook entertainment literacy brand system. Every role, from the floor to the C-suite.
+      </p>
+    </div>
+  </section>
+
+  <!-- Program Cards -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+    <div class="grid gap-5 sm:grid-cols-2">
+      {programs.map((prog) => {
+        const colors = colorMap[prog.color];
+        return (
+          <a
+            href={prog.href}
+            class={`group block bg-white dark:bg-navy rounded-xl shadow-sm border border-n100 dark:border-navy-light ${colors.border} transition-all hover:shadow-md`}
+          >
+            <div class="p-5 sm:p-6">
+              <!-- Top row: badge + duration -->
+              <div class="flex items-center justify-between mb-3">
+                <span class={`inline-block px-2.5 py-0.5 rounded-full text-xs font-heading font-bold uppercase tracking-wider ${colors.badge}`}>
+                  {prog.badge}
+                </span>
+                <span class="text-xs text-n500 dark:text-n400 font-heading font-semibold">{prog.duration}</span>
+              </div>
+
+              <!-- Title -->
+              <h2 class="text-xl font-heading font-bold text-navy dark:text-white mb-2 group-hover:text-teal dark:group-hover:text-teal transition-colors">
+                {prog.name}
+              </h2>
+
+              <!-- Description -->
+              <p class="text-sm text-n700 dark:text-n300 font-body leading-relaxed mb-4">
+                {prog.description}
+              </p>
+
+              <!-- Arrow link -->
+              <div class={`flex items-center gap-1 text-sm font-heading font-semibold ${colors.accent} group-hover:gap-2 transition-all`}>
+                View program
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- Progression Diagram -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 mb-8">
+    <h2 class="text-2xl font-heading font-bold text-navy dark:text-white mb-2 text-center">Program Progression</h2>
+    <p class="text-n500 dark:text-n400 text-sm font-body text-center mb-8 max-w-lg mx-auto">
+      All tracks begin with the Foundation program. After completing it, continue to the track that matches your role.
+    </p>
+
+    <div class="flex flex-col items-center" role="img" aria-label="Program prerequisite tree. All Employees is the foundation, which branches into Frontline, Tier 2 Support, Compliance, and Marcomm tracks. Executive Briefing stands alone.">
+      <!-- Foundation -->
+      <div class="w-56 sm:w-64 bg-teal/10 border-2 border-teal rounded-xl px-4 py-3 text-center">
+        <p class="text-xs font-heading font-bold uppercase tracking-wider text-teal mb-0.5">Foundation</p>
+        <p class="font-heading font-bold text-navy dark:text-white text-sm">All Employees</p>
+      </div>
+
+      <!-- Connector down -->
+      <div class="w-0.5 h-8 bg-teal/30"></div>
+
+      <!-- Branch point -->
+      <div class="relative w-full max-w-2xl">
+        <!-- Horizontal line -->
+        <div class="hidden sm:block absolute top-0 left-1/2 -translate-x-1/2 h-0.5 bg-n200 dark:bg-navy-light" style="width: 75%;"></div>
+
+        <!-- 4 branches -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-2">
+          <div class="flex flex-col items-center">
+            <div class="hidden sm:block w-0.5 h-6 bg-n200 dark:bg-navy-light"></div>
+            <div class="w-full bg-white dark:bg-navy border border-n100 dark:border-navy-light rounded-lg px-2.5 py-2 text-center">
+              <p class="text-[10px] font-heading font-bold uppercase tracking-wider text-teal mb-0.5">Customer-Facing</p>
+              <p class="font-heading font-semibold text-navy dark:text-white text-xs">Frontline</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="hidden sm:block w-0.5 h-6 bg-n200 dark:bg-navy-light"></div>
+            <div class="w-full bg-white dark:bg-navy border border-n100 dark:border-navy-light rounded-lg px-2.5 py-2 text-center">
+              <p class="text-[10px] font-heading font-bold uppercase tracking-wider text-orange mb-0.5">Specialist</p>
+              <p class="font-heading font-semibold text-navy dark:text-white text-xs">Tier 2 Support</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="hidden sm:block w-0.5 h-6 bg-n200 dark:bg-navy-light"></div>
+            <div class="w-full bg-white dark:bg-navy border border-n100 dark:border-navy-light rounded-lg px-2.5 py-2 text-center">
+              <p class="text-[10px] font-heading font-bold uppercase tracking-wider text-info mb-0.5">Legal/Regulatory</p>
+              <p class="font-heading font-semibold text-navy dark:text-white text-xs">Compliance</p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="hidden sm:block w-0.5 h-6 bg-n200 dark:bg-navy-light"></div>
+            <div class="w-full bg-white dark:bg-navy border border-n100 dark:border-navy-light rounded-lg px-2.5 py-2 text-center">
+              <p class="text-[10px] font-heading font-bold uppercase tracking-wider text-teal mb-0.5">Marketing/Creative</p>
+              <p class="font-heading font-semibold text-navy dark:text-white text-xs">Marcomm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Separator -->
+      <div class="flex items-center gap-3 my-6 w-full max-w-xs">
+        <div class="flex-1 h-px bg-n200 dark:bg-navy-light"></div>
+        <span class="text-xs text-n400 dark:text-n500 font-heading uppercase tracking-wider">Standalone</span>
+        <div class="flex-1 h-px bg-n200 dark:bg-navy-light"></div>
+      </div>
+
+      <!-- Executive Briefing -->
+      <div class="w-56 sm:w-64 bg-white dark:bg-navy border border-n100 dark:border-navy-light rounded-xl px-4 py-3 text-center">
+        <p class="text-xs font-heading font-bold uppercase tracking-wider text-teal mb-0.5">Leadership</p>
+        <p class="font-heading font-bold text-navy dark:text-white text-sm">Executive Briefing</p>
+        <p class="text-[10px] text-n500 dark:text-n400 font-body mt-1">No prerequisite required</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer note is in AcademyLayout -->
+</AcademyLayout>

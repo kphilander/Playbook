@@ -7,10 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
 
   .brochure-inside {
     width: 2400px;
-    height: 1000px;
+    height: 1700px;
     display: flex;
     font-family: var(--pb-font-body);
     color: var(--pb-color-neutral-900);
@@ -19,8 +20,8 @@
 
   .panel {
     width: 800px;
-    height: 1000px;
-    padding: 56px;
+    height: 1700px;
+    padding: 72px 56px;
     position: relative;
     overflow: hidden;
   }
@@ -39,32 +40,32 @@
   .panel-heading {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    font-size: calc(36px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 20px;
-    margin-top: 24px;
+    margin-bottom: 28px;
+    margin-top: 32px;
     line-height: 1.2;
   }
   .panel-body {
-    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
-    line-height: 1.7;
-    margin-bottom: 32px;
+    line-height: 1.6;
+    margin-bottom: 40px;
   }
   .principle {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
     padding-left: 20px;
     border-left: 3px solid var(--pb-color-secondary);
   }
   .principle-title {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .principle-body {
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.6;
   }
@@ -100,24 +101,24 @@
   .odds-table th {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--pb-color-neutral-500);
     text-align: left;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 2px solid #D0D0E0;
   }
   .odds-table td {
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-900);
-    padding: 12px 0;
+    padding: 14px 0;
     border-bottom: 1px solid #E5E5F0;
   }
   .odds-table td:last-child {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     text-align: right;
   }
@@ -129,13 +130,13 @@
     border-left: 4px solid var(--pb-color-accent);
   }
   .callout p {
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
-    line-height: 1.6;
+    line-height: 1.5;
     font-style: italic;
   }
   .footnote {
-    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     margin-top: 16px;
   }
@@ -148,13 +149,13 @@
   .tool-item {
     display: flex;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     align-items: flex-start;
   }
   .tool-num {
-    width: 32px;
-    height: 32px;
-    min-width: 32px;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
     border-radius: 50%;
     background: var(--pb-color-secondary);
     display: flex;
@@ -162,28 +163,32 @@
     justify-content: center;
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
+  }
+  .tool-num svg {
+    width: 18px;
+    height: 18px;
   }
   .tool-item strong {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-900);
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
   .tool-item span {
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.5;
   }
   .panel-cta {
-    margin-top: 24px;
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    margin-top: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
-    line-height: 1.6;
-    padding: 16px 20px;
+    line-height: 1.5;
+    padding: 18px 22px;
     background: var(--pb-color-neutral-50);
     border-radius: 10px;
   }
@@ -242,7 +247,7 @@
   <div class="panel panel-odds">
     <div class="section-label label-orange">Real Odds</div>
     <div class="panel-heading">The house edge — what it means for you</div>
-    <div class="panel-body" style="font-size: calc(15px * var(--pb-template-text-scale, 1)); margin-bottom:16px;">The house edge is the mathematical advantage built into every casino game. It's not hidden. It's how the business works. Knowing the edge helps you pick your games and set your budget.</div>
+    <div class="panel-body" style="font-size: calc(20px * var(--pb-template-text-scale, 1)); margin-bottom:16px;">The house edge is the mathematical advantage built into every casino game. It's not hidden. It's how the business works. Knowing the edge helps you pick your games and set your budget.</div>
     <table class="odds-table">
       <thead>
         <tr><th>Game</th><th style="text-align:right;">House edge</th></tr>
@@ -266,23 +271,23 @@
     <div class="section-label label-teal">Your Tools</div>
     <div class="panel-heading">Features that work for you</div>
     <div class="tool-item">
-      <div class="tool-num">1</div>
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12"/><path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2 3 2.5 3 1.1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"/></svg></div>
       <div><strong>Deposit limits</strong><span>Set your entertainment budget for the week or month. Takes 10 seconds. Adjust anytime.</span></div>
     </div>
     <div class="tool-item">
-      <div class="tool-num">2</div>
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
       <div><strong>Session reminders</strong><span>Get a check-in at the interval you choose. Stay aware without killing the vibe.</span></div>
     </div>
     <div class="tool-item">
-      <div class="tool-num">3</div>
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="4" y2="20"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="8" y1="20" x2="8" y2="12"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="16" y1="20" x2="16" y2="14"/></svg></div>
       <div><strong>Activity dashboard</strong><span>See your play stats — sessions, time, spending. No surprises. Knowledge is a feature.</span></div>
     </div>
     <div class="tool-item">
-      <div class="tool-num">4</div>
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
       <div><strong>Bankroll planner</strong><span>Enter your budget, pick your game, and see how far your money can go.</span></div>
     </div>
     <div class="tool-item">
-      <div class="tool-num">5</div>
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
       <div><strong>Game IQ quiz</strong><span>Test your odds knowledge. 7 questions, 2 minutes. Challenge your friends.</span></div>
     </div>
     <div class="panel-cta">

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Playbook Collateral Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F1923;
+    --bg-card: #1B2838;
+    --bg-card-hover: #2A3F56;
+    --text: #F5F5FA;
+    --text-dim: #A8A8C0;
+    --text-faint: #6B6B8A;
+    --teal: #00D4AA;
+    --orange: #FF6B35;
+    --border: rgba(255,255,255,0.08);
+    --thumb-w: 480px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Sticky nav */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15,25,35,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 32px;
+  }
+  .nav-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .nav-title {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .nav-title .accent { color: var(--teal); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .nav-count {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    margin-right: auto;
+  }
+  .nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav a:hover {
+    background: var(--bg-card);
+    color: var(--text);
+  }
+
+  /* Section headers */
+  .section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 64px 32px 16px;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .section-tier {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+  .tier-1 { background: rgba(255,107,53,0.15); color: var(--orange); }
+  .tier-2 { background: rgba(0,212,170,0.15); color: var(--teal); }
+  .section-count {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12px;
+    color: var(--text-faint);
+    margin-left: auto;
+  }
+
+  /* Grid */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+  }
+  .item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.15s, transform 0.15s;
+    flex: 0 0 auto;
+  }
+  .item:hover {
+    border-color: rgba(0,212,170,0.3);
+  }
+  .item-meta {
+    padding: 14px 18px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .item-name {
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--text);
+    font-family: 'Source Code Pro', monospace;
+  }
+  .item-dims {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 11px;
+    color: var(--text-faint);
+    white-space: nowrap;
+  }
+  .item-frame {
+    background: #000;
+    overflow: hidden;
+    position: relative;
+  }
+  .item-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    transform-origin: top left;
+    background: white;
+    display: block;
+  }
+
+  /* Open original link */
+  .item-actions {
+    padding: 10px 18px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+  }
+  .item-actions a {
+    color: var(--teal);
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .item-actions a:hover {
+    color: #33DDBB;
+  }
+  .item-tier {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* Footer */
+  footer {
+    max-width: 1600px;
+    margin: 64px auto;
+    padding: 32px;
+    text-align: center;
+    color: var(--text-faint);
+    font-size: 12px;
+    font-family: 'Source Code Pro', monospace;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-title">Play<span class="accent">book</span> Collateral Gallery</div>
+    <div class="nav-count">59 templates</div>
+    <a href="#social">Social</a>
+    <a href="#stories">Stories</a>
+    <a href="#posters">Posters</a>
+    <a href="#print">Print</a>
+    <a href="#displays">Displays</a>
+    <a href="#emails">Emails</a>
+    <a href="#brochure">Brochure</a>
+    <a href="#signs">Signs</a>
+    <a href="#tier2">Tier 2</a>
+    <a href="#htp">How-to-Play</a>
+    <a href="#demographic">Demographic</a>
+    <a href="#igaming">iGaming</a>
+  </div>
+</nav>
+
+<script>
+// Render an item with iframe scaled to fit thumbnail dimensions
+function item(file, w, h, tier) {
+  // Cap both width and height so portrait/landscape templates fit nicely
+  const maxW = 520;
+  const maxH = 700;
+  const scale = Math.min(1, maxW / w, maxH / h);
+  const scaledW = Math.round(w * scale);
+  const scaledH = Math.round(h * scale);
+  return `
+    <div class="item" style="width:${scaledW}px;">
+      <div class="item-meta">
+        <span class="item-name">${file}</span>
+        <span class="item-dims">${w}×${h}</span>
+      </div>
+      <div class="item-frame" style="width:${scaledW}px;height:${scaledH}px;">
+        <iframe src="${file}" style="width:${w}px;height:${h}px;transform:scale(${scale});"></iframe>
+      </div>
+      <div class="item-actions">
+        <a href="${file}" target="_blank">Open original →</a>
+        <span class="item-tier">${tier}</span>
+      </div>
+    </div>
+  `;
+}
+
+function section(id, title, tier, items) {
+  return `
+    <section class="section" id="${id}">
+      <div class="section-header">
+        <h2 class="section-title">${title}</h2>
+        ${tier ? `<span class="section-tier tier-${tier.replace('Tier ','')}">${tier}</span>` : ''}
+        <span class="section-count">${items.length} templates</span>
+      </div>
+      <div class="grid">
+        ${items.map(i => item(i[0], i[1], i[2], i[3] || tier || '')).join('')}
+      </div>
+    </section>
+  `;
+}
+
+document.body.insertAdjacentHTML('beforeend', `
+
+${section('social', 'Social Cards', 'Tier 1', [
+  ['card-1a-hot-streak.html', 1080, 1080],
+  ['card-1b-due-for-win.html', 1080, 1080],
+  ['card-1c-lucky-machine.html', 1080, 1080],
+  ['card-2a-house-edge.html', 1080, 1080],
+  ['card-2b-sports-betting.html', 1080, 1080],
+  ['card-2c-bonus-wagering.html', 1080, 1080],
+])}
+
+${section('stories', 'Stories (Vertical)', 'Tier 1', [
+  ['story-3a-hot-streak.html', 1080, 1920],
+  ['story-3b-house-edge.html', 1080, 1920],
+  ['story-3c-sports-betting.html', 1080, 1920],
+])}
+
+${section('posters', 'Posters', 'Tier 1', [
+  ['poster-4a-know-your-game.html', 1848, 2448],
+  ['poster-4b-no-fine-print.html', 1848, 2448],
+  ['poster-4c-game-iq.html', 1848, 2448],
+])}
+
+${section('print', 'Print Collateral', 'Tier 1', [
+  ['rack-card-5a.html', 848, 1848],
+  ['table-tent-5b.html', 848, 1248],
+])}
+
+${section('displays', 'Digital Displays', 'Tier 1', [
+  ['display-landscape-6a.html', 1920, 1080],
+  ['display-portrait-6b.html', 1080, 1920],
+])}
+
+${section('emails', 'Emails', 'Tier 1', [
+  ['email-welcome-7a.html', 600, 1100],
+  ['email-deposit-7b.html', 600, 1050],
+  ['email-monthly-7c.html', 600, 1200],
+  ['email-reactivation-7d.html', 600, 1050],
+])}
+
+${section('brochure', 'Brochure (Tri-fold)', 'Tier 1', [
+  ['brochure-trifold-8a.html', 2448, 1748],
+  ['brochure-cover-8b.html', 2448, 1748],
+])}
+
+${section('signs', 'Venue Signage', 'Tier 1', [
+  ['sign-entrance-9a.html', 948, 1248],
+  ['sign-atm-9b.html', 748, 1048],
+  ['sign-floor-9c.html', 948, 748],
+  ['sign-restroom-9d.html', 608, 448],
+  ['sign-staff-9e.html', 948, 1248],
+])}
+
+${section('tier2', 'Tier 2 — Support & Crisis', 'Tier 2', [
+  ['support-page-10a.html', 800, 1200],
+  ['self-exclusion-10b.html', 480, 740],
+  ['session-summary-10c.html', 480, 420],
+  ['limit-reached-10d.html', 480, 220],
+  ['cooldown-10e.html', 480, 580],
+  ['card-tier2-10f.html', 1080, 1080],
+  ['poster-tier2-10g.html', 1848, 2448],
+  ['email-support-10h.html', 600, 1100],
+  ['helpline-card-5c.html', 748, 448],
+])}
+
+${section('htp', 'How to Play — Game Education', 'Tier 1', [
+  ['htp-card-slots.html', 1080, 1080],
+  ['htp-card-blackjack.html', 1080, 1080],
+  ['htp-card-roulette.html', 1080, 1080],
+  ['htp-card-sports.html', 1080, 1080],
+  ['htp-card-baccarat.html', 1080, 1080],
+  ['htp-card-video-poker.html', 1080, 1080],
+  ['htp-card-craps.html', 1080, 1080],
+  ['htp-card-bingo.html', 1080, 1080],
+  ['htp-card-horse-racing.html', 1080, 1080],
+  ['htp-card-lottery.html', 1080, 1080],
+  ['htp-odds-comparison.html', 1080, 1080],
+])}
+
+${section('demographic', 'Demographic-Specific', 'Tier 1', [
+  ['poster-4d-lottery-odds.html', 1848, 2448],
+  ['poster-4e-bingo-hall.html', 1848, 2448],
+  ['card-11a-streamer-myth.html', 1080, 1080],
+  ['card-11b-lucky-numbers.html', 1080, 1080],
+])}
+
+${section('igaming', 'iGaming — Online Operator', 'Tier 1', [
+  ['mobile-onboarding-12a.html', 420, 812, 'Tier 1'],
+  ['deposit-interstitial-12b.html', 420, 812, 'Tier 1'],
+  ['in-play-overlay-12c.html', 420, 280, 'Tier 1'],
+  ['app-banner-12d.html', 728, 90, 'Tier 1'],
+  ['push-notification-12e.html', 420, 120, 'Tier 1'],
+  ['withdrawal-confirm-12f.html', 420, 812, 'Tier 1'],
+  ['betslip-rg-12g.html', 420, 320, 'Tier 1'],
+  ['web-popup-12h.html', 480, 560, 'Tier 1'],
+])}
+
+<footer>
+  Temporary preview gallery · Open any template for full-size view · Placeholders ({{HELPLINE_NUMBER}}, etc.) shown unresolved
+</footer>
+`);
+</script>
+
+</body>
+</html>

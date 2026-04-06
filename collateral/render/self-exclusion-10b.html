@@ -11,9 +11,9 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { margin: 0; padding: 0; background: transparent; }
 
-  .screen {
+  .self-exclusion {
     width: 420px;
-    min-height: 680px;
+    min-height: 740px;
     background: var(--pb-color-white);
     font-family: var(--pb-font-body);
     color: var(--pb-color-primary);
@@ -23,7 +23,7 @@
 
   /* Step indicator */
   .step-bar {
-    padding: 24px 32px 0;
+    padding: 16px 28px 0;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -70,7 +70,7 @@
 
   /* Content */
   .content {
-    padding: 36px 32px 32px;
+    padding: 24px 28px 20px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -78,36 +78,37 @@
 
   .heading {
     font-family: var(--pb-font-heading);
-    font-weight: 800;
-    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     line-height: 1.2;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     letter-spacing: -0.01em;
   }
   .explanation {
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.5;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
   }
 
   /* Duration radio-cards */
   .duration-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 32px;
+    gap: 8px;
+    margin-bottom: 18px;
     flex: 1;
   }
   .duration-option {
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 16px 20px;
+    padding: 14px 18px;
     border: 1.5px solid var(--pb-color-neutral-100);
     border-radius: 12px;
     cursor: pointer;
+    min-height: 48px;
     transition: border-color 0.15s, background 0.15s;
   }
   .duration-option:hover {
@@ -142,7 +143,7 @@
   .duration-label {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
   }
 
@@ -150,18 +151,19 @@
   .cta-button {
     display: block;
     width: 100%;
-    padding: 16px;
+    padding: 14px;
     background: var(--pb-color-secondary);
     color: var(--pb-color-primary);
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     text-align: center;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     letter-spacing: 0.01em;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
+    min-height: 48px;
   }
 
   .back-link {
@@ -172,7 +174,7 @@
     color: var(--pb-color-neutral-500);
     text-decoration: none;
     cursor: pointer;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
   }
   .back-link:hover {
     color: var(--pb-color-neutral-700);
@@ -181,7 +183,7 @@
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="screen">
+<div class="self-exclusion">
 
   <div class="step-bar">
     <a class="step-back">&larr;</a>
@@ -195,7 +197,7 @@
 
   <div class="content">
     <h1 class="heading">How long would you like to pause?</h1>
-    <p class="explanation">Choose a duration that feels right. You can always reach out to support to adjust this later.</p>
+    <p class="explanation">Choose a duration that feels right. Support can adjust this later.</p>
 
     <div class="duration-list">
       <div class="duration-option">

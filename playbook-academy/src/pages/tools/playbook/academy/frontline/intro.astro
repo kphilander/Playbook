@@ -1,0 +1,140 @@
+---
+import AcademyLayout from '../../../../../layouts/AcademyLayout.astro';
+
+const programId = 'frontline';
+const programName = 'Frontline';
+const firstModuleHref = `/tools/playbook/academy/${programId}/00-player-tools-walkthrough`;
+
+const slides = [
+  {
+    heading: 'Frontline Training',
+    body: 'You are the first point of contact for players. How you use tools, choose words, and navigate conversations shapes the entire player experience. This program gives you the skills to do it well.',
+    caption: 'Customer-facing staff are where the brand comes alive. This training makes you confident in every interaction.',
+    icon: 'users',
+  },
+  {
+    heading: 'Tools, Language, Conversations',
+    body: 'Three skills you will master: walking players through the six player tools, using stigma-free language naturally, and handling real conversations including the ones that get tricky.',
+    caption: 'Each module builds on the last. By the end, you will handle any player interaction with confidence.',
+    icon: 'chat',
+  },
+  {
+    heading: "Let's Begin",
+    body: '3 modules. About 55 minutes. Builds on the All Employees foundation. Score 80% or higher on each quiz to earn your Frontline Engagement Certificate.',
+    caption: 'Prerequisite: All Employees program. If you have not completed it, start there first.',
+    icon: 'rocket',
+  },
+];
+---
+
+<AcademyLayout title={`Intro — ${programName}`} programId={programId} programName={programName}>
+  <div class="relative min-h-[calc(100vh-3.5rem)] overflow-hidden" id="intro-deck" data-total={slides.length}>
+    {slides.map((slide, i) => (
+      <section
+        class:list={[
+          'intro-slide absolute inset-0 flex items-center justify-center transition-opacity duration-500',
+          i === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0',
+        ]}
+        data-slide={i}
+        aria-hidden={i !== 0 ? 'true' : undefined}
+      >
+        <div class={`w-full min-h-full flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 ${i === slides.length - 1 ? 'bg-gradient-to-br from-navy via-navy-dark to-navy' : i % 2 === 0 ? 'bg-gradient-to-br from-navy to-navy-dark' : 'bg-gradient-to-br from-navy-dark to-navy'}`}>
+          <div class="max-w-2xl mx-auto text-center">
+            <div class="mb-8">
+              {slide.icon === 'users' && (
+                <svg class="w-16 h-16 mx-auto text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+                </svg>
+              )}
+              {slide.icon === 'chat' && (
+                <svg class="w-16 h-16 mx-auto text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                </svg>
+              )}
+              {slide.icon === 'rocket' && (
+                <svg class="w-16 h-16 mx-auto text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.58-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                </svg>
+              )}
+            </div>
+            <h2 class="text-3xl sm:text-5xl font-heading font-black text-white mb-6">{slide.heading}</h2>
+            <p class="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-xl mx-auto">{slide.body}</p>
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg px-4 py-3 inline-block">
+              <p class="text-sm text-white/60 font-heading italic">{slide.caption}</p>
+            </div>
+            {i === slides.length - 1 && (
+              <div class="mt-10">
+                <a href={firstModuleHref} class="inline-flex items-center gap-2 px-8 py-4 bg-teal hover:bg-teal-dark text-navy font-heading font-bold text-lg rounded-xl transition-colors shadow-lg shadow-teal/20">
+                  Start Program
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                </a>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <div class="fixed bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
+      <button id="prev-btn" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed" disabled aria-label="Previous slide">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+      </button>
+      <div class="flex items-center gap-2" id="dot-indicators">
+        {slides.map((_, i) => (
+          <button
+            class:list={[
+              'w-2.5 h-2.5 rounded-full transition-all duration-300',
+              i === 0 ? 'bg-teal w-6' : 'bg-white/40 hover:bg-white/60',
+            ]}
+            data-dot={i}
+            aria-label={`Go to slide ${i + 1}`}
+          />
+        ))}
+      </div>
+      <button id="next-btn" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 transition-colors flex items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed" aria-label="Next slide">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+      </button>
+    </div>
+  </div>
+
+  <script is:inline>
+    (function() {
+      const deck = document.getElementById('intro-deck');
+      const total = parseInt(deck?.dataset.total || '0');
+      let current = 0;
+
+      function goTo(index) {
+        if (index < 0 || index >= total) return;
+        const slides = document.querySelectorAll('.intro-slide');
+        const dots = document.querySelectorAll('[data-dot]');
+        slides.forEach((s, i) => {
+          s.classList.toggle('opacity-100', i === index);
+          s.classList.toggle('opacity-0', i !== index);
+          s.classList.toggle('z-10', i === index);
+          s.classList.toggle('z-0', i !== index);
+          s.setAttribute('aria-hidden', i !== index ? 'true' : 'false');
+        });
+        dots.forEach((d, i) => {
+          d.classList.toggle('bg-teal', i === index);
+          d.classList.toggle('w-6', i === index);
+          d.classList.toggle('bg-white/40', i !== index);
+          d.classList.toggle('w-2.5', i !== index);
+        });
+        current = index;
+        document.getElementById('prev-btn').disabled = current === 0;
+        document.getElementById('next-btn').disabled = current === total - 1;
+      }
+
+      document.getElementById('prev-btn')?.addEventListener('click', () => goTo(current - 1));
+      document.getElementById('next-btn')?.addEventListener('click', () => goTo(current + 1));
+      document.querySelectorAll('[data-dot]').forEach(dot => {
+        dot.addEventListener('click', () => goTo(parseInt(dot.dataset.dot)));
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') goTo(current - 1);
+        if (e.key === 'ArrowRight') goTo(current + 1);
+      });
+    })();
+  </script>
+</AcademyLayout>

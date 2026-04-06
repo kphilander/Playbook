@@ -1,0 +1,2340 @@
+---
+import AcademyLayout from '../../../../../layouts/AcademyLayout.astro';
+import LessonSidebar from '../../../../../components/academy/LessonSidebar.astro';
+import Quiz from '../../../../../components/academy/Quiz.astro';
+import { getCollection, render } from 'astro:content';
+
+const programId = 'executive-briefing';
+const programName = 'Executive Briefing';
+const basePath = `/tools/playbook/academy/${programId}`;
+const { module: moduleSlug } = Astro.params;
+
+const allModules = await getCollection('academy', (entry) => {
+  return entry.data.program_id === programId && entry.data.content_type === 'training-module';
+});
+const modules = allModules.sort((a, b) => (a.data.module_number ?? 0) - (b.data.module_number ?? 0));
+
+const currentIndex = modules.findIndex((m) => m.id.endsWith(`/${moduleSlug}.md`) || m.id.endsWith(`/${moduleSlug}`));
+const currentModule = modules[currentIndex];
+
+if (!currentModule) {
+  return Astro.redirect(basePath);
+}
+
+// Render markdown to HTML string, then parse into structured sections
+const { Content } = await render(currentModule);
+const prevModule = currentIndex > 0 ? modules[currentIndex - 1] : null;
+const nextModule = currentIndex < modules.length - 1 ? modules[currentIndex + 1] : null;
+const data = currentModule.data;
+
+function getSlug(id: string): string {
+  const parts = id.split('/');
+  return parts[parts.length - 1].replace(/\.md$/, '');
+}
+
+export async function getStaticPaths() {
+  const modules = await getCollection('academy', (entry) => {
+    return entry.data.program_id === 'executive-briefing' && entry.data.content_type === 'training-module';
+  });
+  return modules.map((mod) => ({
+    params: { module: mod.id.split('/').pop()!.replace(/\.md$/, '') },
+  }));
+}
+
+// Brand configuration for placeholder resolution
+const brandConfig: Record<string, string> = {
+  'PROGRAM_NAME': 'Playbook',
+  'PLAYBOOK_REPO': 'https://github.com/kphilander/Branding',
+  'HELPLINE_NUMBER': '1-800-522-4700',
+  'MIN_AGE': '21',
+  'SELF_EXCLUSION_PROCESS_URL': '#',
+  'CLINICAL_SERVICES_URL': '#',
+  'PRODUCT_TRAINING_URL': '#',
+  'MANDATORY_TRAINING_URL': '#',
+  'INTERNAL_POLICIES_URL': '#',
+};
+
+// Server-side placeholder resolution for title and objectives
+function resolve(text: string): string {
+  let result = text;
+  for (const [key, value] of Object.entries(brandConfig)) {
+    result = result.replace(new RegExp(`\\{\\{${key}\\}\\}`, 'g'), value);
+  }
+  return result;
+}
+
+const resolvedTitle = resolve(data.title);
+const resolvedObjectives = (data.learning_objectives || []).map((o: string) => resolve(o));
+---
+
+<AcademyLayout title={`${resolvedTitle} — ${programName}`} programId={programId} programName={programName}>
+  <!-- Module Header -->
+  <section class="bg-navy text-white py-10 lg:py-12">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-80">
+      <a href={basePath} class="inline-flex items-center gap-1 text-white/60 hover:text-white text-sm font-heading mb-4 transition-colors">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        {programName}
+      </a>
+      <div class="flex items-center gap-3 mb-3">
+        <span class="px-3 py-1 bg-teal/20 text-teal rounded-full text-xs font-heading font-bold uppercase tracking-wider">
+          Module {(data.module_number ?? 0) + 1}
+        </span>
+        {data.duration_minutes && (
+          <span class="text-white/50 text-sm font-heading">~{data.duration_minutes} min</span>
+        )}
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-heading font-black leading-tight">{resolvedTitle}</h1>
+    </div>
+  </section>
+
+  <!-- Learning Objectives bar -->
+  {resolvedObjectives.length > 0 && (
+    <section class="bg-teal/5 dark:bg-teal/10 border-b border-teal/20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-80 py-5">
+        <div class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-teal mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <div>
+            <h2 class="text-sm font-heading font-bold text-navy dark:text-white uppercase tracking-wider mb-2">Learning Objectives</h2>
+            <ul class="space-y-1">
+              {resolvedObjectives.map((obj: string) => (
+                <li class="text-sm text-n700 dark:text-n300 flex items-start gap-2">
+                  <span class="text-teal mt-1">&#8226;</span>
+                  <span>{obj}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Main content area with sidebar -->
+  <div class="flex min-h-screen">
+    <!-- Desktop sidebar -->
+    <aside id="lesson-sidebar" class="hidden lg:block fixed left-0 top-14 w-72 h-[calc(100vh-3.5rem)] bg-white dark:bg-navy border-r border-n100 dark:border-navy-light overflow-y-auto z-40 transition-all duration-300">
+      <!-- Sidebar header with collapse toggle -->
+      <button id="sidebar-toggle" class="w-full flex items-center justify-between p-4 border-b border-n100 dark:border-navy-light hover:bg-n50 dark:hover:bg-navy-light transition-colors" aria-label="Toggle sidebar" aria-expanded="true">
+        <div class="text-left">
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-n500 dark:text-n300 mb-1">Lessons</p>
+          <p class="text-sm font-heading font-bold text-navy dark:text-white truncate">{resolvedTitle}</p>
+        </div>
+        <svg id="sidebar-chevron" class="w-4 h-4 text-n400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </button>
+      <!-- Progress bar in sidebar -->
+      <div class="px-4 py-2 border-b border-n100 dark:border-navy-light">
+        <div class="flex items-center justify-between mb-1">
+          <span class="text-xs text-n500 dark:text-n400 font-heading" id="sidebar-progress-label">0% complete</span>
+        </div>
+        <div class="h-1.5 bg-n100 dark:bg-navy-light rounded-full overflow-hidden">
+          <div id="sidebar-progress-bar" class="h-full bg-teal rounded-full transition-all duration-500" style="width: 0%"></div>
+        </div>
+      </div>
+      <nav aria-label="Module lessons" class="p-2" id="sidebar-nav">
+        <!-- Populated by client-side script after sections are identified -->
+      </nav>
+    </aside>
+
+    <!-- Noscript fallback -->
+    <noscript>
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-80 py-6">
+        <div class="rounded-lg border border-orange/30 bg-orange/5 p-4 text-sm text-n700 dark:text-n300">
+          This module requires JavaScript for interactive exercises and assessments. Please enable JavaScript to continue.
+        </div>
+      </div>
+    </noscript>
+
+    <!-- Content -->
+    <article id="module-content" class="flex-1 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-80 py-12 pb-24 lg:pb-12">
+      <div class="module-prose">
+        <Content />
+      </div>
+    </article>
+  </div>
+
+  <!-- Prev / Next Navigation -->
+  <nav class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 lg:ml-80 pb-16" aria-label="Module navigation">
+    <div class="flex items-stretch gap-4 border-t border-n100 dark:border-navy-light pt-8">
+      {prevModule ? (
+        <a href={`${basePath}/${getSlug(prevModule.id)}`}
+           class="flex-1 group p-4 rounded-xl border border-n100 dark:border-navy-light hover:shadow-md transition-all text-left">
+          <div class="text-xs text-n500 dark:text-n300 font-heading uppercase tracking-wider mb-1">Previous</div>
+          <div class="font-heading font-bold text-navy dark:text-white group-hover:text-teal transition-colors">{resolve(prevModule.data.title)}</div>
+        </a>
+      ) : <div class="flex-1" />}
+      {nextModule ? (
+        <a href={`${basePath}/${getSlug(nextModule.id)}`}
+           class="flex-1 group p-4 rounded-xl border border-n100 dark:border-navy-light hover:shadow-md transition-all text-right">
+          <div class="text-xs text-n500 dark:text-n300 font-heading uppercase tracking-wider mb-1">Next</div>
+          <div class="font-heading font-bold text-navy dark:text-white group-hover:text-teal transition-colors">{resolve(nextModule.data.title)}</div>
+        </a>
+      ) : (
+        <a href={basePath}
+           class="flex-1 group p-4 rounded-xl border border-teal/30 bg-teal/5 hover:shadow-md transition-all text-right">
+          <div class="text-xs text-teal font-heading uppercase tracking-wider mb-1">Completed</div>
+          <div class="font-heading font-bold text-navy dark:text-white group-hover:text-teal transition-colors">Back to {programName}</div>
+        </a>
+      )}
+    </div>
+  </nav>
+
+  <!-- Mobile bottom stepper (matches existing academy: navy/95 backdrop-blur) -->
+  <div id="mobile-stepper" class="lg:hidden fixed bottom-0 left-0 right-0 bg-navy/95 backdrop-blur-sm z-40 px-4 py-2.5 flex items-center justify-between shadow-lg">
+    <button id="stepper-prev" class="p-2 rounded-lg hover:bg-white/10 transition-colors text-white/50 disabled:opacity-30" disabled aria-label="Previous section">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+    <button id="stepper-counter" class="px-4 py-1.5 rounded-lg bg-white/10 text-sm font-heading font-semibold text-white hover:bg-white/20 transition-colors" aria-label="Open lesson list" aria-expanded="false">
+      Section 1
+    </button>
+    <button id="stepper-next" class="p-2 rounded-lg hover:bg-white/10 transition-colors text-white" aria-label="Next section">
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile lesson drawer (slides up from bottom) -->
+  <div id="mobile-drawer-overlay" class="lg:hidden fixed inset-0 bg-black/50 z-50 hidden" aria-hidden="true"></div>
+  <div id="mobile-drawer" class="lg:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-navy rounded-t-2xl z-50 transform translate-y-full transition-transform duration-300 max-h-[70vh] overflow-y-auto shadow-2xl" role="dialog" aria-label="Lesson navigation" aria-hidden="true">
+    <div class="sticky top-0 bg-white dark:bg-navy border-b border-n100 dark:border-navy-light p-4 flex items-center justify-between">
+      <h3 class="font-heading font-bold text-navy dark:text-white text-sm">Lessons</h3>
+      <button id="drawer-close" class="p-1.5 rounded-lg hover:bg-n50 dark:hover:bg-navy-light transition-colors" aria-label="Close">
+        <svg class="w-5 h-5 text-n500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="p-3" id="drawer-nav">
+      <!-- Populated by client-side script -->
+    </nav>
+  </div>
+
+  <div class="lg:hidden h-16"></div>
+
+  <!-- Audio players are built inline by section 9 script below -->
+</AcademyLayout>
+
+<!-- Post-render: resolve placeholders, style content, build sidebar, wire interactivity -->
+<script is:inline define:vars={{ brandConfig, programId, moduleSlug: moduleSlug || '', nextModuleUrl: nextModule ? `${basePath}/${getSlug(nextModule.id)}` : '', nextModuleTitle: nextModule ? resolve(nextModule.data.title) : '' }}>
+(function() {
+  const content = document.querySelector('.module-prose');
+  if (!content) return;
+
+  // ─── 0. Resolve {{PLACEHOLDER}} tokens ───
+  const html = content.innerHTML;
+  let resolved = html;
+  for (const [key, value] of Object.entries(brandConfig)) {
+    resolved = resolved.replace(new RegExp('\\{\\{' + key + '\\}\\}', 'g'), value);
+    // Also fix URL-encoded versions
+    resolved = resolved.replace(new RegExp('%7B%7B' + key + '%7D%7D', 'g'), value);
+  }
+  if (resolved !== html) content.innerHTML = resolved;
+
+  // Also resolve in the page title
+  document.title = document.title.replace(/\{\{PROGRAM_NAME\}\}/g, brandConfig.PROGRAM_NAME || 'Playbook');
+
+  // ─── 0b. Hide operator notes and quick-scan index ───
+  content.querySelectorAll('h2').forEach(h => {
+    const text = h.textContent || '';
+    if (text.match(/Quick.scan index/i) || text.match(/^Learning objectives$/i)) {
+      // Hide the quick-scan table and learning objectives (rendered in header bar)
+      let next = h.nextElementSibling;
+      h.style.display = 'none';
+      while (next && next.tagName !== 'H2') {
+        next.style.display = 'none';
+        next = next.nextElementSibling;
+      }
+    }
+  });
+
+  // Hide operator note blockquotes (they contain "Operator note")
+  content.querySelectorAll('blockquote').forEach(bq => {
+    const firstStrong = bq.querySelector('strong');
+    if (firstStrong && firstStrong.textContent.match(/Operator (note|integration point)/i)) {
+      bq.style.display = 'none';
+    }
+  });
+
+  // Hide the "Program: ... | Duration: ... | Prerequisites: ..." line
+  content.querySelectorAll('p').forEach(p => {
+    if (p.textContent.match(/^\s*Program:.*Duration:.*Prerequisites:/)) {
+      p.style.display = 'none';
+    }
+  });
+
+  // ─── 0c. Hide quiz answers from view and build interactive quiz ───
+  let quizSection = null;
+  content.querySelectorAll('h2').forEach(h => {
+    if (h.textContent.match(/Module Test/i)) {
+      quizSection = h;
+    }
+  });
+
+  if (quizSection) {
+    // Extract quiz questions before hiding
+    const questions = [];
+    let qNode = quizSection.nextElementSibling;
+    let currentQ = null;
+
+    while (qNode && qNode.tagName !== 'H2') {
+      const text = qNode.textContent || '';
+
+      if (qNode.tagName === 'H3' && text.match(/Question \d+/)) {
+        if (currentQ) questions.push(currentQ);
+        currentQ = { stem: '', options: [], correct: '', explanation: '', index: questions.length + 1 };
+      } else if (currentQ) {
+        if (text.match(/^\s*Stem:/)) {
+          currentQ.stem = text.replace(/^\s*Stem:\s*/, '');
+        } else if (text.match(/^\s*Correct:\s*/)) {
+          currentQ.correct = text.replace(/^\s*Correct:\s*/, '').trim();
+        } else if (text.match(/^\s*Explanation:/)) {
+          currentQ.explanation = text.replace(/^\s*Explanation:\s*/, '');
+        } else if (qNode.tagName === 'TABLE') {
+          // Extract options from table rows
+          qNode.querySelectorAll('tbody tr').forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length >= 2) {
+              currentQ.options.push({
+                letter: (cells[0].textContent || '').trim(),
+                text: (cells[1].textContent || '').trim()
+              });
+            }
+          });
+        }
+      }
+      qNode = qNode.nextElementSibling;
+    }
+    if (currentQ) questions.push(currentQ);
+
+    // Hide all raw quiz content
+    let node = quizSection.nextElementSibling;
+    while (node && node.tagName !== 'H2') {
+      node.style.display = 'none';
+      node = node.nextElementSibling;
+    }
+
+    // Build interactive quiz UI
+    if (questions.length > 0) {
+      const quizContainer = document.createElement('div');
+      quizContainer.className = 'mt-6 rounded-xl border border-n100 dark:border-navy-light overflow-hidden';
+      quizContainer.innerHTML = `
+        <div class="bg-navy px-5 py-4 flex items-center justify-between">
+          <div>
+            <span class="text-xs font-heading font-bold uppercase tracking-wider text-orange">Module Test</span>
+            <h3 class="font-heading font-bold text-lg mt-0.5" style="color: white;">Knowledge Check</h3>
+          </div>
+          <span class="text-sm text-white/60 font-heading">${questions.length} questions · 80% to pass</span>
+        </div>
+        <div class="p-5 sm:p-6 bg-white dark:bg-navy" id="quiz-body"></div>
+      `;
+
+      const quizBody = quizContainer.querySelector('#quiz-body');
+      let answered = 0, correct = 0;
+      let currentQuizQ = 0; // tracks which question is currently visible
+      const threshold = Math.ceil(questions.length * 0.8);
+
+      // Add a progress indicator at top of quiz body
+      const quizProgressEl = document.createElement('div');
+      quizProgressEl.className = 'flex items-center justify-between mb-6 pb-3 border-b border-n100 dark:border-navy-light';
+      quizProgressEl.innerHTML = '<span class="text-sm font-heading font-semibold text-navy dark:text-white" id="quiz-step-label">Question 1 of ' + questions.length + '</span><div class="flex gap-1" id="quiz-step-dots"></div>';
+      quizBody.appendChild(quizProgressEl);
+      var quizStepDots = quizProgressEl.querySelector('#quiz-step-dots');
+      for (var di = 0; di < questions.length; di++) {
+        var dot = document.createElement('span');
+        dot.className = 'w-2.5 h-2.5 rounded-full ' + (di === 0 ? 'bg-teal' : 'bg-n200 dark:bg-navy-light');
+        dot.dataset.dotIndex = String(di);
+        quizStepDots.appendChild(dot);
+      }
+
+      function updateQuizStepUI() {
+        var label = document.getElementById('quiz-step-label');
+        if (label) label.textContent = 'Question ' + (currentQuizQ + 1) + ' of ' + questions.length;
+        quizStepDots.querySelectorAll('span').forEach(function(d, i) {
+          d.className = 'w-2.5 h-2.5 rounded-full ' + (i < answered ? 'bg-success' : i === currentQuizQ ? 'bg-teal' : 'bg-n200 dark:bg-navy-light');
+        });
+      }
+
+      questions.forEach((q, qi) => {
+        const qDiv = document.createElement('div');
+        qDiv.className = 'quiz-question mb-8 pb-8 border-b border-n100 dark:border-navy-light last:border-0 last:mb-0 last:pb-0' + (qi > 0 ? ' quiz-hidden' : '');
+        qDiv.innerHTML = `
+          <p class="text-xs text-n500 dark:text-n300 font-heading uppercase tracking-wider mb-2">Question ${qi + 1} of ${questions.length}</p>
+          <p class="text-navy dark:text-white font-heading font-semibold text-lg mb-4">${q.stem}</p>
+          <div class="space-y-2 quiz-options-${qi}" role="radiogroup" aria-label="Answer options for question ${qi + 1}"></div>
+          <div class="quiz-feedback-${qi} hidden rounded-lg p-4 mt-3 text-sm" tabindex="-1"></div>
+        `;
+
+        const optContainer = qDiv.querySelector(`.quiz-options-${qi}`);
+        q.options.forEach(opt => {
+          const btn = document.createElement('button');
+          const isCorrect = opt.letter === q.correct;
+          btn.className = 'quiz-option flex items-start gap-3 w-full text-left px-4 py-3 rounded-lg border-2 border-n100 dark:border-navy-light bg-white dark:bg-navy-dark hover:border-teal transition-all';
+          btn.setAttribute('role', 'radio');
+          btn.setAttribute('aria-checked', 'false');
+          btn.innerHTML = `
+            <span class="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center border-2 border-n300 text-xs font-heading font-bold text-n500 mt-0.5">${opt.letter}</span>
+            <span class="text-sm leading-relaxed text-n700 dark:text-n300">${opt.text}</span>
+          `;
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (btn.dataset.answered) return;
+            // Mark all options in this question as answered
+            optContainer.querySelectorAll('button').forEach(b => { b.dataset.answered = 'true'; b.style.pointerEvents = 'none'; b.disabled = true; b.setAttribute('tabindex', '-1'); b.setAttribute('aria-checked', 'false'); });
+            btn.setAttribute('aria-checked', 'true');
+
+            if (isCorrect) {
+              btn.classList.remove('border-n100', 'dark:border-navy-light');
+              btn.classList.add('border-success', 'bg-success/10');
+              correct++;
+            } else {
+              btn.classList.remove('border-n100', 'dark:border-navy-light');
+              btn.classList.add('border-danger', 'bg-danger/10');
+              // Highlight correct answer
+              optContainer.querySelectorAll('button').forEach(b => {
+                if (b.querySelector('span').textContent.trim() === q.correct) {
+                  b.classList.remove('border-n100', 'dark:border-navy-light');
+                  b.classList.add('border-success', 'bg-success/10');
+                }
+              });
+            }
+            answered++;
+
+            // Show feedback and move focus to it
+            const fb = qDiv.querySelector(`.quiz-feedback-${qi}`);
+            if (fb) {
+              fb.classList.remove('hidden');
+              fb.className = `quiz-feedback-${qi} rounded-lg p-4 mt-3 text-sm ${isCorrect ? 'bg-success/10 border border-success/20' : 'bg-danger/10 border border-danger/20'}`;
+              fb.setAttribute('tabindex', '-1');
+              var quizLead = q.explanation.split('.')[0];
+              var quizRemainder = q.explanation.slice(quizLead.length).replace(/^[.\s]+/, '');
+              fb.innerHTML = `<p class="font-heading font-semibold mb-1 ${isCorrect ? 'text-success' : 'text-danger'}">${isCorrect ? quizLead + '.' : 'Not quite \u2014 ' + quizLead.toLowerCase() + '.'}</p>${quizRemainder ? '<p class="text-n700 dark:text-n300">' + quizRemainder + '</p>' : ''}`;
+              fb.focus({ preventScroll: true });
+            }
+
+            // Update step dots
+            updateQuizStepUI();
+
+            // Show "Next Question" button if not the last question
+            if (qi < questions.length - 1) {
+              var nextBtn = document.createElement('button');
+              nextBtn.className = 'quiz-next-btn';
+              nextBtn.innerHTML = 'Next Question <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>';
+              qDiv.appendChild(nextBtn);
+              nextBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // Hide current question, show next
+                qDiv.classList.add('quiz-hidden');
+                currentQuizQ = qi + 1;
+                var allQDivs = quizBody.querySelectorAll('.quiz-question');
+                if (allQDivs[qi + 1]) {
+                  allQDivs[qi + 1].classList.remove('quiz-hidden');
+                  allQDivs[qi + 1].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+                updateQuizStepUI();
+              });
+            }
+
+            // Check if all answered — show results
+            if (answered === questions.length) {
+              const score = Math.round((correct / questions.length) * 100);
+              const passed = score >= 80;
+              const results = document.createElement('div');
+              results.className = 'text-center py-8 mt-4 border-t border-n100 dark:border-navy-light';
+              // Build question-by-question review for retry
+              let reviewHtml = '';
+              if (!passed) {
+                reviewHtml = '<div class="text-left mt-6 mb-4 space-y-3">';
+                reviewHtml += '<p class="text-xs font-heading font-bold uppercase tracking-wider text-n500 mb-2">Question Review</p>';
+                quizBody.querySelectorAll('.quiz-question').forEach((qd, qi) => {
+                  const wasCorrect = qd.querySelector('.border-success [aria-checked="true"]') || (qd.querySelector('[aria-checked="true"]')?.classList.contains('border-success'));
+                  const fb = qd.querySelector('[class*="quiz-feedback"]');
+                  const fbText = fb ? fb.textContent.substring(0, 120) : '';
+                  reviewHtml += '<div class="flex items-start gap-2 p-2.5 rounded-lg ' + (wasCorrect ? 'bg-success/5' : 'bg-danger/5') + '">';
+                  reviewHtml += '<span class="flex-shrink-0 mt-0.5">' + (wasCorrect ? '<svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>' : '<svg class="w-4 h-4 text-danger" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>') + '</span>';
+                  reviewHtml += '<span class="text-xs text-n700 dark:text-n300">Q' + (qi+1) + ': ' + fbText + '</span></div>';
+                });
+                reviewHtml += '</div>';
+              }
+
+              // Celebration confetti for pass
+              let confettiHtml = '';
+              if (passed) {
+                const colors = ['#00D4AA', '#FF6B35', '#4A90D9', '#FFD700', '#FF3D6E'];
+                for (let ci = 0; ci < 20; ci++) {
+                  const left = Math.random() * 80 + 10;
+                  const delay = Math.random() * 0.5;
+                  const color = colors[ci % colors.length];
+                  confettiHtml += '<div class="confetti-piece" style="left:' + left + '%;top:20%;background:' + color + ';animation-delay:' + delay + 's;"></div>';
+                }
+              }
+
+              results.innerHTML = `
+                <div style="position:relative;overflow:hidden;padding:2rem 0;">
+                  ${confettiHtml}
+                  <div class="celebrate-badge w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center ${passed ? 'bg-success' : 'bg-danger'}" style="box-shadow: 0 4px 20px ${passed ? 'rgba(0,200,83,0.3)' : 'rgba(255,61,0,0.2)'};">
+                    <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="${passed ? 'M5 13l4 4L19 7' : 'M6 18L18 6M6 6l12 12'}" />
+                    </svg>
+                  </div>
+                  <h3 class="text-2xl font-heading font-bold text-navy dark:text-white mb-2">${passed ? 'Module Complete!' : 'Not quite \u2014 review and retry'}</h3>
+                  <p class="text-navy dark:text-white font-heading font-semibold text-lg mb-1">${correct} of ${questions.length} correct (${score}%)</p>
+                  <p class="text-n500 text-sm mb-4">${passed ? 'You\u2019ve mastered the core concepts. This module is marked complete.' : 'You need ' + threshold + ' of ' + questions.length + ' correct (80%) to pass. Review the feedback below.'}</p>
+                  ${passed ? '<div class="inline-block px-4 py-2 bg-success/10 text-success rounded-full text-sm font-heading font-bold mb-6"><svg class="w-4 h-4 inline mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Badge earned: Welcome to Playbook</div>' : ''}
+                  ${reviewHtml}
+                  ${passed && nextModuleUrl ? '<a href="' + nextModuleUrl + '" class="inline-block px-6 py-3 bg-teal text-navy font-heading font-bold rounded-lg hover:bg-teal-light transition-colors shadow-md hover:shadow-lg">Continue to ' + (nextModuleTitle ? nextModuleTitle : 'Next Module') + ' &rarr;</a>' : ''}
+                  ${passed && !nextModuleUrl ? '<a href="' + ('/tools/playbook/academy/' + programId) + '" class="inline-block px-6 py-3 bg-teal text-navy font-heading font-bold rounded-lg hover:bg-teal-light transition-colors shadow-md hover:shadow-lg">Back to Program &rarr;</a>' : ''}
+                  ${!passed ? '<button id="quiz-retry-btn" class="px-6 py-3 bg-orange text-white font-heading font-bold rounded-lg hover:bg-orange-dark transition-colors shadow-md hover:shadow-lg">Review &amp; Retry Quiz</button>' : ''}
+                </div>
+              `;
+              // Reveal all questions so review panel context is visible, remove next buttons
+              quizBody.querySelectorAll('.quiz-question').forEach(qd => qd.classList.remove('quiz-hidden'));
+              quizBody.querySelectorAll('.quiz-next-btn').forEach(b => b.remove());
+              // Hide step progress header since quiz is complete
+              if (quizProgressEl) quizProgressEl.style.display = 'none';
+
+              quizBody.appendChild(results);
+              requestAnimationFrame(() => {
+                results.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              });
+
+              // Retry handler
+              if (!passed) {
+                results.querySelector('#quiz-retry-btn')?.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  answered = 0; correct = 0;
+                  quizBody.querySelectorAll('button.quiz-option').forEach(b => {
+                    b.classList.remove('border-success', 'bg-success/10', 'border-danger', 'bg-danger/10');
+                    b.classList.add('border-n100', 'dark:border-navy-light');
+                    b.style.pointerEvents = ''; b.dataset.answered = '';
+                    b.disabled = false; b.removeAttribute('tabindex'); b.setAttribute('aria-checked', 'false'); b.removeAttribute('aria-disabled');
+                  });
+                  quizBody.querySelectorAll('[class*="quiz-feedback"]').forEach(f => f.classList.add('hidden'));
+                  // Remove "Next Question" buttons from previous attempt
+                  quizBody.querySelectorAll('.quiz-next-btn').forEach(b => b.remove());
+                  // Reset one-at-a-time: hide all except first, reset step counter
+                  currentQuizQ = 0;
+                  quizBody.querySelectorAll('.quiz-question').forEach((qd, qi) => {
+                    if (qi > 0) qd.classList.add('quiz-hidden');
+                    else qd.classList.remove('quiz-hidden');
+                  });
+                  if (quizProgressEl) quizProgressEl.style.display = '';
+                  updateQuizStepUI();
+                  results.remove();
+                  const firstQ = quizBody.querySelector('.quiz-question');
+                  (firstQ || quizBody.firstElementChild || quizContainer).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+              }
+
+              if (passed) {
+                // Lock progress bar at 100%
+                moduleIsCompleted = true;
+                const _sp = document.getElementById('sidebar-progress-bar');
+                const _sl = document.getElementById('sidebar-progress-label');
+                if (_sp) _sp.style.width = '100%';
+                if (_sl) _sl.textContent = '100% complete';
+                try {
+                  const key = 'playbook-academy-' + programId;
+                  const progress = JSON.parse(localStorage.getItem(key) || '{}');
+                  if (!progress[moduleSlug]) progress[moduleSlug] = { completedLessons: [], completed: false, quizScore: null, totalLessons: 0 };
+                  progress[moduleSlug].quizScore = score;
+                  progress[moduleSlug].completed = true;
+                  progress[moduleSlug].lastAccessed = new Date().toISOString();
+                  localStorage.setItem(key, JSON.stringify(progress));
+                  window.dispatchEvent(new CustomEvent('progress-updated'));
+                } catch(e) {}
+              }
+            }
+          });
+          optContainer.appendChild(btn);
+        });
+        quizBody.appendChild(qDiv);
+      });
+
+      // Insert quiz after the h2
+      quizSection.parentNode.insertBefore(quizContainer, quizSection.nextSibling);
+    }
+  }
+
+  // ─── 0d. Convert exercise tables into interactive click-to-match ───
+  content.querySelectorAll('h3').forEach(h3 => {
+    const text = h3.textContent || '';
+    if (!text.match(/^Exercise:/)) return;
+
+    const exerciseName = text.replace(/^Exercise:\s*/, '');
+    // Find the type, instructions, and table
+    let node = h3.nextElementSibling;
+    let type = 'drag-and-drop';
+    let instructions = '';
+    let tableEl = null;
+
+    while (node && node.tagName !== 'H2' && node.tagName !== 'H3') {
+      const t = node.textContent || '';
+      if (t.match(/^\s*Type:/)) type = t.replace(/^\s*Type:\s*/, '').trim();
+      else if (t.match(/^\s*Instructions:/)) instructions = t.replace(/^\s*Instructions:\s*/, '').trim();
+      else if (node.tagName === 'TABLE') { tableEl = node; break; }
+      node = node.nextElementSibling;
+    }
+
+    // Skip generative exercise types — handled by section 0d2
+    if (/rewrite|fill-in|reflection|audit/i.test(type)) return;
+
+    if (!tableEl) return;
+
+    // Extract items from table (skip header row)
+    const items = [];
+    const categories = new Set();
+    tableEl.querySelectorAll('tbody tr').forEach(row => {
+      const cells = row.querySelectorAll('td');
+      if (cells.length >= 4) {
+        const item = {
+          content: (cells[0].textContent || '').trim(),
+          correct: (cells[1].textContent || '').trim(),
+          fbCorrect: (cells[2].textContent || '').trim(),
+          fbIncorrect: (cells[3].textContent || '').trim(),
+        };
+        items.push(item);
+        categories.add(item.correct);
+      }
+    });
+
+    if (items.length === 0) return;
+
+    // Hide the raw exercise elements
+    h3.style.display = 'none';
+    let hideNode = h3.nextElementSibling;
+    while (hideNode && hideNode.tagName !== 'H2' && hideNode.tagName !== 'H3') {
+      hideNode.style.display = 'none';
+      hideNode = hideNode.nextElementSibling;
+    }
+
+    // Build interactive exercise UI
+    const wrapper = document.createElement('div');
+    wrapper.className = 'my-8 rounded-xl border border-n100 dark:border-navy-light overflow-hidden';
+    wrapper.dataset.hasExercise = '';
+    wrapper.dataset.exerciseId = 'exercise-' + exerciseName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+    const catArray = Array.from(categories);
+    let completedCount = 0;
+
+    wrapper.innerHTML = `
+      <div class="bg-navy px-5 py-4 flex items-center justify-between">
+        <div>
+          <span class="text-xs font-heading font-bold uppercase tracking-wider text-teal">Interactive Exercise</span>
+          <h3 class="font-heading font-bold text-lg mt-0.5" style="color: white;">${exerciseName}</h3>
+        </div>
+        <span class="text-sm text-white/60 font-heading exercise-score">${completedCount} of ${items.length}</span>
+      </div>
+      <div class="p-5 bg-white dark:bg-navy-dark">
+        <p class="text-sm text-n500 dark:text-n400 mb-4">${instructions || 'Drag items to a category, or click a button to match.'}</p>
+        <div class="category-drop-zones grid gap-3 mb-5" style="grid-template-columns: repeat(${catArray.length}, 1fr);"></div>
+        <div class="exercise-items space-y-3"></div>
+      </div>
+    `;
+
+    // Build category drop zones
+    const dropZonesContainer = wrapper.querySelector('.category-drop-zones');
+    const dropZones = {};
+    catArray.forEach(cat => {
+      const zone = document.createElement('div');
+      zone.className = 'category-drop-zone';
+      zone.dataset.category = cat;
+      zone.innerHTML = `<div class="category-drop-zone-label">${cat}</div><div class="drop-zone-items"></div>`;
+      zone.addEventListener('dragover', (e) => { e.preventDefault(); zone.classList.add('drag-over'); });
+      zone.addEventListener('dragleave', () => { zone.classList.remove('drag-over'); });
+      zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        zone.classList.remove('drag-over');
+        const dragIdx = parseInt(e.dataTransfer.getData('text/plain'), 10);
+        if (isNaN(dragIdx)) return;
+        const dragItem = items[dragIdx];
+        const itemDiv = itemsContainer.querySelectorAll(':scope > div.exercise-item')[dragIdx];
+        if (!itemDiv || itemDiv.dataset.answered) return;
+        itemDiv.dataset.answered = 'true';
+        const isCorrect = cat === dragItem.correct;
+        completedCount++;
+        scoreLabel.textContent = `${completedCount} of ${items.length}`;
+        const chip = document.createElement('span');
+        const chipContent = dragItem.content.replace(/^[""\u201C\u201D\u2018\u2019'`]+|[""\u201C\u201D\u2018\u2019'`]+$/g, '');
+        chip.className = 'dropped-item ' + (isCorrect ? 'correct' : 'incorrect');
+        chip.textContent = chipContent.length > 40 ? chipContent.slice(0, 37) + '\u2026' : chipContent;
+        zone.querySelector('.drop-zone-items').appendChild(chip);
+        itemDiv.setAttribute('draggable', 'false');
+        itemDiv.style.opacity = '0.5';
+        itemDiv.style.cursor = 'default';
+        const btnContainer = itemDiv.querySelector('.cat-buttons');
+        const feedback = itemDiv.querySelector('.exercise-item-feedback');
+        btnContainer.querySelectorAll('button').forEach(b => { b.style.pointerEvents = 'none'; b.disabled = true; b.setAttribute('tabindex', '-1'); b.setAttribute('aria-disabled', 'true'); b.setAttribute('aria-checked', 'false'); b.classList.add('opacity-50'); });
+        btnContainer.querySelectorAll('button').forEach(b => {
+          if (b.textContent === cat) {
+            b.setAttribute('aria-checked', 'true');
+            if (isCorrect) { b.classList.remove('opacity-50'); b.classList.add('border-success', 'bg-success/10', 'text-success'); }
+            else { b.classList.remove('opacity-50'); b.classList.add('border-danger', 'bg-danger/10', 'text-danger'); }
+          }
+          if (!isCorrect && b.textContent === dragItem.correct) { b.classList.remove('opacity-50'); b.classList.add('border-success', 'bg-success/10', 'text-success'); }
+        });
+        feedback.classList.remove('hidden');
+        feedback.className = `exercise-item-feedback mt-3 rounded-lg p-3 text-sm ${isCorrect ? 'bg-success/10 border border-success/20' : 'bg-danger/10 border border-danger/20'}`;
+        if (isCorrect) itemDiv.classList.add('exercise-item-correct');
+        const fbText = isCorrect ? dragItem.fbCorrect : dragItem.fbIncorrect;
+        const teachLead = fbText.split(/[.!]/)[0];
+        const fbRemainder = fbText.slice(teachLead.length).replace(/^[.!\s]+/, '');
+        feedback.innerHTML = `<p class="font-heading font-semibold mb-1 ${isCorrect ? 'text-success' : 'text-danger'}">${teachLead}.</p>${fbRemainder ? '<p class="text-n700 dark:text-n300">' + fbRemainder + '</p>' : ''}`;
+        try {
+          const key = 'playbook-academy-' + programId;
+          const progress = JSON.parse(localStorage.getItem(key) || '{}');
+          if (!progress[moduleSlug]) progress[moduleSlug] = { completedLessons: [], completed: false, quizScore: null, totalLessons: 0 };
+          const exId = 'exercise-' + exerciseName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          if (!progress[moduleSlug].completedLessons.includes(exId)) progress[moduleSlug].completedLessons.push(exId);
+          localStorage.setItem(key, JSON.stringify(progress));
+          window.dispatchEvent(new CustomEvent('exercise-completed', { detail: { exerciseId: exId } }));
+        } catch(e) {}
+        try {
+          var exStateKey = 'playbook-academy-ex-state-' + moduleSlug;
+          var exState = JSON.parse(localStorage.getItem(exStateKey) || '{}');
+          var exId2 = wrapper.dataset.exerciseId;
+          if (!exState[exId2]) exState[exId2] = {};
+          exState[exId2][dragIdx] = { chosen: cat, isCorrect: isCorrect };
+          localStorage.setItem(exStateKey, JSON.stringify(exState));
+        } catch(e) {}
+      });
+      dropZonesContainer.appendChild(zone);
+      dropZones[cat] = zone;
+    });
+
+    const itemsContainer = wrapper.querySelector('.exercise-items');
+    const scoreLabel = wrapper.querySelector('.exercise-score');
+
+    items.forEach((item, idx) => {
+      const itemDiv = document.createElement('div');
+      itemDiv.className = 'exercise-item p-4 rounded-lg border border-n100 dark:border-navy-light bg-n50 dark:bg-navy';
+      itemDiv.setAttribute('draggable', 'true');
+      itemDiv.addEventListener('dragstart', (e) => {
+        if (itemDiv.dataset.answered) { e.preventDefault(); return; }
+        e.dataTransfer.setData('text/plain', String(idx));
+        e.dataTransfer.effectAllowed = 'move';
+        itemDiv.style.opacity = '0.5';
+      });
+      itemDiv.addEventListener('dragend', () => {
+        if (!itemDiv.dataset.answered) itemDiv.style.opacity = '1';
+      });
+      const displayContent = item.content.replace(/^[""\u201C\u201D\u2018\u2019'`]+|[""\u201C\u201D\u2018\u2019'`]+$/g, '');
+      itemDiv.innerHTML = `
+        <p class="text-sm font-semibold text-navy dark:text-white mb-3">\u201C${displayContent}\u201D</p>
+        <div class="flex flex-wrap gap-2 cat-buttons" role="radiogroup" aria-label="Category choices"></div>
+        <div class="exercise-item-feedback hidden mt-3 rounded-lg p-3 text-sm" tabindex="-1"></div>
+      `;
+
+      const btnContainer = itemDiv.querySelector('.cat-buttons');
+      const feedback = itemDiv.querySelector('.exercise-item-feedback');
+
+      catArray.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'px-3 py-1.5 rounded-lg border border-n300 dark:border-navy-light text-xs font-heading font-semibold text-navy dark:text-n300 hover:border-teal hover:bg-teal/5 transition-all';
+        btn.setAttribute('role', 'radio');
+        btn.setAttribute('aria-checked', 'false');
+        btn.textContent = cat;
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (itemDiv.dataset.answered) return;
+          itemDiv.dataset.answered = 'true';
+          const isCorrect = cat === item.correct;
+          completedCount++;
+          scoreLabel.textContent = `${completedCount} of ${items.length}`;
+
+          // Persist exercise completion
+          try {
+            const key = 'playbook-academy-' + programId;
+            const progress = JSON.parse(localStorage.getItem(key) || '{}');
+            if (!progress[moduleSlug]) progress[moduleSlug] = { completedLessons: [], completed: false, quizScore: null, totalLessons: 0 };
+            const exId = 'exercise-' + exerciseName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            if (!progress[moduleSlug].completedLessons.includes(exId)) {
+              progress[moduleSlug].completedLessons.push(exId);
+            }
+            localStorage.setItem(key, JSON.stringify(progress));
+            window.dispatchEvent(new CustomEvent('exercise-completed', { detail: { exerciseId: exId } }));
+          } catch(e) {}
+
+          // Persist individual item answer for visual restore
+          try {
+            var exStateKey = 'playbook-academy-ex-state-' + moduleSlug;
+            var exState = JSON.parse(localStorage.getItem(exStateKey) || '{}');
+            var exId2 = wrapper.dataset.exerciseId;
+            if (!exState[exId2]) exState[exId2] = {};
+            exState[exId2][idx] = { chosen: cat, isCorrect: isCorrect };
+            localStorage.setItem(exStateKey, JSON.stringify(exState));
+          } catch(e) {}
+
+          // Disable all buttons for this item
+          btnContainer.querySelectorAll('button').forEach(b => { b.style.pointerEvents = 'none'; b.disabled = true; b.setAttribute('tabindex', '-1'); b.setAttribute('aria-disabled', 'true'); b.setAttribute('aria-checked', 'false'); b.classList.add('opacity-50'); });
+          btn.setAttribute('aria-checked', 'true');
+
+          // Highlight selected
+          if (isCorrect) {
+            btn.classList.remove('border-n300', 'dark:border-navy-light', 'opacity-50');
+            btn.classList.add('border-success', 'bg-success/10', 'text-success');
+          } else {
+            btn.classList.remove('border-n300', 'dark:border-navy-light', 'opacity-50');
+            btn.classList.add('border-danger', 'bg-danger/10', 'text-danger');
+            // Highlight correct
+            btnContainer.querySelectorAll('button').forEach(b => {
+              if (b.textContent === item.correct) {
+                b.classList.remove('opacity-50');
+                b.classList.add('border-success', 'bg-success/10', 'text-success');
+              }
+            });
+          }
+
+          // Show feedback and move focus to it
+          feedback.classList.remove('hidden');
+          feedback.className = `exercise-item-feedback mt-3 rounded-lg p-3 text-sm ${isCorrect ? 'bg-success/10 border border-success/20' : 'bg-danger/10 border border-danger/20'}`;
+          feedback.setAttribute('tabindex', '-1');
+          const fbText = isCorrect ? item.fbCorrect : item.fbIncorrect;
+          const teachLead = fbText.split(/[.!]/)[0];
+          const fbRemainder = fbText.slice(teachLead.length).replace(/^[.!\s]+/, '');
+          feedback.innerHTML = `<p class="font-heading font-semibold mb-1 ${isCorrect ? 'text-success' : 'text-danger'}">${teachLead}.</p>${fbRemainder ? '<p class="text-n700 dark:text-n300">' + fbRemainder + '</p>' : ''}`;
+          feedback.focus({ preventScroll: true });
+        });
+        btnContainer.appendChild(btn);
+      });
+
+      itemsContainer.appendChild(itemDiv);
+    });
+
+    // Restore saved exercise state on reload
+    try {
+      var exStateKey = 'playbook-academy-ex-state-' + moduleSlug;
+      var exState = JSON.parse(localStorage.getItem(exStateKey) || '{}');
+      var savedItems = exState[wrapper.dataset.exerciseId];
+      if (savedItems) {
+        var allItemDivs = itemsContainer.querySelectorAll(':scope > div.exercise-item');
+        items.forEach(function(item, idx) {
+          var saved = savedItems[idx];
+          if (!saved) return;
+          var itemDiv = allItemDivs[idx];
+          if (!itemDiv) return;
+          itemDiv.dataset.answered = 'true';
+          itemDiv.setAttribute('draggable', 'false');
+          itemDiv.style.opacity = '0.5';
+          itemDiv.style.cursor = 'default';
+          completedCount++;
+          var btnContainer = itemDiv.querySelector('.cat-buttons');
+          var feedback = itemDiv.querySelector('.exercise-item-feedback');
+          if (dropZones[saved.chosen]) {
+            var chip = document.createElement('span');
+            var chipContent = item.content.replace(/^[""\u201C\u201D\u2018\u2019'`]+|[""\u201C\u201D\u2018\u2019'`]+$/g, '');
+            chip.className = 'dropped-item ' + (saved.isCorrect ? 'correct' : 'incorrect');
+            chip.textContent = chipContent.length > 40 ? chipContent.slice(0, 37) + '\u2026' : chipContent;
+            dropZones[saved.chosen].querySelector('.drop-zone-items').appendChild(chip);
+          }
+          btnContainer.querySelectorAll('button').forEach(function(b) {
+            b.style.pointerEvents = 'none'; b.disabled = true;
+            b.setAttribute('tabindex', '-1'); b.setAttribute('aria-disabled', 'true');
+            b.setAttribute('aria-checked', 'false'); b.classList.add('opacity-50');
+            if (b.textContent === saved.chosen) {
+              b.setAttribute('aria-checked', 'true');
+              if (saved.isCorrect) {
+                b.classList.remove('border-n300', 'dark:border-navy-light', 'opacity-50');
+                b.classList.add('border-success', 'bg-success/10', 'text-success');
+              } else {
+                b.classList.remove('border-n300', 'dark:border-navy-light', 'opacity-50');
+                b.classList.add('border-danger', 'bg-danger/10', 'text-danger');
+              }
+            }
+            if (!saved.isCorrect && b.textContent === item.correct) {
+              b.classList.remove('opacity-50');
+              b.classList.add('border-success', 'bg-success/10', 'text-success');
+            }
+          });
+          var fbText = saved.isCorrect ? item.fbCorrect : item.fbIncorrect;
+          var teachLead = fbText.split(/[.!]/)[0];
+          var fbRemainder = fbText.slice(teachLead.length).replace(/^[.!\s]+/, '');
+          feedback.classList.remove('hidden');
+          feedback.className = 'exercise-item-feedback mt-3 rounded-lg p-3 text-sm ' + (saved.isCorrect ? 'bg-success/10 border border-success/20' : 'bg-danger/10 border border-danger/20');
+          feedback.innerHTML = '<p class="font-heading font-semibold mb-1 ' + (saved.isCorrect ? 'text-success' : 'text-danger') + '">' + teachLead + '.</p>' + (fbRemainder ? '<p class="text-n700 dark:text-n300">' + fbRemainder + '</p>' : '');
+        });
+        scoreLabel.textContent = completedCount + ' of ' + items.length;
+      }
+    } catch(e) {}
+
+    // Insert after the hidden elements
+    h3.parentNode.insertBefore(wrapper, h3);
+  });
+
+  // ─── 0d2. Handle generative exercises (rewrite / fill-in-blank / reflection / audit-rewrite) ───
+  content.querySelectorAll('h3').forEach(h3 => {
+    const text = h3.textContent || '';
+    if (!text.match(/^Exercise:/i)) return;
+    // Skip if already processed by section 0d (would be hidden)
+    if (h3.style.display === 'none') return;
+
+    // Scan siblings for type, instructions, table, model answer blockquote
+    let node = h3.nextElementSibling;
+    let type = '';
+    let fillinInstructions = '';
+    let modelAnswer = '';
+    let tableEl = null;
+    let fillinListHtml = '';
+    let extraContentHtml = '';
+    while (node && node.tagName !== 'H2' && node.tagName !== 'H3') {
+      const t = node.textContent || '';
+      if (t.match(/^\s*\*?\*?Type:\*?\*?\s*/)) type = t.replace(/^\s*\*?\*?Type:\*?\*?\s*/, '').trim().toLowerCase();
+      else if (t.match(/^\s*\*?\*?Instructions:\*?\*?\s*/)) fillinInstructions = t.replace(/^\s*\*?\*?Instructions:\*?\*?\s*/, '').trim();
+      else if (node.tagName === 'OL') fillinListHtml = node.outerHTML;
+      else if (node.tagName === 'UL' && !tableEl) extraContentHtml += node.outerHTML;
+      if (node.tagName === 'TABLE') tableEl = node;
+      if (node.tagName === 'BLOCKQUOTE') {
+        var bqText = node.textContent || '';
+        if (bqText.match(/Model answer:/i)) {
+          modelAnswer = bqText.replace(/^\s*\*?\*?Model answer:\*?\*?\s*/i, '').trim();
+        }
+      }
+      if (node.tagName === 'P' && !t.match(/^\s*\*?\*?Type:/) && !t.match(/^\s*\*?\*?Instructions:/) && type && fillinInstructions && !tableEl) {
+        extraContentHtml += node.outerHTML;
+      }
+      node = node.nextElementSibling;
+    }
+
+    var isGenerative = /rewrite|fill-in|reflection|audit/i.test(type);
+    // Also treat as generative if table has fillable 2-column format (Component | Your Answer)
+    var hasFillableTable = false;
+    if (tableEl && !isGenerative) {
+      tableEl.querySelectorAll('tbody tr').forEach(function(row) {
+        var cells = row.querySelectorAll('td');
+        if (cells.length === 2) {
+          var val = (cells[1].textContent || '').trim();
+          if (val === '' || val.match(/^\(.*\)$/) || val.match(/^\*?\(.*\)\*?$/) || val.match(/Write this|Your /i)) {
+            hasFillableTable = true;
+          }
+        }
+      });
+    }
+    if (!isGenerative && !modelAnswer && !hasFillableTable) return;
+
+    const exerciseName = text.replace(/^Exercise:\s*/, '');
+
+    var originalText = '';
+    var modelRewrite = '';
+    var rewriteRows = [];
+    if (tableEl && /rewrite|audit/i.test(type)) {
+      tableEl.querySelectorAll('tbody tr').forEach(function(row) {
+        var cells = row.querySelectorAll('td');
+        if (cells.length >= 3) {
+          rewriteRows.push({
+            original: (cells[0].textContent || '').trim(),
+            audit: (cells[1].textContent || '').trim(),
+            model: (cells[2].textContent || '').trim(),
+            feedback: cells.length >= 4 ? (cells[3].textContent || '').trim() : ''
+          });
+        } else if (cells.length === 2) {
+          rewriteRows.push({
+            original: (cells[0].textContent || '').trim(),
+            audit: '',
+            model: (cells[1].textContent || '').trim(),
+            feedback: ''
+          });
+        }
+      });
+      if (rewriteRows.length > 0) {
+        originalText = rewriteRows.map(function(r) { return r.original; }).join('\n\n');
+        modelRewrite = rewriteRows.map(function(r) { return r.model; }).join('\n\n');
+      }
+    }
+
+    var fillableTableHtml = '';
+    if (tableEl && /fill-in|scenario/i.test(type) && !(/rewrite|audit/i.test(type))) {
+      var rows = tableEl.querySelectorAll('tbody tr');
+      var hasFillable = false;
+      rows.forEach(function(row) {
+        var cells = row.querySelectorAll('td');
+        if (cells.length === 2) {
+          var val = (cells[1].textContent || '').trim();
+          if (val === '' || val.match(/^\(.*\)$/) || val.match(/^\*?\(.*\)\*?$/) || val.match(/Write this|Your /i)) {
+            hasFillable = true;
+          }
+        }
+      });
+      if (hasFillable) {
+        fillableTableHtml = '<div class="mb-4 text-sm text-n700 dark:text-n300 overflow-x-auto">' + tableEl.outerHTML + '</div>';
+      }
+    }
+
+    if (!modelAnswer && modelRewrite) {
+      modelAnswer = modelRewrite;
+    }
+
+    let hideNode = h3.nextElementSibling;
+    h3.style.display = 'none';
+    while (hideNode && hideNode.tagName !== 'H2' && hideNode.tagName !== 'H3') {
+      hideNode.style.display = 'none';
+      hideNode = hideNode.nextElementSibling;
+    }
+
+    var exerciseLabel = /rewrite|audit/i.test(type) ? 'Rewrite Exercise' : /reflection/i.test(type) ? 'Reflection Exercise' : 'Writing Exercise';
+    var placeholder = /rewrite|audit/i.test(type) ? 'Type your rewrite here...' : 'Type your answer here...';
+    var fillinPrompt = fillinInstructions || (/rewrite|audit/i.test(type) ? 'Rewrite the text below, then compare with the model answer.' : 'Write your answer below.');
+
+    var contextHtml = '';
+    if (rewriteRows.length > 0) {
+      contextHtml = '<div class="mb-4 space-y-3">';
+      rewriteRows.forEach(function(r, i) {
+        contextHtml += '<div class="p-4 rounded-lg bg-n50 dark:bg-navy border border-n100 dark:border-navy-light">';
+        if (rewriteRows.length > 1) contextHtml += '<p class="text-xs font-heading font-bold uppercase tracking-wider text-n500 dark:text-n400 mb-2">Item ' + (i + 1) + '</p>';
+        contextHtml += '<p class="text-sm text-n700 dark:text-n300 leading-relaxed"><span class="font-heading font-semibold text-navy dark:text-white">Original: </span>' + r.original + '</p>';
+        if (r.audit) contextHtml += '<p class="text-sm text-n500 dark:text-n400 mt-2 leading-relaxed"><span class="font-heading font-semibold">Issues: </span>' + r.audit + '</p>';
+        if (r.feedback) contextHtml += '<p class="text-xs text-n400 dark:text-n500 mt-2 italic">' + r.feedback + '</p>';
+        contextHtml += '</div>';
+      });
+      contextHtml += '</div>';
+    }
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'my-8 rounded-xl border border-n100 dark:border-navy-light overflow-hidden';
+    wrapper.innerHTML = `
+      <div class="bg-navy px-5 py-4">
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-teal">${exerciseLabel}</span>
+        <h3 class="font-heading font-bold text-lg mt-0.5" style="color: white;">${exerciseName}</h3>
+      </div>
+      <div class="p-5 bg-white dark:bg-navy-dark">
+        <p class="text-sm text-n500 dark:text-n400 mb-4">${fillinPrompt}</p>
+        ${fillinListHtml ? '<div class="mb-4 text-sm text-n700 dark:text-n300 space-y-1 pl-1">' + fillinListHtml + '</div>' : ''}
+        ${extraContentHtml ? '<div class="mb-4 text-sm text-n700 dark:text-n300">' + extraContentHtml + '</div>' : ''}
+        ${fillableTableHtml}
+        ${contextHtml}
+        <textarea class="fillin-textarea w-full p-3 rounded-lg border border-n100 dark:border-navy-light bg-n50 dark:bg-navy text-n700 dark:text-n300 text-sm leading-relaxed min-h-[120px] focus:outline-none focus:ring-2 focus:ring-teal" placeholder="${placeholder}"></textarea>
+        <div class="flex items-center justify-between mt-3">
+          <button class="fillin-reveal px-4 py-2 rounded-lg bg-n300 text-white font-heading font-semibold text-sm cursor-not-allowed transition-colors" disabled aria-disabled="true">Write your answer first</button>
+          <span class="fillin-wordcount text-xs text-n400 font-heading">0 words</span>
+        </div>
+        <div class="fillin-model hidden mt-4 p-4 rounded-lg bg-teal/5 dark:bg-teal/10 border border-teal/20">
+          <p class="text-xs font-heading font-semibold uppercase tracking-wider text-teal mb-2">Model Answer</p>
+          <p class="text-n700 dark:text-n300 text-sm leading-relaxed whitespace-pre-line">${modelAnswer || 'Model answer not available.'}</p>
+        </div>
+      </div>
+    `;
+
+    const textarea = wrapper.querySelector('.fillin-textarea');
+    const revealBtn = wrapper.querySelector('.fillin-reveal');
+    const wordcount = wrapper.querySelector('.fillin-wordcount');
+    const MIN_WORDS = 10;
+
+    var fillinKey = 'playbook-academy-fillin-' + moduleSlug + '-' + exerciseName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+    textarea?.addEventListener('input', function() {
+      const words = this.value.trim().split(/\s+/).filter(w => w.length > 0).length;
+      if (wordcount) wordcount.textContent = words + ' word' + (words !== 1 ? 's' : '');
+      if (words >= MIN_WORDS) {
+        revealBtn.disabled = false;
+        revealBtn.setAttribute('aria-disabled', 'false');
+        revealBtn.className = 'fillin-reveal px-4 py-2 rounded-lg bg-navy text-white font-heading font-semibold text-sm hover:bg-navy-light transition-colors cursor-pointer';
+        revealBtn.textContent = 'Compare with Model Answer';
+      } else {
+        revealBtn.disabled = true;
+        revealBtn.setAttribute('aria-disabled', 'true');
+        revealBtn.className = 'fillin-reveal px-4 py-2 rounded-lg bg-n300 text-white font-heading font-semibold text-sm cursor-not-allowed transition-colors';
+        revealBtn.textContent = (MIN_WORDS - words) + ' more word' + ((MIN_WORDS - words) !== 1 ? 's' : '') + ' needed';
+      }
+      try {
+        var saved = JSON.parse(localStorage.getItem(fillinKey) || '{}');
+        saved.text = this.value;
+        localStorage.setItem(fillinKey, JSON.stringify(saved));
+      } catch(e) {}
+    });
+
+    revealBtn?.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (this.disabled) return;
+      const model = wrapper.querySelector('.fillin-model');
+      if (model) {
+        model.classList.toggle('hidden');
+        this.textContent = model.classList.contains('hidden') ? 'Compare with Model Answer' : 'Hide Model Answer';
+        try {
+          var saved = JSON.parse(localStorage.getItem(fillinKey) || '{}');
+          saved.revealed = !model.classList.contains('hidden');
+          localStorage.setItem(fillinKey, JSON.stringify(saved));
+        } catch(e) {}
+      }
+    });
+
+    try {
+      var savedFillin = JSON.parse(localStorage.getItem(fillinKey) || '{}');
+      if (savedFillin.text) {
+        textarea.value = savedFillin.text;
+        textarea.dispatchEvent(new Event('input'));
+        if (savedFillin.revealed) {
+          var model = wrapper.querySelector('.fillin-model');
+          if (model) {
+            model.classList.remove('hidden');
+            revealBtn.textContent = 'Hide Model Answer';
+          }
+        }
+      }
+    } catch(e) {}
+
+    h3.parentNode.insertBefore(wrapper, h3);
+  });
+
+  // ─── 0d3. Final sweep: hide any remaining raw tables/paragraphs leaked from exercises & quizzes ───
+  // Exercise sections: any <table> still visible inside a region between an Exercise: h3 and the next h2/h3
+  content.querySelectorAll('h3').forEach(function(h3) {
+    if (!(h3.textContent || '').match(/^Exercise:/i)) return;
+    var sib = h3.nextElementSibling;
+    while (sib && sib.tagName !== 'H2' && sib.tagName !== 'H3') {
+      if (sib.tagName === 'TABLE' && sib.style.display !== 'none') sib.style.display = 'none';
+      sib = sib.nextElementSibling;
+    }
+  });
+  // Quiz / Module Test section: hide any remaining visible tables and answer-key paragraphs
+  // IMPORTANT: skip the dynamically-created interactive quiz container (has #quiz-body inside)
+  if (quizSection) {
+    var qSib = quizSection.nextElementSibling;
+    while (qSib && qSib.tagName !== 'H2') {
+      if (qSib.style.display !== 'none' && !qSib.querySelector('#quiz-body')) qSib.style.display = 'none';
+      qSib = qSib.nextElementSibling;
+    }
+  }
+  // Hide stray answer-key paragraphs anywhere in the prose (Stem:, Correct:, Explanation:, Assesses:, Source:)
+  content.querySelectorAll('p').forEach(function(p) {
+    var t = p.textContent || '';
+    if (/^\s*(Stem:|Correct:|Explanation:|Assesses:|Source:)/i.test(t)) {
+      p.style.display = 'none';
+    }
+  });
+
+  // ─── 0e. Hide narrator stage directions ───
+  content.querySelectorAll('blockquote').forEach(bq => {
+    bq.innerHTML = bq.innerHTML
+      .replace(/\[transition slide\]/gi, '')
+      .replace(/\[show [^\]]+\]/gi, '')
+      .replace(/\[pause\]/gi, '')
+      .replace(/\[key point\]/gi, '')
+      .replace(/\[highlight [^\]]+\]/gi, '')
+      .replace(/\[transition to [^\]]+\]/gi, '')
+      .replace(/\[transition\]/gi, '')
+      .replace(/\[read [^\]]+\]/gi, '')
+      .replace(/\[walk through [^\]]+\]/gi, '');
+  });
+
+  // ─── 0f. Transform "Failure N:" paragraphs into visual cards ───
+  (function() {
+    const failurePattern = /^\s*\*\*Failure\s+(\d+):\s*([^.*]+)\.?\*\*\s*(.*)/s;
+    const paragraphs = Array.from(content.querySelectorAll('p'));
+    let failureCards = [];
+    let failureInsertPoint = null;
+
+    paragraphs.forEach(p => {
+      const html = p.innerHTML || '';
+      const match = html.match(/^<strong>Failure\s+(\d+):\s*([^.<]+)\.?<\/strong>\s*([\s\S]*)/);
+      if (match) {
+        failureCards.push({ num: match[1], title: match[2].trim(), body: match[3].trim() });
+        if (!failureInsertPoint) failureInsertPoint = p;
+        p.style.display = 'none';
+      }
+    });
+
+    if (failureCards.length > 0 && failureInsertPoint) {
+      const grid = document.createElement('div');
+      grid.className = 'numbered-card-grid cols-2';
+      failureCards.forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'numbered-card card-failure';
+        card.innerHTML = `
+          <div class="numbered-card-number">${c.num}</div>
+          <div class="numbered-card-title">${c.title}</div>
+          <div class="numbered-card-body">${c.body}</div>
+        `;
+        grid.appendChild(card);
+      });
+      failureInsertPoint.parentNode.insertBefore(grid, failureInsertPoint);
+    }
+  })();
+
+  // ─── 0g. Transform "Premise N:" paragraphs into visual cards ───
+  (function() {
+    const paragraphs = Array.from(content.querySelectorAll('p'));
+    let premiseCards = [];
+    let premiseInsertPoint = null;
+
+    paragraphs.forEach(p => {
+      const html = p.innerHTML || '';
+      const match = html.match(/^<strong>Premise\s+(\d+):\s*([^.<]+)\.?<\/strong>\s*([\s\S]*)/);
+      if (match) {
+        premiseCards.push({ num: match[1], title: match[2].trim(), body: match[3].trim() });
+        if (!premiseInsertPoint) premiseInsertPoint = p;
+        p.style.display = 'none';
+      }
+    });
+
+    if (premiseCards.length > 0 && premiseInsertPoint) {
+      const grid = document.createElement('div');
+      grid.className = 'numbered-card-grid cols-2';
+      premiseCards.forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'numbered-card card-premise';
+        card.innerHTML = `
+          <div class="numbered-card-number">${c.num}</div>
+          <div class="numbered-card-title">${c.title}</div>
+          <div class="numbered-card-body">${c.body}</div>
+        `;
+        grid.appendChild(card);
+      });
+      premiseInsertPoint.parentNode.insertBefore(grid, premiseInsertPoint);
+    }
+  })();
+
+  // ─── 0h. Transform "Pillar N:" paragraphs into visual cards ───
+  (function() {
+    const paragraphs = Array.from(content.querySelectorAll('p'));
+    let pillarCards = [];
+    let pillarInsertPoint = null;
+
+    paragraphs.forEach(p => {
+      const html = p.innerHTML || '';
+      // Match: **Pillar 1: Open — "No fine print."**
+      const match = html.match(/^<strong>Pillar\s+(\d+):\s*(\w+)\s*[\u2014—-]+\s*[\u201C""]([^"\u201D\u201C]+)[\u201D""]\.?<\/strong>\s*([\s\S]*)/);
+      if (match) {
+        pillarCards.push({ num: match[1], name: match[2].trim(), tagline: match[3].trim(), body: match[4].trim() });
+        if (!pillarInsertPoint) pillarInsertPoint = p;
+        p.style.display = 'none';
+      }
+    });
+
+    if (pillarCards.length > 0 && pillarInsertPoint) {
+      const grid = document.createElement('div');
+      grid.className = 'numbered-card-grid cols-2';
+      const pillarIcons = {
+        'Open': '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>',
+        'Social': '<svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>'
+      };
+      pillarCards.forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'numbered-card card-pillar';
+        card.innerHTML = `
+          <div class="numbered-card-number">${pillarIcons[c.name] || c.num}</div>
+          <div class="pillar-tagline">${c.tagline}</div>
+          <div class="numbered-card-title">${c.name}</div>
+          <div class="numbered-card-body">${c.body}</div>
+        `;
+        grid.appendChild(card);
+      });
+      pillarInsertPoint.parentNode.insertBefore(grid, pillarInsertPoint);
+    }
+  })();
+
+  // ─── 0i. Transform "What X is NOT" list into visual callout ───
+  (function() {
+    const lists = Array.from(content.querySelectorAll('ul'));
+    lists.forEach(ul => {
+      const prevEl = ul.previousElementSibling;
+      if (!prevEl) return;
+      const prevText = prevEl.innerHTML || '';
+      if (!prevText.match(/is\s+NOT/i)) return;
+
+      const items = Array.from(ul.querySelectorAll('li'));
+      if (items.length === 0) return;
+
+      const callout = document.createElement('div');
+      callout.className = 'not-list';
+      items.forEach(li => {
+        const row = document.createElement('div');
+        row.className = 'not-list-item';
+        row.innerHTML = `
+          <svg class="not-list-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
+          <span>${li.innerHTML}</span>
+        `;
+        callout.appendChild(row);
+      });
+      ul.style.display = 'none';
+      ul.parentNode.insertBefore(callout, ul);
+    });
+  })();
+
+  // ─── 0j. Wrap comparison tables (Two gaps, one system) with polished wrapper ───
+  (function() {
+    content.querySelectorAll('table').forEach(t => {
+      const headers = Array.from(t.querySelectorAll('th'));
+      const headerText = headers.map(h => (h.textContent || '').trim()).join(' ');
+      if (headerText.match(/Engagement Gap/) && headerText.match(/Knowledge Gap/)) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'comparison-table-wrapper';
+        t.parentNode.insertBefore(wrapper, t);
+        wrapper.appendChild(t);
+      }
+    });
+  })();
+
+  // ─── 0k. Transform "Before We Begin" into interactive warm-up poll ───
+  (function() {
+    let beforeH2 = null;
+    content.querySelectorAll('h2').forEach(h => {
+      if ((h.textContent || '').match(/Before We Begin/i)) beforeH2 = h;
+    });
+    if (!beforeH2) return;
+
+    // Hide all content until next h2
+    let node = beforeH2.nextElementSibling;
+    const toHide = [beforeH2];
+    while (node && node.tagName !== 'H2') {
+      toHide.push(node);
+      node = node.nextElementSibling;
+    }
+    toHide.forEach(n => n.style.display = 'none');
+
+    const poll = document.createElement('div');
+    poll.className = 'warmup-poll';
+    poll.setAttribute('role', 'group');
+    poll.setAttribute('aria-label', 'Warm-up poll');
+    poll.innerHTML = `
+      <div class="warmup-poll-header">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <h4>Before We Begin</h4>
+      </div>
+      <div class="warmup-poll-body">
+        <p class="warmup-poll-question">What comes to mind when you hear <strong>"responsible gambling"</strong>?</p>
+        <button class="warmup-poll-option" data-poll="helpline" aria-pressed="false">
+          <span class="poll-radio"></span>
+          <span>A helpline number in small print</span>
+        </button>
+        <button class="warmup-poll-option" data-poll="warning" aria-pressed="false">
+          <span class="poll-radio"></span>
+          <span>A warning label or age gate</span>
+        </button>
+        <button class="warmup-poll-option" data-poll="checkbox" aria-pressed="false">
+          <span class="poll-radio"></span>
+          <span>A compliance checkbox nobody reads</span>
+        </button>
+        <button class="warmup-poll-option" data-poll="other" aria-pressed="false">
+          <span class="poll-radio"></span>
+          <span>Something else entirely</span>
+        </button>
+        <div class="warmup-poll-reveal" style="display:none;">
+          <p style="margin:0;"><strong class="warmup-poll-reveal-lead">Most people pick one of the first three.</strong> That\u2019s the problem we\u2019re here to solve. Whatever your answer, hold that thought \u2014 this module will challenge every assumption behind it.</p>
+        </div>
+      </div>
+    `;
+
+    beforeH2.parentNode.insertBefore(poll, beforeH2);
+
+    var pollStorageKey = 'playbook-academy-poll-' + moduleSlug;
+
+    // Wire poll buttons
+    poll.querySelectorAll('.warmup-poll-option').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        poll.querySelectorAll('.warmup-poll-option').forEach(b => {
+          b.classList.remove('selected');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        this.classList.add('selected');
+        this.setAttribute('aria-pressed', 'true');
+        const reveal = poll.querySelector('.warmup-poll-reveal');
+        if (reveal) reveal.style.display = '';
+        // Persist selection
+        try { localStorage.setItem(pollStorageKey, this.dataset.poll); } catch(e) {}
+      });
+    });
+
+    // Restore saved poll selection on page load
+    try {
+      var savedPoll = localStorage.getItem(pollStorageKey);
+      if (savedPoll) {
+        var savedBtn = poll.querySelector('.warmup-poll-option[data-poll="' + savedPoll + '"]');
+        if (savedBtn) {
+          savedBtn.classList.add('selected');
+          savedBtn.setAttribute('aria-pressed', 'true');
+          var reveal = poll.querySelector('.warmup-poll-reveal');
+          if (reveal) reveal.style.display = '';
+        }
+      }
+    } catch(e) {}
+  })();
+
+  // ─── 0l. Add section icons to h2 headings ───
+  (function() {
+    const iconMap = {
+      'engagement gap': { bg: 'rgba(255, 61, 0, 0.1)', color: '#FF3D00', svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>' },
+      'knowledge gap': { bg: 'rgba(0, 212, 170, 0.1)', color: '#00A888', svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>' },
+      'two pillars': { bg: 'rgba(27, 40, 56, 0.1)', color: '#1B2838', svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>' },
+    };
+    content.querySelectorAll('h2').forEach(h2 => {
+      const text = (h2.textContent || '').toLowerCase();
+      for (const [key, config] of Object.entries(iconMap)) {
+        if (text.includes(key)) {
+          const icon = document.createElement('span');
+          icon.className = 'section-icon';
+          icon.style.cssText = `background:${config.bg};`;
+          icon.innerHTML = `<svg class="w-5 h-5" style="color:${config.color}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">${config.svg}</svg>`;
+          h2.insertBefore(icon, h2.firstChild);
+          h2.style.display = 'flex';
+          h2.style.alignItems = 'center';
+          break;
+        }
+      }
+    });
+  })();
+
+  // ─── 0m. Wrap "Reflection prompt:" / "Second prompt:" paragraphs in styled containers ───
+  (function() {
+    const paragraphs = Array.from(content.querySelectorAll('p'));
+    let promptGroup = [];
+    let insertPoint = null;
+
+    paragraphs.forEach(p => {
+      const html = p.innerHTML || '';
+      if (html.match(/^<strong>Reflection prompt:<\/strong>/) || html.match(/^<strong>Second prompt:<\/strong>/)) {
+        promptGroup.push(p);
+        if (!insertPoint) insertPoint = p;
+      }
+    });
+
+    if (promptGroup.length > 0 && insertPoint) {
+      const container = document.createElement('div');
+      container.className = 'reflection-prompt-container';
+      container.setAttribute('role', 'note');
+      container.setAttribute('aria-label', 'Reflection prompts');
+      container.innerHTML = `
+        <div class="reflection-prompt-header">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          <span>Reflection</span>
+        </div>
+        <div class="reflection-prompt-body"></div>
+      `;
+      const body = container.querySelector('.reflection-prompt-body');
+      promptGroup.forEach(p => {
+        const clone = p.cloneNode(true);
+        clone.style.display = '';
+        clone.className = 'reflection-prompt-item';
+        body.appendChild(clone);
+        p.style.display = 'none';
+      });
+      insertPoint.parentNode.insertBefore(container, insertPoint);
+    }
+  })();
+
+  // ─── 1. Style the prose content ───
+  content.querySelectorAll('h1').forEach(h => {
+    h.classList.add('text-3xl', 'font-heading', 'font-bold', 'text-navy', 'dark:text-white', 'mb-6');
+    h.style.display = 'none';
+  });
+
+  content.querySelectorAll('h2').forEach(h => {
+    h.classList.add('text-2xl', 'font-heading', 'font-bold', 'text-navy', 'dark:text-white', 'mt-10', 'mb-6', 'pb-3', 'border-b', 'border-n100', 'dark:border-navy-light', 'scroll-mt-20');
+  });
+
+  content.querySelectorAll('h3').forEach(h => {
+    h.classList.add('text-lg', 'font-heading', 'font-semibold', 'text-navy', 'dark:text-white', 'mt-8', 'mb-4');
+  });
+
+  content.querySelectorAll('p').forEach(p => {
+    p.classList.add('text-n700', 'dark:text-n300', 'leading-relaxed', 'mb-4');
+  });
+
+  // Lead paragraphs: first p after each h2 gets larger text (matching existing site)
+  content.querySelectorAll('h2').forEach(h2 => {
+    let next = h2.nextElementSibling;
+    if (next && next.tagName === 'P') {
+      next.classList.add('text-lg', 'text-n600');
+      next.classList.remove('text-n700');
+    }
+  });
+
+  content.querySelectorAll('ul, ol').forEach(l => {
+    l.classList.add('text-n700', 'dark:text-n300', 'leading-relaxed', 'mb-4', 'ml-6');
+  });
+
+  content.querySelectorAll('li').forEach(li => {
+    li.classList.add('mb-1');
+  });
+
+  content.querySelectorAll('strong').forEach(s => {
+    s.classList.add('text-navy', 'dark:text-white', 'font-semibold');
+  });
+
+  content.querySelectorAll('table').forEach(t => {
+    t.classList.add('w-full', 'text-sm', 'mb-6', 'border-collapse');
+    t.querySelectorAll('th').forEach(th => {
+      th.classList.add('font-heading', 'text-left', 'text-navy', 'dark:text-white', 'bg-n50', 'dark:bg-navy-light', 'px-4', 'py-2.5', 'border-b', 'border-n100', 'text-sm', 'font-semibold');
+    });
+    t.querySelectorAll('td').forEach(td => {
+      td.classList.add('px-4', 'py-2.5', 'border-b', 'border-n100', 'dark:border-navy-light', 'align-top', 'text-n700', 'dark:text-n300');
+    });
+    // Wrap table in a scrollable container for responsive overflow
+    if (!t.parentElement?.classList.contains('table-wrapper')) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      t.parentNode.insertBefore(wrapper, t);
+      wrapper.appendChild(t);
+    }
+  });
+
+  content.querySelectorAll('blockquote').forEach(bq => {
+    bq.classList.add('border-l-4', 'border-teal', 'bg-teal/5', 'dark:bg-teal/10', 'px-5', 'py-4', 'rounded-r-xl', 'my-6', 'text-n700', 'dark:text-n300');
+    // Style narrator blockquotes differently
+    const firstStrong = bq.querySelector('strong');
+    if (firstStrong && firstStrong.textContent.includes('Narrator')) {
+      bq.classList.remove('border-teal', 'bg-teal/5', 'dark:bg-teal/10');
+      bq.classList.add('border-navy-light', 'bg-navy/5', 'dark:bg-white/5', 'italic');
+      // Add audio icon
+      const icon = document.createElement('div');
+      icon.className = 'flex items-center gap-2 text-xs font-heading font-semibold uppercase tracking-wider text-n500 dark:text-n400 mb-2 not-italic';
+      icon.innerHTML = '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg> Narrator Script';
+      bq.insertBefore(icon, bq.firstChild);
+    }
+    // Style operator integration points
+    if (firstStrong && firstStrong.textContent.includes('Operator')) {
+      bq.classList.remove('border-teal', 'bg-teal/5', 'dark:bg-teal/10');
+      bq.classList.add('border-orange', 'bg-orange/5', 'dark:bg-orange/10');
+    }
+  });
+
+  content.querySelectorAll('code').forEach(c => {
+    if (!c.parentElement?.matches('pre')) {
+      c.classList.add('text-teal-dark', 'dark:text-teal', 'bg-teal/10', 'px-1.5', 'py-0.5', 'rounded', 'text-sm', 'font-mono');
+    }
+  });
+
+  content.querySelectorAll('hr').forEach(hr => {
+    hr.classList.add('border-n100', 'dark:border-navy-light', 'my-8');
+  });
+
+  // ─── Key Takeaway boxes ───
+  content.querySelectorAll('h2').forEach(h2 => {
+    if (h2.textContent.match(/Key Takeaway/i)) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'key-takeaway-wrapper mb-8 p-6 rounded-xl bg-navy/5 dark:bg-white/5 border border-navy/10 dark:border-white/10';
+      // Restyle heading
+      h2.classList.remove('border-b', 'border-n100', 'dark:border-navy-light', 'pb-3', 'mt-10');
+      h2.classList.add('flex', 'items-center', 'gap-2', 'text-lg', 'mb-3');
+      h2.style.marginTop = '0'; h2.style.borderBottom = 'none'; h2.style.paddingBottom = '0';
+      const icon = document.createElement('span');
+      icon.innerHTML = '<svg class="w-5 h-5 text-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+      h2.insertBefore(icon, h2.firstChild);
+      // Capture the first sibling BEFORE any DOM changes
+      let firstSibling = h2.nextElementSibling;
+      const parent = h2.parentNode;
+      // Insert wrapper at h2's position, then move h2 into it
+      parent.insertBefore(wrapper, h2);
+      wrapper.appendChild(h2);
+      // Now loop from the saved sibling and move content into wrapper
+      let next = firstSibling;
+      while (next && next.tagName !== 'H2' && !next.classList.contains('module-section')) {
+        const toMove = next;
+        next = next.nextElementSibling;
+        wrapper.appendChild(toMove);
+      }
+    }
+  });
+
+  // ─── Module Test section styling ───
+  content.querySelectorAll('h2').forEach(h2 => {
+    if (h2.textContent.match(/Module Test/i)) {
+      h2.classList.remove('border-b', 'border-n100', 'dark:border-navy-light', 'pb-3');
+      h2.classList.add('text-orange', 'dark:text-orange-light');
+      // Add test icon
+      const icon = document.createElement('span');
+      icon.innerHTML = '<svg class="w-6 h-6 text-orange inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+      h2.insertBefore(icon, h2.firstChild);
+    }
+  });
+
+  // ─── 2. Wrap h2 sections in <section> elements ───
+  const h2s = Array.from(content.querySelectorAll('h2'));
+  const sections = [];
+
+  h2s.forEach((h2, i) => {
+    const title = h2.textContent.trim();
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+    // Collect all siblings until next h2
+    const sectionEl = document.createElement('section');
+    sectionEl.id = `section-${slug}`;
+    sectionEl.dataset.slideIndex = String(i);
+    sectionEl.dataset.lessonSlug = slug;
+    sectionEl.className = 'module-section py-8 scroll-mt-20';
+
+    // Check if this section has an exercise
+    let node = h2.nextElementSibling;
+    let hasExercise = false;
+    const tempNodes = [h2];
+    while (node && node.tagName !== 'H2') {
+      if (node.textContent.includes('Exercise:') || node.textContent.includes('Type:')) {
+        hasExercise = true;
+      }
+      tempNodes.push(node);
+      node = node.nextElementSibling;
+    }
+
+    if (hasExercise) sectionEl.dataset.hasExercise = '';
+
+    // Move nodes into section
+    h2.parentNode.insertBefore(sectionEl, h2);
+    tempNodes.forEach(n => sectionEl.appendChild(n));
+
+    sections.push({ slug, title, hasExercise, index: i });
+  });
+
+  // ─── 3. Build sidebar navigation ───
+  const sidebarNav = document.getElementById('sidebar-nav');
+  if (sidebarNav && sections.length > 0) {
+    const ul = document.createElement('ul');
+    ul.className = 'space-y-0.5';
+
+    let visibleIndex = 0;
+    sections.forEach((s, i) => {
+      // Skip quick-scan index and meta sections
+      if (s.title.match(/Quick.scan|References/i)) return;
+
+      visibleIndex++;
+      const li = document.createElement('li');
+      const isTest = s.title.match(/Module Test/i);
+      const isTakeaway = s.title.match(/Key Takeaway/i);
+
+      let displayTitle = s.title
+        .replace(/^Section \d+:\s*/i, '')
+        .replace(/^##\s*/, '');
+
+      // Truncate long titles
+      if (displayTitle.length > 35) displayTitle = displayTitle.substring(0, 32) + '...';
+
+      li.innerHTML = `
+        <a href="#section-${s.slug}" data-sidebar-link="${s.slug}"
+           class="sidebar-link flex items-center gap-2.5 px-3 py-2 rounded-lg text-sm transition-colors
+             text-n700 dark:text-n300 hover:bg-n50 dark:hover:bg-navy-light
+             ${isTest ? 'mt-2 pt-2 border-t border-n100 dark:border-navy-light font-semibold' : ''}
+             ${isTakeaway ? 'font-medium' : ''}">
+          <span class="flex-shrink-0 w-5 h-5 rounded-full border-2 ${
+            isTest ? 'border-orange' : isTakeaway ? 'border-teal' : 'border-n300 dark:border-n500'
+          } flex items-center justify-center text-xs font-heading font-bold ${
+            isTest ? 'text-orange' : isTakeaway ? 'text-teal' : 'text-n500'
+          }">
+            ${isTest ? '!' : isTakeaway ? '★' : visibleIndex}
+          </span>
+          <span class="truncate">${displayTitle}</span>
+        </a>
+      `;
+      ul.appendChild(li);
+    });
+
+    sidebarNav.appendChild(ul);
+
+    // ─── 3b. Mark completed sections from localStorage ───
+    try {
+      const key = 'playbook-academy-' + programId;
+      const progress = JSON.parse(localStorage.getItem(key) || '{}');
+      const modProgress = progress[moduleSlug];
+      if (modProgress && modProgress.completedLessons && modProgress.completedLessons.length > 0) {
+        const completedSet = new Set(modProgress.completedLessons);
+        const quizPassed = modProgress.quizScore != null && modProgress.quizScore >= 80;
+        sidebarNav.querySelectorAll('.sidebar-link').forEach(link => {
+          const slug = link.dataset.sidebarLink;
+          const sectionEl = document.getElementById('section-' + slug);
+          if (!sectionEl) return;
+          // Check if any exercise INSIDE this section has been completed
+          const sectionExercises = sectionEl.querySelectorAll('[data-exercise-id]');
+          const hasCompletedExercise = Array.from(sectionExercises).some(ex => completedSet.has(ex.dataset.exerciseId));
+          const isTestSlug = slug.match(/module-test/i);
+          const isTakeawaySlug = slug.match(/key-takeaway/i);
+          if (hasCompletedExercise || (quizPassed && isTestSlug) || (quizPassed && isTakeawaySlug)) {
+            const circle = link.querySelector('span:first-child');
+            if (circle) {
+              circle.classList.remove('border-n300', 'dark:border-n500', 'text-n500', 'border-orange', 'text-orange', 'border-teal', 'text-teal');
+              circle.classList.add('border-success', 'bg-success', 'text-white');
+              circle.innerHTML = '<svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>';
+            }
+          }
+        });
+      }
+    } catch(e) {}
+  }
+
+  // ─── 4. Sidebar collapse toggle ───
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebar = document.getElementById('lesson-sidebar');
+  const sidebarNavEl = document.getElementById('sidebar-nav');
+  const sidebarChevron = document.getElementById('sidebar-chevron');
+  const sidebarProgressSection = sidebar ? sidebar.querySelector('.px-4.py-2') : null;
+  let sidebarCollapsed = false;
+
+  sidebarToggle?.addEventListener('click', () => {
+    sidebarCollapsed = !sidebarCollapsed;
+    if (sidebar) sidebar.classList.toggle('collapsed', sidebarCollapsed);
+    document.body.classList.toggle('sidebar-collapsed', sidebarCollapsed);
+    if (sidebarNavEl) sidebarNavEl.style.display = sidebarCollapsed ? 'none' : '';
+    if (sidebarProgressSection) sidebarProgressSection.style.display = sidebarCollapsed ? 'none' : '';
+    if (sidebarChevron) sidebarChevron.style.transform = sidebarCollapsed ? 'rotate(180deg)' : '';
+    sidebarToggle.setAttribute('aria-expanded', String(!sidebarCollapsed));
+  });
+
+  // ─── 4b. Check if module is already completed (used to lock progress bar at 100%) ───
+  let moduleIsCompleted = false;
+  try {
+    const _pk = 'playbook-academy-' + programId;
+    const _sp = JSON.parse(localStorage.getItem(_pk) || '{}');
+    const _md = _sp[moduleSlug];
+    if (_md && (_md.completed || (_md.quizScore != null && _md.quizScore >= 80))) {
+      moduleIsCompleted = true;
+    }
+  } catch(e) {}
+
+  // ─── 5. Scroll tracking with IntersectionObserver ───
+  let currentSectionIndex = 0;
+  const sectionEls = document.querySelectorAll('.module-section');
+  const totalSections = sectionEls.length;
+  const visibleSections = Array.from(sectionEls).filter(el => {
+    const title = el.querySelector('h2')?.textContent || '';
+    return !title.match(/Quick.scan|References/i);
+  });
+  const visibleCount = visibleSections.length;
+
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) {
+        const index = parseInt(entry.target.dataset.slideIndex || '0');
+        currentSectionIndex = index;
+        updateActive(index);
+      }
+    }
+  }, { rootMargin: '-15% 0px -70% 0px' });
+
+  sectionEls.forEach(el => observer.observe(el));
+
+  function updateActive(index) {
+    // Sidebar active state
+    document.querySelectorAll('.sidebar-link').forEach(link => link.classList.remove('active'));
+    const slug = sectionEls[index]?.dataset.lessonSlug;
+    if (slug) {
+      const active = document.querySelector(`[data-sidebar-link="${slug}"]`);
+      if (active) active.classList.add('active');
+      // Also highlight in mobile drawer
+      document.querySelectorAll('.drawer-link').forEach(link => link.classList.remove('active'));
+      const drawerActive = document.querySelector(`[data-drawer-link="${slug}"]`);
+      if (drawerActive) drawerActive.classList.add('active');
+    }
+
+    // Mobile stepper counter
+    const counter = document.getElementById('stepper-counter');
+    if (counter) counter.textContent = `Section ${index + 1} of ${totalSections}`;
+
+    const prev = document.getElementById('stepper-prev');
+    const next = document.getElementById('stepper-next');
+    if (prev) prev.disabled = index === 0;
+    if (next) next.disabled = index >= totalSections - 1;
+
+    // Nav progress bar (percentage through module) — skip if module already completed
+    if (!moduleIsCompleted) {
+      const pct = totalSections > 1 ? Math.round((index / (totalSections - 1)) * 100) : 100;
+      const sidebarProg = document.getElementById('sidebar-progress-bar');
+      const sidebarLabel = document.getElementById('sidebar-progress-label');
+      if (sidebarProg) sidebarProg.style.width = `${pct}%`;
+      if (sidebarLabel) sidebarLabel.textContent = `${pct}% complete`;
+    }
+  }
+
+  // ─── 6. Mobile stepper + drawer ───
+  document.getElementById('stepper-prev')?.addEventListener('click', () => {
+    if (currentSectionIndex > 0) {
+      sectionEls[currentSectionIndex - 1]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+  document.getElementById('stepper-next')?.addEventListener('click', () => {
+    if (currentSectionIndex < totalSections - 1) {
+      sectionEls[currentSectionIndex + 1]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  // Mobile drawer open/close
+  const drawerOverlay = document.getElementById('mobile-drawer-overlay');
+  const drawer = document.getElementById('mobile-drawer');
+  const drawerNav = document.getElementById('drawer-nav');
+
+  let drawerTriggerEl = null;
+
+  function getDrawerFocusables() {
+    if (!drawer) return [];
+    return Array.from(drawer.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+  }
+
+  function trapFocusInDrawer(e) {
+    const focusables = getDrawerFocusables();
+    if (focusables.length === 0) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.key === 'Tab') {
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+    if (e.key === 'Escape') { e.preventDefault(); closeDrawer(); }
+  }
+
+  function openDrawer() {
+    drawerTriggerEl = document.activeElement;
+    if (drawerOverlay) { drawerOverlay.classList.remove('hidden'); drawerOverlay.setAttribute('aria-hidden', 'false'); }
+    if (drawer) {
+      drawer.style.transform = 'translateY(0)';
+      drawer.setAttribute('aria-hidden', 'false');
+    }
+    const stepperCounter = document.getElementById('stepper-counter');
+    if (stepperCounter) stepperCounter.setAttribute('aria-expanded', 'true');
+    // Focus the close button inside the drawer
+    requestAnimationFrame(() => {
+      const closeBtn = document.getElementById('drawer-close');
+      if (closeBtn) closeBtn.focus();
+    });
+    document.addEventListener('keydown', trapFocusInDrawer);
+  }
+  function closeDrawer() {
+    if (drawerOverlay) { drawerOverlay.classList.add('hidden'); drawerOverlay.setAttribute('aria-hidden', 'true'); }
+    if (drawer) {
+      drawer.style.transform = 'translateY(100%)';
+      drawer.setAttribute('aria-hidden', 'true');
+    }
+    const stepperCounter = document.getElementById('stepper-counter');
+    if (stepperCounter) stepperCounter.setAttribute('aria-expanded', 'false');
+    document.removeEventListener('keydown', trapFocusInDrawer);
+    // Return focus to trigger
+    if (drawerTriggerEl && typeof drawerTriggerEl.focus === 'function') {
+      drawerTriggerEl.focus();
+      drawerTriggerEl = null;
+    }
+  }
+
+  document.getElementById('stepper-counter')?.addEventListener('click', openDrawer);
+  document.getElementById('drawer-close')?.addEventListener('click', closeDrawer);
+  drawerOverlay?.addEventListener('click', closeDrawer);
+
+  // Build drawer nav (mirrors sidebar)
+  if (drawerNav && sections.length > 0) {
+    const ul = document.createElement('ul');
+    ul.className = 'space-y-1';
+    sections.forEach((s, i) => {
+      if (s.title.match(/Quick.scan|References/i)) return;
+      const li = document.createElement('li');
+      let displayTitle = s.title.replace(/^Section \d+:\s*/i, '').replace(/^##\s*/, '');
+      if (displayTitle.length > 40) displayTitle = displayTitle.substring(0, 37) + '...';
+      const isTest = s.title.match(/Module Test/i);
+      li.innerHTML = `
+        <a href="#section-${s.slug}" data-drawer-link="${s.slug}"
+           class="drawer-link flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm transition-colors
+             text-n700 dark:text-n300 hover:bg-n50 dark:hover:bg-navy-light active:bg-teal/10
+             ${isTest ? 'font-semibold border-t border-n100 dark:border-navy-light mt-2 pt-3' : ''}">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full ${isTest ? 'bg-orange/10 text-orange' : 'bg-n100 dark:bg-navy-light text-n500'} flex items-center justify-center text-xs font-heading font-bold">${isTest ? '!' : i + 1}</span>
+          <span>${displayTitle}</span>
+        </a>
+      `;
+      li.querySelector('a')?.addEventListener('click', () => {
+        closeDrawer();
+      });
+      ul.appendChild(li);
+    });
+    drawerNav.appendChild(ul);
+  }
+
+  updateActive(0);
+
+  // ─── 6b. Section-visit tracking (reading progress) ───
+  // Track which sections the learner has spent 5+ seconds viewing.
+  // Stored as a Set in localStorage, keyed by module slug. Distinct from exercise completion.
+  (function() {
+    var visitedKey = 'playbook-academy-visited-' + moduleSlug;
+    var visitedSet;
+    try { visitedSet = new Set(JSON.parse(localStorage.getItem(visitedKey) || '[]')); } catch(e) { visitedSet = new Set(); }
+
+    // Render visited dots on page load for already-visited sections
+    function renderVisitedDots() {
+      document.querySelectorAll('.sidebar-link').forEach(function(link) {
+        var slug = link.dataset.sidebarLink;
+        if (!slug || !visitedSet.has(slug)) return;
+        // Don't overwrite a completion checkmark (bg-success)
+        var circle = link.querySelector('span:first-child');
+        if (!circle || circle.classList.contains('bg-success')) return;
+        // Add a small visited dot if not already present
+        if (!link.querySelector('.visited-dot')) {
+          var dot = document.createElement('span');
+          dot.className = 'visited-dot';
+          dot.setAttribute('aria-label', 'Visited');
+          link.appendChild(dot);
+        }
+      });
+    }
+    renderVisitedDots();
+
+    // Use IntersectionObserver + timers to detect 5-second dwell per section
+    var dwellTimers = {};
+    var visitObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        var slug = entry.target.dataset.lessonSlug;
+        if (!slug) return;
+        if (entry.isIntersecting) {
+          if (!visitedSet.has(slug) && !dwellTimers[slug]) {
+            dwellTimers[slug] = setTimeout(function() {
+              visitedSet.add(slug);
+              try { localStorage.setItem(visitedKey, JSON.stringify(Array.from(visitedSet))); } catch(e) {}
+              renderVisitedDots();
+              delete dwellTimers[slug];
+            }, 5000);
+          }
+        } else {
+          if (dwellTimers[slug]) {
+            clearTimeout(dwellTimers[slug]);
+            delete dwellTimers[slug];
+          }
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sectionEls.forEach(function(el) { visitObserver.observe(el); });
+  })();
+
+  // ─── 7b. Restore progress bar from localStorage on reload ───
+  try {
+    const progressKey = 'playbook-academy-' + programId;
+    const savedProgress = JSON.parse(localStorage.getItem(progressKey) || '{}');
+    const modData = savedProgress[moduleSlug];
+    if (modData) {
+      let restoredPct = 0;
+      if (modData.completed || (modData.quizScore != null && modData.quizScore >= 80)) {
+        restoredPct = 100;
+      } else if (modData.completedLessons && modData.completedLessons.length > 0) {
+        const totalLessons = modData.totalLessons || totalSections || 1;
+        restoredPct = Math.min(Math.round((modData.completedLessons.length / totalLessons) * 100), 99);
+      }
+      if (restoredPct > 0) {
+        const sidebarProg = document.getElementById('sidebar-progress-bar');
+        const sidebarLabel = document.getElementById('sidebar-progress-label');
+        if (sidebarProg) sidebarProg.style.width = restoredPct + '%';
+        if (sidebarLabel) sidebarLabel.textContent = restoredPct + '% complete';
+      }
+    }
+  } catch(e) {}
+
+  // ─── 8. Accessibility: ARIA live region for feedback ───
+  const liveRegion = document.createElement('div');
+  liveRegion.setAttribute('aria-live', 'polite');
+  liveRegion.setAttribute('aria-atomic', 'true');
+  liveRegion.className = 'sr-only';
+  liveRegion.id = 'a11y-live';
+  document.body.appendChild(liveRegion);
+
+  // Announce quiz feedback to screen readers
+  document.querySelectorAll('[class*="quiz-feedback"]').forEach(fb => {
+    const observer = new MutationObserver(() => {
+      if (!fb.classList.contains('hidden')) {
+        const text = fb.textContent || '';
+        liveRegion.textContent = text;
+      }
+    });
+    observer.observe(fb, { attributes: true, attributeFilter: ['class'] });
+  });
+
+  // Announce exercise feedback to screen readers
+  document.querySelectorAll('.exercise-item-feedback').forEach(fb => {
+    const observer = new MutationObserver(() => {
+      if (!fb.classList.contains('hidden')) {
+        const text = fb.textContent || '';
+        liveRegion.textContent = text;
+      }
+    });
+    observer.observe(fb, { attributes: true, attributeFilter: ['class'] });
+  });
+
+  // ─── 9. Audio players for narrator scripts ───
+  // Map narrator blockquotes (in document order) to audio files by section.
+  // Audio files follow pattern: /audio/{programId}/{moduleSlug}/section-{N}-narrator.mp3
+  // Count narrator blockquotes first, then build paths dynamically
+  var narratorCount = 0;
+  content.querySelectorAll('blockquote').forEach(function(bq) {
+    var s = bq.querySelector('strong');
+    if (s && s.textContent.includes('Narrator')) narratorCount++;
+  });
+  var narratorAudioFiles = [];
+  for (var ni = 0; ni < narratorCount; ni++) {
+    narratorAudioFiles.push('/audio/' + programId + '/' + moduleSlug + '/section-' + (ni + 1) + '-narrator.mp3');
+  }
+  var allAudioElements = []; // track for auto-pause
+
+  function buildAudioPlayer(audioSrc, transcriptEl) {
+    var uid = 'ap-' + Math.random().toString(36).slice(2, 9);
+    var container = document.createElement('div');
+    container.className = 'audio-player rounded-xl border border-n100 dark:border-navy-light bg-white dark:bg-navy overflow-hidden my-6';
+
+    // -- Controls row --
+    var controls = document.createElement('div');
+    controls.className = 'flex items-center gap-3 px-4 py-3';
+
+    // Play/pause button
+    var playBtn = document.createElement('button');
+    playBtn.className = 'w-10 h-10 rounded-full bg-teal text-navy flex items-center justify-center flex-shrink-0 hover:bg-teal-dark transition-colors focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 dark:focus:ring-offset-navy';
+    playBtn.setAttribute('aria-label', 'Play audio');
+    var playSvg = '<svg class="ap-icon-play w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+    var pauseSvg = '<svg class="ap-icon-pause w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>';
+    playBtn.innerHTML = playSvg + pauseSvg;
+    controls.appendChild(playBtn);
+
+    // Progress area
+    var progressWrap = document.createElement('div');
+    progressWrap.className = 'flex-1 min-w-0';
+
+    var progressTrack = document.createElement('div');
+    progressTrack.className = 'h-2 bg-n100 dark:bg-navy-light rounded-full cursor-pointer relative group';
+    progressTrack.setAttribute('role', 'slider');
+    progressTrack.setAttribute('aria-label', 'Audio progress');
+    progressTrack.setAttribute('aria-valuemin', '0');
+    progressTrack.setAttribute('aria-valuemax', '100');
+    progressTrack.setAttribute('aria-valuenow', '0');
+    progressTrack.setAttribute('tabindex', '0');
+
+    var progressFill = document.createElement('div');
+    progressFill.className = 'h-full bg-teal rounded-full transition-[width] duration-100 relative';
+    progressFill.style.width = '0%';
+    var knob = document.createElement('div');
+    knob.className = 'absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 bg-teal rounded-full shadow-sm opacity-0 group-hover:opacity-100 transition-opacity';
+    progressFill.appendChild(knob);
+    progressTrack.appendChild(progressFill);
+    progressWrap.appendChild(progressTrack);
+
+    var timeRow = document.createElement('div');
+    timeRow.className = 'flex items-center justify-between mt-1';
+    var timeCurrent = document.createElement('span');
+    timeCurrent.className = 'text-xs text-n500 dark:text-n400 font-mono';
+    timeCurrent.textContent = '0:00';
+    var timeTotal = document.createElement('span');
+    timeTotal.className = 'text-xs text-n500 dark:text-n400 font-mono';
+    timeTotal.textContent = '0:00';
+    timeRow.appendChild(timeCurrent);
+    timeRow.appendChild(timeTotal);
+    progressWrap.appendChild(timeRow);
+    controls.appendChild(progressWrap);
+
+    // Rate button
+    var rateBtn = document.createElement('button');
+    rateBtn.className = 'px-2 py-1 text-xs font-heading font-bold text-n500 dark:text-n400 bg-n50 dark:bg-navy-light rounded-md hover:bg-n100 dark:hover:bg-navy-light/70 transition-colors flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-teal';
+    rateBtn.setAttribute('aria-label', 'Playback speed: 1x');
+    rateBtn.textContent = '1x';
+    controls.appendChild(rateBtn);
+
+    container.appendChild(controls);
+
+    // -- Transcript toggle --
+    var transcriptSection = document.createElement('div');
+    transcriptSection.className = 'border-t border-n100 dark:border-navy-light';
+    var transcriptToggle = document.createElement('button');
+    transcriptToggle.className = 'flex items-center justify-between w-full px-4 py-2.5 text-sm font-heading font-semibold text-n700 dark:text-n300 hover:bg-n50 dark:hover:bg-navy-light/50 transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal';
+    transcriptToggle.setAttribute('aria-expanded', 'false');
+    transcriptToggle.setAttribute('aria-controls', uid + '-transcript');
+    transcriptToggle.innerHTML = '<span class="flex items-center gap-2"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>Transcript</span><svg class="ap-chevron w-4 h-4 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>';
+    transcriptSection.appendChild(transcriptToggle);
+
+    var transcriptBody = document.createElement('div');
+    transcriptBody.id = uid + '-transcript';
+    transcriptBody.className = 'hidden px-4 pb-4';
+    transcriptBody.setAttribute('role', 'region');
+    transcriptBody.setAttribute('aria-label', 'Audio transcript');
+    var transcriptInner = document.createElement('div');
+    transcriptInner.className = 'p-4 rounded-lg bg-n50 dark:bg-navy-light/50 text-sm text-n700 dark:text-n300 font-body leading-relaxed max-h-60 overflow-y-auto';
+    // Extract clean transcript text from the narrator blockquote
+    transcriptInner.innerHTML = transcriptEl.innerHTML;
+    transcriptBody.appendChild(transcriptInner);
+    transcriptSection.appendChild(transcriptBody);
+    container.appendChild(transcriptSection);
+
+    // -- Wire up audio behaviour --
+    // Create a real <audio> element inserted into the DOM so the browser
+    // reliably fetches metadata and fires the loadedmetadata event.
+    var audio = document.createElement('audio');
+    audio.setAttribute('preload', 'metadata');
+    audio.style.display = 'none';
+    container.appendChild(audio);
+
+    var playing = false;
+    var rates = [1, 1.25, 1.5];
+    var rateIndex = 0;
+    var iconPlay = playBtn.querySelector('.ap-icon-play');
+    var iconPause = playBtn.querySelector('.ap-icon-pause');
+    var chevron = transcriptToggle.querySelector('.ap-chevron');
+
+    allAudioElements.push(audio);
+
+    function fmtTime(s) {
+      if (isNaN(s)) return '0:00';
+      var m = Math.floor(s / 60);
+      var sec = Math.floor(s % 60);
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+
+    function updateProgress() {
+      if (!audio.duration) return;
+      var pct = (audio.currentTime / audio.duration) * 100;
+      progressFill.style.width = pct + '%';
+      progressTrack.setAttribute('aria-valuenow', String(Math.round(pct)));
+      timeCurrent.textContent = fmtTime(audio.currentTime);
+    }
+
+    // Attach ALL event listeners BEFORE setting src so none are missed
+    audio.addEventListener('loadedmetadata', function() {
+      timeTotal.textContent = fmtTime(audio.duration);
+    });
+
+    audio.addEventListener('error', function(e) {
+      // Log error details for debugging
+      var mediaErr = audio.error;
+      console.error('[AudioPlayer] Failed to load:', audioSrc, 'code:', mediaErr ? mediaErr.code : 'unknown', 'message:', mediaErr ? mediaErr.message : 'none');
+      // Replace controls with graceful fallback message
+      controls.innerHTML = '<div class="flex items-center gap-2 px-4 py-3 text-sm text-n500 dark:text-n400"><svg class="w-5 h-5 flex-shrink-0 text-n400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/><path stroke-linecap="round" stroke-linejoin="round" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg><span>Audio unavailable &mdash; read transcript below</span></div>';
+      // Auto-expand transcript so user can read it
+      transcriptBody.classList.remove('hidden');
+      transcriptToggle.setAttribute('aria-expanded', 'true');
+      if (chevron) chevron.style.transform = 'rotate(180deg)';
+    });
+
+    audio.addEventListener('play', function() {
+      playing = true;
+      if (iconPlay) iconPlay.classList.add('hidden');
+      if (iconPause) iconPause.classList.remove('hidden');
+      playBtn.setAttribute('aria-label', 'Pause audio');
+    });
+
+    audio.addEventListener('pause', function() {
+      playing = false;
+      if (iconPlay) iconPlay.classList.remove('hidden');
+      if (iconPause) iconPause.classList.add('hidden');
+      playBtn.setAttribute('aria-label', 'Play audio');
+    });
+
+    audio.addEventListener('timeupdate', updateProgress);
+
+    audio.addEventListener('ended', function() {
+      playing = false;
+      if (iconPlay) iconPlay.classList.remove('hidden');
+      if (iconPause) iconPause.classList.add('hidden');
+      playBtn.setAttribute('aria-label', 'Play audio');
+    });
+
+    // Set src after listeners are attached, then defer load() until the
+    // container is in the real DOM (caller inserts it right after return).
+    audio.src = audioSrc;
+    container._deferLoad = function() {
+      audio.load();
+      if (audio.readyState >= 1) timeTotal.textContent = fmtTime(audio.duration);
+    };
+
+    playBtn.addEventListener('click', function() {
+      if (playing) { audio.pause(); } else { audio.play(); }
+    });
+
+    // Seek via click
+    progressTrack.addEventListener('click', function(e) {
+      if (!audio.duration) return;
+      var rect = progressTrack.getBoundingClientRect();
+      var pct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      audio.currentTime = pct * audio.duration;
+      updateProgress();
+    });
+
+    // Seek via keyboard
+    progressTrack.addEventListener('keydown', function(e) {
+      if (!audio.duration) return;
+      var step = audio.duration * 0.05;
+      if (e.key === 'ArrowRight') { audio.currentTime = Math.min(audio.duration, audio.currentTime + step); }
+      else if (e.key === 'ArrowLeft') { audio.currentTime = Math.max(0, audio.currentTime - step); }
+      updateProgress();
+    });
+
+    // Rate control
+    rateBtn.addEventListener('click', function() {
+      rateIndex = (rateIndex + 1) % rates.length;
+      audio.playbackRate = rates[rateIndex];
+      rateBtn.textContent = rates[rateIndex] + 'x';
+      rateBtn.setAttribute('aria-label', 'Playback speed: ' + rates[rateIndex] + 'x');
+    });
+
+    // Transcript toggle
+    transcriptToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var expanded = transcriptToggle.getAttribute('aria-expanded') === 'true';
+      transcriptToggle.setAttribute('aria-expanded', String(!expanded));
+      transcriptBody.classList.toggle('hidden');
+      if (chevron) chevron.style.transform = expanded ? '' : 'rotate(180deg)';
+    });
+
+    // Expose audio element on container for auto-pause
+    container._audio = audio;
+    container._isPlaying = function() { return playing; };
+
+    return container;
+  }
+
+  // Find all narrator blockquotes in document order and map to audio files
+  var narratorIndex = 0;
+  content.querySelectorAll('blockquote').forEach(function(bq) {
+    var firstStrong = bq.querySelector('strong');
+    if (!firstStrong || !firstStrong.textContent.includes('Narrator')) return;
+    var audioSrc = narratorIndex < narratorAudioFiles.length ? narratorAudioFiles[narratorIndex] : null;
+    narratorIndex++;
+
+    if (audioSrc) {
+      var player = buildAudioPlayer(audioSrc, bq);
+      bq.parentNode.insertBefore(player, bq);
+      // Now that the element is in the real DOM, trigger audio load
+      if (player._deferLoad) player._deferLoad();
+    }
+
+    // Hide narrator blockquote (transcript lives inside the player now)
+    bq.classList.add('hidden');
+  });
+
+  // Auto-pause: when the next section or exercise scrolls into view, pause any playing audio
+  var autoPauseObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        allAudioElements.forEach(function(a) {
+          if (!a.paused) a.pause();
+        });
+      }
+    });
+  }, { rootMargin: '0px', threshold: 0.3 });
+
+  // Observe section boundaries and exercises for auto-pause
+  document.querySelectorAll('.module-section, [data-has-exercise]').forEach(function(el, i) {
+    // Only observe sections after the first one (entering a new section should pause previous audio)
+    if (el.classList.contains('module-section') && i === 0) return;
+    autoPauseObserver.observe(el);
+  });
+
+  // ─── 10. ARIA: glossary tooltip linking ───
+  content.querySelectorAll('.glossary-term').forEach((term, idx) => {
+    const tooltip = term.querySelector('.glossary-tooltip');
+    if (!tooltip) return;
+    const tooltipId = 'glossary-tip-' + idx;
+    tooltip.id = tooltipId;
+    tooltip.setAttribute('role', 'tooltip');
+    term.setAttribute('aria-describedby', tooltipId);
+    term.setAttribute('tabindex', '0');
+  });
+
+  // ─── 10b. ARIA: add aria-disabled to answered quiz/exercise buttons ───
+  // Override the click handlers to also set aria-disabled
+  // Set aria-disabled on answered buttons
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-answered]');
+    if (btn && btn.dataset.answered) {
+      btn.setAttribute('aria-disabled', 'true');
+      btn.setAttribute('disabled', '');
+      btn.setAttribute('tabindex', '-1');
+    }
+  }, true);
+
+  // ─── 11. Live sidebar checkmark updates on exercise completion ───
+  function updateSidebarCheckmarks() {
+    try {
+      const key = 'playbook-academy-' + programId;
+      const progress = JSON.parse(localStorage.getItem(key) || '{}');
+      const modProgress = progress[moduleSlug];
+      if (!modProgress || !modProgress.completedLessons) return;
+      const completedSet = new Set(modProgress.completedLessons);
+      const quizPassed = modProgress.quizScore != null && modProgress.quizScore >= 80;
+
+      document.querySelectorAll('.sidebar-link, .drawer-link').forEach(link => {
+        const slug = link.dataset.sidebarLink || link.dataset.drawerLink;
+        if (!slug) return;
+        const sectionEl = document.getElementById('section-' + slug);
+        if (!sectionEl) return;
+        // Check if any exercise INSIDE this section has been completed
+        const sectionExercises = sectionEl.querySelectorAll('[data-exercise-id]');
+        const hasCompletedExercise = Array.from(sectionExercises).some(ex => completedSet.has(ex.dataset.exerciseId));
+        const isTestSlug = slug.match(/module-test/i);
+        const isTakeawaySlug = slug.match(/key-takeaway/i);
+        if (hasCompletedExercise || (quizPassed && isTestSlug) || (quizPassed && isTakeawaySlug)) {
+          const circle = link.querySelector('span:first-child');
+          if (circle && !circle.classList.contains('bg-success')) {
+            circle.classList.remove('border-n300', 'dark:border-n500', 'text-n500', 'bg-n100', 'dark:bg-navy-light', 'border-orange', 'text-orange', 'border-teal', 'text-teal');
+            circle.classList.add('border-success', 'bg-success', 'text-white');
+            circle.innerHTML = '<svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>';
+          }
+        }
+      });
+    } catch(e) {}
+  }
+  window.addEventListener('exercise-completed', updateSidebarCheckmarks);
+  window.addEventListener('progress-updated', updateSidebarCheckmarks);
+})();
+</script>
+
+<style is:global>
+  .sidebar-link.active {
+    background: rgba(0, 212, 170, 0.08);
+    color: #00A888;
+    font-weight: 600;
+  }
+  .dark .sidebar-link.active {
+    background: rgba(0, 212, 170, 0.12);
+    color: #00D4AA;
+  }
+
+  /* Accessibility: visible focus rings */
+  .quiz-option:focus-visible,
+  .exercise-item button:focus-visible,
+  .cat-buttons button:focus-visible,
+  .warmup-poll-option:focus-visible,
+  .fillin-reveal:focus-visible,
+  .fillin-textarea:focus-visible,
+  .sidebar-link:focus-visible,
+  .drawer-link:focus-visible,
+  #stepper-prev:focus-visible,
+  #stepper-next:focus-visible,
+  #stepper-counter:focus-visible,
+  #sidebar-toggle:focus-visible,
+  #dark-mode-toggle:focus-visible,
+  #drawer-close:focus-visible,
+  #quiz-retry-btn:focus-visible {
+    outline: 2px solid #00D4AA;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
+
+  /* Accessibility: respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
+
+  /* Section visited dot (reading progress) */
+  .visited-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #A8A8C0;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+  .dark .visited-dot {
+    background: #5A5A7A;
+  }
+
+  /* Hide quiz questions by default for one-at-a-time mode */
+  .quiz-question.quiz-hidden { display: none; }
+  .quiz-next-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #1B2838;
+    color: white;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background 200ms ease;
+    margin-top: 0.75rem;
+  }
+  .quiz-next-btn:hover { background: #2A3F56; }
+  .quiz-next-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .dark .quiz-next-btn { background: #00D4AA; color: #1A1A2E; }
+  .dark .quiz-next-btn:hover { background: #00B894; }
+
+  /* AudioPlayer component handles its own styling */
+</style>

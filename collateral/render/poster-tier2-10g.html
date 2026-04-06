@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=900">
+<meta name="viewport" content="width=1800">
 <title>Venue Poster — Tier 2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { margin: 0; padding: 0; background: transparent; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
 
   .poster {
-    width: 900px;
-    height: 1200px;
+    width: 1800px;
+    height: 2400px;
     background: var(--pb-color-white);
     font-family: var(--pb-font-body);
     color: var(--pb-color-primary);
@@ -23,7 +23,7 @@
     overflow: hidden;
   }
 
-  /* 6px solid teal top bar */
+  /* 3px solid teal top bar (Tier 2 spec) */
   .accent-bar {
     height: 6px;
     background: var(--pb-color-secondary);
@@ -32,14 +32,14 @@
 
   /* Header */
   .poster-header {
-    padding: 48px 64px 0;
+    padding: 96px 128px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   .logo {
     font-family: var(--pb-font-heading);
-    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    font-size: calc(64px * var(--pb-template-text-scale, 1));
   }
   .logo-play {
     font-weight: 800;
@@ -59,43 +59,43 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 64px;
+    padding: 0 128px;
     text-align: center;
   }
 
   .headline {
     font-family: var(--pb-font-heading);
-    font-weight: 900;
-    font-size: calc(72px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    font-size: calc(144px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     line-height: 1.1;
     letter-spacing: -0.03em;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
   }
   .subhead {
     font-family: var(--pb-font-body);
-    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    font-size: calc(52px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.5;
-    margin-bottom: 56px;
+    margin-bottom: 112px;
   }
 
   /* Large helpline number */
   .helpline-number {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: calc(72px * var(--pb-template-text-scale, 1));
+    font-size: calc(144px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
     letter-spacing: 0.02em;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
   }
   .helpline-channels {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    font-size: calc(44px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     letter-spacing: 0.04em;
-    margin-bottom: 48px;
+    margin-bottom: 96px;
   }
   .helpline-channels strong {
     color: var(--pb-color-primary);
@@ -107,19 +107,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
-    margin-bottom: 20px;
+    gap: 48px;
+    margin-bottom: 40px;
   }
   .qr-box {
-    width: 120px;
-    height: 120px;
+    width: 240px;
+    height: 240px;
     background: var(--pb-color-neutral-50);
-    border-radius: 12px;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-mono);
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-primary);
   }
@@ -129,38 +129,38 @@
   .qr-label-main {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
   .qr-label-sub {
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
   }
 
   /* Footer */
   .poster-footer {
-    padding: 32px 64px;
+    padding: 64px 128px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid var(--pb-color-neutral-100);
   }
   .operator-placeholder {
-    width: 120px;
-    height: 40px;
+    width: 240px;
+    height: 80px;
     border: 1.5px dashed var(--pb-color-neutral-300);
-    border-radius: 6px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-body);
-    font-size: calc(11px * var(--pb-template-text-scale, 1));
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     letter-spacing: 0.02em;
   }
   .footer-legal {
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     text-align: right;
     line-height: 1.5;

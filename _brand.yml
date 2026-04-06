@@ -363,6 +363,37 @@ messaging:
       - "See how it works"
 
 
+# ─── Content Defaults ───────────────────────────────────────────
+# Default text for collateral templates. Operators can override
+# any value here to localize or customize messaging.
+content_defaults:
+  # Stat block: game examples shown on posters, rack cards, displays
+  stat_game_1: "Blackjack (basic strategy)"
+  stat_value_1: "0.5%"
+  stat_note_1: "Best odds in the casino"
+  stat_game_2: "American Roulette"
+  stat_value_2: "5.26%"
+  stat_note_2: "Double zero = double edge"
+  stat_game_3: "Slots (average)"
+  stat_value_3: "2–15%"
+  stat_note_3: "Varies by machine and casino"
+
+  # Hero messaging
+  hero_headline: "Every game has math. Here's yours."
+  hero_subhead: "Know the house edge. Pick your games. Set your budget."
+
+  # Quiz CTA
+  quiz_cta: "Think you know the odds? Scan to take the quiz"
+
+  # Tools section
+  tools_headline: "Your tools. Your limits. Your call."
+  tools_body: "Set your deposit limit, session reminders, and activity alerts in your account settings. Takes 10 seconds."
+
+  # Support messaging
+  support_headline: "Free, confidential support"
+  support_body: "For any question about gambling. No judgment. Ever."
+
+
 # ─── TONE ────────────────────────────────────
 # Voice configuration. The Playbook default is
 # "confident myth-buster" — adapt to your brand.

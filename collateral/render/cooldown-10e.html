@@ -11,9 +11,9 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { margin: 0; padding: 0; background: transparent; }
 
-  .screen {
+  .cooldown-screen {
     width: 420px;
-    min-height: 520px;
+    min-height: 580px;
     background: var(--pb-color-white);
     font-family: var(--pb-font-body);
     color: var(--pb-color-primary);
@@ -31,7 +31,7 @@
   /* Content */
   .content {
     flex: 1;
-    padding: 48px 32px 32px;
+    padding: 28px 28px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,55 +40,56 @@
 
   /* Checkmark circle */
   .check-circle {
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     background: var(--pb-color-success);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 28px;
+    margin-bottom: 16px;
   }
   .check-icon {
     color: var(--pb-color-white);
   }
   .check-icon svg {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
   }
 
   .heading {
     font-family: var(--pb-font-heading);
-    font-weight: 800;
-    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1.2;
     letter-spacing: -0.01em;
   }
   .subhead {
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
-    margin-bottom: 24px;
+    line-height: 1.5;
+    margin-bottom: 16px;
   }
 
   /* Duration callout */
   .duration-box {
     background: var(--pb-color-neutral-50);
     border-radius: 10px;
-    padding: 14px 24px;
-    margin-bottom: 24px;
+    padding: 12px 20px;
+    margin-bottom: 16px;
     width: 100%;
-    max-width: 340px;
+    max-width: 360px;
   }
   .duration-text {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
   }
   .duration-until {
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     margin-top: 4px;
   }
@@ -98,23 +99,23 @@
     list-style: none;
     text-align: left;
     width: 100%;
-    max-width: 340px;
-    margin-bottom: 28px;
+    max-width: 360px;
+    margin-bottom: 14px;
     padding: 0;
   }
   .info-list li {
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.5;
-    padding: 6px 0;
-    padding-left: 20px;
+    padding: 2px 0;
+    padding-left: 18px;
     position: relative;
   }
   .info-list li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 13px;
+    top: 11px;
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -125,55 +126,57 @@
   .helpline-block {
     background: var(--pb-color-neutral-50);
     border-radius: 10px;
-    padding: 18px 24px;
+    padding: 12px 20px;
     width: 100%;
-    max-width: 340px;
-    margin-bottom: 28px;
+    max-width: 360px;
+    margin-bottom: 14px;
     text-align: center;
   }
   .helpline-label {
     font-family: var(--pb-font-heading);
-    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--pb-color-neutral-500);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .helpline-number {
     font-family: var(--pb-font-mono);
-    font-weight: 600;
-    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
+    letter-spacing: 0.01em;
   }
   .helpline-channels {
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
-    margin-top: 4px;
+    margin-top: 6px;
   }
 
   /* Done button */
   .done-button {
     display: block;
     width: 100%;
-    max-width: 340px;
+    max-width: 360px;
     padding: 16px;
     background: var(--pb-color-secondary);
     color: var(--pb-color-primary);
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     text-align: center;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     letter-spacing: 0.01em;
+    min-height: 48px;
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="screen">
+<div class="cooldown-screen">
 
   <div class="accent-bar"></div>
 
@@ -191,9 +194,9 @@
     </div>
 
     <ul class="info-list">
-      <li>You won't be able to log in or place wagers</li>
-      <li>Your balance is safe and will be here when you return</li>
-      <li>Support is always available if you need to talk</li>
+      <li>Login and wagering are paused</li>
+      <li>Your balance is safe</li>
+      <li>Support is always available</li>
     </ul>
 
     <div class="helpline-block">

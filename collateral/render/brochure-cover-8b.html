@@ -7,10 +7,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
 
   .brochure-outside {
     width: 2400px;
-    height: 1000px;
+    height: 1700px;
     display: flex;
     font-family: var(--pb-font-body);
     position: relative;
@@ -18,8 +19,8 @@
 
   .panel {
     width: 800px;
-    height: 1000px;
-    padding: 56px;
+    height: 1700px;
+    padding: 72px 56px;
     position: relative;
     overflow: hidden;
   }
@@ -46,30 +47,30 @@
     line-height: 1.2;
   }
   .panel-support .body {
-    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
-    line-height: 1.7;
-    margin-bottom: 40px;
+    line-height: 1.6;
+    margin-bottom: 36px;
   }
   .channel-item {
     display: flex;
     align-items: center;
     gap: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   .channel-label {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    width: 60px;
+    width: 72px;
   }
   .channel-value {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
   }
   .support-footer {
@@ -78,14 +79,16 @@
     left: 0;
     right: 0;
     background: var(--pb-color-primary-light);
-    padding: 20px 56px;
+    padding: 22px 32px;
     text-align: center;
   }
   .support-footer span {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
   }
 
   /* Panel 5 — Quiz Hook (Back center) */
@@ -98,16 +101,6 @@
     align-items: center;
     text-align: center;
     border-left: 1px solid rgba(255,255,255,0.08);
-  }
-  .panel-quiz::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
   }
   .quiz-badge {
     display: inline-block;
@@ -135,26 +128,27 @@
     z-index: 1;
   }
   .quiz-body {
-    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
-    line-height: 1.7;
-    max-width: 500px;
-    margin-bottom: 32px;
+    line-height: 1.6;
+    max-width: 540px;
+    margin-bottom: 28px;
     position: relative;
     z-index: 1;
   }
   .quiz-question {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 12px;
-    padding: 20px 24px;
+    padding: 22px 26px;
     margin-bottom: 32px;
-    max-width: 520px;
+    max-width: 560px;
     font-style: italic;
+    line-height: 1.5;
     position: relative;
     z-index: 1;
   }
@@ -181,9 +175,10 @@
   .qr-label {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
     text-align: left;
+    line-height: 1.4;
   }
   .qr-label strong {
     display: block;
@@ -209,16 +204,6 @@
     top: 0; left: 0; right: 0;
     height: 6px;
     background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
-  }
-  .panel-cover::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
   }
   .cover-logo {
     font-family: var(--pb-font-heading);
@@ -247,17 +232,17 @@
     z-index: 1;
   }
   .cover-operator {
-    width: 160px;
-    height: 48px;
+    width: 180px;
+    height: 52px;
     border: 2px dashed rgba(255,255,255,0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-heading);
-    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     position: relative;
     z-index: 1;
   }
@@ -267,19 +252,23 @@
     left: 0;
     right: 0;
     background: var(--pb-color-primary-light);
-    padding: 16px 56px;
+    padding: 22px 32px;
     text-align: center;
     z-index: 1;
   }
   .cover-helpline span {
     font-family: var(--pb-font-mono);
-    font-weight: 600;
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
+    line-height: 1.25;
+    letter-spacing: -0.01em;
   }
   .cover-legal {
-    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
+    line-height: 1.4;
+    max-width: 560px;
     position: relative;
     z-index: 1;
   }

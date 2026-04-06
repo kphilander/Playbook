@@ -11,9 +11,9 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { margin: 0; padding: 0; background: transparent; }
 
-  .card {
+  .session-summary {
     width: 420px;
-    min-height: 320px;
+    min-height: 360px;
     background: var(--pb-color-white);
     border: 1px solid var(--pb-color-neutral-100);
     border-radius: 16px;
@@ -37,7 +37,7 @@
   }
   .card-heading .period {
     font-weight: 400;
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
   }
 
@@ -87,11 +87,11 @@
     gap: 6px;
     align-items: center;
     font-family: var(--pb-font-mono);
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     font-weight: 500;
     color: var(--pb-color-neutral-700);
     margin-top: 16px;
-    padding: 12px 0;
+    padding: 14px 0;
     border-top: 1px solid #F0F0F5;
     border-bottom: 1px solid #F0F0F5;
   }
@@ -108,13 +108,13 @@
     margin-top: 4px;
   }
   .limit-label {
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
   }
   .limit-value {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
   }
   .limit-badge {
@@ -134,12 +134,12 @@
   /* Manage link */
   .manage-link {
     font-family: var(--pb-font-heading);
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     color: var(--pb-color-secondary);
     text-decoration: none;
     margin-top: auto;
-    padding-top: 8px;
+    padding-top: 10px;
     cursor: pointer;
   }
   .manage-link:hover {
@@ -149,7 +149,7 @@
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="card">
+<div class="session-summary">
 
   <div class="card-heading">
     Your Activity <span class="period">— Last 7 Days</span>

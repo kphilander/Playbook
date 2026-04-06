@@ -1,0 +1,18 @@
+{
+  "name": "playbook-academy",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playbook Academy — LMS training curriculum for operator staff",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^6.0.8",
+    "edge-tts": "^1.0.1",
+    "tailwindcss": "^3.4.19"
+  }
+}

@@ -1,0 +1,247 @@
+---
+import Exercise from '../Exercise.astro';
+
+interface ScenarioOption {
+  text: string;
+  correct: boolean;
+  feedback: string;
+}
+
+interface Scenario {
+  scenario: string;
+  options: ScenarioOption[];
+}
+
+interface Props {
+  scenarios: Scenario[];
+}
+
+const { scenarios } = Astro.props;
+---
+
+<Exercise
+  name="Scenario Practice"
+  type="Scenario"
+  instructions="Read each scenario carefully, then select the best response. You'll receive immediate feedback on your choice."
+>
+  <div
+    id="scenario-exercise"
+    data-scenarios={JSON.stringify(scenarios)}
+  >
+    <!-- Step indicators -->
+    <div class="flex items-center justify-center gap-2 mb-6" id="scenario-steps" role="tablist" aria-label="Scenario progress">
+      {scenarios.map((_, i) => (
+        <button
+          class="scenario-step w-8 h-8 rounded-full border-2 border-n300 dark:border-n500 flex items-center justify-center text-xs font-heading font-bold text-n500 dark:text-n300 transition-all"
+          data-step={i}
+          role="tab"
+          aria-selected={i === 0 ? 'true' : 'false'}
+          aria-label={`Scenario ${i + 1}`}
+        >
+          {i + 1}
+        </button>
+      ))}
+    </div>
+
+    <!-- Scenario container -->
+    <div id="scenario-active" aria-live="polite">
+      {scenarios.map((s, i) => (
+        <div
+          class:list={['scenario-panel', i === 0 ? '' : 'hidden']}
+          data-scenario-index={i}
+        >
+          <!-- Scenario text -->
+          <div class="mb-5 p-4 rounded-lg bg-navy/5 dark:bg-white/5 border-l-4 border-teal">
+            <p class="text-xs text-n500 dark:text-n300 font-heading uppercase tracking-wider mb-2">
+              Scenario {i + 1} of {scenarios.length}
+            </p>
+            <p class="text-navy dark:text-white font-body text-base leading-relaxed">{s.scenario}</p>
+          </div>
+
+          <!-- Options -->
+          <div class="space-y-2 mb-4">
+            {s.options.map((opt, oi) => (
+              <button
+                class="scenario-option flex items-start gap-3 w-full text-left px-4 py-3 rounded-lg border-2 border-n100 dark:border-navy-light bg-white dark:bg-navy hover:border-teal dark:hover:border-teal transition-all cursor-pointer"
+                data-scenario={i}
+                data-option={oi}
+                data-correct={opt.correct ? 'true' : 'false'}
+                data-feedback={opt.feedback}
+              >
+                <span class="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center border-2 border-n300 dark:border-n500 text-xs font-heading font-bold text-n500 dark:text-n300 transition-colors mt-0.5">
+                  {String.fromCharCode(65 + oi)}
+                </span>
+                <span class="text-sm leading-relaxed text-n700 dark:text-n300 font-body">{opt.text}</span>
+              </button>
+            ))}
+          </div>
+
+          <!-- Feedback area (hidden until answered) -->
+          <div
+            class="scenario-feedback hidden rounded-lg p-4 text-sm mb-4"
+            data-scenario-feedback={i}
+          >
+            <p class="font-heading font-semibold mb-1" data-feedback-label></p>
+            <p class="text-n700 dark:text-n300 leading-relaxed font-body" data-feedback-text></p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Navigation -->
+    <div class="flex items-center justify-between pt-4 border-t border-n100 dark:border-navy-light">
+      <div class="text-sm text-n500 dark:text-n400 font-heading" id="scenario-score" aria-live="polite"></div>
+      <button
+        id="scenario-next"
+        class="hidden px-5 py-2 bg-teal text-navy font-heading font-semibold text-sm rounded-lg hover:bg-teal-dark transition-colors focus:outline-none focus:ring-2 focus:ring-teal focus:ring-offset-2 dark:focus:ring-offset-navy"
+        aria-label="Next scenario"
+      >
+        Next
+        <svg class="w-4 h-4 inline-block ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</Exercise>
+
+<script is:inline>
+  (function() {
+    const container = document.getElementById('scenario-exercise');
+    if (!container) return;
+
+    const scenarios = JSON.parse(container.dataset.scenarios || '[]');
+    const total = scenarios.length;
+    let current = 0;
+    let correctCount = 0;
+    const answered = {};
+
+    const panels = container.querySelectorAll('.scenario-panel');
+    const steps = container.querySelectorAll('.scenario-step');
+    const nextBtn = document.getElementById('scenario-next');
+    const scoreEl = document.getElementById('scenario-score');
+
+    function showPanel(index) {
+      panels.forEach((p, i) => {
+        p.classList.toggle('hidden', i !== index);
+      });
+      steps.forEach((s, i) => {
+        s.setAttribute('aria-selected', i === index ? 'true' : 'false');
+        if (i === index) {
+          s.classList.add('border-teal', 'text-teal', 'dark:text-teal');
+          s.classList.remove('border-n300', 'dark:border-n500', 'text-n500', 'dark:text-n300');
+        } else if (answered[i] !== undefined) {
+          s.classList.add(answered[i] ? 'border-success' : 'border-danger', 'bg-opacity-20');
+          s.classList.remove('border-teal', 'text-teal', 'dark:text-teal', 'border-n300', 'dark:border-n500');
+          s.innerHTML = answered[i]
+            ? '<svg class="w-4 h-4 text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>'
+            : '<svg class="w-4 h-4 text-danger" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>';
+        } else {
+          s.classList.remove('border-teal', 'text-teal', 'dark:text-teal');
+          s.classList.add('border-n300', 'dark:border-n500', 'text-n500', 'dark:text-n300');
+        }
+      });
+      current = index;
+      updateNext();
+    }
+
+    function updateNext() {
+      if (!nextBtn) return;
+      if (answered[current] !== undefined && current < total - 1) {
+        nextBtn.classList.remove('hidden');
+        nextBtn.textContent = 'Next';
+      } else if (answered[current] !== undefined && current === total - 1) {
+        nextBtn.classList.add('hidden');
+      } else {
+        nextBtn.classList.add('hidden');
+      }
+    }
+
+    function updateScore() {
+      if (!scoreEl) return;
+      const answeredCount = Object.keys(answered).length;
+      if (answeredCount > 0) {
+        scoreEl.textContent = correctCount + ' of ' + answeredCount + ' correct';
+      }
+      if (answeredCount === total) {
+        scoreEl.textContent = 'Complete: ' + correctCount + ' of ' + total + ' correct (' + Math.round((correctCount / total) * 100) + '%)';
+      }
+    }
+
+    // Option click handler
+    container.querySelectorAll('.scenario-option').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var si = parseInt(btn.dataset.scenario);
+        if (answered[si] !== undefined) return;
+
+        var isCorrect = btn.dataset.correct === 'true';
+        answered[si] = isCorrect;
+        if (isCorrect) correctCount++;
+
+        // Style the selected button
+        if (isCorrect) {
+          btn.classList.add('border-success', 'bg-success/10');
+        } else {
+          btn.classList.add('border-danger', 'bg-danger/10');
+        }
+
+        // Highlight correct answer if wrong
+        if (!isCorrect) {
+          container.querySelectorAll('[data-scenario="' + si + '"][data-correct="true"]').forEach(function(c) {
+            c.classList.add('border-success', 'bg-success/10');
+          });
+        }
+
+        // Disable all options for this scenario
+        container.querySelectorAll('[data-scenario="' + si + '"]').forEach(function(b) {
+          b.style.pointerEvents = 'none';
+        });
+
+        // Show feedback
+        var feedback = container.querySelector('[data-scenario-feedback="' + si + '"]');
+        if (feedback) {
+          feedback.classList.remove('hidden');
+          var label = feedback.querySelector('[data-feedback-label]');
+          var text = feedback.querySelector('[data-feedback-text]');
+          if (label) {
+            label.textContent = isCorrect ? 'Correct!' : 'Incorrect';
+            label.className = 'font-heading font-semibold mb-1 ' + (isCorrect ? 'text-success' : 'text-danger');
+          }
+          if (text) text.textContent = btn.dataset.feedback;
+          feedback.className = 'scenario-feedback rounded-lg p-4 text-sm mb-4 ' + (isCorrect ? 'bg-success/10 border border-success/20' : 'bg-danger/10 border border-danger/20');
+        }
+
+        updateScore();
+        showPanel(current);
+      });
+    });
+
+    // Step indicator clicks
+    steps.forEach(function(step) {
+      step.addEventListener('click', function() {
+        showPanel(parseInt(step.dataset.step));
+      });
+    });
+
+    // Next button
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function() {
+        if (current < total - 1) {
+          showPanel(current + 1);
+        }
+      });
+    }
+
+    // Keyboard navigation
+    container.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight' && answered[current] !== undefined && current < total - 1) {
+        showPanel(current + 1);
+      } else if (e.key === 'ArrowLeft' && current > 0) {
+        showPanel(current - 1);
+      }
+    });
+
+    // Initialize
+    showPanel(0);
+  })();
+</script>

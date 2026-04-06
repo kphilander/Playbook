@@ -1,0 +1,186 @@
+---
+import type { QuizQuestion } from '../../lib/parse-module';
+
+interface Props {
+  questions: QuizQuestion[];
+  passingScore: number;
+  programId: string;
+  moduleSlug: string;
+}
+
+const { questions, passingScore, programId, moduleSlug } = Astro.props;
+const threshold = Math.ceil(questions.length * (passingScore / 100));
+---
+
+<div id="module-test" data-slide-index={999} class="module-section py-12 scroll-mt-20">
+  <div class="exercise-wrapper">
+    <div class="exercise-header flex items-center justify-between">
+      <div>
+        <span class="text-xs font-heading font-bold uppercase tracking-wider text-orange">Module Test</span>
+        <h2 class="text-white font-heading font-bold text-lg mt-0.5">Knowledge Check</h2>
+      </div>
+      <span class="text-sm text-white/60 font-heading" id="quiz-progress">
+        {questions.length} questions &middot; {passingScore}% to pass
+      </span>
+    </div>
+
+    <div class="p-5 sm:p-6" id="quiz-container">
+      {questions.map((q, i) => (
+        <div class="quiz-question mb-8 pb-8 border-b border-n100 dark:border-navy-light last:border-0 last:mb-0 last:pb-0" data-question-index={i}>
+          <p class="text-xs text-n500 dark:text-n300 font-heading uppercase tracking-wider mb-2">
+            Question {i + 1} of {questions.length}
+          </p>
+          <p class="text-navy dark:text-white font-heading font-semibold text-lg mb-4">{q.stem}</p>
+
+          <div class="space-y-2 mb-4">
+            {q.options.map((opt) => (
+              <button
+                class="quiz-option flex items-start gap-3"
+                data-question={i}
+                data-letter={opt.letter}
+                data-correct={opt.letter === q.correct ? 'true' : 'false'}
+              >
+                <span class="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center border-2 border-n300 text-xs font-heading font-bold text-n500 transition-colors mt-0.5">
+                  {opt.letter}
+                </span>
+                <span class="text-left text-sm leading-relaxed">{opt.text}</span>
+              </button>
+            ))}
+          </div>
+
+          <div class="quiz-feedback hidden rounded-lg p-4 mt-3 text-sm" data-feedback={i}>
+            <p class="font-heading font-semibold mb-1" data-feedback-label></p>
+            <p class="text-n700 dark:text-n300 leading-relaxed">{q.explanation}</p>
+          </div>
+        </div>
+      ))}
+
+      <!-- Results -->
+      <div id="quiz-results" class="hidden text-center py-8">
+        <div id="quiz-result-icon" class="w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
+        <h3 class="text-2xl font-heading font-bold text-navy dark:text-white mb-2" id="quiz-result-title"></h3>
+        <p class="text-n700 dark:text-n300 mb-2" id="quiz-result-score"></p>
+        <p class="text-n500 dark:text-n400 text-sm mb-6" id="quiz-result-message"></p>
+        <button id="quiz-retry" class="hidden px-6 py-2.5 bg-orange text-white font-heading font-semibold rounded-lg hover:bg-orange-dark transition-colors">
+          Retry Quiz
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline define:vars={{ questionCount: questions.length, passingScore, threshold, programId, moduleSlug }}>
+  const answers = {};
+  let answered = 0;
+  let correct = 0;
+  let locked = false;
+
+  document.querySelectorAll('.quiz-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (locked) return;
+
+      const qi = btn.dataset.question;
+      if (answers[qi] !== undefined) return; // Already answered
+
+      const isCorrect = btn.dataset.correct === 'true';
+      answers[qi] = isCorrect;
+      answered++;
+      if (isCorrect) correct++;
+
+      // Style the selected option
+      btn.classList.add(isCorrect ? 'correct' : 'incorrect');
+
+      // If wrong, highlight the correct answer
+      if (!isCorrect) {
+        const correctBtn = document.querySelector(`[data-question="${qi}"][data-correct="true"]`);
+        if (correctBtn) correctBtn.classList.add('correct');
+      }
+
+      // Disable all options for this question
+      document.querySelectorAll(`[data-question="${qi}"]`).forEach(b => {
+        b.style.pointerEvents = 'none';
+      });
+
+      // Show feedback
+      const feedback = document.querySelector(`[data-feedback="${qi}"]`);
+      if (feedback) {
+        feedback.classList.remove('hidden');
+        const label = feedback.querySelector('[data-feedback-label]');
+        if (label) {
+          label.textContent = isCorrect ? 'Correct!' : 'Incorrect';
+          label.className = `font-heading font-semibold mb-1 ${isCorrect ? 'text-success' : 'text-danger'}`;
+        }
+        feedback.className = `quiz-feedback rounded-lg p-4 mt-3 text-sm ${
+          isCorrect ? 'bg-success/10 border border-success/20' : 'bg-danger/10 border border-danger/20'
+        }`;
+      }
+
+      // Check if all questions answered
+      if (answered === questionCount) {
+        showResults();
+      }
+    });
+  });
+
+  function showResults() {
+    locked = true;
+    const score = Math.round((correct / questionCount) * 100);
+    const passed = score >= passingScore;
+
+    const results = document.getElementById('quiz-results');
+    const icon = document.getElementById('quiz-result-icon');
+    const title = document.getElementById('quiz-result-title');
+    const scoreEl = document.getElementById('quiz-result-score');
+    const message = document.getElementById('quiz-result-message');
+    const retry = document.getElementById('quiz-retry');
+
+    if (results) results.classList.remove('hidden');
+
+    if (icon) {
+      icon.innerHTML = passed
+        ? '<svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>'
+        : '<svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>';
+      icon.className = `w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center ${passed ? 'bg-success' : 'bg-danger'}`;
+    }
+
+    if (title) title.textContent = passed ? 'Module Complete!' : 'Not quite — review and retry';
+    if (scoreEl) scoreEl.textContent = `${correct} of ${questionCount} correct (${score}%)`;
+    if (message) message.textContent = passed
+      ? `You passed with ${score}%. This module is now marked complete.`
+      : `You need ${passingScore}% (${threshold} of ${questionCount}) to pass. Review the sections above and try again.`;
+
+    if (retry && !passed) retry.classList.remove('hidden');
+
+    // Save progress
+    if (passed) {
+      try {
+        const key = `playbook-academy-${programId}`;
+        const progress = JSON.parse(localStorage.getItem(key) || '{}');
+        if (!progress[moduleSlug]) progress[moduleSlug] = { completedLessons: [], completed: false, quizScore: null, totalLessons: 0 };
+        progress[moduleSlug].quizScore = score;
+        progress[moduleSlug].completed = true;
+        progress[moduleSlug].lastAccessed = new Date().toISOString();
+        localStorage.setItem(key, JSON.stringify(progress));
+        window.dispatchEvent(new CustomEvent('progress-updated', { detail: { programId } }));
+      } catch {}
+    }
+  }
+
+  // Retry button
+  document.getElementById('quiz-retry')?.addEventListener('click', () => {
+    Object.keys(answers).forEach(k => delete answers[k]);
+    answered = 0;
+    correct = 0;
+    locked = false;
+
+    document.querySelectorAll('.quiz-option').forEach(btn => {
+      btn.classList.remove('correct', 'incorrect');
+      btn.style.pointerEvents = '';
+    });
+    document.querySelectorAll('.quiz-feedback').forEach(f => f.classList.add('hidden'));
+    document.getElementById('quiz-results')?.classList.add('hidden');
+
+    // Scroll to first question
+    document.querySelector('.quiz-question')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>

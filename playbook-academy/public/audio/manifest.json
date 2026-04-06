@@ -1,0 +1,44 @@
+{
+  "intro-01-welcome": {
+    "title": "Welcome",
+    "src": "/audio/intro-01-welcome.mp3",
+    "duration": 22.2,
+    "fileSize": 266688,
+    "wordCount": 43
+  },
+  "intro-02-engagement-gap": {
+    "title": "The Engagement Gap",
+    "src": "/audio/intro-02-engagement-gap.mp3",
+    "duration": 20,
+    "fileSize": 240192,
+    "wordCount": 44
+  },
+  "intro-03-informed-choice": {
+    "title": "The Informed Choice Model",
+    "src": "/audio/intro-03-informed-choice.mp3",
+    "duration": 41.8,
+    "fileSize": 501696,
+    "wordCount": 81
+  },
+  "intro-04-meet-your-players": {
+    "title": "Meet Your Players",
+    "src": "/audio/intro-04-meet-your-players.mp3",
+    "duration": 9,
+    "fileSize": 107424,
+    "wordCount": 17
+  },
+  "intro-05-customer-journey": {
+    "title": "The Customer Journey",
+    "src": "/audio/intro-05-customer-journey.mp3",
+    "duration": 14.2,
+    "fileSize": 170496,
+    "wordCount": 26
+  },
+  "intro-06-getting-started": {
+    "title": "Getting Started",
+    "src": "/audio/intro-06-getting-started.mp3",
+    "duration": 13.1,
+    "fileSize": 157536,
+    "wordCount": 28
+  }
+}

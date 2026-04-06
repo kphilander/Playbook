@@ -48,4 +48,64 @@
 
   /* ─── Template Scale ────────────────── */
   --pb-template-text-scale: 1;
+
+  /* ─── Per-Block Text Scale ──────────── */
+  --pb-scale-heading: var(--pb-template-text-scale, 1);
+  --pb-scale-body: var(--pb-template-text-scale, 1);
+  --pb-scale-stat: var(--pb-template-text-scale, 1);
+  --pb-scale-legal: var(--pb-template-text-scale, 1);
+
+  /* ─── Container Dimensions ─────────── */
+  /* Override per-template to resize without editing HTML */
+  /* --pb-card-width: 1080px; */
+  /* --pb-card-height: 1080px; */
+}
+
+/* ─── Shared Logo Styles ───────────────── */
+.pb-logo {
+  font-family: var(--pb-font-heading);
+  line-height: 1;
+  white-space: nowrap;
+}
+.pb-logo .logo-play {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.pb-logo .logo-book {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+/* Dark background variant */
+.pb-logo--dark .logo-play { color: var(--pb-color-white); }
+.pb-logo--dark .logo-book { color: var(--pb-color-secondary); }
+/* Light background variant */
+.pb-logo--light .logo-play { color: var(--pb-color-primary); }
+.pb-logo--light .logo-book { color: var(--pb-color-secondary); }
+
+/* ─── Shared Operator Co-brand ─────────── */
+.pb-cobrand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.pb-cobrand__divider {
+  width: 1px;
+  background: var(--pb-color-neutral-300);
+}
+.pb-cobrand__placeholder {
+  border: 1.5px dashed var(--pb-color-neutral-300);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--pb-font-body);
+  color: var(--pb-color-neutral-300);
+  letter-spacing: 0.02em;
+}
+/* Dark background variant */
+.pb-cobrand--dark .pb-cobrand__divider { background: var(--pb-color-neutral-300); }
+.pb-cobrand--dark .pb-cobrand__placeholder {
+  border-color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.25);
 }

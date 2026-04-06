@@ -2,86 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Restroom Mirror Cling — A5</title>
+<title>Restroom Mirror Cling — A5 — Tier 2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
 
   .sign-restroom {
     width: 560px;
     height: 400px;
-    background: var(--pb-color-primary);
+    background: var(--pb-color-white);
+    color: var(--pb-color-primary);
     position: relative;
     overflow: hidden;
     font-family: var(--pb-font-body);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
   }
-  .sign-restroom::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+
+  /* 3px solid teal accent bar — Tier 2 spec */
+  .accent-bar {
+    height: 3px;
+    background: var(--pb-color-secondary);
+    flex-shrink: 0;
   }
 
   .restroom-content {
-    position: relative;
-    z-index: 1;
-    padding: 40px;
+    flex: 1;
+    padding: 36px 44px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   .restroom-headline {
     font-family: var(--pb-font-heading);
-    font-weight: 800;
-    font-size: calc(36px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
-    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: calc(34px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
   }
   .restroom-body {
+    font-family: var(--pb-font-body);
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
-    line-height: 1.5;
-    margin-bottom: 28px;
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    margin-bottom: 22px;
   }
   .restroom-number {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: calc(48px * var(--pb-template-text-scale, 1));
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     letter-spacing: 0.04em;
+    line-height: 1.1;
   }
   .restroom-channels {
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
-    line-height: 1.8;
+    font-family: var(--pb-font-body);
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.6;
   }
   .restroom-channels strong {
-    color: var(--pb-color-white);
+    color: var(--pb-color-neutral-700);
     font-weight: 600;
-  }
-  .restroom-avail {
-    font-family: var(--pb-font-heading);
-    font-weight: 700;
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
-    margin-top: 16px;
   }
 
   .restroom-logo {
     position: absolute;
     bottom: 16px;
-    right: 20px;
+    right: 24px;
     font-family: var(--pb-font-heading);
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
-    z-index: 1;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    line-height: 1;
   }
-  .restroom-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .restroom-logo .logo-play { color: var(--pb-color-primary); font-weight: 800; letter-spacing: -0.02em; }
   .restroom-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .restroom-legal {
     position: absolute;
@@ -98,14 +100,15 @@
 <body>
 <div class="sign-restroom">
 
+  <div class="accent-bar"></div>
+
   <div class="restroom-content">
-    <div class="restroom-headline">Need to talk?</div>
-    <div class="restroom-body">Free, confidential support — for any question about gambling.</div>
+    <div class="restroom-headline">Free, confidential support</div>
+    <div class="restroom-body">For any question about gambling. 24/7. No judgment.</div>
     <div class="restroom-number">{{HELPLINE_NUMBER}}</div>
     <div class="restroom-channels">
-      <strong>Text</strong> {{HELPLINE_NUMBER}} | <strong>Chat</strong> {{CHAT_URL}}
+      <strong>Text</strong> {{TEXT_NUMBER}} &nbsp;&middot;&nbsp; <strong>Chat</strong> {{CHAT_URL}}
     </div>
-    <div class="restroom-avail">24/7. No judgment.</div>
   </div>
 
   <div class="restroom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>

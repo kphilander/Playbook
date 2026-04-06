@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { margin: 0; background: transparent; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
   .poster {
     width: 1800px; height: 2400px;
     background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
@@ -14,7 +14,6 @@
     display: flex; flex-direction: column;
   }
   .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
-  .poster::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 60px 60px; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); }
   .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
@@ -43,9 +42,9 @@
   .callout-text { font-family: var(--pb-font-body); font-size: calc(28px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); line-height: 1.4; }
   .callout-text strong { color: var(--pb-color-white); font-weight: 600; }
   .poster-cta { display: block; width: 100%; padding: 36px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(32px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 20px; text-decoration: none; letter-spacing: 0.02em; }
-  .poster-footer { background: var(--pb-color-primary-light); padding: 36px 96px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
-  .footer-legal { font-family: var(--pb-font-body); font-size: calc(20px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); }
+  .poster-footer { background: var(--pb-color-primary-light); padding: 48px 96px; display: flex; align-items: center; justify-content: space-between; gap: 32px; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(42px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -58,7 +57,7 @@
   <div class="poster-body">
     <div class="eyebrow">No fine print</div>
     <div class="headline">Every game has a <span class="teal">house edge</span>.<br>Here's yours.</div>
-    <div class="subhead">The house edge is the percentage the casino keeps over time. Here's how popular games compare.</div>
+    <div class="subhead">It's the percentage the house keeps over time. Here's how games compare.</div>
     <div class="edge-list">
       <div class="edge-row">
         <div class="edge-bar-wrap">
@@ -91,7 +90,7 @@
     </div>
     <div class="callout">
       <div class="callout-number">$5.26</div>
-      <div class="callout-text">For every <strong>$100 wagered</strong> on American Roulette,<br>the casino keeps an average of $5.26 over time.</div>
+      <div class="callout-text">For every <strong>$100 wagered</strong> on American Roulette,<br>the house keeps $5.26 on average.</div>
     </div>
     <a href="#" class="poster-cta">See the full breakdown</a>
   </div>
