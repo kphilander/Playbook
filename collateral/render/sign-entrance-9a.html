@@ -26,17 +26,6 @@
     height: 8px;
     background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
   }
-  .sign-entrance::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none;
-  }
-
   .sign-header {
     display: flex;
     align-items: center;
@@ -144,7 +133,7 @@
   .footer-helpline {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
   }
   .footer-legal {
@@ -175,7 +164,7 @@
   </div>
 
   <div class="sign-footer">
-    <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
+    <span class="footer-helpline">Free, confidential support: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 

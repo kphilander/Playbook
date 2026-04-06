@@ -28,18 +28,6 @@
       background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
     }
 
-    /* Subtle grid pattern overlay */
-    .rack-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(var(--pb-grid-color, 255,255,255), var(--pb-grid-opacity, 0.02)) 1px, transparent 1px);
-      background-size: 60px 60px;
-      pointer-events: none;
-    }
-
     .card-header {
       padding: 48px 56px 0;
       display: flex;
@@ -210,17 +198,18 @@
     .helpline-strip {
       margin-top: 32px;
       background: var(--pb-color-primary-light);
-      padding: 24px 40px;
+      padding: 24px 32px;
       text-align: center;
       position: relative;
       z-index: 1;
     }
     .helpline-text {
       font-family: var(--pb-font-mono);
-      font-size: calc(28px * var(--pb-template-text-scale, 1));
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       color: var(--pb-color-white);
       line-height: 1.25;
+      letter-spacing: -0.01em;
     }
 
     .legal-strip {

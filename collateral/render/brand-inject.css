@@ -55,10 +55,6 @@
   --pb-scale-stat: var(--pb-template-text-scale, 1);
   --pb-scale-legal: var(--pb-template-text-scale, 1);
 
-  /* ─── Grid Overlay ─────────────────── */
-  --pb-grid-color: 255, 255, 255;
-  --pb-grid-opacity: 0.02;
-
   /* ─── Container Dimensions ─────────── */
   /* Override per-template to resize without editing HTML */
   /* --pb-card-width: 1080px; */

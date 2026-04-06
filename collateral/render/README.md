@@ -122,6 +122,5 @@ Print templates include 24px (3mm at 200dpi 2x) bleed on all sides. The `body` p
 
 - `--pb-template-text-scale`: Global text scale multiplier (default: 1)
 - `--pb-scale-heading` / `--pb-scale-body` / `--pb-scale-stat` / `--pb-scale-legal`: Per-block text scale
-- `--pb-grid-color` / `--pb-grid-opacity`: Grid overlay customization
 - Content tokens (`{{STAT_GAME_1}}`, `{{HERO_HEADLINE}}`, etc.) resolve from `_brand.yml` `content_defaults` section
 - `{{OPERATOR_LOGO}}` resolves to operator logo image or placeholder
