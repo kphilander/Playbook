@@ -50,7 +50,7 @@
     }
     .screen-logo {
       font-family: var(--pb-font-heading);
-      font-size: calc(36px * var(--pb-template-text-scale, 1));
+      font-size: calc(44px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-white);
     }
     .screen-logo .logo-play {
@@ -103,51 +103,52 @@
       justify-content: center;
       line-height: 1;
       font-family: var(--pb-font-heading);
-      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      font-size: calc(26px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: var(--pb-color-primary);
       background: var(--pb-color-secondary);
-      padding: 8px 24px;
+      padding: 12px 28px;
       border-radius: 100px;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
     }
     .screen-headline {
       font-family: var(--pb-font-heading);
-      font-size: calc(64px * var(--pb-template-text-scale, 1));
+      font-size: calc(96px * var(--pb-template-text-scale, 1));
       font-weight: 800;
-      line-height: 1.1;
+      line-height: 1.05;
       color: var(--pb-color-white);
       letter-spacing: -0.02em;
-      margin-bottom: 20px;
-      max-width: 900px;
+      margin-bottom: 28px;
+      max-width: 1000px;
     }
     .screen-subhead {
       font-family: var(--pb-font-body);
-      font-size: calc(28px * var(--pb-template-text-scale, 1));
-      line-height: 1.5;
+      font-size: calc(36px * var(--pb-template-text-scale, 1));
+      line-height: 1.4;
       color: var(--pb-color-neutral-300);
-      max-width: 800px;
-      margin-bottom: 32px;
+      max-width: 900px;
+      margin-bottom: 40px;
     }
 
     .stats-row {
       display: flex;
-      gap: 48px;
+      gap: 56px;
     }
     .stat-item {
       text-align: center;
     }
     .stat-game {
       font-family: var(--pb-font-body);
-      font-size: calc(18px * var(--pb-template-text-scale, 1));
+      font-size: calc(32px * var(--pb-template-text-scale, 1));
+      font-weight: 600;
       color: var(--pb-color-neutral-300);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .stat-pct {
       font-family: var(--pb-font-heading);
-      font-size: calc(48px * var(--pb-template-text-scale, 1));
+      font-size: calc(72px * var(--pb-template-text-scale, 1));
       font-weight: 900;
       line-height: 1;
       letter-spacing: -0.03em;
@@ -157,9 +158,9 @@
     .stat-pct.orange { color: var(--pb-color-accent); }
     .stat-label {
       font-family: var(--pb-font-body);
-      font-size: calc(16px * var(--pb-template-text-scale, 1));
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     .content-right {
@@ -169,29 +170,30 @@
       margin-left: 72px;
     }
     .qr-box {
-      width: 180px;
-      height: 180px;
+      width: 220px;
+      height: 220px;
       background: var(--pb-color-white);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-mono);
-      font-size: calc(16px * var(--pb-template-text-scale, 1));
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-primary);
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
     .qr-label {
       font-family: var(--pb-font-heading);
-      font-size: calc(18px * var(--pb-template-text-scale, 1));
-      font-weight: 600;
+      font-size: calc(28px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
       color: var(--pb-color-white);
       text-align: center;
+      line-height: 1.25;
     }
 
     .helpline-strip {
       background: var(--pb-color-primary-light);
-      padding: 20px 72px;
+      padding: 24px 72px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -200,20 +202,20 @@
     }
     .helpline-text {
       font-family: var(--pb-font-mono);
-      font-size: calc(22px * var(--pb-template-text-scale, 1));
-      font-weight: 600;
+      font-size: calc(32px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
       color: var(--pb-color-white);
     }
 
     .legal-strip {
-      padding: 12px 72px;
+      padding: 14px 72px;
       text-align: center;
       position: relative;
       z-index: 1;
     }
     .legal-text {
       font-family: var(--pb-font-body);
-      font-size: calc(16px * var(--pb-template-text-scale, 1));
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
     }
   </style>
@@ -232,7 +234,6 @@
       <div class="content-left">
         <div class="pillar-badge">Open</div>
         <div class="screen-headline">Every game has math.<br>Here's yours.</div>
-        <div class="screen-subhead">Know the house edge. Pick your games. Set your budget.</div>
         <div class="stats-row">
           <div class="stat-item">
             <div class="stat-game">Blackjack</div>

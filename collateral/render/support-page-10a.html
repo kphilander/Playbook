@@ -87,7 +87,7 @@
 
   .page-heading {
     font-family: var(--pb-font-heading);
-    font-weight: 800;
+    font-weight: 700;
     font-size: calc(32px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 8px;
@@ -95,9 +95,9 @@
     letter-spacing: -0.01em;
   }
   .page-subhead {
-    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
-    line-height: 1.5;
+    line-height: 1.7;
     margin-bottom: 40px;
   }
 
@@ -109,10 +109,11 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 20px 24px;
+    padding: 24px;
     background: var(--pb-color-neutral-50);
     border-radius: 12px;
     margin-bottom: 12px;
+    min-height: 48px;
     cursor: pointer;
     transition: background 0.15s;
   }
@@ -140,15 +141,16 @@
   .channel-label {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
   .channel-detail {
     font-family: var(--pb-font-mono);
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
-    font-weight: 500;
-    color: var(--pb-color-neutral-700);
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    font-weight: 600;
+    color: var(--pb-color-primary);
+    letter-spacing: 0.01em;
   }
   .channel-arrow {
     color: var(--pb-color-neutral-300);
@@ -205,14 +207,14 @@
   .resource-title {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
   .resource-desc {
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-500);
-    line-height: 1.4;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
   }
 
   /* Footer */
@@ -225,20 +227,23 @@
   .footer-label {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
   }
   .footer-helpline {
     font-family: var(--pb-font-mono);
     font-weight: 600;
-    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
+    letter-spacing: 0.01em;
   }
   .footer-channels {
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
-    margin-top: 4px;
+    margin-top: 6px;
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">

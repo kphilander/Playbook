@@ -47,7 +47,7 @@
   }
   .card-logo {
     font-family: var(--pb-font-heading);
-    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
@@ -82,17 +82,18 @@
   .sign-headline {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: calc(56px * var(--pb-template-text-scale, 1));
+    font-size: calc(84px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
-    line-height: 1.15;
-    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 28px;
   }
   .sign-sub {
-    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
-    line-height: 1.5;
-    margin-bottom: 48px;
-    max-width: 600px;
+    line-height: 1.45;
+    margin-bottom: 56px;
+    max-width: 720px;
   }
 
   .qr-block {
@@ -103,49 +104,51 @@
     z-index: 1;
   }
   .qr-placeholder {
-    width: 120px;
-    height: 120px;
+    width: 180px;
+    height: 180px;
     background: var(--pb-color-white);
-    border-radius: 10px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--pb-font-mono);
-    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     font-weight: 600;
   }
   .qr-text {
     font-family: var(--pb-font-heading);
     font-weight: 600;
-    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
+    line-height: 1.3;
   }
   .qr-text strong {
     display: block;
     color: var(--pb-color-white);
     font-weight: 700;
-    font-size: calc(20px * var(--pb-template-text-scale, 1));
-    margin-bottom: 4px;
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
+    margin-bottom: 8px;
   }
 
   .sign-footer {
     background: var(--pb-color-primary-light);
-    padding: 24px 56px;
+    padding: 36px 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
     position: relative;
     z-index: 1;
   }
   .footer-helpline {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
   }
   .footer-legal {
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-300);
   }
 </style>
@@ -164,10 +167,10 @@
 
   <div class="sign-content">
     <div class="sign-headline">Know your game.<br>Play on your terms.</div>
-    <div class="sign-sub">Real odds, real tools, and free support — available anytime.</div>
+    <div class="sign-sub">Real odds. Real tools. Free support.</div>
     <div class="qr-block">
       <div class="qr-placeholder">QR Code</div>
-      <div class="qr-text"><strong>Scan for the facts</strong>Visit the Playbook content hub</div>
+      <div class="qr-text"><strong>Scan for the facts</strong>Odds, tools, and guides</div>
     </div>
   </div>
 

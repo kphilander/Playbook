@@ -56,7 +56,7 @@
   }
   .heading {
     font-family: var(--pb-font-heading);
-    font-weight: 800;
+    font-weight: 700;
     font-size: calc(28px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     margin-bottom: 24px;
@@ -67,7 +67,7 @@
     font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
     line-height: 1.7;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   /* Resource cards */
@@ -81,9 +81,10 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 18px 20px;
+    padding: 20px 22px;
     background: var(--pb-color-neutral-50);
     border-radius: 12px;
+    min-height: 48px;
   }
   .resource-icon {
     width: 44px;
@@ -106,14 +107,14 @@
   .resource-title {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 2px;
+    margin-bottom: 4px;
   }
   .resource-desc {
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-500);
-    line-height: 1.4;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
   }
   .resource-arrow {
     color: var(--pb-color-neutral-300);
@@ -134,11 +135,12 @@
     color: var(--pb-color-primary);
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     padding: 16px 40px;
     border-radius: 8px;
     text-decoration: none;
     letter-spacing: 0.01em;
+    min-height: 48px;
   }
 
   /* Footer */
@@ -150,13 +152,14 @@
   }
   .footer-helpline {
     font-family: var(--pb-font-mono);
-    font-weight: 600;
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
   }
   .footer-channels {
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     margin-bottom: 16px;
   }
@@ -196,13 +199,13 @@
     <h1 class="heading">We're here if you need us.</h1>
 
     <p class="body-text">
-      Whether you have a question, need a break, or just want to talk — support is always available. No appointments. No cost. No judgment.
+      Have a question? Need a break? Support is always available. No appointments. No cost. No judgment.
     </p>
     <p class="body-text">
-      You're in control of your experience, and we're here to make sure it stays that way. Every tool is optional, and every conversation is confidential.
+      Every tool is optional. Every conversation is confidential.
     </p>
     <p class="body-text">
-      Here are a few ways to get started:
+      A few ways to start:
     </p>
 
     <div class="resource-cards">

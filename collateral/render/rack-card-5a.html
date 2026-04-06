@@ -127,12 +127,12 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 40px;
+      gap: 28px;
       position: relative;
       z-index: 1;
     }
     .stat-row {
-      padding: 32px;
+      padding: 28px;
       background: rgba(255,255,255,0.03);
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.06);
@@ -158,8 +158,9 @@
     .stat-value.orange { color: var(--pb-color-accent); }
     .stat-note {
       font-family: var(--pb-font-body);
-      font-size: calc(18px * var(--pb-template-text-scale, 1));
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
+      line-height: 1.4;
     }
 
     .card-callout {
@@ -207,18 +208,19 @@
     }
 
     .helpline-strip {
-      margin-top: 40px;
+      margin-top: 32px;
       background: var(--pb-color-primary-light);
-      padding: 24px 56px;
+      padding: 24px 40px;
       text-align: center;
       position: relative;
       z-index: 1;
     }
     .helpline-text {
       font-family: var(--pb-font-mono);
-      font-size: calc(20px * var(--pb-template-text-scale, 1));
-      font-weight: 600;
+      font-size: calc(28px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
       color: var(--pb-color-white);
+      line-height: 1.25;
     }
 
     .legal-strip {
@@ -229,8 +231,9 @@
     }
     .legal-text {
       font-family: var(--pb-font-body);
-      font-size: calc(16px * var(--pb-template-text-scale, 1));
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
       color: var(--pb-color-neutral-500);
+      line-height: 1.4;
     }
   </style>
   <link rel="stylesheet" href="brand-inject.css">

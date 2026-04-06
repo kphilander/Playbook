@@ -40,26 +40,27 @@
     justify-content: space-between;
     margin-bottom: 24px;
   }
-  .card-logo { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(34px * var(--pb-template-text-scale, 1)); }
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .internal-badge {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(11px * var(--pb-template-text-scale, 1));
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--pb-color-accent);
     background: rgba(255,107,53,0.15);
-    padding: 6px 14px;
+    padding: 8px 18px;
     border-radius: 100px;
   }
   .staff-headline {
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: calc(36px * var(--pb-template-text-scale, 1));
+    font-size: calc(56px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-white);
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   .staff-content {
@@ -69,14 +70,14 @@
 
   .staff-item {
     display: flex;
-    gap: 20px;
-    margin-bottom: 28px;
+    gap: 24px;
+    margin-bottom: 32px;
     align-items: flex-start;
   }
   .item-number {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
     border-radius: 50%;
     background: var(--pb-color-primary);
     display: flex;
@@ -84,23 +85,23 @@
     justify-content: center;
     font-family: var(--pb-font-heading);
     font-weight: 800;
-    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
     margin-top: 2px;
   }
   .item-content strong {
     font-family: var(--pb-font-heading);
     font-weight: 700;
-    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-primary);
     display: block;
-    margin-bottom: 6px;
-    line-height: 1.3;
+    margin-bottom: 8px;
+    line-height: 1.25;
   }
   .item-content p {
-    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-700);
-    line-height: 1.6;
+    line-height: 1.5;
   }
   .item-content .highlight {
     color: var(--pb-color-secondary);
@@ -108,29 +109,30 @@
   }
   .item-content .term-swap {
     font-family: var(--pb-font-mono);
-    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
     font-weight: 600;
     background: var(--pb-color-neutral-50);
-    padding: 2px 6px;
+    padding: 3px 8px;
     border-radius: 4px;
     color: var(--pb-color-primary);
   }
 
   .staff-footer {
     background: var(--pb-color-primary);
-    padding: 24px 56px;
+    padding: 32px 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
   }
   .footer-helpline {
     font-family: var(--pb-font-mono);
     font-weight: 700;
-    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-secondary);
   }
   .footer-note {
-    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
     font-style: italic;
   }
@@ -152,8 +154,8 @@
     <div class="staff-item">
       <div class="item-number">1</div>
       <div class="item-content">
-        <strong>Every player has access to tools.</strong>
-        <p>Deposit limits, session reminders, and activity dashboards are in account settings. Know where to direct players.</p>
+        <strong>Players have tools.</strong>
+        <p>Limits, reminders, and dashboards live in account settings.</p>
       </div>
     </div>
 
@@ -161,7 +163,7 @@
       <div class="item-number">2</div>
       <div class="item-content">
         <strong>Use Playbook language.</strong>
-        <p>Say <span class="term-swap">"tools"</span> not "interventions." Say <span class="term-swap">"player"</span> not "gambler." Say <span class="term-swap">"check in"</span> not "self-assess."</p>
+        <p>Say <span class="term-swap">"tools"</span> not "interventions." <span class="term-swap">"Player"</span> not "gambler." <span class="term-swap">"Check in"</span> not "self-assess."</p>
       </div>
     </div>
 
@@ -169,23 +171,23 @@
       <div class="item-number">3</div>
       <div class="item-content">
         <strong>Know the helpline.</strong>
-        <p><span class="highlight">{{HELPLINE_NUMBER}}</span> — free, confidential, 24/7. For any question about gambling.</p>
+        <p><span class="highlight">{{HELPLINE_NUMBER}}</span> — free, confidential, 24/7.</p>
       </div>
     </div>
 
     <div class="staff-item">
       <div class="item-number">4</div>
       <div class="item-content">
-        <strong>If a player seems distressed, offer support discreetly.</strong>
-        <p>Don't diagnose. Don't lecture. Just say: "Here's our support card if you ever need it."</p>
+        <strong>Offer support discreetly.</strong>
+        <p>Don't diagnose. Just say: "Here's our support card."</p>
       </div>
     </div>
 
     <div class="staff-item">
       <div class="item-number">5</div>
       <div class="item-content">
-        <strong>Player education lives in the content hub.</strong>
-        <p>Direct curious players to the Playbook section for quizzes, odds info, and tools.</p>
+        <strong>Player education is in the content hub.</strong>
+        <p>Send curious players to the Playbook section.</p>
       </div>
     </div>
   </div>
