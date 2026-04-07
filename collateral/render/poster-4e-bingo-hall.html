@@ -9,11 +9,11 @@
   body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
   .poster {
     width: 1800px; height: 2400px;
-    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    background: var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); z-index: 2; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); }
   .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }

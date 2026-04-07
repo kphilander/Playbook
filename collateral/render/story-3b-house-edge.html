@@ -9,11 +9,11 @@
   body { margin: 0; background: transparent; }
   .story-card {
     width: 1080px; height: 1920px;
-    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    background: var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); z-index: 2; }
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); }
   .story-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }

@@ -9,11 +9,11 @@
   body { margin: 0; background: transparent; }
   .story-card {
     width: 1080px; height: 1920px;
-    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    background: var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); z-index: 2; }
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); }
   .story-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
@@ -23,7 +23,7 @@
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 24px; }
   .myth-statement { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 32px; letter-spacing: -0.02em; }
   .myth-statement .strike { text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 5px; color: var(--pb-color-neutral-300); }
-  .divider { width: 80px; height: 4px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); margin-bottom: 32px; border-radius: 2px; }
+  .divider { width: 80px; height: 4px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); margin-bottom: 32px; border-radius: 2px; }
   .fact-statement { font-family: var(--pb-font-body); font-size: calc(30px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 40px; }
   .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
   .stat-block { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 32px; text-align: center; margin-bottom: 40px; }

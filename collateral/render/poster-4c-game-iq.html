@@ -9,11 +9,11 @@
   body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
   .poster {
     width: 1800px; height: 2400px;
-    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    background: var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); z-index: 2; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); }
   .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
@@ -23,7 +23,7 @@
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--pb-color-accent); margin-bottom: 32px; }
   .myth-statement { font-family: var(--pb-font-heading); font-size: calc(80px * var(--pb-template-text-scale, 1)); font-weight: 900; line-height: 1.1; color: var(--pb-color-white); margin-bottom: 40px; letter-spacing: -0.03em; }
   .myth-statement .strike { text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 6px; color: var(--pb-color-neutral-300); }
-  .divider { width: 120px; height: 6px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); margin-bottom: 40px; border-radius: 3px; }
+  .divider { width: 120px; height: 6px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); margin-bottom: 40px; border-radius: 3px; }
   .fact-statement { font-family: var(--pb-font-body); font-size: calc(36px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 48px; }
   .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
   .fact-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px; margin-bottom: 48px; }
