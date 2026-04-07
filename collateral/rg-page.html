@@ -35,15 +35,17 @@
   --rg-secondary-dark: var(--pb-color-secondary-dark, #00A888);
   --rg-accent: var(--pb-color-accent, #FF6B35);
   --rg-accent-light: var(--pb-color-accent-light, #FF8A5C);
+  /* On-dark text & overlays — no on-dark token in the brand system, keep literal */
   --rg-text: #E8ECF1;
   --rg-text-muted: #9AA8B8;
-  --rg-text-dark: #2D3748;
-  --rg-text-dark-muted: #64748B;
-  --rg-surface: #FFFFFF;
-  --rg-surface-alt: #F7F8FA;
   --rg-divider: rgba(255,255,255,0.08);
-  --rg-divider-light: #E2E8F0;
   --rg-card-border: rgba(255,255,255,0.1);
+  /* On-light text, surfaces, and dividers — wired to brand neutral scale */
+  --rg-text-dark: var(--pb-color-neutral-900, #2D3748);
+  --rg-text-dark-muted: var(--pb-color-neutral-700, #64748B);
+  --rg-surface: var(--pb-color-white, #FFFFFF);
+  --rg-surface-alt: var(--pb-color-neutral-50, #F7F8FA);
+  --rg-divider-light: var(--pb-color-neutral-100, #E2E8F0);
   --rg-font-heading: var(--pb-font-heading, 'Inter', system-ui, sans-serif);
   --rg-font-body: var(--pb-font-body, 'Source Sans 3', system-ui, sans-serif);
   --rg-font-mono: var(--pb-font-mono, 'Source Code Pro', monospace);
@@ -54,7 +56,12 @@
   --rg-reveal-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* If an uploaded brand font is single-weight (e.g. Pacifico), let the browser
+     synthesize bold and italic so headings still respect their weight specs. */
+  font-synthesis: weight style;
+}
 body {
   font-family: var(--rg-font-body);
   background: var(--rg-surface);
@@ -142,7 +149,32 @@ body {
   white-space: nowrap;
   margin-right: 24px;
   padding: 14px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
+/* Brand logo span — hidden by default, shown when an uploaded brand provides a logo.
+   <html data-pb-logo-mode="replace">  → logo shows, text hides
+   <html data-pb-logo-mode="cobrand">   → logo + divider + text */
+.rg-brand-logo {
+  display: none;
+  height: 40px;
+  width: auto;
+  max-width: 220px;
+  background: var(--pb-logo-image, none) no-repeat left center / contain;
+  min-width: 100px;
+}
+.rg-brand-divider {
+  display: none;
+  width: 1px;
+  height: 18px;
+  background: currentColor;
+  opacity: 0.35;
+}
+html[data-pb-logo-mode="replace"] .rg-brand-logo { display: inline-block; }
+html[data-pb-logo-mode="replace"] .rg-brand-text { display: none; }
+html[data-pb-logo-mode="cobrand"] .rg-brand-logo,
+html[data-pb-logo-mode="cobrand"] .rg-brand-divider { display: inline-block; }
 .rg-nav a:not(.rg-nav-brand) {
   color: var(--rg-text-muted);
   text-decoration: none;
@@ -165,7 +197,7 @@ body {
 .rg-nav-progress-fill {
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--rg-accent), var(--rg-secondary));
+  background: var(--pb-gradient-bar, linear-gradient(90deg, var(--rg-accent), var(--rg-secondary)));
   transition: width 80ms linear;
 }
 
@@ -187,7 +219,7 @@ body {
 
 /* === Hero === */
 .rg-hero {
-  background: linear-gradient(170deg, var(--rg-primary-dark) 0%, var(--rg-primary) 50%, var(--rg-primary-light) 100%);
+  background: var(--pb-gradient-bg, linear-gradient(170deg, var(--rg-primary-dark) 0%, var(--rg-primary) 50%, var(--rg-primary-light) 100%));
   padding: 80px 24px 100px;
   text-align: center;
   position: relative;
@@ -302,8 +334,8 @@ body {
 .rg-btn:focus-visible { outline: 2px solid var(--rg-secondary); outline-offset: 2px; }
 .rg-btn-primary {
   background: var(--rg-accent);
-  color: #fff;
-  box-shadow: 0 4px 16px rgba(255,107,53,0.3);
+  color: var(--pb-color-white, #fff);
+  box-shadow: 0 4px 16px rgba(255,107,53,0.3); /* tracks --rg-accent */
 }
 .rg-btn-primary:hover { box-shadow: 0 6px 24px rgba(255,107,53,0.4); }
 .rg-btn-ghost {
@@ -325,7 +357,7 @@ body {
   padding: 80px 0;
 }
 .rg-section-dark {
-  background: linear-gradient(180deg, var(--rg-primary) 0%, var(--rg-primary-dark) 100%);
+  background: var(--pb-gradient-bg, linear-gradient(180deg, var(--rg-primary) 0%, var(--rg-primary-dark) 100%));
   color: var(--rg-text);
 }
 .rg-section-alt {
@@ -358,7 +390,7 @@ body {
   width: 48px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, var(--rg-accent), var(--rg-secondary));
+  background: var(--pb-gradient-bar, linear-gradient(90deg, var(--rg-accent), var(--rg-secondary)));
   margin: 0 auto 16px;
 }
 .rg-accent-line-left { margin: 0 0 16px; }
@@ -555,7 +587,7 @@ body {
   overflow: hidden;
   transition: border-color var(--rg-transition), box-shadow var(--rg-transition);
 }
-.rg-tool-card:hover { border-color: #CBD5E0; }
+.rg-tool-card:hover { border-color: var(--pb-color-neutral-100, #CBD5E0); }
 .rg-tool-card[aria-expanded="true"] {
   border-left: 4px solid var(--rg-secondary);
   box-shadow: 0 4px 20px rgba(0,0,0,0.06);
@@ -817,7 +849,7 @@ body {
 .rg-tooltip {
   position: absolute;
   background: var(--rg-primary);
-  color: #fff;
+  color: var(--pb-color-white, #fff);
   padding: 10px 14px;
   border-radius: 8px;
   font-family: var(--rg-font-body);
@@ -914,6 +946,24 @@ body {
   font-size: 0.85rem;
   line-height: 1.6;
 }
+.rg-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  color: var(--rg-text);
+  font-family: var(--rg-font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.rg-footer-brand .rg-brand-logo { height: 48px; max-width: 240px; min-width: 100px; }
+.rg-footer-brand .rg-brand-divider { height: 32px; }
+/* Hide the brand row entirely when no logo has been uploaded — the footer
+   already shows the organization in the legal text below. */
+.rg-footer-brand { display: none; }
+html[data-pb-logo-mode="cobrand"] .rg-footer-brand,
+html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
 .rg-footer-helpline {
   font-family: var(--rg-font-mono);
   font-weight: 600;
@@ -1031,7 +1081,11 @@ body {
 <!-- Sticky Nav -->
 <nav class="rg-nav" id="rgNav">
   <div class="rg-nav-inner">
-    <a href="#" class="rg-nav-brand">{{PROGRAM_NAME}}</a>
+    <a href="#" class="rg-nav-brand" aria-label="{{PROGRAM_NAME}}">
+      <span class="rg-brand-logo" role="img" aria-label="{{ORGANIZATION}} logo"></span>
+      <span class="rg-brand-divider" aria-hidden="true"></span>
+      <span class="rg-brand-text">{{PROGRAM_NAME}}</span>
+    </a>
     <a href="#odds">The Real Odds</a>
     <a href="#myths">Myth vs. Math</a>
     <a href="#tools">Your Tools</a>
@@ -1292,6 +1346,11 @@ body {
 
 <!-- Footer -->
 <footer class="rg-footer">
+  <div class="rg-footer-brand" aria-label="{{PROGRAM_NAME}}">
+    <span class="rg-brand-logo" role="img" aria-label="{{ORGANIZATION}} logo"></span>
+    <span class="rg-brand-divider" aria-hidden="true"></span>
+    <span class="rg-brand-text">{{PROGRAM_NAME}}</span>
+  </div>
   <div class="rg-footer-helpline">{{HELPLINE_NUMBER}}</div>
   <p>
     <a href="tel:{{HELPLINE_NUMBER}}">Call</a> &middot;
@@ -1309,8 +1368,10 @@ body {
 <div class="rg-progress-ring" id="progressRing" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-label="0% explored"></div>
 
 <!-- Widget bundle -->
-<!-- Widget bundle: use CDN for production, relative path for local dev -->
-<script src="../widgets/playbook-widgets.js"></script>
+<!-- Widget bundle: use CDN for production, relative path for local dev.
+     Built bundle lives at widgets/dist/playbook-widgets.js — that's the right
+     path for both `npm run build:widgets` output and local static serves. -->
+<script src="../widgets/dist/playbook-widgets.js"></script>
 
 <script>
 (function() {
@@ -1935,8 +1996,8 @@ body {
   align-items: center;
   gap: 10px;
   padding: 12px 20px;
-  background: #1B2838;
-  color: #E8ECF1;
+  background: var(--rg-primary);
+  color: var(--rg-text);
   border: 2px solid rgba(0,212,170,0.4);
   border-radius: 999px;
   font-family: 'Inter', system-ui, sans-serif;
@@ -1948,13 +2009,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .demo-toggle:hover {
-  border-color: #00D4AA;
+  border-color: var(--rg-secondary);
   box-shadow: 0 8px 32px rgba(0,212,170,0.2);
 }
 .demo-toggle.active {
-  background: #00D4AA;
-  color: #0F1923;
-  border-color: #00D4AA;
+  background: var(--rg-secondary);
+  color: var(--rg-primary-dark);
+  border-color: var(--rg-secondary);
 }
 .demo-toggle-dot {
   width: 10px;
@@ -1964,7 +2025,7 @@ body {
   transition: background 0.25s ease;
 }
 .demo-toggle.active .demo-toggle-dot {
-  background: #0F1923;
+  background: var(--rg-primary-dark);
   box-shadow: 0 0 0 3px rgba(15,25,35,0.3);
 }
 
@@ -1978,8 +2039,8 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: #00D4AA;
-  color: #0F1923;
+  background: var(--rg-secondary);
+  color: var(--rg-primary-dark);
   border: 3px solid rgba(255,255,255,0.3);
   cursor: pointer;
   font-family: 'Inter', system-ui, sans-serif;
@@ -2016,7 +2077,7 @@ body {
   pointer-events: auto;
 }
 .demo-intro-shade .intro-card {
-  background: #1B2838;
+  background: var(--rg-primary);
   border: 1px solid rgba(0,212,170,0.3);
   border-radius: 16px;
   padding: 32px 40px;
@@ -2028,12 +2089,12 @@ body {
 .demo-intro-shade .intro-card h3 {
   font-size: 1.2rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--pb-color-white, #fff);
   margin-bottom: 8px;
 }
 .demo-intro-shade .intro-card p {
   font-size: 0.9rem;
-  color: #9AA8B8;
+  color: var(--rg-text-muted);
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -2044,14 +2105,15 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.92rem;
   font-weight: 700;
-  color: #0F1923;
-  background: #00D4AA;
+  color: var(--rg-primary-dark);
+  background: var(--rg-secondary);
   border: none;
   padding: 12px 28px;
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.15s;
 }
+/* #33DDBB is a derived hover tint of secondary; preserved as a literal — no brand slot for it */
 .demo-intro-shade .intro-btn:hover { background: #33DDBB; }
 .demo-intro-shade .intro-num {
   display: inline-flex;
@@ -2060,8 +2122,8 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #0F1923;
-  color: #00D4AA;
+  background: var(--rg-primary-dark);
+  color: var(--rg-secondary);
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -2071,7 +2133,7 @@ body {
 }
 .demo-hotspot.visited {
   opacity: 0.35;
-  background: #2A3F56;
+  background: var(--rg-primary-light);
   color: #6B8299;
   box-shadow: none;
 }
@@ -2092,8 +2154,8 @@ body.demo-mode .demo-hotspot { display: flex; align-items: center; justify-conte
   white-space: nowrap;
   font-size: 0.72rem;
   font-weight: 700;
-  color: #00D4AA;
-  background: #0F1923;
+  color: var(--rg-secondary);
+  background: var(--rg-primary-dark);
   padding: 4px 10px;
   border-radius: 6px;
   border: 1px solid rgba(0,212,170,0.3);
@@ -2126,12 +2188,12 @@ body.demo-mode .demo-annotated:hover {
   width: min(560px, calc(100vw - 48px));
   max-height: calc(100vh - 80px);
   overflow-y: auto;
-  background: #1B2838;
+  background: var(--rg-primary);
   border: 1px solid rgba(0,212,170,0.25);
   border-radius: 16px;
   padding: 36px;
   box-shadow: 0 24px 80px rgba(0,0,0,0.5);
-  color: #E8ECF1;
+  color: var(--rg-text);
   font-family: 'Inter', system-ui, sans-serif;
   opacity: 0;
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -2167,7 +2229,7 @@ body.demo-mode .demo-annotated:hover {
   border-radius: 50%;
   background: rgba(255,255,255,0.08);
   border: none;
-  color: #9AA8B8;
+  color: var(--rg-text-muted);
   font-size: 1.1rem;
   cursor: pointer;
   display: flex;
@@ -2175,7 +2237,7 @@ body.demo-mode .demo-annotated:hover {
   justify-content: center;
   transition: background 0.2s, color 0.2s;
 }
-.demo-overlay-close:hover { background: rgba(255,255,255,0.15); color: #fff; }
+.demo-overlay-close:hover { background: rgba(255,255,255,0.15); color: var(--pb-color-white, #fff); }
 
 .demo-overlay-nav {
   display: flex;
@@ -2193,7 +2255,7 @@ body.demo-mode .demo-annotated:hover {
   border-radius: 8px;
   border: 1px solid rgba(0,212,170,0.3);
   background: transparent;
-  color: #00D4AA;
+  color: var(--rg-secondary);
   cursor: pointer;
   transition: all 0.15s;
 }
@@ -2211,20 +2273,20 @@ body.demo-mode .demo-annotated:hover {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #00D4AA;
+  color: var(--rg-secondary);
   margin-bottom: 12px;
 }
 .demo-overlay h3 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--pb-color-white, #fff);
   line-height: 1.3;
   margin-bottom: 16px;
 }
 .demo-overlay-body p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #9AA8B8;
+  color: var(--rg-text-muted);
   margin-bottom: 14px;
 }
 .demo-overlay-body p:last-child { margin-bottom: 0; }
@@ -2239,13 +2301,13 @@ body.demo-mode .demo-annotated:hover {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FF6B35;
+  color: var(--rg-accent);
   margin-bottom: 10px;
 }
 .demo-overlay-section p {
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #9AA8B8;
+  color: var(--rg-text-muted);
 }
 
 .demo-overlay-tags {
@@ -2260,24 +2322,24 @@ body.demo-mode .demo-annotated:hover {
   padding: 4px 10px;
   border-radius: 4px;
   background: rgba(0,212,170,0.12);
-  color: #00D4AA;
+  color: var(--rg-secondary);
 }
 
 /* ---- Demo Mode Banner ---- */
 .demo-banner {
   display: none;
-  background: linear-gradient(90deg, #1B2838 0%, #0F1923 100%);
+  background: var(--pb-gradient-bg, linear-gradient(90deg, var(--rg-primary) 0%, var(--rg-primary-dark) 100%));
   border-bottom: 2px solid rgba(0,212,170,0.3);
   padding: 14px 24px;
   text-align: center;
   font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.88rem;
-  color: #9AA8B8;
+  color: var(--rg-text-muted);
   position: relative;
   z-index: 300;
 }
 body.demo-mode .demo-banner { display: block; }
-.demo-banner strong { color: #00D4AA; }
+.demo-banner strong { color: var(--rg-secondary); }
 .demo-banner span { color: rgba(255,255,255,0.4); margin: 0 8px; }
 
 /* ---- Responsive ---- */
@@ -2315,7 +2377,7 @@ body.demo-mode .demo-banner { display: block; }
   left: 50%;
   transform: translate(-50%, -50%) scale(0.95);
   width: min(440px, calc(100vw - 40px));
-  background: #1B2838;
+  background: var(--rg-primary);
   border: 1px solid rgba(0, 212, 170, 0.3);
   border-radius: 16px;
   padding: 32px 28px 28px;
@@ -2345,7 +2407,7 @@ body.demo-mode .demo-banner { display: block; }
   border-radius: 8px;
   transition: background 150ms ease, color 150ms ease;
 }
-.demo-link-card-close:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.demo-link-card-close:hover { background: rgba(255,255,255,0.08); color: var(--pb-color-white, #fff); }
 
 .demo-link-card-badge {
   display: inline-block;
@@ -2353,20 +2415,20 @@ body.demo-mode .demo-banner { display: block; }
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #00D4AA;
+  color: var(--rg-secondary);
   margin-bottom: 10px;
 }
 .demo-link-card h4 {
   font-size: 1.15rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--pb-color-white, #fff);
   line-height: 1.3;
   margin-bottom: 12px;
 }
 .demo-link-card-desc {
   font-size: 0.92rem;
   line-height: 1.7;
-  color: #9AA8B8;
+  color: var(--rg-text-muted);
   margin-bottom: 0;
 }
 .demo-link-card-section {
@@ -2377,13 +2439,13 @@ body.demo-mode .demo-banner { display: block; }
 .demo-link-card-section p {
   font-size: 0.88rem;
   line-height: 1.6;
-  color: #9AA8B8;
+  color: var(--rg-text-muted);
 }
 .demo-link-card-section code {
   font-family: 'Source Code Pro', monospace;
   font-size: 0.82rem;
   background: rgba(0,212,170,0.1);
-  color: #00D4AA;
+  color: var(--rg-secondary);
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -2880,6 +2942,482 @@ body.demo-mode .demo-banner { display: block; }
       hideLinkPopup();
     }
   });
+})();
+</script>
+
+<!-- ============================================================
+     TRY YOUR BRAND — Client-side preview chrome
+     Lets visitors upload _brand.yml or brand-inject.css from the
+     Playbook configurator and re-skin this page live, no rebuild.
+     Self-contained: button, modal, CSS, JS all under pb-tyb- prefix.
+     Strip via [data-pb-preview-chrome] selector to remove from prod.
+     ============================================================ -->
+<style>
+.pb-tyb-trigger {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9998;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: var(--rg-accent);
+  color: var(--pb-color-white, #fff);
+  border: none;
+  border-radius: 999px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  -webkit-font-smoothing: antialiased;
+}
+.pb-tyb-trigger:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+.pb-tyb-trigger .pb-tyb-arrow { font-size: 0.78rem; opacity: 0.9; }
+
+.pb-tyb-shade {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(15,25,35,0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.pb-tyb-shade.pb-tyb-visible { opacity: 1; pointer-events: auto; }
+
+.pb-tyb-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.96);
+  z-index: 10000;
+  width: min(520px, calc(100vw - 32px));
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  background: #1A1F2E;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  color: #E8ECF1;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+}
+.pb-tyb-modal.pb-tyb-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.pb-tyb-modal h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+.pb-tyb-modal .pb-tyb-intro {
+  font-size: 0.86rem;
+  color: #9AA8B8;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+.pb-tyb-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: #9AA8B8;
+  font-size: 1.05rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+.pb-tyb-close:hover { background: rgba(255,255,255,0.16); color: #fff; }
+
+.pb-tyb-zone {
+  display: block;
+  border: 1.5px dashed rgba(255,255,255,0.18);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.pb-tyb-zone:hover {
+  border-color: rgba(0,212,170,0.5);
+  background: rgba(0,212,170,0.04);
+}
+.pb-tyb-zone.pb-tyb-dragover {
+  border-color: #00D4AA;
+  background: rgba(0,212,170,0.08);
+}
+.pb-tyb-zone-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.pb-tyb-zone-desc {
+  font-size: 0.78rem;
+  color: #9AA8B8;
+  line-height: 1.5;
+}
+.pb-tyb-zone input[type="file"] {
+  display: none;
+}
+
+.pb-tyb-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.pb-tyb-status {
+  font-size: 0.78rem;
+  color: #9AA8B8;
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+.pb-tyb-status.pb-tyb-ok { color: #00D4AA; }
+.pb-tyb-status.pb-tyb-err { color: #FF6B6B; }
+.pb-tyb-reset {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: transparent;
+  color: #9AA8B8;
+  border: 1px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+.pb-tyb-reset:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+.pb-tyb-reset:disabled { opacity: 0.4; cursor: default; }
+
+@media (max-width: 640px) {
+  .pb-tyb-trigger { bottom: 16px; right: 16px; padding: 10px 16px; font-size: 0.82rem; }
+  .pb-tyb-modal { padding: 24px 20px; }
+}
+</style>
+
+<button class="pb-tyb-trigger" id="pbTybTrigger" data-pb-preview-chrome="true" type="button">
+  <span class="pb-tyb-arrow">▸</span> Try your brand
+</button>
+
+<div class="pb-tyb-shade" id="pbTybShade" data-pb-preview-chrome="true"></div>
+<div class="pb-tyb-modal" id="pbTybModal" data-pb-preview-chrome="true" role="dialog" aria-labelledby="pbTybTitle" aria-modal="true">
+  <button class="pb-tyb-close" id="pbTybClose" aria-label="Close">×</button>
+  <h3 id="pbTybTitle">Try your brand on this page</h3>
+  <p class="pb-tyb-intro">Upload <strong>brand-inject.css</strong> from the <strong>Playbook brand configurator</strong> to re-skin this page with your colors, fonts, logo, and program details. Nothing leaves your browser.</p>
+
+  <label class="pb-tyb-zone" id="pbTybCssZone">
+    <div class="pb-tyb-zone-title">Upload brand-inject.css</div>
+    <div class="pb-tyb-zone-desc">Drop or click to choose. Self-contained &mdash; includes embedded fonts, logo, and metadata.</div>
+    <input type="file" id="pbTybCssInput" accept=".css,text/css">
+  </label>
+
+  <p style="margin-top:14px; font-size:0.72rem; color:#6B8299; line-height:1.5;">Need to fork the Playbook repo and run the build pipeline instead? Use <strong>_brand.yml</strong> from the configurator &mdash; not this uploader.</p>
+
+  <div class="pb-tyb-actions">
+    <div class="pb-tyb-status" id="pbTybStatus">No brand uploaded.</div>
+    <button class="pb-tyb-reset" id="pbTybReset" type="button" disabled>Reset</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var trigger = document.getElementById('pbTybTrigger');
+  var shade = document.getElementById('pbTybShade');
+  var modal = document.getElementById('pbTybModal');
+  var closeBtn = document.getElementById('pbTybClose');
+  var status = document.getElementById('pbTybStatus');
+  var resetBtn = document.getElementById('pbTybReset');
+  var cssInput = document.getElementById('pbTybCssInput');
+  var cssZone = document.getElementById('pbTybCssZone');
+
+  // === Modal open/close ===
+  function openModal() {
+    shade.classList.add('pb-tyb-visible');
+    modal.classList.add('pb-tyb-visible');
+  }
+  function closeModal() {
+    shade.classList.remove('pb-tyb-visible');
+    modal.classList.remove('pb-tyb-visible');
+  }
+  trigger.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  shade.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('pb-tyb-visible')) closeModal();
+  });
+
+  // === Google Fonts allow-list (mirrors hub/configurator/index.html font dropdowns) ===
+  // Custom uploaded fonts and the three built-in families (Inter, Source Sans 3,
+  // Source Code Pro) are already loaded by the page itself, so they're not in
+  // this list. Anything else picked from the configurator's Google Fonts dropdown
+  // gets lazy-loaded on apply.
+  var GOOGLE_FONTS_ALLOWLIST = {
+    // Sans — heading & body dropdowns
+    'DM Sans': 'wght@400;500;600;700;800;900',
+    'Outfit': 'wght@400;500;600;700;800;900',
+    'Figtree': 'wght@400;500;600;700;800;900',
+    'Albert Sans': 'wght@400;500;600;700;800;900',
+    'Montserrat': 'wght@400;500;600;700;800;900',
+    'Poppins': 'wght@400;500;600;700;800;900',
+    'Plus Jakarta Sans': 'wght@400;500;600;700;800',
+    'Sora': 'wght@400;500;600;700;800',
+    'Urbanist': 'wght@400;500;600;700;800;900',
+    'Manrope': 'wght@400;500;600;700;800',
+    'Work Sans': 'wght@400;500;600;700;800;900',
+    'Barlow': 'wght@400;500;600;700;800;900',
+    'Raleway': 'wght@400;500;600;700;800;900',
+    'IBM Plex Sans': 'wght@400;500;600;700',
+    'Lexend': 'wght@400;500;600;700;800;900',
+    'Space Grotesk': 'wght@400;500;600;700',
+    'Rubik': 'wght@400;500;600;700;800;900',
+    'Josefin Sans': 'wght@400;500;600;700',
+    // Sans — body dropdown additions
+    'Lato': 'wght@400;700;900',
+    'Open Sans': 'wght@400;500;600;700;800',
+    'Nunito': 'wght@400;500;600;700;800;900',
+    'Cabin': 'wght@400;500;600;700',
+    'Karla': 'wght@400;500;600;700;800',
+    // Serif — heading & body
+    'Playfair Display': 'wght@400;500;600;700;800;900',
+    'Bitter': 'wght@400;500;600;700;800;900',
+    'Merriweather': 'wght@400;700;900',
+    'Libre Baskerville': 'wght@400;700',
+    'Roboto Slab': 'wght@400;500;600;700;800;900',
+    // Mono — mono dropdown
+    'IBM Plex Mono': 'wght@400;500;600;700',
+    'JetBrains Mono': 'wght@400;500;600;700;800',
+    'Fira Code': 'wght@400;500;600;700'
+  };
+  var loadedGoogleFonts = {};
+
+  function extractFamily(cssValue) {
+    if (!cssValue) return null;
+    // CSS value looks like: "'Montserrat', system-ui, sans-serif" — pull the first family.
+    var first = cssValue.split(',')[0].trim();
+    return first.replace(/^['"]/, '').replace(/['"]$/, '');
+  }
+  function ensureGoogleFont(family) {
+    if (!family || loadedGoogleFonts[family]) return;
+    var weights = GOOGLE_FONTS_ALLOWLIST[family];
+    if (!weights) return; // not a Google font we know about, or already loaded by the page
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=' + encodeURIComponent(family).replace(/%20/g, '+') + ':' + weights + '&display=swap';
+    link.setAttribute('data-pb-tyb-font', family);
+    document.head.appendChild(link);
+    loadedGoogleFonts[family] = true;
+  }
+  function loadFontsFromAppliedBrand() {
+    // Read the resolved font families AFTER the user CSS has been injected
+    var rootStyle = window.getComputedStyle(document.documentElement);
+    ['--pb-font-heading', '--pb-font-body', '--pb-font-mono'].forEach(function(varName) {
+      var family = extractFamily(rootStyle.getPropertyValue(varName));
+      if (family) ensureGoogleFont(family);
+    });
+  }
+
+  // === Logo mode detection ===
+  // After applying user CSS, read --pb-logo-mode and set a data attribute on
+  // <html> so the brand markup picks up the right cobrand vs replace styling.
+  // (CSS can't conditionally toggle elements based on a custom property value
+  // without container queries / @container style(), so we mirror it as an attr.)
+  function applyLogoModeFromBrand() {
+    var rootStyle = window.getComputedStyle(document.documentElement);
+    var mode = (rootStyle.getPropertyValue('--pb-logo-mode') || '').trim().replace(/^['"]|['"]$/g, '');
+    var image = (rootStyle.getPropertyValue('--pb-logo-image') || '').trim();
+    if (image && image !== 'none' && (mode === 'cobrand' || mode === 'replace')) {
+      document.documentElement.setAttribute('data-pb-logo-mode', mode);
+    } else {
+      document.documentElement.removeAttribute('data-pb-logo-mode');
+    }
+  }
+
+  // === Token substitution ===
+  // Snapshot every text node containing a {{TOKEN}} placeholder so we can restore
+  // them on reset. Then replace tokens with values from the uploaded brand metadata.
+  var pbTybTokenSnapshots = null;
+  function pbTybSnapshotTokens() {
+    if (pbTybTokenSnapshots !== null) return; // already snapshotted
+    pbTybTokenSnapshots = [];
+    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(node) {
+        if (!node.nodeValue || node.nodeValue.indexOf('{{') < 0) return NodeFilter.FILTER_REJECT;
+        // Skip nodes inside <script>, <style>, and the Try-your-brand modal itself
+        var parent = node.parentNode;
+        while (parent && parent !== document.body) {
+          var tag = parent.nodeName && parent.nodeName.toLowerCase();
+          if (tag === 'script' || tag === 'style') return NodeFilter.FILTER_REJECT;
+          if (parent.id === 'pbTybModal' || parent.id === 'pbTybShade') return NodeFilter.FILTER_REJECT;
+          parent = parent.parentNode;
+        }
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while ((node = walker.nextNode())) {
+      pbTybTokenSnapshots.push({ node: node, original: node.nodeValue });
+    }
+    // Also snapshot select attributes that may contain tokens
+    var attrTargets = document.querySelectorAll('[href*="{{"], [aria-label*="{{"], [title*="{{"]');
+    attrTargets.forEach(function(el) {
+      ['href', 'aria-label', 'title'].forEach(function(attr) {
+        var v = el.getAttribute(attr);
+        if (v && v.indexOf('{{') >= 0) {
+          pbTybTokenSnapshots.push({ node: el, attr: attr, original: v });
+        }
+      });
+    });
+  }
+  function pbTybApplyTokenMap(map) {
+    pbTybSnapshotTokens();
+    pbTybTokenSnapshots.forEach(function(snap) {
+      var resolved = snap.original.replace(/\{\{([A-Z_]+)\}\}/g, function(_, token) {
+        if (map.hasOwnProperty(token)) return map[token];
+        return '{{' + token + '}}';
+      });
+      if (snap.attr) {
+        snap.node.setAttribute(snap.attr, resolved);
+      } else {
+        snap.node.nodeValue = resolved;
+      }
+    });
+  }
+  function pbTybResetTokens() {
+    if (!pbTybTokenSnapshots) return;
+    pbTybTokenSnapshots.forEach(function(snap) {
+      if (snap.attr) {
+        snap.node.setAttribute(snap.attr, snap.original);
+      } else {
+        snap.node.nodeValue = snap.original;
+      }
+    });
+  }
+  // Parse the /*! PLAYBOOK_META {...} */ block emitted by the configurator
+  function pbTybParseMetaFromCss(cssText) {
+    var match = cssText.match(/\/\*!\s*PLAYBOOK_META\s+(\{[\s\S]*?\})\s*\*\//);
+    if (!match) return null;
+    try { return JSON.parse(match[1]); } catch (e) { return null; }
+  }
+  // Convert metadata into a token map (uppercase keys matching the {{TOKEN}} markers)
+  function pbTybMetaToTokenMap(meta) {
+    var map = {};
+    if (meta.program_name) map.PROGRAM_NAME = meta.program_name;
+    if (meta.organization) map.ORGANIZATION = meta.organization;
+    if (meta.website) map.WEBSITE = meta.website;
+    if (meta.helpline_number) map.HELPLINE_NUMBER = meta.helpline_number;
+    if (meta.text_number) map.TEXT_NUMBER = meta.text_number;
+    if (meta.chat_url) map.CHAT_URL = meta.chat_url;
+    if (meta.min_age) map.MIN_AGE = meta.min_age;
+    if (meta.age_disclaimer) map.AGE_DISCLAIMER = meta.age_disclaimer;
+    return map;
+  }
+
+  // === Apply / reset CSS ===
+  function setStatus(text, kind) {
+    status.textContent = text;
+    status.classList.remove('pb-tyb-ok', 'pb-tyb-err');
+    if (kind === 'ok') status.classList.add('pb-tyb-ok');
+    if (kind === 'err') status.classList.add('pb-tyb-err');
+  }
+  function applyCss(cssText, label) {
+    var existing = document.getElementById('pb-tyb-user-brand');
+    if (existing) existing.remove();
+    var style = document.createElement('style');
+    style.id = 'pb-tyb-user-brand';
+    style.textContent = cssText;
+    document.head.appendChild(style);
+    // Lazy-load any Google Font the brand references that the page didn't already preload
+    loadFontsFromAppliedBrand();
+    // Mirror --pb-logo-mode onto <html> so cobrand/replace markup styling kicks in
+    applyLogoModeFromBrand();
+    // Resolve {{PROGRAM_NAME}} etc. from the metadata block (if the configurator emitted one)
+    var meta = pbTybParseMetaFromCss(cssText);
+    if (meta) pbTybApplyTokenMap(pbTybMetaToTokenMap(meta));
+    setStatus('Applied: ' + label, 'ok');
+    resetBtn.disabled = false;
+  }
+  resetBtn.addEventListener('click', function() {
+    var existing = document.getElementById('pb-tyb-user-brand');
+    if (existing) existing.remove();
+    // Strip any lazy-loaded Google Font <link>s and forget them
+    document.querySelectorAll('link[data-pb-tyb-font]').forEach(function(l) { l.remove(); });
+    loadedGoogleFonts = {};
+    // Clear logo mode so brand markup falls back to text wordmark
+    document.documentElement.removeAttribute('data-pb-logo-mode');
+    // Restore original {{PROGRAM_NAME}} etc. token text
+    pbTybResetTokens();
+    setStatus('Reset to default brand.');
+    resetBtn.disabled = true;
+    cssInput.value = '';
+    yamlInput.value = '';
+  });
+
+  // === CSS file handling ===
+  function handleCssFile(file) {
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        applyCss(e.target.result, file.name);
+      } catch (err) {
+        setStatus('Error applying CSS: ' + err.message, 'err');
+      }
+    };
+    reader.onerror = function() { setStatus('Could not read file: ' + file.name, 'err'); };
+    reader.readAsText(file);
+  }
+  cssInput.addEventListener('change', function(e) {
+    handleCssFile(e.target.files && e.target.files[0]);
+  });
+
+  // === Drag-and-drop on the CSS zone ===
+  function wireDrop(zone, handler) {
+    ['dragenter', 'dragover'].forEach(function(evt) {
+      zone.addEventListener(evt, function(e) {
+        e.preventDefault(); e.stopPropagation();
+        zone.classList.add('pb-tyb-dragover');
+      });
+    });
+    ['dragleave', 'drop'].forEach(function(evt) {
+      zone.addEventListener(evt, function(e) {
+        e.preventDefault(); e.stopPropagation();
+        zone.classList.remove('pb-tyb-dragover');
+      });
+    });
+    zone.addEventListener('drop', function(e) {
+      var file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+      handler(file);
+    });
+  }
+  wireDrop(cssZone, handleCssFile);
 })();
 </script>
 </body>

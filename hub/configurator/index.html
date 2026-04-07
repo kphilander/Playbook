@@ -183,6 +183,43 @@
   /* === Preview Panel === */
   .preview-panel { flex: 1; padding: 20px 24px; overflow-y: auto; background: #F5F5FA; }
   .preview-title { font-family: 'Inter', sans-serif; font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: #A8A8C0; font-weight: 600; margin-bottom: 16px; }
+
+  /* Always-on hover tooltips naming which brand slot controls each preview element */
+  .preview-panel [data-pb-label] { position: relative; }
+  .preview-panel [data-pb-label]:hover {
+    outline: 1px dashed rgba(26, 26, 46, 0.5);
+    outline-offset: 2px;
+  }
+  .preview-panel [data-pb-label]:hover::after {
+    content: attr(data-pb-label);
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1A1A2E;
+    color: #fff;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 5px 9px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .preview-panel [data-pb-label]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 2px);
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
+    border-top-color: #1A1A2E;
+    pointer-events: none;
+    z-index: 10000;
+  }
   .preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
   /* Scaled preview cards */
@@ -195,7 +232,7 @@
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
-  .pv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA)); z-index: 2; }
+  .pv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--cfg-gradient-bar, linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #00D4AA))); z-index: 2; }
   .pv-card .card-header { padding: 28px 32px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .pv-card .card-logo { font-size: 16px; display: inline-flex; align-items: center; }
   .pv-card .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
@@ -215,19 +252,21 @@
   .pv-card .footer-helpline { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-weight: 700; font-size: 8px; }
   .pv-card .footer-legal { font-size: 7px; }
 
-  /* Tier 2 Support Card */
-  .pv-card-tier2 { background: #fff !important; }
-  .pv-card-tier2::before { background: var(--cfg-secondary, #00D4AA) !important; height: 6px; }
+  /* Tier 2 Support Card — mirrors collateral/render/card-tier2-10f.html */
+  .pv-card-tier2 { background: #fff !important; position: relative; }
+  .pv-card-tier2::before { display: none; }
   .pv-card-tier2::after { display: none; }
-  .pv-card-tier2 .card-body { justify-content: center; padding: 0 32px; }
-  .pv-card-tier2 .t2-headline { font-size: 26px; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 10px; }
-  .pv-card-tier2 .t2-subline { font-size: 12px; line-height: 1.5; margin-bottom: 24px; max-width: 85%; }
-  .pv-card-tier2 .t2-contact-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
-  .pv-card-tier2 .t2-contact-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; min-width: 32px; }
-  .pv-card-tier2 .t2-contact-value { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-weight: 600; font-size: 18px; letter-spacing: 0.02em; }
-  .pv-card-tier2 .t2-contact-value.t2-phone { font-size: 24px; }
+  .pv-card-tier2 .pv-accent-bar { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--cfg-secondary, #00D4AA); }
+  .pv-card-tier2 .card-body { justify-content: center; padding: 0 24px; }
+  .pv-card-tier2 .t2-headline { font-size: 22px; font-weight: 700; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 8px; }
+  .pv-card-tier2 .t2-subline { font-size: 11px; line-height: 1.5; margin-bottom: 14px; max-width: 90%; }
+  .pv-card-tier2 .t2-helpline-number { font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-weight: 600; font-size: 20px; letter-spacing: 0.02em; line-height: 1; }
+  .pv-card-tier2 .t2-helpline-channels { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 9px; letter-spacing: 0.04em; text-transform: none; margin-top: 4px; margin-bottom: 14px; }
+  .pv-card-tier2 .t2-qr-row { display: flex; align-items: center; gap: 10px; }
+  .pv-card-tier2 .t2-qr-box { width: 34px; height: 34px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--cfg-font-mono, 'Source Code Pro'), monospace; font-size: 8px; font-weight: 600; flex-shrink: 0; }
+  .pv-card-tier2 .t2-qr-label { font-size: 9px; }
   .pv-card-tier2 .card-footer { background: transparent; border-top: 1px solid var(--cfg-neutral-100, #E8E8F0); }
-  .pv-card-tier2 .t2-footer-text { font-weight: 700; font-size: 9px; letter-spacing: 0.02em; }
+  .pv-card-tier2 .t2-footer-text { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 9px; letter-spacing: 0.02em; }
 
   /* Co-brand lockup */
   .pv-card .co-brand { display: flex; align-items: center; gap: 10px; }
@@ -375,7 +414,7 @@
               <button class="logo-remove" onclick="removeLogo(event)">&times; Remove</button>
             </div>
           </div>
-          <input type="file" class="logo-upload-input" id="logoFileInput" accept="image/png,image/jpeg,image/svg+xml">
+          <input type="file" class="logo-upload-input" id="logoFileInput" accept="image/png,image/jpeg,image/svg+xml,image/webp,image/gif,image/avif,.svg,.png,.jpg,.jpeg,.webp,.gif,.avif">
         </div>
         <div class="extracted-colors" id="extractedColors" style="display:none;">
           <div class="extracted-colors-label">Colors found in your logo</div>
@@ -490,7 +529,7 @@
 
         <div class="form-group">
           <label class="form-label">Text Colors</label>
-          <div class="contrast-info" style="margin-bottom:10px">Body copy, headings, captions, and muted text on cards and pages</div>
+          <div class="contrast-info" style="margin-bottom:10px">Body copy, headings, captions, and muted text on cards and pages. Hover any preview element to see which slot controls it.</div>
           <div class="semantic-row">
             <div class="semantic-group">
               <label class="form-label">Headings</label>
@@ -498,6 +537,7 @@
                 <input type="color" class="color-picker" id="colorN900" value="#1A1A2E">
                 <input type="text" class="form-input color-hex" id="colorN900Hex" value="#1A1A2E" maxlength="7">
               </div>
+              <div class="contrast-info" style="font-size:10px; margin-top:4px;">Used in email, print, brochure, and brand-book templates. Not shown in this card preview.</div>
             </div>
             <div class="semantic-group">
               <label class="form-label">Body text</label>
@@ -505,6 +545,7 @@
                 <input type="color" class="color-picker" id="colorN700" value="#3D3D5C">
                 <input type="text" class="form-input color-hex" id="colorN700Hex" value="#3D3D5C" maxlength="7">
               </div>
+              <div class="contrast-info" style="font-size:10px; margin-top:4px;">Drives the Tier 2 subline in the preview. Also used across email, print, and web body copy.</div>
             </div>
             <div class="semantic-group">
               <label class="form-label">Captions</label>
@@ -581,6 +622,14 @@
             <a href="#" id="footerBarResetLink" style="font-size:11px; color:#00D4AA; margin-left:8px; display:none; white-space:nowrap;" onclick="resetFooterBarColor(event)">Reset to auto</a>
           </div>
         </div>
+
+        <div class="form-group">
+          <label class="form-label" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+            <input type="checkbox" id="allowGradients" checked onchange="updatePreview()" style="accent-color:#00D4AA; width:16px; height:16px; cursor:pointer;">
+            <span>Allow gradients</span>
+          </label>
+          <div class="contrast-info" style="margin-top:6px;">Playbook uses two gradients by default: a horizontal accent&nbsp;&rarr;&nbsp;secondary bar at the top of cards, and a primary&nbsp;&rarr;&nbsp;primary-dark background on posters and stories. Some color combinations look muddy when blended &mdash; uncheck this to use solid colors instead.</div>
+        </div>
       </div>
 
       <div class="wizard-nav">
@@ -597,9 +646,9 @@
 
       <div class="form-group">
         <label class="form-label">Custom Font (optional)</label>
-        <div class="contrast-info" style="margin-bottom:6px">Upload a .woff or .woff2 file to add your own font to all selectors below.</div>
+        <div class="contrast-info" style="margin-bottom:6px">Upload a .woff2, .woff, .ttf, or .otf file. The font will be auto-selected as the heading font and added to all selectors below. Single-weight fonts use synthesized bold for headings.</div>
         <div class="font-upload-row">
-          <input type="file" id="fontFileInput" accept=".woff,.woff2" style="font-size:12px;">
+          <input type="file" id="fontFileInput" accept=".woff,.woff2,.ttf,.otf" style="font-size:12px;">
         </div>
         <div id="customFontInfo" style="display:none;">
           <div class="font-upload-info">
@@ -981,13 +1030,15 @@
       </div>
 
       <div class="download-grid">
-        <button class="download-btn download-btn-primary" onclick="downloadYaml()">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          _brand.yml
-        </button>
-        <button class="download-btn download-btn-secondary" onclick="downloadCss()">
+        <button class="download-btn download-btn-primary" onclick="downloadCss()" title="Self-contained CSS file with embedded fonts, logo, and metadata. Drop into the RG website 'Try your brand' uploader for an instant preview.">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           brand-inject.css
+          <span style="display:block; font-size:10px; font-weight:400; opacity:0.85; margin-top:2px;">For previewing on the RG website</span>
+        </button>
+        <button class="download-btn download-btn-secondary" onclick="downloadYaml()" title="Source-of-truth config file. Drop into a fork of the Playbook repo and run npm run build to regenerate every collateral piece.">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          _brand.yml
+          <span style="display:block; font-size:10px; font-weight:400; opacity:0.85; margin-top:2px;">For forking the Playbook repo</span>
         </button>
       </div>
 
@@ -1063,46 +1114,47 @@
       <!-- Preview Card 1: Myth Buster -->
       <div class="preview-frame">
         <div class="preview-frame-label">Myth-Buster Card</div>
-        <div class="pv-card" id="pvCard1" style="background: var(--cfg-primary, #1B2838);">
+        <div class="pv-card" id="pvCard1" data-pb-label="Primary — Card background" style="background: var(--cfg-primary, #1B2838);">
           <div class="card-header">
-            <span class="card-logo" id="pvLogo1"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
-            <span class="card-pillar" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
+            <span class="card-logo" id="pvLogo1"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Heading Font — Logo wordmark (white on dark)">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+            <span class="card-pillar" data-pb-label="Secondary — Pillar badge" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
           </div>
           <div class="card-body">
-            <div class="myth-label" id="pvMythLabel" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
-            <div class="myth-statement" id="pvMythStatement" style="color: #fff;"><span class="strike" style="text-decoration-color: var(--cfg-accent, #FF6B35); color: #A8A8C0;">"I'm on a hot streak"</span></div>
-            <div class="fact-statement" id="pvFactStatement" style="color: #A8A8C0;">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn't.</div>
+            <div class="myth-label" id="pvMythLabel" data-pb-label="Accent — Myth label" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
+            <div class="myth-statement" id="pvMythStatement" data-pb-label="Heading Font — Myth statement"><span class="strike" data-pb-label="Light text (n300) — Struck myth, strike color = Accent" style="text-decoration-color: var(--cfg-accent, #FF6B35);">"I'm on a hot streak"</span></div>
+            <div class="fact-statement" id="pvFactStatement" data-pb-label="Body Font + Light text (n300) — Fact statement">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn't.</div>
             <div class="stat-block">
-              <span class="stat-number" style="color: var(--cfg-accent, #FF6B35);">0%</span>
-              <span class="stat-unit" style="color: #A8A8C0;">chance past results<br>affect the next spin</span>
+              <span class="stat-number" data-pb-label="Accent — Stat number" style="color: var(--cfg-accent, #FF6B35);">0%</span>
+              <span class="stat-unit" data-pb-label="Light text (n300) — Stat unit">chance past results<br>affect the next spin</span>
             </div>
           </div>
-          <div class="card-footer" style="background: var(--cfg-primary-light, #2A3F56);">
-            <span class="footer-helpline" style="color: #fff;" id="pvHelpline1">Free support 24/7: 1-800-522-4700</span>
-            <span class="footer-legal" style="color: #A8A8C0;" id="pvLegal1">21+ to gamble</span>
+          <div class="card-footer" data-pb-label="Footer bar — derived from Primary" style="background: var(--cfg-primary-light, #2A3F56);">
+            <span class="footer-helpline" data-pb-label="Mono Font — Helpline (white on dark)" id="pvHelpline1">Free support 24/7: 1-800-522-4700</span>
+            <span class="footer-legal" data-pb-label="Light text (n300) — Legal" id="pvLegal1">21+ to gamble</span>
           </div>
         </div>
       </div>
 
-      <!-- Preview Card 2: Tier 2 Support Card -->
+      <!-- Preview Card 2: Tier 2 Support Card — mirrors collateral/render/card-tier2-10f.html -->
       <div class="preview-frame">
         <div class="preview-frame-label">Tier 2 Support Card</div>
-        <div class="pv-card pv-card-tier2" id="pvCard2">
-          <div class="card-header" style="padding: 28px 32px 0;">
-            <span class="card-logo" id="pvLogo2"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+        <div class="pv-card pv-card-tier2" id="pvCard2" data-pb-label="Background (n50 / white) — Light card surface">
+          <div class="pv-accent-bar" data-pb-label="Secondary — 3px accent bar"></div>
+          <div class="card-header" style="padding: 20px 24px 0;">
+            <span class="card-logo" id="pvLogo2"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Primary — Logo wordmark" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
           </div>
           <div class="card-body">
-            <div class="t2-headline" id="pvT2Headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
-            <div class="t2-subline" id="pvT2Subline" style="color: #6B6B8A;">Free, confidential support for any question about gambling.</div>
-            <div id="pvT2ContactBlock">
-              <div class="t2-contact-row">
-                <span class="t2-contact-label" style="color: #A8A8C0;">Call</span>
-                <span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);" id="pvT2Phone">1-800-522-4700</span>
-              </div>
+            <div class="t2-headline" id="pvT2Headline" data-pb-label="Heading Font + Primary — Tier 2 headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
+            <div class="t2-subline" id="pvT2Subline" data-pb-label="Body Font + Body text (n700) — Subline body copy">Free, confidential support for any question about gambling.</div>
+            <div class="t2-helpline-number" id="pvT2Phone" data-pb-label="Mono Font + Secondary — Helpline number">1-800-522-4700</div>
+            <div class="t2-helpline-channels" data-pb-label="Heading Font + Captions (n500) — Helpline channels">Call &middot; Text &middot; Chat</div>
+            <div class="t2-qr-row">
+              <div class="t2-qr-box" data-pb-label="Background (n50) + Borders (n100) + Light text (n300)">QR</div>
+              <div class="t2-qr-label" data-pb-label="Captions (n500) — QR caption">Scan for support</div>
             </div>
           </div>
           <div class="card-footer">
-            <span class="t2-footer-text" style="color: #A8A8C0;">24/7 &middot; No judgment &middot; Ever.</span>
+            <span class="t2-footer-text" data-pb-label="Heading Font + Light text (n300) — Footer text">24/7 &middot; No judgment &middot; Ever.</span>
           </div>
         </div>
       </div>
@@ -1111,14 +1163,14 @@
       <!-- Preview: Co-brand Helpline Badge -->
       <div class="preview-frame" style="grid-column: 1 / -1;">
         <div class="preview-frame-label">Co-Brand Helpline Badge</div>
-        <div class="pv-badge" id="pvBadge" style="background: var(--cfg-primary, #1B2838);">
+        <div class="pv-badge" id="pvBadge" data-pb-label="Primary — Badge background" style="background: var(--cfg-primary, #1B2838);">
           <span id="pvBadgeOperator"></span>
-          <div class="badge-divider" style="background: var(--cfg-secondary, #00D4AA);" id="pvBadgeCoDivider"></div>
-          <span class="badge-logo" id="pvLogoBadge"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" style="color: #fff;">Play</span><span class="logo-book" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
-          <div class="badge-divider" style="background: #A8A8C0;"></div>
+          <div class="badge-divider" data-pb-label="Secondary — Co-brand divider" style="background: var(--cfg-secondary, #00D4AA);" id="pvBadgeCoDivider"></div>
+          <span class="badge-logo" id="pvLogoBadge"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Heading Font — Logo wordmark (white on dark)">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+          <div class="badge-divider" data-pb-label="Light text (n300) — Divider"></div>
           <div>
-            <div class="badge-text" style="color: #A8A8C0;" id="pvBadgeLabel">Free, confidential support 24/7</div>
-            <div class="badge-number" style="color: #fff;" id="pvBadgeNumber">1-800-522-4700</div>
+            <div class="badge-text" data-pb-label="Light text (n300) — Badge label" id="pvBadgeLabel">Free, confidential support 24/7</div>
+            <div class="badge-number" data-pb-label="Mono Font — Helpline number (white on dark)" id="pvBadgeNumber">1-800-522-4700</div>
           </div>
         </div>
       </div>
@@ -1416,8 +1468,33 @@ function initLogoUpload() {
   input.addEventListener('change', () => { if (input.files.length) handleLogoFile(input.files[0]); });
 }
 
+function showLogoError(msg) {
+  let errEl = document.getElementById('logoUploadError');
+  if (!errEl) {
+    errEl = document.createElement('div');
+    errEl.id = 'logoUploadError';
+    errEl.style.cssText = 'margin-top:8px; padding:8px 10px; background:#FFE5E5; border:1px solid #FF6B6B; border-radius:6px; color:#C00; font-size:11px; line-height:1.4;';
+    const zone = document.getElementById('logoUploadZone');
+    if (zone && zone.parentNode) zone.parentNode.insertBefore(errEl, zone.nextSibling);
+  }
+  errEl.textContent = msg;
+  errEl.style.display = 'block';
+  setTimeout(() => { if (errEl) errEl.style.display = 'none'; }, 8000);
+}
+
 function handleLogoFile(file) {
-  if (!file.type.match(/^image\/(png|jpeg|svg\+xml)$/)) return;
+  // Accept the common web image formats. SVG is preferred (vector), then PNG, JPEG, WebP, GIF.
+  // Use file.type when present, fall back to extension for cases where type is empty (e.g. some
+  // file inputs on certain OSes return empty type for .svg files).
+  const validMime = /^image\/(png|jpe?g|svg\+xml|webp|gif|avif)$/i;
+  const validExt = /\.(png|jpe?g|svg|webp|gif|avif)$/i;
+  if (!validMime.test(file.type) && !validExt.test(file.name)) {
+    showLogoError(`Unsupported logo file: ${file.name}. Use SVG, PNG, JPG, WebP, or GIF.`);
+    return;
+  }
+  const prevErr = document.getElementById('logoUploadError');
+  if (prevErr) prevErr.style.display = 'none';
+
   const reader = new FileReader();
   reader.onload = (e) => {
     uploadedLogoDataUrl = e.target.result;
@@ -1431,6 +1508,7 @@ function handleLogoFile(file) {
     document.getElementById('logoModeToggle').style.display = '';
     updatePreview();
   };
+  reader.onerror = () => showLogoError(`Could not read ${file.name}.`);
   reader.readAsDataURL(file);
 }
 
@@ -1457,21 +1535,62 @@ function getLogoMode() {
 }
 
 // === Custom Font Upload ===
+// Maps file extension → CSS @font-face format() hint and a friendlier MIME for the data URL.
+const FONT_FORMAT_MAP = {
+  woff2: { format: 'woff2',     mime: 'font/woff2' },
+  woff:  { format: 'woff',      mime: 'font/woff'  },
+  ttf:   { format: 'truetype',  mime: 'font/ttf'   },
+  otf:   { format: 'opentype',  mime: 'font/otf'   },
+};
+
+function showFontError(msg) {
+  let errEl = document.getElementById('customFontError');
+  if (!errEl) {
+    errEl = document.createElement('div');
+    errEl.id = 'customFontError';
+    errEl.style.cssText = 'margin-top:8px; padding:8px 10px; background:#FFE5E5; border:1px solid #FF6B6B; border-radius:6px; color:#C00; font-size:11px; line-height:1.4;';
+    const fontInputRow = document.querySelector('.font-upload-row');
+    if (fontInputRow && fontInputRow.parentNode) {
+      fontInputRow.parentNode.insertBefore(errEl, fontInputRow.nextSibling);
+    }
+  }
+  errEl.textContent = msg;
+  errEl.style.display = 'block';
+  setTimeout(() => { if (errEl) errEl.style.display = 'none'; }, 8000);
+}
+
 function handleFontFile(file) {
   const ext = file.name.split('.').pop().toLowerCase();
-  if (ext !== 'woff' && ext !== 'woff2') return;
+  const formatInfo = FONT_FORMAT_MAP[ext];
+  if (!formatInfo) {
+    showFontError(`Unsupported font file: .${ext}. Use .woff2, .woff, .ttf, or .otf.`);
+    return;
+  }
+  // Hide any previous error
+  const prevErr = document.getElementById('customFontError');
+  if (prevErr) prevErr.style.display = 'none';
+
   const reader = new FileReader();
   reader.onload = (e) => {
-    customFontDataUrl = e.target.result;
+    // FileReader's data: URL uses application/octet-stream for unknown extensions.
+    // Some browsers (Safari especially) refuse to use a font from a data URL whose
+    // MIME doesn't match the format hint, so rewrite the prefix to a real font MIME.
+    let dataUrl = e.target.result;
+    if (dataUrl.indexOf('data:application/octet-stream') === 0) {
+      dataUrl = dataUrl.replace('data:application/octet-stream', 'data:' + formatInfo.mime);
+    }
+    customFontDataUrl = dataUrl;
     // Derive a default family name from the filename
     const baseName = file.name.replace(/\.(woff2?|otf|ttf)$/i, '').replace(/[-_]/g, ' ');
     customFontName = baseName;
 
-    // Inject @font-face into the page
+    // Inject @font-face into the page so the configurator's own preview can use it.
+    // Don't constrain font-weight here — many uploaded fonts are single-weight, and
+    // declaring a 100–900 range causes some browsers to skip the file when the
+    // requested weight doesn't match. Pair with font-synthesis on consumers instead.
     let styleEl = document.getElementById('customFontFace');
     if (!styleEl) { styleEl = document.createElement('style'); styleEl.id = 'customFontFace'; document.head.appendChild(styleEl); }
-    const format = ext === 'woff2' ? 'woff2' : 'woff';
-    styleEl.textContent = `@font-face { font-family: '${baseName}'; src: url('${customFontDataUrl}') format('${format}'); font-weight: 100 900; font-display: swap; }`;
+    styleEl.textContent = `@font-face { font-family: '${baseName}'; src: url('${customFontDataUrl}') format('${formatInfo.format}'); font-display: swap; }`;
 
     // Update UI
     document.getElementById('customFontInfo').style.display = '';
@@ -1484,6 +1603,11 @@ function handleFontFile(file) {
     addCustomFontOption('fontHeading', baseName);
     addCustomFontOption('fontBody', baseName);
     addCustomFontOption('fontMono', baseName);
+
+    // Auto-select the uploaded font as the heading font so users see immediate effect.
+    // Body and mono are left at their defaults so the user can pick if they want.
+    const headingSel = document.getElementById('fontHeading');
+    if (headingSel) headingSel.value = baseName;
 
     updatePreview();
   };
@@ -1836,6 +1960,16 @@ function updatePreview() {
   root.style.setProperty('--cfg-accent', accent);
   root.style.setProperty('--cfg-font-mono', `'${document.getElementById('fontMono').value}'`);
 
+  // Gradient toggle — drives the preview accent bar AND background
+  const allowGradients = document.getElementById('allowGradients') ? document.getElementById('allowGradients').checked : true;
+  if (allowGradients) {
+    root.style.setProperty('--cfg-gradient-bar', `linear-gradient(90deg, ${accent}, ${secondary})`);
+    root.style.setProperty('--cfg-gradient-bg', `linear-gradient(180deg, ${primary}, ${primaryDark})`);
+  } else {
+    root.style.setProperty('--cfg-gradient-bar', secondary);
+    root.style.setProperty('--cfg-gradient-bg', primary);
+  }
+
   // Apply neutral scale
   const neutrals = getNeutrals();
   neutrals.forEach(n => {
@@ -1849,21 +1983,58 @@ function updatePreview() {
   root.style.setProperty('--cfg-warning', semantic.warning);
   root.style.setProperty('--cfg-danger', semantic.danger);
 
-  // Apply neutral colors to preview card elements
-  const n100 = neutrals[4].hex;
-  const n300 = neutrals[3].hex;
-  const n500 = neutrals[2].hex;
-  const n50 = neutrals[5].hex;
-  document.querySelectorAll('.pv-card .fact-statement, .pv-card .stat-unit, .pv-card .footer-legal').forEach(el => { el.style.color = n300; });
-  document.querySelectorAll('.pv-card .myth-statement .strike').forEach(el => { el.style.color = n300; });
-  document.querySelectorAll('.pv-card-tier2 .t2-subline').forEach(el => { el.style.color = n500; });
-  document.querySelectorAll('.pv-card-tier2 .t2-contact-label').forEach(el => { el.style.color = n300; });
+  // === Preview slot → element mapping ===
+  // Myth-Buster card (dark) — mirrors collateral/render/card-1a-hot-streak.html
+  //   Primary        → .pv-card background
+  //   Footer bar     → .pv-card .card-footer background (derived from primary)
+  //   Secondary      → .card-pillar bg, .logo-book, .fact-statement strong
+  //   Accent         → .myth-label, .stat-number, strike text-decoration
+  //   White          → .myth-statement, .footer-helpline, .logo-play
+  //   Light text(n300) → .fact-statement, .stat-unit, .footer-legal, .myth-statement .strike
+  // Tier 2 card (light) — mirrors collateral/render/card-tier2-10f.html
+  //   Background(n50) → .t2-qr-box bg
+  //   Borders(n100)   → .t2-qr-box border, card-footer border-top
+  //   Light text(n300)→ .t2-qr-box text, .t2-footer-text
+  //   Captions(n500)  → .t2-helpline-channels, .t2-qr-label
+  //   Body text(n700) → .t2-subline
+  //   Primary         → .t2-headline, .logo-play
+  //   Secondary       → .pv-accent-bar, .t2-helpline-number, .logo-book
+  // Co-brand badge (dark)
+  //   Primary         → .pv-badge background
+  //   Secondary       → co-brand .badge-divider, .logo-book
+  //   Light text(n300)→ non-co-brand .badge-divider, .badge-text
+  //   White           → .badge-number, .logo-play
+  const n900 = neutrals[0].hex;  // Headings (not surfaced in preview — see A4 note)
+  const n700 = neutrals[1].hex;  // Body text → Tier 2 subline
+  const n500 = neutrals[2].hex;  // Captions → Tier 2 helpline channels, QR label
+  const n300 = neutrals[3].hex;  // Light text → muted text on dark, Tier 2 QR/footer
+  const n100 = neutrals[4].hex;  // Borders → Tier 2 QR border, card-footer border
+  const n50  = neutrals[5].hex;  // Background → Tier 2 QR box background
+
+  // Myth-Buster card neutrals
+  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .fact-statement, .pv-card:not(.pv-card-tier2) .stat-unit, .pv-card:not(.pv-card-tier2) .footer-legal').forEach(el => { el.style.color = n300; });
+  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .myth-statement .strike').forEach(el => { el.style.color = n300; });
+
+  // Tier 2 card neutrals — matches canonical card-tier2-10f.html
+  document.querySelectorAll('.pv-card-tier2 .t2-subline').forEach(el => { el.style.color = n700; });
+  document.querySelectorAll('.pv-card-tier2 .t2-helpline-channels').forEach(el => { el.style.color = n500; });
+  document.querySelectorAll('.pv-card-tier2 .t2-qr-label').forEach(el => { el.style.color = n500; });
+  document.querySelectorAll('.pv-card-tier2 .t2-qr-box').forEach(el => {
+    el.style.background = n50;
+    el.style.border = `1px solid ${n100}`;
+    el.style.color = n300;
+  });
   document.querySelectorAll('.pv-card-tier2 .t2-footer-text').forEach(el => { el.style.color = n300; });
+  document.querySelectorAll('.pv-card-tier2 .card-footer').forEach(el => { el.style.borderTop = `1px solid ${n100}`; });
+  document.querySelectorAll('.pv-card-tier2 .t2-helpline-number').forEach(el => { el.style.color = secondary; });
+
+  // Co-brand badge neutrals
   document.querySelectorAll('.pv-badge .badge-text').forEach(el => { el.style.color = n300; });
   document.querySelectorAll('.pv-card .co-brand-divider').forEach(el => { el.style.background = n300; el.style.opacity = '0.4'; });
-  // White text on dark primary backgrounds
+
+  // White text on dark primary backgrounds (canonical per real templates)
   document.querySelectorAll('.pv-card:not(.pv-card-tier2) .myth-statement').forEach(el => { if (!el.querySelector('.strike')) return; el.style.color = '#FFFFFF'; });
-  document.querySelectorAll('.pv-card .footer-helpline').forEach(el => { el.style.color = '#FFFFFF'; });
+  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .footer-helpline').forEach(el => { el.style.color = '#FFFFFF'; });
   document.querySelectorAll('.pv-card:not(.pv-card-tier2) .card-logo .logo-play').forEach(el => { el.style.color = '#FFFFFF'; });
   document.querySelectorAll('.pv-badge .badge-number').forEach(el => { el.style.color = '#FFFFFF'; });
   document.querySelectorAll('.pv-badge .badge-logo .logo-play').forEach(el => { el.style.color = '#FFFFFF'; });
@@ -1875,10 +2046,10 @@ function updatePreview() {
   document.querySelectorAll('.pv-card, .pv-badge').forEach(el => {
     el.style.fontFamily = `'${bodyFont}', sans-serif`;
   });
-  document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-contact-label, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo').forEach(el => {
+  document.querySelectorAll('.pv-card .card-logo, .pv-card .card-pillar, .pv-card .myth-label, .pv-card .myth-statement, .pv-card .stat-number, .pv-card .stat-unit, .pv-card-tier2 .t2-headline, .pv-card-tier2 .t2-helpline-channels, .pv-card-tier2 .t2-footer-text, .pv-badge .badge-logo').forEach(el => {
     el.style.fontFamily = `'${headingFont}', sans-serif`;
   });
-  document.querySelectorAll('.pv-card .footer-helpline, .pv-card-tier2 .t2-contact-value, .pv-badge .badge-number').forEach(el => {
+  document.querySelectorAll('.pv-card .footer-helpline, .pv-card-tier2 .t2-helpline-number, .pv-card-tier2 .t2-qr-box, .pv-badge .badge-number').forEach(el => {
     el.style.fontFamily = `'${monoFont}', monospace`;
   });
 
@@ -1895,18 +2066,20 @@ function updatePreview() {
   // Each element maps to a scale level; ratio vs default gives the multiplier
   const def = TYPE_SCALE_PRESETS.default;
   const scaleMap = [
-    { sel: '.pv-card .myth-statement, .pv-card-tier2 .t2-headline', base: 26, level: 'h2', defVal: def.h2 },
+    { sel: '.pv-card:not(.pv-card-tier2) .myth-statement', base: 26, level: 'h2', defVal: def.h2 },
+    { sel: '.pv-card-tier2 .t2-headline', base: 22, level: 'h2', defVal: def.h2 },
     { sel: '.pv-card .myth-label', base: 8, level: 'caption', defVal: def.caption },
-    { sel: '.pv-card .fact-statement, .pv-card-tier2 .t2-subline', base: 13, level: 'body', defVal: def.body },
+    { sel: '.pv-card .fact-statement', base: 13, level: 'body', defVal: def.body },
+    { sel: '.pv-card-tier2 .t2-subline', base: 11, level: 'body', defVal: def.body },
     { sel: '.pv-card .stat-number', base: 40, level: 'display', defVal: def.display },
     { sel: '.pv-card .stat-unit', base: 12, level: 'small', defVal: def.small },
     { sel: '.pv-card .card-logo, .pv-badge .badge-logo', base: 16, level: 'h4', defVal: def.h4 },
     { sel: '.pv-card .card-pillar', base: 9, level: 'caption', defVal: def.caption },
     { sel: '.pv-card .footer-helpline', base: 8, level: 'caption', defVal: def.caption },
     { sel: '.pv-card .footer-legal', base: 7, level: 'caption', defVal: def.caption },
-    { sel: '.pv-card-tier2 .t2-contact-label, .pv-card-tier2 .t2-footer-text', base: 9, level: 'caption', defVal: def.caption },
-    { sel: '.pv-card-tier2 .t2-contact-value', base: 18, level: 'h3', defVal: def.h3 },
-    { sel: '.pv-card-tier2 .t2-contact-value.t2-phone', base: 24, level: 'h2', defVal: def.h2 },
+    { sel: '.pv-card-tier2 .t2-helpline-number', base: 20, level: 'h2', defVal: def.h2 },
+    { sel: '.pv-card-tier2 .t2-helpline-channels, .pv-card-tier2 .t2-qr-label', base: 9, level: 'caption', defVal: def.caption },
+    { sel: '.pv-card-tier2 .t2-footer-text', base: 9, level: 'caption', defVal: def.caption },
     { sel: '.pv-badge .badge-text', base: 11, level: 'small', defVal: def.small },
     { sel: '.pv-badge .badge-number', base: 14, level: 'body', defVal: def.body },
   ];
@@ -1917,7 +2090,7 @@ function updatePreview() {
     document.querySelectorAll(sel).forEach(el => { el.style.fontSize = px + 'px'; });
   });
   // Apply line heights to preview cards
-  document.querySelectorAll('.pv-card .myth-statement, .pv-card-tier2 .t2-headline').forEach(el => { el.style.lineHeight = String(ts.lhHeading); });
+  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .myth-statement, .pv-card-tier2 .t2-headline').forEach(el => { el.style.lineHeight = String(ts.lhHeading); });
   document.querySelectorAll('.pv-card .fact-statement, .pv-card-tier2 .t2-subline').forEach(el => { el.style.lineHeight = String(ts.lhBody); });
 
   // Update program name in logos (text or image replacement)
@@ -1971,27 +2144,16 @@ function updatePreview() {
   });
   const badgeNumber = document.getElementById('pvBadgeNumber');
   const chatUrlVal = document.getElementById('chatUrl').value || preset.chatUrl || '';
-  const contactBlock = document.getElementById('pvT2ContactBlock');
-  if (contactBlock) {
-    let html = '';
-    html += '<div class="t2-contact-row">';
-    html += '<span class="t2-contact-label" style="color: ' + n300 + ';">Call</span>';
-    html += '<span class="t2-contact-value t2-phone" style="color: var(--cfg-secondary, #00D4AA);">' + helpline + '</span>';
-    html += '</div>';
-    if (textNum) {
-      html += '<div class="t2-contact-row">';
-      html += '<span class="t2-contact-label" style="color: ' + n300 + ';">Text</span>';
-      html += '<span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);">' + textNum + '</span>';
-      html += '</div>';
-    }
-    if (chatUrlVal) {
-      const chatDisplay = chatUrlVal.replace(/^https?:\/\//, '').replace(/\/$/, '');
-      html += '<div class="t2-contact-row">';
-      html += '<span class="t2-contact-label" style="color: ' + n300 + ';">Chat</span>';
-      html += '<span class="t2-contact-value" style="color: var(--cfg-secondary, #00D4AA);">' + chatDisplay + '</span>';
-      html += '</div>';
-    }
-    contactBlock.innerHTML = html;
+
+  // Tier 2 helpline number and channels (matches canonical card-tier2-10f.html)
+  const t2Phone = document.getElementById('pvT2Phone');
+  if (t2Phone) t2Phone.textContent = helpline;
+  const t2Channels = document.querySelector('.pv-card-tier2 .t2-helpline-channels');
+  if (t2Channels) {
+    const channels = ['Call'];
+    if (textNum) channels.push('Text');
+    if (chatUrlVal) channels.push('Chat');
+    t2Channels.textContent = channels.join(' \u00B7 ');
   }
 
   // Update badge with helpline org and channels
@@ -2374,15 +2536,21 @@ function updateCultureContent() {
 
   const accent = document.getElementById('colorAccent').value || '#FF6B35';
   const secondary = document.getElementById('colorSecondary').value || '#00D4AA';
+  // Pull current Light text (n300) from the neutrals so culture swaps don't reset it
+  const n300Now = (document.getElementById('colorN300') && document.getElementById('colorN300').value) || '#A8A8C0';
 
   // Myth-buster card
   const mythStmt = document.getElementById('pvMythStatement');
   if (mythStmt) {
     const strikeHtml = CULTURE_CONTENT.mythStatement[humor] || CULTURE_CONTENT.mythStatement.irreverent;
     mythStmt.innerHTML = strikeHtml;
-    // Re-apply colors to the strike span
+    // Re-apply colors AND tooltip label to the freshly-rendered strike span
     const strike = mythStmt.querySelector('.strike');
-    if (strike) { strike.style.textDecorationColor = accent; strike.style.color = '#A8A8C0'; }
+    if (strike) {
+      strike.style.textDecorationColor = accent;
+      strike.style.color = n300Now;
+      strike.setAttribute('data-pb-label', 'Light text (n300) — Struck myth, strike color = Accent');
+    }
   }
 
   const factStmt = document.getElementById('pvFactStatement');
@@ -2673,24 +2841,50 @@ function generateFullCss() {
   const bodyFont = document.getElementById('fontBody').value;
   const monoFont = document.getElementById('fontMono').value;
   const ts = getTypeScale();
+  const allowGradients = document.getElementById('allowGradients') ? document.getElementById('allowGradients').checked : true;
 
-  // Custom font @font-face block
+  // Operator metadata — emitted as a JSON block inside a CSS comment so the
+  // RG template's "Try your brand" upload can resolve {{PROGRAM_NAME}} etc.
+  // CSS comments are inert at the styling layer but parseable by the consumer.
+  const fieldVal = (id) => {
+    const el = document.getElementById(id);
+    return el && el.value ? el.value : '';
+  };
+  const meta = {
+    program_name: fieldVal('programName') || 'Playbook',
+    organization: fieldVal('orgName'),
+    website: fieldVal('websiteUrl'),
+    helpline_number: fieldVal('helplineNumber'),
+    text_number: fieldVal('textNumber'),
+    chat_url: fieldVal('chatUrl'),
+    min_age: fieldVal('minAge'),
+    age_disclaimer: (fieldVal('disclaimerAge') || 'You must be {{MIN_AGE}}+ to gamble.')
+      .replace(/\{\{MIN_AGE\}\}/g, fieldVal('minAge') || '21'),
+  };
+  const metaBlock = '/*! PLAYBOOK_META ' + JSON.stringify(meta) + ' */\n\n';
+
+  // Custom font @font-face block — embed font binary as data URL so the
+  // CSS file is self-contained (works wherever it's dropped, including the
+  // RG template's "Try your brand" upload, with no sidecar files needed).
   let fontFaceBlock = '';
   if (customFontDataUrl && customFontName) {
-    const fmt = customFontDataUrl.includes('woff2') ? 'woff2' : 'woff';
-    fontFaceBlock = `/* Custom font */
+    // Detect format from the data URL MIME (FONT_FORMAT_MAP rewrites these on upload)
+    let fmt = 'woff2';
+    if (customFontDataUrl.indexOf('data:font/woff2') === 0) fmt = 'woff2';
+    else if (customFontDataUrl.indexOf('data:font/woff') === 0) fmt = 'woff';
+    else if (customFontDataUrl.indexOf('data:font/ttf') === 0) fmt = 'truetype';
+    else if (customFontDataUrl.indexOf('data:font/otf') === 0) fmt = 'opentype';
+    fontFaceBlock = `/* Custom font (embedded as data URL — no sidecar file needed) */
 @font-face {
   font-family: '${customFontName}';
-  src: url('${customFontName.replace(/\s+/g, '-').toLowerCase()}.${fmt}') format('${fmt}');
-  font-weight: 100 900;
+  src: url('${customFontDataUrl}') format('${fmt}');
   font-display: swap;
 }
-/* NOTE: Place your ${fmt} file alongside this CSS, named ${customFontName.replace(/\s+/g, '-').toLowerCase()}.${fmt} */
 
 `;
   }
 
-  return fontFaceBlock + `/* brand-inject.css \u2014 Generated by Playbook Brand Configurator */
+  return metaBlock + fontFaceBlock + `/* brand-inject.css \u2014 Generated by Playbook Brand Configurator */
 :root {
   /* Colors */
   --pb-color-primary: ${primary};
@@ -2735,6 +2929,12 @@ function generateFullCss() {
   --pb-line-height-heading: ${ts.lhHeading};
   --pb-line-height-body: ${ts.lhBody};
   --pb-line-height-tight: ${ts.lhTight};
+
+  /* Gradients — toggled by 'Allow gradients' in the configurator.
+     When off, both fall back to a flat brand color so muddy color blends are avoided. */
+  --pb-allow-gradients: ${allowGradients ? '1' : '0'};
+  --pb-gradient-bar: ${allowGradients ? `linear-gradient(90deg, ${accent}, ${secondary})` : secondary};
+  --pb-gradient-bg: ${allowGradients ? `linear-gradient(180deg, ${primary}, ${primaryDark})` : primary};
 }
 
 /* Logo image replacement — toggles text wordmark to an uploaded image */
@@ -2752,15 +2952,16 @@ function generateFullCss() {
   background: var(--pb-logo-image, none) no-repeat left center / contain;
   min-width: 4em;
 }
-` + (getLogoMode() === 'replace' && uploadedLogoDataUrl ? `
-/* Operator logo replaces text wordmark */
+` + (uploadedLogoDataUrl ? `
+/* Operator logo (embedded as data URL — no sidecar file needed)
+   Mode: ${getLogoMode()} (cobrand = side-by-side with Playbook wordmark, replace = swaps wordmark) */
 :root {
+  --pb-logo-mode: ${getLogoMode()};
+  --pb-logo-image: url('${uploadedLogoDataUrl}');
+  --pb-logo-image-height: 1.4em;${getLogoMode() === 'replace' ? `
   --pb-logo-text-display: none;
-  --pb-logo-image-display: inline-block;
-  --pb-logo-image: url('operator-logo.svg');
-  --pb-logo-image-height: 1.4em;
+  --pb-logo-image-display: inline-block;` : ''}
 }
-/* NOTE: Replace the url above with the path to your hosted logo file. */
 ` : '') + ``;
 }
 
