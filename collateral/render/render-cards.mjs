@@ -74,6 +74,25 @@ const cards = [
   { html: 'withdrawal-confirm-12f.html', output: 'withdrawal-confirm-12f.png', w: 420, h: 812, selector: '.withdrawal-confirm' },
   { html: 'betslip-rg-12g.html', output: 'betslip-rg-12g.png', w: 420, h: 320, selector: '.betslip-rg' },
   { html: 'web-popup-12h.html', output: 'web-popup-12h.png', w: 480, h: 560, selector: '.web-popup' },
+  // Cognitive distortion / myth cards
+  { html: 'card-13a-its-due.html', output: 'card-13a-its-due.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13b-near-win.html', output: 'card-13b-near-win.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13c-picked-right.html', output: 'card-13c-picked-right.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13d-won-big.html', output: 'card-13d-won-big.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13e-lucky-shirt.html', output: 'card-13e-lucky-shirt.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13f-earned-win.html', output: 'card-13f-earned-win.png', w: 1080, h: 1080, selector: '.social-card' },
+  // "Every game has math. Here's yours." cross-format showcase
+  { html: 'card-14a-every-game-blackjack.html', output: 'card-14a-every-game-blackjack.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'story-14b-every-game-roulette.html', output: 'story-14b-every-game-roulette.png', w: 1080, h: 1920, selector: '.story-card' },
+  { html: 'poster-14c-every-game-slots.html', output: 'poster-14c-every-game-slots.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'email-14d-every-game.html', output: 'email-14d-every-game.png', w: 600, h: 1100, selector: '.email' },
+  { html: 'display-14e-every-game.html', output: 'display-14e-every-game.png', w: 1920, h: 1080, selector: '.display-screen' },
+  { html: 'mobile-14f-every-game.html', output: 'mobile-14f-every-game.png', w: 420, h: 812, selector: '.mobile-screen' },
+  // Playoff basketball / sports betting education campaign
+  { html: 'card-15a-point-spread.html', output: 'card-15a-point-spread.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'story-15b-bet-costs.html', output: 'story-15b-bet-costs.png', w: 1080, h: 1920, selector: '.story-card' },
+  { html: 'poster-15c-how-sportsbook-wins.html', output: 'poster-15c-how-sportsbook-wins.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'live-odds-overlay-15d.html', output: 'live-odds-overlay-15d.png', w: 420, h: 280, selector: '.live-overlay' },
 ];
 
 // Filter to only render files passed as CLI args, or all if none given

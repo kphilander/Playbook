@@ -1,0 +1,3096 @@
+# Translation strings for Playbook collateral.
+#
+# Each key is a unique string ID used across one or more templates.
+# en is the source. ja, zh-CN, ar are target languages.
+#
+# Cultural profile drives translation quality (not just language):
+#   ja        (Japan):  elder, communal, understated, contextual, reserved
+#   zh-CN     (Macau):  authority, communal, minimal, diplomatic, private
+#   ar        (UAE):    authority, communal, understated, contextual, private
+#
+# Rules applied in this file:
+#   1. English source is copied verbatim from the templates — never edited.
+#   2. Cultural adaptation, not literal translation. Where a literal rendering
+#      would be culturally wrong (e.g., irreverent jokes in zh-CN/ar, direct
+#      second-person "you" in ja-formal), a `note:` field explains what changed.
+#   3. {{TOKENS}} are build-time placeholders and are NOT translated.
+#   4. Identical strings (helpline label, age disclaimer, "Learn more", footer
+#      legal, etc.) are deduplicated into the top-level `common:` section.
+#   5. Template-specific strings are grouped by template ID (filename minus
+#      the .html extension) to make review easy.
+#   6. Phase A items are fully translated across all three languages.
+#      Phase B items list the English source with `TODO: translate` markers
+#      for ja/zh-CN/ar — to be filled in batched future work.
+#
+# Phase A (fully translated below):
+#   - common (helpline/disclaimer/CTAs/footer legal, etc.)
+#   - card-13a..13f  (cognitive distortion "Myth vs. Math" cards — most
+#     culturally reactive, need careful work)
+#   - card-14a / story-14b / poster-14c / email-14d / display-14e /
+#     mobile-14f  (every-game cross-format showcase — shared headline,
+#     different layouts)
+#   - card-15a / story-15b / poster-15c / live-odds-overlay-15d
+#     (sports-math quartet)
+#
+# Phase B (skeleton — English only, translations TODO):
+#   - all other templates listed at the bottom of this file
+#
+# review: comments flag any translation the extractor was uncertain about.
+
+strings:
+
+  # ──────────────────────────────────────────────────────────────────────
+  # COMMON — strings shared across many templates
+  # ──────────────────────────────────────────────────────────────────────
+  common:
+
+    # The Playbook logo is two parts — "Play" set bold, "book" set light/uppercase.
+    # It is a brand wordmark. Translations render it exactly the same visually;
+    # the brand name "Playbook" never translates, it stays Latin.
+    brand_logo_play:
+      en: "Play"
+      ja: "Play"
+      zh-CN: "Play"
+      ar: "Play"
+      note: "Brand wordmark — never translates. Keep Latin characters."
+    brand_logo_book:
+      en: "book"
+      ja: "book"
+      zh-CN: "book"
+      ar: "book"
+      note: "Brand wordmark — never translates. Keep Latin characters."
+
+    # Voice pillars printed in pill badges on many cards/posters.
+    pillar_open:
+      en: "Open"
+      ja: "オープン"
+      zh-CN: "公开"
+      ar: "شفافية"
+      note: "ja: Katakana loanword is idiomatic for this kind of brand pillar label. zh-CN (Macau): 公开 = open/public/transparent, an authoritative civic register. ar: شفافية = transparency, the institutional register the UAE uses in RG communications."
+    pillar_social:
+      en: "Social"
+      ja: "ソーシャル"
+      zh-CN: "社群"
+      ar: "اجتماعي"
+      note: "zh-CN: 社群 (community) fits the communal profile better than 社交 (socializing)."
+
+    # Section labels — these appear in the same pill-badge slot as voice pillars
+    # but carry editorial/section meaning instead.
+    section_real_odds:
+      en: "Real Odds"
+      ja: "本当の確率"
+      zh-CN: "真实赔率"
+      ar: "الاحتمالات الحقيقية"
+    section_sports_math:
+      en: "Sports math"
+      ja: "スポーツの数学"
+      zh-CN: "体育博彩的数学"
+      ar: "حسابات الرهان الرياضي"
+      note: "zh-CN: 'sports math' as a punchy English phrase doesn't land; expanded to '体育博彩的数学' (the math of sports betting) for the institutional register."
+    section_know_your_game:
+      en: "Know Your Game"
+      ja: "ゲームを知る"
+      zh-CN: "了解游戏"
+      ar: "اعرف لعبتك"
+    section_how_it_works:
+      en: "How It Works"
+      ja: "仕組み"
+      zh-CN: "运作方式"
+      ar: "آلية العمل"
+    section_your_session:
+      en: "Your session"
+      ja: "今回のセッション"
+      zh-CN: "本次游戏"
+      ar: "جلستك"
+    section_more_resources:
+      en: "More resources"
+      ja: "その他のサポート"
+      zh-CN: "更多资源"
+      ar: "موارد إضافية"
+    section_myth_vs_math:
+      en: "Myth vs. Math"
+      ja: "俗説と数学"
+      zh-CN: "误区与数字"
+      ar: "الاعتقاد مقابل الأرقام"
+      note: "zh-CN: 数字 (numbers) lands more cleanly than 数学 (mathematics) in the civic register. ar: we use 'belief vs. numbers' to preserve the contrast without the informal 'myth' framing."
+
+    # Helpline / support line footer strings. There are several minor wording
+    # variants in English ("Free support", "Free, confidential support", "24/7
+    # Support") — we represent the canonical forms and let templates pick.
+    helpline_short:
+      en: "Free support 24/7: {{HELPLINE_NUMBER}}"
+      ja: "24時間無料サポート：{{HELPLINE_NUMBER}}"
+      zh-CN: "24小时免费支援：{{HELPLINE_NUMBER}}"
+      ar: "دعم مجاني على مدار الساعة: {{HELPLINE_NUMBER}}"
+      note: "ar: numbers remain LTR inline within RTL text (standard CSS). Use Arabic colon positioning."
+    helpline_full:
+      en: "Free, confidential support 24/7: {{HELPLINE_NUMBER}}"
+      ja: "秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}"
+      zh-CN: "24小时免费保密支援：{{HELPLINE_NUMBER}}"
+      ar: "دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}"
+      note: "zh-CN: 保密 (confidentiality) is emphasized per Macau profile. ja: 秘密厳守 is the standard institutional phrasing for confidential support."
+    helpline_247_prefix:
+      en: "24/7 Support: {{HELPLINE_NUMBER}}"
+      ja: "24時間サポート：{{HELPLINE_NUMBER}}"
+      zh-CN: "24小时支援：{{HELPLINE_NUMBER}}"
+      ar: "دعم على مدار الساعة: {{HELPLINE_NUMBER}}"
+    helpline_247_label:
+      en: "24/7 Support"
+      ja: "24時間サポート"
+      zh-CN: "24小时支援"
+      ar: "الدعم على مدار الساعة"
+    helpline_label_24_7:
+      en: "{{HELPLINE_NUMBER}} · 24/7"
+      ja: "{{HELPLINE_NUMBER}}・24時間対応"
+      zh-CN: "{{HELPLINE_NUMBER}}・24小时"
+      ar: "{{HELPLINE_NUMBER}} · على مدار الساعة"
+    helpline_available_24_7:
+      en: "{{TEXT_NUMBER}} · Chat {{CHAT_URL}} · Available 24/7"
+      ja: "{{TEXT_NUMBER}}・チャット {{CHAT_URL}}・24時間対応"
+      zh-CN: "{{TEXT_NUMBER}}・在线支援 {{CHAT_URL}}・24小时服务"
+      ar: "{{TEXT_NUMBER}} · الدردشة {{CHAT_URL}} · متاح على مدار الساعة"
+    helpline_channels_short:
+      en: "{{TEXT_NUMBER}} · Chat {{CHAT_URL}}"
+      ja: "{{TEXT_NUMBER}}・チャット {{CHAT_URL}}"
+      zh-CN: "{{TEXT_NUMBER}}・在线支援 {{CHAT_URL}}"
+      ar: "{{TEXT_NUMBER}} · الدردشة {{CHAT_URL}}"
+    helpline_headline:
+      en: "Free, confidential support"
+      ja: "秘密厳守の無料サポート"
+      zh-CN: "免费保密支援"
+      ar: "دعم مجاني وسري"
+    helpline_headline_24_7:
+      en: "Free, confidential support — 24/7"
+      ja: "秘密厳守の無料サポート・24時間対応"
+      zh-CN: "24小时免费保密支援"
+      ar: "دعم مجاني وسري — على مدار الساعة"
+    helpline_subtext:
+      en: "No judgment. No cost. Just real help, whenever you need it."
+      ja: "費用もかからず、評価もされません。必要なときに、確かなサポートをご利用いただけます。"
+      zh-CN: "免费、不加评判，随时为玩家提供真诚的帮助。"
+      ar: "بدون أحكام، وبدون تكلفة. فقط مساعدة حقيقية عند الحاجة."
+      note: "ja: 'No judgment' becomes '評価もされません' (you won't be judged/assessed). zh-CN (Macau): subject dropped and 玩家 (player) used instead of 你; diplomatic register. ar: formal MSA, parallel structure preserved."
+    helpline_for_any_question:
+      en: "For any question about gambling. No judgment. Ever."
+      ja: "ギャンブルに関するどのようなご相談にもお応えします。ご評価することはありません。"
+      zh-CN: "无论关于博彩的任何问题，玩家皆可咨询，不受评判。"
+      ar: "لأي سؤال يتعلق بالمقامرة. بدون أحكام، أبدًا."
+    helpline_available_any_gambling:
+      en: "Free, confidential support — for any question about gambling."
+      ja: "ギャンブルに関するご相談は、秘密厳守の無料サポートをご利用いただけます。"
+      zh-CN: "博彩相关任何问题，皆可获得免费保密支援。"
+      ar: "دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة."
+    helpline_available_long:
+      en: "Free, confidential support is available 24/7 — for any question about gambling. No judgment. Ever."
+      ja: "ギャンブルに関するどのようなご相談にも、秘密厳守の無料サポートが24時間ご利用いただけます。ご評価することはありません。"
+      zh-CN: "24小时免费保密支援,博彩相关任何问题皆可咨询,玩家不会受到任何评判。"
+      ar: "الدعم المجاني والسري متاح على مدار الساعة — لأي سؤال يتعلق بالمقامرة. بدون أحكام، أبدًا."
+    helpline_24_7_no_judgment:
+      en: "24/7 · No judgment · Any question about gambling"
+      ja: "24時間対応・評価なし・ギャンブルに関するあらゆるご相談"
+      zh-CN: "24小时·不加评判·博彩相关任何问题"
+      ar: "على مدار الساعة · بدون أحكام · لأي سؤال عن المقامرة"
+    helpline_24_7_ever:
+      en: "24/7 · No judgment · Ever."
+      ja: "24時間対応・評価は一切いたしません"
+      zh-CN: "24小时・始终不加评判"
+      ar: "على مدار الساعة · بدون أحكام · أبدًا"
+    helpline_need_to_talk:
+      en: "Need to talk?"
+      ja: "お話しされたいときに"
+      zh-CN: "需要倾诉吗？"
+      ar: "هل تحتاج إلى التحدث؟"
+      note: "ja: direct question → softer nominal phrase ('when you'd like to talk'). zh-CN: keeps question form but in formal register. ar: formal MSA interrogative."
+    helpline_need_to_talk_free:
+      en: "Need to talk? Free, confidential support."
+      ja: "お話しされたいときに。秘密厳守の無料サポートをご利用いただけます。"
+      zh-CN: "需要倾诉吗？免费保密支援。"
+      ar: "هل تحتاج إلى التحدث؟ دعم مجاني وسري."
+    helpline_short_label:
+      en: "Free, confidential support: {{HELPLINE_NUMBER}}"
+      ja: "秘密厳守の無料サポート：{{HELPLINE_NUMBER}}"
+      zh-CN: "免费保密支援：{{HELPLINE_NUMBER}}"
+      ar: "دعم مجاني وسري: {{HELPLINE_NUMBER}}"
+
+    # Channel labels repeated across multiple templates.
+    channel_call:
+      en: "Call"
+      ja: "電話"
+      zh-CN: "电话"
+      ar: "اتصال"
+    channel_text:
+      en: "Text"
+      ja: "メッセージ"
+      zh-CN: "短讯"
+      ar: "رسالة نصية"
+      note: "zh-CN: 短讯 is the Macau/HK register; mainland would use 短信."
+    channel_chat:
+      en: "Chat"
+      ja: "チャット"
+      zh-CN: "在线支援"
+      ar: "الدردشة"
+      note: "zh-CN: 在线支援 (online support) reads more institutional than 聊天 (chat)."
+    channel_web:
+      en: "Web"
+      ja: "ウェブ"
+      zh-CN: "网站"
+      ar: "الويب"
+    channel_call_dot_text_dot_chat:
+      en: "Call · Text · Chat"
+      ja: "電話・メッセージ・チャット"
+      zh-CN: "电话・短讯・在线支援"
+      ar: "اتصال · رسالة · دردشة"
+
+    # Short CTAs.
+    cta_learn_more:
+      en: "Learn more"
+      ja: "詳しくはこちら"
+      zh-CN: "了解更多"
+      ar: "اعرف المزيد"
+    cta_get_started:
+      en: "Get started"
+      ja: "はじめる"
+      zh-CN: "立即开始"
+      ar: "ابدأ الآن"
+    cta_continue:
+      en: "Continue"
+      ja: "続ける"
+      zh-CN: "继续"
+      ar: "متابعة"
+    cta_done:
+      en: "Done"
+      ja: "完了"
+      zh-CN: "完成"
+      ar: "تم"
+    cta_go_back:
+      en: "Go back"
+      ja: "戻る"
+      zh-CN: "返回"
+      ar: "رجوع"
+    cta_see_full_breakdown:
+      en: "See the full breakdown"
+      ja: "詳細を確認する"
+      zh-CN: "查看完整数据"
+      ar: "عرض التفاصيل الكاملة"
+    cta_scan_for_support:
+      en: "Scan for support"
+      ja: "スキャンしてサポートへ"
+      zh-CN: "扫码获取支援"
+      ar: "امسح للحصول على الدعم"
+    cta_scan_for_facts:
+      en: "Scan for the facts"
+      ja: "スキャンして事実を確認"
+      zh-CN: "扫码查看事实"
+      ar: "امسح لعرض الحقائق"
+    cta_scan_to_learn_more:
+      en: "Scan to learn more"
+      ja: "スキャンして詳細を見る"
+      zh-CN: "扫码了解更多"
+      ar: "امسح لمعرفة المزيد"
+    cta_manage_preferences:
+      en: "Manage your preferences"
+      ja: "配信設定を管理する"
+      zh-CN: "管理邮件偏好"
+      ar: "إدارة التفضيلات"
+    cta_unsubscribe:
+      en: "Unsubscribe"
+      ja: "配信停止"
+      zh-CN: "取消订阅"
+      ar: "إلغاء الاشتراك"
+
+    # Legal / disclaimer lines. {{AGE_DISCLAIMER}} and {{GENERAL_DISCLAIMER}}
+    # are build-time tokens resolved from jurisdiction config, so they are
+    # NOT translated here. They appear untouched in templates.
+    legal_age_plus_general:
+      en: "{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}"
+      ja: "{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}"
+      zh-CN: "{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}"
+      ar: "{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}"
+      note: "Passthrough — these tokens resolve per jurisdiction at build time."
+
+    # Operator co-brand placeholder ("Your logo" / "Your logo here") — this is
+    # a pre-build placeholder that operators replace with their logo, so it
+    # should read naturally to the authoring audience. Still, the test renders
+    # show the string, so we translate it for preview parity.
+    operator_logo_placeholder:
+      en: "Your logo"
+      ja: "貴社ロゴ"
+      zh-CN: "贵司标志"
+      ar: "شعارك"
+    operator_logo_here:
+      en: "Your logo here"
+      ja: "貴社ロゴをここに"
+      zh-CN: "贵司标志"
+      ar: "شعارك هنا"
+
+    # QR block labels.
+    qr_code_label:
+      en: "QR Code"
+      ja: "QRコード"
+      zh-CN: "二维码"
+      ar: "رمز الاستجابة السريعة"
+    qr_plain:
+      en: "QR"
+      ja: "QR"
+      zh-CN: "QR"
+      ar: "QR"
+      note: "Plain 'QR' placeholder in mockups — leave as Latin."
+
+    # Internal-use / operator-facing labels that appear in the rendered
+    # mockups (sign-staff-9e, etc.) but are ultimately seen only by staff.
+    internal_use_only:
+      en: "Internal use only"
+      ja: "社内限定"
+      zh-CN: "内部使用"
+      ar: "للاستخدام الداخلي فقط"
+
+  # ──────────────────────────────────────────────────────────────────────
+  # PHASE A — cognitive-distortion "Myth vs. Math" cards (13a..13f)
+  # These are the highest-stakes strings for cultural adaptation because
+  # they use first-person myth quotes and blunt corrective facts. Literal
+  # translation would read as accusatory in ja/zh-CN/ar. We use the
+  # culturally-correct elder/authority register for each target.
+  # ──────────────────────────────────────────────────────────────────────
+
+  card-13a-its-due:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"It''s due to hit"'
+      ja: "「そろそろ当たるはず」"
+      zh-CN: "「快该中了」"
+      ar: "«حان وقت الفوز»"
+      note: "ja: elder/contextual register avoids the English slang 'due to hit' — 'そろそろ当たるはず' (it should be about to hit) is the natural colloquial expression of the fallacy in Japanese. zh-CN: 快该中了 captures the casual player's internal monologue in Macau Cantonese-influenced Mandarin. ar: «حان وقت الفوز» = 'the time for winning has come' — preserves the expectation, formal MSA."
+    fact:
+      en: "The slot doesn't owe you a win. <strong>Losses don't load the next spin.</strong>"
+      ja: "スロットマシンは、勝ちを約束するものではありません。<strong>過去の負けが次の結果に影響することはありません。</strong>"
+      zh-CN: "老虎机并不欠玩家任何奖金。<strong>过往的损失不会影响下一次旋转。</strong>"
+      ar: "آلة القمار لا تدين لك بالفوز. <strong>الخسائر السابقة لا تؤثر على الدورة التالية.</strong>"
+      note: "ja: drops the 'owe you' debt metaphor (culturally off-key) in favor of a neutral factual statement. zh-CN: uses 玩家 instead of 你, keeping the communal/institutional register. ar: parallel factual structure preserved."
+    stat_number:
+      en: "$0"
+      ja: "¥0"
+      zh-CN: "MOP$0"
+      ar: "0 AED"
+      note: "Currency symbol localizes per jurisdiction: Japan → ¥, Macau → MOP$, UAE → AED. Numerals stay Arabic."
+    stat_unit:
+      en: "owed to you<br>for past losses"
+      ja: "過去の負けに対して<br>支払われるもの"
+      zh-CN: "因过往损失<br>应得的金额"
+      ar: "مستحق لك<br>مقابل الخسائر السابقة"
+
+  card-13b-near-win:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"It was so close!"'
+      ja: "「惜しかった！」"
+      zh-CN: "「就差一点！」"
+      ar: "«كان قريبًا جدًا!»"
+    fact:
+      en: "A near-win isn't progress. It's just <strong>a loss that looks close.</strong>"
+      ja: "惜しい負けは、勝ちに近づいている証ではありません。それは<strong>近く見えるだけの負け</strong>です。"
+      zh-CN: "差一点的失败并非接近胜利,<strong>其实只是一次看起来接近的损失。</strong>"
+      ar: "الخسارة القريبة ليست تقدمًا. إنها فقط <strong>خسارة تبدو قريبة.</strong>"
+      note: "zh-CN: 其实 (actually/in fact) replaces direct negation, fitting the diplomatic profile."
+    stat_number:
+      en: "$0"
+      ja: "¥0"
+      zh-CN: "MOP$0"
+      ar: "0 AED"
+    stat_unit:
+      en: "earned<br>by \"almost\""
+      ja: "「惜しい」で<br>得られるもの"
+      zh-CN: "因「差一点」<br>获得的金额"
+      ar: "ما يُكسب<br>من «تقريبًا»"
+
+  card-13c-picked-right:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"I picked the right machine"'
+      ja: "「いい台を選んだ」"
+      zh-CN: "「我选对了机器」"
+      ar: "«اخترت الآلة المناسبة»"
+    fact:
+      en: "All slots are random. <strong>Your pick doesn't change the odds.</strong>"
+      ja: "すべてのスロットは無作為に決まります。<strong>台を選んでも確率は変わりません。</strong>"
+      zh-CN: "所有老虎机均为随机。<strong>事实上,选择机器不会改变赔率。</strong>"
+      ar: "جميع آلات القمار عشوائية. <strong>اختيارك لا يغير الاحتمالات.</strong>"
+      note: "zh-CN: 事实上 (in fact) softens the correction per the diplomatic Macau profile."
+    stat_number:
+      en: "0%"
+      ja: "0%"
+      zh-CN: "0%"
+      ar: "0%"
+    stat_unit:
+      en: "effect of picking<br>the \"right\" one"
+      ja: "「いい台」選びの<br>影響"
+      zh-CN: "选「对」机器的<br>实际影响"
+      ar: "تأثير اختيار<br>الآلة «المناسبة»"
+
+  card-13d-won-big:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"I won big last time"'
+      ja: "「前回は大きく勝った」"
+      zh-CN: "「上次我赢了不少」"
+      ar: "«فزت فوزًا كبيرًا في المرة السابقة»"
+    fact:
+      en: "Your brain keeps the wins and <strong>forgets the losses.</strong>"
+      ja: "私たちの記憶は、勝った時のことを覚えていて<strong>負けた時のことを忘れがちです。</strong>"
+      zh-CN: "人的记忆往往保留胜利,<strong>却淡化损失。</strong>"
+      ar: "يحتفظ الذهن بالانتصارات <strong>وينسى الخسائر.</strong>"
+      note: "ja: '私たちの記憶' (our memory) — communal framing, avoids direct 'your brain'. zh-CN: '人的记忆' (people's memory) — same communal shift, avoids 你的大脑."
+
+  card-13e-lucky-shirt:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"I always win in this shirt"'
+      ja: "「このシャツを着るとよく当たる」"
+      zh-CN: "「穿这件衣服总是会赢」"
+      ar: "«أفوز دائمًا بهذا القميص»"
+    fact:
+      en: "Your shirt can't talk to the slot. <strong>Nothing you wear or do changes the odds.</strong>"
+      ja: "服装がスロットに影響を与えることはありません。<strong>身につけるものや行動で確率は変わりません。</strong>"
+      zh-CN: "衣物与老虎机之间并无联系。<strong>穿戴或行为均不会改变赔率。</strong>"
+      ar: "ملابسك لا تتواصل مع آلة القمار. <strong>لا شيء ترتديه أو تفعله يغير الاحتمالات.</strong>"
+      note: "ja: the English joke 'your shirt can't talk to the slot' is dropped — it reads as flippant in Japanese. Replaced with the neutral factual version."
+
+  card-13f-earned-win:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"I''ve earned a win"'
+      ja: "「そろそろ勝たせてもらえるはず」"
+      zh-CN: "「我应该赢一次了」"
+      ar: "«استحققت الفوز»"
+      note: "ja: 'I've earned a win' doesn't translate literally — the Japanese player's version of this fallacy is closer to 'it's about time I was allowed to win' (そろそろ勝たせてもらえるはず), which also carries the culturally-appropriate passive/contextual voice."
+    fact:
+      en: "Losses aren't a down payment on a win. <strong>The math doesn't play favorites.</strong>"
+      ja: "負けは、将来の勝ちの頭金ではありません。<strong>確率はどなたにも平等です。</strong>"
+      zh-CN: "损失并非胜利的预付款。<strong>概率对每位玩家一视同仁。</strong>"
+      ar: "الخسائر ليست دفعة مقدمة نحو الفوز. <strong>الأرقام لا تحابي أحدًا.</strong>"
+      note: "en 'doesn't play favorites' is idiomatic → 'the odds are equal for everyone' in all three languages, preserving the corrective meaning without the sports metaphor."
+
+  # ──────────────────────────────────────────────────────────────────────
+  # PHASE A — "Every game has math. Here's yours." cross-format showcase
+  # (14a..14f)
+  # These share the hero headline and a single per-game stat, then render
+  # it across six formats: card, story, poster, email, display, mobile.
+  # ──────────────────────────────────────────────────────────────────────
+
+  common_14:
+    headline_every_game:
+      en: "Every game has math.<br>Here's yours."
+      ja: "すべてのゲームには数学があります。<br>ここに示します。"
+      zh-CN: "每款游戏都有数学。<br>请看您的游戏。"
+      ar: "لكل لعبة حساباتها.<br>إليك حسابات لعبتك."
+      note: "ja: 'here's yours' → 'ここに示します' (we show it to you here) — elder/contextual. zh-CN: keeps 您 formal register and replaces 这里是 with 请看 (please see). ar: formal MSA parallelism."
+    headline_every_game_flat:
+      en: "Every game has math. Here's yours."
+      ja: "すべてのゲームには数学があります。ここに示します。"
+      zh-CN: "每款游戏都有数学。请看您的游戏。"
+      ar: "لكل لعبة حساباتها. إليك حسابات لعبتك."
+
+  card-14a-every-game-blackjack:
+    headline: { $ref: "common_14.headline_every_game" }
+    pillar: { $ref: "common.pillar_open" }
+    stat_number:
+      en: "0.5%"
+      ja: "0.5%"
+      zh-CN: "0.5%"
+      ar: "0.5%"
+    stat_label:
+      en: "Blackjack<br>(perfect play)"
+      ja: "ブラックジャック<br>（最適戦略時）"
+      zh-CN: "二十一点<br>（最佳策略）"
+      ar: "بلاك جاك<br>(اللعب الأمثل)"
+    body_line:
+      en: "The lowest house edge in the casino."
+      ja: "カジノの中で最も低いハウスエッジです。"
+      zh-CN: "赌场中最低的庄家优势。"
+      ar: "أقل نسبة للكازينو في اللعبة."
+
+  story-14b-every-game-roulette:
+    headline: { $ref: "common_14.headline_every_game" }
+    pillar: { $ref: "common.pillar_open" }
+    stat_number:
+      en: "5.26%"
+      ja: "5.26%"
+      zh-CN: "5.26%"
+      ar: "5.26%"
+    stat_label:
+      en: "American roulette"
+      ja: "アメリカンルーレット"
+      zh-CN: "美式轮盘"
+      ar: "الروليت الأمريكي"
+    body_line:
+      en: "The house cut stays the same."
+      ja: "ハウスの取り分は変わりません。"
+      zh-CN: "庄家的抽成始终不变。"
+      ar: "نسبة الكازينو تبقى كما هي."
+
+  poster-14c-every-game-slots:
+    headline: { $ref: "common_14.headline_every_game" }
+    pillar: { $ref: "common.pillar_open" }
+    stat_number:
+      en: "2–15%"
+      ja: "2〜15%"
+      zh-CN: "2–15%"
+      ar: "2–15%"
+      note: "ja: uses the 〜 (wave dash) which is the Japanese convention for numeric ranges."
+    stat_label:
+      en: "Slot machines"
+      ja: "スロットマシン"
+      zh-CN: "老虎机"
+      ar: "آلات القمار"
+    body_line:
+      en: "The cut is set before you spin. You can't see it."
+      ja: "取り分は回す前に決まっていて、見ることはできません。"
+      zh-CN: "抽成在旋转之前已经设定,玩家无法看到。"
+      ar: "النسبة مُحددة مسبقًا قبل الدوران، ولا يمكن رؤيتها."
+    cta:
+      en: "Look up your game's cut at {{PROGRAM_URL}}"
+      ja: "{{PROGRAM_URL}} でご自身のゲームの取り分をご確認ください"
+      zh-CN: "访问 {{PROGRAM_URL}} 查询游戏的抽成"
+      ar: "تحقق من نسبة لعبتك على {{PROGRAM_URL}}"
+
+  email-14d-every-game:
+    subject: { $ref: "common_14.headline_every_game_flat" }
+    h1: { $ref: "common_14.headline_every_game_flat" }
+    intro:
+      en: "From lowest to highest — here's what the casino keeps."
+      ja: "低い順から高い順へ — カジノが受け取る割合をご紹介します。"
+      zh-CN: "从低到高 — 以下是赌场的抽成比例。"
+      ar: "من الأدنى إلى الأعلى — هذه هي نسبة الكازينو."
+    col_game:
+      en: "Game"
+      ja: "ゲーム"
+      zh-CN: "游戏"
+      ar: "اللعبة"
+    col_house_edge:
+      en: "House edge"
+      ja: "ハウスエッジ"
+      zh-CN: "庄家优势"
+      ar: "نسبة الكازينو"
+    row_blackjack:
+      en: "Blackjack (perfect play)"
+      ja: "ブラックジャック（最適戦略時）"
+      zh-CN: "二十一点（最佳策略）"
+      ar: "بلاك جاك (اللعب الأمثل)"
+    row_baccarat:
+      en: "Baccarat (banker)"
+      ja: "バカラ（バンカー）"
+      zh-CN: "百家乐（庄家）"
+      ar: "باكاراه (المصرفي)"
+    row_craps:
+      en: "Craps (pass line)"
+      ja: "クラップス（パスライン）"
+      zh-CN: "花旗骰（Pass line）"
+      ar: "كرابس (Pass line)"
+    row_european_roulette:
+      en: "European roulette"
+      ja: "ヨーロピアンルーレット"
+      zh-CN: "欧式轮盘"
+      ar: "الروليت الأوروبي"
+    row_american_roulette:
+      en: "American roulette"
+      ja: "アメリカンルーレット"
+      zh-CN: "美式轮盘"
+      ar: "الروليت الأمريكي"
+    row_slots:
+      en: "Slots"
+      ja: "スロット"
+      zh-CN: "老虎机"
+      ar: "آلات القمار"
+    insight:
+      en: "Lower edge = longer play on average. A single session can still swing hard."
+      ja: "ハウスエッジが低いほど、平均的に長く遊べます。ただし、1回のセッションでも大きく変動することがあります。"
+      zh-CN: "庄家优势越低,平均游戏时间越长。单次游戏仍可能出现较大波动。"
+      ar: "كلما انخفضت نسبة الكازينو، طال اللعب في المتوسط. ومع ذلك، قد تتقلب الجلسة الواحدة بشكل ملحوظ."
+    cta:
+      en: "See every game's math at {{PROGRAM_URL}}"
+      ja: "{{PROGRAM_URL}} ですべてのゲームの数学をご覧ください"
+      zh-CN: "访问 {{PROGRAM_URL}} 查看所有游戏的数据"
+      ar: "اطلع على حسابات كل لعبة على {{PROGRAM_URL}}"
+    footer_support_line: { $ref: "common.helpline_available_any_gambling" }
+    manage_preferences: { $ref: "common.cta_manage_preferences" }
+
+  display-14e-every-game:
+    headline: { $ref: "common_14.headline_every_game_flat" }
+    pillar: { $ref: "common.pillar_open" }
+    stat_blackjack:
+      en: "Blackjack (perfect play)"
+      ja: "ブラックジャック（最適戦略時）"
+      zh-CN: "二十一点（最佳策略）"
+      ar: "بلاك جاك (اللعب الأمثل)"
+    stat_roulette:
+      en: "Roulette"
+      ja: "ルーレット"
+      zh-CN: "轮盘"
+      ar: "الروليت"
+    stat_slots:
+      en: "Slots"
+      ja: "スロット"
+      zh-CN: "老虎机"
+      ar: "آلات القمار"
+    body_line:
+      en: "Same casino. Different math."
+      ja: "同じカジノでも、数学は異なります。"
+      zh-CN: "同一家赌场,数据却各不相同。"
+      ar: "الكازينو ذاته. الحسابات تختلف."
+
+  mobile-14f-every-game:
+    title: { $ref: "common_14.headline_every_game_flat" }
+    header_label:
+      en: "Games"
+      ja: "ゲーム"
+      zh-CN: "游戏"
+      ar: "الألعاب"
+    intro:
+      en: "Tap a game to see the full math."
+      ja: "ゲームをタップすると詳細が表示されます。"
+      zh-CN: "点击游戏查看完整数据。"
+      ar: "انقر على لعبة لعرض الحسابات الكاملة."
+    # Game rows same as email-14d rows above; build uses those refs.
+    cta:
+      en: "See all games at {{PROGRAM_URL}}"
+      ja: "すべてのゲームは {{PROGRAM_URL}} でご覧いただけます"
+      zh-CN: "访问 {{PROGRAM_URL}} 查看所有游戏"
+      ar: "اطلع على جميع الألعاب على {{PROGRAM_URL}}"
+
+  # ──────────────────────────────────────────────────────────────────────
+  # PHASE A — Sports-math quartet (15a..15d)
+  # ──────────────────────────────────────────────────────────────────────
+
+  card-15a-point-spread:
+    eyebrow: { $ref: "common.section_sports_math" }
+    pillar: { $ref: "common.pillar_open" }
+    headline:
+      en: "The point spread, explained."
+      ja: "ポイントスプレッドとは。"
+      zh-CN: "让分盘,详细解释。"
+      ar: "فارق النقاط، موضّحًا."
+    body_text:
+      en: "The spread isn't a guess at who will win. It's how the sportsbook gets bets on both teams."
+      ja: "スプレッドは勝者を予想するものではなく、両チームに賭けを集めるための仕組みです。"
+      zh-CN: "让分并非预测胜负,而是博彩公司吸引双方投注的方式。"
+      ar: "فارق النقاط ليس تخمينًا للفائز. إنه الطريقة التي تستخدمها شركة الرهان لجذب الرهانات على الفريقين."
+    hero_big:
+      en: "$1.10"
+      ja: "110円"
+      zh-CN: "MOP$1.10"
+      ar: "1.10 AED"
+      note: "Currency localizes per jurisdiction. The ratio 1.10:1 is what matters."
+    hero_label:
+      en: "to win $1, either side"
+      ja: "どちらに賭けても1円獲得するのに"
+      zh-CN: "投注任一方赢取 MOP$1 所需"
+      ar: "للربح بقيمة 1 AED من أي جهة"
+
+  story-15b-bet-costs:
+    eyebrow: { $ref: "common.section_sports_math" }
+    pillar: { $ref: "common.pillar_open" }
+    headline:
+      en: "Not all bets cost the same."
+      ja: "賭けの種類によって、取り分は違います。"
+      zh-CN: "并非所有投注都等价。"
+      ar: "ليست كل الرهانات متساوية التكلفة."
+    bar_moneyline:
+      en: "Moneyline"
+      ja: "マネーライン"
+      zh-CN: "独赢盘"
+      ar: "منى لاين"
+    bar_moneyline_value:
+      en: "3%"
+      ja: "3%"
+      zh-CN: "3%"
+      ar: "3%"
+    bar_props:
+      en: "Props"
+      ja: "プロップ"
+      zh-CN: "特殊投注"
+      ar: "رهانات خاصة"
+    bar_props_value:
+      en: "5–7%"
+      ja: "5〜7%"
+      zh-CN: "5–7%"
+      ar: "5–7%"
+    bar_parlays:
+      en: "Same-game parlays"
+      ja: "同一試合パーレイ"
+      zh-CN: "同场过关"
+      ar: "رهانات متعددة بنفس المباراة"
+    bar_parlays_value:
+      en: "15–25%"
+      ja: "15〜25%"
+      zh-CN: "15–25%"
+      ar: "15–25%"
+    body_text:
+      en: "Simple bets have a smaller cut. Fun bets have a bigger one."
+      ja: "シンプルな賭けは取り分が少なく、複雑な賭けは取り分が大きくなります。"
+      zh-CN: "简单投注抽成较低,复杂投注抽成较高。"
+      ar: "الرهانات البسيطة تكلفتها أقل. الرهانات الممتعة تكلفتها أكبر."
+      note: "en 'fun bets' → neutralized to 'complex/exciting bets' — 'fun' reads flippant in zh-CN/ar RG registers."
+
+  poster-15c-how-sportsbook-wins:
+    eyebrow: { $ref: "common.section_sports_math" }
+    pillar: { $ref: "common.pillar_open" }
+    headline:
+      en: "How the sportsbook<br>actually wins."
+      ja: "ブックメーカーが<br>本当に勝つ仕組み。"
+      zh-CN: "体育博彩公司<br>实际上是如何获利的。"
+      ar: "كيف تفوز شركة<br>الرهان فعليًا."
+    row_side_a:
+      en: "Bet on Side A:"
+      ja: "Aへの賭け："
+      zh-CN: "投注 A 方:"
+      ar: "الرهان على الجانب أ:"
+    row_side_b:
+      en: "Bet on Side B:"
+      ja: "Bへの賭け："
+      zh-CN: "投注 B 方:"
+      ar: "الرهان على الجانب ب:"
+    row_total:
+      en: "Total collected:"
+      ja: "総額："
+      zh-CN: "总收入:"
+      ar: "الإجمالي المحصّل:"
+    row_winner:
+      en: "Winner gets back:"
+      ja: "勝者が受け取る額："
+      zh-CN: "赢家获得:"
+      ar: "يسترد الفائز:"
+    row_book_keeps:
+      en: "Sportsbook keeps:"
+      ja: "ブックメーカーの取り分："
+      zh-CN: "博彩公司保留:"
+      ar: "تحتفظ شركة الرهان بـ:"
+    val_110:
+      en: "$1.10"
+      ja: "110円"
+      zh-CN: "MOP$1.10"
+      ar: "1.10 AED"
+    val_220:
+      en: "$2.20"
+      ja: "220円"
+      zh-CN: "MOP$2.20"
+      ar: "2.20 AED"
+    val_210:
+      en: "$2.10"
+      ja: "210円"
+      zh-CN: "MOP$2.10"
+      ar: "2.10 AED"
+    val_010:
+      en: "$0.10"
+      ja: "10円"
+      zh-CN: "MOP$0.10"
+      ar: "0.10 AED"
+    insight:
+      en: "They don't need to pick winners. They just need bets on both sides.</br>"
+      ja: "勝者を当てる必要はありません。両方に賭けが入ればよいのです。"
+      zh-CN: "无需预测赢家,只需双方均有投注即可。"
+      ar: "لا حاجة لاختيار الفائز. يكفي وجود رهانات على الجانبين."
+    cta:
+      en: "See the math at {{PROGRAM_URL}}"
+      ja: "{{PROGRAM_URL}} で計算を確認"
+      zh-CN: "访问 {{PROGRAM_URL}} 查看数据"
+      ar: "اطلع على الحسابات على {{PROGRAM_URL}}"
+
+  live-odds-overlay-15d:
+    title:
+      en: "Live Odds Overlay — Sportsbook Cut — Tier 1"
+      ja: "ライブオッズオーバーレイ — ブックメーカー取り分 — Tier 1"
+      zh-CN: "即时赔率浮层 — 博彩公司抽成 — Tier 1"
+      ar: "شريط الأسعار المباشر — نسبة شركة الرهان — Tier 1"
+      note: "Tier 1 is a brand-internal voice marker and should remain Latin."
+    section_label: { $ref: "common.section_sports_math" }
+    heading:
+      en: "Live odds move. The cut stays."
+      ja: "ライブオッズは動きます。取り分は動きません。"
+      zh-CN: "即时赔率会变,抽成始终不变。"
+      ar: "الأسعار المباشرة تتحرك. النسبة تبقى."
+    body_text:
+      en: "Every live line has the sportsbook's cut baked in. The updates don't erase it."
+      ja: "すべてのライブラインにはブックメーカーの取り分が組み込まれており、更新されても消えることはありません。"
+      zh-CN: "每条即时赔率均内含博彩公司的抽成,赔率更新并不会将其消除。"
+      ar: "كل سعر مباشر يتضمن نسبة شركة الرهان. التحديثات لا تلغيها."
+    stat_big:
+      en: "5–10%"
+      ja: "5〜10%"
+      zh-CN: "5–10%"
+      ar: "5–10%"
+    stat_label:
+      en: "typical sportsbook cut on live bets"
+      ja: "ライブベットにおける一般的な取り分"
+      zh-CN: "即时投注的典型抽成"
+      ar: "النسبة المعتادة لرهان مباشر"
+    footer_helpline: { $ref: "common.helpline_label_24_7" }
+
+  # ──────────────────────────────────────────────────────────────────────
+  # PHASE B — skeleton for remaining templates
+  # Each entry lists the unique English strings found in that template.
+  # ja/zh-CN/ar values are left as `TODO: translate` for batched work.
+  # ──────────────────────────────────────────────────────────────────────
+
+  # -------- Cards (1a / 1b / 1c / 2a / 2b / 2c) --------
+  card-1a-hot-streak:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"I''m on a hot streak"'
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact:
+      en: "Every spin, hand, and roll is <strong>statistically independent</strong>. Your brain sees patterns. The math doesn't."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'your brain sees patterns' risks flippant in zh-CN/ar — prefer 'the mind tends to see patterns'."
+    stat_number:
+      en: "0%"
+    stat_unit:
+      en: "chance past results<br>affect the next spin"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  card-1b-due-for-win:
+    eyebrow: { $ref: "common.section_myth_vs_math" }
+    pillar: { $ref: "common.pillar_open" }
+    myth:
+      en: '"I''m due for a win"'
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact:
+      en: "Each outcome is <strong>completely independent</strong>. The machine doesn't know what happened before. Each spin has the same odds as every other one."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    callout_label:
+      en: "The gambler's fallacy"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    callout_text:
+      en: "This belief is the most expensive idea in gambling. The math never changes."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  card-1c-lucky-machine:
+    pillar: { $ref: "common.pillar_social" }
+    myth_label: { $ref: "common.section_myth_vs_math" }
+    myth_statement:
+      en: "Your \"lucky machine\" has the emotional range of a toaster."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: the 'emotional range of a toaster' joke is distinctively irreverent US-English humor — it does NOT translate literally. ja/zh-CN/ar should rewrite as a culturally-appropriate understated factual statement (e.g., 'A slot machine does not recognize players or objects'). This is a high-priority rewrite."
+    fact_statement:
+      en: "Every spin is calculated by a <strong>random number generator</strong>. It doesn't know you. It doesn't care. It doesn't remember your last spin."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'doesn't care' is too casual for ja/zh-CN/ar. Prefer neutral: 'has no memory of prior results'."
+    stat_slots_label:
+      en: "Slots house edge"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_slots_value:
+      en: "2-15%"
+    stat_rng_label:
+      en: "RNG memory"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_rng_value:
+      en: "0"
+    share_prompt:
+      en: "Share this with the friend who has a \"system.\""
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: social-share prompts are often dropped entirely in ja/zh-CN/ar editions per the 'minimal humor / private' profiles. Consider SKIP or full rewrite."
+
+  card-2a-house-edge:
+    section_label: { $ref: "common.section_real_odds" }
+    headline:
+      en: "Every game has a house edge.<br>Here's what you're actually playing."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    game_blackjack:
+      en: "Blackjack (basic strategy)"
+    game_european_roulette:
+      en: "European Roulette"
+    game_american_roulette:
+      en: "American Roulette"
+    game_slots_avg:
+      en: "Slots (average)"
+    note_best_odds:
+      en: "Best odds in the casino"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    note_single_zero:
+      en: "Single zero wheel"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    note_double_zero:
+      en: "Double zero = double edge"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    note_varies_by_machine:
+      en: "Varies by machine"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  card-2b-sports-betting:
+    section_label: { $ref: "common.section_real_odds" }
+    headline:
+      en: "What does -110 mean?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    bet_110:
+      en: "You bet <span class=\"amount\">$110</span>"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    win_100:
+      en: "You win <span class=\"amount\">$100</span>"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cut_10:
+      en: "The <span class=\"cut\">$10</span> difference?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    explanation:
+      en: "That's the sportsbook's cut."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    emphasis:
+      en: "On every. Single. Bet."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: the staccato 'every. single. bet.' is an English rhetorical device — do NOT translate literally. Render as neutral emphatic (e.g., すべての賭けに例外なく / 每一次投注都是如此 / في كل رهان دون استثناء)."
+    vig_standard_label:
+      en: "Standard line"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    vig_standard_value:
+      en: "-110"
+    vig_standard_note:
+      en: "~4.5% vig"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    vig_favorite_label:
+      en: "Heavy favorite"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    vig_favorite_value:
+      en: "-150"
+    vig_favorite_note:
+      en: "Higher cut"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    vig_underdog_label:
+      en: "Underdog"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    vig_underdog_value:
+      en: "+200"
+    vig_underdog_note:
+      en: "Vig still applies"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  card-2c-bonus-wagering:
+    pillar: { $ref: "common.pillar_open" }
+    quiz_label:
+      en: "Game IQ Quiz"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    headline:
+      en: "Think you know the odds?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_question:
+      en: "\"A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?\""
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    answer:
+      en: "<strong>Same as always.</strong> The machine has no memory. Every spin is independent."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    challenge:
+      en: "Most people get this wrong. What about you?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: direct 'What about you?' challenge is too confrontational for ja/zh-CN/ar — rewrite as neutral invitation."
+
+  # -------- Stories 3a / 3b / 3c --------
+  story-3a-hot-streak:
+    pillar: { $ref: "common.pillar_open" }
+    myth_label:
+      en: "Monday Myth"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'Monday Myth' is alliterative English branding — ja/zh-CN/ar should use a neutral recurring label (e.g., 今週の俗説 / 每周误区 / اعتقاد الأسبوع)."
+    myth_statement:
+      en: '"I''m on a hot streak"'
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact_statement:
+      en: "Every spin, hand, and roll is <strong>statistically independent</strong>. Your brain sees patterns. The math doesn't."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "0%"
+    stat_label:
+      en: "chance past results affect the next spin"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    story_cta:
+      en: "See how it works"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  story-3b-house-edge:
+    section_label: { $ref: "common.section_real_odds" }
+    eyebrow:
+      en: "Did you know?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    headline:
+      en: "Blackjack has a <span class=\"teal\">0.5%</span> house edge with basic strategy"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    game_blackjack:
+      en: "Blackjack"
+    game_blackjack_note:
+      en: "Basic strategy"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    game_craps:
+      en: "Craps"
+    game_craps_note:
+      en: "Pass / don't pass"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    game_american_roulette:
+      en: "American Roulette"
+    game_american_roulette_note:
+      en: "Double zero"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    game_slots:
+      en: "Slots"
+    game_slots_note:
+      en: "Varies by machine"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    context:
+      en: "Knowing the edge helps you pick your games and set your budget."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    story_cta: { $ref: "common.cta_see_full_breakdown" }
+
+  story-3c-sports-betting:
+    pillar: { $ref: "common.pillar_open" }
+    eyebrow:
+      en: "Friday Quiz"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    headline:
+      en: "What does -110 mean in sports betting?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    money_bet_label:
+      en: "You bet"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    money_win_label:
+      en: "You win"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    money_cut_label:
+      en: "The cut"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    money_note_vig:
+      en: "~4.5% vig"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    answer_label:
+      en: "The answer"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    answer_text:
+      en: "You bet <strong>$110 to win $100</strong>. The $10 is the sportsbook's cut. On every single bet."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    story_cta:
+      en: "Know the math behind every line"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- Posters 4a..4e --------
+  poster-4a-know-your-game:
+    pillar: { $ref: "common.pillar_open" }
+    eyebrow:
+      en: "Know the numbers"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    headline:
+      en: "Know your game.<br>Play on your terms."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    subhead:
+      en: "Every game has a house edge. Here's yours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_blackjack_label:
+      en: "Blackjack"
+    stat_blackjack_note:
+      en: "Basic strategy"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_roulette_label:
+      en: "Roulette"
+    stat_roulette_note:
+      en: "American double-zero"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_slots_label:
+      en: "Slots"
+    stat_slots_note:
+      en: "Varies by machine"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    context:
+      en: "Lower edge means <strong>your money lasts longer</strong>."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_label:
+      en: "Scan for the full breakdown"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_sub:
+      en: "Free odds calculator and game guides"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    poster_cta:
+      en: "Explore all the tools at {{PROGRAM_URL}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  poster-4b-no-fine-print:
+    section_label: { $ref: "common.section_real_odds" }
+    eyebrow:
+      en: "No fine print"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    headline:
+      en: "Every game has a <span class=\"teal\">house edge</span>.<br>Here's yours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    subhead:
+      en: "It's the percentage the house keeps over time. Here's how games compare."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    row_blackjack:
+      en: "Blackjack (basic strategy)"
+    row_craps:
+      en: "Craps (pass / don't pass)"
+    row_american_roulette:
+      en: "American Roulette"
+    row_slots:
+      en: "Slots"
+    callout_number:
+      en: "$5.26"
+    callout_text:
+      en: "For every <strong>$100 wagered</strong> on American Roulette,<br>the house keeps $5.26 on average."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "Currency amounts should follow jurisdiction currency (¥ / MOP$ / AED) — ratios stay the same (5.26%)."
+    poster_cta: { $ref: "common.cta_see_full_breakdown" }
+
+  poster-4c-game-iq:
+    pillar: { $ref: "common.pillar_open" }
+    myth_label: { $ref: "common.section_myth_vs_math" }
+    myth_statement:
+      en: '"I''m due for a win"'
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact_statement:
+      en: "This is the <strong>gambler's fallacy</strong>. Past results don't change what happens next."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact_box_title:
+      en: "How it actually works"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact_box_text:
+      en: "A roulette wheel has <strong>no memory</strong>. After 10 reds, black on spin 11 is <strong>still the same odds</strong>. Every spin is independent."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_1_number:
+      en: "0%"
+    stat_1_label:
+      en: "Effect of past spins<br>on the next result"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_2_number:
+      en: "47.4%"
+    stat_2_label:
+      en: "Chance of red or black<br>on every single spin"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_cta:
+      en: "Test your Game IQ — take the quiz"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  poster-4d-lottery-odds:
+    pillar: { $ref: "common.pillar_open" }
+    eyebrow:
+      en: "Lottery"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    headline:
+      en: "Know your odds.<br>They're bigger than you think."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    subhead:
+      en: "Every number combination has the exact same chance. No exceptions."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_649_label:
+      en: "6/49 Jackpot"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_649_value:
+      en: "1 in 14M"
+    stat_649_note:
+      en: "13,983,816 to 1"
+    stat_mega_label:
+      en: "Mega Jackpot"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_mega_value:
+      en: "1 in 302M"
+    stat_mega_note:
+      en: "302,575,350 to 1"
+    stat_scratch_label:
+      en: "Scratch Cards"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_scratch_value:
+      en: "Varies"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_scratch_note:
+      en: "Check the back of the card"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    context:
+      en: "<strong>Lucky numbers, birthdays, systems</strong> — the math doesn't care. Every combination is equally (un)likely."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: '(un)likely' parenthetical pun does not translate — rewrite as direct factual statement."
+    qr_label:
+      en: "Scan for the full breakdown"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_sub:
+      en: "Lottery odds guide and scratch card prize breakdown"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    poster_cta:
+      en: "Explore all the tools at {{PROGRAM_URL}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  poster-4e-bingo-hall:
+    pillar: { $ref: "common.pillar_open" }
+    eyebrow:
+      en: "Bingo"
+    headline:
+      en: "Every card has<br>the same chance."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    subhead:
+      en: "Your lucky seat doesn't change the odds. But knowing how prize pools work does."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_seat_label:
+      en: "Your Lucky Seat"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_seat_value:
+      en: "0%"
+    stat_seat_note:
+      en: "effect on the draw"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_more_label:
+      en: "More Cards"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_more_value:
+      en: "More chances"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_more_note:
+      en: "but also more cost per session"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_quiet_label:
+      en: "Quieter Sessions"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_quiet_value:
+      en: "Fewer players"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_quiet_note:
+      en: "fewer cards competing with yours"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    context:
+      en: "The venue keeps a share. <strong>What's left becomes the prize pool</strong>. Every card has equal odds."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_label:
+      en: "Scan for the bingo odds guide"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_sub:
+      en: "Or ask at the counter"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    poster_cta:
+      en: "Explore all the tools at {{PROGRAM_URL}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- Print 5a / 5b / 5c --------
+  rack-card-5a:
+    pillar: { $ref: "common.pillar_open" }
+    operator_placeholder: { $ref: "common.operator_logo_placeholder" }
+    hero_headline:
+      en: "Every game has math.<br>Here's yours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    hero_subhead:
+      en: "Know the house edge. Pick your games. Set your budget."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_blackjack:
+      en: "Blackjack (basic strategy)"
+    stat_blackjack_note:
+      en: "Best odds in the casino"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_roulette:
+      en: "American Roulette"
+    stat_roulette_note:
+      en: "Double zero = double edge"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_slots:
+      en: "Slots (average)"
+    stat_slots_note:
+      en: "Varies by machine and casino"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    callout_text:
+      en: "<strong>Knowing the edge</strong> helps you pick your games and set your budget."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_label: { $ref: "common.cta_scan_for_facts" }
+
+  table-tent-5b:
+    pillar: { $ref: "common.pillar_open" }
+    odds_label: { $ref: "common.section_real_odds" }
+    odds_stat:
+      en: "5.26%"
+    odds_context:
+      en: "That's the house edge on American roulette. Every $100 wagered, about $5.26 goes to the house over time."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    odds_callout:
+      en: "Know the edge. Pick your game."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_cta:
+      en: "Think you know the odds?<br>Scan to take the quiz"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tools_headline:
+      en: "Your tools. Your limits.<br>Your call."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tools_body:
+      en: "Set your deposit limit, session reminders, and activity alerts in your account settings. Takes 10 seconds."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    helpline_label: { $ref: "common.helpline_need_to_talk_free" }
+    helpline_sub: { $ref: "common.helpline_24_7_no_judgment" }
+
+  helpline-card-5c:
+    operator_placeholder: { $ref: "common.operator_logo_placeholder" }
+    helpline_headline: { $ref: "common.helpline_headline" }
+    helpline_sub: { $ref: "common.helpline_for_any_question" }
+    qr_label: { $ref: "common.cta_scan_for_support" }
+    availability:
+      en: "24/7"
+
+  # -------- Displays 6a / 6b --------
+  display-landscape-6a:
+    pillar: { $ref: "common.pillar_open" }
+    operator_placeholder: { $ref: "common.operator_logo_here" }
+    screen_headline: { $ref: "common_14.headline_every_game" }
+    stat_blackjack_game:
+      en: "Blackjack"
+    stat_blackjack_label:
+      en: "house edge"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_roulette_game:
+      en: "Roulette"
+    stat_slots_game:
+      en: "Slots"
+    qr_label:
+      en: "Scan to<br>learn more"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  display-portrait-6b:
+    pillar: { $ref: "common.pillar_open" }
+    operator_placeholder: { $ref: "common.operator_logo_here" }
+    display_headline:
+      en: "Every game<br>has math.<br>Here's yours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    display_sub:
+      en: "Real odds. Real tools. No fine print."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    display_body:
+      en: "Knowing the edge helps you pick your games and set your budget."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_label_strong:
+      en: "Scan to learn more"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_sub:
+      en: "Visit the Playbook content hub"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- Emails 7a..7d --------
+  email-welcome-7a:
+    title:
+      en: "Welcome to Playbook"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    h1:
+      en: "Welcome. A few things worth knowing."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    intro:
+      en: "Playbook gives you the facts, the tools, and the real numbers behind the games you play. No fine print."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    section_title:
+      en: "Three things. 60 seconds."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    step1_title:
+      en: "Set your budget"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    step1_body:
+      en: "Pick your deposit limit. Weekly, monthly, whatever works. Takes 10 seconds."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    step2_title:
+      en: "Set your pace"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    step2_body:
+      en: "Session reminders keep you aware. No buzzkill. Just a check-in."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'no buzzkill' is US slang — do NOT translate literally. Rewrite as 'non-intrusive' / 'without disruption'."
+    step3_title:
+      en: "Know your game"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    step3_body:
+      en: "Take the odds quiz. 7 questions, 2 minutes. Challenge your friends after."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'Challenge your friends' may read as too casual for the Macau/UAE registers — consider softening."
+    cta_get_started: { $ref: "common.cta_get_started" }
+    stat_range_low:
+      en: "0.5%"
+    stat_range_high:
+      en: "15%"
+    stat_range_body:
+      en: "That's the range of house edge across casino games. Knowing the edge helps you pick your games and set your budget."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_see_odds:
+      en: "See the real odds"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    footer_support_line: { $ref: "common.helpline_available_any_gambling" }
+
+  email-deposit-7b:
+    title_h1:
+      en: "Deposit confirmed"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    amount_placeholder:
+      en: "$50.00"
+    date_placeholder:
+      en: "February 22, 2026"
+    budget_heading:
+      en: "Your budget at a glance"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    weekly_limit_label:
+      en: "Weekly limit"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    used_label:
+      en: "Used"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    remaining_label:
+      en: "Remaining"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    pct_used:
+      en: "35% of weekly limit used"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    limits_note:
+      en: "Your limits are yours. Adjust anytime in account settings."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_adjust:
+      en: "Adjust your limits"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tools_heading:
+      en: "Your tools"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tool_session_label:
+      en: "Session reminders"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tool_session_value:
+      en: "Every 60 min"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tool_dashboard_label:
+      en: "Activity dashboard"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tool_dashboard_value:
+      en: "Updated live"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tool_bankroll_label:
+      en: "Bankroll planner"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tool_bankroll_value:
+      en: "Not set up"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_dashboard:
+      en: "See your dashboard"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    support_contact_line:
+      en: "Call {{HELPLINE_NUMBER}} | Text {{HELPLINE_NUMBER}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  email-monthly-7c:
+    h1:
+      en: "Your January summary"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "'January' is dynamic — should be tokenized as {{MONTH_NAME}} in future build."
+    intro:
+      en: "Knowledge is a feature. Here's yours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'Knowledge is a feature' is a brand tagline — may need brand-voice treatment per jurisdiction."
+    section_key_stats:
+      en: "Key stats"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_sessions:
+      en: "sessions"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_time_label:
+      en: "total play time"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_avg_label:
+      en: "average session"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_net_label:
+      en: "net result"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_full_activity:
+      en: "See full activity"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    section_limits:
+      en: "Your limits this month"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    limit_deposit_label:
+      en: "Deposit limit"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    limit_deposit_value:
+      en: "$200/week — used 72% avg"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    limit_session_label:
+      en: "Session reminders"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    limit_session_value:
+      en: "Every 60 min — triggered 9x"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_adjust_tools:
+      en: "Adjust your tools"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    section_facts:
+      en: "Facts worth sharing"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tag_odds:
+      en: "Odds"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    article_house_edge:
+      en: "How the house edge actually works"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    read_time_4:
+      en: "4 min read"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tag_tools:
+      en: "Tools"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    article_deposit_limit:
+      en: "5 ways your deposit limit saves you money"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    read_time_3:
+      en: "3 min read"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_explore_more:
+      en: "Explore more"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  email-reactivation-7d:
+    h1:
+      en: "Your tools are right where you left them"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    intro:
+      en: "No pressure. Just a quick update on what's available."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    section_ready:
+      en: "Still set up and ready"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    deposit_limit_label:
+      en: "Deposit limit"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    deposit_limit_value:
+      en: "$200/week"
+    session_label:
+      en: "Session reminders"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    session_value:
+      en: "Every 60 min"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_label:
+      en: "Game IQ quiz"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_value:
+      en: "Best: 5/7 — new Qs"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_check_settings:
+      en: "Check your settings"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    need_to_talk_h: { $ref: "common.helpline_need_to_talk" }
+    need_to_talk_body: { $ref: "common.helpline_available_long" }
+    support_channel_line:
+      en: "Text {{HELPLINE_NUMBER}} | Chat at {{CHAT_URL}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_find_support:
+      en: "Find support"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    section_while_away:
+      en: "While you were away"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    tag_new:
+      en: "New"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    article_slot_independent:
+      en: "Why every slot spin is independent"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_read_it:
+      en: "Read it"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- Brochures 8a / 8b --------
+  brochure-trifold-8a:
+    panel_what_is_heading:
+      en: "What is Playbook?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    panel_what_is_body:
+      en: "Playbook gives you the facts and features to play on your terms. Not warnings. Not lectures. Just the real numbers behind the games you play — and the tools to manage your experience."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'not warnings, not lectures' has a defensive/reactive framing that reads oddly in the zh-CN/ar institutional register. Consider rewriting as a positive declarative for those editions."
+    panel_know_heading:
+      en: "Know the odds"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    panel_know_body:
+      en: "Every game has a house edge. We show you the actual numbers so you can make informed choices."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    panel_tools_heading:
+      en: "Use the tools"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    panel_tools_body:
+      en: "Deposit limits, session reminders, activity dashboards — features designed to keep you in control."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    panel_play_heading:
+      en: "Play your way"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    panel_play_body:
+      en: "Your money, your limits, your call. We give you information and tools. You decide what to do with them."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    section_real_odds: { $ref: "common.section_real_odds" }
+    he_heading:
+      en: "The house edge — what it means for you"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    he_body:
+      en: "The house edge is the mathematical advantage built into every casino game. It's not hidden. It's how the business works. Knowing the edge helps you pick your games and set your budget."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    table_col_game:
+      en: "Game"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    table_col_edge:
+      en: "House edge"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    roulette_100_example:
+      en: "For every $100 you wager on American roulette, the casino keeps about $5.26 over time. That's the cost of the entertainment."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    optimal_strategy_note:
+      en: "House edge assumes optimal strategy where applicable."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    your_tools_h:
+      en: "Your Tools"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    features_h:
+      en: "Features that work for you"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_deposit_title:
+      en: "Deposit limits"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_deposit_body:
+      en: "Set your entertainment budget for the week or month. Takes 10 seconds. Adjust anytime."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_session_title:
+      en: "Session reminders"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_session_body:
+      en: "Get a check-in at the interval you choose. Stay aware without killing the vibe."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'without killing the vibe' does NOT translate — rewrite as 'without disrupting the experience'."
+    feature_dashboard_title:
+      en: "Activity dashboard"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_dashboard_body:
+      en: "See your play stats — sessions, time, spending. No surprises. Knowledge is a feature."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_bankroll_title:
+      en: "Bankroll planner"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_bankroll_body:
+      en: "Enter your budget, pick your game, and see how far your money can go."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_quiz_title:
+      en: "Game IQ quiz"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature_quiz_body:
+      en: "Test your odds knowledge. 7 questions, 2 minutes. Challenge your friends."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_find_tools:
+      en: "Find these tools"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  brochure-cover-8b:
+    operator_placeholder: { $ref: "common.operator_logo_here" }
+    front_headline:
+      en: "Every game has math.<br>Here's yours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    front_sub:
+      en: "Real odds. Real tools. No fine print."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    pillar: { $ref: "common.pillar_open" }
+    quiz_h:
+      en: "Think you know<br>the odds?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_body:
+      en: "Take the 2-minute game IQ quiz. Most people get question 3 wrong."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_sample:
+      en: "\"A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?\""
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_scan_label:
+      en: "Scan to take the quiz"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    quiz_challenge:
+      en: "Challenge your friends."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    help_h: { $ref: "common.helpline_need_to_talk" }
+    help_body: { $ref: "common.helpline_available_long" }
+    web_resource:
+      en: "ncpgambling.org"
+      note: "Resource URL — should be swapped per jurisdiction at build time (not translated)."
+
+  # -------- Signs 9a..9e --------
+  sign-entrance-9a:
+    operator_placeholder: { $ref: "common.operator_logo_here" }
+    headline:
+      en: "Know your game.<br>Play on your terms."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    sub:
+      en: "Real odds. Real tools. Free support."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_label: { $ref: "common.cta_scan_for_facts" }
+    qr_sub:
+      en: "Odds, tools, and guides"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  sign-atm-9b:
+    headline:
+      en: "Set your budget first."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    sub:
+      en: "Deposit limits take 10 seconds. Your money. Your rules."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    block_title:
+      en: "Deposit limits"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    block_time:
+      en: "10 seconds"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    block_body:
+      en: "Weekly or monthly. Adjust anytime."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_label:
+      en: "Scan to set your deposit limit"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  sign-floor-9c:
+    section_label: { $ref: "common.section_real_odds" }
+    headline:
+      en: "Every game has<br>a house edge."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    sub:
+      en: "Know yours. Pick your game."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    qr_label:
+      en: "Scan to see all games"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  sign-restroom-9d:
+    headline: { $ref: "common.helpline_headline" }
+    sub:
+      en: "For any question about gambling. 24/7. No judgment."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    channel_text:
+      en: "Text {{TEXT_NUMBER}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    channel_chat: { $ref: "common.channel_chat" }
+
+  sign-staff-9e:
+    internal_label: { $ref: "common.internal_use_only" }
+    headline:
+      en: "5 things every team<br>member should know"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item1_title:
+      en: "Players have tools."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item1_body:
+      en: "Limits, reminders, and dashboards live in account settings."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item2_title:
+      en: "Use Playbook language."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item2_body:
+      en: "Say <strong>\"tools\"</strong> not \"interventions.\" <strong>\"Player\"</strong> not \"gambler.\" <strong>\"Check in\"</strong> not \"self-assess.\""
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: Playbook's English anti-vocabulary list does NOT translate literally — each language needs its own culturally-appropriate anti-vocabulary per the _cultural-audit.md work."
+    item3_title:
+      en: "Know the helpline."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item3_body:
+      en: "{{HELPLINE_NUMBER}} — free, confidential, 24/7."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item4_title:
+      en: "Offer support discreetly."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item4_body:
+      en: "Don't diagnose. Just say: \"Here's our support card.\""
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item5_title:
+      en: "Player education is in the content hub."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    item5_body:
+      en: "Send curious players to the Playbook section."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- Support / RG templates 10a..10h --------
+  support-page-10a:
+    operator_placeholder: { $ref: "common.operator_logo_placeholder" }
+    page_heading: { $ref: "common.helpline_headline_24_7" }
+    page_subhead: { $ref: "common.helpline_subtext" }
+    channel_call_label: { $ref: "common.channel_call" }
+    channel_text_label: { $ref: "common.channel_text" }
+    channel_chat_label: { $ref: "common.channel_chat" }
+    section_more_resources: { $ref: "common.section_more_resources" }
+    resource_self_exclusion_title:
+      en: "Self-Exclusion"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    resource_self_exclusion_desc:
+      en: "Pause your account."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    resource_financial_title:
+      en: "Financial Counseling"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    resource_financial_desc:
+      en: "Free help with debt."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    resource_peer_title:
+      en: "Peer Support"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    resource_peer_desc:
+      en: "Talk with others who get it."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    footer_label:
+      en: "National Council on Problem Gambling"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "This is a US-specific organization name — for ja/zh-CN/ar it should be swapped to the local equivalent (e.g., Japan: 全国ギャンブル依存症対策機構; Macau: 澳門負責任博彩咨询服务; UAE: no direct equivalent — may be dropped). Needs jurisdiction mapping, not literal translation."
+    footer_channels: { $ref: "common.helpline_available_24_7" }
+
+  self-exclusion-10b:
+    step_indicator:
+      en: "Step 2 of 3"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    heading:
+      en: "How long would you like to pause?"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    subhead:
+      en: "Choose a duration that feels right. Support can adjust this later."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    dur_24_hours:
+      en: "24 hours"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    dur_7_days:
+      en: "7 days"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    dur_30_days:
+      en: "30 days"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    dur_6_months:
+      en: "6 months"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    dur_1_year:
+      en: "1 year"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    dur_indefinite:
+      en: "Indefinite"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_continue: { $ref: "common.cta_continue" }
+    cta_back: { $ref: "common.cta_go_back" }
+
+  session-summary-10c:
+    heading:
+      en: "Your Activity"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    range:
+      en: "— Last 7 Days"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    day_mon:
+      en: "Mon"
+      ja: "月"
+      zh-CN: "一"
+      ar: "الاثنين"
+    day_tue:
+      en: "Tue"
+      ja: "火"
+      zh-CN: "二"
+      ar: "الثلاثاء"
+    day_wed:
+      en: "Wed"
+      ja: "水"
+      zh-CN: "三"
+      ar: "الأربعاء"
+    day_thu:
+      en: "Thu"
+      ja: "木"
+      zh-CN: "四"
+      ar: "الخميس"
+    day_fri:
+      en: "Fri"
+      ja: "金"
+      zh-CN: "五"
+      ar: "الجمعة"
+    day_sat:
+      en: "Sat"
+      ja: "土"
+      zh-CN: "六"
+      ar: "السبت"
+    day_sun:
+      en: "Sun"
+      ja: "日"
+      zh-CN: "日"
+      ar: "الأحد"
+    summary_line:
+      en: "Sessions: 4 · Time: 3h 22m · Avg: 50m"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    deposit_label:
+      en: "Deposit limit"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    deposit_value:
+      en: "$200/week"
+    status_active:
+      en: "Active"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_manage:
+      en: "Manage settings"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  limit-reached-10d:
+    headline:
+      en: "Weekly deposit limit reached"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    body:
+      en: "Resets Monday, March 3. That's your budget working as designed."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'working as designed' sounds reassuring in English but may read flat in ja/zh-CN/ar — rewrite as 'limit applied as you set it'."
+    cta_view_activity:
+      en: "View activity"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  cooldown-10e:
+    headline:
+      en: "Your account is paused"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    sub:
+      en: "Take all the time you need."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    duration:
+      en: "Paused for 30 days"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    until:
+      en: "Until April 24, 2026"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    bullet_locked:
+      en: "Login and wagering are paused"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    bullet_balance:
+      en: "Your balance is safe"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    bullet_support:
+      en: "Support is always available"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    helpline_label: { $ref: "common.helpline_247_label" }
+    cta_done: { $ref: "common.cta_done" }
+
+  card-tier2-10f:
+    headline:
+      en: "No question<br>is too small."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    body:
+      en: "Free, confidential support for any question about gambling."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    channels: { $ref: "common.channel_call_dot_text_dot_chat" }
+    qr_label: { $ref: "common.cta_scan_for_support" }
+    availability: { $ref: "common.helpline_24_7_ever" }
+
+  poster-tier2-10g:
+    operator_placeholder: { $ref: "common.operator_logo_placeholder" }
+    headline: { $ref: "common.helpline_need_to_talk" }
+    sub:
+      en: "Free. Confidential. No judgment."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    channel_chat: { $ref: "common.channel_chat" }
+    qr_label: { $ref: "common.cta_scan_for_support" }
+
+  email-support-10h:
+    h1:
+      en: "We're here if you need us."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    option1_title:
+      en: "Call the helpline"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    option1_body:
+      en: "Someone to talk to, 24/7"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    option2_title:
+      en: "Take a break"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    option2_body:
+      en: "Pause your account, anytime"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    option3_title:
+      en: "Review your activity"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    option3_body:
+      en: "Sessions, time, and limits at a glance"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_get_support:
+      en: "Get support now"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    channels: { $ref: "common.helpline_available_24_7" }
+    unsub:
+      en: "Unsubscribe · Manage preferences"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- Misc cards 11a / 11b --------
+  card-11a-streamer-myth:
+    pillar: { $ref: "common.pillar_open" }
+    myth_label: { $ref: "common.section_myth_vs_math" }
+    myth_statement:
+      en: '"That streamer always wins"'
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact_statement:
+      en: "Sponsored streams use <strong>house money</strong>. Highlight reels cut the losses. Your account has a real balance — and real odds working against you."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "review: 'highlight reels cut the losses' is sports-media jargon — rewrite as 'edited clips omit the losses' in all three languages."
+    stat_number:
+      en: "100%"
+    stat_unit:
+      en: "of esports odds include a<br>built-in margin. The book always gets its cut."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  card-11b-lucky-numbers:
+    pillar: { $ref: "common.pillar_open" }
+    myth_label: { $ref: "common.section_myth_vs_math" }
+    myth_statement:
+      en: '"My numbers are due"'
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    fact_statement:
+      en: "Every combination in a 6/49 draw has <strong>identical odds: 1 in 13,983,816</strong>. The draw doesn't remember last week. Every week starts fresh."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "0%"
+    stat_unit:
+      en: "chance any past draw<br>affects the next one"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- In-app / digital 12a..12h --------
+  mobile-onboarding-12a:
+    h1:
+      en: "Welcome to Playbook"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    sub:
+      en: "Real odds. Real tools. Your call."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature1_title:
+      en: "Know the odds"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature1_body:
+      en: "See the house edge for every game"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature2_title:
+      en: "Set your limits"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature2_body:
+      en: "Deposit caps, session alerts, your rules"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature3_title:
+      en: "Track your play"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    feature3_body:
+      en: "Activity dashboard at a glance"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_get_started: { $ref: "common.cta_get_started" }
+
+  deposit-interstitial-12b:
+    headline:
+      en: "Before you deposit"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    body:
+      en: "Setting a limit takes 10 seconds — pick your budget and you're set."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    option_50:
+      en: "$50/week"
+    option_100:
+      en: "$100/week"
+    option_200:
+      en: "$200/week"
+    option_custom:
+      en: "Custom"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_set:
+      en: "Set limit & continue"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_skip:
+      en: "Skip for now"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  in-play-overlay-12c:
+    headline:
+      en: "Session check-in"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_line:
+      en: "1h 23m played · $45 wagered"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_keep_playing:
+      en: "Keep playing"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_take_break:
+      en: "Take a break"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  app-banner-12d:
+    body:
+      en: "Every game has a house edge. Know yours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_learn_more: { $ref: "common.cta_learn_more" }
+    helpline:
+      en: "24/7: {{HELPLINE_NUMBER}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  push-notification-12e:
+    app_name:
+      en: "Playbook"
+      note: "Brand name — never translates."
+    title:
+      en: "Session reminder"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    body:
+      en: "You've been playing for 1 hour. Your session reminder is here."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    timestamp_now:
+      en: "now"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  withdrawal-confirm-12f:
+    section_label: { $ref: "common.section_your_session" }
+    headline:
+      en: "Withdrawal confirmed"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    amount:
+      en: "$150.00"
+    body:
+      en: "Your balance will be in your account within 24 hours."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    session_stats:
+      en: "45m · $80 wagered · +$70 net"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    helpline_label: { $ref: "common.helpline_247_label" }
+    cta_done: { $ref: "common.cta_done" }
+
+  betslip-rg-12g:
+    headline:
+      en: "Before you bet"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    budget_label:
+      en: "Your budget left"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    budget_value:
+      en: "$75"
+    weekly_bets_label:
+      en: "This week's bets"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    body:
+      en: "Sports outcomes are uncertain. Here's where your budget stands."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_manage:
+      en: "Manage your limits"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  web-popup-12h:
+    headline:
+      en: "Your play, your tools"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    body:
+      en: "Here's what's available — use what works for you."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    opt1:
+      en: "Set a deposit limit"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    opt2:
+      en: "View your activity"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    opt3:
+      en: "Take a break"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_continue:
+      en: "I'm good, continue"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    cta_support:
+      en: "Talk to someone — {{HELPLINE_NUMBER}}"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  # -------- How-to-play (htp) card family --------
+  # These share a consistent structure: pillar, section label "How It Works",
+  # game name, body, stat number, stat unit. Listed here for each variant.
+  htp-common:
+    section_label: { $ref: "common.section_how_it_works" }
+
+  htp-card-baccarat:
+    game:
+      en: "Baccarat"
+      ja: "バカラ"
+      zh-CN: "百家乐"
+      ar: "باكاراه"
+    body:
+      en: "The simplest game on the floor has some of the <strong>best odds in the casino</strong>. Bet Banker. Skip the Tie. That's the whole strategy."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "1.06%"
+    stat_unit:
+      en: "house edge<br>on Banker bet"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-bingo:
+    game:
+      en: "Bingo"
+      ja: "ビンゴ"
+      zh-CN: "宾果"
+      ar: "البينجو"
+    body:
+      en: "Every card has <strong>the same chance of winning</strong>. Off-peak sessions mean fewer players competing for the same prizes."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "5-25%"
+    stat_unit:
+      en: "house edge range<br>online vs. in-venue"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    legal_18_plus:
+      en: "18+ to play"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "This is a hardcoded 18+ legal line (not a token) — should be tokenized via {{AGE_DISCLAIMER}} long-term, but for now treat as a string to translate per jurisdiction."
+
+  htp-card-blackjack:
+    game:
+      en: "Blackjack"
+      ja: "ブラックジャック"
+      zh-CN: "二十一点"
+      ar: "بلاك جاك"
+    body:
+      en: "The best odds in the casino take <strong>20 minutes to learn</strong>. Basic strategy is the mathematically optimal play for every hand."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "0.5%"
+    stat_unit:
+      en: "house edge with<br>basic strategy"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-craps:
+    game:
+      en: "Craps"
+      ja: "クラップス"
+      zh-CN: "花旗骰"
+      ar: "كرابس"
+    body:
+      en: "The table looks complex but <strong>two bets matter</strong>: Pass and Don't Pass. Everything in the center of the layout has a house edge of 9% or worse."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "1.41%"
+    stat_unit:
+      en: "house edge<br>on the Pass line"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-horse-racing:
+    game:
+      en: "Horse Racing"
+      ja: "競馬"
+      zh-CN: "赛马"
+      ar: "سباق الخيل"
+    body:
+      en: "In pari-mutuel betting, you're not playing against the house. You're splitting the pool with <strong>other bettors</strong> — after the track takes its cut."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "15-25%"
+    stat_unit:
+      en: "takeout range<br>depending on bet type"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    legal_18_plus_wager:
+      en: "18+ to wager"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-lottery:
+    game:
+      en: "Lottery"
+      ja: "宝くじ"
+      zh-CN: "彩票"
+      ar: "اليانصيب"
+    body:
+      en: "Every number has an <strong>identical chance</strong> of being drawn. Picking birthdays, patterns, or \"lucky\" numbers doesn't change the odds."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "45-50%"
+    stat_unit:
+      en: "house edge<br>on major draw games"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-roulette:
+    game:
+      en: "Roulette"
+      ja: "ルーレット"
+      zh-CN: "轮盘"
+      ar: "الروليت"
+    body:
+      en: "38 slots, 2 green zeros, and <strong>every bet has the same house edge</strong>. Red, black, single number — the math doesn't change."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "5.26%"
+    stat_unit:
+      en: "house edge on<br>every standard bet"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-slots:
+    game:
+      en: "Slots"
+      ja: "スロット"
+      zh-CN: "老虎机"
+      ar: "آلات القمار"
+    body:
+      en: "Every spin is decided by a <strong>random number generator</strong> before the reels even move. No memory. No patterns. No hot streaks."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "2–15%"
+    stat_unit:
+      en: "house edge range<br>check the paytable"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-sports:
+    game:
+      en: "Sports Betting"
+      ja: "スポーツベッティング"
+      zh-CN: "体育博彩"
+      ar: "الرهان الرياضي"
+    body:
+      en: "At standard odds, you need to win <strong>more than half</strong> your bets just to break even. The vig is the sportsbook's built-in commission."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "52.4%"
+    stat_unit:
+      en: "break-even win rate<br>at −110 odds"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-card-video-poker:
+    game:
+      en: "Video Poker"
+      ja: "ビデオポーカー"
+      zh-CN: "视频扑克"
+      ar: "بوكر الفيديو"
+    body:
+      en: "Your hold/discard decisions change the math. Check two numbers on the paytable: <strong>full house and flush payouts</strong>. 9/6 is the one you want."
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    stat_number:
+      en: "0.46%"
+    stat_unit:
+      en: "house edge on full-pay<br>9/6 Jacks or Better"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+
+  htp-odds-comparison:
+    section_label: { $ref: "common.section_know_your_game" }
+    pillar: { $ref: "common.pillar_open" }
+    headline:
+      en: "Odds at a Glance"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    col_game:
+      en: "Game"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    col_best:
+      en: "Best bet"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+    row_blackjack:
+      en: "Blackjack (basic strategy)"
+    row_baccarat:
+      en: "Baccarat (banker)"
+    row_craps:
+      en: "Craps (don't pass)"
+    row_roulette_eu:
+      en: "Roulette (European)"
+    row_sports:
+      en: "Sports Betting (std. vig)"
+    row_roulette_us:
+      en: "Roulette (American)"
+    row_slots:
+      en: "Slots"
+    row_lottery:
+      en: "Lottery"
+    footnote:
+      en: "House edge = what the house keeps per $100 wagered over time"
+      ja: "TODO: translate"
+      zh-CN: "TODO: translate"
+      ar: "TODO: translate"
+      note: "Currency example ($100) should be localized per jurisdiction."

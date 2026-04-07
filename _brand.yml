@@ -260,6 +260,33 @@ helplines:
   european-union:
     note: "See jurisdictions/european-union/country-specific/ for local helplines"
 
+  japan:
+    number: "{{JP_HELPLINE_NUMBER}}"
+    text_number: "{{JP_TEXT_NUMBER}}"
+    chat_url: "{{JP_CHAT_URL}}"
+    website: "{{JP_SUPPORT_WEBSITE}}"
+    label: "{{JP_SUPPORT_LABEL}}"
+    hours: "{{JP_SUPPORT_HOURS}}"
+    notes: "Placeholders — fill in before production deployment. Primary candidate: Society Concerned about the Gambling Addiction (SCGA) or MHLW gambling hotline."
+
+  macau:
+    number: "{{MO_HELPLINE_NUMBER}}"
+    text_number: "{{MO_TEXT_NUMBER}}"
+    chat_url: "{{MO_CHAT_URL}}"
+    website: "{{MO_SUPPORT_WEBSITE}}"
+    label: "{{MO_SUPPORT_LABEL}}"
+    hours: "{{MO_SUPPORT_HOURS}}"
+    notes: "Placeholders — fill in before production deployment. Primary candidate: IAS (Instituto de Acção Social) gambling counselling or Sheng Kung Hui Macau RG support."
+
+  united-arab-emirates:
+    number: "{{AE_HELPLINE_NUMBER}}"
+    text_number: "{{AE_TEXT_NUMBER}}"
+    chat_url: "{{AE_CHAT_URL}}"
+    website: "{{AE_SUPPORT_WEBSITE}}"
+    label: "{{AE_SUPPORT_LABEL}}"
+    hours: "{{AE_SUPPORT_HOURS}}"
+    notes: "Placeholders — fill in before production deployment. Primary candidate: National Rehabilitation Center (Abu Dhabi) or jurisdictional MoHAP hotline."
+
 
 # ─── OPERATOR INTEGRATION ───────────────────
 # These tokens are used in the deployable RG page template.
@@ -316,6 +343,71 @@ cultural_profile:
   comfort: "open"            # open | reserved | private
 
 
+# ─── COUNTRY CULTURAL PROFILES ──────────────
+# Per-country cultural profile overrides for localized collateral.
+# Applied at build time based on target jurisdiction. See
+# brand-book/09-cultural-adaptation.md for research basis.
+
+country_cultural_profiles:
+  japan:
+    voice: "elder"           # Respected guidance, not buddy-to-buddy
+    framing: "communal"      # Family/workplace context (Hofstede IDV 46)
+    humor: "understated"     # Subtle, self-deprecating, absurdist
+    directness: "contextual" # High-context ("read the air")
+    comfort: "reserved"      # Cautious openness about gambling
+
+  macau:
+    voice: "authority"       # Institutional voice (Hofstede PDI 80)
+    framing: "communal"      # Family/mianzi (Hofstede IDV 20)
+    humor: "minimal"         # Serious tone, no RG humor
+    directness: "diplomatic" # Face-saving, never direct confrontation
+    comfort: "private"       # Loo et al. 2022: extreme stigma in Chinese communities
+
+  united-arab-emirates:
+    voice: "authority"       # High trust in government/institutions
+    framing: "communal"      # Islamic ethics, family honor
+    humor: "understated"     # Subtle humor OK; Dubai is cosmopolitan
+    directness: "contextual" # High-context Arab communication patterns
+    comfort: "private"       # Religious + social stigma; maximum confidentiality
+
+
+# ─── CURRENCY LOCALIZATION ──────────────────
+# Per-jurisdiction currency symbols and formatting for templates that
+# display monetary amounts (e.g., house edge illustration $1.10).
+
+currency:
+  default:
+    symbol: "$"
+    code: "USD"
+    position: "before"        # before | after
+    thousands: ","
+    decimal: "."
+
+  japan:
+    symbol: "¥"
+    code: "JPY"
+    position: "before"
+    thousands: ","
+    decimal: "."
+    notes: "JPY has no decimal subunit in practice. Round dollar examples to integers: $1.10 → ¥110, $0.10 → ¥10, $2.20 → ¥220."
+
+  macau:
+    symbol: "MOP$"
+    code: "MOP"
+    position: "before"
+    thousands: ","
+    decimal: "."
+    notes: "Macau pataca. Exchange ~8 MOP per USD as of Q2 2026 — round dollar examples: $1.10 → MOP$9, $0.10 → MOP$1, $2.20 → MOP$18."
+
+  united-arab-emirates:
+    symbol: "AED"
+    code: "AED"
+    position: "before"
+    thousands: ","
+    decimal: "."
+    notes: "UAE dirham. Exchange ~3.67 AED per USD (pegged). Round: $1.10 → AED 4, $0.10 → AED 0.40, $2.20 → AED 8."
+
+
 # ─── LEGAL ───────────────────────────────────
 
 legal:
@@ -326,6 +418,9 @@ legal:
     united-states: 21
     united-states-nevada: 21
     canada-british-columbia: 19
+    japan: 20                    # Japan age of majority; IR casinos require 20+
+    macau: 21                    # Macau casinos require 21+
+    united-arab-emirates: 21     # UAE placeholder — verify per licensed venue
   disclaimers:
     age: "You must be {{MIN_AGE}}+ to gamble."
     general: "Gambling involves risk. Play on your terms."
