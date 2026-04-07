@@ -355,29 +355,42 @@ strings:
   card-13a-its-due:
     eyebrow: { $ref: "common.section_myth_vs_math" }
     pillar: { $ref: "common.pillar_open" }
+    myth_intro:
+      en: ""
+      ja: ""
+      zh-CN: "有些玩家认为："
+      ar: "يعتقد بعض اللاعبين:"
+      note: "Macau and UAE introduce the myth as a third-person belief held by 'some players' rather than addressing the reader directly. This is the institutional/communal substitute for the strikethrough device used in English/Japanese. Empty for en/ja since those locales keep the strikethrough."
     myth:
       en: '"It''s due to hit"'
-      ja: "「そろそろ当たるはず」"
+      ja: "「そろそろ当たるはずだ」"
       zh-CN: "「快该中了」"
       ar: "«حان وقت الفوز»"
-      note: "ja: elder/contextual register avoids the English slang 'due to hit' — 'そろそろ当たるはず' (it should be about to hit) is the natural colloquial expression of the fallacy in Japanese. zh-CN: 快该中了 captures the casual player's internal monologue in Macau Cantonese-influenced Mandarin. ar: «حان وقت الفوز» = 'the time for winning has come' — preserves the expectation, formal MSA."
+      note: "ja: 「そろそろ当たるはずだ」 — bare はず is fragmentary as a quoted thought; はずだ is the natural sentence-final form. zh-CN: 快该中了 captures the casual player's internal monologue in Macau Cantonese-influenced Mandarin. ar: «حان وقت الفوز» = 'the time for winning has come' — preserves the expectation, formal MSA."
+    fact_softener:
+      en: ""
+      ja: ""
+      zh-CN: "事实上，"
+      ar: "في الواقع، "
+      note: "Macau and UAE prefix the fact statement with a diplomatic softener (事实上 / في الواقع — 'in fact, / in reality,') to avoid direct negation of the myth. Standard institutional Chinese and Arabic public-health convention. Note Chinese full-width comma U+FF0C and Arabic comma U+060C."
     fact:
       en: "The slot doesn't owe you a win. <strong>Losses don't load the next spin.</strong>"
-      ja: "スロットマシンは、勝ちを約束するものではありません。<strong>過去の負けが次の結果に影響することはありません。</strong>"
+      ja: "スロットマシンは、勝ちを保証するものではありません。<strong>過去の負けが次の結果に影響することはありません。</strong>"
       zh-CN: "老虎机并不欠玩家任何奖金。<strong>过往的损失不会影响下一次旋转。</strong>"
-      ar: "آلة القمار لا تدين لك بالفوز. <strong>الخسائر السابقة لا تؤثر على الدورة التالية.</strong>"
-      note: "ja: drops the 'owe you' debt metaphor (culturally off-key) in favor of a neutral factual statement. zh-CN: uses 玩家 instead of 你, keeping the communal/institutional register. ar: parallel factual structure preserved."
+      ar: "آلة القمار لا تدين لأحد بالفوز. <strong>الخسائر السابقة لا تؤثر على الدورة التالية.</strong>"
+      note: "ja: 保証する (to guarantee) is the institutional/financial verb, more elder-register than 約束する (to promise). zh-CN: uses 玩家 instead of 你, keeping the communal/institutional register. ar: 'لا تدين لأحد' (doesn't owe anyone) instead of 'لك' (you) — communal voice for UAE institutional register; the literal you-address would read as Western RG translation."
     stat_number:
       en: "$0"
       ja: "¥0"
-      zh-CN: "MOP$0"
-      ar: "0 AED"
-      note: "Currency symbol localizes per jurisdiction: Japan → ¥, Macau → MOP$, UAE → AED. Numerals stay Arabic."
+      zh-CN: "澳门币 0"
+      ar: "0 د.إ"
+      note: "Currency symbols localized to native conventions per jurisdiction: Japan → ¥ (universal); Macau → 澳门币 (Chinese-language Macau pataca, MOP$ for international/banking); UAE → د.إ (Arabic dirham abbreviation, AED for ISO/banking). Numerals stay Western Arabic (0-9)."
     stat_unit:
       en: "owed to you<br>for past losses"
-      ja: "過去の負けに対して<br>支払われるもの"
+      ja: "過去の負けに対する<br>払い戻し"
       zh-CN: "因过往损失<br>应得的金额"
-      ar: "مستحق لك<br>مقابل الخسائر السابقة"
+      ar: "مستحق<br>مقابل الخسائر السابقة"
+      note: "ja: 払い戻し (refund) is the natural Japanese financial-institution noun for what's owed back; reads as a single noun phrase paired with the ¥0 numeral. ar: drops 'لك' (to you) for communal voice consistency with the fact statement."
 
   card-13b-near-win:
     eyebrow: { $ref: "common.section_myth_vs_math" }

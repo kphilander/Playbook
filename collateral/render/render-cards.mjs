@@ -93,6 +93,10 @@ const cards = [
   { html: 'story-15b-bet-costs.html', output: 'story-15b-bet-costs.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-15c-how-sportsbook-wins.html', output: 'poster-15c-how-sportsbook-wins.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'live-odds-overlay-15d.html', output: 'live-odds-overlay-15d.png', w: 420, h: 280, selector: '.live-overlay' },
+  // i18n pilot — card-13a-its-due translated variants
+  { html: 'card-13a-its-due.ja.html', output: 'card-13a-its-due.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13a-its-due.zh-CN.html', output: 'card-13a-its-due.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13a-its-due.ar.html', output: 'card-13a-its-due.ar.png', w: 1080, h: 1080, selector: '.social-card' },
 ];
 
 // Filter to only render files passed as CLI args, or all if none given

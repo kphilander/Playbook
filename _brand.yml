@@ -392,20 +392,31 @@ currency:
     notes: "JPY has no decimal subunit in practice. Round dollar examples to integers: $1.10 → ¥110, $0.10 → ¥10, $2.20 → ¥220."
 
   macau:
-    symbol: "MOP$"
+    symbol: "澳门币"
+    symbol_intl: "MOP$"
     code: "MOP"
     position: "before"
     thousands: ","
     decimal: "."
-    notes: "Macau pataca. Exchange ~8 MOP per USD as of Q2 2026 — round dollar examples: $1.10 → MOP$9, $0.10 → MOP$1, $2.20 → MOP$18."
+    notes: |
+      Macau pataca. In Chinese-language content, use 澳门币 (Macau currency, Simplified)
+      or 澳門幣 (Traditional). MOP$ is the international banking convention used in
+      English-language contexts. ISO 4217 code is MOP. Exchange ~8 MOP per USD as of
+      Q2 2026 — round dollar examples: $1.10 → 澳门币 9, $0.10 → 澳门币 1, $2.20 → 澳门币 18.
 
   united-arab-emirates:
-    symbol: "AED"
+    symbol: "د.إ"
+    symbol_intl: "AED"
     code: "AED"
-    position: "before"
+    position: "after"
     thousands: ","
     decimal: "."
-    notes: "UAE dirham. Exchange ~3.67 AED per USD (pegged). Round: $1.10 → AED 4, $0.10 → AED 0.40, $2.20 → AED 8."
+    notes: |
+      UAE dirham. In Arabic-language content, use د.إ (dirham emirati). AED is the
+      ISO 4217 banking code used in international/English contexts. Position is
+      "after" because Arabic price convention writes the number followed by the
+      currency abbreviation. Exchange ~3.67 AED per USD (pegged). Round examples:
+      $1.10 → 4 د.إ, $0.10 → 0.40 د.إ, $2.20 → 8 د.إ.
 
 
 # ─── LEGAL ───────────────────────────────────
