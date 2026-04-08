@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Withdrawal Confirmation — Tier 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .withdrawal-confirm {
+    width: 420px;
+    min-height: 812px;
+    background: var(--pb-color-primary);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* 8px gradient accent bar (orange→teal) */
+  .accent-bar {
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 48px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Logo — dark variant (white Play, teal BOOK) */
+  .logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+  .logo .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--pb-color-white);
+  }
+  .logo .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pb-color-secondary);
+  }
+
+  /* Checkmark circle */
+  .check-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--pb-color-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+  .check-icon {
+    color: var(--pb-color-white);
+  }
+  .check-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  .amount {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .subhead {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 340px;
+  }
+
+  /* Divider */
+  .divider {
+    width: 100%;
+    max-width: 340px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+    margin-bottom: 24px;
+  }
+
+  /* Session section */
+  .section-label {
+    font-family: var(--pb-font-heading);
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-neutral-300);
+    margin-bottom: 16px;
+  }
+
+  .stats-row {
+    font-family: var(--pb-font-mono);
+    font-weight: 500;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  .stats-row .stat-sep {
+    color: var(--pb-color-neutral-500);
+    margin: 0 6px;
+  }
+
+  /* Helpline block — dark bg variant */
+  .helpline-block {
+    background: var(--pb-color-primary-light);
+    border-radius: 10px;
+    padding: 18px 24px;
+    width: 100%;
+    max-width: 340px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .helpline-label {
+    font-family: var(--pb-font-heading);
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-neutral-300);
+    margin-bottom: 6px;
+  }
+  .helpline-number {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+  }
+  .helpline-channels {
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    margin-top: 4px;
+  }
+
+  /* Done button */
+  .done-button {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    padding: 16px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="withdrawal-confirm">
+
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="logo">
+      <span class="logo-play">Play</span><span class="logo-book">book</span>
+    </div>
+
+    <div class="check-circle">
+      <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g></svg></span>
+    </div>
+
+    <h1 class="heading">出金が完了しました</h1>
+    <div class="amount">¥15,000</div>
+    <p class="subhead">24時間以内に残高がアカウントに反映されます。</p>
+
+    <div class="divider"></div>
+
+    <div class="section-label">今回のセッション</div>
+    <div class="stats-row">
+      45分<span class="stat-sep">&middot;</span>8,000円の賭け<span class="stat-sep">&middot;</span>収支 +7,000円
+    </div>
+
+    <div class="helpline-block">
+      <div class="helpline-label">24時間サポート</div>
+      <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
+      <div class="helpline-channels">{{TEXT_NUMBER}}・チャット {{CHAT_URL}}</div>
+    </div>
+
+    <button class="done-button">完了</button>
+  </div>
+
+</div>
+</body>
+</html>

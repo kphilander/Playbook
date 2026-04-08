@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>暂停确认 — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .cooldown-screen {
+    width: 420px;
+    min-height: 580px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* 3px teal top bar */
+  .accent-bar {
+    height: 3px;
+    background: var(--pb-color-secondary);
+    flex-shrink: 0;
+  }
+
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 28px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Checkmark circle */
+  .check-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--pb-color-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  .check-icon {
+    color: var(--pb-color-white);
+  }
+  .check-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .subhead {
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  /* Duration callout */
+  .duration-box {
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 16px;
+    width: 100%;
+    max-width: 360px;
+  }
+  .duration-text {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .duration-until {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 6px;
+  }
+
+  /* Bullet list */
+  .info-list {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 14px;
+    padding: 0;
+  }
+  .info-list li {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    padding: 4px 0 4px 18px;
+    position: relative;
+  }
+  .info-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pb-color-neutral-300);
+  }
+
+  /* Helpline block */
+  .helpline-block {
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+    padding: 14px 20px;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  .helpline-label {
+    font-family: var(--pb-font-heading);
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-neutral-500);
+    margin-bottom: 8px;
+  }
+  .helpline-number {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .helpline-channels {
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 6px;
+  }
+
+  /* Done button */
+  .done-button {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    padding: 16px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    min-height: 48px;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="cooldown-screen">
+
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="check-circle">
+      <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g></svg></span>
+    </div>
+
+    <h1 class="heading">账户已暂停</h1>
+    <p class="subhead">可按所需时间安排。</p>
+
+    <div class="duration-box">
+      <div class="duration-text">已暂停 30 天</div>
+      <div class="duration-until">至 2026 年 4 月 24 日</div>
+    </div>
+
+    <ul class="info-list">
+      <li>登录及投注均已暂停</li>
+      <li>账户余额安全</li>
+      <li>保密支援服务始终可用</li>
+    </ul>
+
+    <div class="helpline-block">
+      <div class="helpline-label">24小时支援</div>
+      <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
+      <div class="helpline-channels">{{TEXT_NUMBER}}・在线支援 {{CHAT_URL}}</div>
+    </div>
+
+    <button class="done-button">完成</button>
+  </div>
+
+</div>
+</body>
+</html>

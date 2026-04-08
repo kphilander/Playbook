@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=480">
+<title>游戏时长检查弹窗 — Tier 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .web-popup {
+    width: 480px;
+    min-height: 560px;
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
+    border-radius: 20px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.15);
+    font-family: var(--pb-font-body);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* 8px gradient top bar */
+  .accent-bar {
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    background: none;
+    border: none;
+    line-height: 1;
+    font-family: var(--pb-font-heading);
+    font-weight: 300;
+    z-index: 2;
+  }
+
+  /* Content */
+  .content {
+    flex: 1;
+    padding: 40px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Logo — dark variant: white Play, teal BOOK */
+  .logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    line-height: 1;
+  }
+  .logo .logo-play {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--pb-color-white);
+  }
+  .logo .logo-book {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pb-color-secondary);
+  }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+
+  .body-text {
+    font-family: var(--pb-font-body);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 380px;
+  }
+
+  /* Resource links */
+  .resource-links {
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .resource-link {
+    display: block;
+    text-align: left;
+    padding: 14px 18px;
+    border-left: 3px solid var(--pb-color-secondary);
+    background: rgba(255,255,255,0.04);
+    border-radius: 0 8px 8px 0;
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  /* Primary CTA */
+  .cta-primary {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    padding: 16px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  /* Secondary link */
+  .cta-secondary {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  /* Footer disclaimer */
+  .footer-disclaimer {
+    font-family: var(--pb-font-body);
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.6;
+    text-align: center;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="web-popup">
+
+  <div class="accent-bar"></div>
+  <button class="close-btn">&times;</button>
+
+  <div class="content">
+    <div class="logo">
+      <span class="logo-play">Play</span><span class="logo-book">book</span>
+    </div>
+
+    <h1 class="heading">自主游戏，自主工具</h1>
+    <p class="body-text">以下为可用功能，玩家可按需使用。</p>
+
+    <div class="resource-links">
+      <a class="resource-link" href="#">设定存款限额</a>
+      <a class="resource-link" href="#">查看活动记录</a>
+      <a class="resource-link" href="#">暂停休息</a>
+    </div>
+
+    <button class="cta-primary">无需变更，继续</button>
+
+    <a class="cta-secondary" href="#">寻求咨询 &mdash; {{HELPLINE_NUMBER}}</a>
+
+    <div class="footer-disclaimer">{{AGE_DISCLAIMER}}</div>
+  </div>
+
+</div>
+</body>
+</html>

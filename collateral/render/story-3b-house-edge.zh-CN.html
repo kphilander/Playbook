@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .story-card {
+    width: 1080px; height: 1920px;
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); }
+  .story-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .story-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
+  .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(46px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.4; color: var(--pb-color-white); margin-bottom: 40px; }
+  .headline .teal { color: var(--pb-color-secondary); }
+  .odds-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .odds-row { display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px 28px; }
+  .odds-row .game { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-white); line-height: 1.5; }
+  .odds-row .note { font-family: var(--pb-font-body); font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 4px; line-height: 1.5; }
+  .odds-row .edge { font-family: 'Inter', system-ui, sans-serif; font-size: calc(38px * var(--pb-template-text-scale, 1)); font-weight: 700; }
+  .odds-row .edge.teal { color: var(--pb-color-secondary); }
+  .odds-row .edge.white { color: var(--pb-color-white); }
+  .odds-row .edge.orange { color: var(--pb-color-accent); }
+  .context { font-family: var(--pb-font-body); font-size: calc(28px * var(--pb-template-text-scale, 1)); line-height: 1.7; color: var(--pb-color-neutral-300); margin-bottom: 40px; }
+  .story-cta { display: block; width: 100%; padding: 24px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(24px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 16px; text-decoration: none; }
+  .story-footer { background: var(--pb-color-primary-light); padding: 24px 48px; text-align: center; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="story-card">
+  <div class="story-header">
+    <span class="story-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="section-label">真实赔率</span>
+  </div>
+  <div class="story-body">
+    <div class="eyebrow">相关数据</div>
+    <div class="headline">采用基本策略时，二十一点的庄家优势为 <span class="teal">0.5%</span></div>
+    <div class="odds-list">
+      <div class="odds-row">
+        <div><div class="game">二十一点</div><div class="note">基本策略</div></div>
+        <div class="edge teal">0.5%</div>
+      </div>
+      <div class="odds-row">
+        <div><div class="game">花旗骰</div><div class="note">Pass / Don't Pass</div></div>
+        <div class="edge white">1.4%</div>
+      </div>
+      <div class="odds-row">
+        <div><div class="game">美式轮盘</div><div class="note">双零</div></div>
+        <div class="edge orange">5.26%</div>
+      </div>
+      <div class="odds-row">
+        <div><div class="game">老虎机</div><div class="note">因机器而异</div></div>
+        <div class="edge orange">2-15%</div>
+      </div>
+    </div>
+    <div class="context">了解庄家优势有助于玩家选择游戏并设定预算。</div>
+    <a href="#" class="story-cta">查看完整数据</a>
+  </div>
+  <div class="story-footer">
+    <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
+  </div>
+</div>
+</body>
+</html>

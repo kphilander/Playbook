@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>مراجعة الجلسة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .in-play-overlay {
+    width: 420px;
+    height: 280px;
+    background: var(--pb-color-primary);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .accent-bar {
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    flex-shrink: 0;
+  }
+
+  .content {
+    padding: 20px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    gap: 14px;
+  }
+  .card-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+  }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.5;
+  }
+
+  .session-stats {
+    font-family: var(--pb-font-body);
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    font-weight: 500;
+    color: var(--pb-color-neutral-300);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .button-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: auto;
+  }
+  .btn {
+    flex: 1;
+    padding: 14px 16px;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+  }
+  .btn-outline {
+    background: transparent;
+    border: 1.5px solid var(--pb-color-white);
+    color: var(--pb-color-white);
+  }
+  .btn-primary {
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+  }
+
+  .footer {
+    padding: 0 28px 16px;
+    text-align: center;
+  }
+  .footer-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="in-play-overlay">
+
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="top-row">
+      <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+      <h1 class="heading">مراجعة الجلسة</h1>
+    </div>
+
+    <div class="session-stats">1 ساعة و23 دقيقة من اللعب &middot; 45 د.إ مراهنة</div>
+
+    <div class="button-row">
+      <button class="btn btn-outline">متابعة اللعب</button>
+      <button class="btn btn-primary">أخذ استراحة</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="footer-helpline">{{HELPLINE_NUMBER}} &middot; على مدار الساعة</span>
+  </div>
+
+</div>
+</body>
+</html>

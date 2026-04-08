@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<title>ATM Area Sign — A4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+  .sign-atm {
+    width: 700px;
+    height: 1000px;
+    background: var(--pb-color-primary);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--pb-font-body);
+  }
+  .sign-atm::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .sign-header { padding: 40px 48px 0; position: relative; z-index: 1; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(36px * var(--pb-template-text-scale, 1)); }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .sign-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .sign-headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(58px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.3;
+    margin-bottom: 28px;
+  }
+  .sign-body {
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    margin-bottom: 44px;
+    max-width: 600px;
+  }
+  .tool-highlight {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+  }
+  .tool-highlight-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    margin-bottom: 12px;
+  }
+  .tool-highlight-stat {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(56px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .tool-highlight-body {
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+  }
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-placeholder {
+    width: 140px;
+    height: 140px;
+    background: var(--pb-color-white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-mono);
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-weight: 600;
+  }
+  .qr-text {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.5;
+  }
+  .sign-footer {
+    background: var(--pb-color-primary-light);
+    padding: 28px 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 6px;
+    line-height: 1.4;
+  }
+  .footer-legal {
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="sign-atm">
+
+  <div class="sign-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+  </div>
+
+  <div class="sign-content">
+    <div class="sign-headline">请先设定预算。</div>
+    <div class="sign-body">存款限额设定仅需十秒钟。资金及规则皆由玩家自主。</div>
+
+    <div class="tool-highlight">
+      <div class="tool-highlight-label">存款限额</div>
+      <div class="tool-highlight-stat">十秒钟</div>
+      <div class="tool-highlight-body">可按周或按月设定，并可随时调整。</div>
+    </div>
+
+    <div class="qr-block">
+      <div class="qr-placeholder">QR Code</div>
+      <div class="qr-text">扫码设定存款限额</div>
+    </div>
+  </div>
+
+  <div class="sign-footer">
+    <div class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}}</div>
+  </div>
+
+</div>
+</body>
+</html>

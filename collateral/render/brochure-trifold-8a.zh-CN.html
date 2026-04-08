@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<title>Tri-fold Brochure — Inside Spread</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
+
+  .brochure-inside {
+    width: 2400px;
+    height: 1700px;
+    display: flex;
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+  .panel {
+    width: 800px;
+    height: 1700px;
+    padding: 72px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .panel-intro { background: var(--pb-color-white); }
+  .panel-intro::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .panel-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 28px;
+    margin-top: 32px;
+    line-height: 1.4;
+  }
+  .panel-body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .principle {
+    margin-bottom: 32px;
+    padding-left: 20px;
+    border-left: 3px solid var(--pb-color-secondary);
+  }
+  .principle-title {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .principle-body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+  }
+  .panel-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    margin-bottom: 8px;
+  }
+  .panel-logo .logo-play { color: var(--pb-color-primary); font-weight: 800; letter-spacing: -0.02em; }
+  .panel-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .panel-odds { background: var(--pb-color-neutral-50); border-left: 1px solid #E5E5F0; }
+  .section-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    margin-bottom: 12px;
+    margin-top: 24px;
+  }
+  .label-orange { color: var(--pb-color-accent); }
+  .label-teal { color: var(--pb-color-secondary); }
+  .odds-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+  .odds-table th {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 2px solid #D0D0E0;
+  }
+  .odds-table td {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    padding: 14px 0;
+    border-bottom: 1px solid #E5E5F0;
+    line-height: 1.6;
+  }
+  .odds-table td:last-child {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    text-align: right;
+  }
+  .callout {
+    background: var(--pb-color-white);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 24px;
+    border-left: 4px solid var(--pb-color-accent);
+  }
+  .callout p {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+  }
+  .footnote {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+  .panel-tools { background: var(--pb-color-white); border-left: 1px solid #E5E5F0; }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+    align-items: flex-start;
+  }
+  .tool-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: var(--pb-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .tool-num svg { width: 18px; height: 18px; }
+  .tool-item strong {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    display: block;
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .tool-item span {
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+  }
+  .panel-cta {
+    margin-top: 20px;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    padding: 18px 22px;
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+  }
+  .panel-cta strong {
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="brochure-inside">
+
+  <div class="panel panel-intro">
+    <div class="panel-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="panel-heading">何谓 Playbook？</div>
+    <div class="panel-body">Playbook 提供真实数据与实用功能，助玩家自主掌控。所呈现的是游戏背后的准确数字，以及便于管理游戏体验的工具。</div>
+    <div class="principle">
+      <div class="principle-title">了解赔率</div>
+      <div class="principle-body">每款游戏都有庄家优势。此处呈现准确数字，供玩家做出知情的选择。</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">善用工具</div>
+      <div class="principle-body">存款限额、游戏时长提醒、活动仪表板 — 各项功能均为玩家保持自主掌控而设。</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">自主游戏</div>
+      <div class="principle-body">资金、限额、决定皆由玩家自主。此处提供资讯与工具，具体运用由玩家决定。</div>
+    </div>
+  </div>
+
+  <div class="panel panel-odds">
+    <div class="section-label label-orange">真实赔率</div>
+    <div class="panel-heading">庄家优势 — 其实际含义</div>
+    <div class="panel-body" style="font-size: calc(22px * var(--pb-template-text-scale, 1)); margin-bottom:16px;">庄家优势即赌场各类游戏内含的数学优势，并非隐蔽信息，而是行业运作的基本方式。了解此数字有助于玩家选择游戏并设定预算。</div>
+    <table class="odds-table">
+      <thead>
+        <tr><th>游戏</th><th style="text-align:right;">庄家优势</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>二十一点（基本策略）</td><td>0.5%</td></tr>
+        <tr><td>花旗骰（Pass / Don't Pass）</td><td>1.4%</td></tr>
+        <tr><td>欧式轮盘</td><td>2.7%</td></tr>
+        <tr><td>美式轮盘</td><td>5.26%</td></tr>
+        <tr><td>老虎机</td><td>2–15%</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <p>在美式轮盘中，每投注澳门币 100，长期而言赌场约保留澳门币 5.26。此即娱乐的成本。</p>
+    </div>
+    <div class="footnote">所列庄家优势于适用情况下，均以最佳策略为准。</div>
+  </div>
+
+  <div class="panel panel-tools">
+    <div class="section-label label-teal">可用工具</div>
+    <div class="panel-heading">为玩家服务的功能</div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12"/><path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2 3 2.5 3 1.1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"/></svg></div>
+      <div><strong>存款限额</strong><span>可按周或按月设定娱乐预算，仅需十秒钟，并可随时调整。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
+      <div><strong>游戏时长提醒</strong><span>可按自选间隔收到提醒，有助于保持觉察而不打扰游戏体验。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="4" y2="20"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="8" y1="20" x2="8" y2="12"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="16" y1="20" x2="16" y2="14"/></svg></div>
+      <div><strong>活动仪表板</strong><span>查看游戏数据 — 场次、时长、支出。资讯清晰透明，知识即功能。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
+      <div><strong>资金规划器</strong><span>输入预算、选择游戏，即可查看资金的预期使用情况。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
+      <div><strong>游戏知识测验</strong><span>测试对赔率的了解。七道题目，两分钟即可完成，欢迎与朋友分享。</span></div>
+    </div>
+    <div class="panel-cta">
+      <strong>查找相关工具</strong>请前往账户设置或访问 Playbook 内容中心。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

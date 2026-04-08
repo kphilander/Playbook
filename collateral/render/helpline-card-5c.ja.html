@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 24px; background: var(--pb-color-white); }
+
+    .helpline-card {
+      width: 700px;
+      height: 400px;
+      position: relative;
+      background: var(--pb-color-white);
+      font-family: var(--pb-font-body);
+      color: var(--pb-color-primary);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .accent-bar {
+      height: 3px;
+      background: var(--pb-color-secondary);
+      flex-shrink: 0;
+    }
+
+    .card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 48px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .card-logo {
+      font-family: var(--pb-font-heading);
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
+    }
+    .card-logo .logo-play {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--pb-color-primary);
+    }
+    .card-logo .logo-book {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pb-color-secondary);
+    }
+    .co-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .co-brand-divider {
+      width: 1px;
+      height: 22px;
+      background: var(--pb-color-neutral-300);
+    }
+    .operator-placeholder {
+      width: 80px;
+      height: 32px;
+      border: 1.5px dashed var(--pb-color-neutral-300);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--pb-font-body);
+      font-size: calc(10px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-500);
+    }
+
+    .helpline-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .helpline-left {
+      flex: 1;
+    }
+    .helpline-headline {
+      font-family: var(--pb-font-heading);
+      font-size: calc(26px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
+      color: var(--pb-color-primary);
+      margin-bottom: 6px;
+    }
+    .helpline-sub {
+      font-family: var(--pb-font-body);
+      font-size: calc(19px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-700);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .helpline-number {
+      font-family: var(--pb-font-mono);
+      font-size: calc(36px * var(--pb-template-text-scale, 1));
+      font-weight: 600;
+      color: var(--pb-color-secondary);
+      margin-bottom: 8px;
+    }
+    .helpline-channels {
+      font-family: var(--pb-font-body);
+      font-size: calc(17px * var(--pb-template-text-scale, 1));
+      line-height: 1.7;
+      color: var(--pb-color-neutral-500);
+    }
+    .helpline-channels strong {
+      color: var(--pb-color-neutral-700);
+      font-weight: 600;
+    }
+
+    .helpline-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 32px;
+    }
+    .qr-box {
+      width: 80px;
+      height: 80px;
+      background: var(--pb-color-neutral-50);
+      border: 1px solid var(--pb-color-neutral-100);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--pb-font-mono);
+      font-size: calc(12px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-300);
+      margin-bottom: 6px;
+    }
+    .qr-label {
+      font-family: var(--pb-font-body);
+      font-size: calc(12px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-500);
+      line-height: 1.5;
+    }
+
+    .card-footer {
+      padding: 0 48px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .legal-text {
+      font-family: var(--pb-font-body);
+      font-size: calc(12px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-500);
+    }
+    .availability {
+      font-family: var(--pb-font-heading);
+      font-size: calc(14px * var(--pb-template-text-scale, 1));
+      font-weight: 600;
+      color: var(--pb-color-secondary);
+    }
+  </style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+  <div class="helpline-card">
+    <div class="accent-bar"></div>
+    <div class="card-content">
+      <div class="card-header">
+        <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+        <div class="co-brand">
+          <div class="co-brand-divider"></div>
+          <div class="operator-placeholder">貴社ロゴ</div>
+        </div>
+      </div>
+      <div class="helpline-main">
+        <div class="helpline-left">
+          <div class="helpline-headline">秘密厳守の無料サポート</div>
+          <div class="helpline-sub">ギャンブルに関するどのようなご相談にもお応えします。ご評価することはありません。</div>
+          <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
+          <div class="helpline-channels">
+            {{TEXT_NUMBER}} &nbsp;&middot;&nbsp;
+            <strong>チャット</strong> {{CHAT_URL}}
+          </div>
+        </div>
+        <div class="helpline-right">
+          <div class="qr-box">QR</div>
+          <span class="qr-label">スキャンしてサポートへ</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="legal-text">{{AGE_DISCLAIMER}}</span>
+      <span class="availability">24時間対応</span>
+    </div>
+  </div>
+</body>
+</html>

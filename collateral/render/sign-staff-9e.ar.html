@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ملصق استراحة الموظفين — A3</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
+
+  .sign-staff {
+    width: 900px;
+    height: 1200px;
+    background: var(--pb-color-white);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-neutral-900);
+    display: flex;
+    flex-direction: column;
+  }
+  .sign-staff::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+
+  .staff-header {
+    background: var(--pb-color-primary);
+    padding: 40px 56px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(34px * var(--pb-template-text-scale, 1)); }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .internal-badge {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-accent);
+    background: rgba(255,107,53,0.15);
+    padding: 10px 20px;
+    border-radius: 100px;
+  }
+  .staff-headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(60px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.5;
+  }
+
+  .staff-content {
+    flex: 1;
+    padding: 40px 56px;
+  }
+
+  .staff-item {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 36px;
+    align-items: flex-start;
+  }
+  .item-number {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 50%;
+    background: var(--pb-color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    margin-top: 2px;
+  }
+  .item-content strong {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .item-content p {
+    font-size: calc(23px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+  }
+  .item-content .highlight {
+    color: var(--pb-color-secondary);
+    font-weight: 700;
+  }
+  .item-content .term-swap {
+    font-family: var(--pb-font-body);
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    background: var(--pb-color-neutral-50);
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: var(--pb-color-primary);
+  }
+
+  .staff-footer {
+    background: var(--pb-color-primary);
+    padding: 32px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .footer-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+  }
+  .footer-note {
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.7;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="sign-staff">
+
+  <div class="staff-header">
+    <div class="header-top">
+      <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+      <span class="internal-badge">للاستخدام الداخلي فقط</span>
+    </div>
+    <div class="staff-headline">خمس نقاط ينبغي أن<br>يعرفها كل موظف</div>
+  </div>
+
+  <div class="staff-content">
+    <div class="staff-item">
+      <div class="item-number">1</div>
+      <div class="item-content">
+        <strong>لدى اللاعبين أدوات متاحة.</strong>
+        <p>الحدود والتذكيرات ولوحات النشاط متوفرة في إعدادات الحساب.</p>
+      </div>
+    </div>
+
+    <div class="staff-item">
+      <div class="item-number">2</div>
+      <div class="item-content">
+        <strong>اعتماد لغة Playbook.</strong>
+        <p>الأفضل استخدام <span class="term-swap">«الأدوات»</span> بدلًا من «التدخلات»، و<span class="term-swap">«اللاعب»</span> بدلًا من «المقامر»، و<span class="term-swap">«المتابعة»</span> بدلًا من «التقييم الذاتي».</p>
+      </div>
+    </div>
+
+    <div class="staff-item">
+      <div class="item-number">3</div>
+      <div class="item-content">
+        <strong>معرفة خط الدعم.</strong>
+        <p><span class="highlight">{{HELPLINE_NUMBER}}</span> — دعم مجاني وسري على مدار الساعة.</p>
+      </div>
+    </div>
+
+    <div class="staff-item">
+      <div class="item-number">4</div>
+      <div class="item-content">
+        <strong>تقديم الدعم بتحفّظ.</strong>
+        <p>لا حاجة إلى أي تشخيص. يكفي قول: «إليك بطاقة الدعم».</p>
+      </div>
+    </div>
+
+    <div class="staff-item">
+      <div class="item-number">5</div>
+      <div class="item-content">
+        <strong>محتوى توعية اللاعبين متوفر في مركز المحتوى.</strong>
+        <p>يمكن إرشاد اللاعبين المهتمين إلى قسم Playbook.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="staff-footer">
+    <span class="footer-helpline">{{HELPLINE_NUMBER}}</span>
+    <span class="footer-note">للاستخدام الداخلي فقط</span>
+  </div>
+
+</div>
+</body>
+</html>

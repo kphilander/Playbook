@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>自我隔离 — 时长选择 — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .self-exclusion {
+    width: 420px;
+    min-height: 740px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Step indicator */
+  .step-bar {
+    padding: 16px 28px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .step-back {
+    font-family: var(--pb-font-heading);
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-weight: 600;
+    color: var(--pb-color-neutral-500);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .step-dots {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+  }
+  .step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--pb-color-neutral-100);
+  }
+  .step-dot.done {
+    background: var(--pb-color-secondary);
+  }
+  .step-dot.active {
+    background: var(--pb-color-secondary);
+    width: 24px;
+    border-radius: 4px;
+  }
+  .step-label {
+    font-family: var(--pb-font-body);
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    margin-left: 8px;
+  }
+
+  /* Content */
+  .content {
+    padding: 24px 28px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    line-height: 1.4;
+    margin-bottom: 8px;
+  }
+  .explanation {
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  /* Duration radio-cards */
+  .duration-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+    flex: 1;
+  }
+  .duration-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    border: 1.5px solid var(--pb-color-neutral-100);
+    border-radius: 12px;
+    min-height: 48px;
+  }
+  .duration-option.selected {
+    border-color: var(--pb-color-secondary);
+    background: #F0FDF9;
+  }
+  .radio-circle {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    border: 2px solid var(--pb-color-neutral-300);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .selected .radio-circle {
+    border-color: var(--pb-color-secondary);
+  }
+  .radio-fill {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+  }
+  .selected .radio-fill {
+    background: var(--pb-color-secondary);
+  }
+  .duration-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+
+  /* CTA */
+  .cta-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    min-height: 48px;
+  }
+
+  .back-link {
+    text-align: center;
+    font-family: var(--pb-font-heading);
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-weight: 600;
+    color: var(--pb-color-neutral-500);
+    text-decoration: none;
+    padding-bottom: 4px;
+    display: block;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="self-exclusion">
+
+  <div class="step-bar">
+    <a class="step-back">&larr;</a>
+    <div class="step-dots">
+      <div class="step-dot done"></div>
+      <div class="step-dot active"></div>
+      <div class="step-dot"></div>
+    </div>
+    <span class="step-label">步骤 2 / 3</span>
+  </div>
+
+  <div class="content">
+    <h1 class="heading">请选择暂停时长。</h1>
+    <p class="explanation">请选择适合的时长。客服可于日后协助调整。</p>
+
+    <div class="duration-list">
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">24 小时</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">7 天</div>
+      </div>
+      <div class="duration-option selected">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">30 天</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">6 个月</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">1 年</div>
+      </div>
+      <div class="duration-option">
+        <div class="radio-circle"><div class="radio-fill"></div></div>
+        <div class="duration-label">无限期</div>
+      </div>
+    </div>
+
+    <button class="cta-button">继续</button>
+    <a class="back-link">返回</a>
+  </div>
+
+</div>
+</body>
+</html>

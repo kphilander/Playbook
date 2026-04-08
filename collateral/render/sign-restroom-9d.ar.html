@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>ملصق مرآة الحمام — A5 — الفئة الثانية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
+
+  .sign-restroom {
+    width: 560px;
+    height: 400px;
+    background: var(--pb-color-white);
+    color: var(--pb-color-primary);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--pb-font-body);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accent-bar {
+    height: 3px;
+    background: var(--pb-color-secondary);
+    flex-shrink: 0;
+  }
+
+  .restroom-content {
+    flex: 1;
+    padding: 36px 44px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .restroom-headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(36px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+  .restroom-body {
+    font-family: var(--pb-font-body);
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+  .restroom-number {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(42px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    margin-bottom: 14px;
+    line-height: 1.2;
+  }
+  .restroom-channels {
+    font-family: var(--pb-font-body);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.7;
+  }
+  .restroom-channels strong {
+    color: var(--pb-color-neutral-700);
+    font-weight: 700;
+  }
+
+  .restroom-logo {
+    position: absolute;
+    bottom: 16px;
+    inset-inline-end: 24px;
+    font-family: var(--pb-font-heading);
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    line-height: 1;
+  }
+  .restroom-logo .logo-play { color: var(--pb-color-primary); font-weight: 800; letter-spacing: -0.02em; }
+  .restroom-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="sign-restroom">
+
+  <div class="accent-bar"></div>
+
+  <div class="restroom-content">
+    <div class="restroom-headline">دعم مجاني وسري</div>
+    <div class="restroom-body">لأي سؤال يتعلق بالمقامرة. على مدار الساعة. بدون أحكام.</div>
+    <div class="restroom-number">{{HELPLINE_NUMBER}}</div>
+    <div class="restroom-channels">
+      <strong>رسالة نصية</strong> {{TEXT_NUMBER}} &nbsp;&middot;&nbsp; <strong>الدردشة</strong> {{CHAT_URL}}
+    </div>
+  </div>
+
+  <div class="restroom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+
+</div>
+</body>
+</html>

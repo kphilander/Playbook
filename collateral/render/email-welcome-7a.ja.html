@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>Playbookへようこそ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: var(--pb-font-body);
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+  .accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  .hero-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero h1 {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(34px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .hero p {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section-white {
+    padding: 40px 56px;
+    background: var(--pb-color-white);
+  }
+  .section-gray {
+    padding: 40px 56px;
+    background: var(--pb-color-neutral-50);
+  }
+  .section-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .tool-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+    background: #E8FFF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+  }
+  .tool-item strong {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .tool-item span {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 24px;
+  }
+  .stat-block {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .stat-number {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(50px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+  }
+  .stat-number .teal { color: var(--pb-color-secondary); }
+  .stat-number .orange { color: var(--pb-color-accent); }
+  .stat-context {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 40px 56px;
+    text-align: center;
+  }
+  .footer-support {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+  .footer-channels {
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+    margin-bottom: 24px;
+    line-height: 1.8;
+  }
+  .footer-legal {
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .footer-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-unsub {
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 16px;
+  }
+  .footer-unsub a { color: var(--pb-color-neutral-300); text-decoration: underline; }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>ようこそ。知っておきたいことをいくつかご紹介します。</h1>
+    <p>Playbookは、事実、ツール、そして遊ぶゲームの背景にある本当の数字をお届けします。但し書きはありません。</p>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">3つのこと、60秒でご確認いただけます。</div>
+    <div class="tool-item">
+      <div class="tool-icon">1</div>
+      <div>
+        <strong>予算を決める</strong>
+        <span>入金上限を決めます。週単位でも月単位でも構いません。10秒で完了します。</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">2</div>
+      <div>
+        <strong>ペースを整える</strong>
+        <span>セッションのお知らせで状況を把握できます。邪魔はせず、そっとお知らせするだけです。</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">3</div>
+      <div>
+        <strong>ゲームを知る</strong>
+        <span>確率クイズに挑戦してみましょう。7問、2分で終わります。終わったらご友人にも共有できます。</span>
+      </div>
+    </div>
+    <a href="#" class="cta-button">はじめる</a>
+  </div>
+
+  <div class="section-gray">
+    <div class="stat-block">
+      <div class="stat-number"><span class="teal">0.5%</span> 〜 <span class="orange">15%</span></div>
+      <div class="stat-context">カジノゲーム全体のハウスエッジの幅です。エッジを知ることが、ゲーム選びと予算設定の手がかりになります。</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">本当の確率を見る</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">ギャンブルに関するご相談は、秘密厳守の無料サポートをご利用いただけます。</div>
+    <div class="footer-channels">
+      電話：{{HELPLINE_NUMBER}}<br>
+      メッセージ：{{HELPLINE_NUMBER}}<br>
+      チャット：{{CHAT_URL}}
+    </div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-unsub">
+      <a href="#">配信設定を管理する</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

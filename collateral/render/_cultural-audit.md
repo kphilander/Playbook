@@ -133,16 +133,18 @@ Reference document for the i18n localization work. Documents modification requir
 
 ### iGaming (12a-12h)
 
+> **Note (2026-04-08)**: iGaming has been legalized in UAE. Earlier audit recommended SKIP for the entire 12-series in UAE; this is now reversed. UAE iGaming templates are built per the same modification matrix as the rest of the UAE collateral.
+
 | Template | JP | Macau | UAE | Key changes |
 |---|---|---|---|---|
-| `mobile-onboarding-12a` | M | H | SKIP | UAE iGaming illegal; skip entire 12-series for UAE |
-| `deposit-interstitial-12b` | L | H | SKIP | Localize currency |
-| `in-play-overlay-12c` | TL | L | SKIP | Macau: soften button labels |
-| `app-banner-12d` | L | L | SKIP | Soften "Know yours" |
-| `push-notification-12e` | TL | TL | SKIP | Session reminder |
-| `withdrawal-confirm-12f` | L | L | SKIP | Localize currency |
-| `betslip-rg-12g` | L | L | SKIP | Localize currency |
-| `web-popup-12h` | M | M | SKIP | "I'm good, continue" → neutral "Continue" |
+| `mobile-onboarding-12a` | M | H | M | Localize currency |
+| `deposit-interstitial-12b` | L | H | M | Localize currency |
+| `in-play-overlay-12c` | TL | L | L | Macau: soften button labels |
+| `app-banner-12d` | L | L | L | Soften "Know yours" |
+| `push-notification-12e` | TL | TL | TL | Session reminder |
+| `withdrawal-confirm-12f` | L | L | L | Localize currency |
+| `betslip-rg-12g` | L | L | L | Localize currency |
+| `web-popup-12h` | M | M | M | "I'm good, continue" → neutral "Continue" |
 
 ### Cognitive distortion cards (13a-13f)
 
@@ -216,14 +218,14 @@ Appears in: `card-1a`, `card-1b`, `card-2c`, `card-11a`, `card-11b`, `card-13a-1
 
 **Macau**: `htp-card-craps`, `htp-card-bingo`, `htp-card-video-poker`, `poster-4e-bingo-hall`, `card-11a-streamer-myth`, `card-13e-lucky-shirt`
 
-**UAE**: All 12-series iGaming + same game-specific skips as Macau
+**UAE**: same game-specific skips as Macau (`htp-card-craps`, `htp-card-bingo`, `htp-card-video-poker`, `poster-4e-bingo-hall`, `card-11a-streamer-myth`, `card-13e-lucky-shirt`). iGaming is now legal in UAE — 12-series is built, not skipped.
 
 ### Final template counts
 
 - **Japan**: 75 templates
 - **Macau**: ~68 templates (7 skips)
-- **UAE**: ~60 templates (15 skips: 7 game-specific + 8 iGaming)
-- **Total new files**: ~203
+- **UAE**: ~68 templates (7 skips — same as Macau after iGaming legalization)
+- **Total new files**: ~211
 
 ### Helpline data
 

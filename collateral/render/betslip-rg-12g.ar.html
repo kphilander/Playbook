@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>قبل الرهان — مراجعة الميزانية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .betslip-rg {
+    width: 420px;
+    height: 340px;
+    background: var(--pb-color-primary);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-white);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accent-bar {
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    flex-shrink: 0;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px 28px 18px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+  .logo .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-color-white); }
+  .logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-secondary); }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .stat-blocks {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+  }
+  .stat-block { flex: 1; }
+  .stat-label {
+    font-family: var(--pb-font-body);
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .stat-value {
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    line-height: 1.2;
+  }
+  .stat-value--teal { color: var(--pb-color-secondary); }
+  .stat-value--white { color: var(--pb-color-white); }
+
+  .body-text {
+    font-family: var(--pb-font-body);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  .manage-link {
+    font-family: var(--pb-font-body);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    text-decoration: none;
+    line-height: 1.5;
+    margin-bottom: auto;
+  }
+
+  .footer-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.5;
+    padding-top: 10px;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="betslip-rg">
+
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="logo">
+      <span class="logo-play">Play</span><span class="logo-book">book</span>
+    </div>
+
+    <h1 class="heading">قبل الرهان</h1>
+
+    <div class="stat-blocks">
+      <div class="stat-block">
+        <div class="stat-label">الميزانية المتبقية</div>
+        <div class="stat-value stat-value--teal">75 د.إ</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-label">رهانات هذا الأسبوع</div>
+        <div class="stat-value stat-value--white">12</div>
+      </div>
+    </div>
+
+    <p class="body-text">نتائج الأحداث الرياضية غير مؤكدة. إليك وضع الميزانية الراهن.</p>
+
+    <a class="manage-link" href="#">إدارة الحدود &larr;</a>
+
+    <div class="footer-helpline">دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}</div>
+  </div>
+
+</div>
+</body>
+</html>

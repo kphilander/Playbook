@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>تأكيد فترة التهدئة — الفئة الثانية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .cooldown-screen {
+    width: 420px;
+    min-height: 580px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accent-bar {
+    height: 3px;
+    background: var(--pb-color-secondary);
+    flex-shrink: 0;
+  }
+
+  .content {
+    flex: 1;
+    padding: 28px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .check-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--pb-color-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .check-icon { color: var(--pb-color-white); }
+  .check-icon svg { width: 28px; height: 28px; }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .subhead {
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+  .duration-box {
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+    padding: 14px 22px;
+    margin-bottom: 18px;
+    width: 100%;
+    max-width: 360px;
+  }
+  .duration-text {
+    font-family: var(--pb-font-body);
+    font-weight: 700;
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    line-height: 1.5;
+  }
+  .duration-until {
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 6px;
+    line-height: 1.7;
+  }
+
+  .info-list {
+    list-style: none;
+    text-align: start;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 16px;
+    padding: 0;
+  }
+  .info-list li {
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    padding: 4px 0;
+    padding-inline-start: 18px;
+    position: relative;
+  }
+  .info-list li::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    top: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pb-color-neutral-300);
+  }
+
+  .helpline-block {
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+    padding: 14px 22px;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .helpline-label {
+    font-family: var(--pb-font-heading);
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-neutral-500);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .helpline-number {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .helpline-channels {
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 8px;
+    line-height: 1.7;
+  }
+
+  .done-button {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    padding: 16px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    min-height: 48px;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="cooldown-screen">
+
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="check-circle">
+      <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g></svg></span>
+    </div>
+
+    <h1 class="heading">الحساب في وضع الإيقاف المؤقت</h1>
+    <p class="subhead">الوقت متاح بالكامل.</p>
+
+    <div class="duration-box">
+      <div class="duration-text">إيقاف مؤقت لمدة 30 يومًا</div>
+      <div class="duration-until">حتى 24 أبريل 2026</div>
+    </div>
+
+    <ul class="info-list">
+      <li>تسجيل الدخول والمراهنة موقوفان مؤقتًا</li>
+      <li>الرصيد في أمان</li>
+      <li>الدعم متاح دائمًا</li>
+    </ul>
+
+    <div class="helpline-block">
+      <div class="helpline-label">الدعم على مدار الساعة</div>
+      <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
+      <div class="helpline-channels">{{TEXT_NUMBER}} &middot; الدردشة {{CHAT_URL}}</div>
+    </div>
+
+    <button class="done-button">تم</button>
+  </div>
+
+</div>
+</body>
+</html>

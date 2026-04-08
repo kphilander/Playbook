@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+
+    .table-tent {
+      width: 800px;
+      height: 1200px;
+      position: relative;
+      background: var(--pb-color-primary);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .table-tent::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    }
+    .panel-a {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 56px 32px;
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid var(--pb-color-primary-light);
+      transform: rotate(180deg);
+    }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+    .card-logo {
+      font-family: var(--pb-font-heading);
+      font-size: calc(30px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-white);
+    }
+    .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
+    .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+    .card-pillar {
+      font-family: var(--pb-font-heading);
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
+      color: var(--pb-color-primary);
+      background: var(--pb-color-secondary);
+      padding: 6px 18px;
+      border-radius: 100px;
+      display: inline-flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+    .odds-label {
+      font-family: var(--pb-font-heading);
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
+      color: var(--pb-color-accent);
+      margin-bottom: 16px;
+    }
+    .odds-stat {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: calc(88px * var(--pb-template-text-scale, 1));
+      font-weight: 900;
+      color: var(--pb-color-accent);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    .odds-context {
+      font-family: var(--pb-font-body);
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
+      line-height: 1.7;
+      color: var(--pb-color-neutral-300);
+      margin-bottom: 20px;
+    }
+    .odds-callout {
+      font-family: var(--pb-font-heading);
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
+      font-weight: 600;
+      color: var(--pb-color-white);
+      line-height: 1.5;
+    }
+    .quiz-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: auto;
+    }
+    .qr-small {
+      width: 72px; height: 72px;
+      background: var(--pb-color-white);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--pb-font-mono);
+      font-size: calc(12px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-primary);
+      flex-shrink: 0;
+    }
+    .quiz-cta {
+      font-family: var(--pb-font-heading);
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      font-weight: 600;
+      color: var(--pb-color-secondary);
+      line-height: 1.6;
+    }
+    .panel-b {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 32px 56px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .tools-headline {
+      font-family: var(--pb-font-heading);
+      font-size: calc(30px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
+      color: var(--pb-color-white);
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+    .tools-body {
+      font-family: var(--pb-font-body);
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
+      line-height: 1.7;
+      color: var(--pb-color-neutral-300);
+      margin-bottom: 32px;
+    }
+    .helpline-block {
+      background: var(--pb-color-primary-light);
+      border-radius: 12px;
+      padding: 24px 28px;
+      text-align: center;
+    }
+    .helpline-label {
+      font-family: var(--pb-font-body);
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-300);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+    .helpline-number {
+      font-family: var(--pb-font-mono);
+      font-size: calc(32px * var(--pb-template-text-scale, 1));
+      font-weight: 600;
+      color: var(--pb-color-secondary);
+      margin-bottom: 8px;
+    }
+    .helpline-sub {
+      font-family: var(--pb-font-body);
+      font-size: calc(16px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-500);
+      line-height: 1.6;
+    }
+    .legal-row { margin-top: auto; text-align: center; padding-top: 16px; }
+    .legal-text {
+      font-family: var(--pb-font-body);
+      font-size: calc(15px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-500);
+      line-height: 1.6;
+    }
+  </style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+  <div class="table-tent">
+    <div class="panel-a">
+      <div class="panel-header">
+        <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+        <span class="card-pillar">公开</span>
+      </div>
+      <div class="odds-label">真实赔率</div>
+      <div class="odds-stat">5.26%</div>
+      <div class="odds-context">此即美式轮盘的庄家优势。每投注澳门币 100，长期而言约有澳门币 5.26 归赌场所有。</div>
+      <div class="odds-callout">了解庄家优势，合理选择游戏。</div>
+      <div class="quiz-row">
+        <div class="qr-small">QR</div>
+        <span class="quiz-cta">了解真实赔率？<br>扫码参与测验</span>
+      </div>
+    </div>
+    <div class="panel-b">
+      <div class="tools-headline">自主工具、自主限额、<br>自主决定。</div>
+      <div class="tools-body">可在账户设置中设定存款限额、游戏时长提醒及活动通知，仅需十秒钟。</div>
+      <div class="helpline-block">
+        <div class="helpline-label">需要倾诉吗？免费保密支援。</div>
+        <div class="helpline-number">{{HELPLINE_NUMBER}}</div>
+        <div class="helpline-sub">24小时·不加评判·博彩相关任何问题</div>
+      </div>
+      <div class="legal-row">
+        <span class="legal-text">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
