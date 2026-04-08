@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>すべてのゲームには数学があります。ここに示します。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: var(--pb-font-body);
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+  .accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  .hero-logo .logo-play {
+    color: var(--pb-color-white);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .hero-logo .logo-book {
+    color: var(--pb-color-secondary);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .hero h1 {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  .hero p {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section-white {
+    padding: 40px 56px;
+    background: var(--pb-color-white);
+  }
+  .odds-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+  }
+  .odds-table th {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 2px solid var(--pb-color-neutral-200);
+  }
+  .odds-table th.right { text-align: right; }
+  .odds-table td {
+    font-family: var(--pb-font-body);
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--pb-color-neutral-200);
+    line-height: 1.5;
+  }
+  .odds-table td.edge {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    text-align: right;
+    color: var(--pb-color-primary);
+  }
+  .odds-table tr:last-child td { border-bottom: none; }
+  .insight {
+    font-family: var(--pb-font-body);
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 40px 56px;
+    text-align: center;
+  }
+  .footer-support {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+  .footer-channels {
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+  .footer-legal {
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .footer-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .footer-logo .logo-play {
+    color: var(--pb-color-white);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .footer-logo .logo-book {
+    color: var(--pb-color-secondary);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .footer-unsub {
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 16px;
+  }
+  .footer-unsub a {
+    color: var(--pb-color-neutral-300);
+    text-decoration: underline;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>すべてのゲームには数学があります。ここに示します。</h1>
+    <p>低い順から高い順へ — カジノが受け取る割合をご紹介します。</p>
+  </div>
+
+  <div class="section-white">
+    <table class="odds-table">
+      <thead>
+        <tr>
+          <th>ゲーム</th>
+          <th class="right">ハウスエッジ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ブラックジャック（最適戦略時）</td>
+          <td class="edge">0.5%</td>
+        </tr>
+        <tr>
+          <td>バカラ（バンカー）</td>
+          <td class="edge">1.06%</td>
+        </tr>
+        <tr>
+          <td>クラップス（パスライン）</td>
+          <td class="edge">1.41%</td>
+        </tr>
+        <tr>
+          <td>ヨーロピアンルーレット</td>
+          <td class="edge">2.7%</td>
+        </tr>
+        <tr>
+          <td>アメリカンルーレット</td>
+          <td class="edge">5.26%</td>
+        </tr>
+        <tr>
+          <td>スロット</td>
+          <td class="edge">2〜15%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight">ハウスエッジが低いほど、平均的に長く遊べます。ただし、1回のセッションでも大きく変動することがあります。</div>
+    <a href="#" class="cta-button">{{PROGRAM_URL}} ですべてのゲームの数学をご覧ください</a>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">ギャンブルに関するご相談は、秘密厳守の無料サポートをご利用いただけます。</div>
+    <div class="footer-channels">
+      お電話：{{HELPLINE_NUMBER}}<br>
+      SMS：{{HELPLINE_NUMBER}}<br>
+      チャット：{{CHAT_URL}}
+    </div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-unsub">
+      <a href="#">配信設定を管理する</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
