@@ -49,10 +49,28 @@ class PlaybookHelpline extends HTMLElement {
     const theme = this.getAttribute('theme') || 'dark';
     const mode = this.getAttribute('mode') || 'banner';
 
+    // Read from the Playbook brand system's canonical variables first, fall back
+    // to the legacy widget-specific `--pb-bg` / `--pb-text` / `--pb-accent` names
+    // for any external consumers that theme via those, then hard defaults.
     const colors = {
-      dark:    { bg: 'var(--pb-bg, #1B2838)', text: 'var(--pb-text, #fff)', accent: 'var(--pb-accent, #00D4AA)', border: 'transparent' },
-      light:   { bg: 'var(--pb-bg, #fff)', text: 'var(--pb-text, #1B2838)', accent: 'var(--pb-accent, #00D4AA)', border: '#e5e5e5' },
-      minimal: { bg: 'var(--pb-bg, transparent)', text: 'var(--pb-text, inherit)', accent: 'var(--pb-accent, #00D4AA)', border: 'transparent' },
+      dark: {
+        bg:     'var(--pb-color-primary, var(--pb-bg, #1B2838))',
+        text:   'var(--pb-color-white, var(--pb-text, #fff))',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        border: 'transparent'
+      },
+      light: {
+        bg:     'var(--pb-color-white, var(--pb-bg, #fff))',
+        text:   'var(--pb-color-primary, var(--pb-text, #1B2838))',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        border: 'var(--pb-color-neutral-100, #e5e5e5)'
+      },
+      minimal: {
+        bg:     'var(--pb-bg, transparent)',
+        text:   'var(--pb-text, inherit)',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        border: 'transparent'
+      },
     };
     const c = colors[theme] || colors.dark;
 
@@ -60,7 +78,7 @@ class PlaybookHelpline extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: block; font-family: var(--pb-font, 'Inter', system-ui, sans-serif); }
+        :host { display: block; font-family: var(--pb-font-body, var(--pb-font, 'Inter', system-ui, sans-serif)); }
         .helpline {
           background: ${c.bg};
           color: ${c.text};
@@ -188,16 +206,21 @@ class PlaybookMyth extends HTMLElement {
     const theme = this.getAttribute('theme') || 'dark';
     const myth = this._myths[this._currentIndex];
 
+    // Brand-system variables win; legacy widget-local names are fallbacks.
     const isDark = theme === 'dark';
-    const bg = isDark ? 'var(--pb-bg, #1B2838)' : 'var(--pb-bg, #fff)';
-    const text = isDark ? 'var(--pb-text, #fff)' : 'var(--pb-text, #1B2838)';
+    const bg = isDark
+      ? 'var(--pb-color-primary, var(--pb-bg, #1B2838))'
+      : 'var(--pb-color-white, var(--pb-bg, #fff))';
+    const text = isDark
+      ? 'var(--pb-color-white, var(--pb-text, #fff))'
+      : 'var(--pb-color-primary, var(--pb-text, #1B2838))';
     const muted = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(27,40,56,0.5)';
-    const accent = 'var(--pb-accent, #FF6B35)';
-    const teal = 'var(--pb-teal, #00D4AA)';
+    const accent = 'var(--pb-color-accent, var(--pb-accent, #FF6B35))';
+    const teal = 'var(--pb-color-secondary, var(--pb-teal, #00D4AA))';
 
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: block; font-family: var(--pb-font, 'Inter', system-ui, sans-serif); max-width: 400px; }
+        :host { display: block; font-family: var(--pb-font-body, var(--pb-font, 'Inter', system-ui, sans-serif)); max-width: 400px; }
         .card {
           background: ${bg};
           color: ${text};
@@ -335,17 +358,22 @@ class PlaybookOdds extends HTMLElement {
       return;
     }
 
+    // Brand-system variables win; legacy widget-local names are fallbacks.
     const isDark = theme === 'dark';
-    const bg = isDark ? 'var(--pb-bg, #1B2838)' : 'var(--pb-bg, #fff)';
-    const text = isDark ? 'var(--pb-text, #fff)' : 'var(--pb-text, #1B2838)';
+    const bg = isDark
+      ? 'var(--pb-color-primary, var(--pb-bg, #1B2838))'
+      : 'var(--pb-color-white, var(--pb-bg, #fff))';
+    const text = isDark
+      ? 'var(--pb-color-white, var(--pb-text, #fff))'
+      : 'var(--pb-color-primary, var(--pb-text, #1B2838))';
     const muted = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(27,40,56,0.5)';
-    const accent = 'var(--pb-accent, #FF6B35)';
-    const teal = 'var(--pb-teal, #00D4AA)';
+    const accent = 'var(--pb-color-accent, var(--pb-accent, #FF6B35))';
+    const teal = 'var(--pb-color-secondary, var(--pb-teal, #00D4AA))';
     const cardBg = isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)';
 
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: block; font-family: var(--pb-font, 'Inter', system-ui, sans-serif); max-width: 320px; }
+        :host { display: block; font-family: var(--pb-font-body, var(--pb-font, 'Inter', system-ui, sans-serif)); max-width: 320px; }
         .card { background: ${bg}; color: ${text}; border-radius: 16px; overflow: hidden;
           box-shadow: 0 2px 8px rgba(27,40,56,0.12), 0 8px 24px rgba(27,40,56,0.08); }
         .gradient-bar { height: 4px; background: linear-gradient(90deg, ${accent}, ${teal}); }
