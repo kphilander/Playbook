@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Gaming Floor Sign — Odds Fact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+
+  .sign-floor {
+    width: 900px;
+    height: 700px;
+    background: var(--pb-color-primary);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--pb-font-body);
+  }
+  .sign-floor::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .sign-layout {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  .sign-left {
+    flex: 1;
+    padding: 56px 48px 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sign-right {
+    width: 380px;
+    padding: 56px 48px 96px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .section-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-accent);
+    margin-bottom: 16px;
+  }
+  .sign-headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(70px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+  .sign-body {
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .qr-placeholder {
+    width: 130px;
+    height: 130px;
+    background: var(--pb-color-white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-mono);
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-weight: 600;
+  }
+  .qr-text {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.5;
+  }
+
+  .odds-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .odds-game {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+  }
+  .odds-edge {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+  }
+  .odds-edge.teal { color: var(--pb-color-secondary); }
+  .odds-edge.white { color: var(--pb-color-white); }
+  .odds-edge.orange { color: var(--pb-color-accent); }
+
+  .sign-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--pb-color-primary-light);
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    z-index: 1;
+  }
+  .bottom-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); }
+  .bottom-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .bottom-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .bottom-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="sign-floor">
+
+  <div class="sign-layout">
+    <div class="sign-left">
+      <div class="section-label">本当の確率</div>
+      <div class="sign-headline">すべてのゲームには<br>ハウスエッジがあります。</div>
+      <div class="sign-body">ご自身のエッジを知り、ゲームを選ぶ。</div>
+      <div class="qr-block">
+        <div class="qr-placeholder">QR Code</div>
+        <div class="qr-text">スキャンしてすべてのゲームを見る</div>
+      </div>
+    </div>
+    <div class="sign-right">
+      <div class="odds-card">
+        <div class="odds-game">ブラックジャック</div>
+        <div class="odds-edge teal">0.5%</div>
+      </div>
+      <div class="odds-card">
+        <div class="odds-game">ルーレット</div>
+        <div class="odds-edge white">5.26%</div>
+      </div>
+      <div class="odds-card">
+        <div class="odds-game">スロット</div>
+        <div class="odds-edge orange">2〜15%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sign-bottom">
+    <span class="bottom-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="bottom-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
+  </div>
+
+</div>
+</body>
+</html>

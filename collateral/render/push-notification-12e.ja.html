@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>Push Notification — Session Reminder — Tier 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .push-notification {
+    width: 420px;
+    height: 120px;
+    background: var(--pb-color-white);
+    border: 1px solid var(--pb-color-neutral-100);
+    border-radius: 16px;
+    font-family: var(--pb-font-body);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 14px;
+  }
+
+  /* App icon */
+  .app-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    background: var(--pb-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .app-icon-letter {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1;
+  }
+
+  /* Center text */
+  .notification-text {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .notification-app {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.5;
+  }
+  .notification-title {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    line-height: 1.5;
+  }
+  .notification-body {
+    font-family: var(--pb-font-body);
+    font-weight: 400;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.5;
+  }
+
+  /* Timestamp */
+  .notification-time {
+    font-family: var(--pb-font-body);
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    white-space: nowrap;
+    align-self: flex-start;
+    padding-top: 16px;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="push-notification">
+
+  <div class="app-icon">
+    <span class="app-icon-letter">P</span>
+  </div>
+
+  <div class="notification-text">
+    <span class="notification-app">Playbook</span>
+    <span class="notification-title">セッションのお知らせ</span>
+    <span class="notification-body">1時間プレイされています。セッションのお知らせの時間です。</span>
+  </div>
+
+  <span class="notification-time">たった今</span>
+
+</div>
+</body>
+</html>

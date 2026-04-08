@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>欢迎使用 Playbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: 'Inter', 'Noto Sans SC', Arial, sans-serif;
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+  .accent-bar { height: 4px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  .hero-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero h1 {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(34px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .hero p {
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section-white { padding: 40px 56px; background: var(--pb-color-white); }
+  .section-gray { padding: 40px 56px; background: var(--pb-color-neutral-50); }
+  .section-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .tool-icon {
+    width: 40px; height: 40px; min-width: 40px;
+    border-radius: 10px;
+    background: #E8FFF8;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+  }
+  .tool-item strong {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    display: block;
+    margin-bottom: 4px;
+    line-height: 1.5;
+  }
+  .tool-item span {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 24px;
+  }
+  .stat-block { text-align: center; padding: 20px 0; }
+  .stat-number {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+  }
+  .stat-number .teal { color: var(--pb-color-secondary); }
+  .stat-number .orange { color: var(--pb-color-accent); }
+  .stat-context {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 40px 56px;
+    text-align: center;
+  }
+  .footer-support {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .footer-channels {
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+    margin-bottom: 24px;
+    line-height: 1.8;
+  }
+  .footer-legal {
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .footer-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-unsub {
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 16px;
+  }
+  .footer-unsub a { color: var(--pb-color-neutral-300); text-decoration: underline; }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>欢迎。以下几项资讯值得关注。</h1>
+    <p>Playbook 提供真实数据、实用工具以及游戏背后的准确数字，毫无隐晦。</p>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">三项事项，六十秒即可完成。</div>
+    <div class="tool-item">
+      <div class="tool-icon">1</div>
+      <div>
+        <strong>设定预算</strong>
+        <span>选择合适的存款限额，可按周或按月设定，仅需十秒钟。</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">2</div>
+      <div>
+        <strong>掌控节奏</strong>
+        <span>游戏时长提醒有助于玩家保持觉察，温和而不具干扰性。</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">3</div>
+      <div>
+        <strong>了解游戏</strong>
+        <span>参与赔率测验。七道题目，两分钟即可完成，欢迎与朋友分享。</span>
+      </div>
+    </div>
+    <a href="#" class="cta-button">立即开始</a>
+  </div>
+
+  <div class="section-gray">
+    <div class="stat-block">
+      <div class="stat-number"><span class="teal">0.5%</span> 至 <span class="orange">15%</span></div>
+      <div class="stat-context">此即赌场各类游戏庄家优势的区间。了解此数字有助于玩家选择游戏并设定预算。</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">查看真实赔率</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">博彩相关任何问题，皆可获得免费保密支援。</div>
+    <div class="footer-channels">
+      电话 {{HELPLINE_NUMBER}}<br>
+      短讯 {{HELPLINE_NUMBER}}<br>
+      在线支援 {{CHAT_URL}}
+    </div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-unsub">
+      <a href="#">管理偏好设置</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

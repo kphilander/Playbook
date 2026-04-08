@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>لافتة المدخل — ملصق A2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+
+  .sign-entrance {
+    width: 900px;
+    height: 1200px;
+    background: var(--pb-color-primary);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--pb-font-body);
+  }
+  .sign-entrance::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .sign-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 56px 0;
+    position: relative;
+    z-index: 1;
+  }
+  .card-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
+  }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .co-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .co-brand-divider {
+    width: 1px;
+    height: 36px;
+    background: var(--pb-color-neutral-300);
+  }
+  .operator-placeholder {
+    font-family: var(--pb-font-heading);
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    border: 2px dashed rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 8px 16px;
+  }
+
+  .sign-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 56px;
+    position: relative;
+    z-index: 1;
+  }
+  .sign-headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(92px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+  .sign-sub {
+    font-size: calc(34px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    margin-bottom: 56px;
+    max-width: 720px;
+  }
+
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-placeholder {
+    width: 180px;
+    height: 180px;
+    background: var(--pb-color-white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-mono);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-weight: 600;
+  }
+  .qr-text {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.5;
+  }
+  .qr-text strong {
+    display: block;
+    color: var(--pb-color-white);
+    font-weight: 700;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+
+  .sign-footer {
+    background: var(--pb-color-primary-light);
+    padding: 36px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+  }
+  .footer-legal {
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="sign-entrance">
+
+  <div class="sign-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <div class="co-brand">
+      <div class="co-brand-divider"></div>
+      <div class="operator-placeholder">شعارك هنا</div>
+    </div>
+  </div>
+
+  <div class="sign-content">
+    <div class="sign-headline">اعرف لعبتك.<br>العب بشروطك.</div>
+    <div class="sign-sub">احتمالات حقيقية. أدوات حقيقية. دعم مجاني.</div>
+    <div class="qr-block">
+      <div class="qr-placeholder">رمز QR</div>
+      <div class="qr-text"><strong>امسح لعرض الحقائق</strong>احتمالات وأدوات وأدلة</div>
+    </div>
+  </div>
+
+  <div class="sign-footer">
+    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+  </div>
+
+</div>
+</body>
+</html>

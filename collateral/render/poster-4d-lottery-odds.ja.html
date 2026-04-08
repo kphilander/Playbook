@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+  .poster {
+    width: 1800px; height: 2400px;
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); }
+  .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .poster-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+  .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 28px; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(82px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.3; color: var(--pb-color-white); margin-bottom: 24px; }
+  .subhead { font-family: var(--pb-font-body); font-size: calc(38px * var(--pb-template-text-scale, 1)); line-height: 1.7; color: var(--pb-color-neutral-300); margin-bottom: 64px; }
+  .stat-grid { display: flex; gap: 32px; margin-bottom: 64px; }
+  .stat-col { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px 36px; text-align: center; }
+  .stat-game { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-white); margin-bottom: 16px; }
+  .stat-edge { font-family: var(--pb-font-mono); font-size: calc(46px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+  .stat-edge.teal { color: var(--pb-color-secondary); }
+  .stat-edge.white { color: var(--pb-color-white); }
+  .stat-edge.orange { color: var(--pb-color-accent); }
+  .stat-note { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.5; }
+  .context { font-family: var(--pb-font-body); font-size: calc(34px * var(--pb-template-text-scale, 1)); line-height: 1.7; color: var(--pb-color-neutral-300); margin-bottom: 48px; }
+  .context strong { color: var(--pb-color-secondary); font-weight: 600; }
+  .qr-row { display: flex; align-items: center; gap: 28px; margin-bottom: 48px; }
+  .qr-placeholder { width: 140px; height: 140px; background: var(--pb-color-white); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-family: var(--pb-font-mono); font-size: calc(14px * var(--pb-template-text-scale, 1)); color: var(--pb-color-primary); font-weight: 600; }
+  .qr-label { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-white); line-height: 1.5; }
+  .qr-label span { display: block; font-family: var(--pb-font-body); font-weight: 400; font-size: calc(23px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-top: 6px; line-height: 1.6; }
+  .poster-cta { display: block; width: 100%; padding: 36px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(34px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 20px; text-decoration: none; }
+  .poster-footer { background: var(--pb-color-primary-light); padding: 48px 96px; display: flex; align-items: center; justify-content: space-between; gap: 32px; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(42px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="poster">
+  <div class="poster-header">
+    <span class="poster-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="poster-pillar">オープン</span>
+  </div>
+  <div class="poster-body">
+    <div class="eyebrow">宝くじ</div>
+    <div class="headline">確率を知る。<br>思っているより大きな数字です。</div>
+    <div class="subhead">どの数字の組み合わせも確率はまったく同じです。例外はありません。</div>
+    <div class="stat-grid">
+      <div class="stat-col">
+        <div class="stat-game">6/49ジャックポット</div>
+        <div class="stat-edge teal">1,400万分の1</div>
+        <div class="stat-note">13,983,816 分の1</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-game">メガジャックポット</div>
+        <div class="stat-edge white">3億分の1</div>
+        <div class="stat-note">302,575,350 分の1</div>
+      </div>
+      <div class="stat-col">
+        <div class="stat-game">スクラッチくじ</div>
+        <div class="stat-edge orange">さまざま</div>
+        <div class="stat-note">券の裏面をご確認ください</div>
+      </div>
+    </div>
+    <div class="context"><strong>幸運の数字、誕生日、独自の法則</strong> ― 数学はそれらを区別しません。どの組み合わせも、当たる確率は等しく、そしてわずかです。</div>
+    <div class="qr-row">
+      <div class="qr-placeholder">QR</div>
+      <div class="qr-label">スキャンして詳細を確認<span>宝くじの確率ガイドとスクラッチくじの賞金内訳</span></div>
+    </div>
+    <a href="#" class="poster-cta">{{PROGRAM_URL}} ですべてのツールをご覧ください</a>
+  </div>
+  <div class="poster-footer">
+    <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+  </div>
+</div>
+</body>
+</html>

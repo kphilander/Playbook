@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .social-card {
+    width: 1080px; height: 1080px;
+    background: var(--pb-color-primary);
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
+  .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
+  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(56px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.4; color: var(--pb-color-white); margin-bottom: 40px; }
+  .breakdown { margin-bottom: 36px; }
+  .breakdown-line { font-family: var(--pb-font-mono); font-size: calc(30px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-white); line-height: 2; }
+  .breakdown-line .amount { color: var(--pb-color-secondary); font-weight: 700; }
+  .breakdown-line .cut { color: var(--pb-color-accent); font-weight: 700; }
+  .explanation { font-family: var(--pb-font-body); font-size: calc(28px * var(--pb-template-text-scale, 1)); line-height: 1.7; color: var(--pb-color-neutral-300); margin-bottom: 32px; }
+  .emphasis { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
+  .vig-strip { margin-top: 32px; display: flex; gap: 16px; }
+  .vig-card { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; text-align: center; }
+  .vig-label { font-family: var(--pb-font-body); font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 8px; }
+  .vig-value { font-family: var(--pb-font-heading); font-size: calc(30px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-white); }
+  .vig-note { font-family: var(--pb-font-body); font-size: calc(15px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 4px; line-height: 1.5; }
+  .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="social-card">
+  <div class="card-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="section-label">本当の確率</span>
+  </div>
+  <div class="card-body">
+    <div class="headline">−110とはどういう意味でしょうか。</div>
+    <div class="breakdown">
+      <div class="breakdown-line"><span class="amount">11,000円</span>を賭ける</div>
+      <div class="breakdown-line"><span class="amount">10,000円</span>を得る</div>
+      <div class="breakdown-line"><span class="cut">1,000円</span>の差は何か。</div>
+    </div>
+    <div class="explanation">それがブックメーカーの取り分です。</div>
+    <div class="emphasis">すべての賭けに例外なく。</div>
+    <div class="vig-strip">
+      <div class="vig-card">
+        <div class="vig-label">標準ライン</div>
+        <div class="vig-value">-110</div>
+        <div class="vig-note">約4.5%のビグ</div>
+      </div>
+      <div class="vig-card">
+        <div class="vig-label">本命</div>
+        <div class="vig-value">-150</div>
+        <div class="vig-note">取り分は高め</div>
+      </div>
+      <div class="vig-card">
+        <div class="vig-label">対抗</div>
+        <div class="vig-value">+200</div>
+        <div class="vig-note">ビグはそれでも発生します</div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+  </div>
+</div>
+</body>
+</html>

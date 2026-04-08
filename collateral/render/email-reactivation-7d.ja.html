@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>ツールは以前のままお使いいただけます</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: var(--pb-font-body);
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+  }
+  .accent-bar { height: 4px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); margin-bottom: 32px; display: inline-block; }
+  .hero-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero h1 { font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(30px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); margin-bottom: 12px; line-height: 1.5; }
+  .hero p { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); line-height: 1.7; }
+  .section-white { padding: 40px 56px; background: var(--pb-color-white); }
+  .section-gray { padding: 40px 56px; background: var(--pb-color-neutral-50); }
+  .section-heading { font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(22px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-900); margin-bottom: 24px; line-height: 1.5; }
+  .tool-status-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+  .status-dot {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    border-radius: 50%;
+    background: var(--pb-color-secondary);
+  }
+  .tool-name {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    flex: 1;
+  }
+  .tool-value {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    font-family: var(--pb-font-mono);
+    font-weight: 500;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .cta-button-outline {
+    display: inline-block;
+    background: transparent;
+    color: var(--pb-color-secondary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 12px;
+    border: 2px solid var(--pb-color-secondary);
+  }
+  .support-box {
+    background: var(--pb-color-primary);
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+  }
+  .support-box h3 {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .support-box p {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .support-box .helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    margin-bottom: 8px;
+  }
+  .support-box .channels {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+  }
+  .article-promo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .article-badge {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    background: linear-gradient(135deg, var(--pb-color-accent), var(--pb-color-secondary));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+  }
+  .article-promo-title {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    margin-bottom: 4px;
+    line-height: 1.6;
+  }
+  .article-promo-meta { font-size: calc(15px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 36px 56px;
+    text-align: center;
+  }
+  .footer-support { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); font-weight: 600; margin-bottom: 10px; line-height: 1.7; }
+  .footer-channels { font-family: var(--pb-font-mono); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; line-height: 1.8; }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.7; margin-bottom: 12px; }
+  .footer-logo { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; }
+  .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>ツールは以前のままお使いいただけます</h1>
+    <p>お急ぎいただく必要はありません。現在ご利用いただける内容を簡単にお知らせします。</p>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">設定済みで、すぐにお使いいただけます</div>
+    <div class="tool-status-item">
+      <div class="status-dot"></div>
+      <div class="tool-name">入金上限</div>
+      <div class="tool-value">週20,000円</div>
+    </div>
+    <div class="tool-status-item">
+      <div class="status-dot"></div>
+      <div class="tool-name">セッションのお知らせ</div>
+      <div class="tool-value">60分ごと</div>
+    </div>
+    <div class="tool-status-item">
+      <div class="status-dot"></div>
+      <div class="tool-name">ゲームIQクイズ</div>
+      <div class="tool-value">最高記録：7問中5問 ― 新しい問題もあります</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">設定を確認する</a>
+    </div>
+  </div>
+
+  <div class="section-gray">
+    <div class="support-box">
+      <h3>お話しされたいときに</h3>
+      <p>ギャンブルに関するどのようなご相談にも、秘密厳守の無料サポートが24時間ご利用いただけます。ご評価することはありません。</p>
+      <div class="helpline">{{HELPLINE_NUMBER}}</div>
+      <div class="channels">メッセージ {{HELPLINE_NUMBER}} ｜ チャット {{CHAT_URL}}</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button-outline">サポートを探す</a>
+    </div>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">お休みのあいだに</div>
+    <div class="article-promo">
+      <div class="article-badge">新着</div>
+      <div>
+        <div class="article-promo-title">スロットの一回ごとのスピンが独立している理由</div>
+        <div class="article-promo-meta">3分で読めます</div>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">読む</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">ギャンブルに関するご相談は、秘密厳守の無料サポートをご利用いただけます。</div>
+    <div class="footer-channels">電話 {{HELPLINE_NUMBER}} ｜ メッセージ {{HELPLINE_NUMBER}}</div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+  </div>
+
+</div>
+</body>
+</html>

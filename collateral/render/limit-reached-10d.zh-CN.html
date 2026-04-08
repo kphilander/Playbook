@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>限额已达提示 — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .limit-reached {
+    width: 420px;
+    min-height: 220px;
+    background: var(--pb-color-white);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    position: relative;
+    border: 1px solid var(--pb-color-neutral-100);
+    border-left: 3px solid var(--pb-color-secondary);
+    border-radius: 0 12px 12px 0;
+    padding: 22px 40px 22px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  /* Info icon */
+  .icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    background: #E8FFF8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+  .icon-check {
+    color: var(--pb-color-secondary);
+  }
+  .icon-check svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Content */
+  .banner-content {
+    flex: 1;
+  }
+  .banner-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+  }
+  .banner-body {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .banner-link {
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-weight: 600;
+    color: var(--pb-color-secondary);
+    text-decoration: none;
+  }
+
+  /* Dismiss X */
+  .dismiss {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-weight: 400;
+    color: var(--pb-color-neutral-300);
+    border-radius: 4px;
+    line-height: 1;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="limit-reached">
+
+  <div class="icon">
+    <span class="icon-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g></svg></span>
+  </div>
+
+  <div class="banner-content">
+    <div class="banner-heading">每周存款限额已达上限</div>
+    <div class="banner-body">将于 3 月 3 日（星期一）重置。限额已按所设规则执行。</div>
+    <a class="banner-link">查看活动记录 &rarr;</a>
+  </div>
+
+  <div class="dismiss">&times;</div>
+
+</div>
+</body>
+</html>

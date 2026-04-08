@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>لكل لعبة حساباتها. إليك حسابات لعبتك. — Tier 1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .mobile-screen {
+    width: 420px;
+    height: 812px;
+    background: var(--pb-color-primary);
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .accent-bar {
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    flex-shrink: 0;
+  }
+
+  .header {
+    padding: 24px 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+  .card-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+  }
+  .card-logo .logo-play {
+    color: var(--pb-color-white);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .card-logo .logo-book {
+    color: var(--pb-color-secondary);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .header-label {
+    font-family: var(--pb-font-heading);
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+  }
+
+  .content {
+    padding: 24px 24px 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+  .headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(26px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
+  .intro {
+    font-family: var(--pb-font-body);
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .game-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .game-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--pb-color-primary-light);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+  }
+  .game-name {
+    font-family: var(--pb-font-body);
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-weight: 600;
+    color: var(--pb-color-white);
+    line-height: 1.5;
+  }
+  .game-edge {
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+  }
+
+  .bottom-link {
+    display: block;
+    text-align: center;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    text-decoration: none;
+    padding: 8px 0 4px;
+    margin-top: auto;
+  }
+
+  .footer {
+    padding: 14px 24px 22px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .footer-helpline {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="mobile-screen">
+
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="header-label">الألعاب</span>
+  </div>
+
+  <div class="content">
+    <h1 class="headline">لكل لعبة حساباتها.<br>إليك حسابات لعبتك.</h1>
+    <p class="intro">يُمكن النقر على لعبة لعرض الحسابات الكاملة.</p>
+
+    <div class="game-list">
+      <div class="game-row">
+        <span class="game-name">بلاك جاك (اللعب الأمثل)</span>
+        <span class="game-edge">0.5%</span>
+      </div>
+      <div class="game-row">
+        <span class="game-name">باكاراه (المصرفي)</span>
+        <span class="game-edge">1.06%</span>
+      </div>
+      <div class="game-row">
+        <span class="game-name">كرابس (Pass line)</span>
+        <span class="game-edge">1.41%</span>
+      </div>
+      <div class="game-row">
+        <span class="game-name">الروليت الأوروبي</span>
+        <span class="game-edge">2.7%</span>
+      </div>
+      <div class="game-row">
+        <span class="game-name">الروليت الأمريكي</span>
+        <span class="game-edge">5.26%</span>
+      </div>
+      <div class="game-row">
+        <span class="game-name">آلات القمار</span>
+        <span class="game-edge">2&ndash;15%</span>
+      </div>
+    </div>
+
+    <a href="#" class="bottom-link">للاطلاع على جميع الألعاب، يُرجى زيارة {{PROGRAM_URL}}</a>
+  </div>
+
+  <div class="footer">
+    <span class="footer-helpline">دعم على مدار الساعة: {{HELPLINE_NUMBER}}</span>
+  </div>
+
+</div>
+</body>
+</html>

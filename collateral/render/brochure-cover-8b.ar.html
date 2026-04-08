@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>بروشور ثلاثي الطي — الغلاف والظهر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+
+  .brochure-outside {
+    width: 2400px;
+    height: 1700px;
+    display: flex;
+    font-family: var(--pb-font-body);
+    position: relative;
+  }
+
+  .panel {
+    width: 800px;
+    height: 1700px;
+    padding: 72px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-support {
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
+  }
+  .panel-support::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .panel-support .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-top: 24px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .panel-support .body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.8;
+    margin-bottom: 36px;
+  }
+  .channel-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .channel-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    width: 100px;
+    line-height: 1.5;
+  }
+  .channel-value {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+  }
+  .support-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--pb-color-primary-light);
+    padding: 24px 32px;
+    text-align: center;
+  }
+  .support-footer span {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.5;
+  }
+
+  .panel-quiz {
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-inline-start: 1px solid rgba(255,255,255,0.08);
+  }
+  .quiz-badge {
+    display: inline-block;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    padding: 8px 22px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .quiz-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 22px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+  }
+  .quiz-body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.8;
+    max-width: 560px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .quiz-question {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 26px 30px;
+    margin-bottom: 32px;
+    max-width: 580px;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .qr-placeholder {
+    width: 100px;
+    height: 100px;
+    background: var(--pb-color-white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-mono);
+    font-size: calc(11px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-weight: 600;
+  }
+  .qr-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    text-align: start;
+    line-height: 1.7;
+  }
+  .qr-label strong {
+    display: block;
+    color: var(--pb-color-white);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .panel-cover {
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-inline-start: 1px solid rgba(255,255,255,0.08);
+  }
+  .panel-cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .cover-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .cover-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .cover-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 18px;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-sub {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    margin-bottom: 48px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-operator {
+    width: 180px;
+    height: 52px;
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-bottom: 36px;
+    position: relative;
+    z-index: 1;
+  }
+  .cover-helpline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--pb-color-primary-light);
+    padding: 24px 32px;
+    text-align: center;
+    z-index: 1;
+  }
+  .cover-helpline span {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.5;
+  }
+  .cover-legal {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.7;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="brochure-outside">
+
+  <div class="panel panel-support">
+    <div class="heading">هل تحتاج إلى التحدث؟</div>
+    <div class="body">الدعم المجاني والسري متاح على مدار الساعة — لأي سؤال يتعلق بالمقامرة. بدون أحكام، أبدًا.</div>
+    <div class="channel-item">
+      <div class="channel-label">اتصال</div>
+      <div class="channel-value">{{HELPLINE_NUMBER}}</div>
+    </div>
+    <div class="channel-item">
+      <div class="channel-label">رسالة نصية</div>
+      <div class="channel-value">{{HELPLINE_NUMBER}}</div>
+    </div>
+    <div class="channel-item">
+      <div class="channel-label">الدردشة</div>
+      <div class="channel-value">{{CHAT_URL}}</div>
+    </div>
+    <div class="channel-item">
+      <div class="channel-label">الويب</div>
+      <div class="channel-value">ncpgambling.org</div>
+    </div>
+    <div class="support-footer">
+      <span>دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}</span>
+    </div>
+  </div>
+
+  <div class="panel panel-quiz">
+    <div class="quiz-badge">شفافية</div>
+    <div class="quiz-heading">هل الاحتمالات<br>معروفة؟</div>
+    <div class="quiz-body">اختبار الإلمام باللعبة في دقيقتين. كثيرون يُخطئون في السؤال الثالث.</div>
+    <div class="quiz-question">«آلة القمار لم تصرف فوزًا منذ 3 ساعات. ما احتمالات الدورة التالية؟»</div>
+    <div class="qr-block">
+      <div class="qr-placeholder">رمز QR</div>
+      <div class="qr-label"><strong>امسح لبدء الاختبار</strong>تجربة الاختبار متاحة للجميع.</div>
+    </div>
+  </div>
+
+  <div class="panel panel-cover">
+    <div class="cover-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="cover-operator">شعارك هنا</div>
+    <div class="cover-heading">لكل لعبة حساباتها.<br>إليك حسابات لعبتك.</div>
+    <div class="cover-sub">احتمالات حقيقية. أدوات حقيقية. دون شروط مخفية.</div>
+    <div class="cover-legal">{{AGE_DISCLAIMER}}</div>
+    <div class="cover-helpline">
+      <span>دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

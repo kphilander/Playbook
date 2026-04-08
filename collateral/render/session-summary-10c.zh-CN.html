@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=420">
+<title>活动仪表板卡片 — Tier 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .session-summary {
+    width: 420px;
+    min-height: 360px;
+    background: var(--pb-color-white);
+    border: 1px solid var(--pb-color-neutral-100);
+    border-radius: 16px;
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-primary);
+    padding: 28px 28px 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Heading */
+  .card-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(19px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .card-heading .period {
+    font-weight: 400;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+  }
+
+  /* Bar chart */
+  .chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 100px;
+    margin-bottom: 8px;
+    padding: 0 4px;
+  }
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  .bar {
+    width: 100%;
+    max-width: 36px;
+    border-radius: 4px 4px 0 0;
+    background: #E0E0EA;
+    min-height: 4px;
+  }
+  .bar.today {
+    background: var(--pb-color-secondary);
+  }
+  .bar-label {
+    font-family: var(--pb-font-heading);
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    font-weight: 600;
+    color: var(--pb-color-neutral-300);
+    margin-top: 6px;
+  }
+  .bar-label.today {
+    color: var(--pb-color-secondary);
+  }
+
+  /* Stats row */
+  .stats-row {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-family: var(--pb-font-mono);
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    font-weight: 500;
+    color: var(--pb-color-neutral-700);
+    margin-top: 16px;
+    padding: 14px 0;
+    border-top: 1px solid #F0F0F5;
+    border-bottom: 1px solid #F0F0F5;
+  }
+  .stats-row .sep {
+    color: var(--pb-color-neutral-300);
+  }
+
+  /* Deposit limit */
+  .limit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    margin-top: 4px;
+  }
+  .limit-label {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+  }
+  .limit-value {
+    font-family: var(--pb-font-mono);
+    font-weight: 600;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .limit-badge {
+    display: inline-block;
+    background: #E8FFF8;
+    color: var(--pb-color-secondary);
+    font-family: var(--pb-font-heading);
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+  }
+
+  /* Manage link */
+  .manage-link {
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    font-weight: 600;
+    color: var(--pb-color-secondary);
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 10px;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="session-summary">
+
+  <div class="card-heading">
+    活动记录 <span class="period">— 过去 7 天</span>
+  </div>
+
+  <div class="chart">
+    <div class="bar-col">
+      <div class="bar" style="height: 60%;"></div>
+      <div class="bar-label">一</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 35%;"></div>
+      <div class="bar-label">二</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 0; min-height: 4px;"></div>
+      <div class="bar-label">三</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 80%;"></div>
+      <div class="bar-label">四</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 0; min-height: 4px;"></div>
+      <div class="bar-label">五</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar" style="height: 50%;"></div>
+      <div class="bar-label">六</div>
+    </div>
+    <div class="bar-col">
+      <div class="bar today" style="height: 45%;"></div>
+      <div class="bar-label today">日</div>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    场次：4 <span class="sep">&middot;</span> 时长：3 小时 22 分钟 <span class="sep">&middot;</span> 平均：50 分钟
+  </div>
+
+  <div class="limit-row">
+    <span class="limit-label">存款限额</span>
+    <span class="limit-value">每周澳门币 1,600 <span class="limit-badge">已启用</span></span>
+  </div>
+
+  <a class="manage-link">管理设置 &rarr;</a>
+
+</div>
+</body>
+</html>

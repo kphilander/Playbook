@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>شاشة عرض رقمية — عمودي 9:16</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .display-portrait {
+    width: 1080px;
+    height: 1920px;
+    background: linear-gradient(180deg, var(--pb-color-primary-dark), var(--pb-color-primary));
+    position: relative;
+    overflow: hidden;
+    font-family: var(--pb-font-body);
+    display: flex;
+    flex-direction: column;
+  }
+  .display-portrait::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    z-index: 2;
+  }
+  .display-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px;
+    position: relative;
+    z-index: 1;
+  }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(36px * var(--pb-template-text-scale, 1)); }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .co-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .co-brand-divider {
+    width: 1px;
+    height: 40px;
+    background: var(--pb-color-neutral-300);
+  }
+  .operator-placeholder {
+    font-family: var(--pb-font-heading);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    border: 2px dashed rgba(255,255,255,0.15);
+    border-radius: 6px;
+    padding: 12px 24px;
+  }
+
+  .display-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 48px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pillar-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    padding: 12px 28px;
+    border-radius: 100px;
+    margin-bottom: 32px;
+    align-self: flex-start;
+  }
+
+  .display-headline {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(100px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    line-height: 1.4;
+    margin-bottom: 28px;
+  }
+  .display-sub {
+    font-size: calc(38px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.8;
+    margin-bottom: 48px;
+    max-width: 900px;
+  }
+
+  .odds-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  .odds-card {
+    flex: 1;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 36px 28px;
+    text-align: center;
+  }
+  .odds-game {
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(34px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .odds-edge {
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(68px * var(--pb-template-text-scale, 1));
+    line-height: 1.1;
+  }
+  .odds-edge.teal { color: var(--pb-color-secondary); }
+  .odds-edge.white { color: var(--pb-color-white); }
+  .odds-edge.orange { color: var(--pb-color-accent); }
+
+  .display-body {
+    font-size: calc(38px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+
+  .qr-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .qr-placeholder {
+    width: 200px;
+    height: 200px;
+    background: var(--pb-color-white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-weight: 600;
+  }
+  .qr-text {
+    font-family: var(--pb-font-heading);
+  }
+  .qr-text strong {
+    display: block;
+    font-weight: 700;
+    font-size: calc(38px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .qr-text span {
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+  }
+
+  .display-footer {
+    background: var(--pb-color-primary-light);
+    padding: 34px 48px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .display-footer span {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="display-portrait">
+
+  <div class="display-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <div class="co-brand">
+      <div class="co-brand-divider"></div>
+      <div class="operator-placeholder">شعارك هنا</div>
+    </div>
+  </div>
+
+  <div class="display-content">
+    <div class="pillar-badge">شفافية</div>
+    <div class="display-headline">لكل لعبة<br>حساباتها.<br>إليك حسابات لعبتك.</div>
+    <div class="display-sub">احتمالات حقيقية. أدوات حقيقية. دون شروط مخفية.</div>
+
+    <div class="odds-row">
+      <div class="odds-card">
+        <div class="odds-game">بلاك جاك</div>
+        <div class="odds-edge teal">0.5%</div>
+      </div>
+      <div class="odds-card">
+        <div class="odds-game">الروليت</div>
+        <div class="odds-edge white">5.26%</div>
+      </div>
+      <div class="odds-card">
+        <div class="odds-game">آلات القمار</div>
+        <div class="odds-edge orange">2-15%</div>
+      </div>
+    </div>
+
+    <div class="display-body">معرفة النسبة تساعد على اختيار الألعاب وضبط الميزانية.</div>
+
+    <div class="qr-block">
+      <div class="qr-placeholder">رمز QR</div>
+      <div class="qr-text"><strong>امسح لمعرفة المزيد</strong><span>تفضّل بزيارة مركز محتوى Playbook</span></div>
+    </div>
+  </div>
+
+  <div class="display-footer">
+    <span>دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}</span>
+  </div>
+
+</div>
+</body>
+</html>

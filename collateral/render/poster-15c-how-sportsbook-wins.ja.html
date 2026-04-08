@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+  .poster {
+    width: 1800px; height: 2400px;
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); }
+  .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .poster-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+  .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 28px; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(100px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.3; color: var(--pb-color-white); margin-bottom: 64px; }
+  .flow-list { display: flex; flex-direction: column; gap: 28px; margin-bottom: 64px; }
+  .flow-row { display: flex; align-items: baseline; justify-content: space-between; padding: 28px 40px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; }
+  .flow-label { font-family: var(--pb-font-heading); font-size: calc(46px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); }
+  .flow-value { font-family: var(--pb-font-mono); font-size: calc(68px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-white); letter-spacing: -0.02em; }
+  .flow-row.climax { background: rgba(0, 209, 178, 0.1); border: 2px solid var(--pb-color-secondary); padding: 40px 48px; }
+  .flow-row.climax .flow-label { font-size: calc(58px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-white); }
+  .flow-row.climax .flow-value { font-size: calc(108px * var(--pb-template-text-scale, 1)); color: var(--pb-color-secondary); }
+  .insight { font-family: var(--pb-font-body); font-size: calc(40px * var(--pb-template-text-scale, 1)); line-height: 1.7; color: var(--pb-color-neutral-300); margin-bottom: 56px; }
+  .poster-cta { display: block; width: 100%; padding: 36px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(34px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 20px; text-decoration: none; }
+  .poster-footer { background: var(--pb-color-primary-light); padding: 48px 96px; display: flex; align-items: center; justify-content: space-between; gap: 32px; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(42px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="poster">
+  <div class="poster-header">
+    <span class="poster-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="poster-pillar">オープン</span>
+  </div>
+  <div class="poster-body">
+    <div class="eyebrow">スポーツの数学</div>
+    <div class="headline">ブックメーカーが<br>本当に勝つ仕組み。</div>
+    <div class="flow-list">
+      <div class="flow-row">
+        <span class="flow-label">Aへの賭け：</span>
+        <span class="flow-value">11,000円</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-label">Bへの賭け：</span>
+        <span class="flow-value">11,000円</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-label">総額：</span>
+        <span class="flow-value">22,000円</span>
+      </div>
+      <div class="flow-row">
+        <span class="flow-label">勝者が受け取る額：</span>
+        <span class="flow-value">21,000円</span>
+      </div>
+      <div class="flow-row climax">
+        <span class="flow-label">ブックメーカーの取り分：</span>
+        <span class="flow-value">1,000円</span>
+      </div>
+    </div>
+    <div class="insight">勝者を当てる必要はありません。両方に賭けが入ればよいのです。</div>
+    <a href="#" class="poster-cta">{{PROGRAM_URL}} で計算を確認</a>
+  </div>
+  <div class="poster-footer">
+    <span class="footer-helpline">24時間無料・秘密厳守サポート：{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+  </div>
+</div>
+</body>
+</html>

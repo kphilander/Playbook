@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>تم تأكيد الإيداع</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: 'Inter', 'Noto Sans Arabic', Arial, sans-serif;
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+  }
+  .accent-bar { height: 4px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  .hero-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero h1 {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 22px;
+    line-height: 1.5;
+  }
+  .deposit-amount {
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(52px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .deposit-date {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.7;
+  }
+  .section-white { padding: 40px 56px; background: var(--pb-color-white); }
+  .section-gray { padding: 40px 56px; background: var(--pb-color-neutral-50); }
+  .section-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .budget-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .budget-stat {
+    flex: 1;
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+    padding: 22px;
+    text-align: center;
+  }
+  .budget-stat .label {
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.7;
+  }
+  .budget-stat .value {
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .budget-stat .value.teal { color: var(--pb-color-secondary); }
+  .budget-stat .value.orange { color: var(--pb-color-accent); }
+  .progress-bar-outer {
+    width: 100%;
+    height: 8px;
+    background: #E5E5F0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  .progress-bar-inner {
+    width: 35%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-secondary), #00B894);
+    border-radius: 4px;
+  }
+  .progress-label {
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    text-align: end;
+    line-height: 1.7;
+  }
+  .note {
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    margin-top: 18px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .tool-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 0;
+    border-bottom: 1px solid #E5E5F0;
+  }
+  .tool-row:last-child { border-bottom: none; }
+  .tool-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--pb-color-secondary);
+    min-width: 10px;
+  }
+  .tool-dot.off { background: var(--pb-color-neutral-300); }
+  .tool-label {
+    font-weight: 600;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    flex: 1;
+    line-height: 1.7;
+  }
+  .tool-status {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-family: var(--pb-font-body);
+    font-weight: 500;
+  }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 36px 56px;
+    text-align: center;
+  }
+  .footer-support { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); font-weight: 600; margin-bottom: 12px; line-height: 1.7; }
+  .footer-channels {
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.7; margin-bottom: 12px; }
+  .footer-logo { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; }
+  .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>تم تأكيد الإيداع</h1>
+    <div class="deposit-amount">50.00 د.إ</div>
+    <div class="deposit-date">22 فبراير 2026</div>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">الميزانية في لمحة</div>
+    <div class="budget-grid">
+      <div class="budget-stat">
+        <div class="label">الحد الأسبوعي</div>
+        <div class="value">200 د.إ</div>
+      </div>
+      <div class="budget-stat">
+        <div class="label">المستخدم</div>
+        <div class="value teal">70 د.إ</div>
+      </div>
+      <div class="budget-stat">
+        <div class="label">المتبقي</div>
+        <div class="value">130 د.إ</div>
+      </div>
+    </div>
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner"></div>
+    </div>
+    <div class="progress-label">استُخدم 35% من الحد الأسبوعي</div>
+    <div class="note">الحدود تخصّ صاحب الحساب. يمكن تعديلها في أي وقت من الإعدادات.</div>
+    <a href="#" class="cta-button">تعديل الحدود</a>
+  </div>
+
+  <div class="section-gray">
+    <div class="section-heading">الأدوات المتاحة</div>
+    <div class="tool-row">
+      <div class="tool-dot"></div>
+      <div class="tool-label">تذكيرات الجلسة</div>
+      <div class="tool-status">كل 60 دقيقة</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-dot"></div>
+      <div class="tool-label">لوحة النشاط</div>
+      <div class="tool-status">تحديث مباشر</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-dot off"></div>
+      <div class="tool-label">مخطط الرصيد</div>
+      <div class="tool-status">لم يُفعَّل بعد</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">عرض لوحة النشاط</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
+    <div class="footer-channels">اتصال {{HELPLINE_NUMBER}} | رسالة نصية {{HELPLINE_NUMBER}}</div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+  </div>
+
+</div>
+</body>
+</html>

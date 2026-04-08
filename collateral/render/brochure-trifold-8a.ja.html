@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>三つ折りブロシュア ― 内側</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
+
+  .brochure-inside {
+    width: 2400px;
+    height: 1700px;
+    display: flex;
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+
+  .panel {
+    width: 800px;
+    height: 1700px;
+    padding: 72px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-intro { background: var(--pb-color-white); }
+  .panel-intro::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .panel-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(38px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 28px;
+    margin-top: 32px;
+    line-height: 1.5;
+  }
+  .panel-body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  .principle {
+    margin-bottom: 32px;
+    padding-left: 20px;
+    border-left: 3px solid var(--pb-color-secondary);
+  }
+  .principle-title {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 8px;
+  }
+  .principle-body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+  }
+  .panel-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    margin-bottom: 8px;
+  }
+  .panel-logo .logo-play { color: var(--pb-color-primary); font-weight: 800; letter-spacing: -0.02em; }
+  .panel-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .panel-odds {
+    background: var(--pb-color-neutral-50);
+    border-left: 1px solid #E5E5F0;
+  }
+  .section-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    margin-bottom: 12px;
+    margin-top: 24px;
+  }
+  .label-orange { color: var(--pb-color-accent); }
+  .label-teal { color: var(--pb-color-secondary); }
+  .odds-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+  .odds-table th {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 2px solid #D0D0E0;
+  }
+  .odds-table td {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    padding: 14px 0;
+    border-bottom: 1px solid #E5E5F0;
+    line-height: 1.5;
+  }
+  .odds-table td:last-child {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    text-align: right;
+  }
+  .callout {
+    background: var(--pb-color-white);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 24px;
+    border-left: 4px solid var(--pb-color-accent);
+  }
+  .callout p {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+  }
+  .footnote {
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+
+  .panel-tools {
+    background: var(--pb-color-white);
+    border-left: 1px solid #E5E5F0;
+  }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+    align-items: flex-start;
+  }
+  .tool-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: var(--pb-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .tool-num svg { width: 18px; height: 18px; }
+  .tool-item strong {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .tool-item span {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+  }
+  .panel-cta {
+    margin-top: 20px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.7;
+    padding: 18px 22px;
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+  }
+  .panel-cta strong {
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="brochure-inside">
+
+  <div class="panel panel-intro">
+    <div class="panel-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="panel-heading">Playbookとは</div>
+    <div class="panel-body">Playbookは、ご自身のペースで遊ぶための事実と機能をお届けします。警告でも説教でもなく、ゲームの背景にある本当の数字と、体験を整えるためのツールをご提供します。</div>
+    <div class="principle">
+      <div class="principle-title">確率を知る</div>
+      <div class="principle-body">すべてのゲームにはハウスエッジがあります。実際の数字をご紹介するので、納得のいく選択をしていただけます。</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">ツールを使う</div>
+      <div class="principle-body">入金上限、セッションのお知らせ、利用状況ダッシュボードなど、主導権を保つための機能をご用意しています。</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">自分のペースで遊ぶ</div>
+      <div class="principle-body">資金も、上限も、判断もご自身のものです。情報とツールはこちらでご用意しますが、使い方を決めるのはご自身です。</div>
+    </div>
+  </div>
+
+  <div class="panel panel-odds">
+    <div class="section-label label-orange">本当の確率</div>
+    <div class="panel-heading">ハウスエッジとは ― それが意味すること</div>
+    <div class="panel-body" style="font-size: calc(22px * var(--pb-template-text-scale, 1)); margin-bottom:16px;">ハウスエッジとは、すべてのカジノゲームに組み込まれている数学的な優位性のことです。隠されているわけではなく、ビジネスの成り立ちそのものです。エッジを知ることが、ゲーム選びと予算設定の手がかりになります。</div>
+    <table class="odds-table">
+      <thead>
+        <tr><th>ゲーム</th><th style="text-align:right;">ハウスエッジ</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ブラックジャック（基本戦略）</td><td>0.5%</td></tr>
+        <tr><td>クラップス（パス／ドント・パス）</td><td>1.4%</td></tr>
+        <tr><td>ヨーロピアンルーレット</td><td>2.7%</td></tr>
+        <tr><td>アメリカンルーレット</td><td>5.26%</td></tr>
+        <tr><td>スロット</td><td>2〜15%</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <p>アメリカンルーレットで10,000円を賭けるごとに、長期的には約526円がカジノに渡ります。これが娯楽の対価です。</p>
+    </div>
+    <div class="footnote">ハウスエッジは、該当する場合は最適戦略を前提としています。</div>
+  </div>
+
+  <div class="panel panel-tools">
+    <div class="section-label label-teal">ご利用いただけるツール</div>
+    <div class="panel-heading">役立つ機能</div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12"/><path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2 3 2.5 3 1.1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"/></svg></div>
+      <div><strong>入金上限</strong><span>週単位または月単位で娯楽予算を決めます。10秒で設定でき、いつでも変更できます。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
+      <div><strong>セッションのお知らせ</strong><span>お選びいただいた間隔でそっとお知らせします。体験を妨げることなく、状況を把握していただけます。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="4" y2="20"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="8" y1="20" x2="8" y2="12"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="16" y1="20" x2="16" y2="14"/></svg></div>
+      <div><strong>利用状況ダッシュボード</strong><span>セッション、時間、金額などのプレイ履歴をご確認いただけます。不意の発見はありません。知ることは、一つの機能です。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
+      <div><strong>資金プランナー</strong><span>予算を入力してゲームを選ぶと、資金がどこまで持つかを確認できます。</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
+      <div><strong>ゲームIQクイズ</strong><span>確率の知識を試せます。7問、2分。ご友人にも共有できます。</span></div>
+    </div>
+    <div class="panel-cta">
+      <strong>ツールを探す</strong>：アカウント設定または Playbook コンテンツハブからご利用いただけます。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

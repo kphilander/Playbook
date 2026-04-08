@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>Every game has math. Here's yours.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+  .accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    display: inline-block;
+  }
+  .hero-logo .logo-play {
+    color: var(--pb-color-white);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .hero-logo .logo-book {
+    color: var(--pb-color-secondary);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .hero h1 {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section-white {
+    padding: 40px 56px;
+    background: var(--pb-color-white);
+  }
+  .section-gray {
+    padding: 40px 56px;
+    background: var(--pb-color-neutral-50);
+  }
+  .odds-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 24px;
+  }
+  .odds-table th {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--pb-color-neutral-500);
+    text-align: left;
+    padding: 12px 0;
+    border-bottom: 2px solid var(--pb-color-neutral-200);
+  }
+  .odds-table th.right { text-align: right; }
+  .odds-table td {
+    font-family: var(--pb-font-body);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--pb-color-neutral-200);
+  }
+  .odds-table td.edge {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    text-align: right;
+    color: var(--pb-color-primary);
+  }
+  .odds-table tr:last-child td { border-bottom: none; }
+  .insight {
+    font-family: var(--pb-font-body);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 40px 56px;
+    text-align: center;
+  }
+  .footer-support {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .footer-channels {
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+  .footer-legal {
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .footer-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    margin-top: 20px;
+    display: inline-block;
+  }
+  .footer-logo .logo-play {
+    color: var(--pb-color-white);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .footer-logo .logo-book {
+    color: var(--pb-color-secondary);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .footer-unsub {
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 16px;
+  }
+  .footer-unsub a {
+    color: var(--pb-color-neutral-300);
+    text-decoration: underline;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
+<body>
+<div class="email">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <h1>Every game has math. Here's yours.</h1>
+    <p>From lowest to highest &mdash; here's what the casino keeps.</p>
+  </div>
+
+  <div class="section-white">
+    <table class="odds-table">
+      <thead>
+        <tr>
+          <th>Game</th>
+          <th class="right">House edge</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Blackjack (perfect play)</td>
+          <td class="edge">0.5%</td>
+        </tr>
+        <tr>
+          <td>Baccarat (banker)</td>
+          <td class="edge">1.06%</td>
+        </tr>
+        <tr>
+          <td>Craps (pass line)</td>
+          <td class="edge">1.41%</td>
+        </tr>
+        <tr>
+          <td>European roulette</td>
+          <td class="edge">2.7%</td>
+        </tr>
+        <tr>
+          <td>American roulette</td>
+          <td class="edge">5.26%</td>
+        </tr>
+        <tr>
+          <td>Slots</td>
+          <td class="edge">2&ndash;15%</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="insight">Lower edge = longer play on average. A single session can still swing hard.</div>
+    <a href="#" class="cta-button">See every game's math at {{PROGRAM_URL}}</a>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">Free, confidential support &mdash; for any question about gambling.</div>
+    <div class="footer-channels">
+      Call {{HELPLINE_NUMBER}}<br>
+      Text {{HELPLINE_NUMBER}}<br>
+      Chat at {{CHAT_URL}}
+    </div>
+    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-unsub">
+      <a href="#">Manage your preferences</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

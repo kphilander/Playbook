@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+  .poster {
+    width: 1800px; height: 2400px;
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); }
+  .poster-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .poster-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+  .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
+  .myth-label { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); margin-bottom: 32px; }
+  .myth-intro { font-family: var(--pb-font-body); font-size: calc(36px * var(--pb-template-text-scale, 1)); font-weight: 400; color: var(--pb-color-neutral-300); margin-bottom: 16px; line-height: 1.7; }
+  .myth-statement { font-family: var(--pb-font-heading); font-size: calc(84px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.3; color: var(--pb-color-white); margin-bottom: 40px; }
+  .divider { width: 120px; height: 6px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); margin-bottom: 40px; border-radius: 3px; }
+  .fact-statement { font-family: var(--pb-font-body); font-size: calc(38px * var(--pb-template-text-scale, 1)); line-height: 1.7; color: var(--pb-color-neutral-300); margin-bottom: 48px; }
+  .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
+  .fact-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px; padding: 48px; margin-bottom: 48px; }
+  .fact-box-title { font-family: var(--pb-font-heading); font-size: calc(26px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; }
+  .fact-box-text { font-family: var(--pb-font-body); font-size: calc(30px * var(--pb-template-text-scale, 1)); line-height: 1.7; color: var(--pb-color-neutral-300); }
+  .fact-box-text strong { color: var(--pb-color-white); font-weight: 600; }
+  .stat-row { display: flex; gap: 32px; margin-bottom: 48px; }
+  .stat-item { flex: 1; text-align: center; }
+  .stat-number { font-family: 'Inter', system-ui, sans-serif; font-size: calc(84px * var(--pb-template-text-scale, 1)); font-weight: 900; color: var(--pb-color-accent); line-height: 1; letter-spacing: -0.03em; margin-bottom: 12px; }
+  .stat-label { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); line-height: 1.6; }
+  .quiz-cta { display: block; width: 100%; padding: 36px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(34px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 20px; text-decoration: none; }
+  .poster-footer { background: var(--pb-color-primary-light); padding: 48px 96px; display: flex; align-items: center; justify-content: space-between; gap: 32px; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(42px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="poster">
+  <div class="poster-header">
+    <span class="poster-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="poster-pillar">公开</span>
+  </div>
+  <div class="poster-body">
+    <div class="myth-label">误区与数字</div>
+    <div class="myth-intro">有些玩家认为：</div>
+    <div class="myth-statement">「我应该要赢一次了」</div>
+    <div class="divider"></div>
+    <div class="fact-statement">事实上，此即<strong>赌徒谬误</strong>。过往结果不会影响下一次的发生。</div>
+    <div class="fact-box">
+      <div class="fact-box-title">实际运作方式</div>
+      <div class="fact-box-text">轮盘<strong>并无记忆</strong>。连续十次红色后，第十一次出现黑色的赔率<strong>仍完全相同</strong>。每一次旋转均为独立事件。</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat-item">
+        <div class="stat-number">0%</div>
+        <div class="stat-label">过往旋转对<br>下一次结果的影响</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">47.4%</div>
+        <div class="stat-label">每一次旋转<br>出现红色或黑色的概率</div>
+      </div>
+    </div>
+    <a href="#" class="quiz-cta">游戏知识测验 — 立即参与</a>
+  </div>
+  <div class="poster-footer">
+    <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+  </div>
+</div>
+</body>
+</html>

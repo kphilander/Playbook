@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=480">
+<title>نافذة مراجعة الجلسة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { margin: 0; padding: 0; background: transparent; }
+
+  .web-popup {
+    width: 480px;
+    min-height: 600px;
+    background: var(--pb-color-primary);
+    color: var(--pb-color-white);
+    border-radius: 20px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.15);
+    font-family: var(--pb-font-body);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .accent-bar {
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 18px;
+    inset-inline-start: 20px;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    background: none;
+    border: none;
+    line-height: 1;
+    font-family: var(--pb-font-heading);
+    font-weight: 300;
+    z-index: 2;
+  }
+
+  .content {
+    flex: 1;
+    padding: 40px 40px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    line-height: 1;
+  }
+  .logo .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-color-white); }
+  .logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-secondary); }
+
+  .heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(30px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .body-text {
+    font-family: var(--pb-font-body);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-300);
+    line-height: 1.8;
+    margin-bottom: 28px;
+    max-width: 400px;
+  }
+
+  .resource-links {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .resource-link {
+    display: block;
+    text-align: start;
+    padding: 16px 20px;
+    border-inline-start: 3px solid var(--pb-color-secondary);
+    background: rgba(255,255,255,0.04);
+    border-radius: 8px 0 0 8px;
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-white);
+    text-decoration: none;
+    line-height: 1.5;
+  }
+
+  .cta-primary {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 16px;
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(17px * var(--pb-template-text-scale, 1));
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  .cta-secondary {
+    font-family: var(--pb-font-mono);
+    font-weight: 700;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .footer-disclaimer {
+    font-family: var(--pb-font-body);
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.7;
+    text-align: center;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="web-popup">
+
+  <div class="accent-bar"></div>
+  <button class="close-btn">&times;</button>
+
+  <div class="content">
+    <div class="logo">
+      <span class="logo-play">Play</span><span class="logo-book">book</span>
+    </div>
+
+    <h1 class="heading">اللعب والأدوات</h1>
+    <p class="body-text">إليك ما هو متاح — يمكن استخدام ما يناسب كل لاعب.</p>
+
+    <div class="resource-links">
+      <a class="resource-link" href="#">ضبط حد الإيداع</a>
+      <a class="resource-link" href="#">عرض النشاط</a>
+      <a class="resource-link" href="#">أخذ استراحة</a>
+    </div>
+
+    <button class="cta-primary">متابعة</button>
+
+    <a class="cta-secondary" href="#">التحدث مع أحد — {{HELPLINE_NUMBER}}</a>
+
+    <div class="footer-disclaimer">{{AGE_DISCLAIMER}}</div>
+  </div>
+
+</div>
+</body>
+</html>

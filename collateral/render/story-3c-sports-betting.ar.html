@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .story-card {
+    width: 1080px; height: 1920px;
+    background: linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark));
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
+  .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); }
+  .story-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .story-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .story-pillar { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; }
+  .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(52px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.5; color: var(--pb-color-white); margin-bottom: 40px; }
+  .quiz-box { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px; margin-bottom: 40px; text-align: center; }
+  .quiz-box .question { font-family: var(--pb-font-heading); font-weight: 600; font-size: calc(28px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); line-height: 1.7; margin-bottom: 24px; }
+  .quiz-box .answer-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); margin-bottom: 14px; }
+  .quiz-box .answer { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); line-height: 1.8; }
+  .quiz-box .answer strong { color: var(--pb-color-secondary); font-weight: 700; }
+  .breakdown-visual { display: flex; gap: 16px; margin-bottom: 40px; }
+  .money-block { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px; text-align: center; }
+  .money-label { font-family: var(--pb-font-body); font-size: calc(20px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 10px; line-height: 1.7; }
+  .money-value { font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif; font-size: calc(38px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.2; }
+  .money-value.green { color: var(--pb-color-secondary); }
+  .money-value.white { color: var(--pb-color-white); }
+  .money-value.orange { color: var(--pb-color-accent); }
+  .money-note { font-family: var(--pb-font-body); font-size: calc(15px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 8px; line-height: 1.7; }
+  .story-cta { display: block; width: 100%; padding: 28px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(24px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 16px; text-decoration: none; line-height: 1.5; }
+  .story-footer { background: var(--pb-color-primary-light); padding: 28px 48px; text-align: center; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="story-card">
+  <div class="story-header">
+    <span class="story-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="story-pillar">شفافية</span>
+  </div>
+  <div class="story-body">
+    <div class="eyebrow">اختبار يوم الجمعة</div>
+    <div class="headline">ماذا يعني ‎-110 في الرهان الرياضي؟</div>
+    <div class="breakdown-visual">
+      <div class="money-block">
+        <div class="money-label">قيمة الرهان</div>
+        <div class="money-value green">110 د.إ</div>
+      </div>
+      <div class="money-block">
+        <div class="money-label">قيمة الربح</div>
+        <div class="money-value white">100 د.إ</div>
+      </div>
+      <div class="money-block">
+        <div class="money-label">النسبة المقتطعة</div>
+        <div class="money-value orange">10 د.إ</div>
+        <div class="money-note">نسبة نحو 4.5%</div>
+      </div>
+    </div>
+    <div class="quiz-box">
+      <div class="answer-label">الإجابة</div>
+      <div class="answer">رهان بقيمة <strong>110 د.إ للربح بقيمة 100 د.إ</strong>. الـ10 د.إ هي نسبة شركة الرهان، في كل رهان دون استثناء.</div>
+    </div>
+    <a href="#" class="story-cta">التعرّف على الحسابات وراء كل سعر</a>
+  </div>
+  <div class="story-footer">
+    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}</span>
+  </div>
+</div>
+</body>
+</html>

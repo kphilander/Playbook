@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>بروشور ثلاثي الطي — الطية الداخلية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; padding: 24px; background: var(--pb-color-white); }
+
+  .brochure-inside {
+    width: 2400px;
+    height: 1700px;
+    display: flex;
+    font-family: var(--pb-font-body);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+
+  .panel {
+    width: 800px;
+    height: 1700px;
+    padding: 72px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .panel-intro { background: var(--pb-color-white); }
+  .panel-intro::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
+  }
+  .panel-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(40px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 30px;
+    margin-top: 32px;
+    line-height: 1.5;
+  }
+  .panel-body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    margin-bottom: 40px;
+  }
+  .principle {
+    margin-bottom: 32px;
+    padding-inline-start: 20px;
+    border-inline-start: 3px solid var(--pb-color-secondary);
+  }
+  .principle-title {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .principle-body {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+  }
+  .panel-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    margin-bottom: 8px;
+  }
+  .panel-logo .logo-play { color: var(--pb-color-primary); font-weight: 800; letter-spacing: -0.02em; }
+  .panel-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  .panel-odds {
+    background: var(--pb-color-neutral-50);
+    border-inline-start: 1px solid #E5E5F0;
+  }
+  .section-label {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    margin-bottom: 14px;
+    margin-top: 24px;
+    line-height: 1.5;
+  }
+  .label-orange { color: var(--pb-color-accent); }
+  .label-teal { color: var(--pb-color-secondary); }
+  .odds-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+  }
+  .odds-table th {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    text-align: start;
+    padding: 14px 0;
+    border-bottom: 2px solid #D0D0E0;
+    line-height: 1.7;
+  }
+  .odds-table td {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    padding: 16px 0;
+    border-bottom: 1px solid #E5E5F0;
+    line-height: 1.7;
+  }
+  .odds-table td:last-child {
+    font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: calc(24px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+    text-align: end;
+  }
+  .callout {
+    background: var(--pb-color-white);
+    border-radius: 10px;
+    padding: 22px;
+    margin-top: 24px;
+    border-inline-start: 4px solid var(--pb-color-accent);
+  }
+  .callout p {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+  }
+  .footnote {
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 18px;
+    line-height: 1.7;
+  }
+
+  .panel-tools {
+    background: var(--pb-color-white);
+    border-inline-start: 1px solid #E5E5F0;
+  }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+  }
+  .tool-num {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: var(--pb-color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-primary);
+  }
+  .tool-num svg { width: 18px; height: 18px; }
+  .tool-item strong {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    display: block;
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  .tool-item span {
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+  }
+  .panel-cta {
+    margin-top: 20px;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.8;
+    padding: 22px 26px;
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+  }
+  .panel-cta strong {
+    color: var(--pb-color-primary);
+    font-family: var(--pb-font-heading);
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
+    }
+  </style>
+  </head>
+<body>
+<div class="brochure-inside">
+
+  <div class="panel panel-intro">
+    <div class="panel-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="panel-heading">ما هو Playbook؟</div>
+    <div class="panel-body">يقدّم Playbook الحقائق والميزات التي تُتيح اللعب بشروط واضحة. معلومات دقيقة وأدوات عملية، إلى جانب الأرقام الفعلية خلف الألعاب.</div>
+    <div class="principle">
+      <div class="principle-title">اعرف الاحتمالات</div>
+      <div class="principle-body">لكل لعبة نسبة للكازينو. تُعرض الأرقام الفعلية لدعم القرارات المبنية على المعرفة.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">استخدم الأدوات</div>
+      <div class="principle-body">حدود الإيداع وتذكيرات الجلسة ولوحات النشاط — ميزات مصمّمة لتعزيز التحكم.</div>
+    </div>
+    <div class="principle">
+      <div class="principle-title">العب على طريقتك</div>
+      <div class="principle-body">المال والحدود والقرار تخصّ اللاعب. المعلومات والأدوات متاحة، والاستخدام يعود إلى كل لاعب.</div>
+    </div>
+  </div>
+
+  <div class="panel panel-odds">
+    <div class="section-label label-orange">الاحتمالات الحقيقية</div>
+    <div class="panel-heading">نسبة الكازينو — المعنى وفائدتها</div>
+    <div class="panel-body" style="font-size: calc(22px * var(--pb-template-text-scale, 1)); margin-bottom:16px;">نسبة الكازينو هي الميزة الرياضية المُدمجة في كل لعبة كازينو. إنها ليست مخفية، بل جزء من آلية العمل. معرفتها تساعد على اختيار الألعاب وضبط الميزانية.</div>
+    <table class="odds-table">
+      <thead>
+        <tr><th>اللعبة</th><th style="text-align:end;">نسبة الكازينو</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>بلاك جاك (الاستراتيجية الأساسية)</td><td>0.5%</td></tr>
+        <tr><td>كرابس (Pass / Don't pass)</td><td>1.4%</td></tr>
+        <tr><td>الروليت الأوروبي</td><td>2.7%</td></tr>
+        <tr><td>الروليت الأمريكي</td><td>5.26%</td></tr>
+        <tr><td>آلات القمار</td><td>2-15%</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">
+      <p>مقابل كل 100 د.إ مراهنة على الروليت الأمريكي، يحتفظ الكازينو بنحو 5.26 د.إ مع مرور الوقت. هذه هي تكلفة التجربة.</p>
+    </div>
+    <div class="footnote">نسبة الكازينو محسوبة على أساس الاستراتيجية المثلى حيثما كان ذلك ممكنًا.</div>
+  </div>
+
+  <div class="panel panel-tools">
+    <div class="section-label label-teal">الأدوات المتاحة</div>
+    <div class="panel-heading">ميزات تدعم تجربة اللعب</div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v12"/><path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2 3 2.5 3 1.1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"/></svg></div>
+      <div><strong>حدود الإيداع</strong><span>تحديد ميزانية الترفيه أسبوعيًا أو شهريًا. لا يستغرق الأمر سوى 10 ثوانٍ، ويمكن التعديل في أي وقت.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
+      <div><strong>تذكيرات الجلسة</strong><span>تنبيه لحظي في الفاصل المختار. تعزيز الوعي دون تعطيل التجربة.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="4" y2="20"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="8" y1="20" x2="8" y2="12"/><line x1="12" y1="20" x2="12" y2="8"/><line x1="16" y1="20" x2="16" y2="14"/></svg></div>
+      <div><strong>لوحة النشاط</strong><span>عرض إحصائيات اللعب: الجلسات والوقت والإنفاق. دون مفاجآت. المعرفة ميزة.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="8" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
+      <div><strong>مخطط الرصيد</strong><span>إدخال الميزانية واختيار اللعبة ومعرفة مدى امتداد المبلغ.</span></div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg></div>
+      <div><strong>اختبار الإلمام باللعبة</strong><span>اختبار المعرفة بالاحتمالات: 7 أسئلة في دقيقتين.</span></div>
+    </div>
+    <div class="panel-cta">
+      <strong>الوصول إلى هذه الأدوات</strong> من إعدادات الحساب أو مركز محتوى Playbook.
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
