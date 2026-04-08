@@ -40,10 +40,28 @@ class PlaybookHelpline extends HTMLElement {
     const theme = this.getAttribute('theme') || 'dark';
     const mode = this.getAttribute('mode') || 'banner';
 
+    // Read from the Playbook brand system's canonical variables first, fall back
+    // to the legacy widget-specific `--pb-bg` / `--pb-text` / `--pb-accent` names
+    // for any external consumers that theme via those, then hard defaults.
     const colors = {
-      dark:    { bg: 'var(--pb-bg, #1B2838)', text: 'var(--pb-text, #fff)', accent: 'var(--pb-accent, #00D4AA)', border: 'transparent' },
-      light:   { bg: 'var(--pb-bg, #fff)', text: 'var(--pb-text, #1B2838)', accent: 'var(--pb-accent, #00D4AA)', border: '#e5e5e5' },
-      minimal: { bg: 'var(--pb-bg, transparent)', text: 'var(--pb-text, inherit)', accent: 'var(--pb-accent, #00D4AA)', border: 'transparent' },
+      dark: {
+        bg:     'var(--pb-color-primary, var(--pb-bg, #1B2838))',
+        text:   'var(--pb-color-white, var(--pb-text, #fff))',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        border: 'transparent'
+      },
+      light: {
+        bg:     'var(--pb-color-white, var(--pb-bg, #fff))',
+        text:   'var(--pb-color-primary, var(--pb-text, #1B2838))',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        border: 'var(--pb-color-neutral-100, #e5e5e5)'
+      },
+      minimal: {
+        bg:     'var(--pb-bg, transparent)',
+        text:   'var(--pb-text, inherit)',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        border: 'transparent'
+      },
     };
     const c = colors[theme] || colors.dark;
 
@@ -51,7 +69,7 @@ class PlaybookHelpline extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: block; font-family: var(--pb-font, 'Inter', system-ui, sans-serif); }
+        :host { display: block; font-family: var(--pb-font-body, var(--pb-font, 'Inter', system-ui, sans-serif)); }
         .helpline {
           background: ${c.bg};
           color: ${c.text};

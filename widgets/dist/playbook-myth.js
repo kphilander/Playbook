@@ -67,16 +67,21 @@ class PlaybookMyth extends HTMLElement {
     const theme = this.getAttribute('theme') || 'dark';
     const myth = this._myths[this._currentIndex];
 
+    // Brand-system variables win; legacy widget-local names are fallbacks.
     const isDark = theme === 'dark';
-    const bg = isDark ? 'var(--pb-bg, #1B2838)' : 'var(--pb-bg, #fff)';
-    const text = isDark ? 'var(--pb-text, #fff)' : 'var(--pb-text, #1B2838)';
+    const bg = isDark
+      ? 'var(--pb-color-primary, var(--pb-bg, #1B2838))'
+      : 'var(--pb-color-white, var(--pb-bg, #fff))';
+    const text = isDark
+      ? 'var(--pb-color-white, var(--pb-text, #fff))'
+      : 'var(--pb-color-primary, var(--pb-text, #1B2838))';
     const muted = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(27,40,56,0.5)';
-    const accent = 'var(--pb-accent, #FF6B35)';
-    const teal = 'var(--pb-teal, #00D4AA)';
+    const accent = 'var(--pb-color-accent, var(--pb-accent, #FF6B35))';
+    const teal = 'var(--pb-color-secondary, var(--pb-teal, #00D4AA))';
 
     this.shadowRoot.innerHTML = `
       <style>
-        :host { display: block; font-family: var(--pb-font, 'Inter', system-ui, sans-serif); max-width: 400px; }
+        :host { display: block; font-family: var(--pb-font-body, var(--pb-font, 'Inter', system-ui, sans-serif)); max-width: 400px; }
         .card {
           background: ${bg};
           color: ${text};

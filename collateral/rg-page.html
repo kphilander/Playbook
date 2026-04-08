@@ -35,9 +35,13 @@
   --rg-secondary-dark: var(--pb-color-secondary-dark, #00A888);
   --rg-accent: var(--pb-color-accent, #FF6B35);
   --rg-accent-light: var(--pb-color-accent-light, #FF8A5C);
-  /* On-dark text & overlays — no on-dark token in the brand system, keep literal */
-  --rg-text: #E8ECF1;
-  --rg-text-muted: #9AA8B8;
+  /* On-dark text: bright foreground reads --pb-color-white so operators can
+     override (rare), muted foreground reads --pb-color-neutral-300 which the
+     configurator labels "Light text — muted text on dark backgrounds." Both
+     fall through to safe on-dark defaults when no brand is applied. Overlays
+     stay literal since the brand system has no on-dark overlay token. */
+  --rg-text: var(--pb-color-white, #E8ECF1);
+  --rg-text-muted: var(--pb-color-neutral-300, #9AA8B8);
   --rg-divider: rgba(255,255,255,0.08);
   --rg-card-border: rgba(255,255,255,0.1);
   /* On-light text, surfaces, and dividers — wired to brand neutral scale */
@@ -3286,15 +3290,20 @@ body.demo-mode .demo-banner { display: block; }
     while ((node = walker.nextNode())) {
       pbTybTokenSnapshots.push({ node: node, original: node.nodeValue });
     }
-    // Also snapshot select attributes that may contain tokens
-    var attrTargets = document.querySelectorAll('[href*="{{"], [aria-label*="{{"], [title*="{{"]');
-    attrTargets.forEach(function(el) {
-      ['href', 'aria-label', 'title'].forEach(function(attr) {
-        var v = el.getAttribute(attr);
-        if (v && v.indexOf('{{') >= 0) {
-          pbTybTokenSnapshots.push({ node: el, attr: attr, original: v });
+    // Also snapshot any attribute on any element whose value contains a {{...}}
+    // token. This covers href/aria-label/title AND custom-element attributes
+    // like `number`, `text-number`, `chat-url` on <playbook-helpline>, which
+    // feed the widget's shadow DOM render and won't be reached by the text walker.
+    document.querySelectorAll('*').forEach(function(el) {
+      if (!el.attributes) return;
+      // Skip the Try-your-brand modal itself
+      if (el.closest && el.closest('#pbTybModal, #pbTybShade')) return;
+      for (var i = 0; i < el.attributes.length; i++) {
+        var attr = el.attributes[i];
+        if (attr.value && attr.value.indexOf('{{') >= 0) {
+          pbTybTokenSnapshots.push({ node: el, attr: attr.name, original: attr.value });
         }
-      });
+      }
     });
   }
   function pbTybApplyTokenMap(map) {
