@@ -91,7 +91,8 @@ strings:
       en: "Know Your Game"
       ja: "ゲームを知る"
       zh-CN: "了解游戏"
-      ar: "اعرف لعبتك"
+      ar: "معرفة اللعبة"
+      note: "ar: UAE communal voice — 'اعرف لعبتك' (imperative + 2nd-person suffix) replaced with the verbal noun 'معرفة اللعبة' (knowing the game), the standard institutional register."
     section_how_it_works:
       en: "How It Works"
       ja: "仕組み"
@@ -101,7 +102,8 @@ strings:
       en: "Your session"
       ja: "今回のセッション"
       zh-CN: "本次游戏"
-      ar: "جلستك"
+      ar: "ملخّص الجلسة"
+      note: "ar: UAE communal voice — 'جلستك' contains the 2nd-person ك suffix ('your session'). Replaced with 'ملخّص الجلسة' (session summary) — no direct address."
     section_more_resources:
       en: "More resources"
       ja: "その他のサポート"
@@ -138,7 +140,8 @@ strings:
       en: "24/7 Support"
       ja: "24時間サポート"
       zh-CN: "24小时支援"
-      ar: "الدعم على مدار الساعة"
+      ar: "دعم مجاني وسري على مدار الساعة"
+      note: "ar: UAE private/confidential register expects the مجاني وسري (free and confidential) promise in every helpline label. Original 'الدعم على مدار الساعة' extended to the full form to harmonize with helpline_short/helpline_full (which already include مجاني وسري)."
     helpline_label_24_7:
       en: "{{HELPLINE_NUMBER}} · 24/7"
       ja: "{{HELPLINE_NUMBER}}・24時間対応"
@@ -183,8 +186,9 @@ strings:
     helpline_available_long:
       en: "Free, confidential support is available 24/7 — for any question about gambling. No judgment. Ever."
       ja: "ギャンブルに関するどのようなご相談にも、秘密厳守の無料サポートが24時間ご利用いただけます。ご評価することはありません。"
-      zh-CN: "24小时免费保密支援,博彩相关任何问题皆可咨询,玩家不会受到任何评判。"
+      zh-CN: "24小时免费保密支援，博彩相关任何问题皆可咨询，玩家不会受到任何评判。"
       ar: "الدعم المجاني والسري متاح على مدار الساعة — لأي سؤال يتعلق بالمقامرة. بدون أحكام، أبدًا."
+      note: "zh-CN: use full-width Chinese comma U+FF0C (，) between clauses, never the half-width Latin comma U+002C (,). Chinese punctuation convention requires full-width marks when the surrounding characters are Han."
     helpline_24_7_no_judgment:
       en: "24/7 · No judgment · Any question about gambling"
       ja: "24時間対応・評価なし・ギャンブルに関するあらゆるご相談"
@@ -199,13 +203,14 @@ strings:
       en: "Need to talk?"
       ja: "お話しされたいときに"
       zh-CN: "需要倾诉吗？"
-      ar: "هل تحتاج إلى التحدث؟"
-      note: "ja: direct question → softer nominal phrase ('when you'd like to talk'). zh-CN: keeps question form but in formal register. ar: formal MSA interrogative."
+      ar: "باب الحوار مفتوح."
+      note: "ja: direct question → softer nominal phrase ('when you'd like to talk'). zh-CN: keeps question form but in formal register. ar: UAE communal voice forbids direct second-person questions (تحتاج addresses the reader). Replaced with institutional declarative 'باب الحوار مفتوح' (The door for dialogue is open) — no second-person reference."
     helpline_need_to_talk_free:
       en: "Need to talk? Free, confidential support."
       ja: "お話しされたいときに。秘密厳守の無料サポートをご利用いただけます。"
       zh-CN: "需要倾诉吗？免费保密支援。"
-      ar: "هل تحتاج إلى التحدث؟ دعم مجاني وسري."
+      ar: "باب الحوار مفتوح. دعم مجاني وسري."
+      note: "ar: UAE communal voice — see helpline_need_to_talk note."
     helpline_short_label:
       en: "Free, confidential support: {{HELPLINE_NUMBER}}"
       ja: "秘密厳守の無料サポート：{{HELPLINE_NUMBER}}"
@@ -246,12 +251,14 @@ strings:
       en: "Learn more"
       ja: "詳しくはこちら"
       zh-CN: "了解更多"
-      ar: "اعرف المزيد"
+      ar: "لمعرفة المزيد"
+      note: "ar: UAE communal voice — imperative 'اعرف' replaced with the verbal-noun purposive construction 'لمعرفة' (to know / for knowing)."
     cta_get_started:
       en: "Get started"
       ja: "はじめる"
       zh-CN: "立即开始"
-      ar: "ابدأ الآن"
+      ar: "البدء الآن"
+      note: "ar: UAE communal voice — imperative 'ابدأ' replaced with the verbal noun 'البدء' (the starting / to begin). Standard institutional register for CTAs."
     cta_continue:
       en: "Continue"
       ja: "続ける"
@@ -403,7 +410,7 @@ strings:
     fact:
       en: "A near-win isn't progress. It's just <strong>a loss that looks close.</strong>"
       ja: "惜しい負けは、勝ちに近づいている証ではありません。それは<strong>近く見えるだけの負け</strong>です。"
-      zh-CN: "差一点的失败并非接近胜利,<strong>其实只是一次看起来接近的损失。</strong>"
+      zh-CN: "差一点的失败并非接近胜利，<strong>其实只是一次看起来接近的损失。</strong>"
       ar: "الخسارة القريبة ليست تقدمًا. إنها فقط <strong>خسارة تبدو قريبة.</strong>"
       note: "zh-CN: 其实 (actually/in fact) replaces direct negation, fitting the diplomatic profile."
     stat_number:
@@ -430,7 +437,7 @@ strings:
     fact:
       en: "All slots are random. <strong>Your pick doesn't change the odds.</strong>"
       ja: "すべてのスロットは無作為に決まります。<strong>台を選んでも確率は変わりません。</strong>"
-      zh-CN: "所有老虎机均为随机。<strong>事实上,选择机器不会改变赔率。</strong>"
+      zh-CN: "所有老虎机均为随机。<strong>事实上，选择机器不会改变赔率。</strong>"
       ar: "جميع آلات القمار عشوائية. <strong>الاختيار لا يغير الاحتمالات.</strong>"
       note: "zh-CN: 事实上 (in fact) softens the correction per the diplomatic Macau profile. ar: dropped the second-person possessive ك from اختيارك (your pick) → الاختيار (the pick/choosing) — aligns with the UAE communal-voice rule that forbids second-person pronouns in institutional RG copy."
     stat_number:
@@ -455,7 +462,7 @@ strings:
     fact:
       en: "Your brain keeps the wins and <strong>forgets the losses.</strong>"
       ja: "私たちの記憶は、勝った時のことを覚えていて<strong>負けた時のことを忘れがちです。</strong>"
-      zh-CN: "人的记忆往往保留胜利,<strong>却淡化损失。</strong>"
+      zh-CN: "人的记忆往往保留胜利，<strong>却淡化损失。</strong>"
       ar: "يحتفظ الذهن بالانتصارات <strong>وينسى الخسائر.</strong>"
       note: "ja: '私たちの記憶' (our memory) — communal framing, avoids direct 'your brain'. zh-CN: '人的记忆' (people's memory) — same communal shift, avoids 你的大脑."
 
@@ -502,13 +509,14 @@ strings:
       en: "Every game has math.<br>Here's yours."
       ja: "すべてのゲームには数学があります。<br>ここに示します。"
       zh-CN: "每款游戏都有数学。<br>以下是各游戏的数据。"
-      ar: "لكل لعبة حساباتها.<br>إليك حسابات لعبتك."
-      note: "ja: 'here's yours' → 'ここに示します' (we show it to you here) — elder/contextual. zh-CN: Macau communal voice profile forbids second-person pronouns (including formal 您). Reworked to institutional framing: '每款游戏都有数学。以下是各游戏的数据。' (Every game has math. Below are the data for each game.) — no second-person reference, communal/informational register. ar: formal MSA parallelism."
+      ar: "لكل لعبة حساباتها.<br>وفيما يلي التفاصيل."
+      note: "ja: 'here's yours' → 'ここに示します' (we show it to you here) — elder/contextual. zh-CN: Macau communal voice profile forbids second-person pronouns (including formal 您). Reworked to institutional framing: '每款游戏都有数学。以下是各游戏的数据。' (Every game has math. Below are the data for each game.) — no second-person reference, communal/informational register. ar: UAE communal voice forbids second-person pronouns (لك, أنت) and second-person suffixes. Original 'إليك حسابات لعبتك' used the ك suffix twice ('here is YOUR game's math'). Rewritten as 'لكل لعبة حساباتها. وفيما يلي التفاصيل.' (For every game its math. Below are the details.) — bare nominal + impersonal 'below follows' construction, no second-person reference."
     headline_every_game_flat:
       en: "Every game has math. Here's yours."
       ja: "すべてのゲームには数学があります。ここに示します。"
       zh-CN: "每款游戏都有数学。以下是各游戏的数据。"
-      ar: "لكل لعبة حساباتها. إليك حسابات لعبتك."
+      ar: "لكل لعبة حساباتها. وفيما يلي التفاصيل."
+      note: "ar: UAE communal voice — see headline_every_game note above. Flat (no <br>) variant used where inline rendering is needed."
 
   card-14a-every-game-blackjack:
     headline: { $ref: "common_14.headline_every_game" }
@@ -565,7 +573,7 @@ strings:
     body_line:
       en: "The cut is set before you spin. You can't see it."
       ja: "取り分は回す前に決まっていて、見ることはできません。"
-      zh-CN: "抽成在旋转之前已经设定,玩家无法看到。"
+      zh-CN: "抽成在旋转之前已经设定，玩家无法看到。"
       ar: "النسبة مُحددة مسبقًا قبل الدوران، ولا يمكن رؤيتها."
     cta:
       en: "Look up your game's cut at {{PROGRAM_URL}}"
@@ -625,7 +633,7 @@ strings:
     insight:
       en: "Lower edge = longer play on average. A single session can still swing hard."
       ja: "ハウスエッジが低いほど、平均的に長く遊べます。ただし、1回のセッションでも大きく変動することがあります。"
-      zh-CN: "庄家优势越低,平均游戏时间越长。单次游戏仍可能出现较大波动。"
+      zh-CN: "庄家优势越低，平均游戏时间越长。单次游戏仍可能出现较大波动。"
       ar: "كلما انخفضت نسبة الكازينو، طال اللعب في المتوسط. ومع ذلك، قد تتقلب الجلسة الواحدة بشكل ملحوظ."
     cta:
       en: "See every game's math at {{PROGRAM_URL}}"
@@ -657,7 +665,7 @@ strings:
     body_line:
       en: "Same casino. Different math."
       ja: "同じカジノでも、数学は異なります。"
-      zh-CN: "同一家赌场,数据却各不相同。"
+      zh-CN: "同一家赌场，数据却各不相同。"
       ar: "الكازينو ذاته. الحسابات تختلف."
 
   mobile-14f-every-game:
@@ -691,12 +699,12 @@ strings:
     headline:
       en: "The point spread, explained."
       ja: "ポイントスプレッドとは。"
-      zh-CN: "让分盘,详细解释。"
+      zh-CN: "让分盘，详细解释。"
       ar: "فارق النقاط، موضّحًا."
     body_text:
       en: "The spread isn't a guess at who will win. It's how the sportsbook gets bets on both teams."
       ja: "スプレッドは勝者を予想するものではなく、両チームに賭けを集めるための仕組みです。"
-      zh-CN: "让分并非预测胜负,而是博彩公司吸引双方投注的方式。"
+      zh-CN: "让分并非预测胜负，而是博彩公司吸引双方投注的方式。"
       ar: "فارق النقاط ليس تخمينًا للفائز. إنه الطريقة التي تستخدمها شركة الرهان لجذب الرهانات على الفريقين."
     hero_big:
       en: "$1.10"
@@ -753,7 +761,7 @@ strings:
     body_text:
       en: "Simple bets have a smaller cut. Fun bets have a bigger one."
       ja: "シンプルな賭けは取り分が少なく、複雑な賭けは取り分が大きくなります。"
-      zh-CN: "简单投注抽成较低,复杂投注抽成较高。"
+      zh-CN: "简单投注抽成较低，复杂投注抽成较高。"
       ar: "الرهانات البسيطة تكلفتها أقل. الرهانات المعقدة تكلفتها أكبر."
       note: "en 'fun bets' → neutralized to 'complex/exciting bets' — 'fun' reads flippant in zh-CN/ar RG registers. ar: specifically المعقدة (complex) rather than ممتعة (enjoyable/fun) — the UAE register cannot frame high-juice parlays as 'fun' without undermining the RG message."
 
@@ -814,7 +822,7 @@ strings:
     insight:
       en: "They don't need to pick winners. They just need bets on both sides.</br>"
       ja: "勝者を当てる必要はありません。両方に賭けが入ればよいのです。"
-      zh-CN: "无需预测赢家,只需双方均有投注即可。"
+      zh-CN: "无需预测赢家，只需双方均有投注即可。"
       ar: "لا حاجة لاختيار الفائز. يكفي وجود رهانات على الجانبين."
     cta:
       en: "See the math at {{PROGRAM_URL}}"
@@ -834,12 +842,12 @@ strings:
     heading:
       en: "Live odds move. The cut stays."
       ja: "ライブオッズは動きます。取り分は動きません。"
-      zh-CN: "即时赔率会变,抽成始终不变。"
+      zh-CN: "即时赔率会变，抽成始终不变。"
       ar: "الأسعار المباشرة تتحرك. النسبة تبقى."
     body_text:
       en: "Every live line has the sportsbook's cut baked in. The updates don't erase it."
       ja: "すべてのライブラインにはブックメーカーの取り分が組み込まれており、更新されても消えることはありません。"
-      zh-CN: "每条即时赔率均内含博彩公司的抽成,赔率更新并不会将其消除。"
+      zh-CN: "每条即时赔率均内含博彩公司的抽成，赔率更新并不会将其消除。"
       ar: "كل سعر مباشر يتضمن نسبة شركة الرهان. التحديثات لا تلغيها."
     stat_big:
       en: "5–10%"
@@ -968,8 +976,8 @@ strings:
       en: "Every game has a house edge.<br>Here's what you're actually playing."
       ja: "すべてのゲームにはハウスエッジがあります。<br>実際に遊んでいるものの中身をご紹介します。"
       zh-CN: "每款游戏都有庄家优势。<br>以下是各游戏的实际数据。"
-      ar: "لكل لعبة نسبة للكازينو.<br>إليك ما تُلعب فعليًا."
-      note: "zh-CN: Macau communal voice — second-person 'you' dropped, rewritten as 'below are the actual data for each game'."
+      ar: "لكل لعبة نسبة للكازينو.<br>وفيما يلي التفاصيل."
+      note: "zh-CN: Macau communal voice — second-person 'you' dropped, rewritten as 'below are the actual data for each game'. ar: UAE communal voice forbids second-person verb تُلعب ('you play'); rewritten with impersonal 'below follows the details' framing."
     game_blackjack:
       en: "Blackjack (basic strategy)"
     game_european_roulette:
@@ -1243,18 +1251,20 @@ strings:
       en: "Know the numbers"
       ja: "数字を知る"
       zh-CN: "了解数字"
-      ar: "اعرف الأرقام"
+      ar: "معرفة الأرقام"
+      note: "ar: UAE communal voice — imperative 'اعرف' replaced with the verbal noun 'معرفة'."
     headline:
       en: "Know your game.<br>Play on your terms."
       ja: "ゲームを知り、<br>自分のペースで遊ぶ。"
       zh-CN: "了解游戏。<br>自主掌控。"
-      ar: "اعرف لعبتك.<br>العب بشروطك."
-      note: "zh-CN: 'your game' / 'on your terms' reframed as institutional imperative-free phrases — 了解游戏 (understand the game) / 自主掌控 (self-directed control)."
+      ar: "معرفة اللعبة.<br>اللعب وفق الشروط الخاصة."
+      note: "zh-CN: 'your game' / 'on your terms' reframed as institutional imperative-free phrases — 了解游戏 (understand the game) / 自主掌控 (self-directed control). ar: UAE communal voice forbids second-person imperatives (اعرف, العب) and second-person suffixes (لعبتك, بشروطك). Rewritten using verbal nouns: 'معرفة اللعبة. اللعب وفق الشروط الخاصة.' (Knowing the game. Playing according to one's own terms.) — no imperatives, no second-person."
     subhead:
       en: "Every game has a house edge. Here's yours."
       ja: "すべてのゲームにはハウスエッジがあります。それぞれのエッジをご紹介します。"
       zh-CN: "每款游戏都有庄家优势。以下是各游戏的数据。"
-      ar: "لكل لعبة نسبة للكازينو. إليك حسابات كل لعبة."
+      ar: "لكل لعبة نسبة للكازينو. وفيما يلي التفاصيل."
+      note: "ar: UAE communal voice — original 'إليك' (here is for you) replaced with impersonal 'وفيما يلي' (below follows)."
     stat_blackjack_label:
       en: "Blackjack"
     stat_blackjack_note:
@@ -1308,12 +1318,14 @@ strings:
       en: "Every game has a <span class=\"teal\">house edge</span>.<br>Here's yours."
       ja: "すべてのゲームには<span class=\"teal\">ハウスエッジ</span>があります。<br>実際の数値をご紹介します。"
       zh-CN: "每款游戏都有<span class=\"teal\">庄家优势</span>。<br>以下为各游戏数据。"
-      ar: "لكل لعبة <span class=\"teal\">نسبة للكازينو</span>.<br>إليك حسابات لعبتك."
+      ar: "لكل لعبة <span class=\"teal\">نسبة للكازينو</span>.<br>وفيما يلي التفاصيل."
+      note: "ar: UAE communal voice — original 'إليك حسابات لعبتك' used the ك suffix ('here is YOUR game's math'). Replaced with impersonal 'وفيما يلي التفاصيل' (below follows the details)."
     subhead:
       en: "It's the percentage the house keeps over time. Here's how games compare."
       ja: "長期的にハウスが受け取る割合のことです。ゲームごとの比較をご覧ください。"
       zh-CN: "即赌场长期保留的比例。以下是各游戏的比较。"
-      ar: "هي النسبة التي يحتفظ بها الكازينو مع مرور الوقت. إليك مقارنة بين الألعاب."
+      ar: "هي النسبة التي يحتفظ بها الكازينو مع مرور الوقت. وفيما يلي مقارنة بين الألعاب."
+      note: "ar: UAE communal voice — 'إليك' replaced with impersonal 'وفيما يلي' (below follows)."
     row_blackjack:
       en: "Blackjack (basic strategy)"
     row_craps:
@@ -1393,8 +1405,8 @@ strings:
       en: "Know your odds.<br>They're bigger than you think."
       ja: "確率を知る。<br>思っているより大きな数字です。"
       zh-CN: "了解真实赔率。<br>数字远超一般印象。"
-      ar: "اعرف الاحتمالات.<br>إنها أكبر مما يظن كثيرون."
-      note: "zh-CN: 'than you think' → '一般印象' (common impression) to avoid second-person address."
+      ar: "معرفة الاحتمالات.<br>إنها أكبر مما يظن كثيرون."
+      note: "zh-CN: 'than you think' → '一般印象' (common impression) to avoid second-person address. ar: UAE communal voice — imperative 'اعرف' replaced with the verbal noun 'معرفة'."
     subhead:
       en: "Every number combination has the exact same chance. No exceptions."
       ja: "どの数字の組み合わせも確率はまったく同じです。例外はありません。"
@@ -1543,12 +1555,14 @@ strings:
       en: "Every game has math.<br>Here's yours."
       ja: "すべてのゲームには数学があります。<br>ここに示します。"
       zh-CN: "每款游戏都有数学。<br>以下是各游戏的数据。"
-      ar: "لكل لعبة حساباتها.<br>إليك حسابات لعبتك."
+      ar: "لكل لعبة حساباتها.<br>وفيما يلي التفاصيل."
+      note: "ar: UAE communal voice — 'إليك حسابات لعبتك' replaced with impersonal 'وفيما يلي التفاصيل'."
     hero_subhead:
       en: "Know the house edge. Pick your games. Set your budget."
       ja: "ハウスエッジを知り、ゲームを選び、予算を立てる。"
       zh-CN: "了解庄家优势、选择游戏、设定预算。"
-      ar: "اعرف نسبة الكازينو. اختر الألعاب. اضبط الميزانية."
+      ar: "معرفة نسبة الكازينو. اختيار الألعاب. ضبط الميزانية."
+      note: "ar: UAE communal voice — three imperatives (اعرف / اختر / اضبط) replaced with the three verbal nouns (معرفة / اختيار / ضبط)."
     stat_blackjack:
       en: "Blackjack (basic strategy)"
     stat_blackjack_note:
@@ -1592,7 +1606,8 @@ strings:
       en: "Know the edge. Pick your game."
       ja: "エッジを知り、ゲームを選ぶ。"
       zh-CN: "了解庄家优势，合理选择游戏。"
-      ar: "اعرف النسبة. اختر لعبتك."
+      ar: "معرفة النسبة. اختيار اللعبة المناسبة."
+      note: "ar: UAE communal voice — imperatives اعرف/اختر and ك suffix replaced with verbal nouns معرفة/اختيار."
     quiz_cta:
       en: "Think you know the odds?<br>Scan to take the quiz"
       ja: "確率をご存じでしょうか。<br>スキャンしてクイズに参加"
@@ -1649,7 +1664,8 @@ strings:
       en: "Every game<br>has math.<br>Here's yours."
       ja: "すべての<br>ゲームには数学があります。<br>ここに示します。"
       zh-CN: "每款游戏<br>都有数学。<br>以下是各游戏数据。"
-      ar: "لكل لعبة<br>حساباتها.<br>إليك حسابات لعبتك."
+      ar: "لكل لعبة<br>حساباتها.<br>وفيما يلي التفاصيل."
+      note: "ar: UAE communal voice — 'إليك حسابات لعبتك' replaced with impersonal 'وفيما يلي التفاصيل'."
     display_sub:
       en: "Real odds. Real tools. No fine print."
       ja: "本当の確率。確かなツール。但し書きはなし。"
@@ -1677,7 +1693,8 @@ strings:
       en: "Welcome to Playbook"
       ja: "Playbookへようこそ"
       zh-CN: "欢迎使用 Playbook"
-      ar: "مرحبًا بك في Playbook"
+      ar: "أهلًا بالانضمام إلى Playbook"
+      note: "ar: UAE communal voice — 'مرحبًا بك' contains the second-person ك suffix. Replaced with the impersonal 'أهلًا بالانضمام إلى Playbook' (Welcome to joining Playbook) — no direct address."
     h1:
       en: "Welcome. A few things worth knowing."
       ja: "ようこそ。知っておきたいことをいくつかご紹介します。"
@@ -1718,7 +1735,8 @@ strings:
       en: "Know your game"
       ja: "ゲームを知る"
       zh-CN: "了解游戏"
-      ar: "اعرف لعبتك"
+      ar: "معرفة اللعبة"
+      note: "ar: UAE communal voice — 'اعرف لعبتك' replaced with the verbal noun 'معرفة اللعبة'."
     step3_body:
       en: "Take the odds quiz. 7 questions, 2 minutes. Challenge your friends after."
       ja: "確率クイズに挑戦してみましょう。7問、2分で終わります。終わったらご友人にも共有できます。"
@@ -1847,8 +1865,8 @@ strings:
       en: "Knowledge is a feature. Here's yours."
       ja: "知ることは、一つの機能です。今月のまとめをご覧ください。"
       zh-CN: "知识即功能。以下是相关数据。"
-      ar: "المعرفة ميزة. إليك ملخصك."
-      note: "review: 'Knowledge is a feature' is a brand tagline. zh-CN: literal rendering '知识即功能'; follow-up reframed as institutional '以下是相关数据'. ja: 'Knowledge is a feature' — brand tagline rendered as '知ることは、一つの機能です' (knowing is a feature), preserving the meaning in elder register."
+      ar: "المعرفة ميزة. وفيما يلي ملخص الشهر."
+      note: "review: 'Knowledge is a feature' is a brand tagline. zh-CN: literal rendering '知识即功能'; follow-up reframed as institutional '以下是相关数据'. ja: 'Knowledge is a feature' — brand tagline rendered as '知ることは、一つの機能です' (knowing is a feature), preserving the meaning in elder register. ar: UAE communal voice — 'إليك ملخصك' contained two second-person ك suffixes ('here is YOUR summary'). Rewritten as 'وفيما يلي ملخص الشهر' (below follows the month's summary) — no direct address, no possessive."
     section_key_stats:
       en: "Key stats"
       ja: "主な統計"
@@ -2052,7 +2070,8 @@ strings:
       en: "Know the odds"
       ja: "確率を知る"
       zh-CN: "了解赔率"
-      ar: "اعرف الاحتمالات"
+      ar: "معرفة الاحتمالات"
+      note: "ar: UAE communal voice — imperative 'اعرف' replaced with the verbal noun 'معرفة'."
     panel_know_body:
       en: "Every game has a house edge. We show you the actual numbers so you can make informed choices."
       ja: "すべてのゲームにはハウスエッジがあります。実際の数字をご紹介するので、納得のいく選択をしていただけます。"
@@ -2062,7 +2081,8 @@ strings:
       en: "Use the tools"
       ja: "ツールを使う"
       zh-CN: "善用工具"
-      ar: "استخدم الأدوات"
+      ar: "استخدام الأدوات"
+      note: "ar: UAE communal voice — imperative 'استخدم' replaced with the verbal noun 'استخدام'."
     panel_tools_body:
       en: "Deposit limits, session reminders, activity dashboards — features designed to keep you in control."
       ja: "入金上限、セッションのお知らせ、利用状況ダッシュボードなど、主導権を保つための機能をご用意しています。"
@@ -2072,7 +2092,8 @@ strings:
       en: "Play your way"
       ja: "自分のペースで遊ぶ"
       zh-CN: "自主游戏"
-      ar: "العب على طريقتك"
+      ar: "اللعب وفق الطريقة الخاصة"
+      note: "ar: UAE communal voice — imperative العب + 2nd-person suffix ك replaced with verbal-noun construction 'اللعب وفق الطريقة الخاصة' (playing according to one's own way)."
     panel_play_body:
       en: "Your money, your limits, your call. We give you information and tools. You decide what to do with them."
       ja: "資金も、上限も、判断もご自身のものです。情報とツールはこちらでご用意しますが、使い方を決めるのはご自身です。"
@@ -2183,7 +2204,8 @@ strings:
       en: "Every game has math.<br>Here's yours."
       ja: "すべてのゲームには数学があります。<br>ここに示します。"
       zh-CN: "每款游戏都有数学。<br>以下是各游戏的数据。"
-      ar: "لكل لعبة حساباتها.<br>إليك حسابات لعبتك."
+      ar: "لكل لعبة حساباتها.<br>وفيما يلي التفاصيل."
+      note: "ar: UAE communal voice — 'إليك حسابات لعبتك' replaced with impersonal 'وفيما يلي التفاصيل'."
     front_sub:
       en: "Real odds. Real tools. No fine print."
       ja: "本当の確率。確かなツール。但し書きはなし。"
@@ -2229,7 +2251,8 @@ strings:
       en: "Know your game.<br>Play on your terms."
       ja: "ゲームを知り、<br>自分のペースで遊ぶ。"
       zh-CN: "了解游戏。<br>自主掌控。"
-      ar: "اعرف لعبتك.<br>العب بشروطك."
+      ar: "معرفة اللعبة.<br>اللعب وفق الشروط الخاصة."
+      note: "ar: UAE communal voice — imperatives اعرف/العب and ك suffixes replaced with verbal nouns معرفة/اللعب."
     sub:
       en: "Real odds. Real tools. Free support."
       ja: "本当の確率。確かなツール。無料のサポート。"
@@ -2285,7 +2308,8 @@ strings:
       en: "Know yours. Pick your game."
       ja: "ご自身のエッジを知り、ゲームを選ぶ。"
       zh-CN: "了解相关数据，合理选择游戏。"
-      ar: "اعرف النسبة. اختر لعبتك."
+      ar: "معرفة النسبة. اختيار اللعبة المناسبة."
+      note: "ar: UAE communal voice — imperatives اعرف/اختر and ك suffix replaced with verbal nouns معرفة/اختيار."
     qr_label:
       en: "Scan to see all games"
       ja: "スキャンしてすべてのゲームを見る"
@@ -2724,7 +2748,8 @@ strings:
       en: "Welcome to Playbook"
       ja: "Playbookへようこそ"
       zh-CN: "欢迎使用 Playbook"
-      ar: "مرحبًا بك في Playbook"
+      ar: "أهلًا بالانضمام إلى Playbook"
+      note: "ar: UAE communal voice — 'مرحبًا بك' contains the second-person ك suffix. Replaced with the impersonal 'أهلًا بالانضمام إلى Playbook'."
     sub:
       en: "Real odds. Real tools. Your call."
       ja: "本当の確率。確かなツール。判断はご自身で。"
@@ -2734,7 +2759,8 @@ strings:
       en: "Know the odds"
       ja: "確率を知る"
       zh-CN: "了解赔率"
-      ar: "اعرف الاحتمالات"
+      ar: "معرفة الاحتمالات"
+      note: "ar: UAE communal voice — imperative 'اعرف' replaced with the verbal noun 'معرفة'."
     feature1_body:
       en: "See the house edge for every game"
       ja: "すべてのゲームのハウスエッジを確認できます"
@@ -2744,7 +2770,8 @@ strings:
       en: "Set your limits"
       ja: "上限を設定する"
       zh-CN: "设定限额"
-      ar: "اضبط الحدود"
+      ar: "ضبط الحدود"
+      note: "ar: UAE communal voice — imperative 'اضبط' replaced with the verbal noun 'ضبط'."
     feature2_body:
       en: "Deposit caps, session alerts, your rules"
       ja: "入金上限、セッションのお知らせなど、ルールはご自身のものです"
@@ -2754,7 +2781,8 @@ strings:
       en: "Track your play"
       ja: "プレイ状況を確認する"
       zh-CN: "追踪游戏数据"
-      ar: "تتبّع اللعب"
+      ar: "تتبُّع اللعب"
+      note: "ar: verbal-noun form with explicit shadda/damma 'تتبُّع' — already a verbal noun, adjusted vowelling for clarity (per review)."
     feature3_body:
       en: "Activity dashboard at a glance"
       ja: "利用状況ダッシュボードで一目で確認できます"
@@ -2826,7 +2854,8 @@ strings:
       en: "Every game has a house edge. Know yours."
       ja: "すべてのゲームにはハウスエッジがあります。ご自身のエッジを知る。"
       zh-CN: "每款游戏都有庄家优势。了解相关数据。"
-      ar: "لكل لعبة نسبة للكازينو. اعرف نسبة لعبتك."
+      ar: "لكل لعبة نسبة للكازينو. معرفة النسبة لكل لاعب."
+      note: "ar: UAE communal voice — 'اعرف نسبة لعبتك' (imperative + 2nd-person suffix) replaced with verbal-noun construction 'معرفة النسبة لكل لاعب' (knowing the rate, for each player)."
     cta_learn_more: { $ref: "common.cta_learn_more" }
     helpline:
       en: "24/7: {{HELPLINE_NUMBER}}"
@@ -2901,7 +2930,8 @@ strings:
       en: "Sports outcomes are uncertain. Here's where your budget stands."
       ja: "スポーツの結果は予測できません。ご予算の状況をご確認ください。"
       zh-CN: "体育赛事结果难以预测。以下为当前预算状况。"
-      ar: "نتائج الأحداث الرياضية غير مؤكدة. إليك وضع الميزانية الراهن."
+      ar: "نتائج الأحداث الرياضية غير مؤكدة. وضع الميزانية الراهن أدناه."
+      note: "ar: UAE communal voice — 'إليك' (here is for you) replaced with bare-nominal / impersonal 'أدناه' (below)."
     cta_manage:
       en: "Manage your limits"
       ja: "上限を管理する"
@@ -2918,7 +2948,8 @@ strings:
       en: "Here's what's available — use what works for you."
       ja: "ご利用いただける機能をご紹介します。お役に立つものをお使いください。"
       zh-CN: "以下为可用功能，玩家可按需使用。"
-      ar: "إليك ما هو متاح — يمكن استخدام ما يناسب كل لاعب."
+      ar: "ما هو متاح — يمكن استخدام ما يناسب كل لاعب."
+      note: "ar: UAE communal voice — leading 'إليك' (here is for you) dropped; reader-facing framing removed."
     opt1:
       en: "Set a deposit limit"
       ja: "入金上限を設定"
