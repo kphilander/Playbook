@@ -1368,10 +1368,11 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
 <div class="rg-progress-ring" id="progressRing" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" data-label="0% explored"></div>
 
 <!-- Widget bundle -->
-<!-- Widget bundle: use CDN for production, relative path for local dev.
-     Built bundle lives at widgets/dist/playbook-widgets.js — that's the right
-     path for both `npm run build:widgets` output and local static serves. -->
-<script src="../widgets/dist/playbook-widgets.js"></script>
+<!-- Path is relative to this file's location after sync-playbook.sh flattens
+     widgets/dist/ → widgets/ in public/tools/playbook/. The Playbook repo
+     ships symlinks at widgets/*.js → widgets/dist/*.js so local static serves
+     of this file work without needing to run the sync script first. -->
+<script src="../widgets/playbook-widgets.js"></script>
 
 <script>
 (function() {
