@@ -121,8 +121,8 @@ strings:
       en: "Free support 24/7: {{HELPLINE_NUMBER}}"
       ja: "24時間無料サポート：{{HELPLINE_NUMBER}}"
       zh-CN: "24小时免费支援：{{HELPLINE_NUMBER}}"
-      ar: "دعم مجاني على مدار الساعة: {{HELPLINE_NUMBER}}"
-      note: "ar: numbers remain LTR inline within RTL text (standard CSS). Use Arabic colon positioning."
+      ar: "دعم مجاني وسري على مدار الساعة: {{HELPLINE_NUMBER}}"
+      note: "ar: numbers remain LTR inline within RTL text (standard CSS). Use Arabic colon positioning. ar intentionally adds وسري (and confidential) even though the English source is just 'Free support' — the UAE private/confidential register expects the confidentiality promise in every helpline label, so the short/full forms converge in Arabic. This harmonizes all 16 Arabic templates to the same label."
     helpline_full:
       en: "Free, confidential support 24/7: {{HELPLINE_NUMBER}}"
       ja: "秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}"
@@ -410,12 +410,14 @@ strings:
       en: "$0"
       ja: "¥0"
       zh-CN: "MOP$0"
-      ar: "0 AED"
+      ar: "0 د.إ"
+      note: "ar: localized to UAE dirham form د.إ (with Arabic dots and kasra) instead of Latin 'AED'. The native Arabic abbreviation matches how currency is rendered in UAE-facing institutional materials."
     stat_unit:
       en: "earned<br>by \"almost\""
       ja: "「惜しい」で<br>得られるもの"
       zh-CN: "因「差一点」<br>获得的金额"
-      ar: "ما يُكسب<br>من «تقريبًا»"
+      ar: "المكتسب<br>من «تقريبًا»"
+      note: "ar: smoothed from the earlier ما يُكسب (what is earned) to المكتسب (the gained) — a more natural MSA nominal form that flows better in the tight stat-unit layout."
 
   card-13c-picked-right:
     eyebrow: { $ref: "common.section_myth_vs_math" }
@@ -429,8 +431,8 @@ strings:
       en: "All slots are random. <strong>Your pick doesn't change the odds.</strong>"
       ja: "すべてのスロットは無作為に決まります。<strong>台を選んでも確率は変わりません。</strong>"
       zh-CN: "所有老虎机均为随机。<strong>事实上,选择机器不会改变赔率。</strong>"
-      ar: "جميع آلات القمار عشوائية. <strong>اختيارك لا يغير الاحتمالات.</strong>"
-      note: "zh-CN: 事实上 (in fact) softens the correction per the diplomatic Macau profile."
+      ar: "جميع آلات القمار عشوائية. <strong>الاختيار لا يغير الاحتمالات.</strong>"
+      note: "zh-CN: 事实上 (in fact) softens the correction per the diplomatic Macau profile. ar: dropped the second-person possessive ك from اختيارك (your pick) → الاختيار (the pick/choosing) — aligns with the UAE communal-voice rule that forbids second-person pronouns in institutional RG copy."
     stat_number:
       en: "0%"
       ja: "0%"
@@ -469,8 +471,8 @@ strings:
       en: "Your shirt can't talk to the slot. <strong>Nothing you wear or do changes the odds.</strong>"
       ja: "服装がスロットに影響を与えることはありません。<strong>身につけるものや行動で確率は変わりません。</strong>"
       zh-CN: "衣物与老虎机之间并无联系。<strong>穿戴或行为均不会改变赔率。</strong>"
-      ar: "ملابسك لا تتواصل مع آلة القمار. <strong>لا شيء ترتديه أو تفعله يغير الاحتمالات.</strong>"
-      note: "ja: the English joke 'your shirt can't talk to the slot' is dropped — it reads as flippant in Japanese. Replaced with the neutral factual version."
+      ar: "الملابس لا تتواصل مع آلة القمار. <strong>لا ما يُرتدى ولا ما يُفعل يغير الاحتمالات.</strong>"
+      note: "ja: the English joke 'your shirt can't talk to the slot' is dropped — it reads as flippant in Japanese. Replaced with the neutral factual version. ar: (1) dropped second-person possessive ك from ملابسك (your clothes) → الملابس (the clothes) per UAE communal-voice rule. (2) smoothed the second sentence from the earlier passive sequence لا شيء يُرتدى أو يُفعل يغير الاحتمالات into the parallel structure لا ما يُرتدى ولا ما يُفعل — the repeated لا ما yields cleaner MSA parallelism."
 
   card-13f-earned-win:
     eyebrow: { $ref: "common.section_myth_vs_math" }
@@ -499,13 +501,13 @@ strings:
     headline_every_game:
       en: "Every game has math.<br>Here's yours."
       ja: "すべてのゲームには数学があります。<br>ここに示します。"
-      zh-CN: "每款游戏都有数学。<br>请看您的游戏。"
+      zh-CN: "每款游戏都有数学。<br>以下是各游戏的数据。"
       ar: "لكل لعبة حساباتها.<br>إليك حسابات لعبتك."
-      note: "ja: 'here's yours' → 'ここに示します' (we show it to you here) — elder/contextual. zh-CN: keeps 您 formal register and replaces 这里是 with 请看 (please see). ar: formal MSA parallelism."
+      note: "ja: 'here's yours' → 'ここに示します' (we show it to you here) — elder/contextual. zh-CN: Macau communal voice profile forbids second-person pronouns (including formal 您). Reworked to institutional framing: '每款游戏都有数学。以下是各游戏的数据。' (Every game has math. Below are the data for each game.) — no second-person reference, communal/informational register. ar: formal MSA parallelism."
     headline_every_game_flat:
       en: "Every game has math. Here's yours."
       ja: "すべてのゲームには数学があります。ここに示します。"
-      zh-CN: "每款游戏都有数学。请看您的游戏。"
+      zh-CN: "每款游戏都有数学。以下是各游戏的数据。"
       ar: "لكل لعبة حساباتها. إليك حسابات لعبتك."
 
   card-14a-every-game-blackjack:
@@ -569,7 +571,8 @@ strings:
       en: "Look up your game's cut at {{PROGRAM_URL}}"
       ja: "{{PROGRAM_URL}} でご自身のゲームの取り分をご確認ください"
       zh-CN: "访问 {{PROGRAM_URL}} 查询游戏的抽成"
-      ar: "تحقق من نسبة لعبتك على {{PROGRAM_URL}}"
+      ar: "للاطلاع على نسبة اللعبة، يُرجى زيارة {{PROGRAM_URL}}"
+      note: "ar: converted from 2nd-person imperative تحقق من نسبة لعبتك (check your game's cut) to impersonal للاطلاع على نسبة اللعبة، يُرجى زيارة (to view the game's cut, please visit). The UAE communal-voice rule forbids second-person possessive (لعبتك → اللعبة) and direct imperatives; the impersonal modal يُرجى replaces تحقق."
 
   email-14d-every-game:
     subject: { $ref: "common_14.headline_every_game_flat" }
@@ -628,7 +631,8 @@ strings:
       en: "See every game's math at {{PROGRAM_URL}}"
       ja: "{{PROGRAM_URL}} ですべてのゲームの数学をご覧ください"
       zh-CN: "访问 {{PROGRAM_URL}} 查看所有游戏的数据"
-      ar: "اطلع على حسابات كل لعبة على {{PROGRAM_URL}}"
+      ar: "للاطلاع على حسابات كل لعبة، يُرجى زيارة {{PROGRAM_URL}}"
+      note: "ar: converted from 2nd-person imperative اطلع على (look/see) to impersonal للاطلاع على...، يُرجى زيارة. The UAE communal-voice rule forbids direct imperatives in institutional RG copy; the impersonal modal يُرجى is the standard respectful register."
     footer_support_line: { $ref: "common.helpline_available_any_gambling" }
     manage_preferences: { $ref: "common.cta_manage_preferences" }
 
@@ -667,13 +671,15 @@ strings:
       en: "Tap a game to see the full math."
       ja: "ゲームをタップすると詳細が表示されます。"
       zh-CN: "点击游戏查看完整数据。"
-      ar: "انقر على لعبة لعرض الحسابات الكاملة."
+      ar: "يُمكن النقر على لعبة لعرض الحسابات الكاملة."
+      note: "ar: converted from 2nd-person imperative انقر (tap) to impersonal modal يُمكن النقر (one can tap / it is possible to tap) — softer, aligned with the UAE communal-voice rule that avoids direct imperatives in institutional RG copy."
     # Game rows same as email-14d rows above; build uses those refs.
     cta:
       en: "See all games at {{PROGRAM_URL}}"
       ja: "すべてのゲームは {{PROGRAM_URL}} でご覧いただけます"
       zh-CN: "访问 {{PROGRAM_URL}} 查看所有游戏"
-      ar: "اطلع على جميع الألعاب على {{PROGRAM_URL}}"
+      ar: "للاطلاع على جميع الألعاب، يُرجى زيارة {{PROGRAM_URL}}"
+      note: "ar: converted from 2nd-person imperative اطلع على (look/see) to impersonal للاطلاع على...، يُرجى زيارة. UAE communal-voice rule: no direct imperatives in institutional RG copy."
 
   # ──────────────────────────────────────────────────────────────────────
   # PHASE A — Sports-math quartet (15a..15d)
@@ -694,15 +700,16 @@ strings:
       ar: "فارق النقاط ليس تخمينًا للفائز. إنه الطريقة التي تستخدمها شركة الرهان لجذب الرهانات على الفريقين."
     hero_big:
       en: "$1.10"
-      ja: "110円"
-      zh-CN: "MOP$1.10"
-      ar: "1.10 AED"
-      note: "Currency localizes per jurisdiction. The ratio 1.10:1 is what matters."
+      ja: "11,000円"
+      zh-CN: "澳门币 11"
+      ar: "11 د.إ"
+      note: "Currency localizes per jurisdiction. The ratio 1.10:1 is what matters — it is the canonical -110 sportsbook juice (bet 11 to win 10, total 22, winner gets back 21, sportsbook keeps 1; hold = 1/22 ≈ 4.55%). ja: scaled ×10000 from the $1.10 base — 1円 is functionally worthless in Japan (~$0.007 USD) and no Japanese bettor would reference a 1-yen wager; 10,000–22,000円 (~$70–150 USD) matches realistic typical wager sizes for Japanese sports betting (toto, Pari-mutuel). zh-CN: Macau uses whole-pataca units (澳门币 11 / 澳门币 10) instead of fractional MOP$1.10 — a 10-MOP minimum-unit bet is the realistic local framing and it preserves the canonical 11:10 (-110) ratio without introducing fractional patacas. ar: whole-dirham units 11 د.إ / 10 د.إ instead of fractional 1.10 AED — realistic UAE framing using the native د.إ abbreviation, and preserves the canonical 11:10 (-110) ratio without fractional dirhams. Arithmetic and 1.10:1 ratio preserved across all locales."
     hero_label:
       en: "to win $1, either side"
-      ja: "どちらに賭けても1円獲得するのに"
-      zh-CN: "投注任一方赢取 MOP$1 所需"
-      ar: "للربح بقيمة 1 AED من أي جهة"
+      ja: "どちらに賭けても10,000円を得るために"
+      zh-CN: "投注任一方赢取 澳门币 10 所需"
+      ar: "للربح بقيمة 10 د.إ من أي جهة"
+      note: "ja: ending 〜ために is a complete purpose-clause (the prior 〜のに left a dangling grammar fragment unsuitable as a standalone label). zh-CN: paired with hero_big 澳门币 11 — bet 11 to win 10. ar: paired with hero_big 11 د.إ — bet 11 dirhams to win 10 dirhams, preserving the canonical 11:10 ratio with native currency formatting."
 
   story-15b-bet-costs:
     eyebrow: { $ref: "common.section_sports_math" }
@@ -716,7 +723,8 @@ strings:
       en: "Moneyline"
       ja: "マネーライン"
       zh-CN: "独赢盘"
-      ar: "منى لاين"
+      ar: "موني لاين"
+      note: "ar: CRITICAL typo fix. The earlier transliteration منى لاين reads as 'Mina line' (Mina is a place name / girl's name, not 'money'). موني لاين is the correct phonetic transliteration of 'moneyline'."
     bar_moneyline_value:
       en: "3%"
       ja: "3%"
@@ -746,8 +754,8 @@ strings:
       en: "Simple bets have a smaller cut. Fun bets have a bigger one."
       ja: "シンプルな賭けは取り分が少なく、複雑な賭けは取り分が大きくなります。"
       zh-CN: "简单投注抽成较低,复杂投注抽成较高。"
-      ar: "الرهانات البسيطة تكلفتها أقل. الرهانات الممتعة تكلفتها أكبر."
-      note: "en 'fun bets' → neutralized to 'complex/exciting bets' — 'fun' reads flippant in zh-CN/ar RG registers."
+      ar: "الرهانات البسيطة تكلفتها أقل. الرهانات المعقدة تكلفتها أكبر."
+      note: "en 'fun bets' → neutralized to 'complex/exciting bets' — 'fun' reads flippant in zh-CN/ar RG registers. ar: specifically المعقدة (complex) rather than ممتعة (enjoyable/fun) — the UAE register cannot frame high-juice parlays as 'fun' without undermining the RG message."
 
   poster-15c-how-sportsbook-wins:
     eyebrow: { $ref: "common.section_sports_math" }
@@ -784,24 +792,25 @@ strings:
       ar: "تحتفظ شركة الرهان بـ:"
     val_110:
       en: "$1.10"
-      ja: "110円"
-      zh-CN: "MOP$1.10"
-      ar: "1.10 AED"
+      ja: "11,000円"
+      zh-CN: "澳门币 11"
+      ar: "11 د.إ"
+      note: "Canonical -110 sportsbook juice: bet 11 to win 10, total 22 collected, winner gets 21 back, sportsbook keeps 1 (hold = 1/22 ≈ 4.55%). ja: scaled ×10000 from USD base — 1円 is functionally worthless in Japan (~$0.007 USD); 11,000–22,000円 (~$70–150 USD) matches realistic typical wager sizes for Japanese sports betting (toto, Pari-mutuel). zh-CN: Macau uses whole-pataca units (澳门币 11 / 22 / 21 / 1) instead of fractional MOP$1.10 — a 10-MOP minimum-unit bet is the realistic local framing and preserves the canonical 11:10 (-110) ratio without fractional patacas. ar: whole-dirham units (11 / 22 / 21 / 1 د.إ) using the native د.إ abbreviation instead of fractional Latin 'AED' — realistic UAE framing, preserves the canonical 11:10 (-110) ratio without fractional dirhams. All five values across locales scale together so 11+11=22, 22−21=1 arithmetic and the proportional vig (≈4.55%) are preserved."
     val_220:
       en: "$2.20"
-      ja: "220円"
-      zh-CN: "MOP$2.20"
-      ar: "2.20 AED"
+      ja: "22,000円"
+      zh-CN: "澳门币 22"
+      ar: "22 د.إ"
     val_210:
       en: "$2.10"
-      ja: "210円"
-      zh-CN: "MOP$2.10"
-      ar: "2.10 AED"
+      ja: "21,000円"
+      zh-CN: "澳门币 21"
+      ar: "21 د.إ"
     val_010:
       en: "$0.10"
-      ja: "10円"
-      zh-CN: "MOP$0.10"
-      ar: "0.10 AED"
+      ja: "1,000円"
+      zh-CN: "澳门币 1"
+      ar: "1 د.إ"
     insight:
       en: "They don't need to pick winners. They just need bets on both sides.</br>"
       ja: "勝者を当てる必要はありません。両方に賭けが入ればよいのです。"
@@ -811,7 +820,8 @@ strings:
       en: "See the math at {{PROGRAM_URL}}"
       ja: "{{PROGRAM_URL}} で計算を確認"
       zh-CN: "访问 {{PROGRAM_URL}} 查看数据"
-      ar: "اطلع على الحسابات على {{PROGRAM_URL}}"
+      ar: "للاطلاع على الحسابات، يُرجى زيارة {{PROGRAM_URL}}"
+      note: "ar: converted from 2nd-person masculine imperative اطلع (look/see) to an impersonal construction للاطلاع على...، يُرجى زيارة (to view..., please visit). The UAE communal-voice rule forbids direct imperatives to the reader in institutional RG copy; the impersonal modal يُرجى is the standard respectful register."
 
   live-odds-overlay-15d:
     title:
