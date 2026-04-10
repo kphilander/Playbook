@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="diagramTitle diagramDesc" font-family="Inter, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <title id="diagramTitle">Where Playbook fits in the gambling system</title>
+  <desc id="diagramDesc">A matrix diagram showing six stakeholders in the gambling system — Operators, Players, Regulators, Support Services, Researchers, and Advocacy — across three response layers: Early Prevention, Operations, and Treatment and Recovery. Playbook Tier 1 is highlighted as a teal communication layer sitting in the Operations row, bridging the Operators and Players columns. Playbook Tier 2 is shown as teal-bordered circles in the Operators and Players cells of the Treatment and Recovery row, marking the support-voice connection to recovery. Filled navy circles indicate a stakeholder's primary role; hollow circles indicate active but secondary involvement.</desc>
+
+  <defs>
+    <filter id="lozengeShadow" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+      <feOffset dx="0" dy="4" result="offsetBlur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.18"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="820" fill="#FFFFFF"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- TITLE BLOCK                                 -->
+  <!-- ─────────────────────────────────────────── -->
+  <text x="40" y="70" font-size="32" font-weight="800" fill="#0F1923" letter-spacing="-0.01em">Where Playbook fits in the gambling system</text>
+  <text x="40" y="100" font-size="16" font-weight="400" fill="#6B6B8A">An entertainment literacy layer between operators and players</text>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- LEGEND (top-right)                          -->
+  <!-- ─────────────────────────────────────────── -->
+  <g font-size="16" font-weight="500" fill="#3D3D5C">
+    <!-- Primary role -->
+    <circle cx="880" cy="50" r="20" fill="#1B2838"/>
+    <text x="912" y="56">Primary role</text>
+
+    <!-- Active role -->
+    <circle cx="880" cy="105" r="20" fill="#FFFFFF" stroke="#6B6B8A" stroke-width="2.5"/>
+    <text x="912" y="111">Active role</text>
+
+    <!-- Playbook Tier 2 -->
+    <circle cx="880" cy="160" r="20" fill="#FFFFFF" stroke="#00D4AA" stroke-width="4"/>
+    <text x="912" y="166">Playbook Tier 2</text>
+  </g>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- AXIS LABELS                                 -->
+  <!-- ─────────────────────────────────────────── -->
+  <text x="700" y="212" font-size="12" font-weight="700" fill="#6B6B8A" letter-spacing="0.2em" text-anchor="middle">STAKEHOLDERS</text>
+  <text transform="translate(32, 525) rotate(-90)" font-size="12" font-weight="700" fill="#6B6B8A" letter-spacing="0.2em" text-anchor="middle">RESPONSE LAYERS</text>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- MATRIX GRID — row backgrounds               -->
+  <!-- ─────────────────────────────────────────── -->
+  <rect x="220" y="280" width="960" height="150" fill="#F5F5FA"/>
+  <rect x="220" y="450" width="960" height="150" fill="#FFFFFF"/>
+  <rect x="220" y="620" width="960" height="150" fill="#F5F5FA"/>
+
+  <!-- Row dividers (horizontal) -->
+  <line x1="220" y1="280" x2="1180" y2="280" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="220" y1="430" x2="1180" y2="430" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="220" y1="450" x2="1180" y2="450" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="220" y1="600" x2="1180" y2="600" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="220" y1="620" x2="1180" y2="620" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="220" y1="770" x2="1180" y2="770" stroke="#E8E8F0" stroke-width="1"/>
+
+  <!-- Column dividers (vertical, from just above headers into the grid) -->
+  <line x1="380" y1="225" x2="380" y2="770" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="540" y1="225" x2="540" y2="770" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="700" y1="225" x2="700" y2="770" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="860" y1="225" x2="860" y2="770" stroke="#E8E8F0" stroke-width="1"/>
+  <line x1="1020" y1="225" x2="1020" y2="770" stroke="#E8E8F0" stroke-width="1"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- STAKEHOLDER COLUMN HEADERS                  -->
+  <!-- ─────────────────────────────────────────── -->
+  <g font-size="13" font-weight="700" fill="#1B2838" letter-spacing="0.06em" text-anchor="middle">
+    <text x="300" y="255">OPERATORS</text>
+    <text x="460" y="255">PLAYERS</text>
+    <text x="620" y="255">REGULATORS</text>
+    <text x="780" y="245">SUPPORT</text>
+    <text x="780" y="265">SERVICES</text>
+    <text x="940" y="255">RESEARCHERS</text>
+    <text x="1100" y="255">ADVOCACY</text>
+  </g>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- RESPONSE LAYER ROW LABELS                   -->
+  <!-- ─────────────────────────────────────────── -->
+  <g font-size="14" font-weight="700" fill="#1B2838" letter-spacing="0.08em" text-anchor="end">
+    <!-- Early Prevention (row center y=355) -->
+    <text x="190" y="350">EARLY</text>
+    <text x="190" y="370">PREVENTION</text>
+    <!-- Operations (row center y=525) -->
+    <text x="190" y="530">OPERATIONS</text>
+    <!-- Treatment & Recovery (row center y=695) -->
+    <text x="190" y="690">TREATMENT &amp;</text>
+    <text x="190" y="710">RECOVERY</text>
+  </g>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- ACTIVITY MATRIX MARKERS                     -->
+  <!-- Filled circle = primary role                -->
+  <!-- Hollow circle = active but secondary        -->
+  <!-- Teal-bordered circle = Playbook Tier 2      -->
+  <!-- ─────────────────────────────────────────── -->
+
+  <!-- Prevention row (y=355) -->
+  <circle cx="300" cy="355" r="20" fill="#FFFFFF" stroke="#6B6B8A" stroke-width="2.5"/>
+  <circle cx="460" cy="355" r="20" fill="#FFFFFF" stroke="#6B6B8A" stroke-width="2.5"/>
+  <circle cx="620" cy="355" r="20" fill="#1B2838"/>
+  <circle cx="780" cy="355" r="20" fill="#FFFFFF" stroke="#6B6B8A" stroke-width="2.5"/>
+  <circle cx="940" cy="355" r="20" fill="#1B2838"/>
+  <circle cx="1100" cy="355" r="20" fill="#1B2838"/>
+
+  <!-- Operations row (y=525) — Operators & Players cells covered by lozenge -->
+  <circle cx="620" cy="525" r="20" fill="#1B2838"/>
+  <circle cx="780" cy="525" r="20" fill="#FFFFFF" stroke="#6B6B8A" stroke-width="2.5"/>
+  <circle cx="940" cy="525" r="20" fill="#1B2838"/>
+  <circle cx="1100" cy="525" r="20" fill="#FFFFFF" stroke="#6B6B8A" stroke-width="2.5"/>
+
+  <!-- Treatment row (y=695) -->
+  <circle cx="300" cy="695" r="20" fill="#FFFFFF" stroke="#00D4AA" stroke-width="4"/>
+  <circle cx="460" cy="695" r="20" fill="#FFFFFF" stroke="#00D4AA" stroke-width="4"/>
+  <circle cx="620" cy="695" r="20" fill="#FFFFFF" stroke="#6B6B8A" stroke-width="2.5"/>
+  <circle cx="780" cy="695" r="20" fill="#1B2838"/>
+  <circle cx="940" cy="695" r="20" fill="#1B2838"/>
+  <circle cx="1100" cy="695" r="20" fill="#1B2838"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- PLAYBOOK TIER 1 LOZENGE — the hero element  -->
+  <!-- Sits in the operations row spanning         -->
+  <!-- Operators (x=300) ↔ Players (x=460)         -->
+  <!-- ─────────────────────────────────────────── -->
+  <g filter="url(#lozengeShadow)">
+    <rect x="240" y="485" width="280" height="80" rx="40" fill="#00D4AA"/>
+  </g>
+  <text x="380" y="522" font-size="22" font-weight="800" fill="#0F1923" text-anchor="middle">Playbook Tier 1</text>
+  <text x="380" y="545" font-size="11" font-weight="700" fill="#0F1923" fill-opacity="0.72" letter-spacing="0.14em" text-anchor="middle">COMMUNICATION LAYER</text>
+</svg>

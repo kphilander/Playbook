@@ -324,6 +324,20 @@ like a revenue source and nothing more.
 
 ### Where Playbook Sits
 
+<picture>
+  <source srcset="../visual-identity/diagrams/diagram-system-positioning-on-dark.svg" media="(prefers-color-scheme: dark)">
+  <img src="../visual-identity/diagrams/diagram-system-positioning-on-light.svg" alt="Where Playbook fits in the gambling system: a matrix of stakeholders (Operators, Players, Regulators, Support Services, Researchers, Advocacy) across three layers (Early Prevention, Operations, Treatment & Recovery), with Playbook highlighted as the communication layer between Operators and Players in the Operations row.">
+</picture>
+
+Gambling harm is a shared problem with many actors. Playbook lives in the
+**operations layer** -- the day-to-day experience of play -- where **Tier 1**
+(entertainment literacy, the "Playbook voice") acts as the **communication
+layer between operators and players**. **Tier 2** (support and crisis, the
+"support voice") extends that same operator-to-player channel into **treatment
+and recovery**, connecting players to help if they ever need it. Playbook is
+one piece of a larger system that also includes regulators, support services,
+researchers, and advocacy groups.
+
 ```
 Entertainment brand          Playbook                    Support services
 (casino, sportsbook)        (entertainment literacy)    (helplines, counseling)
