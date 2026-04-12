@@ -82,6 +82,7 @@ color:
     neutral_700: "#3D3D5C"
     neutral_500: "#6B6B8A"
     neutral_300: "#A8A8C0"
+    neutral_200: "#C8C8D8"
     neutral_100: "#E8E8F0"
     neutral_50: "#F5F5FA"
 
@@ -110,6 +111,7 @@ color:
     n700: "neutral_700"
     n500: "neutral_500"
     n300: "neutral_300"
+    n200: "neutral_200"
     n100: "neutral_100"
     n50: "neutral_50"
 
@@ -239,6 +241,12 @@ helplines:
     website: "www.begambleaware.org"
     label: "GambleAware"
     self_exclusion: "www.gamstop.co.uk"
+
+  # ── Forward-looking placeholders ──────────────────────────────
+  # The following helpline entries are for jurisdictions without
+  # a full module in jurisdictions/. They are kept here so that
+  # brand-config.mjs can resolve helpline data for any jurisdiction
+  # passed to brandTokens(), even before a full module is created.
 
   australia:
     number: "1800 858 858"

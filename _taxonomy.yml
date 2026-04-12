@@ -75,6 +75,7 @@ audience:
   - general
   - young-adults
   - sports-bettors
+  - traditional-players
   - at-risk
   - help-seekers
   - friends-and-family
@@ -157,6 +158,9 @@ presentation:
     - brl
     - jpy
     - inr
+    - sgd              # Singapore dollar
+    - mop              # Macau pataca
+    - dkk              # Danish krone
     - generic          # Uses "units" or no currency symbol
 
   sports_culture:

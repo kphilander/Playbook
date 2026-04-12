@@ -40,7 +40,7 @@ last_updated: "2026-03-22"
 > *(Singapore prohibits online gambling under the Gambling Control Act 2022. This module covers land-based casino operations at Marina Bay Sands and Resorts World Sentosa only.)*
 
 > **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../brand-book/08-governance.md))*
+> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -147,7 +147,7 @@ Not applicable -- online gambling is prohibited in Singapore.
 **On-brand compliance** (the Playbook way):
 > Need to talk? The NCPG helpline is free, confidential, and available daily 8am-11pm: **1800-6-668-668**. Chat online at ncpg.org.sg. No judgement, just support.
 
-*Pattern from: [Messaging Framework -- Warning Statement Standards](../brand-book/05-messaging-framework.md#warning-statement-standards)*
+*Pattern from: [Messaging Framework -- Warning Statement Standards](../../brand-book/05-messaging-framework.md#warning-statement-standards)*
 
 ---
 
@@ -198,7 +198,7 @@ Singapore uses obligation-based requirements, so operators have flexibility to u
 4. Follow with a helpful action whenever possible
 5. All messaging subject to GRA approval as part of the responsible gambling programme
 
-*Pattern from: [Messaging Framework -- Warning Statement Standards](../brand-book/05-messaging-framework.md#warning-statement-standards)*
+*Pattern from: [Messaging Framework -- Warning Statement Standards](../../brand-book/05-messaging-framework.md#warning-statement-standards)*
 
 ---
 
@@ -294,7 +294,7 @@ This is automatic -- no application or revocation is required. The exclusion is 
 
 ### Staff FAQ addition
 
-Add this Q&A to the [Staff FAQ](../collateral/customer-service/staff-faq.md):
+Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 > **Q: What exclusion options are available in Singapore?**
 >
@@ -536,4 +536,4 @@ Complete before launching Playbook in Singapore.
 
 ---
 
-*Cross-references: [`_brand.yml`](../_brand.yml) | [Messaging Framework -- Warning Statement Standards](../brand-book/05-messaging-framework.md#warning-statement-standards) | [Staff FAQ](../collateral/customer-service/staff-faq.md) | [Governance](../brand-book/08-governance.md) | [Jurisdictions README](../README.md)*
+*Cross-references: [`_brand.yml`](../../_brand.yml) | [Messaging Framework -- Warning Statement Standards](../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Staff FAQ](../../collateral/customer-service/staff-faq.md) | [Governance](../../brand-book/08-governance.md) | [Jurisdictions README](../README.md)*

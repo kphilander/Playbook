@@ -328,37 +328,43 @@ async function render() {
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
-  for (const card of toRender) {
-    const page = await browser.newPage();
-    await page.setViewport({ width: card.w, height: card.h });
+  try {
+    for (const card of toRender) {
+      const page = await browser.newPage();
+      try {
+        await page.setViewport({ width: card.w, height: card.h });
 
-    // Read HTML and resolve {{PLACEHOLDER}} brand tokens from _brand.yml
-    const filePath = join(__dirname, card.html);
-    const rawHtml = readFileSync(filePath, 'utf-8');
-    const resolvedHtml = resolveBrandTokens(rawHtml);
+        // Read HTML and resolve {{PLACEHOLDER}} brand tokens from _brand.yml
+        const filePath = join(__dirname, card.html);
+        const rawHtml = readFileSync(filePath, 'utf-8');
+        const resolvedHtml = resolveBrandTokens(rawHtml);
 
-    // Use file:// base URL so relative CSS links (brand-inject.css) still resolve
-    await page.goto(`file://${__dirname}/`, { waitUntil: 'domcontentloaded' });
-    await page.setContent(resolvedHtml, { waitUntil: 'networkidle0' });
+        // Use file:// base URL so relative CSS links (brand-inject.css) still resolve
+        await page.goto(`file://${__dirname}/`, { waitUntil: 'domcontentloaded' });
+        await page.setContent(resolvedHtml, { waitUntil: 'networkidle0' });
 
-    // Wait for Google Fonts to load
-    await page.evaluateHandle('document.fonts.ready');
+        // Wait for Google Fonts to load
+        await page.evaluateHandle('document.fonts.ready');
 
-    const element = await page.$(card.selector);
-    if (element) {
-      await element.screenshot({
-        path: join(__dirname, card.output),
-        type: 'png',
-      });
-      console.log(`Rendered: ${card.output}`);
-    } else {
-      console.warn(`⚠ Selector "${card.selector}" not found in ${card.html}`);
+        const element = await page.$(card.selector);
+        if (element) {
+          await element.screenshot({
+            path: join(__dirname, card.output),
+            type: 'png',
+          });
+          console.log(`Rendered: ${card.output}`);
+        } else {
+          console.warn(`⚠ Selector "${card.selector}" not found in ${card.html}`);
+        }
+      } catch (e) {
+        console.error(`✗ Failed to render ${card.html}: ${e.message}`);
+      } finally {
+        await page.close();
+      }
     }
-
-    await page.close();
+  } finally {
+    await browser.close();
   }
-
-  await browser.close();
   console.log('Done.');
 }
 
