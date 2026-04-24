@@ -1,0 +1,28 @@
+# Sample _brand.yml — UAE operator preview
+# ==========================================
+# Drop into the "Upload _brand.yml" zone. The page will:
+#   • Set <html lang="ar" dir="rtl">
+#   • Load Noto Sans Arabic
+#   • Mirror the nav, progress bar, and tool cards (RTL)
+#   • Swap copy, glossary, and quizzes to Arabic
+#     (UAE profile: authority / communal / understated / contextual / private)
+#   • Fetch api/myths.ar.json for the quiz content
+
+meta:
+  program_name: "لعب آمن"
+  organization: "الإمارات للألعاب"
+  website: "https://emirates-gaming.example"
+  contact_email: "support@emirates-gaming.example"
+  primary_jurisdictions:
+    - united-arab-emirates
+
+legal:
+  minimum_gambling_age:
+    united-arab-emirates: 21
+
+cultural_profile:
+  voice: "authority"
+  framing: "communal"
+  humor: "understated"
+  directness: "contextual"
+  comfort: "private"

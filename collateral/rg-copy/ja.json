@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "language": "ja",
+    "dir": "ltr",
+    "html_lang": "ja",
+    "font_family_heading": "'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Inter', 'Noto Sans JP', system-ui, sans-serif",
+    "font_preload_google": "Noto+Sans+JP:wght@300;400;500;600;700;800;900",
+    "cultural_profile": "elder/communal/understated/contextual/reserved (Japan)",
+    "currency_note": "JPY integer, ¥ before numeral; round dollar examples to the nearest yen (e.g., $1.10 → ¥110)"
+  },
+  "strings": {
+    "meta.title": "{{PROGRAM_NAME}} — 自分のペースで",
+    "meta.description": "確率を知り、自分なりの目安を定め、納得して楽しむ。{{ORGANIZATION}}による、自分のペースで向き合うためのご案内。",
+    "helpline.strip.label": "24時間・無料・秘匿のご相談窓口",
+    "helpline.strip.live_chat": "ライブチャット",
+    "nav.odds": "本当の確率",
+    "nav.myths": "思い込みと数学",
+    "nav.tools": "便利な機能",
+    "nav.break": "少し休む",
+    "nav.support": "相談する",
+    "hero.quick_question": "ちょっとした質問です…",
+    "hero.sub_default": "普段楽しんでいるゲームについて、どのくらい知っているか試してみませんか。",
+    "hero.fallback.title_html": "自分のペースで、<span>楽しむ。</span>",
+    "hero.fallback.sub": "ゲームにはそれぞれ仕組みがあり、選択はご自身の手の中にあります。確率を知り、便利な機能を活用し、自分に合った向き合い方を見つける──その手助けとなるページです。",
+    "hero.fallback.cta_see_odds": "確率を見る",
+    "hero.fallback.cta_set_limits": "目安を決める",
+    "odds.label": "確率と透明性",
+    "odds.title": "遊ぶゲームを選び、数字で確かめる。",
+    "odds.blurb": "それぞれのゲームには数学的な還元率が設定されています。普段お楽しみのゲームを選ぶと、仕組みの違いが見えてきます。",
+    "odds.empty": "上のゲームを選んでください。",
+    "myths.label": "思い込みと数学",
+    "myths.title": "ゲームを知っているつもりでも。",
+    "myths.blurb": "「連勝している」「縁起のいい席」「タイミングよく回す」──よく聞く話です。それぞれを数学の視点で確かめてみましょう。",
+    "tools.label": "便利な機能",
+    "tools.title": "ご自身の使い方に合わせて。",
+    "tools.blurb": "制限するものではなく、はじめる前に静かに設定しておく、そんな道具です。",
+    "tools.budget_lock.name": "予算の固定",
+    "tools.budget_lock.hook": "はじめる前に、楽しむための目安を。",
+    "tools.budget_lock.detail_html": "日・週・月の単位で、使える範囲をあらかじめ定めておきます。設定すれば、そのまま有効になります。下げたいときはすぐに反映されます。上げたいときは、落ち着いて判断できるよう、少しだけ時間をおいてからとなります。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.session_timer.name": "時間の目安",
+    "tools.session_timer.hook": "決めた時間になったら、そっとお知らせします。",
+    "tools.session_timer.detail_html": "ご自身に合ったプレイ時間をあらかじめ決めておきます。時間が来ると、そっとお声がけします──中断するのではなく、続けるかどうかを考える一瞬を持つためです。時計を気にしなくても、自分のペースが保てます。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.play_dashboard.name": "プレイ状況",
+    "tools.play_dashboard.hook": "ご自身のプレイが一目で分かる。",
+    "tools.play_dashboard.detail_html": "入金・出金、プレイ時間、現在の収支を一つの画面にまとめています。ご自身の記録を、そのままご覧になれます。行動の判断材料として、あるいは、ただ知っておく安心として。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">ダッシュボードを見る →</a>",
+    "tools.safety_net.name": "安全装置",
+    "tools.safety_net.hook": "ここまで、と決めておけば、自動で一時停止。",
+    "tools.safety_net.detail_html": "一回のプレイ、一日、一週間など、お好みの単位で上限を定められます。そこに達すると、自動的に一時停止となります。決めるのはご自身。判断の主導権は、あなたの手の中にあります。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.reality_check.name": "振り返りの目印",
+    "tools.reality_check.hook": "プレイ中に、時間と収支を静かにお知らせ。",
+    "tools.reality_check.detail_html": "プレイ中、一定の間隔で、経過時間と現在の収支を小さく表示します。控えめで、閉じやすい仕様です。割り込むのではなく、情報としてそっと。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.budget_planner.name": "予算の計画",
+    "tools.budget_planner.hook": "数字で整理してから、楽しむ。",
+    "tools.budget_planner.detail_html": "暮らしの中で、楽しみに回せる金額を落ち着いて考える場です。外食やサブスクリプションと同じように、はじめる前に目安を決めておく──それだけのことですが、後から見直すより随分安心です。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">予算を立てる →</a>",
+    "tools.cta_set_limits": "目安を決める →",
+    "break.label": "ご自身の判断で",
+    "break.title": "少し離れたいとき、ひとつの操作で。",
+    "break.blurb": "少し休みたい──理由も期間も、ご自身の判断で構いません。書類も、質問もありません。",
+    "break.card_timeframe.title": "期間はご自身で",
+    "break.card_timeframe.desc": "数か月から長期まで、選択肢はさまざまです。今のお気持ちに合うものを。後日、改めて見直すこともできます。",
+    "break.card_pause.title": "すべてが一時停止",
+    "break.card_pause.desc": "アカウントは一時停止となり、お知らせも止まります。入金も、プレイもありません。落ち着いた距離が保てます。",
+    "break.card_support.title": "一人ではありません",
+    "break.card_support.desc": "休んでいる間も、ご相談の窓口はご利用いただけます。電話、チャット、カウンセリング──離れていても、そばにあります。",
+    "break.cta_take_break": "少し休む →",
+    "support.label": "サポート",
+    "support.title": "必要なときに、そばに。",
+    "support.blurb": "無料、秘匿、24時間。理由はいりません。深刻な状態でなくとも構いません。",
+    "support.normalizer": "毎日、多くの方がご連絡くださっています。ごく自然なことです。",
+    "support.additional_resources": "その他のご案内",
+    "support.org.desc": "ご本人とご家族の両方に向けた、専門的な支援と情報を提供しています。",
+    "support.ga.title": "Gamblers Anonymous",
+    "support.ga.desc": "仲間同士の集まり──オンラインと対面の両方で開かれています。",
+    "support.gamtalk.title": "GamTalk",
+    "support.gamtalk.desc": "匿名でご利用いただける、オンラインの相談フォーラム。評価や判断のない場です。",
+    "footer.call": "電話",
+    "footer.chat": "チャット",
+    "footer.legal_html": "{{MIN_AGE}}歳以上。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n提供：<a href=\"https://github.com/kphilander/Playbook\">Playbook</a>（CC0）",
+    "progress.zero": "0%を閲覧",
+    "progress.getting_started": "読みはじめ — {pct}%",
+    "progress.making_progress": "進んでいます — {pct}%",
+    "progress.almost_there": "もうすぐ — {pct}%",
+    "progress.all_explored": "すべて閲覧済み",
+    "hero.feedback_prefix_html": "<strong>答えは、</strong>",
+    "hero.cta_keep_going": "続けて、全問に挑戦 →",
+    "myths.aria_question_pattern": "質問 {n} / {total}",
+    "myths.next_question": "次の質問 →",
+    "myths.see_your_score": "結果を見る →",
+    "myths.correct_label": "正解",
+    "myths.perfect_score": "満点です。お見事でした。もっとも、数字を知ったからといって確率が変わるわけではありません ── ただ、ご自身の目で見て判断できるようになる、という意味合いなのです。",
+    "myths.good_effort": "すべて正解できたかどうかにかかわらず、今は数字を把握されています。当て推量より、ずっと落ち着いた立ち位置になるはずです。",
+    "myths.explore_tools": "便利な機能を見る →",
+    "odds.insight_pattern_html": "<strong>差は、どれくらいでしょうか。</strong> 10ドルずつ、100回賭けたとすると、「{best_game}」では約<strong>{best_loss}ドル</strong>、「{worst_game}」では約<strong>{worst_loss}ドル</strong>の損失が見込まれます。同じ予算でも、数字はまるで違うのです。",
+    "odds.how_to_play_pattern": "{game}の遊び方 →"
+  },
+  "glossary": {
+    "house edge": "カジノ側の数学的な有利さを百分率で表したもの。例えば「ハウスエッジ5%」とは、長期的に見て、賭け金100円のうち5円がカジノに残ると期待される、という意味です。",
+    "rtp": "Return to Player（還元率）── 長期的にプレイヤー側へ戻ってくる割合。RTP 96%は、100円の賭けに対して平均で96円が戻ると期待できる水準です。",
+    "rng": "Random Number Generator（乱数生成器）── すべての回転、カード、抽選が互いに独立した結果となることを担うソフトウェアです。",
+    "bankroll": "楽しむためにあらかじめ取り分けておくお金──娯楽の予算のようなものと考えて差し支えありません。",
+    "volatility": "短期的な結果の振れ幅。ボラティリティが高いほど、当たり外れの差が大きく、当たりの回数は少なめになります。",
+    "expected value": "同じ賭けを何度も繰り返したときの、数学的な平均結果。値がマイナスなら、カジノ側に有利な賭けです。",
+    "paytable": "スロットやビデオポーカーの配当表──どの組み合わせでいくら払われるかを示した一覧です。",
+    "wagering requirement": "ボーナスを現金として引き出すまでに、何倍の賭けを行う必要があるかを定めた条件です。",
+    "deposit limit": "一定期間内に入金できる上限額。ご自身で決められます。",
+    "parlay": "複数の予想を組み合わせた一つの賭け。すべて的中した場合のみ配当が発生します。",
+    "tilt": "いらだちや動揺で判断が崩れている状態──感情が数字に勝ってしまっているときのことです。",
+    "cool-off period": "短期間の自主的な休止。おおむね24時間から30日ほどの範囲で設定されます。",
+    "ggr": "Gross Gaming Revenue（粗ゲーミング収益）── 総賭け金から払い戻しを差し引いた、事業者側の総収入です。",
+    "ev": "Expected Value（期待値）── 繰り返しプレイしたときに、一回あたり平均で得る・失う額のことです。",
+    "self-exclusion": "ご自身の判断で、一定期間サービスのご利用を止める仕組みです。",
+    "session limit": "一回のプレイ時間の上限。設定した時間が来ると、そっとお声がけする仕組みです。",
+    "loss limit": "一定期間内の損失の上限。上限に達すると、自動的にプレイが一時停止となります。",
+    "reality check": "プレイ中、経過時間と収支を定期的に表示する小さなお知らせです。"
+  },
+  "odds_card": {
+    "labels": {
+      "badge": "確率を知る",
+      "house_edge": "ハウスエッジ",
+      "rtp": "還元率(RTP)",
+      "source": "出典：Playbook · CC0ライセンス · ご利用地域で内容をご確認ください"
+    },
+    "games": {
+      "slots": {
+        "facts": [
+          "<strong>1回ごとの結果は独立しています。</strong> 機械は過去を記憶しません。",
+          "<strong>還元率はソフトウェアで定まり、</strong>規制を受けています。時間帯は関係ありません。",
+          "賭け金を上げると振れ幅は大きくなりますが、<strong>確率は変わりません。</strong>",
+          "惜しい外れは「当たりに近づいている」ことを意味しません。結果はすでに決まっているのです。"
+        ]
+      },
+      "blackjack": {
+        "facts": [
+          "ベーシックストラテジーを用いれば、<strong>カジノゲームの中で最もハウスエッジが低い</strong>ゲームです。",
+          "ベーシックストラテジーはハウスエッジを下げます。<strong>直感ではなく、数学です。</strong>",
+          "カードカウンティングは可能ですが、優位は<strong>わずか0.5〜1.5%</strong>で、膨大なハンド数を要します。",
+          "ディーラーは定められた規則に従い、<strong>裁量はありません。</strong>"
+        ]
+      },
+      "roulette": {
+        "facts": [
+          "<strong>アメリカンルーレット(00あり):</strong> ハウスエッジ 5.26%。",
+          "<strong>ヨーロピアンルーレット(0のみ):</strong> ハウスエッジ 2.70%。",
+          "1回ごとの結果はそれぞれ独立しています。玉は過去の位置を覚えていません。",
+          "「そろそろ出る」数字は存在しません。<strong>37(または38)のマスは等しく起こります。</strong>"
+        ]
+      },
+      "sports-betting": {
+        "facts": [
+          "<strong>ビグ(手数料)</strong>はブックメーカーの取り分です。標準は両サイド-110。",
+          "スポーツに詳しいことは役立ちますが、<strong>オッズには専門知識がすでに織り込まれています。</strong>",
+          "パーレー(連勝式)は試合ごとに取り分が重なります。<strong>試合を増やすほど、数字は厳しくなります。</strong>",
+          "予想屋は的中例を見せがちで、外した話は表に出ません。<strong>生存バイアスに留意が必要です。</strong>"
+        ]
+      },
+      "baccarat": {
+        "facts": [
+          "<strong>バンカー:</strong> ハウスエッジ 1.06%(このゲームで最も有利)。",
+          "<strong>プレイヤー:</strong> ハウスエッジ 1.24%。",
+          "<strong>タイ:</strong> ハウスエッジ 14.4% — 避けたい賭けです。",
+          "履歴のパターン追跡は確率を変えません。<strong>1回ごとが独立しています。</strong>"
+        ]
+      },
+      "video-poker": {
+        "facts": [
+          "最適戦略で、還元率が<strong>99%を超える</strong>バリアントもあります。",
+          "<strong>ジャックス・オア・ベター(9/6)</strong>が定番で、還元率99.54%。",
+          "スロットとは異なり、<strong>判断が結果に影響します。</strong>",
+          "<strong>常にマックスベット</strong>を。ロイヤルフラッシュの配当倍率がその条件です。"
+        ]
+      },
+      "craps": {
+        "facts": [
+          "<strong>パス/ドントパス:</strong> ハウスエッジ 1.41%(最も有利な賭け)。",
+          "<strong>オッズベット:</strong> ハウスエッジ 0% — カジノで唯一の公平な賭けです。",
+          "プロポジションベットは魅力的に見えますが、<strong>ハウスエッジは最大16.7%。</strong>",
+          "ダイスは無作為です。<strong>狙った目を出す技術は存在しません。</strong>"
+        ]
+      },
+      "lottery": {
+        "facts": [
+          "宝くじは、ギャンブル商品の中で<strong>最もハウスエッジが高い</strong>部類です。",
+          "10枚買っても、ほぼゼロの確率を10倍しただけ。<strong>10 × ほぼゼロ ≈ ほぼゼロ。</strong>",
+          "どの数字の組み合わせも同じ確率です。<strong>無作為には好みがありません。</strong>",
+          "期待される戻りは、通常 <strong>1ドルあたり0.40〜0.60ドル</strong> ほどです。"
+        ]
+      },
+      "bingo": {
+        "facts": [
+          "確率は<strong>場に出ているカードの総数</strong>次第で、手元のカードの種類ではありません。",
+          "カードを増やせば確率はわずかに上がりますが、<strong>対戦相手も同じ条件です。</strong>",
+          "数字は無作為に引かれます。<strong>パターンや戦略で数字は変わりません。</strong>",
+          "運営側は賞金プールから取り分を差し引きます。通常 <strong>5〜25%</strong>。"
+        ]
+      }
+    }
+  },
+  "games": {
+    "slots": "スロット",
+    "blackjack": "ブラックジャック",
+    "roulette": "ルーレット",
+    "sports-betting": "スポーツベッティング",
+    "baccarat": "バカラ",
+    "video-poker": "ビデオポーカー",
+    "craps": "クラップス",
+    "lottery": "宝くじ",
+    "bingo": "ビンゴ"
+  }
+}

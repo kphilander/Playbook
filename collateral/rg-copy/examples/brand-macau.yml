@@ -1,0 +1,27 @@
+# Sample _brand.yml — Macau operator preview
+# ============================================
+# Drop into the "Upload _brand.yml" zone. The page will:
+#   • Set <html lang="zh-Hans">
+#   • Load Noto Sans SC
+#   • Swap copy, glossary, and quizzes to Simplified Chinese
+#     (Macau profile: authority / communal / minimal humor / diplomatic / private)
+#   • Fetch api/myths.zh-CN.json for the quiz content
+
+meta:
+  program_name: "金沙娱乐"
+  organization: "澳门金沙娱乐有限公司"
+  website: "https://sandsmacao.example"
+  contact_email: "support@sandsmacao.example"
+  primary_jurisdictions:
+    - macau
+
+legal:
+  minimum_gambling_age:
+    macau: 21
+
+cultural_profile:
+  voice: "authority"
+  framing: "communal"
+  humor: "minimal"
+  directness: "diplomatic"
+  comfort: "private"

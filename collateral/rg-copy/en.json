@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "language": "en",
+    "dir": "ltr",
+    "html_lang": "en",
+    "font_family_heading": "'Inter', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Source Sans 3', system-ui, sans-serif",
+    "font_preload_google": null,
+    "cultural_profile": "peer/individual/irreverent/blunt/open (Playbook default)",
+    "currency_note": "USD, $ before numeral"
+  },
+  "strings": {
+    "meta.title": "{{PROGRAM_NAME}} — Play on Your Terms",
+    "meta.description": "Know the odds, set your limits, and play informed. {{ORGANIZATION}}'s guide to playing on your terms.",
+    "helpline.strip.label": "Free, confidential support 24/7",
+    "helpline.strip.live_chat": "Live Chat",
+    "nav.odds": "The Real Odds",
+    "nav.myths": "Myth vs. Math",
+    "nav.tools": "Your Tools",
+    "nav.break": "Take a Break",
+    "nav.support": "Talk to Someone",
+    "hero.quick_question": "Quick question…",
+    "hero.sub_default": "Test what you actually know about the games you play.",
+    "hero.fallback.title_html": "Play on <span>your terms.</span>",
+    "hero.fallback.sub": "Every game has math. Every player has choices. Know the odds, use the tools, and decide what works for you.",
+    "hero.fallback.cta_see_odds": "See the real odds",
+    "hero.fallback.cta_set_limits": "Set your limits",
+    "odds.label": "Odds & Transparency",
+    "odds.title": "Pick your games. See the real math.",
+    "odds.blurb": "Every casino game has a built-in mathematical edge. Tap the games you play to see how they compare.",
+    "odds.empty": "Select a game above to see the odds.",
+    "myths.label": "Myths vs. Math",
+    "myths.title": "Think you know the game?",
+    "myths.blurb": "Every player has heard a theory. Hot streaks, lucky seats, timing the spin. Tap your answer to see what the math actually says.",
+    "tools.label": "Your Tools",
+    "tools.title": "Features that work for you.",
+    "tools.blurb": "These aren't restrictions. They're controls — like adjusting settings before you play.",
+    "tools.budget_lock.name": "Budget lock",
+    "tools.budget_lock.hook": "Set your entertainment spend before you start.",
+    "tools.budget_lock.detail_html": "Decide what you're comfortable spending — daily, weekly, or monthly. Lock it in and it takes effect immediately. Want to lower it? Instant. Want to raise it? There's a cooling-off period so you make that call with a clear head.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.session_timer.name": "Session timer",
+    "tools.session_timer.hook": "Get a nudge when your chosen time is up.",
+    "tools.session_timer.detail_html": "Pick a session length that works for you. When time's up, you get a check-in — not a shutdown, just a moment to decide if you want to keep going. Stay aware without watching the clock.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.play_dashboard.name": "Play dashboard",
+    "tools.play_dashboard.hook": "Full visibility into your play. No surprises.",
+    "tools.play_dashboard.detail_html": "See your deposits, withdrawals, session time, and net position in one place. Full transparency over your account. Information you can act on — or just know.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">View dashboard →</a>",
+    "tools.safety_net.name": "Safety net",
+    "tools.safety_net.hook": "Set a floor. If you hit it, play pauses.",
+    "tools.safety_net.detail_html": "Loss limits let you define a maximum you're willing to lose in a session, day, or week. If you hit it, play pauses automatically. You set the number — you're in control.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.reality_check.name": "Reality check",
+    "tools.reality_check.hook": "Quick updates on time and spend while you play.",
+    "tools.reality_check.detail_html": "Periodic pop-ups showing how long you've been playing and your current net position. Quick, non-intrusive, and easy to dismiss. Information, not interruption.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.budget_planner.name": "Budget planner",
+    "tools.budget_planner.hook": "Do the math first, play after.",
+    "tools.budget_planner.detail_html": "Figure out what entertainment spend fits your finances. Think about it like a night out or a streaming subscription — decide the number before you start, not after.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Plan your budget →</a>",
+    "tools.cta_set_limits": "Set your limits →",
+    "break.label": "Your Call",
+    "break.title": "Need some time away? It's one click.",
+    "break.blurb": "If you want a break — for any reason, for any length — you can step away on your terms. No forms. No questions asked.",
+    "break.card_timeframe.title": "Choose your timeframe",
+    "break.card_timeframe.desc": "Options range from a few months to permanent. Pick what feels right. You can always revisit later.",
+    "break.card_pause.title": "Everything pauses",
+    "break.card_pause.desc": "Your account pauses. Marketing stops. No deposits, no bets. A clean break from play while you want it.",
+    "break.card_support.title": "You're not alone",
+    "break.card_support.desc": "Support stays available throughout. Helplines, chat, counseling — none of that goes away when you take a break.",
+    "break.cta_take_break": "Take a break →",
+    "support.label": "Support",
+    "support.title": "Here if you need it.",
+    "support.blurb": "Free, confidential, 24/7. No reason needed. No crisis required.",
+    "support.normalizer": "Thousands of people reach out every day. It's a normal thing to do.",
+    "support.additional_resources": "Additional resources",
+    "support.org.desc": "Professional support and resources for players and families.",
+    "support.ga.title": "Gamblers Anonymous",
+    "support.ga.desc": "Peer support meetings — online and in person.",
+    "support.gamtalk.title": "GamTalk",
+    "support.gamtalk.desc": "Online peer support forum — anonymous, judgement-free.",
+    "footer.call": "Call",
+    "footer.chat": "Chat",
+    "footer.legal_html": "{{MIN_AGE}}+ only.<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\nPowered by <a href=\"https://github.com/kphilander/Playbook\">Playbook</a> (CC0)",
+    "progress.zero": "0% explored",
+    "progress.getting_started": "Getting started — {pct}%",
+    "progress.making_progress": "Making progress — {pct}%",
+    "progress.almost_there": "Almost there — {pct}%",
+    "progress.all_explored": "All explored!",
+    "hero.feedback_prefix_html": "<strong>The answer:</strong>",
+    "hero.cta_keep_going": "Keep going — take the full quiz →",
+    "myths.aria_question_pattern": "Question {n} of {total}",
+    "myths.next_question": "Next question →",
+    "myths.see_your_score": "See your score →",
+    "myths.correct_label": "correct",
+    "myths.perfect_score": "Perfect score. You know your stuff. But even knowing the math doesn't change the odds — it just means you're playing with your eyes open.",
+    "myths.good_effort": "Whether you got them all right or not, now you know the math. And knowing the math is always better than guessing.",
+    "myths.explore_tools": "Explore your tools →",
+    "odds.insight_pattern_html": "<strong>The difference?</strong> Over 100 bets at $10 each, you'd expect to lose about <strong>${best_loss}</strong> on {best_game} vs. <strong>${worst_loss}</strong> on {worst_game}. Same budget, very different math.",
+    "odds.how_to_play_pattern": "How to play {game} →"
+  },
+  "glossary": {
+    "house edge": "The mathematical advantage the casino has over the player, expressed as a percentage. A 5% house edge means the casino expects to keep $5 of every $100 wagered over time.",
+    "rtp": "Return to Player — the percentage of wagered money a game returns to players over time. An RTP of 96% means the game returns $96 for every $100 wagered on average.",
+    "rng": "Random Number Generator — software that ensures every spin, hand, or draw is completely independent and random.",
+    "bankroll": "The amount of money a player has set aside for gambling — like an entertainment budget.",
+    "volatility": "How much a game's outcomes swing in the short term. High volatility = bigger wins and losses, less frequent payouts.",
+    "expected value": "The mathematical average outcome of a bet if placed infinite times. A negative EV means the house has an edge.",
+    "paytable": "A chart showing the payouts for each winning combination on a slot or video poker game.",
+    "wagering requirement": "The number of times a bonus must be wagered before it can be withdrawn as cash.",
+    "deposit limit": "A maximum amount you can deposit into your account over a set period. You set the number.",
+    "parlay": "A single bet combining multiple selections. All selections must win for the bet to pay out.",
+    "tilt": "A state of emotional frustration that leads to poor decision-making — when emotion takes over from math.",
+    "cool-off period": "A short-term voluntary break from gambling, typically 24 hours to 30 days.",
+    "ggr": "Gross Gaming Revenue — the total amount wagered minus the total amount paid out to players. The operator's top-line income.",
+    "ev": "Expected Value — the average amount a player can expect to win or lose per bet over many plays.",
+    "self-exclusion": "A voluntary program that lets players ban themselves from gambling venues or platforms for a set period.",
+    "session limit": "A time limit you set on how long you play in a single session. A nudge when your time is up.",
+    "loss limit": "A cap on how much you can lose within a set period. Once hit, play pauses automatically.",
+    "reality check": "A periodic pop-up that reminds you how long you've been playing and how much you've spent."
+  },
+  "odds_card": {
+    "labels": {
+      "badge": "Know the Odds",
+      "house_edge": "House Edge",
+      "rtp": "RTP",
+      "source": "Source: Playbook · CC0 Licensed · Verify for your jurisdiction"
+    },
+    "games": {
+      "slots": {
+        "facts": [
+          "<strong>Every spin is independent.</strong> The machine has no memory.",
+          "<strong>RTP is set in software</strong> and regulated. Time of day is irrelevant.",
+          "Higher bets = bigger swings, <strong>not better odds.</strong>",
+          "Near misses are not “almost winning.” The result was already decided."
+        ]
+      },
+      "blackjack": {
+        "facts": [
+          "<strong>Lowest house edge</strong> of any casino game with basic strategy.",
+          "Basic strategy reduces house edge. <strong>It’s math, not intuition.</strong>",
+          "Card counting is real but yields <strong>a tiny 0.5–1.5% edge</strong> over thousands of hands.",
+          "The dealer follows mandatory rules with <strong>zero discretion.</strong>"
+        ]
+      },
+      "roulette": {
+        "facts": [
+          "<strong>American roulette (00):</strong> 5.26% house edge.",
+          "<strong>European roulette (single 0):</strong> 2.70% house edge.",
+          "Every spin is independent. The ball doesn’t know where it landed before.",
+          "No number is “due.” <strong>All 37/38 slots are equally likely.</strong>"
+        ]
+      },
+      "sports-betting": {
+        "facts": [
+          "The <strong>vig (juice)</strong> is the sportsbook’s margin. Standard: -110 on both sides.",
+          "Knowing the sport helps, but <strong>the line already prices in expertise.</strong>",
+          "Parlays compound the vig per leg. <strong>More legs = worse math.</strong>",
+          "Tipsters show highlights, not losses. <strong>Survivorship bias is real.</strong>"
+        ]
+      },
+      "baccarat": {
+        "facts": [
+          "<strong>Banker bet:</strong> 1.06% house edge (best bet in the game).",
+          "<strong>Player bet:</strong> 1.24% house edge.",
+          "<strong>Tie bet:</strong> 14.4% house edge — avoid it.",
+          "Pattern tracking doesn’t change the odds. <strong>Each hand is independent.</strong>"
+        ]
+      },
+      "video-poker": {
+        "facts": [
+          "With optimal strategy, some variants offer <strong>RTP over 99%.</strong>",
+          "<strong>Jacks or Better (9/6)</strong> is the gold standard: 99.54% RTP.",
+          "Unlike slots, <strong>your decisions actually affect the outcome.</strong>",
+          "Always play <strong>max coins</strong> — the Royal Flush bonus requires it."
+        ]
+      },
+      "craps": {
+        "facts": [
+          "<strong>Pass/Don’t Pass:</strong> 1.41% house edge (best bets).",
+          "<strong>Odds bet:</strong> 0% house edge — the only fair bet in the casino.",
+          "Proposition bets look exciting but carry <strong>house edges up to 16.7%.</strong>",
+          "Dice are random. <strong>Controlled shooting is a myth.</strong>"
+        ]
+      },
+      "lottery": {
+        "facts": [
+          "Lotteries have the <strong>highest house edge</strong> of any gambling product.",
+          "Buying 10 tickets multiplies near-zero odds. <strong>10 × near-zero ≈ near-zero.</strong>",
+          "No number combination is more likely than any other. <strong>Randomness doesn’t have favorites.</strong>",
+          "The expected return is typically <strong>$0.40–$0.60 per $1 spent.</strong>"
+        ]
+      },
+      "bingo": {
+        "facts": [
+          "Odds depend on <strong>how many cards are in play,</strong> not which ones you hold.",
+          "More cards = slightly better odds, but <strong>you’re competing against all players.</strong>",
+          "Numbers are drawn randomly. <strong>No pattern or strategy changes the math.</strong>",
+          "The house takes its cut from the prize pool — typically <strong>5–25%.</strong>"
+        ]
+      }
+    }
+  },
+  "games": {
+    "slots": "Slots",
+    "blackjack": "Blackjack",
+    "roulette": "Roulette",
+    "sports-betting": "Sports Betting",
+    "baccarat": "Baccarat",
+    "video-poker": "Video Poker",
+    "craps": "Craps",
+    "lottery": "Lottery",
+    "bingo": "Bingo"
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "count": 18,
+    "language": "ja",
+    "source_en": "api/myths.json",
+    "tone_profile": "elder/communal/understated/contextual/reserved (Japan)"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "連勝の感覚",
+      "quiz": {
+        "question": "スロットマシンで4回連続で当たりました。5回目の当たる確率はどうなるでしょうか。",
+        "options": [
+          { "label": "通常より高い ── 流れが来ている", "correct": false },
+          { "label": "通常より低い ── そろそろ外れる番", "correct": false },
+          { "label": "ほかの回とまったく同じ", "correct": true },
+          { "label": "賭け金の額によって変わる" , "correct": false }
+        ],
+        "feedback": "1回ごとの結果はそれぞれ独立しています。機械は過去を記憶しませんし、意識することもありません。「流れ」とは、人の頭が感じ取っているもので、ゲームの側には存在しないものなのです。"
+      }
+    },
+    {
+      "id": 2,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "そろそろ当たる頃",
+      "quiz": {
+        "question": "スロットマシンが3時間ほど当たりを出していません。次の結果について、何が言えるでしょうか。",
+        "options": [
+          { "label": "そろそろ当たりやすくなる", "correct": false },
+          { "label": "当たりにくい ── 「冷えている」", "correct": false },
+          { "label": "1回ごとは独立している ── 何も言えない", "correct": true },
+          { "label": "機械の不具合の可能性がある", "correct": false }
+        ],
+        "feedback": "乱数生成器には記憶がありません。3時間外れ続けたという事実から、次に何が起こるかを推し量ることはできないのです。"
+      }
+    },
+    {
+      "id": 3,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "お気に入りの台",
+      "quiz": {
+        "question": "同じスロットでよく勝つ気がする ── その理由はどこにあるのでしょうか。",
+        "options": [
+          { "label": "機械がご自身の遊び方を学習している", "correct": false },
+          { "label": "ロイヤルティの積み重ねによる", "correct": false },
+          { "label": "確証バイアス ── 勝ちは覚え、負けは忘れてしまう", "correct": true },
+          { "label": "台の癖を見抜いている", "correct": false }
+        ],
+        "feedback": "「あの台」での勝ちを覚えていて、負けの記憶は薄れている ── 確証バイアスと呼ばれる働きです。台の側には、実は癖も相性もありません。"
+      }
+    },
+    {
+      "id": 4,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "惜しい外れの意味",
+      "quiz": {
+        "question": "スロットで、同じ絵柄が2つ並び、3つ目が外れました。これは何を意味するでしょうか。",
+        "options": [
+          { "label": "当たりが近づいている", "correct": false },
+          { "label": "機械が温まってきている", "correct": false },
+          { "label": "ほかの外れと同じ ── 何も意味しない", "correct": true },
+          { "label": "賭け金を上げるべき合図", "correct": false }
+        ],
+        "feedback": "惜しい外れは気持ちを高ぶらせますが、次の結果を占う手がかりにはなりません。リールが止まる前から、乱数生成器が結果を決めているためです。"
+      }
+    },
+    {
+      "id": 5,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "時間帯と当たりやすさ",
+      "quiz": {
+        "question": "時間帯によってスロットの当たりやすさは変わるのでしょうか。",
+        "options": [
+          { "label": "変わる ── 夜は緩めに設定されている", "correct": false },
+          { "label": "変わる ── 混雑する週末は締められている", "correct": false },
+          { "label": "変わらない ── 還元率はソフトウェアで定まり、規制を受けている", "correct": true },
+          { "label": "カジノによって異なる", "correct": false }
+        ],
+        "feedback": "還元率はゲームソフトウェアに組み込まれており、規制当局が認定しています。カジノが時間帯や状況に合わせて調整することはできない仕組みになっているのです。"
+      }
+    },
+    {
+      "id": 6,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "賭け金と有利さ",
+      "quiz": {
+        "question": "賭け金を1ドルから10ドルに上げると、ハウスエッジ(カジノの取り分)はどう変わるでしょうか。",
+        "options": [
+          { "label": "下がる ── 高額ベッターは優遇される", "correct": false },
+          { "label": "上がる ── カジノ側が多く取る", "correct": false },
+          { "label": "まったく変わらない", "correct": true },
+          { "label": "機械によって異なる", "correct": false }
+        ],
+        "feedback": "ハウスエッジは割合で定まっているため、賭け金の大きさに関係なく、同じように適用されます。大きく賭ければ、期待される損失も比例して大きくなる、ということなのです。"
+      }
+    },
+    {
+      "id": 7,
+      "gameType": ["roulette", "blackjack", "baccarat"],
+      "title": "必勝法の限界",
+      "quiz": {
+        "question": "ルーレットで、負けるたびに賭け金を倍にするマーチンゲール法を用いた場合、何が起こるでしょうか。",
+        "options": [
+          { "label": "長い目で見れば必ず勝ち越せる", "correct": false },
+          { "label": "やがてハウスエッジが消える", "correct": false },
+          { "label": "小さな勝ちの積み重ねと、まれに訪れる大きな負けを取り引きすることになる", "correct": true },
+          { "label": "規律の持ち方によって結果が変わる", "correct": false }
+        ],
+        "feedback": "どんな賭け方も、土台にある数字を変えることはできません。マーチンゲール法は、小さな負けを減らす代わりに、まれですが大きな負けを招く構造になっているのです。"
+      }
+    },
+    {
+      "id": 8,
+      "gameType": ["blackjack", "baccarat", "poker"],
+      "title": "ディーラーの調子",
+      "quiz": {
+        "question": "続けて3人のプレイヤーがディーラーに負けました。テーブルを変えたほうがよいでしょうか。",
+        "options": [
+          { "label": "変えるべき ── このディーラーは当たっている", "correct": false },
+          { "label": "残るべき ── そろそろディーラーが崩れる頃", "correct": false },
+          { "label": "どちらでも同じ ── ディーラーは定められた手順に従い、カードは無作為", "correct": true },
+          { "label": "手作業のシャッフルなら、変えたほうがよい", "correct": false }
+        ],
+        "feedback": "ディーラーは定められた手順に従って動きますので、「調子」というものは存在しません。連勝も連敗も、確率のゆらぎの表れに過ぎないのです。"
+      }
+    },
+    {
+      "id": 9,
+      "gameType": ["blackjack"],
+      "title": "カウンティングの実情",
+      "quiz": {
+        "question": "熟練したカードカウンターが得るカジノに対する優位は、おおむねどれくらいでしょうか。",
+        "options": [
+          { "label": "10〜15% ── 収益性は高い", "correct": false },
+          { "label": "5〜10% ── 安定した収入になる", "correct": false },
+          { "label": "0.5〜1.5% ── わずかな優位で、長時間のプレイを要する", "correct": true },
+          { "label": "0% ── 実際には機能しない", "correct": false }
+        ],
+        "feedback": "カードカウンティングは理論としては成立しますが、優位はわずか0.5〜1.5%です。多額の資金と膨大なハンド数を要するうえ、カジノ側の対策もあり、実践の道は細いのです。"
+      }
+    },
+    {
+      "id": 10,
+      "gameType": ["roulette", "lottery"],
+      "title": "「自分の」数字",
+      "quiz": {
+        "question": "ルーレットで、50回続けて出ていない数字に賭けています。次に出る確率はどうでしょうか。",
+        "options": [
+          { "label": "高い ── そろそろ出る頃", "correct": false },
+          { "label": "低い ── 今日は運に恵まれない数字", "correct": false },
+          { "label": "いつもと同じ: 37分の1", "correct": true },
+          { "label": "ディーラーの投げ方による", "correct": false }
+        ],
+        "feedback": "1回ごとの結果はそれぞれ独立しています。ヨーロピアンルーレットでは、どの数字も毎回37分の1の確率で、過去がどうであれ、その値は変わらないのです。"
+      }
+    },
+    {
+      "id": 11,
+      "gameType": ["sports-betting"],
+      "title": "知識と勝率",
+      "quiz": {
+        "question": "スポーツに詳しい方でも、-110オッズのスプレッドベットで損益分岐に達するには、どれくらいの勝率が必要でしょうか。",
+        "options": [
+          { "label": "50% ── 半分当たれば充分", "correct": false },
+          { "label": "約52.4% ── 手数料分を補う必要がある", "correct": true },
+          { "label": "55% ── わずかな優位が必要", "correct": false },
+          { "label": "60% ── 明確な強みが必要", "correct": false }
+        ],
+        "feedback": "標準の-110オッズでは、ブックメーカーの取り分があるため、約52.4%の勝率でようやく損益が釣り合います。半分当てるだけでは、手数料の分だけ負けが積み上がっていくのです。"
+      }
+    },
+    {
+      "id": 12,
+      "gameType": ["sports-betting"],
+      "title": "パーレーの落とし穴",
+      "quiz": {
+        "question": "パーレー(連勝式)に試合を4つ組み合わせたとき、ブックメーカーの取り分はどう変化するでしょうか。",
+        "options": [
+          { "label": "変わらない ── 約4.5%のまま", "correct": false },
+          { "label": "配当が大きいので、むしろ下がる", "correct": false },
+          { "label": "2〜3倍に膨らむ ── 各試合ごとに上乗せされる", "correct": true },
+          { "label": "選ぶ競技によって異なる", "correct": false }
+        ],
+        "feedback": "ブックメーカーの取り分は、試合を組み合わせるたびに積み重なります。4試合のパーレーでは、単一のベットに比べて取り分がおよそ4倍になる計算で、大きな配当の裏には相応の仕組みが隠れているのです。"
+      }
+    },
+    {
+      "id": 13,
+      "gameType": ["sports-betting"],
+      "title": "予想屋の成績",
+      "quiz": {
+        "question": "今週の予想屋が10戦中8勝でした。この情報から何が分かるでしょうか。",
+        "options": [
+          { "label": "確立された手法 ── 次の予想も従うべき", "correct": false },
+          { "label": "この調子が続く見込みが高い", "correct": false },
+          { "label": "10戦では、何かを結論づけるには少なすぎる", "correct": true },
+          { "label": "内部情報を持っているに違いない", "correct": false }
+        ],
+        "feedback": "短期間の連勝は、統計的に必ず誰かに訪れるものです。多くの予想屋が発信している以上、ある週に高勝率を残す者が現れるのは、ごく自然な成り行きなのです。"
+      }
+    },
+    {
+      "id": 14,
+      "gameType": ["sports-betting"],
+      "title": "ライブベットの錯覚",
+      "quiz": {
+        "question": "試合の流れを見て、ライブ(イン・プレイ)ベットを行うとき、その位置はどこにあるでしょうか。",
+        "options": [
+          { "label": "ブックメーカーの先を読んでいる ── 見た情報を生かせる", "correct": false },
+          { "label": "相手が持たない情報を握っている", "correct": false },
+          { "label": "通常は、アルゴリズムがすでにオッズを調整済み ── 一歩遅れている", "correct": true },
+          { "label": "試合前より有利なオッズが保証される", "correct": false }
+        ],
+        "feedback": "ブックメーカーはミリ秒単位でオッズを更新します。こちらが気づいて判断する頃には、その情報はすでに織り込まれている ── それがライブベットの実情なのです。"
+      }
+    },
+    {
+      "id": 15,
+      "gameType": ["lottery"],
+      "title": "「出番」の数字",
+      "quiz": {
+        "question": "6か月間抽選で出ていない番号42があります。次の抽選で出る可能性は高まるでしょうか。",
+        "options": [
+          { "label": "高まる ── 統計的に出番が近い", "correct": false },
+          { "label": "高まる ── いずれは出るはずという考えによる", "correct": false },
+          { "label": "変わらない ── 各抽選は独立で、どの数字も等しい確率", "correct": true },
+          { "label": "総番号数によって異なる", "correct": false }
+        ],
+        "feedback": "抽選のボールは自らの過去を記憶しません。それぞれの抽選は、前の結果とはまったく切り離された出来事なのです。"
+      }
+    },
+    {
+      "id": 16,
+      "gameType": ["lottery"],
+      "title": "多く買えば当たるか",
+      "quiz": {
+        "question": "宝くじを1枚ではなく100枚買った場合、当選確率はどれほど上がるでしょうか。",
+        "options": [
+          { "label": "何かしら当たるのはほぼ確実", "correct": false },
+          { "label": "1400万分の1が100/1400万に ── それでも99.999%は外れ", "correct": true },
+          { "label": "1%の当選確率になる", "correct": false },
+          { "label": "ジャックポットの大きさによる", "correct": false }
+        ],
+        "feedback": "ほぼゼロに100をかけても、依然としてほぼゼロのままです。0.000007%が0.0007%になる ── 宝くじはそういう規模の確率で動いているのです。"
+      }
+    },
+    {
+      "id": 17,
+      "gameType": ["all-gambling"],
+      "title": "負けを取り戻す",
+      "quiz": {
+        "question": "200ドル負けた方が、取り戻そうと遊び続けたとき、平均的にはどうなるでしょうか。",
+        "options": [
+          { "label": "たいていは1時間以内に取り戻せる", "correct": false },
+          { "label": "連敗のあとはオッズが好転する", "correct": false },
+          { "label": "平均してさらに負ける ── ハウスエッジが積み重なるため", "correct": true },
+          { "label": "切り替えたゲームによって異なる", "correct": false }
+        ],
+        "feedback": "取り戻そうとすれば、不利な土台の上でさらにベットを重ねることになります。平均すれば、状況はむしろ悪化していく ── それが数字の示すところなのです。"
+      }
+    },
+    {
+      "id": 18,
+      "gameType": ["all-gambling"],
+      "title": "収益源としての捉え方",
+      "quiz": {
+        "question": "長い目で見たとき、ゲームの設計はどうなっているでしょうか。",
+        "options": [
+          { "label": "プレイヤーとカジノで、損益が釣り合うように", "correct": false },
+          { "label": "技術と経験を重ねれば、打ち破れるように", "correct": false },
+          { "label": "賭けた総額より少なく戻るように ── それがハウスエッジ", "correct": true },
+          { "label": "長期の常連には報いるように", "correct": false }
+        ],
+        "feedback": "ハウスエッジはあらゆるゲームに組み込まれています。長い目で見れば、ゲームは賭けられた総額より少なく戻す ── それがカジノの成り立ちの根幹なのです。"
+      }
+    }
+  ]
+}

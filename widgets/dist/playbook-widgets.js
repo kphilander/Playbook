@@ -358,6 +358,28 @@ class PlaybookOdds extends HTMLElement {
       return;
     }
 
+    // Optional translations, sourced from window.__pbI18nActiveBundle.odds_card
+    // when the rg-page i18n pipeline has activated a language. Falls back to the
+    // embedded English defaults when no bundle is active — widget stays usable
+    // standalone. Bundle shape:
+    //   odds_card: {
+    //     labels: { badge, house_edge, rtp, source },
+    //     games: { <game_key>: { facts: ["...", ...] } }
+    //   }
+    const bundle = (typeof window !== 'undefined' && window.__pbI18nActiveBundle) || null;
+    const T = (bundle && bundle.odds_card) || {};
+    const labels = T.labels || {};
+    const gameT = (T.games && T.games[gameName]) || {};
+    const badgeLabel = labels.badge || 'Know the Odds';
+    const houseEdgeLabel = labels.house_edge || 'House Edge';
+    const rtpLabel = labels.rtp || 'RTP';
+    const sourceLabel = labels.source || 'Source: Playbook \u00B7 CC0 Licensed \u00B7 Verify for your jurisdiction';
+    const facts = (gameT.facts && gameT.facts.length) ? gameT.facts : game.facts;
+    // Game name: prefer the parent page's localized map (bundle.games[key]) so the
+    // card header matches the chip label and the odds-insight sentence. Falls
+    // back to the widget's embedded English name when no bundle is active.
+    const localizedGameName = (bundle && bundle.games && bundle.games[gameName]) || game.name;
+
     // Brand-system variables win; legacy widget-local names are fallbacks.
     const isDark = theme === 'dark';
     const bg = isDark
@@ -398,25 +420,34 @@ class PlaybookOdds extends HTMLElement {
       <div class="card">
         <div class="gradient-bar"></div>
         <div class="header">
-          <span class="game-name">${this.esc(game.name)}</span>
-          <span class="badge">Know the Odds</span>
+          <span class="game-name">${this.esc(localizedGameName)}</span>
+          <span class="badge">${this.esc(badgeLabel)}</span>
         </div>
         <div class="stats">
           <div class="stat-box">
-            <div class="stat-label">House Edge</div>
+            <div class="stat-label">${this.esc(houseEdgeLabel)}</div>
             <div class="stat-value">${this.esc(game.houseEdge)}</div>
           </div>
           <div class="stat-box">
-            <div class="stat-label">RTP</div>
+            <div class="stat-label">${this.esc(rtpLabel)}</div>
             <div class="stat-value positive">${this.esc(game.rtp)}</div>
           </div>
         </div>
         <div class="facts">
-          ${game.facts.map(f => `<div class="fact">${f}</div>`).join('')}
+          ${facts.map(f => `<div class="fact">${f}</div>`).join('')}
         </div>
-        <div class="source">Source: Playbook \u00B7 CC0 Licensed \u00B7 Verify for your jurisdiction</div>
+        <div class="source">${this.esc(sourceLabel)}</div>
       </div>
     `;
+  }
+
+  // Refresh all <playbook-odds> instances in the document. Called by the
+  // rg-page i18n pipeline after a language activates/deactivates so cards
+  // already on screen pick up the new translations.
+  static refreshAll() {
+    document.querySelectorAll('playbook-odds').forEach(function(el) {
+      if (el.shadowRoot) el.render();
+    });
   }
 
   esc(str) {
