@@ -1,0 +1,18 @@
+# Sample _brand.yml — Jurisdiction without a localized bundle
+# =============================================================
+# Useful for confirming the no-override fallback. The page stays
+# English (no dir swap, no font load, English myths). Status in
+# the TYB modal reads:
+#   "Applied: brand-fallthrough.yml. No language override for
+#    united-kingdom — staying English."
+
+meta:
+  program_name: "Playbook"
+  organization: "Example UK Operator Ltd."
+  website: "https://playbook-uk.example"
+  primary_jurisdictions:
+    - united-kingdom
+
+legal:
+  minimum_gambling_age:
+    united-kingdom: 18

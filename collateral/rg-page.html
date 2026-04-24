@@ -4,8 +4,8 @@
   <link rel="icon" type="image/svg+xml" href="/tools/playbook/favicon.svg" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{PROGRAM_NAME}} — Play on Your Terms</title>
-<meta name="description" content="Know the odds, set your limits, and play informed. {{ORGANIZATION}}'s guide to playing on your terms.">
+<title data-i18n="meta.title">{{PROGRAM_NAME}} — Play on Your Terms</title>
+<meta name="description" content="Know the odds, set your limits, and play informed. {{ORGANIZATION}}'s guide to playing on your terms." data-i18n-attrs="content:meta.description">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,8 +125,10 @@ body {
 }
 
 /* === Sticky Nav === */
+/* Nav bg matches the helpline strip above (--rg-primary-dark) and the hero top stop
+   (also --rg-primary-dark at 0%) so the three surfaces read as one unbroken field. */
 .rg-nav {
-  background: var(--rg-primary);
+  background: var(--rg-primary-dark);
   position: sticky;
   top: 33px;
   z-index: 100;
@@ -423,10 +425,14 @@ html[data-pb-logo-mode="cobrand"] .rg-brand-divider { display: inline-block; }
   gap: 6px;
 }
 .rg-game-chip:hover { border-color: var(--rg-secondary); color: var(--rg-secondary); }
+/* Selected chip: white-on-primary is the one pairing that holds across any operator palette
+   (operators pick a saturated primary; primary/white is brand-validated for WCAG AA).
+   The secondary shows as a 3px underline stripe so its "interactive" semantic survives. */
 .rg-game-chip[aria-checked="true"] {
-  background: var(--rg-secondary);
-  border-color: var(--rg-secondary);
-  color: var(--rg-primary-dark);
+  background: var(--rg-primary);
+  border-color: var(--rg-primary);
+  color: var(--pb-color-white, #fff);
+  box-shadow: inset 0 -3px 0 var(--rg-secondary);
 }
 .rg-game-chip:focus-visible { outline: 2px solid var(--rg-secondary); outline-offset: 2px; }
 .rg-odds-grid {
@@ -743,7 +749,7 @@ html[data-pb-logo-mode="cobrand"] .rg-brand-divider { display: inline-block; }
 /* === Brand SVG Icons === */
 .rg-tool-icon svg, .rg-break-card-icon svg { width: 22px; height: 22px; color: inherit; }
 .rg-game-chip svg { width: 18px; height: 18px; }
-.rg-game-chip[aria-checked="true"] svg { color: var(--rg-primary-dark); }
+.rg-game-chip[aria-checked="true"] svg { color: var(--pb-color-white, #fff); }
 
 /* === Guide Link (below odds widget) === */
 .rg-guide-link {
@@ -997,6 +1003,28 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   .rg-game-chip { font-size: 0.8rem; padding: 8px 14px; }
   .rg-quiz-question { font-size: 1.15rem; }
 }
+
+/* === RTL layout overrides ================================================
+   Activated when <html dir="rtl"> is set by the i18n runtime (Arabic bundle).
+   Japanese and Chinese bundles stay LTR so this block does not apply to them.
+   ------------------------------------------------------------------------- */
+[dir="rtl"] .rg-helpline-strip { direction: rtl; }
+[dir="rtl"] .rg-nav-inner { flex-direction: row-reverse; }
+[dir="rtl"] .rg-nav-brand { margin-right: 0; margin-left: 24px; }
+[dir="rtl"] .rg-nav-progress { display: flex; flex-direction: row-reverse; }
+[dir="rtl"] .rg-hero::before { left: auto; right: -50%; }
+[dir="rtl"] .rg-hero-cta-row,
+[dir="rtl"] .rg-break-ctas { flex-direction: row-reverse; }
+[dir="rtl"] .rg-tool-toggle { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .rg-tool-detail-content { padding: 0 78px 24px 24px; }
+[dir="rtl"] .rg-insight { border-left: none; border-right: 4px solid var(--rg-secondary); }
+[dir="rtl"] .rg-tool-card[aria-expanded="true"] { border-left: none; border-right: 4px solid var(--rg-secondary); }
+[dir="rtl"] .rg-quiz-card,
+[dir="rtl"] .rg-quiz-opt,
+[dir="rtl"] .rg-hero-feedback { text-align: right; }
+[dir="rtl"] .rg-support-normalizer { text-align: center; }
+/* The footer, section headers, and hero are already centered — no override needed. */
+
 </style>
 </head>
 <body>
@@ -1069,6 +1097,2500 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   </symbol>
 </svg>
 
+<!-- i18n copy bundles (hand-authored per market; rendered by the Try-your-brand modal
+     when a _brand.yml uploads specifies meta.primary_jurisdictions). To add a language,
+     author collateral/rg-copy/<lang>.json and inline it below. -->
+<script type="application/json" id="pb-i18n-en">
+{
+  "_meta": {
+    "language": "en",
+    "dir": "ltr",
+    "html_lang": "en",
+    "font_family_heading": "'Inter', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Source Sans 3', system-ui, sans-serif",
+    "font_preload_google": null,
+    "cultural_profile": "peer/individual/irreverent/blunt/open (Playbook default)",
+    "currency_note": "USD, $ before numeral"
+  },
+  "strings": {
+    "meta.title": "{{PROGRAM_NAME}} — Play on Your Terms",
+    "meta.description": "Know the odds, set your limits, and play informed. {{ORGANIZATION}}'s guide to playing on your terms.",
+    "helpline.strip.label": "Free, confidential support 24/7",
+    "helpline.strip.live_chat": "Live Chat",
+    "nav.odds": "The Real Odds",
+    "nav.myths": "Myth vs. Math",
+    "nav.tools": "Your Tools",
+    "nav.break": "Take a Break",
+    "nav.support": "Talk to Someone",
+    "hero.quick_question": "Quick question…",
+    "hero.sub_default": "Test what you actually know about the games you play.",
+    "hero.fallback.title_html": "Play on <span>your terms.</span>",
+    "hero.fallback.sub": "Every game has math. Every player has choices. Know the odds, use the tools, and decide what works for you.",
+    "hero.fallback.cta_see_odds": "See the real odds",
+    "hero.fallback.cta_set_limits": "Set your limits",
+    "odds.label": "Odds & Transparency",
+    "odds.title": "Pick your games. See the real math.",
+    "odds.blurb": "Every casino game has a built-in mathematical edge. Tap the games you play to see how they compare.",
+    "odds.empty": "Select a game above to see the odds.",
+    "myths.label": "Myths vs. Math",
+    "myths.title": "Think you know the game?",
+    "myths.blurb": "Every player has heard a theory. Hot streaks, lucky seats, timing the spin. Tap your answer to see what the math actually says.",
+    "tools.label": "Your Tools",
+    "tools.title": "Features that work for you.",
+    "tools.blurb": "These aren't restrictions. They're controls — like adjusting settings before you play.",
+    "tools.budget_lock.name": "Budget lock",
+    "tools.budget_lock.hook": "Set your entertainment spend before you start.",
+    "tools.budget_lock.detail_html": "Decide what you're comfortable spending — daily, weekly, or monthly. Lock it in and it takes effect immediately. Want to lower it? Instant. Want to raise it? There's a cooling-off period so you make that call with a clear head.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.session_timer.name": "Session timer",
+    "tools.session_timer.hook": "Get a nudge when your chosen time is up.",
+    "tools.session_timer.detail_html": "Pick a session length that works for you. When time's up, you get a check-in — not a shutdown, just a moment to decide if you want to keep going. Stay aware without watching the clock.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.play_dashboard.name": "Play dashboard",
+    "tools.play_dashboard.hook": "Full visibility into your play. No surprises.",
+    "tools.play_dashboard.detail_html": "See your deposits, withdrawals, session time, and net position in one place. Full transparency over your account. Information you can act on — or just know.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">View dashboard →</a>",
+    "tools.safety_net.name": "Safety net",
+    "tools.safety_net.hook": "Set a floor. If you hit it, play pauses.",
+    "tools.safety_net.detail_html": "Loss limits let you define a maximum you're willing to lose in a session, day, or week. If you hit it, play pauses automatically. You set the number — you're in control.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.reality_check.name": "Reality check",
+    "tools.reality_check.hook": "Quick updates on time and spend while you play.",
+    "tools.reality_check.detail_html": "Periodic pop-ups showing how long you've been playing and your current net position. Quick, non-intrusive, and easy to dismiss. Information, not interruption.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.budget_planner.name": "Budget planner",
+    "tools.budget_planner.hook": "Do the math first, play after.",
+    "tools.budget_planner.detail_html": "Figure out what entertainment spend fits your finances. Think about it like a night out or a streaming subscription — decide the number before you start, not after.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Plan your budget →</a>",
+    "tools.cta_set_limits": "Set your limits →",
+    "break.label": "Your Call",
+    "break.title": "Need some time away? It's one click.",
+    "break.blurb": "If you want a break — for any reason, for any length — you can step away on your terms. No forms. No questions asked.",
+    "break.card_timeframe.title": "Choose your timeframe",
+    "break.card_timeframe.desc": "Options range from a few months to permanent. Pick what feels right. You can always revisit later.",
+    "break.card_pause.title": "Everything pauses",
+    "break.card_pause.desc": "Your account pauses. Marketing stops. No deposits, no bets. A clean break from play while you want it.",
+    "break.card_support.title": "You're not alone",
+    "break.card_support.desc": "Support stays available throughout. Helplines, chat, counseling — none of that goes away when you take a break.",
+    "break.cta_take_break": "Take a break →",
+    "support.label": "Support",
+    "support.title": "Here if you need it.",
+    "support.blurb": "Free, confidential, 24/7. No reason needed. No crisis required.",
+    "support.normalizer": "Thousands of people reach out every day. It's a normal thing to do.",
+    "support.additional_resources": "Additional resources",
+    "support.org.desc": "Professional support and resources for players and families.",
+    "support.ga.title": "Gamblers Anonymous",
+    "support.ga.desc": "Peer support meetings — online and in person.",
+    "support.gamtalk.title": "GamTalk",
+    "support.gamtalk.desc": "Online peer support forum — anonymous, judgement-free.",
+    "footer.call": "Call",
+    "footer.chat": "Chat",
+    "footer.legal_html": "{{MIN_AGE}}+ only.<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\nPowered by <a href=\"https://github.com/kphilander/Playbook\">Playbook</a> (CC0)",
+    "progress.zero": "0% explored",
+    "progress.getting_started": "Getting started — {pct}%",
+    "progress.making_progress": "Making progress — {pct}%",
+    "progress.almost_there": "Almost there — {pct}%",
+    "progress.all_explored": "All explored!",
+    "hero.feedback_prefix_html": "<strong>The answer:</strong>",
+    "hero.cta_keep_going": "Keep going — take the full quiz →",
+    "myths.aria_question_pattern": "Question {n} of {total}",
+    "myths.next_question": "Next question →",
+    "myths.see_your_score": "See your score →",
+    "myths.correct_label": "correct",
+    "myths.perfect_score": "Perfect score. You know your stuff. But even knowing the math doesn't change the odds — it just means you're playing with your eyes open.",
+    "myths.good_effort": "Whether you got them all right or not, now you know the math. And knowing the math is always better than guessing.",
+    "myths.explore_tools": "Explore your tools →",
+    "odds.insight_pattern_html": "<strong>The difference?</strong> Over 100 bets at $10 each, you'd expect to lose about <strong>${best_loss}</strong> on {best_game} vs. <strong>${worst_loss}</strong> on {worst_game}. Same budget, very different math.",
+    "odds.how_to_play_pattern": "How to play {game} →"
+  },
+  "glossary": {
+    "house edge": "The mathematical advantage the casino has over the player, expressed as a percentage. A 5% house edge means the casino expects to keep $5 of every $100 wagered over time.",
+    "rtp": "Return to Player — the percentage of wagered money a game returns to players over time. An RTP of 96% means the game returns $96 for every $100 wagered on average.",
+    "rng": "Random Number Generator — software that ensures every spin, hand, or draw is completely independent and random.",
+    "bankroll": "The amount of money a player has set aside for gambling — like an entertainment budget.",
+    "volatility": "How much a game's outcomes swing in the short term. High volatility = bigger wins and losses, less frequent payouts.",
+    "expected value": "The mathematical average outcome of a bet if placed infinite times. A negative EV means the house has an edge.",
+    "paytable": "A chart showing the payouts for each winning combination on a slot or video poker game.",
+    "wagering requirement": "The number of times a bonus must be wagered before it can be withdrawn as cash.",
+    "deposit limit": "A maximum amount you can deposit into your account over a set period. You set the number.",
+    "parlay": "A single bet combining multiple selections. All selections must win for the bet to pay out.",
+    "tilt": "A state of emotional frustration that leads to poor decision-making — when emotion takes over from math.",
+    "cool-off period": "A short-term voluntary break from gambling, typically 24 hours to 30 days.",
+    "ggr": "Gross Gaming Revenue — the total amount wagered minus the total amount paid out to players. The operator's top-line income.",
+    "ev": "Expected Value — the average amount a player can expect to win or lose per bet over many plays.",
+    "self-exclusion": "A voluntary program that lets players ban themselves from gambling venues or platforms for a set period.",
+    "session limit": "A time limit you set on how long you play in a single session. A nudge when your time is up.",
+    "loss limit": "A cap on how much you can lose within a set period. Once hit, play pauses automatically.",
+    "reality check": "A periodic pop-up that reminds you how long you've been playing and how much you've spent."
+  },
+  "odds_card": {
+    "labels": {
+      "badge": "Know the Odds",
+      "house_edge": "House Edge",
+      "rtp": "RTP",
+      "source": "Source: Playbook · CC0 Licensed · Verify for your jurisdiction"
+    },
+    "games": {
+      "slots": {
+        "facts": [
+          "<strong>Every spin is independent.</strong> The machine has no memory.",
+          "<strong>RTP is set in software</strong> and regulated. Time of day is irrelevant.",
+          "Higher bets = bigger swings, <strong>not better odds.</strong>",
+          "Near misses are not “almost winning.” The result was already decided."
+        ]
+      },
+      "blackjack": {
+        "facts": [
+          "<strong>Lowest house edge</strong> of any casino game with basic strategy.",
+          "Basic strategy reduces house edge. <strong>It’s math, not intuition.</strong>",
+          "Card counting is real but yields <strong>a tiny 0.5–1.5% edge</strong> over thousands of hands.",
+          "The dealer follows mandatory rules with <strong>zero discretion.</strong>"
+        ]
+      },
+      "roulette": {
+        "facts": [
+          "<strong>American roulette (00):</strong> 5.26% house edge.",
+          "<strong>European roulette (single 0):</strong> 2.70% house edge.",
+          "Every spin is independent. The ball doesn’t know where it landed before.",
+          "No number is “due.” <strong>All 37/38 slots are equally likely.</strong>"
+        ]
+      },
+      "sports-betting": {
+        "facts": [
+          "The <strong>vig (juice)</strong> is the sportsbook’s margin. Standard: -110 on both sides.",
+          "Knowing the sport helps, but <strong>the line already prices in expertise.</strong>",
+          "Parlays compound the vig per leg. <strong>More legs = worse math.</strong>",
+          "Tipsters show highlights, not losses. <strong>Survivorship bias is real.</strong>"
+        ]
+      },
+      "baccarat": {
+        "facts": [
+          "<strong>Banker bet:</strong> 1.06% house edge (best bet in the game).",
+          "<strong>Player bet:</strong> 1.24% house edge.",
+          "<strong>Tie bet:</strong> 14.4% house edge — avoid it.",
+          "Pattern tracking doesn’t change the odds. <strong>Each hand is independent.</strong>"
+        ]
+      },
+      "video-poker": {
+        "facts": [
+          "With optimal strategy, some variants offer <strong>RTP over 99%.</strong>",
+          "<strong>Jacks or Better (9/6)</strong> is the gold standard: 99.54% RTP.",
+          "Unlike slots, <strong>your decisions actually affect the outcome.</strong>",
+          "Always play <strong>max coins</strong> — the Royal Flush bonus requires it."
+        ]
+      },
+      "craps": {
+        "facts": [
+          "<strong>Pass/Don’t Pass:</strong> 1.41% house edge (best bets).",
+          "<strong>Odds bet:</strong> 0% house edge — the only fair bet in the casino.",
+          "Proposition bets look exciting but carry <strong>house edges up to 16.7%.</strong>",
+          "Dice are random. <strong>Controlled shooting is a myth.</strong>"
+        ]
+      },
+      "lottery": {
+        "facts": [
+          "Lotteries have the <strong>highest house edge</strong> of any gambling product.",
+          "Buying 10 tickets multiplies near-zero odds. <strong>10 × near-zero ≈ near-zero.</strong>",
+          "No number combination is more likely than any other. <strong>Randomness doesn’t have favorites.</strong>",
+          "The expected return is typically <strong>$0.40–$0.60 per $1 spent.</strong>"
+        ]
+      },
+      "bingo": {
+        "facts": [
+          "Odds depend on <strong>how many cards are in play,</strong> not which ones you hold.",
+          "More cards = slightly better odds, but <strong>you’re competing against all players.</strong>",
+          "Numbers are drawn randomly. <strong>No pattern or strategy changes the math.</strong>",
+          "The house takes its cut from the prize pool — typically <strong>5–25%.</strong>"
+        ]
+      }
+    }
+  },
+  "games": {
+    "slots": "Slots",
+    "blackjack": "Blackjack",
+    "roulette": "Roulette",
+    "sports-betting": "Sports Betting",
+    "baccarat": "Baccarat",
+    "video-poker": "Video Poker",
+    "craps": "Craps",
+    "lottery": "Lottery",
+    "bingo": "Bingo"
+  }
+}
+</script>
+<script type="application/json" id="pb-i18n-ja">
+{
+  "_meta": {
+    "language": "ja",
+    "dir": "ltr",
+    "html_lang": "ja",
+    "font_family_heading": "'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Inter', 'Noto Sans JP', system-ui, sans-serif",
+    "font_preload_google": "Noto+Sans+JP:wght@300;400;500;600;700;800;900",
+    "cultural_profile": "elder/communal/understated/contextual/reserved (Japan)",
+    "currency_note": "JPY integer, ¥ before numeral; round dollar examples to the nearest yen (e.g., $1.10 → ¥110)"
+  },
+  "strings": {
+    "meta.title": "{{PROGRAM_NAME}} — 自分のペースで",
+    "meta.description": "確率を知り、自分なりの目安を定め、納得して楽しむ。{{ORGANIZATION}}による、自分のペースで向き合うためのご案内。",
+    "helpline.strip.label": "24時間・無料・秘匿のご相談窓口",
+    "helpline.strip.live_chat": "ライブチャット",
+    "nav.odds": "本当の確率",
+    "nav.myths": "思い込みと数学",
+    "nav.tools": "便利な機能",
+    "nav.break": "少し休む",
+    "nav.support": "相談する",
+    "hero.quick_question": "ちょっとした質問です…",
+    "hero.sub_default": "普段楽しんでいるゲームについて、どのくらい知っているか試してみませんか。",
+    "hero.fallback.title_html": "自分のペースで、<span>楽しむ。</span>",
+    "hero.fallback.sub": "ゲームにはそれぞれ仕組みがあり、選択はご自身の手の中にあります。確率を知り、便利な機能を活用し、自分に合った向き合い方を見つける──その手助けとなるページです。",
+    "hero.fallback.cta_see_odds": "確率を見る",
+    "hero.fallback.cta_set_limits": "目安を決める",
+    "odds.label": "確率と透明性",
+    "odds.title": "遊ぶゲームを選び、数字で確かめる。",
+    "odds.blurb": "それぞれのゲームには数学的な還元率が設定されています。普段お楽しみのゲームを選ぶと、仕組みの違いが見えてきます。",
+    "odds.empty": "上のゲームを選んでください。",
+    "myths.label": "思い込みと数学",
+    "myths.title": "ゲームを知っているつもりでも。",
+    "myths.blurb": "「連勝している」「縁起のいい席」「タイミングよく回す」──よく聞く話です。それぞれを数学の視点で確かめてみましょう。",
+    "tools.label": "便利な機能",
+    "tools.title": "ご自身の使い方に合わせて。",
+    "tools.blurb": "制限するものではなく、はじめる前に静かに設定しておく、そんな道具です。",
+    "tools.budget_lock.name": "予算の固定",
+    "tools.budget_lock.hook": "はじめる前に、楽しむための目安を。",
+    "tools.budget_lock.detail_html": "日・週・月の単位で、使える範囲をあらかじめ定めておきます。設定すれば、そのまま有効になります。下げたいときはすぐに反映されます。上げたいときは、落ち着いて判断できるよう、少しだけ時間をおいてからとなります。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.session_timer.name": "時間の目安",
+    "tools.session_timer.hook": "決めた時間になったら、そっとお知らせします。",
+    "tools.session_timer.detail_html": "ご自身に合ったプレイ時間をあらかじめ決めておきます。時間が来ると、そっとお声がけします──中断するのではなく、続けるかどうかを考える一瞬を持つためです。時計を気にしなくても、自分のペースが保てます。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.play_dashboard.name": "プレイ状況",
+    "tools.play_dashboard.hook": "ご自身のプレイが一目で分かる。",
+    "tools.play_dashboard.detail_html": "入金・出金、プレイ時間、現在の収支を一つの画面にまとめています。ご自身の記録を、そのままご覧になれます。行動の判断材料として、あるいは、ただ知っておく安心として。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">ダッシュボードを見る →</a>",
+    "tools.safety_net.name": "安全装置",
+    "tools.safety_net.hook": "ここまで、と決めておけば、自動で一時停止。",
+    "tools.safety_net.detail_html": "一回のプレイ、一日、一週間など、お好みの単位で上限を定められます。そこに達すると、自動的に一時停止となります。決めるのはご自身。判断の主導権は、あなたの手の中にあります。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.reality_check.name": "振り返りの目印",
+    "tools.reality_check.hook": "プレイ中に、時間と収支を静かにお知らせ。",
+    "tools.reality_check.detail_html": "プレイ中、一定の間隔で、経過時間と現在の収支を小さく表示します。控えめで、閉じやすい仕様です。割り込むのではなく、情報としてそっと。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">設定する →</a>",
+    "tools.budget_planner.name": "予算の計画",
+    "tools.budget_planner.hook": "数字で整理してから、楽しむ。",
+    "tools.budget_planner.detail_html": "暮らしの中で、楽しみに回せる金額を落ち着いて考える場です。外食やサブスクリプションと同じように、はじめる前に目安を決めておく──それだけのことですが、後から見直すより随分安心です。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">予算を立てる →</a>",
+    "tools.cta_set_limits": "目安を決める →",
+    "break.label": "ご自身の判断で",
+    "break.title": "少し離れたいとき、ひとつの操作で。",
+    "break.blurb": "少し休みたい──理由も期間も、ご自身の判断で構いません。書類も、質問もありません。",
+    "break.card_timeframe.title": "期間はご自身で",
+    "break.card_timeframe.desc": "数か月から長期まで、選択肢はさまざまです。今のお気持ちに合うものを。後日、改めて見直すこともできます。",
+    "break.card_pause.title": "すべてが一時停止",
+    "break.card_pause.desc": "アカウントは一時停止となり、お知らせも止まります。入金も、プレイもありません。落ち着いた距離が保てます。",
+    "break.card_support.title": "一人ではありません",
+    "break.card_support.desc": "休んでいる間も、ご相談の窓口はご利用いただけます。電話、チャット、カウンセリング──離れていても、そばにあります。",
+    "break.cta_take_break": "少し休む →",
+    "support.label": "サポート",
+    "support.title": "必要なときに、そばに。",
+    "support.blurb": "無料、秘匿、24時間。理由はいりません。深刻な状態でなくとも構いません。",
+    "support.normalizer": "毎日、多くの方がご連絡くださっています。ごく自然なことです。",
+    "support.additional_resources": "その他のご案内",
+    "support.org.desc": "ご本人とご家族の両方に向けた、専門的な支援と情報を提供しています。",
+    "support.ga.title": "Gamblers Anonymous",
+    "support.ga.desc": "仲間同士の集まり──オンラインと対面の両方で開かれています。",
+    "support.gamtalk.title": "GamTalk",
+    "support.gamtalk.desc": "匿名でご利用いただける、オンラインの相談フォーラム。評価や判断のない場です。",
+    "footer.call": "電話",
+    "footer.chat": "チャット",
+    "footer.legal_html": "{{MIN_AGE}}歳以上。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n提供：<a href=\"https://github.com/kphilander/Playbook\">Playbook</a>（CC0）",
+    "progress.zero": "0%を閲覧",
+    "progress.getting_started": "読みはじめ — {pct}%",
+    "progress.making_progress": "進んでいます — {pct}%",
+    "progress.almost_there": "もうすぐ — {pct}%",
+    "progress.all_explored": "すべて閲覧済み",
+    "hero.feedback_prefix_html": "<strong>答えは、</strong>",
+    "hero.cta_keep_going": "続けて、全問に挑戦 →",
+    "myths.aria_question_pattern": "質問 {n} / {total}",
+    "myths.next_question": "次の質問 →",
+    "myths.see_your_score": "結果を見る →",
+    "myths.correct_label": "正解",
+    "myths.perfect_score": "満点です。お見事でした。もっとも、数字を知ったからといって確率が変わるわけではありません ── ただ、ご自身の目で見て判断できるようになる、という意味合いなのです。",
+    "myths.good_effort": "すべて正解できたかどうかにかかわらず、今は数字を把握されています。当て推量より、ずっと落ち着いた立ち位置になるはずです。",
+    "myths.explore_tools": "便利な機能を見る →",
+    "odds.insight_pattern_html": "<strong>差は、どれくらいでしょうか。</strong> 10ドルずつ、100回賭けたとすると、「{best_game}」では約<strong>{best_loss}ドル</strong>、「{worst_game}」では約<strong>{worst_loss}ドル</strong>の損失が見込まれます。同じ予算でも、数字はまるで違うのです。",
+    "odds.how_to_play_pattern": "{game}の遊び方 →"
+  },
+  "glossary": {
+    "house edge": "カジノ側の数学的な有利さを百分率で表したもの。例えば「ハウスエッジ5%」とは、長期的に見て、賭け金100円のうち5円がカジノに残ると期待される、という意味です。",
+    "rtp": "Return to Player（還元率）── 長期的にプレイヤー側へ戻ってくる割合。RTP 96%は、100円の賭けに対して平均で96円が戻ると期待できる水準です。",
+    "rng": "Random Number Generator（乱数生成器）── すべての回転、カード、抽選が互いに独立した結果となることを担うソフトウェアです。",
+    "bankroll": "楽しむためにあらかじめ取り分けておくお金──娯楽の予算のようなものと考えて差し支えありません。",
+    "volatility": "短期的な結果の振れ幅。ボラティリティが高いほど、当たり外れの差が大きく、当たりの回数は少なめになります。",
+    "expected value": "同じ賭けを何度も繰り返したときの、数学的な平均結果。値がマイナスなら、カジノ側に有利な賭けです。",
+    "paytable": "スロットやビデオポーカーの配当表──どの組み合わせでいくら払われるかを示した一覧です。",
+    "wagering requirement": "ボーナスを現金として引き出すまでに、何倍の賭けを行う必要があるかを定めた条件です。",
+    "deposit limit": "一定期間内に入金できる上限額。ご自身で決められます。",
+    "parlay": "複数の予想を組み合わせた一つの賭け。すべて的中した場合のみ配当が発生します。",
+    "tilt": "いらだちや動揺で判断が崩れている状態──感情が数字に勝ってしまっているときのことです。",
+    "cool-off period": "短期間の自主的な休止。おおむね24時間から30日ほどの範囲で設定されます。",
+    "ggr": "Gross Gaming Revenue（粗ゲーミング収益）── 総賭け金から払い戻しを差し引いた、事業者側の総収入です。",
+    "ev": "Expected Value（期待値）── 繰り返しプレイしたときに、一回あたり平均で得る・失う額のことです。",
+    "self-exclusion": "ご自身の判断で、一定期間サービスのご利用を止める仕組みです。",
+    "session limit": "一回のプレイ時間の上限。設定した時間が来ると、そっとお声がけする仕組みです。",
+    "loss limit": "一定期間内の損失の上限。上限に達すると、自動的にプレイが一時停止となります。",
+    "reality check": "プレイ中、経過時間と収支を定期的に表示する小さなお知らせです。"
+  },
+  "odds_card": {
+    "labels": {
+      "badge": "確率を知る",
+      "house_edge": "ハウスエッジ",
+      "rtp": "還元率(RTP)",
+      "source": "出典：Playbook · CC0ライセンス · ご利用地域で内容をご確認ください"
+    },
+    "games": {
+      "slots": {
+        "facts": [
+          "<strong>1回ごとの結果は独立しています。</strong> 機械は過去を記憶しません。",
+          "<strong>還元率はソフトウェアで定まり、</strong>規制を受けています。時間帯は関係ありません。",
+          "賭け金を上げると振れ幅は大きくなりますが、<strong>確率は変わりません。</strong>",
+          "惜しい外れは「当たりに近づいている」ことを意味しません。結果はすでに決まっているのです。"
+        ]
+      },
+      "blackjack": {
+        "facts": [
+          "ベーシックストラテジーを用いれば、<strong>カジノゲームの中で最もハウスエッジが低い</strong>ゲームです。",
+          "ベーシックストラテジーはハウスエッジを下げます。<strong>直感ではなく、数学です。</strong>",
+          "カードカウンティングは可能ですが、優位は<strong>わずか0.5〜1.5%</strong>で、膨大なハンド数を要します。",
+          "ディーラーは定められた規則に従い、<strong>裁量はありません。</strong>"
+        ]
+      },
+      "roulette": {
+        "facts": [
+          "<strong>アメリカンルーレット(00あり):</strong> ハウスエッジ 5.26%。",
+          "<strong>ヨーロピアンルーレット(0のみ):</strong> ハウスエッジ 2.70%。",
+          "1回ごとの結果はそれぞれ独立しています。玉は過去の位置を覚えていません。",
+          "「そろそろ出る」数字は存在しません。<strong>37(または38)のマスは等しく起こります。</strong>"
+        ]
+      },
+      "sports-betting": {
+        "facts": [
+          "<strong>ビグ(手数料)</strong>はブックメーカーの取り分です。標準は両サイド-110。",
+          "スポーツに詳しいことは役立ちますが、<strong>オッズには専門知識がすでに織り込まれています。</strong>",
+          "パーレー(連勝式)は試合ごとに取り分が重なります。<strong>試合を増やすほど、数字は厳しくなります。</strong>",
+          "予想屋は的中例を見せがちで、外した話は表に出ません。<strong>生存バイアスに留意が必要です。</strong>"
+        ]
+      },
+      "baccarat": {
+        "facts": [
+          "<strong>バンカー:</strong> ハウスエッジ 1.06%(このゲームで最も有利)。",
+          "<strong>プレイヤー:</strong> ハウスエッジ 1.24%。",
+          "<strong>タイ:</strong> ハウスエッジ 14.4% — 避けたい賭けです。",
+          "履歴のパターン追跡は確率を変えません。<strong>1回ごとが独立しています。</strong>"
+        ]
+      },
+      "video-poker": {
+        "facts": [
+          "最適戦略で、還元率が<strong>99%を超える</strong>バリアントもあります。",
+          "<strong>ジャックス・オア・ベター(9/6)</strong>が定番で、還元率99.54%。",
+          "スロットとは異なり、<strong>判断が結果に影響します。</strong>",
+          "<strong>常にマックスベット</strong>を。ロイヤルフラッシュの配当倍率がその条件です。"
+        ]
+      },
+      "craps": {
+        "facts": [
+          "<strong>パス/ドントパス:</strong> ハウスエッジ 1.41%(最も有利な賭け)。",
+          "<strong>オッズベット:</strong> ハウスエッジ 0% — カジノで唯一の公平な賭けです。",
+          "プロポジションベットは魅力的に見えますが、<strong>ハウスエッジは最大16.7%。</strong>",
+          "ダイスは無作為です。<strong>狙った目を出す技術は存在しません。</strong>"
+        ]
+      },
+      "lottery": {
+        "facts": [
+          "宝くじは、ギャンブル商品の中で<strong>最もハウスエッジが高い</strong>部類です。",
+          "10枚買っても、ほぼゼロの確率を10倍しただけ。<strong>10 × ほぼゼロ ≈ ほぼゼロ。</strong>",
+          "どの数字の組み合わせも同じ確率です。<strong>無作為には好みがありません。</strong>",
+          "期待される戻りは、通常 <strong>1ドルあたり0.40〜0.60ドル</strong> ほどです。"
+        ]
+      },
+      "bingo": {
+        "facts": [
+          "確率は<strong>場に出ているカードの総数</strong>次第で、手元のカードの種類ではありません。",
+          "カードを増やせば確率はわずかに上がりますが、<strong>対戦相手も同じ条件です。</strong>",
+          "数字は無作為に引かれます。<strong>パターンや戦略で数字は変わりません。</strong>",
+          "運営側は賞金プールから取り分を差し引きます。通常 <strong>5〜25%</strong>。"
+        ]
+      }
+    }
+  },
+  "games": {
+    "slots": "スロット",
+    "blackjack": "ブラックジャック",
+    "roulette": "ルーレット",
+    "sports-betting": "スポーツベッティング",
+    "baccarat": "バカラ",
+    "video-poker": "ビデオポーカー",
+    "craps": "クラップス",
+    "lottery": "宝くじ",
+    "bingo": "ビンゴ"
+  }
+}
+</script>
+<script type="application/json" id="pb-i18n-zh-CN">
+{
+  "_meta": {
+    "language": "zh-CN",
+    "dir": "ltr",
+    "html_lang": "zh-Hans",
+    "font_family_heading": "'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Inter', 'Noto Sans SC', system-ui, sans-serif",
+    "font_preload_google": "Noto+Sans+SC:wght@300;400;500;600;700;800;900",
+    "cultural_profile": "authority/communal/minimal/diplomatic/private (Macau)",
+    "currency_note": "MOP, 澳门币 before numeral; ~8 MOP per USD (e.g., $1.10 → 澳门币 9)"
+  },
+  "strings": {
+    "meta.title": "{{PROGRAM_NAME}} — 理性娱乐",
+    "meta.description": "了解概率、设定个人限额、理性参与。{{ORGANIZATION}}提供的娱乐消费管理指南。",
+    "helpline.strip.label": "全天候免费保密咨询",
+    "helpline.strip.live_chat": "在线咨询",
+    "nav.odds": "实际概率",
+    "nav.myths": "误区与数据",
+    "nav.tools": "功能设置",
+    "nav.break": "暂停使用",
+    "nav.support": "获取支持",
+    "hero.quick_question": "一个小问题…",
+    "hero.sub_default": "以下小测试，有助于加深对常见游戏的理解。",
+    "hero.fallback.title_html": "理性娱乐，<span>从了解开始。</span>",
+    "hero.fallback.sub": "每种游戏皆有其数学规律，每位参与者亦有自主选择。通过了解概率、善用功能设置，可找到适合自身的参与方式。",
+    "hero.fallback.cta_see_odds": "查看概率",
+    "hero.fallback.cta_set_limits": "设定限额",
+    "odds.label": "概率与透明度",
+    "odds.title": "选择游戏，查看真实数据。",
+    "odds.blurb": "每种赌场游戏均设有固定的数学优势（庄家优势）。选择常接触的游戏类别，即可查看各项数据对比。",
+    "odds.empty": "请先选择上方的游戏类别。",
+    "myths.label": "误区与数据",
+    "myths.title": "您所了解的，或许另有答案。",
+    "myths.blurb": "连胜势头、好运位置、把握时机——这些说法颇为常见。下方通过数学角度加以分析。",
+    "tools.label": "功能设置",
+    "tools.title": "依需求配置。",
+    "tools.blurb": "以下并非限制措施，而是参与前可预先调整的管理工具。",
+    "tools.budget_lock.name": "预算锁定",
+    "tools.budget_lock.hook": "参与前，设定娱乐消费范围。",
+    "tools.budget_lock.detail_html": "可按日、周、月为单位，预先设定可支配的娱乐消费范围。设定后即刻生效。如需下调，立即执行；如需上调，系统设有冷静思考期，以便从容判断。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.session_timer.name": "时长提醒",
+    "tools.session_timer.hook": "达到预设时长时，系统将发出提示。",
+    "tools.session_timer.detail_html": "参与前设定合适的时长。时间到达时，系统会发出温和提醒——并非强制中断，而是让参与者有机会判断是否继续。无需时时留意时间，亦可把握自身节奏。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.play_dashboard.name": "参与记录",
+    "tools.play_dashboard.hook": "参与情况一目了然。",
+    "tools.play_dashboard.detail_html": "存款、提款、参与时长、当前收支情况，均集中显示于同一页面。完整记录可随时查阅，既可作为判断参考，亦可仅供了解之用。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">查看记录 →</a>",
+    "tools.safety_net.name": "损失上限",
+    "tools.safety_net.hook": "达到上限，系统自动暂停。",
+    "tools.safety_net.detail_html": "按次、按日、按周预先设定损失上限。达到该数额时，系统自动暂停参与。数额由参与者自主决定，主导权始终掌握在个人手中。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.reality_check.name": "定期提示",
+    "tools.reality_check.hook": "参与过程中，时长与收支提示。",
+    "tools.reality_check.detail_html": "参与过程中，系统定期以小窗形式提示已参与时长与当前收支。设计简洁、便于关闭。并非干扰，而是适时的信息呈现。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.budget_planner.name": "预算规划",
+    "tools.budget_planner.hook": "先做规划，后行参与。",
+    "tools.budget_planner.detail_html": "从日常开销中，合理规划可用于娱乐的部分。正如餐饮消费、订阅服务一样——参与前明确预算，胜于事后回顾。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">规划预算 →</a>",
+    "tools.cta_set_limits": "设定限额 →",
+    "break.label": "自主选择",
+    "break.title": "如需暂离，一键即可操作。",
+    "break.blurb": "如欲暂停——无论出于何种原因或期限——均可依自身意愿暂离。无需填表，无需询问。",
+    "break.card_timeframe.title": "期限自主选定",
+    "break.card_timeframe.desc": "可选期限从数月至长期不等。依当前需要作出选择。日后亦可重新考量。",
+    "break.card_pause.title": "全面暂停",
+    "break.card_pause.desc": "账户暂停，营销信息停止。无存款、无投注。期间保持清晰的距离。",
+    "break.card_support.title": "支持始终在线",
+    "break.card_support.desc": "暂离期间，咨询渠道仍可使用。电话、在线咨询、专业辅导——支持从未离开。",
+    "break.cta_take_break": "暂停参与 →",
+    "support.label": "支持",
+    "support.title": "有需要时，随时联系。",
+    "support.blurb": "免费、保密、全天候。无需理由，亦无需处于紧急状态。",
+    "support.normalizer": "每日都有众多人士主动联系。此乃寻常之事。",
+    "support.additional_resources": "其他资源",
+    "support.org.desc": "面向参与者及其家属的专业支持与信息服务。",
+    "support.ga.title": "Gamblers Anonymous",
+    "support.ga.desc": "同伴互助聚会——提供线上与线下两种形式。",
+    "support.gamtalk.title": "GamTalk",
+    "support.gamtalk.desc": "匿名线上互助论坛。无评判，无压力。",
+    "footer.call": "致电",
+    "footer.chat": "咨询",
+    "footer.legal_html": "仅限{{MIN_AGE}}岁及以上人士。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n技术支持：<a href=\"https://github.com/kphilander/Playbook\">Playbook</a>（CC0）",
+    "progress.zero": "已阅读 0%",
+    "progress.getting_started": "刚开始 — {pct}%",
+    "progress.making_progress": "持续阅读 — {pct}%",
+    "progress.almost_there": "即将读完 — {pct}%",
+    "progress.all_explored": "已全部阅读",
+    "hero.feedback_prefix_html": "<strong>正确答案：</strong>",
+    "hero.cta_keep_going": "继续参与完整测试 →",
+    "myths.aria_question_pattern": "第 {n} 题，共 {total} 题",
+    "myths.next_question": "下一题 →",
+    "myths.see_your_score": "查看成绩 →",
+    "myths.correct_label": "正确",
+    "myths.perfect_score": "全部答对。掌握程度出色。需要说明的是，了解数学规律并不会改变概率本身 —— 仅意味着参与时，对所处情境有清晰的认识。",
+    "myths.good_effort": "无论是否全部答对，对相关数学规律已有了认识。相比凭感觉判断，这一立足点更为稳妥。",
+    "myths.explore_tools": "查看功能设置 →",
+    "odds.insight_pattern_html": "<strong>差距有多大？</strong> 以每次10美元、共投注100次计算，「{best_game}」的预计损失约为 <strong>{best_loss}美元</strong>，「{worst_game}」则约为 <strong>{worst_loss}美元</strong>。同等预算，数学规律截然不同。",
+    "odds.how_to_play_pattern": "{game}的玩法 →"
+  },
+  "glossary": {
+    "house edge": "庄家优势——即赌场相对于参与者的数学优势，以百分比表示。庄家优势5%意味着长期而言，每投注100元，赌场预计可保留5元。",
+    "rtp": "Return to Player（返还率）—— 长期内回馈参与者的投注比例。RTP 96%即表示每投注100元，平均可得96元回馈。",
+    "rng": "Random Number Generator（随机数生成器）—— 确保每次转动、发牌、抽取结果均为独立随机的软件系统。",
+    "bankroll": "专为娱乐用途预留的资金——类似于娱乐消费预算。",
+    "volatility": "游戏短期结果的波动幅度。高波动性意味着输赢差距较大、中奖频率较低。",
+    "expected value": "同一投注无限次重复时的数学平均结果。负值表示庄家具有数学优势。",
+    "paytable": "老虎机或视频扑克的派彩表——列明各中奖组合对应的派彩金额。",
+    "wagering requirement": "奖金需达成的投注倍数条件，方可作为现金提取。",
+    "deposit limit": "一定期间内的存款上限，由参与者自行设定。",
+    "parlay": "将多项预测合并为一笔投注，所有预测均须命中方可派彩。",
+    "tilt": "情绪失控导致判断失准的状态——即情绪压倒理智的时刻。",
+    "cool-off period": "短期自主休止期，通常为24小时至30日。",
+    "ggr": "Gross Gaming Revenue（博彩毛收入）—— 总投注额扣除派彩后的金额，即运营方的总收入。",
+    "ev": "Expected Value（期望值）—— 多次参与时，每次投注平均所得或所失的金额。",
+    "self-exclusion": "参与者自主申请在指定期间内停止使用相关服务的机制。",
+    "session limit": "单次参与时长的上限。设定时间到达时，系统会发出温和提示。",
+    "loss limit": "指定期间内的损失上限。达到上限时，系统自动暂停参与。",
+    "reality check": "参与过程中定期显示的小窗提示，告知当前参与时长及消费金额。"
+  },
+  "odds_card": {
+    "labels": {
+      "badge": "了解概率",
+      "house_edge": "庄家优势",
+      "rtp": "返还率(RTP)",
+      "source": "资料来源：Playbook · CC0 授权 · 请依所属司法管辖区核实"
+    },
+    "games": {
+      "slots": {
+        "facts": [
+          "<strong>每次旋转均为独立事件。</strong> 机器不具备记忆功能。",
+          "<strong>返还率由软件设定，</strong>并受监管。时段并不影响。",
+          "投注金额越高，波动越大，<strong>概率并不因此改善。</strong>",
+          "「差一点」不等于「接近中奖」。结果在旋转前已经确定。"
+        ]
+      },
+      "blackjack": {
+        "facts": [
+          "采用基本策略时，<strong>庄家优势在赌场游戏中最低。</strong>",
+          "基本策略可降低庄家优势。<strong>属于数学，而非直觉。</strong>",
+          "算牌确有其事，但优势<strong>仅为 0.5–1.5%，</strong>且需大量手牌方可体现。",
+          "荷官依据固定规则操作，<strong>无自由裁量。</strong>"
+        ]
+      },
+      "roulette": {
+        "facts": [
+          "<strong>美式轮盘(含 00):</strong> 庄家优势 5.26%。",
+          "<strong>欧式轮盘(单个 0):</strong> 庄家优势 2.70%。",
+          "每次旋转均为独立事件。球不记录上一次的落点。",
+          "没有数字「该出了」。<strong>37/38 格的概率完全相等。</strong>"
+        ]
+      },
+      "sports-betting": {
+        "facts": [
+          "<strong>抽水(vig)</strong>是博彩公司的利润。标准为两侧 -110。",
+          "熟悉运动固然有帮助，但<strong>赔率已将专业判断计入其中。</strong>",
+          "串关投注的抽水逐场累积。<strong>场次越多，数学上越不利。</strong>",
+          "预测者往往展示胜场而隐藏败场。<strong>幸存者偏差不可忽视。</strong>"
+        ]
+      },
+      "baccarat": {
+        "facts": [
+          "<strong>庄家：</strong>庄家优势 1.06%(游戏中最有利的选项)。",
+          "<strong>闲家：</strong>庄家优势 1.24%。",
+          "<strong>和局：</strong>庄家优势 14.4% — 建议避开。",
+          "记录牌路并不改变概率。<strong>每手均为独立事件。</strong>"
+        ]
+      },
+      "video-poker": {
+        "facts": [
+          "采用最佳策略时，部分变体的<strong>返还率可超过 99%。</strong>",
+          "<strong>Jacks or Better(9/6)</strong>为标杆：RTP 99.54%。",
+          "与老虎机不同，<strong>玩家的决策会影响结果。</strong>",
+          "始终<strong>押注最大硬币数</strong> — 皇家同花顺的赔率基于此条件。"
+        ]
+      },
+      "craps": {
+        "facts": [
+          "<strong>过关/不过关：</strong>庄家优势 1.41%(最有利的投注)。",
+          "<strong>赔率投注：</strong>庄家优势 0% — 赌场中唯一公平的投注。",
+          "命题投注看似诱人，<strong>庄家优势可高达 16.7%。</strong>",
+          "骰子为无规律随机。<strong>「控制性投掷」并不存在。</strong>"
+        ]
+      },
+      "lottery": {
+        "facts": [
+          "彩票在博彩产品中<strong>庄家优势最高。</strong>",
+          "购买 10 张仅是将近似为零的概率放大 10 倍。<strong>10 × 近似零 ≈ 近似零。</strong>",
+          "各组号码的概率相等。<strong>随机并无偏好。</strong>",
+          "每投入 1 美元，通常期望回馈 <strong>0.40–0.60 美元。</strong>"
+        ]
+      },
+      "bingo": {
+        "facts": [
+          "概率取决于<strong>场内卡片总数，</strong>而非手中卡片的内容。",
+          "增加卡片可略微提高概率，但<strong>所有玩家同时参与竞争。</strong>",
+          "数字完全随机抽取。<strong>任何规律或策略皆无法改变数学结果。</strong>",
+          "运营方从奖池中抽成，通常为 <strong>5–25%。</strong>"
+        ]
+      }
+    }
+  },
+  "games": {
+    "slots": "老虎机",
+    "blackjack": "二十一点",
+    "roulette": "轮盘",
+    "sports-betting": "体育博彩",
+    "baccarat": "百家乐",
+    "video-poker": "视频扑克",
+    "craps": "花旗骰",
+    "lottery": "彩票",
+    "bingo": "宾果"
+  }
+}
+</script>
+<script type="application/json" id="pb-i18n-ar">
+{
+  "_meta": {
+    "language": "ar",
+    "dir": "rtl",
+    "html_lang": "ar",
+    "font_family_heading": "'Inter', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Inter', 'Noto Sans Arabic', system-ui, sans-serif",
+    "font_preload_google": "Noto+Sans+Arabic:wght@300;400;500;600;700;800;900",
+    "cultural_profile": "authority/communal/understated/contextual/private (UAE)",
+    "currency_note": "AED, د.إ after numeral; pegged ~3.67 AED per USD (e.g., $1.10 → 4 د.إ)"
+  },
+  "strings": {
+    "meta.title": "{{PROGRAM_NAME}} — اللعب بوعي",
+    "meta.description": "معرفة الاحتمالات، وتحديد الحدود الشخصية، والمشاركة الواعية. دليل {{ORGANIZATION}} للمشاركة بوعي.",
+    "helpline.strip.label": "دعم مجاني وسري على مدار الساعة",
+    "helpline.strip.live_chat": "المحادثة المباشرة",
+    "nav.odds": "الاحتمالات الفعلية",
+    "nav.myths": "الاعتقادات والحقائق",
+    "nav.tools": "الأدوات المتاحة",
+    "nav.break": "التوقف المؤقت",
+    "nav.support": "طلب الدعم",
+    "hero.quick_question": "سؤال موجز…",
+    "hero.sub_default": "اختبار قصير لاستيعاب مبادئ الألعاب المعتادة.",
+    "hero.fallback.title_html": "اللعب بوعي، <span>عبر المعرفة.</span>",
+    "hero.fallback.sub": "لكل لعبة منطقها الرياضي، ولكل مشارك حرية الاختيار. معرفة الاحتمالات وحسن استخدام الأدوات يتيحان المشاركة بطريقة ملائمة.",
+    "hero.fallback.cta_see_odds": "اطلاع على الاحتمالات ←",
+    "hero.fallback.cta_set_limits": "تحديد الحدود ←",
+    "odds.label": "الاحتمالات والشفافية",
+    "odds.title": "اختيار الألعاب واستعراض الأرقام الفعلية.",
+    "odds.blurb": "لكل لعبة كازينو ميزة رياضية ثابتة (ميزة البيت). اختيار الألعاب المعتادة يُظهر الفروق بين المؤشرات.",
+    "odds.empty": "يُرجى اختيار لعبة من الأعلى.",
+    "myths.label": "الاعتقادات والحقائق",
+    "myths.title": "ما يُعتقد قد يخالف الواقع.",
+    "myths.blurb": "سلاسل المكاسب، المقاعد الموفّقة، ضبط التوقيت — روايات متداولة. أدناه تحليل رياضي لكل منها.",
+    "tools.label": "الأدوات المتاحة",
+    "tools.title": "تهيئة تناسب الاستخدام الشخصي.",
+    "tools.blurb": "ليست قيوداً، بل أدوات تُهيَّأ قبل المشاركة.",
+    "tools.budget_lock.name": "تثبيت الميزانية",
+    "tools.budget_lock.hook": "تحديد نطاق الإنفاق الترفيهي قبل البدء.",
+    "tools.budget_lock.detail_html": "يمكن تحديد نطاق الإنفاق الترفيهي المسموح به — يومياً أو أسبوعياً أو شهرياً. يبدأ السريان فور التفعيل. التخفيض ينفذ مباشرةً؛ الزيادة تستلزم فترة تهدئة تتيح اتخاذ القرار بهدوء.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">التفعيل ←</a>",
+    "tools.session_timer.name": "مؤقت الجلسة",
+    "tools.session_timer.hook": "تنبيه لطيف عند انقضاء المدة المحددة.",
+    "tools.session_timer.detail_html": "تحديد مدة جلسة ملائمة مسبقاً. عند انقضاء المدة، يصدر تنبيه هادئ — ليس إيقافاً إجبارياً، بل لحظة للتأمل قبل متابعة المشاركة. دون الحاجة لمراقبة الوقت باستمرار.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">التفعيل ←</a>",
+    "tools.play_dashboard.name": "سجل المشاركة",
+    "tools.play_dashboard.hook": "نظرة شاملة على النشاط.",
+    "tools.play_dashboard.detail_html": "الإيداعات والسحوبات ومدة المشاركة ووضع الحساب الحالي، جميعها مجمّعة في شاشة واحدة. سجل كامل متاح للاطلاع، سواء للاستفادة منه في اتخاذ القرار أو للعلم فقط.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">عرض السجل ←</a>",
+    "tools.safety_net.name": "حد الخسارة",
+    "tools.safety_net.hook": "عند بلوغ الحد، يتوقف النشاط تلقائياً.",
+    "tools.safety_net.detail_html": "تحديد حد أقصى للخسارة لكل جلسة أو يوم أو أسبوع. عند بلوغ الحد، يتم إيقاف المشاركة تلقائياً. القرار يبقى بيد المشارك وحده.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">التفعيل ←</a>",
+    "tools.reality_check.name": "تنبيهات دورية",
+    "tools.reality_check.hook": "إظهار الوقت والوضع المالي أثناء المشاركة.",
+    "tools.reality_check.detail_html": "خلال المشاركة، تظهر نوافذ صغيرة بشكل دوري لعرض المدة المنقضية والوضع المالي الحالي. تصميم هادئ وسهل الإغلاق. معلومة في وقتها، لا إزعاج.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">التفعيل ←</a>",
+    "tools.budget_planner.name": "تخطيط الميزانية",
+    "tools.budget_planner.hook": "التخطيط أولاً، المشاركة لاحقاً.",
+    "tools.budget_planner.detail_html": "تحديد الجزء المخصص للترفيه من ميزانية الحياة اليومية بهدوء. تماماً كمصاريف المطاعم أو اشتراكات الخدمات — قرار ما قبل المشاركة أهدأ من المراجعة بعدها.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">التخطيط ←</a>",
+    "tools.cta_set_limits": "تحديد الحدود ←",
+    "break.label": "القرار الشخصي",
+    "break.title": "خطوة واحدة للتوقف عند الرغبة.",
+    "break.blurb": "عند الحاجة إلى توقف — أياً كان السبب أو المدة — يمكن الابتعاد بقرار شخصي. دون استمارات ولا استفسارات.",
+    "break.card_timeframe.title": "مدة يحددها المشارك",
+    "break.card_timeframe.desc": "الخيارات تتراوح بين عدة أشهر إلى مدة طويلة. يُختار ما يناسب الوضع الحالي. يمكن إعادة النظر لاحقاً.",
+    "break.card_pause.title": "إيقاف شامل",
+    "break.card_pause.desc": "الحساب يتوقف ورسائل الترويج تنقطع. لا إيداعات ولا رهانات. مسافة واضحة تُحفظ خلال الفترة.",
+    "break.card_support.title": "الدعم لا يغيب",
+    "break.card_support.desc": "خلال فترة التوقف، تبقى قنوات الاستشارة متاحة. الهاتف، المحادثة، الإرشاد — الدعم قريب حتى عند الابتعاد.",
+    "break.cta_take_break": "تفعيل التوقف ←",
+    "support.label": "الدعم",
+    "support.title": "متوفر عند الحاجة.",
+    "support.blurb": "مجاناً، بسرية، على مدار الساعة. دون حاجة إلى مبرر، ودون اشتراط حالة طارئة.",
+    "support.normalizer": "كثيرون يتواصلون يومياً. أمر اعتيادي.",
+    "support.additional_resources": "مصادر إضافية",
+    "support.org.desc": "دعم مهني ومصادر معلومات للمشاركين وذويهم.",
+    "support.ga.title": "Gamblers Anonymous",
+    "support.ga.desc": "لقاءات دعم الأقران — عبر الإنترنت وبشكل حضوري.",
+    "support.gamtalk.title": "GamTalk",
+    "support.gamtalk.desc": "منتدى إلكتروني للدعم، مجهول الهوية ودون إصدار أحكام.",
+    "footer.call": "اتصال",
+    "footer.chat": "محادثة",
+    "footer.legal_html": "للأعمار {{MIN_AGE}}+ فقط.<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\nمدعوم من <a href=\"https://github.com/kphilander/Playbook\">Playbook</a> (CC0)",
+    "progress.zero": "0% من المحتوى",
+    "progress.getting_started": "{pct}% — في البداية",
+    "progress.making_progress": "{pct}% — قيد الاستعراض",
+    "progress.almost_there": "{pct}% — على وشك الإتمام",
+    "progress.all_explored": "تم استعراض كامل المحتوى",
+    "hero.feedback_prefix_html": "<strong>الإجابة الصحيحة:</strong>",
+    "hero.cta_keep_going": "← المتابعة واستكمال الاختبار",
+    "myths.aria_question_pattern": "سؤال {n} من {total}",
+    "myths.next_question": "← السؤال التالي",
+    "myths.see_your_score": "← عرض النتيجة",
+    "myths.correct_label": "إجابات صحيحة",
+    "myths.perfect_score": "علامة كاملة — إلمام مميّز. تجدر الإشارة إلى أن إدراك الحسابات لا يُغيّر الاحتمالات ذاتها؛ غير أنه يتيح المشاركة من موقع اطّلاع لا من موقع تخمين.",
+    "myths.good_effort": "بصرف النظر عن عدد الإجابات الصحيحة، أصبح الآن وضوح في الحسابات الأساسية. وهذا موقع أهدأ مقارنةً بالتخمين.",
+    "myths.explore_tools": "← استعراض الأدوات",
+    "odds.insight_pattern_html": "<strong>ما حجم الفارق؟</strong> عند 100 رهان بقيمة 10 دولارات لكل منها، تبلغ الخسارة المتوقّعة على {best_game} نحو <strong>{best_loss} دولاراً</strong>، مقابل <strong>{worst_loss} دولاراً</strong> على {worst_game}. الميزانية واحدة، والحساب مختلف.",
+    "odds.how_to_play_pattern": "← كيفية اللعب: {game}"
+  },
+  "glossary": {
+    "house edge": "ميزة البيت — الميزة الرياضية للكازينو على المشارك، بالنسبة المئوية. ميزة قدرها 5٪ تعني أنه على المدى الطويل، من كل 100 وحدة مراهنة، يُتوقع أن يحتفظ الكازينو بـ 5 وحدات.",
+    "rtp": "Return to Player (نسبة الإعادة) — نسبة الأموال المراهنة التي تعود إلى المشاركين على المدى الطويل. RTP بنسبة 96٪ يعني أن كل 100 وحدة مراهنة تُعيد 96 وحدة في المتوسط.",
+    "rng": "Random Number Generator (مولّد الأرقام العشوائية) — برمجية تضمن أن كل دورة أو توزيع أو سحب مستقل تماماً وعشوائي.",
+    "bankroll": "المبلغ المخصص للترفيه — بمثابة ميزانية ترفيهية مستقلة.",
+    "volatility": "حجم تأرجح النتائج على المدى القصير. التقلب العالي يعني تفاوتاً أكبر بين المكاسب والخسائر، وتكراراً أقل للفوز.",
+    "expected value": "المتوسط الرياضي لنتيجة رهان إذا تكرر إلى ما لا نهاية. القيمة السالبة تعني وجود ميزة للبيت.",
+    "paytable": "جدول المدفوعات — في ماكينات القمار أو فيديو البوكر، يوضح المبلغ المدفوع لكل تركيبة فائزة.",
+    "wagering requirement": "عدد المرات التي يجب فيها الرهان بالمكافأة قبل إمكانية سحبها نقداً.",
+    "deposit limit": "الحد الأقصى للإيداع خلال فترة محددة. يُحدده المشارك بنفسه.",
+    "parlay": "رهان مركّب يجمع عدة اختيارات. يشترط فوز جميعها لصرف المكافأة.",
+    "tilt": "حالة من الإحباط العاطفي تُفضي إلى قرارات غير موفقة — حين تطغى العاطفة على المنطق.",
+    "cool-off period": "فترة توقف اختيارية قصيرة، تتراوح عادة بين 24 ساعة و30 يوماً.",
+    "ggr": "Gross Gaming Revenue (إجمالي إيرادات الألعاب) — مجموع المراهنات مطروحاً منه المبالغ المدفوعة للمشاركين. هو الإيراد الكلي للمشغّل.",
+    "ev": "Expected Value (القيمة المتوقعة) — متوسط ما يمكن للمشارك كسبه أو خسارته لكل رهان على مدى مشاركات كثيرة.",
+    "self-exclusion": "نظام اختياري يتيح للمشاركين منع أنفسهم من الوصول إلى الخدمات لفترة محددة.",
+    "session limit": "حد زمني يُحدده المشارك لمدة الجلسة الواحدة. تنبيه هادئ عند انقضاء المدة.",
+    "loss limit": "حد أقصى للخسارة خلال فترة محددة. عند بلوغه، يتوقف النشاط تلقائياً.",
+    "reality check": "نافذة دورية تذكّر المشارك بمدة المشاركة والمبلغ المُنفَق."
+  },
+  "odds_card": {
+    "labels": {
+      "badge": "تعرّف على الاحتمالات",
+      "house_edge": "ميزة البيت",
+      "rtp": "نسبة الإعادة (RTP)",
+      "source": "المصدر: Playbook · ترخيص CC0 · يُرجى التحقق وفق الولاية القضائية ذات الصلة"
+    },
+    "games": {
+      "slots": {
+        "facts": [
+          "<strong>كل دورة حدث مستقل بذاته.</strong> لا تحتفظ الماكينة بأي ذاكرة.",
+          "<strong>نسبة العائد مضمّنة في البرمجية</strong> وخاضعة للتنظيم. التوقيت لا يؤثر.",
+          "رفع قيمة الرهان يزيد التذبذب، <strong>دون تحسين الاحتمالات.</strong>",
+          "الاقتراب من الفوز لا يعني «على وشك الفوز». فالنتيجة كانت محسومة سلفاً."
+        ]
+      },
+      "blackjack": {
+        "facts": [
+          "باتباع الاستراتيجية الأساسية، <strong>تعدّ من أدنى ألعاب الكازينو من حيث ميزة البيت.</strong>",
+          "تُخفّض الاستراتيجية الأساسية ميزة البيت. <strong>الأمر رياضي لا حدسي.</strong>",
+          "عدّ الأوراق قائم فعلياً، غير أن الميزة <strong>ضئيلة (0.5–1.5%)</strong> وتتطلب آلاف الأيدي.",
+          "يعمل الموزّع وفق قواعد محدّدة <strong>دون سلطة تقديرية.</strong>"
+        ]
+      },
+      "roulette": {
+        "facts": [
+          "<strong>الروليت الأمريكي (مع 00):</strong> ميزة البيت 5.26%.",
+          "<strong>الروليت الأوروبي (صفر واحد):</strong> ميزة البيت 2.70%.",
+          "كل دورة مستقلة. لا تحتفظ الكرة بسجل لموضعها السابق.",
+          "لا يوجد رقم «متأخر». <strong>الخانات الـ 37 (أو 38) متساوية الاحتمال.</strong>"
+        ]
+      },
+      "sports-betting": {
+        "facts": [
+          "<strong>العمولة (vig)</strong> هي هامش مشغّل الرهان. القياس: -110 على الجانبين.",
+          "معرفة الرياضة مفيدة، غير أن <strong>السعر يدمج الخبرة فعلاً.</strong>",
+          "الرهانات المجمّعة تضاعف العمولة مع كل مرحلة. <strong>المزيد من المراحل يزيد الفارق الرياضي.</strong>",
+          "يعرض المتنبّئون الإصابات ويُخفون الإخفاقات. <strong>تحيّز الناجين حقيقي.</strong>"
+        ]
+      },
+      "baccarat": {
+        "facts": [
+          "<strong>رهان البيت (Banker):</strong> ميزة 1.06% (الأفضل في اللعبة).",
+          "<strong>رهان اللاعب (Player):</strong> ميزة 1.24%.",
+          "<strong>رهان التعادل (Tie):</strong> ميزة 14.4% — يُستحسن تجنّبه.",
+          "تتبّع الأنماط لا يُغيّر الاحتمالات. <strong>كل جولة حدث مستقل.</strong>"
+        ]
+      },
+      "video-poker": {
+        "facts": [
+          "مع الاستراتيجية المثلى، تقدّم بعض الصيغ <strong>نسبة عائد تفوق 99%.</strong>",
+          "<strong>Jacks or Better (9/6)</strong> المعيار الذهبي بنسبة 99.54%.",
+          "بخلاف ماكينات القمار، <strong>تؤثّر القرارات على النتيجة فعلاً.</strong>",
+          "يُستحسن دائماً اللعب <strong>بأقصى عدد قطع نقدية</strong> — إذ يُشترط ذلك لمكافأة Royal Flush."
+        ]
+      },
+      "craps": {
+        "facts": [
+          "<strong>Pass / Don’t Pass:</strong> ميزة البيت 1.41% (الأفضل).",
+          "<strong>Odds bet:</strong> ميزة البيت 0% — الرهان العادل الوحيد في الكازينو.",
+          "الرهانات الاقتراحية تبدو مغرية، غير أن <strong>ميزة البيت قد تبلغ 16.7%.</strong>",
+          "النرد عشوائي. <strong>«الرمي المحكوم» وهم لا أساس له.</strong>"
+        ]
+      },
+      "lottery": {
+        "facts": [
+          "ضمن منتجات الرهان، اليانصيب صاحب <strong>أعلى ميزة بيت.</strong>",
+          "شراء 10 تذاكر يضاعف احتمالاً قريباً من الصفر عشر مرات. <strong>10 × شبه صفر ≈ شبه صفر.</strong>",
+          "لا تركيبة أرقام أكثر احتمالاً من غيرها. <strong>العشوائية لا تفضّل أحداً.</strong>",
+          "العائد المتوقّع عادةً <strong>0.40–0.60 دولار لكل دولار مراهن.</strong>"
+        ]
+      },
+      "bingo": {
+        "facts": [
+          "يعتمد الاحتمال على <strong>إجمالي البطاقات في اللعبة،</strong> لا على البطاقات المُمسكة.",
+          "البطاقات الإضافية ترفع الاحتمال قليلاً، غير أن <strong>جميع المشاركين يتنافسون في الوقت نفسه.</strong>",
+          "تُسحب الأرقام عشوائياً. <strong>لا نمط ولا استراتيجية تُغيّر الحساب.</strong>",
+          "تقتطع الجهة المشغّلة حصتها من مجموع الجوائز، وهي عادة <strong>5–25%.</strong>"
+        ]
+      }
+    }
+  },
+  "games": {
+    "slots": "ماكينات القمار",
+    "blackjack": "بلاك جاك",
+    "roulette": "الروليت",
+    "sports-betting": "رهانات الرياضة",
+    "baccarat": "الباكارا",
+    "video-poker": "فيديو بوكر",
+    "craps": "كرابس",
+    "lottery": "اليانصيب",
+    "bingo": "بينغو"
+  }
+}
+</script>
+<!-- Myth data bundles (per-language). Read by the main IIFE and the i18n
+     reinit hook so the quiz works offline and in any serve context. -->
+<script type="application/json" id="pb-myths-en">
+{
+  "meta": {
+    "count": 18,
+    "generated": "2026-03-07T03:29:15.142Z",
+    "version": "0.1.0",
+    "source": "messaging/myth-busting.md"
+  },
+  "frontmatter": {
+    "content_type": "myth-bust",
+    "title": "Myth Busting",
+    "pillar": [
+      "open",
+      "social"
+    ],
+    "tier": [
+      1
+    ],
+    "tone": [
+      "playful-witty",
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "audience": [
+      "general"
+    ],
+    "channel": [
+      "social-media",
+      "blog",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "currency": "usd",
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Game-specific myths: Some reference US casino culture.\nHumor: One-liners use irreverent tone. Adapt for profile.\nFormat: Social card copy may need cultural adjustment.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "title": "The Hot Streak",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "clustering-illusion",
+        "hot-hand-fallacy"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I'm on a hot streak — keep going!",
+        "fact": "Every spin is statistically independent. The machine doesn't know you just won. Your brain sees a streak. The math sees coin flips.",
+        "stat": "0% chance your last result affects the next spin."
+      },
+      "articleExplainer": "You just hit three wins in a row. Everything in your body is screaming *keep playing*. Your brain has spotted a pattern and it's convinced the machine is \"hot.\"\n\nHere's the thing: there is no pattern. Slot machines use random number generators (RNGs) that produce a new, independent outcome every single spin. The machine has no memory of your last result — no hot streaks, no cold streaks, just math.\n\nThis is called the *clustering illusion* — our brains are pattern-recognition engines, and they're very good at finding patterns even where none exist. Three wins in a row feel meaningful. Statistically, they're just noise.\n\nThe house edge doesn't change because you're winning. It's baked into the math of every spin, whether it's your first or your hundredth.",
+      "quiz": {
+        "question": "You've won 4 spins in a row on a slot machine. What are the odds on spin 5?",
+        "options": [
+          {
+            "label": "Better than normal — you're on a streak",
+            "correct": false
+          },
+          {
+            "label": "Worse than normal — you're \"due\" for a loss",
+            "correct": false
+          },
+          {
+            "label": "Exactly the same as every other spin",
+            "correct": true
+          },
+          {
+            "label": "Depends on how much you bet",
+            "correct": false
+          }
+        ],
+        "feedback": "Every spin is independent. The machine doesn't know — or care — what happened before. Streaks are something your brain invented, not something the game created."
+      }
+    },
+    {
+      "id": 2,
+      "title": "Due for a Win",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "gambler-s-fallacy"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "This machine hasn't paid out in ages — it's due.",
+        "fact": "Slot machines don't keep score. Each spin is generated independently by an RNG. A machine that hasn't paid out in 200 spins has the exact same odds on spin 201.",
+        "stat": "An RNG generates thousands of numbers per second — even between spins."
+      },
+      "articleExplainer": "You've been sitting at a machine for an hour. Nothing. The person before you also walked away empty. So the machine *must* be ready to pay out, right?\n\nThis is the gambler's fallacy — the belief that past outcomes influence future ones in a random system. It's one of the most common (and most costly) misconceptions in gambling.\n\nRandom number generators don't have a memory, a quota, or a schedule. They don't \"owe\" anyone a win. The probability of hitting a jackpot on the next spin is identical whether the machine paid out 30 seconds ago or 30 hours ago.\n\nThink of it like flipping a coin. If you flip heads 10 times in a row, the next flip is still 50/50. The coin doesn't know what happened before. Neither does the slot machine.",
+      "quiz": {
+        "question": "A slot machine hasn't paid out in 3 hours. What does that tell you about the next spin?",
+        "options": [
+          {
+            "label": "It's more likely to pay out soon",
+            "correct": false
+          },
+          {
+            "label": "It's less likely to pay out — it's \"cold\"",
+            "correct": false
+          },
+          {
+            "label": "Nothing — each spin is independent",
+            "correct": true
+          },
+          {
+            "label": "The machine is broken",
+            "correct": false
+          }
+        ],
+        "feedback": "Random number generators have no memory. Three hours of losses tells you nothing about what happens next. Every spin starts fresh."
+      }
+    },
+    {
+      "id": 3,
+      "title": "The Lucky Machine",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "anthropomorphism",
+        "magical-thinking"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "That's my lucky machine.",
+        "fact": "Slot machines don't have personalities, moods, or loyalty programs for regulars. Your \"lucky machine\" has the emotional range of a toaster. The RNG doesn't know you're sitting there.",
+        "stat": "Slot outcomes are determined ~1,000x per second by an RNG. None of those calculations involve who's playing."
+      },
+      "articleExplainer": "We give slot machines names. We sit at the same one every visit. We feel *betrayed* when \"our\" machine pays out to someone else.\n\nHere's what's actually happening inside: a random number generator cycling through thousands of outcomes per second. It doesn't know who you are. It doesn't reward loyalty. It doesn't punish abandonment. It's a processor running math.\n\nThe reason some machines *feel* luckier is a mix of confirmation bias (you remember the wins, forget the losses) and the simple fact that you've spent more time there. More time = more spins = more chances to hit both wins and losses.\n\nEvery machine with the same game and configuration has the same probability profile. Your \"lucky machine\" and the one gathering dust in the corner are mathematically identical.",
+      "quiz": {
+        "question": "You always win more on the same slot machine. Why?",
+        "options": [
+          {
+            "label": "The machine has learned your play style",
+            "correct": false
+          },
+          {
+            "label": "You've built up loyalty credits",
+            "correct": false
+          },
+          {
+            "label": "Confirmation bias — you remember wins and forget losses",
+            "correct": true
+          },
+          {
+            "label": "You've figured out its pattern",
+            "correct": false
+          }
+        ],
+        "feedback": "You remember the wins on \"your\" machine and forget the losses. That's confirmation bias. The machine treats every player — and every spin — identically."
+      }
+    },
+    {
+      "id": 4,
+      "title": "Near Misses Mean You're Close",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "near-miss-effect"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Two cherries and a blank — I almost hit it! One more try.",
+        "fact": "A near miss on a slot machine is not \"almost winning.\" The RNG doesn't generate \"close\" outcomes. What you see on the reels is a display — the result was decided the instant you pressed spin.",
+        "stat": "Near misses are statistically no closer to a win than any other losing combination."
+      },
+      "articleExplainer": "Two matching symbols and a blank. Your heart rate jumps. You think: *I was so close!*\n\nYou weren't close. In modern slot machines, the outcome is determined by the RNG the instant you press the button. The spinning reels are an animation — a visual representation of a result that's already been decided. The reels don't \"almost land\" on anything. They land exactly where the math tells them to.\n\nNear misses feel significant because your brain processes them the same way it processes actual wins — the same neural pathways light up, the same dopamine fires. Research shows that near misses increase the urge to keep playing, which is why they feel so motivating.\n\nBut mathematically, a near miss carries the same information as any other loss: you didn't win this spin. The next spin is independent.",
+      "quiz": {
+        "question": "You see two matching symbols and a blank on a slot machine. What does that mean?",
+        "options": [
+          {
+            "label": "You're getting closer to a win",
+            "correct": false
+          },
+          {
+            "label": "The machine is warming up",
+            "correct": false
+          },
+          {
+            "label": "Nothing — it's a loss like any other",
+            "correct": true
+          },
+          {
+            "label": "You should increase your bet",
+            "correct": false
+          }
+        ],
+        "feedback": "Near misses feel exciting, but they carry zero predictive value. The RNG decided the result before the reels even started spinning. \"Almost\" isn't a thing in random outcomes."
+      }
+    },
+    {
+      "id": 5,
+      "title": "Time of Day Matters",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "magical-thinking",
+        "illusory-correlation"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Slots pay out more at night / weekends / when the casino is full.",
+        "fact": "Payout percentages are set in the game software and approved by regulators. Casinos can't flip a switch to change them based on time of day, foot traffic, or the phase of the moon.",
+        "stat": "Changing a slot machine's RTP typically requires regulatory approval, a software change, and machine downtime."
+      },
+      "articleExplainer": "The theory sounds logical: casinos want to attract players during slow periods, so they loosen the machines at off-peak times. Or they tighten them on weekends when the floor is packed.\n\nIn reality, this doesn't happen. Return-to-player (RTP) percentages are embedded in the game software, certified by independent testing labs, and approved by gaming regulators. Changing the RTP on a machine isn't like adjusting a thermostat — it requires a software update, regulatory paperwork, and in most jurisdictions the machine has to be taken offline.\n\nCasinos absolutely *can* choose machines with different RTP settings when they buy or configure them. But they can't adjust them on the fly in response to traffic. The machine paying out at 2 AM and 2 PM is running the same math.\n\nIf you notice more wins at certain times, it's likely because you play longer during those periods — more spins means more wins *and* more losses.",
+      "quiz": {
+        "question": "Do slot machines pay out more at certain times of day?",
+        "options": [
+          {
+            "label": "Yes — casinos loosen them at night to attract players",
+            "correct": false
+          },
+          {
+            "label": "Yes — they tighten them on weekends when it's busy",
+            "correct": false
+          },
+          {
+            "label": "No — RTP is set in software and regulated",
+            "correct": true
+          },
+          {
+            "label": "It varies by casino",
+            "correct": false
+          }
+        ],
+        "feedback": "Payout percentages are baked into the game software and certified by regulators. Casinos can't adjust them based on the clock or crowd size."
+      }
+    },
+    {
+      "id": 6,
+      "title": "Higher Bets Improve Your Odds",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "proportionality-bias"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Bet max for better odds.",
+        "fact": "The house edge is the same whether you bet $0.25 or $25. Bigger bets mean bigger potential wins *and* bigger potential losses — but the math behind each spin doesn't change.",
+        "stat": "The house edge percentage stays constant regardless of bet size. A 5% edge takes 5 cents of every dollar or $5 of every $100."
+      },
+      "articleExplainer": "There's a persistent belief that maximum bets unlock better odds. On older mechanical machines with progressive jackpots, max bet was sometimes required to be *eligible* for the top prize — but that didn't change the underlying probability. On modern video slots, the math is the math regardless of wager size.\n\nThe house edge is a percentage. It applies equally to small and large bets. Betting $1 per spin on a game with a 5% edge costs you an average of 5 cents per spin. Betting $10 per spin on the same game costs you an average of 50 cents per spin. The *rate* of loss is identical — you're just scaling it up.\n\nBigger bets do increase *variance* — you'll see wider swings in both directions. But variance isn't the same as better odds. It's the same odds with louder volume.",
+      "quiz": {
+        "question": "If you increase your bet from $1 to $10, what happens to the house edge?",
+        "options": [
+          {
+            "label": "It goes down — casinos reward bigger bettors",
+            "correct": false
+          },
+          {
+            "label": "It goes up — the casino takes more",
+            "correct": false
+          },
+          {
+            "label": "It stays exactly the same",
+            "correct": true
+          },
+          {
+            "label": "It depends on the machine",
+            "correct": false
+          }
+        ],
+        "feedback": "The house edge is a percentage. It applies equally no matter your bet size. Bigger bets = bigger swings, not better odds."
+      }
+    },
+    {
+      "id": 7,
+      "title": "Betting Systems Beat the House",
+      "category": "Table Games",
+      "gameType": [
+        "roulette",
+        "blackjack",
+        "baccarat"
+      ],
+      "bias": [
+        "gambler-s-fallacy",
+        "illusion-of-control"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Just use the Martingale system — double your bet after every loss. You'll always come out ahead.",
+        "fact": "No betting system changes the house edge. Martingale requires infinite money, no table limits, and infinite time — none of which exist. In reality, it turns many small wins into occasional catastrophic losses.",
+        "stat": "With a $10 starting bet on roulette, 8 consecutive losses (which happen ~1 in 170 attempts) requires a $2,560 bet — often exceeding table limits."
+      },
+      "articleExplainer": "The Martingale system is elegant in theory: bet $10, lose, bet $20, lose, bet $40, lose, bet $80, win — and you're $10 up. Simple. Foolproof. Except for the \"fool\" part.\n\nThe system works perfectly in a universe with no table limits, infinite bankrolls, and unlimited time. In our universe, it breaks in two ways. First, tables have maximum bets. After a losing streak of 7-8 rounds, your required bet often exceeds the table maximum. Game over. Second, even without limits, the exponential growth of bets means a single bad run can wipe out hundreds of small wins.\n\nThe house edge on each individual bet remains unchanged no matter how you structure your wagers. No sequence of bets can turn a negative-expectation game into a positive one. The Martingale doesn't change the math — it changes *when* you lose, not *whether* you lose.\n\nThis applies to every \"system\" — Fibonacci, D'Alembert, Labouchere. If the underlying game has a house edge, no pattern of bet sizing eliminates it.",
+      "quiz": {
+        "question": "What happens if you use the Martingale system (doubling your bet after each loss) on roulette?",
+        "options": [
+          {
+            "label": "You'll always come out ahead eventually",
+            "correct": false
+          },
+          {
+            "label": "The house edge disappears over time",
+            "correct": false
+          },
+          {
+            "label": "You trade many small wins for occasional devastating losses",
+            "correct": true
+          },
+          {
+            "label": "It depends on how disciplined you are",
+            "correct": false
+          }
+        ],
+        "feedback": "No betting system changes the underlying math. Martingale turns small losses into rare but huge ones. Table limits and finite bankrolls make it fail in practice."
+      }
+    },
+    {
+      "id": 8,
+      "title": "The Dealer Is Hot or Cold",
+      "category": "Table Games",
+      "gameType": [
+        "blackjack",
+        "baccarat",
+        "poker"
+      ],
+      "bias": [
+        "clustering-illusion",
+        "anthropomorphism"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Switch tables — that dealer is too hot.",
+        "fact": "Dealers don't influence the outcome. They follow fixed rules (hit on 16, stand on 17) with no discretion. Cards are shuffled randomly. A \"hot\" dealer is just variance you've assigned a face to.",
+        "stat": "Blackjack dealers make zero decisions. They follow a mandatory script printed on the felt."
+      },
+      "articleExplainer": "The dealer just beat six players in a row. Everyone at the table is muttering. Someone leaves. You're thinking about following.\n\nBut the dealer isn't making decisions. In blackjack, the dealer's actions are entirely scripted — hit below 17, stand at 17 or above. No judgment calls, no strategy, no streaks of brilliance. The dealer is executing a fixed algorithm.\n\nThe cards themselves are randomly shuffled (or drawn from a continuously shuffled shoe). The order has nothing to do with who's dealing. If the same cards were dealt by a different person — or by a machine — the outcomes would be identical.\n\nWhen a dealer seems \"hot,\" you're watching a short sequence of random outcomes and assigning them a narrative. That's what brains do. But the next hand's probability is determined by the remaining cards in the shoe, not by the dealer's track record.",
+      "quiz": {
+        "question": "Three players in a row just lost to the dealer. Should you switch tables?",
+        "options": [
+          {
+            "label": "Yes — this dealer is \"hot\" and likely to keep winning",
+            "correct": false
+          },
+          {
+            "label": "No — staying gives you better odds because the dealer is \"due\" to lose",
+            "correct": false
+          },
+          {
+            "label": "It makes no difference — the dealer follows fixed rules and cards are random",
+            "correct": true
+          },
+          {
+            "label": "Yes — but only if the dealer is shuffling manually",
+            "correct": false
+          }
+        ],
+        "feedback": "Dealers follow mandatory rules with zero discretion. A \"hot dealer\" is just random variance you've put a face on. Switching tables doesn't change the math."
+      }
+    },
+    {
+      "id": 9,
+      "title": "Card Counting Is Easy Money",
+      "category": "Table Games",
+      "gameType": [
+        "blackjack"
+      ],
+      "bias": [
+        "overconfidence-bias",
+        "survivorship-bias"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I saw it in a movie — just count cards and beat the house.",
+        "fact": "Card counting is real math, but it requires hundreds of hours of practice, a large bankroll to survive variance, and casinos actively work to detect and counter it. Most people who try it lose money.",
+        "stat": "Even a skilled card counter's edge is typically 0.5–1.5% — meaning thousands of hands before the advantage plays out, with high variance along the way."
+      },
+      "articleExplainer": "Card counting works in principle. By tracking the ratio of high to low cards remaining in a shoe, a player can identify moments when the odds tilt slightly in their favor and bet accordingly. The math is real. The movies, however, are not.\n\nWhat the movies leave out: the edge from card counting is small — typically 0.5% to 1.5% over the house. That means playing thousands of hands to realize any statistical advantage, while enduring long losing streaks along the way. You need a substantial bankroll, precise execution under casino conditions, and the discipline to stick to the count when you're deep in a loss.\n\nMeanwhile, casinos use continuous shuffling machines, multi-deck shoes, card-counting detection software, and the right to ask you to leave. The practical window for card counting has been shrinking for decades.\n\nCan it work? For a small number of highly disciplined players with specific conditions, yes. Is it easy money? Not remotely.",
+      "quiz": {
+        "question": "What edge does a skilled card counter typically have over the casino?",
+        "options": [
+          {
+            "label": "10-15% — it's very profitable",
+            "correct": false
+          },
+          {
+            "label": "5-10% — solid income",
+            "correct": false
+          },
+          {
+            "label": "0.5-1.5% — small edge that requires thousands of hands",
+            "correct": true
+          },
+          {
+            "label": "0% — it doesn't actually work",
+            "correct": false
+          }
+        ],
+        "feedback": "Card counting is real but the edge is tiny (0.5-1.5%), requires a huge bankroll, and casinos actively counter it. It's nothing like the movies."
+      }
+    },
+    {
+      "id": 10,
+      "title": "Choosing \"Your\" Numbers Improves Odds",
+      "category": "Table Games",
+      "gameType": [
+        "roulette",
+        "lottery"
+      ],
+      "bias": [
+        "illusion-of-control"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I always play 17 — it's my lucky number.",
+        "fact": "Every number on a roulette wheel has the same probability on every spin. The ball doesn't know it's your birthday. Choosing \"your\" number gives you a sense of control over a random outcome — but doesn't change the math.",
+        "stat": "On a European roulette wheel, every number has a 1-in-37 chance (2.7%). On American roulette, it's 1-in-38 (2.63%). Your number isn't special."
+      },
+      "articleExplainer": "Picking \"your\" number feels like a strategy. You've chosen 17 because it's your birthday, your jersey number, or it just *feels* right. And when it hits, it feels like vindication.\n\nThis is the *illusion of control* — the tendency to believe that personal involvement in a random process improves the outcome. Choosing a number feels different from accepting a random one, even though the probabilities are identical.\n\nOn a European roulette wheel, each number has a 1-in-37 chance. On American roulette, 1-in-38. These odds don't change based on who picked the number, why they picked it, or how many times they've played it before.\n\nThe same applies to lottery numbers. Picking your own numbers vs. using a quick pick gives you the same odds of winning. The one practical advantage of unusual number choices? If you *do* win a shared jackpot, you're less likely to split it with others who picked the same popular numbers (like birthdays 1-31).",
+      "quiz": {
+        "question": "In roulette, you always bet on number 7 and it hasn't come up in 50 spins. What are the odds it comes up next?",
+        "options": [
+          {
+            "label": "Higher — it's overdue",
+            "correct": false
+          },
+          {
+            "label": "Lower — it's clearly unlucky today",
+            "correct": false
+          },
+          {
+            "label": "The same as always: 1-in-37",
+            "correct": true
+          },
+          {
+            "label": "It depends on where the dealer drops the ball",
+            "correct": false
+          }
+        ],
+        "feedback": "Each spin is independent. Number 7 has a 1-in-37 chance (European) every single spin, regardless of what happened on the previous 50, 500, or 5,000 spins."
+      }
+    },
+    {
+      "id": 11,
+      "title": "Knowing the Sport Means You'll Win",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "overconfidence-bias",
+        "dunning-kruger-effect"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I know football better than anyone — of course I'll make money betting on it.",
+        "fact": "Sports knowledge helps you form opinions. But the sportsbook already knows everything you know (and more), and it's priced into the odds. Beating the line consistently means being smarter than the market, not just the sport.",
+        "stat": "Professional sports bettors need to win ~52.4% of spread bets at -110 just to break even. Most recreational bettors win around 48-50%."
+      },
+      "articleExplainer": "You've watched every game this season. You know the injury report, the coaching changes, the weather forecast. You're confident. You should be — knowledge is great.\n\nBut here's what many bettors miss: the odds aren't set in a vacuum. Sportsbooks employ teams of analysts using advanced models, historical data, and real-time market information. Every piece of knowledge you have is already priced into the line. To win *consistently*, you don't just need to know the sport — you need to know something the market doesn't.\n\nAt standard -110 odds, you need to win 52.4% of your bets to break even. The sportsbook's cut (the \"vig\" or \"juice\") means that even a knowledgeable bettor picking at random would expect to lose over time. Studies consistently show that recreational bettors' win rates cluster around 48-50% — close enough to feel like skill, but below the break-even threshold.\n\nSports knowledge makes watching more fun. It doesn't reliably translate to profit.",
+      "quiz": {
+        "question": "You're an expert on a sport. What win rate do you need on -110 spread bets just to break even?",
+        "options": [
+          {
+            "label": "50% — just win half",
+            "correct": false
+          },
+          {
+            "label": "About 52.4% — enough to cover the vig",
+            "correct": true
+          },
+          {
+            "label": "55% — a small edge",
+            "correct": false
+          },
+          {
+            "label": "60% — you need a clear advantage",
+            "correct": false
+          }
+        ],
+        "feedback": "At standard -110 odds, the sportsbook's cut means you need to win about 52.4% to break even. Most recreational bettors — regardless of expertise — win around 48-50%."
+      }
+    },
+    {
+      "id": 12,
+      "title": "Parlays Are a Smart Strategy",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "optimism-bias",
+        "probability-neglect"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Parlays pay way more — they're the smart play.",
+        "fact": "Parlays pay more because they're harder to hit. Each leg multiplies the risk. The sportsbook's edge compounds with every game you add. A 4-leg parlay at -110 gives the house roughly a 20% edge — vs. ~4.5% on a single bet.",
+        "stat": "A 4-leg parlay at even odds has a 6.25% chance of hitting. The payout doesn't fully compensate for that risk."
+      },
+      "articleExplainer": "A parlay turns $10 into $120. It's the lottery ticket of sports betting — small stake, big potential payout. And that's exactly why sportsbooks love them.\n\nEach leg of a parlay is an independent bet. To win, you need *all* of them to hit. If each bet individually is roughly 50/50, the math gets steep fast: a 2-leg parlay is 25%, a 3-leg is 12.5%, a 4-leg is 6.25%, and a 5-leg is just 3.1%.\n\nHere's the part that hurts: the sportsbook's edge (the vig) compounds on every leg. On a single -110 bet, the house edge is about 4.5%. On a 4-leg parlay, it balloons to roughly 20%. The big payout numbers look exciting, but they're *less* than fair odds for the actual probability — the sportsbook keeps a larger share as you add legs.\n\nParlays are entertainment. They can make a Sunday of football more exciting for a small stake. But they're not a strategy, and the math strongly favors the house.",
+      "quiz": {
+        "question": "You add a 4th game to your parlay. What happens to the sportsbook's edge?",
+        "options": [
+          {
+            "label": "It stays the same — about 4.5%",
+            "correct": false
+          },
+          {
+            "label": "It actually decreases because the payout is bigger",
+            "correct": false
+          },
+          {
+            "label": "It roughly doubles or triples — compounding on each leg",
+            "correct": true
+          },
+          {
+            "label": "It depends on which sports you pick",
+            "correct": false
+          }
+        ],
+        "feedback": "The sportsbook's edge compounds with every leg. A 4-leg parlay has roughly 4x the house edge of a single bet. The big payout compensates for most — but not all — of the added risk."
+      }
+    },
+    {
+      "id": 13,
+      "title": "Following Tipsters Guarantees Profit",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "authority-bias",
+        "survivorship-bias"
+      ],
+      "pillar": "open + social",
+      "socialCard": {
+        "myth": "This tipster is 80% on their last 10 picks — follow the money!",
+        "fact": "Tipsters highlight their wins and bury their losses. A 10-pick sample is statistically meaningless. Even a coin-flipper will have streaks of 7-8 wins in 10. Long-term, most tipsters perform no better than chance.",
+        "stat": "A 10-pick winning streak at 50% base odds happens roughly 1 in 1,000 times. With thousands of tipsters posting, someone will always be \"hot.\""
+      },
+      "articleExplainer": "Scroll through social media and you'll find tipsters with incredible recent records. 8 out of 10. 15-game winning streaks. \"Just follow my picks and you can't lose.\"\n\nThis is *survivorship bias* in action. You're seeing the tipsters who are currently on a streak. You're not seeing the thousands who are at 4-out-of-10 and not posting about it. And you're not seeing the featured tipster's full history — just the window that looks impressive.\n\nHere's the math: if 1,000 people flip a coin 10 times, roughly one of them will get 10 heads. That person isn't a genius — they're a statistical inevitability. Tipsters work the same way. In any given week, *someone* will be on a hot streak. By the time you find them and follow them, the streak is likely to regress to the mean.\n\nThe profitable tipsters — the genuine ones — rarely advertise. And their edge, if it exists, is small enough that it disappears after they take their cut.",
+      "quiz": {
+        "question": "A tipster has picked 8 winners out of 10 this week. What does that tell you?",
+        "options": [
+          {
+            "label": "They have a proven system — follow their picks",
+            "correct": false
+          },
+          {
+            "label": "They're likely to keep winning at this rate",
+            "correct": false
+          },
+          {
+            "label": "A 10-pick sample is too small to draw any conclusion",
+            "correct": true
+          },
+          {
+            "label": "They must have inside information",
+            "correct": false
+          }
+        ],
+        "feedback": "Short winning streaks are statistically inevitable. With thousands of tipsters posting, someone will always be \"hot\" right now. A 10-pick sample tells you almost nothing about long-term accuracy."
+      }
+    },
+    {
+      "id": 14,
+      "title": "In-Play Betting Gives You an Edge",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "illusion-of-control",
+        "overconfidence"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I can see how the game is going — live betting lets me react and win.",
+        "fact": "Sportsbooks update live odds in milliseconds using algorithms faster than any human. By the time you've spotted a shift, the line has already moved. In-play betting also means faster decisions, more bets, and less thinking time.",
+        "stat": "Average time between in-play wagers is under 30 seconds — far less than the deliberation time most pre-match bettors take."
+      },
+      "articleExplainer": "In-play betting feels like a superpower. You're watching the game, you can *see* what's happening, and you can react in real time. It feels like an information advantage.\n\nExcept the sportsbook's algorithms are reacting faster than you are. Live odds are recalculated in milliseconds using statistical models, real-time data feeds, and market flow. By the time you've noticed that the momentum has shifted, the line has already moved. You're not ahead of the market — you're behind it.\n\nThere's a second issue: pace. In-play betting compresses decision-making time from hours (pre-match research) to seconds. Faster decisions typically mean less analysis, more emotional betting, and more total wagers per session. More bets at a negative expected value means faster losses.\n\nNone of this makes in-play betting \"bad\" — it's exciting and it adds to the entertainment. But the idea that watching the game gives you an edge over algorithms processing thousands of data points per second doesn't hold up.",
+      "quiz": {
+        "question": "When you place a live in-play bet based on what you see in the game, you're:",
+        "options": [
+          {
+            "label": "Ahead of the sportsbook — you're reacting to what you see",
+            "correct": false
+          },
+          {
+            "label": "Using information the sportsbook doesn't have",
+            "correct": false
+          },
+          {
+            "label": "Typically behind the algorithm, which already adjusted the line",
+            "correct": true
+          },
+          {
+            "label": "Guaranteed better odds than pre-match",
+            "correct": false
+          }
+        ],
+        "feedback": "Sportsbooks recalculate live odds in milliseconds. By the time you react to what you see, the line has already moved. In-play is exciting, but it's not an information edge."
+      }
+    },
+    {
+      "id": 15,
+      "title": "Some Numbers Are \"Due\"",
+      "category": "Lottery & Scratch Cards",
+      "gameType": [
+        "lottery"
+      ],
+      "bias": [
+        "gambler-s-fallacy"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Number 23 hasn't been drawn in months — it's overdue.",
+        "fact": "Lottery draws are independent events. The balls don't know which numbers came up last week. Every combination has the same probability every single draw, no matter what happened before.",
+        "stat": "In a 6/49 lottery, every single combination has a 1-in-13,983,816 chance. Every. Single. Draw."
+      },
+      "articleExplainer": "Lottery websites show \"hot\" and \"cold\" numbers. Some players track which numbers haven't appeared recently and assume they're \"due\" to come up. It feels logical — a form of balance, like the universe evening things out.\n\nBut lottery draws are the purest form of independence in gambling. Physical lottery balls have no memory. The machine that draws them doesn't consult a history. Each draw is a completely fresh random event.\n\nIn a standard 6/49 lottery, every combination of six numbers has a 1-in-13,983,816 chance — whether those numbers came up last week or haven't appeared in a year. The \"cold\" number has the same chance as the \"hot\" one.\n\nThe reason number-tracking feels useful is the same pattern recognition that makes humans brilliant at most things but terrible at understanding randomness. We see absence and expect correction. In random systems, there's no correction mechanism — just more randomness.",
+      "quiz": {
+        "question": "Number 42 hasn't appeared in the lottery for 6 months. Is it more likely to appear next draw?",
+        "options": [
+          {
+            "label": "Yes — it's statistically overdue",
+            "correct": false
+          },
+          {
+            "label": "Yes — the law of averages says it must come up eventually",
+            "correct": false
+          },
+          {
+            "label": "No — each draw is independent and every number has equal odds",
+            "correct": true
+          },
+          {
+            "label": "It depends on how many total numbers are in the draw",
+            "correct": false
+          }
+        ],
+        "feedback": "Lottery balls don't track their own history. Each draw is a completely independent event. Number 42 has the same odds whether it appeared yesterday or hasn't shown up in a year."
+      }
+    },
+    {
+      "id": 16,
+      "title": "Buying More Tickets Dramatically Improves Odds",
+      "category": "Lottery & Scratch Cards",
+      "gameType": [
+        "lottery"
+      ],
+      "bias": [
+        "probability-neglect",
+        "proportionality-bias"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I'll buy 10 tickets — that's 10x the chance!",
+        "fact": "Technically true. But 10 times a near-zero chance is still a near-zero chance. Going from 1-in-14-million to 10-in-14-million doesn't meaningfully change your probability. You've spent 10x the money to move from \"almost impossible\" to \"still almost impossible.\"",
+        "stat": "10 tickets in a 6/49 lottery gives you a 0.0000715% chance of the jackpot. That's a 99.99993% chance of *not* winning."
+      },
+      "articleExplainer": "\"More tickets = more chances\" is technically correct. If one ticket gives you a 1-in-14-million chance, ten tickets give you 10-in-14-million. You've genuinely multiplied your probability by ten.\n\nThe problem is scale. Multiplying a tiny number by ten gives you a slightly-less-tiny number. Your chance goes from 0.00000715% to 0.0000715%. You've spent 10x the money to move from an almost-impossible chance to a still-almost-impossible chance.\n\nHere's another way to think about it: to have even a 50% chance of winning a 6/49 lottery, you'd need to buy about 9.7 million tickets — at a cost of roughly $10-20 million, for a jackpot that may be smaller than that.\n\nThis isn't an argument against playing the lottery. It's an argument for understanding what you're buying. A lottery ticket is entertainment — the fantasy of what you'd do with the winnings, the brief excitement of the draw. Buying more tickets mostly increases the cost of that entertainment, not the likelihood of the outcome.",
+      "quiz": {
+        "question": "You buy 100 lottery tickets instead of 1. How much did your odds improve?",
+        "options": [
+          {
+            "label": "You're basically guaranteed to win something",
+            "correct": false
+          },
+          {
+            "label": "You went from 1-in-14-million to 100-in-14-million — still 99.999% unlikely",
+            "correct": true
+          },
+          {
+            "label": "You now have a 1% chance of winning",
+            "correct": false
+          },
+          {
+            "label": "It depends on the jackpot size",
+            "correct": false
+          }
+        ],
+        "feedback": "100x a near-zero probability is still near-zero. You've moved from 0.000007% to 0.0007%. Lottery tickets are entertainment, not investments — buying more mostly increases the cost."
+      }
+    },
+    {
+      "id": 17,
+      "title": "You Can Win Back Your Losses",
+      "category": "Online & General",
+      "gameType": [
+        "all-gambling"
+      ],
+      "bias": [
+        "sunk-cost-fallacy",
+        "loss-aversion"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I'm down $200 — I need to keep playing to win it back.",
+        "fact": "Every new bet is a new bet. The house edge doesn't change because you're losing. Chasing losses means making more bets at a mathematical disadvantage, which on average digs the hole deeper.",
+        "stat": "The probability of recovering a loss by continued play *decreases* the more you play, because the house edge works against you on every additional bet."
+      },
+      "articleExplainer": "You're down $200. You came with $300. If you can just win that $200 back, you'll walk away. So you keep playing.\n\nThis is the *sunk cost fallacy* — the tendency to continue a behavior because of previously invested resources (time, money, emotion) rather than evaluating the current situation on its own terms.\n\nHere's the reality: your $200 is gone. It's not sitting in the machine waiting to come back. Every new bet you make starts fresh with the same house edge as your first bet. The math doesn't care that you're behind. Continued play at a mathematical disadvantage *increases* your expected total loss, not your chances of recovery.\n\nThis is one of the most important concepts in gambling literacy: **past results don't change future probabilities**. Your next bet is evaluated purely on its own odds. The fact that you're \"down\" is emotionally relevant to you, but mathematically irrelevant to the game.\n\nSetting a loss limit before you start — and sticking to it — is the most effective counter to this pattern. It takes the decision out of the emotional moment.",
+      "quiz": {
+        "question": "You've lost $200. If you keep playing to win it back, what typically happens?",
+        "options": [
+          {
+            "label": "Most players recover their losses within an hour",
+            "correct": false
+          },
+          {
+            "label": "The odds shift in your favor after a losing streak",
+            "correct": false
+          },
+          {
+            "label": "On average, you lose more — the house edge compounds",
+            "correct": true
+          },
+          {
+            "label": "It depends on which game you switch to",
+            "correct": false
+          }
+        ],
+        "feedback": "Chasing losses means making more bets at a mathematical disadvantage. On average, it makes the total loss larger. Setting a limit before you play is the best defense."
+      }
+    },
+    {
+      "id": 18,
+      "title": "Gambling Is a Way to Make Money",
+      "category": "Online & General",
+      "gameType": [
+        "all-gambling"
+      ],
+      "bias": [
+        "optimism-bias",
+        "fundamental-attribution-error"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I can make a living from gambling if I learn enough.",
+        "fact": "The house edge means that across all games, the math favors the operator over time. A tiny number of professional gamblers exist, but they treat it like a job — with bankroll management, statistical models, and an acceptance of long losing periods. For 99%+ of players, gambling is entertainment with a cost.",
+        "stat": "The global gambling industry generates hundreds of billions in revenue annually. That revenue is the sum of player losses minus player wins."
+      },
+      "articleExplainer": "Everyone knows someone who \"always wins.\" Or they've read about the professional poker player who made millions. If *they* can do it, why can't you?\n\nHere's the full picture: professional gamblers do exist, but they represent a vanishingly small percentage of all players. They focus on the few games where skill has a meaningful impact (poker, sports betting, some advantage play in blackjack). They treat it as a job with long hours, extensive study, rigorous bankroll management, and significant periods of negative results. And many of them — even successful ones — have periods where they question whether it's sustainable.\n\nFor the vast majority of gambling products — slots, roulette, lottery, most casino games — there is no skill component that overcomes the house edge over time. These are entertainment products with a built-in cost, like movies, concerts, or theme parks.\n\nUnderstanding this isn't pessimistic — it's empowering. When you frame gambling as entertainment with a budget, you can enjoy it without the pressure of needing to \"come out ahead.\" The goal isn't to beat the house. The goal is to have fun on your own terms.",
+      "quiz": {
+        "question": "Over time, most gambling games are designed to:",
+        "options": [
+          {
+            "label": "Break even for both the player and the house",
+            "correct": false
+          },
+          {
+            "label": "Be beatable with enough skill and practice",
+            "correct": false
+          },
+          {
+            "label": "Return less than the total amount wagered — that's the house edge",
+            "correct": true
+          },
+          {
+            "label": "Reward loyal, long-term players",
+            "correct": false
+          }
+        ],
+        "feedback": "The house edge is built into every game. It means that over time, the game returns less than players put in. That's how the business works. Gambling is entertainment with a cost — not an investment strategy."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/json" id="pb-myths-ja">
+{
+  "meta": {
+    "count": 18,
+    "language": "ja",
+    "source_en": "api/myths.json",
+    "tone_profile": "elder/communal/understated/contextual/reserved (Japan)"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "連勝の感覚",
+      "quiz": {
+        "question": "スロットマシンで4回連続で当たりました。5回目の当たる確率はどうなるでしょうか。",
+        "options": [
+          { "label": "通常より高い ── 流れが来ている", "correct": false },
+          { "label": "通常より低い ── そろそろ外れる番", "correct": false },
+          { "label": "ほかの回とまったく同じ", "correct": true },
+          { "label": "賭け金の額によって変わる" , "correct": false }
+        ],
+        "feedback": "1回ごとの結果はそれぞれ独立しています。機械は過去を記憶しませんし、意識することもありません。「流れ」とは、人の頭が感じ取っているもので、ゲームの側には存在しないものなのです。"
+      }
+    },
+    {
+      "id": 2,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "そろそろ当たる頃",
+      "quiz": {
+        "question": "スロットマシンが3時間ほど当たりを出していません。次の結果について、何が言えるでしょうか。",
+        "options": [
+          { "label": "そろそろ当たりやすくなる", "correct": false },
+          { "label": "当たりにくい ── 「冷えている」", "correct": false },
+          { "label": "1回ごとは独立している ── 何も言えない", "correct": true },
+          { "label": "機械の不具合の可能性がある", "correct": false }
+        ],
+        "feedback": "乱数生成器には記憶がありません。3時間外れ続けたという事実から、次に何が起こるかを推し量ることはできないのです。"
+      }
+    },
+    {
+      "id": 3,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "お気に入りの台",
+      "quiz": {
+        "question": "同じスロットでよく勝つ気がする ── その理由はどこにあるのでしょうか。",
+        "options": [
+          { "label": "機械がご自身の遊び方を学習している", "correct": false },
+          { "label": "ロイヤルティの積み重ねによる", "correct": false },
+          { "label": "確証バイアス ── 勝ちは覚え、負けは忘れてしまう", "correct": true },
+          { "label": "台の癖を見抜いている", "correct": false }
+        ],
+        "feedback": "「あの台」での勝ちを覚えていて、負けの記憶は薄れている ── 確証バイアスと呼ばれる働きです。台の側には、実は癖も相性もありません。"
+      }
+    },
+    {
+      "id": 4,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "惜しい外れの意味",
+      "quiz": {
+        "question": "スロットで、同じ絵柄が2つ並び、3つ目が外れました。これは何を意味するでしょうか。",
+        "options": [
+          { "label": "当たりが近づいている", "correct": false },
+          { "label": "機械が温まってきている", "correct": false },
+          { "label": "ほかの外れと同じ ── 何も意味しない", "correct": true },
+          { "label": "賭け金を上げるべき合図", "correct": false }
+        ],
+        "feedback": "惜しい外れは気持ちを高ぶらせますが、次の結果を占う手がかりにはなりません。リールが止まる前から、乱数生成器が結果を決めているためです。"
+      }
+    },
+    {
+      "id": 5,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "時間帯と当たりやすさ",
+      "quiz": {
+        "question": "時間帯によってスロットの当たりやすさは変わるのでしょうか。",
+        "options": [
+          { "label": "変わる ── 夜は緩めに設定されている", "correct": false },
+          { "label": "変わる ── 混雑する週末は締められている", "correct": false },
+          { "label": "変わらない ── 還元率はソフトウェアで定まり、規制を受けている", "correct": true },
+          { "label": "カジノによって異なる", "correct": false }
+        ],
+        "feedback": "還元率はゲームソフトウェアに組み込まれており、規制当局が認定しています。カジノが時間帯や状況に合わせて調整することはできない仕組みになっているのです。"
+      }
+    },
+    {
+      "id": 6,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "賭け金と有利さ",
+      "quiz": {
+        "question": "賭け金を1ドルから10ドルに上げると、ハウスエッジ(カジノの取り分)はどう変わるでしょうか。",
+        "options": [
+          { "label": "下がる ── 高額ベッターは優遇される", "correct": false },
+          { "label": "上がる ── カジノ側が多く取る", "correct": false },
+          { "label": "まったく変わらない", "correct": true },
+          { "label": "機械によって異なる", "correct": false }
+        ],
+        "feedback": "ハウスエッジは割合で定まっているため、賭け金の大きさに関係なく、同じように適用されます。大きく賭ければ、期待される損失も比例して大きくなる、ということなのです。"
+      }
+    },
+    {
+      "id": 7,
+      "gameType": ["roulette", "blackjack", "baccarat"],
+      "title": "必勝法の限界",
+      "quiz": {
+        "question": "ルーレットで、負けるたびに賭け金を倍にするマーチンゲール法を用いた場合、何が起こるでしょうか。",
+        "options": [
+          { "label": "長い目で見れば必ず勝ち越せる", "correct": false },
+          { "label": "やがてハウスエッジが消える", "correct": false },
+          { "label": "小さな勝ちの積み重ねと、まれに訪れる大きな負けを取り引きすることになる", "correct": true },
+          { "label": "規律の持ち方によって結果が変わる", "correct": false }
+        ],
+        "feedback": "どんな賭け方も、土台にある数字を変えることはできません。マーチンゲール法は、小さな負けを減らす代わりに、まれですが大きな負けを招く構造になっているのです。"
+      }
+    },
+    {
+      "id": 8,
+      "gameType": ["blackjack", "baccarat", "poker"],
+      "title": "ディーラーの調子",
+      "quiz": {
+        "question": "続けて3人のプレイヤーがディーラーに負けました。テーブルを変えたほうがよいでしょうか。",
+        "options": [
+          { "label": "変えるべき ── このディーラーは当たっている", "correct": false },
+          { "label": "残るべき ── そろそろディーラーが崩れる頃", "correct": false },
+          { "label": "どちらでも同じ ── ディーラーは定められた手順に従い、カードは無作為", "correct": true },
+          { "label": "手作業のシャッフルなら、変えたほうがよい", "correct": false }
+        ],
+        "feedback": "ディーラーは定められた手順に従って動きますので、「調子」というものは存在しません。連勝も連敗も、確率のゆらぎの表れに過ぎないのです。"
+      }
+    },
+    {
+      "id": 9,
+      "gameType": ["blackjack"],
+      "title": "カウンティングの実情",
+      "quiz": {
+        "question": "熟練したカードカウンターが得るカジノに対する優位は、おおむねどれくらいでしょうか。",
+        "options": [
+          { "label": "10〜15% ── 収益性は高い", "correct": false },
+          { "label": "5〜10% ── 安定した収入になる", "correct": false },
+          { "label": "0.5〜1.5% ── わずかな優位で、長時間のプレイを要する", "correct": true },
+          { "label": "0% ── 実際には機能しない", "correct": false }
+        ],
+        "feedback": "カードカウンティングは理論としては成立しますが、優位はわずか0.5〜1.5%です。多額の資金と膨大なハンド数を要するうえ、カジノ側の対策もあり、実践の道は細いのです。"
+      }
+    },
+    {
+      "id": 10,
+      "gameType": ["roulette", "lottery"],
+      "title": "「自分の」数字",
+      "quiz": {
+        "question": "ルーレットで、50回続けて出ていない数字に賭けています。次に出る確率はどうでしょうか。",
+        "options": [
+          { "label": "高い ── そろそろ出る頃", "correct": false },
+          { "label": "低い ── 今日は運に恵まれない数字", "correct": false },
+          { "label": "いつもと同じ: 37分の1", "correct": true },
+          { "label": "ディーラーの投げ方による", "correct": false }
+        ],
+        "feedback": "1回ごとの結果はそれぞれ独立しています。ヨーロピアンルーレットでは、どの数字も毎回37分の1の確率で、過去がどうであれ、その値は変わらないのです。"
+      }
+    },
+    {
+      "id": 11,
+      "gameType": ["sports-betting"],
+      "title": "知識と勝率",
+      "quiz": {
+        "question": "スポーツに詳しい方でも、-110オッズのスプレッドベットで損益分岐に達するには、どれくらいの勝率が必要でしょうか。",
+        "options": [
+          { "label": "50% ── 半分当たれば充分", "correct": false },
+          { "label": "約52.4% ── 手数料分を補う必要がある", "correct": true },
+          { "label": "55% ── わずかな優位が必要", "correct": false },
+          { "label": "60% ── 明確な強みが必要", "correct": false }
+        ],
+        "feedback": "標準の-110オッズでは、ブックメーカーの取り分があるため、約52.4%の勝率でようやく損益が釣り合います。半分当てるだけでは、手数料の分だけ負けが積み上がっていくのです。"
+      }
+    },
+    {
+      "id": 12,
+      "gameType": ["sports-betting"],
+      "title": "パーレーの落とし穴",
+      "quiz": {
+        "question": "パーレー(連勝式)に試合を4つ組み合わせたとき、ブックメーカーの取り分はどう変化するでしょうか。",
+        "options": [
+          { "label": "変わらない ── 約4.5%のまま", "correct": false },
+          { "label": "配当が大きいので、むしろ下がる", "correct": false },
+          { "label": "2〜3倍に膨らむ ── 各試合ごとに上乗せされる", "correct": true },
+          { "label": "選ぶ競技によって異なる", "correct": false }
+        ],
+        "feedback": "ブックメーカーの取り分は、試合を組み合わせるたびに積み重なります。4試合のパーレーでは、単一のベットに比べて取り分がおよそ4倍になる計算で、大きな配当の裏には相応の仕組みが隠れているのです。"
+      }
+    },
+    {
+      "id": 13,
+      "gameType": ["sports-betting"],
+      "title": "予想屋の成績",
+      "quiz": {
+        "question": "今週の予想屋が10戦中8勝でした。この情報から何が分かるでしょうか。",
+        "options": [
+          { "label": "確立された手法 ── 次の予想も従うべき", "correct": false },
+          { "label": "この調子が続く見込みが高い", "correct": false },
+          { "label": "10戦では、何かを結論づけるには少なすぎる", "correct": true },
+          { "label": "内部情報を持っているに違いない", "correct": false }
+        ],
+        "feedback": "短期間の連勝は、統計的に必ず誰かに訪れるものです。多くの予想屋が発信している以上、ある週に高勝率を残す者が現れるのは、ごく自然な成り行きなのです。"
+      }
+    },
+    {
+      "id": 14,
+      "gameType": ["sports-betting"],
+      "title": "ライブベットの錯覚",
+      "quiz": {
+        "question": "試合の流れを見て、ライブ(イン・プレイ)ベットを行うとき、その位置はどこにあるでしょうか。",
+        "options": [
+          { "label": "ブックメーカーの先を読んでいる ── 見た情報を生かせる", "correct": false },
+          { "label": "相手が持たない情報を握っている", "correct": false },
+          { "label": "通常は、アルゴリズムがすでにオッズを調整済み ── 一歩遅れている", "correct": true },
+          { "label": "試合前より有利なオッズが保証される", "correct": false }
+        ],
+        "feedback": "ブックメーカーはミリ秒単位でオッズを更新します。こちらが気づいて判断する頃には、その情報はすでに織り込まれている ── それがライブベットの実情なのです。"
+      }
+    },
+    {
+      "id": 15,
+      "gameType": ["lottery"],
+      "title": "「出番」の数字",
+      "quiz": {
+        "question": "6か月間抽選で出ていない番号42があります。次の抽選で出る可能性は高まるでしょうか。",
+        "options": [
+          { "label": "高まる ── 統計的に出番が近い", "correct": false },
+          { "label": "高まる ── いずれは出るはずという考えによる", "correct": false },
+          { "label": "変わらない ── 各抽選は独立で、どの数字も等しい確率", "correct": true },
+          { "label": "総番号数によって異なる", "correct": false }
+        ],
+        "feedback": "抽選のボールは自らの過去を記憶しません。それぞれの抽選は、前の結果とはまったく切り離された出来事なのです。"
+      }
+    },
+    {
+      "id": 16,
+      "gameType": ["lottery"],
+      "title": "多く買えば当たるか",
+      "quiz": {
+        "question": "宝くじを1枚ではなく100枚買った場合、当選確率はどれほど上がるでしょうか。",
+        "options": [
+          { "label": "何かしら当たるのはほぼ確実", "correct": false },
+          { "label": "1400万分の1が100/1400万に ── それでも99.999%は外れ", "correct": true },
+          { "label": "1%の当選確率になる", "correct": false },
+          { "label": "ジャックポットの大きさによる", "correct": false }
+        ],
+        "feedback": "ほぼゼロに100をかけても、依然としてほぼゼロのままです。0.000007%が0.0007%になる ── 宝くじはそういう規模の確率で動いているのです。"
+      }
+    },
+    {
+      "id": 17,
+      "gameType": ["all-gambling"],
+      "title": "負けを取り戻す",
+      "quiz": {
+        "question": "200ドル負けた方が、取り戻そうと遊び続けたとき、平均的にはどうなるでしょうか。",
+        "options": [
+          { "label": "たいていは1時間以内に取り戻せる", "correct": false },
+          { "label": "連敗のあとはオッズが好転する", "correct": false },
+          { "label": "平均してさらに負ける ── ハウスエッジが積み重なるため", "correct": true },
+          { "label": "切り替えたゲームによって異なる", "correct": false }
+        ],
+        "feedback": "取り戻そうとすれば、不利な土台の上でさらにベットを重ねることになります。平均すれば、状況はむしろ悪化していく ── それが数字の示すところなのです。"
+      }
+    },
+    {
+      "id": 18,
+      "gameType": ["all-gambling"],
+      "title": "収益源としての捉え方",
+      "quiz": {
+        "question": "長い目で見たとき、ゲームの設計はどうなっているでしょうか。",
+        "options": [
+          { "label": "プレイヤーとカジノで、損益が釣り合うように", "correct": false },
+          { "label": "技術と経験を重ねれば、打ち破れるように", "correct": false },
+          { "label": "賭けた総額より少なく戻るように ── それがハウスエッジ", "correct": true },
+          { "label": "長期の常連には報いるように", "correct": false }
+        ],
+        "feedback": "ハウスエッジはあらゆるゲームに組み込まれています。長い目で見れば、ゲームは賭けられた総額より少なく戻す ── それがカジノの成り立ちの根幹なのです。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/json" id="pb-myths-zh-CN">
+{
+  "meta": {
+    "count": 18,
+    "language": "zh-CN",
+    "source_en": "api/myths.json",
+    "tone_profile": "authority/communal/minimal/diplomatic/private (Macau)"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "连续中奖",
+      "quiz": {
+        "question": "某位玩家在老虎机上连续四次中奖。第五次的中奖概率如何？",
+        "options": [
+          { "label": "高于常规 —— 势头正好", "correct": false },
+          { "label": "低于常规 —— 该轮到输了", "correct": false },
+          { "label": "与其他任何一次完全相同", "correct": true },
+          { "label": "取决于投注金额", "correct": false }
+        ],
+        "feedback": "每一次的结果均为独立事件。机器不记录也不关心此前发生了什么。所谓「势头」，更多属于人脑的构建，而非游戏本身的设计。"
+      }
+    },
+    {
+      "id": 2,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "「该中」的时候",
+      "quiz": {
+        "question": "一台老虎机三个小时未出中奖。这对下一次旋转意味着什么？",
+        "options": [
+          { "label": "即将中奖的可能性上升", "correct": false },
+          { "label": "处于「冷机」状态，更不容易中", "correct": false },
+          { "label": "没有意义 —— 每次旋转均为独立事件", "correct": true },
+          { "label": "机器可能出现故障", "correct": false }
+        ],
+        "feedback": "随机数生成器不具备记忆功能。三小时未中这一事实，对下一次的结果无任何预示作用。"
+      }
+    },
+    {
+      "id": 3,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "所谓的幸运机器",
+      "quiz": {
+        "question": "在同一台老虎机上似乎总能赢得更多。原因何在？",
+        "options": [
+          { "label": "机器已熟悉玩家的玩法", "correct": false },
+          { "label": "累积了忠诚度权益", "correct": false },
+          { "label": "确认偏差 —— 赢的记忆保留，输的记忆淡忘", "correct": true },
+          { "label": "已摸清机器的规律", "correct": false }
+        ],
+        "feedback": "人会记住在「那台机器」上的胜利，而淡忘输的经历 —— 这是一种确认偏差。从机器的角度看，并不存在所谓的规律或偏好。"
+      }
+    },
+    {
+      "id": 4,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "「差一点」的含义",
+      "quiz": {
+        "question": "老虎机上出现两个相同符号、第三个为空白。这意味着什么？",
+        "options": [
+          { "label": "距离中奖越来越近", "correct": false },
+          { "label": "机器正在「升温」", "correct": false },
+          { "label": "没有意义 —— 与其他任何一次未中相同", "correct": true },
+          { "label": "应考虑增加投注金额", "correct": false }
+        ],
+        "feedback": "「差一点」会带来心理上的期待，但并不具备预示下一次结果的作用。随机数生成器在卷轴停下之前，已经决定了结果。"
+      }
+    },
+    {
+      "id": 5,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "时段与概率",
+      "quiz": {
+        "question": "老虎机在一天中不同时段的派彩率是否有所不同？",
+        "options": [
+          { "label": "有 —— 夜间设置更为宽松", "correct": false },
+          { "label": "有 —— 客流繁忙的周末设置更紧", "correct": false },
+          { "label": "无 —— 返还率在软件中固定，并受监管", "correct": true },
+          { "label": "视赌场而定", "correct": false }
+        ],
+        "feedback": "派彩率由游戏软件设定，并经监管机构认证。赌场无法根据时段或客流进行动态调整，此为制度所决定。"
+      }
+    },
+    {
+      "id": 6,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "投注金额与优势",
+      "quiz": {
+        "question": "若将单次投注从1美元增至10美元，庄家优势（赌场的数学优势）会如何变化？",
+        "options": [
+          { "label": "下降 —— 赌场优待高额投注者", "correct": false },
+          { "label": "上升 —— 赌场会取得更多", "correct": false },
+          { "label": "完全不变", "correct": true },
+          { "label": "视机器而定", "correct": false }
+        ],
+        "feedback": "庄家优势以百分比计算，不论投注金额大小，其比例保持一致。投注额越高，期望损失也按比例同步增加。"
+      }
+    },
+    {
+      "id": 7,
+      "gameType": ["roulette", "blackjack", "baccarat"],
+      "title": "投注策略的局限",
+      "quiz": {
+        "question": "在轮盘游戏中采用马丁格尔策略（每输一次便加倍下注），结果会如何？",
+        "options": [
+          { "label": "长期来看，必然胜出", "correct": false },
+          { "label": "庄家优势会随时间消失", "correct": false },
+          { "label": "以频繁的小胜，换取偶发的大额损失", "correct": true },
+          { "label": "取决于玩家的自律程度", "correct": false }
+        ],
+        "feedback": "任何投注策略均无法改变底层的数学规律。马丁格尔策略将小额损失转化为罕见但规模较大的损失，结构本身即如此设计。"
+      }
+    },
+    {
+      "id": 8,
+      "gameType": ["blackjack", "baccarat", "poker"],
+      "title": "荷官的「状态」",
+      "quiz": {
+        "question": "连续三位玩家输给了荷官。是否应当换桌？",
+        "options": [
+          { "label": "应换 —— 此荷官处于「热手」状态", "correct": false },
+          { "label": "应留 —— 荷官即将转输", "correct": false },
+          { "label": "无差别 —— 荷官依固定规则操作，牌为随机", "correct": true },
+          { "label": "若为人工洗牌，则应换", "correct": false }
+        ],
+        "feedback": "荷官按照既定规则操作，无自由裁量。所谓「热手荷官」，实为概率的自然波动，并非某种趋势。"
+      }
+    },
+    {
+      "id": 9,
+      "gameType": ["blackjack"],
+      "title": "算牌的实际优势",
+      "quiz": {
+        "question": "熟练的算牌者相对于赌场，通常具有多少优势？",
+        "options": [
+          { "label": "10-15% —— 收益可观", "correct": false },
+          { "label": "5-10% —— 可作稳定收入", "correct": false },
+          { "label": "0.5-1.5% —— 优势微小，需长时间大量投注方可体现", "correct": true },
+          { "label": "0% —— 并无实际效果", "correct": false }
+        ],
+        "feedback": "算牌在理论上存在，但优势仅为0.5-1.5%。实践中需要大量资金、长时间专注以及承受方差；赌场亦设有相应的防范措施。"
+      }
+    },
+    {
+      "id": 10,
+      "gameType": ["roulette", "lottery"],
+      "title": "「个人的」号码",
+      "quiz": {
+        "question": "在轮盘中始终下注7号，过去50次均未出现。下一次出现的概率如何？",
+        "options": [
+          { "label": "上升 —— 即将出现", "correct": false },
+          { "label": "下降 —— 今日显然不利", "correct": false },
+          { "label": "与往常相同：37分之1", "correct": true },
+          { "label": "取决于荷官投球的方式", "correct": false }
+        ],
+        "feedback": "每一次旋转均为独立事件。在欧式轮盘中，任一数字每次出现的概率均为37分之1，过往结果不会影响当前概率。"
+      }
+    },
+    {
+      "id": 11,
+      "gameType": ["sports-betting"],
+      "title": "知识与胜率",
+      "quiz": {
+        "question": "在-110赔率的让分投注中，熟悉该项运动的玩家需要多高的胜率才能达到收支平衡？",
+        "options": [
+          { "label": "50% —— 胜过一半即可", "correct": false },
+          { "label": "约52.4% —— 覆盖赔率差", "correct": true },
+          { "label": "55% —— 需轻微优势", "correct": false },
+          { "label": "60% —— 需明显优势", "correct": false }
+        ],
+        "feedback": "在-110标准赔率下，博彩公司已计入抽水。因此仅胜一半仍会逐步亏损；需约52.4%的胜率方可持平。"
+      }
+    },
+    {
+      "id": 12,
+      "gameType": ["sports-betting"],
+      "title": "串关投注的数学",
+      "quiz": {
+        "question": "在串关投注中增加第四场比赛，博彩公司的优势会如何变化？",
+        "options": [
+          { "label": "保持不变 —— 约4.5%", "correct": false },
+          { "label": "反而下降，因派彩更高", "correct": false },
+          { "label": "大约翻一番或翻三倍 —— 各场优势复合叠加", "correct": true },
+          { "label": "视所选运动项目而定", "correct": false }
+        ],
+        "feedback": "博彩公司的优势会随每一场比赛复合累积。四场串关的整体优势约为单场的四倍 —— 丰厚派彩的背后，存在相应的数学安排。"
+      }
+    },
+    {
+      "id": 13,
+      "gameType": ["sports-betting"],
+      "title": "预测者的战绩",
+      "quiz": {
+        "question": "某位预测者本周10选8。这说明了什么？",
+        "options": [
+          { "label": "已建立成熟体系 —— 可以跟进", "correct": false },
+          { "label": "此状态有望延续", "correct": false },
+          { "label": "10次样本不足以得出结论", "correct": true },
+          { "label": "掌握内部消息", "correct": false }
+        ],
+        "feedback": "短期连胜在统计上总会出现在某些人身上。在众多预测者同时发布的情况下，某一周出现高胜率者，属于自然发生的结果，并非能力的确证。"
+      }
+    },
+    {
+      "id": 14,
+      "gameType": ["sports-betting"],
+      "title": "滚球投注的实际位置",
+      "quiz": {
+        "question": "依据赛场所见进行滚球（即时）投注时，玩家实际处于什么位置？",
+        "options": [
+          { "label": "领先于博彩公司 —— 能够利用场上信息", "correct": false },
+          { "label": "掌握了博彩公司未获得的资讯", "correct": false },
+          { "label": "通常处于劣势 —— 算法已先行调整赔率", "correct": true },
+          { "label": "较赛前赔率更为有利", "correct": false }
+        ],
+        "feedback": "博彩公司以毫秒级别更新实时赔率。当玩家察觉并作出判断时，相关信息已被系统吸收 —— 滚球投注的实况便是如此。"
+      }
+    },
+    {
+      "id": 15,
+      "gameType": ["lottery"],
+      "title": "「该出」的号码",
+      "quiz": {
+        "question": "42号彩票号码已经六个月未曾出现。在下一期中出现的可能性是否更高？",
+        "options": [
+          { "label": "是 —— 统计上已到出现的时候", "correct": false },
+          { "label": "是 —— 平均法则要求其迟早出现", "correct": false },
+          { "label": "否 —— 每一期为独立抽取，各号概率相等", "correct": true },
+          { "label": "取决于总号码数量", "correct": false }
+        ],
+        "feedback": "抽奖球体本身不具记忆。每一次抽取均是完全独立的事件，与先前的结果无关联。"
+      }
+    },
+    {
+      "id": 16,
+      "gameType": ["lottery"],
+      "title": "多买票是否显著提升中奖",
+      "quiz": {
+        "question": "购买100张而非1张彩票，中奖概率的提升幅度如何？",
+        "options": [
+          { "label": "基本可以保证有所中奖", "correct": false },
+          { "label": "从1400万分之1提升至100/1400万 —— 仍有99.999%的概率不中", "correct": true },
+          { "label": "中奖概率变为1%", "correct": false },
+          { "label": "取决于头奖的规模", "correct": false }
+        ],
+        "feedback": "接近于零的概率乘以100，仍然接近于零。0.000007%变为0.0007% —— 彩票的数学规律即是如此。"
+      }
+    },
+    {
+      "id": 17,
+      "gameType": ["all-gambling"],
+      "title": "试图赢回损失",
+      "quiz": {
+        "question": "某位玩家已损失200美元。继续下注以求挽回，通常会出现何种结果？",
+        "options": [
+          { "label": "多数人可在一小时内挽回损失", "correct": false },
+          { "label": "连输后概率会转向有利", "correct": false },
+          { "label": "平均而言损失进一步扩大 —— 庄家优势逐步累积", "correct": true },
+          { "label": "视转换至何种游戏而定", "correct": false }
+        ],
+        "feedback": "追加投注即是在数学劣势下继续下注。从平均结果看，情况只会恶化 —— 这是数字呈现的客观规律。"
+      }
+    },
+    {
+      "id": 18,
+      "gameType": ["all-gambling"],
+      "title": "作为收入来源",
+      "quiz": {
+        "question": "长期而言，博彩游戏的设计目标通常为：",
+        "options": [
+          { "label": "玩家与赌场均达成持平", "correct": false },
+          { "label": "通过足够的技巧与练习即可战胜", "correct": false },
+          { "label": "回馈总额少于投注总额 —— 此即为庄家优势", "correct": true },
+          { "label": "回馈长期忠诚的玩家", "correct": false }
+        ],
+        "feedback": "庄家优势是每一种游戏的内在设计。长期而言，玩家投注的总额超过游戏回馈的总额 —— 此为博彩行业运作的基础。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/json" id="pb-myths-ar">
+{
+  "meta": {
+    "count": 18,
+    "language": "ar",
+    "source_en": "api/myths.json",
+    "tone_profile": "authority/communal/understated/contextual/private (UAE)"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "سلسلة المكاسب",
+      "quiz": {
+        "question": "أحرز المشارك أربع دورات فائزة متتالية على ماكينة قمار. ما احتمال الفوز في الدورة الخامسة؟",
+        "options": [
+          { "label": "أعلى من المعتاد — السلسلة مستمرة", "correct": false },
+          { "label": "أدنى من المعتاد — حان دور الخسارة", "correct": false },
+          { "label": "مطابقة تماماً لأي دورة أخرى", "correct": true },
+          { "label": "تتوقف على قيمة الرهان", "correct": false }
+        ],
+        "feedback": "كل دورة حدث مستقل بذاته. لا تحتفظ الماكينة بذاكرة للنتائج السابقة، ولا تتأثر بها. «السلسلة» مفهوم يبنيه الذهن، لا آلية تُبنى في اللعبة."
+      }
+    },
+    {
+      "id": 2,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "«حان وقت الفوز»",
+      "quiz": {
+        "question": "مرّت ثلاث ساعات دون فوز على ماكينة. ماذا يدل ذلك بشأن الدورة التالية؟",
+        "options": [
+          { "label": "يقترب احتمال الفوز", "correct": false },
+          { "label": "يتراجع الاحتمال — الماكينة «باردة»", "correct": false },
+          { "label": "لا دلالة — كل دورة مستقلة", "correct": true },
+          { "label": "وجود عطل محتمل في الماكينة", "correct": false }
+        ],
+        "feedback": "مولّدات الأرقام العشوائية لا تحتفظ بذاكرة. مرور ثلاث ساعات دون فوز لا يُنبئ بشيء عن الدورة القادمة."
+      }
+    },
+    {
+      "id": 3,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "الماكينة «المحظوظة»",
+      "quiz": {
+        "question": "يبدو أن المكاسب أعلى على ماكينة بعينها. أين يكمن التفسير؟",
+        "options": [
+          { "label": "تعلّمت الماكينة أسلوب اللعب", "correct": false },
+          { "label": "تراكمت نقاط الولاء", "correct": false },
+          { "label": "انحياز التأكيد — يحضر ذكر المكاسب وتغيب الخسائر", "correct": true },
+          { "label": "تمّ استنباط نمط الماكينة", "correct": false }
+        ],
+        "feedback": "تظل المكاسب المحقّقة على «تلك الماكينة» حاضرة في الذاكرة، فيما تتراجع الخسائر. يُعرف هذا بانحياز التأكيد. ومن جهة الماكينة، لا وجود لأنماط أو تفضيلات."
+      }
+    },
+    {
+      "id": 4,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "«اقتراب الفوز»",
+      "quiz": {
+        "question": "ظهر رمزان متطابقان وثالث فارغ على ماكينة القمار. ما دلالة ذلك؟",
+        "options": [
+          { "label": "الاقتراب من الفوز", "correct": false },
+          { "label": "تهيّؤ الماكينة للمكافأة", "correct": false },
+          { "label": "لا دلالة — خسارة كأي خسارة أخرى", "correct": true },
+          { "label": "إشارة إلى رفع قيمة الرهان", "correct": false }
+        ],
+        "feedback": "قد يُثير منظر «الاقتراب» الحماس، غير أنه لا يحمل قيمة تنبؤية. فمولّد الأرقام العشوائية يُحدّد النتيجة قبل توقّف البكرات."
+      }
+    },
+    {
+      "id": 5,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "الوقت ومعدل الفوز",
+      "quiz": {
+        "question": "هل يختلف معدل العائد لماكينات القمار باختلاف الساعة؟",
+        "options": [
+          { "label": "نعم — الضبط أكثر سخاءً ليلاً", "correct": false },
+          { "label": "نعم — تُضبط أشدّ في عطلات نهاية الأسبوع", "correct": false },
+          { "label": "لا — نسبة العائد محدّدة في البرمجية وخاضعة للتنظيم", "correct": true },
+          { "label": "يختلف من كازينو لآخر", "correct": false }
+        ],
+        "feedback": "نسب العائد مضمّنة في برمجية اللعبة ومصدّقة من الجهات المنظّمة. لا يجوز للكازينو تعديلها بحسب التوقيت أو الازدحام."
+      }
+    },
+    {
+      "id": 6,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "الرهان والميزة",
+      "quiz": {
+        "question": "عند زيادة الرهان من دولار واحد إلى عشرة دولارات، كيف تتغيّر ميزة البيت (ميزة الكازينو الرياضية)؟",
+        "options": [
+          { "label": "تنخفض — يستفيد كبار الرهانات", "correct": false },
+          { "label": "ترتفع — يحصل الكازينو على نسبة أكبر", "correct": false },
+          { "label": "تبقى كما هي تماماً", "correct": true },
+          { "label": "تتوقف على الماكينة", "correct": false }
+        ],
+        "feedback": "تُحسب ميزة البيت كنسبة مئوية، فتظل ثابتة أياً كان حجم الرهان. كلما ارتفع الرهان، ارتفعت قيمة الخسارة المتوقّعة طردياً."
+      }
+    },
+    {
+      "id": 7,
+      "gameType": ["roulette", "blackjack", "baccarat"],
+      "title": "حدود استراتيجيات الرهان",
+      "quiz": {
+        "question": "عند اتباع استراتيجية مارتينغال (مضاعفة الرهان بعد كل خسارة) في الروليت، ماذا تكون النتيجة؟",
+        "options": [
+          { "label": "تحقيق المكسب على المدى الطويل حتماً", "correct": false },
+          { "label": "تلاشي ميزة البيت بمرور الوقت", "correct": false },
+          { "label": "استبدال مكاسب صغيرة متكرّرة بخسائر نادرة وكبيرة", "correct": true },
+          { "label": "يتوقف الأمر على الانضباط الشخصي", "correct": false }
+        ],
+        "feedback": "لا تُغيّر أي استراتيجية من البنية الرياضية الأساسية. تُحوّل مارتينغال الخسائر الصغيرة إلى خسائر نادرة لكنها جسيمة، وهذا هو تصميمها في الأصل."
+      }
+    },
+    {
+      "id": 8,
+      "gameType": ["blackjack", "baccarat", "poker"],
+      "title": "«حالة الموزّع»",
+      "quiz": {
+        "question": "خسر ثلاثة مشاركين متتابعون أمام الموزّع. هل يُستحسن تغيير الطاولة؟",
+        "options": [
+          { "label": "نعم — الموزّع في حالة «ساخنة»", "correct": false },
+          { "label": "لا — الموزّع سيخسر قريباً", "correct": false },
+          { "label": "لا فرق — يتبع الموزّع قواعد محدّدة والأوراق عشوائية", "correct": true },
+          { "label": "نعم، إذا كان الخلط يدوياً", "correct": false }
+        ],
+        "feedback": "يعمل الموزّع وفق قواعد محدّدة مسبقاً دون سلطة تقديرية. «الموزّع الساخن» مجرد انعكاس لتذبذب احتمالي، لا ظاهرة فعلية."
+      }
+    },
+    {
+      "id": 9,
+      "gameType": ["blackjack"],
+      "title": "عدّ الأوراق بين النظرية والواقع",
+      "quiz": {
+        "question": "ما حجم الميزة التي يحصل عليها عادةً العدّاد المحترف مقابل الكازينو؟",
+        "options": [
+          { "label": "10-15% — عوائد مرتفعة", "correct": false },
+          { "label": "5-10% — دخل مستقر", "correct": false },
+          { "label": "0.5-1.5% — ميزة ضئيلة تتطلب آلاف الأيدي", "correct": true },
+          { "label": "0% — لا جدوى عملية", "correct": false }
+        ],
+        "feedback": "عدّ الأوراق موجود نظرياً، لكن الميزة ضئيلة (0.5-1.5%) وتستلزم رأس مال كبيراً وتفرّغاً. فضلاً عن ذلك، تعتمد الكازينوهات إجراءات مضادّة."
+      }
+    },
+    {
+      "id": 10,
+      "gameType": ["roulette", "lottery"],
+      "title": "الأرقام «الشخصية»",
+      "quiz": {
+        "question": "في الروليت، يُراهَن على الرقم 7 دون أن يظهر في 50 دورة متتالية. ما احتمال ظهوره في الدورة التالية؟",
+        "options": [
+          { "label": "أعلى — تأخّر ظهوره", "correct": false },
+          { "label": "أدنى — يوم غير مواتٍ", "correct": false },
+          { "label": "كما هو دائماً: 1 من 37", "correct": true },
+          { "label": "يتوقف على طريقة رمي الكرة", "correct": false }
+        ],
+        "feedback": "كل دورة حدث مستقل. في الروليت الأوروبي، لكل رقم احتمال ثابت يبلغ 1 من 37 في كل دورة، بصرف النظر عن السجل السابق."
+      }
+    },
+    {
+      "id": 11,
+      "gameType": ["sports-betting"],
+      "title": "الخبرة ونسبة الفوز",
+      "quiz": {
+        "question": "في رهانات الفارق بسعر -110، ما نسبة الفوز المطلوبة لمجرّد تعادل الحساب؟",
+        "options": [
+          { "label": "50% — يكفي الفوز في النصف", "correct": false },
+          { "label": "حوالي 52.4% — تغطية عمولة المشغّل", "correct": true },
+          { "label": "55% — ميزة بسيطة", "correct": false },
+          { "label": "60% — ميزة واضحة", "correct": false }
+        ],
+        "feedback": "عند السعر القياسي -110، تُحتسب عمولة المشغّل ضمن السعر. لذا يتطلّب التعادل نسبة فوز تقارب 52.4%، وكل ما دون ذلك يؤدي تدريجياً إلى صافي خسارة."
+      }
+    },
+    {
+      "id": 12,
+      "gameType": ["sports-betting"],
+      "title": "حسابات المجموعات",
+      "quiz": {
+        "question": "عند إضافة المباراة الرابعة إلى رهان مجمّع، كيف تتغيّر ميزة المشغّل؟",
+        "options": [
+          { "label": "تبقى ثابتة عند 4.5% تقريباً", "correct": false },
+          { "label": "تنخفض لأن قيمة العائد تزداد", "correct": false },
+          { "label": "تتضاعف أو تتثلّث تقريباً — تراكم عبر كل مرحلة", "correct": true },
+          { "label": "تتوقف على الرياضات المختارة", "correct": false }
+        ],
+        "feedback": "تتراكم ميزة المشغّل مع كل إضافة. في رهان مكوّن من أربع مراحل، تبلغ الميزة الإجمالية نحو أربعة أضعافها في رهان مفرد — وهو الأساس الكامن خلف ارتفاع العائد المحتمل."
+      }
+    },
+    {
+      "id": 13,
+      "gameType": ["sports-betting"],
+      "title": "سجلّ المتنبّئين",
+      "quiz": {
+        "question": "حقّق متنبّئ 8 إصابات من 10 توقّعات في أسبوع واحد. ماذا يمكن استنتاجه؟",
+        "options": [
+          { "label": "نظام مُجرَّب — يُستحسن الاقتداء به", "correct": false },
+          { "label": "استمرار هذا المعدل مرجّح", "correct": false },
+          { "label": "عيّنة من 10 لا تكفي لاستنتاج يُعتدّ به", "correct": true },
+          { "label": "اطّلاعه على معلومات داخلية", "correct": false }
+        ],
+        "feedback": "السلاسل القصيرة من الفوز ظاهرة إحصائية متوقّعة. مع وجود آلاف المتنبّئين، تُسجّل نسب مرتفعة لدى بعضهم في أسبوع ما، دون أن يعكس ذلك مهارة ثابتة."
+      }
+    },
+    {
+      "id": 14,
+      "gameType": ["sports-betting"],
+      "title": "الرهان المباشر: الموقع الحقيقي",
+      "quiz": {
+        "question": "عند الرهان المباشر استناداً إلى ما يُرى في الميدان، ما موقع المشارك فعلياً؟",
+        "options": [
+          { "label": "متقدّم على المشغّل — يستثمر ما يُشاهده", "correct": false },
+          { "label": "يمتلك معلومات لا تتوفّر لدى المشغّل", "correct": false },
+          { "label": "متأخّر عادةً — خوارزميّات قد عدّلت الأسعار", "correct": true },
+          { "label": "أسعار أفضل مقارنة بالرهانات المسبقة", "correct": false }
+        ],
+        "feedback": "يُحدّث المشغّل الأسعار بفواصل بالملّي ثانية. حين يُلاحظ المشارك حدثاً ويبني عليه قراره، تكون الخوارزميّات قد أدرجت ذلك التغيير مسبقاً."
+      }
+    },
+    {
+      "id": 15,
+      "gameType": ["lottery"],
+      "title": "الأرقام «المتأخّرة»",
+      "quiz": {
+        "question": "لم يظهر الرقم 42 في اليانصيب منذ ستة أشهر. هل يزداد احتمال ظهوره في السحب القادم؟",
+        "options": [
+          { "label": "نعم — تأخّر ظهوره إحصائياً", "correct": false },
+          { "label": "نعم — قانون المعدّلات يستوجب ظهوره", "correct": false },
+          { "label": "لا — كل سحب مستقل، وجميع الأرقام متساوية الاحتمال", "correct": true },
+          { "label": "يتوقف على إجمالي عدد الأرقام", "correct": false }
+        ],
+        "feedback": "لا تحتفظ كرات السحب بذاكرة لسجلّها. كل سحب حدث مستقل تماماً، لا علاقة له بما سبق."
+      }
+    },
+    {
+      "id": 16,
+      "gameType": ["lottery"],
+      "title": "شراء مزيد من التذاكر",
+      "quiz": {
+        "question": "عند شراء 100 تذكرة يانصيب بدلاً من تذكرة واحدة، كيف يتحسّن احتمال الفوز؟",
+        "options": [
+          { "label": "الفوز بشيء شبه مضمون", "correct": false },
+          { "label": "الانتقال من 1/14 مليون إلى 100/14 مليون — لا تزال 99.999% خسارة", "correct": true },
+          { "label": "يصبح الاحتمال 1%", "correct": false },
+          { "label": "يتوقف على حجم الجائزة الكبرى", "correct": false }
+        ],
+        "feedback": "ضرب احتمال يقارب الصفر بمئة يظل قريباً من الصفر. أي الانتقال من 0.000007% إلى 0.0007% — وهو أقرب توصيف لحجم احتمالات اليانصيب."
+      }
+    },
+    {
+      "id": 17,
+      "gameType": ["all-gambling"],
+      "title": "محاولة استرداد الخسائر",
+      "quiz": {
+        "question": "خسر المشارك 200 دولار. عند الاستمرار بهدف الاسترداد، ما النتيجة المتوسّطة؟",
+        "options": [
+          { "label": "يسترد معظم المشاركين الخسائر خلال ساعة", "correct": false },
+          { "label": "تتحوّل الاحتمالات لصالح المشارك بعد خسائر متتالية", "correct": false },
+          { "label": "تتّسع الخسارة في المتوسّط — تتراكم ميزة البيت", "correct": true },
+          { "label": "يتوقف الأمر على اللعبة التالية", "correct": false }
+        ],
+        "feedback": "يعني الاستمرار مواصلة الرهانات ضمن وضع رياضي غير متكافئ. في المتوسّط، يزداد حجم الخسارة لا العكس — وهذا ما تُظهره الأرقام."
+      }
+    },
+    {
+      "id": 18,
+      "gameType": ["all-gambling"],
+      "title": "التوصيف المالي للألعاب",
+      "quiz": {
+        "question": "على المدى الطويل، تُصمَّم ألعاب الرهان عادةً بحيث:",
+        "options": [
+          { "label": "تحقّق تعادلاً بين المشارك والكازينو", "correct": false },
+          { "label": "يمكن التغلّب عليها بالمهارة والتدريب الكافي", "correct": false },
+          { "label": "تُعيد أقلّ من المبالغ المراهن بها إجمالاً — ذلك هو ميزة البيت", "correct": true },
+          { "label": "تُكافئ المشاركين المواظبين على المدى البعيد", "correct": false }
+        ],
+        "feedback": "ميزة البيت مكوّن بنيوي في كل لعبة. على المدى الطويل، يتخطّى إجمالي الرهانات ما تُعيده اللعبة — وهو الأساس الذي تقوم عليه هذه الصناعة."
+      }
+    }
+  ]
+}
+</script>
+
 <!-- Demo Mode Banner (shown above helpline strip when active) -->
 <div class="demo-banner" id="demoBanner">
   <strong>Operator Demo Mode</strong><span>|</span>Click the teal hotspots on each section to see what it does, why it's here, and how to customize it.
@@ -1076,10 +3598,10 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
 
 <!-- Persistent Helpline Strip -->
 <div class="rg-helpline-strip">
-  Free, confidential support 24/7
+  <span data-i18n="helpline.strip.label">Free, confidential support 24/7</span>
   <a href="tel:{{HELPLINE_NUMBER}}">{{HELPLINE_NUMBER}}</a>
   <span class="rg-strip-sep"></span>
-  <a href="{{CHAT_URL}}">Live Chat</a>
+  <a href="{{CHAT_URL}}" data-i18n="helpline.strip.live_chat">Live Chat</a>
 </div>
 
 <!-- Sticky Nav -->
@@ -1090,11 +3612,11 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       <span class="rg-brand-divider" aria-hidden="true"></span>
       <span class="rg-brand-text">{{PROGRAM_NAME}}</span>
     </a>
-    <a href="#odds">The Real Odds</a>
-    <a href="#myths">Myth vs. Math</a>
-    <a href="#tools">Your Tools</a>
-    <a href="#break">Take a Break</a>
-    <a href="#support">Talk to Someone</a>
+    <a href="#odds" data-i18n="nav.odds">The Real Odds</a>
+    <a href="#myths" data-i18n="nav.myths">Myth vs. Math</a>
+    <a href="#tools" data-i18n="nav.tools">Your Tools</a>
+    <a href="#break" data-i18n="nav.break">Take a Break</a>
+    <a href="#support" data-i18n="nav.support">Talk to Someone</a>
   </div>
   <div class="rg-nav-progress"><div class="rg-nav-progress-fill" id="progressFill"></div></div>
 </nav>
@@ -1104,19 +3626,19 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   <div class="rg-hero-content">
     <!-- Interactive quiz (populated by JS) -->
     <div class="rg-hero-quiz" id="heroQuiz">
-      <p class="rg-hero-sub" style="margin-bottom:12px; font-size:0.9rem;">Quick question&hellip;</p>
+      <p class="rg-hero-sub" style="margin-bottom:12px; font-size:0.9rem;" data-i18n="hero.quick_question">Quick question&hellip;</p>
       <h1 id="heroQuestion"></h1>
-      <p class="rg-hero-sub" id="heroSub">Test what you actually know about the games you play.</p>
+      <p class="rg-hero-sub" id="heroSub" data-i18n="hero.sub_default">Test what you actually know about the games you play.</p>
       <div class="rg-hero-options" id="heroOptions"></div>
       <div class="rg-hero-feedback" id="heroFeedback" role="alert"></div>
     </div>
     <!-- Fallback if quiz data fails -->
     <div class="rg-hero-fallback" id="heroFallback">
-      <h1>Play on <span>your terms.</span></h1>
-      <p class="rg-hero-sub">Every game has math. Every player has choices. Know the odds, use the tools, and decide what works for you.</p>
+      <h1 data-i18n="hero.fallback.title_html">Play on <span>your terms.</span></h1>
+      <p class="rg-hero-sub" data-i18n="hero.fallback.sub">Every game has math. Every player has choices. Know the odds, use the tools, and decide what works for you.</p>
       <div class="rg-hero-cta-row">
-        <a href="#odds" class="rg-btn rg-btn-primary">See the real odds</a>
-        <a href="#tools" class="rg-btn rg-btn-ghost">Set your limits</a>
+        <a href="#odds" class="rg-btn rg-btn-primary" data-i18n="hero.fallback.cta_see_odds">See the real odds</a>
+        <a href="#tools" class="rg-btn rg-btn-ghost" data-i18n="hero.fallback.cta_set_limits">Set your limits</a>
       </div>
     </div>
   </div>
@@ -1127,14 +3649,14 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>
-      <div class="rg-label">Odds &amp; Transparency</div>
-      <h2>Pick your games. See the real math.</h2>
-      <p>Every casino game has a built-in mathematical edge. Tap the games you play to see how they compare.</p>
+      <div class="rg-label" data-i18n="odds.label">Odds &amp; Transparency</div>
+      <h2 data-i18n="odds.title">Pick your games. See the real math.</h2>
+      <p data-i18n="odds.blurb">Every casino game has a built-in mathematical edge. Tap the games you play to see how they compare.</p>
     </div>
 
     <div class="rg-game-chips rg-reveal" id="gameChips"></div>
     <div class="rg-odds-grid" id="oddsGrid">
-      <div class="rg-odds-empty">Select a game above to see the odds.</div>
+      <div class="rg-odds-empty" data-i18n="odds.empty">Select a game above to see the odds.</div>
     </div>
     <div class="rg-insight" id="oddsInsight" role="status"></div>
   </div>
@@ -1145,9 +3667,9 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>
-      <div class="rg-label">Myths vs. Math</div>
-      <h2>Think you know the game?</h2>
-      <p>Every player has heard a theory. Hot streaks, lucky seats, timing the spin. Tap your answer to see what the math actually says.</p>
+      <div class="rg-label" data-i18n="myths.label">Myths vs. Math</div>
+      <h2 data-i18n="myths.title">Think you know the game?</h2>
+      <p data-i18n="myths.blurb">Every player has heard a theory. Hot streaks, lucky seats, timing the spin. Tap your answer to see what the math actually says.</p>
     </div>
 
     <div class="rg-quiz-container" id="quizContainer">
@@ -1167,9 +3689,9 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>
-      <div class="rg-label label-light">Your Tools</div>
-      <h2>Features that work for you.</h2>
-      <p>These aren't restrictions. They're controls &mdash; like adjusting settings before you play.</p>
+      <div class="rg-label label-light" data-i18n="tools.label">Your Tools</div>
+      <h2 data-i18n="tools.title">Features that work for you.</h2>
+      <p data-i18n="tools.blurb">These aren't restrictions. They're controls &mdash; like adjusting settings before you play.</p>
     </div>
 
     <div class="rg-tools-grid rg-stagger" id="toolsGrid">
@@ -1178,12 +3700,12 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
         <button class="rg-tool-toggle" aria-controls="tool1">
           <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-budget"/></svg></div>
           <div class="rg-tool-info">
-            <div class="rg-tool-name">Budget lock</div>
-            <div class="rg-tool-hook">Set your entertainment spend before you start.</div>
+            <div class="rg-tool-name" data-i18n="tools.budget_lock.name">Budget lock</div>
+            <div class="rg-tool-hook" data-i18n="tools.budget_lock.hook">Set your entertainment spend before you start.</div>
           </div>
           <span class="rg-tool-chevron">&#x25BC;</span>
         </button>
-        <div class="rg-tool-detail" id="tool1"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content">
+        <div class="rg-tool-detail" id="tool1"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content" data-i18n="tools.budget_lock.detail_html">
           Decide what you're comfortable spending &mdash; daily, weekly, or monthly. Lock it in and it takes effect immediately. Want to lower it? Instant. Want to raise it? There's a cooling-off period so you make that call with a clear head.
           <br><a href="{{LIMITS_URL}}" class="rg-btn rg-btn-ghost-light rg-btn-small">Set up &rarr;</a>
         </div></div></div>
@@ -1193,12 +3715,12 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
         <button class="rg-tool-toggle" aria-controls="tool2">
           <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-timer"/></svg></div>
           <div class="rg-tool-info">
-            <div class="rg-tool-name">Session timer</div>
-            <div class="rg-tool-hook">Get a nudge when your chosen time is up.</div>
+            <div class="rg-tool-name" data-i18n="tools.session_timer.name">Session timer</div>
+            <div class="rg-tool-hook" data-i18n="tools.session_timer.hook">Get a nudge when your chosen time is up.</div>
           </div>
           <span class="rg-tool-chevron">&#x25BC;</span>
         </button>
-        <div class="rg-tool-detail" id="tool2"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content">
+        <div class="rg-tool-detail" id="tool2"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content" data-i18n="tools.session_timer.detail_html">
           Pick a session length that works for you. When time's up, you get a check-in &mdash; not a shutdown, just a moment to decide if you want to keep going. Stay aware without watching the clock.
           <br><a href="{{LIMITS_URL}}" class="rg-btn rg-btn-ghost-light rg-btn-small">Set up &rarr;</a>
         </div></div></div>
@@ -1208,12 +3730,12 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
         <button class="rg-tool-toggle" aria-controls="tool3">
           <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-activity"/></svg></div>
           <div class="rg-tool-info">
-            <div class="rg-tool-name">Play dashboard</div>
-            <div class="rg-tool-hook">Full visibility into your play. No surprises.</div>
+            <div class="rg-tool-name" data-i18n="tools.play_dashboard.name">Play dashboard</div>
+            <div class="rg-tool-hook" data-i18n="tools.play_dashboard.hook">Full visibility into your play. No surprises.</div>
           </div>
           <span class="rg-tool-chevron">&#x25BC;</span>
         </button>
-        <div class="rg-tool-detail" id="tool3"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content">
+        <div class="rg-tool-detail" id="tool3"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content" data-i18n="tools.play_dashboard.detail_html">
           See your deposits, withdrawals, session time, and net position in one place. Full transparency over your account. Information you can act on &mdash; or just know.
           <br><a href="{{LIMITS_URL}}" class="rg-btn rg-btn-ghost-light rg-btn-small">View dashboard &rarr;</a>
         </div></div></div>
@@ -1223,12 +3745,12 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
         <button class="rg-tool-toggle" aria-controls="tool4">
           <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-limit"/></svg></div>
           <div class="rg-tool-info">
-            <div class="rg-tool-name">Safety net</div>
-            <div class="rg-tool-hook">Set a floor. If you hit it, play pauses.</div>
+            <div class="rg-tool-name" data-i18n="tools.safety_net.name">Safety net</div>
+            <div class="rg-tool-hook" data-i18n="tools.safety_net.hook">Set a floor. If you hit it, play pauses.</div>
           </div>
           <span class="rg-tool-chevron">&#x25BC;</span>
         </button>
-        <div class="rg-tool-detail" id="tool4"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content">
+        <div class="rg-tool-detail" id="tool4"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content" data-i18n="tools.safety_net.detail_html">
           Loss limits let you define a maximum you're willing to lose in a session, day, or week. If you hit it, play pauses automatically. You set the number &mdash; you're in control.
           <br><a href="{{LIMITS_URL}}" class="rg-btn rg-btn-ghost-light rg-btn-small">Set up &rarr;</a>
         </div></div></div>
@@ -1238,12 +3760,12 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
         <button class="rg-tool-toggle" aria-controls="tool5">
           <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-bell"/></svg></div>
           <div class="rg-tool-info">
-            <div class="rg-tool-name">Reality check</div>
-            <div class="rg-tool-hook">Quick updates on time and spend while you play.</div>
+            <div class="rg-tool-name" data-i18n="tools.reality_check.name">Reality check</div>
+            <div class="rg-tool-hook" data-i18n="tools.reality_check.hook">Quick updates on time and spend while you play.</div>
           </div>
           <span class="rg-tool-chevron">&#x25BC;</span>
         </button>
-        <div class="rg-tool-detail" id="tool5"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content">
+        <div class="rg-tool-detail" id="tool5"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content" data-i18n="tools.reality_check.detail_html">
           Periodic pop-ups showing how long you've been playing and your current net position. Quick, non-intrusive, and easy to dismiss. Information, not interruption.
           <br><a href="{{LIMITS_URL}}" class="rg-btn rg-btn-ghost-light rg-btn-small">Set up &rarr;</a>
         </div></div></div>
@@ -1253,12 +3775,12 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
         <button class="rg-tool-toggle" aria-controls="tool6">
           <div class="rg-tool-icon"><svg width="22" height="22"><use href="#pb-icon-edge"/></svg></div>
           <div class="rg-tool-info">
-            <div class="rg-tool-name">Budget planner</div>
-            <div class="rg-tool-hook">Do the math first, play after.</div>
+            <div class="rg-tool-name" data-i18n="tools.budget_planner.name">Budget planner</div>
+            <div class="rg-tool-hook" data-i18n="tools.budget_planner.hook">Do the math first, play after.</div>
           </div>
           <span class="rg-tool-chevron">&#x25BC;</span>
         </button>
-        <div class="rg-tool-detail" id="tool6"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content">
+        <div class="rg-tool-detail" id="tool6"><div class="rg-tool-detail-inner"><div class="rg-tool-detail-content" data-i18n="tools.budget_planner.detail_html">
           Figure out what entertainment spend fits your finances. Think about it like a night out or a streaming subscription &mdash; decide the number before you start, not after.
           <br><a href="{{LIMITS_URL}}" class="rg-btn rg-btn-ghost-light rg-btn-small">Plan your budget &rarr;</a>
         </div></div></div>
@@ -1267,7 +3789,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     </div>
 
     <div class="rg-tools-cta rg-reveal">
-      <a href="{{LIMITS_URL}}" class="rg-btn rg-btn-primary">Set your limits &rarr;</a>
+      <a href="{{LIMITS_URL}}" class="rg-btn rg-btn-primary" data-i18n="tools.cta_set_limits">Set your limits &rarr;</a>
     </div>
   </div>
 </section>
@@ -1277,31 +3799,31 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>
-      <div class="rg-label">Your Call</div>
-      <h2>Need some time away? It's one click.</h2>
-      <p>If you want a break &mdash; for any reason, for any length &mdash; you can step away on your terms. No forms. No questions asked.</p>
+      <div class="rg-label" data-i18n="break.label">Your Call</div>
+      <h2 data-i18n="break.title">Need some time away? It's one click.</h2>
+      <p data-i18n="break.blurb">If you want a break &mdash; for any reason, for any length &mdash; you can step away on your terms. No forms. No questions asked.</p>
     </div>
 
     <div class="rg-break-grid rg-stagger">
       <div class="rg-break-card rg-reveal">
         <div class="rg-break-card-icon"><svg width="24" height="24"><use href="#pb-icon-timer"/></svg></div>
-        <h3>Choose your timeframe</h3>
-        <p>Options range from a few months to permanent. Pick what feels right. You can always revisit later.</p>
+        <h3 data-i18n="break.card_timeframe.title">Choose your timeframe</h3>
+        <p data-i18n="break.card_timeframe.desc">Options range from a few months to permanent. Pick what feels right. You can always revisit later.</p>
       </div>
       <div class="rg-break-card rg-reveal">
         <div class="rg-break-card-icon"><svg width="24" height="24"><use href="#pb-icon-check"/></svg></div>
-        <h3>Everything pauses</h3>
-        <p>Your account pauses. Marketing stops. No deposits, no bets. A clean break from play while you want it.</p>
+        <h3 data-i18n="break.card_pause.title">Everything pauses</h3>
+        <p data-i18n="break.card_pause.desc">Your account pauses. Marketing stops. No deposits, no bets. A clean break from play while you want it.</p>
       </div>
       <div class="rg-break-card rg-reveal">
         <div class="rg-break-card-icon"><svg width="24" height="24"><use href="#pb-icon-help"/></svg></div>
-        <h3>You're not alone</h3>
-        <p>Support stays available throughout. Helplines, chat, counseling &mdash; none of that goes away when you take a break.</p>
+        <h3 data-i18n="break.card_support.title">You're not alone</h3>
+        <p data-i18n="break.card_support.desc">Support stays available throughout. Helplines, chat, counseling &mdash; none of that goes away when you take a break.</p>
       </div>
     </div>
 
     <div class="rg-break-ctas rg-reveal">
-      <a href="{{SELF_EXCLUSION_URL}}" class="rg-btn rg-btn-primary">Take a break &rarr;</a>
+      <a href="{{SELF_EXCLUSION_URL}}" class="rg-btn rg-btn-primary" data-i18n="break.cta_take_break">Take a break &rarr;</a>
       <a href="{{SELF_EXCLUSION_URL}}" class="rg-btn rg-btn-ghost-light">{{SELF_EXCLUSION_NAME}} &rarr;</a>
     </div>
   </div>
@@ -1312,12 +3834,12 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   <div class="rg-container">
     <div class="rg-section-header rg-reveal">
       <div class="rg-accent-line"></div>
-      <div class="rg-label">Support</div>
-      <h2>Here if you need it.</h2>
-      <p>Free, confidential, 24/7. No reason needed. No crisis required.</p>
+      <div class="rg-label" data-i18n="support.label">Support</div>
+      <h2 data-i18n="support.title">Here if you need it.</h2>
+      <p data-i18n="support.blurb">Free, confidential, 24/7. No reason needed. No crisis required.</p>
     </div>
 
-    <p class="rg-support-normalizer rg-reveal">Thousands of people reach out every day. It's a normal thing to do.</p>
+    <p class="rg-support-normalizer rg-reveal" data-i18n="support.normalizer">Thousands of people reach out every day. It's a normal thing to do.</p>
 
     <div class="rg-reveal" style="margin-bottom:24px;">
       <playbook-helpline
@@ -1330,19 +3852,19 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       </playbook-helpline>
     </div>
 
-    <h3 style="text-align:center; color:var(--rg-text); font-family:var(--rg-font-heading); font-size:1.1rem; font-weight:600; margin-bottom:16px;" class="rg-reveal">Additional resources</h3>
+    <h3 style="text-align:center; color:var(--rg-text); font-family:var(--rg-font-heading); font-size:1.1rem; font-weight:600; margin-bottom:16px;" class="rg-reveal" data-i18n="support.additional_resources">Additional resources</h3>
     <div class="rg-support-grid rg-stagger">
       <a href="{{SUPPORT_ORG_URL}}" class="rg-support-card rg-reveal">
         <h3>{{SUPPORT_ORG_NAME}}</h3>
-        <p>Professional support and resources for players and families.</p>
+        <p data-i18n="support.org.desc">Professional support and resources for players and families.</p>
       </a>
       <a href="https://www.gamblersanonymous.org" class="rg-support-card rg-reveal">
-        <h3>Gamblers Anonymous</h3>
-        <p>Peer support meetings &mdash; online and in person.</p>
+        <h3 data-i18n="support.ga.title">Gamblers Anonymous</h3>
+        <p data-i18n="support.ga.desc">Peer support meetings &mdash; online and in person.</p>
       </a>
       <a href="https://www.gamtalk.org" class="rg-support-card rg-reveal">
-        <h3>GamTalk</h3>
-        <p>Online peer support forum &mdash; anonymous, judgement-free.</p>
+        <h3 data-i18n="support.gamtalk.title">GamTalk</h3>
+        <p data-i18n="support.gamtalk.desc">Online peer support forum &mdash; anonymous, judgement-free.</p>
       </a>
     </div>
   </div>
@@ -1357,11 +3879,11 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   </div>
   <div class="rg-footer-helpline">{{HELPLINE_NUMBER}}</div>
   <p>
-    <a href="tel:{{HELPLINE_NUMBER}}">Call</a> &middot;
+    <a href="tel:{{HELPLINE_NUMBER}}" data-i18n="footer.call">Call</a> &middot;
     {{TEXT_NUMBER}} &middot;
-    <a href="{{CHAT_URL}}">Chat</a>
+    <a href="{{CHAT_URL}}" data-i18n="footer.chat">Chat</a>
   </p>
-  <p class="rg-footer-legal">
+  <p class="rg-footer-legal" data-i18n="footer.legal_html">
     {{MIN_AGE}}+ only.<br>
     &copy; {{ORGANIZATION}} &middot; <a href="{{WEBSITE}}">{{WEBSITE}}</a><br>
     Powered by <a href="https://github.com/kphilander/Playbook">Playbook</a> (CC0)
@@ -1551,8 +4073,10 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       });
 
       var fb = document.getElementById('heroFeedback');
-      fb.innerHTML = '<strong>The answer:</strong> ' + myth.quiz.feedback +
-        '<div class="rg-hero-cta-row"><a href="#myths" class="rg-btn rg-btn-primary rg-btn-small">Keep going &mdash; take the full quiz &rarr;</a></div>';
+      var prefix = (window.__pbI18N && window.__pbI18N('hero.feedback_prefix_html', '<strong>The answer:</strong>')) || '<strong>The answer:</strong>';
+      var keepGoing = (window.__pbI18N && window.__pbI18N('hero.cta_keep_going', 'Keep going — take the full quiz →')) || 'Keep going — take the full quiz →';
+      fb.innerHTML = prefix + ' ' + myth.quiz.feedback +
+        '<div class="rg-hero-cta-row"><a href="#myths" class="rg-btn rg-btn-primary rg-btn-small">' + keepGoing + '</a></div>';
       fb.classList.add('visible');
       requestAnimationFrame(function() { fb.classList.add('shown'); });
     },
@@ -1716,21 +4240,33 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
 
   // ========== OddsExplorer ==========
   var OddsExplorer = {
+    // Localized game name with English fallback.
+    gameName: function(key) {
+      var fallback = (GAMES[key] && GAMES[key].name) || key;
+      return (window.__pbGameName && window.__pbGameName(key, fallback)) || fallback;
+    },
+
     init: function() {
       var chipsEl = document.getElementById('gameChips');
+      chipsEl.innerHTML = '';
       var keys = Object.keys(GAMES);
       keys.forEach(function(key) {
         var g = GAMES[key];
         var btn = document.createElement('button');
         btn.className = 'rg-game-chip';
         btn.setAttribute('role', 'switch');
+        btn.setAttribute('data-game', key);
         btn.setAttribute('aria-checked', state.selectedGames.indexOf(key) >= 0 ? 'true' : 'false');
-        btn.innerHTML = gameIcon(g.icon) + ' ' + g.name;
+        btn.innerHTML = gameIcon(g.icon) + ' ' + OddsExplorer.gameName(key);
         btn.addEventListener('click', function() { OddsExplorer.toggle(key, btn); });
         chipsEl.appendChild(btn);
       });
       this.render();
     },
+
+    // Re-render chips + cards + insight with the currently active language.
+    // init() is idempotent (clears chipsEl first), so calling it again is safe.
+    refresh: function() { this.init(); },
 
     toggle: function(game, btn) {
       var idx = state.selectedGames.indexOf(game);
@@ -1777,7 +4313,8 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
           var link = document.createElement('a');
           link.className = 'rg-guide-link';
           link.href = '../games/' + game + '.html';
-          link.innerHTML = '<svg width="16" height="16"><use href="#pb-icon-info"/></svg> How to play ' + GAMES[game].name + ' \u2192';
+          var htpPattern = (window.__pbI18N && window.__pbI18N('odds.how_to_play_pattern', 'How to play {game} →')) || 'How to play {game} →';
+          link.innerHTML = '<svg width="16" height="16"><use href="#pb-icon-info"/></svg> ' + htpPattern.replace('{game}', OddsExplorer.gameName(game));
           wrapper.appendChild(link);
         }
       });
@@ -1797,9 +4334,14 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       var bestLoss = (best.data.edgeMid / 100 * 1000).toFixed(0);
       var worstLoss = (worst.data.edgeMid / 100 * 1000).toFixed(0);
 
-      insight.innerHTML = '<strong>The difference?</strong> Over 100 bets at $10 each, you\'d expect to lose about <strong>$' +
-        bestLoss + '</strong> on ' + best.data.name + ' vs. <strong>$' + worstLoss + '</strong> on ' + worst.data.name +
-        '. Same budget, very different math.';
+      var pattern = (window.__pbI18N && window.__pbI18N('odds.insight_pattern_html',
+        '<strong>The difference?</strong> Over 100 bets at $10 each, you\'d expect to lose about <strong>${best_loss}</strong> on {best_game} vs. <strong>${worst_loss}</strong> on {worst_game}. Same budget, very different math.'))
+        || '<strong>The difference?</strong> Over 100 bets at $10 each, you\'d expect to lose about <strong>${best_loss}</strong> on {best_game} vs. <strong>${worst_loss}</strong> on {worst_game}. Same budget, very different math.';
+      insight.innerHTML = pattern
+        .replace('{best_loss}', bestLoss)
+        .replace('{worst_loss}', worstLoss)
+        .replace('{best_game}', OddsExplorer.gameName(best.key))
+        .replace('{worst_game}', OddsExplorer.gameName(worst.key));
       insight.classList.add('visible');
 
       // Annotate terms in the insight callout
@@ -1829,10 +4371,11 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     renderDots: function() {
       var dotsEl = document.getElementById('quizDots');
       dotsEl.innerHTML = '';
+      var pattern = (window.__pbI18N && window.__pbI18N('myths.aria_question_pattern', 'Question {n} of {total}')) || 'Question {n} of {total}';
       for (var i = 0; i < state.quizTotal; i++) {
         var dot = document.createElement('div');
         dot.className = 'rg-quiz-dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', 'Question ' + (i + 1) + ' of ' + state.quizTotal);
+        dot.setAttribute('aria-label', pattern.replace('{n}', i + 1).replace('{total}', state.quizTotal));
         dotsEl.appendChild(dot);
       }
     },
@@ -1850,8 +4393,11 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       }.bind(this));
       html += '</fieldset>';
       html += '<div class="rg-quiz-feedback" id="qFeedback">' + this.esc(myth.quiz.feedback) + '</div>';
+      var nextLabel = (idx < state.quizTotal - 1)
+        ? ((window.__pbI18N && window.__pbI18N('myths.next_question', 'Next question →')) || 'Next question →')
+        : ((window.__pbI18N && window.__pbI18N('myths.see_your_score', 'See your score →')) || 'See your score →');
       html += '<div class="rg-quiz-next" id="qNext"><button class="rg-btn rg-btn-ghost rg-btn-small" id="qNextBtn">' +
-        (idx < state.quizTotal - 1 ? 'Next question &rarr;' : 'See your score &rarr;') + '</button></div>';
+        this.esc(nextLabel) + '</button></div>';
       html += '</div>';
 
       cardEl.innerHTML = html;
@@ -1910,17 +4456,18 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       var dotsEl = document.getElementById('quizDots');
       dotsEl.querySelectorAll('.rg-quiz-dot').forEach(function(d) { d.classList.add('done'); d.classList.remove('active'); });
 
+      var I = window.__pbI18N || function(_, f) { return f; };
+      var correctLabel = I('myths.correct_label', 'correct');
+      var msg = (state.quizScore === state.quizTotal)
+        ? I('myths.perfect_score', 'Perfect score. You know your stuff. But even knowing the math doesn\u2019t change the odds \u2014 it just means you\u2019re playing with your eyes open.')
+        : I('myths.good_effort', 'Whether you got them all right or not, now you know the math. And knowing the math is always better than guessing.');
+      var exploreCta = I('myths.explore_tools', 'Explore your tools \u2192');
       container.innerHTML =
         '<div class="rg-quiz-summary">' +
           '<div class="rg-quiz-score">' + state.quizScore + '/' + state.quizTotal + '</div>' +
-          '<div class="rg-quiz-score-label">correct</div>' +
-          '<p class="rg-quiz-summary-msg">' +
-            (state.quizScore === state.quizTotal
-              ? 'Perfect score. You know your stuff. But even knowing the math doesn\'t change the odds \u2014 it just means you\'re playing with your eyes open.'
-              : 'Whether you got them all right or not, now you know the math. And knowing the math is always better than guessing.'
-            ) +
-          '</p>' +
-          '<a href="#tools" class="rg-btn rg-btn-primary rg-btn-small">Explore your tools &rarr;</a>' +
+          '<div class="rg-quiz-score-label">' + this.esc(correctLabel) + '</div>' +
+          '<p class="rg-quiz-summary-msg">' + this.esc(msg) + '</p>' +
+          '<a href="#tools" class="rg-btn rg-btn-primary rg-btn-small">' + this.esc(exploreCta) + '</a>' +
         '</div>';
     },
 
@@ -1955,6 +4502,10 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     NavController.init();
     ProgressTracker.init();
     TermTooltips.init();
+    // Expose for the Try-your-brand i18n pipeline (separate IIFE below) so it
+    // can swap glossary definitions when a language bundle activates.
+    window.TermTooltips = TermTooltips;
+    window.ProgressTracker = ProgressTracker;
     OddsExplorer.init();
     ToolShowcase.init();
 
@@ -1965,18 +4516,86 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     TermTooltips.annotate(document.getElementById('break'));
     TermTooltips.annotate(document.getElementById('support'));
 
-    // Load myths for hero quiz and quiz walkthrough
-    fetch('../api/myths.json')
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        var myths = data.myths || [];
+    // Load myths for hero quiz and quiz walkthrough. Prefer inlined
+    // <script type="application/json" id="pb-myths-<lang>"> blocks so the
+    // page works offline and in any serve context. Fall back to a network
+    // fetch if inlined data is absent (e.g. widget reused elsewhere).
+    var inlineMyths = readInlineMyths('en');
+    if (inlineMyths) {
+      HeroQuiz.init(inlineMyths);
+      QuizEngine.init(inlineMyths);
+    } else {
+      fetch('../api/myths.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          var myths = data.myths || [];
+          HeroQuiz.init(myths);
+          QuizEngine.init(myths);
+        })
+        .catch(function() {
+          HeroQuiz.showFallback();
+          QuizEngine.showFallback();
+        });
+    }
+
+    // Expose re-init hook for the i18n pipeline (separate IIFE below).
+    // Called on language activation/deactivation after fetching a
+    // language-specific myths file. Resets quiz state and re-renders.
+    window.__pbRGReinit = function(myths) {
+      state.heroAnswered = false;
+      state.quizCurrent = 0;
+      state.quizScore = 0;
+      // Reset hero
+      document.getElementById('heroOptions').innerHTML = '';
+      var heroFb = document.getElementById('heroFeedback');
+      heroFb.innerHTML = '';
+      heroFb.classList.remove('visible', 'shown');
+      document.getElementById('heroQuiz').style.display = '';
+      document.getElementById('heroFallback').style.display = 'none';
+      document.getElementById('heroQuestion').textContent = '';
+      // Reset myth quiz
+      document.getElementById('quizDots').innerHTML = '';
+      document.getElementById('quizCard').innerHTML = '';
+      document.getElementById('quizContainer').style.display = '';
+      document.getElementById('quizFallback').style.display = 'none';
+      if (myths && myths.length) {
         HeroQuiz.init(myths);
         QuizEngine.init(myths);
-      })
-      .catch(function() {
+      } else {
         HeroQuiz.showFallback();
         QuizEngine.showFallback();
-      });
+      }
+    };
+
+    // Bundle string lookup helper, shared with HeroQuiz / QuizEngine / OddsExplorer.
+    // Returns translated string if a language bundle is active; else the fallback.
+    window.__pbI18N = function(key, fallback) {
+      var b = window.__pbI18nActiveBundle;
+      return (b && b.strings && b.strings[key]) || fallback;
+    };
+    // Game-name lookup: bundle.games is keyed by the same lowercase keys the
+    // GAMES object uses (slots, blackjack, sports-betting, ...).
+    window.__pbGameName = function(key, fallback) {
+      var b = window.__pbI18nActiveBundle;
+      return (b && b.games && b.games[key]) || fallback;
+    };
+    // Expose inline-myth reader for the i18n pipeline so it doesn't need to
+    // re-implement the lookup or re-parse the JSON block.
+    window.__pbReadInlineMyths = readInlineMyths;
+    // Expose OddsExplorer so the i18n pipeline can refresh chips + cards on
+    // language switch.
+    window.__pbOddsExplorer = OddsExplorer;
+  }
+
+  // Read myths for a language from the inlined <script type="application/json">
+  // block. Returns an array of myth objects or null if the block is missing.
+  function readInlineMyths(lang) {
+    var el = document.getElementById('pb-myths-' + lang);
+    if (!el) return null;
+    try {
+      var data = JSON.parse(el.textContent);
+      return data.myths || [];
+    } catch (e) { return null; }
   }
 
   if (document.readyState === 'loading') {
@@ -3134,7 +5753,7 @@ body.demo-mode .demo-banner { display: block; }
 <div class="pb-tyb-modal" id="pbTybModal" data-pb-preview-chrome="true" role="dialog" aria-labelledby="pbTybTitle" aria-modal="true">
   <button class="pb-tyb-close" id="pbTybClose" aria-label="Close">×</button>
   <h3 id="pbTybTitle">Try your brand on this page</h3>
-  <p class="pb-tyb-intro">Upload <strong>brand-inject.css</strong> from the <strong>Playbook brand configurator</strong> to re-skin this page with your colors, fonts, logo, and program details. Nothing leaves your browser.</p>
+  <p class="pb-tyb-intro">Upload <strong>brand-inject.css</strong> to re-skin this page with your colors, fonts, logo, and program details. Add <strong>_brand.yml</strong> to swap the copy into a local language based on your primary jurisdiction. Nothing leaves your browser.</p>
 
   <label class="pb-tyb-zone" id="pbTybCssZone">
     <div class="pb-tyb-zone-title">Upload brand-inject.css</div>
@@ -3142,7 +5761,11 @@ body.demo-mode .demo-banner { display: block; }
     <input type="file" id="pbTybCssInput" accept=".css,text/css">
   </label>
 
-  <p style="margin-top:14px; font-size:0.72rem; color:#6B8299; line-height:1.5;">Need to fork the Playbook repo and run the build pipeline instead? Use <strong>_brand.yml</strong> from the configurator &mdash; not this uploader.</p>
+  <label class="pb-tyb-zone" id="pbTybYamlZone" style="margin-top:12px;">
+    <div class="pb-tyb-zone-title">Upload _brand.yml <span style="font-weight:400; opacity:0.6;">(optional)</span></div>
+    <div class="pb-tyb-zone-desc">Switches page language from your primary jurisdiction. Japan → Japanese. Macau → Simplified Chinese. UAE → Arabic. Anything else stays English.</div>
+    <input type="file" id="pbTybYamlInput" accept=".yml,.yaml,text/yaml,text/x-yaml">
+  </label>
 
   <div class="pb-tyb-actions">
     <div class="pb-tyb-status" id="pbTybStatus">No brand uploaded.</div>
@@ -3162,6 +5785,13 @@ body.demo-mode .demo-banner { display: block; }
   var resetBtn = document.getElementById('pbTybReset');
   var cssInput = document.getElementById('pbTybCssInput');
   var cssZone = document.getElementById('pbTybCssZone');
+  var yamlInput = document.getElementById('pbTybYamlInput');
+  var yamlZone = document.getElementById('pbTybYamlZone');
+
+  // Latest token map derived from an uploaded brand-inject.css. Kept at the
+  // IIFE scope so the language-switch path can re-apply it on freshly-swapped
+  // translated copy (which also contains {{PROGRAM_NAME}} etc.).
+  var pbTybCurrentTokenMap = {};
 
   // === Modal open/close ===
   function openModal() {
@@ -3370,7 +6000,10 @@ body.demo-mode .demo-banner { display: block; }
     applyLogoModeFromBrand();
     // Resolve {{PROGRAM_NAME}} etc. from the metadata block (if the configurator emitted one)
     var meta = pbTybParseMetaFromCss(cssText);
-    if (meta) pbTybApplyTokenMap(pbTybMetaToTokenMap(meta));
+    if (meta) {
+      pbTybCurrentTokenMap = pbTybMetaToTokenMap(meta);
+      pbTybApplyTokenMap(pbTybCurrentTokenMap);
+    }
     setStatus('Applied: ' + label, 'ok');
     resetBtn.disabled = false;
   }
@@ -3382,8 +6015,13 @@ body.demo-mode .demo-banner { display: block; }
     loadedGoogleFonts = {};
     // Clear logo mode so brand markup falls back to text wordmark
     document.documentElement.removeAttribute('data-pb-logo-mode');
+    // Language first: restore English copy, clear dir, drop Noto fonts.
+    // Must happen BEFORE pbTybResetTokens so the restored English body has
+    // its {{...}} tokens intact when the token reset fires.
+    deactivateLanguage();
     // Restore original {{PROGRAM_NAME}} etc. token text
     pbTybResetTokens();
+    pbTybCurrentTokenMap = {};
     setStatus('Reset to default brand.');
     resetBtn.disabled = true;
     cssInput.value = '';
@@ -3428,6 +6066,386 @@ body.demo-mode .demo-banner { display: block; }
     });
   }
   wireDrop(cssZone, handleCssFile);
+
+  // ============================================================
+  // i18n — layered on top of the CSS upload path. Independent:
+  //   CSS  controls visuals + operator strings ({{PROGRAM_NAME}} etc.)
+  //   YAML controls page language + RTL + font stack
+  // Either can apply without the other; both reset together.
+  // ============================================================
+
+  // Map an uploaded _brand.yml's meta.primary_jurisdictions[0] to a
+  // language bundle. Anything not in this map falls through to English.
+  var MARKET_TO_LANG = {
+    japan: 'ja',
+    macau: 'zh-CN',
+    'united-arab-emirates': 'ar'
+  };
+
+  // ---- Mini YAML parser (scoped to the fields we read) ----
+  // Handles: top-level keys, 2-space nesting, simple scalars (quoted or
+  // unquoted), `- item` sequences, `#` comments, blank lines. Skips
+  // `key: |` / `key: >` block scalars (used by `notes:` fields).
+  // Everything else is silently ignored — missing paths fall through to `en`.
+  function pbTybParseBrandYaml(text) {
+    var lines = text.split(/\r?\n/);
+    var root = {};
+    // Each frame: { indent, obj, grandparent?, key? } — grandparent/key set when
+    // obj was created as a placeholder by a `key:` with no inline value, so we
+    // can retroactively replace it with [] if its first child is a `- item`.
+    var stack = [{ indent: -1, obj: root }];
+    var blockScalarIndent = -1;
+
+    for (var i = 0; i < lines.length; i++) {
+      var raw = lines[i];
+
+      // Skip body of a block scalar (e.g. `notes: |`)
+      if (blockScalarIndent >= 0) {
+        var trimTest = raw.replace(/^\s+/, '');
+        var thisIndent = raw.length - trimTest.length;
+        if (!trimTest || thisIndent > blockScalarIndent) continue;
+        blockScalarIndent = -1;
+      }
+
+      // Strip end-of-line comment (simple; we don't have `#` inside scalars)
+      var hashIdx = raw.indexOf(' #');
+      if (hashIdx >= 0) raw = raw.substring(0, hashIdx);
+      var startsHash = raw.replace(/^\s*/, '').charAt(0) === '#';
+      if (startsHash) continue;
+      if (!raw.trim()) continue;
+
+      var indent = raw.match(/^ */)[0].length;
+      var body = raw.substring(indent);
+
+      // Pop to the right parent for this indent
+      while (stack.length > 1 && stack[stack.length - 1].indent >= indent) stack.pop();
+      var top = stack[stack.length - 1];
+
+      // List item: `- value`
+      var listMatch = body.match(/^-\s+(.*)$/);
+      if (listMatch) {
+        // If top.obj is an empty placeholder {} for a key on its grandparent,
+        // replace it with [] on the grandparent and track the array here.
+        if (top.grandparent && top.key && top.obj && !Array.isArray(top.obj) && Object.keys(top.obj).length === 0) {
+          top.grandparent[top.key] = [];
+          top.obj = top.grandparent[top.key];
+        }
+        if (Array.isArray(top.obj)) {
+          var itemVal = listMatch[1].trim().replace(/^["']|["']$/g, '');
+          top.obj.push(itemVal);
+        }
+        continue;
+      }
+
+      // key: value  OR  key:  (block follows)
+      var kvMatch = body.match(/^([A-Za-z0-9_\-]+):\s*(.*)$/);
+      if (!kvMatch) continue;
+      var key = kvMatch[1];
+      var rawVal = kvMatch[2].trim();
+      var parent = top.obj;
+
+      if (!rawVal) {
+        var sub = {};
+        parent[key] = sub;
+        stack.push({ indent: indent, obj: sub, grandparent: parent, key: key });
+        continue;
+      }
+      // Block scalar markers — skip contents until dedent
+      if (rawVal === '|' || rawVal === '>') {
+        parent[key] = '';
+        blockScalarIndent = indent;
+        continue;
+      }
+      // Strip quotes + coerce integers (for minimum_gambling_age)
+      var val = rawVal.replace(/^"(.*)"$/, '$1').replace(/^'(.*)'$/, '$1');
+      if (/^-?\d+$/.test(val)) val = parseInt(val, 10);
+      parent[key] = val;
+    }
+    return root;
+  }
+
+  // ---- Original-text snapshots (one walk, taken on boot) ----
+  // Each snapshot: { node, kind: 'text'|'html'|'attr'|'title', attr?, original }
+  var pbI18nOriginalSnapshots = [];
+  var pbI18nMarkupRE = /<[a-z]+[\s>]/i;
+
+  function pbI18nSnapshotAll() {
+    // Text/HTML content on [data-i18n]
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      if (el.tagName.toLowerCase() === 'title') {
+        pbI18nOriginalSnapshots.push({ node: el, kind: 'title', original: document.title });
+      } else if (pbI18nMarkupRE.test(el.innerHTML)) {
+        pbI18nOriginalSnapshots.push({ node: el, kind: 'html', original: el.innerHTML });
+      } else {
+        pbI18nOriginalSnapshots.push({ node: el, kind: 'text', original: el.textContent });
+      }
+    });
+    // Attributes on [data-i18n-attrs]
+    document.querySelectorAll('[data-i18n-attrs]').forEach(function(el) {
+      var pairs = el.getAttribute('data-i18n-attrs').split(',');
+      pairs.forEach(function(p) {
+        var parts = p.split(':');
+        if (parts.length !== 2) return;
+        var attrName = parts[0].trim();
+        pbI18nOriginalSnapshots.push({ node: el, kind: 'attr', attr: attrName, original: el.getAttribute(attrName) || '' });
+      });
+    });
+  }
+
+  // Snapshot immediately (script runs at end of <body>, so all i18n nodes exist)
+  pbI18nSnapshotAll();
+
+  // ---- Google Font loading for bundle's font cascade ----
+  function pbI18nLoadFont(googleSpec, lang) {
+    if (!googleSpec) return;
+    var existing = document.querySelector('link[data-pb-i18n-font="' + lang + '"]');
+    if (existing) return;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=' + googleSpec + '&display=swap';
+    link.setAttribute('data-pb-i18n-font', lang);
+    document.head.appendChild(link);
+  }
+
+  // ---- Progress-ring label override ----
+  // ProgressTracker is closure-private to the main page IIFE and exposed to
+  // window during its init() (DOMContentLoaded). By the time the user opens
+  // the TYB modal and uploads a YAML, it's available — so we patch lazily
+  // on first activation and then stay patched.
+  var pbI18nProgressPatterns = null; // { zero, getting_started, making_progress, almost_there, all_explored }
+  var pbI18nProgressPatched = false;
+  function pbI18nPatchProgress() {
+    if (pbI18nProgressPatched) return;
+    var PT = window.ProgressTracker;
+    if (!PT || !PT.getMilestoneLabel) return;
+    var original = PT.getMilestoneLabel.bind(PT);
+    PT.getMilestoneLabel = function(pct) {
+      if (pbI18nProgressPatterns) {
+        var p = pbI18nProgressPatterns;
+        if (pct === 100) return p.all_explored;
+        if (pct >= 80) return p.almost_there.replace('{pct}', pct);
+        if (pct >= 40) return p.making_progress.replace('{pct}', pct);
+        if (pct > 0) return p.getting_started.replace('{pct}', pct);
+        return p.zero;
+      }
+      return original(pct);
+    };
+    pbI18nProgressPatched = true;
+  }
+
+  // ---- Activate / deactivate a language bundle ----
+  var pbI18nActive = null; // current lang code, or null for English
+
+  function pbI18nBundleFor(lang) {
+    var el = document.getElementById('pb-i18n-' + lang);
+    if (!el) return null;
+    try { return JSON.parse(el.textContent); } catch (e) { return null; }
+  }
+
+  function activateLanguage(lang) {
+    var bundle = pbI18nBundleFor(lang);
+    if (!bundle) return false;
+
+    // Set html lang + dir
+    var html = document.documentElement;
+    html.setAttribute('lang', bundle._meta.html_lang || lang);
+    if (bundle._meta.dir === 'rtl') html.setAttribute('dir', 'rtl');
+    else html.removeAttribute('dir');
+
+    // Load Noto font for this bundle, override --rg-font-* so brand CSS
+    // doesn't win. (The brand CSS sets --pb-font-*; we override the
+    // --rg-font-* family variables directly.)
+    pbI18nLoadFont(bundle._meta.font_preload_google, lang);
+    var existingFontStyle = document.getElementById('pb-i18n-fonts');
+    if (existingFontStyle) existingFontStyle.remove();
+    if (bundle._meta.font_family_heading || bundle._meta.font_family_body) {
+      var fontStyle = document.createElement('style');
+      fontStyle.id = 'pb-i18n-fonts';
+      fontStyle.textContent = ':root {' +
+        (bundle._meta.font_family_heading ? ' --rg-font-heading: ' + bundle._meta.font_family_heading + ';' : '') +
+        (bundle._meta.font_family_body ? ' --rg-font-body: ' + bundle._meta.font_family_body + ';' : '') +
+        ' }';
+      document.head.appendChild(fontStyle);
+    }
+
+    // Walk [data-i18n]
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      var key = el.getAttribute('data-i18n');
+      var val = bundle.strings[key];
+      if (val == null) return;
+      if (el.tagName.toLowerCase() === 'title') {
+        document.title = val;
+      } else if (pbI18nMarkupRE.test(val)) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
+    });
+    // Walk [data-i18n-attrs]
+    document.querySelectorAll('[data-i18n-attrs]').forEach(function(el) {
+      var pairs = el.getAttribute('data-i18n-attrs').split(',');
+      pairs.forEach(function(p) {
+        var parts = p.split(':');
+        if (parts.length !== 2) return;
+        var attrName = parts[0].trim();
+        var key = parts[1].trim();
+        var val = bundle.strings[key];
+        if (val != null) el.setAttribute(attrName, val);
+      });
+    });
+
+    // Glossary — keys stay English lowercase; definitions become translated.
+    // TermTooltips is defined inside the main page IIFE above but attached
+    // to the same global; we read it via window.
+    if (window.TermTooltips && bundle.glossary) {
+      window.TermTooltips.activeTerms = Object.assign({}, bundle.glossary);
+    }
+
+    // Progress-ring labels (consulted by the patched getMilestoneLabel)
+    pbI18nPatchProgress();
+    var s = bundle.strings;
+    pbI18nProgressPatterns = {
+      zero: s['progress.zero'] || '0% explored',
+      getting_started: s['progress.getting_started'] || 'Getting started — {pct}%',
+      making_progress: s['progress.making_progress'] || 'Making progress — {pct}%',
+      almost_there: s['progress.almost_there'] || 'Almost there — {pct}%',
+      all_explored: s['progress.all_explored'] || 'All explored!'
+    };
+
+    // Re-snapshot tokens against the now-translated copy, then re-apply
+    // the current CSS-derived token map so {{PROGRAM_NAME}} etc. resolve
+    // inside translated strings.
+    pbTybTokenSnapshots = null;
+    pbTybSnapshotTokens();
+    if (pbTybCurrentTokenMap && Object.keys(pbTybCurrentTokenMap).length) {
+      pbTybApplyTokenMap(pbTybCurrentTokenMap);
+    }
+
+    // Expose active bundle so HeroQuiz/QuizEngine/OddsExplorer can read UI strings
+    window.__pbI18nActiveBundle = bundle;
+    pbI18nActive = lang;
+
+    // Reload myths in the target language so the hero quiz + myth walkthrough
+    // also localize. Falls back to the English myths if the localized file 404s.
+    pbI18nReloadMyths(lang);
+
+    // Refresh chips + cards + insight: re-renders <playbook-odds> instances,
+    // re-builds chip labels with the localized game names, and re-runs the
+    // insight sentence so {best_game} / {worst_game} pick up the new bundle.
+    if (window.__pbOddsExplorer && typeof window.__pbOddsExplorer.refresh === 'function') {
+      window.__pbOddsExplorer.refresh();
+    }
+    if (window.customElements && window.customElements.get('playbook-odds')) {
+      var OddsCtor = window.customElements.get('playbook-odds');
+      if (OddsCtor && typeof OddsCtor.refreshAll === 'function') OddsCtor.refreshAll();
+    }
+    return true;
+  }
+
+  function pbI18nReloadMyths(lang) {
+    if (!window.__pbRGReinit) return; // main IIFE not ready yet
+    // Prefer inline data — zero network, always available in any serve context.
+    if (window.__pbReadInlineMyths) {
+      var inline = window.__pbReadInlineMyths(lang) || window.__pbReadInlineMyths('en');
+      if (inline && inline.length) {
+        window.__pbRGReinit(inline);
+        return;
+      }
+    }
+    // Network fallback if no inline blocks present
+    var url = (lang === 'en') ? '../api/myths.json' : '../api/myths.' + lang + '.json';
+    fetch(url)
+      .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(data) { window.__pbRGReinit(data.myths || []); })
+      .catch(function() {
+        if (lang !== 'en') {
+          fetch('../api/myths.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) { window.__pbRGReinit(data.myths || []); })
+            .catch(function() { window.__pbRGReinit([]); });
+        } else {
+          window.__pbRGReinit([]);
+        }
+      });
+  }
+
+  function deactivateLanguage() {
+    if (!pbI18nActive) return;
+    var html = document.documentElement;
+    html.setAttribute('lang', 'en');
+    html.removeAttribute('dir');
+    document.querySelectorAll('link[data-pb-i18n-font]').forEach(function(l) { l.remove(); });
+    var fontStyle = document.getElementById('pb-i18n-fonts');
+    if (fontStyle) fontStyle.remove();
+
+    // Restore original text/attr snapshots
+    pbI18nOriginalSnapshots.forEach(function(s) {
+      if (s.kind === 'text') s.node.textContent = s.original;
+      else if (s.kind === 'html') s.node.innerHTML = s.original;
+      else if (s.kind === 'attr') s.node.setAttribute(s.attr, s.original);
+      else if (s.kind === 'title') document.title = s.original;
+    });
+
+    // Restore glossary
+    if (window.TermTooltips && window.TermTooltips.baseTerms) {
+      window.TermTooltips.activeTerms = Object.assign({}, window.TermTooltips.baseTerms);
+    }
+    // Clear progress patterns so the original English patch returns to default
+    pbI18nProgressPatterns = null;
+    // Re-snapshot tokens against restored English so future CSS applies target English
+    pbTybTokenSnapshots = null;
+    window.__pbI18nActiveBundle = null;
+    pbI18nActive = null;
+
+    // Reload the English myths so hero + myth quizzes return to English
+    pbI18nReloadMyths('en');
+
+    // Restore chip labels + cards + insight to English defaults
+    if (window.__pbOddsExplorer && typeof window.__pbOddsExplorer.refresh === 'function') {
+      window.__pbOddsExplorer.refresh();
+    }
+    if (window.customElements && window.customElements.get('playbook-odds')) {
+      var OddsCtor = window.customElements.get('playbook-odds');
+      if (OddsCtor && typeof OddsCtor.refreshAll === 'function') OddsCtor.refreshAll();
+    }
+  }
+
+  // ---- YAML file handling ----
+  function handleYamlFile(file) {
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      var parsed;
+      try {
+        parsed = pbTybParseBrandYaml(e.target.result);
+      } catch (err) {
+        setStatus('Could not read YAML: ' + err.message + '. Language unchanged.', 'err');
+        return;
+      }
+      var jurisdictions = parsed && parsed.meta && parsed.meta.primary_jurisdictions;
+      var market = Array.isArray(jurisdictions) ? jurisdictions[0] : null;
+      var lang = (market && MARKET_TO_LANG[market]) || 'en';
+
+      if (lang === 'en') {
+        deactivateLanguage();
+        setStatus('Applied: ' + file.name + '. No language override for ' + (market || 'unspecified jurisdiction') + ' — staying English.', 'ok');
+        resetBtn.disabled = false;
+        return;
+      }
+      if (activateLanguage(lang)) {
+        setStatus('Applied: ' + file.name + '. Language: ' + lang + ' (' + (market || '') + ').', 'ok');
+        resetBtn.disabled = false;
+      } else {
+        setStatus('Bundle missing: tried pb-i18n-' + lang + '. Language unchanged.', 'err');
+      }
+    };
+    reader.onerror = function() { setStatus('Could not read file: ' + file.name, 'err'); };
+    reader.readAsText(file);
+  }
+  yamlInput.addEventListener('change', function(e) {
+    handleYamlFile(e.target.files && e.target.files[0]);
+  });
+  wireDrop(yamlZone, handleYamlFile);
 })();
 </script>
 </body>

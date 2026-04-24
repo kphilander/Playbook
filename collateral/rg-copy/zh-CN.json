@@ -1,0 +1,210 @@
+{
+  "_meta": {
+    "language": "zh-CN",
+    "dir": "ltr",
+    "html_lang": "zh-Hans",
+    "font_family_heading": "'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif",
+    "font_family_body": "'Inter', 'Noto Sans SC', system-ui, sans-serif",
+    "font_preload_google": "Noto+Sans+SC:wght@300;400;500;600;700;800;900",
+    "cultural_profile": "authority/communal/minimal/diplomatic/private (Macau)",
+    "currency_note": "MOP, 澳门币 before numeral; ~8 MOP per USD (e.g., $1.10 → 澳门币 9)"
+  },
+  "strings": {
+    "meta.title": "{{PROGRAM_NAME}} — 理性娱乐",
+    "meta.description": "了解概率、设定个人限额、理性参与。{{ORGANIZATION}}提供的娱乐消费管理指南。",
+    "helpline.strip.label": "全天候免费保密咨询",
+    "helpline.strip.live_chat": "在线咨询",
+    "nav.odds": "实际概率",
+    "nav.myths": "误区与数据",
+    "nav.tools": "功能设置",
+    "nav.break": "暂停使用",
+    "nav.support": "获取支持",
+    "hero.quick_question": "一个小问题…",
+    "hero.sub_default": "以下小测试，有助于加深对常见游戏的理解。",
+    "hero.fallback.title_html": "理性娱乐，<span>从了解开始。</span>",
+    "hero.fallback.sub": "每种游戏皆有其数学规律，每位参与者亦有自主选择。通过了解概率、善用功能设置，可找到适合自身的参与方式。",
+    "hero.fallback.cta_see_odds": "查看概率",
+    "hero.fallback.cta_set_limits": "设定限额",
+    "odds.label": "概率与透明度",
+    "odds.title": "选择游戏，查看真实数据。",
+    "odds.blurb": "每种赌场游戏均设有固定的数学优势（庄家优势）。选择常接触的游戏类别，即可查看各项数据对比。",
+    "odds.empty": "请先选择上方的游戏类别。",
+    "myths.label": "误区与数据",
+    "myths.title": "您所了解的，或许另有答案。",
+    "myths.blurb": "连胜势头、好运位置、把握时机——这些说法颇为常见。下方通过数学角度加以分析。",
+    "tools.label": "功能设置",
+    "tools.title": "依需求配置。",
+    "tools.blurb": "以下并非限制措施，而是参与前可预先调整的管理工具。",
+    "tools.budget_lock.name": "预算锁定",
+    "tools.budget_lock.hook": "参与前，设定娱乐消费范围。",
+    "tools.budget_lock.detail_html": "可按日、周、月为单位，预先设定可支配的娱乐消费范围。设定后即刻生效。如需下调，立即执行；如需上调，系统设有冷静思考期，以便从容判断。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.session_timer.name": "时长提醒",
+    "tools.session_timer.hook": "达到预设时长时，系统将发出提示。",
+    "tools.session_timer.detail_html": "参与前设定合适的时长。时间到达时，系统会发出温和提醒——并非强制中断，而是让参与者有机会判断是否继续。无需时时留意时间，亦可把握自身节奏。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.play_dashboard.name": "参与记录",
+    "tools.play_dashboard.hook": "参与情况一目了然。",
+    "tools.play_dashboard.detail_html": "存款、提款、参与时长、当前收支情况，均集中显示于同一页面。完整记录可随时查阅，既可作为判断参考，亦可仅供了解之用。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">查看记录 →</a>",
+    "tools.safety_net.name": "损失上限",
+    "tools.safety_net.hook": "达到上限，系统自动暂停。",
+    "tools.safety_net.detail_html": "按次、按日、按周预先设定损失上限。达到该数额时，系统自动暂停参与。数额由参与者自主决定，主导权始终掌握在个人手中。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.reality_check.name": "定期提示",
+    "tools.reality_check.hook": "参与过程中，时长与收支提示。",
+    "tools.reality_check.detail_html": "参与过程中，系统定期以小窗形式提示已参与时长与当前收支。设计简洁、便于关闭。并非干扰，而是适时的信息呈现。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">立即设置 →</a>",
+    "tools.budget_planner.name": "预算规划",
+    "tools.budget_planner.hook": "先做规划，后行参与。",
+    "tools.budget_planner.detail_html": "从日常开销中，合理规划可用于娱乐的部分。正如餐饮消费、订阅服务一样——参与前明确预算，胜于事后回顾。\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">规划预算 →</a>",
+    "tools.cta_set_limits": "设定限额 →",
+    "break.label": "自主选择",
+    "break.title": "如需暂离，一键即可操作。",
+    "break.blurb": "如欲暂停——无论出于何种原因或期限——均可依自身意愿暂离。无需填表，无需询问。",
+    "break.card_timeframe.title": "期限自主选定",
+    "break.card_timeframe.desc": "可选期限从数月至长期不等。依当前需要作出选择。日后亦可重新考量。",
+    "break.card_pause.title": "全面暂停",
+    "break.card_pause.desc": "账户暂停，营销信息停止。无存款、无投注。期间保持清晰的距离。",
+    "break.card_support.title": "支持始终在线",
+    "break.card_support.desc": "暂离期间，咨询渠道仍可使用。电话、在线咨询、专业辅导——支持从未离开。",
+    "break.cta_take_break": "暂停参与 →",
+    "support.label": "支持",
+    "support.title": "有需要时，随时联系。",
+    "support.blurb": "免费、保密、全天候。无需理由，亦无需处于紧急状态。",
+    "support.normalizer": "每日都有众多人士主动联系。此乃寻常之事。",
+    "support.additional_resources": "其他资源",
+    "support.org.desc": "面向参与者及其家属的专业支持与信息服务。",
+    "support.ga.title": "Gamblers Anonymous",
+    "support.ga.desc": "同伴互助聚会——提供线上与线下两种形式。",
+    "support.gamtalk.title": "GamTalk",
+    "support.gamtalk.desc": "匿名线上互助论坛。无评判，无压力。",
+    "footer.call": "致电",
+    "footer.chat": "咨询",
+    "footer.legal_html": "仅限{{MIN_AGE}}岁及以上人士。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n技术支持：<a href=\"https://github.com/kphilander/Playbook\">Playbook</a>（CC0）",
+    "progress.zero": "已阅读 0%",
+    "progress.getting_started": "刚开始 — {pct}%",
+    "progress.making_progress": "持续阅读 — {pct}%",
+    "progress.almost_there": "即将读完 — {pct}%",
+    "progress.all_explored": "已全部阅读",
+    "hero.feedback_prefix_html": "<strong>正确答案：</strong>",
+    "hero.cta_keep_going": "继续参与完整测试 →",
+    "myths.aria_question_pattern": "第 {n} 题，共 {total} 题",
+    "myths.next_question": "下一题 →",
+    "myths.see_your_score": "查看成绩 →",
+    "myths.correct_label": "正确",
+    "myths.perfect_score": "全部答对。掌握程度出色。需要说明的是，了解数学规律并不会改变概率本身 —— 仅意味着参与时，对所处情境有清晰的认识。",
+    "myths.good_effort": "无论是否全部答对，对相关数学规律已有了认识。相比凭感觉判断，这一立足点更为稳妥。",
+    "myths.explore_tools": "查看功能设置 →",
+    "odds.insight_pattern_html": "<strong>差距有多大？</strong> 以每次10美元、共投注100次计算，「{best_game}」的预计损失约为 <strong>{best_loss}美元</strong>，「{worst_game}」则约为 <strong>{worst_loss}美元</strong>。同等预算，数学规律截然不同。",
+    "odds.how_to_play_pattern": "{game}的玩法 →"
+  },
+  "glossary": {
+    "house edge": "庄家优势——即赌场相对于参与者的数学优势，以百分比表示。庄家优势5%意味着长期而言，每投注100元，赌场预计可保留5元。",
+    "rtp": "Return to Player（返还率）—— 长期内回馈参与者的投注比例。RTP 96%即表示每投注100元，平均可得96元回馈。",
+    "rng": "Random Number Generator（随机数生成器）—— 确保每次转动、发牌、抽取结果均为独立随机的软件系统。",
+    "bankroll": "专为娱乐用途预留的资金——类似于娱乐消费预算。",
+    "volatility": "游戏短期结果的波动幅度。高波动性意味着输赢差距较大、中奖频率较低。",
+    "expected value": "同一投注无限次重复时的数学平均结果。负值表示庄家具有数学优势。",
+    "paytable": "老虎机或视频扑克的派彩表——列明各中奖组合对应的派彩金额。",
+    "wagering requirement": "奖金需达成的投注倍数条件，方可作为现金提取。",
+    "deposit limit": "一定期间内的存款上限，由参与者自行设定。",
+    "parlay": "将多项预测合并为一笔投注，所有预测均须命中方可派彩。",
+    "tilt": "情绪失控导致判断失准的状态——即情绪压倒理智的时刻。",
+    "cool-off period": "短期自主休止期，通常为24小时至30日。",
+    "ggr": "Gross Gaming Revenue（博彩毛收入）—— 总投注额扣除派彩后的金额，即运营方的总收入。",
+    "ev": "Expected Value（期望值）—— 多次参与时，每次投注平均所得或所失的金额。",
+    "self-exclusion": "参与者自主申请在指定期间内停止使用相关服务的机制。",
+    "session limit": "单次参与时长的上限。设定时间到达时，系统会发出温和提示。",
+    "loss limit": "指定期间内的损失上限。达到上限时，系统自动暂停参与。",
+    "reality check": "参与过程中定期显示的小窗提示，告知当前参与时长及消费金额。"
+  },
+  "odds_card": {
+    "labels": {
+      "badge": "了解概率",
+      "house_edge": "庄家优势",
+      "rtp": "返还率(RTP)",
+      "source": "资料来源：Playbook · CC0 授权 · 请依所属司法管辖区核实"
+    },
+    "games": {
+      "slots": {
+        "facts": [
+          "<strong>每次旋转均为独立事件。</strong> 机器不具备记忆功能。",
+          "<strong>返还率由软件设定，</strong>并受监管。时段并不影响。",
+          "投注金额越高，波动越大，<strong>概率并不因此改善。</strong>",
+          "「差一点」不等于「接近中奖」。结果在旋转前已经确定。"
+        ]
+      },
+      "blackjack": {
+        "facts": [
+          "采用基本策略时，<strong>庄家优势在赌场游戏中最低。</strong>",
+          "基本策略可降低庄家优势。<strong>属于数学，而非直觉。</strong>",
+          "算牌确有其事，但优势<strong>仅为 0.5–1.5%，</strong>且需大量手牌方可体现。",
+          "荷官依据固定规则操作，<strong>无自由裁量。</strong>"
+        ]
+      },
+      "roulette": {
+        "facts": [
+          "<strong>美式轮盘(含 00):</strong> 庄家优势 5.26%。",
+          "<strong>欧式轮盘(单个 0):</strong> 庄家优势 2.70%。",
+          "每次旋转均为独立事件。球不记录上一次的落点。",
+          "没有数字「该出了」。<strong>37/38 格的概率完全相等。</strong>"
+        ]
+      },
+      "sports-betting": {
+        "facts": [
+          "<strong>抽水(vig)</strong>是博彩公司的利润。标准为两侧 -110。",
+          "熟悉运动固然有帮助，但<strong>赔率已将专业判断计入其中。</strong>",
+          "串关投注的抽水逐场累积。<strong>场次越多，数学上越不利。</strong>",
+          "预测者往往展示胜场而隐藏败场。<strong>幸存者偏差不可忽视。</strong>"
+        ]
+      },
+      "baccarat": {
+        "facts": [
+          "<strong>庄家：</strong>庄家优势 1.06%(游戏中最有利的选项)。",
+          "<strong>闲家：</strong>庄家优势 1.24%。",
+          "<strong>和局：</strong>庄家优势 14.4% — 建议避开。",
+          "记录牌路并不改变概率。<strong>每手均为独立事件。</strong>"
+        ]
+      },
+      "video-poker": {
+        "facts": [
+          "采用最佳策略时，部分变体的<strong>返还率可超过 99%。</strong>",
+          "<strong>Jacks or Better(9/6)</strong>为标杆：RTP 99.54%。",
+          "与老虎机不同，<strong>玩家的决策会影响结果。</strong>",
+          "始终<strong>押注最大硬币数</strong> — 皇家同花顺的赔率基于此条件。"
+        ]
+      },
+      "craps": {
+        "facts": [
+          "<strong>过关/不过关：</strong>庄家优势 1.41%(最有利的投注)。",
+          "<strong>赔率投注：</strong>庄家优势 0% — 赌场中唯一公平的投注。",
+          "命题投注看似诱人，<strong>庄家优势可高达 16.7%。</strong>",
+          "骰子为无规律随机。<strong>「控制性投掷」并不存在。</strong>"
+        ]
+      },
+      "lottery": {
+        "facts": [
+          "彩票在博彩产品中<strong>庄家优势最高。</strong>",
+          "购买 10 张仅是将近似为零的概率放大 10 倍。<strong>10 × 近似零 ≈ 近似零。</strong>",
+          "各组号码的概率相等。<strong>随机并无偏好。</strong>",
+          "每投入 1 美元，通常期望回馈 <strong>0.40–0.60 美元。</strong>"
+        ]
+      },
+      "bingo": {
+        "facts": [
+          "概率取决于<strong>场内卡片总数，</strong>而非手中卡片的内容。",
+          "增加卡片可略微提高概率，但<strong>所有玩家同时参与竞争。</strong>",
+          "数字完全随机抽取。<strong>任何规律或策略皆无法改变数学结果。</strong>",
+          "运营方从奖池中抽成，通常为 <strong>5–25%。</strong>"
+        ]
+      }
+    }
+  },
+  "games": {
+    "slots": "老虎机",
+    "blackjack": "二十一点",
+    "roulette": "轮盘",
+    "sports-betting": "体育博彩",
+    "baccarat": "百家乐",
+    "video-poker": "视频扑克",
+    "craps": "花旗骰",
+    "lottery": "彩票",
+    "bingo": "宾果"
+  }
+}

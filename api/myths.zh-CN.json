@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "count": 18,
+    "language": "zh-CN",
+    "source_en": "api/myths.json",
+    "tone_profile": "authority/communal/minimal/diplomatic/private (Macau)"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "连续中奖",
+      "quiz": {
+        "question": "某位玩家在老虎机上连续四次中奖。第五次的中奖概率如何？",
+        "options": [
+          { "label": "高于常规 —— 势头正好", "correct": false },
+          { "label": "低于常规 —— 该轮到输了", "correct": false },
+          { "label": "与其他任何一次完全相同", "correct": true },
+          { "label": "取决于投注金额", "correct": false }
+        ],
+        "feedback": "每一次的结果均为独立事件。机器不记录也不关心此前发生了什么。所谓「势头」，更多属于人脑的构建，而非游戏本身的设计。"
+      }
+    },
+    {
+      "id": 2,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "「该中」的时候",
+      "quiz": {
+        "question": "一台老虎机三个小时未出中奖。这对下一次旋转意味着什么？",
+        "options": [
+          { "label": "即将中奖的可能性上升", "correct": false },
+          { "label": "处于「冷机」状态，更不容易中", "correct": false },
+          { "label": "没有意义 —— 每次旋转均为独立事件", "correct": true },
+          { "label": "机器可能出现故障", "correct": false }
+        ],
+        "feedback": "随机数生成器不具备记忆功能。三小时未中这一事实，对下一次的结果无任何预示作用。"
+      }
+    },
+    {
+      "id": 3,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "所谓的幸运机器",
+      "quiz": {
+        "question": "在同一台老虎机上似乎总能赢得更多。原因何在？",
+        "options": [
+          { "label": "机器已熟悉玩家的玩法", "correct": false },
+          { "label": "累积了忠诚度权益", "correct": false },
+          { "label": "确认偏差 —— 赢的记忆保留，输的记忆淡忘", "correct": true },
+          { "label": "已摸清机器的规律", "correct": false }
+        ],
+        "feedback": "人会记住在「那台机器」上的胜利，而淡忘输的经历 —— 这是一种确认偏差。从机器的角度看，并不存在所谓的规律或偏好。"
+      }
+    },
+    {
+      "id": 4,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "「差一点」的含义",
+      "quiz": {
+        "question": "老虎机上出现两个相同符号、第三个为空白。这意味着什么？",
+        "options": [
+          { "label": "距离中奖越来越近", "correct": false },
+          { "label": "机器正在「升温」", "correct": false },
+          { "label": "没有意义 —— 与其他任何一次未中相同", "correct": true },
+          { "label": "应考虑增加投注金额", "correct": false }
+        ],
+        "feedback": "「差一点」会带来心理上的期待，但并不具备预示下一次结果的作用。随机数生成器在卷轴停下之前，已经决定了结果。"
+      }
+    },
+    {
+      "id": 5,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "时段与概率",
+      "quiz": {
+        "question": "老虎机在一天中不同时段的派彩率是否有所不同？",
+        "options": [
+          { "label": "有 —— 夜间设置更为宽松", "correct": false },
+          { "label": "有 —— 客流繁忙的周末设置更紧", "correct": false },
+          { "label": "无 —— 返还率在软件中固定，并受监管", "correct": true },
+          { "label": "视赌场而定", "correct": false }
+        ],
+        "feedback": "派彩率由游戏软件设定，并经监管机构认证。赌场无法根据时段或客流进行动态调整，此为制度所决定。"
+      }
+    },
+    {
+      "id": 6,
+      "gameType": ["slots", "electronic-gaming"],
+      "title": "投注金额与优势",
+      "quiz": {
+        "question": "若将单次投注从1美元增至10美元，庄家优势（赌场的数学优势）会如何变化？",
+        "options": [
+          { "label": "下降 —— 赌场优待高额投注者", "correct": false },
+          { "label": "上升 —— 赌场会取得更多", "correct": false },
+          { "label": "完全不变", "correct": true },
+          { "label": "视机器而定", "correct": false }
+        ],
+        "feedback": "庄家优势以百分比计算，不论投注金额大小，其比例保持一致。投注额越高，期望损失也按比例同步增加。"
+      }
+    },
+    {
+      "id": 7,
+      "gameType": ["roulette", "blackjack", "baccarat"],
+      "title": "投注策略的局限",
+      "quiz": {
+        "question": "在轮盘游戏中采用马丁格尔策略（每输一次便加倍下注），结果会如何？",
+        "options": [
+          { "label": "长期来看，必然胜出", "correct": false },
+          { "label": "庄家优势会随时间消失", "correct": false },
+          { "label": "以频繁的小胜，换取偶发的大额损失", "correct": true },
+          { "label": "取决于玩家的自律程度", "correct": false }
+        ],
+        "feedback": "任何投注策略均无法改变底层的数学规律。马丁格尔策略将小额损失转化为罕见但规模较大的损失，结构本身即如此设计。"
+      }
+    },
+    {
+      "id": 8,
+      "gameType": ["blackjack", "baccarat", "poker"],
+      "title": "荷官的「状态」",
+      "quiz": {
+        "question": "连续三位玩家输给了荷官。是否应当换桌？",
+        "options": [
+          { "label": "应换 —— 此荷官处于「热手」状态", "correct": false },
+          { "label": "应留 —— 荷官即将转输", "correct": false },
+          { "label": "无差别 —— 荷官依固定规则操作，牌为随机", "correct": true },
+          { "label": "若为人工洗牌，则应换", "correct": false }
+        ],
+        "feedback": "荷官按照既定规则操作，无自由裁量。所谓「热手荷官」，实为概率的自然波动，并非某种趋势。"
+      }
+    },
+    {
+      "id": 9,
+      "gameType": ["blackjack"],
+      "title": "算牌的实际优势",
+      "quiz": {
+        "question": "熟练的算牌者相对于赌场，通常具有多少优势？",
+        "options": [
+          { "label": "10-15% —— 收益可观", "correct": false },
+          { "label": "5-10% —— 可作稳定收入", "correct": false },
+          { "label": "0.5-1.5% —— 优势微小，需长时间大量投注方可体现", "correct": true },
+          { "label": "0% —— 并无实际效果", "correct": false }
+        ],
+        "feedback": "算牌在理论上存在，但优势仅为0.5-1.5%。实践中需要大量资金、长时间专注以及承受方差；赌场亦设有相应的防范措施。"
+      }
+    },
+    {
+      "id": 10,
+      "gameType": ["roulette", "lottery"],
+      "title": "「个人的」号码",
+      "quiz": {
+        "question": "在轮盘中始终下注7号，过去50次均未出现。下一次出现的概率如何？",
+        "options": [
+          { "label": "上升 —— 即将出现", "correct": false },
+          { "label": "下降 —— 今日显然不利", "correct": false },
+          { "label": "与往常相同：37分之1", "correct": true },
+          { "label": "取决于荷官投球的方式", "correct": false }
+        ],
+        "feedback": "每一次旋转均为独立事件。在欧式轮盘中，任一数字每次出现的概率均为37分之1，过往结果不会影响当前概率。"
+      }
+    },
+    {
+      "id": 11,
+      "gameType": ["sports-betting"],
+      "title": "知识与胜率",
+      "quiz": {
+        "question": "在-110赔率的让分投注中，熟悉该项运动的玩家需要多高的胜率才能达到收支平衡？",
+        "options": [
+          { "label": "50% —— 胜过一半即可", "correct": false },
+          { "label": "约52.4% —— 覆盖赔率差", "correct": true },
+          { "label": "55% —— 需轻微优势", "correct": false },
+          { "label": "60% —— 需明显优势", "correct": false }
+        ],
+        "feedback": "在-110标准赔率下，博彩公司已计入抽水。因此仅胜一半仍会逐步亏损；需约52.4%的胜率方可持平。"
+      }
+    },
+    {
+      "id": 12,
+      "gameType": ["sports-betting"],
+      "title": "串关投注的数学",
+      "quiz": {
+        "question": "在串关投注中增加第四场比赛，博彩公司的优势会如何变化？",
+        "options": [
+          { "label": "保持不变 —— 约4.5%", "correct": false },
+          { "label": "反而下降，因派彩更高", "correct": false },
+          { "label": "大约翻一番或翻三倍 —— 各场优势复合叠加", "correct": true },
+          { "label": "视所选运动项目而定", "correct": false }
+        ],
+        "feedback": "博彩公司的优势会随每一场比赛复合累积。四场串关的整体优势约为单场的四倍 —— 丰厚派彩的背后，存在相应的数学安排。"
+      }
+    },
+    {
+      "id": 13,
+      "gameType": ["sports-betting"],
+      "title": "预测者的战绩",
+      "quiz": {
+        "question": "某位预测者本周10选8。这说明了什么？",
+        "options": [
+          { "label": "已建立成熟体系 —— 可以跟进", "correct": false },
+          { "label": "此状态有望延续", "correct": false },
+          { "label": "10次样本不足以得出结论", "correct": true },
+          { "label": "掌握内部消息", "correct": false }
+        ],
+        "feedback": "短期连胜在统计上总会出现在某些人身上。在众多预测者同时发布的情况下，某一周出现高胜率者，属于自然发生的结果，并非能力的确证。"
+      }
+    },
+    {
+      "id": 14,
+      "gameType": ["sports-betting"],
+      "title": "滚球投注的实际位置",
+      "quiz": {
+        "question": "依据赛场所见进行滚球（即时）投注时，玩家实际处于什么位置？",
+        "options": [
+          { "label": "领先于博彩公司 —— 能够利用场上信息", "correct": false },
+          { "label": "掌握了博彩公司未获得的资讯", "correct": false },
+          { "label": "通常处于劣势 —— 算法已先行调整赔率", "correct": true },
+          { "label": "较赛前赔率更为有利", "correct": false }
+        ],
+        "feedback": "博彩公司以毫秒级别更新实时赔率。当玩家察觉并作出判断时，相关信息已被系统吸收 —— 滚球投注的实况便是如此。"
+      }
+    },
+    {
+      "id": 15,
+      "gameType": ["lottery"],
+      "title": "「该出」的号码",
+      "quiz": {
+        "question": "42号彩票号码已经六个月未曾出现。在下一期中出现的可能性是否更高？",
+        "options": [
+          { "label": "是 —— 统计上已到出现的时候", "correct": false },
+          { "label": "是 —— 平均法则要求其迟早出现", "correct": false },
+          { "label": "否 —— 每一期为独立抽取，各号概率相等", "correct": true },
+          { "label": "取决于总号码数量", "correct": false }
+        ],
+        "feedback": "抽奖球体本身不具记忆。每一次抽取均是完全独立的事件，与先前的结果无关联。"
+      }
+    },
+    {
+      "id": 16,
+      "gameType": ["lottery"],
+      "title": "多买票是否显著提升中奖",
+      "quiz": {
+        "question": "购买100张而非1张彩票，中奖概率的提升幅度如何？",
+        "options": [
+          { "label": "基本可以保证有所中奖", "correct": false },
+          { "label": "从1400万分之1提升至100/1400万 —— 仍有99.999%的概率不中", "correct": true },
+          { "label": "中奖概率变为1%", "correct": false },
+          { "label": "取决于头奖的规模", "correct": false }
+        ],
+        "feedback": "接近于零的概率乘以100，仍然接近于零。0.000007%变为0.0007% —— 彩票的数学规律即是如此。"
+      }
+    },
+    {
+      "id": 17,
+      "gameType": ["all-gambling"],
+      "title": "试图赢回损失",
+      "quiz": {
+        "question": "某位玩家已损失200美元。继续下注以求挽回，通常会出现何种结果？",
+        "options": [
+          { "label": "多数人可在一小时内挽回损失", "correct": false },
+          { "label": "连输后概率会转向有利", "correct": false },
+          { "label": "平均而言损失进一步扩大 —— 庄家优势逐步累积", "correct": true },
+          { "label": "视转换至何种游戏而定", "correct": false }
+        ],
+        "feedback": "追加投注即是在数学劣势下继续下注。从平均结果看，情况只会恶化 —— 这是数字呈现的客观规律。"
+      }
+    },
+    {
+      "id": 18,
+      "gameType": ["all-gambling"],
+      "title": "作为收入来源",
+      "quiz": {
+        "question": "长期而言，博彩游戏的设计目标通常为：",
+        "options": [
+          { "label": "玩家与赌场均达成持平", "correct": false },
+          { "label": "通过足够的技巧与练习即可战胜", "correct": false },
+          { "label": "回馈总额少于投注总额 —— 此即为庄家优势", "correct": true },
+          { "label": "回馈长期忠诚的玩家", "correct": false }
+        ],
+        "feedback": "庄家优势是每一种游戏的内在设计。长期而言，玩家投注的总额超过游戏回馈的总额 —— 此为博彩行业运作的基础。"
+      }
+    }
+  ]
+}
