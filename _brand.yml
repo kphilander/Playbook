@@ -30,6 +30,19 @@ meta:
     - united-states
     - united-kingdom
 
+  # The auditable theory of change behind the framework, plus practitioner
+  # provenance. Token-resolved into collateral so future generated content
+  # inherits a single canonical credibility line. Override on fork only if
+  # you are deploying Playbook under your own attribution.
+  foundations:
+    chapter: "brand-book/00b-theoretical-foundations.md"
+    public_url: "https://gamblingpolicy.com/playbook/foundations"
+    author: "Kahlil S. Philander, Ph.D."
+    author_url: "https://kahlil.co"
+    author_affiliation: "Carson College of Business, Washington State University"
+    author_credential_line: "Co-developer, Positive Play Scale · 289 documented engagements across 5 continents · Two NCPG Research Awards"
+    one_sentence_provenance: "Playbook is being proposed by the person who built the measurement instrument it relies on, evaluated the accreditation program it critiques, and has implemented RG programs at the operators it is designed for."
+
 
 # ─── BRAND PILLARS ───────────────────────────
 # These two pillars define what Playbook content is.

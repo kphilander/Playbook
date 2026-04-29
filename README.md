@@ -1,6 +1,6 @@
 # Playbook
 
-**Open-source brand guidelines for gambling entertainment literacy — CC0-licensed, white-label, built for operators.**
+**Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.**
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](_brand.yml)
@@ -11,13 +11,25 @@
 
 Playbook is a complete, forkable brand system for gambling entertainment literacy. It gives operators everything they need to build player-facing content that's actually worth engaging with: brand foundations, voice and tone, messaging frameworks, visual identity specs, multi-jurisdiction compliance modules, and ready-to-use collateral templates.
 
-Playbook is a **content and media brand** — the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the informed choice model: most people who gamble do so without problems, gambling is entertainment, and players make better decisions when they understand the math, the odds, and the tools available to them.
+Playbook is a **content and media brand**: the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the informed choice model: most people who gamble do so without problems, gambling is entertainment, and players make better decisions when they understand the math, the odds, and the tools available to them.
+
+## The How and Why of the Playbook Design
+
+Playbook is built on an auditable theory of change. The core mechanism is **belief recalibration**: cognitive distortions are causally implicated in gambling-related harm (Philander & Gainsbury, 2020, 2022), and positively-framed, segmented literacy content shifts attitudes and subjective norms via the Theory of Reasoned Action pathway (Gainsbury, Philander, & Grattan, 2020). The intended outcome measure is the **Positive Play Scale** (Wood et al., 2017; Tabri, Wood, Philander, & Wohl, 2020): four sub-constructs (Personal Responsibility, Gambling Literacy, Honesty and Control, Pre-commitment) that anchor every character, scenario, and content prompt in the system. The design rationale for character-driven, segmented messaging traces to Gainsbury, Abarbanel, Philander, & Butler (2018), and the operator-culture layer that determines whether deployment actually moves player outcomes traces to Philander (2020, 2023).
+
+Research, however, only goes so far. RG is a management practice as much as a research domain, and experience fills in the operational detail that the literature necessarily obscures: which training cadence is sustainable, which compliance translation works across jurisdictions, when a literacy module belongs at registration vs. mid-session vs. cool-down, what makes an internal RG culture stick beyond an accreditation cycle. Playbook integrates both layers. The cited theory of change is the auditable scaffolding; the practitioner record behind the design choices is the load-bearing complement.
+
+The full theory (every claim, every cite, every open question about what isn't yet empirically tested) is in **[Chapter 00b: Theoretical Foundations](brand-book/00b-theoretical-foundations.md)**. Read that chapter before deciding whether the rest of this repository is serious work.
 
 ## Created by
 
-Playbook was created by [Kahlil Simeon-Rose, Ph.D.](https://kahlil.co), a tenured Associate Professor at Washington State University.
+Playbook is the design product of a 20-year research and consulting practice. Lead author: [Kahlil Simeon-Rose, Ph.D.](https://kahlil.co) (publishing as Philander on the work cited above), tenured Associate Professor at Washington State University's Carson College of Business.
 
-His career spans gambling research, policy, and industry practice — from directing social responsibility at BCLC (where he co-developed GameSense, later licensed by multiple jurisdictions and private operators), to co-developing the Positive Play Scale (the first standardized measure of responsible gambling behavior), to co-developing RG Check for iGaming at the Responsible Gambling Council. He has served as a consultant to casino operators, lotteries, sports betting platforms, regulators, and courts across North America, Europe, and Australasia. His research has been recognized with two National Council on Problem Gambling Annual Research Awards (2015, 2021), and he serves on the inaugural advisory committee of the Responsible Online Gaming Association (ROGA).
+The practitioner record behind the framework: two decades of consulting and research across five continents, with **150+ consulting engagements and 50+ peer-reviewed publications (2004–2024)**. Direct engagements span **North America, Europe, the Middle East, Australasia, and Asia-Pacific**, with a client mix that includes integrated-resort operators in Las Vegas and Asia-Pacific, tier-1 European online sportsbook and casino operators, US tribal gaming operators, provincial Canadian Crown lottery and gaming corporations, US state gambling commissions, and gaming regulators in Europe, the Middle East, and Australasia.
+
+**Programs and instruments:** co-developer of GameSense while serving as Director of Social Responsibility at the British Columbia Lottery Corporation (since licensed by multiple jurisdictions and private operators); co-developer of the **Positive Play Scale** (the player-side outcome measure proposed for evaluating Playbook itself); co-developer of RG Check for iGaming at the Responsible Gambling Council, and consultant on later updates to the RG Check frameworks. **Recognition and active advisory roles:** two NCPG Annual Research Awards (2015, 2021); current advisory positions include the Scientific Advisory Board of the [Deutsche Stiftung Glücksspielforschung](https://deutsche-stiftung-gluecksspielforschung.de/foundation/) / German Foundation for Gambling Research, the Responsible Gambling Working Group of the Canadian Gaming Association, and the inaugural Advisory Committee of the Responsible Online Gaming Association (ROGA).
+
+The full provenance, with the inline disclosures attached to each cited paper, is in the [About this work](brand-book/00b-theoretical-foundations.md#about-this-work) footer of the Foundations chapter.
 
 ## Who is this for?
 
@@ -33,15 +45,15 @@ His career spans gambling research, policy, and industry practice — from direc
 
 **Brand differentiation.** In a market where every operator's RG page looks the same, Playbook content stands out. It tells players: "We take you seriously."
 
-**Regulatory compliance.** Jurisdictions require player-facing education and messaging. Playbook makes compliance content that actually works — not just content that checks a box.
+**Regulatory compliance.** Jurisdictions require player-facing education and messaging. Playbook makes compliance content that actually works, not just content that checks a box.
 
 ## Quick start
 
 1. **Fork this repository** to your own GitHub account
-2. **Edit [`_brand.yml`](_brand.yml)** — your program name, colors, fonts, helpline numbers, and taglines. This single file drives the entire system.
-3. **Choose your jurisdictions** — keep the modules you operate in (`jurisdictions/united-kingdom/`), delete the rest
-4. **Customize messaging** — pick from the tagline system, adapt tone examples, write your own
-5. **Build collateral** — use the HTML templates in `collateral/render/` and markdown specs across all channels
+2. **Edit [`_brand.yml`](_brand.yml)**: your program name, colors, fonts, helpline numbers, and taglines. This single file drives the entire system.
+3. **Choose your jurisdictions**: keep the modules you operate in (`jurisdictions/united-kingdom/`), delete the rest
+4. **Customize messaging**: pick from the tagline system, adapt tone examples, write your own
+5. **Build collateral**: use the HTML templates in `collateral/render/` and markdown specs across all channels
 
 ## Preview
 
@@ -50,11 +62,11 @@ A selection of the 41 ready-to-use templates in the brand system. Each template 
 | | | |
 |---|---|---|
 | ![Social card](collateral/render/card-1a-hot-streak.png) | ![Email template](collateral/render/email-welcome-7a.png) | ![Venue poster](collateral/render/poster-4a-know-your-game.png) |
-| Social card — myth-buster | Email — welcome series | Poster — Know Your Game |
+| Social card, myth-buster | Email, welcome series | Poster, Know Your Game |
 | ![Rack card](collateral/render/rack-card-5a.png) | ![Digital display](collateral/render/display-landscape-6a.png) | ![Venue sign](collateral/render/sign-entrance-9a.png) |
-| Print — rack card | Digital display — landscape | Venue sign — entrance |
+| Print, rack card | Digital display, landscape | Venue sign, entrance |
 | ![Support page](collateral/render/support-page-10a.png) | ![Helpline poster](collateral/render/poster-tier2-10g.png) | ![Brochure](collateral/render/brochure-trifold-8a.png) |
-| Tier 2 — support page | Tier 2 — helpline poster | Print — brochure inside |
+| Tier 2, support page | Tier 2, helpline poster | Print, brochure inside |
 
 ---
 
@@ -71,6 +83,7 @@ Playbook/
 │
 ├── brand-book/                       # Core brand guidelines (10 chapters)
 │   ├── 00-introduction.md            # Purpose, the engagement gap, two-tier system
+│   ├── 00b-theoretical-foundations.md # Auditable theory of change: how/why Playbook works, citations, logic model, author provenance
 │   ├── 01-brand-foundation.md        # Mission, vision, pillars (Open / Social)
 │   ├── 02-brand-personality.md       # Playbook voice, humor guidelines
 │   ├── 03-visual-identity.md         # Logo, color, typography, icons, photography
@@ -199,7 +212,7 @@ Playbook/
 
 | Area | Description |
 |------|-------------|
-| **Jurisdictions** | Additional regulatory compliance modules: UK (UKGC, ASA/CAP), remaining US states, Australia (ACMA), remaining Canadian provinces, and EU (CEN 16259). The template system, Canada/BC module, and US/Nevada module are complete — see `jurisdictions/`. |
+| **Jurisdictions** | Additional regulatory compliance modules: UK (UKGC, ASA/CAP), remaining US states, Australia (ACMA), remaining Canadian provinces, and EU (CEN 16259). The template system, Canada/BC module, and US/Nevada module are complete (see `jurisdictions/`). |
 | **Implementation guides** | Operator adoption resources: 30-minute quick-start guide, Figma design briefs, launch checklist, and measurement framework for tracking content engagement and adoption metrics. |
 | **Examples** | Worked brand application with a fictional operator showing how to fork, configure `_brand.yml`, and deploy the full system. |
 
@@ -209,7 +222,7 @@ The [`_brand.yml`](_brand.yml) file is the engine. It holds every customizable v
 
 Fork the repo. Edit `_brand.yml`. Your brand identity cascades everywhere.
 
-**The adaptive identity model.** Playbook is *recognizable but adaptive*. The structural patterns (message hierarchy, content architecture, layout principles) stay consistent across operators. The visual surface (colors, fonts, logo) adapts to each operator's brand. A player who encounters Playbook-based content at one platform will intuitively recognize the content structure at another — even though they look different.
+**The adaptive identity model.** Playbook is *recognizable but adaptive*. The structural patterns (message hierarchy, content architecture, layout principles) stay consistent across operators. The visual surface (colors, fonts, logo) adapts to each operator's brand. A player who encounters Playbook-based content at one platform will intuitively recognize the content structure at another, even though they look different.
 
 ## Rendering collateral
 
@@ -224,21 +237,21 @@ node render-cards.mjs card-1a      # Render a specific template
 ```
 
 Other build scripts:
-- `node build-logos.mjs` — Generate logo SVGs from brand config
-- `node build-icons.mjs` — Generate icon SVGs
-- `node build-deck.mjs` — Generate the PPTX brand deck
+- `node build-logos.mjs`: Generate logo SVGs from brand config
+- `node build-icons.mjs`: Generate icon SVGs
+- `node build-deck.mjs`: Generate the PPTX brand deck
 
 ## Two-tier architecture
 
 Playbook uses a two-tier system:
 
-- **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging — content players seek out. This is what operators co-brand with.
+- **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging: content players seek out. This is what operators co-brand with.
 
 - **Tier 2 (5%):** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, cooldown screens, session summaries. Warm, direct, appropriately serious. See `visual-identity/tier-2/tier-2-visual-guide.md` for the full visual specification and 8 template renders.
 
 ## License
 
-[CC0 1.0 Universal](LICENSE) — public domain. Copy, modify, distribute, and use this work for any purpose, including commercial, without permission or attribution.
+[CC0 1.0 Universal](LICENSE): public domain. Copy, modify, distribute, and use this work for any purpose, including commercial, without permission or attribution.
 
 **Why CC0?** Player education is too important for licensing friction. Every operator should be able to deploy quality content without legal barriers. CC0 means the entire industry can collaborate on one shared standard.
 

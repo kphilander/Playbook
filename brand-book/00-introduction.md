@@ -125,6 +125,16 @@ competent adults enjoying a leisure activity, you write differently. You design
 differently. You create content that respects the reader, and respected readers
 pay attention.
 
+The deeper version of this argument — the cited theory of change, the proximal
+mechanism (cognitive correction), the behavior pathway (Theory of Reasoned
+Action), the design rationale for segmented messaging, the operator-culture
+prerequisites for deployment, the logic model, and the honest concessions about
+what is and isn't yet empirically tested — is in
+[Chapter 00b: Theoretical Foundations](00b-theoretical-foundations.md). That
+chapter is the auditable receipt for the framework summarized here, and is the
+canonical answer when a regulator, operator, or skeptical reader asks *why*
+this approach.
+
 ### The Execution: A Content/Media Brand
 
 Playbook is not a wellness app. (If earlier drafts referenced Calm or Headspace
@@ -389,6 +399,7 @@ you need.
 | Chapter | What It Covers | Read This When You Need To... |
 |---|---|---|
 | **00 -- Introduction** *(you are here)* | The engagement gap, the Playbook approach, the two-tier system | Understand why Playbook exists and what it is |
+| **[00b -- Theoretical Foundations](00b-theoretical-foundations.md)** | Auditable theory of change, cited mechanisms, logic model, author provenance | Defend the framework to a regulator, operator, or skeptical researcher |
 | **[01 -- Brand Foundation](01-brand-foundation.md)** | Mission, vision, pillars, positioning, audiences, content scope | Set strategic direction or brief a new team member |
 | **[02 -- Brand Personality](02-brand-personality.md)** | Archetypes, personality traits, humor, emotional attributes | Understand *who* Playbook is and how it behaves |
 | **[03 -- Visual Identity](03-visual-identity.md)** | Logo, color, typography, photography, illustration, iconography | Create any visual asset |
@@ -573,4 +584,4 @@ sharing.
 
 ---
 
-*Next: [Chapter 1 -- Brand Foundation](01-brand-foundation.md)*
+*Next: [Chapter 00b — Theoretical Foundations](00b-theoretical-foundations.md) — the auditable theory of change behind the framework above. Then [Chapter 1 — Brand Foundation](01-brand-foundation.md).*
