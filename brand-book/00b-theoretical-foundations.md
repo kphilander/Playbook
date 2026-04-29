@@ -16,7 +16,7 @@ If you came to Playbook from a marketing background and have been told elsewhere
 
 ## 1. The problem Playbook addresses
 
-Most responsible gambling (RG) programming never reaches the players it is intended to help. Across multiple jurisdictions, between 1% and 23% of players use the RG tools their operators provide (Wood, Wohl, Tabri, & Philander, 2024). In a recent U.S. casino sample, only 2.38% of players picked up an RG brochure and 0.26% spoke to an RG advisor (Louderback, Gray, LaPlante, Abarbanel, & Bernhard, 2022, cited in Wood et al., 2024). The dominant industry response (pamphlets, helpline signage, and pop-up warnings) is largely ignored, in part because the term "responsible gambling" itself is perceived as patronizing and because the programming is framed around problem gamblers rather than the full spectrum of players (Parke et al., 2007; Wood et al., 2024).
+Most responsible gambling (RG) programming never reaches the players it is intended to help. Across multiple jurisdictions, between 1% and 23% of players use the RG tools their operators provide (Wood, Wohl, Tabri, & Philander, 2024). In a recent U.S. casino sample, only 2.38% of players picked up an RG brochure and 0.26% spoke to an RG advisor (Louderback, LaPlante, Abarbanel, Kraus, Bernhard, & Gray, 2022). The dominant industry response (pamphlets, helpline signage, and pop-up warnings) is largely ignored, in part because the term "responsible gambling" itself is perceived as patronizing and because the programming is framed around problem gamblers rather than the full spectrum of players (Parke et al., 2007; Wood et al., 2024).
 
 In management-theoretic terms, this is a product-adoption failure. The Technology Acceptance Model (Davis, 1989), the dominant framework for predicting whether users adopt a system, identifies two near-universal predictors: perceived usefulness and perceived ease of use. Existing RG tools fail on both. They are perceived as useful only to players who self-identify as having a problem, a category most do not embrace, and engagement carries a stigma cost that raises their effective difficulty. Playbook is an attempt to address this engagement gap with a literacy framework that is positive in framing, segmented in design, and embedded in operator practice. The remainder of this document describes the theoretical scaffolding that supports each of those choices.
 
@@ -214,6 +214,8 @@ Heskett, J. L., Jones, T. O., Loveman, G. W., Sasser, W. E., & Schlesinger, L. A
 Kahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. *Econometrica, 47*(2), 263–291.
 
 Korn, D. A., & Shaffer, H. J. (1999). Gambling and the health of the public: Adopting a public health perspective. *Journal of Gambling Studies, 15*(4), 289–365.
+
+Louderback, E. R., LaPlante, D. A., Abarbanel, B., Kraus, S. W., Bernhard, B. J., & Gray, H. M. (2022). Examining responsible gambling program awareness and engagement trends and relationships with gambling beliefs and behaviors: A three-wave study of customers from a major gambling operator. *Journal of Gambling Studies, 39*(1), 401–429. https://doi.org/10.1007/s10899-022-10109-7
 
 Philander, K. S. (2020). *Future-proofing the industry: Organizational culture and responsible gambling*. Prepared for the New Horizons in Responsible Gambling Conference. British Columbia Lottery Corporation.
 
