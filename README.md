@@ -57,7 +57,7 @@ The full provenance, with the inline disclosures attached to each cited paper, i
 
 ## Preview
 
-A selection of the 41 ready-to-use templates in the brand system. Each template is available as HTML source and PNG render in `collateral/render/`.
+A selection of the 75 ready-to-use English templates in the brand system (290 with i18n variants). Each template is available as HTML source and PNG render in `collateral/render/`.
 
 | | | |
 |---|---|---|
@@ -81,7 +81,7 @@ Playbook/
 ├── CONTRIBUTING.md                   # How to contribute
 ├── CHANGELOG.md                      # Version history
 │
-├── brand-book/                       # Core brand guidelines (10 chapters)
+├── brand-book/                       # Core brand guidelines (11 chapters)
 │   ├── 00-introduction.md            # Purpose, the engagement gap, two-tier system
 │   ├── 00b-theoretical-foundations.md # Auditable theory of change: how/why Playbook works, citations, logic model, author provenance
 │   ├── 01-brand-foundation.md        # Mission, vision, pillars (Open / Social)
@@ -116,16 +116,14 @@ Playbook/
 │   ├── blackjack.md                  # Blackjack guide
 │   ├── roulette.md                   # Roulette guide
 │   ├── sports-betting.md             # Sports Betting guide
+│   ├── baccarat.md                   # Baccarat guide
+│   ├── craps.md                      # Craps guide
+│   ├── video-poker.md                # Video Poker guide
+│   ├── bingo.md                      # Bingo guide
+│   ├── lottery.md                    # Lottery guide
+│   ├── horse-racing.md               # Horse Racing guide
 │   ├── diagrams/                     # SVG diagrams embedded in game guides
-│   │   ├── slots-rtp-volatility.svg
-│   │   ├── blackjack-strategy-overview.svg
-│   │   ├── roulette-wheel-comparison.svg
-│   │   └── sports-betting-vig-explained.svg
-│   └── quick-reference/              # Condensed single-card summaries
-│       ├── slots-quick-ref.md
-│       ├── blackjack-quick-ref.md
-│       ├── roulette-quick-ref.md
-│       └── sports-betting-quick-ref.md
+│   └── quick-reference/              # 11 condensed single-card summaries
 │
 ├── messaging/                        # Messaging content library
 │   ├── core-messages.md              # 74 tagged messages by touchpoint
@@ -150,7 +148,7 @@ Playbook/
 │   ├── video-audio/                  # TV, radio, pre-roll, and hold message scripts
 │   ├── customer-service/             # Conversation scripts and staff FAQ
 │   ├── interactive/                   # Quiz framework
-│   └── render/                       # 41 HTML templates + PNG renders + build pipeline
+│   └── render/                       # 75 HTML templates + PNG renders + build pipeline (290 with i18n)
 │       ├── render-cards.mjs          # Puppeteer manifest (HTML → PNG)
 │       ├── build-logos.mjs           # Logo SVG generator
 │       ├── build-icons.mjs           # Icon SVG generator
@@ -171,49 +169,38 @@ Playbook/
 ├── jurisdictions/                    # Regulatory compliance modules
 │   ├── README.md                    # How jurisdiction modules work
 │   ├── _template/                   # Templates for new jurisdictions
-│   │   ├── jurisdiction-overview.md # Country-level scaffold
-│   │   ├── compliance-module.md     # Sub-jurisdiction scaffold
-│   │   └── collateral-adaptation.md # Collateral localization scaffold
-│   ├── canada/                      # Canada (provincial model)
-│   │   ├── README.md                # Federal framework, provincial table
-│   │   ├── _brand-canada.yml        # Provincial config overrides
-│   │   └── british-columbia/        # BC compliance module
-│   │       ├── README.md            # Full compliance module
-│   │       └── advertising-rules.md # Advertising deep-dive
-│   └── united-states/               # United States (state-by-state model)
-│       ├── README.md                # Federal framework, state table
-│       ├── _brand-us.yml            # State config overrides
-│       └── nevada/                  # Nevada compliance module
-│           ├── README.md            # Full compliance module
-│           └── advertising-rules.md # Advertising deep-dive
+│   ├── canada/                      # Canada: BC, Alberta, Ontario
+│   ├── united-states/               # US: Nevada, New Jersey, Pennsylvania, Michigan, Ohio, Massachusetts, California
+│   ├── united-kingdom/              # UK (UKGC)
+│   ├── malta/                       # Malta (MGA)
+│   ├── denmark/                     # Denmark
+│   ├── macau/                       # Macau
+│   └── singapore/                   # Singapore
 │
 ├── docs/                             # Player testing protocol and operational documents
 │   ├── README.md                    # Testing overview and navigation
 │   └── content-scorecard.md          # Content performance surveys, scoring, and decision framework
-│
-└── implementation/                   # 🔜 Operator adoption guides (planned)
 ```
 
 ## What's built
 
 | Area | Status | Contents |
 |------|--------|----------|
-| **Brand book** | Complete | 10 chapters covering foundations through governance |
+| **Brand book** | Complete | 11 chapters covering foundations through cultural adaptation |
 | **Visual identity** | Complete | 15 logo SVGs, 31 icon SVGs, design tokens CSS, typography system with self-hosted fonts, photography and illustration guides |
-| **How to Play** | In progress | 4 game guides (slots, blackjack, roulette, sports betting), quick-reference cards, odds comparison, 5 social card templates. Template ready for 6 more games. |
+| **How to Play** | Complete | 10 game guides (slots, blackjack, roulette, sports betting, baccarat, craps, video poker, bingo, lottery, horse racing), 11 quick-reference cards, odds comparison, how-to-play card templates |
 | **Messaging** | Complete | 74 core messages, tagline system, CTA library, myth-busting, stigma-free language guide, tone examples, 6 player-segment profiles |
 | **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
-| **Collateral renders** | Complete | 41 HTML/PNG template pairs: social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, 8 Tier 2 support/crisis templates, 5 how-to-play cards, and 4 educational SVG diagrams |
+| **Collateral renders** | Complete | 75 English HTML/PNG template pairs (290 with i18n variants): social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, Tier 2 support/crisis templates, how-to-play cards, and educational SVG diagrams |
 | **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
 | **Docs** | Complete | Player testing protocol with Pulse (3-item) and Full (7-item) surveys using NPS and semantic differentials, delayed recall survey, cultural fit A/B testing, scoring guides, standard reporting format, and GitHub issue template for sharing findings |
-| **Jurisdictions** | In progress | Template system, Canada/BC compliance module, US/Nevada compliance module, advertising rules |
+| **Jurisdictions** | Complete | 7 countries (Canada, US, UK, Malta, Denmark, Macau, Singapore) with sub-jurisdiction modules, advertising rules, and collateral adaptation guides |
 
 ## What's planned
 
 | Area | Description |
 |------|-------------|
-| **Jurisdictions** | Additional regulatory compliance modules: UK (UKGC, ASA/CAP), remaining US states, Australia (ACMA), remaining Canadian provinces, and EU (CEN 16259). The template system, Canada/BC module, and US/Nevada module are complete (see `jurisdictions/`). |
-| **Implementation guides** | Operator adoption resources: 30-minute quick-start guide, Figma design briefs, launch checklist, and measurement framework for tracking content engagement and adoption metrics. |
+| **Implementation guides** | Operator adoption resources: quick-start guide, Figma design briefs, launch checklist, and measurement framework for tracking content engagement and adoption metrics. |
 | **Examples** | Worked brand application with a fictional operator showing how to fork, configure `_brand.yml`, and deploy the full system. |
 
 ## How the white-label system works
@@ -231,7 +218,7 @@ The `collateral/render/` directory contains a Puppeteer-based pipeline that rend
 ```bash
 cd collateral/render
 npm install
-node render-cards.mjs              # Render all 41 templates
+node render-cards.mjs              # Render all templates
 node render-cards.mjs poster       # Render only poster templates
 node render-cards.mjs card-1a      # Render a specific template
 ```
