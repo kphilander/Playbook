@@ -12,7 +12,6 @@ Node.js build scripts that power the Playbook white-label system. All scripts re
 | [generate-inject-css.mjs](generate-inject-css.mjs) | Generates injectable CSS for HTML collateral templates | `collateral/render/brand-inject.css` |
 | [resolve-placeholders.mjs](resolve-placeholders.mjs) | Resolves `{{PLACEHOLDER}}` brand tokens in strings at build time | Shared module (no file output) |
 | [validate-brand.mjs](validate-brand.mjs) | Validates `_brand.yml` — checks required fields, hex colors, alias resolution, font definitions | Console output + exit code |
-| [migrate-templates.mjs](migrate-templates.mjs) | One-time migration: replaces hardcoded hex/fonts in HTML templates with CSS variables and brand tokens | Modifies HTML files in `collateral/render/` |
 | [generate-content-api.mjs](generate-content-api.mjs) | Orchestrates all content parsers and writes structured JSON feeds | `api/*.json` (messages, myths, CTAs, campaigns, game guides) |
 | [generate-asset-manifest.mjs](generate-asset-manifest.mjs) | Scans asset directories and catalogs all logos, icons, collateral, and photography | `api/assets.json` |
 
@@ -24,7 +23,7 @@ Node.js build scripts that power the Playbook white-label system. All scripts re
 | [parse-messages.mjs](parsers/parse-messages.mjs) | `messaging/core-messages.md` | 67 messages with pillar, tone, tier |
 | [parse-myths.mjs](parsers/parse-myths.mjs) | `messaging/myth-busting.md` | 18 myths (social card + explainer + quiz) |
 | [parse-ctas.mjs](parsers/parse-ctas.mjs) | `messaging/core-messages.md` | 50 calls to action by section |
-| [parse-campaigns.mjs](parsers/parse-campaigns.mjs) | `campaigns/` | 7 campaign briefs with schedules |
+| [parse-campaigns.mjs](parsers/parse-campaigns.mjs) | `messaging/campaigns.md` | 7 campaign briefs with schedules |
 | [parse-games.mjs](parsers/parse-games.mjs) | `how-to-play/*.md` | 11 game guides with key terms and quizzes |
 
 ## Usage

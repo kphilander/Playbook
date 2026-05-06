@@ -7,6 +7,7 @@ The complete brand guidelines for Playbook, organized as 10 sequential chapters.
 | # | Chapter | What it covers |
 |---|---------|----------------|
 | 0 | [Introduction](00-introduction.md) | Purpose, the engagement gap, two-tier content system |
+| 0b | [Theoretical Foundations](00b-theoretical-foundations.md) | Auditable theory of change, citations, logic model, author provenance |
 | 1 | [Brand Foundation](01-brand-foundation.md) | Mission, vision, pillars (Open / Social), positioning |
 | 2 | [Brand Personality](02-brand-personality.md) | Playbook voice, humor guidelines |
 | 3 | [Visual Identity](03-visual-identity.md) | Logo, color, typography, iconography, photography, illustration |
@@ -15,6 +16,7 @@ The complete brand guidelines for Playbook, organized as 10 sequential chapters.
 | 6 | [Accessibility](06-accessibility.md) | WCAG 2.1 AA compliance, inclusive design requirements |
 | 7 | [Application Guidelines](07-application-guidelines.md) | Cross-channel rules, co-branding, integration patterns |
 | 8 | [Governance](08-governance.md) | Stewardship, versioning, quarterly review cadence |
+| 9 | [Cultural Adaptation](09-cultural-adaptation.md) | Five cultural spectrums, localization framework |
 
 ## Reference
 
