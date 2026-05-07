@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Cream tile -->
+  <rect width="64" height="64" rx="3" fill="#F4EDE0"/>
+  <!-- Globe — oxblood disc with gold longitude/latitude lines -->
+  <circle cx="32" cy="32" r="26" fill="#5C1A1B"/>
+  <ellipse cx="32" cy="32" rx="26" ry="7" fill="none" stroke="#A88E3F" stroke-width="1.3" opacity="0.9"/>
+  <ellipse cx="32" cy="32" rx="7" ry="26" fill="none" stroke="#A88E3F" stroke-width="1.3" opacity="0.9"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="#A88E3F" stroke-width="1.5"/>
+</svg>

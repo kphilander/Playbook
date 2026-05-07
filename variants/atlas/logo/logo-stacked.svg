@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="140" viewBox="0 0 180 140">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700');
+  </style>
+
+  <!-- Globe centered -->
+  <g transform="translate(60, 8)">
+    <circle cx="30" cy="30" r="28" fill="#5C1A1B"/>
+    <ellipse cx="30" cy="30" rx="28" ry="7" fill="none" stroke="#A88E3F" stroke-width="1.2" opacity="0.9"/>
+    <ellipse cx="30" cy="30" rx="7" ry="28" fill="none" stroke="#A88E3F" stroke-width="1.2" opacity="0.9"/>
+    <circle cx="30" cy="30" r="28" fill="none" stroke="#A88E3F" stroke-width="1.5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="90" y="112" text-anchor="middle"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="42"
+        font-weight="700"
+        font-style="italic"
+        fill="#5C1A1B">Atlas</text>
+
+  <!-- Gold rule -->
+  <line x1="48" y1="124" x2="132" y2="124" stroke="#A88E3F" stroke-width="0.8"/>
+</svg>

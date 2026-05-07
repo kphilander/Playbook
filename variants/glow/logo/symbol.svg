@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Cream rounded tile -->
+  <rect width="64" height="64" rx="20" fill="#FAF7F2"/>
+  <!-- Sun mark — moss disc with thin gold halo -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#D4A574" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="32" cy="32" r="18" fill="#2D4A3E"/>
+</svg>

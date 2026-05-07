@@ -1,0 +1,28 @@
+# Sample _brand.yml — Macau locale preview
+# ============================================
+# Region-only demo, used by the "MO · 简体中文" preset chip on rg-page.html.
+# The page will:
+#   • Set <html lang="zh-Hans">
+#   • Load Noto Sans SC
+#   • Swap copy, glossary, and quizzes to Simplified Chinese
+#     (Macau profile: authority / communal / minimal humor / diplomatic / private)
+#   • Fetch api/myths.zh-CN.json for the quiz content
+
+meta:
+  program_name: "Macau"
+  organization: "Macau locale demo"
+  website: "https://example.mo"
+  contact_email: "info@example.mo"
+  primary_jurisdictions:
+    - macau
+
+legal:
+  minimum_gambling_age:
+    macau: 21
+
+cultural_profile:
+  voice: "authority"
+  framing: "communal"
+  humor: "minimal"
+  directness: "diplomatic"
+  comfort: "private"

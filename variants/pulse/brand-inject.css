@@ -1,0 +1,65 @@
+/*! PLAYBOOK_META {"program_name":"Pulse","organization":"Pulse — gamer brand demo","website":"https://example.com/pulse","helpline_number":"1-800-522-4700","text_number":"Text SUPPORT to 53342","chat_url":"https://www.ncpgambling.org/chat","min_age":"21","age_disclaimer":"You must be 21+ to gamble."} */
+
+/* brand-inject.css — Pulse variant (Playbook system demo)
+   ====================================================
+   Drop into a Playbook RG page (collateral/rg-page.html)
+   to re-skin it with the Pulse brand. Self-contained:
+   embedded logo data URI, color/font/scale tokens, and
+   metadata for {{TOKEN}} resolution.
+   ==================================================== */
+
+:root {
+  /* ─── Colors ────────────────────────── */
+  --pb-color-primary: #15151E;
+  --pb-color-primary-light: #22222E;
+  --pb-color-primary-dark: #0A0A0F;
+  --pb-color-secondary: #00F0FF;
+  --pb-color-secondary-light: #5BF6FF;
+  --pb-color-secondary-dark: #00BFCC;
+  --pb-color-accent: #FF2E9A;
+  --pb-color-accent-light: #FF66B5;
+  --pb-color-accent-dark: #CC1E7B;
+  --pb-color-neutral-900: #0A0A0F;
+  --pb-color-neutral-700: #1F1F2B;
+  --pb-color-neutral-500: #5A5A6E;
+  --pb-color-neutral-300: #9A9AA8;
+  --pb-color-neutral-100: #E0E0E8;
+  --pb-color-neutral-50: #F5F5FA;
+  --pb-color-success: #00FF88;
+  --pb-color-warning: #FFB800;
+  --pb-color-danger: #FF3838;
+  --pb-color-info: #2979FF;
+  --pb-color-white: #FFFFFF;
+  --pb-color-black: #111111;
+
+  /* ─── Fonts ─────────────────────────── */
+  --pb-font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --pb-font-body: 'Inter', system-ui, sans-serif;
+  --pb-font-mono: 'JetBrains Mono', monospace;
+
+  /* ─── Type Scale ────────────────────── */
+  --pb-text-display: 4rem;
+  --pb-text-h1: 3rem;
+  --pb-text-h2: 2.25rem;
+  --pb-text-h3: 1.625rem;
+  --pb-text-h4: 1.25rem;
+  --pb-text-body-lg: 1.125rem;
+  --pb-text-body: 1rem;
+  --pb-text-small: 0.875rem;
+  --pb-text-caption: 0.75rem;
+
+  /* ─── Line Heights ──────────────────── */
+  --pb-leading-heading: 1;
+  --pb-leading-body: 1.55;
+  --pb-leading-tight: 1.2;
+
+  /* ─── Gradients ─────────────────────── */
+  --pb-gradient-bar: linear-gradient(90deg, #FF2E9A, #00F0FF);
+  --pb-gradient-bg: linear-gradient(180deg, #15151E, #0A0A0F);
+
+  /* ─── Logo (embedded SVG data URI — self-contained) ─ */
+  --pb-logo-mode: 'replace';
+  --pb-logo-image: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22240%22 height%3D%2264%22 viewBox%3D%220 0 240 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DSpace%2BGrotesk%3Awght%40700%27)%3B %3C/style%3E %3C!-- Dark plate --%3E %3Crect width%3D%22240%22 height%3D%2264%22 rx%3D%226%22 fill%3D%22%230A0A0F%22/%3E %3C!-- Heartbeat / pulse waveform %E2%80%94 cyan with magenta peak --%3E %3Cpolyline points%3D%2214%2C32 28%2C32 36%2C32 44%2C16 52%2C48 60%2C32 74%2C32%22 stroke%3D%22%2300F0FF%22 stroke-width%3D%223.5%22 fill%3D%22none%22 stroke-linejoin%3D%22round%22 stroke-linecap%3D%22round%22/%3E %3C!-- Magenta peak accent dot --%3E %3Ccircle cx%3D%2244%22 cy%3D%2216%22 r%3D%223.5%22 fill%3D%22%23FF2E9A%22/%3E %3C!-- Wordmark --%3E %3Ctext x%3D%2286%22 y%3D%2246%22 font-family%3D%22%27Space Grotesk%27%2C sans-serif%22 font-size%3D%2242%22 font-weight%3D%22700%22 letter-spacing%3D%22-1.6%22 fill%3D%22%23F5F5FA%22%3EPulse%3C/text%3E %3C/svg%3E");
+  --pb-logo-image-height: 1.4em;
+  --pb-logo-image-display: inline-block;
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="140" viewBox="0 0 160 140">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800');
+  </style>
+
+  <!-- Mark centered above wordmark -->
+  <rect x="58" y="10" width="44" height="44" rx="10" fill="#2563EB"/>
+  <polygon points="80,18 94,42 80,36 66,42" fill="#FFFFFF"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="106" text-anchor="middle"
+        font-family="'Inter Tight', system-ui, sans-serif"
+        font-size="40"
+        font-weight="800"
+        letter-spacing="-1.6"
+        fill="#0E141B">North</text>
+</svg>

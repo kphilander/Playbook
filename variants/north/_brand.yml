@@ -1,0 +1,229 @@
+# _brand.yml — North (Variant Demo)
+# ============================================
+# Demonstration fork of Playbook in a clean fintech / premium SaaS
+# register — Stripe-meets-Notion. Mostly neutral, one bold accent,
+# sharp typography, lots of whitespace. For brands that want to
+# feel premium and calculated rather than playful.
+#
+# To use: cp variants/north/_brand.yml _brand.yml && npm run generate
+# ============================================
+
+
+# ─── META ────────────────────────────────────
+
+meta:
+  program_name: "North"
+  organization: "Your Company Name"
+  website: "https://example.com/north"
+  contact_email: "info@example.com"
+  year_established: 2026
+  version: "0.1.0"
+  license: "CC0-1.0"
+  primary_jurisdictions:
+    - united-states
+    - united-kingdom
+
+
+# ─── BRAND PILLARS ───────────────────────────
+
+brand_pillars:
+
+  - name: "Counted"
+    tagline: "Every number, visible"
+    description: >
+      The house edge, the session length, the running total.
+      If it shapes your play, it should be on screen.
+
+  - name: "Considered"
+    tagline: "Decisions, not defaults"
+    description: >
+      Limits set on purpose. Sessions ended on purpose.
+      Money committed on purpose. The defaults work for the house.
+
+
+# ─── COLOR PALETTE ───────────────────────────
+# Premium-fintech palette. Lots of neutrals, one signature accent (lime).
+# Inspired by Stripe / Linear / Notion.
+
+color:
+  palette:
+    primary: "#0E141B"                    # Deep ink (warmer/more confident than gray slate)
+    primary_light: "#1E2733"
+    primary_dark: "#070B0F"
+
+    secondary: "#2563EB"                  # Deep electric blue — load-bearing (4.99:1 on bg)
+    secondary_light: "#3B82F6"            # Brighter electric — decorative chips / pull-highlights
+    secondary_dark: "#1E40AF"             # Deepest — for emphasis hover (8.42:1)
+
+    accent: "#FCD34D"                     # Highlighter yellow — for selection / decorative
+    accent_light: "#FDE68A"
+    accent_dark: "#CA8A04"
+
+    neutral_900: "#0E141B"                # Matches primary — single ink value
+    neutral_700: "#3F4754"                # Warmer mid-gray
+    neutral_500: "#6B7280"
+    neutral_300: "#D1D5DB"
+    neutral_200: "#E5E7EB"
+    neutral_100: "#F3F4F6"
+    neutral_50: "#FBFBFA"                 # Warm off-white (Linear-style)
+
+    success: "#16A34A"
+    warning: "#D97706"
+    danger: "#DC2626"
+    info: "#3B82F6"
+
+    white: "#FFFFFF"
+    black: "#070B0F"
+
+  aliases:
+    ink: "primary"
+    inkLight: "primary_light"
+    inkDark: "primary_dark"
+    blue: "secondary"
+    blueLight: "secondary_light"
+    blueDark: "secondary_dark"
+    highlighter: "accent"
+    highlighterLight: "accent_light"
+    highlighterDark: "accent_dark"
+    n900: "neutral_900"
+    n700: "neutral_700"
+    n500: "neutral_500"
+    n300: "neutral_300"
+    n200: "neutral_200"
+    n100: "neutral_100"
+    n50: "neutral_50"
+
+  semantic:
+    background: "neutral_50"               # Warm off-white #FBFBFA (NOT pure white)
+    surface: "white"                       # Cards/elevated surfaces use pure white for lift
+    text_primary: "primary"                # Deep ink #0E141B — 18.6:1 on warm off-white
+    text_secondary: "neutral_700"          # Warm gray — 9.4:1
+    text_muted: "neutral_500"              # 4.7:1 (just passes AA)
+    link: "secondary"                      # Electric blue — 4.62:1 on off-white
+    link_hover: "secondary_dark"           # Deep blue — 9.83:1
+    cta_primary_bg: "primary"              # Ink CTA (premium, confident)
+    cta_primary_text: "white"              # 18.6:1
+    cta_secondary_bg: "secondary"          # Electric blue CTA
+    cta_secondary_text: "white"            # 4.55:1 — passes AA body just barely
+    quiz_correct: "success"
+    quiz_incorrect: "danger"
+    feature_highlight: "secondary_dark"    # Deep blue for emphasis text — 9.83:1 on off-white
+                                            # (electric blue is borderline at body size; deep blue is bulletproof)
+    helpline_banner: "primary"
+    border: "neutral_200"
+    divider: "neutral_100"
+
+
+# ─── TYPOGRAPHY ──────────────────────────────
+# Tight modern grotesque. The Linear / Vercel aesthetic.
+
+typography:
+  fonts:
+    heading:
+      family: "Inter Tight"
+      source: "google"
+      weights: [400, 500, 600, 700, 800]
+      fallback: "system-ui, -apple-system, sans-serif"
+    body:
+      family: "Inter"
+      source: "google"
+      weights: [400, 500, 600]
+      fallback: "system-ui, sans-serif"
+    monospace:
+      family: "JetBrains Mono"
+      source: "google"
+      weights: [400, 500, 600]
+      fallback: "monospace"
+
+  scale:
+    display: 4.5                          # Bumped from 3.5 — louder hero
+    h1: 3.0                               # Bumped from 2.5
+    h2: 2.25
+    h3: 1.625
+    h4: 1.125
+    body_large: 1.125
+    body: 0.9375                          # 15px — premium-tight body
+    small: 0.8125
+    caption: 0.75
+
+  line_height:
+    heading: 1.1
+    body: 1.55
+    tight: 1.25
+
+
+# ─── LOGO ────────────────────────────────────
+
+logo:
+  type: "wordmark + dot mark"
+  font: "Inter Tight"
+  primary_path: "variants/north/logo/"
+
+
+# ─── TONE ────────────────────────────────────
+
+tone:
+  humor: "minimal"
+  formality: "balanced"
+  voice_archetype: "the-product-team-that-respects-you"
+  gambling_culture: "selective"
+
+  prefer:
+    player: "you"
+    informed_play: "informed decisions, knowing the math, set defaults"
+    tools: "controls"
+    check_in: "review"
+    take_a_break: "pause"
+    your_limits: "your limits"
+
+
+# ─── MESSAGING ───────────────────────────────
+
+messaging:
+  taglines:
+    counted:
+      - "Every number, visible."
+      - "The math, on screen."
+      - "Counted, not estimated."
+    considered:
+      - "Decisions, not defaults."
+      - "Set on purpose."
+      - "The controls are yours."
+
+  ctas:
+    primary:
+      - "See the numbers"
+      - "Open dashboard"
+      - "Review the math"
+    features:
+      - "Set limits"
+      - "Open controls"
+      - "Review activity"
+    content:
+      - "Read the breakdown"
+      - "See the calculation"
+      - "Open the report"
+
+
+# ─── Content Defaults ───────────────────────────────────────────
+
+content_defaults:
+  stat_game_1: "Blackjack (basic strategy)"
+  stat_value_1: "0.5%"
+  stat_note_1: "Lowest published edge"
+  stat_game_2: "American Roulette"
+  stat_value_2: "5.26%"
+  stat_note_2: "Two zeros — verified"
+  stat_game_3: "Slots (average)"
+  stat_value_3: "2–15%"
+  stat_note_3: "Range varies by venue and machine"
+
+  hero_headline: "The numbers, made visible."
+  hero_subhead: "Every game has a measurable house edge. Every account has visible controls. Use both."
+
+  quiz_cta: "Take the 90-second math check"
+  tools_headline: "Controls, set on purpose."
+  tools_body: "Deposit limits, session reviews, activity reports. Every control is in your account, defaulted to off, and configurable in under a minute."
+
+  support_headline: "Confidential support, available now."
+  support_body: "Talk to a trained counselor. Free. Anonymous. 24/7."

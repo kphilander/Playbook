@@ -1,0 +1,30 @@
+# Sample _brand.yml — Japan locale preview
+# ============================================
+# Region-only demo, used by the "JP · 日本語" preset chip on rg-page.html
+# (inside the "Try your brand" modal). The page will:
+#   • Set <html lang="ja">
+#   • Load Noto Sans JP
+#   • Swap static copy, glossary, and quizzes to Japanese (elder/reserved tone)
+#   • Fetch api/myths.ja.json for the quiz content
+#
+# Combine with brand-inject.css from the Playbook configurator to also
+# substitute {{PROGRAM_NAME}}, {{ORGANIZATION}}, {{HELPLINE_NUMBER}}, etc.
+
+meta:
+  program_name: "Japan"
+  organization: "Japan locale demo"
+  website: "https://example.jp"
+  contact_email: "info@example.jp"
+  primary_jurisdictions:
+    - japan
+
+legal:
+  minimum_gambling_age:
+    japan: 20
+
+cultural_profile:
+  voice: "elder"
+  framing: "communal"
+  humor: "understated"
+  directness: "contextual"
+  comfort: "reserved"

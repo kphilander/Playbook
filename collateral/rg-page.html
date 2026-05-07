@@ -96,41 +96,47 @@ body {
 }
 
 /* === Helpline Strip === */
+/* Post-hero helpline callout. Used to be a sticky 33px-tall strip at the very
+   top — moved here so the nav can own the top of the page and the helpline
+   gets more breathing room (and prominence) right where the player has just
+   finished the hero. The "Talk to Someone" section near the page bottom is
+   the always-on safety net for users who scroll past this callout. */
 .rg-helpline-strip {
   background: var(--rg-primary-dark);
   color: var(--rg-text);
   text-align: center;
-  padding: 8px 20px;
-  font-size: 0.85rem;
-  position: sticky;
-  top: 0;
-  z-index: 200;
+  padding: 18px 20px;
+  font-size: 0.95rem;
   font-family: var(--rg-font-body);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .rg-helpline-strip a {
   color: var(--rg-secondary);
   text-decoration: none;
   font-family: var(--rg-font-mono);
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.05rem;
   margin: 0 6px;
 }
 .rg-helpline-strip a:hover { text-decoration: underline; }
 .rg-helpline-strip .rg-strip-sep {
   display: inline-block;
   width: 1px;
-  height: 12px;
+  height: 14px;
   background: rgba(255,255,255,0.25);
   vertical-align: middle;
-  margin: 0 10px;
+  margin: 0 12px;
 }
 
 /* === Sticky Nav === */
-/* Nav bg matches the helpline strip above (--rg-primary-dark) and the hero top stop
-   (also --rg-primary-dark at 0%) so the three surfaces read as one unbroken field. */
+/* Nav owns the top of the page now that the helpline strip lives below the hero.
+   Bg matches the hero top stop (--rg-primary-dark at 0%) so they read as one
+   unbroken field. */
 .rg-nav {
   background: var(--rg-primary-dark);
   position: sticky;
-  top: 33px;
+  top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--rg-divider);
 }
@@ -164,11 +170,15 @@ body {
    <html data-pb-logo-mode="cobrand">   → logo + divider + text */
 .rg-brand-logo {
   display: none;
-  height: 40px;
+  height: 56px;
   width: auto;
-  max-width: 220px;
-  background: var(--pb-logo-image, none) no-repeat left center / contain;
-  min-width: 100px;
+  max-width: 280px;
+  /* Prefer the on-dark variant when the brand provides one — the nav strip and
+     footer both use --pb-color-primary-dark as their background, so a logo
+     using the brand's own dark wordmark color would disappear there.
+     Falls back to --pb-logo-image when only one variant is supplied. */
+  background: var(--pb-logo-image-on-dark, var(--pb-logo-image, none)) no-repeat left center / contain;
+  min-width: 140px;
 }
 .rg-brand-divider {
   display: none;
@@ -181,11 +191,15 @@ html[data-pb-logo-mode="replace"] .rg-brand-logo { display: inline-block; }
 html[data-pb-logo-mode="replace"] .rg-brand-text { display: none; }
 html[data-pb-logo-mode="cobrand"] .rg-brand-logo,
 html[data-pb-logo-mode="cobrand"] .rg-brand-divider { display: inline-block; }
+/* When a logo is showing, tighten nav padding so the taller logo doesn't blow
+   out the strip. (Text-only wordmark keeps its original 14px breathing room.) */
+html[data-pb-logo-mode="replace"] .rg-nav-brand,
+html[data-pb-logo-mode="cobrand"] .rg-nav-brand { padding: 6px 0; }
 .rg-nav a:not(.rg-nav-brand) {
   color: var(--rg-text-muted);
   text-decoration: none;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 14px 12px;
   white-space: nowrap;
   border-bottom: 2px solid transparent;
@@ -231,18 +245,49 @@ html[data-pb-logo-mode="cobrand"] .rg-brand-divider { display: inline-block; }
   position: relative;
   overflow: hidden;
 }
-.rg-hero::before {
-  content: '';
+/* Optional full-bleed background video — sits behind the brand-tinted overlay
+   and the hero content. Toggle with the "Hero video" picker in the Try-your-
+   brand modal, or set <video class="rg-hero-video"> at build time. */
+.rg-hero-video {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(ellipse at 30% 20%, rgba(0,212,170,0.06) 0%, transparent 60%),
-              radial-gradient(ellipse at 70% 80%, rgba(255,107,53,0.04) 0%, transparent 60%);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.7;
   pointer-events: none;
 }
-.rg-hero-content { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; }
+/* Brand-tinted overlay: only applied when a hero video is active (the JS
+   picker / locale handler toggles .rg-hero--has-video on the section). On
+   the default no-video landing the hero shows just its plain dark gradient
+   so the overlay doesn't add a heavy wash to an already-dark surface. */
+.rg-hero--has-video::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(15,25,35,0.5) 0%, rgba(15,25,35,0.82) 100%),
+    radial-gradient(ellipse at 28% 28%, rgba(0,212,170,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse at 72% 78%, rgba(255,107,53,0.08) 0%, transparent 60%);
+  background:
+    linear-gradient(180deg,
+      color-mix(in srgb, var(--rg-primary-dark) 50%, transparent) 0%,
+      color-mix(in srgb, var(--rg-primary-dark) 84%, transparent) 100%),
+    radial-gradient(ellipse at 28% 28%,
+      color-mix(in srgb, var(--rg-secondary) 18%, transparent) 0%,
+      transparent 60%),
+    radial-gradient(ellipse at 72% 78%,
+      color-mix(in srgb, var(--rg-accent) 12%, transparent) 0%,
+      transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+.rg-hero-content { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+/* Reduced motion: dim the video to be quietly atmospheric instead of looping motion. */
+@media (prefers-reduced-motion: reduce) {
+  .rg-hero-video { animation: none !important; opacity: 0.35; }
+}
 .rg-hero h1 {
   font-family: var(--rg-font-heading);
   font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -967,7 +1012,7 @@ html[data-pb-logo-mode="cobrand"] .rg-brand-divider { display: inline-block; }
   font-weight: 700;
   font-size: 0.95rem;
 }
-.rg-footer-brand .rg-brand-logo { height: 48px; max-width: 240px; min-width: 100px; }
+.rg-footer-brand .rg-brand-logo { height: 64px; max-width: 320px; min-width: 140px; }
 .rg-footer-brand .rg-brand-divider { height: 32px; }
 /* Hide the brand row entirely when no logo has been uploaded — the footer
    already shows the organization in the legal text below. */
@@ -1179,7 +1224,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     "support.gamtalk.desc": "Online peer support forum — anonymous, judgement-free.",
     "footer.call": "Call",
     "footer.chat": "Chat",
-    "footer.legal_html": "{{MIN_AGE}}+ only.<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\nPowered by <a href=\"https://github.com/kphilander/Playbook\">Playbook</a> (CC0)",
+    "footer.legal_html": "{{MIN_AGE}}+ only.<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\nPowered by <a href=\"https://gamblingpolicy.com/playbook\">Playbook</a> (CC0)",
     "progress.zero": "0% explored",
     "progress.getting_started": "Getting started — {pct}%",
     "progress.making_progress": "Making progress — {pct}%",
@@ -1222,7 +1267,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       "badge": "Know the Odds",
       "house_edge": "House Edge",
       "rtp": "RTP",
-      "source": "Source: Playbook · CC0 Licensed · Verify for your jurisdiction"
+      "source": "Powered by Playbook (CC0)"
     },
     "games": {
       "slots": {
@@ -1391,7 +1436,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     "support.gamtalk.desc": "匿名でご利用いただける、オンラインの相談フォーラム。評価や判断のない場です。",
     "footer.call": "電話",
     "footer.chat": "チャット",
-    "footer.legal_html": "{{MIN_AGE}}歳以上。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n提供：<a href=\"https://github.com/kphilander/Playbook\">Playbook</a>（CC0）",
+    "footer.legal_html": "{{MIN_AGE}}歳以上。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n提供：<a href=\"https://gamblingpolicy.com/playbook\">Playbook</a>（CC0）",
     "progress.zero": "0%を閲覧",
     "progress.getting_started": "読みはじめ — {pct}%",
     "progress.making_progress": "進んでいます — {pct}%",
@@ -1434,7 +1479,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       "badge": "確率を知る",
       "house_edge": "ハウスエッジ",
       "rtp": "還元率(RTP)",
-      "source": "出典：Playbook · CC0ライセンス · ご利用地域で内容をご確認ください"
+      "source": "提供：Playbook（CC0）"
     },
     "games": {
       "slots": {
@@ -1603,7 +1648,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     "support.gamtalk.desc": "匿名线上互助论坛。无评判，无压力。",
     "footer.call": "致电",
     "footer.chat": "咨询",
-    "footer.legal_html": "仅限{{MIN_AGE}}岁及以上人士。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n技术支持：<a href=\"https://github.com/kphilander/Playbook\">Playbook</a>（CC0）",
+    "footer.legal_html": "仅限{{MIN_AGE}}岁及以上人士。<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\n技术支持：<a href=\"https://gamblingpolicy.com/playbook\">Playbook</a>（CC0）",
     "progress.zero": "已阅读 0%",
     "progress.getting_started": "刚开始 — {pct}%",
     "progress.making_progress": "持续阅读 — {pct}%",
@@ -1646,7 +1691,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       "badge": "了解概率",
       "house_edge": "庄家优势",
       "rtp": "返还率(RTP)",
-      "source": "资料来源：Playbook · CC0 授权 · 请依所属司法管辖区核实"
+      "source": "技术支持：Playbook（CC0）"
     },
     "games": {
       "slots": {
@@ -1815,7 +1860,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     "support.gamtalk.desc": "منتدى إلكتروني للدعم، مجهول الهوية ودون إصدار أحكام.",
     "footer.call": "اتصال",
     "footer.chat": "محادثة",
-    "footer.legal_html": "للأعمار {{MIN_AGE}}+ فقط.<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\nمدعوم من <a href=\"https://github.com/kphilander/Playbook\">Playbook</a> (CC0)",
+    "footer.legal_html": "للأعمار {{MIN_AGE}}+ فقط.<br>\n© {{ORGANIZATION}} · <a href=\"{{WEBSITE}}\">{{WEBSITE}}</a><br>\nمدعوم من <a href=\"https://gamblingpolicy.com/playbook\">Playbook</a> (CC0)",
     "progress.zero": "0% من المحتوى",
     "progress.getting_started": "{pct}% — في البداية",
     "progress.making_progress": "{pct}% — قيد الاستعراض",
@@ -1858,7 +1903,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
       "badge": "تعرّف على الاحتمالات",
       "house_edge": "ميزة البيت",
       "rtp": "نسبة الإعادة (RTP)",
-      "source": "المصدر: Playbook · ترخيص CC0 · يُرجى التحقق وفق الولاية القضائية ذات الصلة"
+      "source": "مدعوم من Playbook (CC0)"
     },
     "games": {
       "slots": {
@@ -3597,13 +3642,6 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
 </div>
 
 <!-- Persistent Helpline Strip -->
-<div class="rg-helpline-strip">
-  <span data-i18n="helpline.strip.label">Free, confidential support 24/7</span>
-  <a href="tel:{{HELPLINE_NUMBER}}">{{HELPLINE_NUMBER}}</a>
-  <span class="rg-strip-sep"></span>
-  <a href="{{CHAT_URL}}" data-i18n="helpline.strip.live_chat">Live Chat</a>
-</div>
-
 <!-- Sticky Nav -->
 <nav class="rg-nav" id="rgNav">
   <div class="rg-nav-inner">
@@ -3623,10 +3661,14 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
 
 <!-- Hero: Curiosity Hook -->
 <section class="rg-hero" id="hero">
-  <div class="rg-hero-content">
+  <!-- Video element is empty by default (no source) — the picker / locale
+       handler swaps a source in when a video is requested, and toggles
+       .rg-hero--has-video on the section to enable the brand-tinted overlay. -->
+  <video class="rg-hero-video" id="heroVideo" muted loop playsinline preload="metadata" aria-hidden="true" style="display:none;"></video>
+  <div class="rg-hero-content" id="heroContent">
     <!-- Interactive quiz (populated by JS) -->
     <div class="rg-hero-quiz" id="heroQuiz">
-      <p class="rg-hero-sub" style="margin-bottom:12px; font-size:0.9rem;" data-i18n="hero.quick_question">Quick question&hellip;</p>
+      <p class="rg-hero-sub" style="margin-bottom:12px; font-size:0.85rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--rg-secondary);" data-i18n="hero.quick_question">Quick question&hellip;</p>
       <h1 id="heroQuestion"></h1>
       <p class="rg-hero-sub" id="heroSub" data-i18n="hero.sub_default">Test what you actually know about the games you play.</p>
       <div class="rg-hero-options" id="heroOptions"></div>
@@ -3643,6 +3685,15 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
     </div>
   </div>
 </section>
+
+<!-- Helpline callout — sits right under the hero so help is the first
+     thing the player encounters after the curiosity hook. -->
+<div class="rg-helpline-strip">
+  <span data-i18n="helpline.strip.label">Free, confidential support 24/7</span>
+  <a href="tel:{{HELPLINE_NUMBER}}">{{HELPLINE_NUMBER}}</a>
+  <span class="rg-strip-sep"></span>
+  <a href="{{CHAT_URL}}" data-i18n="helpline.strip.live_chat">Live Chat</a>
+</div>
 
 <!-- Section: The Real Odds — Interactive Explorer -->
 <section class="rg-section" id="odds">
@@ -3886,7 +3937,7 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
   <p class="rg-footer-legal" data-i18n="footer.legal_html">
     {{MIN_AGE}}+ only.<br>
     &copy; {{ORGANIZATION}} &middot; <a href="{{WEBSITE}}">{{WEBSITE}}</a><br>
-    Powered by <a href="https://github.com/kphilander/Playbook">Playbook</a> (CC0)
+    Powered by <a href="https://gamblingpolicy.com/playbook">Playbook</a> (CC0)
   </p>
 </footer>
 
@@ -5128,12 +5179,12 @@ body.demo-mode .demo-banner { display: block; }
     {
       section: 'helpline-strip',
       selector: '.rg-helpline-strip',
-      badge: 'Persistent UI',
-      title: 'Always-Visible Helpline Strip',
-      body: '<p>A sticky banner at the very top of every page displaying your helpline number and live chat link. It stays visible as the player scrolls, ensuring help is always one tap away.</p>' +
-            '<p>Most jurisdictions require visible helpline information. This exceeds the minimum by making it persistent rather than buried in a footer.</p>',
+      badge: 'Helpline',
+      title: 'Post-Hero Helpline Callout',
+      body: '<p>A prominent banner placed right after the curiosity-hook hero, displaying your helpline number and live chat link. It\'s the first thing the player encounters once the hero engagement completes — high visibility without dominating the always-on chrome.</p>' +
+            '<p>Most jurisdictions require visible helpline information. The "Talk to Someone" section near the bottom of the page is the always-on safety net for users who scroll past this callout.</p>',
       customize: '<p>Replace <code>{{HELPLINE_NUMBER}}</code> and <code>{{CHAT_URL}}</code> with your jurisdiction\'s support contacts. Supports phone, text, and chat links. Colors inherit from your brand configuration.</p>',
-      tags: ['Compliance', 'Helpline', 'Sticky UI']
+      tags: ['Compliance', 'Helpline', 'Hero callout']
     },
     {
       section: 'nav',
@@ -5577,68 +5628,82 @@ body.demo-mode .demo-banner { display: block; }
      Strip via [data-pb-preview-chrome] selector to remove from prod.
      ============================================================ -->
 <style>
+/* Floating CTA at bottom-right. Matches the page's primary-button style
+   (--rg-accent bg, white text, rounded pill, soft drop shadow) so it reads
+   as part of the brand system rather than a piece of demo chrome. */
 .pb-tyb-trigger {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 28px;
+  right: 28px;
   z-index: 9998;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
+  padding: 14px 26px;
   background: var(--rg-accent);
   color: var(--pb-color-white, #fff);
   border: none;
   border-radius: 999px;
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.88rem;
+  font-family: var(--rg-font-heading, 'Inter', system-ui, sans-serif);
+  font-size: 0.9375rem;
   font-weight: 700;
+  letter-spacing: -0.005em;
   cursor: pointer;
-  box-shadow: 0 8px 28px rgba(0,0,0,0.25), 0 0 0 1px rgba(255,255,255,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
   -webkit-font-smoothing: antialiased;
 }
-.pb-tyb-trigger:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
-.pb-tyb-trigger .pb-tyb-arrow { font-size: 0.78rem; opacity: 0.9; }
+.pb-tyb-trigger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+}
+/* Legacy spans — kept inert in case other selectors reference them. */
+.pb-tyb-trigger .pb-tyb-arrow,
+.pb-tyb-trigger-icon { display: none; }
 
 .pb-tyb-shade {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: rgba(15,25,35,0.7);
+  background: rgba(15,25,35,0.55);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.3s ease;
 }
 .pb-tyb-shade.pb-tyb-visible { opacity: 1; pointer-events: auto; }
 
+/* Right-side drawer (replaces the centered modal). Slides in from the right
+   edge with a smooth ease, full viewport height, fixed width on desktop and
+   full-width on small screens. */
 .pb-tyb-modal {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.96);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(460px, 100vw);
   z-index: 10000;
-  width: min(520px, calc(100vw - 32px));
-  max-height: calc(100vh - 64px);
-  overflow-y: auto;
   background: #1A1F2E;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  border-left: 1px solid rgba(255,255,255,0.1);
+  border-radius: 18px 0 0 18px;
+  padding: 32px 30px 40px;
+  overflow-y: auto;
+  box-shadow: -24px 0 60px rgba(0,0,0,0.5);
   color: #E8ECF1;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(100%);
+  transition: transform 0.32s cubic-bezier(0.2, 0.7, 0.15, 1);
   -webkit-font-smoothing: antialiased;
 }
 .pb-tyb-modal.pb-tyb-visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(0);
+}
+/* When the drawer opens, fade the trigger out so it doesn't peek through
+   the drawer edge or compete with the close button. */
+.pb-tyb-shade.pb-tyb-visible ~ .pb-tyb-trigger,
+body:has(.pb-tyb-shade.pb-tyb-visible) .pb-tyb-trigger {
+  opacity: 0;
+  pointer-events: none;
 }
 .pb-tyb-modal h3 {
   font-size: 1.2rem;
@@ -5739,14 +5804,442 @@ body.demo-mode .demo-banner { display: block; }
 .pb-tyb-reset:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
 .pb-tyb-reset:disabled { opacity: 0.4; cursor: default; }
 
+/* Variant presets: one-click brand swaps that load demo brand-inject.css files
+   from /variants/<slug>/. Useful for showing operators what the system can do
+   without making them upload anything. */
+.pb-tyb-presets {
+  margin: 0 0 18px;
+  padding: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+.pb-tyb-presets-label {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 10px;
+}
+.pb-tyb-presets-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.pb-tyb-preset {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 8px 12px 8px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.pb-tyb-preset:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+.pb-tyb-preset.pb-tyb-active {
+  background: rgba(0,212,170,0.18);
+  border-color: rgba(0,212,170,0.5);
+  color: #fff;
+}
+.pb-tyb-preset .pb-tyb-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  display: inline-block;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
 @media (max-width: 640px) {
-  .pb-tyb-trigger { bottom: 16px; right: 16px; padding: 10px 16px; font-size: 0.82rem; }
-  .pb-tyb-modal { padding: 24px 20px; }
+  .pb-tyb-trigger { bottom: 16px; right: 16px; padding: 10px 16px 10px 12px; font-size: 0.82rem; }
+  .pb-tyb-modal { padding: 24px 20px 36px; border-radius: 0; }
 }
 </style>
 
+<!-- ═════════════════════════════════════════════════════════════════
+     Bundled variant brand-inject.css and locale _brand.yml files.
+     Embedded as inert <script type="text/{css,yaml}"> blocks so the
+     "Try your brand" toggle can re-skin the page without a fetch().
+     Source files live under /variants/<slug>/ and /variants/locales/.
+     ═════════════════════════════════════════════════════════════════ -->
+<script type="text/css" id="pb-bundled-variant-glow" data-pb-preview-chrome="true">
+/*! PLAYBOOK_META {"program_name":"Glow","organization":"Glow — wellness brand demo","website":"https://example.com/glow","helpline_number":"1-800-522-4700","text_number":"Text SUPPORT to 53342","chat_url":"https://www.ncpgambling.org/chat","min_age":"21","age_disclaimer":"You must be 21+ to gamble."} */
+
+/* brand-inject.css — Glow variant (Playbook system demo)
+   ====================================================
+   Drop into a Playbook RG page (collateral/rg-page.html)
+   to re-skin it with the Glow brand. Self-contained:
+   embedded logo data URI, color/font/scale tokens, and
+   metadata for {{TOKEN}} resolution.
+   ==================================================== */
+
+:root {
+  /* ─── Colors ────────────────────────── */
+  --pb-color-primary: #2D4A3E;
+  --pb-color-primary-light: #4A6B5C;
+  --pb-color-primary-dark: #1A2E26;
+  --pb-color-secondary: #D4A574;
+  --pb-color-secondary-light: #E1B98D;
+  --pb-color-secondary-dark: #B8895C;
+  --pb-color-accent: #E8826B;
+  --pb-color-accent-light: #F09F8C;
+  --pb-color-accent-dark: #A8472E;
+  --pb-color-neutral-900: #1F1F1B;
+  --pb-color-neutral-700: #3D3A33;
+  --pb-color-neutral-500: #6B6B65;
+  --pb-color-neutral-300: #A8A6A0;
+  --pb-color-neutral-100: #E8E4DA;
+  --pb-color-neutral-50: #FAF7F2;
+  --pb-color-success: #4A8C5A;
+  --pb-color-warning: #D49B3F;
+  --pb-color-danger: #B8453E;
+  --pb-color-info: #2979FF;
+  --pb-color-white: #FFFFFF;
+  --pb-color-black: #111111;
+
+  /* ─── Fonts ─────────────────────────── */
+  --pb-font-heading: 'Fraunces', system-ui, -apple-system, sans-serif;
+  --pb-font-body: 'Inter', system-ui, sans-serif;
+  --pb-font-mono: 'JetBrains Mono', monospace;
+
+  /* ─── Type Scale ────────────────────── */
+  --pb-text-display: 3.25rem;
+  --pb-text-h1: 2.5rem;
+  --pb-text-h2: 2rem;
+  --pb-text-h3: 1.5rem;
+  --pb-text-h4: 1.25rem;
+  --pb-text-body-lg: 1.125rem;
+  --pb-text-body: 1rem;
+  --pb-text-small: 0.875rem;
+  --pb-text-caption: 0.75rem;
+
+  /* ─── Line Heights ──────────────────── */
+  --pb-leading-heading: 1.15;
+  --pb-leading-body: 1.7;
+  --pb-leading-tight: 1.3;
+
+  /* ─── Gradients ─────────────────────── */
+  --pb-gradient-bar: linear-gradient(90deg, #E8826B, #D4A574);
+  --pb-gradient-bg: linear-gradient(180deg, #2D4A3E, #1A2E26);
+
+  /* ─── Logo (embedded SVG data URI — self-contained) ─ */
+  --pb-logo-mode: 'replace';
+  --pb-logo-image: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22200%22 height%3D%2264%22 viewBox%3D%220 0 200 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DFraunces%3Aopsz%2Cwght%409..144%2C600%27)%3B %3C/style%3E %3C!-- Sun mark %E2%80%94 solid moss disc with a thin gold halo ring --%3E %3Ccircle cx%3D%2232%22 cy%3D%2232%22 r%3D%2228%22 fill%3D%22none%22 stroke%3D%22%23D4A574%22 stroke-width%3D%221.5%22 opacity%3D%220.7%22/%3E %3Ccircle cx%3D%2232%22 cy%3D%2232%22 r%3D%2222%22 fill%3D%22%232D4A3E%22/%3E %3C!-- Wordmark %E2%80%94 Fraunces semibold --%3E %3Ctext x%3D%2272%22 y%3D%2247%22 font-family%3D%22%27Fraunces%27%2C Georgia%2C serif%22 font-size%3D%2244%22 font-weight%3D%22600%22 letter-spacing%3D%22-1.2%22 fill%3D%22%232D4A3E%22%3EGlow%3C/text%3E %3C/svg%3E");
+  --pb-logo-image-on-dark: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22200%22 height%3D%2264%22 viewBox%3D%220 0 200 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DFraunces%3Aopsz%2Cwght%409..144%2C600%27)%3B %3C/style%3E %3C!-- Sun mark %E2%80%94 sand disc with thin cream halo (visible on dark moss bg) --%3E %3Ccircle cx%3D%2232%22 cy%3D%2232%22 r%3D%2228%22 fill%3D%22none%22 stroke%3D%22%23FAF7F2%22 stroke-width%3D%221.5%22 opacity%3D%220.5%22/%3E %3Ccircle cx%3D%2232%22 cy%3D%2232%22 r%3D%2222%22 fill%3D%22%23D4A574%22/%3E %3C!-- Wordmark %E2%80%94 cream Fraunces semibold for legibility on dark moss nav --%3E %3Ctext x%3D%2272%22 y%3D%2247%22 font-family%3D%22%27Fraunces%27%2C Georgia%2C serif%22 font-size%3D%2244%22 font-weight%3D%22600%22 letter-spacing%3D%22-1.2%22 fill%3D%22%23FAF7F2%22%3EGlow%3C/text%3E %3C/svg%3E");
+  --pb-logo-image-height: 1.4em;
+  --pb-logo-image-display: inline-block;
+}
+</script>
+<script type="text/css" id="pb-bundled-variant-pulse" data-pb-preview-chrome="true">
+/*! PLAYBOOK_META {"program_name":"Pulse","organization":"Pulse — gamer brand demo","website":"https://example.com/pulse","helpline_number":"1-800-522-4700","text_number":"Text SUPPORT to 53342","chat_url":"https://www.ncpgambling.org/chat","min_age":"21","age_disclaimer":"You must be 21+ to gamble."} */
+
+/* brand-inject.css — Pulse variant (Playbook system demo)
+   ====================================================
+   Drop into a Playbook RG page (collateral/rg-page.html)
+   to re-skin it with the Pulse brand. Self-contained:
+   embedded logo data URI, color/font/scale tokens, and
+   metadata for {{TOKEN}} resolution.
+   ==================================================== */
+
+:root {
+  /* ─── Colors ────────────────────────── */
+  --pb-color-primary: #15151E;
+  --pb-color-primary-light: #22222E;
+  --pb-color-primary-dark: #0A0A0F;
+  --pb-color-secondary: #00F0FF;
+  --pb-color-secondary-light: #5BF6FF;
+  --pb-color-secondary-dark: #00BFCC;
+  --pb-color-accent: #FF2E9A;
+  --pb-color-accent-light: #FF66B5;
+  --pb-color-accent-dark: #CC1E7B;
+  --pb-color-neutral-900: #0A0A0F;
+  --pb-color-neutral-700: #1F1F2B;
+  --pb-color-neutral-500: #5A5A6E;
+  --pb-color-neutral-300: #9A9AA8;
+  --pb-color-neutral-100: #E0E0E8;
+  --pb-color-neutral-50: #F5F5FA;
+  --pb-color-success: #00FF88;
+  --pb-color-warning: #FFB800;
+  --pb-color-danger: #FF3838;
+  --pb-color-info: #2979FF;
+  --pb-color-white: #FFFFFF;
+  --pb-color-black: #111111;
+
+  /* ─── Fonts ─────────────────────────── */
+  --pb-font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --pb-font-body: 'Inter', system-ui, sans-serif;
+  --pb-font-mono: 'JetBrains Mono', monospace;
+
+  /* ─── Type Scale ────────────────────── */
+  --pb-text-display: 4rem;
+  --pb-text-h1: 3rem;
+  --pb-text-h2: 2.25rem;
+  --pb-text-h3: 1.625rem;
+  --pb-text-h4: 1.25rem;
+  --pb-text-body-lg: 1.125rem;
+  --pb-text-body: 1rem;
+  --pb-text-small: 0.875rem;
+  --pb-text-caption: 0.75rem;
+
+  /* ─── Line Heights ──────────────────── */
+  --pb-leading-heading: 1;
+  --pb-leading-body: 1.55;
+  --pb-leading-tight: 1.2;
+
+  /* ─── Gradients ─────────────────────── */
+  --pb-gradient-bar: linear-gradient(90deg, #FF2E9A, #00F0FF);
+  --pb-gradient-bg: linear-gradient(180deg, #15151E, #0A0A0F);
+
+  /* ─── Logo (embedded SVG data URI — self-contained) ─ */
+  --pb-logo-mode: 'replace';
+  --pb-logo-image: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22240%22 height%3D%2264%22 viewBox%3D%220 0 240 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DSpace%2BGrotesk%3Awght%40700%27)%3B %3C/style%3E %3C!-- Dark plate --%3E %3Crect width%3D%22240%22 height%3D%2264%22 rx%3D%226%22 fill%3D%22%230A0A0F%22/%3E %3C!-- Heartbeat / pulse waveform %E2%80%94 cyan with magenta peak --%3E %3Cpolyline points%3D%2214%2C32 28%2C32 36%2C32 44%2C16 52%2C48 60%2C32 74%2C32%22 stroke%3D%22%2300F0FF%22 stroke-width%3D%223.5%22 fill%3D%22none%22 stroke-linejoin%3D%22round%22 stroke-linecap%3D%22round%22/%3E %3C!-- Magenta peak accent dot --%3E %3Ccircle cx%3D%2244%22 cy%3D%2216%22 r%3D%223.5%22 fill%3D%22%23FF2E9A%22/%3E %3C!-- Wordmark --%3E %3Ctext x%3D%2286%22 y%3D%2246%22 font-family%3D%22%27Space Grotesk%27%2C sans-serif%22 font-size%3D%2242%22 font-weight%3D%22700%22 letter-spacing%3D%22-1.6%22 fill%3D%22%23F5F5FA%22%3EPulse%3C/text%3E %3C/svg%3E");
+  --pb-logo-image-height: 1.4em;
+  --pb-logo-image-display: inline-block;
+}
+</script>
+<script type="text/css" id="pb-bundled-variant-north" data-pb-preview-chrome="true">
+/*! PLAYBOOK_META {"program_name":"North","organization":"North — fintech brand demo","website":"https://example.com/north","helpline_number":"1-800-522-4700","text_number":"Text SUPPORT to 53342","chat_url":"https://www.ncpgambling.org/chat","min_age":"21","age_disclaimer":"You must be 21+ to gamble."} */
+
+/* brand-inject.css — North variant (Playbook system demo)
+   ====================================================
+   Drop into a Playbook RG page (collateral/rg-page.html)
+   to re-skin it with the North brand. Self-contained:
+   embedded logo data URI, color/font/scale tokens, and
+   metadata for {{TOKEN}} resolution.
+   ==================================================== */
+
+:root {
+  /* ─── Colors ────────────────────────── */
+  --pb-color-primary: #0E141B;
+  --pb-color-primary-light: #1E2733;
+  --pb-color-primary-dark: #070B0F;
+  --pb-color-secondary: #2563EB;
+  --pb-color-secondary-light: #3B82F6;
+  --pb-color-secondary-dark: #1E40AF;
+  --pb-color-accent: #FCD34D;
+  --pb-color-accent-light: #FDE68A;
+  --pb-color-accent-dark: #CA8A04;
+  --pb-color-neutral-900: #0E141B;
+  --pb-color-neutral-700: #3F4754;
+  --pb-color-neutral-500: #6B7280;
+  --pb-color-neutral-300: #D1D5DB;
+  --pb-color-neutral-100: #F3F4F6;
+  --pb-color-neutral-50: #FBFBFA;
+  --pb-color-success: #16A34A;
+  --pb-color-warning: #D97706;
+  --pb-color-danger: #DC2626;
+  --pb-color-info: #2979FF;
+  --pb-color-white: #FFFFFF;
+  --pb-color-black: #111111;
+
+  /* ─── Fonts ─────────────────────────── */
+  --pb-font-heading: 'Inter Tight', system-ui, -apple-system, sans-serif;
+  --pb-font-body: 'Inter', system-ui, sans-serif;
+  --pb-font-mono: 'JetBrains Mono', monospace;
+
+  /* ─── Type Scale ────────────────────── */
+  --pb-text-display: 4.5rem;
+  --pb-text-h1: 3rem;
+  --pb-text-h2: 2.25rem;
+  --pb-text-h3: 1.625rem;
+  --pb-text-h4: 1.125rem;
+  --pb-text-body-lg: 1.125rem;
+  --pb-text-body: 0.9375rem;
+  --pb-text-small: 0.8125rem;
+  --pb-text-caption: 0.75rem;
+
+  /* ─── Line Heights ──────────────────── */
+  --pb-leading-heading: 1.1;
+  --pb-leading-body: 1.55;
+  --pb-leading-tight: 1.25;
+
+  /* ─── Gradients ─────────────────────── */
+  --pb-gradient-bar: linear-gradient(90deg, #FCD34D, #2563EB);
+  --pb-gradient-bg: linear-gradient(180deg, #0E141B, #070B0F);
+
+  /* ─── Logo (embedded SVG data URI — self-contained) ─ */
+  --pb-logo-mode: 'replace';
+  --pb-logo-image: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22200%22 height%3D%2264%22 viewBox%3D%220 0 200 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DInter%2BTight%3Awght%40800%27)%3B %3C/style%3E %3C!-- Mark %E2%80%94 solid ink chevron (north arrow) inside a soft blue tile --%3E %3Crect x%3D%226%22 y%3D%2210%22 width%3D%2244%22 height%3D%2244%22 rx%3D%2210%22 fill%3D%22%232563EB%22/%3E %3C!-- Crisp white upward chevron --%3E %3Cpolygon points%3D%2228%2C18 42%2C42 28%2C36 14%2C42%22 fill%3D%22%23FFFFFF%22/%3E %3C!-- Wordmark %E2%80%94 Inter Tight 800%2C tight tracking --%3E %3Ctext x%3D%2262%22 y%3D%2244%22 font-family%3D%22%27Inter Tight%27%2C system-ui%2C sans-serif%22 font-size%3D%2238%22 font-weight%3D%22800%22 letter-spacing%3D%22-1.6%22 fill%3D%22%230E141B%22%3ENorth%3C/text%3E %3C/svg%3E");
+  --pb-logo-image-on-dark: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22200%22 height%3D%2264%22 viewBox%3D%220 0 200 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DInter%2BTight%3Awght%40800%27)%3B %3C/style%3E %3C!-- Mark %E2%80%94 blue tile reads on any bg --%3E %3Crect x%3D%226%22 y%3D%2210%22 width%3D%2244%22 height%3D%2244%22 rx%3D%2210%22 fill%3D%22%232563EB%22/%3E %3Cpolygon points%3D%2228%2C18 42%2C42 28%2C36 14%2C42%22 fill%3D%22%23FFFFFF%22/%3E %3C!-- Wordmark %E2%80%94 white for dark nav --%3E %3Ctext x%3D%2262%22 y%3D%2244%22 font-family%3D%22%27Inter Tight%27%2C system-ui%2C sans-serif%22 font-size%3D%2238%22 font-weight%3D%22800%22 letter-spacing%3D%22-1.6%22 fill%3D%22%23FFFFFF%22%3ENorth%3C/text%3E %3C/svg%3E");
+  --pb-logo-image-height: 1.4em;
+  --pb-logo-image-display: inline-block;
+}
+</script>
+<script type="text/css" id="pb-bundled-variant-atlas" data-pb-preview-chrome="true">
+/*! PLAYBOOK_META {"program_name":"Atlas","organization":"Atlas — vintage brand demo","website":"https://example.com/atlas","helpline_number":"1-800-522-4700","text_number":"Text SUPPORT to 53342","chat_url":"https://www.ncpgambling.org/chat","min_age":"21","age_disclaimer":"You must be 21+ to gamble."} */
+
+/* brand-inject.css — Atlas variant (Playbook system demo)
+   ====================================================
+   Drop into a Playbook RG page (collateral/rg-page.html)
+   to re-skin it with the Atlas brand. Self-contained:
+   embedded logo data URI, color/font/scale tokens, and
+   metadata for {{TOKEN}} resolution.
+   ==================================================== */
+
+:root {
+  /* ─── Colors ────────────────────────── */
+  --pb-color-primary: #5C1A1B;
+  --pb-color-primary-light: #7A2A2B;
+  --pb-color-primary-dark: #3D1011;
+  --pb-color-secondary: #A88E3F;
+  --pb-color-secondary-light: #C4AB5C;
+  --pb-color-secondary-dark: #8A7330;
+  --pb-color-accent: #1F4F4A;
+  --pb-color-accent-light: #2F6B65;
+  --pb-color-accent-dark: #143834;
+  --pb-color-neutral-900: #1A1614;
+  --pb-color-neutral-700: #3D352F;
+  --pb-color-neutral-500: #6B5F54;
+  --pb-color-neutral-300: #A89B8A;
+  --pb-color-neutral-100: #E8DEC9;
+  --pb-color-neutral-50: #F4EDE0;
+  --pb-color-success: #3F6B3A;
+  --pb-color-warning: #A88E3F;
+  --pb-color-danger: #8A2A1F;
+  --pb-color-info: #2979FF;
+  --pb-color-white: #FAF7EE;
+  --pb-color-black: #111111;
+
+  /* ─── Fonts ─────────────────────────── */
+  --pb-font-heading: 'Playfair Display', system-ui, -apple-system, sans-serif;
+  --pb-font-body: 'Source Serif 4', system-ui, sans-serif;
+  --pb-font-mono: 'JetBrains Mono', monospace;
+
+  /* ─── Type Scale ────────────────────── */
+  --pb-text-display: 4rem;
+  --pb-text-h1: 2.75rem;
+  --pb-text-h2: 2rem;
+  --pb-text-h3: 1.5rem;
+  --pb-text-h4: 1.25rem;
+  --pb-text-body-lg: 1.1875rem;
+  --pb-text-body: 1.0625rem;
+  --pb-text-small: 0.9375rem;
+  --pb-text-caption: 0.8125rem;
+
+  /* ─── Line Heights ──────────────────── */
+  --pb-leading-heading: 1.1;
+  --pb-leading-body: 1.65;
+  --pb-leading-tight: 1.3;
+
+  /* ─── Gradients ─────────────────────── */
+  --pb-gradient-bar: linear-gradient(90deg, #1F4F4A, #A88E3F);
+  --pb-gradient-bg: linear-gradient(180deg, #5C1A1B, #3D1011);
+
+  /* ─── Logo (embedded SVG data URI — self-contained) ─ */
+  --pb-logo-mode: 'replace';
+  --pb-logo-image: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22240%22 height%3D%2264%22 viewBox%3D%220 0 240 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DPlayfair%2BDisplay%3Aital%2Cwght%400%2C700%3B1%2C700%27)%3B %3C/style%3E %3C!-- Globe mark %E2%80%94 oxblood disc with gold meridian %2B equator lines --%3E %3Cg transform%3D%22translate(8%2C 8)%22%3E %3Ccircle cx%3D%2224%22 cy%3D%2224%22 r%3D%2223%22 fill%3D%22%235C1A1B%22/%3E %3C!-- Equator --%3E %3Cellipse cx%3D%2224%22 cy%3D%2224%22 rx%3D%2223%22 ry%3D%226%22 fill%3D%22none%22 stroke%3D%22%23A88E3F%22 stroke-width%3D%221.2%22 opacity%3D%220.9%22/%3E %3C!-- Meridian (vertical) --%3E %3Cellipse cx%3D%2224%22 cy%3D%2224%22 rx%3D%226%22 ry%3D%2223%22 fill%3D%22none%22 stroke%3D%22%23A88E3F%22 stroke-width%3D%221.2%22 opacity%3D%220.9%22/%3E %3C!-- Outer ring --%3E %3Ccircle cx%3D%2224%22 cy%3D%2224%22 r%3D%2223%22 fill%3D%22none%22 stroke%3D%22%23A88E3F%22 stroke-width%3D%221.5%22/%3E %3C/g%3E %3C!-- Wordmark %E2%80%94 Playfair italic%2C weighty --%3E %3Ctext x%3D%2264%22 y%3D%2246%22 font-family%3D%22%27Playfair Display%27%2C Georgia%2C serif%22 font-size%3D%2242%22 font-weight%3D%22700%22 font-style%3D%22italic%22 fill%3D%22%235C1A1B%22%3EAtlas%3C/text%3E %3C!-- Gold rule under wordmark --%3E %3Cline x1%3D%2264%22 y1%3D%2254%22 x2%3D%22178%22 y2%3D%2254%22 stroke%3D%22%23A88E3F%22 stroke-width%3D%220.8%22/%3E %3C/svg%3E");
+  --pb-logo-image-on-dark: url("data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%22240%22 height%3D%2264%22 viewBox%3D%220 0 240 64%22%3E %3Cstyle%3E %40import url(%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DPlayfair%2BDisplay%3Aital%2Cwght%400%2C700%3B1%2C700%27)%3B %3C/style%3E %3C!-- Globe mark %E2%80%94 gold disc with cream meridian %2B equator (visible on dark oxblood) --%3E %3Cg transform%3D%22translate(8%2C 8)%22%3E %3Ccircle cx%3D%2224%22 cy%3D%2224%22 r%3D%2223%22 fill%3D%22%23A88E3F%22/%3E %3Cellipse cx%3D%2224%22 cy%3D%2224%22 rx%3D%2223%22 ry%3D%226%22 fill%3D%22none%22 stroke%3D%22%23F4EDE0%22 stroke-width%3D%221.2%22 opacity%3D%220.9%22/%3E %3Cellipse cx%3D%2224%22 cy%3D%2224%22 rx%3D%226%22 ry%3D%2223%22 fill%3D%22none%22 stroke%3D%22%23F4EDE0%22 stroke-width%3D%221.2%22 opacity%3D%220.9%22/%3E %3Ccircle cx%3D%2224%22 cy%3D%2224%22 r%3D%2223%22 fill%3D%22none%22 stroke%3D%22%23F4EDE0%22 stroke-width%3D%221.5%22/%3E %3C/g%3E %3C!-- Wordmark %E2%80%94 cream Playfair italic for dark oxblood nav --%3E %3Ctext x%3D%2264%22 y%3D%2246%22 font-family%3D%22%27Playfair Display%27%2C Georgia%2C serif%22 font-size%3D%2242%22 font-weight%3D%22700%22 font-style%3D%22italic%22 fill%3D%22%23F4EDE0%22%3EAtlas%3C/text%3E %3C!-- Cream rule under wordmark --%3E %3Cline x1%3D%2264%22 y1%3D%2254%22 x2%3D%22178%22 y2%3D%2254%22 stroke%3D%22%23A88E3F%22 stroke-width%3D%220.8%22 opacity%3D%220.9%22/%3E %3C/svg%3E");
+  --pb-logo-image-height: 1.4em;
+  --pb-logo-image-display: inline-block;
+}
+</script>
+<script type="text/yaml" id="pb-bundled-locale-japan" data-pb-preview-chrome="true">
+# Sample _brand.yml — Japan locale preview
+# ============================================
+# Region-only demo, used by the "JP · 日本語" preset chip on rg-page.html
+# (inside the "Try your brand" modal). The page will:
+#   • Set <html lang="ja">
+#   • Load Noto Sans JP
+#   • Swap static copy, glossary, and quizzes to Japanese (elder/reserved tone)
+#   • Fetch api/myths.ja.json for the quiz content
+#
+# Combine with brand-inject.css from the Playbook configurator to also
+# substitute {{PROGRAM_NAME}}, {{ORGANIZATION}}, {{HELPLINE_NUMBER}}, etc.
+
+meta:
+  program_name: "Japan"
+  organization: "Japan locale demo"
+  website: "https://example.jp"
+  contact_email: "info@example.jp"
+  primary_jurisdictions:
+    - japan
+
+legal:
+  minimum_gambling_age:
+    japan: 20
+
+cultural_profile:
+  voice: "elder"
+  framing: "communal"
+  humor: "understated"
+  directness: "contextual"
+  comfort: "reserved"
+</script><script type="text/yaml" id="pb-bundled-locale-macau" data-pb-preview-chrome="true">
+# Sample _brand.yml — Macau locale preview
+# ============================================
+# Region-only demo, used by the "MO · 简体中文" preset chip on rg-page.html.
+# The page will:
+#   • Set <html lang="zh-Hans">
+#   • Load Noto Sans SC
+#   • Swap copy, glossary, and quizzes to Simplified Chinese
+#     (Macau profile: authority / communal / minimal humor / diplomatic / private)
+#   • Fetch api/myths.zh-CN.json for the quiz content
+
+meta:
+  program_name: "Macau"
+  organization: "Macau locale demo"
+  website: "https://example.mo"
+  contact_email: "info@example.mo"
+  primary_jurisdictions:
+    - macau
+
+legal:
+  minimum_gambling_age:
+    macau: 21
+
+cultural_profile:
+  voice: "authority"
+  framing: "communal"
+  humor: "minimal"
+  directness: "diplomatic"
+  comfort: "private"
+</script><script type="text/yaml" id="pb-bundled-locale-uae" data-pb-preview-chrome="true">
+# Sample _brand.yml — UAE locale preview
+# ==========================================
+# Region-only demo, used by the "AE · العربية" preset chip on rg-page.html.
+# The page will:
+#   • Set <html lang="ar" dir="rtl">
+#   • Load Noto Sans Arabic
+#   • Mirror the nav, progress bar, and tool cards (RTL)
+#   • Swap copy, glossary, and quizzes to Arabic
+#     (UAE profile: authority / communal / understated / contextual / private)
+#   • Fetch api/myths.ar.json for the quiz content
+
+meta:
+  program_name: "UAE"
+  organization: "UAE locale demo"
+  website: "https://example.ae"
+  contact_email: "info@example.ae"
+  primary_jurisdictions:
+    - united-arab-emirates
+
+legal:
+  minimum_gambling_age:
+    united-arab-emirates: 21
+
+cultural_profile:
+  voice: "authority"
+  framing: "communal"
+  humor: "understated"
+  directness: "contextual"
+  comfort: "private"
+</script>
+
 <button class="pb-tyb-trigger" id="pbTybTrigger" data-pb-preview-chrome="true" type="button">
-  <span class="pb-tyb-arrow">▸</span> Try your brand
+  Try your brand
 </button>
 
 <div class="pb-tyb-shade" id="pbTybShade" data-pb-preview-chrome="true"></div>
@@ -5754,6 +6247,43 @@ body.demo-mode .demo-banner { display: block; }
   <button class="pb-tyb-close" id="pbTybClose" aria-label="Close">×</button>
   <h3 id="pbTybTitle">Try your brand on this page</h3>
   <p class="pb-tyb-intro">Upload <strong>brand-inject.css</strong> to re-skin this page with your colors, fonts, logo, and program details. Add <strong>_brand.yml</strong> to swap the copy into a local language based on your primary jurisdiction. Nothing leaves your browser.</p>
+
+  <div class="pb-tyb-presets" id="pbTybPresets" data-pb-preview-chrome="true">
+    <div class="pb-tyb-presets-label">One-click demo brands</div>
+    <div class="pb-tyb-presets-row">
+      <button class="pb-tyb-preset pb-tyb-active" data-variant="" type="button">Default Playbook</button>
+      <button class="pb-tyb-preset" data-variant="glow" type="button">
+        <span class="pb-tyb-dot" style="background:#2D4A3E"></span>Glow
+      </button>
+      <button class="pb-tyb-preset" data-variant="pulse" type="button">
+        <span class="pb-tyb-dot" style="background:#0A0A0F"></span>Pulse
+      </button>
+      <button class="pb-tyb-preset" data-variant="north" type="button">
+        <span class="pb-tyb-dot" style="background:#84CC16"></span>North
+      </button>
+      <button class="pb-tyb-preset" data-variant="atlas" type="button">
+        <span class="pb-tyb-dot" style="background:#5C1A1B"></span>Atlas
+      </button>
+    </div>
+  </div>
+
+  <div class="pb-tyb-presets" id="pbTybVideos" data-pb-preview-chrome="true">
+    <div class="pb-tyb-presets-label">Hero video</div>
+    <div class="pb-tyb-presets-row">
+      <button class="pb-tyb-preset pb-tyb-active" data-video="" type="button">None</button>
+      <button class="pb-tyb-preset" data-video="assets/hero-bg-1.mp4" type="button">Video 1</button>
+    </div>
+  </div>
+
+  <div class="pb-tyb-presets" id="pbTybLocales" data-pb-preview-chrome="true">
+    <div class="pb-tyb-presets-label">One-click locale presets</div>
+    <div class="pb-tyb-presets-row">
+      <button class="pb-tyb-preset pb-tyb-active" data-locale="" type="button">English (default)</button>
+      <button class="pb-tyb-preset" data-locale="japan" type="button">JP · 日本語</button>
+      <button class="pb-tyb-preset" data-locale="macau" type="button">MO · 简体中文</button>
+      <button class="pb-tyb-preset" data-locale="uae" type="button">AE · العربية</button>
+    </div>
+  </div>
 
   <label class="pb-tyb-zone" id="pbTybCssZone">
     <div class="pb-tyb-zone-title">Upload brand-inject.css</div>
@@ -5787,6 +6317,9 @@ body.demo-mode .demo-banner { display: block; }
   var cssZone = document.getElementById('pbTybCssZone');
   var yamlInput = document.getElementById('pbTybYamlInput');
   var yamlZone = document.getElementById('pbTybYamlZone');
+  var presets = document.getElementById('pbTybPresets');
+  var locales = document.getElementById('pbTybLocales');
+  var videos = document.getElementById('pbTybVideos');
 
   // Latest token map derived from an uploaded brand-inject.css. Kept at the
   // IIFE scope so the language-switch path can re-apply it on freshly-swapped
@@ -5846,6 +6379,10 @@ body.demo-mode .demo-banner { display: block; }
     'Merriweather': 'wght@400;700;900',
     'Libre Baskerville': 'wght@400;700',
     'Roboto Slab': 'wght@400;500;600;700;800;900',
+    'Fraunces': 'opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700',
+    'Source Serif 4': 'wght@400;500;600;700',
+    // Sans — additional families used by built-in variant presets
+    'Inter Tight': 'wght@400;500;600;700;800',
     // Mono — mono dropdown
     'IBM Plex Mono': 'wght@400;500;600;700',
     'JetBrains Mono': 'wght@400;500;600;700;800',
@@ -5920,6 +6457,14 @@ body.demo-mode .demo-banner { display: block; }
     while ((node = walker.nextNode())) {
       pbTybTokenSnapshots.push({ node: node, original: node.nodeValue });
     }
+    // Also snapshot the document <title> if it contains a token. The body walker
+    // above doesn't reach the head, so titles like "{{PROGRAM_NAME}} — Play on
+    // Your Terms" never updated when a brand was applied. Stored as a special
+    // 'title' kind so the existing reset path can restore it.
+    var titleEl = document.querySelector('title');
+    if (titleEl && titleEl.textContent.indexOf('{{') >= 0) {
+      pbTybTokenSnapshots.push({ kind: 'title', original: titleEl.textContent });
+    }
     // Also snapshot any attribute on any element whose value contains a {{...}}
     // token. This covers href/aria-label/title AND custom-element attributes
     // like `number`, `text-number`, `chat-url` on <playbook-helpline>, which
@@ -5943,7 +6488,9 @@ body.demo-mode .demo-banner { display: block; }
         if (map.hasOwnProperty(token)) return map[token];
         return '{{' + token + '}}';
       });
-      if (snap.attr) {
+      if (snap.kind === 'title') {
+        document.title = resolved;
+      } else if (snap.attr) {
         snap.node.setAttribute(snap.attr, resolved);
       } else {
         snap.node.nodeValue = resolved;
@@ -5953,7 +6500,9 @@ body.demo-mode .demo-banner { display: block; }
   function pbTybResetTokens() {
     if (!pbTybTokenSnapshots) return;
     pbTybTokenSnapshots.forEach(function(snap) {
-      if (snap.attr) {
+      if (snap.kind === 'title') {
+        document.title = snap.original;
+      } else if (snap.attr) {
         snap.node.setAttribute(snap.attr, snap.original);
       } else {
         snap.node.nodeValue = snap.original;
@@ -6446,6 +6995,197 @@ body.demo-mode .demo-banner { display: block; }
     handleYamlFile(e.target.files && e.target.files[0]);
   });
   wireDrop(yamlZone, handleYamlFile);
+
+  // === Variant preset toggle ===
+  // One-click brand swaps that fetch a demo brand-inject.css from
+  // /variants/<slug>/brand-inject.css and pipe it through applyCss().
+  // The Default button just clicks the existing Reset button.
+  function setActivePreset(slug) {
+    if (!presets) return;
+    var buttons = presets.querySelectorAll('.pb-tyb-preset');
+    buttons.forEach(function(btn) {
+      var matches = (btn.getAttribute('data-variant') || '') === (slug || '');
+      btn.classList.toggle('pb-tyb-active', matches);
+    });
+  }
+  function applyVariantPreset(slug, label) {
+    // Read from the inline <script type="text/css" id="pb-bundled-variant-<slug>">
+    // block embedded in this same HTML file. No fetch — works on file://, in
+    // iframes, and on any deploy that serves the rg-page (no sidecar files needed).
+    var node = document.getElementById('pb-bundled-variant-' + slug);
+    if (!node) {
+      setStatus('Variant "' + label + '" is not bundled in this build.', 'err');
+      return;
+    }
+    applyCss(node.textContent, label);
+    setActivePreset(slug);
+  }
+  if (presets) {
+    presets.addEventListener('click', function(e) {
+      var btn = e.target.closest('.pb-tyb-preset');
+      if (!btn) return;
+      var slug = btn.getAttribute('data-variant') || '';
+      var label = btn.textContent.trim();
+      if (!slug) {
+        // "Default Playbook" — reuse the existing reset path
+        if (!resetBtn.disabled) resetBtn.click();
+        setActivePreset('');
+        setStatus('Default Playbook brand restored.');
+      } else {
+        applyVariantPreset(slug, label);
+      }
+    });
+    // When the user uploads their own CSS or hits reset, drop the preset highlight.
+    cssInput.addEventListener('change', function() { setActivePreset(null); });
+    resetBtn.addEventListener('click', function() { setActivePreset(''); });
+  }
+
+  // === Locale preset toggle ===
+  // One-click language/culture swaps. Fetches a tiny demo _brand.yml from
+  // /variants/locales/<slug>.yml, wraps the text in a synthetic File so the
+  // existing handleYamlFile() path runs unchanged (parses YAML, picks language
+  // from primary_jurisdictions, calls activateLanguage / deactivateLanguage).
+  function setActiveLocale(slug) {
+    if (!locales) return;
+    var buttons = locales.querySelectorAll('.pb-tyb-preset');
+    buttons.forEach(function(btn) {
+      var matches = (btn.getAttribute('data-locale') || '') === (slug || '');
+      btn.classList.toggle('pb-tyb-active', matches);
+    });
+  }
+  function applyLocalePreset(slug, label) {
+    // Read from the inline <script type="text/yaml" id="pb-bundled-locale-<slug>">
+    // block embedded in this same HTML file. No fetch — see applyVariantPreset.
+    var node = document.getElementById('pb-bundled-locale-' + slug);
+    if (!node) {
+      setStatus('Locale "' + label + '" is not bundled in this build.', 'err');
+      return;
+    }
+    var yamlText = node.textContent;
+    // Wrap text in a File so handleYamlFile() works unchanged.
+    var fakeFile;
+    try {
+      fakeFile = new File([yamlText], slug + '.yml', { type: 'text/yaml' });
+    } catch (e) {
+      // Older browsers without File constructor: fall back to a Blob with a name shim.
+      fakeFile = new Blob([yamlText], { type: 'text/yaml' });
+      fakeFile.name = slug + '.yml';
+    }
+    handleYamlFile(fakeFile);
+    setActiveLocale(slug);
+  }
+  if (locales) {
+    locales.addEventListener('click', function(e) {
+      var btn = e.target.closest('.pb-tyb-preset');
+      if (!btn) return;
+      var slug = btn.getAttribute('data-locale') || '';
+      var label = btn.textContent.trim();
+      if (!slug) {
+        // "English (default)" — drop the active language without touching the brand CSS.
+        deactivateLanguage();
+        setActiveLocale('');
+        setStatus('English copy restored.');
+      } else {
+        applyLocalePreset(slug, label);
+      }
+      // Pair the locale with its city-specific hero video (Japan / Macau /
+      // UAE each have their own clip; English falls back to Video 1). Skipped
+      // automatically if the user picked "None" in the Hero video row.
+      if (typeof window.__pbApplyHeroVideoForLocale === 'function') {
+        window.__pbApplyHeroVideoForLocale(slug);
+      }
+    });
+    // When the user uploads their own YAML or hits reset, drop the locale highlight.
+    yamlInput.addEventListener('change', function() { setActiveLocale(null); });
+    resetBtn.addEventListener('click', function() { setActiveLocale(''); });
+  }
+
+  // === Hero video picker + locale-driven swap ===
+  // The picker is the user-facing manual control (None / Video 1). Locale
+  // changes (JP / MO / AE / English) ALSO swap the hero video to a city-
+  // specific clip — but only if the user has explicitly turned video on
+  // first (default state is no video), tracked via heroVideoOptOut.
+  var heroVideo = document.getElementById('heroVideo');
+  var heroSection = document.getElementById('hero');
+  var heroVideoOptOut = true;       // default: no video on landing
+
+  // Locale → city video. English/default falls back to the standard Video 1.
+  // Keys match the data-locale attribute on the locale-picker chips, NOT the
+  // YAML's `primary_jurisdictions` slug — the picker click handler passes
+  // data-locale ("japan" / "macau" / "uae"). To swap which clip pairs with
+  // which city, just rename the files in /collateral/assets/.
+  var LOCALE_VIDEOS = {
+    '': 'assets/hero-bg-1.mp4',                     // English default
+    'japan': 'assets/hero-bg-jp.mp4',
+    'macau': 'assets/hero-bg-mo.mp4',
+    'uae': 'assets/hero-bg-ae.mp4'
+  };
+
+  // Apply a video src to the hero element (or hide it when src is empty).
+  // Pulled out so both the picker and the locale flow can share the logic.
+  // Also toggles .rg-hero--has-video on the section so the brand-tinted
+  // overlay only appears when a video is actually playing.
+  function applyHeroVideo(src) {
+    if (!heroVideo) return;
+    if (!src) {
+      heroVideo.pause();
+      heroVideo.removeAttribute('src');
+      heroVideo.querySelectorAll('source').forEach(function(s) { s.remove(); });
+      heroVideo.style.display = 'none';
+      heroVideo.load();
+      if (heroSection) heroSection.classList.remove('rg-hero--has-video');
+      return;
+    }
+    heroVideo.style.display = '';
+    if (heroSection) heroSection.classList.add('rg-hero--has-video');
+    var existing = heroVideo.querySelector('source');
+    if (existing) {
+      // Avoid a re-load (and frame flicker) if the src hasn't changed.
+      if (existing.getAttribute('src') === src) return;
+      existing.setAttribute('src', src);
+    } else {
+      var s = document.createElement('source');
+      s.setAttribute('src', src);
+      s.setAttribute('type', 'video/mp4');
+      heroVideo.appendChild(s);
+    }
+    heroVideo.load();
+    var p = heroVideo.play();
+    if (p && typeof p.catch === 'function') p.catch(function() {});
+  }
+
+  function setActiveVideo(src) {
+    if (!videos) return;
+    videos.querySelectorAll('.pb-tyb-preset').forEach(function(btn) {
+      btn.classList.toggle('pb-tyb-active', (btn.getAttribute('data-video') || '') === (src || ''));
+    });
+  }
+
+  // Picker handler: user explicitly choosing video or None.
+  if (videos) {
+    videos.addEventListener('click', function(e) {
+      var btn = e.target.closest('.pb-tyb-preset');
+      if (!btn) return;
+      var src = btn.getAttribute('data-video') || '';
+      var label = btn.textContent.trim();
+      heroVideoOptOut = !src;       // remember "None" so locale changes don't override it
+      applyHeroVideo(src);
+      setActiveVideo(src);
+      setStatus('Hero video: ' + label + '.');
+    });
+  }
+
+  // Locale-driven swap: called by the locale handler whenever a new locale
+  // is applied (or English is restored). Skipped if the user opted out via
+  // the None button. Public-ish so the locale flow can call it.
+  function applyHeroVideoForLocale(localeSlug) {
+    if (heroVideoOptOut) return;
+    var src = LOCALE_VIDEOS[localeSlug || ''] || LOCALE_VIDEOS[''];
+    applyHeroVideo(src);
+    setActiveVideo(src);
+  }
+  // Expose for the locale handler below to call after a locale apply.
+  window.__pbApplyHeroVideoForLocale = applyHeroVideoForLocale;
 })();
 </script>
 </body>

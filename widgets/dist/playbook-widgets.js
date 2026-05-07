@@ -358,27 +358,28 @@ class PlaybookOdds extends HTMLElement {
       return;
     }
 
-    // Optional translations, sourced from window.__pbI18nActiveBundle.odds_card
-    // when the rg-page i18n pipeline has activated a language. Falls back to the
-    // embedded English defaults when no bundle is active — widget stays usable
-    // standalone. Bundle shape:
-    //   odds_card: {
-    //     labels: { badge, house_edge, rtp, source },
-    //     games: { <game_key>: { facts: ["...", ...] } }
-    //   }
-    const bundle = (typeof window !== 'undefined' && window.__pbI18nActiveBundle) || null;
-    const T = (bundle && bundle.odds_card) || {};
-    const labels = T.labels || {};
-    const gameT = (T.games && T.games[gameName]) || {};
+    // i18n: pull labels + localized facts + game name from the host page's
+    // active language bundle (window.__pbI18nActiveBundle.odds_card). Each
+    // value falls back to the English default when no bundle is active or
+    // the key is missing — keeps the widget self-contained when used outside
+    // the rg-page (e.g. dropped into a marketing site with no i18n layer).
+    const bundle = (typeof window !== 'undefined' && window.__pbI18nActiveBundle && window.__pbI18nActiveBundle.odds_card) || null;
+    const labels = (bundle && bundle.labels) || {};
+    const localizedFacts = bundle && bundle.games && bundle.games[gameName] && bundle.games[gameName].facts;
+    const facts = (Array.isArray(localizedFacts) && localizedFacts.length) ? localizedFacts : game.facts;
+    const localizedGameName = (typeof window !== 'undefined' && typeof window.__pbGameName === 'function')
+      ? window.__pbGameName(gameName, game.name)
+      : game.name;
     const badgeLabel = labels.badge || 'Know the Odds';
     const houseEdgeLabel = labels.house_edge || 'House Edge';
     const rtpLabel = labels.rtp || 'RTP';
-    const sourceLabel = labels.source || 'Source: Playbook \u00B7 CC0 Licensed \u00B7 Verify for your jurisdiction';
-    const facts = (gameT.facts && gameT.facts.length) ? gameT.facts : game.facts;
-    // Game name: prefer the parent page's localized map (bundle.games[key]) so the
-    // card header matches the chip label and the odds-insight sentence. Falls
-    // back to the widget's embedded English name when no bundle is active.
-    const localizedGameName = (bundle && bundle.games && bundle.games[gameName]) || game.name;
+    // Source label may be localized ("提供：Playbook（CC0）", "مدعوم من Playbook (CC0)").
+    // Wrap the brand name "Playbook" in a link wherever it appears.
+    const sourceText = labels.source || 'Powered by Playbook (CC0)';
+    const sourceHtml = sourceText.replace(
+      'Playbook',
+      '<a href="https://gamblingpolicy.com/playbook" target="_blank" rel="noopener">Playbook</a>'
+    );
 
     // Brand-system variables win; legacy widget-local names are fallbacks.
     const isDark = theme === 'dark';
@@ -416,6 +417,8 @@ class PlaybookOdds extends HTMLElement {
         .fact strong { color: ${text}; font-weight: 600; }
         .source { padding: 12px 24px; font-size: 0.6rem; color: ${muted}; opacity: 0.6;
           background: ${cardBg}; text-align: center; }
+        .source a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+        .source a:hover { opacity: 1; }
       </style>
       <div class="card">
         <div class="gradient-bar"></div>
@@ -436,17 +439,18 @@ class PlaybookOdds extends HTMLElement {
         <div class="facts">
           ${facts.map(f => `<div class="fact">${f}</div>`).join('')}
         </div>
-        <div class="source">${this.esc(sourceLabel)}</div>
+        <div class="source">${sourceHtml}</div>
       </div>
     `;
   }
 
-  // Refresh all <playbook-odds> instances in the document. Called by the
-  // rg-page i18n pipeline after a language activates/deactivates so cards
-  // already on screen pick up the new translations.
+  // Re-render every connected <playbook-odds> on the page. Called by the
+  // rg-page i18n pipeline when the user switches locales — the new bundle is
+  // already on window.__pbI18nActiveBundle, so each instance just needs to
+  // re-read it and rebuild its shadow DOM.
   static refreshAll() {
     document.querySelectorAll('playbook-odds').forEach(function(el) {
-      if (el.shadowRoot) el.render();
+      if (typeof el.render === 'function' && el.shadowRoot) el.render();
     });
   }
 
