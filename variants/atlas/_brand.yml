@@ -1,0 +1,231 @@
+# _brand.yml — Atlas (Variant Demo)
+# ============================================
+# Demonstration fork of Playbook in a vintage / editorial register —
+# the "old-money card room" aesthetic. Oxblood, antique gold, paper
+# cream. For brands that want to feel like a private club guidebook
+# rather than a tech product. Macau, Monte Carlo, classic Vegas.
+#
+# To use: cp variants/atlas/_brand.yml _brand.yml && npm run generate
+# ============================================
+
+
+# ─── META ────────────────────────────────────
+
+meta:
+  program_name: "Atlas"
+  organization: "Your Company Name"
+  website: "https://example.com/atlas"
+  contact_email: "info@example.com"
+  year_established: 2026
+  version: "0.1.0"
+  license: "CC0-1.0"
+  primary_jurisdictions:
+    - united-states
+    - united-kingdom
+
+
+# ─── BRAND PILLARS ───────────────────────────
+
+brand_pillars:
+
+  - name: "House"
+    tagline: "Know the room"
+    description: >
+      Every casino has its math, its customs, its tells. The
+      players who do well are the ones who learned the room
+      before they sat down.
+
+  - name: "Rules"
+    tagline: "Set your own"
+    description: >
+      The house has rules. So should you. A budget. A bedtime.
+      A game you don't play after midnight. Yours, in writing.
+
+
+# ─── COLOR PALETTE ───────────────────────────
+# Vintage card-room palette. Oxblood, antique gold, paper cream.
+# Reads like an old hardback or a private club menu.
+
+color:
+  palette:
+    primary: "#5C1A1B"                    # Oxblood
+    primary_light: "#7A2A2B"
+    primary_dark: "#3D1011"
+
+    secondary: "#A88E3F"                  # Antique gold (matte, not glittery)
+    secondary_light: "#C4AB5C"
+    secondary_dark: "#8A7330"
+
+    accent: "#1F4F4A"                     # Deep teal (felt-like)
+    accent_light: "#2F6B65"
+    accent_dark: "#143834"
+
+    neutral_900: "#1A1614"                # Warm near-black
+    neutral_700: "#3D352F"
+    neutral_500: "#6B5F54"
+    neutral_300: "#A89B8A"
+    neutral_200: "#C8BBA8"
+    neutral_100: "#E8DEC9"
+    neutral_50: "#F4EDE0"                 # Aged paper
+
+    success: "#3F6B3A"
+    warning: "#A88E3F"
+    danger: "#8A2A1F"
+    info: "#1F4F6E"
+
+    white: "#FAF7EE"                      # Warm white (not pure)
+    black: "#1A1614"
+
+  aliases:
+    oxblood: "primary"
+    oxbloodLight: "primary_light"
+    oxbloodDark: "primary_dark"
+    gold: "secondary"
+    goldLight: "secondary_light"
+    goldDark: "secondary_dark"
+    felt: "accent"
+    feltLight: "accent_light"
+    feltDark: "accent_dark"
+    n900: "neutral_900"
+    n700: "neutral_700"
+    n500: "neutral_500"
+    n300: "neutral_300"
+    n200: "neutral_200"
+    n100: "neutral_100"
+    n50: "neutral_50"
+
+  semantic:
+    background: "neutral_50"               # Aged paper
+    surface: "white"                       # Warm white card
+    text_primary: "neutral_900"            # 13.8:1 on cream
+    text_secondary: "neutral_700"          # 8.4:1
+    text_muted: "neutral_500"              # 4.7:1 (just passes AA)
+    link: "primary"                         # Oxblood links — 9.6:1 on cream
+    link_hover: "primary_dark"             # 12.5:1
+    cta_primary_bg: "primary"              # Oxblood CTAs
+    cta_primary_text: "neutral_50"         # Cream on oxblood — 9.6:1
+    cta_secondary_bg: "secondary"          # Gold CTAs
+    cta_secondary_text: "neutral_900"      # Black on gold — 6.5:1
+    quiz_correct: "success"
+    quiz_incorrect: "danger"
+    feature_highlight: "primary"           # Oxblood for emphasis text — 11.14:1 on cream
+                                            # (gold #A88E3F was 2.73:1 — fails 3:1 even for large text;
+                                            # gold reserved for decorative dividers/rings only)
+    helpline_banner: "primary_dark"
+    border: "neutral_300"
+    divider: "neutral_200"
+
+
+# ─── TYPOGRAPHY ──────────────────────────────
+# Editorial serif throughout. Reads like a book, not a website.
+
+typography:
+  fonts:
+    heading:
+      family: "Playfair Display"
+      source: "google"
+      weights: [400, 600, 700, 800, 900]
+      fallback: "Georgia, 'Times New Roman', serif"
+    body:
+      family: "Source Serif 4"
+      source: "google"
+      weights: [400, 500, 600, 700]
+      fallback: "Georgia, 'Times New Roman', serif"
+    monospace:
+      family: "JetBrains Mono"
+      source: "google"
+      weights: [400, 500]
+      fallback: "monospace"
+
+  scale:
+    display: 4.0                          # Big editorial display
+    h1: 2.75
+    h2: 2.0
+    h3: 1.5
+    h4: 1.25
+    body_large: 1.1875                    # 19px — readable serif
+    body: 1.0625                          # 17px
+    small: 0.9375
+    caption: 0.8125
+
+  line_height:
+    heading: 1.1
+    body: 1.65                            # Generous serif leading
+    tight: 1.3
+
+
+# ─── LOGO ────────────────────────────────────
+
+logo:
+  type: "serif wordmark + monogram"
+  font: "Playfair Display"
+  primary_path: "variants/atlas/logo/"
+
+
+# ─── TONE ────────────────────────────────────
+
+tone:
+  humor: "warm"                            # Knowing, not zinger-y
+  formality: "balanced"
+  voice_archetype: "the-pit-boss-who-likes-you"
+  gambling_culture: "fluent"               # House edge, comp, shoe — assume fluency
+
+  prefer:
+    player: "the player"
+    informed_play: "playing the room, knowing the math, holding the line"
+    tools: "tools, ledgers, the rules you set"
+    check_in: "take stock"
+    take_a_break: "step out"
+    your_limits: "your line"
+
+
+# ─── MESSAGING ───────────────────────────────
+
+messaging:
+  taglines:
+    house:
+      - "Know the room."
+      - "The house has its math. Now you do."
+      - "Every game has its custom."
+    rules:
+      - "Set your own."
+      - "A line, in writing."
+      - "Yours, before the deal."
+
+  ctas:
+    primary:
+      - "Read the rules"
+      - "See the math"
+      - "Take the table tour"
+    features:
+      - "Set the line"
+      - "Keep the ledger"
+      - "Hold the budget"
+    content:
+      - "Read the chapter"
+      - "Study the game"
+      - "Tour the table"
+
+
+# ─── Content Defaults ───────────────────────────────────────────
+
+content_defaults:
+  stat_game_1: "Blackjack (basic strategy)"
+  stat_value_1: "0.5%"
+  stat_note_1: "The thinking player's table"
+  stat_game_2: "American Roulette"
+  stat_value_2: "5.26%"
+  stat_note_2: "The double zero is the room"
+  stat_game_3: "Slots (average)"
+  stat_value_3: "2–15%"
+  stat_note_3: "A wide spread. Read the floor"
+
+  hero_headline: "Know the room before you sit down."
+  hero_subhead: "Every game has its math. Every house has its custom. The players who do well are the ones who studied both."
+
+  quiz_cta: "Take the table tour — 90 seconds"
+  tools_headline: "The line you set. In writing."
+  tools_body: "A deposit limit. A session bell. A weekly ledger. Set them once, and they hold the line for you when the room gets loud."
+
+  support_headline: "Free, confidential support — for the player and the player's people."
+  support_body: "Speak with a counselor. No script. No record. Whenever you need it."

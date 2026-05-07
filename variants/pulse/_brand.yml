@@ -1,0 +1,229 @@
+# _brand.yml — Pulse (Variant Demo)
+# ============================================
+# Demonstration fork of Playbook tilted toward streamer / esports /
+# Twitch-native culture. Dark UI, electric accents, fast voice.
+# Built for a brand that wants to live next to Stake.com, Rollbit,
+# and DraftKings' younger audience — without sounding like a pamphlet.
+#
+# To use: cp variants/pulse/_brand.yml _brand.yml && npm run generate
+# ============================================
+
+
+# ─── META ────────────────────────────────────
+
+meta:
+  program_name: "Pulse"
+  organization: "Your Company Name"
+  website: "https://example.com/pulse"
+  contact_email: "info@example.com"
+  year_established: 2026
+  version: "0.1.0"
+  license: "CC0-1.0"
+  primary_jurisdictions:
+    - united-states
+    - united-kingdom
+
+
+# ─── BRAND PILLARS ───────────────────────────
+
+brand_pillars:
+
+  - name: "Edge"
+    tagline: "Know yours"
+    description: >
+      Every game has a number. Pros know it cold. You should too.
+      That's the difference between playing and getting played.
+
+  - name: "Fast"
+    tagline: "No fluff"
+    description: >
+      We don't waste your time with disclaimers and pamphlet
+      energy. Quick math, clean visuals, you're back to the game.
+
+
+# ─── COLOR PALETTE ───────────────────────────
+# Dark-mode-native. Almost-black bg, electric cyan, hot magenta.
+# Looks like a streamer overlay, not a clinical website.
+
+color:
+  palette:
+    primary: "#15151E"                    # Almost-black surface
+    primary_light: "#22222E"
+    primary_dark: "#0A0A0F"
+
+    secondary: "#00F0FF"                  # Electric cyan
+    secondary_light: "#5BF6FF"
+    secondary_dark: "#00BFCC"
+
+    accent: "#FF2E9A"                     # Hot magenta
+    accent_light: "#FF66B5"
+    accent_dark: "#CC1E7B"
+
+    neutral_900: "#0A0A0F"
+    neutral_700: "#1F1F2B"
+    neutral_500: "#5A5A6E"
+    neutral_300: "#9A9AA8"
+    neutral_200: "#C2C2CC"
+    neutral_100: "#E0E0E8"
+    neutral_50: "#F5F5FA"
+
+    success: "#00FF88"
+    warning: "#FFB800"
+    danger: "#FF3838"
+    info: "#00F0FF"
+
+    white: "#FFFFFF"
+    black: "#000000"
+
+  aliases:
+    obsidian: "primary"
+    obsidianLight: "primary_light"
+    obsidianDark: "primary_dark"
+    cyan: "secondary"
+    cyanLight: "secondary_light"
+    cyanDark: "secondary_dark"
+    magenta: "accent"
+    magentaLight: "accent_light"
+    magentaDark: "accent_dark"
+    n900: "neutral_900"
+    n700: "neutral_700"
+    n500: "neutral_500"
+    n300: "neutral_300"
+    n200: "neutral_200"
+    n100: "neutral_100"
+    n50: "neutral_50"
+
+  semantic:
+    background: "primary_dark"             # #0A0A0F
+    surface: "primary"                     # #15151E elevated card
+    text_primary: "neutral_50"             # #F5F5FA on dark — 17:1
+    text_secondary: "neutral_100"          # #E0E0E8 on dark — 14:1
+    text_muted: "neutral_300"              # #9A9AA8 on dark — 6.6:1
+    link: "secondary"                      # Cyan on dark — 13.6:1
+    link_hover: "secondary_light"          # 15:1
+    cta_primary_bg: "accent"               # Magenta CTA
+    cta_primary_text: "neutral_900"        # Black on magenta — 6.5:1
+    cta_secondary_bg: "secondary"          # Cyan CTA
+    cta_secondary_text: "neutral_900"      # Black on cyan — 13.6:1
+    quiz_correct: "success"
+    quiz_incorrect: "danger"
+    feature_highlight: "secondary"
+    helpline_banner: "primary"
+    border: "neutral_700"
+    divider: "neutral_700"
+
+
+# ─── TYPOGRAPHY ──────────────────────────────
+# Wide grotesque headline + monospace body for that terminal/coder feel.
+
+typography:
+  fonts:
+    heading:
+      family: "Space Grotesk"
+      source: "google"
+      weights: [400, 500, 600, 700]
+      fallback: "system-ui, -apple-system, sans-serif"
+    body:
+      family: "Inter"
+      source: "google"
+      weights: [400, 500, 600, 700]
+      fallback: "system-ui, sans-serif"
+    monospace:
+      family: "JetBrains Mono"
+      source: "google"
+      weights: [400, 500, 700]
+      fallback: "monospace"
+
+  scale:
+    display: 4.0                          # Bigger, louder
+    h1: 3.0
+    h2: 2.25
+    h3: 1.625
+    h4: 1.25
+    body_large: 1.125
+    body: 1.0
+    small: 0.875
+    caption: 0.75
+
+  line_height:
+    heading: 1.0                          # Stacked, dense, poster-like
+    body: 1.55
+    tight: 1.2
+
+
+# ─── LOGO ────────────────────────────────────
+
+logo:
+  type: "wordmark + chevron mark"
+  font: "Space Grotesk"
+  primary_path: "variants/pulse/logo/"
+
+
+# ─── TONE ────────────────────────────────────
+
+tone:
+  humor: "confident-wit"
+  formality: "conversational"
+  voice_archetype: "the-friend-who-counts-cards"
+  gambling_culture: "fluent"               # Use the slang. Not a tourist.
+
+  prefer:
+    player: "player"
+    informed_play: "edge, math, sharp play"
+    tools: "tools"
+    check_in: "check the tape"
+    take_a_break: "step off"
+    your_limits: "your line"
+
+
+# ─── MESSAGING ───────────────────────────────
+
+messaging:
+  taglines:
+    edge:
+      - "Know your edge."
+      - "The math is the game."
+      - "Sharps know. Now you do."
+      - "Every game has a number."
+    fast:
+      - "No fluff."
+      - "Math, fast."
+      - "Skip the pamphlet."
+
+  ctas:
+    primary:
+      - "Run the math"
+      - "Check the edge"
+      - "Pull the numbers"
+    features:
+      - "Set the line"
+      - "Lock the budget"
+      - "Tape the session"
+    content:
+      - "Read the breakdown"
+      - "Watch the explainer"
+      - "Run the sim"
+
+
+# ─── Content Defaults ───────────────────────────────────────────
+
+content_defaults:
+  stat_game_1: "Blackjack (basic strategy)"
+  stat_value_1: "0.5%"
+  stat_note_1: "The sharp's game"
+  stat_game_2: "American Roulette"
+  stat_value_2: "5.26%"
+  stat_note_2: "Two zeros, twice the bleed"
+  stat_game_3: "Slots (average)"
+  stat_value_3: "2–15%"
+  stat_note_3: "Wide spread. Read the machine"
+
+  hero_headline: "Know your edge."
+  hero_subhead: "Every game has a number. Pros know it cold. So should you."
+
+  quiz_cta: "Test your edge — 60-second quiz"
+  tools_headline: "Set your line. Hold it."
+  tools_body: "Deposit cap, session timer, weekly tape. Set in 30 seconds. Quiet until you cross your own line."
+
+  support_headline: "Talk to someone — free, confidential, fast."
+  support_body: "No script, no pitch. Just a person."

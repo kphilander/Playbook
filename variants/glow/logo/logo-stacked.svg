@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="140" viewBox="0 0 160 140">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600');
+  </style>
+
+  <!-- Sun mark centered above wordmark -->
+  <circle cx="80" cy="44" r="34" fill="none" stroke="#D4A574" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="80" cy="44" r="26" fill="#2D4A3E"/>
+
+  <!-- Wordmark -->
+  <text x="80" y="118" text-anchor="middle"
+        font-family="'Fraunces', Georgia, serif"
+        font-size="44"
+        font-weight="600"
+        letter-spacing="-1.2"
+        fill="#2D4A3E">Glow</text>
+</svg>

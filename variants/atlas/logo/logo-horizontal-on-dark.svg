@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700');
+  </style>
+
+  <!-- Globe mark — gold disc with cream meridian + equator (visible on dark oxblood) -->
+  <g transform="translate(8, 8)">
+    <circle cx="24" cy="24" r="23" fill="#A88E3F"/>
+    <ellipse cx="24" cy="24" rx="23" ry="6" fill="none" stroke="#F4EDE0" stroke-width="1.2" opacity="0.9"/>
+    <ellipse cx="24" cy="24" rx="6" ry="23" fill="none" stroke="#F4EDE0" stroke-width="1.2" opacity="0.9"/>
+    <circle cx="24" cy="24" r="23" fill="none" stroke="#F4EDE0" stroke-width="1.5"/>
+  </g>
+
+  <!-- Wordmark — cream Playfair italic for dark oxblood nav -->
+  <text x="64" y="46"
+        font-family="'Playfair Display', Georgia, serif"
+        font-size="42"
+        font-weight="700"
+        font-style="italic"
+        fill="#F4EDE0">Atlas</text>
+
+  <!-- Cream rule under wordmark -->
+  <line x1="64" y1="54" x2="178" y2="54" stroke="#A88E3F" stroke-width="0.8" opacity="0.9"/>
+</svg>
