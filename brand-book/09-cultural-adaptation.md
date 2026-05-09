@@ -35,8 +35,6 @@ For operators whose markets differ on one or more cultural dimensions, Playbook 
 
 Before diving into the YAML files, use the interactive **[Brand Personality Switcher](../collateral/render/personality-switcher.html)** to preview how your brand would sound across all 217 messages. Set your five dimensions and see every tagline, CTA, core message, and game guide phrase update in real time — with the Playbook default shown alongside for comparison.
 
-To regenerate after editing variant files: `node collateral/render/build-personality-switcher.mjs`
-
 ### How to use
 
 1. **Set your profile** in `_brand.yml` under `cultural_profile`
