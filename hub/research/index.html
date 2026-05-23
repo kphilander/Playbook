@@ -24,6 +24,16 @@
 </script>
 
 <style>
+  /* design-tokens.css flips --pb-text and friends to near-white under
+     prefers-color-scheme: dark, but this page's body bg is hardcoded white,
+     which would render body copy invisible. Force light values so the page
+     renders the same regardless of OS theme. */
+  :root {
+    color-scheme: light;
+    --pb-text: #1A1A2E;
+    --pb-text-secondary: #3D3D5C;
+    --pb-text-muted: #6B6B8A;
+  }
   body { font-family: var(--pb-font-body, 'Source Sans 3', sans-serif); color: var(--pb-text); background: var(--pb-color-white); }
   h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-height: var(--pb-leading-heading); }
 
