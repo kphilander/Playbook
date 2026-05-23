@@ -988,8 +988,9 @@
         <div class="contrast-info">Use {{MIN_AGE}} to auto-fill the gambling age above</div>
       </div>
       <div class="form-group">
-        <label class="form-label">General Disclaimer</label>
-        <textarea class="form-input" id="disclaimerGeneral" rows="2" style="resize: vertical; font-family: inherit;" placeholder="Gambling involves risk. Play on your terms.">Gambling involves risk. Play on your terms.</textarea>
+        <label class="form-label">Required Legal Disclaimer</label>
+        <textarea class="form-input" id="disclaimerGeneral" rows="3" style="resize: vertical; font-family: inherit;" placeholder="Jurisdiction-required disclosure (helpline, age, etc.)">If you or someone you know has a gambling problem and wants help, call 1-800-GAMBLER. 21+ and present in a state where wagering is legal.</textarea>
+        <div class="contrast-info">Populated from the jurisdiction preset. Where regulators prescribe verbatim text (e.g. PA &sect; 501a.7), use that wording exactly. Verify with your legal team before publishing.</div>
       </div>
 
       <div class="wizard-nav">
@@ -1206,6 +1207,7 @@ const JURISDICTION_PRESETS = {
     supportOrgName: 'National Council on Problem Gambling', supportOrgUrl: 'https://www.ncpgambling.org',
     verticals: 'Varies by state', mandatoryMessaging: '',
     jurisdictionKey: 'united-states',
+    disclaimerGeneral: 'If you or someone you know has a gambling problem and wants help, call 1-800-GAMBLER. 21+ and present in a state where wagering is legal.',
     notes: 'National defaults. Select a state below for state-specific helplines, regulators, and requirements.'
   },
   'us-nv': {
@@ -1219,6 +1221,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Sports Betting',
     mandatoryMessaging: 'Wagering accounts: verbatim message required per Reg 5.225(18)(b)',
     jurisdictionKey: 'united-states-nevada',
+    disclaimerGeneral: 'If you or someone you know has a gambling problem, crisis counseling and referral services can be accessed by calling 1-800-522-4700. 21+ to wager. (NGC Reg 5.225(18)(b) prescribes verbatim language for wagering accounts — confirm with counsel.)',
     notes: 'Nevada uses the NCPG national helpline (no separate state helpline). Two regulatory regimes: Reg 5 (land-based) and Reg 5A (interactive gaming). No online casino; no lottery.'
   },
   'us-ma': {
@@ -1232,6 +1235,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Sports Betting',
     mandatoryMessaging: 'Sports ads: helpline required per 205 CMR 256.06(2) with font size minimums. DPH provides language.',
     jurisdictionKey: 'united-states-massachusetts',
+    disclaimerGeneral: 'Gambling Problem? Call (800) 327-5050 or visit GamblingHelpLineMA.org. 21+ to gamble. (Sports ads: use DPH-prescribed language with font-size minimums per 205 CMR 256.06.)',
     notes: 'Massachusetts has its own state helpline (not NCPG). Separate regimes: Chapter 23K (casino) and Chapter 23N (sports wagering). GameSense Info Centers at every licensed casino. No online casino.'
   },
   'us-nj': {
@@ -1245,6 +1249,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     mandatoryMessaging: '1-800-GAMBLER required on all platforms and in all advertising. DGE Advertising Best Practices apply.',
     jurisdictionKey: 'united-states-new-jersey',
+    disclaimerGeneral: 'If you or someone you know has a gambling problem and wants help, call 1-800-GAMBLER. Bet With Your Head, Not Over It. 21+ and physically present in NJ.',
     notes: '1-800-GAMBLER originated in NJ (now used widely across the US). One of the first US states with legal online gaming.'
   },
   'us-oh': {
@@ -1258,6 +1263,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Sports Betting',
     mandatoryMessaging: 'Sports gaming ads must include problem-gambling prevention messages and helpline per OAC 3775-16-08.',
     jurisdictionKey: 'united-states-ohio',
+    disclaimerGeneral: 'Gambling Problem? Call 1-800-589-9966 or visit ohioforresponsiblegambling.org. 21+ and physically present in Ohio.',
     notes: 'Statewide voluntary exclusion covers casinos and sports gaming. No online casino.'
   },
   'us-mi': {
@@ -1271,6 +1277,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     mandatoryMessaging: '1-800-GAMBLER required on all licensed platforms (Feb 2024 adoption). Responsible Gaming page required per R 432.654 (iGaming) and R 432.754 (sports betting). MDHHS treatment line: 1-800-270-7117.',
     jurisdictionKey: 'united-states-michigan',
+    disclaimerGeneral: 'If you or someone you know has a gambling problem and wants help, call 1-800-GAMBLER. 21+ and physically present in Michigan.',
     notes: 'Two separate SE programs: DPL for the three Detroit commercial casinos; RGD for online + sports. Compulsive Gaming Prevention Fund receives $2M annually.'
   },
   'us-pa': {
@@ -1284,6 +1291,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino, Online Poker, Sports Betting',
     mandatoryMessaging: 'Verbatim required per 58 Pa. Code § 501a.7(d): "IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, HELP IS AVAILABLE, CALL 1-800-GAMBLER." Font-size minimums apply (2% print, etc.). At least 20 signs within 50 ft of entrances/exits and at ATMs (§ 501a.5).',
     jurisdictionKey: 'united-states-pennsylvania',
+    disclaimerGeneral: 'IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, HELP IS AVAILABLE, CALL 1-800-GAMBLER. 21+ and physically present in Pennsylvania. (Verbatim required per 58 Pa. Code § 501a.7(d).)',
     notes: 'Largest US online gambling revenue state. iGaming platforms must surface hourly pop-ups with elapsed session time and amount wagered (§ 814a.1).'
   },
   'us-ca': {
@@ -1297,6 +1305,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino (tribal only) — no online casino, no state-regulated sports betting',
     mandatoryMessaging: 'Most tribal-state compacts require display of 1-800-GAMBLER and RG signage at casino entrances and gaming floors. Specific terms vary by compact.',
     jurisdictionKey: 'united-states-california',
+    disclaimerGeneral: 'If you or someone you know has a gambling problem, call 1-800-GAMBLER. Must be 21+ where alcohol is served; 18+ at some tribal venues. (Specific tribal compact terms vary — confirm against your operator\'s compact.)',
     notes: 'No legal online casino or sports betting in California. Land-based tribal casinos only. Age varies by compact (18 or 21; alcohol-serving venues typically 21+).'
   },
   'us-az': {
@@ -1310,6 +1319,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino (tribal), Sports Betting',
     mandatoryMessaging: 'Event wagering ads must include the problem-gambling helpline per A.A.C. R19-4-110 (Responsible Advertising). 1-800-GAMBLER also widely used.',
     jurisdictionKey: 'united-states-arizona',
+    disclaimerGeneral: 'Gambling Problem? Call 1-800-NEXT-STEP (1-800-639-8783). 21+ and physically present in Arizona. 1-800-GAMBLER is also widely accepted.',
     notes: 'Event wagering live since 9 September 2021 (retail and mobile concurrent launch). No legal online casino. 21+ for event wagering; tribal compacts under A.R.S. § 5-601 also require 21+.'
   },
   // --- Canada ---
@@ -1321,6 +1331,7 @@ const JURISDICTION_PRESETS = {
     supportOrgName: 'Responsible Gambling Council', supportOrgUrl: 'https://www.responsiblegambling.org',
     verticals: 'Varies by province', mandatoryMessaging: '',
     jurisdictionKey: 'canada',
+    disclaimerGeneral: 'Know your limit, play within it. Gambling support varies by province — visit ConnexOntario.ca, GamblingSupportBC.ca, or your provincial helpline. 19+ in most provinces; 18+ in Alberta, Manitoba, Quebec.',
     notes: 'Gambling regulated provincially. Select a province below for specific requirements.'
   },
   'ca-on': {
@@ -1334,6 +1345,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     mandatoryMessaging: 'ConnexOntario must be prominently displayed on iGaming registration pages. Sport betting inducements prohibited in public advertising.',
     jurisdictionKey: 'canada-ontario',
+    disclaimerGeneral: 'Gambling Problem? ConnexOntario provides free, confidential support 24/7: 1-866-531-2600 or connexontario.ca. 19+ Ontario residents. Play responsibly.',
     notes: 'Open competitive iGaming market (live 4 April 2022). ~44 registered operators running ~77-82 sites. BetGuard centralized self-exclusion launched 14 May 2026 covering all licensed iGaming sites.'
   },
   'ca-ab': {
@@ -1347,6 +1359,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino (PlayAlberta)',
     mandatoryMessaging: 'GameSense materials and AHS helpline must be accessible at every venue. iGaming Alberta Act establishes a competitive private market (in implementation; private operators not yet live as of May 2026).',
     jurisdictionKey: 'canada-alberta',
+    disclaimerGeneral: 'Know your limit. Play within it. AHS Addiction Helpline: 1-866-332-2322 (24/7, free, confidential). 18+ to gamble in Alberta. GameSenseAlberta.com.',
     notes: 'Deal Us In staff certification mandatory for all gaming workers. PlayAlberta is the AGLC-operated online platform.'
   },
   // --- Other countries ---
@@ -1360,6 +1373,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     mandatoryMessaging: 'Must comply with ASA/CAP advertising codes. GAMSTOP participation required for remote operators.',
     jurisdictionKey: 'united-kingdom',
+    disclaimerGeneral: '18+. Please gamble responsibly. begambleaware.org | GAMSTOP self-exclusion: gamstop.co.uk. Take time to think.',
     notes: ''
   },
   au: {
@@ -1372,6 +1386,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Sports Betting (online casino prohibited)',
     mandatoryMessaging: '',
     jurisdictionKey: 'australia',
+    disclaimerGeneral: '18+. Set a deposit limit. Chances are you\'re about to lose. Gambler\'s Help: 1800 858 858 | gamblinghelponline.org.au | National Self-Exclusion: betstop.gov.au.',
     notes: ''
   },
   dk: {
@@ -1385,6 +1400,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     mandatoryMessaging: 'Players MUST set a deposit limit before play. Age limit + ROFUS info required in all marketing. 2025-26 advertising reform package effective 1 January 2027: under-25 in-ad ban, 200m school-proximity ban, live-sports whistle-to-whistle ban.',
     jurisdictionKey: 'denmark',
+    disclaimerGeneral: 'Spil ansvarligt. 18+. Hjælp og rådgivning: StopSpillet 70 22 28 25 | Selvudelukkelse: rofus.nu. (Age limit + ROFUS info required in all marketing per Spillemyndigheden.)',
     notes: 'ROFUS is mandatory for all licensees. Executive Orders 1274/1276 (as amended by EOs 682/684 of 2025) govern online play.'
   },
   mt: {
@@ -1398,6 +1414,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     mandatoryMessaging: 'All ads must display licensee name, licence number, minimum age, and RG message (S.L. 583.09). Responsible gaming page must be within one click from anywhere on the site (PPD Art. 10). Penalties up to EUR 25,000 per breach.',
     jurisdictionKey: 'malta',
+    disclaimerGeneral: 'Play responsibly. 18+. {{OPERATOR_NAME}} | Licence: {{LICENCE_NUMBER}}. Helpline 1777 (24/7) | rgf.org.mt. (S.L. 583.09 requires licensee name, licence number, minimum age, and RG message in all advertising.)',
     notes: 'Helpline 1777 operates 24/7 (RGF). Sedqa national line: 179. Land-based casino age split: 18+ non-Maltese, 25+ Maltese citizens.'
   },
   sg: {
@@ -1411,6 +1428,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino only (two integrated resorts — online gambling largely prohibited)',
     mandatoryMessaging: 'All casino advertising must be GRA-approved. Entry levy applies to Singapore Citizens and PRs: S$150 per 24-hour visit or S$3,000 annual (Casino Control (Entry Levy) Regs). Compulsory staff training.',
     jurisdictionKey: 'singapore',
+    disclaimerGeneral: 'Restricted to persons 21 years of age and above. If you or someone you know has a gambling problem, call the National Problem Gambling Helpline at 1800-6-668-668. (All casino advertising must be GRA-approved.)',
     notes: 'GRA created by Gambling Regulatory Authority of Singapore Act 2022 (effective 1 August 2022). NCPG helpline staffed daily 08:00–23:00 SGT (not 24/7).'
   },
   mo: {
@@ -1425,6 +1443,7 @@ const JURISDICTION_PRESETS = {
     verticals: 'Land-based Casino only (no legal online gambling)',
     mandatoryMessaging: 'RG messages required in promotional pamphlets and on casino-floor kiosks. 24-hr Gambling Counseling Hotline displayed on ATM screensavers at all casinos. Advertising must comply with DICJ guidelines (Law 7/2022 amending Law 16/2001).',
     jurisdictionKey: 'macau',
+    disclaimerGeneral: 'Don\'t be a slave to gambling. Gambling restricted to those 21 years of age and over. 24-hr Gambling Counseling Hotline: 2823-0101 (verify against current DICJ-published materials).',
     notes: 'No legal online gambling. 21+ to enter casinos (raised from 18 by Law 10/2012). Verify the IAS counseling hotline number against current DICJ-published materials before deployment.'
   },
   custom: {
@@ -1435,6 +1454,7 @@ const JURISDICTION_PRESETS = {
     supportOrgName: '', supportOrgUrl: '',
     verticals: '', mandatoryMessaging: '',
     jurisdictionKey: '',
+    disclaimerGeneral: '',
     notes: ''
   }
 };
@@ -2423,6 +2443,10 @@ function applyPreset(id) {
   document.getElementById('limitsUrl').value = '';
   document.getElementById('supportOrgName').value = preset.supportOrgName || '';
   document.getElementById('supportOrgUrl').value = preset.supportOrgUrl || '';
+  // Populate jurisdiction-required legal disclaimer (do not clobber a user-edited value if 'custom' was picked)
+  if (preset.disclaimerGeneral !== undefined) {
+    document.getElementById('disclaimerGeneral').value = preset.disclaimerGeneral;
+  }
   updateJurisdictionInfo(preset);
   updatePreview();
 }
