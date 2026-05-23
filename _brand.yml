@@ -248,6 +248,55 @@ helplines:
       state_resource: "Nevada Council on Problem Gambling"
       state_website: "www.nevadacouncil.org"
       notes: "No separate state helpline — uses NCPG national number"
+    new-jersey:
+      number: "1-800-GAMBLER"
+      text_number: "Text 800GAM"
+      chat_url: "www.800gambler.org/chat"
+      website: "www.800gambler.org"
+      label: "Council on Compulsive Gambling of New Jersey"
+      hours: "24/7"
+      notes: "1-800-GAMBLER is the originating NJ number, now used widely across US jurisdictions."
+    massachusetts:
+      number: "1-800-327-5050"
+      text_number: "Text GAMB to 800327"
+      chat_url: "www.gamblinghelplinema.org"
+      website: "www.gamblinghelplinema.org"
+      label: "Massachusetts Problem Gambling Helpline"
+      hours: "24/7"
+      notes: "Operated by the Massachusetts Council on Gaming and Health (MACGH). Required in sports wagering ads with DPH-prescribed language."
+    ohio:
+      number: "1-800-589-9966"
+      alternate: "1-800-GAMBLER"
+      text_number: "Text 4HOPE to 741741"
+      website: "problemgambling.ohio.gov"
+      label: "Ohio for Responsible Gambling"
+      hours: "24/7"
+    michigan:
+      number: "1-800-GAMBLER"
+      alternate: "1-800-270-7117"
+      website: "www.michigan.gov/mgcb/resources/responsible-gaming"
+      label: "Michigan statewide problem gambling helpline"
+      hours: "24/7"
+      notes: "1-800-GAMBLER adopted statewide Feb 2024; calls routed to MDHHS. 1-800-270-7117 is MDHHS treatment line. Do NOT publish MGCB Responsible Gaming Section (888-223-3044) as a player helpline — that's an administrative contact."
+    pennsylvania:
+      number: "1-800-GAMBLER"
+      website: "responsibleplay.pa.gov"
+      label: "PA Department of Drug and Alcohol Programs (DDAP)"
+      hours: "24/7"
+      notes: "Verbatim ad disclosure required: 'IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, HELP IS AVAILABLE, CALL 1-800-GAMBLER.' Font-size minimums per 58 Pa. Code § 501a.7."
+    arizona:
+      number: "1-800-NEXT-STEP"
+      alternate: "1-800-639-8783"
+      website: "problemgambling.az.gov"
+      label: "Arizona Department of Gaming Division of Problem Gambling"
+      hours: "24/7"
+      notes: "1-800-GAMBLER also widely accepted by ADG."
+    california:
+      number: "1-800-GAMBLER"
+      website: "www.problemgambling.ca.gov"
+      label: "California Office of Problem Gambling (OPG)"
+      hours: "24/7"
+      notes: "Most California tribal compacts reference 1-800-GAMBLER. Tribal casinos may also publish tribally-operated lines."
 
   united-kingdom:
     number: "0808 8020 133"
@@ -277,6 +326,37 @@ helplines:
       website: "www.connexontario.ca"
       label: "ConnexOntario"
       hours: "24/7"
+    alberta:
+      number: "1-866-332-2322"
+      website: "albertahealthservices.ca/amh"
+      label: "Alberta Health Services Addiction Helpline"
+      gamesense_url: "myplaybc.com / gamesense.com (program operates through PlayAlberta)"
+      hours: "24/7"
+      notes: "GameSense Alberta integrated through PlayAlberta and AGLC venues. Deal Us In is the mandatory worker certification program."
+
+  denmark:
+    number: "+45 70 22 28 25"
+    website: "stopspillet.dk"
+    label: "StopSpillet"
+    self_exclusion: "ROFUS (rofus.nu) — national self-exclusion register"
+    hours: "Mon-Thu 09:00-22:00, Fri 09:00-18:00, Sat-Sun 12:00-18:00 (CET)"
+
+  malta:
+    number: "1777"
+    alternate: "179"
+    website: "rgf.org.mt"
+    label: "Responsible Gaming Foundation (RGF) Supportline"
+    alternate_label: "Sedqa helpline (substance and gambling)"
+    hours: "24/7"
+    self_exclusion: "MGA self-barring (mga.org.mt/player-hub/self-barring/)"
+
+  singapore:
+    number: "1800-6-668-668"
+    website: "ncpg.org.sg"
+    label: "National Council on Problem Gambling (NCPG) Helpline"
+    hours: "Daily 8:00–23:00 SGT"
+    self_exclusion: "NCPG self-exclusion + casino-control family exclusion orders"
+    notes: "NCPG main helpline is staffed 08:00–23:00 SGT daily (not 24/7). Casino entry levy applies to Singapore Citizens / PRs: S$150 per 24-hour visit or S$3,000 annual."
 
   european-union:
     note: "See jurisdictions/european-union/country-specific/ for local helplines"
