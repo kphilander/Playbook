@@ -82,6 +82,11 @@
     font-size: clamp(1rem, 1.8vw, 1.1rem); color: rgba(255,255,255,0.6);
     max-width: 620px; margin: 0 auto 32px; position: relative; line-height: 1.7;
   }
+  .pb-hero-ctas {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    justify-content: center; align-items: center;
+    position: relative;
+  }
   .pb-hero-compact .pb-btn {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 12px 28px; border-radius: 8px;
@@ -91,6 +96,15 @@
     transition: transform 0.2s, box-shadow 0.2s; position: relative;
   }
   .pb-hero-compact .pb-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+  .pb-hero-compact .pb-btn-outline {
+    background: transparent; color: #fff;
+    border: 2px solid var(--pb-color-secondary);
+    padding: 10px 26px;
+  }
+  .pb-hero-compact .pb-btn-outline:hover {
+    background: var(--pb-color-secondary);
+    color: var(--pb-color-primary-dark);
+  }
 
   /* === Sections === */
   .pb-section { padding: 80px 0; }
@@ -335,7 +349,10 @@
       <a href="/tools/playbook/" class="pb-back">&larr; Back to Playbook</a>
       <h1>Content <span>Scorecard</span></h1>
       <p>Measure whether your literacy content is working &mdash; the same way you'd measure any marketing campaign. Three surveys, auto-scored benchmarks, and a clear ship-or-revise decision.</p>
-      <a href="#deploy" class="pb-btn">Try the Survey Widget &darr;</a>
+      <div class="pb-hero-ctas">
+        <a href="#deploy" class="pb-btn">Try the Survey Widget &darr;</a>
+        <a href="https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml" class="pb-btn pb-btn-outline" target="_blank" rel="noopener">Share Your Findings &rarr;</a>
+      </div>
     </div>
   </section>
 
@@ -573,7 +590,7 @@
     <p>
       <a href="/tools/playbook/">Playbook Hub</a> &middot;
       <a href="https://github.com/kphilander/Playbook/blob/main/docs/content-scorecard.md" target="_blank" rel="noopener">Full Guide on GitHub</a> &middot;
-      <a href="https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml" target="_blank" rel="noopener">Share Findings</a>
+      <a href="https://github.com/kphilander/Playbook/issues/new?template=research-findings.yml" target="_blank" rel="noopener">Share Your Findings</a>
     </p>
   </footer>
 
