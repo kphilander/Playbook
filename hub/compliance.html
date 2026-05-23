@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regulatory Alignment — Playbook</title>
-<meta name="description" content="Map Playbook responsible gambling content to regulatory requirements across jurisdictions. Select your regulator, review specific requirements, and verify coverage.">
+<title>The Coverage Map — Playbook</title>
+<meta name="description" content="See how Playbook's player-education content maps to your regulator's requirements. Citations, gaps, and what your team still needs to build.">
 <meta name="theme-color" content="#1B2838">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Regulatory Alignment Matrix — Playbook">
-<meta property="og:description" content="See how Playbook's responsible gambling content maps to regulatory requirements across 12 jurisdictions. Honest coverage ratings backed by repo audit.">
+<meta property="og:title" content="The Coverage Map — Playbook">
+<meta property="og:description" content="See how Playbook's player-education content maps, regulator by regulator. Honest coverage ratings. Primary-source citations. 16 jurisdictions shipped, more in the queue.">
 <meta property="og:image" content="https://raw.githubusercontent.com/kphilander/Playbook/main/collateral/render/poster-4a-know-your-game.png">
 <meta property="og:url" content="https://www.gamblingpolicy.com/tools/playbook/compliance.html">
 <meta property="og:type" content="website">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Regulatory Alignment Matrix — Playbook">
-<meta name="twitter:description" content="See how Playbook's responsible gambling content maps to regulatory requirements across 12 jurisdictions.">
+<meta name="twitter:title" content="The Coverage Map — Playbook">
+<meta name="twitter:description" content="See how Playbook's player-education content maps, regulator by regulator. Honest coverage ratings backed by primary-source citations.">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/kphilander/Playbook/main/collateral/render/poster-4a-know-your-game.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -415,6 +415,29 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
 .theme-badge.strong { background: rgba(0,212,170,0.15); color: #00997a; }
 .theme-badge.partial { background: rgba(255,180,50,0.15); color: #b88a00; }
 .theme-badge.light { background: rgba(255,107,53,0.12); color: #cc5520; }
+.badge-glyph {
+  display: inline-block; font-size: 0.65rem; margin-right: 4px;
+  vertical-align: 1px; font-weight: 700;
+}
+
+/* === Badge legend === */
+.badge-legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px;
+  background: #f7f8fa; border: 1px solid #e2e6ea;
+  border-radius: 8px; padding: 14px 18px; margin-bottom: 24px;
+  font-size: 0.85rem;
+}
+.badge-legend-label {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;
+  color: #5a6a7a; margin-right: 4px;
+}
+.theme-badge-meta {
+  color: #5a6a7a; font-size: 0.82rem;
+}
+@media (max-width: 600px) {
+  .badge-legend { font-size: 0.78rem; gap: 6px 8px; padding: 12px 14px; }
+}
 .theme-chevron {
   font-size: 1.2rem; color: #b0bac4;
   transition: transform 0.3s;
@@ -661,6 +684,48 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
   html { scroll-behavior: auto; }
 }
 
+/* === Focus styles (keyboard users) === */
+.reg-card:focus-visible,
+.vert-chip:focus-visible,
+.reg-region-header:focus-visible,
+.theme-header:focus-visible,
+.juris-header:focus-visible {
+  outline: 3px solid #00D4AA;
+  outline-offset: 2px;
+}
+.fab-btn:focus-visible,
+.fab-clear:focus-visible,
+.feedback-submit:focus-visible,
+.request-fab:focus-visible {
+  outline: 3px solid #FF6B35;
+  outline-offset: 3px;
+}
+
+/* === Mobile tap target sizes (WCAG 2.5.5) === */
+@media (max-width: 768px) {
+  .reg-card { min-height: 56px; }
+  .vert-chip { min-height: 44px; }
+  .theme-header, .juris-header { min-height: 56px; }
+}
+
+/* === Print CSS === */
+@media print {
+  body { background: #fff; color: #000; }
+  .pb-hero { background: #fff; color: #000; padding: 20px 0; border-bottom: 2px solid #000; }
+  .pb-hero h1, .pb-hero h1 span, .pb-hero p { color: #000; }
+  .request-fab, .fab-container, .pb-disclaimer-close, .feedback-section,
+  .pb-back-bar, .configurator-cta, .reg-region-chevron, .theme-chevron, .juris-chevron { display: none !important; }
+  .pb-bottom-disclaimer { background: #fff !important; color: #000 !important; padding: 16px 0; }
+  .pb-bottom-disclaimer strong, .pb-bottom-disclaimer p, .pb-bottom-disclaimer a { color: #000 !important; }
+  .reg-grid { max-height: none !important; opacity: 1 !important; display: grid !important; }
+  .reg-region-header.collapsed + .reg-grid { max-height: none !important; opacity: 1 !important; }
+  .theme-card .theme-body, .juris-card .juris-body { display: block !important; border-top: 1px solid #ccc; }
+  .theme-card, .juris-card, .citation-card, .summary-stat, .summary-scope { page-break-inside: avoid; }
+  .sr { opacity: 1 !important; transform: none !important; }
+  a { color: #000; text-decoration: underline; }
+  .citation-source a::after { content: ' (' attr(href) ')'; font-size: 0.7rem; }
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
   .pb-container, .pb-container-wide { padding: 0 20px; }
@@ -680,6 +745,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
   .fab-btn { padding: 12px 20px; font-size: 0.82rem; }
 }
 </style>
+<noscript><style>
+  /* Without JS, the page filter/matrix doesn't work but the regulator selector should still be readable */
+  .sr { opacity: 1 !important; transform: none !important; }
+  .reg-grid { max-height: none !important; opacity: 1 !important; }
+</style></noscript>
 </head>
 <body>
 
@@ -689,29 +759,28 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
 <!-- Hero -->
 <section class="pb-hero">
   <div class="pb-container">
-    <h1>Regulatory <span>Alignment</span></h1>
-    <p>See exactly how Playbook content maps to the regulatory requirements in your jurisdiction. Select your regulator, review specific requirements, and verify coverage&nbsp;&mdash; then confirm with your legal team.</p>
+    <h1>The Coverage <span>Map</span></h1>
+    <p>Every regulator wants something different. We show you exactly what &mdash; citation by citation &mdash; and exactly which parts of Playbook cover it. No fine print. Primary citations only. Every gap named.</p>
   </div>
 </section>
 
-<!-- Disclaimer Banner (closeable) -->
+<!-- Single, prominent legal notice -->
 <div class="pb-container">
-  <div class="pb-disclaimer-banner sr" id="disclaimer-banner">
-    <button class="pb-disclaimer-close" onclick="document.getElementById('disclaimer-banner').classList.add('hidden')" aria-label="Close disclaimer">&times;</button>
-    <strong>Important Disclaimer</strong>
-    This page is for informational purposes only and does not constitute legal advice. Operators are solely responsible for verifying compliance with all applicable laws and licence conditions. Always verify against current regulatory guidance with qualified legal counsel.
-  </div>
+  <aside class="pb-disclaimer-banner sr" id="disclaimer-banner" role="region" aria-labelledby="disclaimer-heading">
+    <strong id="disclaimer-heading">How to read this page</strong>
+    We cite primary sources. We don&rsquo;t replace your legal team. Every citation links to the regulator&rsquo;s own published text &mdash; verify against the version that applies to your licence.
+  </aside>
 </div>
 
 <!-- Floating Request Button -->
-<a href="#feedback" class="request-fab" id="request-fab">Request a jurisdiction</a>
+<a href="#feedback" class="request-fab" id="request-fab">Request a regulator</a>
 
 <!-- STEP 1: Regulator Selector -->
 <section class="pb-section" id="step-1">
   <div class="pb-container-wide">
     <div class="pb-step-indicator sr">
       <div class="pb-step-num">1</div>
-      <div class="pb-step-label">Select Your Regulator</div>
+      <div class="pb-step-label">Pick your regulator(s)</div>
     </div>
     <p class="pb-section-sub sr">Click one or more regulators below. The requirements matrix will show only the themes and citations relevant to your selections.</p>
 
@@ -719,13 +788,13 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">United States</span>
-      <span class="reg-region-count">6 regulators + 2 in development</span>
+      <span class="reg-region-count">9 regulators + 1 in development</span>
     </div>
-    <div class="reg-grid sr" style="max-height:900px;">
+    <div class="reg-grid sr" style="max-height:1400px;">
       <div class="reg-card" data-reg="ngc">
         <div class="reg-card-name">Nevada Gaming Control Board (NGC)</div>
         <div class="reg-card-juris">Nevada, United States</div>
-        <div class="reg-card-desc">NRS Chapter 463; NGC Regulation 5 (Rev. 12/24), Regulation 5A (Rev. 05/24)</div>
+        <div class="reg-card-desc">NRS Chapter 463; NGC Regulation 5 (Rev. 03/26), Regulation 5A (Rev. 02/26)</div>
       </div>
       <div class="reg-card" data-reg="njdge">
         <div class="reg-card-name">New Jersey DGE</div>
@@ -747,11 +816,20 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         <div class="reg-card-juris">California, United States</div>
         <div class="reg-card-desc">Individual Tribal-State Compacts; IGRA. Land-based tribal casinos only.</div>
       </div>
-      <div class="reg-card-cs"><div class="reg-card-name">Pennsylvania PGCB</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card" data-reg="pgcb">
+        <div class="reg-card-name">Pennsylvania Gaming Control Board (PGCB)</div>
+        <div class="reg-card-juris">Pennsylvania, United States</div>
+        <div class="reg-card-desc">4 Pa.C.S.; 58 Pa. Code Chapters 501a, 503a, 813a, 814a, 815a, 1410a</div>
+      </div>
       <div class="reg-card" data-reg="mgcb">
         <div class="reg-card-name">Michigan Gaming Control Board (MGCB)</div>
         <div class="reg-card-juris">Michigan, United States</div>
         <div class="reg-card-desc">PA 152 of 2019 (iGaming); PA 149 of 2019 (Sports Betting); Michigan Gaming Control and Revenue Act</div>
+      </div>
+      <div class="reg-card" data-reg="az">
+        <div class="reg-card-name">Arizona Department of Gaming (ADG)</div>
+        <div class="reg-card-juris">Arizona, United States</div>
+        <div class="reg-card-desc">A.R.S. Title 5 Chapter 12 (Event Wagering); A.A.C. R19-4; Tribal-State Gaming Compacts</div>
       </div>
       <div class="reg-card-cs"><div class="reg-card-name">Illinois IGB</div><div class="reg-card-juris">In development</div></div>
     </div>
@@ -804,7 +882,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">Europe</span>
-      <span class="reg-region-count">2 regulators + 7 in development</span>
+      <span class="reg-region-count">3 regulators + 6 in development</span>
     </div>
     <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
       <div class="reg-card" data-reg="ukgc">
@@ -817,7 +895,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         <div class="reg-card-juris">Denmark</div>
         <div class="reg-card-desc">Spilleloven; Executive Orders 1274/1276</div>
       </div>
-      <div class="reg-card-cs"><div class="reg-card-name">MGA (Malta)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card" data-reg="mga">
+        <div class="reg-card-name">Malta Gaming Authority (MGA)</div>
+        <div class="reg-card-juris">Malta</div>
+        <div class="reg-card-desc">Gaming Act (Cap. 583); Player Protection Directive (Dir. 2 of 2018); Gaming Commercial Communications Regs (S.L. 583.09)</div>
+      </div>
       <div class="reg-card-cs"><div class="reg-card-name">Spelinspektionen (Sweden)</div><div class="reg-card-juris">In development</div></div>
       <div class="reg-card-cs"><div class="reg-card-name">ANJ (France)</div><div class="reg-card-juris">In development</div></div>
       <div class="reg-card-cs"><div class="reg-card-name">KSA (Netherlands)</div><div class="reg-card-juris">In development</div></div>
@@ -857,7 +939,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
   <div class="pb-container-wide">
     <div class="pb-step-indicator sr">
       <div class="pb-step-num">2</div>
-      <div class="pb-step-label">Select Your Verticals / Channels</div>
+      <div class="pb-step-label">Pick your verticals</div>
     </div>
     <p class="pb-section-sub sr">Narrow results to the gambling verticals you operate in. If none are selected, all verticals are shown.</p>
 
@@ -869,7 +951,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
       <div class="vert-chip coming-soon">Bingo / VLT <span class="cs-label">Coming soon</span></div>
       <div class="vert-chip coming-soon">Horse Racing <span class="cs-label">Coming soon</span></div>
     </div>
-    <div class="vert-hint sr">Slots, table games, physical venue signage -- Online slots, RNG table games, live dealer -- Retail and online sportsbook</div>
+    <div class="vert-hint sr"><strong>Land-based:</strong> slots, table games, venue signage. &nbsp; <strong>Online:</strong> slots, RNG tables, live dealer. &nbsp; <strong>Sports:</strong> retail and online sportsbook.</div>
 
     <div id="juris-notices"></div>
   </div>
@@ -877,7 +959,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
 
 <!-- Floating Action Buttons -->
 <div class="fab-container" id="fab">
-  <button class="fab-btn" id="fab-view" onclick="showRequirements()">View <span id="fab-count">0</span> requirements &rarr;</button>
+  <button class="fab-btn" id="fab-view" onclick="showRequirements()">View <span id="fab-count">0</span> themes &middot; <span id="fab-cit-count">0</span> citations &rarr;</button>
   <button class="fab-clear" onclick="clearSelection()">Clear</button>
 </div>
 
@@ -886,11 +968,22 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
   <div class="pb-container-wide">
     <div class="pb-step-indicator sr">
       <div class="pb-step-num">3</div>
-      <div class="pb-step-label">Requirements Matrix</div>
+      <div class="pb-step-label">Requirements &amp; coverage</div>
     </div>
 
     <div id="requirements-placeholder">
-      <p class="pb-section-sub">Select at least one regulator in Step&nbsp;1, then click "View Requirements" to see the full matrix.</p>
+      <p class="pb-section-sub">Pick at least one regulator above. Then tap <strong>View themes</strong> to load the matrix.</p>
+    </div>
+
+    <!-- Badge legend (shown once the matrix renders) -->
+    <div class="badge-legend sr" id="badge-legend" style="display:none;">
+      <span class="badge-legend-label">Coverage signal:</span>
+      <span class="theme-badge strong"><span class="badge-glyph">&#9679;</span> Strong</span>
+      <span class="theme-badge-meta">templates and tokens ship</span>
+      <span class="theme-badge partial"><span class="badge-glyph">&#9680;</span> Partial</span>
+      <span class="theme-badge-meta">framework ships; jurisdiction text not pre-wired</span>
+      <span class="theme-badge light"><span class="badge-glyph">&#9675;</span> Light</span>
+      <span class="theme-badge-meta">minimal &mdash; you build most of it</span>
     </div>
 
     <div id="requirements-matrix"></div>
@@ -902,40 +995,40 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
   <div class="pb-container-wide">
     <div class="pb-step-indicator sr">
       <div class="pb-step-num">4</div>
-      <div class="pb-step-label">Coverage Summary</div>
+      <div class="pb-step-label">Coverage at a glance</div>
     </div>
 
     <div class="summary-grid sr" id="summary-stats"></div>
 
     <div class="summary-scope sr">
-      <h4>Playbook Scope -- What Is (and Isn't) Included</h4>
+      <h4>What Playbook gives you &mdash; and what we don&rsquo;t</h4>
       <div class="scope-cols">
         <div class="scope-col yes">
-          <h5>Playbook Covers</h5>
+          <h5>Playbook delivers</h5>
           <ul>
-            <li>Player education content (game guides, odds tables)</li>
-            <li>Responsible gambling messaging (74 core messages)</li>
-            <li>Helpline display and crisis support templates</li>
+            <li>Player-education content (game guides, odds tables)</li>
+            <li>Core messaging library (74 tagged messages, pillar / tier / tone)</li>
+            <li>Helpline display and crisis-support templates</li>
             <li>Self-exclusion communication templates</li>
             <li>Limit-setting promotional messaging and UX mockups</li>
-            <li>Advertising copy and campaign briefs (Nevada-specific only)</li>
-            <li>Age restriction display templates with configurable min_age token</li>
+            <li>Advertising copy and campaign briefs (Nevada-specific only today)</li>
+            <li>Age display templates with configurable min_age token</li>
             <li>Venue and environmental signage templates (HTML/PNG renders)</li>
             <li>Staff conversation scripts and FAQs (reference materials)</li>
-            <li>Activity statement communication mockups</li>
+            <li>Activity-statement communication mockups</li>
           </ul>
         </div>
         <div class="scope-col no">
-          <h5>Operator Provides</h5>
+          <h5>What your team builds</h5>
           <ul>
             <li>Legal review and compliance certification</li>
             <li>Platform features (deposit limits, self-exclusion infrastructure)</li>
-            <li>Age verification technology</li>
-            <li>Activity statement data pipelines</li>
+            <li>Age-verification technology</li>
+            <li>Activity-statement data pipelines</li>
             <li>Jurisdiction-specific mandatory verbatim text</li>
             <li>Advertising pre-clearance and media buying</li>
             <li>Staff training program, e-learning, and certification</li>
-            <li>Game-specific RTP values from their platform</li>
+            <li>Game-specific RTP values from your platform</li>
             <li>Self-exclusion enrollment mechanics and scheme integration</li>
             <li>Session tracking and monitoring systems</li>
             <li>Press-ready production files from signage templates</li>
@@ -952,15 +1045,15 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
   <div class="pb-container-wide">
     <div class="pb-step-indicator sr">
       <div class="pb-step-num">5</div>
-      <div class="pb-step-label">Jurisdiction Details</div>
+      <div class="pb-step-label">Per-jurisdiction notes</div>
     </div>
     <p class="pb-section-sub sr">Expand each selected regulator for key legislation, unique requirements, and notable provisions.</p>
     <div id="juris-cards"></div>
 
     <div class="configurator-cta sr" style="text-align:center; margin-top:48px; padding:40px 32px; background:linear-gradient(135deg,#0F1923 0%,#1B2838 100%); border-radius:12px;">
-      <h4 style="font-family:'Inter',sans-serif; font-size:1.3rem; color:#fff; margin-bottom:8px;">Ready to configure Playbook for your jurisdiction?</h4>
-      <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin-bottom:24px; max-width:540px; margin-left:auto; margin-right:auto;">Set your operator name, helpline number, minimum age, and brand tokens in the configurator. Generate a white-label build in minutes.</p>
-      <a href="/tools/playbook/configurator" style="display:inline-block; padding:14px 36px; background:#00D4AA; color:#0F1923; font-family:'Inter',sans-serif; font-weight:700; font-size:0.95rem; border-radius:8px; text-decoration:none; transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='#00eabb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#00D4AA';this.style.transform='none'">Open the Brand Configurator</a>
+      <h4 style="font-family:'Inter',sans-serif; font-size:1.3rem; color:#fff; margin-bottom:8px;">Once you&rsquo;ve mapped your regulator, build your version.</h4>
+      <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; margin-bottom:24px; max-width:540px; margin-left:auto; margin-right:auto;">Set your operator name, helpline number, minimum age, and brand tokens. The configurator wires them into every template &mdash; collateral, widgets, RG page, signage. One source of truth.</p>
+      <a href="/tools/playbook/configurator" style="display:inline-block; padding:14px 36px; background:#00D4AA; color:#0F1923; font-family:'Inter',sans-serif; font-weight:700; font-size:0.95rem; border-radius:8px; text-decoration:none; transition:background 0.2s,transform 0.2s;" onmouseover="this.style.background='#00eabb';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#00D4AA';this.style.transform='none'">Open the configurator</a>
     </div>
   </div>
 </section>
@@ -969,8 +1062,8 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
 <section class="feedback-section" id="feedback">
   <div class="pb-container">
     <div class="feedback-inner">
-      <h3>Report an Error or Request a Jurisdiction</h3>
-      <p>Found an inaccurate citation? Need a jurisdiction we haven't covered yet? Let us know and we'll prioritize it.</p>
+      <h3>Found something wrong? Tell us.</h3>
+      <p>Found a bad citation? Need a regulator we haven&rsquo;t shipped yet? Send it. Jurisdictions go in the queue by demand.</p>
       <form id="feedback-form" onsubmit="return submitFeedback(event)">
         <div class="feedback-grid">
           <div>
@@ -980,7 +1073,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
           <div>
             <label for="fb-type">Type</label>
             <select id="fb-type" name="type">
-              <option value="jurisdiction-request">Request a jurisdiction</option>
+              <option value="jurisdiction-request">Request a regulator</option>
               <option value="citation-error">Report a citation error</option>
               <option value="coverage-feedback">Coverage feedback</option>
               <option value="other">Other</option>
@@ -989,11 +1082,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         </div>
         <div class="feedback-msg-wrap">
           <label for="fb-message">Details</label>
-          <textarea id="fb-message" name="message" placeholder="Which jurisdiction do you need? Or describe the error you found..." required></textarea>
+          <textarea id="fb-message" name="message" placeholder="Which regulator do you need? Or describe the error you found..." required></textarea>
         </div>
         <button type="submit" class="feedback-submit">Submit</button>
       </form>
-      <div class="feedback-success" id="feedback-success">Thanks! We've received your submission and will follow up.</div>
+      <div class="feedback-success" id="feedback-success">Thanks! We&rsquo;ve received your submission and will follow up.</div>
     </div>
   </div>
 </section>
@@ -1001,10 +1094,9 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
 <!-- Bottom Disclaimer -->
 <footer class="pb-bottom-disclaimer">
   <div class="pb-container">
-    <strong>Legal Disclaimer</strong>
-    <p>Playbook is the content and communications layer of your responsible gambling program. It provides messaging, templates, and educational content&nbsp;&mdash; not legal analysis, compliance certification, or platform features. Your legal and compliance team should review all content before deployment.</p>
-    <p style="margin-top:12px;">This page is for informational purposes only and does not constitute legal advice. Operators are solely responsible for verifying compliance with all applicable laws and licence conditions. Requirements change frequently&nbsp;&mdash; always verify against current regulatory guidance with qualified legal counsel.</p>
-    <p style="margin-top:16px;font-size:0.78rem;color:rgba(255,255,255,0.35);">&copy; Playbook. Built for operators, reviewed by experts.</p>
+    <strong>How Playbook fits</strong>
+    <p>Playbook is the content and communications layer of your responsible-gaming program. We ship messaging, templates, and player-education content &mdash; not legal analysis, compliance certification, or platform features. Your legal and compliance team should review every line before deployment.</p>
+    <p style="margin-top:16px;font-size:0.78rem;color:rgba(255,255,255,0.35);">&copy; Playbook. Open source &middot; MIT license &middot; <a href="https://github.com/kphilander/Playbook" style="color:rgba(255,255,255,0.55);" target="_blank" rel="noopener">github.com/kphilander/Playbook</a></p>
   </div>
 </footer>
 
@@ -1071,7 +1163,13 @@ var SOURCES = {
   'mga-rg-faq':        'https://www.mga.org.mt/faqs/remote-gaming-are-there-any-mandatory-responsible-gambling-tools-which-must-be-offered-to-players/',
   'mga-ads-faq':       'https://www.mga.org.mt/faqs/what-is-required-when-advertising/',
   'mga-selfbar':       'https://www.mga.org.mt/player-hub/self-barring/',
-  'mga-pp':            'https://www.mga.org.mt/licensee-hub/compliance/player-protection/'
+  'mga-pp':            'https://www.mga.org.mt/licensee-hub/compliance/player-protection/',
+  'az-ars-title5':     'https://www.azleg.gov/arsDetail/?title=5',
+  'az-r19-4':          'https://apps.azsos.gov/public_services/Title_19/19-04.pdf',
+  'az-vse':            'https://gaming.az.gov/resources/responsible-gaming/self-exclusion',
+  'az-helpline':       'https://problemgambling.az.gov/',
+  'az-rg':             'https://gaming.az.gov/resources/responsible-gaming',
+  'az-compacts':       'https://gaming.az.gov/tribal-gaming/tribal-state-compacts'
 };
 
 /* Verticals */
@@ -1084,11 +1182,12 @@ var VERTICALS = [
 /* Regulators that are land-based only */
 var LAND_BASED_ONLY = { ca: true, dicj: true, gra_sg: true };
 
-/* Regulators with no online/sports */
-var NO_ONLINE_SPORTS = {
-  ca: 'California does not currently permit online casino gaming or sports betting. Requirements shown are for tribal land-based casinos under individual compacts.',
-  dicj: 'Macau does not permit legal online gambling. Requirements shown are for land-based casinos only.',
-  gra_sg: 'Singapore largely prohibits online gambling. Requirements shown are for land-based casinos at the two integrated resorts only.'
+/* Regulators with vertical limitations — note shown when a blocked vertical is selected */
+var VERTICAL_LIMITATIONS = {
+  ca:     { blocked: ['online','sports'], note: 'California does not currently permit online casino gaming or sports betting. Requirements shown are for tribal land-based casinos under individual compacts.' },
+  dicj:   { blocked: ['online','sports'], note: 'Macau does not permit legal online gambling. Requirements shown are for land-based casinos only.' },
+  gra_sg: { blocked: ['online','sports'], note: 'Singapore largely prohibits online gambling. Requirements shown are for land-based casinos at the two integrated resorts only.' },
+  az:     { blocked: ['online'],          note: 'Arizona does not currently permit online casino gaming. Requirements shown are for sports betting (state-licensed via ADG) and land-based tribal casinos (under individual compacts).' }
 };
 
 /* ======================================================================
@@ -1100,7 +1199,7 @@ var THEMES = [
   id: 1,
   title: 'Game Information & Odds Disclosure',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','agco','dicj','gra_sg','spillem','pgcb','mga'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','agco','dicj','gra_sg','spillem','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2); Reg 5A.150', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Post problem gambling information including resources in gaming areas. Interactive gaming operators must prominently display operator identity, license number, responsible gambling links, and house rules before play begins.' },
@@ -1131,7 +1230,9 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.5; \u00A7 501a.7(d); \u00A7 814a.1', src:'pgcb-501a', verticals:['casino','online','sports'],
       text:'At least 20 signs with gambling assistance message within 50 feet of entrances/exits and at ATMs/cash dispensing machines (\u00A7 501a.5). All ads must include 1-800-GAMBLER with prescribed font sizing (\u00A7 501a.7(d)). iGaming platforms must display helpline on login/logout screens and link to Council on Compulsive Gambling of PA (\u00A7 814a.1).' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4(1)(e)', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'Operators must display a link to one or more gambling help organisations. Responsible Gaming Foundation (RGF) Supportline 1777 (8am-8pm daily, free and confidential). Additional support via Sedqa helpline 179. Remote operators must provide this within one click from anywhere on the website.' }
+      text:'Operators must display a link to one or more gambling help organisations. Responsible Gaming Foundation (RGF) Supportline 1777 (24/7, free and confidential). Additional support via Sedqa helpline 179. Remote operators must provide this within one click from anywhere on the website.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-115; Tribal-State Compacts', src:'az-r19-4', verticals:['casino','sports'],
+      text:'Event wagering operators must provide accessible information on rules of play, odds of winning, and how to wager before a player places a bet. Tribal-State Compacts require participating tribes to make game rules and odds information available to patrons on the gaming floor.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">11</span> <a href="https://github.com/kphilander/Playbook/tree/main/how-to-play" target="_blank" rel="noopener">game guides</a> with house edge / RTP data at grade 6-8 reading level</li><li><span class="asset-count">1</span> <a href="https://github.com/kphilander/Playbook/blob/main/how-to-play/odds-at-a-glance.md" target="_blank" rel="noopener">odds comparison table</a> covering 11 games with house edge ranges</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">HTP card templates</a> (print-ready HTML)</li><li><a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-odds.js" target="_blank" rel="noopener">Odds explorer widget</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1141,14 +1242,14 @@ var THEMES = [
     thumb('htp-card-sports.png','HTP Sports') +
     thumb('htp-odds-comparison.png','Odds Table') +
     '</div>',
-  gap: 'Game-specific RTP values if different from published ranges; any jurisdiction-mandated display format for odds.'
+  gap: 'Game-specific RTP values pulled from your platform (Playbook publishes ranges, not your slot-by-slot numbers); any jurisdiction-mandated display format for odds (e.g. fractional vs decimal, mandatory disclosure placement).'
 },
 /* ------- THEME 2: RG Messaging ------- */
 {
   id: 2,
   title: 'Responsible Gambling Messaging',
   badge: 'partial',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','spillem','aglc','agco','pgcb','mga'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','spillem','aglc','agco','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5.225(18)(b)', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Advertising must conform to standards of decency, dignity, good taste, honesty, and inoffensiveness. Wagering account operators must display a prescribed responsible gambling message with the NCPG helpline number.' },
@@ -1173,18 +1274,20 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.7(d); \u00A7 814a.1', src:'pgcb-501a', verticals:['casino','online','sports'],
       text:'All gaming advertisements must include a gambling assistance message with the DDAP helpline number (1-800-GAMBLER). Interactive gaming platforms must prominently display "IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, HELP IS AVAILABLE, CALL 1-800-GAMBLER" on login/logout screens.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3-4; Gaming Commercial Communications Regs (S.L. 583.09)', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'A responsible gaming message must be displayed explaining that gaming can be harmful if not controlled. Before a player\'s first deposit, operators must provide information about all available responsible gaming tools. All advertising must include the licensee name, licence number, minimum age, and responsible gaming information.' }
+      text:'A responsible gaming message must be displayed explaining that gaming can be harmful if not controlled. Before a player\'s first deposit, operators must provide information about all available responsible gaming tools. All advertising must include the licensee name, licence number, minimum age, and responsible gaming information.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-117', src:'az-r19-4', verticals:['sports'],
+      text:'Event wagering advertising and promotional materials must include a problem-gambling helpline number and a responsible-gaming message. Ads must not target minors, encourage irresponsible play, or imply guaranteed winning.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">74</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a> tagged by pillar, tier, tone, and audience</li><li><span class="asset-count">18</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/myth-busting.md" target="_blank" rel="noopener">myth-busting entries</a> in 3 formats each</li><li><span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a> organized by function</li><li>Messages are jurisdiction-agnostic; <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> supports mandatory text tokens but none are wired for the current target jurisdictions</li></ul>',
 
-  gap: 'Each jurisdiction may require specific verbatim statements. Playbook provides the messaging framework but mandatory verbatim text (specific to NV, NJ, MA, OH, CA, ON, AB, Macau, Singapore, UK, or Denmark) is NOT pre-configured. Messages are not tagged by jurisdiction. Operators must configure jurisdiction-specific mandatory text themselves via _brand.yml tokens.'
+  gap: 'Most regulators require verbatim statements &mdash; and every one is different. Playbook ships the messaging framework and the token system; you wire the exact verbatim text for your licence into <code>_brand.yml</code>. We don&rsquo;t ship pre-loaded jurisdiction text because mistakes there are licence risk, and your legal team writes that line, not us.'
 },
 /* ------- THEME 3: Helpline & Crisis Support ------- */
 {
   id: 3,
   title: 'Helpline & Crisis Support',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','gra_sg','spillem','aglc','dicj','agco','pgcb','mga'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','gra_sg','spillem','aglc','dicj','agco','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2)', src:'ngc-reg5', verticals:['casino','sports'],
       text:'Prominently post the toll-free NCPG helpline number in or near gaming areas, cage areas, and at cash dispensing machines in gaming areas.' },
@@ -1195,7 +1298,7 @@ var THEMES = [
     { reg:'mgc', label:'MGC (Massachusetts)', ref:'205 CMR 256.06(2); M.G.L. c. 23K', src:'mgc-ads', verticals:['casino','sports'],
       text:'Massachusetts Problem Gambling Helpline: 1-800-327-5050 (text GAMB to 800327). Required in all sports wagering ads with prescribed font sizing (205 CMR 256.06(4)). GameSense Info Centers at all three casinos.' },
     { reg:'mgcb', label:'MGCB (Michigan)', ref:'R 432.654; R 432.754; MGCB Notice 2024', src:'mgcb-helpline', verticals:['casino','online','sports'],
-      text:'1-800-GAMBLER adopted as Michigan\'s statewide helpline (February 2024). Calls routed to Michigan DHHS. All online platforms must display the helpline prominently. MDHHS also operates 1-800-270-7117. MGCB Responsible Gaming Section: 888-223-3044. DontRegretTheBet.org campaign site provides additional resources.' },
+      text:'1-800-GAMBLER adopted as Michigan\'s statewide helpline (February 2024). Calls routed to Michigan DHHS. All online platforms must display the helpline prominently. MDHHS also operates 1-800-270-7117 (treatment line). MGCB Responsible Gaming Section: 888-223-3044 (administrative / licensee contact &mdash; not a player-facing crisis helpline). DontRegretTheBet.org campaign site provides additional resources.' },
     { reg:'occc', label:'OCCC (Ohio)', ref:'OAC 3772-12-06 / OAC 3775-16-08', src:'occc-admin', verticals:['casino','sports'],
       text:'Problem gambling plan must include signage with responsible gambling information and helpline.' },
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.3.1', src:'ukgc-331', verticals:['casino','online','sports'],
@@ -1209,7 +1312,9 @@ var THEMES = [
     { reg:'dicj', label:'DICJ (Macau)', ref:'DICJ RG Standards', src:'dicj-rg', verticals:['casino'],
       text:'24-hour Gambling Counseling Hotline displayed on ATM screensavers at all casinos.' },
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.09 / 2.11', src:'agco-ig', verticals:['casino','online','sports'],
-      text:'ConnexOntario (1-866-531-2600) must be prominently displayed on registration pages. iGaming operators must provide 24/7 live customer support and contact information for Ontario harm-treatment organizations.' }
+      text:'ConnexOntario (1-866-531-2600) must be prominently displayed on registration pages. iGaming operators must provide 24/7 live customer support and contact information for Ontario harm-treatment organizations.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-117; A.R.S. § 5-1304', src:'az-helpline', verticals:['casino','sports'],
+      text:'1-800-NEXT-STEP (1-800-639-8783) is Arizona\'s problem-gambling helpline, administered by the Arizona Department of Gaming Division of Problem Gambling. Must be displayed in all event wagering advertising, on operator platforms, and on tribal-casino signage. 1-800-GAMBLER is also widely used.' }
   ],
   assets: '<ul class="asset-list"><li>Multi-jurisdiction helpline config in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> (US national, US-Nevada, UK, Australia, Canada provinces)</li><li>Working <a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-helpline.js" target="_blank" rel="noopener">&lt;playbook-helpline&gt;</a> web component</li><li>Sticky helpline strip on <a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a></li><li>Dedicated support section</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Helpline card template</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1218,14 +1323,14 @@ var THEMES = [
     thumb('support-page-10a.png','Support Page') +
     '</div>',
 
-  gap: 'No helpline data configured for Ohio, Macau, Singapore, Denmark, or Alberta yet. _brand.yml would need updating with those jurisdiction-specific helpline numbers.'
+  gap: 'Helpline configurations for Massachusetts, Michigan, Pennsylvania, Arizona, Ohio, Singapore, Malta, Macau, Denmark, and Alberta still need to be wired into <code>_brand.yml</code> alongside the existing Nevada, UK, and Ontario entries. The token system is ready; the values just need to land in config.'
 },
 /* ------- THEME 4: Self-Exclusion ------- */
 {
   id: 4,
   title: 'Self-Exclusion Program Communications',
   badge: 'partial',
-  regs: ['ukgc','ngc','njdge','ca','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','dicj','pgcb','mga'],
+  regs: ['ukgc','ngc','njdge','ca','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az'],
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.5.5 (GAMSTOP)', src:'ukgc-355', verticals:['online','sports'],
       text:'Must participate in GAMSTOP multi-operator remote self-exclusion scheme.' },
@@ -1245,8 +1350,8 @@ var THEMES = [
       text:'Self-exclusion, family exclusion orders, visit limit scheme. Criminal penalties for violations.' },
     { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'ROFUS', src:'spillem-rg', verticals:['casino','online','sports'],
       text:'National self-exclusion register. All licence holders MUST connect to ROFUS. Options: 24-hour break, 1/3/6 months, permanent.' },
-    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.14 / 2.14.1', src:'agco-cse', verticals:['casino','online','sports'],
-      text:'Voluntary self-exclusion with 6-month, 1-year, and 5-year options. Centralized Self-Exclusion (Std 2.14.1) launching 2026 covers all regulated iGaming sites through a single enrollment. Self-excluded persons removed from all marketing within 24 hours.' },
+    { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.14 / 2.14.1 (rev. April 2026)', src:'agco-cse', verticals:['casino','online','sports'],
+      text:'Voluntary self-exclusion with 6-month, 1-year, and 5-year options. Centralized Self-Exclusion (Std 2.14.1) launched in mid-2026 as BetGuard, covering all regulated iGaming sites through a single enrollment. Self-excluded persons removed from all marketing within 24 hours.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Self-Exclusion', src:'aglc-se', verticals:['casino','online'],
       text:'Exclusion from all Alberta casinos, RECs, and PlayAlberta. 6mo/1yr/2yr/3yr.' },
     { reg:'dicj', label:'DICJ (Macau)', ref:'Law 10/2012 (amended by Law 17/2018)', src:'dicj-rg', verticals:['casino'],
@@ -1254,7 +1359,9 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 503a; \u00A7 815a', src:'pgcb-503a', verticals:['casino','online','sports'],
       text:'Separate statewide self-exclusion programs for casino (\u00A7 503a) and interactive gaming (\u00A7 815a). Duration: 1 year, 5 years, or lifetime. Lifetime petitions for removal after 10 years with treatment documentation. Winnings forfeited to PGCB for compulsive gambling programs. Marketing cessation required. Sports wagering covered via \u00A7 1410a.1 cross-reference to casino and interactive programs.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 5; MGA Self-Barring', src:'mga-selfbar', verticals:['casino','online','sports'],
-      text:'Land-based: self-barring from all gambling premises for 6 months, 12 months, or 12 months with auto-renewal. Cannot be removed until timeframe expires. Remote: operators must offer self-exclusion for definite or indefinite period; requests implemented immediately with no inducement to continue. If excluded for gambling problems, must be excluded from all brands operated by the licensee.' }
+      text:'Land-based: self-barring from all gambling premises for 6 months, 12 months, or 12 months with auto-renewal. Cannot be removed until timeframe expires. Remote: operators must offer self-exclusion for definite or indefinite period; requests implemented immediately with no inducement to continue. If excluded for gambling problems, must be excluded from all brands operated by the licensee.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.R.S. § 5-1306; A.A.C. R19-4-119', src:'az-vse', verticals:['casino','sports'],
+      text:'ADG Voluntary Self-Exclusion program with 1-year, 5-year, and lifetime options. Covers all state-licensed event wagering operators; enrollment via online form or in-person at ADG. Tribal casinos maintain separate self-exclusion lists under individual compacts. Removal from the lifetime list requires petition to ADG.' }
   ],
   assets: '<ul class="asset-list"><li>Self-exclusion tokens in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a>: <code>{{SELF_EXCLUSION_URL}}</code>, <code>{{SELF_EXCLUSION_NAME}}</code></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Need a Break?" section</li><li>UI mockup for self-exclusion flow</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Cooldown screen template</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1262,14 +1369,14 @@ var THEMES = [
     thumb('cooldown-10e.png','Cooldown Screen') +
     '</div>',
 
-  gap: 'No program-specific content for different schemes (GAMSTOP, GameSense, ROFUS, NCPG family exclusion, etc.). Generic templates only, not jurisdiction-adaptive. Operators must integrate their specific self-exclusion scheme details.'
+  gap: 'We ship a generic self-exclusion communications template. We don&rsquo;t ship scheme-specific copy for GAMSTOP, GameSense, ROFUS, BetStop, ConnexOntario, BetGuard, or NCPG family-exclusion programs &mdash; those each have their own enrollment flows, durations, and brand voice constraints. Operators wire their scheme details into the template.'
 },
 /* ------- THEME 5: Limit-Setting & Player Controls ------- */
 {
   id: 5,
   title: 'Limit-Setting & Player Controls',
   badge: 'partial',
-  regs: ['ngc','ukgc','njdge','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','pgcb','mga'],
+  regs: ['ngc','ukgc','njdge','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(18)(a)', src:'ngc-reg5a', verticals:['online','sports'],
       text:'Interactive gaming accounts must offer loss limits, deposit limits, tournament limits, buy-in limits, play-time limits, and time-based exclusion. Wagering accounts must provide deposit limits.' },
@@ -1294,7 +1401,9 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 814a.2', src:'pgcb-814a', verticals:['online','sports'],
       text:'Interactive gaming operators must offer daily/weekly/monthly deposit limits, daily/weekly/monthly loss limits, single wager caps, session time limits (with hourly pop-ups showing time and money wagered), peer-to-peer table limits, and temporary account suspension (minimum 72 hours). Decreases effective immediately; increases require previous limit expiration and reaffirmation.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4(2)-(3)', src:'mga-rg-faq', verticals:['online','sports'],
-      text:'Remote operators must offer either deposit limits or wagering limits (both encouraged). Reality checks must be offered. Before first deposit or during registration, players must be given the opportunity to set limits. Operators are also encouraged to offer loss limits, session/time limits, and time-outs (24 hours to 30 days).' }
+      text:'Remote operators must offer either deposit limits or wagering limits (both encouraged). Reality checks must be offered. Before first deposit or during registration, players must be given the opportunity to set limits. Operators are also encouraged to offer loss limits, session/time limits, and time-outs (24 hours to 30 days).' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-110', src:'az-r19-4', verticals:['sports'],
+      text:'Event wagering operators must offer player-set deposit limits, wager limits, and time-based limits. Players can decrease limits immediately; increases or removals are subject to a cooling-off period before taking effect.' }
   ],
   assets: '<ul class="asset-list"><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Your Tools" section with limit-setting promotion</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Limit-reached notification mockup</a></li><li>Session summary mockup</li><li>Cooldown screen mockup</li><li>Tools pillar messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages library</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1302,14 +1411,14 @@ var THEMES = [
     thumb('session-summary-10c.png','Session Summary') +
     '</div>',
 
-  gap: 'These are UX specs and mockups, not functional widgets. Operator must build the actual limit-setting tools, session tracking, and deposit limit infrastructure.'
+  gap: 'We ship the UX &mdash; copy, screens, the moment a player hits their limit. The deposit-limit engine, session tracker, and account plumbing are platform features. Your engineering team owns the rails; we own how it reads when a player gets there.'
 },
 /* ------- THEME 6: Advertising Compliance ------- */
 {
   id: 6,
   title: 'Advertising Compliance',
   badge: 'partial',
-  regs: ['ngc','njdge','mgc','occc','mgcb','ukgc','gra_sg','spillem','agco','aglc','dicj','pgcb','mga'],
+  regs: ['ngc','njdge','mgc','occc','mgcb','ukgc','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5A.155', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Advertising must conform to prevailing community standards of decency, dignity, good taste, honesty, and inoffensiveness. Interactive gaming advertising must be truthful and non-deceptive with clear promotion terms.' },
@@ -1325,8 +1434,8 @@ var THEMES = [
       text:'Must comply with ASA/CAP advertising codes.' },
     { reg:'gra_sg', label:'GRA (Singapore)', ref:'Casino Control (Advertising) Regs 2010', src:'gra-sg-ads', verticals:['casino'],
       text:'All casino advertising must be GRA-approved.' },
-    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Marketing Guide', src:'spillem-guide', verticals:['casino','online','sports'],
-      text:'Under-25 ban in ads, age limit + ROFUS required in all marketing, proximity bans near schools, live sports ad ban.' },
+    { reg:'spillem', label:'Spillemyndigheden (Denmark)', ref:'Marketing Guide; 2025-26 advertising reform package', src:'spillem-guide', verticals:['casino','online','sports'],
+      text:'Currently in force: age limit + ROFUS info required in all marketing; targeting restrictions; cannot suggest gambling solves problems. Effective 1 January 2027: ban on under-25 individuals appearing in gambling advertising; 200m school-proximity ban; live-sports whistle-to-whistle ad ban (EC-notified Jan 2026).' },
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.03–2.07', src:'agco-ads', verticals:['casino','online','sports'],
       text:'No targeting minors, self-excluded, or high-risk persons. No athlete endorsements except for responsible gambling advocacy. Sport betting inducements prohibited in public advertising. Inducement disclosures must include all material conditions. Opt-in consent required for direct inducement marketing.' },
     { reg:'aglc', label:'AGLC (Alberta)', ref:'AGLC Standards', src:'aglc-rg', verticals:['casino','online','sports'],
@@ -1336,7 +1445,9 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.7; \u00A7 813a.2', src:'pgcb-501a', verticals:['casino','online','sports'],
       text:'All ads must include gambling assistance message with 1-800-GAMBLER and DDAP helpline. Font size minimums: 2% print, 5% billboard, 2-8% video/TV. No false information; conditions and limitations must be clearly disclosed. iGaming ads must be co-branded (certificate holder and operator equally). OCPG can order immediate discontinuation of harmful ads. No employing individuals to persuade patrons on the gaming floor.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Gaming Commercial Communications Regs (S.L. 583.09); CCC Guidelines', src:'mga-ccc', verticals:['casino','online','sports'],
-      text:'Ads must display licensee name, licence number, minimum age, and responsible gaming information. Broad prohibition on gambling ads in public places (except tourist locations, airports, hotels). No targeting minors or vulnerable persons. No suggesting gambling solves financial or social problems. Broadcast restrictions: no gambling ads during or adjacent to children\'s programmes. Penalties up to EUR 25,000 per breach.' }
+      text:'Ads must display licensee name, licence number, minimum age, and responsible gaming information. Broad prohibition on gambling ads in public places (except tourist locations, airports, hotels). No targeting minors or vulnerable persons. No suggesting gambling solves financial or social problems. Broadcast restrictions: no gambling ads during or adjacent to children\'s programmes. Penalties up to EUR 25,000 per breach.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-117', src:'az-r19-4', verticals:['sports'],
+      text:'Event wagering advertising must include the problem-gambling helpline, may not target minors or persons on the voluntary self-exclusion list, may not imply guaranteed winnings, and may not appear at venues primarily attended by persons under 21. Operators must retain advertising records for ADG review.' }
   ],
   assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/07-application-guidelines.md" target="_blank" rel="noopener">Application guidelines</a></strong> with channel-specific rules for digital, print, broadcast, environmental</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Stigma-free language guide</a> with 35 term pairs</li><li><span class="asset-count">74</span> pre-vetted <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a>, <span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a>, <span class="asset-count">7</span> campaign briefs</li><li>Legal disclaimers configured in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a></li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Email templates</a> and social cards</li></ul>' +
     '<div class="thumb-grid">' +
@@ -1345,14 +1456,14 @@ var THEMES = [
     thumb('email-monthly-7c.png','Monthly Email') +
     '</div>',
 
-  gap: 'Playbook has detailed advertising rules for Nevada only among the target jurisdictions. No UK, Denmark, Ontario, Massachusetts, Ohio, Singapore, Macau, or Alberta advertising modules. Operators must build jurisdiction-specific advertising compliance for their markets.'
+  gap: 'Detailed advertising modules ship for Nevada and the UK only today. Per-jurisdiction advertising rule packs for Denmark, Ontario, Massachusetts, Ohio, Singapore, Macau, Malta, Arizona, Pennsylvania, and Alberta are on the roadmap. The brand book&rsquo;s application guidelines and stigma-free language guide cover the universal principles; jurisdiction-specific font sizing, helpline placement, and disclosure rules need to be built per market.'
 },
 /* ------- THEME 7: Age Restriction ------- */
 {
   id: 7,
   title: 'Age Restriction Display',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','gra_sg','dicj','ukgc','spillem','agco','aglc','pgcb','mga'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','gra_sg','dicj','ukgc','spillem','agco','aglc','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'NRS 463.350; Reg 5A.110(2)(b)', src:'ngc-nrs463', verticals:['casino','online','sports'],
       text:'21+ minimum gambling age for all products. Interactive gaming registration requires date of birth confirming player is 21 or older.' },
@@ -1381,7 +1492,9 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'4 Pa.C.S. \u00A7 1207; 58 Pa. Code \u00A7 513a', src:'pgcb-501a', verticals:['casino','online','sports'],
       text:'21+ minimum gambling age for all products including casino, interactive gaming, and sports wagering. Underage gaming provisions under Chapter 513a; facilities must prevent minors from accessing gaming floors and interactive platforms.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Gaming Act (Cap. 583), Art. 7; Player Protection Directive', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'18+ for online and non-casino land-based gambling. Land-based casinos: 18+ for non-Maltese citizens, 25+ for Maltese citizens. Underage gaming sign must be displayed on all remote gaming sites. All advertising must include minimum age to participate.' }
+      text:'18+ for online and non-casino land-based gambling. Land-based casinos: 18+ for non-Maltese citizens, 25+ for Maltese citizens. Underage gaming sign must be displayed on all remote gaming sites. All advertising must include minimum age to participate.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.R.S. § 5-1303(7); Tribal-State Compacts', src:'az-ars-title5', verticals:['casino','sports'],
+      text:'21+ minimum age for event wagering (retail and mobile). Tribal-State Compacts set the age for tribal casinos &mdash; typically 21 where alcohol is served, 18 at some tribal venues. Mobile event wagering apps must verify identity and age through ADG-approved verification systems.' }
   ],
   assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> <code>legal.min_age</code></strong> configurable per jurisdiction (18, 19, or 21)</li><li><code>{{MIN_AGE}}</code> token used throughout all templates and <a href="https://github.com/kphilander/Playbook/tree/main/collateral" target="_blank" rel="noopener">collateral</a></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> footer displays age automatically from config</li><li>All collateral templates include age messaging where applicable</li></ul>',
 
@@ -1392,7 +1505,7 @@ var THEMES = [
   id: 8,
   title: 'Venue & Environmental Signage',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','dicj','gra_sg','aglc','ukgc','agco','pgcb','mga'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','dicj','gra_sg','aglc','ukgc','agco','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2)', src:'ngc-reg5', verticals:['casino','sports'],
       text:'Post written materials on the nature and symptoms of problem gambling and the NCPG helpline in conspicuous places in or near gaming areas, cage areas, and at cash dispensing machines.' },
@@ -1419,7 +1532,9 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.5', src:'pgcb-501a', verticals:['casino'],
       text:'At least 20 signs with OCPG-approved gambling assistance message required. Signs must be posted within 50 feet of each entrance and exit, and above or below cash dispensing openings on ATMs, voucher/coupon redemption machines, and other cash-dispensing equipment.' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 4; Gaming Act (Cap. 583)', src:'mga-pp', verticals:['casino'],
-      text:'Land-based casinos must display responsible gaming information and self-barring details. Age restriction signage required at all casino entrances (25+ for Maltese citizens, 18+ for non-Maltese). Responsible Gaming Foundation materials and helpline 1777 must be accessible to patrons.' }
+      text:'Land-based casinos must display responsible gaming information and self-barring details. Age restriction signage required at all casino entrances (25+ for Maltese citizens, 18+ for non-Maltese). Responsible Gaming Foundation materials and helpline 1777 must be accessible to patrons.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4; Tribal-State Compacts', src:'az-rg', verticals:['casino','sports'],
+      text:'Tribal-State Compacts typically require responsible-gaming signage at casino entrances, on the gaming floor, and at ATMs. Retail sportsbooks (state-licensed) must display the problem-gambling helpline and age-restriction notices in the wagering area.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">5</span> <a href="https://github.com/kphilander/Playbook/tree/main/collateral/environmental" target="_blank" rel="noopener">venue sign templates</a> (entrance, ATM, floor, restroom, staff area)</li><li><span class="asset-count">5</span> poster templates</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Print collateral</a>: rack card, table tent, helpline card, tri-fold brochure</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/digital" target="_blank" rel="noopener">Digital displays</a>: landscape and portrait formats</li><li>All <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">rendered as HTML + PNG</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1447,7 +1562,7 @@ var THEMES = [
   id: 9,
   title: 'Staff Training & Customer Interaction',
   badge: 'partial',
-  regs: ['ukgc','ngc','njdge','mgc','occc','mgcb','gra_sg','aglc','agco','pgcb','mga'],
+  regs: ['ukgc','ngc','njdge','mgc','occc','mgcb','gra_sg','aglc','agco','pgcb','mga','az'],
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.4.1 (premises) / 3.4.3 (remote)', src:'ukgc-341', verticals:['casino','online','sports'],
       text:'Customer interaction requirements for identifying at-risk players. Separate codes for premises-based and remote gambling.' },
@@ -1470,21 +1585,23 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 501a.3; \u00A7 814a.4', src:'pgcb-501a', verticals:['casino','online','sports'],
       text:'Mandatory employee training on compulsive gambling symptoms, intervention techniques, self-exclusion materials, preventing marketing to excluded persons, and alcohol/gaming protocols (\u00A7 501a.3). Training by qualified specialist at orientation with annual reinforcement; documented in personnel files. iGaming operators must train staff to identify and report excluded persons (\u00A7 814a.4).' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3(2)', src:'mga-ppd', verticals:['casino','online','sports'],
-      text:'Employees dealing with responsible gaming matters or player interactions must be routinely trained in responsible gaming procedures. Staff must be qualified to identify signs of gambling-related harm. Operators must retain records of all player interactions and investigations conducted.' }
+      text:'Employees dealing with responsible gaming matters or player interactions must be routinely trained in responsible gaming procedures. Staff must be qualified to identify signs of gambling-related harm. Operators must retain records of all player interactions and investigations conducted.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-115', src:'az-r19-4', verticals:['sports'],
+      text:'Event wagering operators must train employees who interact with players to identify signs of problem gambling and refer players to the helpline. Training must be completed at hire and refreshed periodically. Tribal casinos run their own training programs under compact obligations.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">8</span> <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/conversation-scripts.md" target="_blank" rel="noopener">conversation scripts</a> (helpline referral, self-exclusion enrollment, deposit limit setting, distressed player interaction)</li><li><span class="asset-count">30</span>-question <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/staff-faq.md" target="_blank" rel="noopener">staff FAQ</a></li><li>At-risk player segment profile with messaging guidance</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Tier 2 messaging guidelines</a> for support contexts</li></ul>' +
     '<div class="thumb-grid">' +
     thumb('support-page-10a.png','Support Page') +
     '</div>',
 
-  gap: 'These are reference materials, NOT a training program. No e-learning, no curriculum, no certification. Operator must build actual training infrastructure.'
+  gap: 'Reference materials, not a training program. No LMS, no curriculum, no certification &mdash; that&rsquo;s a separate vendor or in-house build. What we give you: scripts, an FAQ your floor staff can actually use, and the Tier 2 voice guidance for support conversations.'
 },
 /* ------- THEME 10: Activity Statements & Transparency ------- */
 {
   id: 10,
   title: 'Activity Statements & Transparency',
   badge: 'light',
-  regs: ['ngc','ukgc','mgc','mgcb','spillem','agco','pgcb','mga'],
+  regs: ['ngc','ukgc','mgc','mgcb','spillem','agco','pgcb','mga','az'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(17-18)', src:'ngc-reg5a', verticals:['online','sports'],
       text:'Interactive gaming operators must maintain complete game history for every game played. Wagering account licensees must record and maintain all deposits, withdrawals, credits, and debits for 5 years.' },
@@ -1501,7 +1618,9 @@ var THEMES = [
     { reg:'pgcb', label:'PGCB (Pennsylvania)', ref:'58 Pa. Code \u00A7 814a.1; \u00A7 813a.5', src:'pgcb-814a', verticals:['online','sports'],
       text:'Interactive gaming systems must display current local time, elapsed session duration, and hourly pop-up notifications showing time spent and money wagered (\u00A7 814a.1). Previous login date/time displayed upon account access. Operators must maintain electronic records of all bonuses and promotional offers with detailed logs (\u00A7 813a.5).' },
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 3; Gaming Authorisations Directive (Directive 3 of 2018)', src:'mga-ppd', verticals:['online','sports'],
-      text:'B2C licensees must document compliance with responsible gaming policies and retain evidence of investigations and player interactions. Operators must monitor player gambling habits and maintain records for MGA review. Reality checks must be offered to help players track session duration.' }
+      text:'B2C licensees must document compliance with responsible gaming policies and retain evidence of investigations and player interactions. Operators must monitor player gambling habits and maintain records for MGA review. Reality checks must be offered to help players track session duration.' },
+    { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4; A.R.S. § 5-1304', src:'az-r19-4', verticals:['sports'],
+      text:'Event wagering operators must maintain account records (deposits, withdrawals, wagers, settled wagers) and make activity history available to players on request. Records must be retained for at least 5 years.' }
   ],
   assets: '<ul class="asset-list"><li>Static <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">session summary mockup</a></li><li>Dashboard messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">"Open" pillar</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1519,8 +1638,8 @@ var JURISDICTIONS = {
   ngc: {
     name: 'Nevada Gaming Control Board / Nevada Gaming Commission',
     jurisdiction: 'Nevada, United States',
-    legislation: 'NRS Chapter 463 (Nevada Gaming Control Act); NGC Regulation 5 (Rev. 12/24); NGC Regulation 5A (Rev. 05/24)',
-    unique: 'Two-tier regulatory model (NGCB investigates, NGC decides). Property-by-property self-exclusion — no centralized statewide program. Reg 5.170 mandates posting near ATMs and at the cage. Reg 5A governs interactive gaming (online poker, mobile sports betting). Reg 5.225(18)(b) prescribes a verbatim responsible gambling message for wagering accounts. 21+ minimum age for all products. Online casino not legal; lottery constitutionally prohibited.',
+    legislation: 'NRS Chapter 463 (Nevada Gaming Control Act); NGC Regulation 5 (Rev. 03/26); NGC Regulation 5A (Rev. 02/26)',
+    unique: 'Two-tier regulatory model (NGCB investigates, NGC decides). Property-by-property self-exclusion &mdash; no centralized statewide program. Reg 5.170 mandates posting near ATMs and at the cage. Reg 5A governs interactive gaming (online poker, mobile sports betting). Reg 5.225(18)(b) prescribes a verbatim responsible gambling message for wagering accounts. 21+ minimum age for all products. Online casino not legal; lottery constitutionally prohibited.',
     verticals: 'Land-based Casino, Sports Betting',
     source: 'https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5Operation.pdf'
   },
@@ -1559,8 +1678,8 @@ var JURISDICTIONS = {
   agco: {
     name: 'AGCO (Ontario)',
     jurisdiction: 'Ontario, Canada',
-    legislation: 'Gaming Control Act, 1992; Registrar\'s Standards for Internet Gaming; Registrar\'s Standards for Gaming and Lottery',
-    unique: 'Open competitive iGaming market (April 2022) with 70+ registered operators. Mandatory deposit/loss limits and real-time behavioural monitoring for all iGaming operators. Public advertising of sport betting inducements prohibited. Centralized Self-Exclusion program launching 2026. No mandatory verbatim statement, but ConnexOntario must be prominently displayed.',
+    legislation: 'Gaming Control Act, 1992; Registrar\'s Standards for Internet Gaming (rev. April 2026); Registrar\'s Standards for Gaming and Lottery',
+    unique: 'Open competitive iGaming market (live April 2022). Currently around 48 registered operators running 80+ gaming websites. Mandatory deposit/loss limits and real-time behavioural monitoring for all iGaming operators. Public advertising of sport betting inducements prohibited. Centralized Self-Exclusion (Std 2.14.1) launched mid-2026 as BetGuard. No mandatory verbatim statement, but ConnexOntario (1-866-531-2600) must be prominently displayed.',
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     source: 'https://www.agco.ca/en/lottery-and-gaming/guides/registrars-standards-internet-gaming'
   },
@@ -1583,8 +1702,8 @@ var JURISDICTIONS = {
   gra_sg: {
     name: 'GRA (Singapore)',
     jurisdiction: 'Singapore',
-    legislation: 'Casino Control Act 2006; Gambling Control Act 2022',
-    unique: 'Land-based casino only (2 integrated resorts) -- online gambling largely prohibited. 21+ minimum age. Self-exclusion, family exclusion orders, and visit limit scheme with criminal penalties for violations. All casino advertising must be GRA-approved. Compulsory staff training. National helpline: 1800-6-668-668.',
+    legislation: 'Gambling Regulatory Authority of Singapore Act 2022 (GRASA); Casino Control Act 2006; Gambling Control Act 2022',
+    unique: 'Land-based casino only (2 integrated resorts) &mdash; online gambling largely prohibited. 21+ minimum age. Casino entry levy for Singapore Citizens and Permanent Residents: S$150 per 24-hour visit or S$3,000 annual (Casino Control (Entry Levy) Regulations). Self-exclusion, family exclusion orders, and visit-limit scheme with criminal penalties for violations. All casino advertising must be GRA-approved. Compulsory staff training. National helpline: 1800-6-668-668.',
     verticals: 'Land-based Casino only',
     source: 'https://sso.agc.gov.sg/Act/CCA2006'
   },
@@ -1592,25 +1711,49 @@ var JURISDICTIONS = {
     name: 'UKGC (Gambling Commission)',
     jurisdiction: 'United Kingdom',
     legislation: 'Gambling Act 2005; Licence Conditions and Codes of Practice (LCCP)',
-    unique: 'GAMSTOP national self-exclusion scheme; LCCP social responsibility codes are licence conditions (breach = enforcement action); Strong focus on customer interaction (SR Code 3.4.3); Must offer financial limits; Must comply with ASA/CAP advertising codes; 18+ minimum age.',
+    unique: 'GAMSTOP national self-exclusion scheme; LCCP social responsibility codes are licence conditions (breach = enforcement action); Strong focus on customer interaction (SR Code 3.4.3); Financial vulnerability check under SR Code 3.4.4 (effective Aug 2024); Statutory levy on operators (effective April 2025, replacing voluntary 3.1.1 RET contributions); Online slot stake limits (&pound;5 for 25+, &pound;2 for 18-24, in force May 2025); Must offer financial limits; Must comply with ASA/CAP advertising codes; 18+ minimum age.',
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
-    source: 'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/7-1-1-fair-and-transparent-terms-and-practices'
+    source: 'https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp'
   },
   mgcb: {
     name: 'Michigan Gaming Control Board (MGCB)',
     jurisdiction: 'Michigan, United States',
     legislation: 'Michigan Gaming Control and Revenue Act (Initiated Law 1 of 1996, amended by PA 69 of 1997); Lawful Internet Gaming Act (PA 152 of 2019); Lawful Sports Betting Act (PA 149 of 2019); Compulsive Gaming Prevention Act (PA 70 of 1997); Admin Rules R 432.601-676 (Internet Gaming), R 432.711-776 (Internet Sports Betting)',
-    unique: 'All three verticals: 3 Detroit commercial casinos (MGM Grand Detroit, MotorCity Casino, Hollywood Casino at Greektown), tribal casinos (12 compacts), legal iGaming (January 2021), and legal sports betting. Two separate self-exclusion programs: Disassociated Persons List (DPL, lifetime with 5-year removal option) for Detroit casinos and Responsible Gaming Database (RGD, 1-year or 5-year) for online platforms. 1-800-GAMBLER adopted as statewide helpline (February 2024). Compulsive Gaming Prevention Fund receives $2M annually. "Don\'t Regret the Bet" Emmy Award-winning responsible gaming campaign. 21+ minimum age for all gambling.',
+    unique: 'All three verticals: 3 Detroit commercial casinos (MGM Grand Detroit, MotorCity Casino, Hollywood Casino Greektown), tribal casinos (12 compacts), legal iGaming (January 2021), and legal sports betting. Two separate self-exclusion programs: Disassociated Persons List (DPL, lifetime with 5-year removal option) for Detroit casinos and Responsible Gaming Database (RGD, 1-year or 5-year) for online platforms. 1-800-GAMBLER adopted as statewide helpline (February 2024). Compulsive Gaming Prevention Fund receives $2M annually. "Don\'t Regret the Bet" Emmy Award-winning responsible gaming campaign. 21+ minimum age for all gambling.',
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     source: 'https://www.michigan.gov/mgcb/resources/responsible-gaming'
   },
   spillem: {
     name: 'Spillemyndigheden (Denmark)',
     jurisdiction: 'Denmark',
-    legislation: 'Spilleloven; Executive Orders 1274/1276',
-    unique: 'ROFUS national self-exclusion register (all licence holders must connect); Players MUST set deposit limit before beginning play; Under-25 ban in advertising; Age limit + ROFUS info required in all marketing; Proximity bans near schools; Live sports ad ban; StopSpillet helpline required; 18+ minimum age.',
+    legislation: 'Spilleloven; Executive Orders 1274/1276; 2025-26 advertising reform package (EC-notified Jan 2026, effective 1 Jan 2027)',
+    unique: 'ROFUS national self-exclusion register (all licence holders must connect); Players MUST set deposit limit before beginning play; Age limit + ROFUS info required in all marketing; StopSpillet helpline required; 18+ minimum age. Effective 1 January 2027: ban on under-25 individuals appearing in gambling advertising; 200m school-proximity ban; live-sports whistle-to-whistle ad ban.',
     verticals: 'Land-based Casino, Online Casino, Sports Betting',
     source: 'https://www.spillemyndigheden.dk/en/responsible-gambling'
+  },
+  pgcb: {
+    name: 'Pennsylvania Gaming Control Board (PGCB)',
+    jurisdiction: 'Pennsylvania, United States',
+    legislation: '4 Pa.C.S. (Race Horse Development and Gaming Act; Interactive Gaming; Sports Wagering); 58 Pa. Code Chapters 501a, 503a, 813a, 814a, 815a, 1410a',
+    unique: 'Largest US online gambling revenue state. Two statewide self-exclusion programs &mdash; casino (&sect; 503a) and interactive gaming (&sect; 815a) &mdash; with 1-year, 5-year, and lifetime options; lifetime removal available by petition after 10 years. Prescriptive advertising rules with font-size minimums (&sect; 501a.7) and DDAP 1-800-GAMBLER mandatory verbatim. At least 20 signs within 50 ft of entrances/exits and at ATMs (&sect; 501a.5). iGaming platforms must surface hourly pop-ups showing time and money wagered (&sect; 814a.1). 21+ minimum age.',
+    verticals: 'Land-based Casino, Online Casino, Online Poker, Sports Betting',
+    source: 'https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter501a/chap501atoc.html'
+  },
+  mga: {
+    name: 'Malta Gaming Authority (MGA)',
+    jurisdiction: 'Malta',
+    legislation: 'Gaming Act (Cap. 583); Player Protection Directive (Directive 2 of 2018); Gaming Authorisations Directive (Directive 3 of 2018); Gaming Commercial Communications Regs (S.L. 583.09)',
+    unique: 'De facto EU online-gaming licensing hub. Risk-based, outcome-focused supervision. Responsible gaming page must be accessible within one click from anywhere on the site. Self-barring: 6 or 12 months, or 12 months auto-renewing &mdash; cannot be removed until period expires. Land-based casino age split: 18+ non-Maltese, 25+ Maltese citizens. Helpline 1777 (RGF Supportline, 24/7) + Sedqa 179. Advertising must include licensee name, licence number, minimum age, and RG message; penalties up to EUR 25,000 per breach.',
+    verticals: 'Land-based Casino, Online Casino, Sports Betting',
+    source: 'https://www.mga.org.mt/licensee-hub/compliance/player-protection/'
+  },
+  az: {
+    name: 'Arizona Department of Gaming (ADG)',
+    jurisdiction: 'Arizona, United States',
+    legislation: 'A.R.S. Title 5 Chapter 12 (Event Wagering Act); A.A.C. R19-4 (Event Wagering Rules); A.R.S. &sect; 5-601 (Tribal-State Gaming Compacts); A.R.S. &sect; 5-1306 (Voluntary Self-Exclusion)',
+    unique: 'Event wagering (retail and mobile) live since 9 September 2021 &mdash; among the first US states to launch both channels concurrently. Two-track regulator: state-licensed event wagering operators alongside tribal casinos governed by individual compacts. No legal online casino. 21+ for event wagering. ADG Voluntary Self-Exclusion: 1 / 5 / lifetime. Helpline: 1-800-NEXT-STEP (1-800-639-8783), administered by ADG\'s Division of Problem Gambling.',
+    verticals: 'Land-based Casino (tribal), Sports Betting',
+    source: 'https://gaming.az.gov/'
   }
 };
 
@@ -1634,20 +1777,37 @@ var selectedRegs = new Set();
 var selectedVerts = new Set();
 
 /* ======================================================================
+   ACCESSIBILITY: Make custom selectors keyboard-operable
+   ====================================================================== */
+function activateOnKey(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault();
+    this.click();
+  }
+}
+
+/* ======================================================================
    REGULATOR SELECTOR
    ====================================================================== */
 document.querySelectorAll('.reg-card').forEach(function(card) {
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+  card.setAttribute('aria-pressed', 'false');
+  card.addEventListener('keydown', activateOnKey);
   card.addEventListener('click', function() {
     var reg = this.dataset.reg;
     if (selectedRegs.has(reg)) {
       selectedRegs.delete(reg);
       this.classList.remove('selected');
+      this.setAttribute('aria-pressed', 'false');
     } else {
       selectedRegs.add(reg);
       this.classList.add('selected');
+      this.setAttribute('aria-pressed', 'true');
     }
     updateFab();
     updateJurisNotices();
+    persistStateToUrl();
   });
 });
 
@@ -1655,37 +1815,49 @@ document.querySelectorAll('.reg-card').forEach(function(card) {
    VERTICAL SELECTOR
    ====================================================================== */
 document.querySelectorAll('.vert-chip:not(.coming-soon)').forEach(function(chip) {
+  chip.setAttribute('role', 'button');
+  chip.setAttribute('tabindex', '0');
+  chip.setAttribute('aria-pressed', 'false');
+  chip.addEventListener('keydown', activateOnKey);
   chip.addEventListener('click', function() {
     var vert = this.dataset.vert;
     if (selectedVerts.has(vert)) {
       selectedVerts.delete(vert);
       this.classList.remove('selected');
+      this.setAttribute('aria-pressed', 'false');
     } else {
       selectedVerts.add(vert);
       this.classList.add('selected');
+      this.setAttribute('aria-pressed', 'true');
     }
     updateFab();
     updateJurisNotices();
+    persistStateToUrl();
   });
 });
 
 /* ======================================================================
-   JURISDICTION NOTICES (California, Macau, Singapore)
+   JURISDICTION NOTICES (vertical limitations)
    ====================================================================== */
 function updateJurisNotices() {
   var container = document.getElementById('juris-notices');
   container.innerHTML = '';
-  var hasOnlineOrSports = selectedVerts.size === 0 || selectedVerts.has('online') || selectedVerts.has('sports');
-  if (!hasOnlineOrSports) return;
 
-  Object.keys(NO_ONLINE_SPORTS).forEach(function(regId) {
-    if (selectedRegs.has(regId) && hasOnlineOrSports) {
-      var note = document.createElement('div');
-      note.className = 'juris-notice';
-      var regName = JURISDICTIONS[regId] ? JURISDICTIONS[regId].name : regId;
-      note.innerHTML = '<strong>' + regName + '</strong><br>' + NO_ONLINE_SPORTS[regId];
-      container.appendChild(note);
-    }
+  Object.keys(VERTICAL_LIMITATIONS).forEach(function(regId) {
+    if (!selectedRegs.has(regId)) return;
+    var lim = VERTICAL_LIMITATIONS[regId];
+    // Show note if: no verts selected (all shown), OR any selected vert is blocked for this regulator
+    var shouldShow = selectedVerts.size === 0 ||
+      lim.blocked.some(function(v) { return selectedVerts.has(v); });
+    if (!shouldShow) return;
+
+    var note = document.createElement('div');
+    note.className = 'juris-notice';
+    note.setAttribute('role', 'status');
+    note.setAttribute('aria-live', 'polite');
+    var regName = JURISDICTIONS[regId] ? JURISDICTIONS[regId].name : regId;
+    note.innerHTML = '<strong>' + regName + '</strong><br>' + lim.note;
+    container.appendChild(note);
   });
 }
 
@@ -1695,12 +1867,18 @@ function updateJurisNotices() {
 function updateFab() {
   var fab = document.getElementById('fab');
   var count = document.getElementById('fab-count');
+  var citCount = document.getElementById('fab-cit-count');
   if (selectedRegs.size > 0) {
     fab.classList.add('visible');
-    var matchCount = THEMES.filter(function(t) {
-      return themeMatchesFilters(t);
-    }).length;
-    count.textContent = matchCount;
+    var matchedThemes = THEMES.filter(function(t) { return themeMatchesFilters(t); });
+    count.textContent = matchedThemes.length;
+    var totalCitations = 0;
+    matchedThemes.forEach(function(t) {
+      totalCitations += t.citations.filter(function(c) {
+        return selectedRegs.has(c.reg) && citationMatchesVerticals(c);
+      }).length;
+    });
+    if (citCount) citCount.textContent = totalCitations;
   } else {
     fab.classList.remove('visible');
   }
@@ -1733,17 +1911,22 @@ window.clearSelection = function() {
   selectedVerts.clear();
   document.querySelectorAll('.reg-card.selected').forEach(function(c) {
     c.classList.remove('selected');
+    c.setAttribute('aria-pressed', 'false');
   });
   document.querySelectorAll('.vert-chip.selected').forEach(function(c) {
     c.classList.remove('selected');
+    c.setAttribute('aria-pressed', 'false');
   });
   updateFab();
   document.getElementById('juris-notices').innerHTML = '';
   document.getElementById('requirements-matrix').classList.remove('visible');
   document.getElementById('requirements-matrix').innerHTML = '';
   document.getElementById('requirements-placeholder').style.display = '';
+  var legend = document.getElementById('badge-legend');
+  if (legend) legend.style.display = 'none';
   document.getElementById('step-3').style.display = 'none';
   document.getElementById('step-4').style.display = 'none';
+  persistStateToUrl();
 };
 
 /* ======================================================================
@@ -1757,6 +1940,8 @@ window.showRequirements = function() {
   placeholder.style.display = 'none';
   container.innerHTML = '';
   container.classList.add('visible');
+  var legend = document.getElementById('badge-legend');
+  if (legend) legend.style.display = 'flex';
 
   var matchedThemes = THEMES.filter(function(t) {
     return themeMatchesFilters(t);
@@ -1769,13 +1954,19 @@ window.showRequirements = function() {
     /* Header */
     var header = document.createElement('div');
     header.className = 'theme-header';
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+    header.setAttribute('aria-expanded', 'false');
+    var badgeGlyph = theme.badge === 'strong' ? '\u25CF' : (theme.badge === 'partial' ? '\u25D0' : '\u25CB');
     header.innerHTML =
       '<div class="theme-num">' + theme.id + '</div>' +
       '<div class="theme-title">' + theme.title + '</div>' +
-      '<span class="theme-badge ' + theme.badge + '">' + theme.badge + '</span>' +
-      '<span class="theme-chevron">\u25BC</span>';
+      '<span class="theme-badge ' + theme.badge + '" aria-label="' + theme.badge + ' coverage"><span class="badge-glyph">' + badgeGlyph + '</span>' + theme.badge + '</span>' +
+      '<span class="theme-chevron" aria-hidden="true">\u25BC</span>';
+    header.addEventListener('keydown', activateOnKey);
     header.addEventListener('click', function() {
       card.classList.toggle('expanded');
+      header.setAttribute('aria-expanded', card.classList.contains('expanded') ? 'true' : 'false');
     });
     card.appendChild(header);
 
@@ -1871,11 +2062,16 @@ function buildJurisdictionCards() {
 
     var header = document.createElement('div');
     header.className = 'juris-header';
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
+    header.setAttribute('aria-expanded', 'false');
     header.innerHTML =
       '<span class="juris-name">' + j.name + '</span>' +
-      '<span class="juris-chevron">\u25BC</span>';
+      '<span class="juris-chevron" aria-hidden="true">\u25BC</span>';
+    header.addEventListener('keydown', activateOnKey);
     header.addEventListener('click', function() {
       card.classList.toggle('expanded');
+      header.setAttribute('aria-expanded', card.classList.contains('expanded') ? 'true' : 'false');
     });
     card.appendChild(header);
 
@@ -1921,15 +2117,23 @@ function initScrollReveal() {
 initScrollReveal();
 
 /* ======================================================================
-   COLLAPSIBLE REGION TOGGLE (all regions)
+   COLLAPSIBLE REGION TOGGLE (all regions, keyboard-accessible)
    ====================================================================== */
 document.querySelectorAll('.reg-region-header').forEach(function(header) {
   var grid = header.nextElementSibling;
   if (!grid) return;
   header.removeAttribute('onclick');
+  header.setAttribute('role', 'button');
+  header.setAttribute('tabindex', '0');
+  header.setAttribute('aria-expanded', header.classList.contains('collapsed') ? 'false' : 'true');
+  grid.setAttribute('aria-hidden', header.classList.contains('collapsed') ? 'true' : 'false');
+  header.addEventListener('keydown', activateOnKey);
   header.addEventListener('click', function() {
     this.classList.toggle('collapsed');
-    if (this.classList.contains('collapsed')) {
+    var isCollapsed = this.classList.contains('collapsed');
+    this.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
+    grid.setAttribute('aria-hidden', isCollapsed ? 'true' : 'false');
+    if (isCollapsed) {
       grid.style.maxHeight = '0';
       grid.style.opacity = '0';
     } else {
@@ -1938,6 +2142,51 @@ document.querySelectorAll('.reg-region-header').forEach(function(header) {
     }
   });
 });
+
+/* ======================================================================
+   URL STATE: hydrate from URL on load; persist on every change
+   ====================================================================== */
+function persistStateToUrl() {
+  var params = new URLSearchParams();
+  if (selectedRegs.size > 0) params.set('regs', Array.from(selectedRegs).join(','));
+  if (selectedVerts.size > 0) params.set('verts', Array.from(selectedVerts).join(','));
+  var qs = params.toString();
+  var newUrl = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+  try { history.replaceState(null, '', newUrl); } catch (e) { /* ignore */ }
+}
+
+function hydrateStateFromUrl() {
+  var params = new URLSearchParams(window.location.search);
+  var regs = params.get('regs');
+  var verts = params.get('verts');
+  if (regs) {
+    regs.split(',').forEach(function(r) {
+      var card = document.querySelector('.reg-card[data-reg="' + r + '"]');
+      if (card) {
+        selectedRegs.add(r);
+        card.classList.add('selected');
+        card.setAttribute('aria-pressed', 'true');
+      }
+    });
+  }
+  if (verts) {
+    verts.split(',').forEach(function(v) {
+      var chip = document.querySelector('.vert-chip[data-vert="' + v + '"]');
+      if (chip) {
+        selectedVerts.add(v);
+        chip.classList.add('selected');
+        chip.setAttribute('aria-pressed', 'true');
+      }
+    });
+  }
+  if (selectedRegs.size > 0) {
+    updateFab();
+    updateJurisNotices();
+    // Auto-open matrix if URL had selections
+    setTimeout(function() { showRequirements(); }, 200);
+  }
+}
+hydrateStateFromUrl();
 
 /* ======================================================================
    FEEDBACK FORM
