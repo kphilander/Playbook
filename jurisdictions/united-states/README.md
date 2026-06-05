@@ -137,7 +137,7 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 | Georgia | GLC | 18 (lottery only) | No | No | No | No | Yes | Planned |
 | Hawaii | — | — | No | No | No | No | No | Planned |
 | Idaho | ILC / ISP | 18 (lottery/racing) | Tribal | No | No | No | Yes | Planned |
-| Illinois | IGB | 21 | Legal | Legal | No | No | Yes | Planned |
+| **Illinois** | IGB | 21 | Legal | Legal | No | No | Yes | [Complete](illinois/) |
 | Indiana | IGC | 21 | Legal | Legal | No | No | Yes | Planned |
 | Iowa | IRGC | 21 | Legal | Legal | No | No | Yes | Planned |
 | Kansas | KRGC | 21 | Legal (4 state-owned) | Legal | No | No | Yes | Planned |

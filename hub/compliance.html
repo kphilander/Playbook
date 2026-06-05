@@ -788,7 +788,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">United States</span>
-      <span class="reg-region-count">9 regulators + 1 in development</span>
+      <span class="reg-region-count">9 regulators</span>
     </div>
     <div class="reg-grid sr" style="max-height:1400px;">
       <div class="reg-card" data-reg="ngc">
@@ -831,7 +831,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         <div class="reg-card-juris">Arizona, United States</div>
         <div class="reg-card-desc">A.R.S. Title 5 Chapter 12 (Event Wagering); A.A.C. R19-4; Tribal-State Gaming Compacts</div>
       </div>
-      <div class="reg-card-cs"><div class="reg-card-name">Illinois IGB</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card" data-reg="igb">
+        <div class="reg-card-name">Illinois Gaming Board (IGB)</div>
+        <div class="reg-card-juris">Illinois, United States</div>
+        <div class="reg-card-desc">Illinois Gambling Act; Sports Wagering Act; statewide self-exclusion; 2025 uniform ad rules</div>
+      </div>
     </div>
 
     <!-- Canada (starts collapsed) -->
@@ -1169,7 +1173,18 @@ var SOURCES = {
   'az-vse':            'https://gaming.az.gov/resources/responsible-gaming/self-exclusion',
   'az-helpline':       'https://problemgambling.az.gov/',
   'az-rg':             'https://gaming.az.gov/resources/responsible-gaming',
-  'az-compacts':       'https://gaming.az.gov/tribal-gaming/tribal-state-compacts'
+  'az-compacts':       'https://gaming.az.gov/tribal-gaming/tribal-state-compacts',
+  'igb-act10':      'https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=1399&ChapterID=25',
+  'igb-act45':      'https://www.ilga.gov/legislation/ilcs/ilcs5.asp?ActID=3996&ChapterID=25',
+  'igb-act40':      'https://www.ilga.gov/legislation/ilcs/ilcs5.asp?ActID=3095&ChapterID=25',
+  'igb-3000':       'https://www.law.cornell.edu/regulations/illinois/title-86/part-3000',
+  'igb-3000se':     'https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-86-SS-3000.745',
+  'igb-1900ads':    'https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-11-SS-1900.340',
+  'igb-1800':       'https://www.law.cornell.edu/regulations/illinois/title-11/part-1800',
+  'igb-sep':        'https://igb.illinois.gov/help-for-problem-gamblers/self-exclusion-program.html',
+  'igb-help':       'https://igb.illinois.gov/help-for-problem-gamblers.html',
+  'igb-idhs':       'https://www.dhs.state.il.us/page.aspx?item=117443',
+  'igb-swlaw':      'https://igb.illinois.gov/sports-wagering/sports-law.html'
 };
 
 /* Verticals */
@@ -1187,7 +1202,8 @@ var VERTICAL_LIMITATIONS = {
   ca:     { blocked: ['online','sports'], note: 'California does not currently permit online casino gaming or sports betting. Requirements shown are for tribal land-based casinos under individual compacts.' },
   dicj:   { blocked: ['online','sports'], note: 'Macau does not permit legal online gambling. Requirements shown are for land-based casinos only.' },
   gra_sg: { blocked: ['online','sports'], note: 'Singapore largely prohibits online gambling. Requirements shown are for land-based casinos at the two integrated resorts only.' },
-  az:     { blocked: ['online'],          note: 'Arizona does not currently permit online casino gaming. Requirements shown are for sports betting (state-licensed via ADG) and land-based tribal casinos (under individual compacts).' }
+  az:     { blocked: ['online'],          note: 'Arizona does not currently permit online casino gaming. Requirements shown are for sports betting (state-licensed via ADG) and land-based tribal casinos (under individual compacts).' },
+  igb:    { blocked: ['online'],          note: 'Illinois does not permit online casino/iGaming (iGaming bills SB 1963/HB 3080 stalled in committee). Requirements shown are for land-based casinos, retail and online sports wagering, and video gaming terminals.' }
 };
 
 /* ======================================================================
@@ -1249,7 +1265,7 @@ var THEMES = [
   id: 2,
   title: 'Responsible Gambling Messaging',
   badge: 'partial',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','spillem','aglc','agco','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','spillem','aglc','agco','pgcb','mga','az','igb'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5.225(18)(b)', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Advertising must conform to standards of decency, dignity, good taste, honesty, and inoffensiveness. Wagering account operators must display a prescribed responsible gambling message with the NCPG helpline number.' },
@@ -1276,7 +1292,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Arts. 9 & 14; Gaming Commercial Communications Regs (S.L. 583.09)', src:'mga-ppd', verticals:['casino','online','sports'],
       text:'A responsible gaming message must be displayed explaining that gaming can be harmful if not controlled (Art. 9). Before a player\'s first deposit, operators must provide information about all available responsible gaming tools (Art. 14). All advertising must include the licensee name, licence number, minimum age, and responsible gaming information.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-110 (Responsible Advertising)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering advertising and promotional materials must include a problem-gambling helpline number and a responsible-gaming message. Ads must not target minors, encourage irresponsible play, or imply guaranteed winning.' }
+      text:'Event wagering advertising and promotional materials must include a problem-gambling helpline number and a responsible-gaming message. Ads must not target minors, encourage irresponsible play, or imply guaranteed winning.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'11 Ill. Adm. Code 1900.340(e)(2); 86 Ill. Adm. Code 3000 (Aug 2025 amendments)', src:'igb-1900ads', verticals:['casino','sports'],
+      text:'All advertising and marketing for casinos, video gaming and sports wagering must include problem-gambling text as determined by the Illinois Department of Human Services and must carry prominent responsible-gaming messages. Rules were harmonized uniformly across all three verticals effective August 2025.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">74</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a> tagged by pillar, tier, tone, and audience</li><li><span class="asset-count">18</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/myth-busting.md" target="_blank" rel="noopener">myth-busting entries</a> in 3 formats each</li><li><span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a> organized by function</li><li>Messages are jurisdiction-agnostic; <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> supports mandatory text tokens but none are wired for the current target jurisdictions</li></ul>',
 
@@ -1287,7 +1305,7 @@ var THEMES = [
   id: 3,
   title: 'Helpline & Crisis Support',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','gra_sg','spillem','aglc','dicj','agco','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','gra_sg','spillem','aglc','dicj','agco','pgcb','mga','az','igb'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2)', src:'ngc-reg5', verticals:['casino','sports'],
       text:'Prominently post the toll-free NCPG helpline number in or near gaming areas, cage areas, and at cash dispensing machines in gaming areas.' },
@@ -1314,7 +1332,9 @@ var THEMES = [
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.09 / 2.11', src:'agco-ig', verticals:['casino','online','sports'],
       text:'ConnexOntario (1-866-531-2600) must be prominently displayed on registration pages. iGaming operators must provide 24/7 live customer support and contact information for Ontario harm-treatment organizations.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-150; A.R.S. § 5-1320(F)', src:'az-helpline', verticals:['casino','sports'],
-      text:'1-800-NEXT-STEP (1-800-639-8783) is Arizona\'s problem-gambling helpline, administered by the Arizona Department of Gaming Division of Problem Gambling. Must be displayed in all event wagering advertising, on operator platforms, and on tribal-casino signage. 1-800-GAMBLER is also widely used.' }
+      text:'1-800-NEXT-STEP (1-800-639-8783) is Arizona\'s problem-gambling helpline, administered by the Arizona Department of Gaming Division of Problem Gambling. Must be displayed in all event wagering advertising, on operator platforms, and on tribal-casino signage. 1-800-GAMBLER is also widely used.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'230 ILCS 10/13.1; 11 Ill. Adm. Code 1900.340(e)(2)', src:'igb-idhs', verticals:['casino','sports'],
+      text:'Illinois operates a statewide Problem Gambling Helpline (1-800-GAMBLER; text ILGAMB to 833234), funded through the IDHS Division of Behavioral Health and Recovery. The Illinois Gambling Act requires casino compulsive-gambling notices, and advertising must carry IDHS-determined problem-gambling text including the helpline.' }
   ],
   assets: '<ul class="asset-list"><li>Multi-jurisdiction helpline config in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> (US national, US-Nevada, UK, Australia, Canada provinces)</li><li>Working <a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-helpline.js" target="_blank" rel="noopener">&lt;playbook-helpline&gt;</a> web component</li><li>Sticky helpline strip on <a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a></li><li>Dedicated support section</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Helpline card template</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1330,7 +1350,7 @@ var THEMES = [
   id: 4,
   title: 'Self-Exclusion Program Communications',
   badge: 'partial',
-  regs: ['ukgc','ngc','njdge','ca','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az'],
+  regs: ['ukgc','ngc','njdge','ca','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az','igb'],
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.5.5 (GAMSTOP)', src:'ukgc-355', verticals:['online','sports'],
       text:'Must participate in GAMSTOP multi-operator remote self-exclusion scheme.' },
@@ -1361,7 +1381,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 11; MGA Self-Barring', src:'mga-selfbar', verticals:['casino','online','sports'],
       text:'Land-based: self-barring from all gambling premises for 6 months, 12 months, or 12 months with auto-renewal. Cannot be removed until timeframe expires. Remote: operators must offer self-exclusion for definite or indefinite period; requests implemented immediately with no inducement to continue. If excluded for gambling problems, must be excluded from all brands operated by the licensee.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.R.S. § 5-1320; A.A.C. R19-4-150', src:'az-vse', verticals:['casino','sports'],
-      text:'ADG Voluntary Self-Exclusion program with 1-year, 5-year, and 10-year options &mdash; no lifetime tier; self-exclusion is irrevocable for the elected period. Covers all state-licensed event wagering operators; enrollment via online form or in-person at ADG. Tribal casinos maintain separate self-exclusion lists under individual compacts.' }
+      text:'ADG Voluntary Self-Exclusion program with 1-year, 5-year, and 10-year options &mdash; no lifetime tier; self-exclusion is irrevocable for the elected period. Covers all state-licensed event wagering operators; enrollment via online form or in-person at ADG. Tribal casinos maintain separate self-exclusion lists under individual compacts.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'86 Ill. Adm. Code 3000.745-3000.790; 11 Ill. Adm. Code 1900.1710', src:'igb-sep', verticals:['casino','sports'],
+      text:'The IGB Self-Exclusion Program is statewide and covers casinos and sports wagering. The minimum exclusion is five years; enrollment is in person. Operators must bar self-excluded persons from the gaming floor and from all marketing and promotional materials. Removal requires a request after five years supported by an affidavit from a licensed mental-health professional who is a certified gambling counselor or psychiatrist.' }
   ],
   assets: '<ul class="asset-list"><li>Self-exclusion tokens in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a>: <code>{{SELF_EXCLUSION_URL}}</code>, <code>{{SELF_EXCLUSION_NAME}}</code></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Need a Break?" section</li><li>UI mockup for self-exclusion flow</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Cooldown screen template</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1376,7 +1398,7 @@ var THEMES = [
   id: 5,
   title: 'Limit-Setting & Player Controls',
   badge: 'partial',
-  regs: ['ngc','ukgc','njdge','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','pgcb','mga','az'],
+  regs: ['ngc','ukgc','njdge','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','pgcb','mga','az','igb'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(18)(a)', src:'ngc-reg5a', verticals:['online','sports'],
       text:'Interactive gaming accounts must offer loss limits, deposit limits, tournament limits, buy-in limits, play-time limits, and time-based exclusion. Wagering accounts must provide deposit limits.' },
@@ -1403,7 +1425,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 14', src:'mga-rg-faq', verticals:['online','sports'],
       text:'Remote operators must offer either deposit limits or wagering limits (both encouraged). Reality checks must be offered. Before first deposit or during registration, players must be given the opportunity to set limits. Operators are also encouraged to offer loss limits, session/time limits, and time-outs (24 hours to 30 days).' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-133 / R19-4-135 (Player Accounts); A.A.C. R19-4-150', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering operators must offer player-set deposit limits, wager limits, and time-based limits. Players can decrease limits immediately; increases or removals are subject to a cooling-off period before taking effect.' }
+      text:'Event wagering operators must offer player-set deposit limits, wager limits, and time-based limits. Players can decrease limits immediately; increases or removals are subject to a cooling-off period before taking effect.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'11 Ill. Adm. Code 1900 (sports wagering account controls)', src:'igb-swlaw', verticals:['sports'],
+      text:'Online and mobile sports wagering accounts are subject to IGB account-control rules in Part 1900, including patron account management and closure. The exact deposit, wager and time-limit subsection should be confirmed against the canonical rule text.' }
   ],
   assets: '<ul class="asset-list"><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Your Tools" section with limit-setting promotion</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Limit-reached notification mockup</a></li><li>Session summary mockup</li><li>Cooldown screen mockup</li><li>Tools pillar messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages library</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1418,7 +1442,7 @@ var THEMES = [
   id: 6,
   title: 'Advertising Compliance',
   badge: 'partial',
-  regs: ['ngc','njdge','mgc','occc','mgcb','ukgc','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az'],
+  regs: ['ngc','njdge','mgc','occc','mgcb','ukgc','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az','igb'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5A.155', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Advertising must conform to prevailing community standards of decency, dignity, good taste, honesty, and inoffensiveness. Interactive gaming advertising must be truthful and non-deceptive with clear promotion terms.' },
@@ -1447,7 +1471,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Gaming Commercial Communications Regs (S.L. 583.09); CCC Guidelines', src:'mga-ccc', verticals:['casino','online','sports'],
       text:'Ads must display licensee name, licence number, minimum age, and responsible gaming information. Broad prohibition on gambling ads in public places (except tourist locations, airports, hotels). No targeting minors or vulnerable persons. No suggesting gambling solves financial or social problems. Broadcast restrictions: no gambling ads during or adjacent to children\'s programmes. Penalties up to EUR 25,000 per breach.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-110 (Responsible Advertising)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering advertising must include the problem-gambling helpline, may not target minors or persons on the voluntary self-exclusion list, may not imply guaranteed winnings, and may not appear at venues primarily attended by persons under 21. Operators must retain advertising records for ADG review.' }
+      text:'Event wagering advertising must include the problem-gambling helpline, may not target minors or persons on the voluntary self-exclusion list, may not imply guaranteed winnings, and may not appear at venues primarily attended by persons under 21. Operators must retain advertising records for ADG review.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'11 Ill. Adm. Code 1900.340; 86 Ill. Adm. Code 3000 (Aug 2025 amendments)', src:'igb-1900ads', verticals:['casino','sports'],
+      text:'Advertising must not target individuals under 21 and is banned on college or university campuses, in college and university media, and at sports venues used primarily for college events; ads must not depict college students or settings. Operators must retain copies of all materials with a publication log, offer patrons an opt-out, and may not pay third parties compensation tied to the volume or outcome of wagers. False or misleading content is prohibited.' }
   ],
   assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/07-application-guidelines.md" target="_blank" rel="noopener">Application guidelines</a></strong> with channel-specific rules for digital, print, broadcast, environmental</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Stigma-free language guide</a> with 35 term pairs</li><li><span class="asset-count">74</span> pre-vetted <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a>, <span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a>, <span class="asset-count">7</span> campaign briefs</li><li>Legal disclaimers configured in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a></li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Email templates</a> and social cards</li></ul>' +
     '<div class="thumb-grid">' +
@@ -1463,7 +1489,7 @@ var THEMES = [
   id: 7,
   title: 'Age Restriction Display',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','gra_sg','dicj','ukgc','spillem','agco','aglc','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','gra_sg','dicj','ukgc','spillem','agco','aglc','pgcb','mga','az','igb'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'NRS 463.350; Reg 5A.110(2)(b)', src:'ngc-nrs463', verticals:['casino','online','sports'],
       text:'21+ minimum gambling age for all products. Interactive gaming registration requires date of birth confirming player is 21 or older.' },
@@ -1494,7 +1520,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Gaming Act (Cap. 583); Player Protection Directive (Directive 2 of 2018), Art. 4', src:'mga-ppd', verticals:['casino','online','sports'],
       text:'18+ for online and non-casino land-based gambling. Land-based casinos: 18+ for non-Maltese citizens, 25+ for Maltese citizens. Underage gaming sign must be displayed on all remote gaming sites (Art. 4). All advertising must include minimum age to participate.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.R.S. § 5-1311; A.A.C. R19-4-110(A)(1); A.R.S. § 5-601 (Tribal Compacts)', src:'az-ars-title5', verticals:['casino','sports'],
-      text:'21+ minimum age for event wagering (retail and mobile). Arizona model tribal-state compact under A.R.S. § 5-601 requires 21+ for wagering on tribal casino gaming activities. Mobile event wagering apps must verify identity and age through ADG-approved verification systems.' }
+      text:'21+ minimum age for event wagering (retail and mobile). Arizona model tribal-state compact under A.R.S. § 5-601 requires 21+ for wagering on tribal casino gaming activities. Mobile event wagering apps must verify identity and age through ADG-approved verification systems.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'230 ILCS 10/18; 230 ILCS 40; 230 ILCS 45; 11 Ill. Adm. Code 1900.340(e)(1)', src:'igb-act10', verticals:['casino','sports'],
+      text:'The minimum gambling age is 21 for casinos, sports wagering and video gaming terminals. Video gaming establishments must post signage stating that play is limited to persons 21 or older, and advertising must not be directed to individuals under 21.' }
   ],
   assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> <code>legal.min_age</code></strong> configurable per jurisdiction (18, 19, or 21)</li><li><code>{{MIN_AGE}}</code> token used throughout all templates and <a href="https://github.com/kphilander/Playbook/tree/main/collateral" target="_blank" rel="noopener">collateral</a></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> footer displays age automatically from config</li><li>All collateral templates include age messaging where applicable</li></ul>',
 
@@ -1505,7 +1533,7 @@ var THEMES = [
   id: 8,
   title: 'Venue & Environmental Signage',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','dicj','gra_sg','aglc','ukgc','agco','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','dicj','gra_sg','aglc','ukgc','agco','pgcb','mga','az','igb'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2)', src:'ngc-reg5', verticals:['casino','sports'],
       text:'Post written materials on the nature and symptoms of problem gambling and the NCPG helpline in conspicuous places in or near gaming areas, cage areas, and at cash dispensing machines.' },
@@ -1534,7 +1562,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 9; Gaming Act (Cap. 583)', src:'mga-pp', verticals:['casino'],
       text:'Land-based casinos must display responsible gaming information and self-barring details (Art. 9). Age restriction signage required at all casino entrances (25+ for Maltese citizens, 18+ for non-Maltese). Responsible Gaming Foundation materials and helpline 1777 must be accessible to patrons.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-150; Tribal-State Compacts', src:'az-rg', verticals:['casino','sports'],
-      text:'Tribal-State Compacts typically require responsible-gaming signage at casino entrances, on the gaming floor, and at ATMs. Retail sportsbooks (state-licensed) must display the problem-gambling helpline and age-restriction notices in the wagering area.' }
+      text:'Tribal-State Compacts typically require responsible-gaming signage at casino entrances, on the gaming floor, and at ATMs. Retail sportsbooks (state-licensed) must display the problem-gambling helpline and age-restriction notices in the wagering area.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'230 ILCS 10/13.1; 230 ILCS 40; 11 Ill. Adm. Code 1800', src:'igb-help', verticals:['casino'],
+      text:'Casinos must post compulsive-gambling and treatment/helpline notices; video gaming establishments must post 21-and-over signage and keep terminals in a restricted area in view of a staff member over 21. Self-exclusion and treatment information is made available at venues.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">5</span> <a href="https://github.com/kphilander/Playbook/tree/main/collateral/environmental" target="_blank" rel="noopener">venue sign templates</a> (entrance, ATM, floor, restroom, staff area)</li><li><span class="asset-count">5</span> poster templates</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Print collateral</a>: rack card, table tent, helpline card, tri-fold brochure</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/digital" target="_blank" rel="noopener">Digital displays</a>: landscape and portrait formats</li><li>All <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">rendered as HTML + PNG</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1562,7 +1592,7 @@ var THEMES = [
   id: 9,
   title: 'Staff Training & Customer Interaction',
   badge: 'partial',
-  regs: ['ukgc','ngc','njdge','mgc','occc','mgcb','gra_sg','aglc','agco','pgcb','mga','az'],
+  regs: ['ukgc','ngc','njdge','mgc','occc','mgcb','gra_sg','aglc','agco','pgcb','mga','az','igb'],
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.4.1 (premises) / 3.4.3 (remote)', src:'ukgc-341', verticals:['casino','online','sports'],
       text:'Customer interaction requirements for identifying at-risk players. Separate codes for premises-based and remote gambling.' },
@@ -1587,7 +1617,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Arts. 16(2) & 18(1)', src:'mga-ppd', verticals:['casino','online','sports'],
       text:'Employees dealing with responsible gaming matters or player interactions must be routinely trained in responsible gaming procedures (Art. 18(1)). Staff must be qualified to identify signs of gambling-related harm. Operators must retain records of all player interactions and investigations conducted (Art. 16(2)).' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-150 (Self-Exclusion and Responsible Gaming)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering operators must train employees who interact with players to identify signs of problem gambling and refer players to the helpline. Training must be completed at hire and refreshed periodically. Tribal casinos run their own training programs under compact obligations.' }
+      text:'Event wagering operators must train employees who interact with players to identify signs of problem gambling and refer players to the helpline. Training must be completed at hire and refreshed periodically. Tribal casinos run their own training programs under compact obligations.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'11 Ill. Adm. Code 1800.1710; 86 Ill. Adm. Code 3000', src:'igb-1800', verticals:['casino','sports'],
+      text:'A video gaming rule titled Conversations About Responsible Gaming addresses staff-patron responsible-gaming interaction; casino operators carry duties to enforce self-exclusion and to handle patron interactions under Part 3000.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">8</span> <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/conversation-scripts.md" target="_blank" rel="noopener">conversation scripts</a> (helpline referral, self-exclusion enrollment, deposit limit setting, distressed player interaction)</li><li><span class="asset-count">30</span>-question <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/staff-faq.md" target="_blank" rel="noopener">staff FAQ</a></li><li>At-risk player segment profile with messaging guidance</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Tier 2 messaging guidelines</a> for support contexts</li></ul>' +
     '<div class="thumb-grid">' +
@@ -1601,7 +1633,7 @@ var THEMES = [
   id: 10,
   title: 'Activity Statements & Transparency',
   badge: 'light',
-  regs: ['ngc','ukgc','mgc','mgcb','spillem','agco','pgcb','mga','az'],
+  regs: ['ngc','ukgc','mgc','mgcb','spillem','agco','pgcb','mga','az','igb'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(17-18)', src:'ngc-reg5a', verticals:['online','sports'],
       text:'Interactive gaming operators must maintain complete game history for every game played. Wagering account licensees must record and maintain all deposits, withdrawals, credits, and debits for 5 years.' },
@@ -1620,7 +1652,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Arts. 16(2) & 17(1); Gaming Authorisations Directive (Directive 3 of 2018)', src:'mga-ppd', verticals:['online','sports'],
       text:'B2C licensees must document compliance with responsible gaming policies and retain evidence of investigations and player interactions (Art. 16(2)). Operators must monitor player gambling habits and maintain records for MGA review (Art. 17(1)). Reality checks must be offered to help players track session duration.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-152 (Retention of Records)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering operators must maintain account records (deposits, withdrawals, wagers, settled wagers) and make activity history available to players on request. Records must be retained for at least 5 years from the date of creation.' }
+      text:'Event wagering operators must maintain account records (deposits, withdrawals, wagers, settled wagers) and make activity history available to players on request. Records must be retained for at least 5 years from the date of creation.' },
+    { reg:'igb', label:'IGB (Illinois)', ref:'11 Ill. Adm. Code 1900.340(c); 11 Ill. Adm. Code 1900', src:'igb-1900ads', verticals:['sports'],
+      text:'Master sports wagering licensees and management services providers must retain copies of all advertising and marketing materials with a log of when and how each was published, aired, displayed or distributed; Part 1900 imposes recordkeeping on licensees.' }
   ],
   assets: '<ul class="asset-list"><li>Static <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">session summary mockup</a></li><li>Dashboard messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">"Open" pillar</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1754,6 +1788,14 @@ var JURISDICTIONS = {
     unique: 'Event wagering (retail and mobile) live since 9 September 2021 &mdash; among the first US states to launch both channels concurrently. Two-track regulator: state-licensed event wagering operators alongside tribal casinos governed by individual compacts. No legal online casino. 21+ for event wagering (tribal compacts under &sect; 5-601 also require 21+). ADG Voluntary Self-Exclusion: 1 / 5 / 10-year options &mdash; no lifetime tier; irrevocable for the elected period. Helpline: 1-800-NEXT-STEP (1-800-639-8783), administered by ADG\'s Division of Problem Gambling.',
     verticals: 'Land-based Casino (tribal), Sports Betting',
     source: 'https://gaming.az.gov/'
+  },
+  igb: {
+    name: 'Illinois Gaming Board (IGB)',
+    jurisdiction: 'Illinois, United States',
+    legislation: 'Illinois Gambling Act (230 ILCS 10); Sports Wagering Act (230 ILCS 45); Video Gaming Act (230 ILCS 40); 86 Ill. Adm. Code 3000; 11 Ill. Adm. Code 1900 and 1800',
+    unique: 'Three legal verticals &mdash; casinos, retail and online sports wagering, and roughly 9,000 video gaming terminals &mdash; but no legal online casino. Statewide Self-Exclusion Program covering casinos and sports wagering with a mandatory five-year minimum and in-person enrollment. August 2025 uniform advertising rules ban advertising on college campuses, in college media and at college venues, and prohibit performance-based affiliate compensation. Helpline 1-800-GAMBLER; the "Are You Really Winning?" public-awareness campaign.',
+    verticals: 'Land-based Casino, Sports Betting (retail and online), Video Gaming Terminals',
+    source: 'https://igb.illinois.gov/'
   }
 };
 

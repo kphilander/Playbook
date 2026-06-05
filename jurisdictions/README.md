@@ -70,6 +70,10 @@ jurisdictions/
 │   ├── california/                     # Layer 2: Sub-jurisdiction
 │   │   └── README.md                   # Full compliance module (tribal compacts)
 │   │
+│   ├── illinois/                       # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
 │   ├── massachusetts/                  # Layer 2: Sub-jurisdiction
 │   │   └── README.md                   # Full compliance module
 │   │
@@ -129,6 +133,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 | Singapore | -- (standalone) | GRA | Complete | [singapore/](singapore/) |
 | United Kingdom | -- (national) | Gambling Commission (UKGC) | Complete | [united-kingdom/](united-kingdom/) |
 | United States | California | CGCC / Tribal Gaming Commissions | Complete | [united-states/california/](united-states/california/) |
+| United States | Illinois | IGB | Complete | [united-states/illinois/](united-states/illinois/) |
 | United States | Massachusetts | MGC | Complete | [united-states/massachusetts/](united-states/massachusetts/) |
 | United States | Michigan | MGCB | Complete | [united-states/michigan/](united-states/michigan/) |
 | United States | Nevada | NGCB / NGC | Complete | [united-states/nevada/](united-states/nevada/) |
