@@ -28,6 +28,11 @@ jurisdictions/
 │   ├── compliance-module.md            # Sub-jurisdiction scaffold
 │   └── collateral-adaptation.md        # Collateral localization scaffold
 │
+├── australia/                          # National jurisdiction (federal online + state land-based)
+│   ├── README.md                       # Full compliance module (separate regimes)
+│   ├── _brand-australia.yml            # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference (multi-layer ad rules)
+│
 ├── canada/                             # Layer 1: Country
 │   ├── README.md                       # Federal framework, provincial table
 │   ├── _brand-canada.yml               # Country-level config overrides
@@ -121,6 +126,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 
 | Country / Territory | Sub-jurisdiction | Regulator | Status | Module |
 |---|---|---|---|---|
+| Australia | -- (national / federal) | ACMA / NCPF | Complete | [australia/](australia/) |
 | Canada | Alberta | AGLC | Complete | [canada/alberta/](canada/alberta/) |
 | Canada | Ontario | AGCO / iGO | Complete | [canada/ontario/](canada/ontario/) |
 | Denmark | -- (national) | Spillemyndigheden | Complete | [denmark/](denmark/) |

@@ -1,0 +1,119 @@
+# _brand-australia.yml — Australia Overrides
+# ================================================
+# This file contains Australia-specific overrides for _brand.yml.
+#
+# Australia is a SEPARATE-REGIMES jurisdiction:
+#   - Online wagering (sports/race pre-event, lotteries, keno) is
+#     regulated FEDERALLY by ACMA under the Interactive Gambling Act
+#     2001 and the National Consumer Protection Framework (NCPF).
+#   - Land-based gambling (casinos, gaming machines, retail wagering)
+#     is regulated by each STATE and TERRITORY.
+#
+# CRITICAL: Online casino-style gaming and online in-play (live) betting
+# are ILLEGAL in Australia. Never configure Playbook online-casino /
+# iGaming products for the Australian market.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in Australia.
+#
+# See: jurisdictions/australia/README.md for the full Australia module
+# ================================================
+
+
+# ─── HELPLINES ───────────────────────────────
+# National Gambling Helpline — single national number that routes
+# callers to the relevant state/territory service. Operated via
+# Gambling Help Online (gamblinghelponline.org.au).
+
+helplines:
+  australia:
+    number: "1800 858 858"
+    website: "www.gamblinghelponline.org.au"
+    label: "National Gambling Helpline"
+    hours: "24/7"
+    languages:
+      - English
+    chat: "www.gamblinghelponline.org.au"
+    notes: >
+      The National Gambling Helpline (1800 858 858) is free,
+      confidential, and available 24/7. The prescribed call to action
+      in online wagering advertising (NCPF Consistent Gambling
+      Messaging) embeds this number and gamblinghelponline.org.au.
+
+
+# ─── SELF-EXCLUSION ──────────────────────────
+# BetStop is the national online/phone self-exclusion register under
+# the Interactive Gambling Act 2001 (Part 7B) and the National
+# Self-Exclusion Register Act 2019. It covers ONLINE and PHONE
+# wagering only. Land-based self-exclusion is run state by state.
+
+self_exclusion:
+  australia:
+    name: "BetStop"
+    url: "https://www.betstop.gov.au"
+    scope: "All licensed Australian online and phone wagering services"
+    durations:
+      - "3 months"
+      - "6 months"
+      - "12 months"
+      - "lifetime"
+    notes: >
+      BetStop covers online and phone wagering nationally — one
+      registration excludes the person from every licensed Australian
+      online/phone wagering service. Providers must not provide the
+      service, open an account, or send marketing to registered persons.
+      Land-based venue self-exclusion is separate and set by each state
+      (e.g. NSW under the Gaming Machines Act 2001 and Casino Control
+      Act 1992).
+
+
+# ─── LEGAL ───────────────────────────────────
+# 18+ for all gambling, nationwide, across every state and territory
+# and for both online and land-based products.
+
+legal:
+  minimum_gambling_age:
+    australia: 18
+
+
+# ─── MANDATORY MESSAGING ────────────────────
+# Online wagering advertising must rotate SEVEN mandated taglines in
+# equal proportion plus a prescribed call to action carrying the
+# National Gambling Helpline (NCPF Measure 6, Consistent Gambling
+# Messaging, in force 30 March 2023). This is a VERBATIM requirement.
+#
+# VERIFY the current approved wording against the live DSS guidance and
+# the relevant state Consistent Gambling Messaging notice before
+# publishing. The taglines below were verbatim-verified during research
+# via a registered Western Australian Consistent Gambling Messaging
+# Notice; confirm before merge.
+#
+# There is NO single mandatory statement for land-based — state venue
+# RG-signage obligations are described in the module (NSW illustrative).
+
+messaging:
+  mandatory:
+    australia-wagering: >
+      Seven mandated taglines in equal rotation
+      (1) "Chances are you're about to lose."
+      (2) "Think. Is this a bet you really want to place?"
+      (3) "What are you prepared to lose today? Set a deposit limit."
+      (4) "What's gambling really costing you?"
+      (5) "You win some. You lose more."
+      (6) "Imagine what you could be buying instead."
+      (7) "What's gambling really costing you? Reach out."
+      plus the prescribed call to action carrying the National Gambling
+      Helpline (1800 858 858 / gamblinghelponline.org.au).
+    # australia-venue: (none — state-set obligation, no single verbatim statement)
+
+
+# ─── PRESENTATION ───────────────────────────
+# Australia-specific display preferences.
+
+presentation:
+  odds_format: decimal       # Australia uses decimal odds (e.g., 2.50)
+  currency: aud              # Australian Dollar
+  currency_symbol: "$"
+  language: en-au            # Australian English (licence, organisation, recognise)
+  sports_culture: afl-nrl-racing
