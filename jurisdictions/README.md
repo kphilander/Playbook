@@ -28,6 +28,11 @@ jurisdictions/
 │   ├── compliance-module.md            # Sub-jurisdiction scaffold
 │   └── collateral-adaptation.md        # Collateral localization scaffold
 │
+├── brazil/                             # National jurisdiction (federal, online-only)
+│   ├── README.md                       # Full compliance module
+│   ├── _brand-brazil.yml               # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference (~19 ad prohibitions)
+│
 ├── canada/                             # Layer 1: Country
 │   ├── README.md                       # Federal framework, provincial table
 │   ├── _brand-canada.yml               # Country-level config overrides
@@ -121,6 +126,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 
 | Country / Territory | Sub-jurisdiction | Regulator | Status | Module |
 |---|---|---|---|---|
+| Brazil | -- (national) | SPA / MF (Secretaria de Premios e Apostas) | Complete | [brazil/](brazil/) |
 | Canada | Alberta | AGLC | Complete | [canada/alberta/](canada/alberta/) |
 | Canada | Ontario | AGCO / iGO | Complete | [canada/ontario/](canada/ontario/) |
 | Denmark | -- (national) | Spillemyndigheden | Complete | [denmark/](denmark/) |

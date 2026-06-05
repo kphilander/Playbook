@@ -912,12 +912,16 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">Latin America</span>
-      <span class="reg-region-count">Coming soon</span>
+      <span class="reg-region-count">1 regulator + 2 in development</span>
     </div>
     <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
+      <div class="reg-card" data-reg="spa_br">
+        <div class="reg-card-name">SPA/MF (Brazil)</div>
+        <div class="reg-card-juris">Brazil (federal)</div>
+        <div class="reg-card-desc">Law 14.790/2023; online fixed-odds betting; SIGAP licensing; centralized self-exclusion</div>
+      </div>
       <div class="reg-card-cs"><div class="reg-card-name">Coljuegos (Colombia)</div><div class="reg-card-juris">In development</div></div>
       <div class="reg-card-cs"><div class="reg-card-name">LOTBA (Argentina)</div><div class="reg-card-juris">In development</div></div>
-      <div class="reg-card-cs"><div class="reg-card-name">SBJ / LOTERJ (Brazil)</div><div class="reg-card-juris">In development</div></div>
     </div>
 
     <!-- Africa (starts collapsed) -->
@@ -1169,7 +1173,13 @@ var SOURCES = {
   'az-vse':            'https://gaming.az.gov/resources/responsible-gaming/self-exclusion',
   'az-helpline':       'https://problemgambling.az.gov/',
   'az-rg':             'https://gaming.az.gov/resources/responsible-gaming',
-  'az-compacts':       'https://gaming.az.gov/tribal-gaming/tribal-state-compacts'
+  'az-compacts':       'https://gaming.az.gov/tribal-gaming/tribal-state-compacts',
+  'spa_br-lei14790':   'https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm',
+  'spa_br-lei13756':   'https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13756.htm',
+  'spa_br-p1231':      'https://www.in.gov.br/web/dou/-/portaria-spa/mf-n-1.231-de-31-de-julho-de-2024-575670297',
+  'spa_br-legislacao': 'https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao',
+  'spa_br-p2579':      'https://www.gov.br/fazenda/pt-br/assuntos/noticias/2025/novembro/spa-aprimora-protecao-ao-apostador-com-novas-regras-de-autoexclusao-centralizada-e-autolimites',
+  'spa_br-sigap':      'https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/sistema-de-gestao-de-apostas-sigap'
 };
 
 /* Verticals */
@@ -1187,7 +1197,8 @@ var VERTICAL_LIMITATIONS = {
   ca:     { blocked: ['online','sports'], note: 'California does not currently permit online casino gaming or sports betting. Requirements shown are for tribal land-based casinos under individual compacts.' },
   dicj:   { blocked: ['online','sports'], note: 'Macau does not permit legal online gambling. Requirements shown are for land-based casinos only.' },
   gra_sg: { blocked: ['online','sports'], note: 'Singapore largely prohibits online gambling. Requirements shown are for land-based casinos at the two integrated resorts only.' },
-  az:     { blocked: ['online'],          note: 'Arizona does not currently permit online casino gaming. Requirements shown are for sports betting (state-licensed via ADG) and land-based tribal casinos (under individual compacts).' }
+  az:     { blocked: ['online'],          note: 'Arizona does not currently permit online casino gaming. Requirements shown are for sports betting (state-licensed via ADG) and land-based tribal casinos (under individual compacts).' },
+  spa_br: { blocked: ['casino'],          note: 'Brazil regulates only online fixed-odds betting — sports betting and online games — under Law 14.790/2023. Land-based casinos remain illegal. Requirements shown apply to the online market on .bet.br domains.' }
 };
 
 /* ======================================================================
@@ -1199,7 +1210,7 @@ var THEMES = [
   id: 1,
   title: 'Game Information & Odds Disclosure',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','agco','dicj','gra_sg','spillem','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','agco','dicj','gra_sg','spillem','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2); Reg 5A.150', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Post problem gambling information including resources in gaming areas. Interactive gaming operators must prominently display operator identity, license number, responsible gambling links, and house rules before play begins.' },
@@ -1232,7 +1243,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 9', src:'mga-ppd', verticals:['casino','online','sports'],
       text:'Operators must display a link to one or more gambling help organisations. Responsible Gaming Foundation (RGF) Supportline 1777 (24/7, free and confidential). Additional support via Sedqa helpline 179. Remote operators must provide this within one click from anywhere on the website.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-150; Tribal-State Compacts', src:'az-r19-4', verticals:['casino','sports'],
-      text:'Event wagering operators must provide accessible information on rules of play, odds of winning, and how to wager before a player places a bet. Tribal-State Compacts require participating tribes to make game rules and odds information available to patrons on the gaming floor.' }
+      text:'Event wagering operators must provide accessible information on rules of play, odds of winning, and how to wager before a player places a bet. Tribal-State Compacts require participating tribes to make game rules and odds information available to patrons on the gaming floor.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Portaria SPA/MF 1.231/2024, Art. 4 II; Art. 23 V', src:'spa_br-p1231', verticals:['online','sports'],
+      text:'Operators must inform the player of the theoretical Return to Player (RTP) of each online game offered (Art. 4 II), and bettors have the right to be informed of the fixed odds of the sports events and online games offered (Art. 23 V).' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">11</span> <a href="https://github.com/kphilander/Playbook/tree/main/how-to-play" target="_blank" rel="noopener">game guides</a> with house edge / RTP data at grade 6-8 reading level</li><li><span class="asset-count">1</span> <a href="https://github.com/kphilander/Playbook/blob/main/how-to-play/odds-at-a-glance.md" target="_blank" rel="noopener">odds comparison table</a> covering 11 games with house edge ranges</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">HTP card templates</a> (print-ready HTML)</li><li><a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-odds.js" target="_blank" rel="noopener">Odds explorer widget</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1249,7 +1262,7 @@ var THEMES = [
   id: 2,
   title: 'Responsible Gambling Messaging',
   badge: 'partial',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','spillem','aglc','agco','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','spillem','aglc','agco','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5.225(18)(b)', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Advertising must conform to standards of decency, dignity, good taste, honesty, and inoffensiveness. Wagering account operators must display a prescribed responsible gambling message with the NCPG helpline number.' },
@@ -1276,7 +1289,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Arts. 9 & 14; Gaming Commercial Communications Regs (S.L. 583.09)', src:'mga-ppd', verticals:['casino','online','sports'],
       text:'A responsible gaming message must be displayed explaining that gaming can be harmful if not controlled (Art. 9). Before a player\'s first deposit, operators must provide information about all available responsible gaming tools (Art. 14). All advertising must include the licensee name, licence number, minimum age, and responsible gaming information.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-110 (Responsible Advertising)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering advertising and promotional materials must include a problem-gambling helpline number and a responsible-gaming message. Ads must not target minors, encourage irresponsible play, or imply guaranteed winning.' }
+      text:'Event wagering advertising and promotional materials must include a problem-gambling helpline number and a responsible-gaming message. Ads must not target minors, encourage irresponsible play, or imply guaranteed winning.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Lei 14.790/2023, Art. 16; Portaria SPA/MF 1.231/2024, Art. 13', src:'spa_br-p1231', verticals:['online','sports'],
+      text:'All communication, advertising and marketing (including digital) must display warning clauses: an age-restriction mark (18+) or the notice "proibido para menores de 18 anos," and a warning about the risks of addiction and pathological gambling. Clauses must be clear and legible, at least 10 percent of the ad size, conveyed in spoken and written form where possible, and shown on the opening page of operator sites and apps.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">74</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a> tagged by pillar, tier, tone, and audience</li><li><span class="asset-count">18</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/myth-busting.md" target="_blank" rel="noopener">myth-busting entries</a> in 3 formats each</li><li><span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a> organized by function</li><li>Messages are jurisdiction-agnostic; <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> supports mandatory text tokens but none are wired for the current target jurisdictions</li></ul>',
 
@@ -1287,7 +1302,7 @@ var THEMES = [
   id: 3,
   title: 'Helpline & Crisis Support',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','gra_sg','spillem','aglc','dicj','agco','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','ukgc','gra_sg','spillem','aglc','dicj','agco','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.170(2)', src:'ngc-reg5', verticals:['casino','sports'],
       text:'Prominently post the toll-free NCPG helpline number in or near gaming areas, cage areas, and at cash dispensing machines in gaming areas.' },
@@ -1314,7 +1329,9 @@ var THEMES = [
     { reg:'agco', label:'AGCO (Ontario)', ref:'Registrar\'s Stds for Internet Gaming, Stds 2.09 / 2.11', src:'agco-ig', verticals:['casino','online','sports'],
       text:'ConnexOntario (1-866-531-2600) must be prominently displayed on registration pages. iGaming operators must provide 24/7 live customer support and contact information for Ontario harm-treatment organizations.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-150; A.R.S. § 5-1320(F)', src:'az-helpline', verticals:['casino','sports'],
-      text:'1-800-NEXT-STEP (1-800-639-8783) is Arizona\'s problem-gambling helpline, administered by the Arizona Department of Gaming Division of Problem Gambling. Must be displayed in all event wagering advertising, on operator platforms, and on tribal-casino signage. 1-800-GAMBLER is also widely used.' }
+      text:'1-800-NEXT-STEP (1-800-639-8783) is Arizona\'s problem-gambling helpline, administered by the Arizona Department of Gaming Division of Problem Gambling. Must be displayed in all event wagering advertising, on operator platforms, and on tribal-casino signage. 1-800-GAMBLER is also widely used.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Portaria SPA/MF 1.231/2024, Art. 4 XII-XIII', src:'spa_br-p1231', verticals:['online','sports'],
+      text:'Operators must provide internet-accessible customer-service and ombudsman channels, including to guide bettors at risk of addiction or pathological gambling, and their families, toward obtaining help and treatment. No specific government helpline number is prescribed.' }
   ],
   assets: '<ul class="asset-list"><li>Multi-jurisdiction helpline config in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> (US national, US-Nevada, UK, Australia, Canada provinces)</li><li>Working <a href="https://github.com/kphilander/Playbook/blob/main/widgets/src/playbook-helpline.js" target="_blank" rel="noopener">&lt;playbook-helpline&gt;</a> web component</li><li>Sticky helpline strip on <a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a></li><li>Dedicated support section</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/print" target="_blank" rel="noopener">Helpline card template</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1330,7 +1347,7 @@ var THEMES = [
   id: 4,
   title: 'Self-Exclusion Program Communications',
   badge: 'partial',
-  regs: ['ukgc','ngc','njdge','ca','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az'],
+  regs: ['ukgc','ngc','njdge','ca','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.5.5 (GAMSTOP)', src:'ukgc-355', verticals:['online','sports'],
       text:'Must participate in GAMSTOP multi-operator remote self-exclusion scheme.' },
@@ -1361,7 +1378,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 11; MGA Self-Barring', src:'mga-selfbar', verticals:['casino','online','sports'],
       text:'Land-based: self-barring from all gambling premises for 6 months, 12 months, or 12 months with auto-renewal. Cannot be removed until timeframe expires. Remote: operators must offer self-exclusion for definite or indefinite period; requests implemented immediately with no inducement to continue. If excluded for gambling problems, must be excluded from all brands operated by the licensee.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.R.S. § 5-1320; A.A.C. R19-4-150', src:'az-vse', verticals:['casino','sports'],
-      text:'ADG Voluntary Self-Exclusion program with 1-year, 5-year, and 10-year options &mdash; no lifetime tier; self-exclusion is irrevocable for the elected period. Covers all state-licensed event wagering operators; enrollment via online form or in-person at ADG. Tribal casinos maintain separate self-exclusion lists under individual compacts.' }
+      text:'ADG Voluntary Self-Exclusion program with 1-year, 5-year, and 10-year options &mdash; no lifetime tier; self-exclusion is irrevocable for the elected period. Covers all state-licensed event wagering operators; enrollment via online form or in-person at ADG. Tribal casinos maintain separate self-exclusion lists under individual compacts.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Portaria SPA/MF 1.231/2024, Art. 4 IV(d)/V and Art. 11 VII (amended by Portaria SPA/MF 2.579/2025)', src:'spa_br-p2579', verticals:['online','sports'],
+      text:'Bettors may self-exclude either per-operator (the account is closed; re-registration only after the defined term) or nationally, through a centralized platform maintained by the SPA that blocks registration and access across all authorized betting systems, for a definite or indefinite period. Operators must surface a clear, highlighted link to the central platform and must not send advertising to self-excluded or court-excluded persons.' }
   ],
   assets: '<ul class="asset-list"><li>Self-exclusion tokens in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a>: <code>{{SELF_EXCLUSION_URL}}</code>, <code>{{SELF_EXCLUSION_NAME}}</code></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Need a Break?" section</li><li>UI mockup for self-exclusion flow</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Cooldown screen template</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1376,7 +1395,7 @@ var THEMES = [
   id: 5,
   title: 'Limit-Setting & Player Controls',
   badge: 'partial',
-  regs: ['ngc','ukgc','njdge','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','pgcb','mga','az'],
+  regs: ['ngc','ukgc','njdge','mgc','occc','mgcb','gra_sg','spillem','agco','aglc','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(18)(a)', src:'ngc-reg5a', verticals:['online','sports'],
       text:'Interactive gaming accounts must offer loss limits, deposit limits, tournament limits, buy-in limits, play-time limits, and time-based exclusion. Wagering accounts must provide deposit limits.' },
@@ -1403,7 +1422,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Art. 14', src:'mga-rg-faq', verticals:['online','sports'],
       text:'Remote operators must offer either deposit limits or wagering limits (both encouraged). Reality checks must be offered. Before first deposit or during registration, players must be given the opportunity to set limits. Operators are also encouraged to offer loss limits, session/time limits, and time-outs (24 hours to 30 days).' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-133 / R19-4-135 (Player Accounts); A.A.C. R19-4-150', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering operators must offer player-set deposit limits, wager limits, and time-based limits. Players can decrease limits immediately; increases or removals are subject to a cooling-off period before taking effect.' }
+      text:'Event wagering operators must offer player-set deposit limits, wager limits, and time-based limits. Players can decrease limits immediately; increases or removals are subject to a cooling-off period before taking effect.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Portaria SPA/MF 1.231/2024, Art. 4 IV/X/XI (amended by Portaria SPA/MF 2.579/2025)', src:'spa_br-p1231', verticals:['online','sports'],
+      text:'Operators must let bettors set prudential limits (by elapsed time, financial loss, total deposited, or number of bets, bound to daily, weekly or monthly periods), session alerts or blocks, and pause periods, and must maintain a permanent panel showing time used, losses and balance. Limit increases or pause removals take effect only 24 hours after the request. Since Portaria 2.579/2025, bettors must set prudential self-limits (time and bet value) at registration.' }
   ],
   assets: '<ul class="asset-list"><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> "Your Tools" section with limit-setting promotion</li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Limit-reached notification mockup</a></li><li>Session summary mockup</li><li>Cooldown screen mockup</li><li>Tools pillar messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages library</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1418,7 +1439,7 @@ var THEMES = [
   id: 6,
   title: 'Advertising Compliance',
   badge: 'partial',
-  regs: ['ngc','njdge','mgc','occc','mgcb','ukgc','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az'],
+  regs: ['ngc','njdge','mgc','occc','mgcb','ukgc','gra_sg','spillem','agco','aglc','dicj','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5.011(1)(d); Reg 5A.155', src:'ngc-reg5', verticals:['casino','online','sports'],
       text:'Advertising must conform to prevailing community standards of decency, dignity, good taste, honesty, and inoffensiveness. Interactive gaming advertising must be truthful and non-deceptive with clear promotion terms.' },
@@ -1447,7 +1468,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Gaming Commercial Communications Regs (S.L. 583.09); CCC Guidelines', src:'mga-ccc', verticals:['casino','online','sports'],
       text:'Ads must display licensee name, licence number, minimum age, and responsible gaming information. Broad prohibition on gambling ads in public places (except tourist locations, airports, hotels). No targeting minors or vulnerable persons. No suggesting gambling solves financial or social problems. Broadcast restrictions: no gambling ads during or adjacent to children\'s programmes. Penalties up to EUR 25,000 per breach.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-110 (Responsible Advertising)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering advertising must include the problem-gambling helpline, may not target minors or persons on the voluntary self-exclusion list, may not imply guaranteed winnings, and may not appear at venues primarily attended by persons under 21. Operators must retain advertising records for ADG review.' }
+      text:'Event wagering advertising must include the problem-gambling helpline, may not target minors or persons on the voluntary self-exclusion list, may not imply guaranteed winnings, and may not appear at venues primarily attended by persons under 21. Operators must retain advertising records for ADG review.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Lei 14.790/2023, Art. 17; Portaria SPA/MF 1.231/2024, Art. 12', src:'spa_br-p1231', verticals:['online','sports'],
+      text:'Advertising is subject to roughly nineteen enumerated prohibitions: no unfounded or misleading claims about winning probabilities or gains; no suggestion of easy gain or that betting drives personal, social or financial success; no celebrity endorsement to that effect; no encouragement of excessive betting or calls to immediate action; no portrayal of betting as a life priority, an alternative to employment, a source of income, an investment, or a solution to problems; no sexual or objectifying content; and broad bans on targeting or featuring minors. All ads must identify as advertising and state the SPA authorization.' }
   ],
   assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/07-application-guidelines.md" target="_blank" rel="noopener">Application guidelines</a></strong> with channel-specific rules for digital, print, broadcast, environmental</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Stigma-free language guide</a> with 35 term pairs</li><li><span class="asset-count">74</span> pre-vetted <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">core messages</a>, <span class="asset-count">50</span> <a href="https://github.com/kphilander/Playbook/blob/main/messaging/calls-to-action.md" target="_blank" rel="noopener">CTAs</a>, <span class="asset-count">7</span> campaign briefs</li><li>Legal disclaimers configured in <a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a></li><li><a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">Email templates</a> and social cards</li></ul>' +
     '<div class="thumb-grid">' +
@@ -1463,7 +1486,7 @@ var THEMES = [
   id: 7,
   title: 'Age Restriction Display',
   badge: 'strong',
-  regs: ['ngc','njdge','ca','mgc','occc','mgcb','gra_sg','dicj','ukgc','spillem','agco','aglc','pgcb','mga','az'],
+  regs: ['ngc','njdge','ca','mgc','occc','mgcb','gra_sg','dicj','ukgc','spillem','agco','aglc','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'NRS 463.350; Reg 5A.110(2)(b)', src:'ngc-nrs463', verticals:['casino','online','sports'],
       text:'21+ minimum gambling age for all products. Interactive gaming registration requires date of birth confirming player is 21 or older.' },
@@ -1494,7 +1517,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Gaming Act (Cap. 583); Player Protection Directive (Directive 2 of 2018), Art. 4', src:'mga-ppd', verticals:['casino','online','sports'],
       text:'18+ for online and non-casino land-based gambling. Land-based casinos: 18+ for non-Maltese citizens, 25+ for Maltese citizens. Underage gaming sign must be displayed on all remote gaming sites (Art. 4). All advertising must include minimum age to participate.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.R.S. § 5-1311; A.A.C. R19-4-110(A)(1); A.R.S. § 5-601 (Tribal Compacts)', src:'az-ars-title5', verticals:['casino','sports'],
-      text:'21+ minimum age for event wagering (retail and mobile). Arizona model tribal-state compact under A.R.S. § 5-601 requires 21+ for wagering on tribal casino gaming activities. Mobile event wagering apps must verify identity and age through ADG-approved verification systems.' }
+      text:'21+ minimum age for event wagering (retail and mobile). Arizona model tribal-state compact under A.R.S. § 5-601 requires 21+ for wagering on tribal casino gaming activities. Mobile event wagering apps must verify identity and age through ADG-approved verification systems.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Lei 14.790/2023, Art. 26 I and Art. 3; Portaria SPA/MF 1.231/2024, Art. 13 I', src:'spa_br-lei14790', verticals:['online','sports'],
+      text:'Betting by persons under 18 is prohibited; all communications must display the 18+ mark or the notice "proibido para menores de 18 anos." Sports events involving only youth or under-18 categories cannot be bet upon.' }
   ],
   assets: '<ul class="asset-list"><li><strong><a href="https://github.com/kphilander/Playbook/blob/main/_brand.yml" target="_blank" rel="noopener">_brand.yml</a> <code>legal.min_age</code></strong> configurable per jurisdiction (18, 19, or 21)</li><li><code>{{MIN_AGE}}</code> token used throughout all templates and <a href="https://github.com/kphilander/Playbook/tree/main/collateral" target="_blank" rel="noopener">collateral</a></li><li><a href="https://github.com/kphilander/Playbook/blob/main/collateral/rg-page.html" target="_blank" rel="noopener">RG page</a> footer displays age automatically from config</li><li>All collateral templates include age messaging where applicable</li></ul>',
 
@@ -1562,7 +1587,7 @@ var THEMES = [
   id: 9,
   title: 'Staff Training & Customer Interaction',
   badge: 'partial',
-  regs: ['ukgc','ngc','njdge','mgc','occc','mgcb','gra_sg','aglc','agco','pgcb','mga','az'],
+  regs: ['ukgc','ngc','njdge','mgc','occc','mgcb','gra_sg','aglc','agco','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ukgc', label:'UKGC', ref:'LCCP 3.4.1 (premises) / 3.4.3 (remote)', src:'ukgc-341', verticals:['casino','online','sports'],
       text:'Customer interaction requirements for identifying at-risk players. Separate codes for premises-based and remote gambling.' },
@@ -1587,7 +1612,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Arts. 16(2) & 18(1)', src:'mga-ppd', verticals:['casino','online','sports'],
       text:'Employees dealing with responsible gaming matters or player interactions must be routinely trained in responsible gaming procedures (Art. 18(1)). Staff must be qualified to identify signs of gambling-related harm. Operators must retain records of all player interactions and investigations conducted (Art. 16(2)).' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-150 (Self-Exclusion and Responsible Gaming)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering operators must train employees who interact with players to identify signs of problem gambling and refer players to the helpline. Training must be completed at hire and refreshed periodically. Tribal casinos run their own training programs under compact obligations.' }
+      text:'Event wagering operators must train employees who interact with players to identify signs of problem gambling and refer players to the helpline. Training must be completed at hire and refreshed periodically. Tribal casinos run their own training programs under compact obligations.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Lei 14.790/2023, Art. 28; Portaria SPA/MF 1.231/2024, Art. 4 XII and Art. 5', src:'spa_br-p1231', verticals:['online','sports'],
+      text:'Operators must run a free Portuguese-language customer-service and ombudsman channel and maintain a documented responsible-gaming policy with behavioural monitoring. No specific staff-certification scheme is prescribed; obligations focus on accessible support and monitoring.' }
   ],
   assets: '<ul class="asset-list"><li><span class="asset-count">8</span> <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/conversation-scripts.md" target="_blank" rel="noopener">conversation scripts</a> (helpline referral, self-exclusion enrollment, deposit limit setting, distressed player interaction)</li><li><span class="asset-count">30</span>-question <a href="https://github.com/kphilander/Playbook/blob/main/collateral/customer-service/staff-faq.md" target="_blank" rel="noopener">staff FAQ</a></li><li>At-risk player segment profile with messaging guidance</li><li><a href="https://github.com/kphilander/Playbook/blob/main/brand-book/04-voice-and-tone.md" target="_blank" rel="noopener">Tier 2 messaging guidelines</a> for support contexts</li></ul>' +
     '<div class="thumb-grid">' +
@@ -1601,7 +1628,7 @@ var THEMES = [
   id: 10,
   title: 'Activity Statements & Transparency',
   badge: 'light',
-  regs: ['ngc','ukgc','mgc','mgcb','spillem','agco','pgcb','mga','az'],
+  regs: ['ngc','ukgc','mgc','mgcb','spillem','agco','pgcb','mga','az','spa_br'],
   citations: [
     { reg:'ngc', label:'NGC (Nevada)', ref:'Reg 5A.120(4); Reg 5.225(17-18)', src:'ngc-reg5a', verticals:['online','sports'],
       text:'Interactive gaming operators must maintain complete game history for every game played. Wagering account licensees must record and maintain all deposits, withdrawals, credits, and debits for 5 years.' },
@@ -1620,7 +1647,9 @@ var THEMES = [
     { reg:'mga', label:'MGA (Malta)', ref:'Player Protection Directive (Directive 2 of 2018), Arts. 16(2) & 17(1); Gaming Authorisations Directive (Directive 3 of 2018)', src:'mga-ppd', verticals:['online','sports'],
       text:'B2C licensees must document compliance with responsible gaming policies and retain evidence of investigations and player interactions (Art. 16(2)). Operators must monitor player gambling habits and maintain records for MGA review (Art. 17(1)). Reality checks must be offered to help players track session duration.' },
     { reg:'az', label:'ADG (Arizona)', ref:'A.A.C. R19-4-152 (Retention of Records)', src:'az-r19-4', verticals:['sports'],
-      text:'Event wagering operators must maintain account records (deposits, withdrawals, wagers, settled wagers) and make activity history available to players on request. Records must be retained for at least 5 years from the date of creation.' }
+      text:'Event wagering operators must maintain account records (deposits, withdrawals, wagers, settled wagers) and make activity history available to players on request. Records must be retained for at least 5 years from the date of creation.' },
+    { reg:'spa_br', label:'SPA/MF (Brazil)', ref:'Portaria SPA/MF 1.231/2024, Art. 4 X and Art. 23 VI; Lei 14.790/2023, Art. 30', src:'spa_br-p1231', verticals:['online','sports'],
+      text:'Bettors have the right to their full financial-movement history (deposits, withdrawals, stakes, prizes) and to a permanent panel detailing time used, losses incurred and available balance. Prizes are payable exclusively to the bettor’s own bank or payment account at a Banco Central-authorized institution, with no third-party payouts.' }
   ],
   assets: '<ul class="asset-list"><li>Static <a href="https://github.com/kphilander/Playbook/tree/main/collateral/render" target="_blank" rel="noopener">session summary mockup</a></li><li>Dashboard messages from <a href="https://github.com/kphilander/Playbook/blob/main/messaging/core-messages.md" target="_blank" rel="noopener">"Open" pillar</a></li></ul>' +
     '<div class="thumb-grid">' +
@@ -1754,6 +1783,14 @@ var JURISDICTIONS = {
     unique: 'Event wagering (retail and mobile) live since 9 September 2021 &mdash; among the first US states to launch both channels concurrently. Two-track regulator: state-licensed event wagering operators alongside tribal casinos governed by individual compacts. No legal online casino. 21+ for event wagering (tribal compacts under &sect; 5-601 also require 21+). ADG Voluntary Self-Exclusion: 1 / 5 / 10-year options &mdash; no lifetime tier; irrevocable for the elected period. Helpline: 1-800-NEXT-STEP (1-800-639-8783), administered by ADG\'s Division of Problem Gambling.',
     verticals: 'Land-based Casino (tribal), Sports Betting',
     source: 'https://gaming.az.gov/'
+  },
+  spa_br: {
+    name: 'Secretaria de Premios e Apostas (SPA/MF)',
+    jurisdiction: 'Brazil (federal)',
+    legislation: 'Lei no 14.790/2023; Portarias SPA/MF no 1.231/2024, 827/2024, 1.475/2024, 2.579/2025',
+    unique: 'New federal online betting regime live since 1 January 2025, regulated by the Secretaria de Premios e Apostas within the Ministry of Finance via the SIGAP system. Mandatory facial-recognition identity verification, prudential self-limits at registration, and a centralized national self-exclusion platform. Covers online fixed-odds sports betting and online games; land-based casinos remain illegal.',
+    verticals: 'Online Sports Betting, Online Games',
+    source: 'https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas'
   }
 };
 
