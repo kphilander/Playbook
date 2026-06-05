@@ -221,7 +221,7 @@ Both meet the regulatory requirement. The second version provides multiple conta
 |---|---|
 | **Verbatim required statement** | **None** -- Alberta does not require a specific word-for-word message |
 | **What IS required** | Advertising and marketing materials must contain a responsible gambling message; responsible gambling information must be available at all venues and on platforms |
-| **Contrast with BC** | BC requires "Know your limit, play within it." (exact wording); Alberta requires information display but no specific phrasing |
+| **Contrast with BC** | BC is also obligation-based — no verbatim statement. "Know your limit, play within it." is the BCLC/GameSense tagline (a slogan), not a BC mandate. Both provinces require information display with no specific phrasing prescribed. |
 
 ### What the Standards require
 
@@ -550,7 +550,7 @@ Quick-reference table mapping every collateral category to Alberta-specific adap
 | Area | Alberta | BC |
 |---|---|---|
 | **Minimum age** | 18+ | 19+ |
-| **Mandatory statement** | None | "Know your limit, play within it." |
+| **Mandatory statement** | None (obligation-based) | None (obligation-based); "Know your limit, play within it." is the BCLC/GameSense tagline, not a mandate |
 | **Helpline** | AHS Addiction Helpline 1-866-332-2322 | Gambling Support BC 1-888-795-6111 |
 | **RG program** | GameSense (AGLC, licensed from BCLC) | GameSense (BCLC, originator) |
 | **Self-exclusion** | AGLC province-wide (6mo/1yr/2yr/3yr) | Game Break (BCLC province-wide) |

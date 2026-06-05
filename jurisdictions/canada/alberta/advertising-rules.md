@@ -70,8 +70,8 @@ Like Ontario, Alberta's open iGaming market (launching mid-2026) means **multipl
 
 | Area | Alberta | Ontario | BC |
 |---|---|---|---|
-| **Approach** | Standards-based (AGLC) + national code | Standards-based (AGCO) + national code | Multi-layer (GPEB/IGCO + BCLC + national code) |
-| **Mandatory statement** | None | None | "Know your limit, play within it." |
+| **Approach** | Standards-based (AGLC) + national code | Standards-based (AGCO) + national code | Multi-layer (GPEB/IGCO + BCLC + national code), single Crown operator |
+| **Mandatory statement** | None | None | None — obligation-based; "Know your limit, play within it." is the BCLC/GameSense tagline, not a mandate |
 | **Inducement advertising** | Opt-in consent required; no public advertising ban | Sport betting inducements banned in public ads | Limited bonus prominence |
 | **Athlete endorsements** | Banned (except RG advocacy) | Banned (except RG advocacy) | Not specified |
 | **National code** | CGA Code (enforceable) | CGA Code (enforceable) | CGA Code (enforceable) |

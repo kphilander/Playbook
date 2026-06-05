@@ -36,6 +36,10 @@ jurisdictions/
 │   │   ├── README.md                   # Full compliance module
 │   │   └── advertising-rules.md        # Deep-dive reference
 │   │
+│   ├── british-columbia/               # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
 │   └── ontario/                        # Layer 2: Sub-jurisdiction
 │       ├── README.md                   # Full compliance module
 │       └── advertising-rules.md        # Deep-dive reference
@@ -122,6 +126,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 | Country / Territory | Sub-jurisdiction | Regulator | Status | Module |
 |---|---|---|---|---|
 | Canada | Alberta | AGLC | Complete | [canada/alberta/](canada/alberta/) |
+| Canada | British Columbia | IGCO (GPEB) / BCLC | Complete | [canada/british-columbia/](canada/british-columbia/) |
 | Canada | Ontario | AGCO / iGO | Complete | [canada/ontario/](canada/ontario/) |
 | Denmark | -- (national) | Spillemyndigheden | Complete | [denmark/](denmark/) |
 | Macau SAR | -- (standalone) | DICJ | Complete | [macau/](macau/) |

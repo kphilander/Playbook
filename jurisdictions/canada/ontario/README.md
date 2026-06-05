@@ -32,7 +32,7 @@ last_updated: 2026-03-10
 
 # Ontario — Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ontario. Ontario has a unique hybrid model: OLG operates land-based casinos and OLG.ca, while the iGaming market is open to private operators registered with AGCO and contracted through iGaming Ontario (iGO). There is no mandatory verbatim statement (unlike BC's "Know your limit, play within it"), but ConnexOntario (1-866-531-2600) must be prominently displayed. Ontario's iGaming standards are among the most detailed in North America, with mandatory deposit/loss limits, real-time behavioural monitoring, and a Centralized Self-Exclusion program launching in 2026.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ontario. Ontario has a unique hybrid model: OLG operates land-based casinos and OLG.ca, while the iGaming market is open to private operators registered with AGCO and contracted through iGaming Ontario (iGO). Like BC and Alberta, Ontario is obligation-based — there is no mandatory verbatim statement — but ConnexOntario (1-866-531-2600) must be prominently displayed. Ontario's iGaming standards are among the most detailed in North America, with mandatory deposit/loss limits, real-time behavioural monitoring, and a Centralized Self-Exclusion program launching in 2026.
 
 > **Last verified**: 2026-03-10
 > **Next review due**: 2026-06-10 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
@@ -192,7 +192,7 @@ Both meet the regulatory requirement. The second version provides multiple conta
 |---|---|
 | **Verbatim required statement** | **None** — Ontario does not require a specific word-for-word message |
 | **What IS required** | Prominent display of responsible gambling information and ConnexOntario contact details (Stds 2.08, 2.09) |
-| **Contrast with BC** | BC requires "Know your limit, play within it." (exact wording); Ontario requires information display but no specific phrasing |
+| **Contrast with BC** | BC is also obligation-based — no verbatim statement. "Know your limit, play within it." is the BCLC/GameSense tagline (a slogan), not a BC mandate. Both provinces require information display with no specific phrasing prescribed. |
 
 ### What the Standards require
 
@@ -507,7 +507,7 @@ Quick-reference table mapping every collateral category to Ontario-specific adap
 
 | Area | Ontario | BC |
 |---|---|---|
-| **Mandatory statement** | None | "Know your limit, play within it." |
+| **Mandatory statement** | None (obligation-based) | None (obligation-based); "Know your limit, play within it." is the BCLC/GameSense tagline, not a mandate |
 | **Helpline** | ConnexOntario 1-866-531-2600 | Gambling Support BC 1-888-795-6111 |
 | **Self-exclusion** | Dual system (OLG + iGaming) | Game Break (BCLC province-wide) |
 | **Deployment model** | Any of 70+ private operators OR OLG | BCLC service providers only |

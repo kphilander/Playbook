@@ -85,7 +85,7 @@ The national code aligns with {{PROGRAM_NAME}}'s existing approach — transpare
 
 | Province/Territory | Regulator | Operator | Legal age | Online gambling | Helpline | Module status |
 |---|---|---|---|---|---|---|
-| **British Columbia** | GPEB → IGCO (April 2026) | BCLC | 19 | PlayNow.com (BCLC) | 1-888-795-6111 | Planned |
+| **British Columbia** | GPEB → IGCO (April 2026) | BCLC | 19 | PlayNow.com (BCLC) | 1-888-795-6111 | [Complete](british-columbia/) |
 | **Ontario** | AGCO / iGO | OLG + private (iGaming) | 19 | Open market (April 2022) | 1-866-531-2600 | [Complete](ontario/) |
 | **Alberta** | AGLC / AiGC | AGLC + private (iGaming, mid-2026) | 18 | PlayAlberta.ca; open market launching mid-2026 | 1-866-332-2322 | [Complete](alberta/) |
 | **Quebec** | Loto-Québec / RAJ | Loto-Québec | 18 | Espacejeux.com | 1-800-461-0140 | Planned |
@@ -168,11 +168,9 @@ legal:
     canada-ontario: 19
     canada-alberta: 18
     canada-quebec: 18
-
-messaging:
-  mandatory:
-    canada-british-columbia: "Know your limit, play within it."
 ```
+
+> **No mandatory-messaging entries for these provinces.** British Columbia, Ontario, and Alberta are all **obligation-based** — operators must display the provincial help line and regulator-approved responsible-gambling messaging, but **no verbatim statement is prescribed**. "Know your limit, play within it." is the **BCLC/GameSense tagline** (a brand slogan), not a BC regulatory mandate, so there is no `messaging.mandatory.canada-british-columbia` token. Add `messaging.mandatory` entries only for provinces that genuinely require word-for-word text.
 
 This structure scales as new provincial modules are added.
 

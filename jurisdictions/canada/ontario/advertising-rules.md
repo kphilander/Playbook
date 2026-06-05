@@ -70,8 +70,8 @@ Unlike BC, Ontario does not have a single Crown corporation controlling all gamb
 
 | Area | Ontario | BC | Nevada |
 |---|---|---|---|
-| **Approach** | Standards-based (AGCO) + national code | Multi-layer (GPEB/IGCO + BCLC + national code) | Principles-based (Reg 5.011(4)) |
-| **Mandatory statement** | None | "Know your limit, play within it." | None |
+| **Approach** | Standards-based (AGCO) + national code | Multi-layer (GPEB/IGCO + BCLC + national code), single Crown operator | Principles-based (Reg 5.011(4)) |
+| **Mandatory statement** | None | None — obligation-based; "Know your limit, play within it." is the BCLC/GameSense tagline, not a mandate | None |
 | **Inducement advertising** | Sport betting inducements banned in public ads | Limited bonus prominence | No specific restriction |
 | **Athlete endorsements** | Banned (except RG advocacy) | Not specified | Not specified |
 | **National code** | CGA Code (enforceable) | CGA Code (enforceable) | AGA Code (voluntary) |
@@ -393,15 +393,14 @@ Ontario's required disclosures for gambling advertising:
 | Glossary | Reference document |
 | How-to-play guides | Educational content, not advertising |
 
-### Key simplification vs. BC
+### Key contrast with BC
 
-Ontario compliance is simpler than BC for advertising templates because:
-1. **No mandatory statement** — no `{{MANDATORY_STATEMENT}}` token needed
-2. **Fewer required elements** — primarily ConnexOntario + 19+ (vs. BC's statement + helpline + 19+ + GameSense)
-3. **Flexible phrasing** — {{PROGRAM_NAME}} on-brand language can be used without constraints
+Ontario and BC are both **obligation-based** — neither requires a verbatim statement, and neither needs a `{{MANDATORY_STATEMENT}}` token. (Note: "Know your limit, play within it." is the BCLC/GameSense **tagline**, not a BC mandate.) Both require a responsible-gambling message plus the provincial help line and a 19+ notice, with flexible phrasing.
 
-But Ontario adds one complexity BC doesn't have:
-4. **Sport betting inducement ban** — any content adjacent to bonus/inducement messaging requires careful separation
+The real differences are structural, not message-mandate:
+1. **Operator model** — BC is a single Crown operator (BCLC), so advertising is centrally vetted; Ontario has 70+ private operators advertising independently.
+2. **Sport betting inducement ban** — Ontario bans public advertising of sport-betting inducements (Std 2.05); BC has no equivalent because it has no competitive inducement market (BCLC centrally limits bonus prominence).
+3. **Program reference** — in BC, advertising sits alongside GameSense (BCLC's own program); in Ontario, GameSense is not present and PlaySmart is OLG-only.
 
 ---
 
