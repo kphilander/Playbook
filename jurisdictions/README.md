@@ -58,6 +58,11 @@ jurisdictions/
 │   ├── README.md                       # Full compliance module
 │   └── _brand-singapore.yml            # Jurisdiction config overrides
 │
+├── sweden/                             # National jurisdiction (online + betting)
+│   ├── README.md                       # Full compliance module
+│   ├── _brand-sweden.yml               # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference
+│
 ├── united-kingdom/                     # National jurisdiction (no sub-jurisdictions)
 │   ├── README.md                       # Full compliance module
 │   ├── _brand-uk.yml                   # Jurisdiction config overrides
@@ -127,6 +132,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 | Macau SAR | -- (standalone) | DICJ | Complete | [macau/](macau/) |
 | Malta | -- (national) | MGA | Complete | [malta/](malta/) |
 | Singapore | -- (standalone) | GRA | Complete | [singapore/](singapore/) |
+| Sweden | -- (national) | Spelinspektionen | Complete | [sweden/](sweden/) |
 | United Kingdom | -- (national) | Gambling Commission (UKGC) | Complete | [united-kingdom/](united-kingdom/) |
 | United States | California | CGCC / Tribal Gaming Commissions | Complete | [united-states/california/](united-states/california/) |
 | United States | Massachusetts | MGC | Complete | [united-states/massachusetts/](united-states/massachusetts/) |

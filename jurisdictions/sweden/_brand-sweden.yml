@@ -1,0 +1,147 @@
+# _brand-sweden.yml -- Sweden Overrides
+# ================================================
+# This file contains Sweden-specific overrides for _brand.yml.
+# Sweden has a centralized national regulatory model under
+# Spelinspektionen (the Swedish Gambling Authority) -- no
+# sub-jurisdictions for gambling purposes.
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in Sweden. Sweden has a single national
+#   support line (Stodlinjen), a single national self-exclusion
+#   register (Spelpaus.se), and national advertising rules
+#   enforced by Spelinspektionen and the Consumer Agency.
+#
+# Key features:
+#   - Statutory duty of care (omsorgsplikt): continuous monitoring,
+#     documented action plan, player contact
+#   - Mandatory deposit limit before online play; operator must
+#     contact players above SEK 10,000/month
+#   - Spelpaus.se national self-exclusion register (BankID)
+#   - Stodlinjen national support line
+#   - Bonus offers only on the first occasion of play
+#   - Land-based casino licensing abolished from 1 January 2026;
+#     the licensed market is online gambling and betting
+#
+# See: jurisdictions/sweden/README.md for the full Sweden module
+# ================================================
+
+
+# --- HELPLINES ---------------------------------
+# Sweden's national support line for problem gambling is Stodlinjen,
+# publicly funded (commissioned via the Public Health Agency of
+# Sweden) and independent of operators. Free and confidential, for
+# players, relatives, and professionals.
+
+helplines:
+  sweden:
+    number: "020-81 91 00"
+    website: "https://www.stodlinjen.se"
+    label: "Stodlinjen"
+    languages:
+      - Swedish
+    cost: "Free"
+    operated_by: "National Support Line (publicly funded, independent of operators)"
+    notes: "Phone and chat counselling plus a gambling self-test. Used as the problem-gambling support contact required in commercial communications (all channels except radio)."
+
+
+# --- LEGAL -------------------------------------
+# 18+ for all licensed gambling (online casino, online bingo,
+# betting). There is no lower age tier.
+
+legal:
+  minimum_gambling_age:
+    sweden: 18
+
+
+# --- MANDATORY MESSAGING ----------------------
+# Sweden does NOT have verbatim mandatory statements.
+# All requirements are obligation-based or standard-based:
+#   - 18+ minimum-age information in commercial communications
+#   - Problem-gambling support contact (Stodlinjen) in all
+#     channels except radio
+#   - Marketing must observe moderation (mattfullhet) -- note the
+#     statutory word is "moderation," not "special moderation"
+#     (the latter is case-law interpretation)
+#   - Mandatory deposit limit before online play
+#   - Bonus offers only on the first occasion of play
+#
+# The deposit-limit prompt is the closest to a "mandatory
+# statement" -- players must set a deposit limit before they can play.
+
+messaging:
+  mandatory:
+    # No verbatim mandatory statement in Swedish gambling law.
+    # The following are the key obligation/standard-based requirements:
+
+    sweden-deposit-limit-sv: "Du maste satta en insattningsgrans innan du kan spela."
+    sweden-deposit-limit-en: "You must set a deposit limit before you can play."
+
+    sweden-age-limit: "18+"
+
+    sweden-disclosure-template-sv: "18+ | Stodlinjen 020-81 91 00 | spelpaus.se"
+    sweden-disclosure-template-en: "18+ | Stodlinjen 020-81 91 00 | spelpaus.se"
+
+  # On-brand versions of required disclosures
+  on_brand:
+    sweden-helpline: "Need to talk? Stodlinjen is free, confidential, and independent. Call 020-81 91 00 or chat at stodlinjen.se."
+    sweden-self-exclusion: "Need a break? Register at spelpaus.se -- one stop covers every Swedish-licensed operator."
+    sweden-deposit-limit: "Set your deposit limit -- it's required before you start, and it keeps you in control."
+
+
+# --- SELF-EXCLUSION ----------------------------
+# Spelpaus.se is Sweden's national self-exclusion register. All
+# licensed operators must connect to it and check it at registration
+# and at every login.
+
+self_exclusion:
+  sweden:
+    program_name: "Spelpaus"
+    full_name: "Spelpaus.se (national self-exclusion register)"
+    url: "https://www.spelpaus.se"
+    info_url: "https://www.spelpaus.se/?lang=en"
+    durations:
+      - "1 month"
+      - "3 months"
+      - "6 months"
+      - "Indefinite (minimum 12 months)"
+    scope: "All Swedish-licensed operators (online gambling and betting); blocks gambling marketing"
+    enrollment_methods:
+      - "Online at spelpaus.se using BankID"
+    reinstatement: "Fixed-term exclusions expire automatically; no early exit. Indefinite exclusions can be ended after a minimum of 12 months."
+    marketing_cessation: "Self-excluded players may not be sent gambling marketing (Gambling Act ch.15 §2)"
+    operator_obligations:
+      - "Check Spelpaus at registration and at every login"
+      - "Deny access to all excluded players"
+      - "Close the account of any indefinitely excluded player"
+      - "Offer an immediate 24-hour self-exclusion option for online casino, online bingo, and computer-simulated machines"
+      - "Stop all marketing to self-excluded players"
+
+
+# --- PRESENTATION ------------------------------
+# Sweden uses decimal odds, SEK currency, and European
+# football as the primary sports-culture reference.
+
+presentation:
+  odds_format: decimal
+  currency: sek
+  currency_symbol: "kr"
+  sports_culture: european-football
+  language: sv
+  locale: sv-SE
+
+
+# --- REGULATOR ---------------------------------
+# Reference information for Spelinspektionen.
+
+regulator:
+  sweden:
+    name: "Spelinspektionen"
+    name_en: "Swedish Gambling Authority"
+    website: "https://www.spelinspektionen.se/en/"
+    email: "registrator@spelinspektionen.se"
+    phone: "+46 (0)152-650 100"
+    address: "Box 199, 645 23 Strangnas, Sweden"
+    legislation: "Gambling Act (Spellagen 2018:1138); Gambling Ordinance (2018:1475); regulations LIFS 2018:2"
+    duty_of_care: "Statutory duty of care (omsorgsplikt) -- continuous monitoring, documented action plan, and player contact; SEK 10,000/month contact trigger"
+    self_exclusion_register: "Spelpaus.se"
