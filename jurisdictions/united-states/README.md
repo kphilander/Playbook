@@ -127,7 +127,7 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 | **Nevada** | NGCB / NGC | 21 | Legal | Legal | No | Legal | No (constitutionally prohibited) | [Complete](nevada/) |
 | Alabama | — | 21 | No | No | No | No | No | Planned |
 | Alaska | — | 21 | No | No | No | No | No | Planned |
-| Arizona | ADG | 21 | Tribal | Legal | No | No | Yes | Planned |
+| **Arizona** | ADG | 21 | Tribal | Legal | No | No | Yes | [Complete](arizona/) |
 | Arkansas | ARC | 21 | Legal (4 casinos) | Legal | No | No | Yes | Planned |
 | **California** | CGCC / Tribal Gaming Commissions | 21 (alcohol casinos), 18 (non-alcohol casinos/lottery/racing) | Tribal (66 casinos) + cardrooms | No | No | No | Yes | [Complete](california/) |
 | Colorado | DORA/DGE | 21 | Legal | Legal | No | No | Yes | Planned |

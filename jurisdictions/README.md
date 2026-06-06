@@ -67,6 +67,10 @@ jurisdictions/
 │   ├── README.md                       # Federal framework, state table
 │   ├── _brand-us.yml                   # Country-level config overrides
 │   │
+│   ├── arizona/                        # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module (event wagering + tribal)
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
 │   ├── california/                     # Layer 2: Sub-jurisdiction
 │   │   └── README.md                   # Full compliance module (tribal compacts)
 │   │
@@ -128,6 +132,7 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 | Malta | -- (national) | MGA | Complete | [malta/](malta/) |
 | Singapore | -- (standalone) | GRA | Complete | [singapore/](singapore/) |
 | United Kingdom | -- (national) | Gambling Commission (UKGC) | Complete | [united-kingdom/](united-kingdom/) |
+| United States | Arizona | ADG | Complete | [united-states/arizona/](united-states/arizona/) |
 | United States | California | CGCC / Tribal Gaming Commissions | Complete | [united-states/california/](united-states/california/) |
 | United States | Massachusetts | MGC | Complete | [united-states/massachusetts/](united-states/massachusetts/) |
 | United States | Michigan | MGCB | Complete | [united-states/michigan/](united-states/michigan/) |
