@@ -71,15 +71,6 @@
       ],
       "text": "ADG Voluntary Self-Exclusion program with 1-year, 5-year, and 10-year options &mdash; no lifetime tier; self-exclusion is irrevocable for the elected period. Covers all state-licensed event wagering operators; enrollment via online form or in-person at ADG. Tribal casinos maintain separate self-exclusion lists under individual compacts."
     },
-    "5": {
-      "label": "ADG (Arizona)",
-      "ref": "A.A.C. R19-4-133 / R19-4-135 (Player Accounts); A.A.C. R19-4-150",
-      "src": "az-r19-4",
-      "verticals": [
-        "sports"
-      ],
-      "text": "Event wagering operators must offer player-set deposit limits, wager limits, and time-based limits. Players can decrease limits immediately; increases or removals are subject to a cooling-off period before taking effect."
-    },
     "6": {
       "label": "ADG (Arizona)",
       "ref": "A.A.C. R19-4-110 (Responsible Advertising)",
@@ -108,15 +99,6 @@
         "sports"
       ],
       "text": "Tribal-State Compacts typically require responsible-gaming signage at casino entrances, on the gaming floor, and at ATMs. Retail sportsbooks (state-licensed) must display the problem-gambling helpline and age-restriction notices in the wagering area."
-    },
-    "9": {
-      "label": "ADG (Arizona)",
-      "ref": "A.A.C. R19-4-150 (Self-Exclusion and Responsible Gaming)",
-      "src": "az-r19-4",
-      "verticals": [
-        "sports"
-      ],
-      "text": "Event wagering operators must train employees who interact with players to identify signs of problem gambling and refer players to the helpline. Training must be completed at hire and refreshed periodically. Tribal casinos run their own training programs under compact obligations."
     },
     "10": {
       "label": "ADG (Arizona)",
