@@ -99,12 +99,12 @@ There are no sub-national gambling regulators. All requirements apply uniformly 
 
 | Change | Effective date | Impact |
 |---|---|---|
-| **Land-based casino abolition** | 1 January 2026 | State land-based casino licensing ended; the last Casino Cosmopol closed April 2025. The licensable market is now online gambling and betting. *(Verify the exact amending instrument before publishing -- see operator caveat below.)* |
+| **Land-based casino abolition** | 1 January 2026 | State land-based casino licensing ended; the last Casino Cosmopol closed April 2025. The licensable market is now online gambling and betting. *(Implemented by SFS 2025:291, repealing Spellagen ch. 5 §§ 3-6.)* |
 | **B2B software supplier licence** | In force 1 July 2023 | Suppliers of gambling software to licensed operators must hold a Spelinspektionen authorisation |
 | **Updated Gambling Act consolidation** | In force (SFS 2024:255) | Latest consolidated amendments to Spellagen 2018:1138 |
 | **Updated Gambling Ordinance consolidation** | In force (SFS 2023:310) | Latest consolidated amendments to Spelforordningen 2018:1475 |
 
-> **Operator caveat**: The land-based casino abolition (effective 1 January 2026) is corroborated by regulator context and reporting, but the exact SFS amending instrument / government bill was not located in an official gazette at the time of writing. Confirm the citing instrument before publishing the "abolished" framing -- it is the basis for treating land-based casino as a non-licensable vertical in this module.
+> **Primary instrument**: The land-based casino abolition (effective 1 January 2026) is implemented by **SFS 2025:291** (Lag om andring i spellagen (2018:1138)), which repeals Spellagen chapter 5 §§ 3-6; legislative chain prop. 2024/25:73 "Avveckling av statliga kasinon", bet. 2024/25:KrU9, rskr. 2024/25:171 (Riksdag decision 2 April 2025). Note: the AML (penningtvatt) changes in the same reform package took effect 1 July 2025, but the casino-abolition provisions take effect 1 January 2026.
 
 *Source: [Spelinspektionen -- rules and regulation](https://www.spelinspektionen.se/en/rules-and-regulation/eng-spelansvar-omsorgsplikt/)*
 
