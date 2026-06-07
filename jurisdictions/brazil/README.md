@@ -91,7 +91,7 @@ last_updated: "2026-06-05"
 
 - The federal regime is new (live 1 January 2025) and still maturing. The SPA continues to issue Portarias refining technical, payment, and player-protection rules.
 - Portaria SPA/MF no 2.579/2025 introduced centralized self-exclusion and mandatory prudential self-limits (time and bet value) set at registration. Expect further player-protection tightening.
-- Permitted payment instruments are governed by SPA technical Portarias together with Banco Central rules (Pix and debit are central; restrictions apply to other instruments). Verify the current permitted-instrument list before asserting any specific ban.
+- Permitted payment instruments are set by **Portaria Normativa SPA/MF no 615/2024** (16 April 2024): Pix, TED, debit and prepaid cards are permitted (funded only from the bettor's own registered account); credit cards, boleto, cash and cryptoassets are prohibited as funding methods.
 
 ---
 
@@ -373,7 +373,7 @@ All collateral in Brazil must display the **18+** mark (or "proibido para menore
 | **AML framework** | Brazilian AML law (Lei no 9.613/1998) and SPA/MF Portarias; operators are obligated persons for prevention of money laundering and terrorism financing |
 | **Identity verification** | CPF + mandatory facial-recognition verification at onboarding |
 | **Payment controls** | Prizes and balances move exclusively through the bettor's own bank/payment account at a Banco Central-authorized institution -- **no third-party payments** (Lei 14.790/2023, Art. 30) |
-| **Permitted instruments** | Set by SPA technical Portarias together with Banco Central rules (Pix and debit are central). **Verify the current permitted/banned-instrument list before asserting specifics.** |
+| **Permitted instruments** | Portaria Normativa SPA/MF no 615/2024: Pix, TED, debit and prepaid cards permitted (from the bettor's own account); credit cards, boleto, cash and cryptoassets prohibited as funding methods |
 | **Player-facing impact** | Identity and facial verification at registration; payouts only to the player's own account |
 
 **Source**: [Lei 14.790/2023, Art. 30](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm) | [SPA legislacao index](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao)
