@@ -6,7 +6,7 @@
   "card": {
     "name": "Arizona Department of Gaming (ADG)",
     "juris": "Arizona, United States",
-    "desc": "A.R.S. Title 5 Chapter 12 (Event Wagering); A.A.C. R19-4; Tribal-State Gaming Compacts"
+    "desc": "A.R.S. Title 5 Chapter 11 (Event Wagering); A.A.C. R19-4; Tribal-State Gaming Compacts"
   },
   "landBasedOnly": false,
   "verticalLimitation": {
@@ -53,7 +53,7 @@
     },
     "3": {
       "label": "ADG (Arizona)",
-      "ref": "A.A.C. R19-4-150; A.R.S. § 5-1320(F)",
+      "ref": "A.A.C. R19-4-150; A.R.S. § 5-1320(A)",
       "src": "az-helpline",
       "verticals": [
         "casino",
