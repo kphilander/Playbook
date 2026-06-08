@@ -27,17 +27,18 @@ adaptation_notes: |
   blunt/open). On-brand messaging examples throughout need adaptation
   for non-US deployments. Currency is USD. Helpline is 1-800-GAMBLER.
   Pennsylvania has all verticals: land-based casino, online casino (iGaming),
-  online poker, and sports betting. Self-exclusion has separate programs
-  for casino and interactive gaming.
-last_updated: 2026-03-22
+  online poker, sports betting, video gaming terminals (VGTs), and fantasy
+  contests. Self-exclusion has four separate programs: casino, interactive
+  gaming, video gaming terminals, and fantasy contests.
+last_updated: 2026-06-08
 ---
 
 # Pennsylvania -- Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Pennsylvania. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Pennsylvania uses a prescriptive model with specific advertising font size requirements, a verbatim helpline message for interactive gaming, and detailed player protection tool mandates. Pennsylvania has separate self-exclusion programs for casino and interactive gaming. Pennsylvania is the largest US online gambling revenue state, with all verticals legal: land-based casino, online casino (iGaming), online poker, and sports betting.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Pennsylvania. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Pennsylvania uses a prescriptive model with specific advertising font size requirements, a verbatim helpline message for interactive gaming, and detailed player protection tool mandates. Pennsylvania runs four separate self-exclusion programs: casino, interactive gaming, video gaming terminals (VGTs), and fantasy contests. Pennsylvania is the largest US online gambling revenue state, with all verticals legal: land-based casino, online casino (iGaming), online poker, sports betting, video gaming terminals, and fantasy contests.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -50,9 +51,11 @@ last_updated: 2026-03-22
 | [Helpline](#helpline) | 1-800-GAMBLER display rules |
 | [Messaging requirements](#messaging-requirements) | Verbatim iGaming message + obligation-based signage |
 | [Advertising restrictions](#advertising-restrictions) | Prescriptive font size rules, required disclosures |
-| [Self-exclusion](#self-exclusion) | Casino (503a) and interactive gaming (815a) programs |
+| [Self-exclusion](#self-exclusion) | Four programs: casino (503a), interactive gaming (815a), VGT (1119a), fantasy (1209a) |
 | [Player protection -- land-based](#player-protection--land-based) | Venue-specific requirements |
 | [Player protection -- interactive](#player-protection--interactive) | Deposit/loss/time limits, session pop-ups |
+| [Video gaming terminals (VGTs)](#video-gaming-terminals-vgts) | Signage, training, advertising, self-exclusion (1118a/1119a) |
+| [Fantasy contests](#fantasy-contests) | Advertising, signage, self-exclusion (1207a/1208a/1209a) |
 | [Age verification](#age-verification) | 21+ requirements |
 | [AML/KYC](#amlkyc) | FinCEN/BSA requirements |
 | [Collateral adaptation](#collateral-adaptation) | Quick reference for all touchpoints |
@@ -68,7 +71,7 @@ last_updated: 2026-03-22
 | **Primary regulator** | Pennsylvania Gaming Control Board (PGCB) |
 | **Website** | [gamingcontrolboard.pa.gov](https://gamingcontrolboard.pa.gov/) |
 | **Governing legislation** | 4 Pa.C.S. (Pennsylvania Race Horse Development and Gaming Act, Act 71 of 2004; expanded by Act 42 of 2017) |
-| **Regulations** | 58 Pa. Code, Subparts I (land-based), L (interactive gaming), Q (sports wagering) |
+| **Regulations** | 58 Pa. Code, Subparts I (land-based), L (interactive gaming), Q (sports wagering), V (video gaming terminals), and the fantasy contest subpart (Chapters 1207a-1209a) |
 | **Office of Compulsive and Problem Gambling (OCPG)** | Division within PGCB; oversees responsible gambling programs, approves signage and messaging |
 | **Established** | 2004 (Act 71) |
 | **Regulatory approach** | Prescriptive |
@@ -94,6 +97,12 @@ The PGCB is an independent state agency with seven commissioners. Unlike Nevada'
 | 58 Pa. Code Chapter 814a | [pacodeandbulletin.gov -- 814a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter814a/chap814atoc.html) | Interactive gaming compulsive and problem gambling requirements |
 | 58 Pa. Code Chapter 815a | [pacodeandbulletin.gov -- 815a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter815a/chap815atoc.html) | Interactive gaming self-exclusion |
 | 58 Pa. Code Chapter 1410a | [pacodeandbulletin.gov -- 1410a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1410a/chap1410atoc.html) | Sports wagering compulsive and problem gambling |
+| 58 Pa. Code Chapter 1411a | [pacodeandbulletin.gov -- 1411a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1411a/chap1411atoc.html) | Sports wagering self-excluded persons |
+| 58 Pa. Code Chapter 1118a | [pacodeandbulletin.gov -- 1118a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1118a/chap1118atoc.html) | Video gaming terminals -- compulsive and problem gaming (signage, training, advertising) |
+| 58 Pa. Code Chapter 1119a | [pacodeandbulletin.gov -- 1119a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1119a/chap1119atoc.html) | Video gaming terminals -- self-exclusion |
+| 58 Pa. Code Chapter 1207a | [pacodeandbulletin.gov -- 1207a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1207a/chap1207atoc.html) | Fantasy contest advertising |
+| 58 Pa. Code Chapter 1208a | [pacodeandbulletin.gov -- 1208a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1208a/chap1208atoc.html) | Fantasy contest compulsive and problem gaming (signage, information) |
+| 58 Pa. Code Chapter 1209a | [pacodeandbulletin.gov -- 1209a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1209a/chap1209atoc.html) | Fantasy contest self-exclusion |
 
 ---
 
@@ -114,10 +123,10 @@ The PGCB is an independent state agency with seven commissioners. Unlike Nevada'
 | Sports betting | Land-based + Interactive | Legal | PGCB | Retail and mobile; authorized by Act 42 of 2017 |
 | Online casino (iGaming) | Interactive | Legal | PGCB | Slots + table games; authorized by Act 42 of 2017; live since July 2019 |
 | Online poker | Interactive | Legal | PGCB | Part of iGaming authorization |
-| Video Gaming Terminals (VGTs) | Land-based | Legal | PGCB | Truck stops and qualified establishments |
+| Video Gaming Terminals (VGTs) | Land-based | Legal | PGCB | Truck stops and qualified establishments; RG obligations under Chapters 1118a/1119a (see [VGT section](#video-gaming-terminals-vgts)) |
 | Lottery | Both | Legal | PA Lottery (separate) | Not under PGCB jurisdiction |
 | Horse racing (pari-mutuel) | Land-based | Legal | PA Horse Racing Commission | Separate regulatory body |
-| Fantasy sports contests | Interactive | Legal | PGCB | Regulated under Chapter 1208a |
+| Fantasy contests | Interactive | Legal | PGCB | RG obligations under Chapters 1207a (advertising), 1208a (signage/information), and 1209a (self-exclusion) (see [Fantasy contests section](#fantasy-contests)) |
 
 ### Licensing model
 
@@ -179,10 +188,18 @@ Verbatim message required on login/logout screens:
 
 *(or Board-approved equivalent)*
 
-Player protection pages must also include direct links to:
+Under 814a.1(g)(3), the player protection page must also carry direct links to:
 - Council on Compulsive Gambling of Pennsylvania website
-- DDAP gambling addiction treatment provider list
+- DDAP treatment provider list
 - PGCB Office of Compulsive and Problem Gaming webpage
+
+It must additionally include Board-approved informational materials, reviewed and updated annually, covering:
+- The rules of responsible gambling
+- Common myths about gambling
+- The risks associated with gambling
+- The signs and symptoms of a gambling problem
+- The Board's self-exclusion brochure
+- The rules governing self-imposed limits (a list of each limit type and how to enroll)
 
 ### On-brand helpline display
 
@@ -203,9 +220,11 @@ Player protection pages must also include direct links to:
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
 | iGaming login/logout | Verbatim | "IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, HELP IS AVAILABLE, CALL 1-800-GAMBLER" | 58 Pa. Code 814a.1 |
-| All advertising | Standard-based | Gambling assistance message with DDAP helpline number (1-800-GAMBLER) | 58 Pa. Code 501a.7(d) |
+| All advertising | Standard-based | Gambling assistance message with DDAP helpline number (1-800-GAMBLER); font sizing per 501a.7(e)(1)-(4) | 58 Pa. Code 501a.7(d), (e) |
 | Venue signage | Obligation-based | OCPG-approved gambling assistance message; minimum 20 signs at specified locations | 58 Pa. Code 501a.5 |
 | Promotions (iGaming) | Standard-based | Must include "If you or someone you know has a gambling problem, help is available. Call 1-800-GAMBLER." | 58 Pa. Code 813a.3 |
+| VGT advertising | Standard-based | Gambling assistance message; must comply with 501a.7 | 58 Pa. Code 1118a.4 |
+| Fantasy advertising | Standard-based | "If you or someone you know has a gambling problem, help is available. Call (1-800-GAMBLER)." when directed to PA participants | 58 Pa. Code 1207a.1(c) |
 
 ### Verbatim required statements
 
@@ -220,7 +239,7 @@ Player protection pages must also include direct links to:
 | Venue signage | Gambling assistance message with helpline (OCPG-approved text) | 20+ locations: entrances/exits, ATMs, cash dispensing machines | 58 Pa. Code 501a.5 |
 | Advertising | Gambling assistance message with DDAP helpline number | All gaming advertisements | 58 Pa. Code 501a.7(d) |
 | Patron education | Printed material on compulsive and problem gambling, self-exclusion, treatment services | Distributed within licensed facilities | 58 Pa. Code 501a.2 |
-| iGaming protection page | Helpline info, links to CCGP, DDAP, and OCPG | Accessible page on all iGaming platforms | 58 Pa. Code 814a.1 |
+| iGaming protection page | Helpline info; links to CCGP, DDAP, and OCPG; Board-approved materials on RG rules, myths, risks, signs/symptoms of a gambling problem, the self-exclusion brochure, and self-imposed limit rules | Accessible page on all iGaming platforms | 58 Pa. Code 814a.1(g)(3) |
 
 ### On-brand integration
 
@@ -251,16 +270,18 @@ Player protection pages must also include direct links to:
 | Disclose conditions | All conditions and limiting factors must be clearly disclosed | All | 58 Pa. Code 501a.7 |
 | Co-branding (iGaming) | Certificate holder and operator names/logos displayed equally and prominently | Interactive | 58 Pa. Code 813a.2 |
 | No floor solicitation | Cannot employ individuals to persuade patrons to gamble on the gaming floor | Land-based | 58 Pa. Code 501a.7 |
-| OCPG discontinuation power | OCPG can require immediate discontinuation of harmful ads | All | 58 Pa. Code 501a.7 |
+| OCPG discontinuation power | OCPG can require immediate discontinuation of harmful ads | All | 58 Pa. Code 501a.7; 1207a.1(d) |
+| VGT advertising | Must carry the gambling assistance message and comply with 501a.7 standards | VGT | 58 Pa. Code 1118a.4 |
+| Fantasy advertising | Must carry the gambling assistance message when directed to PA participants; no false/misleading claims; net-winnings parity | Fantasy | 58 Pa. Code 1207a.1 |
 
-### Font size standards (501a.7)
+### Font size standards (501a.7(e))
 
-| Medium | Minimum size | Notes |
-|---|---|---|
-| **Print** | 2% of ad height/width (whichever is greater), or match majority font size | Whichever standard produces larger text |
-| **Billboards** | 5% of billboard height or width | |
-| **Video/TV** | 2% of image size throughout, OR 8% on dedicated end screen (last 3 seconds) | Operator choice of approach |
-| **Websites** | Match majority webpage text size; 2% for gaming-specific ads | |
+| Medium | Minimum size | Source | Notes |
+|---|---|---|---|
+| **Print** | 2% of ad height/width (whichever is greater), or match majority font size | 501a.7(e)(1) | Whichever standard produces larger text |
+| **Billboards** | 5% of billboard height or width | 501a.7(e)(2) | |
+| **Video/TV** | 2% of image size throughout, OR 8% on dedicated end screen (last 3 seconds) | 501a.7(e)(3) | Operator choice of approach |
+| **Websites** | Match majority webpage text size; 2% for gaming-specific ads | 501a.7(e)(4) | |
 
 ### Channel-specific rules (iGaming -- 813a.2)
 
@@ -292,7 +313,7 @@ For a detailed advertising reference, see [advertising-rules.md](advertising-rul
 
 ## Self-exclusion
 
-Pennsylvania operates **separate self-exclusion programs** for casino and interactive gaming:
+Pennsylvania operates **four separate self-exclusion programs**, one for each regulated vertical: casino (503a), interactive gaming including online sports wagering (815a), video gaming terminals (1119a), and fantasy contests (1209a). A player must enroll in each program that covers the products they use; enrollment in one does not exclude them from the others. The PGCB lists all four at [responsibleplay.pa.gov/self-exclusion](https://responsibleplay.pa.gov/self-exclusion/).
 
 ### Casino self-exclusion (58 Pa. Code Chapter 503a)
 
@@ -323,17 +344,53 @@ Pennsylvania operates **separate self-exclusion programs** for casino and intera
 | **Reinstatement (lifetime)** | Petition after 10 years with problem gambling assessment and treatment documentation |
 | **Source** | [58 Pa. Code 815a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter815a/chap815atoc.html) |
 
-### Sports wagering self-exclusion (58 Pa. Code 1410a.1)
+### Sports wagering self-exclusion (58 Pa. Code Chapter 1411a; 1410a.1)
 
-Sports wagering is covered through the **cross-reference provisions** in 1410a.1, which requires sports wagering operators to comply with the compulsive and problem gambling provisions of Subparts I (land-based, including 503a) and L (interactive, including 815a). Sports bettors enroll through either the casino or interactive gaming self-exclusion program depending on whether they use retail or mobile.
+Sports wagering self-exclusion is governed by its own dedicated chapter, **1411a (Sports Wagering Self-Excluded Persons)**. Under **1411a.1**, sports wagering certificate holders and operators must comply with the existing self-exclusion provisions for retail and interactive operations and amend their self-exclusion plans to cover sports wagering. The cross-reference mechanism in **1410a.1** ties sports wagering to the compulsive and problem gambling provisions of Subparts I (land-based, including 503a) and L (interactive, including 815a). In practice, a sports bettor's exclusion rides on the casino program (retail) or the interactive gaming program (mobile/online), but the controlling instrument is Chapter 1411a.
+
+| Field | Value |
+|---|---|
+| **Program name** | Sports Wagering Self-Excluded Persons |
+| **Governing chapter** | 58 Pa. Code Chapter 1411a; cross-referenced by 1410a.1 |
+| **Operator duty** | Comply with retail/interactive self-exclusion rules; amend the self-exclusion plan to include sports wagering |
+| **Enrollment** | Through the casino (503a) or interactive gaming (815a) program, depending on retail vs. mobile |
+| **Source** | [58 Pa. Code 1411a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1411a/chap1411atoc.html) |
+
+### Video gaming terminal self-exclusion (58 Pa. Code Chapter 1119a)
+
+A distinct program covering video gaming terminals at truck stops and qualified establishments.
+
+| Field | Value |
+|---|---|
+| **Program name** | Video Gaming Self-Exclusion |
+| **Duration options** | 1 year, 5 years, or lifetime |
+| **Scope** | All licensed video gaming establishments in Pennsylvania |
+| **Establishment duty** | Train staff to identify self-excluded persons; deny access and report the presence of an excluded person to the OCPG/Bureau (1119a.5) |
+| **Marketing cessation** | No promotional materials or solicitations to self-excluded persons |
+| **Reinstatement (1/5 year)** | Removal upon request after the period expires |
+| **Reinstatement (lifetime)** | Petition after 10 years with documentation of a completed problem gambling assessment and treatment |
+| **Source** | [58 Pa. Code 1119a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1119a/chap1119atoc.html) |
+
+### Fantasy contest self-exclusion (58 Pa. Code Chapter 1209a)
+
+The fourth program, administered by the OCPG, covering fantasy contests.
+
+| Field | Value |
+|---|---|
+| **Program name** | Fantasy Contest Self-Exclusion |
+| **Duration options** | Minimum 1 year (player-selected period of at least one year) |
+| **Scope** | All licensed fantasy contest operators in Pennsylvania |
+| **Operator duty** | Refuse entries, deny contest participation, and stop marketing to self-excluded participants; maintain the fantasy self-exclusion list (1209a.3, 1209a.4) |
+| **Reinstatement** | Removal after the selected period, per 1209a.5 |
+| **Source** | [58 Pa. Code 1209a](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1209a/chap1209atoc.html) |
 
 ### {{PROGRAM_NAME}} language mapping
 
 | Context | {{PROGRAM_NAME}} term | Official term | When to use official term |
 |---|---|---|---|
 | Tier 1 (casual) | "Take a break" / "Pause your account" | Self-Exclusion | Never in Tier 1 |
-| Tier 2 (formal) | "Self-exclusion" | Casino Self-Exclusion / Interactive Gaming Self-Exclusion | Legal documents, formal enrollment |
-| Staff training | Both | Self-Exclusion (specify casino or interactive) | When explaining the program's official name |
+| Tier 2 (formal) | "Self-exclusion" | Casino / Interactive Gaming / Video Gaming / Fantasy Contest Self-Exclusion | Legal documents, formal enrollment |
+| Staff training | Both | Self-Exclusion (specify which of the four programs) | When explaining the program's official name |
 
 ### Staff FAQ addition
 
@@ -341,7 +398,7 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 > **Q: How does self-exclusion work in Pennsylvania?**
 >
-> Pennsylvania has two separate self-exclusion programs: one for casinos (all licensed facilities statewide) and one for interactive gaming (online casino, online poker, and sports betting). Players choose 1-year, 5-year, or lifetime exclusion. They can enroll online through the PGCB website, in person at Board offices, or at a licensed facility. During exclusion, they cannot enter gaming floors or access online accounts. Any winnings during exclusion are forfeited to the Board to fund compulsive gambling programs. If a player asks about it, explain the options and offer to help them get started. Use "take a break" in casual conversation, "self-exclusion" when referring to the specific program.
+> Pennsylvania has four separate self-exclusion programs, one per vertical: casinos (all licensed facilities statewide), interactive gaming (online casino, online poker, and sports betting), video gaming terminals, and fantasy contests. A player has to sign up for each program that covers what they play -- joining one does not cover the others. The casino, interactive gaming, and VGT programs offer 1-year, 5-year, or lifetime exclusion; the fantasy program runs for a player-chosen period of at least one year. Players can enroll online through the PGCB website, in person at Board offices, or at a licensed facility. During exclusion, they cannot enter gaming floors or access online accounts. Any winnings during exclusion are forfeited to the Board to fund problem gambling programs. If a player asks about it, explain the options and offer to help them get started. Use "take a break" in casual conversation, "self-exclusion" when referring to the specific program.
 
 ---
 
@@ -406,6 +463,54 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 | Session limits | "Set a session timer -- get a heads-up when you've been playing a while." | 58 Pa. Code 814a.1; 814a.2 |
 | Account suspension | "Need a break? Pause your account for 72 hours or longer. You can still withdraw your funds." | 58 Pa. Code 814a.2 |
 | Hourly pop-up | "Quick check-in: you've been playing for [X] and wagered [$Y]. Want to keep going or take a break?" | 58 Pa. Code 814a.1 |
+
+---
+
+## Video gaming terminals (VGTs)
+
+Pennsylvania permits video gaming terminals at qualified truck stops and establishments. VGT establishment licensees carry their own compulsive-and-problem-gaming and self-exclusion obligations under **58 Pa. Code Chapters 1118a and 1119a** -- these are separate from the casino (501a/503a) and interactive (814a/815a) regimes and apply to any {{PROGRAM_NAME}} deployment that touches VGT establishments.
+
+### Required obligations (58 Pa. Code Chapter 1118a)
+
+| Tool / Obligation | Required? | Details | Source |
+|---|---|---|---|
+| Helpline / problem-gaming signage | Yes | Post the gambling assistance message ("If you or someone you know has a gambling problem, help is available. Call (1-800-GAMBLER).") within the video gaming area and above or below the cash-dispensing opening of each ATM | 58 Pa. Code 1118a.1 |
+| Underage-entry signage | Yes | Post the notice that it is unlawful for anyone under 21 to enter the video gaming area, at the entrance | 58 Pa. Code 1118a.1 |
+| Problem-gaming information | Yes | Make problem-gaming information available to patrons | 58 Pa. Code 1118a.2 |
+| Employee training | Yes | Conduct problem-gaming training for staff | 58 Pa. Code 1118a.3 |
+| Advertising compliance | Yes | VGT advertising must carry the gambling assistance message and comply with 501a.7 standards | 58 Pa. Code 1118a.4 |
+| Self-exclusion | Yes | Video gaming self-exclusion program; 1/5/lifetime options | 58 Pa. Code 1119a |
+| Penalties | -- | Noncompliance is subject to Board enforcement | 58 Pa. Code 1118a.5 |
+
+### {{PROGRAM_NAME}} tool messaging -- VGT
+
+| Tool | {{PROGRAM_NAME}} copy | Context |
+|---|---|---|
+| Area signage | "Playing the machines? Free, confidential help is here 24/7: 1-800-GAMBLER." | 58 Pa. Code 1118a.1 (subject to OCPG approval) |
+| Self-exclusion info | "Want to take a break from video gaming? Pennsylvania has a self-exclusion program just for it. Ask any team member." | 58 Pa. Code 1119a |
+
+---
+
+## Fantasy contests
+
+Pennsylvania regulates fantasy contests through a dedicated set of chapters. Fantasy operators carry advertising, problem-gaming, and self-exclusion obligations under **58 Pa. Code Chapters 1207a, 1208a, and 1209a** that apply to any {{PROGRAM_NAME}} fantasy deployment.
+
+### Required obligations
+
+| Tool / Obligation | Required? | Details | Source |
+|---|---|---|---|
+| Advertising gambling assistance message | Yes | Any advertisement directed to PA participants must include "If you or someone you know has a gambling problem, help is available. Call (1-800-GAMBLER)."; no false/misleading claims; net-winnings parity | 58 Pa. Code 1207a.1 |
+| OCPG discontinuation power | Yes | OCPG may order discontinuation of a fantasy advertisement by written notice | 58 Pa. Code 1207a.1(d) |
+| Problem-gaming signage | Yes | Display the gambling assistance message / problem-gaming notice | 58 Pa. Code 1208a.1 |
+| Problem-gaming information | Yes | Maintain a responsible-gaming page with links to treatment resources and OCPG materials | 58 Pa. Code 1208a.2 |
+| Self-exclusion | Yes | Fantasy contest self-exclusion program; minimum 1-year period | 58 Pa. Code 1209a |
+
+### {{PROGRAM_NAME}} tool messaging -- fantasy
+
+| Tool | {{PROGRAM_NAME}} copy | Context |
+|---|---|---|
+| Responsible-gaming page | "Questions about your play? Free, confidential support is one tap away -- 24/7. Call 1-800-GAMBLER." | 58 Pa. Code 1208a.2 |
+| Self-exclusion info | "Need to step away from contests? You can self-exclude for a year or more. Here's how." | 58 Pa. Code 1209a |
 
 ---
 
@@ -476,8 +581,8 @@ All collateral in this jurisdiction must display `21+` age notice:
 | **Video/Audio** | TV spot | Both | 2% throughout or 8% end screen (3 sec); co-branding for iGaming | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | Radio spot | Both | 1-800-GAMBLER; co-branding for iGaming | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | Pre-roll | Interactive | 2-8% sizing; co-branding | `{{HELPLINE_NUMBER}}` |
-| **Customer service** | Conversation scripts | Both | Self-exclusion info (both casino and interactive programs); PGCB contact info | `{{SELF_EXCLUSION_URL}}` |
-| **Customer service** | Staff FAQ | Both | Add PA-specific Q&As (two self-exclusion programs, treatment referral procedures) | N/A |
+| **Customer service** | Conversation scripts | Both | Self-exclusion info (all four programs: casino, interactive, VGT, fantasy); PGCB contact info | `{{SELF_EXCLUSION_URL}}` |
+| **Customer service** | Staff FAQ | Both | Add PA-specific Q&As (four self-exclusion programs, treatment referral procedures) | N/A |
 
 ---
 
@@ -524,7 +629,7 @@ Complete before launching {{PROGRAM_NAME}} in Pennsylvania.
 - [ ] Identified PGCB as primary regulator; OCPG as responsible gambling office
 - [ ] Confirmed licensing requirements (Category 1-4 casino licenses; interactive gaming certificates)
 - [ ] Verified legal gambling age: 21+
-- [ ] Reviewed permitted products table (all verticals: land-based, iGaming, sports betting)
+- [ ] Reviewed permitted products table (all verticals: land-based, iGaming, sports betting, VGTs, fantasy contests)
 - [ ] Checked for pending regulatory changes
 - [ ] Identified deployment verticals: [ ] Land-based [ ] Interactive [ ] Both
 
@@ -534,7 +639,7 @@ Complete before launching {{PROGRAM_NAME}} in Pennsylvania.
 - [ ] 1-800-GAMBLER displayed per jurisdiction rules (land-based and interactive)
 - [ ] Age notice (21+) on all player-facing content
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Pennsylvania values
-- [ ] iGaming protection page includes links to CCGP, DDAP, and OCPG
+- [ ] iGaming protection page includes links to CCGP, DDAP, and OCPG, plus Board-approved materials on RG rules, myths, risks, signs/symptoms, the self-exclusion brochure, and self-imposed limit rules (814a.1(g)(3))
 
 ### Advertising
 - [ ] All ads include 1-800-GAMBLER with prescribed font sizing
@@ -548,8 +653,11 @@ Complete before launching {{PROGRAM_NAME}} in Pennsylvania.
 ### Self-exclusion
 - [ ] Casino: statewide self-exclusion program integrated (503a)
 - [ ] Interactive: interactive gaming self-exclusion integrated (815a)
-- [ ] Self-excluded patrons removed from all marketing (both programs)
-- [ ] Staff trained on self-exclusion enrollment and enforcement
+- [ ] Sports wagering: self-exclusion plan amended to cover sports wagering (1411a; 1410a.1)
+- [ ] VGT: video gaming self-exclusion integrated, if deploying to VGT establishments (1119a)
+- [ ] Fantasy: fantasy contest self-exclusion integrated, if offering fantasy contests (1209a)
+- [ ] Self-excluded patrons removed from all marketing (every applicable program)
+- [ ] Staff trained on self-exclusion enrollment and enforcement across applicable programs
 - [ ] Winnings forfeiture process implemented for excluded persons
 - [ ] Self-exclusion language mapped to {{PROGRAM_NAME}} tiers
 
@@ -573,6 +681,20 @@ Complete before launching {{PROGRAM_NAME}} in Pennsylvania.
 - [ ] Limit decrease effective immediately; increase requires expiration + reaffirmation
 - [ ] No gaming communications to suspended accounts
 
+### Video gaming terminals (if applicable)
+- [ ] Problem-gaming signage posted in video gaming area and at ATM cash-dispensing openings (1118a.1)
+- [ ] Underage-entry (under 21) signage posted at the entrance (1118a.1)
+- [ ] Problem-gaming information available to patrons (1118a.2)
+- [ ] Staff problem-gaming training conducted (1118a.3)
+- [ ] VGT advertising carries the gambling assistance message and meets 501a.7 sizing (1118a.4)
+- [ ] Video gaming self-exclusion integrated (1119a)
+
+### Fantasy contests (if applicable)
+- [ ] Fantasy advertising to PA participants includes the gambling assistance message; no false/misleading claims (1207a.1)
+- [ ] Problem-gaming signage/notice displayed (1208a.1)
+- [ ] Responsible-gaming page with treatment-resource and OCPG links maintained (1208a.2)
+- [ ] Fantasy contest self-exclusion integrated (1209a)
+
 ### Age verification
 - [ ] Land-based: age verification at gaming floor entry
 - [ ] Interactive: electronic identity verification at registration
@@ -580,7 +702,7 @@ Complete before launching {{PROGRAM_NAME}} in Pennsylvania.
 ### Content
 - [ ] All collateral adapted per collateral adaptation table
 - [ ] Staff FAQ updated with Pennsylvania-specific Q&As
-- [ ] Conversation scripts updated with dual self-exclusion program info
+- [ ] Conversation scripts updated with all applicable self-exclusion program info (casino, interactive, VGT, fantasy)
 
 ### Governance
 - [ ] `_brand.yml` updated with Pennsylvania values
