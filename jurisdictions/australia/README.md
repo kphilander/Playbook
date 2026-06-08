@@ -23,50 +23,56 @@ verticals: [land-based, interactive]
 regulatory_approach: prescriptive
 adaptation_status: base
 adaptation_notes: |
-  Australia is a separate-regimes jurisdiction. Online wagering is
-  regulated FEDERALLY (ACMA under the Interactive Gambling Act 2001 plus
-  the National Consumer Protection Framework); land-based gambling is
-  regulated by STATE and TERRITORY governments. Online casino-style
-  gaming and online in-play betting are ILLEGAL — never present
-  Playbook online-casino collateral for the Australian market. Use AUD
-  currency, decimal odds, and Australian English (licence, organisation,
-  recognise). The seven mandated taglines and the National Gambling
-  Helpline call to action are verbatim federal requirements for online
-  wagering advertising; each platform draws from its own permitted
-  subset, rotated equally over 12 months. The land-based layer in this
-  module is illustrated with New South Wales (NSW) as the primary worked
-  example and Victoria (VIC) as a second worked example of the
-  mandatory-code-plus-Ministerial-Direction pattern; a full national
-  land-based build still needs a per-state pass.
-last_updated: 2026-06-05
+  Australia is a federation. Gambling is regulated PRIMARILY by the
+  eight STATES and TERRITORIES — each has its own regulator, its own
+  gambling Act, and its own responsible-gambling code of practice,
+  self-exclusion scheme, venue signage rules, and staff-training
+  requirements. A narrower FEDERAL overlay (ACMA under the Interactive
+  Gambling Act 2001 plus the National Consumer Protection Framework)
+  governs ONLINE WAGERING specifically — what is legal online, and a
+  set of national consumer-protection measures. Even online wagering is
+  LICENSED at state/territory level: most of Australia's online
+  corporate bookmakers are licensed in the Northern Territory. Online
+  casino-style gaming and online in-play betting are ILLEGAL — never
+  present Playbook online-casino collateral for the Australian market.
+  Use AUD currency, decimal odds, and Australian English (licence,
+  organisation, recognise). The seven mandated taglines and the
+  National Gambling Helpline call to action are verbatim requirements
+  (federal consistent-messaging) for online wagering advertising; each
+  platform draws from its own permitted subset, rotated equally over 12
+  months. The state/territory layer is the spine of this module; New
+  South Wales (NSW) and Victoria (VIC) are presented as worked examples
+  of the common "own Act + own RG code of practice" pattern. A full
+  national build still needs a per-state pass.
+last_updated: 2026-06-08
 ---
 
 # Australia — Compliance Module
 
-> **Operator note**: This module covers the compliance requirements for deploying {{PROGRAM_NAME}} in Australia. Australia runs **two separate regulatory regimes**. Online wagering (sports and race betting, lotteries, keno) is regulated **federally** by the **Australian Communications and Media Authority (ACMA)** under the **Interactive Gambling Act 2001 (Cth)** and the **National Consumer Protection Framework for Online Wagering (NCPF)** — a package of 10 enumerated consumer-protection measures. Land-based gambling (casinos, pubs/clubs gaming machines, retail wagering, lotteries) is regulated **state by state**. The federal online layer is the primary focus of this module; the state land-based layer is documented as a clearly-marked secondary section using **New South Wales (NSW)** as the worked example.
+> **Operator note**: This module covers the compliance requirements for deploying {{PROGRAM_NAME}} in Australia. **Australia is a federation, and gambling is regulated primarily by the eight states and territories.** Each one has its own regulator, its own gambling Act, and its own responsible-gambling code of practice, self-exclusion scheme, venue-signage rules, and staff-training requirements. Land-based gambling (casinos, pubs/clubs gaming machines, retail wagering, lotteries) sits entirely in this state/territory layer. A narrower **federal overlay** — the **Australian Communications and Media Authority (ACMA)** under the **Interactive Gambling Act 2001 (Cth)** plus the **National Consumer Protection Framework for Online Wagering (NCPF)** — governs **online wagering** specifically: it sets what is legal online and a package of national consumer-protection measures. Even online wagering is **licensed** at state/territory level (most online corporate bookmakers are licensed in the **Northern Territory**). The state/territory layer is the spine of this module; the federal online overlay is documented as a clearly-marked second layer.
 >
 > **The vertical trap**: Online casino-style gaming and online in-play (live) betting are **illegal** in Australia under the Interactive Gambling Act 2001. Only **pre-event** online sports and race wagering, and online lotteries and keno, are legal online. Land-based casinos are legal but state-licensed. **Never deploy Playbook online-casino / iGaming collateral for the Australian market.**
 >
-> **Verticals covered**: Online sports and race wagering (federal) | Land-based casino and gaming machines (state-regulated, NSW illustrative).
-> *(If your deployment is online-wagering-only, the state land-based sections can be skipped. If your deployment is land-based-only, the federal online-wagering sections can be skipped — but read the regulatory-authority and helpline sections regardless.)*
+> **Verticals covered**: Land-based casino and gaming machines (state/territory-regulated) | Online sports and race wagering (state/territory-licensed, federally overlaid). NSW and Victoria are used as worked examples of the state layer.
+> *(If your deployment is land-based-only, the federal online-wagering overlay sections can be skipped. If your deployment is online-wagering-only, the land-based state-detail sections can be skipped — but read the regulatory-authority and helpline sections regardless.)*
 
-> **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
 ## Quick-scan index
 
-| Section | Regime | Description |
+| Section | Layer | Description |
 |---|---|---|
-| [Regulatory authority](#regulatory-authority) | Both | Federal ACMA + state regulators, how the split works |
+| [Regulatory authority](#regulatory-authority) | Both | State/territory regulators (primary) + federal online overlay, how the structure works |
 | [Legal requirements](#legal-requirements) | Both | Permitted products, what is illegal online, 18+ |
 | [Helpline](#helpline) | Both | National Gambling Helpline and display rules |
-| [Messaging requirements](#messaging-requirements) | Online | Seven mandated taglines + call to action (verbatim) |
-| [Advertising restrictions](#advertising-restrictions) | Both | Multi-layer ad rules; see [advertising-rules.md](advertising-rules.md) |
-| [Self-exclusion](#self-exclusion) | Both | BetStop (online, national) + state land-based schemes |
-| [Player protection — interactive](#player-protection--interactive) | Online | NCPF 10 measures, credit ban, activity statements |
-| [Player protection — land-based](#player-protection--land-based) | Land-based | NSW venue obligations (Regulation 2019, RGO) + Victoria worked example |
+| [Messaging requirements](#messaging-requirements) | Online overlay | Seven mandated taglines + call to action (verbatim) |
+| [Advertising restrictions](#advertising-restrictions) | Both | State ad law + federal/broadcast online overlay; see [advertising-rules.md](advertising-rules.md) |
+| [Self-exclusion](#self-exclusion) | Both | State/territory land-based schemes + BetStop (online, national) |
+| [Player protection — land-based](#player-protection--land-based) | State/territory | The primary RG layer: NSW (Regulation 2019, RGO) + Victoria worked examples |
+| [Player protection — interactive](#player-protection--interactive) | Online overlay | NCPF measures, credit ban, activity statements |
 | [Age verification](#age-verification) | Both | 18+ nationwide; pre-verification for online |
 | [AML/KYC](#amlkyc) | Both | AUSTRAC, AML/CTF Act customer verification |
 | [Collateral adaptation](#collateral-adaptation) | Both | What to change across all touchpoints |
@@ -77,43 +83,46 @@ last_updated: 2026-06-05
 
 ## Regulatory authority
 
-Australia has **no single gambling regulator**. Responsibility is split between the Commonwealth (federal) government and the eight states and territories.
+Australia has **no single gambling regulator**. Gambling is regulated **primarily by the eight states and territories** — each has its own regulator, its own gambling Act, and its own responsible-gambling code of practice, self-exclusion scheme, venue-signage rules, and staff-training requirements. The Commonwealth (federal) government runs a **narrower overlay** that governs **online wagering**: the Interactive Gambling Act 2001 sets what is legal online, and the National Consumer Protection Framework (NCPF) adds national consumer-protection measures. ACMA enforces the federal online rules; it is **not** the licensor of operators.
+
+### The primary layer — state and territory regulators
+
+Land-based gambling (casinos, gaming machines/pokies, retail and on-course wagering, lotteries, keno venues) is regulated **entirely** at state/territory level. Each jurisdiction follows the same pattern — its **own gambling Act + its own RG code of practice + its own self-exclusion, signage, and staff-training rules**.
+
+| State / Territory | Primary gambling regulator(s) |
+|---|---|
+| **New South Wales (NSW)** | **Liquor & Gaming NSW** (gaming machines, wagering, lotteries) + the **NSW Independent Casino Commission (NICC)** (casinos) |
+| **Victoria (VIC)** | **Victorian Gambling and Casino Control Commission (VGCCC)** |
+| **Queensland (QLD)** | **Office of Liquor and Gaming Regulation (OLGR)** |
+| **Western Australia (WA)** | **Gaming and Wagering Commission of Western Australia (GWC)** |
+| **South Australia (SA)** | **Liquor and Gambling Commissioner** / Consumer and Business Services |
+| **Tasmania (TAS)** | **Tasmanian Liquor and Gaming Commission** |
+| **Australian Capital Territory (ACT)** | **ACT Gambling and Racing Commission** |
+| **Northern Territory (NT)** | **Northern Territory Racing and Wagering Commission** *(the NTRWC; replaced the former NT Racing Commission from 1 July 2024 under the Racing and Wagering Act 2024)* |
+
+> **The NT licenses Australia's online bookmakers.** Even "online wagering" is licensed at state/territory level — and in practice **most of Australia's online corporate bookmakers are licensed in the Northern Territory** (Sportsbet, Ladbrokes, bet365, Betfair and others). This is the clearest illustration that the states and territories, not the Commonwealth, are the licensing authorities; the federal NCPF layer standardises consumer-protection conduct across the operators they license.
+
+### The federal overlay — online wagering only
 
 | Field | Value |
 |---|---|
-| **Federal regulator (online wagering)** | Australian Communications and Media Authority (ACMA) |
+| **Federal regulator (online wagering)** | Australian Communications and Media Authority (ACMA) — enforcement (complaints, disruption of illegal services); **not** a licensor of operators |
 | **Federal website** | [acma.gov.au](https://www.acma.gov.au) |
 | **Federal policy owner** | Department of Social Services (DSS) — owns the NCPF |
 | **Governing federal legislation** | Interactive Gambling Act 2001 (Cth) |
 | **Federal framework** | National Consumer Protection Framework for Online Wagering (NCPF) — 10 measures |
-| **State/territory regulators (land-based)** | One per state/territory (NSW used as the example below) |
 | **Regulatory approach** | Prescriptive (NCPF 10 enumerated measures; verbatim-mandated taglines; minute-level live-sport ad timing) |
 
-### How the split works
+### How the two layers fit together
 
 | Layer | Who regulates | What it covers | Key instruments |
 |---|---|---|---|
-| **Federal — online** | ACMA (enforcement); DSS (policy) | Online/phone sports and race wagering, online lotteries and keno; prohibition of illegal online services | Interactive Gambling Act 2001; NCPF National Policy Statement; Interactive Gambling Amendment (Credit and Other Measures) Act 2023; Broadcasting Services (Online Content Service Provider Rules) 2018 |
-| **State — land-based** | State/territory regulator | Casinos, gaming machines (pokies), retail/on-course wagering, lotteries, keno venues | State gambling statutes (e.g. NSW Casino Control Act 1992; Gaming Machines Act 2001) |
+| **State / territory — the primary layer** | State/territory regulator (table above) | All land-based gambling — casinos, gaming machines (pokies), retail/on-course wagering, lotteries, keno venues — **and** the licensing of online wagering operators; each state's own RG code, self-exclusion, signage and staff-training rules | State gambling statutes (e.g. NSW Gaming Machines Act 2001 + Gaming Machines Regulation 2019; NSW Casino Control Act 1992; VIC Gambling Regulation Act 2003; NT Racing and Wagering Act 2024) |
+| **Federal — online overlay** | ACMA (enforcement); DSS (policy) | A narrower overlay on **online wagering only**: what is legal online (online casino/in-play prohibited; pre-event sports/race wagering and lotteries permitted) plus national consumer-protection measures | Interactive Gambling Act 2001; NCPF National Policy Statement; Interactive Gambling Amendment (Credit and Other Measures) Act 2023; Broadcasting Services (Online Content Service Provider Rules) 2018 |
 
-### State/territory regulators (reference)
+### The NCPF 10 measures (federal online overlay)
 
-| State / Territory | Land-based regulator |
-|---|---|
-| **New South Wales** (illustrative) | NSW Independent Casino Commission (casinos); Liquor & Gaming NSW (gaming machines, wagering, lotteries) |
-| Victoria | Victorian Gambling and Casino Control Commission (VGCCC) |
-| Queensland | Office of Liquor and Gaming Regulation (OLGR) |
-| Western Australia | Gaming and Wagering Commission of WA |
-| South Australia | Consumer and Business Services (Liquor and Gambling) |
-| Tasmania | Tasmanian Liquor and Gaming Commission |
-| ACT | ACT Gambling and Racing Commission |
-| Northern Territory | NT Racing Commission / Licensing NT (hosts most online wagering licensees) |
-
-> **Note on online licensing**: Although ACMA enforces the *conduct* rules federally, online wagering operators are *licensed* by a state or territory — in practice most are licensed in the **Northern Territory**. The NCPF standardises consumer-protection conduct across all of them.
-
-### The NCPF 10 measures
-
-The National Consumer Protection Framework for Online Wagering is the prescriptive heart of the federal online regime. The official ten measures:
+The National Consumer Protection Framework for Online Wagering is the prescriptive heart of the **federal online overlay** — national consumer-protection measures for online wagering. Some are federal law in their own right (BetStop national self-exclusion; the credit/credit-card/digital-currency ban under the Interactive Gambling Amendment (Credit and Other Measures) Act 2023; consistent gambling messaging); others are implemented through the state/territory **licence conditions** that bind each operator. The official ten measures:
 
 | # | Measure | Status |
 |---|---|---|
@@ -144,7 +153,7 @@ The National Consumer Protection Framework for Online Wagering is the prescripti
 | Requirement | Value |
 |---|---|
 | **Minimum gambling age** | 18+ nationwide (all products, all states) |
-| **Legal framework** | Federal Interactive Gambling Act 2001 (online) + state gambling statutes (land-based) |
+| **Legal framework** | State/territory gambling statutes (the primary layer — land-based gambling and the licensing of online operators) + the federal Interactive Gambling Act 2001 (online overlay) |
 | **Online gambling** | Partly legal: online **pre-event** sports/race wagering, online lotteries, online keno are legal. Online **casino-style gaming** and online **in-play (live) betting** are **illegal**. |
 | **Land-based gambling** | Legal, state-licensed (casinos, gaming machines, retail wagering, lotteries) |
 
@@ -164,9 +173,9 @@ The National Consumer Protection Framework for Online Wagering is the prescripti
 
 ### Key regulatory notes
 
-- The defining feature of Australia is the **federal-online / state-land-based split**. A {{PROGRAM_NAME}} deployment must be scoped to the correct regime.
+- The defining feature of Australia is that **the states and territories are the primary regulators** — they regulate all land-based gambling and license the operators (including online wagering operators) — while a **narrower federal overlay** governs online wagering. A {{PROGRAM_NAME}} deployment must be scoped to the correct layer(s).
 - The Interactive Gambling Act 2001 makes it an offence to **provide** a prohibited interactive gambling service to customers in Australia, and to **advertise** one.
-- The NCPF standardises online-wagering **conduct** nationally even though **licensing** is done state by state.
+- Online wagering is **licensed** state by state (most operators in the Northern Territory); the federal NCPF standardises consumer-protection **conduct** across those licensed operators.
 - {{PROGRAM_NAME}} content for Australia must never present online casino or online live-betting products, and must never tag online-casino verticals in collateral.
 
 ---
@@ -187,15 +196,15 @@ The National Consumer Protection Framework for Online Wagering is the prescripti
 
 ### Display rules
 
-The National Gambling Helpline call to action is **mandated in the consistent gambling messaging** for online wagering (NCPF Measure 8). State land-based rules also require helpline display, set by each state.
+The National Gambling Helpline number is a single national contact, but helpline-display obligations come from two layers. State and territory land-based rules require helpline and counselling display in venues; the federal online overlay mandates the helpline call to action in the consistent gambling messaging for online wagering (NCPF Measure 8).
 
-#### Interactive display (federal — primary)
+#### Land-based display (state/territory — primary; NSW example)
+
+State and territory venue rules require responsible-gambling signage and counselling/helpline contact information in gambling areas — the primary land-based display obligation. In NSW, for example, venues with gaming machines and casinos must display this at gambling areas, near ATMs/cash facilities, and at entrances (under the NSW Gaming Machines Act 2001 and associated regulation, and the Casino Control Act 1992). Exact placement and wording are set by Liquor & Gaming NSW / the NSW Independent Casino Commission. Every state and territory has equivalent venue-display rules under its own gambling Act.
+
+#### Interactive display (federal online overlay)
 
 The prescribed **call to action** must accompany online wagering advertising and relevant promotional material, embedding the National Gambling Helpline **1800 858 858** and **gamblinghelponline.org.au**. This is part of the same consistent-messaging requirement that mandates the seven taglines.
-
-#### Land-based display (state — NSW illustrative)
-
-NSW venues with gaming machines and casinos must display responsible-gambling signage and counselling/helpline contact information at gambling areas, near ATMs/cash facilities, and at entrances (under the NSW Gaming Machines Act 2001 and associated regulation, and the Casino Control Act 1992). Exact placement and wording are set by Liquor & Gaming NSW / the NSW Independent Casino Commission.
 
 ### On-brand helpline display
 
@@ -292,7 +301,7 @@ The mandated tagline ("You win some. You lose more.") and the helpline call to a
 
 ## Advertising restrictions
 
-Australia's online-wagering advertising regime is **multi-layer**: federal prohibition of illegal services, federal live-sport timing rules, the consistent-messaging mandate, inducement restrictions, plus state and broadcast codes.
+Gambling advertising in Australia is governed at two levels. **Land-based gambling advertising is governed by state and territory law** — each jurisdiction has its own advertising rules and codes (e.g. the NSW Betting and Racing Act/Regulation and Liquor & Gaming NSW Guideline GL4015). The **online and broadcast overlay** then adds the federal layers for online wagering and broadcast media: the IGA Part 7A prohibition on advertising illegal services, the federal live-sport timing rules, the NCPF consistent-messaging mandate, and the registered Free TV / Commercial Radio / ASTRA broadcast codes. The table below lists the operative rules across both levels; the full breakdown is in [advertising-rules.md](advertising-rules.md).
 
 | Rule | Requirement | Verticals | Source |
 |---|---|---|---|
@@ -346,9 +355,21 @@ For the full channel-by-channel breakdown, prohibited-content table, required-di
 
 ## Self-exclusion
 
-Australia has a **national online self-exclusion register (BetStop)** plus **state-by-state land-based** schemes. These are separate systems.
+Self-exclusion in Australia has two layers: **state and territory land-based schemes** (the primary layer — each jurisdiction runs its own venue / multi-venue self-exclusion under its own gambling Act) and the **national online register (BetStop)** that overlays online and phone wagering. These are separate systems.
 
-### Interactive self-exclusion — BetStop (national)
+### Land-based self-exclusion (state/territory — primary; NSW example)
+
+Each state and territory runs its own land-based self-exclusion scheme under its own gambling Act. NSW is shown as the example.
+
+| Field | Value |
+|---|---|
+| **Program** | NSW venue / multi-venue self-exclusion (e.g. via registered providers and venue schemes) |
+| **Scope** | NSW gaming venues and casinos (separate from BetStop) |
+| **Duration options** | Set by the scheme (commonly 3, 6, 12 months, or longer) |
+| **Enrollment** | In-person at the venue or via a self-exclusion provider |
+| **Source** | NSW Gaming Machines Act 2001; Casino Control Act 1992 |
+
+### Interactive self-exclusion — BetStop (national online overlay)
 
 | Field | Value |
 |---|---|
@@ -362,16 +383,6 @@ Australia has a **national online self-exclusion register (BetStop)** plus **sta
 | **Minimum exclusion period** | 3 months |
 | **Penalty for breach** | Civil penalty of 750 penalty units for providing a service to a registered person |
 | **Source** | Interactive Gambling Act 2001 (Cth) Part 7B; Interactive Gambling Amendment (National Self-exclusion Register) Act 2019; National Self-Exclusion Register (Indexation) Rules |
-
-### Land-based self-exclusion (state — NSW illustrative)
-
-| Field | Value |
-|---|---|
-| **Program** | NSW venue / multi-venue self-exclusion (e.g. via registered providers and venue schemes) |
-| **Scope** | NSW gaming venues and casinos (separate from BetStop) |
-| **Duration options** | Set by the scheme (commonly 3, 6, 12 months, or longer) |
-| **Enrollment** | In-person at the venue or via a self-exclusion provider |
-| **Source** | NSW Gaming Machines Act 2001; Casino Control Act 1992 |
 
 > **Skippable**: If your deployment is **online-wagering-only**, the land-based self-exclusion subsection can be skipped. If your deployment is **land-based-only**, BetStop does not apply to you — but you should still signpost it where customers may also gamble online.
 
@@ -396,11 +407,53 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 ---
 
+## Player protection — land-based
+
+*This is the primary player-protection layer. Skip only if your deployment is online-wagering-only.*
+
+Land-based player protection — the **primary** standards-of-practice layer in Australia — is set by each **state and territory**. Every jurisdiction follows the same pattern: its **own gambling Act + its own responsible-gambling code of practice**, with its own signage, self-exclusion, and staff-training rules. The two worked examples below — **New South Wales** and **Victoria** — illustrate that pattern; other states and territories differ in detail and would each need their own pass. NSW's day-to-day standards sit in the **Gaming Machines Regulation 2019** (the operative regulation made under the Gaming Machines Act 2001).
+
+### Required tools and obligations (NSW example)
+
+| Tool / Obligation | Required? | Details | Source |
+|---|---|---|---|
+| Mandatory signage and counselling notices | Yes | Prescribed gambling-counselling notices and responsible-gambling signage displayed at gaming areas | NSW Gaming Machines Regulation 2019 |
+| Gambling contact cards | Yes | Gambling contact cards (counselling/helpline) must be available to patrons in gaming areas | NSW Gaming Machines Regulation 2019 |
+| RG messaging on player activity statements | Yes | Responsible-gambling messaging must appear on player activity statements provided to gaming-machine players | NSW Gaming Machines Regulation 2019 |
+| Helpline display | Yes | Gambling Help / National Gambling Helpline contact at gambling areas and cash facilities | NSW Gaming Machines Regulation 2019 |
+| Self-exclusion | Yes | Venue and multi-venue self-exclusion available | NSW Gaming Machines Act 2001; Casino Control Act 1992 |
+| Staff responsible-conduct training | Yes | Gaming staff must complete responsible-conduct-of-gambling training | NSW Gaming Machines Act 2001; Gaming Machines Regulation 2019 |
+| ATM / cash-dispenser placement restrictions | Yes | Restrictions on the placement of ATMs and cash dispensers in or near gaming areas | NSW Gaming Machines Regulation 2019 |
+| Responsible Gambling Officer (RGO) | Yes (venues > 20 GME) | Commenced **1 July 2024**. Hotels and clubs with **more than 20 gaming-machine entitlements** must have an RGO on duty while machines operate (larger clubs need additional RGOs). RGOs monitor for patrons at risk of harm, refer them to support, and facilitate self-exclusion — a **Theme 9** harm-monitoring obligation | NSW responsible-gambling-officer reforms (Gaming Machines Act/Regulation amendments) — [nsw.gov.au RGO release](https://www.nsw.gov.au/ministerial-releases/responsible-gambling-officers-introduced-into-pubs-and-clubs-across-nsw) |
+
+### {{PROGRAM_NAME}} tool messaging — land-based (NSW)
+
+| Tool | {{PROGRAM_NAME}} copy | Context |
+|---|---|---|
+| Self-exclusion info | "Need a break? Talk to any staff member — they can help you step away, no judgement." | NSW Gaming Machines Act 2001 |
+| Helpline display | "Free, confidential support — 24/7. Call 1800 858 858." | NSW Gaming Machines Regulation 2019 |
+| RG information | "Know your game. Set a limit before you start." | NSW Gaming Machines Regulation 2019 |
+
+> **Source**: NSW Gaming Machines Regulation 2019 — `https://legislation.nsw.gov.au/view/html/inforce/current/sl-2019-0221` (canonical, but bot-blocked from this environment). The Responsible Gambling Officer requirement is described at [nsw.gov.au RGO release](https://www.nsw.gov.au/ministerial-releases/responsible-gambling-officers-introduced-into-pubs-and-clubs-across-nsw) (verified).
+
+### Second worked example — Victoria (the "mandatory code + direction" pattern)
+
+NSW is one model of the primary state layer; **Victoria** shows another common Australian form of it — the **"mandatory code of conduct + Ministerial Direction"** pattern. It is also the clearest example of how the federal NCPF online measures are, in turn, given **legal force at state level** through that same state machinery.
+
+| Obligation | Requirement | Source |
+|---|---|---|
+| Responsible Gambling Code of Conduct | Every venue operator holding a gambling industry licence **must** adopt a Responsible Gambling Code of Conduct. The Code is compulsory under the Gambling Regulation Act 2003; its **content is prescribed by Ministerial Direction** (Responsible Gambling Codes of Conduct for Venue Operators, effective **1 March 2020**). Operators either adopt an industry venue code or submit their own | Gambling Regulation Act 2003; VGCCC — [responsible-gambling codes of conduct](https://www.vgccc.vic.gov.au/for-gambling-providers/venue-operators-and-poker-machines/venue-operator-obligations/responsible-gambling-codes-of-conduct-standards) |
+| NCPF measures given legal force | The federal NCPF measures are made binding in Victoria through **Harm Minimisation Ministerial Directions** applying to Victorian wagering and betting licensees | VGCCC — [National Consumer Protection Framework (VIC)](https://www.vgccc.vic.gov.au/for-gambling-providers/bookmakers/national-consumer-protection-framework) |
+
+> **Why this matters**: NSW and Victoria are two worked examples of the **same primary pattern** — every state and territory has its **own gambling Act plus its own RG code of practice**, not a single national statutory checklist. A full national land-based build needs a per-state pass. Victoria also shows the mechanism by which the federal online overlay is operationalised: a **mandatory code whose content a Minister prescribes by direction**, with the NCPF measures bound onto state licensees the same way.
+
+---
+
 ## Player protection — interactive
 
-*Skip this section if your deployment is land-based only.*
+*This is the federal online overlay. Skip this section if your deployment is land-based only.*
 
-Online wagering player protection is governed by the **NCPF 10 measures** plus the Interactive Gambling Act.
+Online wagering player protection is the **federal overlay** on top of the state/territory licensing layer: it is governed by the **NCPF 10 measures** plus the Interactive Gambling Act. Some of these measures are federal law in their own right (BetStop; the credit ban; consistent messaging); others are delivered through the state/territory **licence conditions** that bind each operator (Victoria above shows the mechanism).
 
 ### Required tools and obligations
 
@@ -429,48 +482,6 @@ Online wagering player protection is governed by the **NCPF 10 measures** plus t
 
 ---
 
-## Player protection — land-based
-
-*Skip this section if your deployment is online-wagering-only.*
-
-Land-based player protection is set by each **state**. The requirements below are illustrated with **New South Wales**; other states differ and would need their own pass. The day-to-day NSW standards sit in the **Gaming Machines Regulation 2019** (the operative regulation made under the Gaming Machines Act 2001).
-
-### Required tools and obligations (NSW illustrative)
-
-| Tool / Obligation | Required? | Details | Source |
-|---|---|---|---|
-| Mandatory signage and counselling notices | Yes | Prescribed gambling-counselling notices and responsible-gambling signage displayed at gaming areas | NSW Gaming Machines Regulation 2019 |
-| Gambling contact cards | Yes | Gambling contact cards (counselling/helpline) must be available to patrons in gaming areas | NSW Gaming Machines Regulation 2019 |
-| RG messaging on player activity statements | Yes | Responsible-gambling messaging must appear on player activity statements provided to gaming-machine players | NSW Gaming Machines Regulation 2019 |
-| Helpline display | Yes | Gambling Help / National Gambling Helpline contact at gambling areas and cash facilities | NSW Gaming Machines Regulation 2019 |
-| Self-exclusion | Yes | Venue and multi-venue self-exclusion available | NSW Gaming Machines Act 2001; Casino Control Act 1992 |
-| Staff responsible-conduct training | Yes | Gaming staff must complete responsible-conduct-of-gambling training | NSW Gaming Machines Act 2001; Gaming Machines Regulation 2019 |
-| ATM / cash-dispenser placement restrictions | Yes | Restrictions on the placement of ATMs and cash dispensers in or near gaming areas | NSW Gaming Machines Regulation 2019 |
-| Responsible Gambling Officer (RGO) | Yes (venues > 20 GME) | Commenced **1 July 2024**. Hotels and clubs with **more than 20 gaming-machine entitlements** must have an RGO on duty while machines operate (larger clubs need additional RGOs). RGOs monitor for patrons at risk of harm, refer them to support, and facilitate self-exclusion — a **Theme 9** harm-monitoring obligation | NSW responsible-gambling-officer reforms (Gaming Machines Act/Regulation amendments) — [nsw.gov.au RGO release](https://www.nsw.gov.au/ministerial-releases/responsible-gambling-officers-introduced-into-pubs-and-clubs-across-nsw) |
-
-### {{PROGRAM_NAME}} tool messaging — land-based (NSW)
-
-| Tool | {{PROGRAM_NAME}} copy | Context |
-|---|---|---|
-| Self-exclusion info | "Need a break? Talk to any staff member — they can help you step away, no judgement." | NSW Gaming Machines Act 2001 |
-| Helpline display | "Free, confidential support — 24/7. Call 1800 858 858." | NSW Gaming Machines Regulation 2019 |
-| RG information | "Know your game. Set a limit before you start." | NSW Gaming Machines Regulation 2019 |
-
-> **Source**: NSW Gaming Machines Regulation 2019 — `https://legislation.nsw.gov.au/view/html/inforce/current/sl-2019-0221` (canonical, but bot-blocked from this environment). The Responsible Gambling Officer requirement is described at [nsw.gov.au RGO release](https://www.nsw.gov.au/ministerial-releases/responsible-gambling-officers-introduced-into-pubs-and-clubs-across-nsw) (verified).
-
-### Second-state worked example — Victoria (the "mandatory code + direction" pattern)
-
-NSW is the illustrative state above, but it is not the only model. **Victoria** shows the common Australian **"mandatory code of conduct + Ministerial Direction"** pattern, and is the clearest example of how the federal NCPF measures are given **legal force at state level**.
-
-| Obligation | Requirement | Source |
-|---|---|---|
-| Responsible Gambling Code of Conduct | Every venue operator holding a gambling industry licence **must** adopt a Responsible Gambling Code of Conduct. The Code is compulsory under the Gambling Regulation Act 2003; its **content is prescribed by Ministerial Direction** (Responsible Gambling Codes of Conduct for Venue Operators, effective **1 March 2020**). Operators either adopt an industry venue code or submit their own | Gambling Regulation Act 2003; VGCCC — [responsible-gambling codes of conduct](https://www.vgccc.vic.gov.au/for-gambling-providers/venue-operators-and-poker-machines/venue-operator-obligations/responsible-gambling-codes-of-conduct-standards) |
-| NCPF measures given legal force | The federal NCPF measures are made binding in Victoria through **Harm Minimisation Ministerial Directions** applying to Victorian wagering and betting licensees | VGCCC — [National Consumer Protection Framework (VIC)](https://www.vgccc.vic.gov.au/for-gambling-providers/bookmakers/national-consumer-protection-framework) |
-
-> **Why this matters**: The module's land-based layer is otherwise NSW-only. Victoria demonstrates that a full national land-based build needs a per-state pass, and that the mechanism in several states is a **mandatory code whose content a Minister prescribes by direction** — not a single statutory checklist. Treat NSW and VIC as two worked examples of the same federated pattern.
-
----
-
 ## Age verification
 
 | Field | Value |
@@ -480,7 +491,7 @@ NSW is the illustrative state above, but it is not the only model. **Victoria** 
 | **`{{MIN_AGE}}` token value** | 18 |
 | **Statutory basis** | Interactive Gambling Act 2001 s8B (online); state gambling statutes (land-based); AML/CTF Act 2006 (verification) |
 
-### Interactive verification (federal)
+### Interactive verification (federal online overlay)
 
 | Requirement | Details | Source |
 |---|---|---|
@@ -488,7 +499,7 @@ NSW is the illustrative state above, but it is not the only model. **Victoria** 
 | **Verification window** | Pre-verification — verification before account use (strengthened 29 September 2024) | NCPF Measure 3 |
 | **Verification method** | Identity verification under the AML/CTF Act customer-verification rules | AML/CTF Act 2006 |
 
-### Land-based verification (state — NSW illustrative)
+### Land-based verification (state/territory — NSW example)
 
 | Requirement | Details | Source |
 |---|---|---|
@@ -558,9 +569,9 @@ Quick-reference table mapping every collateral category to Australia-specific ad
 | **Online in-play betting** | **Illegal** | Legal | Legal (mobile sports) |
 | **Mandatory statement** | Seven verbatim taglines + call to action (online) | None (obligation-based) | Wagering accounts: prescribed text |
 | **Helpline** | National Gambling Helpline 1800 858 858 | GamCare 0808 8020 133 | NCPG 1-800-522-4700 |
-| **Self-exclusion** | BetStop (national online) + state land-based | GAMSTOP (national remote) + premises | Property-by-property |
+| **Self-exclusion** | State/territory land-based schemes + BetStop (national online) | GAMSTOP (national remote) + premises | Property-by-property |
 | **Credit** | Credit / credit-card / digital-currency ban | Credit-card ban (2020) | Operator discretion |
-| **Regulatory split** | Federal online / state land-based | Single national | Single state |
+| **Regulatory split** | State/territory primary (land-based + operator licensing) + federal online overlay | Single national | Single state |
 | **Odds format** | Decimal | Decimal / fractional | American |
 | **Currency** | AUD | GBP | USD |
 | **Language** | Australian English | British English | American English |
@@ -616,10 +627,10 @@ See [`_brand-australia.yml`](_brand-australia.yml) for the full set of Australia
 Complete before launching {{PROGRAM_NAME}} in Australia.
 
 ### Regulatory
-- [ ] Confirmed deployment regime: [ ] Online wagering (federal) [ ] Land-based (state) [ ] Both
-- [ ] Confirmed ACMA as the federal online-wagering conduct regulator
-- [ ] Identified the relevant state/territory land-based regulator (if land-based)
-- [ ] Reviewed Interactive Gambling Act 2001 and NCPF 10 measures
+- [ ] Confirmed deployment layer(s): [ ] Land-based (state/territory) [ ] Online wagering (state/territory licence + federal overlay) [ ] Both
+- [ ] Identified the relevant **state/territory regulator(s)** — the primary layer (e.g. Liquor & Gaming NSW + NICC; VGCCC; OLGR; GWC; SA Liquor and Gambling Commissioner; TAS Liquor and Gaming Commission; ACT Gambling and Racing Commission; NT Racing and Wagering Commission)
+- [ ] Reviewed the applicable state/territory gambling Act and its RG code of practice
+- [ ] If online: confirmed ACMA's federal online overlay (IGA 2001 + NCPF 10 measures) and the state/territory operator licence (most online bookmakers NT-licensed)
 - [ ] Verified legal gambling age: 18+ nationwide
 - [ ] Confirmed online casino and online in-play betting are NOT offered (illegal)
 - [ ] Tracked the pending total-ad-ban reform (NOT law — monitor only)
@@ -648,7 +659,17 @@ Complete before launching {{PROGRAM_NAME}} in Australia.
 - [ ] Self-exclusion language mapped to {{PROGRAM_NAME}} Tier 1/Tier 2 language
 - [ ] Staff FAQ updated with Australia self-exclusion Q&A (BetStop + state)
 
-### Player protection — interactive
+### Player protection — land-based (primary)
+*Check only if deploying in venues (NSW example; confirm the equivalent for your state/territory — every one has its own Act + RG code, e.g. Victoria's mandatory Responsible Gambling Code of Conduct).*
+- [ ] Mandatory signage, counselling notices and gambling contact cards in gaming areas (NSW Gaming Machines Regulation 2019)
+- [ ] RG messaging on player activity statements (NSW Gaming Machines Regulation 2019)
+- [ ] Helpline displayed at gambling areas and cash facilities
+- [ ] Responsible-conduct-of-gambling staff training completed
+- [ ] ATM / cash-dispenser placement restrictions observed (NSW Gaming Machines Regulation 2019)
+- [ ] Responsible Gambling Officer on duty if venue has > 20 gaming-machine entitlements (NSW, from 1 July 2024)
+- [ ] If deploying in Victoria: Responsible Gambling Code of Conduct adopted (Gambling Regulation Act 2003 + Ministerial Direction)
+
+### Player protection — interactive (federal online overlay)
 *Check only if deploying online wagering.*
 - [ ] Opt-out pre-commitment scheme prompts customers to set limits, incl. customer-set deposit limits (NCPF Measure 6)
 - [ ] Simple account-closure process displayed (NCPF Measure 5)
@@ -658,16 +679,6 @@ Complete before launching {{PROGRAM_NAME}} in Australia.
 - [ ] Staff training + annual refresher in place (NCPF Measure 9)
 - [ ] Customer verification before account use (NCPF Measure 3)
 - [ ] Restrictions on inducements observed (NCPF Measure 4)
-
-### Player protection — land-based
-*Check only if deploying in venues (NSW illustrative; confirm the equivalent for your state — e.g. Victoria's mandatory Responsible Gambling Code of Conduct).*
-- [ ] Mandatory signage, counselling notices and gambling contact cards in gaming areas (NSW Gaming Machines Regulation 2019)
-- [ ] RG messaging on player activity statements (NSW Gaming Machines Regulation 2019)
-- [ ] Helpline displayed at gambling areas and cash facilities
-- [ ] Responsible-conduct-of-gambling staff training completed
-- [ ] ATM / cash-dispenser placement restrictions observed (NSW Gaming Machines Regulation 2019)
-- [ ] Responsible Gambling Officer on duty if venue has > 20 gaming-machine entitlements (NSW, from 1 July 2024)
-- [ ] If deploying in Victoria: Responsible Gambling Code of Conduct adopted (Gambling Regulation Act 2003 + Ministerial Direction)
 
 ### Age verification
 - [ ] Online: identity and age verified before account use (NCPF Measure 3 customer verification; AML/CTF Act)
@@ -688,8 +699,8 @@ Complete before launching {{PROGRAM_NAME}} in Australia.
 ### Governance
 - [ ] `_brand.yml` updated with Australia values (helpline, age, self-exclusion, messaging)
 - [ ] `_brand-australia.yml` reviewed
-- [ ] `Last verified` date set on this module (2026-06-05)
-- [ ] `Next review due` date set (2026-09-05)
+- [ ] `Last verified` date set on this module (2026-06-08)
+- [ ] `Next review due` date set (2026-09-08)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

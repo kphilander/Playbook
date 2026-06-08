@@ -2,12 +2,18 @@
 # ================================================
 # This file contains Australia-specific overrides for _brand.yml.
 #
-# Australia is a SEPARATE-REGIMES jurisdiction:
-#   - Online wagering (sports/race pre-event, lotteries, keno) is
-#     regulated FEDERALLY by ACMA under the Interactive Gambling Act
-#     2001 and the National Consumer Protection Framework (NCPF).
+# Australia is a FEDERATION. Gambling is regulated PRIMARILY by the
+# eight STATES and TERRITORIES:
 #   - Land-based gambling (casinos, gaming machines, retail wagering)
-#     is regulated by each STATE and TERRITORY.
+#     AND the licensing of operators (including online wagering
+#     operators) sit with each STATE and TERRITORY. Each has its own
+#     gambling Act and its own responsible-gambling code of practice.
+#     Most online corporate bookmakers are licensed in the Northern
+#     Territory.
+#   - A narrower FEDERAL overlay governs ONLINE WAGERING specifically:
+#     ACMA under the Interactive Gambling Act 2001 (what is legal
+#     online) and the National Consumer Protection Framework (NCPF —
+#     national consumer-protection measures).
 #
 # CRITICAL: Online casino-style gaming and online in-play (live) betting
 # are ILLEGAL in Australia. Never configure Playbook online-casino /

@@ -21,25 +21,31 @@ presentation:
   language: en-au
 adaptation_status: base
 adaptation_notes: |
-  Australian gambling advertising rules apply to ONLINE WAGERING
-  (sports/race pre-event, lotteries, keno). Online casino-style gaming
-  and online in-play betting are illegal and must never be advertised.
-  The seven mandated taglines and the National Gambling Helpline call
-  to action are verbatim federal requirements. Live-sport timing rules
-  operate at minute-level precision. Use AUD, decimal odds, and
-  Australian English. State and broadcaster codes layer on top of the
-  federal rules.
-last_updated: 2026-06-05
+  Gambling advertising in Australia is governed at two levels.
+  LAND-BASED gambling advertising is governed by STATE and TERRITORY
+  law (each jurisdiction has its own advertising rules and codes — e.g.
+  the NSW Betting and Racing Act/Regulation and Liquor & Gaming NSW
+  Guideline GL4015). An ONLINE/BROADCAST OVERLAY then adds the federal
+  layers for online wagering and broadcast media: the IGA Part 7A
+  prohibition on advertising illegal services, the federal live-sport
+  timing rules, the NCPF consistent-messaging mandate (seven mandated
+  taglines + the National Gambling Helpline call to action — verbatim),
+  and the registered Free TV / Commercial Radio / ASTRA broadcast
+  codes. Online casino-style gaming and online in-play betting are
+  illegal and must never be advertised. Live-sport timing rules operate
+  at minute-level precision. Use AUD, decimal odds, and Australian
+  English.
+last_updated: 2026-06-08
 ---
 
 # Australia — Advertising Rules
 
-> **Operator note**: This is the detailed advertising reference for Australia. It covers the federal online-wagering advertising regime — the prohibition on advertising illegal services, the live-sport timing restrictions, the Consistent Gambling Messaging mandate (seven verbatim taglines + call to action), and inducement restrictions — plus the state and broadcast layers. Use this alongside the [Australia compliance module](README.md) for complete coverage.
+> **Operator note**: This is the detailed advertising reference for Australia. Gambling advertising here is governed at two levels. **Land-based gambling advertising is governed by state and territory law** (each jurisdiction has its own rules and codes — e.g. the NSW Betting and Racing Act/Regulation + GL4015). The **online/broadcast overlay** then adds the federal layers: the prohibition on advertising illegal services (IGA Part 7A), the live-sport timing restrictions, the Consistent Gambling Messaging mandate (seven verbatim taglines + call to action), inducement restrictions, and the registered Free TV / Commercial Radio / ASTRA broadcast codes. Use this alongside the [Australia compliance module](README.md) for complete coverage.
 >
 > **The vertical trap**: Online casino-style gaming and online in-play (live) betting are **illegal** in Australia and must **never** be advertised. This module is for legal online wagering (pre-event sports and race betting, lotteries, keno) and, where noted, land-based venues.
 
-> **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -47,7 +53,7 @@ last_updated: 2026-06-05
 
 | Section | Description |
 |---|---|
-| [Australia's multi-layer framework](#australias-multi-layer-framework) | Federal + state + broadcast layers |
+| [Australia's two-level framework](#australias-two-level-framework) | State/territory primary + federal/broadcast overlay |
 | [Prohibition on advertising illegal services](#prohibition-on-advertising-illegal-services) | IGA Part 7A |
 | [Live-sport advertising restrictions](#live-sport-advertising-restrictions) | Whistle-to-whistle timing rules |
 | [Consistent gambling messaging](#consistent-gambling-messaging) | Seven mandated taglines + call to action |
@@ -61,20 +67,20 @@ last_updated: 2026-06-05
 
 ---
 
-## Australia's multi-layer framework
+## Australia's two-level framework
 
-Australian online-wagering advertising sits under several overlapping layers:
+Gambling advertising in Australia is governed at two levels. **State and territory law is the primary layer** — it governs land-based gambling advertising and adds its own wagering-ad rules. The **federal and broadcast layers are an overlay** for online wagering and broadcast media. The rows below run primary-layer first, then the overlay:
 
 | Layer | Source | Scope |
 |---|---|---|
-| **Federal — prohibition** | Interactive Gambling Act 2001 (Cth) Part 7A | Bans advertising of prohibited (illegal) interactive gambling services and unlicensed regulated services |
-| **Federal — live sport** | Broadcasting Services (Online Content Service Provider Rules) 2018 (F2018L01203) Pts 3-4, s17 | Timing restrictions on gambling ads during live sport on online content services; broadcaster codes mirror this for TV/radio |
-| **Federal — messaging** | NCPF National Policy Statement, Part 8 (Consistent Gambling Messaging — NCPF Measure 8) | Platform-permitted taglines (equal rotation over 12 months) + prescribed call to action |
-| **Federal — inducements** | NCPF National Policy Statement (Measure 4 — restrictions on inducements) | Restriction on publicly advertised sign-up inducements |
-| **State / territory — wagering ads** | NSW Betting and Racing Regulation 2022 + L&GNSW Guideline GL4015 (NSW illustrative) | Bans inducement advertising published or communicated to NSW persons; geo-disclaimers do not cure a breach; reaches influencers and social media |
-| **Industry / broadcaster codes** | Free TV Commercial Television Industry Code of Practice; Commercial Radio Code of Practice 2017 (CRA); Subscription TV (ASTRA) codes; platform policies | ACMA-registered codes binding broadcast gambling ads (whistle-to-whistle, odds-promotion restriction, RG message) plus platform age-targeting |
+| **State / territory — primary (land-based + wagering ads)** | Each jurisdiction's gambling-advertising law and codes — e.g. NSW Betting and Racing Act 1998 + Betting and Racing Regulation 2022 + L&GNSW Guideline GL4015 (NSW shown) | Governs land-based gambling advertising in the jurisdiction; the NSW layer also bans inducement advertising published or communicated to NSW persons (geo-disclaimers do not cure a breach; reaches influencers and social media). Every state/territory has its own equivalent rules |
+| **Federal overlay — prohibition** | Interactive Gambling Act 2001 (Cth) Part 7A | Bans advertising of prohibited (illegal) interactive gambling services and unlicensed regulated services |
+| **Federal overlay — live sport** | Broadcasting Services (Online Content Service Provider Rules) 2018 (F2018L01203) Pts 3-4, s17 | Timing restrictions on gambling ads during live sport on online content services; broadcaster codes mirror this for TV/radio |
+| **Federal overlay — messaging** | NCPF National Policy Statement, Part 8 (Consistent Gambling Messaging — NCPF Measure 8) | Platform-permitted taglines (equal rotation over 12 months) + prescribed call to action |
+| **Federal overlay — inducements** | NCPF National Policy Statement (Measure 4 — restrictions on inducements) | Restriction on publicly advertised sign-up inducements |
+| **Broadcast overlay — industry codes** | Free TV Commercial Television Industry Code of Practice; Commercial Radio Code of Practice 2017 (CRA); Subscription TV (ASTRA) codes; platform policies | ACMA-registered codes binding broadcast gambling ads (whistle-to-whistle, odds-promotion restriction, RG message) plus platform age-targeting |
 
-This module focuses on the federal layers, which apply nationally and standardise online-wagering advertising conduct.
+The federal and broadcast overlay layers apply nationally and standardise online-wagering and broadcast advertising conduct; the state/territory layer is where land-based gambling advertising — and the licensing of the operators being advertised — is actually governed.
 
 ---
 
@@ -173,7 +179,7 @@ Under **NCPF Measure 4 (Restrictions on inducements)**, sign-up and similar indu
 
 ## Named broadcast and state advertising codes
 
-The federal OCSP Rules are given practical effect — for television, radio and subscription TV — by **ACMA-registered industry codes**, and NSW adds a wagering-ad layer of its own. These are the operative standards once an ad reaches a broadcast or a NSW audience.
+In the broadcast overlay, the federal OCSP Rules are given practical effect — for television, radio and subscription TV — by **ACMA-registered industry codes**. The primary state layer also bites here: NSW adds a wagering-ad layer of its own (and every state/territory has equivalent rules). These are the operative standards once an ad reaches a broadcast or a NSW audience.
 
 | Standard | Instrument | Scope | Source |
 |---|---|---|---|
