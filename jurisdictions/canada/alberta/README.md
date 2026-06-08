@@ -26,20 +26,26 @@ adaptation_notes: |
   Alberta module uses CAD currency context. No mandatory verbatim
   statement. Alberta Health Services Addiction Helpline is province-
   specific. GameSense program (licensed from BCLC) operates at all
-  casinos and RECs. Deal Us In mandatory staff certification is
-  Alberta-specific. PlayAlberta is the current sole regulated online
-  platform; open competitive iGaming market launching mid-2026 under
-  iGaming Alberta Act with AGLC as regulator and AiGC as market
+  casinos and RECs. Deal Us In (casinos) and Reel Facts (VLT staff)
+  mandatory certifications are Alberta-specific. In-venue standards of
+  practice (signage, GameSense Info Centres, self-exclusion operator
+  duties, age-ID challenge-25) are set by the AGLC Casino Terms &
+  Conditions and Operating Guidelines (CTCOG) and the parallel Racing
+  Entertainment Centre guidelines (RECTCOG). Self-exclusion is a
+  centralized 24/7 digital platform (effective 2026-02-26) ahead of the
+  open iGaming market. PlayAlberta is the current sole regulated online
+  platform; open competitive iGaming market launching July 13, 2026
+  under iGaming Alberta Act with AGLC as regulator and AiGC as market
   conductor. 18+ minimum age (lower than most Canadian provinces).
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # Alberta -- Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Alberta. Alberta has a dual-body model: AGLC regulates all gambling, while the Alberta iGaming Corporation (AiGC) conducts and manages the private iGaming market launching mid-2026. Currently, PlayAlberta.ca is the sole regulated online platform; the open competitive market will add private operators. GameSense (licensed from BCLC) is Alberta's responsible gambling program, with trained Advisors and Info Centres at every casino and racing entertainment centre (REC). Deal Us In certification is mandatory for all gaming workers.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Alberta. Alberta has a dual-body model: AGLC regulates all gambling, while the Alberta iGaming Corporation (AiGC) conducts and manages the private iGaming market launching **July 13, 2026**. Currently, PlayAlberta.ca is the sole regulated online platform; the open competitive market will add private operators. GameSense (licensed from BCLC) is Alberta's responsible gambling program, with trained Advisors and Info Centres at every casino and racing entertainment centre (REC). The operational standards of practice for land-based venues -- signage, Info Centres, self-exclusion operator duties, age-ID checks, and staff training -- are set by AGLC's **Casino Terms & Conditions and Operating Guidelines (CTCOG)** and the parallel **Racing Entertainment Centre Terms & Conditions and Operating Guidelines (RECTCOG)**. Deal Us In certification is mandatory for all casino gaming workers; **Reel Facts** is the parallel mandatory certification for VLT staff.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -47,15 +53,16 @@ last_updated: 2026-03-22
 
 | Section | Description |
 |---|---|
-| [Regulatory authority](#regulatory-authority) | AGLC, AiGC, PlayAlberta |
+| [Regulatory authority](#regulatory-authority) | AGLC, AiGC, PlayAlberta + CTCOG/RECTCOG operating guidelines |
 | [Legal requirements](#legal-requirements) | 18+, dual-body model, permitted products |
 | [Helpline](#helpline) | Alberta Health Services Addiction Helpline + GameSense Info Line |
 | [Messaging requirements](#messaging-requirements) | No verbatim mandate -- what IS required |
 | [Advertising restrictions](#advertising-restrictions) | AGLC iGaming standards + CGA national code |
 | [GameSense compatibility](#gamesense-compatibility) | Working alongside AGLC's player education program |
-| [Self-exclusion](#self-exclusion) | AGLC Self-Exclusion + CSE for iGaming market |
-| [Player protection tools](#player-protection-tools) | Deposit limits, loss limits, reality checks, breaks |
-| [Age verification](#age-verification) | 18+ requirements |
+| [Self-exclusion](#self-exclusion) | Centralized digital platform + CTCOG operator duties |
+| [Player protection tools](#player-protection-tools) | Limits, cooling-off, reality checks, risk-monitoring |
+| [Staff training](#staff-training) | Deal Us In (casinos) + Reel Facts (VLT staff) |
+| [Age verification](#age-verification) | 18+ requirements + challenge-25 ID standard |
 | [AML/KYC](#amlkyc) | FINTRAC requirements + AGLC AML certification |
 | [Collateral adaptation](#collateral-adaptation) | Quick reference for all touchpoints |
 | [`_brand.yml` updates](#brandyml-updates) | Config values to add |
@@ -72,10 +79,25 @@ last_updated: 2026-03-22
 | **Current online operator** | PlayAlberta.ca (AGLC-operated) |
 | **Governing legislation** | Gaming, Liquor and Cannabis Act (RSA 2000, c.G-1) |
 | **iGaming legislation** | iGaming Alberta Act (Bill 48, Royal Assent May 12, 2025) |
-| **Key regulations** | Gaming, Liquor and Cannabis Regulation (AR 143/1996); Standards and Requirements for Internet Gaming |
+| **Key regulations** | Gaming, Liquor and Cannabis Regulation (AR 143/1996); Standards and Requirements for Internet Gaming (SRIG) |
+| **Operating guidelines (land-based)** | Casino Terms & Conditions and Operating Guidelines (CTCOG); Racing Entertainment Centre Terms & Conditions and Operating Guidelines (RECTCOG); Casino and REC Self-Exclusion Program Manual |
 | **Website** | [aglc.ca](https://aglc.ca/) |
 
-*Sources: [Gaming, Liquor and Cannabis Act](https://open.alberta.ca/publications/g01) | [iGaming Alberta Act](https://open.alberta.ca/publications/i00p2) | [AGLC Gaming](https://aglc.ca/gaming)*
+*Sources: [Gaming, Liquor and Cannabis Act](https://open.alberta.ca/publications/g01) | [iGaming Alberta Act](https://open.alberta.ca/publications/i00p2) | [AGLC Gaming](https://aglc.ca/gaming) | [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines) | [RECTCOG](https://aglc.ca/documents/racing-entertainment-centre-terms-conditions-and-operating-guidelines)*
+
+> **Verify before merge**: The `open.alberta.ca/publications/i00p2` link (iGaming Alberta Act) returned a transient HTTP 520 server error during the last audit; the canonical [`open.alberta.ca/publications/g01`](https://open.alberta.ca/publications/g01) (GLC Act) and [CanLII](https://www.canlii.org/en/ab/laws/regu/alta-reg-143-1996/latest/alta-reg-143-1996.html) (Regulation) resolved live. The CTCOG/RECTCOG documents are published as PDFs that are live but not auto-parseable; confirm section numbers against the current PDF before legal sign-off.
+
+### Standards of practice (operating guidelines)
+
+Alberta's primary legislation sets the framework, but the **binding in-venue standards of practice** -- signage, GameSense Info Centres, self-exclusion operator duties, age verification, and staff training -- live in AGLC's operating-guideline documents, not the Act or Regulation. {{PROGRAM_NAME}} operators deploying in land-based venues should treat these as the controlling source:
+
+| Document | Governs | Key RG/comms sections |
+|---|---|---|
+| **Casino Terms & Conditions and Operating Guidelines (CTCOG)** | Licensed casino facilities | s.3.1 age verification; s.3.5--3.6 self-exclusion operator duties; s.4.2.1 GameSense Information Centre; s.4.3.7 social-responsibility and no-minors signage; s.11.4.5--11.4.7 Deal Us In staff training |
+| **Racing Entertainment Centre Terms & Conditions and Operating Guidelines (RECTCOG)** | Racing Entertainment Centres (RECs) | Parallel signage, self-exclusion, staff-training, and age-verification provisions for REC venues (most recent amendments effective 2025-11-04) |
+| **Casino and REC Self-Exclusion Program Manual** | Self-exclusion enrolment and enforcement | Enrolment, detection, enforcement, and re-entry reporting procedures referenced by CTCOG s.3.5--3.6 |
+
+*Sources: [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines) | [RECTCOG](https://aglc.ca/documents/racing-entertainment-centre-terms-conditions-and-operating-guidelines) | [AGLC gaming legislation & policies](https://aglc.ca/gaming/gaming-legislation-policies)*
 
 ### Regulatory structure
 
@@ -97,25 +119,25 @@ This mirrors Ontario's AGCO/iGO structure. AGLC sets and enforces standards; AiG
 5. **Operator contracts with AiGC** -- commercial agreement covering revenue sharing, operational requirements
 6. **Operator achieves RG Check accreditation** from the Responsible Gambling Council (mandatory)
 7. **Operator launches** on the regulated Alberta market
-8. **AGLC monitors** ongoing compliance with Standards and Requirements
+8. **AGLC monitors** ongoing compliance with the Standards and Requirements for Internet Gaming (SRIG)
 
 *Source: [Segev LLP -- Alberta iGaming Legal Framework](https://segevllp.com/know-the-rules-before-you-play-albertas-igaming-legal-framework-and-registration-process/)*
 
 ### iGaming Alberta Act (Bill 48)
 
-On **May 12, 2025**, the iGaming Alberta Act received Royal Assent, establishing the framework for Alberta's open competitive iGaming market. Key provisions:
+On **May 12, 2025**, the iGaming Alberta Act received Royal Assent, establishing the framework for Alberta's open competitive iGaming market, with a firm public launch date of **July 13, 2026**. Key provisions:
 
-| Area | Before (PlayAlberta monopoly) | After (open market, mid-2026) |
+| Area | Before (PlayAlberta monopoly) | After (open market, July 13, 2026) |
 |---|---|---|
 | **Online operator** | PlayAlberta.ca (AGLC-operated) only | PlayAlberta + licensed private operators |
 | **Market conductor** | N/A | AiGC (Alberta iGaming Corporation) |
 | **Regulator** | AGLC | AGLC (unchanged) |
 | **Sports betting** | PlayAlberta single-event betting only | Private sportsbooks + PlayAlberta |
-| **Self-exclusion** | AGLC Self-Exclusion (venues + PlayAlberta) | Centralized Self-Exclusion covering all platforms and venues |
+| **Self-exclusion** | AGLC Self-Exclusion (venues + PlayAlberta), already a centralized 24/7 digital platform as of 2026-02-26 | Same centralized digital self-exclusion platform extended to all licensed private operators |
 
 **What this means for {{PROGRAM_NAME}} operators**: The open market creates new deployment opportunities. Any registered iGaming operator can deploy {{PROGRAM_NAME}} content. The regulatory requirements (responsible gambling standards, advertising rules, self-exclusion integration) apply uniformly to all operators.
 
-*Source: [Alberta's iGaming Strategy](https://www.alberta.ca/albertas-igaming-strategy)*
+*Sources: [Alberta's iGaming Strategy](https://www.alberta.ca/albertas-igaming-strategy) | [Gowling WLG -- Alberta iGaming](https://gowlingwlg.com/en/insights-resources/articles/2026/alberta-igaming) | [Gambling Insider -- Alberta iGaming launch July 13](https://www.gamblinginsider.com/news/151877/alberta-igaming-market-launch-july-13)*
 
 ---
 
@@ -125,7 +147,7 @@ On **May 12, 2025**, the iGaming Alberta Act received Royal Assent, establishing
 |---|---|
 | **Minimum gambling age** | 18+ |
 | **Legal framework** | Dual-body -- AGLC monopoly (land-based/lottery) transitioning to AGLC regulation + AiGC market conduct (iGaming) |
-| **Online gambling** | Legal -- PlayAlberta.ca (since 2020); open iGaming market launching mid-2026 |
+| **Online gambling** | Legal -- PlayAlberta.ca (since 2020); open iGaming market launching July 13, 2026 |
 | **Lottery** | Legal -- Western Canada Lottery Corporation (WCLC) products sold through AGLC |
 
 ### Permitted products
@@ -133,8 +155,8 @@ On **May 12, 2025**, the iGaming Alberta Act received Royal Assent, establishing
 | Product | Legal status | Operator | Notes |
 |---|---|---|---|
 | Casino (slots, table games) | Legal | Private operators under AGLC licence | 28 casinos + racing entertainment centres across Alberta |
-| Online casino (iGaming) | Legal | PlayAlberta.ca (AGLC); private operators launching mid-2026 | Open competitive market under iGaming Alberta Act |
-| Sports betting (single-event) | Legal | PlayAlberta.ca; private operators launching mid-2026 | Legal since Sept 21, 2021 (Bill C-218) |
+| Online casino (iGaming) | Legal | PlayAlberta.ca (AGLC); private operators launching July 13, 2026 | Open competitive market under iGaming Alberta Act |
+| Sports betting (single-event) | Legal | PlayAlberta.ca; private operators launching July 13, 2026 | Legal since Sept 21, 2021 (Bill C-218) |
 | Lottery | Legal | WCLC via AGLC | Lotto 6/49, Lotto Max, scratch tickets |
 | Horse racing | Legal | Licensed tracks (RECs) | Century Downs, Century Mile |
 | Poker (live) | Legal | Licensed casinos | Available in licensed casinos |
@@ -191,11 +213,13 @@ On **May 12, 2025**, the iGaming Alberta Act received Royal Assent, establishing
 
 ### Display rules
 
-Under the Gaming, Liquor and Cannabis Act and AGLC Standards:
+Under **CTCOG s.4.3.7** (casino facilities) and the parallel RECTCOG provisions, the in-venue display obligation is a binding standard of practice -- not just a general expectation:
 
-- All casinos and RECs must display responsible gambling information including helpline contact details
-- GameSense Info Centres at all casinos and RECs provide brochures, self-exclusion information, and community resource referrals
-- iGaming operators must display responsible gambling information and helpline resources prominently on their platforms
+- Casino facility licensees **must post in a prominent location** social-responsibility messaging as provided by AGLC -- for example, GameSense and self-exclusion information (**CTCOG s.4.3.7(a)(v)**) -- alongside "no minors allowed" signage (**s.4.3.7(a)(vi)**) and AML/surveillance messaging
+- Every casino facility **must** include a **GameSense Information Centre (minimum 120 sq ft)**; AGLC is responsible for its installation, staffing, and operation (**CTCOG s.4.2.1(b)**). Info Centres provide brochures, self-exclusion information, and community resource referrals
+- iGaming operators must display responsible gambling information and helpline resources prominently on their platforms (SRIG)
+
+*Sources: [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines) | [RECTCOG](https://aglc.ca/documents/racing-entertainment-centre-terms-conditions-and-operating-guidelines)*
 
 ### On-brand helpline display
 
@@ -228,12 +252,13 @@ Both meet the regulatory requirement. The second version provides multiple conta
 Alberta's approach is **obligation-based** rather than message-based. Operators must:
 
 1. **Include a responsible gambling message** in all advertising and marketing materials
-2. **Display helpline information** and responsible gambling resources prominently
-3. **Provide GameSense information** at all venues (land-based)
+2. **Display helpline information** and responsible gambling resources prominently (CTCOG s.4.3.7)
+3. **Provide GameSense information** at all venues via a GameSense Information Centre (land-based; CTCOG s.4.2.1)
 4. **Make self-exclusion information** readily available to all patrons
-5. **Train employees** to recognize and respond to at-risk gambling behaviour (Deal Us In)
+5. **Train employees** to recognize and respond to gambling that may be causing harm -- Deal Us In for casino gaming workers, **Reel Facts** for VLT staff
 6. **Provide quarterly reminders** regarding time and financial limits (iGaming)
 7. **Provide monthly reminders** to review financial activity statements (iGaming)
+8. **Honour a minimum 24-hour cooling-off period** before any player request to relax or remove a deposit, loss, or time limit takes effect (iGaming; SRIG)
 
 ### On-brand integration
 
@@ -341,13 +366,14 @@ The **CGA Code for Responsible Gaming Advertising** (January 2026), administered
 
 ## Self-exclusion
 
-### Current system
+### Current system (centralized digital platform)
 
-Alberta currently has one province-wide self-exclusion program:
+Alberta has one province-wide self-exclusion program. As of **2026-02-26** it operates as a **centralized, 24/7 digital platform** (CTCOG s.3.6.1--3.6.7 revised accordingly), already live for land-based venues and PlayAlberta ahead of the open iGaming market:
 
 | Field | Value |
 |---|---|
 | **Program name** | AGLC Self-Exclusion Program |
+| **Platform** | Centralized 24/7 digital self-exclusion platform (effective 2026-02-26) |
 | **Scope** | All Alberta casinos, racing entertainment centres, and PlayAlberta.ca |
 | **Duration options** | 6 months, 1 year, 2 years, 3 years |
 | **Enrollment** | Virtual sign-up (online), in person at any casino/REC, or via AGLC office |
@@ -357,18 +383,36 @@ Alberta currently has one province-wide self-exclusion program:
 | **Enforcement** | Security staff will remove self-excluded persons from casino/REC premises |
 | **Information sharing** | Participant information shared with all security offices at all Alberta casinos and RECs |
 
-*Source: [AGLC Self-Exclusion](https://aglc.ca/gaming/self-exclusion) | [GameSense Self-Exclusion](https://gamesenseab.ca/responsible-gambling-support/self-exclusion-program)*
+*Sources: [AGLC Self-Exclusion (redirects to selfexclusion.ca)](https://selfexclusion.ca/) | [AGLC bulletin -- Self-Exclusion Program Updates (effective 2026-02-26)](https://aglc.ca/gaming-bulletins/self-exclusion-program-updates) | [GameSense Self-Exclusion](https://gamesenseab.ca/responsible-gambling-support/self-exclusion-program)*
 
-### Centralized Self-Exclusion (CSE) -- launching with iGaming market
+> **Note**: The former `aglc.ca/gaming/self-exclusion` page now 301-redirects to [selfexclusion.ca](https://selfexclusion.ca/), the dedicated digital platform. **Verify before merge**: selfexclusion.ca is live but JavaScript-rendered (it was not auto-parseable during the last audit) -- confirm enrolment URLs against the live site before legal sign-off.
+
+### Self-exclusion operator obligations (CTCOG s.3.5--3.6 + SE Program Manual)
+
+Beyond enrolment, the **CTCOG** and the **Casino and REC Self-Exclusion Program Manual** impose concrete operator duties that directly shape {{PROGRAM_NAME}} communications and marketing suppression:
+
+| Obligation | Requirement | Source |
+|---|---|---|
+| **Self-exclusion administrators** | Designate SE program administrators available during operating hours | CTCOG s.3.6.3 |
+| **Marketing suppression** | Exclude self-exclusion participants from **all loyalty mailings and promotions** | CTCOG s.3.6.4 |
+| **Staff awareness** | Ensure surveillance and all Deal Us In Phase Two staff have current self-exclusion bulletins | CTCOG s.3.6.5 |
+| **Discrepancy Reports** | Submit a Discrepancy Report **within 72 hours** when a banned or self-excluded patron is found on premises | CTCOG s.3.5.3 |
+| **Re-Entry Reports** | Submit a self-exclusion Re-Entry Report **within 24 hours** of a breach | CTCOG s.3.6.7 |
+| **Enrolment procedures** | Enrol and manage participants per the Self-Exclusion Program Manual | Casino and REC Self-Exclusion Program Manual |
+| **Prize disentitlement (statutory backstop)** | Self-excluded persons are disentitled from claiming prizes | GLC Regulation s.34.5 |
+
+*Sources: [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines) | [Gaming, Liquor and Cannabis Regulation s.34.5 (CanLII)](https://www.canlii.org/en/ab/laws/regu/alta-reg-143-1996/latest/alta-reg-143-1996.html)*
+
+### Centralized Self-Exclusion across the open iGaming market
+
+When private operators launch (**July 13, 2026**), the centralized digital platform extends to cover all licensed online sites alongside land-based venues:
 
 | Field | Value |
 |---|---|
-| **Program name** | Centralized Self-Exclusion (CSE) |
 | **Scope** | All licensed iGaming sites AND all land-based gambling venues |
 | **Category selection** | Players can opt out of all iGaming sites, all land-based venues, or both |
-| **Enrollment** | Single registration process via centralized platform |
-| **Operator obligations** | API integration with AGLC's CSE platform mandatory; prevent account creation/access; cease all marketing |
-| **Launch** | Day one of iGaming market launch (mid-2026) |
+| **Enrollment** | Single registration process via the centralized digital platform |
+| **Operator obligations** | API integration with AGLC's centralized self-exclusion platform mandatory; prevent account creation/access; cease all marketing |
 
 *Source: [Segev LLP -- Alberta iGaming Registration](https://segevllp.com/alberta-open-for-business-igaming-registration-officially-opens-today/)*
 
@@ -388,7 +432,7 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 > **Q: How does self-exclusion work in Alberta?**
 >
-> Alberta has a province-wide self-exclusion program run by AGLC. Players can exclude themselves from all Alberta casinos, racing entertainment centres, and PlayAlberta.ca for 6 months, 1 year, 2 years, or 3 years. Once signed, the agreement cannot be cancelled or changed. Players can sign up virtually, in person at any casino or REC, or by contacting AGLC. A new **Centralized Self-Exclusion (CSE)** system is launching with the iGaming market, allowing players to exclude from all licensed online platforms, all land-based venues, or both through a single enrollment.
+> Alberta has a province-wide self-exclusion program run by AGLC, now delivered through a **centralized 24/7 digital platform** (selfexclusion.ca). Players can exclude themselves from all Alberta casinos, racing entertainment centres, and PlayAlberta.ca for 6 months, 1 year, 2 years, or 3 years. Once signed, the agreement cannot be cancelled or changed. Players can sign up online, in person at any casino or REC, or by contacting AGLC. When the open iGaming market launches (July 13, 2026), the same centralized platform extends to all licensed online operators, so a single enrollment can cover all licensed online platforms, all land-based venues, or both.
 >
 > If a player asks about self-exclusion, explain the options and offer to help them get started. Use "take a break" in casual conversation, "Self-Exclusion Program" when referring to the formal program.
 
@@ -400,11 +444,12 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 | Tool | Required? | Details |
 |---|---|---|
-| **Self-exclusion** | Yes | Province-wide AGLC program covering all casinos and RECs |
-| **GameSense Info Centres** | Yes | Dedicated space at every casino and REC with responsible gambling information |
+| **Self-exclusion** | Yes | Centralized digital AGLC program covering all casinos and RECs; operator duties under CTCOG s.3.5--3.6 |
+| **GameSense Info Centres** | Yes | Dedicated space (minimum 120 sq ft) at every casino, installed and staffed by AGLC (CTCOG s.4.2.1) |
 | **GameSense Advisors** | Yes | Trained staff available at casinos and RECs |
-| **Responsible gambling signage** | Yes | Posted throughout venues |
-| **Employee training (Deal Us In)** | Yes | Mandatory for all gaming workers within 30 days of employment |
+| **Responsible gambling signage** | Yes | Prominently posted social-responsibility and no-minors signage (CTCOG s.4.3.7) |
+| **Employee training (Deal Us In)** | Yes | Mandatory for all casino gaming workers within 30 days of employment (CTCOG s.11.4.5--11.4.7) |
+| **Employee training (Reel Facts)** | Yes | Mandatory social-responsibility certification for VLT staff who deal with customers (~6,000 VLTs in scope) |
 | **AML certification** | Yes | Mandatory for staff exposed to money laundering risk (2-year validity) |
 
 ### iGaming (PlayAlberta + future private operators)
@@ -412,16 +457,19 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 | Tool | Required? | Details |
 |---|---|---|
 | **Deposit limits** | Yes | Daily, weekly, and monthly periods. Must be offered at account creation |
-| **Loss limits** | Yes | Prevent play once limit is reached |
-| **Reality checks** | Yes | Time-based reminders during sessions |
+| **Loss limits** | Yes | Defined as net losses; prevent play once limit is reached |
+| **Time limits** | Yes | Available in 1-hour-minimum increments (SRIG) |
+| **Limit cooling-off** | Yes | Minimum 24-hour cooling-off period before any player request to relax or remove a deposit, loss, or time limit takes effect; player-initiated only, not bypassable by customer service (SRIG) |
+| **Reality checks** | Yes | Time-based reminders during sessions; auto-logout on inactivity |
+| **Player risk-monitoring / early intervention** | Yes | Operators must maintain mechanisms to identify moderate/high-risk players and intervene (SRIG) |
 | **Voluntary breaks** | Yes | Temporary account suspension options |
-| **Self-exclusion** | Yes | Province-wide program; CSE integration mandatory for iGaming operators |
+| **Self-exclusion** | Yes | Centralized digital program; API integration mandatory for iGaming operators |
 | **Activity statements** | Yes | Monthly reminders to review financial activity |
 | **Limit reminders** | Yes | Quarterly reminders regarding time and financial limits |
 | **RG Check accreditation** | Yes | Mandatory for all iGaming operators (RGC program) |
 | **Responsible gambling information** | Yes | Must be prominently displayed on platform |
 
-*Sources: [AGLC Responsible Gambling](https://aglc.ca/gaming/responsible-gambling) | [Gowling WLG -- Alberta iGaming](https://gowlingwlg.com/en/insights-resources/articles/2026/alberta-igaming-requires-rg-check-and-ad-controls)*
+*Sources: [AGLC Responsible Gambling](https://aglc.ca/gaming/responsible-gambling) | [AGLC gaming legislation & policies (SRIG index)](https://aglc.ca/gaming/gaming-legislation-policies) | [Gowling WLG -- Alberta iGaming](https://gowlingwlg.com/en/insights-resources/articles/2026/alberta-igaming-requires-rg-check-and-ad-controls)*
 
 ### {{PROGRAM_NAME}} tool messaging for Alberta
 
@@ -435,6 +483,34 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 ---
 
+## Staff training
+
+Alberta mandates **two distinct social-responsibility certifications** depending on the venue type. Both are conditions of operation, and AGLC Inspectors can request proof on demand.
+
+### Deal Us In (casino gaming workers)
+
+Deal Us In is the mandatory certification for casino gaming workers, structured in two phases (**CTCOG s.11.4.5--11.4.7**):
+
+| Phase | Who | Coverage |
+|---|---|---|
+| **Phase One** | All gaming workers | Responsible gambling fundamentals, recognizing and responding to gambling that may be causing harm, GameSense and self-exclusion awareness |
+| **Phase Two** | Supervisors, managers, and security | Phase One content plus enhanced intervention and self-exclusion enforcement duties |
+
+- Certification is required within **30 days of employment**
+- At licensed casino facilities, **at least one Phase One and one Phase Two certified worker must be on shift at all times** (CTCOG s.11.4.5--11.4.7)
+
+### Reel Facts (VLT staff)
+
+**Reel Facts** is the parallel mandatory social-responsibility certification for VLT retailers and staff who deal with customers -- distinct from Deal Us In and squarely in scope given Alberta's ~6,000 VLTs in ~900 licensed premises:
+
+- All customer-facing VLT staff must complete Reel Facts; staff must show proof on AGLC Inspector request
+- Uncertified staff risk warning, fine, licence suspension, or termination
+- At licensed casino facilities, Deal Us In Phase One is accepted in lieu of Reel Facts; **standalone VLT premises still require Reel Facts** (CTCOG s.11.4.6)
+
+*Sources: [AGLC Reel Facts VLT Staff Training](https://aglc.ca/training/reel-facts-vlt-staff-training) | [AGLC VLT Staff Training](https://aglc.ca/gaming/vlts/vlt-operators-and-staff/vlt-staff-training) | [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines)*
+
+---
+
 ## Age verification
 
 | Field | Value |
@@ -443,6 +519,7 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 | **`_brand.yml` key** | `legal.minimum_gambling_age.canada-alberta` |
 | **`{{MIN_AGE}}` token value** | 18 |
 | **Statutory basis** | Gaming, Liquor and Cannabis Act, s.37 |
+| **Operational standard** | Staff must request photo ID and verify age whenever a person appears under 25 -- a "challenge-25"-type standard (CTCOG s.3.1.4) |
 | **Products with different ages** | None -- 18+ applies to all gambling products in Alberta |
 
 ### Land-based verification
@@ -450,7 +527,8 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 | Requirement | Details |
 |---|---|
 | **Method** | Government-issued photo ID |
-| **Entry restriction** | Minors not allowed in casinos or racing entertainment centres |
+| **ID-challenge threshold** | Staff must request ID and verify age whenever a person appears under 25 (CTCOG s.3.1.4) |
+| **Entry restriction** | Minors barred from entry, employment, and volunteering at casinos or racing entertainment centres (CTCOG s.3.1.1--3.1.3) |
 
 ### Interactive verification
 
@@ -459,7 +537,7 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 | **Registration** | Identity verification required at account creation |
 | **Age confirmation** | Date of birth must confirm player is 18 or older |
 
-*Source: [Gaming, Liquor and Cannabis Act](https://open.alberta.ca/publications/g01)*
+*Sources: [Gaming, Liquor and Cannabis Act](https://open.alberta.ca/publications/g01) | [CTCOG s.3.1](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines)*
 
 ### Age messaging
 
@@ -515,7 +593,7 @@ Quick-reference table mapping every collateral category to Alberta-specific adap
 |---|---|---|---|
 | **Digital** | Website footer | AHS Addiction Helpline: 1-866-332-2322 + on-brand RG message | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Age gate | Set to 18+ | `{{MIN_AGE}}` = 18 |
-| **Digital** | Self-exclusion page | Explain dual system (current AGLC + CSE for iGaming); link to enrollment | -- |
+| **Digital** | Self-exclusion page | Explain the centralized digital self-exclusion platform (selfexclusion.ca); link to enrollment | -- |
 | **Digital** | Deposit screen | Deposit limit prompt + helpline | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Social media bio | Include 1-866-332-2322 | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Email footer | AHS Addiction Helpline + on-brand RG message in every email | `{{HELPLINE_NUMBER}}` |
@@ -539,9 +617,9 @@ Quick-reference table mapping every collateral category to Alberta-specific adap
 | **Mandatory statement** | None | None |
 | **Helpline** | AHS Addiction Helpline 1-866-332-2322 | ConnexOntario 1-866-531-2600 |
 | **RG program** | GameSense (AGLC, licensed from BCLC) | PlaySmart (OLG) |
-| **Self-exclusion** | Province-wide AGLC program (6mo/1yr/2yr/3yr) | Dual system (OLG My PlayBreak + iGaming site-level) |
-| **iGaming market** | Launching mid-2026 (AiGC) | Live since April 2022 (iGO) |
-| **Staff certification** | Deal Us In (mandatory, 5-year expiry) | Outcomes-based training (AGCO, no pre-approval since July 2025) |
+| **Self-exclusion** | Centralized digital AGLC program (6mo/1yr/2yr/3yr) | Dual system (OLG My PlayBreak + iGaming site-level) |
+| **iGaming market** | Launching July 13, 2026 (AiGC) | Live since April 2022 (iGO) |
+| **Staff certification** | Deal Us In (casinos) + Reel Facts (VLT staff), mandatory | Outcomes-based training (AGCO, no pre-approval since July 2025) |
 | **RG Check** | Mandatory for all iGaming operators | Not mandatory (but encouraged) |
 | **Sport betting inducements** | Opt-in consent required for inducement marketing | Public advertising of sport betting inducements prohibited |
 
@@ -553,8 +631,8 @@ Quick-reference table mapping every collateral category to Alberta-specific adap
 | **Mandatory statement** | None | "Know your limit, play within it." |
 | **Helpline** | AHS Addiction Helpline 1-866-332-2322 | Gambling Support BC 1-888-795-6111 |
 | **RG program** | GameSense (AGLC, licensed from BCLC) | GameSense (BCLC, originator) |
-| **Self-exclusion** | AGLC province-wide (6mo/1yr/2yr/3yr) | Game Break (BCLC province-wide) |
-| **Deployment model** | Open competitive market (launching mid-2026) | BCLC monopoly (PlayNow.com) |
+| **Self-exclusion** | AGLC province-wide, centralized digital (6mo/1yr/2yr/3yr) | Game Break (BCLC province-wide) |
+| **Deployment model** | Open competitive market (launching July 13, 2026) | BCLC monopoly (PlayNow.com) |
 
 For the detailed collateral adaptation template, see [collateral-adaptation.md](../../_template/collateral-adaptation.md).
 
@@ -597,7 +675,8 @@ Complete before launching {{PROGRAM_NAME}} in Alberta.
 - [ ] Verified legal gambling age: 18+ for all products
 - [ ] Reviewed permitted products table
 - [ ] Reviewed Gaming, Liquor and Cannabis Act and iGaming Alberta Act
-- [ ] Tracked iGaming market launch timeline (mid-2026)
+- [ ] Reviewed applicable operating guidelines (CTCOG for casinos, RECTCOG for RECs) and the SRIG for iGaming
+- [ ] Tracked iGaming market launch date (July 13, 2026)
 - [ ] Achieved RG Check accreditation (mandatory for iGaming operators)
 
 ### Helpline
@@ -626,8 +705,9 @@ Complete before launching {{PROGRAM_NAME}} in Alberta.
 
 ### Self-exclusion
 - [ ] AGLC Self-Exclusion information available to all patrons (venues)
-- [ ] iGaming: API integration with AGLC's centralized Self-Exclusion platform
-- [ ] Self-excluded persons removed from all marketing
+- [ ] iGaming: API integration with AGLC's centralized digital self-exclusion platform
+- [ ] Self-excluded persons removed from all marketing, including loyalty mailings and promotions (CTCOG s.3.6.4)
+- [ ] Operator duties confirmed: SE administrators on duty (s.3.6.3); 72-hr Discrepancy Reports (s.3.5.3); 24-hr Re-Entry Reports (s.3.6.7)
 - [ ] Self-exclusion language mapped to {{PROGRAM_NAME}} Tier 1/Tier 2 language
 - [ ] Staff FAQ updated with Alberta self-exclusion Q&A
 
@@ -639,18 +719,22 @@ Complete before launching {{PROGRAM_NAME}} in Alberta.
 - [ ] iGaming: quarterly reminders regarding time and financial limits
 - [ ] iGaming: monthly reminders to review financial activity statements
 - [ ] iGaming: limits offered at account creation
-- [ ] Land-based: GameSense information and resources available
-- [ ] Land-based: responsible gambling signage posted
+- [ ] iGaming: 24-hour cooling-off enforced before limit increases/removals take effect (SRIG)
+- [ ] iGaming: player risk-monitoring / early-intervention mechanisms in place (SRIG)
+- [ ] Land-based: GameSense Information Centre provided (min 120 sq ft; CTCOG s.4.2.1)
+- [ ] Land-based: social-responsibility and no-minors signage posted (CTCOG s.4.3.7)
 
 ### Staff training
-- [ ] Land-based: Deal Us In certification for all gaming workers (within 30 days of employment)
+- [ ] Casinos: Deal Us In certification for all gaming workers (within 30 days of employment; two-phase, CTCOG s.11.4.5--11.4.7)
+- [ ] Casinos: at least one Phase One and one Phase Two certified worker on shift at all times
+- [ ] VLT premises: Reel Facts certification for all customer-facing VLT staff
 - [ ] Land-based: AML certification for applicable staff (2-year validity)
 - [ ] iGaming: responsible gambling training for customer-facing staff
 
 ### Age verification
 - [ ] 18+ age verification at all gambling touchpoints
 - [ ] iGaming: identity verification at registration
-- [ ] Land-based: ID checks at casino/REC entry
+- [ ] Land-based: ID checks at casino/REC entry, with challenge-25 ID standard for anyone appearing under 25 (CTCOG s.3.1.4)
 
 ### AML/KYC
 - [ ] FINTRAC compliance program in place
@@ -673,7 +757,7 @@ Complete before launching {{PROGRAM_NAME}} in Alberta.
 - [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
-- [ ] CSE integration monitoring plan in place (mid-2026)
+- [ ] Self-exclusion API integration monitoring plan in place ahead of open-market launch (July 13, 2026)
 
 ---
 
