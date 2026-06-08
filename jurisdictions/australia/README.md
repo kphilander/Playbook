@@ -32,9 +32,12 @@ adaptation_notes: |
   currency, decimal odds, and Australian English (licence, organisation,
   recognise). The seven mandated taglines and the National Gambling
   Helpline call to action are verbatim federal requirements for online
-  wagering advertising. The land-based layer in this module is
-  illustrated with New South Wales (NSW) only; a full national land-based
-  build needs a per-state pass.
+  wagering advertising; each platform draws from its own permitted
+  subset, rotated equally over 12 months. The land-based layer in this
+  module is illustrated with New South Wales (NSW) as the primary worked
+  example and Victoria (VIC) as a second worked example of the
+  mandatory-code-plus-Ministerial-Direction pattern; a full national
+  land-based build still needs a per-state pass.
 last_updated: 2026-06-05
 ---
 
@@ -63,7 +66,7 @@ last_updated: 2026-06-05
 | [Advertising restrictions](#advertising-restrictions) | Both | Multi-layer ad rules; see [advertising-rules.md](advertising-rules.md) |
 | [Self-exclusion](#self-exclusion) | Both | BetStop (online, national) + state land-based schemes |
 | [Player protection — interactive](#player-protection--interactive) | Online | NCPF 10 measures, credit ban, activity statements |
-| [Player protection — land-based](#player-protection--land-based) | Land-based | NSW venue obligations (illustrative) |
+| [Player protection — land-based](#player-protection--land-based) | Land-based | NSW venue obligations (Regulation 2019, RGO) + Victoria worked example |
 | [Age verification](#age-verification) | Both | 18+ nationwide; pre-verification for online |
 | [AML/KYC](#amlkyc) | Both | AUSTRAC, AML/CTF Act customer verification |
 | [Collateral adaptation](#collateral-adaptation) | Both | What to change across all touchpoints |
@@ -110,20 +113,22 @@ Australia has **no single gambling regulator**. Responsibility is split between 
 
 ### The NCPF 10 measures
 
-The National Consumer Protection Framework for Online Wagering is the prescriptive heart of the federal online regime. The 10 measures:
+The National Consumer Protection Framework for Online Wagering is the prescriptive heart of the federal online regime. The official ten measures:
 
 | # | Measure | Status |
 |---|---|---|
-| 1 | Prohibition on lines of credit | In force (credit/credit-card/digital-currency ban commenced 11 June 2024) |
-| 2 | Restrictions on payment methods (no credit cards / digital currency) | In force (11 June 2024) |
-| 3 | Voluntary opt-out pre-commitment scheme | In force |
-| 4 | Customer-set deposit limits | In force |
-| 5 | Restriction of inducements (no sign-up inducements that are publicly advertised) | In force |
-| 6 | Consistent gambling messaging (seven mandated taglines + call to action) | In force (30 March 2023) |
-| 7 | Staff training | In force (30 March 2023) |
-| 8 | Activity statements (monthly) | In force |
-| 9 | National Self-Exclusion Register (BetStop) | In force (launched 21 August 2023) |
-| 10 | Account/customer verification before betting | Strengthened (verification before account use, 29 September 2024) |
+| 1 | Prohibition on lines of credit | In force |
+| 2 | Restrictions on the provision of credit by payday lenders | In force |
+| 3 | Customer verification | In force (strengthened — verification before account use, 29 September 2024) |
+| 4 | Restrictions on inducements | In force |
+| 5 | Account closure (a simple, prominent account-closure process must be displayed) | In force |
+| 6 | Opt-out pre-commitment (includes customer-set deposit limits as a component) | In force |
+| 7 | Activity statements | In force |
+| 8 | Consistent gambling messaging (seven mandated taglines + call to action) | In force (30 March 2023) |
+| 9 | Staff training | In force (30 March 2023) |
+| 10 | National Self-Exclusion Register (BetStop) | In force (launched 21 August 2023) |
+
+> **Note**: The **credit / credit-card / digital-currency ban** is **not** one of the ten NCPF measures — it is the separate **Interactive Gambling Amendment (Credit and Other Measures) Act 2023** (commenced 11 June 2024; see [Player protection — interactive](#player-protection--interactive)). **Customer-set deposit limits** are a component of the opt-out pre-commitment measure (Measure 6), not a standalone eleventh measure.
 
 ### Upcoming changes
 
@@ -182,7 +187,7 @@ The National Consumer Protection Framework for Online Wagering is the prescripti
 
 ### Display rules
 
-The National Gambling Helpline call to action is **mandated in the consistent gambling messaging** for online wagering (NCPF Measure 6). State land-based rules also require helpline display, set by each state.
+The National Gambling Helpline call to action is **mandated in the consistent gambling messaging** for online wagering (NCPF Measure 8). State land-based rules also require helpline display, set by each state.
 
 #### Interactive display (federal — primary)
 
@@ -211,7 +216,7 @@ Both meet the requirement. The second frames the helpline as available for any q
 
 ### Consistent gambling messaging (verbatim — online wagering)
 
-Australia's online-wagering messaging is **verbatim and prescriptive**. Under NCPF Measure 6 (Consistent Gambling Messaging), online wagering advertising must rotate **seven mandated taglines in equal proportion** and carry a prescribed **call to action**. These replaced the old "Gamble Responsibly" message from **30 March 2023**.
+Australia's online-wagering messaging is **verbatim and prescriptive**. Under NCPF Measure 8 (Consistent Gambling Messaging), online wagering advertising must rotate the **mandated taglines** (the permitted subset for each platform) in equal proportion over a 12-month period and carry a prescribed **call to action**. These replaced the old "Gamble Responsibly" message from **30 March 2023**.
 
 ### Messaging regime summary
 
@@ -232,15 +237,35 @@ The seven mandated taglines (online wagering) are:
 |---|---|
 | 1 | Chances are you're about to lose. |
 | 2 | Think. Is this a bet you really want to place? |
-| 3 | What are you prepared to lose today? Set a deposit limit. |
-| 4 | What's gambling really costing you? |
-| 5 | You win some. You lose more. |
-| 6 | Imagine what you could be buying instead. |
-| 7 | What's gambling really costing you? Reach out. |
+| 3 | What's gambling really costing you? |
+| 4 | What are you prepared to lose today? Set a deposit limit. |
+| 5 | Imagine what you could be buying instead. |
+| 6 | You win some. You lose more. |
+| 7 | What are you really gambling with? |
 
-Each must appear **in equal rotation** (no single tagline favoured), accompanied by the prescribed **call to action** carrying the National Gambling Helpline (1800 858 858 / gamblinghelponline.org.au).
+#### Platform-specific permitted subsets
 
-> **Verify before merge**: the exact list and current wording of the seven taglines and the call to action should be confirmed against the live DSS guidance (`acma-cgm`) and the relevant state Consistent Gambling Messaging notice before publishing any Australian advertising. The taglines were independently verbatim-verified via a registered Western Australian Consistent Gambling Messaging Notice during research; the DSS explainer pages were temporarily unreachable from the research environment.
+Not every tagline is permitted on every platform. The mandated message must be drawn from the subset approved for the placement:
+
+| Platform | Permitted taglines | Count |
+|---|---|---|
+| Television / video and radio | 1, 3, 5, 6, 7 | five |
+| Digital, print, social media, website | 1, 2, 3, 4, 5, 7 | six |
+| In-app | 1, 2, 3, 4, 5, 6, 7 | all seven |
+
+#### Verbatim call to action
+
+The prescribed call to action carrying the National Gambling Helpline is, word-for-word:
+
+> **For free and confidential support call 1800 858 858 or visit gamblinghelponline.org.au**
+
+(Radio and TV/video carry approved modified forms of the call to action — e.g. radio uses "For free and confidential support visit gamblinghelponline.org.au"; TV/video may use "For free and confidential support, call the number on screen or visit the website." Use the platform-approved wording.)
+
+#### Equal-rotation rule
+
+Providers must take reasonable steps to ensure all **applicable** taglines (the subset permitted for the platform) are employed **equally over a 12-month period** — no single tagline may be favoured. This rotation obligation applies to television, radio, in-app, digital, print, social media, and website advertising.
+
+> **Source**: WA Consistent Gambling Messaging Notice 2025 — [cits.wa.gov.au notice](https://www.cits.wa.gov.au/department/news/news-article/2025/03/24/consistent-gambling-messaging). The seven taglines, platform subsets, verbatim call to action, and 12-month equal-rotation rule were verbatim-verified against this registered state notice. The Department of Social Services (DSS) consistent-gambling-messaging platform-definitions page is the canonical federal source but is bot-blocked from this environment; confirm against live DSS guidance before publishing any Australian advertising.
 
 ### On-brand integration
 
@@ -274,14 +299,27 @@ Australia's online-wagering advertising regime is **multi-layer**: federal prohi
 | No advertising of illegal services | Prohibited interactive gambling services (online casino, online in-play) and unlicensed services must not be advertised | Interactive | Interactive Gambling Act 2001 Part 7A |
 | Live-sport timing ban | No gambling ads during live sport 5:00 am – 8:30 pm and 5 min before to 5 min after play | Interactive | Broadcasting Services (Online Content Service Provider Rules) 2018 (F2018L01203) Pts 3-4, s17 |
 | Odds-promotion ban | No commentator/representative odds promotion 30 min either side of play | Interactive | F2018L01203 |
-| Consistent gambling messaging | Seven taglines (equal rotation) + call to action | Interactive | NCPF Part 8 |
-| Inducement restrictions | No publicly advertised sign-up inducements | Interactive | NCPF Measure 5 |
+| Consistent gambling messaging | Platform-permitted taglines (equal rotation over 12 months) + call to action | Interactive | NCPF Measure 8 / NCPF Part 8; WA Consistent Gambling Messaging Notice 2025 |
+| Inducement restrictions (federal) | No publicly advertised sign-up inducements | Interactive | NCPF Measure 4 |
+| Broadcast code restrictions | ACMA-registered Free TV, Commercial Radio (CRA) and Subscription TV (ASTRA) codes bind broadcast gambling ads (no ads 5:00 am – 8:30 pm during live sport; 5 min before/after play; odds-promotion restriction; socially-responsible + RG message) | Interactive | Free TV Commercial Television Industry Code of Practice; Commercial Radio Code of Practice 2017 (CRA); ASTRA codes |
+| NSW wagering-ad inducement ban (state) | Inducement advertising must not be published or communicated to NSW persons — geo-disclaimers excluding NSW residents do **not** cure a breach; reaches gambling influencers and social media | Interactive | NSW Betting and Racing Regulation 2022; L&GNSW Guideline GL4015 |
+
+### Named standards of practice (broadcast and state advertising codes)
+
+The federal OCSP Rules are mirrored — and in places extended — by industry codes and state instruments. These are the operative standards that bind a gambling advertisement once it reaches a broadcast or a NSW audience.
+
+| Standard | Instrument | What it binds | Source |
+|---|---|---|---|
+| **Free TV broadcast code** | Free TV Commercial Television Industry Code of Practice | Commercial free-to-air TV gambling ads: no ads during live sport 5:00 am – 8:30 pm and 5 min before/after play; odds-promotion restriction; socially-responsible content + RG message | [freetv.com.au gambling advertising code](https://www.freetv.com.au/new-free-tv-gambling-advertising-code/) |
+| **Commercial Radio code** | Commercial Radio Code of Practice 2017 (Commercial Radio Australia — CRA) | Commercial radio gambling ads: equivalent live-sport timing and RG-message obligations | [cra.au regulation and codes](https://cra.au/regulation-and-codes) |
+| **Subscription TV code** | Subscription TV (ASTRA) codes of practice | Subscription/pay-TV gambling ads: equivalent live-sport timing and RG-message obligations | ASTRA codes (registered with ACMA) |
+| **NSW wagering-ad layer** | NSW Betting and Racing Regulation 2022 + L&GNSW Guideline GL4015 | Wagering-ad inducement layer: bans inducement advertising published or communicated to NSW persons even where a geo-disclaimer purports to exclude NSW residents; reaches gambling influencers and social-media promotions | [nsw.gov.au gambling advertising](https://www.nsw.gov.au/business-and-economy/liquor-and-gaming/gaming/wagering-regulation/gambling-advertising) |
 
 ### Channel-specific rules
 
 | Channel | Key restrictions | Verticals | Source |
 |---|---|---|---|
-| Broadcast (TV/radio) | Live-sport whistle-to-whistle restrictions; messaging required | Interactive | F2018L01203; broadcaster codes |
+| Broadcast (TV/radio) | Live-sport whistle-to-whistle restrictions; messaging required | Interactive | F2018L01203; Free TV Commercial Television Industry Code of Practice; Commercial Radio Code of Practice 2017 (CRA); ASTRA codes |
 | Digital / online | OCSP Rules apply to online content services; messaging required; no illegal-service ads | Interactive | F2018L01203; IGA 2001 Pt 7A |
 | Print | Messaging required; no illegal-service ads | Interactive | NCPF Part 8; IGA 2001 Pt 7A |
 | Direct marketing | Excluded persons (BetStop) must not receive electronic, telemarketing, or direct-mail marketing | Interactive | IGA 2001 Part 7B |
@@ -298,8 +336,8 @@ Australia's online-wagering advertising regime is **multi-layer**: federal prohi
 
 ### Required disclosures
 
-- One of the seven mandated taglines (equal rotation) in online wagering advertising
-- The prescribed call to action carrying the National Gambling Helpline (1800 858 858 / gamblinghelponline.org.au)
+- One of the platform-permitted mandated taglines (equal rotation over 12 months) in online wagering advertising
+- The prescribed call to action carrying the National Gambling Helpline: "For free and confidential support call 1800 858 858 or visit gamblinghelponline.org.au" (platform-approved modified forms for radio and TV/video)
 - 18+ age context
 
 For the full channel-by-channel breakdown, prohibited-content table, required-disclosures table, and the {{PROGRAM_NAME}} content compliance matrix, see [advertising-rules.md](advertising-rules.md).
@@ -323,7 +361,7 @@ Australia has a **national online self-exclusion register (BetStop)** plus **sta
 | **Marketing cessation** | Providers must not send electronic, telemarketing, or direct-mail marketing to registered persons |
 | **Minimum exclusion period** | 3 months |
 | **Penalty for breach** | Civil penalty of 750 penalty units for providing a service to a registered person |
-| **Source** | Interactive Gambling Act 2001 (Cth) Part 7B; National Self-Exclusion Register Act 2019; National Self-Exclusion Register (Indexation) Rules |
+| **Source** | Interactive Gambling Act 2001 (Cth) Part 7B; Interactive Gambling Amendment (National Self-exclusion Register) Act 2019; National Self-Exclusion Register (Indexation) Rules |
 
 ### Land-based self-exclusion (state — NSW illustrative)
 
@@ -368,23 +406,25 @@ Online wagering player protection is governed by the **NCPF 10 measures** plus t
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Customer-set deposit limits | Yes | Providers must offer deposit limits (NCPF Measure 4) | NCPF National Policy Statement |
-| Opt-out pre-commitment | Yes | Scheme must actively prompt customers to set limits (NCPF Measure 3) | NCPF National Policy Statement |
-| Credit / credit-card / digital-currency ban | Yes | Must not provide or facilitate credit, nor accept credit cards or digital currency, from customers in Australia. Small providers (< AUD 30M turnover) exempt; ban does not apply to lotteries/keno | Interactive Gambling Act 2001 s15C (commenced 11 June 2024) |
-| Monthly activity statements | Yes | Regular (monthly) statements showing wins, losses and net position, with a link to support services | NCPF Measure 8 |
-| Consistent gambling messaging | Yes | Seven taglines + call to action | NCPF Measure 6 |
-| Staff training | Yes | Appropriate training + annual refresher | NCPF Measure 7 |
-| Self-exclusion (BetStop) | Yes | National register; must not provide service or marketing to registered persons | IGA 2001 Part 7B |
-| Account/customer verification | Yes | Age and identity verified before the account can be used (strengthened 29 September 2024) | NCPF Measure 10; AML/CTF Act 2006 |
-| No publicly advertised inducements | Yes | Restriction on sign-up inducements (NCPF Measure 5) | NCPF National Policy Statement |
+| Opt-out pre-commitment (incl. customer-set deposit limits) | Yes | Scheme must actively prompt customers to set limits; customer-set deposit limits are a component of this measure (NCPF Measure 6) | NCPF National Policy Statement |
+| Account closure | Yes | A simple, prominent account-closure process must be displayed (NCPF Measure 5) | NCPF National Policy Statement |
+| Credit / credit-card / digital-currency ban | Yes | Must not provide or facilitate credit or credit-related products, nor accept payment by credit card or digital currency, from customers physically present in Australia. Small providers (< AUD 30M annual wagering turnover) exempt; ban does not apply to lotteries/keno. **Separate from the NCPF ten measures.** | Interactive Gambling Amendment (Credit and Other Measures) Act 2023 (C2023A00114) — IGA 2001 s15C; commenced 11 June 2024; civil penalties up to ~AUD 247,500 |
+| Activity statements | Yes | Regular (monthly) statements showing wins, losses and net position, with a link to support services (NCPF Measure 7) | NCPF National Policy Statement |
+| Consistent gambling messaging | Yes | Platform-permitted taglines (equal rotation over 12 months) + call to action (NCPF Measure 8) | NCPF National Policy Statement; WA Consistent Gambling Messaging Notice 2025 |
+| Staff training | Yes | Appropriate training + annual refresher (NCPF Measure 9) | NCPF National Policy Statement |
+| Self-exclusion (BetStop) — National Self-Exclusion Register | Yes | National register (NCPF Measure 10); must not provide service or marketing to registered persons | IGA 2001 Part 7B; Interactive Gambling Amendment (National Self-exclusion Register) Act 2019 |
+| Customer verification | Yes | Age and identity verified before the account can be used (NCPF Measure 3; strengthened 29 September 2024) | NCPF National Policy Statement; AML/CTF Act 2006 |
+| Restrictions on inducements | Yes | Restriction on publicly advertised sign-up inducements (NCPF Measure 4) | NCPF National Policy Statement |
+| Restrictions re payday lenders | Yes | Restrictions on the provision of credit by payday lenders to wagering customers (NCPF Measure 2) | NCPF National Policy Statement |
+| Prohibition on lines of credit | Yes | Providers must not offer customers a line of credit (NCPF Measure 1) | NCPF National Policy Statement |
 
 ### {{PROGRAM_NAME}} tool messaging — interactive
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
-| Deposit limits | "Set your deposit limit — bet on your terms. Takes 10 seconds." | NCPF Measure 4 |
-| Pre-commitment prompt | "Before you start: what are you happy to spend today? Set it once, we'll hold you to it." | NCPF Measure 3 |
-| Monthly activity statement | "Your month in numbers — wins, losses, where you landed. No surprises." | NCPF Measure 8 |
+| Deposit limits | "Set your deposit limit — bet on your terms. Takes 10 seconds." | NCPF Measure 6 (component of opt-out pre-commitment) |
+| Pre-commitment prompt | "Before you start: what are you happy to spend today? Set it once, we'll hold you to it." | NCPF Measure 6 |
+| Monthly activity statement | "Your month in numbers — wins, losses, where you landed. No surprises." | NCPF Measure 7 |
 | BetStop | "Need a longer break? BetStop steps you away from every Australian betting site at once." | IGA 2001 Part 7B |
 
 ---
@@ -393,25 +433,41 @@ Online wagering player protection is governed by the **NCPF 10 measures** plus t
 
 *Skip this section if your deployment is online-wagering-only.*
 
-Land-based player protection is set by each **state**. The requirements below are illustrated with **New South Wales**; other states differ and would need their own pass.
+Land-based player protection is set by each **state**. The requirements below are illustrated with **New South Wales**; other states differ and would need their own pass. The day-to-day NSW standards sit in the **Gaming Machines Regulation 2019** (the operative regulation made under the Gaming Machines Act 2001).
 
 ### Required tools and obligations (NSW illustrative)
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| RG information / signage | Yes | Responsible-gambling and counselling information displayed in gambling areas | NSW Gaming Machines Act 2001 |
-| Helpline display | Yes | Gambling Help / National Gambling Helpline contact at gambling areas and cash facilities | NSW Gaming Machines Act 2001 |
+| Mandatory signage and counselling notices | Yes | Prescribed gambling-counselling notices and responsible-gambling signage displayed at gaming areas | NSW Gaming Machines Regulation 2019 |
+| Gambling contact cards | Yes | Gambling contact cards (counselling/helpline) must be available to patrons in gaming areas | NSW Gaming Machines Regulation 2019 |
+| RG messaging on player activity statements | Yes | Responsible-gambling messaging must appear on player activity statements provided to gaming-machine players | NSW Gaming Machines Regulation 2019 |
+| Helpline display | Yes | Gambling Help / National Gambling Helpline contact at gambling areas and cash facilities | NSW Gaming Machines Regulation 2019 |
 | Self-exclusion | Yes | Venue and multi-venue self-exclusion available | NSW Gaming Machines Act 2001; Casino Control Act 1992 |
-| Staff responsible-conduct training | Yes | Gaming staff must complete responsible-conduct-of-gambling training | NSW Gaming Machines Act 2001 |
-| Cash-facility / ATM restrictions | Yes | Limits on ATM placement and cash access in gaming areas | NSW gaming machine regulation |
+| Staff responsible-conduct training | Yes | Gaming staff must complete responsible-conduct-of-gambling training | NSW Gaming Machines Act 2001; Gaming Machines Regulation 2019 |
+| ATM / cash-dispenser placement restrictions | Yes | Restrictions on the placement of ATMs and cash dispensers in or near gaming areas | NSW Gaming Machines Regulation 2019 |
+| Responsible Gambling Officer (RGO) | Yes (venues > 20 GME) | Commenced **1 July 2024**. Hotels and clubs with **more than 20 gaming-machine entitlements** must have an RGO on duty while machines operate (larger clubs need additional RGOs). RGOs monitor for patrons at risk of harm, refer them to support, and facilitate self-exclusion — a **Theme 9** harm-monitoring obligation | NSW responsible-gambling-officer reforms (Gaming Machines Act/Regulation amendments) — [nsw.gov.au RGO release](https://www.nsw.gov.au/ministerial-releases/responsible-gambling-officers-introduced-into-pubs-and-clubs-across-nsw) |
 
 ### {{PROGRAM_NAME}} tool messaging — land-based (NSW)
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
 | Self-exclusion info | "Need a break? Talk to any staff member — they can help you step away, no judgement." | NSW Gaming Machines Act 2001 |
-| Helpline display | "Free, confidential support — 24/7. Call 1800 858 858." | NSW Gaming Machines Act 2001 |
-| RG information | "Know your game. Set a limit before you start." | NSW Gaming Machines Act 2001 |
+| Helpline display | "Free, confidential support — 24/7. Call 1800 858 858." | NSW Gaming Machines Regulation 2019 |
+| RG information | "Know your game. Set a limit before you start." | NSW Gaming Machines Regulation 2019 |
+
+> **Source**: NSW Gaming Machines Regulation 2019 — `https://legislation.nsw.gov.au/view/html/inforce/current/sl-2019-0221` (canonical, but bot-blocked from this environment). The Responsible Gambling Officer requirement is described at [nsw.gov.au RGO release](https://www.nsw.gov.au/ministerial-releases/responsible-gambling-officers-introduced-into-pubs-and-clubs-across-nsw) (verified).
+
+### Second-state worked example — Victoria (the "mandatory code + direction" pattern)
+
+NSW is the illustrative state above, but it is not the only model. **Victoria** shows the common Australian **"mandatory code of conduct + Ministerial Direction"** pattern, and is the clearest example of how the federal NCPF measures are given **legal force at state level**.
+
+| Obligation | Requirement | Source |
+|---|---|---|
+| Responsible Gambling Code of Conduct | Every venue operator holding a gambling industry licence **must** adopt a Responsible Gambling Code of Conduct. The Code is compulsory under the Gambling Regulation Act 2003; its **content is prescribed by Ministerial Direction** (Responsible Gambling Codes of Conduct for Venue Operators, effective **1 March 2020**). Operators either adopt an industry venue code or submit their own | Gambling Regulation Act 2003; VGCCC — [responsible-gambling codes of conduct](https://www.vgccc.vic.gov.au/for-gambling-providers/venue-operators-and-poker-machines/venue-operator-obligations/responsible-gambling-codes-of-conduct-standards) |
+| NCPF measures given legal force | The federal NCPF measures are made binding in Victoria through **Harm Minimisation Ministerial Directions** applying to Victorian wagering and betting licensees | VGCCC — [National Consumer Protection Framework (VIC)](https://www.vgccc.vic.gov.au/for-gambling-providers/bookmakers/national-consumer-protection-framework) |
+
+> **Why this matters**: The module's land-based layer is otherwise NSW-only. Victoria demonstrates that a full national land-based build needs a per-state pass, and that the mechanism in several states is a **mandatory code whose content a Minister prescribes by direction** — not a single statutory checklist. Treat NSW and VIC as two worked examples of the same federated pattern.
 
 ---
 
@@ -428,8 +484,8 @@ Land-based player protection is set by each **state**. The requirements below ar
 
 | Requirement | Details | Source |
 |---|---|---|
-| **Registration requirements** | Customer age and identity must be verified before the betting account can be used | NCPF Measure 10; AML/CTF Act 2006 |
-| **Verification window** | Pre-verification — verification before account use (strengthened 29 September 2024) | NCPF Measure 10 |
+| **Registration requirements** | Customer age and identity must be verified before the betting account can be used | NCPF Measure 3 (customer verification); AML/CTF Act 2006 |
+| **Verification window** | Pre-verification — verification before account use (strengthened 29 September 2024) | NCPF Measure 3 |
 | **Verification method** | Identity verification under the AML/CTF Act customer-verification rules | AML/CTF Act 2006 |
 
 ### Land-based verification (state — NSW illustrative)
@@ -458,7 +514,7 @@ Australian gambling operators are subject to the **Anti-Money Laundering and Cou
 | **AML authority** | AUSTRAC | AML/CTF Act 2006 |
 | **Customer verification** | Verify customer identity before providing designated services; underpins NCPF pre-verification | AML/CTF Act 2006 |
 | **Reporting** | Threshold transaction reports and suspicious matter reports to AUSTRAC | AML/CTF Act 2006 |
-| **Player-facing impact** | Customers must complete identity verification before they can bet online | NCPF Measure 10; AML/CTF Act 2006 |
+| **Player-facing impact** | Customers must complete identity verification before they can bet online | NCPF Measure 3 (customer verification); AML/CTF Act 2006 |
 
 ### Player-facing messaging
 
@@ -594,22 +650,27 @@ Complete before launching {{PROGRAM_NAME}} in Australia.
 
 ### Player protection — interactive
 *Check only if deploying online wagering.*
-- [ ] Customer-set deposit limits offered (NCPF Measure 4)
-- [ ] Opt-out pre-commitment scheme prompts customers to set limits (NCPF Measure 3)
-- [ ] Credit / credit-card / digital-currency ban enforced (IGA s15C; small-provider exemption noted)
-- [ ] Monthly activity statements provided with support link (NCPF Measure 8)
-- [ ] Staff training + annual refresher in place (NCPF Measure 7)
-- [ ] Account/customer verification before account use (NCPF Measure 10)
+- [ ] Opt-out pre-commitment scheme prompts customers to set limits, incl. customer-set deposit limits (NCPF Measure 6)
+- [ ] Simple account-closure process displayed (NCPF Measure 5)
+- [ ] Credit / credit-card / digital-currency ban enforced (Interactive Gambling Amendment (Credit and Other Measures) Act 2023; IGA s15C; small-provider < AUD 30M exemption noted; separate from the ten NCPF measures)
+- [ ] Monthly activity statements provided with support link (NCPF Measure 7)
+- [ ] Consistent gambling messaging present, platform-permitted taglines in 12-month equal rotation (NCPF Measure 8)
+- [ ] Staff training + annual refresher in place (NCPF Measure 9)
+- [ ] Customer verification before account use (NCPF Measure 3)
+- [ ] Restrictions on inducements observed (NCPF Measure 4)
 
 ### Player protection — land-based
-*Check only if deploying in venues (NSW illustrative).*
-- [ ] RG information / signage posted in gambling areas
+*Check only if deploying in venues (NSW illustrative; confirm the equivalent for your state — e.g. Victoria's mandatory Responsible Gambling Code of Conduct).*
+- [ ] Mandatory signage, counselling notices and gambling contact cards in gaming areas (NSW Gaming Machines Regulation 2019)
+- [ ] RG messaging on player activity statements (NSW Gaming Machines Regulation 2019)
 - [ ] Helpline displayed at gambling areas and cash facilities
 - [ ] Responsible-conduct-of-gambling staff training completed
-- [ ] Cash-facility / ATM restrictions observed
+- [ ] ATM / cash-dispenser placement restrictions observed (NSW Gaming Machines Regulation 2019)
+- [ ] Responsible Gambling Officer on duty if venue has > 20 gaming-machine entitlements (NSW, from 1 July 2024)
+- [ ] If deploying in Victoria: Responsible Gambling Code of Conduct adopted (Gambling Regulation Act 2003 + Ministerial Direction)
 
 ### Age verification
-- [ ] Online: identity and age verified before account use (NCPF Measure 10; AML/CTF Act)
+- [ ] Online: identity and age verified before account use (NCPF Measure 3 customer verification; AML/CTF Act)
 - [ ] Land-based: ID checks; minors excluded from gaming areas
 
 ### AML/KYC
