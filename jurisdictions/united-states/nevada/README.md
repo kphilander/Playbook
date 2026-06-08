@@ -26,15 +26,15 @@ adaptation_notes: |
   for non-US deployments. Currency is USD. Helpline numbers are US
   national (NCPG). Self-exclusion is property-by-property — unique to
   Nevada. AGA code references are US-specific.
-last_updated: 2026-03-10
+last_updated: 2026-06-08
 ---
 
 # Nevada — Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Nevada. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Nevada uses an obligation-based model for most player-facing signage (Reg 5.170 — no prescribed phrasing) but does prescribe a verbatim responsible gambling message for wagering accounts (Reg 5.225(18)(b)). Nevada uses a property-by-property self-exclusion model — there is no centralized statewide program.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Nevada. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Nevada uses an obligation-based model for most player-facing signage (Reg 5.170 — no prescribed phrasing) but does prescribe verbatim responsible gambling messages in two places: for wagering accounts (Reg 5.225(18)(b)) and at cashless-wagering devices (Regulation 14 / Technical Standard 3.150). Nevada uses a property-by-property self-exclusion model — there is no centralized statewide program. Note the distinction throughout between **binding regulation** (NRS, NGC Regulations 5/5A/14, Technical Standards) and **voluntary industry code** (the AGA Responsible Gaming Code of Conduct), which NGCB references but does not enforce as law.
 
-> **Last verified**: 2026-03-10
-> **Next review due**: 2026-06-10 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -44,11 +44,11 @@ last_updated: 2026-03-10
 |---|---|
 | [Regulatory authority](#regulatory-authority) | NGCB + NGC two-tier structure |
 | [Legal requirements](#legal-requirements) | 21+, permitted products, licensing |
-| [Helpline](#helpline) | NCPG national helpline, display rules |
-| [Messaging requirements](#messaging-requirements) | Obligation-based signage + verbatim wagering account message |
+| [Helpline](#helpline) | NCPG national helpline, state program (NRS Ch. 458A), display rules |
+| [Messaging requirements](#messaging-requirements) | Obligation-based signage + verbatim wagering account and cashless-device messages |
 | [Advertising restrictions](#advertising-restrictions) | Principles-based standard (Reg 5.011(1)(d)) + Reg 5A.155 |
 | [Self-exclusion](#self-exclusion) | Property-by-property model (Reg 5.170(4)) + interactive (Reg 5A.130) |
-| [Player protection tools](#player-protection-tools) | Land-based vs. interactive gaming |
+| [Player protection tools](#player-protection-tools) | Land-based, cashless-device, and interactive gaming |
 | [Age verification](#age-verification) | 21+ requirements |
 | [AML/KYC](#amlkyc) | FinCEN/BSA requirements |
 | [Collateral adaptation](#collateral-adaptation) | Quick reference for all touchpoints |
@@ -65,7 +65,8 @@ last_updated: 2026-03-10
 | **Investigative body** | Nevada Gaming Control Board (NGCB) |
 | **Decision body** | Nevada Gaming Commission (NGC) |
 | **Governing legislation** | Nevada Revised Statutes (NRS) Chapter 463 — Nevada Gaming Control Act |
-| **Regulations** | NGC Regulation 5 (Operation of Gaming Establishments, Rev. 12/24); NGC Regulation 5A (Operation of Interactive Gaming, Rev. 05/24) |
+| **Regulations** | NGC Regulation 5 (Operation of Gaming Establishments, Rev. 12/24); NGC Regulation 5A (Operation of Interactive Gaming, Rev. 05/24); NGC Regulation 14 + Technical Standards (Manufacturers, Distributors, Gaming Devices, Cashless Wagering Systems) |
+| **State problem-gambling program** | NRS / NAC Chapter 458A — Prevention and Treatment of Problem Gambling (DHHS / DPBH); funds treatment and prevention, distinct from the operator-facing NGC regulations |
 | **Established** | 1955 (oldest state gaming regulatory framework in the US) |
 
 ### Two-tier structure
@@ -102,6 +103,10 @@ This separation ensures independence — the body that investigates does not mak
 | NRS Chapter 463 | [leg.state.nv.us/nrs/nrs-463.html](https://www.leg.state.nv.us/nrs/nrs-463.html) | Nevada Gaming Control Act — governs all gambling in Nevada |
 | NGC Regulation 5 (Rev. 12/24) | [gaming.nv.gov — Regulation 5](https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5Operation.pdf) | Operation of Gaming Establishments — includes 5.011 (advertising), 5.170 (problem gambling programs), 5.225 (wagering accounts) |
 | NGC Regulation 5A (Rev. 05/24) | [gaming.nv.gov — Regulation 5A](https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5A.pdf) | Operation of Interactive Gaming — online poker and mobile sports betting |
+| NGC Regulation 14 | [gaming.nv.gov — Regulation 14](https://www.gaming.nv.gov/siteassets/content/home/features/Regulation14.pdf) | Manufacturers, distributors, gaming devices and associated equipment — authorizes the Technical Standards |
+| Technical Standard 3 (On-Line Slot Systems and Cashless Wagering Systems, Rev. 02/20) | [gaming.nv.gov — Technical Standard 3](https://www.gaming.nv.gov/siteassets/content/home/features/TechnicalStandard3.pdf) | TS 3.150 — cashless-device responsible gambling message and patron-set transfer limit |
+| NRS Chapter 458A | [leg.state.nv.us/nrs/nrs-458a.html](https://www.leg.state.nv.us/nrs/nrs-458a.html) | Prevention and Treatment of Problem Gambling — state program and Advisory Committee *(canonical; verify before merge — leg.state.nv.us blocks automated fetchers)* |
+| Regulations index | [gaming.nv.gov — Gaming Statutes & Regulations](https://www.gaming.nv.gov/regulations/gaming-statutes-regulations/) | Official index of all NRS, NGC Regulations, and Technical Standards |
 
 ---
 
@@ -175,6 +180,20 @@ Nevada does not operate a separate state gambling helpline. Operators use the **
 
 The Nevada Council on Problem Gambling is a **nonprofit** organization — it is not a state agency and does not operate a separate helpline. It provides education, training, and advocacy within Nevada and refers to the national NCPG helpline.
 
+### State program (NRS / NAC Chapter 458A)
+
+Separately from the nonprofit Council, Nevada *does* operate a **statutory state program** for the prevention and treatment of gambling harm. It does not change any player-facing display obligation — it is the public treatment and referral infrastructure that operators and players sit within, and it is useful context for the "support ecosystem" {{PROGRAM_NAME}} content points people toward.
+
+| Field | Value |
+|---|---|
+| **Statute** | NRS / NAC Chapter 458A — Prevention and Treatment of Problem Gambling *(Nevada's statutory term is "problem gambling"; {{PROGRAM_NAME}} content keeps stigma-free framing — "person experiencing gambling harm" — while citing the statute accurately)* |
+| **Administering body** | Nevada Department of Health and Human Services, Division of Public and Behavioral Health (DPBH) |
+| **Governance** | Advisory Committee on Problem Gambling (NRS 458A.060) |
+| **Funding** | Account for the Prevention and Treatment of Problem Gambling (established 2005), funded by a per-slot-machine allocation |
+| **Role** | Funds prevention, treatment, and counselor certification statewide — a referral destination, not a player-facing comms obligation |
+
+This is **infrastructure/referral context, not a content requirement**. No verbatim statement or signage flows from Chapter 458A; the binding player-facing display rules remain Reg 5.170(2), Reg 5.225(18)(b), and TS 3.150 (below).
+
 ### Display rules (Regulation 5.170(2))
 
 Under **Regulation 5.170(2)**, Nevada licensees must:
@@ -215,14 +234,15 @@ Both meet the Regulation 5.170 requirement. The second version provides multiple
 
 ## Messaging requirements
 
-### Two messaging regimes
+### Three messaging regimes
 
-Nevada has **two distinct messaging regimes** — one for general signage and one for wagering accounts:
+Nevada has **three distinct messaging regimes** — one obligation-based, two with verbatim prescribed text:
 
 | Regime | Requirement | Source |
 |---|---|---|
 | **General signage** | Obligation-based — post problem gambling info and helpline, but no prescribed phrasing | Reg 5.170(2) |
 | **Wagering accounts** | **Verbatim message prescribed** — must be conspicuously displayed upon account access | Reg 5.225(18)(b) |
+| **Cashless-wagering devices** | **Verbatim responsible-gambling message prescribed** — at the gaming device or on a printed item given to the patron, plus a patron-set transfer limit | Regulation 14 / Technical Standard 3.150(2)(e)–(f) |
 
 ### Wagering account mandatory message (Regulation 5.225(18)(b))
 
@@ -230,7 +250,21 @@ Operators with wagering accounts (including mobile sports betting and online pok
 
 > [Licensee's name] encourages you to gamble responsibly. For problem gambling information and assistance, call the 24-hour confidential Problem Gamblers HelpLine at 1-800-522-4700, or visit www.WhenTheFunStops.org.
 
-**Important**: The regulation allows the Board Chair to administratively approve alternative helpline numbers or website addresses if they change. Given the NCPG rebrand to 1-800-MY-RESET, check with NGCB for current approved alternatives.
+**Important**: The regulation allows the Board Chair to administratively approve alternative helpline numbers or website addresses if they change. Given the NCPG rebrand to 1-800-MY-RESET and that www.WhenTheFunStops.org is a legacy domain, confirm the current Board-Chair-approved number and URL for this mandated text with NGCB before publishing — do not silently substitute the rebranded values into prescribed-verbatim text. Verify against NGCB Industry Notices: [gaming.nv.gov — Industry Notices](https://www.gaming.nv.gov/about-us/industry-notices/).
+
+### Cashless-wagering device message (Regulation 14 / Technical Standard 3.150)
+
+Cashless-wagering systems (digital-wallet and cashless play at the machine) carry their own player-facing responsible-gambling touchpoint, separate from the floor signage and wagering-account regimes above. Under **Technical Standard 3.150** (authorized by Regulation 14), the system must:
+
+| Requirement | Detail | Source |
+|---|---|---|
+| **Conspicuous RG message** | At the gaming device or on a printed item given to the patron, display a responsible gambling message that includes the Nevada Council on Problem Gambling website (www.WhenTheFunStops.org) and the toll-free number (800-522-4700) | TS 3.150(2)(e) |
+| **Patron-set transfer limit** | Provide a daily transfer limit the patron can configure (effective Feb 1, 2021) | TS 3.150(2)(f) |
+| **Notice of the limit** | Notify the patron of the ability to set that transfer limit | TS 3.150 |
+
+This is the binding, citable basis for device-level responsible-gambling messaging and a land-based player-control touchpoint — it is the cashless-play analogue to the interactive deposit/loss limits covered later in this module.
+
+**Important (same caution as the wagering-account message)**: TS 3.150(2)(e) hard-codes **800-522-4700** and **www.WhenTheFunStops.org**. Both are legacy values (see the helpline transition note above). Before publishing device-level copy, confirm the current Board-approved number and URL with NGCB rather than substituting the rebranded 1-800-MY-RESET / ncpgambling.org values into the prescribed text. The dollar mechanics of the transfer limit, debit-instrument handling, and metering are technical/financial controls outside {{PROGRAM_NAME}}'s remit — only the patron-facing RG message and the right-to-set-a-limit notice are content touchpoints.
 
 ### General signage obligations (Regulation 5.170)
 
@@ -265,6 +299,7 @@ Because general signage has no mandated phrasing, operators have flexibility to 
 | Casino floor | Conspicuous places in/near gaming areas | Reg 5.170(2) |
 | Cage area | Conspicuous places in/near cage areas | Reg 5.170(2) |
 | ATMs in gaming areas | At cash dispensing machines | Reg 5.170(2) |
+| Cashless-wagering device | At the device or on a printed item given to the patron | TS 3.150(2)(e) |
 | Website / app (wagering accounts) | Conspicuously displayed upon account access | Reg 5.225(18)(b) |
 | Interactive gaming platform | Prominent display before play begins | Reg 5A.150 |
 | Social media | Profile/bio | Best practice |
@@ -401,7 +436,9 @@ Nevada's land-based player protection requirements are obligation-based:
 | **Helpline display** | Yes | Reg 5.170(2) | NCPG toll-free number in gaming areas, at cage, at ATMs |
 | **Employee training** | Yes | Reg 5.170(3) | Training on problem gambling symptoms; NCPG-NV certified programs presumed adequate |
 | **Credit/check/mail self-limitation** | Yes | Reg 5.170(4) | Players can self-limit access to credit, check-cashing, and direct mail marketing |
-| **Deposit limits** | N/A (land-based) | — | Not applicable for walk-in cash play |
+| **Cashless-device transfer limit** | Yes (cashless play) | TS 3.150(2)(f) | Patron can configure a daily transfer limit at cashless-wagering devices; patron must be notified of the ability to set it |
+| **Cashless-device RG message** | Yes (cashless play) | TS 3.150(2)(e) | RG message with NCPG website and toll-free number at the device or on a printed item |
+| **Deposit limits** | N/A (land-based cash) | — | Not applicable for walk-in cash play |
 | **Session time tracking** | No | — | Not required; some operators offer voluntarily |
 | **Activity statements** | No | — | Not required for land-based |
 
@@ -429,6 +466,7 @@ Nevada's interactive gaming regulations require significantly more player protec
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
 | Credit self-limitation | "Don't want credit at the tables? Tell the cage — it's that simple." | Land-based (Reg 5.170(4)) |
+| Cashless transfer limit | "Set a daily transfer cap on your cashless wallet — your money, your pace." | Cashless device (TS 3.150(2)(f)) |
 | Deposit limits | "Set your deposit limit — play on your terms. Takes 10 seconds." | Interactive gaming (Reg 5A.120(4)(b)) |
 | Loss limits | "Set a loss limit — no surprises at the end of a session." | Interactive gaming (Reg 5A.120(4)(a)) |
 | Session limits | "Set a session reminder — your dashboard, your rules." | Interactive gaming (Reg 5A.120(4)(e)) |
@@ -526,6 +564,7 @@ Quick-reference table mapping every collateral category to Nevada-specific adapt
 | **Environmental** | Gaming areas | Problem gambling info + helpline per Reg 5.170(2) | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Cage area | Problem gambling info + helpline per Reg 5.170(2) | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | ATMs in gaming areas | Problem gambling info + helpline per Reg 5.170(2) | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | Cashless-wagering device | RG message at device or on printed item + patron transfer-limit notice per TS 3.150(2)(e)–(f); confirm Board-approved helpline/URL | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Digital display | On-brand RG message in rotation, helpline | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | TV spot end card | Helpline (3-second minimum recommended) | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | Radio spot | Spoken helpline reference | `{{HELPLINE_NUMBER}}` |
@@ -577,9 +616,16 @@ messaging:
       For problem gambling information and assistance, call the
       24-hour confidential Problem Gamblers HelpLine at
       1-800-522-4700, or visit www.WhenTheFunStops.org.
+    # Cashless-wagering device RG message (Reg 14 / TS 3.150(2)(e)).
+    # Must appear at the device or on a printed item given to the patron,
+    # and include the NCPG website and toll-free number below.
+    united-states-nevada-cashless-device: |
+      Responsible gambling: for problem gambling information and
+      assistance, call 800-522-4700 or visit www.WhenTheFunStops.org.
+      You may set a daily transfer limit on your cashless account.
 ```
 
-Note: The wagering account message is prescribed by Reg 5.225(18)(b). The Board Chair may approve alternative helpline numbers/URLs. General signage has no verbatim requirement.
+Note: The wagering account message is prescribed by Reg 5.225(18)(b) and the cashless-device message by Regulation 14 / Technical Standard 3.150(2)(e). The Board Chair may approve alternative helpline numbers/URLs — confirm the current approved values before publishing either verbatim message. General signage (Reg 5.170(2)) has no verbatim requirement.
 
 Also see the full [US config overrides](../_brand-us.yml) for the complete state structure.
 
@@ -602,12 +648,15 @@ Complete before launching {{PROGRAM_NAME}} in Nevada.
 - [ ] All three accepted numbers known (1-800-522-4700, 1-800-GAMBLER, 1-800-MY-RESET)
 - [ ] Primary display number selected (1-800-GAMBLER recommended)
 - [ ] Helpline posted in conspicuous places in/near gaming areas, cage areas, and at ATMs
+- [ ] Cashless-wagering devices display RG message with NCPG website and toll-free number (TS 3.150(2)(e))
 - [ ] Interactive gaming platform displays helpline prominently (Reg 5A.150)
 - [ ] Nevada Council on Problem Gambling referenced where appropriate
+- [ ] State program (NRS/NAC Ch. 458A) noted as the referral/treatment ecosystem (context, not a display obligation)
 
 ### Messaging
 - [ ] Wagering account displays verbatim Reg 5.225(18)(b) message upon account access
-- [ ] Confirmed with NGCB whether alternative helpline numbers/URLs are approved for the Reg 5.225(18)(b) message
+- [ ] Cashless-wagering device displays verbatim RG message + patron transfer-limit notice (TS 3.150(2)(e)–(f))
+- [ ] Confirmed with NGCB the current Board-approved helpline number/URL for the Reg 5.225(18)(b) and TS 3.150(2)(e) verbatim messages (legacy 1-800-522-4700 / WhenTheFunStops.org)
 - [ ] Problem gambling information prominently posted per Reg 5.170(2) — nature and symptoms, plus helpline
 - [ ] 21+ age notice on all player-facing content
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Nevada values
@@ -618,7 +667,7 @@ Complete before launching {{PROGRAM_NAME}} in Nevada.
 - [ ] No content targeting or appealing to persons under 21
 - [ ] No misleading claims about odds, winning likelihood, or prize amounts
 - [ ] No marketing to property self-excluded patrons (Reg 5.170(4))
-- [ ] AGA Responsible Gaming Code of Conduct alignment verified
+- [ ] AGA Responsible Gaming Code of Conduct (updated Sept 2025) alignment verified — voluntary industry code, not Nevada law
 - [ ] Advertising reviewed per [advertising-rules.md](advertising-rules.md)
 
 ### Self-exclusion
@@ -639,6 +688,7 @@ Complete before launching {{PROGRAM_NAME}} in Nevada.
 - [ ] Interactive gaming: Time-based exclusion available (Reg 5A.120(4)(f))
 - [ ] Interactive gaming: Single account per operator enforced (Reg 5A.120(2)(a))
 - [ ] Interactive gaming: No credit extension for interactive gaming (Reg 5A.120(3))
+- [ ] Cashless devices: Patron-set daily transfer limit available and the patron notified of it (TS 3.150(2)(f))
 - [ ] Problem gambling information prominently posted (Reg 5.170(2))
 
 ### Age verification

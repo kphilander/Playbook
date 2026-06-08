@@ -25,15 +25,15 @@ adaptation_notes: |
   Comparison tables reference Ontario and UK — useful for cross-market
   operators. On-brand disclosure examples need cultural adaptation
   for non-US markets.
-last_updated: 2026-03-10
+last_updated: 2026-06-08
 ---
 
 # Nevada — Advertising Rules
 
-> **Operator note**: This is the detailed advertising reference for Nevada. It covers Nevada's principles-based standard (Regulation 5.011(1)(d)), the AGA Responsible Gaming Code overlay, interactive gaming advertising rules (Regulation 5A.155), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Nevada compliance module](README.md) for complete coverage.
+> **Operator note**: This is the detailed advertising reference for Nevada. It covers Nevada's principles-based standard (Regulation 5.011(1)(d)), the AGA Responsible Gaming Code of Conduct overlay (voluntary industry code, updated Sept 2025), interactive gaming advertising rules (Regulation 5A.155), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Nevada compliance module](README.md) for complete coverage. Throughout, distinguish **binding regulation** (NRS, NGC Regulations) from **voluntary industry code** (AGA) — the AGA code is not Nevada law, though NGCB references it.
 
-> **Last verified**: 2026-03-10
-> **Next review due**: 2026-06-10 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -94,7 +94,14 @@ This contrasts with jurisdictions like Ontario (AGCO Stds 2.03–2.07, which ite
 
 ## AGA Responsible Gaming Code
 
-The **American Gaming Association (AGA)** publishes a voluntary **Responsible Marketing Code for Sports Wagering** and general advertising principles. While not law in Nevada, most major operators are AGA members and follow these standards. NGCB references AGA standards when evaluating advertising practices.
+The **American Gaming Association (AGA)** publishes the voluntary **Responsible Gaming Code of Conduct** — a unified code (updated **September 2025**) that covers responsible-gaming operations *and* advertising/marketing across all gaming forms (casino, sports wagering, iGaming). It supersedes the older standalone November 2020 Responsible Gaming Code. The AGA also maintains a **Responsible Marketing Code for Sports Wagering**, separately tightened in recent revisions (it now prohibits "risk-free" bet language and strengthens college-age protections). These are **voluntary industry standards, not Nevada law** — but most major Nevada operators are AGA members and follow them, and NGCB references AGA standards when evaluating advertising practices.
+
+| Field | Value |
+|---|---|
+| **Primary instrument** | AGA Responsible Gaming Code of Conduct (updated Sept 2025) |
+| **Advertising overlay** | AGA Responsible Marketing Code for Sports Wagering (bans "risk-free"; college-age protections) |
+| **Legal status** | Voluntary industry code — *not* binding Nevada regulation |
+| **Source** | [AGA Responsible Gaming Code of Conduct (PDF)](https://www.americangaming.org/wp-content/uploads/2025/12/Responsible-Gaming-Code-of-Conduct-2026.pdf) |
 
 ### Key advertising provisions
 
@@ -113,11 +120,14 @@ The AGA's **Responsible Marketing Code for Sports Wagering** adds:
 
 | Provision | Details |
 |---|---|
+| **No "risk-free" language** | The code prohibits describing bets or promotions as "risk-free" (a recent tightening) |
 | **No active athlete endorsement** | Active professional athletes should not endorse sports wagering products |
-| **No college student targeting** | Advertising must not specifically target college-age audiences in campus environments |
+| **No college student targeting** | Advertising must not specifically target college-age audiences; strengthened protections around campus environments |
 | **Odds accuracy** | Published odds must be accurate and current |
 | **Promotional terms** | Bonus and promotional offers must include clear terms and conditions |
 | **Frequency limits** | Voluntary limits on advertising frequency during live sports broadcasts |
+
+{{PROGRAM_NAME}} alignment: the "Open" pillar already rules out "risk-free" and "easy money" framing, so {{PROGRAM_NAME}} content meets these voluntary standards by default. Treat them as a floor, not a ceiling.
 
 ---
 
@@ -222,6 +232,7 @@ Before an authorized player begins a session, the operator must prominently disp
 | **Problem gambling info** | Written materials on nature/symptoms posted in conspicuous places | Reg 5.170(2) |
 | **Helpline** | NCPG toll-free number in/near gaming areas, cage areas, at ATMs | Reg 5.170(2) |
 | **Self-exclusion info** | Available to patrons who request it | Reg 5.170(4) |
+| **Cashless-device RG message** | RG message with NCPG website and toll-free number at the device or on a printed item; patron transfer-limit notice | TS 3.150(2)(e)–(f) |
 | **Advertising content** | Conforms to Reg 5.011(1)(d) principles | Reg 5.011(1)(d) |
 | **Floor signage** | Helpline and problem gambling information visible | Reg 5.170(2) |
 | **Digital displays** | Include problem gambling information in content rotation | Reg 5.170(2) |
@@ -244,7 +255,7 @@ The following content is **prohibited** in Nevada gambling advertising. While Ne
 | Category | Prohibited content | Source |
 |---|---|---|
 | **Minors** | Any depiction of minors gambling. Content, language, characters, or themes primarily appealing to persons under 21. Cartoon characters or mascots that appeal to children. | NRS 463.0129, Reg 5.011(1)(d), AGA Code |
-| **Misleading odds** | Claims suggesting guaranteed wins, "easy money," or that outcomes are predictable. Misrepresentation of odds, probabilities, or prize sizes. Advertising that is "false or materially misleading." | Reg 5.011(1)(d) |
+| **Misleading odds** | Claims suggesting guaranteed wins, "easy money," "risk-free" bets/promotions, or that outcomes are predictable. Misrepresentation of odds, probabilities, or prize sizes. Advertising that is "false or materially misleading." | Reg 5.011(1)(d); AGA Marketing Code ("risk-free") |
 | **Financial solution** | Portraying gambling as a way to pay bills, achieve financial security, or solve money problems. | Reg 5.011(1)(d) ("dignity"), AGA Code |
 | **Targeting self-excluded** | Any marketing directed at individuals on a property's self-exclusion list or operator's interactive gaming self-exclusion register. | Reg 5.170(4), Reg 5A.130(2) |
 | **Indecent/offensive** | Sexually explicit, gratuitously violent, or content designed primarily to shock or offend. | Reg 5.011(1)(d) ("decency," "good taste," "inoffensiveness") |
