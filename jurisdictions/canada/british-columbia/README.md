@@ -29,12 +29,21 @@ adaptation_notes: |
   tagline (a slogan), not a regulator-mandated phrase. Single Crown
   operator (BCLC) across all verticals; private firms participate only as
   registered service providers, which differs from Ontario's open market
-  and Alberta's launching open market. Land-based RG Standards are
-  principles-based; the Internet Gambling RG Standards for PlayNow.com are
-  prescriptive. GameSense originated here (BCLC, 2009) and is BC's flagship
-  player-education program. On-brand messaging examples need cultural
-  adaptation for non-North-American deployments.
-last_updated: 2026-06-05
+  and Alberta's launching open market. As of 13 April 2026, four binding
+  regulations under the Gaming Control Act SBC 2022 c.29 are in force:
+  B.C. Reg. 214/2025 (Training), 215/2025 (Marketing/Advertising/Promotion,
+  which supersedes the soft 2015 Advertising standard), 216/2025 (Problem
+  Gambling), and 217/2025 (Voluntary Self-Exclusion) — delegated from the
+  umbrella Gaming Control Regulation (B.C. Reg. 209/2025). The older GPEB
+  standards (land-based RG Standards, principles-based; Internet Gambling RG
+  Standards for PlayNow.com, prescriptive) carry forward as legacy reference
+  and have NOT yet been reissued by IGCO. RG Check accreditation is
+  administered by the Responsible Gambling Council (RGC), not the CGA; every
+  BC facility has held it since 2011 and BCLC holds WLA Level 4. GameSense
+  originated here (BCLC, 2009) and is BC's flagship player-education program.
+  On-brand messaging examples need cultural adaptation for non-North-American
+  deployments.
+last_updated: 2026-06-08
 ---
 
 # British Columbia — Compliance Module
@@ -44,8 +53,8 @@ last_updated: 2026-06-05
 > **Verticals covered**: Land-based Casino, Online Casino (PlayNow.com), Sports Betting — all conducted and managed by BCLC.
 > *(BC's land-based RG Standards are principles-based; the Internet Gambling RG Standards governing PlayNow.com are prescriptive. Sections are split accordingly — if your deployment is land-based-only or PlayNow-only, you can skip the other channel's subsections.)*
 
-> **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -53,12 +62,12 @@ last_updated: 2026-06-05
 
 | Section | Verticals | Description |
 |---|---|---|
-| [Regulatory authority](#regulatory-authority) | All | IGCO (formerly GPEB), BCLC, service providers |
+| [Regulatory authority](#regulatory-authority) | All | IGCO (formerly GPEB), BCLC, service providers, binding 2025 regulations |
 | [Legal requirements](#legal-requirements) | All | 19+, Crown monopoly model, permitted products |
 | [Helpline](#helpline) | All | Gambling Support BC details and display rules |
 | [Messaging requirements](#messaging-requirements) | All | No verbatim mandate — what IS required |
 | [GameSense — BC's flagship program](#gamesense--bcs-flagship-program) | All | Working with the program BC originated |
-| [Advertising restrictions](#advertising-restrictions) | All | Advertising & Marketing Standards + CGA national code |
+| [Advertising restrictions](#advertising-restrictions) | All | B.C. Reg. 215/2025 (binding) + legacy standard + CGA national code |
 | [Self-exclusion](#self-exclusion) | All | Voluntary Self-Exclusion / Game Break |
 | [Player protection — land-based](#player-protection--land-based) | Land-based | Principles-based RG Standards |
 | [Player protection — interactive (PlayNow.com)](#player-protection--interactive-playnowcom) | Interactive | Prescriptive Internet Gambling RG Standards |
@@ -77,7 +86,8 @@ last_updated: 2026-06-05
 | **Regulator** | Independent Gambling Control Office (IGCO) — formerly the Gaming Policy and Enforcement Branch (GPEB) |
 | **Operator** | British Columbia Lottery Corporation (BCLC) — Crown corporation; sole conduct-and-manage operator |
 | **Governing legislation** | Gaming Control Act, SBC 2022 c.29 (in force 13 April 2026) |
-| **Regulation** | Gaming Control Regulation, B.C. Reg. 209/2025 |
+| **Umbrella regulation** | Gaming Control Regulation, B.C. Reg. 209/2025 — delegates the detail to four subject regulations below |
+| **Binding subject regulations (2025)** | B.C. Reg. 214/2025 (Lottery Corporation Training Program); 215/2025 (Lottery Scheme Marketing, Advertising and Promotion); 216/2025 (Problem Gambling); 217/2025 (Voluntary Self-Exclusion) — all made under the Act, in force 13 April 2026 |
 | **Federal authority** | Criminal Code (Canada), s.207 — provinces conduct and manage lawful gaming |
 | **License model** | No operator licences; private firms register as **service providers** to BCLC |
 | **Regulatory approach** | Hybrid — principles-based land-based RG Standards; prescriptive Internet Gambling RG Standards |
@@ -102,12 +112,42 @@ BC's gambling system has a clear separation between the regulator and the operat
 
 **What this means for {{PROGRAM_NAME}} operators**: Unlike Ontario (70+ private operators) or Alberta (open market launching mid-2026), there is **no independent operator** to deploy {{PROGRAM_NAME}} in BC. Deployment happens **with or through BCLC** (or a BCLC service provider) — as supplementary player-education content alongside GameSense. The single-operator model means content can be consistent province-wide rather than fragmented across competing brands.
 
+### Binding 2025 regulations under the new Act
+
+The Gaming Control Act, SBC 2022 c.29 is implemented through the **Gaming Control Regulation (B.C. Reg. 209/2025)**, which acts as an umbrella and delegates the operational detail to **four subject regulations**. All four were deposited in 2025 and come into force with the Act on **13 April 2026**. These are **binding law** — they sit above (and in the marketing case, supersede) the older principles-based GPEB standards. Document and design to these four regulations.
+
+| Regulation | Covers | Key requirements (selected) | Source |
+|---|---|---|---|
+| **B.C. Reg. 215/2025 — Lottery Scheme Marketing, Advertising and Promotion Regulation** | Advertising & marketing (supersedes the soft 2015 Advertising & Marketing Standard) | No depicting sexual acts, violence, trauma, problem-gambling behaviour, peer pressure, or intoxicated gambling (s.3); **bans use of widely-recognized athletes and celebrities** in ads on cable/streaming/billboards (ss.10–11); no minors, no creative appealing to minors, none on school grounds (ss.12–13); no false odds, no implying skill/practice/spend duration affects chances (ss.4, 8); a **mandatory RG message** covering prevention, mitigation, and treatment, clearly legible/audible (s.6); must clearly indicate **19+** (s.7); inducement T&C disclosure plus prior written consent for direct inducement marketing (ss.15–16); reasonable steps to prevent marketing to self-excluded persons (s.14) | [B.C. Reg. 215/2025](https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0215_2025) |
+| **B.C. Reg. 216/2025 — Problem Gambling Regulation** | Player-protection tools, in-venue information | Mandatory **deposit-limit tool at account creation**; optional loss/time limits (24h/7d/30d); 24h delay on increases, immediate decreases; notify player when a limit is reached (ss.4–5); short-term account locks of **24h–90d** (s.6); 19+ on homepage and account creation, **hourly pop-up break reminders**, prominent links to limit tools and self-assessment, credit values shown in dollars (ss.3, 7–8, 14); continuous monitoring of each participant with recommended interventions (s.9); dedicated problem-gambling information areas in casinos, posters/brochures on odds and house edge, **multilingual materials in Traditional Chinese, Simplified Chinese, and Punjabi**, anonymous self-assessment (ss.20–24) | [B.C. Reg. 216/2025](https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0216_2025) |
+| **B.C. Reg. 217/2025 — Voluntary Self-Exclusion Regulation** | Self-exclusion (Game Break) | Agreement durations fixed at **6 months, 1 year, 2 years, or 3 years** (s.2); mandatory pre-enrolment education on terms, prize forfeiture, extension, and counselling access (s.3); in-person or electronic enrolment with records shared across operators (ss.4–5); return of account balances within **14 days** (s.6); pre-expiry communication within **30 days** before expiry (s.7) | [B.C. Reg. 217/2025](https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0217_2025) |
+| **B.C. Reg. 214/2025 — Lottery Corporation Training Program Regulation** | Staff training | **Problem Gambling Courses tiered by role on fixed cadences**: Lottery Corp officials and gaming-facility workers every **30 days** (including identifying intoxication); security staff and supervisors every **90 days** (including managing emotional distress); content covers chance-vs-skill, problem-gambling recognition, and support services (s.3); a **Patron Resources Course** on assisting with VSE enrolment and counselling access (s.4) | [B.C. Reg. 214/2025 (folder index)](https://www.bclaws.gov.bc.ca/civix/content/complete/statreg/553593740/723702428/?xsl=%2Ftemplates%2Fbrowse.xsl%2F) |
+
+> **Reading the two layers together**: The older GPEB standards (RG Standards Part A, Internet Gambling RG Standards, the 2015 Advertising & Marketing Standard) remain a useful operational reference and IGCO has **not yet reissued them** under the new Act. But where the 2025 regulations speak, **they are the binding authority** — most sharply for advertising, where B.C. Reg. 215/2025 supersedes the soft 2015 standard. Cite the regulations, not just the standards, for any 13-April-2026-onward deployment.
+
+### Accreditation — RG Check (RGC)
+
+Alongside the statutory regime, BC's gambling operations participate in an independent third-party accreditation: **RG Check**, administered by the **Responsible Gambling Council (RGC)** — an independent non-profit, **not** the Canadian Gaming Association. (The CGA owns the *advertising* code referenced later in this module; it does not run RG Check. Do not conflate the two.)
+
+| Field | Value |
+|---|---|
+| **Accreditation** | RG Check |
+| **Administered by** | Responsible Gambling Council (RGC) |
+| **BC coverage** | **Every BC gambling facility has held RG Check accreditation since 2011**; PlayNow.com was the first site to achieve RG Check internet accreditation |
+| **BCLC certification** | BCLC holds **WLA (World Lottery Association) Level 4** responsible-gaming certification |
+| **What it covers** | Player safeguards, staff training, self-exclusion, advertising, informed decision-making, and continuous improvement — the same themes as the 2025 regulations |
+| **Term** | Three-year accreditation cycle; thresholds per standard area and overall |
+| **Source** | [Canadian Gaming Business — RGC RG Check (Oct 2025)](https://www.canadiangamingbusiness.com/2025/10/30/great-canadian-recognized-rgc-rg-check/) |
+
+For {{PROGRAM_NAME}}, RG Check is a relevant **standard to align with**: content that supports player safeguards, informed choice, and self-exclusion awareness reinforces the operator's RGC accreditation rather than working against it.
+
 ### Upcoming changes
 
 | Change | Detail | Effective |
 |---|---|---|
 | **New Act in force** | The Gaming Control Act, SBC 2022 c.29 replaced the prior Gaming Control Act and renamed the regulator from GPEB to the **Independent Gambling Control Office (IGCO)** | 13 April 2026 |
-| **Standards re-issuance** | The published GPEB standards (RG Standards, Internet Gambling RG Standards, Advertising & Marketing Standards) still cite authority under the **old** Act and may be reissued by IGCO. The substantive requirements carry forward (new Act s.56 requires compliance; s.57 mandates the VSE program). **Verify the current standards before publishing.** | TBD |
+| **Binding 2025 regulations in force** | Four subject regulations under the Act — **B.C. Reg. 214/2025** (Training Program), **215/2025** (Marketing, Advertising and Promotion), **216/2025** (Problem Gambling), and **217/2025** (Voluntary Self-Exclusion) — come into force, delegated from the umbrella **Gaming Control Regulation (B.C. Reg. 209/2025)**. B.C. Reg. 215/2025 **supersedes** the soft 2015 Advertising & Marketing Standard. | 13 April 2026 |
+| **Standards re-issuance** | The published GPEB standards (RG Standards, Internet Gambling RG Standards, Advertising & Marketing Standard) still cite authority under the **old** Act and **IGCO has not yet reissued them**. Their substantive requirements carry forward (new Act s.56 requires compliance; s.57 mandates the VSE program), and they are **now paired with the four binding 2025 regulations above**, which ARE in force. Cite the regulations as the controlling authority and **verify the standards before publishing.** | TBD |
 
 ---
 
@@ -175,7 +215,8 @@ BC splits help-line display obligations between land-based venues and PlayNow.co
 Under the **Responsible Gambling Standards for the BC Gambling Industry, Part A** (principles-based):
 
 - Information on the **risks of gambling and where to get help** must be displayed at point of sale and at all lottery retail (s.2.2).
-- In gaming facilities, responsible-gambling information must be available in **customer-service areas, washrooms, and at ATMs** (s.5.1–5.3).
+- In gaming facilities, responsible-gambling information must be available in **customer-service areas, washrooms, and at ATMs** (s.2.2(b)). *(Financial-transaction and no-credit notices are the separate Part A s.5.1–5.3.)*
+- Casinos must maintain **dedicated problem-gambling information areas** with posters/brochures on odds and house edge, **multilingual materials in Traditional Chinese, Simplified Chinese, and Punjabi**, and an anonymous self-assessment (B.C. Reg. 216/2025 ss.20–24).
 - **GameSense Info Centres** with trained advisors operate at casinos and community gaming centres.
 
 #### Interactive display (PlayNow.com)
@@ -218,7 +259,7 @@ Both meet the regulatory requirement. The second version surfaces multiple conta
 |---|---|---|---|
 | Land-based venues & retail | Obligation-based | Display help line and regulator-approved RG messaging; no prescribed wording | RG Standards Pt A s.2.1–2.2 |
 | PlayNow.com | Obligation-based | Prominently display RG/GameSense messaging, signs of problem gambling, and the help line on key pages | Internet Gambling RG Standards s.1.1–1.4 |
-| Advertising | Standard-based | All advertising/marketing must carry a responsible-gambling message, in the same language as the ad | Advertising & Marketing Standards (Responsible Gambling) |
+| Advertising | Regulation-based (binding) | All advertising/marketing must carry a responsible-gambling message covering prevention, mitigation, and treatment, clearly legible/audible, and clearly indicate 19+ | **B.C. Reg. 215/2025 ss.6–7**; legacy Advertising & Marketing Standard |
 
 **Obligation types explained:**
 - **Verbatim** — exact prescribed text that must appear word-for-word *(BC has none)*
@@ -232,8 +273,8 @@ BC's approach is **obligation-based** (like Ontario and Alberta) rather than mes
 1. **Display the Gambling Support BC help line** at point of sale, in venues, and on PlayNow.com (RG Standards Pt A s.2.2; Internet Gambling RG Standards s.1.4)
 2. **Display BCLC/GameSense responsible-gambling messaging** as approved by the regulator (RG Standards Pt A s.2.1)
 3. **Provide game and odds information**, including skill-vs-chance, randomness, and common myths on PlayNow.com (Internet Gambling RG Standards s.1.3)
-4. **Include a responsible-gambling message** in all advertising, in the same language as the ad (Advertising & Marketing Standards)
-5. **Train staff** to provide responsible-gambling information and dispel gambling myths (RG Standards Pt A s.3.2–3.3; Internet Gambling RG Standards s.2.1–2.4)
+4. **Include a responsible-gambling message** in all advertising — covering prevention, mitigation, and treatment, clearly legible/audible, with a clear 19+ indication (B.C. Reg. 215/2025 ss.6–7; legacy Advertising & Marketing Standard)
+5. **Train staff** to provide responsible-gambling information and dispel gambling myths, on the fixed cadences in the training regulation (B.C. Reg. 214/2025 s.3; RG Standards Pt A s.3.2–3.3; Internet Gambling RG Standards s.2.1–2.4)
 
 ### On-brand integration
 
@@ -310,24 +351,32 @@ You **may** still use "Know your limit, play within it." where you want to echo 
 
 ### BC's multi-layer framework
 
-BC's advertising rules come from two overlapping layers:
+BC's advertising rules come from three overlapping layers:
 
 | Layer | Source | Scope |
 |---|---|---|
-| **Provincial** | GPEB/IGCO **Advertising and Marketing Standards for Gambling in BC** | All BCLC and service-provider gambling advertising in BC |
+| **Provincial (binding)** | **B.C. Reg. 215/2025 — Lottery Scheme Marketing, Advertising and Promotion Regulation** (in force 13 April 2026) | Binding law for all provincial gaming-scheme marketing, advertising, and promotion in BC; **supersedes** the soft 2015 standard |
+| **Provincial (legacy)** | GPEB/IGCO **Advertising and Marketing Standard for Gambling in BC** (2015) | Earlier principles-based standard; still a useful operational reference but **superseded by B.C. Reg. 215/2025** where they overlap |
 | **National** | CGA Code for Responsible Gaming Advertising (January 2026) | All gambling advertising in Canada |
 
-Because BCLC is the **single operator**, advertising is centrally controlled — there is no field of competing operators running independent campaigns. BCLC vets advertising against the standards before it runs.
+Because BCLC is the **single operator**, advertising is centrally controlled — there is no field of competing operators running independent campaigns. BCLC vets advertising against these requirements before it runs.
 
-### Key Advertising & Marketing Standards
+### B.C. Reg. 215/2025 — binding marketing requirements
 
-| Theme | Requirement |
-|---|---|
-| **Responsible gambling** | All advertising and marketing must contain a responsible-gambling message, presented in the **same language** as the advertisement. |
-| **Odds of winning** | Odds must be stated factually; advertising must **not** present winning as the most probable outcome. |
-| **No financial-cure framing** | Must not encourage playing beyond one's means, imply certainty of financial reward, present gambling as an alternative to employment or investment, or encourage chasing losses. |
-| **No misleading the odds** | Must not imply that the chances of winning increase with longer play, or suggest that skill ensures a positive outcome. |
-| **Protecting minors** | Must not use minors or minor-appealing models, cartoon figures, or celebrity endorsers whose primary appeal is to minors. **Minors are defined as under 19.** |
+As of 13 April 2026, marketing, advertising, and promotion of BC gaming schemes is governed by **binding regulation**, not just the 2015 standard. The 215/2025 requirements are stricter and more specific:
+
+| Theme | Requirement | Section |
+|---|---|---|
+| **Prohibited depictions** | Must not depict sexual acts, violence, trauma, problem-gambling behaviour, peer pressure to gamble, or gambling while intoxicated | s.3 |
+| **No false or misleading odds** | Odds must be stated truthfully; must not present winning as likely, imply that skill, practice, or duration of play/spend improves the chances of winning | ss.4, 8 |
+| **Mandatory RG message** | Every ad must carry a responsible-gambling message covering **prevention, mitigation, and treatment**, clearly legible or audible | s.6 |
+| **19+ indication** | Marketing must clearly indicate that gambling is restricted to those **19 and older** | s.7 |
+| **Athletes and celebrities banned** | Must **not** use widely-recognized athletes or celebrities in advertising on cable, streaming, or billboards | ss.10–11 |
+| **Protecting minors** | No minors, no creative that appeals to minors, and no marketing on school grounds | ss.12–13 |
+| **Self-excluded persons** | Reasonable steps to prevent marketing reaching self-excluded persons | s.14 |
+| **Inducements** | Inducement terms and conditions must be disclosed; **prior written consent** required before direct inducement marketing | ss.15–16 |
+
+> Note: the older 2015 Advertising & Marketing Standard described a responsible-gambling **message** with no prescribed wording. B.C. Reg. 215/2025 goes further — it mandates a message that addresses prevention, mitigation, and treatment (s.6), an explicit 19+ indication (s.7), and the athlete/celebrity ban (ss.10–11). Where the regulation and the legacy standard differ, the **regulation controls**. *Source: [B.C. Reg. 215/2025](https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0215_2025).*
 
 ### CGA national code overlay
 
@@ -342,7 +391,7 @@ For a detailed advertising reference, see [advertising-rules.md](advertising-rul
 
 ## Self-exclusion
 
-BC operates a **single province-wide Voluntary Self-Exclusion program**, branded **Game Break**, covering **both** land-based facilities and PlayNow.com. This is simpler than Ontario's dual system — one programme spans every channel.
+BC operates a **single province-wide Voluntary Self-Exclusion program**, branded **Game Break**, covering **both** land-based facilities and PlayNow.com. This is simpler than Ontario's dual system — one programme spans every channel. As of 13 April 2026 the program is governed by the binding **B.C. Reg. 217/2025 (Voluntary Self-Exclusion Regulation)**, which fixes the agreement terms, mandates pre-enrolment education, and sets timelines for returning balances and pre-expiry contact. *Source: [B.C. Reg. 217/2025](https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0217_2025).*
 
 ### Voluntary Self-Exclusion (Game Break)
 
@@ -353,13 +402,17 @@ BC operates a **single province-wide Voluntary Self-Exclusion program**, branded
 | **Scope** | Province-wide — **all BC casinos and community gaming centres + PlayNow.com** |
 | **Enrolment (land-based)** | In person at any BC casino — signed agreement + **photo-ID capture** at enrolment |
 | **Enrolment (online)** | Through PlayNow.com account settings |
-| **Duration options** | A range of exclusion lengths; **irrevocable for the chosen term** |
+| **Duration options** | Fixed agreement terms of **6 months, 1 year, 2 years, or 3 years** (B.C. Reg. 217/2025 s.2); **irrevocable for the chosen term** |
+| **Pre-enrolment education** | **Mandatory** before enrolling — covers terms, prize forfeiture, extension, and how to access counselling (B.C. Reg. 217/2025 s.3) |
+| **Enrolment method & records** | In-person or electronic enrolment; **records shared across operators** (B.C. Reg. 217/2025 ss.4–5) |
 | **PlayNow time-outs** | Short breaks of **1 day, 2 weeks, 1, 2, or 3 months** (separate from full self-exclusion) |
 | **Cross-channel effect** | Online self-exclusion **also bars land-based BCLC play** |
 | **Reinstatement** | **Active reinstatement** required at term end — exclusion does not lapse automatically |
+| **Pre-expiry communication** | Operator must communicate with the participant **within 30 days before expiry** (B.C. Reg. 217/2025 s.7) |
+| **Return of balances** | Account balances returned **within 14 days** (B.C. Reg. 217/2025 s.6) |
 | **Support on enrol** | Enrollees offered **referral to treatment** and removed from marketing |
 | **Enforcement** | **Photo-ID scanning at casino entry** + signed agreement; venues monitor to deter re-entry |
-| **Source** | Gaming Control Act s.57; RG Standards Pt A s.6.1–6.4; Internet Gambling RG Standards s.5.1–5.11 |
+| **Source** | **B.C. Reg. 217/2025 (Voluntary Self-Exclusion Regulation), ss.2–7**; Gaming Control Act s.57; RG Standards Pt A s.6.1–6.4 (legacy); Internet Gambling RG Standards s.5.1–5.11 (legacy) |
 
 > **Verify-before-merge note**: VSE enforcement is documented as **photo-ID scanning at entry plus a signed agreement**. Facial-recognition technology was only **historically tested** in BC — do not assert it as the live primary control.
 
@@ -379,7 +432,7 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 > **Q: How does self-exclusion work in British Columbia?**
 >
-> BC has one province-wide program: **Voluntary Self-Exclusion**, known to players as **Game Break**. It covers **every BC casino and community gaming centre and PlayNow.com** through a single enrolment. Players sign an agreement and have their photo ID captured at enrolment; the exclusion is **irrevocable for the term they choose** and requires an **active reinstatement** step at the end — it does not expire on its own. On PlayNow.com, players can also take shorter **time-outs** of 1 day, 2 weeks, or 1–3 months. Online self-exclusion also blocks land-based BCLC play.
+> BC has one province-wide program: **Voluntary Self-Exclusion**, known to players as **Game Break**. It covers **every BC casino and community gaming centre and PlayNow.com** through a single enrolment. Before enrolling, players receive mandatory education on the terms, prize forfeiture, and how to reach counselling. They choose a fixed term of **6 months, 1 year, 2 years, or 3 years**, sign an agreement, and have their photo ID captured at enrolment; the exclusion is **irrevocable for the chosen term** and requires an **active reinstatement** step at the end — it does not expire on its own (the operator reaches out within 30 days before expiry). Any account balance is returned within 14 days. On PlayNow.com, players can also take shorter **time-outs** of 1 day, 2 weeks, or 1–3 months. Online self-exclusion also blocks land-based BCLC play.
 >
 > If a player asks about it, explain the options and offer to help them enrol or contact a GameSense Advisor. In casual conversation, say "take a break" or "pause your account." Use "Game Break" or "Voluntary Self-Exclusion" when referring to the formal program.
 
@@ -389,20 +442,27 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 *Skip this section if your deployment is PlayNow-only.*
 
-BC's land-based responsible-gambling rules are **principles-based** — the **Responsible Gambling Standards for the BC Gambling Industry, Part A** describe obligations and outcomes rather than enumerating prescriptive tool mechanics. Service providers operate facilities on BCLC's behalf and must meet these standards.
+BC's land-based responsible-gambling rules combine the binding **B.C. Reg. 216/2025 (Problem Gambling Regulation)** in-venue requirements (in force 13 April 2026) with the legacy principles-based **Responsible Gambling Standards for the BC Gambling Industry, Part A**, which describe obligations and outcomes rather than enumerating prescriptive tool mechanics. Where they overlap, the regulation controls. Service providers operate facilities on BCLC's behalf and must meet these requirements. *Source: [B.C. Reg. 216/2025](https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0216_2025).*
 
 ### Required tools and obligations
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Problem gambling information posting | Yes | RG and help information in customer-service areas, washrooms, and at ATMs | RG Standards Pt A s.2.2, s.5.1–5.3 |
+| Dedicated problem-gambling information areas | Yes | Casinos must maintain **dedicated problem-gambling information areas** with posters/brochures on **odds and house edge** | B.C. Reg. 216/2025 ss.20–24 |
+| Problem gambling information posting | Yes | RG and help information available in customer-service areas, washrooms, and at ATMs | RG Standards Pt A s.2.2(b) |
+| Multilingual RG materials | Yes | Problem-gambling materials provided in **Traditional Chinese, Simplified Chinese, and Punjabi** | B.C. Reg. 216/2025 ss.20–24; RG Standards Pt A s.2.5 |
+| Anonymous self-assessment | Yes | An **anonymous self-assessment** must be available to patrons | B.C. Reg. 216/2025 ss.20–24 |
+| Self-exclusion information displayed | Yes | Information on the Voluntary Self-Exclusion program displayed to patrons | RG Standards Pt A s.2.4 |
 | Help line display | Yes | Gambling Support BC at point of sale, in venues, at lottery retail | RG Standards Pt A s.2.2 |
 | GameSense Info Centres & Advisors | Yes | Dedicated centres with trained advisors at casinos and community gaming centres | RG Standards Pt A (GameSense program) |
 | Clocks visible to patrons | Yes | Clocks showing time of day in areas readily accessible to customers | RG Standards Pt A s.4.6 |
 | No credit / lending to patrons | Yes | Information posted that credit and lending are prohibited; financial-transaction policies disclosed | RG Standards Pt A s.5.1–5.3 |
-| Employee training | Yes | Patron-facing staff trained to identify and respond to distress; designated trained interveners; Serving It Right where alcohol is served | RG Standards Pt A s.3.2–3.3, s.4.3, s.4.5 |
+| Prevent visibly-intoxicated play | Yes | Reasonable steps to prevent play by visibly intoxicated patrons | RG Standards Pt A s.4.2 |
+| Unattended-children policy | Yes | Policy to address unattended children on the premises | RG Standards Pt A s.4.4 |
+| Employee training | Yes | Patron-facing staff trained on chance-vs-skill, problem-gambling recognition, identifying intoxication, and support services; designated trained interveners; Serving It Right where alcohol is served | **B.C. Reg. 214/2025 s.3** (Problem Gambling Course, 30/90-day cadence); RG Standards Pt A s.3.2–3.3, s.4.3, s.4.5 |
+| VSE-assistance training | Yes | Staff trained to **assist patrons with VSE enrolment and counselling access** | B.C. Reg. 214/2025 s.4 (Patron Resources Course) |
 | Increased interaction for extended play | Yes | Staff interaction must increase for extended or intensive play | RG Standards Pt A s.4.5 |
-| Self-exclusion (Game Break) | Yes | Province-wide VSE; photo-ID capture and signed agreement at enrolment | Gaming Control Act s.57; RG Standards Pt A s.6.1–6.4 |
+| Self-exclusion (Game Break) | Yes | Province-wide VSE; fixed terms (6mo/1/2/3yr); pre-enrolment education; photo-ID capture and signed agreement at enrolment | B.C. Reg. 217/2025 ss.2–7; Gaming Control Act s.57; RG Standards Pt A s.6.1–6.4 |
 
 ### {{PROGRAM_NAME}} tool messaging — land-based
 
@@ -418,36 +478,43 @@ BC's land-based responsible-gambling rules are **principles-based** — the **Re
 
 *Skip this section if your deployment is land-based-only.*
 
-PlayNow.com is governed by the **Standards for Responsible Gambling — Internet Gambling**, which are **prescriptive** — they enumerate specific tools, periods, and prohibited behaviours. PlayNow is BCLC's own platform (no third-party operator market).
+PlayNow.com is governed by the binding **B.C. Reg. 216/2025 (Problem Gambling Regulation)** as of 13 April 2026, paired with the legacy **Standards for Responsible Gambling — Internet Gambling**, which are **prescriptive** — they enumerate specific tools, periods, and prohibited behaviours. Where the two overlap, the regulation controls. PlayNow is BCLC's own platform (no third-party operator market). *Source: [B.C. Reg. 216/2025](https://www.bclaws.gov.bc.ca/civix/document/id/regulationbulletin/regulationbulletin/r0216_2025).*
 
 ### Required tools and obligations
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Deposit limits | Yes | Setting a **weekly deposit limit is mandatory** for players | Internet Gambling RG Standards s.3.5–3.14 |
-| Loss limits | Yes (opt-out) | Loss limits offered; players must **actively opt out** | Internet Gambling RG Standards s.3.5–3.14 |
-| Time limits | Yes (opt-out) | Time limits offered; players must **actively opt out** | Internet Gambling RG Standards s.3.5–3.14 |
+| Deposit-limit tool at account creation | Yes | A **deposit-limit tool must be presented at account creation**; on PlayNow a **weekly deposit limit is mandatory** | B.C. Reg. 216/2025 s.4; Internet Gambling RG Standards s.3.8 |
+| Loss limits | Yes (opt-out) | Optional loss limits on 24h/7d/30d cycles; players must **actively opt out** | B.C. Reg. 216/2025 s.4; Internet Gambling RG Standards s.3.7 |
+| Time limits | Yes (opt-out) | Optional time limits on 24h/7d/30d cycles; players must **actively opt out** | B.C. Reg. 216/2025 s.4; Internet Gambling RG Standards s.3.7 |
 | Time-outs / breaks | Yes (opt-out) | 1 day, 2 weeks, 1, 2, or 3 months; players must actively opt out | Internet Gambling RG Standards s.5.x |
-| Limit-change cooling-off | Yes | **Increases** take effect only after a **24-hour** cooling-off; **decreases** are immediate | Internet Gambling RG Standards s.3.5–3.14 |
-| Auto-play restrictions | Yes | **Auto-play for online slots is prohibited** | Internet Gambling RG Standards s.3.x |
-| Single account enforcement | Yes | Only **one account per player** is permitted | Internet Gambling RG Standards s.3.x |
-| Session reminders | Yes | **Hourly** session reminders promote breaks | Internet Gambling RG Standards s.1.5 |
+| Short-term account locks | Yes | Player-set account locks from **24 hours to 90 days** | B.C. Reg. 216/2025 s.6 |
+| Limit-change cooling-off + notification | Yes | **Increases** take effect only after a **24-hour** delay; **decreases** are immediate; the player is **notified when a limit is reached** | B.C. Reg. 216/2025 ss.4–5; Internet Gambling RG Standards s.3.9 (increase cooling-off), s.3.11 (limit-reached notification) |
+| Auto-play restrictions | Yes | **Auto-play for online slots is prohibited** | Internet Gambling RG Standards s.3.5 |
+| Single account enforcement | Yes | Only **one account per player** is permitted | Internet Gambling RG Standards s.3.6 |
+| Session reminders | Yes | **Hourly** pop-up break reminders | B.C. Reg. 216/2025 s.3; Internet Gambling RG Standards s.3.14 |
+| Continuous monitoring & intervention | Yes | Continuous monitoring of **each participant**, with recommended interventions | B.C. Reg. 216/2025 s.9 |
+| Risk detection & in-session interventions | Yes | Risk detection with pop-up and self-test interventions surfaced to at-risk players | Internet Gambling RG Standards s.2.5–2.6 |
+| High-risk game labelling | Yes | Higher-risk games must be **labelled** as such | Internet Gambling RG Standards s.3.3 |
 | Activity statements / history | Yes | Real-time time/money tracking with **up to six months** of history | Internet Gambling RG Standards s.1.5, s.3.12–3.13 |
-| Account transparency | Yes | Clear access to balances, deposits, withdrawals, bonuses, and limits; cash value of credits displayed | Internet Gambling RG Standards s.3.12–3.13 |
+| Account transparency | Yes | Clear access to balances, deposits, withdrawals, bonuses, and limits; **credit values shown in dollars** | B.C. Reg. 216/2025 ss.8, 14; Internet Gambling RG Standards s.3.12–3.13 |
+| 19+ on homepage & account creation | Yes | The **19+** restriction must be shown on the homepage and at account creation | B.C. Reg. 216/2025 ss.3, 7 |
+| Links to limit tools & self-assessment | Yes | Prominent links to limit tools and an **anonymous self-assessment** | B.C. Reg. 216/2025 ss.8, 14 |
 | Responsible-gambling messaging | Yes | RG/GameSense info, signs of problem gambling, and the help line on key pages | Internet Gambling RG Standards s.1.1–1.4 |
-| Self-exclusion | Yes | Game Break online enrolment; irrevocable for chosen term; bars land-based play; active reinstatement | Internet Gambling RG Standards s.5.1–5.11 |
-| Staff training (online) | Yes | PlayNow staff trained to give RG info, dispel myths in chats/calls, direct to resources and self-exclusion | Internet Gambling RG Standards s.2.1–2.4 |
+| Self-exclusion | Yes | Game Break online enrolment; fixed term (6mo/1/2/3yr); bars land-based play; active reinstatement | B.C. Reg. 217/2025 ss.2–7; Internet Gambling RG Standards s.5.1–5.11 |
+| Staff training (online) | Yes | PlayNow staff trained to give RG info, dispel myths in chats/calls, direct to resources and self-exclusion | B.C. Reg. 214/2025 s.3; Internet Gambling RG Standards s.2.1–2.4 |
 
 ### {{PROGRAM_NAME}} tool messaging — interactive
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
-| Weekly deposit limit | "Your weekly deposit limit is set before you play — that's the BC way. Adjust it anytime (increases wait 24 hours)." | Internet Gambling RG Standards s.3.5–3.14 |
-| Loss limit | "Cap your losses for the week. One setting, total control." | Internet Gambling RG Standards s.3.5–3.14 |
+| Weekly deposit limit | "Your weekly deposit limit is set before you play — that's the BC way. Adjust it anytime (increases wait 24 hours)." | B.C. Reg. 216/2025 ss.4–5; Internet Gambling RG Standards s.3.8–3.9 |
+| Loss limit | "Cap your losses for the week. One setting, total control." | B.C. Reg. 216/2025 s.4; Internet Gambling RG Standards s.3.7 |
+| Account lock | "Lock your account for anywhere from a day to 90 days. Instant, no questions." | B.C. Reg. 216/2025 s.6 |
 | Time-out | "Need a breather? Pause for a day, two weeks, or up to 3 months." | Internet Gambling RG Standards s.5.x |
-| Session reminder | "Your hourly check-in is here — time and money, no surprises." | Internet Gambling RG Standards s.1.5 |
-| Activity dashboard | "Six months of your play, on demand. Wins, losses, and everything wagered." | Internet Gambling RG Standards s.3.12–3.13 |
-| Self-exclusion (Game Break) | "Need a longer break? Game Break covers PlayNow and every BC venue." | Internet Gambling RG Standards s.5.1–5.11 |
+| Session reminder | "Your hourly check-in is here — time and money, no surprises." | B.C. Reg. 216/2025 s.3; Internet Gambling RG Standards s.3.14 |
+| Activity dashboard | "Six months of your play, on demand. Wins, losses, and everything wagered." | Internet Gambling RG Standards s.1.5, s.3.12–3.13 |
+| Self-exclusion (Game Break) | "Need a longer break? Game Break covers PlayNow and every BC venue." | B.C. Reg. 217/2025 ss.2–7; Internet Gambling RG Standards s.5.1–5.11 |
 
 ---
 
@@ -533,7 +600,9 @@ Quick-reference table mapping every collateral category to BC-specific adaptatio
 | **Print** | Helpline card | Both | Gambling Support BC, 1-888-795-6111, gamblingsupportbc.ca | All helpline tokens |
 | **Environmental** | Entry signage | Land-based | 19+ age notice, Gambling Support BC, GameSense Info Centre wayfinding | `{{MIN_AGE}}`, `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Floor / ATM area | Land-based | Gambling Support BC, no-credit notice, RG info | `{{HELPLINE_NUMBER}}` |
-| **Environmental** | Washroom / service desk | Land-based | RG information per RG Standards Pt A s.5.1–5.3 | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | Washroom / service desk | Land-based | RG information per RG Standards Pt A s.2.2(b) (financial/no-credit notices per s.5.1–5.3) | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | PG information area | Land-based | Dedicated problem-gambling area: odds/house-edge posters, anonymous self-assessment, multilingual materials (Traditional Chinese, Simplified Chinese, Punjabi) per B.C. Reg. 216/2025 ss.20–24 | `{{HELPLINE_NUMBER}}` |
+| **Print** | Multilingual RG insert | Both | Provide RG/help materials in Traditional Chinese, Simplified Chinese, and Punjabi (B.C. Reg. 216/2025) | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Digital display | Land-based | On-brand RG message in rotation, Gambling Support BC | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | TV spot end card | Both | Gambling Support BC + RG message (same language as ad) | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | Radio spot | Both | Spoken Gambling Support BC reference + RG message | `{{HELPLINE_NUMBER}}` |
@@ -594,7 +663,10 @@ Complete before launching {{PROGRAM_NAME}} in British Columbia.
 - [ ] Verified legal gambling age: 19+ for all products
 - [ ] Reviewed permitted products table
 - [ ] Reviewed Gaming Control Act (SBC 2022 c.29) and the RG / Internet Gambling RG / Advertising standards
-- [ ] **Verified the current standards** post-IGCO transition (GPEB PDFs may be reissued under the new Act)
+- [ ] Reviewed the four binding 2025 regulations: **B.C. Reg. 214/2025** (Training), **215/2025** (Marketing/Advertising/Promotion), **216/2025** (Problem Gambling), **217/2025** (Voluntary Self-Exclusion) — in force 13 April 2026
+- [ ] Confirmed B.C. Reg. 215/2025 **supersedes** the soft 2015 Advertising & Marketing Standard
+- [ ] **Verified the current standards** post-IGCO transition (GPEB PDFs not yet reissued; cite the 2025 regulations as controlling authority)
+- [ ] Noted RG Check accreditation (administered by **RGC**, not the CGA); BCLC WLA Level 4 certification
 
 ### Helpline
 - [ ] Gambling Support BC (1-888-795-6111) displayed at point of sale, in venues, and on PlayNow key pages
@@ -616,19 +688,26 @@ Complete before launching {{PROGRAM_NAME}} in British Columbia.
 - [ ] GameSense slogan and brand assets respected (not presented as legal requirements)
 
 ### Advertising
-- [ ] Advertising reviewed against the Advertising & Marketing Standards for Gambling in BC
-- [ ] Responsible-gambling message present in all ads, in the same language as the ad
-- [ ] Odds stated factually; winning not presented as the most probable outcome
-- [ ] No financial-cure framing, no chasing-losses encouragement, no skill-ensures-winning claims
-- [ ] No minors or minor-appealing models/cartoons/endorsers (minors = under 19)
+- [ ] Advertising reviewed against **B.C. Reg. 215/2025** (binding) and the legacy Advertising & Marketing Standard
+- [ ] RG message covering prevention, mitigation, and treatment present in all ads, clearly legible/audible, same language as the ad (s.6)
+- [ ] 19+ clearly indicated in all marketing (s.7)
+- [ ] No widely-recognized athletes or celebrities in cable/streaming/billboard ads (ss.10–11)
+- [ ] No prohibited depictions (sexual acts, violence, trauma, problem-gambling behaviour, peer pressure, intoxicated gambling) (s.3)
+- [ ] Odds stated factually; winning not presented as likely; no skill/practice/duration-improves-chances claims (ss.4, 8)
+- [ ] No minors or minor-appealing creative; no marketing on school grounds (ss.12–13)
+- [ ] Inducement T&Cs disclosed; prior written consent obtained before direct inducement marketing (ss.15–16)
+- [ ] Reasonable steps taken to keep marketing away from self-excluded persons (s.14)
 - [ ] Advertising reviewed against CGA Code for Responsible Gaming Advertising (January 2026)
 - [ ] Advertising reviewed per [advertising-rules.md](advertising-rules.md)
 
 ### Self-exclusion
 - [ ] Game Break (Voluntary Self-Exclusion) information available — province-wide scope explained (all venues + PlayNow)
-- [ ] Land-based enrolment: photo-ID capture + signed agreement
+- [ ] Fixed agreement terms offered: **6 months / 1 / 2 / 3 years** (B.C. Reg. 217/2025 s.2)
+- [ ] **Mandatory pre-enrolment education** delivered (terms, prize forfeiture, extension, counselling access) (s.3)
+- [ ] Land-based enrolment: photo-ID capture + signed agreement; in-person or electronic enrolment with cross-operator records (ss.4–5)
 - [ ] PlayNow time-outs (1 day / 2 weeks / 1–3 months) available
-- [ ] Irrevocable-for-term + active-reinstatement rules communicated
+- [ ] Irrevocable-for-term + active-reinstatement rules communicated; pre-expiry contact within 30 days of expiry (s.7)
+- [ ] Account balances returned within **14 days** (s.6)
 - [ ] Online self-exclusion also bars land-based BCLC play
 - [ ] Self-excluded persons removed from marketing; treatment referral offered
 - [ ] Self-exclusion language mapped to {{PROGRAM_NAME}} Tier 1/Tier 2 language
@@ -637,23 +716,31 @@ Complete before launching {{PROGRAM_NAME}} in British Columbia.
 
 ### Player protection — land-based
 *Check only if deploying in land-based venues.*
-- [ ] RG information posted in customer-service areas, washrooms, and at ATMs (s.5.1–5.3)
+- [ ] RG information posted in customer-service areas, washrooms, and at ATMs (s.2.2(b))
+- [ ] Dedicated problem-gambling information area with odds/house-edge posters and anonymous self-assessment (B.C. Reg. 216/2025 ss.20–24)
+- [ ] Multilingual RG materials provided in **Traditional Chinese, Simplified Chinese, and Punjabi** (B.C. Reg. 216/2025; RG Standards Pt A s.2.5)
+- [ ] Self-exclusion information displayed (s.2.4)
 - [ ] Clocks visible to patrons (s.4.6)
 - [ ] No-credit / lending notice posted (s.5.1–5.3)
-- [ ] Staff trained to identify/respond to distress; designated interveners; Serving It Right where alcohol served
+- [ ] Reasonable steps to prevent visibly-intoxicated play (s.4.2); unattended-children policy in place (s.4.4)
+- [ ] Staff trained per **B.C. Reg. 214/2025** (Problem Gambling Course on 30/90-day cadence, incl. identifying intoxication; Patron Resources Course for VSE assistance); designated interveners; Serving It Right where alcohol served
 - [ ] GameSense Info Centre present and staffed
 
 ### Player protection — interactive (PlayNow.com)
 *Check only if deploying on PlayNow.com.*
-- [ ] Mandatory weekly deposit limit enforced (s.3.5–3.14)
-- [ ] Loss / time limits and time-outs available on an opt-out basis
-- [ ] 24-hour cooling-off on limit increases; decreases immediate
-- [ ] Online-slot auto-play disabled
-- [ ] One account per player enforced
-- [ ] Hourly session reminders active (s.1.5)
-- [ ] Real-time activity tracking with up to six months of history (s.3.12–3.13)
-- [ ] Account transparency (balances, deposits, withdrawals, bonuses, limits; cash value of credits)
-- [ ] PlayNow staff trained to give RG info and dispel myths (s.2.1–2.4)
+- [ ] Deposit-limit tool presented at account creation; weekly deposit limit mandatory (B.C. Reg. 216/2025 s.4; Internet Gambling RG Standards s.3.8)
+- [ ] Loss / time limits (24h/7d/30d) and time-outs available on an opt-out basis (s.4; Internet Gambling RG Standards s.3.7)
+- [ ] 24-hour cooling-off on limit increases; decreases immediate; player notified when a limit is reached (ss.4–5; Internet Gambling RG Standards s.3.9, s.3.11)
+- [ ] Short-term account locks (24h–90d) available (s.6)
+- [ ] Online-slot auto-play disabled (Internet Gambling RG Standards s.3.5)
+- [ ] One account per player enforced (Internet Gambling RG Standards s.3.6)
+- [ ] Hourly pop-up break reminders active (B.C. Reg. 216/2025 s.3; Internet Gambling RG Standards s.3.14)
+- [ ] Continuous monitoring of each participant with recommended interventions (s.9); risk detection with pop-up/self-test interventions (Internet Gambling RG Standards s.2.5–2.6)
+- [ ] Higher-risk games labelled (Internet Gambling RG Standards s.3.3)
+- [ ] 19+ shown on homepage and at account creation; prominent links to limit tools and self-assessment (ss.3, 7–8, 14)
+- [ ] Real-time activity tracking with up to six months of history (Internet Gambling RG Standards s.1.5, s.3.12–3.13)
+- [ ] Account transparency (balances, deposits, withdrawals, bonuses, limits; credit values shown in dollars) (s.8, s.14)
+- [ ] PlayNow staff trained to give RG info and dispel myths (B.C. Reg. 214/2025 s.3; Internet Gambling RG Standards s.2.1–2.4)
 
 ### Age verification
 - [ ] 19+ verification at all gambling touchpoints
@@ -675,8 +762,8 @@ Complete before launching {{PROGRAM_NAME}} in British Columbia.
 ### Governance
 - [ ] `_brand.yml` updated with BC values (helpline, age)
 - [ ] `_brand-canada.yml` reviewed (no BC mandatory-messaging entry)
-- [ ] `Last verified` date set on this module (2026-06-05)
-- [ ] `Next review due` date set (2026-09-05)
+- [ ] `Last verified` date set on this module (2026-06-08)
+- [ ] `Next review due` date set (2026-09-08)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 - [ ] IGCO standards re-issuance monitored post-13-April-2026 transition
