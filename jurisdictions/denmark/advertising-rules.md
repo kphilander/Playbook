@@ -27,15 +27,15 @@ adaptation_notes: |
   whistle-to-whistle live sports ban are distinctive features not
   found in most North American jurisdictions. On-brand disclosure
   examples need cultural adaptation for non-Scandinavian markets.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # Denmark -- Advertising Rules
 
-> **Operator note**: This is the detailed advertising reference for Denmark. It covers Denmark's prescriptive multi-layer advertising framework: the Gambling Act (Spilleloven) s.36, the Marketing Practices Act (Markedsforingsloven), the Consumer Ombudsman's oversight, the Spillemyndigheden's Duty of Disclosure Guide, and the 2027 advertising reform package. Denmark's advertising rules are among the most prescriptive in Europe, with specific restrictions on age targeting, proximity bans, live sports bans, and mandatory disclosure requirements. Use this alongside the [Denmark compliance module](README.md) for complete coverage.
+> **Operator note**: This is the detailed advertising reference for Denmark. It covers Denmark's prescriptive multi-layer advertising framework: the Gambling Act (Spilleloven) s.36, the Marketing Practices Act (Markedsforingsloven), the Consumer Ombudsman's oversight, the Spillemyndigheden's two marketing guides -- the **Guide on duty of disclosure v3.1** and the **Guide on sales promotion v5.0** -- the **"information when marketing" rules** in force since 1 April 2020, and the 2027 advertising reform package. Denmark's advertising rules are among the most prescriptive in Europe, with specific restrictions on age targeting, proximity bans, live sports bans, and mandatory disclosure requirements. Use this alongside the [Denmark compliance module](README.md) for complete coverage.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -46,7 +46,9 @@ last_updated: 2026-03-22
 | [Denmark's advertising framework](#denmarks-advertising-framework) | Multi-layer regulatory structure |
 | [Gambling Act s.36 -- core advertising rules](#gambling-act-s36----core-advertising-rules) | Primary legislation requirements |
 | [Marketing Practices Act overlay](#marketing-practices-act-overlay) | Consumer Ombudsman's role |
-| [Duty of Disclosure Guide](#duty-of-disclosure-guide) | Spillemyndigheden's detailed guidance |
+| [Duty of Disclosure Guide v3.1](#duty-of-disclosure-guide-v31) | In-ad disclosures; social-media and affiliate scope |
+| [Sales Promotion Guide v5.0](#sales-promotion-guide-v50) | Bonus structures and draw/prize-value rules |
+| [Information when marketing (2020 rules)](#information-when-marketing-2020-rules) | Mandatory in-ad info and feasibility carve-out |
 | [2027 advertising reform package](#2027-advertising-reform-package) | Upcoming restrictions |
 | [Channel-by-channel rules](#channel-by-channel-rules) | Broadcast, digital, print, direct, in-venue, sponsorship |
 | [Prohibited content](#prohibited-content) | What you cannot say or show |
@@ -66,7 +68,9 @@ Denmark's gambling advertising is governed by three overlapping layers plus a ma
 |---|---|---|---|
 | **Primary legislation** | Gambling Act (Spilleloven) s.36 | Spillemyndigheden | Gambling-specific advertising rules |
 | **General consumer law** | Marketing Practices Act (Markedsforingsloven) | Consumer Ombudsman (Forbrugerombudsmanden) | Misleading marketing, comparative ads, youth protection, sales promotions |
-| **Regulatory guidance** | Duty of Disclosure Guide; RG Guide v1.4 | Spillemyndigheden | Detailed implementation guidance for operators |
+| **Marketing guidance -- disclosure** | Guide on duty of disclosure v3.1 | Spillemyndigheden | In-ad 18+/ROFUS/StopSpillet; operators' own social-media platforms; boosted odds; loyalty programmes; affiliate scope |
+| **Marketing guidance -- promotions** | Guide on sales promotion v5.0 | Spillemyndigheden | Bonus structures; promotional draw/prize-value calculation; loyalty treatment |
+| **Marketing guidance -- in-ad info** | "New rules on information when marketing" (in force 1 Apr 2020) | Spillemyndigheden | 18+, ROFUS, StopSpillet and the Authority's label in ads; case-by-case media-feasibility carve-out |
 | **2027 reform** | Advertising reform package (EC-notified Jan 2026) | Spillemyndigheden (expanded powers) | Under-25 ban, proximity bans, live sports ban, public transport ban |
 
 ### Key distinction: Denmark vs. North American jurisdictions
@@ -127,9 +131,9 @@ The Consumer Ombudsman monitors gambling advertising for compliance with the Mar
 
 ---
 
-## Duty of Disclosure Guide
+## Duty of Disclosure Guide v3.1
 
-The Spillemyndigheden publishes detailed guidance on what information operators must disclose in marketing materials.
+The Spillemyndigheden publishes a versioned **Guide on duty of disclosure regarding marketing of gambling** (current version 3.1) setting out what information operators must disclose in marketing materials.
 
 ### Mandatory disclosures in all marketing
 
@@ -152,7 +156,47 @@ When advertising bonuses, free bets, or promotional offers, operators must discl
 
 The conditions may not be hidden behind links, in footnotes, or in separate terms pages -- they must be **in the immediate advertising context**.
 
-*Source: [Spillemyndigheden gambling advertising](https://www.spillemyndigheden.dk/en/gambling-advertising)*
+### Social media, affiliates, boosted odds and loyalty programmes
+
+Version 3.1 of the disclosure guide extends explicitly to channels central to Playbook's "Social" pillar and to affiliate distribution:
+
+- **Operators' own social-media platforms** -- the disclosure duty applies to content an operator publishes on its own social channels, not only to paid placements. Shareable formats (quizzes, myth-busters, stats cards) that carry any promotional element must still carry the mandatory disclosures.
+- **Affiliates** -- marketing performed by affiliates on the operator's behalf falls within the operator's disclosure responsibility; affiliate content must meet the same standard.
+- **Boosted odds** -- enhanced or "boosted" odds offers are treated as promotions and trigger the disclosure duty.
+- **Loyalty programmes** -- loyalty and VIP communications are within scope and must not be individualised in a way the legislation prohibits.
+
+*Source: [Spillemyndigheden gambling advertising](https://www.spillemyndigheden.dk/en/gambling-advertising); [Guide on duty of disclosure v3.1](https://www.spillemyndigheden.dk/uploads/2025-07/The%20Danish%20Gambling%20Authority%27s%20guide%20on%20duty%20of%20disclosure%20regarding%20marketing%20of%20gambling_version%203_1.pdf) (verify before merge)*
+
+---
+
+## Sales Promotion Guide v5.0
+
+Separate from the disclosure guide, the Spillemyndigheden publishes a **Guide on sales promotion** (current version 5.0, December 2020) that governs how bonuses and promotions themselves are structured -- not just how they are disclosed.
+
+### What the sales-promotion guide covers
+
+| Topic | Standard |
+|---|---|
+| **Bonus structures** | How welcome bonuses, free bets and reload offers may be constructed |
+| **Promotional draw / prize value** | The value of a promotional draw or prize is calculated on the basis of the estimated number of participants, so the advertised value is not overstated |
+| **Boosted odds** | Enhanced-odds promotions are treated as sales promotions and must meet the transparency standard |
+| **Loyalty programmes** | Loyalty and reward schemes are treated as promotions; benefits and conditions must be transparent |
+| **Uniform terms** | Promotional bonuses must apply on uniform terms across eligible player groups (see [Individualisation prohibition](#individualisation-prohibition)) |
+
+Use this guide alongside the disclosure guide: the sales-promotion guide tells you whether a promotion may be offered and how its value is expressed; the disclosure guide tells you what conditions must accompany it in the ad.
+
+*Source: [Guide on sales promotion v5.0](https://www.spillemyndigheden.dk/uploads/2025-07/The%20Danish%20Gambling%20Authority%20guide%20on%20sales%20promotion%20version%205_0.pdf) (verify before merge); landing: [Two guides updated -- marketing and sales promotion](https://www.spillemyndigheden.dk/en/news/two-guides-updated-marketing-gambling-and-sales-promotion)*
+
+---
+
+## Information when marketing (2020 rules)
+
+The obligation to carry the **age limit (18+), ROFUS, StopSpillet, and the Authority's label inside marketing** stems from a specific rule-set that came **into force on 1 April 2020** ("New rules on information when marketing gambling products"). Two points the rest of this reference depends on:
+
+- **In-ad placement** -- the required information must appear in or directly alongside the advertisement, not only on a landing page.
+- **Media-feasibility carve-out** -- where a given medium cannot reasonably carry all of the information (for example, a very short audio or small-format unit), the requirement is applied on a case-by-case basis. This is a narrow practical allowance, not a general exemption; document the rationale where it is relied on.
+
+*Source: [New rules on information when marketing gambling products](https://www.spillemyndigheden.dk/en/news/new-rules-information-when-marketing-gambling-products)*
 
 ---
 
@@ -205,8 +249,11 @@ Operators should begin adapting advertising materials in H2 2026 to ensure compl
 | Rule | Requirement | Source |
 |---|---|---|
 | Age targeting | Must not target under-18s in form or media choice | Gambling Act s.36 |
-| Disclosures | 18+, ROFUS, StopSpillet in all digital ads | Gambling Act s.36 |
-| Bonus ads | All conditions alongside the offer | Duty of Disclosure Guide |
+| Disclosures | 18+, ROFUS, StopSpillet in all digital ads | Gambling Act s.36; Information-when-marketing rules |
+| Bonus ads | All conditions alongside the offer | Duty of Disclosure Guide v3.1; Sales Promotion Guide v5.0 |
+| Own social-media platforms | Disclosure duty applies to the operator's own social content, not only paid placements | Duty of Disclosure Guide v3.1 |
+| Affiliates | Affiliate marketing falls within the operator's disclosure responsibility | Duty of Disclosure Guide v3.1 |
+| Boosted odds | Treated as a promotion; triggers disclosure and sales-promotion rules | Duty of Disclosure Guide v3.1; Sales Promotion Guide v5.0 |
 | ROFUS marketing | Must not serve ads to ROFUS-registered players | ROFUS rules |
 | Influencer/brand ambassador | Under-25 ban (from 2027) | 2027 reform |
 | Retargeting | Must not retarget ROFUS-registered players | ROFUS rules |
@@ -227,15 +274,15 @@ Operators should begin adapting advertising materials in H2 2026 to ensure compl
 | ROFUS-registered players | **Prohibited** -- automatic "No thank you to marketing" | ROFUS rules |
 | Consent | Must have opted in to receive marketing | Marketing Practices Act |
 | Content | Same disclosure requirements as other channels | Gambling Act s.36 |
-| Bonus offers | All conditions alongside the offer | Duty of Disclosure Guide |
+| Bonus offers | All conditions alongside the offer | Duty of Disclosure Guide v3.1 |
 
 ### In-venue (land-based casinos, betting shops)
 
 | Rule | Requirement | Source |
 |---|---|---|
-| DGA labelling scheme | Must be displayed | Certification requirements |
-| RG information | StopSpillet, ROFUS, treatment centres must be visible | RG Guide v1.4 |
-| Age notices | 18+ clearly displayed | Gambling Act |
+| DGA labelling scheme | Must be displayed | Certification Programme (SCP.00) |
+| RG information | StopSpillet, ROFUS, treatment centres must be visible | RG Guide v1.4 (casino); Exec Order 686/2025 (betting shops) |
+| Age notices | 18+ clearly displayed | Gambling Act; Exec Order 686/2025 (betting) |
 | Promotional materials | Must comply with same advertising rules | Gambling Act s.36 |
 
 ### Sponsorship
@@ -337,9 +384,15 @@ Promotional bonuses **cannot be offered on individualised terms**. They must app
 - VIP-only bonuses that are not available to all eligible players
 - Personalised free-bet offers designed to re-engage lapsed players
 
+### Promotional draw and prize value
+
+Under the Sales Promotion Guide v5.0, the value of a promotional draw or prize must be calculated on the basis of the **estimated number of participants** -- so the advertised value reflects a realistic expected value and is not overstated. Boosted-odds offers and loyalty-programme benefits are treated as sales promotions and are subject to the same transparency standard.
+
 ### Free-to-play welcome bonus restrictions (from 2027)
 
 The 2027 reform package includes restrictions on free-to-play welcome bonuses. Operators should review their onboarding bonus structures before 1 January 2027.
+
+*Source: [Guide on duty of disclosure v3.1](https://www.spillemyndigheden.dk/uploads/2025-07/The%20Danish%20Gambling%20Authority%27s%20guide%20on%20duty%20of%20disclosure%20regarding%20marketing%20of%20gambling_version%203_1.pdf); [Guide on sales promotion v5.0](https://www.spillemyndigheden.dk/uploads/2025-07/The%20Danish%20Gambling%20Authority%20guide%20on%20sales%20promotion%20version%205_0.pdf) (both: verify before merge)*
 
 ---
 
@@ -364,12 +417,13 @@ Assessment of {{PROGRAM_NAME}} templates against Denmark's advertising rules.
 | Template | What to change | Adaptation |
 |---|---|---|
 | Email templates | Add required disclosures to footer | 18+, ROFUS, StopSpillet in every email footer |
-| Social media cards | Add required disclosures | 18+, ROFUS, StopSpillet visible |
+| Social media cards | Add required disclosures | 18+, ROFUS, StopSpillet visible; disclosure duty applies to the operator's own social channels (Duty of Disclosure v3.1) |
+| Affiliate-distributed content | Confirm disclosures travel with the content | Affiliate marketing falls within the operator's disclosure responsibility (Duty of Disclosure v3.1) |
 | Posters | Add required disclosures | 18+, StopSpillet helpline, ROFUS reference |
 | Rack cards | Add helpline | StopSpillet as primary helpline |
-| Welcome email | Add disclosures; review bonus mention | Bonus conditions alongside any offer |
+| Welcome email | Add disclosures; review bonus mention | Bonus conditions alongside any offer; draw/prize value not overstated (Sales Promotion v5.0) |
 | Deposit email | Add disclosures; review deposit limit mention | Reference mandatory deposit limit |
-| RG page | Add StopSpillet, ROFUS, treatment centres | Denmark-specific support resources |
+| RG page | Add StopSpillet, ROFUS, self-test link, treatment centres | Denmark-specific support resources, in Danish and prominently placed |
 
 ### Not usable in Denmark without modification
 
@@ -377,6 +431,12 @@ Assessment of {{PROGRAM_NAME}} templates against Denmark's advertising rules.
 |---|---|---|
 | Any template with persons under 25 in imagery | Under-25 ban (from 2027) | Replace imagery |
 | Any template positioned as a bonus ad without conditions | Conditions must be alongside offer | Add full conditions or remove bonus reference |
+
+---
+
+## Source verification note
+
+The marketing-guidance layer above was reconciled against Spillemyndigheden sources on 2026-06-08. The **Duty of Disclosure guide v3.1** and **Sales Promotion guide v5.0** PDF URLs follow Spillemyndigheden's published `/uploads/...` path but were not byte-verified; their version numbers are reported-by-source. Confirm those links via the canonical [Spillemyndigheden guides](https://www.spillemyndigheden.dk/en/guides) page before merge. The Gambling Act, Marketing Practices Act, the 2020 information-when-marketing rules, and the 2027 reform package landing pages were verified. This material is for informational and educational purposes only and does not constitute legal advice; verify all requirements with qualified Danish counsel before deploying {{PROGRAM_NAME}}.
 
 ---
 
