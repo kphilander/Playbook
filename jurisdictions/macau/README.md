@@ -28,18 +28,18 @@ adaptation_notes: |
   Chinese and Portuguese language markets. Currency is MOP (Macau Pataca).
   Helpline is Macau-specific. Voice should adapt to collective/restrained/
   indirect/cautious cultural profile for local deployment.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # Macau SAR -- Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Macau SAR. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Macau is a **land-based casino only** jurisdiction -- online gambling is strictly prohibited. The regulatory framework is a hybrid of prescriptive legislation (Law 16/2001, Law 10/2012) and obligation-based concessionaire requirements (Article 42-A responsible gambling duties). Macau's legal system is based on Portuguese civil law and operates in Chinese (traditional) and Portuguese.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Macau SAR. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Macau is a **land-based casino only** jurisdiction -- online gambling is strictly prohibited. The regulatory framework is a hybrid of prescriptive legislation (Law 16/2001, Law 10/2012) and obligation-based concessionaire requirements. The responsible-gambling duties sit in Gaming Law **Articles 42-A and 42-B** (Law 16/2001 as amended by Law 7/2022), with operational detail in **Law 16/2022** (Regime of Operation of Casino Games) and **Administrative Regulation 55/2022** (Regulation of Casino Games Operation). Macau's legal system is based on Portuguese civil law and operates in Chinese (traditional) and Portuguese.
 >
 > **Verticals covered**: Land-based Casino only
 > *(Interactive/online gambling is prohibited under Macau law. Skip all interactive sections.)*
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -68,8 +68,9 @@ last_updated: 2026-03-22
 |---|---|
 | **Primary regulator** | Gaming Inspection and Coordination Bureau (DICJ -- Direccao de Inspeccao e Coordenacao de Jogos) |
 | **Website** | [dicj.gov.mo](https://www.dicj.gov.mo/web/en/frontpage/index.html) |
-| **Governing legislation** | Law No. 16/2001 (amended by Law No. 7/2022) -- General framework for casino gaming |
-| **Supporting legislation** | Law No. 10/2012 (amended by Law 17/2018) -- Casino entry and exclusion; Law No. 20/2024 -- Illegal gambling crimes; Advertisement Act (Decree-Law 7/89/M) |
+| **Governing legislation** | Law No. 16/2001 (amended by Law No. 7/2022) -- General framework for casino gaming; **Articles 42-A and 42-B** carry the responsible-gambling duties |
+| **Implementing legislation** | Law No. 16/2022 -- Regime of Operation of Casino Games (16 Dec 2022); Administrative Regulation No. 55/2022 -- Regulation of Casino Games Operation (21 Dec 2022). These implement the operational RG obligations (RG-plan execution, on-premises financial-access and promotions controls, minors-prevention measures) |
+| **Supporting legislation** | Law No. 10/2012 (amended by Law 17/2018) -- Casino entry and exclusion; Law No. 20/2024 -- Illegal gambling crimes; Law No. 7/2024 -- Regime of Credit for Casino Games (financial/licensing, RG-protection rationale); Advertisement Act (Decree-Law 7/89/M) |
 | **Reports to** | Secretary for Economy and Finance, Macau SAR Government |
 | **Regulatory approach** | Hybrid (prescriptive legislation + obligation-based concessionaire duties) |
 | **Established** | 2003 (current DICJ structure) |
@@ -90,7 +91,7 @@ Macau operates under a **concession-based system**. The government grants conces
 ### Upcoming changes
 
 - **Advertising law overhaul**: Proposed amendments to the Advertisement Act (consultation closed August 2025) would introduce a blanket ban on advertising that draws attention to or evokes associations with gambling, with increased penalties and content takedown authority.
-- **All gaming in concessionaire-owned properties**: Deadline of December 31, 2025, for all gaming to occur in properties owned by the concessionaires themselves.
+- **All gaming in concessionaire-owned properties**: The deadline for all gaming to occur in properties owned by the concessionaires themselves was December 31, 2025 (now passed). Confirm current implementation status with DICJ / local counsel before relying on satellite-casino arrangements.
 
 ---
 
@@ -112,6 +113,21 @@ Macau operates under a **concession-based system**. The government grants conces
 | Online casino / iGaming | Interactive | Prohibited | -- | Criminal offence: up to 8 years imprisonment (Law 20/2024) |
 | Sports lottery | Land-based/Limited | Legal (exclusive concession) | DICJ | Football and basketball only; operated by Macau Slot Co. |
 | Pari-mutuel (greyhound) | Land-based | Ended | -- | Macau Canidrome closed July 2018 |
+
+### Responsible-gambling legal framework
+
+The RG duties are not a single catch-all clause. They run through a layered set of instruments, and operators should map each obligation to the specific instrument rather than to "Article 42-A" alone:
+
+| Instrument | What it carries | Themes |
+|---|---|---|
+| Gaming Law **Article 42-A** (Law 16/2001, am. Law 7/2022) | The core RG obligation: concessionaires must adopt measures to promote responsible gambling and prevent and mitigate gambling-related harm | RG messaging, player protection |
+| Gaming Law **Article 42-B** (Law 16/2001, am. Law 7/2022) | The prescriptive RG-plan contents: staff training, helpline and information availability, measures to prevent entry by minors and legally incapacitated persons, and **limitations on on-premises financial access and on promotions consistent with RG aims** | Limit-setting and player controls, advertising/promotions, staff training |
+| **Law 16/2022** -- Regime of Operation of Casino Games | Operational backbone for floor-level RG measures: RG-plan execution and the minimum operating requirements concessionaires must meet | Game info, RG messaging, player controls, signage, staff training, transparency |
+| **Administrative Regulation 55/2022** -- Regulation of Casino Games Operation | Operational detail implementing the RG-plan, financial-access and promotions controls, and minors-prevention measures. Concessionaires must also comply with the Minimum Internal Control Requirements (MICR), responsible-gambling and other instructions issued from time to time by DICJ | Player controls, signage, transparency |
+
+The **on-premises financial-access and promotions limitations** in Article 42-B are a player-control requirement, not just an advertising rule: they constrain how readily a patron can access funds on the gaming floor and how promotions may be run. Treat them as a {{PROGRAM_NAME}} limit-setting touchpoint as well as an advertising one.
+
+*Sources: [ICLG Gambling Laws and Regulations -- Macau 2026](https://iclg.com/practice-areas/gambling-laws-and-regulations/macau); [Chambers Gaming Law 2025 -- Macau SAR](https://practiceguides.chambers.com/practice-guides/gaming-law-2025/macau-sar-china). Primary instrument texts are published in Chinese and Portuguese via the [DICJ Legislation Index](https://www.dicj.gov.mo/web/en/legislation/index.html) -- verify pin-cites with local counsel before merge.*
 
 ---
 
@@ -140,9 +156,17 @@ Macau operates under a **concession-based system**. The government grants conces
 
 #### Land-based display
 
-The 24-hour Gambling Counseling Hotline number must be displayed on ATM screensavers at all casinos. Responsible Gambling Information Kiosks (19 across all casinos) provide counseling contact information and self-exclusion access.
+The DICJ-prescribed responsible-gambling measure set requires the helpline and RG information across several enforced touchpoints at all casinos:
 
-*Source: [DICJ Responsible Gambling Information](https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html)*
+| Display locus | Requirement |
+|---|---|
+| ATM / cash-machine screensavers | Display the 24-hour Gambling Counseling Hotline number |
+| Responsible Gambling Information Kiosks | 19 kiosks across all casinos; provide counseling contact information and self-exclusion access |
+| Smoking rooms | Play responsible-gaming promotional videos in all smoking rooms at all casinos (indoor smoking is confined to enclosed lounges since the January 2019 ban, making these a specific, enforced signage point) |
+| Slot machines | Place RG stickers on all slot machines promoting responsible gaming and hotline information |
+| Promotional pamphlets | Include RG messages in all gaming-related promotional pamphlets |
+
+*Sources: [DICJ Responsible Gambling Information](https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html) (primary; JS-rendered and partly unfetchable -- **verify before merge**). The measure-by-measure list above mirrors the DICJ-prescribed set as published in concessionaire RG disclosures, e.g. [Galaxy Entertainment -- Responsible Gaming](https://www.galaxyentertainment.com/en/corp/responsible-gaming).*
 
 ### On-brand helpline display
 
@@ -162,10 +186,12 @@ The 24-hour Gambling Counseling Hotline number must be displayed on ATM screensa
 
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
-| Casino floor (kiosks) | Standard-based | RG information via Responsible Gambling Information Kiosks | DICJ Standards; Article 42-A, Law 16/2001 |
+| Casino floor (kiosks) | Standard-based | RG information via Responsible Gambling Information Kiosks | Article 42-A/42-B, Law 16/2001; Law 16/2022 |
 | Promotional pamphlets | Obligation-based | RG messages in all gaming-related promotional pamphlets | Article 42-A, Law 16/2001 (amended by Law 7/2022) |
-| ATM screensavers | Standard-based | Display 24-hour Gambling Counseling Hotline | DICJ Standards |
-| Concessionaire premises | Obligation-based | Information on problem gambling behaviours and support | Article 42-A, Law 16/2001 (amended by Law 7/2022) |
+| ATM screensavers | Standard-based | Display 24-hour Gambling Counseling Hotline | Article 42-B, Law 16/2001; DICJ RG measures |
+| Smoking rooms | Standard-based | RG promotional videos in all smoking rooms | DICJ RG measures |
+| Slot machines | Standard-based | RG and hotline stickers on all slot machines | DICJ RG measures |
+| Concessionaire premises | Obligation-based | Information on signs of gambling-related harm and available support | Article 42-A, Law 16/2001 (amended by Law 7/2022) |
 
 ### Verbatim required statements
 
@@ -175,8 +201,8 @@ Macau does not prescribe specific verbatim statements. Requirements are obligati
 
 | Obligation | What must be communicated | Where | Source |
 |---|---|---|---|
-| RG information | Information on problem gambling behaviours and available support | Casino premises, kiosks, pamphlets | Article 42-A, Law 16/2001 |
-| Helpline display | 24-hour Gambling Counseling Hotline number | ATM screensavers, kiosks | DICJ Standards |
+| RG information | Information on signs of gambling-related harm and available support | Casino premises, kiosks, pamphlets | Article 42-A, Law 16/2001 |
+| Helpline display | 24-hour Gambling Counseling Hotline number | ATM screensavers, kiosks, smoking-room videos, slot-machine stickers | Article 42-B, Law 16/2001; DICJ RG measures |
 | Self-exclusion information | How to apply for self-exclusion | Kiosks, DICJ office information | Law 10/2012 |
 
 ### On-brand integration
@@ -199,6 +225,7 @@ Macau's obligation-based approach means operators have full flexibility to use {
 | Focus restriction | Marketing must focus on entertainment, tourism, and hospitality rather than gaming | Land-based | Decree-Law 7/89/M |
 | Online advertising ban | All online/remote gambling advertising strictly forbidden | All | Decree-Law 7/89/M |
 | Minor protection | Targeting persons under 21 prohibited | Land-based | Law 7/2022 |
+| On-premises promotions limits | Promotions on the gaming floor must stay within limits consistent with RG aims | Land-based | Article 42-B, Law 16/2001; AR 55/2022 |
 | RG in pamphlets | RG messages required in gaming-related promotional pamphlets | Land-based | Article 42-A, Law 16/2001 |
 
 ### Upcoming advertising changes
@@ -234,9 +261,9 @@ RG messages must be included in all gaming-related promotional pamphlets. Respon
 | **Scope** | All or specific casinos in Macau SAR |
 | **Enrollment method** | In-person at DICJ office or via 19 Responsible Gambling Information Kiosks |
 | **Processing time** | Within 5 working days, DICJ notifies applicant to sign notification letter |
-| **Reinstatement** | Revocation can be requested during active period |
+| **Reinstatement** | Revocation may be requested in person at DICJ during the active period, but **takes effect only 30 days after the request** |
 | **Cost** | Free |
-| **Source** | [Law 10/2012; PS-1408](https://www.gov.mo/en/services/ps-1408/) |
+| **Source** | [Law 10/2012, art. 6(1); PS-1408](https://www.gov.mo/en/services/ps-1408/); [DICJ Self-Exclusion / Third-Party Exclusion](https://www.dicj.gov.mo/web/en/responsible/isolation/isolation.html) |
 
 ### Third-party exclusion
 
@@ -270,6 +297,8 @@ Under the 2018 amendment (Law 17/2018) to Law 10/2012, effective December 27, 20
 | Tier 2 (formal) | "Self-exclusion" | Self-Exclusion and Third-Party Exclusion | Legal documents, formal enrollment |
 | Staff training | Both | DICJ exclusion program | When explaining the official program |
 
+**No fine print**: When explaining how to end an exclusion, be honest that it is not instant. A revocation request takes 30 days to take effect and must be filed in person at DICJ. Frame this as a feature of a real cooling-off period, not a barrier -- and never imply someone can simply walk back in the same day.
+
 ---
 
 ## Player protection -- land-based
@@ -278,13 +307,47 @@ Under the 2018 amendment (Law 17/2018) to Law 10/2012, effective December 27, 20
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Problem gambling information posting | Yes | Via 19 RG Information Kiosks and promotional pamphlets | Article 42-A, Law 16/2001 |
-| Helpline display | Yes | 24-hour hotline on ATM screensavers | DICJ Standards |
+| RG information posting | Yes | Via 19 RG Information Kiosks and promotional pamphlets | Article 42-A, Law 16/2001 |
+| Helpline display | Yes | 24-hour hotline on ATM screensavers, kiosks, smoking-room videos, and slot-machine stickers | Article 42-B, Law 16/2001; DICJ RG measures |
+| Smoking-room RG videos | Yes | Responsible-gaming promotional videos in all smoking rooms | DICJ RG measures |
+| Slot-machine RG stickers | Yes | RG and hotline stickers on all slot machines | DICJ RG measures |
+| Entrance entry-restriction signage | Yes | Signage with entry restrictions and related regulations at all casino entrances | Article 42-B, Law 16/2001; DICJ RG measures |
+| On-premises financial-access controls | Yes | Limitations on cash access and promotions consistent with RG aims | Article 42-B, Law 16/2001; AR 55/2022 |
 | Self-exclusion | Yes | Self and third-party exclusion via DICJ | Law 10/2012 |
-| Employee training | Yes | Staff trained to identify problem gambling signs; specialized RG teams | Article 42-A, Law 16/2001 |
-| RG kiosks | Yes | 19 kiosks co-managed by DICJ, IAS, ISCG | DICJ Standards |
+| Employee training | Yes | Staff trained to recognize signs of gambling-related harm and respond; specialized RG teams; staff encouraged into DICJ/IAS/ISCG certificate courses | Article 42-B, Law 16/2001; RG promotion programme |
+| RG kiosks | Yes | 19 kiosks co-managed by DICJ, IAS, ISCG | Law 16/2022; DICJ RG measures |
 | Annual RG reporting | Yes | Concessionaires submit annual RG activity reports to DICJ | Article 42-A, Law 16/2001 |
-| Specialized RG team | Yes | Each concessionaire must establish internal team for patron support | Article 42-A, Law 16/2001 |
+| Specialized RG team | Yes | Each concessionaire must establish an internal team for patron support | Article 42-A, Law 16/2001 |
+
+### Environmental signage measures
+
+Macau's standards of practice prescribe specific floor-level signage and display measures, distinct from the age-verification ID procedure (see [Age verification](#age-verification)). These are the Theme 8 environmental-signage obligations operators should build into venue collateral:
+
+| Measure | Where | Source |
+|---|---|---|
+| Entry-restriction signage | All casino entrances -- entry restrictions and related regulations, including the 21+ rule and exclusion notices | Article 42-B, Law 16/2001; DICJ RG measures |
+| ATM / cash-machine screensavers | Hotline number on all on-floor cash machines | DICJ RG measures |
+| Smoking-room RG videos | All enclosed smoking lounges at all casinos | DICJ RG measures |
+| Slot-machine RG stickers | All slot machines -- RG message and hotline | DICJ RG measures |
+| RG Information Kiosks | 19 kiosks across all casinos | Law 16/2022; DICJ RG measures |
+
+*Source: DICJ-prescribed RG measure set, as published in concessionaire RG disclosures, e.g. [Galaxy Entertainment -- Responsible Gaming](https://www.galaxyentertainment.com/en/corp/responsible-gaming). Primary DICJ RG page: [Responsible Gambling Information](https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html) (**verify before merge** -- JS-rendered).*
+
+### Responsible Gambling promotion programme and staff certification
+
+Macau runs a formal, recurring **Responsible Gambling promotion programme** jointly organized by **DICJ**, the **Social Welfare Bureau (IAS)**, and the **Institute for the Study of Commercial Gaming (ISCG, University of Macau)**. This is the standards-of-practice scaffolding behind staff training and public awareness, and operators are expected to plug their RG staff into it.
+
+| Element | Detail |
+|---|---|
+| Organizers | DICJ + Social Welfare Bureau (IAS) + ISCG (University of Macau) |
+| Public awareness | Recurring Responsible Gambling promotion campaigns and events |
+| Staff certification -- counselling | Macau Gambling Counsellor Professional Certificate Course |
+| Staff certification -- RG instruction | Macau Responsible Gambling Instructor Certificate Course |
+| Scale | 145 trainees certified across the certificate courses in 2022 |
+
+For {{PROGRAM_NAME}} deployments, treat these certificate courses as the recognized training pathway for the specialized RG team members who staff kiosks and lead patron interactions (Theme 9). Reference them in staff onboarding and the Macau Staff FAQ.
+
+*Sources: [University of Macau FBA -- Keeping Macau Responsible](https://fba.um.edu.mo/keeping-macau-responsible/); [Macau CSR -- Macau Responsible Gambling Promotion Closing Ceremony for 2022](https://macaucsr.com/en/2023/01/04/macau-responsible-gambling-promotion-closing-ceremony-for-2022/).*
 
 ### Player protection -- interactive
 
@@ -397,7 +460,8 @@ Complete before launching {{PROGRAM_NAME}} in Macau SAR.
 
 ### Regulatory
 - [ ] Identified DICJ as primary regulator
-- [ ] Confirmed concessionaire relationship and obligations under Article 42-A
+- [ ] Confirmed concessionaire relationship and RG obligations under Articles 42-A and 42-B
+- [ ] Mapped operational RG duties to Law 16/2022 and Administrative Regulation 55/2022 (RG plan, financial-access/promotions controls, minors prevention)
 - [ ] Verified legal gambling age: 21+ for casinos, 18+ for pari-mutuel/lottery
 - [ ] Confirmed online gambling is prohibited -- deployment is land-based only
 - [ ] Checked for pending regulatory changes (advertising law overhaul, property ownership deadline)
@@ -405,6 +469,8 @@ Complete before launching {{PROGRAM_NAME}} in Macau SAR.
 ### Messaging
 - [ ] RG messages included in all gaming-related promotional pamphlets
 - [ ] Helpline (853) 2823 0101 displayed on ATM screensavers
+- [ ] RG promotional videos shown in all smoking rooms
+- [ ] RG and hotline stickers placed on all slot machines
 - [ ] Age notice (21+) on all player-facing content
 - [ ] Content available in Chinese (traditional) and Portuguese
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Macau values
@@ -420,14 +486,18 @@ Complete before launching {{PROGRAM_NAME}} in Macau SAR.
 - [ ] Self-exclusion information available at venue (via kiosks and/or staff)
 - [ ] Staff trained on DICJ self-exclusion enrollment process
 - [ ] Third-party exclusion process understood by staff
+- [ ] 30-day revocation lag communicated honestly (no implication of same-day re-entry)
 - [ ] Off-duty employee casino ban enforced and communicated
 - [ ] Self-exclusion language mapped to {{PROGRAM_NAME}} tiers
 
 ### Player protection -- land-based
 - [ ] Responsible gambling information available via kiosks
-- [ ] Helpline displayed on ATM screensavers
+- [ ] Helpline displayed on ATM screensavers, smoking-room videos, and slot-machine stickers
+- [ ] Entry-restriction signage in place at all casino entrances
+- [ ] On-premises financial-access and promotions limits applied per Article 42-B / AR 55/2022
 - [ ] Specialized RG team established per concessionaire obligations
-- [ ] Staff trained to identify and respond to problem gambling signs
+- [ ] Staff trained to recognize and respond to signs of gambling-related harm
+- [ ] RG staff routed into DICJ/IAS/ISCG counsellor or instructor certificate courses
 - [ ] Annual RG activity report process established for DICJ submission
 
 ### Age verification
@@ -453,17 +523,21 @@ Complete before launching {{PROGRAM_NAME}} in Macau SAR.
 
 This material is for informational and educational purposes only and does not constitute legal, medical, or professional advice. Macau gambling regulations are published primarily in Chinese and Portuguese. Operators must verify all compliance requirements with qualified legal counsel familiar with Macau SAR law before deploying {{PROGRAM_NAME}}.
 
-Note: Several primary source documents (legislation text, DICJ instructions) are available only in Chinese and Portuguese on the DICJ website. The English-language references cited in this module are from the DICJ English-language pages, the Macau SAR Government Portal (English), and reputable legal guides (ICLG, Chambers and Partners). Operators should obtain official translations or local legal counsel review for deployment.
+Note: Several primary source documents (legislation text, DICJ instructions) are available only in Chinese and Portuguese on the DICJ website. The post-2022 implementing instruments referenced here -- Law 16/2022, Administrative Regulation 55/2022, and Gaming Law Articles 42-A/42-B (Law 16/2001 as amended by Law 7/2022) -- should have their pin-cites confirmed against the official Chinese/Portuguese texts via the DICJ Legislation Index before merge. The English-language references cited in this module are from the DICJ English-language pages, the Macau SAR Government Portal (English), reputable legal guides (ICLG, Chambers and Partners), and concessionaire RG disclosures that mirror the DICJ-prescribed measure set. The DICJ English Responsible Gambling content page (`/responsible/responsible01/content.html`) is JS-rendered and was not directly fetchable during research; treat it as canonical but **verify before merge**. Operators should obtain official translations or local legal counsel review for deployment.
 
 ---
 
 *Cross-references: [`_brand.yml`](../../_brand.yml) | [Messaging Framework -- Warning Statement Standards](../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Staff FAQ](../../collateral/customer-service/staff-faq.md) | [Governance](../../brand-book/08-governance.md) | [Jurisdictions README](../README.md)*
 
 Sources:
-- [DICJ Responsible Gambling Information](https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html)
+- [DICJ Responsible Gambling Information](https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html) *(JS-rendered; verify before merge)*
+- [DICJ Self-Exclusion / Third-Party Exclusion](https://www.dicj.gov.mo/web/en/responsible/isolation/isolation.html)
 - [DICJ Self-Exclusion Services](https://www.dicj.gov.mo/web/EN/services/isolation/)
 - [Macau SAR Government -- Self-Exclusion Application (PS-1408)](https://www.gov.mo/en/services/ps-1408/)
 - [Macau SAR Government -- Third-Party Exclusion (PS-1408b)](https://www.gov.mo/en/services/ps-1408/ps-1408b/)
 - [ICLG Gambling Laws and Regulations -- Macau 2026](https://iclg.com/practice-areas/gambling-laws-and-regulations/macau)
 - [Chambers Gaming Law 2025 -- Macau SAR](https://practiceguides.chambers.com/practice-guides/gaming-law-2025/macau-sar-china)
+- [Galaxy Entertainment -- Responsible Gaming](https://www.galaxyentertainment.com/en/corp/responsible-gaming) *(mirrors DICJ-prescribed RG measure set)*
+- [University of Macau FBA -- Keeping Macau Responsible](https://fba.um.edu.mo/keeping-macau-responsible/)
+- [Macau CSR -- Macau Responsible Gambling Promotion Closing Ceremony for 2022](https://macaucsr.com/en/2023/01/04/macau-responsible-gambling-promotion-closing-ceremony-for-2022/)
 - [DICJ Legislation Index](https://www.dicj.gov.mo/web/en/legislation/index.html)
