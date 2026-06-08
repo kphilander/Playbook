@@ -8,15 +8,15 @@ reading_level: grade-9-12
 game_type: []
 audience: [general]
 channel: [blog, in-app]
-last_updated: "2026-06-05"
+last_updated: "2026-06-08"
 ---
 
 # Brazil (SPA/MF) -- Advertising Rules
 
 > **Operator note**: This is a detailed reference for gambling advertising rules in Brazil. It supplements the [Brazil compliance module](README.md). Brazil's advertising rules are prescriptive: **Lei no 14.790/2023, Art. 17** sets the statutory prohibitions, and **Portaria SPA/MF no 1.231/2024, Art. 12** enumerates them in detail (roughly nineteen distinct prohibitions). The warning-clause requirements come from **Lei 14.790/2023, Art. 16** and **Portaria 1.231/2024, Art. 13**. The legal market is online-only -- there are no land-based venues.
 
-> **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08
 
 ---
 
@@ -27,9 +27,11 @@ last_updated: "2026-06-05"
 | Lei no 14.790/2023, Arts. 16-17 | Statutory advertising/communication rules and prohibitions for fixed-odds betting and online games |
 | Portaria SPA/MF no 1.231/2024, Arts. 12-13 | Enumerated advertising prohibitions (Art. 12) and warning-clause requirements (Art. 13) |
 | Portaria SPA/MF no 1.231/2024, Art. 11 | Prohibition on advertising to self-excluded and court-excluded persons |
+| CONAR Anexo X (Codigo Brasileiro de Autorregulamentacao Publicitaria -- Apostas) | Self-regulatory advertising code for betting; standardized warning + labelling, over-21 endorsers, verified profiles, content bans (in force Dec 2023 / fully Jan 2024; policed by CONAR) |
+| SENACON Despacho no 2.344/2024 + Nota Tecnica no 6/2024 | Consumer-protection advertising restrictions: suspension of bonus/advance-reward ads, bans on ads to minors and in schools/universities, no youth-popular influencers (R$50k/day fines) |
 | Lei no 14.790/2023 (overarching) | Federal authority for the regime |
 
-**Sources**: [Lei 14.790/2023](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm) | [SPA legislacao index (Portaria 1.231/2024)](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao)
+**Sources**: [Lei 14.790/2023](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm) | [SPA legislacao index (Portaria 1.231/2024)](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao) | [CONAR Anexo X (PDF)](http://www.conar.org.br/pdf/CONAR-ANEXO-X-PUBLICIDADE-APOSTAS-dezembro-2023.pdf)
 
 > **Source-access note**: The in.gov.br DOU permalink for Portaria 1.231/2024 may not load from every network (it was WAF-blocked during research). Use the reachable [SPA legislacao index](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao) as the reliable "View source" backstop, and re-verify the in.gov.br link before merge.
 
@@ -90,6 +92,44 @@ Brazilian gambling advertising must **not**:
 
 ---
 
+## CONAR self-regulation -- Anexo X
+
+The statute and Portaria are not the whole picture. Brazilian advertising self-regulation runs through **CONAR** (Conselho Nacional de Autorregulamentacao Publicitaria), and betting has its own annex: **Anexo X of the Codigo Brasileiro de Autorregulamentacao Publicitaria (Apostas)**. It came into force in **December 2023** and applied **fully from January 2024**. Treat Anexo X as a **first-class standard of practice** for any {{PROGRAM_NAME}} advertising in Brazil -- CONAR can require ads to be altered or pulled, and it moves faster than the formal SPA process.
+
+| Requirement | Detail |
+|---|---|
+| **Standardized warning + labelling** | A mandatory **standardized responsible-play warning**, plus **"this is advertising"** labelling and **Ministry-of-Finance authorization** labelling on the piece |
+| **Over-21 endorsers** | Influencers and other endorsers who appear in betting advertising must be **over 21** |
+| **Verified official profiles** | An operator's **official social profiles** must carry a **verified badge** |
+| **No pressure appeals** | No advertising that **pressures** the audience to bet |
+| **No "repeated play improves your odds"** | No messaging suggesting that **playing more often improves the chance of winning** |
+| **No child/youth targeting** | No **child- or youth-targeted imagery** |
+| **No credit/lending offers** | No advertising of **credit or lending** to fund betting |
+
+**In force**: December 2023; fully from January 2024. **Policed by**: CONAR.
+
+**Source**: [CONAR Anexo X (PDF)](http://www.conar.org.br/pdf/CONAR-ANEXO-X-PUBLICIDADE-APOSTAS-dezembro-2023.pdf)
+
+> **Source-access note**: The CONAR Anexo X PDF downloads cleanly over a normal HTTP client (e.g. `curl`), but an automated fetch may hit a **TLS certificate-chain quirk** on conar.org.br. Keep the URL -- it is the correct primary source -- and open it in a browser or via `curl` if a fetcher reports a certificate error.
+
+---
+
+## SENACON consumer-protection restrictions
+
+Separately from the SPA and CONAR, the **Secretaria Nacional do Consumidor (SENACON)** -- the federal consumer-protection authority -- has restricted betting advertising under consumer law. Through **Despacho no 2.344/2024** and **Nota Tecnica no 6/2024**, SENACON imposed:
+
+| Restriction | Detail |
+|---|---|
+| **Bonus / advance-reward ads suspended** | **Suspension** of advertising of bonuses and advance-reward ("antecipacao de premio") offers |
+| **No ads to minors** | **Ban** on betting advertising aimed at children and adolescents |
+| **No schools / universities** | **No promotion** of betting in schools or universities |
+| **No youth-popular figures** | **No use of personalities or influencers** popular with adolescents |
+| **Penalty** | **R$50,000 per day** for non-compliance |
+
+Treat these as **noted standards** that bind {{PROGRAM_NAME}} advertising in Brazil alongside the SPA rules and CONAR Anexo X.
+
+---
+
 ## Placement and channel rules
 
 | Channel | Key restrictions | Source |
@@ -113,12 +153,19 @@ Brazilian gambling advertising must **not**:
 - Sexual or objectifying content
 - Advertising to self-excluded or court-excluded persons
 - Ads that do not identify as advertising or omit the SPA authorization
+- (CONAR Anexo X) Pressure appeals, "repeated play improves your odds" messaging, child/youth imagery, and credit/lending offers
+- (SENACON) Bonus / advance-reward advertising; ads to children/adolescents; promotion in schools/universities; youth-popular influencers
 
 ---
 
 ## Enforcement
 
-Advertising compliance sits within the SPA/MF supervisory regime for the federal market. The SPA can require corrective action and apply administrative sanctions for breaches of the Lei 14.790/2023 and Portaria 1.231/2024 advertising rules; consumer-protection and self-regulatory bodies (e.g. CONAR) also engage with gambling advertising in Brazil. Verify the current sanction framework and any self-regulatory codes with legal counsel before launch.
+Advertising compliance sits within the SPA/MF supervisory regime for the federal market. The SPA can require corrective action and apply administrative sanctions for breaches of the Lei 14.790/2023 and Portaria 1.231/2024 advertising rules. Two further bodies actively police betting advertising in Brazil, and both are first-class for compliance purposes:
+
+- **CONAR** enforces the self-regulatory **Anexo X** code (above) and can order ads altered or withdrawn.
+- **SENACON** enforces consumer-protection restrictions (Despacho 2.344/2024; Nota Tecnica 6/2024), including the **R$50,000/day** penalty for non-compliant advertising.
+
+Verify the current sanction framework and the live text of all three layers with legal counsel before launch.
 
 ---
 
@@ -137,6 +184,10 @@ Advertising compliance sits within the SPA/MF supervisory regime for the federal
 - [ ] No targeting, featuring, or appealing to minors; no targeting vulnerable persons
 - [ ] No sexual or objectifying content
 - [ ] No advertising directed to self-excluded or court-excluded persons
+- [ ] **CONAR Anexo X**: standardized responsible-play warning + "this is advertising" + Ministry-of-Finance authorization labelling present
+- [ ] **CONAR Anexo X**: any influencer/endorser is over 21; official social profiles carry a verified badge
+- [ ] **CONAR Anexo X**: no pressure appeals, no "repeated play improves your odds" messaging, no child/youth imagery, no credit/lending offers
+- [ ] **SENACON**: no bonus or advance-reward advertising; no ads to children/adolescents; no promotion in schools/universities; no youth-popular personalities/influencers
 - [ ] Ad uses {{PROGRAM_NAME}} voice while meeting all warning and identification obligations
 - [ ] No fixed slogan presented as if it were word-for-word mandated
 

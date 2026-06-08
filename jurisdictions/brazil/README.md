@@ -33,7 +33,7 @@ adaptation_notes: |
   set (18+ mark + addiction-risk warning at >=10% of ad size), prudential
   self-limits at registration, and the centralized SPA self-exclusion
   platform. No single verbatim slogan is mandated.
-last_updated: "2026-06-05"
+last_updated: "2026-06-08"
 ---
 
 # Brazil (SPA/MF) -- Compliance Module
@@ -46,8 +46,8 @@ last_updated: "2026-06-05"
 >
 > **Regulatory approach**: Prescriptive (new, Portaria-driven; enumerated advertising prohibitions and mandated player-protection tools)
 
-> **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -59,7 +59,7 @@ last_updated: "2026-06-05"
 | [Legal requirements](#legal-requirements) | All | Licensing, permitted products, legal framework |
 | [Helpline](#helpline) | All | Support-channel obligations (no named government helpline) |
 | [Messaging requirements](#messaging-requirements) | All | Required warning clauses and on-brand integration |
-| [Advertising restrictions](#advertising-restrictions) | All | The ~19 enumerated prohibitions; see [advertising-rules.md](advertising-rules.md) |
+| [Advertising restrictions](#advertising-restrictions) | All | The ~19 enumerated prohibitions plus CONAR Anexo X and SENACON; see [advertising-rules.md](advertising-rules.md) |
 | [Self-exclusion](#self-exclusion) | All | Per-operator + centralized national autoexclusao |
 | [Player protection -- interactive](#player-protection----interactive) | Interactive | Online player-protection tools |
 | [Venue & environmental signage](#venue--environmental-signage) | N/A | Online-only market -- no physical venues |
@@ -78,7 +78,7 @@ last_updated: "2026-06-05"
 | **Primary regulator** | Secretaria de Premios e Apostas (SPA) -- Ministerio da Fazenda (SPA/MF) |
 | **Website** | [gov.br/fazenda -- Secretaria de Premios e Apostas](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas) |
 | **Governing legislation** | Lei no 14.790/2023 (regulates fixed-odds betting and online games); Lei no 13.756/2018 (created the fixed-odds betting modality) |
-| **Key regulations (Portarias)** | Portaria SPA/MF no 1.231/2024 (responsible gaming, technical and player-protection rules); no 827/2024; no 1.475/2024; no 2.579/2025 (centralized self-exclusion and self-limits at registration) |
+| **Key regulations (Portarias)** | Portaria SPA/MF no 1.207/2024 (technical requirements -- RTP and game information); no 1.225/2024 (monitoring and inspection); no 1.231/2024 (responsible gaming and advertising); no 722/2024 (betting-system rules and identity verification); no 827/2024; no 1.475/2024; no 2.579/2025 (centralized self-exclusion and self-limits at registration); Instrucao Normativa SPA/MF no 31/2025 (self-exclusion enforcement) |
 | **Operating system** | SIGAP -- Sistema de Gestao de Apostas (betting management / licensing system) |
 | **License model** | Competitive federal authorization (outorga). Onerous grant of roughly R$30 million for a 5-year term; an authorization covers up to three commercial brands. Operators serve the market on `.bet.br` domains. |
 | **Regulatory approach** | Prescriptive / Portaria-driven |
@@ -120,10 +120,16 @@ last_updated: "2026-06-05"
 |---|---|---|
 | Lei no 14.790/2023 | Primary legislation for fixed-odds betting and online games | Establishes the federal regime, advertising rules (Arts. 16-17), under-18 prohibition (Arts. 3, 26), customer-service duties (Art. 28), and the payouts-to-own-account rule (Art. 30) |
 | Lei no 13.756/2018 | Created the fixed-odds betting modality | Statutory origin of quota-fixa betting in Brazil |
-| Portaria SPA/MF no 1.231/2024 | Responsible gaming, technical and player-protection rules | Mandates RTP and odds disclosure, warning clauses, support channels, prudential limits, self-exclusion mechanics, and the ~19 advertising prohibitions |
+| Portaria SPA/MF no 1.207/2024 (29 Jul 2024) | Technical requirements for online games and live-game studios | Sets the minimum 85% theoretical RTP per game over its lifecycle (Art. 28), the in-graphics RTP-display rule (Art. 29), the game-information / help-screen and in-session display duties (Art. 11), and the 30-minute inactivity session timeout (Art. 2 VI) |
+| Portaria SPA/MF no 1.225/2024 (31 Jul 2024) | Monitoring and inspection | Supervisory / behavioural-monitoring layer over operators' fixed-odds betting activities |
+| Portaria SPA/MF no 1.231/2024 (31 Jul 2024) | Responsible gaming, communication and player-protection rules | Mandates odds disclosure, warning clauses, support channels, prudential limits, self-exclusion mechanics, and the ~19 advertising prohibitions |
+| Portaria SPA/MF no 722/2024 (2 May 2024) | General rules for betting systems; identity verification | Statutory basis for the mandatory facial-recognition / identity-verification onboarding requirement |
 | Portaria SPA/MF no 2.579/2025 | Centralized self-exclusion and self-limits | Centralized national autoexclusao platform; prudential self-limits (time and bet value) required at registration |
+| Instrucao Normativa SPA/MF no 31/2025 | Self-exclusion enforcement | Operator procedure behind the centralized self-exclusion: consult the SIGAP Modulo de Impedidos at first registration/login and at least every 15 days, block access on a match and return the available balance, with 30/45/90-day implementation deadlines |
 
-**Sources**: [Lei 14.790/2023](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm) | [Lei 13.756/2018](https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13756.htm) | [SPA legislacao index](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao)
+> **Naming note (Portaria numbers)**: The **technical** Portaria is **1.207/2024** (29 Jul 2024) -- it carries the RTP and game-information rules. The **monitoring/inspection** Portaria is **1.225/2024** (31 Jul 2024). The **responsible-gaming and advertising** Portaria is **1.231/2024** (31 Jul 2024). They are three distinct instruments issued the same week; do not conflate them.
+
+**Sources**: [Lei 14.790/2023](https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm) | [Lei 13.756/2018](https://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2018/Lei/L13756.htm) | [Portaria 1.207/2024 (legisweb)](https://www.legisweb.com.br/legislacao/?id=462643) | [SPA legislacao index](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao)
 
 ---
 
@@ -167,7 +173,7 @@ Because there is no government helpline number, the obligation is to surface **o
 | All communication, advertising and marketing (incl. digital) | Standard-based | Warning clauses: 18+ age mark or "proibido para menores de 18 anos," and a warning about addiction/pathological-gambling risk | Lei 14.790/2023, Art. 16; Portaria 1.231/2024, Art. 13 |
 | Warning-clause sizing | Standard-based | Clear and legible, at least **10%** of the ad size; spoken and written where possible; shown on the opening page of operator sites/apps | Portaria 1.231/2024, Art. 13 |
 | Operator site / app | Standard-based | Surface support (customer-service + ombudsman) channels and a highlighted link to the centralized self-exclusion platform | Portaria 1.231/2024, Art. 4 XII-XIII; Art. 11 VII |
-| Odds & RTP | Obligation-based | Theoretical RTP per online game; fixed odds for sports events and online games | Portaria 1.231/2024, Art. 4 II; Art. 23 V |
+| Odds & RTP | Obligation-based | Theoretical RTP per online game (displayed in-graphics before a session starts) and fixed odds for sports events and online games | Portaria 1.231/2024, Art. 4 II; Art. 23 V; Portaria 1.207/2024, Arts. 28-29 |
 
 **Obligation types**: Brazil does **not** prescribe a single verbatim slogan (there is no mandated word-for-word sentence such as "Aposte com responsabilidade"). The binding requirement is the **Art. 13 warning-clause set** -- the 18+ mark plus the addiction-risk warning, meeting the size and placement rules. Operators have wording flexibility around that obligation.
 
@@ -212,7 +218,7 @@ Because no fixed slogan is mandated, operators have full flexibility to wrap the
 
 ## Advertising restrictions
 
-Brazil's advertising regime is **prescriptive**: Lei 14.790/2023, Art. 17 plus Portaria SPA/MF no 1.231/2024, Art. 12, set out roughly **nineteen enumerated prohibitions**. The full breakdown lives in [advertising-rules.md](advertising-rules.md); the headline rules are below.
+Brazil's advertising regime is **prescriptive** and sits on three layers: (1) the statute and Portaria -- Lei 14.790/2023, Art. 17 plus Portaria SPA/MF no 1.231/2024, Art. 12, which set out roughly **nineteen enumerated prohibitions**; (2) the **CONAR** self-regulatory code (**Anexo X**, in force Dec 2023 / fully Jan 2024); and (3) **SENACON** consumer-protection measures. The full breakdown lives in [advertising-rules.md](advertising-rules.md); the headline rules are below.
 
 | Rule | Requirement | Verticals | Source |
 |---|---|---|---|
@@ -253,6 +259,31 @@ All advertising must:
 
 For the full enumerated breakdown, see [advertising-rules.md](advertising-rules.md).
 
+### CONAR self-regulation (Anexo X)
+
+Beyond the statute and Portaria, gambling advertising in Brazil is also bound by the **Codigo Brasileiro de Autorregulamentacao Publicitaria -- Anexo X (Apostas)**, the advertising self-regulation code policed by **CONAR**. It came into force in December 2023 and applied fully from January 2024. Treat it as a first-class standard of practice, not a footnote:
+
+| Requirement | Detail | Source |
+|---|---|---|
+| Standardized warning + labelling | Mandatory standardized responsible-play warning, plus **"this is advertising"** labelling and **Ministry-of-Finance authorization** labelling | CONAR Anexo X |
+| Over-21 endorsers | Influencers and endorsers must be **over 21** | CONAR Anexo X |
+| Verified official profiles | Official operator social profiles must carry a **verified badge** | CONAR Anexo X |
+| Content bans | No **pressure appeals**, no **"repeated play improves your odds"** messaging, no **child/youth-targeted imagery**, and no **credit/lending** offers | CONAR Anexo X |
+
+**Source**: [CONAR Anexo X (PDF)](http://www.conar.org.br/pdf/CONAR-ANEXO-X-PUBLICIDADE-APOSTAS-dezembro-2023.pdf)
+
+### SENACON consumer-protection restrictions
+
+The **Secretaria Nacional do Consumidor (SENACON)** has also acted on betting advertising under consumer-protection law. Via **Despacho no 2.344/2024** and **Nota Tecnica no 6/2024**, SENACON ordered:
+
+| Restriction | Detail | Source |
+|---|---|---|
+| Bonus/advance-reward ads | **Suspension** of advertising of bonuses and advance-reward offers | SENACON Despacho 2.344/2024; Nota Tecnica 6/2024 |
+| No ads to minors | **Ban** on betting advertising aimed at children and adolescents | SENACON Despacho 2.344/2024; Nota Tecnica 6/2024 |
+| No schools/universities | **No promotion** in schools or universities | SENACON Despacho 2.344/2024; Nota Tecnica 6/2024 |
+| No youth-popular figures | **No use of personalities/influencers** popular with adolescents | SENACON Despacho 2.344/2024; Nota Tecnica 6/2024 |
+| Penalty | **R$50,000/day** fines for non-compliance | SENACON Despacho 2.344/2024 |
+
 ---
 
 ## Self-exclusion
@@ -277,7 +308,20 @@ Brazil offers **autoexclusao** at two levels: per-operator and a **centralized n
 | **Scope** | **All authorized betting systems** -- blocks registration and access across the licensed market |
 | **Duration options** | Definite or indefinite period |
 | **Operator obligations** | Surface a clear, highlighted link to the central platform; block access for listed persons; do not send advertising to self-excluded or court-excluded persons |
-| **Source** | Portaria SPA/MF no 1.231/2024, Art. 11 VII (amended by Portaria SPA/MF no 2.579/2025) |
+| **Enforcement procedure** | Consult the **SIGAP Modulo de Impedidos** at first registration/login and **at least every 15 days** for all registered users; on a match, **block access and return the available account balance** (see [Operator enforcement](#operator-enforcement----instrucao-normativa-312025)) |
+| **Source** | Portaria SPA/MF no 1.231/2024, Art. 11 VII (amended by Portaria SPA/MF no 2.579/2025); Instrucao Normativa SPA/MF no 31/2025 |
+
+### Operator enforcement -- Instrucao Normativa 31/2025
+
+**Instrucao Normativa SPA/MF no 31/2025** is the operator procedure behind the centralized self-exclusion the module already references. It tells operators *how* to enforce the national list:
+
+| Obligation | Detail | Source |
+|---|---|---|
+| Consult the central list | Check the **SIGAP Modulo de Impedidos** at a user's **first registration/login** and **at least every 15 days** thereafter, for all registered users | Instrucao Normativa 31/2025 |
+| Act on a match | If a user appears on the list, **block their access** and **return the available balance** in their account | Instrucao Normativa 31/2025 |
+| Implementation deadlines | Phased rollout with **30 / 45 / 90-day** deadlines for the enforcement and prudential-limit adaptations | Instrucao Normativa 31/2025 |
+
+**Source**: [SPA -- centralized self-exclusion and self-limits (gov.br)](https://www.gov.br/fazenda/pt-br/assuntos/noticias/2025/novembro/spa-aprimora-protecao-ao-apostador-com-novas-regras-de-autoexclusao-centralizada-e-autolimites)
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -311,10 +355,13 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 | Session alerts / blocks | Yes | Session alerts or blocks must be available | Portaria 1.231/2024, Art. 4 X |
 | Pause periods | Yes | Bettors can set pause periods | Portaria 1.231/2024, Art. 4 X |
 | Permanent activity panel | Yes | A permanent panel showing time used, losses, and balance | Portaria 1.231/2024, Art. 4 X |
-| RTP / odds disclosure | Yes | Theoretical RTP per online game; fixed odds for sports and online games | Portaria 1.231/2024, Art. 4 II; Art. 23 V |
-| Self-exclusion | Yes | Per-operator and centralized national platform | Portaria 1.231/2024, Arts. 4 IV(d)/V, 11 VII |
+| RTP / odds disclosure | Yes | Theoretical RTP per online game; fixed odds for sports and online games. The **theoretical RTP must be displayed in the game graphics without the bettor having to start a session**, with a plain-language explanation | Portaria 1.231/2024, Art. 4 II; Art. 23 V; **Portaria 1.207/2024, Art. 29** |
+| Minimum RTP | Yes | Each online game must theoretically pay a **minimum 85% RTP** over its expected lifecycle | Portaria 1.207/2024, Art. 28 |
+| Game information & help screens | Yes | Complete, unambiguous game information, payout tables and rules; help screens accessible **without depositing or betting**; in-session display of balance, stake, last result and winnings | Portaria 1.207/2024, Art. 11 |
+| Session timeout | Yes | Online game session ends on player exit or after **30 minutes of inactivity** | Portaria 1.207/2024, Art. 2 VI |
+| Self-exclusion | Yes | Per-operator and centralized national platform; operator enforcement via the SIGAP Modulo de Impedidos (consult at registration/login and at least every 15 days; block and refund on a match) | Portaria 1.231/2024, Arts. 4 IV(d)/V, 11 VII; Instrucao Normativa 31/2025 |
 | Support channels | Yes | Customer-service and ombudsman channels signposting help for at-risk bettors and families | Portaria 1.231/2024, Art. 4 XII-XIII |
-| Behavioural monitoring | Yes | Documented responsible-gaming policy with behavioural monitoring | Portaria 1.231/2024, Art. 5 |
+| Behavioural monitoring | Yes | Documented responsible-gaming policy with behavioural monitoring; supervisory monitoring/inspection layer | Portaria 1.231/2024, Art. 5; Portaria 1.225/2024 |
 | Financial-history access | Yes | Full financial-movement history (deposits, withdrawals, stakes, prizes) | Portaria 1.231/2024, Art. 4 X; Art. 23 VI |
 | No third-party payouts | Yes | Prizes paid exclusively to the bettor's own bank/payment account at a Banco Central-authorized institution | Lei 14.790/2023, Art. 30 |
 
@@ -326,7 +373,23 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 | Prudential limits | "Set limits by time, loss, deposit, or number of bets -- daily, weekly, or monthly. Your call." | Portaria 1.231/2024, Art. 4 IV/X/XI |
 | Limit-change delay | "Raising a limit? It kicks in after 24 hours -- a small pause so the choice is really yours." | Portaria 1.231/2024, Art. 4 X/XI |
 | Activity panel | "Your panel, always on: time played, losses, and balance in one place." | Portaria 1.231/2024, Art. 4 X |
+| RTP up front | "Every game shows its theoretical RTP before you play -- no session needed, no fine print. That is the long-run payout, plain and simple." | Portaria 1.207/2024, Arts. 28-29 |
 | Self-exclusion | "Need a longer break? Pause this account -- or block yourself across every licensed operator through the national platform." | Portaria 1.231/2024, Art. 11 VII |
+
+### Technical requirements -- online games (Portaria 1.207/2024)
+
+Brazil's **technical** Portaria, **no 1.207/2024** (29 Jul 2024), sits underneath the responsible-gaming Portaria and governs how online games and live-game studios must behave. It is the most material game-information requirement for {{PROGRAM_NAME}} online deployments:
+
+| Requirement | Detail | Source |
+|---|---|---|
+| **Minimum theoretical RTP** | Each online game must theoretically pay a **minimum 85% RTP** over its expected useful life | Portaria 1.207/2024, Art. 28 |
+| **RTP displayed in-graphics, no session needed** | The theoretical RTP must be shown **in the game graphics without the bettor having to start a session**, with a plain-language explanation of what it means | Portaria 1.207/2024, Art. 29 |
+| **Game information & help screens** | Complete and unambiguous game information, payout tables and rules; help screens reachable **without depositing or betting**; in-session display of balance, stake, last result and winnings | Portaria 1.207/2024, Art. 11 |
+| **Session timeout** | A game session terminates on player exit or after **30 minutes of inactivity** | Portaria 1.207/2024, Art. 2 VI |
+
+> **Open-pillar fit**: This is "no fine print" written into law. The {{PROGRAM_NAME}} odds-explorer and house-edge guides already publish RTP ranges; the Brazil obligation goes further -- the **exact theoretical RTP must be visible in the game itself before a session starts**. Make sure your platform surfaces it, and use the in-graphics display as a chance to explain RTP in plain language rather than burying it.
+
+**Source**: [Portaria 1.207/2024 (legisweb)](https://www.legisweb.com.br/legislacao/?id=462643) | [SPA legislacao index](https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa/legislacao)
 
 ---
 
@@ -349,8 +412,8 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 | Requirement | Details | Source |
 |---|---|---|
-| **Identity** | CPF (Brazilian taxpayer registry number) required; identity verified against the bettor | Lei 14.790/2023; Portaria SPA/MF no 1.231/2024 |
-| **Facial recognition** | **Mandatory facial-recognition** identity verification as part of the onboarding/identity procedures | Lei 14.790/2023 (identity verification incl. "reconhecimento facial") |
+| **Identity** | CPF (Brazilian taxpayer registry number) required; identity verified against the bettor | Lei 14.790/2023; Portaria SPA/MF no 722/2024 (betting-system / identity-verification rules) |
+| **Facial recognition** | **Mandatory facial-recognition** identity verification as part of the onboarding/identity procedures | Lei 14.790/2023 (identity verification incl. "reconhecimento facial"); Portaria SPA/MF no 722/2024 |
 | **Under-18 prohibition** | Betting by persons under 18 is prohibited; under-18 / youth-only sports categories cannot be bet upon | Lei 14.790/2023, Arts. 3, 26 I |
 | **Payments tie-in** | Prizes and movements tied to the bettor's own Banco Central-authorized account -- no third-party payments | Lei 14.790/2023, Art. 30 |
 
@@ -371,7 +434,7 @@ All collateral in Brazil must display the **18+** mark (or "proibido para menore
 | Requirement | Value |
 |---|---|
 | **AML framework** | Brazilian AML law (Lei no 9.613/1998) and SPA/MF Portarias; operators are obligated persons for prevention of money laundering and terrorism financing |
-| **Identity verification** | CPF + mandatory facial-recognition verification at onboarding |
+| **Identity verification** | CPF + mandatory facial-recognition verification at onboarding (Portaria SPA/MF no 722/2024) |
 | **Payment controls** | Prizes and balances move exclusively through the bettor's own bank/payment account at a Banco Central-authorized institution -- **no third-party payments** (Lei 14.790/2023, Art. 30) |
 | **Permitted instruments** | Portaria Normativa SPA/MF no 615/2024: Pix, TED, debit and prepaid cards permitted (from the bettor's own account); credit cards, boleto, cash and cryptoassets prohibited as funding methods |
 | **Player-facing impact** | Identity and facial verification at registration; payouts only to the player's own account |
@@ -480,11 +543,15 @@ Complete before launching {{PROGRAM_NAME}} in Brazil.
 - [ ] No sexual or objectifying content
 - [ ] No targeting, featuring, or appealing to minors
 - [ ] No advertising to self-excluded or court-excluded persons
+- [ ] CONAR Anexo X met: standardized warning + "this is advertising" + MF-authorization labelling; over-21 endorsers; verified badge on official profiles; no pressure appeals, "repeated play improves odds," child/youth imagery, or credit/lending offers
+- [ ] SENACON restrictions met: no bonus/advance-reward advertising; no ads to children/adolescents; no promotion in schools/universities; no youth-popular personalities/influencers
 - [ ] Full enumerated checklist in [advertising-rules.md](advertising-rules.md) completed
 
 ### Self-exclusion
 - [ ] Per-operator autoexclusao implemented (account closed; re-registration only after term)
 - [ ] Clear, highlighted link to the centralized SPA self-exclusion platform
+- [ ] SIGAP Modulo de Impedidos consulted at first registration/login and at least every 15 days (Instrucao Normativa 31/2025)
+- [ ] On a match: access blocked and available balance returned (Instrucao Normativa 31/2025)
 - [ ] Listed persons blocked from registration and access
 - [ ] Self-excluded / court-excluded persons removed from all advertising
 - [ ] Staff trained on autoexclusao (per-operator + centralized)
@@ -496,6 +563,11 @@ Complete before launching {{PROGRAM_NAME}} in Brazil.
 - [ ] Limit increases / pause removals take effect only after 24 hours
 - [ ] Session alerts/blocks and pause periods available
 - [ ] Permanent activity panel (time used, losses, balance)
+- [ ] Each online game meets the minimum 85% theoretical RTP (Portaria 1.207/2024, Art. 28)
+- [ ] Theoretical RTP displayed in-graphics, with a plain explanation, before a session starts (Art. 29)
+- [ ] Complete game info, payout tables and help screens accessible without depositing or betting (Art. 11)
+- [ ] In-session display of balance, stake, last result and winnings (Art. 11)
+- [ ] 30-minute inactivity session timeout implemented (Art. 2 VI)
 - [ ] Support + ombudsman channels signpost help for at-risk bettors and families
 - [ ] Behavioural monitoring under a documented responsible-gaming policy
 - [ ] Full financial-movement history available to the bettor
@@ -523,8 +595,8 @@ Complete before launching {{PROGRAM_NAME}} in Brazil.
 
 ### Governance
 - [ ] `_brand.yml` updated with Brazil values (or `_brand-brazil.yml` merged)
-- [ ] `Last verified` date set: 2026-06-05
-- [ ] `Next review due` date set: 2026-09-05
+- [ ] `Last verified` date set: 2026-06-08
+- [ ] `Next review due` date set: 2026-09-08
 - [ ] in.gov.br DOU permalinks re-verified from a normal network (or `spa_br-legislacao` relied upon)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
