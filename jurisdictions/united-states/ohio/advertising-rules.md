@@ -22,18 +22,19 @@ presentation:
 adaptation_status: base
 adaptation_notes: |
   Advertising rules are jurisdiction-specific regulatory content.
-  Ohio has prescriptive sports gaming advertising rules (OAC 3775-16-08)
-  and plan-based casino advertising requirements (OAC 3772-12-06).
+  Ohio has prescriptive sports gaming advertising rules (OAC 3775-16-08),
+  prescriptive promotions/bonus rules (OAC 3775-16-09), and plan-based
+  casino advertising requirements (OAC 3772-12-06).
   On-brand disclosure examples need cultural adaptation for non-US markets.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # Ohio -- Advertising Rules
 
-> **Operator note**: This is the detailed advertising reference for Ohio. It covers Ohio's prescriptive sports gaming advertising standard (OAC 3775-16-08), casino advertising via commission-approved plans (OAC 3772-12-06), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Ohio compliance module](README.md) for complete coverage.
+> **Operator note**: This is the detailed advertising reference for Ohio. It covers Ohio's prescriptive sports gaming advertising standard (OAC 3775-16-08), the promotions and bonuses standard (OAC 3775-16-09), casino advertising via commission-approved plans (OAC 3772-12-06), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Ohio compliance module](README.md) for complete coverage.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -42,6 +43,7 @@ last_updated: 2026-03-22
 | Section | Description |
 |---|---|
 | [Ohio's prescriptive standard](#ohios-prescriptive-standard) | OAC 3775-16-08 framework |
+| [Promotions and bonuses](#promotions-and-bonuses) | OAC 3775-16-09 promo/bonus T&C standard |
 | [Casino advertising requirements](#casino-advertising-requirements) | OAC 3772-12-06 plan-based approach |
 | [AGA Responsible Gaming Code](#aga-responsible-gaming-code) | Industry self-regulatory overlay |
 | [Channel-by-channel rules](#channel-by-channel-rules) | Broadcast, digital, print, direct, in-venue, sponsorship |
@@ -76,8 +78,18 @@ Every sports gaming advertisement must:
 | **Convey conditions of play** | Cost to participate, nature of promotions, odds of winning | OAC 3775-16-08 |
 | **Specify material conditions** | Any material conditions or limiting factors must be clearly and conspicuously specified | OAC 3775-16-08 |
 | **Include prevention message** | Clearly and conspicuously include messages designed to prevent problem gambling | OAC 3775-16-08 |
-| **Include helpline information** | Provide information about how to access resources, including the NCPG 24-hour helpline or problem gambling helpline | OAC 3775-16-08 |
+| **Include helpline information** | Provide information about how to access resources, including the NCPG national helpline, Ohio's problem gambling helpline, or another free helpline approved by the executive director | OAC 3775-16-08 |
 | **Disclose proprietor identity** | Identify the sports gaming proprietor, mobile management services provider, or management services provider | OAC 3775-16-08 |
+
+#### Content prohibitions and affirmative duties
+
+Beyond the inclusion requirements, OAC 3775-16-08 imposes content prohibitions and ongoing obligations:
+
+| Rule | Detail | Regulatory basis |
+|---|---|---|
+| **No under-21 depiction** | Advertisements must not depict any individual under the age of 21, except live footage or images of athletes in an eligible sporting event | OAC 3775-16-08 |
+| **No misleading information** | Advertisements must not contain false, deceptive, or misleading information | OAC 3775-16-08 |
+| **Cease dissemination** | The proprietor must cease disseminating an advertisement upon discovering it is non-compliant, or when directed to do so by the executive director | OAC 3775-16-08 |
 
 #### Small-format advertising exception
 
@@ -100,7 +112,7 @@ This means operators can use shortened ads (social media posts, brief digital pl
 
 ### OAC 3772-12-06 -- Problem gambling plan
 
-Casino advertising is governed through the operator's compulsive and problem gambling plan, which must be submitted to and approved by the OCCC before implementation. The plan must include:
+Casino advertising is governed through the operator's disordered and problem gambling plan, which must be submitted to and approved by the OCCC before implementation. The plan must include:
 
 | Plan element | Advertising relevance |
 |---|---|
@@ -117,6 +129,32 @@ Sports gaming advertising rules are **prescriptive**: the rules apply to all ope
 
 ---
 
+## Promotions and bonuses
+
+### OAC 3775-16-09 -- Promotions and bonuses
+
+Ohio regulates promotional and bonus offers under a rule distinct from general advertising. This directly governs the {{PROGRAM_NAME}} promotional content surface -- odds boosts, sign-up offers, deposit matches, profit boosts, and similar incentives -- so it warrants its own review track.
+
+| Requirement | Details | Regulatory basis |
+|---|---|---|
+| **Clear and unambiguous rules** | The rules governing a promotion or bonus must be stated clearly and unambiguously | OAC 3775-16-09 |
+| **T&Cs standard** | Terms and conditions must be full, accurate, concise, transparent, and not misleading | OAC 3775-16-09 |
+| **Active/expiry disclosure** | The advertisement must disclose the date and time the promotion becomes active and the date and time it expires | OAC 3775-16-09 |
+| **No prohibited targeting** | Promotions must not target individuals under 21, persons ineligible to participate, problem gamblers, or other vulnerable individuals | OAC 3775-16-09 |
+| **Transaction-linked eligibility** | Promotions tied to non-gaming transactions may be offered only to persons verified as 21+ and not enrolled in Time Out Ohio | OAC 3775-16-09 |
+
+### Why this matters for {{PROGRAM_NAME}}
+
+Promotional copy is one of the highest-frequency, highest-risk content types -- and the rule's T&C standard ("full, accurate, concise, transparent, and not misleading") is the regulatory mirror of Pillar 1, "Open -- no fine print." Treat the active/expiry disclosure as mandatory, not optional: a promo card with no visible start/end window is non-compliant under this rule even if every other disclosure is present.
+
+**Non-compliant (buried, no window):**
+> Bet $5, get $200 in bonus bets! T&Cs apply.
+
+**On-brand and compliant:**
+> **$200 in bonus bets when you bet $5.** Plain terms: bonus bets are non-withdrawable and expire 7 days after issue. Offer runs 12:00 PM ET Oct 1 -- 11:59 PM ET Oct 7. 21+ and not on Time Out Ohio. [Full terms].
+
+---
+
 ## AGA Responsible Gaming Code
 
 The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct applies to Ohio operators that are AGA members. While not legally binding, it represents industry best practices:
@@ -126,7 +164,8 @@ The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct app
 | Responsible advertising | OAC 3775-16-08 (sports); OAC 3772-12-06 (casino) | Ohio rules are more detailed than AGA principles |
 | No targeting minors | OAC 3775-16-08 -- must not target under-21 | Aligned |
 | Helpline in ads | OAC 3775-16-08 -- helpline required in all sports ads | Aligned |
-| No misleading claims | OAC 3775-16-08 -- conditions, odds, and material factors required | Aligned |
+| No misleading claims | OAC 3775-16-08 -- explicit ban on false/deceptive/misleading information; conditions, odds, and material factors required | Aligned |
+| Honest promotions | OAC 3775-16-09 -- promo/bonus T&Cs must be full, accurate, transparent, and not misleading | Aligned and stronger (active/expiry disclosure required) |
 | Self-exclusion | OAC 3772-12-04 -- cease all direct marketing to excluded individuals | Aligned and stronger (15-day deadline) |
 
 Ohio's prescriptive rules generally meet or exceed AGA voluntary standards.
@@ -164,6 +203,8 @@ All sports gaming advertisements are prohibited from:
 | **Targeting vulnerable individuals** | Must not target other vulnerable individuals | OAC 3775-16-08 |
 | **Promoting irresponsible play** | Must not promote irresponsible or excessive participation in sports gaming | OAC 3775-16-08 |
 | **Guaranteeing success** | Must not suggest that social, financial, or personal success is guaranteed by engaging in sports gaming | OAC 3775-16-08 |
+| **Depicting under-21 individuals** | Must not depict any individual under the age of twenty-one, except live footage or images of athletes in an eligible sporting event | OAC 3775-16-08 |
+| **False/deceptive/misleading info** | Must not contain false, deceptive, or misleading information | OAC 3775-16-08 |
 
 ### Additional prohibitions (casino -- via plan)
 
@@ -222,11 +263,11 @@ Assessment of which {{PROGRAM_NAME}} templates are Ohio-compliant as-is:
 | **Game guides (HTP cards)** | Yes | No changes needed -- educational content with no advertising claims |
 | **Core messages** | Yes, with adaptation | Add Ohio helpline (1-800-589-9966) where helpline tokens are used |
 | **Myth-busting** | Yes | No changes needed -- factual corrections are compliant |
-| **CTAs** | Review needed | Ensure no CTAs suggest guaranteed success or promote excessive play |
+| **CTAs** | Review needed | Ensure no CTAs suggest guaranteed success or promote excessive play; promotional CTAs must meet OAC 3775-16-09 (clear T&Cs, active/expiry disclosure) |
 | **Posters** | Yes, with adaptation | Replace helpline with Ohio number; add prevention message |
 | **Venue signage** | Yes, with adaptation | Include treatment info and Time Out Ohio reference per OAC 3772-12-06 |
 | **Email templates** | Yes, with adaptation | Add Ohio helpline in footer; ensure opt-out method per OAC 3775-16-08 if sports-related |
-| **Social cards** | Review needed | May need small-format exception (link to landing page with full disclosures) |
+| **Social cards** | Review needed | May need small-format exception (link to landing page with full disclosures); promotional social cards must meet OAC 3775-16-09, including active/expiry disclosure |
 | **RG page** | Yes, with adaptation | Add Ohio helpline, Time Out Ohio details, and Ohio-specific resources |
 | **Staff FAQ** | Yes, with adaptation | Add Time Out Ohio Q&A and Ohio helpline |
 | **Conversation scripts** | Yes, with adaptation | Add Ohio helpline in referral scripts; add Time Out Ohio enrollment |
@@ -238,13 +279,15 @@ Assessment of which {{PROGRAM_NAME}} templates are Ohio-compliant as-is:
 >
 > Place your bet with [Operator Name].
 >
-> Odds may change. Must be 21+. Ohio only. T&Cs apply at [website].
+> Offer live 12:00 PM ET Sun -- 11:59 PM ET Sun. Odds may change. Must be 21+ and not on Time Out Ohio. Ohio only. T&Cs apply at [website].
 > Gambling problem? Call 1-800-589-9966 (24/7, free, confidential).
 > Text 4hope to 741741. [Unsubscribe link]
 
+*Note: the offer window (active/expiry date and time) is required for promotions under OAC 3775-16-09.*
+
 **Sports gaming promotion (social media -- short form):**
 > Bengals +150 this Sunday. Bet now at [Operator].
-> 21+ | Gambling problem? 1-800-589-9966 | Full terms at [link]
+> Offer ends 11:59 PM ET Sun. 21+ | Gambling problem? 1-800-589-9966 | Full terms at [link]
 
 **Casino venue signage ({{PROGRAM_NAME}} approach):**
 > **Play on your terms.** Set your limits. Know the odds.
@@ -263,6 +306,8 @@ Assessment of which {{PROGRAM_NAME}} templates are Ohio-compliant as-is:
 | **Font size requirements** | Not specified | Not specified | Yes (2% print, 5% billboard, 8% video end screen) |
 | **Proprietor disclosure** | Required | Not specified | Required |
 | **Anti-targeting** | Under-21, problem gamblers, vulnerable | Under-21 (NRS 463.0129) | Under-21 (25% audience threshold), at-risk |
+| **Under-21 depiction** | Banned, except live athlete footage (OAC 3775-16-08) | Not specified | Restricted |
+| **Promotions/bonuses** | Dedicated rule: clear T&Cs + active/expiry disclosure (OAC 3775-16-09) | Not specified | Addressed in ad rules |
 | **Direct ad opt-out** | 15-day window | Not specified | Required |
 | **Pre-approval** | No (sports); yes (casino plan) | No | No |
 | **Enforcement** | Proactive monitoring | Complaint-driven | Active enforcement |
