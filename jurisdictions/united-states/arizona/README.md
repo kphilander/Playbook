@@ -27,21 +27,23 @@ adaptation_notes: |
   blunt/open). On-brand messaging examples throughout need adaptation for
   non-US deployments. Currency is USD. Arizona runs a two-track regime:
   state-licensed event wagering (retail and mobile) under the Arizona
-  Department of Gaming, and tribal land-based casinos under individual
-  Class III tribal-state compacts. No online casino. Arizona has its own
-  state helpline — 1-800-NEXT-STEP (1-800-639-8783) — operated by ADG's
+  Department of Gaming, and tribal land-based casinos under the 2021
+  model Class III tribal-state compact. No online casino. Arizona has its
+  own state helpline — 1-800-NEXT-STEP (1-800-639-8783) — operated by ADG's
   Division of Problem Gambling, separate from the NCPG national number.
+  Tribal responsible-gaming duties are standardized by the 2021 model
+  compact (A.R.S. § 5-601.02, § 3(v)-(x)), not left to vary tribe by tribe.
   Self-exclusion (A.R.S. § 5-1320 / A.A.C. R19-4-150) offers 1/5/10-year
-  terms and is irrevocable for the elected period.
-last_updated: 2026-06-06
+  terms (set by ADG procedure) and is irrevocable for the elected period.
+last_updated: 2026-06-08
 ---
 
 # Arizona — Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Arizona. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Arizona operates a **two-track** regime: state-licensed **event wagering** (retail and mobile) under the Arizona Department of Gaming (A.R.S. Title 5, Chapter 11; A.A.C. R19-4), and **tribal land-based casinos** under individual Class III **tribal-state compacts** (A.R.S. § 5-601). Online casino is **not** legal. Event wagering advertising has prescriptive content rules (A.A.C. R19-4-110), and self-exclusion is a statewide ADG program (A.R.S. § 5-1320; A.A.C. R19-4-150) with 1-, 5-, and 10-year terms.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Arizona. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Arizona operates a **two-track** regime: state-licensed **event wagering** (retail and mobile) under the Arizona Department of Gaming (A.R.S. Title 5, Chapter 11; A.A.C. R19-4), and **tribal land-based casinos** under the **2021 model Class III tribal-state compact** (A.R.S. § 5-601.02; older compacts authorized under A.R.S. § 5-601). The model compact **standardizes** tribal responsible-gaming duties — signage, self-exclusion, and advertising — in § 3(v)-(x), so for compacting tribes these are specific, citable obligations rather than "consult your compact" unknowns. Online casino is **not** legal. Event wagering advertising has prescriptive content rules (A.A.C. R19-4-110), and self-exclusion is a statewide ADG program (A.R.S. § 5-1320; A.A.C. R19-4-150) with 1-, 5-, and 10-year terms (set by ADG procedure).
 
-> **Last verified**: 2026-06-06
-> **Next review due**: 2026-09-06 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -70,10 +72,10 @@ last_updated: 2026-06-06
 |---|---|
 | **Primary regulator** | Arizona Department of Gaming (ADG) |
 | **Website** | [gaming.az.gov](https://gaming.az.gov/) |
-| **Governing legislation** | A.R.S. Title 5, Chapter 11 (Event Wagering, §§ 5-1301 to 5-1321); A.R.S. Title 5, Chapter 10 (Fantasy Sports Betting, §§ 5-1201 et seq.); A.R.S. § 5-601 (Tribal-State Gaming Compacts) |
+| **Governing legislation** | A.R.S. Title 5, Chapter 11 (Event Wagering, §§ 5-1301 to 5-1321); A.R.S. Title 5, Chapter 10 (Fantasy Sports Betting, §§ 5-1201 et seq.); A.R.S. § 5-601.02 (2021 new standard form tribal-state gaming compact); A.R.S. § 5-601 (earlier tribal-state compacts) |
 | **Regulations** | A.A.C. Title 19, Chapter 4 (Department of Gaming) — Article 1 (Event Wagering, R19-4-101 et seq.); Article 2 (Fantasy Sports) |
 | **Established** | ADG created 1995; event wagering and fantasy sports authority added by Laws 2021, Ch. 234 (HB2772); both channels live 9 September 2021 |
-| **Regulatory approach** | Prescriptive (event wagering); compact-based (tribal land-based) |
+| **Regulatory approach** | Prescriptive (event wagering); model-compact-based (tribal land-based) — the 2021 model compact (§ 5-601.02) standardizes tribal RG duties |
 
 ### Scope of authority
 
@@ -83,7 +85,7 @@ The ADG licenses, regulates, and oversees event wagering, fantasy sports, pari-m
 |---|---|
 | **Event wagering** | Licensing and oversight of event wagering operators (retail and mobile) since September 2021 (A.R.S. Title 5, Ch. 11) |
 | **Fantasy sports** | Licensing of fantasy sports contest operators (A.A.C. R19-4 Article 2) |
-| **Tribal gaming oversight** | State gaming agency duties under Class III tribal-state compacts (A.R.S. § 5-601); certification of tribal gaming employees and vendors |
+| **Tribal gaming oversight** | State Gaming Agency duties under the Class III tribal-state compacts (2021 model compact, A.R.S. § 5-601.02; earlier compacts under A.R.S. § 5-601); certification of tribal gaming employees and vendors |
 | **Problem gambling** | ADG Division of Problem Gambling operates the statewide helpline and self-exclusion program (A.R.S. § 5-1320) |
 | **Self-exclusion** | Statewide Voluntary Self-Exclusion list for event wagering and fantasy sports (A.A.C. R19-4-150) |
 
@@ -94,7 +96,7 @@ Arizona regulates land-based and event wagering through **separate legal instrum
 | Track | Who runs it | Legal instrument | What it covers |
 |---|---|---|---|
 | **Event wagering (retail + mobile)** | State-licensed event wagering operators, regulated by ADG | A.R.S. Title 5, Ch. 11; A.A.C. R19-4 Article 1 | Sportsbooks (online and in-person), including operators tethered to tribes and to professional sports franchises/venues |
-| **Tribal land-based casino** | Individual Arizona tribes, under their own gaming commissions | Class III tribal-state compacts under A.R.S. § 5-601 and IGRA | Slots, table games, and other Class III gaming on tribal land |
+| **Tribal land-based casino** | Individual Arizona tribes, under their own gaming commissions | Class III tribal-state compacts (2021 model compact under A.R.S. § 5-601.02; earlier compacts under A.R.S. § 5-601) and IGRA | Slots, table games, and other Class III gaming on tribal land |
 
 Event wagering rules (A.A.C. R19-4) and tribal compact obligations are **different documents with different requirements**. Throughout this module, requirements are tagged to the track they apply to. Operators deploying in only one track can skip the other.
 
@@ -104,7 +106,7 @@ Event wagering rules (A.A.C. R19-4) and tribal compact obligations are **differe
 |---|---|---|
 | **Arizona Department of Gaming (ADG)** | Regulates event wagering, fantasy sports, racing; state partner for tribal compacts | Primary regulator — event wagering compliance flows through ADG |
 | **ADG Division of Problem Gambling** | Operates the statewide helpline and self-exclusion program | Owns 1-800-NEXT-STEP; receives forfeited self-exclusion winnings |
-| **Individual tribal gaming commissions** | Regulate Class III gaming on each tribe's land | Land-based signage and RG obligations are set by each compact |
+| **Individual tribal gaming commissions** | Regulate Class III gaming on each tribe's land | Land-based signage and RG obligations are standardized by the 2021 model compact (§ 5-601.02, § 3(v)-(x)) and enforced by each tribe's commission |
 | **National Indian Gaming Commission (NIGC)** | Federal oversight of tribal gaming | Federal MICS and AML framework for tribal casinos |
 | **Arizona Lottery** | Operates the state lottery (separate from ADG) | Limited relevance — lottery is outside ADG's gaming verticals |
 
@@ -113,11 +115,14 @@ Event wagering rules (A.A.C. R19-4) and tribal compact obligations are **differe
 | Document | URL | Relevance |
 |---|---|---|
 | A.R.S. Title 5 (Amusements and Sports) | [azleg.gov/arsDetail/?title=5](https://www.azleg.gov/arsDetail/?title=5) | Contains Ch. 11 (Event Wagering), Ch. 10 (Fantasy Sports), and § 5-601 (Tribal Compacts) |
-| A.R.S. § 5-1320 | [azleg.gov/ars/5/01320.htm](https://www.azleg.gov/ars/5/01320.htm) | Problem gambling; self-exclusion list; helpline display (subsection A) |
+| A.R.S. § 5-1320 | [azleg.gov/ars/5/01320.htm](https://www.azleg.gov/ars/5/01320.htm) | Problem gambling; self-exclusion list; helpline display (A); list mechanics — forms, weekly distribution, account revocation, denied access (B); prize forfeiture and donation to ADG (C); list confidentiality (D); duty to develop and maintain a problem-gambling mitigation program (E) |
 | A.R.S. § 5-1311 | [azleg.gov/ars/5/01311.htm](https://www.azleg.gov/ars/5/01311.htm) | License restrictions — prohibits wagering by persons under 21 |
-| A.R.S. § 5-601 | [azleg.gov/ars/5/00601.htm](https://www.azleg.gov/ars/5/00601.htm) | Gambling on Indian reservations; tribal-state compacts (21+ requirement) |
-| A.A.C. Title 19, Ch. 4 (rules) | [apps.azsos.gov/public_services/Title_19/19-04.pdf](https://apps.azsos.gov/public_services/Title_19/19-04.pdf) | Event Wagering and Fantasy Sports rules (R19-4 series) |
-| ADG Tribal-State Compacts | [gaming.az.gov/tribal-gaming/tribal-state-compacts](https://gaming.az.gov/tribal-gaming/tribal-state-compacts) | The 2021 model compact and tribe-specific compacts |
+| A.R.S. § 5-601.02 | [azleg.gov/ars/5/00601-02.htm](https://www.azleg.gov/ars/5/00601-02.htm) | New standard form (2021) tribal-state gaming compact. Standardizes tribal RG: signage (§ 3(v)(1)), self-exclusion duties (§ 3(v)(2)), 21+ wagering (§ 3(w)), advertising guidelines no less stringent than the AGA (§ 3(x)(2)-(3)) |
+| A.R.S. § 5-601 | [azleg.gov/ars/5/00601.htm](https://www.azleg.gov/ars/5/00601.htm) | Gambling on Indian reservations; earlier tribal-state compacts (21+ requirement) |
+| A.A.C. Title 19, Ch. 4 (rules) | [apps.azsos.gov/public_services/Title_19/19-04.pdf](https://apps.azsos.gov/public_services/Title_19/19-04.pdf) | Event Wagering (Article 1) and Fantasy Sports (Article 2) rules (R19-4 series) |
+| A.A.C. R19-4-206 (Fantasy Sports) | [law.cornell.edu/regulations/arizona/Ariz-Admin-Code-SS-R19-4-206](https://www.law.cornell.edu/regulations/arizona/Ariz-Admin-Code-SS-R19-4-206) | Responsible Advertising for fantasy sports — the Article-2 twin of R19-4-110 (verticals are casino + sports here; included for corpus completeness) |
+| A.A.C. R19-4-226 (Fantasy Sports) | [law.cornell.edu/regulations/arizona/Ariz-Admin-Code-SS-R19-4-226](https://www.law.cornell.edu/regulations/arizona/Ariz-Admin-Code-SS-R19-4-226) | Self-Exclusion and Responsible Gaming for fantasy sports — the Article-2 twin of R19-4-150 |
+| ADG Tribal-State Compacts | [gaming.az.gov/tribal-gaming/tribal-state-compacts](https://gaming.az.gov/tribal-gaming/tribal-state-compacts) | The 2021 model compact and tribe-specific compacts (canonical ADG link; site is bot-blocked to automated checks) |
 | ADG Responsible Gaming | [gaming.az.gov/resources/responsible-gaming](https://gaming.az.gov/resources/responsible-gaming) | ADG responsible gaming program and operator resources |
 
 ---
@@ -127,7 +132,7 @@ Event wagering rules (A.A.C. R19-4) and tribal compact obligations are **differe
 | Requirement | Value |
 |---|---|
 | **Minimum gambling age** | 21+ (event wagering, fantasy sports, and tribal Class III gaming) |
-| **Legal framework** | State-licensed event wagering (A.R.S. Title 5, Ch. 11) + tribal Class III gaming under compacts (A.R.S. § 5-601) |
+| **Legal framework** | State-licensed event wagering (A.R.S. Title 5, Ch. 11) + tribal Class III gaming under the 2021 model compact (A.R.S. § 5-601.02; earlier compacts under A.R.S. § 5-601) |
 | **Online gambling** | Online/mobile **sports betting** legal (since September 2021); **online casino NOT legal** |
 | **Lottery** | Arizona Lottery operates the state lottery (regulated separately from ADG) |
 
@@ -135,7 +140,7 @@ Event wagering rules (A.A.C. R19-4) and tribal compact obligations are **differe
 
 | Product | Legal status | Regulator | Notes |
 |---|---|---|---|
-| Casino (slots, table games) | Legal (tribal only) | Individual tribal gaming commissions | Class III gaming on tribal land under compacts (A.R.S. § 5-601) |
+| Casino (slots, table games) | Legal (tribal only) | Individual tribal gaming commissions | Class III gaming on tribal land under the 2021 model compact (A.R.S. § 5-601.02; earlier compacts under A.R.S. § 5-601) |
 | Sports betting (retail) | Legal | ADG | Event wagering at sportsbook locations tethered to tribes and pro sports venues |
 | Sports betting (online/mobile) | Legal | ADG | Mobile event wagering via licensed operators (since September 2021) |
 | Fantasy sports | Legal | ADG | Licensed fantasy sports contest operators (A.A.C. R19-4 Article 2) |
@@ -162,7 +167,7 @@ Arizona uses a **dual licensing model**:
 | **Limited event wagering operator** | Event wagering | Retail-only operator inside a sports facility footprint |
 | **Management services / mobile provider** | Event wagering | Third party operating the platform on an operator's behalf |
 | **Fantasy sports contest operator** | Fantasy sports | ADG license for fantasy contests (A.A.C. R19-4 Article 2) |
-| **Tribal gaming (Class III)** | Tribal land-based | Authorized by the tribe's Class III compact under A.R.S. § 5-601; the tribe's gaming commission licenses its facilities and staff |
+| **Tribal gaming (Class III)** | Tribal land-based | Authorized by the tribe's Class III compact (2021 model compact under A.R.S. § 5-601.02; earlier compacts under A.R.S. § 5-601); the tribe's gaming commission licenses its facilities and staff |
 
 ---
 
@@ -199,7 +204,9 @@ Under **A.A.C. R19-4-150(A)**, event wagering operators must:
 
 > Post signage (English and Spanish) at all public entrances and exits of the retail wagering area, display help-availability messaging on each event wagering platform and/or kiosk, and include a responsible gaming message with the statewide helpline in all advertising.
 
-For **tribal land-based casinos**, responsible gaming signage and helpline display are set by each tribe's compact — typically required at entrances, on the gaming floor, and at ATMs/cage.
+For **tribal land-based casinos**, the 2021 model compact (**A.R.S. § 5-601.02, § 3(v)(1)**) requires each gaming facility to post, at **all public entrances and exits**, that help is available for a gambling problem, with — at a minimum — the statewide toll-free crisis hotline number.
+
+> **Signage-text discrepancy to confirm:** The model-compact text references the hotline "established by the Arizona State Lottery Commission," but the current operative statewide number is **ADG's 1-800-NEXT-STEP**. Confirm the exact hotline text required on tribal signage with the tribe's gaming commission and current ADG guidance before producing collateral — the statutory reference and the live number do not match on their face.
 
 ### On-brand helpline display
 
@@ -226,7 +233,7 @@ Arizona uses prescriptive content requirements for event wagering advertising an
 |---|---|---|
 | **Event wagering advertising** | Prescriptive -- every ad must carry a responsible gaming message and the statewide helpline; specific prohibitions apply | A.A.C. R19-4-110; R19-4-150(A) |
 | **Event wagering platform** | Obligation-based -- help-availability messaging must be obvious and easily accessible on each platform/kiosk | A.A.C. R19-4-150(A); A.R.S. § 5-1320(A) |
-| **Tribal venue signage** | Compact-based -- responsible gaming signage and helpline required, phrasing set by each compact | Tribal-State Compacts (A.R.S. § 5-601) |
+| **Tribal venue signage** | Model-compact-based -- post at all public entrances/exits that help is available, with at minimum the statewide crisis hotline number | A.R.S. § 5-601.02, § 3(v)(1) |
 
 ### Messaging regime summary
 
@@ -235,7 +242,7 @@ Arizona uses prescriptive content requirements for event wagering advertising an
 | Event wagering ads | Standard-based | Responsible gaming message + statewide helpline (1-800-NEXT-STEP) | A.A.C. R19-4-110; R19-4-150(A) |
 | Event wagering platform/kiosk | Obligation-based | "Help is available" messaging + helpline, obvious and easily accessible | A.A.C. R19-4-150(A); A.R.S. § 5-1320(A) |
 | Retail sportsbook signage | Standard-based | Signage (English + Spanish) at entrances/exits stating help is available | A.A.C. R19-4-150(A) |
-| Tribal casino signage | Compact-based | Responsible gaming and helpline signage per the tribe's compact | A.R.S. § 5-601 |
+| Tribal casino signage | Model-compact-based | Help-available signage with the statewide crisis hotline at all public entrances/exits | A.R.S. § 5-601.02, § 3(v)(1) |
 
 ### Verbatim required statements
 
@@ -248,7 +255,7 @@ Arizona does **not** prescribe a verbatim word-for-word message. The rules requi
 | Responsible gaming message | A responsible gaming / problem gambling message | All event wagering advertising | A.A.C. R19-4-110; R19-4-150(A) |
 | Helpline access | Statewide toll-free helpline number, text, and website | All event wagering ads and platforms/kiosks | A.R.S. § 5-1320(A); A.A.C. R19-4-150(A) |
 | Help-availability notice | "Help is available if a person has a problem with gambling" | Event wagering platform/kiosk; retail entrances/exits (English + Spanish) | A.A.C. R19-4-150(A) |
-| Responsible gaming signage | Responsible gaming and helpline signage | Tribal casino floor/entrances | Tribal-State Compacts (A.R.S. § 5-601) |
+| Responsible gaming signage | Help-available notice + statewide crisis hotline | Tribal casino — all public entrances/exits | A.R.S. § 5-601.02, § 3(v)(1) |
 
 ### On-brand integration
 
@@ -280,7 +287,7 @@ Arizona's event wagering advertising rule (A.A.C. R19-4-110, "Responsible Advert
 | Field | Value |
 |---|---|
 | **Primary regulation** | A.A.C. R19-4-110 (Responsible Advertising); A.A.C. R19-4-150(A) (helpline in ads) |
-| **Tribal advertising** | Governed by each tribe's compact and gaming commission |
+| **Tribal advertising** | Governed by the tribe's compact and gaming commission; the 2021 model compact sets a binding AGA-level floor (§ 5-601.02, § 3(x)(2)-(3)) |
 | **Approach** | Prescriptive -- specific prohibitions and required disclosures |
 | **Enforcement** | ADG monitors advertising and may impose conditions or penalties on operators |
 
@@ -304,13 +311,14 @@ Event wagering advertisements must NOT:
 | Promote irresponsible or excessive participation in event wagering | A.A.C. R19-4-110 |
 | Suggest that social, financial, or personal success is guaranteed by engaging in event wagering | A.A.C. R19-4-110 |
 | Appear at venues where the audience is primarily under 21 | A.A.C. R19-4-110 |
-| Appear on merchandise designed primarily for minors | A.A.C. R19-4-110 |
-| Be placed on college/university campuses or news platforms (except generally available broadcast/digital advertising) | A.A.C. R19-4-110 |
+| Appear on merchandise designed primarily for minors | A.A.C. R19-4-110(E) |
+| Be promoted or advertised in **college or university-owned news assets, including digital news assets** (this bars only institution-owned news outlets, not third-party news coverage of campus) | A.A.C. R19-4-110(F) |
+| Be placed on college/university campuses, except advertising generally available to the public through broadcast, digital, or similar media | A.A.C. R19-4-110(G) |
 | Target persons on the ADG self-exclusion list | A.R.S. § 5-1320; A.A.C. R19-4-150 |
 
 ### Tribal advertising
 
-Advertising for tribal land-based casinos is governed by each tribe's compact and its gaming commission, not by A.A.C. R19-4. Best practice mirrors the event wagering rule: include responsible gaming messaging and the helpline, and do not market to self-excluded or underage persons.
+Advertising for tribal land-based casinos is governed by the tribe's compact and gaming commission, not by A.A.C. R19-4 — but under the 2021 model compact this is **not** an open question. **A.R.S. § 5-601.02, § 3(x)(2)-(3)** requires each operator to adopt advertising/marketing guidelines **no less stringent than the American Gaming Association's general advertising guidelines**, and prohibits advertising that specifically appeals to minors. For compacting tribes, the **AGA Code is therefore a binding minimum floor, not a voluntary overlay**. Apply it as a hard requirement: include responsible gaming messaging and the helpline, do not appeal to minors, and do not market to self-excluded persons.
 
 For a detailed advertising reference, see [advertising-rules.md](advertising-rules.md).
 
@@ -327,12 +335,12 @@ Arizona operates a **statewide Voluntary Self-Exclusion program** through the AD
 | **Program name** | ADG Voluntary Self-Exclusion |
 | **Website** | [gaming.az.gov/exclude](https://gaming.az.gov/exclude) |
 | **Administered by** | Arizona Department of Gaming, Division of Problem Gambling |
-| **Duration options** | 1 year, 5 years, or 10 years (no lifetime tier) |
+| **Duration options** | 1 year, 5 years, or 10 years (no lifetime tier) — the **specific terms are set by ADG procedure**, not by the text of A.R.S. § 5-1320 or A.A.C. R19-4-150 |
 | **Scope** | A person may self-exclude from **either** all Arizona tribal gaming facilities **or** event wagering and fantasy sports (EWFS); the EWFS list applies to all state-licensed event wagering operators statewide |
 | **Enrollment methods** | Online via gaming.az.gov/exclude; operators must advise inquirers and provide ADG application forms on request |
 | **Identity verification** | Required at enrollment (ADG compiles name, aliases, photograph, identifying information) |
 | **Reinstatement** | Self-exclusion is **irrevocable for the elected period** — it does not end early; removal occurs per ADG procedures after the term expires |
-| **Source** | A.R.S. § 5-1320; A.A.C. R19-4-150 |
+| **Source** | **Event wagering:** A.R.S. § 5-1320 (list mechanics, forfeiture, reporting in (B)/(C)) + A.A.C. R19-4-150 (signage, platform/kiosk messaging, RG message + helpline in ads, list confidentiality). **Tribal:** 2021 model compact, A.R.S. § 5-601.02, § 3(v)(2). Durations are set by ADG procedure. |
 
 > **Scope note:** Arizona's self-exclusion is structured as **two lists** — tribal gaming facilities, and event wagering/fantasy sports — reflecting the two-track regime. A player chooses which to enroll in. This differs from a single unified list (such as Ohio's Time Out Ohio). Confirm a player's intended scope when assisting enrollment.
 
@@ -342,23 +350,38 @@ If a self-excluded person participates in event wagering:
 
 | Consequence | Details |
 |---|---|
-| **Winnings forfeited** | Any prize or award won by a person on the self-exclusion list is forfeited |
-| **Forfeited funds** | Donated by the operator to the ADG Division of Problem Gambling on a quarterly basis |
-| **Account revoked** | Operators must revoke the player account and remove the person from all mailing lists |
-| **Reporting** | Operators must report participation by a self-excluded person to ADG (name, date, value forfeited, action taken) |
+| **Winnings forfeited** | Any prize or award won by a person on the self-exclusion list is forfeited (A.R.S. § 5-1320(C)) |
+| **Forfeited funds** | For **event wagering**, forfeited winnings are donated to the **ADG Division of Problem Gambling** (A.R.S. § 5-1320(C)). *(Note the contrast with the tribal track below, where a forfeited hand-paid jackpot goes to an Arizona-based non-profit.)* |
+| **Account revoked** | Operators must revoke the player account and remove the person from all mailing lists (A.R.S. § 5-1320(B)) |
+| **Reporting** | Operators must report participation by a self-excluded person to ADG (name, date, value forfeited, action taken) (A.R.S. § 5-1320(B)) |
 
-### Event wagering operator responsibilities (A.R.S. § 5-1320; A.A.C. R19-4-150)
+### Event wagering operator responsibilities
 
-| Obligation | Details | Timeline |
+The self-exclusion **mechanics** — list distribution, account revocation, denied access, forfeiture, and reporting — are set by **A.R.S. § 5-1320(B)/(C)**. **A.A.C. R19-4-150** supplies the communications layer: bilingual entrance/exit signage, platform/kiosk help messaging, the RG message + helpline in advertising, and list confidentiality. Each row below names its operative source.
+
+| Obligation | Details | Timeline | Source |
+|---|---|---|---|
+| **Check the list** | Check the most recent ADG self-excluded persons list before creating a player account | Before account creation | A.R.S. § 5-1320(B) |
+| **Deny access** | Take commercially reasonable steps to ensure self-excluded persons are denied access to all event wagering | Ongoing | A.R.S. § 5-1320(B) |
+| **Revoke and de-market** | Revoke the player account and remove the person from all mailing lists | On identifying a self-excluded person | A.R.S. § 5-1320(B) |
+| **No payouts** | Do not pay any prize or award to a person on the self-exclusion list; forfeit and donate winnings to ADG | Ongoing | A.R.S. § 5-1320(C) |
+| **Advise inquirers** | Establish procedures to advise persons who inquire about self-exclusion and provide ADG forms | On request | A.R.S. § 5-1320(B) |
+| **Signage & platform messaging** | Bilingual (English + Spanish) entrance/exit signage; help-availability messaging on each platform/kiosk; RG message + helpline in advertising | Ongoing | A.A.C. R19-4-150 |
+| **Confidentiality** | The ADG self-excluded persons list is not open to public inspection | Ongoing | A.A.C. R19-4-150 |
+
+### Tribal self-exclusion duties (2021 model compact — A.R.S. § 5-601.02, § 3(v)(2))
+
+For compacting tribes, the model compact spells out specific self-exclusion duties at each gaming facility — these are citable, not "consult your compact":
+
+| Obligation | Details | Compact cite |
 |---|---|---|
-| **Check the list** | Check the most recent ADG self-excluded persons list before creating a player account | Before account creation |
-| **Deny access** | Take commercially reasonable steps to ensure self-excluded persons are denied access to all event wagering | Ongoing |
-| **Revoke and de-market** | Revoke the player account and remove the person from all mailing lists | On identifying a self-excluded person |
-| **No payouts** | Do not pay any prize or award to a person on the self-exclusion list; forfeit and donate winnings | Ongoing |
-| **Advise inquirers** | Establish procedures to advise persons who inquire about self-exclusion and provide ADG forms | On request |
-| **Confidentiality** | The ADG self-excluded persons list is not open to public inspection | Ongoing |
+| **Advise on procedures** | Advise inquirers of the State Gaming Agency's self-exclusion procedures | § 3(v)(2)(B) |
+| **De-market & verify** | Remove self-excluded persons from all mailing lists and revoke player's cards; check ID against the self-exclusion list before cashing a check or credit-card cash advance | § 3(v)(2)(F) |
+| **Identify & escort out** | Take reasonable steps to identify self-excluded persons on the floor and promptly escort them out | § 3(v)(2)(G) |
+| **No hand-paid jackpot** | Do not make a hand-paid jackpot to a self-excluded person; **forfeited jackpots are donated to an Arizona-based non-profit** — note this **differs from event wagering**, where forfeitures go to ADG's Division of Problem Gambling | § 3(v)(2)(H) |
+| **Confidentiality** | The self-exclusion list is not open to public inspection | § 3(v)(2)(K) |
 
-> **Tribal track:** Tribal casinos maintain their own self-exclusion programs under their compacts and gaming commissions; a tribal self-exclusion is separate from the ADG list.
+> **Tribal track:** The tribal self-exclusion program runs under the model compact and the tribe's gaming commission, and is **separate from the ADG event-wagering/fantasy list**. A player who wants both tracks covered must enroll in each.
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -383,16 +406,16 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 > **Skip note:** Arizona's player-protection requirements differ sharply by track. Skip the track you are not deploying in.
 
-### Tribal land-based gaming (Class III compacts — A.R.S. § 5-601)
+### Tribal land-based gaming (2021 model Class III compact — A.R.S. § 5-601.02)
 
-Tribal land-based player-protection requirements are set by each tribe's compact and gaming commission, not by A.A.C. R19-4:
+Tribal land-based player-protection requirements are **standardized by the 2021 model compact** (§ 3(v)-(x)) and enforced by each tribe's gaming commission, not by A.A.C. R19-4. For compacting tribes these are specific, citable duties:
 
 | Tool / Obligation | Required? | Regulatory basis | Details |
 |---|---|---|---|
-| **Responsible gaming signage** | Yes | Tribal-State Compacts | Signage and helpline at entrances, gaming floor, and ATMs/cage (set by compact) |
-| **Helpline display** | Yes | Tribal-State Compacts | 1-800-NEXT-STEP commonly displayed throughout the facility |
-| **Self-exclusion** | Yes | Tribal compact / gaming commission | Tribal program, separate from the ADG list |
-| **Employee awareness** | Yes (per compact) | Tribal-State Compacts | Tribes run their own responsible gaming training under compact obligations |
+| **Responsible gaming signage** | Yes | § 5-601.02, § 3(v)(1) | Post at all public entrances/exits that help is available, with at minimum the statewide crisis hotline number |
+| **Helpline display** | Yes | § 5-601.02, § 3(v)(1) | Statewide crisis hotline required on signage; 1-800-NEXT-STEP is the operative number (confirm exact signage text — see the discrepancy note in the Helpline section) |
+| **Self-exclusion** | Yes | § 5-601.02, § 3(v)(2) | Specific duties: advise on procedures (B); de-market, revoke cards, ID-check before check/credit cashing (F); identify and escort out (G); no hand-paid jackpot, forfeiture to an Arizona-based non-profit (H); list not public (K). Separate from the ADG list. |
+| **Advertising floor** | Yes | § 5-601.02, § 3(x)(2)-(3) | Guidelines no less stringent than the AGA general advertising guidelines; no specific appeal to minors |
 | **Deposit/session limits** | N/A | — | Not applicable for walk-in cash play |
 
 ### Event wagering (A.R.S. Title 5, Ch. 11; A.A.C. R19-4)
@@ -402,6 +425,7 @@ Event wagering player-protection requirements are set by statute and ADG rule:
 | Tool / Obligation | Required? | Regulatory basis | Details |
 |---|---|---|---|
 | **Helpline / RG messaging on platform** | Yes | A.R.S. § 5-1320(A); A.A.C. R19-4-150(A) | "Help is available" messaging + helpline obvious and easily accessible on each platform/kiosk |
+| **Problem-gambling mitigation program** | Yes | A.R.S. § 5-1320(E) | Operators "shall develop and maintain a program to mitigate problem gambling and curtail compulsive gambling, which may be in conjunction with the department." The statute does **not** prescribe specific staff-training elements — see the Staff Training theme note. |
 | **Self-exclusion** | Yes | A.R.S. § 5-1320; A.A.C. R19-4-150 | Statewide EWFS list — check before account creation; revoke and de-market on a hit |
 | **Identity / age verification** | Yes | A.A.C. R19-4-133 (Player Account Creation) | Age and identity verified before account use; one account per patron |
 | **Account maintenance / withdrawals** | Yes | A.A.C. R19-4-135 (Player Account Maintenance) | Withdrawal requests honored within set timeframe; dormant account handling |
@@ -434,7 +458,7 @@ Event wagering player-protection requirements are set by statute and ADG rule:
 | **Verification (event wagering)** | Age and identity verified before account use, via government-issued ID and/or multi-source authentication (A.A.C. R19-4-133) |
 | **Verification (fantasy sports)** | Age and identity verified before account use (A.A.C. R19-4 Article 2); 21+ |
 | **Products with different ages** | None -- 21+ applies to all regulated gambling in Arizona |
-| **Statutory basis** | A.R.S. § 5-1311 (event wagering); A.R.S. § 5-601(B) (tribal compacts) |
+| **Statutory basis** | A.R.S. § 5-1311 (event wagering); A.R.S. § 5-601.02, § 3(w) (2021 model compact — 21+ for wagering on tribal gaming activities); A.R.S. § 5-601 (earlier compacts) |
 
 ### Event wagering account registration (A.A.C. R19-4-133)
 
@@ -505,7 +529,7 @@ Quick-reference table mapping every collateral category to Arizona-specific adap
 | **Print** | Rack card | Helpline, on-brand message | Both | `{{HELPLINE_NUMBER}}` |
 | **Print** | Table tent | Helpline + on-brand message | Tribal | `{{HELPLINE_NUMBER}}` |
 | **Print** | Helpline card | 1-800-NEXT-STEP, text NEXTSTEP to 53342, problemgambling.az.gov | Both | All helpline tokens |
-| **Environmental** | Tribal casino floor | Responsible gaming + helpline signage per compact | Tribal | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | Tribal casino floor | Help-available + crisis hotline signage at all public entrances/exits (§ 5-601.02, § 3(v)(1)) | Tribal | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Retail sportsbook | Signage (English + Spanish) at entrances/exits: help is available | Event wagering | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Digital display | On-brand RG message in rotation, helpline | Both | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | TV spot end card | Helpline + responsible gaming message | Event wagering | `{{HELPLINE_NUMBER}}` |
@@ -563,7 +587,7 @@ messaging:
 Complete before launching {{PROGRAM_NAME}} in Arizona.
 
 ### Regulatory
-- [ ] Identified ADG as primary regulator and current legislation (A.R.S. Title 5, Ch. 11; § 5-601; A.A.C. R19-4)
+- [ ] Identified ADG as primary regulator and current legislation (A.R.S. Title 5, Ch. 11; § 5-601.02 (2021 model compact); § 5-601; A.A.C. R19-4)
 - [ ] Confirmed license requirements and status (event wagering operator and/or tribal track)
 - [ ] Verified legal gambling age: 21+
 - [ ] Reviewed permitted products table (tribal land-based casino; event wagering retail + mobile; fantasy sports; no online casino)
@@ -582,24 +606,27 @@ Complete before launching {{PROGRAM_NAME}} in Arizona.
 - [ ] Responsible gaming message and helpline in all event wagering ads
 - [ ] No targeting of under-21, no misleading content, no guaranteed-success claims
 - [ ] No promotion of irresponsible or excessive play
-- [ ] No advertising at primarily-under-21 venues, on minors' merchandise, or on college campuses (beyond general broadcast/digital)
+- [ ] No advertising at primarily-under-21 venues or on minors' merchandise (R19-4-110(D)/(E))
+- [ ] No promotion in college/university-owned news assets, including digital (R19-4-110(F)); no campus placement beyond generally available broadcast/digital media (R19-4-110(G))
 - [ ] No marketing to persons on the ADG self-exclusion list
-- [ ] Tribal advertising reviewed against the applicable compact
+- [ ] Tribal advertising meets the model-compact AGA floor (§ 5-601.02, § 3(x)(2)-(3)) — guidelines no less stringent than the AGA, no appeal to minors
 
 ### Self-exclusion
 - [ ] ADG Voluntary Self-Exclusion information available on platforms and at venues
-- [ ] Self-excluded persons list checked before account creation
-- [ ] Self-excluded persons denied access; accounts revoked and removed from mailing lists
-- [ ] No payouts to self-excluded persons; winnings forfeited and donated to ADG quarterly
-- [ ] Participation by self-excluded persons reported to ADG
+- [ ] Self-excluded persons list checked before account creation (A.R.S. § 5-1320(B))
+- [ ] Self-excluded persons denied access; accounts revoked and removed from mailing lists (A.R.S. § 5-1320(B))
+- [ ] No payouts to self-excluded persons; event-wagering winnings forfeited and donated to ADG (A.R.S. § 5-1320(C))
+- [ ] Participation by self-excluded persons reported to ADG (A.R.S. § 5-1320(B))
+- [ ] Bilingual signage, platform/kiosk messaging, and list confidentiality maintained (A.A.C. R19-4-150)
+- [ ] Problem-gambling mitigation program developed and maintained (A.R.S. § 5-1320(E))
 - [ ] Staff trained to advise on self-exclusion and provide ADG forms
-- [ ] Tribal track: tribal self-exclusion program addressed under the compact
+- [ ] Tribal track: model-compact self-exclusion duties met (§ 5-601.02, § 3(v)(2)) — advise on procedures, de-market/revoke cards, ID-check before check/credit cashing, identify and escort out, no hand-paid jackpot (forfeiture to an Arizona-based non-profit), list not public
 
 ### Player protection -- tribal land-based
 *Check only if deploying in tribal venues.*
-- [ ] Responsible gaming and helpline signage per the tribe's compact
-- [ ] Tribal self-exclusion program in place
-- [ ] Employee responsible gaming awareness per compact obligations
+- [ ] Help-available signage with the statewide crisis hotline at all public entrances/exits (§ 5-601.02, § 3(v)(1)); signage-text discrepancy confirmed with the tribe's commission
+- [ ] Tribal self-exclusion duties implemented (§ 5-601.02, § 3(v)(2))
+- [ ] Advertising meets the AGA floor (§ 5-601.02, § 3(x)(2)-(3))
 
 ### Player protection -- event wagering
 *Check only if deploying on event wagering platforms.*

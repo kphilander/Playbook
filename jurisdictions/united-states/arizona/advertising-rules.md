@@ -25,17 +25,20 @@ adaptation_notes: |
   prescriptive event wagering advertising rules (A.A.C. R19-4-110, "Responsible
   Advertising") and a helpline-display requirement on all event wagering ads
   (A.A.C. R19-4-150(A); A.R.S. § 5-1320(A)). Tribal land-based advertising is
-  governed by each tribe's compact and gaming commission, not by R19-4.
+  governed by the tribe's compact and gaming commission, not by R19-4 — but
+  the 2021 model compact (A.R.S. § 5-601.02, § 3(x)(2)-(3)) standardizes it,
+  making the AGA general advertising guidelines a binding minimum floor for
+  compacting tribes rather than a voluntary overlay.
   On-brand disclosure examples need cultural adaptation for non-US markets.
-last_updated: 2026-06-06
+last_updated: 2026-06-08
 ---
 
 # Arizona -- Advertising Rules
 
 > **Operator note**: This is the detailed advertising reference for Arizona. It covers Arizona's prescriptive event wagering advertising standard (A.A.C. R19-4-110), the helpline-display requirement (A.A.C. R19-4-150(A); A.R.S. § 5-1320(A)), tribal advertising via compacts, channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Arizona compliance module](README.md) for complete coverage.
 
-> **Last verified**: 2026-06-06
-> **Next review due**: 2026-09-06 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -45,7 +48,7 @@ last_updated: 2026-06-06
 |---|---|
 | [Arizona's prescriptive standard](#arizonas-prescriptive-standard) | A.A.C. R19-4-110 framework |
 | [Tribal advertising requirements](#tribal-advertising-requirements) | Compact-based approach |
-| [AGA Responsible Gaming Code](#aga-responsible-gaming-code) | Industry self-regulatory overlay |
+| [AGA advertising guidelines](#aga-advertising-guidelines) | Binding floor for tribal venues; best practice for event wagering |
 | [Channel-by-channel rules](#channel-by-channel-rules) | Broadcast, digital, print, direct, in-venue, sponsorship |
 | [Prohibited content](#prohibited-content) | What you cannot say or show |
 | [Required disclosures](#required-disclosures) | What must appear in advertising |
@@ -62,7 +65,7 @@ Arizona has separate advertising frameworks for event wagering and tribal land-b
 | Regime | Regulation | Approach | Key difference |
 |---|---|---|---|
 | **Event wagering advertising** | A.A.C. R19-4-110; R19-4-150(A) | Prescriptive -- specific prohibitions and a required helpline/RG message apply to all advertising | Rules apply automatically; no pre-approval |
-| **Tribal advertising** | Tribal-State Compacts (A.R.S. § 5-601) | Compact-based -- governed by each tribe's compact and gaming commission | Set tribe by tribe |
+| **Tribal advertising** | 2021 model compact (A.R.S. § 5-601.02, § 3(x)(2)-(3)); earlier compacts under § 5-601 | Model-compact-based -- AGA general advertising guidelines are a binding minimum floor; enforced by each tribe's gaming commission | Standardized across compacting tribes |
 
 ### A.A.C. R19-4-110 -- Responsible Advertising
 
@@ -92,35 +95,40 @@ A.A.C. R19-4-110 took effect 26 July 2021 and was amended 15 April 2022. Confirm
 
 ## Tribal advertising requirements
 
-### Tribal-State Compacts (A.R.S. § 5-601)
+### 2021 model compact (A.R.S. § 5-601.02)
 
-Advertising for tribal land-based casinos is governed through each tribe's Class III compact and its gaming commission -- **not** through A.A.C. R19-4. Compacts and tribal regulations typically require:
+Advertising for tribal land-based casinos is governed through the tribe's Class III compact and its gaming commission -- **not** through A.A.C. R19-4. But under the 2021 model compact these requirements are **standardized and citable**, not left to vary tribe by tribe:
 
-| Element | Advertising relevance |
-|---|---|
-| **Responsible gaming messaging** | Compacts commonly require responsible gaming messaging and the helpline in casino advertising and on signage |
-| **No marketing to self-excluded persons** | Tribal self-exclusion programs prohibit marketing to enrolled persons |
-| **No marketing to minors** | 21+ wagering requirement under A.R.S. § 5-601(B) carries through to advertising practice |
+| Element | Advertising requirement | Compact cite |
+|---|---|---|
+| **AGA-level advertising floor** | Adopt advertising/marketing guidelines **no less stringent than the AGA's general advertising guidelines** | § 5-601.02, § 3(x)(2)-(3) |
+| **No appeal to minors** | Advertising must **not** specifically appeal to minors | § 5-601.02, § 3(x)(3) |
+| **Responsible gaming messaging / helpline** | Help-available signage with the statewide crisis hotline at all public entrances/exits | § 5-601.02, § 3(v)(1) |
+| **No marketing to self-excluded persons** | Remove self-excluded persons from all mailing lists; do not market to enrolled persons | § 5-601.02, § 3(v)(2)(F) |
+| **21+** | 21+ for wagering on tribal gaming activities (carries through to advertising practice) | § 5-601.02, § 3(w) |
 
 ### Key difference from event wagering
 
-Tribal advertising rules are **compact-based**: each tribe sets and enforces them through its gaming commission, with the state as compact partner. Event wagering advertising rules are **prescriptive and statewide**: A.A.C. R19-4-110 and R19-4-150(A) apply to all state-licensed event wagering operators automatically, with no pre-approval process.
+Tribal advertising rules are **model-compact-based**: the 2021 model compact sets a uniform AGA-level floor (§ 3(x)(2)-(3)) that each tribe enforces through its gaming commission, with the state as compact partner. Event wagering advertising rules are **prescriptive and statewide**: A.A.C. R19-4-110 and R19-4-150(A) apply to all state-licensed event wagering operators automatically, with no pre-approval process. Both tracks now rest on specific, citable requirements rather than open-ended "consult your compact" guidance.
 
 ---
 
-## AGA Responsible Gaming Code
+## AGA advertising guidelines
 
-The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct applies to Arizona operators that are AGA members. While not legally binding, it represents industry best practices:
+The status of the **American Gaming Association (AGA)** advertising guidelines depends on the track:
+
+- **Tribal land-based (binding floor).** Under the 2021 model compact, **A.R.S. § 5-601.02, § 3(x)(2)-(3)** requires each operator to adopt advertising/marketing guidelines **no less stringent than the AGA's general advertising guidelines**, and not to specifically appeal to minors. For compacting tribes the AGA Code is therefore a **binding minimum floor, not a voluntary overlay** — treat it as a hard requirement.
+- **Event wagering (best practice).** For state-licensed event wagering, the AGA Responsible Gaming Code is industry best practice (binding only on AGA members by contract); the statewide standard is set by A.A.C. R19-4-110 and R19-4-150(A).
 
 | AGA principle | Arizona regulatory requirement | Status |
 |---|---|---|
-| Responsible advertising | A.A.C. R19-4-110 (event wagering); compacts (tribal) | Arizona event wagering rules are more specific than AGA principles |
-| No targeting minors | A.A.C. R19-4-110 -- must not target or appeal to under-21 | Aligned |
+| Responsible advertising | A.A.C. R19-4-110 (event wagering); § 5-601.02, § 3(x)(2)-(3) (tribal — AGA floor mandatory) | Event wagering rules are more specific than AGA principles; tribal venues must meet the AGA floor |
+| No targeting/appeal to minors | A.A.C. R19-4-110 (event wagering); § 5-601.02, § 3(x)(3) (tribal) | Aligned; mandatory on both tracks |
 | Helpline in ads | A.A.C. R19-4-150(A); A.R.S. § 5-1320(A) -- helpline required in all event wagering ads | Aligned |
 | No misleading claims | A.A.C. R19-4-110 -- no misleading or false information; no guaranteed success | Aligned |
 | Self-exclusion | A.R.S. § 5-1320 -- no payouts or marketing to self-excluded persons | Aligned and stronger (forfeiture of winnings) |
 
-Arizona's event wagering rules generally meet or exceed AGA voluntary standards.
+Arizona's event wagering rules generally meet or exceed the AGA standards, and the model compact makes the AGA floor a binding requirement for tribal venues.
 
 ---
 
@@ -139,7 +147,7 @@ Arizona's event wagering advertising rules under A.A.C. R19-4-110 and the helpli
 | **Direct marketing** | No marketing to self-excluded persons | A.R.S. § 5-1320; A.A.C. R19-4-150 |
 | **In-venue (tribal casino)** | Per tribal compact; responsible gaming + helpline signage | Set by the tribe's gaming commission |
 | **In-venue (retail sportsbook)** | Signage (English + Spanish) at entrances/exits stating help is available | A.A.C. R19-4-150(A) |
-| **Campus / merchandise** | Prohibited on campuses and minors' merchandise (beyond general broadcast/digital) | A.A.C. R19-4-110 |
+| **Campus / merchandise** | No placement on minors' merchandise (R19-4-110(E)); none in college/university-owned news assets, incl. digital (R19-4-110(F)); no campus placement beyond generally available broadcast/digital media (R19-4-110(G)) | A.A.C. R19-4-110(E)-(G) |
 | **Sponsorship** | Same R19-4-110 requirements apply to sponsored content | Must not target prohibited groups |
 
 ---
@@ -155,17 +163,19 @@ All event wagering advertisements are prohibited from:
 | **Promoting irresponsible play** | Must not promote irresponsible or excessive participation in event wagering | A.A.C. R19-4-110 |
 | **Guaranteeing success** | Must not suggest social, financial, or personal success is guaranteed by engaging in event wagering | A.A.C. R19-4-110 |
 | **Primarily-under-21 venues** | Must not appear at venues where the audience is primarily under 21 | A.A.C. R19-4-110 |
-| **Minors' merchandise** | Event wagering brands must not appear on items designed primarily for minors | A.A.C. R19-4-110 |
-| **Campus placement** | Must not be placed on college/university campuses or news platforms (except generally available broadcast/digital advertising) | A.A.C. R19-4-110 |
+| **Minors' merchandise** | Event wagering brands must not appear on items designed primarily for minors | A.A.C. R19-4-110(E) |
+| **University-owned news assets** | Must not be promoted or advertised in **college or university-owned news assets, including digital news assets**. This bars only institution-owned outlets — not third-party news coverage of campus | A.A.C. R19-4-110(F) |
+| **Campus placement** | Must not be placed on college/university campuses, except advertising generally available to the public through broadcast, digital, or similar media | A.A.C. R19-4-110(G) |
 | **Self-excluded persons** | Must not market to persons on the ADG self-exclusion list | A.R.S. § 5-1320; A.A.C. R19-4-150 |
 
-### Additional prohibitions (tribal -- via compact)
+### Additional prohibitions (tribal -- 2021 model compact)
 
-Tribal advertising is governed by each tribe's compact and gaming commission. While specifics vary, best practices include:
+Tribal advertising is governed by the tribe's compact and gaming commission. Under the 2021 model compact these are specific requirements, not just best practices:
 
-- No marketing to persons on the tribe's self-exclusion list
-- No marketing to persons under 21 (A.R.S. § 5-601(B))
-- Responsible gaming messaging and helpline in casino advertising
+- Adopt advertising/marketing guidelines no less stringent than the AGA's general advertising guidelines (§ 5-601.02, § 3(x)(2)-(3))
+- No advertising that specifically appeals to minors (§ 5-601.02, § 3(x)(3)); 21+ for tribal wagering (§ 3(w))
+- No marketing to persons on the tribe's self-exclusion list; remove them from all mailing lists (§ 5-601.02, § 3(v)(2)(F))
+- Help-available signage with the statewide crisis hotline at all public entrances/exits (§ 5-601.02, § 3(v)(1))
 
 ---
 
@@ -185,7 +195,7 @@ Tribal advertising is governed by each tribe's compact and gaming commission. Wh
 |---|---|---|
 | **Help-availability notice** | "Help is available if a person has a problem with gambling" (English + Spanish) | Retail sportsbook entrances/exits |
 | **Platform/kiosk messaging** | Obvious, easily accessible help messaging + helpline | Each event wagering platform/kiosk |
-| **Responsible gaming signage** | Responsible gaming and helpline signage | Tribal casino floor/entrances (per compact) |
+| **Responsible gaming signage** | Help-available notice + statewide crisis hotline | Tribal casino — all public entrances/exits (§ 5-601.02, § 3(v)(1)) |
 
 ---
 
