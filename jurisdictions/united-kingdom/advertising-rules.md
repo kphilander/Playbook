@@ -25,16 +25,19 @@ adaptation_notes: |
   licence conditions, ASA/CAP non-broadcast codes, BCAP broadcast
   codes, and industry voluntary codes. The September 2025 CAP Code
   extension to non-UK-based operators is a significant recent change.
+  The industry advertising code is published by the Industry Group for
+  Responsible Gambling (IGRG), not the BGC; it carries the
+  whistle-to-whistle ban and the safer-gambling messaging commitments.
   On-brand disclosure examples use British English.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # United Kingdom -- Advertising Rules
 
 > **Operator note**: This is the detailed advertising reference for the United Kingdom. It covers the four-layer advertising framework: LCCP licence conditions, ASA/CAP non-broadcast codes, BCAP broadcast codes, and the Gambling Industry Code for Socially Responsible Advertising. The UK has the most complex gambling advertising regime globally. Use this alongside the [UK compliance module](README.md) for complete coverage.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -46,7 +49,7 @@ last_updated: 2026-03-22
 | [LCCP requirements](#lccp-requirements) | SR 5.1.6, SR 5.1.1, SR 5.1.12 |
 | [CAP Code Section 16 -- non-broadcast](#cap-code-section-16--non-broadcast) | Digital, print, direct marketing, social media |
 | [BCAP Code Section 17 -- broadcast](#bcap-code-section-17--broadcast) | TV and radio |
-| [Industry codes](#industry-codes) | Gambling Industry Code for Socially Responsible Advertising |
+| [Industry codes](#industry-codes) | IGRG code: whistle-to-whistle ban, safer-gambling messaging |
 | [September 2025 CAP Code extension](#september-2025-cap-code-extension) | Non-UK operators brought into scope |
 | [Channel-by-channel rules](#channel-by-channel-rules) | Broadcast, digital, print, direct, in-venue, sponsorship |
 | [Prohibited content](#prohibited-content) | Complete list |
@@ -65,7 +68,7 @@ The UK operates a four-layer advertising framework for gambling:
 | **1. LCCP** | Gambling Commission | SR 5.1.6, SR 5.1.1, SR 5.1.12 | All UK-licensed operators | Licence condition -- breach = enforcement action |
 | **2. Non-broadcast** | ASA / CAP | CAP Code Section 16 | Online, print, direct marketing, social media | Enforced by ASA; upheld rulings require compliance |
 | **3. Broadcast** | ASA / BCAP | BCAP Code Section 17 | TV and radio | Enforced by Ofcom via ASA |
-| **4. Industry** | BGC / Industry bodies | Gambling Industry Code for Socially Responsible Advertising | Industry members | Voluntary but referenced by Gambling Commission |
+| **4. Industry** | IGRG (Industry Group for Responsible Gambling) | Gambling Industry Code for Socially Responsible Advertising (7th edition, in force 1 December 2023; updated March 2025) | Industry members | Voluntary but referenced by Gambling Commission |
 
 ### How the layers interact
 
@@ -125,7 +128,7 @@ Gambling advertisements must **not**:
 | Peer pressure | 16.3.6 | Encourage gambling through social pressure messaging |
 | Sexual/romantic content | 16.3.7 | Link gambling to seduction, sexual success, or enhanced attractiveness |
 | Toughness associations | 16.3.8 | Connect gambling to resilience or recklessness |
-| Youth culture appeal | 16.3.11 | Strongly appeal to under-18s through cultural references, youth influencers, or content of particular appeal to children |
+| Strong appeal to under-18s | 16.3.11 (and 16.3.12) | Be of "strong appeal" to under-18s -- the tightened CAP/BCAP standard in force since 1 October 2022, which bans content (top-flight footballers, sportspeople and celebrities with strong youth appeal, youth-culture references, certain influencers and characters) that is of strong appeal to children regardless of how the ad is targeted |
 | Under-25 gambling | 16.3.13 | Feature anyone under 25 (or who appears under 25) gambling or in a significant role |
 | Children featured | 16.3.14 | Feature children or young persons in gambling contexts (narrow exceptions for family entertainment venues) |
 | Under-18 targeting | 16.3.12 | Direct advertising toward those under 18 through media selection or context |
@@ -138,6 +141,10 @@ Gambling advertisements must **not**:
 | Football pools, lotteries, prize gaming | 16 | 16.3.12 |
 | Appearance in ads (gambling role) | 25 | 16.3.13 |
 
+#### "Strong appeal to under-18s" (in force 1 October 2022)
+
+The CAP and BCAP codes were tightened on **1 October 2022** so that gambling and lottery ads must not be of **"strong appeal"** to children or young persons -- a stricter test than the previous "particular appeal." The distinction: content can be off-limits even where most of the audience is adult, if its *content* (not its scheduling or targeting) holds strong appeal to under-18s. In practice this rules out top-flight/Premier League footballers and other sportspeople and celebrities with a strong under-18 following, certain video-game and social-media references, and influencers popular with children. The ASA enforces this through the CAP guidance on protecting under-18s (often referenced as GAM003). Sources: [CAP Code Section 16](https://www.asa.org.uk/type/non_broadcast/code_section/16.html); [BCAP Code Section 17](https://www.asa.org.uk/type/broadcast/code_section/17.html).
+
 ---
 
 ## BCAP Code Section 17 -- broadcast
@@ -148,10 +155,12 @@ The BCAP Code governs TV and radio gambling advertising with additional broadcas
 
 | Rule | Description |
 |---|---|
+| **Strong appeal to under-18s** | Gambling ads must not be of strong appeal to under-18s (in force 1 October 2022; same standard as CAP 16.3.11) |
 | **Pre-watershed content** | Gambling ads must not be shown during or adjacent to programmes of particular appeal to under-18s |
 | **9pm watershed** | Certain gambling content restricted to post-watershed viewing |
-| **Frequency** | Must not be disproportionate in frequency during live sports events |
-| **Celebrity endorsement** | Subject to same under-25 rules as non-broadcast |
+| **Whistle-to-whistle ban** | No betting/gaming TV ads from 5 minutes before to 5 minutes after live sport shown pre-watershed (IGRG industry code) |
+| **Celebrity endorsement** | Subject to same under-25 and strong-appeal rules as non-broadcast |
+| **Safer-gambling messaging** | Safer-gambling reference on-screen for at least 10% of the ad's duration (IGRG industry code) |
 | **Substantive prohibitions** | All CAP Code s.16 prohibitions apply equally to broadcast |
 
 ---
@@ -160,13 +169,28 @@ The BCAP Code governs TV and radio gambling advertising with additional broadcas
 
 ### Gambling Industry Code for Socially Responsible Advertising
 
-This voluntary industry code, referenced by the Gambling Commission as best practice, includes additional commitments beyond the statutory minimum. The Betting and Gaming Council (BGC) members adhere to this code.
+This voluntary industry code is published and administered by the **Industry Group for Responsible Gambling (IGRG)** -- not the BGC, which is sometimes mis-cited as the publisher. The current edition is the **7th edition**, in force from **1 December 2023** (updated March 2025). The Gambling Commission references it as supplementing the CAP/BCAP codes with minimum industry standards. Code: [Gambling Commission -- Gambling industry code for socially responsible advertising](https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/page/gambling-industry-code-for-socially-responsible-advertising); publisher: [IGRG -- Industry advertising code](https://igrg.org.uk/wp/industry-advertising-code/).
 
 Key provisions include:
-- No gambling advertising before 9pm watershed on TV
 - No gambling sponsorship of programming aimed at children
-- Enhanced age-verification for digital advertising targeting
-- Voluntary restrictions on frequency during live sports broadcasts
+- Enhanced age-verification controls for digital advertising targeting
+- The **whistle-to-whistle ban** (see below)
+- The **safer-gambling messaging** commitments (see below)
+
+#### Whistle-to-whistle ban
+
+A named industry standard the module previously referenced only loosely as "frequency limits": betting and gaming TV advertising is prohibited from **5 minutes before to 5 minutes after** a live sporting event broadcast before the 9pm watershed (covering the period from the start of the pre-event build-up). It applies across all live sport shown pre-watershed.
+
+#### Safer-gambling messaging commitments
+
+Two further industry commitments {{PROGRAM_NAME}} content should surface rather than work around:
+
+| Commitment | Requirement |
+|---|---|
+| **On-screen safer-gambling reference** | A safer-gambling message (for example a begambleaware.org reference) must be on-screen for **at least 10% of a television advert's duration** |
+| **Advertising directed to safer gambling** | A commitment to direct a share of advertising (around 20%) to safer-gambling messaging |
+
+The current industry safer-gambling campaign line is **"Take Time to Think"**, which replaced the retired "When the Fun Stops, Stop." Do not use the retired line as a safer-gambling message. Source: IGRG *Gambling Industry Code for Socially Responsible Advertising* (7th ed.) -- see links above.
 
 ---
 
@@ -193,8 +217,8 @@ A significant amendment took effect on **1 September 2025**, closing a regulator
 | Scheduling | No gambling ads during or adjacent to programming of particular appeal to under-18s | BCAP s.17 |
 | Watershed | Certain content restricted to post-9pm | BCAP s.17 / Industry Code |
 | Content | All CAP Code s.16 prohibitions apply | BCAP s.17 |
-| End card | GamCare helpline / GambleAware reference; 18+ age notice | SR 3.3.1, CAP/BCAP |
-| Live sports | Frequency limits apply (industry voluntary code) | Industry Code |
+| End card | GamCare helpline / safer-gambling reference; 18+ age notice; on-screen safer-gambling message for >=10% of ad duration | SR 3.3.1, CAP/BCAP, IGRG Code |
+| Live sports | Whistle-to-whistle ban: no ads 5 min before to 5 min after live sport pre-watershed | IGRG Code |
 
 ### Digital (website, app, display)
 
@@ -274,7 +298,8 @@ Disclosures that must appear in UK gambling advertising:
 | Disclosure | Where required | Format |
 |---|---|---|
 | **18+** age restriction | All gambling advertising | Clear and prominent |
-| **Helpline / support reference** | All advertising (via SR 3.3.1) | GamCare / GambleAware / "When the fun stops, stop" |
+| **Helpline / support reference** | All advertising (via SR 3.3.1) | GamCare / begambleaware.org / "Take Time to Think" (the retired "When the Fun Stops, Stop" line should no longer be used) |
+| **Safer-gambling on-screen message** | TV advertising (IGRG Code) | Safer-gambling reference on-screen for at least 10% of the ad's duration |
 | **Significant T&Cs** | All incentive/bonus advertising | At first presentation; clear and prominent |
 | **Wagering requirements** | All bonus advertising | Specific and transparent |
 | **Time/eligibility limits** | Time-limited or restricted offers | Clear and prominent |
