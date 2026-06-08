@@ -29,7 +29,9 @@ adaptation_notes: |
   terminals (VGTs) — but NO legal online casino. Casino rules live in
   86 Ill. Adm. Code 3000; sports wagering in 11 Ill. Adm. Code 1900; video
   gaming in 11 Ill. Adm. Code 1800. Self-exclusion is statewide (the IGB
-  Self-Exclusion Program), with a 5-year minimum and no lifetime tier.
+  Self-Exclusion Program); casino exclusion is requested on a permanent/
+  indefinite basis with a 5-year minimum lock-in before removal may be
+  requested (86 Ill. Adm. Code 3000.750, limited by 3000.780).
   Helpline is 1-800-GAMBLER, paired with the IDHS "Are You Really Winning?"
   public-awareness campaign. August 2025 brought uniform advertising rules
   across all three verticals.
@@ -104,8 +106,15 @@ The IGB licenses, regulates, and oversees casino gaming, sports wagering, and vi
 | Sports Wagering Act (230 ILCS 45) | [ilga.gov](https://www.ilga.gov/legislation/ilcs/ilcs5.asp?ActID=3996&ChapterID=25) | Governs sports wagering |
 | Video Gaming Act (230 ILCS 40) | [ilga.gov](https://www.ilga.gov/legislation/ilcs/ilcs5.asp?ActID=3095&ChapterID=25) | Governs video gaming terminals |
 | 86 Ill. Adm. Code 3000 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/title-86/part-3000) | Casino rules, including self-exclusion (3000.745–3000.790) |
-| 11 Ill. Adm. Code 1900.340 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-11-SS-1900.340) | Sports wagering advertising and marketing |
+| 86 Ill. Adm. Code 3000.750 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-86-SS-3000.750) | Self-Exclusion List — permanent basis, 5-year minimum (limited by 3000.780) |
+| 86 Ill. Adm. Code 3000.560 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-86-SS-3000.560) | Casino patron-admission duty (keep ineligible/self-excluded off the gaming floor) |
+| 77 Ill. Adm. Code 2059.103 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-77-SS-2059.101) | IDHS-prescribed compulsive-gambling text (1-800-GAMBLER) |
+| 11 Ill. Adm. Code 1900.340 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-11-SS-1900.340) | Sports wagering advertising and marketing (incl. (e)(3)-(7)) |
+| 11 Ill. Adm. Code 1900.1220 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-11-SS-1900.1220) | Sports wagering accounts — closure method, PG statement, SE-list verification |
+| 11 Ill. Adm. Code 1900.1730 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-11-SS-1900.1730) | Sports wagering duties re self-excluded persons |
 | 11 Ill. Adm. Code 1800 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/title-11/part-1800) | Video gaming rules |
+| 11 Ill. Adm. Code 1800.1710 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-11-SS-1800.1710) | VGT "Conversations About Responsible Gaming" — right, not obligation |
+| 11 Ill. Adm. Code 1800.1750 | [law.cornell.edu](https://www.law.cornell.edu/regulations/illinois/Ill-Admin-Code-tit-11-SS-1800.1750) | VGT problem-gambling signage |
 | IGB Self-Exclusion Program | [igb.illinois.gov](https://igb.illinois.gov/help-for-problem-gamblers/self-exclusion-program.html) | Statewide self-exclusion |
 | IDHS Gambling Help | [dhs.state.il.us](https://www.dhs.state.il.us/page.aspx?item=117443) | 1-800-GAMBLER, "Are You Really Winning?" |
 
@@ -164,9 +173,9 @@ Illinois uses a **competitive** licensing system:
 
 ### Display rules
 
-- **Advertising (all verticals)**: must include **problem gambling text as determined by IDHS**, including the helpline (11 Ill. Adm. Code 1900.340(e)(2); 86 Ill. Adm. Code 3000 as amended August 2025).
+- **Advertising (all verticals)**: must include the **IDHS-prescribed problem gambling text** (the 1-800-GAMBLER text at 77 Ill. Adm. Code 2059.103), including the helpline (11 Ill. Adm. Code 1900.340(e)(2); casino master ad rule 86 Ill. Adm. Code 3000.680, amended August 2025; VGT 11 Ill. Adm. Code 1800.1760).
 - **Casino venues**: must post compulsive-gambling and treatment/helpline notices (230 ILCS 10/13.1).
-- **Video gaming establishments**: must post 21-and-over signage and make problem gambling/treatment information available.
+- **Video gaming establishments**: must post 21-and-over signage and a problem-gambling sign carrying the 2059.103 text plus how to access the Self-Exclusion Program, conspicuously posted at the entrance to any gaming area and visible from any ATM (11 Ill. Adm. Code 1800.1750).
 
 ### On-brand helpline display
 
@@ -191,13 +200,19 @@ Illinois does not prescribe a single verbatim slogan. Instead, advertising must 
 
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
-| Advertising (casino, VGT, sports) | Standard-based | Problem gambling text as determined by IDHS, including the helpline; prominent responsible-gaming messages | 11 Ill. Adm. Code 1900.340(e)(2); 86 Ill. Adm. Code 3000 (Aug 2025) |
+| Advertising (casino, VGT, sports) | Standard-based | IDHS-prescribed problem gambling text (77 Ill. Adm. Code 2059.103), including the helpline; prominent responsible-gaming messages | 11 Ill. Adm. Code 1900.340(e)(2); 86 Ill. Adm. Code 3000.680; 11 Ill. Adm. Code 1800.1760 (Aug 2025) |
 | Casino venue notice | Obligation-based | Compulsive-gambling and treatment/helpline notices | 230 ILCS 10/13.1 |
-| Self-exclusion program info | Obligation-based | Self-exclusion and treatment information available at venues and on platforms | 86 Ill. Adm. Code 3000.745–.790 |
+| VGT problem-gambling sign | Obligation-based | 2059.103 text + how to access the Self-Exclusion Program, at the gaming-area entrance and visible from any ATM | 11 Ill. Adm. Code 1800.1750 |
+| Self-exclusion program info | Obligation-based | Self-exclusion and treatment information available at venues and on platforms | 86 Ill. Adm. Code 3000.745–.790 (3000.750) |
 
 ### Verbatim required statements
 
-Illinois rules require the **IDHS-determined problem gambling text** in advertising rather than prescribing a single operator slogan. A statutory compulsive-gambling provision (230 ILCS 10/13.1) and the IDHS warning text (77 Ill. Adm. Code 2059) govern the required language. **The exact verbatim wording of any mandatory statement must be confirmed against 230 ILCS 10/13.1 and 77 Ill. Adm. Code 2059 before publishing** — see [Verify before publishing](#verify-before-publishing-notes).
+Illinois rules require the **IDHS-determined problem gambling text** in advertising and signage rather than prescribing a single operator slogan. The IDHS prescribes that text at **77 Ill. Adm. Code 2059.103**, which the gaming rules incorporate by reference across signage and advertising disclosures. The prescribed compulsive-gambling text is:
+
+> **"If you or someone you know has a gambling problem, crisis counseling and referral services can be accessed by calling 1-800-GAMBLER (1-800-426-2537)."**
+> — 77 Ill. Adm. Code 2059.103
+
+This is the fixed language that must appear (or appear materially consistent with it, subject to Administrator approval where applicable) wherever the rules call for "problem gambling text as determined by IDHS." A separate statutory compulsive-gambling provision (230 ILCS 10/13.1) governs the casino venue notice; **confirm that statutory wording against 230 ILCS 10/13.1 on `ilga.gov` before presenting it word-for-word** — see [Verify before publishing](#verify-before-publishing-notes).
 
 ### On-brand integration
 
@@ -225,29 +240,36 @@ Illinois's advertising rules were **harmonized uniformly across casinos, video g
 
 | Field | Value |
 |---|---|
-| **Primary regulation** | 11 Ill. Adm. Code 1900.340 (sports); parallel casino/VGT rules under 86 Ill. Adm. Code 3000 / 11 Ill. Adm. Code 1800 (Aug 2025 amendments) |
+| **Primary regulation** | 11 Ill. Adm. Code 1900.340 (sports); **casino master ad rule 86 Ill. Adm. Code 3000.680**, which the sports (1900.340) and VGT (11 Ill. Adm. Code 1800.1760) ad rules incorporate by reference (Aug 2025 amendments) |
 | **Approach** | Prescriptive — specific content and conduct requirements |
 | **Enforcement** | IGB enforces proactively and publishes cease-and-desist letters |
+
+> **How the ad rules fit together**: 86 Ill. Adm. Code **3000.680** is the master "Advertising and Marketing" rule. The August 2025 uniform requirements — the IDHS-prescribed problem-gambling text, the college campus/media/venue ban, the no-depicting-college-students/settings prohibition, the record-retention/publication log, the direct-ad opt-out, and the ban on volume- or outcome-based affiliate compensation — live there. The VGT ad rule (**1800.1760**) and the sports ad rule (**1900.340**) incorporate 3000.680 by reference, which is how the requirements run uniformly across all three verticals.
 
 ### Required in advertising
 
 | Requirement | Details | Source |
 |---|---|---|
-| **Problem gambling text** | IDHS-determined problem gambling text, including the helpline | 1900.340(e)(2) |
-| **Responsible-gaming messages** | Prominent responsible-gaming messaging | 1900.340; 86 Adm. Code 3000 (2025) |
-| **Record retention** | Retain copies of all advertising and marketing materials with a publication log | 1900.340(c) |
-| **Patron opt-out** | Provide a method to opt out of direct advertising | 1900.340 |
+| **Problem gambling text** | IDHS-prescribed problem gambling text (77 Ill. Adm. Code 2059.103), including the helpline | 1900.340(e)(2); 3000.680 |
+| **21+ statement** | Ads must state that patrons must be 21 years of age or older to wager | 1900.340(e)(3) |
+| **Responsible-gaming messages** | Prominent responsible-gaming messaging | 1900.340; 3000.680 |
+| **Record retention** | Retain copies of all advertising and marketing materials with a publication log | 1900.340(c); 3000.680 |
+| **Patron opt-out** | Provide a method to opt out of direct advertising | 1900.340; 3000.680 |
 
 ### Prohibited content
 
 | Prohibition | Source |
 |---|---|
 | Targeting individuals under 21 | 1900.340(e)(1) |
-| Advertising on college or university campuses | Aug 2025 uniform rules |
-| Advertising in college/university media (newspapers, radio, TV) | Aug 2025 uniform rules |
-| Advertising at sports venues used primarily for college events | Aug 2025 uniform rules |
-| Depicting college students or college settings | Aug 2025 uniform rules |
-| Performance-based affiliate compensation tied to the volume or outcome of wagers | 1900.340(f) |
+| Imagery, symbols, cartoon/celebrity/entertainer figures, endorsements, or language designed to appeal to those under 21 | 1900.340(e)(4) |
+| Featuring anyone who is, or appears to be, under 21 | 1900.340(e)(5) |
+| Placement in media (including social media) that appeals primarily to those under 21 | 1900.340(e)(6) |
+| Placement before any audience presumed to be majority under 21 | 1900.340(e)(7) |
+| Advertising on college or university campuses | 3000.680 (Aug 2025 uniform rules) |
+| Advertising in college/university media (newspapers, radio, TV) | 3000.680 (Aug 2025 uniform rules) |
+| Advertising at sports venues used primarily for college events | 3000.680 (Aug 2025 uniform rules) |
+| Depicting college students or college settings | 3000.680 (Aug 2025 uniform rules) |
+| Performance-based affiliate compensation tied to the volume or outcome of wagers | 1900.340(f); 3000.680 |
 | False or misleading content | 1900.340 |
 
 For the detailed advertising reference, see [advertising-rules.md](advertising-rules.md).
@@ -263,11 +285,11 @@ For the detailed advertising reference, see [advertising-rules.md](advertising-r
 | **Program name** | Illinois Gaming Board Self-Exclusion Program (SEP) |
 | **Website** | [igb.illinois.gov/help-for-problem-gamblers/self-exclusion-program](https://igb.illinois.gov/help-for-problem-gamblers/self-exclusion-program.html) |
 | **Administered by** | Illinois Gaming Board |
-| **Duration** | **Minimum five (5) years** — there is **no shorter or lifetime tier** in the program description |
+| **Duration** | **Indefinite / permanent, with a 5-year minimum lock-in.** Casino self-exclusion is requested "on a permanent basis, except as limited by Section 3000.780," and a person on the Self-Exclusion List is prohibited for a **minimum of 5 years** before removal may be requested. It is not a fixed 5-year term that lapses automatically — the exclusion continues until the person affirmatively requests removal after the minimum. |
 | **Scope** | Casinos and sports wagering statewide |
 | **Enrollment method** | In person |
 | **Removal / reinstatement** | After the five-year minimum, removal requires a request supported by an affidavit from a licensed mental health professional who is a certified gambling counselor or psychiatrist |
-| **Source** | 86 Ill. Adm. Code 3000.745–3000.790 |
+| **Source** | 86 Ill. Adm. Code 3000.745–3000.790; duration/permanence under 3000.750 (as limited by 3000.780) |
 
 ### Operator responsibilities
 
@@ -275,7 +297,7 @@ For the detailed advertising reference, see [advertising-rules.md](advertising-r
 |---|---|
 | **Bar from gaming floor** | Prevent self-excluded persons from gambling at casinos and from wagering on sports |
 | **Remove from marketing** | Exclude self-excluded persons from all marketing and promotional materials |
-| **No reinstatement before minimum** | Honor the five-year minimum before any removal request |
+| **No reinstatement before minimum** | Honor the indefinite/permanent exclusion and its five-year minimum lock-in before any removal request (3000.750, as limited by 3000.780) |
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -291,7 +313,7 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 > **Q: What is the Illinois Self-Exclusion Program?**
 >
-> It is the Illinois Gaming Board's statewide self-exclusion program, covering casinos and sports wagering. Enrollment is in person, and the minimum exclusion is five years — there is no shorter or lifetime option. After five years, a person can request removal, but only with an affidavit from a licensed mental health professional who is a certified gambling counselor or psychiatrist. Use "take a break" in casual conversation, and "Self-Exclusion Program" when referring to the formal program.
+> It is the Illinois Gaming Board's statewide self-exclusion program, covering casinos and sports wagering. Enrollment is in person. Casino exclusion is requested on a permanent/indefinite basis, with a five-year minimum lock-in — it is not a fixed term that lapses on its own. After the five-year minimum, a person can request removal, but only with an affidavit from a licensed mental health professional who is a certified gambling counselor or psychiatrist. Use "take a break" in casual conversation, and "Self-Exclusion Program" when referring to the formal program.
 
 ---
 
@@ -302,34 +324,47 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 | Tool / Obligation | Required? | Regulatory basis | Details |
 |---|---|---|---|
 | **Compulsive-gambling notice** | Yes | 230 ILCS 10/13.1 | Treatment and helpline notices posted at the casino |
-| **Self-exclusion** | Yes | 86 Adm. Code 3000.745–.790 | Statewide SEP — see [self-exclusion](#self-exclusion) |
-| **Employee duties** | Yes | 86 Adm. Code 3000 | Enforce self-exclusion; patron interaction duties |
+| **Self-exclusion** | Yes | 86 Adm. Code 3000.745–.790 (3000.750) | Statewide SEP — see [self-exclusion](#self-exclusion) |
+| **Patron-admission duty** | Yes | 86 Adm. Code 3000.560 | Affirmative duty to prevent ineligible/self-excluded persons from accessing the gaming floor (magnetometers/turnstile screening) |
+| **Employee duties** | Yes | 86 Adm. Code 3000.560 / 3000.770 | Enforce self-exclusion and patron admission; Illinois imposes no affirmative RG staff-training mandate (see [player-protection note](#a-note-on-staff-training-theme-9)) |
 | **Deposit limits** | N/A | -- | Not applicable to walk-in cash play |
 
 ### Sports wagering (11 Ill. Adm. Code 1900)
 
 | Tool / Obligation | Required? | Regulatory basis | Details |
 |---|---|---|---|
-| **Account controls** | Yes | 11 Adm. Code 1900 | Patron account management and closure |
-| **Deposit / wager / time limits** | Verify | 11 Adm. Code 1900 | Account-control provisions apply; confirm the exact subsection before citing as verbatim |
-| **Self-exclusion** | Yes | 86 Adm. Code 3000.745–.790 | Statewide SEP covers sports wagering |
-| **Identity verification** | Yes | 11 Adm. Code 1900 | Account registration identity verification |
+| **Account closure** | Yes | 11 Adm. Code 1900.1220(l) | Accounts must provide a conspicuous, readily accessible account-closure method; remaining balance refunded per internal controls |
+| **Problem-gambling statement** | Yes | 11 Adm. Code 1900.1220(j)(6) | Account/activity statements must carry a problem-gambling-assistance statement (text per IDHS rules) |
+| **Deposit / wager / time limits** | Operator-offered | 11 Adm. Code 1900.1220 | **Patron-set deposit/wager/time limits are not mandated at the rule level.** Part 1900.1220 requires only the account-closure method and the problem-gambling statement; any limits an operator surfaces are voluntary/operator-offered |
+| **Self-exclusion** | Yes | 11 Adm. Code 1900.1730; 86 Adm. Code 3000.745–.790 | Statewide SEP covers sports wagering; 1900.1730 sets the licensee duties (database flagging, no check-cashing/credit, identity checks, online account handling) |
+| **Identity verification** | Yes | 11 Adm. Code 1900.1220(b)(3)(C) | Registration must verify the patron is 21+ and not on the Self-Exclusion List |
 
 ### Video gaming terminals (11 Ill. Adm. Code 1800)
 
 | Tool / Obligation | Required? | Regulatory basis | Details |
 |---|---|---|---|
 | **21+ signage** | Yes | 230 ILCS 40 | Establishments must post that play is limited to persons 21 or older |
+| **Problem-gambling signage** | Yes | 11 Adm. Code 1800.1750 | Sign carrying the 2059.103 compulsive-gambling text plus how to access the Self-Exclusion Program, conspicuously posted at the entrance to any gaming area and visible from any ATM (content pre-approved by the Administrator) |
+| **Underage-gambling-compliance program** | Yes | 11 Adm. Code 1800 Subpart U (1800.2110–.2170) | VGT establishments must maintain an underage-gambling-compliance program |
 | **Restricted area** | Yes | 230 ILCS 40 / 11 Adm. Code 1800 | Terminals must be in a restricted area in view of a staff member over 21 |
-| **Responsible-gaming conversations** | Verify | 11 Adm. Code 1800.1710 | A rule titled "Conversations About Responsible Gaming" applies; confirm scope/wording before citing |
+| **Responsible-gaming conversations** | Optional (right, not obligation) | 11 Adm. Code 1800.1710 | "Conversations About Responsible Gaming" grants VGT staff a **"right, but not an obligation"** to raise RG with players, paired with a liability shield. It is *not* an affirmative duty — see [the staff-training note](#a-note-on-staff-training-theme-9) |
 
 ### {{PROGRAM_NAME}} tool messaging for Illinois
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
-| Deposit / wager limits | "Set your limit — play on your terms. Takes 10 seconds." | Sports wagering accounts (Part 1900) |
+| Deposit / wager limits | "Set your limit — play on your terms. Takes 10 seconds." | Sports wagering accounts — operator-offered, not rule-mandated (Part 1900.1220) |
 | Self-exclusion | "Need a break from gambling? The Illinois Self-Exclusion Program covers casinos and sportsbooks statewide." | Casino + sports (86 Adm. Code 3000) |
-| Account closure | "Want to close your account? We'll make it easy — and share some resources if you want them." | Sports wagering (Part 1900) |
+| Account closure | "Want to close your account? We'll make it easy — and share some resources if you want them." | Sports wagering — required account-closure method (Part 1900.1220(l)) |
+
+### A note on staff training (Theme 9)
+
+**Illinois imposes no affirmative responsible-gambling staff-training mandate.** This is worth stating plainly because several other jurisdictions do require it:
+
+- **Video gaming** — 11 Ill. Adm. Code 1800.1710 ("Conversations About Responsible Gaming") expressly grants VGT staff a **"right, but not an obligation"** to raise responsible gaming with players, and pairs that with a **liability shield** (a licensed location is not liable if a self-excluded or problem-gambling-registry enrollee plays a terminal on the premises). It deliberately stops short of a duty.
+- **Casino** — staff duties are limited to **self-exclusion enforcement and patron admission** (86 Ill. Adm. Code 3000.560 / 3000.770). There is no enumerated RG-interaction-training requirement.
+
+Because of this, {{PROGRAM_NAME}}'s Theme 9 content (conversation scripts, the staff FAQ, Tier 2 voice guidance) is **best-practice and brand-driven, not compliance-driven** in Illinois. Operators should still train staff — it is the right thing to do and aligns with AGA guidance — but they are not closing a regulatory gap by doing so. Do not present staff training to an Illinois operator as a statutory obligation.
 
 ---
 
@@ -388,8 +423,8 @@ Quick-reference table mapping every collateral category to Illinois-specific ada
 |---|---|---|---|
 | **Digital** | Website footer | 1-800-GAMBLER + on-brand RG message | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Age gate | Set to 21+ | `{{MIN_AGE}}` = 21 |
-| **Digital** | Sports account | Account limits offered; helpline + IDHS text | 11 Adm. Code 1900 |
-| **Digital** | Self-exclusion page | Explain statewide SEP (5-year minimum, in-person) | 86 Adm. Code 3000.745–.790 |
+| **Digital** | Sports account | Required: account-closure method + problem-gambling statement; limits are operator-offered (not rule-mandated); helpline + IDHS text | 11 Adm. Code 1900.1220 |
+| **Digital** | Self-exclusion page | Explain statewide SEP (indefinite/permanent, 5-year minimum lock-in, in-person) | 86 Adm. Code 3000.745–.790 (3000.750) |
 | **Digital** | Email footer | Helpline + IDHS text; opt-out for direct ads | `{{HELPLINE_NUMBER}}` |
 | **Print** | Brochure | 1-800-GAMBLER, 21+ notice, SEP reference | All tokens |
 | **Print** | Helpline card | 1-800-GAMBLER, text ILGAMB to 833234 | All helpline tokens |
@@ -420,7 +455,7 @@ helplines:
       cost: "Free"
       state_resource: "IDHS Division of Behavioral Health & Recovery"
       campaign_site: "areyoureallywinning.com"
-      notes: "Funded by IDHS. Advertising must include problem gambling text as determined by IDHS (11 Ill. Adm. Code 1900.340). NCPG national numbers also accepted."
+      notes: "Funded by IDHS. Advertising must include the IDHS-prescribed problem gambling text set verbatim at 77 Ill. Adm. Code 2059.103 (11 Ill. Adm. Code 1900.340(e)(2); casino master ad rule 86 Ill. Adm. Code 3000.680). NCPG national numbers also accepted."
 
 # --- LEGAL ---
 legal:
@@ -430,10 +465,13 @@ legal:
 # --- MANDATORY MESSAGING ---
 messaging:
   mandatory:
-    # illinois-general: (no single verbatim slogan; advertising must include
-    #   problem gambling text as determined by IDHS per 11 Ill. Adm. Code
-    #   1900.340(e)(2). Casino compulsive-gambling notice under 230 ILCS 10/13.1;
-    #   IDHS warning text under 77 Ill. Adm. Code 2059 — confirm exact wording.)
+    illinois-idhs-text: "If you or someone you know has a gambling problem, crisis counseling and referral services can be accessed by calling 1-800-GAMBLER (1-800-426-2537)."
+    # illinois-general: (no single operator slogan. The fixed element is the
+    #   IDHS-prescribed compulsive-gambling text above, set verbatim at
+    #   77 Ill. Adm. Code 2059.103 and required in advertising per
+    #   11 Ill. Adm. Code 1900.340(e)(2) and incorporated by the casino master
+    #   ad rule 86 Ill. Adm. Code 3000.680. Separate casino venue notice under
+    #   230 ILCS 10/13.1 — confirm that statutory wording on ilga.gov.)
 ```
 
 ---
@@ -451,14 +489,16 @@ Complete before launching {{PROGRAM_NAME}} in Illinois.
 - [ ] Identified deployment verticals: [ ] Casino [ ] Sports betting [ ] VGT
 
 ### Messaging
-- [ ] IDHS-determined problem gambling text included in all advertising
+- [ ] IDHS-prescribed problem gambling text (77 Ill. Adm. Code 2059.103, verbatim) included in all advertising and signage
 - [ ] Helpline (1-800-GAMBLER) displayed in advertising and at venues
 - [ ] Age notice (21+) on all player-facing content
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Illinois values
-- [ ] Verbatim warning wording confirmed against 230 ILCS 10/13.1 and 77 Ill. Adm. Code 2059
+- [ ] Statutory casino venue-notice wording confirmed against 230 ILCS 10/13.1 on ilga.gov (the 2059.103 advertising text is supplied verbatim in this module)
 
 ### Advertising
-- [ ] Advertising reviewed against 11 Ill. Adm. Code 1900.340 and the Aug 2025 uniform rules
+- [ ] Advertising reviewed against 11 Ill. Adm. Code 1900.340 and the casino master ad rule 86 Ill. Adm. Code 3000.680 (incorporated by 1800.1760)
+- [ ] Ads state patrons must be 21+ to wager (1900.340(e)(3))
+- [ ] No imagery/figures/endorsements/placement appealing to or aimed at under-21 (1900.340(e)(4)-(7))
 - [ ] No advertising on college campuses, in college media, or at college sports venues
 - [ ] No depiction of college students or college settings
 - [ ] No performance-based affiliate compensation tied to wager volume/outcome
@@ -468,20 +508,25 @@ Complete before launching {{PROGRAM_NAME}} in Illinois.
 ### Self-exclusion
 - [ ] Self-Exclusion Program information available at venues and on platforms
 - [ ] Self-excluded persons barred from gaming floor and from all marketing
-- [ ] Five-year minimum honored; removal only with clinical affidavit after the minimum
+- [ ] Indefinite/permanent exclusion with five-year minimum lock-in honored; removal only with clinical affidavit after the minimum
 - [ ] Staff trained on SEP enrollment and enforcement
 
 ### Player protection — casino / VGT
 *Check only if deploying in land-based venues or VGT establishments.*
 - [ ] Compulsive-gambling and treatment notices posted (230 ILCS 10/13.1)
+- [ ] Casino patron-admission duty enforced — ineligible/self-excluded persons kept off the gaming floor (86 Ill. Adm. Code 3000.560)
 - [ ] VGT establishments post 21+ signage and keep terminals in a restricted area
+- [ ] VGT problem-gambling sign (2059.103 text + Self-Exclusion Program access) posted at the gaming-area entrance and visible from any ATM (1800.1750)
+- [ ] VGT underage-gambling-compliance program in place (1800 Subpart U, 1800.2110-.2170)
 - [ ] Employee duties on self-exclusion enforcement implemented
 
 ### Player protection — sports wagering
 *Check only if deploying on sports wagering platforms.*
-- [ ] Account controls (limits, closure) implemented per Part 1900
-- [ ] Identity verification at account registration
-- [ ] Self-exclusion check against the statewide SEP
+- [ ] Conspicuous account-closure method with balance refund (1900.1220(l))
+- [ ] Problem-gambling-assistance statement in account statements (1900.1220(j)(6))
+- [ ] Patron-set limits offered where the operator chooses to (operator-offered, not rule-mandated)
+- [ ] Identity verification at account registration; patron verified 21+ and not on the Self-Exclusion List (1900.1220(b)(3)(C))
+- [ ] Self-excluded-person duties implemented (database flagging, no check-cashing/credit, identity checks for wagers >$500 and redemptions >$2,000, online block/suspend/void/refund) (1900.1730)
 
 ### Age verification
 - [ ] Casino: photo ID at entry/cage
@@ -506,9 +551,9 @@ Complete before launching {{PROGRAM_NAME}} in Illinois.
 
 These items were flagged during research and should be confirmed against primary sources before the module is published or the citations are treated as verbatim:
 
-1. **`ilga.gov` reachability** — the canonical statutes (230 ILCS 10/13.1, 10/18; 230 ILCS 45; 230 ILCS 40) and rule Parts 1900/1800 were verified via the Cornell LII mirror and IGB pages because `ilga.gov` was unreachable during research. Re-open the `ilga.gov` links from a standard network and confirm exact subsection numbers.
-2. **Verbatim warning text** — confirm any mandatory statement against 230 ILCS 10/13.1 and 77 Ill. Adm. Code 2059 before presenting it as word-for-word.
-3. **Part 1900 / 1800 subsections** — the precise deposit/wager/time-limit subsection (Part 1900) and the "Conversations About Responsible Gaming" rule (1800.1710) were not opened verbatim; confirm before citing as hard requirements.
+1. **`ilga.gov` reachability** — the canonical statutes (230 ILCS 10/13.1, 10/18; 230 ILCS 45; 230 ILCS 40) and the Administrative Code Parts are published on `ilga.gov`, which was unreachable from the research environment. The Administrative Code subsections cited in this module — including 86 Ill. Adm. Code 3000.750, 3000.560; 77 Ill. Adm. Code 2059.103; 11 Ill. Adm. Code 1900.340(e), 1900.1220, 1900.1730, 1800.1710, 1800.1750, 1800.1760 — were verified against the Cornell LII mirror (`law.cornell.edu`). Re-open the `ilga.gov` links from a standard network to confirm before relying on them as the official text.
+2. **Casino master ad rule (3000.680) and VGT ad rule (1800.1760)** — these August 2025 amendments were not yet individually mirrored on Cornell LII at research time (the section pages returned a Part-level directory). The substance is summarized from the JCAR-approved uniform rules; confirm 3000.680 and 1800.1760 directly on `ilga.gov` before treating their text as verbatim.
+3. **Statutory casino venue notice (230 ILCS 10/13.1)** — the IDHS *advertising* text is supplied verbatim from 77 Ill. Adm. Code 2059.103 (verified). The separate statutory *venue-notice* wording at 230 ILCS 10/13.1 should still be confirmed on `ilga.gov` before being presented word-for-word.
 4. **iGaming status** — online casino is not legal in Illinois (confirmed for 2026, but volatile). Re-confirm at launch; never tag Illinois content with the `online` vertical until/unless enacted.
 
 ---

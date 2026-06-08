@@ -54,12 +54,12 @@ last_updated: 2026-06-05
 
 ## Illinois's prescriptive standard
 
-Illinois specifies exactly what must and must not appear in gambling advertising. The core rule is **11 Ill. Adm. Code 1900.340** (sports wagering advertising and marketing), and as of August 1, 2025 equivalent requirements apply to **casino** advertising (86 Ill. Adm. Code 3000) and **video gaming** advertising (11 Ill. Adm. Code 1800).
+Illinois specifies exactly what must and must not appear in gambling advertising. The core rule is **11 Ill. Adm. Code 1900.340** (sports wagering advertising and marketing). The casino master ad rule, **86 Ill. Adm. Code 3000.680**, carries the August 2025 uniform requirements, and the VGT ad rule (**11 Ill. Adm. Code 1800.1760**) and the sports ad rule (1900.340) incorporate 3000.680 by reference — which is how the requirements run consistently across all three verticals.
 
 | Field | Value |
 |---|---|
-| **Primary regulation** | 11 Ill. Adm. Code 1900.340 |
-| **Parallel rules** | 86 Ill. Adm. Code 3000 (casino) and 11 Ill. Adm. Code 1800 (video gaming), as amended August 2025 |
+| **Primary regulation** | 11 Ill. Adm. Code 1900.340 (sports) |
+| **Master ad rule** | 86 Ill. Adm. Code 3000.680 (casino) — incorporated by reference into 11 Ill. Adm. Code 1800.1760 (VGT) and 1900.340 (sports), as amended August 2025 |
 | **Approach** | Prescriptive — specific content and conduct requirements apply automatically |
 | **Enforcement** | IGB enforces proactively and publishes cease-and-desist letters |
 
@@ -69,9 +69,15 @@ Every advertisement must:
 
 | Requirement | Details | Regulatory basis |
 |---|---|---|
-| **Include problem gambling text** | Problem gambling text as determined by IDHS, including the helpline | 1900.340(e)(2) |
-| **Carry responsible-gaming messages** | Prominent responsible-gaming messaging | 1900.340; 86 Adm. Code 3000 (2025) |
+| **Include problem gambling text** | The IDHS-prescribed compulsive-gambling text (set verbatim at 77 Ill. Adm. Code 2059.103), including the helpline | 1900.340(e)(2); 3000.680 |
+| **State the 21+ requirement** | Ads must state patrons must be 21 years of age or older to wager | 1900.340(e)(3) |
+| **Carry responsible-gaming messages** | Prominent responsible-gaming messaging | 1900.340; 3000.680 |
 | **Not mislead** | No false or misleading content | 1900.340 |
+
+The IDHS-prescribed text, required wherever the rules call for "problem gambling text as determined by IDHS," is:
+
+> **"If you or someone you know has a gambling problem, crisis counseling and referral services can be accessed by calling 1-800-GAMBLER (1-800-426-2537)."**
+> — 77 Ill. Adm. Code 2059.103
 
 ---
 
@@ -86,7 +92,9 @@ The August 1, 2025 uniform rules (JCAR-approved May 13, 2025; published in the I
 | **Affiliate compensation ban** | No performance-based affiliate compensation tied to the volume or outcome of wagers |
 | **Opt-out** | Direct advertising must offer a method to opt out |
 | **Record retention** | Operators must retain copies of all materials with a log of how and when each was published |
-| **IDHS problem gambling text** | Required across all three verticals |
+| **IDHS problem gambling text** | The 2059.103 text required across all three verticals |
+
+These requirements are codified in the casino master ad rule **86 Ill. Adm. Code 3000.680**, which the VGT (1800.1760) and sports (1900.340) ad rules incorporate by reference.
 
 ---
 
@@ -98,9 +106,9 @@ The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct app
 |---|---|---|
 | Responsible advertising | 1900.340; 86 Adm. Code 3000; 11 Adm. Code 1800 | Illinois rules are more detailed than AGA principles |
 | No targeting minors | 1900.340(e)(1) — must not target under-21 | Aligned |
-| Helpline in ads | 1900.340(e)(2) — IDHS text including helpline | Aligned |
+| Helpline in ads | 1900.340(e)(2) — IDHS text (2059.103) including helpline | Aligned |
 | No misleading claims | 1900.340 — no false or misleading content | Aligned |
-| Self-exclusion | 86 Adm. Code 3000.745–.790 — bar self-excluded persons from marketing | Aligned |
+| Self-exclusion | 1900.1730; 86 Adm. Code 3000.745–.790 — flag and bar self-excluded persons from marketing | Aligned |
 
 ---
 
@@ -118,7 +126,7 @@ Illinois's rules apply uniformly across channels for each vertical. The college-
 | **Direct marketing (email)** | IDHS text + helpline; opt-out method required | Retain copies; honor opt-outs |
 | **Direct marketing (SMS/mail)** | IDHS text + helpline; opt-out method | No marketing to self-excluded persons |
 | **In-venue (casino)** | Compulsive-gambling and treatment notices (230 ILCS 10/13.1); responsible-gaming messaging | Treatment + helpline information |
-| **In-venue (VGT establishment)** | 21+ signage; terminals in restricted area | No advertising aimed at under-21 |
+| **In-venue (VGT establishment)** | 21+ signage; problem-gambling sign (2059.103 text + Self-Exclusion Program access) at the gaming-area entrance and visible from any ATM (1800.1750); terminals in restricted area | No advertising aimed at under-21 |
 | **Sponsorship** | Same content rules apply; no college-venue association | Must not target prohibited groups |
 
 ---
@@ -128,11 +136,15 @@ Illinois's rules apply uniformly across channels for each vertical. The college-
 | Prohibition | Details | Source |
 |---|---|---|
 | **Targeting under-21** | Advertising must not be directed to individuals under 21 | 1900.340(e)(1) |
-| **College campuses** | No advertising on college or university campuses | Aug 2025 uniform rules |
-| **College media** | No advertising in college/university newspapers, radio, or TV | Aug 2025 uniform rules |
-| **College venues** | No advertising at sports venues used primarily for college events | Aug 2025 uniform rules |
-| **Depicting college settings** | No depiction of college students or college settings | Aug 2025 uniform rules |
-| **Performance-based affiliate pay** | No compensation tied to the volume or outcome of wagers | 1900.340(f) |
+| **Appeal-to-minors content** | No imagery, symbols, cartoon/celebrity/entertainer figures, endorsements, or language designed to appeal to those under 21 | 1900.340(e)(4) |
+| **Under-21 figures** | No featuring anyone who is, or appears to be, under 21 | 1900.340(e)(5) |
+| **Under-21 media placement** | No placement in media (including social media) that appeals primarily to those under 21 | 1900.340(e)(6) |
+| **Under-21 audiences** | No placement before any audience presumed to be majority under 21 | 1900.340(e)(7) |
+| **College campuses** | No advertising on college or university campuses | 3000.680 (Aug 2025) |
+| **College media** | No advertising in college/university newspapers, radio, or TV | 3000.680 (Aug 2025) |
+| **College venues** | No advertising at sports venues used primarily for college events | 3000.680 (Aug 2025) |
+| **Depicting college settings** | No depiction of college students or college settings | 3000.680 (Aug 2025) |
+| **Performance-based affiliate pay** | No compensation tied to the volume or outcome of wagers | 1900.340(f); 3000.680 |
 | **False or misleading content** | Prohibited | 1900.340 |
 
 ---
@@ -141,12 +153,13 @@ Illinois's rules apply uniformly across channels for each vertical. The college-
 
 | Disclosure | Requirement | Where |
 |---|---|---|
-| **Problem gambling text** | IDHS-determined text, including the helpline | All advertising |
+| **Problem gambling text** | IDHS-prescribed text (77 Ill. Adm. Code 2059.103), including the helpline | All advertising |
+| **21+ statement** | Ads must state patrons must be 21 or older to wager | All advertising (1900.340(e)(3)) |
 | **Responsible-gaming message** | Prominent responsible-gaming messaging | All advertising |
 | **Opt-out method** | Clear method to opt out of future direct advertising | Direct ads |
 | **Record retention** | Copies retained with a publication log | All advertising (internal) |
 | **Casino venue notice** | Compulsive-gambling and treatment/helpline notices | Casino venues (230 ILCS 10/13.1) |
-| **VGT signage** | 21-and-over signage | VGT establishments |
+| **VGT signage** | 21-and-over signage, plus a problem-gambling sign (2059.103 text + Self-Exclusion Program access) at the gaming-area entrance and visible from any ATM | VGT establishments (1800.1750) |
 
 ---
 
@@ -155,8 +168,8 @@ Illinois's rules apply uniformly across channels for each vertical. The college-
 | Requirement | Details |
 |---|---|
 | **Opt-out method** | Each direct advertisement must provide a method by which an individual may opt out of receiving future advertisements |
-| **Self-excluded persons** | Must not send marketing or promotional materials to persons on the statewide Self-Exclusion Program |
-| **Record retention** | Retain copies of all advertising and marketing materials with a log of when and how each was published, aired, displayed, or distributed (1900.340(c)) |
+| **Self-excluded persons** | Must flag self-excluded persons in all mailing/marketing/promotional lists and not send them marketing or promotional materials (1900.1730; 86 Adm. Code 3000.745–.790) |
+| **Record retention** | Retain copies of all advertising and marketing materials with a log of when and how each was published, aired, displayed, or distributed (1900.340(c); 3000.680) |
 
 ---
 
