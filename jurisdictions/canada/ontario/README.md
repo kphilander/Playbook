@@ -27,15 +27,15 @@ adaptation_notes: |
   American deployments. iGaming market structure (open competitive)
   differs from BC's BCLC monopoly — affects deployment model.
   OLG PlaySmart compatibility section is Ontario-specific.
-last_updated: 2026-03-10
+last_updated: 2026-06-08
 ---
 
 # Ontario — Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ontario. Ontario has a unique hybrid model: OLG operates land-based casinos and OLG.ca, while the iGaming market is open to private operators registered with AGCO and contracted through iGaming Ontario (iGO). There is no mandatory verbatim statement (unlike BC's "Know your limit, play within it"), but ConnexOntario (1-866-531-2600) must be prominently displayed. Ontario's iGaming standards are among the most detailed in North America, with mandatory deposit/loss limits, real-time behavioural monitoring, and a Centralized Self-Exclusion program launching in 2026.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ontario. Ontario has a unique hybrid model: OLG operates land-based casinos and OLG.ca, while the iGaming market is open to private operators registered with AGCO and contracted through iGaming Ontario (iGO). There is no mandatory verbatim statement (unlike BC's "Know your limit, play within it"), but ConnexOntario (1-866-531-2600) must be prominently displayed. Ontario's iGaming standards are among the most detailed in North America, with mandatory deposit/loss limits, per-wager operator-advantage disclosure, real-time behavioural monitoring, and a live centralized self-exclusion program — **BetGuard** (BetGuard.ca, live since May 14, 2026).
 
-> **Last verified**: 2026-03-10
-> **Next review due**: 2026-06-10 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -45,11 +45,13 @@ last_updated: 2026-03-10
 |---|---|
 | [Regulatory authority](#regulatory-authority) | AGCO, iGaming Ontario, OLG |
 | [Legal requirements](#legal-requirements) | 19+, hybrid model, permitted products |
+| [Game information & odds disclosure](#game-information--odds-disclosure) | Binding Category-4 standards (Std 4.05–4.07) |
 | [Helpline](#helpline) | ConnexOntario details and display rules |
 | [Messaging requirements](#messaging-requirements) | No verbatim mandate — what IS required |
+| [Operator RG obligations (iGO agreement)](#operator-rg-obligations-igo-operating-agreement) | RG Check accreditation, RG campaigns, ad balance |
 | [Advertising restrictions](#advertising-restrictions) | AGCO standards + CGA national code |
 | [PlaySmart compatibility](#playsmart-compatibility) | Working alongside OLG's player education program |
-| [Self-exclusion](#self-exclusion) | OLG My PlayBreak + iGaming CSE |
+| [Self-exclusion](#self-exclusion) | OLG My PlayBreak + iGaming BetGuard (centralized) |
 | [Player protection tools](#player-protection-tools) | Deposit limits, loss limits, breaks, behavioural monitoring |
 | [Age verification](#age-verification) | 19+ requirements |
 | [AML/KYC](#amlkyc) | FINTRAC requirements |
@@ -68,7 +70,8 @@ last_updated: 2026-03-10
 | **Land-based/lottery operator** | Ontario Lottery and Gaming Corporation (OLG) |
 | **Governing legislation** | Gaming Control Act, 1992 (S.O. 1992, c.24) |
 | **iGaming legislation** | iGaming Ontario Act, 2024 (in force May 12, 2025) |
-| **Key regulations** | O. Reg. 722/21; Registrar's Standards for Internet Gaming; Registrar's Standards for Gaming and Lottery |
+| **Key regulations** | O. Reg. 722/21; [Registrar's Standards for Internet Gaming](https://www.agco.ca/en/book/export/html/245361); [Registrar's Standards for Gaming and Lottery](https://www.agco.ca/en/book/export/html/243206) |
+| **Operator market agreement** | [iGaming Ontario operating agreement](https://igamingontario.ca/en/operator/your-role-responsible-gambling) — adds RG conditions (RG Check accreditation, RG campaigns) on top of AGCO standards |
 | **Market launch** | April 4, 2022 (iGaming market) |
 
 ### Regulatory structure
@@ -132,6 +135,40 @@ On **May 12, 2025**, the iGaming Ontario Act, 2024 came into force, restructurin
   - **Private iGaming operators**: as supplementary content for any of 70+ registered operators
 - This differs from BC's BCLC monopoly — in Ontario, any registered iGaming operator can deploy {{PROGRAM_NAME}}
 - The open market structure means {{PROGRAM_NAME}} content may need to work across multiple operator brands simultaneously
+
+---
+
+## Game information & odds disclosure
+
+Ontario's iGaming standards mandate game-information and odds disclosure that maps directly to {{PROGRAM_NAME}}'s flagship "no fine print" proposition. These are **binding Category-4 standards** that apply to **every registered operator** — not just OLG. This is the regulatory anchor for {{PROGRAM_NAME}}'s odds-literacy content, and it is distinct from OLG's voluntary [PlaySmart](#playsmart-compatibility) program (which applies only to OLG properties).
+
+### Binding disclosure standards (Registrar's Standards for Internet Gaming)
+
+| Standard | Requirement |
+|---|---|
+| **Std 4.05** | Each game must have a game-specification document disclosing the **operator's advantage (house edge) for each wager** offered. |
+| **Std 4.06** | **Before placing a wager**, players must be able to access sufficient information to make an **informed decision** — the chances of winning, how the game is played, the rules, prizes/odds, and any restrictions. |
+| **Std 4.07** | Game information must **not mislead or misrepresent** the game, the odds, or the chances of winning. |
+
+The land-based analogue lives in the [Registrar's Standards for Gaming and Lottery](https://www.agco.ca/en/book/export/html/243206) (Category 4). Primary source for the iGaming standards: [Registrar's Standards for Internet Gaming, Category 4](https://www.agco.ca/en/book/export/html/245361).
+
+### Why this matters for {{PROGRAM_NAME}}
+
+| Theme | How the Category-4 standards back {{PROGRAM_NAME}} content |
+|---|---|
+| **Odds literacy** | Std 4.06 obliges every operator to surface odds and how-to-play information before a wager — {{PROGRAM_NAME}}'s odds explainers and house-edge content help operators meet this in a way players actually read. |
+| **House-edge transparency** | Std 4.05 requires per-wager operator-advantage disclosure — the exact subject of {{PROGRAM_NAME}}'s "no fine print" house-edge education. |
+| **Myth-busting** | Std 4.07 bars misleading game information — {{PROGRAM_NAME}}'s myth-busters reinforce accurate mental models without overclaiming. |
+
+### On-brand integration
+
+**Bare compliance** (a buried game-info link):
+> *Game rules and odds available in the game help menu.*
+
+**On-brand compliance** (the {{PROGRAM_NAME}} way):
+> **Know the odds before you play.** Every game shows its house edge and how it works — here's what those numbers actually mean for your session.
+
+Both satisfy Std 4.05–4.06. The second turns a mandated disclosure into {{PROGRAM_NAME}} odds-literacy content that players engage with.
 
 ---
 
@@ -202,7 +239,7 @@ Ontario's approach is **obligation-based** (like Nevada) rather than message-bas
 2. **Provide responsible gambling information** systematically — how games work, support services, gaming harms awareness (Std 2.08)
 3. **Make help resources readily available** to all patrons, including 24/7 live support (Stds 2.11, 2.3)
 4. **Include responsible gambling messages** in advertising (Std 2.08)
-5. **Train employees** to recognize and respond to problem gambling (Stds 2.12, 2.5)
+5. **Train employees** to recognize and respond to disordered gambling (Std 2.5; see [Operator RG obligations](#operator-rg-obligations-igo-operating-agreement) for the July 11, 2025 training amendment)
 
 ### On-brand integration
 
@@ -216,6 +253,51 @@ Because Ontario has no mandated phrasing, operators have flexibility to use {{PR
 > **1-866-531-2600** | **Text CONNEX to 247247** | connexontario.ca
 
 This flexibility is a significant advantage — {{PROGRAM_NAME}} content in Ontario can fully express its brand voice without working around a mandatory statement.
+
+---
+
+## Operator RG obligations (iGO operating agreement)
+
+Registered iGaming operators answer to **two** sources of responsible gambling obligation: the binding AGCO Registrar's Standards, and the **iGaming Ontario operating agreement** every operator signs to access the regulated market. The operating agreement adds commercial RG conditions on top of the Standards — and these shape where {{PROGRAM_NAME}} content fits.
+
+### iGO operating-agreement RG conditions
+
+| Condition | Requirement |
+|---|---|
+| **RG Check accreditation** | Operators must achieve and maintain **Responsible Gambling Council (RGC) "RG Check" accreditation** — an independent, audited RG standard covering policy, informed decision-making, self-exclusion, and staff training. |
+| **RG campaigns** | Operators must run responsible-gambling and harm-prevention awareness campaigns. |
+| **RG / promotional balance** | Operators must maintain a balance between responsible-gambling messaging and promotional advertising. |
+| **BetGuard participation** | Operators must integrate with the [centralized self-exclusion](#self-exclusion) program (BetGuard) and honour its registry. |
+
+**Citation:** iGaming Ontario, ["Your Role in Responsible Gambling"](https://igamingontario.ca/en/operator/your-role-responsible-gambling).
+
+**Where {{PROGRAM_NAME}} fits:** RG Check rewards informed-decision content, accessible RG information, and clear self-exclusion messaging — all native {{PROGRAM_NAME}} strengths. The RG-campaign and balance conditions create direct demand for {{PROGRAM_NAME}}'s shareable, entertainment-first literacy content as an operator's RG layer.
+
+### Staff training: July 11, 2025 amendment (Std 2.5)
+
+Effective **July 11, 2025**, AGCO amended **Standard 2.5** to **remove the requirement that the Registrar pre-approve responsible-gambling training programs**, across Gaming, Lottery, and iGaming. Training is now **outcomes-based**: operators design, deliver, and update their own RG training to meet the standard's required outcomes, rather than submitting a curriculum for approval.
+
+| Before July 11, 2025 | After July 11, 2025 |
+|---|---|
+| RG training programs required Registrar pre-approval | Operators design and maintain their own outcomes-based RG training |
+
+**Citation:** AGCO, ["AGCO Updates Responsible Gambling Training Standards for Gaming and Lottery"](https://www.agco.ca/en/news/agco-updates-responsible-gambling-training-standards-gaming-and-lottery).
+
+**Where {{PROGRAM_NAME}} fits:** operator-designed training increases demand for ready-made, on-brand staff-facing content — {{PROGRAM_NAME}}'s [Staff FAQ](../../../collateral/customer-service/staff-faq.md) and conversation scripts can feed an operator's own training program.
+
+### AGCO guidance: supporting players at risk of harm
+
+AGCO's **"Guidance for iGaming Operators on Identifying and Supporting Players at Risk of Harm"** is the operative **standard of practice** behind the behavioural-monitoring and intervention obligations (Std 2.10, 2.11). Although non-binding, it sets the expectation for how operators detect and respond to harm:
+
+| Element | Expectation |
+|---|---|
+| **Detection** | Automated and manual monitoring of spend/time patterns (including "binge" play), customer-service interactions, and tool usage. |
+| **Intervention timing** | Operators should intervene **immediately on identifying potential harm**, not at a fixed threshold. |
+| **Scaled response** | Responses escalate with severity: reminder messages → personalized contact → gameplay restriction → account suspension. |
+
+**Citation:** AGCO, ["Guidance for iGaming Operators on Identifying and Supporting Players at Risk of Harm"](https://www.agco.ca/en/lottery-and-gaming/guidance-igaming-operators-identifying-and-supporting-players-risk-harm).
+
+**Where {{PROGRAM_NAME}} fits:** the scaled-response model relies on player-facing communications at every step. {{PROGRAM_NAME}}'s Tier 2 [support voice](../../../brand-book/05-messaging-framework.md#warning-statement-standards) provides the warm, direct language for reminder messages and personalized outreach without stigmatizing the player.
 
 ---
 
@@ -234,11 +316,14 @@ Ontario's advertising rules come from two overlapping layers:
 
 | Standard | Requirement |
 |---|---|
-| **Std 2.03** | Advertising must not target high-risk, underage, or self-excluded persons. No cartoon figures, influencers, or celebrities appealing to minors. No active or retired athlete endorsements except for responsible gambling advocacy. |
+| **Std 2.03** | Advertising must not target high-risk, underage, or self-excluded persons. No cartoon figures, influencers, or celebrities appealing to minors. No placement near schools or in youth-directed media. |
+| **Std 2.04(4)** | No active or retired athletes (or others likely to appeal to minors, including social-media influencers) in iGaming advertising or marketing, **except for responsible gambling advocacy**. This restriction was added by amendment effective **February 28, 2024** (announced August 29, 2023). |
 | **Std 2.04** | Marketing must be truthful and not mislead. Cannot suggest gambling solves problems, replaces employment, ensures financial security, or that extended play increases chances. Cannot link gambling to seduction, attractiveness, or social status. |
-| **Std 2.05** | **Public advertising of sport betting inducements, bonuses, and credits is prohibited.** Inducement advertising is only permitted on the operator's gaming site and through direct marketing after active player consent. |
+| **Std 2.05** | **Public advertising of sport betting inducements, bonuses, and credits is prohibited** — in force since market launch on **April 4, 2022**. Inducement advertising is only permitted on the operator's gaming site and through direct marketing after active player consent. |
 | **Std 2.06** | Permitted inducement communications must disclose all material conditions at first presentation. Cannot describe offers as "free" if conditions exist or "risk-free" if player money is at risk. |
 | **Std 2.07** | Players must actively opt in to receive direct advertising of inducements. Must be able to withdraw consent at any time. |
+
+> **Citation note**: The athlete/influencer restriction sits at **Std 2.04(4)** in the current Registrar's Standards for Internet Gaming. (Earlier drafts of this module attributed it to Std 2.03; the substance is unchanged, but the current numbering is 2.04(4).) Source: [AGCO Marketing & Advertising](https://www.agco.ca/en/lottery-and-gaming/responsible-gambling/marketing-and-advertising); amendment effective date per [Cassels analysis](https://cassels.com/insights/betting-on-the-new-rules-agco-limits-use-of-athletes-influencers-in-igaming-advertising/).
 
 ### Sport betting inducement ban
 
@@ -266,7 +351,7 @@ For a detailed advertising reference, see [advertising-rules.md](advertising-rul
 
 ## PlaySmart compatibility
 
-[PlaySmart](https://www.playsmart.ca) is OLG's player education platform, providing information about odds, game mechanics, and responsible gambling tools.
+[PlaySmart](https://www.playsmart.ca) is OLG's player education platform, providing information about odds, game mechanics, and responsible gambling tools. PlaySmart is **voluntary and OLG-only** — for the *binding* odds and game-information obligations that apply to every registered operator, see [Game information & odds disclosure](#game-information--odds-disclosure) (Std 4.05–4.07).
 
 ### What is PlaySmart?
 
@@ -313,7 +398,7 @@ Ontario has two self-exclusion systems operating in parallel:
 |---|---|---|---|
 | **OLG My PlayBreak** | OLG casinos, cGaming centres, OLG.ca | OLG | 6 months, 1 year, 3 years, indefinite |
 | **iGaming site-level** (Std 2.14) | Individual iGaming operator site | Each registered operator | 6 months, 1 year, 5 years |
-| **Centralized Self-Exclusion** (Std 2.14.1) | All regulated iGaming sites | iGO (launching 2026) | 6 months, 1 year, 5 years |
+| **BetGuard** — centralized self-exclusion (Std 2.14.1) | All regulated iGaming sites | iGO (**live since May 14, 2026**) | 6 months, 1 year, 5 years, **or a custom term** |
 
 ### OLG My PlayBreak
 
@@ -337,23 +422,30 @@ Ontario has two self-exclusion systems operating in parallel:
 | **Immediate effect** | Account logged out immediately upon enrollment |
 | **Marketing** | Self-excluded persons removed from all marketing within 24 hours (Std 2.03) |
 
-### Centralized Self-Exclusion (Standard 2.14.1) — launching 2026
+### BetGuard — centralized self-exclusion (Standard 2.14.1)
+
+Ontario's centralized self-exclusion program is **live**. It launched on **May 14, 2026** under the brand **BetGuard** (player portal: [BetGuard.ca](https://betguard.ca)), operated by iGaming Ontario. One registration opts a person out of **every regulated Ontario iGaming brand** at once.
 
 | Field | Value |
 |---|---|
-| **Scope** | All regulated iGaming sites in Ontario |
-| **Duration options** | 6 months, 1 year, 5 years |
-| **Enrollment** | Single registration process via central platform (managed by iGO) |
-| **Operator obligations** | Prevent account creation/access within 24 hours; cease all marketing; cancel and refund outstanding wagers; return unused funds |
+| **Brand / portal** | BetGuard — [BetGuard.ca](https://betguard.ca) |
+| **Status** | Live since May 14, 2026 |
+| **Scope** | All regulated iGaming sites in Ontario (~70+ brands) |
+| **Duration options** | 6 months, 1 year, 5 years, **or a custom term** |
+| **No-cancellation rule** | Once activated, a self-exclusion term **cannot be shortened or cancelled** before it ends |
+| **Enrollment** | Single registration via the central BetGuard portal; **no existing operator account required**; completes in under 10 minutes |
+| **Operator obligations** | Check registry status in real time via API; block login/account access and cease all marketing for registered persons within 24 hours |
 | **Registry** | Maintained by iGO; individuals added within 1 hour of registration |
-| **Technology** | Built by IC360 and DataWorks |
+| **Support** | 24/7 support with direct transfer to ConnexOntario |
+
+**Citation:** iGaming Ontario, ["BetGuard, Ontario's new tool to opt out of online gaming, is now available"](https://igamingontario.ca/en/news/betguard-centralized-self-exclusion-ontario-igaming); standard basis Std 2.14.1, per the [AGCO information bulletin on the centralized self-exclusion program](https://www.agco.ca/en/news/information-bulletin-agco-sets-igaming-standards-centralized-self-exclusion-program).
 
 ### {{PROGRAM_NAME}} language mapping
 
 | Context | {{PROGRAM_NAME}} term | Official term | When to use official term |
 |---|---|---|---|
 | Tier 1 (casual) | "Take a break" / "Pause your account" | My PlayBreak (OLG) / "Self-exclusion" (iGaming) | Never in Tier 1 — use {{PROGRAM_NAME}} language |
-| Tier 2 (formal) | "Self-exclusion" | My PlayBreak / Centralized Self-Exclusion | Legal documents, formal enrollment, support referrals |
+| Tier 2 (formal) | "Self-exclusion" | My PlayBreak / BetGuard (centralized self-exclusion) | Legal documents, formal enrollment, support referrals |
 | Staff training | Both | My PlayBreak / Self-exclusion | When explaining the program and training on enrollment |
 | Website/app | "Need a break from playing here?" | "Self-exclusion program" | On the self-exclusion enrollment page itself |
 | Print/signage | "Need a break from gambling?" | "Self-exclusion" | Venue self-exclusion information areas |
@@ -364,9 +456,9 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 > **Q: How does self-exclusion work in Ontario?**
 >
-> Ontario has two self-exclusion systems. **OLG My PlayBreak** covers all OLG casinos, charitable gaming centres, and OLG.ca — players can exclude from any or all sectors for 6 months, 1 year, 3 years, or indefinitely. For **private iGaming operators**, each site offers self-exclusion for 6 months, 1 year, or 5 years under AGCO Standard 2.14. A new **Centralized Self-Exclusion** program (Standard 2.14.1) is launching in 2026, allowing players to exclude from all regulated iGaming sites through a single enrollment.
+> Ontario has two self-exclusion systems. **OLG My PlayBreak** covers all OLG casinos, charitable gaming centres, and OLG.ca — players can exclude from any or all sectors for 6 months, 1 year, 3 years, or indefinitely. For **private iGaming**, each site offers its own self-exclusion for 6 months, 1 year, or 5 years under AGCO Standard 2.14, and the centralized program **BetGuard** (BetGuard.ca, live since May 14, 2026; Standard 2.14.1) lets a player opt out of **all** regulated Ontario iGaming sites through a single registration — no operator account needed. BetGuard terms can be 6 months, 1 year, 5 years, or a custom length, and **cannot be shortened or cancelled once activated**.
 >
-> If a player asks about self-exclusion, explain which options apply to them based on where they play. In casual conversation, say "take a break" or "pause your account." Use "self-exclusion" or "My PlayBreak" when referring to the formal programs.
+> If a player asks about self-exclusion, explain which options apply to them based on where they play. For someone who wants to step away from online gambling entirely, point them to BetGuard. In casual conversation, say "take a break" or "pause your account." Use "self-exclusion," "My PlayBreak," or "BetGuard" when referring to the formal programs.
 
 ---
 
@@ -384,9 +476,10 @@ Ontario's iGaming standards are among the most detailed in North America:
 | **Wager limits** | Varies | Std 2.23 | Not universally required but offered by most operators |
 | **Cooling-off for limit changes** | Yes | Std 2.24 | Minimum 24-hour wait before limits can be relaxed or removed |
 | **Short-term breaks** | Yes | Std 2.13 | 1 day, 1 week, 1 month, 2 months, 3 months — wagers prevented during break |
-| **Self-exclusion** | Yes | Std 2.14 | 6 months, 1 year, 5 years |
-| **Centralized Self-Exclusion** | Yes (2026) | Std 2.14.1 | All regulated sites via single enrollment |
-| **Time tracking** | Yes | Std 2.12 (Gaming) | Players must have means to track passage of time |
+| **Self-exclusion (site-level)** | Yes | Std 2.14 | 6 months, 1 year, 5 years |
+| **Centralized self-exclusion (BetGuard)** | Yes (live) | Std 2.14.1 | All regulated sites via single registration; 6mo/1yr/5yr or custom; cannot be shortened or cancelled once activated |
+| **Time tracking** | Yes | Std 2.22 | Players must have means to track passage of time |
+| **Net-position display (slots)** | Yes | Std 2.21 | Slots sessions must clearly display net position (winnings minus losses since session start) in Canadian dollars |
 | **Behavioural monitoring** | Yes | Std 2.10 | Real-time automated and manual monitoring for harm indicators |
 | **Intervention** | Yes | Std 2.11 | Immediate assistance scaled to severity when harm detected |
 | **24/7 live support** | Yes | Std 2.11 | Customer support available around the clock |
@@ -402,9 +495,9 @@ Ontario's iGaming standards are among the most detailed in North America:
 |---|---|---|
 | **Self-exclusion (My PlayBreak)** | Yes | OLG sector-specific exclusion |
 | **Information posting** | Yes (Std 2.3) | ConnexOntario, limits, self-exclusion info readily available |
-| **Time tracking** | Yes (Std 2.12) | Players must have means to track time |
-| **Employee training** | Yes (Std 2.5) | Mandatory responsible gambling training |
-| **Credit self-limitation** | Yes (casino, Std 2.15) | 24-hour wait for credit limit increases; no credit to problem gamblers |
+| **Time tracking** | Yes (Std 2.12) | Players must have means to track time (land-based; the iGaming equivalent is Std 2.22) |
+| **Employee training** | Yes (Std 2.5) | Mandatory responsible gambling training — outcomes-based; Registrar pre-approval removed effective [July 11, 2025](#operator-rg-obligations-igo-operating-agreement) |
+| **Credit self-limitation** | Yes (casino, Std 2.15) | 24-hour wait for credit limit increases; no credit extended to players experiencing gambling harm |
 
 ### {{PROGRAM_NAME}} tool messaging for Ontario
 
@@ -414,6 +507,8 @@ Ontario's iGaming standards are among the most detailed in North America:
 | Loss limits | "Cap your losses for the day, week, or month. One setting, total control." | iGaming (Std 2.23) |
 | Short-term break | "Need a breather? Pause your account for a day, a week, or up to 3 months." | iGaming (Std 2.13) |
 | Self-exclusion | "Need a longer break? Step away for 6 months, 1 year, or 5 years." | iGaming (Std 2.14) |
+| Centralized self-exclusion | "Want to step away from online gambling for good? BetGuard opts you out of every regulated Ontario site in one go." | iGaming (Std 2.14.1, BetGuard) |
+| Net-position display | "Up or down this session? Your running total is right there — in plain dollars." | iGaming slots (Std 2.21) |
 | Activity dashboard | "Your play stats are ready. No surprises — just the facts." | iGaming (Std 3.15) |
 
 ---
@@ -487,7 +582,7 @@ Quick-reference table mapping every collateral category to Ontario-specific adap
 |---|---|---|---|
 | **Digital** | Website footer | ConnexOntario: 1-866-531-2600 + on-brand RG message | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Age gate | Set to 19+ | `{{MIN_AGE}}` = 19 |
-| **Digital** | Self-exclusion page | Explain dual system (site-level + CSE); link to operator's enrollment | — |
+| **Digital** | Self-exclusion page | Explain dual system (site-level + BetGuard centralized); link to operator's enrollment and BetGuard.ca | — |
 | **Digital** | Deposit screen | Deposit limit prompt + ConnexOntario | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Social media bio | Include 1-866-531-2600 | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Email footer | ConnexOntario + on-brand RG message in every email | `{{HELPLINE_NUMBER}}` |
@@ -509,7 +604,7 @@ Quick-reference table mapping every collateral category to Ontario-specific adap
 |---|---|---|
 | **Mandatory statement** | None | "Know your limit, play within it." |
 | **Helpline** | ConnexOntario 1-866-531-2600 | Gambling Support BC 1-888-795-6111 |
-| **Self-exclusion** | Dual system (OLG + iGaming) | Game Break (BCLC province-wide) |
+| **Self-exclusion** | Dual system (OLG My PlayBreak + iGaming BetGuard, centralized) | Game Break (BCLC province-wide) |
 | **Deployment model** | Any of 70+ private operators OR OLG | BCLC service providers only |
 | **Inducement advertising** | Sport betting inducements banned in public ads | Limited bonus prominence |
 | **Player education program** | PlaySmart (OLG-only) | GameSense (all BCLC venues) |
@@ -557,6 +652,7 @@ Complete before launching {{PROGRAM_NAME}} in Ontario.
 - [ ] Reviewed permitted products table
 - [ ] Reviewed Gaming Control Act, 1992 and Registrar's Standards (Gaming + Internet Gaming)
 - [ ] Tracked iGaming Ontario Act, 2024 implementation (May 2025)
+- [ ] Reviewed iGO operating-agreement RG conditions (RG Check accreditation, RG campaigns, ad balance, BetGuard)
 
 ### Helpline
 - [ ] ConnexOntario displayed prominently per Standards 2.08, 2.09, 2.11
@@ -573,12 +669,18 @@ Complete before launching {{PROGRAM_NAME}} in Ontario.
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Ontario values
 - [ ] PlaySmart acknowledged where content appears at OLG properties
 
+### Game information & odds disclosure
+- [ ] iGaming: per-wager operator-advantage (house edge) disclosed per Std 4.05
+- [ ] iGaming: informed-decision game information available before wagering per Std 4.06
+- [ ] iGaming: no misleading or misrepresentative game information per Std 4.07
+- [ ] {{PROGRAM_NAME}} odds-literacy content mapped to the Category-4 disclosure obligations (not just voluntary PlaySmart)
+
 ### Advertising
 - [ ] Advertising reviewed against AGCO Standards 2.03–2.07 (iGaming) / 2.1–2.2.3 (Gaming)
 - [ ] Advertising reviewed against CGA Code for Responsible Gaming Advertising (January 2026)
 - [ ] No content targeting or appealing to persons under 19
-- [ ] No athlete endorsements except for responsible gambling advocacy
-- [ ] Sport betting inducement advertising restricted to on-site and opted-in direct marketing only
+- [ ] No athlete/influencer endorsements except for responsible gambling advocacy (Std 2.04(4), effective Feb 28, 2024)
+- [ ] Sport betting inducement advertising restricted to on-site and opted-in direct marketing only (Std 2.05, in force since Apr 4, 2022)
 - [ ] Inducement disclosures include all material conditions
 - [ ] Opt-in consent process for inducement direct marketing
 - [ ] No misleading claims about odds, winning likelihood, or prize amounts
@@ -586,7 +688,8 @@ Complete before launching {{PROGRAM_NAME}} in Ontario.
 
 ### Self-exclusion
 - [ ] iGaming: site-level self-exclusion available (6mo, 1yr, 5yr) per Std 2.14
-- [ ] iGaming: Centralized Self-Exclusion integration planned for 2026 launch (Std 2.14.1)
+- [ ] iGaming: BetGuard centralized self-exclusion integrated — real-time registry checks, login + marketing blocks (Std 2.14.1; live since May 14, 2026)
+- [ ] iGaming: BetGuard no-shorten/no-cancel-once-activated rule and custom-term option reflected in self-exclusion messaging
 - [ ] Land-based: OLG My PlayBreak information available to patrons
 - [ ] Self-excluded persons removed from all marketing within 24 hours
 - [ ] Self-exclusion language mapped to {{PROGRAM_NAME}} Tier 1/Tier 2 language
@@ -600,9 +703,13 @@ Complete before launching {{PROGRAM_NAME}} in Ontario.
 - [ ] iGaming: slot auto-play disabled (Std 2.16)
 - [ ] iGaming: minimum 2.5-second slot spin interval (Std 2.18)
 - [ ] iGaming: turbo/quick-spin features disabled for slots (Std 2.19)
+- [ ] iGaming: time-tracking means available to players (Std 2.22)
+- [ ] iGaming: net-position displayed for slots in Canadian dollars (Std 2.21)
 - [ ] iGaming: real-time behavioural monitoring implemented (Std 2.10)
-- [ ] iGaming: intervention procedures for at-risk players (Std 2.11)
+- [ ] iGaming: intervention procedures aligned to AGCO at-risk-player guidance (Std 2.11)
 - [ ] iGaming: 24/7 live customer support (Std 2.11)
+- [ ] Operator: RG Check accreditation achieved/maintained; RG campaigns running (iGO operating agreement)
+- [ ] Staff: outcomes-based RG training in place (Std 2.5, as amended July 11, 2025)
 - [ ] Land-based: responsible gambling info posted per Std 2.3
 
 ### Age verification
@@ -632,7 +739,7 @@ Complete before launching {{PROGRAM_NAME}} in Ontario.
 - [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
-- [ ] CSE launch monitoring plan in place (2026)
+- [ ] BetGuard centralized self-exclusion integration verified (live since May 14, 2026)
 
 ---
 
