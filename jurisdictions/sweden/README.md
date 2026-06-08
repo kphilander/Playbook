@@ -31,9 +31,15 @@ adaptation_notes: |
   the statutory duty of care (omsorgsplikt), the SEK 10,000/month
   contact threshold, and the first-occasion-only bonus rule are
   Sweden-specific features with no direct equivalents in North American
-  markets. Land-based casinos were abolished from 1 January 2026, so the
-  regulated market is online gambling and betting; lotteries remain
-  regulated but Playbook has no separate lottery vertical.
+  markets. The standards layer beneath the Act is load-bearing for
+  online verticals: LIFS 2018:5 (commercial online gambling and betting)
+  imposes an always-on risk/helpline display duty; KOVFS 2025:2 is the
+  current controlling marketing standard codifying "special moderation";
+  the SGA duty-of-care guidance and the SPER/BOS self-regulatory codes
+  round out the practice standards. Land-based casinos were abolished
+  from 1 January 2026, so the regulated market is online gambling and
+  betting; lotteries remain regulated but Playbook has no separate
+  lottery vertical.
 last_updated: 2026-06-05
 ---
 
@@ -74,7 +80,7 @@ last_updated: 2026-06-05
 | **Primary regulator** | Spelinspektionen (Swedish Gambling Authority) |
 | **Website** | [spelinspektionen.se/en](https://www.spelinspektionen.se/en/) |
 | **Governing legislation** | Gambling Act (Spellagen 2018:1138); Gambling Ordinance (Spelforordningen 2018:1475) |
-| **Key regulations** | Spelinspektionen's regulations and general guidelines LIFS 2018:2 (on gambling operations and the duty of care); duty-of-care guidance (omsorgsplikt) |
+| **Key regulations** | Spelinspektionen's regulations and general guidelines: LIFS 2018:2 (gambling operations and the duty of care); **LIFS 2018:5** (commercial online gambling and betting -- the operative regulation for online verticals); LIFS 2018:3 (exemptions from the registration/self-exclusion requirement). Guidance: duty of care (omsorgsplikt). Marketing standard: **KOVFS 2025:2** (Consumer Agency general guidelines on gambling marketing) |
 | **Regulatory approach** | Prescriptive, with a principles-based duty-of-care (omsorgsplikt) overlay |
 | **Regulatory model** | Mixed -- competitive online gambling and betting licences (re-regulated market since 1 January 2019); retained state monopoly for certain lotteries; B2B game-software supplier authorisation required since 1 July 2023 |
 | **Location** | Box 199, 645 23 Strangnas, Sweden |
@@ -137,11 +143,15 @@ There are no sub-national gambling regulators. All requirements apply uniformly 
 | Gambling Act (Spellagen 2018:1138) | National gambling framework | Core legislation: licence duty, 18+ age limit, duty of care, advertising moderation, self-exclusion, deposit limits, staff training |
 | Gambling Ordinance (2018:1475) | Implementing provisions | Detailed rules on deposit limits, self-exclusion mechanics, bonus terms, documentation of RG measures |
 | Spelinspektionen regulations LIFS 2018:2 | Operator conduct and duty of care | Operational detail on the duty of care, monitoring, and player-protection measures |
-| Duty-of-care guidance (omsorgsplikt) | Regulator guidance | Specifies mandated RG measures including feedback to the player on their gambling behaviour |
-| Marketing Act (Marknadsforingslagen 2008:486) | Advertising across all sectors | Consumer-protection overlay on gambling advertising; "moderation" standard; enforced with the Consumer Agency |
+| Spelinspektionen regulations **LIFS 2018:5** | Commercial online gambling and betting | **The operative regulation for {{PROGRAM_NAME}}'s online verticals.** Adds, beyond the Act: an always-on duty to keep the risks of gambling and an independent helpline contact (Stodlinjen) readily accessible, prominently displayed on the start page alongside the SGA logo and link; betting-agent RG knowledge; self-exclusion across all of a player's accounts at the licensee |
+| Spelinspektionen regulations LIFS 2018:3 | Exemptions from registration/self-exclusion | Defines the practical scope of the Spelpaus duty by listing game categories exempt from the mandatory player-registration requirement |
+| Duty-of-care guidance (Vagledning omsorgsplikt) | Regulator guidance | Discretely cited instrument: analyse player profiles, give the player feedback on their gambling behaviour, apply access restrictions, follow up on whether measures worked, maintain a living action plan disseminated across the organisation |
+| Marketing Act (Marknadsforingslagen 2008:486) | Advertising across all sectors | Consumer-protection overlay on gambling advertising; the "moderation" standard; enforced with the Consumer Agency |
+| Consumer Agency guidelines **KOVFS 2025:2** | Marketing of gambling to consumers | **The current controlling marketing standard** (decided 23 June 2025, in force 1 September 2025). Codifies the "special moderation" treatment and sets concrete do/don'ts (no intrusive formats, no easy/guaranteed-win impressions, bonus-term placement, support-organisation web/email/phone) |
+| Industry self-regulatory codes | Standards of practice | SPER/BOS marketing guidelines and the BOS Code of Conduct ("Standard for sustainable gambling"); enforced via SPER/BOS, the Consumer Ombudsman, Spelinspektionen, and Reklamombudsmannen (RO) |
 | Money Laundering and Terrorist Financing (Prevention) Act (Penningtvattslagen 2017:630) | Anti-money laundering | KYC requirements, suspicious-activity reporting (maps to no Playbook theme) |
 
-*Source: [Spelinspektionen -- the SGA's regulations (LIFS 2018:2)](https://www.spelinspektionen.se/en/rules-and-regulation/the-sgas-regulations/lifs-20182/)*
+*Sources: [Spelinspektionen -- the SGA's regulations (LIFS 2018:2)](https://www.spelinspektionen.se/en/rules-and-regulation/the-sgas-regulations/lifs-20182/); [LIFS 2018:5 -- commercial online gambling and betting](https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20185/) ([EN regulations index](https://www.spelinspektionen.se/en/rules-and-regulation/sga-regulations-english/)); [LIFS 2018:3 -- exemptions from the registration requirement](https://lagen.nu/lifs/2018:3); [KOVFS 2025:2 -- Consumer Agency gambling-marketing guidelines](https://publikationer.konsumentverket.se/produkter-och-tjanster/ovriga-omraden/kovfs-20252-konsumentverkets-allmanna-rad-om-marknadsforing-av-spel)*
 
 ---
 
@@ -161,11 +171,16 @@ Stodlinjen offers free, confidential counselling by phone and chat, plus a self-
 
 ### Display rules
 
-Licensees must, in commercial communications (except on radio) and at locations where gambling is provided, state contact information for an organisation that provides information about and support for problem gambling (Gambling Act ch.15 §3). Stodlinjen is the national support line used for this purpose.
+The helpline obligation comes from two layers, not one:
 
-For interactive deployments, the support-organisation contact and the link to Spelpaus self-exclusion must be readily accessible across the platform, and players must be informed of the duty-of-care tools.
+- **Gambling Act ch.15 §3 (advertising layer)**: in commercial communications (except on radio) and at locations where gambling is provided, licensees must state contact information for an organisation that provides information about and support for problem gambling. Stodlinjen is the national support line used for this purpose.
+- **LIFS 2018:5 (always-on platform layer, online verticals)**: separate from the ad rules, the operator must keep **readily accessible where it offers gambling** both (a) the risks of gambling for money and (b) contact details for a gambling-problem helpline that is independent of the operator and suited to Swedish conditions -- the general guideline names **Stodlinjen** (§7). The operator's identity and the helpline contact must be **prominently displayed on the start/home page**, alongside the SGA logo and a link to Spelinspektionen (§8). Section 7 also requires the licence period, a statement that Spelinspektionen is the supervisory authority, and the stake/participation cost to be kept accessible.
 
-*Source: [Spelinspektionen -- responsible gambling and duty of care](https://www.spelinspektionen.se/en/rules-and-regulation/eng-spelansvar-omsorgsplikt/)*
+So for interactive deployments the helpline contact and risk information are an **always-on platform duty**, not just an ad disclosure: the support-organisation contact and the link to Spelpaus self-exclusion must be readily accessible across the platform (prominently on the start page), and players must be informed of the duty-of-care tools.
+
+> **Not just a name**: under **KOVFS 2025:2 §4.1.1**, naming the support organisation alone is insufficient -- a **web address, email, or phone number** for it must also be shown. "Stodlinjen" on its own does not satisfy the disclosure; "Stodlinjen 020-81 91 00 / stodlinjen.se" does.
+
+*Sources: [Spelinspektionen -- responsible gambling and duty of care](https://www.spelinspektionen.se/en/rules-and-regulation/eng-spelansvar-omsorgsplikt/); [LIFS 2018:5 -- commercial online gambling and betting](https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20185/); [KOVFS 2025:2](https://publikationer.konsumentverket.se/produkter-och-tjanster/ovriga-omraden/kovfs-20252-konsumentverkets-allmanna-rad-om-marknadsforing-av-spel)*
 
 ### On-brand helpline display
 
@@ -188,12 +203,13 @@ Sweden uses an **obligation-based** approach. There is no single verbatim respon
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
 | All commercial communications | Obligation-based | Clear minimum-age (18+) information | Gambling Act ch.15 §3 |
-| All commercial communications (except radio) | Obligation-based | Contact info for a problem-gambling support organisation (Stodlinjen) | Gambling Act ch.15 §3 |
-| All marketing | Standard-based | Moderation; no targeting of under-18s | Gambling Act ch.15 §1 |
+| All commercial communications (except radio) | Obligation-based | Contact info for a problem-gambling support organisation (Stodlinjen) -- naming it is not enough; show a web address, email, or phone number too | Gambling Act ch.15 §3; KOVFS 2025:2 §4.1.1 |
+| All marketing | Standard-based | Moderation (codified do/don'ts); no targeting of under-18s | Gambling Act ch.15 §1; KOVFS 2025:2 |
+| Online platform (always on) | Obligation-based | Risks of gambling and an independent helpline contact (Stodlinjen) readily accessible; operator identity + helpline prominently on the start page with the SGA logo and link | LIFS 2018:5 §§7-8 |
 | Game information | Obligation-based | Rules and likelihood of winning easily accessible, in Swedish; no false near-win impression | Gambling Act ch.14 §§4-5 |
 | Before online play | Standard-based | Mandatory deposit limit must be set | Gambling Act ch.14 §6; Ordinance ch.11 §§3-5 |
 | Registration and every login | Standard-based | Spelpaus check; age verification | Gambling Act ch.14 §§3, 11-12 |
-| Bonus offers | Standard-based | Bonus only on first occasion of play; terms in clear language; >=60 days to meet conditions | Gambling Act ch.14 §9; Ordinance ch.11 §6 |
+| Bonus offers | Standard-based | Bonus only on first occasion of play; terms in clear language within one click; >=60 days to meet conditions | Gambling Act ch.14 §9; Ordinance ch.11 §6; KOVFS 2025:2 |
 
 **Obligation types explained:**
 - **Verbatim** -- exact prescribed text that must appear word-for-word (Sweden has none)
@@ -204,14 +220,15 @@ Sweden uses an **obligation-based** approach. There is no single verbatim respon
 
 None. Sweden does not prescribe verbatim responsible-gambling messages. All requirements are obligation-based or standard-based.
 
-> **Note on "moderation"**: The Gambling Act ch.15 §1 requires that marketing be carried out with **moderation** (Swedish: *mattfullhet*). The stronger phrase "special moderation" is a case-law interpretation developed by the courts, not the literal statutory wording -- keep compliance citations to the statutory word "moderation."
+> **Note on "moderation"**: The Gambling Act ch.15 §1 requires that marketing be carried out with **moderation** (Swedish: *mattfullhet*). The stronger phrase "special moderation" (*sarskild mattfullhet*) began as a case-law interpretation, but it is no longer *merely* case-law: it is now **codified by KOVFS 2025:2** (the Consumer Agency's general guidelines on gambling marketing, in force 1 September 2025), which translates the standard into concrete do/don'ts. Cite the statutory word "moderation" (ch.15 §1) for the duty, and KOVFS 2025:2 for the operative detail.
 
 ### Obligation-based requirements
 
 | Obligation | What must be communicated | Where | Source |
 |---|---|---|---|
 | Age limit display | "18+" or equivalent minimum-age notice | All commercial communications | Gambling Act ch.15 §3 |
-| Support-organisation contact | Contact details for a problem-gambling support organisation (Stodlinjen) | All commercial communications except radio; at points of sale | Gambling Act ch.15 §3 |
+| Support-organisation contact | Contact details for a problem-gambling support organisation (Stodlinjen). Naming the organisation is not enough -- a web address, email, or phone number must also be shown | All commercial communications except radio; at points of sale | Gambling Act ch.15 §3; KOVFS 2025:2 §4.1.1 |
+| Start-page risk + helpline display | The risks of gambling and an independent helpline contact (Stodlinjen) kept readily accessible; operator identity + helpline prominently on the start page, with the SGA logo and a link to Spelinspektionen; licence period, that Spelinspektionen is the authority, and stake/participation cost also accessible | On the online platform (always on) | LIFS 2018:5 §§7-8 |
 | Game information | Rules and likelihood of winning, easily accessible and in Swedish | On the gambling platform | Gambling Act ch.14 §4 |
 | No false near-win | Games must not give a false impression of a near-win; free/trial games must match the real-money game | On the gambling platform | Gambling Act ch.14 §5 |
 | Deposit-limit prompt | Player must set a deposit limit before online play | Online platforms | Gambling Act ch.14 §6 |
@@ -229,11 +246,12 @@ Since Sweden has no verbatim statements, operators have full flexibility to use 
 > "18+ only. Set your deposit limit, play your way. Need a break? Register at spelpaus.se -- one stop covers every Swedish-licensed operator. Need to talk? Stodlinjen: 020-81 91 00."
 
 **Rules for on-brand integration:**
-1. The 18+ minimum-age notice and a problem-gambling support contact must be present in commercial communications (support contact in all channels except radio)
-2. All marketing must observe moderation -- no exaggerated winning chances, no pressure tactics, no targeting under-18s
-3. Bonus offers may only be made on the first occasion of play, with terms in clear language and at least 60 days to satisfy conditions
-4. Game rules and the likelihood of winning must be accurate and easily accessible
-5. Always frame gambling as entertainment, not income, and follow with a helpful action where possible
+1. The 18+ minimum-age notice and a problem-gambling support contact must be present in commercial communications (support contact in all channels except radio). Per KOVFS 2025:2 §4.1.1, the support contact must include a web address, email, or phone number -- not just the organisation's name
+2. On online platforms, keep the risks of gambling and the helpline contact (Stodlinjen) readily accessible at all times, with operator identity and the helpline prominent on the start page (LIFS 2018:5 §§7-8) -- this is an always-on duty, separate from the ad disclosures
+3. All marketing must observe moderation as codified by KOVFS 2025:2 -- no intrusive formats (pop-ups, full-screen takeovers, pulsing/blinking), no "easy/fast to win" or guaranteed-win impressions, no celebrity success attributed to gambling, no suggestion that gambling solves social or financial problems, no targeting under-18s
+4. Bonus offers may only be made on the first occasion of play, with terms in clear language and at least 60 days to satisfy conditions; bonus terms (with wagering/stake/time conditions and "new players only") must sit within one click of the ad and up front (KOVFS 2025:2)
+5. Game rules and the likelihood of winning must be accurate and easily accessible
+6. Always frame gambling as entertainment, not income, and follow with a helpful action where possible
 
 *Pattern from: [Messaging Framework -- Warning Statement Standards](../../brand-book/05-messaging-framework.md#warning-statement-standards)*
 
@@ -241,20 +259,25 @@ Since Sweden has no verbatim statements, operators have full flexibility to use 
 
 ## Advertising restrictions
 
-Sweden's advertising framework is governed by two overlapping legal instruments:
+Sweden's advertising framework is governed by overlapping legal instruments plus a self-regulatory layer:
 
 1. **Gambling Act (Spellagen 2018:1138) ch.15** -- gambling-specific advertising rules (moderation, age, support contact, self-exclusion protections, sponsorship limits, channel bans)
 2. **Marketing Act (Marknadsforingslagen 2008:486)** -- general consumer-protection advertising rules, enforced with the Swedish Consumer Agency / Consumer Ombudsman
+3. **Consumer Agency guidelines KOVFS 2025:2** -- the current controlling marketing standard (in force 1 September 2025): it codifies "special moderation" into concrete do/don'ts and sets the support-contact and bonus-term display rules
+4. **Industry self-regulatory codes** -- the SPER/BOS marketing guidelines and the BOS Code of Conduct, enforced via SPER/BOS, the Consumer Ombudsman, Spelinspektionen, and Reklamombudsmannen (RO)
 
 | Rule | Requirement | Verticals | Source |
 |---|---|---|---|
-| Moderation | Marketing must be carried out with moderation | Online, Sports | Gambling Act ch.15 §1 |
+| Moderation | Marketing must be carried out with moderation, as codified into concrete do/don'ts | Online, Sports | Gambling Act ch.15 §1; KOVFS 2025:2 |
+| No intrusive formats | No pop-ups, full-screen takeovers, or pulsing/blinking creative | Online, Sports | KOVFS 2025:2 |
+| No win-ease impression | No "easy/fast to win" or guaranteed-win impressions; celebrities must not imply gambling caused their success | Online, Sports | KOVFS 2025:2 |
+| No problem-solving framing | Must not present gambling as a solution to social or financial problems | Online, Sports | KOVFS 2025:2 |
 | Age targeting | Must not be directed at persons under 18 | Online, Sports | Gambling Act ch.15 §1 |
 | Minimum-age display | Commercial communications must include clear minimum-age info | Online, Sports | Gambling Act ch.15 §3 |
-| Support-contact display | Commercial communications (except radio) must include problem-gambling support contact | Online, Sports | Gambling Act ch.15 §3 |
+| Support-contact display | Commercial communications (except radio) must include a problem-gambling support contact -- with a web address, email, or phone number, not just the organisation's name | Online, Sports | Gambling Act ch.15 §3; KOVFS 2025:2 §4.1.1 |
 | Self-excluded players | Marketing must not be directed at self-excluded players or closed accounts without opt-in | Online, Sports | Gambling Act ch.15 §2 |
 | First-occasion bonus | Bonus offers only on the first occasion a player participates in a game | Online, Sports | Gambling Act ch.14 §9 |
-| Bonus terms | Terms in clear language; at least 60 days to meet conditions | Online, Sports | Ordinance ch.11 §6 |
+| Bonus terms | Terms in clear language within one click of the ad, with wagering/stake/time conditions and "new players only" up front; at least 60 days to meet conditions | Online, Sports | Ordinance ch.11 §6; KOVFS 2025:2 |
 | Sponsorship | Restrictions on gambling sponsorship | Online, Sports | Gambling Act ch.15 §5 |
 | Unlicensed-gambling ads | Ads for unlicensed gambling banned on TV, radio, and video-sharing platforms | Online, Sports | Gambling Act ch.15 §6 |
 | Game information | Likelihood of winning must be accurate; no false near-win impression | Online, Sports | Gambling Act ch.14 §§4-5 |
@@ -274,6 +297,9 @@ Sweden's advertising framework is governed by two overlapping legal instruments:
 
 - Marketing directed at persons under 18
 - Marketing that fails the moderation standard (pressure tactics, exaggeration)
+- Intrusive formats -- pop-ups, full-screen takeovers, pulsing or blinking creative (KOVFS 2025:2)
+- "Easy/fast to win" or guaranteed-win impressions; celebrities implying gambling caused their success (KOVFS 2025:2)
+- Presenting gambling as a solution to social or financial problems (KOVFS 2025:2)
 - Misleading presentation of winning chances; a false impression of a near-win
 - Marketing directed at self-excluded players or closed accounts without opt-in
 - Bonus offers beyond the first occasion a player participates in a game
@@ -283,10 +309,17 @@ Sweden's advertising framework is governed by two overlapping legal instruments:
 
 All gambling commercial communications must include:
 1. **18+** minimum-age information (all channels)
-2. **Problem-gambling support contact** (Stodlinjen) -- all channels except radio
-3. **Bonus terms** (if a first-occasion bonus is advertised) -- clear language, at least 60 days to meet conditions
+2. **Problem-gambling support contact** (Stodlinjen) -- all channels except radio; show a web address, email, or phone number, not just the name (KOVFS 2025:2 §4.1.1)
+3. **Bonus terms** (if a first-occasion bonus is advertised) -- within one click of the ad, with wagering/stake/time conditions and "new players only" up front; clear language; at least 60 days to meet conditions
 
-For a detailed advertising reference, see [advertising-rules.md](advertising-rules.md).
+### Self-regulatory codes
+
+Beyond the legal layer, the industry maintains codes treated as standards of practice:
+
+- **SPER/BOS marketing guidelines** -- moderation, no targeting of minors, responsible sponsorship, problem-gambling information, consent/unsubscribe for direct marketing, and affiliate accountability; enforced via SPER/BOS, the Consumer Ombudsman, Spelinspektionen, and **Reklamombudsmannen (RO)** as the advertising self-regulation enforcer.
+- **BOS Code of Conduct ("Standard for sustainable gambling")** -- a named compliance owner, annual staff education, and management reporting.
+
+For a detailed advertising reference, including the full KOVFS 2025:2 do/don'ts and the self-regulatory codes, see [advertising-rules.md](advertising-rules.md).
 
 ---
 
@@ -300,14 +333,14 @@ Sweden operates a **single unified national self-exclusion register (Spelpaus.se
 |---|---|
 | **Program name** | Spelpaus.se |
 | **Duration options** | 1 month, 3 months, 6 months, or indefinite (minimum 12 months before reinstatement can take effect) |
-| **Scope** | National -- all Swedish-licensed operators (online gambling and betting); marketing is also blocked |
+| **Scope** | National -- all Swedish-licensed operators (online gambling and betting); marketing is also blocked. At a single licensee, the exclusion must cover all of the player's accounts and games (LIFS 2018:5 §4(2)). The practical reach of the underlying registration duty is bounded by LIFS 2018:3, which exempts certain game categories from mandatory registration |
 | **Enrollment method** | Online at [spelpaus.se](https://www.spelpaus.se/?lang=en) using BankID (national electronic identification) |
 | **Account action** | Operators must deny access to excluded players and close the account of any indefinitely excluded player |
 | **Marketing cessation** | Self-excluded players may not be sent gambling marketing (Gambling Act ch.15 §2) |
 | **Minimum exclusion period** | 1 month (fixed-term); indefinite registrations run for at least 12 months |
 | **Reinstatement** | Fixed-term exclusions expire automatically. There is no early exit -- an exclusion cannot be lifted before its period ends; indefinite exclusions can be ended after a minimum of 12 months. |
 | **Operator obligation** | Must check Spelpaus at registration and at every login; must connect to the national register | 
-| **Source** | [Spelpaus.se](https://www.spelpaus.se/?lang=en); Gambling Act ch.14 §§11-12; Ordinance ch.11 §§8-12 |
+| **Source** | [Spelpaus.se](https://www.spelpaus.se/?lang=en); Gambling Act ch.14 §§11-12; Ordinance ch.11 §§8-12; [LIFS 2018:5 §4(2)](https://www.spelinspektionen.se/lagar-regler/foreskrifter/lifs-20185/); [LIFS 2018:3 -- registration exemptions](https://lagen.nu/lifs/2018:3) |
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -336,15 +369,18 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Duty of care (omsorgsplikt) | Yes (statutory) | Operator must counteract excessive gambling through continuous monitoring and a documented action plan; contact players where problem gambling is identified or suspected | Gambling Act ch.14 §1; Ordinance ch.11 §§1-2; LIFS 2018:2 |
+| Duty of care (omsorgsplikt) | Yes (statutory) | Operator must counteract excessive gambling through continuous monitoring and a documented action plan; contact players where problem gambling is identified or suspected. The SGA **duty-of-care guidance** sets out the operative steps: analyse player profiles (behaviour, pattern, contacts), give the player feedback on their gambling behaviour, apply restrictions/access limitations, follow up on whether the measures worked, and maintain a living action plan disseminated across the organisation | Gambling Act ch.14 §1; Ordinance ch.11 §§1-2; LIFS 2018:2; duty-of-care guidance |
 | Deposit limits | Yes (mandatory) | Player MUST set a deposit limit before online play (a loss limit for token machines). Limits by day, week, and month. | Gambling Act ch.14 §6; Ordinance ch.11 §§3-5 |
 | Limit-change timing | Yes | Increases take effect after 72 hours; decreases take effect immediately | Ordinance ch.11 §§3-5 |
 | SEK 10,000 contact trigger | Yes | Operator must contact any player who raises a limit or sets a deposit limit above SEK 10,000 per month | Gambling Act ch.14 §7; Ordinance ch.11 §§3-5 |
 | Login-time limit | Yes (offer) | An optional login-time (session) limit must be offered to the player | Ordinance ch.11 §§3-5 |
 | Stake confirmation | Yes | Players must actively confirm stakes | Gambling Act ch.14 §6 |
-| Self-exclusion (Spelpaus) | Yes | Must offer self-exclusion, including an immediate 24-hour option for online casino, online bingo, and computer-simulated machines; link to and check the national Spelpaus register at registration and every login | Gambling Act ch.14 §§11-12; Ordinance ch.11 §§8-12 |
-| Behavioural monitoring | Yes | Continuous monitoring of gambling behaviour to detect signs of problem gambling | Gambling Act ch.14 §1; LIFS 2018:2 |
-| Player feedback | Yes | Provide the player with feedback on their own gambling behaviour (mandated measure under SGA duty-of-care guidance) | Duty-of-care guidance |
+| Self-exclusion (Spelpaus) | Yes | Must offer self-exclusion, including an immediate 24-hour option for online casino, online bingo, and computer-simulated machines; link to and check the national Spelpaus register at registration and every login. Self-exclusion must cover **all of a player's accounts and games at the licensee**, not just one product | Gambling Act ch.14 §§11-12; Ordinance ch.11 §§8-12; LIFS 2018:5 §4(2) |
+| Always-on risk + helpline display | Yes | Keep the risks of gambling and an independent helpline contact (Stodlinjen) readily accessible; show operator identity and the helpline prominently on the start page, with the SGA logo and a link to Spelinspektionen | LIFS 2018:5 §§7-8 |
+| Betting agents (spelombud) | Yes (if used) | Betting agents must know the relevant RG rules: 18+, the credit ban, and where players get help with the self-test and self-exclusion | LIFS 2018:5 §12 |
+| Behavioural monitoring | Yes | Continuous monitoring of gambling behaviour to detect signs of problem gambling; analyse player profiles (behaviour, pattern, contacts) per the SGA duty-of-care guidance | Gambling Act ch.14 §1; LIFS 2018:2; duty-of-care guidance |
+| Player feedback | Yes | Provide the player with feedback on their own gambling behaviour (mandated measure under the SGA duty-of-care guidance) | Duty-of-care guidance |
+| Restrictions and follow-up | Yes | Apply restrictions/access limitations where indicated, follow up on whether the measures worked, and maintain a living action plan disseminated across the organisation | Duty-of-care guidance |
 | Activity statements / game history | Yes | Players must be able to access their gambling and transaction history | Ordinance ch.11 §§1-2 |
 | Bonus restrictions | Yes | Bonus only on the first occasion of play; clear terms; >=60 days to meet conditions | Gambling Act ch.14 §9; Ordinance ch.11 §6 |
 | Documentation | Yes | Document all responsible-gambling measures and player contacts | Ordinance ch.11 §§1-2; LIFS 2018:2 |
@@ -494,8 +530,9 @@ Complete before launching {{PROGRAM_NAME}} in Sweden.
 
 ### Messaging
 - [ ] 18+ minimum-age information in all commercial communications
-- [ ] Problem-gambling support contact (Stodlinjen 020-81 91 00) in all channels except radio
-- [ ] Marketing observes the statutory moderation standard
+- [ ] Problem-gambling support contact (Stodlinjen 020-81 91 00) in all channels except radio -- shown with a web address, email, or phone number, not just the name (KOVFS 2025:2 §4.1.1)
+- [ ] Always-on online display: risks of gambling + Stodlinjen contact readily accessible; operator identity + helpline prominent on the start page with the SGA logo and link (LIFS 2018:5 §§7-8)
+- [ ] Marketing observes the moderation standard as codified by KOVFS 2025:2
 - [ ] Game rules and likelihood of winning accurate and easily accessible, in Swedish
 - [ ] No false near-win impression; free/trial games match the real-money game
 - [ ] Bonus offers limited to the first occasion of play, with clear terms and >=60 days to meet conditions
@@ -503,14 +540,20 @@ Complete before launching {{PROGRAM_NAME}} in Sweden.
 
 ### Advertising
 - [ ] No under-18 targeting
+- [ ] No intrusive formats (pop-ups, full-screen takeovers, pulsing/blinking) (KOVFS 2025:2)
+- [ ] No "easy/fast to win" or guaranteed-win impressions; no celebrity success attributed to gambling (KOVFS 2025:2)
+- [ ] No framing of gambling as a solution to social or financial problems (KOVFS 2025:2)
 - [ ] No marketing directed at self-excluded players or closed accounts without opt-in
 - [ ] No promotion of unlicensed gambling on TV, radio, or video-sharing platforms
 - [ ] Sponsorship arrangements reviewed against ch.15 §5 restrictions
-- [ ] Required disclosures (18+, support contact) present per channel
+- [ ] Bonus terms within one click of the ad, with wagering/stake/time conditions and "new players only" up front (KOVFS 2025:2)
+- [ ] Required disclosures (18+, support contact with a web/email/phone reference) present per channel
+- [ ] Reviewed against the SPER/BOS marketing guidelines and the BOS Code of Conduct (self-regulatory)
 
 ### Self-exclusion
 - [ ] Spelpaus integration implemented -- checks at registration and at every login
 - [ ] Immediate 24-hour self-exclusion option offered for online casino, online bingo, and computer-simulated machines
+- [ ] Self-exclusion covers all of a player's accounts and games at the licensee (LIFS 2018:5 §4(2))
 - [ ] Indefinitely excluded players' accounts closed; access denied to all excluded players
 - [ ] No marketing sent to self-excluded players
 - [ ] No early exit offered (exclusions run their full term; indefinite runs min 12 months)
@@ -519,6 +562,9 @@ Complete before launching {{PROGRAM_NAME}} in Sweden.
 
 ### Player protection -- interactive
 - [ ] Duty of care (omsorgsplikt) implemented: continuous monitoring + documented action plan
+- [ ] Duty-of-care guidance steps applied: player-profile analysis, player feedback, access restrictions, follow-up on effectiveness, living action plan disseminated across the organisation
+- [ ] Always-on risk + helpline display on the platform (LIFS 2018:5 §§7-8)
+- [ ] Betting agents (if used) trained on 18+, the credit ban, and where players get help with the self-test and self-exclusion (LIFS 2018:5 §12)
 - [ ] Mandatory deposit limit before play (daily, weekly, monthly)
 - [ ] Limit-change timing enforced (increase +72h, decrease immediate)
 - [ ] SEK 10,000/month contact trigger implemented (raise a limit or set deposit limit above SEK 10,000)
