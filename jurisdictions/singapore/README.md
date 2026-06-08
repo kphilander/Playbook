@@ -29,7 +29,7 @@ adaptation_notes: |
   adaptation needed for multilingual context (English, Mandarin,
   Malay, Tamil). Entry levy and automatic exclusion provisions are
   unique to Singapore and require specific messaging.
-last_updated: "2026-03-22"
+last_updated: "2026-06-08"
 ---
 
 # Singapore — Compliance Module
@@ -39,8 +39,8 @@ last_updated: "2026-03-22"
 > **Verticals covered**: Land-based Casino only
 > *(Singapore prohibits online gambling under the Gambling Control Act 2022. This module covers land-based casino operations at Marina Bay Sands and Resorts World Sentosa only.)*
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -71,7 +71,8 @@ last_updated: "2026-03-22"
 | **Primary regulator** | Gambling Regulatory Authority (GRA) |
 | **Website** | [www.gra.gov.sg](https://www.gra.gov.sg/) |
 | **Governing legislation** | Casino Control Act 2006; Gambling Control Act 2022; Gambling Regulatory Authority of Singapore Act 2022 |
-| **Key subsidiary legislation** | Casino Control (Responsible Gambling) Regulations 2013; Casino Control (Advertising) Regulations 2010; Casino Control (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Regulations 2009 |
+| **Key subsidiary legislation** | Casino Control (Responsible Gambling) Regulations 2013 (S 332/2013); Casino Control (Advertising) Regulations 2010 (S 86/2010); Casino Control (Problem Gambling -- Exclusion Orders and Visit Limits) Rules 2008 (S 623/2008); Casino Control (Section 122 Reconsideration and Appeals) Rules 2022 (S 645/2022); Casino Control (Entry Levy) Regulations (as varied by the Casino Control (Variation of Entry Levies) Order 2024); Casino Control (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Regulations 2009 |
+| **Standards of practice** | GRA-issued [Standards and Notices for Casino Operators and Businesses](https://www.gra.gov.sg/standards-notices/Standards-Notices-for-Casino-Operators-Businesses) -- binding operational directions issued under the Casino Control Act (e.g. s.102(2)). Confirm any standard or notice touching RG messaging, signage, advertising approval, or patron management before launch, as these can prescribe format and placement the Regulations leave open. |
 | **Reporting to** | Ministry of Home Affairs (MHA) |
 | **Regulatory approach** | **Prescriptive** -- detailed regulations with specific requirements, prior-approval regimes, and criminal penalties |
 | **Harm minimisation body** | National Council on Problem Gambling (NCPG), under Ministry of Social and Family Development (MSF) |
@@ -82,13 +83,13 @@ last_updated: "2026-03-22"
 - **2010**: Marina Bay Sands and Resorts World Sentosa open; advertising and entry levy regulations take effect
 - **2013**: Responsible Gambling Regulations enacted
 - **2022**: GRA reconstituted from Casino Regulatory Authority (CRA) on 1 August 2022; Gambling Control Act 2022 and GRA Act 2022 enacted, absorbing the former Remote Gambling Act 2014
-- **2024**: Casino Control (Amendment) Act 2024 -- criminalises breach of family visit limit and strengthens exclusion enforcement
+- **2024**: Casino Control (Amendment) Act 2024 -- gazetted 3 October 2024, **commenced 30 October 2024**. Criminalises breach of family visit limit, strengthens exclusion enforcement, expands GRA suitability criteria, and regularises the entry-levy rates in the Act
 
-### Upcoming changes
+### Recent regulatory changes
 
-The Casino Control (Amendment) Act 2024 was gazetted on 3 October 2024. Key changes include criminalising the breach of family visit limits (previously only third-party exclusions were criminal offences) and expanding the scope of automatic exclusion by law. Operators should verify implementation dates with GRA.
+The Casino Control (Amendment) Act 2024 was gazetted on 3 October 2024 and **commenced on 30 October 2024** -- it is now in force, not pending. Key changes include criminalising the breach of family visit limits (previously only third-party exclusions were criminal offences), strengthening exclusion enforcement, expanding GRA suitability criteria, and regularising the entry-levy rates within the Act. The self-exclusion table below already reflects the family-visit-limit penalty.
 
-**Source**: [Casino Control (Amendment) Act 2024](https://sso.agc.gov.sg/Acts-Supp/29-2024/Published/20241003?DocDate=20241003)
+**Source**: [Casino Control (Amendment) Act 2024](https://sso.agc.gov.sg/Acts-Supp/29-2024/Published/20241003?DocDate=20241003) | [MHA -- Commencement of the Casino Control (Amendment) Act on 30 October 2024](https://www.mha.gov.sg/media-room/newsroom/commencement-of-the-casino-control-amendment-act-on-30-october-2024/) | [GRA -- Casino Control (Amendment) Bill 2024 Second Reading Speech](https://www.gra.gov.sg/newsroom/latest-events-speeches/event-detail/the-casino-control-(amendment)-bill-2024-(second-reading-speech))
 
 ---
 
@@ -131,9 +132,9 @@ The Casino Control (Amendment) Act 2024 was gazetted on 3 October 2024. Key chan
 
 #### Land-based display
 
-Casino operators must display NCPG helpline information (1800-6-668-668) prominently in casino premises as part of their GRA-approved responsible gambling programme. This includes gaming floors, entry points, and areas where responsible gambling information is posted.
+Casino operators must display NCPG helpline information (1800-6-668-668) prominently in casino premises as part of their GRA-approved responsible gambling programme. This includes gaming floors, entry points, and areas where responsible gambling information is posted. The underlying display obligation sits in CCRGR 2013, Part II (esp. Reg 5).
 
-**Source**: [Casino Control (Responsible Gambling) Regulations 2013](https://sso.agc.gov.sg/SL/CCA2006-S332-2013)
+**Source**: [Casino Control (Responsible Gambling) Regulations 2013 (S 332/2013)](https://sso.agc.gov.sg/SL/CCA2006-S332-2013)
 
 #### Interactive display
 
@@ -157,10 +158,10 @@ Not applicable -- online gambling is prohibited in Singapore.
 
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
-| Casino premises | Obligation-based | Display responsible gambling information including helpline and self-exclusion details | CCA Part XI; RG Regs 2013 |
+| Casino premises | Obligation-based | Display responsible gambling information including helpline and self-exclusion details | CCA Part XI; CCRGR 2013, Part II (esp. Reg 5) |
 | Advertising/promotions | Standard-based | All casino ads must receive prior GRA approval; no glamorisation; no targeting minors/vulnerable | Advertising Regs 2010 |
-| Entry points | Standard-based | Entry levy information, age restriction (21+), NCPG helpline | CCA s.116, s.132 |
-| Exclusion/visit limit areas | Obligation-based | Information about self-exclusion, family exclusion, and visit limit schemes | CCA ss.159-168 |
+| Entry points | Standard-based | Entry levy information, age restriction (21+), NCPG helpline | CCA s.116, s.132; Entry Levy Regs |
+| Exclusion/visit limit areas | Obligation-based | Information about self-exclusion, family exclusion, and visit limit schemes | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 (S 623/2008) |
 
 **Obligation types explained:**
 - **Verbatim** -- exact prescribed text that must appear word-for-word
@@ -175,11 +176,13 @@ Singapore does not prescribe verbatim statements in the same manner as some US j
 
 | Obligation | What must be communicated | Where | Source |
 |---|---|---|---|
-| Responsible gambling information | Problem gambling signs, available help, self-exclusion options | Casino premises | RG Regs 2013 |
-| NCPG helpline | 1800-6-668-668 | Casino premises, advertising | RG Regs 2013 |
-| Entry levy | S$150/24hrs or S$3,000/year for citizens/PRs | Casino entry points | CCA s.116 |
+| Responsible gambling information | Disordered/problem gambling signs, available help, self-exclusion options | Casino premises | CCRGR 2013, Part II (Reg 5) |
+| NCPG helpline | 1800-6-668-668 | Casino premises, advertising | CCRGR 2013, Part II (Reg 5) |
+| Entry levy | S$150/24hrs or S$3,000/year for citizens/PRs | Casino entry points | CCA s.116; Entry Levy Regs |
 | Age restriction | 21+ to enter casino | Casino entry points | CCA s.132 |
-| Exclusion programmes | Self-exclusion and family exclusion information | Casino premises | CCA ss.159-168 |
+| Exclusion programmes | Self-exclusion and family exclusion information | Casino premises | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 |
+
+The operative operator-facing obligations -- pre-commitment (expenditure and time limits), display of RG messages and help resources, patron education, mandatory employee training, and regular programme review -- sit in **Casino Control (Responsible Gambling) Regulations 2013, Part II (especially Reg 5)**. The RG programme itself must be **GRA-approved and is subject to inspection and audit**.
 
 ### On-brand integration
 
@@ -247,7 +250,7 @@ Enforcement is active. Marina Bay Sands was fined SGD100,000 for launching casin
 
 ## Self-exclusion
 
-Singapore has the most comprehensive exclusion system in Asia-Pacific, administered by the NCPG with multiple tiers:
+Singapore has the most comprehensive exclusion system in Asia-Pacific. The NCPG administers the voluntary, family, and third-party channels, but a person may also be excluded by the **Gambling Regulatory Authority (GRA)** or by the **Commissioner of Police** -- staff and patron-facing materials should reflect that exclusion is not solely an NCPG process. The operative procedures (application, objection, variation, revocation, duration) for self-, family-, third-party and by-law exclusions and visit limits live in the **Casino Control (Problem Gambling -- Exclusion Orders and Visit Limits) Rules 2008**, not in the CCA sections alone.
 
 ### Exclusion types overview
 
@@ -258,6 +261,8 @@ Singapore has the most comprehensive exclusion system in Asia-Pacific, administe
 | **Family exclusion order** | Family member | As determined by NCPG | All casinos | No |
 | **Family visit limit** | Family member | As determined by NCPG | Limits casino visits per month | **Yes** -- up to S$10,000 fine or 12 months imprisonment |
 | **Third-party exclusion order** | NCPG (without application) | As determined by NCPG | All casinos | **Yes** -- up to S$10,000 fine or 12 months imprisonment |
+| **GRA exclusion order** | Gambling Regulatory Authority | As determined by GRA | Casino premises | **Yes** |
+| **Police exclusion order** | Commissioner of Police (CCA s.122) | As determined; reconsideration/appeal route available | Casino premises | **Yes** |
 | **Exclusion by law** | Automatic | Duration of qualifying condition | All casinos, jackpot rooms, Singapore Pools online | **Yes** |
 
 ### Self-exclusion details
@@ -269,7 +274,7 @@ Singapore has the most comprehensive exclusion system in Asia-Pacific, administe
 | **Scope** | All casinos in Singapore, jackpot machine rooms in private clubs, Singapore Pools remote betting |
 | **Enrollment method** | Online via NCPG IVEMS portal or in person |
 | **Reinstatement** | Application to NCPG after minimum 1 year |
-| **Source** | [CCA ss.159-168](https://sso.agc.gov.sg/Act/CCA2006) |
+| **Source** | [CCA ss.159-168](https://sso.agc.gov.sg/Act/CCA2006); [Casino Control (Problem Gambling -- Exclusion Orders and Visit Limits) Rules 2008 (S 623/2008)](https://sso.agc.gov.sg/SL/CCA2006-S623-2008) *(latest amendment S 97/2021; SSO: verify in browser before merge)* |
 
 ### Exclusion by law (automatic)
 
@@ -283,6 +288,21 @@ The following categories of persons are automatically excluded from casinos, jac
 This is automatic -- no application or revocation is required. The exclusion is lifted when the qualifying condition ends.
 
 **Source**: [NCPG Overview of Exclusions and Visit Limit](https://www.ncpg.org.sg/services/overview-of-exclusions-and-visit-limit)
+
+### Additional exclusion issuers (GRA and Police)
+
+Beyond the NCPG-administered and automatic channels, two further authorities can issue exclusions. Staff and patron-facing materials should reflect that a person may be excluded by the GRA or by the Police, each with its own process:
+
+| Issuer | Power | Process notes | Source |
+|---|---|---|---|
+| **Gambling Regulatory Authority** | May, by an exclusion order in writing, prohibit a person from entering or remaining on any casino premises | Authority's own order, distinct from NCPG channels | [GRA -- Exclusion Order by GRA](https://www.gra.gov.sg/harm-minimisation/exclusion-order-and-visit-limits/by-gra) |
+| **Commissioner of Police** | Exclusion order under CCA s.122 | Has its own reconsideration and appeal route | [GRA -- by NCPG/Others](https://www.gra.gov.sg/harm-minimisation/exclusion-order-and-visit-limits/by-ncpg-others); [Casino Control (Section 122 Reconsideration and Appeals) Rules 2022 (S 645/2022)](https://sso.agc.gov.sg/SL-Supp/S645-2022/Published/20220729) *(SSO: verify in browser before merge)* |
+
+### Operator duty for excluded persons
+
+Operators carry an affirmative duty -- not just a patron-side option. The casino must maintain and check the excluded-persons list, deny entry and gaming to excluded persons, and remove them from all marketing. NCPG provides an organisations-facing channel for processing self-exclusions. This duty is grounded in the CCA Part X excluded-persons provisions and CCRGR 2013, Part II.
+
+**Source**: [NCPG -- Self-Exclusion (For Organisations)](https://www.ncpg.org.sg/services/self-exclusions-and-visit-limits/apply-self-exclusion/for-organisations)
 
 ### Playbook language mapping
 
@@ -298,7 +318,7 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 > **Q: What exclusion options are available in Singapore?**
 >
-> Singapore has the most comprehensive casino exclusion system in Asia-Pacific, administered by the NCPG. Options include: self-exclusion (minimum 1 year from all casinos), voluntary visit limits, family exclusion orders, and family visit limits. Some categories of persons (bankrupts, social assistance recipients) are automatically excluded by law. If a patron asks about any of these, explain their options clearly and offer to help them contact the NCPG at 1800-6-668-668 or visit ncpg.org.sg. Use "take a break" in casual conversation; use the official programme names when explaining specifics.
+> Singapore has the most comprehensive casino exclusion system in Asia-Pacific. The NCPG administers self-exclusion (minimum 1 year from all casinos), voluntary visit limits, family exclusion orders, and family visit limits. A person may also be excluded by the **GRA** or the **Police** (under CCA s.122), and some categories of persons (bankrupts, social assistance recipients) are automatically excluded by law. If a patron asks about any of these, explain their options clearly and offer to help them contact the NCPG at 1800-6-668-668 or visit ncpg.org.sg. Use "take a break" in casual conversation; use the official programme names when explaining specifics.
 
 ---
 
@@ -308,24 +328,24 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Problem gambling information posting | Yes | Prominent display in casino premises | RG Regs 2013 |
-| Helpline display | Yes | NCPG 1800-6-668-668 | RG Regs 2013 |
-| Expenditure limits | Yes | Systems for patrons to set expenditure limits | RG Regs 2013 |
-| Time limits | Yes | Systems for patrons to set time limits | RG Regs 2013 |
-| Employee training | Yes | Compulsory for frontline and management staff | RG Regs 2013 |
-| Self-exclusion | Yes | Multi-tier NCPG system | CCA ss.159-168 |
-| Entry levy | Yes | S$150/24hrs or S$3,000/year for citizens/PRs | CCA s.116 |
-| Responsible gambling programme | Yes | Must be GRA-approved; subject to regular inspection and audit | RG Regs 2013 |
+| Disordered/problem gambling information posting | Yes | Prominent display in casino premises | CCRGR 2013, Part II (Reg 5) |
+| Helpline display | Yes | NCPG 1800-6-668-668 | CCRGR 2013, Part II (Reg 5) |
+| Expenditure limits | Yes | Systems for patrons to set expenditure limits | CCRGR 2013, Part II (Reg 5) |
+| Time limits | Yes | Systems for patrons to set time limits | CCRGR 2013, Part II (Reg 5) |
+| Employee training | Yes | Compulsory for frontline and management staff | CCRGR 2013, Part II (Reg 5) |
+| Self-exclusion | Yes | Multi-tier system (NCPG, GRA, Police, by law) | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 |
+| Entry levy | Yes | S$150/24hrs or S$3,000/year for citizens/PRs | CCA s.116; Entry Levy Regs |
+| Responsible gambling programme | Yes | Must be GRA-approved; subject to regular inspection and audit | CCRGR 2013, Part II (Reg 5) |
 | Age verification at entry | Yes | 21+ verification at casino entrance | CCA s.132 |
 
 ### Playbook tool messaging -- land-based
 
 | Tool | Playbook copy | Context |
 |---|---|---|
-| Expenditure limits | "Set a spending limit before you play. It takes 30 seconds and keeps you in control." | RG Regs 2013 |
-| Time limits | "Set a time reminder -- your session, your rules." | RG Regs 2013 |
-| Self-exclusion | "Need a longer break? Self-exclusion is free, confidential, and covers all casinos in Singapore." | CCA ss.159-168 |
-| Helpline | "The NCPG helpline is free and confidential: 1800-6-668-668, daily 8am-11pm." | RG Regs 2013 |
+| Expenditure limits | "Set a spending limit before you play. It takes 30 seconds and keeps you in control." | CCRGR 2013, Part II (Reg 5) |
+| Time limits | "Set a time reminder -- your session, your rules." | CCRGR 2013, Part II (Reg 5) |
+| Self-exclusion | "Need a longer break? Self-exclusion is free, confidential, and covers all casinos in Singapore." | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 |
+| Helpline | "The NCPG helpline is free and confidential: 1800-6-668-668, daily 8am-11pm." | CCRGR 2013, Part II (Reg 5) |
 
 ---
 
@@ -376,7 +396,8 @@ All collateral in this jurisdiction must display 21+ age notice:
 | **Foreigners** | Exempt |
 | **Purpose** | Social safeguard to minimise harmful gambling among locals |
 | **Revenue allocation** | Paid to Singapore Totalisator Board for social/charitable purposes |
-| **Source** | [CCA s.116](https://sso.agc.gov.sg/Act/CCA2006); [GRA Entry Levy](https://www.gra.gov.sg/resources/entry-levy) |
+| **Rate-setting instrument** | The levy is authorised by CCA s.116, but the **rates (S$150 / S$3,000) are fixed by subsidiary instruments** -- the Casino Control (Entry Levy) Regulations, as varied by the Casino Control (Variation of Entry Levies) Order. The 2019 variation order expired on 3 April 2024 and was restored by a 2024 Order; the 2024 Amendment Act then regularised the rates within the Act. Cite the controlling instrument alongside s.116, and verify the current rate before publishing. |
+| **Source** | [CCA s.116](https://sso.agc.gov.sg/Act/CCA2006); [GRA Entry Levy](https://www.gra.gov.sg/resources/entry-levy) (points to the Casino Control (Entry Levy) Regulations) |
 
 ### Playbook messaging for entry levy
 
@@ -460,8 +481,8 @@ legal:
 # --- MESSAGING ---------------------------------
 messaging:
   mandatory:
-    singapore-general: "If you or someone you know has a gambling problem, call 1800-6-668-668."
-    # Obligation-based -- no prescribed wording; above is suggested minimum
+    singapore-general: "If gambling is affecting you or someone you know, call the NCPG helpline: 1800-6-668-668."
+    # Obligation-based -- no prescribed wording; above is suggested minimum (stigma-free framing)
 ```
 
 ---
@@ -475,7 +496,8 @@ Complete before launching Playbook in Singapore.
 - [ ] Confirmed Casino Control Act 2006, Gambling Control Act 2022, and all subsidiary regulations
 - [ ] Verified legal gambling age: 21+
 - [ ] Reviewed permitted products: land-based casino only (2 integrated resorts)
-- [ ] Checked for pending regulatory changes (Casino Control (Amendment) Act 2024)
+- [ ] Confirmed Casino Control (Amendment) Act 2024 in force (commenced 30 October 2024)
+- [ ] Reviewed applicable GRA Standards and Notices for Casino Operators and Businesses
 - [ ] Identified deployment vertical: Land-based only
 
 ### Messaging
@@ -498,18 +520,20 @@ Complete before launching Playbook in Singapore.
 - [ ] Self-exclusion information and NCPG referral process in place
 - [ ] Family exclusion order information available
 - [ ] Visit limit scheme information available
-- [ ] Staff trained on all exclusion types (self, family, third-party, by law)
+- [ ] Staff trained on all exclusion types and issuers (self, family, third-party, GRA, Police s.122, by law)
+- [ ] Exclusion procedures referenced to the Exclusion Orders & Visit Limits Rules 2008 (S 623/2008)
 - [ ] Exclusion by law categories understood (bankrupts, social assistance, public rental, legal aid)
-- [ ] Self-excluded patrons removed from all marketing
+- [ ] Operator excluded-persons list maintained and checked; self-excluded patrons removed from all marketing
 
 ### Player protection -- land-based
 - [ ] GRA-approved responsible gambling programme implemented
-- [ ] Problem gambling information posted per programme requirements
+- [ ] Disordered/problem gambling information posted per programme requirements
 - [ ] NCPG helpline displayed in required locations
 - [ ] Employee training programme implemented (frontline and management)
 - [ ] Expenditure limit system available for patrons
 - [ ] Time limit system available for patrons
 - [ ] Entry levy system functioning (S$150/24hrs, S$3,000/year for citizens/PRs)
+- [ ] Current entry-levy rate verified against the controlling instrument (Entry Levy Regs / Variation Order)
 
 ### Age verification
 - [ ] Age verification at casino entrance (21+)
