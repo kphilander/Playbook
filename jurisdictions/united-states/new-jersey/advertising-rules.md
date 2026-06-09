@@ -106,7 +106,7 @@ The operative numeric standards for sports-wagering marketing come from the AGA'
 
 ### New Jersey codification -- A4113
 
-New Jersey has also moved the college-partnership and NIL restrictions from voluntary code into state law via **A4113**, which restricts sports-wagering partnerships with NJ institutions of higher education and NIL deals with college athletes. Where A4113 and the AGA code overlap, treat the statute as the controlling floor and the AGA code as the operable detail. Confirm the enacted text and effective date with legal before relying on it.
+New Jersey has also moved one of these restrictions from voluntary code into state law via **A4113** (signed July 8, 2025), which prohibits **public** institutions of higher education (and their athletic departments and booster clubs) from entering sports-wagering **advertising partnerships** with operators. A4113 does **not** address NIL deals with individual college athletes, and it applies only to **public** institutions -- the NIL-with-amateur-athletes prohibition comes from the AGA code alone. Where A4113 and the AGA code overlap (the public-campus advertising-partnership ban), treat the statute as the controlling floor and the AGA code as the operable detail. Source: [CDC Gaming -- New Jersey governor signs prohibition on university sportsbook partnerships](https://cdcgaming.com/brief/new-jersey-governor-signs-prohibition-on-university-sportsbook-partnerships-bill/).
 
 ---
 
@@ -205,7 +205,7 @@ Every gambling advertisement in New Jersey must include:
 | **In-session inducement** | Cannot induce continued wagering during active play, on exit attempt, or on win/loss (online) | NJAC 13:69O-1.2 |
 | **Under-21 talent** | No models, actors, or influencers under 21 in sports-wagering ads (sports wagering) | AGA Responsible Marketing Code |
 | **College-campus marketing** | No sports-wagering marketing on college/university campuses (sports wagering) | AGA Responsible Marketing Code / A4113 |
-| **College-athlete NIL deals** | No NIL sponsorship deals with college athletes to promote sports wagering (sports wagering) | AGA Responsible Marketing Code / A4113 |
+| **College-athlete NIL deals** | No NIL sponsorship deals with college athletes to promote sports wagering (sports wagering) | AGA Responsible Marketing Code |
 
 ---
 

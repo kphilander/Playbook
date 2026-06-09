@@ -47,7 +47,7 @@ last_updated: 2026-06-08
 |---|---|
 | [Regulatory authority](#regulatory-authority) | DGE + CCC two-body structure |
 | [Legal requirements](#legal-requirements) | 21+, permitted products, licensing |
-| [Game information & odds disclosure](#game-information--odds-disclosure) | Payout %, RTP, optimal-strategy and skill-game signage (NJAC 13:69D / 13:69F) |
+| [Game information & odds disclosure](#game-information--odds-disclosure) | Payout %, RTP, optimal-strategy (NJAC 13:69D / 13:69F) and skill-game signage (NJAC 13:69E-1.28Y) |
 | [Helpline](#helpline) | 1-800-GAMBLER (CCGNJ) + NCPG national |
 | [Messaging requirements](#messaging-requirements) | Verbatim online message + obligation-based land-based |
 | [Advertising restrictions](#advertising-restrictions) | DGE Advertising Best Practices |
@@ -106,7 +106,7 @@ New Jersey's regulatory framework uses a **two-body system** that separates inve
 |---|---|---|
 | Casino Control Act | [nj.gov/casinos/law/act/](https://www.nj.gov/casinos/law/act/) | Governs all casino gambling in NJ |
 | NJAC 13:69D (Accounting Controls and Standards) | [law.cornell.edu -- 13:69D-1.1](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69D-1-1) | Minimum payout %, theoretical RTP, optimal-strategy disclosure |
-| NJAC 13:69E-1.28A (Slot game approval) | [law.cornell.edu -- 13:69E-1.28A](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69E-1-28A) | Skill-based-game signage (skill-based, no minimum RTP, payouts by skill) |
+| NJAC 13:69E-1.28Y (Skill-based games) | [law.cornell.edu -- 13:69E-1.28Y](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69E-1-28Y) | Skill-based-game signage at (c) (Division-approved logo: skill-based, not a slot machine, no minimum RTP, payouts by skill) |
 | NJAC 13:69F (Rules of the Games) | [nj.gov -- Chapter 69F](https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69F.pdf) | Rules-of-play basis for each authorized game |
 | NJAC 13:69G (Self-Exclusion) | [nj.gov -- Chapter 69G](https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69G.pdf) | Self-exclusion program rules |
 | NJAC 13:69N (Sports Wagering) | [nj.gov -- Chapter 69N](https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69N.pdf) | Sports pool and online sports pool operations |
@@ -173,10 +173,10 @@ New Jersey's odds-and-payout transparency requirements live in the accounting-co
 | Minimum payout percentage | Slot machines must achieve a minimum theoretical payout to the public; the controlling figure is set in the accounting controls chapter and approved per game | NJAC 13:69D |
 | Theoretical return-to-player (RTP) | Theoretical payout/hold is defined and must be calculated and reported for each approved slot game | NJAC 13:69D-1.1 |
 | Optimal-strategy disclosure | For strategy-based games (for example, video poker), the theoretical payout is stated assuming optimal player strategy | NJAC 13:69D |
-| Skill-based-game signage | A skill-based game must carry signage stating that the game is skill-based, that it offers no minimum return-to-player, and that payouts are determined by player skill | NJAC 13:69E-1.28A |
+| Skill-based-game signage | A skill-based game must carry a Division-approved logo stating that the game is skill-based, is not a slot machine, and offers no minimum return-to-player, with patron-facing text that payouts are directly determined by the player's level of skill | NJAC 13:69E-1.28Y(c) |
 | Rules of the games | The rules of play, wagers, and payout odds for each authorized game are prescribed by regulation and must be made available to patrons | NJAC 13:69F |
 
-> **Verify before merge**: The exact minimum-payout figure and the optimal-strategy/skill-game signage wording should be confirmed against the controlling text of NJAC 13:69D and 13:69E before sign-off (the nj.gov chapter PDFs are scanned; Cornell LII is the machine-readable mirror).
+> **Verify before merge**: The exact minimum-payout figure and the optimal-strategy/skill-game signage wording should be confirmed against the controlling text of NJAC 13:69D and 13:69E-1.28Y before sign-off (the nj.gov chapter PDFs are scanned; Cornell LII is the machine-readable mirror — [verify 13:69E-1.28Y in browser](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69E-1-28Y)).
 
 ### Playbook angle -- Theme 1
 
@@ -197,8 +197,8 @@ New Jersey has its own state-specific gambling helpline operated by the **Counci
 | **Primary number** | 1-800-GAMBLER (1-800-426-2537) |
 | **Organization** | Council on Compulsive Gambling of New Jersey, Inc. |
 | **Website** | [800gambler.org](https://800gambler.org) |
-| **Office hours** | Monday--Friday, 9am--5pm |
-| **Office address** | 100 Mulberry St, Newark, NJ 07102 |
+| **Office hours** | Monday--Friday, 8am--5pm (helpline 24/7) |
+| **Office address** | 3635 Quakerbridge Rd, Suite 7, Hamilton, NJ 08619 (office phone 609-588-5515) |
 | **Cost** | Free |
 | **Social media** | Twitter: @ccgofnj; Instagram: @800gambler |
 
@@ -627,7 +627,7 @@ helplines:
       number_numeric: "1-800-426-2537"
       website: "800gambler.org"
       label: "Council on Compulsive Gambling of New Jersey"
-      hours: "Mon-Fri 9am-5pm (office); 24/7 via NCPG national"
+      hours: "Mon-Fri 8am-5pm (office); helpline 24/7"
       state_resource: "Council on Compulsive Gambling of New Jersey (CCGNJ)"
       state_website: "800gambler.org"
       notes: "NJ-specific helpline operated by CCGNJ. NCPG national resources (1-800-MY-RESET, text 800GAM, ncpgambling.org/chat) also available 24/7."
@@ -724,7 +724,7 @@ Complete before launching {{PROGRAM_NAME}} in New Jersey.
 
 ### Game information & odds disclosure
 - [ ] Where the operator publishes payout %, RTP, or rules of play, the figures are surfaced plainly (NJAC 13:69D / 13:69F)
-- [ ] Skill-based games carry required skill/no-minimum-RTP signage (NJAC 13:69E-1.28A)
+- [ ] Skill-based games carry required skill/no-minimum-RTP signage (NJAC 13:69E-1.28Y(c))
 
 ### Age verification
 - [ ] Land-based: age verification at casino entrance / gaming areas
