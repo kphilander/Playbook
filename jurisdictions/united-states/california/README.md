@@ -147,7 +147,7 @@ There are roughly three generations of compacts, each with increasingly detailed
 | CGCC Compacts page | [cgcc.ca.gov/compacts](https://www.cgcc.ca.gov/?pageID=compacts) | Full text of all ratified compacts and amendments |
 | CGCC About page | [cgcc.ca.gov/aboutus](https://www.cgcc.ca.gov/?pageID=aboutus&pageName=About+Us) | CGCC role and authority |
 | CGCC Play Responsibly page | [cgcc.ca.gov/playresponsibly](https://www.cgcc.ca.gov/?pageID=playresponsibly) | Cardroom self-exclusion overview; notes it does **not** cover tribal casinos |
-| BGC Tribal page | [oag.ca.gov/gambling/tribal](https://oag.ca.gov/gambling/tribal) | Bureau's tribal gaming role; model-compact RG provisions summary |
+| BGC Tribal page | [oag.ca.gov/gambling/tribal](https://oag.ca.gov/gambling/tribal) | Bureau's tribal gaming role -- licensing, suitability, and background investigations (not a source for model-compact RG provisions) |
 | BGC Responsible Gambling page | [oag.ca.gov/gambling/responsible](https://oag.ca.gov/gambling/responsible) | Cardroom self-exclusion program, forms, helpline and resource list |
 | BGC Self-Exclusion page | [oag.ca.gov/gambling/exclusion](https://oag.ca.gov/gambling/exclusion) | Statewide cardroom self-exclusion enrollment |
 | 4 CCR Article 9 (cardroom RG) | [law.cornell.edu -- 4 CCR 12460](https://www.law.cornell.edu/regulations/california/4-CCR-12460) | Codified cardroom RG standard of practice (ss. 12460-12466) |
@@ -193,8 +193,8 @@ California gambling law has several unique characteristics:
 |---|---|---|
 | Tribes with ratified compacts | 67 | CGCC (Jan 2025) |
 | Secretarial Procedures in effect | 10 additional tribes | CGCC (Jan 2025) |
-| Tribes operating casinos | 63 | CGCC / CNIGA |
-| Total casinos | 66 | CGCC / CNIGA |
+| Tribes operating casinos | 62 | CGCC / AGA (2025) |
+| Total casinos | 65 | CGCC / AGA (2025) |
 | Estimated annual gross gaming revenue | ~$8.5 billion | AGA (2025) |
 | Economic impact | ~$35 billion (total state economy contribution) | AGA |
 | Share of US tribal casino revenue | >25% | AGA |
@@ -209,13 +209,13 @@ California gambling law has several unique characteristics:
 
 | Section | Title | What it requires | Themes |
 |---|---|---|---|
-| **s. 12460** | Definitions | Defines "problem gambling," "self-restriction," "self-exclusion," and the OPG-approved toll-free number for the rest of Article 9 | Foundation |
+| **s. 12460** | Definitions | Defines "self-exclusion" and "self-restriction" for the rest of Article 9 (does not define "problem gambling") | Foundation |
 | **s. 12461** | Posting Referral Information | Signage on the nature and symptoms of problem gambling + the OPG-approved toll-free number at entrances/exits, near gambling areas, and at cash/credit areas; any cardroom website must carry an RG message and a link to OPG | 8, 3, 2, 1 |
 | **s. 12462** | Training Requirements | New-employee orientation (within 60 days of hire) **and** annual problem gambling training for all employees who interact with patrons in gambling areas; documentation retained | 9 |
 | **s. 12463** | Self-Restriction Program | Operator-run program letting patrons bar themselves from specific games or the whole establishment; confidential lists, removal procedures, check-cashing/credit restriction, marketing suppression, forfeiture of unredeemed winnings to problem gambling prevention | 5, 4, 6 |
-| **s. 12464** | Self-Exclusion Program | The **statewide, BGC-administered** self-exclusion registry (Form CGCC-CH7-05); one-year-irrevocable or lifetime terms; no credit to enrolled persons; forfeiture of unredeemed jackpots/prizes to CDPH-OPG | 4, 5, 9 |
-| **s. 12465** | Self-Exclusion -- removal mechanics | Licensees must immediately remove and report enrolled persons; procedures for honoring the statewide list | 4, 9 |
-| **s. 12466** | Responsible Gambling Program Review | Every licensee must maintain a written **Program for Responsible Gambling** covering all Article 9 standards; the Bureau may demand it, cite deficiencies, set a cure period, and impose penalties (up to $1,000 per violation) | 9, 10 |
+| **s. 12464** | Self-Exclusion Program | The **statewide, BGC-administered** self-exclusion registry (Form CGCC-CH7-05); enrollment, no credit to enrolled persons; forfeiture of unredeemed jackpots/prizes to CDPH-OPG (s. 12464 sets no duration terms -- see s. 12465) | 4, 5, 9 |
+| **s. 12465** | Removal from the List of Self-Excluded Persons | Removal mechanics: a **lifetime** exclusion may request removal only **after one year**; fixed-term exclusions auto-expire at the end of the requested term; licensees honor the statewide list | 4, 9 |
+| **s. 12466** | Responsible Gambling Program Review | Every licensee must maintain a written **Program for Responsible Gambling** covering all Article 9 standards; the Bureau may demand it, cite deficiencies, and set a cure period, and the **Commission** may assess penalties (up to $1,000 per violation) | 9, 10 |
 
 ### Cardroom signage and referral information (s. 12461)
 
@@ -265,7 +265,7 @@ This is the sharpest contrast with the tribal side. California cardrooms partici
 | **Scope** | Statewide across all licensed cardrooms (does **not** cover tribal casinos) |
 | **Administrator** | Bureau of Gambling Control (CA DOJ) |
 | **Enrollment form** | CGCC-CH7-05 |
-| **Duration options** | One year (irrevocable) or lifetime |
+| **Term / removal** | Set by **s. 12465** (not s. 12464): a **lifetime** exclusion may request removal only **after one year**; a fixed-term exclusion auto-expires at the end of the requested term |
 | **Credit** | No credit may be extended to enrolled persons |
 | **Winnings** | Unredeemed jackpots/prizes forfeited to CDPH-OPG |
 | **Operator duty** | Immediately remove enrolled persons and report; honor the statewide list |
@@ -278,7 +278,7 @@ Every cardroom licensee must maintain a single written **Program for Responsible
 
 - The Bureau may **demand** the written program at any time
 - The Bureau may **cite deficiencies** and set a **cure period**
-- The Bureau may impose **penalties of up to $1,000 per violation**
+- The **Commission** (CGCC) may assess **penalties of up to $1,000 per violation** -- the Bureau issues the deficiency notice and sets the cure period; the Commission imposes the fine
 
 - **Citation:** [4 CCR s. 12466](https://www.law.cornell.edu/regulations/california/4-CCR-12466) (Responsible Gambling Program Review); definitions at [4 CCR s. 12460](https://www.law.cornell.edu/regulations/california/4-CCR-12460). Parent statute: Gambling Control Act, Bus. & Prof. Code s. 19800 et seq.
 
@@ -299,9 +299,9 @@ The tribal side genuinely varies compact-to-compact, but the corpus no longer su
 | **Employee/manager training** | **New-hire RG training before floor work**, plus **annual training** for managers and front-line employees, typically via an established problem-gambling-organization relationship | 2004 / 2012 | 9 |
 | **Self-exclusion enrollment** | Allow patrons to enroll in self-exclusion; halt promotional mailings; deny credit and check-cashing; revoke privileges for casino services | Post-2011 | 4, 5 |
 
-> **Dating correction:** the advertising RG-message-plus-helpline obligation is **not** new to post-2011 compacts. The **2004-generation** compacts already require advertising and marketing materials to carry responsible gambling messages and a toll-free helpline number. Operators under 2004-2006 compacts should not assume they are exempt.
+> **Dating note (verify before relying):** the advertising RG-message-plus-helpline obligation appears to pre-date the post-2011 compacts -- the **2004-generation** compacts are commonly described as already requiring advertising and marketing materials to carry responsible gambling messages and a toll-free helpline number, so operators under 2004-2006 compacts should not assume they are exempt. The compact PDFs are image/binary and not machine-extractable, so **the 2004-generation dating of this advertising obligation should be verified against a specific compact PDF** (the "Patron Disputes and Responsible Gambling" section of a named tribe's compact) before relying on it.
 
-- **Citations:** [oag.ca.gov/gambling/tribal](https://oag.ca.gov/gambling/tribal) (Bureau summary of model-compact RG provisions); [AGA Responsible Gaming Regulations Guide -- California entry](https://www.americangaming.org/resources/responsible-gaming-regulations-and-statutes-guide/). Full compact text: [CGCC compacts library](https://www.cgcc.ca.gov/?pageID=compacts) -- individual compact PDFs are image/binary and are not machine-extractable, so cite by **section within a named tribe's compact** (typically the "Patron Disputes and Responsible Gambling" section). *Verify the exact provision against the specific compact before relying on it.*
+- **Citations:** [AGA Responsible Gaming Regulations Guide -- California entry](https://www.americangaming.org/resources/responsible-gaming-regulations-and-statutes-guide/) (corroborates the common model-compact RG provisions); a named tribe's compact via the [CGCC compacts library](https://www.cgcc.ca.gov/?pageID=compacts) -- individual compact PDFs are image/binary and not machine-extractable, so cite by **section within a named tribe's compact** (typically the "Patron Disputes and Responsible Gambling" section). *Verify the exact provision against the specific compact before relying on it.* (The Bureau's [tribal gaming page](https://oag.ca.gov/gambling/tribal) covers licensing, suitability, and background investigations -- not these RG provisions -- so it is not cited here as their source.)
 
 ---
 
@@ -369,9 +369,9 @@ For **cardrooms**, display is **codified and mandatory** -- the OPG-approved tol
 
 Because California has no single state-mandated display format, operators should:
 1. Check their specific compact for helpline display requirements
-2. Display **1-800-GAMBLER** as the primary number (widely recognized, used by CALPG in-state)
+2. Display **1-800-GAMBLER** as the primary number -- this is California's mandated/primary number, named verbatim in 4 CCR s. 12461, and the state has confirmed it is **not** changing it
 3. Include the CALPG website (calpg.org) where space permits
-4. Add **1-800-MY-RESET** as the updated national branded number
+4. Optionally include **1-800-MY-RESET** as a national alternate (NCPG's branded national number) -- this is **not** a California display change; California is not switching from 1-800-GAMBLER ([CALPG/OPG statement](https://www.prweb.com/releases/dont-panic-californias-problem-gambling-helpline-is-not-changing-302582969.html))
 
 ### On-brand helpline display
 
@@ -510,7 +510,7 @@ In sharp contrast to the fragmented tribal model, **cardrooms participate in a g
 | **Scope** | Statewide across all licensed cardrooms (does **not** apply to tribal casinos) |
 | **Administrator** | Bureau of Gambling Control (CA DOJ) |
 | **Enrollment form** | CGCC-CH7-05 |
-| **Duration** | One year (irrevocable) or lifetime |
+| **Term / removal (s. 12465)** | A **lifetime** exclusion may request removal only **after one year**; a fixed-term exclusion auto-expires at the end of the requested term |
 | **Credit** | No credit to enrolled persons |
 | **Winnings** | Unredeemed jackpots/prizes forfeited to CDPH-OPG |
 | **Operator duty** | Immediately remove and report enrolled persons; honor the statewide list |
@@ -558,7 +558,7 @@ Requirements differ by regime. The table below shows **tribal** common provision
 | **Self-exclusion** | Yes (post-2011) -- property-level program | **Yes -- statewide registry** (Form CGCC-CH7-05) | Compacts; 4 CCR ss. 12464-12465 |
 | **Self-restriction (in-venue)** | Varies | **Yes -- mandatory** operator-run program (bar specific games or whole venue) | 4 CCR s. 12463 |
 | **Employee training** | Common model-compact expectation -- new-hire before floor work + annual | **Yes -- mandatory** orientation within 60 days + annual | Compacts; 4 CCR s. 12462 |
-| **Written RG program + review** | Set by tribal gaming commission | **Yes -- mandatory** Program for Responsible Gambling; Bureau review, penalties to $1,000/violation | 4 CCR s. 12466 |
+| **Written RG program + review** | Set by tribal gaming commission | **Yes -- mandatory** Program for Responsible Gambling; Bureau review, Commission-assessed penalties to $1,000/violation | 4 CCR s. 12466 |
 | **Credit self-limitation** | Varies | Yes -- via self-restriction program | Compacts; 4 CCR s. 12463 |
 | **No complimentary alcohol** | Yes (most compacts) | Per state alcohol licensing | Most compacts |
 | **Session time tracking** | No | No | -- |
@@ -589,8 +589,8 @@ Requirements differ by regime. The table below shows **tribal** common provision
 
 | Casino type | Minimum age | Approximate count |
 |---|---|---|
-| Tribal casino **with** alcohol license | 21+ | ~43 of 63 |
-| Tribal casino **without** alcohol license | 18+ | ~20 of 63 |
+| Tribal casino **with** alcohol license | 21+ | ~45 of 65 |
+| Tribal casino **without** alcohol license | 18+ | ~20 of 65 |
 
 The age requirement is determined by two factors:
 1. The terms of the individual tribal-state compact
