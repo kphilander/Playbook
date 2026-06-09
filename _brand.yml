@@ -234,7 +234,9 @@ helplines:
       number: "1-800-522-4700"
       alternate: "1-800-GAMBLER"
       new_primary: "1-800-MY-RESET"
-      text_number: "Text SUPPORT to 53342"
+      # NCPG texts via the full helpline numbers (no keyword/shortcode).
+      # Source: https://www.ncpgambling.org/help-treatment/about-the-national-problem-gambling-helpline/
+      text_number: "Text 1-800-MY-RESET (1-800-697-3738) or 1-800-522-4700"
       chat_url: "www.ncpgambling.org/chat"
       website: "www.ncpgambling.org"
       label: "National Council on Problem Gambling"
@@ -250,7 +252,9 @@ helplines:
       notes: "No separate state helpline — uses NCPG national number"
     new-jersey:
       number: "1-800-GAMBLER"
-      text_number: "Text 800GAM"
+      # CCGNJ-owned 1-800-GAMBLER text shortcode.
+      # Source: https://800gambler.org/about-us/
+      text_number: "Text 800GAMBLER to 53342"
       chat_url: "www.800gambler.org/chat"
       website: "www.800gambler.org"
       label: "Council on Compulsive Gambling of New Jersey"

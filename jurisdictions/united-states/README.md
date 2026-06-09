@@ -13,7 +13,7 @@
 |---|---|
 | [Regulatory landscape](#regulatory-landscape) | Federal framework and state-by-state model |
 | [Key federal legislation](#key-federal-legislation) | Wire Act, PASPA, IGRA, UIGEA |
-| [National helplines](#national-helplines) | NCPG and the 1-800-MY-RESET transition |
+| [National helplines](#national-helplines) | NCPG (1-800-MY-RESET / 1-800-522-4700) and the CCGNJ-owned 1-800-GAMBLER |
 | [AGA Responsible Gaming framework](#aga-responsible-gaming-framework) | Industry self-regulatory standards |
 | [State structure](#state-structure) | All 50 states + DC with key facts |
 | [`_brand.yml` structure](#brandyml-structure) | Restructuring US entries to state sub-entries |
@@ -72,24 +72,32 @@ For operators deploying {{PROGRAM_NAME}} in the United States, this state-by-sta
 
 ### NCPG (National Council on Problem Gambling)
 
-The **National Council on Problem Gambling (NCPG)** operates the primary US gambling helpline. As of January 2026, three numbers are accepted:
+The **National Council on Problem Gambling (NCPG)** operates the National Problem Gambling Helpline network. As of January 2026, NCPG's helpline is reachable on two numbers:
 
 | Number | Status | Notes |
 |---|---|---|
 | **1-800-522-4700** | Active | Legacy number; still widely used and operational |
-| **1-800-GAMBLER** | Active | Vanity number; commonly required by state regulators |
-| **1-800-MY-RESET** | Active (new, January 2026) | NCPG rebrand; being promoted as the primary number going forward |
+| **1-800-MY-RESET** (1-800-697-3738) | Active (new, January 2026) | NCPG's National Problem Gambling Helpline number, [launched January 29, 2026](https://www.ncpgambling.org/help-treatment/about-the-national-problem-gambling-helpline/); a new front door to the **same** helpline network. NCPG **strongly encourages** adoption but [**does not require it**](https://www.ncpgambling.org/1-800-my-reset-national-problem-gambling-helpline-faq/), and asks regulators to **authorize** its promotion in digital and multi-jurisdictional advertising |
 
-**NGCB Notice 2026-04** confirmed that all three numbers are accepted for regulatory compliance in Nevada. Other states are expected to follow. Operators should:
-- Display **1-800-GAMBLER** where state regulations specifically require it
-- Add **1-800-MY-RESET** as the primary branded helpline going forward
-- Keep **1-800-522-4700** as a fallback — it remains the most recognized number
+### 1-800-GAMBLER (CCGNJ-owned — separate from NCPG)
+
+**1-800-GAMBLER is not an NCPG number.** It is a [federally registered service mark **owned by the Council on Compulsive Gambling of New Jersey (CCGNJ)**](https://800gambler.org/about-us/). NCPG's non-exclusive license to use it [**lapsed in 2022**, and the New Jersey courts ordered NCPG to **cease and desist** using the 1-800-GAMBLER® mark](https://www.szaferman.com/ownership-rights-in-the-federally-registered-service-mark-1-800-gambler-are-upheld-by-the-courts-of-new-jersey/).
+
+| Number | Owner | Notes |
+|---|---|---|
+| **1-800-GAMBLER** | CCGNJ | CCGNJ-owned vanity number, written into many state regulations by name; display where state-required |
+
+**The number an operator must display is set by the state regulator** — often **1-800-GAMBLER** by name, or a state-specific line. **1-800-MY-RESET** is the national resource to promote *where the regulator authorizes it*; adoption is voluntary, not a mandatory national display number. In Nevada, [**NGCB Notice #2026-09** (February 11, 2026)](https://www.gaming.nv.gov/contentassets/7568a04a6f774450a186ee4e28e1d614/notice-to-licensees-2026--re-ncpg-phone-number.pdf) acknowledges all three numbers (1-800-MY-RESET; 1-800-522-4700; 1-800-GAMBLER) as operating helpline phone numbers for problem gambling resources. Operators should:
+- Display **1-800-GAMBLER** where state regulations specifically require it by name
+- Promote **1-800-MY-RESET** where the state regulator authorizes it — adoption is voluntary, not required
+- Keep **1-800-522-4700** as a fallback — it remains a widely recognized number on the same network
 
 ### Other national resources
 
 | Resource | Contact | Description |
 |---|---|---|
-| **NCPG text line** | Text 800GAM | Text-based support |
+| **NCPG text line** | Text **1-800-MY-RESET** (1-800-697-3738) or **1-800-522-4700** | NCPG texts via the [full helpline numbers](https://www.ncpgambling.org/help-treatment/about-the-national-problem-gambling-helpline/) — there is no NCPG keyword/shortcode |
+| **CCGNJ text line** | Text **800GAMBLER** to **53342** | CCGNJ's text shortcode for 1-800-GAMBLER (separate from NCPG) |
 | **NCPG chat** | www.ncpgambling.org/chat | Online chat support |
 | **988 Suicide & Crisis Lifeline** | Call/text 988 | Not gambling-specific; for crisis situations |
 
@@ -199,7 +207,7 @@ helplines:
   united-states:
     number: "1-800-522-4700"
     alternate: "1-800-GAMBLER"
-    text_number: "Text 800522"
+    text_number: "Text 1-800-MY-RESET (1-800-697-3738) or 1-800-522-4700"
     website: "www.ncpgambling.org"
     label: "National Problem Gambling Helpline"
 ```
@@ -215,7 +223,7 @@ helplines:
       number: "1-800-522-4700"
       alternate: "1-800-GAMBLER"
       new_primary: "1-800-MY-RESET"
-      text_number: "Text SUPPORT to 53342"
+      text_number: "Text 1-800-MY-RESET (1-800-697-3738) or 1-800-522-4700"
       chat_url: "www.ncpgambling.org/chat"
       website: "www.ncpgambling.org"
       label: "National Council on Problem Gambling"
