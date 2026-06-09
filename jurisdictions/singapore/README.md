@@ -132,9 +132,9 @@ The Casino Control (Amendment) Act 2024 was gazetted on 3 October 2024 and **com
 
 #### Land-based display
 
-Casino operators must display NCPG helpline information (1800-6-668-668) prominently in casino premises as part of their GRA-approved responsible gambling programme. This includes gaming floors, entry points, and areas where responsible gambling information is posted. The underlying display obligation sits in CCRGR 2013, Part II (esp. Reg 5).
+Casino operators must display NCPG helpline information (1800-6-668-668) prominently in casino premises as part of their GRA-approved responsible gambling programme. This includes gaming floors, entry points, and areas where responsible gambling information is posted. The prominent-display and signage standard itself sits in the **Responsible Gambling Code for Casinos** (issued by the GRA under CCA s.200B and given binding force as the "responsible gambling requirements" via CCRGR 2013 reg 3), not in CCRGR reg 5 -- reg 5 governs the approval of the operator's responsible gambling programme.
 
-**Source**: [Casino Control (Responsible Gambling) Regulations 2013 (S 332/2013)](https://sso.agc.gov.sg/SL/CCA2006-S332-2013)
+**Source**: [Casino Control (Responsible Gambling) Regulations 2013 (S 332/2013)](https://sso.agc.gov.sg/SL/CCA2006-S332-2013) (reg 2 defines the Responsible Gambling Code for Casinos as the code issued under CCA s.200B; reg 3 incorporates it). SSO blocks automated fetch -- verify in browser.
 
 #### Interactive display
 
@@ -158,7 +158,7 @@ Not applicable -- online gambling is prohibited in Singapore.
 
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
-| Casino premises | Obligation-based | Display responsible gambling information including helpline and self-exclusion details | CCA Part XI; CCRGR 2013, Part II (esp. Reg 5) |
+| Casino premises | Obligation-based | Display responsible gambling information including helpline and self-exclusion details | CCA Part XI; Responsible Gambling Code for Casinos (CCA s.200B), incorporated via CCRGR 2013 reg 3 |
 | Advertising/promotions | Standard-based | All casino ads must receive prior GRA approval; no glamorisation; no targeting minors/vulnerable | Advertising Regs 2010 |
 | Entry points | Standard-based | Entry levy information, age restriction (21+), NCPG helpline | CCA s.116, s.132; Entry Levy Regs |
 | Exclusion/visit limit areas | Obligation-based | Information about self-exclusion, family exclusion, and visit limit schemes | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 (S 623/2008) |
@@ -176,13 +176,13 @@ Singapore does not prescribe verbatim statements in the same manner as some US j
 
 | Obligation | What must be communicated | Where | Source |
 |---|---|---|---|
-| Responsible gambling information | Disordered/problem gambling signs, available help, self-exclusion options | Casino premises | CCRGR 2013, Part II (Reg 5) |
-| NCPG helpline | 1800-6-668-668 | Casino premises, advertising | CCRGR 2013, Part II (Reg 5) |
+| Responsible gambling information | Disordered/problem gambling signs, available help, self-exclusion options | Casino premises | Responsible Gambling Code for Casinos (CCA s.200B), incorporated via CCRGR 2013 reg 3 |
+| NCPG helpline | 1800-6-668-668 | Casino premises, advertising | Responsible Gambling Code for Casinos (CCA s.200B), incorporated via CCRGR 2013 reg 3 |
 | Entry levy | S$150/24hrs or S$3,000/year for citizens/PRs | Casino entry points | CCA s.116; Entry Levy Regs |
 | Age restriction | 21+ to enter casino | Casino entry points | CCA s.132 |
 | Exclusion programmes | Self-exclusion and family exclusion information | Casino premises | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 |
 
-The operative operator-facing obligations -- pre-commitment (expenditure and time limits), display of RG messages and help resources, patron education, mandatory employee training, and regular programme review -- sit in **Casino Control (Responsible Gambling) Regulations 2013, Part II (especially Reg 5)**. The RG programme itself must be **GRA-approved and is subject to inspection and audit**.
+The operative operator-facing obligations split across two instruments. Pre-commitment (systems for patrons to set expenditure and time limits), patron-exclusion and visit-limit systems, and mandatory employee training sit in the programme contents prescribed by **Casino Control (Responsible Gambling) Regulations 2013, reg 5(2)(e)-(h)**; reg 5 also governs the approval of that programme and its periodic review (regs 5-8). The prominent display of RG messages, help resources and the helpline is a standard set by the **Responsible Gambling Code for Casinos** (issued under CCA s.200B and incorporated as the binding "responsible gambling requirements" via CCRGR 2013 reg 3). The RG programme itself must be **GRA-approved and is subject to inspection and audit**.
 
 ### On-brand integration
 
@@ -214,7 +214,7 @@ Singapore uses obligation-based requirements, so operators have flexibility to u
 | No targeting minors | Must not target persons under 21 | Land-based | Advertising Regs 2010 |
 | No targeting vulnerable | Must not target vulnerable persons | Land-based | Advertising Regs 2010 |
 | No misleading claims | Must not contain misleading claims about odds or winnings | Land-based | Advertising Regs 2010 |
-| Designated sites only | Limited factual advertisements permitted only at designated sites | Land-based | Advertising Regs 2010, Reg 5 |
+| Designated sites only | Limited factual advertisements permitted only at designated sites | Land-based | Advertising Regs 2010, reg 4 (esp. reg 4(2)-(3)) |
 
 ### Channel-specific rules
 
@@ -222,7 +222,7 @@ Singapore uses obligation-based requirements, so operators have flexibility to u
 |---|---|---|---|
 | Broadcast (TV/radio) | Casino advertising heavily restricted; requires GRA approval | Land-based | Advertising Regs 2010 |
 | Digital | Online casino advertising prohibited (online gambling is illegal) | N/A | GCA 2022 |
-| Print | Limited factual ads at designated tourist sites, hotels, Changi Airport only | Land-based | Advertising Regs 2010, Reg 5 |
+| Print | Limited factual ads at designated tourist sites, hotels, Changi Airport only | Land-based | Advertising Regs 2010, reg 4(2)-(3) |
 | Direct marketing | Subject to GRA approval | Land-based | Advertising Regs 2010 |
 | In-venue | Subject to GRA approval as part of casino operations | Land-based | Advertising Regs 2010 |
 | Sponsorship | Subject to GRA approval | Land-based | Advertising Regs 2010 |
@@ -244,7 +244,7 @@ All approved casino advertisements must comply with GRA guidelines. The specific
 
 Enforcement is active. Marina Bay Sands was fined SGD100,000 for launching casino-related promotions without prior GRA approval, demonstrating that the prior-approval requirement is strictly enforced.
 
-**Source**: [Casino Control (Advertising) Regulations 2010](https://sso.agc.gov.sg/SL/CCA2006-S86-2010) | [GRA Responsible Gambling, Advertising & Promotion](https://www.gra.gov.sg/harm-minimisation/responsible-gambling-advertising-promotion)
+**Source**: [Casino Control (Advertising) Regulations 2010 (S 86/2010)](https://sso.agc.gov.sg/SL/CCA2006-S86-2010) (in this instrument, reg 4 is "Permitted advertising and promotion" -- which sets out the designated-site, hotel and Changi Airport carve-outs at reg 4(2) and the "factual information only" limited-advertisement test at reg 4(3); reg 3 imposes the prior-approval requirement; reg 5 is "Interviews and media releases") | [GRA Responsible Gambling, Advertising & Promotion](https://www.gra.gov.sg/harm-minimisation/responsible-gambling-advertising-promotion). SSO blocks automated fetch -- verify statute text in browser.
 
 ---
 
@@ -328,24 +328,24 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Disordered/problem gambling information posting | Yes | Prominent display in casino premises | CCRGR 2013, Part II (Reg 5) |
-| Helpline display | Yes | NCPG 1800-6-668-668 | CCRGR 2013, Part II (Reg 5) |
-| Expenditure limits | Yes | Systems for patrons to set expenditure limits | CCRGR 2013, Part II (Reg 5) |
-| Time limits | Yes | Systems for patrons to set time limits | CCRGR 2013, Part II (Reg 5) |
-| Employee training | Yes | Compulsory for frontline and management staff | CCRGR 2013, Part II (Reg 5) |
+| Disordered/problem gambling information posting | Yes | Prominent display in casino premises | Responsible Gambling Code for Casinos (CCA s.200B), incorporated via CCRGR 2013 reg 3 |
+| Helpline display | Yes | NCPG 1800-6-668-668 | Responsible Gambling Code for Casinos (CCA s.200B), incorporated via CCRGR 2013 reg 3 |
+| Expenditure limits | Yes | Systems for patrons to set expenditure limits | CCRGR 2013, reg 5(2)(e) |
+| Time limits | Yes | Systems for patrons to set time limits | CCRGR 2013, reg 5(2)(e) |
+| Employee training | Yes | Compulsory for frontline and management staff | CCRGR 2013, reg 5(2)(h) |
 | Self-exclusion | Yes | Multi-tier system (NCPG, GRA, Police, by law) | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 |
 | Entry levy | Yes | S$150/24hrs or S$3,000/year for citizens/PRs | CCA s.116; Entry Levy Regs |
-| Responsible gambling programme | Yes | Must be GRA-approved; subject to regular inspection and audit | CCRGR 2013, Part II (Reg 5) |
+| Responsible gambling programme | Yes | Must be GRA-approved; subject to regular inspection and audit | CCRGR 2013, reg 5 (approval) and regs 6-8 (implementation, review) |
 | Age verification at entry | Yes | 21+ verification at casino entrance | CCA s.132 |
 
 ### Playbook tool messaging -- land-based
 
 | Tool | Playbook copy | Context |
 |---|---|---|
-| Expenditure limits | "Set a spending limit before you play. It takes 30 seconds and keeps you in control." | CCRGR 2013, Part II (Reg 5) |
-| Time limits | "Set a time reminder -- your session, your rules." | CCRGR 2013, Part II (Reg 5) |
+| Expenditure limits | "Set a spending limit before you play. It takes 30 seconds and keeps you in control." | CCRGR 2013, reg 5(2)(e) |
+| Time limits | "Set a time reminder -- your session, your rules." | CCRGR 2013, reg 5(2)(e) |
 | Self-exclusion | "Need a longer break? Self-exclusion is free, confidential, and covers all casinos in Singapore." | CCA ss.159-168; Exclusion Orders & Visit Limits Rules 2008 |
-| Helpline | "The NCPG helpline is free and confidential: 1800-6-668-668, daily 8am-11pm." | CCRGR 2013, Part II (Reg 5) |
+| Helpline | "The NCPG helpline is free and confidential: 1800-6-668-668, daily 8am-11pm." | Responsible Gambling Code for Casinos (CCA s.200B), incorporated via CCRGR 2013 reg 3 |
 
 ---
 
@@ -416,8 +416,8 @@ The entry levy is a unique Singapore feature that requires careful messaging:
 | Requirement | Value |
 |---|---|
 | **AML authority** | GRA (under Casino Control Act); MAS (financial institutions) |
-| **KYC/CDD threshold** | S$4,000 for casino transactions |
-| **Governing regulation** | Casino Control (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Regulations 2009 |
+| **KYC/CDD threshold** | S$4,000 for casino cash transactions or deposits (lowered from the previous S$10,000 cash / S$5,000 deposit thresholds by the Anti-Money Laundering and Other Matters Act 2024, which amended the Casino Control Act to align with the FATF standard) |
+| **Governing regulation** | Casino Control Act (CDD threshold as amended by the Anti-Money Laundering and Other Matters Act 2024); operational detail in the Casino Control (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Regulations 2009 |
 | **Reporting requirements** | Suspicious transaction reports (STRs) to Suspicious Transaction Reporting Office (STRO) |
 | **Player-facing impact** | Identity verification for transactions at or above S$4,000; source of funds checks for large transactions |
 
@@ -430,6 +430,8 @@ When AML/KYC processes affect players, use Playbook voice:
 
 **On-brand:**
 > "Quick ID check -- it keeps your account secure and is required for all players. Standard procedure, takes just a moment."
+
+**Source**: [MHA -- Phased Commencement of the Anti-money Laundering and Other Matters Act](https://www.mha.gov.sg/media-room/newsroom/phased-commencement-of-the-anti-money-laundering-and-other-matters-act/) (confirms the casino CDD threshold was lowered to S$4,000 from S$10,000 cash / S$5,000 deposits, via amendment to the Casino Control Act) | [Casino Control (Prevention of Money Laundering, Terrorism Financing and Proliferation Financing) Regulations 2009 (S 507/2009)](https://sso.agc.gov.sg/SL/CCA2006-S507-2009) (SSO blocks automated fetch -- verify in browser)
 
 ---
 
