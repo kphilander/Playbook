@@ -1,11 +1,11 @@
 ---
 content_type: jurisdiction-module
-title: "California (Tribal Compacts) -- Compliance Module"
+title: "California (Tribal Compacts + Cardrooms) -- Compliance Module"
 pillar: [open]
 tier: 1
 tone: [confident-informative]
 reading_level: grade-9-12
-game_type: [slots, blackjack, baccarat, poker]
+game_type: [slots, blackjack, baccarat, poker, pai-gow]
 audience: [general]
 channel: [blog, in-app]
 cultural_profile:
@@ -23,26 +23,32 @@ verticals: [land-based]
 regulatory_approach: hybrid
 adaptation_status: base
 adaptation_notes: |
-  California module covers tribal land-based casinos only. There is no
-  legal online casino or sports betting in California. Requirements
-  vary by individual tribal compact -- this module documents common
-  provisions found across the three generations of compacts (1999,
-  2004-2006, post-2011). Operators must verify specific requirements
-  against the compact governing their property. The fragmented
-  regulatory structure (federal + state + tribal) makes this the most
-  complex US jurisdiction for compliance mapping.
-last_updated: 2026-03-22
+  California module covers two distinct land-based regimes: tribal
+  casinos (governed by tribal-state compacts) and non-tribal cardrooms
+  (governed by state regulation). There is no legal online casino or
+  sports betting in California. Tribal requirements vary by individual
+  compact -- this module documents common provisions found across the
+  three generations of compacts (1999, 2004-2006, post-2011) and the
+  common model-compact responsible gambling language. Cardroom
+  requirements are, by contrast, uniform and codified: the entire
+  responsible gambling standard of practice lives in 4 CCR Title 4,
+  Division 18, Chapter 7, Article 9 (ss. 12460-12466). Operators must
+  verify tribal requirements against the compact governing their
+  property. The fragmented tribal structure (federal + state + tribal)
+  alongside the codified cardroom regime makes this the most complex US
+  jurisdiction for compliance mapping.
+last_updated: 2026-06-08
 ---
 
-# California (Tribal Compacts) -- Compliance Module
+# California (Tribal Compacts + Cardrooms) -- Compliance Module
 
-> **Operator note**: California's tribal gaming regulatory framework is unlike any other US jurisdiction. There is no single set of rules -- each of the 67 ratified tribal-state compacts contains its own responsible gambling provisions, and each of the 60+ tribal gaming commissions sets its own policies. This module documents the **common provisions** found across most compacts and the state-level framework. Operators **must** verify specific requirements against the compact governing their property and the rules of the relevant tribal gaming commission.
+> **Operator note**: California runs **two parallel land-based regimes**, and they sit at opposite ends of the regulatory spectrum. **Tribal casinos** are governed by tribal-state compacts -- there is no single rulebook; each of the 67 ratified compacts contains its own responsible gambling provisions, and each of the 60+ tribal gaming commissions sets its own policies (this module documents the **common model-compact provisions**). **Cardrooms** (non-tribal, state-licensed) are governed by a **single, uniform, codified responsible gambling standard of practice -- 4 CCR Title 4, Division 18, Chapter 7, Article 9 (ss. 12460-12466)** -- covering signage, training, self-restriction, statewide self-exclusion, and program review. Operators **must** verify tribal requirements against the compact and tribal gaming commission governing their property; cardroom operators follow Article 9 directly.
 >
-> **Verticals covered**: Land-based casino only
+> **Verticals covered**: Land-based only -- tribal casinos and non-tribal cardrooms
 > *(California does not permit legal online casino gaming or sports betting. Propositions 26 and 27, which would have legalized sports betting, were rejected by voters in November 2022. Tribal leaders have indicated no plans to pursue a 2026 ballot measure; 2028 is the next realistic window.)*
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -50,15 +56,17 @@ last_updated: 2026-03-22
 
 | Section | Description |
 |---|---|
-| [Regulatory authority](#regulatory-authority) | Three-layer structure: federal (NIGC), state (CGCC + BGC), tribal |
+| [Regulatory authority](#regulatory-authority) | Four layers: federal (NIGC), state (CGCC + BGC), compact (tribal), cardroom (state-codified) |
 | [Legal requirements](#legal-requirements) | 18+/21+, permitted products, compact structure |
-| [Helpline](#helpline) | 1-800-GAMBLER, California Office of Problem Gambling, CALPG |
-| [Messaging requirements](#messaging-requirements) | Compact-dependent, obligation-based |
-| [Advertising restrictions](#advertising-restrictions) | Compact-dependent, newer compacts more prescriptive |
-| [Self-exclusion](#self-exclusion) | Property-by-property under tribal gaming commissions |
-| [Player protection -- land-based](#player-protection--land-based) | Compact-dependent requirements |
+| [Cardroom responsible gambling regime](#cardroom-responsible-gambling-regime-4-ccr-article-9) | The codified standard of practice -- 4 CCR Article 9, ss. 12460-12466 |
+| [Tribal model-compact RG provisions](#tribal-model-compact-rg-provisions) | Common signage, advertising, training, self-exclusion language |
+| [Helpline](#helpline) | 1-800-GAMBLER, California Office of Problem Gambling, CalGETS, CALPG |
+| [Messaging requirements](#messaging-requirements) | Tribal: obligation-based; cardroom: prescriptive (Article 9) |
+| [Advertising restrictions](#advertising-restrictions) | Tribal: compact-dependent; cardroom: BGC review (2025/26 rules) |
+| [Self-exclusion](#self-exclusion) | Tribal: property-by-property; cardroom: statewide BGC registry |
+| [Player protection -- land-based](#player-protection--land-based) | Compact-dependent (tribal) + codified (cardroom) requirements |
 | [Age verification](#age-verification) | 18+ or 21+ depending on alcohol service |
-| [AML/KYC](#amlkyc) | FinCEN/BSA applies to all tribal casinos |
+| [AML/KYC](#amlkyc) | FinCEN/BSA applies to all tribal casinos and cardrooms |
 | [Collateral adaptation](#collateral-adaptation) | Quick reference for all touchpoints |
 | [`_brand.yml` updates](#brandyml-updates) | Config values to add |
 | [Compliance checklist](#compliance-checklist) | Pre-launch verification |
@@ -67,15 +75,19 @@ last_updated: 2026-03-22
 
 ## Regulatory authority
 
-### Three-layer regulatory structure
+### Regulatory structure
 
-California tribal gaming operates under a **hybrid regulatory model** that is unique among US states. Three layers of authority govern tribal casinos:
+California gambling operates under a **hybrid regulatory model** that is unique among US states. The layers differ for tribal casinos versus non-tribal cardrooms:
 
 | Layer | Authority | Role |
 |---|---|---|
-| **Federal** | National Indian Gaming Commission (NIGC) | Oversees Class II gaming; approves tribal gaming ordinances; enforcement authority under IGRA |
-| **State** | California Gambling Control Commission (CGCC) + Bureau of Gambling Control (BGC, within CA DOJ) | Suitability determinations for key employees and suppliers; compact administration; SDF/RSTF fund management; casino monitoring |
-| **Tribal** | Individual Tribal Gaming Commissions (~60+) | Primary on-site regulation; gaming ordinance enforcement; self-exclusion programs; employee licensing; day-to-day compliance |
+| **Federal** | National Indian Gaming Commission (NIGC) | Oversees Class II gaming; approves tribal gaming ordinances; enforcement authority under IGRA (tribal only) |
+| **State** | California Gambling Control Commission (CGCC) + Bureau of Gambling Control (BGC, within CA DOJ) | For tribal: suitability determinations, compact administration, SDF/RSTF fund management, casino monitoring. For cardrooms: full licensing **and** the codified responsible gambling regulations (4 CCR Article 9) |
+| **Compact (tribal)** | Individual Tribal Gaming Commissions (~60+) | Primary on-site regulation; gaming ordinance enforcement; self-exclusion programs; employee licensing; day-to-day compliance |
+| **Cardroom (state-codified)** | CGCC + BGC under 4 CCR Title 4, Div. 18, Ch. 7, Art. 9 | Uniform, prescriptive responsible gambling standard of practice for all ~65 licensed cardrooms -- see [Cardroom responsible gambling regime](#cardroom-responsible-gambling-regime-4-ccr-article-9) |
+
+> **No federal RG floor for tribal casinos.** The NIGC's Class III Minimum Internal Control Standards (25 CFR Part 542) have been **stayed / indefinitely suspended since 2018** following *Colorado River Indian Tribes v. National Indian Gaming Commission*. Federal MICS therefore do **not** supply a responsible gambling baseline for tribal casinos -- those obligations live entirely in the **compacts, tribal gaming ordinances, and Tribal Internal Control Standards (TICS)**. The module's reliance on compacts for tribal RG is correct by necessity, not omission.
+> *Reference: [eCFR 25 CFR Part 542](https://www.ecfr.gov/current/title-25/chapter-III/subchapter-D/part-542); [NIGC Class III MICS guidance](https://www.nigc.gov/news/detail/nigc-announce-the-approval-of-guidance-on-the-class-iii-minimum-internal-co).*
 
 ### California Gambling Control Commission (CGCC)
 
@@ -111,7 +123,9 @@ California tribal gaming operates under a **hybrid regulatory model** that is un
 |---|---|---|
 | **IGRA** (25 U.S.C. s. 2701 et seq.) | Federal framework for tribal gaming; created NIGC; requires compacts for Class III gaming | [congress.gov](https://www.congress.gov/crs-product/IF12527) |
 | **California Constitution Art. IV s. 19(f)** | Proposition 1A (2000) -- amended state constitution to permit Class III tribal gaming | [leginfo.legislature.ca.gov](https://leginfo.legislature.ca.gov/) |
-| **Gambling Control Act** (Bus. & Prof. Code s. 19800 et seq.) | State regulatory framework; CGCC authority; suitability standards | [oag.ca.gov](https://oag.ca.gov/gambling) |
+| **Gambling Control Act** (Bus. & Prof. Code s. 19800 et seq.) | State regulatory framework; CGCC authority; suitability standards; **parent statute of the cardroom RG regulations** | [oag.ca.gov](https://oag.ca.gov/gambling) |
+| **4 CCR Title 4, Div. 18, Ch. 7, Article 9** (ss. 12460-12466) | Codified responsible gambling standard of practice for **cardrooms** -- signage, training, self-restriction, statewide self-exclusion, program review | [law.cornell.edu -- 4 CCR 12460](https://www.law.cornell.edu/regulations/california/4-CCR-12460) |
+| **Welfare & Institutions Code ss. 4369-4369.5** | Statutory basis for the California Office of Problem Gambling (OPG) and the toll-free crisis line | [leginfo.legislature.ca.gov -- WIC 4369](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=4369.) |
 | **Tribal-State Compacts** | Individual agreements between tribes and the Governor | [cgcc.ca.gov/compacts](https://www.cgcc.ca.gov/?pageID=compacts) |
 
 ### Compact generations
@@ -132,7 +146,12 @@ There are roughly three generations of compacts, each with increasingly detailed
 |---|---|---|
 | CGCC Compacts page | [cgcc.ca.gov/compacts](https://www.cgcc.ca.gov/?pageID=compacts) | Full text of all ratified compacts and amendments |
 | CGCC About page | [cgcc.ca.gov/aboutus](https://www.cgcc.ca.gov/?pageID=aboutus&pageName=About+Us) | CGCC role and authority |
-| BGC Tribal page | [oag.ca.gov/gambling/tribal](https://oag.ca.gov/gambling/tribal) | Bureau's tribal gaming role |
+| CGCC Play Responsibly page | [cgcc.ca.gov/playresponsibly](https://www.cgcc.ca.gov/?pageID=playresponsibly) | Cardroom self-exclusion overview; notes it does **not** cover tribal casinos |
+| BGC Tribal page | [oag.ca.gov/gambling/tribal](https://oag.ca.gov/gambling/tribal) | Bureau's tribal gaming role -- licensing, suitability, and background investigations (not a source for model-compact RG provisions) |
+| BGC Responsible Gambling page | [oag.ca.gov/gambling/responsible](https://oag.ca.gov/gambling/responsible) | Cardroom self-exclusion program, forms, helpline and resource list |
+| BGC Self-Exclusion page | [oag.ca.gov/gambling/exclusion](https://oag.ca.gov/gambling/exclusion) | Statewide cardroom self-exclusion enrollment |
+| 4 CCR Article 9 (cardroom RG) | [law.cornell.edu -- 4 CCR 12460](https://www.law.cornell.edu/regulations/california/4-CCR-12460) | Codified cardroom RG standard of practice (ss. 12460-12466) |
+| AGA Responsible Gaming Regulations Guide | [americangaming.org](https://www.americangaming.org/resources/responsible-gaming-regulations-and-statutes-guide/) | California entry corroborates model-compact RG provisions |
 | NIGC | [nigc.gov](https://www.nigc.gov/) | Federal oversight |
 | AGA California Fact Sheet | [americangaming.org (PDF)](https://www.americangaming.org/wp-content/uploads/2025/02/California_AGA-Gaming-Regulatory-Fact-Sheet-2025.pdf) | Summary of regulatory requirements |
 
@@ -174,11 +193,115 @@ California gambling law has several unique characteristics:
 |---|---|---|
 | Tribes with ratified compacts | 67 | CGCC (Jan 2025) |
 | Secretarial Procedures in effect | 10 additional tribes | CGCC (Jan 2025) |
-| Tribes operating casinos | 63 | CGCC / CNIGA |
-| Total casinos | 66 | CGCC / CNIGA |
+| Tribes operating casinos | 62 | CGCC / AGA (2025) |
+| Total casinos | 65 | CGCC / AGA (2025) |
 | Estimated annual gross gaming revenue | ~$8.5 billion | AGA (2025) |
 | Economic impact | ~$35 billion (total state economy contribution) | AGA |
 | Share of US tribal casino revenue | >25% | AGA |
+
+---
+
+## Cardroom responsible gambling regime (4 CCR Article 9)
+
+> **This is the codified half of California.** Where tribal RG "varies by compact," cardroom RG does not. Every one of California's ~65 licensed cardrooms operates under a **single, uniform, prescriptive responsible gambling standard of practice** -- **4 CCR Title 4, Division 18, Chapter 7, Article 9, sections 12460 through 12466** -- adopted by the CGCC under the Gambling Control Act (Bus. & Prof. Code s. 19800 et seq.) and enforced by the Bureau of Gambling Control. Cardrooms are the **more** regulated and **more** standardized of California's two regimes. For Playbook operators deploying at a cardroom, this section -- not the compact section -- is the governing rulebook.
+
+### Article 9 at a glance
+
+| Section | Title | What it requires | Themes |
+|---|---|---|---|
+| **s. 12460** | Definitions | Defines "self-exclusion" and "self-restriction" for the rest of Article 9 (does not define "problem gambling") | Foundation |
+| **s. 12461** | Posting Referral Information | Signage on the nature and symptoms of problem gambling + the OPG-approved toll-free number at entrances/exits, near gambling areas, and at cash/credit areas; any cardroom website must carry an RG message and a link to OPG | 8, 3, 2, 1 |
+| **s. 12462** | Training Requirements | New-employee orientation (within 60 days of hire) **and** annual problem gambling training for all employees who interact with patrons in gambling areas; documentation retained | 9 |
+| **s. 12463** | Self-Restriction Program | Operator-run program letting patrons bar themselves from specific games or the whole establishment; confidential lists, removal procedures, check-cashing/credit restriction, marketing suppression, forfeiture of unredeemed winnings to problem gambling prevention | 5, 4, 6 |
+| **s. 12464** | Self-Exclusion Program | The **statewide, BGC-administered** self-exclusion registry (Form CGCC-CH7-05); enrollment, no credit to enrolled persons; forfeiture of unredeemed jackpots/prizes to CDPH-OPG (s. 12464 sets no duration terms -- see s. 12465) | 4, 5, 9 |
+| **s. 12465** | Removal from the List of Self-Excluded Persons | Removal mechanics: a **lifetime** exclusion may request removal only **after one year**; fixed-term exclusions auto-expire at the end of the requested term; licensees honor the statewide list | 4, 9 |
+| **s. 12466** | Responsible Gambling Program Review | Every licensee must maintain a written **Program for Responsible Gambling** covering all Article 9 standards; the Bureau may demand it, cite deficiencies, and set a cure period, and the **Commission** may assess penalties (up to $1,000 per violation) | 9, 10 |
+
+### Cardroom signage and referral information (s. 12461)
+
+Each cardroom business licensee **must post** written materials on the nature and symptoms of problem gambling, together with the **OPG-approved toll-free number (currently 1-800-GAMBLER)**, at:
+
+- Patron gambling-area entrances and exits
+- Conspicuous places near the gambling areas
+- Any location where cash or credit is provided to patrons
+
+Any cardroom **website** must carry a responsible gambling message and a link to the California Office of Problem Gambling at **problemgambling.ca.gov** (the state portal named in the regulation -- see the [Helpline section](#helpline) on confirming this URL before publishing).
+
+- **Citation:** [4 CCR s. 12461](https://www.law.cornell.edu/regulations/california/4-CCR-12461) (Posting Referral Information)
+
+### Cardroom employee training (s. 12462)
+
+Cardroom licensees must run a problem gambling training program for every employee who directly interacts with patrons in gambling areas:
+
+| Element | Requirement |
+|---|---|
+| **New-employee orientation** | Within 60 days of hire |
+| **Ongoing training** | Annually, for all patron-facing gambling-area staff |
+| **Content** | Nature and symptoms of problem gambling; the self-restriction and self-exclusion programs; how to provide referral information; the toll-free helpline |
+| **Documentation** | Records of training retained and available to the Bureau |
+
+- **Citation:** [4 CCR s. 12462](https://www.law.cornell.edu/regulations/california/4-CCR-12462) (Training Requirements)
+
+### Cardroom self-restriction program (s. 12463)
+
+Distinct from the statewide self-exclusion list, each licensee must operate its own **self-restriction program** letting patrons limit their own play at that establishment:
+
+- Written materials and forms describing the program
+- Confidential self-restriction lists
+- Ability to bar a patron from specific games **or** the entire establishment
+- Removal procedures
+- Options to restrict check-cashing and credit
+- Exclusion from marketing and promotional contact
+- Forfeiture of unredeemed winnings to problem gambling prevention
+
+- **Citation:** [4 CCR s. 12463](https://www.law.cornell.edu/regulations/california/4-CCR-12463) (Self-Restriction Program)
+
+### Cardroom statewide self-exclusion program (ss. 12464-12465)
+
+This is the sharpest contrast with the tribal side. California cardrooms participate in a **genuine statewide, BGC-administered self-exclusion registry** -- the opposite of the fragmented property-by-property tribal model.
+
+| Field | Value |
+|---|---|
+| **Scope** | Statewide across all licensed cardrooms (does **not** cover tribal casinos) |
+| **Administrator** | Bureau of Gambling Control (CA DOJ) |
+| **Enrollment form** | CGCC-CH7-05 |
+| **Term / removal** | Set by **s. 12465** (not s. 12464): a **lifetime** exclusion may request removal only **after one year**; a fixed-term exclusion auto-expires at the end of the requested term |
+| **Credit** | No credit may be extended to enrolled persons |
+| **Winnings** | Unredeemed jackpots/prizes forfeited to CDPH-OPG |
+| **Operator duty** | Immediately remove enrolled persons and report; honor the statewide list |
+
+- **Citations:** [4 CCR s. 12464](https://www.law.cornell.edu/regulations/california/4-CCR-12464) (Self-Exclusion Program); [4 CCR s. 12465](https://www.law.cornell.edu/regulations/california/4-CCR-12465) (removal mechanics); program overview and forms at [oag.ca.gov/gambling/responsible](https://oag.ca.gov/gambling/responsible) and [oag.ca.gov/gambling/exclusion](https://oag.ca.gov/gambling/exclusion); [CGCC Play Responsibly](https://www.cgcc.ca.gov/?pageID=playresponsibly) (confirms the program does **not** cover tribal casinos).
+
+### Cardroom Program for Responsible Gambling + Bureau review (s. 12466)
+
+Every cardroom licensee must maintain a single written **Program for Responsible Gambling** that addresses all Article 9 standards (signage, training, self-restriction, self-exclusion). This is the enforceable wrapper around everything above:
+
+- The Bureau may **demand** the written program at any time
+- The Bureau may **cite deficiencies** and set a **cure period**
+- The **Commission** (CGCC) may assess **penalties of up to $1,000 per violation** -- the Bureau issues the deficiency notice and sets the cure period; the Commission imposes the fine
+
+- **Citation:** [4 CCR s. 12466](https://www.law.cornell.edu/regulations/california/4-CCR-12466) (Responsible Gambling Program Review); definitions at [4 CCR s. 12460](https://www.law.cornell.edu/regulations/california/4-CCR-12460). Parent statute: Gambling Control Act, Bus. & Prof. Code s. 19800 et seq.
+
+### {{PROGRAM_NAME}} note for cardroom deployments
+
+Because Article 9 mandates the *what* (signage, helpline, referral info, training, self-restriction, self-exclusion) but not the *exact wording*, Playbook content has room to do this with dignity rather than the legal minimum. Treat Article 9 as the floor and apply full {{PROGRAM_NAME}} voice on top -- the same approach used in the [Messaging requirements](#messaging-requirements) section.
+
+---
+
+## Tribal model-compact RG provisions
+
+The tribal side genuinely varies compact-to-compact, but the corpus no longer supports a flat "it varies" answer. Across the **2004 and 2012 generations** of compacts, a set of **common model-compact responsible gambling provisions** recurs, and operators should treat these as the baseline expectation (then verify the exact text against the compact governing their property).
+
+| Provision | Common model-compact requirement | Generation | Themes |
+|---|---|---|---|
+| **Conspicuous + ATM signage** | Display signs bearing a toll-free helpline number at **conspicuous locations and at ATMs** where patrons may obtain assistance; post problem gambling information near entrances, cages, club booths, and restrooms | 2004 / 2012 | 8, 3, 2 |
+| **Advertising RG message + helpline** | Advertising and marketing materials must contain **responsible gambling messages and a toll-free helpline number** for problem gamblers | 2004 onward | 6, 2, 3 |
+| **Employee/manager training** | **New-hire RG training before floor work**, plus **annual training** for managers and front-line employees, typically via an established problem-gambling-organization relationship | 2004 / 2012 | 9 |
+| **Self-exclusion enrollment** | Allow patrons to enroll in self-exclusion; halt promotional mailings; deny credit and check-cashing; revoke privileges for casino services | Post-2011 | 4, 5 |
+
+> **Dating note (verify before relying):** the advertising RG-message-plus-helpline obligation appears to pre-date the post-2011 compacts -- the **2004-generation** compacts are commonly described as already requiring advertising and marketing materials to carry responsible gambling messages and a toll-free helpline number, so operators under 2004-2006 compacts should not assume they are exempt. The compact PDFs are image/binary and not machine-extractable, so **the 2004-generation dating of this advertising obligation should be verified against a specific compact PDF** (the "Patron Disputes and Responsible Gambling" section of a named tribe's compact) before relying on it.
+
+- **Citations:** [AGA Responsible Gaming Regulations Guide -- California entry](https://www.americangaming.org/resources/responsible-gaming-regulations-and-statutes-guide/) (corroborates the common model-compact RG provisions); a named tribe's compact via the [CGCC compacts library](https://www.cgcc.ca.gov/?pageID=compacts) -- individual compact PDFs are image/binary and not machine-extractable, so cite by **section within a named tribe's compact** (typically the "Patron Disputes and Responsible Gambling" section). *Verify the exact provision against the specific compact before relying on it.* (The Bureau's [tribal gaming page](https://oag.ca.gov/gambling/tribal) covers licensing, suitability, and background investigations -- not these RG provisions -- so it is not cited here as their source.)
 
 ---
 
@@ -202,8 +325,20 @@ California gambling law has several unique characteristics:
 | Field | Value |
 |---|---|
 | **Agency** | California Department of Public Health (CDPH) |
-| **Website** | [cdph.ca.gov/Programs/OPG](https://www.cdph.ca.gov/Programs/OPG/Pages/helpline-numbers.aspx) |
+| **Statutory basis** | Welfare & Institutions Code ss. 4369-4369.5 -- the State Program of Problem Gambling. OPG was created in 2003 (moved from DADP to CDPH); the toll-free crisis line is the statutory first-priority program. |
+| **Consolidated state portal** | [problemgambling.ca.gov](https://problemgambling.ca.gov/) -- the single state portal named verbatim in 4 CCR s. 12461 as the link cardroom websites must carry. *Verify before merge: this URL returned a connection error from the audit sandbox (likely a network restriction, not a dead site); confirm it resolves before publishing.* |
+| **Helpline-numbers reference** | [cdph.ca.gov/Programs/OPG](https://www.cdph.ca.gov/Programs/OPG/Pages/helpline-numbers.aspx) |
+| **Standard pairing** | **Call 1-800-GAMBLER** and **Text SUPPORT to 53342** is the OPG/state-portal standard helpline pairing |
 | **Role** | State program for problem gambling prevention, education, and treatment coordination |
+
+### CalGETS -- California Gambling Education and Treatment Services
+
+| Field | Value |
+|---|---|
+| **Program** | OPG + UCLA Gambling Studies Program -- the referral destination behind the helpline |
+| **Services** | Free phone, individual, group, and residential treatment for people experiencing difficulty with gambling, and for affected family members |
+| **Provider standard of practice** | Authorized providers must hold a licensed clinical degree and complete state-funded CalGETS training |
+| **Websites** | [cdph.ca.gov/Programs/OPG -- CalGETS](https://www.cdph.ca.gov/Programs/OPG/Pages/calgets.aspx); [uclagamblingprogram.org/calgets](https://uclagamblingprogram.org/calgets/) |
 
 ### National helpline (also active in California)
 
@@ -217,22 +352,26 @@ California gambling law has several unique characteristics:
 
 | Resource | Contact | Description |
 |---|---|---|
+| **CalGETS** | via 1-800-GAMBLER | Free state treatment program (phone, individual, group, residential) -- OPG + UCLA |
+| **NICOS Chinese Coalition** | 1-888-968-7888 | Chinese-language problem gambling line; listed on the BGC responsible gambling page -- relevant to California cardroom/casino demographics and the brand's cultural-profile system |
 | **Gamblers Anonymous (CA)** | Regional numbers by area | Free 12-step support groups across California |
 | **NCPG** | 1-800-MY-RESET | National helpline |
 | **988 Suicide & Crisis Lifeline** | Call/text 988 | Not gambling-specific; for crisis situations |
 
 ### Display rules
 
-Display requirements are **compact-dependent**. Post-2011 compacts typically require:
+For **tribal casinos**, display requirements are **compact-dependent**. Post-2011 compacts typically require:
 - Helpline number displayed in advertising and marketing materials
 - Responsible gambling information available at the casino
 - Referral information for problem gambling services
 
+For **cardrooms**, display is **codified and mandatory** -- the OPG-approved toll-free number on signage at entrances/exits, near gambling areas, and at cash/credit areas, plus an RG message and OPG link on any cardroom website (4 CCR s. 12461; see the [Cardroom responsible gambling regime](#cardroom-responsible-gambling-regime-4-ccr-article-9)).
+
 Because California has no single state-mandated display format, operators should:
 1. Check their specific compact for helpline display requirements
-2. Display **1-800-GAMBLER** as the primary number (widely recognized, used by CALPG in-state)
+2. Display **1-800-GAMBLER** as the primary number -- this is California's mandated/primary number, named verbatim in 4 CCR s. 12461, and the state has confirmed it is **not** changing it
 3. Include the CALPG website (calpg.org) where space permits
-4. Add **1-800-MY-RESET** as the updated national branded number
+4. Optionally include **1-800-MY-RESET** as a national alternate (NCPG's branded national number) -- this is **not** a California display change; California is not switching from 1-800-GAMBLER ([CALPG/OPG statement](https://www.prweb.com/releases/dont-panic-californias-problem-gambling-helpline-is-not-changing-302582969.html))
 
 ### On-brand helpline display
 
@@ -249,9 +388,9 @@ Because California has no single state-mandated display format, operators should
 
 ## Messaging requirements
 
-### Fragmented messaging landscape
+### Two messaging landscapes
 
-California has **no single set of messaging requirements**. Requirements depend on:
+Messaging requirements split by regime. **Tribal** messaging has **no single set of requirements** -- it depends on the compact and the tribal gaming commission. **Cardroom** messaging is **prescriptive and codified** under 4 CCR Article 9. Tribal requirements depend on:
 1. Which compact governs the property
 2. Which generation of compact (1999, 2004-2006, post-2011)
 3. The tribal gaming commission's own ordinances
@@ -260,9 +399,10 @@ California has **no single set of messaging requirements**. Requirements depend 
 
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
-| **Casino signage (all compacts)** | Obligation-based | Problem gambling information and helpline available to patrons | Individual compacts |
-| **Advertising (post-2011 compacts)** | Obligation-based | Responsible gambling messages and toll-free helpline in advertising materials | Post-2011 compacts |
-| **Advertising (pre-2011 compacts)** | Minimal / none | Earlier compacts have few or no explicit advertising messaging requirements | Individual compacts |
+| **Cardroom signage** | **Prescriptive (codified)** | Problem gambling nature/symptoms materials + OPG-approved toll-free number at entrances/exits, near gambling areas, and at cash/credit areas; website RG message + link to OPG | 4 CCR s. 12461 |
+| **Casino signage (all compacts)** | Obligation-based | Problem gambling information and helpline available to patrons; model compacts specify conspicuous-location + ATM signage | Individual compacts (model-compact provisions) |
+| **Advertising (2004 compacts onward)** | Obligation-based | Responsible gambling messages and toll-free helpline in advertising materials | 2004 and later compacts |
+| **Advertising (1999 compacts)** | Minimal / none | The earliest compacts have few or no explicit advertising messaging requirements | Individual compacts |
 | **Patron communications** | Obligation-based | Responsible gambling information in patron communications (newer compacts) | Post-2011 compacts |
 
 ### Verbatim required statements
@@ -293,9 +433,25 @@ Because there are no mandated verbatim statements, operators have **full flexibi
 
 ## Advertising restrictions
 
-### Compact-dependent framework
+### Two advertising frameworks
 
-Advertising restrictions in California are **not uniform** -- they depend on the compact governing the property. Post-2011 compacts contain the most detailed advertising provisions.
+**Tribal** advertising restrictions are **not uniform** -- they depend on the compact governing the property (2004 and later compacts require an RG message + helpline; see the [tribal model-compact provisions](#tribal-model-compact-rg-provisions)). **Cardroom** advertising is now subject to **active state oversight** by the Bureau of Gambling Control under tightened 2025/26 rules.
+
+### Cardroom advertising oversight (2025/26 rules)
+
+New CGCC/BGC rules (finalized in mid-2025; effective 2026) give the Bureau authority to **disapprove misleading cardroom advertising and fine operators**:
+
+| Rule area | Standard of practice |
+|---|---|
+| **Misleading advertising** | BGC may disapprove cardroom advertising it finds deceptive and impose penalties |
+| **Helpline presence** | A July 2025 compliance sweep cited cardroom ads that **omitted the problem gambling helpline** or displayed it **too small or unclear** -- the helpline must be present and legible |
+| **Youth-adjacent sponsorship** | New limits on cardroom **sponsorship of youth sports, school, and charity events** to curb indirect targeting of minors |
+
+- **Citation:** CGCC rulemaking CGCC-GCA-2025-02-R -- [Initial Statement of Reasons (PDF)](https://www.cgcc.ca.gov/documents/enabling/2025/CGCC-GCA-2025-02-R_ISOR_wAttachments.pdf); analysis: Womble Bond Dickinson, ["California Cardrooms Face Major Operational Shift Following DOJ Rule Approval"](https://www.womblebonddickinson.com/us/insights/alerts/california-cardrooms-face-major-operational-shift-following-doj-rule-approval). *Verify the final adopted text before relying on specific thresholds -- this is a recent rulemaking and the citation is to the rulemaking record.*
+
+### Tribal compact-dependent framework
+
+Tribal advertising restrictions are **not uniform** -- they depend on the compact governing the property. Post-2011 compacts contain the most detailed advertising provisions, though the RG-message-plus-helpline obligation dates to the 2004 generation.
 
 ### Common provisions (post-2011 compacts)
 
@@ -345,9 +501,21 @@ California has **no centralized statewide self-exclusion program** for tribal ca
 | **Enrollment method** | Varies -- in-person, mail-in, or at the tribal gaming commission (not inside the casino) |
 | **Scope** | Typically covers the specific tribal casino only |
 
-### State-level self-exclusion (non-tribal)
+### Cardroom statewide self-exclusion (non-tribal) -- codified
 
-The California Department of Justice operates a [Self-Exclusion Program](https://oag.ca.gov/gambling/exclusion_self) for **state-licensed cardrooms** (non-tribal). This program does **not** apply to tribal casinos.
+In sharp contrast to the fragmented tribal model, **cardrooms participate in a genuine statewide self-exclusion registry**, administered by the Bureau of Gambling Control under 4 CCR ss. 12464-12465:
+
+| Field | Value |
+|---|---|
+| **Scope** | Statewide across all licensed cardrooms (does **not** apply to tribal casinos) |
+| **Administrator** | Bureau of Gambling Control (CA DOJ) |
+| **Enrollment form** | CGCC-CH7-05 |
+| **Term / removal (s. 12465)** | A **lifetime** exclusion may request removal only **after one year**; a fixed-term exclusion auto-expires at the end of the requested term |
+| **Credit** | No credit to enrolled persons |
+| **Winnings** | Unredeemed jackpots/prizes forfeited to CDPH-OPG |
+| **Operator duty** | Immediately remove and report enrolled persons; honor the statewide list |
+
+See the [Cardroom responsible gambling regime](#cardroom-responsible-gambling-regime-4-ccr-article-9) for the full Article 9 detail. Program overview and forms: [oag.ca.gov/gambling/responsible](https://oag.ca.gov/gambling/responsible) and [oag.ca.gov/gambling/exclusion](https://oag.ca.gov/gambling/exclusion); [CGCC Play Responsibly](https://www.cgcc.ca.gov/?pageID=playresponsibly).
 
 ### What newer compacts require
 
@@ -369,11 +537,11 @@ Post-2011 compacts typically require tribal gaming operations to allow persons t
 
 ### Key difference from other states
 
-Unlike New Jersey (statewide), Massachusetts (statewide), or the UK (GAMSTOP national scheme), California's self-exclusion is **entirely fragmented**. A player who self-excludes at one tribal casino is **not** excluded from any other tribal casino. {{PROGRAM_NAME}} content should:
+California is **split**: its **tribal** self-exclusion is fully fragmented (property-by-property), while its **cardroom** self-exclusion is a genuine **statewide** registry. So unlike New Jersey or Massachusetts (single statewide schemes) or the UK (GAMSTOP national scheme), a California player's experience depends entirely on which venue type they are in. A player who self-excludes at one **tribal** casino is **not** excluded from any other tribal casino; a player who self-excludes from **cardrooms** is excluded statewide across all cardrooms (but not from tribal casinos). {{PROGRAM_NAME}} content should:
 
-- Clarify that exclusion applies to this property only
-- Provide information on how to self-exclude at other properties if the player requests it
-- Note that the state DOJ program covers cardrooms but not tribal casinos
+- For tribal casinos: clarify that exclusion applies to this property only, and explain how to self-exclude at other properties if the player requests it
+- For cardrooms: explain that self-exclusion is statewide across all cardrooms (Bureau of Gambling Control, Form CGCC-CH7-05)
+- Always note the boundary: the cardroom statewide program does **not** cover tribal casinos, and vice versa
 
 ---
 
@@ -381,19 +549,21 @@ Unlike New Jersey (statewide), Massachusetts (statewide), or the UK (GAMSTOP nat
 
 ### Required tools and obligations
 
-Requirements vary by compact. The table below reflects **common provisions** found in post-2011 compacts:
+Requirements differ by regime. The table below shows **tribal** common provisions (post-2011 compacts and model-compact language) alongside the **cardroom** codified Article 9 requirements:
 
-| Tool / Obligation | Required? | Details | Source |
+| Tool / Obligation | Tribal (compact) | Cardroom (Article 9) | Source |
 |---|---|---|---|
-| **Problem gambling information posting** | Yes (most compacts) | Responsible gambling information available at the casino | Individual compacts |
-| **Helpline display** | Yes (post-2011 compacts) | 1-800-GAMBLER or equivalent | Post-2011 compacts |
-| **Self-exclusion** | Yes (post-2011 compacts) | Property-level program | Post-2011 compacts |
-| **Employee training** | Varies | Set by tribal gaming commission | Tribal gaming ordinances |
-| **Credit self-limitation** | Varies | Where credit is offered, self-limitation may be available | Individual compacts |
-| **No complimentary alcohol** | Yes (most compacts) | Tribes may not serve complimentary alcoholic beverages | Most compacts |
-| **Session time tracking** | No | Not required by compacts | -- |
-| **Activity statements** | No | Not required by compacts | -- |
-| **Deposit/loss limits** | N/A | Not applicable (land-based cash play) | -- |
+| **Problem gambling information posting** | Yes (most compacts) -- conspicuous locations + ATMs in model compacts | **Yes -- mandatory** at entrances/exits, near gambling areas, and cash/credit areas | Compacts; 4 CCR s. 12461 |
+| **Helpline display** | Yes (post-2011 compacts) -- 1-800-GAMBLER or equivalent | **Yes -- mandatory** OPG-approved toll-free number | Compacts; 4 CCR s. 12461 |
+| **Self-exclusion** | Yes (post-2011) -- property-level program | **Yes -- statewide registry** (Form CGCC-CH7-05) | Compacts; 4 CCR ss. 12464-12465 |
+| **Self-restriction (in-venue)** | Varies | **Yes -- mandatory** operator-run program (bar specific games or whole venue) | 4 CCR s. 12463 |
+| **Employee training** | Common model-compact expectation -- new-hire before floor work + annual | **Yes -- mandatory** orientation within 60 days + annual | Compacts; 4 CCR s. 12462 |
+| **Written RG program + review** | Set by tribal gaming commission | **Yes -- mandatory** Program for Responsible Gambling; Bureau review, Commission-assessed penalties to $1,000/violation | 4 CCR s. 12466 |
+| **Credit self-limitation** | Varies | Yes -- via self-restriction program | Compacts; 4 CCR s. 12463 |
+| **No complimentary alcohol** | Yes (most compacts) | Per state alcohol licensing | Most compacts |
+| **Session time tracking** | No | No | -- |
+| **Activity statements** | No | No | -- |
+| **Deposit/loss limits** | N/A (land-based cash play) | N/A (land-based cash play) | -- |
 
 ### {{PROGRAM_NAME}} tool messaging for California
 
@@ -419,8 +589,8 @@ Requirements vary by compact. The table below reflects **common provisions** fou
 
 | Casino type | Minimum age | Approximate count |
 |---|---|---|
-| Tribal casino **with** alcohol license | 21+ | ~43 of 63 |
-| Tribal casino **without** alcohol license | 18+ | ~20 of 63 |
+| Tribal casino **with** alcohol license | 21+ | ~45 of 65 |
+| Tribal casino **without** alcohol license | 18+ | ~20 of 65 |
 
 The age requirement is determined by two factors:
 1. The terms of the individual tribal-state compact
@@ -444,7 +614,7 @@ For 18+ properties, substitute:
 
 ### FinCEN/BSA requirements
 
-Tribal casinos are classified as **financial institutions** under the Bank Secrecy Act (BSA) and must comply with FinCEN regulations, just like commercial casinos:
+Tribal casinos and cardrooms are classified as **financial institutions** under the Bank Secrecy Act (BSA) and must comply with FinCEN regulations, just like commercial casinos:
 
 | Requirement | Threshold | Player-facing impact |
 |---|---|---|
@@ -509,8 +679,10 @@ helplines:
       hours: "24/7"
       cost: "Free"
       state_resource: "California Office of Problem Gambling (CDPH)"
-      state_website: "cdph.ca.gov/Programs/OPG"
-      notes: "1-800-GAMBLER is staffed in California by CALPG with master's-level counselors. NCPG national numbers (1-800-522-4700, 1-800-MY-RESET) also work in California."
+      state_website: "problemgambling.ca.gov"
+      state_statutory_basis: "Welfare & Institutions Code ss. 4369-4369.5"
+      treatment_program: "CalGETS (OPG + UCLA)"
+      notes: "1-800-GAMBLER is staffed in California by CALPG with master's-level counselors. problemgambling.ca.gov is the consolidated state portal named in 4 CCR s. 12461 (verify the live URL before publishing). NCPG national numbers (1-800-522-4700, 1-800-MY-RESET) also work in California."
 
 # --- LEGAL ---
 legal:
@@ -570,6 +742,16 @@ Complete before launching {{PROGRAM_NAME}} at a California tribal casino.
 - [ ] Employee training program implemented per tribal gaming commission requirements
 - [ ] Complimentary alcohol policy compliant with compact (most prohibit free alcohol)
 
+### Cardroom (complete only if deploying at a non-tribal cardroom)
+- [ ] Confirmed the venue is a state-licensed cardroom (Article 9 applies, not a compact)
+- [ ] Referral signage posted at entrances/exits, near gambling areas, and at cash/credit areas (4 CCR s. 12461)
+- [ ] Website carries an RG message and a link to OPG (problemgambling.ca.gov)
+- [ ] New-employee orientation (within 60 days) and annual training in place (4 CCR s. 12462)
+- [ ] Self-restriction program operational, with confidential lists and removal procedures (4 CCR s. 12463)
+- [ ] Statewide self-exclusion (Form CGCC-CH7-05) honored; enrolled persons removed and reported (4 CCR ss. 12464-12465)
+- [ ] Written Program for Responsible Gambling maintained and available to the Bureau (4 CCR s. 12466)
+- [ ] Advertising reviewed for misleading content; helpline present and legible; no youth-event sponsorship issues (2025/26 BGC rules)
+
 ### Age verification
 - [ ] Age verification at casino entrance and/or gaming areas
 - [ ] Correct minimum age posted (18+ or 21+)
@@ -607,27 +789,32 @@ State Level
 |  Gambling Control Act (Bus. & Prof.     |
 |  Code s. 19800 et seq.)                 |
 |                                          |
-|  CGCC -- Compact administration,         |
-|          suitability, fund management    |
-|  BGC  -- Investigation, enforcement     |
+|  CGCC -- Compact admin, suitability,     |
+|          fund mgmt, cardroom regs        |
+|  BGC  -- Investigation, enforcement      |
 +-----------------------------------------+
             |
-            v
-Compact Level (67 ratified + 10 Secretarial Procedures)
-+-----------------------------------------+
-|  Individual Tribal-State Compacts       |
-|  (3 generations: 1999, 2004-06, 2011+) |
-|  Govern Class III gaming on tribal land |
-+-----------------------------------------+
-            |
-            v
-Tribal Level (~60+ gaming commissions)
-+-----------------------------------------+
-|  Individual Tribal Gaming Commissions   |
-|  Primary on-site regulation             |
-|  Self-exclusion, employee licensing,    |
-|  gaming ordinances, day-to-day ops      |
-+-----------------------------------------+
+      +-----+-----------------------+
+      |                             |
+      v                             v
+Compact Level (tribal)        Cardroom Level (state-codified)
++---------------------------+ +-----------------------------+
+| Tribal-State Compacts     | | 4 CCR Title 4, Div. 18,     |
+| (3 generations: 1999,     | | Ch. 7, Article 9            |
+|  2004-06, 2011+)          | | (ss. 12460-12466)           |
+| 67 ratified + 10 Sec.     | | Uniform RG standard of      |
+| Procedures                | | practice for ~65 cardrooms: |
+| Class III on tribal land  | | signage, training, self-    |
++---------------------------+ | restriction, statewide      |
+      |                       | self-exclusion, program     |
+      v                       | review (BGC-enforced)       |
+Tribal Level (~60+ commissions) +---------------------------+
++---------------------------+
+| Tribal Gaming Commissions |
+| Primary on-site reg;      |
+| self-exclusion, licensing,|
+| ordinances, day-to-day    |
++---------------------------+
 ```
 
 ---
