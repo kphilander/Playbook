@@ -25,8 +25,12 @@ adaptation_notes: |
   Michigan uses a hybrid approach: statutory standards (PA 152 / PA 149)
   plus administrative rules for interactive platforms — the responsible
   gaming page rules (R 432.654 iGaming / R 432.754 sports betting) and the
-  promotional-wagering/advertising rules (R 432.649 iGaming / R 432.749
-  sports betting). The 2025 MR 9 rulemaking (eff. 4/29/2025) reinforced
+  promotional-wagering rules (R 432.649 iGaming / R 432.749 sports betting).
+  Note the titled scope differs: R 432.749 is titled "Tournaments/contests,
+  bonus and promotional wagering, advertising, and player loyalty programs,"
+  while R 432.649 is titled only "Tournaments/contests and bonus and promotional
+  wagering" (no advertising or loyalty in the iGaming rule's title).
+  The 2025 MR 9 rulemaking (eff. 4/29/2025) reinforced
   no-targeting (under-21, self-excluded) and truthful/not-misleading standards.
   On-brand disclosure examples need cultural adaptation for non-US markets.
 last_updated: 2026-06-08
@@ -68,7 +72,7 @@ Michigan regulates gambling advertising through a **hybrid** framework: broad st
 | Layer | Source | Nature | Scope |
 |---|---|---|---|
 | **Statutory standards** | Lawful Internet Gaming Act (PA 152 of 2019); Lawful Sports Betting Act (PA 149 of 2019) | Standard-based | All interactive advertising (truthful/not-misleading; no targeting under-21) |
-| **Promotional wagering rules** | R 432.649 (iGaming) / R 432.749 (sports betting) | Rule-based | Tournaments/contests, bonus and promotional wagering, advertising, loyalty programs |
+| **Promotional wagering rules** | R 432.649 (iGaming) / R 432.749 (sports betting) | Rule-based | Tournaments/contests and bonus and promotional wagering (iGaming, R 432.649); the sports-betting rule (R 432.749) additionally titles advertising and player loyalty programs |
 | **Responsible gaming page rules** | R 432.654 (iGaming) / R 432.754 (sports betting) | Standard-based | RG logo, RG page, helpline message required wherever advertising drives to the platform |
 | **2025 MR 9 amendments** | MGCB rulemaking, eff. 4/29/2025 | Rule-based | Reinforced no targeting (under-21, self-excluded); truthful/not-misleading |
 | **Land-based** | Michigan Gaming Control and Revenue Act + MGCB-approved internal controls | Obligation-based | Detroit commercial casino advertising and in-venue signage |
@@ -87,17 +91,18 @@ Michigan regulates gambling advertising through a **hybrid** framework: broad st
 
 ## Internet gaming and sports betting advertising
 
-### Promotional wagering and advertising rules (R 432.649 / R 432.749)
+### Promotional wagering rules (R 432.649 / R 432.749)
 
-Promotional conduct — tournaments and contests, bonus and promotional wagering, advertising, and player loyalty programs — is governed by **R 432.649** (internet gaming) and the parallel **R 432.749** (internet sports betting). These rules cover the mechanics of bonus/promotional offers and related advertising and endorsement conduct.
+Promotional conduct is governed by **R 432.649** (internet gaming) and the parallel **R 432.749** (internet sports betting). The two rules are **not identical in titled scope**: R 432.749 is titled *"Tournaments/contests, bonus and promotional wagering, advertising, and player loyalty programs,"* so for sports betting it reaches advertising and loyalty programs by its terms. R 432.649 is titled only *"Tournaments/contests and bonus and promotional wagering"* — its title does **not** include advertising or player loyalty programs, so for internet gaming, advertising obligations rest primarily on the statutory standards (PA 152) and R 432.654 rather than R 432.649's title. Both rules cover the mechanics of bonus/promotional offers.
 
 | Requirement | Details | Source |
 |---|---|---|
 | **Promotional wagering mechanics** | Bonus and promotional wagering must operate as described and disclosed | R 432.649 (iGaming) / R 432.749 (sports betting) |
-| **Loyalty programs** | Player loyalty programs are governed alongside promotional wagering | R 432.649 / R 432.749 |
-| **Truthful presentation** | Promotional offers and advertising must be truthful and not misleading | PA 152 / PA 149; R 432.649 / R 432.749 |
+| **Loyalty programs** | Player loyalty programs are named in R 432.749's title (sports betting); the iGaming rule R 432.649 does not title loyalty programs | R 432.749 (sports betting); compare R 432.649 (iGaming) |
+| **Advertising** | Advertising is named in R 432.749's title (sports betting); for iGaming, advertising standards derive from PA 152 and R 432.654, not R 432.649's title | R 432.749 (sports betting); PA 152 + R 432.654 (iGaming) |
+| **Truthful presentation** | Promotional offers and advertising must be truthful and not misleading | PA 152 / PA 149 |
 
-> **Pin the right rule by vertical.** Use **R 432.649** for internet gaming promotions and **R 432.749** for internet sports betting promotions. They are separate, independently enforceable rules.
+> **Pin the right rule by vertical.** Use **R 432.649** for internet gaming promotions and **R 432.749** for internet sports betting promotions. They are separate, independently enforceable rules — and R 432.749's title is broader (it names advertising and player loyalty programs; R 432.649's title does not).
 
 ### Responsible gaming page requirements that attach to advertising (R 432.654 / R 432.754)
 
@@ -144,7 +149,7 @@ The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct app
 
 ## Channel-by-channel rules
 
-Michigan's interactive advertising obligations apply across channels; the key variables are vertical (cite R 432.654 / R 432.749 for iGaming, R 432.754 / R 432.749 for sports betting) and whether the placement can carry full RG information or must link to it.
+Michigan's interactive advertising obligations apply across channels; the key variables are vertical (cite R 432.654 / R 432.649 for iGaming, R 432.754 / R 432.749 for sports betting) and whether the placement can carry full RG information or must link to it.
 
 | Channel | Key requirements | Verticals | Source |
 |---|---|---|---|
@@ -168,7 +173,7 @@ Michigan statutes and rules prohibit advertising that:
 | **False or misleading claims** | About odds, winnings, or gambling outcomes | PA 152 / PA 149; 2025 MR 9 |
 | **Targeting under-21** | Advertising must not target individuals under 21 | PA 152 / PA 149; 2025 MR 9 |
 | **Targeting self-excluded persons** | No marketing to DPL or online self-exclusion enrollees | MGCB rules; 2025 MR 9 |
-| **Targeting prohibited persons** | No marketing to persons on the involuntary responsible gaming database | R 432.671 / R 432.771; duties R 432.676 / R 432.776 |
+| **Targeting prohibited persons** | No marketing to involuntary prohibited persons in the Responsible Gaming Database | R 432.671 / R 432.771; duties R 432.676 / R 432.776 |
 | **Promoting excessive play** | Advertising must not promote irresponsible or excessive gambling | PA 152 / PA 149 |
 | **Risk-free misrepresentation** | Misleading claims about the risk-free nature of gambling | PA 152 / PA 149; 2025 MR 9 |
 | **Non-conforming promotions** | Bonus/promotional offers that do not operate as disclosed | R 432.649 / R 432.749 |

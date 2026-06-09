@@ -28,9 +28,13 @@ adaptation_notes: |
   for non-US deployments. Currency is USD. Michigan has a voluntary
   self-exclusion program for Detroit commercial casinos (Disassociated Persons
   List, MGCB-administered) and a separate voluntary online self-exclusion
-  program for internet gaming and sports betting (MCL 432.312 + MGCB form
-  AD-2067). These are distinct from the involuntary statewide responsible
-  gaming database (R 432.671 / R 432.771), which lists prohibited persons.
+  program for internet gaming and sports betting — voluntary placement in the
+  Responsible Gaming Database (RGD) for a player-selected 1-year or 5-year term
+  (R 432.672 iGaming / R 432.772 sports betting; MCL 432.312; MGCB form AD-2067,
+  the "Responsible Gaming Database Application"). The RGD is the single statewide
+  database established by R 432.671 / R 432.771; it holds both these voluntary
+  1/5-year placements and involuntary prohibited persons (felony/court-ordered,
+  permanent unless removed by the executive director).
   Tribal casinos operate under separate tribal-state compacts. Three governing
   statutes cover land-based casino, internet gaming, and sports betting.
   Helpline transitioned to 1-800-GAMBLER as statewide primary in February 2024;
@@ -42,7 +46,7 @@ last_updated: 2026-06-08
 
 # Michigan — Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Michigan. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Michigan uses a **hybrid** regulatory approach with **three separate governing statutes** covering land-based casino, internet gaming, and sports betting. Michigan has two **voluntary** self-exclusion programs — the Disassociated Persons List (DPL) for Detroit commercial casinos and the online self-exclusion program for internet gaming and sports betting (MCL 432.312; MGCB form AD-2067). Do not confuse either with the **involuntary** statewide responsible gaming database (R 432.671 / R 432.771), which lists felony-convicted, court-ordered, and otherwise prohibited persons. Tribal casinos operate under separate tribal-state compacts and are not directly regulated by the MGCB. Detailed advertising standards are in the companion [advertising rules](advertising-rules.md) reference.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Michigan. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Michigan uses a **hybrid** regulatory approach with **three separate governing statutes** covering land-based casino, internet gaming, and sports betting. Michigan has two **voluntary** self-exclusion programs — the Disassociated Persons List (DPL) for Detroit commercial casinos and the online program for internet gaming and sports betting. The online program is **voluntary placement in the Responsible Gaming Database (RGD)** for a player-selected 1-year or 5-year term (R 432.672 iGaming / R 432.772 sports betting; MCL 432.312; MGCB form AD-2067, the "Responsible Gaming Database Application"). The RGD — the single statewide database established by R 432.671 / R 432.771 — holds **both** these voluntary placements **and** involuntary prohibited persons (felony-convicted, court-ordered, and otherwise barred; permanent unless removed by the executive director). Voluntary self-excluders and involuntary prohibited persons are different populations within the same database, so distinguish them in player-facing copy. Tribal casinos operate under separate tribal-state compacts and are not directly regulated by the MGCB. Detailed advertising standards are in the companion [advertising rules](advertising-rules.md) reference.
 >
 > **Verticals covered**: Land-based Casino (3 Detroit commercial + 24 tribal), Online Casino/iGaming, Sports Betting (retail + mobile)
 > *(If your deployment only covers one vertical, sections marked with another vertical's tag can be skipped.)*
@@ -62,8 +66,8 @@ last_updated: 2026-06-08
 | [Messaging requirements](#messaging-requirements) | All | Obligation-based (land-based) + standard-based (interactive) |
 | [Advertising restrictions](#advertising-restrictions) | All | Statutory and rule-based requirements |
 | [Self-exclusion — Disassociated Persons List](#self-exclusion--disassociated-persons-list) | Land-based | Voluntary DPL for Detroit commercial casinos (lifetime with 5-year removal option) |
-| [Self-exclusion — online program](#self-exclusion--online-self-exclusion-program) | Interactive | Voluntary online self-exclusion for iGaming/sports betting (1-year or 5-year; MCL 432.312, form AD-2067) |
-| [Responsible gaming database (prohibited persons)](#responsible-gaming-database--prohibited-persons) | Interactive | Involuntary statewide list (R 432.671 / R 432.771); permanent unless removed by the executive director |
+| [Self-exclusion — online program (RGD)](#self-exclusion--online-self-exclusion-program-rgd) | Interactive | Voluntary placement in the Responsible Gaming Database for iGaming/sports betting (1-year or 5-year; R 432.672 / R 432.772; MCL 432.312, form AD-2067) |
+| [Responsible Gaming Database — prohibited persons](#responsible-gaming-database--prohibited-persons) | Interactive | The same statewide RGD (R 432.671 / R 432.771) also holds involuntary prohibited persons; permanent unless removed by the executive director |
 | [Player protection — land-based](#player-protection--land-based) | Land-based | Detroit casino requirements |
 | [Player protection — interactive](#player-protection--interactive) | Interactive | Statutory deposit/wagering/time limits, account controls |
 | [Age verification](#age-verification) | All | 21+ for all gambling |
@@ -106,7 +110,7 @@ A fourth statute — the **Compulsive Gaming Prevention Act** (PA 70 of 1997, MC
 | **Tribal casino compacts** | Audits compliance with tribal-state compact provisions (does not have direct regulatory authority over tribal casinos) |
 | **Pari-mutuel horse racing** | Regulatory authority |
 | **Casino-style charitable gaming** | Regulatory authority |
-| **Responsible gaming** | Administers the voluntary Disassociated Persons List (land-based) and voluntary online self-exclusion (iGaming/sports betting); maintains the involuntary responsible gaming database of prohibited persons (R 432.671 / R 432.771); funds "Don't Regret the Bet" campaign |
+| **Responsible gaming** | Administers the voluntary Disassociated Persons List (land-based) and the online program — voluntary placement in the Responsible Gaming Database (iGaming/sports betting; R 432.672 / R 432.772); maintains that same Responsible Gaming Database (R 432.671 / R 432.771), which also holds involuntary prohibited persons; funds "Don't Regret the Bet" campaign |
 
 ### Tribal gaming
 
@@ -134,13 +138,15 @@ Tribal casinos are regulated by their own tribal gaming commissions under the In
 | Internet Sports Betting Rules (R 432.711-776) | [law.cornell.edu — Internet Sports Betting rule index](https://www.law.cornell.edu/regulations/michigan/department-treasury/michigan-gaming-control-board/internet-sports-betting) | Administrative rules for internet sports betting |
 | R 432.654 — Internet gaming responsible gaming (RG logo + RG page) | [law.cornell.edu — R 432.654](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-654) | Interactive RG logo, RG page, helpline message (iGaming) |
 | R 432.754 — Internet sports betting responsible gaming (RG logo + RG page) | [law.cornell.edu — R 432.754](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-754) | Interactive RG logo, RG page, helpline message (sports betting) |
-| R 432.671 — Responsible gaming database (involuntary prohibited-persons list) | [law.cornell.edu — R 432.671](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-671) | Establishment/maintenance of the involuntary database |
+| R 432.671 / R 432.771 — Establishment and maintenance of the Responsible Gaming Database | [law.cornell.edu — R 432.671](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-671) · [R 432.771](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-771) | Establishes the single statewide database that holds both voluntary placements (R 432.672 / R 432.772) and involuntary prohibited persons |
+| R 432.672 / R 432.772 — Voluntary placement in the Responsible Gaming Database | [law.cornell.edu — R 432.672](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-672) · [R 432.772](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-772) | Player-selected 1-year or 5-year voluntary self-exclusion (the online program); governs the voluntary act |
 | R 432.676 — Internet gaming prohibited-person duties | [law.cornell.edu — R 432.676](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-676) | Duty to block, cancel wager, notify executive director (iGaming) |
-| R 432.776 — Internet sports betting prohibited-person duties | [law.cornell.edu — Internet Sports Betting rule index](https://www.law.cornell.edu/regulations/michigan/department-treasury/michigan-gaming-control-board/internet-sports-betting) | Duty to block, cancel wager, notify executive director (sports betting) |
-| R 432.649 / R 432.749 — Promotional wagering, bonuses, advertising | [law.cornell.edu — R 432.649](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-649) · [R 432.749](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-749) | Tournaments/contests, bonus and promotional wagering, advertising, loyalty programs |
+| R 432.776 — Internet sports betting prohibited-person duties | [law.cornell.edu — R 432.776](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-776) | Duty to block, cancel wager, notify executive director (sports betting) |
+| R 432.649 — Tournaments/contests and bonus and promotional wagering (iGaming) | [law.cornell.edu — R 432.649](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-649) | iGaming promotions/bonuses (title does **not** include advertising or loyalty programs) |
+| R 432.749 — Tournaments/contests, bonus and promotional wagering, advertising, and player loyalty programs (sports betting) | [law.cornell.edu — R 432.749](https://www.law.cornell.edu/regulations/michigan/Mich-Admin-Code-R-432-749) | Sports betting promotions/bonuses, plus advertising and loyalty programs (broader titled scope than R 432.649) |
 | 2025 MR 9 rulemaking (eff. 4/29/2025, amending R 432.654 & R 432.754) | [michigan.gov — MGCB online gaming/sports betting rule revisions](https://www.michigan.gov/mgcb) *(verify before merge — gov PDF host bot-blocks automated checks)* | Helpline-wording amendment; advertising tightening (under-21/self-excluded) |
 | MCL 432.312 | [legislature.mi.gov — MCL 432.312](https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-432-312) | Responsible gaming measures, player protection tools, voluntary online self-exclusion |
-| MGCB self-exclusion / responsible gaming materials (form AD-2067) | [michigan.gov — Responsible Gaming](https://www.michigan.gov/mgcb/resources/responsible-gaming) *(verify before merge — gov host bot-blocks automated checks)* | Voluntary online self-exclusion application and program details |
+| MGCB form AD-2067 — Responsible Gaming Database Application (voluntary placement) | [michigan.gov — AD-2067 (canonical)](https://www.michigan.gov/-/media/Project/Websites/mgcb/Disassociated-Persons-Forms/Internet-Gaming-and-Sports-Betting-Responsible-Gaming-Database-Application.pdf) *(verify in browser — gov PDF host bot-blocks automated checks)* · [michigan.gov — Responsible Gaming](https://www.michigan.gov/mgcb/resources/responsible-gaming) | Application to voluntarily place one's name in the Responsible Gaming Database (1-year or 5-year); titled "...Responsible Gaming Database Application" |
 | Compulsive Gaming Prevention Act (PA 70 of 1997) | [legislature.mi.gov — Act 70](https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-Act-70-of-1997) | Compulsive Gaming Prevention Fund |
 
 ### Upcoming changes
@@ -199,6 +205,8 @@ Michigan uses a **tethered licensing model** for interactive gaming:
 
 As of **February 8, 2024**, the MGCB adopted **1-800-GAMBLER** as Michigan's statewide primary problem gambling helpline. Calls from Michigan are routed to the Michigan Department of Health and Human Services (MDHHS).
 
+> **Helpline-currency note (verify current MGCB-required number before launch).** The national 1-800-GAMBLER arrangement changed in late 2025–early 2026. 1-800-GAMBLER is a federally registered mark owned by the **Council on Compulsive Gambling of New Jersey (CCGNJ)** — not the NCPG. In September 2025 a New Jersey court returned control of the mark to CCGNJ and ordered the NCPG to stop managing 1-800-GAMBLER after **September 29, 2025**; the **NCPG then adopted a new national number, 1-800-MY-RESET, on January 29, 2026**, and is encouraging states and regulators to authorize and promote it. **For Michigan, 1-800-GAMBLER currently remains the right number to display** — MGCB routes it to Michigan's own MDHHS helpline (not the NCPG network), which insulates the state's requirement from the national dispute. But because adoption of the new number "will vary by state due to regulatory requirements," **confirm MGCB's current required display number before launch** rather than assuming. Sources: [NJ court ruling — CCGNJ regains 1-800-GAMBLER](https://sbcamericas.com/2025/09/23/judge-ruling-1800-gambler-ncpg-ccgnj/) *(verify in browser)* · [Szaferman Lakind — ownership of the 1-800-GAMBLER® mark upheld for CCGNJ](https://www.szaferman.com/ownership-rights-in-the-federally-registered-service-mark-1-800-gambler-are-upheld-by-the-courts-of-new-jersey/) · [NCPG — 1-800-MY-RESET announcement (Jan 29, 2026)](https://www.ncpgambling.org/news/1-800-my-reset-announcement/) · [MGCB bulletin — Michigan routes 1-800-GAMBLER to MDHHS (Feb 8, 2024)](https://content.govdelivery.com/accounts/MIGCB/bulletins/389745b)
+
 | Field | Value |
 |---|---|
 | **Primary number** | 1-800-GAMBLER (1-800-426-2537) |
@@ -206,7 +214,8 @@ As of **February 8, 2024**, the MGCB adopted **1-800-GAMBLER** as Michigan's sta
 | **Online chat** | www.1800gamblerchat.org |
 | **Hours** | 24/7/365 |
 | **Cost** | Free and confidential |
-| **Operator** | National Council on Problem Gambling (NCPG); Michigan calls routed to MDHHS |
+| **Michigan routing** | Calls from Michigan are routed to the Michigan Department of Health and Human Services (MDHHS) — i.e., to Michigan's own state helpline, not a national call center |
+| **Mark ownership** | 1-800-GAMBLER is a federally registered service mark owned by the Council on Compulsive Gambling of New Jersey (CCGNJ) — *not* the National Council on Problem Gambling (NCPG). See currency note below. |
 
 ### Legacy MDHHS helpline
 
@@ -328,7 +337,7 @@ Michigan's advertising approach is **hybrid** — statutory provisions set broad
 | **Sports betting** | PA 149 of 2019 + Internet Sports Betting Rules (R 432.711-776); RG page R 432.754; promotions R 432.749 |
 | **Approach** | Hybrid — statutory standards + rule-based requirements |
 
-> **2025 MR 9 advertising changes**: The 2025 MR 9 rulemaking (effective 4/29/2025) reinforced that advertising must not target individuals under 21 or self-excluded persons, and must be truthful and not misleading. Promotional wagering, bonuses, and loyalty programs are governed by **R 432.649** (iGaming) / **R 432.749** (sports betting).
+> **2025 MR 9 advertising changes**: The 2025 MR 9 rulemaking (effective 4/29/2025) reinforced that advertising must not target individuals under 21 or self-excluded persons, and must be truthful and not misleading. Bonus and promotional wagering is governed by **R 432.649** (iGaming) / **R 432.749** (sports betting). Note the titled scope differs by vertical: R 432.749 is titled "Tournaments/contests, bonus and promotional wagering, advertising, and player loyalty programs," whereas R 432.649 is titled only "Tournaments/contests and bonus and promotional wagering" — so advertising and player loyalty programs are named in the sports-betting rule's title but not the iGaming rule's.
 
 ### General advertising principles
 
@@ -348,7 +357,7 @@ Michigan statutes and rules prohibit:
 - Advertising that targets individuals under 21
 - Advertising that promotes irresponsible or excessive gambling
 - Misleading claims about the risk-free nature of gambling
-- Marketing to self-excluded individuals (DPL or online self-exclusion program) and to persons listed in the involuntary responsible gaming database
+- Marketing to self-excluded individuals (DPL, or voluntary RGD placements under R 432.672 / R 432.772) and to involuntary prohibited persons in the Responsible Gaming Database
 
 ### Required disclosures
 
@@ -383,7 +392,7 @@ All interactive gaming and sports betting advertising must include:
 | **Does NOT cover** | Tribal casinos, online platforms (separate online self-exclusion program) |
 | **Enrollment method** | In-person at MGCB offices (Detroit Cadillac Place or Lansing) |
 | **Application requirements** | Government-issued photo ID, physical description (height, weight, eye color, ethnicity, tattoos) |
-| **Removal process** | Apply using MGCB form after minimum 5 years; MGCB has 30 business days to process |
+| **Removal process** | Apply using MGCB form after minimum 5 years; MGCB has up to 60 business days to process a completed removal request |
 | **Legal consequences** | Entry to Detroit casino while on DPL = criminal trespass (up to 1 year imprisonment, up to $1,000 fine, or both); winnings confiscated and deposited into Compulsive Gaming Prevention Fund |
 | **Source** | Michigan Gaming Control and Revenue Act; MGCB Disassociated Persons Forms |
 
@@ -398,19 +407,20 @@ All interactive gaming and sports betting advertising must include:
 
 ---
 
-## Self-exclusion — online self-exclusion program
+## Self-exclusion — online self-exclusion program (RGD)
 
-> **Important — two different things share similar names.** The **voluntary online self-exclusion program** described here (a player chooses 1 year or 5 years) is *not* the same as the **involuntary responsible gaming database** (R 432.671 / R 432.771), which is documented in the next section. The voluntary online program rests on MCL 432.312 and the MGCB self-exclusion application (form AD-2067). Player-facing self-exclusion copy should cite MCL 432.312, not R 432.671.
+> **How this fits together.** Michigan's voluntary online self-exclusion **is voluntary placement in the Responsible Gaming Database (RGD)**. A player chooses a 1-year or 5-year term under **R 432.672** (internet gaming) / **R 432.772** (internet sports betting), backed by MCL 432.312 and the MGCB **"Responsible Gaming Database Application"** (form AD-2067). The RGD itself — the single statewide database — is established by **R 432.671 / R 432.771** and holds *both* these voluntary placements *and* the involuntary prohibited persons covered in the next section. So the voluntary program and the involuntary prohibitions are different populations **within the same database**, not two separate databases. In player-facing copy, cite **R 432.672 / R 432.772** (and MCL 432.312) for the voluntary self-exclusion act, and keep voluntary self-excluders clearly distinct from involuntary prohibited persons.
 
-### Online platforms (voluntary online self-exclusion)
+### Online platforms (voluntary placement in the Responsible Gaming Database)
 
 | Field | Value |
 |---|---|
-| **Program name** | Internet gaming and sports betting voluntary self-exclusion |
+| **Program name** | Voluntary placement in the Responsible Gaming Database (RGD) — internet gaming and sports betting self-exclusion |
 | **Nature** | Voluntary — player-initiated |
 | **Duration options** | 1 year or 5 year (selected at enrollment) |
 | **Scope** | All Michigan-regulated internet gaming operators and internet sports betting operators |
-| **Enrollment method** | MGCB self-exclusion application (form AD-2067); can be submitted remotely |
+| **Governing rule** | R 432.672 (internet gaming) / R 432.772 (internet sports betting); MCL 432.312 |
+| **Enrollment method** | MGCB Responsible Gaming Database Application (form AD-2067); can be submitted remotely |
 | **Confirmation** | MGCB Responsible Gaming Representative emails written confirmation; processing may take up to 45 days |
 | **Account action** | Prohibited from establishing and/or using an online wagering account or sports betting account |
 | **Auto-removal** | Yes — name removed automatically when selected exclusion period expires |
@@ -418,7 +428,7 @@ All interactive gaming and sports betting advertising must include:
 | **Separate selections** | Can choose different durations for online casino vs. sports betting |
 | **Operator discretion** | Licensed operators offering both online casino and sports betting may deny privileges to all offered online gaming for the longest exclusion chosen |
 | **Marketing cessation** | Operators must cease marketing to enrolled individuals |
-| **Source** | MCL 432.312; MGCB form AD-2067 |
+| **Source** | R 432.672 (iGaming) / R 432.772 (sports betting); MCL 432.312; MGCB form AD-2067 (Responsible Gaming Database Application) |
 
 ### Key online self-exclusion details
 
@@ -426,23 +436,25 @@ All interactive gaming and sports betting advertising must include:
 - Different durations can be selected for each product type
 - Unlike the DPL (lifetime), the online program offers **time-limited** exclusion (1 or 5 years)
 - Removal is **automatic** at period expiration — no reinstatement petition required
-- The program is administered by the MGCB under MCL 432.312
+- The program is administered by the MGCB under R 432.672 / R 432.772 and MCL 432.312; enrollment places the player's name in the Responsible Gaming Database (RGD) for the chosen term
 - Privacy protections: The self-exclusion records are exempt from disclosure under Michigan's Freedom of Information Act
 
 ---
 
-## Responsible gaming database — prohibited persons
+## Responsible Gaming Database — prohibited persons
 
-> **This is an involuntary list, not a self-exclusion program.** The responsible gaming database under **R 432.671** (internet gaming) and **R 432.771** (internet sports betting) lists individuals barred from online wagering for reasons including felony or gaming-crime convictions, crimes of moral turpitude, placement on another state's exclusion list, court orders, and executive-director designations. Placement is **permanent unless removed by the MGCB executive director** — there is no 1-year/5-year self-selected option. Do not present it as voluntary self-exclusion in player-facing copy.
+> **This section covers the involuntary placements within the RGD.** The Responsible Gaming Database is established by **R 432.671** (internet gaming) and **R 432.771** (internet sports betting). It holds two distinct populations: the **voluntary** 1-year/5-year self-excluders covered in the previous section (R 432.672 / R 432.772), and the **involuntary** prohibited persons covered here — individuals barred from online wagering for reasons including felony or gaming-crime convictions, crimes of moral turpitude, placement on another state's exclusion list, court orders, and executive-director designations. Involuntary placement is **permanent unless removed by the MGCB executive director** — there is no 1-year/5-year self-selected option. Do not present involuntary prohibited-person status as voluntary self-exclusion in player-facing copy.
 
 | Field | Value |
 |---|---|
-| **List name** | Responsible gaming database (prohibited persons) |
+| **Database name** | Responsible Gaming Database (RGD) |
+| **Population covered here** | Involuntary prohibited persons |
 | **Nature** | Involuntary — by conviction, court order, other-state exclusion, or executive-director designation |
 | **Scope** | All Michigan-regulated internet gaming and internet sports betting operators |
 | **Duration** | Permanent unless removed by the MGCB executive director |
 | **Operator duty** | Make reasonable efforts to prevent a prohibited person from opening an account or wagering; on discovery, give written notice to the executive director, cancel the wager, and suspend or close the account (R 432.676 iGaming / R 432.776 sports betting) |
-| **Source** | R 432.671 (iGaming) / R 432.771 (sports betting); duties R 432.676 / R 432.776 |
+| **Database established by** | R 432.671 (iGaming) / R 432.771 (sports betting) |
+| **Source** | R 432.671 / R 432.771 (database; involuntary placement); duties R 432.676 / R 432.776 |
 
 ### Prohibited-person operator duties (R 432.676 / R 432.776)
 
@@ -456,16 +468,18 @@ These affirmative duties apply at registration and on an ongoing basis, and they
 
 ### Self-exclusion / prohibited-person programs compared
 
-| Feature | DPL (Land-based, voluntary) | Online self-exclusion (Interactive, voluntary) | Responsible gaming database (Interactive, involuntary) |
+The online voluntary self-exclusion and the involuntary prohibited-person list are **two populations within the same Responsible Gaming Database (RGD)**, not separate databases — the columns below contrast how a player ends up in each.
+
+| Feature | DPL (Land-based, voluntary) | Online self-exclusion — RGD voluntary placement (Interactive) | RGD involuntary prohibited persons (Interactive) |
 |---|---|---|---|
 | **Nature** | Voluntary | Voluntary | Involuntary (conviction/court order/designation) |
 | **Scope** | 3 Detroit commercial casinos | All MI-regulated online operators | All MI-regulated online operators |
 | **Duration** | Lifetime (5-year removal option) | 1 year or 5 years | Permanent unless removed by executive director |
-| **Enrollment** | In-person at MGCB offices | Application form, AD-2067 (remote) | Placed by MGCB; not self-selected |
-| **Removal** | Petition after 5 years; 30 business days to process | Automatic at period expiration | Only by executive-director removal |
+| **Enrollment** | In-person at MGCB offices | Application form AD-2067 (remote); name placed in the RGD | Placed in the RGD by MGCB; not self-selected |
+| **Removal** | Petition after 5 years; up to 60 business days to process | Automatic at period expiration | Only by executive-director removal |
 | **Tribal casinos** | Not covered | N/A | N/A |
 | **Consequence** | Trespass charges; winnings confiscated to Compulsive Gaming Prevention Fund | Account closure | Account blocked; wager canceled; reported to executive director |
-| **Source** | Michigan Gaming Control and Revenue Act | MCL 432.312; AD-2067 | R 432.671 / R 432.771; duties R 432.676 / R 432.776 |
+| **Source** | Michigan Gaming Control and Revenue Act | R 432.672 / R 432.772; MCL 432.312; AD-2067 | R 432.671 / R 432.771; duties R 432.676 / R 432.776 |
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -483,7 +497,7 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 > **Q: What are Michigan's self-exclusion programs?**
 >
-> Michigan has two **voluntary** self-exclusion programs. The **Disassociated Persons List (DPL)** covers the three Detroit commercial casinos (MGM Grand Detroit, MotorCity Casino, Hollywood Casino at Greektown) — it's a lifetime ban with the option to apply for removal after at least 5 years. Enrollment is in-person at MGCB offices. The **online self-exclusion program** covers all Michigan-regulated online gaming and sports betting platforms — players choose 1 year or 5 years (MGCB form AD-2067), and their name is automatically removed when the period expires. A separate **responsible gaming database** (R 432.671 / R 432.771) is an *involuntary* prohibited-persons list (felony/court-ordered) — it is not something a player signs up for, so do not describe it as self-exclusion. If a player asks about self-exclusion, ask whether they want to exclude from casinos, online play, or both, and help them get started. Use "take a break" in casual conversation, the official program name when referring to the specific enrollment process. Contact the MGCB Responsible Gaming Section at 888-223-3044 for assistance.
+> Michigan has two **voluntary** self-exclusion programs. The **Disassociated Persons List (DPL)** covers the three Detroit commercial casinos (MGM Grand Detroit, MotorCity Casino, Hollywood Casino at Greektown) — it's a lifetime ban with the option to apply for removal after at least 5 years. Enrollment is in-person at MGCB offices. The **online program** covers all Michigan-regulated online gaming and sports betting platforms — it is **voluntary placement in the Responsible Gaming Database (RGD)** for a player-chosen 1-year or 5-year term (R 432.672 / R 432.772; MGCB form AD-2067, the "Responsible Gaming Database Application"), and the name is automatically removed when the period expires. That same Responsible Gaming Database (R 432.671 / R 432.771) **also** holds *involuntary* prohibited persons (felony/court-ordered) — those entries are not something a player signs up for, so don't describe an involuntary prohibition as self-exclusion. If a player asks about self-exclusion, ask whether they want to exclude from casinos, online play, or both, and help them get started. Use "take a break" in casual conversation, the official program name when referring to the specific enrollment process. Contact the MGCB Responsible Gaming Section at 888-223-3044 for assistance.
 
 ---
 
@@ -545,8 +559,8 @@ These are **statutory requirements** — not discretionary operator tools.
 | **Playing time limits** | Yes | Players must be able to set their own maximum playing times | MCL 432.312(4) |
 | **Self-exclusion (temporary)** | Yes | Temporary self-exclusion for all internet games | MCL 432.312(4) |
 | **Self-exclusion (permanent)** | Yes | Permanent self-exclusion for all internet games | MCL 432.312(4) |
-| **Online self-exclusion program** | Yes | Voluntary statewide online self-exclusion; 1-year or 5-year options | MCL 432.312; MGCB form AD-2067 |
-| **Prohibited-person duties** | Yes | Prevent prohibited persons (responsible gaming database) from opening/using an account; on discovery, notify executive director, cancel wager, suspend/close account | R 432.676 (iGaming) / R 432.776 (sports betting) |
+| **Online self-exclusion program (RGD)** | Yes | Voluntary placement in the Responsible Gaming Database; 1-year or 5-year options | R 432.672 (iGaming) / R 432.772 (sports betting); MCL 432.312; MGCB form AD-2067 |
+| **Prohibited-person duties** | Yes | Prevent prohibited persons (involuntary placements in the Responsible Gaming Database) from opening/using an account; on discovery, notify executive director, cancel wager, suspend/close account | R 432.676 (iGaming) / R 432.776 (sports betting) |
 | **Responsible gaming page** | Yes | Accessible during session with helpline, MGCB links + other US-based help organizations, operator RG policy | R 432.654 (iGaming) / R 432.754 (sports betting) |
 | **RG logo display** | Yes | MGCB-approved responsible gaming logo directing to RG page | R 432.654 (iGaming) / R 432.754 (sports betting) |
 | **Single account** | Yes | One account per operator per player | Internet Gaming Rules |
@@ -561,7 +575,7 @@ These are **statutory requirements** — not discretionary operator tools.
 | Wagering limits | "Cap your wagers — set a limit and play without overthinking it." | MCL 432.312(4) |
 | Playing time limits | "Set a session reminder — your dashboard, your rules." | MCL 432.312(4) |
 | Self-exclusion (temporary) | "Need a breather? Pause your account for as long as you need." | MCL 432.312(4) |
-| Self-exclusion (online program) | "Want to step away longer? Michigan's online self-exclusion lets you choose 1 year or 5 years." | MCL 432.312; AD-2067 |
+| Self-exclusion (online program) | "Want to step away longer? Michigan's online self-exclusion lets you choose 1 year or 5 years." | R 432.672 / R 432.772; MCL 432.312; AD-2067 |
 | RG page | "Questions about how games work, or ready to set some limits? It's all right here." | R 432.654 (iGaming) / R 432.754 (sports betting) |
 
 ---
@@ -590,7 +604,7 @@ These are **statutory requirements** — not discretionary operator tools.
 | **Age verification** | Operator must verify authorized participant is 21+ | MCL 432.308; MCL 432.411 |
 | **Geolocation** | Must verify player is physically located in Michigan | MCL 432.308; MCL 432.411 |
 | **Identity verification** | Full identity verification required at registration | Internet Gaming Rules |
-| **Self-exclusion / prohibited-person check** | Confirm player is not self-excluded (DPL or online program) and is not a prohibited person on the responsible gaming database; block, cancel wager, and notify the executive director on discovery | R 432.671 / R 432.771 (database); duties R 432.676 / R 432.776 |
+| **Self-exclusion / prohibited-person check** | Confirm player is not self-excluded (DPL, or a voluntary RGD placement) and is not an involuntary prohibited person in the Responsible Gaming Database; block, cancel wager, and notify the executive director on discovery | R 432.672 / R 432.772 (voluntary); R 432.671 / R 432.771 (database / involuntary); duties R 432.676 / R 432.776 |
 
 ### Age messaging
 
@@ -641,7 +655,7 @@ Quick-reference table mapping every collateral category to Michigan-specific ada
 | **Digital** | Website footer | Both | MI helpline: 1-800-GAMBLER, Text 800GAM, 1800gamblerchat.org + 21+ + on-brand RG message | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Age gate | Both | Set to 21+ | `{{MIN_AGE}}` = 21 |
 | **Digital** | Wagering account / app | Interactive | RG logo (MGCB-approved); RG page with helpline, MGCB links + other US-based help organizations, operator policy per R 432.654 (iGaming) / R 432.754 (sports betting); deposit/wagering/time limit tools per MCL 432.312(4) | Multiple tokens |
-| **Digital** | Self-exclusion page | Both | Explain the two voluntary programs (DPL for Detroit casinos; online self-exclusion for iGaming/sports betting, form AD-2067) and keep them distinct from the involuntary responsible gaming database; link to MGCB enrollment forms; MGCB RG Section: 888-223-3044 | — |
+| **Digital** | Self-exclusion page | Both | Explain the two voluntary programs (DPL for Detroit casinos; online voluntary placement in the Responsible Gaming Database for iGaming/sports betting, form AD-2067) and keep voluntary self-excluders distinct from involuntary prohibited persons in that same database; link to MGCB enrollment forms; MGCB RG Section: 888-223-3044 | — |
 | **Digital** | Deposit screen | Interactive | Helpline + on-brand message; deposit limit option prominently displayed per MCL 432.312(4) | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Social media bio | Both | Include 1-800-GAMBLER, 21+ | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Email templates | Both | Helpline + on-brand RG message in every email | `{{HELPLINE_NUMBER}}` |
@@ -680,9 +694,15 @@ helplines:
       campaign_website: "www.dontregretthebet.org"
       notes: >
         1-800-GAMBLER adopted as statewide primary Feb 2024;
-        calls routed to MDHHS. Legacy 1-800-270-7117 still
-        operational. MGCB RG Section (888-223-3044) handles
-        self-exclusion enrollment, M-F 8am-5pm ET.
+        calls routed to MDHHS (Michigan's own helpline). Legacy
+        1-800-270-7117 still operational. MGCB RG Section
+        (888-223-3044) handles self-exclusion enrollment,
+        M-F 8am-5pm ET. CURRENCY CAVEAT: 1-800-GAMBLER is a
+        CCGNJ-owned mark (not NCPG's); NJ court returned it to
+        CCGNJ (NCPG to cease after 9/29/2025) and NCPG launched
+        1-800-MY-RESET on 1/29/2026. MI still routes 1-800-GAMBLER
+        to MDHHS, so it currently remains MI's number — but confirm
+        MGCB's current required display before launch.
 
 # --- LEGAL -----------------------------------------------
 legal:
@@ -767,7 +787,7 @@ Complete before launching {{PROGRAM_NAME}} in Michigan.
 ### Responsible gaming database — prohibited persons (Interactive, involuntary)
 - [ ] Reasonable efforts in place to prevent prohibited persons from opening/using accounts (R 432.671 / R 432.771)
 - [ ] On discovery: written notice to executive director, wager canceled, account suspended/closed (R 432.676 / R 432.776)
-- [ ] Database treated as distinct from voluntary self-exclusion in all player-facing copy
+- [ ] Involuntary prohibited-person entries treated as distinct from voluntary self-exclusion in all player-facing copy (both populations live in the same Responsible Gaming Database)
 
 ### Player protection — Land-based
 - [ ] Problem gambling information posted per internal controls
@@ -793,7 +813,7 @@ Complete before launching {{PROGRAM_NAME}} in Michigan.
 - [ ] Land-based: government-issued photo ID at casino entry
 - [ ] Interactive: identity and age verification at registration
 - [ ] Interactive: geolocation verification confirming Michigan location
-- [ ] Self-exclusion checks (DPL / online program) and prohibited-person checks against the responsible gaming database at registration (R 432.671 / R 432.771; duties R 432.676 / R 432.776)
+- [ ] Self-exclusion checks (DPL; voluntary RGD placements under R 432.672 / R 432.772) and involuntary prohibited-person checks against the Responsible Gaming Database at registration (R 432.671 / R 432.771; duties R 432.676 / R 432.776)
 
 ### AML/KYC
 - [ ] FinCEN/BSA compliance program in place
