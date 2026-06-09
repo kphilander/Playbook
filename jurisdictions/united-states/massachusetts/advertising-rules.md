@@ -144,7 +144,7 @@ Under **205 CMR 256.05**, sports wagering advertising must:
 | **No ads to self-excluded** | Must not advertise to self-excluded individuals | 256.07 |
 | **No saturation advertising** | No saturation advertising at sporting events | 256.08(2) |
 
-> **DPH-provided asset — confirm current creative**: 256.06(2) requires the **DPH-provided** helpline language; operators must obtain the current asset directly from the MGC/DPH. With the **PlayWell** rebrand (from GameSense, 2026-03-27), the legacy GameSense-branded creative and the `GameSenseMA.com` domain are in transition — do not reproduce the old tagline from memory. (Verify before merge: the historical tagline wording was corroborated from operator-guidance summaries that were bot-blocked at audit time.)
+> **DPH-provided asset — confirm current creative**: 256.06(2) requires the **DPH-provided** helpline language; operators must obtain the current asset directly from the MGC/DPH. With the **PlayWell** rebrand (from GameSense, 2026-03-27), the legacy GameSense-branded creative and the `GameSenseMA.com` domain are in transition — do not reproduce the old tagline from memory.
 
 ### Responsible gaming font-size requirements
 

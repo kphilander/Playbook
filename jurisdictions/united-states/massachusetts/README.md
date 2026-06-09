@@ -151,7 +151,7 @@ The **Responsible Gaming Framework 2.0** is the MGC's orienting standards-of-pra
 | **Themes** | RG messaging, limit-setting & player controls, staff training, transparency |
 | **Source** | [MGC Responsible Gaming Framework 2.0](https://massgaming.com/wp-content/uploads/MGC-Responsible-Gaming-Framework-2.0.pdf) (linked from the [MGC Commitment to Responsible Gaming](https://massgaming.com/about/commitment-responsible-gaming/) hub) |
 
-> **Verify before merge**: The Framework 2.0 PDF resolves but is large and machine-read only via automated fetch; confirm the current edition and page-level citations directly from the MGC hub before relying on specific provisions in legal copy.
+> **Confirm current edition**: The Framework 2.0 document is the MGC's published standards-of-practice reference (linked from the Commitment to Responsible Gaming hub). Confirm the current edition and any page-level citations directly from the MGC hub before relying on specific provisions in legal copy.
 
 ### PlayMyWay — voluntary budgeting / pre-commitment
 
@@ -210,8 +210,16 @@ Massachusetts uses a **limited licensing system** for casino gambling:
 |---|---|
 | **Category 1** | Resort casino (up to 3 statewide — one per region) |
 | **Category 2** | Slots parlor (one statewide) |
-| **Sports Wagering — Category 1** | Retail + mobile, tethered to Category 1 or 2 casino license |
-| **Sports Wagering — Category 3** | Untethered mobile/online-only sports wagering operators |
+
+Sports wagering is licensed separately under M.G.L. c. 23N in **three** categories:
+
+| Sports wagering license | Description |
+|---|---|
+| **Category 1** | In-person sports wagering at a casino (gaming establishment), held by the casino itself, plus up to two individually-branded mobile apps |
+| **Category 2** | In-person sports wagering at a racetrack or simulcast facility (a "Sports Wagering Facility"), plus up to one individually-branded mobile app |
+| **Category 3** | Mobile/online sports wagering. A Category 3 license is either **Tethered** (connected to a Category 1 or Category 2 licensee) or **Untethered** (standalone, not connected to a Category 1 or Category 2 licensee) |
+
+Verify: [205 CMR 202.02](https://www.law.cornell.edu/regulations/massachusetts/205-CMR-202-02) (definitions) · [M.G.L. c. 23N § 3](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23N/Section3) (category definitions) · [MGC sports wagering licensees](https://massgaming.com/about/sports-wagering-in-massachusetts/sports-wagering-licensees/) (current holders).
 
 ---
 
@@ -242,7 +250,7 @@ Under 205 CMR 138 (Internal Controls), casino licensees must post responsible ga
 
 Under **205 CMR 256.06(2)**, all sports wagering advertising must include the helpline link and phone number **using language provided by the Department of Public Health (DPH)**.
 
-> **DPH-prescribed asset — confirm current version**: The DPH-provided responsible-gaming message has historically paired the helpline with the program logo and a tagline (e.g., "Play it smart from the start! Live Chat @ GameSenseMA.com"). With the PlayWell rebrand, this verbatim asset and the `GameSenseMA.com` domain are in transition. Operators must obtain the **current** DPH-approved language and creative directly from the MGC/DPH before producing ads — do not reproduce the legacy GameSense tagline from memory. (Verify before merge: the specific tagline wording above is corroborated from operator-guidance summaries that were bot-blocked at audit time.)
+> **DPH-prescribed asset — confirm current version**: The DPH-provided responsible-gaming message has historically paired the helpline with the program logo and a tagline (e.g., "Play it smart from the start! Live Chat @ GameSenseMA.com"). With the PlayWell rebrand, this verbatim asset and the `GameSenseMA.com` domain are in transition. Operators must obtain the **current** DPH-approved language and creative directly from the MGC/DPH before producing ads — do not reproduce the legacy GameSense tagline from memory.
 
 Under **205 CMR 233.02(2)**, the link to the VSE program must be **prominently displayed** on any mobile app or digital platform used for sports wagering.
 
