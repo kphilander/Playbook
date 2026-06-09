@@ -28,11 +28,25 @@ jurisdictions/
 │   ├── compliance-module.md            # Sub-jurisdiction scaffold
 │   └── collateral-adaptation.md        # Collateral localization scaffold
 │
+├── australia/                          # National jurisdiction (federal online + state land-based)
+│   ├── README.md                       # Full compliance module (separate regimes)
+│   ├── _brand-australia.yml            # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference (multi-layer ad rules)
+│
+├── brazil/                             # National jurisdiction (federal, online-only)
+│   ├── README.md                       # Full compliance module
+│   ├── _brand-brazil.yml               # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference (~19 ad prohibitions)
+│
 ├── canada/                             # Layer 1: Country
 │   ├── README.md                       # Federal framework, provincial table
 │   ├── _brand-canada.yml               # Country-level config overrides
 │   │
 │   ├── alberta/                        # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
+│   ├── british-columbia/               # Layer 2: Sub-jurisdiction
 │   │   ├── README.md                   # Full compliance module
 │   │   └── advertising-rules.md        # Deep-dive reference
 │   │
@@ -58,6 +72,11 @@ jurisdictions/
 │   ├── README.md                       # Full compliance module
 │   └── _brand-singapore.yml            # Jurisdiction config overrides
 │
+├── sweden/                             # National jurisdiction (online + betting)
+│   ├── README.md                       # Full compliance module
+│   ├── _brand-sweden.yml               # Jurisdiction config overrides
+│   └── advertising-rules.md            # Deep-dive reference
+│
 ├── united-kingdom/                     # National jurisdiction (no sub-jurisdictions)
 │   ├── README.md                       # Full compliance module
 │   ├── _brand-uk.yml                   # Jurisdiction config overrides
@@ -67,8 +86,16 @@ jurisdictions/
 │   ├── README.md                       # Federal framework, state table
 │   ├── _brand-us.yml                   # Country-level config overrides
 │   │
+│   ├── arizona/                        # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module (event wagering + tribal)
+│   │   └── advertising-rules.md        # Deep-dive reference
+│   │
 │   ├── california/                     # Layer 2: Sub-jurisdiction
 │   │   └── README.md                   # Full compliance module (tribal compacts)
+│   │
+│   ├── illinois/                       # Layer 2: Sub-jurisdiction
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
 │   │
 │   ├── massachusetts/                  # Layer 2: Sub-jurisdiction
 │   │   └── README.md                   # Full compliance module
@@ -121,14 +148,20 @@ Each jurisdiction module references specific `_brand.yml` keys and recommends ad
 
 | Country / Territory | Sub-jurisdiction | Regulator | Status | Module |
 |---|---|---|---|---|
+| Australia | -- (national / federal) | ACMA / NCPF | Complete | [australia/](australia/) |
+| Brazil | -- (national) | SPA / MF (Secretaria de Premios e Apostas) | Complete | [brazil/](brazil/) |
 | Canada | Alberta | AGLC | Complete | [canada/alberta/](canada/alberta/) |
+| Canada | British Columbia | IGCO (GPEB) / BCLC | Complete | [canada/british-columbia/](canada/british-columbia/) |
 | Canada | Ontario | AGCO / iGO | Complete | [canada/ontario/](canada/ontario/) |
 | Denmark | -- (national) | Spillemyndigheden | Complete | [denmark/](denmark/) |
 | Macau SAR | -- (standalone) | DICJ | Complete | [macau/](macau/) |
 | Malta | -- (national) | MGA | Complete | [malta/](malta/) |
 | Singapore | -- (standalone) | GRA | Complete | [singapore/](singapore/) |
+| Sweden | -- (national) | Spelinspektionen | Complete | [sweden/](sweden/) |
 | United Kingdom | -- (national) | Gambling Commission (UKGC) | Complete | [united-kingdom/](united-kingdom/) |
+| United States | Arizona | ADG | Complete | [united-states/arizona/](united-states/arizona/) |
 | United States | California | CGCC / Tribal Gaming Commissions | Complete | [united-states/california/](united-states/california/) |
+| United States | Illinois | IGB | Complete | [united-states/illinois/](united-states/illinois/) |
 | United States | Massachusetts | MGC | Complete | [united-states/massachusetts/](united-states/massachusetts/) |
 | United States | Michigan | MGCB | Complete | [united-states/michigan/](united-states/michigan/) |
 | United States | Nevada | NGCB / NGC | Complete | [united-states/nevada/](united-states/nevada/) |
