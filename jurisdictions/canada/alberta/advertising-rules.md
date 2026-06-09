@@ -26,16 +26,19 @@ adaptation_notes: |
   but without Ontario's specific sport betting inducement ban in public
   ads. On-brand disclosure examples need cultural adaptation for non-
   North-American markets. Mandatory RG Check accreditation for iGaming
-  operators adds an additional compliance layer.
-last_updated: 2026-03-22
+  operators adds an additional compliance layer. Self-excluded marketing
+  suppression for land-based venues is a binding operator duty under
+  CTCOG s.3.6.4 (loyalty mailings and promotions). Open iGaming market
+  launches July 13, 2026.
+last_updated: 2026-06-08
 ---
 
 # Alberta -- Advertising Rules
 
 > **Operator note**: This is the detailed advertising reference for Alberta. It covers AGLC Standards and Requirements for Internet Gaming advertising provisions, the national CGA Code for Responsible Gaming Advertising (January 2026), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Alberta compliance module](README.md) for complete coverage.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -64,7 +67,7 @@ Alberta gambling advertising is governed by two overlapping layers:
 | **Provincial** | AGLC Standards and Requirements for Internet Gaming | All gambling advertising in Alberta |
 | **National** | CGA Code for Responsible Gaming Advertising (January 2026) | All gambling advertising in Canada |
 
-Like Ontario, Alberta's open iGaming market (launching mid-2026) means **multiple private operators** will advertise simultaneously, making AGLC's advertising standards particularly important.
+Like Ontario, Alberta's open iGaming market (launching July 13, 2026) means **multiple private operators** will advertise simultaneously, making AGLC's advertising standards particularly important.
 
 ### Key difference from Ontario and BC
 
@@ -93,7 +96,7 @@ Like Ontario, Alberta's open iGaming market (launching mid-2026) means **multipl
 | **Character restrictions** | No cartoon figures, social media influencers, celebrities, or entertainers if there are reasonable grounds to believe it could appeal to minors |
 | **Athlete restriction** | Athletes may only be used to exclusively advocate for responsible gaming practices |
 | **High-risk targeting** | Must not target individuals known to be at high risk of gambling harm |
-| **Self-excluded targeting** | Must not target self-excluded persons; operators must block all marketing to self-excluded players |
+| **Self-excluded targeting** | Must not target self-excluded persons; operators must block all marketing to self-excluded players. For land-based venues, self-exclusion participants must be excluded from all loyalty mailings and promotions (CTCOG s.3.6.4) |
 | **Third-party compliance** | Operator must ensure third-party advertisers comply with the Act and regulations |
 
 ### Inducement marketing requirements
@@ -104,7 +107,7 @@ Unlike Ontario's outright ban on public sport betting inducement advertising, Al
 |---|---|
 | **Opt-in consent** | Each player must be provided with an opt-in process to consent to receiving inducement, bonus, and credit communications |
 | **Withdrawal** | Easily accessible method to withdraw consent at any time |
-| **Marketing cessation** | Self-excluded players must be removed from all marketing |
+| **Marketing cessation** | Self-excluded players must be removed from all marketing, including land-based loyalty mailings and promotions (CTCOG s.3.6.4) |
 | **Documentation** | Operators must maintain version-controlled marketing policies, documented approval workflows, and auditable consent states |
 
 ### Practical implications for operators
@@ -129,8 +132,8 @@ The **CGA Code for Responsible Gaming Advertising** (January 2026), administered
 | **Helpline** | Gambling advertising must include a responsible gambling message and helpline reference |
 | **Social responsibility** | Advertising must not portray gambling as a solution to financial problems |
 | **Endorsements** | Celebrity and influencer endorsements must comply with disclosure rules |
-| **Endorser age** | Minimum age of 25+ for endorsers |
-| **Frequency** | Maximum 1 gambling ad per commercial break during live sports |
+| **Endorser age** | Models, actors, and influencers in gaming advertising must be a minimum of 25 years old |
+| **Adult audience (broadcast)** | Broadcast advertising may appear only where at least 80% of the audience is reasonably expected to be of legal age for gambling; no advertising in or adjacent to children's programming |
 | **T&C disclosure** | Enhanced terms and conditions disclosure requirements |
 
 ### Interaction with AGLC standards
@@ -139,18 +142,20 @@ Where AGLC standards and the CGA Code overlap, the **more restrictive** requirem
 
 See [Canada overview -- CGA Code](../README.md#canadian-gambling-advertising-code) for the full national code analysis.
 
+*Source: [CGA Code for Responsible Gaming Advertising (Ad Standards)](https://adstandards.ca/wp-content/uploads/CGA-Code-for-Responsible-Gaming-Advertising-2025-10-24.pdf)*
+
 ---
 
 ## Channel-by-channel rules
 
 | Channel | Key restrictions | Source |
 |---|---|---|
-| **Broadcast (TV/radio)** | Responsible gambling message required; no targeting minors; max 1 ad per commercial break during live sports (CGA Code); no athlete endorsements except RG advocacy | AGLC Standards + CGA Code |
+| **Broadcast (TV/radio)** | Responsible gambling message required; no targeting minors; broadcast advertising only where at least 80% of the audience is reasonably expected to be of legal age, and none in or adjacent to children's programming (CGA Code); no athlete endorsements except RG advocacy | AGLC Standards + CGA Code |
 | **Digital display** | Responsible gambling message required; no targeting minors or self-excluded players; opt-in consent for inducement communications | AGLC Standards |
 | **Social media** | No content appealing to minors; no use of influencers likely to appeal to minors; responsible gambling message required | AGLC Standards |
 | **Print** | Responsible gambling message required; no targeting minors | AGLC Standards + CGA Code |
 | **Direct marketing** | Opt-in consent required for inducement marketing; easy withdrawal mechanism; self-excluded persons excluded | AGLC Standards |
-| **In-venue** | GameSense information and responsible gambling signage; self-exclusion program information | AGLC Standards |
+| **In-venue** | GameSense Information Centre (min 120 sq ft) and prominently posted social-responsibility and no-minors signage; self-exclusion program information | CTCOG s.4.2.1, s.4.3.7 |
 | **Sponsorship** | Athletes may only advocate for responsible gambling; no endorsements appealing to minors | AGLC Standards |
 
 ---
@@ -164,7 +169,7 @@ The following content types are prohibited in Alberta gambling advertising:
 3. **Cartoon figures appealing to minors** -- if there are reasonable grounds to believe they could appeal to minors
 4. **Influencer/celebrity content appealing to minors** -- social media influencers, celebrities, or entertainers likely to appeal to minors
 5. **High-risk targeting** -- advertising directed at individuals known to be at high risk of gambling harm
-6. **Self-excluded targeting** -- any marketing directed at self-excluded persons
+6. **Self-excluded targeting** -- any marketing directed at self-excluded persons; for land-based venues this includes exclusion from all loyalty mailings and promotions (CTCOG s.3.6.4)
 7. **Misleading claims** -- false or misleading representations about odds, winning likelihood, or financial outcomes
 8. **Problem-solving claims** -- suggestions that gambling solves financial, employment, or personal problems
 9. **Political event betting promotion** -- explicitly prohibited in Alberta's iGaming market
@@ -210,5 +215,7 @@ All "Partial" items require the same three changes:
 3. Ensure a responsible gambling message appears in advertising materials
 
 ---
+
+*Sources for in-venue and self-exclusion marketing rules: [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines) | [RECTCOG](https://aglc.ca/documents/racing-entertainment-centre-terms-conditions-and-operating-guidelines)*
 
 *Cross-references: [Alberta compliance module](README.md) | [Canada overview](../README.md) | [CGA Code](../README.md#canadian-gambling-advertising-code) | [Application guidelines](../../../brand-book/07-application-guidelines.md) | [Stigma-free language guide](../../../brand-book/04-voice-and-tone.md)*
