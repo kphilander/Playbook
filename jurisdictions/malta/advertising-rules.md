@@ -30,7 +30,7 @@ last_updated: "2026-06-08"
 
 **Sources**: [MGA Advertising FAQ](https://www.mga.org.mt/faqs/what-is-required-when-advertising/) | [CCC Guidelines PDF](https://www.mga.org.mt/app/uploads/Commercial-Communications-Committee-Guidelines.pdf) | [MGA CCC announcement and guidelines](https://www.mga.org.mt/mga-sets-up-a-commercial-communications-committee-and-publishes-guidelines/)
 
-> **Verify before merge**: the CCC Guidelines PDF is the binding standard-of-practice source, but it is not parseable by web-fetch tools (it must be read with a PDF text extractor). The regulation numbers cited below were read from the source PDF; re-confirm them against the canonical PDF before publishing.
+> **Verify before legal sign-off**: the CCC Guidelines PDF is the binding standard-of-practice source. The regulation numbers cited below were verified against the canonical MGA CCC PDF (it does not render in web-fetch tools, but it reads cleanly with a PDF text extractor); re-confirm them against that PDF before legal sign-off.
 
 ---
 
@@ -110,8 +110,8 @@ The following content is prohibited in all gambling advertising:
 - Must not suggest that gaming can be a resolution to social, educational, professional, or personal problems
 - Must not present gambling as an alternative to employment
 - Must not present gambling as a solution to financial concerns
-- Must not suggest that solitary gaming is preferable to social gaming (CCC Reg. 20(g))
-- Must not exploit cultural beliefs or traditions about gaming or luck -- for example lucky charms or icons (CCC Reg. 20(k))
+- Must not suggest that solitary gaming is preferable to social gaming (CCC Reg. 6(g))
+- Must not exploit cultural beliefs or traditions about gaming or luck -- for example lucky charms or icons (CCC Reg. 6(k))
 
 ### Promotional integrity
 
@@ -150,10 +150,11 @@ This mirrors the Player Protection Directive's no-inducement rule on self-exclus
 
 | Standard | Requirement | Source |
 |---|---|---|
-| **No product placement** | Sponsorship must exclude product placement | CCC Regs. 23-28 |
-| **Activities involving minors** | Sponsorship is prohibited where the sponsored activity mainly involves minors or vulnerable persons | CCC Regs. 23-28 |
-| **No sponsorship of minors** | Operators must not sponsor minors | CCC Regs. 23-28 |
-| **No merchandising aimed at minors** | Merchandising connected to sponsorship must not target minors | CCC Regs. 23-28 |
+| **No product placement** | Sponsorship is limited to text, logo, or imagery identifying the operator and must exclude product placement | CCC Reg. 21 |
+| **Activities involving minors** | Sponsorship is prohibited where the sponsored activity mainly involves minors or vulnerable persons | CCC Reg. 24 |
+| **No sponsorship of minors** | Operators must not sponsor minors (or persons of legal gaming age portrayed as minors) | CCC Reg. 25 |
+| **No merchandising aimed at minors** | Merchandising connected to sponsorship must not target minors | CCC Reg. 26 |
+| **No advertising in programmes appealing to minors** | Sponsorship of, or advertising in, televised programmes with particular appeal to minors or vulnerable persons is prohibited | CCC Reg. 27 |
 
 ---
 
@@ -186,9 +187,9 @@ The MGA established the CCC to review commercial communications issued by gaming
 - [ ] No marketing to self-excluded persons; affiliate communications controlled (CCC Guidelines)
 - [ ] No inducements (free spins/bonuses) to a player who has signalled intent to stop (CCC Reg. 10)
 - [ ] Social-media placements use age-gating tools (CCC Reg. 13)
-- [ ] No suggestion that solitary gaming is preferable to social gaming (CCC Reg. 20(g))
-- [ ] No exploitation of cultural beliefs about luck (CCC Reg. 20(k))
-- [ ] Sponsorship complies (no product placement; not where the activity mainly involves minors; no merchandising aimed at minors) (CCC Regs. 23-28)
+- [ ] No suggestion that solitary gaming is preferable to social gaming (CCC Reg. 6(g))
+- [ ] No exploitation of cultural beliefs about luck (CCC Reg. 6(k))
+- [ ] Sponsorship complies (no product placement; not where the activity mainly involves minors; no merchandising aimed at minors) (CCC Reg. 21-27)
 - [ ] No ads placed in prohibited public locations
 - [ ] Broadcast ads avoid children's programme slots
 - [ ] No content targeting or featuring minors
