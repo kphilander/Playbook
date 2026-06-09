@@ -30,7 +30,7 @@ adaptation_notes: |
   deployment, including the Remote technical standards (RTS) that govern
   game information, RTP disclosure, reality checks, autoplay, and game
   design. GambleAware is transitioning to the statutory levy system
-  by April 2026; helpline references should use GamCare (0808 8020 133)
+  by 31 March 2026; helpline references should use GamCare (0808 8020 133)
   as the primary contact. GAMSTOP is mandatory for all remote operators.
   The retired "When the Fun Stops, Stop" line has been replaced by the
   industry "Take Time to Think" safer-gambling campaign.
@@ -303,16 +303,16 @@ The UK has one of the most complex gambling advertising regimes globally, with f
 
 | Rule | Requirement | Source |
 |---|---|---|
-| Social responsibility | All gambling marketing must be "socially responsible" | CAP s.16 / BCAP s.17 |
-| No irresponsible behaviour | Must not portray, condone, or encourage irresponsible gambling | CAP 16.1 |
-| No financial solutions | Must not suggest gambling solves financial problems | CAP 16.3.2 |
-| No life priority | Must not depict gambling as essential or above work/family | CAP 16.3.4 |
-| No sexual success | Must not link gambling to seduction or sexual success | CAP 16.3.7 |
-| No peer pressure | Must not encourage gambling through social pressure | CAP 16.3.6 |
-| No under-18 targeting | Must not be directed at under-18s through media or context | CAP 16.3.12 |
-| No under-25 gambling | Must not feature anyone under 25 gambling or in significant roles | CAP 16.3.13 |
-| Clear terms | Incentives must include significant terms and conditions | CAP 16.7 |
-| Truthful | Must not mislead about likelihood of winning | CAP 16.2 |
+| Social responsibility | All gambling marketing must be "socially responsible" | CAP s.16.1 / BCAP s.17 |
+| No irresponsible behaviour | Must not portray, condone, or encourage irresponsible gambling | CAP 16.3.1 |
+| No financial solutions | Must not suggest gambling solves financial problems | CAP 16.3.4 |
+| No life priority | Must not depict gambling as essential or above work/family | CAP 16.3.5 |
+| No sexual success | Must not link gambling to seduction or sexual success | CAP 16.3.8 |
+| No peer pressure | Must not encourage gambling through social pressure | CAP 16.3.7 |
+| No under-18 targeting | Must not be directed at under-18s through media or context | CAP 16.3.13 |
+| No under-25 gambling | Must not feature anyone under 25 gambling or in significant roles | CAP 16.3.14 |
+| Clear terms | Incentives must include significant terms and conditions | CAP s.8 (sales promotions) / LCCP SR 5.1.1 |
+| Truthful | Must not mislead about likelihood of winning | CAP s.3 (misleading advertising) |
 
 ### Channel-specific rules
 

@@ -119,31 +119,30 @@ Gambling advertisements must **not**:
 
 | Rule | CAP Code ref | Description |
 |---|---|---|
-| Irresponsible behaviour | 16.1 | Portray, condone, or encourage gambling behaviour that is socially irresponsible or could lead to financial, social, or emotional harm |
-| Vulnerability exploitation | 16.3.1 | Exploit the susceptibilities of children, young persons, or vulnerable persons |
+| Irresponsible behaviour | 16.3.1 | Portray, condone, or encourage gambling behaviour that is socially irresponsible or could lead to financial, social, or emotional harm |
+| Vulnerability exploitation | 16.3.2 | Exploit the susceptibilities, aspirations, credulity, inexperience, or lack of knowledge of children, young persons, or vulnerable persons |
 | Emotional escape | 16.3.3 | Suggest gambling addresses personal problems like loneliness or depression |
-| Financial solutions | 16.3.2 | Suggest gambling can solve financial problems or replace employment |
-| Life priority | 16.3.4 | Depict gambling as essential or superseding family, work, or other commitments |
-| Self-improvement claims | 16.3.5 | Link gambling to enhanced self-image, control, or social status |
-| Peer pressure | 16.3.6 | Encourage gambling through social pressure messaging |
-| Sexual/romantic content | 16.3.7 | Link gambling to seduction, sexual success, or enhanced attractiveness |
-| Toughness associations | 16.3.8 | Connect gambling to resilience or recklessness |
-| Strong appeal to under-18s | 16.3.11 (and 16.3.12) | Be of "strong appeal" to under-18s -- the tightened CAP/BCAP standard in force since 1 October 2022, which bans content (top-flight footballers, sportspeople and celebrities with strong youth appeal, youth-culture references, certain influencers and characters) that is of strong appeal to children regardless of how the ad is targeted |
-| Under-25 gambling | 16.3.13 | Feature anyone under 25 (or who appears under 25) gambling or in a significant role |
-| Children featured | 16.3.14 | Feature children or young persons in gambling contexts (narrow exceptions for family entertainment venues) |
-| Under-18 targeting | 16.3.12 | Direct advertising toward those under 18 through media selection or context |
+| Financial solutions | 16.3.4 | Suggest gambling can solve financial problems or replace employment |
+| Life priority | 16.3.5 | Depict gambling as essential or superseding family, work, or other commitments |
+| Self-improvement claims | 16.3.6 | Link gambling to enhanced self-image, control, or social status |
+| Peer pressure | 16.3.7 | Encourage gambling through social pressure messaging |
+| Sexual/romantic content | 16.3.8 | Link gambling to seduction, sexual success, or enhanced attractiveness |
+| Toughness associations | 16.3.9 | Connect gambling to resilience or recklessness |
+| Strong appeal to under-18s | 16.3.12 | Be of "strong appeal" to under-18s -- the tightened CAP/BCAP standard in force since 1 October 2022, which bans content (top-flight footballers, sportspeople and celebrities with strong youth appeal, youth-culture references, certain influencers and characters) that is of strong appeal to children regardless of how the ad is targeted |
+| Under-18 targeting | 16.3.13 | Direct advertising toward those under 18 through media selection or context |
+| Under-25 gambling | 16.3.14 | Feature anyone under 25 (or who appears under 25) gambling or in a significant role |
 
 ### Age thresholds
 
 | Activity | Minimum age | CAP reference |
 |---|---|---|
-| Most gambling | 18 | 16.3.12 |
-| Football pools, lotteries, prize gaming | 16 | 16.3.12 |
-| Appearance in ads (gambling role) | 25 | 16.3.13 |
+| Most gambling | 18 | 16.3.13 |
+| Football pools, lotteries, prize gaming | 16 | 16.3.13 |
+| Appearance in ads (gambling role) | 25 | 16.3.14 |
 
 #### "Strong appeal to under-18s" (in force 1 October 2022)
 
-The CAP and BCAP codes were tightened on **1 October 2022** so that gambling and lottery ads must not be of **"strong appeal"** to children or young persons -- a stricter test than the previous "particular appeal." The distinction: content can be off-limits even where most of the audience is adult, if its *content* (not its scheduling or targeting) holds strong appeal to under-18s. In practice this rules out top-flight/Premier League footballers and other sportspeople and celebrities with a strong under-18 following, certain video-game and social-media references, and influencers popular with children. The ASA enforces this through the CAP guidance on protecting under-18s (often referenced as GAM003). Sources: [CAP Code Section 16](https://www.asa.org.uk/type/non_broadcast/code_section/16.html); [BCAP Code Section 17](https://www.asa.org.uk/type/broadcast/code_section/17.html).
+The CAP and BCAP codes were tightened on **1 October 2022** so that gambling and lottery ads must not be of **"strong appeal"** to children or young persons -- a stricter test than the previous "particular appeal." The distinction: content can be off-limits even where most of the audience is adult, if its *content* (not its scheduling or targeting) holds strong appeal to under-18s. In practice this rules out top-flight/Premier League footballers and other sportspeople and celebrities with a strong under-18 following, certain video-game and social-media references, and influencers popular with children. The ASA enforces this through the CAP/BCAP guidance *Gambling and lotteries advertising: protecting under-18s* (the 2022 guidance was refreshed on 14 October 2025). Sources: [CAP Code Section 16](https://www.asa.org.uk/type/non_broadcast/code_section/16.html); [BCAP Code Section 17](https://www.asa.org.uk/type/broadcast/code_section/17.html); [CAP guidance -- Gambling and lotteries advertising: protecting under-18s](https://www.asa.org.uk/resource/gambling-and-lotteries-advertising-protecting-under-18s.html).
 
 ---
 
@@ -155,7 +154,7 @@ The BCAP Code governs TV and radio gambling advertising with additional broadcas
 
 | Rule | Description |
 |---|---|
-| **Strong appeal to under-18s** | Gambling ads must not be of strong appeal to under-18s (in force 1 October 2022; same standard as CAP 16.3.11) |
+| **Strong appeal to under-18s** | Gambling ads must not be of strong appeal to under-18s (in force 1 October 2022; same standard as CAP 16.3.12) |
 | **Pre-watershed content** | Gambling ads must not be shown during or adjacent to programmes of particular appeal to under-18s |
 | **9pm watershed** | Certain gambling content restricted to post-watershed viewing |
 | **Whistle-to-whistle ban** | No betting/gaming TV ads from 5 minutes before to 5 minutes after live sport shown pre-watershed (IGRG industry code) |
@@ -190,7 +189,7 @@ Two further industry commitments {{PROGRAM_NAME}} content should surface rather 
 | **On-screen safer-gambling reference** | A safer-gambling message (for example a begambleaware.org reference) must be on-screen for **at least 10% of a television advert's duration** |
 | **Advertising directed to safer gambling** | A commitment to direct a share of advertising (around 20%) to safer-gambling messaging |
 
-The current industry safer-gambling campaign line is **"Take Time to Think"**, which replaced the retired "When the Fun Stops, Stop." Do not use the retired line as a safer-gambling message. Source: IGRG *Gambling Industry Code for Socially Responsible Advertising* (7th ed.) -- see links above.
+The current industry safer-gambling campaign line is **"Take Time to Think"** (a Betting and Gaming Council campaign), which replaced the retired "When the Fun Stops, Stop." Do not use the retired line as a safer-gambling message. Note the distinction: the IGRG code mandates an **on-screen begambleaware.org reference** for the 10%-of-duration requirement above; "Take Time to Think" is the campaign banner, not the code-mandated on-screen wording. Source: IGRG *Gambling Industry Code for Socially Responsible Advertising* (7th ed.) -- see links above.
 
 ---
 
@@ -224,11 +223,11 @@ A significant amendment took effect on **1 September 2025**, closing a regulator
 
 | Restriction | Details | Source |
 |---|---|---|
-| Age targeting | Must use available age-gating and targeting tools to exclude under-18s | CAP s.16.3.12 |
+| Age targeting | Must use available age-gating and targeting tools to exclude under-18s | CAP s.16.3.13 |
 | Content | All CAP Code s.16 prohibitions apply | CAP s.16 |
 | Terms | Incentive terms must be clear and not misleading | SR 5.1.1 |
 | Social media | All organic and paid content by UK-licensed operators in scope (from September 2025) | CAP Code (amended) |
-| Influencer marketing | Under-25s cannot be featured; proper disclosure required | CAP s.16.3.13 |
+| Influencer marketing | Under-25s cannot be featured; proper disclosure required | CAP s.16.3.14 |
 | Affiliate marketing | Affiliates must comply; operator responsible for affiliate content | SR 5.1.6 |
 
 ### Print
