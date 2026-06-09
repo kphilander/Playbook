@@ -5,7 +5,7 @@ pillar: [open]
 tier: 1
 tone: [confident-informative]
 reading_level: grade-9-12
-game_type: [slots, blackjack, roulette, sports-betting, video-poker]
+game_type: [slots, blackjack, roulette, sports-betting, video-poker, poker]
 audience: [general]
 channel: [blog, in-app]
 cultural_profile:
