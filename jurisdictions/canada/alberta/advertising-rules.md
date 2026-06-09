@@ -132,8 +132,8 @@ The **CGA Code for Responsible Gaming Advertising** (January 2026), administered
 | **Helpline** | Gambling advertising must include a responsible gambling message and helpline reference |
 | **Social responsibility** | Advertising must not portray gambling as a solution to financial problems |
 | **Endorsements** | Celebrity and influencer endorsements must comply with disclosure rules |
-| **Endorser age** | Minimum age of 25+ for endorsers |
-| **Frequency** | Maximum 1 gambling ad per commercial break during live sports |
+| **Endorser age** | Models, actors, and influencers in gaming advertising must be a minimum of 25 years old |
+| **Adult audience (broadcast)** | Broadcast advertising may appear only where at least 80% of the audience is reasonably expected to be of legal age for gambling; no advertising in or adjacent to children's programming |
 | **T&C disclosure** | Enhanced terms and conditions disclosure requirements |
 
 ### Interaction with AGLC standards
@@ -142,13 +142,15 @@ Where AGLC standards and the CGA Code overlap, the **more restrictive** requirem
 
 See [Canada overview -- CGA Code](../README.md#canadian-gambling-advertising-code) for the full national code analysis.
 
+*Source: [CGA Code for Responsible Gaming Advertising (Ad Standards)](https://adstandards.ca/wp-content/uploads/CGA-Code-for-Responsible-Gaming-Advertising-2025-10-24.pdf)*
+
 ---
 
 ## Channel-by-channel rules
 
 | Channel | Key restrictions | Source |
 |---|---|---|
-| **Broadcast (TV/radio)** | Responsible gambling message required; no targeting minors; max 1 ad per commercial break during live sports (CGA Code); no athlete endorsements except RG advocacy | AGLC Standards + CGA Code |
+| **Broadcast (TV/radio)** | Responsible gambling message required; no targeting minors; broadcast advertising only where at least 80% of the audience is reasonably expected to be of legal age, and none in or adjacent to children's programming (CGA Code); no athlete endorsements except RG advocacy | AGLC Standards + CGA Code |
 | **Digital display** | Responsible gambling message required; no targeting minors or self-excluded players; opt-in consent for inducement communications | AGLC Standards |
 | **Social media** | No content appealing to minors; no use of influencers likely to appeal to minors; responsible gambling message required | AGLC Standards |
 | **Print** | Responsible gambling message required; no targeting minors | AGLC Standards + CGA Code |

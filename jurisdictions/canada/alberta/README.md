@@ -85,7 +85,7 @@ last_updated: 2026-06-08
 
 *Sources: [Gaming, Liquor and Cannabis Act](https://open.alberta.ca/publications/g01) | [iGaming Alberta Act](https://open.alberta.ca/publications/i00p2) | [AGLC Gaming](https://aglc.ca/gaming) | [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines) | [RECTCOG](https://aglc.ca/documents/racing-entertainment-centre-terms-conditions-and-operating-guidelines)*
 
-> **Verify before merge**: The `open.alberta.ca/publications/i00p2` link (iGaming Alberta Act) returned a transient HTTP 520 server error during the last audit; the canonical [`open.alberta.ca/publications/g01`](https://open.alberta.ca/publications/g01) (GLC Act) and [CanLII](https://www.canlii.org/en/ab/laws/regu/alta-reg-143-1996/latest/alta-reg-143-1996.html) (Regulation) resolved live. The CTCOG/RECTCOG documents are published as PDFs that are live but not auto-parseable; confirm section numbers against the current PDF before legal sign-off.
+> **Source notes**: The [`open.alberta.ca/publications/i00p2`](https://open.alberta.ca/publications/i00p2) link (iGaming Alberta Act), the canonical [`open.alberta.ca/publications/g01`](https://open.alberta.ca/publications/g01) (GLC Act), and [CanLII](https://www.canlii.org/en/ab/laws/regu/alta-reg-143-1996/latest/alta-reg-143-1996.html) (Regulation) all resolve live. The CTCOG and RECTCOG are published as machine-readable PDFs; the cited section numbers were verified against the current CTCOG Handbook (issued 2026-03-25).
 
 ### Standards of practice (operating guidelines)
 
@@ -156,14 +156,14 @@ On **May 12, 2025**, the iGaming Alberta Act received Royal Assent, establishing
 |---|---|---|---|
 | Casino (slots, table games) | Legal | Private operators under AGLC licence | 28 casinos + racing entertainment centres across Alberta |
 | Online casino (iGaming) | Legal | PlayAlberta.ca (AGLC); private operators launching July 13, 2026 | Open competitive market under iGaming Alberta Act |
-| Sports betting (single-event) | Legal | PlayAlberta.ca; private operators launching July 13, 2026 | Legal since Sept 21, 2021 (Bill C-218) |
+| Sports betting (single-event) | Legal | PlayAlberta.ca; private operators launching July 13, 2026 | Bill C-218 (Safe and Regulated Sports Betting Act) received Royal Assent June 29, 2021 and came into force August 27, 2021 |
 | Lottery | Legal | WCLC via AGLC | Lotto 6/49, Lotto Max, scratch tickets |
 | Horse racing | Legal | Licensed tracks (RECs) | Century Downs, Century Mile |
 | Poker (live) | Legal | Licensed casinos | Available in licensed casinos |
 | Charitable gaming (bingo) | Legal | Licensed charity operators | Regulated by AGLC |
-| VLTs (video lottery terminals) | Legal | AGLC-operated | ~6,000 VLTs in ~900 licensed premises |
+| VLTs (video lottery terminals) | Legal | AGLC-operated | ~6,000 VLTs across Alberta |
 
-*Source: [AGLC Gaming](https://aglc.ca/gaming)*
+*Sources: [AGLC Gaming](https://aglc.ca/gaming) | [Bill C-218 (Safe and Regulated Sports Betting Act) -- Royal Assent, Parliament of Canada](https://www.parl.ca/DocumentViewer/en/43-2/bill/C-218/royal-assent)*
 
 ### Key regulatory notes
 
@@ -301,8 +301,8 @@ Alberta's advertising rules come from two overlapping layers:
 ### CGA national code overlay
 
 The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards. See [canada/README.md](../README.md#canadian-gambling-advertising-code). Key additions:
-- Endorser minimum age of 25+
-- Frequency limits: maximum 1 gambling ad per commercial break during live sports
+- Endorser minimum age of 25+ (models, actors, and influencers must be a minimum of 25 years old)
+- Adult-audience thresholds: broadcast advertising only where at least 80% of the audience is reasonably expected to be of legal age, and no advertising in or adjacent to children's programming
 - Enhanced T&C disclosure requirements
 
 ### Prohibited content
@@ -385,7 +385,7 @@ Alberta has one province-wide self-exclusion program. As of **2026-02-26** it op
 
 *Sources: [AGLC Self-Exclusion (redirects to selfexclusion.ca)](https://selfexclusion.ca/) | [AGLC bulletin -- Self-Exclusion Program Updates (effective 2026-02-26)](https://aglc.ca/gaming-bulletins/self-exclusion-program-updates) | [GameSense Self-Exclusion](https://gamesenseab.ca/responsible-gambling-support/self-exclusion-program)*
 
-> **Note**: The former `aglc.ca/gaming/self-exclusion` page now 301-redirects to [selfexclusion.ca](https://selfexclusion.ca/), the dedicated digital platform. **Verify before merge**: selfexclusion.ca is live but JavaScript-rendered (it was not auto-parseable during the last audit) -- confirm enrolment URLs against the live site before legal sign-off.
+> **Note**: The former `aglc.ca/gaming/self-exclusion` page now 301-redirects to [selfexclusion.ca](https://selfexclusion.ca/), the dedicated digital platform. selfexclusion.ca is live but JavaScript-rendered, so confirm specific enrolment URLs against the live site at deployment time.
 
 ### Self-exclusion operator obligations (CTCOG s.3.5--3.6 + SE Program Manual)
 
@@ -501,10 +501,10 @@ Deal Us In is the mandatory certification for casino gaming workers, structured 
 
 ### Reel Facts (VLT staff)
 
-**Reel Facts** is the parallel mandatory social-responsibility certification for VLT retailers and staff who deal with customers -- distinct from Deal Us In and squarely in scope given Alberta's ~6,000 VLTs in ~900 licensed premises:
+**Reel Facts** is the parallel mandatory social-responsibility certification for VLT retailers and staff who deal with customers -- distinct from Deal Us In and squarely in scope given Alberta's ~6,000 VLTs:
 
 - All customer-facing VLT staff must complete Reel Facts; staff must show proof on AGLC Inspector request
-- Uncertified staff risk warning, fine, licence suspension, or termination
+- Non-compliance may be subject to AGLC enforcement action
 - At licensed casino facilities, Deal Us In Phase One is accepted in lieu of Reel Facts; **standalone VLT premises still require Reel Facts** (CTCOG s.11.4.6)
 
 *Sources: [AGLC Reel Facts VLT Staff Training](https://aglc.ca/training/reel-facts-vlt-staff-training) | [AGLC VLT Staff Training](https://aglc.ca/gaming/vlts/vlt-operators-and-staff/vlt-staff-training) | [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines)*
@@ -518,7 +518,7 @@ Deal Us In is the mandatory certification for casino gaming workers, structured 
 | **Minimum age** | 18+ |
 | **`_brand.yml` key** | `legal.minimum_gambling_age.canada-alberta` |
 | **`{{MIN_AGE}}` token value** | 18 |
-| **Statutory basis** | Gaming, Liquor and Cannabis Act, s.37 |
+| **Statutory basis** | Gaming, Liquor and Cannabis Act, s.37.1 (minors in a licensed facility) and s.37.11 (prohibition on minors gaming); "minor"/"adult" defined as under-18 / 18+ in s.1 |
 | **Operational standard** | Staff must request photo ID and verify age whenever a person appears under 25 -- a "challenge-25"-type standard (CTCOG s.3.1.4) |
 | **Products with different ages** | None -- 18+ applies to all gambling products in Alberta |
 
@@ -537,7 +537,7 @@ Deal Us In is the mandatory certification for casino gaming workers, structured 
 | **Registration** | Identity verification required at account creation |
 | **Age confirmation** | Date of birth must confirm player is 18 or older |
 
-*Sources: [Gaming, Liquor and Cannabis Act](https://open.alberta.ca/publications/g01) | [CTCOG s.3.1](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines)*
+*Sources: [Gaming, Liquor and Cannabis Act (RSA 2000, c.G-1) -- King's Printer consolidation, s.1 / s.37.1 / s.37.11](https://kings-printer.alberta.ca/documents/Acts/G01.pdf) | [Gaming, Liquor and Cannabis Act (open.alberta.ca)](https://open.alberta.ca/publications/g01) | [CTCOG s.3.1](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines)*
 
 ### Age messaging
 
