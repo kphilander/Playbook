@@ -9,7 +9,7 @@
 
 <!-- Open Graph -->
 <meta property="og:title" content="The Coverage Map — Playbook">
-<meta property="og:description" content="See how Playbook's player-education content maps, regulator by regulator. Honest coverage ratings. Primary-source citations. 16 jurisdictions shipped, more in the queue.">
+<meta property="og:description" content="See how Playbook's player-education content maps, regulator by regulator. Honest coverage ratings. Primary-source citations. 20 jurisdictions shipped, more in the queue.">
 <meta property="og:image" content="https://raw.githubusercontent.com/kphilander/Playbook/main/collateral/render/poster-4a-know-your-game.png">
 <meta property="og:url" content="https://www.gamblingpolicy.com/tools/playbook/compliance.html">
 <meta property="og:type" content="website">
@@ -788,7 +788,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">United States</span>
-      <span class="reg-region-count">8 regulators + 1 in development</span>
+      <span class="reg-region-count">9 regulators</span>
     </div>
     <div class="reg-grid sr" style="max-height:1400px;">
       <div class="reg-card" data-reg="ngc">
@@ -831,14 +831,18 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         <div class="reg-card-juris">Arizona, United States</div>
         <div class="reg-card-desc">A.R.S. Title 5 Chapter 12 (Event Wagering); A.A.C. R19-4; Tribal-State Gaming Compacts</div>
       </div>
-      <div class="reg-card-cs"><div class="reg-card-name">Illinois IGB</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card" data-reg="igb">
+        <div class="reg-card-name">Illinois Gaming Board (IGB)</div>
+        <div class="reg-card-juris">Illinois, United States</div>
+        <div class="reg-card-desc">Illinois Gambling Act; Sports Wagering Act; statewide self-exclusion; 2025 uniform ad rules</div>
+      </div>
     </div>
 
     <!-- Canada (starts collapsed) -->
     <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">Canada</span>
-      <span class="reg-region-count">2 regulators + 2 in development</span>
+      <span class="reg-region-count">3 regulators + 1 in development</span>
     </div>
     <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
       <div class="reg-card" data-reg="agco">
@@ -851,7 +855,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         <div class="reg-card-juris">Alberta, Canada</div>
         <div class="reg-card-desc">Gaming, Liquor and Cannabis Act; iGaming Alberta Act</div>
       </div>
-      <div class="reg-card-cs"><div class="reg-card-name">BCLC (British Columbia)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card" data-reg="bclc">
+        <div class="reg-card-name">IGCO / BCLC</div>
+        <div class="reg-card-juris">British Columbia, Canada</div>
+        <div class="reg-card-desc">Gaming Control Act (SBC 2022 c.29); Crown conduct-and-manage monopoly; home of GameSense</div>
+      </div>
       <div class="reg-card-cs"><div class="reg-card-name">Loto-Qu&eacute;bec</div><div class="reg-card-juris">In development</div></div>
     </div>
 
@@ -859,7 +867,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">Asia-Pacific</span>
-      <span class="reg-region-count">2 regulators + 4 in development</span>
+      <span class="reg-region-count">3 regulators + 3 in development</span>
     </div>
     <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
       <div class="reg-card" data-reg="dicj">
@@ -873,7 +881,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         <div class="reg-card-desc">Casino Control Act 2006; Gambling Control Act 2022. Land-based casino only (2 integrated resorts).</div>
       </div>
       <div class="reg-card-cs"><div class="reg-card-name">PAGCOR (Philippines)</div><div class="reg-card-juris">In development</div></div>
-      <div class="reg-card-cs"><div class="reg-card-name">ACMA / NCPF (Australia)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card" data-reg="acma">
+        <div class="reg-card-name">Australia &mdash; states/territories + ACMA (online)</div>
+        <div class="reg-card-juris">Australia (federation)</div>
+        <div class="reg-card-desc">State/territory regulators (primary); federal IGA 2001 + NCPF online overlay (BetStop, credit ban, consistent messaging)</div>
+      </div>
       <div class="reg-card-cs"><div class="reg-card-name">NZGC (New Zealand)</div><div class="reg-card-juris">In development</div></div>
       <div class="reg-card-cs"><div class="reg-card-name">MECC (Japan)</div><div class="reg-card-juris">In development</div></div>
     </div>
@@ -882,7 +894,7 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">Europe</span>
-      <span class="reg-region-count">3 regulators + 6 in development</span>
+      <span class="reg-region-count">4 regulators + 5 in development</span>
     </div>
     <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
       <div class="reg-card" data-reg="ukgc">
@@ -900,7 +912,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
         <div class="reg-card-juris">Malta</div>
         <div class="reg-card-desc">Gaming Act (Cap. 583); Player Protection Directive (Dir. 2 of 2018); Gaming Commercial Communications Regs (S.L. 583.09)</div>
       </div>
-      <div class="reg-card-cs"><div class="reg-card-name">Spelinspektionen (Sweden)</div><div class="reg-card-juris">In development</div></div>
+      <div class="reg-card" data-reg="spelins">
+        <div class="reg-card-name">Spelinspektionen</div>
+        <div class="reg-card-juris">Sweden</div>
+        <div class="reg-card-desc">Gambling Act (2018:1138); Spelpaus national self-exclusion; statutory duty of care</div>
+      </div>
       <div class="reg-card-cs"><div class="reg-card-name">ANJ (France)</div><div class="reg-card-juris">In development</div></div>
       <div class="reg-card-cs"><div class="reg-card-name">KSA (Netherlands)</div><div class="reg-card-juris">In development</div></div>
       <div class="reg-card-cs"><div class="reg-card-name">GGL (Germany)</div><div class="reg-card-juris">In development</div></div>
@@ -912,12 +928,16 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
     <div class="reg-region-header sr collapsed" onclick="this.classList.toggle('collapsed')">
       <span class="reg-region-chevron">&#9660;</span>
       <span class="reg-region-title" style="margin:0;">Latin America</span>
-      <span class="reg-region-count">Coming soon</span>
+      <span class="reg-region-count">1 regulator + 2 in development</span>
     </div>
     <div class="reg-grid sr" style="max-height:0;opacity:0;overflow:hidden;transition:max-height 0.4s ease,opacity 0.3s ease;">
+      <div class="reg-card" data-reg="spa_br">
+        <div class="reg-card-name">SPA/MF (Brazil)</div>
+        <div class="reg-card-juris">Brazil (federal)</div>
+        <div class="reg-card-desc">Law 14.790/2023; online fixed-odds betting; SIGAP licensing; centralized self-exclusion</div>
+      </div>
       <div class="reg-card-cs"><div class="reg-card-name">Coljuegos (Colombia)</div><div class="reg-card-juris">In development</div></div>
       <div class="reg-card-cs"><div class="reg-card-name">LOTBA (Argentina)</div><div class="reg-card-juris">In development</div></div>
-      <div class="reg-card-cs"><div class="reg-card-name">SBJ / LOTERJ (Brazil)</div><div class="reg-card-juris">In development</div></div>
     </div>
 
     <!-- Africa (starts collapsed) -->
@@ -1117,6 +1137,11 @@ h1, h2, h3, h4 { font-family: var(--pb-font-heading, 'Inter', sans-serif); line-
 <script src="jurisdictions-data/pgcb.js"></script>
 <script src="jurisdictions-data/mga.js"></script>
 <script src="jurisdictions-data/az.js"></script>
+<script src="jurisdictions-data/acma.js"></script>
+<script src="jurisdictions-data/spa_br.js"></script>
+<script src="jurisdictions-data/bclc.js"></script>
+<script src="jurisdictions-data/spelins.js"></script>
+<script src="jurisdictions-data/igb.js"></script>
 
 <script>
 (function(){

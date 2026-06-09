@@ -135,7 +135,7 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 | **Nevada** | NGCB / NGC | 21 | Legal | Legal | No | Legal | No (constitutionally prohibited) | [Complete](nevada/) |
 | Alabama | — | 21 | No | No | No | No | No | Planned |
 | Alaska | — | 21 | No | No | No | No | No | Planned |
-| Arizona | ADG | 21 | Tribal | Legal | No | No | Yes | Planned |
+| **Arizona** | ADG | 21 | Tribal | Legal | No | No | Yes | [Complete](arizona/) |
 | Arkansas | ARC | 21 | Legal (4 casinos) | Legal | No | No | Yes | Planned |
 | **California** | CGCC / Tribal Gaming Commissions | 21 (alcohol casinos), 18 (non-alcohol casinos/lottery/racing) | Tribal (66 casinos) + cardrooms | No | No | No | Yes | [Complete](california/) |
 | Colorado | DORA/DGE | 21 | Legal | Legal | No | No | Yes | Planned |
@@ -145,7 +145,7 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 | Georgia | GLC | 18 (lottery only) | No | No | No | No | Yes | Planned |
 | Hawaii | — | — | No | No | No | No | No | Planned |
 | Idaho | ILC / ISP | 18 (lottery/racing) | Tribal | No | No | No | Yes | Planned |
-| Illinois | IGB | 21 | Legal | Legal | No | No | Yes | Planned |
+| **Illinois** | IGB | 21 | Legal | Legal | No | No | Yes | [Complete](illinois/) |
 | Indiana | IGC | 21 | Legal | Legal | No | No | Yes | Planned |
 | Iowa | IRGC | 21 | Legal | Legal | No | No | Yes | Planned |
 | Kansas | KRGC | 21 | Legal (4 state-owned) | Legal | No | No | Yes | Planned |

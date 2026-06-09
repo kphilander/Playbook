@@ -62,6 +62,20 @@ helplines:
       state_website: "gamesensema.com"
       notes: "Massachusetts operates its own state helpline separate from the NCPG national number. 205 CMR 256.06(2) requires this number in all sports wagering advertising using DPH-provided language."
 
+    arizona:
+      number: "1-800-NEXT-STEP"
+      number_numeric: "1-800-639-8783"
+      text_number: "Text NEXTSTEP to 53342"
+      chat_url: "problemgambling.az.gov"
+      website: "problemgambling.az.gov"
+      label: "Arizona Problem Gambling Helpline"
+      hours: "24/7"
+      cost: "Free"
+      state_resource: "ADG Division of Problem Gambling"
+      state_website: "problemgambling.az.gov"
+      vse: "ADG Voluntary Self-Exclusion — gaming.az.gov/exclude"
+      notes: "Arizona operates its own state helpline (1-800-NEXT-STEP) via the ADG Division of Problem Gambling, separate from the NCPG national number. NCPG national numbers (1-800-GAMBLER, 1-800-MY-RESET) also widely used. Helpline display required in all event wagering ads and on platforms/kiosks per A.R.S. § 5-1320(A) and A.A.C. R19-4-150(A). Two-track regime: state-licensed event wagering (ADG) + tribal land-based casinos (compacts). No online casino."
+
     california:
       number: "1-800-GAMBLER"
       text_number: "Text SUPPORT to 53342"
@@ -122,6 +136,17 @@ helplines:
       campaign_site: "dontregretthebet.org"
       notes: "MGCB adopted 1-800-GAMBLER as statewide helpline February 2024. Calls from Michigan routed to DHHS. Legacy MDHHS helpline 1-800-270-7117 remains operational."
 
+    illinois:
+      number: "1-800-GAMBLER"
+      text_number: "Text ILGAMB to 833234"
+      website: "areyoureallywinning.com"
+      label: "Illinois Problem Gambling Helpline"
+      hours: "24/7"
+      cost: "Free"
+      state_resource: "IDHS Division of Behavioral Health & Recovery"
+      campaign_site: "areyoureallywinning.com"
+      notes: "Funded by IDHS. Advertising must include problem gambling text as determined by IDHS (11 Ill. Adm. Code 1900.340(e)(2)). Statewide Self-Exclusion Program has a 5-year minimum and no lifetime tier. NCPG national numbers also accepted."
+
 
 # ─── LEGAL ───────────────────────────────────
 # State minimum gambling ages.
@@ -131,6 +156,7 @@ helplines:
 
 legal:
   minimum_gambling_age:
+    united-states-arizona: 21
     united-states-nevada: 21
     united-states-massachusetts: 21
     united-states-california: 21  # Default to 21; ~43 of 63 casinos require 21+ (alcohol). ~20 admit 18+.
@@ -138,6 +164,7 @@ legal:
     united-states-ohio: 21
     united-states-pennsylvania: 21
     united-states-michigan: 21
+    united-states-illinois: 21
 
 
 # ─── MANDATORY MESSAGING ────────────────────
@@ -162,6 +189,13 @@ messaging:
     # massachusetts-sports-ads: Obligation-based — must include MA Problem Gambling
     #   Helpline link and phone number per 205 CMR 256.06(2) with font size requirements
     #   per 205 CMR 256.06(4). DPH provides the language.
+    # arizona-general: (none — no verbatim requirement; A.A.C. R19-4-150(A) and
+    #   A.R.S. § 5-1320(A) require a responsible gaming message plus the statewide
+    #   helpline (1-800-NEXT-STEP) in event wagering ads and on platforms/kiosks,
+    #   but do not prescribe exact wording. Tribal venue signage is set by compact.)
+    # arizona-event-wagering-ads: Standard-based — must include a responsible gaming
+    #   message and the statewide crisis helpline per A.A.C. R19-4-110 and R19-4-150(A);
+    #   exact text is not prescribed. 1-800-NEXT-STEP or NCPG numbers used.
     # california-general: (none — no verbatim requirement; obligation-based under
     #   individual tribal-state compacts. Post-2011 compacts require responsible
     #   gambling messages and helpline in advertising materials, but do not prescribe
@@ -188,3 +222,7 @@ messaging:
     # michigan-general: (none — no verbatim requirement; obligation-based approach)
     # michigan-online: Standard-based — must display MGCB-approved RG logo, helpline
     #   (1-800-GAMBLER), and link to MGCB website per R 432.654/R 432.754.
+    # illinois-general: (no single verbatim slogan — advertising must include problem
+    #   gambling text as determined by IDHS per 11 Ill. Adm. Code 1900.340(e)(2).
+    #   Casino compulsive-gambling notice under 230 ILCS 10/13.1; IDHS warning text
+    #   under 77 Ill. Adm. Code 2059 — confirm exact wording before publishing.)

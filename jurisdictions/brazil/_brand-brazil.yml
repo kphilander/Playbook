@@ -1,0 +1,80 @@
+# _brand-brazil.yml -- Brazil (SPA/MF) Overrides
+# ================================================
+# This file contains Brazil-specific overrides for _brand.yml.
+# Brazil is a national (federal) jurisdiction with an online-only
+# legal market, regulated by the Secretaria de Premios e Apostas
+# (SPA) within the Ministerio da Fazenda (SPA/MF).
+#
+# Usage:
+#   Merge these values into your _brand.yml when deploying
+#   {{PROGRAM_NAME}} in Brazil. The legal market is online fixed-odds
+#   sports betting and online games on .bet.br domains. Land-based
+#   casinos are ILLEGAL -- do not configure a land-based vertical.
+#
+# See: jurisdictions/brazil/README.md for the full compliance module
+# ================================================
+
+
+# --- HELPLINES -----------------------------------------
+# Brazil prescribes NO national problem-gambling helpline number.
+# The binding obligation is that operators provide internet-accessible
+# customer-service and ombudsman ("ouvidoria") channels that signpost
+# help and treatment for at-risk bettors and their families
+# (Portaria SPA/MF 1.231/2024, Art. 4 XII-XIII).
+
+helplines:
+  brazil:
+    number: ""                     # none mandated by the federal regime
+    website: ""                    # set to your operator support / ombudsman URL
+    label: "Atendimento ao cliente e ouvidoria do operador"
+    hours: ""
+    languages:
+      - Portuguese
+    notes: "No government helpline number is prescribed. Operators must provide internet-accessible customer-service and ombudsman channels guiding at-risk bettors and their families toward help and treatment."
+
+
+# --- LEGAL ---------------------------------------------
+# Single national age threshold: 18+.
+# Legal market is online-only; land-based casinos are illegal.
+
+legal:
+  minimum_gambling_age:
+    brazil: 18
+  regulator:
+    name: "Secretaria de Premios e Apostas (SPA/MF)"
+    website: "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas"
+  self_exclusion:
+    interactive:
+      name: "Autoexclusao (per-operator)"
+      durations: "Definite term (operator-implemented); re-registration only after the term"
+    national:
+      name: "Centralized self-exclusion platform (SPA)"
+      durations: "Definite or indefinite; blocks registration and access across all authorized operators"
+
+
+# --- MESSAGING -----------------------------------------
+# Brazil mandates warning ELEMENTS, not a fixed verbatim slogan.
+# Do NOT present any single sentence (e.g. "Aposte com responsabilidade")
+# as if it were word-for-word mandated. The binding requirement is the
+# Art. 13 warning-clause set:
+#
+# 1. An age-restriction mark (18+) or the notice
+#    "proibido para menores de 18 anos"
+# 2. A warning about the risks of addiction and pathological gambling
+# 3. Clear, legible, at least 10% of the ad size, spoken + written where
+#    possible, and shown on the opening page of operator sites and apps.
+
+messaging:
+  mandatory:
+    brazil-warning: "Proibido para menores de 18 anos. O jogo pode causar dependencia."
+    brazil-age: "Voce precisa ter 18+ para apostar. Proibido para menores de 18 anos."
+
+
+# --- PRESENTATION --------------------------------------
+# Brazil uses Brazilian conventions.
+
+presentation:
+  odds_format: decimal
+  currency: brl
+  currency_symbol: "R$"
+  language: pt-br

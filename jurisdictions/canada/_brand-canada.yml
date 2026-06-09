@@ -92,7 +92,17 @@ legal:
 # Province-specific mandatory statements.
 # These are word-for-word required messages that cannot
 # be paraphrased. Not all provinces have them.
+#
+# British Columbia, Ontario, and Alberta are OBLIGATION-BASED:
+# operators must display the provincial help line and regulator-
+# approved responsible-gambling messaging, but NO verbatim statement
+# is prescribed. "Know your limit, play within it." is the
+# BCLC/GameSense tagline (a brand slogan), not a BC regulatory
+# mandate — so there is no mandatory-messaging token for BC.
+# Add entries below only for provinces that genuinely require
+# word-for-word text.
 
 messaging:
-  mandatory:
-    canada-british-columbia: "Know your limit, play within it."
+  mandatory: {}
+  # (No provincial verbatim statements currently required.
+  #  BC/ON/AB are obligation-based — see note above.)
