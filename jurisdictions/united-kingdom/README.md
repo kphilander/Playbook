@@ -27,18 +27,22 @@ adaptation_notes: |
   spelling and terminology throughout (licence not license, behaviour
   not behavior). The LCCP is the most prescriptive social responsibility
   framework globally — operators must map every SR code to their
-  deployment. GambleAware is transitioning to the statutory levy system
-  by April 2026; helpline references should use GamCare (0808 8020 133)
+  deployment, including the Remote technical standards (RTS) that govern
+  game information, RTP disclosure, reality checks, autoplay, and game
+  design. GambleAware is transitioning to the statutory levy system
+  by 31 March 2026; helpline references should use GamCare (0808 8020 133)
   as the primary contact. GAMSTOP is mandatory for all remote operators.
-last_updated: 2026-03-22
+  The retired "When the Fun Stops, Stop" line has been replaced by the
+  industry "Take Time to Think" safer-gambling campaign.
+last_updated: 2026-06-08
 ---
 
 # United Kingdom — Compliance Module
 
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in the United Kingdom. The UK is the most important regulated online gambling market globally, regulated nationally by the Gambling Commission under the Gambling Act 2005. The Licence Conditions and Codes of Practice (LCCP) contain Social Responsibility (SR) codes that have the force of licence conditions — breach triggers enforcement action including fines (regularly in the millions) and licence revocation. The UK has all verticals: land-based casino, online casino/iGaming, sports betting, bingo, lottery, and poker.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -53,7 +57,8 @@ last_updated: 2026-03-22
 | [Advertising restrictions](#advertising-restrictions) | LCCP SR 5.1.6 + ASA/CAP codes + industry codes |
 | [Self-exclusion](#self-exclusion) | GAMSTOP (remote) + premises schemes |
 | [Player protection -- land-based](#player-protection--land-based) | Premises-based customer interaction |
-| [Player protection -- interactive](#player-protection--interactive) | Financial limits, customer interaction (SR 3.4.3) |
+| [Player protection -- interactive](#player-protection--interactive) | Financial limits, financial-risk/vulnerability checks, customer interaction (SR 3.4.3) |
+| [Game information & design standards (RTS)](#game-information--design-standards-rts) | RTP disclosure, reality checks, autoplay ban, game-design rules, stake limits |
 | [Age verification](#age-verification) | 18+ requirements |
 | [AML/KYC](#amlkyc) | Money Laundering Regulations, POCA |
 | [Collateral adaptation](#collateral-adaptation) | Quick reference for all touchpoints |
@@ -103,7 +108,8 @@ Key SR code areas relevant to {{PROGRAM_NAME}}:
 | SR 3.2.11 | Underage gambling prevention (remote) | Age verification before deposit, play, or free-to-play access |
 | SR 3.3.1 | Responsible gambling information | Information in premises and online |
 | SR 3.4.1 | Customer interaction (premises) | Identify, interact, evaluate |
-| SR 3.4.3 | Customer interaction (remote) | Monitor, flag, intervene, escalate |
+| SR 3.4.3 | Customer interaction (remote) | Identify, act, evaluate (formal guidance binding from 31 Oct 2023) |
+| SR 3.4.4 | Financial vulnerability check (remote) | Light-touch public-record check at net-deposit thresholds |
 | SR 3.5.1 | Self-exclusion (non-remote) | Individual premises self-exclusion |
 | SR 3.5.5 | Self-exclusion (remote -- GAMSTOP) | National multi-operator scheme |
 | SR 3.5.6 | Multi-operator self-exclusion (non-remote) | Local area multi-operator schemes |
@@ -111,13 +117,21 @@ Key SR code areas relevant to {{PROGRAM_NAME}}:
 | SR 5.1.6 | Advertising compliance | ASA/CAP codes |
 | SR 5.1.12 | Direct marketing preferences | Customer marketing control options |
 
-### Upcoming changes
+### Recent and upcoming changes
+
+These flow from the 2023 *High stakes: gambling reform for the digital age* White Paper and the LCCP/RTS consultation responses that followed it.
 
 | Change | Effective date | Impact |
 |---|---|---|
+| Game-design rules (RTS 14) + autoplay ban (RTS 8) extended to all online gaming | 17 January 2025 | No loss-chasing prompts, no reverse withdrawal, no simultaneous play, minimum spin/cycle speeds, no turbo/slam-stop, no celebratory effects for returns at or below stake |
+| Online slots stake limit -- 25+ players | 9 April 2025 | Maximum £5 per spin/game cycle |
+| Online slots stake limit -- 18-24 players | 21 May 2025 | Maximum £2 per spin/game cycle |
+| Financial vulnerability check (SR 3.4.4) | 30 August 2024 (£500/30 days), tightened to £150/30 days from 28 February 2025 | Light-touch public-record check; no customer-facing friction |
+| Frictionless financial-risk assessments pilot | 2024-25 (data-collection pilot) | Tests higher-spend affordability checks using credit-reference data; not yet a live requirement |
 | Mandatory financial limit prompts (RTS 12A-12E) | 31 October 2025 | Prompt before first deposit; 6-month review reminders |
+| GAMSTOP requirement extended to phone/email betting operators | 1 April 2024 | Telephone and email betting brought into the remote multi-operator scheme |
 | Gross deposit limit definition (RTS 12) | 30 June 2026 | "Deposit limit" must mean gross deposits only |
-| GambleAware wind-down | 31 March 2026 | Statutory system replaces GambleAware; new commissioners for research, prevention, treatment |
+| GambleAware wind-down | 31 March 2026 | Statutory levy system replaces GambleAware; new commissioners for research, prevention, treatment |
 | Customer funds protection disclosure | 31 October 2025 | 6-month reminders for unprotected funds |
 
 ---
@@ -182,8 +196,9 @@ Key SR code areas relevant to {{PROGRAM_NAME}}:
 
 ### GambleAware transition
 
-GambleAware will cease operations by **31 March 2026** as the UK transitions to a statutory gambling levy system. The statutory levy (Gambling Levy Regulations 2025, in force 6 April 2025) funds research, prevention, and treatment through public commissioners rather than industry-funded charity. Key implications:
+GambleAware will cease operations by **31 March 2026** as the UK transitions to a statutory gambling levy system. The statutory levy (**Gambling Levy Regulations 2025**, in force **6 April 2025**) funds research, prevention, and treatment (RPT) through public commissioners rather than industry-funded charity. It replaces the previous voluntary contribution arrangement under SR 3.1.1. Key implications:
 
+- The levy is charged at **0.1%-1.1% of an operator's gross gambling yield (GGY)**, banded by sector -- roughly **1.1% for online operators**, lower bands for land-based casinos and betting premises -- and is **collected from 1 October 2025** under Gambling Commission and DCMS direction. See [Gambling Commission -- Statutory gambling levy](https://www.gamblingcommission.gov.uk/guidance/statutory-gambling-levy/statutory-levy-introduction) and the [Gambling Levy Regulations 2025](https://www.legislation.gov.uk/ukdsi/2025/9780348267211).
 - The National Gambling Helpline (0808 8020 133, operated by GamCare) continues
 - References to GambleAware should be reviewed and updated as the transition completes
 - New commissioners will be appointed for England, Scotland, and Wales
@@ -209,7 +224,9 @@ Information must be accessible on all pages of the operator's website/app. Must 
 ### On-brand helpline display
 
 **Bare compliance** (what most operators do):
-> "When the fun stops, stop. If you are worried about your gambling, call the National Gambling Helpline on 0808 8020 133."
+> "Take time to think. If you are worried about your gambling, call the National Gambling Helpline on 0808 8020 133."
+
+*(Note: "Take Time to Think" is the current industry safer-gambling campaign. It replaced the retired "When the Fun Stops, Stop" line, which should no longer be used as a safer-gambling message.)*
 
 **On-brand compliance** (the {{PROGRAM_NAME}} way):
 > Free, confidential support -- 24/7, no judgement. For any question about gambling.
@@ -229,7 +246,7 @@ Both meet the regulatory requirement. The second version provides multiple conta
 |---|---|
 | **Verbatim required statement** | **None** -- the UK does not require specific word-for-word messages |
 | **What IS required** | Prominent display of responsible gambling information and helpline details (SR 3.3.1) |
-| **Industry practice** | "When the fun stops, stop" and "BeGambleAware.org" are widely used but not legally mandated wording |
+| **Industry practice** | "Take Time to Think" (the current industry safer-gambling campaign, which replaced the retired "When the Fun Stops, Stop") and "BeGambleAware.org" are widely used but not legally mandated wording |
 | **Approach** | Obligation-based -- operators must communicate specific information but phrasing is flexible |
 
 ### What the LCCP requires
@@ -240,8 +257,10 @@ The UK's approach is **obligation-based**. Operators must:
 2. **Provide helpline contact details** for at least one counselling organisation (SR 3.3.1)
 3. **Include responsible gambling messaging** in all advertising (SR 5.1.6, via ASA/CAP codes)
 4. **Prompt financial limits** before first deposit and remind every 6 months (RTS 12A-12E, from October 2025)
-5. **Display 18+** age restriction in advertising
-6. **Inform customers** about self-exclusion options including GAMSTOP (SR 3.5.5)
+5. **Offer reality checks** customers can set, displaying time elapsed in session (RTS 13, remote)
+6. **Make the likelihood of winning available** before the customer commits, including the return-to-player (RTP) percentage (RTS 3)
+7. **Display 18+** age restriction in advertising
+8. **Inform customers** about self-exclusion options including GAMSTOP (SR 3.5.5)
 
 ### On-brand integration
 
@@ -284,16 +303,16 @@ The UK has one of the most complex gambling advertising regimes globally, with f
 
 | Rule | Requirement | Source |
 |---|---|---|
-| Social responsibility | All gambling marketing must be "socially responsible" | CAP s.16 / BCAP s.17 |
-| No irresponsible behaviour | Must not portray, condone, or encourage irresponsible gambling | CAP 16.1 |
-| No financial solutions | Must not suggest gambling solves financial problems | CAP 16.3.2 |
-| No life priority | Must not depict gambling as essential or above work/family | CAP 16.3.4 |
-| No sexual success | Must not link gambling to seduction or sexual success | CAP 16.3.7 |
-| No peer pressure | Must not encourage gambling through social pressure | CAP 16.3.6 |
-| No under-18 targeting | Must not be directed at under-18s through media or context | CAP 16.3.12 |
-| No under-25 gambling | Must not feature anyone under 25 gambling or in significant roles | CAP 16.3.13 |
-| Clear terms | Incentives must include significant terms and conditions | CAP 16.7 |
-| Truthful | Must not mislead about likelihood of winning | CAP 16.2 |
+| Social responsibility | All gambling marketing must be "socially responsible" | CAP s.16.1 / BCAP s.17 |
+| No irresponsible behaviour | Must not portray, condone, or encourage irresponsible gambling | CAP 16.3.1 |
+| No financial solutions | Must not suggest gambling solves financial problems | CAP 16.3.4 |
+| No life priority | Must not depict gambling as essential or above work/family | CAP 16.3.5 |
+| No sexual success | Must not link gambling to seduction or sexual success | CAP 16.3.8 |
+| No peer pressure | Must not encourage gambling through social pressure | CAP 16.3.7 |
+| No under-18 targeting | Must not be directed at under-18s through media or context | CAP 16.3.13 |
+| No under-25 gambling | Must not feature anyone under 25 gambling or in significant roles | CAP 16.3.14 |
+| Clear terms | Incentives must include significant terms and conditions | CAP s.8 (sales promotions) / LCCP SR 5.1.1 |
+| Truthful | Must not mislead about likelihood of winning | CAP s.3 (misleading advertising) |
 
 ### Channel-specific rules
 
@@ -430,17 +449,32 @@ The Gambling Commission publishes formal guidance under SR 3.4.1 that operators 
 
 ### Customer interaction (SR 3.4.3)
 
-Remote operators face the most prescriptive customer interaction framework globally under SR 3.4.3:
+Remote operators face the most prescriptive customer interaction framework globally under SR 3.4.3 (in force 12 September 2022), with binding **formal guidance** under it (current version effective 31 October 2023). The framework follows an ongoing **identify -> act -> evaluate** model -- it is not a one-off "monitor and flag" process:
 
 | Requirement | Details | Source |
 |---|---|---|
-| **Monitor indicators** | Customer spend, spending patterns, time spent gambling, behavioural indicators, customer-initiated contact, use of gambling management tools, account indicators | SR 3.4.3 |
-| **Flag risk** | Systems must flag indicators of risk in a timely manner for manual intervention | SR 3.4.3 |
-| **Tailored action** | At lower risk levels, take tailored action | SR 3.4.3 |
-| **Strong action** | At higher risk levels, take strong or stronger action | SR 3.4.3 |
-| **Relationship termination** | At the highest risk levels, terminate the relationship | SR 3.4.3 |
-| **Automated safeguards** | For strong harm indicators, implement automated processes with mandatory manual review | SR 3.4.3 |
-| **Evaluate effectiveness** | Must demonstrate impact through testing and measurement | SR 3.4.3 |
+| **Identify** | Continuously identify customers who may be experiencing or at risk of harm, using indicators of vulnerability and of harm: customer spend, spending patterns, time spent gambling, behavioural and account indicators, customer-initiated contact, and use of gambling-management tools | SR 3.4.3 + formal guidance |
+| **Act -- tailored action** | At lower risk levels, take tailored action proportionate to the indicators identified | SR 3.4.3 |
+| **Act -- strong action** | At higher risk levels, take strong or stronger action | SR 3.4.3 |
+| **Act -- relationship termination** | At the highest risk levels, terminate the relationship | SR 3.4.3 |
+| **Automated safeguards** | For strong indicators of harm, implement automated processes with mandatory manual review | SR 3.4.3 |
+| **Evaluate** | Evaluate and demonstrate the impact and effectiveness of interactions through testing and measurement | SR 3.4.3 |
+
+The Gambling Commission publishes formal guidance under SR 3.4.3 that remote operators must take into account: [Customer interaction guidance for remote gambling licensees](https://www.gamblingcommission.gov.uk/guidance/customer-interaction-guidance-for-remote-gambling-licensees-formal-guidance/introduction-customer-interaction-guidance-for-remote-gambling-licensees-sr) (SR text: [LCCP SR 3.4.3](https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-3-remote-customer-interaction)).
+
+### Financial vulnerability check (SR 3.4.4)
+
+Distinct from affordability/source-of-funds work, SR 3.4.4 requires remote operators to run a light-touch **financial vulnerability check** using publicly available data (for example, records of bankruptcy, County Court judgments, individual voluntary arrangements, or debt relief orders). It triggers at net-deposit thresholds and is designed to be frictionless for the customer:
+
+| Field | Value |
+|---|---|
+| **What it checks** | Publicly available financial-vulnerability indicators (bankruptcy, CCJs, IVAs, DROs) |
+| **Trigger threshold** | £500 net deposits in a rolling 30 days (from 30 August 2024), reduced to £150 net deposits in 30 days (from 28 February 2025) |
+| **Customer experience** | Light-touch and frictionless -- no documents requested from the customer |
+| **Relationship to RG** | Helps identify customers who may be at heightened risk so that customer-interaction action under SR 3.4.3 can follow |
+| **Source** | [LCCP SR 3.4.4 -- Financial vulnerability check](https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-4-financial-vulnerability-check) |
+
+A separate **frictionless financial-risk assessment** (affordability) approach for higher-spending customers is being tested through a Gambling Commission data-collection pilot and is **not yet a live requirement** -- treat it as forthcoming, not current. *(Verify pilot status before relying on it operationally.)*
 
 ### Required tools and obligations
 
@@ -449,9 +483,11 @@ Remote operators face the most prescriptive customer interaction framework globa
 | Financial limits (deposit) | Yes | Prompt before first deposit; free-text entry; 6-month review reminders; decreases immediate | RTS 12A-12E (Oct 2025) |
 | Gross deposit limit definition | Yes (June 2026) | "Deposit limit" must mean gross deposits only | RTS 12 |
 | Self-exclusion (GAMSTOP) | Yes | Participate in GAMSTOP national scheme | SR 3.5.5 |
-| Customer interaction monitoring | Yes | Monitor 6 categories of indicators | SR 3.4.3 |
+| Customer interaction | Yes | Identify, act, evaluate (formal guidance binding) | SR 3.4.3 |
 | Behavioural monitoring | Yes | Real-time automated and manual monitoring | SR 3.4.3 |
 | Intervention escalation | Yes | Scaled from tailored action to relationship termination | SR 3.4.3 |
+| Financial vulnerability check | Yes | Light-touch public-record check at net-deposit thresholds (£150/30 days) | SR 3.4.4 |
+| Reality checks | Yes | Customer-settable; display time elapsed in session, must be acknowledged | RTS 13 |
 | Age verification | Yes | Verify before deposit, free-to-play access, or gambling | SR 3.2.11 |
 | Marketing preferences | Yes | Customer control over marketing received | SR 5.1.12 |
 | Rewards and bonuses | Yes | Socially responsible; no misleading terms; wagering requirement limits | SR 5.1.1 |
@@ -464,9 +500,54 @@ Remote operators face the most prescriptive customer interaction framework globa
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
 | Deposit limits | "Set your deposit limit -- play on your terms. Takes 10 seconds." | RTS 12A-12E |
+| Reality check | "You have been playing for an hour. Quick gut-check: still having fun?" | RTS 13 |
 | Limit review reminder | "It's been 6 months -- take a quick look at your limits and account activity." | RTS 12A-12E |
 | GAMSTOP | "Need a longer break? GAMSTOP lets you step away from all UK gambling sites at once." | SR 3.5.5 |
 | Activity dashboard | "Your play stats are ready. No surprises -- just the facts." | RTS 12A-12E |
+
+---
+
+## Game information & design standards (RTS)
+
+The Gambling Commission's **Remote technical standards (RTS)** are far broader than the financial-limit provisions (RTS 12) cited elsewhere in this module. They are titled "technical standards," but in substance they govern game information, odds/RTP disclosure, pacing, reality checks, and game design -- the rules most relevant to {{PROGRAM_NAME}}'s Pillar-1 "no fine print / know the odds" content and to Theme-5 player controls. Operators with a remote gambling software or operating licence must comply. The game-design (RTS 14) and autoplay (RTS 8) changes below took effect **17 January 2025** following the 2023 White Paper.
+
+### Game information and odds disclosure
+
+| Standard | Requirement | Theme | Source |
+|---|---|---|---|
+| **RTS 2 -- Displaying transactions** | The system must display enough relevant information that the content of the gamble is clear, available to the customer before they commit | Game info / transparency | [RTS 2](https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-2-displaying-transactions) |
+| **RTS 3 -- Rules, game descriptions & likelihood of winning** | Operators must make available, before the customer commits, the information needed to make an informed decision about the chances of winning -- RTS 3C explicitly lists the **return-to-player (RTP) percentage** or probability of winning | Game info & odds disclosure | [RTS 3](https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-3-rules-game-descriptions-and-the-likelihood-of-winning) |
+
+This is the regulatory anchor for {{PROGRAM_NAME}}'s odds-transparency content: the RTP figure is information the operator must already make available, so {{PROGRAM_NAME}} content can surface and explain it rather than working around a gap.
+
+### Pacing, reality checks and game design
+
+| Standard | Requirement | Theme | Source |
+|---|---|---|---|
+| **RTS 8 -- Autoplay** | Autoplay (auto-spin) is prohibited; from 17 January 2025 the ban was widened from slots to **all online gaming products** | Player controls | [RTS 8](https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-8-autoplay-functionality) |
+| **RTS 13 -- Time requirements & reality checks** | Customers must have easily accessible facilities to set a reality-check frequency; the check displays time elapsed in the session and must be acknowledged before further play | Player controls / RG messaging | [RTS 13](https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-13-time-requirements-and-reality-checks) |
+| **RTS 14 -- Responsible product design** | Bans loss-chasing prompts (14A); withdrawal cancellation / reverse withdrawal (14B); simultaneous multi-game play (14C); slot spin cycles under 2.5 seconds and casino game cycles under 5 seconds (14D/14G); speed-up features including turbo, quick-spin and slam-stop (14E); and celebratory audio or visual effects for returns at or below the amount staked (14F) | Player controls / RG messaging / honest win-loss framing | [RTS 14](https://www.gamblingcommission.gov.uk/standards/remote-gambling-and-software-technical-standards/rts-14-responsible-product-design) (overview: [changes to rules for online games design](https://www.gamblingcommission.gov.uk/news/article/changes-to-rules-for-online-games-design)) |
+
+RTS 14F matters for {{PROGRAM_NAME}} content directly: a "win" that returns less than the stake is a net loss, and the product is no longer allowed to celebrate it as a win. {{PROGRAM_NAME}}'s honest win-loss framing aligns with -- and can explain -- this rule.
+
+### Online slots stake limits
+
+A hard per-spin player-control rule introduced after the White Paper:
+
+| Player group | Maximum stake per spin / game cycle | Live from |
+|---|---|---|
+| Players aged 25 and over | £5 | 9 April 2025 |
+| Players aged 18-24 | £2 | 21 May 2025 |
+
+Source: [Gambling Commission -- Online slots stake limit guidance](https://www.gamblingcommission.gov.uk/licensees-and-businesses/guide/online-slots-stake-limit-guidance).
+
+### {{PROGRAM_NAME}} tool messaging -- game information & design
+
+| Touchpoint | {{PROGRAM_NAME}} copy | Context |
+|---|---|---|
+| RTP disclosure | "Every game shows its return-to-player. Here is what that number actually means for your session." | RTS 3 |
+| Reality check | "Time check: you have been playing 60 minutes. Tap to keep going or take a breather." | RTS 13 |
+| Stake limit | "Online slots cap stakes at £5 a spin (£2 if you are under 25). Your limit, set for you." | Stake limit guidance |
 
 ---
 
@@ -527,6 +608,8 @@ UK gambling operators are subject to anti-money laundering regulations under the
 | **Staff training** | Criminal liability under POCA for failure to report known or suspected money laundering | POCA 2002 |
 | **Enforcement** | Regular enforcement actions; fines regularly in the millions (e.g., GBP 10M against Platinum Gaming, October 2025) | Gambling Commission |
 
+> **Distinct from RG checks**: AML source-of-funds work above is separate from the **SR 3.4.4 financial vulnerability check** and the forthcoming financial-risk (affordability) assessments, which are social-responsibility measures aimed at protecting customers from harm rather than AML controls. See [Player protection -- interactive](#player-protection--interactive).
+
 ### Player-facing messaging
 
 When AML/KYC processes affect players, use {{PROGRAM_NAME}} voice:
@@ -577,7 +660,7 @@ Quick-reference table mapping every collateral category to UK-specific adaptatio
 | **Currency** | GBP | CAD | USD |
 | **Language** | British English | Canadian English | American English |
 
-For the detailed collateral adaptation template, see [collateral-adaptation.md](../../_template/collateral-adaptation.md).
+For the detailed collateral adaptation template, see [collateral-adaptation.md](../_template/collateral-adaptation.md).
 
 ---
 
@@ -630,8 +713,9 @@ Complete before launching {{PROGRAM_NAME}} in the United Kingdom.
 - [ ] Identified all applicable SR codes for deployment verticals
 - [ ] Verified legal gambling age: 18+ for all products (16+ for lotteries)
 - [ ] Reviewed permitted products table
-- [ ] Tracked upcoming LCCP changes (financial limits October 2025, gross deposit definition June 2026)
-- [ ] Reviewed statutory levy obligations (Gambling Levy Regulations 2025)
+- [ ] Tracked recent and upcoming LCCP/RTS changes (game design RTS 14 + autoplay RTS 8 from January 2025, stake limits April/May 2025, financial limits October 2025, gross deposit definition June 2026)
+- [ ] Reviewed Remote technical standards relevant to deployment (RTS 2, 3, 8, 13, 14)
+- [ ] Reviewed statutory levy obligations (Gambling Levy Regulations 2025; 0.1%-1.1% of GGY, collected from 1 October 2025)
 - [ ] Identified deployment verticals: [ ] Land-based [ ] Interactive [ ] Both
 
 ### Helpline
@@ -674,10 +758,16 @@ Complete before launching {{PROGRAM_NAME}} in the United Kingdom.
 - [ ] Interactive: free-text limit entry (no pre-set dropdown values)
 - [ ] Interactive: 6-month review reminders for limits and account activity
 - [ ] Interactive: limit decreases applied immediately
-- [ ] Interactive: customer interaction monitoring operational (SR 3.4.3)
+- [ ] Interactive: customer interaction operational on the identify -> act -> evaluate model (SR 3.4.3 + formal guidance)
 - [ ] Interactive: escalation framework in place (tailored -> strong -> termination)
 - [ ] Interactive: automated safeguards with manual review for strong indicators
 - [ ] Interactive: effectiveness evaluation documented
+- [ ] Interactive: financial vulnerability check operational at net-deposit thresholds (SR 3.4.4)
+- [ ] Interactive: reality checks customer-settable and acknowledged (RTS 13)
+- [ ] Interactive: RTP / likelihood-of-winning information available before commit (RTS 3)
+- [ ] Interactive: autoplay disabled across all online gaming products (RTS 8)
+- [ ] Interactive: game design compliant -- no loss-chasing prompts, reverse withdrawal, turbo/slam-stop, sub-2.5s spins, or celebration of returns at or below stake (RTS 14)
+- [ ] Interactive: online slots stake limits enforced (£5 for 25+, £2 for 18-24)
 - [ ] Interactive: customer funds protection status disclosed every 6 months (LCCP 4.2.1)
 - [ ] Land-based: customer interaction procedures implemented (SR 3.4.1)
 - [ ] Land-based: responsible gambling information posted per SR 3.3.1
