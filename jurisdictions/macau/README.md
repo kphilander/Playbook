@@ -69,7 +69,7 @@ last_updated: 2026-06-08
 | **Primary regulator** | Gaming Inspection and Coordination Bureau (DICJ -- Direccao de Inspeccao e Coordenacao de Jogos) |
 | **Website** | [dicj.gov.mo](https://www.dicj.gov.mo/web/en/frontpage/index.html) |
 | **Governing legislation** | Law No. 16/2001 (amended by Law No. 7/2022) -- General framework for casino gaming; **Articles 42-A and 42-B** carry the responsible-gambling duties |
-| **Implementing legislation** | Law No. 16/2022 -- Regime of Operation of Casino Games (16 Dec 2022); Administrative Regulation No. 55/2022 -- Regulation of Casino Games Operation (21 Dec 2022). These implement the operational RG obligations (RG-plan execution, on-premises financial-access and promotions controls, minors-prevention measures) |
+| **Implementing legislation** | Law No. 16/2022 -- Regime of Operation of Casino Games (16 Dec 2022); Administrative Regulation No. 55/2022 -- Regulation of Casino Games Operation (30 Dec 2022, Boletim Oficial I série n.º 52/2022). These implement the operational RG obligations (RG-plan execution, minors-prevention measures, and the broader minimum operating and internal-control requirements) |
 | **Supporting legislation** | Law No. 10/2012 (amended by Law 17/2018) -- Casino entry and exclusion; Law No. 20/2024 -- Illegal gambling crimes; Law No. 7/2024 -- Regime of Credit for Casino Games (financial/licensing, RG-protection rationale); Advertisement Act (Decree-Law 7/89/M) |
 | **Reports to** | Secretary for Economy and Finance, Macau SAR Government |
 | **Regulatory approach** | Hybrid (prescriptive legislation + obligation-based concessionaire duties) |
@@ -90,7 +90,7 @@ Macau operates under a **concession-based system**. The government grants conces
 
 ### Upcoming changes
 
-- **Advertising law overhaul**: Proposed amendments to the Advertisement Act (consultation closed August 2025) would introduce a blanket ban on advertising that draws attention to or evokes associations with gambling, with increased penalties and content takedown authority.
+- **New Advertising Law (enacted, in force 1 Jan 2027)**: Law No. 7/2026 (the new Lei da Publicidade) was passed by the Legislative Assembly on 28 April 2026 and published in the Official Gazette on 11 May 2026, replacing the 1989 advertising law (Decree-Law 7/89/M). It establishes a near-total ban on gambling advertising, with narrow exceptions, and expressly covers digital formats such as livestreaming and influencer content. It enters into force 1 January 2027 -- align collateral before that date. See [Advertising restrictions](#advertising-restrictions).
 - **All gaming in concessionaire-owned properties**: The deadline for all gaming to occur in properties owned by the concessionaires themselves was December 31, 2025 (now passed). Confirm current implementation status with DICJ / local counsel before relying on satellite-casino arrangements.
 
 ---
@@ -121,13 +121,13 @@ The RG duties are not a single catch-all clause. They run through a layered set 
 | Instrument | What it carries | Themes |
 |---|---|---|
 | Gaming Law **Article 42-A** (Law 16/2001, am. Law 7/2022) | The core RG obligation: concessionaires must adopt measures to promote responsible gambling and prevent and mitigate gambling-related harm | RG messaging, player protection |
-| Gaming Law **Article 42-B** (Law 16/2001, am. Law 7/2022) | The prescriptive RG-plan contents: staff training, helpline and information availability, measures to prevent entry by minors and legally incapacitated persons, and **limitations on on-premises financial access and on promotions consistent with RG aims** | Limit-setting and player controls, advertising/promotions, staff training |
+| Gaming Law **Article 42-B** (Law 16/2001, am. Law 7/2022) | The prescriptive RG-plan contents ("Plano de promoção do jogo responsável"): responsible-gambling and addiction information for players, measures to enforce entry interdiction of barred persons, disclosure of the legal exclusion measures and how to apply, staff training and counselling on responsible gambling, and a specialised responsible-gambling support group | Player information, entry interdiction, staff training, RG support team |
 | **Law 16/2022** -- Regime of Operation of Casino Games | Operational backbone for floor-level RG measures: RG-plan execution and the minimum operating requirements concessionaires must meet | Game info, RG messaging, player controls, signage, staff training, transparency |
-| **Administrative Regulation 55/2022** -- Regulation of Casino Games Operation | Operational detail implementing the RG-plan, financial-access and promotions controls, and minors-prevention measures. Concessionaires must also comply with the Minimum Internal Control Requirements (MICR), responsible-gambling and other instructions issued from time to time by DICJ | Player controls, signage, transparency |
+| **Administrative Regulation 55/2022** -- Regulation of Casino Games Operation | Operational detail implementing the casino-operation regime and minors-prevention measures. Concessionaires must also comply with the Minimum Internal Control Requirements (MICR), responsible-gambling and other instructions issued from time to time by DICJ | Player controls, signage, transparency |
 
-The **on-premises financial-access and promotions limitations** in Article 42-B are a player-control requirement, not just an advertising rule: they constrain how readily a patron can access funds on the gaming floor and how promotions may be run. Treat them as a {{PROGRAM_NAME}} limit-setting touchpoint as well as an advertising one.
+On-premises financial-access controls -- how readily a patron can access funds or credit on the gaming floor -- are governed by the casino-operation regime (Law 16/2022 / AR 55/2022) and the credit regime (Law 7/2024), not by Article 42-B. Treat them as a {{PROGRAM_NAME}} limit-setting touchpoint, but map them to those instruments rather than to the RG-plan article.
 
-*Sources: [ICLG Gambling Laws and Regulations -- Macau 2026](https://iclg.com/practice-areas/gambling-laws-and-regulations/macau); [Chambers Gaming Law 2025 -- Macau SAR](https://practiceguides.chambers.com/practice-guides/gaming-law-2025/macau-sar-china). Primary instrument texts are published in Chinese and Portuguese via the [DICJ Legislation Index](https://www.dicj.gov.mo/web/en/legislation/index.html) -- verify pin-cites with local counsel before merge.*
+*Sources: Article 42-B primary text -- [Lei n.º 7/2022 (adds Chapter IV-A "Jogo responsável", arts. 42-A/42-B)](https://bo.dsaj.gov.mo/bo/i/2022/25/lei07.asp) (Official Gazette, Portuguese); [ICLG Gambling Laws and Regulations -- Macau 2026](https://iclg.com/practice-areas/gambling-laws-and-regulations/macau); [Chambers Gaming Law 2025 -- Macau SAR](https://practiceguides.chambers.com/practice-guides/gaming-law-2025/macau-sar-china). Primary instrument texts are published in Chinese and Portuguese via the [Macau casino-gaming legislation collection](https://www.bo.dsaj.gov.mo/pt/legis/rec/121610) -- verify pin-cites with local counsel before merge.*
 
 ---
 
@@ -225,28 +225,29 @@ Macau's obligation-based approach means operators have full flexibility to use {
 | Focus restriction | Marketing must focus on entertainment, tourism, and hospitality rather than gaming | Land-based | Decree-Law 7/89/M |
 | Online advertising ban | All online/remote gambling advertising strictly forbidden | All | Decree-Law 7/89/M |
 | Minor protection | Targeting persons under 21 prohibited | Land-based | Law 7/2022 |
-| On-premises promotions limits | Promotions on the gaming floor must stay within limits consistent with RG aims | Land-based | Article 42-B, Law 16/2001; AR 55/2022 |
+| On-premises promotions limits | Gaming promotions must be confined to casino gaming zones and run consistently with RG aims | Land-based | Article 42-A, Law 16/2001; Law 16/2022 / AR 55/2022 |
 | RG in pamphlets | RG messages required in gaming-related promotional pamphlets | Land-based | Article 42-A, Law 16/2001 |
 
-### Upcoming advertising changes
+### New Advertising Law (Law 7/2026 -- in force 1 January 2027)
 
-Proposed amendments to the Advertisement Act (consultation closed August 2025) would:
-- Introduce a blanket prohibition on any advertising that "draws public attention or evokes associations with gambling activities"
-- Expressly ban encouraging participation in any form of gambling
-- Address new marketing formats including livestreaming and influencer content
-- Increase penalties: current fines of MOP 2,000-12,000 (individuals) and MOP 5,000-28,000 (companies) would be raised
-- Grant content takedown authority
+Macau has **enacted** a new advertising law. Law No. 7/2026 (the new Lei da Publicidade) was passed by the Legislative Assembly on **28 April 2026**, published in the Official Gazette on **11 May 2026**, and **enters into force on 1 January 2027**, replacing the 1989 advertising law (Decree-Law 7/89/M). Key points for {{PROGRAM_NAME}}:
+- Establishes a **near-total ban on gambling advertising**, with three narrow exceptions: casino-gaming concessionaires advertising within their own casino gaming zones; licensed mutual-betting, interactive-gaming or public-gaming operators within their own premises and authorised official websites; and B2B advertising of gaming machines, equipment and systems at conventions and exhibitions.
+- Expressly covers new marketing formats including **livestreaming and influencer content**.
+- **Responsible-gambling campaigns, addiction-treatment advertising, and the display of game rules are not treated as gambling advertising** -- so {{PROGRAM_NAME}} RG and support messaging remains permitted.
+- Enforcement runs through a graduated penalty model; supplementary regulations are expected to detail permits and reporting procedures. Confirm the applicable fine schedule and any transitional treatment of existing advertising licences with local counsel.
 
 ### Prohibited content
 
 - Games of fortune as the primary advertising message
 - Online gambling advertising of any kind
 - Content targeting persons under 21
-- Content encouraging participation in gambling activities (proposed)
+- Gambling advertising generally (near-total ban under Law 7/2026, in force 1 January 2027, subject to the narrow concessionaire and B2B exceptions noted above)
 
 ### Required disclosures
 
-RG messages must be included in all gaming-related promotional pamphlets. Responsible gambling campaigns and addiction treatment advertising are explicitly exempted from advertising restrictions.
+RG messages must be included in all gaming-related promotional pamphlets. Responsible gambling campaigns and addiction treatment advertising are explicitly exempted from advertising restrictions (and remain exempt under Law 7/2026).
+
+*Sources (new Advertising Law): [Chambers -- Macau's New Advertisement Law Handbook](https://chambers.com/articles/macaus-new-advertisement-law-handbook); [Lexology -- Macau's New Advertising Law: A Comprehensive Overhaul for the Digital Age](https://www.lexology.com/library/detail.aspx?g=603310d7-4f2e-40d1-99c9-276988b33a09). Verify the final text and penalty schedule against the Official Gazette (Law 7/2026, published 11 May 2026) via the [Macau official gazette](https://www.bo.dsaj.gov.mo/pt/legis/rec/121610).*
 
 ---
 
@@ -312,7 +313,7 @@ Under the 2018 amendment (Law 17/2018) to Law 10/2012, effective December 27, 20
 | Smoking-room RG videos | Yes | Responsible-gaming promotional videos in all smoking rooms | DICJ RG measures |
 | Slot-machine RG stickers | Yes | RG and hotline stickers on all slot machines | DICJ RG measures |
 | Entrance entry-restriction signage | Yes | Signage with entry restrictions and related regulations at all casino entrances | Article 42-B, Law 16/2001; DICJ RG measures |
-| On-premises financial-access controls | Yes | Limitations on cash access and promotions consistent with RG aims | Article 42-B, Law 16/2001; AR 55/2022 |
+| On-premises financial-access controls | Yes | Limitations on cash/credit access on the gaming floor consistent with RG aims | Law 16/2022 / AR 55/2022; credit regime (Law 7/2024) |
 | Self-exclusion | Yes | Self and third-party exclusion via DICJ | Law 10/2012 |
 | Employee training | Yes | Staff trained to recognize signs of gambling-related harm and respond; specialized RG teams; staff encouraged into DICJ/IAS/ISCG certificate courses | Article 42-B, Law 16/2001; RG promotion programme |
 | RG kiosks | Yes | 19 kiosks co-managed by DICJ, IAS, ISCG | Law 16/2022; DICJ RG measures |
@@ -494,7 +495,7 @@ Complete before launching {{PROGRAM_NAME}} in Macau SAR.
 - [ ] Responsible gambling information available via kiosks
 - [ ] Helpline displayed on ATM screensavers, smoking-room videos, and slot-machine stickers
 - [ ] Entry-restriction signage in place at all casino entrances
-- [ ] On-premises financial-access and promotions limits applied per Article 42-B / AR 55/2022
+- [ ] On-premises financial-access and promotions limits applied per Law 16/2022 / AR 55/2022 and the credit regime (Law 7/2024)
 - [ ] Specialized RG team established per concessionaire obligations
 - [ ] Staff trained to recognize and respond to signs of gambling-related harm
 - [ ] RG staff routed into DICJ/IAS/ISCG counsellor or instructor certificate courses
