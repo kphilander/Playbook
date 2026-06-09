@@ -94,14 +94,14 @@ This contrasts with jurisdictions like Ontario (AGCO Stds 2.03–2.07, which ite
 
 ## AGA Responsible Gaming Code
 
-The **American Gaming Association (AGA)** publishes the voluntary **Responsible Gaming Code of Conduct** — a unified code (updated **September 2025**) that covers responsible-gaming operations *and* advertising/marketing across all gaming forms (casino, sports wagering, iGaming). It supersedes the older standalone November 2020 Responsible Gaming Code. The AGA also maintains a **Responsible Marketing Code for Sports Wagering**, separately tightened in recent revisions (it now prohibits "risk-free" bet language and strengthens college-age protections). These are **voluntary industry standards, not Nevada law** — but most major Nevada operators are AGA members and follow them, and NGCB references AGA standards when evaluating advertising practices.
+The **American Gaming Association (AGA)** publishes the voluntary **Responsible Gaming Code of Conduct** — the current unified code (updated **September 2025**) that, by its own terms, governs both responsible-gaming operations *and* advertising/marketing practices across all gaming forms (casino, sports wagering, iGaming). It is the successor to the AGA's earlier separate codes (the November 2020 Responsible Gaming Code of Conduct and the 2019/2023 Responsible Marketing Code for Sports Wagering). The sports-wagering advertising provisions — including the prohibition on "risk-free" bet language and strengthened college-age protections — are now folded into this unified code; whether the standalone sports-wagering marketing code still operates as a separate live instrument post-unification is ambiguous from public sources, so this module treats the unified Sept-2025 code as authoritative. These are **voluntary industry standards, not Nevada law** — but most major Nevada operators are AGA members and follow them, and NGCB references AGA standards when evaluating advertising practices.
 
 | Field | Value |
 |---|---|
-| **Primary instrument** | AGA Responsible Gaming Code of Conduct (updated Sept 2025) |
-| **Advertising overlay** | AGA Responsible Marketing Code for Sports Wagering (bans "risk-free"; college-age protections) |
+| **Primary instrument** | AGA Responsible Gaming Code of Conduct (updated Sept 2025) — unified; covers operations + advertising/marketing |
+| **Advertising provisions** | Folded into the unified code (bans "risk-free"; talent 21+; amateur/college NIL and campus protections) — successor to the earlier standalone Responsible Marketing Code for Sports Wagering |
 | **Legal status** | Voluntary industry code — *not* binding Nevada regulation |
-| **Source** | [AGA Responsible Gaming Code of Conduct (PDF)](https://www.americangaming.org/wp-content/uploads/2025/12/Responsible-Gaming-Code-of-Conduct-2026.pdf) |
+| **Source** | [AGA Responsible Gaming Code of Conduct (PDF)](https://www.americangaming.org/wp-content/uploads/2025/12/Responsible-Gaming-Code-of-Conduct-2026.pdf) — title "Responsible Gaming Code of Conduct," "Updated September 2025" |
 
 ### Key advertising provisions
 
@@ -116,12 +116,13 @@ The **American Gaming Association (AGA)** publishes the voluntary **Responsible 
 
 ### Sports betting-specific provisions
 
-The AGA's **Responsible Marketing Code for Sports Wagering** adds:
+The unified code's sports-wagering and advertising provisions (successor to the standalone **Responsible Marketing Code for Sports Wagering**) add:
 
 | Provision | Details |
 |---|---|
 | **No "risk-free" language** | The code prohibits describing bets or promotions as "risk-free" (a recent tightening) |
-| **No active athlete endorsement** | Active professional athletes should not endorse sports wagering products |
+| **Talent must be 21+** | Models, actors, influencers, athletes, and entertainers appearing in advertising must be a minimum of 21 years old (Code §II(a)(iii)). There is **no** blanket ban on active professional athletes endorsing sports wagering |
+| **No amateur/college NIL deals** | No sportsbook should enter name, image, and likeness (NIL) endorsements or partnerships with **amateur athletes** (Code §II(c)(iii)); no gaming promotion in college/university-owned assets or on campuses, and college partnerships must not promote gaming (§II(c)(i)–(ii)) |
 | **No college student targeting** | Advertising must not specifically target college-age audiences; strengthened protections around campus environments |
 | **Odds accuracy** | Published odds must be accurate and current |
 | **Promotional terms** | Bonus and promotional offers must include clear terms and conditions |

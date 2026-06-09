@@ -123,7 +123,7 @@ This separation ensures independence — the body that investigates does not mak
 
 | Product | Legal status | Regulator | Notes |
 |---|---|---|---|
-| Casino (slots, table games) | Legal | NGCB/NGC | Nevada's primary gambling industry; ~200 nonrestricted licensees |
+| Casino (slots, table games) | Legal | NGCB/NGC | Nevada's primary gambling industry; several hundred nonrestricted licensees |
 | Sports betting | Legal | NGCB/NGC | Land-based and mobile |
 | Online poker | Legal | NGCB/NGC | Legal since 2013 under AB 114; interstate compact with Delaware |
 | Online casino | **Not legal** | — | Not authorized under current Nevada law |
@@ -159,15 +159,15 @@ Nevada does not operate a separate state gambling helpline. Operators use the **
 
 | Field | Value |
 |---|---|
-| **Primary number** | 1-800-MY-RESET (1-800-697-3738) |
+| **Current branded number** | 1-800-MY-RESET (1-800-697-3738) |
 | **Vanity number** | 1-800-GAMBLER |
-| **Legacy number** | 1-800-522-4700 |
-| **Text support** | Text 800GAM |
+| **Earlier number** | 1-800-522-4700 |
+| **Text support** | Text 1-800-MY-RESET (or 1-800-522-4700) |
 | **Online chat** | www.ncpgambling.org/chat |
 | **Hours** | 24/7/365 |
 | **Cost** | Free |
 | **Languages** | 240+ via Language Line Solutions |
-| **Regulatory reference** | NGCB Notice 2026-04 — all three numbers accepted |
+| **Regulatory reference** | NGCB Notice #2026-09 — any of the three numbers accepted |
 
 ### Nevada Council on Problem Gambling
 
@@ -207,15 +207,17 @@ This means:
 
 ### Helpline number transition
 
-As of January 2026, NCPG has rebranded to **1-800-MY-RESET**. Per **NGCB Notice 2026-04**:
+On January 29, 2026, NCPG changed its national helpline number to **1-800-MY-RESET**. **NGCB Notice #2026-09** (February 11, 2026) acknowledges the new number and is explicitly *permissive* — it does not designate any single number as the required or primary one. It states that "it is acceptable for in-house postings and written materials to reflect **any** of the currently operating helpline phone numbers for problem gambling resources (1-800-MY-RESET; 1-800-522-4700; or 1-800-GAMBLER)."
 
-| Number | Status | Recommendation |
+| Number | Status | Notes |
 |---|---|---|
-| 1-800-MY-RESET | New primary (January 2026) | Use as the prominently displayed number going forward |
-| 1-800-GAMBLER | Still active | Widely recognized; commonly required by regulators |
-| 1-800-522-4700 | Still active | Legacy number; acceptable for compliance |
+| 1-800-MY-RESET | NCPG's updated branded number (January 2026) | Acceptable per Notice #2026-09 |
+| 1-800-GAMBLER | Still active | Widely recognized; commonly required by regulators in other states |
+| 1-800-522-4700 | Still active | Earlier NCPG number; the value still hard-coded in Nevada's two verbatim-mandated messages (below) |
 
-**{{PROGRAM_NAME}} recommendation**: Display **1-800-GAMBLER** as primary (most widely recognized and commonly required), with **1-800-MY-RESET** as the updated branded number. Include both where space permits.
+Source: NGCB Notice #2026-09, "Additional National Council on Problem Gambling Helpline Number" — canonical PDF: [gaming.nv.gov/.../notice-to-licensees-2026--re-ncpg-phone-number.pdf](https://www.gaming.nv.gov/contentassets/7568a04a6f774450a186ee4e28e1d614/notice-to-licensees-2026--re-ncpg-phone-number.pdf); listed on the [NGCB Industry Notices index](https://www.gaming.nv.gov/about-us/industry-notices/) (verify in browser if the direct link is blocked).
+
+**{{PROGRAM_NAME}} recommendation**: Any of the three is acceptable for in-house postings under Notice #2026-09, so choose for recognizability. Displaying **1-800-GAMBLER** (most widely recognized) alongside **1-800-MY-RESET** (NCPG's updated branded number) works well where space permits. Note that this latitude applies to general postings — it does **not** extend to the two prescribed-verbatim messages (Reg 5.225(18)(b) and TS 3.150(2)(e)), which hard-code 1-800-522-4700 unless the Board Chair approves an alternative (see below).
 
 ### On-brand helpline display
 
@@ -403,7 +405,7 @@ Under Reg 5A.130, operators must:
 
 ### Why there is no centralized program
 
-Nevada's gaming industry predates modern centralized self-exclusion systems. With ~200 nonrestricted licensees, the state has historically relied on individual operators to manage their own patron exclusion lists.
+Nevada's gaming industry predates modern centralized self-exclusion systems. With several hundred nonrestricted licensees, the state has historically relied on individual operators to manage their own patron exclusion lists.
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -586,8 +588,8 @@ helplines:
     national:
       number: "1-800-522-4700"
       alternate: "1-800-GAMBLER"
-      new_primary: "1-800-MY-RESET"
-      text_number: "Text 800GAM"
+      current_branded: "1-800-MY-RESET"   # NCPG's current number; any of the three is acceptable per NGCB Notice #2026-09
+      text_number: "Text 1-800-MY-RESET"  # NCPG routes text to the full number (or 1-800-522-4700)
       chat_url: "www.ncpgambling.org/chat"
       website: "www.ncpgambling.org"
       label: "National Council on Problem Gambling"
@@ -596,7 +598,7 @@ helplines:
     nevada:
       number: "1-800-522-4700"
       alternate: "1-800-GAMBLER"
-      new_primary: "1-800-MY-RESET"
+      current_branded: "1-800-MY-RESET"   # any of the three is acceptable per NGCB Notice #2026-09
       website: "www.ncpgambling.org"
       label: "NCPG National Helpline"
       state_resource: "Nevada Council on Problem Gambling"
