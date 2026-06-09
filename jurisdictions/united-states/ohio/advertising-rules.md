@@ -166,7 +166,7 @@ The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct app
 | Helpline in ads | OAC 3775-16-08 -- helpline required in all sports ads | Aligned |
 | No misleading claims | OAC 3775-16-08 -- explicit ban on false/deceptive/misleading information; conditions, odds, and material factors required | Aligned |
 | Honest promotions | OAC 3775-16-09 -- promo/bonus T&Cs must be full, accurate, transparent, and not misleading | Aligned and stronger (active/expiry disclosure required) |
-| Self-exclusion | OAC 3772-12-04 -- cease all direct marketing to excluded individuals | Aligned and stronger (15-day deadline) |
+| Self-exclusion | OAC 3775-16-08(D) -- cease direct advertising to opted-out / excluded individuals; OAC 3772-12-04 sets the facility's VEP-status, notification, and reporting duties | Aligned and stronger (15-day opt-out deadline under 3775-16-08) |
 
 Ohio's prescriptive rules generally meet or exceed AGA voluntary standards.
 
@@ -210,9 +210,10 @@ All sports gaming advertisements are prohibited from:
 
 Casino operators' problem gambling plans must address marketing in the context of disordered gambling. While specific prohibitions depend on the OCCC-approved plan, best practices include:
 
-- No marketing to individuals on the Time Out Ohio voluntary exclusion list (required per OAC 3772-12-04)
-- No credit extension marketing to excluded individuals
-- Loyalty program marketing must have procedures for disordered gambling behavior
+- No marketing to individuals on the Time Out Ohio voluntary exclusion list
+- Loyalty program marketing must have procedures for disordered gambling behavior (OAC 3772-12-06)
+
+Note: OAC 3772-12-04 governs the excluded facility's VEP-status, notification, incident-reporting, and quarterly-reporting duties — it does not itself impose a direct-marketing ban or a credit/check restriction. The codified 15-day cease-direct-advertising duty for sports gaming is OAC 3775-16-08(D).
 
 ---
 
@@ -233,11 +234,13 @@ Casino operators' problem gambling plans must address marketing in the context o
 
 ### Casino venue (OAC 3772-12-06)
 
+OAC 3772-12-06 requires signs containing information on gambling treatment and on the Ohio voluntary exclusion program; it does not prescribe display of a specific helpline number.
+
 | Disclosure | Requirement | Where |
 |---|---|---|
 | **Treatment information** | Information on gambling treatment | Casino signage |
 | **Voluntary exclusion** | Information about the Time Out Ohio program | Casino signage |
-| **Problem gambling helpline** | 1-800-589-9966 displayed | VLT facilities (racinos) throughout |
+| **Problem gambling helpline** | Helpline display (e.g., 1-800-589-9966) — a separate Ohio Lottery VLT-facility requirement, not prescribed by OAC 3772-12-06 | VLT facilities (racinos) throughout |
 
 ---
 
@@ -250,7 +253,7 @@ OAC 3775-16-08 includes specific requirements for direct advertising (ads sent t
 | **Opt-out method** | Each direct advertisement must clearly and conspicuously describe a method by which an individual may opt out of receiving future advertisements |
 | **Electronic opt-out** | If sent via electronic mail, the opt-out method must include either electronic mail or a linked online website |
 | **Action timeline** | Sports gaming proprietor must act upon an opt-out request within fifteen days to ensure the individual will no longer receive advertisements |
-| **Self-excluded persons** | Must cease all direct marketing to Time Out Ohio participants within 15 days of receiving exclusion notice (OAC 3772-12-04) |
+| **Opted-out / excluded persons** | Must act on a direct-advertising opt-out within 15 days (OAC 3775-16-08(D)); do not direct-market to Time Out Ohio participants |
 
 ---
 

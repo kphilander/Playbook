@@ -151,7 +151,7 @@ Ohio uses a **constitutionally authorized licensing system**:
 
 | License type | Description |
 |---|---|
-| **Casino operator** | Authorized by constitutional amendment (Article XV, Section 6a); limited to 4 locations |
+| **Casino operator** | Authorized by constitutional amendment ([Ohio Constitution Article XV, Section 6(C)](https://codes.ohio.gov/ohio-constitution/section-15.6)); limited to 4 locations |
 | **Management company** | Companies managing casino operations |
 | **Key employee** | Senior management and executives |
 | **Casino gaming employee** | All staff directly involved in gaming operations; 21+ age requirement; 3-year license term (ORC 3772.131) |
@@ -429,15 +429,19 @@ If a Time Out Ohio participant is discovered at a banned facility:
 | **Removal** | Removed from the facility immediately |
 | **Criminal charges** | May be charged with criminal trespassing |
 
-### Casino operator responsibilities (OAC 3772-12-04)
+### Excluded-facility responsibilities (OAC 3772-12-04)
+
+[OAC 3772-12-04](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-04) ([LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-04) · verify in browser) sets the facility's duties toward excluded individuals:
 
 | Obligation | Details | Timeline |
 |---|---|---|
-| **Cease direct marketing** | Remove from all marketing lists | Within 15 days of receiving exclusion notice |
-| **No credit extension** | Cannot extend credit in any manner | Immediate |
-| **No check cashing** | Cannot cash checks for excluded individuals | Immediate |
-| **Commission notification** | Immediately notify OCCC in writing if excluded individual found on premises | Immediate |
-| **Confidentiality** | Maintain confidentiality of excluded individuals' information | Ongoing |
+| **Keep VEP status current** | Maintain a system that identifies Ohio VEP participants and update enrollment status | At least once every 7 days |
+| **Commission notification** | Immediately notify OCCC staff if an excluded individual is found on premises | Immediate |
+| **Incident report** | Submit a written report (name, date of birth, circumstances, gaming activity) | Within 72 hours |
+| **Denied-entry report** | Report the number of VEP participants denied entry or sign-in | Quarterly |
+| **Follow the plan** | Comply with the approved disordered and problem gambling plan (OAC 3772-12-06) | Ongoing |
+
+The duty to **cease direct marketing within 15 days** of an opt-out is codified for sports gaming in [OAC 3775-16-08(D)](https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-08) ([LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3775-16-08) · verify in browser) — see [Self-exclusion checklist](#self-exclusion) and [advertising-rules.md](advertising-rules.md). OAC 3772-12-04 does not impose a blanket no-credit or no-check-cashing rule; in fact it expressly permits collection of debts incurred before enrollment (subsection H).
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -470,7 +474,7 @@ Ohio's land-based player protection requirements are governed through the commis
 | **Printed educational material — employees** | Yes | OAC 3772-12-06 | Printed written material to educate employees about disordered/problem gambling and the voluntary exclusion program |
 | **Problem gambling information posting** | Yes | OAC 3772-12-06 | Signs around casino with treatment info and voluntary exclusion details |
 | **Sign language and graphics** | Yes | OAC 3772-12-06 | The plan must include examples of the language and graphics to be used on signs (relevant to on-brand signage design) |
-| **Helpline display** | Yes | OAC 3772-12-06 | 1-800-589-9966 displayed at casino and racino venues |
+| **Signage — treatment + VEP** | Yes | OAC 3772-12-06 | Signs with gambling-treatment and Ohio voluntary exclusion (Time Out Ohio) information. The rule does not prescribe a specific helpline number; displaying 1-800-589-9966 is operator best practice. |
 | **Underage-prevention procedures** | Yes | OAC 3772-12-06 | Explicit procedures to prevent underage gambling, as a plan component (ties to the 21+ requirement) |
 | **Employee training** | Yes | OAC 3772-12-06 | Training program with materials, periodic reinforcement, and certification |
 | **Goals and timetables** | Yes | OAC 3772-12-06 | The plan must state its goals and a timetable for implementation |
@@ -657,7 +661,7 @@ Complete before launching {{PROGRAM_NAME}} in Ohio.
 
 ### Messaging
 - [ ] Problem gambling prevention messages included in all sports gaming advertising
-- [ ] Helpline displayed per OAC 3772-12-06 (casino/racino) and OAC 3775-16-08 (sports ads)
+- [ ] Casino/racino signs with gambling-treatment and Ohio VEP information per OAC 3772-12-06; helpline in sports ads per OAC 3775-16-08
 - [ ] Age notice (21+) on all player-facing content
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Ohio values
 - [ ] Conditions of play (cost, odds, material conditions) disclosed in sports ads
@@ -685,10 +689,10 @@ Complete before launching {{PROGRAM_NAME}} in Ohio.
 
 ### Self-exclusion
 - [ ] Time Out Ohio information available at all venues and on platforms
-- [ ] Excluded individuals removed from marketing within 15 days
-- [ ] No credit extension or check cashing for excluded individuals
-- [ ] OCCC notified immediately in writing if excluded individual found on premises
-- [ ] Confidentiality of excluded individuals maintained
+- [ ] VEP enrollment status checked and updated at least every 7 days (OAC 3772-12-04)
+- [ ] OCCC notified immediately if excluded individual found on premises; written incident report within 72 hours (OAC 3772-12-04)
+- [ ] Quarterly denied-entry reporting to OCCC (OAC 3772-12-04)
+- [ ] Direct-marketing opt-outs actioned within 15 days (sports gaming, OAC 3775-16-08)
 - [ ] Staff trained on Time Out Ohio enrollment and enforcement
 
 ### Player protection -- land-based
