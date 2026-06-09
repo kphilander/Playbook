@@ -25,15 +25,15 @@ adaptation_notes: |
   requirements. Ontario's sport betting inducement ban is the most
   distinctive restriction. On-brand disclosure examples need cultural
   adaptation for non-North-American markets.
-last_updated: 2026-03-10
+last_updated: 2026-06-08
 ---
 
 # Ontario — Advertising Rules
 
 > **Operator note**: This is the detailed advertising reference for Ontario. It covers AGCO Registrar's Standards for advertising (iGaming and Gaming/Lottery), the national CGA Code for Responsible Gaming Advertising (January 2026), channel-by-channel analysis, prohibited content, required disclosures, Ontario's distinctive sport betting inducement ban, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Ontario compliance module](README.md) for complete coverage.
 
-> **Last verified**: 2026-03-10
-> **Next review due**: 2026-06-10 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -90,7 +90,7 @@ Advertising, marketing materials, and communications shall not target high-risk,
 |---|---|
 | **Minor-appealing content** | No themes, language, cartoon figures, symbols, or influencers likely to appeal to minors |
 | **School proximity** | No placement near schools or youth-oriented locations |
-| **Athlete endorsements** | No active or retired athletes with operator agreements, except for responsible gambling advocacy |
+| **Athlete & influencer endorsements** | No active or retired athletes (or others likely to appeal to minors, including social-media influencers) with operator agreements, except for responsible gambling advocacy. This clause is **Standard 2.03, requirement 4** (within this targeting-restrictions standard); it was added by amendment **effective February 28, 2024** (announced August 29, 2023). |
 | **Minor endorsers** | No individuals who are, or appear to be, minors |
 | **Youth media** | No placement in media or venues directed primarily at minors |
 | **High-risk exploitation** | Measures must be in place to limit marketing communications to known high-risk players |
@@ -117,13 +117,15 @@ Marketing must be truthful, must not mislead players or misrepresent products. P
 
 ### Standard 2.05: Inducement advertising ban
 
-**Public advertising of gambling inducements, bonuses, and credits related to sport and event betting is prohibited.** This includes targeted advertising and algorithm-based ads.
+**Public advertising of gambling inducements, bonuses, and credits related to sport and event betting is prohibited** — in force since the regulated market launched on **April 4, 2022**. This includes targeted advertising and algorithm-based ads.
 
 Permitted channels:
 - On the operator's own gaming site
 - Through direct advertising and marketing **after receiving active player consent**
 
 See [Sport betting inducement ban](#sport-betting-inducement-ban) for full details.
+
+> **Citation note**: The inducement ban (Std 2.05) has applied since market launch (April 4, 2022). It is distinct from the **athlete/influencer** restriction at **Std 2.03(4)** (the targeting-restrictions standard — not Std 2.04, which is truthfulness), which was a later amendment effective February 28, 2024. Sources: [AGCO Marketing & Advertising](https://www.agco.ca/en/lottery-and-gaming/responsible-gambling/marketing-and-advertising); [AGCO athlete-ban announcement](https://www.agco.ca/en/news/agco-ban-athletes-ontarios-igaming-advertising-protect-minors); [Cassels analysis](https://cassels.com/insights/a-game-changing-update-ontarios-amended-restrictions-on-use-of-athletes-influencers-in-igaming-advertising-are-now-in-effect/).
 
 ### Standard 2.06: Inducement disclosure
 
@@ -212,6 +214,8 @@ Ontario's most distinctive advertising restriction deserves dedicated attention.
 
 The **CGA Code for Responsible Gaming Advertising** came into effect **January 1, 2026**, administered by Ad Standards Canada. It applies to all gambling advertising across Canada.
 
+**Citation:** Ad Standards Canada, [Canadian Gaming Association Code for Responsible Gaming Advertising (PDF)](https://adstandards.ca/wp-content/uploads/CGA-Code-for-Responsible-Gaming-Advertising-2025-10-24.pdf). The Code governs ad placement by **audience composition** (advertising directed to legal-age audiences) and requires talent/individuals depicted to be **25+**; it contains **no per-break ad-frequency cap** for live sports.
+
 ### Key provisions
 
 | # | Provision | Details |
@@ -223,9 +227,8 @@ The **CGA Code for Responsible Gaming Advertising** came into effect **January 1
 | 5 | **Social responsibility** | Must not portray gambling as financial advancement or social necessity |
 | 6 | **Responsible gambling** | All advertising must include a responsible gambling message and helpline reference |
 | 7 | **Endorsements** | Celebrity, athlete, and influencer endorsements must comply with disclosure requirements |
-| 8 | **Frequency** | Maximum 1 gambling ad per commercial break during live sports |
-| 9 | **Digital/social media** | Age-gating required; content targeted to 19+ audiences in Ontario |
-| 10 | **Complaints** | Handled through Ad Standards Canada's Consumer Complaints process |
+| 8 | **Digital/social media** | Age-gating required; content targeted to 19+ audiences in Ontario |
+| 9 | **Complaints** | Handled through Ad Standards Canada's Consumer Complaints process |
 
 ### Interaction with AGCO standards
 
@@ -234,7 +237,6 @@ The CGA Code **adds to** Ontario's provincial AGCO standards — it does not rep
 | Area | AGCO standard | CGA Code | Which applies |
 |---|---|---|---|
 | Endorser age | Not specified | Must be 25+ | CGA Code (stricter) |
-| Sports ad frequency | Not specified | 1 per commercial break | CGA Code (new) |
 | Athlete endorsements | Banned except RG advocacy | Disclosure required | AGCO (stricter) |
 | Inducement messaging | Public sport betting inducements banned | Terms must be prominent | AGCO (stricter) |
 | Helpline in ads | Required (Std 2.08) | Required | Both — same requirement |
@@ -251,9 +253,9 @@ The CGA Code **adds to** Ontario's provincial AGCO standards — it does not rep
 | **Helpline** | ConnexOntario reference recommended; required for iGaming advertising (Std 2.08) |
 | **Age notice** | 19+ |
 | **Time restrictions** | No Ontario-specific time restrictions; no ads during programming primarily targeting minors |
-| **Sports broadcasts** | Maximum 1 gambling ad per commercial break (CGA Code) |
+| **Sports broadcasts** | The CGA Code governs by audience composition (ads placed for legal-age audiences; talent and individuals depicted aged 25+) and requires responsible-gambling messaging — it sets no per-break ad-frequency cap |
 | **Inducement ban** | No sport betting inducements in broadcast ads (Std 2.05) |
-| **Athlete endorsements** | No athlete endorsements except for RG advocacy (Std 2.03) |
+| **Athlete endorsements** | No athlete or influencer endorsements except for RG advocacy (Std 2.03(4)) |
 
 ### Digital (web, app, social media)
 
@@ -281,7 +283,7 @@ The CGA Code **adds to** Ontario's provincial AGCO standards — it does not rep
 
 | Rule | Details |
 |---|---|
-| **Self-excluded players** | Must be removed from all marketing lists within 24 hours (Std 2.03/2.07) |
+| **Self-excluded players** | Must be removed from all marketing lists within 24 hours (Std 2.03/2.07) — includes persons on the [BetGuard](README.md#self-exclusion) centralized registry, checked in real time |
 | **Inducements** | Permitted only after active player opt-in consent (Std 2.07) |
 | **Opt-out** | Players must be able to withdraw consent at any time |
 | **Frequency** | Must not be excessive or harassing |
@@ -299,7 +301,7 @@ The CGA Code **adds to** Ontario's provincial AGCO standards — it does not rep
 | Rule | Details |
 |---|---|
 | **Youth events** | No gambling advertising at events primarily targeting minors |
-| **Athlete involvement** | No athlete endorsements except for responsible gambling advocacy (Std 2.03) |
+| **Athlete involvement** | No athlete endorsements except for responsible gambling advocacy (Std 2.03(4)) |
 | **Sports sponsorship** | Permitted; must include responsible gambling messaging (CGA Code) |
 
 ---
@@ -311,7 +313,7 @@ The following content is **prohibited** in Ontario gambling advertising:
 | Category | Prohibited content | Source |
 |---|---|---|
 | **Minors** | Any content targeting, depicting, or appealing to persons under 19. Cartoon characters, child-oriented language, youth influencers, placement near schools or in youth media. | Std 2.03, CGA Code |
-| **Athlete endorsements** | Active or retired athletes with operator agreements, except for responsible gambling advocacy. | Std 2.03 |
+| **Athlete & influencer endorsements** | Active or retired athletes, or social-media influencers, with operator agreements, except for responsible gambling advocacy. | Std 2.03(4) |
 | **Public inducements** | Public advertising of sport betting inducements, bonuses, and credits — TV, radio, print, outdoor, digital, social media. | Std 2.05 |
 | **Misleading odds** | Claims suggesting winning is probable, that skill influences games of chance, or that extended play increases chances. | Std 2.04 |
 | **Financial solution** | Portraying gambling as solving financial problems, replacing employment, or ensuring financial security. | Std 2.04 |
