@@ -27,10 +27,13 @@ adaptation_notes: |
   blunt/open). On-brand messaging examples throughout need adaptation
   for non-US deployments. Currency is USD. Massachusetts has separate
   regulatory regimes for casino (Chapter 23K) and sports wagering
-  (Chapter 23N). GameSense Info Centers operate at all three casinos.
-  Helpline is state-specific (MA Problem Gambling Helpline). Sports
-  wagering advertising rules are highly prescriptive (205 CMR 256).
-last_updated: 2026-03-10
+  (Chapter 23N). The MGC's responsible-gaming program is PlayWell
+  (rebranded from GameSense, 2026-03-27); PlayWell Info Centers operate
+  at all three casinos. Helpline is state-specific (MA Problem Gambling
+  Helpline). Sports wagering advertising rules are highly prescriptive
+  (205 CMR 256). RG standards of practice are anchored by the MGC
+  Responsible Gaming Framework 2.0, with PlayMyWay voluntary budgeting.
+last_updated: 2026-06-08
 ---
 
 # Massachusetts — Compliance Module
@@ -40,8 +43,8 @@ last_updated: 2026-03-10
 > **Verticals covered**: Land-based Casino, Sports Betting (retail + mobile)
 > *(Online casino is not legal in Massachusetts. If your deployment only covers one vertical, sections marked with the other vertical's tag can be skipped.)*
 
-> **Last verified**: 2026-03-10
-> **Next review due**: 2026-06-10 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -50,8 +53,9 @@ last_updated: 2026-03-10
 | Section | Verticals | Description |
 |---|---|---|
 | [Regulatory authority](#regulatory-authority) | All | Massachusetts Gaming Commission structure |
+| [RG standards of practice](#responsible-gaming-standards-of-practice) | All | RG Framework 2.0, PlayWell, PlayMyWay, research agenda |
 | [Legal requirements](#legal-requirements) | All | 21+, permitted products, dual-statute framework |
-| [Helpline](#helpline) | All | MA Problem Gambling Helpline, GameSense Info Centers |
+| [Helpline](#helpline) | All | MA Problem Gambling Helpline, PlayWell Info Centers |
 | [Messaging requirements](#messaging-requirements) | All | Obligation-based (casino) + standard-based (sports wagering ads) |
 | [Advertising restrictions](#advertising-restrictions) | Sports wagering | Prescriptive rules (205 CMR 256) — font sizes, prohibited content, endorsements |
 | [Self-exclusion — land-based](#self-exclusion--land-based) | Land-based | Casino VSE (205 CMR 133) |
@@ -74,6 +78,7 @@ last_updated: 2026-03-10
 | **Website** | massgaming.com |
 | **Governing legislation** | M.G.L. Chapter 23K (Expanded Gaming Act — casino); M.G.L. Chapter 23N (Sports Wagering Act) |
 | **Key regulations** | 205 CMR 133 (Casino VSE), 205 CMR 233 (Sports Wagering VSE), 205 CMR 248 (Account Management), 205 CMR 256 (Sports Wagering Advertising), 205 CMR 138 (Casino Internal Controls) |
+| **Key standards of practice** | MGC Responsible Gaming Framework 2.0, PlayWell program (Info Centers + Advisors; rebranded from GameSense 2026-03-27), PlayMyWay voluntary budgeting, MGC research agenda (Positive Play) |
 | **Regulatory approach** | Prescriptive |
 
 ### Dual-statute framework
@@ -87,28 +92,94 @@ Massachusetts regulates gambling through **two separate statutes**, each with it
 
 This dual-statute structure means that compliance requirements often differ between casino and sports wagering — even when covering similar topics (e.g., self-exclusion list update frequency is 72 hours for casino vs. 24 hours for sports wagering).
 
-### GameSense
+#### Statutory RG anchors (Chapter 23K)
 
-Massachusetts operates **GameSense Info Centers** at all three licensed casinos:
+Several responsible-gaming obligations trace to the Expanded Gaming Act itself, not only to the 205 CMR regulations. These are the primary-law hooks behind the program requirements below:
+
+| Provision | Obligation | Theme |
+|---|---|---|
+| **M.G.L. c. 23K § 18(6)** | "Taking additional measures to address problem gambling including, but not limited to, training of gaming employees to identify patrons exhibiting problems with gambling and prevention programs targeted toward vulnerable populations." This is the statutory anchor for staff training — 205 CMR 138 carries the internal-controls detail. | Staff training & customer interaction |
+| **M.G.L. c. 23K § 45** | Self-exclusion statute: authorizes the list, the marketing ban, denial of benefits/credit, and forfeiture of winnings; 205 CMR 133 implements it. | Self-exclusion communications |
+| **M.G.L. c. 23K § 29** | Monthly rewards/cashless win-loss statements for cardholders. | Activity statements & transparency |
+
+### PlayWell (formerly GameSense)
+
+On **2026-03-27**, the MGC rebranded its responsible-gaming program from **GameSense** to **PlayWell**. PlayWell is the MGC's program for player guidance and support; PlayWell branding now appears on casino floors and sports wagering platforms statewide. Massachusetts operates **PlayWell Info Centers** at all three licensed casinos:
 
 | Venue | Location |
 |---|---|
-| MGM Springfield | On-site GameSense Info Center |
-| Encore Boston Harbor | On-site GameSense Info Center |
-| Plainridge Park Casino | On-site GameSense Info Center |
+| MGM Springfield | On-site PlayWell Info Center |
+| Encore Boston Harbor | On-site PlayWell Info Center |
+| Plainridge Park Casino | On-site PlayWell Info Center |
 
-GameSense advisors are designated agents authorized to process VSE applications (205 CMR 133.02(3)).
+PlayWell Advisors are designated agents authorized to process VSE applications (205 CMR 133.02(3)).
+
+> **Transition note**: The rebrand is mid-transition. As of 2026-06-08, the MGC's main responsible-gaming pages use "PlayWell," but some operative pages — notably the **Voluntary Self-Exclusion enrollment page** — still reference "GameSense Info Centers." Treat **GameSense** as a recognized legacy term during the migration: prefer **PlayWell** in new collateral, but do not treat existing "GameSense" references on enrollment materials as errors until the MGC completes the changeover. The legacy `GameSenseMA.com` domain and any GameSense-branded DPH ad asset are likewise in transition — confirm the current asset with the MGC/DPH before producing advertising (see [Messaging requirements](#messaging-requirements)).
 
 ### Primary sources
 
 | Document | URL | Relevance |
 |---|---|---|
 | M.G.L. c. 23K | [malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23K](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23K) | Expanded Gaming Act — governs casino gambling |
+| M.G.L. c. 23K § 18 | [malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23K/Section18](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23K/Section18) | § 18(6) — statutory anchor for staff training + prevention programs |
+| M.G.L. c. 23K § 45 | [malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23K/Section45](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23K/Section45) | Self-exclusion statute (list, marketing ban, benefit denial, forfeiture) |
 | M.G.L. c. 23N | [malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23N](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23N) | Sports Wagering Act — governs sports betting |
 | 205 CMR 133 | [mass.gov/regulations/205-CMR-13300-voluntary-self-exclusion](https://www.mass.gov/regulations/205-CMR-13300-voluntary-self-exclusion) | Casino Voluntary Self-Exclusion |
 | 205 CMR 233 | [mass.gov/regulations/205-CMR-23300-sports-wagering-voluntary-self-exclusion](https://www.mass.gov/regulations/205-CMR-23300-sports-wagering-voluntary-self-exclusion) | Sports Wagering Voluntary Self-Exclusion |
 | 205 CMR 248 | [mass.gov/regulations/205-CMR-24800-sports-wagering-account-management](https://www.mass.gov/regulations/205-CMR-24800-sports-wagering-account-management) | Sports Wagering Account Management |
-| 205 CMR 256 | [mass.gov/regulations/205-CMR-25600-sports-wagering-advertising](https://www.mass.gov/regulations/205-CMR-25600-sports-wagering-advertising) | Sports Wagering Advertising |
+| 205 CMR 256 | [mass.gov/regulations/205-CMR-25600-sports-wagering-advertising](https://www.mass.gov/regulations/205-CMR-25600-sports-wagering-advertising) | Sports Wagering Advertising (section-level text mirrored at [Cornell LII](https://www.law.cornell.edu/regulations/massachusetts/205-CMR-256-06)) |
+| MGC Responsible Gaming Framework 2.0 | [massgaming.com/wp-content/uploads/MGC-Responsible-Gaming-Framework-2.0.pdf](https://massgaming.com/wp-content/uploads/MGC-Responsible-Gaming-Framework-2.0.pdf) | Orienting standards-of-practice document for MA RG policy |
+| MGC Commitment to Responsible Gaming | [massgaming.com/about/commitment-responsible-gaming](https://massgaming.com/about/commitment-responsible-gaming/) | Hub: RG Framework 2.0, PlayWell, PlayMyWay, research agenda |
+| PlayWell program | [playwell.org](https://www.playwell.org/) | MGC responsible-gaming program (Info Centers, Advisors, PlayMyWay, VSE) |
+| PlayMyWay | [playwell.org/play-my-way](https://www.playwell.org/play-my-way/) | Voluntary budgeting / pre-commitment tool (slots) |
+| Positive Play study (1.28.21) | [massgaming.com/wp-content/uploads/Positive-Play-Measuring-Responsible-Gaming-in-Massachusetts-1.28.21.pdf](https://massgaming.com/wp-content/uploads/Positive-Play-Measuring-Responsible-Gaming-in-Massachusetts-1.28.21.pdf) | MGC research-led RG evaluation |
+
+---
+
+## Responsible Gaming standards of practice
+
+Beyond the prescriptive 205 CMR regulations, Massachusetts operates a **standards-of-practice layer** that the MGC treats as core to its responsible-gaming regime. These are not buried in the CMR — they are the orienting policy, the player-facing tools, and the research-led evaluation that shape how operators are expected to behave. Reflect them in {{PROGRAM_NAME}} collateral and operations.
+
+### MGC Responsible Gaming Framework 2.0
+
+The **Responsible Gaming Framework 2.0** is the MGC's orienting standards-of-practice document for RG policy and practice in Massachusetts. It frames the regime around player health, informed decision-making, harm minimization, and research-led evaluation — the same informed-choice posture {{PROGRAM_NAME}} is built on.
+
+| Field | Value |
+|---|---|
+| **Owner** | Massachusetts Gaming Commission (Research & Responsible Gaming Division) |
+| **Nature** | Policy / standards-of-practice document (not a prescriptive CMR) |
+| **Themes** | RG messaging, limit-setting & player controls, staff training, transparency |
+| **Source** | [MGC Responsible Gaming Framework 2.0](https://massgaming.com/wp-content/uploads/MGC-Responsible-Gaming-Framework-2.0.pdf) (linked from the [MGC Commitment to Responsible Gaming](https://massgaming.com/about/commitment-responsible-gaming/) hub) |
+
+> **Confirm current edition**: The Framework 2.0 document is the MGC's published standards-of-practice reference (linked from the Commitment to Responsible Gaming hub). Confirm the current edition and any page-level citations directly from the MGC hub before relying on specific provisions in legal copy.
+
+### PlayMyWay — voluntary budgeting / pre-commitment
+
+**PlayMyWay** is Massachusetts's voluntary budget-setting tool for slot play — the first program of its kind in the US — available at all three casinos. It is a substantive **limit-setting / player-control** standard of practice that complements (and pre-dates) the sports-wagering account limits in 205 CMR 248.16.
+
+| Field | Value |
+|---|---|
+| **What it is** | Free, voluntary daily/weekly/monthly budget tracker for electronic gaming machines (slots) |
+| **Availability** | MGM Springfield, Encore Boston Harbor, Plainridge Park Casino |
+| **Enrollment** | At any slot machine or PlayMyWay kiosk by inserting a rewards card |
+| **Notifications** | Begin at **75%** of the selected budget, then continue at **25%** intervals (100%, 125%, and beyond) |
+| **Theme** | Limit-setting & player controls |
+| **Source** | [PlayMyWay](https://www.playwell.org/play-my-way/) |
+
+**{{PROGRAM_NAME}} on-brand framing:**
+> **Set your number, then play to it.** PlayMyWay tracks your slot budget and pings you at 75% — no lectures, just a heads-up so you stay in control. Sign up at any machine.
+
+### Research agenda & data transparency
+
+Massachusetts's RG regime is explicitly **research- and evaluation-led**. The MGC's Research & Responsible Gaming Division commissions ongoing study of player behavior and RG effectiveness — the data-transparency dimension behind Theme 10 (it sits alongside, not instead of, the player-facing win-loss statements under M.G.L. c. 23K § 29).
+
+| Field | Value |
+|---|---|
+| **Owner** | MGC Research & Responsible Gaming Division |
+| **Flagship study** | "Positive Play: Measuring Responsible Gaming in Massachusetts" (2021) |
+| **Lineage** | Builds on the SEIGMA (Social and Economic Impacts of Gambling in Massachusetts) research program |
+| **Theme** | Activity statements & transparency |
+| **Source** | [Positive Play study (1.28.21)](https://massgaming.com/wp-content/uploads/Positive-Play-Measuring-Responsible-Gaming-in-Massachusetts-1.28.21.pdf); [MGC Commitment hub](https://massgaming.com/about/commitment-responsible-gaming/) |
 
 ---
 
@@ -139,8 +210,16 @@ Massachusetts uses a **limited licensing system** for casino gambling:
 |---|---|
 | **Category 1** | Resort casino (up to 3 statewide — one per region) |
 | **Category 2** | Slots parlor (one statewide) |
-| **Sports Wagering — Category 1** | Retail + mobile, tethered to Category 1 or 2 casino license |
-| **Sports Wagering — Category 3** | Untethered mobile/online-only sports wagering operators |
+
+Sports wagering is licensed separately under M.G.L. c. 23N in **three** categories:
+
+| Sports wagering license | Description |
+|---|---|
+| **Category 1** | In-person sports wagering at a casino (gaming establishment), held by the casino itself, plus up to two individually-branded mobile apps |
+| **Category 2** | In-person sports wagering at a racetrack or simulcast facility (a "Sports Wagering Facility"), plus up to one individually-branded mobile app |
+| **Category 3** | Mobile/online sports wagering. A Category 3 license is either **Tethered** (connected to a Category 1 or Category 2 licensee) or **Untethered** (standalone, not connected to a Category 1 or Category 2 licensee) |
+
+Verify: [205 CMR 202.02](https://www.law.cornell.edu/regulations/massachusetts/205-CMR-202-02) (definitions) · [M.G.L. c. 23N § 3](https://malegislature.gov/Laws/GeneralLaws/PartI/TitleII/Chapter23N/Section3) (category definitions) · [MGC sports wagering licensees](https://massgaming.com/about/sports-wagering-in-massachusetts/sports-wagering-licensees/) (current holders).
 
 ---
 
@@ -157,19 +236,21 @@ Massachusetts uses a **limited licensing system** for casino gambling:
 | **Hours** | 24/7 |
 | **Cost** | Free |
 
-### GameSense Info Centers
+### PlayWell Info Centers
 
-In addition to the statewide helpline, Massachusetts operates **GameSense Info Centers** at all three licensed casinos. These provide in-person responsible gambling information, tool enrollment, and VSE application assistance.
+In addition to the statewide helpline, Massachusetts operates **PlayWell Info Centers** (formerly GameSense Info Centers) at all three licensed casinos. These provide in-person responsible gambling information, tool enrollment (including PlayMyWay), and VSE application assistance.
 
 ### Display rules
 
 #### Land-based display
 
-Under 205 CMR 138 (Internal Controls), casino licensees must post responsible gambling information per their Commission-approved internal controls plan. GameSense Info Centers serve as the primary on-site resource.
+Under 205 CMR 138 (Internal Controls), casino licensees must post responsible gambling information per their Commission-approved internal controls plan; the underlying statutory duty sits in M.G.L. c. 23K § 18(6). PlayWell Info Centers serve as the primary on-site resource.
 
 #### Sports wagering display
 
 Under **205 CMR 256.06(2)**, all sports wagering advertising must include the helpline link and phone number **using language provided by the Department of Public Health (DPH)**.
+
+> **DPH-prescribed asset — confirm current version**: The DPH-provided responsible-gaming message has historically paired the helpline with the program logo and a tagline (e.g., "Play it smart from the start! Live Chat @ GameSenseMA.com"). With the PlayWell rebrand, this verbatim asset and the `GameSenseMA.com` domain are in transition. Operators must obtain the **current** DPH-approved language and creative directly from the MGC/DPH before producing ads — do not reproduce the legacy GameSense tagline from memory.
 
 Under **205 CMR 233.02(2)**, the link to the VSE program must be **prominently displayed** on any mobile app or digital platform used for sports wagering.
 
@@ -337,7 +418,7 @@ For a detailed advertising reference, see [advertising-rules.md](advertising-rul
 | **Duration changes** | Cannot decrease; can increase (133.04(2)) |
 | **Scope** | Statewide — all Massachusetts licensed casinos |
 | **Enrollment method** | Application on Commission website and at designated locations on and off casino premises (133.02(2)) |
-| **Designated agents** | Trained and approved by Commission — includes GameSense advisors, health professionals, licensee employees (133.02(3)) |
+| **Designated agents** | Trained and approved by Commission — includes PlayWell Advisors (formerly GameSense advisors), health professionals, licensee employees (133.02(3)) |
 | **VSE list update frequency** | Every 72 hours (133.02(8)) |
 | **Interstate compact** | VSE list shared via interstate compact (133.02(9)) |
 | **Source** | 205 CMR 133 |
@@ -407,7 +488,7 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 > **Q: What is Massachusetts Voluntary Self-Exclusion (VSE)?**
 >
-> VSE is Massachusetts's statewide self-exclusion program administered by the Gaming Commission. Players can exclude themselves for 1, 3, or 5 years, or for life (lifetime requires 6 months of prior enrollment). During exclusion, they cannot enter gaming areas at any Massachusetts casino, and sports wagering operators must close their accounts. Players remain on the list even after their period expires — they must petition for removal and complete a reinstatement session. If a player asks about it, explain the options and offer to help them get started. Use "take a break" in casual conversation, "Voluntary Self-Exclusion" when referring to the specific program. GameSense advisors at all three casinos can help with enrollment.
+> VSE is Massachusetts's statewide self-exclusion program administered by the Gaming Commission. Players can exclude themselves for 1, 3, or 5 years, or for life (lifetime requires 6 months of prior enrollment). During exclusion, they cannot enter gaming areas at any Massachusetts casino, and sports wagering operators must close their accounts. Players remain on the list even after their period expires — they must petition for removal and complete a reinstatement session. If a player asks about it, explain the options and offer to help them get started. Use "take a break" in casual conversation, "Voluntary Self-Exclusion" when referring to the specific program. PlayWell Advisors (you may still see these called GameSense advisors on some MGC enrollment materials during the rebrand) at all three casinos can help with enrollment.
 
 ---
 
@@ -419,19 +500,21 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 |---|---|---|---|
 | **Problem gambling information posting** | Yes | Per Commission-approved internal controls plan | 205 CMR 138 |
 | **Helpline display** | Yes | MA Problem Gambling Helpline: 1-800-327-5050 | 205 CMR 138 |
-| **GameSense Info Center** | Yes | On-site at all three licensed casinos | M.G.L. c. 23K |
-| **Employee training** | Yes | Staff trained to recognize problem gambling and provide resources | 205 CMR 138 |
-| **VSE program** | Yes | Statewide casino VSE per 205 CMR 133 | 205 CMR 133 |
-| **Monthly win/loss statements** | Yes | For reward/loyalty cardholders | M.G.L. c. 23K s. 29 |
+| **PlayWell Info Center** | Yes | On-site at all three licensed casinos (formerly GameSense) | M.G.L. c. 23K |
+| **PlayMyWay budgeting** | Voluntary (offered statewide) | Voluntary slot budget tracker; alerts at 75% then every 25% | PlayWell / MGC standard of practice |
+| **Employee training** | Yes | Staff trained to identify patrons experiencing gambling harm and provide resources | M.G.L. c. 23K § 18(6); 205 CMR 138 |
+| **VSE program** | Yes | Statewide casino VSE per 205 CMR 133 | M.G.L. c. 23K § 45; 205 CMR 133 |
+| **Monthly win/loss statements** | Yes | For reward/loyalty cardholders | M.G.L. c. 23K § 29 |
 | **Compliance plan** | Yes | Required 60 days before casino opening | 205 CMR 133.06(9) |
 
 ### {{PROGRAM_NAME}} tool messaging — land-based
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
-| GameSense Info Center | "Questions about how games work? Visit GameSense — on-site, free, no judgment." | Casino floor signage |
-| Win/loss statement | "Your monthly play summary is ready. Knowledge is your best bet." | Reward cardholder messaging (M.G.L. c. 23K s. 29) |
-| VSE enrollment | "Need a break from gambling? We can set that up. Talk to GameSense or visit massgaming.com." | Casino RG materials (205 CMR 133) |
+| PlayWell Info Center | "Questions about how games work? Visit PlayWell — on-site, free, no judgment." | Casino floor signage |
+| PlayMyWay | "Set your slot budget, then play to it. PlayMyWay pings you at 75% — sign up at any machine." | Casino floor / slot-area signage |
+| Win/loss statement | "Your monthly play summary is ready. Knowledge is your best bet." | Reward cardholder messaging (M.G.L. c. 23K § 29) |
+| VSE enrollment | "Need a break from gambling? We can set that up. Talk to PlayWell or visit massgaming.com." | Casino RG materials (205 CMR 133) |
 | Helpline | "Free, confidential support — 24/7. Call 1-800-327-5050 or text GAMB to 800327." | All casino RG touchpoints |
 
 ---
@@ -591,17 +674,17 @@ Quick-reference table mapping every collateral category to Massachusetts-specifi
 | **Digital** | Social media bio | Both | Include 1-800-327-5050, 21+ | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Email templates | Both | Helpline + on-brand RG message in every email; unsubscribe mechanism in direct marketing (256.06(5)) | `{{HELPLINE_NUMBER}}` |
 | **Print** | Brochure | Both | MA helpline (all contact methods), 21+ notice | All tokens |
-| **Print** | Rack card | Land-based | Helpline, on-brand message, GameSense reference | `{{HELPLINE_NUMBER}}` |
+| **Print** | Rack card | Land-based | Helpline, on-brand message, PlayWell reference | `{{HELPLINE_NUMBER}}` |
 | **Print** | Table tent | Land-based | Helpline + on-brand message | `{{HELPLINE_NUMBER}}` |
 | **Print** | Helpline card | Both | 1-800-327-5050, Text GAMB to 800327, gamblinghelplinema.org | All helpline tokens |
 | **Print** | Sports wagering ads | Interactive | RG message same size as majority text OR 2% of greater dimension (256.06(4)(a)) | `{{HELPLINE_NUMBER}}` |
-| **Environmental** | Gaming areas | Land-based | RG info + helpline per internal controls plan; GameSense Info Center signage | `{{HELPLINE_NUMBER}}` |
+| **Environmental** | Gaming areas | Land-based | RG info + helpline per internal controls plan; PlayWell Info Center signage; PlayMyWay slot-area prompt | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Billboard | Both | RG message at 5% of greater dimension (256.06(4)(b)) | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Digital display | Land-based | On-brand RG message in rotation, helpline | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | TV spot | Both | RG message visible entire time (2% min) OR from first wagering reference + dedicated end screen (2% during + 8% end screen, last 3 seconds) per 256.06(4)(d) | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | Radio spot | Both | Spoken helpline reference | `{{HELPLINE_NUMBER}}` |
-| **Customer service** | Conversation scripts | Both | MA helpline in all referral scripts; VSE enrollment in scripts; GameSense referral | `{{HELPLINE_NUMBER}}` |
-| **Customer service** | Staff FAQ | Both | Add MA VSE Q&A (casino + sports wagering), update helpline to MA number, add GameSense reference | — |
+| **Customer service** | Conversation scripts | Both | MA helpline in all referral scripts; VSE enrollment in scripts; PlayWell referral | `{{HELPLINE_NUMBER}}` |
+| **Customer service** | Staff FAQ | Both | Add MA VSE Q&A (casino + sports wagering), update helpline to MA number, add PlayWell reference | — |
 
 For a detailed collateral adaptation guide, see the [collateral adaptation template](../../_template/collateral-adaptation.md).
 
@@ -621,12 +704,13 @@ helplines:
       website: "gamblinghelplinema.org"
       label: "Massachusetts Problem Gambling Helpline"
       hours: "24/7"
-      gamesense: true
-      gamesense_venues:
+      playwell: true               # MGC RG program, rebranded from GameSense 2026-03-27
+      playmyway: true              # voluntary slot budgeting tool (alerts at 75%, then every 25%)
+      playwell_venues:
         - "MGM Springfield"
         - "Encore Boston Harbor"
         - "Plainridge Park Casino"
-      notes: "State-specific helpline; GameSense Info Centers at all three casinos"
+      notes: "State-specific helpline; PlayWell Info Centers (formerly GameSense) at all three casinos; PlayMyWay budgeting statewide"
 
 # --- LEGAL -----------------------------------------------
 legal:
@@ -638,10 +722,12 @@ messaging:
   mandatory:
     united-states-massachusetts-general: |
       # No verbatim prescribed statement.
-      # Casino: obligation-based — post RG info per internal controls (205 CMR 138).
+      # Casino: obligation-based — post RG info per internal controls (205 CMR 138);
+      # statutory anchor is M.G.L. c. 23K s. 18(6).
       # Sports wagering ads: standard-based — include helpline using
       # DPH-provided language with prescribed font sizing (205 CMR 256.06).
-      # Obtain current DPH-approved language before deployment.
+      # Obtain current DPH-approved language/creative before deployment — the legacy
+      # GameSense ad asset and GameSenseMA.com domain are in PlayWell transition.
 ```
 
 Note: Massachusetts does not prescribe a verbatim responsible gambling statement in its regulations. Casino signage is obligation-based (205 CMR 138). Sports wagering advertising must use DPH-provided helpline language (205 CMR 256.06(2)) — operators must obtain this language directly from the Department of Public Health.
@@ -661,6 +747,7 @@ Complete before launching {{PROGRAM_NAME}} in Massachusetts.
 - [ ] Reviewed permitted products table (no online casino)
 - [ ] Identified whether deployment is land-based casino, sports wagering, or both
 - [ ] Reviewed M.G.L. c. 23K, M.G.L. c. 23N, and applicable 205 CMR regulations
+- [ ] Reviewed RG standards of practice (MGC Responsible Gaming Framework 2.0, PlayWell, PlayMyWay, research agenda)
 
 ### Helpline
 - [ ] MA Problem Gambling Helpline displayed: 1-800-327-5050
@@ -669,7 +756,8 @@ Complete before launching {{PROGRAM_NAME}} in Massachusetts.
 - [ ] Helpline posted per internal controls plan (casino)
 - [ ] Helpline included in ALL sports wagering advertising using DPH-provided language (256.06(2))
 - [ ] Font-size requirements met for sports wagering ads (256.06(4))
-- [ ] GameSense Info Center referenced in casino materials where appropriate
+- [ ] PlayWell Info Center (formerly GameSense) referenced in casino materials where appropriate
+- [ ] Current DPH-approved RG ad asset/creative confirmed with MGC/DPH (legacy GameSense tagline/domain in PlayWell transition)
 
 ### Messaging
 - [ ] Casino: RG information posted per Commission-approved internal controls (205 CMR 138)
@@ -725,9 +813,10 @@ Complete before launching {{PROGRAM_NAME}} in Massachusetts.
 - [ ] Reinstatement requirements per 133.04 implemented
 
 ### Player protection — Casino
-- [ ] GameSense Info Center operational at venue
-- [ ] Monthly win/loss statements available for reward cardholders (M.G.L. c. 23K s. 29)
-- [ ] Employee training program implemented per internal controls
+- [ ] PlayWell Info Center (formerly GameSense) operational at venue
+- [ ] PlayMyWay voluntary budgeting available/referenced in slot areas
+- [ ] Monthly win/loss statements available for reward cardholders (M.G.L. c. 23K § 29)
+- [ ] Employee training program implemented per internal controls (statutory anchor: M.G.L. c. 23K § 18(6))
 - [ ] Problem gambling information posted per internal controls plan
 
 ### Player protection — Sports Wagering (205 CMR 248)
@@ -765,7 +854,7 @@ Complete before launching {{PROGRAM_NAME}} in Massachusetts.
 ### Content
 - [ ] All collateral adapted per [collateral adaptation table](#collateral-adaptation)
 - [ ] Staff FAQ updated with MA VSE Q&A (casino + sports wagering)
-- [ ] Conversation scripts updated with MA helpline and GameSense references
+- [ ] Conversation scripts updated with MA helpline and PlayWell references
 - [ ] AML/KYC player-facing messaging uses {{PROGRAM_NAME}} voice
 - [ ] Sports wagering app: VSE link prominent, limits displayed pre-registration, helpline with DPH language
 
