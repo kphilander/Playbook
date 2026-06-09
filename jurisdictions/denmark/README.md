@@ -29,15 +29,15 @@ adaptation_notes: |
   market (moderate humor, direct communication). ROFUS, StopSpillet,
   and mandatory deposit limits are Denmark-specific features with no
   direct equivalents in North American markets.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # Denmark -- Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Denmark. Denmark has a centralized national regulatory model under the Danish Gambling Authority (Spillemyndigheden). Unlike federally structured countries such as the US or Canada, Denmark is not subdivided into sub-jurisdictions for gambling purposes -- all requirements are national. Key distinguishing features: mandatory deposit limits before play, ROFUS national self-exclusion register covering all licence holders, prescriptive advertising rules including under-25 bans and proximity restrictions, and StopSpillet helpline obligations.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Denmark. Denmark has a centralized national regulatory model under the Danish Gambling Authority (Spillemyndigheden). Unlike federally structured countries such as the US or Canada, Denmark is not subdivided into sub-jurisdictions for gambling purposes -- all requirements are national. Key distinguishing features: mandatory deposit limits before play, ROFUS national self-exclusion register covering all licence holders, prescriptive advertising rules including under-25 bans and proximity restrictions, and StopSpillet helpline obligations. The controlling standard-of-practice document for online responsible gambling is Spillemyndigheden's **Guidance on responsible gambling -- betting and online casino, v1.0 (26 February 2026)**, which sits above the executive orders and the certification programme. Land-based operators (excluding betting) are still covered by the older RG Guide v1.4.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -46,6 +46,7 @@ last_updated: 2026-03-22
 | Section | Description |
 |---|---|
 | [Regulatory authority](#regulatory-authority) | Spillemyndigheden, key contacts |
+| [Standards of practice](#standards-of-practice) | RG Guidance v1.0, marketing guides, certification programme |
 | [Legal requirements](#legal-requirements) | 18+, licensed products, legal framework |
 | [Helpline](#helpline) | StopSpillet details and display rules |
 | [Messaging requirements](#messaging-requirements) | Obligation-based requirements |
@@ -68,7 +69,8 @@ last_updated: 2026-03-22
 | **Primary regulator** | Spillemyndigheden (Danish Gambling Authority) |
 | **Website** | [spillemyndigheden.dk](https://www.spillemyndigheden.dk/en) |
 | **Governing legislation** | Consolidation Act No. 1182 of 22 September 2025 (Spilleloven / Danish Gambling Act) |
-| **Key executive orders** | Exec Order 1274/2019 (online casino, as amended by 682/2025); Exec Order 1276/2019 (online betting, as amended by 684/2025); Exec Order 1290/2019 (land-based casinos); Exec Order 1289/2019 (gaming machines) |
+| **Controlling RG standard (online)** | Guidance on responsible gambling -- betting and online casino, v1.0 (26 February 2026) |
+| **Key executive orders** | Exec Order 1274/2019 (online casino, as amended by 682/2025); Exec Order 1276/2019 (online betting, as amended by 684/2025); Exec Order 686/2025 (land-based betting); Exec Order 1290/2019 (land-based casinos); Exec Order 1289/2019 (gaming machines) |
 | **Regulatory approach** | Prescriptive |
 | **Location** | Lerchesgade 35, 6, 5000 Odense C, Denmark |
 | **Contact** | mail@spillemyndigheden.dk / +45 72 38 79 13 |
@@ -96,9 +98,39 @@ There are no sub-national gambling regulators. All requirements apply uniformly 
 | **Under-25 brand ambassador ban** | 1 January 2027 | Persons under 25 may not appear in gambling advertising |
 | **Free-to-play welcome bonus restrictions** | 1 January 2027 | Restrictions on free-to-play welcome bonuses |
 | **B2B supplier licences** | In force 1 January 2025 | Game suppliers must obtain B2B licences |
-| **Updated Executive Orders (online casino/betting)** | In force 11 June 2025 | Exec Orders 682/2025 and 684/2025 replace earlier amendments |
+| **Updated Executive Orders (online casino/betting/land-based betting)** | In force 11 June 2025 | Exec Orders 682/2025 (online casino) and 684/2025 (online betting) replace earlier amendments; Exec Order 686/2025 governs land-based betting |
 
 *Source: [Spillemyndigheden legal framework](https://www.spillemyndigheden.dk/en/legal-framework); [iGaming Business](https://igamingbusiness.com/marketing-affiliates/marketing-regulation/denmark-gambling-ads-ban-sports-broadcasts-restrictions/)*
+
+---
+
+## Standards of practice
+
+Denmark's gambling rules sit in four layers. Beyond the Gambling Act and the executive orders (the *what*), Spillemyndigheden publishes the standards-of-practice guides that operators are measured against in supervision (the *how*). For online operators, the controlling document is the 2026 responsible-gambling guidance; it supersedes the older RG Guide v1.4 for betting and online casino, while v1.4 continues to apply to land-based operators other than betting.
+
+| Layer | Instrument | Version / date | What it governs | Source |
+|---|---|---|---|---|
+| Statute | Spilleloven (Gambling Act) | Consolidation Act No. 1182, 22 Sep 2025 | Age limits, advertising (s.36), RG mandate, ROFUS | [Legal framework](https://www.spillemyndigheden.dk/en/legal-framework) |
+| Executive orders | 682/2025 (online casino); 684/2025 (online betting); 686/2025 (land-based betting); 1290/2019 (land-based casino) | In force 11 Jun 2025 (the 2025 orders) | Deposit limit before play, ROFUS link, player-information panel, age, signage | [Legal framework](https://www.spillemyndigheden.dk/en/legal-framework) |
+| RG standard-of-practice (online) | Guidance on responsible gambling -- betting and online casino | v1.0, 26 Feb 2026 | Information panel and prominent placement, self-test referral, on-screen clock, deposit limit, ROFUS, duty of attention, employee training, Danish-language rule | [RG Guidance v1.0](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf) |
+| RG standard-of-practice (land-based, excl. betting) | RG Guide | v1.4, Dec 2022 | Land-based RG information, signage, exclusion, employee duties | [RG Guide v1.4](https://www.spillemyndigheden.dk/uploads/2022-12/The%20Danish%20Gambling%20Authority%E2%80%99s%20guide%20on%20responsible%20gambling%20version%201.4.pdf) |
+| Marketing -- disclosure | Guide on duty of disclosure regarding marketing of gambling | v3.0, 15 Jul 2025 | Mandatory in-ad disclosures; operators' own social-media platforms; boosted odds; loyalty programmes; affiliate scope | [Disclosure guide v3.0](https://www.spillemyndigheden.dk/uploads/2025-07/The%20Danish%20Gambling%20Authority%27s%20guide%20on%20duty%20of%20disclosure%20regarding%20marketing%20of%20gambling_version%203_1.pdf) |
+| Marketing -- promotions | Guide on sales promotion | v5.0, 15 Jul 2025 | Bonus structures, promotional draw/prize-value calculation, boosted odds, loyalty programmes | [Sales promotion guide v5.0](https://www.spillemyndigheden.dk/uploads/2025-07/The%20Danish%20Gambling%20Authority%20guide%20on%20sales%20promotion%20version%205_0.pdf) |
+| Marketing -- in-ad info | New rules on information when marketing gambling products | In force 1 Apr 2020 | 18+, ROFUS, StopSpillet, and the Authority's label in marketing (with a case-by-case media-feasibility carve-out) | [Information when marketing](https://www.spillemyndigheden.dk/en/news/new-rules-information-when-marketing-gambling-products) |
+| Technical (player-facing parts) | Certification Programme (SCP document set) | SCP.00 General; SCP.02 Base platform; SCP.07.01-03 Games | Labelling scheme, statement of account, deposit-limit-before-play, RG-info (ROFUS/StopSpillet) | [Certification](https://www.spillemyndigheden.dk/en/certification); [Updated certification programme -- RG](https://www.spillemyndigheden.dk/en/news/updated-certification-programme-responsible-gambling) |
+
+> **Citation note**: The governing PDFs were text-verified against their title pages and version histories: RG Guidance v1.0 (26 Feb 2026), operator guidelines v9.0 (Jun 2025), Guide on duty of disclosure v3.0 (15 Jul 2025), and Guide on sales promotion v5.0 (15 Jul 2025). Note: the disclosure-guide PDF is *named* `...version 3_1.pdf`, but its title page and version history read "Version 3.0 of 15 July 2025" -- the filename is misleading, so the link is kept as-published while the version is cited as v3.0. The marketing-guide updates are announced at [Spillemyndigheden -- update to guides on duty of disclosure and sales promotion](https://www.spillemyndigheden.dk/en/news/update-guides-duty-disclosure-and-sales-promotion).
+
+### Player-facing standards the guidance adds
+
+The 2026 RG guidance codifies several requirements that are player-facing communications, not just back-office controls. These are reflected in the messaging and player-protection sections below:
+
+- **Mandatory self-test referral** -- online licensees must give players access to a self-test for disordered gambling; this can be satisfied by linking directly to the StopSpillet self-test. (RG Guidance v1.0 §3.1.1; Exec Order 682/2025 §15; Exec Order 684/2025 §13.)
+- **Always-on session clock** -- online casino sites and apps must display a clock that stays visible for the entire logged-in session, so a player can track time spent. It cannot be scrolled or clicked away. (RG Guidance v1.0 §3.1.1.2, "Clock on the website.")
+- **Duty of attention** -- licensees must identify players showing signs of gambling harm using defined parameters (spend, time, loss-chasing), then apply passive measures and active interventions (autogenerated warnings, feedback on current losses/time, direct contact). (RG Guidance v1.0 §6.)
+- **Danish language and prominent placement** -- mandatory player and RG information must be in Danish and presented in a prominent place. (RG Guidance v1.0 §3.1.1.1 and §3.2.)
+
+*Source: [RG Guidance v1.0 (Feb 2026)](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf); [Operator guidelines v9.0 (Jun 2025)](https://www.spillemyndigheden.dk/uploads/2025-06/Guidelines%20for%20operators%20of%20betting%20and%20online%20casino%20version%209.0%202025.pdf)*
 
 ---
 
@@ -116,7 +148,8 @@ There are no sub-national gambling regulators. All requirements apply uniformly 
 | Product | Vertical | Legal status | Licence type | Notes |
 |---|---|---|---|---|
 | Online casino | Interactive | Legal | Online casino licence (Exec Order 682/2025) | Roulette, blackjack, baccarat, poker, bingo, slots, combination games |
-| Online betting | Interactive | Legal | Betting licence (Exec Order 684/2025) | Covers both online and land-based betting |
+| Online betting | Interactive | Legal | Betting licence (Exec Order 684/2025) | Online sports and event betting |
+| Land-based betting | Land-based | Legal | Betting licence (Exec Order 686/2025) | Retail betting shops; player-info, age, ROFUS and signage duties |
 | Land-based casino | Land-based | Legal | Casino licence (Exec Order 1290/2019) | 6 licensed casinos in Denmark |
 | Gaming machines | Land-based | Legal | Gaming machine licence (Exec Order 1289/2019) | Arcades and hospitality venues |
 | Land-based bingo | Land-based | Legal | Bingo licence (Exec Order 1439/2024) | Separate from online bingo |
@@ -129,14 +162,19 @@ There are no sub-national gambling regulators. All requirements apply uniformly 
 | Legislation | Scope | Relevance to {{PROGRAM_NAME}} |
 |---|---|---|
 | Spilleloven (Gambling Act) | National gambling framework | Core legislation: age limits, advertising rules, responsible gambling mandate, ROFUS |
-| Exec Order 1274/2019 (as amended by 682/2025) | Online casino operations | Deposit limits, ROFUS integration, responsible gambling tools, certification requirements |
-| Exec Order 1276/2019 (as amended by 684/2025) | Online betting operations | Deposit limits, ROFUS integration, responsible gambling tools, certification requirements |
+| Exec Order 1274/2019 (as amended by 682/2025) | Online casino operations | Deposit limits, ROFUS integration, responsible gambling tools, self-test referral (§15), certification requirements |
+| Exec Order 1276/2019 (as amended by 684/2025) | Online betting operations | Deposit limits, ROFUS integration, responsible gambling tools, self-test referral (§13), certification requirements |
+| Exec Order 686/2025 | Land-based betting operations | Betting-shop player information, age, signage, ROFUS, responsible gambling duties |
 | Exec Order 1290/2019 | Land-based casino operations | Casino responsible gambling obligations, signage, exclusion |
+| RG Guidance v1.0 (26 Feb 2026) | Online RG standard of practice | Controlling interpretation of all online RG duties; supersedes RG Guide v1.4 for betting and online casino |
+| Guide on duty of disclosure v3.0 (15 Jul 2025) | Marketing disclosure standard | In-ad 18+/ROFUS/StopSpillet; social-media and affiliate scope; boosted odds; loyalty programmes |
+| Guide on sales promotion v5.0 (15 Jul 2025) | Bonus and promotion standard | Bonus structures, promotional draw/prize-value calculation, loyalty treatment |
+| Certification Programme (SCP set) | Technical standard (player-facing parts) | Labelling scheme, statement of account, deposit-limit-before-play, RG-info display |
 | Marketing Practices Act | Advertising across all sectors | Consumer protection overlay on gambling advertising; enforced by Consumer Ombudsman |
 | Hvidvaskloven (AML Act) | Anti-money laundering | KYC requirements, suspicious activity reporting |
 | Exec Order 43/2025 | Match-fixing prevention | Mandatory staff training on match-fixing |
 
-*Source: [Spillemyndigheden legal framework](https://www.spillemyndigheden.dk/en/legal-framework)*
+*Source: [Spillemyndigheden legal framework](https://www.spillemyndigheden.dk/en/legal-framework); [RG Guidance v1.0](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf)*
 
 ---
 
@@ -154,9 +192,11 @@ There are no sub-national gambling regulators. All requirements apply uniformly 
 | **Operated by** | Spillemyndigheden (Danish Gambling Authority) |
 | **Who can call** | Players, relatives, professionals |
 
-StopSpillet also provides a free, anonymous online self-assessment tool for evaluating gambling habits.
+StopSpillet also provides a free, anonymous online self-test for evaluating gambling habits. This self-test is not just a convenience: online licensees **must give players access to a self-test for disordered gambling** as one of the mandatory player-information items, and may satisfy that duty by linking directly to the StopSpillet self-test. Treat the self-test link as a required disclosure on the RG page and in collateral, alongside the StopSpillet and ROFUS references.
 
-Denmark has **13 treatment centres** across the country offering free gambling addiction services, some providing online treatment options.
+*Source: [RG Guidance v1.0 (Feb 2026)](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf) §3.1.1; Exec Order 682/2025 §15; Exec Order 684/2025 §13*
+
+Denmark has **13 treatment centres** across the country offering free services for people experiencing gambling harm, some providing online treatment options.
 
 ### Display rules
 
@@ -168,9 +208,9 @@ Operators must display StopSpillet helpline information visibly within casino pr
 
 #### Interactive display
 
-StopSpillet helpline must be accessible from every page of the gambling platform. Operators must also provide information about treatment centres (not just one, but multiple). ROFUS registration access must be provided across all platforms.
+StopSpillet helpline must be accessible from every page of the gambling platform. Operators must also provide information about treatment centres (not just one, but multiple), a direct link to the StopSpillet **self-test**, and ROFUS registration access across all platforms. All of this mandatory information must be in Danish and placed prominently. Online casino platforms must additionally display an always-on session clock (see [Player protection -- interactive](#player-protection----interactive)).
 
-*Source: [Spillemyndigheden responsible gambling](https://www.spillemyndigheden.dk/en/responsible-gambling)*
+*Source: [Spillemyndigheden responsible gambling](https://www.spillemyndigheden.dk/en/responsible-gambling); [RG Guidance v1.0 (Feb 2026)](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf) §3.1.1, §3.2*
 
 ### On-brand helpline display
 
@@ -192,11 +232,12 @@ Denmark uses an **obligation-based** approach. There is no single verbatim state
 
 | Context | Obligation type | What's required | Source |
 |---|---|---|---|
-| All marketing | Obligation-based | Age limit (18+), ROFUS info, StopSpillet reference | Gambling Act s.36; Duty of Disclosure Guide |
-| All platforms | Obligation-based | Responsible gambling information, treatment centre contacts | RG Guide v1.4 |
-| Before play | Standard-based | Deposit limit must be set | Exec Orders 1274/1276 |
-| Account creation | Standard-based | ROFUS check, age verification | Exec Orders 1274/1276 |
-| Bonus offers | Obligation-based | All conditions disclosed alongside the offer | Gambling Act; Duty of Disclosure Guide |
+| All marketing | Obligation-based | Age limit (18+), ROFUS info, StopSpillet reference, the Authority's label | Gambling Act s.36; Duty of Disclosure Guide v3.0; Information-when-marketing rules (1 Apr 2020) |
+| All online platforms | Obligation-based | RG information, treatment-centre contacts, self-test link -- in Danish, prominently placed | RG Guidance v1.0 §3.1.1, §3.2 |
+| All land-based venues | Obligation-based | RG information, treatment-centre contacts (casino: RG Guide v1.4; betting shops: Exec Order 686/2025) | RG Guide v1.4; Exec Order 686/2025 |
+| Before play (online) | Standard-based | Deposit limit must be set | Exec Orders 682/684; RG Guidance v1.0 |
+| Account creation | Standard-based | ROFUS check, age verification | Exec Orders 682/684 |
+| Bonus offers | Obligation-based | All conditions disclosed alongside the offer | Gambling Act; Duty of Disclosure Guide v3.0; Sales Promotion Guide v5.0 |
 | All marketing | Obligation-based | Winning chances presented correctly and in balanced manner | Gambling Act s.36 |
 
 **Obligation types explained:**
@@ -213,13 +254,15 @@ None. Denmark does not prescribe verbatim responsible gambling messages. All req
 | Obligation | What must be communicated | Where | Source |
 |---|---|---|---|
 | Age limit display | "18+" or equivalent age restriction notice | All marketing, all platforms | Gambling Act s.36 |
-| ROFUS information | Ability to self-exclude via ROFUS | All marketing, all platforms | Gambling Act; RG Guide |
-| StopSpillet reference | Helpline contact details | All marketing, all platforms | RG Guide v1.4 |
-| Treatment centre info | Contact information for treatment centres | All platforms | RG Guide v1.4 |
+| ROFUS information | Ability to self-exclude via ROFUS | All marketing, all platforms | Gambling Act; RG Guidance v1.0 |
+| StopSpillet reference | Helpline contact details | All marketing, all platforms | RG Guidance v1.0; Information-when-marketing rules |
+| Self-test referral | Direct link/access to the StopSpillet self-test for disordered gambling | All online platforms | RG Guidance v1.0 §3.1.1; Exec Orders 682 §15 / 684 §13 |
+| Treatment centre info | Contact information for treatment centres | All platforms | RG Guidance v1.0 (online); RG Guide v1.4 (land-based casino) |
+| Danish language and placement | Mandatory player/RG information must be in Danish and in a prominent place | All online platforms | RG Guidance v1.0 §3.1.1.1, §3.2 |
 | Winning chances | Odds presented correctly, not misleading | All marketing | Gambling Act s.36 |
-| Bonus conditions | Full terms alongside any bonus offer | All marketing | Gambling Act; Duty of Disclosure Guide |
-| Deposit limit prompt | Player must set a deposit limit before playing | Online platforms | Exec Orders 1274/1276 |
-| DGA label | Danish Gambling Authority labelling scheme | All platforms | Certification requirements |
+| Bonus conditions | Full terms alongside any bonus offer | All marketing | Gambling Act; Duty of Disclosure Guide v3.0; Sales Promotion Guide v5.0 |
+| Deposit limit prompt | Player must set a deposit limit before playing | Online platforms | Exec Orders 682/684; RG Guidance v1.0 |
+| DGA label | Danish Gambling Authority labelling scheme | All platforms | Certification Programme (SCP.00) |
 
 ### On-brand integration
 
@@ -233,10 +276,11 @@ Since Denmark has no verbatim statements, operators have full flexibility to use
 
 **Rules for on-brand integration:**
 1. The 18+ age limit, ROFUS reference, and StopSpillet reference must always be present
-2. Winning chances must never be exaggerated or presented misleadingly
-3. Bonus conditions must be fully disclosed alongside any offer
-4. All messaging must frame gambling as entertainment, not income
-5. Follow with a helpful action whenever possible
+2. On online platforms, a direct link to the StopSpillet self-test must also be present, and all mandatory information must be in Danish and prominently placed
+3. Winning chances must never be exaggerated or presented misleadingly
+4. Bonus conditions must be fully disclosed alongside any offer
+5. All messaging must frame gambling as entertainment, not income
+6. Follow with a helpful action whenever possible
 
 *Pattern from: [Messaging Framework -- Warning Statement Standards](../../brand-book/05-messaging-framework.md#warning-statement-standards)*
 
@@ -258,10 +302,11 @@ Denmark's advertising framework is governed by two overlapping legal instruments
 | Financial claims | Must not suggest gambling solves financial problems | All | Gambling Act s.36 |
 | Social status claims | Must not suggest gambling improves social acceptance | All | Gambling Act s.36 |
 | Celebrity endorsement | Must not falsely imply public figures' success resulted from gambling | All | Gambling Act s.36 |
-| Bonus disclosure | All bonus conditions disclosed directly alongside the offer | All | Duty of Disclosure Guide |
-| ROFUS reference | Must include ROFUS self-exclusion information | All | Gambling Act; Duty of Disclosure |
-| 18+ display | Must include age limit in all marketing | All | Gambling Act s.36 |
-| StopSpillet reference | Must include helpline reference | All | RG Guide v1.4 |
+| Bonus disclosure | All bonus conditions disclosed directly alongside the offer | All | Duty of Disclosure Guide v3.0; Sales Promotion Guide v5.0 |
+| ROFUS reference | Must include ROFUS self-exclusion information | All | Gambling Act; Duty of Disclosure Guide v3.0 |
+| 18+ display | Must include age limit in all marketing | All | Gambling Act s.36; Information-when-marketing rules |
+| StopSpillet reference | Must include helpline reference | All | Information-when-marketing rules; Duty of Disclosure Guide v3.0 |
+| Authority's label in ads | Must carry the DGA label where format allows (case-by-case media feasibility) | All | Information-when-marketing rules (1 Apr 2020) |
 | School proximity | Ads banned within 200m of schools (from 2027) | All | 2027 advertising reform |
 | Live sports ban | Whistle-to-whistle ad ban during live broadcasts (from 2027) | All | 2027 advertising reform |
 | ROFUS marketing ban | Must not send marketing to ROFUS-registered players | All | ROFUS rules |
@@ -274,7 +319,7 @@ Denmark's advertising framework is governed by two overlapping legal instruments
 | Digital | Must include 18+, ROFUS, StopSpillet; bonus conditions alongside offer; no targeting under-18s | All | Gambling Act s.36 |
 | Print | Must include 18+, ROFUS, StopSpillet; proximity ban near schools (from 2027) | All | Gambling Act; 2027 reform |
 | Direct marketing | Prohibited to ROFUS-registered players; opt-in required | All | ROFUS rules |
-| In-venue | DGA labelling scheme displayed; RG information visible | Land-based | RG Guide v1.4 |
+| In-venue | DGA labelling scheme displayed; RG information visible | Land-based | RG Guide v1.4 (casino); Exec Order 686/2025 (betting shops) |
 | Sponsorship | Under-25 brand ambassador ban (from 2027); may not glamorise gambling as trendy or social | All | 2027 reform |
 | Public transport | Gambling ads on public transport banned (from 2027) | All | 2027 reform |
 
@@ -303,22 +348,32 @@ For a detailed advertising reference, see [advertising-rules.md](advertising-rul
 
 ## Self-exclusion
 
-Denmark operates a **single unified self-exclusion program (ROFUS)** covering both land-based and interactive gambling.
+Denmark operates a **single unified self-exclusion program (ROFUS)** covering both land-based and interactive gambling. ROFUS itself offers a short 24-hour break as well as longer temporary exclusions (1, 3 or 6 months) and permanent exclusion. Separately, operators may also offer an account-level cool-off at the licence-holder level -- but the 24-hour break is a genuine ROFUS option, not only an operator tool.
+
+### ROFUS registration options
+
+| Option | Duration | Reach | Source |
+|---|---|---|---|
+| **Short-term break** | 24 hours (cooling-off period) | All Danish-licensed operators and land-based venues | [Spillemyndigheden ROFUS](https://www.spillemyndigheden.dk/en/rofus); [RG Guidance v1.0 §9.1](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf) |
+| **Temporary exclusion** | 1 month, 3 months or 6 months | All Danish-licensed operators and land-based venues | [Spillemyndigheden ROFUS](https://www.spillemyndigheden.dk/en/rofus); [RG Guidance v1.0 §9.1](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf) |
+| **Permanent exclusion** | Permanent (closes the account; removal no earlier than 1 year + 7 days) | All Danish-licensed operators and land-based venues | [Spillemyndigheden ROFUS](https://www.spillemyndigheden.dk/en/rofus); [RG Guidance v1.0 §9.1](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf) |
+
+ROFUS registration options are **24 hours, 1 month, 3 months, 6 months, or permanent** (RG Guidance v1.0 §9.1). There is no exclusion period between 24 hours and 30 days -- once past the short-term break, the shortest temporary exclusion is 1 month. Operators may *additionally* run an account-level cool-off with their own service, but the 24-hour break is itself a valid ROFUS term.
 
 ### ROFUS -- Register of Voluntarily Excluded Players
 
 | Field | Value |
 |---|---|
 | **Program name** | ROFUS (Register over Frivilligt Udelukkede Spillere) |
-| **Duration options** | 24-hour break, 1 month, 3 months, 6 months, permanent |
+| **Registration terms** | 24 hours (short-term break); 1 month, 3 months, or 6 months (temporary exclusion); or permanent |
 | **Scope** | National -- all Danish-licensed online operators, all land-based casinos, physical betting retailers (since Oct 2023) |
 | **Enrollment method** | Online via MitID (digital authentication) at [rofusweb.spillemyndigheden.dk](https://rofusweb.spillemyndigheden.dk); or paper form (9-01) mailed to Spillemyndigheden |
 | **Account action** | Online: operator must close account upon discovering permanent registration; refund deposits |
 | **Marketing cessation** | Automatic "No thank you to marketing" status for all registered players -- no gambling communications permitted |
-| **Minimum exclusion period** | 24 hours |
-| **Reinstatement** | Temporary exclusions expire automatically at exact time of registration. Permanent exclusion: removal request possible after 1 year via MitID. Cannot annul temporary registrations early. |
+| **Exclusion periods** | A short-term break is 24 hours; temporary exclusion is a minimum of 1 month (no period is offered between 24 hours and 1 month). Source: RG Guidance v1.0 §9.1 |
+| **Reinstatement** | Short-term and temporary registrations expire automatically at the exact time of registration and cannot be annulled early. Permanent registration: a removal request can be made no earlier than 1 year after registration and confirmed at the earliest 7 days later, so removal completes no earlier than **1 year + 7 days** (via MitID at rofus.nu). |
 | **Operator obligation** | Must check ROFUS at login and account creation; must connect to ROFUS system |
-| **Source** | [Spillemyndigheden ROFUS](https://www.spillemyndigheden.dk/en/rofus) |
+| **Source** | [Spillemyndigheden ROFUS](https://www.spillemyndigheden.dk/en/rofus); [RG Guidance v1.0 §9.1](https://www.spillemyndigheden.dk/uploads/2026-02/The%20Danish%20Gambling%20Authority%27s%20Guidance%20on%20responsible%20gambling%20-%20betting%20and%20online%20casino.pdf); [Operator guidelines v9.0 §7.2.11](https://www.spillemyndigheden.dk/uploads/2025-06/Guidelines%20for%20operators%20of%20betting%20and%20online%20casino%20version%209.0%202025.pdf) |
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -335,7 +390,7 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 > **Q: What is ROFUS?**
 >
-> ROFUS is Denmark's national self-exclusion register, administered by the Danish Gambling Authority. Players can exclude themselves for 24 hours, 1/3/6 months, or permanently from all Danish-licensed online gambling and land-based casinos. Registration is done via MitID or paper form. During exclusion, players cannot access any gambling platform and are automatically removed from all marketing. If a player asks about it, explain the options and offer to help them get started. Use "take a break" in casual conversation, "ROFUS" when referring to the specific program.
+> ROFUS is Denmark's national self-exclusion register, administered by the Danish Gambling Authority. Players can register for a 24-hour break, a temporary exclusion of 1, 3, or 6 months, or permanently, covering all Danish-licensed online gambling and land-based venues. Registration is done via MitID or paper form. During the registration, players cannot access any gambling platform and are automatically removed from all marketing. Operators may also offer their own account-level cool-off as an additional option, but the 24-hour break is itself a ROFUS term. If a player asks about ROFUS, explain the options and offer to help them get started. Use "take a break" in casual conversation, "ROFUS" when referring to the specific program.
 
 ---
 
@@ -345,20 +400,20 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Problem gambling information posting | Yes | RG information, StopSpillet, ROFUS info must be visible | RG Guide v1.4 |
-| Helpline display | Yes | StopSpillet details prominently displayed | RG Guide v1.4 |
-| DGA labelling scheme | Yes | Must display the Authority's label to verify licensing | Certification requirements |
-| Employee training | Yes | Staff must recognise and respond to at-risk players; match-fixing training mandatory since July 2025 | RG Guide v1.4; Exec Order 43/2025 |
-| Self-exclusion | Yes | ROFUS check required; excluded players must not enter | ROFUS rules |
-| Age verification | Yes | 18+ verification at entry | Gambling Act |
-| Activity monitoring | Yes | Continuous monitoring to prevent extended play without intervention | RG Guide v1.4 |
+| Responsible gambling information posting | Yes | RG information, StopSpillet, ROFUS info must be visible | RG Guide v1.4 (casino); Exec Order 686/2025 (betting shops) |
+| Helpline display | Yes | StopSpillet details prominently displayed | RG Guide v1.4; Exec Order 686/2025 |
+| DGA labelling scheme | Yes | Must display the Authority's label to verify licensing | Certification Programme (SCP.00) |
+| Employee training | Yes | Staff must recognise and respond to players showing signs of harm; match-fixing training mandatory since 2025 | RG Guide v1.4; Exec Order 43/2025 |
+| Self-exclusion | Yes | ROFUS check required; registered players must not enter | ROFUS rules |
+| Age verification | Yes | 18+ verification at entry | Gambling Act; Exec Order 1290/2019 (casino); Exec Order 686/2025 (betting) |
+| Duty of attention | Yes | Identify players showing signs of harm and intervene (passive measures and active contact) | RG Guide v1.4; RG Guidance v1.0 §6 |
 
 ### {{PROGRAM_NAME}} tool messaging -- land-based
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
 | RG information | "Know the game before you play it. Odds, rules, house edge -- all right here." | Venue signage |
-| ROFUS | "Need a break? ROFUS lets you pause for 24 hours up to permanently. Ask any staff member." | Venue signage, table tents |
+| ROFUS | "Need a longer break? ROFUS lets you step away from all Danish gambling -- 1, 3, or 6 months, or permanently. Ask any staff member." | Venue signage, table tents |
 | StopSpillet | "Need to talk? StopSpillet: 70 22 28 25. Free, confidential, staffed by professionals." | Venue signage, helpline cards |
 
 ---
@@ -369,19 +424,21 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Deposit limits | Yes (mandatory) | Players MUST set daily, weekly, or monthly deposit limit before play begins. Mandatory since January 2020. Limits are per-operator, not cross-platform. | Exec Orders 1274/1276 |
-| Loss limits | Recommended | Operators should offer loss limits alongside deposit limits | RG Guide v1.4 |
-| Session / play-time limits | Available | Operators must offer time limit options (activation by player) | RG Guide v1.4; Certification |
-| Cool-off / break periods | Yes | 24-hour break option via ROFUS; operators should offer internal break tools | ROFUS; RG Guide v1.4 |
-| Game-type restrictions | Available | Operators must offer ability to restrict game types (activation by player) | Certification requirements |
-| Activity statements / game history | Yes | Customers must be able to access account statements | Certification requirements |
-| Responsible gambling message | Yes | RG information including StopSpillet, ROFUS, treatment centres on every page | RG Guide v1.4 |
+| Deposit limits | Yes (mandatory) | Players MUST set daily, weekly, or monthly deposit limit before play begins. Mandatory since January 2020. Limits are per-operator, not cross-platform. | Exec Orders 682/684; RG Guidance v1.0 |
+| Always-on session clock | Yes (online casino) | Online casino sites/apps must display a clock that stays visible for the entire logged-in session so the player can track time spent. It cannot be scrolled or clicked away. | RG Guidance v1.0 §3.1.1.2 |
+| Self-test referral | Yes | Players must be given access to the StopSpillet self-test for disordered gambling (direct link satisfies the duty) | RG Guidance v1.0 §3.1.1; Exec Orders 682 §15 / 684 §13 |
+| Loss limits | Recommended | Operators should offer loss limits alongside deposit limits | RG Guidance v1.0 |
+| Session / play-time limits | Available | Operators must offer time limit options (activation by player) | RG Guidance v1.0; Certification Programme |
+| Cool-off / break periods | Yes | Account-level cool-off (a short break with this operator) -- separate from ROFUS; operators should offer internal break tools | RG Guidance v1.0 |
+| Game-type restrictions | Available | Operators must offer ability to restrict game types (activation by player) | Certification Programme |
+| Activity statements / game history | Yes | Customers must be able to access a statement of account (deposits, withdrawals, game activity) | Certification Programme (SCP.02 Base platform) |
+| Responsible gambling message | Yes | RG information including StopSpillet, ROFUS, self-test, treatment centres on every page -- in Danish, prominently placed | RG Guidance v1.0 §3.1.1, §3.2 |
 | Self-exclusion | Yes | ROFUS integration mandatory; check at login and account creation | ROFUS rules |
-| Single account enforcement | Yes | One account per operator per player | Exec Orders 1274/1276 |
-| Behavioural monitoring | Yes | Continuous monitoring for abnormal gaming patterns indicating gambling problems | RG Guide v1.4 |
+| Single account enforcement | Yes | One account per operator per player | Exec Orders 682/684 |
+| Duty of attention (behavioural intervention) | Yes | Identify players showing signs of harm using defined parameters (spend, time, loss-chasing), then apply passive measures and active interventions (autogenerated warnings, feedback on current losses/time, direct contact) | RG Guidance v1.0 §6 |
 | ROFUS check | Yes | Must verify against ROFUS at login and account creation | ROFUS rules |
-| DGA label | Yes | Must display the Authority's labelling scheme | Certification requirements |
-| Bonus restrictions | Yes | Bonuses must be offered on uniform terms (not individualised); conditions disclosed alongside offer | Gambling Act; Duty of Disclosure |
+| DGA label | Yes | Must display the Authority's labelling scheme | Certification Programme (SCP.00) |
+| Bonus restrictions | Yes | Bonuses must be offered on uniform terms (not individualised); conditions disclosed alongside offer; promotional draw/prize value calculated per the sales-promotion rules | Gambling Act; Duty of Disclosure Guide v3.0; Sales Promotion Guide v5.0 |
 
 ### {{PROGRAM_NAME}} tool messaging -- interactive
 
@@ -389,7 +446,9 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 |---|---|---|
 | Deposit limits | "Set your deposit limit -- it's required before you start, and it keeps you in control. Daily, weekly, or monthly -- your call." | Registration flow |
 | Session limits | "Set a session reminder -- your dashboard, your rules." | Account settings |
-| ROFUS | "Need a break? Register with ROFUS for 24 hours up to permanently. One registration covers all Danish operators." | RG page, account settings |
+| Session clock (online casino) | "The clock in the corner stays with you the whole session -- a simple way to see how long you've been playing." | Always-on, every logged-in screen |
+| Self-test | "Curious how your play stacks up? Take the free, anonymous StopSpillet self-test." | RG page, account settings |
+| ROFUS | "Need a break? Register with ROFUS for 24 hours, 1, 3, or 6 months, or permanently. One registration covers all Danish operators." | RG page, account settings |
 | StopSpillet | "Need to talk? StopSpillet is free, confidential, and staffed by professionals. Call 70 22 28 25 or chat at StopSpillet.dk." | RG page, support section |
 | Account statement | "See your full play history -- deposits, withdrawals, and game activity. No surprises." | Account dashboard |
 
@@ -435,7 +494,7 @@ This is required in all marketing materials per the Gambling Act s.36.
 | Requirement | Value |
 |---|---|
 | **AML authority** | Spillemyndigheden (gambling sector supervisor); Danish FSA (Finanstilsynet, general AML authority) |
-| **Primary legislation** | Hvidvaskloven (Act on Measures to Prevent Money Laundering and Financing of Terrorism), Consolidation Act No. 1463 of 18 November 2025 |
+| **Primary legislation** | Hvidvaskloven (Act on Measures to Prevent Money Laundering and Financing of Terrorism), Consolidation Act No. 433 of 17 April 2026 |
 | **KYC requirements** | Identity verification at account creation; ongoing monitoring |
 | **Risk assessment** | Written risk assessment required based on business model |
 | **Record retention** | 5 years after business relationship ends |
@@ -515,7 +574,9 @@ self_exclusion:
   denmark:
     program_name: "ROFUS"
     url: "https://rofusweb.spillemyndigheden.dk"
-    durations: "24 hours, 1 month, 3 months, 6 months, permanent"
+    # ROFUS registration terms (RG Guidance v1.0 §9.1): 24-hour short break,
+    # 1/3/6-month temporary exclusion, or permanent. No period between 24h and 1 month.
+    durations: "24 hours, 1 month, 3 months, 6 months, or permanent"
     scope: "All Danish-licensed online operators, all land-based casinos, physical betting retailers"
 ```
 
@@ -537,10 +598,12 @@ Complete before launching {{PROGRAM_NAME}} in Denmark.
 - [ ] 18+ age limit displayed in all marketing and on all platforms
 - [ ] ROFUS self-exclusion information in all marketing and on all platforms
 - [ ] StopSpillet helpline (70 22 28 25) displayed on all platforms and in all marketing
+- [ ] StopSpillet self-test link provided on all online platforms (required disclosure)
 - [ ] Treatment centre information provided (multiple centres, not just one)
+- [ ] Mandatory player/RG information presented in Danish and in a prominent place
 - [ ] DGA labelling scheme displayed on platforms
 - [ ] Winning chances presented correctly and in balanced manner
-- [ ] Bonus conditions disclosed alongside all offers
+- [ ] Bonus conditions disclosed alongside all offers (Duty of Disclosure v3.0; Sales Promotion v5.0)
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Denmark values
 
 ### Advertising
@@ -555,6 +618,8 @@ Complete before launching {{PROGRAM_NAME}} in Denmark.
 
 ### Self-exclusion
 - [ ] ROFUS integration implemented -- checks at login and account creation
+- [ ] ROFUS registration terms stated correctly: 24 hours, 1/3/6 months, or permanent (no period between 24h and 1 month)
+- [ ] Account-level cool-off available as an additional operator tool (the 24-hour break is itself a ROFUS option)
 - [ ] ROFUS-registered players' accounts handled correctly (closure for permanent; no access for temporary)
 - [ ] "No thank you to marketing" enforced for all ROFUS-registered players
 - [ ] Deposits refunded for permanently excluded players
@@ -564,20 +629,23 @@ Complete before launching {{PROGRAM_NAME}} in Denmark.
 ### Player protection -- land-based
 *Check only if deploying in land-based venues.*
 - [ ] RG information posted including StopSpillet, ROFUS, treatment centres
+- [ ] Betting-shop deployments: Exec Order 686/2025 player-info, age and ROFUS duties met
 - [ ] DGA labelling scheme displayed
 - [ ] Staff trained on responsible gambling identification and response
 - [ ] Match-fixing prevention training completed (Exec Order 43/2025)
 - [ ] Age verification at entry enforced (18+)
-- [ ] Continuous monitoring procedures in place for extended play sessions
+- [ ] Duty of attention procedures in place (identify signs of harm and intervene)
 
 ### Player protection -- interactive
 *Check only if deploying on interactive/online platforms.*
 - [ ] Mandatory deposit limit implemented (daily, weekly, or monthly -- player must set before play)
+- [ ] Always-on session clock implemented on online casino (visible entire logged-in session; cannot be dismissed)
+- [ ] Self-test access provided (link to StopSpillet self-test)
 - [ ] Time limits offered (activation by player)
 - [ ] Game-type restrictions offered (activation by player)
-- [ ] Cool-off / break periods available
-- [ ] Account statements accessible to players
-- [ ] Behavioural monitoring implemented for abnormal gaming patterns
+- [ ] Account-level cool-off / break periods available (separate from ROFUS)
+- [ ] Statement of account accessible to players (SCP.02)
+- [ ] Duty of attention implemented: identify signs of harm (spend/time/loss-chasing) and intervene
 - [ ] ROFUS check at login and account creation
 - [ ] Single account enforcement
 - [ ] DGA labelling scheme displayed
@@ -598,8 +666,15 @@ Complete before launching {{PROGRAM_NAME}} in Denmark.
 - [ ] `_brand.yml` updated with Denmark values (or `_brand-denmark.yml` merged)
 - [ ] `Last verified` date set
 - [ ] `Next review due` date set (quarterly)
+- [ ] Source verification: marketing-guide PDFs text-verified (Duty of Disclosure v3.0, 15 Jul 2025; Sales Promotion v5.0, 15 Jul 2025); confirm the SCP document links before merge
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
+
+---
+
+## Source verification note
+
+This module's standards-of-practice layer was reconciled against Spillemyndigheden primary sources on 2026-06-08. The governing PDFs were text-verified against their title pages and version histories: the **RG Guidance v1.0 (26 Feb 2026)**, the **operator guidelines v9.0 (Jun 2025)**, the **Duty of Disclosure guide v3.0 (15 Jul 2025)**, and the **Sales Promotion guide v5.0 (15 Jul 2025)**. Verified content includes the ROFUS registration options (RG Guidance §9.1: 24-hour short break, 1/3/6-month temporary exclusion, or permanent; permanent removal no earlier than 1 year + 7 days), the always-on clock, the duty of attention, and the self-test referral. Note: the Duty of Disclosure PDF is *named* `...version 3_1.pdf` but its content reads "Version 3.0 of 15 July 2025" -- the link is kept as-published while the version is cited as v3.0. Confirm the Certification Programme (SCP) document links via the [Spillemyndigheden certification](https://www.spillemyndigheden.dk/en/certification) page before merge. This material is for informational and educational purposes only and does not constitute legal advice; verify all requirements with qualified Danish counsel before deploying {{PROGRAM_NAME}}.
 
 ---
 

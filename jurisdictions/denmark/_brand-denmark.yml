@@ -106,7 +106,7 @@ self_exclusion:
     enrollment_methods:
       - "Online via MitID at rofusweb.spillemyndigheden.dk"
       - "Paper form (9-01) mailed to Spillemyndigheden"
-    reinstatement: "Temporary exclusions expire automatically. Permanent exclusion: removal request possible after 1 year via MitID."
+    reinstatement: "Temporary exclusions expire automatically. Permanent exclusion: removal request possible no earlier than 1 year after registration, confirmed at the earliest 7 days later, so removal completes no earlier than 1 year + 7 days (via MitID)."
     marketing_cessation: "Automatic 'No thank you to marketing' for all registered players"
     operator_obligations:
       - "Check ROFUS at login and account creation"
