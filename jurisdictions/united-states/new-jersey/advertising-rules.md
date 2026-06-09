@@ -25,15 +25,15 @@ adaptation_notes: |
   NJ has a hybrid approach: DGE Advertising Best Practices (2023)
   plus prescriptive internet gaming rules in NJAC 13:69O-1.2.
   On-brand disclosure examples need cultural adaptation for non-US markets.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # New Jersey -- Advertising Rules
 
 > **Operator note**: This is the detailed advertising reference for New Jersey. It covers the DGE Advertising Best Practices (announced by AG Platkin in 2023), the NJAC 13:69O-1.2 internet gaming advertising rules, channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [New Jersey compliance module](README.md) for complete coverage.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -42,7 +42,7 @@ last_updated: 2026-03-22
 | Section | Description |
 |---|---|
 | [New Jersey's advertising framework](#new-jerseys-advertising-framework) | DGE Best Practices + NJAC 13:69O |
-| [AGA Responsible Gaming Code](#aga-responsible-gaming-code) | Industry self-regulatory overlay |
+| [AGA codes & sports-marketing rules](#aga-codes--sports-marketing-rules) | Responsible Marketing Code for Sports Wagering + A4113 |
 | [Internet gaming advertising](#internet-gaming-advertising) | NJAC 13:69O-1.2 requirements |
 | [Channel-by-channel rules](#channel-by-channel-rules) | Print, broadcast, digital, direct, in-venue |
 | [Prohibited content](#prohibited-content) | What you cannot say or show |
@@ -62,7 +62,7 @@ New Jersey's advertising regulation uses a **dual framework**:
 | **DGE Advertising Best Practices** | Published by AG/DGE (2023) | Standard-based minimum requirements | All gambling advertising (casino, online, sports) |
 | **NJAC 13:69O-1.2** | Administrative code | Prescriptive regulatory requirements | Internet gaming and mobile gaming platforms |
 
-The DGE Advertising Best Practices were announced by Attorney General Matthew J. Platkin and DGE Director David Rebuck in 2023 as part of a multi-faceted effort to strengthen responsible gaming protections. They represent "minimum" best practices for all forms of gambling advertising.
+The DGE Advertising Best Practices were announced by Attorney General Matthew J. Platkin and DGE Director David Rebuck in 2023 as part of a multi-faceted effort to strengthen responsible gaming protections. They represent "minimum" best practices for all forms of gambling advertising. The Advertising Best Practices are one of four DGE operator best-practices documents; the broader responsible-gaming obligations (markers-of-harm monitoring, the proposed RG Lead rule, and at-risk-patron marketing suppression) are covered in the [Responsible gaming standards of practice](README.md#responsible-gaming-standards-of-practice) section of the compliance module.
 
 ### Key differences from Nevada
 
@@ -77,9 +77,11 @@ The DGE Advertising Best Practices were announced by Attorney General Matthew J.
 
 ---
 
-## AGA Responsible Gaming Code
+## AGA codes & sports-marketing rules
 
-The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct applies as a voluntary industry overlay. New Jersey operators who are AGA members typically comply with both DGE requirements and AGA principles.
+The **American Gaming Association (AGA)** publishes two relevant instruments that apply as a voluntary industry overlay. New Jersey operators who are AGA members typically comply with both DGE requirements and AGA standards.
+
+### Responsible Gaming Code of Conduct (general overlay)
 
 | AGA Principle | NJ DGE Requirement | Overlap |
 |---|---|---|
@@ -87,6 +89,24 @@ The **American Gaming Association (AGA)** Responsible Gaming Code of Conduct app
 | Truthful advertising | No deceptive/misleading claims | Aligned |
 | Responsible gambling messaging | "Bet With Your Head, Not Over It" + 1-800-GAMBLER | NJ is more specific |
 | Self-exclusion compliance | Exclusion list sharing for marketing opt-out | Aligned |
+
+### Responsible Marketing Code for Sports Wagering (2023 update)
+
+The operative numeric standards for sports-wagering marketing come from the AGA's [Responsible Marketing Code for Sports Wagering](https://www.americangaming.org/wp-content/uploads/2023/03/AGA_RMCSW_2023FINAL-3.28.23.pdf) (2023 update). These are the concrete, widely-followed rules most NJ sportsbooks operate under:
+
+| Standard | Requirement | Themes |
+|---|---|---|
+| **Audience composition** | Place ads only where at least **73.6%** of the audience is reasonably expected to be 21 or older | 6, 7 |
+| **Talent age** | All models, actors, and influencers featured in sports-wagering ads must be **21 or older** (age verified) | 6, 7 |
+| **No "risk-free"** | The term **"risk-free"** is prohibited in sports-wagering advertising | 6 |
+| **College campuses** | **No** sports-wagering marketing on college/university campuses | 6, 7 |
+| **NIL deals** | **No** name-image-likeness (NIL) sponsorship deals with college athletes to promote sports wagering | 6 |
+
+> **Verify before merge**: The AGA Marketing Code PDF was confirmed live; confirm the current edition before sign-off, as the AGA updates the code periodically.
+
+### New Jersey codification -- A4113
+
+New Jersey has also moved one of these restrictions from voluntary code into state law via **A4113** (signed July 8, 2025), which prohibits **public** institutions of higher education (and their athletic departments and booster clubs) from entering sports-wagering **advertising partnerships** with operators. A4113 does **not** address NIL deals with individual college athletes, and it applies only to **public** institutions -- the NIL-with-amateur-athletes prohibition comes from the AGA code alone. Where A4113 and the AGA code overlap (the public-campus advertising-partnership ban), treat the statute as the controlling floor and the AGA code as the operable detail. Source: [CDC Gaming -- New Jersey governor signs prohibition on university sportsbook partnerships](https://cdcgaming.com/brief/new-jersey-governor-signs-prohibition-on-university-sportsbook-partnerships-bill/).
 
 ---
 
@@ -161,6 +181,7 @@ Every gambling advertisement in New Jersey must include:
 |---|---|
 | Opt-out | Patrons must be able to swiftly opt out |
 | Self-excluded | Self-excluded patrons must be removed from marketing; exclusion lists may be shared with third-party marketers solely for opt-out purposes |
+| At-risk patrons | Under the proposed RG Lead rule (NJAC 13:69O-1.2A), patrons identified as at-risk would be shielded from certain marketing and promotions; see the module's [RG standards of practice](README.md#responsible-gaming-standards-of-practice). Status: proposed, not yet adopted |
 
 ### In-venue
 
@@ -182,6 +203,9 @@ Every gambling advertisement in New Jersey must include:
 | **Microscopic helpline** | Cannot use microscopic font for helpline/RG information | DGE Best Practices |
 | **Unfulfilled offers** | Must maintain advertised offers as described | DGE Best Practices |
 | **In-session inducement** | Cannot induce continued wagering during active play, on exit attempt, or on win/loss (online) | NJAC 13:69O-1.2 |
+| **Under-21 talent** | No models, actors, or influencers under 21 in sports-wagering ads (sports wagering) | AGA Responsible Marketing Code |
+| **College-campus marketing** | No sports-wagering marketing on college/university campuses (sports wagering) | AGA Responsible Marketing Code / A4113 |
+| **College-athlete NIL deals** | No NIL sponsorship deals with college athletes to promote sports wagering (sports wagering) | AGA Responsible Marketing Code |
 
 ---
 

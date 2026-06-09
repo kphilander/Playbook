@@ -29,15 +29,15 @@ adaptation_notes: |
   national. NJ has all three verticals: land-based casino, online casino/
   iGaming, and sports betting. Self-exclusion is statewide covering all
   verticals. AGA code references are US-specific.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # New Jersey — Compliance Module
 
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in New Jersey. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. New Jersey uses a hybrid approach: prescriptive rules for internet gaming (NJAC 13:69O) including a verbatim helpline message, and obligation-based requirements for much of land-based operations. NJ has a statewide self-exclusion program covering all casinos, racetracks, and internet gaming platforms.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -47,12 +47,14 @@ last_updated: 2026-03-22
 |---|---|
 | [Regulatory authority](#regulatory-authority) | DGE + CCC two-body structure |
 | [Legal requirements](#legal-requirements) | 21+, permitted products, licensing |
+| [Game information & odds disclosure](#game-information--odds-disclosure) | Payout %, RTP, optimal-strategy (NJAC 13:69D / 13:69F) and skill-game signage (NJAC 13:69E-1.28Y) |
 | [Helpline](#helpline) | 1-800-GAMBLER (CCGNJ) + NCPG national |
 | [Messaging requirements](#messaging-requirements) | Verbatim online message + obligation-based land-based |
 | [Advertising restrictions](#advertising-restrictions) | DGE Advertising Best Practices |
 | [Self-exclusion](#self-exclusion) | Statewide program (NJAC 13:69G) — 1/5 year/lifetime |
 | [Player protection -- land-based](#player-protection--land-based) | Venue-specific requirements |
-| [Player protection -- interactive](#player-protection--interactive) | NJAC 13:69O deposit/spend/time limits |
+| [Player protection -- interactive](#player-protection--interactive) | NJAC 13:69O-1.4 deposit/spend/time limits; 13:69O-1.2 session controls |
+| [Responsible gaming standards of practice](#responsible-gaming-standards-of-practice) | DGE RG Best Practices, markers-of-harm monitoring, proposed RG Lead rule |
 | [Age verification](#age-verification) | 21+ requirements |
 | [AML/KYC](#amlkyc) | FinCEN/BSA requirements |
 | [Collateral adaptation](#collateral-adaptation) | Quick reference for all touchpoints |
@@ -103,10 +105,19 @@ New Jersey's regulatory framework uses a **two-body system** that separates inve
 | Document | URL | Relevance |
 |---|---|---|
 | Casino Control Act | [nj.gov/casinos/law/act/](https://www.nj.gov/casinos/law/act/) | Governs all casino gambling in NJ |
+| NJAC 13:69D (Accounting Controls and Standards) | [law.cornell.edu -- 13:69D-1.1](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69D-1-1) | Minimum payout %, theoretical RTP, optimal-strategy disclosure |
+| NJAC 13:69E-1.28Y (Skill-based games) | [law.cornell.edu -- 13:69E-1.28Y](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69E-1-28Y) | Skill-based-game signage at (c) (Division-approved logo: skill-based, not a slot machine, no minimum RTP, payouts by skill) |
+| NJAC 13:69F (Rules of the Games) | [nj.gov -- Chapter 69F](https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69F.pdf) | Rules-of-play basis for each authorized game |
 | NJAC 13:69G (Self-Exclusion) | [nj.gov -- Chapter 69G](https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69G.pdf) | Self-exclusion program rules |
 | NJAC 13:69N (Sports Wagering) | [nj.gov -- Chapter 69N](https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69N.pdf) | Sports pool and online sports pool operations |
-| NJAC 13:69O (Internet Gaming) | [law.cornell.edu -- 13:69O-1.2](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69O-1-2) | Internet and mobile gaming requirements |
+| NJAC 13:69O-1.2 (Internet Gaming -- general reqs) | [law.cornell.edu -- 13:69O-1.2](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69O-1-2) | Verbatim login/logout message, session clock, previous-login, timeout, no-inducement, RG page/logos |
+| NJAC 13:69O-1.4 (Internet Gaming -- system standards/operational controls) | [law.cornell.edu -- 13:69O-1.4](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69O-1-4) | Deposit/spend/time limits, 72-hour suspension, $2,500 threshold + annual re-acknowledgment |
+| DGE Responsible Gaming (operator guidance hub) | [njoag.gov -- Responsible Gaming](https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/responsible-gaming-main/) | Lists the four DGE operator best-practices docs (KYC, Responsible Gaming, MFA, Advertising) + NJ support resources |
 | DGE Advertising Best Practices | [nj.gov -- Advertising Best Practices](https://www.nj.gov/oag/ge/docs/BestPractices/AdvertisingBestPractices.pdf) | Advertising standards for operators |
+| DGE markers-of-harm / RG monitoring program | [njoag.gov -- AG Platkin RG efforts](https://www.njoag.gov/ag-platkin-announces-new-multi-faceted-efforts-to-curb-problem-gambling/) | Three-tier intervention program for at-risk online patrons |
+| AGA Responsible Marketing Code for Sports Wagering (2023) | [americangaming.org -- Marketing Code PDF](https://www.americangaming.org/wp-content/uploads/2023/03/AGA_RMCSW_2023FINAL-3.28.23.pdf) | 21+ audience/talent standards, no "risk-free", college-campus/NIL bans |
+
+> **Verify before merge**: The DGE chapter PDFs (69D, 69G, 69N, 69O) and the DGE best-practices PDFs are published live on nj.gov but several are scanned/not machine-readable. The Cornell LII pages are the machine-readable mirror for the NJAC chapters; confirm the controlling text against the official PDF before sign-off.
 
 ---
 
@@ -153,6 +164,28 @@ New Jersey's regulatory framework uses a **two-body system** that separates inve
 
 ---
 
+## Game information & odds disclosure
+
+New Jersey's odds-and-payout transparency requirements live in the accounting-controls and rules-of-the-games chapters, not the internet-gaming chapter. These rules give Playbook's Theme 1 (game information and odds disclosure) a concrete regulatory basis.
+
+| Requirement | Details | Source |
+|---|---|---|
+| Minimum payout percentage | Slot machines must achieve a minimum theoretical payout to the public; the controlling figure is set in the accounting controls chapter and approved per game | NJAC 13:69D |
+| Theoretical return-to-player (RTP) | Theoretical payout/hold is defined and must be calculated and reported for each approved slot game | NJAC 13:69D-1.1 |
+| Optimal-strategy disclosure | For strategy-based games (for example, video poker), the theoretical payout is stated assuming optimal player strategy | NJAC 13:69D |
+| Skill-based-game signage | A skill-based game must carry a Division-approved logo stating that the game is skill-based, is not a slot machine, and offers no minimum return-to-player, with patron-facing text that payouts are directly determined by the player's level of skill | NJAC 13:69E-1.28Y(c) |
+| Rules of the games | The rules of play, wagers, and payout odds for each authorized game are prescribed by regulation and must be made available to patrons | NJAC 13:69F |
+
+> **Verify before merge**: The exact minimum-payout figure and the optimal-strategy/skill-game signage wording should be confirmed against the controlling text of NJAC 13:69D and 13:69E-1.28Y before sign-off (the nj.gov chapter PDFs are scanned; Cornell LII is the machine-readable mirror — [verify 13:69E-1.28Y in browser](https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69E-1-28Y)).
+
+### Playbook angle -- Theme 1
+
+This is core "no fine print" territory. Where the operator publishes RTP, payout, or rules-of-play information, Playbook content can frame it plainly:
+
+> Every game here lists its return-to-player. Slots, video poker, the lot. Know the number before you play -- that is the whole point.
+
+---
+
 ## Helpline
 
 ### Council on Compulsive Gambling of New Jersey (CCGNJ)
@@ -164,8 +197,8 @@ New Jersey has its own state-specific gambling helpline operated by the **Counci
 | **Primary number** | 1-800-GAMBLER (1-800-426-2537) |
 | **Organization** | Council on Compulsive Gambling of New Jersey, Inc. |
 | **Website** | [800gambler.org](https://800gambler.org) |
-| **Office hours** | Monday--Friday, 9am--5pm |
-| **Office address** | 100 Mulberry St, Newark, NJ 07102 |
+| **Office hours** | Monday--Friday, 8am--5pm (helpline 24/7) |
+| **Office address** | 3635 Quakerbridge Rd, Suite 7, Hamilton, NJ 08619 (office phone 609-588-5515) |
 | **Cost** | Free |
 | **Social media** | Twitter: @ccgofnj; Instagram: @800gambler |
 
@@ -220,7 +253,7 @@ New Jersey has **two distinct messaging regimes** -- a prescriptive verbatim req
 |---|---|---|
 | **Internet gaming login/logout** | **Verbatim message prescribed** -- must be prominently displayed on login screen and transmitted on logout | NJAC 13:69O-1.2 |
 | **Advertising** | Standard-based -- "Bet With Your Head, Not Over It" or comparable language + 1-800-GAMBLER | DGE Advertising Best Practices |
-| **General casino signage** | Obligation-based -- responsible gambling information and helpline must be displayed, but no prescribed phrasing | DGE Guidance / Casino Control Act |
+| **General casino signage** | Obligation-based -- responsible gambling information and helpline must be displayed, but no prescribed phrasing | Casino Control Act / DGE Responsible Gaming Best Practices |
 
 ### Verbatim required statement (NJAC 13:69O-1.2)
 
@@ -376,10 +409,10 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Problem gambling information posting | Yes | Responsible gambling signage at casino entrances, near ATMs, cashier cages, sportsbook lounges | DGE Guidance / Casino Control Act |
-| Helpline display | Yes | 1-800-GAMBLER and "Bet With Your Head, Not Over It" on signage | DGE Best Practices |
+| Problem gambling information posting | Yes | Responsible gambling signage at casino entrances, near ATMs, cashier cages, sportsbook lounges | Casino Control Act / DGE Responsible Gaming Best Practices |
+| Helpline display | Yes | 1-800-GAMBLER and "Bet With Your Head, Not Over It" on signage | DGE Advertising Best Practices |
 | Self-exclusion program | Yes | Statewide VSE covering all casinos and racetracks | NJAC 13:69G-2 |
-| Employee training | Yes | Training on recognizing problem gambling and referral procedures | DGE Guidance |
+| Employee training | Yes | Training to recognize symptoms of disordered/problem gambling, respond to patron disclosures, and respond to third-party reports; CCGNJ-standard training deemed sufficient | NJAC 13:69O (internet) / DGE Responsible Gaming Best Practices |
 | Self-exclusion information | Yes | Must be made available to patrons who request it | NJAC 13:69G |
 
 ### {{PROGRAM_NAME}} tool messaging -- land-based
@@ -394,15 +427,18 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 ## Player protection -- interactive
 
-### Required tools and obligations (NJAC 13:69O-1.2)
+### Required tools and obligations (NJAC 13:69O-1.2 and 13:69O-1.4)
+
+> **Citation note**: New Jersey splits these requirements across two subchapters. The patron self-limitation controls -- deposit/spend/time limits, the 72-hour suspension, and the $2,500 lifetime-deposit threshold -- live in **NJAC 13:69O-1.4** (system standards / operational controls). The session-display, previous-login, inactivity-timeout, verbatim login/logout message, player-protection page, no-inducement, and geolocation requirements live in **NJAC 13:69O-1.2**. The Source column below pins each row to its controlling subchapter.
 
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
-| Deposit limits | Yes | Daily, weekly, and monthly deposit limits | NJAC 13:69O-1.2 |
-| Spend/loss limits | Yes | Daily, weekly, and monthly spend limits (max patron deposits put at risk) | NJAC 13:69O-1.2 |
-| Time-based limits | Yes | Daily time limit (measured hourly from login to logoff); player permitted to complete current round/tournament if limit reached | NJAC 13:69O-1.2 |
-| Account suspension | Yes | Minimum 72-hour account suspension option | NJAC 13:69O-1.2 |
-| $2,500 deposit threshold | Yes | When lifetime deposits exceed $2,500, system must halt wagering until patron acknowledges threshold and is informed about responsible gaming limits/account closure | NJAC 13:69O-1.2 |
+| Deposit limits | Yes | Daily, weekly, and monthly deposit limits; a decrease takes effect at next login, an increase only after the prior limit period expires | NJAC 13:69O-1.4 |
+| Spend/loss limits | Yes | Daily, weekly, and monthly spend limits (max patron deposits put at risk) | NJAC 13:69O-1.4 |
+| Time-based limits | Yes | Daily time limit (measured hourly from login to logoff); player permitted to complete current round/tournament if limit reached | NJAC 13:69O-1.4 |
+| Account suspension | Yes | Minimum 72-hour account suspension option | NJAC 13:69O-1.4 |
+| $2,500 deposit threshold | Yes | When lifetime deposits exceed $2,500, system must halt wagering until patron acknowledges the threshold and is informed about responsible gaming limits/account closure | NJAC 13:69O-1.4 |
+| $2,500 threshold -- annual re-acknowledgment | Yes | After the initial acknowledgment, the patron must re-acknowledge the $2,500 lifetime-deposit threshold at least once every 12 months | NJAC 13:69O-1.4 |
 | Session time display | Yes | System must continuously display current server time and session duration, or provide pop-up notifications at least every 30 minutes | NJAC 13:69O-1.2 |
 | Previous login display | Yes | System must display the date and time of the patron's previous login | NJAC 13:69O-1.2 |
 | Inactivity timeout | Yes | After 15 minutes of inactivity, patrons must re-enter credentials | NJAC 13:69O-1.2 |
@@ -420,11 +456,78 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
-| Deposit limits | "Set your deposit limit -- daily, weekly, or monthly. Play on your terms. Takes 10 seconds." | NJAC 13:69O-1.2 |
-| Spend/loss limits | "Set a spend limit -- no surprises at the end of a session." | NJAC 13:69O-1.2 |
-| Session time limits | "Set a session reminder -- your dashboard, your rules." | NJAC 13:69O-1.2 |
-| $2,500 threshold | "You've hit the $2,500 deposit milestone. Want to set a deposit limit or review your play history? Your call." | NJAC 13:69O-1.2 |
-| Account suspension | "Need a break? Pause your account for at least 72 hours -- no questions asked." | NJAC 13:69O-1.2 |
+| Deposit limits | "Set your deposit limit -- daily, weekly, or monthly. Play on your terms. Takes 10 seconds." | NJAC 13:69O-1.4 |
+| Spend/loss limits | "Set a spend limit -- no surprises at the end of a session." | NJAC 13:69O-1.4 |
+| Session time limits | "Set a session reminder -- your dashboard, your rules." | NJAC 13:69O-1.4 |
+| $2,500 threshold | "You've hit the $2,500 deposit milestone. Want to set a deposit limit or review your play history? Your call." | NJAC 13:69O-1.4 |
+| Account suspension | "Need a break? Pause your account for at least 72 hours -- no questions asked." | NJAC 13:69O-1.4 |
+
+---
+
+## Responsible gaming standards of practice
+
+Beyond the prescriptive internet-gaming code, New Jersey's DGE publishes operator guidance and runs monitoring programs that function as enforceable standards of practice. These bear directly on Theme 2 (RG messaging), Theme 3 (helpline and crisis support), Theme 5 (limit-setting and player controls), and Theme 9 (staff training and customer interaction).
+
+### DGE operator best-practices documents
+
+The DGE [Responsible Gaming](https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/responsible-gaming-main/) hub publishes **four** operator best-practices documents. Operators are expected to follow all four:
+
+| Document | Primary themes | Relevance to {{PROGRAM_NAME}} |
+|---|---|---|
+| **Responsible Gaming Best Practices** | 2, 3, 5, 9 | Direct standard of practice for RG messaging, helpline placement, limit-setting prompts, and patron interaction. The module's messaging and player-protection sections should be reconciled against this document. |
+| **Advertising Best Practices** | 6 | Covered in detail in [advertising-rules.md](advertising-rules.md) and the [Advertising restrictions](#advertising-restrictions) section. |
+| **Know Your Customer (KYC) Best Practices** | 7, 9 | Identity and age verification; overlaps the [Age verification](#age-verification) section (NJAC 13:69O-1.3). |
+| **Multi-Factor Authentication Best Practices** | (technical) | Account-security guidance; largely outside Playbook's comms scope. |
+
+> **Verify before merge**: The DGE best-practices PDFs are published live but several are scanned/not machine-readable. Confirm the current text of the Responsible Gaming Best Practices document with the DGE before sign-off.
+
+### Markers-of-harm monitoring (three-tier intervention)
+
+As part of AG Platkin's [multi-faceted responsible-gaming efforts](https://www.njoag.gov/ag-platkin-announces-new-multi-faceted-efforts-to-curb-problem-gambling/) (2023), the DGE requires online operators to use technology and behavioral data to identify patrons showing markers of harm (for example, escalating weekly play time, or wagering an account down to under $1.00), and to intervene on a **three-level** scale:
+
+| Level | Trigger | Required intervention |
+|---|---|---|
+| **Level 1** | Early markers of harm | Automated outreach with responsible-gaming resources |
+| **Level 2** | Continued/escalating markers | Patron must view a responsible-gaming video tutorial before continued play |
+| **Level 3** | Persistent markers | Direct contact by the operator's responsible-gaming team |
+
+For {{PROGRAM_NAME}}, the Level 1 and Level 2 touchpoints are content surfaces: the resource outreach and the tutorial should use the support voice (Tier 2) -- warm, direct, no humor -- and route to 1-800-GAMBLER and the player's limit-setting tools.
+
+### Responsible Gaming Lead -- proposed rule (NJAC 13:69O-1.2A)
+
+A proposed rule would add a designated Responsible Gaming Lead requirement for online operators. **Status: proposed, not yet adopted** (PRN 2025-130; the comment period closed November 14, 2025). Track for adoption at the next quarterly review.
+
+As proposed, the rule would require each internet-gaming operator to:
+
+- Designate one or more **Responsible Gaming Leads**
+- Maintain a list of **at-risk patrons**
+- Ensure at-risk patrons receive responsible-gaming information and resources, and are **shielded from certain marketing and promotions**
+- Apply due-diligence review with **180-day** removal criteria for the at-risk list
+
+Primary source: [NJ Register PAW, PRN 2025-130](https://www.njoag.gov/wp-content/uploads/2025/09/57-N.J.R.-2230a.pdf). This proposal materially affects Themes 2, 6, and 9 and should be folded into the marketing-suppression and staff-interaction workflows once adopted.
+
+### Staff training -- regulatory basis (Theme 9)
+
+Patron-facing internet-gaming staff training has a regulatory basis in NJAC 13:69O, not merely informal DGE guidance. Operators must train relevant staff to:
+
+- **Recognize the symptoms** of disordered or problem gambling
+- **Respond to patron disclosures** about their own or another person's gambling
+- **Respond to third-party reports** of a patron experiencing gambling harm
+
+Training that meets the **CCGNJ standard** is deemed sufficient. See the [Player protection -- land-based](#player-protection--land-based) employee-training row and the DGE Responsible Gaming Best Practices document for the corresponding land-based expectations.
+
+> **Verify before merge**: The exact enumerated training competencies should be confirmed against the controlling text of NJAC 13:69O (the nj.gov Chapter 69O PDF is scanned; Cornell LII is the machine-readable mirror).
+
+### NJ-specific support resources (Theme 3)
+
+In addition to the helpline, New Jersey players have access to NJ-specific support resources that the DGE Responsible Gaming hub lists alongside 1-800-GAMBLER:
+
+| Resource | What it offers |
+|---|---|
+| **GamFin** | Free financial counseling for people affected by gambling harm |
+| **Rutgers Center for Gambling Studies** | NJ responsible-gaming research and annual reports |
+
+These are referral resources for Theme 3 collateral; they supplement, and do not replace, the verbatim 1-800-GAMBLER helpline.
 
 ---
 
@@ -524,7 +627,7 @@ helplines:
       number_numeric: "1-800-426-2537"
       website: "800gambler.org"
       label: "Council on Compulsive Gambling of New Jersey"
-      hours: "Mon-Fri 9am-5pm (office); 24/7 via NCPG national"
+      hours: "Mon-Fri 8am-5pm (office); helpline 24/7"
       state_resource: "Council on Compulsive Gambling of New Jersey (CCGNJ)"
       state_website: "800gambler.org"
       notes: "NJ-specific helpline operated by CCGNJ. NCPG national resources (1-800-MY-RESET, text 800GAM, ncpgambling.org/chat) also available 24/7."
@@ -602,6 +705,7 @@ Complete before launching {{PROGRAM_NAME}} in New Jersey.
 - [ ] Time-based limits (daily) implemented
 - [ ] 72-hour minimum account suspension available
 - [ ] $2,500 lifetime deposit threshold acknowledgment active
+- [ ] $2,500 threshold re-acknowledgment prompted at least every 12 months
 - [ ] Session duration continuously displayed or 30-minute pop-ups active
 - [ ] Previous login date/time displayed
 - [ ] 15-minute inactivity timeout enforced
@@ -610,6 +714,17 @@ Complete before launching {{PROGRAM_NAME}} in New Jersey.
 - [ ] No inducement to continue wagering (in-session, on exit, on win/loss)
 - [ ] Single account per patron enforced
 - [ ] Geolocation confirming NJ location
+
+### Responsible gaming standards of practice
+- [ ] Reconciled messaging and player controls against the DGE Responsible Gaming Best Practices document
+- [ ] Markers-of-harm monitoring with three-tier intervention (resource outreach -> tutorial -> direct contact) in place for online play
+- [ ] Tracked the proposed RG Lead rule (NJAC 13:69O-1.2A) for adoption
+- [ ] Staff trained to recognize symptoms, respond to disclosures, and respond to third-party reports (CCGNJ standard)
+- [ ] NJ-specific support resources (GamFin, Rutgers Center for Gambling Studies) referenced in Theme 3 collateral
+
+### Game information & odds disclosure
+- [ ] Where the operator publishes payout %, RTP, or rules of play, the figures are surfaced plainly (NJAC 13:69D / 13:69F)
+- [ ] Skill-based games carry required skill/no-minimum-RTP signage (NJAC 13:69E-1.28Y(c))
 
 ### Age verification
 - [ ] Land-based: age verification at casino entrance / gaming areas
