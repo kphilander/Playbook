@@ -29,15 +29,15 @@ adaptation_notes: |
   (1-800-589-9966) separate from the NCPG national number. Self-exclusion
   is statewide (Time Out Ohio) covering casinos, racinos, and sports gaming.
   No online casino. AGA code references are US-specific.
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # Ohio — Compliance Module
 
-> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ohio. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Ohio uses a prescriptive model requiring commission-approved compulsive and problem gambling plans (OAC 3772-12-06). Sports gaming advertising has detailed content requirements (OAC 3775-16-08). Ohio operates a statewide voluntary exclusion program — Time Out Ohio — covering all casinos, racinos, and sports gaming.
+> **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ohio. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Ohio uses a prescriptive model requiring commission-approved disordered and problem gambling plans (OAC 3772-12-06). Sports gaming advertising has detailed content requirements (OAC 3775-16-08) and prescriptive promotions/bonus requirements (OAC 3775-16-09). Ohio operates a statewide voluntary exclusion program — Time Out Ohio — covering all casinos, racinos, and sports gaming.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -50,6 +50,7 @@ last_updated: 2026-03-22
 | [Helpline](#helpline) | Ohio Problem Gambling Helpline, display rules |
 | [Messaging requirements](#messaging-requirements) | Problem gambling plan messaging + sports ad requirements |
 | [Advertising restrictions](#advertising-restrictions) | Prescriptive sports gaming ad rules (OAC 3775-16-08) |
+| [Promotions and bonuses](#promotions-and-bonuses) | Promo/bonus T&C standard (OAC 3775-16-09) |
 | [Self-exclusion](#self-exclusion) | Time Out Ohio — statewide program |
 | [Player protection tools](#player-protection-tools) | Land-based vs. sports gaming |
 | [Age verification](#age-verification) | 21+ requirements |
@@ -80,7 +81,7 @@ The OCCC is responsible for the licensing, regulation, investigation, and oversi
 | **Casino gaming** | Licensing and oversight of 4 commercial casinos and 7 racinos (VLT facilities) |
 | **Sports gaming** | Licensing of all sports gaming proprietors (online and retail) since January 2023 |
 | **Employee licensing** | Casino gaming employee licenses required for all gaming staff (ORC 3772.131) |
-| **Problem gambling oversight** | Approval and monitoring of compulsive and problem gambling plans (OAC 3772-12-06) |
+| **Problem gambling oversight** | Approval and monitoring of disordered and problem gambling plans (OAC 3772-12-06) |
 | **Voluntary exclusion** | Joint administration of Time Out Ohio with the Ohio Lottery Commission |
 
 ### Multi-agency landscape
@@ -92,17 +93,24 @@ Ohio's gambling ecosystem involves multiple agencies:
 | **OCCC** | Regulates casinos and sports gaming | Primary regulator — all compliance flows through OCCC |
 | **Ohio Lottery Commission** | Regulates racinos (VLTs) and lottery | Co-administers Time Out Ohio; racino signage requirements |
 | **Ohio State Racing Commission** | Regulates horse racing | Limited relevance — pari-mutuel only |
-| **Ohio Department of Mental Health and Addiction Services (OhioMHAS)** | Funds problem gambling treatment | State-level resource; funds helpline and treatment programs |
-| **Ohio For Responsible Gambling (ORG)** | Coalition of OCCC, OLC, OSRC, and OhioMHAS | Responsible gambling awareness campaigns |
+| **Ohio Department of Mental Health and Addiction Services (OhioMHAS)** | Funds problem gambling treatment | State-level resource; funds helpline and treatment programs; runs the "Change the Game Ohio" youth/parent prevention sub-campaign |
+| **Ohio For Responsible Gambling (ORG)** | Coalition of OCCC, OLC, OSRC, and OhioMHAS | Responsible gambling awareness campaigns; runs the current statewide "Pause Before You Play" campaign ([pausebeforeyouplay.org](https://pausebeforeyouplay.org/)) |
 
 ### Primary sources
+
+Citations use the OCCC/state canonical domain `codes.ohio.gov`. A verified [Cornell LII](https://www.law.cornell.edu/regulations/ohio) mirror is given alongside each Ohio Administrative Code rule as a fetch-confirmed backup.
 
 | Document | URL | Relevance |
 |---|---|---|
 | ORC Chapter 3772 | [codes.ohio.gov/ohio-revised-code/chapter-3772](https://codes.ohio.gov/ohio-revised-code/chapter-3772) | Casino Control Law — governs all casino gaming in Ohio |
 | ORC Chapter 3775 | [codes.ohio.gov/ohio-revised-code/chapter-3775](https://codes.ohio.gov/ohio-revised-code/chapter-3775) | Sports Gaming Act — governs all sports betting in Ohio |
-| OAC 3772-12 | [codes.ohio.gov/ohio-administrative-code/chapter-3772-12](https://codes.ohio.gov/ohio-administrative-code/chapter-3772-12) | Voluntary Exclusion and Compulsive and Problem Gambling Plan Compliance Procedures |
-| OAC 3775-16 | [codes.ohio.gov/ohio-administrative-code/chapter-3775-16](https://codes.ohio.gov/ohio-administrative-code/chapter-3775-16) | General Sports Gaming Proprietor Duties — advertising, accounts, responsible gaming |
+| OAC 3772-12 | [codes.ohio.gov/ohio-administrative-code/chapter-3772-12](https://codes.ohio.gov/ohio-administrative-code/chapter-3772-12) · [LII mirror](https://www.law.cornell.edu/regulations/ohio/title-3772/chapter-3772-12) | Voluntary Exclusion Program and Disordered and Problem Gambling Plan procedures |
+| OAC 3772-12-06 | [codes.ohio.gov/ohio-administrative-code/rule-3772-12-06](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-06) · [LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-06) | Disordered and problem gambling plan — patron/employee education, signage, training, underage prevention, reporting |
+| OAC 3775-16 | [codes.ohio.gov/ohio-administrative-code/chapter-3775-16](https://codes.ohio.gov/ohio-administrative-code/chapter-3775-16) · [LII mirror](https://www.law.cornell.edu/regulations/ohio/title-3775/chapter-3775-16) | General Sports Gaming Proprietor Duties — advertising, accounts, promotions, responsible gaming |
+| OAC 3775-16-03 | [codes.ohio.gov/ohio-administrative-code/rule-3775-16-03](https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-03) · [LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3775-16-03) | Sports gaming accounts — limits, closure, RG notice, identity verification |
+| OAC 3775-16-08 | [codes.ohio.gov/ohio-administrative-code/rule-3775-16-08](https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-08) · [LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3775-16-08) | Sports gaming advertising — disclosures, prohibited content, under-21 depiction ban, cease-dissemination duty |
+| OAC 3775-16-09 | [codes.ohio.gov/ohio-administrative-code/rule-3775-16-09](https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-09) · [LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3775-16-09) | Promotions and bonuses — clear/unambiguous T&Cs, active/expiry disclosure, anti-targeting |
+| Ohio for Responsible Gambling — Pause Before You Play | [pausebeforeyouplay.org](https://pausebeforeyouplay.org/) | Current statewide RG campaign and standard-of-practice messaging (replaced "Get Set Before You Bet") |
 | AGA Ohio Fact Sheet (2025) | [americangaming.org](https://www.americangaming.org/wp-content/uploads/2025/02/Ohio_AGA-Gaming-Regulatory-Fact-Sheet-2025.pdf) | Industry overview and regulatory summary |
 
 ---
@@ -143,7 +151,7 @@ Ohio uses a **constitutionally authorized licensing system**:
 
 | License type | Description |
 |---|---|
-| **Casino operator** | Authorized by constitutional amendment (Article XV, Section 6a); limited to 4 locations |
+| **Casino operator** | Authorized by constitutional amendment ([Ohio Constitution Article XV, Section 6(C)](https://codes.ohio.gov/ohio-constitution/section-15.6)); limited to 4 locations |
 | **Management company** | Companies managing casino operations |
 | **Key employee** | Senior management and executives |
 | **Casino gaming employee** | All staff directly involved in gaming operations; 21+ age requirement; 3-year license term (ORC 3772.131) |
@@ -174,7 +182,7 @@ Ohio operates its own state problem gambling helpline, separate from the NCPG na
 | **Problem Gambling Network of Ohio (PGNO)** | [pgnohio.org](https://www.pgnohio.org/) | Statewide advocacy, training, and professional development |
 | **Ohio Gambling Telehealth Network (OGTN)** | [ohiogtn.org](https://www.ohiogtn.org/) | Free/low-cost telehealth counseling for problem gambling |
 | **Time Out Ohio** | [timeoutohio.com](https://timeoutohio.com/) | Statewide voluntary exclusion program |
-| **Ohio For Responsible Gambling (ORG)** | -- | Multi-agency responsible gambling coalition |
+| **Ohio For Responsible Gambling (ORG)** | [pausebeforeyouplay.org](https://pausebeforeyouplay.org/) | Multi-agency RG coalition; runs the current "Pause Before You Play" campaign and Rate Your Risk self-assessment |
 | **NCPG national helpline** | 1-800-GAMBLER / 1-800-MY-RESET | Also accepted; national network |
 
 ### Display rules
@@ -226,6 +234,20 @@ Ohio uses a combination of obligation-based requirements for casino signage and 
 | Casino problem gambling plan | Standard-based | Must include advertising/outreach to educate public about disordered gambling | OAC 3772-12-06 |
 | Sports gaming ads | Standard-based | Problem gambling prevention messages + helpline/NCPG number | OAC 3775-16-08 |
 | Sports account closure | Standard-based | Notify patron of responsible gaming resources including helpline upon account closure | OAC 3775-16-03 |
+
+### State-aligned standard of practice — Pause Before You Play
+
+Beyond the regulations, Ohio operators are expected to harmonize with the state's active responsible gambling campaign. **Ohio for Responsible Gambling (ORG)** — the coalition of OCCC, the Ohio Lottery Commission, the Ohio State Racing Commission, and OhioMHAS — runs **"Pause Before You Play"** ([pausebeforeyouplay.org](https://pausebeforeyouplay.org/)), the current statewide RG campaign that **replaced the former "Get Set Before You Bet."** It is the de facto state-aligned RG voice and a useful soft-law anchor for {{PROGRAM_NAME}} messaging.
+
+| Element | Detail |
+|---|---|
+| **Campaign** | Pause Before You Play (ORG) |
+| **Core message** | "Sports are fast. Betting shouldn't be." — set limits, know the risks, and pause before you play |
+| **Self-assessment** | Rate Your Risk |
+| **Helpline alignment** | 1-800-589-9966 · Text 4hope to 741741 · 988 Suicide & Crisis Lifeline |
+| **Youth/parent prevention** | OhioMHAS "Change the Game Ohio" sub-campaign |
+
+The {{PROGRAM_NAME}} voice complements (rather than copies) this campaign: it shares the "know the risks, set your limits" frame while keeping the confident, peer Tier 1 tone. Do not echo the retired "Get Set Before You Bet" branding.
 
 ### Verbatim required statements
 
@@ -300,6 +322,17 @@ Advertisements must NOT:
 | Target other vulnerable individuals | OAC 3775-16-08 |
 | Promote irresponsible or excessive participation in sports gaming | OAC 3775-16-08 |
 | Suggest that social, financial, or personal success is guaranteed by engaging in sports gaming | OAC 3775-16-08 |
+| Depict any individual under the age of 21 — except live footage or images of athletes in eligible sporting events | OAC 3775-16-08 |
+| Contain false, deceptive, or misleading information | OAC 3775-16-08 |
+
+### Affirmative compliance duties
+
+Beyond content rules, OAC 3775-16-08 imposes ongoing obligations on the proprietor:
+
+| Duty | Detail | Source |
+|---|---|---|
+| **Cease dissemination** | Stop disseminating any advertisement upon discovering it is non-compliant, or when directed to do so by the executive director | OAC 3775-16-08 |
+| **Approved helpline** | The required helpline may be the NCPG national helpline, Ohio's problem gambling helpline, or another free helpline approved by the executive director | OAC 3775-16-08 |
 
 ### Direct advertising requirements
 
@@ -311,12 +344,46 @@ Advertisements must NOT:
 
 ### Casino advertising
 
-Casino advertising is governed through the operator's compulsive and problem gambling plan (OAC 3772-12-06), which must include:
+Casino advertising is governed through the operator's disordered and problem gambling plan (OAC 3772-12-06), which must include:
 - Procedures for advertising and marketing related to loyalty and rewards programs
 - Advertising and outreach to educate the general public about disordered and problem gambling
 - Plans approved by the OCCC before implementation
 
 For a detailed advertising reference, see [advertising-rules.md](advertising-rules.md).
+
+---
+
+## Promotions and bonuses
+
+### OAC 3775-16-09 — Promotions and bonuses (sports gaming)
+
+Ohio regulates promotional and bonus offers as a distinct content surface from general advertising. Because odds boosts, sign-up offers, deposit matches, and similar promotions are core {{PROGRAM_NAME}} content, this rule governs a high-frequency touchpoint.
+
+| Requirement | Details | Source |
+|---|---|---|
+| **Clear and unambiguous** | The rules of any promotion or bonus must be stated clearly and unambiguously | OAC 3775-16-09 |
+| **T&Cs standard** | Terms and conditions must be full, accurate, concise, transparent, and not misleading | OAC 3775-16-09 |
+| **Active/expiry disclosure** | Disclose the date and time the promotion becomes active and the date and time it expires | OAC 3775-16-09 |
+| **No prohibited targeting** | Promotions must not target individuals under 21, ineligible persons, problem gamblers, or other vulnerable individuals | OAC 3775-16-09 |
+| **Transaction-linked promos** | Promotions tied to non-gaming transactions may be offered only to persons verified as 21+ and not on the Ohio voluntary exclusion (Time Out Ohio) list | OAC 3775-16-09 |
+
+### On-brand promotions integration
+
+Ohio's Pillar 1 ("Open / no fine print") alignment is strongest here: the rule's "full, accurate, concise, transparent, and not misleading" T&C standard is the regulatory expression of the {{PROGRAM_NAME}} promise.
+
+**Generic operator approach:**
+> "Bet $5, get $200 in bonus bets! Terms apply."
+
+**{{PROGRAM_NAME}} on-brand approach:**
+> **$200 in bonus bets when you bet $5.** Here's the deal, in plain terms: bonus bets are non-withdrawable, must be used within 7 days, and this offer runs from 12:00 PM ET Oct 1 to 11:59 PM ET Oct 7. Must be 21+ and not on Time Out Ohio. [Full terms].
+
+**Rules for on-brand promotions:**
+1. State the promotion rules clearly and unambiguously — no buried conditions
+2. Always disclose when the promotion starts and when it expires
+3. Never target under-21, ineligible, problem-gambling, or vulnerable audiences
+4. For transaction-linked offers, confirm 21+ and not-on-VEP eligibility before extending the offer
+
+For the {{PROGRAM_NAME}} content compliance matrix covering promotional CTAs and social cards, see [advertising-rules.md](advertising-rules.md).
 
 ---
 
@@ -335,8 +402,21 @@ Ohio operates a **unified statewide voluntary exclusion program** covering all f
 | **Scope** | All 4 casinos, 7 racinos, and all sports gaming (online and retail) |
 | **Enrollment methods** | Online (TimeOutOhio.com, 24/7); email (TimeOut@Ohio.gov); in-person at any casino or racino |
 | **Identity verification** | Required at enrollment |
-| **Reinstatement** | For 1-year and 5-year terms: exclusion does not end automatically -- patron must request removal after minimum term expires |
-| **Source** | OAC 3772-12; [timeoutohio.com](https://timeoutohio.com/) |
+| **Reinstatement** | For 1-year and 5-year terms: exclusion does not end automatically -- patron must request removal after minimum term expires (OAC 3772-12-05) |
+| **Source** | OAC 3772-12 (see subsection table below); [timeoutohio.com](https://timeoutohio.com/) |
+
+### Governing VEP subsections (OAC 3772-12)
+
+For citation completeness, the self-exclusion program is governed by these rule subsections:
+
+| Rule | Subject | Source |
+|---|---|---|
+| **OAC 3772-12-01** | Definitions, purpose, and scope of the voluntary exclusion program | [codes.ohio.gov](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-01) · [LII](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-01) |
+| **OAC 3772-12-02** | Application for voluntary exclusion | [codes.ohio.gov](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-02) · [LII](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-02) |
+| **OAC 3772-12-03** | Responsibilities of voluntarily excluded individuals | [codes.ohio.gov](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-03) · [LII](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-03) |
+| **OAC 3772-12-04** | Responsibilities of excluded entities/facilities | [codes.ohio.gov](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-04) · [LII](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-04) |
+| **OAC 3772-12-05** | Removal from the voluntary exclusion program (reinstatement) | [codes.ohio.gov](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-05) · [LII](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-05) |
+| **OAC 3772-12-07** | Prior voluntary exclusions | [codes.ohio.gov](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-07) · [LII](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-07) |
 
 ### Consequences of violation
 
@@ -349,15 +429,19 @@ If a Time Out Ohio participant is discovered at a banned facility:
 | **Removal** | Removed from the facility immediately |
 | **Criminal charges** | May be charged with criminal trespassing |
 
-### Casino operator responsibilities (OAC 3772-12-04)
+### Excluded-facility responsibilities (OAC 3772-12-04)
+
+[OAC 3772-12-04](https://codes.ohio.gov/ohio-administrative-code/rule-3772-12-04) ([LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3772-12-04) · verify in browser) sets the facility's duties toward excluded individuals:
 
 | Obligation | Details | Timeline |
 |---|---|---|
-| **Cease direct marketing** | Remove from all marketing lists | Within 15 days of receiving exclusion notice |
-| **No credit extension** | Cannot extend credit in any manner | Immediate |
-| **No check cashing** | Cannot cash checks for excluded individuals | Immediate |
-| **Commission notification** | Immediately notify OCCC in writing if excluded individual found on premises | Immediate |
-| **Confidentiality** | Maintain confidentiality of excluded individuals' information | Ongoing |
+| **Keep VEP status current** | Maintain a system that identifies Ohio VEP participants and update enrollment status | At least once every 7 days |
+| **Commission notification** | Immediately notify OCCC staff if an excluded individual is found on premises | Immediate |
+| **Incident report** | Submit a written report (name, date of birth, circumstances, gaming activity) | Within 72 hours |
+| **Denied-entry report** | Report the number of VEP participants denied entry or sign-in | Quarterly |
+| **Follow the plan** | Comply with the approved disordered and problem gambling plan (OAC 3772-12-06) | Ongoing |
+
+The duty to **cease direct marketing within 15 days** of an opt-out is codified for sports gaming in [OAC 3775-16-08(D)](https://codes.ohio.gov/ohio-administrative-code/rule-3775-16-08) ([LII mirror](https://www.law.cornell.edu/regulations/ohio/Ohio-Admin-Code-3775-16-08) · verify in browser) — see [Self-exclusion checklist](#self-exclusion) and [advertising-rules.md](advertising-rules.md). OAC 3772-12-04 does not impose a blanket no-credit or no-check-cashing rule; in fact it expressly permits collection of debts incurred before enrollment (subsection H).
 
 ### {{PROGRAM_NAME}} language mapping
 
@@ -382,13 +466,20 @@ Add this Q&A to the [Staff FAQ](../../../collateral/customer-service/staff-faq.m
 
 ### Land-based gaming (OAC 3772-12-06)
 
-Ohio's land-based player protection requirements are governed through the commission-approved compulsive and problem gambling plan:
+Ohio's land-based player protection requirements are governed through the commission-approved **disordered and problem gambling plan** (OAC 3772-12-06). The rule mandates specific plan components; the table below maps each to the {{PROGRAM_NAME}} content surface it affects:
 
 | Tool / Obligation | Required? | Regulatory basis | Details |
 |---|---|---|---|
+| **Printed educational material — patrons** | Yes | OAC 3772-12-06 | Printed written material to educate patrons about disordered/problem gambling and the voluntary exclusion program (distinct from advertising/outreach) |
+| **Printed educational material — employees** | Yes | OAC 3772-12-06 | Printed written material to educate employees about disordered/problem gambling and the voluntary exclusion program |
 | **Problem gambling information posting** | Yes | OAC 3772-12-06 | Signs around casino with treatment info and voluntary exclusion details |
-| **Helpline display** | Yes | OAC 3772-12-06 | 1-800-589-9966 displayed at casino and racino venues |
+| **Sign language and graphics** | Yes | OAC 3772-12-06 | The plan must include examples of the language and graphics to be used on signs (relevant to on-brand signage design) |
+| **Signage — treatment + VEP** | Yes | OAC 3772-12-06 | Signs with gambling-treatment and Ohio voluntary exclusion (Time Out Ohio) information. The rule does not prescribe a specific helpline number; displaying 1-800-589-9966 is operator best practice. |
+| **Underage-prevention procedures** | Yes | OAC 3772-12-06 | Explicit procedures to prevent underage gambling, as a plan component (ties to the 21+ requirement) |
 | **Employee training** | Yes | OAC 3772-12-06 | Training program with materials, periodic reinforcement, and certification |
+| **Goals and timetables** | Yes | OAC 3772-12-06 | The plan must state its goals and a timetable for implementation |
+| **Designated responsible position** | Yes | OAC 3772-12-06 | The plan must designate the position responsible for implementation |
+| **VEP-participant confidentiality** | Yes | OAC 3772-12-06 | Procedures to protect the confidentiality of voluntary exclusion program participants |
 | **Problem gambling plan** | Yes | OAC 3772-12-06 | Commission-approved plan required before implementation |
 | **Quarterly reporting** | Yes | OAC 3772-12-06 | Quarterly updates and annual report on plan adherence |
 | **Loyalty/rewards program procedures** | Yes | OAC 3772-12-06 | Specific procedures for disordered gambling behavior in rewards programs |
@@ -497,6 +588,7 @@ Quick-reference table mapping every collateral category to Ohio-specific adaptat
 | **Digital** | Deposit screen | Helpline + on-brand message; deposit limit option prominently displayed | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Social media bio | Include 1-800-589-9966 | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Email footer | Helpline + on-brand RG message in every email | `{{HELPLINE_NUMBER}}` |
+| **Digital** | Promo / bonus offer | Clear, unambiguous T&Cs; disclose active and expiry date/time; 21+ and not-on-VEP for transaction-linked offers | OAC 3775-16-09 |
 | **Print** | Brochure | Ohio helpline (1-800-589-9966), 21+ notice, Time Out Ohio reference | All tokens |
 | **Print** | Rack card | Helpline, on-brand message | `{{HELPLINE_NUMBER}}` |
 | **Print** | Table tent | Helpline + on-brand message | `{{HELPLINE_NUMBER}}` |
@@ -548,6 +640,9 @@ messaging:
     #   exact wording)
     # ohio-sports-ads: Standard-based — must include problem gambling prevention
     #   messages and helpline per OAC 3775-16-08 but exact text is not prescribed
+    # ohio-promotions: Standard-based — promo/bonus T&Cs must be clear, unambiguous,
+    #   and not misleading, and disclose the active and expiry date/time per
+    #   OAC 3775-16-09; no prescribed wording
 ```
 
 ---
@@ -566,7 +661,7 @@ Complete before launching {{PROGRAM_NAME}} in Ohio.
 
 ### Messaging
 - [ ] Problem gambling prevention messages included in all sports gaming advertising
-- [ ] Helpline displayed per OAC 3772-12-06 (casino/racino) and OAC 3775-16-08 (sports ads)
+- [ ] Casino/racino signs with gambling-treatment and Ohio VEP information per OAC 3772-12-06; helpline in sports ads per OAC 3775-16-08
 - [ ] Age notice (21+) on all player-facing content
 - [ ] All `{{PLACEHOLDER}}` tokens resolve to Ohio values
 - [ ] Conditions of play (cost, odds, material conditions) disclosed in sports ads
@@ -576,23 +671,39 @@ Complete before launching {{PROGRAM_NAME}} in Ohio.
 - [ ] Problem gambling prevention message and helpline in all sports ads
 - [ ] Proprietor identity disclosed
 - [ ] No targeting of under-21, ineligible, problem gamblers, or vulnerable individuals
+- [ ] No depiction of anyone under 21 (except live athlete footage in eligible events)
+- [ ] No false, deceptive, or misleading information
 - [ ] No promotion of irresponsible play or guaranteed success
 - [ ] Direct ads include opt-out method; electronic opt-outs honored within 15 days
 - [ ] Small-format ads reference website/app with full info within one click
-- [ ] Casino advertising per commission-approved problem gambling plan
+- [ ] Process in place to cease dissemination on non-compliance or executive-director direction
+- [ ] Casino advertising per commission-approved disordered and problem gambling plan
+
+### Promotions and bonuses
+*Check only if running promotions or bonus offers (sports gaming).*
+- [ ] Promotion/bonus rules stated clearly and unambiguously (OAC 3775-16-09)
+- [ ] T&Cs full, accurate, concise, transparent, and not misleading
+- [ ] Promotion active date/time and expiry date/time disclosed
+- [ ] No targeting of under-21, ineligible, problem-gambling, or vulnerable audiences
+- [ ] Transaction-linked promos offered only to 21+ persons not on Time Out Ohio
 
 ### Self-exclusion
 - [ ] Time Out Ohio information available at all venues and on platforms
-- [ ] Excluded individuals removed from marketing within 15 days
-- [ ] No credit extension or check cashing for excluded individuals
-- [ ] OCCC notified immediately in writing if excluded individual found on premises
-- [ ] Confidentiality of excluded individuals maintained
+- [ ] VEP enrollment status checked and updated at least every 7 days (OAC 3772-12-04)
+- [ ] OCCC notified immediately if excluded individual found on premises; written incident report within 72 hours (OAC 3772-12-04)
+- [ ] Quarterly denied-entry reporting to OCCC (OAC 3772-12-04)
+- [ ] Direct-marketing opt-outs actioned within 15 days (sports gaming, OAC 3775-16-08)
 - [ ] Staff trained on Time Out Ohio enrollment and enforcement
 
 ### Player protection -- land-based
 *Check only if deploying in land-based venues.*
-- [ ] Compulsive and problem gambling plan submitted to OCCC and approved
+- [ ] Disordered and problem gambling plan submitted to OCCC and approved
+- [ ] Printed educational material for patrons AND employees provided
 - [ ] Signs placed around casino with treatment info and voluntary exclusion
+- [ ] Plan specifies sign language and graphics
+- [ ] Explicit underage-prevention procedures included in the plan
+- [ ] Plan states goals/timetables and designates the responsible position
+- [ ] VEP-participant confidentiality procedures in place
 - [ ] VLT facility (racino) displays helpline throughout
 - [ ] Employee training program implemented with reinforcement and certification
 - [ ] Quarterly updates and annual report submitted to OCCC
