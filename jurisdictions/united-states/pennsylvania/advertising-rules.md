@@ -7,15 +7,15 @@ tone: [confident-informative]
 reading_level: grade-9-12
 audience: [general]
 channel: [blog, in-app]
-last_updated: 2026-03-22
+last_updated: 2026-06-08
 ---
 
 # Pennsylvania -- Advertising Rules
 
 > **Operator note**: This document provides a detailed reference for advertising compliance when deploying {{PROGRAM_NAME}} in Pennsylvania. Pennsylvania uses prescriptive font size standards for gambling assistance messaging across all media. Interactive gaming ads have additional co-branding requirements. All rules are sourced from 58 Pa. Code.
 
-> **Last verified**: 2026-03-22
-> **Next review due**: 2026-06-22
+> **Last verified**: 2026-06-08
+> **Next review due**: 2026-09-08
 
 ---
 
@@ -23,9 +23,11 @@ last_updated: 2026-03-22
 
 | Regulation | Scope | URL |
 |---|---|---|
-| 58 Pa. Code 501a.7 | General advertising standards (all gaming) | [pacodeandbulletin.gov](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter501a/chap501atoc.html) |
+| 58 Pa. Code 501a.7 | General advertising standards (all gaming), including font sizing at 501a.7(e)(1)-(4) | [pacodeandbulletin.gov](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter501a/chap501atoc.html) |
 | 58 Pa. Code 813a.2 | Interactive gaming advertisement requirements | [pacodeandbulletin.gov](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter813a/chap813atoc.html) |
-| 58 Pa. Code 1409a | Sports wagering advertisements (cross-references 501a.7 and 813a) | [pacodeandbulletin.gov](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1409a/chap1410atoc.html) |
+| 58 Pa. Code 1409a | Sports wagering advertisements (cross-references 501a.7 and 813a) | [pacodeandbulletin.gov](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1409a/chap1409atoc.html) |
+| 58 Pa. Code 1118a.4 | Video gaming terminal advertising | [pacodeandbulletin.gov](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1118a/chap1118atoc.html) |
+| 58 Pa. Code 1207a.1 | Fantasy contest advertising | [pacodeandbulletin.gov](https://www.pacodeandbulletin.gov/Display/pacode?file=/secure/pacode/data/058/chapter1207a/chap1207atoc.html) |
 
 ---
 
@@ -39,11 +41,11 @@ The OCPG (Office of Compulsive and Problem Gambling) has authority to require im
 
 ---
 
-## Font size standards (501a.7)
+## Font size standards (501a.7(e))
 
-Pennsylvania specifies minimum font sizes for the gambling assistance message by medium:
+Pennsylvania specifies minimum font sizes for the gambling assistance message by medium. The mandate to carry the message lives at **501a.7(d)**; the per-medium sizing standards live at **501a.7(e)(1)-(4)**:
 
-### Print materials
+### Print materials (501a.7(e)(1))
 
 | Standard | Minimum |
 |---|---|
@@ -51,13 +53,13 @@ Pennsylvania specifies minimum font sizes for the gambling assistance message by
 | Alternative | 2% of the advertisement's height or width (whichever is greater) |
 | Which applies | Whichever standard produces the **larger** text |
 
-### Billboards
+### Billboards (501a.7(e)(2))
 
 | Standard | Minimum |
 |---|---|
 | Height or width | 5% of the billboard's height or width (whichever is greater) |
 
-### Video and television
+### Video and television (501a.7(e)(3))
 
 | Approach | Requirement |
 |---|---|
@@ -66,12 +68,12 @@ Pennsylvania specifies minimum font sizes for the gambling assistance message by
 
 Operators may choose either approach.
 
-### Websites
+### Websites (501a.7(e)(4))
 
 | Context | Minimum |
 |---|---|
 | General website pages | Same size as the majority of text on the webpage |
-| Gaming-specific advertisements | 2% of the ad's dimensions |
+| Gaming-specific advertisements | 2% of the ad's dimensions (print standard) |
 
 ---
 
@@ -139,6 +141,31 @@ Sports wagering contests and tournaments must:
 
 ---
 
+## Video gaming terminal advertising (1118a.4)
+
+Advertising for video gaming terminals at truck stops and qualified establishments is governed by **58 Pa. Code 1118a.4**, which requires VGT advertising to:
+
+- Carry the gambling assistance message ("If you or someone you know has a gambling problem, help is available. Call (1-800-GAMBLER).")
+- Comply with the general advertising standards of 501a.7, including the font-size standards at 501a.7(e)
+- Avoid false or misleading content
+
+VGT establishment licensees also carry problem-gaming signage and training obligations under 1118a.1-1118a.3 (see the [VGT section of the compliance module](README.md#video-gaming-terminals-vgts)).
+
+---
+
+## Fantasy contest advertising (1207a.1)
+
+Fantasy contest advertising is governed by **58 Pa. Code 1207a.1**. Any advertisement directed specifically toward participants in Pennsylvania must:
+
+- Include the statement: "If you or someone you know has a gambling problem, help is available. Call (1-800-GAMBLER)." (1207a.1(c))
+- Avoid false or misleading information, and not target individuals under the legal age
+- Clearly disclose conditions associated with the advertisement
+- Reflect net-winnings parity (advertised prizes/winnings stated accurately)
+
+The OCPG may, by written notice, require the immediate discontinuation of any fantasy advertisement (1207a.1(d)). Fantasy operators also carry problem-gaming signage and information obligations under Chapter 1208a (see the [Fantasy section of the compliance module](README.md#fantasy-contests)).
+
+---
+
 ## {{PROGRAM_NAME}} advertising compliance checklist
 
 - [ ] 1-800-GAMBLER appears in all ads with prescribed font sizing
@@ -151,6 +178,8 @@ Sports wagering contests and tournaments must:
 - [ ] No prohibited content
 - [ ] Promotions filed with Board 5+ days in advance
 - [ ] Sports wagering contests filed with Office of Sports Wagering 2+ days in advance
+- [ ] VGT advertising carries the gambling assistance message and meets 501a.7 sizing (1118a.4)
+- [ ] Fantasy advertising to PA participants includes the gambling assistance message; no false/misleading claims (1207a.1)
 - [ ] All records of bonuses and promotions maintained electronically (813a.5)
 
 ---
