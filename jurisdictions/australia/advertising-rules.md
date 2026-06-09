@@ -143,7 +143,9 @@ The tagline used must be permitted for the placement:
 |---|---|---|
 | Television / video and radio | 1, 3, 5, 6, 7 | five |
 | Digital, print, social media, website | 1, 2, 3, 4, 5, 7 | six |
-| In-app | 1, 2, 3, 4, 5, 6, 7 | all seven |
+| In-app | 1, 2, 3, 4, 5, 7 | six |
+
+> **Tagline 6 ("You win some. You lose more.") is permitted in spoken forms of advertising only** (including telemarketing). It is therefore valid for **television/video and radio only as a spoken voiceover** — not as on-screen text — and is **excluded from in-app, digital, print, social media, and website** placements, which are text/display formats. For on-screen text (including in-app), use a tagline from the six-tagline subset (1, 2, 3, 4, 5, 7).
 
 ### Verbatim call to action
 
@@ -289,7 +291,9 @@ In the broadcast overlay, the federal OCSP Rules are given practical effect — 
 > **You win some. You lose more.** Know the odds. Set a limit.
 > Free, confidential support 24/7: **1800 858 858** | **gamblinghelponline.org.au**
 
-The mandated tagline and call to action appear exactly as required; {{PROGRAM_NAME}} framing surrounds them, and rotation across the seven taglines is maintained across the campaign.
+The mandated tagline and call to action appear exactly as required; {{PROGRAM_NAME}} framing surrounds them, and rotation across the **platform's permitted subset** is maintained across the campaign.
+
+> **Note on this example:** "You win some. You lose more." (tagline 6) is permitted in **spoken forms of advertising only**, so the example above is valid for a **spoken placement** (radio or a television/video voiceover). For **on-screen text or in-app**, substitute a tagline from that platform's six-tagline subset (1, 2, 3, 4, 5, 7).
 
 ---
 
@@ -348,6 +352,8 @@ This matrix maps {{PROGRAM_NAME}} collateral templates to their Australia advert
 ## Pending reform
 
 > **Not law as of June 2026.** The 2023 parliamentary inquiry led by the late Peta Murphy MP ("You win some, you lose more") recommended a **phased total ban on online gambling advertising**. As of June 2026 this has **not** been legislated. Track it as a possible future reform — do **not** treat it as a current requirement, and do not cite it in compliance copy as binding. The binding rules today are the prohibition on advertising illegal services, the live-sport timing restrictions, the consistent gambling messaging mandate, and the inducement restrictions described above.
+
+> **Watch item — May 2026 Government response.** In **May 2026** the Government released its formal response to the Murphy report. It **declined a full advertising ban** but announced a **reform package** — reported to include a **ban on online keno**, tighter restrictions on **live-sport and in-venue/in-stadium advertising** (including a broadcast cap and removal of gambling branding from venues and uniforms), and stronger illegal-service enforcement — **slated to take effect around January 2027** via amendments to the **Interactive Gambling Act 2001**. None of this is in force yet, so the present rules above stand. Note the forward implication for products: online keno is a **legal product today** but is **scheduled to be banned** under this package. Re-confirm timing and scope against the enacted IGA amendments before relying on it. Source: [iGaming Today — Australia responds to Murphy report](https://www.igamingtoday.com/australia-responds-to-murphy-report-with-online-keno-ban-and-gambling-ads-restrictions/) (corroborating trade report; verify against the official Government response and the IGA amendments in browser).
 
 ---
 

@@ -143,8 +143,11 @@ The National Consumer Protection Framework for Online Wagering is the prescripti
 
 | Change | Status | Impact |
 |---|---|---|
-| Total ban on online gambling advertising (Murphy review recommendation) | **Pending — NOT law as of June 2026** | Frequently reported; track as a possible future reform. Do **not** treat as a current requirement. |
+| Total ban on online gambling advertising (Murphy review recommendation) | **NOT law as of June 2026.** In May 2026 the Government **declined** a full ban | Frequently reported; track as a possible future reform. Do **not** treat as a current requirement. |
+| Gambling-reform package (Government's May 2026 response to the Murphy report) | **Announced May 2026; slated to take effect ~January 2027** via Interactive Gambling Act 2001 amendments | Reported to include a **ban on online keno**, tighter **live-sport and in-venue/in-stadium** advertising rules (broadcast cap; no gambling branding on venues/uniforms), and stronger illegal-service enforcement. None in force yet — present rules stand. Note: online keno is **legal today** (see below) but is **scheduled to be banned** under this package. Re-confirm against the enacted IGA amendments. |
 | Possible further restrictions on inducements and bonus advertising | Under policy discussion | Monitor DSS / ACMA announcements |
+
+> **Source (reform package)**: [iGaming Today — Australia responds to Murphy report](https://www.igamingtoday.com/australia-responds-to-murphy-report-with-online-keno-ban-and-gambling-ads-restrictions/) (corroborating trade report). Verify against the official Government response and the enacted IGA amendments in browser before relying on it.
 
 ---
 
@@ -164,7 +167,7 @@ The National Consumer Protection Framework for Online Wagering is the prescripti
 | Sports wagering (pre-event) | Interactive | Legal | ACMA (conduct) + state licence | Live/in-play betting online is illegal |
 | Race wagering (pre-event) | Interactive | Legal | ACMA (conduct) + state licence | Racing is the largest online wagering category |
 | Lotteries | Interactive | Legal | ACMA (conduct) + state licence | Credit ban does not apply to lotteries |
-| Keno | Interactive | Legal | ACMA (conduct) + state licence | Credit ban does not apply to keno |
+| Keno | Interactive | Legal | ACMA (conduct) + state licence | Credit ban does not apply to keno. **Scheduled to be banned ~Jan 2027** under the Government's May 2026 reform package — see Upcoming changes |
 | Online casino (slots, table games) | Interactive | **Illegal** | Prohibited under IGA 2001 | A "prohibited interactive gambling service" |
 | Online in-play / live betting | Interactive | **Illegal** | Prohibited under IGA 2001 | Live bets must be placed by phone or in person, not online |
 | Land-based casino | Land-based | Legal | State (e.g. NSW Independent Casino Commission) | Limited-licence / monopoly per state |
@@ -260,7 +263,9 @@ Not every tagline is permitted on every platform. The mandated message must be d
 |---|---|---|
 | Television / video and radio | 1, 3, 5, 6, 7 | five |
 | Digital, print, social media, website | 1, 2, 3, 4, 5, 7 | six |
-| In-app | 1, 2, 3, 4, 5, 6, 7 | all seven |
+| In-app | 1, 2, 3, 4, 5, 7 | six |
+
+> **Tagline 6 ("You win some. You lose more.") is permitted in spoken forms of advertising only** (including telemarketing). It is therefore valid for **television/video and radio only as a spoken voiceover** — not as on-screen text — and is **excluded from in-app, digital, print, social media, and website** placements, which are text/display formats. When placing on-screen text (including in-app), use a tagline from the six-tagline subset (1, 2, 3, 4, 5, 7).
 
 #### Verbatim call to action
 
@@ -289,9 +294,11 @@ Because the taglines and call to action are **verbatim**, they appear word-for-w
 
 The mandated tagline ("You win some. You lose more.") and the helpline call to action appear exactly as required; the {{PROGRAM_NAME}} framing sits around them.
 
+> **Note on this example:** "You win some. You lose more." (tagline 6) is permitted in **spoken forms of advertising only**, so the example above is valid for a **spoken placement** — e.g. radio or a television/video voiceover. For an **on-screen text or in-app** placement, swap in a tagline from that platform's six-tagline subset (1, 2, 3, 4, 5, 7); the on-brand framing pattern is identical.
+
 **Rules for on-brand integration:**
 1. Verbatim taglines and call to action appear word-for-word — never paraphrase
-2. Maintain equal rotation across the seven taglines — do not over-use a favourite
+2. Maintain equal rotation across the **platform's permitted subset** — do not over-use a favourite (and never place a spoken-only tagline as on-screen text)
 3. Give the mandated messaging visual dignity — do not shrink to minimum size
 4. Follow with a helpful action whenever possible
 
