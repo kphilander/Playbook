@@ -207,7 +207,7 @@ Sweden uses an **obligation-based** approach. There is no single verbatim respon
 | All marketing | Standard-based | Moderation (codified do/don'ts); no targeting of under-18s | Gambling Act ch.15 §1; KOVFS 2025:2 |
 | Online platform (always on) | Obligation-based | Risks of gambling and an independent helpline contact (Stodlinjen) readily accessible; operator identity + helpline prominently on the start page with the SGA logo and link | LIFS 2018:5 §§7-8 |
 | Game information | Obligation-based | Rules and likelihood of winning easily accessible, in Swedish; no false near-win impression | Gambling Act ch.14 §§4-5 |
-| Before online play | Standard-based | Mandatory deposit limit must be set | Gambling Act ch.14 §6; Ordinance ch.11 §§3-5 |
+| Before online play | Standard-based | Mandatory deposit limit must be set | Gambling Act ch.14 §7; Ordinance ch.11 §§3-5 |
 | Registration and every login | Standard-based | Spelpaus check; age verification | Gambling Act ch.14 §§3, 11-12 |
 | Bonus offers | Standard-based | Bonus only on first occasion of play; terms in clear language within one click; >=60 days to meet conditions | Gambling Act ch.14 §9; Ordinance ch.11 §6; KOVFS 2025:2 |
 
@@ -231,7 +231,7 @@ None. Sweden does not prescribe verbatim responsible-gambling messages. All requ
 | Start-page risk + helpline display | The risks of gambling and an independent helpline contact (Stodlinjen) kept readily accessible; operator identity + helpline prominently on the start page, with the SGA logo and a link to Spelinspektionen; licence period, that Spelinspektionen is the authority, and stake/participation cost also accessible | On the online platform (always on) | LIFS 2018:5 §§7-8 |
 | Game information | Rules and likelihood of winning, easily accessible and in Swedish | On the gambling platform | Gambling Act ch.14 §4 |
 | No false near-win | Games must not give a false impression of a near-win; free/trial games must match the real-money game | On the gambling platform | Gambling Act ch.14 §5 |
-| Deposit-limit prompt | Player must set a deposit limit before online play | Online platforms | Gambling Act ch.14 §6 |
+| Deposit-limit prompt | Player must set a deposit limit before online play | Online platforms | Gambling Act ch.14 §7 |
 | Bonus terms | First-occasion-only bonus; clear terms; >=60 days to meet conditions | Alongside any bonus offer | Gambling Act ch.14 §9; Ordinance ch.11 §6 |
 | Spelpaus information | Ability to self-exclude via the national register | Platform and marketing | Gambling Act ch.14 §§11-12 |
 
@@ -370,9 +370,9 @@ Add this Q&A to the [Staff FAQ](../../collateral/customer-service/staff-faq.md):
 | Tool / Obligation | Required? | Details | Source |
 |---|---|---|---|
 | Duty of care (omsorgsplikt) | Yes (statutory) | Operator must counteract excessive gambling through continuous monitoring and a documented action plan; contact players where problem gambling is identified or suspected. The SGA **duty-of-care guidance** sets out the operative steps: analyse player profiles (behaviour, pattern, contacts), give the player feedback on their gambling behaviour, apply restrictions/access limitations, follow up on whether the measures worked, and maintain a living action plan disseminated across the organisation | Gambling Act ch.14 §1; Ordinance ch.11 §§1-2; LIFS 2018:2; duty-of-care guidance |
-| Deposit limits | Yes (mandatory) | Player MUST set a deposit limit before online play (a loss limit for token machines). Limits by day, week, and month. | Gambling Act ch.14 §6; Ordinance ch.11 §§3-5 |
+| Deposit limits | Yes (mandatory) | Player MUST set a deposit limit before online play (a loss limit for token machines). Limits by day, week, and month. | Gambling Act ch.14 §7; Ordinance ch.11 §§3-5 |
 | Limit-change timing | Yes | Increases take effect after 72 hours; decreases take effect immediately | Ordinance ch.11 §§3-5 |
-| SEK 10,000 contact trigger | Yes | Operator must contact any player who raises a limit or sets a deposit limit above SEK 10,000 per month | Gambling Act ch.14 §7; Ordinance ch.11 §§3-5 |
+| SEK 10,000 contact trigger | Yes | Operator must contact any player who raises a limit or sets a deposit limit above SEK 10,000 per month | Ordinance ch.11 §5 (duty of care, Gambling Act ch.14 §1) |
 | Login-time limit | Yes (offer) | An optional login-time (session) limit must be offered to the player | Ordinance ch.11 §§3-5 |
 | Stake confirmation | Yes | Players must actively confirm stakes | Gambling Act ch.14 §6 |
 | Self-exclusion (Spelpaus) | Yes | Must offer self-exclusion, including an immediate 24-hour option for online casino, online bingo, and computer-simulated machines; link to and check the national Spelpaus register at registration and every login. Self-exclusion must cover **all of a player's accounts and games at the licensee**, not just one product | Gambling Act ch.14 §§11-12; Ordinance ch.11 §§8-12; LIFS 2018:5 §4(2) |
