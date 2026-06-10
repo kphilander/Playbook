@@ -1,7 +1,7 @@
 {
   "meta": {
-    "totalAssets": 96,
-    "generated": "2026-03-07T03:30:17.563Z",
+    "totalAssets": 114,
+    "generated": "2026-06-10T16:00:45.612Z",
     "version": "0.1.0",
     "baseUrl": "/tools/playbook",
     "description": "Complete catalog of Playbook brand assets. All assets are CC0-licensed."
@@ -193,7 +193,7 @@
       ]
     },
     "icons": {
-      "count": 31,
+      "count": 39,
       "assets": [
         {
           "id": "icon-activity",
@@ -219,6 +219,18 @@
           "tags": [
             "tool",
             "notification"
+          ]
+        },
+        {
+          "id": "icon-bonus",
+          "filename": "icon-bonus.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-bonus.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-bonus.svg",
+          "format": "svg",
+          "fileSize": 432,
+          "category": "icons",
+          "tags": [
+            "general"
           ]
         },
         {
@@ -274,6 +286,18 @@
           ]
         },
         {
+          "id": "icon-deposit",
+          "filename": "icon-deposit.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-deposit.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-deposit.svg",
+          "format": "svg",
+          "fileSize": 401,
+          "category": "icons",
+          "tags": [
+            "general"
+          ]
+        },
+        {
           "id": "icon-dice",
           "filename": "icon-dice.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-dice.svg",
@@ -310,6 +334,18 @@
           "tags": [
             "math",
             "odds"
+          ]
+        },
+        {
+          "id": "icon-exclusion",
+          "filename": "icon-exclusion.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-exclusion.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-exclusion.svg",
+          "format": "svg",
+          "fileSize": 400,
+          "category": "icons",
+          "tags": [
+            "general"
           ]
         },
         {
@@ -375,6 +411,18 @@
           ]
         },
         {
+          "id": "icon-jackpot",
+          "filename": "icon-jackpot.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-jackpot.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-jackpot.svg",
+          "format": "svg",
+          "fileSize": 469,
+          "category": "icons",
+          "tags": [
+            "general"
+          ]
+        },
+        {
           "id": "icon-limit",
           "filename": "icon-limit.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-limit.svg",
@@ -413,6 +461,18 @@
           ]
         },
         {
+          "id": "icon-pause",
+          "filename": "icon-pause.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-pause.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-pause.svg",
+          "format": "svg",
+          "fileSize": 449,
+          "category": "icons",
+          "tags": [
+            "general"
+          ]
+        },
+        {
           "id": "icon-percentage",
           "filename": "icon-percentage.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-percentage.svg",
@@ -443,11 +503,23 @@
           "url": "/tools/playbook/brand-book/assets/icons/icon-playbook.svg",
           "sourceUrl": "visual-identity/iconography/icons/icon-playbook.svg",
           "format": "svg",
-          "fileSize": 430,
+          "fileSize": 397,
           "category": "icons",
           "tags": [
             "content",
             "education"
+          ]
+        },
+        {
+          "id": "icon-profile",
+          "filename": "icon-profile.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-profile.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-profile.svg",
+          "format": "svg",
+          "fileSize": 382,
+          "category": "icons",
+          "tags": [
+            "general"
           ]
         },
         {
@@ -526,6 +598,19 @@
           ]
         },
         {
+          "id": "icon-shield",
+          "filename": "icon-shield.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-shield.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-shield.svg",
+          "format": "svg",
+          "fileSize": 333,
+          "category": "icons",
+          "tags": [
+            "safety",
+            "compliance"
+          ]
+        },
+        {
           "id": "icon-slots",
           "filename": "icon-slots.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-slots.svg",
@@ -587,11 +672,23 @@
           "tags": [
             "general"
           ]
+        },
+        {
+          "id": "icon-withdrawal",
+          "filename": "icon-withdrawal.svg",
+          "url": "/tools/playbook/brand-book/assets/icons/icon-withdrawal.svg",
+          "sourceUrl": "visual-identity/iconography/icons/icon-withdrawal.svg",
+          "format": "svg",
+          "fileSize": 401,
+          "category": "icons",
+          "tags": [
+            "general"
+          ]
         }
       ]
     },
     "collateral": {
-      "count": 45,
+      "count": 55,
       "assets": [
         {
           "id": "brochure-cover-8b",
@@ -653,6 +750,82 @@
           "sourceUrl": "collateral/render/card-11b-lucky-numbers.png",
           "format": "png",
           "fileSize": 66831,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-16a-online-rigged",
+          "filename": "card-16a-online-rigged.png",
+          "url": "/tools/playbook/assets/renders/card-16a-online-rigged.png",
+          "sourceUrl": "collateral/render/card-16a-online-rigged.png",
+          "format": "png",
+          "fileSize": 104487,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-16b-bonus-free-money",
+          "filename": "card-16b-bonus-free-money.png",
+          "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.png",
+          "sourceUrl": "collateral/render/card-16b-bonus-free-money.png",
+          "format": "png",
+          "fileSize": 108171,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-17a-big-game",
+          "filename": "card-17a-big-game.png",
+          "url": "/tools/playbook/assets/renders/card-17a-big-game.png",
+          "sourceUrl": "collateral/render/card-17a-big-game.png",
+          "format": "png",
+          "fileSize": 116437,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-18a-fresh-start",
+          "filename": "card-18a-fresh-start.png",
+          "url": "/tools/playbook/assets/renders/card-18a-fresh-start.png",
+          "sourceUrl": "collateral/render/card-18a-fresh-start.png",
+          "format": "png",
+          "fileSize": 108517,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -943,12 +1116,102 @@
           "dimensions": null
         },
         {
+          "id": "htp-card-baccarat",
+          "filename": "htp-card-baccarat.png",
+          "url": "/tools/playbook/assets/renders/htp-card-baccarat.png",
+          "sourceUrl": "collateral/render/htp-card-baccarat.png",
+          "format": "png",
+          "fileSize": 62635,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-bingo",
+          "filename": "htp-card-bingo.png",
+          "url": "/tools/playbook/assets/renders/htp-card-bingo.png",
+          "sourceUrl": "collateral/render/htp-card-bingo.png",
+          "format": "png",
+          "fileSize": 62805,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "htp-card-blackjack",
           "filename": "htp-card-blackjack.png",
           "url": "/tools/playbook/assets/renders/htp-card-blackjack.png",
           "sourceUrl": "collateral/render/htp-card-blackjack.png",
           "format": "png",
-          "fileSize": 78334,
+          "fileSize": 81564,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-craps",
+          "filename": "htp-card-craps.png",
+          "url": "/tools/playbook/assets/renders/htp-card-craps.png",
+          "sourceUrl": "collateral/render/htp-card-craps.png",
+          "format": "png",
+          "fileSize": 64622,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-horse-racing",
+          "filename": "htp-card-horse-racing.png",
+          "url": "/tools/playbook/assets/renders/htp-card-horse-racing.png",
+          "sourceUrl": "collateral/render/htp-card-horse-racing.png",
+          "format": "png",
+          "fileSize": 66367,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-lottery",
+          "filename": "htp-card-lottery.png",
+          "url": "/tools/playbook/assets/renders/htp-card-lottery.png",
+          "sourceUrl": "collateral/render/htp-card-lottery.png",
+          "format": "png",
+          "fileSize": 63785,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -966,7 +1229,7 @@
           "url": "/tools/playbook/assets/renders/htp-card-roulette.png",
           "sourceUrl": "collateral/render/htp-card-roulette.png",
           "format": "png",
-          "fileSize": 77673,
+          "fileSize": 64982,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -984,7 +1247,7 @@
           "url": "/tools/playbook/assets/renders/htp-card-slots.png",
           "sourceUrl": "collateral/render/htp-card-slots.png",
           "format": "png",
-          "fileSize": 79161,
+          "fileSize": 81706,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -1002,7 +1265,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-sports.png",
           "sourceUrl": "collateral/render/htp-card-sports.png",
           "format": "png",
-          "fileSize": 82469,
+          "fileSize": 85692,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-video-poker",
+          "filename": "htp-card-video-poker.png",
+          "url": "/tools/playbook/assets/renders/htp-card-video-poker.png",
+          "sourceUrl": "collateral/render/htp-card-video-poker.png",
+          "format": "png",
+          "fileSize": 70693,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -1020,7 +1301,7 @@
           "url": "/tools/playbook/assets/renders/htp-odds-comparison.png",
           "sourceUrl": "collateral/render/htp-odds-comparison.png",
           "format": "png",
-          "fileSize": 92216,
+          "fileSize": 95505,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "count": 18,
-    "generated": "2026-03-07T03:29:15.142Z",
+    "count": 20,
+    "generated": "2026-06-10T16:00:45.272Z",
     "version": "0.1.0",
     "source": "messaging/myth-busting.md"
   },
@@ -40,8 +40,8 @@
       "language": "en-us"
     },
     "adaptation_status": "base",
-    "adaptation_notes": "Game-specific myths: Some reference US casino culture.\nHumor: One-liners use irreverent tone. Adapt for profile.\nFormat: Social card copy may need cultural adjustment.\n",
-    "last_updated": "2025-02-25T00:00:00.000Z"
+    "adaptation_notes": "Game-specific myths: Some reference US casino culture.\nHumor: One-liners use irreverent tone. Adapt for profile.\nFormat: Social card copy may need cultural adjustment.\nOnline myths (19–20): Bonus/wagering rules and RTP publication\nrequirements vary by jurisdiction. Verify locally before deploying.\n",
+    "last_updated": "2026-06-10T00:00:00.000Z"
   },
   "myths": [
     {
@@ -786,6 +786,90 @@
           }
         ],
         "feedback": "The house edge is built into every game. It means that over time, the game returns less than players put in. That's how the business works. Gambling is entertainment with a cost — not an investment strategy."
+      }
+    },
+    {
+      "id": 19,
+      "title": "Online Slots Are Rigged",
+      "category": "Online Casino & iGaming",
+      "gameType": [
+        "online-slots",
+        "igaming"
+      ],
+      "bias": [
+        "distrust-heuristic",
+        "illusion-of-unfairness"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Online slots are rigged. Real casinos at least have to play fair.",
+        "fact": "Licensed online slots are tested by independent labs, just like the machines on a casino floor. Most online games even show their payback rate right in the info screen. Try getting that from a physical machine.",
+        "stat": "Online slots commonly pay back 94–97% over time, as much or more than many casino-floor machines."
+      },
+      "articleExplainer": "The losing streak ends, you close the app, and the thought arrives: *this thing is rigged.* You can't see the machine, so why trust it?\n\nHere's what's behind the screen. Licensed online slots run on software that picks a random result for every spin. Independent labs test that software, and regulators check it. That's the same oversight casino-floor machines get.\n\nOnline games are often *more* open than the floor. Most show their \"return to player\" right in the info screen. That's the share of money the game pays back over time, and it's usually 94–97%, as good or better than many physical machines.\n\nA rigged game would be the fastest way for a site to lose its license. The house edge already does the job: legally, openly, and printed in the paytable.",
+      "quiz": {
+        "question": "How does the payback of licensed online slots compare to casino-floor machines?",
+        "options": [
+          {
+            "label": "Much lower, since online games are unregulated",
+            "correct": false
+          },
+          {
+            "label": "Equal or often higher, and usually shown in the game info",
+            "correct": true
+          },
+          {
+            "label": "It changes depending on how much you've deposited",
+            "correct": false
+          },
+          {
+            "label": "Nobody knows, since online payouts are secret",
+            "correct": false
+          }
+        ],
+        "feedback": "Licensed online slots are tested by independent labs and usually show their payback rate in the game info. It's commonly 94–97%, as good or better than many physical machines. The house edge is real, but it's not hidden."
+      }
+    },
+    {
+      "id": 20,
+      "title": "A Bonus Is Free Money",
+      "category": "Online Casino & iGaming",
+      "gameType": [
+        "online-casino",
+        "igaming"
+      ],
+      "bias": [
+        "framing-effect",
+        "anchoring"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "$100 deposit bonus = $100 free. Just withdraw it.",
+        "fact": "Most bonuses come with wagering requirements. A $100 bonus at 30x means betting $3,000 before you can withdraw, with the house edge working on every one of those bets.",
+        "stat": "$3,000 in required wagers at a 4% average edge costs about $120 in expected losses. More than the bonus itself."
+      },
+      "articleExplainer": "\"Deposit $100, get $100 free!\" The word doing all the work in that sentence is \"free.\"\n\nHere's the catch, decoded: most bonuses come with a *wagering requirement*. That's a rule that says you must bet the bonus a set number of times, usually 20x to 40x, before you can cash it out. A $100 bonus at 30x means placing $3,000 in bets first.\n\nNow the math. Every one of those bets faces the house edge. If the games keep about 4% on average, working through $3,000 in required bets costs around $120 in expected losses. That's more than the bonus itself. Add game restrictions, bet caps, and expiry dates, and \"free\" starts looking like a price tag.\n\nBonuses aren't a scam. They're a discount on entertainment, sometimes a good one. Just read the multiplier before you celebrate.",
+      "quiz": {
+        "question": "You get a $100 bonus with a 30x wagering requirement. What does that mean?",
+        "options": [
+          {
+            "label": "You can withdraw $100 after 30 bets",
+            "correct": false
+          },
+          {
+            "label": "You must wager $3,000 before the bonus can be withdrawn",
+            "correct": true
+          },
+          {
+            "label": "Your winnings are multiplied by 30",
+            "correct": false
+          },
+          {
+            "label": "The bonus expires in 30 days",
+            "correct": false
+          }
+        ],
+        "feedback": "30x means $3,000 in total bets before the bonus converts to cash, with each bet facing the house edge. Bonuses can still be good value, but they're a discount with conditions, not free money."
       }
     }
   ]

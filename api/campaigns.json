@@ -1,7 +1,7 @@
 {
   "meta": {
-    "count": 7,
-    "generated": "2026-03-07T03:29:15.142Z",
+    "count": 9,
+    "generated": "2026-06-10T16:00:45.272Z",
     "version": "0.1.0",
     "source": "messaging/campaigns.md"
   },
@@ -28,7 +28,8 @@
     "channel": [
       "social-media",
       "blog",
-      "email"
+      "email",
+      "in-app"
     ],
     "cultural_profile": {
       "voice": "peer",
@@ -42,8 +43,8 @@
       "language": "en-us"
     },
     "adaptation_status": "base",
-    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\n",
-    "last_updated": "2025-02-25T00:00:00.000Z"
+    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\nCampaign 8 (Big Game): Player copy says \"the big game\" — never a\ntrademarked event name. Anchor to your market's marquee event\n(championship final, Grand Final, Cup Final) in the timing note only.\nSquares pools and -110 odds are US conventions: replace with the\nlocal equivalent (office sweepstake, footy tipping) and odds format,\nincluding in card-17a, before deploying outside the US.\nCampaign 9 (New Year): Timing assumes January 1 new year. Shift to\nlocal new-year moment where relevant (e.g., Lunar New Year markets).\n",
+    "last_updated": "2026-06-10T00:00:00.000Z"
   },
   "campaigns": [
     {
@@ -939,6 +940,239 @@
         "Email open + click-through rates",
         "Quiz completion rates (Days 4, 7, 10, 13)",
         "Cross-game engagement (players who engage with 3+ game posts)"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 8,
+      "name": "The Big Game, By the Numbers",
+      "theme": "A 7-day countdown to the year's biggest game — the one week when casual fans place their first-ever bet.",
+      "tagline": "The biggest game of the year deserves your sharpest bet.",
+      "duration": "1 week (7 posts), ending on game day",
+      "pillar": "open + tools",
+      "audience": [
+        "sports bettors",
+        "first-time bettors",
+        "office-pool players",
+        "young adults"
+      ],
+      "mythsUsed": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "schedule": [
+        {
+          "day": "Mon",
+          "channel": "Instagram / Twitter",
+          "content_type": "Countdown card",
+          "myth": "—",
+          "copy_source": "\"6 days to the big game. Before the hype: here's how the lines actually work.\" (adapts SE-1, `core-messages.md`)",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-17a` format"
+        },
+        {
+          "day": "Tue",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "12",
+          "copy_source": "Title: \"Props, Squares, and Parlays: A Field Guide to Big-Game Bets\" — what each bet is, what it costs",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "11",
+          "copy_source": "`myth-busting.md` → Myth 11 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-15a` format"
+        },
+        {
+          "day": "Thu",
+          "channel": "Instagram Stories",
+          "content_type": "Infographic",
+          "myth": "12",
+          "copy_source": "What a hype parlay actually costs — vig compounding per leg",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-15b` format"
+        },
+        {
+          "day": "Fri",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "13",
+          "copy_source": "`myth-busting.md` → Myth 13 → Social card. Frame: everyone posting winning slips this week is the highlight reel.",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-11a` format"
+        },
+        {
+          "day": "Sat",
+          "channel": "All social + in-app",
+          "content_type": "Tool promotion",
+          "myth": "—",
+          "copy_source": "\"Set your game-day budget before kickoff. 10 seconds now, zero math during the game.\"",
+          "asset_format": "1080 x 1080 + push",
+          "template_reference": "`collateral/render/card-17a` format + `push-notification-12e`"
+        },
+        {
+          "day": "Sun (game day)",
+          "channel": "In-app / Stories",
+          "content_type": "Game-day overlay",
+          "myth": "14",
+          "copy_source": "Live-betting reality check: the algorithm moves faster than the broadcast",
+          "asset_format": "In-app overlay",
+          "template_reference": "`collateral/render/live-odds-overlay-15d` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Countdown post",
+          "text": "6 days out. The squares pool is filling up and someone in the group chat has a 9-leg parlay. Before kickoff, here's how the lines actually work. #KnowYourGame"
+        },
+        {
+          "label": "Myth 11 post",
+          "text": "You've watched every snap this season. The sportsbook's models have watched every snap ever, and they set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
+        },
+        {
+          "label": "Myth 13 post",
+          "text": "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
+        },
+        {
+          "label": "Tool promotion post",
+          "text": "Game-day plan: snacks, the good TV, and a budget you set before kickoff. 10 seconds now means zero math during the fourth quarter. Link in bio."
+        },
+        {
+          "label": "Game-day post",
+          "text": "Momentum shifted? The algorithm priced it before the replay ended. In-play betting is exciting, but it's not an edge. Enjoy the game. #KnowYourGame"
+        }
+      ],
+      "email": {
+        "subject": "The big game, by the numbers",
+        "previewText": "Props, parlays, and squares: what this week's bets actually cost.",
+        "bodyStructure": [
+          "Hero: Countdown card image",
+          "\"First bet ever? Welcome.\" — 3-line primer on the moneyline, the spread, and the vig (the sportsbook's built-in fee)",
+          "Myth 12 myth/fact pair (hype parlays)",
+          "\"Set your game-day budget\" tool CTA",
+          "Footer: \"However it ends, it's entertainment. Play on your terms.\""
+        ]
+      },
+      "kpis": [
+        "First-time bettor engagement (new accounts interacting with campaign content)",
+        "Budget/deposit limit setups from the Saturday tool CTA",
+        "Blog read-through on the bet-types field guide",
+        "In-app overlay impressions on game day"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 9,
+      "name": "New Year, Same Math",
+      "theme": "Fresh-start energy, pointed at the one resolution that actually works: set your limits while you're feeling sharp.",
+      "tagline": "New year, same math. New you, better plays.",
+      "duration": "1 week (6 posts), spanning year-end through the first week of January",
+      "pillar": "tools + open",
+      "audience": [
+        "all players",
+        "especially resolution-makers and holiday-season players"
+      ],
+      "mythsUsed": [
+        17,
+        18
+      ],
+      "schedule": [
+        {
+          "day": "Mon (Dec 29)",
+          "channel": "Instagram / Facebook",
+          "content_type": "Year-in-review card",
+          "myth": "—",
+          "copy_source": "\"The math didn't change this year. The house edge was the house edge. Here's the refresher.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-2a` format"
+        },
+        {
+          "day": "Tue (Dec 30)",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "17+18",
+          "copy_source": "Title: \"The Only Gambling Resolution That Works\" — skip 'win more,' set a budget instead",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed (Dec 31)",
+          "channel": "Instagram / Facebook",
+          "content_type": "Resolution card",
+          "myth": "—",
+          "copy_source": "NY-1 from `core-messages.md`: \"New year, same math. But here's a resolution that actually works...\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-18a` format"
+        },
+        {
+          "day": "Thu (Jan 1)",
+          "channel": "All social + in-app",
+          "content_type": "Tool promotion",
+          "myth": "—",
+          "copy_source": "NY-2 from `core-messages.md`: \"Start the year with your limits set and your tools active. It takes 30 seconds.\"",
+          "asset_format": "1080 x 1080 + push",
+          "template_reference": "`collateral/render/card-18a` format + `push-notification-12e`"
+        },
+        {
+          "day": "Fri (Jan 2)",
+          "channel": "Email",
+          "content_type": "Year-in-review digest",
+          "myth": "17, 18",
+          "copy_source": "See email option below",
+          "asset_format": "600 px email",
+          "template_reference": "`collateral/render/email-monthly-7c` format"
+        },
+        {
+          "day": "Sat (Jan 3)",
+          "channel": "Instagram / Facebook",
+          "content_type": "Quiz CTA",
+          "myth": "17, 18",
+          "copy_source": "\"Start the year knowing the odds. 10 questions, 2 minutes.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4b` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Year-in-review post",
+          "text": "Slot payouts on December 31: set in software. Slot payouts on January 1: same software. The math doesn't do resolutions. You can. #NoFinePrint"
+        },
+        {
+          "label": "Resolution post",
+          "text": "Most resolutions fail by February. This one takes 30 seconds and runs itself: set your entertainment budget before you play. #KnowYourGame"
+        },
+        {
+          "label": "Tool promotion post",
+          "text": "New year's day checklist: leftovers, couch, and limits set while you're feeling sharp. Future you says thanks. Link in bio."
+        },
+        {
+          "label": "Quiz CTA post",
+          "text": "New year, new Game IQ. 10 questions on the math behind the games you play. Start the year sharp. Link in bio."
+        }
+      ],
+      "email": {
+        "subject": "New year. Same math. Better plays.",
+        "previewText": "Your year in play, plus the one resolution that runs itself.",
+        "bodyStructure": [
+          "Hero: \"New year, same math\" card image",
+          "Year-in-review stats block (sessions, favorite games — reuse monthly summary format)",
+          "Myth 17 + Myth 18 as short myth/fact pairs",
+          "CTA: \"Set your new-year budget\" → deposit limit feature",
+          "CTA: \"Test your Game IQ\" → quiz link"
+        ]
+      },
+      "kpis": [
+        "Deposit/session limit setups in the first week of January (primary metric)",
+        "Email open and click-through on the year-in-review digest",
+        "Quiz completions from the Saturday CTA",
+        "Tool retention: % of January limit-setters still using limits in March"
       ],
       "tokens": []
     }

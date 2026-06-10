@@ -1,7 +1,7 @@
 {
   "meta": {
     "game": "lottery",
-    "generated": "2026-03-07T03:29:15.142Z",
+    "generated": "2026-06-10T16:00:45.272Z",
     "version": "0.1.0",
     "source": "how-to-play/lottery.md"
   },
@@ -71,7 +71,7 @@
     },
     {
       "heading": "Common myths",
-      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Lucky numbers exist | Numbers don't have memories or feelings | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Numbers that haven't come up are \"due\" | The gambler's fallacy — every draw is independent | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Hot and cold numbers | Past draws don't influence future draws | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Systems can pick winning numbers | No system beats a random draw | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Buying more tickets is a \"strategy\" | It improves your odds linearly, but the expected return is still negative | <!-- TODO: Link to myth-busting.md entry once created --> |\n| Quick picks win less than self-picked numbers | They win in proportion to how many are sold — roughly 70–80% of jackpots go to quick picks because roughly 70–80% of tickets are quick picks | <!-- TODO: Link to myth-busting.md entry once created --> |\n\n---"
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Lucky numbers exist | Numbers don't have memories or feelings | |\n| Numbers that haven't come up are \"due\" | The gambler's fallacy — every draw is independent | |\n| Hot and cold numbers | Past draws don't influence future draws | |\n| Systems can pick winning numbers | No system beats a random draw | |\n| Buying more tickets is a \"strategy\" | It improves your odds linearly, but the expected return is still negative | |\n| Quick picks win less than self-picked numbers | They win in proportion to how many are sold — roughly 70–80% of jackpots go to quick picks because roughly 70–80% of tickets are quick picks | |\n\n---"
     }
   ],
   "keyTerms": [

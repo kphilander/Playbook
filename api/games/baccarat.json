@@ -1,7 +1,7 @@
 {
   "meta": {
     "game": "baccarat",
-    "generated": "2026-03-07T03:29:15.142Z",
+    "generated": "2026-06-10T16:00:45.272Z",
     "version": "0.1.0",
     "source": "how-to-play/baccarat.md"
   },
@@ -70,7 +70,7 @@
     },
     {
       "heading": "Common myths",
-      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Betting Systems Beat the House | Martingale = delayed ruin | [Myth 7](../messaging/myth-busting.md#myth-7-betting-systems-beat-the-house) |\n| The Dealer Is Hot or Cold | Dealers follow a script | [Myth 8](../messaging/myth-busting.md#myth-8-the-dealer-is-hot-or-cold) |\n| Scorecards reveal patterns | Past hands don't influence future hands — each deal is independent | <!-- TODO: Link to myth-busting.md entry once created --> |\n| The Banker bet \"always\" wins | Banker wins 50.68% of decided hands — slightly more, not always | <!-- TODO: Link to myth-busting.md entry once created --> |\n| No-commission tables are better | They compensate with modified payouts — check the actual house edge | <!-- TODO: Link to myth-busting.md entry once created --> |\n\n---"
+      "content": "| Myth | One-liner | Full entry |\n|------|-----------|-----------|\n| Betting Systems Beat the House | Martingale = delayed ruin | [Myth 7](../messaging/myth-busting.md#myth-7-betting-systems-beat-the-house) |\n| The Dealer Is Hot or Cold | Dealers follow a script | [Myth 8](../messaging/myth-busting.md#myth-8-the-dealer-is-hot-or-cold) |\n| Scorecards reveal patterns | Past hands don't influence future hands — each deal is independent | |\n| The Banker bet \"always\" wins | Banker wins 50.68% of decided hands — slightly more, not always | |\n| No-commission tables are better | They compensate with modified payouts — check the actual house edge | |\n\n---"
     }
   ],
   "keyTerms": [

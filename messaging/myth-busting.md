@@ -21,7 +21,9 @@ adaptation_notes: |
   Game-specific myths: Some reference US casino culture.
   Humor: One-liners use irreverent tone. Adapt for profile.
   Format: Social card copy may need cultural adjustment.
-last_updated: 2025-02-25
+  Online myths (19–20): Bonus/wagering rules and RTP publication
+  requirements vary by jurisdiction. Verify locally before deploying.
+last_updated: 2026-06-10
 ---
 
 # Myth-Busting Content Library
@@ -63,6 +65,9 @@ Find the right myth fast — by game type, by channel need, or by the cognitive 
 | **All Gambling** | | | |
 | 17 | [Win Back Your Losses](#myth-17-you-can-win-back-your-losses) | Sunk cost fallacy | Money Myths |
 | 18 | [Gambling as Income](#myth-18-gambling-is-a-way-to-make-money) | Entertainment, not investment | Money Myths, Game IQ |
+| **Online Casino & iGaming** | | | |
+| 19 | [Online Slots Are Rigged](#myth-19-online-slots-are-rigged) | Independently tested, payouts published | — |
+| 20 | [A Bonus Is Free Money](#myth-20-a-bonus-is-free-money) | Wagering requirements are the price tag | — |
 
 ### By channel need
 
@@ -94,6 +99,8 @@ Find the right myth fast — by game type, by channel need, or by the cognitive 
 | Magical thinking | 3, 5 | Believing in luck, timing, or superstition |
 | Proportionality bias | 6 | Assuming bigger inputs = proportionally better outputs |
 | Optimism bias | 18 | Overestimating likelihood of positive outcomes |
+| Distrust heuristic | 19 | Assuming hidden manipulation when outcomes feel unfair |
+| Framing effect | 20 | Judging by how something is presented, not what it costs |
 
 ---
 
@@ -766,6 +773,81 @@ Understanding this isn't pessimistic — it's empowering. When you frame gamblin
 
 ---
 
+## Online Casino & iGaming
+
+---
+
+### Myth 19: Online Slots Are Rigged
+
+**Game type:** Online slots, iGaming | **Bias:** Distrust heuristic, illusion of unfairness | **Pillar:** Open
+
+#### Social card
+
+> **MYTH**: "Online slots are rigged. Real casinos at least have to play fair."
+>
+> **FACT**: Licensed online slots are tested by independent labs, just like the machines on a casino floor. Most online games even show their payback rate right in the info screen. Try getting that from a physical machine.
+>
+> **STAT**: Online slots commonly pay back 94–97% over time, as much or more than many casino-floor machines.
+
+#### Article explainer
+
+The losing streak ends, you close the app, and the thought arrives: *this thing is rigged.* You can't see the machine, so why trust it?
+
+Here's what's behind the screen. Licensed online slots run on software that picks a random result for every spin. Independent labs test that software, and regulators check it. That's the same oversight casino-floor machines get.
+
+Online games are often *more* open than the floor. Most show their "return to player" right in the info screen. That's the share of money the game pays back over time, and it's usually 94–97%, as good or better than many physical machines.
+
+A rigged game would be the fastest way for a site to lose its license. The house edge already does the job: legally, openly, and printed in the paytable.
+
+#### Quiz question
+
+> **Q: How does the payback of licensed online slots compare to casino-floor machines?**
+>
+> A) Much lower, since online games are unregulated
+> B) Equal or often higher, and usually shown in the game info ✓
+> C) It changes depending on how much you've deposited
+> D) Nobody knows, since online payouts are secret
+>
+> **Feedback**: Licensed online slots are tested by independent labs and usually show their payback rate in the game info. It's commonly 94–97%, as good or better than many physical machines. The house edge is real, but it's not hidden.
+
+---
+
+### Myth 20: A Bonus Is Free Money
+
+**Game type:** Online casino, iGaming | **Bias:** Framing effect, anchoring | **Pillar:** Open
+
+#### Social card
+
+> **MYTH**: "$100 deposit bonus = $100 free. Just withdraw it."
+>
+> **FACT**: Most bonuses come with wagering requirements. A $100 bonus at 30x means betting $3,000 before you can withdraw, with the house edge working on every one of those bets.
+>
+> **STAT**: $3,000 in required wagers at a 4% average edge costs about $120 in expected losses. More than the bonus itself.
+
+#### Article explainer
+
+"Deposit $100, get $100 free!" The word doing all the work in that sentence is "free."
+
+Here's the catch, decoded: most bonuses come with a *wagering requirement*. That's a rule that says you must bet the bonus a set number of times, usually 20x to 40x, before you can cash it out. A $100 bonus at 30x means placing $3,000 in bets first.
+
+Now the math. Every one of those bets faces the house edge. If the games keep about 4% on average, working through $3,000 in required bets costs around $120 in expected losses. That's more than the bonus itself. Add game restrictions, bet caps, and expiry dates, and "free" starts looking like a price tag.
+
+Bonuses aren't a scam. They're a discount on entertainment, sometimes a good one. Just read the multiplier before you celebrate.
+
+#### Quiz question
+
+> **Q: You get a $100 bonus with a 30x wagering requirement. What does that mean?**
+>
+> A) You can withdraw $100 after 30 bets
+> B) You must wager $3,000 before the bonus can be withdrawn ✓
+> C) Your winnings are multiplied by 30
+> D) The bonus expires in 30 days
+>
+> **Feedback**: 30x means $3,000 in total bets before the bonus converts to cash, with each bet facing the house edge. Bonuses can still be good value, but they're a discount with conditions, not free money.
+
+---
+
+
 ## Quick-reference index
 
 | # | Myth | Game type | Bias | Pillar |
@@ -788,3 +870,5 @@ Understanding this isn't pessimistic — it's empowering. When you frame gamblin
 | 16 | Buying more tickets dramatically improves odds | Lottery | Probability neglect | Open |
 | 17 | You can win back your losses | All | Sunk cost fallacy | Open |
 | 18 | Gambling is a way to make money | All | Optimism bias | Open |
+| 19 | Online slots are rigged | Online slots | Distrust heuristic | Open |
+| 20 | A bonus is free money | Online casino | Framing effect | Open |
