@@ -1,7 +1,7 @@
 {
   "meta": {
-    "totalAssets": 126,
-    "generated": "2026-06-10T16:40:23.386Z",
+    "totalAssets": 196,
+    "generated": "2026-06-10T17:39:05.717Z",
     "version": "0.1.0",
     "baseUrl": "/tools/playbook",
     "description": "Complete catalog of Playbook brand assets. All assets are CC0-licensed."
@@ -688,8 +688,49 @@
       ]
     },
     "collateral": {
-      "count": 67,
+      "count": 137,
       "assets": [
+        {
+          "id": "app-banner-12d.ar",
+          "filename": "app-banner-12d.ar.png",
+          "url": "/tools/playbook/assets/renders/app-banner-12d.ar.png",
+          "sourceUrl": "collateral/render/app-banner-12d.ar.png",
+          "format": "png",
+          "fileSize": 9947,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "betslip-rg-12g.ar",
+          "filename": "betslip-rg-12g.ar.png",
+          "url": "/tools/playbook/assets/renders/betslip-rg-12g.ar.png",
+          "sourceUrl": "collateral/render/betslip-rg-12g.ar.png",
+          "format": "png",
+          "fileSize": 22153,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "brochure-cover-8b.ar",
+          "filename": "brochure-cover-8b.ar.png",
+          "url": "/tools/playbook/assets/renders/brochure-cover-8b.ar.png",
+          "sourceUrl": "collateral/render/brochure-cover-8b.ar.png",
+          "format": "png",
+          "fileSize": 142572,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": {
+            "width": 2400,
+            "height": 1000
+          }
+        },
         {
           "id": "brochure-cover-8b",
           "filename": "brochure-cover-8b.png",
@@ -697,6 +738,23 @@
           "sourceUrl": "collateral/render/brochure-cover-8b.png",
           "format": "png",
           "fileSize": 116891,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": {
+            "width": 2400,
+            "height": 1000
+          }
+        },
+        {
+          "id": "brochure-trifold-8a.ar",
+          "filename": "brochure-trifold-8a.ar.png",
+          "url": "/tools/playbook/assets/renders/brochure-trifold-8a.ar.png",
+          "sourceUrl": "collateral/render/brochure-trifold-8a.ar.png",
+          "format": "png",
+          "fileSize": 245205,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -744,12 +802,183 @@
           }
         },
         {
+          "id": "card-11b-lucky-numbers.ar",
+          "filename": "card-11b-lucky-numbers.ar.png",
+          "url": "/tools/playbook/assets/renders/card-11b-lucky-numbers.ar.png",
+          "sourceUrl": "collateral/render/card-11b-lucky-numbers.ar.png",
+          "format": "png",
+          "fileSize": 76348,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-11b-lucky-numbers",
           "filename": "card-11b-lucky-numbers.png",
           "url": "/tools/playbook/assets/renders/card-11b-lucky-numbers.png",
           "sourceUrl": "collateral/render/card-11b-lucky-numbers.png",
           "format": "png",
           "fileSize": 66831,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13a-its-due.ar",
+          "filename": "card-13a-its-due.ar.png",
+          "url": "/tools/playbook/assets/renders/card-13a-its-due.ar.png",
+          "sourceUrl": "collateral/render/card-13a-its-due.ar.png",
+          "format": "png",
+          "fileSize": 60936,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13b-near-win.ar",
+          "filename": "card-13b-near-win.ar.png",
+          "url": "/tools/playbook/assets/renders/card-13b-near-win.ar.png",
+          "sourceUrl": "collateral/render/card-13b-near-win.ar.png",
+          "format": "png",
+          "fileSize": 58272,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13c-picked-right.ar",
+          "filename": "card-13c-picked-right.ar.png",
+          "url": "/tools/playbook/assets/renders/card-13c-picked-right.ar.png",
+          "sourceUrl": "collateral/render/card-13c-picked-right.ar.png",
+          "format": "png",
+          "fileSize": 60040,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13d-won-big.ar",
+          "filename": "card-13d-won-big.ar.png",
+          "url": "/tools/playbook/assets/renders/card-13d-won-big.ar.png",
+          "sourceUrl": "collateral/render/card-13d-won-big.ar.png",
+          "format": "png",
+          "fileSize": 59271,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13e-lucky-shirt.ar",
+          "filename": "card-13e-lucky-shirt.ar.png",
+          "url": "/tools/playbook/assets/renders/card-13e-lucky-shirt.ar.png",
+          "sourceUrl": "collateral/render/card-13e-lucky-shirt.ar.png",
+          "format": "png",
+          "fileSize": 62954,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13f-earned-win.ar",
+          "filename": "card-13f-earned-win.ar.png",
+          "url": "/tools/playbook/assets/renders/card-13f-earned-win.ar.png",
+          "sourceUrl": "collateral/render/card-13f-earned-win.ar.png",
+          "format": "png",
+          "fileSize": 57190,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-14a-every-game-blackjack.ar",
+          "filename": "card-14a-every-game-blackjack.ar.png",
+          "url": "/tools/playbook/assets/renders/card-14a-every-game-blackjack.ar.png",
+          "sourceUrl": "collateral/render/card-14a-every-game-blackjack.ar.png",
+          "format": "png",
+          "fileSize": 306505,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-15a-point-spread.ar",
+          "filename": "card-15a-point-spread.ar.png",
+          "url": "/tools/playbook/assets/renders/card-15a-point-spread.ar.png",
+          "sourceUrl": "collateral/render/card-15a-point-spread.ar.png",
+          "format": "png",
+          "fileSize": 313404,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1067,12 +1296,50 @@
           }
         },
         {
+          "id": "card-1a-hot-streak.ar",
+          "filename": "card-1a-hot-streak.ar.png",
+          "url": "/tools/playbook/assets/renders/card-1a-hot-streak.ar.png",
+          "sourceUrl": "collateral/render/card-1a-hot-streak.ar.png",
+          "format": "png",
+          "fileSize": 69274,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-1a-hot-streak",
           "filename": "card-1a-hot-streak.png",
           "url": "/tools/playbook/assets/renders/card-1a-hot-streak.png",
           "sourceUrl": "collateral/render/card-1a-hot-streak.png",
           "format": "png",
           "fileSize": 60604,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-1b-due-for-win.ar",
+          "filename": "card-1b-due-for-win.ar.png",
+          "url": "/tools/playbook/assets/renders/card-1b-due-for-win.ar.png",
+          "sourceUrl": "collateral/render/card-1b-due-for-win.ar.png",
+          "format": "png",
+          "fileSize": 70491,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1105,12 +1372,50 @@
           }
         },
         {
+          "id": "card-1c-lucky-machine.ar",
+          "filename": "card-1c-lucky-machine.ar.png",
+          "url": "/tools/playbook/assets/renders/card-1c-lucky-machine.ar.png",
+          "sourceUrl": "collateral/render/card-1c-lucky-machine.ar.png",
+          "format": "png",
+          "fileSize": 82177,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-1c-lucky-machine",
           "filename": "card-1c-lucky-machine.png",
           "url": "/tools/playbook/assets/renders/card-1c-lucky-machine.png",
           "sourceUrl": "collateral/render/card-1c-lucky-machine.png",
           "format": "png",
           "fileSize": 80558,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2a-house-edge.ar",
+          "filename": "card-2a-house-edge.ar.png",
+          "url": "/tools/playbook/assets/renders/card-2a-house-edge.ar.png",
+          "sourceUrl": "collateral/render/card-2a-house-edge.ar.png",
+          "format": "png",
+          "fileSize": 333866,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1143,12 +1448,50 @@
           }
         },
         {
+          "id": "card-2b-sports-betting.ar",
+          "filename": "card-2b-sports-betting.ar.png",
+          "url": "/tools/playbook/assets/renders/card-2b-sports-betting.ar.png",
+          "sourceUrl": "collateral/render/card-2b-sports-betting.ar.png",
+          "format": "png",
+          "fileSize": 65007,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-2b-sports-betting",
           "filename": "card-2b-sports-betting.png",
           "url": "/tools/playbook/assets/renders/card-2b-sports-betting.png",
           "sourceUrl": "collateral/render/card-2b-sports-betting.png",
           "format": "png",
           "fileSize": 65275,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2c-bonus-wagering.ar",
+          "filename": "card-2c-bonus-wagering.ar.png",
+          "url": "/tools/playbook/assets/renders/card-2c-bonus-wagering.ar.png",
+          "sourceUrl": "collateral/render/card-2c-bonus-wagering.ar.png",
+          "format": "png",
+          "fileSize": 69599,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1181,6 +1524,25 @@
           }
         },
         {
+          "id": "card-tier2-10f.ar",
+          "filename": "card-tier2-10f.ar.png",
+          "url": "/tools/playbook/assets/renders/card-tier2-10f.ar.png",
+          "sourceUrl": "collateral/render/card-tier2-10f.ar.png",
+          "format": "png",
+          "fileSize": 54041,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-tier2-10f",
           "filename": "card-tier2-10f.png",
           "url": "/tools/playbook/assets/renders/card-tier2-10f.png",
@@ -1200,6 +1562,20 @@
           }
         },
         {
+          "id": "cooldown-10e.ar",
+          "filename": "cooldown-10e.ar.png",
+          "url": "/tools/playbook/assets/renders/cooldown-10e.ar.png",
+          "sourceUrl": "collateral/render/cooldown-10e.ar.png",
+          "format": "png",
+          "fileSize": 34898,
+          "category": "collateral",
+          "subcategory": "tier-2-support",
+          "channel": [
+            "in-app"
+          ],
+          "dimensions": null
+        },
+        {
           "id": "cooldown-10e",
           "filename": "cooldown-10e.png",
           "url": "/tools/playbook/assets/renders/cooldown-10e.png",
@@ -1214,12 +1590,69 @@
           "dimensions": null
         },
         {
+          "id": "deposit-interstitial-12b.ar",
+          "filename": "deposit-interstitial-12b.ar.png",
+          "url": "/tools/playbook/assets/renders/deposit-interstitial-12b.ar.png",
+          "sourceUrl": "collateral/render/deposit-interstitial-12b.ar.png",
+          "format": "png",
+          "fileSize": 40331,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "display-14e-every-game.ar",
+          "filename": "display-14e-every-game.ar.png",
+          "url": "/tools/playbook/assets/renders/display-14e-every-game.ar.png",
+          "sourceUrl": "collateral/render/display-14e-every-game.ar.png",
+          "format": "png",
+          "fileSize": 493129,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-landscape-6a.ar",
+          "filename": "display-landscape-6a.ar.png",
+          "url": "/tools/playbook/assets/renders/display-landscape-6a.ar.png",
+          "sourceUrl": "collateral/render/display-landscape-6a.ar.png",
+          "format": "png",
+          "fileSize": 484756,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
           "id": "display-landscape-6a",
           "filename": "display-landscape-6a.png",
           "url": "/tools/playbook/assets/renders/display-landscape-6a.png",
           "sourceUrl": "collateral/render/display-landscape-6a.png",
           "format": "png",
           "fileSize": 473920,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-portrait-6b.ar",
+          "filename": "display-portrait-6b.ar.png",
+          "url": "/tools/playbook/assets/renders/display-portrait-6b.ar.png",
+          "sourceUrl": "collateral/render/display-portrait-6b.ar.png",
+          "format": "png",
+          "fileSize": 168019,
           "category": "collateral",
           "subcategory": "digital-display",
           "channel": [
@@ -1244,12 +1677,63 @@
           "dimensions": null
         },
         {
+          "id": "email-14d-every-game.ar",
+          "filename": "email-14d-every-game.ar.png",
+          "url": "/tools/playbook/assets/renders/email-14d-every-game.ar.png",
+          "sourceUrl": "collateral/render/email-14d-every-game.ar.png",
+          "format": "png",
+          "fileSize": 73839,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-deposit-7b.ar",
+          "filename": "email-deposit-7b.ar.png",
+          "url": "/tools/playbook/assets/renders/email-deposit-7b.ar.png",
+          "sourceUrl": "collateral/render/email-deposit-7b.ar.png",
+          "format": "png",
+          "fileSize": 52068,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
           "id": "email-deposit-7b",
           "filename": "email-deposit-7b.png",
           "url": "/tools/playbook/assets/renders/email-deposit-7b.png",
           "sourceUrl": "collateral/render/email-deposit-7b.png",
           "format": "png",
           "fileSize": 70616,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-monthly-7c.ar",
+          "filename": "email-monthly-7c.ar.png",
+          "url": "/tools/playbook/assets/renders/email-monthly-7c.ar.png",
+          "sourceUrl": "collateral/render/email-monthly-7c.ar.png",
+          "format": "png",
+          "fileSize": 56361,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1278,12 +1762,46 @@
           }
         },
         {
+          "id": "email-reactivation-7d.ar",
+          "filename": "email-reactivation-7d.ar.png",
+          "url": "/tools/playbook/assets/renders/email-reactivation-7d.ar.png",
+          "sourceUrl": "collateral/render/email-reactivation-7d.ar.png",
+          "format": "png",
+          "fileSize": 59798,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
           "id": "email-reactivation-7d",
           "filename": "email-reactivation-7d.png",
           "url": "/tools/playbook/assets/renders/email-reactivation-7d.png",
           "sourceUrl": "collateral/render/email-reactivation-7d.png",
           "format": "png",
           "fileSize": 87942,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-support-10h.ar",
+          "filename": "email-support-10h.ar.png",
+          "url": "/tools/playbook/assets/renders/email-support-10h.ar.png",
+          "sourceUrl": "collateral/render/email-support-10h.ar.png",
+          "format": "png",
+          "fileSize": 76287,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1312,6 +1830,23 @@
           }
         },
         {
+          "id": "email-welcome-7a.ar",
+          "filename": "email-welcome-7a.ar.png",
+          "url": "/tools/playbook/assets/renders/email-welcome-7a.ar.png",
+          "sourceUrl": "collateral/render/email-welcome-7a.ar.png",
+          "format": "png",
+          "fileSize": 71065,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
           "id": "email-welcome-7a",
           "filename": "email-welcome-7a.png",
           "url": "/tools/playbook/assets/renders/email-welcome-7a.png",
@@ -1329,6 +1864,21 @@
           }
         },
         {
+          "id": "helpline-card-5c.ar",
+          "filename": "helpline-card-5c.ar.png",
+          "url": "/tools/playbook/assets/renders/helpline-card-5c.ar.png",
+          "sourceUrl": "collateral/render/helpline-card-5c.ar.png",
+          "format": "png",
+          "fileSize": 39165,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
           "id": "helpline-card-5c",
           "filename": "helpline-card-5c.png",
           "url": "/tools/playbook/assets/renders/helpline-card-5c.png",
@@ -1342,6 +1892,24 @@
             "venue"
           ],
           "dimensions": null
+        },
+        {
+          "id": "htp-card-baccarat.ar",
+          "filename": "htp-card-baccarat.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-card-baccarat.ar.png",
+          "sourceUrl": "collateral/render/htp-card-baccarat.ar.png",
+          "format": "png",
+          "fileSize": 64434,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
         },
         {
           "id": "htp-card-baccarat",
@@ -1368,6 +1936,24 @@
           "sourceUrl": "collateral/render/htp-card-bingo.png",
           "format": "png",
           "fileSize": 62805,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-blackjack.ar",
+          "filename": "htp-card-blackjack.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-card-blackjack.ar.png",
+          "sourceUrl": "collateral/render/htp-card-blackjack.ar.png",
+          "format": "png",
+          "fileSize": 61904,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -1416,12 +2002,48 @@
           }
         },
         {
+          "id": "htp-card-horse-racing.ar",
+          "filename": "htp-card-horse-racing.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-card-horse-racing.ar.png",
+          "sourceUrl": "collateral/render/htp-card-horse-racing.ar.png",
+          "format": "png",
+          "fileSize": 60845,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "htp-card-horse-racing",
           "filename": "htp-card-horse-racing.png",
           "url": "/tools/playbook/assets/renders/htp-card-horse-racing.png",
           "sourceUrl": "collateral/render/htp-card-horse-racing.png",
           "format": "png",
           "fileSize": 66367,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-lottery.ar",
+          "filename": "htp-card-lottery.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-card-lottery.ar.png",
+          "sourceUrl": "collateral/render/htp-card-lottery.ar.png",
+          "format": "png",
+          "fileSize": 60426,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -1452,6 +2074,24 @@
           }
         },
         {
+          "id": "htp-card-roulette.ar",
+          "filename": "htp-card-roulette.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-card-roulette.ar.png",
+          "sourceUrl": "collateral/render/htp-card-roulette.ar.png",
+          "format": "png",
+          "fileSize": 61381,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "htp-card-roulette",
           "filename": "htp-card-roulette.png",
           "url": "/tools/playbook/assets/renders/htp-card-roulette.png",
@@ -1470,12 +2110,48 @@
           }
         },
         {
+          "id": "htp-card-slots.ar",
+          "filename": "htp-card-slots.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-card-slots.ar.png",
+          "sourceUrl": "collateral/render/htp-card-slots.ar.png",
+          "format": "png",
+          "fileSize": 58732,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "htp-card-slots",
           "filename": "htp-card-slots.png",
           "url": "/tools/playbook/assets/renders/htp-card-slots.png",
           "sourceUrl": "collateral/render/htp-card-slots.png",
           "format": "png",
           "fileSize": 81706,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-sports.ar",
+          "filename": "htp-card-sports.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-card-sports.ar.png",
+          "sourceUrl": "collateral/render/htp-card-sports.ar.png",
+          "format": "png",
+          "fileSize": 62911,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -1524,6 +2200,24 @@
           }
         },
         {
+          "id": "htp-odds-comparison.ar",
+          "filename": "htp-odds-comparison.ar.png",
+          "url": "/tools/playbook/assets/renders/htp-odds-comparison.ar.png",
+          "sourceUrl": "collateral/render/htp-odds-comparison.ar.png",
+          "format": "png",
+          "fileSize": 76331,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "htp-odds-comparison",
           "filename": "htp-odds-comparison.png",
           "url": "/tools/playbook/assets/renders/htp-odds-comparison.png",
@@ -1542,6 +2236,30 @@
           }
         },
         {
+          "id": "in-play-overlay-12c.ar",
+          "filename": "in-play-overlay-12c.ar.png",
+          "url": "/tools/playbook/assets/renders/in-play-overlay-12c.ar.png",
+          "sourceUrl": "collateral/render/in-play-overlay-12c.ar.png",
+          "format": "png",
+          "fileSize": 17840,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "limit-reached-10d.ar",
+          "filename": "limit-reached-10d.ar.png",
+          "url": "/tools/playbook/assets/renders/limit-reached-10d.ar.png",
+          "sourceUrl": "collateral/render/limit-reached-10d.ar.png",
+          "format": "png",
+          "fileSize": 15055,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
           "id": "limit-reached-10d",
           "filename": "limit-reached-10d.png",
           "url": "/tools/playbook/assets/renders/limit-reached-10d.png",
@@ -1554,12 +2272,120 @@
           "dimensions": null
         },
         {
+          "id": "live-odds-overlay-15d.ar",
+          "filename": "live-odds-overlay-15d.ar.png",
+          "url": "/tools/playbook/assets/renders/live-odds-overlay-15d.ar.png",
+          "sourceUrl": "collateral/render/live-odds-overlay-15d.ar.png",
+          "format": "png",
+          "fileSize": 21006,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-14f-every-game.ar",
+          "filename": "mobile-14f-every-game.ar.png",
+          "url": "/tools/playbook/assets/renders/mobile-14f-every-game.ar.png",
+          "sourceUrl": "collateral/render/mobile-14f-every-game.ar.png",
+          "format": "png",
+          "fileSize": 51146,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-onboarding-12a.ar",
+          "filename": "mobile-onboarding-12a.ar.png",
+          "url": "/tools/playbook/assets/renders/mobile-onboarding-12a.ar.png",
+          "sourceUrl": "collateral/render/mobile-onboarding-12a.ar.png",
+          "format": "png",
+          "fileSize": 41633,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "poster-14c-every-game-slots.ar",
+          "filename": "poster-14c-every-game-slots.ar.png",
+          "url": "/tools/playbook/assets/renders/poster-14c-every-game-slots.ar.png",
+          "sourceUrl": "collateral/render/poster-14c-every-game-slots.ar.png",
+          "format": "png",
+          "fileSize": 227760,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-15c-how-sportsbook-wins.ar",
+          "filename": "poster-15c-how-sportsbook-wins.ar.png",
+          "url": "/tools/playbook/assets/renders/poster-15c-how-sportsbook-wins.ar.png",
+          "sourceUrl": "collateral/render/poster-15c-how-sportsbook-wins.ar.png",
+          "format": "png",
+          "fileSize": 242937,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4a-know-your-game.ar",
+          "filename": "poster-4a-know-your-game.ar.png",
+          "url": "/tools/playbook/assets/renders/poster-4a-know-your-game.ar.png",
+          "sourceUrl": "collateral/render/poster-4a-know-your-game.ar.png",
+          "format": "png",
+          "fileSize": 244799,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
           "id": "poster-4a-know-your-game",
           "filename": "poster-4a-know-your-game.png",
           "url": "/tools/playbook/assets/renders/poster-4a-know-your-game.png",
           "sourceUrl": "collateral/render/poster-4a-know-your-game.png",
           "format": "png",
           "fileSize": 255046,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4b-no-fine-print.ar",
+          "filename": "poster-4b-no-fine-print.ar.png",
+          "url": "/tools/playbook/assets/renders/poster-4b-no-fine-print.ar.png",
+          "sourceUrl": "collateral/render/poster-4b-no-fine-print.ar.png",
+          "format": "png",
+          "fileSize": 257676,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -1590,12 +2416,48 @@
           }
         },
         {
+          "id": "poster-4c-game-iq.ar",
+          "filename": "poster-4c-game-iq.ar.png",
+          "url": "/tools/playbook/assets/renders/poster-4c-game-iq.ar.png",
+          "sourceUrl": "collateral/render/poster-4c-game-iq.ar.png",
+          "format": "png",
+          "fileSize": 231297,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
           "id": "poster-4c-game-iq",
           "filename": "poster-4c-game-iq.png",
           "url": "/tools/playbook/assets/renders/poster-4c-game-iq.png",
           "sourceUrl": "collateral/render/poster-4c-game-iq.png",
           "format": "png",
           "fileSize": 226487,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4d-lottery-odds.ar",
+          "filename": "poster-4d-lottery-odds.ar.png",
+          "url": "/tools/playbook/assets/renders/poster-4d-lottery-odds.ar.png",
+          "sourceUrl": "collateral/render/poster-4d-lottery-odds.ar.png",
+          "format": "png",
+          "fileSize": 265124,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -1644,6 +2506,24 @@
           }
         },
         {
+          "id": "poster-tier2-10g.ar",
+          "filename": "poster-tier2-10g.ar.png",
+          "url": "/tools/playbook/assets/renders/poster-tier2-10g.ar.png",
+          "sourceUrl": "collateral/render/poster-tier2-10g.ar.png",
+          "format": "png",
+          "fileSize": 136723,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
           "id": "poster-tier2-10g",
           "filename": "poster-tier2-10g.png",
           "url": "/tools/playbook/assets/renders/poster-tier2-10g.png",
@@ -1662,6 +2542,32 @@
           }
         },
         {
+          "id": "push-notification-12e.ar",
+          "filename": "push-notification-12e.ar.png",
+          "url": "/tools/playbook/assets/renders/push-notification-12e.ar.png",
+          "sourceUrl": "collateral/render/push-notification-12e.ar.png",
+          "format": "png",
+          "fileSize": 8733,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "rack-card-5a.ar",
+          "filename": "rack-card-5a.ar.png",
+          "url": "/tools/playbook/assets/renders/rack-card-5a.ar.png",
+          "sourceUrl": "collateral/render/rack-card-5a.ar.png",
+          "format": "png",
+          "fileSize": 105156,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": null
+        },
+        {
           "id": "rack-card-5a",
           "filename": "rack-card-5a.png",
           "url": "/tools/playbook/assets/renders/rack-card-5a.png",
@@ -1676,6 +2582,18 @@
           "dimensions": null
         },
         {
+          "id": "self-exclusion-10b.ar",
+          "filename": "self-exclusion-10b.ar.png",
+          "url": "/tools/playbook/assets/renders/self-exclusion-10b.ar.png",
+          "sourceUrl": "collateral/render/self-exclusion-10b.ar.png",
+          "format": "png",
+          "fileSize": 34833,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
           "id": "self-exclusion-10b",
           "filename": "self-exclusion-10b.png",
           "url": "/tools/playbook/assets/renders/self-exclusion-10b.png",
@@ -1685,6 +2603,20 @@
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "session-summary-10c.ar",
+          "filename": "session-summary-10c.ar.png",
+          "url": "/tools/playbook/assets/renders/session-summary-10c.ar.png",
+          "sourceUrl": "collateral/render/session-summary-10c.ar.png",
+          "format": "png",
+          "fileSize": 18838,
+          "category": "collateral",
+          "subcategory": "tier-2-support",
+          "channel": [
+            "in-app"
+          ],
           "dimensions": null
         },
         {
@@ -1702,12 +2634,42 @@
           "dimensions": null
         },
         {
+          "id": "sign-atm-9b.ar",
+          "filename": "sign-atm-9b.ar.png",
+          "url": "/tools/playbook/assets/renders/sign-atm-9b.ar.png",
+          "sourceUrl": "collateral/render/sign-atm-9b.ar.png",
+          "format": "png",
+          "fileSize": 67512,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
           "id": "sign-atm-9b",
           "filename": "sign-atm-9b.png",
           "url": "/tools/playbook/assets/renders/sign-atm-9b.png",
           "sourceUrl": "collateral/render/sign-atm-9b.png",
           "format": "png",
           "fileSize": 59990,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-entrance-9a.ar",
+          "filename": "sign-entrance-9a.ar.png",
+          "url": "/tools/playbook/assets/renders/sign-entrance-9a.ar.png",
+          "sourceUrl": "collateral/render/sign-entrance-9a.ar.png",
+          "format": "png",
+          "fileSize": 73054,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -1732,12 +2694,42 @@
           "dimensions": null
         },
         {
+          "id": "sign-floor-9c.ar",
+          "filename": "sign-floor-9c.ar.png",
+          "url": "/tools/playbook/assets/renders/sign-floor-9c.ar.png",
+          "sourceUrl": "collateral/render/sign-floor-9c.ar.png",
+          "format": "png",
+          "fileSize": 59799,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
           "id": "sign-floor-9c",
           "filename": "sign-floor-9c.png",
           "url": "/tools/playbook/assets/renders/sign-floor-9c.png",
           "sourceUrl": "collateral/render/sign-floor-9c.png",
           "format": "png",
           "fileSize": 50502,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-restroom-9d.ar",
+          "filename": "sign-restroom-9d.ar.png",
+          "url": "/tools/playbook/assets/renders/sign-restroom-9d.ar.png",
+          "sourceUrl": "collateral/render/sign-restroom-9d.ar.png",
+          "format": "png",
+          "fileSize": 35516,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -1762,6 +2754,21 @@
           "dimensions": null
         },
         {
+          "id": "sign-staff-9e.ar",
+          "filename": "sign-staff-9e.ar.png",
+          "url": "/tools/playbook/assets/renders/sign-staff-9e.ar.png",
+          "sourceUrl": "collateral/render/sign-staff-9e.ar.png",
+          "format": "png",
+          "fileSize": 116006,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
           "id": "sign-staff-9e",
           "filename": "sign-staff-9e.png",
           "url": "/tools/playbook/assets/renders/sign-staff-9e.png",
@@ -1777,12 +2784,84 @@
           "dimensions": null
         },
         {
+          "id": "story-14b-every-game-roulette.ar",
+          "filename": "story-14b-every-game-roulette.ar.png",
+          "url": "/tools/playbook/assets/renders/story-14b-every-game-roulette.ar.png",
+          "sourceUrl": "collateral/render/story-14b-every-game-roulette.ar.png",
+          "format": "png",
+          "fileSize": 119579,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-15b-bet-costs.ar",
+          "filename": "story-15b-bet-costs.ar.png",
+          "url": "/tools/playbook/assets/renders/story-15b-bet-costs.ar.png",
+          "sourceUrl": "collateral/render/story-15b-bet-costs.ar.png",
+          "format": "png",
+          "fileSize": 118494,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3a-hot-streak.ar",
+          "filename": "story-3a-hot-streak.ar.png",
+          "url": "/tools/playbook/assets/renders/story-3a-hot-streak.ar.png",
+          "sourceUrl": "collateral/render/story-3a-hot-streak.ar.png",
+          "format": "png",
+          "fileSize": 114005,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
           "id": "story-3a-hot-streak",
           "filename": "story-3a-hot-streak.png",
           "url": "/tools/playbook/assets/renders/story-3a-hot-streak.png",
           "sourceUrl": "collateral/render/story-3a-hot-streak.png",
           "format": "png",
           "fileSize": 110023,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3b-house-edge.ar",
+          "filename": "story-3b-house-edge.ar.png",
+          "url": "/tools/playbook/assets/renders/story-3b-house-edge.ar.png",
+          "sourceUrl": "collateral/render/story-3b-house-edge.ar.png",
+          "format": "png",
+          "fileSize": 138482,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -1813,6 +2892,24 @@
           }
         },
         {
+          "id": "story-3c-sports-betting.ar",
+          "filename": "story-3c-sports-betting.ar.png",
+          "url": "/tools/playbook/assets/renders/story-3c-sports-betting.ar.png",
+          "sourceUrl": "collateral/render/story-3c-sports-betting.ar.png",
+          "format": "png",
+          "fileSize": 114119,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
           "id": "story-3c-sports-betting",
           "filename": "story-3c-sports-betting.png",
           "url": "/tools/playbook/assets/renders/story-3c-sports-betting.png",
@@ -1831,6 +2928,18 @@
           }
         },
         {
+          "id": "support-page-10a.ar",
+          "filename": "support-page-10a.ar.png",
+          "url": "/tools/playbook/assets/renders/support-page-10a.ar.png",
+          "sourceUrl": "collateral/render/support-page-10a.ar.png",
+          "format": "png",
+          "fileSize": 75819,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
           "id": "support-page-10a",
           "filename": "support-page-10a.png",
           "url": "/tools/playbook/assets/renders/support-page-10a.png",
@@ -1843,12 +2952,48 @@
           "dimensions": null
         },
         {
+          "id": "table-tent-5b.ar",
+          "filename": "table-tent-5b.ar.png",
+          "url": "/tools/playbook/assets/renders/table-tent-5b.ar.png",
+          "sourceUrl": "collateral/render/table-tent-5b.ar.png",
+          "format": "png",
+          "fileSize": 93722,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
           "id": "table-tent-5b",
           "filename": "table-tent-5b.png",
           "url": "/tools/playbook/assets/renders/table-tent-5b.png",
           "sourceUrl": "collateral/render/table-tent-5b.png",
           "format": "png",
           "fileSize": 88598,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "web-popup-12h.ar",
+          "filename": "web-popup-12h.ar.png",
+          "url": "/tools/playbook/assets/renders/web-popup-12h.ar.png",
+          "sourceUrl": "collateral/render/web-popup-12h.ar.png",
+          "format": "png",
+          "fileSize": 26307,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "withdrawal-confirm-12f.ar",
+          "filename": "withdrawal-confirm-12f.ar.png",
+          "url": "/tools/playbook/assets/renders/withdrawal-confirm-12f.ar.png",
+          "sourceUrl": "collateral/render/withdrawal-confirm-12f.ar.png",
+          "format": "png",
+          "fileSize": 41900,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
