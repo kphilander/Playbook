@@ -25,6 +25,9 @@ adaptation_notes: |
   Campaign 8 (Big Game): Player copy says "the big game" — never a
   trademarked event name. Anchor to your market's marquee event
   (championship final, Grand Final, Cup Final) in the timing note only.
+  Squares pools and -110 odds are US conventions: replace with the
+  local equivalent (office sweepstake, footy tipping) and odds format,
+  including in card-17a, before deploying outside the US.
   Campaign 9 (New Year): Timing assumes January 1 new year. Shift to
   local new-year moment where relevant (e.g., Lunar New Year markets).
   Campaign 10 (Online Reality Check): Bonus/wagering and RTP publication
@@ -609,7 +612,7 @@ Send January 2–3 as a year-in-review:
 > - Hero: "New year, same math" card image
 > - Year-in-review stats block (sessions, favorite games — reuse monthly summary format)
 > - Myth 17 + Myth 18 as short myth/fact pairs
-> - CTA: "Set your 2026 budget" → deposit limit feature
+> - CTA: "Set your new-year budget" → deposit limit feature
 > - CTA: "Test your Game IQ" → quiz link
 
 ### Timing note

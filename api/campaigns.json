@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 10,
-    "generated": "2026-06-10T00:57:38.954Z",
+    "generated": "2026-06-10T04:53:15.477Z",
     "version": "0.1.0",
     "source": "messaging/campaigns.md"
   },
@@ -43,7 +43,7 @@
       "language": "en-us"
     },
     "adaptation_status": "base",
-    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\nCampaign 8 (Big Game): Player copy says \"the big game\" — never a\ntrademarked event name. Anchor to your market's marquee event\n(championship final, Grand Final, Cup Final) in the timing note only.\nCampaign 9 (New Year): Timing assumes January 1 new year. Shift to\nlocal new-year moment where relevant (e.g., Lunar New Year markets).\nCampaign 10 (Online Reality Check): Bonus/wagering and RTP publication\nrules vary by jurisdiction — verify Myth 19/22/26 claims locally.\n",
+    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\nCampaign 8 (Big Game): Player copy says \"the big game\" — never a\ntrademarked event name. Anchor to your market's marquee event\n(championship final, Grand Final, Cup Final) in the timing note only.\nSquares pools and -110 odds are US conventions: replace with the\nlocal equivalent (office sweepstake, footy tipping) and odds format,\nincluding in card-17a, before deploying outside the US.\nCampaign 9 (New Year): Timing assumes January 1 new year. Shift to\nlocal new-year moment where relevant (e.g., Lunar New Year markets).\nCampaign 10 (Online Reality Check): Bonus/wagering and RTP publication\nrules vary by jurisdiction — verify Myth 19/22/26 claims locally.\n",
     "last_updated": "2026-06-10T00:00:00.000Z"
   },
   "campaigns": [
@@ -1164,7 +1164,7 @@
           "Hero: \"New year, same math\" card image",
           "Year-in-review stats block (sessions, favorite games — reuse monthly summary format)",
           "Myth 17 + Myth 18 as short myth/fact pairs",
-          "CTA: \"Set your 2026 budget\" → deposit limit feature",
+          "CTA: \"Set your new-year budget\" → deposit limit feature",
           "CTA: \"Test your Game IQ\" → quiz link"
         ]
       },

@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 26,
-    "generated": "2026-06-10T00:57:38.954Z",
+    "generated": "2026-06-10T04:53:15.477Z",
     "version": "0.1.0",
     "source": "messaging/myth-busting.md"
   },
@@ -974,7 +974,7 @@
         "fact": "Live dealers follow the same fixed rules as any casino floor, on camera, with every hand recorded and audited. Stream lag is your internet, not a cover-up.",
         "stat": "0 decisions are made by the dealer. Shuffles are tracked, hands are scripted, and regulators can review every second of footage."
       },
-      "articleExplainer": "The live dealer smiled at you, chatted between hands, and you won three in a row. New theory: she likes you, and she's dealing accordingly.\n\nShe isn't, because she can't. Live dealers follow the same fixed rules as any casino floor: hit on 16, stand on 17, no judgment calls, no favorites. The studio actually has *more* oversight than a casino floor: multiple cameras, sensors that log every card dealt, and full recordings that auditors can review.\n\nThe darker version of this myth says the stream itself is rigged: the lag, the cut, the reshuffle right before your big hand. But a laggy stream is your internet catching up, not a window for the house to change anything. The cards were dealt when they were dealt; your screen just saw it half a second later.\n\nThe dealer's job is to be pleasant and deal the script. The math never joins the small talk.",
+      "articleExplainer": "The live dealer smiled at you, chatted between hands, and you won three in a row. New theory: she likes you, and she's dealing accordingly.\n\nShe isn't, because she can't. Live dealers follow the same fixed rules as any casino floor: in blackjack, hit on 16, stand on 17, no judgment calls, no favorites. The studio actually has *more* oversight than a casino floor: multiple cameras, sensors that log every card dealt, and full recordings that auditors can review.\n\nThe darker version of this myth says the stream itself is rigged: the lag, the cut, the reshuffle right before your big hand. But a laggy stream is your internet catching up, not a window for the house to change anything. The cards were dealt when they were dealt; your screen just saw it half a second later.\n\nThe dealer's job is to be pleasant and deal the script. The math never joins the small talk.",
       "quiz": {
         "question": "A live dealer has been \"hot\" against the table for an hour. What's going on?",
         "options": [
@@ -1094,10 +1094,10 @@
       "pillar": "open",
       "socialCard": {
         "myth": "Demo mode pays like crazy. Switch to real money and the game tightens up.",
-        "fact": "On licensed sites, demo and real-money versions must run the same math. The \"switch\" you feel is a short demo run meeting a long real-money session, plus the fact that losing fake money doesn't sting.",
+        "fact": "In most regulated markets, demo and real-money versions must run the same math. The \"switch\" you feel is a short demo run meeting a long real-money session, plus the fact that losing fake money doesn't sting.",
         "stat": "Same game, same odds. Regulated demo versions are required to match the real-money math."
       },
-      "articleExplainer": "Everyone's run the experiment: win a fortune in demo mode, deposit real money, and watch the game apparently remember it's a business.\n\nOn licensed sites, demo mode must use the same math as the real-money game. Regulators check this, because a \"loose demo\" would be false advertising. Same odds, same payouts, same game.\n\nSo why does the switch feel real? Two reasons. Sample size: you might demo for ten minutes and play for two hours, and short sessions swing wildly both ways. You remember the lucky demo run and forget the unlucky one. And stakes change what you notice: fake losses don't register, real ones do. The same losing streak feels like noise in demo and like a pattern with money on the line.\n\nOne honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a reason to play on regulated platforms, not proof the math changes when money shows up.",
+      "articleExplainer": "Everyone's run the experiment: win a fortune in demo mode, deposit real money, and watch the game apparently remember it's a business.\n\nIn most regulated markets, demo mode must use the same math as the real-money game, and regulators check it, because a \"loose demo\" would be false advertising. Same odds, same payouts, same game.\n\nSo why does the switch feel real? Two reasons. Sample size: you might demo for ten minutes and play for two hours, and short sessions swing wildly both ways. You remember the lucky demo run and forget the unlucky one. And stakes change what you notice: fake losses don't register, real ones do. The same losing streak feels like noise in demo and like a pattern with money on the line.\n\nOne honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a reason to play on regulated platforms, not proof the math changes when money shows up.",
       "quiz": {
         "question": "You won big in demo mode but lose with real money. On a licensed site, what changed?",
         "options": [
@@ -1118,7 +1118,7 @@
             "correct": false
           }
         ],
-        "feedback": "Licensed platforms must run identical math in demo and real-money modes. Short demo sessions plus painless fake losses create the feeling of a switch that the regulated math doesn't allow."
+        "feedback": "In most regulated markets, demo and real-money modes must run identical math. Short demo sessions plus painless fake losses create the feeling of a switch that the math doesn't allow."
       }
     }
   ]
