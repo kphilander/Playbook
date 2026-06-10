@@ -25,18 +25,22 @@
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 20px; }
   .myth-statement { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 32px; letter-spacing: -0.02em; }
   .myth-statement .strike { text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 5px; color: var(--pb-color-neutral-300); }
+  .body-row { display: flex; align-items: center; gap: 48px; }
+  .body-text { flex: 1; }
   .fact-statement { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); }
   .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
-  .stat-block { margin-top: 40px; display: flex; align-items: baseline; gap: 16px; }
-  .stat-number { font-family: var(--pb-font-heading); font-size: calc(72px * var(--pb-template-text-scale, 1)); font-weight: 900; color: var(--pb-color-accent); line-height: 1; letter-spacing: -0.03em; }
-  .stat-unit { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); line-height: 1.3; }
+  .donut-legend { margin-top: 36px; }
+  .legend-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .legend-swatch { width: 16px; height: 16px; border-radius: 4px; }
+  .legend-swatch.teal { background: var(--pb-color-secondary); }
+  .legend-swatch.orange { background: var(--pb-color-accent); }
+  .legend-text { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); }
+  .donut-wrap { width: 320px; flex-shrink: 0; }
+  .donut-wrap svg { width: 100%; height: auto; display: block; }
+  .donut-wrap svg text { font-family: var(--pb-font-heading), 'Inter', sans-serif; }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
-  .icon-chip { width: 88px; height: 88px; border-radius: 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: var(--pb-color-secondary); }
-  .icon-chip svg { width: 48px; height: 48px; }
-  .bg-motif { position: absolute; right: -70px; bottom: 80px; width: 520px; height: 520px; color: var(--pb-color-secondary); opacity: 0.06; z-index: 0; }
-  .bg-motif svg { width: 100%; height: 100%; }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -44,16 +48,29 @@
 <div class="social-card">
   <div class="card-header">
     <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
-    <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M3 8h4l6 8h4"/><path d="M3 16h4l6-8h4"/></g><g stroke-width="1"><polyline points="18 6 21 8 18 10"/><polyline points="18 14 21 16 18 18"/></g></svg></span>
   </div>
-  <div class="bg-motif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1"><path d="M3 8h4l6 8h4"/><path d="M3 16h4l6-8h4"/></g><g stroke-width="0.5"><polyline points="18 6 21 8 18 10"/><polyline points="18 14 21 16 18 18"/></g></svg></div>
   <div class="card-body">
     <div class="myth-label">Myth vs. Math</div>
     <div class="myth-statement"><span class="strike">"Online slots are rigged"</span></div>
-    <div class="fact-statement">Licensed online slots are <strong>tested by independent labs</strong>. Most even show their payback rate in the game info.</div>
-    <div class="stat-block">
-      <span class="stat-number">94–97%</span>
-      <span class="stat-unit">typical online payback rate</span>
+    <div class="body-row">
+      <div class="body-text">
+        <div class="fact-statement">Licensed online slots are <strong>tested by independent labs</strong>. Most even show their payback rate in the game info.</div>
+        <div class="donut-legend">
+          <div class="legend-item"><span class="legend-swatch teal"></span><span class="legend-text">paid back to players</span></div>
+          <div class="legend-item"><span class="legend-swatch orange"></span><span class="legend-text">the house edge</span></div>
+        </div>
+      </div>
+      <div class="donut-wrap">
+        <svg viewBox="0 0 240 240" fill="none">
+          <circle cx="120" cy="120" r="88" stroke="rgba(255,255,255,0.06)" stroke-width="30"/>
+          <g transform="rotate(-90 120 120)">
+            <circle cx="120" cy="120" r="88" stroke="var(--pb-color-secondary)" stroke-width="30" stroke-dasharray="524 29" stroke-linecap="butt"/>
+            <circle cx="120" cy="120" r="88" stroke="var(--pb-color-accent)" stroke-width="30" stroke-dasharray="23 530" stroke-dashoffset="-526" stroke-linecap="butt"/>
+          </g>
+          <text x="120" y="118" text-anchor="middle" font-family="Inter" font-weight="800" font-size="42" fill="var(--pb-color-white)">94&#8211;97%</text>
+          <text x="120" y="146" text-anchor="middle" font-family="Inter" font-weight="600" font-size="14" fill="var(--pb-color-neutral-300)">typical online payback</text>
+        </svg>
+      </div>
     </div>
   </div>
   <div class="card-footer">

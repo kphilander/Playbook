@@ -21,21 +21,18 @@
   .section-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
-  .odds-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .odds-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; position: relative; }
-  .tile-icon { position: absolute; top: 24px; right: 24px; width: 40px; height: 40px; opacity: 0.6; }
-  .tile-icon svg { width: 100%; height: 100%; display: block; }
-  .tile-icon.teal { color: var(--pb-color-secondary); }
-  .tile-icon.white { color: var(--pb-color-white); }
-  .tile-icon.orange { color: var(--pb-color-accent); }
-  .bg-motif { position: absolute; right: -100px; top: 60px; width: 480px; height: 480px; color: var(--pb-color-secondary); opacity: 0.05; z-index: 0; }
-  .bg-motif svg { width: 100%; height: 100%; }
+  .columns { display: flex; gap: 16px; }
+  .col-tools { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+  .odds-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; flex: 1; }
   .odds-game { font-family: var(--pb-font-body); font-size: calc(18px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 8px; }
   .odds-edge { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; letter-spacing: -0.02em; }
   .odds-edge.teal { color: var(--pb-color-secondary); }
-  .odds-edge.white { color: var(--pb-color-white); }
-  .odds-edge.orange { color: var(--pb-color-accent); }
   .odds-note { font-family: var(--pb-font-body); font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 4px; }
+  .col-chart { flex: 1.2; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; }
+  .chart-title { font-family: var(--pb-font-body); font-size: calc(18px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 12px; }
+  .col-chart svg { width: 100%; height: auto; display: block; flex: 1; }
+  .col-chart svg text { font-family: var(--pb-font-heading), 'Inter', sans-serif; }
+  .chart-note { font-family: var(--pb-font-heading); font-size: calc(17px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); margin-top: 12px; }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
@@ -48,33 +45,35 @@
     <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
     <span class="section-label">New Year</span>
   </div>
-  <div class="bg-motif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1"><circle cx="12" cy="12" r="9"/></g><g stroke-width="0.5"><path d="M12 6v12"/><path d="M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1.1-3 2.5 1.3 2 3 2.5 3 1.1 3 2.5-1.3 2.5-3 2.5-3-1.1-3-2.5"/></g></svg></div>
   <div class="card-body">
     <div class="headline">New year, same math.<br>One resolution that runs itself.</div>
-    <div class="odds-grid">
-      <div class="odds-item">
-        <div class="tile-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M4.2 16.5A9 9 0 0 1 12 3a9 9 0 0 1 7.8 13.5"/></g><g stroke-width="1"><line x1="12" y1="12" x2="16.5" y2="7.5"/><circle cx="12" cy="12" r="1"/><line x1="5.5" y1="16" x2="6.5" y2="15"/><line x1="4.5" y1="12" x2="5.5" y2="12"/><line x1="6" y1="8" x2="7" y2="8.5"/><line x1="9" y1="5.5" x2="9.5" y2="6.5"/><line x1="14.5" y1="5.5" x2="14" y2="6.5"/><line x1="17.5" y1="8" x2="17" y2="8.5"/><line x1="19.5" y1="12" x2="18.5" y2="12"/><line x1="18.5" y1="16" x2="17.5" y2="15"/></g></svg></div>
-        <div class="odds-game">Deposit limit</div>
-        <div class="odds-edge teal">10 sec</div>
-        <div class="odds-note">Set it while you're feeling sharp</div>
+    <div class="columns">
+      <div class="col-tools">
+        <div class="odds-item">
+          <div class="odds-game">Deposit limit</div>
+          <div class="odds-edge teal">10 sec</div>
+          <div class="odds-note">Set it while you're feeling sharp</div>
+        </div>
+        <div class="odds-item">
+          <div class="odds-game">Session reminder</div>
+          <div class="odds-edge teal">30 sec</div>
+          <div class="odds-note">Your pace, your call</div>
+        </div>
       </div>
-      <div class="odds-item">
-        <div class="tile-icon teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></g><g stroke-width="1"><path d="M13.7 21a2 2 0 0 1-3.4 0"/></g></svg></div>
-        <div class="odds-game">Session reminder</div>
-        <div class="odds-edge teal">30 sec</div>
-        <div class="odds-note">Your pace, your call</div>
-      </div>
-      <div class="odds-item">
-        <div class="tile-icon orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="5" width="7" height="15" rx="1.5"/><rect x="14" y="10" width="7" height="10" rx="1.5"/></g><g stroke-width="1"><line x1="2" y1="20" x2="22" y2="20"/><line x1="5" y1="9" x2="8" y2="9"/><line x1="5" y1="13" x2="8" y2="13"/><line x1="16" y1="14" x2="19" y2="14"/></g></svg></div>
-        <div class="odds-game">House edge</div>
-        <div class="odds-edge orange">Same</div>
-        <div class="odds-note">The math doesn't do resolutions</div>
-      </div>
-      <div class="odds-item">
-        <div class="tile-icon white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="12" cy="12" r="9"/></g><g stroke-width="1"><path d="M9 9c0-1.7 1.3-3 3-3s3 1.3 3 3c0 2-3 2-3 4"/><circle cx="12" cy="17" r="0.5" fill="currentColor" stroke="none"/></g></svg></div>
-        <div class="odds-game">Your Game IQ</div>
-        <div class="odds-edge white">Up</div>
-        <div class="odds-note">The only stat you control</div>
+      <div class="col-chart">
+        <div class="chart-title">The year ahead</div>
+        <svg viewBox="0 0 480 300" fill="none">
+          <line x1="20" y1="270" x2="460" y2="270" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <text x="20" y="292" font-family="Inter" font-weight="500" font-size="14" fill="var(--pb-color-neutral-500)">Jan</text>
+          <text x="460" y="292" text-anchor="end" font-family="Inter" font-weight="500" font-size="14" fill="var(--pb-color-neutral-500)">Dec</text>
+          <path d="M20 186 H440" stroke="var(--pb-color-accent)" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="440" cy="186" r="5" fill="var(--pb-color-accent)"/>
+          <text x="440" y="216" text-anchor="end" font-family="Inter" font-weight="600" font-size="17" fill="var(--pb-color-accent)">House edge: same</text>
+          <path d="M20 240 C 160 232, 300 180, 440 84" stroke="var(--pb-color-secondary)" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="440" cy="84" r="5" fill="var(--pb-color-secondary)"/>
+          <text x="440" y="62" text-anchor="end" font-family="Inter" font-weight="600" font-size="17" fill="var(--pb-color-secondary)">Your Game IQ: up</text>
+        </svg>
+        <div class="chart-note">The math doesn't do resolutions. You can.</div>
       </div>
     </div>
   </div>

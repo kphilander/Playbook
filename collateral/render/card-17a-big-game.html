@@ -24,17 +24,20 @@
   .explanation { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 32px; }
   .emphasis { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); letter-spacing: 0.02em; }
   .vig-strip { margin-top: 32px; display: flex; gap: 16px; }
-  .vig-card { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px; text-align: center; }
+  .vig-card { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px 20px; text-align: center; display: flex; flex-direction: column; }
   .vig-label { font-family: var(--pb-font-body); font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 8px; }
   .vig-value { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); font-weight: 800; color: var(--pb-color-white); }
   .vig-note { font-family: var(--pb-font-body); font-size: calc(14px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 4px; }
+  .cut-track { margin-top: auto; height: 14px; border-radius: 4px; background: rgba(255,255,255,0.08); overflow: hidden; }
+  .vig-card > .vig-note { margin-bottom: 16px; }
+  .cut-fill { height: 100%; background: var(--pb-color-accent); border-radius: 0 4px 4px 0; }
+  .cut-caption { font-family: var(--pb-font-body); font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 8px; }
+  .squares-grid { margin: 16px auto 0; display: grid; grid-template-columns: repeat(10, 14px); grid-auto-rows: 14px; gap: 3px; }
+  .squares-grid span { background: rgba(255,255,255,0.10); border-radius: 2px; }
+  .squares-grid span.win { background: var(--pb-color-secondary); }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
-  .vig-icon { width: 36px; height: 36px; margin: 0 auto 12px; color: var(--pb-color-neutral-300); opacity: 0.8; }
-  .vig-icon svg { width: 100%; height: 100%; display: block; }
-  .bg-motif { position: absolute; right: -120px; top: 100px; width: 540px; height: 540px; color: var(--pb-color-secondary); opacity: 0.06; z-index: 0; }
-  .bg-motif svg { width: 100%; height: 100%; }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -44,29 +47,42 @@
     <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
     <span class="section-label">The Big Game</span>
   </div>
-  <div class="bg-motif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1"><circle cx="12" cy="12" r="9"/></g><g stroke-width="0.5"><line x1="3" y1="12" x2="21" y2="12"/><path d="M9 3.5Q11 12 9 20.5"/><path d="M15 3.5Q13 12 15 20.5"/></g></svg></div>
   <div class="card-body">
     <div class="headline">The big game,<br>by the numbers.</div>
     <div class="explanation">Biggest betting week of the year. Before the squares pool and the group-chat parlay, know what each bet costs.</div>
     <div class="emphasis">Set your game-day budget before kickoff.</div>
     <div class="vig-strip">
       <div class="vig-card">
-        <div class="vig-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><circle cx="12" cy="12" r="9"/></g><g stroke-width="1"><line x1="3" y1="12" x2="21" y2="12"/><path d="M9 3.5Q11 12 9 20.5"/><path d="M15 3.5Q13 12 15 20.5"/></g></svg></div>
         <div class="vig-label">Single bet, standard line</div>
         <div class="vig-value">-110</div>
         <div class="vig-note">~4.5% to the house</div>
+        <div class="cut-track"><div class="cut-fill" style="width: 4.5%"></div></div>
+        <div class="cut-caption">house share of each bet</div>
       </div>
       <div class="vig-card">
-        <div class="vig-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="5" width="7" height="15" rx="1.5"/><rect x="14" y="10" width="7" height="10" rx="1.5"/></g><g stroke-width="1"><line x1="2" y1="20" x2="22" y2="20"/><line x1="5" y1="9" x2="8" y2="9"/><line x1="5" y1="13" x2="8" y2="13"/><line x1="16" y1="14" x2="19" y2="14"/></g></svg></div>
         <div class="vig-label">4-leg hype parlay</div>
         <div class="vig-value">~20%</div>
         <div class="vig-note">house cut, grows per leg</div>
+        <div class="cut-track"><div class="cut-fill" style="width: 20%"></div></div>
+        <div class="cut-caption">house share of each bet</div>
       </div>
       <div class="vig-card">
-        <div class="vig-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></g><g stroke-width="1"><circle cx="6.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="15.5" cy="15.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="19.5" cy="15.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="15.5" cy="19.5" r="0.75" fill="currentColor" stroke="none"/><circle cx="19.5" cy="19.5" r="0.75" fill="currentColor" stroke="none"/></g></svg></div>
         <div class="vig-label">Squares pool</div>
         <div class="vig-value">100%</div>
         <div class="vig-note">luck. Zero skill involved</div>
+        <div class="squares-grid">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span class="win"></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="cut-caption">100 squares, 1 winner per quarter</div>
       </div>
     </div>
   </div>
