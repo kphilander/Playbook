@@ -30,12 +30,6 @@
   .body-text { flex: 1; }
   .fact-statement { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); }
   .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
-  .donut-legend { margin-top: 36px; }
-  .legend-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-  .legend-swatch { width: 16px; height: 16px; border-radius: 4px; }
-  .legend-swatch.teal { background: var(--pb-color-secondary); }
-  .legend-swatch.orange { background: var(--pb-color-accent); }
-  .legend-text { font-family: var(--pb-font-body); font-size: calc(18px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); }
   .donut-wrap { width: 340px; flex-shrink: 0; }
   .donut-wrap svg { width: 100%; height: auto; display: block; }
   .donut-wrap svg text { font-family: var(--pb-font-heading), 'Inter', sans-serif; }
@@ -57,20 +51,20 @@
     <div class="body-row">
       <div class="body-text">
         <div class="fact-statement">Licensed online slots are <strong>independently tested</strong>. Most even show their payback.</div>
-        <div class="donut-legend">
-          <div class="legend-item"><span class="legend-swatch teal"></span><span class="legend-text">paid back to players</span></div>
-          <div class="legend-item"><span class="legend-swatch orange"></span><span class="legend-text">the house edge</span></div>
-        </div>
       </div>
       <div class="donut-wrap">
-        <svg viewBox="0 0 240 240" fill="none">
-          <circle cx="120" cy="120" r="88" stroke="rgba(255,255,255,0.06)" stroke-width="26"/>
-          <g transform="rotate(-90 120 120)">
-            <circle cx="120" cy="120" r="88" stroke="var(--pb-color-secondary)" stroke-width="26" stroke-dasharray="524 29" stroke-linecap="butt"/>
-            <circle cx="120" cy="120" r="88" stroke="var(--pb-color-accent)" stroke-width="26" stroke-dasharray="23 530" stroke-dashoffset="-526" stroke-linecap="butt"/>
+        <svg viewBox="0 0 240 250" fill="none">
+          <g transform="translate(0 10)">
+            <circle cx="120" cy="120" r="88" stroke="rgba(255,255,255,0.06)" stroke-width="26"/>
+            <g transform="rotate(-90 120 120)">
+              <circle cx="120" cy="120" r="88" stroke="var(--pb-color-secondary)" stroke-width="26" stroke-dasharray="524 29" stroke-linecap="butt"/>
+              <circle cx="120" cy="120" r="88" stroke="var(--pb-color-accent)" stroke-width="26" stroke-dasharray="23 530" stroke-dashoffset="-526" stroke-linecap="butt"/>
+            </g>
+            <polyline points="107,21 88,8" stroke="var(--pb-color-accent)" stroke-width="1.5"/>
+            <text x="82" y="12" text-anchor="end" font-family="Inter" font-weight="600" font-size="13" fill="var(--pb-color-accent)">house edge</text>
+            <text x="120" y="116" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="var(--pb-color-white)">94&#8211;97%</text>
+            <text x="120" y="142" text-anchor="middle" font-family="Inter" font-weight="600" font-size="12" fill="var(--pb-color-neutral-300)">paid back to players</text>
           </g>
-          <text x="120" y="116" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="var(--pb-color-white)">94&#8211;97%</text>
-          <text x="120" y="144" text-anchor="middle" font-family="Inter" font-weight="600" font-size="13" fill="var(--pb-color-neutral-300)">typical payback</text>
         </svg>
       </div>
     </div>
