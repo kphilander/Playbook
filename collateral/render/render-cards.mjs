@@ -98,6 +98,19 @@ const cards = [
   { html: 'card-16b-bonus-free-money.html', output: 'card-16b-bonus-free-money.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-17a-big-game.html', output: 'card-17a-big-game.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-18a-fresh-start.html', output: 'card-18a-fresh-start.png', w: 1080, h: 1080, selector: '.social-card' },
+  // i18n — seasonal & online myth cards (16-18 series) variants
+  { html: 'card-16a-online-rigged.ja.html', output: 'card-16a-online-rigged.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-16b-bonus-free-money.ja.html', output: 'card-16b-bonus-free-money.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-17a-big-game.ja.html', output: 'card-17a-big-game.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-18a-fresh-start.ja.html', output: 'card-18a-fresh-start.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-16a-online-rigged.zh-CN.html', output: 'card-16a-online-rigged.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-16b-bonus-free-money.zh-CN.html', output: 'card-16b-bonus-free-money.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-17a-big-game.zh-CN.html', output: 'card-17a-big-game.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-18a-fresh-start.zh-CN.html', output: 'card-18a-fresh-start.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-16a-online-rigged.ar.html', output: 'card-16a-online-rigged.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-16b-bonus-free-money.ar.html', output: 'card-16b-bonus-free-money.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-17a-big-game.ar.html', output: 'card-17a-big-game.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-18a-fresh-start.ar.html', output: 'card-18a-fresh-start.ar.png', w: 1080, h: 1080, selector: '.social-card' },
   // i18n Phase A — Japanese (Japan) variants
   { html: 'card-13a-its-due.ja.html', output: 'card-13a-its-due.ja.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-13b-near-win.ja.html', output: 'card-13b-near-win.ja.png', w: 1080, h: 1080, selector: '.social-card' },
@@ -353,7 +366,11 @@ async function render() {
 
         const element = await page.$(card.selector);
         if (element) {
-          await element.screenshot({
+          // Viewport capture: element/clip screenshots return a blank image on
+          // dir="rtl" documents in some Chromium builds. The viewport is sized
+          // to the card, and every template renders its root element at 0,0
+          // filling it exactly, so a plain page screenshot is equivalent.
+          await page.screenshot({
             path: join(__dirname, card.output),
             type: 'png',
           });

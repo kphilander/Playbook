@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;600;700;800;900&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .social-card {
+    width: 1080px; height: 1080px;
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px), var(--pb-gradient-bg, linear-gradient(145deg, var(--pb-color-primary-dark), var(--pb-color-primary)));
+    background-size: 48px 48px, 48px 48px, cover;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); }
+  .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); }
+  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .section-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
+  /* Fixed top offset matching the 16-series myth cards */
+  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding: 205px 64px 0; position: relative; z-index: 1; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 32px; letter-spacing: -0.02em; }
+  .fact-statement { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); }
+  .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
+  .stat-block { margin-top: 96px; display: flex; align-items: baseline; gap: 24px; }
+  .stat-number { font-family: var(--pb-font-heading); font-size: calc(96px * var(--pb-template-text-scale, 1)); font-weight: 900; color: var(--pb-color-secondary); line-height: 1; letter-spacing: -0.03em; }
+  .stat-unit { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); line-height: 1.4; }
+  .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <style>
+    /* Locale-specific font cascade override — must come AFTER brand-inject.css to win */
+    :root {
+      --pb-font-heading: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+      --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
+    }
+    .myth-statement, .headline { line-height: 1.4; letter-spacing: 0; }
+    .fact-statement { line-height: 1.8; }
+    .myth-label, .section-label, .card-pillar { letter-spacing: 0.05em; }
+  </style>
+  </head>
+<body>
+<div class="social-card">
+  <div class="card-header">
+    <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="section-label">新年</span>
+  </div>
+  <div class="card-body">
+    <div class="headline">新しい年も、数学は変わらない。<br>自動で続く抱負を、ひとつ。</div>
+    <div class="fact-statement">数学は抱負を立てません。<strong>立てられるのは、あなたです。</strong></div>
+    <div class="stat-block">
+      <span class="stat-number">10秒</span>
+      <span class="stat-unit">入金限度額の設定にかかる時間。<br>冷静なうちに設定しておきましょう。</span>
+    </div>
+  </div>
+  <div class="card-footer">
+    <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+  </div>
+</div>
+</body>
+</html>
