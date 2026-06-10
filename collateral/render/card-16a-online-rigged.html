@@ -33,6 +33,10 @@
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
+  .icon-chip { width: 88px; height: 88px; border-radius: 24px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: var(--pb-color-secondary); }
+  .icon-chip svg { width: 48px; height: 48px; }
+  .bg-motif { position: absolute; right: -70px; bottom: 80px; width: 520px; height: 520px; color: var(--pb-color-secondary); opacity: 0.06; z-index: 0; }
+  .bg-motif svg { width: 100%; height: 100%; }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   </head>
@@ -40,8 +44,9 @@
 <div class="social-card">
   <div class="card-header">
     <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
-
+    <span class="icon-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><path d="M3 8h4l6 8h4"/><path d="M3 16h4l6-8h4"/></g><g stroke-width="1"><polyline points="18 6 21 8 18 10"/><polyline points="18 14 21 16 18 18"/></g></svg></span>
   </div>
+  <div class="bg-motif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="1"><path d="M3 8h4l6 8h4"/><path d="M3 16h4l6-8h4"/></g><g stroke-width="0.5"><polyline points="18 6 21 8 18 10"/><polyline points="18 14 21 16 18 18"/></g></svg></div>
   <div class="card-body">
     <div class="myth-label">Myth vs. Math</div>
     <div class="myth-statement"><span class="strike">"Online slots are rigged"</span></div>
