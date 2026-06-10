@@ -31,7 +31,7 @@
       "verticals": [
         "casino"
       ],
-      "text": "Problem gambling plan must include patron information about games and responsible gambling."
+      "text": "Disordered and problem gambling plan must include patron information about games and responsible gambling."
     },
     "2": {
       "label": "OCCC (Ohio)",
@@ -50,7 +50,7 @@
         "casino",
         "sports"
       ],
-      "text": "Problem gambling plan must include signage with responsible gambling information and helpline."
+      "text": "Disordered and problem gambling plan must include signage with responsible gambling information and helpline."
     },
     "4": {
       "label": "OCCC (Ohio)",
@@ -106,7 +106,7 @@
       "verticals": [
         "casino"
       ],
-      "text": "Problem gambling plan must include staff training on identifying and assisting problem gamblers."
+      "text": "Disordered and problem gambling plan must include staff training on identifying and assisting problem gamblers."
     }
   }
 }

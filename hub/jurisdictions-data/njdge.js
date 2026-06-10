@@ -20,6 +20,7 @@
   },
   "sources": {
     "njdge-69o": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69O-1-2",
+    "njdge-69o-14": "https://www.law.cornell.edu/regulations/new-jersey/N-J-A-C-13-69O-1-4",
     "njdge-bestprac": "https://www.nj.gov/oag/ge/docs/BestPractices/AdvertisingBestPractices.pdf",
     "njdge-69n": "https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69N.pdf",
     "njdge-69g": "https://www.nj.gov/oag/ge/docs/Regulations/CHAPTER69G.pdf"
@@ -71,8 +72,8 @@
     },
     "5": {
       "label": "NJ DGE",
-      "ref": "NJAC 13:69O-1.2",
-      "src": "njdge-69o",
+      "ref": "NJAC 13:69O-1.4",
+      "src": "njdge-69o-14",
       "verticals": [
         "online",
         "sports"

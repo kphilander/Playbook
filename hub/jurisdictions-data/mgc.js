@@ -14,7 +14,7 @@
     "name": "Massachusetts Gaming Commission (MGC)",
     "jurisdiction": "Massachusetts, United States",
     "legislation": "M.G.L. Chapter 23K (Expanded Gaming Act); M.G.L. Chapter 23N (Sports Wagering Act); 205 CMR 133 (Casino VSE); 205 CMR 233 (Sports Wagering VSE); 205 CMR 248 (Sports Wagering Accounts); 205 CMR 256 (Sports Wagering Advertising)",
-    "unique": "Separate regulatory regimes for casino gaming (Chapter 23K) and sports wagering (Chapter 23N). Statewide VSE with 1/3/5 year and lifetime options across both verticals. GameSense Info Centers required at every licensed casino. Mandatory daily/weekly/monthly deposit and wager limits for sports wagering (205 CMR 248.16). Prescriptive advertising rules with font size minimums (205 CMR 256). 1-800-327-5050 helpline. No online casino.",
+    "unique": "Separate regulatory regimes for casino gaming (Chapter 23K) and sports wagering (Chapter 23N). Statewide VSE with 1/3/5 year and lifetime options across both verticals. PlayWell (formerly GameSense) Info Centers required at every licensed casino. Mandatory daily/weekly/monthly deposit and wager limits for sports wagering (205 CMR 248.16). Prescriptive advertising rules with font size minimums (205 CMR 256). 1-800-327-5050 helpline. No online casino.",
     "verticals": "Land-based Casino, Sports Betting",
     "source": "https://www.mass.gov/orgs/massachusetts-gaming-commission"
   },
@@ -52,7 +52,7 @@
         "casino",
         "sports"
       ],
-      "text": "Massachusetts Problem Gambling Helpline: 1-800-327-5050 (text GAMB to 800327). Required in all sports wagering ads with prescribed font sizing (205 CMR 256.06(4)). GameSense Info Centers at all three casinos."
+      "text": "Massachusetts Problem Gambling Helpline: 1-800-327-5050 (text GAMB to 800327). Required in all sports wagering ads with prescribed font sizing (205 CMR 256.06(4)). PlayWell (formerly GameSense) Info Centers at all three casinos."
     },
     "4": {
       "label": "MGC (Massachusetts)",
@@ -99,7 +99,7 @@
       "verticals": [
         "casino"
       ],
-      "text": "GameSense Info Centers required at every licensed casino. VSE applications available at designated locations on and off premises."
+      "text": "PlayWell (formerly GameSense) Info Centers required at every licensed casino. VSE applications available at designated locations on and off premises."
     },
     "9": {
       "label": "MGC (Massachusetts)",
@@ -109,7 +109,7 @@
         "casino",
         "sports"
       ],
-      "text": "Designated agents must complete Commission-approved training on VSE program, problem gambling, and confidentiality (133.02(3)). Gaming licensee staff trained on VSE in conjunction with problem gambling training program (133.06(9)(f)). GameSense Advisors on-site at all casinos."
+      "text": "Designated agents must complete Commission-approved training on VSE program, problem gambling, and confidentiality (133.02(3)). Gaming licensee staff trained on VSE in conjunction with problem gambling training program (133.06(9)(f)). PlayWell Advisors (formerly GameSense advisors) on-site at all casinos."
     },
     "10": {
       "label": "MGC (Massachusetts)",
