@@ -530,7 +530,7 @@ This is the event-moment companion to [Campaign 3](#campaign-3-sports-betting-re
 
 **Countdown post**: "6 days out. The squares pool is filling up and someone in the group chat has a 9-leg parlay. Before kickoff, here's how the lines actually work. #KnowYourGame"
 
-**Myth 11 post**: "You've watched every snap this season. The book's models have watched every snap ever — and set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
+**Myth 11 post**: "You've watched every snap this season. The sportsbook's models have watched every snap ever — and set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
 
 **Myth 25 post**: "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
 
@@ -548,7 +548,7 @@ Send 2–3 days before the game:
 >
 > **Body structure**:
 > - Hero: Countdown card image
-> - "First bet ever? Welcome." — 3-line primer on the moneyline, the spread, and the vig
+> - "First bet ever? Welcome." — 3-line primer on the moneyline, the spread, and the vig (the sportsbook's built-in fee)
 > - Myth 12 myth/fact pair (hype parlays)
 > - "Set your game-day budget" tool CTA
 > - Footer: "However it ends, it's entertainment. Play on your terms."
@@ -589,7 +589,7 @@ Operator-facing: anchor to your market's marquee event — Super Bowl week (US),
 
 ### Suggested captions
 
-**Year-in-review post**: "2025's slot RTP: unchanged. 2026's slot RTP: also unchanged. The math doesn't do resolutions. You can. #NoFinePrint"
+**Year-in-review post**: "Slot payouts on December 31: set in software. Slot payouts on January 1: same software. The math doesn't do resolutions. You can. #NoFinePrint"
 
 **Resolution post**: "Most resolutions fail by February. This one takes 30 seconds and runs itself: set your entertainment budget before you play. #KnowYourGame"
 
@@ -627,7 +627,7 @@ Operator-facing: launch December 29, run through the first weekend of January. A
 
 ## Campaign 10: Online Reality Check
 
-**Theme**: The algorithm isn't out to get you — how online games actually work, from RNG certification to bonus math.
+**Theme**: The algorithm isn't out to get you — how online games actually work, from independent testing to bonus math.
 **Tagline**: "The game doesn't know you. That's the whole point."
 **Duration**: 2 weeks (12 posts)
 **Pillar**: Open
@@ -640,7 +640,7 @@ Operator-facing: launch December 29, run through the first weekend of January. A
 | Day | Channel | Content type | Myth # | Copy source | Asset format | Template reference |
 |---|---|---|---|---|---|---|
 | Mon 1 | Instagram / Facebook | Myth card | 19 | `myth-busting.md` → Myth 19 → Social card | 1080 x 1080 | `collateral/render/card-16a` format |
-| Tue 1 | Blog / help center | Article | 19+20+21 | Combined: "Is Online Rigged? Inside the RNG, the Audits, and Your 'Lucky New Account'" | Long-form web | — |
+| Tue 1 | Blog / help center | Article | 19+20+21 | Combined: "Is Online Rigged? Inside the Testing Labs, the Audits, and Your 'Lucky New Account'" | Long-form web | — |
 | Wed 1 | Instagram / Facebook | Myth card | 20 | `myth-busting.md` → Myth 20 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
 | Thu 1 | In-app | Push notification | 24 | Myth 24 STAT line: "Turbo doubles your spins per hour — same odds, twice the spend rate." | Push | `collateral/render/push-notification-12e` format |
 | Fri 1 | Instagram / Facebook | Myth card | 21 | `myth-busting.md` → Myth 21 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
@@ -654,11 +654,11 @@ Operator-facing: launch December 29, run through the first weekend of January. A
 
 ### Suggested captions
 
-**Myth 19 post**: "Online slots run on lab-certified RNGs — and unlike the casino floor, most publish their RTP right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
+**Myth 19 post**: "Online slots are tested by independent labs — and unlike the casino floor, most show their payback rate right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
 
 **Myth 20 post**: "The game wasn't 'about to pay out' when you walked away. The result is generated the instant you press spin. Everything else is animation. #KnowYourGame"
 
-**Myth 21 post**: "There's no 'new player luck' setting and no winner flag. One game, one certified RTP, every account. Your early wins were variance, not bait. #NoFinePrint"
+**Myth 21 post**: "There's no 'new player luck' setting and no winner flag. One game, one payout rate, every account. Your early wins were a lucky run, not bait. #NoFinePrint"
 
 **Myth 22 post**: "A $100 bonus at 30x wagering = $3,000 in bets before you can withdraw. Bonuses can be good value — but read the multiplier before you celebrate. #KnowYourGame"
 
@@ -674,7 +674,7 @@ Send as a mid-campaign digest after Week 1:
 
 > **Subject**: The game doesn't know you. That's the whole point.
 >
-> **Preview text**: Certified RNGs, published RTP, and why your "lucky new account" was just math.
+> **Preview text**: Independent testing, published payouts, and why your "lucky new account" was just math.
 >
 > **Body structure**:
 > - Hero: Myth 19 card image

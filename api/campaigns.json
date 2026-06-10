@@ -1,7 +1,7 @@
 {
   "meta": {
     "count": 10,
-    "generated": "2026-06-10T00:10:47.976Z",
+    "generated": "2026-06-10T00:50:35.489Z",
     "version": "0.1.0",
     "source": "messaging/campaigns.md"
   },
@@ -1034,7 +1034,7 @@
         },
         {
           "label": "Myth 11 post",
-          "text": "You've watched every snap this season. The book's models have watched every snap ever — and set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
+          "text": "You've watched every snap this season. The sportsbook's models have watched every snap ever — and set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
         },
         {
           "label": "Myth 25 post",
@@ -1054,7 +1054,7 @@
         "previewText": "Props, parlays, and squares — what this week's bets actually cost.",
         "bodyStructure": [
           "Hero: Countdown card image",
-          "\"First bet ever? Welcome.\" — 3-line primer on the moneyline, the spread, and the vig",
+          "\"First bet ever? Welcome.\" — 3-line primer on the moneyline, the spread, and the vig (the sportsbook's built-in fee)",
           "Myth 12 myth/fact pair (hype parlays)",
           "\"Set your game-day budget\" tool CTA",
           "Footer: \"However it ends, it's entertainment. Play on your terms.\""
@@ -1142,7 +1142,7 @@
       "captions": [
         {
           "label": "Year-in-review post",
-          "text": "2025's slot RTP: unchanged. 2026's slot RTP: also unchanged. The math doesn't do resolutions. You can. #NoFinePrint"
+          "text": "Slot payouts on December 31: set in software. Slot payouts on January 1: same software. The math doesn't do resolutions. You can. #NoFinePrint"
         },
         {
           "label": "Resolution post",
@@ -1179,7 +1179,7 @@
     {
       "id": 10,
       "name": "Online Reality Check",
-      "theme": "The algorithm isn't out to get you — how online games actually work, from RNG certification to bonus math.",
+      "theme": "The algorithm isn't out to get you — how online games actually work, from independent testing to bonus math.",
       "tagline": "The game doesn't know you. That's the whole point.",
       "duration": "2 weeks (12 posts)",
       "pillar": "open",
@@ -1213,7 +1213,7 @@
           "channel": "Blog / help center",
           "content_type": "Article",
           "myth": "19+20+21",
-          "copy_source": "Combined: \"Is Online Rigged? Inside the RNG, the Audits, and Your 'Lucky New Account'\"",
+          "copy_source": "Combined: \"Is Online Rigged? Inside the Testing Labs, the Audits, and Your 'Lucky New Account'\"",
           "asset_format": "Long-form web",
           "template_reference": "—"
         },
@@ -1311,7 +1311,7 @@
       "captions": [
         {
           "label": "Myth 19 post",
-          "text": "Online slots run on lab-certified RNGs — and unlike the casino floor, most publish their RTP right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
+          "text": "Online slots are tested by independent labs — and unlike the casino floor, most show their payback rate right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
         },
         {
           "label": "Myth 20 post",
@@ -1319,7 +1319,7 @@
         },
         {
           "label": "Myth 21 post",
-          "text": "There's no 'new player luck' setting and no winner flag. One game, one certified RTP, every account. Your early wins were variance, not bait. #NoFinePrint"
+          "text": "There's no 'new player luck' setting and no winner flag. One game, one payout rate, every account. Your early wins were a lucky run, not bait. #NoFinePrint"
         },
         {
           "label": "Myth 22 post",
@@ -1340,7 +1340,7 @@
       ],
       "email": {
         "subject": "The game doesn't know you. That's the whole point.",
-        "previewText": "Certified RNGs, published RTP, and why your \"lucky new account\" was just math.",
+        "previewText": "Independent testing, published payouts, and why your \"lucky new account\" was just math.",
         "bodyStructure": [
           "Hero: Myth 19 card image",
           "3 myth/fact pairs (Myths 19, 20, 21 — short versions)",

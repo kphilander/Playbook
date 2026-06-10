@@ -66,9 +66,9 @@ Find the right myth fast — by game type, by channel need, or by the cognitive 
 | 17 | [Win Back Your Losses](#myth-17-you-can-win-back-your-losses) | Sunk cost fallacy | Money Myths |
 | 18 | [Gambling as Income](#myth-18-gambling-is-a-way-to-make-money) | Entertainment, not investment | Money Myths, Game IQ |
 | **Online Casino & iGaming** | | | |
-| 19 | [Online Slots Are Rigged](#myth-19-online-slots-are-rigged) | Certified RNGs, published RTP | Online Reality Check |
+| 19 | [Online Slots Are Rigged](#myth-19-online-slots-are-rigged) | Independently tested, payouts published | Online Reality Check |
 | 20 | [The Game Knows You're About to Win](#myth-20-the-game-knows-when-youre-about-to-win) | There is no win schedule | Online Reality Check |
-| 21 | [The Casino Tightens *Your* Odds](#myth-21-the-casino-tightens-the-odds-for-your-account) | RTP is per game, not per player | Online Reality Check |
+| 21 | [The Casino Tightens *Your* Odds](#myth-21-the-casino-tightens-the-odds-for-your-account) | Payouts set per game, not per player | Online Reality Check |
 | 22 | [A Bonus Is Free Money](#myth-22-a-bonus-is-free-money) | Wagering requirements are the price tag | Online Reality Check |
 | 23 | [Live Dealers Can Favor You](#myth-23-live-dealers-can-favor-you) | Scripted dealing, regulated streams | Online Reality Check |
 | 24 | [Auto-Spin Changes Your Odds](#myth-24-auto-spin-and-turbo-mode-change-your-odds) | Speed changes spend rate, not odds | Online Reality Check |
@@ -792,30 +792,30 @@ Understanding this isn't pessimistic — it's empowering. When you frame gamblin
 
 > **MYTH**: "Online slots are rigged — real casinos at least have to play fair."
 >
-> **FACT**: Licensed online slots use certified RNGs tested by independent labs, just like the machines on a casino floor. Online games often publish their RTP right in the info screen — try getting that from a physical machine.
+> **FACT**: Licensed online slots are tested by independent labs, just like the machines on a casino floor. Most online games even show their payback rate right in the info screen — try getting that from a physical machine.
 >
-> **STAT**: Online slot RTPs commonly run 94–97% — equal to or higher than many land-based machines.
+> **STAT**: Online slots commonly pay back 94–97% over time — as much or more than many casino-floor machines.
 
 #### Article explainer
 
-The losing streak ends, you close the app, and the thought arrives: *this thing is rigged.* It's a natural reaction — you can't see the machine, so you can't trust it. Right?
+The losing streak ends, you close the app, and the thought arrives: *this thing is rigged.* You can't see the machine, so why trust it?
 
-Here's what's actually behind the screen: licensed online slots run on random number generators certified by independent testing labs — the same kind of certification physical machines get. Regulators audit the software, and any change to the math requires re-certification.
+Here's what's behind the screen. Licensed online slots run on software that picks a random result for every spin. Independent labs test that software, and regulators check it — the same oversight casino-floor machines get.
 
-Online games are often *more* transparent than the casino floor. Most jurisdictions require online slots to display their return-to-player (RTP) percentage in the game's info panel. That number is typically 94–97% — equal to or better than many land-based machines, partly because websites don't pay for floor space.
+Online games are often *more* open than the floor. Most show their "return to player" — the share of money the game pays back over time — right in the info screen. It's usually 94–97%, as good or better than many physical machines.
 
-A rigged game would be the worst business decision an operator could make: it's the fastest way to lose a license. The house edge already does the job — legally, openly, and printed in the paytable.
+A rigged game would be the fastest way for a site to lose its license. The house edge already does the job — legally, openly, and printed in the paytable.
 
 #### Quiz question
 
-> **Q: How does the RTP of licensed online slots typically compare to land-based machines?**
+> **Q: How does the payback of licensed online slots compare to casino-floor machines?**
 >
 > A) Much lower — online games are unregulated
-> B) Equal or often higher — and usually published in the game info ✓
+> B) Equal or often higher — and usually shown in the game info ✓
 > C) It changes depending on how much you've deposited
-> D) Nobody knows — online RTP is secret
+> D) Nobody knows — online payouts are secret
 >
-> **Feedback**: Licensed online slots use lab-certified RNGs and often publish RTP right in the game — commonly 94–97%, equal to or better than many physical machines. The house edge is real, but it's not hidden.
+> **Feedback**: Licensed online slots are tested by independent labs and usually show their payback rate in the game info — commonly 94–97%, as good or better than many physical machines. The house edge is real, but it's not hidden.
 
 ---
 
@@ -827,19 +827,19 @@ A rigged game would be the worst business decision an operator could make: it's 
 
 > **MYTH**: "The game was about to pay out — then I changed my bet and ruined it."
 >
-> **FACT**: There is no "about to pay out." The RNG generates each result the instant you hit spin. The game has no plan, no schedule, and no idea who you are.
+> **FACT**: There is no "about to pay out." The result is picked at random the instant you hit spin. The game has no plan, no schedule, and no idea who you are.
 >
 > **STAT**: 0 wins are ever "queued up." Every outcome is generated fresh, at the moment you press the button.
 
 #### Article explainer
 
-You've been spinning for twenty minutes. The bonus round feels close. Then you change your bet size — and someone in the chat says you just "reset the jackpot timer."
+You've been spinning for twenty minutes. The bonus round feels close. Then you change your bet — and someone in the chat says you just "reset the jackpot timer."
 
-There is no timer. Online slot outcomes are generated server-side by an RNG at the exact moment you press spin. Nothing is queued, scheduled, or building up. The game doesn't have a plan for your next ten spins — it doesn't even know there will *be* a next ten spins.
+There is no timer. The result of each spin is picked at random the instant you press the button. Nothing is queued up, building, or scheduled. The game doesn't have a plan for your next ten spins — it doesn't know there will *be* a next ten spins.
 
-This myth survives because slots are designed to feel like a story: rising music, escalating near misses, bonus meters filling. Those are presentation, not prediction. The dramatic build-up is added *after* the RNG has already decided the result.
+The myth survives because slots feel like a story: rising music, near misses, meters filling. That's presentation, not prediction. The drama is added *after* the result is already decided.
 
-Changing your bet, switching games, or taking a break can't interrupt a win that was "coming." There was never a win coming. There's just the next independent result, whenever you ask for it.
+So changing your bet, switching games, or taking a break can't interrupt a win that was "coming." There was never a win coming. There's just the next random result, whenever you ask for it.
 
 #### Quiz question
 
@@ -850,7 +850,7 @@ Changing your bet, switching games, or taking a break can't interrupt a win that
 > C) The instant you press spin — everything after is animation ✓
 > D) At the start of each session
 >
-> **Feedback**: The RNG generates the result the moment you press spin. The reels, music, and near misses are a show built around a decision that's already been made. Nothing is ever "about to" hit.
+> **Feedback**: The result is picked at random the moment you press spin. The reels, music, and near misses are a show built around a decision that's already been made. Nothing is ever "about to" hit.
 
 ---
 
@@ -862,30 +862,30 @@ Changing your bet, switching games, or taking a break can't interrupt a win that
 
 > **MYTH**: "New accounts win big at first. Then the site flags you and tightens your odds."
 >
-> **FACT**: RTP is set per game, certified per game, and identical for every player on it. There's no "new player mode," no winner flag, and no per-account dial to turn.
+> **FACT**: A game's payout rate is built into the game itself and is the same for every player on it. There's no "new player mode," no winner flag, and no per-account dial to turn.
 >
-> **STAT**: 1 RTP per game version — the same for your account, your friend's account, and the account that just signed up.
+> **STAT**: 1 payout setting per game — the same for your account, your friend's account, and the account that just signed up.
 
 #### Article explainer
 
-The story goes like this: you won early because the site wanted to hook you. Now that you're a regular, they've quietly turned your odds down. Some players try VPNs or fresh accounts to get the "new player luck" back.
+The story goes: you won early because the site wanted to hook you. Now that you're a regular, they've quietly turned your odds down. Some players even open fresh accounts to get the "new player luck" back.
 
-Here's the problem with the story: the math doesn't have a per-player setting. A licensed game's RTP is built into the certified game software. Every account playing the same game version gets the same odds — regulators check exactly this, and a per-account RTP would be a license-ending violation.
+One problem: the game doesn't have a per-player setting. A licensed game's payout rate is built into the game software and certified before launch. Every account playing that game gets the same odds — regulators check exactly this, and a per-account dial would cost the site its license.
 
-So why did the early sessions feel luckier? Small samples. A few hundred spins can land anywhere — way up or way down. Over thousands of spins, results drift toward the published RTP, which is below 100%. Early luck fading isn't the site adjusting you. It's variance settling into math.
+So why did the early sessions feel luckier? Small samples. A few hundred spins can land anywhere — way up or way down. Over thousands of spins, results settle toward the published rate, which is below 100%. Early luck fading isn't the site adjusting you. It's randomness evening out.
 
-The VPN trick? Same game, same certified math, plus a possible terms-of-service violation. You're not outsmarting the RNG — it never knew who you were to begin with.
+The fresh-account trick? Same game, same math. The game never knew who you were to begin with.
 
 #### Quiz question
 
 > **Q: Your friend says the casino "tightened" their account after a big win. What actually happened?**
 >
-> A) The site flagged them as a winner and lowered their RTP
-> B) Variance — the game's odds never changed, their sample size did ✓
+> A) The site flagged them as a winner and lowered their payouts
+> B) Nothing — the game's odds never changed, their lucky streak just ended ✓
 > C) Their account entered a mandatory cooldown payout cycle
-> D) The RNG adapted to their playing style
+> D) The game adapted to their playing style
 >
-> **Feedback**: RTP is certified per game and identical for every player. Early wins fading is small-sample variance meeting long-run math — not a switch someone flipped on your account.
+> **Feedback**: A game's payout rate is certified per game and identical for every player. Early wins fading is a short lucky run meeting the long-run math — not a switch someone flipped on your account.
 
 ---
 
@@ -903,13 +903,13 @@ The VPN trick? Same game, same certified math, plus a possible terms-of-service 
 
 #### Article explainer
 
-"Deposit $100, get $100 free!" It's the most successful sentence in online gambling marketing. And the word doing all the work is "free."
+"Deposit $100, get $100 free!" The word doing all the work in that sentence is "free."
 
-Here's the fine print, decoded: most bonuses carry a *wagering requirement* — usually 20x to 40x the bonus amount. A $100 bonus at 30x means you must place $3,000 in bets before the bonus converts to withdrawable cash.
+Here's the catch, decoded: most bonuses come with a *wagering requirement* — a rule that says you must bet the bonus a set number of times, usually 20x to 40x, before you can cash it out. A $100 bonus at 30x means placing $3,000 in bets first.
 
-Now run the math. Every one of those $3,000 in wagers plays against the house edge. At an average edge of 4%, the expected cost of working through the requirement is about $120 — more than the bonus you're chasing. Add game restrictions (slots usually count 100%, table games often 10% or less), maximum bet limits, and expiry dates, and "free" starts looking like a price tag.
+Now the math. Every one of those bets faces the house edge. If the games keep about 4% on average, working through $3,000 in required bets costs around $120 in expected losses — more than the bonus itself. Add game restrictions, bet caps, and expiry dates, and "free" starts looking like a price tag.
 
-None of this makes bonuses a scam — they're a discount on entertainment, and sometimes a good one. Just read the multiplier before you celebrate. The offer is real. So is the math attached to it.
+Bonuses aren't a scam — they're a discount on entertainment, sometimes a good one. Just read the multiplier before you celebrate.
 
 #### Quiz question
 
@@ -940,11 +940,11 @@ None of this makes bonuses a scam — they're a discount on entertainment, and s
 
 The live dealer smiled at you, chatted between hands, and you won three in a row. New theory: she likes you, and she's dealing accordingly.
 
-She isn't — because she can't. Live casino dealers follow exactly the same scripted rules as dealers on a physical floor: hit on 16, stand on 17, no discretion, no favorites. The studio adds layers a casino floor doesn't have — multiple camera angles, card-reading sensors that log every card dealt, and full recordings that regulators and auditors can review.
+She isn't — because she can't. Live dealers follow the same fixed rules as any casino floor: hit on 16, stand on 17, no judgment calls, no favorites. The studio actually has *more* oversight than a casino floor — multiple cameras, sensors that log every card dealt, and full recordings that auditors can review.
 
-The darker version of this myth says the stream itself is rigged: the lag, the cut, the reshuffle right before your big hand. But latency is a property of your connection, not a manipulation window. The cards were dealt when they were dealt; your screen just caught up a half-second later.
+The darker version of this myth says the stream itself is rigged: the lag, the cut, the reshuffle right before your big hand. But a laggy stream is your internet catching up, not a window for the house to change anything. The cards were dealt when they were dealt; your screen just saw it half a second later.
 
-A live game is one of the most-watched, most-recorded environments in gambling. The dealer's job is to be pleasant and deal the script. The math never gets a say in the small talk.
+The dealer's job is to be pleasant and deal the script. The math never joins the small talk.
 
 #### Quiz question
 
@@ -952,10 +952,10 @@ A live game is one of the most-watched, most-recorded environments in gambling. 
 >
 > A) The dealer is skilled and playing well
 > B) The studio switched to a tighter deck
-> C) Random variance — the dealer makes zero decisions ✓
+> C) Pure chance — the dealer makes zero decisions ✓
 > D) The stream delay lets the house adjust outcomes
 >
-> **Feedback**: Live dealers follow fixed rules on camera, with every card logged and recorded. A "hot" dealer is variance with a friendly face — same as on the casino floor.
+> **Feedback**: Live dealers follow fixed rules on camera, with every card logged and recorded. A "hot" dealer is a random streak with a friendly face — same as on the casino floor.
 
 ---
 
@@ -967,30 +967,30 @@ A live game is one of the most-watched, most-recorded environments in gambling. 
 
 > **MYTH**: "Always spin manually — auto-spin wins less."
 >
-> **FACT**: The RNG produces the same kind of independent result whether you press the button, hold turbo, or let auto-spin run. What changes is speed: more spins per minute means your budget meets the house edge faster.
+> **FACT**: The result is just as random whether you press the button, hold turbo, or let auto-spin run. What changes is speed: more spins per minute means your budget meets the house edge faster.
 >
 > **STAT**: Turbo play can double your spins per hour — same odds per spin, twice the spend rate.
 
 #### Article explainer
 
-Some players swear by the manual press. The timing, the rhythm, the little pause before the button — it feels like part of the game. Auto-spin, the theory goes, gets the "machine rate" instead of your lucky touch.
+Some players swear by the manual press. The timing, the rhythm, the lucky thumb — it feels like part of the game. Auto-spin, the theory goes, wins less.
 
-The RNG can't tell the difference. Whether the spin request comes from your thumb, an auto-spin queue, or turbo mode, the game generates the same kind of independent, certified-RNG outcome. There's no separate math for automated spins — that would require a second RTP, which would fail certification.
+The game can't tell the difference. Whether the spin comes from your thumb, auto-spin, or turbo mode, the software picks the same kind of random result. There's no separate math for automatic spins.
 
-What auto-spin and turbo *do* change is tempo. A manual player might run 300 spins an hour; turbo and auto features can push that toward 600 or more. Same odds per spin, but your bankroll faces the house edge twice as often. That's not a conspiracy — it's a throughput setting.
+What these features *do* change is speed. A manual player might run 300 spins an hour; turbo and auto-spin can push that toward 600 or more. Same odds per spin — but your budget meets the house edge twice as often. That's not a conspiracy. It's a throttle.
 
-So press the button if you enjoy pressing the button. Just know that the only thing your ritual controls is the pace of the session — which, honestly, is the setting worth paying attention to.
+So press the button if you enjoy pressing the button. Just know the only thing your ritual controls is the pace of the session — which, honestly, is the one setting worth watching.
 
 #### Quiz question
 
 > **Q: What actually changes when you switch from manual spins to turbo auto-spin?**
 >
-> A) The RTP drops slightly
+> A) The payout rate drops slightly
 > B) The number of spins per hour — and how fast your budget is exposed to the edge ✓
 > C) The game enters a different payout table
 > D) Nothing at all
 >
-> **Feedback**: The odds per spin are identical — the RNG doesn't know who or what pressed the button. Turbo and auto-spin change speed, which changes how quickly your budget meets the house edge.
+> **Feedback**: The odds per spin are identical — the game doesn't know who or what pressed the button. Turbo and auto-spin change speed, which changes how quickly your budget meets the house edge.
 
 ---
 
@@ -1002,19 +1002,19 @@ So press the button if you enjoy pressing the button. Just know that the only th
 
 > **MYTH**: "That streamer hits bonus rounds every session. Just play like they do."
 >
-> **FACT**: Many gambling streamers play with sponsored funds or house money, and the highlight reel skips the losing hours. Your account has a real balance and the same published RTP as everyone else.
+> **FACT**: Many gambling streamers play with sponsored funds or house money, and the highlight reel skips the losing hours. Your account has a real balance and the same odds as everyone else.
 >
 > **STAT**: A streamer running 10,000 spins per week will hit huge wins regularly — and lose more than they win. You just don't see that part.
 
 #### Article explainer
 
-The clip is incredible: max win, screaming, chat exploding. The streamer hits bonuses like clockwork, and the obvious conclusion is that they know something you don't.
+The clip is incredible: max win, screaming, chat exploding. The streamer hits bonuses like clockwork, so they must know something you don't.
 
-They know two things, actually. First: volume. A full-time streamer runs tens of thousands of spins a week. At that scale, spectacular wins are a statistical certainty — and so are larger total losses, which don't make the thumbnail. You're watching the highlight reel of a losing season.
+They know two things. First: volume. A full-time streamer runs tens of thousands of spins a week. At that scale, huge wins are guaranteed — and so are bigger total losses, which don't make the thumbnail. You're watching the highlight reel of a losing season.
 
-Second: the balance often isn't theirs. Many gambling streamers are sponsored — playing with operator-provided funds or affiliate deals that change the economics completely. Losing sponsored money costs them nothing; the content is the income. Your deposit doesn't work that way.
+Second: the money often isn't theirs. Many gambling streamers are sponsored, playing with funds the site provides. Losing sponsored money costs them nothing — the content is the income. Your deposit doesn't work that way.
 
-None of this means every streamer is dishonest — some disclose everything. It means the feed you're watching is a business, selected for drama, and running on math (and sometimes money) that isn't available to your account. Enjoy the show. Don't mistake it for a strategy.
+Not every streamer is dishonest; some disclose everything. But the feed is a business, edited for drama, running on money and math your account doesn't get. Enjoy the show. Don't mistake it for a strategy.
 
 #### Quiz question
 
@@ -1022,7 +1022,7 @@ None of this means every streamer is dishonest — some disclose everything. It 
 >
 > A) They've found high-paying games the public can't access
 > B) Huge spin volume plus edited highlights — and often sponsored funds ✓
-> C) Streamers get a higher RTP for marketing reasons
+> C) Streamers get better payout rates for marketing reasons
 > D) They spin at the right time of day
 >
 > **Feedback**: Tens of thousands of spins per week guarantee occasional huge wins — and bigger unseen losses. Add sponsorship deals and selective editing, and the stream tells you nothing about your own odds.
@@ -1037,19 +1037,19 @@ None of this means every streamer is dishonest — some disclose everything. It 
 
 > **MYTH**: "Demo mode pays like crazy. Switch to real money and the game tightens up."
 >
-> **FACT**: On licensed platforms, demo and real-money versions must run the same certified math. The "switch" you feel is a small demo sample meeting a long real-money session — plus the fact that losing fake money doesn't sting.
+> **FACT**: On licensed sites, demo and real-money versions must run the same math. The "switch" you feel is a short demo run meeting a long real-money session — plus the fact that losing fake money doesn't sting.
 >
-> **STAT**: Same game, same RTP. Regulated demo versions are required to match the real-money math.
+> **STAT**: Same game, same odds. Regulated demo versions are required to match the real-money math.
 
 #### Article explainer
 
-Everyone's run the experiment: rack up a fortune in demo mode, deposit actual money, and watch the game apparently remember it's a business.
+Everyone's run the experiment: win a fortune in demo mode, deposit real money, and watch the game apparently remember it's a business.
 
-On licensed platforms, demo mode is required to use the same certified math as the real-money game. Regulators check this specifically, because a "loose demo" would be straightforwardly deceptive advertising. Same RNG behavior, same RTP, same paytable.
+On licensed sites, demo mode must use the same math as the real-money game. Regulators check this, because a "loose demo" would be false advertising. Same odds, same payouts, same game.
 
-So why does the switch feel so real? Two reasons. First, sample size: you might play demo for ten minutes and real money for two hours. Short sessions swing wildly in both directions; you remember the lucky demo run and forget the unlucky one. Second, stakes change perception: fake losses don't register, real losses do. The same losing streak feels like noise in demo and like a pattern with your money on the line.
+So why does the switch feel real? Two reasons. Sample size: you might demo for ten minutes and play for two hours, and short sessions swing wildly both ways — you remember the lucky demo run and forget the unlucky one. And stakes change what you notice: fake losses don't register, real ones do. The same losing streak feels like noise in demo and like a pattern with money on the line.
 
-One honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's an argument for playing on regulated platforms — not evidence that math changes when money shows up.
+One honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a reason to play on regulated platforms — not proof the math changes when money shows up.
 
 #### Quiz question
 
@@ -1057,7 +1057,7 @@ One honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's an
 >
 > A) The game switched to its real-money payout table
 > B) Nothing in the math — your sample size and attention changed ✓
-> C) The casino recognized your deposit and adjusted the RNG
+> C) The casino recognized your deposit and adjusted the odds
 > D) Demo wins are scripted to encourage deposits
 >
 > **Feedback**: Licensed platforms must run identical math in demo and real-money modes. Short demo sessions plus painless fake losses create the feeling of a switch that the regulated math doesn't allow.
