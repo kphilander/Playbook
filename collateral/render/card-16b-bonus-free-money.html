@@ -21,6 +21,7 @@
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); }
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card-pillar { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 20px; }
   .myth-statement { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 32px; letter-spacing: -0.02em; }
@@ -29,15 +30,15 @@
   .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
   .bar-viz { margin-top: 48px; }
   .bar-row { display: flex; align-items: center; gap: 16px; }
-  .bar { height: 52px; border-radius: 0 4px 4px 0; }
+  .bar { height: 52px; flex-shrink: 0; border-radius: 0 4px 4px 0; }
   .bar.teal { background: var(--pb-color-secondary); width: 24px; }
   .bar.orange { background: var(--pb-color-accent); width: 720px; }
-  .bar-value { font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(30px * var(--pb-template-text-scale, 1)); }
+  .bar-value { font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(30px * var(--pb-template-text-scale, 1)); line-height: 1; }
   .bar-value.teal-text { color: var(--pb-color-secondary); }
   .bar-value.orange-text { color: var(--pb-color-accent); }
   .bar-caption { font-family: var(--pb-font-body); font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin: 10px 0 44px; }
   .bar-caption:last-child { margin-bottom: 0; }
-  .viz-scale-note { font-family: var(--pb-font-body); font-size: calc(14px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 24px; }
+  .viz-scale-note { font-family: var(--pb-font-body); font-size: calc(15px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-top: 24px; }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
@@ -48,6 +49,7 @@
 <div class="social-card">
   <div class="card-header">
     <span class="card-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+    <span class="card-pillar">Open</span>
   </div>
   <div class="card-body">
     <div class="myth-label">Myth vs. Math</div>
