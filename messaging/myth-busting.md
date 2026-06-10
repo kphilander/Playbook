@@ -790,32 +790,32 @@ Understanding this isn't pessimistic — it's empowering. When you frame gamblin
 
 #### Social card
 
-> **MYTH**: "Online slots are rigged — real casinos at least have to play fair."
+> **MYTH**: "Online slots are rigged. Real casinos at least have to play fair."
 >
-> **FACT**: Licensed online slots are tested by independent labs, just like the machines on a casino floor. Most online games even show their payback rate right in the info screen — try getting that from a physical machine.
+> **FACT**: Licensed online slots are tested by independent labs, just like the machines on a casino floor. Most online games even show their payback rate right in the info screen. Try getting that from a physical machine.
 >
-> **STAT**: Online slots commonly pay back 94–97% over time — as much or more than many casino-floor machines.
+> **STAT**: Online slots commonly pay back 94–97% over time, as much or more than many casino-floor machines.
 
 #### Article explainer
 
 The losing streak ends, you close the app, and the thought arrives: *this thing is rigged.* You can't see the machine, so why trust it?
 
-Here's what's behind the screen. Licensed online slots run on software that picks a random result for every spin. Independent labs test that software, and regulators check it — the same oversight casino-floor machines get.
+Here's what's behind the screen. Licensed online slots run on software that picks a random result for every spin. Independent labs test that software, and regulators check it. That's the same oversight casino-floor machines get.
 
-Online games are often *more* open than the floor. Most show their "return to player" — the share of money the game pays back over time — right in the info screen. It's usually 94–97%, as good or better than many physical machines.
+Online games are often *more* open than the floor. Most show their "return to player" right in the info screen. That's the share of money the game pays back over time, and it's usually 94–97%, as good or better than many physical machines.
 
-A rigged game would be the fastest way for a site to lose its license. The house edge already does the job — legally, openly, and printed in the paytable.
+A rigged game would be the fastest way for a site to lose its license. The house edge already does the job: legally, openly, and printed in the paytable.
 
 #### Quiz question
 
 > **Q: How does the payback of licensed online slots compare to casino-floor machines?**
 >
-> A) Much lower — online games are unregulated
-> B) Equal or often higher — and usually shown in the game info ✓
+> A) Much lower, since online games are unregulated
+> B) Equal or often higher, and usually shown in the game info ✓
 > C) It changes depending on how much you've deposited
-> D) Nobody knows — online payouts are secret
+> D) Nobody knows, since online payouts are secret
 >
-> **Feedback**: Licensed online slots are tested by independent labs and usually show their payback rate in the game info — commonly 94–97%, as good or better than many physical machines. The house edge is real, but it's not hidden.
+> **Feedback**: Licensed online slots are tested by independent labs and usually show their payback rate in the game info. It's commonly 94–97%, as good or better than many physical machines. The house edge is real, but it's not hidden.
 
 ---
 
@@ -825,7 +825,7 @@ A rigged game would be the fastest way for a site to lose its license. The house
 
 #### Social card
 
-> **MYTH**: "The game was about to pay out — then I changed my bet and ruined it."
+> **MYTH**: "The game was about to pay out. Then I changed my bet and ruined it."
 >
 > **FACT**: There is no "about to pay out." The result is picked at random the instant you hit spin. The game has no plan, no schedule, and no idea who you are.
 >
@@ -833,9 +833,9 @@ A rigged game would be the fastest way for a site to lose its license. The house
 
 #### Article explainer
 
-You've been spinning for twenty minutes. The bonus round feels close. Then you change your bet — and someone in the chat says you just "reset the jackpot timer."
+You've been spinning for twenty minutes. The bonus round feels close. Then you change your bet, and someone in the chat says you just "reset the jackpot timer."
 
-There is no timer. The result of each spin is picked at random the instant you press the button. Nothing is queued up, building, or scheduled. The game doesn't have a plan for your next ten spins — it doesn't know there will *be* a next ten spins.
+There is no timer. The result of each spin is picked at random the instant you press the button. Nothing is queued up, building, or scheduled. The game doesn't have a plan for your next ten spins. It doesn't know there will *be* a next ten spins.
 
 The myth survives because slots feel like a story: rising music, near misses, meters filling. That's presentation, not prediction. The drama is added *after* the result is already decided.
 
@@ -847,7 +847,7 @@ So changing your bet, switching games, or taking a break can't interrupt a win t
 >
 > A) Gradually, as the reels slow down
 > B) When the bonus meter fills up
-> C) The instant you press spin — everything after is animation ✓
+> C) The instant you press spin. Everything after is animation ✓
 > D) At the start of each session
 >
 > **Feedback**: The result is picked at random the moment you press spin. The reels, music, and near misses are a show built around a decision that's already been made. Nothing is ever "about to" hit.
@@ -864,15 +864,15 @@ So changing your bet, switching games, or taking a break can't interrupt a win t
 >
 > **FACT**: A game's payout rate is built into the game itself and is the same for every player on it. There's no "new player mode," no winner flag, and no per-account dial to turn.
 >
-> **STAT**: 1 payout setting per game — the same for your account, your friend's account, and the account that just signed up.
+> **STAT**: 1 payout setting per game. The same for your account, your friend's account, and the account that just signed up.
 
 #### Article explainer
 
 The story goes: you won early because the site wanted to hook you. Now that you're a regular, they've quietly turned your odds down. Some players even open fresh accounts to get the "new player luck" back.
 
-One problem: the game doesn't have a per-player setting. A licensed game's payout rate is built into the game software and certified before launch. Every account playing that game gets the same odds — regulators check exactly this, and a per-account dial would cost the site its license.
+One problem: the game doesn't have a per-player setting. A licensed game's payout rate is built into the game software and certified before launch. Every account playing that game gets the same odds. Regulators check exactly this, and a per-account dial would cost the site its license.
 
-So why did the early sessions feel luckier? Small samples. A few hundred spins can land anywhere — way up or way down. Over thousands of spins, results settle toward the published rate, which is below 100%. Early luck fading isn't the site adjusting you. It's randomness evening out.
+So why did the early sessions feel luckier? Small samples. A few hundred spins can land anywhere, way up or way down. Over thousands of spins, results settle toward the published rate, which is below 100%. Early luck fading isn't the site adjusting you. It's randomness evening out.
 
 The fresh-account trick? Same game, same math. The game never knew who you were to begin with.
 
@@ -881,11 +881,11 @@ The fresh-account trick? Same game, same math. The game never knew who you were 
 > **Q: Your friend says the casino "tightened" their account after a big win. What actually happened?**
 >
 > A) The site flagged them as a winner and lowered their payouts
-> B) Nothing — the game's odds never changed, their lucky streak just ended ✓
+> B) Nothing. The game's odds never changed; their lucky streak just ended ✓
 > C) Their account entered a mandatory cooldown payout cycle
 > D) The game adapted to their playing style
 >
-> **Feedback**: A game's payout rate is certified per game and identical for every player. Early wins fading is a short lucky run meeting the long-run math — not a switch someone flipped on your account.
+> **Feedback**: A game's payout rate is certified per game and identical for every player. Early wins fading is a short lucky run meeting the long-run math, not a switch someone flipped on your account.
 
 ---
 
@@ -897,7 +897,7 @@ The fresh-account trick? Same game, same math. The game never knew who you were 
 
 > **MYTH**: "$100 deposit bonus = $100 free. Just withdraw it."
 >
-> **FACT**: Most bonuses come with wagering requirements. A $100 bonus at 30x means betting $3,000 — with the house edge working on every one of those bets — before you can withdraw.
+> **FACT**: Most bonuses come with wagering requirements. A $100 bonus at 30x means betting $3,000 before you can withdraw, with the house edge working on every one of those bets.
 >
 > **STAT**: $3,000 in required wagers at a 4% average edge costs about $120 in expected losses. More than the bonus itself.
 
@@ -905,11 +905,11 @@ The fresh-account trick? Same game, same math. The game never knew who you were 
 
 "Deposit $100, get $100 free!" The word doing all the work in that sentence is "free."
 
-Here's the catch, decoded: most bonuses come with a *wagering requirement* — a rule that says you must bet the bonus a set number of times, usually 20x to 40x, before you can cash it out. A $100 bonus at 30x means placing $3,000 in bets first.
+Here's the catch, decoded: most bonuses come with a *wagering requirement*. That's a rule that says you must bet the bonus a set number of times, usually 20x to 40x, before you can cash it out. A $100 bonus at 30x means placing $3,000 in bets first.
 
-Now the math. Every one of those bets faces the house edge. If the games keep about 4% on average, working through $3,000 in required bets costs around $120 in expected losses — more than the bonus itself. Add game restrictions, bet caps, and expiry dates, and "free" starts looking like a price tag.
+Now the math. Every one of those bets faces the house edge. If the games keep about 4% on average, working through $3,000 in required bets costs around $120 in expected losses. That's more than the bonus itself. Add game restrictions, bet caps, and expiry dates, and "free" starts looking like a price tag.
 
-Bonuses aren't a scam — they're a discount on entertainment, sometimes a good one. Just read the multiplier before you celebrate.
+Bonuses aren't a scam. They're a discount on entertainment, sometimes a good one. Just read the multiplier before you celebrate.
 
 #### Quiz question
 
@@ -920,7 +920,7 @@ Bonuses aren't a scam — they're a discount on entertainment, sometimes a good 
 > C) Your winnings are multiplied by 30
 > D) The bonus expires in 30 days
 >
-> **Feedback**: 30x means $3,000 in total bets — each one facing the house edge — before the bonus converts to cash. Bonuses can still be good value, but they're a discount with conditions, not free money.
+> **Feedback**: 30x means $3,000 in total bets before the bonus converts to cash, with each bet facing the house edge. Bonuses can still be good value, but they're a discount with conditions, not free money.
 
 ---
 
@@ -930,7 +930,7 @@ Bonuses aren't a scam — they're a discount on entertainment, sometimes a good 
 
 #### Social card
 
-> **MYTH**: "Find a friendly live dealer — they can deal you better cards. And if the stream lags, it's rigged."
+> **MYTH**: "Find a friendly live dealer. They can deal you better cards. And if the stream lags, it's rigged."
 >
 > **FACT**: Live dealers follow the same fixed rules as any casino floor, on camera, with every hand recorded and audited. Stream lag is your internet, not a cover-up.
 >
@@ -940,7 +940,7 @@ Bonuses aren't a scam — they're a discount on entertainment, sometimes a good 
 
 The live dealer smiled at you, chatted between hands, and you won three in a row. New theory: she likes you, and she's dealing accordingly.
 
-She isn't — because she can't. Live dealers follow the same fixed rules as any casino floor: hit on 16, stand on 17, no judgment calls, no favorites. The studio actually has *more* oversight than a casino floor — multiple cameras, sensors that log every card dealt, and full recordings that auditors can review.
+She isn't, because she can't. Live dealers follow the same fixed rules as any casino floor: hit on 16, stand on 17, no judgment calls, no favorites. The studio actually has *more* oversight than a casino floor: multiple cameras, sensors that log every card dealt, and full recordings that auditors can review.
 
 The darker version of this myth says the stream itself is rigged: the lag, the cut, the reshuffle right before your big hand. But a laggy stream is your internet catching up, not a window for the house to change anything. The cards were dealt when they were dealt; your screen just saw it half a second later.
 
@@ -952,10 +952,10 @@ The dealer's job is to be pleasant and deal the script. The math never joins the
 >
 > A) The dealer is skilled and playing well
 > B) The studio switched to a tighter deck
-> C) Pure chance — the dealer makes zero decisions ✓
+> C) Pure chance. The dealer makes zero decisions ✓
 > D) The stream delay lets the house adjust outcomes
 >
-> **Feedback**: Live dealers follow fixed rules on camera, with every card logged and recorded. A "hot" dealer is a random streak with a friendly face — same as on the casino floor.
+> **Feedback**: Live dealers follow fixed rules on camera, with every card logged and recorded. A "hot" dealer is a random streak with a friendly face, same as on the casino floor.
 
 ---
 
@@ -965,32 +965,32 @@ The dealer's job is to be pleasant and deal the script. The math never joins the
 
 #### Social card
 
-> **MYTH**: "Always spin manually — auto-spin wins less."
+> **MYTH**: "Always spin manually. Auto-spin wins less."
 >
 > **FACT**: The result is just as random whether you press the button, hold turbo, or let auto-spin run. What changes is speed: more spins per minute means your budget meets the house edge faster.
 >
-> **STAT**: Turbo play can double your spins per hour — same odds per spin, twice the spend rate.
+> **STAT**: Turbo play can double your spins per hour. Same odds per spin, twice the spend rate.
 
 #### Article explainer
 
-Some players swear by the manual press. The timing, the rhythm, the lucky thumb — it feels like part of the game. Auto-spin, the theory goes, wins less.
+Some players swear by the manual press. The timing, the rhythm, the lucky thumb. It feels like part of the game. Auto-spin, the theory goes, wins less.
 
 The game can't tell the difference. Whether the spin comes from your thumb, auto-spin, or turbo mode, the software picks the same kind of random result. There's no separate math for automatic spins.
 
-What these features *do* change is speed. A manual player might run 300 spins an hour; turbo and auto-spin can push that toward 600 or more. Same odds per spin — but your budget meets the house edge twice as often. That's not a conspiracy. It's a throttle.
+What these features *do* change is speed. A manual player might run 300 spins an hour; turbo and auto-spin can push that toward 600 or more. Same odds per spin, but your budget meets the house edge twice as often. That's not a conspiracy. It's a throttle.
 
-So press the button if you enjoy pressing the button. Just know the only thing your ritual controls is the pace of the session — which, honestly, is the one setting worth watching.
+So press the button if you enjoy pressing the button. Just know the only thing your ritual controls is the pace of the session. Honestly, that's the one setting worth watching.
 
 #### Quiz question
 
 > **Q: What actually changes when you switch from manual spins to turbo auto-spin?**
 >
 > A) The payout rate drops slightly
-> B) The number of spins per hour — and how fast your budget is exposed to the edge ✓
+> B) The number of spins per hour, and how fast your budget is exposed to the edge ✓
 > C) The game enters a different payout table
 > D) Nothing at all
 >
-> **Feedback**: The odds per spin are identical — the game doesn't know who or what pressed the button. Turbo and auto-spin change speed, which changes how quickly your budget meets the house edge.
+> **Feedback**: The odds per spin are identical. The game doesn't know who or what pressed the button. Turbo and auto-spin change speed, which changes how quickly your budget meets the house edge.
 
 ---
 
@@ -1004,15 +1004,15 @@ So press the button if you enjoy pressing the button. Just know the only thing y
 >
 > **FACT**: Many gambling streamers play with sponsored funds or house money, and the highlight reel skips the losing hours. Your account has a real balance and the same odds as everyone else.
 >
-> **STAT**: A streamer running 10,000 spins per week will hit huge wins regularly — and lose more than they win. You just don't see that part.
+> **STAT**: A streamer running 10,000 spins per week will hit huge wins regularly, and lose more than they win. You just don't see that part.
 
 #### Article explainer
 
 The clip is incredible: max win, screaming, chat exploding. The streamer hits bonuses like clockwork, so they must know something you don't.
 
-They know two things. First: volume. A full-time streamer runs tens of thousands of spins a week. At that scale, huge wins are guaranteed — and so are bigger total losses, which don't make the thumbnail. You're watching the highlight reel of a losing season.
+They know two things. First: volume. A full-time streamer runs tens of thousands of spins a week. At that scale, huge wins are guaranteed, and so are bigger total losses, which don't make the thumbnail. You're watching the highlight reel of a losing season.
 
-Second: the money often isn't theirs. Many gambling streamers are sponsored, playing with funds the site provides. Losing sponsored money costs them nothing — the content is the income. Your deposit doesn't work that way.
+Second: the money often isn't theirs. Many gambling streamers are sponsored, playing with funds the site provides. Losing sponsored money costs them nothing. The content is the income. Your deposit doesn't work that way.
 
 Not every streamer is dishonest; some disclose everything. But the feed is a business, edited for drama, running on money and math your account doesn't get. Enjoy the show. Don't mistake it for a strategy.
 
@@ -1021,11 +1021,11 @@ Not every streamer is dishonest; some disclose everything. But the feed is a bus
 > **Q: A streamer hits massive slot wins every week. What's the most likely explanation?**
 >
 > A) They've found high-paying games the public can't access
-> B) Huge spin volume plus edited highlights — and often sponsored funds ✓
+> B) Huge spin volume, edited highlights, and often sponsored funds ✓
 > C) Streamers get better payout rates for marketing reasons
 > D) They spin at the right time of day
 >
-> **Feedback**: Tens of thousands of spins per week guarantee occasional huge wins — and bigger unseen losses. Add sponsorship deals and selective editing, and the stream tells you nothing about your own odds.
+> **Feedback**: Tens of thousands of spins per week guarantee occasional huge wins, and bigger unseen losses. Add sponsorship deals and selective editing, and the stream tells you nothing about your own odds.
 
 ---
 
@@ -1037,7 +1037,7 @@ Not every streamer is dishonest; some disclose everything. But the feed is a bus
 
 > **MYTH**: "Demo mode pays like crazy. Switch to real money and the game tightens up."
 >
-> **FACT**: On licensed sites, demo and real-money versions must run the same math. The "switch" you feel is a short demo run meeting a long real-money session — plus the fact that losing fake money doesn't sting.
+> **FACT**: On licensed sites, demo and real-money versions must run the same math. The "switch" you feel is a short demo run meeting a long real-money session, plus the fact that losing fake money doesn't sting.
 >
 > **STAT**: Same game, same odds. Regulated demo versions are required to match the real-money math.
 
@@ -1047,16 +1047,16 @@ Everyone's run the experiment: win a fortune in demo mode, deposit real money, a
 
 On licensed sites, demo mode must use the same math as the real-money game. Regulators check this, because a "loose demo" would be false advertising. Same odds, same payouts, same game.
 
-So why does the switch feel real? Two reasons. Sample size: you might demo for ten minutes and play for two hours, and short sessions swing wildly both ways — you remember the lucky demo run and forget the unlucky one. And stakes change what you notice: fake losses don't register, real ones do. The same losing streak feels like noise in demo and like a pattern with money on the line.
+So why does the switch feel real? Two reasons. Sample size: you might demo for ten minutes and play for two hours, and short sessions swing wildly both ways. You remember the lucky demo run and forget the unlucky one. And stakes change what you notice: fake losses don't register, real ones do. The same losing streak feels like noise in demo and like a pattern with money on the line.
 
-One honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a reason to play on regulated platforms — not proof the math changes when money shows up.
+One honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a reason to play on regulated platforms, not proof the math changes when money shows up.
 
 #### Quiz question
 
 > **Q: You won big in demo mode but lose with real money. On a licensed site, what changed?**
 >
 > A) The game switched to its real-money payout table
-> B) Nothing in the math — your sample size and attention changed ✓
+> B) Nothing in the math. Your sample size and attention changed ✓
 > C) The casino recognized your deposit and adjusted the odds
 > D) Demo wins are scripted to encourage deposits
 >

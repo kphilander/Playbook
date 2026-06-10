@@ -530,13 +530,13 @@ This is the event-moment companion to [Campaign 3](#campaign-3-sports-betting-re
 
 **Countdown post**: "6 days out. The squares pool is filling up and someone in the group chat has a 9-leg parlay. Before kickoff, here's how the lines actually work. #KnowYourGame"
 
-**Myth 11 post**: "You've watched every snap this season. The sportsbook's models have watched every snap ever — and set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
+**Myth 11 post**: "You've watched every snap this season. The sportsbook's models have watched every snap ever, and they set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
 
 **Myth 25 post**: "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
 
 **Tool promotion post**: "Game-day plan: snacks, the good TV, and a budget you set before kickoff. 10 seconds now means zero math during the fourth quarter. Link in bio."
 
-**Game-day post**: "Momentum shifted? The algorithm priced it before the replay ended. In-play betting is exciting — it's not an edge. Enjoy the game. #KnowYourGame"
+**Game-day post**: "Momentum shifted? The algorithm priced it before the replay ended. In-play betting is exciting, but it's not an edge. Enjoy the game. #KnowYourGame"
 
 ### Email option
 
@@ -544,7 +544,7 @@ Send 2–3 days before the game:
 
 > **Subject**: The big game, by the numbers
 >
-> **Preview text**: Props, parlays, and squares — what this week's bets actually cost.
+> **Preview text**: Props, parlays, and squares: what this week's bets actually cost.
 >
 > **Body structure**:
 > - Hero: Countdown card image
@@ -642,7 +642,7 @@ Operator-facing: launch December 29, run through the first weekend of January. A
 | Mon 1 | Instagram / Facebook | Myth card | 19 | `myth-busting.md` → Myth 19 → Social card | 1080 x 1080 | `collateral/render/card-16a` format |
 | Tue 1 | Blog / help center | Article | 19+20+21 | Combined: "Is Online Rigged? Inside the Testing Labs, the Audits, and Your 'Lucky New Account'" | Long-form web | — |
 | Wed 1 | Instagram / Facebook | Myth card | 20 | `myth-busting.md` → Myth 20 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
-| Thu 1 | In-app | Push notification | 24 | Myth 24 STAT line: "Turbo doubles your spins per hour — same odds, twice the spend rate." | Push | `collateral/render/push-notification-12e` format |
+| Thu 1 | In-app | Push notification | 24 | Myth 24 STAT line: "Turbo doubles your spins per hour. Same odds, twice the spend rate." | Push | `collateral/render/push-notification-12e` format |
 | Fri 1 | Instagram / Facebook | Myth card | 21 | `myth-busting.md` → Myth 21 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
 | Sat 1 | Instagram Stories | Story recap | 19–21 | Week 1 recap: three myths, three facts, one CTA | 1080 x 1920 | `collateral/render/story-16c` format |
 | Mon 2 | Instagram / Facebook | Myth card | 22 | `myth-busting.md` → Myth 22 → Social card | 1080 x 1080 | `collateral/render/card-16b` format |
@@ -654,19 +654,19 @@ Operator-facing: launch December 29, run through the first weekend of January. A
 
 ### Suggested captions
 
-**Myth 19 post**: "Online slots are tested by independent labs — and unlike the casino floor, most show their payback rate right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
+**Myth 19 post**: "Online slots are tested by independent labs, and unlike the casino floor, most show their payback rate right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
 
 **Myth 20 post**: "The game wasn't 'about to pay out' when you walked away. The result is generated the instant you press spin. Everything else is animation. #KnowYourGame"
 
 **Myth 21 post**: "There's no 'new player luck' setting and no winner flag. One game, one payout rate, every account. Your early wins were a lucky run, not bait. #NoFinePrint"
 
-**Myth 22 post**: "A $100 bonus at 30x wagering = $3,000 in bets before you can withdraw. Bonuses can be good value — but read the multiplier before you celebrate. #KnowYourGame"
+**Myth 22 post**: "A $100 bonus at 30x wagering = $3,000 in bets before you can withdraw. Bonuses can be good value, but read the multiplier before you celebrate. #KnowYourGame"
 
-**Myth 24 post**: "Auto-spin doesn't change your odds. It changes your speed — which changes how fast your budget meets the house edge. The only setting that matters is pace. #KnowYourGame"
+**Myth 24 post**: "Auto-spin doesn't change your odds. It changes your speed, which changes how fast your budget meets the house edge. The only setting that matters is pace. #KnowYourGame"
 
 **Myth 25 post**: "Streamers run 10,000+ spins a week, often on sponsored balances, and you see the highlights. That's a TV show, not a strategy. #NoFinePrint"
 
-**Quiz CTA post**: "Eight online myths, busted in two weeks. How many had you? Take the online reality check — 2 minutes. Link in bio."
+**Quiz CTA post**: "Eight online myths, busted in two weeks. How many had you? Take the online reality check. 2 minutes. Link in bio."
 
 ### Email option
 
