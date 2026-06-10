@@ -1,7 +1,7 @@
 {
   "name": "Playbook Content API",
   "version": "0.1.0",
-  "generated": "2026-03-07T03:29:15.142Z",
+  "generated": "2026-06-10T00:10:47.976Z",
   "license": "CC0-1.0",
   "description": "Structured content feeds for the Playbook responsible gambling brand system. All content is CC0-licensed and free to use.",
   "endpoints": {
@@ -42,7 +42,7 @@
       "number": "1-800-522-4700",
       "alternate": "1-800-GAMBLER",
       "new_primary": "1-800-MY-RESET",
-      "text_number": "Text SUPPORT to 53342",
+      "text_number": "Text 1-800-MY-RESET (1-800-697-3738) or 1-800-522-4700",
       "chat_url": "www.ncpgambling.org/chat",
       "website": "www.ncpgambling.org",
       "label": "National Council on Problem Gambling",

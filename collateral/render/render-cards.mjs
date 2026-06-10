@@ -93,6 +93,12 @@ const cards = [
   { html: 'story-15b-bet-costs.html', output: 'story-15b-bet-costs.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-15c-how-sportsbook-wins.html', output: 'poster-15c-how-sportsbook-wins.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'live-odds-overlay-15d.html', output: 'live-odds-overlay-15d.png', w: 420, h: 280, selector: '.live-overlay' },
+  // Online myths campaign (16-series) + seasonal campaigns (17/18-series)
+  { html: 'card-16a-online-rigged.html', output: 'card-16a-online-rigged.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-16b-bonus-free-money.html', output: 'card-16b-bonus-free-money.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'story-16c-online-myths.html', output: 'story-16c-online-myths.png', w: 1080, h: 1920, selector: '.story-card' },
+  { html: 'card-17a-big-game.html', output: 'card-17a-big-game.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-18a-fresh-start.html', output: 'card-18a-fresh-start.png', w: 1080, h: 1080, selector: '.social-card' },
   // i18n Phase A — Japanese (Japan) variants
   { html: 'card-13a-its-due.ja.html', output: 'card-13a-its-due.ja.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-13b-near-win.ja.html', output: 'card-13b-near-win.ja.png', w: 1080, h: 1080, selector: '.social-card' },

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .story-card {
+    width: 1080px; height: 1920px;
+    background: var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); z-index: 2; }
+  .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); }
+  .story-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
+  .story-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
+  .myth-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 24px; }
+  .myth-statement { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 32px; letter-spacing: -0.02em; }
+  .myth-statement .strike { text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 5px; color: var(--pb-color-neutral-300); }
+  .divider { width: 80px; height: 4px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); margin-bottom: 32px; border-radius: 2px; }
+  .fact-statement { font-family: var(--pb-font-body); font-size: calc(30px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 40px; }
+  .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
+  .myth-list { margin-bottom: 40px; }
+  .myth-list-item { display: flex; align-items: baseline; gap: 16px; padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .myth-list-item:last-child { border-bottom: none; }
+  .myth-list-strike { font-family: var(--pb-font-heading); font-size: calc(26px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-neutral-300); text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 3px; flex: 1; }
+  .myth-list-fact { font-family: var(--pb-font-body); font-size: calc(20px * var(--pb-template-text-scale, 1)); color: var(--pb-color-secondary); font-weight: 600; flex: 1; text-align: right; }
+  .stat-block { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 32px; text-align: center; margin-bottom: 40px; }
+  .stat-number { font-family: var(--pb-font-heading); font-size: calc(72px * var(--pb-template-text-scale, 1)); font-weight: 900; color: var(--pb-color-accent); line-height: 1; letter-spacing: -0.03em; margin-bottom: 8px; }
+  .stat-label { font-family: var(--pb-font-heading); font-size: calc(20px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); }
+  .story-cta { display: block; width: 100%; padding: 24px; background: var(--pb-color-secondary); color: var(--pb-color-primary); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(22px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 16px; text-decoration: none; letter-spacing: 0.02em; }
+  .story-footer { background: var(--pb-color-primary-light); padding: 24px 48px; text-align: center; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  </head>
+<body>
+<div class="story-card">
+  <div class="story-header">
+    <span class="story-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></span>
+
+  </div>
+  <div class="story-body">
+    <div class="myth-label">Online Reality Check</div>
+    <div class="myth-statement"><span class="strike">"The game knows you"</span></div>
+    <div class="divider"></div>
+    <div class="fact-statement">It doesn't. The result is generated by a <strong>certified RNG</strong> the instant you press spin — no schedule, no winner flag, no demo switch.</div>
+    <div class="myth-list">
+      <div class="myth-list-item">
+        <span class="myth-list-strike">"Online is rigged"</span>
+        <span class="myth-list-fact">Lab-certified, RTP published</span>
+      </div>
+      <div class="myth-list-item">
+        <span class="myth-list-strike">"It was about to hit"</span>
+        <span class="myth-list-fact">Decided at the spin, not before</span>
+      </div>
+      <div class="myth-list-item">
+        <span class="myth-list-strike">"They tightened my account"</span>
+        <span class="myth-list-fact">One RTP per game, every player</span>
+      </div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-number">1</div>
+      <div class="stat-label">certified RTP per game — same for every account</div>
+    </div>
+    <a href="#" class="story-cta">Take the reality check</a>
+  </div>
+  <div class="story-footer">
+    <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "count": 7,
-    "generated": "2026-03-07T03:29:15.142Z",
+    "count": 10,
+    "generated": "2026-06-10T00:10:47.976Z",
     "version": "0.1.0",
     "source": "messaging/campaigns.md"
   },
@@ -28,7 +28,8 @@
     "channel": [
       "social-media",
       "blog",
-      "email"
+      "email",
+      "in-app"
     ],
     "cultural_profile": {
       "voice": "peer",
@@ -42,8 +43,8 @@
       "language": "en-us"
     },
     "adaptation_status": "base",
-    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\n",
-    "last_updated": "2025-02-25T00:00:00.000Z"
+    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\nCampaign 8 (Big Game): Player copy says \"the big game\" — never a\ntrademarked event name. Anchor to your market's marquee event\n(championship final, Grand Final, Cup Final) in the timing note only.\nCampaign 9 (New Year): Timing assumes January 1 new year. Shift to\nlocal new-year moment where relevant (e.g., Lunar New Year markets).\nCampaign 10 (Online Reality Check): Bonus/wagering and RTP publication\nrules vary by jurisdiction — verify Myth 19/22/26 claims locally.\n",
+    "last_updated": "2026-06-10T00:00:00.000Z"
   },
   "campaigns": [
     {
@@ -939,6 +940,420 @@
         "Email open + click-through rates",
         "Quiz completion rates (Days 4, 7, 10, 13)",
         "Cross-game engagement (players who engage with 3+ game posts)"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 8,
+      "name": "The Big Game, By the Numbers",
+      "theme": "A 7-day countdown to the year's biggest game — the one week when casual fans place their first-ever bet.",
+      "tagline": "The biggest game of the year deserves your sharpest bet.",
+      "duration": "1 week (7 posts), ending on game day",
+      "pillar": "open + tools",
+      "audience": [
+        "sports bettors",
+        "first-time bettors",
+        "office-pool players",
+        "young adults"
+      ],
+      "mythsUsed": [
+        11,
+        12,
+        14,
+        25
+      ],
+      "schedule": [
+        {
+          "day": "Mon",
+          "channel": "Instagram / Twitter",
+          "content_type": "Countdown card",
+          "myth": "—",
+          "copy_source": "\"6 days to the big game. Before the hype: here's how the lines actually work.\" (adapts SE-1, `core-messages.md`)",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-17a` format"
+        },
+        {
+          "day": "Tue",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "12",
+          "copy_source": "Title: \"Props, Squares, and Parlays: A Field Guide to Big-Game Bets\" — what each bet is, what it costs",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "11",
+          "copy_source": "`myth-busting.md` → Myth 11 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-15a` format"
+        },
+        {
+          "day": "Thu",
+          "channel": "Instagram Stories",
+          "content_type": "Infographic",
+          "myth": "12",
+          "copy_source": "What a hype parlay actually costs — vig compounding per leg",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-15b` format"
+        },
+        {
+          "day": "Fri",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "25",
+          "copy_source": "`myth-busting.md` → Myth 25 → Social card. Frame: everyone posting winning slips this week is the highlight reel.",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-11a` format"
+        },
+        {
+          "day": "Sat",
+          "channel": "All social + in-app",
+          "content_type": "Tool promotion",
+          "myth": "—",
+          "copy_source": "\"Set your game-day budget before kickoff. 10 seconds now, zero math during the game.\"",
+          "asset_format": "1080 x 1080 + push",
+          "template_reference": "`collateral/render/card-17a` format + `push-notification-12e`"
+        },
+        {
+          "day": "Sun (game day)",
+          "channel": "In-app / Stories",
+          "content_type": "Game-day overlay",
+          "myth": "14",
+          "copy_source": "Live-betting reality check: the algorithm moves faster than the broadcast",
+          "asset_format": "In-app overlay",
+          "template_reference": "`collateral/render/live-odds-overlay-15d` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Countdown post",
+          "text": "6 days out. The squares pool is filling up and someone in the group chat has a 9-leg parlay. Before kickoff, here's how the lines actually work. #KnowYourGame"
+        },
+        {
+          "label": "Myth 11 post",
+          "text": "You've watched every snap this season. The book's models have watched every snap ever — and set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
+        },
+        {
+          "label": "Myth 25 post",
+          "text": "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
+        },
+        {
+          "label": "Tool promotion post",
+          "text": "Game-day plan: snacks, the good TV, and a budget you set before kickoff. 10 seconds now means zero math during the fourth quarter. Link in bio."
+        },
+        {
+          "label": "Game-day post",
+          "text": "Momentum shifted? The algorithm priced it before the replay ended. In-play betting is exciting — it's not an edge. Enjoy the game. #KnowYourGame"
+        }
+      ],
+      "email": {
+        "subject": "The big game, by the numbers",
+        "previewText": "Props, parlays, and squares — what this week's bets actually cost.",
+        "bodyStructure": [
+          "Hero: Countdown card image",
+          "\"First bet ever? Welcome.\" — 3-line primer on the moneyline, the spread, and the vig",
+          "Myth 12 myth/fact pair (hype parlays)",
+          "\"Set your game-day budget\" tool CTA",
+          "Footer: \"However it ends, it's entertainment. Play on your terms.\""
+        ]
+      },
+      "kpis": [
+        "First-time bettor engagement (new accounts interacting with campaign content)",
+        "Budget/deposit limit setups from the Saturday tool CTA",
+        "Blog read-through on the bet-types field guide",
+        "In-app overlay impressions on game day"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 9,
+      "name": "New Year, Same Math",
+      "theme": "Fresh-start energy, pointed at the one resolution that actually works: set your limits while you're feeling sharp.",
+      "tagline": "New year, same math. New you, better plays.",
+      "duration": "1 week (6 posts), spanning year-end through the first week of January",
+      "pillar": "tools + open",
+      "audience": [
+        "all players",
+        "especially resolution-makers and holiday-season players"
+      ],
+      "mythsUsed": [
+        17,
+        18
+      ],
+      "schedule": [
+        {
+          "day": "Mon (Dec 29)",
+          "channel": "Instagram / Facebook",
+          "content_type": "Year-in-review card",
+          "myth": "—",
+          "copy_source": "\"The math didn't change this year. The house edge was the house edge. Here's the refresher.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-2a` format"
+        },
+        {
+          "day": "Tue (Dec 30)",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "17+18",
+          "copy_source": "Title: \"The Only Gambling Resolution That Works\" — skip 'win more,' set a budget instead",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed (Dec 31)",
+          "channel": "Instagram / Facebook",
+          "content_type": "Resolution card",
+          "myth": "—",
+          "copy_source": "NY-1 from `core-messages.md`: \"New year, same math. But here's a resolution that actually works...\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-18a` format"
+        },
+        {
+          "day": "Thu (Jan 1)",
+          "channel": "All social + in-app",
+          "content_type": "Tool promotion",
+          "myth": "—",
+          "copy_source": "NY-2 from `core-messages.md`: \"Start the year with your limits set and your tools active. It takes 30 seconds.\"",
+          "asset_format": "1080 x 1080 + push",
+          "template_reference": "`collateral/render/card-18a` format + `push-notification-12e`"
+        },
+        {
+          "day": "Fri (Jan 2)",
+          "channel": "Email",
+          "content_type": "Year-in-review digest",
+          "myth": "17, 18",
+          "copy_source": "See email option below",
+          "asset_format": "600 px email",
+          "template_reference": "`collateral/render/email-monthly-7c` format"
+        },
+        {
+          "day": "Sat (Jan 3)",
+          "channel": "Instagram / Facebook",
+          "content_type": "Quiz CTA",
+          "myth": "17, 18",
+          "copy_source": "\"Start the year knowing the odds. 10 questions, 2 minutes.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4b` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Year-in-review post",
+          "text": "2025's slot RTP: unchanged. 2026's slot RTP: also unchanged. The math doesn't do resolutions. You can. #NoFinePrint"
+        },
+        {
+          "label": "Resolution post",
+          "text": "Most resolutions fail by February. This one takes 30 seconds and runs itself: set your entertainment budget before you play. #KnowYourGame"
+        },
+        {
+          "label": "Tool promotion post",
+          "text": "New year's day checklist: leftovers, couch, and limits set while you're feeling sharp. Future you says thanks. Link in bio."
+        },
+        {
+          "label": "Quiz CTA post",
+          "text": "New year, new Game IQ. 10 questions on the math behind the games you play. Start the year sharp. Link in bio."
+        }
+      ],
+      "email": {
+        "subject": "New year. Same math. Better plays.",
+        "previewText": "Your year in play, plus the one resolution that runs itself.",
+        "bodyStructure": [
+          "Hero: \"New year, same math\" card image",
+          "Year-in-review stats block (sessions, favorite games — reuse monthly summary format)",
+          "Myth 17 + Myth 18 as short myth/fact pairs",
+          "CTA: \"Set your 2026 budget\" → deposit limit feature",
+          "CTA: \"Test your Game IQ\" → quiz link"
+        ]
+      },
+      "kpis": [
+        "Deposit/session limit setups in the first week of January (primary metric)",
+        "Email open and click-through on the year-in-review digest",
+        "Quiz completions from the Saturday CTA",
+        "Tool retention: % of January limit-setters still using limits in March"
+      ],
+      "tokens": []
+    },
+    {
+      "id": 10,
+      "name": "Online Reality Check",
+      "theme": "The algorithm isn't out to get you — how online games actually work, from RNG certification to bonus math.",
+      "tagline": "The game doesn't know you. That's the whole point.",
+      "duration": "2 weeks (12 posts)",
+      "pillar": "open",
+      "audience": [
+        "online-first players",
+        "app users",
+        "young adults"
+      ],
+      "mythsUsed": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "schedule": [
+        {
+          "day": "Mon 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "19",
+          "copy_source": "`myth-busting.md` → Myth 19 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-16a` format"
+        },
+        {
+          "day": "Tue 1",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "19+20+21",
+          "copy_source": "Combined: \"Is Online Rigged? Inside the RNG, the Audits, and Your 'Lucky New Account'\"",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "20",
+          "copy_source": "`myth-busting.md` → Myth 20 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Thu 1",
+          "channel": "In-app",
+          "content_type": "Push notification",
+          "myth": "24",
+          "copy_source": "Myth 24 STAT line: \"Turbo doubles your spins per hour — same odds, twice the spend rate.\"",
+          "asset_format": "Push",
+          "template_reference": "`collateral/render/push-notification-12e` format"
+        },
+        {
+          "day": "Fri 1",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "21",
+          "copy_source": "`myth-busting.md` → Myth 21 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Sat 1",
+          "channel": "Instagram Stories",
+          "content_type": "Story recap",
+          "myth": "19–21",
+          "copy_source": "Week 1 recap: three myths, three facts, one CTA",
+          "asset_format": "1080 x 1920",
+          "template_reference": "`collateral/render/story-16c` format"
+        },
+        {
+          "day": "Mon 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "22",
+          "copy_source": "`myth-busting.md` → Myth 22 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-16b` format"
+        },
+        {
+          "day": "Tue 2",
+          "channel": "Blog / help center",
+          "content_type": "Article",
+          "myth": "22",
+          "copy_source": "Title: \"Bonus Math, Decoded: What 30x Wagering Actually Means\" — include the $100/30x worked example",
+          "asset_format": "Long-form web",
+          "template_reference": "—"
+        },
+        {
+          "day": "Wed 2",
+          "channel": "Instagram / Facebook",
+          "content_type": "Myth card",
+          "myth": "24",
+          "copy_source": "`myth-busting.md` → Myth 24 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-1a` format"
+        },
+        {
+          "day": "Thu 2",
+          "channel": "Instagram / Twitter",
+          "content_type": "Myth card",
+          "myth": "25",
+          "copy_source": "`myth-busting.md` → Myth 25 → Social card",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/card-11a` format"
+        },
+        {
+          "day": "Fri 2",
+          "channel": "In-app",
+          "content_type": "Web popup",
+          "myth": "26",
+          "copy_source": "Myth 26 short version: demo and real money run the same certified math",
+          "asset_format": "Popup",
+          "template_reference": "`collateral/render/web-popup-12h` format"
+        },
+        {
+          "day": "Sat 2",
+          "channel": "All social",
+          "content_type": "Quiz CTA",
+          "myth": "19–26",
+          "copy_source": "\"Think the algorithm is out to get you? Take the online reality check.\"",
+          "asset_format": "1080 x 1080",
+          "template_reference": "`collateral/render/poster-4c` format"
+        }
+      ],
+      "captions": [
+        {
+          "label": "Myth 19 post",
+          "text": "Online slots run on lab-certified RNGs — and unlike the casino floor, most publish their RTP right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
+        },
+        {
+          "label": "Myth 20 post",
+          "text": "The game wasn't 'about to pay out' when you walked away. The result is generated the instant you press spin. Everything else is animation. #KnowYourGame"
+        },
+        {
+          "label": "Myth 21 post",
+          "text": "There's no 'new player luck' setting and no winner flag. One game, one certified RTP, every account. Your early wins were variance, not bait. #NoFinePrint"
+        },
+        {
+          "label": "Myth 22 post",
+          "text": "A $100 bonus at 30x wagering = $3,000 in bets before you can withdraw. Bonuses can be good value — but read the multiplier before you celebrate. #KnowYourGame"
+        },
+        {
+          "label": "Myth 24 post",
+          "text": "Auto-spin doesn't change your odds. It changes your speed — which changes how fast your budget meets the house edge. The only setting that matters is pace. #KnowYourGame"
+        },
+        {
+          "label": "Myth 25 post",
+          "text": "Streamers run 10,000+ spins a week, often on sponsored balances, and you see the highlights. That's a TV show, not a strategy. #NoFinePrint"
+        },
+        {
+          "label": "Quiz CTA post",
+          "text": "Eight online myths, busted in two weeks. How many had you? Take the online reality check — 2 minutes. Link in bio."
+        }
+      ],
+      "email": {
+        "subject": "The game doesn't know you. That's the whole point.",
+        "previewText": "Certified RNGs, published RTP, and why your \"lucky new account\" was just math.",
+        "bodyStructure": [
+          "Hero: Myth 19 card image",
+          "3 myth/fact pairs (Myths 19, 20, 21 — short versions)",
+          "\"Bonus math, decoded\" teaser → Week 2 blog article",
+          "CTA: \"Take the online reality check\" → quiz link",
+          "Footer: helpline + \"Demo mode tip: licensed = same math, real money or not.\""
+        ]
+      },
+      "kpis": [
+        "Social engagement rate (rigged/conspiracy content generates discussion — expect high comments)",
+        "In-app push and popup click-through rates (first campaign benchmark for this channel)",
+        "Blog read-through on the bonus math article",
+        "Quiz completions and share rate"
       ],
       "tokens": []
     }

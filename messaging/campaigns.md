@@ -6,7 +6,7 @@ tier: [1]
 tone: [playful-witty, confident-informative]
 reading_level: grade-6-8
 audience: [general, sports-bettors, young-adults]
-channel: [social-media, blog, email]
+channel: [social-media, blog, email, in-app]
 cultural_profile:
   voice: peer
   framing: individual
@@ -22,12 +22,19 @@ adaptation_notes: |
   Hashtags: Assess platform usage per market.
   Campaign 4 (Luck/Lotteries): Add local lottery references.
   Campaign 6 (Game IQ): Quiz uses American odds — adapt format.
-last_updated: 2025-02-25
+  Campaign 8 (Big Game): Player copy says "the big game" — never a
+  trademarked event name. Anchor to your market's marquee event
+  (championship final, Grand Final, Cup Final) in the timing note only.
+  Campaign 9 (New Year): Timing assumes January 1 new year. Shift to
+  local new-year moment where relevant (e.g., Lunar New Year markets).
+  Campaign 10 (Online Reality Check): Bonus/wagering and RTP publication
+  rules vary by jurisdiction — verify Myth 19/22/26 claims locally.
+last_updated: 2026-06-10
 ---
 
 # Campaign Briefs
 
-Seven ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`.
+Ten ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`. Campaigns 1–7 are evergreen; Campaigns 8–9 are seasonal and anchor to calendar moments.
 
 > **How to use this file**: Pick a campaign, customize the copy for your brand (replace `{{PROGRAM_NAME}}` and `{{HELPLINE_NUMBER}}`), produce the assets using the referenced templates, and schedule according to the calendar. Adjust timing to fit your content calendar — the sequence matters more than the exact days.
 
@@ -44,6 +51,9 @@ Seven ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, 
 | 5 | [The Money Myths](#campaign-5-the-money-myths) | 10 days | 6, 12, 17, 18 | Email + social | All operators, responsible play teams |
 | 6 | [Game IQ Challenge](#campaign-6-game-iq-challenge) | 1 week | All | Social + interactive | All operators, engagement-focused |
 | 7 | [Know Your Game](#campaign-7-know-your-game) | 2 weeks | How to Play guides | Social + blog + email | All operators, game education |
+| 8 | [The Big Game, By the Numbers](#campaign-8-the-big-game-by-the-numbers) | 1 week (seasonal) | 11, 12, 14, 25 | Social + in-app | Sportsbooks, championship week |
+| 9 | [New Year, Same Math](#campaign-9-new-year-same-math) | 1 week (seasonal) | 17, 18 | Social + email | All operators, year-end / January |
+| 10 | [Online Reality Check](#campaign-10-online-reality-check) | 2 weeks | 19–26 | Social + in-app | iGaming platforms, online-first players |
 
 ---
 
@@ -493,6 +503,195 @@ Each game gets 2–3 days of content. The campaign opens with a universal hook (
 
 ---
 
+## Campaign 8: The Big Game, By the Numbers
+
+**Theme**: A 7-day countdown to the year's biggest game — the one week when casual fans place their first-ever bet.
+**Tagline**: "The biggest game of the year deserves your sharpest bet."
+**Duration**: 1 week (7 posts), ending on game day
+**Pillar**: Open + Tools
+**Audience**: Sports bettors, first-time bettors, office-pool players, young adults
+**Myths used**: 11 (Knowledge = Winning), 12 (Parlays), 14 (In-Play Edge), 25 (Streamers)
+
+This is the event-moment companion to [Campaign 3](#campaign-3-sports-betting-reality-check): Campaign 3 teaches sports betting literacy in general; Campaign 8 meets the once-a-year bettor in championship week, when props, squares pools, and hype parlays peak. Player-facing copy always says "the big game" — never a trademarked event name.
+
+### Schedule
+
+| Day | Channel | Content type | Myth # | Copy source | Asset format | Template reference |
+|---|---|---|---|---|---|---|
+| Mon | Instagram / Twitter | Countdown card | — | "6 days to the big game. Before the hype: here's how the lines actually work." (adapts SE-1, `core-messages.md`) | 1080 x 1080 | `collateral/render/card-17a` format |
+| Tue | Blog / help center | Article | 12 | Title: "Props, Squares, and Parlays: A Field Guide to Big-Game Bets" — what each bet is, what it costs | Long-form web | — |
+| Wed | Instagram / Twitter | Myth card | 11 | `myth-busting.md` → Myth 11 → Social card | 1080 x 1080 | `collateral/render/card-15a` format |
+| Thu | Instagram Stories | Infographic | 12 | What a hype parlay actually costs — vig compounding per leg | 1080 x 1920 | `collateral/render/story-15b` format |
+| Fri | Instagram / Twitter | Myth card | 25 | `myth-busting.md` → Myth 25 → Social card. Frame: everyone posting winning slips this week is the highlight reel. | 1080 x 1080 | `collateral/render/card-11a` format |
+| Sat | All social + in-app | Tool promotion | — | "Set your game-day budget before kickoff. 10 seconds now, zero math during the game." | 1080 x 1080 + push | `collateral/render/card-17a` format + `push-notification-12e` |
+| Sun (game day) | In-app / Stories | Game-day overlay | 14 | Live-betting reality check: the algorithm moves faster than the broadcast | In-app overlay | `collateral/render/live-odds-overlay-15d` format |
+
+### Suggested captions
+
+**Countdown post**: "6 days out. The squares pool is filling up and someone in the group chat has a 9-leg parlay. Before kickoff, here's how the lines actually work. #KnowYourGame"
+
+**Myth 11 post**: "You've watched every snap this season. The book's models have watched every snap ever — and set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
+
+**Myth 25 post**: "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
+
+**Tool promotion post**: "Game-day plan: snacks, the good TV, and a budget you set before kickoff. 10 seconds now means zero math during the fourth quarter. Link in bio."
+
+**Game-day post**: "Momentum shifted? The algorithm priced it before the replay ended. In-play betting is exciting — it's not an edge. Enjoy the game. #KnowYourGame"
+
+### Email option
+
+Send 2–3 days before the game:
+
+> **Subject**: The big game, by the numbers
+>
+> **Preview text**: Props, parlays, and squares — what this week's bets actually cost.
+>
+> **Body structure**:
+> - Hero: Countdown card image
+> - "First bet ever? Welcome." — 3-line primer on the moneyline, the spread, and the vig
+> - Myth 12 myth/fact pair (hype parlays)
+> - "Set your game-day budget" tool CTA
+> - Footer: "However it ends, it's entertainment. Play on your terms."
+
+### Timing note
+
+Operator-facing: anchor to your market's marquee event — Super Bowl week (US), Grand Final week (AU), Cup Final week (UK/EU), championship final (other markets). Launch 6 days out, end on game day. Player-facing copy stays generic: "the big game."
+
+### KPIs
+
+- First-time bettor engagement (new accounts interacting with campaign content)
+- Budget/deposit limit setups from the Saturday tool CTA
+- Blog read-through on the bet-types field guide
+- In-app overlay impressions on game day
+
+---
+
+## Campaign 9: New Year, Same Math
+
+**Theme**: Fresh-start energy, pointed at the one resolution that actually works: set your limits while you're feeling sharp.
+**Tagline**: "New year, same math. New you, better plays."
+**Duration**: 1 week (6 posts), spanning year-end through the first week of January
+**Pillar**: Tools + Open
+**Audience**: All players, especially resolution-makers and holiday-season players
+**Myths used**: 17 (Chasing Losses), 18 (Gambling as Income)
+**Tone note**: Resolution content invites preachiness. Keep it celebratory and practical — limits framed as a power move, never a confession. See Campaign 5's tone guidance.
+
+### Schedule
+
+| Day | Channel | Content type | Myth # | Copy source | Asset format | Template reference |
+|---|---|---|---|---|---|---|
+| Mon (Dec 29) | Instagram / Facebook | Year-in-review card | — | "The math didn't change this year. The house edge was the house edge. Here's the refresher." | 1080 x 1080 | `collateral/render/card-2a` format |
+| Tue (Dec 30) | Blog / help center | Article | 17+18 | Title: "The Only Gambling Resolution That Works" — skip 'win more,' set a budget instead | Long-form web | — |
+| Wed (Dec 31) | Instagram / Facebook | Resolution card | — | NY-1 from `core-messages.md`: "New year, same math. But here's a resolution that actually works..." | 1080 x 1080 | `collateral/render/card-18a` format |
+| Thu (Jan 1) | All social + in-app | Tool promotion | — | NY-2 from `core-messages.md`: "Start the year with your limits set and your tools active. It takes 30 seconds." | 1080 x 1080 + push | `collateral/render/card-18a` format + `push-notification-12e` |
+| Fri (Jan 2) | Email | Year-in-review digest | 17, 18 | See email option below | 600 px email | `collateral/render/email-monthly-7c` format |
+| Sat (Jan 3) | Instagram / Facebook | Quiz CTA | 17, 18 | "Start the year knowing the odds. 10 questions, 2 minutes." | 1080 x 1080 | `collateral/render/poster-4b` format |
+
+### Suggested captions
+
+**Year-in-review post**: "2025's slot RTP: unchanged. 2026's slot RTP: also unchanged. The math doesn't do resolutions. You can. #NoFinePrint"
+
+**Resolution post**: "Most resolutions fail by February. This one takes 30 seconds and runs itself: set your entertainment budget before you play. #KnowYourGame"
+
+**Tool promotion post**: "New year's day checklist: leftovers, couch, and limits set while you're feeling sharp. Future you says thanks. Link in bio."
+
+**Quiz CTA post**: "New year, new Game IQ. 10 questions on the math behind the games you play. Start the year sharp. Link in bio."
+
+### Email option
+
+Send January 2–3 as a year-in-review:
+
+> **Subject**: New year. Same math. Better plays.
+>
+> **Preview text**: Your year in play, plus the one resolution that runs itself.
+>
+> **Body structure**:
+> - Hero: "New year, same math" card image
+> - Year-in-review stats block (sessions, favorite games — reuse monthly summary format)
+> - Myth 17 + Myth 18 as short myth/fact pairs
+> - CTA: "Set your 2026 budget" → deposit limit feature
+> - CTA: "Test your Game IQ" → quiz link
+
+### Timing note
+
+Operator-facing: launch December 29, run through the first weekend of January. An optional holiday lead-in (mid-December) can reuse HP-1/HP-2 from `core-messages.md` ("Holiday entertainment budget: set it before the fun starts."). For markets where the main new-year moment differs (e.g., Lunar New Year), shift the window and adapt the framing.
+
+### KPIs
+
+- Deposit/session limit setups in the first week of January (primary metric)
+- Email open and click-through on the year-in-review digest
+- Quiz completions from the Saturday CTA
+- Tool retention: % of January limit-setters still using limits in March
+
+---
+
+## Campaign 10: Online Reality Check
+
+**Theme**: The algorithm isn't out to get you — how online games actually work, from RNG certification to bonus math.
+**Tagline**: "The game doesn't know you. That's the whole point."
+**Duration**: 2 weeks (12 posts)
+**Pillar**: Open
+**Audience**: Online-first players, app users, young adults
+**Myths used**: 19 (Online Rigged), 20 (Game Knows), 21 (Account Targeting), 22 (Bonus = Free Money), 23 (Live Dealers), 24 (Auto-Spin), 25 (Streamers), 26 (Demo Mode)
+**Channel note**: This is the first campaign with in-app as a primary channel. Push and popup slots use the stat lines from the myth social cards — they work standalone at small sizes.
+
+### Schedule
+
+| Day | Channel | Content type | Myth # | Copy source | Asset format | Template reference |
+|---|---|---|---|---|---|---|
+| Mon 1 | Instagram / Facebook | Myth card | 19 | `myth-busting.md` → Myth 19 → Social card | 1080 x 1080 | `collateral/render/card-16a` format |
+| Tue 1 | Blog / help center | Article | 19+20+21 | Combined: "Is Online Rigged? Inside the RNG, the Audits, and Your 'Lucky New Account'" | Long-form web | — |
+| Wed 1 | Instagram / Facebook | Myth card | 20 | `myth-busting.md` → Myth 20 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
+| Thu 1 | In-app | Push notification | 24 | Myth 24 STAT line: "Turbo doubles your spins per hour — same odds, twice the spend rate." | Push | `collateral/render/push-notification-12e` format |
+| Fri 1 | Instagram / Facebook | Myth card | 21 | `myth-busting.md` → Myth 21 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
+| Sat 1 | Instagram Stories | Story recap | 19–21 | Week 1 recap: three myths, three facts, one CTA | 1080 x 1920 | `collateral/render/story-16c` format |
+| Mon 2 | Instagram / Facebook | Myth card | 22 | `myth-busting.md` → Myth 22 → Social card | 1080 x 1080 | `collateral/render/card-16b` format |
+| Tue 2 | Blog / help center | Article | 22 | Title: "Bonus Math, Decoded: What 30x Wagering Actually Means" — include the $100/30x worked example | Long-form web | — |
+| Wed 2 | Instagram / Facebook | Myth card | 24 | `myth-busting.md` → Myth 24 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
+| Thu 2 | Instagram / Twitter | Myth card | 25 | `myth-busting.md` → Myth 25 → Social card | 1080 x 1080 | `collateral/render/card-11a` format |
+| Fri 2 | In-app | Web popup | 26 | Myth 26 short version: demo and real money run the same certified math | Popup | `collateral/render/web-popup-12h` format |
+| Sat 2 | All social | Quiz CTA | 19–26 | "Think the algorithm is out to get you? Take the online reality check." | 1080 x 1080 | `collateral/render/poster-4c` format |
+
+### Suggested captions
+
+**Myth 19 post**: "Online slots run on lab-certified RNGs — and unlike the casino floor, most publish their RTP right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
+
+**Myth 20 post**: "The game wasn't 'about to pay out' when you walked away. The result is generated the instant you press spin. Everything else is animation. #KnowYourGame"
+
+**Myth 21 post**: "There's no 'new player luck' setting and no winner flag. One game, one certified RTP, every account. Your early wins were variance, not bait. #NoFinePrint"
+
+**Myth 22 post**: "A $100 bonus at 30x wagering = $3,000 in bets before you can withdraw. Bonuses can be good value — but read the multiplier before you celebrate. #KnowYourGame"
+
+**Myth 24 post**: "Auto-spin doesn't change your odds. It changes your speed — which changes how fast your budget meets the house edge. The only setting that matters is pace. #KnowYourGame"
+
+**Myth 25 post**: "Streamers run 10,000+ spins a week, often on sponsored balances, and you see the highlights. That's a TV show, not a strategy. #NoFinePrint"
+
+**Quiz CTA post**: "Eight online myths, busted in two weeks. How many had you? Take the online reality check — 2 minutes. Link in bio."
+
+### Email option
+
+Send as a mid-campaign digest after Week 1:
+
+> **Subject**: The game doesn't know you. That's the whole point.
+>
+> **Preview text**: Certified RNGs, published RTP, and why your "lucky new account" was just math.
+>
+> **Body structure**:
+> - Hero: Myth 19 card image
+> - 3 myth/fact pairs (Myths 19, 20, 21 — short versions)
+> - "Bonus math, decoded" teaser → Week 2 blog article
+> - CTA: "Take the online reality check" → quiz link
+> - Footer: helpline + "Demo mode tip: licensed = same math, real money or not."
+
+### KPIs
+
+- Social engagement rate (rigged/conspiracy content generates discussion — expect high comments)
+- In-app push and popup click-through rates (first campaign benchmark for this channel)
+- Blog read-through on the bonus math article
+- Quiz completions and share rate
+
+---
+
 ## Campaign sequencing
 
 For operators running multiple campaigns, this order maximizes impact:
@@ -504,8 +703,11 @@ For operators running multiple campaigns, this order maximizes impact:
 | 3rd | Slots Myths Week | Largest player segment. High relatability. |
 | 4th | Sports Betting Reality Check | Time to a major sporting event. |
 | 5th | The Money Myths | Builds on literacy established in campaigns 1–4. |
-| 6th | Luck, Numbers & Lotteries | Lighter tone. Good palette cleanser. |
-| 7th | Beat the House? Table Games | Most niche audience. Deploy to engaged segment. |
+| 6th | Online Reality Check | Online-first segment. Pairs naturally with Money Myths (bonus math). |
+| 7th | Luck, Numbers & Lotteries | Lighter tone. Good palette cleanser. |
+| 8th | Beat the House? Table Games | Most niche audience. Deploy to engaged segment. |
+
+**Seasonal campaigns**: The Big Game, By the Numbers (8) and New Year, Same Math (9) are calendar-anchored — slot them into whatever position the calendar dictates and shift the evergreen sequence around them. Don't run two campaigns simultaneously.
 
 **Cadence**: Allow 1–2 weeks between campaigns to avoid fatigue. Mix myth-busting with tool promotion and general brand content between campaigns.
 
