@@ -9,7 +9,8 @@
   body { margin: 0; background: transparent; }
   .story-card {
     width: 1080px; height: 1920px;
-    background: var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px), var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
+    background-size: 48px 48px, 48px 48px, cover;
     position: relative; overflow: hidden;
     display: flex; flex-direction: column;
   }
@@ -29,7 +30,7 @@
   .myth-list { margin-bottom: 48px; }
   .myth-list-item { display: flex; align-items: baseline; gap: 16px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .myth-list-item:last-child { border-bottom: none; }
-  .myth-list-strike { font-family: var(--pb-font-heading); font-size: calc(30px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-neutral-300); text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 3px; flex: 1; }
+  .myth-list-strike { font-family: var(--pb-font-heading); font-size: calc(30px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-neutral-300); text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 4px; flex: 1; }
   .myth-list-fact { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); color: var(--pb-color-secondary); font-weight: 600; flex: 1; text-align: right; }
   .diagram-block { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px 28px 32px; margin-bottom: 48px; }
   .diagram-block svg { width: 100%; height: auto; display: block; }
@@ -50,20 +51,20 @@
   </div>
   <div class="story-body">
     <div class="myth-label">Online Reality Check</div>
-    <div class="myth-statement"><span class="strike">"The game knows you"</span></div>
+    <div class="myth-statement"><span class="strike">&#8220;The game knows you&#8221;</span></div>
     <div class="divider"></div>
     <div class="fact-statement">It doesn't. Every result is <strong>picked at random</strong> the instant you press spin.</div>
     <div class="myth-list">
       <div class="myth-list-item">
-        <span class="myth-list-strike">"Online is rigged"</span>
+        <span class="myth-list-strike">&#8220;Online is rigged&#8221;</span>
         <span class="myth-list-fact">Lab-tested, payback published</span>
       </div>
       <div class="myth-list-item">
-        <span class="myth-list-strike">"It was about to hit"</span>
+        <span class="myth-list-strike">&#8220;It was about to hit&#8221;</span>
         <span class="myth-list-fact">Decided at the spin, not before</span>
       </div>
       <div class="myth-list-item">
-        <span class="myth-list-strike">"They flagged my account"</span>
+        <span class="myth-list-strike">&#8220;They flagged my account&#8221;</span>
         <span class="myth-list-fact">Your odds never moved</span>
       </div>
     </div>
