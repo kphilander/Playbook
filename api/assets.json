@@ -1,7 +1,7 @@
 {
   "meta": {
-    "totalAssets": 114,
-    "generated": "2026-06-10T16:00:45.612Z",
+    "totalAssets": 126,
+    "generated": "2026-06-10T16:40:23.386Z",
     "version": "0.1.0",
     "baseUrl": "/tools/playbook",
     "description": "Complete catalog of Playbook brand assets. All assets are CC0-licensed."
@@ -688,7 +688,7 @@
       ]
     },
     "collateral": {
-      "count": 55,
+      "count": 67,
       "assets": [
         {
           "id": "brochure-cover-8b",
@@ -763,12 +763,107 @@
           }
         },
         {
+          "id": "card-16a-online-rigged.ar",
+          "filename": "card-16a-online-rigged.ar.png",
+          "url": "/tools/playbook/assets/renders/card-16a-online-rigged.ar.png",
+          "sourceUrl": "collateral/render/card-16a-online-rigged.ar.png",
+          "format": "png",
+          "fileSize": 101423,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-16a-online-rigged.ja",
+          "filename": "card-16a-online-rigged.ja.png",
+          "url": "/tools/playbook/assets/renders/card-16a-online-rigged.ja.png",
+          "sourceUrl": "collateral/render/card-16a-online-rigged.ja.png",
+          "format": "png",
+          "fileSize": 124416,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-16a-online-rigged",
           "filename": "card-16a-online-rigged.png",
           "url": "/tools/playbook/assets/renders/card-16a-online-rigged.png",
           "sourceUrl": "collateral/render/card-16a-online-rigged.png",
           "format": "png",
           "fileSize": 104487,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-16a-online-rigged.zh-CN",
+          "filename": "card-16a-online-rigged.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-16a-online-rigged.zh-CN.png",
+          "sourceUrl": "collateral/render/card-16a-online-rigged.zh-CN.png",
+          "format": "png",
+          "fileSize": 111626,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-16b-bonus-free-money.ar",
+          "filename": "card-16b-bonus-free-money.ar.png",
+          "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.ar.png",
+          "sourceUrl": "collateral/render/card-16b-bonus-free-money.ar.png",
+          "format": "png",
+          "fileSize": 107102,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-16b-bonus-free-money.ja",
+          "filename": "card-16b-bonus-free-money.ja.png",
+          "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.ja.png",
+          "sourceUrl": "collateral/render/card-16b-bonus-free-money.ja.png",
+          "format": "png",
+          "fileSize": 128859,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -801,6 +896,63 @@
           }
         },
         {
+          "id": "card-16b-bonus-free-money.zh-CN",
+          "filename": "card-16b-bonus-free-money.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.zh-CN.png",
+          "sourceUrl": "collateral/render/card-16b-bonus-free-money.zh-CN.png",
+          "format": "png",
+          "fileSize": 128756,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-17a-big-game.ar",
+          "filename": "card-17a-big-game.ar.png",
+          "url": "/tools/playbook/assets/renders/card-17a-big-game.ar.png",
+          "sourceUrl": "collateral/render/card-17a-big-game.ar.png",
+          "format": "png",
+          "fileSize": 102502,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-17a-big-game.ja",
+          "filename": "card-17a-big-game.ja.png",
+          "url": "/tools/playbook/assets/renders/card-17a-big-game.ja.png",
+          "sourceUrl": "collateral/render/card-17a-big-game.ja.png",
+          "format": "png",
+          "fileSize": 136886,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-17a-big-game",
           "filename": "card-17a-big-game.png",
           "url": "/tools/playbook/assets/renders/card-17a-big-game.png",
@@ -820,12 +972,88 @@
           }
         },
         {
+          "id": "card-17a-big-game.zh-CN",
+          "filename": "card-17a-big-game.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-17a-big-game.zh-CN.png",
+          "sourceUrl": "collateral/render/card-17a-big-game.zh-CN.png",
+          "format": "png",
+          "fileSize": 123355,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-18a-fresh-start.ar",
+          "filename": "card-18a-fresh-start.ar.png",
+          "url": "/tools/playbook/assets/renders/card-18a-fresh-start.ar.png",
+          "sourceUrl": "collateral/render/card-18a-fresh-start.ar.png",
+          "format": "png",
+          "fileSize": 99902,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-18a-fresh-start.ja",
+          "filename": "card-18a-fresh-start.ja.png",
+          "url": "/tools/playbook/assets/renders/card-18a-fresh-start.ja.png",
+          "sourceUrl": "collateral/render/card-18a-fresh-start.ja.png",
+          "format": "png",
+          "fileSize": 144422,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-18a-fresh-start",
           "filename": "card-18a-fresh-start.png",
           "url": "/tools/playbook/assets/renders/card-18a-fresh-start.png",
           "sourceUrl": "collateral/render/card-18a-fresh-start.png",
           "format": "png",
           "fileSize": 108517,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-18a-fresh-start.zh-CN",
+          "filename": "card-18a-fresh-start.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-18a-fresh-start.zh-CN.png",
+          "sourceUrl": "collateral/render/card-18a-fresh-start.zh-CN.png",
+          "format": "png",
+          "fileSize": 118149,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
