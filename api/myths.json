@@ -1,7 +1,7 @@
 {
   "meta": {
-    "count": 26,
-    "generated": "2026-06-10T04:53:15.477Z",
+    "count": 20,
+    "generated": "2026-06-10T16:00:45.272Z",
     "version": "0.1.0",
     "source": "messaging/myth-busting.md"
   },
@@ -40,7 +40,7 @@
       "language": "en-us"
     },
     "adaptation_status": "base",
-    "adaptation_notes": "Game-specific myths: Some reference US casino culture.\nHumor: One-liners use irreverent tone. Adapt for profile.\nFormat: Social card copy may need cultural adjustment.\nOnline myths (19–26): Bonus/wagering rules and RTP publication\nrequirements vary by jurisdiction. Verify locally before deploying.\n",
+    "adaptation_notes": "Game-specific myths: Some reference US casino culture.\nHumor: One-liners use irreverent tone. Adapt for profile.\nFormat: Social card copy may need cultural adjustment.\nOnline myths (19–20): Bonus/wagering rules and RTP publication\nrequirements vary by jurisdiction. Verify locally before deploying.\n",
     "last_updated": "2026-06-10T00:00:00.000Z"
   },
   "myths": [
@@ -832,90 +832,6 @@
     },
     {
       "id": 20,
-      "title": "The Game Knows When You're About to Win",
-      "category": "Online Casino & iGaming",
-      "gameType": [
-        "online-slots",
-        "igaming"
-      ],
-      "bias": [
-        "anthropomorphism",
-        "illusion-of-control"
-      ],
-      "pillar": "open",
-      "socialCard": {
-        "myth": "The game was about to pay out. Then I changed my bet and ruined it.",
-        "fact": "There is no \"about to pay out.\" The result is picked at random the instant you hit spin. The game has no plan, no schedule, and no idea who you are.",
-        "stat": "0 wins are ever \"queued up.\" Every outcome is generated fresh, at the moment you press the button."
-      },
-      "articleExplainer": "You've been spinning for twenty minutes. The bonus round feels close. Then you change your bet, and someone in the chat says you just \"reset the jackpot timer.\"\n\nThere is no timer. The result of each spin is picked at random the instant you press the button. Nothing is queued up, building, or scheduled. The game doesn't have a plan for your next ten spins. It doesn't know there will *be* a next ten spins.\n\nThe myth survives because slots feel like a story: rising music, near misses, meters filling. That's presentation, not prediction. The drama is added *after* the result is already decided.\n\nSo changing your bet, switching games, or taking a break can't interrupt a win that was \"coming.\" There was never a win coming. There's just the next random result, whenever you ask for it.",
-      "quiz": {
-        "question": "When is the outcome of an online slot spin actually decided?",
-        "options": [
-          {
-            "label": "Gradually, as the reels slow down",
-            "correct": false
-          },
-          {
-            "label": "When the bonus meter fills up",
-            "correct": false
-          },
-          {
-            "label": "The instant you press spin. Everything after is animation",
-            "correct": true
-          },
-          {
-            "label": "At the start of each session",
-            "correct": false
-          }
-        ],
-        "feedback": "The result is picked at random the moment you press spin. The reels, music, and near misses are a show built around a decision that's already been made. Nothing is ever \"about to\" hit."
-      }
-    },
-    {
-      "id": 21,
-      "title": "The Casino Tightens the Odds for Your Account",
-      "category": "Online Casino & iGaming",
-      "gameType": [
-        "online-slots",
-        "igaming"
-      ],
-      "bias": [
-        "magical-thinking",
-        "distrust-heuristic"
-      ],
-      "pillar": "open",
-      "socialCard": {
-        "myth": "New accounts win big at first. Then the site flags you and tightens your odds.",
-        "fact": "A game's payout rate is built into the game itself and is the same for every player on it. There's no \"new player mode,\" no winner flag, and no per-account dial to turn.",
-        "stat": "1 payout setting per game. The same for your account, your friend's account, and the account that just signed up."
-      },
-      "articleExplainer": "The story goes: you won early because the site wanted to hook you. Now that you're a regular, they've quietly turned your odds down. Some players even open fresh accounts to get the \"new player luck\" back.\n\nOne problem: the game doesn't have a per-player setting. A licensed game's payout rate is built into the game software and certified before launch. Every account playing that game gets the same odds. Regulators check exactly this, and a per-account dial would cost the site its license.\n\nSo why did the early sessions feel luckier? Small samples. A few hundred spins can land anywhere, way up or way down. Over thousands of spins, results settle toward the published rate, which is below 100%. Early luck fading isn't the site adjusting you. It's randomness evening out.\n\nThe fresh-account trick? Same game, same math. The game never knew who you were to begin with.",
-      "quiz": {
-        "question": "Your friend says the casino \"tightened\" their account after a big win. What actually happened?",
-        "options": [
-          {
-            "label": "The site flagged them as a winner and lowered their payouts",
-            "correct": false
-          },
-          {
-            "label": "Nothing. The game's odds never changed; their lucky streak just ended",
-            "correct": true
-          },
-          {
-            "label": "Their account entered a mandatory cooldown payout cycle",
-            "correct": false
-          },
-          {
-            "label": "The game adapted to their playing style",
-            "correct": false
-          }
-        ],
-        "feedback": "A game's payout rate is certified per game and identical for every player. Early wins fading is a short lucky run meeting the long-run math, not a switch someone flipped on your account."
-      }
-    },
-    {
-      "id": 22,
       "title": "A Bonus Is Free Money",
       "category": "Online Casino & iGaming",
       "gameType": [
@@ -954,171 +870,6 @@
           }
         ],
         "feedback": "30x means $3,000 in total bets before the bonus converts to cash, with each bet facing the house edge. Bonuses can still be good value, but they're a discount with conditions, not free money."
-      }
-    },
-    {
-      "id": 23,
-      "title": "Live Dealers Can Favor You",
-      "category": "Online Casino & iGaming",
-      "gameType": [
-        "live-casino",
-        "igaming"
-      ],
-      "bias": [
-        "anthropomorphism",
-        "clustering-illusion"
-      ],
-      "pillar": "open",
-      "socialCard": {
-        "myth": "Find a friendly live dealer. They can deal you better cards. And if the stream lags, it's rigged.",
-        "fact": "Live dealers follow the same fixed rules as any casino floor, on camera, with every hand recorded and audited. Stream lag is your internet, not a cover-up.",
-        "stat": "0 decisions are made by the dealer. Shuffles are tracked, hands are scripted, and regulators can review every second of footage."
-      },
-      "articleExplainer": "The live dealer smiled at you, chatted between hands, and you won three in a row. New theory: she likes you, and she's dealing accordingly.\n\nShe isn't, because she can't. Live dealers follow the same fixed rules as any casino floor: in blackjack, hit on 16, stand on 17, no judgment calls, no favorites. The studio actually has *more* oversight than a casino floor: multiple cameras, sensors that log every card dealt, and full recordings that auditors can review.\n\nThe darker version of this myth says the stream itself is rigged: the lag, the cut, the reshuffle right before your big hand. But a laggy stream is your internet catching up, not a window for the house to change anything. The cards were dealt when they were dealt; your screen just saw it half a second later.\n\nThe dealer's job is to be pleasant and deal the script. The math never joins the small talk.",
-      "quiz": {
-        "question": "A live dealer has been \"hot\" against the table for an hour. What's going on?",
-        "options": [
-          {
-            "label": "The dealer is skilled and playing well",
-            "correct": false
-          },
-          {
-            "label": "The studio switched to a tighter deck",
-            "correct": false
-          },
-          {
-            "label": "Pure chance. The dealer makes zero decisions",
-            "correct": true
-          },
-          {
-            "label": "The stream delay lets the house adjust outcomes",
-            "correct": false
-          }
-        ],
-        "feedback": "Live dealers follow fixed rules on camera, with every card logged and recorded. A \"hot\" dealer is a random streak with a friendly face, same as on the casino floor."
-      }
-    },
-    {
-      "id": 24,
-      "title": "Auto-Spin and Turbo Mode Change Your Odds",
-      "category": "Online Casino & iGaming",
-      "gameType": [
-        "online-slots",
-        "igaming"
-      ],
-      "bias": [
-        "illusion-of-control"
-      ],
-      "pillar": "open",
-      "socialCard": {
-        "myth": "Always spin manually. Auto-spin wins less.",
-        "fact": "The result is just as random whether you press the button, hold turbo, or let auto-spin run. What changes is speed: more spins per minute means your budget meets the house edge faster.",
-        "stat": "Turbo play can double your spins per hour. Same odds per spin, twice the spend rate."
-      },
-      "articleExplainer": "Some players swear by the manual press. The timing, the rhythm, the lucky thumb. It feels like part of the game. Auto-spin, the theory goes, wins less.\n\nThe game can't tell the difference. Whether the spin comes from your thumb, auto-spin, or turbo mode, the software picks the same kind of random result. There's no separate math for automatic spins.\n\nWhat these features *do* change is speed. A manual player might run 300 spins an hour; turbo and auto-spin can push that toward 600 or more. Same odds per spin, but your budget meets the house edge twice as often. That's not a conspiracy. It's a throttle.\n\nSo press the button if you enjoy pressing the button. Just know the only thing your ritual controls is the pace of the session. Honestly, that's the one setting worth watching.",
-      "quiz": {
-        "question": "What actually changes when you switch from manual spins to turbo auto-spin?",
-        "options": [
-          {
-            "label": "The payout rate drops slightly",
-            "correct": false
-          },
-          {
-            "label": "The number of spins per hour, and how fast your budget is exposed to the edge",
-            "correct": true
-          },
-          {
-            "label": "The game enters a different payout table",
-            "correct": false
-          },
-          {
-            "label": "Nothing at all",
-            "correct": false
-          }
-        ],
-        "feedback": "The odds per spin are identical. The game doesn't know who or what pressed the button. Turbo and auto-spin change speed, which changes how quickly your budget meets the house edge."
-      }
-    },
-    {
-      "id": 25,
-      "title": "If Streamers Win, So Can You",
-      "category": "Online Casino & iGaming",
-      "gameType": [
-        "online-casino",
-        "igaming"
-      ],
-      "bias": [
-        "survivorship-bias"
-      ],
-      "pillar": "open + social",
-      "socialCard": {
-        "myth": "That streamer hits bonus rounds every session. Just play like they do.",
-        "fact": "Many gambling streamers play with sponsored funds or house money, and the highlight reel skips the losing hours. Your account has a real balance and the same odds as everyone else.",
-        "stat": "A streamer running 10,000 spins per week will hit huge wins regularly, and lose more than they win. You just don't see that part."
-      },
-      "articleExplainer": "The clip is incredible: max win, screaming, chat exploding. The streamer hits bonuses like clockwork, so they must know something you don't.\n\nThey know two things. First: volume. A full-time streamer runs tens of thousands of spins a week. At that scale, huge wins are guaranteed, and so are bigger total losses, which don't make the thumbnail. You're watching the highlight reel of a losing season.\n\nSecond: the money often isn't theirs. Many gambling streamers are sponsored, playing with funds the site provides. Losing sponsored money costs them nothing. The content is the income. Your deposit doesn't work that way.\n\nNot every streamer is dishonest; some disclose everything. But the feed is a business, edited for drama, running on money and math your account doesn't get. Enjoy the show. Don't mistake it for a strategy.",
-      "quiz": {
-        "question": "A streamer hits massive slot wins every week. What's the most likely explanation?",
-        "options": [
-          {
-            "label": "They've found high-paying games the public can't access",
-            "correct": false
-          },
-          {
-            "label": "Huge spin volume, edited highlights, and often sponsored funds",
-            "correct": true
-          },
-          {
-            "label": "Streamers get better payout rates for marketing reasons",
-            "correct": false
-          },
-          {
-            "label": "They spin at the right time of day",
-            "correct": false
-          }
-        ],
-        "feedback": "Tens of thousands of spins per week guarantee occasional huge wins, and bigger unseen losses. Add sponsorship deals and selective editing, and the stream tells you nothing about your own odds."
-      }
-    },
-    {
-      "id": 26,
-      "title": "Demo Mode Plays Looser Than Real Money",
-      "category": "Online Casino & iGaming",
-      "gameType": [
-        "online-slots",
-        "igaming"
-      ],
-      "bias": [
-        "confirmation-bias"
-      ],
-      "pillar": "open",
-      "socialCard": {
-        "myth": "Demo mode pays like crazy. Switch to real money and the game tightens up.",
-        "fact": "In most regulated markets, demo and real-money versions must run the same math. The \"switch\" you feel is a short demo run meeting a long real-money session, plus the fact that losing fake money doesn't sting.",
-        "stat": "Same game, same odds. Regulated demo versions are required to match the real-money math."
-      },
-      "articleExplainer": "Everyone's run the experiment: win a fortune in demo mode, deposit real money, and watch the game apparently remember it's a business.\n\nIn most regulated markets, demo mode must use the same math as the real-money game, and regulators check it, because a \"loose demo\" would be false advertising. Same odds, same payouts, same game.\n\nSo why does the switch feel real? Two reasons. Sample size: you might demo for ten minutes and play for two hours, and short sessions swing wildly both ways. You remember the lucky demo run and forget the unlucky one. And stakes change what you notice: fake losses don't register, real ones do. The same losing streak feels like noise in demo and like a pattern with money on the line.\n\nOne honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a reason to play on regulated platforms, not proof the math changes when money shows up.",
-      "quiz": {
-        "question": "You won big in demo mode but lose with real money. On a licensed site, what changed?",
-        "options": [
-          {
-            "label": "The game switched to its real-money payout table",
-            "correct": false
-          },
-          {
-            "label": "Nothing in the math. Your sample size and attention changed",
-            "correct": true
-          },
-          {
-            "label": "The casino recognized your deposit and adjusted the odds",
-            "correct": false
-          },
-          {
-            "label": "Demo wins are scripted to encourage deposits",
-            "correct": false
-          }
-        ],
-        "feedback": "In most regulated markets, demo and real-money modes must run identical math. Short demo sessions plus painless fake losses create the feeling of a switch that the math doesn't allow."
       }
     }
   ]

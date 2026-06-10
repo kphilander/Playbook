@@ -1,7 +1,7 @@
 {
   "meta": {
-    "count": 10,
-    "generated": "2026-06-10T04:53:15.477Z",
+    "count": 9,
+    "generated": "2026-06-10T16:00:45.272Z",
     "version": "0.1.0",
     "source": "messaging/campaigns.md"
   },
@@ -43,7 +43,7 @@
       "language": "en-us"
     },
     "adaptation_status": "base",
-    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\nCampaign 8 (Big Game): Player copy says \"the big game\" — never a\ntrademarked event name. Anchor to your market's marquee event\n(championship final, Grand Final, Cup Final) in the timing note only.\nSquares pools and -110 odds are US conventions: replace with the\nlocal equivalent (office sweepstake, footy tipping) and odds format,\nincluding in card-17a, before deploying outside the US.\nCampaign 9 (New Year): Timing assumes January 1 new year. Shift to\nlocal new-year moment where relevant (e.g., Lunar New Year markets).\nCampaign 10 (Online Reality Check): Bonus/wagering and RTP publication\nrules vary by jurisdiction — verify Myth 19/22/26 claims locally.\n",
+    "adaptation_notes": "Sports campaigns: Replace NFL/NBA/MLB with local leagues.\nHashtags: Assess platform usage per market.\nCampaign 4 (Luck/Lotteries): Add local lottery references.\nCampaign 6 (Game IQ): Quiz uses American odds — adapt format.\nCampaign 8 (Big Game): Player copy says \"the big game\" — never a\ntrademarked event name. Anchor to your market's marquee event\n(championship final, Grand Final, Cup Final) in the timing note only.\nSquares pools and -110 odds are US conventions: replace with the\nlocal equivalent (office sweepstake, footy tipping) and odds format,\nincluding in card-17a, before deploying outside the US.\nCampaign 9 (New Year): Timing assumes January 1 new year. Shift to\nlocal new-year moment where relevant (e.g., Lunar New Year markets).\n",
     "last_updated": "2026-06-10T00:00:00.000Z"
   },
   "campaigns": [
@@ -959,8 +959,8 @@
       "mythsUsed": [
         11,
         12,
-        14,
-        25
+        13,
+        14
       ],
       "schedule": [
         {
@@ -1003,8 +1003,8 @@
           "day": "Fri",
           "channel": "Instagram / Twitter",
           "content_type": "Myth card",
-          "myth": "25",
-          "copy_source": "`myth-busting.md` → Myth 25 → Social card. Frame: everyone posting winning slips this week is the highlight reel.",
+          "myth": "13",
+          "copy_source": "`myth-busting.md` → Myth 13 → Social card. Frame: everyone posting winning slips this week is the highlight reel.",
           "asset_format": "1080 x 1080",
           "template_reference": "`collateral/render/card-11a` format"
         },
@@ -1037,7 +1037,7 @@
           "text": "You've watched every snap this season. The sportsbook's models have watched every snap ever, and they set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
         },
         {
-          "label": "Myth 25 post",
+          "label": "Myth 13 post",
           "text": "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
         },
         {
@@ -1173,187 +1173,6 @@
         "Email open and click-through on the year-in-review digest",
         "Quiz completions from the Saturday CTA",
         "Tool retention: % of January limit-setters still using limits in March"
-      ],
-      "tokens": []
-    },
-    {
-      "id": 10,
-      "name": "Online Reality Check",
-      "theme": "The algorithm isn't out to get you — how online games actually work, from independent testing to bonus math.",
-      "tagline": "The game doesn't know you. That's the whole point.",
-      "duration": "2 weeks (12 posts)",
-      "pillar": "open",
-      "audience": [
-        "online-first players",
-        "app users",
-        "young adults"
-      ],
-      "mythsUsed": [
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26
-      ],
-      "schedule": [
-        {
-          "day": "Mon 1",
-          "channel": "Instagram / Facebook",
-          "content_type": "Myth card",
-          "myth": "19",
-          "copy_source": "`myth-busting.md` → Myth 19 → Social card",
-          "asset_format": "1080 x 1080",
-          "template_reference": "`collateral/render/card-16a` format"
-        },
-        {
-          "day": "Tue 1",
-          "channel": "Blog / help center",
-          "content_type": "Article",
-          "myth": "19+20+21",
-          "copy_source": "Combined: \"Is Online Rigged? Inside the Testing Labs, the Audits, and Your 'Lucky New Account'\"",
-          "asset_format": "Long-form web",
-          "template_reference": "—"
-        },
-        {
-          "day": "Wed 1",
-          "channel": "Instagram / Facebook",
-          "content_type": "Myth card",
-          "myth": "20",
-          "copy_source": "`myth-busting.md` → Myth 20 → Social card",
-          "asset_format": "1080 x 1080",
-          "template_reference": "`collateral/render/card-1a` format"
-        },
-        {
-          "day": "Thu 1",
-          "channel": "In-app",
-          "content_type": "Push notification",
-          "myth": "24",
-          "copy_source": "Myth 24 STAT line: \"Turbo doubles your spins per hour. Same odds, twice the spend rate.\"",
-          "asset_format": "Push",
-          "template_reference": "`collateral/render/push-notification-12e` format"
-        },
-        {
-          "day": "Fri 1",
-          "channel": "Instagram / Facebook",
-          "content_type": "Myth card",
-          "myth": "21",
-          "copy_source": "`myth-busting.md` → Myth 21 → Social card",
-          "asset_format": "1080 x 1080",
-          "template_reference": "`collateral/render/card-1a` format"
-        },
-        {
-          "day": "Sat 1",
-          "channel": "Instagram Stories",
-          "content_type": "Story recap",
-          "myth": "19–21",
-          "copy_source": "Week 1 recap: three myths, three facts, one CTA",
-          "asset_format": "1080 x 1920",
-          "template_reference": "`collateral/render/story-16c` format"
-        },
-        {
-          "day": "Mon 2",
-          "channel": "Instagram / Facebook",
-          "content_type": "Myth card",
-          "myth": "22",
-          "copy_source": "`myth-busting.md` → Myth 22 → Social card",
-          "asset_format": "1080 x 1080",
-          "template_reference": "`collateral/render/card-16b` format"
-        },
-        {
-          "day": "Tue 2",
-          "channel": "Blog / help center",
-          "content_type": "Article",
-          "myth": "22",
-          "copy_source": "Title: \"Bonus Math, Decoded: What 30x Wagering Actually Means\" — include the $100/30x worked example",
-          "asset_format": "Long-form web",
-          "template_reference": "—"
-        },
-        {
-          "day": "Wed 2",
-          "channel": "Instagram / Facebook",
-          "content_type": "Myth card",
-          "myth": "24",
-          "copy_source": "`myth-busting.md` → Myth 24 → Social card",
-          "asset_format": "1080 x 1080",
-          "template_reference": "`collateral/render/card-1a` format"
-        },
-        {
-          "day": "Thu 2",
-          "channel": "Instagram / Twitter",
-          "content_type": "Myth card",
-          "myth": "25",
-          "copy_source": "`myth-busting.md` → Myth 25 → Social card",
-          "asset_format": "1080 x 1080",
-          "template_reference": "`collateral/render/card-11a` format"
-        },
-        {
-          "day": "Fri 2",
-          "channel": "In-app",
-          "content_type": "Web popup",
-          "myth": "26",
-          "copy_source": "Myth 26 short version: demo and real money run the same certified math",
-          "asset_format": "Popup",
-          "template_reference": "`collateral/render/web-popup-12h` format"
-        },
-        {
-          "day": "Sat 2",
-          "channel": "All social",
-          "content_type": "Quiz CTA",
-          "myth": "19–26",
-          "copy_source": "\"Think the algorithm is out to get you? Take the online reality check.\"",
-          "asset_format": "1080 x 1080",
-          "template_reference": "`collateral/render/poster-4c` format"
-        }
-      ],
-      "captions": [
-        {
-          "label": "Myth 19 post",
-          "text": "Online slots are tested by independent labs, and unlike the casino floor, most show their payback rate right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
-        },
-        {
-          "label": "Myth 20 post",
-          "text": "The game wasn't 'about to pay out' when you walked away. The result is generated the instant you press spin. Everything else is animation. #KnowYourGame"
-        },
-        {
-          "label": "Myth 21 post",
-          "text": "There's no 'new player luck' setting and no winner flag. One game, one payout rate, every account. Your early wins were a lucky run, not bait. #NoFinePrint"
-        },
-        {
-          "label": "Myth 22 post",
-          "text": "A $100 bonus at 30x wagering = $3,000 in bets before you can withdraw. Bonuses can be good value, but read the multiplier before you celebrate. #KnowYourGame"
-        },
-        {
-          "label": "Myth 24 post",
-          "text": "Auto-spin doesn't change your odds. It changes your speed, which changes how fast your budget meets the house edge. The only setting that matters is pace. #KnowYourGame"
-        },
-        {
-          "label": "Myth 25 post",
-          "text": "Streamers run 10,000+ spins a week, often on sponsored balances, and you see the highlights. That's a TV show, not a strategy. #NoFinePrint"
-        },
-        {
-          "label": "Quiz CTA post",
-          "text": "Eight online myths, busted in two weeks. How many had you? Take the online reality check. 2 minutes. Link in bio."
-        }
-      ],
-      "email": {
-        "subject": "The game doesn't know you. That's the whole point.",
-        "previewText": "Independent testing, published payouts, and why your \"lucky new account\" was just math.",
-        "bodyStructure": [
-          "Hero: Myth 19 card image",
-          "3 myth/fact pairs (Myths 19, 20, 21 — short versions)",
-          "\"Bonus math, decoded\" teaser → Week 2 blog article",
-          "CTA: \"Take the online reality check\" → quiz link",
-          "Footer: helpline + \"Demo mode tip: licensed = same math, real money or not.\""
-        ]
-      },
-      "kpis": [
-        "Social engagement rate (rigged/conspiracy content generates discussion — expect high comments)",
-        "In-app push and popup click-through rates (first campaign benchmark for this channel)",
-        "Blog read-through on the bonus math article",
-        "Quiz completions and share rate"
       ],
       "tokens": []
     }

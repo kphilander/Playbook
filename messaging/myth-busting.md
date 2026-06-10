@@ -21,7 +21,7 @@ adaptation_notes: |
   Game-specific myths: Some reference US casino culture.
   Humor: One-liners use irreverent tone. Adapt for profile.
   Format: Social card copy may need cultural adjustment.
-  Online myths (19–26): Bonus/wagering rules and RTP publication
+  Online myths (19–20): Bonus/wagering rules and RTP publication
   requirements vary by jurisdiction. Verify locally before deploying.
 last_updated: 2026-06-10
 ---
@@ -66,14 +66,8 @@ Find the right myth fast — by game type, by channel need, or by the cognitive 
 | 17 | [Win Back Your Losses](#myth-17-you-can-win-back-your-losses) | Sunk cost fallacy | Money Myths |
 | 18 | [Gambling as Income](#myth-18-gambling-is-a-way-to-make-money) | Entertainment, not investment | Money Myths, Game IQ |
 | **Online Casino & iGaming** | | | |
-| 19 | [Online Slots Are Rigged](#myth-19-online-slots-are-rigged) | Independently tested, payouts published | Online Reality Check |
-| 20 | [The Game Knows You're About to Win](#myth-20-the-game-knows-when-youre-about-to-win) | There is no win schedule | Online Reality Check |
-| 21 | [The Casino Tightens *Your* Odds](#myth-21-the-casino-tightens-the-odds-for-your-account) | Payouts set per game, not per player | Online Reality Check |
-| 22 | [A Bonus Is Free Money](#myth-22-a-bonus-is-free-money) | Wagering requirements are the price tag | Online Reality Check |
-| 23 | [Live Dealers Can Favor You](#myth-23-live-dealers-can-favor-you) | Scripted dealing, regulated streams | Online Reality Check |
-| 24 | [Auto-Spin Changes Your Odds](#myth-24-auto-spin-and-turbo-mode-change-your-odds) | Speed changes spend rate, not odds | Online Reality Check |
-| 25 | [If Streamers Win, So Can You](#myth-25-if-streamers-win-so-can-you) | Highlight reels cut the losses | Online Reality Check |
-| 26 | [Demo Mode Plays Looser](#myth-26-demo-mode-plays-looser-than-real-money) | Same math, smaller sample | Online Reality Check |
+| 19 | [Online Slots Are Rigged](#myth-19-online-slots-are-rigged) | Independently tested, payouts published | — |
+| 20 | [A Bonus Is Free Money](#myth-20-a-bonus-is-free-money) | Wagering requirements are the price tag | — |
 
 ### By channel need
 
@@ -94,20 +88,19 @@ Find the right myth fast — by game type, by channel need, or by the cognitive 
 | Bias | Myths | Explanation |
 |---|---|---|
 | Gambler's fallacy | 2, 7, 15 | Belief that past random events affect future ones |
-| Clustering illusion | 1, 8, 23 | Seeing patterns in random sequences |
+| Clustering illusion | 1, 8 | Seeing patterns in random sequences |
 | Near-miss effect | 4 | Treating "almost winning" as meaningful |
-| Anthropomorphism | 3, 8, 20, 23 | Giving machines or dealers human traits |
-| Illusion of control | 10, 14, 24 | Believing personal choices affect random outcomes |
+| Anthropomorphism | 3, 8 | Giving machines or dealers human traits |
+| Illusion of control | 10, 14 | Believing personal choices affect random outcomes |
 | Overconfidence | 9, 11 | Overestimating one's ability to beat the system |
 | Sunk cost fallacy | 17 | Continuing because of past investment |
-| Survivorship bias | 13, 25 | Only seeing the winners, not the losers |
+| Survivorship bias | 13 | Only seeing the winners, not the losers |
 | Probability neglect | 12, 16 | Ignoring how small probabilities actually are |
-| Magical thinking | 3, 5, 21 | Believing in luck, timing, or superstition |
+| Magical thinking | 3, 5 | Believing in luck, timing, or superstition |
 | Proportionality bias | 6 | Assuming bigger inputs = proportionally better outputs |
 | Optimism bias | 18 | Overestimating likelihood of positive outcomes |
-| Distrust heuristic | 19, 21 | Assuming hidden manipulation when outcomes feel unfair |
-| Framing effect | 22 | Judging by how something is presented, not what it costs |
-| Confirmation bias | 3, 26 | Remembering the evidence that fits, forgetting the rest |
+| Distrust heuristic | 19 | Assuming hidden manipulation when outcomes feel unfair |
+| Framing effect | 20 | Judging by how something is presented, not what it costs |
 
 ---
 
@@ -819,77 +812,7 @@ A rigged game would be the fastest way for a site to lose its license. The house
 
 ---
 
-### Myth 20: The Game Knows When You're About to Win
-
-**Game type:** Online slots, iGaming | **Bias:** Anthropomorphism, illusion of control | **Pillar:** Open
-
-#### Social card
-
-> **MYTH**: "The game was about to pay out. Then I changed my bet and ruined it."
->
-> **FACT**: There is no "about to pay out." The result is picked at random the instant you hit spin. The game has no plan, no schedule, and no idea who you are.
->
-> **STAT**: 0 wins are ever "queued up." Every outcome is generated fresh, at the moment you press the button.
-
-#### Article explainer
-
-You've been spinning for twenty minutes. The bonus round feels close. Then you change your bet, and someone in the chat says you just "reset the jackpot timer."
-
-There is no timer. The result of each spin is picked at random the instant you press the button. Nothing is queued up, building, or scheduled. The game doesn't have a plan for your next ten spins. It doesn't know there will *be* a next ten spins.
-
-The myth survives because slots feel like a story: rising music, near misses, meters filling. That's presentation, not prediction. The drama is added *after* the result is already decided.
-
-So changing your bet, switching games, or taking a break can't interrupt a win that was "coming." There was never a win coming. There's just the next random result, whenever you ask for it.
-
-#### Quiz question
-
-> **Q: When is the outcome of an online slot spin actually decided?**
->
-> A) Gradually, as the reels slow down
-> B) When the bonus meter fills up
-> C) The instant you press spin. Everything after is animation ✓
-> D) At the start of each session
->
-> **Feedback**: The result is picked at random the moment you press spin. The reels, music, and near misses are a show built around a decision that's already been made. Nothing is ever "about to" hit.
-
----
-
-### Myth 21: The Casino Tightens the Odds for Your Account
-
-**Game type:** Online slots, iGaming | **Bias:** Magical thinking, distrust heuristic | **Pillar:** Open
-
-#### Social card
-
-> **MYTH**: "New accounts win big at first. Then the site flags you and tightens your odds."
->
-> **FACT**: A game's payout rate is built into the game itself and is the same for every player on it. There's no "new player mode," no winner flag, and no per-account dial to turn.
->
-> **STAT**: 1 payout setting per game. The same for your account, your friend's account, and the account that just signed up.
-
-#### Article explainer
-
-The story goes: you won early because the site wanted to hook you. Now that you're a regular, they've quietly turned your odds down. Some players even open fresh accounts to get the "new player luck" back.
-
-One problem: the game doesn't have a per-player setting. A licensed game's payout rate is built into the game software and certified before launch. Every account playing that game gets the same odds. Regulators check exactly this, and a per-account dial would cost the site its license.
-
-So why did the early sessions feel luckier? Small samples. A few hundred spins can land anywhere, way up or way down. Over thousands of spins, results settle toward the published rate, which is below 100%. Early luck fading isn't the site adjusting you. It's randomness evening out.
-
-The fresh-account trick? Same game, same math. The game never knew who you were to begin with.
-
-#### Quiz question
-
-> **Q: Your friend says the casino "tightened" their account after a big win. What actually happened?**
->
-> A) The site flagged them as a winner and lowered their payouts
-> B) Nothing. The game's odds never changed; their lucky streak just ended ✓
-> C) Their account entered a mandatory cooldown payout cycle
-> D) The game adapted to their playing style
->
-> **Feedback**: A game's payout rate is certified per game and identical for every player. Early wins fading is a short lucky run meeting the long-run math, not a switch someone flipped on your account.
-
----
-
-### Myth 22: A Bonus Is Free Money
+### Myth 20: A Bonus Is Free Money
 
 **Game type:** Online casino, iGaming | **Bias:** Framing effect, anchoring | **Pillar:** Open
 
@@ -924,145 +847,6 @@ Bonuses aren't a scam. They're a discount on entertainment, sometimes a good one
 
 ---
 
-### Myth 23: Live Dealers Can Favor You
-
-**Game type:** Live casino, iGaming | **Bias:** Anthropomorphism, clustering illusion | **Pillar:** Open
-
-#### Social card
-
-> **MYTH**: "Find a friendly live dealer. They can deal you better cards. And if the stream lags, it's rigged."
->
-> **FACT**: Live dealers follow the same fixed rules as any casino floor, on camera, with every hand recorded and audited. Stream lag is your internet, not a cover-up.
->
-> **STAT**: 0 decisions are made by the dealer. Shuffles are tracked, hands are scripted, and regulators can review every second of footage.
-
-#### Article explainer
-
-The live dealer smiled at you, chatted between hands, and you won three in a row. New theory: she likes you, and she's dealing accordingly.
-
-She isn't, because she can't. Live dealers follow the same fixed rules as any casino floor: in blackjack, hit on 16, stand on 17, no judgment calls, no favorites. The studio actually has *more* oversight than a casino floor: multiple cameras, sensors that log every card dealt, and full recordings that auditors can review.
-
-The darker version of this myth says the stream itself is rigged: the lag, the cut, the reshuffle right before your big hand. But a laggy stream is your internet catching up, not a window for the house to change anything. The cards were dealt when they were dealt; your screen just saw it half a second later.
-
-The dealer's job is to be pleasant and deal the script. The math never joins the small talk.
-
-#### Quiz question
-
-> **Q: A live dealer has been "hot" against the table for an hour. What's going on?**
->
-> A) The dealer is skilled and playing well
-> B) The studio switched to a tighter deck
-> C) Pure chance. The dealer makes zero decisions ✓
-> D) The stream delay lets the house adjust outcomes
->
-> **Feedback**: Live dealers follow fixed rules on camera, with every card logged and recorded. A "hot" dealer is a random streak with a friendly face, same as on the casino floor.
-
----
-
-### Myth 24: Auto-Spin and Turbo Mode Change Your Odds
-
-**Game type:** Online slots, iGaming | **Bias:** Illusion of control | **Pillar:** Open
-
-#### Social card
-
-> **MYTH**: "Always spin manually. Auto-spin wins less."
->
-> **FACT**: The result is just as random whether you press the button, hold turbo, or let auto-spin run. What changes is speed: more spins per minute means your budget meets the house edge faster.
->
-> **STAT**: Turbo play can double your spins per hour. Same odds per spin, twice the spend rate.
-
-#### Article explainer
-
-Some players swear by the manual press. The timing, the rhythm, the lucky thumb. It feels like part of the game. Auto-spin, the theory goes, wins less.
-
-The game can't tell the difference. Whether the spin comes from your thumb, auto-spin, or turbo mode, the software picks the same kind of random result. There's no separate math for automatic spins.
-
-What these features *do* change is speed. A manual player might run 300 spins an hour; turbo and auto-spin can push that toward 600 or more. Same odds per spin, but your budget meets the house edge twice as often. That's not a conspiracy. It's a throttle.
-
-So press the button if you enjoy pressing the button. Just know the only thing your ritual controls is the pace of the session. Honestly, that's the one setting worth watching.
-
-#### Quiz question
-
-> **Q: What actually changes when you switch from manual spins to turbo auto-spin?**
->
-> A) The payout rate drops slightly
-> B) The number of spins per hour, and how fast your budget is exposed to the edge ✓
-> C) The game enters a different payout table
-> D) Nothing at all
->
-> **Feedback**: The odds per spin are identical. The game doesn't know who or what pressed the button. Turbo and auto-spin change speed, which changes how quickly your budget meets the house edge.
-
----
-
-### Myth 25: If Streamers Win, So Can You
-
-**Game type:** Online casino, iGaming | **Bias:** Survivorship bias | **Pillar:** Open + Social
-
-#### Social card
-
-> **MYTH**: "That streamer hits bonus rounds every session. Just play like they do."
->
-> **FACT**: Many gambling streamers play with sponsored funds or house money, and the highlight reel skips the losing hours. Your account has a real balance and the same odds as everyone else.
->
-> **STAT**: A streamer running 10,000 spins per week will hit huge wins regularly, and lose more than they win. You just don't see that part.
-
-#### Article explainer
-
-The clip is incredible: max win, screaming, chat exploding. The streamer hits bonuses like clockwork, so they must know something you don't.
-
-They know two things. First: volume. A full-time streamer runs tens of thousands of spins a week. At that scale, huge wins are guaranteed, and so are bigger total losses, which don't make the thumbnail. You're watching the highlight reel of a losing season.
-
-Second: the money often isn't theirs. Many gambling streamers are sponsored, playing with funds the site provides. Losing sponsored money costs them nothing. The content is the income. Your deposit doesn't work that way.
-
-Not every streamer is dishonest; some disclose everything. But the feed is a business, edited for drama, running on money and math your account doesn't get. Enjoy the show. Don't mistake it for a strategy.
-
-#### Quiz question
-
-> **Q: A streamer hits massive slot wins every week. What's the most likely explanation?**
->
-> A) They've found high-paying games the public can't access
-> B) Huge spin volume, edited highlights, and often sponsored funds ✓
-> C) Streamers get better payout rates for marketing reasons
-> D) They spin at the right time of day
->
-> **Feedback**: Tens of thousands of spins per week guarantee occasional huge wins, and bigger unseen losses. Add sponsorship deals and selective editing, and the stream tells you nothing about your own odds.
-
----
-
-### Myth 26: Demo Mode Plays Looser Than Real Money
-
-**Game type:** Online slots, iGaming | **Bias:** Confirmation bias | **Pillar:** Open
-
-#### Social card
-
-> **MYTH**: "Demo mode pays like crazy. Switch to real money and the game tightens up."
->
-> **FACT**: In most regulated markets, demo and real-money versions must run the same math. The "switch" you feel is a short demo run meeting a long real-money session, plus the fact that losing fake money doesn't sting.
->
-> **STAT**: Same game, same odds. Regulated demo versions are required to match the real-money math.
-
-#### Article explainer
-
-Everyone's run the experiment: win a fortune in demo mode, deposit real money, and watch the game apparently remember it's a business.
-
-In most regulated markets, demo mode must use the same math as the real-money game, and regulators check it, because a "loose demo" would be false advertising. Same odds, same payouts, same game.
-
-So why does the switch feel real? Two reasons. Sample size: you might demo for ten minutes and play for two hours, and short sessions swing wildly both ways. You remember the lucky demo run and forget the unlucky one. And stakes change what you notice: fake losses don't register, real ones do. The same losing streak feels like noise in demo and like a pattern with money on the line.
-
-One honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a reason to play on regulated platforms, not proof the math changes when money shows up.
-
-#### Quiz question
-
-> **Q: You won big in demo mode but lose with real money. On a licensed site, what changed?**
->
-> A) The game switched to its real-money payout table
-> B) Nothing in the math. Your sample size and attention changed ✓
-> C) The casino recognized your deposit and adjusted the odds
-> D) Demo wins are scripted to encourage deposits
->
-> **Feedback**: In most regulated markets, demo and real-money modes must run identical math. Short demo sessions plus painless fake losses create the feeling of a switch that the math doesn't allow.
-
----
 
 ## Quick-reference index
 
@@ -1087,10 +871,4 @@ One honest caveat: on *unlicensed* sites, no rule stops a juiced demo. That's a 
 | 17 | You can win back your losses | All | Sunk cost fallacy | Open |
 | 18 | Gambling is a way to make money | All | Optimism bias | Open |
 | 19 | Online slots are rigged | Online slots | Distrust heuristic | Open |
-| 20 | The game knows you're about to win | Online slots | Anthropomorphism | Open |
-| 21 | The casino tightens your account's odds | Online slots | Magical thinking | Open |
-| 22 | A bonus is free money | Online casino | Framing effect | Open |
-| 23 | Live dealers can favor you | Live casino | Anthropomorphism | Open |
-| 24 | Auto-spin changes your odds | Online slots | Illusion of control | Open |
-| 25 | If streamers win, so can you | Online casino | Survivorship bias | Open + Social |
-| 26 | Demo mode plays looser | Online slots | Confirmation bias | Open |
+| 20 | A bonus is free money | Online casino | Framing effect | Open |

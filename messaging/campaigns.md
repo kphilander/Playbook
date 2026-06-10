@@ -30,14 +30,12 @@ adaptation_notes: |
   including in card-17a, before deploying outside the US.
   Campaign 9 (New Year): Timing assumes January 1 new year. Shift to
   local new-year moment where relevant (e.g., Lunar New Year markets).
-  Campaign 10 (Online Reality Check): Bonus/wagering and RTP publication
-  rules vary by jurisdiction — verify Myth 19/22/26 claims locally.
 last_updated: 2026-06-10
 ---
 
 # Campaign Briefs
 
-Ten ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`. Campaigns 1–7 are evergreen; Campaigns 8–9 are seasonal and anchor to calendar moments.
+Nine ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, channel specs, and references to copy in `myth-busting.md` and templates in `collateral/render/`. Campaigns 1–7 are evergreen; Campaigns 8–9 are seasonal and anchor to calendar moments.
 
 > **How to use this file**: Pick a campaign, customize the copy for your brand (replace `{{PROGRAM_NAME}}` and `{{HELPLINE_NUMBER}}`), produce the assets using the referenced templates, and schedule according to the calendar. Adjust timing to fit your content calendar — the sequence matters more than the exact days.
 
@@ -54,9 +52,8 @@ Ten ready-to-run campaigns. Each brief includes a theme, day-by-day schedule, ch
 | 5 | [The Money Myths](#campaign-5-the-money-myths) | 10 days | 6, 12, 17, 18 | Email + social | All operators, responsible play teams |
 | 6 | [Game IQ Challenge](#campaign-6-game-iq-challenge) | 1 week | All | Social + interactive | All operators, engagement-focused |
 | 7 | [Know Your Game](#campaign-7-know-your-game) | 2 weeks | How to Play guides | Social + blog + email | All operators, game education |
-| 8 | [The Big Game, By the Numbers](#campaign-8-the-big-game-by-the-numbers) | 1 week (seasonal) | 11, 12, 14, 25 | Social + in-app | Sportsbooks, championship week |
+| 8 | [The Big Game, By the Numbers](#campaign-8-the-big-game-by-the-numbers) | 1 week (seasonal) | 11, 12, 13, 14 | Social + in-app | Sportsbooks, championship week |
 | 9 | [New Year, Same Math](#campaign-9-new-year-same-math) | 1 week (seasonal) | 17, 18 | Social + email | All operators, year-end / January |
-| 10 | [Online Reality Check](#campaign-10-online-reality-check) | 2 weeks | 19–26 | Social + in-app | iGaming platforms, online-first players |
 
 ---
 
@@ -513,7 +510,7 @@ Each game gets 2–3 days of content. The campaign opens with a universal hook (
 **Duration**: 1 week (7 posts), ending on game day
 **Pillar**: Open + Tools
 **Audience**: Sports bettors, first-time bettors, office-pool players, young adults
-**Myths used**: 11 (Knowledge = Winning), 12 (Parlays), 14 (In-Play Edge), 25 (Streamers)
+**Myths used**: 11 (Knowledge = Winning), 12 (Parlays), 13 (Tipsters), 14 (In-Play Edge)
 
 This is the event-moment companion to [Campaign 3](#campaign-3-sports-betting-reality-check): Campaign 3 teaches sports betting literacy in general; Campaign 8 meets the once-a-year bettor in championship week, when props, squares pools, and hype parlays peak. Player-facing copy always says "the big game" — never a trademarked event name.
 
@@ -525,7 +522,7 @@ This is the event-moment companion to [Campaign 3](#campaign-3-sports-betting-re
 | Tue | Blog / help center | Article | 12 | Title: "Props, Squares, and Parlays: A Field Guide to Big-Game Bets" — what each bet is, what it costs | Long-form web | — |
 | Wed | Instagram / Twitter | Myth card | 11 | `myth-busting.md` → Myth 11 → Social card | 1080 x 1080 | `collateral/render/card-15a` format |
 | Thu | Instagram Stories | Infographic | 12 | What a hype parlay actually costs — vig compounding per leg | 1080 x 1920 | `collateral/render/story-15b` format |
-| Fri | Instagram / Twitter | Myth card | 25 | `myth-busting.md` → Myth 25 → Social card. Frame: everyone posting winning slips this week is the highlight reel. | 1080 x 1080 | `collateral/render/card-11a` format |
+| Fri | Instagram / Twitter | Myth card | 13 | `myth-busting.md` → Myth 13 → Social card. Frame: everyone posting winning slips this week is the highlight reel. | 1080 x 1080 | `collateral/render/card-11a` format |
 | Sat | All social + in-app | Tool promotion | — | "Set your game-day budget before kickoff. 10 seconds now, zero math during the game." | 1080 x 1080 + push | `collateral/render/card-17a` format + `push-notification-12e` |
 | Sun (game day) | In-app / Stories | Game-day overlay | 14 | Live-betting reality check: the algorithm moves faster than the broadcast | In-app overlay | `collateral/render/live-odds-overlay-15d` format |
 
@@ -535,7 +532,7 @@ This is the event-moment companion to [Campaign 3](#campaign-3-sports-betting-re
 
 **Myth 11 post**: "You've watched every snap this season. The sportsbook's models have watched every snap ever, and they set the line before you opened the app. Bet for fun, not for certainty. #KnowYourGame"
 
-**Myth 25 post**: "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
+**Myth 13 post**: "Your feed is full of winning slips this week. That's the highlight reel, not the average. Nobody screenshots the parlay that died on leg two. #NoFinePrint"
 
 **Tool promotion post**: "Game-day plan: snacks, the good TV, and a budget you set before kickoff. 10 seconds now means zero math during the fourth quarter. Link in bio."
 
@@ -628,73 +625,6 @@ Operator-facing: launch December 29, run through the first weekend of January. A
 
 ---
 
-## Campaign 10: Online Reality Check
-
-**Theme**: The algorithm isn't out to get you — how online games actually work, from independent testing to bonus math.
-**Tagline**: "The game doesn't know you. That's the whole point."
-**Duration**: 2 weeks (12 posts)
-**Pillar**: Open
-**Audience**: Online-first players, app users, young adults
-**Myths used**: 19 (Online Rigged), 20 (Game Knows), 21 (Account Targeting), 22 (Bonus = Free Money), 23 (Live Dealers), 24 (Auto-Spin), 25 (Streamers), 26 (Demo Mode)
-**Channel note**: This is the first campaign with in-app as a primary channel. Push and popup slots use the stat lines from the myth social cards — they work standalone at small sizes.
-
-### Schedule
-
-| Day | Channel | Content type | Myth # | Copy source | Asset format | Template reference |
-|---|---|---|---|---|---|---|
-| Mon 1 | Instagram / Facebook | Myth card | 19 | `myth-busting.md` → Myth 19 → Social card | 1080 x 1080 | `collateral/render/card-16a` format |
-| Tue 1 | Blog / help center | Article | 19+20+21 | Combined: "Is Online Rigged? Inside the Testing Labs, the Audits, and Your 'Lucky New Account'" | Long-form web | — |
-| Wed 1 | Instagram / Facebook | Myth card | 20 | `myth-busting.md` → Myth 20 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
-| Thu 1 | In-app | Push notification | 24 | Myth 24 STAT line: "Turbo doubles your spins per hour. Same odds, twice the spend rate." | Push | `collateral/render/push-notification-12e` format |
-| Fri 1 | Instagram / Facebook | Myth card | 21 | `myth-busting.md` → Myth 21 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
-| Sat 1 | Instagram Stories | Story recap | 19–21 | Week 1 recap: three myths, three facts, one CTA | 1080 x 1920 | `collateral/render/story-16c` format |
-| Mon 2 | Instagram / Facebook | Myth card | 22 | `myth-busting.md` → Myth 22 → Social card | 1080 x 1080 | `collateral/render/card-16b` format |
-| Tue 2 | Blog / help center | Article | 22 | Title: "Bonus Math, Decoded: What 30x Wagering Actually Means" — include the $100/30x worked example | Long-form web | — |
-| Wed 2 | Instagram / Facebook | Myth card | 24 | `myth-busting.md` → Myth 24 → Social card | 1080 x 1080 | `collateral/render/card-1a` format |
-| Thu 2 | Instagram / Twitter | Myth card | 25 | `myth-busting.md` → Myth 25 → Social card | 1080 x 1080 | `collateral/render/card-11a` format |
-| Fri 2 | In-app | Web popup | 26 | Myth 26 short version: demo and real money run the same certified math | Popup | `collateral/render/web-popup-12h` format |
-| Sat 2 | All social | Quiz CTA | 19–26 | "Think the algorithm is out to get you? Take the online reality check." | 1080 x 1080 | `collateral/render/poster-4c` format |
-
-### Suggested captions
-
-**Myth 19 post**: "Online slots are tested by independent labs, and unlike the casino floor, most show their payback rate right in the game info. The edge is real. The conspiracy isn't. #NoFinePrint"
-
-**Myth 20 post**: "The game wasn't 'about to pay out' when you walked away. The result is generated the instant you press spin. Everything else is animation. #KnowYourGame"
-
-**Myth 21 post**: "There's no 'new player luck' setting and no winner flag. One game, one payout rate, every account. Your early wins were a lucky run, not bait. #NoFinePrint"
-
-**Myth 22 post**: "A $100 bonus at 30x wagering = $3,000 in bets before you can withdraw. Bonuses can be good value, but read the multiplier before you celebrate. #KnowYourGame"
-
-**Myth 24 post**: "Auto-spin doesn't change your odds. It changes your speed, which changes how fast your budget meets the house edge. The only setting that matters is pace. #KnowYourGame"
-
-**Myth 25 post**: "Streamers run 10,000+ spins a week, often on sponsored balances, and you see the highlights. That's a TV show, not a strategy. #NoFinePrint"
-
-**Quiz CTA post**: "Eight online myths, busted in two weeks. How many had you? Take the online reality check. 2 minutes. Link in bio."
-
-### Email option
-
-Send as a mid-campaign digest after Week 1:
-
-> **Subject**: The game doesn't know you. That's the whole point.
->
-> **Preview text**: Independent testing, published payouts, and why your "lucky new account" was just math.
->
-> **Body structure**:
-> - Hero: Myth 19 card image
-> - 3 myth/fact pairs (Myths 19, 20, 21 — short versions)
-> - "Bonus math, decoded" teaser → Week 2 blog article
-> - CTA: "Take the online reality check" → quiz link
-> - Footer: helpline + "Demo mode tip: licensed = same math, real money or not."
-
-### KPIs
-
-- Social engagement rate (rigged/conspiracy content generates discussion — expect high comments)
-- In-app push and popup click-through rates (first campaign benchmark for this channel)
-- Blog read-through on the bonus math article
-- Quiz completions and share rate
-
----
-
 ## Campaign sequencing
 
 For operators running multiple campaigns, this order maximizes impact:
@@ -706,9 +636,8 @@ For operators running multiple campaigns, this order maximizes impact:
 | 3rd | Slots Myths Week | Largest player segment. High relatability. |
 | 4th | Sports Betting Reality Check | Time to a major sporting event. |
 | 5th | The Money Myths | Builds on literacy established in campaigns 1–4. |
-| 6th | Online Reality Check | Online-first segment. Pairs naturally with Money Myths (bonus math). |
-| 7th | Luck, Numbers & Lotteries | Lighter tone. Good palette cleanser. |
-| 8th | Beat the House? Table Games | Most niche audience. Deploy to engaged segment. |
+| 6th | Luck, Numbers & Lotteries | Lighter tone. Good palette cleanser. |
+| 7th | Beat the House? Table Games | Most niche audience. Deploy to engaged segment. |
 
 **Seasonal campaigns**: The Big Game, By the Numbers (8) and New Year, Same Math (9) are calendar-anchored — slot them into whatever position the calendar dictates and shift the evergreen sequence around them. Don't run two campaigns simultaneously.
 

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "totalAssets": 115,
-    "generated": "2026-06-10T15:38:33.242Z",
+    "totalAssets": 114,
+    "generated": "2026-06-10T16:00:45.612Z",
     "version": "0.1.0",
     "baseUrl": "/tools/playbook",
     "description": "Complete catalog of Playbook brand assets. All assets are CC0-licensed."
@@ -688,7 +688,7 @@
       ]
     },
     "collateral": {
-      "count": 56,
+      "count": 55,
       "assets": [
         {
           "id": "brochure-cover-8b",
@@ -1547,24 +1547,6 @@
             "digital-signage"
           ],
           "dimensions": null
-        },
-        {
-          "id": "story-16c-online-myths",
-          "filename": "story-16c-online-myths.png",
-          "url": "/tools/playbook/assets/renders/story-16c-online-myths.png",
-          "sourceUrl": "collateral/render/story-16c-online-myths.png",
-          "format": "png",
-          "fileSize": 131360,
-          "category": "collateral",
-          "subcategory": "stories",
-          "channel": [
-            "instagram-stories",
-            "tiktok"
-          ],
-          "dimensions": {
-            "width": 1080,
-            "height": 1920
-          }
         },
         {
           "id": "story-3a-hot-streak",

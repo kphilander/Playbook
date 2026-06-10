@@ -96,7 +96,6 @@ const cards = [
   // Online myths campaign (16-series) + seasonal campaigns (17/18-series)
   { html: 'card-16a-online-rigged.html', output: 'card-16a-online-rigged.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-16b-bonus-free-money.html', output: 'card-16b-bonus-free-money.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'story-16c-online-myths.html', output: 'story-16c-online-myths.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'card-17a-big-game.html', output: 'card-17a-big-game.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-18a-fresh-start.html', output: 'card-18a-fresh-start.png', w: 1080, h: 1080, selector: '.social-card' },
   // i18n Phase A — Japanese (Japan) variants
