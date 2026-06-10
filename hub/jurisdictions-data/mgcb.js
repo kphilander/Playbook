@@ -14,7 +14,7 @@
     "name": "Michigan Gaming Control Board (MGCB)",
     "jurisdiction": "Michigan, United States",
     "legislation": "Michigan Gaming Control and Revenue Act (Initiated Law 1 of 1996, amended by PA 69 of 1997); Lawful Internet Gaming Act (PA 152 of 2019); Lawful Sports Betting Act (PA 149 of 2019); Compulsive Gaming Prevention Act (PA 70 of 1997); Admin Rules R 432.601-676 (Internet Gaming), R 432.711-776 (Internet Sports Betting)",
-    "unique": "All three verticals: three Detroit commercial casinos, tribal casinos (12 compacts), legal iGaming (January 2021), and legal sports betting. Two separate self-exclusion programs: Disassociated Persons List (DPL, lifetime with 5-year removal option) for Detroit casinos and Responsible Gaming Database (RGD, 1-year or 5-year) for online platforms. 1-800-GAMBLER adopted as statewide helpline (February 2024). Compulsive Gaming Prevention Fund receives $2M annually. 21+ minimum age for all gambling.",
+    "unique": "All three verticals: three Detroit commercial casinos, tribal casinos (12 compacts), legal iGaming (January 2021), and legal sports betting. Two separate self-exclusion programs: Disassociated Persons List (DPL, lifetime with 5-year removal option) for Detroit casinos and Responsible Gaming Database (RGD, 1-year or 5-year) for online platforms. 1-800-GAMBLER adopted as statewide helpline (February 2024). Compulsive Gaming Prevention Fund receives $6M annually (FY2025). 21+ minimum age for all gambling.",
     "verticals": "Land-based Casino, Online Casino, Sports Betting",
     "source": "https://www.michigan.gov/mgcb/resources/responsible-gaming"
   },
@@ -123,7 +123,7 @@
         "online",
         "sports"
       ],
-      "text": "Casino employees trained to recognize signs of problem gambling and direct patrons to resources. Compulsive Gaming Prevention Fund ($2M annually from Detroit casino State Services Fee) supports training and education programs. Employees 18+ permitted on premises but those under 21 may not perform gambling functions."
+      "text": "Casino employees trained to recognize signs of problem gambling and direct patrons to resources. Compulsive Gaming Prevention Fund ($6M annually as of FY2025, from Detroit casino State Services Fee) supports training and education programs. Employees 18+ permitted on premises but those under 21 may not perform gambling functions."
     },
     "10": {
       "label": "MGCB (Michigan)",

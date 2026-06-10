@@ -71,7 +71,7 @@
     },
     "5": {
       "label": "NJ DGE",
-      "ref": "NJAC 13:69O-1.2",
+      "ref": "NJAC 13:69O-1.4",
       "src": "njdge-69o",
       "verticals": [
         "online",
