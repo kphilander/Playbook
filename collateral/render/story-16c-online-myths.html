@@ -23,17 +23,12 @@
   .story-pillar { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-primary); background: var(--pb-color-secondary); padding: 8px 20px; border-radius: 100px; }
   .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 24px; }
-  .myth-statement { font-family: var(--pb-font-heading); font-size: calc(52px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
+  .myth-statement { font-family: var(--pb-font-heading); font-size: calc(56px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
   .myth-statement .strike { text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 5px; color: var(--pb-color-neutral-300); }
   .divider { width: 80px; height: 4px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); margin-bottom: 36px; border-radius: 2px; }
-  .fact-statement { font-family: var(--pb-font-body); font-size: calc(33px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 48px; }
+  .fact-statement { font-family: var(--pb-font-body); font-size: calc(34px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 80px; }
   .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
-  .myth-list { margin-bottom: 48px; }
-  .myth-list-item { display: flex; align-items: baseline; gap: 16px; padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
-  .myth-list-item:last-child { border-bottom: none; }
-  .myth-list-strike { font-family: var(--pb-font-heading); font-size: calc(30px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-neutral-300); text-decoration: line-through; text-decoration-color: var(--pb-color-accent); text-decoration-thickness: 4px; flex: 1; }
-  .myth-list-fact { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); color: var(--pb-color-secondary); font-weight: 600; flex: 1; text-align: right; }
-  .diagram-block { background: linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04)), var(--pb-color-primary); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 40px 28px 32px; margin-bottom: 48px; }
+  .diagram-block { background: linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04)), var(--pb-color-primary); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 56px 32px 44px; margin-bottom: 80px; }
   .diagram-block svg { width: 100%; height: auto; display: block; }
   .diagram-block svg text { font-family: var(--pb-font-heading), 'Inter', sans-serif; }
   .diagram-caption { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); text-align: center; margin-top: 24px; }
@@ -54,21 +49,7 @@
     <div class="myth-label">Online Reality Check</div>
     <div class="myth-statement"><span class="strike">&#8220;The game knows you&#8221;</span></div>
     <div class="divider"></div>
-    <div class="fact-statement">It doesn&#8217;t. Every result is <strong>picked at random</strong> the instant you press spin.</div>
-    <div class="myth-list">
-      <div class="myth-list-item">
-        <span class="myth-list-strike">&#8220;Online is rigged&#8221;</span>
-        <span class="myth-list-fact">Lab-tested, payback published</span>
-      </div>
-      <div class="myth-list-item">
-        <span class="myth-list-strike">&#8220;It was about to hit&#8221;</span>
-        <span class="myth-list-fact">Decided at the spin, not before</span>
-      </div>
-      <div class="myth-list-item">
-        <span class="myth-list-strike">&#8220;They flagged my account&#8221;</span>
-        <span class="myth-list-fact">Your odds never moved</span>
-      </div>
-    </div>
+    <div class="fact-statement">It doesn&#8217;t. Every result is <strong>picked at random</strong> the instant you press spin. No schedule, no winner flag, no demo switch.</div>
     <div class="diagram-block">
       <svg viewBox="0 0 900 330" fill="none">
         <rect x="320" y="10" width="260" height="96" rx="4" stroke="var(--pb-color-secondary)" stroke-width="2"/>
