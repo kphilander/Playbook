@@ -23,7 +23,7 @@
   .headline { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 36px; letter-spacing: -0.02em; }
   .columns { display: flex; gap: 16px; }
   .col-tools { flex: 1; display: flex; flex-direction: column; gap: 16px; }
-  .odds-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; flex: 1; }
+  .odds-item { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; flex: 1; display: flex; flex-direction: column; justify-content: center; }
   .odds-game { font-family: var(--pb-font-body); font-size: calc(18px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 8px; }
   .odds-edge { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; letter-spacing: -0.02em; }
   .odds-edge.teal { color: var(--pb-color-secondary); }
@@ -50,12 +50,12 @@
     <div class="columns">
       <div class="col-tools">
         <div class="odds-item">
-          <div class="odds-game">Deposit limit</div>
+          <div class="odds-game">Set a deposit limit</div>
           <div class="odds-edge teal">10 sec</div>
-          <div class="odds-note">Set it while you're feeling sharp</div>
+          <div class="odds-note">That's all it takes</div>
         </div>
         <div class="odds-item">
-          <div class="odds-game">Session reminder</div>
+          <div class="odds-game">Add a session reminder</div>
           <div class="odds-edge teal">30 sec</div>
           <div class="odds-note">Your pace, your call</div>
         </div>
@@ -69,7 +69,7 @@
           <path d="M20 186 H440" stroke="var(--pb-color-accent)" stroke-width="2" stroke-linecap="round"/>
           <circle cx="440" cy="186" r="5" fill="var(--pb-color-accent)"/>
           <text x="440" y="216" text-anchor="end" font-family="Inter" font-weight="600" font-size="17" fill="var(--pb-color-accent)">House edge: same</text>
-          <path d="M20 240 C 160 232, 300 180, 440 84" stroke="var(--pb-color-secondary)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M20 240 C 160 232, 300 180, 440 84" stroke="var(--pb-color-secondary)" stroke-width="2" stroke-linecap="round" stroke-dasharray="9 11"/>
           <circle cx="440" cy="84" r="5" fill="var(--pb-color-secondary)"/>
           <text x="440" y="62" text-anchor="end" font-family="Inter" font-weight="600" font-size="17" fill="var(--pb-color-secondary)">Your Game IQ: up</text>
         </svg>
