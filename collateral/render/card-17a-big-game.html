@@ -25,18 +25,19 @@
   .explanation { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); margin-bottom: 32px; }
   .emphasis { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); letter-spacing: 0.02em; margin-top: 36px; }
   .vig-strip { margin-top: 8px; display: flex; gap: 16px; }
-  .vig-card { flex: 1; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px 20px; text-align: center; display: flex; flex-direction: column; }
+  .vig-card { flex: 1; background: linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04)), var(--pb-color-primary); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 24px 20px; text-align: center; display: flex; flex-direction: column; }
   .vig-label { font-family: var(--pb-font-body); font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-bottom: 8px; }
   .vig-value { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); font-weight: 800; color: var(--pb-color-white); }
   .vig-note { font-family: var(--pb-font-body); font-size: calc(14px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-top: 4px; }
-  .cut-track { margin-top: auto; height: 16px; border-radius: 4px; background: rgba(255,255,255,0.12); overflow: hidden; }
   .vig-card > .vig-note { margin-bottom: 16px; }
-  .cut-fill { height: 100%; background: var(--pb-color-accent); border-radius: 0 4px 4px 0; }
-  .cut-caption { font-family: var(--pb-font-body); font-size: calc(14px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-top: 8px; }
+  .cut-caption { font-family: var(--pb-font-body); font-size: calc(14px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-top: 10px; }
   .cut-example { font-family: var(--pb-font-mono); font-weight: 600; font-size: calc(15px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); margin-top: 6px; }
+  /* Shared metaphor across all three tiles: 10x10 grid = $100 bet (or 100 squares on the board) */
   .squares-grid { margin: auto auto 0; display: grid; grid-template-columns: repeat(10, 10px); grid-auto-rows: 10px; gap: 2px; }
   .squares-grid span { background: rgba(255,255,255,0.10); border-radius: 2px; }
   .squares-grid span.win { background: var(--pb-color-secondary); }
+  .squares-grid span.cut { background: var(--pb-color-accent); }
+  .squares-grid span.cut-half { background: var(--pb-color-accent); opacity: 0.45; }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
@@ -57,15 +58,37 @@
         <div class="vig-label">Single bet, standard line</div>
         <div class="vig-value">-110</div>
         <div class="vig-note">~4.5% house cut</div>
-        <div class="cut-track"><div class="cut-fill" style="width: 4.5%"></div></div>
-        <div class="cut-caption">house cut of each bet</div>
+        <div class="squares-grid">
+          <span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut-half"></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="cut-caption">house cut of each $100 bet</div>
         <div class="cut-example">$4.50 of every $100</div>
       </div>
       <div class="vig-card">
         <div class="vig-label">4-leg hype parlay</div>
         <div class="vig-value">~20%</div>
         <div class="vig-note">house cut, grows per leg</div>
-        <div class="cut-track"><div class="cut-fill" style="width: 20%"></div></div>
+        <div class="squares-grid">
+          <span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span>
+          <span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span><span class="cut"></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
         <div class="cut-caption">~4.5x the single-bet cut</div>
         <div class="cut-example">$20 of every $100</div>
       </div>
