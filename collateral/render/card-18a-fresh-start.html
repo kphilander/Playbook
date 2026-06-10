@@ -20,14 +20,14 @@
   .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
   .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .section-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
-  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
-  .headline { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 48px; letter-spacing: -0.02em; }
-  .chart-panel { background: linear-gradient(rgba(255,255,255,0.04), rgba(255,255,255,0.04)), var(--pb-color-primary); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 40px 48px 32px; }
-  .chart-panel svg { width: 100%; height: auto; display: block; }
-  .chart-panel svg text { font-family: var(--pb-font-heading), 'Inter', sans-serif; }
-  .chart-note { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-white); margin-top: 28px; text-align: center; }
-  .tool-line { font-family: var(--pb-font-body); font-size: calc(22px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); margin-top: 40px; text-align: center; }
-  .tool-line strong { color: var(--pb-color-secondary); font-weight: 600; }
+  /* Fixed top offset matching the 16-series myth cards */
+  .card-body { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; padding: 205px 64px 0; position: relative; z-index: 1; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-color-white); margin-bottom: 32px; letter-spacing: -0.02em; }
+  .fact-statement { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-color-neutral-300); }
+  .fact-statement strong { color: var(--pb-color-secondary); font-weight: 600; }
+  .stat-block { margin-top: 96px; display: flex; align-items: baseline; gap: 24px; }
+  .stat-number { font-family: var(--pb-font-heading); font-size: calc(96px * var(--pb-template-text-scale, 1)); font-weight: 900; color: var(--pb-color-secondary); line-height: 1; letter-spacing: -0.03em; }
+  .stat-unit { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-color-neutral-300); line-height: 1.4; }
   .card-footer { background: var(--pb-color-primary-light); padding: 20px 64px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); font-family: var(--pb-font-body); }
@@ -42,21 +42,11 @@
   </div>
   <div class="card-body">
     <div class="headline">New year, same math.<br>One resolution that runs itself.</div>
-    <div class="chart-panel">
-      <svg viewBox="0 40 840 280" fill="none">
-        <line x1="20" y1="290" x2="820" y2="290" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
-        <text x="20" y="316" font-family="Inter" font-weight="500" font-size="16" fill="var(--pb-color-neutral-300)">Jan</text>
-        <text x="820" y="316" text-anchor="end" font-family="Inter" font-weight="500" font-size="16" fill="var(--pb-color-neutral-300)">Dec</text>
-        <path d="M20 252 H800" stroke="var(--pb-color-accent)" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="800" cy="252" r="6" fill="var(--pb-color-accent)"/>
-        <text x="800" y="232" text-anchor="end" font-family="Inter" font-weight="600" font-size="22" fill="var(--pb-color-accent)">House edge: same</text>
-        <path d="M20 214 C 290 204, 550 160, 800 88" stroke="var(--pb-color-secondary)" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="800" cy="88" r="6" fill="var(--pb-color-secondary)"/>
-        <text x="800" y="66" text-anchor="end" font-family="Inter" font-weight="600" font-size="22" fill="var(--pb-color-secondary)">Your Game IQ: up</text>
-      </svg>
-      <div class="chart-note">The math doesn&#8217;t do resolutions. You can.</div>
+    <div class="fact-statement">The math doesn&#8217;t do resolutions. <strong>You can.</strong></div>
+    <div class="stat-block">
+      <span class="stat-number">10 sec</span>
+      <span class="stat-unit">to set a deposit limit.<br>Do it while you&#8217;re feeling sharp.</span>
     </div>
-    <div class="tool-line">A deposit limit takes <strong>10 seconds</strong> to set. Do it while you&#8217;re feeling sharp.</div>
   </div>
   <div class="card-footer">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
