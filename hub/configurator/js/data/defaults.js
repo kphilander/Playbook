@@ -1,0 +1,560 @@
+/* defaults.js — Canonical default brand object, generated from the repo _brand.yml.
+   Used as the export skeleton when no _brand.yml has been imported, so fresh exports
+   carry the full helplines/integration/currency trees that the form does not edit.
+   Regenerate after editing _brand.yml:  node -e "see hub/configurator/README note" */
+export const DEFAULT_BRAND = {
+  "meta": {
+    "program_name": "Playbook",
+    "organization": "Your Company Name",
+    "website": "https://example.com/playbook",
+    "contact_email": "info@gamblingpolicy.com",
+    "year_established": 2025,
+    "version": "0.1.0",
+    "license": "CC0-1.0",
+    "primary_jurisdictions": [
+      "united-states",
+      "united-kingdom"
+    ],
+    "foundations": {
+      "chapter": "brand-book/00b-theoretical-foundations.md",
+      "public_url": "https://gamblingpolicy.com/playbook/foundations",
+      "author": "Kahlil S. Philander, Ph.D.",
+      "author_url": "https://kahlil.co",
+      "author_affiliation": "Carson College of Business, Washington State University",
+      "author_credential_line": "Co-developer, Positive Play Scale · 289 documented engagements across 5 continents · Two NCPG Research Awards",
+      "one_sentence_provenance": "Playbook is being proposed by the person who built the measurement instrument it relies on, evaluated the accreditation program it critiques, and has implemented RG programs at the operators it is designed for."
+    }
+  },
+  "brand_pillars": [
+    {
+      "name": "Open",
+      "tagline": "No fine print",
+      "description": "Transparency about how things actually work. The house edge, the odds, the T&Cs, the stuff nobody reads. If it affects your play, we'll tell you straight.\n"
+    },
+    {
+      "name": "Social",
+      "tagline": "Worth sharing",
+      "description": "Content worth talking about. Quizzes, myth-busters, facts that make you the smartest person at the table. Share it. Challenge your friends. Start conversations.\n"
+    }
+  ],
+  "color": {
+    "palette": {
+      "primary": "#1B2838",
+      "primary_light": "#2A3F56",
+      "primary_dark": "#0F1923",
+      "secondary": "#00D4AA",
+      "secondary_light": "#33DDBB",
+      "secondary_dark": "#00A888",
+      "accent": "#FF6B35",
+      "accent_light": "#FF8A5C",
+      "accent_dark": "#E55A2B",
+      "neutral_900": "#1A1A2E",
+      "neutral_700": "#3D3D5C",
+      "neutral_500": "#6B6B8A",
+      "neutral_300": "#A8A8C0",
+      "neutral_200": "#C8C8D8",
+      "neutral_100": "#E8E8F0",
+      "neutral_50": "#F5F5FA",
+      "success": "#00C853",
+      "warning": "#FFB300",
+      "danger": "#FF3D00",
+      "info": "#2979FF",
+      "white": "#FFFFFF",
+      "black": "#111111"
+    },
+    "aliases": {
+      "navy": "primary",
+      "navyLight": "primary_light",
+      "midnight": "primary_dark",
+      "teal": "secondary",
+      "tealLight": "secondary_light",
+      "tealDark": "secondary_dark",
+      "orange": "accent",
+      "orangeLight": "accent_light",
+      "orangeDark": "accent_dark",
+      "n900": "neutral_900",
+      "n700": "neutral_700",
+      "n500": "neutral_500",
+      "n300": "neutral_300",
+      "n200": "neutral_200",
+      "n100": "neutral_100",
+      "n50": "neutral_50"
+    },
+    "semantic": {
+      "background": "neutral_50",
+      "surface": "white",
+      "text_primary": "neutral_900",
+      "text_secondary": "neutral_700",
+      "text_muted": "neutral_500",
+      "link": "primary_light",
+      "link_hover": "primary",
+      "cta_primary_bg": "accent",
+      "cta_primary_text": "primary",
+      "cta_secondary_bg": "secondary",
+      "cta_secondary_text": "primary",
+      "quiz_correct": "success",
+      "quiz_incorrect": "danger",
+      "feature_highlight": "secondary",
+      "helpline_banner": "primary",
+      "border": "neutral_500",
+      "divider": "neutral_100"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": {
+        "family": "Inter",
+        "source": "google",
+        "weights": [
+          300,
+          400,
+          600,
+          700,
+          800,
+          900
+        ],
+        "fallback": "system-ui, -apple-system, sans-serif",
+        "file": "fonts/inter-latin.woff2"
+      },
+      "body": {
+        "family": "Source Sans 3",
+        "source": "google",
+        "weights": [
+          300,
+          400,
+          600
+        ],
+        "fallback": "system-ui, sans-serif",
+        "file": "fonts/source-sans-3-latin.woff2"
+      },
+      "monospace": {
+        "family": "Source Code Pro",
+        "source": "google",
+        "weights": [
+          400,
+          500,
+          600
+        ],
+        "fallback": "monospace",
+        "file": "fonts/source-code-pro-latin.woff2"
+      }
+    },
+    "scale": {
+      "display": 3,
+      "h1": 2.5,
+      "h2": 2,
+      "h3": 1.5,
+      "h4": 1.25,
+      "body_large": 1.125,
+      "body": 1,
+      "small": 0.875,
+      "caption": 0.75
+    },
+    "line_height": {
+      "heading": 1.2,
+      "body": 1.6,
+      "tight": 1.3
+    }
+  },
+  "logo": {
+    "type": "text-based wordmark",
+    "font": "Inter",
+    "play_weight": 800,
+    "book_weight": 300,
+    "book_style": "uppercase, tight-spaced",
+    "layouts": {
+      "stacked": "Play over BOOK (square format)",
+      "horizontal": "Playbook as one word (wide format)"
+    },
+    "primary_path": "visual-identity/logo/primary/",
+    "secondary_path": "visual-identity/logo/secondary/",
+    "favicon_path": "visual-identity/logo/favicon/",
+    "helpline_badge_path": "visual-identity/logo/helpline-badge/",
+    "minimum_height": "0.25in",
+    "minimum_height_digital": "24px",
+    "clear_space": "1x logo height on all sides",
+    "file_formats": [
+      "SVG (preferred for digital)",
+      "PNG (with transparency, 2x and 3x)",
+      "EPS (for print)",
+      "PDF (for print)"
+    ],
+    "build_script": "collateral/render/build-logos.mjs"
+  },
+  "helplines": {
+    "default": {
+      "number": "1-800-XXX-XXXX",
+      "text_number": "Text XXXXX",
+      "chat_url": "https://example.com/chat",
+      "label": "Free, confidential support 24/7"
+    },
+    "united-states": {
+      "national": {
+        "number": "1-800-522-4700",
+        "alternate": "1-800-GAMBLER",
+        "new_primary": "1-800-MY-RESET",
+        "text_number": "Text 1-800-MY-RESET (1-800-697-3738) or 1-800-522-4700",
+        "chat_url": "www.ncpgambling.org/chat",
+        "website": "www.ncpgambling.org",
+        "label": "National Council on Problem Gambling",
+        "hours": "24/7"
+      },
+      "nevada": {
+        "number": "1-800-522-4700",
+        "alternate": "1-800-GAMBLER",
+        "new_primary": "1-800-MY-RESET",
+        "website": "www.ncpgambling.org",
+        "label": "NCPG National Helpline",
+        "state_resource": "Nevada Council on Problem Gambling",
+        "state_website": "www.nevadacouncil.org",
+        "notes": "No separate state helpline — uses NCPG national number"
+      },
+      "new-jersey": {
+        "number": "1-800-GAMBLER",
+        "text_number": "Text 800GAMBLER to 53342",
+        "chat_url": "www.800gambler.org/chat",
+        "website": "www.800gambler.org",
+        "label": "Council on Compulsive Gambling of New Jersey",
+        "hours": "24/7",
+        "notes": "1-800-GAMBLER is the originating NJ number, now used widely across US jurisdictions."
+      },
+      "massachusetts": {
+        "number": "1-800-327-5050",
+        "text_number": "Text GAMB to 800327",
+        "chat_url": "www.gamblinghelplinema.org",
+        "website": "www.gamblinghelplinema.org",
+        "label": "Massachusetts Problem Gambling Helpline",
+        "hours": "24/7",
+        "notes": "Operated by the Massachusetts Council on Gaming and Health (MACGH). Required in sports wagering ads with DPH-prescribed language."
+      },
+      "ohio": {
+        "number": "1-800-589-9966",
+        "alternate": "1-800-GAMBLER",
+        "text_number": "Text 4HOPE to 741741",
+        "website": "problemgambling.ohio.gov",
+        "label": "Ohio for Responsible Gambling",
+        "hours": "24/7"
+      },
+      "michigan": {
+        "number": "1-800-GAMBLER",
+        "alternate": "1-800-270-7117",
+        "website": "www.michigan.gov/mgcb/resources/responsible-gaming",
+        "label": "Michigan statewide problem gambling helpline",
+        "hours": "24/7",
+        "notes": "1-800-GAMBLER adopted statewide Feb 2024; calls routed to MDHHS. 1-800-270-7117 is MDHHS treatment line. Do NOT publish MGCB Responsible Gaming Section (888-223-3044) as a player helpline — that's an administrative contact."
+      },
+      "pennsylvania": {
+        "number": "1-800-GAMBLER",
+        "website": "responsibleplay.pa.gov",
+        "label": "PA Department of Drug and Alcohol Programs (DDAP)",
+        "hours": "24/7",
+        "notes": "Verbatim ad disclosure required: 'IF YOU OR SOMEONE YOU KNOW HAS A GAMBLING PROBLEM, HELP IS AVAILABLE, CALL 1-800-GAMBLER.' Font-size minimums per 58 Pa. Code § 501a.7."
+      },
+      "arizona": {
+        "number": "1-800-NEXT-STEP",
+        "alternate": "1-800-639-8783",
+        "website": "problemgambling.az.gov",
+        "label": "Arizona Department of Gaming Division of Problem Gambling",
+        "hours": "24/7",
+        "notes": "1-800-GAMBLER also widely accepted by ADG."
+      },
+      "california": {
+        "number": "1-800-GAMBLER",
+        "website": "www.problemgambling.ca.gov",
+        "label": "California Office of Problem Gambling (OPG)",
+        "hours": "24/7",
+        "notes": "Most California tribal compacts reference 1-800-GAMBLER. Tribal casinos may also publish tribally-operated lines."
+      }
+    },
+    "united-kingdom": {
+      "number": "0808 8020 133",
+      "website": "www.begambleaware.org",
+      "label": "GambleAware",
+      "self_exclusion": "www.gamstop.co.uk"
+    },
+    "australia": {
+      "number": "1800 858 858",
+      "website": "www.gamblinghelponline.org.au",
+      "label": "Gambling Help Online"
+    },
+    "canada": {
+      "british-columbia": {
+        "number": "1-888-795-6111",
+        "website": "www.gamblingsupportbc.ca",
+        "label": "Gambling Support BC",
+        "hours": "24/7"
+      },
+      "ontario": {
+        "number": "1-866-531-2600",
+        "website": "www.connexontario.ca",
+        "label": "ConnexOntario",
+        "hours": "24/7"
+      },
+      "alberta": {
+        "number": "1-866-332-2322",
+        "website": "albertahealthservices.ca/amh",
+        "label": "Alberta Health Services Addiction Helpline",
+        "gamesense_url": "myplaybc.com / gamesense.com (program operates through PlayAlberta)",
+        "hours": "24/7",
+        "notes": "GameSense Alberta integrated through PlayAlberta and AGLC venues. Deal Us In is the mandatory worker certification program."
+      }
+    },
+    "denmark": {
+      "number": "+45 70 22 28 25",
+      "website": "stopspillet.dk",
+      "label": "StopSpillet",
+      "self_exclusion": "ROFUS (rofus.nu) — national self-exclusion register",
+      "hours": "Mon-Thu 09:00-22:00, Fri 09:00-18:00, Sat-Sun 12:00-18:00 (CET)"
+    },
+    "malta": {
+      "number": "1777",
+      "alternate": "179",
+      "website": "rgf.org.mt",
+      "label": "Responsible Gaming Foundation (RGF) Supportline",
+      "alternate_label": "Sedqa helpline (substance and gambling)",
+      "hours": "24/7",
+      "self_exclusion": "MGA self-barring (mga.org.mt/player-hub/self-barring/)"
+    },
+    "singapore": {
+      "number": "1800-6-668-668",
+      "website": "ncpg.org.sg",
+      "label": "National Council on Problem Gambling (NCPG) Helpline",
+      "hours": "Daily 8:00–23:00 SGT",
+      "self_exclusion": "NCPG self-exclusion + casino-control family exclusion orders",
+      "notes": "NCPG main helpline is staffed 08:00–23:00 SGT daily (not 24/7). Casino entry levy applies to Singapore Citizens / PRs: S$150 per 24-hour visit or S$3,000 annual."
+    },
+    "european-union": {
+      "note": "See jurisdictions/european-union/country-specific/ for local helplines"
+    },
+    "japan": {
+      "number": "{{JP_HELPLINE_NUMBER}}",
+      "text_number": "{{JP_TEXT_NUMBER}}",
+      "chat_url": "{{JP_CHAT_URL}}",
+      "website": "{{JP_SUPPORT_WEBSITE}}",
+      "label": "{{JP_SUPPORT_LABEL}}",
+      "hours": "{{JP_SUPPORT_HOURS}}",
+      "notes": "Placeholders — fill in before production deployment. Primary candidate: Society Concerned about the Gambling Addiction (SCGA) or MHLW gambling hotline."
+    },
+    "macau": {
+      "number": "{{MO_HELPLINE_NUMBER}}",
+      "text_number": "{{MO_TEXT_NUMBER}}",
+      "chat_url": "{{MO_CHAT_URL}}",
+      "website": "{{MO_SUPPORT_WEBSITE}}",
+      "label": "{{MO_SUPPORT_LABEL}}",
+      "hours": "{{MO_SUPPORT_HOURS}}",
+      "notes": "Placeholders — fill in before production deployment. Primary candidate: IAS (Instituto de Acção Social) gambling counselling or Sheng Kung Hui Macau RG support."
+    },
+    "united-arab-emirates": {
+      "number": "{{AE_HELPLINE_NUMBER}}",
+      "text_number": "{{AE_TEXT_NUMBER}}",
+      "chat_url": "{{AE_CHAT_URL}}",
+      "website": "{{AE_SUPPORT_WEBSITE}}",
+      "label": "{{AE_SUPPORT_LABEL}}",
+      "hours": "{{AE_SUPPORT_HOURS}}",
+      "notes": "Placeholders — fill in before production deployment. Primary candidate: National Rehabilitation Center (Abu Dhabi) or jurisdictional MoHAP hotline."
+    }
+  },
+  "integration": {
+    "limits_url": "{{LIMITS_URL}}",
+    "self_exclusion_url": "{{SELF_EXCLUSION_URL}}",
+    "self_exclusion_name": "{{SELF_EXCLUSION_NAME}}",
+    "support_org_name": "{{SUPPORT_ORG_NAME}}",
+    "support_org_url": "{{SUPPORT_ORG_URL}}",
+    "self_exclusion_programs": {
+      "united-states": {
+        "name": "State self-exclusion program",
+        "url": ""
+      },
+      "united-kingdom": {
+        "name": "GamStop",
+        "url": "https://www.gamstop.co.uk"
+      },
+      "australia": {
+        "name": "BetStop",
+        "url": "https://www.betstop.gov.au"
+      },
+      "canada": {
+        "name": "Provincial self-exclusion",
+        "url": ""
+      }
+    },
+    "support_orgs": {
+      "united-states": {
+        "name": "National Council on Problem Gambling",
+        "url": "https://www.ncpgambling.org"
+      },
+      "united-kingdom": {
+        "name": "GambleAware",
+        "url": "https://www.begambleaware.org"
+      },
+      "australia": {
+        "name": "Gambling Help Online",
+        "url": "https://www.gamblinghelponline.org.au"
+      },
+      "canada": {
+        "name": "Responsible Gambling Council",
+        "url": "https://www.responsiblegambling.org"
+      }
+    }
+  },
+  "cultural_profile": {
+    "voice": "peer",
+    "framing": "individual",
+    "humor": "irreverent",
+    "directness": "blunt",
+    "comfort": "open"
+  },
+  "country_cultural_profiles": {
+    "japan": {
+      "voice": "elder",
+      "framing": "communal",
+      "humor": "understated",
+      "directness": "contextual",
+      "comfort": "reserved"
+    },
+    "macau": {
+      "voice": "authority",
+      "framing": "communal",
+      "humor": "minimal",
+      "directness": "diplomatic",
+      "comfort": "private"
+    },
+    "united-arab-emirates": {
+      "voice": "authority",
+      "framing": "communal",
+      "humor": "understated",
+      "directness": "contextual",
+      "comfort": "private"
+    }
+  },
+  "currency": {
+    "default": {
+      "symbol": "$",
+      "code": "USD",
+      "position": "before",
+      "thousands": ",",
+      "decimal": "."
+    },
+    "japan": {
+      "symbol": "¥",
+      "code": "JPY",
+      "position": "before",
+      "thousands": ",",
+      "decimal": ".",
+      "notes": "JPY has no decimal subunit in practice. Round dollar examples to integers: $1.10 → ¥110, $0.10 → ¥10, $2.20 → ¥220."
+    },
+    "macau": {
+      "symbol": "澳门币",
+      "symbol_intl": "MOP$",
+      "code": "MOP",
+      "position": "before",
+      "thousands": ",",
+      "decimal": ".",
+      "notes": "Macau pataca. In Chinese-language content, use 澳门币 (Macau currency, Simplified)\nor 澳門幣 (Traditional). MOP$ is the international banking convention used in\nEnglish-language contexts. ISO 4217 code is MOP. Exchange ~8 MOP per USD as of\nQ2 2026 — round dollar examples: $1.10 → 澳门币 9, $0.10 → 澳门币 1, $2.20 → 澳门币 18.\n"
+    },
+    "united-arab-emirates": {
+      "symbol": "د.إ",
+      "symbol_intl": "AED",
+      "code": "AED",
+      "position": "after",
+      "thousands": ",",
+      "decimal": ".",
+      "notes": "UAE dirham. In Arabic-language content, use د.إ (dirham emirati). AED is the\nISO 4217 banking code used in international/English contexts. Position is\n\"after\" because Arabic price convention writes the number followed by the\ncurrency abbreviation. Exchange ~3.67 AED per USD (pegged). Round examples:\n$1.10 → 4 د.إ, $0.10 → 0.40 د.إ, $2.20 → 8 د.إ.\n"
+    }
+  },
+  "legal": {
+    "terms": "TERMS.md",
+    "copyright_holder": "Your Company Name",
+    "minimum_gambling_age": {
+      "default": 18,
+      "united-states": 21,
+      "united-states-nevada": 21,
+      "canada-british-columbia": 19,
+      "japan": 20,
+      "macau": 21,
+      "united-arab-emirates": 21
+    },
+    "disclaimers": {
+      "age": "You must be {{MIN_AGE}}+ to gamble.",
+      "general": "Powered by Playbook (CC0)"
+    }
+  },
+  "messaging": {
+    "taglines": {
+      "open": [
+        "Here's how it actually works.",
+        "No fine print. Just facts.",
+        "The odds are public. Now you know them.",
+        "Every game has math. Here's yours."
+      ],
+      "social": [
+        "Share the facts.",
+        "Challenge your friends.",
+        "The best players know the game.",
+        "How well do you really know the odds?"
+      ]
+    },
+    "ctas": {
+      "primary": [
+        "Take the quiz",
+        "Test your game IQ",
+        "See the real odds"
+      ],
+      "features": [
+        "Set your limits",
+        "Try the bankroll planner",
+        "Check your stats"
+      ],
+      "content": [
+        "Read the breakdown",
+        "Watch the explainer",
+        "See how it works"
+      ]
+    }
+  },
+  "content_defaults": {
+    "stat_game_1": "Blackjack (basic strategy)",
+    "stat_value_1": "0.5%",
+    "stat_note_1": "Best odds in the casino",
+    "stat_game_2": "American Roulette",
+    "stat_value_2": "5.26%",
+    "stat_note_2": "Double zero = double edge",
+    "stat_game_3": "Slots (average)",
+    "stat_value_3": "2–15%",
+    "stat_note_3": "Varies by machine and casino",
+    "hero_headline": "Every game has math. Here's yours.",
+    "hero_subhead": "Know the house edge. Pick your games. Set your budget.",
+    "quiz_cta": "Think you know the odds? Scan to take the quiz",
+    "tools_headline": "Your tools. Your limits. Your call.",
+    "tools_body": "Set your deposit limit, session reminders, and activity alerts in your account settings. Takes 10 seconds.",
+    "support_headline": "Free, confidential support",
+    "support_body": "For any question about gambling. No judgment. Ever."
+  },
+  "tone": {
+    "humor": "confident-wit",
+    "formality": "conversational",
+    "voice_archetype": "playbook-voice",
+    "gambling_culture": "selective",
+    "prefer": {
+      "player": "player (not 'gambler')",
+      "informed_play": "specific behaviors — e.g. 'set a budget', 'know the odds', 'check your session' (not 'responsible gambling' or 'smart play')",
+      "tools": "tools / features (not 'interventions')",
+      "check_in": "check in (not 'self-assess')",
+      "take_a_break": "take a break (not 'self-exclude' in Tier 1)",
+      "your_limits": "your limits (not 'restrictions')"
+    },
+    "avoid_in_tier_1": [
+      "responsible gambling",
+      "problem gambler",
+      "gambling addiction",
+      "pathological",
+      "intervention",
+      "at-risk",
+      "harm",
+      "disorder"
+    ]
+  }
+};
+export function cloneDefaultBrand() {
+  return JSON.parse(JSON.stringify(DEFAULT_BRAND));
+}
