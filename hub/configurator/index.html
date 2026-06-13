@@ -216,15 +216,24 @@
     <section class="step" id="step2" role="group" aria-labelledby="step2Title">
       <div class="step-indicator">Step 2 of 7</div>
       <h2 class="step-title" id="step2Title" tabindex="-1">Color Palette</h2>
-      <p class="step-desc">Pick three brand colors. We&rsquo;ll generate the rest.</p>
+      <p class="step-desc">Not sure where to start? Tap a ready-made palette below &mdash; or set your own three colors.</p>
 
       <details class="step-explainer">
-        <summary>Why three colors?</summary>
+        <summary>New to picking colors? Read this first</summary>
         <div class="explainer-body">
-          <p>Every Playbook template is built from three roles: <strong>Primary</strong> (dark card and page backgrounds), <strong>Secondary</strong> (highlights, badges, interactive elements), and <strong>Accent</strong> (CTAs and big stat numbers). Lighter and darker shades are derived automatically.</p>
-          <p>The badges next to each picker check WCAG&nbsp;2.1 AA contrast as you type, so your collateral stays readable. Open the advanced section to fine-tune text, background, and status colors individually.</p>
+          <p>You don&rsquo;t need a design background. The quickest path: <strong>tap one of the ready-made palettes</strong> &mdash; each is professionally matched and already easy to read. Then, if you like, nudge a color to match your brand.</p>
+          <p>Under the hood every template uses three roles: <strong>Primary</strong> (dark card and page backgrounds), <strong>Secondary</strong> (highlights, badges, interactive elements), and <strong>Accent</strong> (buttons and big stat numbers). All the lighter and darker shades are generated for you.</p>
+          <p>The label next to each color tells you, in plain words, whether text will be easy to read on it &mdash; and what to change if it isn&rsquo;t. Open the advanced section only if you want to hand-tune text, background, and status colors.</p>
         </div>
       </details>
+
+      <div class="palette-presets">
+        <div class="palette-presets-head">
+          <span class="palette-presets-title">Ready-made palettes</span>
+          <span class="palette-presets-hint">Tap one to apply it everywhere. Each is matched to look good and stay easy to read &mdash; you can fine-tune afterward.</span>
+        </div>
+        <div class="palette-presets-grid" id="palettePresetsGrid" role="listbox" aria-label="Ready-made color palettes"></div>
+      </div>
 
       <div class="palette-suggestion hidden" id="paletteSuggestion">
         <div class="palette-suggestion-label">Your brand accent</div>
@@ -241,6 +250,7 @@
           <span class="contrast-badge" id="contrastPrimary" aria-live="polite"></span>
         </div>
         <div class="contrast-info">Used for headers, cards, and backgrounds</div>
+        <div class="contrast-tip hidden" id="tipPrimary" aria-live="polite"></div>
       </fieldset>
 
       <fieldset class="form-group">
@@ -251,6 +261,7 @@
           <span class="contrast-badge" id="contrastSecondary" aria-live="polite"></span>
         </div>
         <div class="contrast-info">Used for highlights, pillar badges, and emphasis text</div>
+        <div class="contrast-tip hidden" id="tipSecondary" aria-live="polite"></div>
       </fieldset>
 
       <fieldset class="form-group">
@@ -261,7 +272,7 @@
           <span class="contrast-badge" id="contrastAccent" aria-live="polite"></span>
         </div>
         <div class="contrast-info">Used for buttons, stat numbers, and call-to-action elements</div>
-        <div class="accent-dark-warning hidden" id="accentDarkWarning" aria-live="polite">&#9888; This accent color may be hard to see on dark backgrounds. Consider a brighter or more saturated shade.</div>
+        <div class="contrast-tip hidden" id="tipAccent" aria-live="polite"></div>
       </fieldset>
 
       <button type="button" class="advanced-toggle" data-target="advancedColors" aria-expanded="false">Text, background &amp; UI colors</button>
