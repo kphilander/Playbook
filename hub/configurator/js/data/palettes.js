@@ -1,8 +1,11 @@
 /* data/palettes.js — Curated, ready-to-use color palettes for people who
-   don't want to pick colors from scratch. Every palette is hand-checked to
-   pass WCAG 2.1 AA contrast: white text on the primary (>=4.5:1), and both
-   secondary and accent on the primary (>=3:1). See /tmp palette check or
-   lib in-repo validation if you add more.
+   don't want to pick colors from scratch. Each palette pairs a deep primary
+   with a secondary and accent that both read as crisp text on it: every
+   secondary and accent clears WCAG 2.1 AA at >=4.6:1 against the primary
+   (templates use the accent for stat numbers and labels on dark cards, so
+   text-grade contrast — not just 3:1 UI contrast — is what matters), and
+   white headings clear AA on every primary. Hues are hand-picked for
+   harmony; secondary/accent lightness is tuned to the contrast target.
 
    Roles match the three brand slots:
      primary   — dark card / page background
@@ -17,45 +20,45 @@ export const PALETTES = [
     primary: '#1B2838', secondary: '#00D4AA', accent: '#FF6B35',
   },
   {
-    id: 'midnight-ocean',
-    name: 'Midnight Ocean',
-    blurb: 'Deep blue with a bright teal and warm gold. Calm and trustworthy.',
-    primary: '#0F2A43', secondary: '#2DD4BF', accent: '#FBBF24',
+    id: 'harbor',
+    name: 'Harbor',
+    blurb: 'Deep ocean blue, soft aqua, and warm amber. Calm and assured.',
+    primary: '#142939', secondary: '#2AA8B3', accent: '#D7870E',
   },
   {
-    id: 'evergreen',
-    name: 'Evergreen',
-    blurb: 'Forest green with mint and amber. Natural and grounded.',
-    primary: '#14342B', secondary: '#34D399', accent: '#F59E0B',
+    id: 'pine',
+    name: 'Pine',
+    blurb: 'Forest green with mint and honey gold. Natural and grounded.',
+    primary: '#153329', secondary: '#34B48D', accent: '#CA9810',
   },
   {
-    id: 'slate-sky',
-    name: 'Slate & Sky',
-    blurb: 'Cool slate with sky blue and orange. Clean and modern.',
-    primary: '#1E293B', secondary: '#38BDF8', accent: '#FB923C',
+    id: 'indigo',
+    name: 'Indigo Dusk',
+    blurb: 'Inky indigo with a cool sky blue and warm coral. Modern and clean.',
+    primary: '#191938', secondary: '#3295DB', accent: '#ED624C',
   },
   {
-    id: 'sunset',
-    name: 'Sunset',
-    blurb: 'Plum with coral and soft yellow. Warm and friendly.',
-    primary: '#2B1B2E', secondary: '#FB7185', accent: '#FCD34D',
+    id: 'orchid',
+    name: 'Orchid',
+    blurb: 'Deep aubergine with orchid and soft gold. Elegant and premium.',
+    primary: '#311B37', secondary: '#CE72D6', accent: '#C08C13',
   },
   {
-    id: 'royal-violet',
-    name: 'Royal Violet',
-    blurb: 'Rich purple with lavender and pink. Premium and bold.',
-    primary: '#241544', secondary: '#A78BFA', accent: '#F472B6',
+    id: 'slate',
+    name: 'Slate',
+    blurb: 'Cool blue-grey with cyan and a warm clay accent. Understated.',
+    primary: '#1D2635', secondary: '#2FA3C7', accent: '#E8792E',
   },
   {
-    id: 'crimson',
-    name: 'Crimson',
-    blurb: 'Dark maroon with rose and gold. Striking and high-energy.',
-    primary: '#2A1215', secondary: '#FB7185', accent: '#FBBF24',
+    id: 'garnet',
+    name: 'Garnet',
+    blurb: 'Dark wine red with rose and champagne gold. Rich and striking.',
+    primary: '#30121A', secondary: '#E4647B', accent: '#B28812',
   },
   {
     id: 'graphite',
     name: 'Graphite',
-    blurb: 'Neutral charcoal with blue and gold. Understated and versatile.',
-    primary: '#1A1D24', secondary: '#60A5FA', accent: '#FBBF24',
+    blurb: 'Neutral charcoal with steel blue and gold. Versatile and sharp.',
+    primary: '#1D2025', secondary: '#5795DA', accent: '#B48C12',
   },
 ];
