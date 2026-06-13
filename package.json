@@ -18,7 +18,8 @@
     "generate:content-api": "node lib/generate-content-api.mjs",
     "generate:assets": "node lib/generate-asset-manifest.mjs",
     "build": "npm run generate && npm run build:logos && npm run build:icons && npm run generate:content-api && npm run generate:assets && npm run build:widgets",
-    "validate": "node lib/validate-brand.mjs"
+    "validate": "node lib/validate-brand.mjs",
+    "serve": "python3 -m http.server 8000"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"
