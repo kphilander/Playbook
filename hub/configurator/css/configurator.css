@@ -220,6 +220,22 @@ fieldset legend { padding: 0; }
 .no-split-row label { font-size: 12px; color: var(--pb-color-neutral-500, #6B6B8A); cursor: pointer; }
 .no-split-row input[type="checkbox"] { accent-color: var(--pb-color-secondary, #00D4AA); }
 
+/* === Ready-made palette presets === */
+.palette-presets { margin-bottom: 22px; }
+.palette-presets-head { margin-bottom: 12px; }
+.palette-presets-title { display: block; font-size: 13px; font-weight: 700; color: var(--pb-color-primary, #1B2838); }
+.palette-presets-hint { display: block; font-size: 12px; color: var(--pb-color-neutral-500, #6B6B8A); line-height: 1.5; margin-top: 2px; }
+.palette-presets-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.palette-card { display: flex; flex-direction: column; gap: 7px; text-align: left; padding: 12px; border-radius: 10px; border: 2px solid var(--pb-color-neutral-100, #E8E8F0); background: #fff; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s; }
+.palette-card:hover { border-color: var(--pb-color-neutral-300, #A8A8C0); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+.palette-card:focus-visible { outline: none; border-color: var(--pb-color-secondary, #00D4AA); box-shadow: 0 0 0 3px rgba(0,212,170,0.25); }
+.palette-card.selected { border-color: var(--pb-color-secondary, #00D4AA); box-shadow: 0 0 0 2px var(--pb-color-secondary, #00D4AA) inset; }
+.palette-card-swatches { display: flex; height: 28px; border-radius: 6px; overflow: hidden; }
+.palette-card-swatch { flex: 1; }
+.palette-card-name { font-size: 13px; font-weight: 700; color: var(--pb-color-primary, #1B2838); }
+.palette-card-blurb { font-size: 11px; color: var(--pb-color-neutral-500, #6B6B8A); line-height: 1.4; }
+@media (max-width: 560px) { .palette-presets-grid { grid-template-columns: 1fr; } }
+
 /* === Palette Suggestion === */
 .palette-suggestion { margin-bottom: 20px; padding: 16px; background: var(--pb-color-neutral-50, #F5F5FA); border: 1px solid var(--pb-color-neutral-100, #E8E8F0); border-radius: 10px; }
 .palette-suggestion.hidden { display: none; }
@@ -242,8 +258,8 @@ fieldset legend { padding: 0; }
 .contrast-pass { background: #c6f6d5; color: #276749; }
 .contrast-fail { background: #fed7d7; color: #9b2c2c; }
 .contrast-info { font-size: 11px; color: var(--pb-color-neutral-500, #6B6B8A); margin-top: 4px; }
-.accent-dark-warning { font-size: 11px; color: #c05621; background: #fffbeb; border: 1px solid #f6e05e; padding: 6px 10px; border-radius: 6px; margin-top: 6px; line-height: 1.4; }
-.accent-dark-warning.hidden { display: none; }
+.contrast-tip { font-size: 11px; color: #c05621; background: #fffbeb; border: 1px solid #f6e05e; padding: 6px 10px; border-radius: 6px; margin-top: 6px; line-height: 1.4; }
+.contrast-tip.hidden { display: none; }
 
 /* === Collapsible advanced sections === */
 .advanced-toggle {

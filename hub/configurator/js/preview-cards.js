@@ -2,7 +2,7 @@
    (myth-buster, tier-2 support, co-brand helpline badge). */
 
 import { appState } from './state.js';
-import { lighten, darken, hexToRgb, rgbToHsl, contrastRatio } from './color-utils.js';
+import { lighten, darken, contrastRatio } from './color-utils.js';
 import { getNameParts, updateWordmarkPreview } from './wordmark.js';
 import { getTypeScale } from './css-export.js';
 import { TYPE_SCALE_PRESETS } from './data/type-scales.js';
@@ -245,36 +245,40 @@ export function updatePreview() {
   updateContrast();
 }
 
+/* Plain-language readability check for non-designers. Each brand color gets
+   a verdict in words (not a "4.5:1" ratio) plus a concrete fix when it fails.
+   The exact ratio stays available on hover/screen-reader via the title. */
+function setReadability(badgeId, tipId, ratio, min, fixText) {
+  const badge = document.getElementById(badgeId);
+  const tip = document.getElementById(tipId);
+  const pass = ratio >= min;
+  if (badge) {
+    badge.textContent = pass ? '✓ Easy to read' : '✕ Hard to read';
+    badge.className = 'contrast-badge ' + (pass ? 'contrast-pass' : 'contrast-fail');
+    badge.title = `Contrast ${ratio.toFixed(1)}:1 — needs at least ${min}:1 to pass WCAG AA`;
+  }
+  if (tip) {
+    tip.textContent = pass ? '' : fixText;
+    tip.classList.toggle('hidden', pass);
+  }
+}
+
 export function updateContrast() {
   const primary = document.getElementById('colorPrimary').value;
   const secondary = document.getElementById('colorSecondary').value;
   const accent = document.getElementById('colorAccent').value;
 
-  const cPrimary = contrastRatio('#ffffff', primary);
-  const elPrimary = document.getElementById('contrastPrimary');
-  elPrimary.textContent = cPrimary.toFixed(1) + ':1';
-  elPrimary.className = 'contrast-badge ' + (cPrimary >= 4.5 ? 'contrast-pass' : 'contrast-fail');
+  setReadability('contrastPrimary', 'tipPrimary',
+    contrastRatio('#ffffff', primary), 4.5,
+    'White headings sit on this color. Pick a deeper, darker shade so titles stay crisp.');
 
-  const cSecondary = contrastRatio(primary, secondary);
-  const elSecondary = document.getElementById('contrastSecondary');
-  elSecondary.textContent = cSecondary.toFixed(1) + ':1';
-  elSecondary.className = 'contrast-badge ' + (cSecondary >= 3 ? 'contrast-pass' : 'contrast-fail');
+  setReadability('contrastSecondary', 'tipSecondary',
+    contrastRatio(primary, secondary), 3,
+    'This shows up on your primary background. Pick a brighter or lighter shade so badges and links stand out.');
 
-  const cAccent = contrastRatio(accent, primary);
-  const elAccent = document.getElementById('contrastAccent');
-  elAccent.textContent = cAccent.toFixed(1) + ':1';
-  elAccent.className = 'contrast-badge ' + (cAccent >= 3 ? 'contrast-pass' : 'contrast-fail');
-
-  const [ar, ag, ab] = hexToRgb(accent);
-  const [, , accentLum] = rgbToHsl(ar, ag, ab);
-  const darkWarning = document.getElementById('accentDarkWarning');
-  if (darkWarning) {
-    if (accentLum < 35 || cAccent < 2) {
-      darkWarning.classList.remove('hidden');
-    } else {
-      darkWarning.classList.add('hidden');
-    }
-  }
+  setReadability('contrastAccent', 'tipAccent',
+    contrastRatio(accent, primary), 3,
+    'Buttons and big stats use this on your primary background. Pick a brighter, more vivid shade so calls to action pop.');
 }
 
 export function updateCultureContent() {

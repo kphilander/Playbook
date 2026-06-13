@@ -6,7 +6,7 @@ import { updatePreview } from './preview-cards.js';
 import { updateSplitSlider, updateWordmarkPreview, syncSplitSliderBounds } from './wordmark.js';
 import { initLogoUpload, restoreLogoUi } from './logo.js';
 import { initFontUpload, restoreFontUi } from './fonts.js';
-import { initColorsStep, syncFooterBarUi } from './steps/colors.js';
+import { initColorsStep, syncFooterBarUi, markSelectedPreset } from './steps/colors.js';
 import { initTypographyStep, syncScalePresetUi } from './steps/typography.js';
 import { initMessagingStep, renderMessagingLists } from './steps/messaging.js';
 import { initVoiceStep, renderVoiceLists } from './steps/voice.js';
@@ -145,6 +145,7 @@ function rehydrateAll() {
   syncJurisdictionUi();
   syncScalePresetUi();
   syncFooterBarUi();
+  markSelectedPreset();
   renderMessagingLists();
   renderVoiceLists();
   syncSplitSliderBounds();
