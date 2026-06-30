@@ -94,10 +94,40 @@ function setField(id, value) {
   if (hex) hex.value = value;
 }
 
+/* Single-level undo: snapshot the fields a roll touches so the user can revert
+   the most recent roll (e.g. if they'd tweaked something first). */
+const ROLL_FIELDS = ['colorPrimary', 'colorSecondary', 'colorAccent',
+  'colorN900', 'colorN700', 'colorN500', 'colorN300', 'colorN200', 'colorN100', 'colorN50',
+  'fontHeading', 'fontBody', 'fontMono'];
+let preRoll = null;
+
+function captureFields() {
+  const fields = {};
+  for (const id of ROLL_FIELDS) {
+    const el = document.getElementById(id);
+    if (el) fields[id] = el.value;
+  }
+  const grad = document.getElementById('allowGradients');
+  return { fields, gradients: grad ? grad.checked : true, footerManual: appState.footerColorManual };
+}
+
+export function canUndoRandomBrand() { return preRoll !== null; }
+
+export function undoRandomBrand() {
+  if (!preRoll) return false;
+  for (const [id, value] of Object.entries(preRoll.fields)) setField(id, value);
+  const grad = document.getElementById('allowGradients');
+  if (grad) grad.checked = preRoll.gradients;
+  appState.footerColorManual = preRoll.footerManual;
+  preRoll = null;
+  return true;
+}
+
 /* Apply a random brand to the colour + typography controls. Voice, messaging,
    jurisdiction and the program name are left untouched — this rolls the visual
    identity only. Returns the archetype label for a confirmation note. */
 export function applyRandomBrand() {
+  preRoll = captureFields();
   const b = generateRandomBrand();
   setField('colorPrimary', b.primary);
   setField('colorSecondary', b.secondary);
