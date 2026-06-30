@@ -175,8 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initWelcomeStep({ onImported, onResume: rehydrateAll });
   initGallery();
 
-  // "Generate a random brand" — rolls a coherent archetype into the colour +
-  // type fields, then re-renders everything (same path as a _brand.yml import).
+  // "Generate a random brand" — rolls a complete brand (colours, fonts, name)
+  // into the fields, then re-renders everything (same path as a _brand.yml import).
   const undoBtns = ['randomBrandUndoWelcome', 'randomBrandUndo'];
   function setUndoVisible(show) {
     undoBtns.forEach(id => {
@@ -185,18 +185,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   function rollRandomBrand() {
-    const label = applyRandomBrand();
+    const name = applyRandomBrand();
+    updateSplitSlider();   // re-bound + auto-split the new program name
     rehydrateAll();
     setUndoVisible(true);
     const note = document.getElementById('randomBrandNote');
     if (note) {
       note.style.display = '';
-      note.innerHTML = `Applied a <strong>${label}</strong> style — it’s live in the preview. ` +
-        'Roll again for a different one, or tweak the colours and fonts from here.';
+      note.innerHTML = `Rolled <strong>${name}</strong> — live in the preview. ` +
+        'Roll again for a different look, or tweak the colours, fonts and name from here.';
     }
   }
   function undoRoll() {
     if (!undoRandomBrand()) return;
+    updateWordmarkPreview();   // restore the wordmark for the reverted name/split
     rehydrateAll();
     setUndoVisible(false);
     const note = document.getElementById('randomBrandNote');
