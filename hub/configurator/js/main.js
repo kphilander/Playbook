@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const note = document.getElementById('randomBrandNote');
     if (note) {
       note.style.display = '';
-      note.innerHTML = `✨ Applied a <strong>${label}</strong> style — it’s live in the preview. ` +
+      note.innerHTML = `Applied a <strong>${label}</strong> style — it’s live in the preview. ` +
         'Roll again for a different one, or tweak the colours and fonts from here.';
     }
   }
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     rehydrateAll();
     setUndoVisible(false);
     const note = document.getElementById('randomBrandNote');
-    if (note) { note.style.display = ''; note.innerHTML = '↩ Reverted to your previous look.'; }
+    if (note) { note.style.display = ''; note.innerHTML = 'Reverted to your previous look.'; }
   }
   document.getElementById('randomBrandWelcome')?.addEventListener('click', rollRandomBrand);
   document.getElementById('randomBrandReroll')?.addEventListener('click', rollRandomBrand);
