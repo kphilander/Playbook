@@ -14,6 +14,7 @@ import { initJurisdictionStep, syncJurisdictionUi } from './steps/jurisdiction.j
 import { initReviewStep, renderValidation } from './steps/review.js';
 import { initWelcomeStep } from './steps/welcome.js';
 import { initGallery, scheduleGalleryRefresh, refreshGalleryNow } from './preview-gallery.js';
+import { applyRandomBrand } from './random-brand.js';
 
 const STEPS = [
   { id: 'step0', label: 'Welcome' },
@@ -173,6 +174,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initFontUpload(onBrandChange);
   initWelcomeStep({ onImported, onResume: rehydrateAll });
   initGallery();
+
+  // "Generate a random brand" — rolls a coherent archetype into the colour +
+  // type fields, then re-renders everything (same path as a _brand.yml import).
+  function rollRandomBrand() {
+    const label = applyRandomBrand();
+    rehydrateAll();
+    const note = document.getElementById('randomBrandNote');
+    if (note) {
+      note.style.display = '';
+      note.innerHTML = `✨ Applied a <strong>${label}</strong> style — it’s live in the preview. ` +
+        'Roll again for a different one, or tweak the colours and fonts from here.';
+    }
+  }
+  document.getElementById('randomBrandWelcome')?.addEventListener('click', rollRandomBrand);
+  document.getElementById('randomBrandReroll')?.addEventListener('click', rollRandomBrand);
 
   // Wordmark split events
   const nameInput = document.getElementById('programName');

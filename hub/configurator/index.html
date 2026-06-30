@@ -58,6 +58,15 @@
       <h2 class="step-title" id="step0Title" tabindex="-1">Build your brand&rsquo;s Playbook</h2>
       <p class="step-desc">Playbook is an open-source brand system for gambling entertainment literacy — 80+ ready-made templates, messages, and tools. This configurator white-labels all of it for your brand in about ten minutes. No code required.</p>
 
+      <div class="random-cta">
+        <div class="random-cta-body">
+          <strong>Not sure where to start? See what&rsquo;s possible.</strong>
+          <span>Generate a complete, coherent brand &mdash; colors, fonts, and gradient chosen to work together and checked for contrast. Roll again to see how different the results can be, then keep one and tweak from there.</span>
+        </div>
+        <button type="button" class="btn-random" id="randomBrandWelcome"><span aria-hidden="true">&#127922;</span> Generate a random brand</button>
+        <p class="random-note" id="randomBrandNote" style="display:none;" aria-live="polite"></p>
+      </div>
+
       <div class="resume-banner" id="resumeBanner" style="display:none;" role="status">
         <span><strong>Welcome back.</strong> You have unsaved work from <span id="resumeBannerWhen"></span>.</span>
         <span class="resume-banner-actions">
@@ -217,6 +226,8 @@
       <div class="step-indicator">Step 2 of 7</div>
       <h2 class="step-title" id="step2Title" tabindex="-1">Color Palette</h2>
       <p class="step-desc">Pick three brand colors. We&rsquo;ll generate the rest.</p>
+
+      <button type="button" class="btn-random btn-random-sm" id="randomBrandReroll"><span aria-hidden="true">&#127922;</span> Surprise me &mdash; roll a random brand</button>
 
       <details class="step-explainer">
         <summary>Why three colors?</summary>
