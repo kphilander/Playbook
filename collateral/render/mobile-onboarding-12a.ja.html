@@ -16,7 +16,7 @@
     height: 812px;
     background: var(--pb-color-primary);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     display: flex;
     flex-direction: column;
     position: relative;
@@ -41,7 +41,7 @@
     font-size: calc(28px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -66,14 +66,14 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(34px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.4;
     margin-bottom: 8px;
   }
   .subhead {
     font-family: var(--pb-font-body);
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
     margin-bottom: 36px;
   }
@@ -99,7 +99,7 @@
     min-width: 36px;
     border-radius: 50%;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(17px * var(--pb-template-text-scale, 1));
@@ -115,13 +115,13 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 4px;
   }
   .feature-desc {
     font-family: var(--pb-font-body);
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
   }
 
@@ -131,7 +131,7 @@
     width: 100%;
     padding: 16px;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(17px * var(--pb-template-text-scale, 1));
@@ -153,7 +153,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     display: block;
     margin-bottom: 4px;
   }

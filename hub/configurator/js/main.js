@@ -1,7 +1,7 @@
 /* main.js — Entry point: wires the wizard shell, navigation, autosave,
    and all step modules together. */
 
-import { appState, scheduleSave } from './state.js';
+import { appState, scheduleSave, loadSaved } from './state.js';
 import { updatePreview } from './preview-cards.js';
 import { updateSplitSlider, updateWordmarkPreview, syncSplitSliderBounds } from './wordmark.js';
 import { initLogoUpload, restoreLogoUi } from './logo.js';
@@ -14,7 +14,9 @@ import { initJurisdictionStep, syncJurisdictionUi } from './steps/jurisdiction.j
 import { initReviewStep, renderValidation } from './steps/review.js';
 import { initWelcomeStep } from './steps/welcome.js';
 import { initGallery, scheduleGalleryRefresh, refreshGalleryNow } from './preview-gallery.js';
-import { applyRandomBrand, undoRandomBrand } from './random-brand.js';
+import { applyRandomBrand, undoRandomBrand, applyIncomingBrand, applyBrandObject } from './random-brand.js';
+import { initReel } from './reel.js';
+import { initRgPreview, refreshRgPreview, remountRgPreview } from './rg-preview.js';
 
 const STEPS = [
   { id: 'step0', label: 'Welcome' },
@@ -33,6 +35,7 @@ let currentStep = 0;
    callback handed to all step modules. */
 function onBrandChange() {
   updatePreview();
+  refreshRgPreview();
   scheduleGalleryRefresh();
   scheduleSave();
   if (currentStep === 7) renderValidation();
@@ -111,6 +114,7 @@ function wirePreviewTabs() {
         p.classList.toggle('active', p.id === tab.getAttribute('aria-controls'));
       });
       if (tab.getAttribute('aria-controls') === 'previewPaneGallery') refreshGalleryNow();
+      else if (tab.getAttribute('aria-controls') === 'previewPaneLive') remountRgPreview();
     });
   });
   document.getElementById('previewPanelTabs').addEventListener('keydown', (e) => {
@@ -185,16 +189,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   function rollRandomBrand() {
-    const name = applyRandomBrand();
+    applyRandomBrand();
     updateSplitSlider();   // re-bound + auto-split the new program name
     rehydrateAll();
     setUndoVisible(true);
-    const note = document.getElementById('randomBrandNote');
-    if (note) {
-      note.style.display = '';
-      note.innerHTML = `Rolled <strong>${name}</strong> — live in the preview. ` +
-        'Roll again for a different look, or tweak the colours, fonts and name from here.';
-    }
   }
   function undoRoll() {
     if (!undoRandomBrand()) return;
@@ -225,4 +223,29 @@ document.addEventListener('DOMContentLoaded', () => {
   goToStep(0);
   updateSplitSlider();
   updatePreview();
+  initRgPreview();
+
+  // Brand handed off from a standalone reel → apply it and drop into the editor.
+  const incoming = applyIncomingBrand();
+  if (incoming) {
+    updateSplitSlider();
+    rehydrateAll();
+    goToStep(2);
+  } else {
+    // Otherwise open the in-app showcase reel on a fresh visit (no saved work).
+    const reelEl = document.getElementById('brandReel');
+    if (reelEl && !loadSaved()) {
+      const reel = initReel(reelEl, {
+        onPick: (brand) => {
+          applyBrandObject(brand);
+          updateSplitSlider();
+          rehydrateAll();
+          goToStep(2);
+          reel.close();
+        },
+        onClose: () => reel.close(),
+      });
+      reel.open();
+    }
+  }
 });

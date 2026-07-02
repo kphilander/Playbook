@@ -16,7 +16,7 @@
     min-height: 1000px;
     background: var(--pb-color-white);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     position: relative;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
   .logo-play {
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .logo-book {
     font-weight: 300;
@@ -72,7 +72,7 @@
     justify-content: center;
     font-family: var(--pb-font-body);
     font-size: calc(12px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
   }
 
   /* Content area */
@@ -88,7 +88,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(34px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 8px;
     line-height: 1.4;
   }
@@ -127,7 +127,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .channel-icon svg {
     width: 22px;
@@ -140,18 +140,18 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(19px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 4px;
   }
   .channel-detail {
     font-family: var(--pb-font-mono);
     font-size: calc(24px * var(--pb-template-text-scale, 1));
     font-weight: 600;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     letter-spacing: 0.01em;
   }
   .channel-arrow {
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
   }
   .channel-arrow svg {
     width: 16px;
@@ -204,7 +204,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 6px;
     line-height: 1.5;
   }
@@ -232,7 +232,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     letter-spacing: 0.01em;
   }
   .footer-channels {

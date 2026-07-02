@@ -15,7 +15,7 @@
     width: 420px;
     height: 812px;
     background: var(--pb-color-primary);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-family: var(--pb-font-body);
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@
     font-size: calc(24px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -60,14 +60,14 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(30px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.4;
     margin-bottom: 12px;
   }
   .body-text {
     font-family: var(--pb-font-body);
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
     margin-bottom: 32px;
   }
@@ -84,13 +84,13 @@
     align-items: center;
     gap: 14px;
     padding: 16px 20px;
-    border: 1.5px solid rgba(255,255,255,0.1);
+    border: 1.5px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 10%, transparent);
     border-radius: 12px;
     cursor: pointer;
     transition: border-color 0.15s, background 0.15s;
   }
   .limit-option:hover {
-    border-color: rgba(255,255,255,0.25);
+    border-color: color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
   }
   .limit-option.selected {
     border-color: var(--pb-color-secondary);
@@ -101,7 +101,7 @@
     height: 22px;
     min-width: 22px;
     border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 30%, transparent);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +122,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
 
   /* CTA */
@@ -131,7 +131,7 @@
     width: 100%;
     padding: 16px;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(17px * var(--pb-template-text-scale, 1));
@@ -148,14 +148,14 @@
     font-family: var(--pb-font-heading);
     font-size: calc(16px * var(--pb-template-text-scale, 1));
     font-weight: 600;
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     text-decoration: none;
     cursor: pointer;
     display: block;
     padding-bottom: 8px;
   }
   .skip-link:hover {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
 
   /* Footer */
@@ -167,7 +167,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">

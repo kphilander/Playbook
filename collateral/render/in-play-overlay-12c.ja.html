@@ -16,7 +16,7 @@
     height: 280px;
     background: var(--pb-color-primary);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     display: flex;
     flex-direction: column;
     position: relative;
@@ -48,7 +48,7 @@
     font-size: calc(16px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -63,7 +63,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(21px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.4;
   }
 
@@ -72,7 +72,7 @@
     font-family: var(--pb-font-mono);
     font-size: calc(16px * var(--pb-template-text-scale, 1));
     font-weight: 500;
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-bottom: 20px;
     line-height: 1.5;
   }
@@ -97,11 +97,11 @@
   .btn-outline {
     background: transparent;
     border: 1.5px solid var(--pb-color-white);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
   .btn-primary {
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
 
   /* Footer */
@@ -113,7 +113,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">

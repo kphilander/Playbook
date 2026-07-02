@@ -32,8 +32,8 @@
     z-index: 1;
   }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(34px * var(--pb-template-text-scale, 1)); }
-  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
 
   .sign-content {
     flex: 1;
@@ -48,21 +48,21 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(58px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.5;
     margin-bottom: 30px;
   }
   .sign-body {
     font-size: calc(30px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.8;
     margin-bottom: 44px;
     max-width: 600px;
   }
 
   .tool-highlight {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: color-mix(in srgb, var(--pb-surface-ink, #fff) 4%, transparent);
+    border: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 8%, transparent);
     border-radius: 16px;
     padding: 32px 36px;
     margin-bottom: 32px;
@@ -79,13 +79,13 @@
     font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     font-weight: 800;
     font-size: calc(56px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.2;
     margin-bottom: 14px;
   }
   .tool-highlight-body {
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
   }
 
@@ -113,7 +113,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.5;
   }
 
@@ -127,13 +127,13 @@
     font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 8px;
     line-height: 1.5;
   }
   .footer-legal {
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
   }
 </style>

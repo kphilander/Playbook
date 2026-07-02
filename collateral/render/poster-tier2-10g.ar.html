@@ -16,7 +16,7 @@
     height: 2400px;
     background: var(--pb-color-white);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     position: relative;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@
     font-family: var(--pb-font-heading);
     font-size: calc(64px * var(--pb-template-text-scale, 1));
   }
-  .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-color-primary); }
+  .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-brand-ink, var(--pb-color-primary)); }
   .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-secondary); }
 
   .poster-body {
@@ -55,7 +55,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(156px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     line-height: 1.5;
     margin-bottom: 36px;
   }
@@ -84,7 +84,7 @@
     line-height: 1.5;
   }
   .helpline-channels strong {
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-weight: 700;
   }
 
@@ -106,14 +106,14 @@
     font-family: var(--pb-font-mono);
     font-size: calc(28px * var(--pb-template-text-scale, 1));
     font-weight: 600;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .qr-label { text-align: start; }
   .qr-label-main {
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(42px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 10px;
     line-height: 1.5;
   }
@@ -140,7 +140,7 @@
     justify-content: center;
     font-family: var(--pb-font-body);
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
   }
   .footer-legal {
     font-size: calc(26px * var(--pb-template-text-scale, 1));

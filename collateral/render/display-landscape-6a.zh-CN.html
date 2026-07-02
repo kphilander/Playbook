@@ -36,7 +36,7 @@
     .screen-logo {
       font-family: var(--pb-font-heading);
       font-size: calc(48px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
     }
     .screen-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
     .screen-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
@@ -44,12 +44,12 @@
     .co-brand-divider { width: 1px; height: 36px; background: var(--pb-color-neutral-300); }
     .operator-placeholder {
       width: 160px; height: 60px;
-      border: 2px dashed rgba(255,255,255,0.25);
+      border: 2px dashed color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
       border-radius: 8px;
       display: flex; align-items: center; justify-content: center;
       font-family: var(--pb-font-body);
       font-size: calc(16px * var(--pb-template-text-scale, 1));
-      color: rgba(255,255,255,0.25);
+      color: color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
     }
     .screen-body {
       flex: 1;
@@ -68,7 +68,7 @@
       font-family: var(--pb-font-heading);
       font-size: calc(28px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       background: var(--pb-color-secondary);
       padding: 12px 28px;
       border-radius: 100px;
@@ -79,7 +79,7 @@
       font-size: calc(104px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       line-height: 1.2;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       margin-bottom: 28px;
       max-width: 1100px;
     }
@@ -89,7 +89,7 @@
       font-family: var(--pb-font-body);
       font-size: calc(34px * var(--pb-template-text-scale, 1));
       font-weight: 600;
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
       margin-bottom: 10px;
     }
     .stat-pct {
@@ -100,7 +100,7 @@
       letter-spacing: -0.03em;
     }
     .stat-pct.teal { color: var(--pb-color-secondary); }
-    .stat-pct.white { color: var(--pb-color-white); }
+    .stat-pct.white { color: var(--pb-surface-ink, var(--pb-color-white)); }
     .stat-pct.orange { color: var(--pb-color-accent); }
     .stat-label {
       font-family: var(--pb-font-body);
@@ -124,14 +124,14 @@
       justify-content: center;
       font-family: var(--pb-font-mono);
       font-size: calc(24px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       margin-bottom: 16px;
     }
     .qr-label {
       font-family: var(--pb-font-heading);
       font-size: calc(30px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       text-align: center;
       line-height: 1.5;
     }
@@ -148,7 +148,7 @@
       font-family: var(--pb-font-mono);
       font-size: calc(30px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
     }
     .legal-strip { padding: 14px 72px; text-align: center; position: relative; z-index: 1; }
     .legal-text {

@@ -16,7 +16,7 @@
     min-height: 740px;
     background: var(--pb-color-white);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     display: flex;
     flex-direction: column;
   }
@@ -60,7 +60,7 @@
   .step-label {
     font-family: var(--pb-font-body);
     font-size: calc(14px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-left: 8px;
   }
 
@@ -76,7 +76,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     line-height: 1.4;
     margin-bottom: 8px;
   }
@@ -134,7 +134,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(19px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
 
   /* CTA */
@@ -143,7 +143,7 @@
     width: 100%;
     padding: 14px;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(19px * var(--pb-template-text-scale, 1));

@@ -77,6 +77,50 @@ export function darken(hex, amount) {
   );
 }
 
+export function mix(hexA, hexB, t) {
+  const [r1, g1, b1] = hexToRgb(hexA);
+  const [r2, g2, b2] = hexToRgb(hexB);
+  return rgbToHex(r1 + (r2 - r1) * t, g1 + (g2 - g1) * t, b1 + (b2 - b1) * t);
+}
+
+export function rgba(hex, a) {
+  const [r, g, b] = hexToRgb(hex);
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+}
+
+/* Surface-relative "polish" tokens. Given a surface color, pick the ink that
+   reads on it (better of white / near-black by WCAG contrast), derive a muted
+   ink, and a hairline texture tint that flips white-on-dark / dark-on-light.
+   Lets the gradient + grid + ink card treatment survive any brand palette
+   instead of assuming a dark surface. textureLine is the gated "sheen"; the
+   track hairlines are plain UI lines and stay on regardless. */
+export function surfaceTokens(surface, { grid = true } = {}) {
+  const DARK = '#15151F';
+  const ink = contrastRatio('#FFFFFF', surface) >= contrastRatio(DARK, surface) ? '#FFFFFF' : DARK;
+  const onLight = ink !== '#FFFFFF';
+  return {
+    ink,
+    inkMuted: mix(ink, surface, 0.34),
+    textureLine: grid ? rgba(ink, onLight ? 0.06 : 0.03) : 'transparent',
+    track: rgba(ink, 0.06),
+    trackBorder: rgba(ink, 0.11),
+  };
+}
+
+/* Nudge a color until it clears a minimum contrast on a surface — darkens on a
+   light surface, lightens on a dark one. Keeps brand-colored wordmark lettering
+   (e.g. the "book" half of the logo) legible on light card surfaces without
+   flattening it to plain ink. */
+export function readableOn(color, surface, min = 4.5) {
+  const [r, g, b] = hexToRgb(surface);
+  const surfaceLight = luminance(r, g, b) > 0.35;
+  let c = color;
+  for (let i = 0; i < 24 && contrastRatio(c, surface) < min; i++) {
+    c = surfaceLight ? darken(c, 0.1) : lighten(c, 0.1);
+  }
+  return c;
+}
+
 /* Six-stop neutral scale derived from a single dark base color.
    Hue is preserved; saturation is clamped lower at lighter stops. */
 export function generateNeutrals(tintHex) {

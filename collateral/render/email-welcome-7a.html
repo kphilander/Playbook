@@ -31,7 +31,7 @@
     display: inline-block;
   }
   .hero-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -45,13 +45,13 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(32px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 12px;
     line-height: 1.2;
   }
   .hero p {
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.6;
     max-width: 480px;
     margin: 0 auto;
@@ -107,7 +107,7 @@
   .cta-button {
     display: inline-block;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
@@ -125,7 +125,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(48px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 8px;
   }
   .stat-number .teal { color: var(--pb-color-secondary); }
@@ -144,7 +144,7 @@
   }
   .footer-support {
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 600;
     margin-bottom: 12px;
   }
@@ -169,7 +169,7 @@
     display: inline-block;
   }
   .footer-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -185,7 +185,7 @@
     margin-top: 16px;
   }
   .footer-unsub a {
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     text-decoration: underline;
   }
 </style>

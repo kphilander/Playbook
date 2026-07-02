@@ -38,7 +38,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(40px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 30px;
     margin-top: 32px;
     line-height: 1.5;
@@ -58,7 +58,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 10px;
     line-height: 1.5;
   }
@@ -72,8 +72,8 @@
     font-size: calc(22px * var(--pb-template-text-scale, 1));
     margin-bottom: 8px;
   }
-  .panel-logo .logo-play { color: var(--pb-color-primary); font-weight: 800; letter-spacing: -0.02em; }
-  .panel-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .panel-logo .logo-play { color: var(--pb-brand-ink, var(--pb-color-primary)); font-weight: 800; letter-spacing: -0.02em; }
+  .panel-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
 
   .panel-odds {
     background: var(--pb-color-neutral-50);
@@ -115,7 +115,7 @@
     font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     font-weight: 800;
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     text-align: end;
   }
   .callout {
@@ -159,7 +159,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .tool-num svg { width: 18px; height: 18px; }
   .tool-item strong {
@@ -186,7 +186,7 @@
     border-radius: 10px;
   }
   .panel-cta strong {
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
   }
 </style>

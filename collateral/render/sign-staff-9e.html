@@ -41,8 +41,8 @@
     margin-bottom: 24px;
   }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(34px * var(--pb-template-text-scale, 1)); }
-  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .internal-badge {
     font-family: var(--pb-font-heading);
     font-weight: 700;
@@ -58,7 +58,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(56px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.1;
     letter-spacing: -0.02em;
   }
@@ -93,7 +93,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     display: block;
     margin-bottom: 8px;
     line-height: 1.25;
@@ -114,7 +114,7 @@
     background: var(--pb-color-neutral-50);
     padding: 3px 8px;
     border-radius: 4px;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
 
   .staff-footer {

@@ -266,3 +266,82 @@
 @media (prefers-reduced-motion: reduce) {
   .gallery-skeleton { animation: none; }
 }
+
+/* ============================================================
+   Template gallery — dark "showcase" styling
+   Mirrors the standalone polished-card viewer: each template floats
+   as a framed, shadowed thumbnail on a dark stage so the brand pops.
+   Everything is scoped to #previewPaneGallery, so the Live preview
+   pane and the rest of the configurator stay light.
+   ============================================================ */
+#previewPaneGallery {
+  background: #0e1016;
+  border-radius: 14px;
+  padding: 18px 18px 26px;
+  margin-top: 2px;
+}
+#previewPaneGallery .contrast-info { color: #a6abbb; }
+
+#previewPaneGallery .gallery-filters { margin-bottom: 14px; }
+#previewPaneGallery .gallery-effects {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 18px;
+  font-family: var(--pb-font-heading, 'Inter', sans-serif);
+}
+#previewPaneGallery .gallery-effects-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #8a90a3;
+}
+#previewPaneGallery .gallery-effect-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 600; color: #d5d8e2; cursor: pointer; user-select: none;
+}
+#previewPaneGallery .gallery-effect-toggle input {
+  accent-color: var(--pb-color-secondary, #00D4AA); width: 15px; height: 15px; cursor: pointer;
+}
+#previewPaneGallery .gallery-pill {
+  border-color: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.05);
+  color: #d5d8e2;
+}
+#previewPaneGallery .gallery-pill:hover { background: rgba(255,255,255,0.12); }
+#previewPaneGallery .gallery-pill.active {
+  background: var(--pb-color-secondary, #00D4AA);
+  color: #0e1016;
+  border-color: var(--pb-color-secondary, #00D4AA);
+}
+
+#previewPaneGallery .gallery-grid { gap: 22px; }
+#previewPaneGallery .gallery-card {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+#previewPaneGallery .gallery-thumb-btn { border-radius: 12px; }
+#previewPaneGallery .gallery-thumb {
+  background: #14161d;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+#previewPaneGallery .gallery-thumb-btn:hover .gallery-thumb {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(0,0,0,0.6);
+}
+#previewPaneGallery .gallery-skeleton {
+  background: linear-gradient(100deg, #14161d 40%, #1e212b 50%, #14161d 60%);
+  background-size: 200% 100%;
+}
+#previewPaneGallery .gallery-error { color: #8a90a3; }
+#previewPaneGallery .gallery-meta { padding: 10px 2px 2px; }
+#previewPaneGallery .gallery-label { color: #eceef4; }
+#previewPaneGallery .gallery-dims { color: #71778a; }
+
+/* Large-preview modal, dark to match the showcase */
+.gallery-modal { background: #14161d; }
+.gallery-modal-head { border-bottom-color: rgba(255,255,255,0.08); }
+.gallery-modal-head h3 { color: #eceef4; }
+.gallery-modal-actions button {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.14);
+  color: #d5d8e2;
+}
+.gallery-modal-actions button:hover { border-color: var(--pb-color-secondary, #00D4AA); color: var(--pb-color-secondary, #00D4AA); }

@@ -28,7 +28,7 @@
   /* Panel 6 — Support Resources (Back right) */
   .panel-support {
     background: var(--pb-color-primary);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
   .panel-support::before {
     content: '';
@@ -41,14 +41,14 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(36px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-top: 24px;
     margin-bottom: 16px;
     line-height: 1.2;
   }
   .panel-support .body {
     font-size: calc(20px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.6;
     margin-bottom: 36px;
   }
@@ -62,7 +62,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     text-transform: uppercase;
     letter-spacing: 0.06em;
     width: 72px;
@@ -86,7 +86,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.25;
     letter-spacing: -0.01em;
   }
@@ -94,13 +94,13 @@
   /* Panel 5 — Quiz Hook (Back center) */
   .panel-quiz {
     background: var(--pb-color-primary);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.08);
+    border-left: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 8%, transparent);
   }
   .quiz-badge {
     display: inline-block;
@@ -110,7 +110,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     padding: 6px 20px;
     border-radius: 100px;
     margin-bottom: 24px;
@@ -121,7 +121,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(36px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 20px;
     line-height: 1.2;
     position: relative;
@@ -129,7 +129,7 @@
   }
   .quiz-body {
     font-size: calc(20px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.6;
     max-width: 540px;
     margin-bottom: 28px;
@@ -140,9 +140,9 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(20px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    background: color-mix(in srgb, var(--pb-surface-ink, #fff) 6%, transparent);
+    border: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 8%, transparent);
     border-radius: 12px;
     padding: 22px 26px;
     margin-bottom: 32px;
@@ -176,13 +176,13 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(20px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     text-align: left;
     line-height: 1.4;
   }
   .qr-label strong {
     display: block;
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 700;
     margin-bottom: 4px;
   }
@@ -190,13 +190,13 @@
   /* Panel 1 — Cover (Front right) */
   .panel-cover {
     background: var(--pb-color-primary);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-left: 1px solid rgba(255,255,255,0.08);
+    border-left: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 8%, transparent);
   }
   .panel-cover::before {
     content: '';
@@ -212,13 +212,13 @@
     position: relative;
     z-index: 1;
   }
-  .cover-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .cover-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .cover-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .cover-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .cover-heading {
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(36px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 16px;
     line-height: 1.2;
     position: relative;
@@ -226,7 +226,7 @@
   }
   .cover-sub {
     font-size: calc(20px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-bottom: 48px;
     position: relative;
     z-index: 1;
@@ -234,7 +234,7 @@
   .cover-operator {
     width: 180px;
     height: 52px;
-    border: 2px dashed rgba(255,255,255,0.2);
+    border: 2px dashed color-mix(in srgb, var(--pb-surface-ink, #fff) 20%, transparent);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -260,7 +260,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.25;
     letter-spacing: -0.01em;
   }

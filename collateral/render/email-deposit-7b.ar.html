@@ -26,13 +26,13 @@
     margin-bottom: 32px;
     display: inline-block;
   }
-  .hero-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .hero-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .hero h1 {
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(30px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 22px;
     line-height: 1.5;
   }
@@ -46,7 +46,7 @@
   }
   .deposit-date {
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
   }
   .section-white { padding: 40px 56px; background: var(--pb-color-white); }
@@ -83,7 +83,7 @@
     font-family: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     font-weight: 800;
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .budget-stat .value.teal { color: var(--pb-color-secondary); }
   .budget-stat .value.orange { color: var(--pb-color-accent); }
@@ -115,7 +115,7 @@
   .cta-button {
     display: inline-block;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
@@ -158,7 +158,7 @@
     padding: 36px 56px;
     text-align: center;
   }
-  .footer-support { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); font-weight: 600; margin-bottom: 12px; line-height: 1.7; }
+  .footer-support { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 600; margin-bottom: 12px; line-height: 1.7; }
   .footer-channels {
     font-family: var(--pb-font-mono);
     font-size: calc(18px * var(--pb-template-text-scale, 1));
@@ -169,8 +169,8 @@
   }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.7; margin-bottom: 12px; }
   .footer-logo { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; }
-  .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   <style>

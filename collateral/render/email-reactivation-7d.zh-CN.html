@@ -21,10 +21,10 @@
     text-align: center;
   }
   .hero-logo { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); margin-bottom: 32px; display: inline-block; }
-  .hero-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .hero-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .hero h1 { font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(30px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); margin-bottom: 12px; line-height: 1.5; }
-  .hero p { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); line-height: 1.7; }
+  .hero-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .hero-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .hero h1 { font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(30px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 12px; line-height: 1.5; }
+  .hero p { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); line-height: 1.7; }
   .section-white { padding: 40px 56px; background: var(--pb-color-white); }
   .section-gray { padding: 40px 56px; background: var(--pb-color-neutral-50); }
   .section-heading { font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(22px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-900); margin-bottom: 24px; line-height: 1.5; }
@@ -59,7 +59,7 @@
   .cta-button {
     display: inline-block;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
@@ -91,13 +91,13 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(24px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 12px;
     line-height: 1.5;
   }
   .support-box p {
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
     margin-bottom: 20px;
   }
@@ -110,7 +110,7 @@
   }
   .support-box .channels {
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.6;
   }
   .article-promo {
@@ -127,7 +127,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(14px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
   .article-promo-title {
     font-family: var(--pb-font-heading);
@@ -143,12 +143,12 @@
     padding: 36px 56px;
     text-align: center;
   }
-  .footer-support { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-color-white); font-weight: 600; margin-bottom: 10px; line-height: 1.6; }
+  .footer-support { font-size: calc(17px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 600; margin-bottom: 10px; line-height: 1.6; }
   .footer-channels { font-family: var(--pb-font-mono); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; line-height: 1.8; }
   .footer-legal { font-size: calc(14px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.7; margin-bottom: 12px; }
   .footer-logo { font-family: var(--pb-font-heading); font-size: calc(15px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; }
-  .footer-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .footer-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .footer-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   <style>

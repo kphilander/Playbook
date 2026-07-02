@@ -35,15 +35,15 @@
     z-index: 1;
   }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(40px * var(--pb-template-text-scale, 1)); }
-  .card-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .card-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .card-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .card-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .co-brand { display: flex; align-items: center; gap: 20px; }
   .co-brand-divider { width: 1px; height: 40px; background: var(--pb-color-neutral-300); }
   .operator-placeholder {
     font-family: var(--pb-font-heading);
     font-size: calc(20px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
-    border: 2px dashed rgba(255,255,255,0.15);
+    border: 2px dashed color-mix(in srgb, var(--pb-surface-ink, #fff) 15%, transparent);
     border-radius: 6px;
     padding: 12px 24px;
   }
@@ -65,7 +65,7 @@
     font-weight: 700;
     font-size: calc(28px * var(--pb-template-text-scale, 1));
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     padding: 12px 28px;
     border-radius: 100px;
     margin-bottom: 32px;
@@ -75,13 +75,13 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(104px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.2;
     margin-bottom: 24px;
   }
   .display-sub {
     font-size: calc(38px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
     margin-bottom: 48px;
     max-width: 900px;
@@ -93,8 +93,8 @@
   }
   .odds-card {
     flex: 1;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: color-mix(in srgb, var(--pb-surface-ink, #fff) 4%, transparent);
+    border: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 8%, transparent);
     border-radius: 20px;
     padding: 32px;
     text-align: center;
@@ -103,7 +103,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 600;
     font-size: calc(34px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-bottom: 14px;
   }
   .odds-edge {
@@ -112,11 +112,11 @@
     font-size: calc(68px * var(--pb-template-text-scale, 1));
   }
   .odds-edge.teal { color: var(--pb-color-secondary); }
-  .odds-edge.white { color: var(--pb-color-white); }
+  .odds-edge.white { color: var(--pb-surface-ink, var(--pb-color-white)); }
   .odds-edge.orange { color: var(--pb-color-accent); }
   .display-body {
     font-size: calc(38px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
     margin-bottom: 40px;
   }
@@ -143,13 +143,13 @@
     display: block;
     font-weight: 700;
     font-size: calc(38px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 10px;
     line-height: 1.5;
   }
   .qr-text span {
     font-size: calc(30px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.6;
   }
   .display-footer {
@@ -163,7 +163,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: calc(30px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
