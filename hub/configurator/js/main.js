@@ -14,6 +14,7 @@ import { initJurisdictionStep, syncJurisdictionUi } from './steps/jurisdiction.j
 import { initReviewStep, renderValidation } from './steps/review.js';
 import { initWelcomeStep } from './steps/welcome.js';
 import { initGallery, scheduleGalleryRefresh, refreshGalleryNow } from './preview-gallery.js';
+import { applyRandomBrand, undoRandomBrand } from './random-brand.js';
 
 const STEPS = [
   { id: 'step0', label: 'Welcome' },
@@ -173,6 +174,39 @@ document.addEventListener('DOMContentLoaded', () => {
   initFontUpload(onBrandChange);
   initWelcomeStep({ onImported, onResume: rehydrateAll });
   initGallery();
+
+  // "Generate a random brand" — rolls a complete brand (colours, fonts, name)
+  // into the fields, then re-renders everything (same path as a _brand.yml import).
+  const undoBtns = ['randomBrandUndoWelcome', 'randomBrandUndo'];
+  function setUndoVisible(show) {
+    undoBtns.forEach(id => {
+      const b = document.getElementById(id);
+      if (b) b.style.display = show ? '' : 'none';
+    });
+  }
+  function rollRandomBrand() {
+    const name = applyRandomBrand();
+    updateSplitSlider();   // re-bound + auto-split the new program name
+    rehydrateAll();
+    setUndoVisible(true);
+    const note = document.getElementById('randomBrandNote');
+    if (note) {
+      note.style.display = '';
+      note.innerHTML = `Rolled <strong>${name}</strong> — live in the preview. ` +
+        'Roll again for a different look, or tweak the colours, fonts and name from here.';
+    }
+  }
+  function undoRoll() {
+    if (!undoRandomBrand()) return;
+    updateWordmarkPreview();   // restore the wordmark for the reverted name/split
+    rehydrateAll();
+    setUndoVisible(false);
+    const note = document.getElementById('randomBrandNote');
+    if (note) { note.style.display = ''; note.innerHTML = 'Reverted to your previous look.'; }
+  }
+  document.getElementById('randomBrandWelcome')?.addEventListener('click', rollRandomBrand);
+  document.getElementById('randomBrandReroll')?.addEventListener('click', rollRandomBrand);
+  undoBtns.forEach(id => document.getElementById(id)?.addEventListener('click', undoRoll));
 
   // Wordmark split events
   const nameInput = document.getElementById('programName');

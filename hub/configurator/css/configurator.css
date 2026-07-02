@@ -461,3 +461,35 @@ fieldset legend { padding: 0; }
   .preview-panel { transition: none; }
   .advanced-toggle::before { transition: none; }
 }
+
+/* === Generate a random brand (welcome + colors steps) === */
+.random-cta {
+  margin: 16px 0 4px;
+  padding: 16px 18px;
+  border: 1px solid rgba(0, 212, 170, 0.28);
+  background: linear-gradient(180deg, rgba(0, 212, 170, 0.10), rgba(0, 212, 170, 0.03));
+  border-radius: 12px;
+}
+.random-cta-body { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
+.random-cta-body strong { font-size: 14px; color: #1B2838; }
+.random-cta-body span { font-size: 12.5px; color: #3D3D5C; line-height: 1.55; }
+.btn-random {
+  font: inherit; font-weight: 700; font-size: 14px;
+  color: #03281f; background: #00D4AA; border: 0; border-radius: 10px;
+  padding: 11px 18px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
+  transition: background .15s, transform .1s, box-shadow .15s;
+}
+.btn-random:hover { background: #00E4B8; box-shadow: 0 6px 18px rgba(0, 212, 170, 0.3); transform: translateY(-1px); }
+.btn-random:active { transform: translateY(0); }
+.btn-random-sm { font-size: 12.5px; padding: 8px 13px; margin: 0 0 16px; background: #1B2838; color: #fff; }
+.btn-random-sm:hover { background: #2A3F56; box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2); }
+.random-note { margin: 10px 0 0; font-size: 12.5px; color: #3D3D5C; line-height: 1.5; }
+.random-note strong { color: #00A888; }
+.btn-undo-roll {
+  font: inherit; font-weight: 600; font-size: 12.5px;
+  color: #3D3D5C; background: transparent; border: 1px solid #C8C8D8; border-radius: 9px;
+  padding: 8px 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px;
+  margin-left: 8px; transition: border-color .15s, color .15s, background .15s;
+}
+.btn-undo-roll:hover { border-color: #6B6B8A; color: #1B2838; background: #F5F5FA; }
+.btn-random-sm + .btn-undo-roll { vertical-align: top; }
