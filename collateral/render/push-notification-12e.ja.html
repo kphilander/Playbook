@@ -39,7 +39,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1;
   }
 
@@ -62,7 +62,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     line-height: 1.5;
   }
   .notification-body {
@@ -77,7 +77,7 @@
   .notification-time {
     font-family: var(--pb-font-body);
     font-size: calc(12px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     white-space: nowrap;
     align-self: flex-start;
     padding-top: 16px;

@@ -31,7 +31,7 @@
     display: inline-block;
   }
   .hero-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -45,13 +45,13 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(32px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 16px;
     line-height: 1.4;
   }
   .hero p {
     font-size: calc(17px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
     max-width: 480px;
     margin: 0 auto;
@@ -87,7 +87,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 700;
     text-align: right;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .odds-table tr:last-child td { border-bottom: none; }
   .insight {
@@ -100,7 +100,7 @@
   .cta-button {
     display: inline-block;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
@@ -115,7 +115,7 @@
   }
   .footer-support {
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 600;
     margin-bottom: 12px;
     line-height: 1.7;
@@ -141,7 +141,7 @@
     display: inline-block;
   }
   .footer-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -157,7 +157,7 @@
     margin-top: 16px;
   }
   .footer-unsub a {
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     text-decoration: underline;
   }
 </style>

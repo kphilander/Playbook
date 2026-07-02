@@ -51,6 +51,17 @@
   --pb-gradient-bar: linear-gradient(90deg, #FF6B35, #00D4AA);
   --pb-gradient-bg: linear-gradient(180deg, #1B2838, #0F1923);
 
+  /* ─── Surface Polish ───────────────── */
+  --pb-shading: 1;
+  --pb-grid: 1;
+  --pb-surface-ink: #FFFFFF;
+  --pb-surface-ink-muted: #b1b6bb;
+  --pb-texture-line: rgba(255, 255, 255, 0.03);
+  --pb-surface-track: rgba(255, 255, 255, 0.06);
+  --pb-surface-track-border: rgba(255, 255, 255, 0.11);
+  --pb-logo-book: #00D4AA;
+  --pb-brand-ink: #1B2838;
+
   /* ─── Template Scale ────────────────── */
   --pb-template-text-scale: 1;
 }

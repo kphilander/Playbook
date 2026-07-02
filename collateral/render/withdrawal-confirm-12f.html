@@ -16,7 +16,7 @@
     min-height: 812px;
     background: var(--pb-color-primary);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     display: flex;
     flex-direction: column;
     position: relative;
@@ -54,7 +54,7 @@
   .logo .logo-play {
     font-weight: 800;
     letter-spacing: -0.02em;
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
   .logo .logo-book {
     font-weight: 300;
@@ -75,7 +75,7 @@
     margin-bottom: 28px;
   }
   .check-icon {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
   .check-icon svg {
     width: 36px;
@@ -86,7 +86,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 16px;
     line-height: 1.2;
     letter-spacing: -0.01em;
@@ -103,7 +103,7 @@
 
   .subhead {
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.6;
     margin-bottom: 32px;
     max-width: 340px;
@@ -114,7 +114,7 @@
     width: 100%;
     max-width: 340px;
     height: 1px;
-    background: rgba(255,255,255,0.1);
+    background: color-mix(in srgb, var(--pb-surface-ink, #fff) 10%, transparent);
     margin-bottom: 24px;
   }
 
@@ -125,7 +125,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-bottom: 16px;
   }
 
@@ -133,7 +133,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 500;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-bottom: 32px;
     line-height: 1.5;
   }
@@ -158,18 +158,18 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-bottom: 6px;
   }
   .helpline-number {
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
   .helpline-channels {
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-top: 4px;
   }
 
@@ -180,7 +180,7 @@
     max-width: 340px;
     padding: 16px;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(16px * var(--pb-template-text-scale, 1));

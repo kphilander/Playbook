@@ -16,7 +16,7 @@
     height: 340px;
     background: var(--pb-color-primary);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     position: relative;
     overflow: hidden;
     display: flex;
@@ -44,14 +44,14 @@
     margin-bottom: 14px;
     line-height: 1;
   }
-  .logo .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-color-white); }
+  .logo .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-surface-ink, var(--pb-color-white)); }
   .logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-secondary); }
 
   .heading {
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(26px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     margin-bottom: 18px;
     line-height: 1.5;
   }
@@ -65,7 +65,7 @@
   .stat-label {
     font-family: var(--pb-font-body);
     font-size: calc(13px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-bottom: 6px;
     line-height: 1.5;
   }
@@ -76,12 +76,12 @@
     line-height: 1.2;
   }
   .stat-value--teal { color: var(--pb-color-secondary); }
-  .stat-value--white { color: var(--pb-color-white); }
+  .stat-value--white { color: var(--pb-surface-ink, var(--pb-color-white)); }
 
   .body-text {
     font-family: var(--pb-font-body);
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.7;
     margin-bottom: 10px;
   }
@@ -99,7 +99,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 700;
     font-size: calc(16px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.5;
     padding-top: 10px;
   }

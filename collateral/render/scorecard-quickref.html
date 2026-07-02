@@ -28,14 +28,14 @@
   /* Header */
   .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--pb-color-neutral-100); }
   .logo { font-family: var(--pb-font-heading); font-size: 28px; }
-  .logo-play { font-weight: 800; color: var(--pb-color-primary); letter-spacing: -0.02em; }
+  .logo-play { font-weight: 800; color: var(--pb-brand-ink, var(--pb-color-primary)); letter-spacing: -0.02em; }
   .logo-book { font-weight: 300; color: var(--pb-color-secondary); text-transform: uppercase; letter-spacing: 0.08em; }
   .header-title { font-family: var(--pb-font-heading); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-accent); }
 
   /* Philosophy banner */
   .philosophy {
     background: var(--pb-color-primary);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     padding: 16px 24px;
     border-radius: 8px;
     margin-bottom: 24px;
@@ -51,7 +51,7 @@
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@
     font-size: 11px;
     font-weight: 700;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     padding: 2px 10px;
     border-radius: 100px;
     letter-spacing: 0.04em;
@@ -82,7 +82,7 @@
     font-family: var(--pb-font-heading);
     font-size: 15px;
     font-weight: 700;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 6px;
   }
   .survey-box .meta {
@@ -133,15 +133,15 @@
   }
   .tree-arrow {
     font-size: 20px;
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     padding-top: 8px;
     flex-shrink: 0;
   }
-  .step-start .step-box { background: var(--pb-color-primary); color: var(--pb-color-white); }
-  .step-green .step-box { background: var(--pb-color-success); color: var(--pb-color-white); }
-  .step-yellow .step-box { background: var(--pb-color-warning); color: var(--pb-color-primary); }
-  .step-red .step-box { background: var(--pb-color-danger); color: var(--pb-color-white); }
-  .step-blue .step-box { background: var(--pb-color-info); color: var(--pb-color-white); }
+  .step-start .step-box { background: var(--pb-color-primary); color: var(--pb-surface-ink, var(--pb-color-white)); }
+  .step-green .step-box { background: var(--pb-color-success); color: var(--pb-surface-ink, var(--pb-color-white)); }
+  .step-yellow .step-box { background: var(--pb-color-warning); color: var(--pb-brand-ink, var(--pb-color-primary)); }
+  .step-red .step-box { background: var(--pb-color-danger); color: var(--pb-surface-ink, var(--pb-color-white)); }
+  .step-blue .step-box { background: var(--pb-color-info); color: var(--pb-surface-ink, var(--pb-color-white)); }
 
   /* Benchmark tables */
   table {
@@ -156,7 +156,7 @@
     text-align: left;
     padding: 6px 8px;
     background: var(--pb-color-primary);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -323,7 +323,7 @@
           <span class="nps-range">30&ndash;49</span>
           <span class="nps-label">Strong</span>
         </div>
-        <div class="nps-bar" style="background: var(--pb-color-warning); color: var(--pb-color-primary);">
+        <div class="nps-bar" style="background: var(--pb-color-warning); color: var(--pb-brand-ink, var(--pb-color-primary));">
           <span class="nps-range">0&ndash;29</span>
           <span class="nps-label">Improve</span>
         </div>

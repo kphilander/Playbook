@@ -38,7 +38,7 @@
     .screen-logo {
       font-family: var(--pb-font-heading);
       font-size: calc(44px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
     }
     .screen-logo .logo-play {
       font-weight: 800;
@@ -57,7 +57,7 @@
       font-family: var(--pb-font-heading);
       font-size: calc(26px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       background: var(--pb-color-secondary);
       padding: 12px 28px;
       border-radius: 100px;
@@ -77,7 +77,7 @@
       font-size: calc(84px * var(--pb-template-text-scale, 1));
       font-weight: 700;
       line-height: 1.3;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       margin-bottom: 56px;
     }
 
@@ -102,19 +102,19 @@
       white-space: nowrap;
     }
     .stat-pct.teal { color: var(--pb-color-secondary); }
-    .stat-pct.white { color: var(--pb-color-white); }
+    .stat-pct.white { color: var(--pb-surface-ink, var(--pb-color-white)); }
     .stat-pct.orange { color: var(--pb-color-accent); }
     .stat-label {
       font-family: var(--pb-font-body);
       font-size: calc(30px * var(--pb-template-text-scale, 1));
       font-weight: 600;
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
       line-height: 1.6;
     }
     .body-line {
       font-family: var(--pb-font-body);
       font-size: calc(38px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
       text-align: center;
       line-height: 1.7;
     }
@@ -132,7 +132,7 @@
       font-family: var(--pb-font-mono);
       font-size: calc(32px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
     }
 
     .legal-strip {

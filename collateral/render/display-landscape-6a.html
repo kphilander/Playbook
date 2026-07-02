@@ -39,7 +39,7 @@
     .screen-logo {
       font-family: var(--pb-font-heading);
       font-size: calc(44px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
     }
     .screen-logo .logo-play {
       font-weight: 800;
@@ -63,14 +63,14 @@
     .operator-placeholder {
       width: 160px;
       height: 60px;
-      border: 2px dashed rgba(255,255,255,0.25);
+      border: 2px dashed color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-body);
       font-size: calc(14px * var(--pb-template-text-scale, 1));
-      color: rgba(255,255,255,0.25);
+      color: color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
     }
 
     .screen-body {
@@ -95,7 +95,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       background: var(--pb-color-secondary);
       padding: 12px 28px;
       border-radius: 100px;
@@ -106,7 +106,7 @@
       font-size: calc(96px * var(--pb-template-text-scale, 1));
       font-weight: 800;
       line-height: 1.05;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       letter-spacing: -0.02em;
       margin-bottom: 28px;
       max-width: 1000px;
@@ -115,7 +115,7 @@
       font-family: var(--pb-font-body);
       font-size: calc(36px * var(--pb-template-text-scale, 1));
       line-height: 1.4;
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
       max-width: 900px;
       margin-bottom: 40px;
     }
@@ -131,7 +131,7 @@
       font-family: var(--pb-font-body);
       font-size: calc(32px * var(--pb-template-text-scale, 1));
       font-weight: 600;
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
       margin-bottom: 10px;
     }
     .stat-pct {
@@ -142,7 +142,7 @@
       letter-spacing: -0.03em;
     }
     .stat-pct.teal { color: var(--pb-color-secondary); }
-    .stat-pct.white { color: var(--pb-color-white); }
+    .stat-pct.white { color: var(--pb-surface-ink, var(--pb-color-white)); }
     .stat-pct.orange { color: var(--pb-color-accent); }
     .stat-label {
       font-family: var(--pb-font-body);
@@ -167,14 +167,14 @@
       justify-content: center;
       font-family: var(--pb-font-mono);
       font-size: calc(24px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       margin-bottom: 16px;
     }
     .qr-label {
       font-family: var(--pb-font-heading);
       font-size: calc(28px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       text-align: center;
       line-height: 1.25;
     }
@@ -192,7 +192,7 @@
       font-family: var(--pb-font-mono);
       font-size: calc(32px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
     }
 
     .legal-strip {

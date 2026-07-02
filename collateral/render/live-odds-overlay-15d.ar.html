@@ -16,7 +16,7 @@
     height: 280px;
     background: var(--pb-color-primary);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     display: flex;
     flex-direction: column;
     position: relative;
@@ -48,7 +48,7 @@
     font-size: calc(15px * var(--pb-template-text-scale, 1));
   }
   .card-logo .logo-play {
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     font-weight: 800;
     letter-spacing: -0.02em;
   }
@@ -69,7 +69,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 800;
     font-size: calc(20px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     line-height: 1.5;
     margin-bottom: 6px;
   }
@@ -77,7 +77,7 @@
   .body-text {
     font-family: var(--pb-font-body);
     font-size: calc(12px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.6;
     margin-bottom: 10px;
   }
@@ -87,8 +87,8 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: color-mix(in srgb, var(--pb-surface-ink, #fff) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 8%, transparent);
     border-radius: 10px;
     padding: 10px 14px;
     margin-bottom: auto;
@@ -103,7 +103,7 @@
   .stat-label {
     font-family: var(--pb-font-body);
     font-size: calc(12px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     line-height: 1.5;
   }
 
@@ -116,7 +116,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(13px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">

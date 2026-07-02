@@ -38,7 +38,7 @@
     .card-logo {
       font-family: var(--pb-font-heading);
       font-size: calc(32px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
     }
     .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
     .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
@@ -47,20 +47,20 @@
     .operator-placeholder {
       width: 120px;
       height: 48px;
-      border: 1px dashed rgba(255,255,255,0.25);
+      border: 1px dashed color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--pb-font-body);
       font-size: calc(12px * var(--pb-template-text-scale, 1));
-      color: rgba(255,255,255,0.25);
+      color: color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
     }
     .card-pillar {
       font-family: var(--pb-font-heading);
       font-size: calc(20px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       background: var(--pb-color-secondary);
       padding: 8px 22px;
       border-radius: 100px;
@@ -80,14 +80,14 @@
       font-size: calc(52px * var(--pb-template-text-scale, 1));
       font-weight: 800;
       line-height: 1.5;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       margin-bottom: 18px;
     }
     .hero-subhead {
       font-family: var(--pb-font-body);
       font-size: calc(26px * var(--pb-template-text-scale, 1));
       line-height: 1.8;
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     }
 
     .stats-section {
@@ -102,14 +102,14 @@
     }
     .stat-row {
       padding: 32px;
-      background: rgba(255,255,255,0.03);
+      background: color-mix(in srgb, var(--pb-surface-ink, #fff) 3%, transparent);
       border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.06);
+      border: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 6%, transparent);
     }
     .stat-game {
       font-family: var(--pb-font-body);
       font-size: calc(22px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
       margin-bottom: 10px;
       line-height: 1.7;
     }
@@ -121,7 +121,7 @@
       margin-bottom: 10px;
     }
     .stat-value.teal { color: var(--pb-color-secondary); }
-    .stat-value.white { color: var(--pb-color-white); }
+    .stat-value.white { color: var(--pb-surface-ink, var(--pb-color-white)); }
     .stat-value.orange { color: var(--pb-color-accent); }
     .stat-note {
       font-family: var(--pb-font-body);
@@ -139,7 +139,7 @@
       font-family: var(--pb-font-body);
       font-size: calc(24px * var(--pb-template-text-scale, 1));
       line-height: 1.8;
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     }
     .callout-text strong { color: var(--pb-color-secondary); font-weight: 700; }
 
@@ -161,14 +161,14 @@
       justify-content: center;
       font-family: var(--pb-font-mono);
       font-size: calc(14px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       flex-shrink: 0;
     }
     .qr-label {
       font-family: var(--pb-font-heading);
       font-size: calc(22px * var(--pb-template-text-scale, 1));
       font-weight: 600;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       line-height: 1.5;
     }
 
@@ -184,7 +184,7 @@
       font-family: var(--pb-font-mono);
       font-size: calc(24px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-white);
+      color: var(--pb-surface-ink, var(--pb-color-white));
       line-height: 1.5;
     }
 

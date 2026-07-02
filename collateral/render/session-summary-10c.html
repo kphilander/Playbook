@@ -18,7 +18,7 @@
     border: 1px solid var(--pb-color-neutral-100);
     border-radius: 16px;
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     padding: 28px 28px 24px;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(18px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 24px;
     display: flex;
     align-items: baseline;
@@ -72,7 +72,7 @@
     font-family: var(--pb-font-heading);
     font-size: calc(11px * var(--pb-template-text-scale, 1));
     font-weight: 600;
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     margin-top: 6px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -96,7 +96,7 @@
     border-bottom: 1px solid var(--pb-color-neutral-50);
   }
   .stats-row .sep {
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
   }
 
   /* Deposit limit */
@@ -115,7 +115,7 @@
     font-family: var(--pb-font-mono);
     font-weight: 600;
     font-size: calc(15px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .limit-badge {
     display: inline-block;

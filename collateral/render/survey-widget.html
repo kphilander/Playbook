@@ -30,9 +30,9 @@
     background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)));
   }
   .widget-logo { font-family: var(--pb-font-heading); font-size: 20px; margin-bottom: 4px; }
-  .widget-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .widget-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
-  .widget-subtitle { color: var(--pb-color-neutral-300); font-size: 14px; }
+  .widget-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
+  .widget-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .widget-subtitle { color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-size: 14px; }
 
   /* Survey selector */
   .survey-selector {
@@ -60,7 +60,7 @@
   .selector-btn.active {
     border-color: var(--pb-color-secondary);
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .selector-btn .btn-meta {
     display: block;
@@ -98,7 +98,7 @@
   .question-text {
     font-size: 16px;
     font-weight: 600;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 16px;
     line-height: 1.4;
   }
@@ -126,7 +126,7 @@
   .nps-btn.selected {
     border-color: var(--pb-color-secondary);
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
   .nps-labels {
     display: flex;
@@ -175,7 +175,7 @@
   .semantic-btn.selected {
     border-color: var(--pb-color-secondary);
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
   }
 
   /* Open text */
@@ -192,7 +192,7 @@
     transition: border-color 0.15s ease;
   }
   .open-text:focus { outline: none; border-color: var(--pb-color-secondary); }
-  .open-text::placeholder { color: var(--pb-color-neutral-300); }
+  .open-text::placeholder { color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); }
 
   /* Submit */
   .submit-btn {
@@ -200,7 +200,7 @@
     width: 100%;
     padding: 14px 24px;
     background: var(--pb-color-secondary);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     border: none;
     border-radius: 8px;
     font-family: var(--pb-font-heading);
@@ -220,7 +220,7 @@
     font-family: var(--pb-font-heading);
     font-size: 20px;
     font-weight: 800;
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 4px;
   }
   .results-subheader {
@@ -263,7 +263,7 @@
     border-radius: 8px;
     padding: 20px 24px;
     margin-top: 20px;
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
   }
   .result-recommendation h3 {
     font-family: var(--pb-font-heading);
@@ -283,7 +283,7 @@
     display: inline-block;
     padding: 10px 20px;
     background: var(--pb-color-accent);
-    color: var(--pb-color-white);
+    color: var(--pb-surface-ink, var(--pb-color-white));
     border: none;
     border-radius: 8px;
     font-family: var(--pb-font-heading);
@@ -324,7 +324,7 @@
   /* Thank you (single-response mode) */
   .thankyou { display: none; text-align: center; padding: 40px 20px; }
   .thankyou.visible { display: block; }
-  .thankyou h2 { font-family: var(--pb-font-heading); font-size: 24px; font-weight: 800; color: var(--pb-color-primary); margin-bottom: 8px; justify-content: center; }
+  .thankyou h2 { font-family: var(--pb-font-heading); font-size: 24px; font-weight: 800; color: var(--pb-brand-ink, var(--pb-color-primary)); margin-bottom: 8px; justify-content: center; }
   .thankyou p { font-size: 16px; color: var(--pb-color-neutral-500); }
 
   /* Utility */
@@ -423,7 +423,7 @@
     <!-- Open text -->
     <div class="question" id="qOpen">
       <div class="question-number" id="openLabel">Question 3</div>
-      <div class="question-text">What's one thing you'd change? <span style="color: var(--pb-color-neutral-300); font-weight: 400;">(optional)</span></div>
+      <div class="question-text">What's one thing you'd change? <span style="color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-weight: 400;">(optional)</span></div>
       <textarea class="open-text" id="openText" placeholder="Your feedback..."></textarea>
     </div>
 

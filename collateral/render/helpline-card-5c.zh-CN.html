@@ -15,7 +15,7 @@
       position: relative;
       background: var(--pb-color-white);
       font-family: var(--pb-font-body);
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -38,7 +38,7 @@
       font-family: var(--pb-font-heading);
       font-size: calc(24px * var(--pb-template-text-scale, 1));
     }
-    .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-color-primary); }
+    .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; color: var(--pb-brand-ink, var(--pb-color-primary)); }
     .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-color-secondary); }
     .co-brand { display: flex; align-items: center; gap: 12px; }
     .co-brand-divider { width: 1px; height: 22px; background: var(--pb-color-neutral-300); }
@@ -49,7 +49,7 @@
       display: flex; align-items: center; justify-content: center;
       font-family: var(--pb-font-body);
       font-size: calc(11px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     }
     .helpline-main { display: flex; align-items: center; justify-content: space-between; }
     .helpline-left { flex: 1; }
@@ -57,7 +57,7 @@
       font-family: var(--pb-font-heading);
       font-size: calc(26px * var(--pb-template-text-scale, 1));
       font-weight: 700;
-      color: var(--pb-color-primary);
+      color: var(--pb-brand-ink, var(--pb-color-primary));
       margin-bottom: 6px;
       line-height: 1.4;
     }
@@ -96,7 +96,7 @@
       display: flex; align-items: center; justify-content: center;
       font-family: var(--pb-font-mono);
       font-size: calc(12px * var(--pb-template-text-scale, 1));
-      color: var(--pb-color-neutral-300);
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
       margin-bottom: 6px;
     }
     .qr-label {

@@ -16,7 +16,7 @@
     min-height: 220px;
     background: var(--pb-color-white);
     font-family: var(--pb-font-body);
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     position: relative;
     border: 1px solid var(--pb-color-neutral-100);
     border-left: 3px solid var(--pb-color-secondary);
@@ -55,7 +55,7 @@
     font-family: var(--pb-font-heading);
     font-weight: 700;
     font-size: calc(19px * var(--pb-template-text-scale, 1));
-    color: var(--pb-color-primary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
     margin-bottom: 8px;
     line-height: 1.4;
   }
@@ -86,7 +86,7 @@
     font-family: var(--pb-font-heading);
     font-size: calc(16px * var(--pb-template-text-scale, 1));
     font-weight: 400;
-    color: var(--pb-color-neutral-300);
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
     border-radius: 4px;
     line-height: 1;
   }
