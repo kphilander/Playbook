@@ -36,6 +36,8 @@ export const FIELDS = [
   // UI-only color fields (not exported to YAML)
   { id: 'colorNeutralTint', yamlPath: null, kind: 'color', default: '#1A1A2E' },
   { id: 'allowGradients',   yamlPath: null, kind: 'check', default: true },
+  { id: 'effectShading',    yamlPath: null, kind: 'check', default: true },
+  { id: 'effectGrid',       yamlPath: null, kind: 'check', default: true },
 
   // ── Typography ──
   { id: 'fontHeading', yamlPath: 'typography.fonts.heading.family',   kind: 'select', default: 'Inter' },

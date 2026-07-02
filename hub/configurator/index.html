@@ -30,6 +30,9 @@
 </head>
 <body>
 
+<!-- Brand showcase reel — opens the configurator (populated by js/reel.js) -->
+<div id="brandReel"></div>
+
 <!-- Back bar (hub-shared) -->
 <div class="pb-back-bar">
   <a href="../../">&larr; Back to Playbook Hub</a>
@@ -400,6 +403,7 @@
           </label>
           <div class="contrast-info" style="margin-top:6px;">Playbook uses two gradients by default: a horizontal accent&nbsp;&rarr;&nbsp;secondary bar at the top of cards, and a primary&nbsp;&rarr;&nbsp;primary-dark background on posters and stories. Some color combinations look muddy when blended &mdash; uncheck this to use solid colors instead.</div>
         </div>
+
       </div>
 
       <div class="wizard-nav">
@@ -1090,7 +1094,12 @@
     </div>
 
     <div class="preview-pane active" id="previewPaneLive" role="tabpanel" aria-labelledby="tabBtnLive">
-      <div class="preview-grid">
+      <div class="rg-preview">
+        <iframe id="rgPreviewFrame" sandbox="allow-scripts" title="Responsible-gambling website preview, your brand applied"></iframe>
+      </div>
+
+      <!-- Sample cards kept rendered off-screen as the source for PNG downloads -->
+      <div class="preview-grid pv-render-only" aria-hidden="true">
 
         <!-- Preview Card 1: Myth Buster -->
         <div class="preview-frame">
@@ -1162,6 +1171,15 @@
       <div class="gallery-notice" id="galleryNotice" role="status"></div>
       <p class="contrast-info" style="margin-bottom:12px;">Real collateral templates from the Playbook library, rendered live with your brand. Click any card for a full-size preview and PNG download.</p>
       <div class="gallery-filters" id="galleryFilters" role="group" aria-label="Filter templates by category"></div>
+      <div class="gallery-effects" id="galleryEffects" role="group" aria-label="Card surface effects">
+        <span class="gallery-effects-label">Effects</span>
+        <label class="gallery-effect-toggle" for="effectShading">
+          <input type="checkbox" id="effectShading" checked> Shading
+        </label>
+        <label class="gallery-effect-toggle" for="effectGrid">
+          <input type="checkbox" id="effectGrid" checked> Grid
+        </label>
+      </div>
       <div class="gallery-grid" id="galleryGrid"></div>
     </div>
   </aside>
