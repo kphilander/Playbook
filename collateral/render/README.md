@@ -61,6 +61,16 @@ node build-deck.mjs                   # Generate PPTX deck
 | `sign-staff-9e` | Staff sign | 900 x 1200 | 24px |
 | `card-11a-streamer-myth` | Social card | 1080 x 1080 | — |
 | `card-11b-lucky-numbers` | Social card | 1080 x 1080 | — |
+| `poster-19a-every-game-math` | Photo poster | 1800 x 2400 | 24px |
+| `poster-19b-odds-are-public` | Photo poster | 1800 x 2400 | 24px |
+| `poster-19c-bet-price-tag` | Photo poster | 1800 x 2400 | 24px |
+| `poster-19d-game-iq` | Photo poster | 1800 x 2400 | 24px |
+| `poster-19e-never-due` | Photo poster | 1800 x 2400 | 24px |
+| `poster-19f-your-tools` | Photo poster | 1800 x 2400 | 24px |
+| `poster-19g-one-decision` | Photo poster | 1800 x 2400 | 24px |
+| `poster-19h-time-flies` | Photo poster | 1800 x 2400 | 24px |
+| `og-rg-page` | OG share card | 1200 x 630 | — |
+| `og-content-hub` | OG share card | 1200 x 630 | — |
 
 ### Tier 2 — Support & Crisis
 
