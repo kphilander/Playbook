@@ -98,6 +98,18 @@ const cards = [
   { html: 'card-16b-bonus-free-money.html', output: 'card-16b-bonus-free-money.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-17a-big-game.html', output: 'card-17a-big-game.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-18a-fresh-start.html', output: 'card-18a-fresh-start.png', w: 1080, h: 1080, selector: '.social-card' },
+  // OG share images (1200x630 Open Graph cards)
+  { html: 'og-rg-page.html', output: 'og-rg-page.png', w: 1200, h: 630, selector: '.og-card' },
+  { html: 'og-content-hub.html', output: 'og-content-hub.png', w: 1200, h: 630, selector: '.og-card' },
+  // Photography poster series (19) — digital posters with AI-generated photography (photos/PROMPTS.md)
+  { html: 'poster-19a-every-game-math.html', output: 'poster-19a-every-game-math.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19b-odds-are-public.html', output: 'poster-19b-odds-are-public.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19c-bet-price-tag.html', output: 'poster-19c-bet-price-tag.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19d-game-iq.html', output: 'poster-19d-game-iq.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19e-never-due.html', output: 'poster-19e-never-due.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19f-your-tools.html', output: 'poster-19f-your-tools.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19g-one-decision.html', output: 'poster-19g-one-decision.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19h-time-flies.html', output: 'poster-19h-time-flies.png', w: 1848, h: 2448, selector: '.poster' },
   // i18n — seasonal & online myth cards (16-18 series) variants
   { html: 'card-16a-online-rigged.ja.html', output: 'card-16a-online-rigged.ja.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-16b-bonus-free-money.ja.html', output: 'card-16b-bonus-free-money.ja.png', w: 1080, h: 1080, selector: '.social-card' },

@@ -42,3 +42,19 @@ decode the first frame after downloading the first ~5 KB), audio stripped
 The source URL and Pixabay license are also embedded in each MP4 as
 container metadata (`comment` and `copyright` atoms). Inspect with
 `ffprobe -show_format <file>` or any media player that reads tags.
+
+---
+
+# Hero photo source
+
+| File | Source | What it shows |
+|---|---|---|
+| `rg-hero-photo.jpg` | AI-generated (Google `gemini-3-pro-image`, 16:9, 2K) | Friends around a lounge table playing a casual card game — default photographic hero for `rg-page.html` |
+
+Art-directed to [`visual-identity/photography/photography.md`](../../visual-identity/photography/photography.md)
+(warm cinematic key light, navy shadows, dark negative space top/edges for the
+hero overlay). Owned outright — no stock license applies. Generation prompt:
+
+```
+A lively, warm group of five diverse friends around a table in a modern lounge in the evening, all mid-laugh, one casually fanning three playing cards for a friendly game while another playfully objects. No chips, no cash, no drinks anywhere. Warm cinematic key light models their faces; the surroundings fall away into deep, dark, softly defocused tones toward the top and edges of the frame — generous dark negative space in the upper half for interface text overlay. Candid editorial lifestyle photograph, full-frame camera, 50mm lens at f/2.8. [full Tier 1 style block — see collateral/render/photos/PROMPTS.md]
+```

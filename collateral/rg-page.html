@@ -258,11 +258,26 @@ html[data-pb-logo-mode="cobrand"] .rg-nav-brand { padding: 6px 0; }
   opacity: 0.7;
   pointer-events: none;
 }
-/* Brand-tinted overlay: only applied when a hero video is active (the JS
-   picker / locale handler toggles .rg-hero--has-video on the section). On
-   the default no-video landing the hero shows just its plain dark gradient
-   so the overlay doesn't add a heavy wash to an already-dark surface. */
-.rg-hero--has-video::before {
+/* Photographic hero background — the default landing visual (video stays
+   opt-in via the picker). Art direction per
+   visual-identity/photography/photography.md; asset documented in
+   assets/SOURCES.md. Hidden whenever a hero video takes over. */
+.rg-hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+.rg-hero--has-video .rg-hero-photo { display: none; }
+/* Brand-tinted overlay: applied when a hero video is active (the JS picker /
+   locale handler toggles .rg-hero--has-video on the section) and on the
+   default photographic hero (.rg-hero--has-photo, set in the markup) so text
+   over the image keeps AA contrast per the text-over-image rules. */
+.rg-hero--has-video::before,
+.rg-hero--has-photo::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -3660,7 +3675,10 @@ html[data-pb-logo-mode="replace"] .rg-footer-brand { display: inline-flex; }
 </nav>
 
 <!-- Hero: Curiosity Hook -->
-<section class="rg-hero" id="hero">
+<section class="rg-hero rg-hero--has-photo" id="hero">
+  <!-- Photographic hero background (default landing visual). Swapped out
+       automatically when a hero video is activated. -->
+  <img class="rg-hero-photo" src="assets/rg-hero-photo.jpg" alt="" aria-hidden="true">
   <!-- Video element is empty by default (no source) — the picker / locale
        handler swaps a source in when a video is requested, and toggles
        .rg-hero--has-video on the section to enable the brand-tinted overlay. -->

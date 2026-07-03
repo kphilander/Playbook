@@ -101,17 +101,17 @@ Game closeups — slot interfaces, card tables, roulette wheels, chips — are a
 
 ![Slot machine interface closeup — purposeful, explains game mechanics](references/closeup-slot-interface-good.jpg)
 
-*[Pexels 30516010](https://www.pexels.com/photo/close-up-of-casino-slot-machine-interface-30516010/) — Slot machine interface detail. Works when used alongside content explaining paylines, RTP, or how slot machines function. The closeup IS the lesson.*
+*Owned reference (AI-generated — prompt in [references/PROMPTS.md](references/PROMPTS.md)). Slot machine interface detail. Works when used alongside content explaining paylines, RTP, or how slot machines function. The closeup IS the lesson.*
 
 ![Cards and chips on gaming table — purposeful, illustrates table game context](references/closeup-cards-chips-good.jpg)
 
-*[Pexels 7594307](https://www.pexels.com/photo/playing-cards-and-casino-chips-on-gaming-table-7594307/) — Cards and chips on a gaming table. Works for content explaining table game mechanics, hand rankings, or house edge by game. Provides purposeful visual context.*
+*Owned reference (AI-generated — prompt in [references/PROMPTS.md](references/PROMPTS.md)). Cards and a deliberately small number of chips on a gaming table. Works for content explaining table game mechanics, hand rankings, or house edge by game. Provides purposeful visual context.*
 
 **Decorative filler (bad):**
 
 ![Row of slot machines — generic, no educational purpose](references/slot-machines-filler-bad.jpg)
 
-*[Pexels 3021120](https://www.pexels.com/photo/slot-machines-3021120/) — Row of slot machines with no human context, no educational framing, no connection to a message. This is generic atmosphere that reads as gambling promotion. Cut it.*
+*Owned reference (AI-generated — prompt in [references/PROMPTS.md](references/PROMPTS.md)). Row of slot machines with no human context, no educational framing, no connection to a message. Technically competent, completely purposeless — generic atmosphere that reads as gambling promotion. Cut it.*
 
 ---
 
@@ -136,7 +136,7 @@ Intentional, editorial-quality lighting that creates mood and visual interest �
 
 ![Cinematic lighting — casino environment with intentional directional light](references/cinematic-lighting-good.jpg)
 
-*[Pexels 9396741](https://www.pexels.com/photo/young-woman-in-checked-mini-dress-at-slot-machines-in-casino-9396741/) — Casino environment with cinematic, intentional lighting. Subject is well-lit with clear directional light; the slot machines provide colorful background bokeh rather than being the subject. This is the standard.*
+*Owned reference (AI-generated — prompt in [references/PROMPTS.md](references/PROMPTS.md)). Two friends at slot machines with cinematic, intentional lighting: a clear warm key light models their faces, the machines provide colorful background bokeh rather than being the subject, and the moment is social. This is the standard. Compare directly with the dim example below — same scene, only the lighting intent changes.*
 
 ### Dim ambient lighting (bad)
 
@@ -154,7 +154,7 @@ Uncontrolled, flat, dark environments where the lighting is incidental rather th
 
 ![Dim ambient lighting — arcade environment with incidental, uncontrolled light](references/dim-lighting-bad.jpg)
 
-*[Pexels 5767461](https://www.pexels.com/photo/man-playing-arcade-game-with-beautiful-woman-at-his-side-5767461/) — Dim arcade/gaming environment where the lighting is incidental. Faces are underlit, the scene is uniformly dark, and the overall feel is dingy rather than dramatic. This fails the lighting test.*
+*Owned reference (AI-generated — prompt in [references/PROMPTS.md](references/PROMPTS.md)). The same two-friends-at-slots scene as the cinematic example above, photographed badly on purpose: no key light, underexposed faces, flat contrast, muddy mixed color cast, visible noise. The setting is identical — only the lighting intent changed, and it fails the lighting test.*
 
 ### The lighting test
 
@@ -317,9 +317,27 @@ All photos should feel consistent with the Playbook brand palette after grading.
 - **Overprocess or over-filter** — no heavy HDR, no Instagram-style filters
 - **Use game equipment as decorative filler** — slot machines and tables without purpose read as gambling promotion, not education
 
+### Reference pair: social vs. solitary
+
+The single most important subject rule, shown as a controlled pair — same venue, opposite framing.
+
+**Social (good):**
+
+![Group of friends laughing together at a blackjack table — social, engaged, warm](references/social-group-good.jpg)
+
+*Owned reference (AI-generated — prompt in [references/PROMPTS.md](references/PROMPTS.md)). Friends engaged with each other more than the game, warm key light, candid mid-story energy. Gambling as a social night out.*
+
+**Solitary (bad):**
+
+![A person alone at a slot machine in an empty casino corner — isolated, distant](references/solitary-player-bad.jpg)
+
+*Owned reference (AI-generated — prompt in [references/PROMPTS.md](references/PROMPTS.md)). One person, empty room, cool desaturated distance. Nothing here is technically wrong — and everything about it reinforces the solitary-gambler stereotype. Never use this framing.*
+
 ---
 
 ## Stock photography sourcing
+
+> **Note on owned imagery:** every reference image in this guide is AI-generated to this spec and owned outright — no third-party stock licensing applies. The exact generation prompts live in [references/PROMPTS.md](references/PROMPTS.md); regenerate or extend the set by following the same pattern. The sourcing keywords below remain for operators who prefer licensed stock photography.
 
 Use these keyword combinations when sourcing stock imagery.
 
