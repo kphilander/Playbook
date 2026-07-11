@@ -380,7 +380,7 @@ As of 13 April 2026, marketing, advertising, and promotion of BC gaming schemes 
 
 ### CGA national code overlay
 
-The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards on top of BC's. See [canada/README.md](../README.md#canadian-gambling-advertising-code). Key additions:
+The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards on top of BC's. See [canada/README.md](../README.md#code-for-responsible-gaming-advertising-cga-code). Key additions:
 - Endorser minimum age of 25+
 - Frequency limits during live sports broadcasts
 - Enhanced inducement/T&C disclosure requirements

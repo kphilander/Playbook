@@ -197,10 +197,11 @@ The number of times a bonus or promotional credit must be wagered before it can 
 | Term | Jurisdiction | Note |
 |---|---|---|
 | GambleAware / BeGambleAware | UK | Trademarked. Use only when referring to the organization. |
-| GameSense | BC, MA | Trademarked. Use only when referring to the program. |
+| GameSense | BC | Trademarked. Use only when referring to the program. Massachusetts rebranded its program to PlayWell in March 2026. |
+| PlayWell | MA (MGC) | MGC responsible-gaming program since March 2026 (formerly GameSense). |
 | GAMSTOP | UK | National self-exclusion scheme. |
-| 1-800-GAMBLER | US (multi-state) | Shared helpline number. State requirements vary. |
-| National Problem Gambling Helpline | US (NCPG) | Official name for 1-800-522-4700. |
+| 1-800-GAMBLER | US (multi-state) | CCGNJ-owned mark used across many states. State requirements vary. |
+| National Problem Gambling Helpline | US (NCPG) | NCPG helpline — primary number 1-800-MY-RESET since January 2026; 1-800-522-4700 remains active. |
 | Spelpaus | Sweden | National self-exclusion system. |
 | OASIS | Germany | Cross-operator exclusion system. |
 

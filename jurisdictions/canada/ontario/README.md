@@ -340,7 +340,7 @@ This is Ontario's most distinctive advertising restriction. **Standard 2.05** pr
 
 ### CGA national code overlay
 
-The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards. See [canada/README.md](../README.md#canadian-gambling-advertising-code). Key additions:
+The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards. See [canada/README.md](../README.md#code-for-responsible-gaming-advertising-cga-code). Key additions:
 - Endorser minimum age of 25+
 - Direction by audience composition (advertising placed for legal-age audiences; talent and individuals depicted aged 25+)
 - Enhanced T&C disclosure requirements

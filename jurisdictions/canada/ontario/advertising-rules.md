@@ -407,4 +407,4 @@ But Ontario adds one complexity BC doesn't have:
 
 ---
 
-*Cross-references: [Ontario compliance module](README.md) | [Canada overview — Advertising Code](../README.md#canadian-gambling-advertising-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*
+*Cross-references: [Ontario compliance module](README.md) | [Canada overview — Advertising Code](../README.md#code-for-responsible-gaming-advertising-cga-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*

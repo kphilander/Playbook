@@ -81,7 +81,7 @@ The **National Council on Problem Gambling (NCPG)** operates the National Proble
 
 ### 1-800-GAMBLER (CCGNJ-owned — separate from NCPG)
 
-**1-800-GAMBLER is not an NCPG number.** It is a [federally registered service mark **owned by the Council on Compulsive Gambling of New Jersey (CCGNJ)**](https://800gambler.org/about-us/). NCPG's non-exclusive license to use it [**lapsed in 2022**, and the New Jersey courts ordered NCPG to **cease and desist** using the 1-800-GAMBLER® mark](https://www.szaferman.com/ownership-rights-in-the-federally-registered-service-mark-1-800-gambler-are-upheld-by-the-courts-of-new-jersey/).
+**1-800-GAMBLER is not an NCPG number.** It is a [federally registered service mark **owned by the Council on Compulsive Gambling of New Jersey (CCGNJ)**](https://800gambler.org/about-us/). NCPG's non-exclusive license to use it (granted June 2022) [**expired May 31, 2025**, and in September 2025 the New Jersey courts ordered NCPG to **cease and desist** using the 1-800-GAMBLER® mark by September 29, 2025](https://www.szaferman.com/ownership-rights-in-the-federally-registered-service-mark-1-800-gambler-are-upheld-by-the-courts-of-new-jersey/).
 
 | Number | Owner | Notes |
 |---|---|---|

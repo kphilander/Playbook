@@ -18,7 +18,7 @@
 # ─── HELPLINES ───────────────────────────────
 # National helpline + state-specific overrides.
 # The NCPG operates the national helpline. Three numbers
-# are accepted as of January 2026 (NGCB Notice 2026-04):
+# are accepted as of February 2026 (NGCB Notice #2026-09):
 #   1-800-522-4700 (legacy)
 #   1-800-GAMBLER (vanity, commonly required by regulators)
 #   1-800-MY-RESET (new primary, January 2026 rebrand)
@@ -49,7 +49,7 @@ helplines:
       hours: "24/7"
       state_resource: "Nevada Council on Problem Gambling"
       state_website: "www.nevadacouncil.org"
-      notes: "Nevada has no separate state helpline — uses NCPG national number. All three numbers accepted per NGCB Notice 2026-04."
+      notes: "Nevada has no separate state helpline — uses NCPG national number. All three numbers accepted per NGCB Notice #2026-09 (February 11, 2026)."
 
     massachusetts:
       number: "1-800-327-5050"

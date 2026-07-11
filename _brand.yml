@@ -354,15 +354,15 @@ helplines:
     website: "stopspillet.dk"
     label: "StopSpillet"
     self_exclusion: "ROFUS (rofus.nu) — national self-exclusion register"
-    hours: "Mon-Thu 09:00-22:00, Fri 09:00-18:00, Sat-Sun 12:00-18:00 (CET)"
+    hours: "Mon-Thu 09:00-21:00, Fri 09:00-17:00 (CET); no weekend hours"
 
   malta:
     number: "1777"
     alternate: "179"
     website: "rgf.org.mt"
     label: "Responsible Gaming Foundation (RGF) Supportline"
-    alternate_label: "Sedqa helpline (substance and gambling)"
-    hours: "24/7"
+    alternate_label: "Supportline 179 (FSWS/Appoġġ) — national support line, 24/7"
+    hours: "Daily (not 24/7 — RGF does not publish current hours; verify before use)"
     self_exclusion: "MGA self-barring (mga.org.mt/player-hub/self-barring/)"
 
   singapore:

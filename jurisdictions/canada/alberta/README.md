@@ -300,7 +300,7 @@ Alberta's advertising rules come from two overlapping layers:
 
 ### CGA national code overlay
 
-The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards. See [canada/README.md](../README.md#canadian-gambling-advertising-code). Key additions:
+The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards. See [canada/README.md](../README.md#code-for-responsible-gaming-advertising-cga-code). Key additions:
 - Endorser minimum age of 25+ (models, actors, and influencers must be a minimum of 25 years old)
 - Adult-audience thresholds: broadcast advertising only where at least 80% of the audience is reasonably expected to be of legal age, and no advertising in or adjacent to children's programming
 - Enhanced T&C disclosure requirements

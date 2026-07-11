@@ -12,7 +12,7 @@
 | Section | Description |
 |---|---|
 | [Regulatory landscape](#regulatory-landscape) | Federal framework and provincial model |
-| [Canadian Gambling Advertising Code](#canadian-gambling-advertising-code) | National advertising standards (January 2026) |
+| [Code for Responsible Gaming Advertising](#code-for-responsible-gaming-advertising-cga-code) | National advertising standards (January 2026) |
 | [Provincial structure](#provincial-structure) | All provinces/territories with key facts |
 | [National helpline situation](#national-helpline-situation) | Why there's no single national helpline |
 | [`_brand.yml` structure](#brandyml-structure) | Restructuring Canada entries to provincial sub-entries |
@@ -54,9 +54,9 @@ For operators deploying {{PROGRAM_NAME}} in Canada, this provincial model means:
 
 ---
 
-## Canadian Gambling Advertising Code
+## Code for Responsible Gaming Advertising (CGA Code)
 
-In **January 2026**, Canada's advertising industry adopted the **Canadian Gambling Advertising Code** — the first national standard for gambling advertising. While not legislation, it is enforced through Advertising Standards Canada (Ad Standards) and applies across all provinces.
+On **January 1, 2026**, the Canadian Gaming Association's **Code for Responsible Gaming Advertising** (the CGA Code) came into effect — the first national standard for gambling advertising, published October 9, 2025. It is a voluntary industry code rather than legislation, administered by Ad Standards, and applies across all provinces.
 
 ### Key provisions
 

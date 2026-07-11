@@ -128,10 +128,10 @@ last_updated: "2026-06-08"
 | **Name** | Responsible Gaming Foundation (RGF) Supportline |
 | **Phone** | 1777 (free, confidential) |
 | **Website** | [www.rgf.org.mt](https://www.rgf.org.mt) |
-| **Hours** | 8am -- 8pm daily |
+| **Hours** | Daily; RGF does not publish current hours -- verify before use (not 24/7) |
 | **Languages** | English, Maltese |
 | **Cost** | Free |
-| **Alternative** | Sedqa (Agenzija Sedqa) helpline: 179 |
+| **Alternative** | Supportline 179 (run by FSWS/Appoġġ; free, 24/7, covers gambling) |
 
 **Source**: [Responsible Gaming Foundation](https://www.rgf.org.mt) | [MGA Safer Gambling](https://www.mga.org.mt/player-hub/safer-gambling/)
 
@@ -482,11 +482,11 @@ helplines:
     number: "1777"
     website: "www.rgf.org.mt"
     label: "Responsible Gaming Foundation (RGF) Supportline"
-    hours: "8am-8pm daily"
+    hours: "Daily — RGF does not publish current hours; verify before use"
     languages:
       - English
       - Maltese
-    notes: "Free and confidential. Alternative: Sedqa helpline 179."
+    notes: "Free and confidential. Alternative: Supportline 179 (FSWS/Appoġġ)."
 
 # --- LEGAL ---------------------------------------------
 legal:

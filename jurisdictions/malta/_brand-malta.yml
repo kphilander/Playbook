@@ -17,14 +17,14 @@
 # --- HELPLINES -----------------------------------------
 # Malta's national gambling helpline is operated by the
 # Responsible Gaming Foundation (RGF). The alternative
-# Sedqa helpline (179) covers broader addiction services.
+# The national Supportline 179 (run by FSWS/Appogg) covers broader support services, 24/7.
 
 helplines:
   malta:
     number: "1777"
     website: "www.rgf.org.mt"
     label: "Responsible Gaming Foundation (RGF) Supportline"
-    hours: "8am-8pm daily"
+    hours: "Daily — RGF does not publish current hours; verify before use (not 24/7)"
     languages:
       - English
       - Maltese
@@ -33,7 +33,7 @@ helplines:
     alternative:
       number: "179"
       website: "www.sedqa.gov.mt"
-      label: "Agenzija Sedqa"
+      label: "Supportline 179 (FSWS/Appoġġ)"
       hours: "24/7"
       notes: "General addiction helpline; covers gambling"
 

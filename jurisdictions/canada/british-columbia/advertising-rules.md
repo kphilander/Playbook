@@ -152,7 +152,7 @@ The GPEB/IGCO **Advertising and Marketing Standard for Gambling in BC** (2015) i
 
 ## CGA Code for Responsible Gaming Advertising
 
-The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, applies nationally on top of BC's provincial standards. See [canada/README.md](../README.md#canadian-gambling-advertising-code).
+The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, applies nationally on top of BC's provincial standards. See [canada/README.md](../README.md#code-for-responsible-gaming-advertising-cga-code).
 
 | Provision | Requirement |
 |---|---|
@@ -279,4 +279,4 @@ What BC and Ontario share: **no mandatory verbatim statement**, a required respo
 
 ---
 
-*Cross-references: [BC compliance module](README.md) | [Canada overview — Advertising Code](../README.md#canadian-gambling-advertising-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*
+*Cross-references: [BC compliance module](README.md) | [Canada overview — Advertising Code](../README.md#code-for-responsible-gaming-advertising-cga-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*
