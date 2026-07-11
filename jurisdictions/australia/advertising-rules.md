@@ -45,7 +45,6 @@ last_updated: 2026-06-08
 > **The vertical trap**: Online casino-style gaming and online in-play (live) betting are **illegal** in Australia and must **never** be advertised. This module is for legal online wagering (pre-event sports and race betting, lotteries, keno) and, where noted, land-based venues.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 

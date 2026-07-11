@@ -34,7 +34,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Nevada. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Nevada uses an obligation-based model for most player-facing signage (Reg 5.170 — no prescribed phrasing) but does prescribe verbatim responsible gambling messages in two places: for wagering accounts (Reg 5.225(18)(b)) and at cashless-wagering devices (Regulation 14 / Technical Standard 3.150). Nevada uses a property-by-property self-exclusion model — there is no centralized statewide program. Note the distinction throughout between **binding regulation** (NRS, NGC Regulations 5/5A/14, Technical Standards) and **voluntary industry code** (the AGA Responsible Gaming Code of Conduct), which NGCB references but does not enforce as law.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -719,7 +718,6 @@ Complete before launching {{PROGRAM_NAME}} in Nevada.
 - [ ] `_brand.yml` updated with Nevada values (helpline, age, wagering account message)
 - [ ] `_brand-us.yml` reviewed
 - [ ] `Last verified` date set on this module
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

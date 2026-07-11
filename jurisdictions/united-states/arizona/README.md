@@ -43,7 +43,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Arizona. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Arizona operates a **two-track** regime: state-licensed **event wagering** (retail and mobile) under the Arizona Department of Gaming (A.R.S. Title 5, Chapter 11; A.A.C. R19-4), and **tribal land-based casinos** under the **2021 model Class III tribal-state compact** (A.R.S. § 5-601.02; older compacts authorized under A.R.S. § 5-601). The model compact **standardizes** tribal responsible-gaming duties — signage, self-exclusion, and advertising — in § 3(v)-(x), so for compacting tribes these are specific, citable obligations rather than "consult your compact" unknowns. Online casino is **not** legal. Event wagering advertising has prescriptive content rules (A.A.C. R19-4-110), and self-exclusion is a statewide ADG program (A.R.S. § 5-1320; A.A.C. R19-4-150) with 1-, 5-, and 10-year terms (set by ADG procedure).
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -649,7 +648,6 @@ Complete before launching {{PROGRAM_NAME}} in Arizona.
 ### Governance
 - [ ] `_brand.yml` updated with Arizona values (helpline, legal age)
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

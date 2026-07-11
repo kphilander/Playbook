@@ -40,7 +40,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Massachusetts. It covers the sports wagering advertising code (205 CMR 256) channel-by-channel — prohibited content, minor and at-risk protections, prescribed responsible-gaming font sizing, endorsement rules, required disclosures, record retention — plus where casino advertising sits (obligation-based under 205 CMR 138). Use it alongside the [Massachusetts compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

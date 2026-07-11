@@ -16,7 +16,6 @@ last_updated: "2026-06-08"
 > **Operator note**: This is a detailed reference for gambling advertising rules in Brazil. It supplements the [Brazil compliance module](README.md). Brazil's advertising rules are prescriptive: **Lei no 14.790/2023, Art. 17** sets the statutory prohibitions, and **Portaria SPA/MF no 1.231/2024, Art. 12** enumerates them in detail (roughly nineteen distinct prohibitions). The warning-clause requirements come from **Lei 14.790/2023, Art. 16** and **Portaria 1.231/2024, Art. 13**. The legal market is online-only -- there are no land-based venues.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08
 
 ---
 

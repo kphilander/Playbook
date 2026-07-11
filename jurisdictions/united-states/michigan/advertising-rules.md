@@ -41,7 +41,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Michigan. It covers Michigan's hybrid advertising framework (statutory standards under PA 152 / PA 149 plus administrative rules), the responsible gaming page requirements that attach to advertising (R 432.654 for internet gaming, R 432.754 for internet sports betting), the promotional-wagering and advertising rules (R 432.649 / R 432.749), the 2025 MR 9 advertising changes, channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Michigan compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 > **Citation verification note**: Cornell LII rule mirrors below returned HTTP 200 and reflect current rule text. The official michigan.gov / MGCB PDFs (the 2025 MR 9 rulemaking package, the Responsible Gaming page) bot-block automated checks and are flagged *verify before merge* — they are valid canonical links in a browser.
 

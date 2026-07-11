@@ -44,7 +44,6 @@ last_updated: 2026-06-08
 > *(Online casino is not legal in Massachusetts. If your deployment only covers one vertical, sections marked with the other vertical's tag can be skipped.)*
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -862,7 +861,6 @@ Complete before launching {{PROGRAM_NAME}} in Massachusetts.
 - [ ] `_brand.yml` updated with Massachusetts values (helpline, age, messaging notes)
 - [ ] `_brand-us.yml` reviewed
 - [ ] `Last verified` date set on this module
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

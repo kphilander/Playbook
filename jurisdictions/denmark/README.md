@@ -37,7 +37,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Denmark. Denmark has a centralized national regulatory model under the Danish Gambling Authority (Spillemyndigheden). Unlike federally structured countries such as the US or Canada, Denmark is not subdivided into sub-jurisdictions for gambling purposes -- all requirements are national. Key distinguishing features: mandatory deposit limits before play, ROFUS national self-exclusion register covering all licence holders, prescriptive advertising rules including under-25 bans and proximity restrictions, and StopSpillet helpline obligations. The controlling standard-of-practice document for online responsible gambling is Spillemyndigheden's **Guidance on responsible gambling -- betting and online casino, v1.0 (26 February 2026)**, which sits above the executive orders and the certification programme. Land-based operators (excluding betting) are still covered by the older RG Guide v1.4.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -665,7 +664,6 @@ Complete before launching {{PROGRAM_NAME}} in Denmark.
 ### Governance
 - [ ] `_brand.yml` updated with Denmark values (or `_brand-denmark.yml` merged)
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Source verification: marketing-guide PDFs text-verified (Duty of Disclosure v3.0, 15 Jul 2025; Sales Promotion v5.0, 15 Jul 2025); confirm the SCP document links before merge
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained

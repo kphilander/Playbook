@@ -45,7 +45,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Alberta. Alberta has a dual-body model: AGLC regulates all gambling, while the Alberta iGaming Corporation (AiGC) conducts and manages the private iGaming market launching **July 13, 2026**. Currently, PlayAlberta.ca is the sole regulated online platform; the open competitive market will add private operators. GameSense (licensed from BCLC) is Alberta's responsible gambling program, with trained Advisors and Info Centres at every casino and racing entertainment centre (REC). The operational standards of practice for land-based venues -- signage, Info Centres, self-exclusion operator duties, age-ID checks, and staff training -- are set by AGLC's **Casino Terms & Conditions and Operating Guidelines (CTCOG)** and the parallel **Racing Entertainment Centre Terms & Conditions and Operating Guidelines (RECTCOG)**. Deal Us In certification is mandatory for all casino gaming workers; **Reel Facts** is the parallel mandatory certification for VLT staff.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -754,7 +753,6 @@ Complete before launching {{PROGRAM_NAME}} in Alberta.
 - [ ] `_brand.yml` updated with Alberta values (helpline, age)
 - [ ] `_brand-canada.yml` reviewed
 - [ ] `Last verified` date set on this module
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 - [ ] Self-exclusion API integration monitoring plan in place ahead of open-market launch (July 13, 2026)

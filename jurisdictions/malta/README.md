@@ -40,7 +40,6 @@ last_updated: "2026-06-08"
 > **Regulatory approach**: Prescriptive (risk-based with outcome-focused supervision since 2025)
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -583,7 +582,6 @@ Complete before launching {{PROGRAM_NAME}} in Malta.
 ### Governance
 - [ ] `_brand.yml` updated with Malta values (or `_brand-malta.yml` merged)
 - [ ] `Last verified` date set: 2026-06-08
-- [ ] `Next review due` date set: 2026-09-08
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

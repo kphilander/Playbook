@@ -33,7 +33,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for New Jersey. It covers the DGE Advertising Best Practices (announced by AG Platkin in 2023), the NJAC 13:69O-1.2 internet gaming advertising rules, channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [New Jersey compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

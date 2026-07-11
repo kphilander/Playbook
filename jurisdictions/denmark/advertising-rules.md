@@ -35,7 +35,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Denmark. It covers Denmark's prescriptive multi-layer advertising framework: the Gambling Act (Spilleloven) s.36, the Marketing Practices Act (Markedsforingsloven), the Consumer Ombudsman's oversight, the Spillemyndigheden's two marketing guides -- the **Guide on duty of disclosure v3.0** and the **Guide on sales promotion v5.0** -- the **"information when marketing" rules** in force since 1 April 2020, and the 2027 advertising reform package. Denmark's advertising rules are among the most prescriptive in Europe, with specific restrictions on age targeting, proximity bans, live sports bans, and mandatory disclosure requirements. Use this alongside the [Denmark compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 

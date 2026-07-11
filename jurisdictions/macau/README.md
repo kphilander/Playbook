@@ -39,7 +39,6 @@ last_updated: 2026-06-08
 > *(Interactive/online gambling is prohibited under Macau law. Skip all interactive sections.)*
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -514,7 +513,6 @@ Complete before launching {{PROGRAM_NAME}} in Macau SAR.
 ### Governance
 - [ ] `_brand.yml` updated with Macau helpline, legal age, and messaging values
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

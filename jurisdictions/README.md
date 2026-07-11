@@ -2,7 +2,7 @@
 
 Regulatory compliance modules that map {{PROGRAM_NAME}} brand guidelines to jurisdiction-specific requirements. Each module tells operators exactly what to change, add, or display when deploying {{PROGRAM_NAME}} in a given market.
 
-> **Operator note**: These modules are compliance references, not legal advice. Always verify requirements with qualified legal counsel before launching in any jurisdiction. Regulations change frequently — every module includes a `Last verified` date and a `Next review due` date aligned with the quarterly regulatory check described in the [governance chapter](../brand-book/08-governance.md).
+> **Operator note**: These modules are compliance references, not legal advice. Always verify requirements with qualified legal counsel before launching in any jurisdiction. Regulations change frequently — every module includes a `Last verified` date, and modules are re-checked on the quarterly regulatory cadence described in the [governance chapter](../brand-book/08-governance.md).
 
 ---
 
@@ -209,7 +209,7 @@ Complete this checklist before writing anything:
 - [ ] `{{PLACEHOLDER}}` tokens match `_brand.yml` keys
 - [ ] Mandatory messaging shows both "bare compliance" and "Playbook on-brand" versions
 - [ ] Compliance checklist covers every researched requirement
-- [ ] `Last verified` and `Next review due` dates are set
+- [ ] `Last verified` date is set
 - [ ] This README's [Available jurisdictions](#available-jurisdictions) table is updated
 
 ### Step 4: Review

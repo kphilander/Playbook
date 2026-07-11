@@ -207,7 +207,7 @@ Create the directory `jurisdictions/{country}/{sub-jurisdiction}/` and populate 
    - Complete the collateral adaptation table (tag each row with its vertical)
    - Include `_brand.yml` update snippets
    - Fill in the complete compliance checklist
-   - Set `last_updated` to today's date and `Next review due` to +3 months
+   - Set `last_updated` and the `Last verified` date to today's date
 
    **Principles-based jurisdictions (e.g., Nevada):**
    - Add a "Practical interpretation" subsection to advertising and messaging explaining how broad principles apply in practice
@@ -336,7 +336,7 @@ Then instruct the user to:
 - **Follow existing module patterns.** Match the depth, structure, and voice of existing completed compliance modules. Use the regulatory approach classification to choose the right pattern: Nevada for principles-based, Ontario for prescriptive.
 - **Split by vertical where regimes differ.** If research reveals separate regulatory instruments for land-based vs. interactive, the module must reflect this split in player protection, self-exclusion, messaging, age verification, collateral adaptation, and the compliance checklist. Tag sections clearly so operators deploying in only one vertical can skip irrelevant content.
 - **Fill every section.** Do not leave template placeholder text in the compliance module. If you lack data for a section, note "Not applicable" or "Data not found — verify with legal counsel" rather than leaving `{{PLACEHOLDER}}` tokens. Mark sections as "N/A — [vertical] not legal in this jurisdiction" where appropriate.
-- **Set dates.** Every module must have a `Last verified` date (today) and a `Next review due` date (+3 months).
+- **Set dates.** Every module must have a `Last verified` date (today).
 
 ## Your Task
 

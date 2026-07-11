@@ -42,7 +42,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for British Columbia. As of **13 April 2026**, BC marketing is governed by binding regulation — **B.C. Reg. 215/2025 (Lottery Scheme Marketing, Advertising and Promotion Regulation)**, which **supersedes** the soft 2015 GPEB/IGCO Advertising and Marketing Standard. This reference covers that regulation, the legacy standard, the national **CGA Code for Responsible Gaming Advertising** (January 2026), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. BC is a **Crown monopoly** — BCLC is the sole operator and advertising is centrally controlled and vetted, so there is no field of competing operators. BC's messaging is **obligation-based**: there is **no mandatory verbatim statement**, and "Know your limit, play within it." is the **BCLC/GameSense tagline**, not a regulatory requirement — though B.C. Reg. 215/2025 now mandates that ads carry a responsible-gambling message addressing prevention, mitigation, and treatment (s.6) and clearly indicate 19+ (s.7). Use this alongside the [BC compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

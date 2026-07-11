@@ -40,7 +40,6 @@ last_updated: "2026-06-08"
 > *(Singapore prohibits online gambling under the Gambling Control Act 2022. This module covers land-based casino operations at Marina Bay Sands and Resorts World Sentosa only.)*
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -555,7 +554,6 @@ Complete before launching Playbook in Singapore.
 ### Governance
 - [ ] `_brand.yml` updated with Singapore values
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 - [ ] GRA approval obtained for responsible gambling programme

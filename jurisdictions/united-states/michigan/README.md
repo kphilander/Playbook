@@ -52,7 +52,6 @@ last_updated: 2026-06-08
 > *(If your deployment only covers one vertical, sections marked with another vertical's tag can be skipped.)*
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -833,7 +832,6 @@ Complete before launching {{PROGRAM_NAME}} in Michigan.
 - [ ] `_brand.yml` updated with Michigan values (helpline, age, messaging)
 - [ ] `_brand-us.yml` reviewed
 - [ ] `Last verified` date set on this module
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

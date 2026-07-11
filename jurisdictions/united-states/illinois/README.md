@@ -45,7 +45,6 @@ last_updated: 2026-06-05
 > **Verticals covered**: Land-based Casino, Sports Betting (retail and online), and Video Gaming Terminals (VGTs). **There is no legal online casino / iGaming in Illinois** — iGaming bills (SB 1963 / HB 3080) stalled in committee. VGT requirements map to the land-based `casino` vertical in the comparison tool. Never tag Illinois content with the `online` (iGaming) vertical.
 
 > **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -541,7 +540,6 @@ Complete before launching {{PROGRAM_NAME}} in Illinois.
 ### Governance
 - [ ] `_brand.yml` updated with Illinois values (helpline, legal age)
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

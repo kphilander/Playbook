@@ -3,7 +3,6 @@
 > **Operator note**: Canada regulates gambling at the provincial level. There is no single national regulator, no national helpline, and no unified licensing framework. Each province and territory operates its own system. This overview covers the federal framework and lists all provinces/territories with their key facts. For sub-jurisdiction compliance details, see the individual modules linked below.
 
 > **Last verified**: 2026-02-22
-> **Next review due**: 2026-05-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 

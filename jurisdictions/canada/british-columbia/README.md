@@ -54,7 +54,6 @@ last_updated: 2026-06-08
 > *(BC's land-based RG Standards are principles-based; the Internet Gambling RG Standards governing PlayNow.com are prescriptive. Sections are split accordingly — if your deployment is land-based-only or PlayNow-only, you can skip the other channel's subsections.)*
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -763,7 +762,6 @@ Complete before launching {{PROGRAM_NAME}} in British Columbia.
 - [ ] `_brand.yml` updated with BC values (helpline, age)
 - [ ] `_brand-canada.yml` reviewed (no BC mandatory-messaging entry)
 - [ ] `Last verified` date set on this module (2026-06-08)
-- [ ] `Next review due` date set (2026-09-08)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 - [ ] IGCO standards re-issuance monitored post-13-April-2026 transition

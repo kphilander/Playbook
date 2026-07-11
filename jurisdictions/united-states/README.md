@@ -3,7 +3,6 @@
 > **Operator note**: The United States regulates gambling at the state level. There is no single national regulator, no unified licensing framework, and no federal online gambling law (PASPA was struck down in 2018). Each state determines which forms of gambling are legal, sets licensing requirements, establishes its own legal age, and operates (or delegates) its own regulatory body. This overview covers the federal framework and lists all 50 states plus DC with their key facts. For sub-jurisdiction compliance details, see the individual modules linked below.
 
 > **Last verified**: 2026-02-22
-> **Next review due**: 2026-05-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 

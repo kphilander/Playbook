@@ -33,7 +33,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Ontario. It covers AGCO Registrar's Standards for advertising (iGaming and Gaming/Lottery), the national CGA Code for Responsible Gaming Advertising (January 2026), channel-by-channel analysis, prohibited content, required disclosures, Ontario's distinctive sport betting inducement ban, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Ontario compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

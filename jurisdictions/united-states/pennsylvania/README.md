@@ -38,7 +38,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Pennsylvania. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Pennsylvania uses a prescriptive model with specific advertising font size requirements, a verbatim helpline message for interactive gaming, and detailed player protection tool mandates. Pennsylvania runs four separate self-exclusion programs: casino, interactive gaming, video gaming terminals (VGTs), and fantasy contests. Pennsylvania is the largest US online gambling revenue state, with all verticals legal: land-based casino, online casino (iGaming), online poker, sports betting, video gaming terminals, and fantasy contests.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -707,7 +706,6 @@ Complete before launching {{PROGRAM_NAME}} in Pennsylvania.
 ### Governance
 - [ ] `_brand.yml` updated with Pennsylvania values
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

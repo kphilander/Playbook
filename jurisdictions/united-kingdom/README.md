@@ -42,7 +42,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in the United Kingdom. The UK is the most important regulated online gambling market globally, regulated nationally by the Gambling Commission under the Gambling Act 2005. The Licence Conditions and Codes of Practice (LCCP) contain Social Responsibility (SR) codes that have the force of licence conditions — breach triggers enforcement action including fines (regularly in the millions) and licence revocation. The UK has all verticals: land-based casino, online casino/iGaming, sports betting, bingo, lottery, and poker.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -800,7 +799,6 @@ Complete before launching {{PROGRAM_NAME}} in the United Kingdom.
 - [ ] `_brand.yml` updated with UK values (helpline, age, self-exclusion)
 - [ ] `_brand-uk.yml` reviewed
 - [ ] `Last verified` date set on this module
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 - [ ] GambleAware transition monitoring plan in place

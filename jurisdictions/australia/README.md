@@ -57,7 +57,6 @@ last_updated: 2026-06-08
 > *(If your deployment is land-based-only, the federal online-wagering overlay sections can be skipped. If your deployment is online-wagering-only, the land-based state-detail sections can be skipped — but read the regulatory-authority and helpline sections regardless.)*
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -707,7 +706,6 @@ Complete before launching {{PROGRAM_NAME}} in Australia.
 - [ ] `_brand.yml` updated with Australia values (helpline, age, self-exclusion, messaging)
 - [ ] `_brand-australia.yml` reviewed
 - [ ] `Last verified` date set on this module (2026-06-08)
-- [ ] `Next review due` date set (2026-09-08)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

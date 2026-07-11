@@ -32,7 +32,6 @@ last_updated: "{{YYYY-MM-DD}}"
 > **Operator note**: This guide maps every {{PROGRAM_NAME}} collateral piece to jurisdiction-specific adaptations. Use it alongside the compliance module to ensure every touchpoint meets {{JURISDICTION_NAME}} requirements. Each row tells you what to change and which `_brand.yml` token drives the change.
 
 > **Last verified**: {{YYYY-MM-DD}}
-> **Next review due**: {{YYYY-MM-DD}} *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
