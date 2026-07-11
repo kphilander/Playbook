@@ -101,7 +101,8 @@ jurisdictions/
 │   │   └── README.md                   # Full compliance module
 │   │
 │   ├── michigan/                       # Layer 2: Sub-jurisdiction
-│   │   └── README.md                   # Full compliance module
+│   │   ├── README.md                   # Full compliance module
+│   │   └── advertising-rules.md        # Deep-dive reference
 │   │
 │   ├── nevada/                         # Layer 2: Sub-jurisdiction
 │   │   ├── README.md                   # Full compliance module

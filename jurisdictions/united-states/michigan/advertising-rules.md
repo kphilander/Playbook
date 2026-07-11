@@ -216,7 +216,7 @@ Assessment of which {{PROGRAM_NAME}} templates are Michigan-compliant as-is:
 | **Email templates** | Yes, with adaptation | Add 1-800-GAMBLER in footer; honor opt-out; no marketing to self-excluded individuals |
 | **Social cards** | Review needed | Use 21+ targeting controls; link to RG page; truthful promotional claims |
 | **RG page** | Yes, with adaptation | Add 1-800-GAMBLER, MGCB Compulsive/Problem Gambling link, links to other US-based help organizations, operator RG policy (R 432.654 / R 432.754) |
-| **Helpline card** | Yes, with adaptation | 1-800-GAMBLER, Text 800GAM, 1800gamblerchat.org, 888-223-3044 (MGCB RG Section) |
+| **Helpline card** | Yes, with adaptation | 1-800-GAMBLER, Text 800GAM, 1800gamblerchat.org |
 | **Staff FAQ** | Yes, with adaptation | Add Michigan self-exclusion Q&A (DPL + online program; database noted as involuntary) |
 | **Conversation scripts** | Yes, with adaptation | Add 1-800-GAMBLER in referral scripts; DPL / online self-exclusion enrollment |
 

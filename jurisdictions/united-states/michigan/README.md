@@ -231,7 +231,7 @@ As of **February 8, 2024**, the MGCB adopted **1-800-GAMBLER** as Michigan's sta
 |---|---|
 | **Number** | 888-223-3044 |
 | **Hours** | Monday-Friday, 8 AM - 5 PM ET |
-| **Purpose** | Self-exclusion enrollment, responsible gaming questions, DPL / online self-exclusion inquiries |
+| **Purpose** | Self-exclusion enrollment, responsible gaming questions, DPL / online self-exclusion inquiries. Administrative contact — do not publish as a player helpline |
 
 ### Display rules
 
@@ -655,19 +655,19 @@ Quick-reference table mapping every collateral category to Michigan-specific ada
 | **Digital** | Website footer | Both | MI helpline: 1-800-GAMBLER, Text 800GAM, 1800gamblerchat.org + 21+ + on-brand RG message | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Age gate | Both | Set to 21+ | `{{MIN_AGE}}` = 21 |
 | **Digital** | Wagering account / app | Interactive | RG logo (MGCB-approved); RG page with helpline, MGCB links + other US-based help organizations, operator policy per R 432.654 (iGaming) / R 432.754 (sports betting); deposit/wagering/time limit tools per MCL 432.312(4) | Multiple tokens |
-| **Digital** | Self-exclusion page | Both | Explain the two voluntary programs (DPL for Detroit casinos; online voluntary placement in the Responsible Gaming Database for iGaming/sports betting, form AD-2067) and keep voluntary self-excluders distinct from involuntary prohibited persons in that same database; link to MGCB enrollment forms; MGCB RG Section: 888-223-3044 | — |
+| **Digital** | Self-exclusion page | Both | Explain the two voluntary programs (DPL for Detroit casinos; online voluntary placement in the Responsible Gaming Database for iGaming/sports betting, form AD-2067) and keep voluntary self-excluders distinct from involuntary prohibited persons in that same database; link to MGCB enrollment forms; MGCB RG Section 888-223-3044 (administrative contact for enrollment questions only — not a player helpline) | — |
 | **Digital** | Deposit screen | Interactive | Helpline + on-brand message; deposit limit option prominently displayed per MCL 432.312(4) | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Social media bio | Both | Include 1-800-GAMBLER, 21+ | `{{HELPLINE_NUMBER}}` |
 | **Digital** | Email templates | Both | Helpline + on-brand RG message in every email | `{{HELPLINE_NUMBER}}` |
 | **Print** | Brochure | Both | MI helpline (all contact methods), 21+ notice, DontRegretTheBet.org reference | All tokens |
 | **Print** | Rack card | Land-based | Helpline, on-brand message | `{{HELPLINE_NUMBER}}` |
 | **Print** | Table tent | Land-based | Helpline + on-brand message | `{{HELPLINE_NUMBER}}` |
-| **Print** | Helpline card | Both | 1-800-GAMBLER, Text 800GAM, 1800gamblerchat.org, 888-223-3044 (MGCB RG Section) | All helpline tokens |
+| **Print** | Helpline card | Both | 1-800-GAMBLER, Text 800GAM, 1800gamblerchat.org | All helpline tokens |
 | **Environmental** | Gaming areas | Land-based | RG info + 1-800-GAMBLER per internal controls | `{{HELPLINE_NUMBER}}` |
 | **Environmental** | Digital display | Land-based | On-brand RG message in rotation, helpline | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | TV spot end card | Both | Helpline (3-second minimum recommended) | `{{HELPLINE_NUMBER}}` |
 | **Video/Audio** | Radio spot | Both | Spoken helpline reference | `{{HELPLINE_NUMBER}}` |
-| **Customer service** | Conversation scripts | Both | 1-800-GAMBLER in all referral scripts; DPL / online self-exclusion enrollment in scripts; MGCB RG Section 888-223-3044 | `{{HELPLINE_NUMBER}}` |
+| **Customer service** | Conversation scripts | Both | 1-800-GAMBLER in all referral scripts; DPL / online self-exclusion enrollment in scripts | `{{HELPLINE_NUMBER}}` |
 | **Customer service** | Staff FAQ | Both | Add Michigan self-exclusion Q&A (DPL + online program; database noted as involuntary), update helpline to 1-800-GAMBLER, add DontRegretTheBet.org reference | — |
 
 For a detailed collateral adaptation guide, see the [collateral adaptation template](../../_template/collateral-adaptation.md).
