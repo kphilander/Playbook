@@ -14,7 +14,7 @@
     "name": "Malta Gaming Authority (MGA)",
     "jurisdiction": "Malta",
     "legislation": "Gaming Act (Cap. 583); Player Protection Directive (Directive 2 of 2018); Gaming Authorisations Directive (Directive 3 of 2018); Gaming Commercial Communications Regs (S.L. 583.09)",
-    "unique": "De facto EU online-gaming licensing hub. Risk-based, outcome-focused supervision. Responsible gaming page must be accessible within one click from anywhere on the site. Self-barring: 6 or 12 months, or 12 months auto-renewing &mdash; cannot be removed until period expires. Land-based casino age split: 18+ non-Maltese, 25+ Maltese citizens. Helpline 1777 (RGF Supportline, 24/7) + Sedqa 179. Advertising must include licensee name, licence number, minimum age, and RG message; penalties up to EUR 25,000 per breach.",
+    "unique": "De facto EU online-gaming licensing hub. Risk-based, outcome-focused supervision. Responsible gaming page must be accessible within one click from anywhere on the site. Self-barring: 6 or 12 months, or 12 months auto-renewing &mdash; cannot be removed until period expires. Land-based casino age split: 18+ non-Maltese, 25+ Maltese citizens. Helpline 1777 (RGF Supportline) + national Supportline 179 (FSWS/Appogg). Advertising must include licensee name, licence number, minimum age, and RG message; penalties up to EUR 25,000 per breach.",
     "verticals": "Land-based Casino, Online Casino, Sports Betting",
     "source": "https://www.mga.org.mt/licensee-hub/compliance/player-protection/"
   },
@@ -48,7 +48,7 @@
           "online",
           "sports"
         ],
-        "text": "Operators must display a link to one or more gambling help organisations. Responsible Gaming Foundation (RGF) Supportline 1777 (24/7, free and confidential). Additional support via Sedqa helpline 179. Remote operators must provide this within one click from anywhere on the website."
+        "text": "Operators must display a link to one or more gambling help organisations. Responsible Gaming Foundation (RGF) Supportline 1777 (free and confidential). Additional support via the national Supportline 179 (FSWS/Appogg, 24/7). Remote operators must provide this within one click from anywhere on the website."
       }
     ],
     "2": {
