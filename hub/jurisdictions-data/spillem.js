@@ -6,15 +6,15 @@
   "card": {
     "name": "Spillemyndigheden (Denmark)",
     "juris": "Denmark",
-    "desc": "Spilleloven; Executive Orders 1274/1276"
+    "desc": "Spilleloven; Executive Orders 682/684 of 2025"
   },
   "landBasedOnly": false,
   "verticalLimitation": null,
   "jurisdiction": {
     "name": "Spillemyndigheden (Denmark)",
     "jurisdiction": "Denmark",
-    "legislation": "Spilleloven; Executive Orders 1274/1276 of 2019 (as amended by EOs 682/684 of June 2025); 2025-26 advertising reform package (EC-notified Jan 2026, effective 1 Jan 2027)",
-    "unique": "ROFUS national self-exclusion register (all licence holders must connect); Players MUST set deposit limit before beginning play; Age limit + ROFUS info required in all marketing; StopSpillet helpline required; 18+ minimum age. Effective 1 January 2027: ban on under-25 individuals appearing in gambling advertising; 200m school-proximity ban; live-sports whistle-to-whistle ad ban.",
+    "legislation": "Spilleloven (Consolidation Act No. 1182 of 22 September 2025); Executive Orders 682 (online casino) and 684 (online betting) of 11 June 2025; advertising reform package (Spilpakke 1) proposed - implementing bill lapsed at the March 2026 election",
+    "unique": "ROFUS national self-exclusion register (all licence holders must connect); Players MUST set deposit limit before beginning play; Age limit + ROFUS info required in all marketing; StopSpillet helpline required; 18+ minimum age. Proposed under Spilpakke 1 (implementing bill lapsed at the March 2026 election): ban on under-25 individuals appearing in gambling advertising; 200m school-proximity ban; live-sports whistle-to-whistle ad ban.",
     "verticals": "Land-based Casino, Online Casino, Sports Betting",
     "source": "https://www.spillemyndigheden.dk/en/responsible-gambling"
   },
@@ -69,7 +69,7 @@
     },
     "5": {
       "label": "Spillemyndigheden (Denmark)",
-      "ref": "Exec Orders 1274/1276 of 2019 (as amended by EOs 682/684 of 2025)",
+      "ref": "Exec Orders 682/684 of 11 June 2025",
       "src": "spillem-rg",
       "verticals": [
         "online",
@@ -86,7 +86,7 @@
         "online",
         "sports"
       ],
-      "text": "Currently in force: age limit + ROFUS info required in all marketing; targeting restrictions; cannot suggest gambling solves problems. Effective 1 January 2027: ban on under-25 individuals appearing in gambling advertising; 200m school-proximity ban; live-sports whistle-to-whistle ad ban (EC-notified Jan 2026)."
+      "text": "Currently in force: age limit + ROFUS info required in all marketing; targeting restrictions; cannot suggest gambling solves problems. Proposed under Spilpakke 1 (EC-notified Jan 2026; implementing bill L 127 lapsed at the March 2026 general election and had not been re-enacted as of mid-2026): ban on under-25 individuals in gambling advertising; 200m school-proximity ban; live-sports whistle-to-whistle ad ban."
     },
     "7": {
       "label": "Spillemyndigheden (Denmark)",

@@ -33,7 +33,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Ontario. It covers AGCO Registrar's Standards for advertising (iGaming and Gaming/Lottery), the national CGA Code for Responsible Gaming Advertising (January 2026), channel-by-channel analysis, prohibited content, required disclosures, Ontario's distinctive sport betting inducement ban, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Ontario compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -407,4 +406,4 @@ But Ontario adds one complexity BC doesn't have:
 
 ---
 
-*Cross-references: [Ontario compliance module](README.md) | [Canada overview — Advertising Code](../README.md#canadian-gambling-advertising-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*
+*Cross-references: [Ontario compliance module](README.md) | [Canada overview — Advertising Code](../README.md#code-for-responsible-gaming-advertising-cga-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*

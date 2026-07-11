@@ -37,7 +37,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Denmark. Denmark has a centralized national regulatory model under the Danish Gambling Authority (Spillemyndigheden). Unlike federally structured countries such as the US or Canada, Denmark is not subdivided into sub-jurisdictions for gambling purposes -- all requirements are national. Key distinguishing features: mandatory deposit limits before play, ROFUS national self-exclusion register covering all licence holders, prescriptive advertising rules including under-25 bans and proximity restrictions, and StopSpillet helpline obligations. The controlling standard-of-practice document for online responsible gambling is Spillemyndigheden's **Guidance on responsible gambling -- betting and online casino, v1.0 (26 February 2026)**, which sits above the executive orders and the certification programme. Land-based operators (excluding betting) are still covered by the older RG Guide v1.4.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -70,7 +69,7 @@ last_updated: 2026-06-08
 | **Website** | [spillemyndigheden.dk](https://www.spillemyndigheden.dk/en) |
 | **Governing legislation** | Consolidation Act No. 1182 of 22 September 2025 (Spilleloven / Danish Gambling Act) |
 | **Controlling RG standard (online)** | Guidance on responsible gambling -- betting and online casino, v1.0 (26 February 2026) |
-| **Key executive orders** | Exec Order 1274/2019 (online casino, as amended by 682/2025); Exec Order 1276/2019 (online betting, as amended by 684/2025); Exec Order 686/2025 (land-based betting); Exec Order 1290/2019 (land-based casinos); Exec Order 1289/2019 (gaming machines) |
+| **Key executive orders** | Exec Order 682/2025 (online casino, superseding 1274/2019); Exec Order 684/2025 (online betting, superseding 1276/2019); Exec Order 686/2025 (land-based betting); Exec Order 1290/2019 (land-based casinos); Exec Order 1289/2019 (gaming machines) |
 | **Regulatory approach** | Prescriptive |
 | **Location** | Lerchesgade 35, 6, 5000 Odense C, Denmark |
 | **Contact** | mail@spillemyndigheden.dk / +45 72 38 79 13 |
@@ -162,8 +161,8 @@ The 2026 RG guidance codifies several requirements that are player-facing commun
 | Legislation | Scope | Relevance to {{PROGRAM_NAME}} |
 |---|---|---|
 | Spilleloven (Gambling Act) | National gambling framework | Core legislation: age limits, advertising rules, responsible gambling mandate, ROFUS |
-| Exec Order 1274/2019 (as amended by 682/2025) | Online casino operations | Deposit limits, ROFUS integration, responsible gambling tools, self-test referral (§15), certification requirements |
-| Exec Order 1276/2019 (as amended by 684/2025) | Online betting operations | Deposit limits, ROFUS integration, responsible gambling tools, self-test referral (§13), certification requirements |
+| Exec Order 682/2025 (online casino, superseding 1274/2019) | Online casino operations | Deposit limits, ROFUS integration, responsible gambling tools, self-test referral (§15), certification requirements |
+| Exec Order 684/2025 (online betting, superseding 1276/2019) | Online betting operations | Deposit limits, ROFUS integration, responsible gambling tools, self-test referral (§13), certification requirements |
 | Exec Order 686/2025 | Land-based betting operations | Betting-shop player information, age, signage, ROFUS, responsible gambling duties |
 | Exec Order 1290/2019 | Land-based casino operations | Casino responsible gambling obligations, signage, exclusion |
 | RG Guidance v1.0 (26 Feb 2026) | Online RG standard of practice | Controlling interpretation of all online RG duties; supersedes RG Guide v1.4 for betting and online casino |
@@ -573,7 +572,7 @@ messaging:
 self_exclusion:
   denmark:
     program_name: "ROFUS"
-    url: "https://rofusweb.spillemyndigheden.dk"
+    url: "https://www.rofus.nu"
     # ROFUS registration terms (RG Guidance v1.0 §9.1): 24-hour short break,
     # 1/3/6-month temporary exclusion, or permanent. No period between 24h and 1 month.
     durations: "24 hours, 1 month, 3 months, 6 months, or permanent"
@@ -665,7 +664,6 @@ Complete before launching {{PROGRAM_NAME}} in Denmark.
 ### Governance
 - [ ] `_brand.yml` updated with Denmark values (or `_brand-denmark.yml` merged)
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Source verification: marketing-guide PDFs text-verified (Duty of Disclosure v3.0, 15 Jul 2025; Sales Promotion v5.0, 15 Jul 2025); confirm the SCP document links before merge
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained

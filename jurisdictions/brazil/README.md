@@ -47,7 +47,6 @@ last_updated: "2026-06-08"
 > **Regulatory approach**: Prescriptive (new, Portaria-driven; enumerated advertising prohibitions and mandated player-protection tools)
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -596,7 +595,6 @@ Complete before launching {{PROGRAM_NAME}} in Brazil.
 ### Governance
 - [ ] `_brand.yml` updated with Brazil values (or `_brand-brazil.yml` merged)
 - [ ] `Last verified` date set: 2026-06-08
-- [ ] `Next review due` date set: 2026-09-08
 - [ ] in.gov.br DOU permalinks re-verified from a normal network (or `spa_br-legislacao` relied upon)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained

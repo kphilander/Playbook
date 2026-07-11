@@ -13,7 +13,7 @@
   "jurisdiction": {
     "name": "AGCO (Ontario)",
     "jurisdiction": "Ontario, Canada",
-    "legislation": "Gaming Control Act, 1992; Registrar's Standards for Internet Gaming (rev. April 2026); Registrar's Standards for Gaming and Lottery",
+    "legislation": "Gaming Control Act, 1992; Registrar's Standards for Internet Gaming (rev. May 2026); Registrar's Standards for Gaming and Lottery",
     "unique": "Open competitive iGaming market (live 4 April 2022). Currently ~44 registered operators running ~77-82 gaming websites. Mandatory deposit/loss limits and real-time behavioural monitoring for all iGaming operators. Public advertising of sport betting inducements prohibited. Centralized Self-Exclusion (Std 2.14.1) launched 14 May 2026 as BetGuard, covering all 82 regulated sites. AGCO's July 2025 outcomes-based shift removed pre-approval of RG training programs for Gaming and Lottery Standards (training remains mandatory and outcomes-audited). No mandatory verbatim statement, but ConnexOntario (1-866-531-2600) must be prominently displayed.",
     "verticals": "Land-based Casino, Online Casino, Sports Betting",
     "source": "https://www.agco.ca/en/lottery-and-gaming/guides/registrars-standards-internet-gaming"
@@ -60,7 +60,7 @@
     },
     "4": {
       "label": "AGCO (Ontario)",
-      "ref": "Registrar's Stds for Internet Gaming, Stds 2.14 / 2.14.1 (rev. 2 April 2026)",
+      "ref": "Registrar's Stds for Internet Gaming, Stds 2.14 / 2.14.1 (rev. May 2026)",
       "src": "agco-cse",
       "verticals": [
         "casino",

@@ -3,7 +3,6 @@
 > **Operator note**: The United States regulates gambling at the state level. There is no single national regulator, no unified licensing framework, and no federal online gambling law (PASPA was struck down in 2018). Each state determines which forms of gambling are legal, sets licensing requirements, establishes its own legal age, and operates (or delegates) its own regulatory body. This overview covers the federal framework and lists all 50 states plus DC with their key facts. For sub-jurisdiction compliance details, see the individual modules linked below.
 
 > **Last verified**: 2026-02-22
-> **Next review due**: 2026-05-22 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -81,7 +80,7 @@ The **National Council on Problem Gambling (NCPG)** operates the National Proble
 
 ### 1-800-GAMBLER (CCGNJ-owned — separate from NCPG)
 
-**1-800-GAMBLER is not an NCPG number.** It is a [federally registered service mark **owned by the Council on Compulsive Gambling of New Jersey (CCGNJ)**](https://800gambler.org/about-us/). NCPG's non-exclusive license to use it [**lapsed in 2022**, and the New Jersey courts ordered NCPG to **cease and desist** using the 1-800-GAMBLER® mark](https://www.szaferman.com/ownership-rights-in-the-federally-registered-service-mark-1-800-gambler-are-upheld-by-the-courts-of-new-jersey/).
+**1-800-GAMBLER is not an NCPG number.** It is a [federally registered service mark **owned by the Council on Compulsive Gambling of New Jersey (CCGNJ)**](https://800gambler.org/about-us/). NCPG's non-exclusive license to use it (granted June 2022) [**expired May 31, 2025**, and in September 2025 the New Jersey courts ordered NCPG to **cease and desist** using the 1-800-GAMBLER® mark by September 29, 2025](https://www.szaferman.com/ownership-rights-in-the-federally-registered-service-mark-1-800-gambler-are-upheld-by-the-courts-of-new-jersey/).
 
 | Number | Owner | Notes |
 |---|---|---|

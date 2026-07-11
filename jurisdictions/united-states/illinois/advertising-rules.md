@@ -33,7 +33,6 @@ last_updated: 2026-06-05
 > **Operator note**: This is the detailed advertising reference for Illinois. It covers the sports wagering advertising standard (11 Ill. Adm. Code 1900.340), the August 2025 uniform rules that extended consistent requirements across casinos, video gaming, and sports wagering, channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Illinois compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

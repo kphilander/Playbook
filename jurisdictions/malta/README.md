@@ -40,7 +40,6 @@ last_updated: "2026-06-08"
 > **Regulatory approach**: Prescriptive (risk-based with outcome-focused supervision since 2025)
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -128,10 +127,10 @@ last_updated: "2026-06-08"
 | **Name** | Responsible Gaming Foundation (RGF) Supportline |
 | **Phone** | 1777 (free, confidential) |
 | **Website** | [www.rgf.org.mt](https://www.rgf.org.mt) |
-| **Hours** | 8am -- 8pm daily |
+| **Hours** | Daily; RGF does not publish current hours -- verify before use (not 24/7) |
 | **Languages** | English, Maltese |
 | **Cost** | Free |
-| **Alternative** | Sedqa (Agenzija Sedqa) helpline: 179 |
+| **Alternative** | Supportline 179 (run by FSWS/Appoġġ; free, 24/7, covers gambling) |
 
 **Source**: [Responsible Gaming Foundation](https://www.rgf.org.mt) | [MGA Safer Gambling](https://www.mga.org.mt/player-hub/safer-gambling/)
 
@@ -482,11 +481,11 @@ helplines:
     number: "1777"
     website: "www.rgf.org.mt"
     label: "Responsible Gaming Foundation (RGF) Supportline"
-    hours: "8am-8pm daily"
+    hours: "Daily — RGF does not publish current hours; verify before use"
     languages:
       - English
       - Maltese
-    notes: "Free and confidential. Alternative: Sedqa helpline 179."
+    notes: "Free and confidential. Alternative: Supportline 179 (FSWS/Appoġġ)."
 
 # --- LEGAL ---------------------------------------------
 legal:
@@ -583,7 +582,6 @@ Complete before launching {{PROGRAM_NAME}} in Malta.
 ### Governance
 - [ ] `_brand.yml` updated with Malta values (or `_brand-malta.yml` merged)
 - [ ] `Last verified` date set: 2026-06-08
-- [ ] `Next review due` date set: 2026-09-08
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

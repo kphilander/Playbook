@@ -34,7 +34,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Ohio. It covers Ohio's prescriptive sports gaming advertising standard (OAC 3775-16-08), the promotions and bonuses standard (OAC 3775-16-09), casino advertising via commission-approved plans (OAC 3772-12-06), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Ohio compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

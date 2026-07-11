@@ -37,7 +37,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for the United Kingdom. It covers the four-layer advertising framework: LCCP licence conditions, ASA/CAP non-broadcast codes, BCAP broadcast codes, and the Gambling Industry Code for Socially Responsible Advertising. The UK has the most complex gambling advertising regime globally. Use this alongside the [UK compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 

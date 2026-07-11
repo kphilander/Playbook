@@ -44,7 +44,6 @@ last_updated: 2026-06-05
 > **Operator note**: This is the detailed advertising reference for Sweden. It covers Sweden's prescriptive advertising framework: the Gambling Act (Spellagen 2018:1138) ch.15, the Marketing Act (Marknadsforingslagen 2008:486), the Consumer Agency's general guidelines **KOVFS 2025:2** (the current controlling marketing standard), Spelinspektionen's supervision, and the Consumer Agency / Consumer Ombudsman's role -- plus the industry self-regulatory codes (SPER/BOS, BOS Code of Conduct, Reklamombudsmannen). Sweden's rules pair a broad statutory standard of **moderation** -- now codified into concrete do/don'ts by KOVFS 2025:2 -- with specific prohibitions on bonuses beyond the first occasion of play, marketing to self-excluded players, and advertising unlicensed gambling on broadcast and video-sharing platforms. Use this alongside the [Sweden compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 

@@ -42,7 +42,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for British Columbia. As of **13 April 2026**, BC marketing is governed by binding regulation — **B.C. Reg. 215/2025 (Lottery Scheme Marketing, Advertising and Promotion Regulation)**, which **supersedes** the soft 2015 GPEB/IGCO Advertising and Marketing Standard. This reference covers that regulation, the legacy standard, the national **CGA Code for Responsible Gaming Advertising** (January 2026), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. BC is a **Crown monopoly** — BCLC is the sole operator and advertising is centrally controlled and vetted, so there is no field of competing operators. BC's messaging is **obligation-based**: there is **no mandatory verbatim statement**, and "Know your limit, play within it." is the **BCLC/GameSense tagline**, not a regulatory requirement — though B.C. Reg. 215/2025 now mandates that ads carry a responsible-gambling message addressing prevention, mitigation, and treatment (s.6) and clearly indicate 19+ (s.7). Use this alongside the [BC compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -152,7 +151,7 @@ The GPEB/IGCO **Advertising and Marketing Standard for Gambling in BC** (2015) i
 
 ## CGA Code for Responsible Gaming Advertising
 
-The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, applies nationally on top of BC's provincial standards. See [canada/README.md](../README.md#canadian-gambling-advertising-code).
+The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, applies nationally on top of BC's provincial standards. See [canada/README.md](../README.md#code-for-responsible-gaming-advertising-cga-code).
 
 | Provision | Requirement |
 |---|---|
@@ -279,4 +278,4 @@ What BC and Ontario share: **no mandatory verbatim statement**, a required respo
 
 ---
 
-*Cross-references: [BC compliance module](README.md) | [Canada overview — Advertising Code](../README.md#canadian-gambling-advertising-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*
+*Cross-references: [BC compliance module](README.md) | [Canada overview — Advertising Code](../README.md#code-for-responsible-gaming-advertising-cga-code) | [Messaging Framework — Warning Statement Standards](../../../brand-book/05-messaging-framework.md#warning-statement-standards) | [Application Guidelines](../../../brand-book/07-application-guidelines.md) | [Collateral specs](../../../collateral/)*

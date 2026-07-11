@@ -15,7 +15,6 @@ last_updated: 2026-06-08
 > **Operator note**: This document provides a detailed reference for advertising compliance when deploying {{PROGRAM_NAME}} in Pennsylvania. Pennsylvania uses prescriptive font size standards for gambling assistance messaging across all media. Interactive gaming ads have additional co-branding requirements. All rules are sourced from 58 Pa. Code.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08
 
 ---
 

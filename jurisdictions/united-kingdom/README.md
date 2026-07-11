@@ -42,7 +42,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in the United Kingdom. The UK is the most important regulated online gambling market globally, regulated nationally by the Gambling Commission under the Gambling Act 2005. The Licence Conditions and Codes of Practice (LCCP) contain Social Responsibility (SR) codes that have the force of licence conditions — breach triggers enforcement action including fines (regularly in the millions) and licence revocation. The UK has all verticals: land-based casino, online casino/iGaming, sports betting, bingo, lottery, and poker.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -127,7 +126,7 @@ These flow from the 2023 *High stakes: gambling reform for the digital age* Whit
 | Online slots stake limit -- 25+ players | 9 April 2025 | Maximum £5 per spin/game cycle |
 | Online slots stake limit -- 18-24 players | 21 May 2025 | Maximum £2 per spin/game cycle |
 | Financial vulnerability check (SR 3.4.4) | 30 August 2024 (£500/30 days), tightened to £150/30 days from 28 February 2025 | Light-touch public-record check; no customer-facing friction |
-| Frictionless financial-risk assessments pilot | 2024-25 (data-collection pilot) | Tests higher-spend affordability checks using credit-reference data; not yet a live requirement |
+| Financial-risk assessments (pilot, then staged rollout) | Pilot 30 Aug 2024 - Mar 2025 (SR 3.4.6); analysis phase from 7 Aug 2025 (SR 3.4.7); staged implementation announced July 2026 | Tests higher-spend affordability checks using credit-reference data; not yet a general requirement |
 | Mandatory financial limit prompts (RTS 12A-12E) | 31 October 2025 | Prompt before first deposit; 6-month review reminders |
 | GAMSTOP requirement extended to phone/email betting operators | 1 April 2024 | Telephone and email betting brought into the remote multi-operator scheme |
 | Gross deposit limit definition (RTS 12) | 30 June 2026 | "Deposit limit" must mean gross deposits only |
@@ -474,7 +473,7 @@ Distinct from affordability/source-of-funds work, SR 3.4.4 requires remote opera
 | **Relationship to RG** | Helps identify customers who may be at heightened risk so that customer-interaction action under SR 3.4.3 can follow |
 | **Source** | [LCCP SR 3.4.4 -- Financial vulnerability check](https://www.gamblingcommission.gov.uk/licensees-and-businesses/lccp/condition/3-4-4-financial-vulnerability-check) |
 
-A separate **frictionless financial-risk assessment** (affordability) approach for higher-spending customers is being tested through a Gambling Commission data-collection pilot and is **not yet a live requirement** -- treat it as forthcoming, not current. *(Verify pilot status before relying on it operationally.)*
+A separate **frictionless financial-risk assessment** (affordability) approach for higher-spending customers has moved through a Gambling Commission pilot (SR 3.4.6, 30 Aug 2024 - Mar 2025) and an analysis phase (SR 3.4.7, from 7 Aug 2025). In July 2026 the Commission announced a **staged implementation** -- Stage 1 targets the largest operators at GBP 5,000+ net deposits in 24 hours, with dates to be confirmed in the autumn 2026 consultation response. It is **not yet a general requirement** -- treat it as forthcoming, not current.
 
 ### Required tools and obligations
 
@@ -800,7 +799,6 @@ Complete before launching {{PROGRAM_NAME}} in the United Kingdom.
 - [ ] `_brand.yml` updated with UK values (helpline, age, self-exclusion)
 - [ ] `_brand-uk.yml` reviewed
 - [ ] `Last verified` date set on this module
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 - [ ] GambleAware transition monitoring plan in place

@@ -35,7 +35,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ontario. Ontario has a unique hybrid model: OLG operates land-based casinos and OLG.ca, while the iGaming market is open to private operators registered with AGCO and contracted through iGaming Ontario (iGO). There is no mandatory verbatim statement (unlike BC's "Know your limit, play within it"), but ConnexOntario (1-866-531-2600) must be prominently displayed. Ontario's iGaming standards are among the most detailed in North America, with mandatory deposit/loss limits, per-wager operator-advantage disclosure, real-time behavioural monitoring, and a live centralized self-exclusion program — **BetGuard** (BetGuard.ca, live since May 14, 2026).
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -340,7 +339,7 @@ This is Ontario's most distinctive advertising restriction. **Standard 2.05** pr
 
 ### CGA national code overlay
 
-The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards. See [canada/README.md](../README.md#canadian-gambling-advertising-code). Key additions:
+The **CGA Code for Responsible Gaming Advertising** (January 2026), administered by Ad Standards Canada, adds national standards. See [canada/README.md](../README.md#code-for-responsible-gaming-advertising-cga-code). Key additions:
 - Endorser minimum age of 25+
 - Direction by audience composition (advertising placed for legal-age audiences; talent and individuals depicted aged 25+)
 - Enhanced T&C disclosure requirements
@@ -738,7 +737,6 @@ Complete before launching {{PROGRAM_NAME}} in Ontario.
 - [ ] `_brand.yml` updated with Ontario values (helpline, age)
 - [ ] `_brand-canada.yml` reviewed
 - [ ] `Last verified` date set on this module
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 - [ ] BetGuard centralized self-exclusion integration verified (live since May 14, 2026)

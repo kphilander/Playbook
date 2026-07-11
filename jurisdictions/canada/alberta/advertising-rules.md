@@ -38,7 +38,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Alberta. It covers AGLC Standards and Requirements for Internet Gaming advertising provisions, the national CGA Code for Responsible Gaming Advertising (January 2026), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Alberta compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -140,7 +139,7 @@ The **CGA Code for Responsible Gaming Advertising** (January 2026), administered
 
 Where AGLC standards and the CGA Code overlap, the **more restrictive** requirement applies. In most cases, AGLC's athlete ban (except for RG advocacy) is stricter than the CGA Code's endorser disclosure rules.
 
-See [Canada overview -- CGA Code](../README.md#canadian-gambling-advertising-code) for the full national code analysis.
+See [Canada overview -- CGA Code](../README.md#code-for-responsible-gaming-advertising-cga-code) for the full national code analysis.
 
 *Source: [CGA Code for Responsible Gaming Advertising (Ad Standards)](https://adstandards.ca/wp-content/uploads/CGA-Code-for-Responsible-Gaming-Advertising-2025-10-24.pdf)*
 
@@ -218,4 +217,4 @@ All "Partial" items require the same three changes:
 
 *Sources for in-venue and self-exclusion marketing rules: [CTCOG](https://aglc.ca/documents/casino-terms-conditions-and-operating-guidelines) | [RECTCOG](https://aglc.ca/documents/racing-entertainment-centre-terms-conditions-and-operating-guidelines)*
 
-*Cross-references: [Alberta compliance module](README.md) | [Canada overview](../README.md) | [CGA Code](../README.md#canadian-gambling-advertising-code) | [Application guidelines](../../../brand-book/07-application-guidelines.md) | [Stigma-free language guide](../../../brand-book/04-voice-and-tone.md)*
+*Cross-references: [Alberta compliance module](README.md) | [Canada overview](../README.md) | [CGA Code](../README.md#code-for-responsible-gaming-advertising-cga-code) | [Application guidelines](../../../brand-book/07-application-guidelines.md) | [Stigma-free language guide](../../../brand-book/04-voice-and-tone.md)*

@@ -6,21 +6,21 @@
   "card": {
     "name": "Nevada Gaming Control Board (NGC)",
     "juris": "Nevada, United States",
-    "desc": "NRS Chapter 463; NGC Regulation 5 (Rev. 03/26), Regulation 5A (Rev. 02/26)"
+    "desc": "NRS Chapter 463; NGC Regulation 5 (Rev. 04/26), Regulation 5A (Rev. 02/26)"
   },
   "landBasedOnly": false,
   "verticalLimitation": null,
   "jurisdiction": {
     "name": "Nevada Gaming Control Board / Nevada Gaming Commission",
     "jurisdiction": "Nevada, United States",
-    "legislation": "NRS Chapter 463 (Nevada Gaming Control Act); NGC Regulation 5 (Rev. 03/26); NGC Regulation 5A (Rev. 02/26)",
+    "legislation": "NRS Chapter 463 (Nevada Gaming Control Act); NGC Regulation 5 (Rev. 04/26); NGC Regulation 5A (Rev. 02/26)",
     "unique": "Two-tier regulatory model (NGCB investigates, NGC decides). Property-by-property self-exclusion &mdash; no centralized statewide program. Reg 5.170 mandates posting near ATMs and at the cage. Reg 5A governs interactive gaming (online poker, mobile sports betting). Reg 5.225(18)(b) prescribes a verbatim responsible gambling message for wagering accounts. 21+ minimum age for all products. Online casino not legal; lottery constitutionally prohibited.",
     "verticals": "Land-based Casino, Sports Betting",
-    "source": "https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5Operation.pdf"
+    "source": "https://www.gaming.nv.gov/siteassets/content/regs/gaming-statutes--regulations/regulation-5-as-of-04-26.pdf"
   },
   "sources": {
-    "ngc-reg5": "https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5Operation.pdf",
-    "ngc-reg5a": "https://www.gaming.nv.gov/siteassets/content/home/features/Regulation5A.pdf",
+    "ngc-reg5": "https://www.gaming.nv.gov/siteassets/content/regs/gaming-statutes--regulations/regulation-5-as-of-04-26.pdf",
+    "ngc-reg5a": "https://www.gaming.nv.gov/contentassets/d6342a488e944e6aa02337fa9d3c94e5/regulation-5a-as-of-02-26.pdf",
     "ngc-nrs463": "https://www.leg.state.nv.us/nrs/nrs-463.html"
   },
   "citations": {

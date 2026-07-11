@@ -50,7 +50,6 @@ last_updated: 2026-06-05
 > **Verticals covered**: Online Casino and Sports Betting. Lotteries are also regulated (state lottery monopoly plus licensed non-profit lotteries), but Playbook has no separate `lottery` vertical -- lottery-specific rules are tagged `online`/`sports`. Land-based casino is no longer a licensable vertical in Sweden.
 
 > **Last verified**: 2026-06-05
-> **Next review due**: 2026-09-05 *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -592,7 +591,6 @@ Complete before launching {{PROGRAM_NAME}} in Sweden.
 ### Governance
 - [ ] `_brand.yml` updated with Sweden values (or `_brand-sweden.yml` merged)
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

@@ -33,7 +33,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Nevada. It covers Nevada's principles-based standard (Regulation 5.011(1)(d)), the AGA Responsible Gaming Code of Conduct overlay (voluntary industry code, updated Sept 2025), interactive gaming advertising rules (Regulation 5A.155), channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Nevada compliance module](README.md) for complete coverage. Throughout, distinguish **binding regulation** (NRS, NGC Regulations) from **voluntary industry code** (AGA) — the AGA code is not Nevada law, though NGCB references it.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

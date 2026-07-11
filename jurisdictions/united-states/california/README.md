@@ -48,7 +48,6 @@ last_updated: 2026-06-08
 > *(California does not permit legal online casino gaming or sports betting. Propositions 26 and 27, which would have legalized sports betting, were rejected by voters in November 2022. Tribal leaders have indicated no plans to pursue a 2026 ballot measure; 2028 is the next realistic window.)*
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -765,7 +764,6 @@ Complete before launching {{PROGRAM_NAME}} at a California tribal casino.
 ### Governance
 - [ ] `_brand.yml` updated with California values
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Tribal gaming commission review obtained
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained

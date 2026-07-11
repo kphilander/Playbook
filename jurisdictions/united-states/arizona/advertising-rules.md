@@ -38,7 +38,6 @@ last_updated: 2026-06-08
 > **Operator note**: This is the detailed advertising reference for Arizona. It covers Arizona's prescriptive event wagering advertising standard (A.A.C. R19-4-110), the helpline-display requirement (A.A.C. R19-4-150(A); A.R.S. § 5-1320(A)), tribal advertising via compacts, channel-by-channel analysis, prohibited content, required disclosures, and a {{PROGRAM_NAME}} content compliance matrix. Use this alongside the [Arizona compliance module](README.md) for complete coverage.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 

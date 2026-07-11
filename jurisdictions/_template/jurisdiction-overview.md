@@ -32,7 +32,6 @@ last_updated: "{{YYYY-MM-DD}}"
 > **Operator note**: This is the country-level overview for {{COUNTRY_NAME}}. It covers the national regulatory framework and lists all sub-jurisdictions with their regulators and key facts. For sub-jurisdiction compliance details, see the individual modules linked below.
 
 > **Last verified**: {{YYYY-MM-DD}}
-> **Next review due**: {{YYYY-MM-DD}} *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 

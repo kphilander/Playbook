@@ -38,7 +38,6 @@ last_updated: "{{YYYY-MM-DD}}"
 > *(If your deployment only covers one vertical — e.g., interactive only — sections marked with the other vertical's tag can be skipped.)*
 
 > **Last verified**: {{YYYY-MM-DD}}
-> **Next review due**: {{YYYY-MM-DD}} *(quarterly, per [governance cadence](../../brand-book/08-governance.md))*
 
 ---
 
@@ -494,7 +493,6 @@ Complete before launching {{PROGRAM_NAME}} in {{JURISDICTION_NAME}}.
 ### Governance
 - [ ] `_brand.yml` updated with jurisdiction values
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

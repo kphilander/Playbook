@@ -37,7 +37,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in New Jersey. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. New Jersey uses a hybrid approach: prescriptive rules for internet gaming (NJAC 13:69O) including a verbatim helpline message, and obligation-based requirements for much of land-based operations. NJ has a statewide self-exclusion program covering all casinos, racetracks, and internet gaming platforms.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -739,7 +738,6 @@ Complete before launching {{PROGRAM_NAME}} in New Jersey.
 ### Governance
 - [ ] `_brand.yml` updated with NJ values
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

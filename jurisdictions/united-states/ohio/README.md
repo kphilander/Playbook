@@ -37,7 +37,6 @@ last_updated: 2026-06-08
 > **Operator note**: This module covers every compliance requirement for deploying {{PROGRAM_NAME}} in Ohio. Work through each section, complete the compliance checklist at the bottom, and get legal/compliance sign-off before launch. Ohio uses a prescriptive model requiring commission-approved disordered and problem gambling plans (OAC 3772-12-06). Sports gaming advertising has detailed content requirements (OAC 3775-16-08) and prescriptive promotions/bonus requirements (OAC 3775-16-09). Ohio operates a statewide voluntary exclusion program — Time Out Ohio — covering all casinos, racinos, and sports gaming.
 
 > **Last verified**: 2026-06-08
-> **Next review due**: 2026-09-08 *(quarterly, per [governance cadence](../../../brand-book/08-governance.md))*
 
 ---
 
@@ -730,7 +729,6 @@ Complete before launching {{PROGRAM_NAME}} in Ohio.
 ### Governance
 - [ ] `_brand.yml` updated with Ohio values (helpline, legal age)
 - [ ] `Last verified` date set
-- [ ] `Next review due` date set (quarterly)
 - [ ] Legal/compliance sign-off obtained
 - [ ] Brand owner sign-off obtained
 

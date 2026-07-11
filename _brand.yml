@@ -304,20 +304,31 @@ helplines:
 
   united-kingdom:
     number: "0808 8020 133"
-    website: "www.begambleaware.org"
-    label: "GambleAware"
+    website: "www.gamcare.org.uk"
+    label: "National Gambling Helpline (GamCare)"
+    hours: "24/7"
     self_exclusion: "www.gamstop.co.uk"
+    notes: "Operated by GamCare. GambleAware (www.begambleaware.org) is winding down by March 2026 as the statutory levy system takes over; the helpline number is unchanged. See jurisdictions/united-kingdom/_brand-uk.yml."
 
-  # ── Forward-looking placeholders ──────────────────────────────
-  # The following helpline entries are for jurisdictions without
-  # a full module in jurisdictions/. They are kept here so that
-  # brand-config.mjs can resolve helpline data for any jurisdiction
-  # passed to brandTokens(), even before a full module is created.
+  # ── International helplines ──────────────────────────────
+  # Entries below mirror the per-jurisdiction configs in
+  # jurisdictions/*/_brand-*.yml so that brand-config.mjs can
+  # resolve helpline data for any jurisdiction passed to
+  # brandTokens(). Japan and the UAE are forward-looking
+  # placeholders — no module exists for them yet.
 
   australia:
     number: "1800 858 858"
     website: "www.gamblinghelponline.org.au"
-    label: "Gambling Help Online"
+    label: "National Gambling Helpline"
+    hours: "24/7"
+    notes: "Reached by phone and via Gambling Help Online (chat and self-help). Mandated in advertising taglines alongside gamblinghelponline.org.au."
+
+  brazil:
+    number: ""
+    website: ""
+    label: "Atendimento ao cliente e ouvidoria do operador"
+    notes: "No government helpline is prescribed by the federal regime. Operators must provide internet-accessible customer-service and ombudsman channels guiding at-risk bettors and their families toward help and treatment (Portaria SPA/MF 1.231/2024, Art. 4 XII-XIII). See jurisdictions/brazil/_brand-brazil.yml."
 
   canada:
     british-columbia:
@@ -343,15 +354,15 @@ helplines:
     website: "stopspillet.dk"
     label: "StopSpillet"
     self_exclusion: "ROFUS (rofus.nu) — national self-exclusion register"
-    hours: "Mon-Thu 09:00-22:00, Fri 09:00-18:00, Sat-Sun 12:00-18:00 (CET)"
+    hours: "Mon-Thu 09:00-21:00, Fri 09:00-17:00 (CET); no weekend hours"
 
   malta:
     number: "1777"
     alternate: "179"
     website: "rgf.org.mt"
     label: "Responsible Gaming Foundation (RGF) Supportline"
-    alternate_label: "Sedqa helpline (substance and gambling)"
-    hours: "24/7"
+    alternate_label: "Supportline 179 (FSWS/Appoġġ) — national support line, 24/7"
+    hours: "Daily (not 24/7 — RGF does not publish current hours; verify before use)"
     self_exclusion: "MGA self-barring (mga.org.mt/player-hub/self-barring/)"
 
   singapore:
@@ -362,8 +373,15 @@ helplines:
     self_exclusion: "NCPG self-exclusion + casino-control family exclusion orders"
     notes: "NCPG main helpline is staffed 08:00–23:00 SGT daily (not 24/7). Casino entry levy applies to Singapore Citizens / PRs: S$150 per 24-hour visit or S$3,000 annual."
 
+  sweden:
+    number: "020-81 91 00"
+    website: "www.stodlinjen.se"
+    label: "Stödlinjen"
+    self_exclusion: "Spelpaus (www.spelpaus.se) — national self-exclusion register"
+    notes: "Publicly funded national support line, independent of operators. Required problem-gambling support contact in commercial communications (all channels except radio). See jurisdictions/sweden/_brand-sweden.yml."
+
   european-union:
-    note: "See jurisdictions/european-union/country-specific/ for local helplines"
+    note: "No EU-wide helpline exists. Use the country modules for local helplines — see jurisdictions/denmark/, jurisdictions/malta/, and jurisdictions/sweden/."
 
   japan:
     number: "{{JP_HELPLINE_NUMBER}}"
@@ -375,13 +393,11 @@ helplines:
     notes: "Placeholders — fill in before production deployment. Primary candidate: Society Concerned about the Gambling Addiction (SCGA) or MHLW gambling hotline."
 
   macau:
-    number: "{{MO_HELPLINE_NUMBER}}"
-    text_number: "{{MO_TEXT_NUMBER}}"
-    chat_url: "{{MO_CHAT_URL}}"
-    website: "{{MO_SUPPORT_WEBSITE}}"
-    label: "{{MO_SUPPORT_LABEL}}"
-    hours: "{{MO_SUPPORT_HOURS}}"
-    notes: "Placeholders — fill in before production deployment. Primary candidate: IAS (Instituto de Acção Social) gambling counselling or Sheng Kung Hui Macau RG support."
+    number: "(853) 2823 0101"
+    website: "https://www.dicj.gov.mo/web/en/responsible/responsible01/content.html"
+    label: "24-hour Gambling Counseling Hotline"
+    hours: "24/7"
+    notes: "Commissioned by the Social Welfare Bureau (IAS), operated by Sheng Kung Hui Macau Social Service Coordination Office; displayed on ATM screensavers at all casinos. Alternate: Yat On Responsible Gambling Counselling Centre (853) 2821 0033. See jurisdictions/macau/_brand-macau.yml."
 
   united-arab-emirates:
     number: "{{AE_HELPLINE_NUMBER}}"
