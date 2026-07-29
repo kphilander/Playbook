@@ -1,14 +1,14 @@
 {
   "meta": {
-    "totalAssets": 196,
-    "generated": "2026-06-10T17:39:05.717Z",
+    "totalAssets": 220,
+    "generated": "2026-07-29T22:24:05.825Z",
     "version": "0.1.0",
     "baseUrl": "/tools/playbook",
     "description": "Complete catalog of Playbook brand assets. All assets are CC0-licensed."
   },
   "categories": {
     "logos": {
-      "count": 15,
+      "count": 27,
       "assets": [
         {
           "id": "logo-horizontal-full-color",
@@ -16,7 +16,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-horizontal-full-color.svg",
           "sourceUrl": "visual-identity/logo/primary/logo-horizontal-full-color.svg",
           "format": "svg",
-          "fileSize": 428,
+          "fileSize": 4173,
           "category": "logos",
           "variant": "primary",
           "colorMode": "full-color",
@@ -28,7 +28,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-horizontal-on-light.svg",
           "sourceUrl": "visual-identity/logo/primary/logo-horizontal-on-light.svg",
           "format": "svg",
-          "fileSize": 428,
+          "fileSize": 4173,
           "category": "logos",
           "variant": "primary",
           "colorMode": "on-light",
@@ -40,7 +40,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-stacked-full-color.svg",
           "sourceUrl": "visual-identity/logo/primary/logo-stacked-full-color.svg",
           "format": "svg",
-          "fileSize": 550,
+          "fileSize": 4602,
           "category": "logos",
           "variant": "primary",
           "colorMode": "full-color",
@@ -52,7 +52,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-stacked-on-light.svg",
           "sourceUrl": "visual-identity/logo/primary/logo-stacked-on-light.svg",
           "format": "svg",
-          "fileSize": 550,
+          "fileSize": 4602,
           "category": "logos",
           "variant": "primary",
           "colorMode": "on-light",
@@ -64,7 +64,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-horizontal-mono-dark.svg",
           "sourceUrl": "visual-identity/logo/secondary/logo-horizontal-mono-dark.svg",
           "format": "svg",
-          "fileSize": 428,
+          "fileSize": 4173,
           "category": "logos",
           "variant": "secondary",
           "colorMode": "mono-dark",
@@ -76,7 +76,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-horizontal-mono-white.svg",
           "sourceUrl": "visual-identity/logo/secondary/logo-horizontal-mono-white.svg",
           "format": "svg",
-          "fileSize": 474,
+          "fileSize": 4224,
           "category": "logos",
           "variant": "secondary",
           "colorMode": "mono-white",
@@ -88,7 +88,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-horizontal-reversed.svg",
           "sourceUrl": "visual-identity/logo/secondary/logo-horizontal-reversed.svg",
           "format": "svg",
-          "fileSize": 474,
+          "fileSize": 4224,
           "category": "logos",
           "variant": "secondary",
           "colorMode": "reversed",
@@ -100,7 +100,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-stacked-mono-dark.svg",
           "sourceUrl": "visual-identity/logo/secondary/logo-stacked-mono-dark.svg",
           "format": "svg",
-          "fileSize": 550,
+          "fileSize": 4470,
           "category": "logos",
           "variant": "secondary",
           "colorMode": "mono-dark",
@@ -112,7 +112,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-stacked-mono-white.svg",
           "sourceUrl": "visual-identity/logo/secondary/logo-stacked-mono-white.svg",
           "format": "svg",
-          "fileSize": 596,
+          "fileSize": 4522,
           "category": "logos",
           "variant": "secondary",
           "colorMode": "mono-white",
@@ -124,11 +124,119 @@
           "url": "/tools/playbook/brand-book/assets/logos/logo-stacked-reversed.svg",
           "sourceUrl": "visual-identity/logo/secondary/logo-stacked-reversed.svg",
           "format": "svg",
-          "fileSize": 596,
+          "fileSize": 4654,
           "category": "logos",
           "variant": "secondary",
           "colorMode": "reversed",
           "usage": "Mono/reversed variants for alternate contexts"
+        },
+        {
+          "id": "symbol-mark-mono-dark",
+          "filename": "symbol-mark-mono-dark.svg",
+          "url": "/tools/playbook/brand-book/assets/logos/symbol-mark-mono-dark.svg",
+          "sourceUrl": "visual-identity/logo/symbol/symbol-mark-mono-dark.svg",
+          "format": "svg",
+          "fileSize": 332,
+          "category": "logos",
+          "variant": "symbol",
+          "colorMode": "mono-dark",
+          "usage": "Text-free symbol mark (punched book cover)"
+        },
+        {
+          "id": "symbol-mark-mono-white",
+          "filename": "symbol-mark-mono-white.svg",
+          "url": "/tools/playbook/brand-book/assets/logos/symbol-mark-mono-white.svg",
+          "sourceUrl": "visual-identity/logo/symbol/symbol-mark-mono-white.svg",
+          "format": "svg",
+          "fileSize": 332,
+          "category": "logos",
+          "variant": "symbol",
+          "colorMode": "mono-white",
+          "usage": "Text-free symbol mark (punched book cover)"
+        },
+        {
+          "id": "symbol-mark-on-dark",
+          "filename": "symbol-mark-on-dark.svg",
+          "url": "/tools/playbook/brand-book/assets/logos/symbol-mark-on-dark.svg",
+          "sourceUrl": "visual-identity/logo/symbol/symbol-mark-on-dark.svg",
+          "format": "svg",
+          "fileSize": 464,
+          "category": "logos",
+          "variant": "symbol",
+          "colorMode": "default",
+          "usage": "Text-free symbol mark (punched book cover)"
+        },
+        {
+          "id": "symbol-mark-on-light",
+          "filename": "symbol-mark-on-light.svg",
+          "url": "/tools/playbook/brand-book/assets/logos/symbol-mark-on-light.svg",
+          "sourceUrl": "visual-identity/logo/symbol/symbol-mark-on-light.svg",
+          "format": "svg",
+          "fileSize": 464,
+          "category": "logos",
+          "variant": "symbol",
+          "colorMode": "on-light",
+          "usage": "Text-free symbol mark (punched book cover)"
+        },
+        {
+          "id": "symbol-mark",
+          "filename": "symbol-mark.svg",
+          "url": "/tools/playbook/brand-book/assets/logos/symbol-mark.svg",
+          "sourceUrl": "visual-identity/logo/symbol/symbol-mark.svg",
+          "format": "svg",
+          "fileSize": 464,
+          "category": "logos",
+          "variant": "symbol",
+          "colorMode": "default",
+          "usage": "Text-free symbol mark (punched book cover)"
+        },
+        {
+          "id": "apple-touch-icon",
+          "filename": "apple-touch-icon.png",
+          "url": "/tools/playbook/brand-book/assets/logos/apple-touch-icon.png",
+          "sourceUrl": "visual-identity/logo/favicon/apple-touch-icon.png",
+          "format": "png",
+          "fileSize": 1342,
+          "category": "logos",
+          "variant": "favicon",
+          "colorMode": "default",
+          "usage": "Browser favicon and app icons"
+        },
+        {
+          "id": "favicon-16",
+          "filename": "favicon-16.png",
+          "url": "/tools/playbook/brand-book/assets/logos/favicon-16.png",
+          "sourceUrl": "visual-identity/logo/favicon/favicon-16.png",
+          "format": "png",
+          "fileSize": 363,
+          "category": "logos",
+          "variant": "favicon",
+          "colorMode": "default",
+          "usage": "Browser favicon and app icons"
+        },
+        {
+          "id": "favicon-32",
+          "filename": "favicon-32.png",
+          "url": "/tools/playbook/brand-book/assets/logos/favicon-32.png",
+          "sourceUrl": "visual-identity/logo/favicon/favicon-32.png",
+          "format": "png",
+          "fileSize": 642,
+          "category": "logos",
+          "variant": "favicon",
+          "colorMode": "default",
+          "usage": "Browser favicon and app icons"
+        },
+        {
+          "id": "favicon-48",
+          "filename": "favicon-48.png",
+          "url": "/tools/playbook/brand-book/assets/logos/favicon-48.png",
+          "sourceUrl": "visual-identity/logo/favicon/favicon-48.png",
+          "format": "png",
+          "fileSize": 762,
+          "category": "logos",
+          "variant": "favicon",
+          "colorMode": "default",
+          "usage": "Browser favicon and app icons"
         },
         {
           "id": "favicon-mono-white",
@@ -136,7 +244,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/favicon-mono-white.svg",
           "sourceUrl": "visual-identity/logo/favicon/favicon-mono-white.svg",
           "format": "svg",
-          "fileSize": 593,
+          "fileSize": 413,
           "category": "logos",
           "variant": "favicon",
           "colorMode": "mono-white",
@@ -148,10 +256,22 @@
           "url": "/tools/playbook/brand-book/assets/logos/favicon-reversed.svg",
           "sourceUrl": "visual-identity/logo/favicon/favicon-reversed.svg",
           "format": "svg",
-          "fileSize": 593,
+          "fileSize": 545,
           "category": "logos",
           "variant": "favicon",
           "colorMode": "reversed",
+          "usage": "Browser favicon and app icons"
+        },
+        {
+          "id": "favicon",
+          "filename": "favicon.ico",
+          "url": "/tools/playbook/brand-book/assets/logos/favicon.ico",
+          "sourceUrl": "visual-identity/logo/favicon/favicon.ico",
+          "format": "ico",
+          "fileSize": 1821,
+          "category": "logos",
+          "variant": "favicon",
+          "colorMode": "default",
           "usage": "Browser favicon and app icons"
         },
         {
@@ -160,7 +280,31 @@
           "url": "/tools/playbook/brand-book/assets/logos/favicon.svg",
           "sourceUrl": "visual-identity/logo/favicon/favicon.svg",
           "format": "svg",
-          "fileSize": 548,
+          "fileSize": 631,
+          "category": "logos",
+          "variant": "favicon",
+          "colorMode": "default",
+          "usage": "Browser favicon and app icons"
+        },
+        {
+          "id": "icon-192",
+          "filename": "icon-192.png",
+          "url": "/tools/playbook/brand-book/assets/logos/icon-192.png",
+          "sourceUrl": "visual-identity/logo/favicon/icon-192.png",
+          "format": "png",
+          "fileSize": 1371,
+          "category": "logos",
+          "variant": "favicon",
+          "colorMode": "default",
+          "usage": "Browser favicon and app icons"
+        },
+        {
+          "id": "icon-512",
+          "filename": "icon-512.png",
+          "url": "/tools/playbook/brand-book/assets/logos/icon-512.png",
+          "sourceUrl": "visual-identity/logo/favicon/icon-512.png",
+          "format": "png",
+          "fileSize": 3756,
           "category": "logos",
           "variant": "favicon",
           "colorMode": "default",
@@ -172,7 +316,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/helpline-badge-dark.svg",
           "sourceUrl": "visual-identity/logo/helpline-badge/helpline-badge-dark.svg",
           "format": "svg",
-          "fileSize": 851,
+          "fileSize": 14495,
           "category": "logos",
           "variant": "helpline-badge",
           "colorMode": "default",
@@ -184,7 +328,7 @@
           "url": "/tools/playbook/brand-book/assets/logos/helpline-badge-light.svg",
           "sourceUrl": "visual-identity/logo/helpline-badge/helpline-badge-light.svg",
           "format": "svg",
-          "fileSize": 791,
+          "fileSize": 14424,
           "category": "logos",
           "variant": "helpline-badge",
           "colorMode": "default",
@@ -688,7 +832,7 @@
       ]
     },
     "collateral": {
-      "count": 137,
+      "count": 147,
       "assets": [
         {
           "id": "app-banner-12d.ar",
@@ -2308,6 +2452,30 @@
           "dimensions": null
         },
         {
+          "id": "og-content-hub",
+          "filename": "og-content-hub.png",
+          "url": "/tools/playbook/assets/renders/og-content-hub.png",
+          "sourceUrl": "collateral/render/og-content-hub.png",
+          "format": "png",
+          "fileSize": 946377,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "og-rg-page",
+          "filename": "og-rg-page.png",
+          "url": "/tools/playbook/assets/renders/og-rg-page.png",
+          "sourceUrl": "collateral/render/og-rg-page.png",
+          "format": "png",
+          "fileSize": 935233,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
           "id": "poster-14c-every-game-slots.ar",
           "filename": "poster-14c-every-game-slots.ar.png",
           "url": "/tools/playbook/assets/renders/poster-14c-every-game-slots.ar.png",
@@ -2332,6 +2500,150 @@
           "sourceUrl": "collateral/render/poster-15c-how-sportsbook-wins.ar.png",
           "format": "png",
           "fileSize": 242937,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19a-every-game-math",
+          "filename": "poster-19a-every-game-math.png",
+          "url": "/tools/playbook/assets/renders/poster-19a-every-game-math.png",
+          "sourceUrl": "collateral/render/poster-19a-every-game-math.png",
+          "format": "png",
+          "fileSize": 4237268,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19b-odds-are-public",
+          "filename": "poster-19b-odds-are-public.png",
+          "url": "/tools/playbook/assets/renders/poster-19b-odds-are-public.png",
+          "sourceUrl": "collateral/render/poster-19b-odds-are-public.png",
+          "format": "png",
+          "fileSize": 4062013,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19c-bet-price-tag",
+          "filename": "poster-19c-bet-price-tag.png",
+          "url": "/tools/playbook/assets/renders/poster-19c-bet-price-tag.png",
+          "sourceUrl": "collateral/render/poster-19c-bet-price-tag.png",
+          "format": "png",
+          "fileSize": 4065446,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19d-game-iq",
+          "filename": "poster-19d-game-iq.png",
+          "url": "/tools/playbook/assets/renders/poster-19d-game-iq.png",
+          "sourceUrl": "collateral/render/poster-19d-game-iq.png",
+          "format": "png",
+          "fileSize": 4124348,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19e-never-due",
+          "filename": "poster-19e-never-due.png",
+          "url": "/tools/playbook/assets/renders/poster-19e-never-due.png",
+          "sourceUrl": "collateral/render/poster-19e-never-due.png",
+          "format": "png",
+          "fileSize": 4196141,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19f-your-tools",
+          "filename": "poster-19f-your-tools.png",
+          "url": "/tools/playbook/assets/renders/poster-19f-your-tools.png",
+          "sourceUrl": "collateral/render/poster-19f-your-tools.png",
+          "format": "png",
+          "fileSize": 3678363,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19g-one-decision",
+          "filename": "poster-19g-one-decision.png",
+          "url": "/tools/playbook/assets/renders/poster-19g-one-decision.png",
+          "sourceUrl": "collateral/render/poster-19g-one-decision.png",
+          "format": "png",
+          "fileSize": 3960727,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19h-time-flies",
+          "filename": "poster-19h-time-flies.png",
+          "url": "/tools/playbook/assets/renders/poster-19h-time-flies.png",
+          "sourceUrl": "collateral/render/poster-19h-time-flies.png",
+          "format": "png",
+          "fileSize": 3873361,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -3002,7 +3314,7 @@
       ]
     },
     "photography": {
-      "count": 5,
+      "count": 7,
       "assets": [
         {
           "id": "cinematic-lighting-good",
@@ -3010,7 +3322,7 @@
           "url": "/tools/playbook/brand-book/assets/photography/cinematic-lighting-good.jpg",
           "sourceUrl": "visual-identity/photography/references/cinematic-lighting-good.jpg",
           "format": "jpg",
-          "fileSize": 118086,
+          "fileSize": 718940,
           "category": "photography",
           "quality": "recommended"
         },
@@ -3040,7 +3352,7 @@
           "url": "/tools/playbook/brand-book/assets/photography/dim-lighting-bad.jpg",
           "sourceUrl": "visual-identity/photography/references/dim-lighting-bad.jpg",
           "format": "jpg",
-          "fileSize": 64216,
+          "fileSize": 778422,
           "category": "photography",
           "quality": "avoid"
         },
@@ -3051,6 +3363,26 @@
           "sourceUrl": "visual-identity/photography/references/slot-machines-filler-bad.jpg",
           "format": "jpg",
           "fileSize": 64224,
+          "category": "photography",
+          "quality": "avoid"
+        },
+        {
+          "id": "social-group-good",
+          "filename": "social-group-good.jpg",
+          "url": "/tools/playbook/brand-book/assets/photography/social-group-good.jpg",
+          "sourceUrl": "visual-identity/photography/references/social-group-good.jpg",
+          "format": "jpg",
+          "fileSize": 742662,
+          "category": "photography",
+          "quality": "recommended"
+        },
+        {
+          "id": "solitary-player-bad",
+          "filename": "solitary-player-bad.jpg",
+          "url": "/tools/playbook/brand-book/assets/photography/solitary-player-bad.jpg",
+          "sourceUrl": "visual-identity/photography/references/solitary-player-bad.jpg",
+          "format": "jpg",
+          "fileSize": 713544,
           "category": "photography",
           "quality": "avoid"
         }

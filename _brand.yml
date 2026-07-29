@@ -194,16 +194,25 @@ typography:
 # ─── LOGO ────────────────────────────────────
 
 logo:
-  type: "text-based wordmark"
+  type: "symbol + weight-contrast wordmark"
   font: "Inter"
+  # Wordmark split — the two halves of the name, set in contrasting weights.
+  # Forks: change these to your own program name's halves; set
+  # wordmark_light_text to "" to render the whole name at the bold weight.
+  wordmark_bold_text: "Play"
+  wordmark_light_text: "book"
   play_weight: 800
-  book_weight: 300
-  book_style: "uppercase, tight-spaced"
+  book_weight: 400
+  book_style: "lowercase, matched size"
+  # The play triangle is cut into the P's counter; set false for a stock P.
+  play_counter: true
+  symbol: "book cover with punched play + spine slit"
   layouts:
-    stacked: "Play over BOOK (square format)"
-    horizontal: "Playbook as one word (wide format)"
+    stacked: "symbol above wordmark (square format)"
+    horizontal: "wordmark as one word (wide format)"
   primary_path: "visual-identity/logo/primary/"
   secondary_path: "visual-identity/logo/secondary/"
+  symbol_path: "visual-identity/logo/symbol/"
   favicon_path: "visual-identity/logo/favicon/"
   helpline_badge_path: "visual-identity/logo/helpline-badge/"
   minimum_height: "0.25in"

@@ -18,21 +18,30 @@ The {{PROGRAM_NAME}} logo identifies gambling entertainment literacy content. It
 
 ### Logo design
 
-The {{PROGRAM_NAME}} logo is a text-based wordmark that splits "Playbook" into its two component concepts:
+The {{PROGRAM_NAME}} identity has two parts — a symbol and a wordmark — unified by one idea: **the play is cut into the book.**
 
-- **Play** — set in Inter 800 (bold). Represents the entertainment side of gambling.
-- **book** — set in Inter 300 (light), uppercase, letter-spaced. Represents the knowledge and literacy side.
+**The symbol** is a book cover with the play punched out. A rounded cover tile carries two negative-space cuts: a spine slit on the left and a play triangle in the field. In color contexts the punched play fills with teal; in monochrome it stays open, letting the background show through. Because the mark is built from cuts rather than strokes, it works in any single color, at any size — from a 16px favicon to a 512px app icon — and doubles natively as an app tile.
 
-The weight contrast between the two halves embodies the brand's core duality: enjoying the game *and* understanding it.
+**The wordmark** splits "Playbook" into its two component concepts:
+
+- **Play** — set in Inter 800 (extra-bold). Represents the entertainment side of gambling.
+- **book** — set in Inter 400 (regular), lowercase, matched size. Represents the knowledge and literacy side.
+
+The signature detail: the counter of the "P" is the same play triangle cut into the symbol — the negative-space play, carried into the name itself. It reads as a quiet wink at display sizes and disappears gracefully at small sizes.
+
+The weight contrast between the two halves embodies the brand's core duality: enjoying the game *and* understanding it. In two-tone variants the contrast is reinforced by color: "Play" in navy, "book" in teal.
+
+**No font dependencies.** All wordmark text is converted to Inter vector outlines when the logo files are generated, so the SVGs render identically everywhere — including `<img>` embeds, CMSes, and email clients that block external font loading. Never re-typeset the wordmark in live text; always use the generated files.
 
 ### Logo layouts
 
 | Layout | Name | Best for |
 |---|---|---|
-| **Stacked** (B1) | Play over BOOK, two lines | App icons, social avatars, square formats, hero placements |
-| **Horizontal** (B2) | Playbook as one word | Navigation bars, headers, banners, inline references, small sizes |
+| **Horizontal** (B1) | Wordmark as one word | Navigation bars, headers, banners, inline references, small sizes |
+| **Stacked** (B2) | Symbol above wordmark | Hero placements, square formats, posters, splash screens |
+| **Symbol** (B3) | Symbol alone | App icons, social avatars, favicons, tight spaces below minimum wordmark size |
 
-Both layouts are interchangeable — choose based on the available space and aspect ratio.
+Layouts are interchangeable — choose based on the available space and aspect ratio.
 
 ### Usage rules
 
@@ -54,40 +63,52 @@ Maintain a minimum clear space equal to **1x the height of the logomark** on all
 ```
 
 #### Minimum size
-- **Print**: Minimum 0.25 inches (6.35mm) in height
-- **Digital**: Minimum 24px in height
-- Below these sizes, use the logomark only (no wordmark)
+- **Print**: Minimum 0.25 inches (6.35mm) in height (horizontal wordmark)
+- **Digital**: Minimum 24px in height for the horizontal wordmark; 48px for the stacked lockup
+- Below these sizes, use the symbol mark alone
 
 #### Approved color variants
 
-Each layout (stacked and horizontal) is available in 5 color modes:
+Each layout is available in 5 color modes. The two-tone pairing is the default identity:
 
-| Variant | Play color | Book color | Background | File suffix |
-|---|---|---|---|---|
-| Full color | `primary` navy | `primary` navy | White | `-full-color` |
-| On light | `primary` navy | `secondary_dark` teal | `neutral_50` light | `-on-light` |
-| Reversed | White | `secondary` teal | `primary` navy | `-reversed` |
-| Mono white | White | `neutral_300` | Black / dark | `-mono-white` |
-| Mono dark | `primary` navy | `primary` navy | Light (single-color) | `-mono-dark` |
+| Variant | Play color | book color | Symbol (cover / punched play) | Background | File suffix |
+|---|---|---|---|---|---|
+| Full color | `primary` navy | `secondary_dark` teal | navy / `secondary` teal fill | White | `-full-color` |
+| On light | `primary` navy | `secondary_dark` teal | navy / `secondary` teal fill | `neutral_50` light | `-on-light` |
+| Reversed | White | `secondary` teal | white / `secondary` teal fill | `primary` navy | `-reversed` |
+| Mono white | White | White | white / open punch | Black / dark | `-mono-white` |
+| Mono dark | `primary` navy | `primary` navy | navy / open punch | Light (single-color) | `-mono-dark` |
+
+The wordmark's teal is `secondary_dark` (contrast-safe on light backgrounds); the symbol's punched play fills with full `secondary` teal for its signature pop. In monochrome the punch stays open — the background shows through the cuts.
 
 ### Logo files
 
 ```
 visual-identity/logo/
-  primary/                          ← default use
-    logo-stacked-full-color.svg
-    logo-stacked-on-light.svg
+  primary/                          ← two-tone, default use
     logo-horizontal-full-color.svg
     logo-horizontal-on-light.svg
+    logo-stacked-full-color.svg     ← symbol above wordmark
+    logo-stacked-on-light.svg
   secondary/                        ← dark backgrounds, mono
-    logo-stacked-reversed.svg
-    logo-stacked-mono-white.svg
-    logo-stacked-mono-dark.svg
     logo-horizontal-reversed.svg
     logo-horizontal-mono-white.svg
     logo-horizontal-mono-dark.svg
-  favicon/
-    favicon.svg
+    logo-stacked-reversed.svg
+    logo-stacked-mono-white.svg
+    logo-stacked-mono-dark.svg
+  symbol/                           ← text-free brand icon
+    symbol-mark.svg                 ← navy container, white page, teal play
+    symbol-mark-on-light.svg
+    symbol-mark-on-dark.svg
+    symbol-mark-mono-dark.svg
+    symbol-mark-mono-white.svg
+  favicon/                          ← browser tabs, app icons, PWA
+    favicon.svg                     ← theme-aware (dark-mode container)
+    favicon.ico                     ← 16 + 32 + 48 packed
+    favicon-16.png / -32.png / -48.png
+    apple-touch-icon.png            ← 180×180 full-bleed
+    icon-192.png / icon-512.png     ← PWA manifest icons
     favicon-reversed.svg
     favicon-mono-white.svg
   helpline-badge/
@@ -95,7 +116,21 @@ visual-identity/logo/
     helpline-badge-dark.svg
 ```
 
-Regenerate all logo files: `node collateral/render/build-logos.mjs`
+Regenerate all logo files: `node collateral/render/build-logos.mjs` (add `--skip-raster` to skip the PNG/ICO step). The build also refreshes the copies used by the content hub and slide deck.
+
+### Favicon and app icons
+
+The favicon is the cover tile itself, scaled to fill the frame — the punched spine slit and teal play stay legible at 16px. `favicon.svg` is theme-aware: the cover lightens to `primary_light` when the browser is in dark mode. App icons (`apple-touch-icon.png`, `icon-192/512.png`) are full-bleed squares — a white cover tile on a `primary` navy field, with the punched slit showing navy through; the OS applies its own corner mask.
+
+Recommended head markup:
+
+```html
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- legacy -->
+<link rel="shortcut icon" href="/favicon.ico">
+```
 
 ### Logo previews
 
@@ -114,11 +149,17 @@ Regenerate all logo files: `node collateral/render/build-logos.mjs`
 | ![Stacked mono-dark](../visual-identity/logo/secondary/logo-stacked-mono-dark.svg) | ![Horizontal mono-dark](../visual-identity/logo/secondary/logo-horizontal-mono-dark.svg) |
 | ![Stacked mono-white](../visual-identity/logo/secondary/logo-stacked-mono-white.svg) | ![Horizontal mono-white](../visual-identity/logo/secondary/logo-horizontal-mono-white.svg) |
 
+**Symbol mark:**
+
+| Primary (container) | On light | Mono dark |
+|---|---|---|
+| ![Symbol](../visual-identity/logo/symbol/symbol-mark.svg) | ![Symbol on light](../visual-identity/logo/symbol/symbol-mark-on-light.svg) | ![Symbol mono](../visual-identity/logo/symbol/symbol-mark-mono-dark.svg) |
+
 **Favicon and helpline badge:**
 
-| Favicon | Favicon reversed | Helpline light | Helpline dark |
-|---|---|---|---|
-| ![Favicon](../visual-identity/logo/favicon/favicon.svg) | ![Favicon reversed](../visual-identity/logo/favicon/favicon-reversed.svg) | ![Helpline light](../visual-identity/logo/helpline-badge/helpline-badge-light.svg) | ![Helpline dark](../visual-identity/logo/helpline-badge/helpline-badge-dark.svg) |
+| Favicon | Helpline light | Helpline dark |
+|---|---|---|
+| ![Favicon](../visual-identity/logo/favicon/favicon.svg) | ![Helpline light](../visual-identity/logo/helpline-badge/helpline-badge-light.svg) | ![Helpline dark](../visual-identity/logo/helpline-badge/helpline-badge-dark.svg) |
 
 #### Prohibited modifications
 
@@ -147,10 +188,11 @@ When the {{PROGRAM_NAME}} logo appears alongside an operator's logo:
 A special lockup combines the {{PROGRAM_NAME}} logomark with a helpline number for contexts where regulatory requirements mandate displaying support information alongside branding:
 
 ```
-[Logomark] | Free help 24/7: {{HELPLINE_NUMBER}}
+[Wordmark] | Free help 24/7
+             {{HELPLINE_NUMBER}}
 ```
 
-Specifications for the helpline badge are in `visual-identity/logo/helpline-badge/`.
+The badge's width adapts to the configured helpline number, and all badge text is outlined — safe for any embed context. Files are in `visual-identity/logo/helpline-badge/`.
 
 ---
 

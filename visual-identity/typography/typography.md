@@ -80,7 +80,7 @@ On viewports ≤768px, headings scale down to stay readable without scrolling:
 
 | Name | Value | CSS token | CSS class | Primary usage |
 |---|---|---|---|---|
-| Light | 300 | `--pb-weight-light` | `.pb-light` | Logo "BOOK" half, body light |
+| Light | 300 | `--pb-weight-light` | `.pb-light` | Body light (the logo's "book" half is Regular 400) |
 | Regular | 400 | `--pb-weight-regular` | `.pb-regular` | Body text, form labels |
 | Medium | 500 | `--pb-weight-medium` | `.pb-medium` | Mono data displays, odds |
 | Semibold | 600 | `--pb-weight-semibold` | `.pb-semibold` | H2–H4, CTAs, labels, UI |
@@ -102,9 +102,8 @@ On viewports ≤768px, headings scale down to stay readable without scrolling:
 **Logo-specific:**
 | Element | Tracking |
 |---|---|
-| "Play" | -0.03em |
-| "BOOK" (stacked) | 0.15em |
-| "book" (horizontal) | 0.02em |
+| "Play" | -0.02em |
+| "book" | -0.01em |
 
 ---
 
@@ -162,7 +161,7 @@ When customizing fonts for your operator brand:
 3. Ensure the font supports character sets for your operating jurisdictions.
 4. Test readability at small sizes — Playbook content often appears in constrained spaces.
 5. Update `_brand.yml` and regenerate `playbook-typography.css`.
-6. If replacing Inter, ensure your heading font has a weight ≥700 for the logo and a weight ≤300 for the "BOOK" contrast.
+6. If replacing Inter, ensure your heading font has a weight ≥700 for the logo's "Play" half and a regular (400) weight for the "book" contrast.
 
 ---
 

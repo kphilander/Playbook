@@ -97,10 +97,11 @@ Playbook/
 │
 ├── visual-identity/                  # Production-ready design assets
 │   ├── design-tokens.css             # CSS custom properties for the full system
-│   ├── logo/                         # 15 SVGs: primary, secondary, favicon, helpline badge
-│   │   ├── primary/                  # Full-color and on-light (horizontal + stacked)
+│   ├── logo/                         # 20 SVGs (outlined text, no font deps) + favicon PNG/ICO set
+│   │   ├── primary/                  # Two-tone full-color and on-light (horizontal + stacked)
 │   │   ├── secondary/                # Reversed, mono-white, mono-dark (horizontal + stacked)
-│   │   ├── favicon/                  # 3 favicon variants
+│   │   ├── symbol/                   # Text-free "open book + play" mark (5 variants)
+│   │   ├── favicon/                  # favicon.svg/.ico, PNG sizes, apple-touch, PWA icons
 │   │   └── helpline-badge/           # Dark and light helpline badges
 │   ├── color/                        # Palette and accessibility contrast matrix
 │   ├── typography/                   # Type specimen, CSS, self-hosted font files (woff2)
