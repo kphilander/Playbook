@@ -112,7 +112,7 @@ export default function PhotographySection() {
           <div className="grid grid-cols-3 gap-4">
             {[
               { name: 'Navy', color: 'rgba(27,40,56,0.85)' },
-              { name: 'Teal', color: 'rgba(0,212,170,0.75)' },
+              { name: 'Teal', color: 'rgba(16,185,129,0.75)' },
               { name: 'Orange', color: 'rgba(255,107,53,0.75)' },
             ].map((o, i) => (
               <div key={i} className="rounded-lg overflow-hidden relative h-32">

@@ -45,7 +45,7 @@ const categories = ['All', ...iconCategories.map(c => c.name)];
 
 const brandColors = [
   { name: 'White', value: '#FFFFFF', class: 'bg-white border-white/30' },
-  { name: 'Teal', value: '#00D4AA', class: 'bg-teal border-teal/30' },
+  { name: 'Teal', value: '#10B981', class: 'bg-teal border-teal/30' },
   { name: 'Orange', value: '#FF6B35', class: 'bg-orange border-orange/30' },
   { name: 'Navy Light', value: '#2A3F56', class: 'bg-navy-light border-white/20' },
 ];

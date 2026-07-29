@@ -20,7 +20,7 @@ The {{PROGRAM_NAME}} logo identifies gambling entertainment literacy content. It
 
 The {{PROGRAM_NAME}} identity has two parts — a symbol and a wordmark — that say the same thing: **the book you play.**
 
-**The symbol** is a closed book beside a play triangle: a rounded bar (the book, spine out) and the play, side by side. Its primary form carries the two shapes in a rounded `primary` navy tile — white book, teal play — the same mark used across {{PROGRAM_NAME}} Academy. Two flat shapes keep it legible from a 16px favicon to a 512px app icon, and it works in a single color.
+**The symbol** is a closed book beside a play triangle: a rounded bar (the book, spine out) and the play, side by side. Its primary form carries the two shapes in a rounded `primary` navy tile — white book, emerald play — the same mark used across {{PROGRAM_NAME}} Academy. Two flat shapes keep it legible from a 16px favicon to a 512px app icon, and it works in a single color.
 
 **The wordmark** is the program name set in Inter 700 (bold), tight tracking, one weight, one color. No split styling, no case games — the confidence is in the restraint. Color carries the variants: navy on light, white on dark.
 
@@ -66,13 +66,13 @@ Each layout is available in 5 color modes:
 
 | Variant | Wordmark | Symbol (book / play) | Background | File suffix |
 |---|---|---|---|---|
-| Full color | `primary` navy | navy tile: white / `secondary` teal | White | `-full-color` |
-| On light | `primary` navy | navy tile: white / `secondary` teal | `neutral_50` light | `-on-light` |
-| Reversed | White | bare mark: white / `secondary` teal | `primary` navy | `-reversed` |
+| Full color | `primary` navy | navy tile: white / `secondary` emerald | White | `-full-color` |
+| On light | `primary` navy | navy tile: white / `secondary` emerald | `neutral_50` light | `-on-light` |
+| Reversed | White | bare mark: white / `secondary` emerald | `primary` navy | `-reversed` |
 | Mono white | White | bare mark: white / white | Black / dark | `-mono-white` |
 | Mono dark | `primary` navy | bare mark: navy / navy | Light (single-color) | `-mono-dark` |
 
-On light backgrounds the symbol travels inside its navy tile; on dark or single-color contexts the bare mark is used and the background does the tile's job. The play triangle is the one place the brand teal appears in the logo.
+On light backgrounds the symbol travels inside its navy tile; on dark or single-color contexts the bare mark is used and the background does the tile's job. The play triangle is the one place the brand emerald appears in the logo.
 
 ### Logo files
 
@@ -91,7 +91,7 @@ visual-identity/logo/
     logo-stacked-mono-white.svg
     logo-stacked-mono-dark.svg
   symbol/                           ← text-free brand icon
-    symbol-mark.svg                 ← navy tile, white book, teal play
+    symbol-mark.svg                 ← navy tile, white book, emerald play
     symbol-mark-on-light.svg        ← bare mark for light backgrounds
     symbol-mark-on-dark.svg
     symbol-mark-mono-dark.svg
@@ -113,7 +113,7 @@ Regenerate all logo files: `node collateral/render/build-logos.mjs` (add `--skip
 
 ### Favicon and app icons
 
-The favicon is the brand tile — the rounded navy square with white book and teal play, identical to the {{PROGRAM_NAME}} Academy favicon. App icons (`apple-touch-icon.png`, `icon-192/512.png`) are the same mark on a full-bleed navy square; the OS applies its own corner mask.
+The favicon is the brand tile — the rounded navy square with white book and emerald play, identical to the {{PROGRAM_NAME}} Academy favicon. App icons (`apple-touch-icon.png`, `icon-192/512.png`) are the same mark on a full-bleed navy square; the OS applies its own corner mask.
 
 Recommended head markup:
 
@@ -193,7 +193,7 @@ The badge's width adapts to the configured helpline number, and all badge text i
 
 ### Design philosophy
 
-The default {{PROGRAM_NAME}} palette is built for a modern, entertainment-grade aesthetic. It should feel like it belongs on a gaming platform, not a health website. Deep navy conveys authority and sophistication. Electric teal creates energy and modernity. Bold orange drives action and attention.
+The default {{PROGRAM_NAME}} palette is built for a modern, entertainment-grade aesthetic. It should feel like it belongs on a gaming platform, not a health website. Deep navy conveys authority and sophistication. Emerald creates energy and forward motion. Bold orange drives action and attention.
 
 The palette avoids the washed-out blues and clinical greens common in traditional RG programs. This is a lifestyle brand palette — confident, contemporary, and high-impact.
 
@@ -209,9 +209,11 @@ The palette avoids the washed-out blues and clinical greens common in traditiona
 
 | Role | Color | Hex | Usage |
 |---|---|---|---|
-| Secondary | Electric teal | `#00D4AA` | Interactive elements, links, highlights |
-| Secondary light | Light teal | `#33DDBB` | Hover states, subtle highlights |
-| Secondary dark | Dark teal | `#00A888` | Pressed states, secondary text on light backgrounds |
+| Secondary | Emerald | `#10B981` | Interactive elements, links, highlights |
+| Secondary light | Light emerald | `#34D399` | Hover states, subtle highlights |
+| Secondary dark | Deep emerald | `#047857` | Pressed states, secondary text on light backgrounds |
+
+The emerald family is a sanctioned range, not a single pin: hold the hue, flex the depth. Anything between `secondary_light` and `secondary_dark` reads on-brand — pick the step that meets contrast for the context (deep emerald is the text-safe step at 5.48:1 on white).
 
 ### Accent palette
 
@@ -561,10 +563,10 @@ When the operator's platform supports dark mode, the {{PROGRAM_NAME}} color syst
 | `text_secondary` | `neutral_700` (#3D3D5C) | `neutral_300` (#A8A8C0) | 7.33:1 ✓ |
 | `text_muted` | `neutral_500` (#6B6B8A) | `neutral_500` (#6B6B8A) | 3.33:1 (large text only) |
 | `headers` | `primary` (#1B2838) | `primary_light` (#2A3F56) | — |
-| `link` | `primary_light` (#2A3F56) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+| `link` | `primary_light` (#2A3F56) | `secondary` (#10B981) | 8.93:1 ✓ |
 | `border` | `neutral_500` (#6B6B8A) | `neutral_700` (#3D3D5C) | — |
 | `accent` (CTA) | `accent` (#FF6B35) | `accent_light` (#FF8A5C) | 7.34:1 ✓ |
-| `secondary` (CTA) | `secondary_dark` (#00A888) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+| `secondary` (CTA) | `secondary_dark` (#047857) | `secondary` (#10B981) | 8.93:1 ✓ |
 
 **Note on muted text in dark mode**: `neutral_500` on `neutral_900` produces only 3.33:1 — this passes for large text (3:1 threshold) but fails AA normal text (4.5:1). Use muted text sparingly in dark mode, and only at 18px+ or 14px+ bold.
 
@@ -589,7 +591,7 @@ Status colors (success, warning, danger, info) need adjustment for dark backgrou
 | Illustrations / icons | Use light-on-dark variants (swap stroke and fill colors) |
 | Charts / data viz | Use light text and grid lines; reduce opacity of non-essential elements |
 | Screenshots | Add a subtle border (`neutral_700`, 1px) so edges don't bleed into the background |
-| Brand gradient bar | No change — the orange → teal gradient works on both light and dark |
+| Brand gradient bar | No change — the orange → emerald gradient works on both light and dark |
 
 ### CSS implementation
 
@@ -602,7 +604,7 @@ Status colors (success, warning, danger, info) need adjustment for dark backgrou
     --pb-text-secondary: #A8A8C0;
     --pb-text-muted: #6B6B8A;
     --pb-border: #3D3D5C;
-    --pb-link: #00D4AA;
+    --pb-link: #10B981;
     --pb-accent: #FF8A5C;
   }
 

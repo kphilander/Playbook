@@ -57,7 +57,7 @@ Widgets use Shadow DOM for style isolation. Override brand colors with CSS custo
 ```css
 :root {
   --pb-color-primary: #1B2838;
-  --pb-color-secondary: #00D4AA;
+  --pb-color-secondary: #10B981;
   --pb-color-accent: #FF6B35;
 }
 ```

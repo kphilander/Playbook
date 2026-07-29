@@ -12,15 +12,15 @@
 
   <!-- Row 1: Coin flip -->
   <text x="40" y="126" fill="#FFFFFF" font-size="15" font-weight="600">Coin flip (heads)</text>
-  <text x="440" y="126" fill="#00D4AA" font-size="15" font-weight="700">1 in 2</text>
-  <rect x="620" y="114" width="140" height="16" rx="3" fill="#00D4AA"/>
+  <text x="440" y="126" fill="#10B981" font-size="15" font-weight="700">1 in 2</text>
+  <rect x="620" y="114" width="140" height="16" rx="3" fill="#10B981"/>
 
   <!-- Row 2 -->
   <line x1="40" y1="146" x2="760" y2="146" stroke="#2A3F56" stroke-width="0.5"/>
   <text x="40" y="174" fill="#FFFFFF" font-size="15" font-weight="600">Dealt a royal flush in poker</text>
-  <text x="440" y="174" fill="#00D4AA" font-size="15" font-weight="700">1 in 649,740</text>
+  <text x="440" y="174" fill="#10B981" font-size="15" font-weight="700">1 in 649,740</text>
   <rect x="620" y="162" width="140" height="16" rx="3" fill="#2A3F56"/>
-  <rect x="620" y="162" width="4" height="16" rx="2" fill="#00D4AA"/>
+  <rect x="620" y="162" width="4" height="16" rx="2" fill="#10B981"/>
 
   <!-- Row 3 -->
   <line x1="40" y1="194" x2="760" y2="194" stroke="#2A3F56" stroke-width="0.5"/>

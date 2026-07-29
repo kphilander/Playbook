@@ -19,7 +19,11 @@
 # ─── META ────────────────────────────────────
 
 meta:
-  program_name: "Playbook"
+  # Formal name, used wherever the program is named in full (wordmark,
+  # titles, formal documents). short_name is the everyday shorthand —
+  # both are fine in prose.
+  program_name: "Playbook RG"
+  short_name: "Playbook"
   organization: "Your Company Name"
   website: "https://example.com/playbook"
   contact_email: "info@gamblingpolicy.com"
@@ -81,9 +85,11 @@ color:
     primary_dark: "#0F1923"
 
     # Secondary — interactive, energetic
-    secondary: "#00D4AA"                  # Electric teal
-    secondary_light: "#33DDBB"
-    secondary_dark: "#00A888"
+    # The emerald family. Variation within the family (light ↔ dark)
+    # is sanctioned; hold the hue, flex the depth.
+    secondary: "#10B981"                  # Emerald
+    secondary_light: "#34D399"
+    secondary_dark: "#047857"
 
     # Accent — CTAs, highlights
     accent: "#FF6B35"                     # Bold orange
@@ -110,6 +116,7 @@ color:
 
   # Friendly aliases — maps short names used in build scripts to palette keys.
   # Forkers: update these if you rename palette entries.
+  # ("teal" is a historical alias name — it now resolves to the emerald family.)
   aliases:
     navy: "primary"
     navyLight: "primary_light"
@@ -134,12 +141,12 @@ color:
     text_primary: "neutral_900"
     text_secondary: "neutral_700"
     text_muted: "neutral_500"
-    link: "primary_light"                  # 10.80:1 on white (was secondary @ 1.91:1 — FAIL)
-    link_hover: "primary"                  # 14.92:1 on white (was secondary_dark @ 3.02:1 — FAIL)
+    link: "secondary_dark"                 # 5.48:1 on white — deep emerald passes AA text
+    link_hover: "primary"                  # 14.92:1 on white
     cta_primary_bg: "accent"
     cta_primary_text: "primary"            # 5.26:1 on accent (was white @ 2.84:1 — FAIL)
     cta_secondary_bg: "secondary"
-    cta_secondary_text: "primary"          # 7.82:1 on secondary (was white @ 1.91:1 — FAIL)
+    cta_secondary_text: "primary"          # 5.88:1 on secondary (was white @ 2.54:1 — FAIL)
     quiz_correct: "success"
     quiz_incorrect: "danger"
     feature_highlight: "secondary"
@@ -199,7 +206,7 @@ logo:
   # Wordmark text and weight. Forks: set your own program name here; the
   # optional wordmark_light_text renders a second half at book_weight for
   # a split-weight treatment (empty = whole name at the bold weight).
-  wordmark_bold_text: "Playbook"
+  wordmark_bold_text: "Playbook RG"
   wordmark_light_text: ""
   play_weight: 700
   book_weight: 400

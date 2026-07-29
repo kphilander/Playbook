@@ -7,7 +7,7 @@
   <line x1="40" y1="56" x2="760" y2="56" stroke="#2A3F56" stroke-width="1"/>
 
   <!-- Legend -->
-  <rect x="40" y="70" width="16" height="16" rx="3" fill="#00D4AA"/>
+  <rect x="40" y="70" width="16" height="16" rx="3" fill="#10B981"/>
   <text x="62" y="83" fill="#A8A8C0" font-size="12">Stand</text>
   <rect x="130" y="70" width="16" height="16" rx="3" fill="#FF6B35"/>
   <text x="152" y="83" fill="#A8A8C0" font-size="12">Hit</text>
@@ -49,11 +49,11 @@
   <!-- Row: 11 — Double all -->
   <g><rect x="290" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="330" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="370" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="410" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="450" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="500" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="540" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="580" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="620" y="226" width="32" height="22" rx="3" fill="#FFB300"/><rect x="660" y="226" width="32" height="22" rx="3" fill="#FF6B35"/></g>
   <!-- Row: 12 — Stand vs 4-6, Hit rest -->
-  <g><rect x="290" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="330" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="370" y="256" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="410" y="256" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="450" y="256" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="500" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="540" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="580" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="620" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="660" y="256" width="32" height="22" rx="3" fill="#FF6B35"/></g>
+  <g><rect x="290" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="330" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="370" y="256" width="32" height="22" rx="3" fill="#10B981"/><rect x="410" y="256" width="32" height="22" rx="3" fill="#10B981"/><rect x="450" y="256" width="32" height="22" rx="3" fill="#10B981"/><rect x="500" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="540" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="580" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="620" y="256" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="660" y="256" width="32" height="22" rx="3" fill="#FF6B35"/></g>
   <!-- Row: 13-16 — Stand vs 2-6, Hit rest -->
-  <g><rect x="290" y="286" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="330" y="286" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="370" y="286" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="410" y="286" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="450" y="286" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="500" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="540" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="580" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="620" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="660" y="286" width="32" height="22" rx="3" fill="#FF6B35"/></g>
+  <g><rect x="290" y="286" width="32" height="22" rx="3" fill="#10B981"/><rect x="330" y="286" width="32" height="22" rx="3" fill="#10B981"/><rect x="370" y="286" width="32" height="22" rx="3" fill="#10B981"/><rect x="410" y="286" width="32" height="22" rx="3" fill="#10B981"/><rect x="450" y="286" width="32" height="22" rx="3" fill="#10B981"/><rect x="500" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="540" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="580" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="620" y="286" width="32" height="22" rx="3" fill="#FF6B35"/><rect x="660" y="286" width="32" height="22" rx="3" fill="#FF6B35"/></g>
   <!-- Row: 17+ — all Stand -->
-  <g><rect x="290" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="330" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="370" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="410" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="450" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="500" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="540" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="580" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="620" y="316" width="32" height="22" rx="3" fill="#00D4AA"/><rect x="660" y="316" width="32" height="22" rx="3" fill="#00D4AA"/></g>
+  <g><rect x="290" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="330" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="370" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="410" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="450" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="500" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="540" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="580" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="620" y="316" width="32" height="22" rx="3" fill="#10B981"/><rect x="660" y="316" width="32" height="22" rx="3" fill="#10B981"/></g>
 
   <!-- YOUR HAND label (vertical) -->
   <text x="20" y="240" fill="#6B6B8A" font-size="11" font-weight="600" letter-spacing="0.5" transform="rotate(-90 20 240)">YOUR HAND ↓</text>
@@ -67,7 +67,7 @@
   <text x="40" y="440" fill="#A8A8C0" font-size="13">This chart alone drops the house edge from ~2% to ~0.5%. Takes 20 minutes to learn.</text>
 
   <!-- House edge callout -->
-  <text x="550" y="390" fill="#00D4AA" font-size="36" font-weight="900">0.5%</text>
+  <text x="550" y="390" fill="#10B981" font-size="36" font-weight="900">0.5%</text>
   <text x="660" y="382" fill="#A8A8C0" font-size="12">house edge</text>
   <text x="660" y="398" fill="#A8A8C0" font-size="12">with this chart</text>
 </svg>

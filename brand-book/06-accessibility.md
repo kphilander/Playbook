@@ -215,10 +215,10 @@ The `visual-identity/color/accessibility-matrix.md` audit identified five critic
 
 | Finding | Issue | Impact | Fix |
 |---|---|---|---|
-| Link text on light backgrounds | Secondary (#00D4AA) on white = 1.91:1 | Links invisible to low-vision users | Use Primary Light (#2A3F56) for links on light backgrounds |
-| Link hover on light backgrounds | Secondary Dark (#00A888) on Neutral 50 = 2.78:1 | Hover state still fails AA | Use Primary (#1B2838) for hover |
+| Link text on light backgrounds | Secondary (#10B981) on white = 1.91:1 | Links invisible to low-vision users | Use Primary Light (#2A3F56) for links on light backgrounds |
+| Link hover on light backgrounds | Secondary Dark (#047857) on Neutral 50 = 2.78:1 | Hover state still fails AA | Use Primary (#1B2838) for hover |
 | Primary CTA button | White on Accent (#FF6B35) = 2.84:1 | CTA button text unreadable | Use Primary (#1B2838) text on Accent background |
-| Secondary CTA button | White on Secondary (#00D4AA) = 1.91:1 | Button text unreadable | Use Primary text on Secondary background |
+| Secondary CTA button | White on Secondary (#10B981) = 1.91:1 | Button text unreadable | Use Primary text on Secondary background |
 | Form borders | Neutral 300 (#A8A8C0) on White = 2.33:1 | Form inputs invisible (SC 1.4.11) | Use Neutral 500 (#6B6B8A) for form borders |
 
 These fixes are incorporated in the recommended `_brand.yml` changes in the accessibility matrix. Operators who customize colors must run their own contrast audit. See `visual-identity/color/accessibility-matrix.md` for the full matrix and all approved color pairings.

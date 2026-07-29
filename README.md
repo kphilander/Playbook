@@ -1,6 +1,6 @@
-# Playbook
+# Playbook RG
 
-**Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.**
+**Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.** Formally *Playbook RG*; "Playbook" works as shorthand.
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](_brand.yml)

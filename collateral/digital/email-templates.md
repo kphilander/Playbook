@@ -29,9 +29,9 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 | **Text on dark** | `#FFFFFF` headline, `#A8A8C0` subtext |
 | **Headings** | Inter (fallback: Arial, Helvetica, sans-serif) |
 | **Body text** | Source Sans 3 (fallback: Georgia, serif) |
-| **Link color** | Teal `#00D4AA` |
-| **CTA buttons** | Teal `#00D4AA` bg, navy `#1B2838` text, 16px padding, rounded 6px |
-| **Accent bar** | 4px gradient `#FF6B35` → `#00D4AA` (top of email, use image) |
+| **Link color** | Teal `#10B981` |
+| **CTA buttons** | Teal `#10B981` bg, navy `#1B2838` text, 16px padding, rounded 6px |
+| **Accent bar** | 4px gradient `#FF6B35` → `#10B981` (top of email, use image) |
 
 ---
 

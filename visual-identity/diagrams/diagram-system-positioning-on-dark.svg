@@ -38,7 +38,7 @@
     <text x="912" y="111">Active role</text>
 
     <!-- Playbook Tier 2 -->
-    <circle cx="880" cy="160" r="20" fill="#1A1A2E" stroke="#00D4AA" stroke-width="4"/>
+    <circle cx="880" cy="160" r="20" fill="#1A1A2E" stroke="#10B981" stroke-width="4"/>
     <text x="912" y="166">Playbook Tier 2</text>
   </g>
 
@@ -119,8 +119,8 @@
   <circle cx="1100" cy="525" r="20" fill="#1A1A2E" stroke="#A8A8C0" stroke-width="2.5"/>
 
   <!-- Treatment row (y=695) -->
-  <circle cx="300" cy="695" r="20" fill="#242438" stroke="#00D4AA" stroke-width="4"/>
-  <circle cx="460" cy="695" r="20" fill="#242438" stroke="#00D4AA" stroke-width="4"/>
+  <circle cx="300" cy="695" r="20" fill="#242438" stroke="#10B981" stroke-width="4"/>
+  <circle cx="460" cy="695" r="20" fill="#242438" stroke="#10B981" stroke-width="4"/>
   <circle cx="620" cy="695" r="20" fill="#242438" stroke="#A8A8C0" stroke-width="2.5"/>
   <circle cx="780" cy="695" r="20" fill="#F5F5FA"/>
   <circle cx="940" cy="695" r="20" fill="#F5F5FA"/>
@@ -132,7 +132,7 @@
   <!-- Operators (x=300) ↔ Players (x=460)         -->
   <!-- ─────────────────────────────────────────── -->
   <g filter="url(#lozengeShadow)">
-    <rect x="240" y="485" width="280" height="80" rx="40" fill="#00D4AA"/>
+    <rect x="240" y="485" width="280" height="80" rx="40" fill="#10B981"/>
   </g>
   <text x="380" y="522" font-size="22" font-weight="800" fill="#0F1923" text-anchor="middle">Playbook Tier 1</text>
   <text x="380" y="545" font-size="11" font-weight="700" fill="#0F1923" fill-opacity="0.72" letter-spacing="0.14em" text-anchor="middle">COMMUNICATION LAYER</text>

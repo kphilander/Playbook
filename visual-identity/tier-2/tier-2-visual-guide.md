@@ -30,7 +30,7 @@ Tier 1 and Tier 2 share the same brand — same fonts, same logo, same design sy
 | Dimension | Tier 1 (Entertainment Literacy) | Tier 2 (Support & Crisis) |
 |---|---|---|
 | **Energy** | High — confident, energetic, engaging | Low — calm, steady, unhurried |
-| **Color density** | Full palette — navy, teal, orange working together | Reduced — navy + white + warm neutrals |
+| **Color density** | Full palette — navy, emerald, orange working together | Reduced — navy + white + warm neutrals |
 | **Visual complexity** | Rich — charts, illustrations, multi-column layouts | Minimal — single focus, generous white space |
 | **Tone cues** | Teal and orange signal energy and action | Neutral warmth signals safety and openness |
 | **Information density** | High — multiple data points, comparisons, quiz options | Low — one idea per screen, one action per step |
@@ -76,7 +76,7 @@ Tier 2 uses a constrained subset of the full Playbook palette. The goal is visua
 | **Text secondary** | Mid gray | `#3D3D5C` (`neutral_700`) | Supporting text, descriptions |
 | **Text tertiary** | Light gray | `#6B6B8A` (`neutral_500`) | Metadata, timestamps |
 | **Border** | Soft gray | `#A8A8C0` (`neutral_300`) | Dividers, card borders |
-| **Accent (support)** | Teal | `#00D4AA` | Primary CTA only — "Call now," "Get support" |
+| **Accent (support)** | Teal | `#10B981` | Primary CTA only — "Call now," "Get support" |
 | **Accent (confirm)** | Success green | `#00C853` | Confirmation states — "Account paused," "Limit set" |
 | **Alert** | Danger red | `#FF3D00` | Urgent alerts only — never as theme or decoration |
 
@@ -251,7 +251,7 @@ When Tier 2 contexts show player activity data (session history, spending patter
 
 ### Chart rules for Tier 2
 
-- **Bar charts:** Use `neutral_300` (`#A8A8C0`) as the default bar color. Use `secondary` teal (`#00D4AA`) for the current period or highlighted data point. Maximum 5 bars visible.
+- **Bar charts:** Use `neutral_300` (`#A8A8C0`) as the default bar color. Use `secondary` teal (`#10B981`) for the current period or highlighted data point. Maximum 5 bars visible.
 - **Line charts:** Use `neutral_500` (`#6B6B8A`) for the line. `neutral_300` for gridlines. No area fill — clean line only.
 - **Donut charts:** Not recommended in Tier 2. If required, use a muted two-tone (neutral + one highlight).
 - **Sparklines:** Acceptable for compact summaries. `neutral_500` line, no fill.

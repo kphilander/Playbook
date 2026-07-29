@@ -11,7 +11,7 @@
 
   <!-- Fair odds bar -->
   <text x="40" y="124" fill="#6B6B8A" font-size="12" font-weight="600">FAIR ODDS</text>
-  <rect x="160" y="110" width="280" height="24" rx="4" fill="#00D4AA" opacity="0.9"/>
+  <rect x="160" y="110" width="280" height="24" rx="4" fill="#10B981" opacity="0.9"/>
   <text x="300" y="127" text-anchor="middle" fill="#1B2838" font-size="12" font-weight="700">Team A: +100 (50%)</text>
   <rect x="440" y="110" width="280" height="24" rx="4" fill="#FF6B35" opacity="0.9"/>
   <text x="580" y="127" text-anchor="middle" fill="#1B2838" font-size="12" font-weight="700">Team B: +100 (50%)</text>
@@ -19,7 +19,7 @@
 
   <!-- Real odds bar -->
   <text x="40" y="168" fill="#6B6B8A" font-size="12" font-weight="600">REAL LINE</text>
-  <rect x="160" y="154" width="294" height="24" rx="4" fill="#00D4AA"/>
+  <rect x="160" y="154" width="294" height="24" rx="4" fill="#10B981"/>
   <text x="307" y="171" text-anchor="middle" fill="#1B2838" font-size="12" font-weight="700">Team A: −110 (52.4%)</text>
   <rect x="454" y="154" width="294" height="24" rx="4" fill="#FF6B35"/>
   <text x="601" y="171" text-anchor="middle" fill="#1B2838" font-size="12" font-weight="700">Team B: −110 (52.4%)</text>
@@ -41,12 +41,12 @@
   <g>
     <!-- +150 -->
     <text x="80" y="298" text-anchor="end" fill="#A8A8C0" font-size="12">+150</text>
-    <rect x="90" y="286" width="200" height="18" rx="3" fill="#00D4AA" opacity="0.8"/>
+    <rect x="90" y="286" width="200" height="18" rx="3" fill="#10B981" opacity="0.8"/>
     <text x="96" y="299" fill="#1B2838" font-size="11" font-weight="700">40.0% — profit if you win &gt;40%</text>
 
     <!-- +100 -->
     <text x="80" y="324" text-anchor="end" fill="#A8A8C0" font-size="12">+100</text>
-    <rect x="90" y="312" width="250" height="18" rx="3" fill="#00D4AA" opacity="0.6"/>
+    <rect x="90" y="312" width="250" height="18" rx="3" fill="#10B981" opacity="0.6"/>
     <text x="96" y="325" fill="#1B2838" font-size="11" font-weight="700">50.0% — true coin flip, no vig</text>
 
     <!-- −110 -->

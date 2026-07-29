@@ -33,7 +33,7 @@ const CSS = `
 .reel-prog i.run{animation:rfill var(--rdur,4600ms) linear forwards}
 @keyframes rfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .reel-head{position:absolute;top:0;left:0;right:0;z-index:20;padding:26px 40px;display:flex;justify-content:space-between;align-items:flex-start}
-.reel-mark{font:800 15px Inter,system-ui,sans-serif}.reel-mark b{color:#00d4aa}
+.reel-mark{font:800 15px Inter,system-ui,sans-serif}.reel-mark b{color:#10B981}
 .reel-hr{display:flex;flex-direction:column;align-items:flex-end;gap:13px;max-width:430px;text-align:right}
 .reel-pitch h1{margin:0;font:800 19px/1.1 Inter,sans-serif;letter-spacing:-.01em}
 .reel-pitch p{margin:5px 0 0;font:13px/1.5 Inter,sans-serif;opacity:.55}

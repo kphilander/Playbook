@@ -52,8 +52,8 @@ Both systems pair bold structure with light detail. Structural elements carry vi
 |-------|-----|------------------------------|
 | Primary | `#1B2838` | Structural strokes, axes, borders, text |
 | Primary Light | `#2A3F56` | Secondary structural elements, backgrounds |
-| Secondary | `#00D4AA` | Positive data, highlights, success states |
-| Secondary Dark | `#00A888` | Secondary data series, pressed states |
+| Secondary | `#10B981` | Positive data, highlights, success states |
+| Secondary Dark | `#047857` | Secondary data series, pressed states |
 | Accent | `#FF6B35` | Key data callouts, alerts, primary emphasis |
 | Accent Light | `#FF8A5C` | Secondary emphasis, hover states |
 | Success | `#00C853` | Positive outcomes, correct answers |
@@ -267,9 +267,9 @@ Use these combinations for data where color is the only differentiator:
 
 | Pair | Colors | Safe for |
 |------|--------|----------|
-| Primary + Secondary | `#1B2838` + `#00D4AA` | All types |
+| Primary + Secondary | `#1B2838` + `#10B981` | All types |
 | Primary + Accent | `#1B2838` + `#FF6B35` | All types |
-| Secondary + Accent | `#00D4AA` + `#FF6B35` | Protanopia, deuteranopia, tritanopia |
+| Secondary + Accent | `#10B981` + `#FF6B35` | Protanopia, deuteranopia, tritanopia |
 | Success + Danger | `#00C853` + `#FF3D00` | **Add pattern fill** — not safe for deuteranopia |
 
 ### Pattern fills for charts
@@ -295,8 +295,8 @@ See the [Tier 2 Visual Guide](../tier-2/tier-2-visual-guide.md) for the complete
 
 | Element | Tier 1 | Tier 2 |
 |---|---|---|
-| Default bar/line color | Secondary (`#00D4AA`) or Accent (`#FF6B35`) | `neutral_300` (`#A8A8C0`) |
-| Highlight / current period | Secondary (`#00D4AA`) | Secondary (`#00D4AA`) — same, but used sparingly |
+| Default bar/line color | Secondary (`#10B981`) or Accent (`#FF6B35`) | `neutral_300` (`#A8A8C0`) |
+| Highlight / current period | Secondary (`#10B981`) | Secondary (`#10B981`) — same, but used sparingly |
 | Gridlines | `neutral_300` (`#A8A8C0`) | `neutral_100` (`#E8E8F0`) — lighter |
 | Labels and annotations | `neutral_700` (`#3D3D5C`) | `neutral_500` (`#6B6B8A`) — softer |
 | Container background | Navy (`#1B2838`) or card surface | White (`#FFFFFF`) or `neutral_50` (`#F5F5FA`) |
@@ -330,7 +330,7 @@ The canonical Tier 2 data visualization — a compact card showing recent player
 │                                           │
 │  ██▓░░██░  (bar chart: 7 days, neutral    │
 │  M T W T F S S   with today highlighted   │
-│                   in teal)                 │
+│                   in emerald)                 │
 │                                           │
 │  Sessions: 4  ·  Time: 3h 22m  ·  Avg: 50m│
 │                                           │

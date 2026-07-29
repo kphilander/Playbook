@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playbook — Brand Book</title>
+  <title>Playbook RG — Brand Book</title>
   <meta name="description" content="Playbook brand guide — an open-source, white-label responsible gambling brand system." />
   <meta property="og:title" content="Playbook — Brand Book" />
   <meta property="og:description" content="An open-source, white-label responsible gambling brand system. Colors, typography, icons, collateral templates, and deployment guidelines." />
@@ -27,8 +27,8 @@
       /* Brand (constant across themes) */
       --navy: #1B2838;
       --navy-light: #2A3F54;
-      --teal: #00D4AA;
-      --teal-dark: #00A888;
+      --teal: #10B981;
+      --teal-dark: #047857;
       --orange: #FF6B35;
       --orange-dark: #E55A2B;
 
@@ -124,7 +124,7 @@
       text-decoration: none; padding: 7px 12px; border-radius: 8px; transition: all 0.15s;
     }
     .nav-link:hover { color: var(--heading-color); background: rgba(128,128,128,0.08); }
-    .nav-link.active { color: var(--teal-dark); background: rgba(0,212,170,0.08); }
+    .nav-link.active { color: var(--teal-dark); background: rgba(16,185,129,0.08); }
     [data-theme="dark"] .nav-link.active { color: var(--teal); }
 
     /* ── Main ── */
@@ -278,7 +278,7 @@
       position: absolute; inset: 0; display: flex; align-items: flex-start;
       padding: 12px; pointer-events: none;
     }
-    .photo-overlay.good { background: linear-gradient(180deg, rgba(0,212,170,0.2) 0%, transparent 40%); }
+    .photo-overlay.good { background: linear-gradient(180deg, rgba(16,185,129,0.2) 0%, transparent 40%); }
     .photo-overlay.bad { background: linear-gradient(180deg, rgba(255,107,53,0.25) 0%, transparent 40%); }
     .photo-badge {
       font-size: 11px; font-weight: 800; padding: 6px 14px; border-radius: 8px;
@@ -393,10 +393,10 @@
     .dim-options { display: flex; gap: 8px; flex-wrap: wrap; }
     .dim-pill {
       font-size: 11px; font-weight: 600; padding: 5px 14px; border-radius: 20px;
-      background: rgba(0,212,170,0.08); color: var(--teal); border: 1px solid rgba(0,212,170,0.2);
+      background: rgba(16,185,129,0.08); color: var(--teal); border: 1px solid rgba(16,185,129,0.2);
       cursor: pointer; transition: all 0.15s; user-select: none;
     }
-    .dim-pill:hover { background: rgba(0,212,170,0.15); }
+    .dim-pill:hover { background: rgba(16,185,129,0.15); }
     .dim-pill.active { background: var(--teal); color: var(--navy); border-color: var(--teal); }
     .live-msg {
       background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px;
@@ -746,7 +746,7 @@
       body { background: #fff; color: #1a1a1a; }
       .section-header h2 { color: #1a1a1a; }
       .section-lead, .sub-desc, .card-label, .card-sub, .voice-card p, .voice-card blockquote { color: #444; }
-      .sub-label { color: #00A888; }
+      .sub-label { color: #047857; }
       .swatch-color { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
       .hero { min-height: auto; padding: 48px 0; }
       .hero-bg { display: none; }
@@ -764,7 +764,7 @@
 
 <!-- Back to top -->
 <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-  <svg width="20" height="20" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF" opacity="0.6"/><polygon points="34,14 54,32 34,50" fill="#00D4AA" opacity="0.8"/></svg>
+  <svg width="20" height="20" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF" opacity="0.6"/><polygon points="34,14 54,32 34,50" fill="#10B981" opacity="0.8"/></svg>
 </button>
 
 <!-- Mobile nav toggle -->
@@ -773,8 +773,8 @@
 <!-- ═══════════════════ SIDEBAR ═══════════════════ -->
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-brand">
-    <svg width="28" height="28" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
-    <span>Play<em>book</em></span>
+    <svg width="28" height="28" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
+    <span>Playbook<span>Play<em>book</em></span>nbsp;RG</span>
   </div>
   <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
     <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
@@ -846,15 +846,15 @@
   <div class="sub-label">Symbol Mark &amp; Favicons</div>
   <div class="grid-5 mb-48">
     <div class="logo-card on-dark">
-      <svg width="48" height="48" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+      <svg width="48" height="48" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
       <div class="logo-label">Primary</div>
     </div>
     <div class="logo-card on-light">
-      <svg width="48" height="48" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#1B2838"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+      <svg width="48" height="48" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#1B2838"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
       <div class="logo-label">On Light</div>
     </div>
     <div class="logo-card on-dark">
-      <svg width="48" height="48" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+      <svg width="48" height="48" viewBox="0 0 64 64"><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
       <div class="logo-label">On Dark</div>
     </div>
     <div class="logo-card on-dark"><img src="assets/logos/favicon-mono-white.svg" alt="Favicon Mono" style="max-width:48px;max-height:48px;"><div class="logo-label">Favicon Mono</div></div>
@@ -871,18 +871,18 @@
   <div class="clearspace-wrap">
     <svg width="260" height="130" viewBox="0 0 260 130" style="flex-shrink:0;">
       <!-- Clear space zone -->
-      <rect x="20" y="15" width="220" height="100" rx="8" fill="none" stroke="#00D4AA" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
+      <rect x="20" y="15" width="220" height="100" rx="8" fill="none" stroke="#10B981" stroke-width="1" stroke-dasharray="4,4" opacity="0.4"/>
       <!-- Inner logo area -->
       <rect x="60" y="35" width="140" height="60" rx="4" fill="var(--card)" stroke="var(--border)" stroke-width="1"/>
       <text x="130" y="70" text-anchor="middle" font-family="'Inter',sans-serif" font-size="24" letter-spacing="-0.8">
         <tspan font-weight="700" fill="currentColor">Playbook</tspan>
       </text>
       <!-- Dimension arrows -->
-      <line x1="60" y1="10" x2="60" y2="35" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
-      <line x1="200" y1="10" x2="200" y2="35" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
-      <text x="130" y="10" text-anchor="middle" font-family="'Source Code Pro',monospace" font-size="8" fill="#00D4AA" opacity="0.8">1&times; logo height</text>
-      <line x1="10" y1="35" x2="60" y2="35" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
-      <line x1="10" y1="95" x2="60" y2="95" stroke="#00D4AA" stroke-width="1" opacity="0.6"/>
+      <line x1="60" y1="10" x2="60" y2="35" stroke="#10B981" stroke-width="1" opacity="0.6"/>
+      <line x1="200" y1="10" x2="200" y2="35" stroke="#10B981" stroke-width="1" opacity="0.6"/>
+      <text x="130" y="10" text-anchor="middle" font-family="'Source Code Pro',monospace" font-size="8" fill="#10B981" opacity="0.8">1&times; logo height</text>
+      <line x1="10" y1="35" x2="60" y2="35" stroke="#10B981" stroke-width="1" opacity="0.6"/>
+      <line x1="10" y1="95" x2="60" y2="95" stroke="#10B981" stroke-width="1" opacity="0.6"/>
     </svg>
     <ul class="guideline-list" style="flex:1;">
       <li><span class="icon do">&#10003;</span> Maintain 1&times; logo-height clear space on all sides</li>
@@ -924,13 +924,13 @@
   <span class="section-num">02</span>
   <div class="section-header"><h2>Color</h2></div>
   <p class="section-lead">
-    Three-tone system: <strong style="color:var(--heading-color)">deep navy</strong> for trust, <strong style="color:var(--teal-dark)">electric teal</strong> for action, <strong style="color:var(--orange)">bold orange</strong> for attention. All combinations are WCAG AA compliant.
+    Three-tone system: <strong style="color:var(--heading-color)">deep navy</strong> for trust, <strong style="color:var(--teal-dark)">emerald</strong> for action, <strong style="color:var(--orange)">bold orange</strong> for attention. All combinations are WCAG AA compliant.
   </p>
 
   <div class="sub-label">Core Palette</div>
   <div class="grid-5 mb-48">
     <div class="swatch"><div class="swatch-color" style="background:#1B2838;"></div><div class="swatch-info"><div class="swatch-name">Navy</div><div class="swatch-hex">#1B2838</div><div class="swatch-role">Primary &middot; backgrounds, trust</div></div></div>
-    <div class="swatch"><div class="swatch-color" style="background:#00D4AA;"></div><div class="swatch-info"><div class="swatch-name">Teal</div><div class="swatch-hex">#00D4AA</div><div class="swatch-role">Action &middot; CTAs, links, accents</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#10B981;"></div><div class="swatch-info"><div class="swatch-name">Teal</div><div class="swatch-hex">#10B981</div><div class="swatch-role">Action &middot; CTAs, links, accents</div></div></div>
     <div class="swatch"><div class="swatch-color" style="background:#FF6B35;"></div><div class="swatch-info"><div class="swatch-name">Orange</div><div class="swatch-hex">#FF6B35</div><div class="swatch-role">Attention &middot; alerts, highlights</div></div></div>
     <div class="swatch"><div class="swatch-color" style="background:#F5F5FA;border-bottom:1px solid #E0E0E8;"></div><div class="swatch-info"><div class="swatch-name">Surface</div><div class="swatch-hex">#F5F5FA</div><div class="swatch-role">Light backgrounds, cards</div></div></div>
     <div class="swatch"><div class="swatch-color" style="background:#FFFFFF;border-bottom:1px solid #E0E0E8;"></div><div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div><div class="swatch-role">Content, clean space</div></div></div>
@@ -940,8 +940,8 @@
   <div class="grid-4 mb-48">
     <div class="swatch"><div class="swatch-color" style="background:#0F1923;"></div><div class="swatch-info"><div class="swatch-name">Navy Deep</div><div class="swatch-hex">#0F1923</div></div></div>
     <div class="swatch"><div class="swatch-color" style="background:#2A3F56;"></div><div class="swatch-info"><div class="swatch-name">Navy Light</div><div class="swatch-hex">#2A3F56</div></div></div>
-    <div class="swatch"><div class="swatch-color" style="background:#00A888;"></div><div class="swatch-info"><div class="swatch-name">Teal Dark</div><div class="swatch-hex">#00A888</div></div></div>
-    <div class="swatch"><div class="swatch-color" style="background:#33DDBB;"></div><div class="swatch-info"><div class="swatch-name">Teal Bright</div><div class="swatch-hex">#33DDBB</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#047857;"></div><div class="swatch-info"><div class="swatch-name">Teal Dark</div><div class="swatch-hex">#047857</div></div></div>
+    <div class="swatch"><div class="swatch-color" style="background:#34D399;"></div><div class="swatch-info"><div class="swatch-name">Teal Bright</div><div class="swatch-hex">#34D399</div></div></div>
     <div class="swatch"><div class="swatch-color" style="background:#E55A2B;"></div><div class="swatch-info"><div class="swatch-name">Orange Dark</div><div class="swatch-hex">#E55A2B</div></div></div>
     <div class="swatch"><div class="swatch-color" style="background:#FF8A5C;"></div><div class="swatch-info"><div class="swatch-name">Orange Light</div><div class="swatch-hex">#FF8A5C</div></div></div>
     <div class="swatch"><div class="swatch-color" style="background:#FFB300;"></div><div class="swatch-info"><div class="swatch-name">Alert</div><div class="swatch-hex">#FFB300</div></div></div>
@@ -951,10 +951,10 @@
   <div class="mt-48">
     <div class="sub-label">Contrast Preview &mdash; WCAG AA</div>
     <div class="contrast-grid">
-      <div class="contrast-cell" style="background:#1B2838;color:#00D4AA;">Teal on Navy<div class="contrast-aa">AA &check; 7.2:1</div></div>
+      <div class="contrast-cell" style="background:#1B2838;color:#10B981;">Teal on Navy<div class="contrast-aa">AA &check; 7.2:1</div></div>
       <div class="contrast-cell" style="background:#1B2838;color:#FFFFFF;">White on Navy<div class="contrast-aa">AA &check; 14.5:1</div></div>
       <div class="contrast-cell" style="background:#1B2838;color:#FF6B35;">Orange on Navy<div class="contrast-aa">AA &check; 5.1:1</div></div>
-      <div class="contrast-cell" style="background:#00D4AA;color:#1B2838;">Navy on Teal<div class="contrast-aa">AA &check; 7.2:1</div></div>
+      <div class="contrast-cell" style="background:#10B981;color:#1B2838;">Navy on Teal<div class="contrast-aa">AA &check; 7.2:1</div></div>
       <div class="contrast-cell" style="background:#F5F5FA;color:#1B2838;">Navy on Surface<div class="contrast-aa">AA &check; 13.8:1</div></div>
       <div class="contrast-cell" style="background:#FFFFFF;color:#1B2838;border-color:#E0E0E8;">Navy on White<div class="contrast-aa">AA &check; 14.5:1</div></div>
     </div>
@@ -963,7 +963,7 @@
   <div class="mt-48">
     <div class="sub-label">Forbidden Combinations</div>
     <div class="contrast-grid">
-      <div class="forbidden-cell" style="background:#00D4AA;color:#FF6B35;">
+      <div class="forbidden-cell" style="background:#10B981;color:#FF6B35;">
         <span class="forbidden-badge">&#10005; FAIL</span>
         Orange on Teal<div class="contrast-aa">2.1:1 &mdash; illegible</div>
       </div>
@@ -971,7 +971,7 @@
         <span class="forbidden-badge">&#10005; FAIL</span>
         Light on Surface<div class="contrast-aa">1.4:1 &mdash; invisible</div>
       </div>
-      <div class="forbidden-cell" style="background:#FFFFFF;color:#00D4AA;border-color:#E0E0E8;">
+      <div class="forbidden-cell" style="background:#FFFFFF;color:#10B981;border-color:#E0E0E8;">
         <span class="forbidden-badge">&#10005; FAIL</span>
         Teal on White<div class="contrast-aa">2.5:1 &mdash; too faint</div>
       </div>
@@ -1027,7 +1027,7 @@
       <p class="sub-desc">Data, hex values, code, tokens.</p>
       <div style="font-family:'Source Code Pro',monospace;font-size:13px;color:var(--dim);line-height:2;background:var(--card);padding:20px 24px;border-radius:12px;border:1px solid var(--border);">
         <span style="color:var(--teal);">--color-navy:</span> #1B2838;<br>
-        <span style="color:var(--teal);">--color-teal:</span> #00D4AA;<br>
+        <span style="color:var(--teal);">--color-teal:</span> #10B981;<br>
         <span style="color:var(--teal);">--color-orange:</span> #FF6B35;<br>
         <span style="color:var(--teal);">--font-heading:</span> 'Inter';<br>
         <span style="color:var(--teal);">--font-body:</span> 'Source Sans 3';
@@ -1067,7 +1067,7 @@
   </div>
 
   <!-- Financial -->
-  <div class="icon-category-label" style="color:#33DDBB;">Financial <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 3 icons</span></div>
+  <div class="icon-category-label" style="color:#34D399;">Financial <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 3 icons</span></div>
   <div class="icon-grid mb-24">
     <div class="icon-cell"><img src="assets/icons/icon-deposit.svg" alt="Deposit" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Deposit</span></div>
     <div class="icon-cell"><img src="assets/icons/icon-withdrawal.svg" alt="Withdrawal" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Withdrawal</span></div>
@@ -1084,7 +1084,7 @@
   </div>
 
   <!-- Player Tools -->
-  <div class="icon-category-label" style="color:#33DDBB;">Player Tools <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 8 icons</span></div>
+  <div class="icon-category-label" style="color:#34D399;">Player Tools <span style="opacity:0.4;font-size:10px;font-weight:400;">&mdash; 8 icons</span></div>
   <div class="icon-grid mb-24">
     <div class="icon-cell"><img src="assets/icons/icon-timer.svg" alt="Timer" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Timer</span></div>
     <div class="icon-cell"><img src="assets/icons/icon-limit.svg" alt="Limit" style="filter:brightness(0) saturate(100%) invert(80%) sepia(50%) saturate(400%) hue-rotate(117deg);"><span>Limit</span></div>
@@ -1184,7 +1184,7 @@
     <!-- Teal tint -->
     <div style="border-radius:14px;overflow:hidden;position:relative;height:220px;border:1px solid var(--border);">
       <img src="assets/photography/closeup-cards-chips-good.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,168,136,0.35) 0%,rgba(0,168,136,0.92) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,120,87,0.35) 0%,rgba(4,120,87,0.92) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:20px;">
         <div style="font-size:9px;font-weight:700;color:var(--navy);letter-spacing:2px;margin-bottom:6px;">TEAL GRADIENT</div>
         <div style="font-size:18px;font-weight:800;color:var(--navy);line-height:1.3;margin-bottom:4px;">Set Your Limits</div>
         <div style="font-size:12px;color:rgba(27,40,56,0.9);">Stay in control with deposit limits, session timers, and cooldown periods.</div>
@@ -1228,7 +1228,7 @@
   <!-- Two voices -->
   <div class="grid-2 mb-48">
     <div class="voice-card" style="border-top:3px solid var(--teal);">
-      <span class="tag" style="background:rgba(0,212,170,0.12);color:var(--teal);">PLAYBOOK VOICE</span>
+      <span class="tag" style="background:rgba(16,185,129,0.12);color:var(--teal);">PLAYBOOK VOICE</span>
       <h3>Confident Myth-Buster</h3>
       <p style="font-size:13px;color:var(--muted);margin-bottom:12px;">
         Authentic, accessible, confident without being arrogant.
@@ -1284,7 +1284,7 @@
   <div class="sub-label">We Say / We Don't Say</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin-bottom:48px;">
 
-    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+    <div style="padding:16px 20px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:12px;">
       <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
       <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"The house edge on this game is 5.26%. Here's what that means over 100 spins."</div>
     </div>
@@ -1293,7 +1293,7 @@
       <div style="font-size:14px;color:var(--muted);line-height:1.5;">"Please gamble responsibly."</div>
     </div>
 
-    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+    <div style="padding:16px 20px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:12px;">
       <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
       <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"You've been playing for 2 hours. Quick check-in &mdash; how's it going?"</div>
     </div>
@@ -1302,7 +1302,7 @@
       <div style="font-size:14px;color:var(--muted);line-height:1.5;">"WARNING: You have been gambling for an extended period."</div>
     </div>
 
-    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+    <div style="padding:16px 20px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:12px;">
       <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
       <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"Every spin starts fresh. Your brain sees streaks. The math doesn't."</div>
     </div>
@@ -1311,7 +1311,7 @@
       <div style="font-size:14px;color:var(--muted);line-height:1.5;">"Be aware that gambling can lead to addiction and financial problems."</div>
     </div>
 
-    <div style="padding:16px 20px;background:rgba(0,212,170,0.06);border:1px solid rgba(0,212,170,0.15);border-radius:12px;">
+    <div style="padding:16px 20px;background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.15);border-radius:12px;">
       <div style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1.5px;margin-bottom:8px;">&#10003; WE SAY</div>
       <div style="font-size:14px;color:var(--heading-color);line-height:1.5;">"Need to talk? Free, confidential, 24/7."</div>
     </div>
@@ -1442,7 +1442,7 @@
         </div>
         <div style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;align-items:center;gap:6px;">
-            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
             <span style="font-size:9px;font-weight:700;color:var(--white);letter-spacing:-0.3px;">Playbook</span>
           </div>
           <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
@@ -1466,7 +1466,7 @@
         </div>
         <div style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;align-items:center;gap:6px;">
-            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
             <span style="font-size:9px;font-weight:700;color:var(--white);letter-spacing:-0.3px;">Playbook</span>
           </div>
           <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
@@ -1490,7 +1490,7 @@
         </div>
         <div dir="ltr" style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;align-items:center;gap:6px;">
-            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
             <span style="font-size:9px;font-weight:700;color:var(--white);letter-spacing:-0.3px;">Playbook</span>
           </div>
           <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
@@ -1514,7 +1514,7 @@
         </div>
         <div style="padding:8px 20px 14px;display:flex;align-items:center;justify-content:space-between;">
           <div style="display:flex;align-items:center;gap:6px;">
-            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#00D4AA"/></svg>
+            <svg width="14" height="14" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1B2838"/><rect x="14" y="14" width="16" height="36" rx="2" fill="#FFF"/><polygon points="34,14 54,32 34,50" fill="#10B981"/></svg>
             <span style="font-size:9px;font-weight:700;color:var(--white);letter-spacing:-0.3px;">Playbook</span>
           </div>
           <span style="font-size:9px;font-weight:600;color:var(--teal);">Open</span>
@@ -1681,7 +1681,7 @@
 
   <div class="row mb-48">
     <div class="voice-card" style="text-align:center;">
-      <span class="tag" style="background:rgba(0,212,170,0.12);color:var(--teal);">CONFIGURATOR</span>
+      <span class="tag" style="background:rgba(16,185,129,0.12);color:var(--teal);">CONFIGURATOR</span>
       <h3>Try It Live</h3>
       <p style="font-size:14px;color:var(--muted);margin:8px 0 20px;">Preview your brand in the Playbook configurator &mdash; set colors, upload your logo, and see instant results.</p>
       <a href="https://gamblingpolicy.com/tools/playbook/configurator/" style="display:inline-block;font-size:14px;font-weight:700;color:var(--navy);background:var(--teal);padding:10px 28px;border-radius:10px;text-decoration:none;">Open Configurator</a>
@@ -1710,7 +1710,7 @@
   <div class="section-header"><h2>Quick Reference</h2></div>
   <p class="section-lead">Screenshot this. Print it. Pin it to your wall.</p>
 
-  <button id="download-qr" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--teal-dark);background:var(--bg-card);border:1px solid rgba(0,212,170,0.3);padding:8px 18px;border-radius:8px;cursor:pointer;margin-bottom:20px;transition:all 0.15s;">
+  <button id="download-qr" style="display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:var(--teal-dark);background:var(--bg-card);border:1px solid rgba(16,185,129,0.3);padding:8px 18px;border-radius:8px;cursor:pointer;margin-bottom:20px;transition:all 0.15s;">
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2v7m0 0L4.5 6.5M7 9l2.5-2.5M2 11h10"/></svg>
     Download SVG
   </button>
@@ -1720,13 +1720,13 @@
       <h4>Colors</h4>
       <div class="qr-swatches" style="margin-bottom:8px;">
         <div class="qr-swatch" style="background:#1B2838;" title="#1B2838"></div>
-        <div class="qr-swatch" style="background:#00D4AA;" title="#00D4AA"></div>
+        <div class="qr-swatch" style="background:#10B981;" title="#10B981"></div>
         <div class="qr-swatch" style="background:#FF6B35;" title="#FF6B35"></div>
         <div class="qr-swatch" style="background:#F5F5FA;border-color:#E0E0E8;" title="#F5F5FA"></div>
         <div class="qr-swatch" style="background:#FFFFFF;border-color:#E0E0E8;" title="#FFFFFF"></div>
       </div>
       <div style="font-family:'Source Code Pro',monospace;font-size:11px;color:var(--dim);line-height:1.8;">
-        Navy #1B2838 &middot; Teal #00D4AA &middot; Orange #FF6B35
+        Navy #1B2838 &middot; Teal #10B981 &middot; Orange #FF6B35
       </div>
     </div>
     <div class="qr-section">
@@ -2108,28 +2108,28 @@
       '<rect width="800" height="420" rx="16" fill="#0F1A26"/>',
       '<rect width="800" height="420" rx="16" fill="none" stroke="#1E3044" stroke-width="1"/>',
       // Title
-      '<text x="36" y="40" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#00D4AA" letter-spacing="2">PLAYBOOK QUICK REFERENCE</text>',
+      '<text x="36" y="40" font-family="Inter,sans-serif" font-size="11" font-weight="800" fill="#10B981" letter-spacing="2">PLAYBOOK QUICK REFERENCE</text>',
       // Colors section
-      '<text x="36" y="80" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">COLORS</text>',
+      '<text x="36" y="80" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#10B981" letter-spacing="2">COLORS</text>',
       '<rect x="36" y="92" width="28" height="28" rx="6" fill="#1B2838" stroke="#1E3044"/>',
-      '<rect x="70" y="92" width="28" height="28" rx="6" fill="#00D4AA"/>',
+      '<rect x="70" y="92" width="28" height="28" rx="6" fill="#10B981"/>',
       '<rect x="104" y="92" width="28" height="28" rx="6" fill="#FF6B35"/>',
       '<rect x="138" y="92" width="28" height="28" rx="6" fill="#F5F5FA" stroke="#E0E0E8"/>',
       '<rect x="172" y="92" width="28" height="28" rx="6" fill="#FFFFFF" stroke="#E0E0E8"/>',
-      '<text x="36" y="140" font-family="Source Code Pro,monospace" font-size="11" fill="#4A6070">Navy #1B2838  Teal #00D4AA  Orange #FF6B35</text>',
+      '<text x="36" y="140" font-family="Source Code Pro,monospace" font-size="11" fill="#4A6070">Navy #1B2838  Teal #10B981  Orange #FF6B35</text>',
       // Typography section
-      '<text x="36" y="180" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">TYPOGRAPHY</text>',
+      '<text x="36" y="180" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#10B981" letter-spacing="2">TYPOGRAPHY</text>',
       '<text x="36" y="202" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#C8D4E0">Inter</tspan> \u2014 headings, UI, logo</text>',
       '<text x="36" y="222" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#C8D4E0">Source Sans 3</tspan> \u2014 body text</text>',
       '<text x="36" y="242" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#C8D4E0">Source Code Pro</tspan> \u2014 data, tokens</text>',
       // Voice section
-      '<text x="420" y="80" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">VOICE</text>',
-      '<text x="420" y="102" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#00D4AA">Playbook:</tspan> Confident myth-buster.</text>',
+      '<text x="420" y="80" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#10B981" letter-spacing="2">VOICE</text>',
+      '<text x="420" y="102" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#10B981">Playbook:</tspan> Confident myth-buster.</text>',
       '<text x="420" y="122" font-family="Inter,sans-serif" font-size="13" fill="#6B8299">Inform, don\u2019t lecture.</text>',
       '<text x="420" y="152" font-family="Inter,sans-serif" font-size="13" fill="#6B8299"><tspan font-weight="700" fill="#FF6B35">Support:</tspan> Warm, direct.</text>',
       '<text x="420" y="172" font-family="Inter,sans-serif" font-size="13" fill="#6B8299">Free, confidential help.</text>',
       // Principles
-      '<text x="420" y="212" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">PRINCIPLES</text>',
+      '<text x="420" y="212" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#10B981" letter-spacing="2">PRINCIPLES</text>',
       '<text x="420" y="234" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Informed, not alarming</text>',
       '<text x="420" y="252" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Your choice, your tools</text>',
       '<text x="420" y="270" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Specific, not sloganeering</text>',
@@ -2137,14 +2137,14 @@
       '<text x="420" y="306" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Real talk</text>',
       '<text x="420" y="324" font-family="Inter,sans-serif" font-size="12" fill="#6B8299">\u2022 Inclusive by default</text>',
       // Links
-      '<text x="36" y="290" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#00D4AA" letter-spacing="2">LINKS</text>',
-      '<text x="36" y="312" font-family="Inter,sans-serif" font-size="13" fill="#00D4AA">gamblingpolicy.com/tools/playbook/configurator</text>',
-      '<text x="36" y="332" font-family="Inter,sans-serif" font-size="13" fill="#00D4AA">github.com/kphilander/Playbook</text>',
-      '<text x="36" y="352" font-family="Inter,sans-serif" font-size="13" fill="#00D4AA">gamblingpolicy.com/playbook</text>',
+      '<text x="36" y="290" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#10B981" letter-spacing="2">LINKS</text>',
+      '<text x="36" y="312" font-family="Inter,sans-serif" font-size="13" fill="#10B981">gamblingpolicy.com/tools/playbook/configurator</text>',
+      '<text x="36" y="332" font-family="Inter,sans-serif" font-size="13" fill="#10B981">github.com/kphilander/Playbook</text>',
+      '<text x="36" y="352" font-family="Inter,sans-serif" font-size="13" fill="#10B981">gamblingpolicy.com/playbook</text>',
       // Symbol mark + footer
       '<rect x="36" y="384" width="20" height="20" rx="4" fill="#1B2838" stroke="#1E3044"/>',
       '<rect x="40" y="388" width="5" height="12" rx="0.5" fill="#FFF"/>',
-      '<polygon points="46,388 53,394 46,400" fill="#00D4AA"/>',
+      '<polygon points="46,388 53,394 46,400" fill="#10B981"/>',
       '<text x="62" y="398" font-family="Inter,sans-serif" font-size="12"><tspan font-weight="700" fill="#FFF">Playbook</tspan></text>',
       '<text x="764" y="398" font-family="Inter,sans-serif" font-size="11" fill="#4A6070" text-anchor="end">Released under CC0</text>',
       '</svg>'

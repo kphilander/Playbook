@@ -1,6 +1,6 @@
 # Logo
 
-The Playbook logo system: a **symbol mark** ("open book + play"), a **weight-contrast wordmark**, and lockups, favicons, and badges built from them. All assets are generated from [`_brand.yml`](../../_brand.yml) by running `node collateral/render/build-logos.mjs`.
+The Playbook RG logo system: a **symbol mark** (closed book + play triangle), a **uniform bold wordmark**, and lockups, favicons, and badges built from them. All assets are generated from [`_brand.yml`](../../_brand.yml) by running `node collateral/render/build-logos.mjs`.
 
 **No font dependencies.** Wordmark text is converted to Inter vector outlines at build time (via fontkit and the vendored variable font in [`../typography/fonts/`](../typography/fonts/)), so every SVG renders identically in `<img>` embeds, GitHub READMEs, CMSes, and email clients — contexts that block external font loading.
 
@@ -8,12 +8,12 @@ Open [`symbol-preview.html`](symbol-preview.html) in a browser to see the full s
 
 ## The marks
 
-- **Symbol** — a closed book beside a play triangle, carried in a rounded navy tile (white book, teal play) — the same mark used across Playbook Academy. On dark or single-color contexts the bare mark is used without the tile. Two flat shapes, legible from 16px favicons to 512px app icons.
+- **Symbol** — a closed book beside a play triangle, carried in a rounded navy tile (white book, emerald play) — the same mark used across Playbook Academy. On dark or single-color contexts the bare mark is used without the tile. Two flat shapes, legible from 16px favicons to 512px app icons.
 - **Wordmark** — the program name set in **Inter 700 (bold)**, tight tracking, one weight, one color: navy on light, white on dark. Forks set their own name (and can opt into a split-weight treatment or a play-counter P) under `logo:` in `_brand.yml`.
 
 ## Variants
 
-### [Primary](primary/) — Two-tone, default use
+### [Primary](primary/) — Default use
 
 | File | Layout | Background |
 |------|--------|------------|
@@ -37,9 +37,9 @@ Open [`symbol-preview.html`](symbol-preview.html) in a browser to see the full s
 
 | File | Use |
 |------|-----|
-| [symbol-mark.svg](symbol/symbol-mark.svg) | Primary — navy tile, white book, teal play |
-| [symbol-mark-on-light.svg](symbol/symbol-mark-on-light.svg) | Light backgrounds — bare mark, navy book, teal play |
-| [symbol-mark-on-dark.svg](symbol/symbol-mark-on-dark.svg) | Dark backgrounds — bare mark, white book, teal play |
+| [symbol-mark.svg](symbol/symbol-mark.svg) | Primary — navy tile, white book, emerald play |
+| [symbol-mark-on-light.svg](symbol/symbol-mark-on-light.svg) | Light backgrounds — bare mark, navy book, emerald play |
+| [symbol-mark-on-dark.svg](symbol/symbol-mark-on-dark.svg) | Dark backgrounds — bare mark, white book, emerald play |
 | [symbol-mark-mono-dark.svg](symbol/symbol-mark-mono-dark.svg) | Monochrome navy, bare mark |
 | [symbol-mark-mono-white.svg](symbol/symbol-mark-mono-white.svg) | Monochrome white on black tile |
 
@@ -54,7 +54,7 @@ The favicon is the brand tile — identical to the Playbook Academy favicon.
 | [favicon-16.png](favicon/favicon-16.png), [favicon-32.png](favicon/favicon-32.png), [favicon-48.png](favicon/favicon-48.png) | Fixed-size PNG fallbacks |
 | [apple-touch-icon.png](favicon/apple-touch-icon.png) | iOS home screen, 180×180 full-bleed navy (iOS applies its own mask) |
 | [icon-192.png](favicon/icon-192.png), [icon-512.png](favicon/icon-512.png) | PWA manifest icons, full-bleed square |
-| [favicon-reversed.svg](favicon/favicon-reversed.svg) | Bare mark (white book, teal play, transparent) for dark UI chrome |
+| [favicon-reversed.svg](favicon/favicon-reversed.svg) | Bare mark (white book, emerald play, transparent) for dark UI chrome |
 | [favicon-mono-white.svg](favicon/favicon-mono-white.svg) | Single-color white mark on black tile |
 
 Recommended head markup:

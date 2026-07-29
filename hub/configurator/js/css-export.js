@@ -62,7 +62,7 @@ function customFontFaceBlock() {
    file and the template-gallery iframes. */
 export function generateVariablesBlock() {
   const primary = val('colorPrimary', '#1B2838');
-  const secondary = val('colorSecondary', '#00D4AA');
+  const secondary = val('colorSecondary', '#10B981');
   const accent = val('colorAccent', '#FF6B35');
   const primaryLight = val('colorFooterBar', lighten(primary, 0.15));
   const primaryDark = darken(primary, 0.3);

@@ -21,10 +21,10 @@
 
   <!-- Row 1: Win/Place/Show -->
   <text x="40" y="130" fill="#FFFFFF" font-size="15" font-weight="600">Win / Place / Show</text>
-  <text x="300" y="130" fill="#00D4AA" font-size="16" font-weight="700">15-18%</text>
-  <text x="440" y="130" fill="#00D4AA" font-size="15" font-weight="600">$82-$85</text>
+  <text x="300" y="130" fill="#10B981" font-size="16" font-weight="700">15-18%</text>
+  <text x="440" y="130" fill="#10B981" font-size="15" font-weight="600">$82-$85</text>
   <rect x="640" y="118" width="120" height="16" rx="3" fill="#2A3F56"/>
-  <rect x="640" y="118" width="22" height="16" rx="3" fill="#00D4AA"/>
+  <rect x="640" y="118" width="22" height="16" rx="3" fill="#10B981"/>
 
   <!-- Row 2: Exacta / Quinella -->
   <line x1="40" y1="150" x2="760" y2="150" stroke="#2A3F56" stroke-width="0.5"/>

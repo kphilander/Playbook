@@ -59,7 +59,7 @@ INSIDE (face up):
 | Element | Content |
 |---|---|
 | **Background** | Navy `#1B2838` (CMYK equivalent) |
-| **Accent bar** | 3mm gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
+| **Accent bar** | 3mm gradient strip at top: orange `#FF6B35` → teal `#10B981` |
 | **Logo** | {{PROGRAM_NAME}} wordmark, stacked (B1) layout, reversed variant (white Play + teal BOOK on navy bg). Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Centered top third. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, dashed border, below program logo. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos if side by side |
 | **Headline** | Every game has math. Here's yours. |

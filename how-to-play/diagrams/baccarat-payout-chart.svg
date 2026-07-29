@@ -15,15 +15,15 @@
   <!-- Row 1: Banker -->
   <text x="40" y="130" fill="#FFFFFF" font-size="16" font-weight="600">Banker</text>
   <text x="240" y="130" fill="#A8A8C0" font-size="15">1:1 (minus 5% comm.)</text>
-  <text x="400" y="130" fill="#00D4AA" font-size="18" font-weight="700">1.06%</text>
-  <text x="580" y="130" fill="#00D4AA" font-size="15" font-weight="600">$1.06</text>
+  <text x="400" y="130" fill="#10B981" font-size="18" font-weight="700">1.06%</text>
+  <text x="580" y="130" fill="#10B981" font-size="15" font-weight="600">$1.06</text>
 
   <!-- Row 2: Player -->
   <line x1="40" y1="152" x2="760" y2="152" stroke="#2A3F56" stroke-width="0.5"/>
   <text x="40" y="182" fill="#FFFFFF" font-size="16" font-weight="600">Player</text>
   <text x="240" y="182" fill="#A8A8C0" font-size="15">1:1</text>
-  <text x="400" y="182" fill="#00D4AA" font-size="18" font-weight="700">1.24%</text>
-  <text x="580" y="182" fill="#00D4AA" font-size="15" font-weight="600">$1.24</text>
+  <text x="400" y="182" fill="#10B981" font-size="18" font-weight="700">1.24%</text>
+  <text x="580" y="182" fill="#10B981" font-size="15" font-weight="600">$1.24</text>
 
   <!-- Row 3: Tie -->
   <line x1="40" y1="204" x2="760" y2="204" stroke="#2A3F56" stroke-width="0.5"/>

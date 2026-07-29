@@ -221,7 +221,7 @@ All photos should feel consistent with the Playbook brand palette after grading.
 | Palette color | Grading use |
 |---------------|-------------|
 | Primary `#1B2838` | Shadow tinting; dark background treatments |
-| Secondary `#00D4AA` | Accent lighting; screen glow; neon environmental light |
+| Secondary `#10B981` | Accent lighting; screen glow; neon environmental light |
 | Accent `#FF6B35` | Warm highlight cast; golden-hour reinforcement |
 | Neutral 50 `#F5F5FA` | Highlight retention target; never let highlights go pure white |
 

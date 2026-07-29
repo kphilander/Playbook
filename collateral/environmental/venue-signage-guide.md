@@ -26,8 +26,8 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 | **Minimum headline** | 48pt (visible from 3m) |
 | **Minimum body** | 18pt |
 | **Minimum helpline** | 24pt bold |
-| **Color system** | Navy `#1B2838` background, white text, teal `#00D4AA` accents, orange `#FF6B35` highlights |
-| **Accent bar** | Gradient strip `#FF6B35` → `#00D4AA` on all signs |
+| **Color system** | Navy `#1B2838` background, white text, teal `#10B981` accents, orange `#FF6B35` highlights |
+| **Accent bar** | Gradient strip `#FF6B35` → `#10B981` on all signs |
 | **Materials** | See per-location specs |
 | **QR codes** | Minimum 2" x 2" (50mm) for scanning from 1m+ |
 

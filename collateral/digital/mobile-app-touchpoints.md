@@ -64,7 +64,7 @@ Copy and layout specs for 6 key mobile screens where {{PROGRAM_NAME}} content in
 | **Headline** | Set your entertainment budget |
 | **Body** | Think of this as your budget for the week. You pick the number. |
 | **Deposit limit prompt** | Want to set a weekly deposit limit? |
-| **Option A** | `Yes, set my limit →` (primary, teal `#00D4AA`) |
+| **Option A** | `Yes, set my limit →` (primary, teal `#10B981`) |
 | **Option B** | `Not right now` (secondary, outlined) |
 | **Confirmation (if set)** | Your deposit limit is set to {{LIMIT_AMOUNT}} per {{PERIOD}}. Adjust it anytime in settings. |
 | **Confirmation CTA** | `Start playing →` |

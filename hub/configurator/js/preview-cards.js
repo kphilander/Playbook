@@ -285,7 +285,7 @@ export function updateCultureContent() {
   const voice = document.getElementById('cultureVoice').value;
 
   const accent = document.getElementById('colorAccent').value || '#FF6B35';
-  const secondary = document.getElementById('colorSecondary').value || '#00D4AA';
+  const secondary = document.getElementById('colorSecondary').value || '#10B981';
   const n300Now = (document.getElementById('colorN300') && document.getElementById('colorN300').value) || '#A8A8C0';
 
   const mythStmt = document.getElementById('pvMythStatement');

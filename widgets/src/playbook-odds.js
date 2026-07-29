@@ -71,7 +71,7 @@ class PlaybookOdds extends HTMLElement {
       : 'var(--pb-color-primary, var(--pb-text, #1B2838))';
     const muted = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(27,40,56,0.5)';
     const accent = 'var(--pb-color-accent, var(--pb-accent, #FF6B35))';
-    const teal = 'var(--pb-color-secondary, var(--pb-teal, #00D4AA))';
+    const teal = 'var(--pb-color-secondary, var(--pb-teal, #10B981))';
     const cardBg = isDark ? 'rgba(255,255,255,0.04)' : 'rgba(0,0,0,0.03)';
 
     this.shadowRoot.innerHTML = `

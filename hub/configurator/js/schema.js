@@ -20,7 +20,7 @@ export const FIELDS = [
 
   // ── Colors ──
   { id: 'colorPrimary',   yamlPath: 'color.palette.primary',     kind: 'color', default: '#1B2838' },
-  { id: 'colorSecondary', yamlPath: 'color.palette.secondary',   kind: 'color', default: '#00D4AA' },
+  { id: 'colorSecondary', yamlPath: 'color.palette.secondary',   kind: 'color', default: '#10B981' },
   { id: 'colorAccent',    yamlPath: 'color.palette.accent',      kind: 'color', default: '#FF6B35' },
   { id: 'colorN900',      yamlPath: 'color.palette.neutral_900', kind: 'color', default: '#1A1A2E' },
   { id: 'colorN700',      yamlPath: 'color.palette.neutral_700', kind: 'color', default: '#3D3D5C' },
