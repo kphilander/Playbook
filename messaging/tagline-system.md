@@ -270,7 +270,7 @@ How taglines pair with the {{PROGRAM_NAME}} logo. For full logo specifications, 
 ### Tagline placement rules
 
 1. **Below the logo** — tagline sits beneath the wordmark with 0.5x logo height spacing.
-2. **Same visual weight as "book"** — use the regular weight (400) of the heading font, lowercase, matching the wordmark's light half.
+2. **Quieter than the wordmark** — use the regular weight (400) of the heading font, sentence case, so the tagline supports rather than competes.
 3. **Never above the logo.** The wordmark always leads.
 4. **Never replace the logo.** The tagline supplements; it doesn't substitute.
 5. **Maximum one tagline per lockup.** Don't stack multiple taglines.

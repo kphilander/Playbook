@@ -40,7 +40,7 @@ The illustration system extends the icon system's design language to larger, mor
 
 ### Design principle
 
-Both systems echo the logo's weight contrast — **Play** (800 weight) / **book** (400 weight). Structural elements carry visual weight; details stay light. This creates hierarchy and ties every visual element back to the wordmark.
+Both systems pair bold structure with light detail. Structural elements carry visual weight; details stay light. This creates hierarchy and keeps every visual element on the brand's confident-but-open personality.
 
 ---
 

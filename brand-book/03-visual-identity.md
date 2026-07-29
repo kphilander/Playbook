@@ -18,18 +18,11 @@ The {{PROGRAM_NAME}} logo identifies gambling entertainment literacy content. It
 
 ### Logo design
 
-The {{PROGRAM_NAME}} identity has two parts — a symbol and a wordmark — unified by one idea: **the play is cut into the book.**
+The {{PROGRAM_NAME}} identity has two parts — a symbol and a wordmark — that say the same thing: **the book you play.**
 
-**The symbol** is a book cover with the play punched out. A rounded cover tile carries two negative-space cuts: a spine slit on the left and a play triangle in the field. In color contexts the punched play fills with teal; in monochrome it stays open, letting the background show through. Because the mark is built from cuts rather than strokes, it works in any single color, at any size — from a 16px favicon to a 512px app icon — and doubles natively as an app tile.
+**The symbol** is a closed book beside a play triangle: a rounded bar (the book, spine out) and the play, side by side. Its primary form carries the two shapes in a rounded `primary` navy tile — white book, teal play — the same mark used across {{PROGRAM_NAME}} Academy. Two flat shapes keep it legible from a 16px favicon to a 512px app icon, and it works in a single color.
 
-**The wordmark** splits "Playbook" into its two component concepts:
-
-- **Play** — set in Inter 800 (extra-bold). Represents the entertainment side of gambling.
-- **book** — set in Inter 400 (regular), lowercase, matched size. Represents the knowledge and literacy side.
-
-The signature detail: the counter of the "P" is the same play triangle cut into the symbol — the negative-space play, carried into the name itself. It reads as a quiet wink at display sizes and disappears gracefully at small sizes.
-
-The weight contrast between the two halves embodies the brand's core duality: enjoying the game *and* understanding it. In two-tone variants the contrast is reinforced by color: "Play" in navy, "book" in teal.
+**The wordmark** is the program name set in Inter 700 (bold), tight tracking, one weight, one color. No split styling, no case games — the confidence is in the restraint. Color carries the variants: navy on light, white on dark.
 
 **No font dependencies.** All wordmark text is converted to Inter vector outlines when the logo files are generated, so the SVGs render identically everywhere — including `<img>` embeds, CMSes, and email clients that block external font loading. Never re-typeset the wordmark in live text; always use the generated files.
 
@@ -38,8 +31,8 @@ The weight contrast between the two halves embodies the brand's core duality: en
 | Layout | Name | Best for |
 |---|---|---|
 | **Horizontal** (B1) | Wordmark as one word | Navigation bars, headers, banners, inline references, small sizes |
-| **Stacked** (B2) | Symbol above wordmark | Hero placements, square formats, posters, splash screens |
-| **Symbol** (B3) | Symbol alone | App icons, social avatars, favicons, tight spaces below minimum wordmark size |
+| **Stacked** (B2) | Symbol tile above wordmark | Hero placements, square formats, posters, splash screens |
+| **Symbol** (B3) | Symbol alone (tile or bare) | App icons, social avatars, favicons, tight spaces below minimum wordmark size |
 
 Layouts are interchangeable — choose based on the available space and aspect ratio.
 
@@ -69,17 +62,17 @@ Maintain a minimum clear space equal to **1x the height of the logomark** on all
 
 #### Approved color variants
 
-Each layout is available in 5 color modes. The two-tone pairing is the default identity:
+Each layout is available in 5 color modes:
 
-| Variant | Play color | book color | Symbol (cover / punched play) | Background | File suffix |
-|---|---|---|---|---|---|
-| Full color | `primary` navy | `secondary_dark` teal | navy / `secondary` teal fill | White | `-full-color` |
-| On light | `primary` navy | `secondary_dark` teal | navy / `secondary` teal fill | `neutral_50` light | `-on-light` |
-| Reversed | White | `secondary` teal | white / `secondary` teal fill | `primary` navy | `-reversed` |
-| Mono white | White | White | white / open punch | Black / dark | `-mono-white` |
-| Mono dark | `primary` navy | `primary` navy | navy / open punch | Light (single-color) | `-mono-dark` |
+| Variant | Wordmark | Symbol (book / play) | Background | File suffix |
+|---|---|---|---|---|
+| Full color | `primary` navy | navy tile: white / `secondary` teal | White | `-full-color` |
+| On light | `primary` navy | navy tile: white / `secondary` teal | `neutral_50` light | `-on-light` |
+| Reversed | White | bare mark: white / `secondary` teal | `primary` navy | `-reversed` |
+| Mono white | White | bare mark: white / white | Black / dark | `-mono-white` |
+| Mono dark | `primary` navy | bare mark: navy / navy | Light (single-color) | `-mono-dark` |
 
-The wordmark's teal is `secondary_dark` (contrast-safe on light backgrounds); the symbol's punched play fills with full `secondary` teal for its signature pop. In monochrome the punch stays open — the background shows through the cuts.
+On light backgrounds the symbol travels inside its navy tile; on dark or single-color contexts the bare mark is used and the background does the tile's job. The play triangle is the one place the brand teal appears in the logo.
 
 ### Logo files
 
@@ -98,13 +91,13 @@ visual-identity/logo/
     logo-stacked-mono-white.svg
     logo-stacked-mono-dark.svg
   symbol/                           ← text-free brand icon
-    symbol-mark.svg                 ← navy container, white page, teal play
-    symbol-mark-on-light.svg
+    symbol-mark.svg                 ← navy tile, white book, teal play
+    symbol-mark-on-light.svg        ← bare mark for light backgrounds
     symbol-mark-on-dark.svg
     symbol-mark-mono-dark.svg
     symbol-mark-mono-white.svg
   favicon/                          ← browser tabs, app icons, PWA
-    favicon.svg                     ← theme-aware (dark-mode container)
+    favicon.svg                     ← the brand tile
     favicon.ico                     ← 16 + 32 + 48 packed
     favicon-16.png / -32.png / -48.png
     apple-touch-icon.png            ← 180×180 full-bleed
@@ -120,7 +113,7 @@ Regenerate all logo files: `node collateral/render/build-logos.mjs` (add `--skip
 
 ### Favicon and app icons
 
-The favicon is the cover tile itself, scaled to fill the frame — the punched spine slit and teal play stay legible at 16px. `favicon.svg` is theme-aware: the cover lightens to `primary_light` when the browser is in dark mode. App icons (`apple-touch-icon.png`, `icon-192/512.png`) are full-bleed squares — a white cover tile on a `primary` navy field, with the punched slit showing navy through; the OS applies its own corner mask.
+The favicon is the brand tile — the rounded navy square with white book and teal play, identical to the {{PROGRAM_NAME}} Academy favicon. App icons (`apple-touch-icon.png`, `icon-192/512.png`) are the same mark on a full-bleed navy square; the OS applies its own corner mask.
 
 Recommended head markup:
 

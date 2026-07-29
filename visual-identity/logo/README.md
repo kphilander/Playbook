@@ -8,10 +8,8 @@ Open [`symbol-preview.html`](symbol-preview.html) in a browser to see the full s
 
 ## The marks
 
-One idea unifies the system: **the play is cut into the book.**
-
-- **Symbol** — a book cover with the play punched out: a rounded cover tile carrying two negative-space cuts, a spine slit and a play triangle. Color contexts fill the punched play with teal; monochrome leaves it open (the background shows through). Built from cuts, it works in any single color at any size — and doubles natively as an app tile.
-- **Wordmark** — the program name split into contrasting weights: **Play** (Inter 800) + **book** (Inter 400), lowercase, matched size. The counter of the "P" is the same play triangle cut into the symbol. The weight contrast embodies the brand duality: enjoying the game *and* understanding it. Forks configure the split (and can disable the play-counter) under `logo:` in `_brand.yml`.
+- **Symbol** — a closed book beside a play triangle, carried in a rounded navy tile (white book, teal play) — the same mark used across Playbook Academy. On dark or single-color contexts the bare mark is used without the tile. Two flat shapes, legible from 16px favicons to 512px app icons.
+- **Wordmark** — the program name set in **Inter 700 (bold)**, tight tracking, one weight, one color: navy on light, white on dark. Forks set their own name (and can opt into a split-weight treatment or a play-counter P) under `logo:` in `_brand.yml`.
 
 ## Variants
 
@@ -39,25 +37,25 @@ One idea unifies the system: **the play is cut into the book.**
 
 | File | Use |
 |------|-----|
-| [symbol-mark.svg](symbol/symbol-mark.svg) | Primary — navy cover, teal-filled play |
-| [symbol-mark-on-light.svg](symbol/symbol-mark-on-light.svg) | Light backgrounds (same as primary) |
-| [symbol-mark-on-dark.svg](symbol/symbol-mark-on-dark.svg) | Dark backgrounds — white cover, teal play, cuts show through |
-| [symbol-mark-mono-dark.svg](symbol/symbol-mark-mono-dark.svg) | Monochrome navy — play stays punched open |
-| [symbol-mark-mono-white.svg](symbol/symbol-mark-mono-white.svg) | Monochrome white — play stays punched open |
+| [symbol-mark.svg](symbol/symbol-mark.svg) | Primary — navy tile, white book, teal play |
+| [symbol-mark-on-light.svg](symbol/symbol-mark-on-light.svg) | Light backgrounds — bare mark, navy book, teal play |
+| [symbol-mark-on-dark.svg](symbol/symbol-mark-on-dark.svg) | Dark backgrounds — bare mark, white book, teal play |
+| [symbol-mark-mono-dark.svg](symbol/symbol-mark-mono-dark.svg) | Monochrome navy, bare mark |
+| [symbol-mark-mono-white.svg](symbol/symbol-mark-mono-white.svg) | Monochrome white on black tile |
 
 ### [Favicon](favicon/) — Browser tabs, app icons, PWA
 
-The favicon is the cover tile scaled to fill the frame — spine slit and teal play stay legible at 16px.
+The favicon is the brand tile — identical to the Playbook Academy favicon.
 
 | File | Use |
 |------|-----|
-| [favicon.svg](favicon/favicon.svg) | Modern browsers. Theme-aware: the cover lightens in dark mode |
+| [favicon.svg](favicon/favicon.svg) | Modern browsers — the brand tile |
 | [favicon.ico](favicon/favicon.ico) | Legacy fallback (16 + 32 + 48 packed) |
 | [favicon-16.png](favicon/favicon-16.png), [favicon-32.png](favicon/favicon-32.png), [favicon-48.png](favicon/favicon-48.png) | Fixed-size PNG fallbacks |
-| [apple-touch-icon.png](favicon/apple-touch-icon.png) | iOS home screen, 180×180 full-bleed: white tile on navy (iOS applies its own mask) |
+| [apple-touch-icon.png](favicon/apple-touch-icon.png) | iOS home screen, 180×180 full-bleed navy (iOS applies its own mask) |
 | [icon-192.png](favicon/icon-192.png), [icon-512.png](favicon/icon-512.png) | PWA manifest icons, full-bleed square |
-| [favicon-reversed.svg](favicon/favicon-reversed.svg) | White cover tile (teal play, transparent cuts) for dark UI chrome |
-| [favicon-mono-white.svg](favicon/favicon-mono-white.svg) | Single-color white tile, play punched open |
+| [favicon-reversed.svg](favicon/favicon-reversed.svg) | Bare mark (white book, teal play, transparent) for dark UI chrome |
+| [favicon-mono-white.svg](favicon/favicon-mono-white.svg) | Single-color white mark on black tile |
 
 Recommended head markup:
 

@@ -1,6 +1,6 @@
 # Iconography
 
-31 custom SVG icons using a dual stroke-weight system that echoes the logo's typographic contrast (Play 800 / book 400): primary strokes at 2px for structure, detail strokes at 1px for accents.
+31 custom SVG icons using a dual stroke-weight system that echoes the brand's bold-structure / light-detail contrast: primary strokes at 2px for structure, detail strokes at 1px for accents.
 
 ## Documents and Assets
 

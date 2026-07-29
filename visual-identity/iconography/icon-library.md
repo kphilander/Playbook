@@ -1,6 +1,6 @@
 # Playbook Icon Library
 
-Complete reference for all 31 icons in the Playbook brand system. Each icon uses a **dual stroke-weight system** that echoes the logo's typographic contrast (Play 800 / book 400).
+Complete reference for all 31 icons in the Playbook brand system. Each icon uses a **dual stroke-weight system** — bold structure, light detail — echoing the brand's confident-but-open personality.
 
 ![Full icon grid preview](icon-preview.png)
 
@@ -8,10 +8,10 @@ Complete reference for all 31 icons in the Playbook brand system. Each icon uses
 
 ## Design philosophy: Weight contrast
 
-The Playbook logo splits "Playbook" into two typographic weights — **Play** (Inter 800, extra-bold) and **book** (Inter 400, regular). The icon system mirrors this contrast with two stroke weights inside every icon:
+The Playbook brand pairs bold structure with light detail — a confident frame around open, approachable content. The icon system expresses this with two stroke weights inside every icon:
 
-- **Primary strokes (2px)** — Outer containers, main shapes, defining structure. The "Play" weight.
-- **Detail strokes (1px)** — Inner details, accents, secondary elements. The "book" weight.
+- **Primary strokes (2px)** — Outer containers, main shapes, defining structure.
+- **Detail strokes (1px)** — Inner details, accents, secondary elements.
 
 This 2:1 ratio creates visual hierarchy within each icon and makes the icon set feel like part of the same design language as the wordmark.
 

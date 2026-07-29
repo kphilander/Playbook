@@ -4,7 +4,7 @@
  *
  * Generates the full logo system from _brand.yml:
  *
- *   Symbol mark (punched book cover)     × 5 color modes
+ *   Symbol mark (book + play in tile)    × 5 color modes
  *   Horizontal lockup (wordmark)         × 5 color modes
  *   Stacked lockup (symbol + wordmark)   × 5 color modes
  *   Helpline badge                       × 2
@@ -235,54 +235,35 @@ function roundedPoly(pts, radii) {
   return d + 'Z';
 }
 
-/* ─── Symbol mark — the punched book cover ──────────────────────── */
-// A book cover tile with the play triangle and spine gutter PUNCHED OUT
-// as negative space — the same cut as the wordmark's play-counter P.
-// Color contexts fill the punched play with teal; mono leaves it open.
-// Designed on a 64×64 grid: tile 8..56 × 8..56, spine slit, play punch.
+/* ─── Symbol mark — closed book + play triangle ─────────────────── */
+// The Playbook Academy mark: a closed-book bar (left page/spine) beside
+// a play triangle, usually inside a rounded navy tile. Two flat shapes,
+// legible from 16px favicons to 512px app icons.
+// 64×64 grid: bar 14,14 16×36 r2 · triangle (34,14)(54,32)(34,50).
 
-const TILE = {
-  x: 8, y: 8, w: 48, h: 48,
-  rSpine: 4.5,        // left (spine) corner radius
-  rEdge: 10,          // right (fore-edge) corner radius
-  slitX: 14, slitW: 4.5,
-  tri: [[26.5, 20], [46, 32], [26.5, 44]],
-  triR: [2, 3, 2],
+const MARK = {
+  bar: { x: 14, y: 14, w: 16, h: 36, rx: 2 },
+  tri: '34,14 54,32 34,50',
 };
 
-function tilePaths() {
-  const t = TILE;
-  const x2 = t.x + t.w, y2 = t.y + t.h;
-  const cover = `M${t.x + t.rSpine} ${t.y}H${x2 - t.rEdge}Q${x2} ${t.y} ${x2} ${t.y + t.rEdge}V${y2 - t.rEdge}Q${x2} ${y2} ${x2 - t.rEdge} ${y2}H${t.x + t.rSpine}Q${t.x} ${y2} ${t.x} ${y2 - t.rSpine}V${t.y + t.rSpine}Q${t.x} ${t.y} ${t.x + t.rSpine} ${t.y}Z`;
-  const slit = `M${t.slitX} ${t.y}h${t.slitW}V${y2}h${-t.slitW}Z`;
-  const tri = roundedPoly(t.tri, t.triR);
-  return { cover, slit, tri };
+function markPaths(barColor, triColor) {
+  const b = MARK.bar;
+  return `<rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="${b.rx}" fill="${barColor}"/><polygon points="${MARK.tri}" fill="${triColor}"/>`;
 }
 
 /**
- * Standalone symbol SVG — the punched cover tile.
- *   coverColor  tile fill
- *   playColor   fill for the punched play; null leaves it open (negative space)
- *   bg          optional square backdrop (app icons); slit/punch show it through
- *   scaleUp     enlarges the tile about center (favicon optics)
+ * Standalone symbol SVG.
+ *   barColor / triColor  the two mark shapes
+ *   bg / bgRx            optional tile behind the mark (rx 14 = brand tile)
  */
-function symbolSVG(coverColor, playColor, { bg = null, bgRx = 0, scaleUp = 1, themeAware = false } = {}) {
-  const { cover, slit, tri } = tilePaths();
-  const style = themeAware
-    ? `<style>.pb-c{fill:${coverColor}}@media(prefers-color-scheme:dark){.pb-c{fill:${C.navyLight}}}</style>`
-    : '';
-  const punched = `<path fill-rule="evenodd" d="${cover} ${slit} ${tri}" ${themeAware ? 'class="pb-c"' : `fill="${coverColor}"`}/>`;
-  const playFill = playColor ? `<path d="${tri}" fill="${playColor}"/>` : '';
-  const g = scaleUp === 1
-    ? punched + playFill
-    : `<g transform="translate(32 32) scale(${scaleUp}) translate(-32 -32)">${punched}${playFill}</g>`;
+function symbolSVG(barColor, triColor, { bg = null, bgRx = 14 } = {}) {
   const bgRect = bg ? `<rect width="64" height="64" rx="${bgRx}" fill="${bg}"/>` : '';
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">${style}${bgRect}${g}</svg>\n`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">${bgRect}${markPaths(barColor, triColor)}</svg>\n`;
 }
 
 /* ─── Wordmark — weight-contrast duality, outlined ──────────────── */
 
-const WM = { size: 44, trackBold: -20, trackLight: -12, gapEm: 0.045, pad: 6 };
+const WM = { size: 44, trackBold: -18, trackLight: -12, gapEm: 0.045, pad: 6 };
 
 /** Layout the two wordmark runs once; recolor per variant. */
 function wordmarkRuns() {
@@ -322,24 +303,20 @@ function wordmarkSVG(boldColor, lightColor, bg = null) {
 
 /* ─── Stacked lockup — symbol above wordmark ────────────────────── */
 
-function stackedSVG(coverColor, playColor, boldColor, lightColor, bg = null) {
+function stackedSVG(tileBg, barColor, triColor, boldColor, lightColor, bg = null) {
   const { parts, bb } = WORDMARK;
   const wmW = bb.maxX - bb.minX;
   const wmH = bb.maxY - bb.minY;
-  const tileVis = 44;           // visual size of the 48-unit tile
-  const scale = tileVis / TILE.w;
+  const tileVis = 48;           // display size of the 64-unit tile
+  const scale = tileVis / 64;
   const gap = 10;
   const pad = 8;
   const w = r2(wmW + pad * 2);
   const h = r2(tileVis + gap + wmH + pad * 2);
   const bgRect = bg ? `<rect width="${w}" height="${h}" fill="${bg}"/>` : '';
-  const { cover, slit, tri } = tilePaths();
-  const punched = `<path fill-rule="evenodd" d="${cover} ${slit} ${tri}" fill="${coverColor}"/>`;
-  const playFill = playColor ? `<path d="${tri}" fill="${playColor}"/>` : '';
-  // place so the tile's visual box (TILE.x..TILE.x+w) is centered at top
-  const gx = r2((w - tileVis) / 2 - TILE.x * scale);
-  const gy = r2(pad - TILE.y * scale);
-  const sym = `<g transform="translate(${gx} ${gy}) scale(${r2(scale)})">${punched}${playFill}</g>`;
+  const tile = tileBg ? `<rect width="64" height="64" rx="14" fill="${tileBg}"/>` : '';
+  const gx = r2((w - tileVis) / 2);
+  const sym = `<g transform="translate(${gx} ${pad}) scale(${r2(scale)})">${tile}${markPaths(barColor, triColor)}</g>`;
   const oy = pad + tileVis + gap - bb.minY;
   const ox = pad - bb.minX;
   const wm = parts.map(p =>
@@ -380,17 +357,15 @@ function helplineBadgeSVG(boldColor, lightColor, dividerColor, labelColor, numbe
 
 /* ─── Favicon / app-icon rasters ────────────────────────────────── */
 
-const TILE_FILL = 64 / TILE.w;  // scale the 48-unit tile to fill the 64 box
-
-// The tile IS the favicon: full-bleed navy cover, punched slit, teal play.
-function faviconSVG({ themeAware = false } = {}) {
-  return symbolSVG(C.navy, C.teal, { scaleUp: TILE_FILL, themeAware });
+// The brand tile IS the favicon: rounded navy tile, white bar, teal play
+// (identical to the Playbook Academy favicon).
+function faviconSVG() {
+  return symbolSVG(C.white, C.teal, { bg: C.navy, bgRx: 14 });
 }
 
-// Square full-bleed icon for apple-touch / PWA: white tile on navy field
-// (the punched slit shows navy through; the OS applies its own mask).
+// Square full-bleed icon for apple-touch / PWA (the OS applies its own mask).
 function appIconSVG() {
-  return symbolSVG(C.white, C.teal, { bg: C.navy, bgRx: 0, scaleUp: 1 });
+  return symbolSVG(C.white, C.teal, { bg: C.navy, bgRx: 0 });
 }
 
 /** Pack PNG buffers into a .ico container (PNG-in-ICO, valid for 16–256 px). */
@@ -472,31 +447,31 @@ function write(dir, name, content) {
 
 write(PRIMARY, 'logo-horizontal-full-color.svg', wordmarkSVG(C.navy, C.tealDark));
 write(PRIMARY, 'logo-horizontal-on-light.svg', wordmarkSVG(C.navy, C.tealDark));
-write(PRIMARY, 'logo-stacked-full-color.svg', stackedSVG(C.navy, C.teal, C.navy, C.tealDark));
-write(PRIMARY, 'logo-stacked-on-light.svg', stackedSVG(C.navy, C.teal, C.navy, C.tealDark));
+write(PRIMARY, 'logo-stacked-full-color.svg', stackedSVG(C.navy, C.white, C.teal, C.navy, C.tealDark));
+write(PRIMARY, 'logo-stacked-on-light.svg', stackedSVG(C.navy, C.white, C.teal, C.navy, C.tealDark));
 
 // ── Secondary (reversed, monochrome) ──
 
 write(SECONDARY, 'logo-horizontal-reversed.svg', wordmarkSVG(C.white, C.teal, C.navy));
 write(SECONDARY, 'logo-horizontal-mono-white.svg', wordmarkSVG(C.white, C.white, C.black));
 write(SECONDARY, 'logo-horizontal-mono-dark.svg', wordmarkSVG(C.navy, C.navy));
-write(SECONDARY, 'logo-stacked-reversed.svg', stackedSVG(C.white, C.teal, C.white, C.teal, C.navy));
-write(SECONDARY, 'logo-stacked-mono-white.svg', stackedSVG(C.white, null, C.white, C.white, C.black));
-write(SECONDARY, 'logo-stacked-mono-dark.svg', stackedSVG(C.navy, null, C.navy, C.navy));
+write(SECONDARY, 'logo-stacked-reversed.svg', stackedSVG(null, C.white, C.teal, C.white, C.teal, C.navy));
+write(SECONDARY, 'logo-stacked-mono-white.svg', stackedSVG(null, C.white, C.white, C.white, C.white, C.black));
+write(SECONDARY, 'logo-stacked-mono-dark.svg', stackedSVG(null, C.navy, C.navy, C.navy, C.navy));
 
 // ── Symbol mark ──
 
-write(SYMBOL_DIR, 'symbol-mark.svg', symbolSVG(C.navy, C.teal));
+write(SYMBOL_DIR, 'symbol-mark.svg', symbolSVG(C.white, C.teal, { bg: C.navy }));
 write(SYMBOL_DIR, 'symbol-mark-on-light.svg', symbolSVG(C.navy, C.teal));
 write(SYMBOL_DIR, 'symbol-mark-on-dark.svg', symbolSVG(C.white, C.teal));
-write(SYMBOL_DIR, 'symbol-mark-mono-dark.svg', symbolSVG(C.navy, null));
-write(SYMBOL_DIR, 'symbol-mark-mono-white.svg', symbolSVG(C.white, null));
+write(SYMBOL_DIR, 'symbol-mark-mono-dark.svg', symbolSVG(C.navy, C.navy));
+write(SYMBOL_DIR, 'symbol-mark-mono-white.svg', symbolSVG(C.white, C.white, { bg: C.black }));
 
 // ── Favicon (SVG) ──
 
-write(FAVICON_DIR, 'favicon.svg', faviconSVG({ themeAware: true }));
-write(FAVICON_DIR, 'favicon-reversed.svg', symbolSVG(C.white, C.teal, { scaleUp: TILE_FILL }));
-write(FAVICON_DIR, 'favicon-mono-white.svg', symbolSVG(C.white, null, { scaleUp: TILE_FILL }));
+write(FAVICON_DIR, 'favicon.svg', faviconSVG());
+write(FAVICON_DIR, 'favicon-reversed.svg', symbolSVG(C.white, C.teal));
+write(FAVICON_DIR, 'favicon-mono-white.svg', symbolSVG(C.white, C.white, { bg: C.black }));
 
 // ── Helpline badges ──
 
@@ -513,8 +488,8 @@ function previewHTML() {
   const wmLite = wordmarkSVG(C.navy, C.tealDark);
   const wmRev = wordmarkSVG(C.white, C.teal);
   const wmMono = wordmarkSVG(C.navy, C.navy);
-  const stLite = stackedSVG(C.navy, C.teal, C.navy, C.tealDark);
-  const stRev = stackedSVG(C.white, C.teal, C.white, C.teal);
+  const stLite = stackedSVG(C.navy, C.white, C.teal, C.navy, C.tealDark);
+  const stRev = stackedSVG(null, C.white, C.teal, C.white, C.teal);
   const fav = faviconSVG();
   const sizes = [16, 24, 32, 48, 64, 128]
     .map(s => `<div class="szi"><div class="szbox" style="width:${s}px;height:${s}px">${fav}</div><span>${s}</span></div>`).join('');
@@ -547,36 +522,36 @@ h2 { font-size:17px; font-weight:600; margin:40px 0 14px; color:${C.n700} }
 </head>
 <body>
 <h1>${brand.meta.program_name} Logo System</h1>
-<p class="subtitle">Symbol: a book cover with the play <em>punched out</em> — spine slit + play triangle as negative space, teal-filled in color contexts. Wordmark: ${BOLD_TEXT} ${BOLD_WGHT} + ${LIGHT_TEXT} ${LIGHT_WGHT}, with the same play cut into the P's counter. All text is outlined; no font dependencies.</p>
+<p class="subtitle">Symbol: a closed book beside a play triangle, carried in a rounded navy tile. Wordmark: ${BOLD_TEXT} set in Inter ${BOLD_WGHT}, one weight, one color. All text is outlined; no font dependencies.</p>
 
 <div class="hero"><div class="hfit" style="height:120px">${stLite}</div><div class="hfit" style="height:52px">${wmLite}</div><div class="szbox" style="width:96px;height:96px">${symbolSVG(C.white, C.teal, { bg: C.navy, bgRx: 14 })}</div></div>
 
 <h2>Horizontal wordmark</h2>
 <div class="grid">
-${card(`<div class="h44">${wmLite}</div>`, 'full-color / on-light — navy + teal-dark')}
-${card(`<div class="h44">${wmRev}</div>`, 'reversed — white + teal', 'dark')}
+${card(`<div class="h44">${wmLite}</div>`, 'full-color / on-light — navy')}
+${card(`<div class="h44">${wmRev}</div>`, 'reversed — white', 'dark')}
 ${card(`<div class="h44">${wmMono}</div>`, 'mono-dark — single color')}
 ${card(`<div class="h44">${wordmarkSVG(C.white, C.white)}</div>`, 'mono-white — single color', 'black')}
 </div>
 
-<h2>Stacked lockup (symbol + wordmark)</h2>
+<h2>Stacked lockup (tile + wordmark)</h2>
 <div class="grid">
 ${card(`<div class="h120">${stLite}</div>`, 'full-color / on-light')}
 ${card(`<div class="h120">${stRev}</div>`, 'reversed', 'dark')}
-${card(`<div class="h120">${stackedSVG(C.navy, null, C.navy, C.navy)}</div>`, 'mono-dark')}
+${card(`<div class="h120">${stackedSVG(null, C.navy, C.navy, C.navy, C.navy)}</div>`, 'mono-dark')}
 </div>
 
-<h2>Symbol mark — the punched cover</h2>
+<h2>Symbol mark — closed book + play</h2>
 <div class="grid">
-${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.navy, C.teal)}</div>`, 'primary — on light')}
-${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.white, C.teal)}</div>`, 'on dark — slit shows through', 'dark')}
-${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.navy, null)}</div>`, 'mono dark — pure negative space')}
-${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.white, null)}</div>`, 'mono white — pure negative space', 'black')}
-${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.white, C.teal, { bg: C.navy, bgRx: 14 })}</div>`, 'app icon — white tile on navy')}
+${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.white, C.teal, { bg: C.navy })}</div>`, 'primary — the brand tile')}
+${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.navy, C.teal)}</div>`, 'on light — no tile')}
+${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.white, C.teal)}</div>`, 'on dark — no tile', 'dark')}
+${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.navy, C.navy)}</div>`, 'mono dark')}
+${card(`<div class="szbox" style="width:96px;height:96px">${symbolSVG(C.white, C.white, { bg: C.black })}</div>`, 'mono white — black tile', 'black')}
 </div>
 
 <h2>Favicon at size</h2>
-<div class="card" style="align-items:flex-start"><div class="rowflex">${sizes}</div><div class="label">favicon.svg is theme-aware (the cover lightens in dark mode); PNG 16/32/48 + favicon.ico + apple-touch-icon + PWA 192/512 ship alongside.</div></div>
+<div class="card" style="align-items:flex-start"><div class="rowflex">${sizes}</div><div class="label">favicon.svg is the brand tile (identical to Playbook Academy's); PNG 16/32/48 + favicon.ico + apple-touch-icon + PWA 192/512 ship alongside.</div></div>
 
 <h2>Helpline badge</h2>
 <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(420px,1fr))">
@@ -596,9 +571,9 @@ files.push(join(LOGO_DIR, 'symbol-preview.html').replace(ROOT + '/', ''));
 
 function heroAnimatedSVG() {
   const s = 4.375;                 // 64-grid → 280px box
-  const tx = 60, ty = 35;          // tile visual area: 95..305 × 70..280
-  const { cover, slit, tri } = tilePaths();
-  const cx = r2(tx + 36 * s), cy = r2(ty + 32 * s);
+  const tx = 60, ty = 35;          // mark visual area: 95..305 × 70..280
+  const b = MARK.bar;
+  const cx = r2(tx + 40 * s), cy = r2(ty + 32 * s);
 
   const { parts, bb } = WORDMARK;
   const wmW = bb.maxX - bb.minX;
@@ -639,19 +614,22 @@ function heroAnimatedSVG() {
   </circle>
 
   <g transform="translate(${tx} ${ty}) scale(${s})">
-    <!-- Cover outline draws on -->
-    <path d="${cover}" fill="none" stroke="#FFFFFF" stroke-width="0.9"
-          stroke-dasharray="210" stroke-dashoffset="210">
-      <animate attributeName="stroke-dashoffset" from="210" to="0" dur="0.8s" begin="0.2s" fill="freeze"/>
-    </path>
-    <!-- Punched cover fills in (slit + play cut out) -->
-    <path fill-rule="evenodd" d="${cover} ${slit} ${tri}" fill="#FFFFFF" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.35s" begin="1s" fill="freeze"/>
-    </path>
-    <!-- The punched play fills teal -->
-    <path d="${tri}" fill="url(#tealGlow)" filter="url(#glow)" opacity="0">
-      <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.4s" fill="freeze"/>
-    </path>
+    <!-- Book bar draws on -->
+    <rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="${b.rx}" fill="none" stroke="#FFFFFF" stroke-width="0.7"
+          stroke-dasharray="110" stroke-dashoffset="110">
+      <animate attributeName="stroke-dashoffset" from="110" to="0" dur="0.8s" begin="0.2s" fill="freeze"/>
+    </rect>
+    <rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="${b.rx}" fill="#FFFFFF" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/>
+    </rect>
+    <!-- Play triangle draws on, then fills teal -->
+    <polygon points="${MARK.tri}" fill="none" stroke="${C.teal}" stroke-width="0.7" stroke-linejoin="round"
+             stroke-dasharray="95" stroke-dashoffset="95">
+      <animate attributeName="stroke-dashoffset" from="95" to="0" dur="0.8s" begin="0.6s" fill="freeze"/>
+    </polygon>
+    <polygon points="${MARK.tri}" fill="url(#tealGlow)" filter="url(#glow)" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.3s" fill="freeze"/>
+    </polygon>
   </g>
 
   <!-- Wordmark fades up (outlined — no font dependency) -->
