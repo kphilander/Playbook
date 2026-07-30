@@ -515,8 +515,8 @@ divider: "neutral_100"       # Decorative only, no contrast requirement
 | Muted text (dark mode)      | Primary          | Neutral 500        |  2.91:1 | Avoid |
 | Primary CTA button          | Accent           | Primary            |  5.26:1 | AA    |
 | Secondary CTA button        | Secondary        | Primary            |  7.82:1 | AAA   |
-| Teal accent (dark mode)     | Primary          | Secondary          |  7.82:1 | AAA   |
-| Teal accent (dark mode)     | Primary Dark     | Secondary          |  9.29:1 | AAA   |
+| Emerald accent (dark mode)     | Primary          | Secondary          |  7.82:1 | AAA   |
+| Emerald accent (dark mode)     | Primary Dark     | Secondary          |  9.29:1 | AAA   |
 | Helpline banner             | Primary          | White              | 14.92:1 | AAA   |
 | Success feedback            | Success          | Primary            |  6.67:1 | AA    |
 | Warning alert               | Warning          | Primary            |  8.31:1 | AAA   |

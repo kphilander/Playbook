@@ -6,7 +6,7 @@
      1200x630 per Open Graph spec. Photo: assets/rg-hero-photo.jpg
      (AI-generated, see collateral/assets/SOURCES.md). -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800;900&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 0; }
@@ -18,9 +18,11 @@
     color-mix(in srgb, var(--pb-color-primary-dark) 55%, transparent) 46%,
     transparent 78%); }
   .og-content { position: absolute; left: 64px; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; z-index: 2; max-width: 640px; }
-  .og-logo { font-family: 'Inter', sans-serif; font-size: 40px; margin-bottom: 28px; }
-  .og-logo .logo-play { color: var(--pb-color-white); font-weight: 800; letter-spacing: -0.02em; }
-  .og-logo .logo-book { color: var(--pb-color-secondary); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .og-logo { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .og-mark { width: 56px; height: 56px; display: block; flex: none; }
+  .og-mark .mark-bar { fill: var(--pb-color-white); }
+  .og-mark .mark-play { fill: var(--pb-color-secondary); }
+  .og-wordmark { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 40px; letter-spacing: -0.02em; color: var(--pb-color-white); }
   .og-headline { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 76px; line-height: 1.05; letter-spacing: -0.03em; color: var(--pb-color-white); margin-bottom: 24px; }
   .og-headline span { color: var(--pb-color-secondary); }
   .og-url { font-family: 'Source Code Pro', monospace; font-weight: 600; font-size: 24px; color: var(--pb-color-neutral-300); }
@@ -32,7 +34,13 @@
   <img class="og-photo" src="../assets/rg-hero-photo.jpg" alt="">
   <div class="og-scrim"></div>
   <div class="og-content">
-    <div class="og-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="og-logo">
+      <svg class="og-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+        <rect class="mark-bar" x="14" y="14" width="16" height="36" rx="2"/>
+        <polygon class="mark-play" points="34,14 54,32 34,50"/>
+      </svg>
+      <span class="og-wordmark">Playbook RG</span>
+    </div>
     <div class="og-headline">Play on <span>your terms.</span></div>
     <div class="og-url">{{PROGRAM_URL}}</div>
   </div>

@@ -160,7 +160,7 @@ export const colorPalette = {
     { name: 'Midnight', hex: '#0F1923', role: 'High Contrast' },
   ],
   secondary: [
-    { name: 'Electric Teal', hex: '#10B981', role: 'Interactive' },
+    { name: 'Emerald', hex: '#10B981', role: 'Interactive' },
     { name: 'Teal Light', hex: '#34D399', role: 'Hover States' },
     { name: 'Teal Dark', hex: '#047857', role: 'Pressed States' },
   ],

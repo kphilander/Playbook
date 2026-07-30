@@ -29,8 +29,8 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 | **Text on dark** | `#FFFFFF` headline, `#A8A8C0` subtext |
 | **Headings** | Inter (fallback: Arial, Helvetica, sans-serif) |
 | **Body text** | Source Sans 3 (fallback: Georgia, serif) |
-| **Link color** | Teal `#10B981` |
-| **CTA buttons** | Teal `#10B981` bg, navy `#1B2838` text, 16px padding, rounded 6px |
+| **Link color** | Emerald `#10B981` |
+| **CTA buttons** | Emerald `#10B981` bg, navy `#1B2838` text, 16px padding, rounded 6px |
 | **Accent bar** | 4px gradient `#FF6B35` → `#10B981` (top of email, use image) |
 
 ---
@@ -43,8 +43,8 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 
 | Variant | Subject | Preview text |
 |---|---|---|
-| **A (primary)** | Welcome to {{PROGRAM_NAME}} — 3 tools, 60 seconds | Set your budget, set your pace, test your game IQ. |
-| **B (quiz hook)** | Think you know the odds? Most people get question 3 wrong | Welcome to {{PROGRAM_NAME}}. Take the quiz. |
+| **A (primary)** | Welcome to {{PROGRAM_SHORT_NAME}} — 3 tools, 60 seconds | Set your budget, set your pace, test your game IQ. |
+| **B (quiz hook)** | Think you know the odds? Most people get question 3 wrong | Welcome to {{PROGRAM_SHORT_NAME}}. Take the quiz. |
 | **C (direct)** | Your tools are ready | Deposit limits, session reminders, and your game IQ quiz — all set up in 60 seconds. |
 
 ### Email body
@@ -53,9 +53,9 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 
 | Element | Content |
 |---|---|
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg). Min height 24px. Maintain 1x logo-height clear space on all sides. Co-branding: if operator logo is present, use vertical divider (neutral_300 `#A8A8C0`, 1px) between logos; {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + emerald BOOK on navy bg). Min height 24px. Maintain 1x logo-height clear space on all sides. Co-branding: if operator logo is present, use vertical divider (neutral_300 `#A8A8C0`, 1px) between logos; {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Headline** | Welcome. A few things worth knowing. |
-| **Subheadline** | {{PROGRAM_NAME}} gives you the facts, the tools, and the real numbers behind the games you play. No fine print. |
+| **Subheadline** | {{PROGRAM_SHORT_NAME}} gives you the facts, the tools, and the real numbers behind the games you play. No fine print. |
 
 **Body section 1 — Tools intro** (white background):
 
@@ -82,7 +82,7 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 | **Helpline** | Free, confidential support — for any question about gambling. |
 | **Channels** | Call {{HELPLINE_NUMBER}} &#124; Text {{TEXT_NUMBER}} &#124; Chat at {{CHAT_URL}} |
 | **Legal** | You must be {{MIN_AGE}}+ to gamble. Gambling involves risk. |
-| **Logo** | {{PROGRAM_NAME}} logomark, reversed variant (white Play + teal BOOK on navy `#0F1923` footer bg). Min height 24px. Below 24px, use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} logomark, reversed variant (white Play + emerald BOOK on navy `#0F1923` footer bg). Min height 24px. Below 24px, use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Unsubscribe** | Manage your preferences (note: {{PROGRAM_NAME}} emails cannot be fully unsubscribed per policy) |
 
 ---
@@ -160,7 +160,7 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 | **Stat 3** | {{AVG_SESSION}} average session |
 | **Stat 4** | {{NET_RESULT}} net result |
 | **CTA** | `See full activity →` |
-| **Layout** | 2x2 grid, each stat in a card with teal accent top border |
+| **Layout** | 2x2 grid, each stat in a card with emerald accent top border |
 
 **Body section 2 — Limits recap** (light gray background):
 
@@ -198,7 +198,7 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 |---|---|---|
 | **A (primary)** | Your tools are still here | Your limits, your dashboard, your quiz score — all where you left them. |
 | **B (quiz hook)** | New quiz questions just dropped | We added new questions to the game IQ quiz. Think you can beat your score? |
-| **C (check-in)** | Quick check-in from {{PROGRAM_NAME}} | Everything's where you left it. Your tools are ready when you are. |
+| **C (check-in)** | Quick check-in from {{PROGRAM_SHORT_NAME}} | Everything's where you left it. Your tools are ready when you are. |
 
 ### Email body
 

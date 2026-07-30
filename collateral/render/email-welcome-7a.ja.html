@@ -29,9 +29,10 @@
     font-size: calc(28px * var(--pb-template-text-scale, 1));
     margin-bottom: 32px;
     display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    font-weight: 700;
+    letter-spacing: -0.018em;
   }
-  .hero-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
-  .hero-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .hero h1 {
     font-family: var(--pb-font-heading);
     font-weight: 700;
@@ -159,9 +160,10 @@
     font-size: calc(16px * var(--pb-template-text-scale, 1));
     margin-top: 20px;
     display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    font-weight: 700;
+    letter-spacing: -0.018em;
   }
-  .footer-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
-  .footer-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .footer-unsub {
     font-size: calc(12px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
@@ -184,7 +186,7 @@
   <div class="accent-bar"></div>
 
   <div class="hero">
-    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="hero-logo">Playbook</div>
     <h1>ようこそ。知っておきたいことをいくつかご紹介します。</h1>
     <p>Playbookは、事実、ツール、そして遊ぶゲームの背景にある本当の数字をお届けします。但し書きはありません。</p>
   </div>
@@ -233,7 +235,7 @@
       チャット：{{CHAT_URL}}
     </div>
     <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-logo">Playbook</div>
     <div class="footer-unsub">
       <a href="#">配信設定を管理する</a>
     </div>

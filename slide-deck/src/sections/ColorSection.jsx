@@ -51,7 +51,7 @@ export default function ColorSection() {
         label="Visual Identity"
         title="Color"
         titleAccent="System"
-        subtitle="A three-tone palette: deep navy for trust, electric teal for action, bold orange for attention. Click any hex code to copy."
+        subtitle="A three-tone palette: deep navy for trust, emerald for action, bold orange for attention. Click any hex code to copy."
       />
 
       {/* Main palette */}

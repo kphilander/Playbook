@@ -21,7 +21,7 @@ pres.defineLayout({ name: "16x9", width: 13.33, height: 7.5 });
 pres.layout = "16x9";
 
 function accentBar(slide) {
-  // 4px ≈ 0.055"  — gradient left orange → right teal
+  // 4px ≈ 0.055"  — gradient left orange → right emerald
   slide.addShape(pres.ShapeType.rect, {
     x: 0, y: 0, w: 13.33, h: 0.055,
     fill: { type: "solid", color: C.orange },
@@ -357,7 +357,7 @@ function footerStrip(slide) {
     { label: "Primary\nDeep Navy", hex: "#1B2838", color: C.navy, textColor: C.white },
     { label: "Primary Light", hex: "#2A3F56", color: C.navyLight, textColor: C.white },
     { label: "Primary Dark\nMidnight", hex: "#0F1923", color: C.midnight, textColor: C.white },
-    { label: "Secondary\nElectric Teal", hex: "#10B981", color: C.teal, textColor: C.navy },
+    { label: "Secondary\nEmerald", hex: "#10B981", color: C.teal, textColor: C.navy },
     { label: "Accent\nBold Orange", hex: "#FF6B35", color: C.orange, textColor: C.white },
   ];
   swatches.forEach((sw, i) => {

@@ -44,7 +44,7 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 | **Background** | Navy `#1B2838` or gradient `#0F1923` → `#1B2838` |
 | **Accent bar** | 6px gradient `#FF6B35` → `#10B981` at top |
 | **Grid overlay** | Subtle white lines, 0.02 opacity, 60px spacing |
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg), top-left. Min height 24px (digital). Maintain 1x logo-height clear space on all sides. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + emerald BOOK on navy bg), top-left. Min height 24px (digital). Maintain 1x logo-height clear space on all sides. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, top-right. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 | **Helpline strip** | Bottom strip, `#2A3F56` background, white Source Code Pro text |
 | **Safe area** | 48px padding on all sides (title-safe zone) |
@@ -62,7 +62,7 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 
 | Element | Content |
 |---|---|
-| **Pillar badge** | `OPEN` (teal pill) |
+| **Pillar badge** | `OPEN` (emerald pill) |
 | **Headline** | Every game has math. Here's yours. |
 | **Headline specs** | Inter 800, 64px, white |
 | **Subheadline** | Real odds. Real tools. No fine print. |
@@ -83,7 +83,7 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 
 | Game | Edge | Color |
 |---|---|---|
-| Blackjack | 0.5% | Teal `#10B981` |
+| Blackjack | 0.5% | Emerald `#10B981` |
 | Roulette | 5.26% | White `#FFFFFF` |
 | Slots | 2–15% | Orange `#FF6B35` |
 
@@ -98,7 +98,7 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 
 | Element | Content |
 |---|---|
-| **Pillar badge** | `SHARP` (teal pill) |
+| **Pillar badge** | `SHARP` (emerald pill) |
 | **Headline** | Think you know the odds? |
 | **Headline specs** | Inter 800, 72px, white |
 | **Body** | Take the 2-minute game IQ quiz. Most people get question 3 wrong. |
@@ -117,7 +117,7 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 | **Headline specs** | Inter 800, 72px, white |
 | **Subheadline** | Free, confidential support — for any question about gambling. No judgment. Ever. |
 | **Number** | {{HELPLINE_NUMBER}} |
-| **Number specs** | Source Code Pro 700, 96px, teal `#10B981` — dominant element |
+| **Number specs** | Source Code Pro 700, 96px, emerald `#10B981` — dominant element |
 | **Channels** | Text {{TEXT_NUMBER}} &#124; Chat {{CHAT_URL}} |
 | **Channels specs** | Source Sans 3, 28px, `#A8A8C0` |
 | **Availability** | 24/7 |

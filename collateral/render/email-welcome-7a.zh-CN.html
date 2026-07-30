@@ -26,9 +26,10 @@
     font-size: calc(30px * var(--pb-template-text-scale, 1));
     margin-bottom: 32px;
     display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    font-weight: 700;
+    letter-spacing: -0.018em;
   }
-  .hero-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
-  .hero-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .hero h1 {
     font-family: var(--pb-font-heading);
     font-weight: 700;
@@ -144,9 +145,10 @@
     font-size: calc(17px * var(--pb-template-text-scale, 1));
     margin-top: 20px;
     display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    font-weight: 700;
+    letter-spacing: -0.018em;
   }
-  .footer-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
-  .footer-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .footer-unsub {
     font-size: calc(13px * var(--pb-template-text-scale, 1));
     color: var(--pb-color-neutral-500);
@@ -169,7 +171,7 @@
   <div class="accent-bar"></div>
 
   <div class="hero">
-    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="hero-logo">Playbook</div>
     <h1>欢迎。以下几项资讯值得关注。</h1>
     <p>Playbook 提供真实数据、实用工具以及游戏背后的准确数字，毫无隐晦。</p>
   </div>
@@ -218,7 +220,7 @@
       在线支援 {{CHAT_URL}}
     </div>
     <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-logo">Playbook</div>
     <div class="footer-unsub">
       <a href="#">管理偏好设置</a>
     </div>

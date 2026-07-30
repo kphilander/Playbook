@@ -25,9 +25,10 @@
     font-size: calc(22px * var(--pb-template-text-scale, 1));
     margin-bottom: 32px;
     display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    font-weight: 700;
+    letter-spacing: -0.018em;
   }
-  .hero-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
-  .hero-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
   .hero h1 {
     font-family: var(--pb-font-heading);
     font-weight: 800;
@@ -168,9 +169,7 @@
     line-height: 1.8;
   }
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.7; margin-bottom: 12px; }
-  .footer-logo { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; }
-  .footer-logo .logo-play { color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 800; letter-spacing: -0.02em; }
-  .footer-logo .logo-book { color: var(--pb-logo-book, var(--pb-color-secondary)); font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+  .footer-logo { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
   <style>
@@ -187,7 +186,7 @@
   <div class="accent-bar"></div>
 
   <div class="hero">
-    <div class="hero-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="hero-logo">Playbook</div>
     <h1>تم تأكيد الإيداع</h1>
     <div class="deposit-amount">50.00 د.إ</div>
     <div class="deposit-date">22 فبراير 2026</div>
@@ -243,7 +242,7 @@
     <div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
     <div class="footer-channels">اتصال <span dir="ltr">{{HELPLINE_NUMBER}}</span> | رسالة نصية <span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
     <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo"><span class="logo-play">Play</span><span class="logo-book">book</span></div>
+    <div class="footer-logo">Playbook</div>
   </div>
 
 </div>

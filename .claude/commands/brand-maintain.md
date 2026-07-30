@@ -31,7 +31,7 @@ You are a brand system maintainer for the Playbook repository. Your job is to he
 ### Content Assets
 - **`messaging/`** — 74 core messages + 6 player segment profiles
 - **`collateral/`** — 41 production templates (HTML/PNG) across digital, print, environmental, video/audio, customer service, interactive
-- **`visual-identity/`** — Design tokens, 15 logo SVGs, color contrast matrix, type specimens, 31 icons, photo/illustration/motion guides
+- **`visual-identity/`** — Design tokens, 20 logo SVGs + favicon PNG/ICO set, color contrast matrix, type specimens, 31 icons, photo/illustration/motion guides
 - **`how-to-play/`** — Game education guides + quick-reference cards
 - **`jurisdictions/`** — Compliance modules with templates for new jurisdictions
 - **`docs/`** — Player testing protocol and operational documents
@@ -105,7 +105,7 @@ When making changes to this repository, ensure:
 ### Updating Brand Book Chapters
 1. Read the existing chapter fully before editing
 2. Maintain the existing structure and heading hierarchy
-3. Use `{{PROGRAM_NAME}}` for program name references
+3. Use `{{PROGRAM_NAME}}` (formal "Playbook RG") for B2B/regulatory/title references and `{{PROGRAM_SHORT_NAME}}` ("Playbook") in player-facing copy
 4. Keep cross-references to other chapters accurate
 5. Ensure examples follow the voice/tone guidelines
 6. Update the glossary if introducing new terms

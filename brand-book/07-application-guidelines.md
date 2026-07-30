@@ -121,7 +121,7 @@ Tier 2 content (crisis/support) appears at specific moments in the player journe
 
 | Touchpoint | What to show | Visual treatment | Tone |
 |---|---|---|---|
-| Support/help page | Helpline (phone/text/chat), self-exclusion link, FAQ | White surface, navy text, teal CTA only, no orange | Warm / Direct |
+| Support/help page | Helpline (phone/text/chat), self-exclusion link, FAQ | White surface, navy text, emerald CTA only, no orange | Warm / Direct |
 | Self-exclusion flow | Duration selection, confirmation, what happens next | Single column, 640px max, one action per screen | Warm / Direct |
 | Activity dashboard | Time played, amount spent, session count, trends | Muted data viz, no gamification, neutral palette | Confident / Informative |
 | Limit-reached notification | Current limit, when it resets, support resources | Clear banner, not dismissible for 5 seconds, helpline visible | Warm / Direct |
@@ -137,7 +137,7 @@ Before launching any Tier 2 touchpoint, verify the following:
 | Check | Requirement | Pass criteria |
 |---|---|---|
 | Helpline visibility | {{HELPLINE_NUMBER}} appears above the fold | Visible without scrolling on all breakpoints |
-| Color compliance | No orange, no vibrant accent colors | Only navy, teal, and neutral grays used |
+| Color compliance | No orange, no vibrant accent colors | Only navy, emerald, and neutral grays used |
 | Typography scale | Body text at 16px minimum | Meets WCAG AAA for readability |
 | White space ratio | At least 40% of the viewport is white space | Visual breathing room is evident |
 | Animation | No spring, bounce, or celebratory motion | Only simple opacity fades permitted |
@@ -160,7 +160,7 @@ Never invert this hierarchy. The support action always comes first. Context expl
 When a player moves from standard content (Tier 1) to a support context (Tier 2), the visual transition should be deliberate:
 
 - Background shifts from brand colors to white
-- Accent color shifts from orange to teal
+- Accent color shifts from orange to emerald
 - Typography weight increases for body text (improved readability under stress)
 - Layout simplifies — single column, fewer elements per screen
 - Playful brand elements (illustrations, mascots, decorative patterns) are removed entirely
