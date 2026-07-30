@@ -29,8 +29,7 @@ export default function HeroSection() {
 
         {/* Wordmark */}
         <h1 className="font-heading text-6xl sm:text-7xl lg:text-8xl mb-4 select-none">
-          <span className="font-extrabold text-white">Play</span>
-          <span className="font-light text-teal">BOOK</span>
+          <span className="font-bold tracking-[-0.018em] text-white">Playbook RG</span>
         </h1>
 
         {/* Subtitle */}

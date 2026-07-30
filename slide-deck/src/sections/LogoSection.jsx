@@ -61,20 +61,21 @@ export default function LogoSection() {
         label="Visual Identity"
         title="Logo"
         titleAccent="System"
-        subtitle="The PlayBOOK wordmark combines bold confidence (Play) with open accessibility (BOOK). Available in 10 primary variants plus favicons and badges."
+        subtitle="A closed book beside a play triangle, plus the program name in one weight and one color. Available in 10 primary variants plus favicons and badges."
       />
 
       {/* Wordmark construction */}
       <ScrollReveal className="mb-16">
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-8 sm:p-12 text-center">
           <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl select-none mb-6">
-            <span className="font-extrabold text-white">Play</span>
-            <span className="font-light text-teal">BOOK</span>
+            <span className="font-bold tracking-[-0.018em] text-white">Playbook RG</span>
           </h1>
           <div className="flex items-center justify-center gap-8 text-xs font-mono text-n300">
-            <span><span className="text-white font-bold">Play</span> — Inter 800</span>
+            <span>Inter 700</span>
             <span className="text-n300">|</span>
-            <span><span className="text-teal font-light">BOOK</span> — Inter 300</span>
+            <span>tracking -0.018em</span>
+            <span className="text-n300">|</span>
+            <span>single color</span>
           </div>
         </div>
       </ScrollReveal>
@@ -110,15 +111,12 @@ export default function LogoSection() {
         <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 sm:p-8">
           <h3 className="font-heading text-lg font-bold text-white mb-4">Clear Space</h3>
           <p className="font-body text-base text-n300 leading-relaxed mb-6">
-            Maintain a minimum clear space equal to the height of the "B" in BOOK on all sides of the logo.
+            Maintain a minimum clear space equal to 1&times; the logo height on all sides.
             Never crop, rotate, distort, or add effects to the wordmark.
           </p>
           <div className="bg-navy-light rounded-lg p-12 flex items-center justify-center">
             <div className="border-2 border-dashed border-teal/30 p-8 rounded">
-              <span className="font-heading text-3xl">
-                <span className="font-extrabold text-white">Play</span>
-                <span className="font-light text-teal">BOOK</span>
-              </span>
+              <span className="font-heading text-3xl font-bold tracking-[-0.018em] text-white">Playbook RG</span>
             </div>
           </div>
         </div>
