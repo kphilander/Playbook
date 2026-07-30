@@ -78,8 +78,7 @@
 .pv-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--cfg-gradient-bar, linear-gradient(90deg, var(--cfg-accent, #FF6B35), var(--cfg-secondary, #10B981))); z-index: 2; }
 .pv-card .card-header { padding: 28px 32px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
 .pv-card .card-logo { font-size: 16px; display: inline-flex; align-items: center; }
-.pv-card .card-logo .logo-play { font-weight: 800; letter-spacing: -0.02em; }
-.pv-card .card-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+.pv-card .card-logo .logo-word { font-weight: 700; letter-spacing: -0.018em; }
 .pv-card .card-logo .logo-replace-img { height: 1.4em; max-width: 120px; object-fit: contain; display: none; }
 .pv-card .card-pillar { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 11px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
 .pv-card .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 32px; position: relative; z-index: 1; }
@@ -120,8 +119,7 @@
 /* Helpline badge preview */
 .pv-badge { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-radius: 12px; }
 .pv-badge .badge-logo { font-size: 14px; display: inline-flex; align-items: center; }
-.pv-badge .badge-logo .logo-play { font-weight: 800; }
-.pv-badge .badge-logo .logo-book { font-weight: 300; text-transform: uppercase; letter-spacing: 0.08em; }
+.pv-badge .badge-logo .logo-word { font-weight: 700; letter-spacing: -0.018em; }
 .pv-badge .badge-logo .logo-replace-img { height: 1.2em; max-width: 100px; object-fit: contain; display: none; }
 .pv-badge .badge-divider { width: 1px; height: 32px; opacity: 0.3; }
 .pv-badge .badge-text { font-size: 11px; font-weight: 600; line-height: 1.2; }

@@ -210,15 +210,7 @@ fieldset legend { padding: 0; }
 
 /* === Wordmark Preview === */
 .wordmark-preview { margin-top: 8px; padding: 16px 20px; background: var(--pb-color-primary, #1B2838); border-radius: 10px; display: flex; align-items: center; justify-content: center; min-height: 64px; }
-.wordmark-preview .wm-play { font-weight: 800; color: #fff; letter-spacing: -0.02em; }
-.wordmark-preview .wm-book { font-weight: 300; color: var(--pb-color-secondary, #10B981); text-transform: uppercase; letter-spacing: 0.08em; }
-.wordmark-preview .wm-full { font-weight: 600; color: #fff; }
-.split-slider-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
-.split-slider-row input[type="range"] { flex: 1; accent-color: var(--pb-color-secondary, #10B981); }
-.split-slider-row .split-pos { font-size: 12px; color: var(--pb-color-neutral-500, #6B6B8A); font-weight: 600; min-width: 60px; }
-.no-split-row { margin-top: 6px; display: flex; align-items: center; gap: 8px; }
-.no-split-row label { font-size: 12px; color: var(--pb-color-neutral-500, #6B6B8A); cursor: pointer; }
-.no-split-row input[type="checkbox"] { accent-color: var(--pb-color-secondary, #10B981); }
+.wordmark-preview .wm-full { font-weight: 700; color: #fff; letter-spacing: -0.018em; }
 
 /* === Palette Suggestion === */
 .palette-suggestion { margin-bottom: 20px; padding: 16px; background: var(--pb-color-neutral-50, #F5F5FA); border: 1px solid var(--pb-color-neutral-100, #E8E8F0); border-radius: 10px; }

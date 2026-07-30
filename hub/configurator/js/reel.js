@@ -33,7 +33,7 @@ const CSS = `
 .reel-prog i.run{animation:rfill var(--rdur,4600ms) linear forwards}
 @keyframes rfill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 .reel-head{position:absolute;top:0;left:0;right:0;z-index:20;padding:26px 40px;display:flex;justify-content:space-between;align-items:flex-start}
-.reel-mark{font:800 15px Inter,system-ui,sans-serif}.reel-mark b{color:#10B981}
+.reel-mark{font:700 15px Inter,system-ui,sans-serif;letter-spacing:-.018em}
 .reel-hr{display:flex;flex-direction:column;align-items:flex-end;gap:13px;max-width:430px;text-align:right}
 .reel-pitch h1{margin:0;font:800 19px/1.1 Inter,sans-serif;letter-spacing:-.01em}
 .reel-pitch p{margin:5px 0 0;font:13px/1.5 Inter,sans-serif;opacity:.55}
@@ -48,8 +48,7 @@ const CSS = `
 .reel-brand{--ink:#fff;--mut:rgba(255,255,255,.74)}
 .rl{--ink:#fff;--mut:rgba(255,255,255,.74)} .rd-mode{} /* placeholder */
 .reel-kick{display:inline-block;font:700 12px var(--fb);letter-spacing:.24em;text-transform:uppercase;color:var(--s)}
-.reel-wm{font:800 clamp(46px,8vw,108px)/.93 var(--fh);letter-spacing:-.03em;color:var(--ink);margin:16px 0 0}
-.reel-wm i{font-style:normal;color:var(--a)}
+.reel-wm{font:700 clamp(46px,8vw,108px)/.93 var(--fh);letter-spacing:-.018em;color:var(--ink);margin:16px 0 0}
 .reel-tag{font:clamp(17px,1.9vw,24px)/1.4 var(--fb);color:var(--mut);max-width:22ch;margin:22px 0 30px}
 .reel-chips{display:flex;gap:11px}.reel-chips.c{justify-content:center}
 .reel-chip{display:flex;flex-direction:column;gap:6px}
@@ -66,7 +65,7 @@ const CSS = `
 .surf .bar{height:10px;background:linear-gradient(90deg,var(--a),var(--s))}
 .surf .pad{padding:28px 30px 30px;background:var(--card);color:var(--cink)}
 .surf .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
-.surf .logo{font:800 21px var(--fh)}.surf .logo i{font-style:normal;color:var(--s)}
+.surf .logo{font:700 21px var(--fh);letter-spacing:-.018em}
 .surf .pill{font:800 11px var(--fb);letter-spacing:.06em;text-transform:uppercase;color:var(--card);background:var(--s);padding:5px 13px;border-radius:999px}
 .surf .lab{font:700 12px var(--fb);letter-spacing:.13em;text-transform:uppercase;color:var(--a);margin-bottom:12px}
 .surf .h{font:800 26px/1.12 var(--fh);margin-bottom:15px}
@@ -79,7 +78,7 @@ const CSS = `
 .poster-p{border-radius:20px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45);text-align:left;background:var(--ppbg);color:var(--ppink);animation:rfloat 8s ease-in-out infinite}
 .poster-p .bar{height:10px;background:linear-gradient(90deg,var(--a),var(--s))}
 .poster-p .pp{padding:32px 34px 28px}
-.poster-p .pl{font:800 20px var(--fh);margin-bottom:22px}.poster-p .pl i{font-style:normal;color:var(--s)}
+.poster-p .pl{font:700 20px var(--fh);letter-spacing:-.018em;margin-bottom:22px}
 .poster-p .ph{font:800 29px/1.12 var(--fh);letter-spacing:-.02em;margin:0 0 22px}
 .poster-p .row{display:grid;grid-template-columns:1fr auto;gap:5px 14px;padding:12px 0;border-top:1px solid var(--pln)}
 .poster-p .g{font:14px var(--fb)}.poster-p .e{font:800 22px var(--fh);color:var(--a);text-align:right;grid-row:span 2}.poster-p .nt{font:11.5px var(--fb);opacity:.55}
@@ -119,7 +118,7 @@ const STATS = [['5.26', '%', 'American roulette'], ['0.5', '%', 'Blackjack · ba
 const TAGS = ['Know the odds. Own your play.', 'Every game has a house edge.', 'No fine print. Just the facts.', 'Play with your eyes open.', "The math doesn't change. Your strategy can.", 'Worth knowing. Worth sharing.'];
 const pick = a => a[Math.floor(Math.random() * a.length)];
 const NM = b => b.name[0] + b.name[1];
-const wmHTML = b => `${b.name[0]}<i>${b.name[1]}</i>`;
+const wmHTML = b => NM(b);
 const chips = (b, c) => `<div class="reel-chips${c ? ' c' : ''}">${[b.primary, b.secondary, b.accent].map(h => `<div class="reel-chip"><i style="background:${h}"></i><span>${h}</span></div>`).join('')}</div>`;
 const tspec = b => `<div class="reel-tspec"><b>${b.fontHeading}</b> / ${b.fontBody}<span class="aa">Aa</span></div>`;
 
@@ -165,7 +164,7 @@ export function initReel(container, { onPick, onClose }) {
     <div class="reel-amb"></div><div class="reel-grain"></div><div class="reel-vig"></div>
     <div class="reel-prog"><i></i></div>
     <button class="reel-skip">Start from scratch instead</button>
-    <div class="reel-head"><div class="reel-mark"><b>Play</b>book · brand system</div>
+    <div class="reel-head"><div class="reel-mark">Playbook RG · brand system</div>
       <div class="reel-hr"><div class="reel-pitch"><h1>One config. Every brand.</h1><p>A single brand file restyles the whole system — light or dark, every surface, colour and type. Like one? Make it yours.</p></div>
       <button class="reel-use">Customize this brand &rarr;</button></div></div>
     <div class="reel-stage"><div class="reel-content"></div></div>

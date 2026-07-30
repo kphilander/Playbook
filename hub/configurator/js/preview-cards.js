@@ -3,7 +3,7 @@
 
 import { appState } from './state.js';
 import { lighten, darken, hexToRgb, rgbToHsl, contrastRatio } from './color-utils.js';
-import { getNameParts, updateWordmarkPreview } from './wordmark.js';
+import { programName, updateWordmarkPreview, WORDMARK_WEIGHT, WORDMARK_TRACKING } from './wordmark.js';
 import { getTypeScale } from './css-export.js';
 import { TYPE_SCALE_PRESETS } from './data/type-scales.js';
 import { CULTURE_CONTENT } from './data/culture-content.js';
@@ -103,9 +103,9 @@ export function updatePreview() {
   // White text on dark primary backgrounds (canonical per real templates)
   document.querySelectorAll('.pv-card:not(.pv-card-tier2) .myth-statement').forEach(el => { if (!el.querySelector('.strike')) return; el.style.color = '#FFFFFF'; });
   document.querySelectorAll('.pv-card:not(.pv-card-tier2) .footer-helpline').forEach(el => { el.style.color = '#FFFFFF'; });
-  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .card-logo .logo-play').forEach(el => { el.style.color = '#FFFFFF'; });
+  document.querySelectorAll('.pv-card:not(.pv-card-tier2) .card-logo .logo-word').forEach(el => { el.style.color = '#FFFFFF'; });
   document.querySelectorAll('.pv-badge .badge-number').forEach(el => { el.style.color = '#FFFFFF'; });
-  document.querySelectorAll('.pv-badge .badge-logo .logo-play').forEach(el => { el.style.color = '#FFFFFF'; });
+  document.querySelectorAll('.pv-badge .badge-logo .logo-word').forEach(el => { el.style.color = '#FFFFFF'; });
   document.querySelectorAll('.pv-badge .badge-divider').forEach(el => { if (!el.id) el.style.background = n300; });
 
   // Fonts
@@ -159,34 +159,23 @@ export function updatePreview() {
   document.querySelectorAll('.pv-card:not(.pv-card-tier2) .myth-statement, .pv-card-tier2 .t2-headline').forEach(el => { el.style.lineHeight = String(ts.lhHeading); });
   document.querySelectorAll('.pv-card .fact-statement, .pv-card-tier2 .t2-subline').forEach(el => { el.style.lineHeight = String(ts.lhBody); });
 
-  // Program name in logos (text or image replacement)
-  const nameParts = getNameParts();
+  // Program name in logos (uniform wordmark, or uploaded-logo replacement)
+  const name = programName();
   const replaceWithImage = appState.logoMode === 'replace' && appState.logoDataUrl;
   document.querySelectorAll('.pv-card .card-logo, .pv-badge .badge-logo').forEach(el => {
-    const play = el.querySelector('.logo-play');
-    const book = el.querySelector('.logo-book');
+    const word = el.querySelector('.logo-word');
     const img = el.querySelector('.logo-replace-img');
     if (replaceWithImage) {
-      if (play) play.style.display = 'none';
-      if (book) book.style.display = 'none';
+      if (word) word.style.display = 'none';
       if (img) { img.src = appState.logoDataUrl; img.style.display = 'inline-block'; }
     } else {
       if (img) { img.style.display = 'none'; }
-      if (play && book) {
-        if (nameParts[1]) {
-          play.textContent = nameParts[0];
-          play.style.display = '';
-          book.textContent = nameParts[1];
-          book.style.fontWeight = '300';
-          book.style.textTransform = 'uppercase';
-          book.style.letterSpacing = '0.08em';
-        } else {
-          play.style.display = 'none';
-          book.textContent = nameParts[0];
-          book.style.fontWeight = '600';
-          book.style.textTransform = 'none';
-          book.style.letterSpacing = '-0.02em';
-        }
+      if (word) {
+        word.textContent = name;
+        word.style.display = '';
+        word.style.fontWeight = WORDMARK_WEIGHT;
+        word.style.letterSpacing = WORDMARK_TRACKING;
+        word.style.textTransform = 'none';
       }
     }
   });

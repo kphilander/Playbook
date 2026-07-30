@@ -157,17 +157,22 @@ export const DEFAULT_BRAND = {
     }
   },
   "logo": {
-    "type": "text-based wordmark",
+    "type": "symbol + uniform bold wordmark",
     "font": "Inter",
-    "play_weight": 800,
-    "book_weight": 300,
-    "book_style": "uppercase, tight-spaced",
+    "wordmark_bold_text": "Playbook RG",
+    "wordmark_light_text": "",
+    "play_weight": 700,
+    "book_weight": 400,
+    "book_style": "single weight, single color",
+    "play_counter": false,
+    "symbol": "closed book + play triangle in rounded tile",
     "layouts": {
-      "stacked": "Play over BOOK (square format)",
-      "horizontal": "Playbook as one word (wide format)"
+      "stacked": "symbol tile above wordmark (square format)",
+      "horizontal": "wordmark as one word (wide format)"
     },
     "primary_path": "visual-identity/logo/primary/",
     "secondary_path": "visual-identity/logo/secondary/",
+    "symbol_path": "visual-identity/logo/symbol/",
     "favicon_path": "visual-identity/logo/favicon/",
     "helpline_badge_path": "visual-identity/logo/helpline-badge/",
     "minimum_height": "0.25in",

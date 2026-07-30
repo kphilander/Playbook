@@ -139,7 +139,7 @@
       <details class="step-explainer">
         <summary>What is this step for?</summary>
         <div class="explainer-body">
-          <p>Your <strong>program name</strong> becomes the wordmark on every template — split-styled like "Play<b>book</b>" or shown as one word. Your <strong>logo</strong> can sit alongside it (co-brand) or replace it entirely.</p>
+          <p>Your <strong>program name</strong> becomes the wordmark on every template, set in one weight and one color. Your <strong>logo</strong> can sit alongside it (co-brand) or replace it entirely.</p>
           <p>The organization, website, and email fill the <code>meta:</code> section of <code>_brand.yml</code> and resolve <code>{{ORGANIZATION}}</code>-style placeholders across all collateral and legal lines.</p>
         </div>
       </details>
@@ -178,7 +178,7 @@
               <input type="radio" name="logoMode" value="replace" style="accent-color:#10B981;"> Replace text wordmark
             </label>
           </div>
-          <div class="contrast-info" style="margin-top:6px;">Replace substitutes your logo for the &ldquo;Playbook&rdquo; text across all collateral.</div>
+          <div class="contrast-info" style="margin-top:6px;">Replace substitutes your logo for the wordmark text across all collateral.</div>
         </fieldset>
       </div>
 
@@ -187,17 +187,10 @@
         <input type="text" class="form-input" id="programName" value="Playbook" placeholder="e.g. BetWise, GameSmart, PlaySafe">
         <div class="wordmark-preview" id="wordmarkPreview">
           <span style="font-family: 'Inter', sans-serif; font-size: 28px;">
-            <span class="wm-play" id="wmPlay">Play</span><span class="wm-book" id="wmBook">book</span>
+            <span class="wm-full" id="wmFull">Playbook</span>
           </span>
         </div>
-        <div class="split-slider-row" id="splitSliderRow">
-          <input type="range" id="splitSlider" min="0" max="8" value="4" aria-label="Wordmark split position">
-          <span class="split-pos" id="splitPos" aria-live="polite">Split: 4</span>
-        </div>
-        <div class="no-split-row">
-          <input type="checkbox" id="noSplitCheck">
-          <label for="noSplitCheck">No split (single weight)</label>
-        </div>
+        <div class="contrast-info" style="margin-top:6px;">The wordmark is your program name in one weight and one color &mdash; white on dark surfaces, primary on light. Use your everyday short name here; it appears on player-facing collateral.</div>
       </div>
 
       <div class="form-group">
@@ -244,7 +237,7 @@
 
       <div class="palette-suggestion hidden" id="paletteSuggestion">
         <div class="palette-suggestion-label">Your brand accent</div>
-        <div class="palette-suggestion-desc">We recommend keeping the Playbook navy &amp; teal as your primary and secondary colors. Pick one of your logo colors below as your accent &mdash; it&rsquo;ll be used for buttons, stats, and calls to action.</div>
+        <div class="palette-suggestion-desc">We recommend keeping the Playbook navy &amp; emerald as your primary and secondary colors. Pick one of your logo colors below as your accent &mdash; it&rsquo;ll be used for buttons, stats, and calls to action.</div>
         <div class="palette-accent-row" id="paletteAccentRow"></div>
         <button type="button" class="palette-apply" id="paletteApplyBtn">Use as Accent Color</button>
       </div>
@@ -1106,7 +1099,7 @@
           <div class="preview-frame-label">Myth-Buster Card</div>
           <div class="pv-card" id="pvCard1" data-pb-label="Primary — Card background" style="background: var(--cfg-primary, #1B2838);">
             <div class="card-header">
-              <span class="card-logo" id="pvLogo1"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Heading Font — Logo wordmark (white on dark)">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #10B981);">book</span></span>
+              <span class="card-logo" id="pvLogo1"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-word" data-pb-label="Heading Font — Logo wordmark (white on dark)">Playbook</span></span>
               <span class="card-pillar" data-pb-label="Secondary — Pillar badge" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #10B981);">Open</span>
             </div>
             <div class="card-body">
@@ -1131,7 +1124,7 @@
           <div class="pv-card pv-card-tier2" id="pvCard2" data-pb-label="Background (n50 / white) — Light card surface">
             <div class="pv-accent-bar" data-pb-label="Secondary — 3px accent bar"></div>
             <div class="card-header" style="padding: 20px 24px 0;">
-              <span class="card-logo" id="pvLogo2"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Primary — Logo wordmark" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #10B981);">book</span></span>
+              <span class="card-logo" id="pvLogo2"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-word" data-pb-label="Primary — Logo wordmark" style="color: var(--cfg-primary, #1B2838);">Playbook</span></span>
             </div>
             <div class="card-body">
               <div class="t2-headline" id="pvT2Headline" data-pb-label="Heading Font + Primary — Tier 2 headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
@@ -1155,7 +1148,7 @@
           <div class="pv-badge" id="pvBadge" data-pb-label="Primary — Badge background" style="background: var(--cfg-primary, #1B2838);">
             <span id="pvBadgeOperator"></span>
             <div class="badge-divider" data-pb-label="Secondary — Co-brand divider" style="background: var(--cfg-secondary, #10B981);" id="pvBadgeCoDivider"></div>
-            <span class="badge-logo" id="pvLogoBadge"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Heading Font — Logo wordmark (white on dark)">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #10B981);">book</span></span>
+            <span class="badge-logo" id="pvLogoBadge"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-word" data-pb-label="Heading Font — Logo wordmark (white on dark)">Playbook</span></span>
             <div class="badge-divider" data-pb-label="Light text (n300) — Divider"></div>
             <div>
               <div class="badge-text" data-pb-label="Light text (n300) — Badge label" id="pvBadgeLabel">Free, confidential support 24/7</div>

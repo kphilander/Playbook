@@ -3,7 +3,7 @@
 
 import { appState, scheduleSave, loadSaved } from './state.js';
 import { updatePreview } from './preview-cards.js';
-import { updateSplitSlider, updateWordmarkPreview, syncSplitSliderBounds } from './wordmark.js';
+import { updateWordmarkPreview } from './wordmark.js';
 import { initLogoUpload, restoreLogoUi } from './logo.js';
 import { initFontUpload, restoreFontUi } from './fonts.js';
 import { initColorsStep, syncFooterBarUi } from './steps/colors.js';
@@ -152,7 +152,7 @@ function rehydrateAll() {
   syncFooterBarUi();
   renderMessagingLists();
   renderVoiceLists();
-  syncSplitSliderBounds();
+  updateWordmarkPreview();
   onBrandChange();
 }
 
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function rollRandomBrand() {
     applyRandomBrand();
-    updateSplitSlider();   // re-bound + auto-split the new program name
+    updateWordmarkPreview();   // reflect the new program name
     rehydrateAll();
     setUndoVisible(true);
   }
@@ -206,13 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('randomBrandReroll')?.addEventListener('click', rollRandomBrand);
   undoBtns.forEach(id => document.getElementById(id)?.addEventListener('click', undoRoll));
 
-  // Wordmark split events
+  // Wordmark preview follows the program name
   const nameInput = document.getElementById('programName');
-  const splitSlider = document.getElementById('splitSlider');
-  const noSplitCheck = document.getElementById('noSplitCheck');
-  nameInput.addEventListener('input', () => { updateSplitSlider(); });
-  splitSlider.addEventListener('input', () => { updateWordmarkPreview(); });
-  noSplitCheck.addEventListener('change', () => { updateWordmarkPreview(); });
+  nameInput.addEventListener('input', () => { updateWordmarkPreview(); });
 
   // Any input change re-renders the preview, refreshes the gallery, autosaves
   document.querySelectorAll('input, select, textarea').forEach(el => {
@@ -221,14 +217,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   goToStep(0);
-  updateSplitSlider();
+  updateWordmarkPreview();
   updatePreview();
   initRgPreview();
 
   // Brand handed off from a standalone reel → apply it and drop into the editor.
   const incoming = applyIncomingBrand();
   if (incoming) {
-    updateSplitSlider();
+    updateWordmarkPreview();
     rehydrateAll();
     goToStep(2);
   } else {
@@ -238,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const reel = initReel(reelEl, {
         onPick: (brand) => {
           applyBrandObject(brand);
-          updateSplitSlider();
+          updateWordmarkPreview();
           rehydrateAll();
           goToStep(2);
           reel.close();
