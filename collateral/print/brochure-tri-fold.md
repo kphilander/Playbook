@@ -60,7 +60,7 @@ INSIDE (face up):
 |---|---|
 | **Background** | Navy `#1B2838` (CMYK equivalent) |
 | **Accent bar** | 3mm gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, stacked (B1) layout, reversed variant (white Play + emerald BOOK on navy bg). Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Centered top third. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, stacked (B1) layout, reversed variant (white wordmark on navy bg). Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Centered top third. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, dashed border, below program logo. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos if side by side |
 | **Headline** | Every game has math. Here's yours. |
 | **Subheadline** | Real odds. Real tools. No fine print. |

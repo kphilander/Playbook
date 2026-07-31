@@ -30,7 +30,7 @@ Production-ready scripts for {{PROGRAM_NAME}} television commercials. 3 x 30-sec
 | **Color grade** | Warm, high-contrast. Navy/emerald/orange palette reflected in wardrobe and set design. |
 | **Graphics** | Clean motion graphics for stats. Inter font. Gradient accents. Match brand system. |
 | **Helpline** | On-screen text, minimum 5 seconds, final frame. White text on navy or emerald background. |
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + emerald BOOK on navy bg) + operator logo in final frame. Min height 24px (digital). Maintain 1x logo-height clear space. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg) + operator logo in final frame. Min height 24px (digital). Maintain 1x logo-height clear space. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 
 ---
 

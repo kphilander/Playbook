@@ -48,7 +48,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 | 0:00–0:02 | Navy background, numbers animate in | — | **Every game has a house edge.** |
 | 0:02–0:05 | Stats appear: Blackjack 0.5%, Roulette 5.26%, Slots 2–15% | — | **Blackjack: 0.5% / Roulette: 5.26% / Slots: 2–15%** |
 | 0:05–0:09 | Person at table, confident, checking phone | "Knowing the edge helps you pick your games and set your budget." | — |
-| 0:09–0:12 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + emerald BOOK on navy bg, min 24px height, 1x clear space) + QR code | "The facts are free." | **Know your game →** / **{{CONTENT_HUB_URL}}** |
+| 0:09–0:12 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white wordmark on navy bg, min 24px height, 1x clear space) + QR code | "The facts are free." | **Know your game →** / **{{CONTENT_HUB_URL}}** |
 | 0:12–0:15 | Helpline frame | — | **Free, confidential support 24/7: {{HELPLINE_NUMBER}}** |
 
 **Persistent text**: `{{HELPLINE_NUMBER}}` visible in corner from 0:05 onward.

@@ -40,7 +40,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 3–8s | Cut to person looking confident | "...has the emotional range of a toaster." |
 | 8–15s | Animated RNG visualization | "Every spin is calculated by a random number generator. It doesn't know you. It doesn't care. It doesn't remember your last spin." |
 | 15–22s | Quick stat cards flying in | "House edge on slots: 2–15%. Now you know." |
-| 22–30s | End card: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + emerald BOOK on navy bg, min 24px height, 1x clear space) + CTA | "Know your game. Link in bio." |
+| 22–30s | End card: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white wordmark on navy bg, min 24px height, 1x clear space) + CTA | "Know your game. Link in bio." |
 
 #### Reel 2 — "The -110 Explained" (Sports betting math)
 
@@ -50,7 +50,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 3–10s | Animated money breakdown | "You bet $110. You win $100. That $10 difference? That's the sportsbook's cut." |
 | 10–18s | Calculator visual | "On every. Single. Bet. It's how the business works." |
 | 18–25s | Comparison: -110 vs -150 vs +200 | "The bigger the favorite, the bigger the cut." |
-| 25–30s | End card: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + emerald BOOK on navy bg, min 24px height, 1x clear space) | "Straight talk. Real numbers. Link in bio." |
+| 25–30s | End card: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white wordmark on navy bg, min 24px height, 1x clear space) | "Straight talk. Real numbers. Link in bio." |
 
 #### Reel 3 — "The Quiz Challenge" (Engagement driver)
 
@@ -61,7 +61,7 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 | 8–12s | Dramatic pause | "If you said 'higher'... wrong." |
 | 12–20s | Answer reveal with animation | "Same as always. The machine has no memory. Each spin is independent." |
 | 20–25s | Score reveal | "Most people get this wrong. What about you?" |
-| 25–30s | End card with QR code: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white Play + emerald BOOK on navy bg, min 24px height, 1x clear space) | "Take the full quiz. Challenge a friend. Link in bio." |
+| 25–30s | End card with QR code: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white wordmark on navy bg, min 24px height, 1x clear space) | "Take the full quiz. Challenge a friend. Link in bio." |
 
 ### Carousel layouts (10 slides)
 

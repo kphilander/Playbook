@@ -44,7 +44,7 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 | **Background** | Navy `#1B2838` or gradient `#0F1923` → `#1B2838` |
 | **Accent bar** | 6px gradient `#FF6B35` → `#10B981` at top |
 | **Grid overlay** | Subtle white lines, 0.02 opacity, 60px spacing |
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + emerald BOOK on navy bg), top-left. Min height 24px (digital). Maintain 1x logo-height clear space on all sides. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg), top-left. Min height 24px (digital). Maintain 1x logo-height clear space on all sides. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, top-right. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 | **Helpline strip** | Bottom strip, `#2A3F56` background, white Source Code Pro text |
 | **Safe area** | 48px padding on all sides (title-safe zone) |

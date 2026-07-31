@@ -42,7 +42,7 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 |---|---|
 | **Background** | Navy `#1B2838` |
 | **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + emerald BOOK on navy bg), top-left, small. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg), top-left, small. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Pillar badge** | `SHARP` (emerald pill), top-right |
 
 ### Odds fact
