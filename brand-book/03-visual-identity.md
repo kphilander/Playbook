@@ -30,8 +30,8 @@ The {{PROGRAM_NAME}} identity has two parts — a symbol and a wordmark — that
 
 | Layout | Name | Best for |
 |---|---|---|
-| **Horizontal** (B1) | Wordmark as one word | Navigation bars, headers, banners, inline references, small sizes |
-| **Stacked** (B2) | Symbol tile above wordmark | Hero placements, square formats, posters, splash screens |
+| **Stacked** (B1) | Symbol tile above wordmark | Hero placements, square formats, posters, splash screens |
+| **Horizontal** (B2) | Wordmark as one word | Navigation bars, headers, banners, inline references, small sizes |
 | **Symbol** (B3) | Symbol alone (tile or bare) | App icons, social avatars, favicons, tight spaces below minimum wordmark size |
 
 Layouts are interchangeable — choose based on the available space and aspect ratio.
@@ -363,12 +363,12 @@ When customizing fonts:
 
 ### Design philosophy: Weight contrast
 
-The {{PROGRAM_NAME}} icon system mirrors the logo's typographic contrast — **Play** (800 weight) vs **BOOK** (300 weight) — through a dual stroke-weight system. Every icon contains two visual layers:
+The {{PROGRAM_NAME}} icon system pairs **bold structure with light detail** — a confident frame around open, approachable content — through a dual stroke-weight system. Every icon contains two visual layers:
 
-- **Primary strokes (2px)**: Outer containers, main shapes, defining structure — the "Play" weight
-- **Detail strokes (1px)**: Inner details, accents, secondary elements — the "BOOK" weight
+- **Primary strokes (2px)**: Outer containers, main shapes, defining structure
+- **Detail strokes (1px)**: Inner details, accents, secondary elements
 
-This 2:1 ratio creates visual hierarchy within each icon and ties the icon system to the wordmark's design language. The weight contrast is visible at 24px and still perceptible at 16px.
+This 2:1 ratio creates visual hierarchy within each icon and keeps the set on the brand's confident-but-open personality. The weight contrast is visible at 24px and still perceptible at 16px.
 
 ### Icon specifications
 
