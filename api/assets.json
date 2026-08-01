@@ -1,7 +1,7 @@
 {
   "meta": {
-    "totalAssets": 220,
-    "generated": "2026-08-01T18:42:51.929Z",
+    "totalAssets": 212,
+    "generated": "2026-08-01T19:16:14.819Z",
     "version": "0.1.0",
     "baseUrl": "/tools/playbook",
     "description": "Complete catalog of Playbook brand assets. All assets are CC0-licensed."
@@ -337,7 +337,7 @@
       ]
     },
     "icons": {
-      "count": 39,
+      "count": 31,
       "assets": [
         {
           "id": "icon-activity",
@@ -363,18 +363,6 @@
           "tags": [
             "tool",
             "notification"
-          ]
-        },
-        {
-          "id": "icon-bonus",
-          "filename": "icon-bonus.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-bonus.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-bonus.svg",
-          "format": "svg",
-          "fileSize": 432,
-          "category": "icons",
-          "tags": [
-            "general"
           ]
         },
         {
@@ -430,18 +418,6 @@
           ]
         },
         {
-          "id": "icon-deposit",
-          "filename": "icon-deposit.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-deposit.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-deposit.svg",
-          "format": "svg",
-          "fileSize": 401,
-          "category": "icons",
-          "tags": [
-            "general"
-          ]
-        },
-        {
           "id": "icon-dice",
           "filename": "icon-dice.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-dice.svg",
@@ -478,18 +454,6 @@
           "tags": [
             "math",
             "odds"
-          ]
-        },
-        {
-          "id": "icon-exclusion",
-          "filename": "icon-exclusion.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-exclusion.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-exclusion.svg",
-          "format": "svg",
-          "fileSize": 400,
-          "category": "icons",
-          "tags": [
-            "general"
           ]
         },
         {
@@ -555,18 +519,6 @@
           ]
         },
         {
-          "id": "icon-jackpot",
-          "filename": "icon-jackpot.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-jackpot.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-jackpot.svg",
-          "format": "svg",
-          "fileSize": 469,
-          "category": "icons",
-          "tags": [
-            "general"
-          ]
-        },
-        {
           "id": "icon-limit",
           "filename": "icon-limit.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-limit.svg",
@@ -605,18 +557,6 @@
           ]
         },
         {
-          "id": "icon-pause",
-          "filename": "icon-pause.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-pause.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-pause.svg",
-          "format": "svg",
-          "fileSize": 449,
-          "category": "icons",
-          "tags": [
-            "general"
-          ]
-        },
-        {
           "id": "icon-percentage",
           "filename": "icon-percentage.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-percentage.svg",
@@ -652,18 +592,6 @@
           "tags": [
             "content",
             "education"
-          ]
-        },
-        {
-          "id": "icon-profile",
-          "filename": "icon-profile.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-profile.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-profile.svg",
-          "format": "svg",
-          "fileSize": 382,
-          "category": "icons",
-          "tags": [
-            "general"
           ]
         },
         {
@@ -742,19 +670,6 @@
           ]
         },
         {
-          "id": "icon-shield",
-          "filename": "icon-shield.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-shield.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-shield.svg",
-          "format": "svg",
-          "fileSize": 333,
-          "category": "icons",
-          "tags": [
-            "safety",
-            "compliance"
-          ]
-        },
-        {
           "id": "icon-slots",
           "filename": "icon-slots.svg",
           "url": "/tools/playbook/brand-book/assets/icons/icon-slots.svg",
@@ -812,18 +727,6 @@
           "sourceUrl": "visual-identity/iconography/icons/icon-warning.svg",
           "format": "svg",
           "fileSize": 439,
-          "category": "icons",
-          "tags": [
-            "general"
-          ]
-        },
-        {
-          "id": "icon-withdrawal",
-          "filename": "icon-withdrawal.svg",
-          "url": "/tools/playbook/brand-book/assets/icons/icon-withdrawal.svg",
-          "sourceUrl": "visual-identity/iconography/icons/icon-withdrawal.svg",
-          "format": "svg",
-          "fileSize": 401,
           "category": "icons",
           "tags": [
             "general"
