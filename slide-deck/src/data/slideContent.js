@@ -161,8 +161,8 @@ export const colorPalette = {
   ],
   secondary: [
     { name: 'Emerald', hex: '#10B981', role: 'Interactive' },
-    { name: 'Teal Light', hex: '#34D399', role: 'Hover States' },
-    { name: 'Teal Dark', hex: '#047857', role: 'Pressed States' },
+    { name: 'Emerald Light', hex: '#34D399', role: 'Hover States' },
+    { name: 'Emerald Dark', hex: '#047857', role: 'Pressed States' },
   ],
   accent: [
     { name: 'Bold Orange', hex: '#FF6B35', role: 'CTAs / Attention' },

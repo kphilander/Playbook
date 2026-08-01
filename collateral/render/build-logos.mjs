@@ -357,7 +357,7 @@ function helplineBadgeSVG(boldColor, lightColor, dividerColor, labelColor, numbe
 
 /* ─── Favicon / app-icon rasters ────────────────────────────────── */
 
-// The brand tile IS the favicon: rounded navy tile, white bar, teal play
+// The brand tile IS the favicon: rounded navy tile, white bar, emerald play
 // (identical to the Playbook Academy favicon).
 function faviconSVG() {
   return symbolSVG(C.white, C.teal, { bg: C.navy, bgRx: 14 });
@@ -622,7 +622,7 @@ function heroAnimatedSVG() {
     <rect x="${b.x}" y="${b.y}" width="${b.w}" height="${b.h}" rx="${b.rx}" fill="#FFFFFF" opacity="0">
       <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/>
     </rect>
-    <!-- Play triangle draws on, then fills teal -->
+    <!-- Play triangle draws on, then fills emerald -->
     <polygon points="${MARK.tri}" fill="none" stroke="${C.teal}" stroke-width="0.7" stroke-linejoin="round"
              stroke-dasharray="95" stroke-dashoffset="95">
       <animate attributeName="stroke-dashoffset" from="95" to="0" dur="0.8s" begin="0.6s" fill="freeze"/>

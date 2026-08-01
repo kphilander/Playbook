@@ -89,10 +89,10 @@ export default function ColorSection() {
           Contrast Reference — WCAG 2.1 AA
         </h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <ContrastDemo fg="#FFFFFF" bg="#1B2838" fgLabel="White" bgLabel="Navy" ratio="13.5:1" pass={true} />
-          <ContrastDemo fg="#10B981" bg="#1B2838" fgLabel="Teal" bgLabel="Navy" ratio="8.2:1" pass={true} />
-          <ContrastDemo fg="#FF6B35" bg="#1B2838" fgLabel="Orange" bgLabel="Navy" ratio="4.9:1" pass={true} />
-          <ContrastDemo fg="#1B2838" bg="#FFFFFF" fgLabel="Navy" bgLabel="White" ratio="13.5:1" pass={true} />
+          <ContrastDemo fg="#FFFFFF" bg="#1B2838" fgLabel="White" bgLabel="Navy" ratio="14.9:1" pass={true} />
+          <ContrastDemo fg="#10B981" bg="#1B2838" fgLabel="Emerald" bgLabel="Navy" ratio="5.9:1" pass={true} />
+          <ContrastDemo fg="#FF6B35" bg="#1B2838" fgLabel="Orange" bgLabel="Navy" ratio="5.3:1" pass={true} />
+          <ContrastDemo fg="#1B2838" bg="#FFFFFF" fgLabel="Navy" bgLabel="White" ratio="14.9:1" pass={true} />
         </div>
       </ScrollReveal>
     </div>

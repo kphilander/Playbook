@@ -32,7 +32,7 @@
     <rect x="14" y="14" width="16" height="36" rx="2" fill="#FFFFFF" opacity="0">
       <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1s" fill="freeze"/>
     </rect>
-    <!-- Play triangle draws on, then fills teal -->
+    <!-- Play triangle draws on, then fills emerald -->
     <polygon points="34,14 54,32 34,50" fill="none" stroke="#10B981" stroke-width="0.7" stroke-linejoin="round"
              stroke-dasharray="95" stroke-dashoffset="95">
       <animate attributeName="stroke-dashoffset" from="95" to="0" dur="0.8s" begin="0.6s" fill="freeze"/>
