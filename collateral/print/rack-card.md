@@ -39,10 +39,10 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 | Element | Content |
 |---|---|
 | **Background** | Navy `#1B2838` |
-| **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg), top-left. Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Below 0.25", use logomark only. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg), top-left. Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Below 0.25", use logomark only. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, top-right. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
-| **Pillar badge** | `OPEN` (teal pill) |
+| **Pillar badge** | `OPEN` (emerald pill) |
 | **Headline** | Every game has math. Here's yours. |
 | **Headline specs** | Inter 800, white, minimum 24pt |
 
@@ -56,7 +56,7 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 
 | Element | Content |
 |---|---|
-| **Stat display** | Large number (Inter 900, teal), supporting text (Source Sans 3, `#A8A8C0`) |
+| **Stat display** | Large number (Inter 900, emerald), supporting text (Source Sans 3, `#A8A8C0`) |
 | **Callout** | Knowing the edge helps you pick your games and set your budget. |
 
 ### QR code block
@@ -82,13 +82,13 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 | Element | Content |
 |---|---|
 | **Background** | White |
-| **Accent bar** | 4px gradient strip at top: orange → teal |
+| **Accent bar** | 4px gradient strip at top: orange → emerald |
 
 ### Tool overview
 
 | Element | Content |
 |---|---|
-| **Section label** | YOUR TOOLS (teal, uppercase) |
+| **Section label** | YOUR TOOLS (emerald, uppercase) |
 | **Intro** | Features that put you in control — all in your account settings. |
 
 | Tool | One-liner |
@@ -134,7 +134,7 @@ The default rack card uses "Know Your Game" odds literacy content. These variant
 
 | Element | Content |
 |---|---|
-| **Pillar badge** | `SHARP` (teal pill) |
+| **Pillar badge** | `SHARP` (emerald pill) |
 | **Headline** | Your slot machine has the emotional range of a toaster. |
 | **Stat 1** | **0%** — The chance your machine "remembers" the last spin |
 | **Stat 2** | **1,000+** — Random outcomes generated per second |
@@ -146,7 +146,7 @@ The default rack card uses "Know Your Game" odds literacy content. These variant
 
 | Element | Content |
 |---|---|
-| **Pillar badge** | `OPEN` (teal pill) |
+| **Pillar badge** | `OPEN` (emerald pill) |
 | **Headline** | Your tools. Your limits. Your call. |
 | **Feature 1** | **Deposit limits** — Set your entertainment budget in 10 seconds |
 | **Feature 2** | **Session reminders** — Stay aware without killing the vibe |

@@ -217,14 +217,10 @@ function captureFields() {
   const fields = {};
   for (const id of COLOR_FONT_FIELDS) { const el = document.getElementById(id); if (el) fields[id] = el.value; }
   const grad = document.getElementById('allowGradients');
-  const split = document.getElementById('splitSlider');
-  const noSplit = document.getElementById('noSplitCheck');
   return {
     fields,
     gradients: grad ? grad.checked : true,
     programName: (document.getElementById('programName') || {}).value || '',
-    split: split ? split.value : '4',
-    noSplit: noSplit ? noSplit.checked : false,
     footerManual: appState.footerColorManual,
     logo: { url: appState.logoDataUrl, mode: appState.logoMode, isMark: appState.logoIsMark, aspect: appState.logoAspect },
   };
@@ -237,8 +233,6 @@ export function undoRandomBrand() {
   for (const [id, value] of Object.entries(preRoll.fields)) setField(id, value);
   const grad = document.getElementById('allowGradients'); if (grad) grad.checked = preRoll.gradients;
   const name = document.getElementById('programName'); if (name) name.value = preRoll.programName;
-  const noSplit = document.getElementById('noSplitCheck'); if (noSplit) noSplit.checked = preRoll.noSplit;
-  const split = document.getElementById('splitSlider'); if (split) split.value = preRoll.split;
   appState.footerColorManual = preRoll.footerManual;
   // Restore the logo state the roll may have replaced.
   const lg = preRoll.logo || {};
@@ -265,12 +259,10 @@ function setFieldsFromBrand(b) {
   setField('fontMono', b.fontMono || 'Source Code Pro');
   const grad = document.getElementById('allowGradients');
   if (grad) grad.checked = !!b.gradient;
-  // Name: a CamelCase wordmark the split logic auto-splits (e.g. "EvenOdds").
+  // Name: rendered as one uniform wordmark (e.g. "EvenOdds").
   const nm = Array.isArray(b.name) ? (b.name[0] + (b.name[1] || '')) : (b.name || 'Playbook');
   const nameEl = document.getElementById('programName');
-  const noSplit = document.getElementById('noSplitCheck');
   if (nameEl) nameEl.value = nm;
-  if (noSplit) noSplit.checked = false;
   appState.footerColorManual = false;
   // Generated logotype → replace mode (the full lockup stands in for the wordmark).
   if (b.logo) {

@@ -41,9 +41,9 @@ Full-width section, above the fold.
 
 | Element | Content |
 |---|---|
-| **Pillar badge** | `OPEN` (teal pill) |
+| **Pillar badge** | `OPEN` (emerald pill) |
 | **Headline** | Every game has math. Here's yours. |
-| **Subheadline** | Real odds. Real tools. No fine print. {{PROGRAM_NAME}} gives you the facts and features to play on your terms. |
+| **Subheadline** | Real odds. Real tools. No fine print. {{PROGRAM_SHORT_NAME}} gives you the facts and features to play on your terms. |
 | **Primary CTA** | `Test your game IQ` → links to quiz section |
 | **Secondary CTA** | `Explore the tools` → links to tool cards |
 | **Background** | Navy `#1B2838` with subtle grid overlay |
@@ -106,7 +106,7 @@ Prominent module driving engagement to the Game IQ quiz.
 
 | Element | Content |
 |---|---|
-| **Pillar badge** | `SHARP` (teal pill) |
+| **Pillar badge** | `SHARP` (emerald pill) |
 | **Headline** | Think you know the odds? |
 | **Body** | 7 questions. 2 minutes. Most people get question 3 wrong. |
 | **Primary CTA** | `Take the quiz →` |
@@ -193,7 +193,7 @@ Global component appearing on every page of the operator's site. Not unique to t
 
 | Element | Content |
 |---|---|
-| **Logomark** | {{PROGRAM_NAME}} logomark, reversed variant (white Play + teal BOOK on dark bg). Min height 24px. Maintain 1x logo-height clear space on all sides. Below 24px, use logomark only (no wordmark). See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logomark** | {{PROGRAM_NAME}} logomark, reversed variant (white wordmark on dark bg). Min height 24px. Maintain 1x logo-height clear space on all sides. Below 24px, use logomark only (no wordmark). See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Helpline** | {{HELPLINE_NUMBER}} |
 | **Age notice** | You must be {{MIN_AGE}}+ to gamble. |
 | **Hub link** | `Know your game →` → links to content hub |

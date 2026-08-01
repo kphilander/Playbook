@@ -1,6 +1,6 @@
-# Playbook
+# Playbook RG
 
-**Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.**
+**Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.** Formally *Playbook RG*; "Playbook" works as shorthand.
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](_brand.yml)
@@ -97,10 +97,11 @@ Playbook/
 │
 ├── visual-identity/                  # Production-ready design assets
 │   ├── design-tokens.css             # CSS custom properties for the full system
-│   ├── logo/                         # 15 SVGs: primary, secondary, favicon, helpline badge
-│   │   ├── primary/                  # Full-color and on-light (horizontal + stacked)
+│   ├── logo/                         # 20 SVGs (outlined text, no font deps) + favicon PNG/ICO set
+│   │   ├── primary/                  # Two-tone full-color and on-light (horizontal + stacked)
 │   │   ├── secondary/                # Reversed, mono-white, mono-dark (horizontal + stacked)
-│   │   ├── favicon/                  # 3 favicon variants
+│   │   ├── symbol/                   # Text-free "open book + play" mark (5 variants)
+│   │   ├── favicon/                  # favicon.svg/.ico, PNG sizes, apple-touch, PWA icons
 │   │   └── helpline-badge/           # Dark and light helpline badges
 │   ├── color/                        # Palette and accessibility contrast matrix
 │   ├── typography/                   # Type specimen, CSS, self-hosted font files (woff2)

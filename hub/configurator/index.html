@@ -139,7 +139,7 @@
       <details class="step-explainer">
         <summary>What is this step for?</summary>
         <div class="explainer-body">
-          <p>Your <strong>program name</strong> becomes the wordmark on every template — split-styled like "Play<b>BOOK</b>" or shown as one word. Your <strong>logo</strong> can sit alongside it (co-brand) or replace it entirely.</p>
+          <p>Your <strong>program name</strong> becomes the wordmark on every template, set in one weight and one color. Your <strong>logo</strong> can sit alongside it (co-brand) or replace it entirely.</p>
           <p>The organization, website, and email fill the <code>meta:</code> section of <code>_brand.yml</code> and resolve <code>{{ORGANIZATION}}</code>-style placeholders across all collateral and legal lines.</p>
         </div>
       </details>
@@ -172,13 +172,13 @@
           <legend class="form-label" style="margin-bottom:8px;">Logo Usage</legend>
           <div style="display:flex; flex-direction:column; gap:6px;">
             <label style="font-size:13px; color:#3D3D5C; cursor:pointer; display:flex; align-items:center; gap:6px;">
-              <input type="radio" name="logoMode" value="cobrand" checked style="accent-color:#00D4AA;"> Co-brand badge only
+              <input type="radio" name="logoMode" value="cobrand" checked style="accent-color:#10B981;"> Co-brand badge only
             </label>
             <label style="font-size:13px; color:#3D3D5C; cursor:pointer; display:flex; align-items:center; gap:6px;">
-              <input type="radio" name="logoMode" value="replace" style="accent-color:#00D4AA;"> Replace text wordmark
+              <input type="radio" name="logoMode" value="replace" style="accent-color:#10B981;"> Replace text wordmark
             </label>
           </div>
-          <div class="contrast-info" style="margin-top:6px;">Replace substitutes your logo for the &ldquo;Playbook&rdquo; text across all collateral.</div>
+          <div class="contrast-info" style="margin-top:6px;">Replace substitutes your logo for the wordmark text across all collateral.</div>
         </fieldset>
       </div>
 
@@ -187,17 +187,10 @@
         <input type="text" class="form-input" id="programName" value="Playbook" placeholder="e.g. BetWise, GameSmart, PlaySafe">
         <div class="wordmark-preview" id="wordmarkPreview">
           <span style="font-family: 'Inter', sans-serif; font-size: 28px;">
-            <span class="wm-play" id="wmPlay">Play</span><span class="wm-book" id="wmBook">book</span>
+            <span class="wm-full" id="wmFull">Playbook</span>
           </span>
         </div>
-        <div class="split-slider-row" id="splitSliderRow">
-          <input type="range" id="splitSlider" min="0" max="8" value="4" aria-label="Wordmark split position">
-          <span class="split-pos" id="splitPos" aria-live="polite">Split: 4</span>
-        </div>
-        <div class="no-split-row">
-          <input type="checkbox" id="noSplitCheck">
-          <label for="noSplitCheck">No split (single weight)</label>
-        </div>
+        <div class="contrast-info" style="margin-top:6px;">The wordmark is your program name in one weight and one color &mdash; white on dark surfaces, primary on light. Use your everyday short name here; it appears on player-facing collateral.</div>
       </div>
 
       <div class="form-group">
@@ -244,7 +237,7 @@
 
       <div class="palette-suggestion hidden" id="paletteSuggestion">
         <div class="palette-suggestion-label">Your brand accent</div>
-        <div class="palette-suggestion-desc">We recommend keeping the Playbook navy &amp; teal as your primary and secondary colors. Pick one of your logo colors below as your accent &mdash; it&rsquo;ll be used for buttons, stats, and calls to action.</div>
+        <div class="palette-suggestion-desc">We recommend keeping the Playbook navy &amp; emerald as your primary and secondary colors. Pick one of your logo colors below as your accent &mdash; it&rsquo;ll be used for buttons, stats, and calls to action.</div>
         <div class="palette-accent-row" id="paletteAccentRow"></div>
         <button type="button" class="palette-apply" id="paletteApplyBtn">Use as Accent Color</button>
       </div>
@@ -262,8 +255,8 @@
       <fieldset class="form-group">
         <legend class="form-label">Secondary (interactive elements)</legend>
         <div class="color-row">
-          <input type="color" class="color-picker" id="colorSecondary" value="#00D4AA" aria-label="Secondary color picker">
-          <input type="text" class="form-input color-hex" id="colorSecondaryHex" value="#00D4AA" maxlength="7" aria-label="Secondary color hex value">
+          <input type="color" class="color-picker" id="colorSecondary" value="#10B981" aria-label="Secondary color picker">
+          <input type="text" class="form-input color-hex" id="colorSecondaryHex" value="#10B981" maxlength="7" aria-label="Secondary color hex value">
           <span class="contrast-badge" id="contrastSecondary" aria-live="polite"></span>
         </div>
         <div class="contrast-info">Used for highlights, pillar badges, and emphasis text</div>
@@ -398,7 +391,7 @@
 
         <div class="form-group">
           <label class="form-label" style="display:flex; align-items:center; gap:10px; cursor:pointer;" for="allowGradients">
-            <input type="checkbox" id="allowGradients" checked style="accent-color:#00D4AA; width:16px; height:16px; cursor:pointer;">
+            <input type="checkbox" id="allowGradients" checked style="accent-color:#10B981; width:16px; height:16px; cursor:pointer;">
             <span>Allow gradients</span>
           </label>
           <div class="contrast-info" style="margin-top:6px;">Playbook uses two gradients by default: a horizontal accent&nbsp;&rarr;&nbsp;secondary bar at the top of cards, and a primary&nbsp;&rarr;&nbsp;primary-dark background on posters and stories. Some color combinations look muddy when blended &mdash; uncheck this to use solid colors instead.</div>
@@ -698,9 +691,9 @@
         </div>
       </div>
 
-      <div class="culture-preview-link" style="margin-top:16px;padding:14px 16px;background:rgba(0,212,170,0.08);border:1px solid rgba(0,212,170,0.2);border-radius:10px;font-size:13px;color:#6B6B8A;line-height:1.5;">
+      <div class="culture-preview-link" style="margin-top:16px;padding:14px 16px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:10px;font-size:13px;color:#6B6B8A;line-height:1.5;">
         <strong style="color:#1B2838;">Want to see how these choices affect your messaging?</strong><br>
-        The <a href="../brand-book/" target="_blank" rel="noopener" style="color:#00A888;font-weight:600;text-decoration:none;">Cultural Adaptation slide</a> in the brand book previews how messages change across all five dimensions &mdash; and the preview cards on the right update live as you switch them.
+        The <a href="../brand-book/" target="_blank" rel="noopener" style="color:#047857;font-weight:600;text-decoration:none;">Cultural Adaptation slide</a> in the brand book previews how messages change across all five dimensions &mdash; and the preview cards on the right update live as you switch them.
       </div>
 
       <div class="wizard-nav">
@@ -1106,13 +1099,13 @@
           <div class="preview-frame-label">Myth-Buster Card</div>
           <div class="pv-card" id="pvCard1" data-pb-label="Primary — Card background" style="background: var(--cfg-primary, #1B2838);">
             <div class="card-header">
-              <span class="card-logo" id="pvLogo1"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Heading Font — Logo wordmark (white on dark)">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
-              <span class="card-pillar" data-pb-label="Secondary — Pillar badge" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #00D4AA);">Open</span>
+              <span class="card-logo" id="pvLogo1"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-word" data-pb-label="Heading Font — Logo wordmark (white on dark)">Playbook</span></span>
+              <span class="card-pillar" data-pb-label="Secondary — Pillar badge" style="color: var(--cfg-primary, #1B2838); background: var(--cfg-secondary, #10B981);">Open</span>
             </div>
             <div class="card-body">
               <div class="myth-label" id="pvMythLabel" data-pb-label="Accent — Myth label" style="color: var(--cfg-accent, #FF6B35);">Myth vs. Math</div>
               <div class="myth-statement" id="pvMythStatement" data-pb-label="Heading Font — Myth statement"><span class="strike" data-pb-label="Light text (n300) — Struck myth, strike color = Accent" style="text-decoration-color: var(--cfg-accent, #FF6B35);">&ldquo;I&rsquo;m on a hot streak&rdquo;</span></div>
-              <div class="fact-statement" id="pvFactStatement" data-pb-label="Body Font + Light text (n300) — Fact statement">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #00D4AA);">statistically independent</strong>. Your brain sees patterns. The math doesn&rsquo;t.</div>
+              <div class="fact-statement" id="pvFactStatement" data-pb-label="Body Font + Light text (n300) — Fact statement">Every spin, hand, and roll is <strong style="color: var(--cfg-secondary, #10B981);">statistically independent</strong>. Your brain sees patterns. The math doesn&rsquo;t.</div>
               <div class="stat-block">
                 <span class="stat-number" data-pb-label="Accent — Stat number" style="color: var(--cfg-accent, #FF6B35);">0%</span>
                 <span class="stat-unit" data-pb-label="Light text (n300) — Stat unit">chance past results<br>affect the next spin</span>
@@ -1131,7 +1124,7 @@
           <div class="pv-card pv-card-tier2" id="pvCard2" data-pb-label="Background (n50 / white) — Light card surface">
             <div class="pv-accent-bar" data-pb-label="Secondary — 3px accent bar"></div>
             <div class="card-header" style="padding: 20px 24px 0;">
-              <span class="card-logo" id="pvLogo2"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Primary — Logo wordmark" style="color: var(--cfg-primary, #1B2838);">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+              <span class="card-logo" id="pvLogo2"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-word" data-pb-label="Primary — Logo wordmark" style="color: var(--cfg-primary, #1B2838);">Playbook</span></span>
             </div>
             <div class="card-body">
               <div class="t2-headline" id="pvT2Headline" data-pb-label="Heading Font + Primary — Tier 2 headline" style="color: var(--cfg-primary, #1B2838);">No question<br>is too small.</div>
@@ -1154,8 +1147,8 @@
           <div class="preview-frame-label">Co-Brand Helpline Badge</div>
           <div class="pv-badge" id="pvBadge" data-pb-label="Primary — Badge background" style="background: var(--cfg-primary, #1B2838);">
             <span id="pvBadgeOperator"></span>
-            <div class="badge-divider" data-pb-label="Secondary — Co-brand divider" style="background: var(--cfg-secondary, #00D4AA);" id="pvBadgeCoDivider"></div>
-            <span class="badge-logo" id="pvLogoBadge"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-play" data-pb-label="Heading Font — Logo wordmark (white on dark)">Play</span><span class="logo-book" data-pb-label="Secondary — Logo accent" style="color: var(--cfg-secondary, #00D4AA);">book</span></span>
+            <div class="badge-divider" data-pb-label="Secondary — Co-brand divider" style="background: var(--cfg-secondary, #10B981);" id="pvBadgeCoDivider"></div>
+            <span class="badge-logo" id="pvLogoBadge"><img class="logo-replace-img" src="" alt="Logo"><span class="logo-word" data-pb-label="Heading Font — Logo wordmark (white on dark)">Playbook</span></span>
             <div class="badge-divider" data-pb-label="Light text (n300) — Divider"></div>
             <div>
               <div class="badge-text" data-pb-label="Light text (n300) — Badge label" id="pvBadgeLabel">Free, confidential support 24/7</div>

@@ -4,7 +4,7 @@ Full dialogue trees for 8 customer service scenarios. Each script includes openi
 
 > **Operator note**: Replace all `{{PLACEHOLDER}}` tokens with values from `_brand.yml`. All agents should complete training on these scripts before handling player contacts. Tone should match the [voice and tone guide](../../brand-book/04-voice-and-tone.md) — warm, direct, never clinical or condescending. See the [language guide](../../brand-book/04-voice-and-tone.md#language-guide) for preferred terminology.
 
-> **Logo usage (not applicable to scripts)**: Conversation scripts are verbal/text interactions with no visual logo display. If printed as staff reference cards, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): full-color variant (navy Play + navy BOOK) on white/light backgrounds, reversed variant (white Play + teal BOOK) on dark backgrounds. Minimum height: 0.25" (print). Maintain 1x logo-height clear space.
+> **Logo usage (not applicable to scripts)**: Conversation scripts are verbal/text interactions with no visual logo display. If printed as staff reference cards, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): full-color variant (navy wordmark) on white/light backgrounds, reversed variant (white wordmark) on dark backgrounds. Minimum height: 0.25" (print). Maintain 1x logo-height clear space.
 
 ---
 
@@ -117,7 +117,7 @@ Full dialogue trees for 8 customer service scenarios. Each script includes openi
 
 **If player asks about a specific game**:
 
-> "I can look up the specific house edge for [game]. We also have a full odds comparison in our {{PROGRAM_NAME}} content hub — it covers every major game type with real numbers."
+> "I can look up the specific house edge for [game]. We also have a full odds comparison in our {{PROGRAM_SHORT_NAME}} content hub — it covers every major game type with real numbers."
 
 **If player asks about "systems" or "strategies"**:
 
@@ -125,7 +125,7 @@ Full dialogue trees for 8 customer service scenarios. Each script includes openi
 
 **Closing**:
 
-> "We have a game IQ quiz in the {{PROGRAM_NAME}} section that covers all of this — most people find it pretty eye-opening. Want me to send you the link?"
+> "We have a game IQ quiz in the {{PROGRAM_SHORT_NAME}} section that covers all of this — most people find it pretty eye-opening. Want me to send you the link?"
 
 ### Key phrases to use
 
@@ -382,7 +382,7 @@ Process the pause immediately — don't add friction.
 
 **Bridge to Playbook language**:
 
-> "We call it {{PROGRAM_NAME}} — it's our player tools and education hub. Here's what you'll find:"
+> "We call it {{PROGRAM_SHORT_NAME}} — it's our player tools and education hub. Here's what you'll find:"
 
 **Tool overview**:
 
@@ -402,7 +402,7 @@ Process the pause immediately — don't add friction.
 
 **Closing**:
 
-> "All of these are in your account settings under {{PROGRAM_NAME}}, or I can send you a direct link to our content hub. Anything specific you'd like to set up right now?"
+> "All of these are in your account settings under {{PROGRAM_SHORT_NAME}}, or I can send you a direct link to our content hub. Anything specific you'd like to set up right now?"
 
 ### Key phrases to use
 

@@ -39,8 +39,8 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 | Element | Content |
 |---|---|
 | **Background** | Navy `#1B2838` |
-| **Accent bar** | 3px gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg), top-left. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. At business-card scale, the helpline badge lockup format ([Logomark] &#124; Free help 24/7: {{HELPLINE_NUMBER}}) may be used. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Accent bar** | 3px gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg), top-left. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. At business-card scale, the helpline badge lockup format ([Logomark] &#124; Free help 24/7: {{HELPLINE_NUMBER}}) may be used. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, top-right, small. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 
 ### Primary content
@@ -52,7 +52,7 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 | **Subheadline** | For any question about gambling. No judgment. Ever. |
 | **Subheadline specs** | Source Sans 3, `#A8A8C0`, 8pt |
 | **Helpline number** | {{HELPLINE_NUMBER}} |
-| **Number specs** | Source Code Pro 700, teal `#00D4AA`, 16pt — largest element on the card |
+| **Number specs** | Source Code Pro 700, emerald `#10B981`, 16pt — largest element on the card |
 | **Availability** | 24/7 |
 
 ---
@@ -62,7 +62,7 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 | Element | Content |
 |---|---|
 | **Background** | White |
-| **Accent bar** | 3px gradient strip at top: orange → teal |
+| **Accent bar** | 3px gradient strip at top: orange → emerald |
 
 ### Contact channels
 
@@ -183,8 +183,8 @@ The default helpline card already uses a support-focused tone. For enhanced Tier
 |---|---|---|
 | **Front background** | Navy (#1B2838) | White — calmer, less enclosing |
 | **Text color** | White on navy | Navy (#1B2838) on white |
-| **Accent** | Teal helpline number | Teal CTA button style |
-| **Gradient bar** | Orange → teal | Omit — Tier 2 avoids the playful gradient |
+| **Accent** | Emerald helpline number | Emerald CTA button style |
+| **Gradient bar** | Orange → emerald | Omit — Tier 2 avoids the playful gradient |
 | **Tone** | "Free, confidential support" | "You're not alone. Help is here." |
 
 See `visual-identity/tier-2/tier-2-visual-guide.md` for the full Tier 2 visual specification.

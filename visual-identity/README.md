@@ -12,7 +12,7 @@ Production-ready design assets and specifications for the Playbook brand system.
 
 | Folder | Contents |
 |--------|----------|
-| [logo/](logo/) | 15 SVG logo variants — primary (full-color, on-light), secondary (reversed, monochrome), favicons, and helpline badges |
+| [logo/](logo/) | 20 SVG logo variants (all text outlined — no font dependencies) plus favicon PNG/ICO set — symbol mark, horizontal wordmark, stacked lockup, favicons/app icons, and helpline badges |
 | [color/](color/) | Color accessibility contrast matrix (WCAG 2.1 AA analysis) |
 | [typography/](typography/) | Type specimen, typography CSS, self-hosted font files (Inter, Source Sans 3, Source Code Pro) |
 | [iconography/](iconography/) | 31 SVG icons across 7 categories, icon library reference, and interactive preview |

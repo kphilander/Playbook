@@ -105,8 +105,7 @@
   --pb-tracking-normal: 0;         /* Body text */
   --pb-tracking-wide: 0.05em;      /* Labels, uppercase UI text */
   --pb-tracking-wider: 0.1em;      /* Small caps, monospace headers */
-  --pb-tracking-logo-play: -0.03em; /* Logo "Play" half */
-  --pb-tracking-logo-book: 0.15em;  /* Logo "BOOK" half */
+  --pb-tracking-wordmark: -0.018em; /* Wordmark — one weight, one color */
 }
 
 

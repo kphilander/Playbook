@@ -51,7 +51,7 @@ Each question has four parts:
 
 1. Player sees the question stem and options
 2. Player selects an answer
-3. Selection is highlighted (teal) — correct answer is revealed if different
+3. Selection is highlighted (emerald) — correct answer is revealed if different
 4. Explanation appears inline, below the options — no page navigation
 5. Player taps "Next" to advance (or swipes on mobile)
 6. After the final question, the result screen appears
@@ -87,7 +87,7 @@ These are design specifications, not code. Implementation will vary by platform.
 | State | Visual treatment |
 |---|---|
 | **Unselected** | Option card with border, neutral background |
-| **Selected (before reveal)** | Teal (`--color-accent`) highlight on the selected option |
+| **Selected (before reveal)** | Emerald (`--color-accent`) highlight on the selected option |
 | **Correct (after reveal)** | Green accent or checkmark icon on the correct option |
 | **Incorrect (after reveal)** | Muted red or X icon on the selected option; correct option highlighted |
 | **Explanation visible** | Explanation text appears inline below the options with a subtle slide-in |
@@ -443,7 +443,7 @@ Generated when a player completes a quiz. Uses Tier 1 visual identity.
 | Element | Specification |
 |---|---|
 | Background | Navy (`--color-navy`) or dark variant from `_brand.yml` |
-| Accent | Teal (`--color-accent`) for highlights and score context |
+| Accent | Emerald (`--color-accent`) for highlights and score context |
 | Quiz title | Displayed prominently at the top |
 | Score context | Framed as insight, not raw score (e.g., "You know more than 80% of players") |
 | CTA | "Take the quiz" with URL or QR code |

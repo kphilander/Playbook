@@ -29,7 +29,7 @@ font-family: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
 
 ## RTL handling (Arabic only)
 
-Arabic templates set `<html lang="ar" dir="rtl">` and use CSS logical properties (`padding-inline-start`, `margin-inline-end`, etc.) so the layout mirrors automatically. The gradient accent bar at the top stays orange→teal (left-to-right) — this is the brand's fixed directional identity and does not flip with RTL. Numbers remain LTR inline within RTL text (standard CSS behavior).
+Arabic templates set `<html lang="ar" dir="rtl">` and use CSS logical properties (`padding-inline-start`, `margin-inline-end`, etc.) so the layout mirrors automatically. The gradient accent bar at the top stays orange→emerald (left-to-right) — this is the brand's fixed directional identity and does not flip with RTL. Numbers remain LTR inline within RTL text (standard CSS behavior).
 
 ## Cultural profile application
 

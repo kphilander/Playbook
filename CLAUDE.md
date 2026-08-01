@@ -1,6 +1,6 @@
 # Playbook — Claude Code Context
 
-This is the **Playbook** repository: an open-source, white-label brand system for gambling entertainment literacy.
+This is the **Playbook** repository: an open-source, white-label brand system for gambling entertainment literacy. The program's formal name is **Playbook RG** (used for B2B, regulatory, and formal surfaces); **Playbook** is the sanctioned shorthand for player-facing content.
 
 ## What This Project Is
 

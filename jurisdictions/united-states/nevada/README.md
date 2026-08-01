@@ -290,7 +290,7 @@ Because general signage has no mandated phrasing, operators have flexibility to 
 > **1-800-GAMBLER** | **1-800-MY-RESET** | ncpgambling.org
 
 **{{PROGRAM_NAME}} venue signage:**
-> **Every game has math. Here's yours.** Your session, your budget, your call. Tools and info available at the cage or at {{PROGRAM_NAME}}.
+> **Every game has math. Here's yours.** Your session, your budget, your call. Tools and info available at the cage or at {{PROGRAM_SHORT_NAME}}.
 > Need to talk? **1-800-GAMBLER** — free, confidential, 24/7.
 
 ### Placement guidance

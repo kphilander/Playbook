@@ -5,7 +5,7 @@
 
   <!-- Inter showcase -->
   <text x="40" y="50" font-family="'Inter', sans-serif" font-weight="900" font-size="10"
-        fill="#00A888" letter-spacing="3">INTER</text>
+        fill="#047857" letter-spacing="3">INTER</text>
 
   <text x="40" y="90" font-family="'Inter', sans-serif" font-weight="800" font-size="42"
         fill="#1B2838" letter-spacing="-1.5">The Quick</text>
@@ -23,13 +23,13 @@
 
   <!-- Source Sans 3 -->
   <text x="40" y="210" font-family="'Source Sans 3', sans-serif" font-weight="600" font-size="10"
-        fill="#00A888" letter-spacing="3">SOURCE SANS 3</text>
+        fill="#047857" letter-spacing="3">SOURCE SANS 3</text>
   <text x="40" y="235" font-family="'Source Sans 3', sans-serif" font-weight="400" font-size="18"
         fill="#3D5468">Body text for clear, accessible communication.</text>
 
   <!-- Source Code Pro -->
   <text x="40" y="265" font-family="'Source Code Pro', monospace" font-weight="500" font-size="10"
-        fill="#00A888" letter-spacing="3">SOURCE CODE PRO</text>
+        fill="#047857" letter-spacing="3">SOURCE CODE PRO</text>
   <text x="40" y="285" font-family="'Source Code Pro', monospace" font-weight="400" font-size="14"
-        fill="#5C7A94">--color-teal: #00D4AA; --color-navy: #1B2838;</text>
+        fill="#5C7A94">--color-teal: #10B981; --color-navy: #1B2838;</text>
 </svg>

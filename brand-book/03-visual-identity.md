@@ -18,21 +18,23 @@ The {{PROGRAM_NAME}} logo identifies gambling entertainment literacy content. It
 
 ### Logo design
 
-The {{PROGRAM_NAME}} logo is a text-based wordmark that splits "Playbook" into its two component concepts:
+The {{PROGRAM_NAME}} identity has two parts — a symbol and a wordmark — that say the same thing: **the book you play.**
 
-- **Play** — set in Inter 800 (bold). Represents the entertainment side of gambling.
-- **book** — set in Inter 300 (light), uppercase, letter-spaced. Represents the knowledge and literacy side.
+**The symbol** is a closed book beside a play triangle: a rounded bar (the book, spine out) and the play, side by side. Its primary form carries the two shapes in a rounded `primary` navy tile — white book, emerald play — the same mark used across {{PROGRAM_NAME}} Academy. Two flat shapes keep it legible from a 16px favicon to a 512px app icon, and it works in a single color.
 
-The weight contrast between the two halves embodies the brand's core duality: enjoying the game *and* understanding it.
+**The wordmark** is the program name set in Inter 700 (bold), tight tracking, one weight, one color. No split styling, no case games — the confidence is in the restraint. Color carries the variants: navy on light, white on dark.
+
+**No font dependencies.** All wordmark text is converted to Inter vector outlines when the logo files are generated, so the SVGs render identically everywhere — including `<img>` embeds, CMSes, and email clients that block external font loading. Never re-typeset the wordmark in live text; always use the generated files.
 
 ### Logo layouts
 
 | Layout | Name | Best for |
 |---|---|---|
-| **Stacked** (B1) | Play over BOOK, two lines | App icons, social avatars, square formats, hero placements |
-| **Horizontal** (B2) | Playbook as one word | Navigation bars, headers, banners, inline references, small sizes |
+| **Stacked** (B1) | Symbol tile above wordmark | Hero placements, square formats, posters, splash screens |
+| **Horizontal** (B2) | Wordmark as one word | Navigation bars, headers, banners, inline references, small sizes |
+| **Symbol** (B3) | Symbol alone (tile or bare) | App icons, social avatars, favicons, tight spaces below minimum wordmark size |
 
-Both layouts are interchangeable — choose based on the available space and aspect ratio.
+Layouts are interchangeable — choose based on the available space and aspect ratio.
 
 ### Usage rules
 
@@ -54,40 +56,52 @@ Maintain a minimum clear space equal to **1x the height of the logomark** on all
 ```
 
 #### Minimum size
-- **Print**: Minimum 0.25 inches (6.35mm) in height
-- **Digital**: Minimum 24px in height
-- Below these sizes, use the logomark only (no wordmark)
+- **Print**: Minimum 0.25 inches (6.35mm) in height (horizontal wordmark)
+- **Digital**: Minimum 24px in height for the horizontal wordmark; 48px for the stacked lockup
+- Below these sizes, use the symbol mark alone
 
 #### Approved color variants
 
-Each layout (stacked and horizontal) is available in 5 color modes:
+Each layout is available in 5 color modes:
 
-| Variant | Play color | Book color | Background | File suffix |
+| Variant | Wordmark | Symbol (book / play) | Background | File suffix |
 |---|---|---|---|---|
-| Full color | `primary` navy | `primary` navy | White | `-full-color` |
-| On light | `primary` navy | `secondary_dark` teal | `neutral_50` light | `-on-light` |
-| Reversed | White | `secondary` teal | `primary` navy | `-reversed` |
-| Mono white | White | `neutral_300` | Black / dark | `-mono-white` |
-| Mono dark | `primary` navy | `primary` navy | Light (single-color) | `-mono-dark` |
+| Full color | `primary` navy | navy tile: white / `secondary` emerald | White | `-full-color` |
+| On light | `primary` navy | navy tile: white / `secondary` emerald | `neutral_50` light | `-on-light` |
+| Reversed | White | bare mark: white / `secondary` emerald | `primary` navy | `-reversed` |
+| Mono white | White | bare mark: white / white | Black / dark | `-mono-white` |
+| Mono dark | `primary` navy | bare mark: navy / navy | Light (single-color) | `-mono-dark` |
+
+On light backgrounds the symbol travels inside its navy tile; on dark or single-color contexts the bare mark is used and the background does the tile's job. The play triangle is the one place the brand emerald appears in the logo.
 
 ### Logo files
 
 ```
 visual-identity/logo/
-  primary/                          ← default use
-    logo-stacked-full-color.svg
-    logo-stacked-on-light.svg
+  primary/                          ← two-tone, default use
     logo-horizontal-full-color.svg
     logo-horizontal-on-light.svg
+    logo-stacked-full-color.svg     ← symbol above wordmark
+    logo-stacked-on-light.svg
   secondary/                        ← dark backgrounds, mono
-    logo-stacked-reversed.svg
-    logo-stacked-mono-white.svg
-    logo-stacked-mono-dark.svg
     logo-horizontal-reversed.svg
     logo-horizontal-mono-white.svg
     logo-horizontal-mono-dark.svg
-  favicon/
-    favicon.svg
+    logo-stacked-reversed.svg
+    logo-stacked-mono-white.svg
+    logo-stacked-mono-dark.svg
+  symbol/                           ← text-free brand icon
+    symbol-mark.svg                 ← navy tile, white book, emerald play
+    symbol-mark-on-light.svg        ← bare mark for light backgrounds
+    symbol-mark-on-dark.svg
+    symbol-mark-mono-dark.svg
+    symbol-mark-mono-white.svg
+  favicon/                          ← browser tabs, app icons, PWA
+    favicon.svg                     ← the brand tile
+    favicon.ico                     ← 16 + 32 + 48 packed
+    favicon-16.png / -32.png / -48.png
+    apple-touch-icon.png            ← 180×180 full-bleed
+    icon-192.png / icon-512.png     ← PWA manifest icons
     favicon-reversed.svg
     favicon-mono-white.svg
   helpline-badge/
@@ -95,7 +109,21 @@ visual-identity/logo/
     helpline-badge-dark.svg
 ```
 
-Regenerate all logo files: `node collateral/render/build-logos.mjs`
+Regenerate all logo files: `node collateral/render/build-logos.mjs` (add `--skip-raster` to skip the PNG/ICO step). The build also refreshes the copies used by the content hub and slide deck.
+
+### Favicon and app icons
+
+The favicon is the brand tile — the rounded navy square with white book and emerald play, identical to the {{PROGRAM_NAME}} Academy favicon. App icons (`apple-touch-icon.png`, `icon-192/512.png`) are the same mark on a full-bleed navy square; the OS applies its own corner mask.
+
+Recommended head markup:
+
+```html
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!-- legacy -->
+<link rel="shortcut icon" href="/favicon.ico">
+```
 
 ### Logo previews
 
@@ -114,11 +142,17 @@ Regenerate all logo files: `node collateral/render/build-logos.mjs`
 | ![Stacked mono-dark](../visual-identity/logo/secondary/logo-stacked-mono-dark.svg) | ![Horizontal mono-dark](../visual-identity/logo/secondary/logo-horizontal-mono-dark.svg) |
 | ![Stacked mono-white](../visual-identity/logo/secondary/logo-stacked-mono-white.svg) | ![Horizontal mono-white](../visual-identity/logo/secondary/logo-horizontal-mono-white.svg) |
 
+**Symbol mark:**
+
+| Primary (container) | On light | Mono dark |
+|---|---|---|
+| ![Symbol](../visual-identity/logo/symbol/symbol-mark.svg) | ![Symbol on light](../visual-identity/logo/symbol/symbol-mark-on-light.svg) | ![Symbol mono](../visual-identity/logo/symbol/symbol-mark-mono-dark.svg) |
+
 **Favicon and helpline badge:**
 
-| Favicon | Favicon reversed | Helpline light | Helpline dark |
-|---|---|---|---|
-| ![Favicon](../visual-identity/logo/favicon/favicon.svg) | ![Favicon reversed](../visual-identity/logo/favicon/favicon-reversed.svg) | ![Helpline light](../visual-identity/logo/helpline-badge/helpline-badge-light.svg) | ![Helpline dark](../visual-identity/logo/helpline-badge/helpline-badge-dark.svg) |
+| Favicon | Helpline light | Helpline dark |
+|---|---|---|
+| ![Favicon](../visual-identity/logo/favicon/favicon.svg) | ![Helpline light](../visual-identity/logo/helpline-badge/helpline-badge-light.svg) | ![Helpline dark](../visual-identity/logo/helpline-badge/helpline-badge-dark.svg) |
 
 #### Prohibited modifications
 
@@ -147,10 +181,11 @@ When the {{PROGRAM_NAME}} logo appears alongside an operator's logo:
 A special lockup combines the {{PROGRAM_NAME}} logomark with a helpline number for contexts where regulatory requirements mandate displaying support information alongside branding:
 
 ```
-[Logomark] | Free help 24/7: {{HELPLINE_NUMBER}}
+[Wordmark] | Free help 24/7
+             {{HELPLINE_NUMBER}}
 ```
 
-Specifications for the helpline badge are in `visual-identity/logo/helpline-badge/`.
+The badge's width adapts to the configured helpline number, and all badge text is outlined — safe for any embed context. Files are in `visual-identity/logo/helpline-badge/`.
 
 ---
 
@@ -158,7 +193,7 @@ Specifications for the helpline badge are in `visual-identity/logo/helpline-badg
 
 ### Design philosophy
 
-The default {{PROGRAM_NAME}} palette is built for a modern, entertainment-grade aesthetic. It should feel like it belongs on a gaming platform, not a health website. Deep navy conveys authority and sophistication. Electric teal creates energy and modernity. Bold orange drives action and attention.
+The default {{PROGRAM_NAME}} palette is built for a modern, entertainment-grade aesthetic. It should feel like it belongs on a gaming platform, not a health website. Deep navy conveys authority and sophistication. Emerald creates energy and forward motion. Bold orange drives action and attention.
 
 The palette avoids the washed-out blues and clinical greens common in traditional RG programs. This is a lifestyle brand palette — confident, contemporary, and high-impact.
 
@@ -174,9 +209,11 @@ The palette avoids the washed-out blues and clinical greens common in traditiona
 
 | Role | Color | Hex | Usage |
 |---|---|---|---|
-| Secondary | Electric teal | `#00D4AA` | Interactive elements, links, highlights |
-| Secondary light | Light teal | `#33DDBB` | Hover states, subtle highlights |
-| Secondary dark | Dark teal | `#00A888` | Pressed states, secondary text on light backgrounds |
+| Secondary | Emerald | `#10B981` | Interactive elements, links, highlights |
+| Secondary light | Light emerald | `#34D399` | Hover states, subtle highlights |
+| Secondary dark | Deep emerald | `#047857` | Pressed states, secondary text on light backgrounds |
+
+The emerald family is a sanctioned range, not a single pin: hold the hue, flex the depth. Anything between `secondary_light` and `secondary_dark` reads on-brand — pick the step that meets contrast for the context (deep emerald is the text-safe step at 5.48:1 on white).
 
 ### Accent palette
 
@@ -326,12 +363,12 @@ When customizing fonts:
 
 ### Design philosophy: Weight contrast
 
-The {{PROGRAM_NAME}} icon system mirrors the logo's typographic contrast — **Play** (800 weight) vs **BOOK** (300 weight) — through a dual stroke-weight system. Every icon contains two visual layers:
+The {{PROGRAM_NAME}} icon system pairs **bold structure with light detail** — a confident frame around open, approachable content — through a dual stroke-weight system. Every icon contains two visual layers:
 
-- **Primary strokes (2px)**: Outer containers, main shapes, defining structure — the "Play" weight
-- **Detail strokes (1px)**: Inner details, accents, secondary elements — the "BOOK" weight
+- **Primary strokes (2px)**: Outer containers, main shapes, defining structure
+- **Detail strokes (1px)**: Inner details, accents, secondary elements
 
-This 2:1 ratio creates visual hierarchy within each icon and ties the icon system to the wordmark's design language. The weight contrast is visible at 24px and still perceptible at 16px.
+This 2:1 ratio creates visual hierarchy within each icon and keeps the set on the brand's confident-but-open personality. The weight contrast is visible at 24px and still perceptible at 16px.
 
 ### Icon specifications
 
@@ -526,10 +563,10 @@ When the operator's platform supports dark mode, the {{PROGRAM_NAME}} color syst
 | `text_secondary` | `neutral_700` (#3D3D5C) | `neutral_300` (#A8A8C0) | 7.33:1 ✓ |
 | `text_muted` | `neutral_500` (#6B6B8A) | `neutral_500` (#6B6B8A) | 3.33:1 (large text only) |
 | `headers` | `primary` (#1B2838) | `primary_light` (#2A3F56) | — |
-| `link` | `primary_light` (#2A3F56) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+| `link` | `primary_light` (#2A3F56) | `secondary` (#10B981) | 8.93:1 ✓ |
 | `border` | `neutral_500` (#6B6B8A) | `neutral_700` (#3D3D5C) | — |
 | `accent` (CTA) | `accent` (#FF6B35) | `accent_light` (#FF8A5C) | 7.34:1 ✓ |
-| `secondary` (CTA) | `secondary_dark` (#00A888) | `secondary` (#00D4AA) | 8.93:1 ✓ |
+| `secondary` (CTA) | `secondary_dark` (#047857) | `secondary` (#10B981) | 8.93:1 ✓ |
 
 **Note on muted text in dark mode**: `neutral_500` on `neutral_900` produces only 3.33:1 — this passes for large text (3:1 threshold) but fails AA normal text (4.5:1). Use muted text sparingly in dark mode, and only at 18px+ or 14px+ bold.
 
@@ -554,7 +591,7 @@ Status colors (success, warning, danger, info) need adjustment for dark backgrou
 | Illustrations / icons | Use light-on-dark variants (swap stroke and fill colors) |
 | Charts / data viz | Use light text and grid lines; reduce opacity of non-essential elements |
 | Screenshots | Add a subtle border (`neutral_700`, 1px) so edges don't bleed into the background |
-| Brand gradient bar | No change — the orange → teal gradient works on both light and dark |
+| Brand gradient bar | No change — the orange → emerald gradient works on both light and dark |
 
 ### CSS implementation
 
@@ -567,7 +604,7 @@ Status colors (success, warning, danger, info) need adjustment for dark backgrou
     --pb-text-secondary: #A8A8C0;
     --pb-text-muted: #6B6B8A;
     --pb-border: #3D3D5C;
-    --pb-link: #00D4AA;
+    --pb-link: #10B981;
     --pb-accent: #FF8A5C;
   }
 

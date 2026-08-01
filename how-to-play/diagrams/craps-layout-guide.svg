@@ -7,7 +7,7 @@
   <line x1="40" y1="56" x2="760" y2="56" stroke="#2A3F56" stroke-width="1"/>
 
   <!-- Legend -->
-  <rect x="40" y="70" width="16" height="16" rx="3" fill="#00D4AA"/>
+  <rect x="40" y="70" width="16" height="16" rx="3" fill="#10B981"/>
   <text x="62" y="83" fill="#A8A8C0" font-size="12">Good bets (under 2%)</text>
   <rect x="260" y="70" width="16" height="16" rx="3" fill="#FFB300"/>
   <text x="282" y="83" fill="#A8A8C0" font-size="12">Moderate (2-5%)</text>
@@ -21,21 +21,21 @@
 
   <!-- Good bets -->
   <text x="40" y="152" fill="#FFFFFF" font-size="14" font-weight="600">Odds (behind Pass/DP)</text>
-  <text x="340" y="152" fill="#00D4AA" font-size="16" font-weight="700">0%</text>
+  <text x="340" y="152" fill="#10B981" font-size="16" font-weight="700">0%</text>
   <rect x="540" y="140" width="200" height="16" rx="3" fill="#2A3F56"/>
-  <rect x="540" y="140" width="1" height="16" rx="1" fill="#00D4AA"/>
+  <rect x="540" y="140" width="1" height="16" rx="1" fill="#10B981"/>
 
   <line x1="40" y1="168" x2="760" y2="168" stroke="#2A3F56" stroke-width="0.5"/>
   <text x="40" y="192" fill="#FFFFFF" font-size="14" font-weight="600">Don't Pass / Don't Come</text>
-  <text x="340" y="192" fill="#00D4AA" font-size="16" font-weight="700">1.36%</text>
+  <text x="340" y="192" fill="#10B981" font-size="16" font-weight="700">1.36%</text>
   <rect x="540" y="180" width="200" height="16" rx="3" fill="#2A3F56"/>
-  <rect x="540" y="180" width="16" height="16" rx="3" fill="#00D4AA"/>
+  <rect x="540" y="180" width="16" height="16" rx="3" fill="#10B981"/>
 
   <line x1="40" y1="208" x2="760" y2="208" stroke="#2A3F56" stroke-width="0.5"/>
   <text x="40" y="232" fill="#FFFFFF" font-size="14" font-weight="600">Pass / Come</text>
-  <text x="340" y="232" fill="#00D4AA" font-size="16" font-weight="700">1.41%</text>
+  <text x="340" y="232" fill="#10B981" font-size="16" font-weight="700">1.41%</text>
   <rect x="540" y="220" width="200" height="16" rx="3" fill="#2A3F56"/>
-  <rect x="540" y="220" width="17" height="16" rx="3" fill="#00D4AA"/>
+  <rect x="540" y="220" width="17" height="16" rx="3" fill="#10B981"/>
 
   <!-- Moderate bets -->
   <line x1="40" y1="252" x2="760" y2="252" stroke="#2A3F56" stroke-width="0.5"/>

@@ -530,7 +530,7 @@ Operators may reference DontRegretTheBet.org alongside {{PROGRAM_NAME}} resource
 
 | Tool | {{PROGRAM_NAME}} copy | Context |
 |---|---|---|
-| RG information | "Every game has math. Here's yours. Tools and info available at the cage or at {{PROGRAM_NAME}}." | Casino floor signage |
+| RG information | "Every game has math. Here's yours. Tools and info available at the cage or at {{PROGRAM_SHORT_NAME}}." | Casino floor signage |
 | DPL self-exclusion | "Need a break from the casino? Talk to the MGCB about the Disassociated Persons List, or call 888-223-3044." | Casino RG materials |
 | Helpline | "Free, confidential support — 24/7. Call 1-800-GAMBLER or text 800GAM." | All casino RG touchpoints |
 

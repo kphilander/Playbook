@@ -1,10 +1,47 @@
 import puppeteer from 'puppeteer';
-import { readFileSync } from 'fs';
+import { readFileSync, mkdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { resolveBrandTokens } from '../../lib/resolve-placeholders.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+/*
+ * Render method — two paths, sizes DERIVED from the template (the w/h on
+ * each card entry are initial layout hints only, never final dimensions):
+ *
+ *   1. Element path (default, non-RTL): screenshot the template's root
+ *      element. Exact for fixed-size templates; content-driven templates
+ *      (emails, tier-2 screens, support pages) get their natural height —
+ *      never cropped by a stale viewport.
+ *
+ *   2. Viewport path: plain page screenshot with the viewport resized to
+ *      the measured target. Used for:
+ *        - RTL (.ar.html) documents — element/clip screenshots render
+ *          BLANK on dir="rtl" in this Chromium; viewport is sized to the
+ *          root element's measured bounds.
+ *        - Print-bleed templates (posters, brochures) — sized to the
+ *          document body's scroll bounds so the bleed margin is included.
+ *
+ * Bleed convention (decided 2026-07): ALL print templates (posters,
+ * brochures, rack card, table tent, helpline card, venue signs) export
+ * WITH their 24px bleed margin (e.g. posters 1848×2448 = 1800×2400 +
+ * 24px each side), matching the 19-series, tier2-10g, the sign/rack/tent
+ * family, and all .ar print renders. The English/ja/zh 4/14/15-series
+ * posters and the brochures were historically committed WITHOUT bleed
+ * (element path) — they pick up bleed dimensions on their next render,
+ * which is intentional. Bleed size is derived as root bounds + 2× the
+ * root's top/left offset, so it tracks whatever margin the template
+ * actually defines.
+ *
+ * Output dir override for testing: RENDER_OUT_DIR=/tmp/out node render-cards.mjs card-1a
+ */
+const BLEED_SELECTORS = new Set([
+  '.poster', '.brochure-inside', '.brochure-outside',
+  '.rack-card', '.table-tent', '.helpline-card',
+  '.sign-entrance', '.sign-atm', '.sign-floor', '.sign-restroom', '.sign-staff',
+]);
+const OUT_DIR = process.env.RENDER_OUT_DIR || __dirname;
 
 const cards = [
   // Social cards (1080x1080)
@@ -352,49 +389,81 @@ const toRender = filter.length > 0
   ? cards.filter(c => filter.some(f => c.html.includes(f) || c.output.includes(f)))
   : cards;
 
+const settle = ms => new Promise(r => setTimeout(r, ms));
+
+async function renderCard(browser, card) {
+  const page = await browser.newPage();
+  try {
+    // Initial viewport from the entry's hints — generous height so
+    // content-driven templates lay out fully before we measure.
+    await page.setViewport({ width: card.w, height: Math.max(card.h, 2600) });
+
+    // Read HTML and resolve {{PLACEHOLDER}} brand tokens from _brand.yml
+    const filePath = join(__dirname, card.html);
+    const rawHtml = readFileSync(filePath, 'utf-8');
+    const resolvedHtml = resolveBrandTokens(rawHtml);
+
+    // Use file:// base URL so relative CSS links (brand-inject.css) still resolve
+    await page.goto(`file://${__dirname}/`, { waitUntil: 'domcontentloaded' });
+    await page.setContent(resolvedHtml, { waitUntil: 'networkidle0' });
+
+    // Wait for Google Fonts, then let layout settle
+    await page.evaluateHandle('document.fonts.ready');
+    await settle(400);
+
+    const element = await page.$(card.selector);
+    if (!element) {
+      console.warn(`⚠ Selector "${card.selector}" not found in ${card.html}`);
+      return;
+    }
+
+    const isRTL = /\.ar\.html$/.test(card.html);
+    const isBleed = BLEED_SELECTORS.has(card.selector);
+    const outPath = join(OUT_DIR, card.output);
+
+    if (isRTL || isBleed) {
+      // Viewport path. Measure the capture target:
+      //   bleed templates → root bounds + 2× the root's offset (the
+      //     symmetric bleed margin the template defines around the root)
+      //   RTL (non-print) → root element bounds (renders at 0,0)
+      const target = await page.evaluate(sel => {
+        const r = document.querySelector(sel).getBoundingClientRect();
+        const off = { x: Math.max(0, Math.round(r.left)), y: Math.max(0, Math.round(r.top)) };
+        return {
+          rootW: Math.round(r.width),
+          rootH: Math.round(r.height),
+          bleedW: Math.round(r.width) + 2 * off.x,
+          bleedH: Math.round(r.height) + 2 * off.y,
+        };
+      }, card.selector);
+      const w = isBleed ? target.bleedW : target.rootW;
+      const h = isBleed ? target.bleedH : target.rootH;
+      await page.setViewport({ width: w, height: h });
+      await settle(150);
+      await page.screenshot({ path: outPath, type: 'png' });
+      console.log(`Rendered (viewport ${w}x${h}${isRTL ? ', rtl' : ''}${isBleed ? ', bleed' : ''}): ${card.output}`);
+    } else {
+      // Element path — bounds come from the template itself.
+      await element.screenshot({ path: outPath, type: 'png' });
+      const box = await element.boundingBox();
+      console.log(`Rendered (element ${Math.round(box.width)}x${Math.round(box.height)}): ${card.output}`);
+    }
+  } catch (e) {
+    console.error(`✗ Failed to render ${card.html}: ${e.message}`);
+  } finally {
+    await page.close();
+  }
+}
+
 async function render() {
+  if (OUT_DIR !== __dirname) mkdirSync(OUT_DIR, { recursive: true });
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
-
   try {
     for (const card of toRender) {
-      const page = await browser.newPage();
-      try {
-        await page.setViewport({ width: card.w, height: card.h });
-
-        // Read HTML and resolve {{PLACEHOLDER}} brand tokens from _brand.yml
-        const filePath = join(__dirname, card.html);
-        const rawHtml = readFileSync(filePath, 'utf-8');
-        const resolvedHtml = resolveBrandTokens(rawHtml);
-
-        // Use file:// base URL so relative CSS links (brand-inject.css) still resolve
-        await page.goto(`file://${__dirname}/`, { waitUntil: 'domcontentloaded' });
-        await page.setContent(resolvedHtml, { waitUntil: 'networkidle0' });
-
-        // Wait for Google Fonts to load
-        await page.evaluateHandle('document.fonts.ready');
-
-        const element = await page.$(card.selector);
-        if (element) {
-          // Viewport capture: element/clip screenshots return a blank image on
-          // dir="rtl" documents in some Chromium builds. The viewport is sized
-          // to the card, and every template renders its root element at 0,0
-          // filling it exactly, so a plain page screenshot is equivalent.
-          await page.screenshot({
-            path: join(__dirname, card.output),
-            type: 'png',
-          });
-          console.log(`Rendered: ${card.output}`);
-        } else {
-          console.warn(`⚠ Selector "${card.selector}" not found in ${card.html}`);
-        }
-      } catch (e) {
-        console.error(`✗ Failed to render ${card.html}: ${e.message}`);
-      } finally {
-        await page.close();
-      }
+      await renderCard(browser, card);
     }
   } finally {
     await browser.close();

@@ -121,8 +121,8 @@ Each HTML template uses CSS variables from `brand-inject.css` and `{{PLACEHOLDER
 
 ### Tier system
 
-- **Tier 1** (Entertainment Literacy): Navy backgrounds, gradient accent bar (orange-to-teal, 6-8px), full color palette, energetic visual treatment
-- **Tier 2** (Support & Crisis): White backgrounds, solid teal accent bar (3px), no orange, calm visual treatment, 18px minimum body text
+- **Tier 1** (Entertainment Literacy): Navy backgrounds, gradient accent bar (orange-to-emerald, 6-8px), full color palette, energetic visual treatment
+- **Tier 2** (Support & Crisis): White backgrounds, solid emerald accent bar (3px), no orange, calm visual treatment, 18px minimum body text
 
 ### Print bleed
 

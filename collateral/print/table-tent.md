@@ -41,9 +41,9 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 | Element | Content |
 |---|---|
 | **Background** | Navy `#1B2838` |
-| **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → teal `#00D4AA` |
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg), top-left, small. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
-| **Pillar badge** | `SHARP` (teal pill), top-right |
+| **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg), top-left, small. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Pillar badge** | `SHARP` (emerald pill), top-right |
 
 ### Odds fact
 
@@ -72,7 +72,7 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 | Element | Content |
 |---|---|
 | **Background** | Navy `#1B2838` |
-| **Accent bar** | 4px gradient strip at top: orange → teal |
+| **Accent bar** | 4px gradient strip at top: orange → emerald |
 
 ### Tool promotion
 

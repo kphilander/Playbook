@@ -60,9 +60,54 @@ function customFontFaceBlock() {
 
 /* The :root variables + font-face + logo rules, shared by the downloadable
    file and the template-gallery iframes. */
+/* The wordmark wrapper classes used across the collateral templates. The name
+   is raw text inside these elements — there are no inner span hooks. */
+const WORDMARK_WRAPPERS = [
+  '.card-logo', '.badge-logo', '.widget-logo', '.guide-logo', '.logo',
+  '.poster-logo', '.story-logo', '.hero-logo', '.footer-logo', '.screen-logo',
+  '.restroom-logo', '.panel-logo', '.cover-logo', '.bottom-logo',
+];
+const WORDMARK_SELECTOR = WORDMARK_WRAPPERS.join(', ');
+const wrapperSel = suffix => WORDMARK_WRAPPERS.map(c => c + suffix).join(', ');
+
+/* Operator-logo CSS.
+   cobrand — the uploaded logo sits beside the wordmark, in flow.
+   replace — the wordmark text goes transparent (keeping its box, so the
+   lockup holds its place and per-template em sizing still applies) and the
+   logo is laid over it. */
+function logoImageCss(mode) {
+  if (mode === 'replace') {
+    return `${WORDMARK_SELECTOR} {
+  position: relative;
+  color: transparent;
+}
+${wrapperSel('::after')} {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: var(--pb-logo-image-height, 1.4em);
+  width: var(--pb-logo-image-width, 100%);
+  background: var(--pb-logo-image) no-repeat left center / contain;
+}
+`;
+  }
+  return `${wrapperSel('::after')} {
+  content: '';
+  display: inline-block;
+  flex: none;
+  height: var(--pb-logo-image-height, 1.4em);
+  width: var(--pb-logo-image-width, 4em);
+  margin-left: var(--pb-logo-gap, 0.5em);
+  background: var(--pb-logo-image) no-repeat left center / contain;
+}
+`;
+}
+
 export function generateVariablesBlock() {
   const primary = val('colorPrimary', '#1B2838');
-  const secondary = val('colorSecondary', '#00D4AA');
+  const secondary = val('colorSecondary', '#10B981');
   const accent = val('colorAccent', '#FF6B35');
   const primaryLight = val('colorFooterBar', lighten(primary, 0.15));
   const primaryDark = darken(primary, 0.3);
@@ -83,9 +128,6 @@ export function generateVariablesBlock() {
   const gridEl = document.getElementById('effectGrid');
   const grid = gridEl ? gridEl.checked : true;
   const surf = surfaceTokens(primary, { grid });
-  // Wordmark "book" accent: keep the brand secondary, but darken it on a light
-  // card so the logo lettering stays legible (stays teal-on-dark unchanged).
-  const logoBook = readableOn(secondary, primary, 6);
   // Brand-colored ink for headings/values on WHITE sections (emails, support
   // pages). Uses the brand primary, but darkens it if a light primary wouldn't
   // read on white. Unchanged for dark brands.
@@ -172,40 +214,31 @@ export function generateVariablesBlock() {
   --pb-texture-line: ${surf.textureLine};
   --pb-surface-track: ${surf.track};
   --pb-surface-track-border: ${surf.trackBorder};
-  --pb-logo-book: ${logoBook};
   --pb-brand-ink: ${brandInk};
 }
 
-/* Logo image replacement — toggles text wordmark to an uploaded image */
-.logo-play, .logo-book {
-  display: var(--pb-logo-text-display, inline);
-}
-.card-logo, .badge-logo, .widget-logo, .guide-logo, .logo, .poster-logo, .story-logo, .hero-logo, .footer-logo, .screen-logo, .restroom-logo, .panel-logo, .cover-logo, .bottom-logo {
+/* Wordmark — the program name in one weight and one color. Templates put the
+   name as text directly inside these wrapper classes; each template sets its
+   own size, so only weight/tracking are enforced here. */
+${WORDMARK_SELECTOR} {
   display: inline-flex;
   align-items: center;
-}
-.card-logo::after, .badge-logo::after, .widget-logo::after, .guide-logo::after, .logo::after, .poster-logo::after, .story-logo::after, .hero-logo::after, .footer-logo::after, .screen-logo::after, .restroom-logo::after, .panel-logo::after, .cover-logo::after, .bottom-logo::after {
-  content: '';
-  display: var(--pb-logo-image-display, none);
-  height: var(--pb-logo-image-height, 1.4em);
-  width: var(--pb-logo-image-width, 4em);
-  margin-left: var(--pb-logo-gap, 0);
-  background: var(--pb-logo-image, none) no-repeat left center / contain;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  text-transform: none;
 }
 ` + (appState.logoDataUrl ? `
 /* Operator logo (embedded as data URL — no sidecar file needed)
-   Mode: ${appState.logoMode} (cobrand = side-by-side with Playbook wordmark, replace = swaps wordmark) */
+   Mode: ${appState.logoMode} (cobrand = beside the wordmark, replace = swaps it) */
 :root {
   --pb-logo-mode: ${appState.logoMode};
   --pb-logo-image: url('${appState.logoDataUrl}');
-  --pb-logo-image-height: 1.4em;
-  --pb-logo-image-display: inline-block;${appState.logoAspect ? `
+  --pb-logo-image-height: 1.4em;${appState.logoAspect ? `
   --pb-logo-image-width: ${(appState.logoAspect * 1.4).toFixed(2)}em;` : appState.logoIsMark ? `
-  --pb-logo-image-width: 1.5em;` : ''}${appState.logoMode === 'replace' ? `
-  --pb-logo-text-display: none;` : `
-  --pb-logo-gap: 0.5em;`}
+  --pb-logo-image-width: 1.5em;` : ''}${appState.logoMode === 'cobrand' ? `
+  --pb-logo-gap: 0.5em;` : ''}
 }
-` : '');
+` + logoImageCss(appState.logoMode) : '');
 }
 
 export function generateFullCss() {

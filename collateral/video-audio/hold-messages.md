@@ -4,7 +4,7 @@
 
 > **Operator note**: Replace all `{{PLACEHOLDER}}` tokens with values from `_brand.yml`. Music bed should be upbeat and modern — not corporate elevator music. See [voice and tone](../../brand-book/04-voice-and-tone.md) for voice direction.
 
-> **Logo usage (not applicable)**: Hold messages are audio-only. No visual logo is displayed. If the phone system has a visual IVR/screen component, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): reversed variant (white Play + teal BOOK) on dark backgrounds, full-color variant on light backgrounds. Minimum height: 24px (digital). Maintain 1x logo-height clear space on all sides.
+> **Logo usage (not applicable)**: Hold messages are audio-only. No visual logo is displayed. If the phone system has a visual IVR/screen component, use the {{PROGRAM_NAME}} logo per the [logo system](../../brand-book/03-visual-identity.md#1-logo-system): reversed variant (white wordmark) on dark backgrounds, full-color variant on light backgrounds. Minimum height: 24px (digital). Maintain 1x logo-height clear space on all sides.
 
 ---
 
@@ -88,7 +88,7 @@ VO: Did you know every casino game has a house edge?
     (2-second pause)
 
     Knowing the edge helps you pick your games and set your budget.
-    The facts are free — visit the {{PROGRAM_NAME}} section of our
+    The facts are free — visit the {{PROGRAM_SHORT_NAME}} section of our
     website or app to learn more.
 
 (3-second music break, transition to next message)
@@ -129,7 +129,7 @@ VO: While you're waiting, here's a quick look at the tools available
     (2-second pause)
 
     Find all of these in your account settings, or visit the
-    {{PROGRAM_NAME}} section of our website.
+    {{PROGRAM_SHORT_NAME}} section of our website.
 
 (3-second music break, transition to next message)
 ```
@@ -164,7 +164,7 @@ VO: Here's one for you while you wait.
 
     (1-second pause)
 
-    You can find it in the {{PROGRAM_NAME}} section of our app or
+    You can find it in the {{PROGRAM_SHORT_NAME}} section of our app or
     website. Challenge your friends when you're done.
 
     (2-second pause)

@@ -9,7 +9,8 @@
     /* ─── Specimen page styles ──────────────────── */
     :root {
       --pb-color-primary: #1B2838;
-      --pb-color-secondary: #00D4AA;
+      --pb-color-secondary: #10B981;
+      --pb-color-secondary-dark: #047857;
       --pb-color-accent: #FF6B35;
       --pb-color-neutral-50: #F5F5FA;
       --pb-color-neutral-100: #E8E8F0;
@@ -572,22 +573,20 @@
     <div class="section-title">Logo Typography</div>
     <div style="display: flex; gap: 3rem; align-items: center; flex-wrap: wrap;">
       <div>
-        <div style="font-family: var(--pb-font-heading); font-weight: 800; font-size: 4rem; line-height: 1; letter-spacing: -0.03em; color: var(--pb-color-primary);">Play</div>
-        <div style="font-family: var(--pb-font-heading); font-weight: 300; font-size: 2rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--pb-color-primary);">BOOK</div>
-        <div class="pb-caption" style="color: var(--pb-color-neutral-500); margin-top: 0.5rem;">Stacked (B1)</div>
+        <div style="font-family: var(--pb-font-heading); font-weight: 700; font-size: 4rem; line-height: 1; letter-spacing: -0.018em; color: var(--pb-color-primary);">Playbook RG</div>
+        <div class="pb-caption" style="color: var(--pb-color-neutral-500); margin-top: 0.5rem;">Wordmark — one weight, one color</div>
       </div>
-      <div>
-        <div style="font-family: var(--pb-font-heading); font-size: 4rem; line-height: 1; letter-spacing: -0.03em; color: var(--pb-color-primary);"><span style="font-weight: 800;">Play</span><span style="font-weight: 300; letter-spacing: 0.02em;">book</span></div>
-        <div class="pb-caption" style="color: var(--pb-color-neutral-500); margin-top: 0.5rem;">Horizontal (B2)</div>
+      <div style="background: var(--pb-color-primary); border-radius: 12px; padding: 1.25rem 1.75rem;">
+        <div style="font-family: var(--pb-font-heading); font-weight: 700; font-size: 4rem; line-height: 1; letter-spacing: -0.018em; color: #fff;">Playbook RG</div>
+        <div class="pb-caption" style="color: var(--pb-color-neutral-300); margin-top: 0.5rem;">Reversed</div>
       </div>
     </div>
     <div style="margin-top: 1.5rem;">
       <table style="max-width: 500px;">
         <tr><th>Element</th><th>Weight</th><th>Tracking</th><th>Style</th></tr>
-        <tr><td>"Play"</td><td>800 (Extrabold)</td><td>-0.03em</td><td>Title case</td></tr>
-        <tr><td>"BOOK" (stacked)</td><td>300 (Light)</td><td>0.15em</td><td>Uppercase</td></tr>
-        <tr><td>"book" (horizontal)</td><td>300 (Light)</td><td>0.02em</td><td>Lowercase</td></tr>
+        <tr><td>"Playbook RG"</td><td>700 (Bold)</td><td>-0.018em</td><td>Title case, single color</td></tr>
       </table>
+      <p class="pb-small" style="color: var(--pb-color-neutral-500); margin-top: 0.75rem;">Production logo files convert this type to outlines at build time — always use the generated SVGs, never live text.</p>
     </div>
   </section>
 

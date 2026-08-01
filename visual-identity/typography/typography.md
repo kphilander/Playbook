@@ -18,7 +18,7 @@
 
 ### Why these fonts?
 
-- **Inter** — Designed for computer screens. Excellent x-height, clear at small sizes, broad weight range for the logo (800 vs 300 contrast) and heading hierarchy.
+- **Inter** — Designed for computer screens. Excellent x-height, clear at small sizes, broad weight range for the wordmark (700) and heading hierarchy.
 - **Source Sans 3** — Adobe's open-source workhorse. Highly readable for long-form content, good at body sizes (16-18px).
 - **Source Code Pro** — Monospaced companion to Source Sans. Chosen for helpline numbers because 0/O, 1/l/I are fully disambiguated.
 
@@ -80,12 +80,12 @@ On viewports ≤768px, headings scale down to stay readable without scrolling:
 
 | Name | Value | CSS token | CSS class | Primary usage |
 |---|---|---|---|---|
-| Light | 300 | `--pb-weight-light` | `.pb-light` | Logo "BOOK" half, body light |
+| Light | 300 | `--pb-weight-light` | `.pb-light` | Body light |
 | Regular | 400 | `--pb-weight-regular` | `.pb-regular` | Body text, form labels |
 | Medium | 500 | `--pb-weight-medium` | `.pb-medium` | Mono data displays, odds |
 | Semibold | 600 | `--pb-weight-semibold` | `.pb-semibold` | H2–H4, CTAs, labels, UI |
 | Bold | 700 | `--pb-weight-bold` | `.pb-bold` | H1, Display, helpline numbers |
-| Extrabold | 800 | `--pb-weight-extrabold` | `.pb-extrabold` | Logo "Play" half, hero stats |
+| Extrabold | 800 | `--pb-weight-extrabold` | `.pb-extrabold` | Hero stats, display emphasis |
 | Black | 900 | `--pb-weight-black` | `.pb-black` | Campaign accent headlines |
 
 ---
@@ -102,9 +102,8 @@ On viewports ≤768px, headings scale down to stay readable without scrolling:
 **Logo-specific:**
 | Element | Tracking |
 |---|---|
-| "Play" | -0.03em |
-| "BOOK" (stacked) | 0.15em |
-| "book" (horizontal) | 0.02em |
+| "Playbook" wordmark | -0.018em |
+
 
 ---
 
@@ -162,7 +161,7 @@ When customizing fonts for your operator brand:
 3. Ensure the font supports character sets for your operating jurisdictions.
 4. Test readability at small sizes — Playbook content often appears in constrained spaces.
 5. Update `_brand.yml` and regenerate `playbook-typography.css`.
-6. If replacing Inter, ensure your heading font has a weight ≥700 for the logo and a weight ≤300 for the "BOOK" contrast.
+6. If replacing Inter, ensure your heading font has a bold (700) weight for the wordmark.
 
 ---
 

@@ -26,8 +26,8 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 | **Minimum headline** | 48pt (visible from 3m) |
 | **Minimum body** | 18pt |
 | **Minimum helpline** | 24pt bold |
-| **Color system** | Navy `#1B2838` background, white text, teal `#00D4AA` accents, orange `#FF6B35` highlights |
-| **Accent bar** | Gradient strip `#FF6B35` → `#00D4AA` on all signs |
+| **Color system** | Navy `#1B2838` background, white text, emerald `#10B981` accents, orange `#FF6B35` highlights |
+| **Accent bar** | Gradient strip `#FF6B35` → `#10B981` on all signs |
 | **Materials** | See per-location specs |
 | **QR codes** | Minimum 2" x 2" (50mm) for scanning from 1m+ |
 
@@ -50,7 +50,7 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 
 | Element | Content |
 |---|---|
-| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white Play + teal BOOK on navy bg). Min height 0.25" (print) or 24px (digital display). Maintain 1x logo-height clear space on all sides. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg). Min height 0.25" (print) or 24px (digital display). Maintain 1x logo-height clear space on all sides. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 | **Headline** | Know your game. Play on your terms. |
 | **Subheadline** | Real odds, real tools, and free support — available anytime. |
@@ -122,7 +122,7 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 
 | Element | Content |
 |---|---|
-| **Label** | GAME IQ (teal) |
+| **Label** | GAME IQ (emerald) |
 | **Headline** | Think you know the odds? |
 | **Body** | Take the 2-minute quiz. Challenge your friends. Most people get question 3 wrong. |
 | **QR code** | Links to quiz |

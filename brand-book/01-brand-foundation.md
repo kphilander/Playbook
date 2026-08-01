@@ -382,6 +382,16 @@ the product looks like an afterthought, they treat it like one.
 | NCPG (US) | Policy advocacy, helpline, campaign kits | Playbook is a complete brand system, not a campaign toolkit |
 | Operator-built programs | Custom, variable quality | Playbook is standardized, open-source, marketing-grade |
 
+### The Name
+
+The program's formal name is **Playbook RG**. Use it for B2B, regulatory, and
+formal contexts -- titles, decks, compliance documentation, and operator-facing
+pages. In player-facing content, use the short name **Playbook**
+({{PROGRAM_SHORT_NAME}}): the Tier 1 voice deliberately avoids the "RG"
+responsible-gambling initialism with players, so what they see and hear is
+simply Playbook. Same brand, two registers -- formal where it signals rigor,
+short where it keeps the player experience unforced.
+
 ---
 
 ## Value Propositions

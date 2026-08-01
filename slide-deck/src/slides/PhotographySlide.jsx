@@ -52,7 +52,7 @@ export default function PhotographySlide() {
           <div className="flex gap-3">
             {[
               { label: 'Navy', color: 'text-white', bg: 'bg-navy/70' },
-              { label: 'Teal', color: 'text-teal', bg: 'bg-teal-dark/50' },
+              { label: 'Emerald', color: 'text-teal', bg: 'bg-teal-dark/50' },
               { label: 'Orange', color: 'text-orange', bg: 'bg-orange-dark/50' },
             ].map((f) => (
               <div key={f.label} className={`flex-1 rounded-lg overflow-hidden relative h-14 bg-gradient-to-br from-navy-light to-navy`}>

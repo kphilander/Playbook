@@ -30,9 +30,9 @@ Tier 1 and Tier 2 share the same brand — same fonts, same logo, same design sy
 | Dimension | Tier 1 (Entertainment Literacy) | Tier 2 (Support & Crisis) |
 |---|---|---|
 | **Energy** | High — confident, energetic, engaging | Low — calm, steady, unhurried |
-| **Color density** | Full palette — navy, teal, orange working together | Reduced — navy + white + warm neutrals |
+| **Color density** | Full palette — navy, emerald, orange working together | Reduced — navy + white + warm neutrals |
 | **Visual complexity** | Rich — charts, illustrations, multi-column layouts | Minimal — single focus, generous white space |
-| **Tone cues** | Teal and orange signal energy and action | Neutral warmth signals safety and openness |
+| **Tone cues** | Emerald and orange signal energy and action | Neutral warmth signals safety and openness |
 | **Information density** | High — multiple data points, comparisons, quiz options | Low — one idea per screen, one action per step |
 | **CTAs** | Multiple options, discovery-oriented | Single primary action, direct path to help |
 | **Imagery** | Lifestyle editorial, social moments, entertainment | Quiet, calm, human warmth without gambling context |
@@ -76,7 +76,7 @@ Tier 2 uses a constrained subset of the full Playbook palette. The goal is visua
 | **Text secondary** | Mid gray | `#3D3D5C` (`neutral_700`) | Supporting text, descriptions |
 | **Text tertiary** | Light gray | `#6B6B8A` (`neutral_500`) | Metadata, timestamps |
 | **Border** | Soft gray | `#A8A8C0` (`neutral_300`) | Dividers, card borders |
-| **Accent (support)** | Teal | `#00D4AA` | Primary CTA only — "Call now," "Get support" |
+| **Accent (support)** | Emerald | `#10B981` | Primary CTA only — "Call now," "Get support" |
 | **Accent (confirm)** | Success green | `#00C853` | Confirmation states — "Account paused," "Limit set" |
 | **Alert** | Danger red | `#FF3D00` | Urgent alerts only — never as theme or decoration |
 
@@ -85,13 +85,13 @@ Tier 2 uses a constrained subset of the full Playbook palette. The goal is visua
 | Color | Why excluded |
 |---|---|
 | **Orange (`#FF6B35`)** | Too energetic, too associated with Tier 1 engagement. Creates urgency that's inappropriate in support contexts. |
-| **Teal as background** | Teal works as a CTA button color but not as a background wash — it's too "entertainment" for Tier 2 surfaces. |
+| **Emerald as background** | Emerald works as a CTA button color but not as a background wash — it's too "entertainment" for Tier 2 surfaces. |
 | **Navy as full-bleed background** | The dark, immersive navy backgrounds from Tier 1 feel heavy in Tier 2. White and near-white surfaces create openness. |
-| **Gradient accent bar** | The orange-to-teal gradient is a Tier 1 signature. Tier 2 uses a single-color accent or no accent bar. |
+| **Gradient accent bar** | The orange-to-emerald gradient is a Tier 1 signature. Tier 2 uses a single-color accent or no accent bar. |
 
 ### Tier 2 accent bar
 
-Where Tier 1 uses the signature orange-to-teal gradient bar, Tier 2 uses a **solid teal bar** at reduced height (3px vs. 6px). This maintains brand recognition while signaling the tonal shift.
+Where Tier 1 uses the signature orange-to-emerald gradient bar, Tier 2 uses a **solid emerald bar** at reduced height (3px vs. 6px). This maintains brand recognition while signaling the tonal shift.
 
 If the gradient bar appears on a support page, the player subconsciously reads it as "entertainment" — and that's the wrong register.
 
@@ -104,7 +104,7 @@ When the operator's platform is in dark mode, Tier 2 surfaces shift:
 | White (`#FFFFFF`) surface | `neutral_900` (`#1A1A2E`) surface |
 | `neutral_50` alt surface | `neutral_700` (`#3D3D5C`) alt surface |
 | `neutral_900` text | `neutral_50` (`#F5F5FA`) text |
-| Teal CTA buttons | Teal CTA buttons (same — sufficient contrast on dark) |
+| Emerald CTA buttons | Emerald CTA buttons (same — sufficient contrast on dark) |
 | Success green confirmations | Success green (slightly desaturated: `#00B84A`) |
 
 All dark mode combinations must pass WCAG 2.1 AA. Test helpline numbers specifically — they must be immediately readable in both modes.
@@ -161,7 +161,7 @@ Design for these conditions. Larger text, more spacing, higher contrast, fewer w
 
 **Support page:**
 ```
-[Solid teal accent bar — 3px]
+[Solid emerald accent bar — 3px]
 [Logo]
 [Heading — semibold, navy]
 [1-2 sentences — what this page is for]
@@ -189,7 +189,7 @@ Design for these conditions. Larger text, more spacing, higher contrast, fewer w
 
 **Limit-reached notification:**
 ```
-[Subtle top border — teal, 2px]
+[Subtle top border — emerald, 2px]
 [Icon — small, muted]
 [Heading — "Weekly limit reached"]
 [One sentence — when it resets]
@@ -243,7 +243,7 @@ When Tier 2 contexts show player activity data (session history, spending patter
 
 | Dimension | Tier 1 data viz | Tier 2 data viz |
 |---|---|---|
-| **Palette** | Full brand colors — teal highlights, orange accents | Muted — `neutral_300` bars/lines, single teal highlight for current period |
+| **Palette** | Full brand colors — emerald highlights, orange accents | Muted — `neutral_300` bars/lines, single emerald highlight for current period |
 | **Annotations** | Bold callouts, comparative labels | Minimal — data labels only, no editorial annotations |
 | **Chrome** | Styled containers, branded headers | Clean containers, white background, thin borders |
 | **Interactivity** | Hover states, clickable segments | Static or minimal interaction — no gamification |
@@ -251,7 +251,7 @@ When Tier 2 contexts show player activity data (session history, spending patter
 
 ### Chart rules for Tier 2
 
-- **Bar charts:** Use `neutral_300` (`#A8A8C0`) as the default bar color. Use `secondary` teal (`#00D4AA`) for the current period or highlighted data point. Maximum 5 bars visible.
+- **Bar charts:** Use `neutral_300` (`#A8A8C0`) as the default bar color. Use `secondary` emerald (`#10B981`) for the current period or highlighted data point. Maximum 5 bars visible.
 - **Line charts:** Use `neutral_500` (`#6B6B8A`) for the line. `neutral_300` for gridlines. No area fill — clean line only.
 - **Donut charts:** Not recommended in Tier 2. If required, use a muted two-tone (neutral + one highlight).
 - **Sparklines:** Acceptable for compact summaries. `neutral_500` line, no fill.
@@ -275,7 +275,7 @@ A key Tier 2 component — shows a player their recent activity at a glance:
 │  Time played       3h 22m              │
 │  Average session   50 min              │
 │                                         │
-│  [Mini bar chart — neutral with teal    │
+│  [Mini bar chart — neutral with emerald    │
 │   highlight on today]                   │
 │                                         │
 │  Your limits: $200/week (active)        │
@@ -345,7 +345,7 @@ Used in the self-exclusion duration selection step.
 - Radio button or card-select pattern
 - Duration label: "7 days" — large, clear
 - Description: "Your account will be paused until {{DATE}}" — smaller, gray
-- Selected state: teal left border (4px), light teal background tint
+- Selected state: emerald left border (4px), light emerald background tint
 - Unselected state: neutral_300 border, white background
 
 ### Confirmation banner
@@ -354,7 +354,7 @@ Used after a player completes a Tier 2 action (set limit, paused account, etc.).
 
 **Structure:**
 - Full-width banner, top of screen
-- Background: `neutral_50` with 2px teal top border
+- Background: `neutral_50` with 2px emerald top border
 - Icon: `icon-check` in success green, 24px
 - Message: "Your account is paused. Take all the time you need."
 - Sub-message: "Support is available: {{HELPLINE_NUMBER}}"
@@ -366,7 +366,7 @@ In-app notification when a deposit or session limit is hit.
 
 **Structure:**
 - Card or banner format, non-intrusive
-- Background: white with subtle teal left border (3px)
+- Background: white with subtle emerald left border (3px)
 - Heading: "Weekly limit reached" — navy, semibold
 - Body: "Resets {{DATE}}. That's your budget working as designed." — neutral_700
 - CTA: "View activity" (text link, not button)
@@ -380,7 +380,7 @@ Before shipping any Tier 2 content, run this checklist:
 
 ### Visual
 - [ ] No orange (`#FF6B35`) appears anywhere on the screen
-- [ ] No gradient accent bar (orange-to-teal) — solid teal or none
+- [ ] No gradient accent bar (orange-to-emerald) — solid emerald or none
 - [ ] White or near-white surface backgrounds — not dark navy immersive
 - [ ] Single column layout, max-width 640px
 - [ ] Helpline number visible without scrolling

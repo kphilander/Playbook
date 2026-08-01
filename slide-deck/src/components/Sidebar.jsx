@@ -49,8 +49,7 @@ export default function Sidebar({ sections, activeSection }) {
         <div className="px-6 pt-8 pb-6 border-b border-white/[0.06]">
           <a href="#hero" onClick={() => setMobileOpen(false)} className="block">
             <div className="mb-1">
-              <span className="font-heading text-xl font-extrabold text-white">Play</span>
-              <span className="font-heading text-xl font-light text-teal">BOOK</span>
+              <span className="font-heading text-xl font-bold tracking-[-0.018em] text-white">Playbook RG</span>
             </div>
             <p className="font-body text-xs text-n300 tracking-wide uppercase">Brand Guide</p>
           </a>

@@ -2,8 +2,9 @@
 /**
  * build-icons.mjs — Playbook Brand Icon Generator (Weight Contrast)
  *
- * Generates 31 SVG icons using a dual stroke-weight system that echoes
- * the logo's typographic contrast (Play 800 / BOOK 300):
+ * Generates 31 SVG icons using a dual stroke-weight system — bold
+ * structure paired with light detail — that echoes the brand's
+ * confident-but-open personality:
  *   - Primary strokes (2px): Outer containers, main shapes, defining structure
  *   - Detail strokes (1px): Inner details, accents, secondary elements
  *
@@ -605,7 +606,7 @@ const previewHtml = `<!DOCTYPE html>
   <div class="spec-banner">
     <div><strong>Primary strokes (2px)</strong> — Outer containers, main shapes, structure</div>
     <div><strong>Detail strokes (1px)</strong> — Inner details, accents, secondary elements</div>
-    <div><strong>Design principle</strong> — Echoes logo weight contrast: Play (800) / BOOK (300)</div>
+    <div><strong>Design principle</strong> — Bold structure (2px), light detail (1px): the brand's confident-but-open personality</div>
   </div>
   <div class="stats">
     <div class="stat"><strong>${totalCount}</strong><span>Total icons</span></div>

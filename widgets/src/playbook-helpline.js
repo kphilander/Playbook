@@ -47,19 +47,19 @@ class PlaybookHelpline extends HTMLElement {
       dark: {
         bg:     'var(--pb-color-primary, var(--pb-bg, #1B2838))',
         text:   'var(--pb-color-white, var(--pb-text, #fff))',
-        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #10B981))',
         border: 'transparent'
       },
       light: {
         bg:     'var(--pb-color-white, var(--pb-bg, #fff))',
         text:   'var(--pb-color-primary, var(--pb-text, #1B2838))',
-        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #10B981))',
         border: 'var(--pb-color-neutral-100, #e5e5e5)'
       },
       minimal: {
         bg:     'var(--pb-bg, transparent)',
         text:   'var(--pb-text, inherit)',
-        accent: 'var(--pb-color-secondary, var(--pb-accent, #00D4AA))',
+        accent: 'var(--pb-color-secondary, var(--pb-accent, #10B981))',
         border: 'transparent'
       },
     };

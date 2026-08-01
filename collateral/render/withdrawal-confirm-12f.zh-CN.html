@@ -23,7 +23,7 @@
     overflow: hidden;
   }
 
-  /* 8px gradient accent bar (orange→teal) */
+  /* 8px gradient accent bar (orange→emerald) */
   .accent-bar {
     height: 8px;
     background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary));
@@ -44,23 +44,15 @@
     z-index: 1;
   }
 
-  /* Logo — dark variant (white Play, teal BOOK) */
+  /* Logo — dark variant (white wordmark) */
   .logo {
     font-family: var(--pb-font-heading);
     font-size: calc(24px * var(--pb-template-text-scale, 1));
     margin-bottom: 40px;
     line-height: 1;
-  }
-  .logo .logo-play {
-    font-weight: 800;
-    letter-spacing: -0.02em;
     color: var(--pb-surface-ink, var(--pb-color-white));
-  }
-  .logo .logo-book {
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--pb-color-secondary);
+    font-weight: 700;
+    letter-spacing: -0.018em;
   }
 
   /* Checkmark circle */
@@ -200,7 +192,7 @@
 
   <div class="content">
     <div class="logo">
-      <span class="logo-play">Play</span><span class="logo-book">book</span>
+      Playbook
     </div>
 
     <div class="check-circle">
