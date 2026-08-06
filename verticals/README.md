@@ -1,6 +1,6 @@
 # Vertical Playbooks
 
-**Deployment maps for each line of business. Pick yours, and know what to ship, where it goes, and who needs to know it.**
+**Deployment maps for each line of business. Pick yours, and know what to deploy, where it goes, and who needs to know it.**
 
 The rest of this repository is organized by content type: guides in [`how-to-play/`](../how-to-play/), campaigns and segments in [`messaging/`](../messaging/), templates in [`collateral/`](../collateral/), law in [`jurisdictions/`](../jurisdictions/). A vertical playbook cuts across all of that from the operator's side of the counter. It answers one question: *you run a casino floor, a sportsbook, an online lobby, or a lottery network. What does Playbook look like deployed in your world?*
 

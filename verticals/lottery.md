@@ -113,7 +113,7 @@ The luck set from [myth-busting](../messaging/myth-busting.md): choosing your nu
 
 You train a network, not a staff. Materials do the work:
 
-1. Ship the [staff FAQ](../collateral/customer-service/staff-faq.md) as a one-page counter card; a clerk should find any answer in ten seconds.
+1. Send the [staff FAQ](../collateral/customer-service/staff-faq.md) as a one-page counter card; a clerk should find any answer in ten seconds.
 2. Keep the [stigma-free language](../messaging/stigma-free-language.md) list inside every retailer kit.
 3. Give corporate-owned stores and claim centers the full [conversation scripts](../collateral/customer-service/conversation-scripts.md), including the Tier 2 handoff; high-value claims are the moment a real conversation can happen.
 
@@ -131,4 +131,4 @@ Score deployments with the [content scorecard](../docs/content-scorecard.md). Lo
 2. Render the counter set: rack card, helpline card, and the lottery quick ref.
 3. Put draw odds in the screen loop in plain numbers.
 4. Schedule [Luck, Numbers & Lotteries](../messaging/campaigns.md#campaign-4-luck-numbers--lotteries) for the next surge window.
-5. Ship the one-page FAQ card to the retail network with the next terminal update.
+5. Send the one-page FAQ card to the retail network with the next terminal update.

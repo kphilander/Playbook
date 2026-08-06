@@ -23,7 +23,7 @@ adaptation_status: base
 adaptation_notes: |
   Written for a regulated iGaming casino. Bonus and wagering examples
   are generic; replace with your promotion mechanics and jurisdiction
-  rules. In markets where the casino product ships inside a sportsbook
+  rules. In markets where the casino product lives inside a sportsbook
   app, run this playbook alongside the sportsbook playbook.
 last_updated: "2026-08-05"
 ---
