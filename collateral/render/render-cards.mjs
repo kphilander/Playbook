@@ -147,6 +147,7 @@ const cards = [
   { html: 'poster-19f-your-tools.html', output: 'poster-19f-your-tools.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'poster-19g-one-decision.html', output: 'poster-19g-one-decision.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'poster-19h-time-flies.html', output: 'poster-19h-time-flies.png', w: 1848, h: 2448, selector: '.poster' },
+  { html: 'poster-19i-lottery-odds.html', output: 'poster-19i-lottery-odds.png', w: 1848, h: 2448, selector: '.poster' },
   // i18n — seasonal & online myth cards (16-18 series) variants
   { html: 'card-16a-online-rigged.ja.html', output: 'card-16a-online-rigged.ja.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-16b-bonus-free-money.ja.html', output: 'card-16b-bonus-free-money.ja.png', w: 1080, h: 1080, selector: '.social-card' },

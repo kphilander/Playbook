@@ -24,6 +24,7 @@ content_type:
   - tone-guide
   - language-guide
   - jurisdiction-module
+  - vertical-playbook
 
 pillar:
   - open           # Transparency, odds literacy
@@ -89,6 +90,15 @@ channel:
   - environmental      # Signage, venue displays
   - push-notification
   - video
+
+# Business verticals. Used by jurisdiction modules (which verticals a
+# market regulates) and vertical playbooks (which line of business a
+# deployment map covers).
+verticals:
+  - land-based         # Casino floors, venues
+  - interactive        # Online casino / iGaming
+  - sports             # Retail and online sports betting
+  - lottery            # Draw games, instant tickets, retail network
 
 adaptation_status:
   - base               # Original content (default)
