@@ -178,6 +178,13 @@ Playbook/
 │   ├── macau/                       # Macau
 │   └── singapore/                   # Singapore
 │
+├── verticals/                        # Deployment maps by line of business
+│   ├── README.md                    # How vertical playbooks work
+│   ├── casino.md                    # Land-based floors: tables, slots, cage, venue
+│   ├── sportsbook.md                # Retail books and betting apps
+│   ├── online-gaming.md             # iGaming: registration, deposit, lobby, lifecycle
+│   └── lottery.md                   # Draw games, instant tickets, retail network
+│
 ├── docs/                             # Player testing protocol and operational documents
 │   ├── README.md                    # Testing overview and navigation
 │   └── content-scorecard.md          # Content performance surveys, scoring, and decision framework
