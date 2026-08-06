@@ -116,7 +116,7 @@ Online rules are the most detailed of any vertical: mandatory reality checks, de
 
 ## Measure it
 
-Online gives you the cleanest measurement of any vertical: every placement has an impression count and a click-through. Score against the [content scorecard](../docs/content-scorecard.md), and watch two product signals: guide reads per active player, and voluntary limit adoption after tool-forward messaging. Rising literacy with steady retention is the whole thesis proved.
+Online gives you the clearest measurement of any vertical: every placement has an impression count and a click-through. Score against the [content scorecard](../docs/content-scorecard.md), and watch two product signals: guide reads per active player, and voluntary limit adoption after tool-forward messaging. Rising literacy with steady retention is the whole thesis proved.
 
 ## Start this week
 

@@ -120,7 +120,7 @@ Sports advertising rules move fast and differ hard by market: bonus wording, odd
 
 ## Measure it
 
-Score deployments with the [content scorecard](../docs/content-scorecard.md). The sportsbook tell is parlay literacy: when quiz answers on parlay pricing improve, the flagship campaign is working. Settlement-screen click-through to the guide is the cleanest in-product signal.
+Score deployments with the [content scorecard](../docs/content-scorecard.md). The sportsbook tell is parlay literacy: when quiz answers on parlay pricing improve, the flagship campaign is working. Settlement-screen click-through to the guide is the clearest in-product signal.
 
 ## Start this week
 
