@@ -17,6 +17,7 @@
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(26px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--pb-color-secondary); margin-bottom: 28px; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(96px * var(--pb-template-text-scale, 1)); font-weight: 900; line-height: 1.05; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 64px; letter-spacing: -0.03em; }
@@ -36,7 +37,7 @@
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="three-step-math">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     
@@ -45,14 +46,6 @@
     <div class="eyebrow">Sports math</div>
     <div class="headline">How the sportsbook<br>actually wins.</div>
     <div class="flow-list">
-      <div class="flow-row">
-        <span class="flow-label">Bet on Side A:</span>
-        <span class="flow-value">$1.10</span>
-      </div>
-      <div class="flow-row">
-        <span class="flow-label">Bet on Side B:</span>
-        <span class="flow-value">$1.10</span>
-      </div>
       <div class="flow-row">
         <span class="flow-label">Total collected:</span>
         <span class="flow-value">$2.20</span>

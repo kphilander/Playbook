@@ -17,6 +17,7 @@
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .card-pillar { font-family: var(--pb-font-heading); font-size: calc(20px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); margin-bottom: 20px; }
   .myth-statement { font-family: var(--pb-font-heading); font-size: calc(50px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.4; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 32px; }
@@ -44,26 +45,21 @@
   </style>
   </head>
 <body>
-<div class="social-card">
+<div class="social-card" data-layout="single-proof">
   <div class="card-header">
     <span class="card-logo">Playbook</span>
     
   </div>
   <div class="card-body">
     <div class="myth-label">俗説と数学</div>
-    <div class="myth-statement">「運のよい台」には、プレイヤーや物を見分ける力はありません。</div>
-    <div class="fact-statement">すべてのスピンは<strong>乱数発生装置</strong>によって決まります。マシンに記憶はなく、直前の結果は次の結果に影響しません。</div>
+    <div class="myth-statement">「相性のよい台」も、あなたを覚えてはいません。</div>
+    <div class="fact-statement">すべてのスピンは<strong>乱数発生器</strong>で決まります。台に記憶はなく、直前の結果が次の結果に影響することもありません。</div>
     <div class="stat-row">
       <div class="stat-card">
-        <div class="game">スロットのハウスエッジ</div>
-        <div class="edge orange">2〜15%</div>
-      </div>
-      <div class="stat-card">
-        <div class="game">RNGの記憶</div>
+        <div class="game">乱数発生器の記憶</div>
         <div class="edge teal">0</div>
       </div>
     </div>
-    <div class="share-prompt">「必勝法」がある方にも、ぜひお伝えください。<span>&rarr;</span></div>
   </div>
   <div class="card-footer">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>

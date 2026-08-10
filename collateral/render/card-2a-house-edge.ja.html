@@ -16,6 +16,7 @@
   .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.4; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 36px; }
@@ -47,27 +48,23 @@
     <span class="section-label">本当の確率</span>
   </div>
   <div class="card-body">
-    <div class="headline">すべてのゲームにはハウスエッジがあります。<br>実際に遊んでいるものの中身をご紹介します。</div>
+    <div class="headline">ゲームが違えば、ハウスエッジも違う。</div>
     <div class="odds-grid">
       <div class="odds-item">
         <div class="odds-game">ブラックジャック（基本戦略）</div>
         <div class="odds-edge teal">0.5%</div>
-        <div class="odds-note">カジノで最も有利な確率</div>
       </div>
       <div class="odds-item">
         <div class="odds-game">ヨーロピアンルーレット</div>
         <div class="odds-edge white">2.7%</div>
-        <div class="odds-note">シングルゼロのホイール</div>
       </div>
       <div class="odds-item">
         <div class="odds-game">アメリカンルーレット</div>
         <div class="odds-edge orange">5.26%</div>
-        <div class="odds-note">ダブルゼロはエッジも倍</div>
       </div>
       <div class="odds-item">
         <div class="odds-game">スロット（平均）</div>
         <div class="odds-edge white">2〜15%</div>
-        <div class="odds-note">機種によって異なります</div>
       </div>
     </div>
   </div>

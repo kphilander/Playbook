@@ -16,6 +16,7 @@
   .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(56px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.4; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 40px; }
@@ -50,31 +51,13 @@
     <span class="section-label">本当の確率</span>
   </div>
   <div class="card-body">
-    <div class="headline">−110とはどういう意味でしょうか。</div>
+    <div class="headline">−110。数字の中に、マージンがこっそり。</div>
     <div class="breakdown">
       <div class="breakdown-line"><span class="amount">11,000円</span>を賭ける</div>
-      <div class="breakdown-line"><span class="amount">10,000円</span>を得る</div>
-      <div class="breakdown-line"><span class="cut">1,000円</span>の差は何か。</div>
+      <div class="breakdown-line">勝てば利益は<span class="amount">10,000円</span></div>
     </div>
-    <div class="explanation">それがブックメーカーの取り分です。</div>
-    <div class="emphasis">すべての賭けに例外なく。</div>
-    <div class="vig-strip">
-      <div class="vig-card">
-        <div class="vig-label">標準ライン</div>
-        <div class="vig-value">-110</div>
-        <div class="vig-note">約4.5%のビグ</div>
-      </div>
-      <div class="vig-card">
-        <div class="vig-label">本命</div>
-        <div class="vig-value">-150</div>
-        <div class="vig-note">取り分は高め</div>
-      </div>
-      <div class="vig-card">
-        <div class="vig-label">対抗</div>
-        <div class="vig-value">+200</div>
-        <div class="vig-note">ビグはそれでも発生します</div>
-      </div>
-    </div>
+    <div class="explanation">価格はラインに含まれています。</div>
+    <div class="emphasis">両サイドが−110なら、ブックメーカーのマージンは約4.8%。</div>
   </div>
   <div class="card-footer">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>

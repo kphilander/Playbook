@@ -17,6 +17,7 @@
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .card-pillar { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); margin-bottom: 20px; }
   .myth-statement { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 32px; letter-spacing: -0.02em; }
@@ -37,7 +38,7 @@
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="social-card">
+<div class="social-card" data-layout="single-proof">
   <div class="card-header">
     <span class="card-logo">Playbook</span>
     
@@ -48,15 +49,10 @@
     <div class="fact-statement">Every spin is calculated by a <strong>random number generator</strong>. It doesn't know you. It doesn't care. It doesn't remember your last spin.</div>
     <div class="stat-row">
       <div class="stat-card">
-        <div class="game">Slots house edge</div>
-        <div class="edge orange">2-15%</div>
-      </div>
-      <div class="stat-card">
         <div class="game">RNG memory</div>
         <div class="edge teal">0</div>
       </div>
     </div>
-    <div class="share-prompt">Share this with the friend who has a "system." <span>&rarr;</span></div>
   </div>
   <div class="card-footer">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>

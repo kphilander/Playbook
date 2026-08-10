@@ -16,6 +16,7 @@
   .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 28px; }
@@ -54,15 +55,15 @@
   </style>
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="two-comparisons">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     <span class="section-label">الاحتمالات الحقيقية</span>
   </div>
   <div class="poster-body">
-    <div class="eyebrow">دون شروط مخفية</div>
-    <div class="headline">لكل لعبة <span class="teal">نسبة للكازينو</span>.<br>وفيما يلي التفاصيل.</div>
-    <div class="subhead">هي النسبة التي يحتفظ بها الكازينو مع مرور الوقت. وفيما يلي مقارنة بين الألعاب.</div>
+    <div class="eyebrow">لا بنود مخفية</div>
+    <div class="headline">لكل لعبة <span class="teal">أفضلية للكازينو</span>.<br>وهذه هي الأرقام.</div>
+    <div class="subhead">أفضلية الكازينو هي النسبة التي يحتفظ بها في المتوسط مع مرور الوقت.</div>
     <div class="edge-list">
       <div class="edge-row">
         <div class="edge-bar-wrap">
@@ -73,31 +74,13 @@
       </div>
       <div class="edge-row">
         <div class="edge-bar-wrap">
-          <div class="edge-game">كرابس (Pass / Don't pass)</div>
-          <div class="edge-bar mid" style="width: 14%;"></div>
-        </div>
-        <div class="edge-pct white">1.4%</div>
-      </div>
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
           <div class="edge-game">الروليت الأمريكي</div>
           <div class="edge-bar high"></div>
         </div>
         <div class="edge-pct orange">5.26%</div>
       </div>
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
-          <div class="edge-game">آلات القمار</div>
-          <div class="edge-bar var"></div>
-        </div>
-        <div class="edge-pct orange">2-15%</div>
-      </div>
     </div>
-    <div class="callout">
-      <div class="callout-number">5.26 د.إ</div>
-      <div class="callout-text">مقابل كل <strong>100 د.إ مراهنة</strong> على الروليت الأمريكي،<br>يحتفظ الكازينو بنحو 5.26 د.إ في المتوسط.</div>
-    </div>
-    <a href="#" class="poster-cta">عرض التفاصيل الكاملة</a>
+    <a href="#" class="poster-cta">قارن بين الألعاب</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>

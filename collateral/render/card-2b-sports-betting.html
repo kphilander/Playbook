@@ -16,6 +16,7 @@
   .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); }
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(52px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.15; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 40px; letter-spacing: -0.02em; }
@@ -43,31 +44,13 @@
     <span class="section-label">Real Odds</span>
   </div>
   <div class="card-body">
-    <div class="headline">What does -110 mean?</div>
+    <div class="headline">−110: ten dollars wearing a tiny disguise.</div>
     <div class="breakdown">
-      <div class="breakdown-line">You bet <span class="amount">$110</span></div>
-      <div class="breakdown-line">You win <span class="amount">$100</span></div>
-      <div class="breakdown-line">The <span class="cut">$10</span> difference?</div>
+      <div class="breakdown-line">Risk <span class="amount">$110</span></div>
+      <div class="breakdown-line">Profit if you win <span class="amount">$100</span></div>
     </div>
-    <div class="explanation">That's the sportsbook's cut.</div>
-    <div class="emphasis">On every. Single. Bet.</div>
-    <div class="vig-strip">
-      <div class="vig-card">
-        <div class="vig-label">Standard line</div>
-        <div class="vig-value">-110</div>
-        <div class="vig-note">~4.5% vig</div>
-      </div>
-      <div class="vig-card">
-        <div class="vig-label">Heavy favorite</div>
-        <div class="vig-value">-150</div>
-        <div class="vig-note">Higher cut</div>
-      </div>
-      <div class="vig-card">
-        <div class="vig-label">Underdog</div>
-        <div class="vig-value">+200</div>
-        <div class="vig-note">Vig still applies</div>
-      </div>
-    </div>
+    <div class="explanation">The price is built into the line.</div>
+    <div class="emphasis">At −110 on both sides, the book’s margin is about 4.8%.</div>
   </div>
   <div class="card-footer">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>

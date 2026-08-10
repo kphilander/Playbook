@@ -32,6 +32,10 @@
 | **Resolution** | 300 DPI minimum |
 | **Paper** | 170gsm coated silk or equivalent |
 | **Coating** | Soft-touch matte laminate on cover panel |
+| **Letter production output** | 3300 x 2550px trim at 300dpi; use `print-us` |
+| **A4 production output** | 3508 x 2480px trim at 300dpi; use `print-iso` |
+
+The fold-in flap is intentionally narrower so the finished brochure closes cleanly. For Letter, use 3.625" for the flap and 3.6875" for each remaining panel. For A4, use 98mm for the flap and 99.5mm for each remaining panel. Confirm the final allowance with the printer before a large run.
 
 ### Fold diagram
 
@@ -60,6 +64,7 @@ INSIDE (face up):
 |---|---|
 | **Background** | Navy `#1B2838` (CMYK equivalent) |
 | **Accent bar** | 3mm gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
+
 | **Logo** | {{PROGRAM_NAME}} wordmark, stacked (B1) layout, reversed variant (white wordmark on navy bg). Min height 0.25" (print). Maintain 1x logo-height clear space on all sides. Centered top third. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, dashed border, below program logo. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos if side by side |
 | **Headline** | Every game has math. Here's yours. |

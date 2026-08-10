@@ -12,7 +12,11 @@ Templates and specifications for every Playbook touchpoint — digital, print, e
 | [video-audio/](video-audio/) | TV spots, radio scripts, digital pre-roll, hold messages |
 | [customer-service/](customer-service/) | Conversation scripts and staff FAQ for frontline teams |
 | [interactive/](interactive/) | Quiz framework for Game IQ and myth-busting quizzes |
-| [render/](render/) | **36 HTML/PNG template pairs** + build scripts (Puppeteer, logo/icon generators, PPTX deck builder) |
+| [render/](render/) | **75 template families / 290 localized renders** + responsive and production export profiles |
+
+## Which size to use
+
+Use the [production size matrix](production-size-matrix.md) before exporting. It separates fixed artboards (social, print, signage, displays) from responsive delivery surfaces (email and product UI), and lists the correct US, ISO, mobile, and platform variants.
 
 ## How it connects
 

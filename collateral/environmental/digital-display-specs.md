@@ -19,6 +19,8 @@ Content and scheduling specs for {{PROGRAM_NAME}} digital signage. Covers landsc
 
 ## Screen specs
 
+Render both orientations with `--profile=display`. Do not crop the landscape master into portrait or place 16:9 art on an ultrawide canvas without a new layout pass.
+
 ### Landscape (primary)
 
 | Property | Value |

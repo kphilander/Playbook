@@ -1,8 +1,10 @@
 import puppeteer from 'puppeteer';
 import { readFileSync, mkdirSync } from 'fs';
+
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { resolveBrandTokens } from '../../lib/resolve-placeholders.mjs';
+import { listProfiles, outputProfiles, resolveOutputProfile } from './output-profiles.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -44,13 +46,13 @@ const BLEED_SELECTORS = new Set([
 const OUT_DIR = process.env.RENDER_OUT_DIR || __dirname;
 
 const cards = [
-  // Social cards (1080x1080)
-  { html: 'card-1a-hot-streak.html', output: 'card-1a-hot-streak.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1b-due-for-win.html', output: 'card-1b-due-for-win.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1c-lucky-machine.html', output: 'card-1c-lucky-machine.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2a-house-edge.html', output: 'card-2a-house-edge.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2b-sports-betting.html', output: 'card-2b-sports-betting.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2c-bonus-wagering.html', output: 'card-2c-bonus-wagering.png', w: 1080, h: 1080, selector: '.social-card' },
+  // Social cards (1080x1350 primary feed canvas)
+  { html: 'card-1a-hot-streak.html', output: 'card-1a-hot-streak.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1b-due-for-win.html', output: 'card-1b-due-for-win.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1c-lucky-machine.html', output: 'card-1c-lucky-machine.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2a-house-edge.html', output: 'card-2a-house-edge.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2b-sports-betting.html', output: 'card-2b-sports-betting.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2c-bonus-wagering.html', output: 'card-2c-bonus-wagering.png', w: 1080, h: 1350, selector: '.social-card' },
   // Stories (1080x1920)
   { html: 'story-3a-hot-streak.html', output: 'story-3a-hot-streak.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'story-3b-house-edge.html', output: 'story-3b-house-edge.png', w: 1080, h: 1920, selector: '.story-card' },
@@ -61,7 +63,7 @@ const cards = [
   { html: 'poster-4c-game-iq.html', output: 'poster-4c-game-iq.png', w: 1848, h: 2448, selector: '.poster' },
   // Print collateral
   { html: 'rack-card-5a.html', output: 'rack-card-5a.png', w: 848, h: 1848, selector: '.rack-card' },
-  { html: 'table-tent-5b.html', output: 'table-tent-5b.png', w: 848, h: 1248, selector: '.table-tent' },
+  { html: 'table-tent-5b.html', output: 'table-tent-5b.png', w: 848, h: 2448, selector: '.table-tent' },
   { html: 'helpline-card-5c.html', output: 'helpline-card-5c.png', w: 748, h: 448, selector: '.helpline-card' },
   { html: 'display-landscape-6a.html', output: 'display-landscape-6a.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'display-portrait-6b.html', output: 'display-portrait-6b.png', w: 1080, h: 1920, selector: '.display-portrait' },
@@ -69,39 +71,39 @@ const cards = [
   { html: 'email-deposit-7b.html', output: 'email-deposit-7b.png', w: 600, h: 1050, selector: '.email' },
   { html: 'email-monthly-7c.html', output: 'email-monthly-7c.png', w: 600, h: 1200, selector: '.email' },
   { html: 'email-reactivation-7d.html', output: 'email-reactivation-7d.png', w: 600, h: 1050, selector: '.email' },
-  { html: 'brochure-trifold-8a.html', output: 'brochure-trifold-8a.png', w: 2448, h: 1748, selector: '.brochure-inside' },
-  { html: 'brochure-cover-8b.html', output: 'brochure-cover-8b.png', w: 2448, h: 1748, selector: '.brochure-outside' },
+  { html: 'brochure-trifold-8a.html', output: 'brochure-trifold-8a.png', w: 2248, h: 1748, selector: '.brochure-inside' },
+  { html: 'brochure-cover-8b.html', output: 'brochure-cover-8b.png', w: 2248, h: 1748, selector: '.brochure-outside' },
   { html: 'sign-entrance-9a.html', output: 'sign-entrance-9a.png', w: 948, h: 1248, selector: '.sign-entrance' },
-  { html: 'sign-atm-9b.html', output: 'sign-atm-9b.png', w: 748, h: 1048, selector: '.sign-atm' },
-  { html: 'sign-floor-9c.html', output: 'sign-floor-9c.png', w: 948, h: 748, selector: '.sign-floor' },
-  { html: 'sign-restroom-9d.html', output: 'sign-restroom-9d.png', w: 608, h: 448, selector: '.sign-restroom' },
-  { html: 'sign-staff-9e.html', output: 'sign-staff-9e.png', w: 948, h: 1248, selector: '.sign-staff' },
+  { html: 'sign-atm-9b.html', output: 'sign-atm-9b.png', w: 748, h: 954, selector: '.sign-atm' },
+  { html: 'sign-floor-9c.html', output: 'sign-floor-9c.png', w: 948, h: 1439, selector: '.sign-floor' },
+  { html: 'sign-restroom-9d.html', output: 'sign-restroom-9d.png', w: 598, h: 898, selector: '.sign-restroom' },
+  { html: 'sign-staff-9e.html', output: 'sign-staff-9e.png', w: 948, h: 1439, selector: '.sign-staff' },
   // Tier 2
   { html: 'support-page-10a.html', output: 'support-page-10a.png', w: 800, h: 1200, selector: '.support-page' },
   { html: 'self-exclusion-10b.html', output: 'self-exclusion-10b.png', w: 480, h: 740, selector: '.self-exclusion' },
   { html: 'session-summary-10c.html', output: 'session-summary-10c.png', w: 480, h: 420, selector: '.session-summary' },
   { html: 'limit-reached-10d.html', output: 'limit-reached-10d.png', w: 480, h: 220, selector: '.limit-reached' },
   { html: 'cooldown-10e.html', output: 'cooldown-10e.png', w: 480, h: 580, selector: '.cooldown-screen' },
-  { html: 'card-tier2-10f.html', output: 'card-tier2-10f.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-tier2-10f.html', output: 'card-tier2-10f.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'poster-tier2-10g.html', output: 'poster-tier2-10g.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-support-10h.html', output: 'email-support-10h.png', w: 600, h: 1100, selector: '.email' },
   // How to Play — social cards (1080x1080)
-  { html: 'htp-card-slots.html', output: 'htp-card-slots.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-blackjack.html', output: 'htp-card-blackjack.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-roulette.html', output: 'htp-card-roulette.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-sports.html', output: 'htp-card-sports.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-baccarat.html', output: 'htp-card-baccarat.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-video-poker.html', output: 'htp-card-video-poker.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-craps.html', output: 'htp-card-craps.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-bingo.html', output: 'htp-card-bingo.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-horse-racing.html', output: 'htp-card-horse-racing.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-lottery.html', output: 'htp-card-lottery.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-odds-comparison.html', output: 'htp-odds-comparison.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-slots.html', output: 'htp-card-slots.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-blackjack.html', output: 'htp-card-blackjack.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-roulette.html', output: 'htp-card-roulette.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-sports.html', output: 'htp-card-sports.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-baccarat.html', output: 'htp-card-baccarat.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-video-poker.html', output: 'htp-card-video-poker.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-craps.html', output: 'htp-card-craps.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-bingo.html', output: 'htp-card-bingo.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-horse-racing.html', output: 'htp-card-horse-racing.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-lottery.html', output: 'htp-card-lottery.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-odds-comparison.html', output: 'htp-odds-comparison.png', w: 1080, h: 1350, selector: '.social-card' },
   // Demographic-specific collateral
   { html: 'poster-4d-lottery-odds.html', output: 'poster-4d-lottery-odds.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'poster-4e-bingo-hall.html', output: 'poster-4e-bingo-hall.png', w: 1848, h: 2448, selector: '.poster' },
-  { html: 'card-11a-streamer-myth.html', output: 'card-11a-streamer-myth.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-11b-lucky-numbers.html', output: 'card-11b-lucky-numbers.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-11a-streamer-myth.html', output: 'card-11a-streamer-myth.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-11b-lucky-numbers.html', output: 'card-11b-lucky-numbers.png', w: 1080, h: 1350, selector: '.social-card' },
   // iGaming templates
   { html: 'mobile-onboarding-12a.html', output: 'mobile-onboarding-12a.png', w: 420, h: 812, selector: '.mobile-onboarding' },
   { html: 'deposit-interstitial-12b.html', output: 'deposit-interstitial-12b.png', w: 420, h: 812, selector: '.deposit-interstitial' },
@@ -112,21 +114,21 @@ const cards = [
   { html: 'betslip-rg-12g.html', output: 'betslip-rg-12g.png', w: 420, h: 320, selector: '.betslip-rg' },
   { html: 'web-popup-12h.html', output: 'web-popup-12h.png', w: 480, h: 560, selector: '.web-popup' },
   // Cognitive distortion / myth cards
-  { html: 'card-13a-its-due.html', output: 'card-13a-its-due.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13b-near-win.html', output: 'card-13b-near-win.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13c-picked-right.html', output: 'card-13c-picked-right.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13d-won-big.html', output: 'card-13d-won-big.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13e-lucky-shirt.html', output: 'card-13e-lucky-shirt.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13f-earned-win.html', output: 'card-13f-earned-win.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13a-its-due.html', output: 'card-13a-its-due.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13b-near-win.html', output: 'card-13b-near-win.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13c-picked-right.html', output: 'card-13c-picked-right.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13d-won-big.html', output: 'card-13d-won-big.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13e-lucky-shirt.html', output: 'card-13e-lucky-shirt.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13f-earned-win.html', output: 'card-13f-earned-win.png', w: 1080, h: 1350, selector: '.social-card' },
   // "Every game has math. Here's yours." cross-format showcase
-  { html: 'card-14a-every-game-blackjack.html', output: 'card-14a-every-game-blackjack.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-14a-every-game-blackjack.html', output: 'card-14a-every-game-blackjack.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-14b-every-game-roulette.html', output: 'story-14b-every-game-roulette.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-14c-every-game-slots.html', output: 'poster-14c-every-game-slots.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-14d-every-game.html', output: 'email-14d-every-game.png', w: 600, h: 1100, selector: '.email' },
   { html: 'display-14e-every-game.html', output: 'display-14e-every-game.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'mobile-14f-every-game.html', output: 'mobile-14f-every-game.png', w: 420, h: 812, selector: '.mobile-screen' },
   // Playoff basketball / sports betting education campaign
-  { html: 'card-15a-point-spread.html', output: 'card-15a-point-spread.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-15a-point-spread.html', output: 'card-15a-point-spread.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-15b-bet-costs.html', output: 'story-15b-bet-costs.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-15c-how-sportsbook-wins.html', output: 'poster-15c-how-sportsbook-wins.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'live-odds-overlay-15d.html', output: 'live-odds-overlay-15d.png', w: 420, h: 280, selector: '.live-overlay' },
@@ -162,65 +164,65 @@ const cards = [
   { html: 'card-17a-big-game.ar.html', output: 'card-17a-big-game.ar.png', w: 1080, h: 1080, selector: '.social-card' },
   { html: 'card-18a-fresh-start.ar.html', output: 'card-18a-fresh-start.ar.png', w: 1080, h: 1080, selector: '.social-card' },
   // i18n Phase A — Japanese (Japan) variants
-  { html: 'card-13a-its-due.ja.html', output: 'card-13a-its-due.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13b-near-win.ja.html', output: 'card-13b-near-win.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13c-picked-right.ja.html', output: 'card-13c-picked-right.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13d-won-big.ja.html', output: 'card-13d-won-big.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13e-lucky-shirt.ja.html', output: 'card-13e-lucky-shirt.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13f-earned-win.ja.html', output: 'card-13f-earned-win.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-14a-every-game-blackjack.ja.html', output: 'card-14a-every-game-blackjack.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13a-its-due.ja.html', output: 'card-13a-its-due.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13b-near-win.ja.html', output: 'card-13b-near-win.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13c-picked-right.ja.html', output: 'card-13c-picked-right.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13d-won-big.ja.html', output: 'card-13d-won-big.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13e-lucky-shirt.ja.html', output: 'card-13e-lucky-shirt.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13f-earned-win.ja.html', output: 'card-13f-earned-win.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-14a-every-game-blackjack.ja.html', output: 'card-14a-every-game-blackjack.ja.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-14b-every-game-roulette.ja.html', output: 'story-14b-every-game-roulette.ja.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-14c-every-game-slots.ja.html', output: 'poster-14c-every-game-slots.ja.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-14d-every-game.ja.html', output: 'email-14d-every-game.ja.png', w: 600, h: 1100, selector: '.email' },
   { html: 'display-14e-every-game.ja.html', output: 'display-14e-every-game.ja.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'mobile-14f-every-game.ja.html', output: 'mobile-14f-every-game.ja.png', w: 420, h: 812, selector: '.mobile-screen' },
-  { html: 'card-15a-point-spread.ja.html', output: 'card-15a-point-spread.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-15a-point-spread.ja.html', output: 'card-15a-point-spread.ja.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-15b-bet-costs.ja.html', output: 'story-15b-bet-costs.ja.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-15c-how-sportsbook-wins.ja.html', output: 'poster-15c-how-sportsbook-wins.ja.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'live-odds-overlay-15d.ja.html', output: 'live-odds-overlay-15d.ja.png', w: 420, h: 280, selector: '.live-overlay' },
   // i18n Phase A — Simplified Chinese (Macau) variants
-  { html: 'card-13a-its-due.zh-CN.html', output: 'card-13a-its-due.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13b-near-win.zh-CN.html', output: 'card-13b-near-win.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13c-picked-right.zh-CN.html', output: 'card-13c-picked-right.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13d-won-big.zh-CN.html', output: 'card-13d-won-big.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13e-lucky-shirt.zh-CN.html', output: 'card-13e-lucky-shirt.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13f-earned-win.zh-CN.html', output: 'card-13f-earned-win.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-14a-every-game-blackjack.zh-CN.html', output: 'card-14a-every-game-blackjack.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13a-its-due.zh-CN.html', output: 'card-13a-its-due.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13b-near-win.zh-CN.html', output: 'card-13b-near-win.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13c-picked-right.zh-CN.html', output: 'card-13c-picked-right.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13d-won-big.zh-CN.html', output: 'card-13d-won-big.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13e-lucky-shirt.zh-CN.html', output: 'card-13e-lucky-shirt.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13f-earned-win.zh-CN.html', output: 'card-13f-earned-win.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-14a-every-game-blackjack.zh-CN.html', output: 'card-14a-every-game-blackjack.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-14b-every-game-roulette.zh-CN.html', output: 'story-14b-every-game-roulette.zh-CN.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-14c-every-game-slots.zh-CN.html', output: 'poster-14c-every-game-slots.zh-CN.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-14d-every-game.zh-CN.html', output: 'email-14d-every-game.zh-CN.png', w: 600, h: 1100, selector: '.email' },
   { html: 'display-14e-every-game.zh-CN.html', output: 'display-14e-every-game.zh-CN.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'mobile-14f-every-game.zh-CN.html', output: 'mobile-14f-every-game.zh-CN.png', w: 420, h: 812, selector: '.mobile-screen' },
-  { html: 'card-15a-point-spread.zh-CN.html', output: 'card-15a-point-spread.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-15a-point-spread.zh-CN.html', output: 'card-15a-point-spread.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-15b-bet-costs.zh-CN.html', output: 'story-15b-bet-costs.zh-CN.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-15c-how-sportsbook-wins.zh-CN.html', output: 'poster-15c-how-sportsbook-wins.zh-CN.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'live-odds-overlay-15d.zh-CN.html', output: 'live-odds-overlay-15d.zh-CN.png', w: 420, h: 280, selector: '.live-overlay' },
   // i18n Phase A — Arabic (UAE) variants with RTL
-  { html: 'card-13a-its-due.ar.html', output: 'card-13a-its-due.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13b-near-win.ar.html', output: 'card-13b-near-win.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13c-picked-right.ar.html', output: 'card-13c-picked-right.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13d-won-big.ar.html', output: 'card-13d-won-big.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13e-lucky-shirt.ar.html', output: 'card-13e-lucky-shirt.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-13f-earned-win.ar.html', output: 'card-13f-earned-win.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-14a-every-game-blackjack.ar.html', output: 'card-14a-every-game-blackjack.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-13a-its-due.ar.html', output: 'card-13a-its-due.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13b-near-win.ar.html', output: 'card-13b-near-win.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13c-picked-right.ar.html', output: 'card-13c-picked-right.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13d-won-big.ar.html', output: 'card-13d-won-big.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13e-lucky-shirt.ar.html', output: 'card-13e-lucky-shirt.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-13f-earned-win.ar.html', output: 'card-13f-earned-win.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-14a-every-game-blackjack.ar.html', output: 'card-14a-every-game-blackjack.ar.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-14b-every-game-roulette.ar.html', output: 'story-14b-every-game-roulette.ar.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-14c-every-game-slots.ar.html', output: 'poster-14c-every-game-slots.ar.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-14d-every-game.ar.html', output: 'email-14d-every-game.ar.png', w: 600, h: 1100, selector: '.email' },
   { html: 'display-14e-every-game.ar.html', output: 'display-14e-every-game.ar.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'mobile-14f-every-game.ar.html', output: 'mobile-14f-every-game.ar.png', w: 420, h: 812, selector: '.mobile-screen' },
-  { html: 'card-15a-point-spread.ar.html', output: 'card-15a-point-spread.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-15a-point-spread.ar.html', output: 'card-15a-point-spread.ar.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-15b-bet-costs.ar.html', output: 'story-15b-bet-costs.ar.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'poster-15c-how-sportsbook-wins.ar.html', output: 'poster-15c-how-sportsbook-wins.ar.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'live-odds-overlay-15d.ar.html', output: 'live-odds-overlay-15d.ar.png', w: 420, h: 280, selector: '.live-overlay' },
   // i18n Phase B — Japanese
-  { html: 'card-1a-hot-streak.ja.html', output: 'card-1a-hot-streak.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1b-due-for-win.ja.html', output: 'card-1b-due-for-win.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1c-lucky-machine.ja.html', output: 'card-1c-lucky-machine.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2a-house-edge.ja.html', output: 'card-2a-house-edge.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2b-sports-betting.ja.html', output: 'card-2b-sports-betting.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2c-bonus-wagering.ja.html', output: 'card-2c-bonus-wagering.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-11a-streamer-myth.ja.html', output: 'card-11a-streamer-myth.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-11b-lucky-numbers.ja.html', output: 'card-11b-lucky-numbers.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-1a-hot-streak.ja.html', output: 'card-1a-hot-streak.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1b-due-for-win.ja.html', output: 'card-1b-due-for-win.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1c-lucky-machine.ja.html', output: 'card-1c-lucky-machine.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2a-house-edge.ja.html', output: 'card-2a-house-edge.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2b-sports-betting.ja.html', output: 'card-2b-sports-betting.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2c-bonus-wagering.ja.html', output: 'card-2c-bonus-wagering.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-11a-streamer-myth.ja.html', output: 'card-11a-streamer-myth.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-11b-lucky-numbers.ja.html', output: 'card-11b-lucky-numbers.ja.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-3a-hot-streak.ja.html', output: 'story-3a-hot-streak.ja.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'story-3b-house-edge.ja.html', output: 'story-3b-house-edge.ja.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'story-3c-sports-betting.ja.html', output: 'story-3c-sports-betting.ja.png', w: 1080, h: 1920, selector: '.story-card' },
@@ -230,7 +232,7 @@ const cards = [
   { html: 'poster-4d-lottery-odds.ja.html', output: 'poster-4d-lottery-odds.ja.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'poster-4e-bingo-hall.ja.html', output: 'poster-4e-bingo-hall.ja.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'rack-card-5a.ja.html', output: 'rack-card-5a.ja.png', w: 848, h: 1848, selector: '.rack-card' },
-  { html: 'table-tent-5b.ja.html', output: 'table-tent-5b.ja.png', w: 848, h: 1248, selector: '.table-tent' },
+  { html: 'table-tent-5b.ja.html', output: 'table-tent-5b.ja.png', w: 848, h: 2448, selector: '.table-tent' },
   { html: 'helpline-card-5c.ja.html', output: 'helpline-card-5c.ja.png', w: 748, h: 448, selector: '.helpline-card' },
   { html: 'display-landscape-6a.ja.html', output: 'display-landscape-6a.ja.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'display-portrait-6b.ja.html', output: 'display-portrait-6b.ja.png', w: 1080, h: 1920, selector: '.display-portrait' },
@@ -238,32 +240,32 @@ const cards = [
   { html: 'email-deposit-7b.ja.html', output: 'email-deposit-7b.ja.png', w: 600, h: 1050, selector: '.email' },
   { html: 'email-monthly-7c.ja.html', output: 'email-monthly-7c.ja.png', w: 600, h: 1200, selector: '.email' },
   { html: 'email-reactivation-7d.ja.html', output: 'email-reactivation-7d.ja.png', w: 600, h: 1050, selector: '.email' },
-  { html: 'brochure-trifold-8a.ja.html', output: 'brochure-trifold-8a.ja.png', w: 2448, h: 1748, selector: '.brochure-inside' },
-  { html: 'brochure-cover-8b.ja.html', output: 'brochure-cover-8b.ja.png', w: 2448, h: 1748, selector: '.brochure-outside' },
+  { html: 'brochure-trifold-8a.ja.html', output: 'brochure-trifold-8a.ja.png', w: 2248, h: 1748, selector: '.brochure-inside' },
+  { html: 'brochure-cover-8b.ja.html', output: 'brochure-cover-8b.ja.png', w: 2248, h: 1748, selector: '.brochure-outside' },
   { html: 'sign-entrance-9a.ja.html', output: 'sign-entrance-9a.ja.png', w: 948, h: 1248, selector: '.sign-entrance' },
-  { html: 'sign-atm-9b.ja.html', output: 'sign-atm-9b.ja.png', w: 748, h: 1048, selector: '.sign-atm' },
-  { html: 'sign-floor-9c.ja.html', output: 'sign-floor-9c.ja.png', w: 948, h: 748, selector: '.sign-floor' },
-  { html: 'sign-restroom-9d.ja.html', output: 'sign-restroom-9d.ja.png', w: 608, h: 448, selector: '.sign-restroom' },
-  { html: 'sign-staff-9e.ja.html', output: 'sign-staff-9e.ja.png', w: 948, h: 1248, selector: '.sign-staff' },
+  { html: 'sign-atm-9b.ja.html', output: 'sign-atm-9b.ja.png', w: 748, h: 954, selector: '.sign-atm' },
+  { html: 'sign-floor-9c.ja.html', output: 'sign-floor-9c.ja.png', w: 948, h: 1439, selector: '.sign-floor' },
+  { html: 'sign-restroom-9d.ja.html', output: 'sign-restroom-9d.ja.png', w: 598, h: 898, selector: '.sign-restroom' },
+  { html: 'sign-staff-9e.ja.html', output: 'sign-staff-9e.ja.png', w: 948, h: 1439, selector: '.sign-staff' },
   { html: 'support-page-10a.ja.html', output: 'support-page-10a.ja.png', w: 800, h: 1200, selector: '.support-page' },
   { html: 'self-exclusion-10b.ja.html', output: 'self-exclusion-10b.ja.png', w: 480, h: 740, selector: '.self-exclusion' },
   { html: 'session-summary-10c.ja.html', output: 'session-summary-10c.ja.png', w: 480, h: 420, selector: '.session-summary' },
   { html: 'limit-reached-10d.ja.html', output: 'limit-reached-10d.ja.png', w: 480, h: 220, selector: '.limit-reached' },
   { html: 'cooldown-10e.ja.html', output: 'cooldown-10e.ja.png', w: 480, h: 580, selector: '.cooldown-screen' },
-  { html: 'card-tier2-10f.ja.html', output: 'card-tier2-10f.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-tier2-10f.ja.html', output: 'card-tier2-10f.ja.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'poster-tier2-10g.ja.html', output: 'poster-tier2-10g.ja.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-support-10h.ja.html', output: 'email-support-10h.ja.png', w: 600, h: 1100, selector: '.email' },
-  { html: 'htp-card-slots.ja.html', output: 'htp-card-slots.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-blackjack.ja.html', output: 'htp-card-blackjack.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-roulette.ja.html', output: 'htp-card-roulette.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-sports.ja.html', output: 'htp-card-sports.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-baccarat.ja.html', output: 'htp-card-baccarat.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-video-poker.ja.html', output: 'htp-card-video-poker.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-craps.ja.html', output: 'htp-card-craps.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-bingo.ja.html', output: 'htp-card-bingo.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-horse-racing.ja.html', output: 'htp-card-horse-racing.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-lottery.ja.html', output: 'htp-card-lottery.ja.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-odds-comparison.ja.html', output: 'htp-odds-comparison.ja.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-slots.ja.html', output: 'htp-card-slots.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-blackjack.ja.html', output: 'htp-card-blackjack.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-roulette.ja.html', output: 'htp-card-roulette.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-sports.ja.html', output: 'htp-card-sports.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-baccarat.ja.html', output: 'htp-card-baccarat.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-video-poker.ja.html', output: 'htp-card-video-poker.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-craps.ja.html', output: 'htp-card-craps.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-bingo.ja.html', output: 'htp-card-bingo.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-horse-racing.ja.html', output: 'htp-card-horse-racing.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-lottery.ja.html', output: 'htp-card-lottery.ja.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-odds-comparison.ja.html', output: 'htp-odds-comparison.ja.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'mobile-onboarding-12a.ja.html', output: 'mobile-onboarding-12a.ja.png', w: 420, h: 812, selector: '.mobile-onboarding' },
   { html: 'deposit-interstitial-12b.ja.html', output: 'deposit-interstitial-12b.ja.png', w: 420, h: 812, selector: '.deposit-interstitial' },
   { html: 'in-play-overlay-12c.ja.html', output: 'in-play-overlay-12c.ja.png', w: 420, h: 280, selector: '.in-play-overlay' },
@@ -273,13 +275,13 @@ const cards = [
   { html: 'betslip-rg-12g.ja.html', output: 'betslip-rg-12g.ja.png', w: 420, h: 320, selector: '.betslip-rg' },
   { html: 'web-popup-12h.ja.html', output: 'web-popup-12h.ja.png', w: 480, h: 560, selector: '.web-popup' },
   // i18n Phase B — Simplified Chinese
-  { html: 'card-1a-hot-streak.zh-CN.html', output: 'card-1a-hot-streak.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1b-due-for-win.zh-CN.html', output: 'card-1b-due-for-win.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1c-lucky-machine.zh-CN.html', output: 'card-1c-lucky-machine.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2a-house-edge.zh-CN.html', output: 'card-2a-house-edge.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2b-sports-betting.zh-CN.html', output: 'card-2b-sports-betting.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2c-bonus-wagering.zh-CN.html', output: 'card-2c-bonus-wagering.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-11b-lucky-numbers.zh-CN.html', output: 'card-11b-lucky-numbers.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-1a-hot-streak.zh-CN.html', output: 'card-1a-hot-streak.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1b-due-for-win.zh-CN.html', output: 'card-1b-due-for-win.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1c-lucky-machine.zh-CN.html', output: 'card-1c-lucky-machine.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2a-house-edge.zh-CN.html', output: 'card-2a-house-edge.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2b-sports-betting.zh-CN.html', output: 'card-2b-sports-betting.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2c-bonus-wagering.zh-CN.html', output: 'card-2c-bonus-wagering.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-11b-lucky-numbers.zh-CN.html', output: 'card-11b-lucky-numbers.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-3a-hot-streak.zh-CN.html', output: 'story-3a-hot-streak.zh-CN.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'story-3b-house-edge.zh-CN.html', output: 'story-3b-house-edge.zh-CN.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'story-3c-sports-betting.zh-CN.html', output: 'story-3c-sports-betting.zh-CN.png', w: 1080, h: 1920, selector: '.story-card' },
@@ -288,7 +290,7 @@ const cards = [
   { html: 'poster-4c-game-iq.zh-CN.html', output: 'poster-4c-game-iq.zh-CN.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'poster-4d-lottery-odds.zh-CN.html', output: 'poster-4d-lottery-odds.zh-CN.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'rack-card-5a.zh-CN.html', output: 'rack-card-5a.zh-CN.png', w: 848, h: 1848, selector: '.rack-card' },
-  { html: 'table-tent-5b.zh-CN.html', output: 'table-tent-5b.zh-CN.png', w: 848, h: 1248, selector: '.table-tent' },
+  { html: 'table-tent-5b.zh-CN.html', output: 'table-tent-5b.zh-CN.png', w: 848, h: 2448, selector: '.table-tent' },
   { html: 'helpline-card-5c.zh-CN.html', output: 'helpline-card-5c.zh-CN.png', w: 748, h: 448, selector: '.helpline-card' },
   { html: 'display-landscape-6a.zh-CN.html', output: 'display-landscape-6a.zh-CN.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'display-portrait-6b.zh-CN.html', output: 'display-portrait-6b.zh-CN.png', w: 1080, h: 1920, selector: '.display-portrait' },
@@ -296,29 +298,29 @@ const cards = [
   { html: 'email-deposit-7b.zh-CN.html', output: 'email-deposit-7b.zh-CN.png', w: 600, h: 1050, selector: '.email' },
   { html: 'email-monthly-7c.zh-CN.html', output: 'email-monthly-7c.zh-CN.png', w: 600, h: 1200, selector: '.email' },
   { html: 'email-reactivation-7d.zh-CN.html', output: 'email-reactivation-7d.zh-CN.png', w: 600, h: 1050, selector: '.email' },
-  { html: 'brochure-trifold-8a.zh-CN.html', output: 'brochure-trifold-8a.zh-CN.png', w: 2448, h: 1748, selector: '.brochure-inside' },
-  { html: 'brochure-cover-8b.zh-CN.html', output: 'brochure-cover-8b.zh-CN.png', w: 2448, h: 1748, selector: '.brochure-outside' },
+  { html: 'brochure-trifold-8a.zh-CN.html', output: 'brochure-trifold-8a.zh-CN.png', w: 2248, h: 1748, selector: '.brochure-inside' },
+  { html: 'brochure-cover-8b.zh-CN.html', output: 'brochure-cover-8b.zh-CN.png', w: 2248, h: 1748, selector: '.brochure-outside' },
   { html: 'sign-entrance-9a.zh-CN.html', output: 'sign-entrance-9a.zh-CN.png', w: 948, h: 1248, selector: '.sign-entrance' },
-  { html: 'sign-atm-9b.zh-CN.html', output: 'sign-atm-9b.zh-CN.png', w: 748, h: 1048, selector: '.sign-atm' },
-  { html: 'sign-floor-9c.zh-CN.html', output: 'sign-floor-9c.zh-CN.png', w: 948, h: 748, selector: '.sign-floor' },
-  { html: 'sign-restroom-9d.zh-CN.html', output: 'sign-restroom-9d.zh-CN.png', w: 608, h: 448, selector: '.sign-restroom' },
-  { html: 'sign-staff-9e.zh-CN.html', output: 'sign-staff-9e.zh-CN.png', w: 948, h: 1248, selector: '.sign-staff' },
+  { html: 'sign-atm-9b.zh-CN.html', output: 'sign-atm-9b.zh-CN.png', w: 748, h: 954, selector: '.sign-atm' },
+  { html: 'sign-floor-9c.zh-CN.html', output: 'sign-floor-9c.zh-CN.png', w: 948, h: 1439, selector: '.sign-floor' },
+  { html: 'sign-restroom-9d.zh-CN.html', output: 'sign-restroom-9d.zh-CN.png', w: 598, h: 898, selector: '.sign-restroom' },
+  { html: 'sign-staff-9e.zh-CN.html', output: 'sign-staff-9e.zh-CN.png', w: 948, h: 1439, selector: '.sign-staff' },
   { html: 'support-page-10a.zh-CN.html', output: 'support-page-10a.zh-CN.png', w: 800, h: 1200, selector: '.support-page' },
   { html: 'self-exclusion-10b.zh-CN.html', output: 'self-exclusion-10b.zh-CN.png', w: 480, h: 740, selector: '.self-exclusion' },
   { html: 'session-summary-10c.zh-CN.html', output: 'session-summary-10c.zh-CN.png', w: 480, h: 420, selector: '.session-summary' },
   { html: 'limit-reached-10d.zh-CN.html', output: 'limit-reached-10d.zh-CN.png', w: 480, h: 220, selector: '.limit-reached' },
   { html: 'cooldown-10e.zh-CN.html', output: 'cooldown-10e.zh-CN.png', w: 480, h: 580, selector: '.cooldown-screen' },
-  { html: 'card-tier2-10f.zh-CN.html', output: 'card-tier2-10f.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-tier2-10f.zh-CN.html', output: 'card-tier2-10f.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'poster-tier2-10g.zh-CN.html', output: 'poster-tier2-10g.zh-CN.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-support-10h.zh-CN.html', output: 'email-support-10h.zh-CN.png', w: 600, h: 1100, selector: '.email' },
-  { html: 'htp-card-slots.zh-CN.html', output: 'htp-card-slots.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-blackjack.zh-CN.html', output: 'htp-card-blackjack.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-roulette.zh-CN.html', output: 'htp-card-roulette.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-sports.zh-CN.html', output: 'htp-card-sports.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-baccarat.zh-CN.html', output: 'htp-card-baccarat.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-horse-racing.zh-CN.html', output: 'htp-card-horse-racing.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-lottery.zh-CN.html', output: 'htp-card-lottery.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-odds-comparison.zh-CN.html', output: 'htp-odds-comparison.zh-CN.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-slots.zh-CN.html', output: 'htp-card-slots.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-blackjack.zh-CN.html', output: 'htp-card-blackjack.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-roulette.zh-CN.html', output: 'htp-card-roulette.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-sports.zh-CN.html', output: 'htp-card-sports.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-baccarat.zh-CN.html', output: 'htp-card-baccarat.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-horse-racing.zh-CN.html', output: 'htp-card-horse-racing.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-lottery.zh-CN.html', output: 'htp-card-lottery.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-odds-comparison.zh-CN.html', output: 'htp-odds-comparison.zh-CN.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'mobile-onboarding-12a.zh-CN.html', output: 'mobile-onboarding-12a.zh-CN.png', w: 420, h: 812, selector: '.mobile-onboarding' },
   { html: 'deposit-interstitial-12b.zh-CN.html', output: 'deposit-interstitial-12b.zh-CN.png', w: 420, h: 812, selector: '.deposit-interstitial' },
   { html: 'in-play-overlay-12c.zh-CN.html', output: 'in-play-overlay-12c.zh-CN.png', w: 420, h: 280, selector: '.in-play-overlay' },
@@ -328,13 +330,13 @@ const cards = [
   { html: 'betslip-rg-12g.zh-CN.html', output: 'betslip-rg-12g.zh-CN.png', w: 420, h: 320, selector: '.betslip-rg' },
   { html: 'web-popup-12h.zh-CN.html', output: 'web-popup-12h.zh-CN.png', w: 480, h: 560, selector: '.web-popup' },
   // i18n Phase B — Arabic
-  { html: 'card-1a-hot-streak.ar.html', output: 'card-1a-hot-streak.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1b-due-for-win.ar.html', output: 'card-1b-due-for-win.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-1c-lucky-machine.ar.html', output: 'card-1c-lucky-machine.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2a-house-edge.ar.html', output: 'card-2a-house-edge.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2b-sports-betting.ar.html', output: 'card-2b-sports-betting.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-2c-bonus-wagering.ar.html', output: 'card-2c-bonus-wagering.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'card-11b-lucky-numbers.ar.html', output: 'card-11b-lucky-numbers.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-1a-hot-streak.ar.html', output: 'card-1a-hot-streak.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1b-due-for-win.ar.html', output: 'card-1b-due-for-win.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-1c-lucky-machine.ar.html', output: 'card-1c-lucky-machine.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2a-house-edge.ar.html', output: 'card-2a-house-edge.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2b-sports-betting.ar.html', output: 'card-2b-sports-betting.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-2c-bonus-wagering.ar.html', output: 'card-2c-bonus-wagering.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-11b-lucky-numbers.ar.html', output: 'card-11b-lucky-numbers.ar.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'story-3a-hot-streak.ar.html', output: 'story-3a-hot-streak.ar.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'story-3b-house-edge.ar.html', output: 'story-3b-house-edge.ar.png', w: 1080, h: 1920, selector: '.story-card' },
   { html: 'story-3c-sports-betting.ar.html', output: 'story-3c-sports-betting.ar.png', w: 1080, h: 1920, selector: '.story-card' },
@@ -343,7 +345,7 @@ const cards = [
   { html: 'poster-4c-game-iq.ar.html', output: 'poster-4c-game-iq.ar.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'poster-4d-lottery-odds.ar.html', output: 'poster-4d-lottery-odds.ar.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'rack-card-5a.ar.html', output: 'rack-card-5a.ar.png', w: 848, h: 1848, selector: '.rack-card' },
-  { html: 'table-tent-5b.ar.html', output: 'table-tent-5b.ar.png', w: 848, h: 1248, selector: '.table-tent' },
+  { html: 'table-tent-5b.ar.html', output: 'table-tent-5b.ar.png', w: 848, h: 2448, selector: '.table-tent' },
   { html: 'helpline-card-5c.ar.html', output: 'helpline-card-5c.ar.png', w: 748, h: 448, selector: '.helpline-card' },
   { html: 'display-landscape-6a.ar.html', output: 'display-landscape-6a.ar.png', w: 1920, h: 1080, selector: '.display-screen' },
   { html: 'display-portrait-6b.ar.html', output: 'display-portrait-6b.ar.png', w: 1080, h: 1920, selector: '.display-portrait' },
@@ -351,29 +353,29 @@ const cards = [
   { html: 'email-deposit-7b.ar.html', output: 'email-deposit-7b.ar.png', w: 600, h: 1050, selector: '.email' },
   { html: 'email-monthly-7c.ar.html', output: 'email-monthly-7c.ar.png', w: 600, h: 1200, selector: '.email' },
   { html: 'email-reactivation-7d.ar.html', output: 'email-reactivation-7d.ar.png', w: 600, h: 1050, selector: '.email' },
-  { html: 'brochure-trifold-8a.ar.html', output: 'brochure-trifold-8a.ar.png', w: 2448, h: 1748, selector: '.brochure-inside' },
-  { html: 'brochure-cover-8b.ar.html', output: 'brochure-cover-8b.ar.png', w: 2448, h: 1748, selector: '.brochure-outside' },
+  { html: 'brochure-trifold-8a.ar.html', output: 'brochure-trifold-8a.ar.png', w: 2248, h: 1748, selector: '.brochure-inside' },
+  { html: 'brochure-cover-8b.ar.html', output: 'brochure-cover-8b.ar.png', w: 2248, h: 1748, selector: '.brochure-outside' },
   { html: 'sign-entrance-9a.ar.html', output: 'sign-entrance-9a.ar.png', w: 948, h: 1248, selector: '.sign-entrance' },
-  { html: 'sign-atm-9b.ar.html', output: 'sign-atm-9b.ar.png', w: 748, h: 1048, selector: '.sign-atm' },
-  { html: 'sign-floor-9c.ar.html', output: 'sign-floor-9c.ar.png', w: 948, h: 748, selector: '.sign-floor' },
-  { html: 'sign-restroom-9d.ar.html', output: 'sign-restroom-9d.ar.png', w: 608, h: 448, selector: '.sign-restroom' },
-  { html: 'sign-staff-9e.ar.html', output: 'sign-staff-9e.ar.png', w: 948, h: 1248, selector: '.sign-staff' },
+  { html: 'sign-atm-9b.ar.html', output: 'sign-atm-9b.ar.png', w: 748, h: 954, selector: '.sign-atm' },
+  { html: 'sign-floor-9c.ar.html', output: 'sign-floor-9c.ar.png', w: 948, h: 1439, selector: '.sign-floor' },
+  { html: 'sign-restroom-9d.ar.html', output: 'sign-restroom-9d.ar.png', w: 598, h: 898, selector: '.sign-restroom' },
+  { html: 'sign-staff-9e.ar.html', output: 'sign-staff-9e.ar.png', w: 948, h: 1439, selector: '.sign-staff' },
   { html: 'support-page-10a.ar.html', output: 'support-page-10a.ar.png', w: 800, h: 1200, selector: '.support-page' },
   { html: 'self-exclusion-10b.ar.html', output: 'self-exclusion-10b.ar.png', w: 480, h: 740, selector: '.self-exclusion' },
   { html: 'session-summary-10c.ar.html', output: 'session-summary-10c.ar.png', w: 480, h: 420, selector: '.session-summary' },
   { html: 'limit-reached-10d.ar.html', output: 'limit-reached-10d.ar.png', w: 480, h: 220, selector: '.limit-reached' },
   { html: 'cooldown-10e.ar.html', output: 'cooldown-10e.ar.png', w: 480, h: 580, selector: '.cooldown-screen' },
-  { html: 'card-tier2-10f.ar.html', output: 'card-tier2-10f.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'card-tier2-10f.ar.html', output: 'card-tier2-10f.ar.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'poster-tier2-10g.ar.html', output: 'poster-tier2-10g.ar.png', w: 1848, h: 2448, selector: '.poster' },
   { html: 'email-support-10h.ar.html', output: 'email-support-10h.ar.png', w: 600, h: 1100, selector: '.email' },
-  { html: 'htp-card-slots.ar.html', output: 'htp-card-slots.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-blackjack.ar.html', output: 'htp-card-blackjack.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-roulette.ar.html', output: 'htp-card-roulette.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-sports.ar.html', output: 'htp-card-sports.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-baccarat.ar.html', output: 'htp-card-baccarat.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-horse-racing.ar.html', output: 'htp-card-horse-racing.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-card-lottery.ar.html', output: 'htp-card-lottery.ar.png', w: 1080, h: 1080, selector: '.social-card' },
-  { html: 'htp-odds-comparison.ar.html', output: 'htp-odds-comparison.ar.png', w: 1080, h: 1080, selector: '.social-card' },
+  { html: 'htp-card-slots.ar.html', output: 'htp-card-slots.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-blackjack.ar.html', output: 'htp-card-blackjack.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-roulette.ar.html', output: 'htp-card-roulette.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-sports.ar.html', output: 'htp-card-sports.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-baccarat.ar.html', output: 'htp-card-baccarat.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-horse-racing.ar.html', output: 'htp-card-horse-racing.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-card-lottery.ar.html', output: 'htp-card-lottery.ar.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'htp-odds-comparison.ar.html', output: 'htp-odds-comparison.ar.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'mobile-onboarding-12a.ar.html', output: 'mobile-onboarding-12a.ar.png', w: 420, h: 812, selector: '.mobile-onboarding' },
   { html: 'deposit-interstitial-12b.ar.html', output: 'deposit-interstitial-12b.ar.png', w: 420, h: 812, selector: '.deposit-interstitial' },
   { html: 'in-play-overlay-12c.ar.html', output: 'in-play-overlay-12c.ar.png', w: 420, h: 280, selector: '.in-play-overlay' },
@@ -384,11 +386,91 @@ const cards = [
   { html: 'web-popup-12h.ar.html', output: 'web-popup-12h.ar.png', w: 480, h: 560, selector: '.web-popup' },
 ];
 
-// Filter to only render files passed as CLI args, or all if none given
-const filter = process.argv.slice(2);
-const toRender = filter.length > 0
-  ? cards.filter(c => filter.some(f => c.html.includes(f) || c.output.includes(f)))
-  : cards;
+const args = process.argv.slice(2);
+const profileArg = args.find(arg => arg.startsWith('--profile='));
+const profileName = profileArg?.split('=')[1] || 'preview';
+const localeArg = args.find(arg => arg.startsWith('--locale='));
+const localeName = localeArg?.split('=')[1] || 'all';
+const checkOnly = args.includes('--check');
+const filters = args.filter(arg => !arg.startsWith('--'));
+
+const readabilityFloors = new Map([
+  ['.social-card', 42],
+  ['.story-card', 42],
+  ['.poster', 28],
+  ['.display-screen', 32],
+  ['.display-portrait', 32],
+  ['.rack-card', 28],
+  ['.table-tent', 34],
+  ['.helpline-card', 28],
+  ['.brochure-inside', 28],
+  ['.brochure-outside', 28],
+  ['.sign-entrance', 28],
+  ['.sign-atm', 22],
+  ['.sign-floor', 28],
+  ['.sign-restroom', 20],
+  ['.sign-staff', 20],
+  ['.email', 16],
+  ['.support-page', 16],
+  ['.self-exclusion', 16],
+  ['.cooldown-screen', 16],
+  ['.web-popup', 16],
+  ['.session-summary', 16],
+  ['.limit-reached', 16],
+  ['.in-play-overlay', 16],
+  ['.betslip-rg', 16],
+  ['.live-overlay', 16],
+  ['.push-notification', 16],
+  ['.mobile-onboarding', 16],
+  ['.deposit-interstitial', 16],
+  ['.withdrawal-confirm', 16],
+  ['.mobile-screen', 16],
+  ['.app-banner', 16],
+]);
+
+if (args.includes('--list-profiles')) {
+  for (const profile of listProfiles()) {
+    console.log(`${profile.name.padEnd(24)} ${profile.description}`);
+  }
+  process.exit(0);
+}
+
+if (!outputProfiles[profileName]) {
+  console.error(`Unknown output profile: ${profileName}`);
+  console.error('Run with --list-profiles to see supported profiles.');
+  process.exit(1);
+}
+
+const localeSuffixes = ['ja', 'zh-CN', 'ar'];
+if (localeName !== 'all' && localeName !== 'en' && !localeSuffixes.includes(localeName)) {
+  console.error(`Unknown locale: ${localeName}. Use en, ja, zh-CN, ar, or all.`);
+  process.exit(1);
+}
+
+const matchesLocale = (filename) => {
+  if (localeName === 'all') return true;
+  if (localeName === 'en') return !localeSuffixes.some(locale => filename.endsWith(`.${locale}.html`));
+  return filename.endsWith(`.${localeName}.html`);
+};
+
+const jurisdictionForTemplate = (filename) => {
+  if (filename.endsWith('.ja.html')) return 'japan';
+  if (filename.endsWith('.zh-CN.html')) return 'macau';
+  if (filename.endsWith('.ar.html')) return 'united-arab-emirates';
+  return 'united-states';
+};
+
+const toRender = cards
+  .map(card => ({ card, target: resolveOutputProfile(profileName, card) }))
+  .filter(({ card, target }) => target && matchesLocale(card.html) && (
+    filters.length === 0
+    || filters.some(filter => card.html.includes(filter) || card.output.includes(filter))
+  ));
+
+if (toRender.length === 0) {
+  console.error(`No templates match profile "${profileName}", locale "${localeName}"${filters.length ? `, and filter(s): ${filters.join(', ')}` : ''}.`);
+  process.exit(1);
+}
 
 const settle = ms => new Promise(r => setTimeout(r, ms));
 
@@ -457,19 +539,261 @@ async function renderCard(browser, card) {
 }
 
 async function render() {
-  if (OUT_DIR !== __dirname) mkdirSync(OUT_DIR, { recursive: true });
+  const failures = [];
+  const outputDirectory = profileName === 'preview'
+    ? __dirname
+    : join(__dirname, 'production', profileName);
+
+  if (!checkOnly) mkdirSync(outputDirectory, { recursive: true });
+
+
   const browser = await puppeteer.launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
   try {
-    for (const card of toRender) {
-      await renderCard(browser, card);
+    for (const { card, target } of toRender) {
+      const page = await browser.newPage();
+      try {
+        const viewportWidth = Math.ceil(target.width + (target.bleed * 2));
+        const viewportHeight = Math.ceil(target.height + (target.bleed * 2));
+        await page.setViewport({
+          width: viewportWidth,
+          height: viewportHeight,
+          deviceScaleFactor: target.scale,
+        });
+
+        // Read HTML and resolve {{PLACEHOLDER}} brand tokens from _brand.yml
+        const filePath = join(__dirname, card.html);
+        const rawHtml = readFileSync(filePath, 'utf-8');
+        const resolvedHtml = resolveBrandTokens(rawHtml, jurisdictionForTemplate(card.html));
+
+        // Use file:// base URL so relative CSS links (brand-inject.css) still resolve
+        await page.goto(`file://${__dirname}/`, { waitUntil: 'domcontentloaded' });
+        await page.setContent(resolvedHtml, { waitUntil: 'networkidle0' });
+
+        await page.evaluate(({ classNames, production, bleed }) => {
+          document.body.classList.add(...classNames);
+          if (production) {
+            document.body.classList.add('pb-production-export');
+            document.body.style.setProperty('--pb-export-bleed', `${bleed}px`);
+          }
+        }, target);
+
+        // Wait for Google Fonts to load
+        await page.evaluateHandle('document.fonts.ready');
+
+        const element = await page.$(card.selector);
+        if (element) {
+          const metrics = await page.evaluate(({ selector, readabilityFloor }) => {
+            const root = document.querySelector(selector);
+            const box = root.getBoundingClientRect();
+            const textElements = [...root.querySelectorAll('*')].filter((node) => {
+              if (node.closest('[data-readability-exempt], .qr-placeholder, .qr-box, .qr-small, .operator-placeholder, .cover-operator, svg')) return false;
+              const style = getComputedStyle(node);
+              if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) < 0.05) return false;
+              if (node.getClientRects().length === 0) return false;
+              if (parseFloat(style.fontSize) === 0 && getComputedStyle(node, '::after').content !== 'none') return false;
+              return [...node.childNodes].some((child) => child.nodeType === Node.TEXT_NODE && child.textContent.trim());
+            });
+            const describe = (node) => {
+              const label = [...node.childNodes]
+                .filter((child) => child.nodeType === Node.TEXT_NODE)
+                .map((child) => child.textContent.trim())
+                .filter(Boolean)
+                .join(' ')
+                .replace(/\s+/g, ' ')
+                .slice(0, 64);
+              const classes = [...node.classList].slice(0, 2).map((name) => `.${name}`).join('');
+              return `${node.tagName.toLowerCase()}${classes} “${label}”`;
+            };
+            const tooSmall = readabilityFloor
+              ? textElements
+                .map((node) => ({ node, size: parseFloat(getComputedStyle(node).fontSize) }))
+                .filter(({ size }) => size + 0.1 < readabilityFloor)
+                .slice(0, 8)
+                .map(({ node, size }) => `${describe(node)} (${size.toFixed(1)}px)`)
+              : [];
+            const outside = textElements
+              .map((node) => ({ node, rect: node.getBoundingClientRect() }))
+              .filter(({ rect }) => rect.left < box.left - 1 || rect.top < box.top - 1 || rect.right > box.right + 1 || rect.bottom > box.bottom + 1)
+              .slice(0, 8)
+              .map(({ node }) => describe(node));
+            const protectedFooter = root.querySelector([
+              ':scope > .story-footer',
+              ':scope > .poster-footer',
+              ':scope > .card-footer',
+              ':scope > .display-footer',
+              ':scope > .legal-strip',
+              ':scope > .sign-bottom',
+              ':scope > .staff-footer',
+              ':scope > .restroom-footer',
+            ].join(', '));
+            const protectedRect = protectedFooter?.getBoundingClientRect();
+            const occluded = protectedRect
+              ? textElements
+                .filter((node) => !protectedFooter.contains(node))
+                .map((node) => ({ node, rect: node.getBoundingClientRect() }))
+                .filter(({ rect }) => (
+                  rect.right > protectedRect.left + 2
+                  && rect.left < protectedRect.right - 2
+                  && rect.bottom > protectedRect.top + 2
+                  && rect.top < protectedRect.bottom - 2
+                ))
+                .slice(0, 8)
+                .map(({ node }) => describe(node))
+              : [];
+            const panels = [...root.querySelectorAll(':scope > .panel')];
+            const panelRects = panels.map((panel) => panel.getBoundingClientRect());
+            const foldBoundaries = root.matches('.brochure-inside, .brochure-outside')
+              ? [...new Set(panelRects
+                .flatMap((rect) => [Math.round(rect.left), Math.round(rect.right)])
+                .filter((x) => x > box.left + 2 && x < box.right - 2))]
+              : [];
+            const foldCrossings = foldBoundaries.length
+              ? textElements
+                .map((node) => ({ node, rect: node.getBoundingClientRect() }))
+                .filter(({ rect }) => foldBoundaries.some((x) => rect.left < x - 2 && rect.right > x + 2))
+                .slice(0, 8)
+                .map(({ node }) => describe(node))
+              : [];
+            const protectedGroups = [...root.querySelectorAll('[data-protected-zone]')];
+            const uncontainedProtected = panels.length
+              ? protectedGroups
+                .filter((group) => !panels.some((panel) => panel.contains(group)))
+                .slice(0, 8)
+                .map((group) => `${group.getAttribute('data-protected-zone')}: ${describe(group)}`)
+              : [];
+            const foldZoneOverlaps = foldBoundaries.length
+              ? protectedGroups
+                .map((group) => ({ group, rect: group.getBoundingClientRect() }))
+                .filter(({ rect }) => foldBoundaries.some((x) => rect.left < x + 24 && rect.right > x - 24))
+                .slice(0, 8)
+                .map(({ group }) => `${group.getAttribute('data-protected-zone')}: ${describe(group)}`)
+              : [];
+            return {
+              width: box.width,
+              height: box.height,
+              scrollWidth: root.scrollWidth,
+              scrollHeight: root.scrollHeight,
+              // Compare scrolling extent with the border box. Using
+              // clientWidth/clientHeight creates false positives for bordered
+              // RTL components whose scroll extent includes a rounding pixel.
+              overflowX: root.scrollWidth > Math.ceil(box.width) + 1,
+              overflowY: root.scrollHeight > Math.ceil(box.height) + 1,
+              tooSmall,
+              outside,
+              occluded,
+              foldCrossings,
+              uncontainedProtected,
+              foldZoneOverlaps,
+            };
+          }, { selector: card.selector, readabilityFloor: readabilityFloors.get(card.selector) || 0 });
+
+          if (!target.naturalHeight && (
+            Math.abs(metrics.width - target.width) > 1
+            || Math.abs(metrics.height - target.height) > 1
+          )) {
+            failures.push(`${card.html}: expected ${target.width}x${target.height}, got ${metrics.width}x${metrics.height}`);
+          }
+
+          if (metrics.overflowX || metrics.overflowY) {
+            failures.push(`${card.html}: root overflow ${metrics.scrollWidth}x${metrics.scrollHeight} inside ${metrics.width}x${metrics.height}`);
+          }
+
+          if (metrics.tooSmall.length > 0) {
+            failures.push(`${card.html}: text below ${readabilityFloors.get(card.selector)}px use-case floor: ${metrics.tooSmall.join('; ')}`);
+          }
+
+          if (metrics.outside.length > 0) {
+            failures.push(`${card.html}: visible text outside artboard: ${metrics.outside.join('; ')}`);
+          }
+
+          if (metrics.occluded.length > 0) {
+            failures.push(`${card.html}: visible text overlaps protected footer: ${metrics.occluded.join('; ')}`);
+          }
+
+          if (metrics.foldCrossings.length > 0) {
+            failures.push(`${card.html}: visible text crosses a fold line: ${metrics.foldCrossings.join('; ')}`);
+          }
+
+          if (metrics.uncontainedProtected.length > 0) {
+            failures.push(`${card.html}: protected content is not contained within one panel: ${metrics.uncontainedProtected.join('; ')}`);
+          }
+
+          if (metrics.foldZoneOverlaps.length > 0) {
+            failures.push(`${card.html}: protected content enters the 24px fold-safe zone: ${metrics.foldZoneOverlaps.join('; ')}`);
+          }
+
+          if (!checkOnly) {
+            const outputPath = join(outputDirectory, card.output);
+            // Keep the artboard itself RTL, but anchor the page canvas LTR
+            // before clipping. Chromium otherwise paints clipped/full-page
+            // screenshots of some RTL fixed-size roots as blank bitmaps.
+            await page.evaluate((selector) => {
+              if (document.documentElement.dir !== 'rtl') return;
+              const root = document.querySelector(selector);
+              root.style.direction = 'rtl';
+              document.documentElement.dir = 'ltr';
+              document.body.dir = 'ltr';
+            }, card.selector);
+            if (target.production && target.bleed > 0) {
+              const box = await element.boundingBox();
+              await page.screenshot({
+                path: outputPath,
+                type: 'png',
+                captureBeyondViewport: true,
+                clip: {
+                  x: Math.max(0, box.x - target.bleed),
+                  y: Math.max(0, box.y - target.bleed),
+                  width: box.width + (target.bleed * 2),
+                  height: box.height + (target.bleed * 2),
+                },
+              });
+            } else {
+              // Puppeteer's element screenshot can return a blank bitmap for
+              // fixed-size roots in RTL documents. Clip the page to the same
+              // measured box so Arabic previews use the exact render path as
+              // their LTR counterparts.
+              const box = await element.boundingBox();
+              await page.screenshot({
+                path: outputPath,
+                type: 'png',
+                captureBeyondViewport: true,
+                clip: {
+                  x: Math.max(0, box.x),
+                  y: Math.max(0, box.y),
+                  width: box.width,
+                  height: box.height,
+                },
+              });
+            }
+            console.log(`Rendered [${profileName}]: ${card.output}`);
+          } else {
+            console.log(`Checked [${profileName}]: ${card.html}`);
+          }
+        } else {
+          failures.push(`${card.html}: selector "${card.selector}" not found`);
+        }
+      } catch (e) {
+        failures.push(`${card.html}: ${e.message}`);
+        console.error(`✗ Failed [${profileName}] ${card.html}: ${e.message}`);
+      } finally {
+        await page.close();
+      }
+
     }
   } finally {
     await browser.close();
   }
-  console.log('Done.');
+
+  if (failures.length > 0) {
+    console.error(`\n${failures.length} layout issue(s):`);
+    for (const failure of failures) console.error(`- ${failure}`);
+    process.exitCode = 1;
+  } else {
+    console.log(`Done. ${toRender.length} template(s) ${checkOnly ? 'checked' : 'rendered'}.`);
+  }
 }
 
 render().catch(console.error);

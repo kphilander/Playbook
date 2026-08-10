@@ -17,6 +17,7 @@
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .story-pillar { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 8px 20px; border-radius: 100px; }
+
   .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(52px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.4; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 40px; }
@@ -47,34 +48,30 @@
   </style>
   </head>
 <body>
-<div class="story-card">
+<div class="story-card" data-layout="visual-answer">
   <div class="story-header">
     <span class="story-logo">Playbook</span>
     
   </div>
   <div class="story-body">
     <div class="eyebrow">金曜クイズ</div>
-    <div class="headline">スポーツベッティングでの−110とはどういう意味でしょうか。</div>
+    <div class="headline">スポーツベッティングの「−110」は何を意味する？</div>
     <div class="breakdown-visual">
       <div class="money-block">
         <div class="money-label">賭け金</div>
         <div class="money-value green">11,000円</div>
       </div>
       <div class="money-block">
-        <div class="money-label">獲得額</div>
+        <div class="money-label">純利益</div>
         <div class="money-value white">10,000円</div>
       </div>
       <div class="money-block">
-        <div class="money-label">取り分</div>
+        <div class="money-label">価格差</div>
         <div class="money-value orange">1,000円</div>
-        <div class="money-note">約4.5%のビグ</div>
+        <div class="money-note">マージン約4.5%</div>
       </div>
     </div>
-    <div class="quiz-box">
-      <div class="answer-label">答え</div>
-      <div class="answer"><strong>11,000円を賭けて10,000円を得ます</strong>。差額の1,000円がブックメーカーの取り分です。すべての賭けに例外なく適用されます。</div>
-    </div>
-    <a href="#" class="story-cta">どのラインにもある数学を知る</a>
+    <a href="#" class="story-cta">オッズの仕組みをもっと知る</a>
   </div>
   <div class="story-footer">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>

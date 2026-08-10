@@ -16,6 +16,7 @@
   .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); z-index: 2; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--pb-color-secondary); margin-bottom: 28px; }
@@ -47,7 +48,7 @@
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="two-comparisons">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     <span class="section-label">Real Odds</span>
@@ -66,29 +67,11 @@
       </div>
       <div class="edge-row">
         <div class="edge-bar-wrap">
-          <div class="edge-game">Craps (pass / don't pass)</div>
-          <div class="edge-bar mid" style="width: 14%;"></div>
-        </div>
-        <div class="edge-pct white">1.4%</div>
-      </div>
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
           <div class="edge-game">American Roulette</div>
           <div class="edge-bar high"></div>
         </div>
         <div class="edge-pct orange">5.26%</div>
       </div>
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
-          <div class="edge-game">Slots</div>
-          <div class="edge-bar var"></div>
-        </div>
-        <div class="edge-pct orange">2-15%</div>
-      </div>
-    </div>
-    <div class="callout">
-      <div class="callout-number">$5.26</div>
-      <div class="callout-text">For every <strong>$100 wagered</strong> on American Roulette,<br>the house keeps $5.26 on average.</div>
     </div>
     <a href="#" class="poster-cta">See the full breakdown</a>
   </div>

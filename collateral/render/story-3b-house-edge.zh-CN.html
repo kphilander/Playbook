@@ -16,6 +16,7 @@
   .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
   .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; }
@@ -44,34 +45,25 @@
   </style>
   </head>
 <body>
-<div class="story-card">
+<div class="story-card" data-layout="two-comparisons">
   <div class="story-header">
     <span class="story-logo">Playbook</span>
     <span class="section-label">真实赔率</span>
   </div>
   <div class="story-body">
-    <div class="eyebrow">相关数据</div>
-    <div class="headline">采用基本策略时，二十一点的庄家优势为 <span class="teal">0.5%</span></div>
+    <div class="eyebrow">你知道吗？</div>
+    <div class="headline">采用基本策略时，二十一点的庄家优势只有 <span class="teal">0.5%</span></div>
     <div class="odds-list">
       <div class="odds-row">
         <div><div class="game">二十一点</div><div class="note">基本策略</div></div>
         <div class="edge teal">0.5%</div>
       </div>
       <div class="odds-row">
-        <div><div class="game">花旗骰</div><div class="note">Pass / Don't Pass</div></div>
-        <div class="edge white">1.4%</div>
-      </div>
-      <div class="odds-row">
         <div><div class="game">美式轮盘</div><div class="note">双零</div></div>
         <div class="edge orange">5.26%</div>
       </div>
-      <div class="odds-row">
-        <div><div class="game">老虎机</div><div class="note">因机器而异</div></div>
-        <div class="edge orange">2-15%</div>
-      </div>
     </div>
-    <div class="context">了解庄家优势有助于玩家选择游戏并设定预算。</div>
-    <a href="#" class="story-cta">查看完整数据</a>
+    <a href="#" class="story-cta">查看完整对比</a>
   </div>
   <div class="story-footer">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>

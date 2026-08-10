@@ -12,8 +12,8 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 |---|---|---|
 | [Entrance / exit](#1-entrance--exit) | Wall-mounted or digital display | Brand awareness + helpline |
 | [Near ATMs / cashiers](#2-near-atms--cashiers) | Small sign or poster | Budget reminder + helpline |
-| [Gaming floor](#3-gaming-floor) | Overhead or column-mounted | Quiz QR, odds facts |
-| [Restrooms](#4-restrooms) | Mirror cling or stall card | Discreet helpline access |
+| [Gaming floor](#3-gaming-floor) | Portrait poster or custom column wrap | Quiz QR, odds facts |
+| [Restrooms](#4-restrooms) | Separate mirror cling and stall-card artboards | Discreet helpline access |
 | [Staff break rooms](#5-staff-break-rooms) | Poster | Training reminders, referral info |
 
 ---
@@ -22,14 +22,20 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 
 | Property | Value |
 |---|---|
-| **Readability distance** | 3 meters minimum for public signage |
-| **Minimum headline** | 48pt (visible from 3m) |
-| **Minimum body** | 18pt |
-| **Minimum helpline** | 24pt bold |
+| **Readability distance** | 3 meters minimum for public signage; arm's length for ATM, restroom, and staff placements |
+| **Minimum headline** | 48pt on public distance-read signage |
+| **Minimum body** | 24pt on A2/18×24 posters; 20pt on A3/11×17 floor signs; 18pt at ATM/cashier; 14pt on private/internal close-read signs |
+| **Minimum support/legal** | Never smaller than the format's body minimum; use weight, color, and position—not smaller type—to subordinate it |
 | **Color system** | Navy `#1B2838` background, white text, emerald `#10B981` accents, orange `#FF6B35` highlights |
 | **Accent bar** | Gradient strip `#FF6B35` → `#10B981` on all signs |
 | **Materials** | See per-location specs |
 | **QR codes** | Minimum 2" x 2" (50mm) for scanning from 1m+ |
+
+---
+
+If the required copy does not fit at these sizes, reduce or sequence the
+message and move detail to the linked surface. Do not create a fine-print tier.
+Validate the narrowest artboard and longest supported locale before release.
 
 ---
 
@@ -102,9 +108,9 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 
 | Property | Value |
 |---|---|
-| **Dimensions** | A3 (297 x 420mm) or 11 x 17" — or column wrap |
+| **Dimensions** | A3 (297 x 420mm) or 11 x 17" portrait poster |
 | **Material** | Foam board in acrylic frame, or column-mounted vinyl |
-| **Mounting** | Overhead (ceiling-hung), column-mounted, or freestanding |
+| **Mounting** | Overhead (ceiling-hung), column-mounted, or freestanding. Column wraps require a site-specific dieline; do not stretch the poster art. |
 | **Placement** | Central gaming floor areas, near high-traffic table games, slot sections |
 
 ### Copy — Variant A: Odds fact
@@ -150,9 +156,11 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 |---|---|
 | **Format A** | Mirror cling (vinyl sticker on mirror surface) |
 | **Format B** | Stall card (small sign inside stall door, at seated eye level) |
-| **Dimensions** | A5 (148 x 210mm) or 5.5 x 8.5" |
+| **Stall-card dimensions** | A5 (148 x 210mm) or 5.5 x 8.5" portrait |
+| **Mirror-cling dimensions** | 7 x 5" landscape default; confirm the available mirror area before production |
 | **Material** | Waterproof vinyl (mirror cling) or laminated card (stall) |
 | **Mounting** | Mirror cling: applied to mirror surface. Stall card: screwed or adhesive-mounted inside stall door |
+| **Output profiles** | `print-us` / `print-iso` for stall cards; `restroom-mirror-print` for mirror clings |
 
 ### Copy — Mirror cling
 
@@ -164,7 +172,7 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 | **Number specs** | Large, bold, Source Code Pro — easily readable from arm's length |
 | **Additional** | Text {{TEXT_NUMBER}} &#124; Chat {{CHAT_URL}} |
 | **Availability** | 24/7. No judgment. |
-| **Logo** | {{PROGRAM_NAME}} logomark only (small, discreet), reversed variant. Min height 0.25" (print). No wordmark at this scale — use logomark only per minimum size rules. Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
+| **Logo** | {{PROGRAM_NAME}} wordmark, reversed on dark backgrounds or primary on light. Use the symbol mark only where the current logo system explicitly calls for an icon-sized placement. Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 
 ### Copy — Stall card
 
@@ -176,7 +184,7 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 | **Text** | {{TEXT_NUMBER}} |
 | **Chat** | {{CHAT_URL}} |
 | **QR code** | Links to support page (small, 1" x 1") |
-| **Note** | No operator branding on stall cards — helpline and {{PROGRAM_NAME}} logomark only (reversed variant on dark bg, or full-color on light bg). Min height 0.25" (print). Below 0.25", use logomark only per minimum size rules |
+| **Note** | No operator branding on stall cards — helpline and the {{PROGRAM_NAME}} wordmark only (reversed on dark backgrounds or primary on light). Do not substitute the favicon/symbol for the collateral wordmark. |
 
 ---
 
@@ -242,6 +250,8 @@ Complete placement guide for {{PROGRAM_NAME}} signage across land-based venues. 
 ---
 
 ## Rendered previews
+
+The default restroom preview is the portrait stall card. Render `restroom-mirror` for the separate landscape cling. See the [production size matrix](../production-size-matrix.md) for every finished size.
 
 Click the template name to view the full HTML source.
 

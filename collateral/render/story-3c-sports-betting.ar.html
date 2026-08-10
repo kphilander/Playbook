@@ -17,6 +17,7 @@
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .story-pillar { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; }
+
   .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(52px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.5; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 40px; }
@@ -47,34 +48,30 @@
   </style>
   </head>
 <body>
-<div class="story-card">
+<div class="story-card" data-layout="visual-answer">
   <div class="story-header">
     <span class="story-logo">Playbook</span>
     
   </div>
   <div class="story-body">
     <div class="eyebrow">اختبار يوم الجمعة</div>
-    <div class="headline">ماذا يعني ‎-110 في الرهان الرياضي؟</div>
+    <div class="headline">ماذا يعني سعر ‎-110 في الرهان الرياضي؟</div>
     <div class="breakdown-visual">
       <div class="money-block">
         <div class="money-label">قيمة الرهان</div>
         <div class="money-value green">110 د.إ</div>
       </div>
       <div class="money-block">
-        <div class="money-label">قيمة الربح</div>
+        <div class="money-label">صافي الربح</div>
         <div class="money-value white">100 د.إ</div>
       </div>
       <div class="money-block">
-        <div class="money-label">النسبة المقتطعة</div>
+        <div class="money-label">فرق السعر</div>
         <div class="money-value orange">10 د.إ</div>
-        <div class="money-note">نسبة نحو 4.5%</div>
+        <div class="money-note">هامش يقارب 4.5%</div>
       </div>
     </div>
-    <div class="quiz-box">
-      <div class="answer-label">الإجابة</div>
-      <div class="answer">رهان بقيمة <strong>110 د.إ للربح بقيمة 100 د.إ</strong>. الـ10 د.إ هي نسبة شركة الرهان، في كل رهان دون استثناء.</div>
-    </div>
-    <a href="#" class="story-cta">التعرّف على الحسابات وراء كل سعر</a>
+    <a href="#" class="story-cta">افهم الحسابات وراء كل سعر</a>
   </div>
   <div class="story-footer">
     <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>

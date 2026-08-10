@@ -23,6 +23,16 @@ Platform-specific content guide for {{PROGRAM_NAME}} social media presence. Cont
 
 ## Instagram / TikTok
 
+### Asset sizes
+
+| Placement | Size | Renderer profile | Notes |
+|---|---:|---|---|
+| Portrait feed | 1080 x 1350 | `social-feed` | Primary master: more phone-screen area and enough room for reference content |
+| Square feed / carousel | 1080 x 1080 | `social-square` | Compatibility export for square-only placements; reduce density rather than crop |
+| Story / Reel | 1080 x 1920 | `story` | Essential copy and support text stay clear of platform UI zones |
+
+Do not stretch or crop between aspect ratios. The renderer recomposes the header, body, and footer for the selected placement.
+
 ### Bio copy
 
 > {{PROGRAM_SHORT_NAME}} | Real odds. Real tools. No fine print.
@@ -354,7 +364,7 @@ Templates for responding to common comments and messages.
 
 ## Rendered previews
 
-### Social cards (1080 x 1080)
+### Social cards (1080 x 1350 primary; 1080 x 1080 compatibility export)
 
 | Template | Theme | Preview |
 |---|---|---|
