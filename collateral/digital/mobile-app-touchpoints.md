@@ -6,6 +6,8 @@ Copy and layout specs for 6 key mobile screens where {{PROGRAM_NAME}} content in
 
 > **Logo usage**: Where the {{PROGRAM_NAME}} logo appears in-app (tab bar, navigation, content hub header), use the horizontal (B2) layout. On navy/dark backgrounds use the reversed variant (white wordmark); on white/light backgrounds use the full-color variant (navy wordmark) or on-light variant (navy wordmark). Minimum height: 24px (digital). Maintain 1x logo-height clear space on all sides. Below 24px, use logomark only (no wordmark). Co-branding with operator logo: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system).
 
+> **Implementation note**: These HTML templates are responsive product references, not fixed 420px raster assets. QA each screen/component at 360, 390, 412, and 430px using the matching renderer profiles. Allow natural height and vertical scroll where content requires it.
+
 ---
 
 ## Quick-scan index
@@ -213,6 +215,8 @@ Copy and layout specs for 6 key mobile screens where {{PROGRAM_NAME}} content in
 ---
 
 ## Push notifications
+
+Push notification HTML is a copy and visual mock only. Ship native notification payloads and let iOS/Android control dimensions, truncation, icon placement, and accessibility behavior.
 
 Copy for opt-in push notifications. Players must explicitly opt in to each category.
 

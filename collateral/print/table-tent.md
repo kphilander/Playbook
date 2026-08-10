@@ -20,15 +20,17 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 
 | Property | Value |
 |---|---|
-| **Flat size** | 4 x 6 inches (102 x 152mm) per side |
-| **Render dimensions** | 800 x 1200px (2x for screen rendering) |
+| **Finished face** | 4 x 6 inches (102 x 152mm) per side |
+| **Flat size** | 4 x 12 inches (102 x 305mm), scored at the midpoint |
+| **Logical preview** | 800 x 2400px flat dieline |
+| **Production output** | 1200 x 3600px trim at 300dpi; `print-us` adds 0.125" bleed |
 | **Bleed** | 0.125" (3mm) on all sides |
 | **Safe zone** | 0.25" (6mm) inside trim |
 | **Color mode** | CMYK |
 | **Resolution** | 300 DPI minimum |
 | **Paper** | 16pt card stock, double-sided, scored for tent fold |
 | **Finish** | Matte laminate both sides (fingerprint resistant) |
-| **Construction** | Scored at midpoint, tented with adhesive tab or built-in stand |
+| **Construction** | Two 4 x 6" faces, scored at midpoint, tented with adhesive tab or separate base |
 
 > **Visual reference**: See [`render/table-tent-5b.html`](../render/table-tent-5b.html) for the HTML template render.
 
@@ -44,6 +46,7 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 | **Accent bar** | 4px gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
 | **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg), top-left, small. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Pillar badge** | `SHARP` (emerald pill), top-right |
+
 
 ### Odds fact
 

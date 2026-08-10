@@ -16,6 +16,7 @@
   .social-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); }
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(56px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.5; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 40px; }
@@ -50,31 +51,13 @@
     <span class="section-label">الاحتمالات الحقيقية</span>
   </div>
   <div class="card-body">
-    <div class="headline">ماذا يعني ‎-110؟</div>
+    <div class="headline">‎-110: الهامش متنكر في رقم صغير.</div>
     <div class="breakdown">
       <div class="breakdown-line">رهان بقيمة <span class="amount">110 د.إ</span></div>
-      <div class="breakdown-line">ربح بقيمة <span class="amount">100 د.إ</span></div>
-      <div class="breakdown-line">الفرق البالغ <span class="cut">10 د.إ</span>؟</div>
+      <div class="breakdown-line">صافي الربح عند الفوز <span class="amount">100 د.إ</span></div>
     </div>
-    <div class="explanation">هذه هي نسبة شركة الرهان.</div>
-    <div class="emphasis">في كل رهان دون استثناء.</div>
-    <div class="vig-strip">
-      <div class="vig-card">
-        <div class="vig-label">السعر المعتاد</div>
-        <div class="vig-value">-110</div>
-        <div class="vig-note">نسبة نحو 4.5%</div>
-      </div>
-      <div class="vig-card">
-        <div class="vig-label">مرشح قوي</div>
-        <div class="vig-value">-150</div>
-        <div class="vig-note">نسبة أعلى</div>
-      </div>
-      <div class="vig-card">
-        <div class="vig-label">الطرف الأضعف</div>
-        <div class="vig-value">+200</div>
-        <div class="vig-note">النسبة تبقى مطبّقة</div>
-      </div>
-    </div>
+    <div class="explanation">السعر مضمّن في الخط.</div>
+    <div class="emphasis">عندما يكون السعر ‎-110 للطرفين، يبلغ هامش شركة الرهان نحو 4.8%.</div>
   </div>
   <div class="card-footer">
     <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>

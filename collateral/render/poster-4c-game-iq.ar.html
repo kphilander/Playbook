@@ -17,6 +17,7 @@
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); margin-bottom: 32px; }
   .myth-intro { font-family: var(--pb-font-body); font-size: calc(34px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); margin-bottom: 18px; line-height: 1.8; }
@@ -47,32 +48,24 @@
   </style>
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="single-proof">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     
   </div>
   <div class="poster-body">
-    <div class="myth-label">الاعتقاد مقابل الأرقام</div>
-    <div class="myth-intro">يعتقد بعض اللاعبين:</div>
-    <div class="myth-statement">«حان وقت فوزي»</div>
+    <div class="myth-label">الخرافة مقابل الحسابات</div>
+    <div class="myth-intro">يعتقد بعض اللاعبين أن:</div>
+    <div class="myth-statement">«حان دوري للفوز»</div>
     <div class="divider"></div>
-    <div class="fact-statement">في الواقع، هذه هي <strong>مغالطة المقامر</strong>. النتائج السابقة لا تغير ما يحدث لاحقًا.</div>
-    <div class="fact-box">
-      <div class="fact-box-title">كيف تعمل اللعبة فعليًا</div>
-      <div class="fact-box-text">عجلة الروليت <strong>لا تحتفظ بذاكرة</strong>. بعد 10 مرات للون الأحمر، تبقى احتمالات الأسود في الدورة الحادية عشرة <strong>كما هي تمامًا</strong>. كل دورة مستقلة.</div>
-    </div>
+    <div class="fact-statement">هذه هي <strong>مغالطة المقامر</strong>. النتائج السابقة لا تغيّر احتمال النتيجة التالية.</div>
     <div class="stat-row">
       <div class="stat-item">
         <div class="stat-number">0%</div>
-        <div class="stat-label">تأثير الدورات السابقة<br>على النتيجة التالية</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">47.4%</div>
-        <div class="stat-label">احتمال الأحمر أو الأسود<br>في كل دورة</div>
+        <div class="stat-label">تأثير اللفات السابقة في النتيجة التالية</div>
       </div>
     </div>
-    <a href="#" class="quiz-cta">لاختبار الإلمام باللعبة — يُرجى بدء الاختبار</a>
+    <a href="#" class="quiz-cta">ابدأ اختبار الإلمام باللعبة</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>

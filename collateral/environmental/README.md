@@ -2,6 +2,8 @@
 
 Specifications for Playbook venue signage and digital displays — physical touchpoints in casinos, gaming floors, and partner venues.
 
+See the [production size matrix](../production-size-matrix.md) before export. Venue templates have distinct US and ISO profiles, and the restroom mirror cling is intentionally separate from the portrait stall card.
+
 ## Documents
 
 | Document | Description |

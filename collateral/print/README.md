@@ -2,6 +2,8 @@
 
 Specifications for Playbook print materials — brochures, rack cards, table tents, and helpline cards.
 
+Use the [production size matrix](../production-size-matrix.md) for 300dpi US/ISO export sizes, bleed, and profile names. The PNG renderer supplies pixel geometry; final CMYK conversion and printer-specific crop/fold marks belong in prepress.
+
 ## Documents
 
 | Document | Description |

@@ -2,6 +2,8 @@
 
 Specifications for Playbook digital touchpoints — email, mobile app, social media, and website content.
 
+Use the [production size matrix](../production-size-matrix.md) to choose social/feed/story/banner profiles. Email and product UI are responsive delivery surfaces; their PNGs are QA references rather than shippable fixed-size assets.
+
 ## Documents
 
 | Document | Description |

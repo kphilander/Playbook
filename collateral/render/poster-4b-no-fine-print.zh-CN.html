@@ -16,6 +16,7 @@
   .poster::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 12px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 28px; }
@@ -54,15 +55,15 @@
   </style>
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="two-comparisons">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     <span class="section-label">真实赔率</span>
   </div>
   <div class="poster-body">
-    <div class="eyebrow">毫无隐晦</div>
-    <div class="headline">每款游戏都有<span class="teal">庄家优势</span>。<br>以下为各游戏数据。</div>
-    <div class="subhead">即赌场长期保留的比例。以下是各游戏的比较。</div>
+    <div class="eyebrow">没有隐藏条款</div>
+    <div class="headline">每款游戏都有<span class="teal">庄家优势</span>。<br>看看数字是多少。</div>
+    <div class="subhead">庄家优势，是赌场长期平均保留的比例。</div>
     <div class="edge-list">
       <div class="edge-row">
         <div class="edge-bar-wrap">
@@ -73,31 +74,13 @@
       </div>
       <div class="edge-row">
         <div class="edge-bar-wrap">
-          <div class="edge-game">花旗骰（Pass / Don't Pass）</div>
-          <div class="edge-bar mid" style="width: 14%;"></div>
-        </div>
-        <div class="edge-pct white">1.4%</div>
-      </div>
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
           <div class="edge-game">美式轮盘</div>
           <div class="edge-bar high"></div>
         </div>
         <div class="edge-pct orange">5.26%</div>
       </div>
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
-          <div class="edge-game">老虎机</div>
-          <div class="edge-bar var"></div>
-        </div>
-        <div class="edge-pct orange">2-15%</div>
-      </div>
     </div>
-    <div class="callout">
-      <div class="callout-number">澳门币 5.26</div>
-      <div class="callout-text">在美式轮盘中，每投注 <strong>澳门币 100</strong>，<br>赌场平均保留 澳门币 5.26。</div>
-    </div>
-    <a href="#" class="poster-cta">查看完整数据</a>
+    <a href="#" class="poster-cta">查看完整对比</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>

@@ -16,6 +16,7 @@
   .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)); z-index: 2; }
   .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
   .section-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); }
   .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 20px; }
@@ -44,34 +45,25 @@
   </style>
   </head>
 <body>
-<div class="story-card">
+<div class="story-card" data-layout="two-comparisons">
   <div class="story-header">
     <span class="story-logo">Playbook</span>
     <span class="section-label">الاحتمالات الحقيقية</span>
   </div>
   <div class="story-body">
-    <div class="eyebrow">هل كان ذلك معروفًا؟</div>
-    <div class="headline">نسبة الكازينو في البلاك جاك <span class="teal">0.5%</span> عند اعتماد الاستراتيجية الأساسية</div>
+    <div class="eyebrow">هل تعلم؟</div>
+    <div class="headline">أفضلية الكازينو في البلاك جاك هي <span class="teal">0.5%</span> عند استخدام الاستراتيجية الأساسية</div>
     <div class="odds-list">
       <div class="odds-row">
         <div><div class="game">بلاك جاك</div><div class="note">الاستراتيجية الأساسية</div></div>
         <div class="edge teal">0.5%</div>
       </div>
       <div class="odds-row">
-        <div><div class="game">كرابس</div><div class="note">Pass / Don't pass</div></div>
-        <div class="edge white">1.4%</div>
-      </div>
-      <div class="odds-row">
         <div><div class="game">الروليت الأمريكي</div><div class="note">صفر مزدوج</div></div>
         <div class="edge orange">5.26%</div>
       </div>
-      <div class="odds-row">
-        <div><div class="game">آلات القمار</div><div class="note">يختلف حسب الآلة</div></div>
-        <div class="edge orange">2-15%</div>
-      </div>
     </div>
-    <div class="context">معرفة النسبة تساعد على اختيار الألعاب وضبط الميزانية.</div>
-    <a href="#" class="story-cta">عرض التفاصيل الكاملة</a>
+    <a href="#" class="story-cta">قارن بين الألعاب</a>
   </div>
   <div class="story-footer">
     <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>

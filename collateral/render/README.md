@@ -1,32 +1,52 @@
 # Render Pipeline
 
-HTML templates, PNG renders, and build scripts for all Playbook collateral. This is the production pipeline — every visual asset in the brand system is built here.
+HTML layout masters, PNG previews, and build scripts for Playbook collateral. The renderer contains 75 English template families and 290 localized render entries across English, Japanese, Simplified Chinese, and Arabic.
 
-## Build scripts
+## Source files
 
-| Script | What it does |
-|--------|-------------|
-| [render-cards.mjs](render-cards.mjs) | Puppeteer pipeline that renders all HTML templates to PNG |
-| [build-logos.mjs](build-logos.mjs) | Generates 15 logo SVGs from brand config |
-| [build-icons.mjs](build-icons.mjs) | Generates 31 icon SVGs across 7 categories |
-| [build-deck.mjs](build-deck.mjs) | Generates the PPTX brand overview deck |
-| [brand-inject.css](brand-inject.css) | Auto-generated CSS injected into all HTML templates |
+| File | Role |
+|---|---|
+| [render-cards.mjs](render-cards.mjs) | Puppeteer renderer, filtering, locale selection, and layout checks |
+| [output-profiles.mjs](output-profiles.mjs) | Named output sizes, print scale, and bleed configuration |
+| [build-comparison.mjs](build-comparison.mjs) | Builds a browsable before/after review sheet from the committed baseline and current PNG previews |
+| [layout-system.css](layout-system.css) | Maintained responsive, safe-zone, and format-specific layout rules |
+| [brand-inject.css](brand-inject.css) | Generated brand tokens plus the shared layout system |
+| [build-logos.mjs](build-logos.mjs) | Logo SVG generator |
+| [build-icons.mjs](build-icons.mjs) | Icon SVG generator |
+| [build-deck.mjs](build-deck.mjs) | PPTX brand overview generator |
+
+`lib/generate-inject-css.mjs` appends `layout-system.css` whenever it regenerates `brand-inject.css`, so brand changes do not erase production layout rules.
+
+Rendered collateral follows the PR #111 wordmark treatment: `Playbook` in Inter 700, one weight, one color, and tight tracking. The punched-cover symbol is reserved for favicons, app icons, social avatars, and placements too tight for the wordmark.
 
 ## Usage
 
 ```bash
-npm install                           # Install puppeteer + pptxgenjs
-node render-cards.mjs                 # Render all templates
-node render-cards.mjs poster          # Render only poster templates
-node render-cards.mjs card-1a         # Render a specific template
-node build-logos.mjs                  # Generate logo SVGs
-node build-icons.mjs                  # Generate icon SVGs
-node build-deck.mjs                   # Generate PPTX deck
+# Manageable preview PNGs
+node collateral/render/render-cards.mjs --locale=en
+node collateral/render/render-cards.mjs --locale=ja poster
+
+# Named output variants
+node collateral/render/render-cards.mjs --profile=social-feed --locale=en
+node collateral/render/render-cards.mjs --profile=social-square --locale=en
+node collateral/render/render-cards.mjs --profile=story --locale=en
+node collateral/render/render-cards.mjs --profile=banner-320x50 --locale=en
+node collateral/render/render-cards.mjs --profile=email-375 --locale=en
+node collateral/render/render-cards.mjs --profile=ui-390 --locale=en
+node collateral/render/render-cards.mjs --profile=print-us --locale=en
+node collateral/render/render-cards.mjs --profile=print-iso --locale=en
+
+# Validation and discovery
+node collateral/render/render-cards.mjs --check --locale=en
+node collateral/render/render-cards.mjs --list-profiles
+
+# Visual comparison against the current committed baseline
+npm run build:comparison
 ```
 
-## Templates (57 total)
+Filters can be combined with options: `--profile=print-us --locale=en sign-floor`.
 
-### Tier 1 — Entertainment Literacy
+## Delivery model
 
 | Template | Format | Size | Bleed |
 |----------|--------|------|-------|
@@ -72,21 +92,21 @@ node build-deck.mjs                   # Generate PPTX deck
 | `og-rg-page` | OG share card | 1200 x 630 | — |
 | `og-content-hub` | OG share card | 1200 x 630 | — |
 
-### Tier 2 — Support & Crisis
+- Social previews use the 4:5 primary feed composition; `social-square` is the square compatibility export. Stories, displays, print, and signage use fixed artboards through named profiles.
+- Email is fluid up to 600px and has natural height. Use the 320/375/600 email profiles for QA only.
+- Product UI templates are responsive HTML references. Use 360/390/412/430 profiles for QA; do not ship those PNGs in an app.
+- Push notification HTML is a content and visual mock only. The operating system owns the final component.
+- Print profiles add bleed outside trim and scale to approximately 300dpi. They remain RGB PNGs until a prepress workflow converts them to the printer's requested CMYK profile.
+- A format-specific source contains only the copy that format uses. Do not keep omitted paragraphs, rows, or prompts in the HTML and hide them with CSS; use `data-layout` only to describe composition.
+- Mark indivisible support, legal, QR, or action groups with `data-protected-zone`. On folded work, each protected group must live inside one panel.
 
-| Template | Format | Size | Bleed |
-|----------|--------|------|-------|
-| `support-page-10a` | Support page | 800 x 1200 | — |
-| `self-exclusion-10b` | Self-exclusion | 420 x 680 | — |
-| `session-summary-10c` | Session summary | 420 x 320 | — |
-| `limit-reached-10d` | Limit reached | 420 x 160 | — |
-| `cooldown-10e` | Cooldown screen | 420 x 520 | — |
-| `card-tier2-10f` | Support card | 1080 x 1080 | — |
-| `poster-tier2-10g` | Support poster | 1800 x 2400 | 24px |
-| `email-support-10h` | Support email | 600 x 1100 | — |
-| `helpline-card-5c` | Helpline card | 700 x 400 | 24px |
+See the [production size matrix](../production-size-matrix.md) for the complete use-case mapping.
 
-### How to Play — Game Education
+## Layout checks
+
+`--check` verifies that each selected root exists, matches fixed-profile dimensions, has no visible text outside the artboard, does not overflow, keeps every visible line at or above the use-case-specific readability floor, prevents content from overlapping protected footers, and rejects text or protected groups that cross brochure fold lines. It exits nonzero on a layout failure, so it can be added to CI.
+
+Locale-specific hierarchy scaling is centralized in `layout-system.css`, while the physical/screen reading floors remain fixed across languages. Translated copy still needs human review for line breaks, reading order, and regulated text; content must be reduced or recomposed rather than shrunk below the floor.
 
 | Template | Format | Size |
 |----------|--------|------|

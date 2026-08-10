@@ -1,0 +1,1091 @@
+/*
+ * Shared collateral layout system
+ *
+ * This file is maintained by hand and appended to brand-inject.css by
+ * lib/generate-inject-css.mjs. Template-local CSS owns the art direction;
+ * these rules own format accuracy, responsive behavior, safe areas, and
+ * production profile variants.
+ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* PR #111 wordmark treatment. The favicon/app symbol is intentionally not
+   substituted for collateral wordmarks. Template-local rules retain the
+   correct light/dark color for each placement. */
+:is(
+  .card-logo,
+  .story-logo,
+  .poster-logo,
+  .logo,
+  .hero-logo,
+  .footer-logo,
+  .screen-logo,
+  .restroom-logo,
+  .panel-logo,
+  .cover-logo,
+  .bottom-logo,
+  .widget-logo
+) {
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  text-transform: none;
+}
+
+html:lang(ja) { --pb-locale-text-scale: 0.96; }
+html:lang(zh-Hans), html:lang(zh-CN) { --pb-locale-text-scale: 0.97; }
+html:lang(ar) { --pb-locale-text-scale: 0.94; }
+
+.social-card,
+.story-card,
+.poster,
+.rack-card,
+.table-tent,
+.helpline-card,
+.brochure-inside,
+.brochure-outside,
+.sign-entrance,
+.sign-atm,
+.sign-floor,
+.sign-restroom,
+.sign-staff,
+.display-screen,
+.display-portrait {
+  --pb-template-text-scale: var(--pb-locale-text-scale, 1);
+}
+
+/* Responsive delivery surfaces: these are components, not raster canvases. */
+.email {
+  width: 100% !important;
+  max-width: 600px;
+  height: auto !important;
+}
+
+.email :is(.cta-button, .cta-button-outline) {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px !important;
+}
+.email .odds-table th { font-size: 16px !important; }
+
+.email :is(
+  .footer-legal,
+  .footer-unsub,
+  .footer-logo,
+  .deposit-date,
+  .progress-label,
+  .label,
+  .article-meta,
+  .article-promo-meta,
+  .tool-status,
+  .limits-value
+) {
+  font-size: 16px !important;
+  line-height: 1.45 !important;
+}
+.email :is(.footer-legal, .footer-unsub) {
+  color: var(--pb-color-neutral-700) !important;
+}
+
+.email :is(.footer-support, .footer-channels) {
+  font-size: 18px !important;
+  line-height: 1.45 !important;
+}
+.email :is(.article-thumb-icon, .article-badge) { font-size: 16px !important; }
+
+.support-page {
+  width: 100% !important;
+  max-width: 800px;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.support-page .channel-info,
+.support-page .resource-card {
+  min-width: 0;
+}
+
+.support-page .channel-detail,
+.support-page .footer-helpline,
+.support-page .footer-channels {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.mobile-onboarding,
+.deposit-interstitial,
+.withdrawal-confirm,
+.mobile-screen {
+  width: min(420px, 100vw) !important;
+  height: auto !important;
+  min-height: 812px;
+  overflow: visible !important;
+}
+
+.self-exclusion,
+.cooldown-screen,
+.web-popup {
+  width: min(480px, 100vw) !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.session-summary,
+.limit-reached,
+.in-play-overlay,
+.betslip-rg,
+.live-overlay,
+.push-notification {
+  width: min(420px, 100vw) !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.push-notification {
+  min-height: 120px !important;
+}
+
+/* Responsive product components use real CSS pixels, so 16px is the visible
+   text floor. Metadata is distinguished by color/weight, not by shrinking it
+   below the surrounding interface. */
+:is(
+  .mobile-onboarding,
+  .deposit-interstitial,
+  .withdrawal-confirm,
+  .mobile-screen,
+  .self-exclusion,
+  .cooldown-screen,
+  .web-popup,
+  .session-summary,
+  .limit-reached,
+  .in-play-overlay,
+  .betslip-rg,
+  .live-overlay,
+  .push-notification,
+  .support-page
+) :is(
+  .footer-legal,
+  .footer-disclaimer,
+  .notification-app,
+  .notification-time,
+  .header-label,
+  .section-label,
+  .step-label,
+  .step-back,
+  .back-link,
+  .intro,
+  .game-name,
+  .game-edge,
+  .body-text,
+  .stat-label,
+  .bar-label,
+  .limit-label,
+  .limit-value,
+  .manage-link,
+  .duration-until,
+  .helpline-label,
+  .helpline-channels,
+  .footer-label,
+  .footer-channels,
+  .footer-helpline
+) {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+}
+
+.session-summary :is(.period, .stats-row, .sep, .limit-badge) {
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+}
+.in-play-overlay .session-stats,
+.push-notification .notification-body,
+.withdrawal-confirm :is(.stats-row, .stat-sep) {
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+}
+.mobile-screen .bottom-link,
+.live-overlay .card-logo { font-size: 16px !important; line-height: 1.35 !important; }
+
+/* Muted does not mean low contrast. These components sit on the dark brand
+   surface, so legal/support lines use the lighter neutral token. */
+:is(
+  .mobile-onboarding,
+  .deposit-interstitial,
+  .mobile-screen,
+  .in-play-overlay,
+  .betslip-rg,
+  .live-overlay
+) :is(.footer-disclaimer, .footer-legal) {
+  color: var(--pb-color-neutral-300) !important;
+}
+.push-notification :is(.notification-app, .notification-time) {
+  color: var(--pb-color-neutral-500) !important;
+}
+
+.app-banner {
+  width: min(728px, 100vw) !important;
+  max-width: 100%;
+}
+
+.app-banner .banner-inner,
+.app-banner .banner-message {
+  min-width: 0;
+}
+.app-banner .cta-pill { font-size: 16px !important; }
+
+.app-banner .banner-message {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px !important;
+}
+
+/* A leaderboard has room for one message and one action. Support contact
+   remains on the destination page instead of competing with the CTA. */
+
+@media (max-width: 430px) {
+  .mobile-onboarding,
+  .deposit-interstitial,
+  .withdrawal-confirm,
+  .mobile-screen,
+  .self-exclusion,
+  .cooldown-screen,
+  .web-popup,
+  .session-summary,
+  .limit-reached,
+  .in-play-overlay,
+  .betslip-rg,
+  .live-overlay {
+    border-radius: 0 !important;
+  }
+
+  .email img,
+  .support-page img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .support-page .header { padding: 24px; }
+  .support-page .content { padding: 36px 24px 28px; }
+  .support-page .footer { padding: 24px; }
+  .support-page .channel-row { padding: 18px; gap: 12px; }
+  .support-page .resource-cards { flex-direction: column; }
+
+  .email :is(
+    .hero,
+    .header,
+    .body-content,
+    .section-white,
+    .section-gray,
+    .footer
+  ) {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .email :is(.stats-grid, .budget-grid) {
+    grid-template-columns: 1fr !important;
+  }
+
+  .email .budget-grid { gap: 8px; }
+  .email .budget-stat { min-width: 0; padding: 16px 8px; }
+
+  .email :is(.cta-button, .cta-button-outline) {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Social: phone feeds reward vertical real estate. 4:5 is the primary
+   composition; square remains a separately recomposed compatibility export. */
+.social-card {
+  width: 1080px !important;
+  height: 1350px !important;
+  --pb-template-text-scale: calc(var(--pb-locale-text-scale, 1) * 1.08);
+}
+
+.social-card .card-header { padding-top: 72px; }
+
+.social-card .card-body {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.social-card .card-footer {
+  min-height: 92px;
+  gap: 20px;
+  flex: 0 0 auto;
+}
+.social-card:has(.helpline-number) .footer-text {
+  color: var(--pb-color-neutral-700) !important;
+}
+
+.social-card .card-footer > * {
+  min-width: 0;
+}
+
+/* Reference tables get a bounded content zone and tighter rows before optical
+   centering. This prevents intrinsic table height from pushing the header or
+   footer outside the 4:5 crop. */
+.social-card:has(.odds-table) .card-body {
+  min-height: 0;
+  justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+
+.social-card:has(.odds-table) .card-title { margin-bottom: 20px; }
+.social-card:has(.odds-table) .odds-table th { padding-bottom: 10px; }
+.social-card:has(.odds-table) .odds-table td { padding-top: 10px; padding-bottom: 10px; }
+
+/* A 1080px social master is commonly displayed around 360px wide. A 13px
+   label in the master becomes roughly 4px on the phone; it is not a valid
+   secondary tier. The 42px floor below resolves to about 14px at delivery. */
+.social-card :is(.card-logo, .logo) { font-size: 52px !important; }
+.social-card :is(.myth-label, .section-label, .card-pillar, .htp-label, .eyebrow, .fact-callout-label) {
+  font-size: 42px !important;
+  line-height: 1.2 !important;
+}
+.social-card .myth-intro {
+  font-size: 42px !important;
+  line-height: 1.3 !important;
+}
+.social-card :is(
+  .footer-helpline,
+  .footer-legal,
+  .footer-text,
+  .stat-unit,
+  .stat-label,
+  .odds-note,
+  .vig-note,
+  .body-line,
+  .body-text,
+  .subline,
+  .bar-value,
+  .bar-caption,
+  .helpline-channels,
+  .qr-label
+) {
+  font-size: 42px !important;
+  line-height: 1.3 !important;
+}
+.social-card :is(.fact-statement, .key-fact) {
+  font-size: 46px !important;
+  line-height: 1.4 !important;
+}
+
+/* Bar comparisons are explanatory content, not chart footnotes. Give their
+   42px labels room by trading ornamental whitespace for a tighter rhythm. */
+.social-card:has(.bar-viz) .card-body {
+  padding-top: 64px;
+  padding-bottom: 48px;
+}
+.social-card:has(.bar-viz) .bar-viz { margin-top: 48px; }
+.social-card:has(.bar-viz) .bar-caption:not(:last-child) { margin-bottom: 24px; }
+
+.social-card .card-footer {
+  min-height: 132px !important;
+  align-items: flex-start !important;
+  flex-wrap: wrap;
+  gap: 10px 28px !important;
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+}
+.social-card .odds-table :is(th, td) {
+  font-size: 42px !important;
+  line-height: 1.2 !important;
+}
+
+/* Dense reference-card source variants contain only the selected values. */
+.social-card:has(.odds-grid) .odds-item { padding: 30px 24px !important; }
+
+/* Source variants now contain only the copy they use. Layout attributes
+   describe the chosen composition; they never suppress authoring content. */
+.social-card[data-layout="single-proof"] .stat-row { justify-content: center; }
+.social-card[data-layout="single-proof"] .stat-card { max-width: 520px; }
+.social-card .hero-stat .label { font-size: 42px !important; line-height: 1.3 !important; }
+.social-card :is(
+  .fact-callout-text,
+  .comparison .game,
+  .comparison .edge,
+  .share-prompt,
+  .breakdown-line,
+  .breakdown-line .amount,
+  .breakdown-line .cut,
+  .explanation,
+  .emphasis,
+  .quiz-label,
+  .quiz-box p,
+  .quiz-box .answer,
+  .challenge
+) {
+  font-size: 42px !important;
+  line-height: 1.3 !important;
+}
+.social-card .odds-game { font-size: 42px !important; line-height: 1.25 !important; }
+.social-card :is(.game, .edge, .vig-label, .vig-value, .quiz-question p, .answer, .answer strong) {
+  font-size: 42px !important;
+  line-height: 1.3 !important;
+}
+
+body.pb-profile-social-feed .social-card {
+  width: 1080px !important;
+  height: 1350px !important;
+  --pb-template-text-scale: calc(var(--pb-locale-text-scale, 1) * 1.08);
+}
+
+body.pb-profile-social-feed .social-card .card-header {
+  padding-top: 72px;
+}
+
+body.pb-profile-social-feed .social-card .card-body {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+body.pb-profile-social-feed .social-card .card-footer {
+  min-height: 92px;
+}
+
+body.pb-profile-social-square .social-card {
+  width: 1080px !important;
+  height: 1080px !important;
+  --pb-template-text-scale: var(--pb-locale-text-scale, 1);
+}
+
+body.pb-profile-social-square .social-card .card-header { padding-top: 48px; }
+
+body.pb-profile-social-square .social-card .card-body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+body.pb-profile-social-square .social-card .card-footer { min-height: 72px; }
+
+/* Story/Reel: keep essential content out of the platform UI zones. */
+.story-card .story-header {
+  padding-top: 200px !important;
+}
+
+.story-card :is(.story-logo, .myth-label, .section-label, .eyebrow, .answer-label) {
+  font-size: 42px !important;
+  line-height: 1.2 !important;
+}
+.story-card .myth-intro {
+  font-size: 42px !important;
+  line-height: 1.3 !important;
+}
+
+.story-card :is(
+  .footer-helpline,
+  .footer-legal,
+  .stat-label,
+  .money-note,
+  .body-line,
+  .body-text
+) {
+  font-size: 42px !important;
+  line-height: 1.3 !important;
+}
+
+.story-card :is(.fact-statement, .story-cta) {
+  font-size: 48px !important;
+  line-height: 1.35 !important;
+}
+
+.story-card :is(
+  .game,
+  .note,
+  .edge,
+  .money-label,
+  .money-value,
+  .quiz-box .answer,
+  .quiz-box .answer strong,
+  .bar-name,
+  .bar-value
+) {
+  font-size: 42px !important;
+  line-height: 1.25 !important;
+}
+.story-card .context { font-size: 42px !important; line-height: 1.3 !important; }
+
+.story-card .story-body {
+  padding-top: 48px !important;
+  padding-bottom: 384px !important;
+}
+
+.story-card .story-footer {
+  display: flex !important;
+  position: absolute !important;
+  left: 48px;
+  right: 48px;
+  bottom: 360px;
+  border-radius: 16px;
+  min-height: 132px;
+  align-items: flex-start !important;
+  flex-direction: column;
+  gap: 10px 28px !important;
+  padding-top: 28px !important;
+  padding-bottom: 28px !important;
+}
+.story-card .story-footer > * { width: 100%; }
+
+.story-card[data-layout="two-comparisons"] .odds-list { margin-bottom: 40px !important; }
+.story-card[data-layout="visual-answer"] .breakdown-visual { margin-bottom: 48px !important; }
+
+/* Print preview defaults: accurate finished ratios at manageable CSS sizes. */
+.brochure-inside,
+.brochure-outside {
+  width: 2200px !important;
+  height: 1700px !important;
+  /* 20 logical px becomes 9pt at Letter production scale. */
+  --pb-template-text-scale: 1.4;
+}
+
+.brochure-inside > .panel,
+.brochure-outside > .panel {
+  height: 1700px !important;
+  padding: 88px 64px 112px;
+}
+
+/* Letter-fold flap is narrower. Outside order: flap, back, cover. */
+.brochure-outside > .panel:nth-child(1) { width: 725px !important; }
+.brochure-outside > .panel:nth-child(2),
+.brochure-outside > .panel:nth-child(3) { width: 737.5px !important; }
+
+/* Inside order: intro, odds, flap. */
+.brochure-inside > .panel:nth-child(1),
+.brochure-inside > .panel:nth-child(2) { width: 737.5px !important; }
+.brochure-inside > .panel:nth-child(3) { width: 725px !important; }
+
+.brochure-inside .panel-intro,
+.brochure-inside .panel-odds,
+.brochure-inside .panel-tools,
+.brochure-outside .panel-support {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brochure-inside .panel-cta { margin-top: 20px; }
+.brochure-outside .panel-support { padding-bottom: 180px; }
+.brochure-outside .qr-placeholder { width: 150px !important; height: 150px !important; }
+.brochure-inside :is(.section-label, .odds-table th),
+.brochure-outside .quiz-badge { font-size: 28px !important; }
+
+.brochure-inside :is(.footnote, .legal-text),
+.brochure-outside :is(.cover-legal, .qr-label) {
+  font-size: 28px !important;
+  line-height: 1.35 !important;
+}
+.brochure-inside .helpline-text,
+.brochure-outside .channel-label {
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+}
+.brochure-inside .helpline-strip { gap: 18px 28px; flex-wrap: wrap; }
+
+/* Support and legal information is a single fold-safe unit inside one panel.
+   It must never span the imposed spread or depend on two panels being open. */
+.brochure-inside .panel-support {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 24px 28px;
+  border-radius: 14px;
+  background: var(--pb-color-primary);
+  color: var(--pb-color-white);
+}
+.brochure-inside .support-kicker {
+  color: var(--pb-color-secondary);
+  font-family: var(--pb-font-heading);
+  font-size: 28px !important;
+  font-weight: 700;
+  line-height: 1.25 !important;
+}
+.brochure-inside .support-number {
+  font-family: var(--pb-font-mono);
+  font-size: 30px !important;
+  line-height: 1.3 !important;
+}
+html:lang(ja) .brochure-inside .support-number,
+html:lang(zh-CN) .brochure-inside .support-number,
+html:lang(ar) .brochure-inside .support-number {
+  font-family: var(--pb-font-body);
+}
+.brochure-inside .support-legal {
+  color: var(--pb-color-neutral-300);
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+}
+
+/* Hand-held formats calculate type and QR sizes from the physical trim. */
+.rack-card {
+  --pb-template-text-scale: calc(var(--pb-locale-text-scale, 1) * 1.32);
+}
+
+html:lang(ja) .rack-card { --pb-template-text-scale: 1.24; }
+html:lang(ar) .rack-card { --pb-template-text-scale: 1.22; }
+
+.rack-card .qr-placeholder { width: 150px !important; height: 150px !important; }
+.rack-card :is(.stat-note, .qr-label, .legal-text) {
+  font-size: 28px !important;
+  line-height: 1.35 !important;
+}
+.rack-card .stat-game { font-size: 28px !important; }
+.rack-card .legal-strip { padding-top: 22px !important; padding-bottom: 28px !important; }
+
+.helpline-card {
+  --pb-template-text-scale: calc(var(--pb-locale-text-scale, 1) * 1.25);
+}
+
+.helpline-card .card-content {
+  justify-content: flex-start;
+  padding: 16px 32px 8px;
+}
+
+.helpline-card .card-header { margin-bottom: 12px; }
+.helpline-card .helpline-main { align-items: flex-start; }
+.helpline-card :is(.helpline-main, .helpline-left) { min-width: 0; }
+/* The wallet card is an action surface, not a miniature support page. The
+   reassurance sentence is available on the linked support page; removing it
+   keeps phone, text, chat, QR, availability, and legal copy at 10pt+. */
+.helpline-card .helpline-number { margin-bottom: 4px; }
+html:lang(ja) .helpline-card .helpline-number,
+html:lang(zh-CN) .helpline-card .helpline-number,
+html:lang(ar) .helpline-card .helpline-number {
+  font-family: var(--pb-font-body);
+  letter-spacing: 0;
+}
+.helpline-card :is(.helpline-number, .helpline-channels) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.helpline-card .helpline-channels { line-height: 1.3; }
+.helpline-card .helpline-right {
+  flex: 0 0 120px;
+  width: 120px;
+  margin-left: 12px;
+}
+.helpline-card .qr-label {
+  max-width: 120px;
+  text-align: center;
+}
+.helpline-card :is(.qr-placeholder, .qr-box) { width: 120px !important; height: 120px !important; }
+.helpline-card .card-footer { padding: 0 32px 10px; }
+.helpline-card .card-logo { font-size: calc(24px * var(--pb-template-text-scale, 1)) !important; }
+.helpline-card :is(.helpline-sub, .helpline-channels, .qr-label, .legal-text, .availability) {
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+}
+.helpline-card .card-footer {
+  align-items: flex-end !important;
+  gap: 20px !important;
+}
+
+/* Posters are read while standing or walking, not as oversized handouts.
+   Every visible line—including support and legal copy—must survive the
+   intended 2–3m viewing distance. Detail that needs a paragraph belongs on
+   the QR destination, not in a smaller type tier on the poster. */
+.poster :is(.qr-placeholder, .qr-box) {
+  width: 200px !important;
+  height: 200px !important;
+  flex: 0 0 200px;
+  font-size: 28px !important;
+}
+
+.poster .poster-header {
+  min-height: 168px;
+  padding: 64px 96px 32px !important;
+}
+
+.poster .poster-logo,
+.poster > .poster-header .logo { font-size: 64px !important; }
+
+.poster .poster-body {
+  padding: 32px 120px 72px !important;
+}
+
+.poster :is(.eyebrow, .myth-label, .poster-pillar, .section-label) {
+  font-size: 32px !important;
+  line-height: 1.2 !important;
+}
+
+.poster :is(.subhead, .fact-statement, .body-line, .insight, .context) {
+  font-size: 40px !important;
+  line-height: 1.35 !important;
+}
+
+.poster :is(.stat-game, .edge-game, .stat-label, .flow-label) {
+  font-size: 34px !important;
+  line-height: 1.25 !important;
+}
+
+.poster :is(.stat-note, .qr-label span, .qr-label-sub, .helpline-channels) {
+  font-size: 32px !important;
+  line-height: 1.3 !important;
+}
+
+.poster :is(.poster-cta, .quiz-cta, .qr-label, .qr-label-main) {
+  font-size: 38px !important;
+  line-height: 1.25 !important;
+}
+
+.poster .poster-footer {
+  min-height: 168px;
+  padding: 40px 96px !important;
+  align-items: flex-start !important;
+  gap: 18px 36px !important;
+  flex-wrap: wrap;
+}
+
+.poster .footer-helpline,
+.poster .footer-legal {
+  font-size: 34px !important;
+  line-height: 1.3 !important;
+}
+
+/* Distance-poster source variants carry only their selected proof. */
+.poster:has(.stat-grid) .stat-grid { margin-bottom: 56px !important; }
+.poster:has(.stat-grid) .stat-col { padding: 52px 32px !important; }
+.poster:has(.stat-grid) .qr-row { margin-bottom: 0 !important; }
+
+.poster[data-layout="two-stats"] .stat-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+.poster[data-layout="single-stat"] .stat-grid {
+  grid-template-columns: minmax(0, 1fr) !important;
+  max-width: 760px;
+}
+.poster[data-layout="single-stat"] .stat-edge { font-size: 96px !important; }
+
+.poster:has(.edge-list) .edge-list { gap: 28px !important; margin-bottom: 56px !important; }
+.poster[data-layout="two-comparisons"] .edge-row { padding: 36px 42px !important; }
+.poster:has(.edge-list) .edge-pct { font-size: 56px !important; }
+
+.poster[data-layout="single-proof"] .stat-row { justify-content: center; }
+.poster[data-layout="single-proof"] .stat-item { max-width: 720px; }
+.poster[data-layout="single-proof"] .fact-statement { margin-bottom: 56px !important; }
+.poster[data-layout="single-proof"] .stat-row { margin-bottom: 64px !important; }
+
+.poster[data-layout="three-step-math"] .flow-list { margin-bottom: 48px !important; }
+.poster[data-layout="three-step-math"] .flow-row { padding: 24px 40px !important; }
+.poster[data-layout="three-step-math"] .flow-value { font-size: 56px !important; }
+.poster[data-layout="three-step-math"] .flow-row.climax .flow-value { font-size: 96px !important; }
+
+/* Tier 2 support poster: secondary channels and the full disclaimer are not
+   fine print. Give the disclaimer its own full-width line. */
+.poster:has(.helpline-number) .helpline-channels { font-size: 40px !important; }
+.poster:has(.helpline-number) :is(.helpline-number, .helpline-channels, .qr-label-sub) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.poster:has(.helpline-number) .qr-row { gap: 36px !important; }
+.poster:has(.helpline-number) .poster-footer { flex-direction: column; }
+.poster:has(.helpline-number) .footer-legal { max-width: 100% !important; }
+
+/* A4 landscape trim at the same logical scale. */
+body.pb-profile-brochure-a4 .brochure-inside,
+body.pb-profile-brochure-a4 .brochure-outside {
+  width: 2400px !important;
+  height: 1697px !important;
+}
+
+body.pb-profile-brochure-a4 .brochure-inside > .panel,
+body.pb-profile-brochure-a4 .brochure-outside > .panel {
+  height: 1697px !important;
+}
+
+body.pb-profile-brochure-a4 .brochure-outside > .panel:nth-child(1) { width: 792px !important; }
+body.pb-profile-brochure-a4 .brochure-outside > .panel:nth-child(2),
+body.pb-profile-brochure-a4 .brochure-outside > .panel:nth-child(3) { width: 804px !important; }
+body.pb-profile-brochure-a4 .brochure-inside > .panel:nth-child(1),
+body.pb-profile-brochure-a4 .brochure-inside > .panel:nth-child(2) { width: 804px !important; }
+body.pb-profile-brochure-a4 .brochure-inside > .panel:nth-child(3) { width: 792px !important; }
+
+/* A 4 x 6 inch table-tent face requires a 4 x 12 inch flat dieline. */
+.table-tent {
+  width: 800px !important;
+  height: 2400px !important;
+  /* Seated viewing: the primary stat reaches roughly 49pt at final size. */
+  --pb-template-text-scale: 1.7;
+}
+
+.table-tent .panel-a,
+.table-tent .panel-b {
+  flex: 0 0 1200px !important;
+  padding: 88px 72px 72px;
+}
+
+.table-tent .panel-a { justify-content: center; }
+.table-tent .panel-b { justify-content: center; }
+.table-tent .quiz-row { margin-top: 64px !important; }
+.table-tent :is(.quiz-cta, .helpline-number, .helpline-sub) {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.table-tent .legal-row { margin-top: 64px !important; }
+.table-tent .qr-small { width: 150px !important; height: 150px !important; }
+.table-tent :is(.legal-text, .helpline-label, .helpline-sub, .quiz-cta) {
+  font-size: 34px !important;
+  line-height: 1.35 !important;
+}
+.table-tent .odds-label { font-size: 34px !important; }
+
+/* Venue signage defaults to the specified US finished-size ratios. */
+.sign-atm {
+  width: 700px !important;
+  height: 906px !important;
+  --pb-template-text-scale: calc(var(--pb-locale-text-scale, 1) * 0.9);
+}
+
+.sign-atm .sign-content { padding-top: 36px; padding-bottom: 36px; }
+.sign-atm .sign-body { margin-bottom: 28px; }
+.sign-atm .tool-highlight { padding: 22px 28px; margin-bottom: 24px; }
+.sign-atm .qr-placeholder { width: 165px !important; height: 165px !important; }
+html:lang(ar) .sign-atm { --pb-template-text-scale: 0.8; }
+
+/* Environmental signs inherit the same principle at their own physical
+   sizes: hierarchy through weight and position, never illegible text. */
+.sign-entrance .qr-text { font-size: 28px !important; }
+.sign-entrance .qr-text strong { font-size: 32px !important; }
+.sign-entrance .sign-footer {
+  align-items: flex-start !important;
+  flex-direction: column;
+}
+.sign-entrance :is(.footer-helpline, .footer-legal) {
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+}
+
+.sign-atm :is(.sign-body, .tool-highlight-body, .qr-text) {
+  font-size: 24px !important;
+  line-height: 1.35 !important;
+}
+.sign-atm .tool-highlight-label { font-size: 22px !important; }
+.sign-atm :is(.footer-helpline, .footer-legal) {
+  font-size: 22px !important;
+  line-height: 1.3 !important;
+}
+
+.sign-floor {
+  width: 900px !important;
+  height: 1391px !important;
+  --pb-template-text-scale: calc(var(--pb-locale-text-scale, 1) * 1.12);
+}
+
+.sign-floor .sign-layout {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 152px 64px 170px;
+  gap: 80px;
+}
+
+.sign-floor .sign-left,
+.sign-floor .sign-right {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.sign-floor .sign-left { flex: 0 0 auto; }
+
+.sign-floor .sign-right {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.sign-floor .odds-card {
+  margin: 0 !important;
+  min-width: 0;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center !important;
+}
+
+.sign-floor .qr-placeholder {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.sign-floor :is(.section-label, .sign-body, .odds-game, .bottom-logo, .bottom-legal) {
+  font-size: 28px !important;
+  line-height: 1.3 !important;
+}
+.sign-floor .qr-text { font-size: 34px !important; line-height: 1.25 !important; }
+.sign-floor .bottom-helpline { font-size: 34px !important; line-height: 1.25 !important; }
+.sign-floor .sign-bottom {
+  align-items: flex-start !important;
+  flex-wrap: wrap;
+  gap: 12px 24px !important;
+}
+.sign-floor .bottom-legal { flex-basis: 100%; }
+
+.sign-restroom {
+  width: 550px !important;
+  height: 850px !important;
+}
+
+.sign-restroom .restroom-content {
+  max-width: none !important;
+  padding: 88px 56px 110px !important;
+  text-align: left !important;
+}
+
+.sign-restroom .restroom-headline { font-size: calc(48px * var(--pb-template-text-scale, 1)); margin-bottom: 28px; }
+.sign-restroom .restroom-body { font-size: calc(24px * var(--pb-template-text-scale, 1)); margin-bottom: 48px; }
+.sign-restroom .restroom-number { font-size: calc(52px * var(--pb-template-text-scale, 1)); margin-bottom: 24px; }
+.sign-restroom .restroom-channels { font-size: 20px !important; }
+.sign-restroom :is(.restroom-number, .restroom-channels) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.sign-restroom :is(.restroom-logo, .restroom-legal) {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+}
+.sign-restroom .restroom-legal { color: var(--pb-color-neutral-500) !important; }
+
+.sign-staff {
+  width: 900px !important;
+  height: 1391px !important;
+  --pb-template-text-scale: calc(var(--pb-locale-text-scale, 1) * 1.08);
+}
+
+.sign-staff .staff-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.sign-staff .staff-item { margin-bottom: 0; }
+.sign-staff .internal-badge { font-size: 20px !important; }
+.sign-staff .item-content p { font-size: 22px !important; line-height: 1.45 !important; }
+.sign-staff :is(.footer-legal, .footer-note) {
+  font-size: 20px !important;
+  line-height: 1.3 !important;
+}
+.sign-staff .staff-footer {
+  align-items: flex-start !important;
+  flex-wrap: wrap;
+  gap: 12px 28px !important;
+}
+
+body.pb-profile-restroom-mirror .sign-restroom {
+  width: 700px !important;
+  height: 500px !important;
+}
+
+body.pb-profile-restroom-mirror .sign-restroom .restroom-content {
+  padding: 52px 64px 72px !important;
+  text-align: center !important;
+}
+
+body.pb-profile-restroom-mirror .sign-restroom .restroom-headline { font-size: calc(40px * var(--pb-template-text-scale, 1)); margin-bottom: 12px; }
+body.pb-profile-restroom-mirror .sign-restroom .restroom-body { font-size: calc(20px * var(--pb-template-text-scale, 1)); margin-bottom: 22px; }
+body.pb-profile-restroom-mirror .sign-restroom .restroom-number { font-size: calc(44px * var(--pb-template-text-scale, 1)); margin-bottom: 12px; }
+body.pb-profile-restroom-mirror .sign-restroom .restroom-channels { font-size: calc(16px * var(--pb-template-text-scale, 1)); }
+
+/* US production artboards use direct inch-to-logical-pixel mappings. */
+body.pb-profile-print-us .sign-atm { width: 850px !important; height: 1100px !important; }
+body.pb-profile-print-us .sign-floor,
+body.pb-profile-print-us .sign-staff { width: 1100px !important; height: 1700px !important; }
+
+/* ISO production ratios. Content remains fluid within each flex layout. */
+body.pb-profile-print-iso .poster { width: 1800px !important; height: 2546px !important; }
+body.pb-profile-print-iso .sign-entrance,
+body.pb-profile-print-iso .sign-floor,
+body.pb-profile-print-iso .sign-staff { width: 900px !important; height: 1273px !important; }
+body.pb-profile-print-iso .sign-atm { width: 700px !important; height: 990px !important; }
+body.pb-profile-print-iso .sign-restroom { width: 550px !important; height: 780px !important; }
+
+/* Digital displays: use the screen more deliberately and keep 48px title-safe. */
+.display-screen .screen-body { gap: 72px; }
+.display-screen .content-left { flex: 1 1 auto; min-width: 0; }
+.display-screen .content-right {
+  flex: 0 0 360px;
+  margin-left: 0 !important;
+  padding: 48px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.display-screen .qr-box { width: 240px; height: 240px; }
+.display-screen :is(.pillar-badge, .stat-label, .qr-label, .legal-text) {
+  font-size: 32px !important;
+  line-height: 1.25 !important;
+}
+.display-screen .helpline-text { font-size: 36px !important; line-height: 1.25 !important; }
+.display-screen .legal-strip { min-height: 70px; padding: 16px 72px !important; }
+.display-portrait .display-content { justify-content: center; padding-top: 64px; padding-bottom: 64px; }
+.display-portrait .qr-placeholder { width: 220px; height: 220px; }
+.display-portrait :is(.odds-game, .display-body, .qr-text span, .footer-legal) {
+  font-size: 32px !important;
+  line-height: 1.3 !important;
+}
+.display-portrait .pillar-badge { font-size: 32px !important; }
+.display-portrait .display-footer,
+.display-portrait .display-footer span {
+  font-size: 34px !important;
+  line-height: 1.25 !important;
+}
+.display-portrait .display-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.display-portrait .display-footer .footer-legal { display: block; }
+
+/* Named web-banner outputs. Nonessential brand/support text collapses first. */
+body.pb-profile-banner-320x50 .app-banner,
+body.pb-profile-banner-300x50 .app-banner {
+  height: 50px !important;
+}
+
+body.pb-profile-banner-320x50 .app-banner { width: 320px !important; }
+body.pb-profile-banner-300x50 .app-banner { width: 300px !important; }
+body.pb-profile-banner-320x100 .app-banner { width: 320px !important; height: 100px !important; }
+
+body.pb-profile-banner-320x50 .app-banner .banner-inner,
+body.pb-profile-banner-300x50 .app-banner .banner-inner { padding: 0 10px; gap: 8px; }
+body.pb-profile-banner-320x100 .app-banner .banner-inner { padding: 0 14px; gap: 10px; }
+
+body.pb-profile-banner-320x50 .app-banner .card-logo,
+body.pb-profile-banner-300x50 .app-banner .card-logo,
+
+body.pb-profile-banner-320x50 .app-banner .banner-message,
+body.pb-profile-banner-300x50 .app-banner .banner-message,
+body.pb-profile-banner-320x100 .app-banner .banner-message { font-size: 0 !important; }
+
+body.pb-profile-banner-320x50 .app-banner .banner-message::after,
+body.pb-profile-banner-300x50 .app-banner .banner-message::after {
+  content: attr(data-compact);
+  font-size: 16px;
+}
+
+body.pb-profile-banner-320x100 .app-banner .banner-message::after {
+  content: attr(data-compact);
+  font-size: 16px;
+}
+
+body.pb-profile-banner-320x50 .app-banner .cta-pill,
+body.pb-profile-banner-300x50 .app-banner .cta-pill { padding: 6px 10px; font-size: 16px !important; }
+body.pb-profile-banner-320x100 .app-banner .cta-pill { padding: 8px 12px; font-size: 16px !important; }
+
+/* Render profiles place bleed outside trim; body supplies edge extension. */
+body.pb-production-export {
+  margin: 0 !important;
+  padding: var(--pb-export-bleed, 0) !important;
+  overflow: visible !important;
+}

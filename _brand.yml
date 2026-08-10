@@ -571,6 +571,10 @@ legal:
     united-arab-emirates: 21     # UAE placeholder — verify per licensed venue
   disclaimers:
     age: "You must be {{MIN_AGE}}+ to gamble."
+    age_by_jurisdiction:
+      japan: "ギャンブルは{{MIN_AGE}}歳以上の方のみご利用いただけます。"
+      macau: "未满{{MIN_AGE}}岁不得参与博彩。"
+      united-arab-emirates: "يُحظر القمار على من هم دون {{MIN_AGE}} عامًا."
     general: "Powered by Playbook (CC0)"
 
 

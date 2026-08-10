@@ -17,6 +17,7 @@
   .card-header { padding: 56px 64px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .card-logo { font-family: var(--pb-font-heading); font-size: calc(32px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .card-pillar { font-family: var(--pb-font-heading); font-size: calc(20px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 8px 22px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .card-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 64px; position: relative; z-index: 1; }
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(18px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); margin-bottom: 20px; }
   .myth-intro { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); font-weight: 400; color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); margin-bottom: 12px; line-height: 1.8; }
@@ -45,27 +46,22 @@
   </style>
   </head>
 <body>
-<div class="social-card">
+<div class="social-card" data-layout="single-proof">
   <div class="card-header">
     <span class="card-logo">Playbook</span>
     
   </div>
   <div class="card-body">
-    <div class="myth-label">الاعتقاد مقابل الأرقام</div>
-    <div class="myth-intro">يعتقد بعض اللاعبين:</div>
-    <div class="myth-statement">«هذه الآلة تعرفني وتحمل لي الحظ»</div>
-    <div class="fact-statement">في الواقع، كل دورة يحسبها <strong>مولّد الأرقام العشوائية</strong>. الآلة لا تتعرف على أحد، ولا تحتفظ بأي ذاكرة للنتائج السابقة.</div>
+    <div class="myth-label">الخرافة مقابل الحسابات</div>
+    <div class="myth-intro">يعتقد بعض اللاعبين أن:</div>
+    <div class="myth-statement">«هذه آلة الحظ الخاصة بي»</div>
+    <div class="fact-statement">كل لفة يحددها <strong>مولّد الأرقام العشوائية</strong>. الآلة لا تعرفك ولا تتذكر النتيجة السابقة.</div>
     <div class="stat-row">
       <div class="stat-card">
-        <div class="game">نسبة الكازينو في آلات القمار</div>
-        <div class="edge orange">2-15%</div>
-      </div>
-      <div class="stat-card">
-        <div class="game">ذاكرة مولّد الأرقام العشوائية</div>
+        <div class="game">ذاكرة مولّد الأرقام العشوائية:</div>
         <div class="edge teal">0</div>
       </div>
     </div>
-    <div class="share-prompt">يمكن مشاركة هذه المعلومات مع الآخرين.</div>
   </div>
   <div class="card-footer">
     <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>

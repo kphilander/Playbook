@@ -17,6 +17,7 @@
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--pb-color-secondary); margin-bottom: 28px; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(76px * var(--pb-template-text-scale, 1)); font-weight: 900; line-height: 1.1; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 24px; letter-spacing: -0.03em; }
@@ -43,7 +44,7 @@
   <link rel="stylesheet" href="brand-inject.css">
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="single-stat">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     
@@ -54,27 +55,15 @@
     <div class="subhead">Every number combination has the exact same chance. No exceptions.</div>
     <div class="stat-grid">
       <div class="stat-col">
-        <div class="stat-game">6/49 Jackpot</div>
-        <div class="stat-edge teal">1 in 14M</div>
-        <div class="stat-note">13,983,816 to 1</div>
-      </div>
-      <div class="stat-col">
         <div class="stat-game">Mega Jackpot</div>
         <div class="stat-edge white">1 in 302M</div>
         <div class="stat-note">302,575,350 to 1</div>
       </div>
-      <div class="stat-col">
-        <div class="stat-game">Scratch Cards</div>
-        <div class="stat-edge orange">Varies</div>
-        <div class="stat-note">Check the back of the card</div>
-      </div>
     </div>
-    <div class="context"><strong>Lucky numbers, birthdays, systems</strong> — the math doesn't care. Every combination is equally (un)likely.</div>
     <div class="qr-row">
       <div class="qr-placeholder">QR</div>
-      <div class="qr-label">Scan for the full breakdown<span>Lottery odds guide and scratch card prize breakdown</span></div>
+      <div class="qr-label">Scan for the lottery odds guide</div>
     </div>
-    <a href="#" class="poster-cta">Explore all the tools at {{PROGRAM_URL}}</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>

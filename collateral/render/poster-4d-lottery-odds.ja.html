@@ -17,6 +17,7 @@
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 28px; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(82px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.3; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 24px; }
@@ -50,38 +51,26 @@
   </style>
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="single-stat">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     
   </div>
   <div class="poster-body">
     <div class="eyebrow">宝くじ</div>
-    <div class="headline">確率を知る。<br>思っているより大きな数字です。</div>
+    <div class="headline">当せん確率は、<br>想像よりずっと低い。</div>
     <div class="subhead">どの数字の組み合わせも確率はまったく同じです。例外はありません。</div>
     <div class="stat-grid">
       <div class="stat-col">
-        <div class="stat-game">6/49ジャックポット</div>
-        <div class="stat-edge teal">1,400万分の1</div>
-        <div class="stat-note">13,983,816 分の1</div>
-      </div>
-      <div class="stat-col">
         <div class="stat-game">メガジャックポット</div>
-        <div class="stat-edge white">3億分の1</div>
-        <div class="stat-note">302,575,350 分の1</div>
-      </div>
-      <div class="stat-col">
-        <div class="stat-game">スクラッチくじ</div>
-        <div class="stat-edge orange">さまざま</div>
-        <div class="stat-note">券の裏面をご確認ください</div>
+        <div class="stat-edge white">約3億分の1</div>
+        <div class="stat-note">正確には302,575,350分の1</div>
       </div>
     </div>
-    <div class="context"><strong>幸運の数字、誕生日、独自の法則</strong> ― 数学はそれらを区別しません。どの組み合わせも、当たる確率は等しく、そしてわずかです。</div>
     <div class="qr-row">
       <div class="qr-placeholder">QR</div>
-      <div class="qr-label">スキャンして詳細を確認<span>宝くじの確率ガイドとスクラッチくじの賞金内訳</span></div>
+      <div class="qr-label">宝くじの確率ガイドを見る</div>
     </div>
-    <a href="#" class="poster-cta">{{PROGRAM_URL}} ですべてのツールをご覧ください</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>

@@ -20,7 +20,8 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 | Property | Value |
 |---|---|
 | **Size** | 3.5 x 2 inches (89 x 51mm) — standard business card |
-| **Render dimensions** | 700 x 400px (2x for screen rendering) |
+| **Logical preview** | 700 x 400px |
+| **Production output** | 1050 x 600px trim at 300dpi; `print-us` adds 0.125" bleed |
 | **Bleed** | 0.125" (3mm) on all sides |
 | **Safe zone** | 0.125" (3mm) inside trim |
 | **Color mode** | CMYK |
@@ -40,6 +41,7 @@ Standard business card spec for {{PROGRAM_NAME}} helpline distribution. Designed
 |---|---|
 | **Background** | Navy `#1B2838` |
 | **Accent bar** | 3px gradient strip at top: orange `#FF6B35` → emerald `#10B981` |
+
 | **Logo** | {{PROGRAM_NAME}} wordmark, horizontal (B2) layout, reversed variant (white wordmark on navy bg), top-left. Min height 0.25" (print). Below 0.25", use logomark only (no wordmark). Maintain 1x logo-height clear space. At business-card scale, the helpline badge lockup format ([Logomark] &#124; Free help 24/7: {{HELPLINE_NUMBER}}) may be used. See [logo system](../../brand-book/03-visual-identity.md#1-logo-system) |
 | **Operator logo** | `[Your logo here]` placeholder, top-right, small. Co-branding: {{PROGRAM_NAME}} logo no smaller than 60% of operator logo height; vertical divider (neutral_300 `#A8A8C0`, 1px) between logos |
 

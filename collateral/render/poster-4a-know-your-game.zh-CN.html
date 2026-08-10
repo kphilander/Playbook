@@ -17,6 +17,7 @@
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 28px; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(88px * var(--pb-template-text-scale, 1)); font-weight: 700; line-height: 1.3; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 24px; }
@@ -50,15 +51,15 @@
   </style>
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="two-stats">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     
   </div>
   <div class="poster-body">
     <div class="eyebrow">了解数字</div>
-    <div class="headline">了解游戏。<br>自主掌控。</div>
-    <div class="subhead">每款游戏都有庄家优势。以下是各游戏的数据。</div>
+    <div class="headline">了解游戏。<br>按自己的节奏玩。</div>
+    <div class="subhead">每款游戏都有庄家优势。先看看两个代表性的数字。</div>
     <div class="stat-grid">
       <div class="stat-col">
         <div class="stat-game">二十一点</div>
@@ -66,22 +67,15 @@
         <div class="stat-note">基本策略</div>
       </div>
       <div class="stat-col">
-        <div class="stat-game">轮盘</div>
-        <div class="stat-edge white">5.26%</div>
-        <div class="stat-note">美式双零</div>
-      </div>
-      <div class="stat-col">
         <div class="stat-game">老虎机</div>
         <div class="stat-edge orange">2-15%</div>
         <div class="stat-note">因机器而异</div>
       </div>
     </div>
-    <div class="context">庄家优势越低，<strong>平均游戏时间越长</strong>。</div>
     <div class="qr-row">
       <div class="qr-placeholder">QR</div>
-      <div class="qr-label">扫码查看完整数据<span>免费赔率计算器及游戏指南</span></div>
+      <div class="qr-label">扫码查看各游戏数据</div>
     </div>
-    <a href="#" class="poster-cta">访问 {{PROGRAM_URL}} 了解所有工具</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>

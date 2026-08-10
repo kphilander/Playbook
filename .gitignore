@@ -2,6 +2,8 @@ node_modules/
 .DS_Store
 
 # Build artifacts
+collateral/render/production/
+collateral/render/comparison/before/
 website/tsconfig.tsbuildinfo
 website/.next/
 website/out/

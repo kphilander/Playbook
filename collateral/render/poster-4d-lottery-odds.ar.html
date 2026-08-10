@@ -17,6 +17,7 @@
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .eyebrow { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-secondary); margin-bottom: 28px; }
   .headline { font-family: var(--pb-font-heading); font-size: calc(82px * var(--pb-template-text-scale, 1)); font-weight: 900; line-height: 1.5; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 24px; }
@@ -50,38 +51,26 @@
   </style>
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="single-stat">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     
   </div>
   <div class="poster-body">
     <div class="eyebrow">اليانصيب</div>
-    <div class="headline">معرفة الاحتمالات.<br>إنها أكبر مما يظن كثيرون.</div>
+    <div class="headline">فرصة الفوز أقل<br>بكثير مما تتخيل.</div>
     <div class="subhead">لكل توليفة أرقام الاحتمال نفسه تمامًا. لا استثناءات.</div>
     <div class="stat-grid">
       <div class="stat-col">
-        <div class="stat-game">جائزة 6/49</div>
-        <div class="stat-edge teal">1 من 14M</div>
-        <div class="stat-note">13,983,816 إلى 1</div>
-      </div>
-      <div class="stat-col">
         <div class="stat-game">الجائزة الكبرى</div>
-        <div class="stat-edge white">1 من 302M</div>
-        <div class="stat-note">302,575,350 إلى 1</div>
-      </div>
-      <div class="stat-col">
-        <div class="stat-game">بطاقات الخدش</div>
-        <div class="stat-edge orange">يختلف</div>
-        <div class="stat-note">للاطلاع على الجهة الخلفية للبطاقة</div>
+        <div class="stat-edge white">1 من 302 مليون</div>
+        <div class="stat-note">الرقم الدقيق: 1 من 302,575,350</div>
       </div>
     </div>
-    <div class="context"><strong>أرقام الحظ وأعياد الميلاد والأنظمة</strong> — الأرقام لا تتأثر بأيٍّ منها. كل توليفة متساوية الاحتمال.</div>
     <div class="qr-row">
       <div class="qr-placeholder">QR</div>
-      <div class="qr-label">امسح لعرض التفاصيل الكاملة<span>دليل احتمالات اليانصيب وبيان جوائز بطاقات الخدش</span></div>
+      <div class="qr-label">امسح لعرض دليل احتمالات اليانصيب</div>
     </div>
-    <a href="#" class="poster-cta">لاستكشاف جميع الأدوات، يُرجى زيارة {{PROGRAM_URL}}</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>

@@ -17,6 +17,7 @@
   .poster-header { padding: 72px 96px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
   .poster-logo { font-family: var(--pb-font-heading); font-size: calc(48px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
   .poster-pillar { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-brand-ink, var(--pb-color-primary)); background: var(--pb-color-secondary); padding: 12px 28px; border-radius: 100px; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+
   .poster-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 96px; position: relative; z-index: 1; }
   .myth-label { font-family: var(--pb-font-heading); font-size: calc(24px * var(--pb-template-text-scale, 1)); font-weight: 700; color: var(--pb-color-accent); margin-bottom: 32px; }
   .myth-intro { font-family: var(--pb-font-body); font-size: calc(36px * var(--pb-template-text-scale, 1)); font-weight: 400; color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); margin-bottom: 16px; line-height: 1.7; }
@@ -47,32 +48,24 @@
   </style>
   </head>
 <body>
-<div class="poster">
+<div class="poster" data-layout="single-proof">
   <div class="poster-header">
     <span class="poster-logo">Playbook</span>
     
   </div>
   <div class="poster-body">
-    <div class="myth-label">误区与数字</div>
-    <div class="myth-intro">有些玩家认为：</div>
-    <div class="myth-statement">「我应该要赢一次了」</div>
+    <div class="myth-label">误区与真相</div>
+    <div class="myth-intro">有些玩家会想：</div>
+    <div class="myth-statement">「该轮到我赢了」</div>
     <div class="divider"></div>
-    <div class="fact-statement">事实上，此即<strong>赌徒谬误</strong>。过往结果不会影响下一次的发生。</div>
-    <div class="fact-box">
-      <div class="fact-box-title">实际运作方式</div>
-      <div class="fact-box-text">轮盘<strong>并无记忆</strong>。连续十次红色后，第十一次出现黑色的赔率<strong>仍完全相同</strong>。每一次旋转均为独立事件。</div>
-    </div>
+    <div class="fact-statement">这就是<strong>赌徒谬误</strong>。过去的结果不会改变下一次的概率。</div>
     <div class="stat-row">
       <div class="stat-item">
         <div class="stat-number">0%</div>
-        <div class="stat-label">过往旋转对<br>下一次结果的影响</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">47.4%</div>
-        <div class="stat-label">每一次旋转<br>出现红色或黑色的概率</div>
+        <div class="stat-label">过去的旋转对下一次结果的影响</div>
       </div>
     </div>
-    <a href="#" class="quiz-cta">游戏知识测验 — 立即参与</a>
+    <a href="#" class="quiz-cta">参加游戏知识测验</a>
   </div>
   <div class="poster-footer">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>

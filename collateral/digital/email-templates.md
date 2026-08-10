@@ -22,6 +22,8 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 | Property | Value |
 |---|---|
 | **Max width** | 600px |
+| **Width behavior** | Fluid `width: 100%` below 600px; natural document height |
+| **QA widths** | 320px, 375px, and 600px |
 | **Layout method** | Table-based (email client compatibility) |
 | **CSS** | Inline only — no `<style>` block |
 | **Background** | White `#FFFFFF` body, navy `#1B2838` hero |
@@ -32,6 +34,8 @@ Production-ready copy for 4 transactional email templates in the {{PROGRAM_NAME}
 | **Link color** | Emerald `#10B981` |
 | **CTA buttons** | Emerald `#10B981` bg, navy `#1B2838` text, 16px padding, rounded 6px |
 | **Accent bar** | 4px gradient `#FF6B35` → `#10B981` (top of email, use image) |
+
+The rendered PNG is a visual QA artifact, not an email attachment or fixed-height deliverable. Production email must remain responsive and be tested in the target email clients.
 
 ---
 
