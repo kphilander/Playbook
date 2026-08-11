@@ -91,6 +91,11 @@ All production print profiles render trim art at approximately 300dpi and add 0.
 
 `print-us` and `print-iso` create 300dpi-ready pixel geometry with bleed. The PNG pipeline is RGB; a print vendor or prepress step must assign the final print color profile, convert to CMYK, add crop marks if requested, and confirm the printer's fold allowance.
 
+The before/after comparison sheet includes a **Production guides** toggle for
+print templates. It shades the bleed, marks trim and content-safe lines, and
+shows fold-protected bands on brochures and the table tent. These annotations
+are review-only and are not burned into exported artwork.
+
 ## Commands
 
 ```bash
