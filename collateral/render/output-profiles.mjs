@@ -52,6 +52,54 @@ const printIso = {
   '.sign-staff': { width: 900, height: 1273, scale: 3.898, bleed: 9.1 },
 };
 
+/**
+ * Physical geometry used by the comparison sheet's optional production
+ * guides. These are review annotations only: the renderer still owns export
+ * resolution and a print vendor owns final crop/fold marks.
+ *
+ * `safe` and `foldSafe` are inches inside the finished trim. ISO exports use
+ * the equivalent 6mm safe area and 3mm fold buffer.
+ */
+const printReviewSpecs = [
+  { match: /^poster-/, trim: [18, 24], safe: 0.25 },
+  { match: /^rack-card-/, trim: [4, 9], safe: 0.25 },
+  { match: /^table-tent-/, trim: [4, 12], safe: 0.25, folds: [{ axis: 'y', at: 0.5, foldSafe: 0.25 }] },
+  { match: /^helpline-card-/, trim: [3.5, 2], safe: 0.125 },
+  {
+    match: /^brochure-trifold-/,
+    trim: [11, 8.5],
+    safe: 0.25,
+    folds: [
+      { axis: 'x', at: 3.6875 / 11, foldSafe: 0.125 },
+      { axis: 'x', at: 7.375 / 11, foldSafe: 0.125 },
+    ],
+  },
+  {
+    match: /^brochure-cover-/,
+    trim: [11, 8.5],
+    safe: 0.25,
+    folds: [
+      { axis: 'x', at: 3.625 / 11, foldSafe: 0.125 },
+      { axis: 'x', at: 7.3125 / 11, foldSafe: 0.125 },
+    ],
+  },
+  { match: /^sign-entrance-/, trim: [18, 24], safe: 0.25 },
+  { match: /^sign-atm-/, trim: [8.5, 11], safe: 0.25 },
+  { match: /^sign-floor-/, trim: [11, 17], safe: 0.25 },
+  { match: /^sign-restroom-/, trim: [5.5, 8.5], safe: 0.25 },
+  { match: /^sign-staff-/, trim: [11, 17], safe: 0.25 },
+];
+
+export function resolvePrintReviewSpec(filename) {
+  const spec = printReviewSpecs.find(({ match }) => match.test(filename));
+  if (!spec) return null;
+  return {
+    bleedLabel: '0.125in / 3mm bleed',
+    safeLabel: spec.safe === 0.125 ? '0.125in / 3mm safe' : '0.25in / 6mm safe',
+    ...spec,
+  };
+}
+
 export const outputProfiles = {
   preview: {
     description: 'Existing manageable-size PNG previews.',

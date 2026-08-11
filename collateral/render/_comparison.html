@@ -16,6 +16,9 @@
     --teal: #00d4aa;
     --orange: #ff6b35;
     --red: #ff657a;
+    --guide-trim: #ff4fd8;
+    --guide-safe: #52e8ff;
+    --guide-fold: #ffd166;
     --line: rgba(255,255,255,.1);
     --after-opacity: .55;
   }
@@ -47,6 +50,15 @@
   .opacity-control { display: none; align-items: center; gap: 8px; color: var(--muted); font-size: 11px; }
   .opacity-control input { width: 110px; accent-color: var(--teal); }
   body.overlay-mode .opacity-control { display: flex; }
+  .guide-key { display: none; max-width: 1540px; margin: 0 auto; padding: 12px 32px 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+  body.guides-mode .guide-key { display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; }
+  .guide-key strong { color: var(--ink); }
+  .guide-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .key-swatch { width: 22px; height: 0; border-top: 2px solid currentColor; }
+  .key-bleed { width: 22px; height: 12px; border: 1px solid var(--guide-trim); background: rgba(255,79,216,.2); }
+  .key-trim { color: var(--guide-trim); }
+  .key-safe { color: var(--guide-safe); border-top-style: dashed; }
+  .key-fold { color: var(--guide-fold); }
   .results { max-width: 1540px; margin: 0 auto; padding: 18px 32px 0; color: var(--faint); font-size: 12px; }
   .sheet { max-width: 1540px; margin: 0 auto; padding: 22px 32px 80px; display: grid; gap: 26px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .comparison-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); box-shadow: 0 18px 50px rgba(0,0,0,.17); }
@@ -67,7 +79,7 @@
   figcaption { min-height: 44px; padding: 10px 13px; display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--faint); border-bottom: 1px solid var(--line); font-size: 10px; }
   figcaption strong { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
   .image-stage, .empty-state, .overlay-stage { height: 410px; }
-  .image-stage { display: flex; align-items: center; justify-content: center; padding: 18px; background-color: #0c151f; background-image: linear-gradient(45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(-45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255,255,255,.025) 75%), linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.025) 75%); background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
+  .image-stage { position: relative; display: flex; align-items: center; justify-content: center; padding: 18px; background-color: #0c151f; background-image: linear-gradient(45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(-45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255,255,255,.025) 75%), linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.025) 75%); background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
   .image-stage img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
   .empty-state { display: grid; place-items: center; padding: 24px; color: var(--faint); background: #0c151f; text-align: center; font-size: 12px; }
   .empty-state span { max-width: 180px; }
@@ -76,20 +88,33 @@
   .overlay-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
   .overlay-stage .overlay-after { opacity: var(--after-opacity); }
   .overlay-stage .empty-state { position: absolute; inset: 0; height: auto; }
-  .overlay-label { position: absolute; z-index: 3; top: 10px; padding: 5px 8px; border-radius: 6px; color: #071019; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .overlay-label { position: absolute; z-index: 5; top: 10px; padding: 5px 8px; border-radius: 6px; color: #071019; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
   .overlay-label-before { left: 10px; background: var(--orange); }
   .overlay-label-after { right: 10px; background: var(--teal); }
+  .production-guide { display: none; position: absolute; z-index: 4; overflow: hidden; pointer-events: none; }
+  body.guides-mode .production-guide { display: block; }
+  .trim-guide, .safe-guide, .fold-zone, .fold-line { position: absolute; }
+  .trim-guide { inset: var(--trim-y) var(--trim-x); border: 2px solid var(--guide-trim); box-shadow: 0 0 0 9999px rgba(255,79,216,.18), inset 0 0 0 1px rgba(11,19,28,.65); }
+  .safe-guide { inset: var(--safe-y) var(--safe-x); border: 2px dashed var(--guide-safe); filter: drop-shadow(0 0 1px #071019); }
+  .fold-zone { background: rgba(255,209,102,.2); }
+  .fold-zone-x { left: var(--fold-start); top: var(--trim-y); bottom: var(--trim-y); width: var(--fold-size); }
+  .fold-zone-y { top: var(--fold-start); left: var(--trim-x); right: var(--trim-x); height: var(--fold-size); }
+  .fold-line { filter: drop-shadow(0 0 1px #071019); }
+  .fold-line-x { left: var(--fold-center); top: var(--trim-y); bottom: var(--trim-y); border-left: 2px dashed var(--guide-fold); }
+  .fold-line-y { top: var(--fold-center); left: var(--trim-x); right: var(--trim-x); border-top: 2px dashed var(--guide-fold); }
   body.overlay-mode .split-view { display: none; }
   body.overlay-mode .overlay-view { display: block; }
   .card-footer { min-height: 58px; padding: 13px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--faint); border-top: 1px solid var(--line); font-size: 10px; }
   .card-footer div { display: flex; gap: 12px; white-space: nowrap; }
   .card-footer a { color: var(--teal); font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: .06em; }
   .card-footer a:hover { color: #4ee3c5; }
+  .guide-available { color: var(--guide-safe); font-weight: 700; }
   .page-footer { padding: 20px 32px 54px; color: var(--faint); text-align: center; font-size: 11px; }
   @media (max-width: 1000px) { .sheet { grid-template-columns: 1fr; } }
   @media (max-width: 680px) {
     .masthead { padding: 42px 18px 26px; }
     .toolbar-inner, .sheet, .results { padding-inline: 18px; }
+    .guide-key { padding-inline: 18px; }
     .sheet { gap: 18px; }
     .split-view { grid-template-columns: 1fr; }
     figure + figure { border-left: 0; border-top: 1px solid var(--line); }
@@ -115,14 +140,14 @@
   <header class="masthead">
     <div class="kicker">Playbook collateral review</div>
     <h1>Before / after comparison sheet</h1>
-    <p class="intro">The left side preserves the committed baseline from <strong>709c4ae</strong>. The right side shows the current regenerated English preview. Use overlay mode to expose shifts in scale, alignment, safe zones, and content density.</p>
+    <p class="intro">The left side preserves the committed baseline from <strong>709c4ae</strong>. The right side shows the current regenerated English preview. Use overlay mode to expose layout shifts, then switch on production guides to review bleed, trim, content-safe, and fold-protected zones.</p>
     <div class="stats">
       <div class="stat"><strong>172</strong><span>Total templates</span></div>
       <div class="stat"><strong>148</strong><span>Revised</span></div>
       <div class="stat"><strong>24</strong><span>New</span></div>
       <div class="stat"><strong>0</strong><span>Removed</span></div>
     </div>
-    <div class="meta">Baseline 709c4ae · 2026-08-06 &nbsp;|&nbsp; Generated Aug 9, 2026, 7:03 PM &nbsp;|&nbsp; <a href="./_gallery.html">Full template gallery</a></div>
+    <div class="meta">Baseline 709c4ae · 2026-08-06 &nbsp;|&nbsp; Generated Aug 11, 2026, 11:57 AM &nbsp;|&nbsp; <a href="./_gallery.html">Full template gallery</a></div>
   </header>
 
   <div class="toolbar">
@@ -142,10 +167,20 @@
       <button type="button" data-status-filter="new">New <span>24</span></button>
       <input class="search" id="search" type="search" placeholder="Search templates…" aria-label="Search templates">
       <div class="view-controls">
+        <button type="button" id="guideToggle" aria-pressed="false">Production guides <span>44</span></button>
         <button type="button" id="viewToggle">Overlay mode</button>
         <label class="opacity-control">After <input id="opacity" type="range" min="0" max="100" value="55"> <span id="opacityValue">55%</span></label>
       </div>
     </div>
+  </div>
+
+  <div class="guide-key" id="guideKey">
+    <strong>Review-only guides</strong>
+    <span><i class="key-swatch key-bleed"></i> Bleed outside trim</span>
+    <span><i class="key-swatch key-trim"></i> Trim line</span>
+    <span><i class="key-swatch key-safe"></i> Content-safe line</span>
+    <span><i class="key-swatch key-fold"></i> Fold line + protected band</span>
+    <span>Final crop marks, color conversion, and tolerances remain a prepress step.</span>
   </div>
 
   <div class="results" id="results">Showing 172 templates</div>
@@ -308,7 +343,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="brochure cover 8b.ar brochure-cover-8b.ar.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="brochure cover 8b.ar brochure-cover-8b.ar.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>05</span> Print</div>
@@ -326,21 +361,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>2448 × 1748px</span></figcaption>
-          <a class="image-stage" href="./brochure-cover-8b.ar.png" target="_blank" rel="noopener"><img src="./brochure-cover-8b.ar.png" alt="Brochure Cover 8B.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./brochure-cover-8b.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./brochure-cover-8b.ar.png" alt="Brochure Cover 8B.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.17469%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.28877%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.04011%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.15419%"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/brochure-cover-8b.ar.png" alt="Brochure Cover 8B.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./brochure-cover-8b.ar.png" alt="Brochure Cover 8B.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./brochure-cover-8b.ar.png" alt="Brochure Cover 8B.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.17469%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.28877%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.04011%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.15419%"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/brochure-cover-8b.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./brochure-cover-8b.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -348,7 +384,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="brochure cover 8b brochure-cover-8b.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="brochure cover 8b brochure-cover-8b.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>06</span> Print</div>
@@ -366,21 +402,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>2448 × 1748px</span></figcaption>
-          <a class="image-stage" href="./brochure-cover-8b.png" target="_blank" rel="noopener"><img src="./brochure-cover-8b.png" alt="Brochure Cover 8B after layout" loading="lazy"></a>
+          <a class="image-stage" href="./brochure-cover-8b.png" target="_blank" rel="noopener"><img class="guide-source" src="./brochure-cover-8b.png" alt="Brochure Cover 8B after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.17469%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.28877%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.04011%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.15419%"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/brochure-cover-8b.png" alt="Brochure Cover 8B before layout" loading="lazy">
-          <img class="overlay-after" src="./brochure-cover-8b.png" alt="Brochure Cover 8B after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./brochure-cover-8b.png" alt="Brochure Cover 8B after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.17469%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.28877%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.04011%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.15419%"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/brochure-cover-8b.png" target="_blank" rel="noopener">Open before</a>
           <a href="./brochure-cover-8b.png" target="_blank" rel="noopener">Open after</a>
@@ -388,7 +425,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="brochure trifold 8a.ar brochure-trifold-8a.ar.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="brochure trifold 8a.ar brochure-trifold-8a.ar.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>07</span> Print</div>
@@ -406,21 +443,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>2448 × 1748px</span></figcaption>
-          <a class="image-stage" href="./brochure-trifold-8a.ar.png" target="_blank" rel="noopener"><img src="./brochure-trifold-8a.ar.png" alt="Brochure Trifold 8A.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./brochure-trifold-8a.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./brochure-trifold-8a.ar.png" alt="Brochure Trifold 8A.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.73173%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.84581%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.59715%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.71123%"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/brochure-trifold-8a.ar.png" alt="Brochure Trifold 8A.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./brochure-trifold-8a.ar.png" alt="Brochure Trifold 8A.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./brochure-trifold-8a.ar.png" alt="Brochure Trifold 8A.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.73173%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.84581%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.59715%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.71123%"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/brochure-trifold-8a.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./brochure-trifold-8a.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -428,7 +466,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="brochure trifold 8a brochure-trifold-8a.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="brochure trifold 8a brochure-trifold-8a.png print updated letter / a4 tri-fold · close read · fold-safe panel sequence">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>08</span> Print</div>
@@ -446,21 +484,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>2448 × 1748px</span></figcaption>
-          <a class="image-stage" href="./brochure-trifold-8a.png" target="_blank" rel="noopener"><img src="./brochure-trifold-8a.png" alt="Brochure Trifold 8A after layout" loading="lazy"></a>
+          <a class="image-stage" href="./brochure-trifold-8a.png" target="_blank" rel="noopener"><img class="guide-source" src="./brochure-trifold-8a.png" alt="Brochure Trifold 8A after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.73173%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.84581%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.59715%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.71123%"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/brochure-trifold-8a.png" alt="Brochure Trifold 8A before layout" loading="lazy">
-          <img class="overlay-after" src="./brochure-trifold-8a.png" alt="Brochure Trifold 8A after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./brochure-trifold-8a.png" alt="Brochure Trifold 8A after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:0.98039%;--trim-y:1.37300%;--safe-x:3.20856%;--safe-y:4.23341%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-x" style="--fold-start:32.73173%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:33.84581%"></span><span class="fold-zone fold-zone-x" style="--fold-start:65.59715%;--fold-size:2.22816%"></span><span class="fold-line fold-line-x" style="--fold-center:66.71123%"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/brochure-trifold-8a.png" target="_blank" rel="noopener">Open before</a>
           <a href="./brochure-trifold-8a.png" target="_blank" rel="noopener">Open after</a>
@@ -3297,7 +3336,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="helpline card 5c.ar helpline-card-5c.ar.png print updated 3.5×2 wallet card · arm’s-length read · contact first">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="helpline card 5c.ar helpline-card-5c.ar.png print updated 3.5×2 wallet card · arm’s-length read · contact first">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>80</span> Print</div>
@@ -3315,21 +3354,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>700 × 400px</span></figcaption>
-          <a class="image-stage" href="./helpline-card-5c.ar.png" target="_blank" rel="noopener"><img src="./helpline-card-5c.ar.png" alt="Helpline Card 5C.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./helpline-card-5c.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./helpline-card-5c.ar.png" alt="Helpline Card 5C.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:3.42857%;--trim-y:6.00000%;--safe-x:6.75510%;--safe-y:11.50000%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/helpline-card-5c.ar.png" alt="Helpline Card 5C.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./helpline-card-5c.ar.png" alt="Helpline Card 5C.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./helpline-card-5c.ar.png" alt="Helpline Card 5C.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:3.42857%;--trim-y:6.00000%;--safe-x:6.75510%;--safe-y:11.50000%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Resized from 748 × 448px to 700 × 400px</span>
+        <span>Resized from 748 × 448px to 700 × 400px · <strong class="guide-available">0.125in / 3mm bleed · 0.125in / 3mm safe</strong></span>
         <div>
           <a href="./comparison/before/helpline-card-5c.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./helpline-card-5c.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -3337,7 +3377,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="helpline card 5c helpline-card-5c.png print updated 3.5×2 wallet card · arm’s-length read · contact first">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="helpline card 5c helpline-card-5c.png print updated 3.5×2 wallet card · arm’s-length read · contact first">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>81</span> Print</div>
@@ -3355,21 +3395,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>748 × 448px</span></figcaption>
-          <a class="image-stage" href="./helpline-card-5c.png" target="_blank" rel="noopener"><img src="./helpline-card-5c.png" alt="Helpline Card 5C after layout" loading="lazy"></a>
+          <a class="image-stage" href="./helpline-card-5c.png" target="_blank" rel="noopener"><img class="guide-source" src="./helpline-card-5c.png" alt="Helpline Card 5C after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:3.20856%;--trim-y:5.35714%;--safe-x:6.55080%;--safe-y:10.93750%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/helpline-card-5c.png" alt="Helpline Card 5C before layout" loading="lazy">
-          <img class="overlay-after" src="./helpline-card-5c.png" alt="Helpline Card 5C after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./helpline-card-5c.png" alt="Helpline Card 5C after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:3.20856%;--trim-y:5.35714%;--safe-x:6.55080%;--safe-y:10.93750%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.125in / 3mm safe</strong></span>
         <div>
           <a href="./comparison/before/helpline-card-5c.png" target="_blank" rel="noopener">Open before</a>
           <a href="./helpline-card-5c.png" target="_blank" rel="noopener">Open after</a>
@@ -4613,7 +4654,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4a know your game.ar poster-4a-know-your-game.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4a know your game.ar poster-4a-know-your-game.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>113</span> Posters</div>
@@ -4631,21 +4672,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4a-know-your-game.ar.png" target="_blank" rel="noopener"><img src="./poster-4a-know-your-game.ar.png" alt="Poster 4A Know Your Game.ar after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4a-know-your-game.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4a-know-your-game.ar.png" alt="Poster 4A Know Your Game.ar after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4a-know-your-game.ar.png" alt="Poster 4A Know Your Game.ar before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4a-know-your-game.ar.png" alt="Poster 4A Know Your Game.ar after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4a-know-your-game.ar.png" alt="Poster 4A Know Your Game.ar after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4a-know-your-game.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4a-know-your-game.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -4653,7 +4695,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4a know your game poster-4a-know-your-game.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4a know your game poster-4a-know-your-game.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>114</span> Posters</div>
@@ -4671,21 +4713,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4a-know-your-game.png" target="_blank" rel="noopener"><img src="./poster-4a-know-your-game.png" alt="Poster 4A Know Your Game after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4a-know-your-game.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4a-know-your-game.png" alt="Poster 4A Know Your Game after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4a-know-your-game.png" alt="Poster 4A Know Your Game before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4a-know-your-game.png" alt="Poster 4A Know Your Game after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4a-know-your-game.png" alt="Poster 4A Know Your Game after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4a-know-your-game.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4a-know-your-game.png" target="_blank" rel="noopener">Open after</a>
@@ -4693,7 +4736,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4b no fine print.ar poster-4b-no-fine-print.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4b no fine print.ar poster-4b-no-fine-print.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>115</span> Posters</div>
@@ -4711,21 +4754,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4b-no-fine-print.ar.png" target="_blank" rel="noopener"><img src="./poster-4b-no-fine-print.ar.png" alt="Poster 4B No Fine Print.ar after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4b-no-fine-print.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4b-no-fine-print.ar.png" alt="Poster 4B No Fine Print.ar after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4b-no-fine-print.ar.png" alt="Poster 4B No Fine Print.ar before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4b-no-fine-print.ar.png" alt="Poster 4B No Fine Print.ar after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4b-no-fine-print.ar.png" alt="Poster 4B No Fine Print.ar after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4b-no-fine-print.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4b-no-fine-print.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -4733,7 +4777,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4b no fine print poster-4b-no-fine-print.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4b no fine print poster-4b-no-fine-print.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>116</span> Posters</div>
@@ -4751,21 +4795,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4b-no-fine-print.png" target="_blank" rel="noopener"><img src="./poster-4b-no-fine-print.png" alt="Poster 4B No Fine Print after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4b-no-fine-print.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4b-no-fine-print.png" alt="Poster 4B No Fine Print after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4b-no-fine-print.png" alt="Poster 4B No Fine Print before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4b-no-fine-print.png" alt="Poster 4B No Fine Print after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4b-no-fine-print.png" alt="Poster 4B No Fine Print after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4b-no-fine-print.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4b-no-fine-print.png" target="_blank" rel="noopener">Open after</a>
@@ -4773,7 +4818,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4c game iq.ar poster-4c-game-iq.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4c game iq.ar poster-4c-game-iq.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>117</span> Posters</div>
@@ -4791,21 +4836,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4c-game-iq.ar.png" target="_blank" rel="noopener"><img src="./poster-4c-game-iq.ar.png" alt="Poster 4C Game Iq.ar after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4c-game-iq.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4c-game-iq.ar.png" alt="Poster 4C Game Iq.ar after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4c-game-iq.ar.png" alt="Poster 4C Game Iq.ar before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4c-game-iq.ar.png" alt="Poster 4C Game Iq.ar after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4c-game-iq.ar.png" alt="Poster 4C Game Iq.ar after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4c-game-iq.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4c-game-iq.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -4813,7 +4859,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4c game iq poster-4c-game-iq.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4c game iq poster-4c-game-iq.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>118</span> Posters</div>
@@ -4831,21 +4877,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4c-game-iq.png" target="_blank" rel="noopener"><img src="./poster-4c-game-iq.png" alt="Poster 4C Game Iq after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4c-game-iq.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4c-game-iq.png" alt="Poster 4C Game Iq after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4c-game-iq.png" alt="Poster 4C Game Iq before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4c-game-iq.png" alt="Poster 4C Game Iq after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4c-game-iq.png" alt="Poster 4C Game Iq after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4c-game-iq.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4c-game-iq.png" target="_blank" rel="noopener">Open after</a>
@@ -4853,7 +4900,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4d lottery odds.ar poster-4d-lottery-odds.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4d lottery odds.ar poster-4d-lottery-odds.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>119</span> Posters</div>
@@ -4871,21 +4918,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4d-lottery-odds.ar.png" target="_blank" rel="noopener"><img src="./poster-4d-lottery-odds.ar.png" alt="Poster 4D Lottery Odds.ar after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4d-lottery-odds.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4d-lottery-odds.ar.png" alt="Poster 4D Lottery Odds.ar after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4d-lottery-odds.ar.png" alt="Poster 4D Lottery Odds.ar before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4d-lottery-odds.ar.png" alt="Poster 4D Lottery Odds.ar after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4d-lottery-odds.ar.png" alt="Poster 4D Lottery Odds.ar after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4d-lottery-odds.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4d-lottery-odds.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -4893,7 +4941,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4d lottery odds poster-4d-lottery-odds.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4d lottery odds poster-4d-lottery-odds.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>120</span> Posters</div>
@@ -4911,21 +4959,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4d-lottery-odds.png" target="_blank" rel="noopener"><img src="./poster-4d-lottery-odds.png" alt="Poster 4D Lottery Odds after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4d-lottery-odds.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4d-lottery-odds.png" alt="Poster 4D Lottery Odds after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4d-lottery-odds.png" alt="Poster 4D Lottery Odds before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4d-lottery-odds.png" alt="Poster 4D Lottery Odds after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4d-lottery-odds.png" alt="Poster 4D Lottery Odds after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4d-lottery-odds.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4d-lottery-odds.png" target="_blank" rel="noopener">Open after</a>
@@ -4933,7 +4982,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 4e bingo hall poster-4e-bingo-hall.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 4e bingo hall poster-4e-bingo-hall.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>121</span> Posters</div>
@@ -4951,21 +5000,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-4e-bingo-hall.png" target="_blank" rel="noopener"><img src="./poster-4e-bingo-hall.png" alt="Poster 4E Bingo Hall after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-4e-bingo-hall.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-4e-bingo-hall.png" alt="Poster 4E Bingo Hall after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-4e-bingo-hall.png" alt="Poster 4E Bingo Hall before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-4e-bingo-hall.png" alt="Poster 4E Bingo Hall after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-4e-bingo-hall.png" alt="Poster 4E Bingo Hall after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-4e-bingo-hall.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-4e-bingo-hall.png" target="_blank" rel="noopener">Open after</a>
@@ -4973,7 +5023,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 14c every game slots.ar poster-14c-every-game-slots.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 14c every game slots.ar poster-14c-every-game-slots.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>122</span> Posters</div>
@@ -4991,21 +5041,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-14c-every-game-slots.ar.png" target="_blank" rel="noopener"><img src="./poster-14c-every-game-slots.ar.png" alt="Poster 14C Every Game Slots.ar after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-14c-every-game-slots.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-14c-every-game-slots.ar.png" alt="Poster 14C Every Game Slots.ar after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-14c-every-game-slots.ar.png" alt="Poster 14C Every Game Slots.ar before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-14c-every-game-slots.ar.png" alt="Poster 14C Every Game Slots.ar after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-14c-every-game-slots.ar.png" alt="Poster 14C Every Game Slots.ar after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-14c-every-game-slots.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-14c-every-game-slots.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -5013,7 +5064,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="new" data-search="poster 14c every game slots poster-14c-every-game-slots.png posters new 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="new" data-production-guide="true" data-search="poster 14c every game slots poster-14c-every-game-slots.png posters new 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>123</span> Posters</div>
@@ -5031,13 +5082,14 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1800 × 2400px</span></figcaption>
-          <a class="image-stage" href="./poster-14c-every-game-slots.png" target="_blank" rel="noopener"><img src="./poster-14c-every-game-slots.png" alt="Poster 14C Every Game Slots after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-14c-every-game-slots.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-14c-every-game-slots.png" alt="Poster 14C Every Game Slots after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.33333%;--trim-y:1.00000%;--safe-x:2.68519%;--safe-y:2.02083%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
-          <img class="overlay-after" src="./poster-14c-every-game-slots.png" alt="Poster 14C Every Game Slots after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-14c-every-game-slots.png" alt="Poster 14C Every Game Slots after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.33333%;--trim-y:1.00000%;--safe-x:2.68519%;--safe-y:2.02083%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <div class="empty-state"><span>New template · no before state</span></div>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
@@ -5045,14 +5097,14 @@
       </div>
 
       <footer class="card-footer">
-        <span>New template</span>
+        <span>New template · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./poster-14c-every-game-slots.png" target="_blank" rel="noopener">Open after</a>
         </div>
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 15c how sportsbook wins.ar poster-15c-how-sportsbook-wins.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 15c how sportsbook wins.ar poster-15c-how-sportsbook-wins.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>124</span> Posters</div>
@@ -5070,21 +5122,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-15c-how-sportsbook-wins.ar.png" target="_blank" rel="noopener"><img src="./poster-15c-how-sportsbook-wins.ar.png" alt="Poster 15C How Sportsbook Wins.ar after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-15c-how-sportsbook-wins.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-15c-how-sportsbook-wins.ar.png" alt="Poster 15C How Sportsbook Wins.ar after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-15c-how-sportsbook-wins.ar.png" alt="Poster 15C How Sportsbook Wins.ar before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-15c-how-sportsbook-wins.ar.png" alt="Poster 15C How Sportsbook Wins.ar after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-15c-how-sportsbook-wins.ar.png" alt="Poster 15C How Sportsbook Wins.ar after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-15c-how-sportsbook-wins.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-15c-how-sportsbook-wins.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -5092,7 +5145,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="new" data-search="poster 15c how sportsbook wins poster-15c-how-sportsbook-wins.png posters new 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="new" data-production-guide="true" data-search="poster 15c how sportsbook wins poster-15c-how-sportsbook-wins.png posters new 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>125</span> Posters</div>
@@ -5110,13 +5163,14 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1800 × 2400px</span></figcaption>
-          <a class="image-stage" href="./poster-15c-how-sportsbook-wins.png" target="_blank" rel="noopener"><img src="./poster-15c-how-sportsbook-wins.png" alt="Poster 15C How Sportsbook Wins after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-15c-how-sportsbook-wins.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-15c-how-sportsbook-wins.png" alt="Poster 15C How Sportsbook Wins after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.33333%;--trim-y:1.00000%;--safe-x:2.68519%;--safe-y:2.02083%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
-          <img class="overlay-after" src="./poster-15c-how-sportsbook-wins.png" alt="Poster 15C How Sportsbook Wins after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-15c-how-sportsbook-wins.png" alt="Poster 15C How Sportsbook Wins after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.33333%;--trim-y:1.00000%;--safe-x:2.68519%;--safe-y:2.02083%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <div class="empty-state"><span>New template · no before state</span></div>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
@@ -5124,14 +5178,14 @@
       </div>
 
       <footer class="card-footer">
-        <span>New template</span>
+        <span>New template · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./poster-15c-how-sportsbook-wins.png" target="_blank" rel="noopener">Open after</a>
         </div>
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19a every game math poster-19a-every-game-math.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19a every game math poster-19a-every-game-math.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>126</span> Posters</div>
@@ -5149,21 +5203,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19a-every-game-math.png" target="_blank" rel="noopener"><img src="./poster-19a-every-game-math.png" alt="Poster 19A Every Game Math after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19a-every-game-math.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19a-every-game-math.png" alt="Poster 19A Every Game Math after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19a-every-game-math.png" alt="Poster 19A Every Game Math before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19a-every-game-math.png" alt="Poster 19A Every Game Math after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19a-every-game-math.png" alt="Poster 19A Every Game Math after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19a-every-game-math.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19a-every-game-math.png" target="_blank" rel="noopener">Open after</a>
@@ -5171,7 +5226,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19b odds are public poster-19b-odds-are-public.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19b odds are public poster-19b-odds-are-public.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>127</span> Posters</div>
@@ -5189,21 +5244,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19b-odds-are-public.png" target="_blank" rel="noopener"><img src="./poster-19b-odds-are-public.png" alt="Poster 19B Odds Are Public after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19b-odds-are-public.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19b-odds-are-public.png" alt="Poster 19B Odds Are Public after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19b-odds-are-public.png" alt="Poster 19B Odds Are Public before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19b-odds-are-public.png" alt="Poster 19B Odds Are Public after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19b-odds-are-public.png" alt="Poster 19B Odds Are Public after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19b-odds-are-public.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19b-odds-are-public.png" target="_blank" rel="noopener">Open after</a>
@@ -5211,7 +5267,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19c bet price tag poster-19c-bet-price-tag.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19c bet price tag poster-19c-bet-price-tag.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>128</span> Posters</div>
@@ -5229,21 +5285,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19c-bet-price-tag.png" target="_blank" rel="noopener"><img src="./poster-19c-bet-price-tag.png" alt="Poster 19C Bet Price Tag after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19c-bet-price-tag.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19c-bet-price-tag.png" alt="Poster 19C Bet Price Tag after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19c-bet-price-tag.png" alt="Poster 19C Bet Price Tag before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19c-bet-price-tag.png" alt="Poster 19C Bet Price Tag after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19c-bet-price-tag.png" alt="Poster 19C Bet Price Tag after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19c-bet-price-tag.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19c-bet-price-tag.png" target="_blank" rel="noopener">Open after</a>
@@ -5251,7 +5308,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19d game iq poster-19d-game-iq.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19d game iq poster-19d-game-iq.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>129</span> Posters</div>
@@ -5269,21 +5326,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19d-game-iq.png" target="_blank" rel="noopener"><img src="./poster-19d-game-iq.png" alt="Poster 19D Game Iq after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19d-game-iq.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19d-game-iq.png" alt="Poster 19D Game Iq after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19d-game-iq.png" alt="Poster 19D Game Iq before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19d-game-iq.png" alt="Poster 19D Game Iq after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19d-game-iq.png" alt="Poster 19D Game Iq after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19d-game-iq.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19d-game-iq.png" target="_blank" rel="noopener">Open after</a>
@@ -5291,7 +5349,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19e never due poster-19e-never-due.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19e never due poster-19e-never-due.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>130</span> Posters</div>
@@ -5309,21 +5367,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19e-never-due.png" target="_blank" rel="noopener"><img src="./poster-19e-never-due.png" alt="Poster 19E Never Due after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19e-never-due.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19e-never-due.png" alt="Poster 19E Never Due after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19e-never-due.png" alt="Poster 19E Never Due before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19e-never-due.png" alt="Poster 19E Never Due after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19e-never-due.png" alt="Poster 19E Never Due after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19e-never-due.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19e-never-due.png" target="_blank" rel="noopener">Open after</a>
@@ -5331,7 +5390,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19f your tools poster-19f-your-tools.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19f your tools poster-19f-your-tools.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>131</span> Posters</div>
@@ -5349,21 +5408,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19f-your-tools.png" target="_blank" rel="noopener"><img src="./poster-19f-your-tools.png" alt="Poster 19F Your Tools after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19f-your-tools.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19f-your-tools.png" alt="Poster 19F Your Tools after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19f-your-tools.png" alt="Poster 19F Your Tools before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19f-your-tools.png" alt="Poster 19F Your Tools after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19f-your-tools.png" alt="Poster 19F Your Tools after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19f-your-tools.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19f-your-tools.png" target="_blank" rel="noopener">Open after</a>
@@ -5371,7 +5431,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19g one decision poster-19g-one-decision.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19g one decision poster-19g-one-decision.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>132</span> Posters</div>
@@ -5389,21 +5449,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19g-one-decision.png" target="_blank" rel="noopener"><img src="./poster-19g-one-decision.png" alt="Poster 19G One Decision after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19g-one-decision.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19g-one-decision.png" alt="Poster 19G One Decision after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19g-one-decision.png" alt="Poster 19G One Decision before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19g-one-decision.png" alt="Poster 19G One Decision after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19g-one-decision.png" alt="Poster 19G One Decision after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19g-one-decision.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19g-one-decision.png" target="_blank" rel="noopener">Open after</a>
@@ -5411,7 +5472,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19h time flies poster-19h-time-flies.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19h time flies poster-19h-time-flies.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>133</span> Posters</div>
@@ -5429,21 +5490,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-19h-time-flies.png" target="_blank" rel="noopener"><img src="./poster-19h-time-flies.png" alt="Poster 19H Time Flies after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19h-time-flies.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19h-time-flies.png" alt="Poster 19H Time Flies after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19h-time-flies.png" alt="Poster 19H Time Flies before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19h-time-flies.png" alt="Poster 19H Time Flies after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19h-time-flies.png" alt="Poster 19H Time Flies after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19h-time-flies.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19h-time-flies.png" target="_blank" rel="noopener">Open after</a>
@@ -5451,7 +5513,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster 19i lottery odds poster-19i-lottery-odds.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster 19i lottery odds poster-19i-lottery-odds.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>134</span> Posters</div>
@@ -5469,21 +5531,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1800 × 2400px</span></figcaption>
-          <a class="image-stage" href="./poster-19i-lottery-odds.png" target="_blank" rel="noopener"><img src="./poster-19i-lottery-odds.png" alt="Poster 19I Lottery Odds after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-19i-lottery-odds.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-19i-lottery-odds.png" alt="Poster 19I Lottery Odds after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.33333%;--trim-y:1.00000%;--safe-x:2.68519%;--safe-y:2.02083%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-19i-lottery-odds.png" alt="Poster 19I Lottery Odds before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-19i-lottery-odds.png" alt="Poster 19I Lottery Odds after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-19i-lottery-odds.png" alt="Poster 19I Lottery Odds after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.33333%;--trim-y:1.00000%;--safe-x:2.68519%;--safe-y:2.02083%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-19i-lottery-odds.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-19i-lottery-odds.png" target="_blank" rel="noopener">Open after</a>
@@ -5491,7 +5554,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster tier2 10g.ar poster-tier2-10g.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster tier2 10g.ar poster-tier2-10g.ar.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>135</span> Posters</div>
@@ -5509,21 +5572,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-tier2-10g.ar.png" target="_blank" rel="noopener"><img src="./poster-tier2-10g.ar.png" alt="Poster Tier2 10G.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-tier2-10g.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-tier2-10g.ar.png" alt="Poster Tier2 10G.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-tier2-10g.ar.png" alt="Poster Tier2 10G.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-tier2-10g.ar.png" alt="Poster Tier2 10G.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-tier2-10g.ar.png" alt="Poster Tier2 10G.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-tier2-10g.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-tier2-10g.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -5531,7 +5595,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Posters" data-status="updated" data-search="poster tier2 10g poster-tier2-10g.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
+    <article class="comparison-card" data-category="Posters" data-status="updated" data-production-guide="true" data-search="poster tier2 10g poster-tier2-10g.png posters updated 18×24 / a2 · 2–3m glance · one dominant headline">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>136</span> Posters</div>
@@ -5549,21 +5613,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>1848 × 2448px</span></figcaption>
-          <a class="image-stage" href="./poster-tier2-10g.png" target="_blank" rel="noopener"><img src="./poster-tier2-10g.png" alt="Poster Tier2 10G after layout" loading="lazy"></a>
+          <a class="image-stage" href="./poster-tier2-10g.png" target="_blank" rel="noopener"><img class="guide-source" src="./poster-tier2-10g.png" alt="Poster Tier2 10G after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/poster-tier2-10g.png" alt="Poster Tier2 10G before layout" loading="lazy">
-          <img class="overlay-after" src="./poster-tier2-10g.png" alt="Poster Tier2 10G after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./poster-tier2-10g.png" alt="Poster Tier2 10G after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:1.29870%;--trim-y:0.98039%;--safe-x:2.65152%;--safe-y:2.00163%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/poster-tier2-10g.png" target="_blank" rel="noopener">Open before</a>
           <a href="./poster-tier2-10g.png" target="_blank" rel="noopener">Open after</a>
@@ -5650,7 +5715,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="rack card 5a.ar rack-card-5a.ar.png print updated 4×9 take-away · hand-held sequential read · 0.75in qr">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="rack card 5a.ar rack-card-5a.ar.png print updated 4×9 take-away · hand-held sequential read · 0.75in qr">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>139</span> Print</div>
@@ -5668,21 +5733,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>848 × 1848px</span></figcaption>
-          <a class="image-stage" href="./rack-card-5a.ar.png" target="_blank" rel="noopener"><img src="./rack-card-5a.ar.png" alt="Rack Card 5A.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./rack-card-5a.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./rack-card-5a.ar.png" alt="Rack Card 5A.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.29870%;--safe-x:8.72642%;--safe-y:4.00433%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/rack-card-5a.ar.png" alt="Rack Card 5A.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./rack-card-5a.ar.png" alt="Rack Card 5A.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./rack-card-5a.ar.png" alt="Rack Card 5A.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.29870%;--safe-x:8.72642%;--safe-y:4.00433%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/rack-card-5a.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./rack-card-5a.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -5690,7 +5756,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="rack card 5a rack-card-5a.png print updated 4×9 take-away · hand-held sequential read · 0.75in qr">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="rack card 5a rack-card-5a.png print updated 4×9 take-away · hand-held sequential read · 0.75in qr">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>140</span> Print</div>
@@ -5708,21 +5774,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>848 × 1848px</span></figcaption>
-          <a class="image-stage" href="./rack-card-5a.png" target="_blank" rel="noopener"><img src="./rack-card-5a.png" alt="Rack Card 5A after layout" loading="lazy"></a>
+          <a class="image-stage" href="./rack-card-5a.png" target="_blank" rel="noopener"><img class="guide-source" src="./rack-card-5a.png" alt="Rack Card 5A after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.29870%;--safe-x:8.72642%;--safe-y:4.00433%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/rack-card-5a.png" alt="Rack Card 5A before layout" loading="lazy">
-          <img class="overlay-after" src="./rack-card-5a.png" alt="Rack Card 5A after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./rack-card-5a.png" alt="Rack Card 5A after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.29870%;--safe-x:8.72642%;--safe-y:4.00433%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/rack-card-5a.png" target="_blank" rel="noopener">Open before</a>
           <a href="./rack-card-5a.png" target="_blank" rel="noopener">Open after</a>
@@ -5890,7 +5957,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign atm 9b.ar sign-atm-9b.ar.png signage updated letter / a4 decision point · arm’s-length read · budget action first">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign atm 9b.ar sign-atm-9b.ar.png signage updated letter / a4 decision point · arm’s-length read · budget action first">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>145</span> Signage</div>
@@ -5908,21 +5975,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>748 × 1048px</span></figcaption>
-          <a class="image-stage" href="./sign-atm-9b.ar.png" target="_blank" rel="noopener"><img src="./sign-atm-9b.ar.png" alt="Sign Atm 9B.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-atm-9b.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-atm-9b.ar.png" alt="Sign Atm 9B.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:3.20856%;--trim-y:2.29008%;--safe-x:5.96099%;--safe-y:4.45871%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-atm-9b.ar.png" alt="Sign Atm 9B.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-atm-9b.ar.png" alt="Sign Atm 9B.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-atm-9b.ar.png" alt="Sign Atm 9B.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:3.20856%;--trim-y:2.29008%;--safe-x:5.96099%;--safe-y:4.45871%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-atm-9b.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-atm-9b.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -5930,7 +5998,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign atm 9b sign-atm-9b.png signage updated letter / a4 decision point · arm’s-length read · budget action first">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign atm 9b sign-atm-9b.png signage updated letter / a4 decision point · arm’s-length read · budget action first">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>146</span> Signage</div>
@@ -5948,21 +6016,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>748 × 1048px</span></figcaption>
-          <a class="image-stage" href="./sign-atm-9b.png" target="_blank" rel="noopener"><img src="./sign-atm-9b.png" alt="Sign Atm 9B after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-atm-9b.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-atm-9b.png" alt="Sign Atm 9B after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:3.20856%;--trim-y:2.29008%;--safe-x:5.96099%;--safe-y:4.45871%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-atm-9b.png" alt="Sign Atm 9B before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-atm-9b.png" alt="Sign Atm 9B after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-atm-9b.png" alt="Sign Atm 9B after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:3.20856%;--trim-y:2.29008%;--safe-x:5.96099%;--safe-y:4.45871%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-atm-9b.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-atm-9b.png" target="_blank" rel="noopener">Open after</a>
@@ -5970,7 +6039,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign entrance 9a.ar sign-entrance-9a.ar.png signage updated 18×24 / a2 entrance · 3m walking glance · headline + cta">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign entrance 9a.ar sign-entrance-9a.ar.png signage updated 18×24 / a2 entrance · 3m walking glance · headline + cta">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>147</span> Signage</div>
@@ -5988,21 +6057,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>948 × 1248px</span></figcaption>
-          <a class="image-stage" href="./sign-entrance-9a.ar.png" target="_blank" rel="noopener"><img src="./sign-entrance-9a.ar.png" alt="Sign Entrance 9A.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-entrance-9a.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-entrance-9a.ar.png" alt="Sign Entrance 9A.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:3.85021%;--safe-y:2.92468%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-entrance-9a.ar.png" alt="Sign Entrance 9A.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-entrance-9a.ar.png" alt="Sign Entrance 9A.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-entrance-9a.ar.png" alt="Sign Entrance 9A.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:3.85021%;--safe-y:2.92468%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-entrance-9a.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-entrance-9a.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -6010,7 +6080,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign entrance 9a sign-entrance-9a.png signage updated 18×24 / a2 entrance · 3m walking glance · headline + cta">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign entrance 9a sign-entrance-9a.png signage updated 18×24 / a2 entrance · 3m walking glance · headline + cta">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>148</span> Signage</div>
@@ -6028,21 +6098,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>948 × 1248px</span></figcaption>
-          <a class="image-stage" href="./sign-entrance-9a.png" target="_blank" rel="noopener"><img src="./sign-entrance-9a.png" alt="Sign Entrance 9A after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-entrance-9a.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-entrance-9a.png" alt="Sign Entrance 9A after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:3.85021%;--safe-y:2.92468%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-entrance-9a.png" alt="Sign Entrance 9A before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-entrance-9a.png" alt="Sign Entrance 9A after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-entrance-9a.png" alt="Sign Entrance 9A after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:3.85021%;--safe-y:2.92468%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-entrance-9a.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-entrance-9a.png" target="_blank" rel="noopener">Open after</a>
@@ -6050,7 +6121,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign floor 9c.ar sign-floor-9c.ar.png signage updated 11×17 / a3 gaming floor · 3m scan · three facts maximum">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign floor 9c.ar sign-floor-9c.ar.png signage updated 11×17 / a3 gaming floor · 3m scan · three facts maximum">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>149</span> Signage</div>
@@ -6068,21 +6139,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>948 × 748px</span></figcaption>
-          <a class="image-stage" href="./sign-floor-9c.ar.png" target="_blank" rel="noopener"><img src="./sign-floor-9c.ar.png" alt="Sign Floor 9C.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-floor-9c.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-floor-9c.ar.png" alt="Sign Floor 9C.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:3.20856%;--safe-x:4.68930%;--safe-y:4.58478%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-floor-9c.ar.png" alt="Sign Floor 9C.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-floor-9c.ar.png" alt="Sign Floor 9C.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-floor-9c.ar.png" alt="Sign Floor 9C.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:3.20856%;--safe-x:4.68930%;--safe-y:4.58478%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-floor-9c.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-floor-9c.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -6090,7 +6162,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign floor 9c sign-floor-9c.png signage updated 11×17 / a3 gaming floor · 3m scan · three facts maximum">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign floor 9c sign-floor-9c.png signage updated 11×17 / a3 gaming floor · 3m scan · three facts maximum">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>150</span> Signage</div>
@@ -6108,21 +6180,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>948 × 748px</span></figcaption>
-          <a class="image-stage" href="./sign-floor-9c.png" target="_blank" rel="noopener"><img src="./sign-floor-9c.png" alt="Sign Floor 9C after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-floor-9c.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-floor-9c.png" alt="Sign Floor 9C after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:3.20856%;--safe-x:4.68930%;--safe-y:4.58478%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-floor-9c.png" alt="Sign Floor 9C before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-floor-9c.png" alt="Sign Floor 9C after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-floor-9c.png" alt="Sign Floor 9C after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:3.20856%;--safe-x:4.68930%;--safe-y:4.58478%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-floor-9c.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-floor-9c.png" target="_blank" rel="noopener">Open after</a>
@@ -6130,7 +6203,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign restroom 9d.ar sign-restroom-9d.ar.png signage updated a5 / half-letter stall card · private close read · contact first">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign restroom 9d.ar sign-restroom-9d.ar.png signage updated a5 / half-letter stall card · private close read · contact first">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>151</span> Signage</div>
@@ -6148,21 +6221,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>608 × 448px</span></figcaption>
-          <a class="image-stage" href="./sign-restroom-9d.ar.png" target="_blank" rel="noopener"><img src="./sign-restroom-9d.ar.png" alt="Sign Restroom 9D.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-restroom-9d.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-restroom-9d.ar.png" alt="Sign Restroom 9D.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:3.94737%;--trim-y:5.35714%;--safe-x:8.13397%;--safe-y:7.98319%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-restroom-9d.ar.png" alt="Sign Restroom 9D.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-restroom-9d.ar.png" alt="Sign Restroom 9D.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-restroom-9d.ar.png" alt="Sign Restroom 9D.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:3.94737%;--trim-y:5.35714%;--safe-x:8.13397%;--safe-y:7.98319%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-restroom-9d.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-restroom-9d.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -6170,7 +6244,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign restroom 9d sign-restroom-9d.png signage updated a5 / half-letter stall card · private close read · contact first">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign restroom 9d sign-restroom-9d.png signage updated a5 / half-letter stall card · private close read · contact first">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>152</span> Signage</div>
@@ -6188,21 +6262,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>608 × 448px</span></figcaption>
-          <a class="image-stage" href="./sign-restroom-9d.png" target="_blank" rel="noopener"><img src="./sign-restroom-9d.png" alt="Sign Restroom 9D after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-restroom-9d.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-restroom-9d.png" alt="Sign Restroom 9D after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:3.94737%;--trim-y:5.35714%;--safe-x:8.13397%;--safe-y:7.98319%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-restroom-9d.png" alt="Sign Restroom 9D before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-restroom-9d.png" alt="Sign Restroom 9D after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-restroom-9d.png" alt="Sign Restroom 9D after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:3.94737%;--trim-y:5.35714%;--safe-x:8.13397%;--safe-y:7.98319%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-restroom-9d.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-restroom-9d.png" target="_blank" rel="noopener">Open after</a>
@@ -6210,7 +6285,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign staff 9e.ar sign-staff-9e.ar.png signage updated 11×17 / a3 break room · repeated close read · numbered scan">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign staff 9e.ar sign-staff-9e.ar.png signage updated 11×17 / a3 break room · repeated close read · numbered scan">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>153</span> Signage</div>
@@ -6228,21 +6303,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>948 × 1248px</span></figcaption>
-          <a class="image-stage" href="./sign-staff-9e.ar.png" target="_blank" rel="noopener"><img src="./sign-staff-9e.ar.png" alt="Sign Staff 9E.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-staff-9e.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-staff-9e.ar.png" alt="Sign Staff 9E.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:4.68930%;--safe-y:3.33710%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-staff-9e.ar.png" alt="Sign Staff 9E.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-staff-9e.ar.png" alt="Sign Staff 9E.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-staff-9e.ar.png" alt="Sign Staff 9E.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:4.68930%;--safe-y:3.33710%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-staff-9e.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-staff-9e.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -6250,7 +6326,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Signage" data-status="updated" data-search="sign staff 9e sign-staff-9e.png signage updated 11×17 / a3 break room · repeated close read · numbered scan">
+    <article class="comparison-card" data-category="Signage" data-status="updated" data-production-guide="true" data-search="sign staff 9e sign-staff-9e.png signage updated 11×17 / a3 break room · repeated close read · numbered scan">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>154</span> Signage</div>
@@ -6268,21 +6344,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>948 × 1248px</span></figcaption>
-          <a class="image-stage" href="./sign-staff-9e.png" target="_blank" rel="noopener"><img src="./sign-staff-9e.png" alt="Sign Staff 9E after layout" loading="lazy"></a>
+          <a class="image-stage" href="./sign-staff-9e.png" target="_blank" rel="noopener"><img class="guide-source" src="./sign-staff-9e.png" alt="Sign Staff 9E after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:4.68930%;--safe-y:3.33710%"><span class="trim-guide"></span><span class="safe-guide"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/sign-staff-9e.png" alt="Sign Staff 9E before layout" loading="lazy">
-          <img class="overlay-after" src="./sign-staff-9e.png" alt="Sign Staff 9E after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./sign-staff-9e.png" alt="Sign Staff 9E after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.53165%;--trim-y:1.92308%;--safe-x:4.68930%;--safe-y:3.33710%"><span class="trim-guide"></span><span class="safe-guide"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/sign-staff-9e.png" target="_blank" rel="noopener">Open before</a>
           <a href="./sign-staff-9e.png" target="_blank" rel="noopener">Open after</a>
@@ -6768,7 +6845,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="table tent 5b.ar table-tent-5b.ar.png print updated two 4×6 faces · seated dwell · each face works independently">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="table tent 5b.ar table-tent-5b.ar.png print updated two 4×6 faces · seated dwell · each face works independently">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>167</span> Print</div>
@@ -6786,21 +6863,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>848 × 1248px</span></figcaption>
-          <a class="image-stage" href="./table-tent-5b.ar.png" target="_blank" rel="noopener"><img src="./table-tent-5b.ar.png" alt="Table Tent 5B.AR after layout" loading="lazy"></a>
+          <a class="image-stage" href="./table-tent-5b.ar.png" target="_blank" rel="noopener"><img class="guide-source" src="./table-tent-5b.ar.png" alt="Table Tent 5B.AR after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.92308%;--safe-x:8.72642%;--safe-y:3.92628%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-y" style="--fold-start:47.99679%;--fold-size:4.00641%"></span><span class="fold-line fold-line-y" style="--fold-center:50.00000%"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/table-tent-5b.ar.png" alt="Table Tent 5B.AR before layout" loading="lazy">
-          <img class="overlay-after" src="./table-tent-5b.ar.png" alt="Table Tent 5B.AR after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./table-tent-5b.ar.png" alt="Table Tent 5B.AR after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.92308%;--safe-x:8.72642%;--safe-y:3.92628%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-y" style="--fold-start:47.99679%;--fold-size:4.00641%"></span><span class="fold-line fold-line-y" style="--fold-center:50.00000%"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/table-tent-5b.ar.png" target="_blank" rel="noopener">Open before</a>
           <a href="./table-tent-5b.ar.png" target="_blank" rel="noopener">Open after</a>
@@ -6808,7 +6886,7 @@
       </footer>
     </article>
 
-    <article class="comparison-card" data-category="Print" data-status="updated" data-search="table tent 5b table-tent-5b.png print updated two 4×6 faces · seated dwell · each face works independently">
+    <article class="comparison-card" data-category="Print" data-status="updated" data-production-guide="true" data-search="table tent 5b table-tent-5b.png print updated two 4×6 faces · seated dwell · each face works independently">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>168</span> Print</div>
@@ -6826,21 +6904,22 @@
         </figure>
         <figure>
           <figcaption><strong>After</strong><span>848 × 1248px</span></figcaption>
-          <a class="image-stage" href="./table-tent-5b.png" target="_blank" rel="noopener"><img src="./table-tent-5b.png" alt="Table Tent 5B after layout" loading="lazy"></a>
+          <a class="image-stage" href="./table-tent-5b.png" target="_blank" rel="noopener"><img class="guide-source" src="./table-tent-5b.png" alt="Table Tent 5B after layout" loading="lazy"><span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.92308%;--safe-x:8.72642%;--safe-y:3.92628%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-y" style="--fold-start:47.99679%;--fold-size:4.00641%"></span><span class="fold-line fold-line-y" style="--fold-center:50.00000%"></span></span></a>
         </figure>
       </div>
 
       <div class="overlay-view">
         <div class="overlay-stage">
           <img class="overlay-before" src="./comparison/before/table-tent-5b.png" alt="Table Tent 5B before layout" loading="lazy">
-          <img class="overlay-after" src="./table-tent-5b.png" alt="Table Tent 5B after layout" loading="lazy">
+          <img class="overlay-after guide-source" src="./table-tent-5b.png" alt="Table Tent 5B after layout" loading="lazy">
+          <span class="production-guide" aria-hidden="true" style="--trim-x:2.83019%;--trim-y:1.92308%;--safe-x:8.72642%;--safe-y:3.92628%"><span class="trim-guide"></span><span class="safe-guide"></span><span class="fold-zone fold-zone-y" style="--fold-start:47.99679%;--fold-size:4.00641%"></span><span class="fold-line fold-line-y" style="--fold-center:50.00000%"></span></span>
           <span class="overlay-label overlay-label-before">Before</span>
           <span class="overlay-label overlay-label-after">After</span>
         </div>
       </div>
 
       <footer class="card-footer">
-        <span>Same canvas · revised layout</span>
+        <span>Same canvas · revised layout · <strong class="guide-available">0.125in / 3mm bleed · 0.25in / 6mm safe</strong></span>
         <div>
           <a href="./comparison/before/table-tent-5b.png" target="_blank" rel="noopener">Open before</a>
           <a href="./table-tent-5b.png" target="_blank" rel="noopener">Open after</a>
@@ -7012,10 +7091,40 @@
   const search = document.querySelector('#search');
   const results = document.querySelector('#results');
   const viewToggle = document.querySelector('#viewToggle');
+  const guideToggle = document.querySelector('#guideToggle');
   const opacity = document.querySelector('#opacity');
   const opacityValue = document.querySelector('#opacityValue');
   let category = 'all';
   let status = 'all';
+
+  function renderedImageBox(image) {
+    const rect = image.getBoundingClientRect();
+    if (!image.naturalWidth || !image.naturalHeight || rect.width === 0 || rect.height === 0) return null;
+    const scale = Math.min(rect.width / image.naturalWidth, rect.height / image.naturalHeight);
+    const width = image.naturalWidth * scale;
+    const height = image.naturalHeight * scale;
+    return {
+      left: rect.left + ((rect.width - width) / 2),
+      top: rect.top + ((rect.height - height) / 2),
+      width,
+      height,
+    };
+  }
+
+  function positionProductionGuides() {
+    for (const guide of document.querySelectorAll('.production-guide')) {
+      const stage = guide.parentElement;
+      const image = stage.querySelector('.guide-source');
+      if (!image) continue;
+      const imageBox = renderedImageBox(image);
+      if (!imageBox) continue;
+      const stageBox = stage.getBoundingClientRect();
+      guide.style.left = (imageBox.left - stageBox.left) + 'px';
+      guide.style.top = (imageBox.top - stageBox.top) + 'px';
+      guide.style.width = imageBox.width + 'px';
+      guide.style.height = imageBox.height + 'px';
+    }
+  }
 
   function filterCards() {
     const query = search.value.trim().toLowerCase();
@@ -7028,6 +7137,7 @@
       if (show) visible += 1;
     }
     results.textContent = 'Showing ' + visible + ' of ' + cards.length + ' templates';
+    requestAnimationFrame(positionProductionGuides);
   }
 
   document.querySelectorAll('[data-category-filter]').forEach((button) => {
@@ -7049,12 +7159,24 @@
     const enabled = document.body.classList.toggle('overlay-mode');
     viewToggle.classList.toggle('active', enabled);
     viewToggle.textContent = enabled ? 'Split view' : 'Overlay mode';
+    requestAnimationFrame(positionProductionGuides);
+  });
+  guideToggle.addEventListener('click', () => {
+    const enabled = document.body.classList.toggle('guides-mode');
+    guideToggle.classList.toggle('active', enabled);
+    guideToggle.setAttribute('aria-pressed', String(enabled));
+    requestAnimationFrame(positionProductionGuides);
   });
   opacity.addEventListener('input', () => {
     const value = Number(opacity.value);
     document.documentElement.style.setProperty('--after-opacity', value / 100);
     opacityValue.textContent = value + '%';
   });
+  document.querySelectorAll('.guide-source').forEach((image) => {
+    if (!image.complete) image.addEventListener('load', positionProductionGuides, { once: true });
+  });
+  window.addEventListener('resize', positionProductionGuides);
+  positionProductionGuides();
 </script>
 </body>
 </html>

@@ -11,6 +11,7 @@ import {
 } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { resolvePrintReviewSpec } from './output-profiles.mjs';
 
 const renderDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(renderDir, '..', '..');
@@ -103,9 +104,63 @@ function emptyState(label) {
   return `<div class="empty-state"><span>${escapeHtml(label)}</span></div>`;
 }
 
-function imageStage(src, alt, label) {
+function percent(value, total) {
+  return `${((value / total) * 100).toFixed(5)}%`;
+}
+
+function productionGuideFor(filename, dimensions) {
+  const spec = dimensions ? resolvePrintReviewSpec(filename) : null;
+  if (!spec) return null;
+
+  // Preview PNGs carry the templates' 24px review bleed. Production output
+  // profiles replace it with the exact 0.125in / 3mm pixel geometry.
+  const previewBleed = 24;
+  const trimWidth = dimensions.width - (previewBleed * 2);
+  const trimHeight = dimensions.height - (previewBleed * 2);
+  if (trimWidth <= 0 || trimHeight <= 0) return null;
+
+  const [physicalWidth, physicalHeight] = spec.trim;
+  const trimX = percent(previewBleed, dimensions.width);
+  const trimY = percent(previewBleed, dimensions.height);
+  const safeX = percent(previewBleed + ((spec.safe / physicalWidth) * trimWidth), dimensions.width);
+  const safeY = percent(previewBleed + ((spec.safe / physicalHeight) * trimHeight), dimensions.height);
+  const folds = (spec.folds || []).map((fold) => {
+    const trimPixels = fold.axis === 'x' ? trimWidth : trimHeight;
+    const physicalSize = fold.axis === 'x' ? physicalWidth : physicalHeight;
+    const fullPixels = fold.axis === 'x' ? dimensions.width : dimensions.height;
+    const center = previewBleed + (fold.at * trimPixels);
+    const halfZone = (fold.foldSafe / physicalSize) * trimPixels;
+    return {
+      axis: fold.axis,
+      center: percent(center, fullPixels),
+      start: percent(center - halfZone, fullPixels),
+      size: percent(halfZone * 2, fullPixels),
+    };
+  });
+
+  return {
+    trimX,
+    trimY,
+    safeX,
+    safeY,
+    folds,
+    label: `${spec.bleedLabel} · ${spec.safeLabel}`,
+  };
+}
+
+function productionGuideMarkup(guide) {
+  if (!guide) return '';
+  const foldMarkup = guide.folds.map((fold) => fold.axis === 'x'
+    ? `<span class="fold-zone fold-zone-x" style="--fold-start:${fold.start};--fold-size:${fold.size}"></span><span class="fold-line fold-line-x" style="--fold-center:${fold.center}"></span>`
+    : `<span class="fold-zone fold-zone-y" style="--fold-start:${fold.start};--fold-size:${fold.size}"></span><span class="fold-line fold-line-y" style="--fold-center:${fold.center}"></span>`
+  ).join('');
+  return `<span class="production-guide" aria-hidden="true" style="--trim-x:${guide.trimX};--trim-y:${guide.trimY};--safe-x:${guide.safeX};--safe-y:${guide.safeY}"><span class="trim-guide"></span><span class="safe-guide"></span>${foldMarkup}</span>`;
+}
+
+function imageStage(src, alt, label, guide = null) {
   if (!src) return emptyState(label);
-  return `<a class="image-stage" href="${escapeHtml(src)}" target="_blank" rel="noopener"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy"></a>`;
+  const guideClass = guide ? ' class="guide-source"' : '';
+  return `<a class="image-stage" href="${escapeHtml(src)}" target="_blank" rel="noopener"><img${guideClass} src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy">${productionGuideMarkup(guide)}</a>`;
 }
 
 mkdirSync(beforeDir, { recursive: true });
@@ -135,6 +190,7 @@ const comparisons = allFiles.map((filename) => {
   const afterPath = join(renderDir, filename);
   const hasBefore = existsSync(beforePath);
   const hasAfter = existsSync(afterPath);
+  const after = hasAfter ? pngDimensions(afterPath) : null;
   return {
     filename,
     title: titleFor(filename),
@@ -142,15 +198,17 @@ const comparisons = allFiles.map((filename) => {
     useCase: useCaseFor(filename),
     status: hasBefore && hasAfter ? 'updated' : hasAfter ? 'new' : 'removed',
     before: hasBefore ? pngDimensions(beforePath) : null,
-    after: hasAfter ? pngDimensions(afterPath) : null,
+    after,
     beforeSrc: hasBefore ? `./comparison/before/${filename}` : null,
     afterSrc: hasAfter ? `./${filename}` : null,
+    productionGuide: productionGuideFor(filename, after),
   };
 });
 
 const updatedCount = comparisons.filter(({ status }) => status === 'updated').length;
 const newCount = comparisons.filter(({ status }) => status === 'new').length;
 const removedCount = comparisons.filter(({ status }) => status === 'removed').length;
+const productionGuideCount = comparisons.filter(({ productionGuide }) => productionGuide).length;
 const categories = [...new Set(comparisons.map(({ category }) => category))];
 const baseHash = git(['rev-parse', '--short', baseRef], { encoding: 'utf8' }).trim();
 const baseDate = git(['log', '-1', '--format=%cs', baseRef], { encoding: 'utf8' }).trim();
@@ -169,12 +227,13 @@ const cards = comparisons.map((item, index) => {
   const afterAlt = `${item.title} after layout`;
   const searchable = `${item.title} ${item.filename} ${item.category} ${item.status} ${item.useCase}`.toLowerCase();
   const beforeStage = imageStage(item.beforeSrc, beforeAlt, item.status === 'new' ? 'No previous template' : 'Before unavailable');
-  const afterStage = imageStage(item.afterSrc, afterAlt, item.status === 'removed' ? 'Removed from current set' : 'After unavailable');
+  const afterStage = imageStage(item.afterSrc, afterAlt, item.status === 'removed' ? 'Removed from current set' : 'After unavailable', item.productionGuide);
   const overlayBefore = item.beforeSrc ? `<img class="overlay-before" src="${escapeHtml(item.beforeSrc)}" alt="${escapeHtml(beforeAlt)}" loading="lazy">` : '';
-  const overlayAfter = item.afterSrc ? `<img class="overlay-after" src="${escapeHtml(item.afterSrc)}" alt="${escapeHtml(afterAlt)}" loading="lazy">` : '';
+  const overlayAfter = item.afterSrc ? `<img class="overlay-after${item.productionGuide ? ' guide-source' : ''}" src="${escapeHtml(item.afterSrc)}" alt="${escapeHtml(afterAlt)}" loading="lazy">` : '';
   const overlayContent = [
     overlayBefore,
     overlayAfter,
+    productionGuideMarkup(item.productionGuide),
     !item.beforeSrc ? emptyState('New template · no before state') : '',
     !item.afterSrc ? emptyState('Removed · no after state') : '',
   ].filter(Boolean).map((line) => `          ${line}`).join('\n');
@@ -182,9 +241,10 @@ const cards = comparisons.map((item, index) => {
     item.beforeSrc ? `<a href="${escapeHtml(item.beforeSrc)}" target="_blank" rel="noopener">Open before</a>` : '',
     item.afterSrc ? `<a href="${escapeHtml(item.afterSrc)}" target="_blank" rel="noopener">Open after</a>` : '',
   ].filter(Boolean).map((line) => `          ${line}`).join('\n');
+  const guideAttribute = item.productionGuide ? ' data-production-guide="true"' : '';
 
   return `
-    <article class="comparison-card" data-category="${escapeHtml(item.category)}" data-status="${item.status}" data-search="${escapeHtml(searchable)}">
+    <article class="comparison-card" data-category="${escapeHtml(item.category)}" data-status="${item.status}"${guideAttribute} data-search="${escapeHtml(searchable)}">
       <header class="card-header">
         <div>
           <div class="eyebrow"><span>${String(index + 1).padStart(2, '0')}</span> ${escapeHtml(item.category)}</div>
@@ -215,7 +275,7 @@ ${overlayContent}
       </div>
 
       <footer class="card-footer">
-        <span>${escapeHtml(changeLabel(item.before, item.after))}</span>
+        <span>${escapeHtml(changeLabel(item.before, item.after))}${item.productionGuide ? ` · <strong class="guide-available">${escapeHtml(item.productionGuide.label)}</strong>` : ''}</span>
         <div>
 ${footerLinks}
         </div>
@@ -241,6 +301,9 @@ const html = `<!DOCTYPE html>
     --teal: #00d4aa;
     --orange: #ff6b35;
     --red: #ff657a;
+    --guide-trim: #ff4fd8;
+    --guide-safe: #52e8ff;
+    --guide-fold: #ffd166;
     --line: rgba(255,255,255,.1);
     --after-opacity: .55;
   }
@@ -272,6 +335,15 @@ const html = `<!DOCTYPE html>
   .opacity-control { display: none; align-items: center; gap: 8px; color: var(--muted); font-size: 11px; }
   .opacity-control input { width: 110px; accent-color: var(--teal); }
   body.overlay-mode .opacity-control { display: flex; }
+  .guide-key { display: none; max-width: 1540px; margin: 0 auto; padding: 12px 32px 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+  body.guides-mode .guide-key { display: flex; align-items: center; gap: 14px 18px; flex-wrap: wrap; }
+  .guide-key strong { color: var(--ink); }
+  .guide-key span { display: inline-flex; align-items: center; gap: 6px; }
+  .key-swatch { width: 22px; height: 0; border-top: 2px solid currentColor; }
+  .key-bleed { width: 22px; height: 12px; border: 1px solid var(--guide-trim); background: rgba(255,79,216,.2); }
+  .key-trim { color: var(--guide-trim); }
+  .key-safe { color: var(--guide-safe); border-top-style: dashed; }
+  .key-fold { color: var(--guide-fold); }
   .results { max-width: 1540px; margin: 0 auto; padding: 18px 32px 0; color: var(--faint); font-size: 12px; }
   .sheet { max-width: 1540px; margin: 0 auto; padding: 22px 32px 80px; display: grid; gap: 26px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .comparison-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); box-shadow: 0 18px 50px rgba(0,0,0,.17); }
@@ -292,7 +364,7 @@ const html = `<!DOCTYPE html>
   figcaption { min-height: 44px; padding: 10px 13px; display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--faint); border-bottom: 1px solid var(--line); font-size: 10px; }
   figcaption strong { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
   .image-stage, .empty-state, .overlay-stage { height: 410px; }
-  .image-stage { display: flex; align-items: center; justify-content: center; padding: 18px; background-color: #0c151f; background-image: linear-gradient(45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(-45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255,255,255,.025) 75%), linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.025) 75%); background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
+  .image-stage { position: relative; display: flex; align-items: center; justify-content: center; padding: 18px; background-color: #0c151f; background-image: linear-gradient(45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(-45deg, rgba(255,255,255,.025) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(255,255,255,.025) 75%), linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.025) 75%); background-size: 24px 24px; background-position: 0 0, 0 12px, 12px -12px, -12px 0; }
   .image-stage img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 10px 30px rgba(0,0,0,.35); }
   .empty-state { display: grid; place-items: center; padding: 24px; color: var(--faint); background: #0c151f; text-align: center; font-size: 12px; }
   .empty-state span { max-width: 180px; }
@@ -301,20 +373,33 @@ const html = `<!DOCTYPE html>
   .overlay-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
   .overlay-stage .overlay-after { opacity: var(--after-opacity); }
   .overlay-stage .empty-state { position: absolute; inset: 0; height: auto; }
-  .overlay-label { position: absolute; z-index: 3; top: 10px; padding: 5px 8px; border-radius: 6px; color: #071019; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+  .overlay-label { position: absolute; z-index: 5; top: 10px; padding: 5px 8px; border-radius: 6px; color: #071019; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
   .overlay-label-before { left: 10px; background: var(--orange); }
   .overlay-label-after { right: 10px; background: var(--teal); }
+  .production-guide { display: none; position: absolute; z-index: 4; overflow: hidden; pointer-events: none; }
+  body.guides-mode .production-guide { display: block; }
+  .trim-guide, .safe-guide, .fold-zone, .fold-line { position: absolute; }
+  .trim-guide { inset: var(--trim-y) var(--trim-x); border: 2px solid var(--guide-trim); box-shadow: 0 0 0 9999px rgba(255,79,216,.18), inset 0 0 0 1px rgba(11,19,28,.65); }
+  .safe-guide { inset: var(--safe-y) var(--safe-x); border: 2px dashed var(--guide-safe); filter: drop-shadow(0 0 1px #071019); }
+  .fold-zone { background: rgba(255,209,102,.2); }
+  .fold-zone-x { left: var(--fold-start); top: var(--trim-y); bottom: var(--trim-y); width: var(--fold-size); }
+  .fold-zone-y { top: var(--fold-start); left: var(--trim-x); right: var(--trim-x); height: var(--fold-size); }
+  .fold-line { filter: drop-shadow(0 0 1px #071019); }
+  .fold-line-x { left: var(--fold-center); top: var(--trim-y); bottom: var(--trim-y); border-left: 2px dashed var(--guide-fold); }
+  .fold-line-y { top: var(--fold-center); left: var(--trim-x); right: var(--trim-x); border-top: 2px dashed var(--guide-fold); }
   body.overlay-mode .split-view { display: none; }
   body.overlay-mode .overlay-view { display: block; }
   .card-footer { min-height: 58px; padding: 13px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--faint); border-top: 1px solid var(--line); font-size: 10px; }
   .card-footer div { display: flex; gap: 12px; white-space: nowrap; }
   .card-footer a { color: var(--teal); font-weight: 800; text-decoration: none; text-transform: uppercase; letter-spacing: .06em; }
   .card-footer a:hover { color: #4ee3c5; }
+  .guide-available { color: var(--guide-safe); font-weight: 700; }
   .page-footer { padding: 20px 32px 54px; color: var(--faint); text-align: center; font-size: 11px; }
   @media (max-width: 1000px) { .sheet { grid-template-columns: 1fr; } }
   @media (max-width: 680px) {
     .masthead { padding: 42px 18px 26px; }
     .toolbar-inner, .sheet, .results { padding-inline: 18px; }
+    .guide-key { padding-inline: 18px; }
     .sheet { gap: 18px; }
     .split-view { grid-template-columns: 1fr; }
     figure + figure { border-left: 0; border-top: 1px solid var(--line); }
@@ -340,7 +425,7 @@ const html = `<!DOCTYPE html>
   <header class="masthead">
     <div class="kicker">Playbook collateral review</div>
     <h1>Before / after comparison sheet</h1>
-    <p class="intro">The left side preserves the committed baseline from <strong>${escapeHtml(baseHash)}</strong>. The right side shows the current regenerated English preview. Use overlay mode to expose shifts in scale, alignment, safe zones, and content density.</p>
+    <p class="intro">The left side preserves the committed baseline from <strong>${escapeHtml(baseHash)}</strong>. The right side shows the current regenerated English preview. Use overlay mode to expose layout shifts, then switch on production guides to review bleed, trim, content-safe, and fold-protected zones.</p>
     <div class="stats">
       <div class="stat"><strong>${comparisons.length}</strong><span>Total templates</span></div>
       <div class="stat"><strong>${updatedCount}</strong><span>Revised</span></div>
@@ -360,10 +445,20 @@ const html = `<!DOCTYPE html>
       <button type="button" data-status-filter="new">New <span>${newCount}</span></button>
       <input class="search" id="search" type="search" placeholder="Search templates…" aria-label="Search templates">
       <div class="view-controls">
+        <button type="button" id="guideToggle" aria-pressed="false">Production guides <span>${productionGuideCount}</span></button>
         <button type="button" id="viewToggle">Overlay mode</button>
         <label class="opacity-control">After <input id="opacity" type="range" min="0" max="100" value="55"> <span id="opacityValue">55%</span></label>
       </div>
     </div>
+  </div>
+
+  <div class="guide-key" id="guideKey">
+    <strong>Review-only guides</strong>
+    <span><i class="key-swatch key-bleed"></i> Bleed outside trim</span>
+    <span><i class="key-swatch key-trim"></i> Trim line</span>
+    <span><i class="key-swatch key-safe"></i> Content-safe line</span>
+    <span><i class="key-swatch key-fold"></i> Fold line + protected band</span>
+    <span>Final crop marks, color conversion, and tolerances remain a prepress step.</span>
   </div>
 
   <div class="results" id="results">Showing ${comparisons.length} templates</div>
@@ -375,10 +470,40 @@ const html = `<!DOCTYPE html>
   const search = document.querySelector('#search');
   const results = document.querySelector('#results');
   const viewToggle = document.querySelector('#viewToggle');
+  const guideToggle = document.querySelector('#guideToggle');
   const opacity = document.querySelector('#opacity');
   const opacityValue = document.querySelector('#opacityValue');
   let category = 'all';
   let status = 'all';
+
+  function renderedImageBox(image) {
+    const rect = image.getBoundingClientRect();
+    if (!image.naturalWidth || !image.naturalHeight || rect.width === 0 || rect.height === 0) return null;
+    const scale = Math.min(rect.width / image.naturalWidth, rect.height / image.naturalHeight);
+    const width = image.naturalWidth * scale;
+    const height = image.naturalHeight * scale;
+    return {
+      left: rect.left + ((rect.width - width) / 2),
+      top: rect.top + ((rect.height - height) / 2),
+      width,
+      height,
+    };
+  }
+
+  function positionProductionGuides() {
+    for (const guide of document.querySelectorAll('.production-guide')) {
+      const stage = guide.parentElement;
+      const image = stage.querySelector('.guide-source');
+      if (!image) continue;
+      const imageBox = renderedImageBox(image);
+      if (!imageBox) continue;
+      const stageBox = stage.getBoundingClientRect();
+      guide.style.left = (imageBox.left - stageBox.left) + 'px';
+      guide.style.top = (imageBox.top - stageBox.top) + 'px';
+      guide.style.width = imageBox.width + 'px';
+      guide.style.height = imageBox.height + 'px';
+    }
+  }
 
   function filterCards() {
     const query = search.value.trim().toLowerCase();
@@ -391,6 +516,7 @@ const html = `<!DOCTYPE html>
       if (show) visible += 1;
     }
     results.textContent = 'Showing ' + visible + ' of ' + cards.length + ' templates';
+    requestAnimationFrame(positionProductionGuides);
   }
 
   document.querySelectorAll('[data-category-filter]').forEach((button) => {
@@ -412,12 +538,24 @@ const html = `<!DOCTYPE html>
     const enabled = document.body.classList.toggle('overlay-mode');
     viewToggle.classList.toggle('active', enabled);
     viewToggle.textContent = enabled ? 'Split view' : 'Overlay mode';
+    requestAnimationFrame(positionProductionGuides);
+  });
+  guideToggle.addEventListener('click', () => {
+    const enabled = document.body.classList.toggle('guides-mode');
+    guideToggle.classList.toggle('active', enabled);
+    guideToggle.setAttribute('aria-pressed', String(enabled));
+    requestAnimationFrame(positionProductionGuides);
   });
   opacity.addEventListener('input', () => {
     const value = Number(opacity.value);
     document.documentElement.style.setProperty('--after-opacity', value / 100);
     opacityValue.textContent = value + '%';
   });
+  document.querySelectorAll('.guide-source').forEach((image) => {
+    if (!image.complete) image.addEventListener('load', positionProductionGuides, { once: true });
+  });
+  window.addEventListener('resize', positionProductionGuides);
+  positionProductionGuides();
 </script>
 </body>
 </html>`;
