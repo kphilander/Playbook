@@ -1,0 +1,35 @@
+{
+  "concepts": [
+    {
+      "id": "sports",
+      "category": "sports",
+      "title": "Every Leg Has to Land",
+      "rationale": "A parlay ticket turns the all-or-nothing rule into a quick visual read. Its one-in-eight example states the independent 50/50-pick assumption used for the arithmetic.",
+      "caption": "A parlay is one bet with several picks. Every leg has to win. With three independent 50/50 picks, that is one chance in eight. Read the whole ticket before the game starts.",
+      "alt": "A Playbook social card with a three-pick parlay ticket. It says every leg has to land, every pick must win, and three independent picks with a true 50/50 chance each produce a one-in-eight chance that all three win.",
+      "sources": [{"path": "how-to-play/sports-betting.md", "section": "Parlays", "note": "Supports that all picks must win. The card separately states its 0.5 × 0.5 × 0.5 = 1 in 8 independent-pick arithmetic assumption; it does not derive probability from a quoted price."}],
+      "tags": {"content_type": "quick-reference", "pillar": ["open"], "tier": 1, "tone": "confident-informative", "audience": ["sports-bettors"], "channel": ["social-media"], "reading_level": "grade-6-8"}
+    },
+    {
+      "id": "myth",
+      "category": "myth",
+      "title": "The Slot Does Not Have a Memory",
+      "rationale": "A fading sequence of old spins makes the independence of the next result immediate. The visual gives the myth a concrete answer without scolding the player.",
+      "caption": "A slot cannot be due. Each spin is independent, so past results cannot change the next one.",
+      "alt": "A dark Playbook myth card reads The slot does not have a memory. Seven faded past spin markers sit above a bright label stating Next spin: same odds.",
+      "sources": [{"path": "messaging/myth-busting.md", "section": "Myth 2: Due for a Win", "note": "Supports that each spin is generated independently and that a machine with 200 prior spins has the same odds on spin 201."}],
+      "tags": {"content_type": "myth-bust", "pillar": ["open"], "tier": 1, "tone": "playful-witty", "audience": ["general"], "channel": ["social-media"], "reading_level": "grade-6-8"}
+    },
+    {
+      "id": "wildcard",
+      "category": "wildcard",
+      "title": "RTP Is the Long Game",
+      "rationale": "A receipt-style calculation separates return to player from a session outcome. It turns the 95 percent RTP example into clear, visible long-run arithmetic.",
+      "caption": "A 95% RTP describes a long-run average, not a promise for one session. The paytable is the place to start.",
+      "alt": "A Playbook social card uses a receipt layout to explain a 95 percent slot return to player. It shows 100 dollars wagered over time, approximately 95 dollars paid back, and approximately 5 dollars as the house edge.",
+      "sources": [{"path": "how-to-play/slots.md", "section": "What this means for your wallet", "note": "Supports the 95% RTP and 5% house-edge example: for every $100 bet over time, about $5 is lost on average; a session may vary."}],
+      "tags": {"content_type": "quick-reference", "pillar": ["open"], "tier": 1, "tone": "confident-informative", "audience": ["general"], "channel": ["social-media"], "reading_level": "grade-6-8"}
+    }
+  ],
+  "notes": "Sports probability uses three independent picks, each with a true 50/50 chance: 0.5³ = 1 in 8. RTP is a long-run average and does not predict an individual session."
+}

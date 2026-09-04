@@ -1,0 +1,16 @@
+{
+  "title": "Playbook model concept comparison",
+  "date": "2026-09-04",
+  "format": {"width": 1080, "height": 1350, "language": "en", "tier": 1},
+  "participants": [
+    {"folder": "astra", "label": "GPT-6 Astra", "model": "gpt-6-astra", "reasoning": "high", "blindLabel": "Studio A"},
+    {"folder": "sol", "label": "GPT-5.6 Sol", "model": "gpt-5.6-sol", "reasoning": "high", "blindLabel": "Studio B"},
+    {"folder": "terra", "label": "GPT-5.6 Terra", "model": "gpt-5.6-terra", "reasoning": "high", "blindLabel": "Studio C"}
+  ],
+  "categories": [
+    {"id": "sports", "label": "Sports betting", "description": "Explain something about how a sports bet works."},
+    {"id": "myth", "label": "Gambling myth", "description": "Give a familiar gambling belief a fresh fact-based treatment."},
+    {"id": "wildcard", "label": "Agent’s choice", "description": "Explore another angle on entertainment literacy."}
+  ],
+  "method": "Three agents were spawned with fresh contexts, different model overrides, identical high reasoning settings, and the same dispatch text except for the assigned output folder. Each was required to read the shared brief and all 19 common input files before authoring. No participant was permitted to read another participant’s outputs. Each authored and revised its own three concepts using the common renderer. The comparison records one sample per model; it does not establish a general model ranking."
+}

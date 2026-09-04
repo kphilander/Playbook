@@ -1,0 +1,19 @@
+/* Identical bundled font resources for all comparison participants. */
+@font-face {
+  font-family: 'Inter';
+  src: url('../../../visual-identity/typography/fonts/inter-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('../../../visual-identity/typography/fonts/source-sans-3-latin.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../../../visual-identity/typography/fonts/source-code-pro-latin.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: block;
+}

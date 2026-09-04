@@ -66,6 +66,12 @@ node collateral/render/render-cards.mjs --check --profile=social-square --locale
 
 The HTML masters preserve program-name, helpline, and age placeholders. Dollar amounts and the displayed time are illustrative editorial examples. Localize those examples and retain the probability assumptions when adapting the concepts.
 
+## Model concept comparison
+
+The [model comparison gallery](model-comparison/index.html) presents nine original concepts: three each from GPT-6 Astra, GPT-5.6 Sol, and GPT-5.6 Terra. Each agent received the same brief, brand content, template set, high reasoning setting, and output requirements, then authored one sports betting concept, one gambling myth concept, and one topic of its choice.
+
+Use the topic filters and optional hidden model names to compare the work, or view the [single comparison sheet](model-comparison/contact-sheet.png). [Method, inputs, and rebuild instructions](model-comparison/README.md) and [review notes](model-comparison/REVIEW-NOTES.md) document the common conditions and agent-made corrections. This comparison uses its own renderer and is not added to the production template registry.
+
 ## Delivery model
 
 | Template | Format | Size | Bleed |

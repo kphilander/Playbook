@@ -1,0 +1,429 @@
+* { box-sizing: border-box; }
+
+html,
+body { margin: 0; }
+
+body { background: transparent; }
+
+.social-card.sol-card {
+  --sol-orange-ink: color-mix(in srgb, var(--pb-color-accent-dark) 70%, var(--pb-color-primary-dark));
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 1080px;
+  height: 1350px;
+  overflow: hidden;
+  font-family: var(--pb-font-body);
+}
+
+.sol-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 10px;
+  background: var(--pb-gradient-bar);
+  z-index: 5;
+}
+
+.sol-card .card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  padding: 54px 64px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.sol-card .card-logo {
+  font-family: var(--pb-font-heading);
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.018em;
+}
+
+.sol-card .series-label {
+  padding: 10px 22px 11px;
+  border: 3px solid currentColor;
+  border-radius: 999px;
+  font-family: var(--pb-font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sol-card .card-main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 0;
+  padding: 42px 64px 38px;
+  position: relative;
+  z-index: 1;
+}
+
+.sol-card h1,
+.sol-card p,
+.sol-card figure { margin: 0; }
+
+.sol-card h1 {
+  font-family: var(--pb-font-heading);
+  font-size: 96px;
+  font-weight: 850;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.sol-card .lead {
+  font-size: 46px;
+  line-height: 1.2;
+}
+
+.sol-card .action-line {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: var(--pb-font-heading);
+  font-size: 42px;
+  font-weight: 750;
+  line-height: 1.16;
+}
+
+.sol-card .action-line::after {
+  content: '→';
+  font-size: 58px;
+  line-height: 0.8;
+}
+
+.sol-card .card-footer {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  min-height: 154px;
+  padding: 27px 64px 29px;
+  background: var(--pb-color-primary-dark);
+  color: var(--pb-color-white);
+  font-size: 42px;
+  line-height: 1.16;
+  position: relative;
+  z-index: 4;
+}
+
+.sol-card .footer-support {
+  font-family: var(--pb-font-mono);
+  font-weight: 600;
+}
+
+.sol-card .footer-legal { color: var(--pb-color-neutral-200); }
+
+/* Sports: the rhythm of a scoreboard reveals the cost of a 50/50 record. */
+.sports-card {
+  background: var(--pb-color-neutral-50);
+  color: var(--pb-color-primary-dark);
+}
+
+.sports-card::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 520px;
+  right: 0;
+  top: 185px;
+  border: 42px solid var(--pb-color-neutral-100);
+  border-right: 0;
+  border-radius: 260px 0 0 260px;
+}
+
+.sports-card .series-label { color: var(--pb-color-secondary-dark); }
+
+.sports-card .card-main { gap: 26px; }
+
+.sports-card h1 { max-width: 900px; }
+
+.sports-card h1 em {
+  color: var(--sol-orange-ink);
+  font-style: normal;
+}
+
+.sports-card .lead { max-width: 860px; }
+
+.scoreboard {
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 32px;
+  background: var(--pb-color-primary);
+  color: var(--pb-color-white);
+  box-shadow: 14px 14px 0 var(--pb-color-neutral-200);
+}
+
+.scoreboard-caption {
+  padding: 23px 30px 20px;
+  border-bottom: 3px solid var(--pb-color-primary-light);
+  color: var(--pb-color-neutral-200);
+  font-size: 42px;
+  line-height: 1.15;
+}
+
+.score-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.score-cell { padding: 22px 30px 24px; }
+
+.score-cell + .score-cell { border-left: 3px solid var(--pb-color-primary-light); }
+
+.score-label {
+  display: block;
+  color: var(--pb-color-neutral-200);
+  font-size: 42px;
+  line-height: 1.15;
+}
+
+.score-amount {
+  display: block;
+  margin-top: 7px;
+  font-family: var(--pb-font-mono);
+  font-size: 72px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.score-cell:first-child .score-amount { color: var(--pb-color-secondary-light); }
+
+.score-cell:last-child .score-amount { color: var(--pb-color-accent-light); }
+
+.net-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 22px 30px 25px;
+  background: var(--pb-color-accent);
+  color: var(--pb-color-primary-dark);
+  font-family: var(--pb-font-heading);
+  font-size: 46px;
+  font-weight: 750;
+  line-height: 1;
+}
+
+.net-line strong {
+  font-family: var(--pb-font-mono);
+  font-size: 78px;
+  line-height: 0.9;
+}
+
+.sports-card .action-line {
+  margin-top: auto;
+  color: var(--pb-color-secondary-dark);
+}
+
+/* Myth: an editorial equation separates long-run return from win frequency. */
+.myth-card {
+  background: var(--pb-color-secondary);
+  color: var(--pb-color-primary-dark);
+}
+
+.myth-card::after {
+  content: '95';
+  position: absolute;
+  right: 0;
+  bottom: 110px;
+  color: color-mix(in srgb, var(--pb-color-primary) 10%, transparent);
+  font-family: var(--pb-font-heading);
+  font-size: 470px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.1em;
+}
+
+.myth-card .series-label { color: var(--pb-color-primary-dark); }
+
+.myth-card .card-main { gap: 25px; }
+
+.myth-card h1 { font-size: 91px; }
+
+.myth-card h1 em {
+  display: inline-block;
+  padding: 0 12px 7px;
+  background: var(--pb-color-primary);
+  color: var(--pb-color-white);
+  font-style: normal;
+  transform: rotate(-1.5deg);
+}
+
+.rtp-proof {
+  padding: 30px 34px 32px;
+  border: 4px solid var(--pb-color-primary-dark);
+  border-radius: 28px;
+  background: var(--pb-color-neutral-50);
+  box-shadow: 12px 12px 0 var(--pb-color-secondary-dark);
+}
+
+.proof-row {
+  display: grid;
+  grid-template-columns: 260px 72px 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+.proof-row + .proof-row {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 4px solid var(--pb-color-neutral-200);
+}
+
+.proof-number {
+  font-family: var(--pb-font-mono);
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.proof-symbol {
+  color: var(--sol-orange-ink);
+  font-family: var(--pb-font-heading);
+  font-size: 76px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+}
+
+.proof-copy {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.12;
+}
+
+.proof-row.false .proof-number,
+.proof-row.false .proof-symbol { color: var(--sol-orange-ink); }
+
+.rtp-assumption {
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 3px dashed var(--pb-color-primary-light);
+  font-size: 42px;
+  line-height: 1.18;
+}
+
+.myth-card .action-line {
+  margin-top: auto;
+  color: var(--pb-color-primary-dark);
+}
+
+/* Wildcard: a tempo ladder makes a small per-spin figure accumulate. */
+.wildcard-card {
+  background: var(--pb-color-accent);
+  color: var(--pb-color-primary-dark);
+}
+
+.wildcard-card .series-label { color: var(--pb-color-primary-dark); }
+
+.wildcard-card .card-main { gap: 25px; }
+
+.wildcard-card h1 { font-size: 98px; }
+
+.wildcard-card h1 em {
+  display: inline-block;
+  padding: 0 14px 5px;
+  background: var(--pb-color-neutral-50);
+  color: var(--pb-color-primary-dark);
+  font-style: normal;
+  box-shadow: 8px 8px 0 var(--pb-color-primary-dark);
+  transform: rotate(-1deg);
+}
+
+.pace-board {
+  display: grid;
+  grid-template-columns: 1fr 82px 1fr 82px 1fr;
+  align-items: stretch;
+  padding: 26px;
+  border-radius: 30px;
+  background: var(--pb-color-primary);
+  color: var(--pb-color-white);
+  box-shadow: 13px 13px 0 var(--pb-color-accent-dark);
+}
+
+.pace-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 202px;
+  padding: 18px 10px;
+  border: 3px solid var(--pb-color-primary-light);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.pace-value {
+  font-family: var(--pb-font-mono);
+  font-size: 69px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+.pace-label {
+  margin-top: 10px;
+  color: var(--pb-color-neutral-200);
+  font-size: 42px;
+  line-height: 1.08;
+}
+
+.pace-arrow {
+  display: grid;
+  place-items: center;
+  color: var(--pb-color-secondary-light);
+  font-family: var(--pb-font-heading);
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.hour-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 24px 32px;
+  border: 4px solid var(--pb-color-primary-dark);
+  border-radius: 24px;
+  background: var(--pb-color-neutral-50);
+}
+
+.hour-copy {
+  font-size: 42px;
+  font-weight: 650;
+  line-height: 1.15;
+}
+
+.hour-value {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.hour-value strong {
+  font-family: var(--pb-font-mono);
+  font-size: 78px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+.hour-value span {
+  margin-top: 5px;
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+.wildcard-card .action-line {
+  margin-top: auto;
+  color: var(--pb-color-primary-dark);
+}
