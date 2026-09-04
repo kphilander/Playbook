@@ -9,9 +9,11 @@ try {
   await page.setViewport({ width: 1600, height: 2400, deviceScaleFactor: 1 });
   await page.goto(pathToFileURL(join(here, 'contact-sheet.html')).href, { waitUntil: 'networkidle0' });
   await page.evaluate(() => document.fonts.ready);
-  const images = await page.$$eval('.sheet-cards img', items => items.map(img => ({ loaded: img.complete && img.naturalWidth === 1080 && img.naturalHeight === 1350, src: img.src })));
-  if (images.length !== 9 || images.some(img => !img.loaded)) throw new Error('Expected nine complete 1080 × 1350 images');
-  const sheet = await page.$('.sheet');
-  await sheet.screenshot({ path: join(here, 'contact-sheet.png') });
-  console.log('Exported contact-sheet.png');
+  for (const sheet of await page.$$('.sheet')) {
+    const result = await sheet.evaluate(element => ({ name: element.dataset.export, count: Number(element.dataset.count), images: [...element.querySelectorAll('img')].map(img => img.complete && img.naturalWidth === 1080 && img.naturalHeight === 1350) }));
+    if (result.images.length !== result.count || result.images.some(loaded => !loaded)) throw new Error(`Incomplete images in ${result.name}`);
+    if (!/^contact-sheet(?:-additions)?$/.test(result.name)) throw new Error('Invalid sheet name');
+    await sheet.screenshot({ path: join(here, `${result.name}.png`) });
+    console.log(`Exported ${result.name}.png`);
+  }
 } finally { await browser.close(); }

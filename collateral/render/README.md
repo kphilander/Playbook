@@ -68,9 +68,9 @@ The HTML masters preserve program-name, helpline, and age placeholders. Dollar a
 
 ## Model concept comparison
 
-The [model comparison gallery](model-comparison/index.html) presents nine original concepts: three each from GPT-6 Astra, GPT-5.6 Sol, and GPT-5.6 Terra. Each agent received the same brief, brand content, template set, high reasoning setting, and output requirements, then authored one sports betting concept, one gambling myth concept, and one topic of its choice.
+The [model showcase gallery](model-comparison/index.html) presents fifteen concepts: three each from GPT-6 Astra, GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.3 Codex Spark, and GPT-5.5. Each agent received the same brief, brand content, template set, high reasoning request, and output requirements, then authored one sports betting concept, one gambling myth concept, and one topic of its choice. GPT-5.4 was unavailable and is not scored.
 
-Use the topic filters and optional hidden model names to compare the work, or view the [single comparison sheet](model-comparison/contact-sheet.png). [Method, inputs, and rebuild instructions](model-comparison/README.md) and [review notes](model-comparison/REVIEW-NOTES.md) document the common conditions and agent-made corrections. This comparison uses its own renderer and is not added to the production template registry.
+Select up to three models and filter by topic, or view the [original three-model sheet](model-comparison/contact-sheet.png) and [Spark / GPT-5.5 sheet](model-comparison/contact-sheet-additions.png). This is a revised, unscored pilot: model-specific QA and unequal image-inspection support prevent a controlled competition claim. [Method and rebuild instructions](model-comparison/README.md), [review notes](model-comparison/REVIEW-NOTES.md), and a [proposed fair-test protocol](model-comparison/competition/PROTOCOL.md) document the limits and next experiment. The showcase uses its own renderer and is not added to the production template registry.
 
 ## Delivery model
 
