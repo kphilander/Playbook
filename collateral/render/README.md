@@ -1,6 +1,6 @@
 # Render Pipeline
 
-HTML layout masters, PNG previews, and build scripts for Playbook collateral. The renderer contains 75 English template families and 290 localized render entries across English, Japanese, Simplified Chinese, and Arabic.
+HTML layout masters, PNG previews, and build scripts for Playbook collateral. The renderer contains English template families and localized render entries across English, Japanese, Simplified Chinese, and Arabic. The new 20-series concepts are English social masters.
 
 ## Source files
 
@@ -45,6 +45,26 @@ npm run build:comparison
 ```
 
 Filters can be combined with options: `--profile=print-us --locale=en sign-floor`.
+
+## Editorial concepts — series 20
+
+Three new Tier 1 concepts use editable CSS/SVG artwork, bundled local fonts, and the configured brand tokens. Each has a 1080 × 1350 PNG preview and supports the 1080 × 1080 square profile with the same copy and 42px minimum text size.
+
+| Concept | Visual idea | HTML master |
+|---|---|---|
+| Your return isn’t your profit | A receipt separates a $50 total return into a $20 stake and $30 profit. | [20a](card-20a-return-vs-profit.html) |
+| Even a good night has an end time | An emerald clock composition turns choosing an end time into a personal plan. | [20b](card-20b-pick-your-pause.html) |
+| More picks. Smaller target. | A 16-outcome grid shows the chance that four independent 50/50 picks all win. | [20c](card-20c-parlay-probability.html) |
+
+Open the [concept review sheet](concepts-20.html) for a side-by-side preview, or read the [copy, alt text, and source notes](concepts-20.md). Shared art direction is in [concept-20.css](concept-20.css).
+
+```bash
+node collateral/render/render-cards.mjs --locale=en card-20
+node collateral/render/render-cards.mjs --check --profile=social-feed --locale=en card-20
+node collateral/render/render-cards.mjs --check --profile=social-square --locale=en card-20
+```
+
+The HTML masters preserve program-name, helpline, and age placeholders. Dollar amounts and the displayed time are illustrative editorial examples. Localize those examples and retain the probability assumptions when adapting the concepts.
 
 ## Delivery model
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pick your pause — {{PROGRAM_SHORT_NAME}}</title>
+  <!--
+  content_type: campaign
+  pillar: [open, tools]
+  tier: 1
+  tone: playful-witty
+  audience: [general]
+  channel: [social-media]
+  reading_level: grade-6-8
+  Source: messaging/core-messages.md, "Session reminder".
+  10:30 is an illustrative end time, not a recommended session duration.
+  The visual depicts a personal plan, not an active account setting.
+  -->
+  <link rel="stylesheet" href="brand-inject.css">
+  <link rel="stylesheet" href="concept-20.css">
+</head>
+<body>
+  <article class="social-card concept-20 concept-time" data-layout="planned-pause" aria-labelledby="headline">
+    <header class="card-header">
+      <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+      <span class="series-label">Your time. Your call.</span>
+    </header>
+    <main class="concept-main">
+      <h1 id="headline">Even a good night<br>has an end time.</h1>
+      <figure class="time-visual" aria-label="Example plan: call it a night at 10:30">
+        <svg class="clock-ring" viewBox="0 0 940 340" fill="none" aria-hidden="true">
+          <circle cx="470" cy="170" r="154" stroke="currentColor" stroke-width="4"/>
+          <path d="M470 32v20m0 236v20M332 170h20m236 0h20M372 72l14 14m168 168 14 14M568 72l-14 14M386 254l-14 14" stroke="currentColor" stroke-width="5"/>
+          <path d="M330 27h-68m42 20-42-20 42-20M610 313h68m-42-20 42 20-42 20" stroke="currentColor" stroke-width="4"/>
+          <circle cx="360" cy="60" r="21" fill="var(--pb-color-accent)" stroke="currentColor" stroke-width="4"/>
+        </svg>
+        <figcaption class="time-readout"><strong>10:30</strong><span>Call it a night.</span></figcaption>
+      </figure>
+      <p class="concept-copy">Choose when to wrap up before you play.<br>A reminder can help you keep track.</p>
+      <p class="concept-action">Pick your pause. Set a reminder.
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M8 24h30M25 11l13 13-13 13"/></svg>
+      </p>
+    </main>
+    <footer class="card-footer" data-protected-zone="support-and-legal">
+      <span>Free support: {{HELPLINE_NUMBER}}</span>
+      <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+    </footer>
+  </article>
+</body>
+</html>
