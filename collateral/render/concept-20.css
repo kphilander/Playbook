@@ -1,0 +1,229 @@
+/* Series 20: editorial concepts. Brand colors and font families come from
+   brand-inject.css; all illustrations are editable CSS/SVG geometry. */
+@font-face {
+  font-family: 'Inter';
+  src: url('../../visual-identity/typography/fonts/inter-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('../../visual-identity/typography/fonts/source-sans-3-latin.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: block;
+}
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('../../visual-identity/typography/fonts/source-code-pro-latin.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: block;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.social-card.concept-20 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--pb-color-primary);
+  color: var(--pb-color-white);
+  font-family: var(--pb-font-body);
+}
+.concept-20::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 8px;
+  background: var(--pb-gradient-bar);
+}
+.concept-20 .card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 62px 64px 0;
+  gap: 52px;
+  flex: 0 0 auto;
+}
+.concept-20 .card-logo {
+  font-family: var(--pb-font-heading);
+  font-weight: 700;
+  letter-spacing: -0.018em;
+}
+.concept-20 .series-label {
+  font-size: 42px;
+  line-height: 1.2;
+  color: var(--pb-color-secondary-light);
+}
+.concept-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 0;
+  padding: 36px 64px;
+  gap: 24px;
+}
+.concept-20 h1 {
+  margin: 0;
+  font-family: var(--pb-font-heading);
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+}
+.concept-20 h1 em { color: var(--pb-color-secondary-light); font-style: normal; }
+.concept-20 p { margin: 0; }
+.concept-copy { font-size: 46px; line-height: 1.22; }
+.concept-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: var(--pb-font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--pb-color-secondary-light);
+}
+.concept-action svg { width: 48px; height: 48px; flex: 0 0 48px; }
+.concept-20 .card-footer {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 64px;
+  background: var(--pb-color-primary-dark);
+  color: var(--pb-color-white);
+  font-size: 42px;
+  line-height: 1.25;
+}
+.concept-20 .footer-legal { color: var(--pb-color-neutral-200); }
+
+/* 20a: a receipt makes the subtraction visible. */
+.receipt {
+  position: relative;
+  margin: 0 22px;
+  padding: 30px 42px 34px;
+  color: var(--pb-color-primary);
+  background: var(--pb-color-neutral-50);
+  box-shadow: 16px 16px 0 var(--pb-color-primary-light);
+}
+.receipt::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 -12px;
+  height: 12px;
+  background: linear-gradient(135deg, var(--pb-color-neutral-50) 25%, transparent 25%) -12px 0 / 24px 24px,
+    linear-gradient(225deg, var(--pb-color-neutral-50) 25%, transparent 25%) -12px 0 / 24px 24px;
+}
+.receipt-caption { font-size: 42px; line-height: 1.2; padding-bottom: 22px; }
+.receipt dl { margin: 0; }
+.receipt-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 52px;
+  line-height: 1.35;
+}
+.receipt-row dd { margin: 0; font-family: var(--pb-font-mono); font-weight: 600; }
+.receipt-total {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 3px dashed var(--pb-color-primary);
+  font-weight: 600;
+}
+.receipt-total dd { font-size: 88px; line-height: 1; color: var(--pb-color-secondary-dark); }
+
+/* 20b: a full-color clock poster with a deliberate end point. */
+.social-card.concept-time { background: var(--pb-color-secondary); color: var(--pb-color-primary); }
+.concept-time .series-label { color: var(--pb-color-primary); }
+.concept-time .concept-action { color: var(--pb-color-primary); }
+.concept-time h1 { font-size: 108px; }
+.time-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 340px;
+  flex: 0 0 340px;
+  margin: 0;
+}
+.clock-ring { position: absolute; height: 100%; width: 100%; color: var(--pb-color-primary); }
+.time-readout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: var(--pb-color-primary);
+  color: var(--pb-color-white);
+  padding: 24px 44px;
+  transform: rotate(-4deg);
+  box-shadow: 12px 12px 0 var(--pb-color-secondary-dark);
+}
+.time-readout strong {
+  font-family: var(--pb-font-mono);
+  font-size: 98px;
+  line-height: 1.1;
+  letter-spacing: -0.06em;
+  font-weight: 600;
+}
+.time-readout span { font-size: 42px; line-height: 1.2; }
+
+/* 20c: sixteen equal outcomes, with the single all-win result marked twice
+   (color and check) so the explanation does not depend on color alone. */
+.concept-parlay h1 em { color: var(--pb-color-accent-light); }
+.probability-panel {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  align-items: center;
+  gap: 46px;
+  margin: 0;
+}
+.outcome-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.outcome-grid > span {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border: 3px solid var(--pb-color-neutral-300);
+  border-radius: 50%;
+}
+.outcome-grid .all-win {
+  background: var(--pb-color-secondary-light);
+  border-color: var(--pb-color-secondary-light);
+  color: var(--pb-color-primary);
+}
+.all-win svg { width: 48px; height: 48px; }
+.probability-number {
+  display: block;
+  font-family: var(--pb-font-heading);
+  font-size: 108px;
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+.probability-caption { font-size: 46px; line-height: 1.25; }
+.probability-caption .percent { display: block; margin-top: 22px; color: var(--pb-color-secondary-light); font-weight: 600; }
+.concept-assumption { padding-top: 24px; border-top: 2px solid var(--pb-color-neutral-300); font-size: 42px; line-height: 1.25; }
+
+/* The square export recomposes spacing and artwork while retaining every
+   word and the same 42px reading floor. */
+body.pb-profile-social-square .concept-20 .card-header { padding-top: 40px; }
+body.pb-profile-social-square .concept-main { padding-top: 24px; padding-bottom: 24px; gap: 20px; }
+body.pb-profile-social-square .concept-20 h1 { font-size: 84px; }
+body.pb-profile-social-square .receipt { padding-top: 24px; padding-bottom: 24px; }
+body.pb-profile-social-square .receipt-caption { padding-bottom: 12px; }
+body.pb-profile-social-square .receipt-row { font-size: 46px; line-height: 1.2; }
+body.pb-profile-social-square .receipt-total { margin-top: 14px; padding-top: 14px; }
+body.pb-profile-social-square .receipt-total dd { font-size: 68px; }
+body.pb-profile-social-square .time-visual { height: 250px; flex-basis: 250px; }
+body.pb-profile-social-square .time-readout { padding: 16px 40px; }
+body.pb-profile-social-square .time-readout strong { font-size: 84px; }
+body.pb-profile-social-square .concept-parlay .concept-main { gap: 16px; }
+body.pb-profile-social-square .concept-parlay h1 { font-size: 76px; }
+body.pb-profile-social-square .concept-parlay .concept-copy { font-size: 42px; }
+body.pb-profile-social-square .probability-panel { grid-template-columns: 230px 1fr; }
+body.pb-profile-social-square .outcome-grid { gap: 10px; }
+body.pb-profile-social-square .all-win svg { width: 32px; height: 32px; }
+body.pb-profile-social-square .probability-number { font-size: 92px; }
+body.pb-profile-social-square .probability-caption .percent { margin-top: 12px; }
+body.pb-profile-social-square .concept-assumption { padding-top: 20px; }
