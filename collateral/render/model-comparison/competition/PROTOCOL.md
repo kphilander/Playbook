@@ -24,6 +24,20 @@ This avoids awarding a concept-quality win because one agent has a screenshot to
 
 A separate full-production lane can assess model-authored HTML/CSS/SVG. It must use the same runtime and actual tool access for every participant, preserve initial submissions, and report rendering failures. Do not combine its scores with the concept lane. The current gallery belongs to an exploratory production showcase, not either controlled lane.
 
+## Shared photography access
+
+Photography can be available through one common sourcing or generation tool. Google has been requested; the specific Google service is pending clarification and no photography API has been connected. The original pilot brief and outputs remain frozen; photography belongs to a new run with declared inputs.
+
+- **Asset-choice test:** give every participant the same frozen shortlist of photo IDs, images, and descriptions for each case. Selection, crop instructions, and composition remain the model's choices. This holds the available material constant.
+- **Sourcing-and-production test:** allow independent queries against the same provider, with the same search-call allowance, results per call, filters, preview resolution, selection limit, and retry rules. Cache repeated identical queries within the run, where provider terms permit, and preserve result order and selection logs. This measures sourcing as well as composition; do not claim that all models saw identical candidates.
+- **Generation-and-production test:** if using Google's Gemini/Imagen, hold the image model, endpoint, dimensions, quality settings, reference-image access, generation allowance, and retry rules constant. Each competing concept model writes its own image prompt. Save every attempt and its prompt, including failures, before selection. Credit the concept model for art direction and Google for image generation; the resulting comparison measures the combined workflow. A separate fixed-photo test isolates copy and composition from image-generation randomness.
+- Freeze either design and its numerical limits before generation. Apply photography access equally to brief-only and shared-input conditions. Give both conditions the same minimum image requirements; the extended Playbook photography reference belongs to the shared-input packet.
+- Use a common interface returning asset ID, provider, description, dimensions, preview reference, photographer, source URL, and license/rights notes. Keep account credentials in the integration, outside model prompts, browser pages, output files, and Git. Record usage without recording credentials.
+- Preflight actual image-input support. Spark reported that image inspection was unsupported in the pilot. Giving it a search API does not resolve that difference. A metadata-only concept lane can give every participant the same descriptions; a scored visual-selection lane requires comparable image access and an explicitly eligible roster.
+- Keep photographer/provider credits with the selected assets and rendered work as required. Do not put third-party stock originals under the repository's CC0 license or redistribute them in source archives unless their terms permit it. Preserve permitted provenance records and hashes for reproducibility.
+
+Google's [Gemini image-generation documentation](https://ai.google.dev/gemini-api/docs/image-generation) supports the generation route. The repository's existing photography prompt records name `gemini-3-pro-image`; that is provenance for those references, not evidence that a Google credential is available to this run. Provider terms and permitted use must be checked for whichever route is selected. Search results alone do not establish rights to use a photograph. Keep any third-party stock license distinct from Playbook's CC0 license.
+
 ## Model roster and availability
 
 - Record exact requested and actual model IDs, date, runtime version, reasoning setting, tool availability, and any backend-reported limits.
