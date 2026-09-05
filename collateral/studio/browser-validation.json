@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "name": "Eight shared templates and seven independent skins",
+      "pass": true
+    },
+    {
+      "name": "Preview dimensions match the declared format",
+      "pass": true
+    },
+    {
+      "name": "CSS skin swaps retain the exact article and media nodes",
+      "pass": true
+    },
+    {
+      "name": "Stylesheet changes the visible palette",
+      "pass": true
+    },
+    {
+      "name": "SVG replaces the photograph in the same media slot",
+      "pass": true
+    },
+    {
+      "name": "SVG inherits each skin’s color",
+      "pass": true
+    },
+    {
+      "name": "Photo selection, alt text and crop travel independently of skin",
+      "pass": true
+    },
+    {
+      "name": "One content edit updates both live templates",
+      "pass": true
+    },
+    {
+      "name": "Recipe and comparison skin survive reload",
+      "pass": true
+    },
+    {
+      "name": "Market contact and age resolve together",
+      "pass": true
+    },
+    {
+      "name": "HTML download is produced",
+      "pass": true
+    },
+    {
+      "name": "Export embeds fonts, image, recipe and market context",
+      "pass": true
+    },
+    {
+      "name": "Embedded fonts retain copyright notices and license terms",
+      "pass": true
+    },
+    {
+      "name": "Portable HTML opens without any network request",
+      "pass": true
+    },
+    {
+      "name": "Recipe export retains content, skin, asset and crop",
+      "pass": true
+    },
+    {
+      "name": "A saved recipe can be restored",
+      "pass": true
+    },
+    {
+      "name": "Invalid imports leave the working recipe intact",
+      "pass": true
+    },
+    {
+      "name": "Overflow is detected and HTML export is blocked",
+      "pass": true
+    },
+    {
+      "name": "Market warning preserves black-on-white styling across skins",
+      "pass": true
+    },
+    {
+      "name": "The prescribed market cannot be changed to a generic contact preview",
+      "pass": true
+    },
+    {
+      "name": "Support keeps calm typography, no image slot and an actual contact link",
+      "pass": true
+    },
+    {
+      "name": "Mobile workspace has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "Editor remains usable when browser storage is unavailable",
+      "pass": true
+    },
+    {
+      "name": "Copy is escaped instead of interpreted as HTML",
+      "pass": true
+    },
+    {
+      "name": "No browser errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

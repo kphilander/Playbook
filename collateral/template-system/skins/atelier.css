@@ -1,0 +1,41 @@
+/* Replace this stylesheet to reskin the same HTML. */
+.message-concept{
+  --narrow-heading-size:103px;
+  --body:Inter, sans-serif;
+  --paper:#F3EFE7;
+  --ink:#262A27;
+  --muted:#655F55;
+  --accent:#79643E;
+  --on-accent:#FFFFFF;
+  --panel:#E4DDCF;
+  --on-panel:#262A27;
+  --panel-accent:#665334;
+  --media-panel:#E4DDCF;
+  --on-media-panel:#262A27;
+  --rule:#C9BEAB;
+  --display:Fraunces, serif;
+  --weight:500;
+  --heading-tracking:-.025em;
+  --heading-word-spacing:.06em;
+  --photo-radius:240px 240px 0 0;
+  --card-radius:0px;
+  --button-radius:0px;
+}
+
+.message-concept[data-tier="2"]{
+  --paper:#FAF6EC;
+  --ink:#253B32;
+  --muted:#536153;
+  --accent:#284E3E;
+  --on-accent:#FFFFFF;
+  --panel:#EBEBDD;
+  --on-panel:#253B32;
+  --panel-accent:#284E3E;
+  --media-panel:#EBEBDD;
+  --on-media-panel:#253B32;
+  --rule:#9AA894;
+  --display:Inter, sans-serif;
+  --weight:700;
+  --card-shadow:none;
+  --card-rotation:0deg;
+}

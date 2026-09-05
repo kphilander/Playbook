@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Playbook — Template Studio</title><link rel="stylesheet" href="studio.css"></head>
+<body>
+<a class="skip-link" href="#workspace">Skip to the workspace</a>
+<header class="topbar"><a class="wordmark" href="../creative-review/index.html">Playbook <span>/ Template studio</span></a><nav aria-label="Creative tools"><a href="../design-preferences/index.html?category=message#comparisons">Your design comparisons ↗</a><a href="../template-system/README.md">How it works ↗</a></nav></header>
+<main>
+<section class="intro"><div><p class="eyebrow">The adaptable creative library / 01</p><h1>One idea.<br><span>Every expression.</span></h1></div><div class="intro-note"><p>Keep the idea. Change its personality.</p><p>Compare two skins on the same template, then shape the copy and choose a photograph or an illustration.</p><span class="quiet-badge">8 template families · 7 CSS skins</span></div></section>
+<div class="workspace" id="workspace">
+<details class="inspector-shell" open><summary class="inspector-toggle">Template settings</summary><aside class="inspector" aria-label="Template controls">
+<div class="section-number">01 <span>The foundation</span></div>
+<label for="template">Template</label><select id="template"></select>
+<label for="variant">Composition</label><select id="variant"><option value="after">New concept</option><option value="before">Reference layout</option></select>
+<p id="format-note" class="hint"></p>
+<div class="section-number">02 <span>The visual</span></div>
+<label for="asset">Image or illustration</label><select id="asset"></select><p id="asset-note" class="hint"></p>
+<div id="crop-controls" hidden><label for="crop-x">Horizontal crop <output id="crop-x-value">50%</output></label><input id="crop-x" type="range" min="0" max="100"><label for="crop-y">Vertical crop <output id="crop-y-value">23%</output></label><input id="crop-y" type="range" min="0" max="100"></div>
+<details id="copy-editor"><summary>Shape the copy <span>+</span></summary><div id="copy-fields"></div><p class="hint">New lines are optional. The fit check catches text that outgrows its space.</p></details>
+<details><summary>Market context <span>+</span></summary><label for="market">Contact profile</label><select id="market"></select><p class="hint">This selects contact details and the study’s message requirements.</p></details>
+<div class="file-actions"><button id="save-recipe">Save recipe</button><button id="restore-recipe">Open recipe</button><input type="file" id="recipe-file" accept=".json,application/json" hidden></div><button id="reset" class="text-button">Reset this template</button>
+<p id="save-state" class="hint" role="status">Changes stay in this browser.</p>
+</aside></details>
+<section class="canvas-area" aria-label="Compare CSS skins">
+<div class="canvas-intro"><div><span class="eyebrow">Same content. Same structure.</span><h2 id="template-title"></h2></div><span class="live-label"><i></i> Live templates</span></div>
+<div class="canvases">
+<figure class="canvas-card"><figcaption><label for="skin-a"><b>A</b> <select id="skin-a" aria-label="Skin A"></select></label><span id="skin-description-a"></span></figcaption><div class="artwork-stage" id="stage-a"><iframe id="preview-a" title="Template with skin A" sandbox="allow-same-origin"></iframe></div><p class="check-note" id="check-a" role="status">Preparing preview…</p></figure>
+<figure class="canvas-card"><figcaption><label for="skin-b"><b>B</b> <select id="skin-b" aria-label="Skin B"></select></label><span id="skin-description-b"></span></figcaption><div class="artwork-stage" id="stage-b"><iframe id="preview-b" title="Template with skin B" sandbox="allow-same-origin"></iframe></div><p class="check-note" id="check-b" role="status">Preparing preview…</p></figure>
+</div>
+<div class="export-bar"><div><strong>Your template, ready to carry forward.</strong><p>HTML includes its fonts, image and editable styles. The recipe keeps your choices reusable.</p></div><div class="export-actions"><label class="sr-only" for="export-side">Skin to export</label><select id="export-side"><option value="a">Skin A</option><option value="b">Skin B</option></select><button id="export-css">CSS skin</button><button id="export-html" class="primary" disabled>Export HTML ↗</button></div></div>
+<p id="action-status" class="action-status" role="status" aria-live="polite"></p>
+<details class="study-context"><summary id="context-title">About this application</summary><p id="context-copy"></p><a id="context-link" target="_blank" rel="noopener">Read the market assumptions ↗</a></details>
+</section>
+</div>
+<footer><span>Clear information. Respect for the player. Room for your brand.</span><span>Template studio · local preview</span></footer>
+</main><script type="module" src="studio.mjs"></script>
+</body></html>

@@ -1,0 +1,39 @@
+/* Replace this stylesheet to reskin the same HTML. */
+.message-concept{
+  --media-accent:var(--accent);
+  --body:Inter, sans-serif;
+  --paper:#173C35;
+  --ink:#F6F1E7;
+  --muted:#D1DCCF;
+  --accent:#DFEDAD;
+  --on-accent:#173C35;
+  --panel:#F6F1E7;
+  --on-panel:#173C35;
+  --panel-accent:#173C35;
+  --media-panel:#173C35;
+  --on-media-panel:#F6F1E7;
+  --rule:#76967A;
+  --display:Manrope, sans-serif;
+  --weight:800;
+  --photo-radius:42px 42px 110px 42px;
+  --card-radius:30px;
+  --button-radius:60px;
+}
+
+.message-concept[data-tier="2"]{
+  --paper:#FAF6EC;
+  --ink:#253B32;
+  --muted:#536153;
+  --accent:#284E3E;
+  --on-accent:#FFFFFF;
+  --panel:#EBEBDD;
+  --on-panel:#253B32;
+  --panel-accent:#284E3E;
+  --media-panel:#EBEBDD;
+  --on-media-panel:#253B32;
+  --rule:#9AA894;
+  --display:Inter, sans-serif;
+  --weight:700;
+  --card-shadow:none;
+  --card-rotation:0deg;
+}
