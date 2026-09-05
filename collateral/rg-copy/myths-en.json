@@ -1,0 +1,792 @@
+{
+  "meta": {
+    "count": 18,
+    "editorial_revision": "2026-09-04",
+    "source": "collateral/rg-copy/myths-en.json",
+    "basis": "Adapted and corrected from messaging/myth-busting.md; see collateral/creative-review/README.md"
+  },
+  "frontmatter": {
+    "content_type": "myth-bust",
+    "title": "Myth Busting",
+    "pillar": [
+      "open",
+      "social"
+    ],
+    "tier": [
+      1
+    ],
+    "tone": [
+      "playful-witty",
+      "confident-informative"
+    ],
+    "reading_level": "grade-6-8",
+    "audience": [
+      "general"
+    ],
+    "channel": [
+      "social-media",
+      "blog",
+      "in-app"
+    ],
+    "cultural_profile": {
+      "voice": "peer",
+      "framing": "individual",
+      "humor": "irreverent",
+      "directness": "blunt",
+      "comfort": "open"
+    },
+    "presentation": {
+      "currency": "usd",
+      "language": "en-us"
+    },
+    "adaptation_status": "base",
+    "adaptation_notes": "Game-specific myths: Some reference US casino culture.\nHumor: One-liners use irreverent tone. Adapt for profile.\nFormat: Social card copy may need cultural adjustment.\n",
+    "last_updated": "2025-02-25T00:00:00.000Z"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "title": "The Hot Streak",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "clustering-illusion",
+        "hot-hand-fallacy"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I'm on a hot streak — keep going!",
+        "fact": "Independent spins do not carry a winning streak forward. The same rules and settings apply to the next spin.",
+        "stat": "The previous wins do not change its odds"
+      },
+      "articleExplainer": "Four wins aren't a forecast.\n\nIndependent spins do not carry a winning streak forward. The same rules and settings apply to the next spin.",
+      "quiz": {
+        "question": "On a slot with independent spins, you win four times. With the same game settings, what changes on spin five?",
+        "options": [
+          {
+            "label": "Better than normal — you're on a streak",
+            "correct": false
+          },
+          {
+            "label": "Worse than normal — you're \"due\" for a loss",
+            "correct": false
+          },
+          {
+            "label": "The previous wins do not change its odds",
+            "correct": true
+          },
+          {
+            "label": "Depends on how much you bet",
+            "correct": false
+          }
+        ],
+        "feedback": "Independent spins do not carry a winning streak forward. The same rules and settings apply to the next spin."
+      }
+    },
+    {
+      "id": 2,
+      "title": "Due for a Win",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "gambler-s-fallacy"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "This machine hasn't paid out in ages — it's due.",
+        "fact": "A losing run does not make an independent spin due. Check any separate bonus features in the game rules.",
+        "stat": "Nothing about the next result"
+      },
+      "articleExplainer": "A losing run isn't a countdown.\n\nA losing run does not make an independent spin due. Check any separate bonus features in the game rules.",
+      "quiz": {
+        "question": "On a slot with independent spins, three hours pass without a win. What does that predict about the next spin?",
+        "options": [
+          {
+            "label": "It's more likely to pay out soon",
+            "correct": false
+          },
+          {
+            "label": "It's less likely to pay out — it's \"cold\"",
+            "correct": false
+          },
+          {
+            "label": "Nothing about the next result",
+            "correct": true
+          },
+          {
+            "label": "The machine is broken",
+            "correct": false
+          }
+        ],
+        "feedback": "A losing run does not make an independent spin due. Check any separate bonus features in the game rules."
+      }
+    },
+    {
+      "id": 3,
+      "title": "The Lucky Machine",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "anthropomorphism",
+        "magical-thinking"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "That's my lucky machine.",
+        "fact": "Memorable wins can shape an impression. A complete record includes stakes and losses. Different games and settings can have different odds.",
+        "stat": "Compare the complete record, including losses"
+      },
+      "articleExplainer": "Favourite seat. Check the facts.\n\nMemorable wins can shape an impression. A complete record includes stakes and losses. Different games and settings can have different odds.",
+      "quiz": {
+        "question": "A slot feels lucky because you remember its wins. What would help you check that impression?",
+        "options": [
+          {
+            "label": "A few memorable wins",
+            "correct": false
+          },
+          {
+            "label": "The machine recognising you",
+            "correct": false
+          },
+          {
+            "label": "Compare the complete record, including losses",
+            "correct": true
+          },
+          {
+            "label": "Your favourite seat",
+            "correct": false
+          }
+        ],
+        "feedback": "Memorable wins can shape an impression. A complete record includes stakes and losses. Different games and settings can have different odds."
+      }
+    },
+    {
+      "id": 4,
+      "title": "Near Misses Mean You're Close",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "near-miss-effect"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Two cherries and a blank — I almost hit it! One more try.",
+        "fact": "A near miss is still a non-winning result under that game's paytable. It does not make an independent next spin more likely to win.",
+        "stat": "No — the near miss does not improve them"
+      },
+      "articleExplainer": "Close isn't a countdown.\n\nA near miss is still a non-winning result under that game's paytable. It does not make an independent next spin more likely to win.",
+      "quiz": {
+        "question": "A non-winning result looks close on a slot with independent spins. Does that improve the next spin's odds?",
+        "options": [
+          {
+            "label": "You're getting closer to a win",
+            "correct": false
+          },
+          {
+            "label": "The machine is warming up",
+            "correct": false
+          },
+          {
+            "label": "No — the near miss does not improve them",
+            "correct": true
+          },
+          {
+            "label": "You should increase your bet",
+            "correct": false
+          }
+        ],
+        "feedback": "A near miss is still a non-winning result under that game's paytable. It does not make an independent next spin more likely to win."
+      }
+    },
+    {
+      "id": 5,
+      "title": "Time of Day Matters",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "magical-thinking",
+        "illusory-correlation"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Slots pay out more at night / weekends / when the casino is full.",
+        "fact": "Time of day alone is not evidence of a higher RTP. Read the game's rules and published return information; requirements vary by market.",
+        "stat": "No — check the game's published information"
+      },
+      "articleExplainer": "The clock isn't a paytable.\n\nTime of day alone is not evidence of a higher RTP. Read the game's rules and published return information; requirements vary by market.",
+      "quiz": {
+        "question": "Can the clock alone tell you a slot game's return-to-player percentage?",
+        "options": [
+          {
+            "label": "The hour on the clock",
+            "correct": false
+          },
+          {
+            "label": "How busy the room feels",
+            "correct": false
+          },
+          {
+            "label": "No — check the game's published information",
+            "correct": true
+          },
+          {
+            "label": "Whether the last spin won",
+            "correct": false
+          }
+        ],
+        "feedback": "Time of day alone is not evidence of a higher RTP. Read the game's rules and published return information; requirements vary by market."
+      }
+    },
+    {
+      "id": 6,
+      "title": "Higher Bets Improve Your Odds",
+      "category": "Slots & Electronic Gaming",
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "bias": [
+        "proportionality-bias"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Bet max for better odds.",
+        "fact": "The percentage is unchanged in this example. A ten-times larger stake has ten-times larger expected loss. Other games may change payouts with the stake.",
+        "stat": "The percentage stays the same"
+      },
+      "articleExplainer": "A bigger stake changes the amount at risk.\n\nThe percentage is unchanged in this example. A ten-times larger stake has ten-times larger expected loss. Other games may change payouts with the stake.",
+      "quiz": {
+        "question": "On the same roulette bet, with the same rules and payout ratio, what happens to the house-edge percentage if your stake rises?",
+        "options": [
+          {
+            "label": "It goes down — casinos reward bigger bettors",
+            "correct": false
+          },
+          {
+            "label": "It goes up — the casino takes more",
+            "correct": false
+          },
+          {
+            "label": "The percentage stays the same",
+            "correct": true
+          },
+          {
+            "label": "It depends on the machine",
+            "correct": false
+          }
+        ],
+        "feedback": "The percentage is unchanged in this example. A ten-times larger stake has ten-times larger expected loss. Other games may change payouts with the stake."
+      }
+    },
+    {
+      "id": 7,
+      "title": "Betting Systems Beat the House",
+      "category": "Table Games",
+      "gameType": [
+        "roulette",
+        "blackjack",
+        "baccarat"
+      ],
+      "bias": [
+        "gambler-s-fallacy",
+        "illusion-of-control"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Just use the Martingale system — double your bet after every loss. You'll always come out ahead.",
+        "fact": "A betting sequence does not change roulette's probabilities or payout ratio. Repeated losses require larger stakes, and funds or table limits can stop the sequence.",
+        "stat": "No — and the required stakes can grow quickly"
+      },
+      "articleExplainer": "A sequence isn't an advantage.\n\nA betting sequence does not change roulette's probabilities or payout ratio. Repeated losses require larger stakes, and funds or table limits can stop the sequence.",
+      "quiz": {
+        "question": "Does doubling your roulette stake after every loss remove the house edge?",
+        "options": [
+          {
+            "label": "Yes — if you keep doubling",
+            "correct": false
+          },
+          {
+            "label": "Yes — it changes the wheel",
+            "correct": false
+          },
+          {
+            "label": "No — and the required stakes can grow quickly",
+            "correct": true
+          },
+          {
+            "label": "Yes — there is no limit to the required stake",
+            "correct": false
+          }
+        ],
+        "feedback": "A betting sequence does not change roulette's probabilities or payout ratio. Repeated losses require larger stakes, and funds or table limits can stop the sequence."
+      }
+    },
+    {
+      "id": 8,
+      "title": "The Dealer Is Hot or Cold",
+      "category": "Table Games",
+      "gameType": [
+        "blackjack",
+        "baccarat",
+        "poker"
+      ],
+      "bias": [
+        "clustering-illusion",
+        "anthropomorphism"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Switch tables — that dealer is too hot.",
+        "fact": "A streak alone does not establish an advantage. Blackjack rules, strategy and the cards remaining can matter; hands dealt from a shoe are not independent.",
+        "stat": "No — compare the rules and game conditions"
+      },
+      "articleExplainer": "Check the rules, not the run.\n\nA streak alone does not establish an advantage. Blackjack rules, strategy and the cards remaining can matter; hands dealt from a shoe are not independent.",
+      "quiz": {
+        "question": "Does a dealer's recent winning streak alone tell you which blackjack table has better odds?",
+        "options": [
+          {
+            "label": "Yes — follow the losing dealer",
+            "correct": false
+          },
+          {
+            "label": "Yes — the streak must reverse",
+            "correct": false
+          },
+          {
+            "label": "No — compare the rules and game conditions",
+            "correct": true
+          },
+          {
+            "label": "Yes — ignore differences in rules",
+            "correct": false
+          }
+        ],
+        "feedback": "A streak alone does not establish an advantage. Blackjack rules, strategy and the cards remaining can matter; hands dealt from a shoe are not independent."
+      }
+    },
+    {
+      "id": 9,
+      "title": "Card Counting Is Easy Money",
+      "category": "Table Games",
+      "gameType": [
+        "blackjack"
+      ],
+      "bias": [
+        "overconfidence-bias",
+        "survivorship-bias"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I saw it in a movie — just count cards and beat the house.",
+        "fact": "Any potential advantage depends on the rules, shoe composition and play. Results vary, including losing periods, and venues may restrict play.",
+        "stat": "No — conditions and outcomes vary"
+      },
+      "articleExplainer": "An advantage isn't a guarantee.\n\nAny potential advantage depends on the rules, shoe composition and play. Results vary, including losing periods, and venues may restrict play.",
+      "quiz": {
+        "question": "Does card counting guarantee income from blackjack?",
+        "options": [
+          {
+            "label": "Yes — every session wins",
+            "correct": false
+          },
+          {
+            "label": "Yes — results are guaranteed",
+            "correct": false
+          },
+          {
+            "label": "No — conditions and outcomes vary",
+            "correct": true
+          },
+          {
+            "label": "Yes — rules never matter",
+            "correct": false
+          }
+        ],
+        "feedback": "Any potential advantage depends on the rules, shoe composition and play. Results vary, including losing periods, and venues may restrict play."
+      }
+    },
+    {
+      "id": 10,
+      "title": "Choosing \"Your\" Numbers Improves Odds",
+      "category": "Table Games",
+      "gameType": [
+        "roulette",
+        "lottery"
+      ],
+      "bias": [
+        "illusion-of-control"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I always play 17 — it's my lucky number.",
+        "fact": "There are 37 equally likely pockets in this example. Previous results do not change the next independent spin's probability.",
+        "stat": "1 in 37"
+      },
+      "articleExplainer": "Your number. The same odds.\n\nThere are 37 equally likely pockets in this example. Previous results do not change the next independent spin's probability.",
+      "quiz": {
+        "question": "On a fair single-zero roulette wheel, number 7 has missed 50 spins. What is its chance on the next independent spin?",
+        "options": [
+          {
+            "label": "Higher — it's overdue",
+            "correct": false
+          },
+          {
+            "label": "Lower — it's clearly unlucky today",
+            "correct": false
+          },
+          {
+            "label": "1 in 37",
+            "correct": true
+          },
+          {
+            "label": "It depends on where the dealer drops the ball",
+            "correct": false
+          }
+        ],
+        "feedback": "There are 37 equally likely pockets in this example. Previous results do not change the next independent spin's probability."
+      }
+    },
+    {
+      "id": 11,
+      "title": "Knowing the Sport Means You'll Win",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "overconfidence-bias",
+        "dunning-kruger-effect"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I know football better than anyone — of course I'll make money betting on it.",
+        "fact": "Risking $110 wins $100 profit. Break-even is 110 ÷ (110 + 100), or about 52.4%. This assumes equal stakes, the same price and no pushes or extra fees.",
+        "stat": "About 52.4%"
+      },
+      "articleExplainer": "Knowing the sport starts the conversation.\n\nRisking $110 wins $100 profit. Break-even is 110 ÷ (110 + 100), or about 52.4%. This assumes equal stakes, the same price and no pushes or extra fees.",
+      "quiz": {
+        "question": "With equal stakes at −110, no pushes and no extra fees, what win rate breaks even?",
+        "options": [
+          {
+            "label": "50% — just win half",
+            "correct": false
+          },
+          {
+            "label": "About 52.4%",
+            "correct": true
+          },
+          {
+            "label": "55% — a small edge",
+            "correct": false
+          },
+          {
+            "label": "60% — you need a clear advantage",
+            "correct": false
+          }
+        ],
+        "feedback": "Risking $110 wins $100 profit. Break-even is 110 ÷ (110 + 100), or about 52.4%. This assumes equal stakes, the same price and no pushes or extra fees."
+      }
+    },
+    {
+      "id": 12,
+      "title": "Parlays Are a Smart Strategy",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "optimism-bias",
+        "probability-neglect"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "A bigger parlay payout means a better chance.",
+        "fact": "0.5 × 0.5 × 0.5 × 0.5 = 0.0625. This example assumes independence; correlated picks need different calculations. A quoted payout is a separate figure.",
+        "stat": "6.25%"
+      },
+      "articleExplainer": "Four picks. One all-win result.\n\n0.5 × 0.5 × 0.5 × 0.5 = 0.0625. This example assumes independence; correlated picks need different calculations. A quoted payout is a separate figure.",
+      "quiz": {
+        "question": "Four independent picks each have a true 50% chance. What is the chance all four win?",
+        "options": [
+          {
+            "label": "50%",
+            "correct": false
+          },
+          {
+            "label": "25%",
+            "correct": false
+          },
+          {
+            "label": "6.25%",
+            "correct": true
+          },
+          {
+            "label": "100%",
+            "correct": false
+          }
+        ],
+        "feedback": "0.5 × 0.5 × 0.5 × 0.5 = 0.0625. This example assumes independence; correlated picks need different calculations. A quoted payout is a separate figure."
+      }
+    },
+    {
+      "id": 13,
+      "title": "Following Tipsters Guarantees Profit",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "authority-bias",
+        "survivorship-bias"
+      ],
+      "pillar": "open + social",
+      "socialCard": {
+        "myth": "Eight wins from ten picks proves a tipster will make a profit.",
+        "fact": "Ten picks are a limited sample. To assess a claim, check the complete record, prices, stakes, losses and fees. Accuracy alone is not profit.",
+        "stat": "It does not establish a reliable long-term profit"
+      },
+      "articleExplainer": "A highlight reel isn't a balance sheet.\n\nTen picks are a limited sample. To assess a claim, check the complete record, prices, stakes, losses and fees. Accuracy alone is not profit.",
+      "quiz": {
+        "question": "A tipster reports eight wins from ten picks. What can that record alone establish?",
+        "options": [
+          {
+            "label": "A guaranteed future win rate",
+            "correct": false
+          },
+          {
+            "label": "A guaranteed profit",
+            "correct": false
+          },
+          {
+            "label": "It does not establish a reliable long-term profit",
+            "correct": true
+          },
+          {
+            "label": "Proof of inside information",
+            "correct": false
+          }
+        ],
+        "feedback": "Ten picks are a limited sample. To assess a claim, check the complete record, prices, stakes, losses and fees. Accuracy alone is not profit."
+      }
+    },
+    {
+      "id": 14,
+      "title": "In-Play Betting Gives You an Edge",
+      "category": "Sports Betting",
+      "gameType": [
+        "sports-betting"
+      ],
+      "bias": [
+        "illusion-of-control",
+        "overconfidence"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "I can see how the game is going — live betting lets me react and win.",
+        "fact": "Live prices can change, and broadcasts can be delayed. Review the accepted price, stake and potential return. Watching the match does not guarantee an information advantage.",
+        "stat": "The current price and potential return"
+      },
+      "articleExplainer": "The score moves. The price can too.\n\nLive prices can change, and broadcasts can be delayed. Review the accepted price, stake and potential return. Watching the match does not guarantee an information advantage.",
+      "quiz": {
+        "question": "Before accepting a live bet after the price changes, which detail matters?",
+        "options": [
+          {
+            "label": "Only the earlier price",
+            "correct": false
+          },
+          {
+            "label": "Only the score",
+            "correct": false
+          },
+          {
+            "label": "The current price and potential return",
+            "correct": true
+          },
+          {
+            "label": "The size of your last win",
+            "correct": false
+          }
+        ],
+        "feedback": "Live prices can change, and broadcasts can be delayed. Review the accepted price, stake and potential return. Watching the match does not guarantee an information advantage."
+      }
+    },
+    {
+      "id": 15,
+      "title": "Some Numbers Are \"Due\"",
+      "category": "Lottery & Scratch Cards",
+      "gameType": [
+        "lottery"
+      ],
+      "bias": [
+        "gambler-s-fallacy"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Number 23 hasn't been drawn in months — it's overdue.",
+        "fact": "A fair independent draw does not compensate for previous results. In a fair six-from-49 draw, each six-number combination has a 1-in-13,983,816 chance.",
+        "stat": "No — its past absence does not improve its chance"
+      },
+      "articleExplainer": "Missing isn't overdue.\n\nA fair independent draw does not compensate for previous results. In a fair six-from-49 draw, each six-number combination has a 1-in-13,983,816 chance.",
+      "quiz": {
+        "question": "In a fair lottery with independent draws, a number has not appeared for six months. Is it more likely next time?",
+        "options": [
+          {
+            "label": "Yes — it's statistically overdue",
+            "correct": false
+          },
+          {
+            "label": "Yes — the law of averages says it must come up eventually",
+            "correct": false
+          },
+          {
+            "label": "No — its past absence does not improve its chance",
+            "correct": true
+          },
+          {
+            "label": "It depends on how many total numbers are in the draw",
+            "correct": false
+          }
+        ],
+        "feedback": "A fair independent draw does not compensate for previous results. In a fair six-from-49 draw, each six-number combination has a 1-in-13,983,816 chance."
+      }
+    },
+    {
+      "id": 16,
+      "title": "Buying More Tickets Dramatically Improves Odds",
+      "category": "Lottery & Scratch Cards",
+      "gameType": [
+        "lottery"
+      ],
+      "bias": [
+        "probability-neglect",
+        "proportionality-bias"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "Buying 100 lottery tickets makes the jackpot likely.",
+        "fact": "The chance is 100 times that of one combination, and the cost is 100 times as much at a fixed price. Duplicate combinations do not add distinct ways to win the jackpot.",
+        "stat": "100 in 13,983,816 — about 0.000715%"
+      },
+      "articleExplainer": "More combinations. More cost.\n\nThe chance is 100 times that of one combination, and the cost is 100 times as much at a fixed price. Duplicate combinations do not add distinct ways to win the jackpot.",
+      "quiz": {
+        "question": "In one fair six-from-49 draw, what jackpot chance do 100 distinct combinations give?",
+        "options": [
+          {
+            "label": "100%",
+            "correct": false
+          },
+          {
+            "label": "100 in 13,983,816 — about 0.000715%",
+            "correct": true
+          },
+          {
+            "label": "1%",
+            "correct": false
+          },
+          {
+            "label": "The jackpot size determines it",
+            "correct": false
+          }
+        ],
+        "feedback": "The chance is 100 times that of one combination, and the cost is 100 times as much at a fixed price. Duplicate combinations do not add distinct ways to win the jackpot."
+      }
+    },
+    {
+      "id": 17,
+      "title": "You Can Win Back Your Losses",
+      "category": "Online & General",
+      "gameType": [
+        "all-gambling"
+      ],
+      "bias": [
+        "sunk-cost-fallacy",
+        "loss-aversion"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "If I keep playing, the game has to pay me back.",
+        "fact": "An earlier loss does not create a repayment obligation. Additional play at negative expected value adds expected loss, although any session can vary. A budget can help you decide when to stop.",
+        "stat": "No — further bets put more money at risk"
+      },
+      "articleExplainer": "A budget is a limit, not a target.\n\nAn earlier loss does not create a repayment obligation. Additional play at negative expected value adds expected loss, although any session can vary. A budget can help you decide when to stop.",
+      "quiz": {
+        "question": "On a game with a house edge, does an earlier loss make recovering that money certain?",
+        "options": [
+          {
+            "label": "Yes — eventually it must repay you",
+            "correct": false
+          },
+          {
+            "label": "Yes — losing creates an advantage",
+            "correct": false
+          },
+          {
+            "label": "No — further bets put more money at risk",
+            "correct": true
+          },
+          {
+            "label": "Yes — a larger stake guarantees it",
+            "correct": false
+          }
+        ],
+        "feedback": "An earlier loss does not create a repayment obligation. Additional play at negative expected value adds expected loss, although any session can vary. A budget can help you decide when to stop."
+      }
+    },
+    {
+      "id": 18,
+      "title": "Gambling Is a Way to Make Money",
+      "category": "Online & General",
+      "gameType": [
+        "all-gambling"
+      ],
+      "bias": [
+        "optimism-bias",
+        "fundamental-attribution-error"
+      ],
+      "pillar": "open",
+      "socialCard": {
+        "myth": "A house edge guarantees a specific result in my session.",
+        "fact": "A positive house edge describes the game's long-run mathematical cost under specified rules. It does not predict a particular session. Treat gambling as entertainment with a budget.",
+        "stat": "An expected return below the amount wagered"
+      },
+      "articleExplainer": "Know the cost of the entertainment.\n\nA positive house edge describes the game's long-run mathematical cost under specified rules. It does not predict a particular session. Treat gambling as entertainment with a budget.",
+      "quiz": {
+        "question": "What does a positive house edge describe?",
+        "options": [
+          {
+            "label": "Guaranteed winnings each session",
+            "correct": false
+          },
+          {
+            "label": "A fee charged after every win",
+            "correct": false
+          },
+          {
+            "label": "An expected return below the amount wagered",
+            "correct": true
+          },
+          {
+            "label": "The percentage of losing players",
+            "correct": false
+          }
+        ],
+        "feedback": "A positive house edge describes the game's long-run mathematical cost under specified rules. It does not predict a particular session. Treat gambling as entertainment with a budget."
+      }
+    }
+  ]
+}

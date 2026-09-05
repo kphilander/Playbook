@@ -38,11 +38,12 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
@@ -53,7 +54,7 @@
     </div>
     <div class="answer"><strong>不会。中奖概率和之前一样。</strong>机器没有记忆，每一次旋转都是独立事件。</div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

@@ -4,9 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=420">
 <title>Every game has math. Here's yours. — Tier 1</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { margin: 0; padding: 0; background: transparent; }
@@ -133,14 +130,15 @@
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="mobile-screen">
+<div class="mobile-screen pb-creative">
 
   <div class="accent-bar"></div>
 
   <div class="header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="header-label">Games</span>
   </div>
 
@@ -150,11 +148,11 @@
 
     <div class="game-list">
       <div class="game-row">
-        <span class="game-name">Blackjack (perfect play)</span>
+        <span class="game-name">Blackjack (basic strategy; favorable rules)</span>
         <span class="game-edge">0.5%</span>
       </div>
       <div class="game-row">
-        <span class="game-name">Baccarat (banker)</span>
+        <span class="game-name">Baccarat (Banker; 5% commission)</span>
         <span class="game-edge">1.06%</span>
       </div>
       <div class="game-row">

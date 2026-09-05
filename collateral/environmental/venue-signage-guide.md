@@ -92,7 +92,7 @@ Validate the narrowest artboard and longest supported locale before release.
 | Element | Content |
 |---|---|
 | **Headline** | Set your budget before you start. |
-| **Body** | Deposit limits take 10 seconds to set in your account. Your money. Your rules. |
+| **Body** | Decide how much cash fits your entertainment budget. ATM withdrawals may not count toward online deposit limits. |
 | **CTA** | Visit {{CONTENT_HUB_URL}} for tools |
 | **Helpline** | Need to talk? Free, confidential support: {{HELPLINE_NUMBER}} |
 | **QR code** | Links to deposit limit settings |
@@ -119,7 +119,7 @@ Validate the narrowest artboard and longest supported locale before release.
 |---|---|
 | **Label** | REAL ODDS (orange) |
 | **Headline** | Every game has a house edge. |
-| **Stats** | Blackjack: 0.5% &#124; Roulette: 5.26% &#124; Slots: 2–15% |
+| **Stats** | Blackjack: ≈0.5% with basic strategy and favorable rules &#124; American roulette: 5.26% on most bets &#124; Slots: illustrative 2–15%, game-dependent |
 | **Body** | The house edge is how casinos work. Knowing the edge helps you pick your games and set your budget. |
 | **QR code** | Links to odds explorer |
 | **QR label** | Scan to see all games |
@@ -130,7 +130,7 @@ Validate the narrowest artboard and longest supported locale before release.
 |---|---|
 | **Label** | GAME IQ (emerald) |
 | **Headline** | Think you know the odds? |
-| **Body** | Take the 2-minute quiz. Challenge your friends. Most people get question 3 wrong. |
+| **Body** | Take the 2-minute quiz. Challenge your friends. See what you know, then explore the answers. |
 | **QR code** | Links to quiz |
 | **QR label** | Scan to take the quiz |
 
@@ -266,3 +266,7 @@ Click the template name to view the full HTML source.
 ---
 
 *Cross-references: [Application Guidelines — Environmental](../../brand-book/07-application-guidelines.md#environmental-applications) | [Core Messages](../../messaging/core-messages.md) | [Stigma-Free Language](../../brand-book/04-voice-and-tone.md#language-guide)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

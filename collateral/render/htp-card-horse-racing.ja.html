@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">仕組み</div>
     <div class="game-name">競馬</div>
-    <div class="key-fact">パリミュチュエル方式では、ハウスと対戦するのではなく、<strong>他の購入者と配当を分け合います</strong>。主催者の取り分が差し引かれたあとの金額が対象です。</div>
+    <div class="key-fact">パリミュチュエル方式では、投票総額から控除した残りを的中者で分けます。最終オッズは締切時の投票で決まります。</div>
     <div class="stat-block">
-      <span class="stat-number">15〜25%</span>
-      <span class="stat-unit">賭けの種類による<br>控除率の幅</span>
+      <span class="stat-number">総額</span>
+      <span class="stat-unit">控除後に<br>的中ベットで分配</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

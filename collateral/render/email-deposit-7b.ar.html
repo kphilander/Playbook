@@ -181,72 +181,67 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
-
-  <div class="accent-bar"></div>
-
-  <div class="hero">
-    <div class="hero-logo">Playbook</div>
-    <h1>تم تأكيد الإيداع</h1>
-    <div class="deposit-amount">50.00 د.إ</div>
-    <div class="deposit-date">22 فبراير 2026</div>
-  </div>
-
-  <div class="section-white">
-    <div class="section-heading">الميزانية في لمحة</div>
-    <div class="budget-grid">
-      <div class="budget-stat">
-        <div class="label">الحد الأسبوعي</div>
-        <div class="value">200 د.إ</div>
-      </div>
-      <div class="budget-stat">
-        <div class="label">المستخدم</div>
-        <div class="value teal">70 د.إ</div>
-      </div>
-      <div class="budget-stat">
-        <div class="label">المتبقي</div>
-        <div class="value">130 د.إ</div>
-      </div>
-    </div>
-    <div class="progress-bar-outer">
-      <div class="progress-bar-inner"></div>
-    </div>
-    <div class="progress-label">استُخدم 35% من الحد الأسبوعي</div>
-    <div class="note">الحدود تخصّ صاحب الحساب. يمكن تعديلها في أي وقت من الإعدادات.</div>
-    <a href="#" class="cta-button">تعديل الحدود</a>
-  </div>
-
-  <div class="section-gray">
-    <div class="section-heading">الأدوات المتاحة</div>
-    <div class="tool-row">
-      <div class="tool-dot"></div>
-      <div class="tool-label">تذكيرات الجلسة</div>
-      <div class="tool-status">كل 60 دقيقة</div>
-    </div>
-    <div class="tool-row">
-      <div class="tool-dot"></div>
-      <div class="tool-label">لوحة النشاط</div>
-      <div class="tool-status">تحديث مباشر</div>
-    </div>
-    <div class="tool-row">
-      <div class="tool-dot off"></div>
-      <div class="tool-label">مخطط الرصيد</div>
-      <div class="tool-status">لم يُفعَّل بعد</div>
-    </div>
-    <div style="text-align: center;">
-      <a href="#" class="cta-button">عرض لوحة النشاط</a>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
-    <div class="footer-channels">اتصال <span dir="ltr">{{HELPLINE_NUMBER}}</span> | رسالة نصية <span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
-    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
-  </div>
-
+<div class="email pb-creative">
+<div class="accent-bar"></div>
+<div class="hero">
+<div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
+<h1>تم تأكيد الإيداع</h1>
+<div class="deposit-amount"><bdi dir="ltr">50.00</bdi> د.إ</div>
+<div class="deposit-date"><bdi dir="ltr">22</bdi> فبراير <bdi dir="ltr">2026</bdi></div>
+</div>
+<div class="section-white">
+<div class="section-heading">الميزانية في لمحة</div>
+<div class="budget-grid">
+<div class="budget-stat">
+<div class="label">الحد الأسبوعي</div>
+<div class="value"><bdi dir="ltr">200</bdi> د.إ</div>
+</div>
+<div class="budget-stat">
+<div class="label">المستخدم</div>
+<div class="value teal"><bdi dir="ltr">70</bdi> د.إ</div>
+</div>
+<div class="budget-stat">
+<div class="label">المتبقي</div>
+<div class="value"><bdi dir="ltr">130</bdi> د.إ</div>
+</div>
+</div>
+<div class="progress-bar-outer">
+<div class="progress-bar-inner"></div>
+</div>
+<div class="progress-label">استُخدم <bdi dir="ltr">35%</bdi> من الحد الأسبوعي</div>
+<div class="note">الحدود تخصّ صاحب الحساب. يمكن تعديلها في أي وقت من الإعدادات.</div>
+<a class="cta-button" href="#">تعديل الحدود</a>
+</div>
+<div class="section-gray">
+<div class="section-heading">الأدوات المتاحة</div>
+<div class="tool-row">
+<div class="tool-dot"></div>
+<div class="tool-label">تذكيرات الجلسة</div>
+<div class="tool-status">كل <bdi dir="ltr">60</bdi> دقيقة</div>
+</div>
+<div class="tool-row">
+<div class="tool-dot"></div>
+<div class="tool-label">لوحة النشاط</div>
+<div class="tool-status">تحديث مباشر</div>
+</div>
+<div class="tool-row">
+<div class="tool-dot off"></div>
+<div class="tool-label">مخطط الرصيد</div>
+<div class="tool-status">لم يُفعَّل بعد</div>
+</div>
+<div style="text-align: center;">
+<a class="cta-button" href="#">عرض لوحة النشاط</a>
+</div>
+</div>
+<div class="footer">
+<div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
+<div class="footer-channels">اتصال <span dir="ltr">{{HELPLINE_NUMBER}}</span> | رسالة نصية <span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
+<div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+<div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
+</div>
 </div>
 </body>
 </html>

@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
-  <style>
+        <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { margin: 0; padding: 0; background: transparent; }
 
@@ -144,11 +141,12 @@
     }
   </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-  <div class="display-screen">
+  <div class="display-screen pb-creative">
     <div class="screen-header">
-      <span class="screen-logo">Playbook</span>
+      <span class="screen-logo">{{PROGRAM_SHORT_NAME}}</span>
       <span class="pillar-badge">Open</span>
     </div>
     <div class="screen-body">
@@ -156,18 +154,18 @@
       <div class="stats-row">
         <div class="stat-item">
           <div class="stat-pct teal">0.5%</div>
-          <div class="stat-label">Blackjack (perfect play)</div>
+          <div class="stat-label">Blackjack (basic strategy; favorable rules)</div>
         </div>
         <div class="stat-item">
           <div class="stat-pct white">5.26%</div>
-          <div class="stat-label">Roulette</div>
+          <div class="stat-label">American roulette</div>
         </div>
         <div class="stat-item">
           <div class="stat-pct orange">2&ndash;15%</div>
           <div class="stat-label">Slots</div>
         </div>
       </div>
-      <div class="body-line">Same casino. Different math.</div>
+      <div class="body-line">Examples: blackjack uses favorable rules; roulette shows most bets.</div>
     </div>
     <div class="helpline-strip">
       <span class="helpline-text">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>

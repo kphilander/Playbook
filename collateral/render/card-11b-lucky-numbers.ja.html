@@ -42,23 +42,24 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="myth-label">俗説と数学</div>
-    <div class="myth-statement"><span class="strike">「自分の番号がそろそろ来るはず」</span></div>
-    <div class="fact-statement">6/49の抽選では、どの組み合わせも<strong>まったく同じ確率：13,983,816分の1</strong>です。抽選は前週を記憶していません。毎週新たに始まります。</div>
+    <div class="myth-statement">番号に<br>「出番」はありません。</div>
+    <div class="fact-statement">公平な6/49抽選では、どの組合せも<strong>13,983,816分の1</strong>。独立した次の抽選は、過去の結果に影響されません。</div>
     <div class="stat-block">
       <span class="stat-number">0%</span>
       <span class="stat-unit">過去の抽選が次の結果に<br>影響を与える確率</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

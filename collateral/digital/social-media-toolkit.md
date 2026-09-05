@@ -59,7 +59,7 @@ Do not stretch or crop between aspect ratios. The renderer recomposes the header
 | 0–3s | Sports betting app UI | Text: "What does -110 mean?" |
 | 3–10s | Animated money breakdown | "You bet $110. You win $100. That $10 difference? That's the sportsbook's cut." |
 | 10–18s | Calculator visual | "On every. Single. Bet. It's how the business works." |
-| 18–25s | Comparison: -110 vs -150 vs +200 | "The bigger the favorite, the bigger the cut." |
+| 18–25s | Comparison: -110 vs -150 vs +200 | "Different prices change the potential return." |
 | 25–30s | End card: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white wordmark on navy bg, min 24px height, 1x clear space) | "Straight talk. Real numbers. Link in bio." |
 
 #### Reel 3 — "The Quiz Challenge" (Engagement driver)
@@ -67,10 +67,10 @@ Do not stretch or crop between aspect ratios. The renderer recomposes the header
 | Timing | Visual | Voiceover / Text overlay |
 |---|---|---|
 | 0–3s | Person looking smug | "Think you know the odds?" |
-| 3–8s | Quiz question on screen | "A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?" |
+| 3–8s | Quiz question on screen | "In an independent slot game, does a losing run make a win more likely?" |
 | 8–12s | Dramatic pause | "If you said 'higher'... wrong." |
-| 12–20s | Answer reveal with animation | "Same as always. The machine has no memory. Each spin is independent." |
-| 20–25s | Score reveal | "Most people get this wrong. What about you?" |
+| 12–20s | Answer reveal with animation | "For independent spins, the same odds. Earlier losses don’t make a win due." |
+| 20–25s | Score reveal | "What did you pick? Here’s why the answer works." |
 | 25–30s | End card with QR code: {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white wordmark on navy bg, min 24px height, 1x clear space) | "Take the full quiz. Challenge a friend. Link in bio." |
 
 ### Carousel layouts (10 slides)
@@ -80,11 +80,11 @@ Do not stretch or crop between aspect ratios. The renderer recomposes the header
 | Slide | Content |
 |---|---|
 | 1 (Cover) | "5 gambling myths the math doesn't support" — bold headline, {{PROGRAM_NAME}} logo (stacked B1 or horizontal B2, reversed variant on dark bg / full-color on light bg; min 24px height, 1x clear space) |
-| 2 | Myth: "I'm due for a win" → Fact: Each outcome is independent. The gambler's fallacy. |
+| 2 | Myth: "I'm due for a win" → Fact: On independent slot spins, past losses do not make a win due. |
 | 3 | Myth: "Hot and cold machines" → Fact: RNG doesn't have moods. Every spin is independent. |
 | 4 | Myth: "Betting systems beat the house" → Fact: No strategy changes the house edge. |
 | 5 | Myth: "I can tell when a machine is about to pay" → Fact: You can't. It's a random number generator. |
-| 6 | Myth: "The casino owes me" → Fact: The house edge is built into every game, every spin. |
+| 6 | Myth: "The casino owes me" → Fact: Earlier losses do not create a repayment obligation. |
 | 7 | "So what CAN you control?" |
 | 8 | Your budget. Your limits. Your session time. Your game choice. |
 | 9 | "Knowledge is a feature." — tools overview with icons |
@@ -95,12 +95,12 @@ Do not stretch or crop between aspect ratios. The renderer recomposes the header
 | Slide | Content |
 |---|---|
 | 1 (Cover) | "Every game has a house edge. Here's yours." |
-| 2 | Blackjack: 0.5% — "Best odds in the casino" |
+| 2 | Blackjack: ≈0.5% — "Basic strategy; favorable rules" |
 | 3 | Craps: 1.4% — "Simple bet, low edge" |
 | 4 | European Roulette: 2.7% — "Single zero wheel" |
-| 5 | American Roulette: 5.26% — "Double zero = double edge" |
+| 5 | American Roulette: 5.26% — "Double-zero wheel; most bets" |
 | 6 | Slots: 2–15% — "Varies by machine and casino" |
-| 7 | Sports betting (vig): ~4.5% — "Built into every line" |
+| 7 | Sports betting: −110 — "$110 stake, $100 profit if the cash bet wins" |
 | 8 | "The house edge is how the business works. Knowing the edge helps you pick your games." |
 | 9 | "Set your budget before you play." — tool CTA |
 | 10 | CTA + {{PROGRAM_NAME}} logo (reversed variant on navy bg or full-color on white bg; min 24px height, 1x clear space) + helpline |
@@ -138,27 +138,27 @@ Refer to existing rendered story templates for visual format:
 |---|---|
 | 1 (Hook) | Your "lucky machine" has the emotional range of a toaster. Here's how slot machines actually work. A thread. |
 | 2 | Every modern slot machine uses a random number generator (RNG). It picks a number the instant you press spin. Everything else — the spinning reels, the sounds — is just presentation. |
-| 3 | The RNG doesn't know your name. It doesn't know you've been sitting there for 3 hours. It doesn't know you "almost" won last time. Each spin is completely independent. |
+| 3 | For independent slot spins, neither a near miss nor a losing run makes a win due. Systems can record activity without changing that result. |
 | 4 | The house edge on slots ranges from 2% to 15%. That's the math built into every machine. Over time, the casino keeps that percentage. That's how the business works. |
-| 5 | What can you control? Your budget. Your session time. Your game choice. Set a deposit limit before you play. It takes 10 seconds. |
+| 5 | What can you control? Your budget. Your session time. Your game choice. Set a deposit limit before you play. Choose your amount and time frame. |
 | 6 | Facts worth knowing. Tools worth using. More at {{CONTENT_HUB_URL}} |
 
 ### One-liner templates
 
 | Theme | Tweet |
 |---|---|
-| Odds fact | The house edge on American roulette is 5.26%. European roulette: 2.7%. One extra zero. Double the edge. |
-| Myth-buster | "I'm due for a win" is the most expensive belief in gambling. Each spin is independent. The machine doesn't owe you anything. |
-| Tool promo | Deposit limits take 10 seconds to set. It's like a seatbelt for your bankroll — set it and forget it. |
-| Quiz hook | How well do you really know the odds? Most people get question 3 wrong. Take the quiz → {{QUIZ_URL}} |
-| Shareable fact | A -110 line means you bet $110 to win $100. The $10 difference is the sportsbook's cut. On every bet. |
+| Odds fact | The house edge on American roulette is 5.26%. European roulette: 2.7%. Check the wheel and the bet rules. |
+| Myth-buster | A losing run isn’t a countdown. Past losses don’t make the next independent slot spin more likely to win. |
+| Tool promo | Choose a deposit amount and a time frame. Check when the limit resets. |
+| Quiz hook | How well do you really know the odds? See what you know, then explore the answers. Take the quiz → {{QUIZ_URL}} |
+| Shareable fact | A -110 line means you bet $110 to win $100. If the cash bet wins, the total return is $210: $110 stake plus $100 profit. |
 
 ### Poll formats
 
 | Poll question | Options |
 |---|---|
-| "A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?" | Same as always / Higher / Lower / Depends on the machine |
-| "What's the house edge on blackjack with basic strategy?" | 0.5% / 2% / 5% / 10% |
+| "In an independent slot game, does a losing run make a win more likely?" | No / Yes / Only after an hour / Only after a near miss |
+| "About what is blackjack’s house edge with basic strategy under favorable rules?" | 0.5% / 2% / 5% / 10% |
 | "What percentage of your entertainment budget do you set aside for gambling?" | 0–10% / 10–25% / 25–50% / I don't budget for it |
 
 ---
@@ -174,7 +174,7 @@ Refer to existing rendered story templates for visual format:
 > The house edge is the mathematical advantage built into every casino game. It's how the business works — and it's not a secret.
 >
 > Here's the quick breakdown:
-> - Blackjack (basic strategy): 0.5%
+> - Blackjack (basic strategy; favorable rules): ≈0.5%
 > - European roulette: 2.7%
 > - American roulette: 5.26%
 > - Slots: 2–15% (varies by machine)
@@ -190,7 +190,7 @@ Refer to existing rendered story templates for visual format:
 
 > **Big game this weekend? Here's what's worth knowing before you place a bet.**
 >
-> A -110 line means you bet $110 to win $100. That $10 difference? That's the sportsbook's cut — on every bet.
+> A -110 line means you bet $110 to win $100. If it wins, a cash bet returns $210: the $110 stake plus $100 profit.
 >
 > A few things worth knowing:
 > - Prop bets are fun, but the house edge is higher than straight bets
@@ -339,7 +339,7 @@ Templates for responding to common comments and messages.
 
 | Trigger | Response |
 |---|---|
-| "I didn't know that!" | "Most people don't — that's exactly why we share it. Check out the full breakdown → {{URL}}" |
+| "I didn't know that!" | "Here’s the full breakdown if you want to explore it → {{URL}}" |
 | "Sharing this" | "Facts worth sharing. Thanks for spreading the word." |
 | Quiz score share | "Nice score. Think your friends can beat it? Challenge them → {{QUIZ_URL}}" |
 
@@ -348,7 +348,7 @@ Templates for responding to common comments and messages.
 | Trigger | Response |
 |---|---|
 | "Is this really how it works?" | "Straight from the math. Every game has a house edge — it's how the business works. Here's the full explainer → {{URL}}" |
-| "How do I set limits?" | "Takes 10 seconds in your account settings. Here's how → {{TOOLS_URL}}" |
+| "How do I set limits?" | "Choose an amount and a period in your account settings. Here’s how → {{TOOLS_URL}}" |
 | "What about [specific game]?" | "Good question. Here's the breakdown for [game] → {{URL}}" |
 
 ### Support-related
@@ -387,3 +387,7 @@ Templates for responding to common comments and messages.
 ---
 
 *Cross-references: [Application Guidelines — Social](../../brand-book/07-application-guidelines.md#social-media) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

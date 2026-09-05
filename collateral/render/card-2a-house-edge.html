@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -33,18 +31,19 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">Real Odds</span>
   </div>
   <div class="card-body">
-    <div class="headline">Every game has a house edge.<br>Here's what you're actually playing.</div>
+    <div class="headline">Casino games have different edges.<br>Examples under the stated rules.</div>
     <div class="odds-grid">
       <div class="odds-item">
-        <div class="odds-game">Blackjack (basic strategy)</div>
+        <div class="odds-game">Blackjack (basic strategy; favorable rules)</div>
         <div class="odds-edge teal">0.5%</div>
       </div>
       <div class="odds-item">
@@ -56,12 +55,12 @@
         <div class="odds-edge orange">5.26%</div>
       </div>
       <div class="odds-item">
-        <div class="odds-game">Slots (average)</div>
+        <div class="odds-game">Slots (game-dependent)</div>
         <div class="odds-edge white">2-15%</div>
       </div>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

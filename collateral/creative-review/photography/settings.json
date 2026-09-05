@@ -1,0 +1,9 @@
+{
+  "provider": "google-gemini",
+  "runId": "creative-refresh-20260905",
+  "model": "gemini-3-pro-image",
+  "aspectRatio": "4:3",
+  "imageSize": "2K",
+  "referenceMode": "none",
+  "maxAttemptsPerConcept": 2
+}

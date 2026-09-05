@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Staff Break Room Poster — A3</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 24px; background: var(--pb-color-white); }
@@ -142,13 +140,14 @@
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="sign-staff">
+<div class="sign-staff pb-creative">
 
   <div class="staff-header">
     <div class="header-top">
-      <span class="card-logo">Playbook</span>
+      <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
       <span class="internal-badge">Internal use only</span>
     </div>
     <div class="staff-headline">5 things every team<br>member should know</div>
@@ -166,7 +165,7 @@
     <div class="staff-item">
       <div class="item-number">2</div>
       <div class="item-content">
-        <strong>Use Playbook language.</strong>
+        <strong>Use {{PROGRAM_SHORT_NAME}} language.</strong>
         <p>Say <span class="term-swap">"tools"</span> not "interventions." <span class="term-swap">"Player"</span> not "gambler." <span class="term-swap">"Check in"</span> not "self-assess."</p>
       </div>
     </div>
@@ -191,7 +190,7 @@
       <div class="item-number">5</div>
       <div class="item-content">
         <strong>Player education is in the content hub.</strong>
-        <p>Send curious players to the Playbook section.</p>
+        <p>Send curious players to the {{PROGRAM_SHORT_NAME}} section.</p>
       </div>
     </div>
   </div>

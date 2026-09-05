@@ -42,27 +42,23 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
-  <div class="card-header">
-    <span class="card-logo">Playbook</span>
-    
-  </div>
-  <div class="card-body">
-    <div class="myth-label">الاعتقاد مقابل الأرقام</div>
-    <div class="myth-intro">يعتقد بعض اللاعبين:</div>
-    <div class="myth-statement">«اخترت الآلة المناسبة»</div>
-    <div class="fact-statement">في الواقع، جميع آلات القمار عشوائية. <strong>الاختيار لا يغير الاحتمالات.</strong></div>
-    <div class="stat-block">
-      <span class="stat-number">0%</span>
-      <span class="stat-unit">تأثير اختيار<br>الآلة «المناسبة»</span>
-    </div>
-  </div>
-  <div class="card-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
-  </div>
+<div class="social-card pb-creative">
+<div class="card-header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+</div>
+<div class="card-body">
+<div class="myth-label">الاعتقاد مقابل الأرقام</div>
+<div class="myth-intro">يعتقد بعض اللاعبين:</div>
+<div class="myth-statement">«اخترت الآلة المناسبة»</div>
+<div class="fact-statement">قد تختلف القواعد ونسب العائد بين الألعاب. <strong>النتائج الأخيرة لا تتنبأ بالدورة المستقلة التالية.</strong></div>
+</div>
+<div class="card-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

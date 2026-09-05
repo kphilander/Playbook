@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Tri-fold Brochure — Outside (Cover + Back)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
@@ -276,9 +274,10 @@
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="brochure-outside">
+<div class="brochure-outside pb-creative">
 
   <!-- Panel 6: Support Resources -->
   <div class="panel panel-support">
@@ -309,7 +308,7 @@
   <div class="panel panel-quiz">
     <div class="quiz-badge">Open</div>
     <div class="quiz-heading">Think you know<br>the odds?</div>
-    <div class="quiz-body">Take the 2-minute game IQ quiz. Most people get question 3 wrong.</div>
+    <div class="quiz-body">Take the 2-minute game IQ quiz. See what you know before you start.</div>
     <div class="quiz-question">"A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?"</div>
     <div class="qr-block">
       <div class="qr-placeholder">QR Code</div>
@@ -319,7 +318,7 @@
 
   <!-- Panel 1: Cover -->
   <div class="panel panel-cover">
-    <div class="cover-logo">Playbook</div>
+    <div class="cover-logo">{{PROGRAM_SHORT_NAME}}</div>
     <div class="cover-operator">Your logo here</div>
     <div class="cover-heading">Every game has math.<br>Here's yours.</div>
     <div class="cover-sub">Real odds. Real tools. No fine print.</div>

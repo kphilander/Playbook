@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">仕組み</div>
     <div class="game-name">ブラックジャック</div>
-    <div class="key-fact">カジノ屈指の有利な確率は、<strong>20分で身につけられます</strong>。基本戦略は、どのハンドでも数学的に最適な打ち方です。</div>
+    <div class="key-fact">基本戦略は、自分の手札とディーラーの表向きのカードに応じた選択です。テーブルのルールも控除率に影響します。</div>
     <div class="stat-block">
-      <span class="stat-number">0.5%</span>
-      <span class="stat-unit">基本戦略を用いた<br>ハウスエッジ</span>
+      <span class="stat-number">≈0.5%</span>
+      <span class="stat-unit">有利なルールで<br>基本戦略を使う場合</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

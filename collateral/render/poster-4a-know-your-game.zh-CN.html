@@ -49,11 +49,12 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="two-stats">
+<div class="poster pb-creative poster-editorial" data-layout="two-stats">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
@@ -77,7 +78,7 @@
       <div class="qr-label">扫码查看各游戏数据</div>
     </div>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

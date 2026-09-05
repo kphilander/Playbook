@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Gaming Floor Sign — Odds Fact</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
@@ -149,9 +147,10 @@
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="sign-floor">
+<div class="sign-floor pb-creative">
 
   <div class="sign-layout">
     <div class="sign-left">
@@ -165,11 +164,11 @@
     </div>
     <div class="sign-right">
       <div class="odds-card">
-        <div class="odds-game">Blackjack</div>
+        <div class="odds-game">Blackjack: basic strategy, favorable rules</div>
         <div class="odds-edge teal">0.5%</div>
       </div>
       <div class="odds-card">
-        <div class="odds-game">Roulette</div>
+        <div class="odds-game">American roulette</div>
         <div class="odds-edge white">5.26%</div>
       </div>
       <div class="odds-card">
@@ -180,7 +179,7 @@
   </div>
 
   <div class="sign-bottom">
-    <span class="bottom-logo">Playbook</span>
+    <span class="bottom-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="bottom-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="bottom-legal">{{AGE_DISCLAIMER}}</span>
   </div>

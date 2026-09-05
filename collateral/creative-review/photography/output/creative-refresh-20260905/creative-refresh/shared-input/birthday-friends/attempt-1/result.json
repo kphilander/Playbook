@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/birthday-friends/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "bdd50dad78e5b611b11954c4b17e88a77db1f38b24c693e5e58e389ac495968a",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-refresh",
+  "concept": "birthday-friends",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T04:41:38.689Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 2714818,
+      "sha256": "a8dd7ba722a4c34dda9f441a95d2a4109c0bac262017ec669a993c1b56918314"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 227,
+    "candidatesTokenCount": 1358,
+    "totalTokenCount": 1909,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 227
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "thoughtsTokenCount": 324,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 23918,
+  "completedAt": "2026-09-05T04:42:02.608Z"
+}

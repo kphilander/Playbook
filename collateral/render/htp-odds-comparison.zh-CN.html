@@ -43,33 +43,31 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">了解游戏</div>
-    <div class="card-title">赔率一览</div>
+    <div class="card-title">相同金额。<br>不同成本。</div>
     <table class="odds-table">
-      <thead>
-        <tr><th>游戏</th><th>最佳投注</th></tr>
-      </thead>
+      <thead><tr><th>游戏</th><th>庄家优势</th></tr></thead>
       <tbody>
-        <tr><td>二十一点（基本策略）</td><td>0.5%</td></tr>
-        <tr><td>百家乐（庄家）</td><td>1.06%</td></tr>
-        <tr><td>轮盘（欧式）</td><td>2.70%</td></tr>
-        <tr><td>体育博彩（标准抽水）</td><td>4.5%</td></tr>
-        <tr><td>轮盘（美式）</td><td>5.26%</td></tr>
-        <tr><td>老虎机</td><td>2–15%</td></tr>
+        <tr><td>二十一点：有利规则＋基本策略</td><td>≈0.5%</td></tr>
+        <tr><td>百家乐：庄家投注，5%佣金</td><td>1.06%</td></tr>
+        <tr><td>双骰：Pass Line</td><td>1.41%</td></tr>
+        <tr><td>轮盘：单零</td><td>2.70%</td></tr>
       </tbody>
     </table>
+    <p class="creative-note">长期预期成本示例，随规则而异。</p>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费支援：{{HELPLINE_NUMBER}}</span>
-    <span class="footer-legal">庄家优势＝每投注澳门币 100，长期而言赌场所保留的金额</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 </div>
 </body>

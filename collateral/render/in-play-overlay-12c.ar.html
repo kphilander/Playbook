@@ -112,30 +112,25 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="in-play-overlay">
-
-  <div class="accent-bar"></div>
-
-  <div class="content">
-    <div class="top-row">
-      <span class="card-logo">Playbook</span>
-      <h1 class="heading">مراجعة الجلسة</h1>
-    </div>
-
-    <div class="session-stats">1 ساعة و23 دقيقة من اللعب &middot; 45 د.إ مراهنة</div>
-
-    <div class="button-row">
-      <button class="btn btn-outline">متابعة اللعب</button>
-      <button class="btn btn-primary">أخذ استراحة</button>
-    </div>
-  </div>
-
-  <div class="footer">
-    <span class="footer-helpline"><span dir="ltr">{{HELPLINE_NUMBER}}</span> &middot; دعم مجاني وسري</span>
-  </div>
-
+<div class="in-play-overlay pb-creative">
+<div class="accent-bar"></div>
+<div class="content">
+<div class="top-row">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+<h1 class="heading">مراجعة الجلسة</h1>
+</div>
+<div class="session-stats"><bdi dir="ltr">1</bdi> ساعة و<bdi dir="ltr">23</bdi> دقيقة من اللعب · <bdi dir="ltr">45</bdi> د.إ مراهنة</div>
+<div class="button-row">
+<button class="btn btn-outline">متابعة اللعب</button>
+<button class="btn btn-primary">أخذ استراحة</button>
+</div>
+</div>
+<div class="footer">
+<span class="footer-helpline"><span dir="ltr">{{HELPLINE_NUMBER}}</span> · دعم مجاني وسري</span>
+</div>
 </div>
 </body>
 </html>

@@ -46,43 +46,42 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
+<div class="story-card pb-creative">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">オープン</span>
   </div>
   <div class="story-body">
     <div class="eyebrow">スポーツの数学</div>
-    <div class="headline">賭けの種類によって、取り分は違います。</div>
+    <div class="headline">同じ賭け金でも、<br>払い戻しは違います。</div>
     <div class="bar-list">
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">マネーライン</span>
-          <span class="bar-value teal">3%</span>
+          <span class="bar-name">−110の場合</span>
+          <span class="bar-value teal">$190.91</span>
         </div>
-        <div class="bar-track"><div class="bar-fill teal"></div></div>
       </div>
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">プロップ</span>
-          <span class="bar-value white">5〜7%</span>
+          <span class="bar-name">−125の場合</span>
+          <span class="bar-value white">$180</span>
         </div>
-        <div class="bar-track"><div class="bar-fill white"></div></div>
       </div>
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">同一試合パーレイ</span>
-          <span class="bar-value orange">15〜25%</span>
+          <span class="bar-name">+100の場合</span>
+          <span class="bar-value orange">$200</span>
         </div>
-        <div class="bar-track"><div class="bar-fill orange"></div></div>
       </div>
     </div>
-    <div class="body-text">シンプルな賭けは取り分が少なく、複雑な賭けは取り分が大きくなります。</div>
+    <div class="body-text">100ドルの現金ベットが的中した例です。払い戻しには元の賭け金を含みます。</div>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料・秘密厳守サポート：{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 </div>
 </body>

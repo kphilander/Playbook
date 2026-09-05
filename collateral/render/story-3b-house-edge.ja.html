@@ -43,29 +43,30 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card" data-layout="two-comparisons">
+<div class="story-card pb-creative" data-layout="two-comparisons">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">本当の確率</span>
   </div>
   <div class="story-body">
     <div class="eyebrow">知っていましたか？</div>
-    <div class="headline">基本戦略を使うブラックジャックのハウスエッジは<span class="teal">0.5%</span></div>
+    <div class="headline">同じ賭け金。<br>異なる仕組み。</div>
     <div class="odds-list">
       <div class="odds-row">
-        <div><div class="game">ブラックジャック</div><div class="note">基本戦略</div></div>
+        <div><div class="game">ブラックジャック</div><div class="note">有利なルール＋基本戦略</div></div>
         <div class="edge teal">0.5%</div>
       </div>
       <div class="odds-row">
-        <div><div class="game">アメリカンルーレット</div><div class="note">ダブルゼロ</div></div>
+        <div><div class="game">アメリカンルーレット</div><div class="note">多くの賭け。5数字賭けは7.89%</div></div>
         <div class="edge orange">5.26%</div>
       </div>
     </div>
     <a href="#" class="story-cta">ゲーム別の数字を見る</a>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>
   </div>
 </div>

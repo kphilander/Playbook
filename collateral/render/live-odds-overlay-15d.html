@@ -4,9 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=420">
 <title>Live Odds Overlay — Sportsbook Cut — Tier 1</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { margin: 0; padding: 0; background: transparent; }
@@ -117,31 +114,22 @@
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="live-overlay">
-
-  <div class="accent-bar"></div>
-
-  <div class="content">
-    <div class="top-row">
-      <span class="card-logo">Playbook</span>
-      <span class="section-label">Sports math</span>
-    </div>
-
-    <h1 class="heading">Live odds move. The cut stays.</h1>
-    <div class="body-text">Every live line has the sportsbook's cut baked in. The updates don't erase it.</div>
-
-    <div class="stat-row">
-      <div class="stat-big">5&ndash;10%</div>
-      <div class="stat-label">typical sportsbook cut on live bets</div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <span class="footer-helpline">{{HELPLINE_NUMBER}} &middot; 24/7</span>
-  </div>
-
+<div class="live-overlay pb-creative">
+<div class="accent-bar"></div>
+<div class="content">
+<div class="top-row">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+<span class="section-label">Sports math</span>
+</div>
+<h1 class="heading">Live odds can change.</h1>
+<div class="body-text">Check the current price and potential return before confirming.</div>
+</div>
+<div class="footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">{{HELPLINE_NUMBER}} · 24/7</span>
+</div>
 </div>
 </body>
 </html>

@@ -62,7 +62,7 @@ Full dialogue trees for 8 customer service scenarios. Each script includes openi
 
 > "You can set a daily, weekly, or monthly deposit limit right in your account settings. Just go to [exact navigation path] and you'll see the option to set your number."
 >
-> "Once it's set, it works in the background — you won't be able to deposit more than your limit in that period. You can adjust it anytime."
+> "Once it's set, it works in the background — you won't be able to deposit more than your limit in that period. Check when a change will take effect."
 
 **If player asks "What number should I set?"**:
 
@@ -125,7 +125,7 @@ Full dialogue trees for 8 customer service scenarios. Each script includes openi
 
 **Closing**:
 
-> "We have a game IQ quiz in the {{PROGRAM_SHORT_NAME}} section that covers all of this — most people find it pretty eye-opening. Want me to send you the link?"
+> "We have a game IQ quiz in the {{PROGRAM_SHORT_NAME}} section that covers all of this — it explains the odds with examples. Want me to send you the link?"
 
 ### Key phrases to use
 
@@ -392,7 +392,7 @@ Process the pause immediately — don't add friction.
 >
 > "**Activity dashboard** — see your play stats, session history, and spending patterns."
 >
-> "**Game IQ quiz** — test your odds knowledge. Most people find it pretty interesting."
+> "**Game IQ quiz** — test your odds knowledge. Each answer includes an explanation."
 >
 > "**Support resources** — free, confidential helpline available 24/7."
 
@@ -486,3 +486,7 @@ Process the pause immediately — don't add friction.
 ---
 
 *Cross-references: [Voice and Tone](../../brand-book/04-voice-and-tone.md) | [Language Guide](../../brand-book/04-voice-and-tone.md#language-guide) | [Core Messages — Help](../../messaging/core-messages.md#help--support-without-barriers) | [Player Segments](../../messaging/player-segments/)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

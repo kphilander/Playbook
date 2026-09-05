@@ -2,6 +2,8 @@
 
 Templates and specifications for every Playbook touchpoint — digital, print, environmental, video/audio, customer service, and interactive content. Each subfolder contains markdown specs that define copy, layout, and design direction. The `render/` folder contains the HTML/PNG build pipeline.
 
+[Open the September creative review](creative-review/index.html) for revised previews, concept comparisons and the reasoning behind the choices.
+
 ## Folders
 
 | Folder | Contents |
@@ -12,7 +14,7 @@ Templates and specifications for every Playbook touchpoint — digital, print, e
 | [video-audio/](video-audio/) | TV spots, radio scripts, digital pre-roll, hold messages |
 | [customer-service/](customer-service/) | Conversation scripts and staff FAQ for frontline teams |
 | [interactive/](interactive/) | Quiz framework for Game IQ and myth-busting quizzes |
-| [render/](render/) | **75 template families / 290 localized renders** + responsive and production export profiles |
+| [render/](render/) | **93 template families / 320 render entries** + responsive and production export profiles |
 
 ## Which size to use
 

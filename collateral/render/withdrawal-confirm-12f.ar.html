@@ -175,41 +175,33 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="withdrawal-confirm">
-
-  <div class="accent-bar"></div>
-
-  <div class="content">
-    <div class="logo">
+<div class="withdrawal-confirm pb-creative">
+<div class="accent-bar"></div>
+<div class="content">
+<div class="logo">
       Playbook
     </div>
-
-    <div class="check-circle">
-      <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"/></g></svg></span>
+<div class="check-circle">
+<span class="check-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24"><g stroke-width="2"><rect height="18" rx="4" width="18" x="3" y="3"></rect></g><g stroke-width="1"><polyline points="8 12 11 15 16 9"></polyline></g></svg></span>
+</div>
+<h1 class="heading">تم تأكيد السحب</h1>
+<div class="amount"><bdi dir="ltr">150.00</bdi> د.إ</div>
+<p class="subhead">راجع حالة السحب لمعرفة وقت الوصول المتوقع.</p>
+<div class="divider"></div>
+<div class="section-label">ملخّص الجلسة</div>
+<div class="stats-row">
+      <bdi dir="ltr">45</bdi> دقيقة<span class="stat-sep">·</span><bdi dir="ltr">80</bdi> د.إ مراهنة<span class="stat-sep">·</span><bdi dir="ltr">+70</bdi> د.إ صافي
     </div>
-
-    <h1 class="heading">تم تأكيد السحب</h1>
-    <div class="amount">150.00 د.إ</div>
-    <p class="subhead">سيظهر الرصيد في الحساب خلال 24 ساعة.</p>
-
-    <div class="divider"></div>
-
-    <div class="section-label">ملخّص الجلسة</div>
-    <div class="stats-row">
-      45 دقيقة<span class="stat-sep">&middot;</span>80 د.إ مراهنة<span class="stat-sep">&middot;</span>+70 د.إ صافي
-    </div>
-
-    <div class="helpline-block">
-      <div class="helpline-label">دعم مجاني وسري على مدار الساعة</div>
-      <div class="helpline-number"><span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
-      <div class="helpline-channels">{{TEXT_NUMBER}} &middot; الدردشة {{CHAT_URL}}</div>
-    </div>
-
-    <button class="done-button">تم</button>
-  </div>
-
+<div class="helpline-block">
+<div class="helpline-label">دعم مجاني وسري على مدار الساعة</div>
+<div class="helpline-number"><span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
+<div class="helpline-channels">{{TEXT_NUMBER}} · الدردشة {{CHAT_URL}}</div>
+</div>
+<button class="done-button">تم</button>
+</div>
 </div>
 </body>
 </html>

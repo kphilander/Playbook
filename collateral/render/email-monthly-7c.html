@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=600">
 <title>Monthly Activity Summary</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   .email {
@@ -135,14 +133,15 @@
 
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
+<div class="email pb-creative">
 
   <div class="accent-bar"></div>
 
   <div class="hero">
-    <div class="hero-logo">Playbook</div>
+    <div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
     <h1>Your January summary</h1>
     <p>Knowledge is a feature. Here's yours.</p>
   </div>
@@ -199,7 +198,7 @@
     <div class="article-card">
       <div class="article-thumb"><div class="article-thumb-icon">Tools</div></div>
       <div>
-        <div class="article-title">5 ways your deposit limit saves you money</div>
+        <div class="article-title">How a deposit limit works</div>
         <div class="article-meta">3 min read</div>
       </div>
     </div>
@@ -212,7 +211,7 @@
     <div class="footer-support">Free, confidential support — for any question about gambling.</div>
     <div class="footer-channels">Call {{HELPLINE_NUMBER}} | Text {{HELPLINE_NUMBER}}</div>
     <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
+    <div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
   </div>
 
 </div>

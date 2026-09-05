@@ -48,7 +48,7 @@ The rendered PNG is a visual QA artifact, not an email attachment or fixed-heigh
 | Variant | Subject | Preview text |
 |---|---|---|
 | **A (primary)** | Welcome to {{PROGRAM_SHORT_NAME}} — 3 tools, 60 seconds | Set your budget, set your pace, test your game IQ. |
-| **B (quiz hook)** | Think you know the odds? Most people get question 3 wrong | Welcome to {{PROGRAM_SHORT_NAME}}. Take the quiz. |
+| **B (quiz hook)** | Think you know the odds? See what you know, then explore the answers | Welcome to {{PROGRAM_SHORT_NAME}}. Take the quiz. |
 | **C (direct)** | Your tools are ready | Deposit limits, session reminders, and your game IQ quiz — all set up in 60 seconds. |
 
 ### Email body
@@ -66,7 +66,7 @@ The rendered PNG is a visual QA artifact, not an email attachment or fixed-heigh
 | Element | Content |
 |---|---|
 | **Section headline** | Three things. 60 seconds. |
-| **Item 1** | **Set your budget** — Pick your deposit limit. Weekly, monthly, whatever works. Takes 10 seconds. |
+| **Item 1** | **Set your budget** — Pick your deposit limit. Weekly, monthly, whatever works. Choose your amount and time frame. |
 | **Item 2** | **Set your pace** — Session reminders keep you aware. No buzzkill. Just a check-in. |
 | **Item 3** | **Know your game** — Take the odds quiz. 7 questions, 2 minutes. Challenge your friends after. |
 | **CTA** | `Get started →` |
@@ -121,7 +121,7 @@ The rendered PNG is a visual QA artifact, not an email attachment or fixed-heigh
 | **Used so far** | {{USED_AMOUNT}} ({{PERCENT}}%) |
 | **Remaining** | {{REMAINING_AMOUNT}} |
 | **CTA** | `Adjust your limits →` |
-| **Note** | Your limits are yours. Adjust anytime in account settings. |
+| **Note** | Your limits are yours. Review changes and their timing in account settings. |
 
 **Body section 2 — Tool reminder** (light gray background):
 
@@ -260,3 +260,7 @@ Click the template name to view the full HTML source.
 ---
 
 *Cross-references: [Application Guidelines — Email](../../brand-book/07-application-guidelines.md#email) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

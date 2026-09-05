@@ -166,14 +166,15 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
+<div class="email pb-creative">
 
   <div class="accent-bar"></div>
 
   <div class="hero">
-    <div class="hero-logo">Playbook</div>
+    <div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
     <h1>欢迎。以下几项资讯值得关注。</h1>
     <p>Playbook 提供真实数据、实用工具以及游戏背后的准确数字，毫无隐晦。</p>
   </div>
@@ -222,7 +223,7 @@
       在线支援 {{CHAT_URL}}
     </div>
     <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
+    <div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
     <div class="footer-unsub">
       <a href="#">管理偏好设置</a>
     </div>

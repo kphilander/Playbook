@@ -1,0 +1,2487 @@
+{
+  "reviewDate": "2026-09-04",
+  "timezone": "America/Los_Angeles",
+  "baseline": "b2d95c8",
+  "brandGuidelines": "Unmodified brand-book and visual-identity guidance matching origin/main at ee2e7d4.",
+  "scope": {
+    "collateral": 320,
+    "families": 93,
+    "languages": {
+      "en": 93,
+      "ja": 79,
+      "zh-CN": 74,
+      "ar": 74
+    },
+    "concepts": 30,
+    "newGooglePhotos": 5,
+    "mirroredBrandBookPreviews": 44
+  },
+  "layoutChecks": [
+    {
+      "profile": "preview",
+      "templates": 320,
+      "status": "passed",
+      "method": "Full profile sweep followed by successful reruns of affected templates after corrections.",
+      "files": [
+        "app-banner-12d.ar.html",
+        "app-banner-12d.html",
+        "app-banner-12d.ja.html",
+        "app-banner-12d.zh-CN.html",
+        "betslip-rg-12g.ar.html",
+        "betslip-rg-12g.html",
+        "betslip-rg-12g.ja.html",
+        "betslip-rg-12g.zh-CN.html",
+        "brochure-cover-8b.ar.html",
+        "brochure-cover-8b.html",
+        "brochure-cover-8b.ja.html",
+        "brochure-cover-8b.zh-CN.html",
+        "brochure-trifold-8a.ar.html",
+        "brochure-trifold-8a.html",
+        "brochure-trifold-8a.ja.html",
+        "brochure-trifold-8a.zh-CN.html",
+        "card-11a-streamer-myth.html",
+        "card-11a-streamer-myth.ja.html",
+        "card-11b-lucky-numbers.ar.html",
+        "card-11b-lucky-numbers.html",
+        "card-11b-lucky-numbers.ja.html",
+        "card-11b-lucky-numbers.zh-CN.html",
+        "card-13a-its-due.ar.html",
+        "card-13a-its-due.html",
+        "card-13a-its-due.ja.html",
+        "card-13a-its-due.zh-CN.html",
+        "card-13b-near-win.ar.html",
+        "card-13b-near-win.html",
+        "card-13b-near-win.ja.html",
+        "card-13b-near-win.zh-CN.html",
+        "card-13c-picked-right.ar.html",
+        "card-13c-picked-right.html",
+        "card-13c-picked-right.ja.html",
+        "card-13c-picked-right.zh-CN.html",
+        "card-13d-won-big.ar.html",
+        "card-13d-won-big.html",
+        "card-13d-won-big.ja.html",
+        "card-13d-won-big.zh-CN.html",
+        "card-13e-lucky-shirt.ar.html",
+        "card-13e-lucky-shirt.html",
+        "card-13e-lucky-shirt.ja.html",
+        "card-13e-lucky-shirt.zh-CN.html",
+        "card-13f-earned-win.ar.html",
+        "card-13f-earned-win.html",
+        "card-13f-earned-win.ja.html",
+        "card-13f-earned-win.zh-CN.html",
+        "card-14a-every-game-blackjack.ar.html",
+        "card-14a-every-game-blackjack.html",
+        "card-14a-every-game-blackjack.ja.html",
+        "card-14a-every-game-blackjack.zh-CN.html",
+        "card-15a-point-spread.ar.html",
+        "card-15a-point-spread.html",
+        "card-15a-point-spread.ja.html",
+        "card-15a-point-spread.zh-CN.html",
+        "card-16a-online-rigged.ar.html",
+        "card-16a-online-rigged.html",
+        "card-16a-online-rigged.ja.html",
+        "card-16a-online-rigged.zh-CN.html",
+        "card-16b-bonus-free-money.ar.html",
+        "card-16b-bonus-free-money.html",
+        "card-16b-bonus-free-money.ja.html",
+        "card-16b-bonus-free-money.zh-CN.html",
+        "card-17a-big-game.ar.html",
+        "card-17a-big-game.html",
+        "card-17a-big-game.ja.html",
+        "card-17a-big-game.zh-CN.html",
+        "card-18a-fresh-start.ar.html",
+        "card-18a-fresh-start.html",
+        "card-18a-fresh-start.ja.html",
+        "card-18a-fresh-start.zh-CN.html",
+        "card-1a-hot-streak.ar.html",
+        "card-1a-hot-streak.html",
+        "card-1a-hot-streak.ja.html",
+        "card-1a-hot-streak.zh-CN.html",
+        "card-1b-due-for-win.ar.html",
+        "card-1b-due-for-win.html",
+        "card-1b-due-for-win.ja.html",
+        "card-1b-due-for-win.zh-CN.html",
+        "card-1c-lucky-machine.ar.html",
+        "card-1c-lucky-machine.html",
+        "card-1c-lucky-machine.ja.html",
+        "card-1c-lucky-machine.zh-CN.html",
+        "card-20a-return-vs-profit.html",
+        "card-20b-pick-your-pause.html",
+        "card-20c-parlay-probability.html",
+        "card-2a-house-edge.ar.html",
+        "card-2a-house-edge.html",
+        "card-2a-house-edge.ja.html",
+        "card-2a-house-edge.zh-CN.html",
+        "card-2b-sports-betting.ar.html",
+        "card-2b-sports-betting.html",
+        "card-2b-sports-betting.ja.html",
+        "card-2b-sports-betting.zh-CN.html",
+        "card-2c-bonus-wagering.ar.html",
+        "card-2c-bonus-wagering.html",
+        "card-2c-bonus-wagering.ja.html",
+        "card-2c-bonus-wagering.zh-CN.html",
+        "card-tier2-10f.ar.html",
+        "card-tier2-10f.html",
+        "card-tier2-10f.ja.html",
+        "card-tier2-10f.zh-CN.html",
+        "cooldown-10e.ar.html",
+        "cooldown-10e.html",
+        "cooldown-10e.ja.html",
+        "cooldown-10e.zh-CN.html",
+        "deposit-interstitial-12b.ar.html",
+        "deposit-interstitial-12b.html",
+        "deposit-interstitial-12b.ja.html",
+        "deposit-interstitial-12b.zh-CN.html",
+        "display-14e-every-game.ar.html",
+        "display-14e-every-game.html",
+        "display-14e-every-game.ja.html",
+        "display-14e-every-game.zh-CN.html",
+        "display-landscape-6a.ar.html",
+        "display-landscape-6a.html",
+        "display-landscape-6a.ja.html",
+        "display-landscape-6a.zh-CN.html",
+        "display-portrait-6b.ar.html",
+        "display-portrait-6b.html",
+        "display-portrait-6b.ja.html",
+        "display-portrait-6b.zh-CN.html",
+        "email-14d-every-game.ar.html",
+        "email-14d-every-game.html",
+        "email-14d-every-game.ja.html",
+        "email-14d-every-game.zh-CN.html",
+        "email-deposit-7b.ar.html",
+        "email-deposit-7b.html",
+        "email-deposit-7b.ja.html",
+        "email-deposit-7b.zh-CN.html",
+        "email-monthly-7c.ar.html",
+        "email-monthly-7c.html",
+        "email-monthly-7c.ja.html",
+        "email-monthly-7c.zh-CN.html",
+        "email-reactivation-7d.ar.html",
+        "email-reactivation-7d.html",
+        "email-reactivation-7d.ja.html",
+        "email-reactivation-7d.zh-CN.html",
+        "email-support-10h.ar.html",
+        "email-support-10h.html",
+        "email-support-10h.ja.html",
+        "email-support-10h.zh-CN.html",
+        "email-welcome-7a.ar.html",
+        "email-welcome-7a.html",
+        "email-welcome-7a.ja.html",
+        "email-welcome-7a.zh-CN.html",
+        "helpline-card-5c.ar.html",
+        "helpline-card-5c.html",
+        "helpline-card-5c.ja.html",
+        "helpline-card-5c.zh-CN.html",
+        "htp-card-baccarat.ar.html",
+        "htp-card-baccarat.html",
+        "htp-card-baccarat.ja.html",
+        "htp-card-baccarat.zh-CN.html",
+        "htp-card-bingo.html",
+        "htp-card-bingo.ja.html",
+        "htp-card-blackjack.ar.html",
+        "htp-card-blackjack.html",
+        "htp-card-blackjack.ja.html",
+        "htp-card-blackjack.zh-CN.html",
+        "htp-card-craps.html",
+        "htp-card-craps.ja.html",
+        "htp-card-horse-racing.ar.html",
+        "htp-card-horse-racing.html",
+        "htp-card-horse-racing.ja.html",
+        "htp-card-horse-racing.zh-CN.html",
+        "htp-card-lottery.ar.html",
+        "htp-card-lottery.html",
+        "htp-card-lottery.ja.html",
+        "htp-card-lottery.zh-CN.html",
+        "htp-card-roulette.ar.html",
+        "htp-card-roulette.html",
+        "htp-card-roulette.ja.html",
+        "htp-card-roulette.zh-CN.html",
+        "htp-card-slots.ar.html",
+        "htp-card-slots.html",
+        "htp-card-slots.ja.html",
+        "htp-card-slots.zh-CN.html",
+        "htp-card-sports.ar.html",
+        "htp-card-sports.html",
+        "htp-card-sports.ja.html",
+        "htp-card-sports.zh-CN.html",
+        "htp-card-video-poker.html",
+        "htp-card-video-poker.ja.html",
+        "htp-odds-comparison.ar.html",
+        "htp-odds-comparison.html",
+        "htp-odds-comparison.ja.html",
+        "htp-odds-comparison.zh-CN.html",
+        "in-play-overlay-12c.ar.html",
+        "in-play-overlay-12c.html",
+        "in-play-overlay-12c.ja.html",
+        "in-play-overlay-12c.zh-CN.html",
+        "limit-reached-10d.ar.html",
+        "limit-reached-10d.html",
+        "limit-reached-10d.ja.html",
+        "limit-reached-10d.zh-CN.html",
+        "live-odds-overlay-15d.ar.html",
+        "live-odds-overlay-15d.html",
+        "live-odds-overlay-15d.ja.html",
+        "live-odds-overlay-15d.zh-CN.html",
+        "mobile-14f-every-game.ar.html",
+        "mobile-14f-every-game.html",
+        "mobile-14f-every-game.ja.html",
+        "mobile-14f-every-game.zh-CN.html",
+        "mobile-onboarding-12a.ar.html",
+        "mobile-onboarding-12a.html",
+        "mobile-onboarding-12a.ja.html",
+        "mobile-onboarding-12a.zh-CN.html",
+        "og-content-hub.html",
+        "og-rg-page.html",
+        "poster-14c-every-game-slots.ar.html",
+        "poster-14c-every-game-slots.html",
+        "poster-14c-every-game-slots.ja.html",
+        "poster-14c-every-game-slots.zh-CN.html",
+        "poster-15c-how-sportsbook-wins.ar.html",
+        "poster-15c-how-sportsbook-wins.html",
+        "poster-15c-how-sportsbook-wins.ja.html",
+        "poster-15c-how-sportsbook-wins.zh-CN.html",
+        "poster-19a-every-game-math.html",
+        "poster-19b-odds-are-public.html",
+        "poster-19c-bet-price-tag.html",
+        "poster-19d-game-iq.html",
+        "poster-19e-never-due.html",
+        "poster-19f-your-tools.html",
+        "poster-19g-one-decision.html",
+        "poster-19h-time-flies.html",
+        "poster-19i-lottery-odds.html",
+        "poster-4a-know-your-game.ar.html",
+        "poster-4a-know-your-game.html",
+        "poster-4a-know-your-game.ja.html",
+        "poster-4a-know-your-game.zh-CN.html",
+        "poster-4b-no-fine-print.ar.html",
+        "poster-4b-no-fine-print.html",
+        "poster-4b-no-fine-print.ja.html",
+        "poster-4b-no-fine-print.zh-CN.html",
+        "poster-4c-game-iq.ar.html",
+        "poster-4c-game-iq.html",
+        "poster-4c-game-iq.ja.html",
+        "poster-4c-game-iq.zh-CN.html",
+        "poster-4d-lottery-odds.ar.html",
+        "poster-4d-lottery-odds.html",
+        "poster-4d-lottery-odds.ja.html",
+        "poster-4d-lottery-odds.zh-CN.html",
+        "poster-4e-bingo-hall.html",
+        "poster-4e-bingo-hall.ja.html",
+        "poster-tier2-10g.ar.html",
+        "poster-tier2-10g.html",
+        "poster-tier2-10g.ja.html",
+        "poster-tier2-10g.zh-CN.html",
+        "push-notification-12e.ar.html",
+        "push-notification-12e.html",
+        "push-notification-12e.ja.html",
+        "push-notification-12e.zh-CN.html",
+        "rack-card-5a.ar.html",
+        "rack-card-5a.html",
+        "rack-card-5a.ja.html",
+        "rack-card-5a.zh-CN.html",
+        "self-exclusion-10b.ar.html",
+        "self-exclusion-10b.html",
+        "self-exclusion-10b.ja.html",
+        "self-exclusion-10b.zh-CN.html",
+        "session-summary-10c.ar.html",
+        "session-summary-10c.html",
+        "session-summary-10c.ja.html",
+        "session-summary-10c.zh-CN.html",
+        "sign-atm-9b.ar.html",
+        "sign-atm-9b.html",
+        "sign-atm-9b.ja.html",
+        "sign-atm-9b.zh-CN.html",
+        "sign-entrance-9a.ar.html",
+        "sign-entrance-9a.html",
+        "sign-entrance-9a.ja.html",
+        "sign-entrance-9a.zh-CN.html",
+        "sign-floor-9c.ar.html",
+        "sign-floor-9c.html",
+        "sign-floor-9c.ja.html",
+        "sign-floor-9c.zh-CN.html",
+        "sign-restroom-9d.ar.html",
+        "sign-restroom-9d.html",
+        "sign-restroom-9d.ja.html",
+        "sign-restroom-9d.zh-CN.html",
+        "sign-staff-9e.ar.html",
+        "sign-staff-9e.html",
+        "sign-staff-9e.ja.html",
+        "sign-staff-9e.zh-CN.html",
+        "story-14b-every-game-roulette.ar.html",
+        "story-14b-every-game-roulette.html",
+        "story-14b-every-game-roulette.ja.html",
+        "story-14b-every-game-roulette.zh-CN.html",
+        "story-15b-bet-costs.ar.html",
+        "story-15b-bet-costs.html",
+        "story-15b-bet-costs.ja.html",
+        "story-15b-bet-costs.zh-CN.html",
+        "story-3a-hot-streak.ar.html",
+        "story-3a-hot-streak.html",
+        "story-3a-hot-streak.ja.html",
+        "story-3a-hot-streak.zh-CN.html",
+        "story-3b-house-edge.ar.html",
+        "story-3b-house-edge.html",
+        "story-3b-house-edge.ja.html",
+        "story-3b-house-edge.zh-CN.html",
+        "story-3c-sports-betting.ar.html",
+        "story-3c-sports-betting.html",
+        "story-3c-sports-betting.ja.html",
+        "story-3c-sports-betting.zh-CN.html",
+        "support-page-10a.ar.html",
+        "support-page-10a.html",
+        "support-page-10a.ja.html",
+        "support-page-10a.zh-CN.html",
+        "table-tent-5b.ar.html",
+        "table-tent-5b.html",
+        "table-tent-5b.ja.html",
+        "table-tent-5b.zh-CN.html",
+        "web-popup-12h.ar.html",
+        "web-popup-12h.html",
+        "web-popup-12h.ja.html",
+        "web-popup-12h.zh-CN.html",
+        "withdrawal-confirm-12f.ar.html",
+        "withdrawal-confirm-12f.html",
+        "withdrawal-confirm-12f.ja.html",
+        "withdrawal-confirm-12f.zh-CN.html"
+      ]
+    },
+    {
+      "profile": "social-square",
+      "templates": 123,
+      "status": "passed",
+      "method": "Full profile sweep followed by successful reruns of affected templates after corrections.",
+      "files": [
+        "card-11a-streamer-myth.html",
+        "card-11a-streamer-myth.ja.html",
+        "card-11b-lucky-numbers.ar.html",
+        "card-11b-lucky-numbers.html",
+        "card-11b-lucky-numbers.ja.html",
+        "card-11b-lucky-numbers.zh-CN.html",
+        "card-13a-its-due.ar.html",
+        "card-13a-its-due.html",
+        "card-13a-its-due.ja.html",
+        "card-13a-its-due.zh-CN.html",
+        "card-13b-near-win.ar.html",
+        "card-13b-near-win.html",
+        "card-13b-near-win.ja.html",
+        "card-13b-near-win.zh-CN.html",
+        "card-13c-picked-right.ar.html",
+        "card-13c-picked-right.html",
+        "card-13c-picked-right.ja.html",
+        "card-13c-picked-right.zh-CN.html",
+        "card-13d-won-big.ar.html",
+        "card-13d-won-big.html",
+        "card-13d-won-big.ja.html",
+        "card-13d-won-big.zh-CN.html",
+        "card-13e-lucky-shirt.ar.html",
+        "card-13e-lucky-shirt.html",
+        "card-13e-lucky-shirt.ja.html",
+        "card-13e-lucky-shirt.zh-CN.html",
+        "card-13f-earned-win.ar.html",
+        "card-13f-earned-win.html",
+        "card-13f-earned-win.ja.html",
+        "card-13f-earned-win.zh-CN.html",
+        "card-14a-every-game-blackjack.ar.html",
+        "card-14a-every-game-blackjack.html",
+        "card-14a-every-game-blackjack.ja.html",
+        "card-14a-every-game-blackjack.zh-CN.html",
+        "card-15a-point-spread.ar.html",
+        "card-15a-point-spread.html",
+        "card-15a-point-spread.ja.html",
+        "card-15a-point-spread.zh-CN.html",
+        "card-16a-online-rigged.ar.html",
+        "card-16a-online-rigged.html",
+        "card-16a-online-rigged.ja.html",
+        "card-16a-online-rigged.zh-CN.html",
+        "card-16b-bonus-free-money.ar.html",
+        "card-16b-bonus-free-money.html",
+        "card-16b-bonus-free-money.ja.html",
+        "card-16b-bonus-free-money.zh-CN.html",
+        "card-17a-big-game.ar.html",
+        "card-17a-big-game.html",
+        "card-17a-big-game.ja.html",
+        "card-17a-big-game.zh-CN.html",
+        "card-18a-fresh-start.ar.html",
+        "card-18a-fresh-start.html",
+        "card-18a-fresh-start.ja.html",
+        "card-18a-fresh-start.zh-CN.html",
+        "card-1a-hot-streak.ar.html",
+        "card-1a-hot-streak.html",
+        "card-1a-hot-streak.ja.html",
+        "card-1a-hot-streak.zh-CN.html",
+        "card-1b-due-for-win.ar.html",
+        "card-1b-due-for-win.html",
+        "card-1b-due-for-win.ja.html",
+        "card-1b-due-for-win.zh-CN.html",
+        "card-1c-lucky-machine.ar.html",
+        "card-1c-lucky-machine.html",
+        "card-1c-lucky-machine.ja.html",
+        "card-1c-lucky-machine.zh-CN.html",
+        "card-20a-return-vs-profit.html",
+        "card-20b-pick-your-pause.html",
+        "card-20c-parlay-probability.html",
+        "card-2a-house-edge.ar.html",
+        "card-2a-house-edge.html",
+        "card-2a-house-edge.ja.html",
+        "card-2a-house-edge.zh-CN.html",
+        "card-2b-sports-betting.ar.html",
+        "card-2b-sports-betting.html",
+        "card-2b-sports-betting.ja.html",
+        "card-2b-sports-betting.zh-CN.html",
+        "card-2c-bonus-wagering.ar.html",
+        "card-2c-bonus-wagering.html",
+        "card-2c-bonus-wagering.ja.html",
+        "card-2c-bonus-wagering.zh-CN.html",
+        "card-tier2-10f.ar.html",
+        "card-tier2-10f.html",
+        "card-tier2-10f.ja.html",
+        "card-tier2-10f.zh-CN.html",
+        "htp-card-baccarat.ar.html",
+        "htp-card-baccarat.html",
+        "htp-card-baccarat.ja.html",
+        "htp-card-baccarat.zh-CN.html",
+        "htp-card-bingo.html",
+        "htp-card-bingo.ja.html",
+        "htp-card-blackjack.ar.html",
+        "htp-card-blackjack.html",
+        "htp-card-blackjack.ja.html",
+        "htp-card-blackjack.zh-CN.html",
+        "htp-card-craps.html",
+        "htp-card-craps.ja.html",
+        "htp-card-horse-racing.ar.html",
+        "htp-card-horse-racing.html",
+        "htp-card-horse-racing.ja.html",
+        "htp-card-horse-racing.zh-CN.html",
+        "htp-card-lottery.ar.html",
+        "htp-card-lottery.html",
+        "htp-card-lottery.ja.html",
+        "htp-card-lottery.zh-CN.html",
+        "htp-card-roulette.ar.html",
+        "htp-card-roulette.html",
+        "htp-card-roulette.ja.html",
+        "htp-card-roulette.zh-CN.html",
+        "htp-card-slots.ar.html",
+        "htp-card-slots.html",
+        "htp-card-slots.ja.html",
+        "htp-card-slots.zh-CN.html",
+        "htp-card-sports.ar.html",
+        "htp-card-sports.html",
+        "htp-card-sports.ja.html",
+        "htp-card-sports.zh-CN.html",
+        "htp-card-video-poker.html",
+        "htp-card-video-poker.ja.html",
+        "htp-odds-comparison.ar.html",
+        "htp-odds-comparison.html",
+        "htp-odds-comparison.ja.html",
+        "htp-odds-comparison.zh-CN.html"
+      ]
+    },
+    {
+      "profile": "email-320",
+      "templates": 24,
+      "status": "passed",
+      "method": "Full profile sweep followed by successful reruns of affected templates after corrections.",
+      "files": [
+        "email-14d-every-game.ar.html",
+        "email-14d-every-game.html",
+        "email-14d-every-game.ja.html",
+        "email-14d-every-game.zh-CN.html",
+        "email-deposit-7b.ar.html",
+        "email-deposit-7b.html",
+        "email-deposit-7b.ja.html",
+        "email-deposit-7b.zh-CN.html",
+        "email-monthly-7c.ar.html",
+        "email-monthly-7c.html",
+        "email-monthly-7c.ja.html",
+        "email-monthly-7c.zh-CN.html",
+        "email-reactivation-7d.ar.html",
+        "email-reactivation-7d.html",
+        "email-reactivation-7d.ja.html",
+        "email-reactivation-7d.zh-CN.html",
+        "email-support-10h.ar.html",
+        "email-support-10h.html",
+        "email-support-10h.ja.html",
+        "email-support-10h.zh-CN.html",
+        "email-welcome-7a.ar.html",
+        "email-welcome-7a.html",
+        "email-welcome-7a.ja.html",
+        "email-welcome-7a.zh-CN.html"
+      ]
+    },
+    {
+      "profile": "ui-360",
+      "templates": 52,
+      "status": "passed",
+      "method": "Full profile sweep followed by successful reruns of affected templates after corrections.",
+      "files": [
+        "betslip-rg-12g.ar.html",
+        "betslip-rg-12g.html",
+        "betslip-rg-12g.ja.html",
+        "betslip-rg-12g.zh-CN.html",
+        "cooldown-10e.ar.html",
+        "cooldown-10e.html",
+        "cooldown-10e.ja.html",
+        "cooldown-10e.zh-CN.html",
+        "deposit-interstitial-12b.ar.html",
+        "deposit-interstitial-12b.html",
+        "deposit-interstitial-12b.ja.html",
+        "deposit-interstitial-12b.zh-CN.html",
+        "in-play-overlay-12c.ar.html",
+        "in-play-overlay-12c.html",
+        "in-play-overlay-12c.ja.html",
+        "in-play-overlay-12c.zh-CN.html",
+        "limit-reached-10d.ar.html",
+        "limit-reached-10d.html",
+        "limit-reached-10d.ja.html",
+        "limit-reached-10d.zh-CN.html",
+        "live-odds-overlay-15d.ar.html",
+        "live-odds-overlay-15d.html",
+        "live-odds-overlay-15d.ja.html",
+        "live-odds-overlay-15d.zh-CN.html",
+        "mobile-14f-every-game.ar.html",
+        "mobile-14f-every-game.html",
+        "mobile-14f-every-game.ja.html",
+        "mobile-14f-every-game.zh-CN.html",
+        "mobile-onboarding-12a.ar.html",
+        "mobile-onboarding-12a.html",
+        "mobile-onboarding-12a.ja.html",
+        "mobile-onboarding-12a.zh-CN.html",
+        "self-exclusion-10b.ar.html",
+        "self-exclusion-10b.html",
+        "self-exclusion-10b.ja.html",
+        "self-exclusion-10b.zh-CN.html",
+        "session-summary-10c.ar.html",
+        "session-summary-10c.html",
+        "session-summary-10c.ja.html",
+        "session-summary-10c.zh-CN.html",
+        "support-page-10a.ar.html",
+        "support-page-10a.html",
+        "support-page-10a.ja.html",
+        "support-page-10a.zh-CN.html",
+        "web-popup-12h.ar.html",
+        "web-popup-12h.html",
+        "web-popup-12h.ja.html",
+        "web-popup-12h.zh-CN.html",
+        "withdrawal-confirm-12f.ar.html",
+        "withdrawal-confirm-12f.html",
+        "withdrawal-confirm-12f.ja.html",
+        "withdrawal-confirm-12f.zh-CN.html"
+      ]
+    },
+    {
+      "profile": "print-us",
+      "templates": 27,
+      "status": "passed",
+      "method": "Full profile sweep followed by successful reruns of affected templates after corrections.",
+      "files": [
+        "brochure-cover-8b.html",
+        "brochure-trifold-8a.html",
+        "helpline-card-5c.html",
+        "poster-14c-every-game-slots.html",
+        "poster-15c-how-sportsbook-wins.html",
+        "poster-19a-every-game-math.html",
+        "poster-19b-odds-are-public.html",
+        "poster-19c-bet-price-tag.html",
+        "poster-19d-game-iq.html",
+        "poster-19e-never-due.html",
+        "poster-19f-your-tools.html",
+        "poster-19g-one-decision.html",
+        "poster-19h-time-flies.html",
+        "poster-19i-lottery-odds.html",
+        "poster-4a-know-your-game.html",
+        "poster-4b-no-fine-print.html",
+        "poster-4c-game-iq.html",
+        "poster-4d-lottery-odds.html",
+        "poster-4e-bingo-hall.html",
+        "poster-tier2-10g.html",
+        "rack-card-5a.html",
+        "sign-atm-9b.html",
+        "sign-entrance-9a.html",
+        "sign-floor-9c.html",
+        "sign-restroom-9d.html",
+        "sign-staff-9e.html",
+        "table-tent-5b.html"
+      ]
+    },
+    {
+      "profile": "print-iso",
+      "templates": 27,
+      "status": "passed",
+      "method": "Full profile sweep followed by successful reruns of affected templates after corrections.",
+      "files": [
+        "brochure-cover-8b.html",
+        "brochure-trifold-8a.html",
+        "helpline-card-5c.html",
+        "poster-14c-every-game-slots.html",
+        "poster-15c-how-sportsbook-wins.html",
+        "poster-19a-every-game-math.html",
+        "poster-19b-odds-are-public.html",
+        "poster-19c-bet-price-tag.html",
+        "poster-19d-game-iq.html",
+        "poster-19e-never-due.html",
+        "poster-19f-your-tools.html",
+        "poster-19g-one-decision.html",
+        "poster-19h-time-flies.html",
+        "poster-19i-lottery-odds.html",
+        "poster-4a-know-your-game.html",
+        "poster-4b-no-fine-print.html",
+        "poster-4c-game-iq.html",
+        "poster-4d-lottery-odds.html",
+        "poster-4e-bingo-hall.html",
+        "poster-tier2-10g.html",
+        "rack-card-5a.html",
+        "sign-atm-9b.html",
+        "sign-entrance-9a.html",
+        "sign-floor-9c.html",
+        "sign-restroom-9d.html",
+        "sign-staff-9e.html",
+        "table-tent-5b.html"
+      ]
+    }
+  ],
+  "conceptChecks": {
+    "status": "passed",
+    "templates": 30,
+    "details": "concept-validation.json"
+  },
+  "browser": {
+    "checks": [
+      {
+        "check": "Gallery English",
+        "pass": true,
+        "count": 123
+      },
+      {
+        "check": "Gallery full inventory",
+        "pass": true,
+        "count": 350
+      },
+      {
+        "check": "Concept filter",
+        "pass": true,
+        "count": 30
+      },
+      {
+        "check": "Search",
+        "pass": true,
+        "count": 2
+      },
+      {
+        "check": "Mobile gallery width",
+        "pass": true,
+        "width": 390
+      },
+      {
+        "check": "Content locale en",
+        "pass": true,
+        "question": "In a fair lottery with independent draws, a number has not appeared for six months. Is it more likely next time?",
+        "bundle": "en"
+      },
+      {
+        "check": "Content locale ja",
+        "pass": true,
+        "question": "ライブベットのオッズが変わったら、確定前にどこを確認しますか。",
+        "bundle": "ja"
+      },
+      {
+        "check": "Content locale zh-CN",
+        "pass": true,
+        "question": "在每次旋转相互独立的老虎机上连赢四次。设置相同，第五次的概率会改变吗？",
+        "bundle": "zh-CN"
+      },
+      {
+        "check": "Content locale ar",
+        "pass": true,
+        "question": "أربعة اختيارات مستقلة، فرصة كل منها الحقيقية 50%. ما احتمال فوزها جميعاً؟",
+        "bundle": "ar"
+      },
+      {
+        "check": "Content locale en",
+        "pass": true,
+        "question": "In one fair six-from-49 draw, what jackpot chance do 100 distinct combinations give?",
+        "bundle": "en"
+      },
+      {
+        "check": "Hero answer feedback",
+        "pass": true,
+        "feedback": "The answer: The chance is 100 times that of one combination, and the cost is 100 times as much at a fixed price. Duplicate combinations do not add distinct ways to win the jackpot.\nKeep going — take the full quiz →"
+      },
+      {
+        "check": "Mobile content page width",
+        "pass": true,
+        "width": 390
+      }
+    ],
+    "errors": [],
+    "pass": true
+  },
+  "brandConfig": {
+    "status": "passed",
+    "warning": "meta.organization is still default"
+  },
+  "sourceArchive": {
+    "status": "unchanged",
+    "path": "collateral/render/model-comparison"
+  },
+  "visualReview": "Contact sheets reviewed for all four language sets and all concepts; large-format inspection and corrections for typography, formulas, photo crops, Arabic numerical direction and support contacts.",
+  "deliveryNotes": [
+    "Operator contact, QR and destination placeholders remain configurable.",
+    "Native editorial review is appropriate before translated campaign publication.",
+    "Print exports are RGB previews with bleed; final printer prepress is separate.",
+    "Audio/video deliverables are revised scripts and storyboards.",
+    "No production deployment."
+  ],
+  "inventorySha256": "d8086b4d1f78846114279831add9417f1324f4523d2a21a0461c004de6a82d9a",
+  "inventory": [
+    {
+      "id": "app-banner-12d",
+      "sourceSha256": "55c14d7b6b3e3a5aedb01174b187016f5c80c639c36f24578189e6696350fc87",
+      "pngSha256": "e1541a1af0de5d42c8d173ebc13927fab92e6b63ac4be363224b5f2aa2d301c6"
+    },
+    {
+      "id": "app-banner-12d.ar",
+      "sourceSha256": "fe6fe3474227db6033eebac07444c868090410e99999fb15c1d52d096ced3c9a",
+      "pngSha256": "c8f4464ef20ab71f7e14eb488f219abf871a3fedabfc45b38e8af1de3e846392"
+    },
+    {
+      "id": "app-banner-12d.ja",
+      "sourceSha256": "2a4d80196363b7b22e04d197b937e2dd315d0e54780c0481d0a1cb478f23cd64",
+      "pngSha256": "39208e5cbfecd7d548c4bdf092b6eeeffe03db595fa4fffd47cba1b48b566c64"
+    },
+    {
+      "id": "app-banner-12d.zh-CN",
+      "sourceSha256": "513f8b6edf6a2cdc2f965c4c7723d8422fbd44b45a2b08004cdd15277b68ab00",
+      "pngSha256": "b7ec77e8f6fb8f614e4316f545278c53017237f25b77d22c152925eb58c7cabb"
+    },
+    {
+      "id": "betslip-rg-12g",
+      "sourceSha256": "14295f4c7b7474834126ed4213f5a6b38522578b67cba6f92af4d2f44f9b4bd7",
+      "pngSha256": "c1b3d92287e2c5e7ef954517025465117a5920c0a9900506ce951611c6237da0"
+    },
+    {
+      "id": "betslip-rg-12g.ar",
+      "sourceSha256": "1b3df4b49fc232d26ab3ca280027aa2f8d4fc981be8ade90b394acbf17add8f6",
+      "pngSha256": "ac6b91997f9c1907c06f85979dddd70c4f716e4ed403dff4829fd8f508bedd9c"
+    },
+    {
+      "id": "betslip-rg-12g.ja",
+      "sourceSha256": "55dc54fb677a28b20f993aa9db5c94db34f81402063699405606df6e382574a9",
+      "pngSha256": "a5869ef11e0df7801d2551d0e96b9155a412c1bb540a845bea8307ccf07d4fd1"
+    },
+    {
+      "id": "betslip-rg-12g.zh-CN",
+      "sourceSha256": "3197e8473507aa96c8ab517d2a16d6871f20d9091c8364a8ebc5c48529955c97",
+      "pngSha256": "84a99caf2f8f84c81cf0ff44ccbc7c1e096b9b85b3f8568f547d046b99d177b6"
+    },
+    {
+      "id": "brochure-cover-8b",
+      "sourceSha256": "42dfb8b1c480aa2c99722f4a7860b8704b774ab5043496f4df81632a2f9ae505",
+      "pngSha256": "6ef4b6639e68616a10cf5db50e380c776dead631d517718603cf66dc0afc6741"
+    },
+    {
+      "id": "brochure-cover-8b.ar",
+      "sourceSha256": "54ebacdbe060410f9f5e553022258b88c20e5250d0561e9e07277bfa7533e82e",
+      "pngSha256": "169e36cc36f89fcc8b03dddf880eb14ec5505b2465bc052b85fac6be44424d65"
+    },
+    {
+      "id": "brochure-cover-8b.ja",
+      "sourceSha256": "814e242e607751ef853dea6f00374c5191251df7e7a44aa808ed39e64819efd7",
+      "pngSha256": "fdb9c32f267260f83f67fbe21b882b841751e55770e69fadb7c2b104bd92f69e"
+    },
+    {
+      "id": "brochure-cover-8b.zh-CN",
+      "sourceSha256": "0e890699eb817e855e1b48ad4fa295d5bdc7ad73b4839543c83ca33179577284",
+      "pngSha256": "3cf64b06ac2695fbaf1216e9d5ae773787c5f647cba9792503df486e987a8255"
+    },
+    {
+      "id": "brochure-trifold-8a",
+      "sourceSha256": "d443c12108b13b67d0548d298501407aac8d25990bdd15981b284b08780e1889",
+      "pngSha256": "cbfc6ddf6ed4a216c9e766fb98d0ed31826a4058ac9dbde63d0530b26dd6dec7"
+    },
+    {
+      "id": "brochure-trifold-8a.ar",
+      "sourceSha256": "fbf9abaa96aa0340e3e2ba7d6dd25aacdf45b8e9093d1eb47a2f49ed9b17a2b9",
+      "pngSha256": "2e0aa18e4cc510b39f3170582fe8e34e8f197900f229922a90b45bf701a8ef79"
+    },
+    {
+      "id": "brochure-trifold-8a.ja",
+      "sourceSha256": "b94dd698ffc8b9681bb14e688db0e424a8cffcb58d4e6acfe6bd3d0665cf42f7",
+      "pngSha256": "240557f6a8752083d7276e353c39baa92120315bc20c11d31eaf52c00f2213ef"
+    },
+    {
+      "id": "brochure-trifold-8a.zh-CN",
+      "sourceSha256": "381071132ea5d458e750e6d52193cc03c23d18bf70b0703aa594475e4d41a95b",
+      "pngSha256": "e5e220e429a3810596c7892aa610e719fad74fd38e151bad482c9029cc23b12c"
+    },
+    {
+      "id": "card-11a-streamer-myth",
+      "sourceSha256": "75c800d4015bdb6283423570091ccb800581dd87ab822d7e0048c8183aecf585",
+      "pngSha256": "038e7ec66756263a4ef411377d467ce2ba5489b2fbd2e1cc8cab9f01248fc5c2"
+    },
+    {
+      "id": "card-11a-streamer-myth.ja",
+      "sourceSha256": "1d66d725d75e00218631612b39b4dc23af3bac5577b4f6ccbcef0e8b81bc0a8b",
+      "pngSha256": "5069ffba77c55aa92624c358c25f19d4719c90311bf9e2ff0dbf9e3c7577ddc9"
+    },
+    {
+      "id": "card-11b-lucky-numbers",
+      "sourceSha256": "7ea591542fa418bc5b3bf1dad93736966b6462cfebb0941b41135a58e9a3b9c7",
+      "pngSha256": "313cf467c81f99116cc7f9bcf5f84fe567705184212e5df871484d9544639355"
+    },
+    {
+      "id": "card-11b-lucky-numbers.ar",
+      "sourceSha256": "c21a86656e3391d296b644a5a24f067cb8cc65d7eeae73f5b9db5f29a661423b",
+      "pngSha256": "4b471b6054063b9180793c10345c912a6f731aa28e2ad0615354c51681bf6a7d"
+    },
+    {
+      "id": "card-11b-lucky-numbers.ja",
+      "sourceSha256": "9a1be2d91468857ba9b1e15110ae054f0491196f5fd6e0e42a657e46aa74b54a",
+      "pngSha256": "46eaa2c4550e54bf462475730553bee5aed28317c4488961972cf4dcf30f3b09"
+    },
+    {
+      "id": "card-11b-lucky-numbers.zh-CN",
+      "sourceSha256": "f336087284dfd1d0d113a8ea35f2600d0cb5f059f45ee954966be9455029e013",
+      "pngSha256": "2b5d632c78b5e46404b33ee4296f03152a8d79264638634956070106c6d8cef2"
+    },
+    {
+      "id": "card-13a-its-due",
+      "sourceSha256": "3cdacab31c5871beaca28d59e8c8f84befba09a195d809ab65d8218bd3f95398",
+      "pngSha256": "257ea117e0f2f0a288c319715bf3591eb22b2cd437ef2969e89ab951d60fc84a"
+    },
+    {
+      "id": "card-13a-its-due.ar",
+      "sourceSha256": "f6328a744b1ef6e091b01f621110592c8720eb9d91df97b0d2927b38e0cbf6c6",
+      "pngSha256": "b37c6b2f7da1ef00b7377201918f43b94ba113c1fa87313020e7483a3d9960ee"
+    },
+    {
+      "id": "card-13a-its-due.ja",
+      "sourceSha256": "9fc610b4fe43e0b46c2914195da11c215626892833ab1d6a137b9ada3333f132",
+      "pngSha256": "21fcace13bd3f80351a5c3e9d216404f30ec57f137ea110fe621507573d48c77"
+    },
+    {
+      "id": "card-13a-its-due.zh-CN",
+      "sourceSha256": "f4990c62590501973cf96da3027125f8ac37e778b1a6e281d630b3be4fecd841",
+      "pngSha256": "679ef1c4da526840f715b9bc52f689e5d1e21f90c13aa12eee54f9164ef4b82a"
+    },
+    {
+      "id": "card-13b-near-win",
+      "sourceSha256": "0b57b2b7249b44e9dd29fce3ac024f7b0e2c97b4c61de940043925c1b276a168",
+      "pngSha256": "1a874c0c12cb4ddbad981852f82a23ae114d4a0c1a92474b1b41dd1929e47ed0"
+    },
+    {
+      "id": "card-13b-near-win.ar",
+      "sourceSha256": "41d252e0115e121a35c80e7f6209393ce6f2ca79ddc5344654632c474346f243",
+      "pngSha256": "a4f82e70f1fe780312ac8c55885292247fece2b903aafac893dd104658a5e628"
+    },
+    {
+      "id": "card-13b-near-win.ja",
+      "sourceSha256": "a5c3276615ec86fe4f494879cc11a4c8c275dfffae0ad3213e92f6f2b8167728",
+      "pngSha256": "7b0d60a8470c6472f0f166a1a95beaf9e8efbdfe23b5c5fb104800a71098c1b1"
+    },
+    {
+      "id": "card-13b-near-win.zh-CN",
+      "sourceSha256": "4ec4ab36c5729971f6c15f014405c8f1dce109592c1b1397bfc073dc1c1ffb81",
+      "pngSha256": "0f3b418991b84f2e85b0d7b880a3788193b7c18cc25e92c9ac8c318d55fa53b3"
+    },
+    {
+      "id": "card-13c-picked-right",
+      "sourceSha256": "0596ee4e474a3da2a0ef0f04d656db3bf7d76102153983670ce1c0faa2160bef",
+      "pngSha256": "ea1768f2158ade61eeae208f303cb4869f3cfc342eff8ee55ec298365bf31c48"
+    },
+    {
+      "id": "card-13c-picked-right.ar",
+      "sourceSha256": "12e8a7b6dedc144c48b6d7e685602675d27ae49f14235e4a7d03d02f3cb27dd3",
+      "pngSha256": "da57f4d9f1b5ca189f919bf788f99fdc05df900aa6ed4e8f63f2ed14e0992277"
+    },
+    {
+      "id": "card-13c-picked-right.ja",
+      "sourceSha256": "e69120cc95a4353a5964efe612a0c09dd307b17be88e0207910cdfad483d1fdb",
+      "pngSha256": "84c51697fa3810ed3f668ded7852452c5391b31f14ae910dcdd312d3cf25341f"
+    },
+    {
+      "id": "card-13c-picked-right.zh-CN",
+      "sourceSha256": "d4d866e833c117c3eb1787d3c1405eaedca053d749f82e089ec8b63cc4cd46a9",
+      "pngSha256": "bf965d16f0798ec5b6943c5b76e65c90dcac3261118b1bc3d452245a389b8192"
+    },
+    {
+      "id": "card-13d-won-big",
+      "sourceSha256": "96b45acc6fb79a8e2c2f62e2e508608e1f121582d1ca59d5c580139b8c1e4449",
+      "pngSha256": "e0b218fb240f2923db28a4c47d25cce49a134f86f21d50bd75e6204346cf6b53"
+    },
+    {
+      "id": "card-13d-won-big.ar",
+      "sourceSha256": "a0f31acd5afcc33ef4ec32496e2150f29ed1ae11574982a72ee3c61563f1b843",
+      "pngSha256": "34b6778374e0e5f299d8e739f5ab3f414ef76bab9212ef046ee4efdfe3d91c0a"
+    },
+    {
+      "id": "card-13d-won-big.ja",
+      "sourceSha256": "294d73f286f33b98128e39a76d18b5da0997032494f0ad98b5e88b11689f1c66",
+      "pngSha256": "d0759d154334be917d4504cd7362accfbc4785c2b0497e68a57054e7316b99e7"
+    },
+    {
+      "id": "card-13d-won-big.zh-CN",
+      "sourceSha256": "a99d2f93fe17f39c05f4f9c3e9b1f2fcb86e195ce545fca690f17555293992b9",
+      "pngSha256": "84e894bd049d8b7f937aec8a9795d82633fb906c9559436f554e9e0fcb258d13"
+    },
+    {
+      "id": "card-13e-lucky-shirt",
+      "sourceSha256": "3c8531d540cfec8ced1eb167918f7bb6267d88d9f07dd8eee110b2aba512c218",
+      "pngSha256": "781946c1a746572007a1180375e8e420aa1f2631dec02076d972c1b02e4d948e"
+    },
+    {
+      "id": "card-13e-lucky-shirt.ar",
+      "sourceSha256": "c3428ac4c7cd1b2c8615c0a36c410eccf289f31c6d36d7d9a3f29dcb419e02f9",
+      "pngSha256": "b1b48d34d5bb5388b352e9aa84ac488796f79d82e6b45b4ca57d3907ffffd722"
+    },
+    {
+      "id": "card-13e-lucky-shirt.ja",
+      "sourceSha256": "b47b241b8be934591a7df160dcda53b594ccb3a308c6cdacec66189824085904",
+      "pngSha256": "4d74a2ec17c625cd41acbdf0d1182e0bc3c574b26a02ea6ccb51f846d5b69c66"
+    },
+    {
+      "id": "card-13e-lucky-shirt.zh-CN",
+      "sourceSha256": "b5aa348a7ab5f4ad606b59b3e26ed9ef916500253a7c8072480853e51ecbc886",
+      "pngSha256": "2e310daca11f4db061c67e6a57f3863034397ca568323289fa3e198a17ae614e"
+    },
+    {
+      "id": "card-13f-earned-win",
+      "sourceSha256": "c52b82456fe9ad45f526c01161b70ff9c3c789cbce418da43b0696c110f383cc",
+      "pngSha256": "ce8a13a0da85aac42df056df3336305dfe7c0ff7085c0262b9214bbbffd75467"
+    },
+    {
+      "id": "card-13f-earned-win.ar",
+      "sourceSha256": "fdaebc6cfe413c49dc993b86a27cc6f0d2d00f979022a52b69d400f6ce963c0e",
+      "pngSha256": "77a6b7c3f7151b99869aa662b596e542f500978ae18831bf69b7572f8802d135"
+    },
+    {
+      "id": "card-13f-earned-win.ja",
+      "sourceSha256": "c06b3853b52a1aa1b3e828adac610ecdfe24c78fb7782a32f495cb931b51ceb7",
+      "pngSha256": "a341a53ff2ca62120dd84ac5de00f60ffc05891536d95a32e5c44bafde6cbab3"
+    },
+    {
+      "id": "card-13f-earned-win.zh-CN",
+      "sourceSha256": "896a2a3639429747e1843b8e822d0c419a607c5317950e7a3e4aefcf3c91b7be",
+      "pngSha256": "ca1a7728e612af59714751e6f99968ff68e9f15718c5f80caf203fedca4eb104"
+    },
+    {
+      "id": "card-14a-every-game-blackjack",
+      "sourceSha256": "9a67e5e89825619e4348fc512a1903d4de249d834e780a8883820078912f877f",
+      "pngSha256": "015f75f7d5377d32bc2cd34494e5aa7d2bb4231469a96b0960778a31ed6eecd6"
+    },
+    {
+      "id": "card-14a-every-game-blackjack.ar",
+      "sourceSha256": "c5bf039e5fca3c8701194c859c5e00fe372e9ed359c759dac1eaed5b1b3d7fc5",
+      "pngSha256": "e4dfe764def7e59c6e9b8a4b1d407861ec340cf405a62bed0a6023941d88972b"
+    },
+    {
+      "id": "card-14a-every-game-blackjack.ja",
+      "sourceSha256": "d946c7c28af71e0f9e2caeb73a578b865074783de0323fe01c826e33436988b1",
+      "pngSha256": "4d88dfb487a53898ca7fca566665f8638e0ea5e65fbf7785694906aa590aad53"
+    },
+    {
+      "id": "card-14a-every-game-blackjack.zh-CN",
+      "sourceSha256": "eb0c8e724b8ecdc1128fee5c62564b7cc3e7e3af8a1551c34e85ae32f4988142",
+      "pngSha256": "6e9248117b643fb8fdc53d2a3ef8e97517ff3edc71e3ee80e762c2c511c71947"
+    },
+    {
+      "id": "card-15a-point-spread",
+      "sourceSha256": "f69447035560d712d8482c1ae9399fe71a83797f911a42010d508c006bd29a07",
+      "pngSha256": "9079f8fcee74acd948fde05d174ad9a362518aaf9960de5e944b07cc571ce9fb"
+    },
+    {
+      "id": "card-15a-point-spread.ar",
+      "sourceSha256": "e6af55d3c14ab8c96abcf1a20169b242a2f2ce250669e27b2f1c07b871cdc187",
+      "pngSha256": "dcdc7c5b8e205f2d87214b1bdc2ef1ddc8142160ddfabae431c58fa11ff9c41a"
+    },
+    {
+      "id": "card-15a-point-spread.ja",
+      "sourceSha256": "2a5267240862c23a0b34302afb0e080f4e0e88502d2df97d9b21cfea6e9f63b6",
+      "pngSha256": "ee1cd0f330014acb70ef3cb1211e945c2ba7fbf06073785335225ab6823de6e1"
+    },
+    {
+      "id": "card-15a-point-spread.zh-CN",
+      "sourceSha256": "851717d7808d6a845d78c14f4c994d779e1eb537c57d355d05cfea9c7ead0a95",
+      "pngSha256": "01e1b526722ed64348779030e11391cc02e27c4818076e2bb8fbbeed8f1b5d0b"
+    },
+    {
+      "id": "card-16a-online-rigged",
+      "sourceSha256": "157aac815185283abb054d9df5a4e1291e080424c8a20533771148edd5cd2662",
+      "pngSha256": "c78164fd5321f291d597f1998331a2e4a6ff4497b1e33c7b72037d9a4a81eb0d"
+    },
+    {
+      "id": "card-16a-online-rigged.ar",
+      "sourceSha256": "fecddbfac59b95216f222ee2cd3b83edc17512ff3add60c663ca61b9fa3ab0f7",
+      "pngSha256": "d2d84a46c28464f48a2273c46cab3212af26ede9b4a5d6f5804a800195cde7bd"
+    },
+    {
+      "id": "card-16a-online-rigged.ja",
+      "sourceSha256": "6498db5b17cd181da2288a2b1c6e14d819ec94257a98b7230acb810a23d488f9",
+      "pngSha256": "be2a9eacad4e72af7d9bacaffc7844c31f1e096635047d82121395336628d681"
+    },
+    {
+      "id": "card-16a-online-rigged.zh-CN",
+      "sourceSha256": "79f06022dded65cfd1566527f2467d400e7e5249fec8f5ad451b4b963235ff88",
+      "pngSha256": "bf75c2baf0f8673a20c77089d3d22e0d878fa586ad3770124b4dbb59892caf0d"
+    },
+    {
+      "id": "card-16b-bonus-free-money",
+      "sourceSha256": "9695bc0eda7621d3d24744e4fb6b4788b563fe3fc5c365a555bc9314008338c4",
+      "pngSha256": "aed3def3a6854e94aa1c4458a39fc5da560733c44a51de1f6b285c39b633bece"
+    },
+    {
+      "id": "card-16b-bonus-free-money.ar",
+      "sourceSha256": "8e22df5d9d221f5fae49ef3c4e807cb83cb2533d8cd6444236cd7c627ff23b2d",
+      "pngSha256": "008bd5e6a6d77c0c5bd278c817747eb5fa4de08080add43edcffbae3bce8516b"
+    },
+    {
+      "id": "card-16b-bonus-free-money.ja",
+      "sourceSha256": "285042c386abf4e6ebdded106c2510494b2c33ec54dcbe31d780311cef9c442b",
+      "pngSha256": "dcf8fe5dacfb23997d62054f3eadb4a08d2d2630b72b2978e4ff81deee0134d5"
+    },
+    {
+      "id": "card-16b-bonus-free-money.zh-CN",
+      "sourceSha256": "a1840a79b1f1dd86f6942882fb705f52914d9779682bc9e173f159801a6da29a",
+      "pngSha256": "5309df9215e1fa28c24c2529cfd262a6edce04baf7c9021e0492a5ab8971c2a9"
+    },
+    {
+      "id": "card-17a-big-game",
+      "sourceSha256": "40c7fd2a7e1c8a79711f81a5b65b571206acdb8f73b1ec464e61ee57d31a6b1e",
+      "pngSha256": "dba038ac22faa714672bea02ec403808862118e512bc5acb59ada85839d5f475"
+    },
+    {
+      "id": "card-17a-big-game.ar",
+      "sourceSha256": "65df03f6207f54cf3b32667366e377b4a0f05470e0fbc43e4532f6d300259fbf",
+      "pngSha256": "0a836963812d63f71f46649177308d64c7a85e8cabcab30a196608a7fa9e036c"
+    },
+    {
+      "id": "card-17a-big-game.ja",
+      "sourceSha256": "fff7dbd3e811becc4751a268d99e888d9fb5616aabe1f9f0510a2d6b3befa04a",
+      "pngSha256": "1f7e6f59412abc519a8c8367fcea0c63b9e3ac54318aa0d21f7177f51c493e23"
+    },
+    {
+      "id": "card-17a-big-game.zh-CN",
+      "sourceSha256": "71dbb6dc3a7fa4883086e60f22bfd228d8aeb03b9d71d788c2929edbe592e485",
+      "pngSha256": "c7974a5632068aa565e3449bb12c15ca5dd80553089c12f557a4f65e04b56b19"
+    },
+    {
+      "id": "card-18a-fresh-start",
+      "sourceSha256": "a93d391e5703c1d82f00ced3eb74512d50b5554829962ee38a08c749ace586c1",
+      "pngSha256": "e188c0fde8b6534bfd57ceabd37b6cfee2a2664826909d9c9211d37ba3ff074b"
+    },
+    {
+      "id": "card-18a-fresh-start.ar",
+      "sourceSha256": "24775413ea8bc875756c44225ddc069f716d149832dbcea5d0a0c7854778cb44",
+      "pngSha256": "7da87b4a8f66d4daeaa6b70b7df34a1d6883f513b7b44e7aa4a5cfc0fb609a7d"
+    },
+    {
+      "id": "card-18a-fresh-start.ja",
+      "sourceSha256": "5f9b6af2767f09b847cd480b70dcaefb40efd2145e3623723eeacaae17105ddb",
+      "pngSha256": "3bfac022ea3afc70f934cf792fab5d2945ca03cf39a795887e0b72367c740997"
+    },
+    {
+      "id": "card-18a-fresh-start.zh-CN",
+      "sourceSha256": "75b2eb0546ccd03602bb109c4c87b82c7714db03e98527f78fef8edf6b7bbb65",
+      "pngSha256": "b082c5d6898082b3bbee994a41cde6deed593ec8ee870a8e1220973e1fbd2957"
+    },
+    {
+      "id": "card-1a-hot-streak",
+      "sourceSha256": "f76debe972411581bbc8ce8e1f3d87ed1fa971335adaad67ceec28d7d3e5555d",
+      "pngSha256": "682fcbca45e346ada8a9ae9c9e814436073472ba462f30dd0cc296ba972e2eb9"
+    },
+    {
+      "id": "card-1a-hot-streak.ar",
+      "sourceSha256": "d1b798bf6cc0d23097bc3e1c3f8e728b79c9f7247f57e0414d856d68369a6bf3",
+      "pngSha256": "de5fbe906bc41270c2753b7e9722b2e69be9cbdebb81ff1ddf81f66eba02d7d7"
+    },
+    {
+      "id": "card-1a-hot-streak.ja",
+      "sourceSha256": "73bd2dc849db8fab989c8fdaa30f48e62a6631350f012c4b9dbb05c4904106a9",
+      "pngSha256": "ed9b3d8ae524190554be8a5bab8a6cc58c26f04888b7c4874a738b941a8d733d"
+    },
+    {
+      "id": "card-1a-hot-streak.zh-CN",
+      "sourceSha256": "85c3990920097d4d90ef3cd6ff6cea51bfce082b4e9d4da1c8fbb6ab86dcae3e",
+      "pngSha256": "6e656d8168844c5906ca721e63b4bfea72938d633709be04636aecbd8b8db726"
+    },
+    {
+      "id": "card-1b-due-for-win",
+      "sourceSha256": "4478f311c6b693c51d5037af6cbd7679fb2f53d296971915e4ac95ef9e9482c8",
+      "pngSha256": "71558f538ddf09272b6e7d5e5147d4c4b462e490f9211231b538b7d623b2cff1"
+    },
+    {
+      "id": "card-1b-due-for-win.ar",
+      "sourceSha256": "26a4f8f8043066aec9cf49037869f6905ae7a6a946ee241dbdb5475136fe2779",
+      "pngSha256": "0472e5276136097488bc88903d265f7a305962c418fa3dcc51f1850a62e70534"
+    },
+    {
+      "id": "card-1b-due-for-win.ja",
+      "sourceSha256": "6a84bc63955c677f6d8c7a22483584184f3daf6571e4aa7026c3381fd6893b29",
+      "pngSha256": "2cf48e22fb17273bd9e20b0e89980cbc00fe298e1a15e21e6578fd1ddfdd9890"
+    },
+    {
+      "id": "card-1b-due-for-win.zh-CN",
+      "sourceSha256": "576303965572ca09f671e8ab75271d0117c04943cbb50819d8cb875eea5f8f88",
+      "pngSha256": "2fa02ab0c606ef09afb2c1dad3b7960daecc64d908762eb7af0d161b555185a0"
+    },
+    {
+      "id": "card-1c-lucky-machine",
+      "sourceSha256": "c1814373f94fdf732fab7485afed7a2b9734c6150c18948d0edc077350c9559d",
+      "pngSha256": "c2d0863594f7b58d471c8d0661a5a6447cc199f5347100d15823ecbeb382cd6d"
+    },
+    {
+      "id": "card-1c-lucky-machine.ar",
+      "sourceSha256": "98d4de26656c6deccb21f0f8e88714a0759ad69d70784557b9a2f79461aa4eab",
+      "pngSha256": "a8987b5665fb02868550e9446c27f5d610405d70ddbfe5c9f532a0642a51ec85"
+    },
+    {
+      "id": "card-1c-lucky-machine.ja",
+      "sourceSha256": "1f46b41bb97230e2fe3fd52d9c318b0b3ce075dc3f51cbdfbbb4a30ba78fb767",
+      "pngSha256": "47cf762e708a3cd32366789eaac5be8cb43ff29eeb19db1e2972889efe728140"
+    },
+    {
+      "id": "card-1c-lucky-machine.zh-CN",
+      "sourceSha256": "e6edf3844380501192952a1cf9300911cf8fd4880bf2b9de4fb3a050c9286f8a",
+      "pngSha256": "75dca4d2ae2977b0110ded6f8f66b922edec52b47cb61a160877e17abdede43c"
+    },
+    {
+      "id": "card-20a-return-vs-profit",
+      "sourceSha256": "1bd12d6e8a25e98629a18d3106d3b1156ab3e342527298043af5b8fabcf84b81",
+      "pngSha256": "eee31da9faebfc196bc5884c2c3ac12927eed368e18227d1ff0be9b9390111bf"
+    },
+    {
+      "id": "card-20b-pick-your-pause",
+      "sourceSha256": "d0dcd938e85071b270d002c35abfa164984bf56cd5dc36032aa205d532d76dda",
+      "pngSha256": "8d29bab1a2ea744aecb834b8008a375908aaf2aae9fac111ea53b5cc7826e07a"
+    },
+    {
+      "id": "card-20c-parlay-probability",
+      "sourceSha256": "785a86df660df7a1c07cce612e5423921649595a3493ee7e86f0f9bf13bfcdef",
+      "pngSha256": "84078111de984537b2438899f86f6885db47a0e5cdf99e56f68bd640b03b16af"
+    },
+    {
+      "id": "card-2a-house-edge",
+      "sourceSha256": "41165122981e4144a0cbb44bc960b48db83600dc851cc984e3c6a1bc5bd5ee30",
+      "pngSha256": "dd36c523ce7dadf039d59ed29e21c8455082effdd08bffd27369b5cfb07f80d6"
+    },
+    {
+      "id": "card-2a-house-edge.ar",
+      "sourceSha256": "68ee4b5cfc61120d1495a5b319e20c48a397227827205a2f08c90e06afca4b79",
+      "pngSha256": "bac59972628db23fd130caee37e0473aea4ece96a516b73d2afeb4b9a69f15d1"
+    },
+    {
+      "id": "card-2a-house-edge.ja",
+      "sourceSha256": "284302f4154e0a883ccfccec2704f2fec63145a75516133245590069658cadcd",
+      "pngSha256": "cc151b5021948e97da6a07414dd278a7e66dae7eb20278c24461df887de960c8"
+    },
+    {
+      "id": "card-2a-house-edge.zh-CN",
+      "sourceSha256": "1bb7d84ad5bba1c134f8ad7b6a85b017d7cc252fda85c731fdebe1c4b22a78d4",
+      "pngSha256": "db14bcd39ccc1c85648111c13f939d15d0b4cd8203d458eed80831ba1b0c545e"
+    },
+    {
+      "id": "card-2b-sports-betting",
+      "sourceSha256": "45da31ec22765ba999edf164ae8dce5fd67aad5b8eaeb9e135f5c1e70f03323a",
+      "pngSha256": "ca2dd906517abc84dc554c1ecf9bdf5c69d165ec437d4a18595426ae8ac9599e"
+    },
+    {
+      "id": "card-2b-sports-betting.ar",
+      "sourceSha256": "900c4dcb062bf4caa53fb95d3a8ab9e45eefe08bf89423c034374f6beca6e9fb",
+      "pngSha256": "a1707994f072d4ce481181d56db970276240b653e59514cc6b2a36368190927b"
+    },
+    {
+      "id": "card-2b-sports-betting.ja",
+      "sourceSha256": "48749e8fb62f07f923fc599a8f9c5c34e6cd8d06f57553d6b8f1905835fb14b5",
+      "pngSha256": "b75f94223069f96bcf91b76e1ee7bf7f06b1bd991c7b6f40b21e965c8f914943"
+    },
+    {
+      "id": "card-2b-sports-betting.zh-CN",
+      "sourceSha256": "f9937ae1971ee78ea12300d35e4429f5fa71a3f3adcf78b266309c4bf15a1e0c",
+      "pngSha256": "f9d26a42500665bd54f7f12b9faaab31d15d8867353eaa7a50923347d28e06d1"
+    },
+    {
+      "id": "card-2c-bonus-wagering",
+      "sourceSha256": "9286a77c8bfbc8f5bb4463f0789c4aa2fb74e2122c83c2078ae3fff77aff2837",
+      "pngSha256": "3a6060fda006099dcbc7ba027591022b77535514281cfbfdd2782a5254b6af15"
+    },
+    {
+      "id": "card-2c-bonus-wagering.ar",
+      "sourceSha256": "3af60c07c4d19e666cb9700659ad0913a3ec272a2f88d20483be258b7b5bb9fd",
+      "pngSha256": "1fab710f8b499c0c74271570bb5940d64e38ed3a137ef4528033f797acffa3ad"
+    },
+    {
+      "id": "card-2c-bonus-wagering.ja",
+      "sourceSha256": "fae107a631bd35ddbf6510ef089acc801db780bdacbae8cfd0c1f6e618221a9e",
+      "pngSha256": "b32dfedcdfe80eb96e26481d958f465d75fb92fc6ef74a785770494eaa40a287"
+    },
+    {
+      "id": "card-2c-bonus-wagering.zh-CN",
+      "sourceSha256": "a78e26121a320ace3f2c8973c232da5dd4b1bdc2b3f0b035422c4edf502e995e",
+      "pngSha256": "da425883d549c944e3deb695691cbf64179856ba1a89e9f1ae6bfad6d20b0306"
+    },
+    {
+      "id": "card-tier2-10f",
+      "sourceSha256": "97444d7ffb63911c25517aa72e7210b269c65bd9473958ac43caae9aa7706a66",
+      "pngSha256": "6d22f76cc59bef3baab362f88dbed7eddc0b301e3c69aff58abde3e3a94c6445"
+    },
+    {
+      "id": "card-tier2-10f.ar",
+      "sourceSha256": "523fb5d8d5c86cf97ab9a46076eb28d112829dad100e8fc03b2b6342537a9aca",
+      "pngSha256": "98a40b35b67a6782e518d4ae844f799278e59575a730081e8f64c7603b49238a"
+    },
+    {
+      "id": "card-tier2-10f.ja",
+      "sourceSha256": "659a1e02326764eb701062553ba11d27388ad687648abede527b87e04ef6bf4e",
+      "pngSha256": "60fe87087bb9a1a2094721f53c6948a797be3562ab277c7463f0dafb05b666a5"
+    },
+    {
+      "id": "card-tier2-10f.zh-CN",
+      "sourceSha256": "bf30b3f024893649a4eb78e7512ce1bddbd0d7266fdd497eef6c6f277e5a7543",
+      "pngSha256": "31aa2f886a5ebbb5c5e3507802305ced70ec23c66db2191c7e9367f8cc876c8f"
+    },
+    {
+      "id": "cooldown-10e",
+      "sourceSha256": "dcf6cd6544abb3f81ece1ce09da24028430ec56ed06ddaee4e7a40deb119a061",
+      "pngSha256": "fcf7f466caab10d0342068724e404c13b86ffbd90e452fd5b7ad2f9cbba93de6"
+    },
+    {
+      "id": "cooldown-10e.ar",
+      "sourceSha256": "800a8ff214b1307168deb04dc38656dd74b38c8a395dc13e338d0ee0b67fcb17",
+      "pngSha256": "279e265bb5e20c6e76b41850ba8e33fdebd77c01d5abb5d87808039236018765"
+    },
+    {
+      "id": "cooldown-10e.ja",
+      "sourceSha256": "ac7cefffc5194a7a85b9378cccca0d81a10d1ebde01f0140ad7a97a7dcb5906b",
+      "pngSha256": "887aedc53e93486052143f68328a9424b50733387b0cfd34a692e07af1e9c94c"
+    },
+    {
+      "id": "cooldown-10e.zh-CN",
+      "sourceSha256": "2552e8868dc3876df7d90a18ebdef63213e1f4c8964c4eff97b2060cc293044a",
+      "pngSha256": "23951c3d390e7002f1f0a56ec837b7817d1287654fe0d8c691813ae9bba88086"
+    },
+    {
+      "id": "deposit-interstitial-12b",
+      "sourceSha256": "b8b404555569c17088954243835b59836d5a0a9e8bee410923605cb6d74020c8",
+      "pngSha256": "5b2b7bc10c970108433fb446ce973e416f819900bc79e382fd2660755e7d73b8"
+    },
+    {
+      "id": "deposit-interstitial-12b.ar",
+      "sourceSha256": "8b9c4380a925c567f11577154f1c8e9defbbf483f0e875952231861db05a43fb",
+      "pngSha256": "2e027f49913f791181ce612aff5cfcf40a1c4228c5caeccf39e3558835a4d5fb"
+    },
+    {
+      "id": "deposit-interstitial-12b.ja",
+      "sourceSha256": "6f90bb0a4c1327474e44fa68c747ed9541478dbd5b2819dded995718e2a920f0",
+      "pngSha256": "985f724706782bc7128ace24b21f4dae24c8c001cb801118a809f2a39db0d1f4"
+    },
+    {
+      "id": "deposit-interstitial-12b.zh-CN",
+      "sourceSha256": "ca750908ff1387d61a60be6088467f564351a4fd5467beea488fbcb1c86a8d19",
+      "pngSha256": "27a4aef4ec3ad6f55d1adbd1a08301a354b12b99cf25859724753abcd62db3e9"
+    },
+    {
+      "id": "display-14e-every-game",
+      "sourceSha256": "c0c9e66ea94bc40d1b7501b35e093b007db519e6a44e4dfd162bede900720e13",
+      "pngSha256": "74bdbb7fbaa0d64324ff85c1cfd35e180811ef9ede72fe249654187152ee5910"
+    },
+    {
+      "id": "display-14e-every-game.ar",
+      "sourceSha256": "bb6200f61e2829ef1698192c287e75724503562b0f0d020a82ada4db8d5cade1",
+      "pngSha256": "950faf0447c19bfe4f4fed44759f564d834da3e68e2131eba1d39a8effdfe50e"
+    },
+    {
+      "id": "display-14e-every-game.ja",
+      "sourceSha256": "afc173f5f406483f34d2a7ceb6b6ca5141134dade6024dcc09b2dfa9a17f7848",
+      "pngSha256": "b7499e59c4cc7e13bc67ffa2175e9736583039e1b8246b7ba9c745e05e5d40cb"
+    },
+    {
+      "id": "display-14e-every-game.zh-CN",
+      "sourceSha256": "c00add541e20951d5871d427f5c1e98c34b579ecdcf392d56a8c5ad5989d8103",
+      "pngSha256": "0db9924c902f888caf85c06e7466b1c973b7b62d1eb64ec71aef25e76db89346"
+    },
+    {
+      "id": "display-landscape-6a",
+      "sourceSha256": "c8fc7c5523c6108cd4110124c0da376c00f06d420de811aa8740dbc5f4b85f23",
+      "pngSha256": "aa75ac3bb9961e273afb4b68cb56f8004324b249b29c676013c6c0f466dd52b8"
+    },
+    {
+      "id": "display-landscape-6a.ar",
+      "sourceSha256": "cc509b0f1fc6ec63cb59376d9cae1f7f832f469761a524133656475689c14932",
+      "pngSha256": "be300d6468d3a9f30cdd0c9f783f394dbd015c5205c6aa1ca991faf333d6a53e"
+    },
+    {
+      "id": "display-landscape-6a.ja",
+      "sourceSha256": "3768255b2445f7406bf41a913fb8945a849f065d131e234308d3dae97da1bdad",
+      "pngSha256": "5e04bffe65ba2b0aeb11a1911382b5a6ead06f9e4269f419853651bfbb05356a"
+    },
+    {
+      "id": "display-landscape-6a.zh-CN",
+      "sourceSha256": "b29c889b11ecd9dfa19b5028a904dc90e52a0ccfe0da00987aab615aa7473d77",
+      "pngSha256": "48ce474959a50f5b2bd8b03394e8aeb947fa5595377018260f2381f3c29b5799"
+    },
+    {
+      "id": "display-portrait-6b",
+      "sourceSha256": "e5ed49cd2b82db0bd5bd6c1a56f782f85fe8aa6e5286b21eeebd76b7b87e208b",
+      "pngSha256": "8dc75405e231d99c3be224c309a15a34cce10ff552857e0293c49be07aa7684c"
+    },
+    {
+      "id": "display-portrait-6b.ar",
+      "sourceSha256": "6198570ad1063f6dfe857552ee14d806f058aeac781167475562519ba4b997b4",
+      "pngSha256": "3212ae5e394b1a83d22043f8feba5a00b8f3c9c817b427dbc63a6a2546f3e03e"
+    },
+    {
+      "id": "display-portrait-6b.ja",
+      "sourceSha256": "a7b5348a90cd52bf5b6c7b6ebb68d8e27fe8432df5ae856596c70dc0ba080413",
+      "pngSha256": "693ee095953ad7e587b0ded628f0b1aedfee8e9ce8a056d00cd75e871f03e1a7"
+    },
+    {
+      "id": "display-portrait-6b.zh-CN",
+      "sourceSha256": "b80f92aa6ddb9112691df87abe887c8bab31f49172c46b365fb411729f7651de",
+      "pngSha256": "f215714c8249ada36d42edf4aec4fac40347f0af63bb2c8db6e28eef846e6a2b"
+    },
+    {
+      "id": "email-14d-every-game",
+      "sourceSha256": "98240ca58307909876c2bd9fc05df11594c57991154b6fddb020a6e9c442bc58",
+      "pngSha256": "dd91a0cd8a222465812505b4fdb7c067d8c268ba6f369aaa1801d1a9af487200"
+    },
+    {
+      "id": "email-14d-every-game.ar",
+      "sourceSha256": "634a275f92961a94fba77c4cc46509e64dcd1d979ddf2391501d07adac3cb1f6",
+      "pngSha256": "b62268945361cce7517ea3f07b168385abff781418b4b8c5d1dc94467c3e7ec1"
+    },
+    {
+      "id": "email-14d-every-game.ja",
+      "sourceSha256": "a9cc086211421b158883f00a6fa9f55630c37569d8ef552a8785a20f7022111d",
+      "pngSha256": "e74cf5130279d4e281ec2bd489e8345476ac99d0309f38de0efad99bc3c1ced9"
+    },
+    {
+      "id": "email-14d-every-game.zh-CN",
+      "sourceSha256": "c4ed39d6b0c1f6000647727f9f4e2f89b1c0fffd844d9d97b768e9a84495de3b",
+      "pngSha256": "7ace62c8a210c83d6f7e818a1b082f755f8f679cd22ab7232a2a474455d37e2a"
+    },
+    {
+      "id": "email-deposit-7b",
+      "sourceSha256": "08aa773f55ea2f5951df90e2436a3afd425d60a4c5a8f2855814f89bb68e571c",
+      "pngSha256": "0fc31f3aca96dd6a031d09daa324ac35e4382c9acd02fcd2551614e9ac783c7c"
+    },
+    {
+      "id": "email-deposit-7b.ar",
+      "sourceSha256": "d828234904d0eca3eae191fbe47bb141e89d71396a510c12fdc4c463d2545919",
+      "pngSha256": "cd21644cc6fcaf21cfc0713fdac63c13959d01e55693c9e064857df90d673ad5"
+    },
+    {
+      "id": "email-deposit-7b.ja",
+      "sourceSha256": "53b3a656f4aa66d48dc3cdccb44aeed42d97bf4fbf28fd4ffc68e50d79e9785e",
+      "pngSha256": "718b20cbe62e629af991c2f9b3d0deaecc815ef153792eb82a0a0c66e2e8a507"
+    },
+    {
+      "id": "email-deposit-7b.zh-CN",
+      "sourceSha256": "f071422aa8bb65c982da9b272836f1ee3cf6a4cb85bac2dc789df50dbe24d081",
+      "pngSha256": "58be8ac8af1869d37492b5f66c7eb321ef2b607fbab11d4ad12fceea00ebf704"
+    },
+    {
+      "id": "email-monthly-7c",
+      "sourceSha256": "80f3976ecee2808f8e9b2ba11bb48763c9950d4858c2ad7ec1ed699d438f7cdd",
+      "pngSha256": "8bbaeb6b4cd267d2021487e96442b1c2661e269e657b9e5db7174f7d76c13e97"
+    },
+    {
+      "id": "email-monthly-7c.ar",
+      "sourceSha256": "32615f6644ccf8951fe8844dd27e7e932473fd8b9b520df98a69c5ec8cc7717a",
+      "pngSha256": "01ab3cce12f4feb0f6eec73218409978f1ae0ac649a6ca75334dc079c3b6a1f8"
+    },
+    {
+      "id": "email-monthly-7c.ja",
+      "sourceSha256": "640bd4e2b9adf98af5989d6267bf8ee05d83fb137f7b63ef7ab0cbeea0732e31",
+      "pngSha256": "9924f2ea95a3f58708547ed198e6fa66382e372e6f1a2f47a2fa1c2547f4599e"
+    },
+    {
+      "id": "email-monthly-7c.zh-CN",
+      "sourceSha256": "48219b127404a6010345d713b1c5f29bff0e86127b7cb6de8f617e010b35ae82",
+      "pngSha256": "2f60b966243267a8aa761c3aa8cc473e9c68c508d13283a5cb17ecd4f6ea03e0"
+    },
+    {
+      "id": "email-reactivation-7d",
+      "sourceSha256": "57b415d5b8c1c8dbfca0b7d69435771a4c3ea663373e8d367584a48ff4add6d3",
+      "pngSha256": "9f8e520c421a12b420a843279241dfcfab0a4a2e47a0016a4ce10ca3078df5a8"
+    },
+    {
+      "id": "email-reactivation-7d.ar",
+      "sourceSha256": "18aa807aa12fb52f938e719ae196bb5376b2a0ed4fc29a7a1b34cfd77dd05f36",
+      "pngSha256": "ca757c925f6e9eb51d8cf1381d37d607e740006ec72213745251a4b779d43641"
+    },
+    {
+      "id": "email-reactivation-7d.ja",
+      "sourceSha256": "27fa849d301531c644d1d3179d1c9296bdfd3899f554b9bf461ddbd280447dcb",
+      "pngSha256": "d1260b716f3e68bbcd65024e0a20fe727192e231d8e42d84c32d54feedd7f07b"
+    },
+    {
+      "id": "email-reactivation-7d.zh-CN",
+      "sourceSha256": "d120dc71d2cae4df83d5280f73eed9725b901b1c5ea9bfe53324c0f4b8c09646",
+      "pngSha256": "3ae271311e24322fdbadeee41255a16c54002bfa8fe5f93025aed1a5c099d2bf"
+    },
+    {
+      "id": "email-support-10h",
+      "sourceSha256": "42e90ebbf63ac6fc11fd971502d1ffe5c0804e44b310caa56947dbf03ee8f330",
+      "pngSha256": "9681f0c286d1ab6e395049c58e92d6e45f4908f6ab083ea0b84d1e22413de3c4"
+    },
+    {
+      "id": "email-support-10h.ar",
+      "sourceSha256": "04901a31800ef2deff973242b8218bb565c93c324a157916fb743f2a563ef889",
+      "pngSha256": "bdb2ac4a6432806803d986c441484cbbccb1f87c4f883286a456aec5cb91b133"
+    },
+    {
+      "id": "email-support-10h.ja",
+      "sourceSha256": "e50af548deb083a7e4dc1a9d6e70f960e1e7dcddcd9313c424c961d65b38ed84",
+      "pngSha256": "84f67481d93c1e50dbf27e70a41d9afd75a091fad5db929ed118a34b432cde87"
+    },
+    {
+      "id": "email-support-10h.zh-CN",
+      "sourceSha256": "b96a960925e0d70e43d40efcf8e1c7ad1721fad799d28a970f32852720d0f401",
+      "pngSha256": "b028c51595d9b09a7e13b016fde4848b847b88866615aea01fc0edb6cbf1c99d"
+    },
+    {
+      "id": "email-welcome-7a",
+      "sourceSha256": "7d3054d48a30a534c5b3a22c4cf268085e558b9717c1011a85b4e387620d2a98",
+      "pngSha256": "f1abd3d45f6f9000db4e18e4698136ab7a816a793162ac8573735127a0ef8fe0"
+    },
+    {
+      "id": "email-welcome-7a.ar",
+      "sourceSha256": "f7558fecedbecbebb4a49015e08e5da7649c8edd676fc566721fa6658e71d760",
+      "pngSha256": "9768409e78631460183473fd9dee3c2727bb45890203f9a84e9ab724de263296"
+    },
+    {
+      "id": "email-welcome-7a.ja",
+      "sourceSha256": "ccdfcc56cb51fdedeef016e8353f5e135b767d02e191c8a341156e5285706a8e",
+      "pngSha256": "339a63b3674bc822e4d297435198a820d079dca656c48af108d0687efef24d12"
+    },
+    {
+      "id": "email-welcome-7a.zh-CN",
+      "sourceSha256": "c5bd53026f29dfb0eee71b164edb972c162c47ceb72ab66e8c3cd048fcdbdc58",
+      "pngSha256": "68fa927c0ed876f3b297dd07ffac21c7dd0b5494dfc7863e948e0486c8500bd6"
+    },
+    {
+      "id": "helpline-card-5c",
+      "sourceSha256": "5bec874d09564ae74df3e3cbeda2c9993b324ead9319be12b3443565c6ea0d0c",
+      "pngSha256": "4f824cfa173dda05d85fb2a3428ff9f99f03da59413547a82a2dd54977b705ee"
+    },
+    {
+      "id": "helpline-card-5c.ar",
+      "sourceSha256": "e02ee3ad3f830a7f7de572858031022d96a744ae3612cf6379caef28531c06b7",
+      "pngSha256": "a9b05db03be80f846938c7a353db2f94a98921b603fbded9f3bcaf8accb3bd1b"
+    },
+    {
+      "id": "helpline-card-5c.ja",
+      "sourceSha256": "a855493c1b2fddfeb92cb89ab07fe6bdd5db2248c8a09d417a141874388a2470",
+      "pngSha256": "72df26239888c59b0313aa3bd08b71e61c1b1b7e7b78336629a92f039312e01b"
+    },
+    {
+      "id": "helpline-card-5c.zh-CN",
+      "sourceSha256": "ac4b1dc3193469f82387ed8d40cfb75a31d4b5f88a38f9918c3797673d8479a7",
+      "pngSha256": "d98f455691990fd2e5c46159d2aa94c14cca5de11ce60960ad5c19cb47cf8a77"
+    },
+    {
+      "id": "htp-card-baccarat",
+      "sourceSha256": "0e9cb68be45f981155ccedf39831d24710ec606c3f3ef737055922a137281188",
+      "pngSha256": "feb61ad16965bf5729020db0fcbdf5d90106065c4cf47437ad609e250efba8dc"
+    },
+    {
+      "id": "htp-card-baccarat.ar",
+      "sourceSha256": "ddcd896f2a053b6341a537774ed879a94b2820f5121e1e9ab504e115f1cfd191",
+      "pngSha256": "306516e896bd200bb02503f13535db4fbeac2cc3415a5fc1775b06fa2a40bf5e"
+    },
+    {
+      "id": "htp-card-baccarat.ja",
+      "sourceSha256": "20bbe08c75c44150608388ea6239a36a7cb0d59e63ffc3ab238f3e9123357dc1",
+      "pngSha256": "1f73af62ade84093cd11baacab8faabe1e55fc5fe2d328e7a841c288416e3f22"
+    },
+    {
+      "id": "htp-card-baccarat.zh-CN",
+      "sourceSha256": "a76c794d5fbb646e6d53660895f4d761b5440f56f5122fc5ae1aa2ffb744e426",
+      "pngSha256": "48a3645e3ca8c322a884f8dbefbacb8d30901674f887af56078623dfc5f13889"
+    },
+    {
+      "id": "htp-card-bingo",
+      "sourceSha256": "5af378f7ae3be30cbbcf94d7a7bd2b0bc6b9537373be6265e9a3beffe4e8adae",
+      "pngSha256": "5dd689c1bd00fa1db502bbc56aa8f6f93e4765bf83e3c15a90168ac714a74eed"
+    },
+    {
+      "id": "htp-card-bingo.ja",
+      "sourceSha256": "df6ae1a824211adcdd29d4f83a1d76e8264526f7ea3404207ba414189c8b541b",
+      "pngSha256": "3860b6ec8b8ca18b3c9b41d1739736c8e85feff7d2e8ccc93eeb2399464667fe"
+    },
+    {
+      "id": "htp-card-blackjack",
+      "sourceSha256": "81df4966ca87bfeabbbede03ebc14124469131eb7db00b46b6338aaccd4ddf58",
+      "pngSha256": "1364e56b52b287af2eae7b4b678b651c8dc2e238f9745c9d405f9a28ab083b5a"
+    },
+    {
+      "id": "htp-card-blackjack.ar",
+      "sourceSha256": "29d851a70b32c6c81bdd1524205a3fb9fd813f5840e8ab62cb42ec4734022776",
+      "pngSha256": "1e14860b0a9294a1a46bfb433bc9e68e9376d3ebb076f90e7b7740e864e833a4"
+    },
+    {
+      "id": "htp-card-blackjack.ja",
+      "sourceSha256": "4fb3ecfcd9d2cecca758245215f2c6f17dddab24e8370d61d7d9d4555efb65ff",
+      "pngSha256": "1dbfc5e835dde66defdbbec4dcdf6905af752ec6352b3dbe2a8bcb59a3c8b73a"
+    },
+    {
+      "id": "htp-card-blackjack.zh-CN",
+      "sourceSha256": "457ad733aeb1b7462d0f89912932a62ea8bb45ffe803a79a223ffe7a3cd6d4f5",
+      "pngSha256": "098b8b70c2a7499c3d477d930394182fd2a08931daf72feca79e24db283280ca"
+    },
+    {
+      "id": "htp-card-craps",
+      "sourceSha256": "803a5d18716cea384f79885203e94c81ae49eda255eb8f04c7c03c3fb33173b5",
+      "pngSha256": "d1fba6ad6a96ee6813dfb2c73cb097715d239d19750d0daebd72ead0fb490714"
+    },
+    {
+      "id": "htp-card-craps.ja",
+      "sourceSha256": "a3b38e0a2c67617bc33df23bc4cbaacc3db8c9b5343f99407dc2719eca9fcb36",
+      "pngSha256": "6816c4f53c32e63cdb9b50f60365a3df50b1f9c6844cbc1efd2ffe4e244f734d"
+    },
+    {
+      "id": "htp-card-horse-racing",
+      "sourceSha256": "507f8c40ad5d65274d29db3f7d12d40b541c69b9c491032384d8b010d7a22c6f",
+      "pngSha256": "53214aa3aefe8c5f88b2b2c7f3a7fce412e398057ecd40ed997e9b705cea7eb4"
+    },
+    {
+      "id": "htp-card-horse-racing.ar",
+      "sourceSha256": "7b5f3cbea9808dfbd199026e2687683dc06d8b61e17b4a352ec79439b6a941e7",
+      "pngSha256": "09e7d5d7f96ac7b8a540e964bf5b4e0eb488c807d67be5ffc4deb57ca3347a34"
+    },
+    {
+      "id": "htp-card-horse-racing.ja",
+      "sourceSha256": "8c4757a7925ddab6854e51bf16b21461ce5b88e82935d9a892bdc46382859bdc",
+      "pngSha256": "4f80c5f9bad52d84e673ad4693c193669cfd5a05ad7544eccd644b500c958bca"
+    },
+    {
+      "id": "htp-card-horse-racing.zh-CN",
+      "sourceSha256": "769870f74b83e622b44016ad8b56d057b928646aa9588ade693d23e8a16fd908",
+      "pngSha256": "e80c668b9ea2cd6219b01735239b03b595e5edeae97a5185c87403c1b328a05b"
+    },
+    {
+      "id": "htp-card-lottery",
+      "sourceSha256": "31a1b87fbdc5260894ba073bdefee9a2af05b410e7d3c29e3c3da56b41fdd15c",
+      "pngSha256": "c437f601fbc9188abfd9ca119b3061c6ee7f269caf3025074f8985d516ed7465"
+    },
+    {
+      "id": "htp-card-lottery.ar",
+      "sourceSha256": "8830962ffecab33638599ebe1e1503f89ef3802af15d3d10247a7c0f32266852",
+      "pngSha256": "1732be2ceca3f4ae487543292a3a4d41c61e2bb06d6e89ca58dad23b8e8fb5b5"
+    },
+    {
+      "id": "htp-card-lottery.ja",
+      "sourceSha256": "313a41fbecea355ff21c594ca61593963510c79f7efff4edee2abc9d981e9389",
+      "pngSha256": "36a95bb8b634f248cbdcfe75c045ec973174766ea1d8058c3cf00950abdaabe9"
+    },
+    {
+      "id": "htp-card-lottery.zh-CN",
+      "sourceSha256": "e0bdaba137be43e86697ce05cb8aadaa2e39033578909b6c57cdf10066b696ee",
+      "pngSha256": "989fbae34033973b4e393cca6cc3c48a9653db5cfb522fe53191341c01e343c2"
+    },
+    {
+      "id": "htp-card-roulette",
+      "sourceSha256": "525a7dfc80eb61947115d59b9109c8cd42770fa1928ada0edaea99902742df26",
+      "pngSha256": "14719bde2d46b9c96cabfb6addc14e22c7cb7ae2f68a9c84101d33d939e91052"
+    },
+    {
+      "id": "htp-card-roulette.ar",
+      "sourceSha256": "118521219ad1c716e1b207c780456b673ca9a1ce378d05d122edce90c7767a34",
+      "pngSha256": "c33b0631f43e699d9b4a1dd906993bd218f2bb292739c70a747186efcc8bccb5"
+    },
+    {
+      "id": "htp-card-roulette.ja",
+      "sourceSha256": "9600e53d32697455459a871eaa2205cf40d7c19112bc5c793e87978c284b7f89",
+      "pngSha256": "5e21c2d367f34ea3154d06986d8bf00e8420f4c441a4c181c6a06c4b10a295c9"
+    },
+    {
+      "id": "htp-card-roulette.zh-CN",
+      "sourceSha256": "7dd6a72c31f416a0e024a0ad95165cded17cc6e5715922c8e64c0275a0656cc9",
+      "pngSha256": "d90fa3ff8009d10d95c38a1e1ada4ca8b1a665c11312234f46840a0832b6216d"
+    },
+    {
+      "id": "htp-card-slots",
+      "sourceSha256": "a4383c8a238e2525000a870a1acd7ee62341f6953d879ff6a575f435b8204ab9",
+      "pngSha256": "41637a493623b06b3a01a0276906d296ca0ccc01a122e409e31b54cd4106c3f2"
+    },
+    {
+      "id": "htp-card-slots.ar",
+      "sourceSha256": "d47c77276f4c6a0ddba1731378108e15853d5c512869e3a1e68c794ce7c98b98",
+      "pngSha256": "1e315cedc7ecd8c42d201e2aabb3d212e1cc41baf9222624b56f04b1b84964a9"
+    },
+    {
+      "id": "htp-card-slots.ja",
+      "sourceSha256": "9c92393f054b7d174fb6a60246f8cad1921624fd2e2c35cb831a33547e29512d",
+      "pngSha256": "bc9f774ea985c5f95211f1ec5acb8ed128b2998eb3f294ffd40eb759f77c4b97"
+    },
+    {
+      "id": "htp-card-slots.zh-CN",
+      "sourceSha256": "806382945778ac99e5c27eab351c640a181ad4c30c67f65528a587c2bf798f0e",
+      "pngSha256": "96b44a85e0d46349a996b32315c8b284652fcb80db0cfc41aba796a8657ee232"
+    },
+    {
+      "id": "htp-card-sports",
+      "sourceSha256": "65fdca55cab50b2adc7d3c348a409f4fdf1ea9f5252726ba0187511ad56ae046",
+      "pngSha256": "5c5fccb183ddb743731125f13dbd37659f65d2ebb8324f83094d82f00917160b"
+    },
+    {
+      "id": "htp-card-sports.ar",
+      "sourceSha256": "36857107149df1b2dfd884172bf261f0b55409f549054665b05f0be9a2584758",
+      "pngSha256": "f848bed4f06e0610e177fb63a5d01ba264a66b3050ed067a2078c6f97350f5f6"
+    },
+    {
+      "id": "htp-card-sports.ja",
+      "sourceSha256": "5d26590bfc98da5a7d07cb8b1bf815d0235bbd64fc03c0efa1689c0483c1ebd4",
+      "pngSha256": "e89acb99a0e040050a99a42ad486ed641fdd13a6dccae618e559fc60bb6a64af"
+    },
+    {
+      "id": "htp-card-sports.zh-CN",
+      "sourceSha256": "8d86754055155bae7c988ab8a36d0777baaa758e0bc7275ac6139fcdfad012d5",
+      "pngSha256": "842e8ad7f6654465912e7f21d976c31a1e628190637b2f723c91fd587420e42f"
+    },
+    {
+      "id": "htp-card-video-poker",
+      "sourceSha256": "fd8db09088a54b56c6d1ba3f9900d8c4ba301dad15ad59c2f8f9dc1edf4a03d6",
+      "pngSha256": "1aab443bb587a05637e4605c30fcc0f26bb62e403bfd12bed4687294bbed8fa4"
+    },
+    {
+      "id": "htp-card-video-poker.ja",
+      "sourceSha256": "89dab443c869477bb9538a2a83856a60e2a53cf407d3ec981fa84d88ef4de4f4",
+      "pngSha256": "ec1e1f2a741edb1226f39c9c328099d11fa8718e95d98a80b0651742549df379"
+    },
+    {
+      "id": "htp-odds-comparison",
+      "sourceSha256": "5978e733ee96048ad0aca7f6cf4a22b790785065f5fe51d281bf8c1fcc11386e",
+      "pngSha256": "8ee9f9d661f5bfd739b369874c0e55a8ef5878f1bcfb298383ee96aa989ab1d2"
+    },
+    {
+      "id": "htp-odds-comparison.ar",
+      "sourceSha256": "7fef431fdfa33ef20bb41908f3cfebd3fed5540f893fcf82df14159f7b2933fd",
+      "pngSha256": "5d57e32ca6f29cd98c09c0234581147ab7fad6680575d9be4571d140d88f7516"
+    },
+    {
+      "id": "htp-odds-comparison.ja",
+      "sourceSha256": "fb41414095332233180b91fb150f98da05d2f3304d80384139ed490d653a6b44",
+      "pngSha256": "8011f96a77ce2a5a8529cf98566a9df7f57c20bab693fe4da1670fc8681a7e11"
+    },
+    {
+      "id": "htp-odds-comparison.zh-CN",
+      "sourceSha256": "1787b5a34b0bf16bbe3c67dc15f419c836e6c5024f417d8272fa6f6d54862b33",
+      "pngSha256": "8cf323353a1d9521af3f7795efbabb17529ce52c2f50d8e65744f190ada33fa4"
+    },
+    {
+      "id": "in-play-overlay-12c",
+      "sourceSha256": "e65e2fa5d3447c981a419a7440eeb143472ee166490f0aa9da5c25be8467bfee",
+      "pngSha256": "44cbfc5d7b068d773f0f5a29dce7a860dec8774ff6cbba65335ea37f86997282"
+    },
+    {
+      "id": "in-play-overlay-12c.ar",
+      "sourceSha256": "62ff50b863756ee15092411bc4399132d29199b8b4f125eb57697a316159b1eb",
+      "pngSha256": "fdb8e34ae948e3094d4fa0585b92d94e46061568f2fda436c9ada43d76aa6876"
+    },
+    {
+      "id": "in-play-overlay-12c.ja",
+      "sourceSha256": "a1dd7629c97f015b059eb883bb0d74a68776eef673f25d53efbdb9a88d24e3c1",
+      "pngSha256": "e565df616e610202cb3a4dbe744f49fdb248d3e36c0d9f6300931f5e9e1fd2aa"
+    },
+    {
+      "id": "in-play-overlay-12c.zh-CN",
+      "sourceSha256": "3591b858c59a9345f1f0f050a7dacd22421010ca445e4f52c5c2d4705b2b718e",
+      "pngSha256": "9a6e60e6206769c4874a600a1fe369e9de6b5a787c24477cc5801c34f38cb02b"
+    },
+    {
+      "id": "limit-reached-10d",
+      "sourceSha256": "b798425a092dd556d87338c32aa5a882ed64f86a683174dc77eebc839bb9827e",
+      "pngSha256": "7b6f2b9429065f0e6d3589460c57f5ca55d74ce498bc5d9d896d1d97b4651e81"
+    },
+    {
+      "id": "limit-reached-10d.ar",
+      "sourceSha256": "5fb644c29686e24abd7ed4544881efb55e9a43edb9f75cc05ef8b0a64b2db924",
+      "pngSha256": "9cc6db45a5a989e6416b2b6f29776428dfe6ad2b103d5b4cb7070f16de0afdfc"
+    },
+    {
+      "id": "limit-reached-10d.ja",
+      "sourceSha256": "d31ff962b13deabe234824760e7f08540d3d1ad1ec6ebefb0e22240eda218a69",
+      "pngSha256": "8e8ee86c75db1c4ddd6778701f115ef243248593527bff13f0e5b9e797c8f258"
+    },
+    {
+      "id": "limit-reached-10d.zh-CN",
+      "sourceSha256": "f25fc47a532131f86d91259488065f31fb9ba80b6c705d619778a45a83c1dc51",
+      "pngSha256": "822e46366db10ac06a3617d4d433864368cbe93958694bccb9c2b49415a5ea5c"
+    },
+    {
+      "id": "live-odds-overlay-15d",
+      "sourceSha256": "cf61708f61647ff338425f98d7ce04fb43fb314db8202715bfc898424256f76e",
+      "pngSha256": "9bf1f5d907db514d8278351404f844281c194a0debf15f614d54d877ceb8718b"
+    },
+    {
+      "id": "live-odds-overlay-15d.ar",
+      "sourceSha256": "ad967c7fca80bbd0b4c7564544d139db3a86f574ff6ca0e86d5faa5141145bd8",
+      "pngSha256": "dab55a95119c56339fe86bfa1138c195b55da4c1006a6556f532a16f8b2cf243"
+    },
+    {
+      "id": "live-odds-overlay-15d.ja",
+      "sourceSha256": "b92a6abfc0ec6d322f283db1c516599f8aad5729d7067ef661f829167b8e3cc3",
+      "pngSha256": "db8cf94a9a9f74a0e05ee562a11a9ba2d77e40048f3828e10e74c6fb102b5de7"
+    },
+    {
+      "id": "live-odds-overlay-15d.zh-CN",
+      "sourceSha256": "372ec0a4827b9a3deb597bd39ef6719e0528dd02b74a9ca20f65cab1f8317795",
+      "pngSha256": "1e5899e4366ad5d9f0d6cfe60e32edfce48a897d596546ca15e4213033e01b3c"
+    },
+    {
+      "id": "mobile-14f-every-game",
+      "sourceSha256": "b917415c77cfc8bb1172f25c0c8a1526cab93c525b32858fa7107fc648dd045e",
+      "pngSha256": "ef958dfb9e577b70cd37371a5df5611fdce463c8ef2b4aa61cc71b86d40cd69a"
+    },
+    {
+      "id": "mobile-14f-every-game.ar",
+      "sourceSha256": "2855de023e63fd52a9fc73603c975ae80bf5789ae4ffa97b12027ac3b920eaef",
+      "pngSha256": "7e577123a584ecb5749269b1c6e873fa2039c87b31f484a0e2b84ff36ef53c42"
+    },
+    {
+      "id": "mobile-14f-every-game.ja",
+      "sourceSha256": "a65c914f9999e3bc2afa30eb7da11ed3755cb8fc5faafab5bf5d62a672d3cbf1",
+      "pngSha256": "2c5e7734169c4ceab1f74d9978afbd6017b67a8a27f461162ddbc961b7e79634"
+    },
+    {
+      "id": "mobile-14f-every-game.zh-CN",
+      "sourceSha256": "413b543d6578632034971669d5a115a1654adfd877076b6fdba8a84703ae97d6",
+      "pngSha256": "b3425a54b585f0a70eb920479b6e5e8ae854d4ebc6c9913ebb30951e4bbf0395"
+    },
+    {
+      "id": "mobile-onboarding-12a",
+      "sourceSha256": "880aa341f9f56b193044d2c8b19297d92880d7d063b81b7ad56a7cb72f7392a4",
+      "pngSha256": "74212af29cb6d66109e060459c3b6a631f447531d635796a3b1ef85ab031d9ac"
+    },
+    {
+      "id": "mobile-onboarding-12a.ar",
+      "sourceSha256": "3b70ab8a80db5e605838815eb60a66556255c8298095e46aed7b8299768c2caf",
+      "pngSha256": "5cc4af65aed617fe54139202aa375d81f901245e4ab7557f8032bfd6f0f803a9"
+    },
+    {
+      "id": "mobile-onboarding-12a.ja",
+      "sourceSha256": "77f810beef29e91a4c8a9f8b7be361744cf17a1a570acd46c57c8e3ac6b17751",
+      "pngSha256": "6550581aa3f8181c364c2297aa289ed955f0753651772daace54b6a9967e546c"
+    },
+    {
+      "id": "mobile-onboarding-12a.zh-CN",
+      "sourceSha256": "1d259254a9be7c57b8c0a93deb65921513166e82132222d5599207fcb47bf0ea",
+      "pngSha256": "c8ca36e698e3499c645341ba619e03929d533ac7f4662b8fac604284e8e3f2dc"
+    },
+    {
+      "id": "og-content-hub",
+      "sourceSha256": "811895d9b2b622aada17b2d9a74af848190031db6c14294775eb0901739d98a2",
+      "pngSha256": "4e96b342e878bd782f69ee2fe6acca6a37dee31eb5c692bf7e15dded696d3e3a"
+    },
+    {
+      "id": "og-rg-page",
+      "sourceSha256": "80830eca43180d3a1d6121dfdb5676e497535128853b980347593a882e6f9907",
+      "pngSha256": "72c8009df601600ad355ed4f68e721c68b2ca9f93e7067bd86a4e5f1f8169254"
+    },
+    {
+      "id": "photo-entry-12-myth",
+      "sourceSha256": "555e5ec4847d730d5755d00f44897a808b099da6160b658dc2c686765ecf70a6",
+      "pngSha256": "a63c335ea28ac3eef7316663e151a8f80d7172a860ece867ce8af60477778619"
+    },
+    {
+      "id": "photo-entry-12-sports",
+      "sourceSha256": "a3ebd0a01f215fc98c0cda23893ca7b491d6d1b8ccf121d7ad9cdb6b9f864bfe",
+      "pngSha256": "1efdfd5903e2ce79cb443be1b1546380e9a0d4f92aec50ec100e8111e491b422"
+    },
+    {
+      "id": "photo-entry-12-wildcard",
+      "sourceSha256": "cb3c3fc9bd9eaec9dc6c1e6e891e802c80595a7910ce30d60e08a1d97306a60a",
+      "pngSha256": "cde83cf55ac3f9786607445c530ffe933315765ac52e198b4f8a19dac5ef8856"
+    },
+    {
+      "id": "photo-entry-27-myth",
+      "sourceSha256": "f9b60abc4d659e9d016af8b53a21292fb422492134d8bece45ff6e890e83c855",
+      "pngSha256": "4d065b4e9074bdad44cbea2637b745d747025365ea3201126a37b01a88431064"
+    },
+    {
+      "id": "photo-entry-27-sports",
+      "sourceSha256": "cbe4840a7b3fe7a638e97241e6dddb805b62a48779e1126c0ce53a148898ae5d",
+      "pngSha256": "e461c22f824a3c22f3797b3278c5374a48df8a919040ef6af1d351c3a7d752f8"
+    },
+    {
+      "id": "photo-entry-27-wildcard",
+      "sourceSha256": "cc551b49ca5c677eb70017c012351d4b4fe4d81753b476b4049a5bf71d422bc9",
+      "pngSha256": "90b605e8bdffa3143c77183487ba6250c29d26ed0564bda15cee7a84d4398f70"
+    },
+    {
+      "id": "photo-entry-43-myth",
+      "sourceSha256": "4942c04ecca318b8b5c40c91cd1c5fcd095e177dde3a9fbb2b5b7160332f0f49",
+      "pngSha256": "364a4c837d455c449718ef36fa8f750ad0de9e272c0120dce6ccc689c7cf5ae2"
+    },
+    {
+      "id": "photo-entry-43-sports",
+      "sourceSha256": "73bd132c1b99b49addb5cc3bd45fa4aa97a9a3b8976dc06a112c0baed6784ad1",
+      "pngSha256": "9f9b7e639c828b8d224aadd7c677d66ba3b473e3a2ce162b1d3390dd3e58f1ec"
+    },
+    {
+      "id": "photo-entry-43-wildcard",
+      "sourceSha256": "6065e0e00233c40718e293edc9f8cc5a6a4a11a9460360792ed2e62ddd535aef",
+      "pngSha256": "c5c25a40c4822cf4ca7e6651bb9bee1483c878419b7854d545fc0c42d9873df0"
+    },
+    {
+      "id": "photo-entry-58-myth",
+      "sourceSha256": "088e60d57aa251d495d2f7b05a080bf3c507ea534761c816ef9ba3f810a45756",
+      "pngSha256": "63cfc80b341b8e85f0a2c64d3a490c1b54c7f45ddcdbff4ebd30e37d4c9e03b1"
+    },
+    {
+      "id": "photo-entry-58-sports",
+      "sourceSha256": "496a5bb67cf26784b3a825dd091b8eb529349ae63c8acbc9a650474a4a76b7ac",
+      "pngSha256": "441b90960047901e5c141b16f1287f8bc33cf6c2a136029685c6ed8671e4ce33"
+    },
+    {
+      "id": "photo-entry-58-wildcard",
+      "sourceSha256": "b61994f9d859a1d1359a2d928dd4829548807949340441bf5b887299f443ab72",
+      "pngSha256": "d6d1138186755f4e300d5e48b0a8b4e94a3287c116c1d0ae659490671185ce76"
+    },
+    {
+      "id": "photo-entry-76-myth",
+      "sourceSha256": "917986d0f01a5e3e6f4ec826d491a1edf1f8998bf61194a76eba9762118a9b28",
+      "pngSha256": "f1c7f8f306750af13244929bbe915e52da3be4dc60df2718017380e73721a36e"
+    },
+    {
+      "id": "photo-entry-76-sports",
+      "sourceSha256": "ebb19218118976c62b7c388ff384a98807d3b747a3811c6d258df4f49364fe62",
+      "pngSha256": "e8f450e86f16bc685fc2de30e43465977098d67f5b4d116760da9f5827f4a4c8"
+    },
+    {
+      "id": "photo-entry-76-wildcard",
+      "sourceSha256": "b167310b94f0713086cece0b97e39eba7ac9bca5c21966dee6c41e8e719ca195",
+      "pngSha256": "d7423022853024eecaddaaa0be6b5268ae825de85ebb7303955799c5ffe47fed"
+    },
+    {
+      "id": "pilot-astra-myth",
+      "sourceSha256": "15f192ba69e88287143bc6c9de489e261f49ab2fccd611c41cbda627402dd67d",
+      "pngSha256": "ac2c05070e6b119a8ec0109180e5c5b9b36c15f67a4666ff52febe5d12e6b674"
+    },
+    {
+      "id": "pilot-astra-sports",
+      "sourceSha256": "b3c46fb5ad55028ad9c3004fa6ff7554557af07406fdf7d7694e48389690806e",
+      "pngSha256": "b8fe05ec36dd9d171eed6ba68ac18e579a777f56447f3ddb8f601117c2fefaa8"
+    },
+    {
+      "id": "pilot-astra-wildcard",
+      "sourceSha256": "66bc258957f4d2d65eccac3c1bbe371b4cab6fc3d8e36d126fafd362d08b6e07",
+      "pngSha256": "6bc24a2e5ebcbd3996f070ec1bab99b8cd525b070249817fc4fbd4f3d54f81ef"
+    },
+    {
+      "id": "pilot-gpt-53-spark-myth",
+      "sourceSha256": "001f62c49ae1b3a8c3a4f3195f9068b78687d5704ae76749ca5c5ad66c8946b1",
+      "pngSha256": "136ebe9b5b4d37ed3c32439506ad57e6ad0575f5c5cf41dd6e1e0e38c3d84a4d"
+    },
+    {
+      "id": "pilot-gpt-53-spark-sports",
+      "sourceSha256": "efa39b22bfbbdced37cc6bb3d7aba5fba10be705bb602739cb78218d0e4dd540",
+      "pngSha256": "0adaa3d38f43212e22d35733fd47065cf8a40efd107f294783b47c354dea0c2c"
+    },
+    {
+      "id": "pilot-gpt-53-spark-wildcard",
+      "sourceSha256": "a3a49959cd9b3fa0a3c77b07c73b84d8544ba290a4ed7cfbe792e506e1bcfbde",
+      "pngSha256": "741b8be67ab8fcf24b4c7f01a92cf10429e9f80c25ace93cef878dcb538774f6"
+    },
+    {
+      "id": "pilot-gpt-55-myth",
+      "sourceSha256": "1bdd462e14a47f78a14d0037c7088432d3618c62668dc2f14490e98451d7670e",
+      "pngSha256": "1bb00d60e71b3adf94f0b0237354f5f265eb854f188080dd513459fb524b39c0"
+    },
+    {
+      "id": "pilot-gpt-55-sports",
+      "sourceSha256": "b7ed66facd59488fe473c789863618b882962f584d6a8d55ed2fb341aa94e602",
+      "pngSha256": "f750b74403cef7e7e6f1c555cfb1251aab0ee5d5ea69732a48e1614cefa3dd3b"
+    },
+    {
+      "id": "pilot-gpt-55-wildcard",
+      "sourceSha256": "534b7f34b32d4340e9d45f47f40ac1b173609b343e126513f225b43e5cef912c",
+      "pngSha256": "d1d713601d5a153526755b364d759d67e7629c372bc5f07c3033e96d2314977d"
+    },
+    {
+      "id": "pilot-sol-myth",
+      "sourceSha256": "352ef2873c59051d367fc0d27ced64a7382e4759d7b6cbc0f0f7fe285cdd3902",
+      "pngSha256": "15a4d1958b5d54998f91fa73f126022322c61c8debf06690b743b941cba78c0b"
+    },
+    {
+      "id": "pilot-sol-sports",
+      "sourceSha256": "23b4587a8fbc929a48093151f532e828c2b91ea7616ef7592b84f505af8ac807",
+      "pngSha256": "e8ca6ffaaa5ba0843956c21966603f7612f45655d8ca635213bc1fb5396c42e1"
+    },
+    {
+      "id": "pilot-sol-wildcard",
+      "sourceSha256": "05ba95b3b9bd572d7ab4260d5d3f084f2f3791ed835bb056de5b7457258808d7",
+      "pngSha256": "8727e7c4ca2aeec8ef8655ab477123c343fb936f28b7ead1c2f57862b7bbf162"
+    },
+    {
+      "id": "pilot-terra-myth",
+      "sourceSha256": "87727aecb77442f8bf58c9f159b3455a995c8f28f477e680811beebc4b25e325",
+      "pngSha256": "d2cb16ebc20f27a2f26115fc26bc6929ec54c9db041f3e8c3df6762249ef116e"
+    },
+    {
+      "id": "pilot-terra-sports",
+      "sourceSha256": "e9900f140360fba3d4b816415920cff7bf2d01644f27f4068ac1e2fde7ec7b41",
+      "pngSha256": "689dcd7320607a6eb752f03ff8b0a94f253b2758e05723ab82b4eceecec09712"
+    },
+    {
+      "id": "pilot-terra-wildcard",
+      "sourceSha256": "0d90973a506b8e15329870c132306918e82a906c9a2e4915e2d2904b60d27888",
+      "pngSha256": "26e13f3610d3d144bc5f89393eaeb7ce734ce6a61c9c733973c059cd2c04710f"
+    },
+    {
+      "id": "poster-14c-every-game-slots",
+      "sourceSha256": "6d228a5eccf69cdd0611eaf6b70d1b4d55b8fbee2b39129709498389226c207f",
+      "pngSha256": "d8ad4623ed4145d4410d57bf34ad32669fd1503b1e26d02d8fa7ac1759c6bca0"
+    },
+    {
+      "id": "poster-14c-every-game-slots.ar",
+      "sourceSha256": "fb85bf71836d497a2860092de15f7df5eca64d7e2cd2e8f6f39a46f15cec2e7b",
+      "pngSha256": "3aa37f05880cc0c9d4ccb103fd855b8aab39bc5a3330e590a66fb61af0e71563"
+    },
+    {
+      "id": "poster-14c-every-game-slots.ja",
+      "sourceSha256": "b18a58222a27af346bf54e1fda6ca03ae9d04372d76e01135dd51e8f7b7ad792",
+      "pngSha256": "c8062de316b61145bdaada66d8b1ee0b6c7a0a33584abf385591564570f65595"
+    },
+    {
+      "id": "poster-14c-every-game-slots.zh-CN",
+      "sourceSha256": "642157f721e3a92c9b86e79f34b51da196db8d47d28f677a4ccea1ae31f2f7ca",
+      "pngSha256": "6c93bd311ca7db3b0ea353c6f6f22426b7b9fcba29b7a879bfccfa0654ffb2ad"
+    },
+    {
+      "id": "poster-15c-how-sportsbook-wins",
+      "sourceSha256": "ee6da01272d3c509864f97d15ce727c818914196cc4734c720c3cd2d93931586",
+      "pngSha256": "75b456e19bae1b7bc2633bc866a8027c5e2a8bb4117244b5a6ec4f3c9b321d59"
+    },
+    {
+      "id": "poster-15c-how-sportsbook-wins.ar",
+      "sourceSha256": "def0b91f8bb2e5082b25ba3df6847d283dc18be80d59cf02f571569decba9e87",
+      "pngSha256": "8ecd50a46261d8dbe670ff860e5e131564d6944a1a9214250b4a8e429f1e2bc8"
+    },
+    {
+      "id": "poster-15c-how-sportsbook-wins.ja",
+      "sourceSha256": "7e27db8324fe4fbdc10b20eca92fe9e2ec7a89ca2c7c605d79a596932d00e8bb",
+      "pngSha256": "8a6b0252c5dfd17e0386f4b588c9f1ee2d605efe9fd74b0db93b45e6ac815fd4"
+    },
+    {
+      "id": "poster-15c-how-sportsbook-wins.zh-CN",
+      "sourceSha256": "2478e8030702a4edecde1384f8edab70d1dd4143c5f9682d3bb034f9798559f9",
+      "pngSha256": "ae13c1582327b8a3356d5a7e2ecdfa49fafbf2eca22b89b5d686437e0f9f3d60"
+    },
+    {
+      "id": "poster-19a-every-game-math",
+      "sourceSha256": "917c0a69e29be0a60eed7536a860ac27733fa40bd15c46842aa99b1234b2d1f0",
+      "pngSha256": "ffc0a8054562d51de1bec233472a38e9e37d17b2bc93e7fd1870f30dbffe640e"
+    },
+    {
+      "id": "poster-19b-odds-are-public",
+      "sourceSha256": "cb5d8fbd9d80742480e55a334800433fa08ecaec78557a8613837a4638fbe80c",
+      "pngSha256": "9b8d1e2beb409b4f9aa27dca5ee3f5b28ade57e40a6b408ee22ff2c192222447"
+    },
+    {
+      "id": "poster-19c-bet-price-tag",
+      "sourceSha256": "93125dc4b1dc0d895af0e2c53dcb1e4b9e3057977aac686791aa6e5e6e837eeb",
+      "pngSha256": "5c11d92b2b63de11e3ddb81345affc3366e8214120687c9ee0c1857ac31bbc27"
+    },
+    {
+      "id": "poster-19d-game-iq",
+      "sourceSha256": "6d7f8d08b428dcd8f04e8bb2a03152a138c123a4f5cd91d6a0ea6357491c5fc8",
+      "pngSha256": "769b9629ad72e15f9f0f1c686bb89e4ed3958321479677cd04a29e73036fcf4b"
+    },
+    {
+      "id": "poster-19e-never-due",
+      "sourceSha256": "89fde1913636d9472a9201ab61b02f480de3bd230a6753ee852e1ab6747535cb",
+      "pngSha256": "c47b9e11791c64413d10d88b8c0f3e9f15f1886c46f5328619a483939373978f"
+    },
+    {
+      "id": "poster-19f-your-tools",
+      "sourceSha256": "6cfe0a792377d96319b1560c5a61bb17922207dc531d4303bdfbc2b8dde72247",
+      "pngSha256": "2ef30615a585d2b919f58e3bd6c106bdfc59f7f231030b60445a18d5dc0b1ca9"
+    },
+    {
+      "id": "poster-19g-one-decision",
+      "sourceSha256": "17728f2176ccdffcbcc155f6ab239ab4262bb361bebddd376f4118c19563c13a",
+      "pngSha256": "217fbe1b6837a57a1938a4580e48bda85c950bdbd0e31e1fd0d86cad692288a5"
+    },
+    {
+      "id": "poster-19h-time-flies",
+      "sourceSha256": "569bf68866692dbce3a453e3e7826d15bf263ed8fac25818228d36a9404876db",
+      "pngSha256": "f0860d0638dfeadc747f361dcf8699098bb3948e6718d7e39cbc67a54c6bb8b7"
+    },
+    {
+      "id": "poster-19i-lottery-odds",
+      "sourceSha256": "55b6c6a2baef2fb61489fe9cf99b021a022784ca5af10a9106379aa624482585",
+      "pngSha256": "f4a508dcb7bbe184bb50c9dc43e17aacc505b931c3259b14d5d833f57c0dbd30"
+    },
+    {
+      "id": "poster-4a-know-your-game",
+      "sourceSha256": "5a1b1ce93997321454209464071e479d6223e7bdfc50da6d06d198b619e259fd",
+      "pngSha256": "dde68ef308110e4d5c19d5bafeb3692b3064b84ccd8271939c4d2800de94b78c"
+    },
+    {
+      "id": "poster-4a-know-your-game.ar",
+      "sourceSha256": "ef420546710544df5b7cdffb80404dfebf79c14507bb323891a55f121bf54c61",
+      "pngSha256": "9d3a511838e36380356bef62d595b591200adc02c12f935d080e512d091e07c6"
+    },
+    {
+      "id": "poster-4a-know-your-game.ja",
+      "sourceSha256": "2bead6c2ec8f235db819eee54acc0b7345f81a245eecce3cb03dcc0668ab1844",
+      "pngSha256": "4626476b633a1627eac29581fbf165a8e7a3208ba56a458715361630f3e5b41b"
+    },
+    {
+      "id": "poster-4a-know-your-game.zh-CN",
+      "sourceSha256": "fb67eba9a4c9ea710b0e128f0af145ceccead6bd8bd0e1acdd6ab89226e3e8d5",
+      "pngSha256": "51799b8afe2196c007505e5ca7456e2466aa549c8768d4dde5ea6be06197b9fe"
+    },
+    {
+      "id": "poster-4b-no-fine-print",
+      "sourceSha256": "aef5452838881e8ed20de66675175aeccbb1f276572ce7e322c315dc0370b659",
+      "pngSha256": "177d6ca26acd331a8421166e9a1b4c92ebd1a22aa086a0b3a2e32eadc6c1403c"
+    },
+    {
+      "id": "poster-4b-no-fine-print.ar",
+      "sourceSha256": "5ebfa7da24d0f1abb29421f8ab22aa0b935dabf9b7d94cd113096315f5330ce4",
+      "pngSha256": "ce01c8db5a02610fbbb826a35f1357b647a5f7931b1bc467555e1ce0ad3395e0"
+    },
+    {
+      "id": "poster-4b-no-fine-print.ja",
+      "sourceSha256": "f92265f557a5391a14cdf782b653b2b82a751e28fc440b54b196f1000f0dc05d",
+      "pngSha256": "211c45c8b07a0180d1a5d61800908d569f98b0094f4310dd0b2e4b92914cd61e"
+    },
+    {
+      "id": "poster-4b-no-fine-print.zh-CN",
+      "sourceSha256": "4f618f5fcaa8803e9c0b8eecd808145e9e4cb966bbabb2aa3b4eb3266fe97734",
+      "pngSha256": "b00244b1b8e2cd54be9041a6933a6720bb3b810d896002eacdc94a4ba0341e96"
+    },
+    {
+      "id": "poster-4c-game-iq",
+      "sourceSha256": "2410dbad4c4dc6926976a653463d9f169e701b23fa88b93fa531b48408ce8de9",
+      "pngSha256": "3e023caeb555b2d5d9f5f65c8402f22f8da364f41554340033bf285a4d59d952"
+    },
+    {
+      "id": "poster-4c-game-iq.ar",
+      "sourceSha256": "57e1a86c29f95041cbd07801354e57c2cf1a1b5a2bde8919e98eb1624a75ce44",
+      "pngSha256": "1759d868871ccba11b68909c7b1726f69291dc84250944be62d11e20e3c8bd8f"
+    },
+    {
+      "id": "poster-4c-game-iq.ja",
+      "sourceSha256": "65ca9790ab055d9178da4ddc7fed0bdf545f4894972b6f4a64c88dfffafb8bab",
+      "pngSha256": "329cada9ec23256fe4360f8f26e5ca66b14f85f7f3ae28595d65827630e17a5a"
+    },
+    {
+      "id": "poster-4c-game-iq.zh-CN",
+      "sourceSha256": "ea46b5ff0acb479b46af2b6d4f89d1dab1ec2fde282795a3c82178b7c8fb1f1f",
+      "pngSha256": "a05495afdcbc3cc118ec97cfac3570fd534dd14b1d7ff16e6c4fe9e78bda5284"
+    },
+    {
+      "id": "poster-4d-lottery-odds",
+      "sourceSha256": "ffbb19ba3e426373ec9fd8510802ee88839cb0d7957b2f80afe303d67529fc13",
+      "pngSha256": "841c2afd45c4c3556410a9e0274dad44e13cc40383b80505099faffe37275b11"
+    },
+    {
+      "id": "poster-4d-lottery-odds.ar",
+      "sourceSha256": "a23075026c634f7825c2b72f340e5ee80af085ee69917d74818523b81f371fed",
+      "pngSha256": "840c51d6827b8fa3d7085a4e123fdb42fe3b808840f8c5cdb5929689b00459cf"
+    },
+    {
+      "id": "poster-4d-lottery-odds.ja",
+      "sourceSha256": "6b13eee8129b22f039848bfd470929c033a829e6eb0637f0c47f07b26e9faf80",
+      "pngSha256": "7381b337eea2bf8592ad30e48486a3d28b126a5d15a7affe33bc9f626455f29a"
+    },
+    {
+      "id": "poster-4d-lottery-odds.zh-CN",
+      "sourceSha256": "47e8f9325f1321289a721e281c25fd6876afdaf4d0f5cdddb1ca8067e3e689be",
+      "pngSha256": "ac615b6e483f3e5a39565d344d6d8985dc86e5e7b90a97af825d8079687f90cb"
+    },
+    {
+      "id": "poster-4e-bingo-hall",
+      "sourceSha256": "7b45dee23415e35d9331bc4415525d0260dde80017f85fd2b806c295e4a33054",
+      "pngSha256": "d443cd7785abf30de6d8de4a335e36d1ba19ea702e8cc8340cc0a72c04f27e8d"
+    },
+    {
+      "id": "poster-4e-bingo-hall.ja",
+      "sourceSha256": "ace9b358be406fa6b0b95036d3d05329e745c856bfb57d29c9117d5b4b443f3f",
+      "pngSha256": "b4a7af3e83981c0bd157e7ee46eaa2e8990cd3f475904c0b27ec0269e15c0bfc"
+    },
+    {
+      "id": "poster-tier2-10g",
+      "sourceSha256": "3356935a4f584e4999ba0a4ea7067257b870a696a44094d2443ea7334749f8f0",
+      "pngSha256": "84d07d320c114eef5c2d58fb3eba591b4f11db4e019d222105823a7f5d74abbd"
+    },
+    {
+      "id": "poster-tier2-10g.ar",
+      "sourceSha256": "5024786f895af41d58e30f6a0f2d766ed6869bed8ec8f2672f33c55862a9d920",
+      "pngSha256": "e57b9a713264279fc11a46ca0e349dc07142c884502f087881bc2708ab9b57e1"
+    },
+    {
+      "id": "poster-tier2-10g.ja",
+      "sourceSha256": "d5e48aa9482e9264f984d0a2260df37c25671a8d744e915c5968babbefb0294f",
+      "pngSha256": "fbdf5432644c4ed36651711b5e0d3e08295ce11dfbaeaf3b212937ebd43ee6dd"
+    },
+    {
+      "id": "poster-tier2-10g.zh-CN",
+      "sourceSha256": "8451d8b21ad67a2e9802d5d4f8d1eab9f083b21cd8a5f9ad786a703909902007",
+      "pngSha256": "be48b3f1fe1cd12b06f8ef75629e0079e9a1ab7fb586d4e6b32a4970295f5dcf"
+    },
+    {
+      "id": "push-notification-12e",
+      "sourceSha256": "34944bae452a7744a9ef31a33e27ac45f75324c698db9873323aa1cadb62c477",
+      "pngSha256": "c26389b4cad90d852e35430fa6ebb46d39c845f674ce880ff3b49399519f8318"
+    },
+    {
+      "id": "push-notification-12e.ar",
+      "sourceSha256": "f5b0c0d9f86cc24d2395d0101dd60ef5b280d1d9bb6eaf6e387b1a18dae1f490",
+      "pngSha256": "eb9aab9c5629d189faa7699708fe6f47409a86dd190d762f2b9019acb92883c0"
+    },
+    {
+      "id": "push-notification-12e.ja",
+      "sourceSha256": "5ca6fc2001a58039c314ffd9e8e273b45326406a642a9e3863615ea4bf1a7981",
+      "pngSha256": "3e67ca3d0aae3b125a54ae799fe0ccd674ce6ae87260f637567226c7be1fc10f"
+    },
+    {
+      "id": "push-notification-12e.zh-CN",
+      "sourceSha256": "a0d91f1ad7ccc666551bdff4a8776b80f386c371cb09c2e895392fcd3ce8d6ff",
+      "pngSha256": "51aad768f3269ccdfed4098963f2d8cfbc88a99966b4e2c7086aa1b107afc522"
+    },
+    {
+      "id": "rack-card-5a",
+      "sourceSha256": "202b30e2210da67e1c99592f1f87de58efaa7e7b981d7903dd6b49fe4c4ab358",
+      "pngSha256": "e63b080d05409563357aa5c46d2dbbbe9982e5716a18a851fa6da9b0b06ad9c2"
+    },
+    {
+      "id": "rack-card-5a.ar",
+      "sourceSha256": "b10a64b124459ead2ece157a8ed6318ea46aab578c494188f4545e7e38c5083c",
+      "pngSha256": "e2968ffb894b85bc56df6c81726c8477191e3744a62ae41587cef36ac2dd714e"
+    },
+    {
+      "id": "rack-card-5a.ja",
+      "sourceSha256": "f33dd2993ceef41a94d296cec1903ddf6f410648bca8904e25407350454b9e80",
+      "pngSha256": "c648617b0cd51ba52f30109b13d28c1042ba9295dd9110dd107296332b3db781"
+    },
+    {
+      "id": "rack-card-5a.zh-CN",
+      "sourceSha256": "ad6a70401128632337a6cb864df76bbf07c6e74e2750e6456eb8fa5281b5a133",
+      "pngSha256": "202c284f55dca9150c34517e38b86ae5dd4beb26835830007d6153a8f3637ac5"
+    },
+    {
+      "id": "self-exclusion-10b",
+      "sourceSha256": "5fc8a8caf2b965aaf5751b118f312d3bbb29f0cb77149c3ee83b0ad155f3e744",
+      "pngSha256": "38c20bc413f55868b32da7b36feb8fdcedb19f261ab6450333abeb7bd3fd03cc"
+    },
+    {
+      "id": "self-exclusion-10b.ar",
+      "sourceSha256": "5c1cb6e83670ba56359ebda6068d326485ce709b8beed03367e94588f409d818",
+      "pngSha256": "cd028911bd737126081b38fbf6927c073fccb9b7c6791901ce7c1b958e07f679"
+    },
+    {
+      "id": "self-exclusion-10b.ja",
+      "sourceSha256": "b0f270d90b0a09331b8d7161d67fb80b5792dbd55c39ee8542f831f0c67e2842",
+      "pngSha256": "0eb7ec5e6a09b0760f663743749bb6ee4e8ed34514ccab3667cf64c9afd3ff55"
+    },
+    {
+      "id": "self-exclusion-10b.zh-CN",
+      "sourceSha256": "cfbe901dab9bc6126089e5c6fd912b9c1db1f41257c873a9a436ec8cfc952ca5",
+      "pngSha256": "7bba85db56fd8b4fe429d1f53c3ede1ee42fa17aefd6c953d13371196a448ff0"
+    },
+    {
+      "id": "session-summary-10c",
+      "sourceSha256": "fc7f5c726d5e9efc7347de839c16eac9a304430ae39b9d18621cf72d9c4388ca",
+      "pngSha256": "81bcde40e0f352f9aba2f7aa0f1f39ea429e5f89537f6737783e673ad84ea16b"
+    },
+    {
+      "id": "session-summary-10c.ar",
+      "sourceSha256": "43e1b64a55a09e57c8c00fdeba04856864172bee2da5e34a36a7a78649269158",
+      "pngSha256": "e632773361222735766696920bb3243723e2d6c790ab45d621fe0c74152c12c0"
+    },
+    {
+      "id": "session-summary-10c.ja",
+      "sourceSha256": "ba1e953030fac5742bedcbf9d4a9531f289d3f1cd684ba53b7abadd2aaf6c449",
+      "pngSha256": "27d33c9a98d49a277339da0503793e66809694a0548d73b16dc79788da19cb79"
+    },
+    {
+      "id": "session-summary-10c.zh-CN",
+      "sourceSha256": "f9f5092fc0b8ec2641ad0e674f12be31207de05a9c239aaad1fc2bd52e537689",
+      "pngSha256": "85fbc9c334bfee2b321f1a2c3fa635b53428d4fc5703e9e63e25a57349a11184"
+    },
+    {
+      "id": "sign-atm-9b",
+      "sourceSha256": "a589ba515673184330174b8617e134841a6af3e5d73c3238e3d66ada4c5775cd",
+      "pngSha256": "377ed16dc6595c3b8602f441474a362b07ec7baf13b86321c58fd36c345c9345"
+    },
+    {
+      "id": "sign-atm-9b.ar",
+      "sourceSha256": "4e3976b3abe0d12766a0797da0bdbe07d67007dc4bdc43ed5d54269e57203b1b",
+      "pngSha256": "467318203182c2508827cb90bf7e973834aa85b57a5dd8065558f826cc871a3f"
+    },
+    {
+      "id": "sign-atm-9b.ja",
+      "sourceSha256": "2803fbfda164344561a8b7eb2ba6841a57b2450c4d1393f8de4c4e34cfd49fbc",
+      "pngSha256": "62d75867130a1749afa9b5519d037f886ada45da3c11f65c84aea514c2139960"
+    },
+    {
+      "id": "sign-atm-9b.zh-CN",
+      "sourceSha256": "39f7c4d34d3eb3017c243ca719f465c14d9475e67511e66f2b6fb4b3454e8c4a",
+      "pngSha256": "b994096cbcd03abc43757f36f0130098bd84799ef4fc585da0432b732348b8fc"
+    },
+    {
+      "id": "sign-entrance-9a",
+      "sourceSha256": "edefcbde7a802dba82ecaec7026d97c343ecce5a44ab899f01024e69fcc9aa88",
+      "pngSha256": "929eb1fc2f15bf77aff268c09a37b6ad50197387334d7252dd6b643dee9f1976"
+    },
+    {
+      "id": "sign-entrance-9a.ar",
+      "sourceSha256": "bbd1abe786cde89cf847f6f018917b5e0111368e6faf2838294464137b9f355d",
+      "pngSha256": "ea8a3ab583888833705dc3a9587486688654a39061c90db732b59fe8286f1efd"
+    },
+    {
+      "id": "sign-entrance-9a.ja",
+      "sourceSha256": "1b2098f7972a3ad8d3f7f4a67fee110707e6f493e99cd291739865654a985d8c",
+      "pngSha256": "6ede3c9bf129b363bc96dc9d091cdace6563b6f86548b70c25116b8d1cfc7890"
+    },
+    {
+      "id": "sign-entrance-9a.zh-CN",
+      "sourceSha256": "5c43571a3a6bf2590dbb4a23fbe95ca04ae0ebb882de7a70ae97204690021e71",
+      "pngSha256": "ce258efbb6e01cf992c042b6c617cb886ab322c63f826de04df7df80c46c1cd9"
+    },
+    {
+      "id": "sign-floor-9c",
+      "sourceSha256": "f1a5ccb784872305d2259b5a3f39e700da0c64625668dd68087f26a71a0ae59a",
+      "pngSha256": "86b7bd15ea0cda861bcf63f4f5b7e30d43c9bfc3898c04c1bf8a52df36900c3c"
+    },
+    {
+      "id": "sign-floor-9c.ar",
+      "sourceSha256": "3b1004843182595e8076a472bfd4132c7e442aeb2097f2fca97b09af8cf44d4b",
+      "pngSha256": "46756d701ff2692f64f9d7fa8c0744c7b7f2b4865edb0ade5d135c6ac1f427ee"
+    },
+    {
+      "id": "sign-floor-9c.ja",
+      "sourceSha256": "68d6c53aeaf12b4756404b415f240c839397d468a8adbd2409ed7f922facd7dc",
+      "pngSha256": "cd63715df25d1c2f8391e7d3b5f4376f99a70a8bdb19924cb23d3e6bb558a58b"
+    },
+    {
+      "id": "sign-floor-9c.zh-CN",
+      "sourceSha256": "4c0a29d890330f62a6bba7b5ba136194deebc5c1b1ba8f44cb888c7e878a88f1",
+      "pngSha256": "d99c6c7b99c43da5eb06bed578e4db7e9ea9ba7c163ba76606b2d8dee54c3eeb"
+    },
+    {
+      "id": "sign-restroom-9d",
+      "sourceSha256": "c566b205c845cd6b5d177f29972675df5188a7cef69a6a9d0a719563a52f743d",
+      "pngSha256": "7c9b4152377ada3ead44a8b9b69f0716402236a53f2ed52533ae8f70d66f6c6b"
+    },
+    {
+      "id": "sign-restroom-9d.ar",
+      "sourceSha256": "9f147c205554c6fc78c5c63a4ab73b90d2d4eeae63399df8b8309818980c28e1",
+      "pngSha256": "fbf942c21864ec99e7065ade9dd9ee7f3661a18f1e9d280e2bbb7957a2244625"
+    },
+    {
+      "id": "sign-restroom-9d.ja",
+      "sourceSha256": "ebc9b2e45fad1b34d35fbe8f7c262d7c293f5d1981477954c499a27a29f72a68",
+      "pngSha256": "47bcc95219e9c44ae2590b491329c9b8bec2a751b22b36c752ee0d3dbe6f9e1e"
+    },
+    {
+      "id": "sign-restroom-9d.zh-CN",
+      "sourceSha256": "5a7d528082ccd6fd284d2b0aa78f689aea85ca22adf6434a30f7fc276744c61d",
+      "pngSha256": "aa9f1334b7b7c54889a3db978d414f741c9efc95e15030603266d8995c02d274"
+    },
+    {
+      "id": "sign-staff-9e",
+      "sourceSha256": "3d668d48f85b380953b51f55f26e7bea6aacac08a16d548422e60d8322f0da25",
+      "pngSha256": "aec754d7e1ecaf06fb2e2837144c75972dc77098f8f50a870c28afe7295abb16"
+    },
+    {
+      "id": "sign-staff-9e.ar",
+      "sourceSha256": "62845dd65b1588239b9e77689b2efda41b5c64bd19a74b232d9366eb433b585a",
+      "pngSha256": "bd3b513981d0a063986ea92333405b8b3a021ef9d74e432f8eba476ba611a339"
+    },
+    {
+      "id": "sign-staff-9e.ja",
+      "sourceSha256": "9c1acb466c0572e73be7a733e693940663f41ce2a2b5b9b7021dd1874db6506e",
+      "pngSha256": "072015c5512a0e442e2c71b3d2beb883629d333372009b0c98f509e77a937acf"
+    },
+    {
+      "id": "sign-staff-9e.zh-CN",
+      "sourceSha256": "3ebca4d4d403d2b509a9acae410c2c26a6a5ef500ef32fc28cbd6a081e64de20",
+      "pngSha256": "f50a8f7a5ccfb4a070fdd0fb4d774445b0ac29e25f84e48a02af753ea65ce899"
+    },
+    {
+      "id": "story-14b-every-game-roulette",
+      "sourceSha256": "0fd13f6dd175f4bc24560f79edec30440e1425b1c2ddc2d5d65a18512072c9ce",
+      "pngSha256": "ff0ebe29a6a4768edd97383cfa5f56e137f77fceed175328d0eded71baa6f985"
+    },
+    {
+      "id": "story-14b-every-game-roulette.ar",
+      "sourceSha256": "6f42ae3d65bee1b237729f43d57ee8ad6ba835fe1f782385ad60d812dd32e9be",
+      "pngSha256": "29f062323ff53eff5422287b5b34c460587d34eaa41882c2fd208edf6e423938"
+    },
+    {
+      "id": "story-14b-every-game-roulette.ja",
+      "sourceSha256": "0e7ac21346c2e83b407b31f25321b7d2685915568448eefd5f052d469678611e",
+      "pngSha256": "0c7620c3ddc2126eaf41e7b1ec74fe84c0864099175d09a5492637cf79c30d3b"
+    },
+    {
+      "id": "story-14b-every-game-roulette.zh-CN",
+      "sourceSha256": "cc251e0a38b57ba632eb2b2c0705dd3dddc4ed6503b1b2d464c4469fad0be6cf",
+      "pngSha256": "fbcb8d8b4eb16342a53d933c3f312405c633b70c8b76bc7e0eb94a9a069eee26"
+    },
+    {
+      "id": "story-15b-bet-costs",
+      "sourceSha256": "f2655a647a68ae63065bfadca431d299c42690254f32749ac3c378a2b2f97b1c",
+      "pngSha256": "2dd3a229d2910ed01cbd6ca94026813cc2b840d4a73a1e18c3dae61b6b66c377"
+    },
+    {
+      "id": "story-15b-bet-costs.ar",
+      "sourceSha256": "d76b2b5bd191ca7129c7c49d529cd68b8ac26e055f970f95ca2d65a9ef975813",
+      "pngSha256": "5b322c80acaa2a5605c85e0160ab78f85ba38a42e0682689b9d3af04df2ece63"
+    },
+    {
+      "id": "story-15b-bet-costs.ja",
+      "sourceSha256": "fc171eb774e7ffd29fcfb19e6d8acabf52ac76e961038c04fd2d9d6f0c58234a",
+      "pngSha256": "882159a6aaa8bb052346c223184075c3659c66e6e4c6a5ab4823269ea88cd762"
+    },
+    {
+      "id": "story-15b-bet-costs.zh-CN",
+      "sourceSha256": "f113402ea10fd471e3dd1bf7a216ca8eb28ad6e744887ee353c79e4387930025",
+      "pngSha256": "82c954734d262244df8da52918428a03a3b08bcea3664cd142aa4aaa5462ad6d"
+    },
+    {
+      "id": "story-3a-hot-streak",
+      "sourceSha256": "ea8df1789c4af28744408edfc97afe7c329e254386441dc734a876f088c91565",
+      "pngSha256": "b4712bd443c4387cca801e6e00736203eb76df68f1e0a417e7a3d7b4618fad0a"
+    },
+    {
+      "id": "story-3a-hot-streak.ar",
+      "sourceSha256": "7d304f0355468f1eb0e63d7ef87f84e416ad5ab8a0cb303e6a33432fb1a9f656",
+      "pngSha256": "9f60afe95614b609ce45b5a29195fda9a2a87cae112f2e18904e7bd45f6d72b7"
+    },
+    {
+      "id": "story-3a-hot-streak.ja",
+      "sourceSha256": "64f7e9af1505286980d8ced7c4c46be6ae4f61818ccb9013d0b3fc97eadd8b4e",
+      "pngSha256": "33f90182437997fe96785b1d80dd28e11b183927dccf1acc9d1cea3ca6d22e19"
+    },
+    {
+      "id": "story-3a-hot-streak.zh-CN",
+      "sourceSha256": "d6b66bc38335a45b9374d17c16e843cd06b127e7d2517694aba4be5e04ecfe56",
+      "pngSha256": "dac5d910c84f9f394e8118d9bcc7462b56bba29f062b39c2ea9a4ec6dd7fe76a"
+    },
+    {
+      "id": "story-3b-house-edge",
+      "sourceSha256": "2462ad4b3f854cdd11d9a6fbb595c61fff2b21a80ae172475034fcb5910bcad8",
+      "pngSha256": "0f77c4200af7635d4a07a6bd8fa119a8ba37219d34ccc6e114df48e88ed14ed7"
+    },
+    {
+      "id": "story-3b-house-edge.ar",
+      "sourceSha256": "29c8b9cd4fb8541ebffbae1b1c246a12abec6f87ea58456491931de3e2a192e0",
+      "pngSha256": "a0d23b3b2ca4beeb04effbef5e324ac19c9aac57284063fdea2a6d9703f806da"
+    },
+    {
+      "id": "story-3b-house-edge.ja",
+      "sourceSha256": "0b0f04c096fc020eb38c643a4c5c0d873631f0de0ae6799c8d6559ec1c513e01",
+      "pngSha256": "e4a175e296e2964a120ddf2a2e717c21e8200a0cc14d4b4b899c34c9ecb721f6"
+    },
+    {
+      "id": "story-3b-house-edge.zh-CN",
+      "sourceSha256": "2b2e1cb900b2c79743cf461fefd4defc5dc89d8ffc2e1f34f6682ab9c8fa32e7",
+      "pngSha256": "f15ca70867414d548f1ad3f1466ebe5691be314d9b31e72477ce7ff319509bea"
+    },
+    {
+      "id": "story-3c-sports-betting",
+      "sourceSha256": "fa4e21b7bc9afab3ba051c3b2ab490055813b8cb1c2b7c03a142294a74d32855",
+      "pngSha256": "8c3fe9a515a87e7e57d2519c910b2f255d02747f21d1a57b1b379fc143b94e70"
+    },
+    {
+      "id": "story-3c-sports-betting.ar",
+      "sourceSha256": "8eb98403e8dfadc750ff68415c5fd764e364eb0a09d9525ebfa6ccfad863c80d",
+      "pngSha256": "b9edd2b41167e9b124cbd44888f261bdc8ea3600532c7c7dc0a20c5f019d18c4"
+    },
+    {
+      "id": "story-3c-sports-betting.ja",
+      "sourceSha256": "2318c012b959483d29239feb940f9fe477cbb61875756cfd19b7ea8885475658",
+      "pngSha256": "b1a156ee8cec461cc2628ac0e5f3e96e9dde25253f4b82420cace03a405262b7"
+    },
+    {
+      "id": "story-3c-sports-betting.zh-CN",
+      "sourceSha256": "296066e1e2dcf0e603fdaad61d63f247afc91b9e16917c4d9b9f9fbe5a3b0eee",
+      "pngSha256": "c48f80d0e673273c9cd4ccb518269ae540eeb1fe3977e1a3886a17bcc0bb04aa"
+    },
+    {
+      "id": "support-page-10a",
+      "sourceSha256": "e49c29cbd8ad86d64981fc562e5627aa39baf829775e9e9522462a44c6259297",
+      "pngSha256": "33ae8ecfd457bb1394fb8a65908c888f5620f1745db9fab0be54366910af9dd6"
+    },
+    {
+      "id": "support-page-10a.ar",
+      "sourceSha256": "17eaf129b14da8ba584101590a8cb03dcf7fc771ede6a68bff025bb2ac9f5eb1",
+      "pngSha256": "26694d7dc396ff3be3c5ac114772840ee983691c7fa2da2a0e613f0a16f5623c"
+    },
+    {
+      "id": "support-page-10a.ja",
+      "sourceSha256": "e6921ad76b2208bf77f5793535e4b99360bd1345f59e6d4564476f9d24b62881",
+      "pngSha256": "63aa4fe6c13a1d0a2988811c58b5130b93fc6b5944a58768033309add5358342"
+    },
+    {
+      "id": "support-page-10a.zh-CN",
+      "sourceSha256": "6f9e6831e1063caae29555540440faa78af02cebc254333805b4b0e93b760464",
+      "pngSha256": "21ebef52d77cfb4608b798f624243598ef25b5e52be58b1bbe7df256050123ab"
+    },
+    {
+      "id": "table-tent-5b",
+      "sourceSha256": "bffe700ee7b308ab0b7195cf6652f94d956a2bb80beee58e9ee70d99f025368c",
+      "pngSha256": "89a294462e134c4c08f5866a52fd75dee65ed86d9ccb562e5784a9b7b52ce142"
+    },
+    {
+      "id": "table-tent-5b.ar",
+      "sourceSha256": "ee36c2b0148bd4aac12bbb9709235a924d31d6317c1e0aaa11d49b5d6c35dddf",
+      "pngSha256": "9cd2c8b04175ebba7690c85b0f7917143c0a9bf2d6c374db89cff14ed396aad0"
+    },
+    {
+      "id": "table-tent-5b.ja",
+      "sourceSha256": "37f4b406409a82c1e4f569c6e127719725fb0101cda4b59d11d8a83bd3e8fe2e",
+      "pngSha256": "eed0ef50c0ab185ae4f9780c4531ad507e039e0f9e6ba247288f8294ee3b9b8b"
+    },
+    {
+      "id": "table-tent-5b.zh-CN",
+      "sourceSha256": "240233300380a22fedb61108966b1f2f5eb5a7ebc716c6279e5d74914499957f",
+      "pngSha256": "cf8e24a9c4723d8d32af148c9fbd0ffdd046685e70451003ce1b95ca685174e2"
+    },
+    {
+      "id": "web-popup-12h",
+      "sourceSha256": "abd2a023b686e7b4df728f52b9c932c6959c4be6cdc0fc75eea31deb49716898",
+      "pngSha256": "0aceb71cfc9857058eaef1d9f1c5128440f28b6af7f67570e281462c7217a082"
+    },
+    {
+      "id": "web-popup-12h.ar",
+      "sourceSha256": "d60861a9b1e9ed1024246f0ec55fc062d8ec44172579b3e0f0b7247c42acdbca",
+      "pngSha256": "0fdb750cedf08063868376536a12c9053b3a2159fd6e89188b95f9e6401e17c2"
+    },
+    {
+      "id": "web-popup-12h.ja",
+      "sourceSha256": "26b5517fd3a1eacc882cff88b3c4c0c0d3679790a966eb5021e49d7c67091315",
+      "pngSha256": "4d2a7676381e6881f2377afe1ac8ee839444188d99da513b54266174704c23b7"
+    },
+    {
+      "id": "web-popup-12h.zh-CN",
+      "sourceSha256": "df983f3d300685f34ed8ba53abc07e4dc1483e42dcfa3bc2a52ebe8760d89ae6",
+      "pngSha256": "0c82985af5c18644990b23968da109097e721fcf5d3ced4ce2656bca2e6afc36"
+    },
+    {
+      "id": "withdrawal-confirm-12f",
+      "sourceSha256": "8a4854336923a13783e0c87f2db196d5f3f2a60421dfd46182cf638c02b281a3",
+      "pngSha256": "9d10a83823c4c36e838b28971c0e82b80a0ec17a555334f0abede64ea8d20497"
+    },
+    {
+      "id": "withdrawal-confirm-12f.ar",
+      "sourceSha256": "e33664d5a03a6e3f43c46340c5de9c8ea796f30dfd48677add81e642c6973a69",
+      "pngSha256": "a248279efca49aa9bc26e02404a2d00a985936152e8c6ea50c0278edf5ffa3ef"
+    },
+    {
+      "id": "withdrawal-confirm-12f.ja",
+      "sourceSha256": "12693ca43ba9eed2da206c67d8cc149d3a65eb51f5ef30a2de20945b2408b776",
+      "pngSha256": "8806ef79fe4d12ecac781b770e6b618a9bf91e41c074f996f0b773bc0bfd4618"
+    },
+    {
+      "id": "withdrawal-confirm-12f.zh-CN",
+      "sourceSha256": "2bc36c768b3649cb407fc692e1a88bee6c42d3126b4d6ebec7e756d03ab77e36",
+      "pngSha256": "1af311aa829e6c7c55a5f631c19a51e9d239a3b9d45e8a50cdddd325f3366234"
+    }
+  ]
+}

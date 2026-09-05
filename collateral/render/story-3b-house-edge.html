@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -37,29 +35,30 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card" data-layout="two-comparisons">
+<div class="story-card pb-creative" data-layout="two-comparisons">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">Real Odds</span>
   </div>
   <div class="story-body">
     <div class="eyebrow">Did you know?</div>
-    <div class="headline">Blackjack has a <span class="teal">0.5%</span> house edge with basic strategy</div>
+    <div class="headline">Same stake.<br>Different math.</div>
     <div class="odds-list">
       <div class="odds-row">
-        <div><div class="game">Blackjack</div><div class="note">Basic strategy</div></div>
+        <div><div class="game">Blackjack</div><div class="note">Favorable rules + basic strategy</div></div>
         <div class="edge teal">0.5%</div>
       </div>
       <div class="odds-row">
-        <div><div class="game">American Roulette</div><div class="note">Double zero</div></div>
+        <div><div class="game">American Roulette</div><div class="note">Most bets; five-number: 7.89%</div></div>
         <div class="edge orange">5.26%</div>
       </div>
     </div>
     <a href="#" class="story-cta">See the full breakdown</a>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

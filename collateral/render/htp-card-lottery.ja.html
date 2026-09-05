@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">仕組み</div>
     <div class="game-name">宝くじ</div>
-    <div class="key-fact">どの番号も<strong>当たる確率は同じ</strong>です。誕生日、法則、「幸運の」番号を選んでも、確率は変わりません。</div>
+    <div class="key-fact">公平な6/49抽選では、6つの数字のどの組み合わせも同じ確率です。誕生日を選んでも確率は上がりません。</div>
     <div class="stat-block">
-      <span class="stat-number">45〜50%</span>
-      <span class="stat-unit">主要な抽選ゲームの<br>ハウスエッジ</span>
+      <span class="stat-number">約1/1400万</span>
+      <span class="stat-unit">6/49で<br>6つすべてが一致する確率</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
