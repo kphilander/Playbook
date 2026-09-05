@@ -1,0 +1,1235 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "type",
+      "name": "Typography"
+    },
+    {
+      "id": "color",
+      "name": "Color"
+    },
+    {
+      "id": "layout",
+      "name": "Composition"
+    },
+    {
+      "id": "photo",
+      "name": "Photography"
+    },
+    {
+      "id": "data",
+      "name": "Numbers"
+    },
+    {
+      "id": "shape",
+      "name": "Shape & depth"
+    },
+    {
+      "id": "action",
+      "name": "Calls to action"
+    },
+    {
+      "id": "support",
+      "name": "Support"
+    }
+  ],
+  "pairs": [
+    {
+      "id": "type-serif",
+      "category": "type",
+      "kind": "lifestyle",
+      "number": 1,
+      "title": "A more editorial voice",
+      "beforeLabel": "Confident sans serif",
+      "afterLabel": "Expressive serif",
+      "variable": "Headline family",
+      "rationale": "Fraunces brings an editorial, hospitality feel. Inter keeps the message direct and familiar.",
+      "before": {
+        "id": "reference-lifestyle",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-lifestyle.html",
+        "png": "renders/reference-lifestyle.png"
+      },
+      "after": {
+        "id": "type-serif",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/type-serif.html",
+        "png": "renders/type-serif.png"
+      }
+    },
+    {
+      "id": "type-rounded",
+      "category": "type",
+      "kind": "odds",
+      "number": 2,
+      "title": "A softer kind of confidence",
+      "beforeLabel": "Inter headline",
+      "afterLabel": "Manrope headline",
+      "variable": "Headline family",
+      "rationale": "Manrope adds warmth through its rounder letterforms without turning the content casual.",
+      "before": {
+        "id": "reference-odds",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-odds.html",
+        "png": "renders/reference-odds.png"
+      },
+      "after": {
+        "id": "type-rounded",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/type-rounded.html",
+        "png": "renders/type-rounded.png"
+      }
+    },
+    {
+      "id": "type-geometric",
+      "category": "type",
+      "kind": "quiz",
+      "number": 3,
+      "title": "A little more digital",
+      "beforeLabel": "Inter headline",
+      "afterLabel": "Space Grotesk headline",
+      "variable": "Headline family",
+      "rationale": "Space Grotesk gives the question a game-interface character; body type and spacing stay fixed.",
+      "before": {
+        "id": "reference-quiz",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/reference-quiz.html",
+        "png": "renders/reference-quiz.png"
+      },
+      "after": {
+        "id": "type-geometric",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/type-geometric.html",
+        "png": "renders/type-geometric.png"
+      }
+    },
+    {
+      "id": "type-heavy",
+      "category": "type",
+      "kind": "poster",
+      "number": 4,
+      "title": "How loud should the headline be?",
+      "beforeLabel": "Bold Inter",
+      "afterLabel": "Archivo Black",
+      "variable": "Headline family and weight",
+      "rationale": "A denser display face adds poster energy. The words, scale, color and composition stay the same.",
+      "before": {
+        "id": "reference-poster",
+        "kind": "poster",
+        "format": "Poster concept",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-poster.html",
+        "png": "renders/reference-poster.png"
+      },
+      "after": {
+        "id": "type-heavy",
+        "kind": "poster",
+        "format": "Poster concept",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/type-heavy.html",
+        "png": "renders/type-heavy.png"
+      }
+    },
+    {
+      "id": "color-paper",
+      "category": "color",
+      "kind": "odds",
+      "number": 5,
+      "title": "Cool clarity or warm paper?",
+      "beforeLabel": "Navy, cool white, emerald",
+      "afterLabel": "Ink, paper, brass",
+      "variable": "Palette",
+      "rationale": "Warm neutrals and a sparing brass accent suggest print and hospitality. The layout stays identical.",
+      "before": {
+        "id": "reference-odds",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-odds.html",
+        "png": "renders/reference-odds.png"
+      },
+      "after": {
+        "id": "color-paper",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/color-paper.html",
+        "png": "renders/color-paper.png"
+      }
+    },
+    {
+      "id": "color-forest",
+      "category": "color",
+      "kind": "lifestyle",
+      "number": 6,
+      "title": "Light canvas or deep forest?",
+      "beforeLabel": "Light with emerald",
+      "afterLabel": "Forest with chartreuse",
+      "variable": "Palette",
+      "rationale": "A deep green field gives the photograph a richer setting. The same image, type and crop remain.",
+      "before": {
+        "id": "reference-lifestyle",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-lifestyle.html",
+        "png": "renders/reference-lifestyle.png"
+      },
+      "after": {
+        "id": "color-forest",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/color-forest.html",
+        "png": "renders/color-forest.png"
+      }
+    },
+    {
+      "id": "color-midnight",
+      "category": "color",
+      "kind": "quiz",
+      "number": 7,
+      "title": "Daylight or after dark?",
+      "beforeLabel": "Light with emerald",
+      "afterLabel": "Midnight with lime",
+      "variable": "Palette",
+      "rationale": "A dark violet surface and lime accents create digital energy without adding extra decoration.",
+      "before": {
+        "id": "reference-quiz",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/reference-quiz.html",
+        "png": "renders/reference-quiz.png"
+      },
+      "after": {
+        "id": "color-midnight",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/color-midnight.html",
+        "png": "renders/color-midnight.png"
+      }
+    },
+    {
+      "id": "color-cobalt",
+      "category": "color",
+      "kind": "poster",
+      "number": 8,
+      "title": "Classic green or playful cobalt?",
+      "beforeLabel": "Navy and emerald",
+      "afterLabel": "Cobalt and coral",
+      "variable": "Palette",
+      "rationale": "Cobalt makes the poster more expressive; coral carries the supporting panel. Type and placement stay fixed.",
+      "before": {
+        "id": "reference-poster",
+        "kind": "poster",
+        "format": "Poster concept",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-poster.html",
+        "png": "renders/reference-poster.png"
+      },
+      "after": {
+        "id": "color-cobalt",
+        "kind": "poster",
+        "format": "Poster concept",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/color-cobalt.html",
+        "png": "renders/color-cobalt.png"
+      }
+    },
+    {
+      "id": "color-peach",
+      "category": "color",
+      "kind": "email",
+      "number": 9,
+      "title": "A warmer welcome",
+      "beforeLabel": "Cool white and emerald",
+      "afterLabel": "Cream and terracotta",
+      "variable": "Palette",
+      "rationale": "A warm email treatment feels more like a hospitality note. The reading order and button remain unchanged.",
+      "before": {
+        "id": "reference-email",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/reference-email.html",
+        "png": "renders/reference-email.png"
+      },
+      "after": {
+        "id": "color-peach",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/color-peach.html",
+        "png": "renders/color-peach.png"
+      }
+    },
+    {
+      "id": "layout-photo-first",
+      "category": "layout",
+      "kind": "lifestyle",
+      "number": 10,
+      "title": "What should lead: words or people?",
+      "beforeLabel": "Headline first",
+      "afterLabel": "Photograph first",
+      "variable": "Reading order",
+      "rationale": "The image moves above the headline. This tests whether the social moment or the message should get the first glance.",
+      "before": {
+        "id": "reference-lifestyle",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-lifestyle.html",
+        "png": "renders/reference-lifestyle.png"
+      },
+      "after": {
+        "id": "layout-photo-first",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/layout-photo-first.html",
+        "png": "renders/layout-photo-first.png"
+      }
+    },
+    {
+      "id": "layout-centered",
+      "category": "layout",
+      "kind": "poster",
+      "number": 11,
+      "title": "Editorial edge or centered statement?",
+      "beforeLabel": "Left aligned",
+      "afterLabel": "Centered",
+      "variable": "Alignment",
+      "rationale": "A centered axis gives a short poster a more ceremonial feel. A left edge feels conversational and easy to scan.",
+      "before": {
+        "id": "reference-poster",
+        "kind": "poster",
+        "format": "Poster concept",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-poster.html",
+        "png": "renders/reference-poster.png"
+      },
+      "after": {
+        "id": "layout-centered",
+        "kind": "poster",
+        "format": "Poster concept",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/layout-centered.html",
+        "png": "renders/layout-centered.png"
+      }
+    },
+    {
+      "id": "layout-open",
+      "category": "layout",
+      "kind": "email",
+      "number": 12,
+      "title": "A card or an open letter?",
+      "beforeLabel": "Contained email card",
+      "afterLabel": "Open editorial layout",
+      "variable": "Content container",
+      "rationale": "Removing the outer card creates an open letter on the same canvas. The internal content and spacing stay fixed.",
+      "before": {
+        "id": "reference-email",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/reference-email.html",
+        "png": "renders/reference-email.png"
+      },
+      "after": {
+        "id": "layout-open",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/layout-open.html",
+        "png": "renders/layout-open.png"
+      }
+    },
+    {
+      "id": "layout-compact",
+      "category": "layout",
+      "kind": "odds",
+      "number": 13,
+      "title": "Rows or columns?",
+      "beforeLabel": "Stacked total and split detail",
+      "afterLabel": "Three equal columns",
+      "variable": "Data arrangement",
+      "rationale": "An equal three-column layout gives all figures the same rank. The stacked version emphasizes the total.",
+      "before": {
+        "id": "reference-odds",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-odds.html",
+        "png": "renders/reference-odds.png"
+      },
+      "after": {
+        "id": "layout-compact",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/layout-compact.html",
+        "png": "renders/layout-compact.png"
+      }
+    },
+    {
+      "id": "photo-arch",
+      "category": "photo",
+      "kind": "lifestyle",
+      "number": 14,
+      "title": "Straight frame or architectural arch?",
+      "beforeLabel": "Rectangular frame",
+      "afterLabel": "Arched frame",
+      "variable": "Photograph mask",
+      "rationale": "An arch adds a hospitality cue while keeping the image, crop and placement fixed.",
+      "before": {
+        "id": "reference-lifestyle",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-lifestyle.html",
+        "png": "renders/reference-lifestyle.png"
+      },
+      "after": {
+        "id": "photo-arch",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/photo-arch.html",
+        "png": "renders/photo-arch.png"
+      }
+    },
+    {
+      "id": "photo-bleed",
+      "category": "photo",
+      "kind": "lifestyle",
+      "number": 15,
+      "title": "Framed or edge to edge?",
+      "beforeLabel": "Inset photograph",
+      "afterLabel": "Full-width photograph",
+      "variable": "Photograph width",
+      "rationale": "Taking the photograph to the edge makes the scene more immersive. Text keeps its original margins.",
+      "before": {
+        "id": "reference-lifestyle",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-lifestyle.html",
+        "png": "renders/reference-lifestyle.png"
+      },
+      "after": {
+        "id": "photo-bleed",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/photo-bleed.html",
+        "png": "renders/photo-bleed.png"
+      }
+    },
+    {
+      "id": "photo-close",
+      "category": "photo",
+      "kind": "lifestyle",
+      "number": 16,
+      "title": "More place or more expression?",
+      "beforeLabel": "Environmental crop",
+      "afterLabel": "Closer social crop",
+      "variable": "Photograph crop",
+      "rationale": "A closer crop gives faces more presence. The wider view gives the casino lounge more context.",
+      "before": {
+        "id": "reference-lifestyle",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-lifestyle.html",
+        "png": "renders/reference-lifestyle.png"
+      },
+      "after": {
+        "id": "photo-close",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/photo-close.html",
+        "png": "renders/photo-close.png"
+      }
+    },
+    {
+      "id": "photo-cafe",
+      "category": "photo",
+      "kind": "lifestyle",
+      "number": 17,
+      "title": "In the venue or in everyday life?",
+      "beforeLabel": "Casino conversation",
+      "afterLabel": "Café conversation",
+      "variable": "Photograph subject and setting",
+      "rationale": "Two adult social scenes test the relevance of a casino setting against a more everyday moment. Frame and message stay fixed.",
+      "before": {
+        "id": "reference-lifestyle",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-lifestyle.html",
+        "png": "renders/reference-lifestyle.png"
+      },
+      "after": {
+        "id": "photo-cafe",
+        "kind": "lifestyle",
+        "format": "Lifestyle social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/photo-cafe.html",
+        "png": "renders/photo-cafe.png"
+      }
+    },
+    {
+      "id": "data-ledger",
+      "category": "data",
+      "kind": "odds",
+      "number": 18,
+      "title": "Panels or a quiet ledger?",
+      "beforeLabel": "Filled data panels",
+      "afterLabel": "Fine rules and open space",
+      "variable": "Data surface treatment",
+      "rationale": "An unboxed ledger feels more editorial. Filled panels make the groups easier to distinguish at a glance.",
+      "before": {
+        "id": "reference-odds",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-odds.html",
+        "png": "renders/reference-odds.png"
+      },
+      "after": {
+        "id": "data-ledger",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/data-ledger.html",
+        "png": "renders/data-ledger.png"
+      }
+    },
+    {
+      "id": "data-dominant",
+      "category": "data",
+      "kind": "odds",
+      "number": 19,
+      "title": "Which number gets the spotlight?",
+      "beforeLabel": "Balanced figures",
+      "afterLabel": "Oversized total",
+      "variable": "Numerical hierarchy",
+      "rationale": "A larger total makes the return the first thing you see. The stake and profit stay clearly labeled.",
+      "before": {
+        "id": "reference-odds",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-odds.html",
+        "png": "renders/reference-odds.png"
+      },
+      "after": {
+        "id": "data-dominant",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/data-dominant.html",
+        "png": "renders/data-dominant.png"
+      }
+    },
+    {
+      "id": "data-sans",
+      "category": "data",
+      "kind": "odds",
+      "number": 20,
+      "title": "Technical or conversational numbers?",
+      "beforeLabel": "Monospace figures",
+      "afterLabel": "Sans serif figures",
+      "variable": "Numeral family",
+      "rationale": "Source Code Pro feels precise; Inter brings the data closer to the rest of the voice. Values and size stay fixed.",
+      "before": {
+        "id": "reference-odds",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/reference-odds.html",
+        "png": "renders/reference-odds.png"
+      },
+      "after": {
+        "id": "data-sans",
+        "kind": "odds",
+        "format": "Odds social",
+        "width": 1080,
+        "height": 1350,
+        "html": "masters/data-sans.html",
+        "png": "renders/data-sans.png"
+      }
+    },
+    {
+      "id": "shape-soft",
+      "category": "shape",
+      "kind": "quiz",
+      "number": 21,
+      "title": "A little softer around the edges",
+      "beforeLabel": "Modest corners",
+      "afterLabel": "Generous corners",
+      "variable": "Corner radius",
+      "rationale": "Large corners make answer cards feel more approachable. Color, spacing and labels are unchanged.",
+      "before": {
+        "id": "reference-quiz",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/reference-quiz.html",
+        "png": "renders/reference-quiz.png"
+      },
+      "after": {
+        "id": "shape-soft",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/shape-soft.html",
+        "png": "renders/shape-soft.png"
+      }
+    },
+    {
+      "id": "shape-square",
+      "category": "shape",
+      "kind": "quiz",
+      "number": 22,
+      "title": "A sharper edge",
+      "beforeLabel": "Modest corners",
+      "afterLabel": "Square corners",
+      "variable": "Corner radius",
+      "rationale": "Square geometry brings a more editorial discipline. The card border and content stay fixed.",
+      "before": {
+        "id": "reference-quiz",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/reference-quiz.html",
+        "png": "renders/reference-quiz.png"
+      },
+      "after": {
+        "id": "shape-square",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/shape-square.html",
+        "png": "renders/shape-square.png"
+      }
+    },
+    {
+      "id": "shape-shadow",
+      "category": "shape",
+      "kind": "quiz",
+      "number": 23,
+      "title": "Flat or tactile?",
+      "beforeLabel": "Flat cards",
+      "afterLabel": "Solid offset shadows",
+      "variable": "Card depth",
+      "rationale": "A small hard shadow gives the cards a tactile game-piece quality without gradients or gloss.",
+      "before": {
+        "id": "reference-quiz",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/reference-quiz.html",
+        "png": "renders/reference-quiz.png"
+      },
+      "after": {
+        "id": "shape-shadow",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/shape-shadow.html",
+        "png": "renders/shape-shadow.png"
+      }
+    },
+    {
+      "id": "shape-angular",
+      "category": "shape",
+      "kind": "quiz",
+      "number": 24,
+      "title": "Soft geometry or cut corners?",
+      "beforeLabel": "Rounded answer cards",
+      "afterLabel": "Angular answer cards",
+      "variable": "Card silhouette",
+      "rationale": "Cut corners introduce a digital visual cue. The content and visual hierarchy remain the same.",
+      "before": {
+        "id": "reference-quiz",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/reference-quiz.html",
+        "png": "renders/reference-quiz.png"
+      },
+      "after": {
+        "id": "shape-angular",
+        "kind": "quiz",
+        "format": "Quiz interface",
+        "width": 540,
+        "height": 800,
+        "html": "masters/shape-angular.html",
+        "png": "renders/shape-angular.png"
+      }
+    },
+    {
+      "id": "cta-outline",
+      "category": "action",
+      "kind": "email",
+      "number": 25,
+      "title": "How much emphasis should an action carry?",
+      "beforeLabel": "Filled button",
+      "afterLabel": "Outlined button",
+      "variable": "Button fill",
+      "rationale": "A filled action is more prominent. An outline keeps the email quieter while preserving the same target size.",
+      "before": {
+        "id": "reference-email",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/reference-email.html",
+        "png": "renders/reference-email.png"
+      },
+      "after": {
+        "id": "cta-outline",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/cta-outline.html",
+        "png": "renders/cta-outline.png"
+      }
+    },
+    {
+      "id": "cta-pill",
+      "category": "action",
+      "kind": "email",
+      "number": 26,
+      "title": "A button with a softer silhouette",
+      "beforeLabel": "Modest corners",
+      "afterLabel": "Pill-shaped button",
+      "variable": "Button radius",
+      "rationale": "A pill adds a more social, welcoming cue. Size, color and wording stay fixed.",
+      "before": {
+        "id": "reference-email",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/reference-email.html",
+        "png": "renders/reference-email.png"
+      },
+      "after": {
+        "id": "cta-pill",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/cta-pill.html",
+        "png": "renders/cta-pill.png"
+      }
+    },
+    {
+      "id": "cta-inline",
+      "category": "action",
+      "kind": "email",
+      "number": 27,
+      "title": "Product action or editorial invitation?",
+      "beforeLabel": "Filled button",
+      "afterLabel": "Underlined text action",
+      "variable": "Action presentation",
+      "rationale": "A text action makes the message read like an editorial note. The filled button gives the next step more presence.",
+      "before": {
+        "id": "reference-email",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/reference-email.html",
+        "png": "renders/reference-email.png"
+      },
+      "after": {
+        "id": "cta-inline",
+        "kind": "email",
+        "format": "Email concept",
+        "width": 720,
+        "height": 1050,
+        "html": "masters/cta-inline.html",
+        "png": "renders/cta-inline.png"
+      }
+    },
+    {
+      "id": "support-warm",
+      "category": "support",
+      "kind": "support",
+      "number": 28,
+      "title": "Warmth without added noise",
+      "beforeLabel": "Cool neutral surface",
+      "afterLabel": "Warm neutral surface",
+      "variable": "Support palette",
+      "rationale": "A cream surface and forest accent add warmth. Contact order, language and contrast remain clear.",
+      "before": {
+        "id": "reference-support",
+        "kind": "support",
+        "format": "Support panel",
+        "width": 420,
+        "height": 740,
+        "html": "masters/reference-support.html",
+        "png": "renders/reference-support.png"
+      },
+      "after": {
+        "id": "support-warm",
+        "kind": "support",
+        "format": "Support panel",
+        "width": 420,
+        "height": 740,
+        "html": "masters/support-warm.html",
+        "png": "renders/support-warm.png"
+      }
+    },
+    {
+      "id": "support-open",
+      "category": "support",
+      "kind": "support",
+      "number": 29,
+      "title": "Does support need a container?",
+      "beforeLabel": "Contact card",
+      "afterLabel": "Open contact block",
+      "variable": "Contact container",
+      "rationale": "Removing the filled panel makes the contact feel integrated into the page. The same button and wording remain.",
+      "before": {
+        "id": "reference-support",
+        "kind": "support",
+        "format": "Support panel",
+        "width": 420,
+        "height": 740,
+        "html": "masters/reference-support.html",
+        "png": "renders/reference-support.png"
+      },
+      "after": {
+        "id": "support-open",
+        "kind": "support",
+        "format": "Support panel",
+        "width": 420,
+        "height": 740,
+        "html": "masters/support-open.html",
+        "png": "renders/support-open.png"
+      }
+    },
+    {
+      "id": "support-first",
+      "category": "support",
+      "kind": "support",
+      "number": 30,
+      "title": "Reassurance first or contact first?",
+      "beforeLabel": "Introduction before contact",
+      "afterLabel": "Contact before introduction",
+      "variable": "Support reading order",
+      "rationale": "Moving the contact up makes it available earlier. Both versions keep the same warm, direct language.",
+      "before": {
+        "id": "reference-support",
+        "kind": "support",
+        "format": "Support panel",
+        "width": 420,
+        "height": 740,
+        "html": "masters/reference-support.html",
+        "png": "renders/reference-support.png"
+      },
+      "after": {
+        "id": "support-first",
+        "kind": "support",
+        "format": "Support panel",
+        "width": 420,
+        "height": 740,
+        "html": "masters/support-first.html",
+        "png": "renders/support-first.png"
+      }
+    }
+  ],
+  "entries": [
+    {
+      "id": "reference-odds",
+      "kind": "odds",
+      "format": "Odds social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/reference-odds.html",
+      "png": "renders/reference-odds.png"
+    },
+    {
+      "id": "reference-lifestyle",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/reference-lifestyle.html",
+      "png": "renders/reference-lifestyle.png"
+    },
+    {
+      "id": "reference-poster",
+      "kind": "poster",
+      "format": "Poster concept",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/reference-poster.html",
+      "png": "renders/reference-poster.png"
+    },
+    {
+      "id": "reference-email",
+      "kind": "email",
+      "format": "Email concept",
+      "width": 720,
+      "height": 1050,
+      "html": "masters/reference-email.html",
+      "png": "renders/reference-email.png"
+    },
+    {
+      "id": "reference-quiz",
+      "kind": "quiz",
+      "format": "Quiz interface",
+      "width": 540,
+      "height": 800,
+      "html": "masters/reference-quiz.html",
+      "png": "renders/reference-quiz.png"
+    },
+    {
+      "id": "reference-support",
+      "kind": "support",
+      "format": "Support panel",
+      "width": 420,
+      "height": 740,
+      "html": "masters/reference-support.html",
+      "png": "renders/reference-support.png"
+    },
+    {
+      "id": "type-serif",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/type-serif.html",
+      "png": "renders/type-serif.png"
+    },
+    {
+      "id": "type-rounded",
+      "kind": "odds",
+      "format": "Odds social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/type-rounded.html",
+      "png": "renders/type-rounded.png"
+    },
+    {
+      "id": "type-geometric",
+      "kind": "quiz",
+      "format": "Quiz interface",
+      "width": 540,
+      "height": 800,
+      "html": "masters/type-geometric.html",
+      "png": "renders/type-geometric.png"
+    },
+    {
+      "id": "type-heavy",
+      "kind": "poster",
+      "format": "Poster concept",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/type-heavy.html",
+      "png": "renders/type-heavy.png"
+    },
+    {
+      "id": "color-paper",
+      "kind": "odds",
+      "format": "Odds social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/color-paper.html",
+      "png": "renders/color-paper.png"
+    },
+    {
+      "id": "color-forest",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/color-forest.html",
+      "png": "renders/color-forest.png"
+    },
+    {
+      "id": "color-midnight",
+      "kind": "quiz",
+      "format": "Quiz interface",
+      "width": 540,
+      "height": 800,
+      "html": "masters/color-midnight.html",
+      "png": "renders/color-midnight.png"
+    },
+    {
+      "id": "color-cobalt",
+      "kind": "poster",
+      "format": "Poster concept",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/color-cobalt.html",
+      "png": "renders/color-cobalt.png"
+    },
+    {
+      "id": "color-peach",
+      "kind": "email",
+      "format": "Email concept",
+      "width": 720,
+      "height": 1050,
+      "html": "masters/color-peach.html",
+      "png": "renders/color-peach.png"
+    },
+    {
+      "id": "layout-photo-first",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/layout-photo-first.html",
+      "png": "renders/layout-photo-first.png"
+    },
+    {
+      "id": "layout-centered",
+      "kind": "poster",
+      "format": "Poster concept",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/layout-centered.html",
+      "png": "renders/layout-centered.png"
+    },
+    {
+      "id": "layout-open",
+      "kind": "email",
+      "format": "Email concept",
+      "width": 720,
+      "height": 1050,
+      "html": "masters/layout-open.html",
+      "png": "renders/layout-open.png"
+    },
+    {
+      "id": "layout-compact",
+      "kind": "odds",
+      "format": "Odds social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/layout-compact.html",
+      "png": "renders/layout-compact.png"
+    },
+    {
+      "id": "photo-arch",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/photo-arch.html",
+      "png": "renders/photo-arch.png"
+    },
+    {
+      "id": "photo-bleed",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/photo-bleed.html",
+      "png": "renders/photo-bleed.png"
+    },
+    {
+      "id": "photo-close",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/photo-close.html",
+      "png": "renders/photo-close.png"
+    },
+    {
+      "id": "photo-cafe",
+      "kind": "lifestyle",
+      "format": "Lifestyle social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/photo-cafe.html",
+      "png": "renders/photo-cafe.png"
+    },
+    {
+      "id": "data-ledger",
+      "kind": "odds",
+      "format": "Odds social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/data-ledger.html",
+      "png": "renders/data-ledger.png"
+    },
+    {
+      "id": "data-dominant",
+      "kind": "odds",
+      "format": "Odds social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/data-dominant.html",
+      "png": "renders/data-dominant.png"
+    },
+    {
+      "id": "data-sans",
+      "kind": "odds",
+      "format": "Odds social",
+      "width": 1080,
+      "height": 1350,
+      "html": "masters/data-sans.html",
+      "png": "renders/data-sans.png"
+    },
+    {
+      "id": "shape-soft",
+      "kind": "quiz",
+      "format": "Quiz interface",
+      "width": 540,
+      "height": 800,
+      "html": "masters/shape-soft.html",
+      "png": "renders/shape-soft.png"
+    },
+    {
+      "id": "shape-square",
+      "kind": "quiz",
+      "format": "Quiz interface",
+      "width": 540,
+      "height": 800,
+      "html": "masters/shape-square.html",
+      "png": "renders/shape-square.png"
+    },
+    {
+      "id": "shape-shadow",
+      "kind": "quiz",
+      "format": "Quiz interface",
+      "width": 540,
+      "height": 800,
+      "html": "masters/shape-shadow.html",
+      "png": "renders/shape-shadow.png"
+    },
+    {
+      "id": "shape-angular",
+      "kind": "quiz",
+      "format": "Quiz interface",
+      "width": 540,
+      "height": 800,
+      "html": "masters/shape-angular.html",
+      "png": "renders/shape-angular.png"
+    },
+    {
+      "id": "cta-outline",
+      "kind": "email",
+      "format": "Email concept",
+      "width": 720,
+      "height": 1050,
+      "html": "masters/cta-outline.html",
+      "png": "renders/cta-outline.png"
+    },
+    {
+      "id": "cta-pill",
+      "kind": "email",
+      "format": "Email concept",
+      "width": 720,
+      "height": 1050,
+      "html": "masters/cta-pill.html",
+      "png": "renders/cta-pill.png"
+    },
+    {
+      "id": "cta-inline",
+      "kind": "email",
+      "format": "Email concept",
+      "width": 720,
+      "height": 1050,
+      "html": "masters/cta-inline.html",
+      "png": "renders/cta-inline.png"
+    },
+    {
+      "id": "support-warm",
+      "kind": "support",
+      "format": "Support panel",
+      "width": 420,
+      "height": 740,
+      "html": "masters/support-warm.html",
+      "png": "renders/support-warm.png"
+    },
+    {
+      "id": "support-open",
+      "kind": "support",
+      "format": "Support panel",
+      "width": 420,
+      "height": 740,
+      "html": "masters/support-open.html",
+      "png": "renders/support-open.png"
+    },
+    {
+      "id": "support-first",
+      "kind": "support",
+      "format": "Support panel",
+      "width": 420,
+      "height": 740,
+      "html": "masters/support-first.html",
+      "png": "renders/support-first.png"
+    }
+  ]
+}

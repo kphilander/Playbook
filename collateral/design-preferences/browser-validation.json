@@ -1,0 +1,142 @@
+{
+  "checks": [
+    {
+      "name": "Thirty comparisons, sixty before/after placements",
+      "pass": true
+    },
+    {
+      "name": "All preview images load",
+      "pass": true
+    },
+    {
+      "name": "Category Typography",
+      "pass": true
+    },
+    {
+      "name": "Category Color",
+      "pass": true
+    },
+    {
+      "name": "Category Composition",
+      "pass": true
+    },
+    {
+      "name": "Category Photography",
+      "pass": true
+    },
+    {
+      "name": "Category Numbers",
+      "pass": true
+    },
+    {
+      "name": "Category Shape & depth",
+      "pass": true
+    },
+    {
+      "name": "Category Calls to action",
+      "pass": true
+    },
+    {
+      "name": "Category Support",
+      "pass": true
+    },
+    {
+      "name": "Every preference state is recorded",
+      "pass": true
+    },
+    {
+      "name": "Choices and notes survive reload",
+      "pass": true
+    },
+    {
+      "name": "Reviewed filter",
+      "pass": true
+    },
+    {
+      "name": "Still to review filter",
+      "pass": true
+    },
+    {
+      "name": "Prefer after filter",
+      "pass": true
+    },
+    {
+      "name": "Prefer before filter",
+      "pass": true
+    },
+    {
+      "name": "One at a time view",
+      "pass": true
+    },
+    {
+      "name": "Focus position survives URL reload",
+      "pass": true
+    },
+    {
+      "name": "Navigation beside choices advances the comparison",
+      "pass": true
+    },
+    {
+      "name": "Full-size before preview opens",
+      "pass": true
+    },
+    {
+      "name": "Full-size preview switches to after",
+      "pass": true
+    },
+    {
+      "name": "Escape closes and restores preview focus",
+      "pass": true
+    },
+    {
+      "name": "Brief contains choices, both/neither and literal notes",
+      "pass": true
+    },
+    {
+      "name": "Export brief matches saved choices and pending work",
+      "pass": true
+    },
+    {
+      "name": "Backup round trip preserves choices",
+      "pass": true
+    },
+    {
+      "name": "Download buttons produce the actual brief and backup",
+      "pass": true
+    },
+    {
+      "name": "Restore merges choices and keeps prior work",
+      "pass": true
+    },
+    {
+      "name": "Malformed entries are constrained to known studies and bounded notes",
+      "pass": true
+    },
+    {
+      "name": "Unsupported backup versions rejected",
+      "pass": true
+    },
+    {
+      "name": "Clearing a choice preserves its note",
+      "pass": true
+    },
+    {
+      "name": "Mobile page fits 390px",
+      "pass": true
+    },
+    {
+      "name": "Mobile preview fits viewport",
+      "pass": true
+    },
+    {
+      "name": "Mobile brief fits viewport",
+      "pass": true
+    },
+    {
+      "name": "Review remains usable when browser storage is blocked",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}
