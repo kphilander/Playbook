@@ -1,7 +1,7 @@
 {
   "checks": [
     {
-      "name": "Thirty comparisons, sixty before/after placements",
+      "name": "Complete comparison and before/after inventory",
       "pass": true
     },
     {
@@ -38,6 +38,10 @@
     },
     {
       "name": "Category Support",
+      "pass": true
+    },
+    {
+      "name": "Category Message placement",
       "pass": true
     },
     {
@@ -134,6 +138,42 @@
     },
     {
       "name": "Review remains usable when browser storage is blocked",
+      "pass": true
+    },
+    {
+      "name": "New-round deep link opens the first concept",
+      "pass": true
+    },
+    {
+      "name": "Total progress includes the new round",
+      "pass": true
+    },
+    {
+      "name": "Eight new concepts have visible market context",
+      "pass": true
+    },
+    {
+      "name": "Full-size concept retains its scope note",
+      "pass": true
+    },
+    {
+      "name": "On-screen brief retains concept assumptions",
+      "pass": true
+    },
+    {
+      "name": "Export carries assumptions and earlier notes",
+      "pass": true
+    },
+    {
+      "name": "New concept category fits mobile",
+      "pass": true
+    },
+    {
+      "name": "Mobile concept viewer retains the correct market",
+      "pass": true
+    },
+    {
+      "name": "UK and Australian specimens use their intended contact context",
       "pass": true
     }
   ],

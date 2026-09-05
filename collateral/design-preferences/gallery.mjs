@@ -18,6 +18,9 @@ function updateProgress() {
   const n = data.pairs.filter(p=>choices[p.id]?.choice).length;
   $('progress-count').textContent = `${n} of ${data.pairs.length} reviewed`;
   $('progress').value = n;
+  $('progress').max = data.pairs.length;
+  $('study-count').textContent = `${data.pairs.length} choices. Your point of view.`;
+  $('clear-filters').textContent = `Show all ${data.pairs.length}`;
   $('save-status').textContent = saving ? 'Saved in this browser. Export to keep a copy.' : 'Browser saving unavailable. Export to keep your choices.';
   $('categories').innerHTML = [{id:'all',name:'All choices'},...data.categories].map(c=>{
     const group=data.pairs.filter(p=>c.id==='all'||p.category===c.id), count=group.filter(p=>choices[p.id]?.choice).length;
@@ -37,7 +40,8 @@ function figure(pair,side) {
 function card(pair) {
   const item=choices[pair.id]||{};
   const cat=data.categories.find(c=>c.id===pair.category).name;
-  return `<article class="comparison-card" data-pair="${pair.id}" aria-labelledby="title-${pair.id}"><header class="card-header"><div class="card-meta"><strong>${String(pair.number).padStart(2,'0')} / ${esc(cat)}</strong><span>${esc(pair.before.format)}</span></div><h3 id="title-${pair.id}">${esc(pair.title)}</h3><p class="changed"><b>What changes:</b> ${esc(pair.variable)}</p></header><div class="pair">${figure(pair,'before')}${figure(pair,'after')}</div><div class="choice-area"><span class="choice-label" id="choice-${pair.id}">Which would you carry forward?</span><div class="vote-group" role="group" aria-labelledby="choice-${pair.id}">${Object.entries(choiceNames).map(([value,label])=>`<button class="vote" data-value="${value}" aria-pressed="${item.choice===value}" aria-label="${label}">${({before:'← Before',after:'After →',both:'Both',neither:'Neither'})[value]}</button>`).join('')}</div><p class="saved-choice" aria-live="polite">${item.choice?esc(choiceNames[item.choice]+' · '+preferredLabel(pair,item.choice)):'Choose freely. You can change your mind.'}</p><div class="details-row"><details ${item.note?'open':''}><summary>Design notes & your comments</summary><p>${esc(pair.rationale)}</p><label for="note-${pair.id}">What do you like, or what would you change?</label><textarea id="note-${pair.id}" data-note="${pair.id}" maxlength="2000" placeholder="For example: this type, with warmer colors.">${esc(item.note||'')}</textarea></details><button class="clear-choice" data-clear="${pair.id}" ${item.choice?'':'hidden'} aria-label="Clear choice for ${esc(pair.title)}">Clear choice</button></div></div></article>`;
+  const scope=pair.scope?`<aside class="scope-note"><strong>${esc(pair.scope)}</strong><p>${esc(pair.assumption)}</p><a href="${esc(pair.source)}" target="_blank" rel="noopener">${esc(pair.sourceTitle)} ↗</a></aside>`:'';
+  return `<article class="comparison-card" data-pair="${pair.id}" aria-labelledby="title-${pair.id}"><header class="card-header"><div class="card-meta"><strong>${String(pair.number).padStart(2,'0')} / ${esc(cat)}</strong><span>${esc(pair.before.format)}</span></div><h3 id="title-${pair.id}">${esc(pair.title)}</h3><p class="changed"><b>What changes:</b> ${esc(pair.variable)}</p></header><div class="pair">${figure(pair,'before')}${figure(pair,'after')}</div>${scope}<div class="choice-area"><span class="choice-label" id="choice-${pair.id}">Which would you carry forward?</span><div class="vote-group" role="group" aria-labelledby="choice-${pair.id}">${Object.entries(choiceNames).map(([value,label])=>`<button class="vote" data-value="${value}" aria-pressed="${item.choice===value}" aria-label="${label}">${({before:'← Before',after:'After →',both:'Both',neither:'Neither'})[value]}</button>`).join('')}</div><p class="saved-choice" aria-live="polite">${item.choice?esc(choiceNames[item.choice]+' · '+preferredLabel(pair,item.choice)):'Choose freely. You can change your mind.'}</p><div class="details-row"><details ${item.note?'open':''}><summary>Design notes & your comments</summary><p>${esc(pair.rationale)}</p><label for="note-${pair.id}">What do you like, or what would you change?</label><textarea id="note-${pair.id}" data-note="${pair.id}" maxlength="2000" placeholder="For example: this type, with warmer colors.">${esc(item.note||'')}</textarea></details><button class="clear-choice" data-clear="${pair.id}" ${item.choice?'':'hidden'} aria-label="Clear choice for ${esc(pair.title)}">Clear choice</button></div></div></article>`;
 }
 function render() {
   const items=filtered();
@@ -103,6 +107,8 @@ function showPreview(side) {
   $('viewer-side').textContent=`${side} / ${String(previewPair.number).padStart(2,'0')} / ${previewPair.variable}`;
   $('viewer-image').src=item.png;$('viewer-image').alt=previewPair.before.format+' — '+previewPair[side+'Label'];
   $('full-image').href=item.png;
+  $('viewer-context').textContent=previewPair.scope ? `${previewPair.scope}. ${previewPair.assumption}` : '';
+  $('viewer-context').hidden=!previewPair.scope;
   $('viewer-switch').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.side===side)));
 }
 $('viewer-switch').addEventListener('click',e=>{if(e.target.dataset.side)showPreview(e.target.dataset.side);});
@@ -114,7 +120,7 @@ function renderBrief() {
   const selected=data.pairs.filter(p=>choices[p.id]);
   $('brief-content').innerHTML=selected.length?data.categories.map(c=>{
     const pairs=selected.filter(p=>p.category===c.id);if(!pairs.length)return '';
-    return `<section class="brief-category"><h3>${esc(c.name)}</h3>${pairs.map(p=>{const item=choices[p.id];return `<div class="brief-item"><h4>${String(p.number).padStart(2,'0')}. ${esc(p.title)}</h4><p class="preference">${esc(choiceNames[item.choice]||'Not decided')} · ${esc(preferredLabel(p,item.choice))}</p><p>${esc(p.before.format)} · ${esc(p.variable)}</p>${item.note?`<p>${esc(item.note)}</p>`:''}</div>`;}).join('')}</section>`;
+    return `<section class="brief-category"><h3>${esc(c.name)}</h3>${pairs.map(p=>{const item=choices[p.id];return `<div class="brief-item"><h4>${String(p.number).padStart(2,'0')}. ${esc(p.title)}</h4><p class="preference">${esc(choiceNames[item.choice]||'Not decided')} · ${esc(preferredLabel(p,item.choice))}</p><p>${esc(p.before.format)} · ${esc(p.variable)}</p>${p.scope?`<p class="brief-context">${esc(p.scope)} · ${esc(p.assumption)}</p>`:''}${item.note?`<p>${esc(item.note)}</p>`:''}</div>`;}).join('')}</section>`;
   }).join(''):'<p class="brief-empty">Your brief starts with your first choice. Add a note wherever your preference needs more detail.</p>';
 }
 $('open-brief').addEventListener('click',e=>{lastFocus=e.currentTarget;renderBrief();$('brief').showModal();});

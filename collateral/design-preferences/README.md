@@ -1,14 +1,14 @@
 # Design preference comparisons
 
-[Open the review](index.html). Thirty focused before / after pairs let a reviewer choose typography, color, composition and detail independently. Browse the collection or review one pair at a time, enlarge either version, choose **Before**, **After**, **Both** or **Neither**, and add a note.
+[Open the review](index.html). Thirty-eight focused before / after pairs let a reviewer choose typography, color, composition and detail independently. Browse the collection or review one pair at a time, enlarge either version, choose **Before**, **After**, **Both** or **Neither**, and add a note.
 
 The **preference brief** groups those stated choices by design area. Download or copy the brief for the next creative round. **Save choices** exports a JSON backup; **Restore choices** merges a backup into this browser, replacing matching entries while retaining the others. Individual choices can be cleared without deleting their notes.
 
 ## What the comparison means
 
-“Before” is a freshly built reference study grounded in Playbook's current identity. It is not an archived production file. “After” changes the variable named on the card. Neither side is presented as the correct answer. For historical production changes, use the separate [library before / after gallery](../render/_comparison.html).
+“Before” is a freshly built reference study grounded in Playbook's identity. The eight message-placement pairs each have their own matched reference. It is not an archived production file. “After” changes the variable named on the card. Neither side is presented as the correct answer. For historical production changes, use the separate [library before / after gallery](../render/_comparison.html).
 
-The 30 pairs reuse six references and add 30 alternatives: **36 HTML masters and PNGs**, shown in 60 comparison placements. Wording is held constant within every pair. The photography-setting pair intentionally uses two different photographs; all other lifestyle pairs use the same source image. Changes to composition include the reflow needed by the selected arrangement.
+The original 30 pairs reuse six references and add 30 alternatives. Eight message-placement pairs add 16 masters: **52 HTML masters and PNGs**, shown in 76 comparison placements. Wording is held constant within every pair. The photography-setting pair intentionally uses two different photographs; all other lifestyle pairs use the same source image. Changes to composition include the reflow needed by the selected arrangement.
 
 | Area | Pairs | Choices |
 |---|---:|---|
@@ -20,8 +20,9 @@ The 30 pairs reuse six references and add 30 alternatives: **36 HTML masters and
 | Shape and depth | 4 | Generous corners, square corners, solid shadows, cut corners |
 | Calls to action | 3 | Outlined button, pill, text action |
 | Support | 3 | Warm neutral palette, open contact block, earlier contact placement |
+| Message placement | 8 | Editorial signature, side note, shared action card, open note, contact first, open invitation, banner destination, protected inset panel |
 
-Applications are an odds social card, lifestyle social card, poster concept, email concept, quiz interface and support panel. The initial studies are English. Poster and email examples are fixed-size review canvases; the quiz and contact controls inside the artwork are visual specimens. A selected direction needs channel-specific production adaptation and language fitting before library-wide use.
+Applications include odds and lifestyle social cards, poster and email concepts, quiz and support interfaces, and a banner-to-destination layout study. The initial studies are English. Poster and email examples are fixed-size review canvases; the quiz and contact controls inside the artwork are visual specimens. A selected direction needs channel-specific production adaptation and language fitting before library-wide use.
 
 ## Brand and assets
 
@@ -51,6 +52,29 @@ node collateral/design-preferences/check-browser.mjs http://127.0.0.1:8000/colla
 
 [studies.mjs](studies.mjs) holds the comparison decisions and rationales. [build.mjs](build.mjs) generates the masters, manifest and browser data from shared content. [specimens.css](specimens.css) contains the scoped visual choices. [preferences.mjs](preferences.mjs) manages backup validation and brief output.
 
-The renderer checks all 36 canvases for matching dimensions, font and image loading, unresolved tokens, text bounds and clipping, major and internal block overlaps, container fit, and solid-background text contrast of at least 4.5:1. Minimum source text sizes are 42px for social/poster studies, 22px for email, 19px for quiz and 16px for support. It also verifies identical visible copy within each pair. [Render results](validation.json) include final image hashes.
+The renderer checks all 52 canvases for matching dimensions, font and image loading, unresolved tokens, text bounds and clipping, major and internal block overlaps, container fit, and solid-background text contrast of at least 4.5:1. Minimum source text sizes are 42px for social/poster studies, 32px for the banner-to-destination review canvas, 22px for email, 19px for quiz and 16px for support. It also verifies identical visible copy within each pair. [Render results](validation.json) include final image hashes.
 
 [Browser checks](browser-validation.json) cover the entire image inventory, every category and preference state, review filters, persistence, notes, focused URL state, full-size switching, keyboard dismissal and focus return, actual downloaded files, backup restore, invalid input handling, mobile layout and storage-unavailable behavior. Checks use a temporary browser profile and never change a user's saved preferences. Every pair is also visually reviewed; browser checks alone do not assess art direction.
+
+## Message placement: round two
+
+[Review the eight new concepts](index.html?category=message&view=focus&pair=message-signature#comparisons). These studies apply the [compliance research](../../docs/compliance-banner-research-2026-09-05.md) to the design question. They are layout studies with explicit assumptions, not cleared advertisements.
+
+| No. | Study | What to judge |
+|---|---|---|
+| 31 | Atelier / editorial signature | An inset rule and one readable contact line; more room for the photograph. |
+| 32 | Atelier / side note | Upright support information in a generous margin, alongside the budgeting message. |
+| 33 | Social Club / shared action card | A light card pairs the main invitation with support information. |
+| 34 | Arcade / open note | Expressive planning graphics, with flat and plainly set contact information. |
+| 35 | Support / contact in the foreground | The contact appears ahead of the explanation on a quiet lilac surface. |
+| 36 | Support / open invitation | A warm, open reading flow replaces the boxed contact footer. |
+| 37 | Circuit / banner destination | The same support route moves from a small invitation into the illustrated destination. |
+| 38 | Wagering / inset message panel | The same black-on-white tagline and support CTA move into the main composition. |
+
+All eight pairs preserve their wording and contact information between versions; placement changes include the necessary reflow. No asset is made “compliant” by a preference vote. The first six use the US contact preview. The British banner study uses an 18+ preview and GamCare route. The Australian study resolves the Australian phone and age from `_brand.yml`; the prescribed support web address is part of the market-specific study copy.
+
+The age and contact previews are not comprehensive state/operator disclosure blocks. The British scenario draws on IGRG paragraph 46 and does not imply that all social advertisements have the same exception. The Australian scenario preserves black-on-white wording and explores placement; operator, channel and state/territory checks remain necessary. Context is shown beside the pair, in its full-size preview, in the on-screen brief and in the downloaded brief.
+
+The banner-to-destination composition is a static review canvas, not an implemented live journey or final media-unit size. CTA and contact controls inside every PNG/master are visual specimens. An implemented support page should align its semantic and keyboard reading order with the selected visual hierarchy.
+
+[message-concepts.mjs](message-concepts.mjs) defines the round and generates its masters; [message-concepts.css](message-concepts.css) holds the scoped layouts. The original preference IDs and browser storage key are retained. The new round uses the same existing fonts, vector wordmark and owned photograph; it requires no new image generation or credentials.

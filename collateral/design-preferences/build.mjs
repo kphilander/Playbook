@@ -2,6 +2,7 @@ import {readFileSync, writeFileSync, mkdirSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {categories, studies} from './studies.mjs';
+import {buildMessageConcepts} from './message-concepts.mjs';
 const here = dirname(fileURLToPath(import.meta.url));
 for (const folder of ['masters', 'renders']) mkdirSync(join(here, folder), {recursive:true});
 const arrow = '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 24h32M26 11l13 13-13 13"/></svg>';
@@ -38,6 +39,9 @@ function master(id, kind, variant = '') {
 }
 const before = Object.fromEntries(Object.keys(formats).map(kind=>[kind,master(`reference-${kind}`,kind)]));
 const pairs = studies.map(study=>({...study, before:before[study.kind], after:master(study.id,study.kind,study.id)}));
+const concepts=buildMessageConcepts(here,logo);
+pairs.push(...concepts.pairs);entries.push(...concepts.entries);
+categories.push({id:'message',name:'Message placement'});
 const data = {version:1,categories,pairs,entries};
 writeFileSync(join(here,'manifest.json'),JSON.stringify(data,null,2)+'\n');
 writeFileSync(join(here,'data.js'),'window.PREFERENCE_STUDIES = '+JSON.stringify(data).replace(/</g,'\\u003c')+';\n');

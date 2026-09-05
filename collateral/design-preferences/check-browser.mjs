@@ -17,21 +17,21 @@ try {
   page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>errors.push(r.url()));
   await page.setViewport({width:1500,height:1100});
   await page.goto(url,{waitUntil:'networkidle0'});
-  record('Thirty comparisons, sixty before/after placements',await page.$$eval('.comparison-card',e=>e.length)===30 && await page.$$eval('.preview img',e=>e.length)===60);
+  record('Complete comparison and before/after inventory',await page.$$eval('.comparison-card',e=>e.length)===data.pairs.length && await page.$$eval('.preview img',e=>e.length)===data.pairs.length*2);
   await page.$$eval('.preview img',async imgs=>{for(const i of imgs)i.loading='eager';await Promise.all(imgs.map(i=>i.decode()));});
   record('All preview images load',await page.$$eval('.preview img',imgs=>imgs.every(i=>i.complete&&i.naturalWidth)));
   await page.screenshot({path:'/tmp/playbook-preferences-desktop.png'});
   for(const category of data.categories){await page.click(`[data-category="${category.id}"]`);record(`Category ${category.name}`,await page.$$eval('.comparison-card',e=>e.length)===data.pairs.filter(p=>p.category===category.id).length);}
   await page.click('[data-category="all"]');
   for(const [i,choice] of ['after','before','both','neither'].entries())await page.click(`[data-pair="${data.pairs[i].id}"] [data-value="${choice}"]`);
-  record('Every preference state is recorded',await page.$eval('#progress-count',e=>e.textContent)==='4 of 30 reviewed');
+  record('Every preference state is recorded',await page.$eval('#progress-count',e=>e.textContent)===`4 of ${data.pairs.length} reviewed`);
   const first=data.pairs[0].id;
   await page.click(`[data-pair="${first}"] summary`);
   await page.type(`[data-note="${first}"]`,'This type, with warmer colors. <Keep it adult>');
   await page.reload({waitUntil:'networkidle0'});
   record('Choices and notes survive reload',await page.$eval(`[data-pair="${first}"] [data-value="after"]`,e=>e.getAttribute('aria-pressed'))==='true' && await page.$eval(`[data-note="${first}"]`,e=>e.value)==='This type, with warmer colors. <Keep it adult>');
   await page.select('#status-filter','reviewed');record('Reviewed filter',await page.$$eval('.comparison-card',e=>e.length)===4);
-  await page.select('#status-filter','unreviewed');record('Still to review filter',await page.$$eval('.comparison-card',e=>e.length)===26);
+  await page.select('#status-filter','unreviewed');record('Still to review filter',await page.$$eval('.comparison-card',e=>e.length)===data.pairs.length-4);
   await page.select('#status-filter','after');record('Prefer after filter',await page.$$eval('.comparison-card',e=>e.length)===1);
   await page.select('#status-filter','before');record('Prefer before filter',await page.$$eval('.comparison-card',e=>e.length)===1);
   await page.select('#status-filter','all');await page.click('#view-focus');
@@ -51,7 +51,7 @@ try {
   record('Brief contains choices, both/neither and literal notes',await page.$eval('#brief-content',e=>e.textContent.includes('Both work')&&e.textContent.includes('Neither')&&e.textContent.includes('<Keep it adult>')));
   const exportState=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),STORAGE_KEY);
   const md=buildBrief(data,exportState);
-  record('Export brief matches saved choices and pending work',md.includes('4 of 30')&&md.includes('Choice: Prefer after — Expressive serif')&&md.includes('## Still to review')&&md.includes('> This type, with warmer colors. <Keep it adult>'));
+  record('Export brief matches saved choices and pending work',md.includes(`4 of ${data.pairs.length}`)&&md.includes('Choice: Prefer after — Expressive serif')&&md.includes('## Still to review')&&md.includes('> This type, with warmer colors. <Keep it adult>'));
   assert.deepEqual(importChoices(exportChoices(exportState),data.pairs),exportState);record('Backup round trip preserves choices',true);
   const downloadDir='/tmp/playbook-preferences-downloads';mkdirSync(downloadDir,{recursive:true});
   const client=await page.createCDPSession();await client.send('Browser.setDownloadBehavior',{behavior:'allow',downloadPath:downloadDir});
@@ -63,12 +63,12 @@ try {
   writeFileSync('/tmp/playbook-preferences-restore.json',JSON.stringify(exportChoices({[data.pairs[4].id]:{choice:'after',note:'Prefer warm paper.'}})));
   await(await page.$('#import-file')).uploadFile('/tmp/playbook-preferences-restore.json');
   await page.waitForFunction(()=>document.getElementById('brief-status').textContent.startsWith('Restored'));
-  record('Restore merges choices and keeps prior work',await page.$eval('#brief-count',e=>e.textContent)==='5 of 30 comparisons reviewed');
+  record('Restore merges choices and keeps prior work',await page.$eval('#brief-count',e=>e.textContent)===`5 of ${data.pairs.length} comparisons reviewed`);
   const imported=cleanChoices({[first]:{choice:'bogus',note:'x'.repeat(3000)},unknown:{choice:'after',note:'ignored'}},data.pairs);
   record('Malformed entries are constrained to known studies and bounded notes',Object.keys(imported).length===1&&imported[first].choice===null&&imported[first].note.length===2000);
   assert.throws(()=>importChoices({version:999,choices:{}},data.pairs));record('Unsupported backup versions rejected',true);
   await page.keyboard.press('Escape');await page.click(`[data-clear="${first}"]`);
-  record('Clearing a choice preserves its note',await page.$eval('#progress-count',e=>e.textContent)==='4 of 30 reviewed'&&await page.$eval(`[data-note="${first}"]`,e=>e.value.includes('warmer colors')));
+  record('Clearing a choice preserves its note',await page.$eval('#progress-count',e=>e.textContent)===`4 of ${data.pairs.length} reviewed`&&await page.$eval(`[data-note="${first}"]`,e=>e.value.includes('warmer colors')));
   await page.click('#view-browse');await page.setViewport({width:390,height:844});await page.evaluate(()=>scrollTo(0,0));
   record('Mobile page fits 390px',await page.evaluate(()=>document.documentElement.scrollWidth<=390));
   await page.screenshot({path:'/tmp/playbook-preferences-mobile.png'});
@@ -77,7 +77,28 @@ try {
   await page.keyboard.press('Escape');
   const blocked=await browser.newPage();await blocked.evaluateOnNewDocument(()=>Object.defineProperty(window,'localStorage',{get(){throw new DOMException('Blocked','SecurityError');}}));
   await blocked.goto(url,{waitUntil:'networkidle0'});await blocked.click(`[data-pair="${first}"] [data-value="after"]`);
-  record('Review remains usable when browser storage is blocked',await blocked.$eval('#progress-count',e=>e.textContent)==='1 of 30 reviewed'&&await blocked.$eval('#save-status',e=>e.textContent.includes('unavailable')));await blocked.close();
+  record('Review remains usable when browser storage is blocked',await blocked.$eval('#progress-count',e=>e.textContent)===`1 of ${data.pairs.length} reviewed`&&await blocked.$eval('#save-status',e=>e.textContent.includes('unavailable')));await blocked.close();
+  await page.setViewport({width:1500,height:1100});
+  await page.goto(url+'?category=message&view=focus&pair=message-signature',{waitUntil:'networkidle0'});
+  record('New-round deep link opens the first concept',await page.$eval('.comparison-card',e=>e.dataset.pair)==='message-signature');
+  record('Total progress includes the new round',await page.$eval('#progress',e=>e.max)===data.pairs.length);
+  await page.click('#view-browse');
+  record('Eight new concepts have visible market context',await page.$$eval('.scope-note',els=>els.length===8&&els.every(e=>e.innerText.length>100)));
+  await page.click('[data-pair="message-signature"] [data-value="after"]');
+  await page.click('[data-pair="message-banner"] [data-side="after"]');
+  record('Full-size concept retains its scope note',await page.$eval('#viewer-context',e=>!e.hidden&&e.textContent.includes('Great Britain')));
+  await page.keyboard.press('Escape');
+  await page.click('#open-brief');
+  record('On-screen brief retains concept assumptions',await page.$eval('#brief-content',e=>e.textContent.includes('not a cleared state-specific advertisement')));
+  const newChoices=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),STORAGE_KEY);
+  record('Export carries assumptions and earlier notes',buildBrief(data,newChoices).includes('Study context: Layout study')&&newChoices[first].note.includes('warmer colors'));
+  await page.keyboard.press('Escape');await page.setViewport({width:390,height:844});
+  record('New concept category fits mobile',await page.evaluate(()=>document.documentElement.scrollWidth<=390));
+  await page.click('[data-pair="message-protected"] [data-side="after"]');
+  record('Mobile concept viewer retains the correct market',await page.$eval('#viewer-context',e=>e.textContent.includes('Australia')));
+  await page.keyboard.press('Escape');
+  const validation=JSON.parse(readFileSync(join(here,'validation.json'),'utf8'));
+  record('UK and Australian specimens use their intended contact context',validation.find(v=>v.id==='message-banner-after').copy.includes('gamcare.org.uk')&&validation.find(v=>v.id==='message-banner-after').copy.includes('18+')&&validation.find(v=>v.id==='message-protected-after').copy.includes('1800 858 858')&&validation.find(v=>v.id==='message-protected-after').copy.includes('18+'));
 } catch(error) {errors.push(error.stack||error.message);}
 finally {await browser.close();}
 const report={checks,errors,pass:checks.every(c=>c.pass)&&!errors.length};

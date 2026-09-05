@@ -28,7 +28,7 @@ export function importChoices(input, pairs) {
 }
 export function buildBrief(data, choices) {
   const reviewed = data.pairs.filter(p=>choices[p.id]?.choice).length;
-  const lines = ['# Playbook — Design preference brief','',`${reviewed} of ${data.pairs.length} comparisons reviewed.`, '', 'These are stated visual preferences, not audience research or a combined production theme. Before is the shared reference study; after explores the named choice.',''];
+  const lines = ['# Playbook — Design preference brief','',`${reviewed} of ${data.pairs.length} comparisons reviewed.`, '', 'These are stated visual preferences, not audience research or a combined production theme. Before is a freshly built reference study; after explores the named choice.',''];
   for (const category of data.categories) {
     const pairs = data.pairs.filter(p=>p.category===category.id && choices[p.id]);
     if (!pairs.length) continue;
@@ -36,6 +36,7 @@ export function buildBrief(data, choices) {
     for (const pair of pairs) {
       const item = choices[pair.id];
       lines.push(`### ${String(pair.number).padStart(2,'0')}. ${pair.title}`, '', `Choice: ${choiceNames[item.choice] || 'Not decided'} — ${preferredLabel(pair,item.choice)}`, `Design variable: ${pair.variable}`, `Application: ${pair.before.format}`,`Before: ${pair.beforeLabel}`,`After: ${pair.afterLabel}`);
+      if(pair.scope)lines.push(`Study context: ${pair.scope}`,`Assumption: ${pair.assumption}`,`Reference: ${pair.source}`);
       if (item.note.trim()) lines.push('', 'Notes:', ...item.note.trim().split('\n').map(line=>`> ${line}`));
       lines.push('');
     }
