@@ -1,0 +1,10 @@
+{
+  "status": "setup defaults; freeze a new run ID before competition generation",
+  "provider": "google-gemini",
+  "runId": "google-photography-setup-20260904",
+  "model": "gemini-3-pro-image",
+  "aspectRatio": "3:4",
+  "imageSize": "2K",
+  "referenceMode": "none",
+  "maxAttemptsPerConcept": 1
+}

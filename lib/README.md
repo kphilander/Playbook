@@ -1,6 +1,6 @@
 # lib
 
-Node.js build scripts that power the Playbook white-label system. All scripts read from [`_brand.yml`](../_brand.yml) and generate outputs automatically.
+Node.js scripts that power the Playbook white-label system. The brand build scripts read from [`_brand.yml`](../_brand.yml); the optional photography tool uses a separately frozen request and settings file.
 
 ## Scripts
 
@@ -14,6 +14,7 @@ Node.js build scripts that power the Playbook white-label system. All scripts re
 | [validate-brand.mjs](validate-brand.mjs) | Validates `_brand.yml` — checks required fields, hex colors, alias resolution, font definitions | Console output + exit code |
 | [generate-content-api.mjs](generate-content-api.mjs) | Orchestrates all content parsers and writes structured JSON feeds | `api/*.json` (messages, myths, CTAs, campaigns, game guides) |
 | [generate-asset-manifest.mjs](generate-asset-manifest.mjs) | Scans asset directories and catalogs all logos, icons, collateral, and photography | `api/assets.json` |
+| [google-photography.mjs](google-photography.mjs) | Optional shared Google Gemini photography interface with private credential loading and recorded attempt limits | Images and audit records in the assigned output root; [usage](../collateral/render/model-comparison/competition/PHOTOGRAPHY.md) |
 
 ### Content parsers ([`parsers/`](parsers/))
 
@@ -48,6 +49,6 @@ npm run build:widgets                # Bundle Web Components → widgets/dist/
 
 ## How it works
 
-All scripts import `brand-config.mjs`, which loads `_brand.yml` and exposes a structured API: color palettes, semantic references, font families, helpline numbers, and `{{PLACEHOLDER}}` token mappings. When you edit `_brand.yml` and re-run `npm run generate`, the entire visual system updates.
+The brand build scripts import `brand-config.mjs`, which loads `_brand.yml` and exposes a structured API: color palettes, semantic references, font families, helpline numbers, and `{{PLACEHOLDER}}` token mappings. When you edit `_brand.yml` and re-run `npm run generate`, the entire visual system updates.
 
 The content parsers (`parsers/`) handle the reverse direction: reading Playbook's markdown documentation and extracting structured data into JSON feeds for operator integrations.

@@ -1,0 +1,176 @@
+{
+  "participant": "entry-58",
+  "productionFiles": [
+    {
+      "file": "render.mjs",
+      "sha256": "7ccd4fda2808a508ed61b6a3f6d642f54f5ede972e05e383ba7d35270cbb6545"
+    },
+    {
+      "file": "production-fix.css",
+      "sha256": "0cf39611743ef004146a2ab46a03e03f46f297de13ecb21063fe2bc9a1d9a87c"
+    },
+    {
+      "file": "common.mjs",
+      "sha256": "609e66e2d5f523c62a67712fa05c023802f822098f65845bc07044d90b658347"
+    }
+  ],
+  "submissionIssues": [],
+  "concepts": [
+    {
+      "id": "sports",
+      "submissionSha256": "1025c783479b32fc5d23c6fe6d3e75a18eb7c67b66935cbe4a10628f046695fe",
+      "photoStatus": "generated",
+      "photoSha256": "42ffad0a0e888e0cbdc7e148d8b0be4e5247047bbe9fda381b461361d55f6c2b",
+      "pngSha256": "03efe37fffae7882cec21f63ddef1204b7d3f3db7d8ba0f6799ebb7584959c4e",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Why -110 Means a Thin Margin",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "At standard -110 lines, both sides imply about 104.8% total probability, so the sportsbook keeps a 4.8% margin before you can beat it.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Break-even is 52.4% win rate. If you rely on emotion, the math wins.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Sports betting",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "myth",
+      "submissionSha256": "1025c783479b32fc5d23c6fe6d3e75a18eb7c67b66935cbe4a10628f046695fe",
+      "photoStatus": "generated",
+      "photoSha256": "04c5b6d8bceab904d63a605f723d74f2a069b75745ea2445984506c5b4ce7b35",
+      "pngSha256": "53c96bae6e4a1ef08d3d1f122bcd8533802bd3b1985ee5875e93059e31b81a3d",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "A Machine Can't Be Due",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "A slot machine does not track your history. A no-payout streak means only that you had a bad run, not that spin 201 is due to hit — each spin is independent and decided separately.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "History affects only your memory. The odds on the next spin stay the same.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Myth check",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "wildcard",
+      "submissionSha256": "1025c783479b32fc5d23c6fe6d3e75a18eb7c67b66935cbe4a10628f046695fe",
+      "photoStatus": "generated",
+      "photoSha256": "2cad718170327c30791a88b45a8e2126201ac1ac81293241c39ddd46f179e787",
+      "pngSha256": "aac76ebf5ddf6375e812dc8d85363a793e948f06846d8b124470568e6cdad0ab",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Your Long-Run Cost, Not a Promise",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "A 95% RTP slot has a 5% house edge. Over time, that is about $5 lost for every $100 you wager, even though any single session can move either way.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Set your session budget first. The edge is math, not hope.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Your play",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

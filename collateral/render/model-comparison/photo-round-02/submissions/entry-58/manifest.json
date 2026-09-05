@@ -1,0 +1,154 @@
+{
+  "concepts": [
+    {
+      "id": "sports",
+      "category": "sports",
+      "title": "Why -110 Means a Thin Margin",
+      "body": "At standard -110 lines, both sides imply about 104.8% total probability, so the sportsbook keeps a 4.8% margin before you can beat it.",
+      "takeaway": "Break-even is 52.4% win rate. If you rely on emotion, the math wins.",
+      "rationale": "This concept keeps the point concrete by tying sports learning directly to a familiar number, then turning it into a practical check: what looked like confidence must be tested against the vig before a pick can stay profitable.",
+      "caption": "Most sports conversations start with team talk. This starts with line math: can you beat 52.4% at -110?",
+      "alt": "Top-left headline card with title 'Why -110 Means a Thin Margin' and body copy explaining both sides at -110 imply 104.8% combined and a 4.8% margin, with a green takeaway stating the break-even win rate. A candid social group photo sits left of the copy, one adult smiling and one showing a casual watch-party conversation.",
+      "photoPrompt": "Create a candid editorial 3:4 photo for social media, 2K. Indoor sports bar at warm golden-hour style lighting. Four diverse adults age 25+ sit together on a couch at a game night, laughing and leaning in together while one person points at a sports schedule on a wall TV in the background. No readable on-screen gambling or betting content, no cards, chips, cash, money stacks, logos, or text in the photograph. Natural skin tones, cinematic cinematic lighting, shallow depth of field, moderate motion, social connection visible. Leave breathing room around faces and hands for layout text. No minors, no alcohol, no gambling paraphernalia.",
+      "photoAlt": "Adults in their late twenties to forties at a sports watch night, standing close and speaking with each other while enjoying a shared atmosphere; faces are clearly lit, natural skin tones, candid celebration energy, no explicit gambling actions.",
+      "photoRationale": "The social, non-transactional interaction mirrors a real conversation about odds and keeps the concept grounded in player decision-making rather than product promotion.",
+      "sources": [
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "The 30-second version",
+          "note": "Source states that standard -110 requires a 52.4% win rate to break even and that sports betting lines include a built-in vig. Assumption: this concept uses those values to derive combined implied margin arithmetic across both sides."
+        },
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "The vig in practice",
+          "note": "Source gives both-side implied probability at -110 as 52.4% each, total 104.8%, so the overage is 4.8% in this table."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "open",
+          "social"
+        ],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": [
+          "general",
+          "sports-bettors"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "myth",
+      "category": "myth",
+      "title": "A Machine Can't Be Due",
+      "body": "A slot machine does not track your history. A no-payout streak means only that you had a bad run, not that spin 201 is due to hit — each spin is independent and decided separately.",
+      "takeaway": "History affects only your memory. The odds on the next spin stay the same.",
+      "rationale": "This myth card converts a common emotional belief into a simple sequence: lucky and unlucky runs are separate. Keeping the wording close to player language helps the card land quickly in social feeds.",
+      "caption": "If your machine hasn't paid out in 50 spins, that doesn't increase your next chance. That's how the brain reads patterns, not the RNG.",
+      "alt": "Card headline and copy debunking the \"machine is due\" myth with a green takeaway, supported by a warm candid photo of adults sharing conversation in a lounge, social context focused on people and faces rather than any gambling device.",
+      "photoPrompt": "Create a candid editorial 3:4 photo for social media, 2K. Cozy cafe lounge scene with three diverse adults aged 25+ in a warm social moment, one person holding a coaster and another gesturing while others laugh. Keep the shot human-centered with natural skin tones and soft cinematic light from late-evening window. No gambling symbols, no machines, no cards, no dice, no chips, no cash stacks, no minors, no readable screen content, no logos, no banners. Maintain breathing room around faces and hands for overlaid text.",
+      "photoAlt": "Three adults in a café booth sharing conversation and mild laughter in a warm-lit candid frame, with no emphasis on devices or gambling objects; all attention on social interaction and facial expression.",
+      "photoRationale": "The scene emphasizes myth correction through peer conversation and shared sensemaking, matching the educational tone and avoiding gambling-object imagery.",
+      "sources": [
+        {
+          "path": "messaging/myth-busting.md",
+          "section": "Myth 2: Due for a Win",
+          "note": "Myth buster explicitly says a machine that hasn't paid out in 200 spins has identical odds on the next spin; uses exact independent-spin framing. Assumption: claims generalize to a simple next-spin explanation."
+        },
+        {
+          "path": "messaging/stigma-free-language.md",
+          "section": "Quick reference card",
+          "note": "Used to enforce tone: use neutral language around behavior and avoid alarmist labels in player-facing copy."
+        }
+      ],
+      "tags": {
+        "content_type": "myth-bust",
+        "pillar": [
+          "open"
+        ],
+        "tier": 1,
+        "tone": "playful-witty",
+        "audience": [
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "wildcard",
+      "category": "wildcard",
+      "title": "Your Long-Run Cost, Not a Promise",
+      "body": "A 95% RTP slot has a 5% house edge. Over time, that is about $5 lost for every $100 you wager, even though any single session can move either way.",
+      "takeaway": "Set your session budget first. The edge is math, not hope.",
+      "rationale": "This keeps the card practical: one headline fact and one behavior-ready takeaway. It teaches expected value without sounding like fear messaging and gives a concrete action in the same glance.",
+      "caption": "There's no lucky bankroll plan for long-run math. A 95% RTP machine means house edge first, hope second.",
+      "alt": "Playbook card showing the long-run expectation concept with headline and body about RTP and house edge, paired with a candid photograph of adults discussing budgeting and entertainment plans in a home game space.",
+      "photoPrompt": "Create a candid editorial 3:4 photo for social media, 2K. Indoor home setting with two adults and one friend, all over 25, sitting at a table reviewing a printed notepad and calculator while drinking coffee. They appear thoughtful and social, no one gambling at a machine. No visible logos, no readable text on any device, no cash stacks, no betting slips, no alcohol, no minors. Warm cinematic key light, natural skin tones, moderate depth of field, social connection with enough negative space for overlay text.",
+      "photoAlt": "Three adults (25+) in a home living room at a table discussing plans, with relaxed postures and clear eye contact, emphasizing budgeting conversation rather than wagering behavior.",
+      "photoRationale": "The photo supports the math claim by showing intentional planning and shared decision-making, reinforcing that risk management is a habit, not a vibe.",
+      "sources": [
+        {
+          "path": "how-to-play/slots.md",
+          "section": "What this means for your wallet",
+          "note": "Source gives a direct translation of 95% RTP into 5% house edge and $5 expected loss per $100 over time. Assumption: used as a direct long-run expectation statement with normal variance caveat."
+        },
+        {
+          "path": "how-to-play/slots.md",
+          "section": "House edge and RTP",
+          "note": "Source defines house edge as what the casino keeps, reinforcing the same expected-value relationship."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "open",
+          "social"
+        ],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": [
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    }
+  ],
+  "referencesRead": [
+    "AGENTS.md",
+    ".claude/commands/brand-create.md",
+    "_brand.yml",
+    "_taxonomy.yml",
+    "brand-book/02-brand-personality.md",
+    "brand-book/03-visual-identity.md",
+    "brand-book/04-voice-and-tone.md",
+    "brand-book/05-messaging-framework.md",
+    "messaging/stigma-free-language.md",
+    "messaging/core-messages.md",
+    "messaging/myth-busting.md",
+    "how-to-play/sports-betting.md",
+    "how-to-play/slots.md",
+    "visual-identity/photography/photography.md",
+    "collateral/render/card-15a-point-spread.html",
+    "collateral/render/card-13a-its-due.html",
+    "collateral/render/card-20b-pick-your-pause.html",
+    "collateral/render/concept-20.css",
+    "collateral/render/layout-system.css",
+    "collateral/render/model-comparison/fonts.css",
+    "collateral/render/model-comparison/photo-round-02/BRIEF.md",
+    "collateral/render/model-comparison/photo-round-02/template.mjs",
+    "collateral/render/model-comparison/photo-round-02/template.css",
+    "collateral/render/model-comparison/photo-round-02/photography-settings.json"
+  ],
+  "notes": "Checks completed for title, body, and takeaway character limits, source headings, simple arithmetic, and JSON validity before submission. No photos were rendered and no external image APIs were called."
+}

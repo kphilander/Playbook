@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-43/shared-input/sports/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-43",
+  "concept": "sports",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T01:01:04.443Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-43",
+    "condition": "shared-input",
+    "concept": "sports",
+    "prompt": "Candid editorial lifestyle photograph for an entertainment-literacy social card, portrait 3:4 composition at 2K. Three clearly adult friends aged about 28 to 40, diverse in appearance, sit together in a modern arena lounge during a basketball game; one uses both hands to illustrate a narrow scoring margin while the others lean in, smiling and talking. Show social connection and an informed, lively conversation, not a bet being placed. Warm cinematic key light with amber highlights, subtle navy-toned shadows, natural skin tones, moderate shallow depth of field, premium magazine editorial realism. Compose as a centered medium portrait with comfortable breathing room around every face and hand. Background crowd and court lights are softly out of focus with no readable scoreboard, screen content, signage, logos, brands, watermarks, text, cash, betting slips, gambling equipment, alcohol, minors, distress, or solitary subjects."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Candid editorial lifestyle photograph for an entertainment-literacy social card, portrait 3:4 composition at 2K. Three clearly adult friends aged about 28 to 40, diverse in appearance, sit together in a modern arena lounge during a basketball game; one uses both hands to illustrate a narrow scoring margin while the others lean in, smiling and talking. Show social connection and an informed, lively conversation, not a bet being placed. Warm cinematic key light with amber highlights, subtle navy-toned shadows, natural skin tones, moderate shallow depth of field, premium magazine editorial realism. Compose as a centered medium portrait with comfortable breathing room around every face and hand. Background crowd and court lights are softly out of focus with no readable scoreboard, screen content, signage, logos, brands, watermarks, text, cash, betting slips, gambling equipment, alcohol, minors, distress, or solitary subjects."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

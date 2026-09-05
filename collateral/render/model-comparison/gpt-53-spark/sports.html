@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One miss, no rescue. - {{PROGRAM_SHORT_NAME}}</title>
+  <!--
+  content_type: quick-reference
+  pillar: [open]
+  tier: 1
+  tone: confident-informative
+  audience: [sports-bettors]
+  channel: [social-media]
+  reading_level: grade-6-8
+  Source: how-to-play/sports-betting.md, "Parlays"
+  Source: how-to-play/sports-betting.md, "The vig in practice"
+  -->
+  <link rel="stylesheet" href="../../brand-inject.css">
+  <link rel="stylesheet" href="../fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <article class="social-card gpt53-card gpt53-sports" aria-labelledby="sports-title">
+    <header class="card-header">
+      <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+      <span class="series-label">Sports math</span>
+    </header>
+
+    <main class="card-main">
+      <h1 id="sports-title">One miss, no rescue.</h1>
+      <p class="lead">Parlay odds multiply: both independent legs must land.</p>
+
+      <figure class="parlay-board" aria-label="Parlay math: two independent 50% outcomes multiplied together gives one quarter, or about one in four.">
+        <figcaption>Parlay math at a glance</figcaption>
+        <div class="parlay-row">
+          <div class="leg-box"><strong class="leg-prob">1 / 2</strong><span>Leg 1 (50%)</span></div>
+          <div class="parlay-mult">×</div>
+          <div class="leg-box"><strong class="leg-prob">1 / 2</strong><span>Leg 2 (50%)</span></div>
+        </div>
+        <p class="parlay-assumption">Assumption: each leg is 50% and independent.</p>
+        <div class="parlay-equation"><span>1 / 2 × 1 / 2 = 1 / 4</span> <strong>25%</strong> <span> (about 1 in 4)</span></div>
+      </figure>
+
+      <p class="takeaway">Two independent 50/50 legs give about one in four tickets at this level.</p>
+      <p class="action">Read the legs first, then the payout.</p>
+    </main>
+
+    <footer class="card-footer" data-protected-zone="support-and-legal">
+      <span class="footer-support">Free support: {{HELPLINE_NUMBER}}</span>
+      <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+    </footer>
+  </article>
+</body>
+</html>

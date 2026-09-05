@@ -1,0 +1,112 @@
+{
+  "concepts": [
+    {
+      "id": "sports",
+      "category": "sports",
+      "title": "The live line is already moving.",
+      "rationale": "A live odds board turns in-play betting into a speed comparison: the sportsbook reprices first, then the player taps. The concept focuses on price awareness rather than promising an advantage.",
+      "caption": "Live betting feels like reacting in the moment. The line is already moving. Sportsbooks reprice live odds in milliseconds, and in-play vig is often wider than pre-game. Check the price before you chase the moment.",
+      "alt": "Playbook sports math card on navy. Headline: The live line is already moving. An example live betting board shows Example: before at minus 110, Example: after at minus 125, and Your tap next. A bright panel says algorithms reprice live odds in milliseconds. Body text says watching the game feels like an edge, but the sportsbook is watching faster. Action line says check the price before you chase the moment. A protected footer displays free support and age information from the brand configuration.",
+      "sources": [
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "In-play (live betting)",
+          "note": "The section says live odds update in real time, odds change rapidly, algorithms process data faster than humans, and in-play vig is often wider than pre-game. The displayed odds are illustrative movement, not a claim about a specific game."
+        },
+        {
+          "path": "messaging/myth-busting.md",
+          "section": "Myth 14: In-Play Betting Gives You an Edge",
+          "note": "This myth supports the milliseconds wording and the point that by the time a player reacts, the line has usually moved."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "open"
+        ],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": [
+          "sports-bettors"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "myth",
+      "category": "myth",
+      "title": "Bigger spin. Same percentage.",
+      "rationale": "Two side-by-side wager sizes show that the house edge percentage stays the same when the game settings and paytable are unchanged, while the dollar cost scales. The visual makes the myth correction concrete without telling players how much to bet.",
+      "caption": "Bet size changes the volume, not the house edge, when the game settings and paytable stay the same. This example uses a 5% edge: 5 cents per $1, or $5 per $100. Bigger bets mean bigger swings, not better odds.",
+      "alt": "Playbook myth versus math card on a light background. Headline: Bigger spin. Same percentage. Two slot bet examples for the same game settings and paytable show an example one dollar spin with a five percent edge and five cents in play cost over time, beside the same game at a one hundred dollar spin with the same five percent edge and five dollars in play cost over time. Body text says same game settings, same paytable: bet size scales dollars, not the edge. Action line says five percent example and pick your bet for budget, not better odds. A protected footer displays free support and age information from the brand configuration.",
+      "sources": [
+        {
+          "path": "messaging/myth-busting.md",
+          "section": "Myth 6: Higher Bets Improve Your Odds",
+          "note": "The social card and explainer state that the house edge is a percentage and that bigger bets scale dollar outcomes rather than improving odds. The card makes the 5% assumption visible and uses the myth's arithmetic: 5 cents per $1 or $5 per $100."
+        },
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Bet types",
+          "note": "The key point says betting more per spin does not improve odds; bigger bets mean bigger potential wins and bigger potential losses at the same rate. The card qualifies this as the same game settings and paytable."
+        }
+      ],
+      "tags": {
+        "content_type": "myth-bust",
+        "pillar": [
+          "open",
+          "social"
+        ],
+        "tier": 1,
+        "tone": "playful-witty",
+        "audience": [
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "wildcard",
+      "category": "wildcard",
+      "title": "The small spin can move fast.",
+      "rationale": "A pace meter and oversized equation make slot speed visible. The idea reframes a low per-spin amount as throughput, helping players set a budget before play starts.",
+      "caption": "Small spins can add up fast. Example: $0.50 every 3 seconds is 20 spins per minute. Over an hour, that is $600 total wagered, not $600 necessarily lost. Set the budget before the reels get chatty.",
+      "alt": "Playbook budget math card on emerald. Headline: The small spin can move fast. A dark pace meter says fifty cents every three seconds. The equation panel reads fifty cents times twenty per minute times sixty minutes equals six hundred dollars per hour, with a note that this is total wagered, not money lost. Action line says set your budget before the reels get chatty. A protected footer displays free support and age information from the brand configuration.",
+      "sources": [
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Tips for informed play",
+          "note": "Tip 4 states that a $0.50 bet every 3 seconds adds up to $600 per hour. The card shows the arithmetic: one spin every 3 seconds equals 20 spins per minute; $0.50 x 20 x 60 = $600 total wagered, not money lost."
+        },
+        {
+          "path": "messaging/core-messages.md",
+          "section": "Tools — Features that work for you",
+          "note": "The tools messages support framing budgets and limits as player-controlled features. The card uses an action line about setting a budget without presenting an active account control."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "open",
+          "tools"
+        ],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": [
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    }
+  ],
+  "notes": "Illustrative English Tier 1 comparison masters only. Live odds and slot examples vary by product and jurisdiction, so operator-specific releases should verify their own lines, RTP, game pace, and support configuration. The odds movement in the sports card is illustrative; no external research or raster image assets were used."
+}

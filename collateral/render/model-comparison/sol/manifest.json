@@ -1,0 +1,82 @@
+{
+  "concepts": [
+    {
+      "id": "sports",
+      "category": "sports",
+      "title": "Half right. Still down.",
+      "rationale": "A scoreboard makes the hidden cost of a 50% record at −110 instantly visible. The familiar win-loss frame turns vig math into one clean, memorable result.",
+      "caption": "Win half your bets at −110 and you are still down. Ten equal bets make the vig easy to see: +$500 from five wins, −$550 from five losses. Read the line before you call it even.",
+      "alt": "Playbook sports-math card titled Half right. Still down. A navy scoreboard shows ten equal bets at minus 110: five wins produce 500 dollars in profit, five losses cost 550 dollars, leaving a season total of minus 50 dollars. The action line reads Read the line. Price the vig.",
+      "sources": [
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "Break-even win rates",
+          "note": "The guide states that −110 odds require a 52.4% break-even win rate. Visible arithmetic assumes ten equal $110 bets: 5 × $100 profit = $500 and 5 × $110 loss = $550, for a $50 net loss."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": ["open"],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": ["sports-bettors"],
+        "channel": ["social-media"],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "myth",
+      "category": "myth",
+      "title": "95% RTP is not 95 winning spins.",
+      "rationale": "An editorial equation separates two numbers players can easily confuse: money returned over time and winning-spin frequency. The bold not-equal line makes the correction readable before the explanation.",
+      "caption": "A 95% RTP does not promise 95 winning spins out of 100. RTP tracks the share of money returned across all play over time. One session can land anywhere. Check the number—and what it actually measures.",
+      "alt": "Bright emerald Playbook myth card titled 95 percent RTP is not 95 winning spins. A white proof panel states that 95 percent equals long-run money returned and does not equal 95 winning spins out of 100. A note says the example applies across all play over time and one session can land anywhere.",
+      "sources": [
+        {
+          "path": "how-to-play/slots.md",
+          "section": "House edge and RTP",
+          "note": "The guide defines RTP as the percentage of all money wagered that a machine pays back over its lifetime; a 95% RTP leaves a 5% house edge."
+        },
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Question 2",
+          "note": "The guide explicitly distinguishes 95% RTP from winning 95% of spins and from retaining 95% of a starting balance in one session."
+        }
+      ],
+      "tags": {
+        "content_type": "myth-bust",
+        "pillar": ["open", "social"],
+        "tier": 1,
+        "tone": "playful-witty",
+        "audience": ["general"],
+        "channel": ["social-media"],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "wildcard",
+      "category": "wildcard",
+      "title": "Small bet. Fast clock.",
+      "rationale": "A tempo ladder shows how a small per-spin amount accumulates at common slot speed. The arithmetic is the artwork, giving players a quick way to connect pace with their entertainment budget.",
+      "caption": "Fifty cents feels small. At an example pace of one spin every three seconds, it becomes 20 spins and $10 wagered each minute—$600 wagered in an hour. Pick your pace and set your entertainment budget before the reels start.",
+      "alt": "Orange Playbook pace-check card titled Small bet. Fast clock. A navy calculation board shows 50 cents each spin times 20 spins per minute equals 10 dollars wagered per minute. A second line shows 10 dollars times 60 minutes equals 600 dollars wagered per hour. The action line reads Pick your pace. Set your budget.",
+      "sources": [
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Tips for informed play",
+          "note": "The guide gives the same visible assumption and result: a $0.50 bet every 3 seconds equals $600 wagered per hour. Arithmetic: 60 ÷ 3 = 20 spins per minute; 20 × $0.50 = $10 per minute; $10 × 60 = $600 per hour."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": ["open", "tools"],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": ["general"],
+        "channel": ["social-media"],
+        "reading_level": "grade-6-8"
+      }
+    }
+  ],
+  "notes": "The sports example assumes equal $110 stakes at −110. The myth uses 95% as an illustrative slot RTP and does not predict a single session. The wildcard shows amount wagered, not expected loss or money remaining."
+}

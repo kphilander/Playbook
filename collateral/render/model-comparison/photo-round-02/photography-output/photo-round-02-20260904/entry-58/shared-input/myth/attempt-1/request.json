@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-58/shared-input/myth/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-58",
+  "concept": "myth",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T00:52:41.787Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-58",
+    "condition": "shared-input",
+    "concept": "myth",
+    "prompt": "Create a candid editorial 3:4 photo for social media, 2K. Cozy cafe lounge scene with three diverse adults aged 25+ in a warm social moment, one person holding a coaster and another gesturing while others laugh. Keep the shot human-centered with natural skin tones and soft cinematic light from late-evening window. No gambling symbols, no machines, no cards, no dice, no chips, no cash stacks, no minors, no readable screen content, no logos, no banners. Maintain breathing room around faces and hands for overlaid text."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Create a candid editorial 3:4 photo for social media, 2K. Cozy cafe lounge scene with three diverse adults aged 25+ in a warm social moment, one person holding a coaster and another gesturing while others laugh. Keep the shot human-centered with natural skin tones and soft cinematic light from late-evening window. No gambling symbols, no machines, no cards, no dice, no chips, no cash stacks, no minors, no readable screen content, no logos, no banners. Maintain breathing room around faces and hands for overlaid text."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

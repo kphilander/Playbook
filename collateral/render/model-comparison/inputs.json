@@ -1,0 +1,82 @@
+{
+  "baselineCommit": "d18952be5a70ff556f9e1c5b52faa33b45efd254",
+  "briefSha256": "595e0f7c30620831c991c63bf3ac034f917afbc0c0df5e51f11dd94197780a4d",
+  "references": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "2c6d34e3eaba341b493f03b79a1141424162fc171714164bf1d126ac19c75665"
+    },
+    {
+      "path": ".claude/commands/brand-create.md",
+      "sha256": "f7eb98537eb9ce408bb8e2bb3e4ab6b219d650c14837cd9f7fe264e64c840fe9"
+    },
+    {
+      "path": "_brand.yml",
+      "sha256": "1b3f1ff766bef0d2b3382241d34efd74c4d110f696a453235023751618d10d5c"
+    },
+    {
+      "path": "_taxonomy.yml",
+      "sha256": "3a7b4706c9e53bcae41e341d74825a8c986d268d2269a03cb0e1c9c4147bbd08"
+    },
+    {
+      "path": "brand-book/02-brand-personality.md",
+      "sha256": "51b22ffa656e8a564e6ce7becb4552d94aa86ee9a7ff2753eca70ec66e253b76"
+    },
+    {
+      "path": "brand-book/03-visual-identity.md",
+      "sha256": "ff5ff681e25516f5a40b0c801cb8d4fcc618eda9431959d30be32b403b5bfa84"
+    },
+    {
+      "path": "brand-book/04-voice-and-tone.md",
+      "sha256": "06dec15af7e097c0ecdc1c5bc3e756d216e23a93afd44fdf73ac27648a42307c"
+    },
+    {
+      "path": "brand-book/05-messaging-framework.md",
+      "sha256": "3b04aa5f9fd4a7f3eeeec6682edba565e07746e451b825eff309d42d4f11431f"
+    },
+    {
+      "path": "messaging/stigma-free-language.md",
+      "sha256": "d3c232dc84b91c4acede4d78f8c2ca36e44111af946953aa30fd0851897eb092"
+    },
+    {
+      "path": "messaging/core-messages.md",
+      "sha256": "d4c28979dcc418a479e6a30a301a1be051fb03d66743ec99a2944a1d4a6534df"
+    },
+    {
+      "path": "messaging/myth-busting.md",
+      "sha256": "8c0d0d8ddfa603d493d85ba2bdb4f544365226557c1361f65847f42ff74fd0c2"
+    },
+    {
+      "path": "how-to-play/sports-betting.md",
+      "sha256": "e6255eb959946f9839cd08445d7383a17348a037f5fa9e8acaa9a8f5985064be"
+    },
+    {
+      "path": "how-to-play/slots.md",
+      "sha256": "a38977f52fb911cca605467091101e59d2c90394e8704eb8597cdaf43dd9cefd"
+    },
+    {
+      "path": "collateral/render/card-15a-point-spread.html",
+      "sha256": "b04af108d66ea24ad212c34ec3f26ca62dcdf0df05cc23cc34b591ae16f395d6"
+    },
+    {
+      "path": "collateral/render/card-13a-its-due.html",
+      "sha256": "2d1b27b17b6e6c1f06303998e05a4048b92f493b60c708d46411351c5ba8591b"
+    },
+    {
+      "path": "collateral/render/card-20b-pick-your-pause.html",
+      "sha256": "5ef7f4b650cec2d07a6566c714221a7b310c2997b9a63468e4c01bfb0e032593"
+    },
+    {
+      "path": "collateral/render/concept-20.css",
+      "sha256": "f38556dc281826d01e3f0d6bb46490ebbf46357d167dfdab0a652851473e8219"
+    },
+    {
+      "path": "collateral/render/layout-system.css",
+      "sha256": "3bf631b004124a5fd7a01dd784342b105760d42d0887d7f987051f84958600b0"
+    },
+    {
+      "path": "collateral/render/model-comparison/fonts.css",
+      "sha256": "beaf18d19bfbaaefccdcc2c7cfe57b120a83a2a83d0971c24eb3bc2d41cb9460"
+    }
+  ]
+}
