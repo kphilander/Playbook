@@ -4,6 +4,8 @@ Templates and specifications for every Playbook touchpoint — digital, print, e
 
 [Open the September creative review](creative-review/index.html) for revised previews, concept comparisons and the reasoning behind the choices.
 
+[Compare four style alternatives](style-alternatives/index.html): editorial luxury, contemporary hospitality, digital precision and playful confidence. Each includes three finished specimens.
+
 ## Folders
 
 | Folder | Contents |
