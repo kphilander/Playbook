@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/slots-social/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "bdd50dad78e5b611b11954c4b17e88a77db1f38b24c693e5e58e389ac495968a",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-refresh",
+  "concept": "slots-social",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T04:34:25.676Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 2547596,
+      "sha256": "15e588e1d1669b485b39b8d2c06e7877f26479b724f6f33094ffcf9909e29048"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 325,
+    "candidatesTokenCount": 1364,
+    "totalTokenCount": 1920,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 325
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "thoughtsTokenCount": 231,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 23350,
+  "completedAt": "2026-09-05T04:34:49.027Z"
+}

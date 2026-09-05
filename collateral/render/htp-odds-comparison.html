@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -36,31 +34,29 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">Know Your Game</div>
-    <div class="card-title">Odds at a Glance</div>
+    <div class="card-title">Same stake.<br>Different costs.</div>
     <table class="odds-table">
-      <thead>
-        <tr><th>Game</th><th>Best bet</th></tr>
-      </thead>
+      <thead><tr><th>Game</th><th>House edge</th></tr></thead>
       <tbody>
-        <tr><td>Blackjack (basic strategy)</td><td>0.5%</td></tr>
-        <tr><td>Baccarat (banker)</td><td>1.06%</td></tr>
-        <tr><td>Roulette (European)</td><td>2.70%</td></tr>
-        <tr><td>Sports Betting (std. vig)</td><td>4.5%</td></tr>
-        <tr><td>Roulette (American)</td><td>5.26%</td></tr>
-        <tr><td>Slots</td><td>2–15%</td></tr>
+        <tr><td>Blackjack: favorable rules + basic strategy</td><td>≈0.5%</td></tr>
+        <tr><td>Baccarat: Banker, 5% commission</td><td>1.06%</td></tr>
+        <tr><td>Craps: Pass line</td><td>1.41%</td></tr>
+        <tr><td>Roulette: single zero</td><td>2.70%</td></tr>
       </tbody>
     </table>
+    <p class="creative-note">Expected cost over time; rules vary.</p>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

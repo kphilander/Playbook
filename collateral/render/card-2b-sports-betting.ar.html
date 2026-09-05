@@ -43,26 +43,27 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
-  <div class="card-header">
-    <span class="card-logo">Playbook</span>
-    <span class="section-label">الاحتمالات الحقيقية</span>
-  </div>
-  <div class="card-body">
-    <div class="headline">‎-110: الهامش متنكر في رقم صغير.</div>
-    <div class="breakdown">
-      <div class="breakdown-line">رهان بقيمة <span class="amount">110 د.إ</span></div>
-      <div class="breakdown-line">صافي الربح عند الفوز <span class="amount">100 د.إ</span></div>
-    </div>
-    <div class="explanation">السعر مضمّن في الخط.</div>
-    <div class="emphasis">عندما يكون السعر ‎-110 للطرفين، يبلغ هامش شركة الرهان نحو 4.8%.</div>
-  </div>
-  <div class="card-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
-  </div>
+<div class="social-card pb-creative">
+<div class="card-header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+<span class="section-label">الاحتمالات الحقيقية</span>
+</div>
+<div class="card-body">
+<div class="headline"><bdi dir="ltr">−110</bdi>.<br/>تفاصيل العائد.</div>
+<div class="breakdown">
+<div class="breakdown-line">رهان بقيمة <span class="amount"><bdi dir="ltr">110</bdi> د.إ</span></div>
+<div class="breakdown-line">صافي الربح عند الفوز <span class="amount"><bdi dir="ltr">100</bdi> د.إ</span></div>
+</div>
+<div class="explanation">رهان نقدي فائز بقيمة <bdi dir="ltr">110</bdi> يعيد إجمالي <bdi dir="ltr">210</bdi>.</div>
+<div class="emphasis">مبلغ الرهان الأصلي زائد الربح.</div>
+</div>
+<div class="card-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

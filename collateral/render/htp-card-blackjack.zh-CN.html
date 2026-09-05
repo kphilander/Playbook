@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">运作方式</div>
     <div class="game-name">二十一点</div>
-    <div class="key-fact">赌场中最佳的赔率，<strong>仅需二十分钟即可掌握</strong>。基本策略即为每手牌中数学上最优的打法。</div>
+    <div class="key-fact">基本策略根据你的手牌和庄家的明牌作出选择。牌桌规则也会影响庄家优势。</div>
     <div class="stat-block">
-      <span class="stat-number">0.5%</span>
-      <span class="stat-unit">采用基本策略的<br>庄家优势</span>
+      <span class="stat-number">≈0.5%</span>
+      <span class="stat-unit">有利规则下<br>使用基本策略</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

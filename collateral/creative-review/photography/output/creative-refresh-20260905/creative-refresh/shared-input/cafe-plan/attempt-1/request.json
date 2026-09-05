@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/cafe-plan/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "bdd50dad78e5b611b11954c4b17e88a77db1f38b24c693e5e58e389ac495968a",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-refresh",
+  "concept": "cafe-plan",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T04:34:22.386Z",
+  "status": "started",
+  "request": {
+    "participant": "creative-refresh",
+    "condition": "shared-input",
+    "concept": "cafe-plan",
+    "prompt": "Use case: photorealistic-natural. Asset type: premium editorial campaign photography for Playbook, an entertainment literacy brand. Create one authentic-looking photograph, no layout, no typography, no graphic overlay. All people clearly adults aged 30–60, candid interaction, relaxed confident energy; nobody posing for the camera. Directional warm key light, exposed faces, natural skin texture, deep navy shadows and subtle amber highlights, unbranded clothing, restrained saturation. Medium environmental shot at eye level, 4:3 landscape. Keep all faces and active hands within the central 75% of the composition, with breathing room around heads. No alcohol, drinking glasses, cash, chip piles, logos, watermarks, readable screens, fake text or prominent game equipment. Avoid exaggerated grins, celebration of money, pointing at camera, theatrical gestures, glossy synthetic skin, awkward hands or repeated faces. Two friends at a sunlit cafe table planning an evening out: a woman about 40 with dark curly hair and a man about 55 with salt-and-pepper hair. She briefly shows him the back of her phone, he smiles at her rather than at the camera; their attention is on each other. The phone display is turned entirely away from camera. A small pair of ceramic coffee cups and a folded paper menu without readable type provide everyday context. Medium view with full heads, forearms and natural hands, clear warm window light, navy upholstery and amber wood. Nothing suggests distress, wealth or obsessive phone use."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Use case: photorealistic-natural. Asset type: premium editorial campaign photography for Playbook, an entertainment literacy brand. Create one authentic-looking photograph, no layout, no typography, no graphic overlay. All people clearly adults aged 30–60, candid interaction, relaxed confident energy; nobody posing for the camera. Directional warm key light, exposed faces, natural skin texture, deep navy shadows and subtle amber highlights, unbranded clothing, restrained saturation. Medium environmental shot at eye level, 4:3 landscape. Keep all faces and active hands within the central 75% of the composition, with breathing room around heads. No alcohol, drinking glasses, cash, chip piles, logos, watermarks, readable screens, fake text or prominent game equipment. Avoid exaggerated grins, celebration of money, pointing at camera, theatrical gestures, glossy synthetic skin, awkward hands or repeated faces. Two friends at a sunlit cafe table planning an evening out: a woman about 40 with dark curly hair and a man about 55 with salt-and-pepper hair. She briefly shows him the back of her phone, he smiles at her rather than at the camera; their attention is on each other. The phone display is turned entirely away from camera. A small pair of ceramic coffee cups and a folded paper menu without readable type provide everyday context. Medium view with full heads, forearms and natural hands, clear warm window light, navy upholstery and amber wood. Nothing suggests distress, wealth or obsessive phone use."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "4:3",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

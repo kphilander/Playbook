@@ -691,6 +691,9 @@ async function render() {
               foldCrossings,
               uncontainedProtected,
               foldZoneOverlaps,
+              orphanedFooters: [...document.querySelectorAll('[data-protected-zone], .footer, .card-footer, .story-footer, .poster-footer')]
+                .filter(node => !root.contains(node) && node.getBoundingClientRect().height > 0)
+                .map(describe),
             };
           }, { selector: card.selector, readabilityFloor: readabilityFloors.get(card.selector) || 0 });
 
@@ -715,6 +718,10 @@ async function render() {
 
           if (metrics.occluded.length > 0) {
             failures.push(`${card.html}: visible text overlaps protected footer: ${metrics.occluded.join('; ')}`);
+          }
+
+          if (metrics.orphanedFooters.length > 0) {
+            failures.push(`${card.html}: footer outside render root: ${metrics.orphanedFooters.join('; ')}`);
           }
 
           if (metrics.foldCrossings.length > 0) {
@@ -800,4 +807,7 @@ async function render() {
   }
 }
 
-render().catch(console.error);
+render().catch(error => {
+  console.error(error);
+  process.exitCode = 1;
+});

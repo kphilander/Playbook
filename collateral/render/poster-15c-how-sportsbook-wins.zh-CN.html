@@ -42,11 +42,12 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="three-step-math">
+<div class="poster pb-creative" data-layout="three-step-math">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
@@ -66,10 +67,10 @@
         <span class="flow-value">澳门币 1</span>
       </div>
     </div>
-    <div class="insight">博彩公司不必猜中赢家；只要两边都有投注，就能留下利润空间。</div>
+    <div class="insight">示例：两边各下注1.10，赔率−110。一边赢、一边输，不计走盘退款。</div>
     <a href="#" class="poster-cta">访问 {{PROGRAM_URL}} 查看数据</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

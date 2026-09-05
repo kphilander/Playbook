@@ -26,16 +26,11 @@ Try-your-brand modal is preserved.
 
 To update an inlined bundle after editing a JSON here, re-run:
 
-```bash
-python3 <<'EOF'
-# inlines collateral/rg-copy/*.json into rg-page.html between the SVG
-# symbol-defs close and the Demo Mode Banner comment. Idempotent —
-# replaces existing pb-i18n-<lang> blocks.
-# (Full script in git history of this commit; intended as a one-liner.)
-EOF
+```sh
+node lib/inline-rg-copy.mjs
 ```
 
-A proper `lib/inline-rg-copy.mjs` build command is a follow-up.
+This idempotent command reads four page bundles and four `myths-<lang>.json` quiz bundles, validates JSON, requires exactly one matching inline block, and safely escapes `<` inside JSON data.
 
 ## Bundle format
 
@@ -93,7 +88,7 @@ Flat JSON with three top-level blocks:
      python3 -c "import json; json.load(open('$f'))" && echo "$f ok"
    done
    ```
-6. **Re-inline** into [rg-page.html](../rg-page.html) using the Python splice above.
+6. **Re-inline** into [rg-page.html](../rg-page.html) using `node lib/inline-rg-copy.mjs`.
 
 ## Updating English copy in rg-page.html
 
@@ -102,23 +97,11 @@ for now. A `regen-en.mjs` script that walks `[data-i18n]` / `[data-i18n-attrs]`
 attributes and rebuilds `en.json` from the current DOM is a reasonable
 follow-up — not scoped for this PoC.
 
-## What's NOT in the bundles
+## Quiz and dynamic content
 
-These stay English in every language for the PoC:
+The four `myths-<lang>.json` files maintain all 18 quiz questions in each language. English also contains the short social and article explanations. They are inlined into `pb-myths-<lang>` blocks. Edit these sources, then re-inline; do not regenerate them from the older API snapshot.
 
-- **Hero quiz question + myth quiz cards** — fed from `myths.json` at runtime,
-  separate concern.
-- **Odds grid contents** — rendered by the `<playbook-odds>` web component,
-  separate widget.
-- **Demo-mode overlays** — `#demoBanner` and the hotspot popups explain how
-  the Playbook system works to operators; authored in English for the demo
-  layer, not as player-facing content.
-- **TYB modal chrome** — "Try your brand", "Upload brand-inject.css",
-  "Upload _brand.yml", reset/close buttons, status messages. Deliberately kept
-  English as preview tooling.
-- **Link popups** that explain placeholder URLs to operators.
-
-Adding any of these to the bundles is a scope expansion for later.
+The page bundles include localized odds-card facts and glossary definitions. English is active on initial load and after a language reset. Operator demo controls and the Try-your-brand modal remain English. Linked game guides use the separate content API.
 
 ## Token placeholders still honored
 

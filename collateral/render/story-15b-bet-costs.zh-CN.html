@@ -46,43 +46,42 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
+<div class="story-card pb-creative">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">公开</span>
   </div>
   <div class="story-body">
     <div class="eyebrow">体育博彩的数学</div>
-    <div class="headline">并非所有投注都等价。</div>
+    <div class="headline">相同本金，<br>不同返还。</div>
     <div class="bar-list">
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">独赢盘</span>
-          <span class="bar-value teal">3%</span>
+          <span class="bar-name">赔率 −110</span>
+          <span class="bar-value teal">$190.91</span>
         </div>
-        <div class="bar-track"><div class="bar-fill teal"></div></div>
       </div>
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">特殊投注</span>
-          <span class="bar-value white">5&ndash;7%</span>
+          <span class="bar-name">赔率 −125</span>
+          <span class="bar-value white">$180</span>
         </div>
-        <div class="bar-track"><div class="bar-fill white"></div></div>
       </div>
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">同场过关</span>
-          <span class="bar-value orange">15&ndash;25%</span>
+          <span class="bar-name">赔率 +100</span>
+          <span class="bar-value orange">$200</span>
         </div>
-        <div class="bar-track"><div class="bar-fill orange"></div></div>
       </div>
     </div>
-    <div class="body-text">简单投注抽成较低，复杂投注抽成较高。</div>
+    <div class="body-text">示例：100美元现金投注获胜。返还金额包含原始本金。</div>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 </div>
 </body>

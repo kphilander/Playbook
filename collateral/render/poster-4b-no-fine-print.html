@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
@@ -46,28 +44,29 @@
   .footer-legal { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="two-comparisons">
+<div class="poster pb-creative poster-editorial" data-layout="two-comparisons">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">Real Odds</span>
   </div>
   <div class="poster-body">
     <div class="eyebrow">No fine print</div>
-    <div class="headline">Every game has a <span class="teal">house edge</span>.<br>Here's yours.</div>
-    <div class="subhead">It's the percentage the house keeps over time. Here's how games compare.</div>
+    <div class="headline">Same stake.<br>Different math.</div>
+    <div class="subhead">House edge is the expected cost over time, as a share of money wagered. Rules and strategy matter.</div>
     <div class="edge-list">
       <div class="edge-row">
         <div class="edge-bar-wrap">
-          <div class="edge-game">Blackjack (basic strategy)</div>
+          <div class="edge-game">Blackjack (basic strategy; favorable rules)</div>
           <div class="edge-bar low"></div>
         </div>
         <div class="edge-pct teal">0.5%</div>
       </div>
       <div class="edge-row">
         <div class="edge-bar-wrap">
-          <div class="edge-game">American Roulette</div>
+          <div class="edge-game">American roulette · most bets</div>
           <div class="edge-bar high"></div>
         </div>
         <div class="edge-pct orange">5.26%</div>
@@ -75,7 +74,7 @@
     </div>
     <a href="#" class="poster-cta">See the full breakdown</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

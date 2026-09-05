@@ -1,0 +1,544 @@
+{
+  "meta": {
+    "count": 18,
+    "language": "ja",
+    "source_en": "collateral/rg-copy/myths-en.json",
+    "tone_profile": "elder/communal/understated/contextual/reserved (Japan)",
+    "editorial_revision": "2026-09-04"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "連勝の感覚",
+      "quiz": {
+        "question": "各回が独立したスロットで4連勝。同じ設定なら、次の回の確率は変わりますか。",
+        "options": [
+          {
+            "label": "通常より高い ── 流れが来ている",
+            "correct": false
+          },
+          {
+            "label": "通常より低い ── そろそろ外れる番",
+            "correct": false
+          },
+          {
+            "label": "過去の当たりでは変わらない",
+            "correct": true
+          },
+          {
+            "label": "賭け金の額によって変わる",
+            "correct": false
+          }
+        ],
+        "feedback": "独立した回では、前の当たりは次の確率に影響しません。同じルールと設定での説明です。"
+      }
+    },
+    {
+      "id": 2,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "そろそろ当たる頃",
+      "quiz": {
+        "question": "各回が独立したスロットで3時間当たりがない場合、次の回を予測できますか。",
+        "options": [
+          {
+            "label": "そろそろ当たりやすくなる",
+            "correct": false
+          },
+          {
+            "label": "当たりにくい ── 「冷えている」",
+            "correct": false
+          },
+          {
+            "label": "過去の外れからは予測できない",
+            "correct": true
+          },
+          {
+            "label": "機械の不具合の可能性がある",
+            "correct": false
+          }
+        ],
+        "feedback": "連敗しても、独立した次の回が当たりやすくなることはありません。別のボーナス機能はルールをご確認ください。"
+      }
+    },
+    {
+      "id": 3,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "お気に入りの台",
+      "quiz": {
+        "question": "よく当たると感じる台。その印象を確かめるには何が役立ちますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "負けや賭け金も含めた全記録",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "印象に残る勝ちだけでなく、負けと賭け金も確認します。ゲームや設定によって確率は異なる場合があります。"
+      }
+    },
+    {
+      "id": 4,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "惜しい外れの意味",
+      "quiz": {
+        "question": "各回が独立したスロットで惜しい外れが出ると、次の当選確率は上がりますか。",
+        "options": [
+          {
+            "label": "当たりが近づいている",
+            "correct": false
+          },
+          {
+            "label": "機械が温まってきている",
+            "correct": false
+          },
+          {
+            "label": "上がらない",
+            "correct": true
+          },
+          {
+            "label": "賭け金を上げるべき合図",
+            "correct": false
+          }
+        ],
+        "feedback": "配当表で当たりでなければ外れです。惜しい外れは、独立した次の回の当選確率を上げません。"
+      }
+    },
+    {
+      "id": 5,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "時間帯と当たりやすさ",
+      "quiz": {
+        "question": "時計だけを見て、スロットのRTP（理論上の還元率）は分かりますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "分からない。公開情報とルールを確認する",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "時間帯だけでは高いRTPの根拠になりません。ゲームのルールと公開された還元率を確認してください。要件は市場によって異なります。"
+      }
+    },
+    {
+      "id": 6,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "賭け金と有利さ",
+      "quiz": {
+        "question": "ルーレットで同じ賭け方・ルール・配当倍率のまま賭け金を増やすと、ハウスエッジの割合はどうなりますか。",
+        "options": [
+          {
+            "label": "下がる ── 高額ベッターは優遇される",
+            "correct": false
+          },
+          {
+            "label": "上がる ── カジノ側が多く取る",
+            "correct": false
+          },
+          {
+            "label": "割合は変わらない",
+            "correct": true
+          },
+          {
+            "label": "機械によって異なる",
+            "correct": false
+          }
+        ],
+        "feedback": "この例では割合は同じです。賭け金が10倍なら期待損失額も10倍。ほかのゲームでは賭け金によって配当条件が変わる場合があります。"
+      }
+    },
+    {
+      "id": 7,
+      "gameType": [
+        "roulette",
+        "blackjack",
+        "baccarat"
+      ],
+      "title": "必勝法の限界",
+      "quiz": {
+        "question": "ルーレットで負けるたびに賭け金を倍にすると、ハウスエッジはなくなりますか。",
+        "options": [
+          {
+            "label": "長い目で見れば必ず勝ち越せる",
+            "correct": false
+          },
+          {
+            "label": "やがてハウスエッジが消える",
+            "correct": false
+          },
+          {
+            "label": "なくならず、必要な賭け金が急増することがある",
+            "correct": true
+          },
+          {
+            "label": "規律の持ち方によって結果が変わる",
+            "correct": false
+          }
+        ],
+        "feedback": "賭ける順序では確率や配当倍率は変わりません。連敗すると必要額が増え、資金やテーブル上限に達する場合があります。"
+      }
+    },
+    {
+      "id": 8,
+      "gameType": [
+        "blackjack",
+        "baccarat",
+        "poker"
+      ],
+      "title": "ディーラーの調子",
+      "quiz": {
+        "question": "ディーラーの最近の連勝だけで、有利なブラックジャックのテーブルは分かりますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "分からない。ルールと条件を比較する",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "連勝だけでは有利さを判断できません。ルール、戦略、残りのカードが関係します。同じシューから配られる各ハンドは独立ではありません。"
+      }
+    },
+    {
+      "id": 9,
+      "gameType": [
+        "blackjack"
+      ],
+      "title": "カウンティングの実情",
+      "quiz": {
+        "question": "カードカウンティングで、ブラックジャックの収入は保証されますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "保証されない。条件も結果も変わる",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "有利さはルール、残りのカード、プレイに左右されます。負ける期間もあり、施設がプレイを制限する場合もあります。"
+      }
+    },
+    {
+      "id": 10,
+      "gameType": [
+        "roulette",
+        "lottery"
+      ],
+      "title": "「自分の」数字",
+      "quiz": {
+        "question": "公平なシングルゼロのルーレットで7が50回出ていません。独立した次の回で出る確率は。",
+        "options": [
+          {
+            "label": "高い ── そろそろ出る頃",
+            "correct": false
+          },
+          {
+            "label": "低い ── 今日は運に恵まれない数字",
+            "correct": false
+          },
+          {
+            "label": "37分の1",
+            "correct": true
+          },
+          {
+            "label": "ディーラーの投げ方による",
+            "correct": false
+          }
+        ],
+        "feedback": "この例では37のポケットは同じ確率です。過去の結果で独立した次の回の確率は変わりません。"
+      }
+    },
+    {
+      "id": 11,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "知識と勝率",
+      "quiz": {
+        "question": "同額を−110で賭け、引き分け返金や追加手数料がない場合、損益分岐の勝率は。",
+        "options": [
+          {
+            "label": "50% ── 半分当たれば充分",
+            "correct": false
+          },
+          {
+            "label": "約52.4%",
+            "correct": true
+          },
+          {
+            "label": "55% ── わずかな優位が必要",
+            "correct": false
+          },
+          {
+            "label": "60% ── 明確な強みが必要",
+            "correct": false
+          }
+        ],
+        "feedback": "110を賭けて勝つと利益は100。110÷（110＋100）で約52.4%です。同額・同じオッズ・返金なし・追加手数料なしを仮定しています。"
+      }
+    },
+    {
+      "id": 12,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "パーレーの落とし穴",
+      "quiz": {
+        "question": "それぞれ真の当選確率が50%で、互いに独立した4つの予想。全部当たる確率は。",
+        "options": [
+          {
+            "label": "50%",
+            "correct": false
+          },
+          {
+            "label": "25%",
+            "correct": false
+          },
+          {
+            "label": "6.25%",
+            "correct": true
+          },
+          {
+            "label": "100%",
+            "correct": false
+          }
+        ],
+        "feedback": "0.5×0.5×0.5×0.5＝0.0625。独立していることが前提で、関連する予想には別の計算が必要です。提示される配当とは別の数字です。"
+      }
+    },
+    {
+      "id": 13,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "予想屋の成績",
+      "quiz": {
+        "question": "予想屋の10戦8勝という記録だけで、何が分かりますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "長期の利益が確実とは判断できない",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "10戦は限られた標本です。全記録、オッズ、賭け金、負け、手数料を確認してください。的中率だけでは利益は分かりません。"
+      }
+    },
+    {
+      "id": 14,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "ライブベットの錯覚",
+      "quiz": {
+        "question": "ライブベットのオッズが変わったら、確定前にどこを確認しますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "現在のオッズと受取額",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "ライブのオッズは変わり、放送に遅延がある場合もあります。確定するオッズ、賭け金、受取額を確認しましょう。観戦だけで情報の優位は保証されません。"
+      }
+    },
+    {
+      "id": 15,
+      "gameType": [
+        "lottery"
+      ],
+      "title": "「出番」の数字",
+      "quiz": {
+        "question": "公平で各抽選が独立した宝くじで、半年出ていない数字は次に出やすくなりますか。",
+        "options": [
+          {
+            "label": "高まる ── 統計的に出番が近い",
+            "correct": false
+          },
+          {
+            "label": "高まる ── いずれは出るはずという考えによる",
+            "correct": false
+          },
+          {
+            "label": "過去に出なかったことでは変わらない",
+            "correct": true
+          },
+          {
+            "label": "総番号数によって異なる",
+            "correct": false
+          }
+        ],
+        "feedback": "公平で独立した抽選は過去の結果を埋め合わせません。49個から6個を選ぶ例では、各組合せの確率は13,983,816分の1です。"
+      }
+    },
+    {
+      "id": 16,
+      "gameType": [
+        "lottery"
+      ],
+      "title": "多く買えば当たるか",
+      "quiz": {
+        "question": "公平な49個中6個の抽選で、異なる100組を1回の抽選に買うと頭賞の確率は。",
+        "options": [
+          {
+            "label": "100%",
+            "correct": false
+          },
+          {
+            "label": "13,983,816分の100、約0.000715%",
+            "correct": true
+          },
+          {
+            "label": "1%",
+            "correct": false
+          },
+          {
+            "label": "50%",
+            "correct": false
+          }
+        ],
+        "feedback": "確率は1組の100倍で、単価が同じなら費用も100倍。同じ組合せの重複購入は、頭賞になる異なる組合せを増やしません。"
+      }
+    },
+    {
+      "id": 17,
+      "gameType": [
+        "all-gambling"
+      ],
+      "title": "負けを取り戻す",
+      "quiz": {
+        "question": "ハウスエッジのあるゲームで、前に負けた分は必ず戻りますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "保証はなく、追加の賭け金も失う可能性がある",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "過去の負けで払い戻す義務は生まれません。期待値がマイナスの追加プレイは期待損失を増やしますが、個々の結果は変動します。予算はやめどきを決める助けになります。"
+      }
+    },
+    {
+      "id": 18,
+      "gameType": [
+        "all-gambling"
+      ],
+      "title": "収益源としての捉え方",
+      "quiz": {
+        "question": "正のハウスエッジとは何を示しますか。",
+        "options": [
+          {
+            "label": "結果が必ず保証される",
+            "correct": false
+          },
+          {
+            "label": "直前の結果だけで判断できる",
+            "correct": false
+          },
+          {
+            "label": "期待される還元額が賭けた額を下回ること",
+            "correct": true
+          },
+          {
+            "label": "ルールは関係ない",
+            "correct": false
+          }
+        ],
+        "feedback": "所定のルールでの長期的な数学上のコストです。1回のセッションを予測する数字ではありません。予算を決めて楽しむ娯楽として捉えましょう。"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hot streaks are loud, not lucky. - {{PROGRAM_SHORT_NAME}}</title>
+  <!--
+  content_type: myth-bust
+  pillar: [open]
+  tier: 1
+  tone: playful-witty
+  audience: [general]
+  channel: [social-media]
+  reading_level: grade-6-8
+  Source: messaging/myth-busting.md, "Myth 1: The Hot Streak"
+  Source: how-to-play/slots.md, "Tips for informed play"
+  -->
+  <link rel="stylesheet" href="../../render/brand-inject.css">
+  <link rel="stylesheet" href="../../render/model-comparison/fonts.css">
+  <link rel="stylesheet" href="../../render/model-comparison/gpt-53-spark/style.css">
+<link rel="stylesheet" href="../pilot-refinements.css"></head>
+<body>
+  <article class="social-card gpt53-card gpt53-myth" aria-labelledby="myth-title">
+    <header class="card-header">
+      <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+      <span class="series-label">Myth / fact</span>
+    </header>
+
+    <main class="card-main">
+      <h1 id="myth-title">Hot streaks are loud,<br>not lucky.</h1>
+      <p class="lead">Three wins in a row do not improve the next spin.</p>
+
+      <figure class="streak-board" aria-label="A chart shows that the next slot spin does not become more likely after previous wins, because each spin is independent.">
+        <figcaption>Myth check: Hot streak</figcaption>
+        <div class="streak-bars">
+          <div class="streak-line">
+            <span class="label">Last result</span>
+            <span class="value">WIN</span>
+          </div>
+          <div class="streak-line">
+            <span class="label">Next spin change</span>
+            <span class="value">0%</span>
+          </div>
+          <div class="streak-line">
+            <span class="label">Next spin odds</span>
+            <span class="value">Same as before</span>
+          </div>
+        </div>
+      </figure>
+
+      <p class="takeaway">Past wins don’t improve the next independent spin.</p>
+      <p class="action">Check your time and budget.</p>
+    </main>
+
+    <footer class="card-footer" data-protected-zone="support-and-legal">
+      <span class="footer-support">Free support: {{HELPLINE_NUMBER}}</span>
+      <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+    </footer>
+  </article>
+</body>
+</html>

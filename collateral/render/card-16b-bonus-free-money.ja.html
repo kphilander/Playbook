@@ -54,25 +54,26 @@
     .fact-statement { line-height: 1.8; }
     .myth-label, .section-label, .card-pillar { letter-spacing: 0.05em; }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="card-pillar">オープン</span>
   </div>
   <div class="card-body">
     <div class="myth-label">俗説と数学</div>
-    <div class="myth-statement"><span class="strike">「ボーナスはタダでもらえるお金だ」</span></div>
-    <div class="fact-statement">1万円のボーナスに30倍の賭け条件が付くと、出金までに<strong>30万円分のベット</strong>が必要です。まずは倍率の確認を。</div>
+    <div class="myth-statement">ボーナスの条件。</div>
+    <div class="fact-statement">ボーナスだけに30倍の条件。1万円なら<strong>30万円の対象ベット</strong>が必要です。対象ゲームと期限も確認を。</div>
     <div class="bar-viz">
       <div class="bar-row"><div class="bar-track"><div class="bar teal"></div></div><span class="bar-value teal-text">1万円</span></div>
       <div class="bar-caption">ボーナス額</div>
       <div class="bar-row"><div class="bar-track"><div class="bar orange"></div></div><span class="bar-value orange-text">30万円</span></div>
-      <div class="bar-caption">出金に必要なベット総額（実際の比率で表示）</div>
+      <div class="bar-caption">必要な対象ベット総額</div>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -34,23 +32,24 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">How It Works</div>
     <div class="game-name">Video Poker</div>
-    <div class="key-fact">Your hold/discard decisions change the math. Check two numbers on the paytable: <strong>full house and flush payouts</strong>. 9/6 is the one you want.</div>
+    <div class="key-fact">Look for the game name as well as the paytable. <strong>9/6 means 9 for a full house and 6 for a flush</strong> in Jacks or Better.</div>
     <div class="stat-block">
       <span class="stat-number">0.46%</span>
-      <span class="stat-unit">house edge on full-pay<br>9/6 Jacks or Better</span>
+      <span class="stat-unit">9/6 Jacks or Better<br>optimal play, max-coin royal</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

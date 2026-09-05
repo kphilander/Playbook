@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
-  <style>
+        <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { margin: 0; padding: 24px; background: var(--pb-color-white); }
 
@@ -160,13 +157,14 @@
     }
   </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-  <div class="helpline-card">
+  <div class="helpline-card pb-creative">
     <div class="accent-bar"></div>
     <div class="card-content">
       <div class="card-header">
-        <span class="card-logo">Playbook</span>
+        <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
         <div class="co-brand">
           <div class="co-brand-divider"></div>
           <div class="operator-placeholder">Your logo</div>
@@ -187,7 +185,7 @@
         </div>
       </div>
     </div>
-    <div class="card-footer">
+    <div class="card-footer" data-protected-zone="support-and-legal">
       <span class="legal-text">{{AGE_DISCLAIMER}}</span>
       <span class="availability">24/7</span>
     </div>

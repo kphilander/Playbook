@@ -37,26 +37,26 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster">
-  <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
-    
-  </div>
-  <div class="poster-body">
-    <div class="headline">لكل لعبة حساباتها.<br>وفيما يلي التفاصيل.</div>
-    <div class="stat-block">
-      <span class="stat-number">2&ndash;15%</span>
-      <span class="stat-label">آلات القمار</span>
-    </div>
-    <div class="body-line">النسبة مُحددة مسبقًا قبل الدوران، ولا يمكن رؤيتها.</div>
-    <a href="#" class="poster-cta">للاطلاع على نسبة اللعبة، يُرجى زيارة {{PROGRAM_URL}}</a>
-  </div>
-  <div class="poster-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
-  </div>
+<div class="poster pb-creative">
+<div class="poster-header">
+<span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
+</div>
+<div class="poster-body">
+<div class="headline">لكل لعبة حساباتها.<br/>وفيما يلي التفاصيل.</div>
+<div class="stat-block">
+<span class="stat-number"><bdi dir="ltr">2–15%</bdi></span>
+<span class="stat-label">آلات القمار</span>
+</div>
+<div class="body-line">تختلف الأفضلية حسب اللعبة. راجع معلومات نسبة العائد.</div>
+<a class="poster-cta" href="#">للاطلاع على نسبة اللعبة، يُرجى زيارة {{PROGRAM_URL}}</a>
+</div>
+<div class="poster-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

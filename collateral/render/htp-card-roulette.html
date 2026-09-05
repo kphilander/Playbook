@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -34,23 +32,24 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">How It Works</div>
-    <div class="game-name">Roulette</div>
-    <div class="key-fact">38 slots, 2 green zeros, and <strong>every bet has the same house edge</strong>. Red, black, single number — the math doesn't change.</div>
+    <div class="game-name">American roulette</div>
+    <div class="key-fact">An American wheel has 0 and 00. <strong>Most bets share a 5.26% house edge.</strong> The five-number bet is higher: 7.89%.</div>
     <div class="stat-block">
-      <span class="stat-number">5.26%</span>
-      <span class="stat-unit">house edge on<br>every standard bet</span>
+      <span class="stat-number">0 + 00</span>
+      <span class="stat-unit">two zero pockets<br>on an American wheel</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=600">
-<title>Welcome to Playbook</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
+<title>Welcome to {{PROGRAM_SHORT_NAME}}</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   .email {
@@ -176,16 +174,17 @@
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
+<div class="email pb-creative">
 
   <div class="accent-bar"></div>
 
   <div class="hero">
-    <div class="hero-logo">Playbook</div>
+    <div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
     <h1>Welcome. A few things worth knowing.</h1>
-    <p>Playbook gives you the facts, the tools, and the real numbers behind the games you play. No fine print.</p>
+    <p>{{PROGRAM_SHORT_NAME}} gives you the facts, the tools, and the real numbers behind the games you play. No fine print.</p>
   </div>
 
   <div class="section-white">
@@ -194,7 +193,7 @@
       <div class="tool-icon">1</div>
       <div>
         <strong>Set your budget</strong>
-        <span>Pick your deposit limit. Weekly, monthly, whatever works. Takes 10 seconds.</span>
+        <span>Pick your deposit limit. Weekly, monthly, whatever works. Choose your amount and period.</span>
       </div>
     </div>
     <div class="tool-item">
@@ -217,7 +216,7 @@
   <div class="section-gray">
     <div class="stat-block">
       <div class="stat-number"><span class="teal">0.5%</span> to <span class="orange">15%</span></div>
-      <div class="stat-context">That's the range of house edge across casino games. Knowing the edge helps you pick your games and set your budget.</div>
+      <div class="stat-context">Illustrative range across selected casino games. Rules and strategy affect the edge. Knowing the edge helps you pick your games and set your budget.</div>
     </div>
     <div style="text-align: center;">
       <a href="#" class="cta-button">See the real odds</a>
@@ -232,7 +231,7 @@
       Chat at {{CHAT_URL}}
     </div>
     <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
+    <div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
     <div class="footer-unsub">
       <a href="#">Manage your preferences</a>
     </div>

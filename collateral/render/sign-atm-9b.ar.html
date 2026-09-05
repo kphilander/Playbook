@@ -144,35 +144,30 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="sign-atm">
-
-  <div class="sign-header">
-    <span class="card-logo">Playbook</span>
-  </div>
-
-  <div class="sign-content">
-    <div class="sign-headline">تحديد الميزانية أولًا.</div>
-    <div class="sign-body">حدود الإيداع لا تستغرق سوى 10 ثوانٍ. المال والقواعد تخصّ اللاعب.</div>
-
-    <div class="tool-highlight">
-      <div class="tool-highlight-label">حدود الإيداع</div>
-      <div class="tool-highlight-stat">10 ثوانٍ</div>
-      <div class="tool-highlight-body">أسبوعيًا أو شهريًا. يمكن التعديل في أي وقت.</div>
-    </div>
-
-    <div class="qr-block">
-      <div class="qr-placeholder">رمز QR</div>
-      <div class="qr-text">امسح لضبط حد الإيداع</div>
-    </div>
-  </div>
-
-  <div class="sign-footer">
-    <div class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
-    <div class="footer-legal">{{AGE_DISCLAIMER}}</div>
-  </div>
-
+<div class="sign-atm pb-creative">
+<div class="sign-header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+</div>
+<div class="sign-content">
+<div class="sign-headline">تحديد الميزانية أولًا.</div>
+<div class="sign-body">تُحدَّد ميزانية الترفيه النقدية قبل السحب.</div>
+<div class="tool-highlight">
+<div class="tool-highlight-label">الميزانية النقدية</div>
+<div class="tool-highlight-stat">قرارك</div>
+<div class="tool-highlight-body">قد لا تُحتسب السحوبات النقدية ضمن حدود الإيداع عبر الإنترنت.</div>
+</div>
+<div class="qr-block">
+<div class="qr-placeholder">رمز QR</div>
+<div class="qr-text">امسح للاطلاع على أدوات الميزانية</div>
+</div>
+</div>
+<div class="sign-footer">
+<div class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
+<div class="footer-legal">{{AGE_DISCLAIMER}}</div>
+</div>
 </div>
 </body>
 </html>

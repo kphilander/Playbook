@@ -54,17 +54,18 @@
     .fact-statement { line-height: 1.8; }
     .myth-label, .section-label, .card-pillar { letter-spacing: 0.05em; }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="card-pillar">公开</span>
   </div>
   <div class="card-body">
     <div class="myth-label">误区与数字</div>
     <div class="myth-statement"><span class="strike">「红利等于免费资金」</span></div>
-    <div class="fact-statement">一笔澳门币 100 的红利，若设有 30 倍流水要求，提款前须完成<strong>澳门币 3,000 的投注</strong>。请先查阅倍数条款。</div>
+    <div class="fact-statement">示例：30倍流水仅适用于奖金时，100奖金需<strong>3,000有效投注额。</strong>还需查看适用游戏和期限。</div>
     <div class="bar-viz">
       <div class="bar-row"><div class="bar-track"><div class="bar teal"></div></div><span class="bar-value teal-text">澳门币 100</span></div>
       <div class="bar-caption">红利金额</div>
@@ -72,7 +73,7 @@
       <div class="bar-caption">提款所需投注总额（按实际比例绘制）</div>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

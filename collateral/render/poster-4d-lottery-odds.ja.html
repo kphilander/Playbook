@@ -49,22 +49,23 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="single-stat">
+<div class="poster pb-creative poster-editorial" data-layout="single-stat">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
     <div class="eyebrow">宝くじ</div>
-    <div class="headline">当せん確率は、<br>想像よりずっと低い。</div>
-    <div class="subhead">どの数字の組み合わせも確率はまったく同じです。例外はありません。</div>
+    <div class="headline">6つの数字。<br>すべて一致する確率。</div>
+    <div class="subhead">公平な「49個から6個」の抽選では、どの6個の組み合わせも当選確率は同じです。</div>
     <div class="stat-grid">
       <div class="stat-col">
-        <div class="stat-game">メガジャックポット</div>
-        <div class="stat-edge white">約3億分の1</div>
-        <div class="stat-note">正確には302,575,350分の1</div>
+        <div class="stat-game">6/49抽選</div>
+        <div class="stat-edge white">約1/1400万</div>
+        <div class="stat-note">正確には1/13,983,816</div>
       </div>
     </div>
     <div class="qr-row">
@@ -72,7 +73,7 @@
       <div class="qr-label">宝くじの確率ガイドを見る</div>
     </div>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

@@ -7,8 +7,6 @@
      visual-identity/photography/photography.md (cinematic warm key light,
      navy-tinted shadows, lower-third negative space for text overlay).
      Prompt source: collateral/render/photos/PROMPTS.md -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
@@ -46,25 +44,26 @@
   .footer-legal { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-300); white-space: nowrap; }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster">
+<div class="poster pb-creative">
   <img class="poster-photo" src="photos/poster-19f.jpg" alt="A man at a coffee shop glancing at his phone while a friend talks across the table">
   <div class="photo-scrim"></div>
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="poster-pillar">No fine print</span>
   </div>
   <div class="poster-body">
-    <div class="eyebrow">Ten seconds, tops</div>
-    <div class="headline">Your tools. Your limits.<br>Your call.</div>
-    <div class="subhead">A deposit limit is a <strong>seatbelt for your bankroll</strong> &mdash; set it once and it works in the background.</div>
+    <div class="eyebrow">Your account settings</div>
+    <div class="headline">Pick a deposit limit.<br>Give it a time frame.</div>
+    <div class="subhead">Choose an amount and a period. Check when the limit resets and when changes take effect.</div>
     <div class="cta-row">
       <a href="#" class="poster-cta">Set your limits</a>
       <span class="cta-url">{{PROGRAM_URL}}</span>
     </div>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

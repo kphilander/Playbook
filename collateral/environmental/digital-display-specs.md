@@ -85,7 +85,7 @@ Render both orientations with `--profile=display`. Do not crop the landscape mas
 
 | Game | Edge | Color |
 |---|---|---|
-| Blackjack | 0.5% | Emerald `#10B981` |
+| Blackjack: basic strategy, favorable rules | ≈0.5% | Emerald `#10B981` |
 | Roulette | 5.26% | White `#FFFFFF` |
 | Slots | 2–15% | Orange `#FF6B35` |
 
@@ -103,7 +103,7 @@ Render both orientations with `--profile=display`. Do not crop the landscape mas
 | **Pillar badge** | `SHARP` (emerald pill) |
 | **Headline** | Think you know the odds? |
 | **Headline specs** | Inter 800, 72px, white |
-| **Body** | Take the 2-minute game IQ quiz. Most people get question 3 wrong. |
+| **Body** | Take the 2-minute game IQ quiz. See what you know, then explore the answers. |
 | **QR code** | Links to quiz (large, 200px+) |
 | **QR label** | Scan to take the quiz |
 | **Social hook** | Challenge your friends. |
@@ -207,3 +207,7 @@ Render both orientations with `--profile=display`. Do not crop the landscape mas
 ---
 
 *Cross-references: [Application Guidelines — Environmental](../../brand-book/07-application-guidelines.md#environmental-applications) | [Core Messages](../../messaging/core-messages.md) | [HTML template](../render/display-landscape-6a.html)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -39,43 +37,42 @@
   .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
+<div class="story-card pb-creative">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">Open</span>
   </div>
   <div class="story-body">
     <div class="eyebrow">Sports math</div>
-    <div class="headline">Not all bets cost the same.</div>
+    <div class="headline">Same stake.<br>Different returns.</div>
     <div class="bar-list">
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">Moneyline</span>
-          <span class="bar-value teal">3%</span>
+          <span class="bar-name">At −110</span>
+          <span class="bar-value teal">$190.91</span>
         </div>
-        <div class="bar-track"><div class="bar-fill teal"></div></div>
       </div>
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">Props</span>
-          <span class="bar-value white">5&ndash;7%</span>
+          <span class="bar-name">At −125</span>
+          <span class="bar-value white">$180</span>
         </div>
-        <div class="bar-track"><div class="bar-fill white"></div></div>
       </div>
       <div class="bar-row">
         <div class="bar-label">
-          <span class="bar-name">Same-game parlays</span>
-          <span class="bar-value orange">15&ndash;25%</span>
+          <span class="bar-name">At +100</span>
+          <span class="bar-value orange">$200</span>
         </div>
-        <div class="bar-track"><div class="bar-fill orange"></div></div>
       </div>
     </div>
-    <div class="body-text">Simple bets have a smaller cut. Fun bets have a bigger one.</div>
+    <div class="body-text">Example: a winning $100 cash bet. Returns include the original stake.</div>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 </div>
 </body>

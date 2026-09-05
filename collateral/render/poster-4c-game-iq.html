@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
@@ -39,27 +37,28 @@
   .footer-legal { font-family: var(--pb-font-body); font-size: calc(24px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="single-proof">
+<div class="poster pb-creative poster-editorial" data-layout="single-proof">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
     <div class="myth-label">Myth vs. Math</div>
-    <div class="myth-statement"><span class="strike">"I'm due for a win"</span></div>
+    <div class="myth-statement">A losing streak<br>isn’t a countdown.</div>
     <div class="divider"></div>
-    <div class="fact-statement">This is the <strong>gambler's fallacy</strong>. Past results don't change what happens next.</div>
+    <div class="fact-statement">On independent slot spins, past losses don’t make the next spin more likely to win.</div>
     <div class="stat-row">
       <div class="stat-item">
-        <div class="stat-number">0%</div>
-        <div class="stat-label">Effect of past spins<br>on the next result</div>
+        <div class="stat-number">Same odds</div>
+        <div class="stat-label">For the next independent spin</div>
       </div>
     </div>
     <a href="#" class="quiz-cta">Test your Game IQ &mdash; take the quiz</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

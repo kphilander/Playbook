@@ -1,0 +1,544 @@
+{
+  "meta": {
+    "count": 18,
+    "language": "zh-CN",
+    "source_en": "collateral/rg-copy/myths-en.json",
+    "tone_profile": "authority/communal/minimal/diplomatic/private (Macau)",
+    "editorial_revision": "2026-09-04"
+  },
+  "myths": [
+    {
+      "id": 1,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "连续中奖",
+      "quiz": {
+        "question": "在每次旋转相互独立的老虎机上连赢四次。设置相同，第五次的概率会改变吗？",
+        "options": [
+          {
+            "label": "高于常规 —— 势头正好",
+            "correct": false
+          },
+          {
+            "label": "低于常规 —— 该轮到输了",
+            "correct": false
+          },
+          {
+            "label": "之前的中奖不会改变概率",
+            "correct": true
+          },
+          {
+            "label": "取决于投注金额",
+            "correct": false
+          }
+        ],
+        "feedback": "独立旋转不会延续连胜的概率优势。这里假定游戏规则和设置相同。"
+      }
+    },
+    {
+      "id": 2,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "「该中」的时候",
+      "quiz": {
+        "question": "每次旋转相互独立的老虎机三小时未中奖，能预测下一次吗？",
+        "options": [
+          {
+            "label": "即将中奖的可能性上升",
+            "correct": false
+          },
+          {
+            "label": "处于「冷机」状态，更不容易中",
+            "correct": false
+          },
+          {
+            "label": "不能根据之前的未中预测",
+            "correct": true
+          },
+          {
+            "label": "机器可能出现故障",
+            "correct": false
+          }
+        ],
+        "feedback": "连续未中不会让下一次独立旋转更容易中奖。其他奖励功能请查阅游戏规则。"
+      }
+    },
+    {
+      "id": 3,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "所谓的幸运机器",
+      "quiz": {
+        "question": "觉得某台机器特别容易赢。什么信息有助于检验这个印象？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "包括投注和损失在内的完整记录",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "难忘的中奖可能影响印象。完整记录也包含投注和损失。不同游戏或设置可能有不同概率。"
+      }
+    },
+    {
+      "id": 4,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "「差一点」的含义",
+      "quiz": {
+        "question": "在独立旋转的老虎机上，差一点中奖会提高下一次的概率吗？",
+        "options": [
+          {
+            "label": "距离中奖越来越近",
+            "correct": false
+          },
+          {
+            "label": "机器正在「升温」",
+            "correct": false
+          },
+          {
+            "label": "不会",
+            "correct": true
+          },
+          {
+            "label": "应考虑增加投注金额",
+            "correct": false
+          }
+        ],
+        "feedback": "按该游戏派彩表未中奖就是未中奖。差一点不会提高下一次独立旋转的中奖概率。"
+      }
+    },
+    {
+      "id": 5,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "时段与概率",
+      "quiz": {
+        "question": "只看时钟，能知道老虎机的RTP（理论返还率）吗？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "不能，应查看游戏公开信息",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "时段本身不是更高RTP的证据。请查看游戏规则和公开返还率；不同市场的要求可能不同。"
+      }
+    },
+    {
+      "id": 6,
+      "gameType": [
+        "slots",
+        "electronic-gaming"
+      ],
+      "title": "投注金额与优势",
+      "quiz": {
+        "question": "在轮盘中，同一种投注、相同规则和派彩比例下提高金额，庄家优势的百分比如何变化？",
+        "options": [
+          {
+            "label": "下降 —— 赌场优待高额投注者",
+            "correct": false
+          },
+          {
+            "label": "上升 —— 赌场会取得更多",
+            "correct": false
+          },
+          {
+            "label": "百分比不变",
+            "correct": true
+          },
+          {
+            "label": "视机器而定",
+            "correct": false
+          }
+        ],
+        "feedback": "本例中百分比不变，投注金额增加十倍，预期损失金额也增加十倍。其他游戏可能随投注额改变派彩条件。"
+      }
+    },
+    {
+      "id": 7,
+      "gameType": [
+        "roulette",
+        "blackjack",
+        "baccarat"
+      ],
+      "title": "投注策略的局限",
+      "quiz": {
+        "question": "轮盘中每输一次便加倍下注，能消除庄家优势吗？",
+        "options": [
+          {
+            "label": "长期来看，必然胜出",
+            "correct": false
+          },
+          {
+            "label": "庄家优势会随时间消失",
+            "correct": false
+          },
+          {
+            "label": "不能，所需金额可能迅速增加",
+            "correct": true
+          },
+          {
+            "label": "取决于玩家的自律程度",
+            "correct": false
+          }
+        ],
+        "feedback": "投注顺序不改变轮盘概率或派彩比例。连续失利会要求更大金额，资金或桌面限额可能使计划中止。"
+      }
+    },
+    {
+      "id": 8,
+      "gameType": [
+        "blackjack",
+        "baccarat",
+        "poker"
+      ],
+      "title": "荷官的「状态」",
+      "quiz": {
+        "question": "仅凭荷官最近连赢，就能判断哪个二十一点牌桌更有利吗？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "不能，应比较规则和游戏条件",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "连赢本身不能证明优势。规则、策略及剩余牌张可能影响概率；同一牌靴中发出的各手牌并非独立。"
+      }
+    },
+    {
+      "id": 9,
+      "gameType": [
+        "blackjack"
+      ],
+      "title": "算牌的实际优势",
+      "quiz": {
+        "question": "算牌能保证二十一点的收入吗？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "不能，条件与结果会变化",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "潜在优势取决于规则、剩余牌张与玩法。结果可能有亏损期，场所也可能限制参与。"
+      }
+    },
+    {
+      "id": 10,
+      "gameType": [
+        "roulette",
+        "lottery"
+      ],
+      "title": "「个人的」号码",
+      "quiz": {
+        "question": "公平的单零轮盘中，7号已连续50次未出。下一次独立旋转出现的概率是？",
+        "options": [
+          {
+            "label": "上升 —— 即将出现",
+            "correct": false
+          },
+          {
+            "label": "下降 —— 今日显然不利",
+            "correct": false
+          },
+          {
+            "label": "37分之1",
+            "correct": true
+          },
+          {
+            "label": "取决于荷官投球的方式",
+            "correct": false
+          }
+        ],
+        "feedback": "本例中37个格子的概率相同。过去的结果不改变下一次独立旋转的概率。"
+      }
+    },
+    {
+      "id": 11,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "知识与胜率",
+      "quiz": {
+        "question": "金额相同、赔率−110、没有退回投注的平局或额外费用时，收支平衡需要多高胜率？",
+        "options": [
+          {
+            "label": "50% —— 胜过一半即可",
+            "correct": false
+          },
+          {
+            "label": "约52.4%",
+            "correct": true
+          },
+          {
+            "label": "55% —— 需轻微优势",
+            "correct": false
+          },
+          {
+            "label": "60% —— 需明显优势",
+            "correct": false
+          }
+        ],
+        "feedback": "投注110，赢时利润100。110÷（110＋100）约为52.4%。前提是金额和赔率相同，没有平局退款或额外费用。"
+      }
+    },
+    {
+      "id": 12,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "串关投注的数学",
+      "quiz": {
+        "question": "四个相互独立的选择，每个真实获胜概率为50%，全部获胜的概率是？",
+        "options": [
+          {
+            "label": "50%",
+            "correct": false
+          },
+          {
+            "label": "25%",
+            "correct": false
+          },
+          {
+            "label": "6.25%",
+            "correct": true
+          },
+          {
+            "label": "100%",
+            "correct": false
+          }
+        ],
+        "feedback": "0.5×0.5×0.5×0.5＝0.0625。此例假定独立，相关选择需要不同计算。报价中的派彩是另一项数字。"
+      }
+    },
+    {
+      "id": 13,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "预测者的战绩",
+      "quiz": {
+        "question": "预测者声称10选8中，仅这份记录能证明什么？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "不能证明可靠的长期利润",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "10次是有限样本。请查看完整记录、赔率、金额、损失与费用。命中率本身不等于利润。"
+      }
+    },
+    {
+      "id": 14,
+      "gameType": [
+        "sports-betting"
+      ],
+      "title": "滚球投注的实际位置",
+      "quiz": {
+        "question": "滚球赔率改变后，确认投注前应核对什么？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "当前赔率与可能收到的总额",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "滚球赔率可能改变，转播也可能延迟。请检查确认的赔率、投注额和可能返还额。观看比赛不保证信息优势。"
+      }
+    },
+    {
+      "id": 15,
+      "gameType": [
+        "lottery"
+      ],
+      "title": "「该出」的号码",
+      "quiz": {
+        "question": "在公平且各期独立的彩票抽奖中，某号码半年未出，下一期会更容易出现吗？",
+        "options": [
+          {
+            "label": "是 —— 统计上已到出现的时候",
+            "correct": false
+          },
+          {
+            "label": "是 —— 平均法则要求其迟早出现",
+            "correct": false
+          },
+          {
+            "label": "不会因之前未出而提高概率",
+            "correct": true
+          },
+          {
+            "label": "取决于总号码数量",
+            "correct": false
+          }
+        ],
+        "feedback": "公平独立的抽奖不会补偿过去的结果。49选6的例子中，每组号码的概率为13,983,816分之1。"
+      }
+    },
+    {
+      "id": 16,
+      "gameType": [
+        "lottery"
+      ],
+      "title": "多买票是否显著提升中奖",
+      "quiz": {
+        "question": "一次公平的49选6抽奖中，购买100组不同号码，头奖概率是多少？",
+        "options": [
+          {
+            "label": "100%",
+            "correct": false
+          },
+          {
+            "label": "13,983,816分之100，约0.000715%",
+            "correct": true
+          },
+          {
+            "label": "1%",
+            "correct": false
+          },
+          {
+            "label": "50%",
+            "correct": false
+          }
+        ],
+        "feedback": "概率是单组的100倍；单价相同时，费用也是100倍。重复同一组合不会增加不同的头奖命中方式。"
+      }
+    },
+    {
+      "id": 17,
+      "gameType": [
+        "all-gambling"
+      ],
+      "title": "试图赢回损失",
+      "quiz": {
+        "question": "有庄家优势的游戏中，之前损失的钱一定能赢回来吗？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "没有保证，追加投注也可能损失",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "先前的损失不会产生偿还义务。负期望值下追加投注会增加预期损失，但每次结果可能不同。预算有助于决定何时结束。"
+      }
+    },
+    {
+      "id": 18,
+      "gameType": [
+        "all-gambling"
+      ],
+      "title": "作为收入来源",
+      "quiz": {
+        "question": "正的庄家优势描述什么？",
+        "options": [
+          {
+            "label": "结果一定有保证",
+            "correct": false
+          },
+          {
+            "label": "只看上一结果即可判断",
+            "correct": false
+          },
+          {
+            "label": "预期返还低于投注金额",
+            "correct": true
+          },
+          {
+            "label": "规则无关紧要",
+            "correct": false
+          }
+        ],
+        "feedback": "它描述指定规则下的长期数学成本，不预测某次游戏的结果。把博彩视为有预算的娱乐活动。"
+      }
+    }
+  ]
+}

@@ -62,7 +62,7 @@ Four-card grid showcasing player features. Each card links to the relevant tool 
 |---|---|
 | **Icon** | `shield-check` (from icon system) |
 | **Headline** | Set your deposit limit |
-| **Body** | Pick your number. Play without second-guessing. Takes 10 seconds. |
+| **Body** | Pick your number. Review the limit before confirming. Choose your amount and time frame. |
 | **CTA** | `Set your limits →` |
 
 > Ref: Message [T-1](../../messaging/core-messages.md#tools--features-that-work-for-you), [D-1](../../messaging/core-messages.md#deposit-screen)
@@ -108,7 +108,7 @@ Prominent module driving engagement to the Game IQ quiz.
 |---|---|
 | **Pillar badge** | `SHARP` (emerald pill) |
 | **Headline** | Think you know the odds? |
-| **Body** | 7 questions. 2 minutes. Most people get question 3 wrong. |
+| **Body** | 7 questions. 2 minutes. See what you know, then explore the answers. |
 | **Primary CTA** | `Take the quiz →` |
 | **Secondary CTA** | `Challenge a friend →` |
 | **Social proof** | `{{QUIZ_COUNT}}+ players have taken the quiz` |
@@ -131,11 +131,11 @@ Interactive or static module comparing house edge across game types.
 
 | Game | House edge | Note |
 |---|---|---|
-| Blackjack (basic strategy) | 0.5% | Best odds in the casino |
+| Blackjack (basic strategy; favorable rules) | ≈0.5% | Basic strategy; favorable rules |
 | Craps (pass/don't pass) | 1.4% | Simple bet, low edge |
 | Baccarat (banker) | 1.06% | House favorite |
 | European roulette | 2.7% | Single zero wheel |
-| American roulette | 5.26% | Double zero = double edge |
+| American roulette | 5.26% | Double-zero wheel; most bets |
 | Slots (average) | 2–15% | Varies by machine and casino |
 
 | Element | Content |
@@ -240,3 +240,7 @@ Global component appearing on every page of the operator's site. Not unique to t
 ---
 
 *Cross-references: [Application Guidelines](../../brand-book/07-application-guidelines.md) | [Core Messages](../../messaging/core-messages.md) | [Messaging Framework](../../brand-book/05-messaging-framework.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

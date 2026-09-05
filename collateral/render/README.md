@@ -2,6 +2,8 @@
 
 HTML layout masters, PNG previews, and build scripts for Playbook collateral. The renderer contains English template families and localized render entries across English, Japanese, Simplified Chinese, and Arabic. The new 20-series concepts are English social masters.
 
+The [September creative review](../creative-review/index.html) covers all 320 registered render entries and 30 separate concept revisions, with a [decision and evidence ledger](../creative-review/README.md).
+
 ## Source files
 
 | File | Role |
@@ -9,6 +11,7 @@ HTML layout masters, PNG previews, and build scripts for Playbook collateral. Th
 | [render-cards.mjs](render-cards.mjs) | Puppeteer renderer, filtering, locale selection, and layout checks |
 | [output-profiles.mjs](output-profiles.mjs) | Named output sizes, print scale, and bleed configuration |
 | [build-comparison.mjs](build-comparison.mjs) | Builds a browsable before/after review sheet from the committed baseline and current PNG previews |
+| [creative-system.css](creative-system.css) | Opt-in creative refinements and bundled Latin fonts; archived concepts remain separate |
 | [layout-system.css](layout-system.css) | Maintained responsive, safe-zone, and format-specific layout rules |
 | [brand-inject.css](brand-inject.css) | Generated brand tokens plus the shared layout system |
 | [build-logos.mjs](build-logos.mjs) | Logo SVG generator |

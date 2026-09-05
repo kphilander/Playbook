@@ -40,28 +40,28 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
-  <div class="story-header">
-    <span class="story-logo">Playbook</span>
-    
-  </div>
-  <div class="story-body">
-    <div class="myth-label">اعتقاد الأسبوع</div>
-    <div class="myth-intro">يعتقد بعض اللاعبين:</div>
-    <div class="myth-statement">«أنا في سلسلة انتصارات»</div>
-    <div class="divider"></div>
-    <div class="fact-statement">في الواقع، كل دورة وكل يد وكل رمية <strong>مستقلة إحصائيًا</strong>. الذهن يميل إلى رؤية الأنماط، أما الأرقام فلا.</div>
-    <div class="stat-block">
-      <div class="stat-number">0%</div>
-      <div class="stat-label">احتمال تأثير النتائج السابقة على الدورة التالية</div>
-    </div>
-    <a href="#" class="story-cta">للاطلاع على آلية العمل</a>
-  </div>
-  <div class="story-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-  </div>
+<div class="story-card pb-creative">
+<div class="story-header">
+<span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
+</div>
+<div class="story-body">
+<div class="myth-label">اعتقاد الأسبوع</div>
+<div class="myth-intro">يعتقد بعض اللاعبين:</div>
+<div class="myth-statement">«أنا في سلسلة انتصارات»</div>
+<div class="divider"></div>
+<div class="fact-statement">في دورات السلوتس المستقلة، <strong>الفوز السابق لا يزيد احتمال الفوز في الدورة التالية.</strong></div>
+<div class="stat-block">
+<div class="stat-number"><bdi dir="ltr">0%</bdi></div>
+<div class="stat-label">احتمال تأثير النتائج السابقة على الدورة التالية</div>
+</div>
+<a class="story-cta" href="#">للاطلاع على آلية العمل</a>
+</div>
+<div class="story-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+</div>
 </div>
 </body>
 </html>

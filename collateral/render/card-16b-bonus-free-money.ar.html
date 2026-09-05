@@ -55,28 +55,29 @@
     .myth-label, .section-label, .card-pillar { letter-spacing: 0.05em; }
     .bar, .bar-fill-orange { border-radius: 4px 0 0 4px; }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
-  <div class="card-header">
-    <span class="card-logo">Playbook</span>
-    <span class="card-pillar">شفافية</span>
-  </div>
-  <div class="card-body">
-    <div class="myth-label">الاعتقاد مقابل الأرقام</div>
-    <div class="myth-statement"><span class="strike">«المكافأة أموال مجانية»</span></div>
-    <div class="fact-statement">مكافأة بقيمة 100 درهم بشرط رهان 30 ضعفًا تعني <strong>رهانات بقيمة 3,000 درهم</strong> قبل إمكانية السحب. اطّلع على المضاعف أولًا.</div>
-    <div class="bar-viz">
-      <div class="bar-row"><div class="bar-track"><div class="bar teal"></div></div><span class="bar-value teal-text">100 درهم</span></div>
-      <div class="bar-caption">قيمة المكافأة</div>
-      <div class="bar-row"><div class="bar-track"><div class="bar orange"></div></div><span class="bar-value orange-text">3,000 درهم</span></div>
-      <div class="bar-caption">إجمالي الرهانات المطلوبة، مرسوم بالمقياس الفعلي</div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
-  </div>
+<div class="social-card pb-creative">
+<div class="card-header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+<span class="card-pillar">شفافية</span>
+</div>
+<div class="card-body">
+<div class="myth-label">الاعتقاد مقابل الأرقام</div>
+<div class="myth-statement"><span class="strike">«المكافأة أموال مجانية»</span></div>
+<div class="fact-statement">مثال: إذا كان شرط <bdi dir="ltr">30</bdi> ضعفًا على المكافأة وحدها، فمكافأة <bdi dir="ltr">100</bdi> تتطلب <strong><bdi dir="ltr">3,000</bdi> من الرهانات المؤهلة.</strong> راجع الألعاب والمهلة.</div>
+<div class="bar-viz">
+<div class="bar-row"><div class="bar-track"><div class="bar teal"></div></div><span class="bar-value teal-text"><bdi dir="ltr">100</bdi> درهم</span></div>
+<div class="bar-caption">قيمة المكافأة</div>
+<div class="bar-row"><div class="bar-track"><div class="bar orange"></div></div><span class="bar-value orange-text"><bdi dir="ltr">3,000</bdi> درهم</span></div>
+<div class="bar-caption">إجمالي الرهانات المطلوبة، مرسوم بالمقياس الفعلي</div>
+</div>
+</div>
+<div class="card-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

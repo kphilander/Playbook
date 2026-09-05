@@ -159,71 +159,67 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
-
-  <div class="accent-bar"></div>
-
-  <div class="hero">
-    <div class="hero-logo">Playbook</div>
-    <h1>لكل لعبة حساباتها. وفيما يلي التفاصيل.</h1>
-    <p>من الأدنى إلى الأعلى — هذه هي نسبة الكازينو.</p>
-  </div>
-
-  <div class="section-white">
-    <table class="odds-table">
-      <thead>
-        <tr>
-          <th>اللعبة</th>
-          <th class="right">نسبة الكازينو</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>بلاك جاك (اللعب الأمثل)</td>
-          <td class="edge">0.5%</td>
-        </tr>
-        <tr>
-          <td>باكاراه (المصرفي)</td>
-          <td class="edge">1.06%</td>
-        </tr>
-        <tr>
-          <td>كرابس (Pass line)</td>
-          <td class="edge">1.41%</td>
-        </tr>
-        <tr>
-          <td>الروليت الأوروبي</td>
-          <td class="edge">2.7%</td>
-        </tr>
-        <tr>
-          <td>الروليت الأمريكي</td>
-          <td class="edge">5.26%</td>
-        </tr>
-        <tr>
-          <td>آلات القمار</td>
-          <td class="edge">2&ndash;15%</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="insight">كلما انخفضت نسبة الكازينو، طال اللعب في المتوسط. ومع ذلك، قد تتقلب الجلسة الواحدة بشكل ملحوظ.</div>
-    <a href="#" class="cta-button">للاطلاع على حسابات كل لعبة، يُرجى زيارة {{PROGRAM_URL}}</a>
-  </div>
-
-  <div class="footer">
-    <div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
-    <div class="footer-channels">
-      اتصال: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br>
-      رسالة نصية: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br>
+<div class="email pb-creative">
+<div class="accent-bar"></div>
+<div class="hero">
+<div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
+<h1>لكل لعبة حساباتها. وفيما يلي التفاصيل.</h1>
+<p>من الأدنى إلى الأعلى — هذه هي نسبة الكازينو.</p>
+</div>
+<div class="section-white">
+<table class="odds-table">
+<thead>
+<tr>
+<th>اللعبة</th>
+<th class="right">نسبة الكازينو</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>بلاك جاك (اللعب الأمثل)</td>
+<td class="edge"><bdi dir="ltr">0.5%</bdi></td>
+</tr>
+<tr>
+<td>باكاراه (المصرفي)</td>
+<td class="edge"><bdi dir="ltr">1.06%</bdi></td>
+</tr>
+<tr>
+<td>كرابس (Pass line)</td>
+<td class="edge"><bdi dir="ltr">1.41%</bdi></td>
+</tr>
+<tr>
+<td>الروليت الأوروبي</td>
+<td class="edge"><bdi dir="ltr">2.7%</bdi></td>
+</tr>
+<tr>
+<td>الروليت الأمريكي</td>
+<td class="edge"><bdi dir="ltr">5.26%</bdi></td>
+</tr>
+<tr>
+<td>آلات القمار</td>
+<td class="edge"><bdi dir="ltr">2–15%</bdi></td>
+</tr>
+</tbody>
+</table>
+<div class="insight">كلما انخفضت نسبة الكازينو، طال اللعب في المتوسط. ومع ذلك، قد تتقلب الجلسة الواحدة بشكل ملحوظ.</div>
+<a class="cta-button" href="#">للاطلاع على حسابات كل لعبة، يُرجى زيارة {{PROGRAM_URL}}</a>
+</div>
+<div class="footer">
+<div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
+<div class="footer-channels">
+      اتصال: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br/>
+      رسالة نصية: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br/>
       الدردشة: {{CHAT_URL}}
     </div>
-    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
-    <div class="footer-unsub">
-      <a href="#">إدارة التفضيلات</a>
-    </div>
-  </div>
-
+<div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+<div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
+<div class="footer-unsub">
+<a href="#">إدارة التفضيلات</a>
+</div>
+</div>
 </div>
 </body>
 </html>

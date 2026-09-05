@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -36,25 +34,26 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card" data-layout="single-proof">
+<div class="social-card pb-creative" data-layout="single-proof">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="myth-label">Myth vs. Math</div>
-    <div class="myth-statement">Your "lucky machine" has the emotional range of a toaster.</div>
-    <div class="fact-statement">Every spin is calculated by a <strong>random number generator</strong>. It doesn't know you. It doesn't care. It doesn't remember your last spin.</div>
+    <div class="myth-statement">Lucky seat.<br>Same game rules.</div>
+    <div class="fact-statement">A random number generator decides the result. <strong>Your seat doesn’t change the game’s math.</strong> Check the rules and paytable.</div>
     <div class="stat-row">
       <div class="stat-card">
-        <div class="game">RNG memory</div>
-        <div class="edge teal">0</div>
+        <div class="game">Seat-based advantage</div>
+        <div class="edge teal">0%</div>
       </div>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

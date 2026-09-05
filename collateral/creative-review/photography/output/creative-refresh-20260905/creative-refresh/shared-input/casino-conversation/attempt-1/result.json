@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/casino-conversation/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "bdd50dad78e5b611b11954c4b17e88a77db1f38b24c693e5e58e389ac495968a",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-refresh",
+  "concept": "casino-conversation",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T04:34:17.271Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 2844999,
+      "sha256": "8a444129d56fd401e6792a13c9f310cdda8b092f646af3d689c0bbe3c5635f9a"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 294,
+    "candidatesTokenCount": 1339,
+    "totalTokenCount": 1967,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 294
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "thoughtsTokenCount": 334,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 25255,
+  "completedAt": "2026-09-05T04:34:42.526Z"
+}
