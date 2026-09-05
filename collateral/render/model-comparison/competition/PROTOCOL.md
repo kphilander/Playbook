@@ -26,7 +26,7 @@ A separate full-production lane can assess model-authored HTML/CSS/SVG. It must 
 
 ## Shared photography access
 
-Photography can be available through one common sourcing or generation tool. Google has been requested; the specific Google service is pending clarification and no photography API has been connected. The original pilot brief and outputs remain frozen; photography belongs to a new run with declared inputs.
+Photography can be available through one common sourcing or generation tool. Google Gemini credentials have been connected and authenticated locally. The [shared photography command](PHOTOGRAPHY.md) provides a common text-to-image interface and attempt records; its setup checks are excluded from the competition. The original pilot brief and outputs remain frozen; photography belongs to a new run with declared inputs.
 
 - **Asset-choice test:** give every participant the same frozen shortlist of photo IDs, images, and descriptions for each case. Selection, crop instructions, and composition remain the model's choices. This holds the available material constant.
 - **Sourcing-and-production test:** allow independent queries against the same provider, with the same search-call allowance, results per call, filters, preview resolution, selection limit, and retry rules. Cache repeated identical queries within the run, where provider terms permit, and preserve result order and selection logs. This measures sourcing as well as composition; do not claim that all models saw identical candidates.
@@ -36,7 +36,7 @@ Photography can be available through one common sourcing or generation tool. Goo
 - Preflight actual image-input support. Spark reported that image inspection was unsupported in the pilot. Giving it a search API does not resolve that difference. A metadata-only concept lane can give every participant the same descriptions; a scored visual-selection lane requires comparable image access and an explicitly eligible roster.
 - Keep photographer/provider credits with the selected assets and rendered work as required. Do not put third-party stock originals under the repository's CC0 license or redistribute them in source archives unless their terms permit it. Preserve permitted provenance records and hashes for reproducibility.
 
-Google's [Gemini image-generation documentation](https://ai.google.dev/gemini-api/docs/image-generation) supports the generation route. The repository's existing photography prompt records name `gemini-3-pro-image`; that is provenance for those references, not evidence that a Google credential is available to this run. Provider terms and permitted use must be checked for whichever route is selected. Search results alone do not establish rights to use a photograph. Keep any third-party stock license distinct from Playbook's CC0 license.
+Google's [Gemini image-generation documentation](https://ai.google.dev/gemini-api/docs/image-generation) supports the generation route. The repository's existing photography prompt records name `gemini-3-pro-image`, and the authenticated Google model catalog includes that model. The setup defaults use it as the common image generator; freeze the actual comparison configuration before assigning new entries. Provider terms and permitted use must be checked for whichever route is selected. Search results alone do not establish rights to use a photograph. Keep any third-party stock license distinct from Playbook's CC0 license.
 
 ## Model roster and availability
 

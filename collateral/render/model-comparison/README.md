@@ -6,6 +6,8 @@ For images to show or share, use the [Astra / Sol / Terra sheet](contact-sheet.p
 
 **This is not a controlled competition.** The models received different corrective feedback, and Spark reported that image inspection was unavailable. The [proposed fair-test protocol](competition/PROTOCOL.md) separates model differences from the effect of shared inputs, with fresh submissions, a common concept renderer, a credible brief-only control, and blind judging. Its [rubric](competition/RUBRIC.json) is a draft; no study has been run or scored.
 
+A [shared Google photography command](competition/PHOTOGRAPHY.md) is available for a new run. It uses one configured Gemini image model and preserves requests, outputs, failures, and attempt counts. Its connection-check image is not a competition entry, and the existing fifteen concepts retain their original photography-free brief.
+
 ## Participants and assignment
 
 | Model | Reasoning | Concepts |
