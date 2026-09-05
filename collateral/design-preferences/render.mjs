@@ -19,13 +19,13 @@ try{
   page.on('requestfailed',r=>errors.push('Resource failed: '+r.url()));
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto(pathToFileURL(join(here,'masters/')).href);
-  await page.setContent(resolveBrandTokens(readFileSync(join(here,item.html),'utf8')),{waitUntil:'load'});
+  await page.setContent(resolveBrandTokens(readFileSync(join(here,item.html),'utf8'),item.jurisdiction),{waitUntil:'load'});
   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});
-  const metrics=await page.evaluate(kind=>{
+  const metrics=await page.evaluate(({kind,readingFloor})=>{
    const root=document.querySelector('.specimen'),box=root.getBoundingClientRect(),issues=[];
    const visible=r=>r.width>0&&r.height>0;
    const overlaps=(a,b)=>a.left<b.right-2&&a.right>b.left+2&&a.top<b.bottom-2&&a.bottom>b.top+2;
-   const floor={support:16,quiz:19,email:22}[kind]||42;
+   const floor=readingFloor||{support:16,quiz:19,email:22}[kind]||42;
    const colors=new Map();
    const rgb=s=>s.match(/[\d.]+/g)?.map(Number);
    const luminance=c=>c.slice(0,3).map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((a,x,i)=>a+x*[.2126,.7152,.0722][i],0);
@@ -41,25 +41,32 @@ try{
     const fg=rgb(cs.color);if(bg&&fg){const a=luminance(fg),b=luminance(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);const key=cs.color+' on '+getComputedStyle(ancestor).backgroundColor;colors.set(key,+ratio.toFixed(2));if(ratio<4.5)issues.push('Text contrast below 4.5: '+text+' ('+ratio.toFixed(2)+')');}
    }
    const blocks=kind==='support'?['.spec-header','.support-symbol','h1','.support-intro','.contact-panel','.support-note','.support-footer']:kind==='email'?['.spec-header','.email-card','.spec-footer']:kind==='quiz'?['.spec-header','.eyebrow','h1','.answers','.quiz-note','.spec-footer']:['.spec-header','h1','.intro','.ledger','.plan','.photo-frame','.takeaway','.spec-action','.spec-footer'];
-   const elements=blocks.map(s=>root.querySelector(s)).filter(Boolean);
-   for(let i=0;i<elements.length;i++)for(let j=i+1;j<elements.length;j++)if(overlaps(elements[i].getBoundingClientRect(),elements[j].getBoundingClientRect()))issues.push('Content overlap: '+elements[i].className+' / '+elements[j].className);
+   const elements=kind==='message'?[...root.querySelectorAll(':scope > [data-block]')]:blocks.map(s=>root.querySelector(s)).filter(Boolean);
+   for(let i=0;i<elements.length;i++)for(let j=i+1;j<elements.length;j++){
+    const a=elements[i],b=elements[j],ar=a.getBoundingClientRect(),br=b.getBoundingClientRect();
+    // The banner journey deliberately shows its support route inside a mocked browser surface.
+    const isRoute=a.classList.contains('mc-route')||b.classList.contains('mc-route');
+    const contains=(x,y)=>x.left<=y.left&&x.right>=y.right&&x.top<=y.top&&x.bottom>=y.bottom;
+    const surface=a.matches('section.mc-banner,.mc-destination')||b.matches('section.mc-banner,.mc-destination');
+    if(overlaps(ar,br)&&!(isRoute&&surface&&(contains(ar,br)||contains(br,ar))))issues.push('Content overlap: '+a.className+' / '+b.className);
+   }
    if(root.innerText.includes('{{'))issues.push('Unresolved brand token');
    const h=getComputedStyle(root.querySelector('h1'));if(!document.fonts.check(h.fontWeight+' '+h.fontSize+' '+h.fontFamily.split(',')[0]))issues.push('Display font unavailable');
-   for(const selector of ['.email-card','.email-tip','.plan','.ledger>div','.contact-panel','.answers']){
+   for(const selector of ['.email-card','.email-tip','.plan','.ledger>div','.contact-panel','.answers','.mc-contact','.mc-warning','.mc-plan','.mc-route']){
     for(const container of root.querySelectorAll(selector)){
-     const children=[...container.children].filter(el=>getComputedStyle(el).position!=='absolute');
+     const children=[...container.children].filter(el=>getComputedStyle(el).position!=='absolute'&&visible(el.getBoundingClientRect()));
      for(let i=0;i<children.length;i++)for(let j=i+1;j<children.length;j++)if(overlaps(children[i].getBoundingClientRect(),children[j].getBoundingClientRect()))issues.push('Internal overlap: '+selector);
      const r=container.getBoundingClientRect();
      for(const child of children){const c=child.getBoundingClientRect();if(c.bottom>r.bottom+2||c.top<r.top-2||c.left<r.left-2||c.right>r.right+2)issues.push('Content exceeds container: '+selector);}
     }
    }
    return{width:box.width,height:box.height,issues:[...new Set(issues)],contrastPairs:Object.fromEntries(colors),copy:root.innerText.replace(/\s+/g,' ').trim()};
-  },item.kind);
+  },item);
   if(metrics.width!==item.width||metrics.height!==item.height)errors.push('Incorrect dimensions');
   await(await page.$('.specimen')).screenshot({path:join(here,item.png)});
   const issues=[...errors,...metrics.issues];const pngSha256=createHash('sha256').update(readFileSync(join(here,item.png))).digest('hex');
-  if(!item.id.startsWith('reference-')){
-   const baseline=results.find(r=>r.id==='reference-'+item.kind);
+  if(item.comparisonId?item.side==='after':!item.id.startsWith('reference-')){
+   const baseline=results.find(r=>r.id===(item.comparisonId?item.comparisonId+'-before':'reference-'+item.kind));
    if(baseline?.copy!==metrics.copy)issues.push('Copy differs from the shared reference');
   }
   results.push({id:item.id,...metrics,issues,pngSha256});console.log(item.id+': '+(issues.length?issues.join('; '):'PASS'));await page.close();
