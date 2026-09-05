@@ -1,0 +1,39 @@
+/* Replace this stylesheet to reskin the same HTML. */
+.message-concept{
+  --media-accent:var(--accent);
+  --body:Inter, sans-serif;
+  --paper:#19162B;
+  --ink:#F0EDF8;
+  --muted:#D0C8E0;
+  --accent:#DAFA73;
+  --on-accent:#19162B;
+  --panel:#F5F2FB;
+  --on-panel:#29233F;
+  --panel-accent:#493578;
+  --media-panel:#302743;
+  --on-media-panel:#F0EDF8;
+  --rule:#827099;
+  --display:'Space Grotesk', sans-serif;
+  --weight:700;
+  --photo-radius:4px;
+  --card-radius:4px;
+  --button-radius:4px;
+}
+
+.message-concept[data-tier="2"]{
+  --paper:#F5F2FB;
+  --ink:#29233F;
+  --muted:#625371;
+  --accent:#493578;
+  --on-accent:#FFFFFF;
+  --panel:#E8E1F1;
+  --on-panel:#29233F;
+  --panel-accent:#493578;
+  --media-panel:#E8E1F1;
+  --on-media-panel:#29233F;
+  --rule:#9A8AAE;
+  --display:Inter, sans-serif;
+  --weight:700;
+  --card-shadow:none;
+  --card-rotation:0deg;
+}

@@ -77,4 +77,10 @@ The age and contact previews are not comprehensive state/operator disclosure blo
 
 The banner-to-destination composition is a static review canvas, not an implemented live journey or final media-unit size. CTA and contact controls inside every PNG/master are visual specimens. An implemented support page should align its semantic and keyboard reading order with the selected visual hierarchy.
 
-[message-concepts.mjs](message-concepts.mjs) defines the round and generates its masters; [message-concepts.css](message-concepts.css) holds the scoped layouts. The original preference IDs and browser storage key are retained. The new round uses the same existing fonts, vector wordmark and owned photograph; it requires no new image generation or credentials.
+[message-concepts.mjs](message-concepts.mjs) defines the round and generates its masters; the [shared template system](../template-system/README.md) now holds the renderer, layouts, skins and assets. The original preference IDs and browser storage key are retained. The new round uses the same existing fonts, vector wordmark and owned photograph; it requires no new image generation or credentials.
+
+## Live template system
+
+The eight message-placement families (16 masters) now come from the same engine as the [template studio](../studio/index.html). A skin changes a stylesheet without changing article markup. The studio separates plain-text content, media selection/crop, market profiles and composition. The original 30 preference studies remain earlier research specimens; the 93-family production library is not yet migrated to this engine. Existing preference IDs and saved choices remain compatible.
+
+The main Playbook skin reads generated brand tokens. Six alternative skins are separate CSS files. The comparison gallery retains each concept’s original skin as its starting direction. Regenerate the gallery after changing shared layout or skin files. Support reading order is aligned with the foreground-contact composition; the renderer compares the exact wording of each content block independently of block reading order.

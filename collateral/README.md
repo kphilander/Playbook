@@ -6,6 +6,8 @@ Templates and specifications for every Playbook touchpoint — digital, print, e
 
 [Compare four style alternatives](style-alternatives/index.html): editorial luxury, contemporary hospitality, digital precision and playful confidence. Each includes three finished specimens.
 
+[Open the template studio](studio/index.html) to reskin the eight latest concept families, switch SVG illustrations and AI photos, edit copy, and export reusable HTML, CSS and recipes. The gallery and studio use the same [template system](template-system/README.md).
+
 ## Folders
 
 | Folder | Contents |
@@ -29,4 +31,4 @@ Use the [production size matrix](production-size-matrix.md) before exporting. It
 - **Jurisdiction-specific adaptations** (mandatory statements, helpline numbers) are in [`jurisdictions/`](../jurisdictions/).
 - **`{{PLACEHOLDER}}` tokens** throughout templates resolve to values from [`_brand.yml`](../_brand.yml) at build time.
 
-[Design preference comparisons](design-preferences/index.html) offer 30 focused before / after pairs across eight design areas, with saved choices, notes and an exportable preference brief.
+[Design preference comparisons](design-preferences/index.html) offer 38 focused before / after pairs across nine design areas, with saved choices, notes and an exportable preference brief.
