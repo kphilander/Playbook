@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-27/shared-input/sports/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-27",
+  "concept": "sports",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T00:58:57.867Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-27",
+    "condition": "shared-input",
+    "concept": "sports",
+    "prompt": "Candid premium editorial portrait photograph, 3:4 vertical composition, of three clearly adult friends aged 28 to 40 with varied genders and ethnicities at a relaxed home sports watch party. One person casually holds a smartphone with the screen angled away and completely unreadable while the other two lean in, talking through the game with curious, friendly expressions; emphasize shared discussion rather than victory or disappointment. A television glow and subtle sports-night atmosphere sit softly out of focus in the background, with no visible score, team marks, broadcast text, or logos. Warm cinematic window-and-lamp key light, natural skin texture, modern lived-in setting, moderate shallow depth of field, realistic documentary moment, premium lifestyle campaign quality. Compose for a centered 3:4 crop with at least 10% breathing room around every face and hand. No minors, no alcohol, no gambling equipment, no cash, no brands, no watermarks, no readable screens, no text in the image."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Candid premium editorial portrait photograph, 3:4 vertical composition, of three clearly adult friends aged 28 to 40 with varied genders and ethnicities at a relaxed home sports watch party. One person casually holds a smartphone with the screen angled away and completely unreadable while the other two lean in, talking through the game with curious, friendly expressions; emphasize shared discussion rather than victory or disappointment. A television glow and subtle sports-night atmosphere sit softly out of focus in the background, with no visible score, team marks, broadcast text, or logos. Warm cinematic window-and-lamp key light, natural skin texture, modern lived-in setting, moderate shallow depth of field, realistic documentary moment, premium lifestyle campaign quality. Compose for a centered 3:4 crop with at least 10% breathing room around every face and hand. No minors, no alcohol, no gambling equipment, no cash, no brands, no watermarks, no readable screens, no text in the image."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

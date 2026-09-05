@@ -1,0 +1,176 @@
+{
+  "participant": "entry-76",
+  "productionFiles": [
+    {
+      "file": "render.mjs",
+      "sha256": "7ccd4fda2808a508ed61b6a3f6d642f54f5ede972e05e383ba7d35270cbb6545"
+    },
+    {
+      "file": "production-fix.css",
+      "sha256": "0cf39611743ef004146a2ab46a03e03f46f297de13ecb21063fe2bc9a1d9a87c"
+    },
+    {
+      "file": "common.mjs",
+      "sha256": "609e66e2d5f523c62a67712fa05c023802f822098f65845bc07044d90b658347"
+    }
+  ],
+  "submissionIssues": [],
+  "concepts": [
+    {
+      "id": "sports",
+      "submissionSha256": "3240776b981de32b96950e1368fadbf1d457e56cad063d3478c31360d4418544",
+      "photoStatus": "generated",
+      "photoSha256": "02af5e9c1c6f418ce9d42e96efdb073fc364cfcf262db4c5108260c99fef5f96",
+      "pngSha256": "7c87cdaec568ea6c5ac631cc6f8ea58726901f2e51d138a17dd3da6da428057a",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Half Right Still Pays the Book",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "At -110, winning half your spread bets is still short. You need about 52.4% just to break even because the vig is baked into the line.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Check the price before the pick.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Sports betting",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "myth",
+      "submissionSha256": "3240776b981de32b96950e1368fadbf1d457e56cad063d3478c31360d4418544",
+      "photoStatus": "generated",
+      "photoSha256": "b83f65043ea63a75021661d62e18209b48008ccb743555202c6bebd198b16b91",
+      "pngSha256": "4ce4291cb81dc9d1e13bbad270f6e20f36f9bdffddc26fff0cc34b7418dbe4ae",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Almost Is Just Theater",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "A slot near miss feels close, but the RNG already chose the result before the reels moved. The next spin starts fresh; the last display has no vote.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Near misses do not warm up the next spin.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Myth check",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "wildcard",
+      "submissionSha256": "3240776b981de32b96950e1368fadbf1d457e56cad063d3478c31360d4418544",
+      "photoStatus": "generated",
+      "photoSha256": "caa7ae6b8d90249d1983199b1ff8e8deb8488c8f3c452b6af3362ce9c0a45727",
+      "pngSha256": "1ce8a9f34aaf72ebf0b3e67a11466fa7e2bd057a29c1005f0b00f85451045a61",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Price the Night First",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Your entertainment budget is the cost of the session, decided before the action starts. Once play gets loud, the best number is the one you already picked.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Pick the number while the room is quiet.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Your play",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+import puppeteer from 'puppeteer';
+import assert from 'node:assert/strict';
+import {writeFileSync} from 'node:fs';
+import {join} from 'node:path';
+import {here,json} from './common.mjs';
+const origin=process.env.PHOTO_ROUND_PREVIEW||'http://127.0.0.1:59191/collateral/render/model-comparison/photo-round-02/';
+const browser=await puppeteer.launch({headless:true,args:['--no-sandbox']});
+const checks=[],errors=[];
+try{
+ const page=await browser.newPage();page.on('pageerror',e=>errors.push(e.message));
+ await page.setViewport({width:1440,height:1000});await page.goto(origin+'index.html',{waitUntil:'load'});
+ assert.equal(await page.$$eval('#picker button',els=>els.length),5);checks.push('Five selectable participants');
+ assert.equal(await page.$$eval('.art-button',els=>els.length),9);checks.push('Three-entry default shows nine concepts');
+ assert(await page.$$eval('.entry-label>span',els=>els.every(el=>el.textContent.startsWith('Entry '))));checks.push('Presentation names start masked');
+ await page.click('[data-entry="entry-58"]');assert.equal(await page.$$eval('#picker button[aria-pressed=true]',els=>els.length),3);checks.push('Maximum three selected entries enforced');
+ await page.click('[data-entry="entry-43"]');await page.click('[data-entry="entry-12"]');await page.click('[data-entry="entry-58"]');
+ assert.equal(await page.$$eval('.art-button',els=>els.length),6);checks.push('Two-entry comparison shows six concepts');
+ await page.click('#reveal');assert(await page.$$eval('.entry-label>span',els=>els.some(el=>el.textContent==='GPT-5.3 Codex Spark')));assert(await page.$$eval('.entry-label>span',els=>els.some(el=>el.textContent==='GPT-5.5')));checks.push('Model identity reveal updates selected cards');
+ await page.click('[data-category="sports"]');assert.equal(await page.$$eval('.art-button',els=>els.length),2);checks.push('Category filter preserves selected entries');
+ await page.click('[data-detail="entry-58/sports"]');assert(await page.$eval('#detail',el=>el.open));assert(await page.$eval('#detail-content',el=>el.textContent.includes('4.55%')));checks.push('Detail dialog includes separate factual-review observation');
+ await page.keyboard.press('Escape');assert(!(await page.$eval('#detail',el=>el.open)));checks.push('Escape closes modal');
+ await page.click('[data-entry="entry-76"]');await page.click('[data-entry="entry-58"]');assert.equal(await page.$$eval('#picker button[aria-pressed=true]',els=>els.length),1);checks.push('At least one selected entry enforced');
+ const assets=await page.evaluate(async()=>{const results=[];for(const c of window.PHOTO_ROUND.concepts){const i=new Image();i.src=c.png;await i.decode();results.push({entry:c.participant,id:c.id,width:i.naturalWidth,height:i.naturalHeight});}return results;});
+ assert.equal(assets.length,15);assert(assets.every(a=>a.width===1080&&a.height===1350));checks.push('All fifteen card PNGs load at 1080 × 1350');
+ await page.reload({waitUntil:'load'});await page.evaluate(async()=>{document.querySelectorAll('img').forEach(i=>i.loading='eager');await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:join(here,'gallery-desktop.png'),fullPage:true});checks.push('Desktop page fits viewport');
+ await page.setViewport({width:390,height:844});await page.reload({waitUntil:'load'});await page.evaluate(async()=>{document.querySelectorAll('img').forEach(i=>i.loading='eager');await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:join(here,'gallery-mobile.png'),fullPage:true});checks.push('390px mobile page fits viewport');
+ await page.click('.art-button');assert(await page.$eval('#detail',el=>el.scrollWidth<=el.clientWidth));await page.keyboard.press('Escape');checks.push('Mobile detail fits dialog width');
+ assert.equal(errors.length,0);checks.push('No browser JavaScript errors');
+ writeFileSync(join(here,'gallery-qa.json'),json({checkedAt:new Date().toISOString(),origin,checks,assets,errors}));console.log(json({passed:checks.length,checks}));
+}finally{await browser.close();}

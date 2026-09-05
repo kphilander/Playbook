@@ -1,0 +1,176 @@
+{
+  "participant": "entry-12",
+  "productionFiles": [
+    {
+      "file": "render.mjs",
+      "sha256": "7ccd4fda2808a508ed61b6a3f6d642f54f5ede972e05e383ba7d35270cbb6545"
+    },
+    {
+      "file": "production-fix.css",
+      "sha256": "0cf39611743ef004146a2ab46a03e03f46f297de13ecb21063fe2bc9a1d9a87c"
+    },
+    {
+      "file": "common.mjs",
+      "sha256": "609e66e2d5f523c62a67712fa05c023802f822098f65845bc07044d90b658347"
+    }
+  ],
+  "submissionIssues": [],
+  "concepts": [
+    {
+      "id": "sports",
+      "submissionSha256": "537390bff68b24dfb5196cbba0af1e128e143a89f853b97cc907fde4792786e7",
+      "photoStatus": "generated",
+      "photoSha256": "339ede177f15d5f98dfa80d100bc6000999036ddc9772ee33ad1cb34a9ca7a04",
+      "pngSha256": "69472b567ba8acab17b7ba19e34b97b10d24f5169aba19e6b094d8a89cd23c20",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Rival fans. Same total.",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "An over/under bet is on both teams' combined score. A 24–21 final makes 45, so over 44.5 wins. Your team's result is a separate story.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "For totals, add both scores. Then compare with the line.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Sports betting",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "myth",
+      "submissionSha256": "537390bff68b24dfb5196cbba0af1e128e143a89f853b97cc907fde4792786e7",
+      "photoStatus": "generated",
+      "photoSha256": "169f42fe6a7dce75fd6cd60c4625373ecfd418f37626e1bcee6ec2b5bd637464",
+      "pngSha256": "4cfaf4c83cfe4ba480da009627c65ecfb11fd0d8dee4ff80e0293871f5604c5b",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Sentimental value. Same odds.",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Your birthday can make a roulette number feel special. On a fair European wheel with one zero, each number still has a 1-in-37 chance on every spin.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "A meaningful number isn't a more likely number.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Myth check",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "wildcard",
+      "submissionSha256": "537390bff68b24dfb5196cbba0af1e128e143a89f853b97cc907fde4792786e7",
+      "photoStatus": "generated",
+      "photoSha256": "8514c7a74b7c53f82dd72e2f37576f61c42f1e200b9b0caa209dc539fe49d59e",
+      "pngSha256": "66b743ff761482efdd92a6e6f6d4317e3760d841c35f75bda08ae00edadef8de",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "The penny isn't the price.",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "A slot with 20 lines at 5 credits per line and 1¢ per credit costs $1 per spin, before any extras. The penny is the credit value.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Check the total bet per spin before you press spin.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Your play",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

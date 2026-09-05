@@ -1,5 +1,7 @@
 # Playbook model concept showcase — revised pilot
 
+A separate [shared-photography round](photo-round-02/index.html) adds fifteen fresh concepts with Google-generated photos, preserved first submissions, and a common fixed layout. The fifteen revised pilot concepts documented below remain separate.
+
 Five model agents each created three concepts from the same Playbook brief, brand references, and templates. Open [the gallery](index.html) to select up to three models, filter by topic, hide model labels, inspect the artwork, and read captions, alt text, and source notes. It opens with the added GPT-5.3 Codex Spark and GPT-5.5 samples selected.
 
 For images to show or share, use the [Astra / Sol / Terra sheet](contact-sheet.png) and [GPT-5.3 Codex Spark / GPT-5.5 sheet](contact-sheet-additions.png). Both identify the work as an unscored pilot.

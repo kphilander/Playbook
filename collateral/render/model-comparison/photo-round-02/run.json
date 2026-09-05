@@ -1,0 +1,62 @@
+{
+  "title": "Playbook shared photography concept round",
+  "runId": "photo-round-02-20260904",
+  "frozenAt": "2026-09-05T00:48:50.136765+00:00",
+  "condition": "shared-input",
+  "participants": [
+    {
+      "id": "entry-12",
+      "model": "gpt-6-astra",
+      "label": "GPT-6 Astra",
+      "requestedReasoning": "high"
+    },
+    {
+      "id": "entry-27",
+      "model": "gpt-5.6-sol",
+      "label": "GPT-5.6 Sol",
+      "requestedReasoning": "high"
+    },
+    {
+      "id": "entry-43",
+      "model": "gpt-5.6-terra",
+      "label": "GPT-5.6 Terra",
+      "requestedReasoning": "high"
+    },
+    {
+      "id": "entry-58",
+      "model": "gpt-5.3-codex-spark",
+      "label": "GPT-5.3 Codex Spark",
+      "requestedReasoning": "high"
+    },
+    {
+      "id": "entry-76",
+      "model": "gpt-5.5",
+      "label": "GPT-5.5",
+      "requestedReasoning": "high"
+    }
+  ],
+  "presentationOrder": [
+    "entry-43",
+    "entry-76",
+    "entry-12",
+    "entry-58",
+    "entry-27"
+  ],
+  "categories": [
+    "sports",
+    "myth",
+    "wildcard"
+  ],
+  "modelProvenance": "Requested model overrides and high reasoning accepted by dispatch; no independent backend snapshot or equal-compute telemetry.",
+  "authoring": "Fresh context; identical dispatch except folder; one completed submission; no participant previews or coordinator creative feedback. Text-only checks allowed.",
+  "production": "Common fixed template. Coordinator sends each original prompt verbatim to Google; one attempt per concept; first returned final image used, all candidates retained. No creative repair or image selection.",
+  "budget": "Same requested high reasoning; no enforced equal token or wall-clock budget. Five participants dispatched in batches because of concurrency limits.",
+  "interpretation": "Unscored exploratory comparison of copy and photo direction under shared inputs. Layout is held fixed. Google output randomness contributes to visual differences. No causal claim about shared-input value or the Bitter Lesson.",
+  "unavailable": [
+    {
+      "model": "gpt-5.4",
+      "status": "unavailable-not-scored",
+      "evidence": "Previously rejected by both subagent interface and CLI availability probe; not retried in this round."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-27/shared-input/wildcard/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-27",
+  "concept": "wildcard",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T00:58:58.128Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-27",
+    "condition": "shared-input",
+    "concept": "wildcard",
+    "prompt": "Candid premium lifestyle editorial portrait photograph, 3:4 vertical composition, of two clearly adult friends aged 30 to 45 with different genders and ethnic backgrounds pausing together at the edge of a bright, modern casino entertainment lounge before playing. One person casually checks a wristwatch while the other holds a smartphone at their side with the screen completely unreadable; they face each other in an easy, relaxed conversation, suggesting a shared plan for time and budget. Any gaming area appears only as soft environmental bokeh in the deep background, never as the subject. Warm intentional cinematic light with a clear flattering key, natural skin texture, lifted navy-toned shadows, subtle amber highlights, realistic unstaged body language, premium contemporary editorial quality. Compose for a centered 3:4 crop with at least 10% breathing room around faces, hands, watch, and phone. No minors, no alcohol, no chips, no cash, no visible wagers, no solitary or distressed players, no brands, no logos, no watermarks, no readable screens, no text in the image."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Candid premium lifestyle editorial portrait photograph, 3:4 vertical composition, of two clearly adult friends aged 30 to 45 with different genders and ethnic backgrounds pausing together at the edge of a bright, modern casino entertainment lounge before playing. One person casually checks a wristwatch while the other holds a smartphone at their side with the screen completely unreadable; they face each other in an easy, relaxed conversation, suggesting a shared plan for time and budget. Any gaming area appears only as soft environmental bokeh in the deep background, never as the subject. Warm intentional cinematic light with a clear flattering key, natural skin texture, lifted navy-toned shadows, subtle amber highlights, realistic unstaged body language, premium contemporary editorial quality. Compose for a centered 3:4 crop with at least 10% breathing room around faces, hands, watch, and phone. No minors, no alcohol, no chips, no cash, no visible wagers, no solitary or distressed players, no brands, no logos, no watermarks, no readable screens, no text in the image."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

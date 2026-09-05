@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-12/shared-input/wildcard/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-12",
+  "concept": "wildcard",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T00:57:35.431Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-12",
+    "condition": "shared-input",
+    "concept": "wildcard",
+    "prompt": "Create one original candid editorial photograph, portrait 3:4 at 2K. Two adult friends pause together at one slot machine to understand its controls before starting. A Latina woman in her late thirties sits upright in the machine's chair, wearing a plain emerald blouse. A Black woman in her mid-fifties, in a plain navy jacket, sits on an adjacent chair turned toward her. They have relaxed, interested expressions: the first has just glanced back from the machine toward her friend, and the friend responds with a small open-palm gesture. The moment should feel like two capable adults comparing notes, not a lesson or a win celebration. Photograph from beside the machine, facing the women, so only a narrow unmarked side edge of the cabinet is visible at one edge of the frame. Its screen, reels and control panel are entirely outside the view. No rows of gaming equipment or decorative chips. Their interaction is the clear subject, with their complete hands resting near the chair arms and their faces sharp. Frame both from the waist up within the central 80 percent of the portrait and preserve at least 10 percent breathing room around faces and hands. Soft architectural bokeh suggests a modern entertainment lounge. A clear warm overhead practical and soft side fill light both faces naturally; preserve pores, age lines and natural skin color, with rich navy shadows, warm amber highlights and no cold neon cast. Only these two clearly adult people appear. No minors, alcohol, drinks, cash, distress, brands, logos, watermarks, signs, numbers, lettering, readable displays or any text in the photograph. All card typography is added separately outside the image."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Create one original candid editorial photograph, portrait 3:4 at 2K. Two adult friends pause together at one slot machine to understand its controls before starting. A Latina woman in her late thirties sits upright in the machine's chair, wearing a plain emerald blouse. A Black woman in her mid-fifties, in a plain navy jacket, sits on an adjacent chair turned toward her. They have relaxed, interested expressions: the first has just glanced back from the machine toward her friend, and the friend responds with a small open-palm gesture. The moment should feel like two capable adults comparing notes, not a lesson or a win celebration. Photograph from beside the machine, facing the women, so only a narrow unmarked side edge of the cabinet is visible at one edge of the frame. Its screen, reels and control panel are entirely outside the view. No rows of gaming equipment or decorative chips. Their interaction is the clear subject, with their complete hands resting near the chair arms and their faces sharp. Frame both from the waist up within the central 80 percent of the portrait and preserve at least 10 percent breathing room around faces and hands. Soft architectural bokeh suggests a modern entertainment lounge. A clear warm overhead practical and soft side fill light both faces naturally; preserve pores, age lines and natural skin color, with rich navy shadows, warm amber highlights and no cold neon cast. Only these two clearly adult people appear. No minors, alcohol, drinks, cash, distress, brands, logos, watermarks, signs, numbers, lettering, readable displays or any text in the photograph. All card typography is added separately outside the image."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

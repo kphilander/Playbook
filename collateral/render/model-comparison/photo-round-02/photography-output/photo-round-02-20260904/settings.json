@@ -1,0 +1,10 @@
+{
+  "provider": "google-gemini",
+  "runId": "photo-round-02-20260904",
+  "model": "gemini-3-pro-image",
+  "aspectRatio": "3:4",
+  "imageSize": "2K",
+  "referenceMode": "none",
+  "maxAttemptsPerConcept": 1,
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d"
+}

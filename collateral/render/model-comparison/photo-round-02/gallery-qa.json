@@ -1,0 +1,114 @@
+{
+  "checkedAt": "2026-09-05T01:08:21.933Z",
+  "origin": "http://127.0.0.1:59191/collateral/render/model-comparison/photo-round-02/",
+  "checks": [
+    "Five selectable participants",
+    "Three-entry default shows nine concepts",
+    "Presentation names start masked",
+    "Maximum three selected entries enforced",
+    "Two-entry comparison shows six concepts",
+    "Model identity reveal updates selected cards",
+    "Category filter preserves selected entries",
+    "Detail dialog includes separate factual-review observation",
+    "Escape closes modal",
+    "At least one selected entry enforced",
+    "All fifteen card PNGs load at 1080 × 1350",
+    "Desktop page fits viewport",
+    "390px mobile page fits viewport",
+    "Mobile detail fits dialog width",
+    "No browser JavaScript errors"
+  ],
+  "assets": [
+    {
+      "entry": "entry-12",
+      "id": "sports",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-12",
+      "id": "myth",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-12",
+      "id": "wildcard",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-27",
+      "id": "sports",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-27",
+      "id": "myth",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-27",
+      "id": "wildcard",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-43",
+      "id": "sports",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-43",
+      "id": "myth",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-43",
+      "id": "wildcard",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-58",
+      "id": "sports",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-58",
+      "id": "myth",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-58",
+      "id": "wildcard",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-76",
+      "id": "sports",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-76",
+      "id": "myth",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "entry": "entry-76",
+      "id": "wildcard",
+      "width": 1080,
+      "height": 1350
+    }
+  ],
+  "errors": []
+}

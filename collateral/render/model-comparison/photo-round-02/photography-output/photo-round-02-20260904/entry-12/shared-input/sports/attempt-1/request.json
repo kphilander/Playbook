@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-12/shared-input/sports/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-12",
+  "concept": "sports",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T00:57:35.154Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-12",
+    "condition": "shared-input",
+    "concept": "sports",
+    "prompt": "Create one original candid editorial photograph, portrait 3:4 at 2K. Two friends, both visibly in their forties, sit together in outdoor football stadium seats during a quiet break in the action. A South Asian man wears a plain rust-orange scarf over a navy jacket; a white woman wears a plain emerald scarf over a cream jacket. Their different fan colors suggest friendly rivalry without representing any real team. Capture the man turning toward his friend mid-conversation, eyebrows lifted, while she answers with an amused half-smile and a small open-hand gesture. Their shoulders lean comfortably toward each other. This is a conversation between fans, not a victory celebration. Frame both from the waist up at their seated eye level with their faces and complete gesturing hands inside the central 80 percent of the portrait. Keep at least 10 percent breathing room around faces and hands. Soft rows of stadium seating establish the setting; no other people appear. Late-afternoon directional sunlight lights both faces warmly, with natural pores and skin color, gentle amber highlights, navy-tinted shadows and restrained editorial contrast. Both faces should remain sharp, the seats softly blurred. No posed camera smiles. No minors, alcohol, drinks, cash, betting slips, gambling equipment, logos, brands, watermarks, signs, numbers, lettering, screens or any text in the photograph. All typography will be added separately outside the image."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Create one original candid editorial photograph, portrait 3:4 at 2K. Two friends, both visibly in their forties, sit together in outdoor football stadium seats during a quiet break in the action. A South Asian man wears a plain rust-orange scarf over a navy jacket; a white woman wears a plain emerald scarf over a cream jacket. Their different fan colors suggest friendly rivalry without representing any real team. Capture the man turning toward his friend mid-conversation, eyebrows lifted, while she answers with an amused half-smile and a small open-hand gesture. Their shoulders lean comfortably toward each other. This is a conversation between fans, not a victory celebration. Frame both from the waist up at their seated eye level with their faces and complete gesturing hands inside the central 80 percent of the portrait. Keep at least 10 percent breathing room around faces and hands. Soft rows of stadium seating establish the setting; no other people appear. Late-afternoon directional sunlight lights both faces warmly, with natural pores and skin color, gentle amber highlights, navy-tinted shadows and restrained editorial contrast. Both faces should remain sharp, the seats softly blurred. No posed camera smiles. No minors, alcohol, drinks, cash, betting slips, gambling equipment, logos, brands, watermarks, signs, numbers, lettering, screens or any text in the photograph. All typography will be added separately outside the image."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

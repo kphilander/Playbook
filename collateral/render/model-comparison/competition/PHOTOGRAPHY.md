@@ -64,6 +64,8 @@ Keep actual image-generator cost and latency separate from concept-model cost an
 
 ## Verification
 
+The [shared photography concept round](../photo-round-02/index.html) now contains fifteen fresh concepts and fifteen successful Google photographs. All five agents supplied original prompts in fresh contexts; the coordinator executed one attempt per concept after freezing each first completed submission. No participant received an image preview or creative feedback. The [round method](../photo-round-02/README.md) documents the common template, a shared integration correction, retained content/photo issues, and the limits of this unscored comparison.
+
 Run the credential-free checks with `node --test lib/google-photography.test.mjs`. They cover credential handling, malformed requests, fixed provider origin, output preservation, concurrent attempt limits, refusal/HTTP/transport failures, and changed settings.
 
 The setup request in [`photography-check-request.json`](photography-check-request.json) is a coordinator-authored technical check, excluded from competition entries and scores. The first setup request using the documentation's newer `responseFormat` representation returned HTTP 400 and is preserved in `../photography-output/google-photography-setup-20260904/`. The adapter uses the also-documented `imageConfig` representation for its next setup run; this request-format change is not a concept-model revision.

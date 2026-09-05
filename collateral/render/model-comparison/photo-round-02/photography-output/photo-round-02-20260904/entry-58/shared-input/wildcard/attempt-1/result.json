@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-58/shared-input/wildcard/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-58",
+  "concept": "wildcard",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T00:52:41.860Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 2780920,
+      "sha256": "2cad718170327c30791a88b45a8e2126201ac1ac81293241c39ddd46f179e787"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 110,
+    "candidatesTokenCount": 1271,
+    "totalTokenCount": 1735,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 110
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "thoughtsTokenCount": 354,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 22886,
+  "completedAt": "2026-09-05T00:53:04.747Z"
+}
