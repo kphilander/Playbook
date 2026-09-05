@@ -1,0 +1,88 @@
+/* Three art-direction studies. Shared live type, SVG and brand tokens.
+   Layout classes are independent of skins; a replacement CSS file can set
+   --ad-paper, --ad-ink, --ad-accent, --ad-display and --ad-weight. */
+@import url('../template-system/fonts.css');
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--pb-color-neutral-50); }
+.ad {
+  --ad-paper: var(--pb-color-neutral-50);
+  --ad-ink: var(--pb-color-primary);
+  --ad-accent: var(--pb-color-secondary-dark);
+  --ad-spot: var(--pb-color-white);
+  --ad-display: var(--pb-font-heading);
+  --ad-weight: 650;
+  --ad-rule: color-mix(in srgb, var(--ad-ink) 28%, transparent);
+  margin: 0; position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
+  background: var(--ad-paper); color: var(--ad-ink);
+  font-family: var(--pb-font-body); text-rendering: optimizeLegibility;
+}
+.ad * { margin: 0; }
+.ad h1 { font-family: var(--ad-display); font-weight: var(--ad-weight); letter-spacing: -.065em; line-height: .98; }
+.ad-header { display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+.ad-wordmark { display: block; width: 250px; height: 52px; fill: currentColor; }
+.ad-series { font-size: 42px; line-height: 1.2; }
+.ad p { font-size: 46px; line-height: 1.24; }
+.ad-footer { border-top: 2px solid var(--ad-rule); flex-shrink: 0; font-size: 42px; line-height: 1.2; padding-top: 24px; }
+.ad-footer span { display: block; }
+.ad-footer span + span { margin-top: 8px; }
+.ad-footer a { color: inherit; text-decoration: none; }
+.social-card.ad { padding: 58px 64px 46px; gap: 0; }
+.social-card.ad .ad-header { margin-bottom: 80px; }
+
+/* One visual metaphor, drawn as a reusable vector. */
+.ad-seat { --ad-paper: var(--pb-color-secondary); }
+.ad-seat h1 { font-size: var(--ad-heading-size,112px); }
+.ad-seat .ad-illustration { display: block; width: calc(100% + 28px); margin: 46px -14px 44px; height: 354px; flex-shrink: 0; }
+.ad-seat .ad-chair { color: var(--ad-ink); }
+.ad-seat .ad-chair-selected { color: var(--ad-spot); }
+.ad-seat .ad-copy { max-width: 935px; }
+.ad-seat .ad-footer { margin-top: auto; }
+
+/* A ranked reading order, with rules and rates sharing a baseline. */
+.ad-odds h1 { font-size: var(--ad-heading-size,110px); }
+.ad-odds .ad-header { margin-bottom: 52px !important; }
+.ad-odds .ad-intro { margin-top: 26px; max-width: 920px; }
+.ad-odds .ad-rates { margin-top: 34px; }
+.ad-rate { border-top: 2px solid var(--ad-rule); display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 30px; padding: 15px 0 17px; }
+.ad-rate dt { font-size: 46px; line-height: 1.13; font-weight: 600; }
+.ad-rate dt span { display: block; font-size: 42px; line-height: 1.15; font-weight: 400; margin-top: 8px; }
+.ad-rate dd { font: 550 93px/.98 var(--ad-display); letter-spacing: -.06em; font-variant-numeric: tabular-nums; }
+.ad-rate dd small { font: inherit; font-size: 56px; letter-spacing: -.045em; }
+.ad-rate:first-child dd { color: var(--ad-accent); }
+.ad-odds .ad-footer { margin-top: auto; }
+
+/* A photographic essay: crisp crop and an opaque reading surface. */
+body:has(.ad-photo) { padding: 24px; }
+.poster.ad-photo { width: 1800px; height: 2400px; padding: 84px 104px 72px; }
+.ad-photo { --ad-display: Fraunces, serif; --ad-weight: 450; }
+.ad-photo .ad-wordmark { width: 330px; height: 69px; }
+.ad-photo .ad-series { font-size: 40px; }
+.ad-photo h1 { font-size: var(--ad-heading-size,190px); line-height: 1.01; letter-spacing: -.04em; word-spacing: .03em; margin-top: 96px; position: relative; z-index: 1; }
+.ad-photo h1 em { font-weight: inherit; font-style: normal; color: var(--ad-accent); }
+.ad-photo .ad-image { width: 100%; height: 1060px; object-fit: cover; object-position: var(--ad-focal-x, 50%) var(--ad-focal-y, 40%); display: block; margin-top: 80px; }
+.ad-photo .ad-caption { display: grid; grid-template-columns: 380px 1fr; gap: 80px; margin-top: 56px; }
+.ad-photo .ad-caption-label { border-top: 3px solid var(--ad-ink); padding-top: 22px; font-size: 40px; }
+.ad-photo .ad-caption p { font-size: 56px; line-height: 1.25; }
+.ad-photo .ad-route { display: flex; justify-content: space-between; align-items: center; margin-top: 56px; gap: 30px; }
+.ad-photo .ad-route a { color: inherit; text-decoration: none; font-size: 40px; overflow-wrap: anywhere; }
+.ad-photo .ad-route a:first-child { font-weight: 600; font-size: 48px; }
+.ad-photo .ad-arrow { display: inline-block; width: 48px; height: 48px; vertical-align: -.17em; margin-left: 20px; }
+.ad-photo .ad-footer { margin-top: auto; font-size: 36px; line-height: 1.25; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 30px; padding-top: 28px; }
+.ad-photo .ad-footer span + span { margin-top: 0; }
+
+/* Recompose the same content for the shorter export. */
+body.pb-profile-social-square .social-card.ad { padding-top: 48px; padding-bottom: 36px; }
+body.pb-profile-social-square .social-card.ad .ad-header { margin-bottom: 32px !important; }
+body.pb-profile-social-square .ad-seat h1 { font-size: 100px; }
+body.pb-profile-social-square .ad-seat .ad-illustration { height: 210px; margin-top: 24px; margin-bottom: 28px; }
+body.pb-profile-social-square .ad-seat p { font-size: 42px; }
+body.pb-profile-social-square .ad-odds h1 { font-size: 86px; }
+body.pb-profile-social-square .ad-odds .ad-intro { margin-top: 20px; font-size: 42px; }
+body.pb-profile-social-square .ad-odds .ad-rates { margin-top: 26px; }
+body.pb-profile-social-square .ad-rate { padding: 12px 0; }
+body.pb-profile-social-square .ad-rate dt { font-size: 42px; }
+body.pb-profile-social-square .ad-rate dt span { margin-top: 4px; }
+body.pb-profile-social-square .ad-rate dd { font-size: 76px; }
+body.pb-profile-social-square .ad-footer { padding-top: 18px; }
