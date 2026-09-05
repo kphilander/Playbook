@@ -28,3 +28,5 @@ Use the [production size matrix](production-size-matrix.md) before exporting. It
 - **Visual specs** (colors, fonts, icons) reference [`visual-identity/`](../visual-identity/) and the design tokens in `visual-identity/design-tokens.css`.
 - **Jurisdiction-specific adaptations** (mandatory statements, helpline numbers) are in [`jurisdictions/`](../jurisdictions/).
 - **`{{PLACEHOLDER}}` tokens** throughout templates resolve to values from [`_brand.yml`](../_brand.yml) at build time.
+
+[Design preference comparisons](design-preferences/index.html) offer 30 focused before / after pairs across eight design areas, with saved choices, notes and an exportable preference brief.

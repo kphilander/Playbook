@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Playbook — Find your design preferences</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <a class="skip-link" href="#comparisons">Skip to comparisons</a>
+  <header class="topbar"><a class="brand" href="../creative-review/index.html">Playbook <span>/ Creative studio</span></a><nav aria-label="Creative galleries"><a href="../render/_comparison.html">Library before / after</a><a href="../style-alternatives/index.html">Four complete styles ↗</a></nav></header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow">30 choices. Your point of view.</p><h1>Find the details<br>that feel like you.</h1></div>
+      <div class="intro-copy"><p>Luxury can be warm. Playful can be precise. Pick the type, colors and details you’d like to carry forward.</p><p class="method">Each pair explores one design choice across six formats. “Before” is a shared Playbook reference study; “after” is an alternative. Either can win.</p><a href="#comparisons" class="start-link">Start exploring <span>↓</span></a></div>
+    </section>
+    <section class="progress-strip" aria-label="Your progress"><div class="progress-copy"><strong id="progress-count">0 of 30 reviewed</strong><span id="save-status" role="status">Choices stay in this browser.</span></div><progress id="progress" value="0" max="30" aria-label="Comparisons reviewed"></progress><button id="open-brief" class="primary">Your preference brief <span>↗</span></button></section>
+    <div class="workspace">
+      <aside class="sidebar"><p class="eyebrow">Explore a design choice</p><nav id="categories" aria-label="Design categories"></nav><div class="sidebar-note"><span>Look for a pattern.</span><p>You can prefer a serif headline and a playful button. These choices help build your own direction.</p></div></aside>
+      <section class="review-area" aria-label="Design comparisons">
+        <div class="review-tools"><div><h2 id="category-title">All design choices</h2><p id="result-count" role="status" aria-live="polite"></p></div><div class="tool-options"><label><span class="sr-only">Review status</span><select id="status-filter"><option value="all">All comparisons</option><option value="unreviewed">Still to review</option><option value="reviewed">Reviewed</option><option value="after">Prefer after</option><option value="before">Prefer before</option></select></label><div class="view-switch" role="group" aria-label="Review view"><button id="view-browse" aria-pressed="true">Browse</button><button id="view-focus" aria-pressed="false">One at a time</button></div></div></div>
+        <div class="focus-navigation" id="focus-navigation" hidden><button id="previous">← Previous</button><span id="focus-position"></span><button id="next">Next →</button></div>
+        <div id="comparisons" class="comparisons" tabindex="-1"></div>
+        <div id="empty" class="empty" hidden><h3>No comparisons in this view.</h3><p>Try another category or return to all comparisons.</p><button id="clear-filters">Show all 30</button></div>
+      </section>
+    </div>
+    <footer class="page-footer"><p>The Playbook essence stays: clear information, respect for the player, and calm, direct support.</p><nav><a href="README.md">About these studies</a><a href="../style-alternatives/index.html">Explore complete styles</a></nav></footer>
+  </main>
+  <dialog id="viewer" aria-labelledby="viewer-title"><div class="dialog-header"><div><p class="eyebrow" id="viewer-side"></p><h2 id="viewer-title"></h2></div><button data-close="viewer" aria-label="Close full-size preview">Close ×</button></div><div class="viewer-stage"><img id="viewer-image" alt=""></div><div class="viewer-footer"><div id="viewer-switch" role="group" aria-label="Preview version"><button data-side="before">Before</button><button data-side="after">After</button></div><a id="full-image" target="_blank" rel="noopener">Full-size image ↗</a></div></dialog>
+  <dialog id="brief" aria-labelledby="brief-title"><div class="dialog-header"><div><p class="eyebrow">Your creative direction</p><h2 id="brief-title">A brief made from your choices.</h2></div><button data-close="brief" aria-label="Close preference brief">Close ×</button></div><div class="brief-intro"><p id="brief-count"></p><p>Specific preferences to take into the next design round. Mixed choices are useful; this is a brief, not a score.</p></div><div id="brief-content"></div><div class="brief-actions"><button id="download-brief" class="primary">Download brief</button><button id="copy-brief">Copy brief</button><button id="download-json">Save choices</button><button id="import-json">Restore choices</button><input type="file" id="import-file" accept="application/json,.json" hidden></div><p id="brief-status" class="brief-status" role="status" aria-live="polite">The brief is a text document. “Save choices” creates a backup you can restore here.</p></dialog>
+  <script src="data.js"></script><script type="module" src="gallery.mjs"></script>
+</body>
+</html>

@@ -432,7 +432,7 @@ const html = `<!DOCTYPE html>
       <div class="stat"><strong>${newCount}</strong><span>New</span></div>
       <div class="stat"><strong>${removedCount}</strong><span>Removed</span></div>
     </div>
-    <div class="meta">Baseline ${escapeHtml(baseHash)} · ${escapeHtml(baseDate)} &nbsp;|&nbsp; Generated ${escapeHtml(generatedAt)} &nbsp;|&nbsp; <a href="./_gallery.html">Full template gallery</a></div>
+    <div class="meta">Baseline ${escapeHtml(baseHash)} · ${escapeHtml(baseDate)} &nbsp;|&nbsp; Generated ${escapeHtml(generatedAt)} &nbsp;|&nbsp; <a href="../design-preferences/index.html">Choose your preferences across 30 design pairs →</a> &nbsp;|&nbsp; <a href="./_gallery.html">Full template gallery</a></div>
   </header>
 
   <div class="toolbar">
