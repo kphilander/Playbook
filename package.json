@@ -27,7 +27,8 @@
     "validate": "node lib/validate-brand.mjs",
     "serve": "python3 -m http.server 8000",
     "generate:rg-copy": "node lib/inline-rg-copy.mjs",
-    "build:creative-review": "node collateral/creative-review/render.mjs && node collateral/creative-review/build-review.mjs"
+    "build:creative-review": "node collateral/creative-review/render.mjs && node collateral/creative-review/build-review.mjs",
+    "build:style-alternatives": "node collateral/style-alternatives/build.mjs && node collateral/style-alternatives/render.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"
