@@ -4,3 +4,6 @@ function show(saved){const choices=read();for(const section of document.querySel
 for(const section of document.querySelectorAll('[data-id]'))for(const b of section.querySelectorAll('[data-choice]'))b.addEventListener('click',()=>{const choices=read(),id=section.dataset.id;if(choices[id]===b.dataset.choice)delete choices[id];else choices[id]=b.dataset.choice;try{localStorage.setItem(key,JSON.stringify(choices));show(section);}catch{section.querySelector('output').textContent='Browser saving unavailable.';}});
 for(const button of document.querySelectorAll('[data-filter]'))button.addEventListener('click',()=>{for(const b of document.querySelectorAll('[data-filter]'))b.setAttribute('aria-pressed',String(b===button));for(const s of document.querySelectorAll('[data-category]'))s.hidden=button.dataset.filter!=='all'&&s.dataset.category!==button.dataset.filter;});
 addEventListener('storage',e=>{if(e.key===key)show()});show();
+const nextReview=document.createElement('p'),nextLink=document.createElement('a');
+nextLink.href='../text-surfaces/index.html';nextLink.textContent='Explore background & CSS directions →';
+nextReview.append(nextLink);document.querySelector('.intro').append(nextReview);

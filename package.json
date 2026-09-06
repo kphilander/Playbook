@@ -44,7 +44,9 @@
     "check:template-studio": "node collateral/template-system/check.mjs && node collateral/studio/check-browser.mjs",
     "export:template": "node collateral/template-system/render.mjs",
     "build:text-polish": "node collateral/text-polish/build.mjs",
-    "check:text-polish": "node collateral/text-polish/check-layouts.mjs && node collateral/text-polish/check-browser.mjs"
+    "check:text-polish": "node collateral/text-polish/check-layouts.mjs && node collateral/text-polish/check-browser.mjs",
+    "build:text-surfaces": "node collateral/text-surfaces/build.mjs",
+    "check:text-surfaces": "node collateral/text-surfaces/check.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"

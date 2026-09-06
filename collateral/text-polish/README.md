@@ -65,3 +65,9 @@ and translucent background colors; it is scoped to these text-led templates,
 not photographic backgrounds. Visual inspection remains part of review.
 
 Preferences save independently in `playbook-text-polish-preferences-v1`.
+
+The [recorded review](selection.json) contains 21 “Looks good” and five
+“Needs work” choices, read from the saved browser review on September 6, 2026.
+“Needs work” is a refinement flag, not a preference for the earlier design.
+The [background and CSS study](../text-surfaces/index.html) builds on that
+feedback and keeps its new choices separate.
