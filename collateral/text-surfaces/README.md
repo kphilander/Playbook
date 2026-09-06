@@ -80,3 +80,8 @@ of every comparison complements those checks.
 Choices save under `playbook-text-surfaces-preferences-v1`, keyed by template
 and surface. Multiple favorites are allowed. The export contains only this
 study's choices; it does not overwrite or import earlier feedback.
+
+The [September 6 saved review](selection.json) records 33 ratings: four
+Favorite, 13 Maybe and 16 Pass, with 21 unrated. The [review notes](review-notes.md)
+identify the four preferred template/treatment combinations and the remaining
+design questions. Recording feedback does not change the production masters.
