@@ -1,0 +1,57 @@
+/* One article, three expression classes. Color/type still come from the skin.
+   The source photograph and its crop do not change between expressions. */
+.message-concept.mc-presence {
+  --campaign-field:var(--pb-color-primary);
+  --campaign-accent:var(--pb-color-secondary);
+  --presence-field:transparent;
+  --presence-ink:var(--campaign-ink);
+  --presence-book:var(--campaign-ink);
+  --presence-play:var(--campaign-accent);
+  --presence-heading:128px;
+  --presence-weight:650;
+  --presence-line:var(--campaign-ink);
+  --presence-rule-width:100px;
+  --presence-rule-height:4px;
+  --presence-rule-color:var(--campaign-accent);
+}
+.mc-presence .presence-masthead {position:absolute;inset:0 0 auto;height:510px;background:var(--presence-field);color:var(--presence-ink);}
+.mc-presence .mc-header {top:50px;align-items:center;color:inherit;}
+.mc-presence .mc-header>span {color:inherit;}
+.mc-presence .presence-brand {display:flex;align-items:center;gap:40px;}
+.mc-presence .brand-logo {width:300px;}
+.mc-presence .presence-symbol {display:block;width:72px;height:72px;flex:none;stroke:none;}
+.mc-presence .presence-symbol rect {fill:var(--presence-book);stroke:none;}
+.mc-presence .presence-symbol polygon {fill:var(--presence-play);stroke:none;}
+.mc-presence .presence-rule {position:absolute;left:60px;top:165px;width:var(--presence-rule-width);height:var(--presence-rule-height);background:var(--presence-rule-color);}
+.mc-presence h1 {top:188px;font-size:var(--presence-heading);font-weight:var(--presence-weight);line-height:.96;letter-spacing:-.055em;color:inherit;}
+.mc-presence h1 span {display:block;}
+.mc-presence h1 span+span {color:var(--presence-line);}
+.mc-presence .mc-action svg {color:var(--campaign-accent);}
+
+/* B: the emerald phrase and book-spine rule carry the same identity together. */
+.message-concept.mc-presence.after {
+  --presence-weight:750;
+  --presence-heading:132px;
+  --presence-line:var(--campaign-accent);
+  --presence-rule-width:960px;
+  --presence-rule-height:6px;
+  --photo-top-alpha:.84;
+}
+.mc-presence.after .presence-masthead {
+  background:linear-gradient(color-mix(in srgb,var(--campaign-field) 38%,transparent),transparent);
+}
+
+/* C: a deliberate brand field, with no inset photograph or lower banner. */
+.message-concept.mc-presence.bold {
+  --presence-field:var(--campaign-accent);
+  --presence-ink:var(--campaign-field);
+  --presence-book:var(--campaign-field);
+  --presence-play:var(--campaign-field);
+  --presence-line:var(--campaign-field);
+  --presence-heading:140px;
+  --presence-weight:850;
+  --presence-rule-width:960px;
+  --presence-rule-height:2px;
+  --presence-rule-color:var(--campaign-field);
+}
+.mc-presence.bold h1 {top:213px;letter-spacing:-.045em;word-spacing:.02em;}

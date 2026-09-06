@@ -1,5 +1,7 @@
 import {campaigns} from './campaigns.mjs';
+import {brandPresenceTemplate} from './brand-presence.mjs';
 export const templates=[
+  brandPresenceTemplate,
   ...campaigns,
   {id:'message-signature',theme:'atelier',layout:'signature',title:'A quiet editorial signature',beforeLabel:'Atelier / separate footer',afterLabel:'Atelier / editorial signature',format:'Lifestyle social',series:'Your time. Your call.',headline:'Even a good night\nhas an end time.',copy:'Choose when to wrap up before you play.\nA reminder can help you keep track.',action:'Pick your pause.',visual:'photo',rationale:'A fine editorial line brings the contact details into the reading flow. The photograph gains room and the age notice remains distinct.'},
   {id:'message-margin',theme:'atelier',layout:'margin',title:'Give the information its own margin',beforeLabel:'Atelier / bottom band',afterLabel:'Atelier / side note',format:'Budget social',series:'A little planning.',headline:'Your night.\nYour number.',copy:'Choose what you’re happy to spend\nbefore the night gets going.',action:'Set your budget.',visual:'plan',rationale:'A broad side note makes the information part of the page architecture. The headline and budget card reflow alongside it; nothing is hidden or rotated.'},

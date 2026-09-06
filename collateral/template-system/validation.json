@@ -1,5 +1,418 @@
 [
   {
+    "template": "campaign-presence",
+    "variant": "quiet",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "quiet",
+    "skin": "atelier",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "quiet",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 5.32
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "quiet",
+    "skin": "arcade",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "quiet",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "quiet",
+    "skin": "quiet",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "quiet",
+    "skin": "warm",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "after",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2,
+      "rgb(16, 185, 129) on photo shadow over brightest possible pixel": 5.75
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "after",
+    "skin": "atelier",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2,
+      "rgb(16, 185, 129) on photo shadow over brightest possible pixel": 5.75
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "after",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 5.75,
+      "rgb(222, 237, 178) on photo shadow over brightest possible pixel": 11.71
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "after",
+    "skin": "arcade",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2,
+      "rgb(16, 185, 129) on photo shadow over brightest possible pixel": 5.75
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "after",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2,
+      "rgb(218, 250, 115) on photo shadow over brightest possible pixel": 12.44
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "after",
+    "skin": "quiet",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2,
+      "rgb(16, 185, 129) on photo shadow over brightest possible pixel": 5.75
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "after",
+    "skin": "warm",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2,
+      "rgb(16, 185, 129) on photo shadow over brightest possible pixel": 5.75
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "bold",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(27, 40, 56) on rgb(16, 185, 129)": 5.88,
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "bold",
+    "skin": "atelier",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(27, 40, 56) on rgb(16, 185, 129)": 5.88,
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "bold",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(24, 61, 53) on rgb(222, 237, 178)": 9.59,
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 5.75
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "bold",
+    "skin": "arcade",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(27, 40, 56) on rgb(16, 185, 129)": 5.88,
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "bold",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(41, 58, 176) on rgb(218, 250, 115)": 7.7,
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "bold",
+    "skin": "quiet",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(27, 40, 56) on rgb(16, 185, 129)": 5.88,
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-presence",
+    "variant": "bold",
+    "skin": "warm",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(27, 40, 56) on rgb(16, 185, 129)": 5.88,
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 6.2
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
     "template": "campaign-rest",
     "variant": "after",
     "skin": "playbook",

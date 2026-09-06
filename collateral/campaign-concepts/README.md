@@ -10,6 +10,10 @@ reading_level: grade-6-8
 
 # Campaign concepts / rounds 3 and 4
 
+[Compare three levels of brand presence](brand-presence/index.html): the same
+dinner photograph in restrained, signature and bold expressions. Preview each
+with Playbook, Social Club or Circuit. [Design decisions](brand-presence/README.md).
+
 [Compare three new photographic executions](photo-comparison/index.html):
 joining the table, before the show, and heading out together. They use the
 same direction 01 recipe and Social Club skin, with only the registered

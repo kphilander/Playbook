@@ -13,6 +13,7 @@ const params=new URLSearchParams(location.search);
 if(params.get('template')!==recipe.templateId&&templates.some(t=>t.id===params.get('template')))recipe=createRecipe(params.get('template'));
 if(skins.some(s=>s.id===params.get('skin')))recipe.skinId=params.get('skin');
 if(skins.some(s=>s.id===params.get('compare')))compareSkin=params.get('compare');
+if(templates.find(t=>t.id===recipe.templateId).variants?.includes(params.get('variant')))recipe.variant=params.get('variant');
 const linkedAsset=assets.find(a=>a.id===params.get('asset')&&a.slot===slotFor(templates.find(t=>t.id===recipe.templateId)));
 if(linkedAsset&&linkedAsset.id!==recipe.assetId)recipe=validateRecipe({...recipe,assetId:linkedAsset.id,focalPoint:null});
 function options(element,items,value){element.replaceChildren(...items.map(item=>{const option=document.createElement('option');option.value=item.id;option.textContent=item.name||item.title;return option;}));element.value=value;}
@@ -24,7 +25,7 @@ function currentTemplate(){return templates.find(t=>t.id===recipe.templateId);}
 function selectedRecipe(){return {...recipe,skinId:$('export-side').value==='a'?recipe.skinId:compareSkin};}
 function syncControls(){
   const d=currentTemplate(),slot=slotFor(d);
-  $('template').value=d.id;options($('variant'),(d.variants||['after','before']).map(id=>({id,name:id==='after'?'New concept':'Reference layout'})),recipe.variant);$('variant').disabled=d.variants?.length===1;$('skin-a').value=recipe.skinId;$('skin-b').value=compareSkin;
+  $('template').value=d.id;options($('variant'),(d.variants||['after','before']).map(id=>({id,name:d.variantLabels?.[id]||(id==='after'?'New concept':'Reference layout')})),recipe.variant);$('variant').disabled=d.variants?.length===1;$('skin-a').value=recipe.skinId;$('skin-b').value=compareSkin;
   $('template-title').textContent=d.title;$('format-note').textContent=`${d.format} · ${d.width||1080} × ${d.height||1350}`;
   const compatible=assets.filter(a=>a.slot===slot);
   options($('asset'),compatible.length?compatible:[{id:'',name:'No image in this template'}],recipe.assetId||'');$('asset').disabled=!slot;
