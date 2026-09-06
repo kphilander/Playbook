@@ -53,18 +53,17 @@ body { margin: 0; background: var(--pb-color-neutral-50); }
 .ad-rate:first-child dd { color: var(--ad-accent); }
 .ad-odds .ad-footer { margin-top: auto; }
 
-/* A photographic essay: crisp crop and an opaque reading surface. */
+/* A direct photo-led message using the same typographic voice as 1 and 2. */
 body:has(.ad-photo) { padding: 24px; }
 .poster.ad-photo { width: 1800px; height: 2400px; padding: 84px 104px 72px; }
-.ad-photo { --ad-display: Fraunces, serif; --ad-weight: 450; }
+.ad-photo { --ad-weight: 650; }
 .ad-photo .ad-wordmark { width: 330px; height: 69px; }
 .ad-photo .ad-series { font-size: 40px; }
-.ad-photo h1 { font-size: var(--ad-heading-size,190px); line-height: 1.01; letter-spacing: -.04em; word-spacing: .03em; margin-top: 96px; position: relative; z-index: 1; }
+.ad-photo h1 { font-size: var(--ad-heading-size,164px); line-height: 1.02; letter-spacing: -.055em; margin-top: 88px; }
 .ad-photo h1 em { font-weight: inherit; font-style: normal; color: var(--ad-accent); }
-.ad-photo .ad-image { width: 100%; height: 1060px; object-fit: cover; object-position: var(--ad-focal-x, 50%) var(--ad-focal-y, 40%); display: block; margin-top: 80px; }
-.ad-photo .ad-caption { display: grid; grid-template-columns: 380px 1fr; gap: 80px; margin-top: 56px; }
-.ad-photo .ad-caption-label { border-top: 3px solid var(--ad-ink); padding-top: 22px; font-size: 40px; }
-.ad-photo .ad-caption p { font-size: 56px; line-height: 1.25; }
+.ad-photo .ad-image { width: 100%; height: 1060px; flex-shrink: 0; object-fit: cover; object-position: var(--ad-focal-x, 50%) var(--ad-focal-y, 40%); display: block; margin-top: 64px; }
+.ad-photo .ad-caption { margin-top: 42px; max-width: 1400px; }
+.ad-photo .ad-caption p { font-size: 60px; line-height: 1.25; }
 .ad-photo .ad-route { display: flex; justify-content: space-between; align-items: center; margin-top: 56px; gap: 30px; }
 .ad-photo .ad-route a { color: inherit; text-decoration: none; font-size: 40px; overflow-wrap: anywhere; }
 .ad-photo .ad-route a:first-child { font-weight: 600; font-size: 48px; }
