@@ -46,17 +46,33 @@
 .mc-campaign-probability .campaign-stat strong {display:block;font-size:238px;font-weight:var(--campaign-weight);letter-spacing:-.045em;}
 .mc-campaign-probability .mc-copy {top:1050px;}
 
-/* Round four: a photographic cover, typographic reels, pocket arithmetic,
+/* Round four: a photographic cover, symbolic reels, pocket arithmetic,
    and an oversized time symbol. All live inside the existing skin contract. */
-.message-concept.mc-campaign-rest {--photo-top-end:35%;--photo-bottom-start:76%;--photo-bottom-alpha:.82;}
+.message-concept.mc-campaign-rest {--photo-top-alpha:.6;--photo-top-end:35%;--photo-bottom-start:76%;--photo-bottom-alpha:.62;}
 .mc-campaign-rest h1 {top:176px;--campaign-heading:130px;}
-.mc-campaign-rest .campaign-shade {background:linear-gradient(rgb(0 0 0 / var(--photo-top-alpha)) 0%,rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),#0000 42%,#0000 63%,rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),#000e 91%);}
+.mc-campaign-rest .campaign-shade {
+  /* Ease through the entire photograph instead of two abrupt black shelves.
+     The first/last reading areas never fall below their declared minimum. */
+  background:linear-gradient(
+    rgb(0 0 0 / var(--photo-top-alpha)) 0%,
+    rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),
+    rgb(0 0 0 / .52) 40%,rgb(0 0 0 / .34) 45%,
+    rgb(0 0 0 / .22) 50%,rgb(0 0 0 / .20) 55%,
+    rgb(0 0 0 / .28) 60%,rgb(0 0 0 / .42) 66%,
+    rgb(0 0 0 / .55) 71%,
+    rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),
+    rgb(0 0 0 / var(--photo-bottom-alpha)) 100%);
+}
+.mc-campaign-rest .mc-action {color:var(--campaign-ink);}
+.mc-campaign-rest .mc-action svg {color:var(--campaign-accent);}
 .mc-campaign-nearmiss .campaign-reels {position:absolute;left:0;top:198px;width:1080px;height:535px;}
 .mc-campaign-nearmiss .reel-field {position:relative;height:430px;background:var(--campaign-accent);color:var(--campaign-field);}
-.mc-campaign-nearmiss .reel-field svg {position:absolute;inset:0;width:100%;height:100%;stroke:var(--campaign-field);stroke-width:var(--campaign-outline);}
+.mc-campaign-nearmiss .reel-dividers {position:absolute;inset:0;width:100%;height:100%;stroke:currentColor;stroke-width:var(--campaign-outline);}
 .mc-campaign-nearmiss .reel-marker {fill:var(--campaign-field);stroke:none;}
-.mc-campaign-nearmiss .reel-symbols {position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;font:var(--campaign-weight) 420px/.95 var(--display);letter-spacing:-.07em;text-align:center;}
-.mc-campaign-nearmiss .reel-symbols span {padding-right:24px;}
+.mc-campaign-nearmiss .reel-symbols {position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);place-items:center;}
+.mc-campaign-nearmiss .reel-symbol {width:260px;height:310px;fill:currentColor;stroke:none;}
+.mc-campaign-nearmiss .reel-stem {fill:none;stroke:currentColor;stroke-width:calc(8px + var(--campaign-outline));stroke-linecap:round;stroke-linejoin:round;}
+.mc-campaign-nearmiss .reel-detail {fill:none;stroke:var(--campaign-accent);stroke-width:calc(4px + var(--campaign-outline) * .5);stroke-linecap:round;}
 .mc-campaign-nearmiss .campaign-reels figcaption {position:absolute;left:60px;top:472px;font:400 42px/1.2 var(--body);}
 .mc-campaign-zero h1 {top:176px;--campaign-heading:110px;}
 .mc-campaign-zero .campaign-wheels {position:absolute;left:60px;top:448px;width:960px;display:grid;grid-template-columns:1fr 1fr;gap:60px;}

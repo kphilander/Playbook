@@ -13,8 +13,7 @@
     ],
     "issues": [],
     "contrastPairs": {
-      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
-      "rgb(52, 211, 153) on photo shadow over brightest possible pixel": 7.07
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
     },
     "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+",
     "raster": {
@@ -41,7 +40,7 @@
         }
       ]
     },
-    "pngSha256": "0b26caccc0d5001177a3b2b20a70ab82c532ab2144b51ee935eea5b4ed92d274"
+    "pngSha256": "ce1d66bebe3910d2cd22dabddbbc5655230685163caec7a0b57c56126a8b7e83"
   },
   {
     "template": "campaign-rest",
@@ -57,8 +56,7 @@
     ],
     "issues": [],
     "contrastPairs": {
-      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 9.27,
-      "rgb(222, 237, 178) on photo shadow over brightest possible pixel": 10.92
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 5.32
     },
     "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+",
     "raster": {
@@ -85,7 +83,7 @@
         }
       ]
     },
-    "pngSha256": "a5779a2123b1c640f14e4f524b614f042492925a8dfa206365ce483e94718b44"
+    "pngSha256": "e0b00116868de1546e2033132b005b996519db8dac34049f00855af180e6f6a4"
   },
   {
     "template": "campaign-rest",
@@ -101,8 +99,7 @@
     ],
     "issues": [],
     "contrastPairs": {
-      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
-      "rgb(218, 250, 115) on photo shadow over brightest possible pixel": 11.59
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
     },
     "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+",
     "raster": {
@@ -129,7 +126,7 @@
         }
       ]
     },
-    "pngSha256": "663e418eeed4847c81e71caeac09b45d9407507a84303a41ee90862a7414ce50"
+    "pngSha256": "4d6a400d502c21c8b20e32e3b6380b6ff8688403bc7f98da9844275f0580a301"
   },
   {
     "template": "campaign-nearmiss",
@@ -138,7 +135,7 @@
     "height": 1350,
     "blockCopy": [
       "DIV.mc-action: See how a spin works",
-      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FIGURE.campaign-reels: Close-looking result. No prediction.",
       "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
       "H1.: So close. Same odds.",
       "HEADER.mc-header: Myth / Math",
@@ -147,10 +144,9 @@
     "issues": [],
     "contrastPairs": {
       "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
-      "rgb(15, 25, 35) on rgb(52, 211, 153)": 9.23,
       "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
     },
-    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
+    "copy": "Myth / Math So close. Same odds. Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
     "raster": {
       "scale": 3,
       "pixels": [
@@ -159,7 +155,7 @@
       ],
       "sources": []
     },
-    "pngSha256": "a055a1a6f0b0e2f4a9a2408eccc55a26f0c6ce5f60f00729d5aca78ca4fdeaae"
+    "pngSha256": "52a6c9fd5e16d28799bdc8a386ccb5fb5f257593bcba42c6f68c9f7db951c710"
   },
   {
     "template": "campaign-nearmiss",
@@ -168,7 +164,7 @@
     "height": 1350,
     "blockCopy": [
       "DIV.mc-action: See how a spin works",
-      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FIGURE.campaign-reels: Close-looking result. No prediction.",
       "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
       "H1.: So close. Same odds.",
       "HEADER.mc-header: Myth / Math",
@@ -177,10 +173,9 @@
     "issues": [],
     "contrastPairs": {
       "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
-      "rgb(24, 61, 53) on rgb(222, 237, 178)": 9.59,
       "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
     },
-    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
+    "copy": "Myth / Math So close. Same odds. Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
     "raster": {
       "scale": 3,
       "pixels": [
@@ -189,7 +184,7 @@
       ],
       "sources": []
     },
-    "pngSha256": "e2f088ecd5adf4e06feb08f3fd1221f209355f75218bac07f79a56fa0dcdc61e"
+    "pngSha256": "08476dc04d23d5e55c042a6c707601f030f31ec92c4186344a3b923199b7af4e"
   },
   {
     "template": "campaign-nearmiss",
@@ -198,7 +193,7 @@
     "height": 1350,
     "blockCopy": [
       "DIV.mc-action: See how a spin works",
-      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FIGURE.campaign-reels: Close-looking result. No prediction.",
       "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
       "H1.: So close. Same odds.",
       "HEADER.mc-header: Myth / Math",
@@ -207,10 +202,9 @@
     "issues": [],
     "contrastPairs": {
       "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
-      "rgb(41, 58, 176) on rgb(218, 250, 115)": 7.7,
       "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
     },
-    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
+    "copy": "Myth / Math So close. Same odds. Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
     "raster": {
       "scale": 3,
       "pixels": [
@@ -219,7 +213,7 @@
       ],
       "sources": []
     },
-    "pngSha256": "6ded1605d9549f6ae80f5fe7d1ae50ef6a8f1c74a5acbf5cefdd29bde02c18fa"
+    "pngSha256": "8b25d4c1af265f0084287c440e56dfa38bdbad9456c5551a2ee0b975bdfab63d"
   },
   {
     "template": "campaign-zero",

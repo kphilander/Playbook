@@ -18,7 +18,7 @@ followed by the three earlier concepts and their saved favorites.
 | Concept | Creative decision | Content basis |
 |---|---|---|
 | “Leave room for the rest.” | A new 4K photograph fills the canvas. Warm hospitality and ordinary adult company put gambling within a larger evening. The headline occupies dark architecture above the faces. | Choose a finish time before play. [Session-reminder messages](../../messaging/core-messages.md#session-reminder). No promised product feature or universal session length. |
-| “So close. Same odds.” | Oversized live reel symbols run from edge to edge. A nearly matching result supplies a familiar visual hook; the explanation targets the misconception. | A near miss does not improve the next independent slot spin’s probability. [Slots guide](../../how-to-play/slots.md) and [near-miss message](../../messaging/myth-busting.md#myth-4-near-misses-mean-youre-close). The 7 / 7 / 6 arrangement is illustrative, not a specific game/paytable. |
+| “So close. Same odds.” | Two cherry symbols and a lemon replace the oversized numbers. Filled SVG silhouettes and fine negative strokes make the almost-match recognizable at small sizes. | A near miss does not improve the next independent slot spin’s probability. [Slots guide](../../how-to-play/slots.md) and [near-miss message](../../messaging/myth-busting.md#myth-4-near-misses-mean-youre-close). The fruit arrangement is illustrative, not a specific game/paytable or a claim about whether this combination pays. |
 | “One extra zero. Different odds.” | Paired SVG rings count 37 and 38 pockets. One and two highlighted pockets introduce the edge comparison. | Straight-up number bets with standard 35:1 profit payouts: house edge = 1 − 36/N, giving 2.70% for N=37 and 5.26% for N=38. [Roulette guide](../../how-to-play/roulette.md). Rings count pockets; they do not depict physical wheel order. |
 | “Time is part of the budget.” | An oversized dial with an open arc and pause symbol gives an everyday planning tool a clear graphic identity. | Choose an end time and use a reminder. The dial is a metaphor, not a progress meter, recommended duration, account control or automatic stop. |
 
@@ -31,6 +31,21 @@ The voice follows the brand book’s Open and Social pillars: explain an actual
 mechanic, give the viewer a usable action, and make the message worth sharing.
 No decorative generated text, cartoon mascots, boxed photo posters or invented
 regulatory banner requirements are introduced.
+
+### Refinement after review
+
+The user found the top and bottom photographic fades awkward and suggested
+symbols for concept 2. The terrace composition now uses a softer, continuous
+shadow: the image remains visible behind the lower copy instead of falling
+into near-black. The action uses the main light ink, with color retained in
+the arrow, so the photograph can stay lighter while the text retains contrast.
+The source photograph, full-bleed crop and message placement are unchanged.
+
+The reel symbols are native SVG geometry. Their fill inherits the skin color;
+stem and detail strokes inherit the same graphic-weight tokens as the other
+campaign diagrams. No emoji font, raster symbol image or generated lettering
+is involved. The result has an accessible description, and changing the CSS
+preserves the artwork and content nodes.
 
 ## Round 3 — retained preferences
 
