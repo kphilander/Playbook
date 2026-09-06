@@ -1,6 +1,8 @@
+import {photoSceneAssets} from './photo-scene-assets.mjs';
 const photos='../creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/';
 const provenance='../creative-review/photography/README.md';
 export const assets=[
+  ...photoSceneAssets,
   {id:'room-for-the-rest',name:'Room for the rest · 4K portrait',type:'raster',role:'photography',slot:'hero',src:'../campaign-concepts/photography/output/campaign-round-4-20260905/creative-campaign/shared-input/room-for-the-rest/attempt-1/candidate-1-image-1.jpg',alt:'Two adult friends on a warmly lit resort terrace, with dark architecture above them.',focalPoint:[50,50],width:3712,height:4608,origin:'AI-generated · Gemini 3 Pro Image · 4K',provenance:'../campaign-concepts/README.md',prompt:'../campaign-concepts/photography/round-4-request.json'},
   {id:'evening-pause',name:'Evening pause · portrait',type:'raster',role:'photography',slot:'hero',src:'../campaign-concepts/photography/output/campaign-portrait-20260905/creative-campaign/shared-input/evening-pause/attempt-1/candidate-1-image-1.jpg',alt:'Two adult friends talking as they walk through a resort lobby at blue hour.',focalPoint:[50,50],width:1856,height:2304,origin:'AI-generated · Gemini 3 Pro Image',provenance:'../campaign-concepts/README.md',prompt:'../campaign-concepts/photography/request.json'},
   {id:'casino-conversation',name:'Casino conversation',type:'raster',role:'photography',slot:'hero',src:photos+'casino-conversation/attempt-1/candidate-1-image-1.jpg',alt:'Three adult friends talking in a warmly lit casino lounge.',focalPoint:[50,23],width:2400,height:1792,origin:'AI-generated · Gemini 3 Pro Image',provenance,prompt:'../creative-review/photography/requests/casino-conversation.json'},

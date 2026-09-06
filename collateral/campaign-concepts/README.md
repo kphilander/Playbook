@@ -10,6 +10,11 @@ reading_level: grade-6-8
 
 # Campaign concepts / rounds 3 and 4
 
+[Compare three new photographic executions](photo-comparison/index.html):
+joining the table, before the show, and heading out together. They use the
+same direction 01 recipe and Social Club skin, with only the registered
+photograph changed. [Sources, prompts and selection notes](photo-comparison/README.md).
+
 [Open the 18 creative previews](index.html): four new ideas in three skins,
 followed by the three earlier concepts and their saved favorites.
 

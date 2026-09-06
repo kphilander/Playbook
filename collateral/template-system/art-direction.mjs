@@ -5,6 +5,7 @@ export const artDirections={
     title:'Show what comes next.',
     summary:'Photograph a specific moment in the rest of the evening: friends meeting for dinner, arriving at a show, or heading out together.',
     reviewHref:'../campaign-concepts/index.html#campaign-rest-photography',
+    comparisonHref:'../campaign-concepts/photo-comparison/index.html',
     briefHref:'../campaign-concepts/photography/art-direction.md',
     diagram:'photography/rest-composition.svg',
     guidance:[

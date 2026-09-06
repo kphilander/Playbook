@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "name": "All three photos load without horizontal overflow at 1440px",
+      "pass": true
+    },
+    {
+      "name": "All three photos load without horizontal overflow at 775px",
+      "pass": true
+    },
+    {
+      "name": "All three photos load without horizontal overflow at 390px",
+      "pass": true
+    },
+    {
+      "name": "A scene preference survives reload",
+      "pass": true
+    },
+    {
+      "name": "Selecting a scene again clears it",
+      "pass": true
+    },
+    {
+      "name": "Scene choices preserve earlier skin preferences",
+      "pass": true
+    },
+    {
+      "name": "The Dinner edit link opens its actual photograph",
+      "pass": true
+    },
+    {
+      "name": "The The show edit link opens its actual photograph",
+      "pass": true
+    },
+    {
+      "name": "The Heading out edit link opens its actual photograph",
+      "pass": true
+    },
+    {
+      "name": "A different scene resets the crop while reloading the same scene preserves edits",
+      "pass": true
+    },
+    {
+      "name": "An incompatible asset link cannot add a photo to a graphic template",
+      "pass": true
+    },
+    {
+      "name": "Unregistered asset URLs are ignored",
+      "pass": true
+    },
+    {
+      "name": "All three exported PNGs decode at the expected dimensions",
+      "pass": true
+    },
+    {
+      "name": "No browser errors",
+      "pass": true
+    }
+  ]
+}

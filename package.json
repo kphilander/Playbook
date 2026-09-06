@@ -22,6 +22,8 @@
     "build:art-direction": "node collateral/render/sync-art-direction-logos.mjs && node collateral/render/render-cards.mjs card-1c-lucky-machine card-2a-house-edge poster-19e-never-due --locale=en && node collateral/render/art-direction-review.mjs",
     "build:campaign-concepts": "node collateral/studio/build.mjs && node collateral/campaign-concepts/build.mjs",
     "check:campaign-concepts": "node collateral/campaign-concepts/check.mjs",
+    "build:photo-comparison": "node collateral/campaign-concepts/photo-comparison/build.mjs",
+    "check:photo-comparison": "node collateral/campaign-concepts/photo-comparison/check.mjs",
     "check:collateral": "node collateral/render/render-cards.mjs --check --locale=en",
     "build:widgets": "node widgets/build.mjs",
     "generate:content-api": "node lib/generate-content-api.mjs",

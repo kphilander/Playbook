@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/campaign-concepts/photography/output/campaign-photo-scenes-20260906/creative-campaign/shared-input/rest-dinner/attempt-2",
+  "attempt": 2,
+  "settingsSha256": "1c77fd2fc6d643a1cd13a3e7a068f1b37d9a527a6229fa0aaf31e60476e7c938",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-campaign",
+  "concept": "rest-dinner",
+  "condition": "shared-input",
+  "startedAt": "2026-09-06T20:43:22.582Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 8679678,
+      "sha256": "9b391507553403535c059906fa7e6581f8d50fa793158303a6aefc2188b25a8a"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 855,
+    "candidatesTokenCount": 2385,
+    "totalTokenCount": 3556,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 855
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 2000
+      }
+    ],
+    "thoughtsTokenCount": 316,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 35227,
+  "completedAt": "2026-09-06T20:43:57.810Z"
+}

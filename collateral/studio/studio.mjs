@@ -13,6 +13,8 @@ const params=new URLSearchParams(location.search);
 if(params.get('template')!==recipe.templateId&&templates.some(t=>t.id===params.get('template')))recipe=createRecipe(params.get('template'));
 if(skins.some(s=>s.id===params.get('skin')))recipe.skinId=params.get('skin');
 if(skins.some(s=>s.id===params.get('compare')))compareSkin=params.get('compare');
+const linkedAsset=assets.find(a=>a.id===params.get('asset')&&a.slot===slotFor(templates.find(t=>t.id===recipe.templateId)));
+if(linkedAsset&&linkedAsset.id!==recipe.assetId)recipe=validateRecipe({...recipe,assetId:linkedAsset.id,focalPoint:null});
 function options(element,items,value){element.replaceChildren(...items.map(item=>{const option=document.createElement('option');option.value=item.id;option.textContent=item.name||item.title;return option;}));element.value=value;}
 options($('template'),templates,recipe.templateId);
 for(const side of ['a','b'])options($('skin-'+side),skins,side==='a'?recipe.skinId:compareSkin);
