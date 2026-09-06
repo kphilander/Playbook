@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="../../render/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>Deposit Confirmed</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+  }
+  .accent-bar { height: 4px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    font-weight: 700;
+    letter-spacing: -0.018em;
+  }
+
+  .hero h1 {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    margin-bottom: 20px;
+  }
+  .deposit-amount {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+    margin-bottom: 8px;
+  }
+  .deposit-date {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
+  }
+  .section-white { padding: 40px 56px; background: var(--pb-color-white); }
+  .section-gray { padding: 40px 56px; background: var(--pb-color-neutral-50); }
+  .section-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(20px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    margin-bottom: 24px;
+  }
+  .budget-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .budget-stat {
+    flex: 1;
+    background: var(--pb-color-neutral-50);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .budget-stat .label {
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-family: var(--pb-font-heading);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .budget-stat .value {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-brand-ink, var(--pb-color-primary));
+  }
+  .budget-stat .value.teal { color: var(--pb-color-secondary); }
+  .budget-stat .value.orange { color: var(--pb-color-accent); }
+  .progress-bar-outer {
+    width: 100%;
+    height: 8px;
+    background: var(--pb-color-neutral-100);
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .progress-bar-inner {
+    width: 35%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--pb-color-secondary), var(--pb-color-secondary-dark));
+    border-radius: 4px;
+  }
+  .progress-label {
+    font-size: calc(14px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    text-align: right;
+  }
+  .note {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.6;
+    margin-top: 16px;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(15px * var(--pb-template-text-scale, 1));
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .tool-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--pb-color-neutral-100);
+  }
+  .tool-row:last-child { border-bottom: none; }
+  .tool-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--pb-color-secondary);
+    min-width: 10px;
+  }
+  .tool-dot.off { background: var(--pb-color-neutral-300); }
+  .tool-label {
+    font-weight: 600;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    flex: 1;
+  }
+  .tool-status {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    font-family: var(--pb-font-mono);
+    font-weight: 500;
+  }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 36px 56px;
+    text-align: center;
+  }
+  .footer-support { font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 600; margin-bottom: 10px; }
+  .footer-channels {
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); line-height: 1.6; margin-bottom: 12px; }
+  .footer-logo { font-family: var(--pb-font-heading); font-size: calc(14px * var(--pb-template-text-scale, 1)); margin-top: 16px; display: inline-block; color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <link rel="stylesheet" href="creative-system.css">
+  <link rel="stylesheet" href="text-polish.css">
+</head>
+<body>
+<div class="email pb-creative pb-text-polish">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo">Playbook</div>
+    <h1>Deposit confirmed</h1>
+    <div class="deposit-amount">$50.00</div>
+    <div class="deposit-date">February 22, 2026</div>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">Your budget at a glance</div>
+    <div class="budget-grid">
+      <div class="budget-stat">
+        <div class="label">Weekly limit</div>
+        <div class="value">$200</div>
+      </div>
+      <div class="budget-stat">
+        <div class="label">Used</div>
+        <div class="value teal">$70</div>
+      </div>
+      <div class="budget-stat">
+        <div class="label">Remaining</div>
+        <div class="value">$130</div>
+      </div>
+    </div>
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner"></div>
+    </div>
+    <div class="progress-label">35% of weekly limit used</div>
+    <div class="note">Your limits are yours. Review changes and their timing in account settings.</div>
+    <a href="#" class="cta-button">Adjust your limits</a>
+  </div>
+
+  <div class="section-gray">
+    <div class="section-heading">Your tools</div>
+    <div class="tool-row">
+      <div class="tool-dot"></div>
+      <div class="tool-label">Session reminders</div>
+      <div class="tool-status">Every 60 min</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-dot"></div>
+      <div class="tool-label">Activity dashboard</div>
+      <div class="tool-status">Updated live</div>
+    </div>
+    <div class="tool-row">
+      <div class="tool-dot off"></div>
+      <div class="tool-label">Bankroll planner</div>
+      <div class="tool-status">Not set up</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">See your dashboard</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">Free, confidential support — for any question about gambling.</div>
+    <div class="footer-channels">Call 1-800-522-4700 | Text 1-800-522-4700</div>
+    <div class="footer-legal">You must be 21+ to gamble. Powered by Playbook (CC0)</div>
+    <div class="footer-logo">Playbook</div>
+  </div>
+
+</div>
+</body>
+</html>

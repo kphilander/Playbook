@@ -42,7 +42,9 @@
     "check:design-preferences": "node collateral/design-preferences/check-browser.mjs",
     "build:template-studio": "npm run generate:tokens && node collateral/studio/build.mjs && node collateral/design-preferences/build.mjs && node collateral/design-preferences/render.mjs",
     "check:template-studio": "node collateral/template-system/check.mjs && node collateral/studio/check-browser.mjs",
-    "export:template": "node collateral/template-system/render.mjs"
+    "export:template": "node collateral/template-system/render.mjs",
+    "build:text-polish": "node collateral/text-polish/build.mjs",
+    "check:text-polish": "node collateral/text-polish/check-layouts.mjs && node collateral/text-polish/check-browser.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="../../render/">
+  <meta charset="UTF-8">
+        <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
+
+    .rack-card {
+      width: 800px;
+      height: 1800px;
+      position: relative;
+      background: var(--pb-color-primary);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top accent bar */
+    .rack-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)));
+    }
+
+    .card-header {
+      padding: 48px 56px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 1;
+    }
+    .card-logo {
+      font-family: var(--pb-font-heading);
+      font-size: calc(32px * var(--pb-template-text-scale, 1));
+      color: var(--pb-surface-ink, var(--pb-color-white));
+
+      font-weight: 700;
+      letter-spacing: -0.018em;
+    }
+    .card-header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .co-brand-divider {
+      width: 1px;
+      height: 28px;
+      background: var(--pb-color-neutral-300);
+    }
+    .operator-placeholder {
+      width: 120px;
+      height: 48px;
+      border: 1px dashed color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--pb-font-body);
+      font-size: calc(11px * var(--pb-template-text-scale, 1));
+      color: color-mix(in srgb, var(--pb-surface-ink, #fff) 25%, transparent);
+    }
+    .card-pillar {
+      font-family: var(--pb-font-heading);
+      font-size: calc(18px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pb-brand-ink, var(--pb-color-primary));
+      background: var(--pb-color-secondary);
+      padding: 8px 22px;
+      border-radius: 100px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .card-hero {
+      padding: 56px 56px 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-headline {
+      font-family: var(--pb-font-heading);
+      font-size: calc(48px * var(--pb-template-text-scale, 1));
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--pb-surface-ink, var(--pb-color-white));
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-subhead {
+      font-family: var(--pb-font-body);
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
+      line-height: 1.5;
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
+    }
+
+    .stats-section {
+      flex: 1;
+      padding: 0 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-row {
+      padding: 28px;
+      background: color-mix(in srgb, var(--pb-surface-ink, #fff) 3%, transparent);
+      border-radius: 12px;
+      border: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 6%, transparent);
+    }
+    .stat-game {
+      font-family: var(--pb-font-body);
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .stat-value {
+      font-family: var(--pb-font-heading);
+      font-size: calc(56px * var(--pb-template-text-scale, 1));
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+    .stat-value.teal { color: var(--pb-color-secondary); }
+    .stat-value.white { color: var(--pb-surface-ink, var(--pb-color-white)); }
+    .stat-value.orange { color: var(--pb-color-accent); }
+    .stat-note {
+      font-family: var(--pb-font-body);
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-500);
+      line-height: 1.4;
+    }
+
+    .card-callout {
+      padding: 0 56px;
+      position: relative;
+      z-index: 1;
+    }
+    .callout-text {
+      font-family: var(--pb-font-body);
+      font-size: calc(22px * var(--pb-template-text-scale, 1));
+      line-height: 1.5;
+      color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
+    }
+    .callout-text strong {
+      color: var(--pb-color-secondary);
+      font-weight: 600;
+    }
+
+    .card-qr {
+      padding: 40px 56px 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .qr-placeholder {
+      width: 100px;
+      height: 100px;
+      background: var(--pb-color-white);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--pb-font-mono);
+      font-size: calc(14px * var(--pb-template-text-scale, 1));
+      color: var(--pb-brand-ink, var(--pb-color-primary));
+      flex-shrink: 0;
+    }
+    .qr-label {
+      font-family: var(--pb-font-heading);
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      font-weight: 600;
+      color: var(--pb-surface-ink, var(--pb-color-white));
+    }
+
+    .helpline-strip {
+      margin-top: 32px;
+      background: var(--pb-color-primary-light);
+      padding: 24px 32px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .helpline-text {
+      font-family: var(--pb-font-mono);
+      font-size: calc(24px * var(--pb-template-text-scale, 1));
+      font-weight: 700;
+      color: var(--pb-surface-ink, var(--pb-color-white));
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .legal-strip {
+      padding: 16px 56px 24px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .legal-text {
+      font-family: var(--pb-font-body);
+      font-size: calc(20px * var(--pb-template-text-scale, 1));
+      color: var(--pb-color-neutral-500);
+      line-height: 1.4;
+    }
+  </style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <link rel="stylesheet" href="creative-system.css">
+  <link rel="stylesheet" href="text-polish.css">
+</head>
+<body>
+  <div class="rack-card pb-creative pb-text-polish">
+    <div class="card-header">
+      <div class="card-header-left">
+        <span class="card-logo">Playbook</span>
+        <div class="co-brand-divider"></div>
+        <div class="operator-placeholder">Your logo</div>
+      </div>
+      
+    </div>
+    <div class="card-hero">
+      <div class="hero-headline">Every game has math.<br>Here's yours.</div>
+      <div class="hero-subhead">Know the house edge. Pick your games. Set your budget.</div>
+    </div>
+    <div class="stats-section">
+      <div class="stat-row">
+        <div class="stat-game">Blackjack (basic strategy; favorable rules)</div>
+        <div class="stat-value teal">0.5%</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-game">American Roulette</div>
+        <div class="stat-value white">5.26%</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-game">Slots (varies by game)</div>
+        <div class="stat-value orange">2&ndash;15%</div>
+      </div>
+    </div>
+    <div class="card-callout">
+      <div class="callout-text"><strong>Knowing the edge</strong> helps you pick your games and set your budget.</div>
+    </div>
+    <div class="card-qr">
+      <div class="qr-placeholder">QR</div>
+      <span class="qr-label">Scan for the facts</span>
+    </div>
+    <div class="helpline-strip">
+      <span class="helpline-text">Free, confidential support 24/7: <span class="support-number">1-800-522-4700</span></span>
+    </div>
+    <div class="legal-strip">
+      <span class="legal-text">You must be 21+ to gamble. Powered by Playbook (CC0)</span>
+    </div>
+  </div>
+</body>
+</html>

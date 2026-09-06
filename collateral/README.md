@@ -4,6 +4,8 @@ Templates and specifications for every Playbook touchpoint — digital, print, e
 
 [Open the September creative review](creative-review/index.html) for revised previews, concept comparisons and the reasoning behind the choices.
 
+[Compare the everyday collateral polish](text-polish/index.html): 26 text-led English masters with refined hierarchy, spacing and accessible supporting text, including saved before/after preferences.
+
 [Compare four style alternatives](style-alternatives/index.html): editorial luxury, contemporary hospitality, digital precision and playful confidence. Each includes three finished specimens.
 
 [Open the template studio](studio/index.html) to reskin the eight latest concept families, switch SVG illustrations and AI photos, edit copy, and export reusable HTML, CSS and recipes. The gallery and studio use the same [template system](template-system/README.md).

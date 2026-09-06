@@ -1,0 +1,190 @@
+[
+  {
+    "name": "Review fits 1440px with 26 comparisons",
+    "pass": true
+  },
+  {
+    "name": "Review fits 775px with 26 comparisons",
+    "pass": true
+  },
+  {
+    "name": "Review fits 390px with 26 comparisons",
+    "pass": true
+  },
+  {
+    "name": "Mobile comparisons stack at a readable width",
+    "pass": true
+  },
+  {
+    "name": "Cards filter shows the correct templates",
+    "pass": true
+  },
+  {
+    "name": "Stories filter shows the correct templates",
+    "pass": true
+  },
+  {
+    "name": "Posters filter shows the correct templates",
+    "pass": true
+  },
+  {
+    "name": "Print filter shows the correct templates",
+    "pass": true
+  },
+  {
+    "name": "Email filter shows the correct templates",
+    "pass": true
+  },
+  {
+    "name": "How to play filter shows the correct templates",
+    "pass": true
+  },
+  {
+    "name": "Per-template preferences survive reload",
+    "pass": true
+  },
+  {
+    "name": "Clicking a selected choice clears it",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "poster-4b-no-fine-print live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "poster-4c-game-iq live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "rack-card-5a live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "table-tent-5b live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "email-welcome-7a live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "email-deposit-7b live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "email-monthly-7c live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "email-reactivation-7d live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-baccarat live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-bingo live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-craps live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-horse-racing live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-lottery live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-roulette live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-slots live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-sports live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "htp-card-video-poker live artwork loads with resolved copy and readable contrast",
+    "pass": true
+  },
+  {
+    "name": "All 26 PNGs have the promised native render dimensions",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak can change brand colors and heading font through CSS",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak can change brand colors and heading font through CSS",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game can change brand colors and heading font through CSS",
+    "pass": true
+  },
+  {
+    "name": "rack-card-5a can change brand colors and heading font through CSS",
+    "pass": true
+  },
+  {
+    "name": "email-welcome-7a can change brand colors and heading font through CSS",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack can change brand colors and heading font through CSS",
+    "pass": true
+  },
+  {
+    "name": "The contrast audit rejects unreadable body copy",
+    "pass": true
+  },
+  {
+    "name": "No browser errors",
+    "pass": true
+  }
+]
