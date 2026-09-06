@@ -15,7 +15,7 @@ reading_level: grade-6-8
 The user prefers the revised illustration and odds cards from the earlier
 review, and the **original full-bleed photo poster**. They rejected the two
 inset photo treatments. These new compositions start from that clarified
-preference; they have not yet been selected by the user.
+preference. The user has now saved a preferred treatment for each concept.
 
 | Concept | Creative decision | Content basis |
 |---|---|---|
@@ -26,6 +26,28 @@ preference; they have not yet been selected by the user.
 Every concept is shown in Social Club (warm white, forest, Manrope) and
 Circuit (white, cobalt, lime, Space Grotesk). Content, photography and SVG
 geometry are byte-identical between each pair. The differences are CSS.
+
+## Saved selections
+
+The user-saved controls in the campaign review select:
+
+| Concept | Favorite | Preview |
+|---|---|---|
+| Cinema | A / Social Club | [Selected artwork](renders/campaign-cinema-club.png) |
+| Pause | B / Circuit | [Selected artwork](renders/campaign-pause-circuit.png) |
+| Odds | A / Social Club | [Selected artwork](renders/campaign-probability-club.png) |
+
+These choices are captured in [selections.json](selections.json) and are now
+used by each template’s default recipe and reset action. Existing saved
+recipes, explicit skin links and browser preferences remain authoritative
+for those individual sessions. Both CSS treatments remain available.
+
+For the next creative round, carry forward the lighter Social Club type
+in the cinematic and odds compositions, and Circuit’s stronger type and
+lime pause symbol in the portrait composition. This is a direction for
+these templates, not evidence of one universal preferred skin. The
+full-bleed photo preference and the earlier illustration/odds selections
+also remain in force.
 
 ## Working templates
 
