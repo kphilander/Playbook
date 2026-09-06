@@ -1,4 +1,12 @@
 /* Replace this stylesheet to reskin the same HTML. */
+.message-concept[data-template^="campaign-"]{
+  --campaign-field:#183D35;
+  --campaign-ink:#FAF6EC;
+  --campaign-accent:#DEEDB2;
+  --campaign-weight:550;
+  --campaign-tracking:-.055em;
+  --campaign-outline:2px;
+}
 .message-concept{
   --media-accent:var(--accent);
   --body:Inter, sans-serif;

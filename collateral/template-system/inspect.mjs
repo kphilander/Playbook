@@ -8,6 +8,12 @@ export function inspectArtwork({kind='message',readingFloor}={},contextDocument)
    const overlaps=(a,b)=>a.left<b.right-2&&a.right>b.left+2&&a.top<b.bottom-2&&a.bottom>b.top+2;
    const floor=readingFloor||{support:16,quiz:19,email:22}[kind]||42;
    const colors=new Map();
+   // Campaign shadows use explicit minimum opacity over their reading areas.
+   // Composite over pure white: the brightest possible photo pixel. This avoids
+   // treating the solid color behind a photograph as its actual text backdrop.
+   const photoShade=root.querySelector('.campaign-shade');
+   const rootStyle=getComputedStyle(root);
+   const shadeValue=name=>parseFloat(rootStyle.getPropertyValue('--photo-'+name));
    const rgb=s=>s.match(/[\d.]+/g)?.map(Number);
    const luminance=c=>c.slice(0,3).map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((a,x,i)=>a+x*[.2126,.7152,.0722][i],0);
    const walk=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
@@ -19,7 +25,15 @@ export function inspectArtwork({kind='message',readingFloor}={},contextDocument)
     const size=parseFloat(cs.fontSize);if(size<floor)issues.push('Below reading floor: '+text);
     for(const r of rects){if(r.left<box.left-2||r.right>box.right+2||r.top<box.top-2||r.bottom>box.bottom+2)issues.push('Outside artboard: '+text);for(let a=p;a&&a!==root;a=a.parentElement){const ac=getComputedStyle(a),ar=a.getBoundingClientRect();if(/hidden|clip/.test(ac.overflowX+ac.overflowY)&&(r.left<ar.left-2||r.right>ar.right+2||r.top<ar.top-size*.25||r.bottom>ar.bottom+size*.25))issues.push('Clipped: '+text);}}
     let bg,ancestor=p;while(ancestor){const c=rgb(getComputedStyle(ancestor).backgroundColor);if(c&&c.length>=3&&(c.length<4||c[3]===1)){bg=c;break;}ancestor=ancestor.parentElement;}
-    const fg=rgb(cs.color);if(bg&&fg){const a=luminance(fg),b=luminance(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);const key=cs.color+' on '+getComputedStyle(ancestor).backgroundColor;colors.set(key,+ratio.toFixed(2));if(ratio<4.5)issues.push('Text contrast below 4.5: '+text+' ('+ratio.toFixed(2)+')');}
+    let backgroundLabel=bg?getComputedStyle(ancestor).backgroundColor:'';
+    if(photoShade){
+      const topEnd=box.top+box.height*shadeValue('top-end')/100,bottomStart=box.top+box.height*shadeValue('bottom-start')/100;
+      const alphas=rects.map(r=>r.bottom<=topEnd?shadeValue('top-alpha'):r.top>=bottomStart?shadeValue('bottom-alpha'):0);
+      const alpha=Math.min(...alphas);
+      if(!Number.isFinite(alpha)||alpha<=0||alpha>1)issues.push('Text leaves the protected photo reading areas: '+text);
+      else{const channel=255*(1-alpha);bg=[channel,channel,channel];backgroundLabel='photo shadow over brightest possible pixel';}
+    }
+    const fg=rgb(cs.color);if(bg&&fg){const a=luminance(fg),b=luminance(bg),ratio=(Math.max(a,b)+.05)/(Math.min(a,b)+.05);const key=cs.color+' on '+backgroundLabel;colors.set(key,Math.min(colors.get(key)||Infinity,+ratio.toFixed(2)));if(ratio<4.5)issues.push('Text contrast below 4.5: '+text+' ('+ratio.toFixed(2)+')');}
    }
    const blocks=kind==='support'?['.spec-header','.support-symbol','h1','.support-intro','.contact-panel','.support-note','.support-footer']:kind==='email'?['.spec-header','.email-card','.spec-footer']:kind==='quiz'?['.spec-header','.eyebrow','h1','.answers','.quiz-note','.spec-footer']:['.spec-header','h1','.intro','.ledger','.plan','.photo-frame','.takeaway','.spec-action','.spec-footer'];
    const elements=kind==='message'?[...root.querySelectorAll(':scope > [data-block]')]:blocks.map(s=>root.querySelector(s)).filter(Boolean);

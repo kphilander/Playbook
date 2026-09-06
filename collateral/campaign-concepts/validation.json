@@ -1,0 +1,120 @@
+[
+  {
+    "template": "campaign-cinema",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Know how the game works",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Luck doesn’t keep score.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: Past losses don’t make the next independent slot spin more likely to win."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 9.27,
+      "rgb(222, 237, 178) on photo shadow over brightest possible pixel": 9.4
+    },
+    "copy": "Myth / Math Luck doesn’t keep score. Past losses don’t make the next independent slot spin more likely to win. Know how the game works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-cinema",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Know how the game works",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Luck doesn’t keep score.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: Past losses don’t make the next independent slot spin more likely to win."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(218, 250, 115) on photo shadow over brightest possible pixel": 9.98
+    },
+    "copy": "Myth / Math Luck doesn’t keep score. Past losses don’t make the next independent slot spin more likely to win. Know how the game works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-pause",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Make room for a pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Your time. Your call.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose an end time before you play. Set a reminder to check in."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 9.27,
+      "rgb(222, 237, 178) on photo shadow over brightest possible pixel": 10.15
+    },
+    "copy": "Time well spent Your time. Your call. Choose an end time before you play. Set a reminder to check in. Make room for a pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-pause",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Make room for a pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Your time. Your call.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose an end time before you play. Set a reminder to check in."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(218, 250, 115) on photo shadow over brightest possible pixel": 10.77
+    },
+    "copy": "Time well spent Your time. Your call. Choose an end time before you play. Set a reminder to check in. Make room for a pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-probability",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.campaign-stat: 1 in 16",
+      "DIV.mc-action: Know what you’re combining",
+      "FIGURE.campaign-outcomes: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: More picks. Smaller target.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: Four independent picks, each truly 50/50. All four must win: a 6.25% chance."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Inside the odds More picks. Smaller target. 1 in 16 Four independent picks, each truly 50/50. All four must win: a 6.25% chance. Know what you’re combining Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-probability",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.campaign-stat: 1 in 16",
+      "DIV.mc-action: Know what you’re combining",
+      "FIGURE.campaign-outcomes: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: More picks. Smaller target.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: Four independent picks, each truly 50/50. All four must win: a 6.25% chance."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Inside the odds More picks. Smaller target. 1 in 16 Four independent picks, each truly 50/50. All four must win: a 6.25% chance. Know what you’re combining Free support: 1-800-522-4700 21+"
+  }
+]

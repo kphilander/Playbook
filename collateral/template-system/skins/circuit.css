@@ -1,4 +1,13 @@
 /* Replace this stylesheet to reskin the same HTML. */
+.message-concept[data-template^="campaign-"]{
+  --campaign-field:#293AB0;
+  --campaign-ink:#FFFFFF;
+  --campaign-accent:#DAFA73;
+  --campaign-weight:700;
+  --campaign-tracking:-.05em;
+  --campaign-outline:8px;
+}
+.mc-campaign-probability .campaign-outcomes .other {fill:color-mix(in srgb,var(--campaign-ink) 12%,transparent);}
 .message-concept{
   --media-accent:var(--accent);
   --body:Inter, sans-serif;

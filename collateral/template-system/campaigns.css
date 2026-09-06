@@ -1,0 +1,47 @@
+/* Composition only. Skins supply type, color and graphic weight.
+   Photo shadow stops are tied to the reading areas, not to a brand name. */
+.message-concept[data-template^="campaign-"] {
+  --campaign-field:var(--pb-color-primary-dark);
+  --campaign-ink:var(--pb-color-white);
+  --campaign-accent:var(--pb-color-secondary-light);
+  --campaign-weight:600;
+  --campaign-tracking:-.055em;
+  --campaign-outline:3px;
+  --campaign-heading:118px;
+  --campaign-case:none;
+  --photo-top-alpha:.74;
+  --photo-top-end:12%;
+  --photo-bottom-alpha:.78;
+  --photo-bottom-start:54%;
+  background:var(--campaign-field);
+  color:var(--campaign-ink);
+}
+[data-template^="campaign-"] .campaign-photo {position:absolute;inset:0;margin:0;overflow:hidden;}
+[data-template^="campaign-"] .campaign-photo img {width:100%;height:100%;display:block;object-fit:cover;object-position:var(--media-x,50%) var(--media-y,50%);}
+[data-template^="campaign-"] .campaign-photo svg {width:100%;height:100%;background:var(--campaign-field);color:var(--campaign-accent);}
+[data-template^="campaign-"] .campaign-shade {position:absolute;inset:0;pointer-events:none;}
+[data-template^="campaign-"] .mc-header {top:54px;left:60px;right:60px;font:400 42px/1.2 var(--body);}
+[data-template^="campaign-"] .mc-header>span {color:var(--campaign-ink);}
+[data-template^="campaign-"] .brand-logo {width:255px;}
+[data-template^="campaign-"] h1 {left:60px;width:960px;top:770px;font:var(--campaign-weight) var(--campaign-heading)/1 var(--display);letter-spacing:var(--campaign-tracking);text-transform:var(--campaign-case);}
+[data-template^="campaign-"] .mc-copy {left:60px;right:60px;top:1038px;font:400 42px/1.2 var(--body);}
+[data-template^="campaign-"] .mc-action {top:1174px;left:60px;right:60px;min-height:58px;font:600 42px/1.2 var(--body);color:var(--campaign-accent);}
+[data-template^="campaign-"] .mc-action svg {width:42px;height:42px;}
+[data-template^="campaign-"] .campaign-footer {position:absolute;left:60px;right:60px;bottom:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;font:400 42px/1.15 var(--pb-font-body);}
+[data-template^="campaign-"] .campaign-footer a {font-weight:600;color:inherit;text-decoration:none;white-space:nowrap;}
+.mc-campaign-cinema .campaign-photo img {height:940px;object-position:var(--media-x,50%) var(--media-y,23%);}
+.mc-campaign-cinema .campaign-shade {background:linear-gradient(rgb(0 0 0 / var(--photo-top-alpha)) 0%,rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),#0000 25%,#0000 38%,rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),#000 68%);}
+.message-concept.mc-campaign-cinema {background:#000;}
+.message-concept.mc-campaign-pause {--photo-top-end:39%;--photo-bottom-start:76%;--photo-bottom-alpha:.8;}
+.mc-campaign-pause h1 {top:176px;--campaign-heading:144px;width:860px;}
+.mc-campaign-pause .campaign-shade {background:linear-gradient(rgb(0 0 0 / var(--photo-top-alpha)) 0%,rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),#0000 45%,#0000 61%,rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),#000e 86%,#000e 100%);}
+.mc-campaign-pause .campaign-pause-mark {position:absolute;right:60px;top:210px;width:78px;height:125px;fill:var(--campaign-accent);stroke:none;}
+.mc-campaign-probability h1 {top:174px;--campaign-heading:110px;}
+.mc-campaign-probability .campaign-outcomes {position:absolute;left:60px;top:472px;width:550px;height:550px;stroke-width:var(--campaign-outline);color:var(--campaign-ink);}
+.mc-campaign-probability .campaign-outcomes svg {width:100%;height:100%;stroke-width:inherit;}
+.mc-campaign-probability .campaign-outcomes .winning {fill:var(--campaign-accent);stroke:var(--campaign-accent);}
+.mc-campaign-probability .campaign-outcomes .other {fill:none;stroke:var(--campaign-ink);}
+.mc-campaign-probability .campaign-stat {position:absolute;left:676px;top:565px;width:344px;line-height:1;font-family:var(--display);}
+.mc-campaign-probability .campaign-stat span {display:block;font-size:64px;letter-spacing:-.03em;}
+.mc-campaign-probability .campaign-stat strong {display:block;font-size:238px;font-weight:var(--campaign-weight);letter-spacing:-.045em;}
+.mc-campaign-probability .mc-copy {top:1050px;}

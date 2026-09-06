@@ -1,6 +1,6 @@
 # Playbook creative template system
 
-[Open the live studio](../studio/index.html). The platform separates content, composition, brand styling, media and market context. Its first library is the eight message-placement concept families: 16 compositions, each usable with seven CSS skins. The existing preference gallery builds those same masters through this engine.
+[Open the live studio](../studio/index.html). The platform separates content, composition, brand styling, media and market context. The library now contains eight message-placement families plus [three campaign concepts](../campaign-concepts/index.html): 19 compositions, each usable with seven CSS skins. The existing preference gallery builds its original masters through this engine. The new campaign review compares two treatments of each new composition.
 
 This implements the main brand book’s [adaptive identity model](../../brand-book/03-visual-identity.md): operator colors and fonts can change while the information hierarchy remains recognizable. Support content uses calm language, familiar type and no game imagery.
 
@@ -9,10 +9,10 @@ This implements the main brand book’s [adaptive identity model](../../brand-bo
 | Layer | Source | Responsibility |
 |---|---|---|
 | Brand configuration | `_brand.yml` → generated tokens and studio resources | Brand colors, base type, generated wordmark, contact numbers and ages |
-| Template catalogue | [catalog.mjs](catalog.mjs) | Eight content defaults, composition IDs, format dimensions and study rationale |
+| Template catalogue | [catalog.mjs](catalog.mjs), [campaigns.mjs](campaigns.mjs) | Content defaults, composition IDs, format dimensions and study rationale |
 | Recipe | Versioned JSON, checked by [engine.mjs](engine.mjs) | Template, composition, skin, text, asset, crop and market profile |
 | Markup | `renderArticle()` in [engine.mjs](engine.mjs) | Live typography, generated vector logo, SVG/photo slots, contact and warning components |
-| Layout | [layouts.css](layouts.css) | Canvas dimensions, spatial hierarchy and format-specific fitting rules |
+| Layout | [layouts.css](layouts.css), [campaigns.css](campaigns.css) | Canvas dimensions, spatial hierarchy, photo reading areas and format-specific fitting rules |
 | Skin | [skins/](skins/) | Semantic colors, fonts, letter spacing, corners, depth and display-font fitting metrics |
 | Media | [assets.mjs](assets.mjs), [assets/](assets/) | SVG sources, AI photo sources, alt text, focal points and provenance |
 | Market context | [resources.mjs](resources.mjs) | Brand-configured contact/age previews and the two researched, fixed scenario profiles |
@@ -86,11 +86,14 @@ To add media:
 
 The Source Sans 3 copyright notice is retained from the vendored font’s metadata, alongside the existing SIL OFL terms. All bundled font notices travel in the portable HTML.
 
-No new generation was needed for this version. Source photos and prompt records are reused, and the new SVGs are code-native assets.
+The original message-placement library reuses existing source photos. The
+new pause campaign adds a portrait generated through the authorized Google
+workflow; see its [prompt, selection and provenance](../campaign-concepts/README.md#photography-provenance-and-selection).
+The pause mark and sixteen-outcome graphic remain programmatic SVG.
 
 ## Content and market contract
 
-Recipe version 1 accepts `templateId`, `variant`, `skinId`, `assetId`, nullable `[x,y]` crop percentages, `marketId`, and plain-text `series`, `headline`, `copy`, `action`. The renderer escapes text; validation rejects unsupported IDs, profiles, crop values, excessive lengths and missing content. The fixed banner journey keeps its two-surface copy in the renderer for this initial version and does not expose the generic copy editor.
+Recipe version 1 accepts `templateId`, `variant`, `skinId`, `assetId`, nullable `[x,y]` crop percentages, `marketId`, and plain-text `series`, `headline`, `copy`, `action`. The renderer escapes text; validation rejects unsupported IDs, profiles, crop values, excessive lengths and missing content. Campaign templates support only the `after` composition; the studio presents one option for these. The fixed banner journey keeps its two-surface copy in the renderer for this initial version and does not expose the generic copy editor.
 
 Contact/age preview profiles cover the US, Great Britain and Australia. The two specific banner and wagering studies retain their researched scenarios and fixed profile selection. These are not comprehensive jurisdiction modules. Requirements, operator details and content purpose must be assessed independently of styling; see the [source-linked research](../../docs/compliance-banner-research-2026-09-05.md).
 
@@ -98,6 +101,6 @@ Source dimensions are 1080 × 1350 for the social/journey review canvases and 42
 
 ## Verification
 
-[The matrix](validation.json) checks 8 families × 2 compositions × 7 skins: **112 combinations**. It proves markup independence and checks bounds, block overlap, clipping, internal fit, fonts/images and solid-surface text contrast. [Browser checks](../studio/browser-validation.json) cover actual CSS-only switching, media/crop changes, content edits, persistence, recipe validation, overflow gating, protected messages, accessible support order, downloads, offline exports and narrow screens.
+[The matrix](validation.json) checks 19 compositions × 7 skins: **133 combinations**. It proves markup independence and checks bounds, block overlap, clipping, internal fit, fonts/images and text contrast. For the campaign photo layouts, contrast uses the minimum shadow opacity over the brightest possible image pixel, and text outside the designated reading areas fails validation. [Browser checks](../studio/browser-validation.json) cover actual CSS-only switching, media/crop changes, content edits, persistence, recipe validation, overflow gating, protected messages, accessible support order, downloads, offline exports and narrow screens.
 
 The existing [preference-gallery checks](../design-preferences/browser-validation.json) continue to protect saved choices and comparison behavior. Visual review is still required: fitting and contrast alone do not establish good art direction or market suitability.

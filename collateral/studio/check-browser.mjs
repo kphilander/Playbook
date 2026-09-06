@@ -17,7 +17,7 @@ try{
  page.on('pageerror',error=>errors.push(error.message));page.on('requestfailed',request=>{if(request.failure()?.errorText!=='net::ERR_ABORTED')errors.push(request.url());});
  const cdp=await page.createCDPSession();await cdp.send('Browser.setDownloadBehavior',{behavior:'allow',downloadPath:downloads});
  await page.goto(url,{waitUntil:'networkidle0'});await ready(page);
- record('Eight shared templates and seven independent skins',await page.$$eval('#template option',o=>o.length)===8&&await page.$$eval('#skin-a option',o=>o.length)===7);
+ record('Eleven shared templates and seven independent skins',await page.$$eval('#template option',o=>o.length)===11&&await page.$$eval('#skin-a option',o=>o.length)===7);
  record('Preview dimensions match the declared format',await page.$eval('#preview-a',f=>f.contentDocument.querySelector('.specimen').offsetWidth)===1080);
  await page.evaluate(()=>{window.originalArticle=document.getElementById('preview-a').contentDocument.querySelector('.specimen');window.originalMarkup=window.originalArticle.outerHTML;});
  await page.select('#skin-a','club');await ready(page);

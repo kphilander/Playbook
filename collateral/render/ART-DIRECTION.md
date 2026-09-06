@@ -11,15 +11,20 @@ the game-dependent slots range kept beside the values.
 User feedback: “i like the changes in 1 and 2. i dislike 3.” The seat and
 odds masters and their rendered previews are kept unchanged. The first
 photo revision is retained as the rejected comparison, not an approved
-direction. The specific reason for disliking it has not been established.
+direction.
 
 The second photo treatment tests the bold sans-serif voice of the two
 preferred cards. It brings the explanation directly beneath the headline
 and removes the secondary caption label. The photograph, crop, headline,
 explanation, CTA and configurable support content stay the same, so this
-comparison tests typography and hierarchy. This new treatment is pending
-user review; the feedback does not establish a rejection of photography
-in general. Existing AI photo provenance remains in
+comparison tested typography and hierarchy. The user then clarified:
+“i liked the full page image with bleed in the first one, the new style
+feels very homemade poster.” Both inset photo treatments are rejected.
+The original full-bleed photo direction is preferred. This is now recorded
+explicitly in the review, which links to the
+[new campaign concepts](../campaign-concepts/index.html). The cinematic and
+pause templates bring photography back to the edges; the odds template
+extends the preferred graphic direction. Existing AI photo provenance remains in
 `../creative-review/photography/`.
 
 All copy stays in HTML. `art-direction.css` owns layout and exposes paper,
