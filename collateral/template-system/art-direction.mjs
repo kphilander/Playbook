@@ -17,3 +17,15 @@ export const artDirections={
     adaptations:'Social Club: a restaurant terrace or show foyer, tactile materials and warm light. Circuit: adult friends heading out for late food, contemporary street light and a little more movement. The shared subject is the next plan together.'
   }
 };
+
+for(const [format,composition] of Object.entries({
+  story:'A 9:16 crop from a portrait master. Keep both faces inside the central width of the image, with quiet architecture above them. This study reserves 180px at the top and 220px at the bottom; check the actual placement UI separately. Supply native detail for a 2160 × 3840 export.',
+  landscape:'Photography occupies the right side of a 16:9 canvas and blends into a solid reading field on the left. Keep faces away from the left blend, with room above for the series line and below for age information. The image slot needs native detail for a 3360 × 3240 crop.'
+})){
+  const source=artDirections['room-for-the-rest'];
+  artDirections['room-for-the-rest-'+format]={...source,
+    reviewHref:'../campaign-concepts/campaign-family/index.html#format-'+format,
+    briefHref:'../campaign-concepts/campaign-family/README.md',
+    guidance:source.guidance.map(g=>g.label==='Compose for the cover'?{label:'Compose for the '+format,text:composition}:g)
+  };
+}

@@ -1,4 +1,6 @@
 /* Replace this stylesheet to reskin the same HTML. */
+/* The wide display face needs a smaller scale in the landscape reading column. */
+.message-concept[data-format="landscape"]{--presence-heading:120px;}
 .message-concept{
   --body:Inter, sans-serif;
   --paper:#FFF5DF;

@@ -4,6 +4,9 @@
 “Leave room for the rest” copy, dinner photograph, crop and contact profile.
 Dinner is a fixed comparison input, not a selected photographic favorite.
 
+[The campaign family](../campaign-family/index.html) develops the selected
+restrained expression into portrait, story and landscape formats.
+
 | Treatment | Brand decision | Tradeoff |
 |---|---|---|
 | A / Restrained | Official vector wordmark and book/play symbol; a short accent rule; confident, white type. | Keeps the photograph dominant, with recognition concentrated in the masthead. |

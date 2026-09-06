@@ -10,6 +10,10 @@ reading_level: grade-6-8
 
 # Campaign concepts / rounds 3 and 4
 
+[Review the restrained campaign family](campaign-family/index.html): portrait,
+story and landscape in Playbook, Social Club and Circuit, developed from the
+saved A / Restrained preference. [Format and image-quality notes](campaign-family/README.md).
+
 [Compare three levels of brand presence](brand-presence/index.html): the same
 dinner photograph in restrained, signature and bold expressions. Preview each
 with Playbook, Social Club or Circuit. [Design decisions](brand-presence/README.md).

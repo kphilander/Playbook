@@ -5,7 +5,7 @@ export const presenceTreatments=[
   {id:'bold',label:'C / Bold',short:'Bold',note:'The brand leads.',description:'A solid color masthead and oversized type give the campaign a strong graphic presence. This deliberately covers the upper architecture while the same photograph continues edge to edge below.'}
 ];
 export const brandPresenceTemplate={
-  id:'campaign-presence',theme:'playbook',layout:'campaign-rest',defaultVariant:'quiet',
+  id:'campaign-presence',theme:'playbook',layout:'campaign-rest',brandPresence:true,defaultVariant:'quiet',
   variants:presenceTreatments.map(t=>t.id),variantLabels:Object.fromEntries(presenceTreatments.map(t=>[t.id,t.short])),
   title:'Brand presence / Leave room for the rest',format:'Campaign social',
   series:'Time well spent',headline:'Leave room\nfor the rest.',

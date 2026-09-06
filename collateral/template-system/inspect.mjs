@@ -12,6 +12,7 @@ export function inspectArtwork({kind='message',readingFloor}={},contextDocument)
    // Composite over pure white: the brightest possible photo pixel. This avoids
    // treating the solid color behind a photograph as its actual text backdrop.
    const photoShade=root.querySelector('.campaign-shade');
+   const photoBox=root.querySelector('.campaign-photo')?.getBoundingClientRect();
    const rootStyle=getComputedStyle(root);
    const shadeValue=name=>parseFloat(rootStyle.getPropertyValue('--photo-'+name));
    const rgb=s=>s.match(/[\d.]+/g)?.map(Number);
@@ -32,7 +33,10 @@ export function inspectArtwork({kind='message',readingFloor}={},contextDocument)
     const readingSurface=p.closest('[data-reading-surface]');
     const surfaceBox=readingSurface?.getBoundingClientRect();
     const solidSurface=readingSurface===ancestor&&rects.every(r=>r.left>=surfaceBox.left&&r.right<=surfaceBox.right&&r.top>=surfaceBox.top&&r.bottom<=surfaceBox.bottom);
-    if(photoShade&&!solidSurface){
+    // A landscape media slot covers only part of the canvas. Text wholly
+    // outside it is checked against its solid background, not a fictitious photo.
+    const overPhoto=photoShade&&(!photoBox||rects.some(r=>overlaps(r,photoBox)));
+    if(overPhoto&&!solidSurface){
       const topEnd=box.top+box.height*shadeValue('top-end')/100,bottomStart=box.top+box.height*shadeValue('bottom-start')/100;
       const alphas=rects.map(r=>r.bottom<=topEnd?shadeValue('top-alpha'):r.top>=bottomStart?shadeValue('bottom-alpha'):0);
       const alpha=Math.min(...alphas);

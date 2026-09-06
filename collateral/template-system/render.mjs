@@ -11,10 +11,10 @@ import {parseRasterScale,inspectRasterDensity} from './export-quality.mjs';
 
 const args=process.argv.slice(2),scaleArgs=args.filter(a=>a.startsWith('--scale=')),positional=args.filter(a=>!a.startsWith('--'));
 if(!positional[0]||positional.length>2||scaleArgs.length>1||args.some(a=>a.startsWith('--')&&!a.startsWith('--scale=')))throw new Error('Usage: node collateral/template-system/render.mjs recipe.json [output-directory] [--scale=1|2|3|4]');
-const scale=parseRasterScale(scaleArgs[0]?.slice(8));
 const recipe=validateRecipe(JSON.parse(readFileSync(resolve(positional[0]),'utf8')));
 const output=resolve(positional[1]||'/tmp/playbook-template-export');
 const d=templates.find(t=>t.id===recipe.templateId),resources=loadResources(),assetBase=new URL('./',import.meta.url).href;
+const scale=parseRasterScale(scaleArgs[0]?.slice(8)??d.defaultRasterScale);
 const require=createRequire(new URL('../render/package.json',import.meta.url)),puppeteer=require('puppeteer');
 const browser=await puppeteer.launch({headless:'shell',protocolTimeout:30000,args:['--no-sandbox']});
 try{
