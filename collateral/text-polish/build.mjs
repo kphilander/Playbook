@@ -47,7 +47,7 @@ try {
     // element capture's actual PNG height rather than a rounded viewport hint.
     assert.ok(Math.abs(pixels[1]-height*2)<=(item.category==='Email'?2:0),item.id+' raster height');
     reports.push({id:item.id,category:item.category,title:metrics.title,dimensions:[width,height],pixels,contrast,sourceSha256:digest(source),baselineSourceSha256:digest(before),pngSha256:digest(png),copyPreserved:true});
-    writeFileSync(new URL('live/'+item.id+'.html',root),html.replace('<head>','<head><base href="../../render/">'));
+    writeFileSync(new URL('live/'+item.id+'.html',root),html.replace('<head>','<head><base href="../../render/">').replace(/[\t ]+$/gm,''));
     console.log(item.id+' · '+pixels.join(' × ')+' · '+contrast.issues.length+' contrast issues');
    }
   }
