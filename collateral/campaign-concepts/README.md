@@ -15,6 +15,14 @@ followed by the three earlier concepts and their saved favorites.
 
 ## Round 4 — clearer ideas, sharper artwork
 
+Direction 01 now has a [photography brief](photography/art-direction.md) and
+[composition guide](photography/rest-composition.svg), also shown beneath the
+concept in the review and linked beside the studio's image selector. The brief
+directs a specific shared plan, casting, light, composition, source resolution
+and adaptations for different adult brands. It belongs to the template, so
+it remains available when the photograph changes. The existing creative and
+historical generation prompt are retained.
+
 | Concept | Creative decision | Content basis |
 |---|---|---|
 | “Leave room for the rest.” | A new 4K photograph fills the canvas. Warm hospitality and ordinary adult company put gambling within a larger evening. The headline occupies dark architecture above the faces. | Choose a finish time before play. [Session-reminder messages](../../messaging/core-messages.md#session-reminder). No promised product feature or universal session length. |
@@ -78,6 +86,11 @@ These choices are captured in [selections.json](selections.json) and are now
 used by each template’s default recipe and reset action. Existing saved
 recipes, explicit skin links and browser preferences remain authoritative
 for those individual sessions. Both CSS treatments remain available.
+
+The latest user message supports New direction / 01 and asks for more art
+and photography direction. That feedback is recorded separately from skin
+preferences. The four new rows currently show no selected control in the
+connected review; no additional preferred skin has been inferred.
 
 For the next creative round, carry forward the lighter Social Club type
 in the cinematic and odds compositions, and Circuit’s stronger type and

@@ -1,4 +1,5 @@
 import {templates,skins,assets,createRecipe,validateRecipe,renderDocument,marketContext,fields,slotFor} from '../template-system/engine.mjs';
+import {artDirections} from '../template-system/art-direction.mjs';
 import {inspectArtwork} from '../template-system/inspect.mjs';
 import {bundleDocument} from '../template-system/bundle.mjs';
 
@@ -27,6 +28,10 @@ function syncControls(){
   options($('asset'),compatible.length?compatible:[{id:'',name:'No image in this template'}],recipe.assetId||'');$('asset').disabled=!slot;
   const asset=assets.find(a=>a.id===recipe.assetId);
   $('asset-note').textContent=asset?.origin||(d.visual==='probability'?'Programmatic SVG: 16 equal outcomes, one highlighted.':'Support keeps the focus on the person and the contact.');
+  const direction=artDirections[d.artDirection];
+  $('art-direction-note').hidden=!direction;
+  if(direction)$('art-direction-link').href=direction.reviewHref;
+  else $('art-direction-link').removeAttribute('href');
   $('crop-controls').hidden=asset?.type!=='raster';
   if(asset?.type==='raster')for(const [i,axis] of ['x','y'].entries()){$('crop-'+axis).value=(recipe.focalPoint||asset.focalPoint)[i];$('crop-'+axis+'-value').textContent=$('crop-'+axis).value+'%';}
   $('copy-editor').hidden=d.layout==='banner';$('copy-fields').replaceChildren();

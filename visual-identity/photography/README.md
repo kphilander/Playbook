@@ -25,3 +25,4 @@ The [`references/`](references/) folder contains annotated example photographs s
 ## Related
 
 - Photography guidelines in context: [Brand Book — Visual Identity](../../brand-book/03-visual-identity.md)
+- Campaign application: [“Leave room for the rest.” photography brief](../../collateral/campaign-concepts/photography/art-direction.md) — a scene brief and composition guide for the reusable 4:5 campaign cover.

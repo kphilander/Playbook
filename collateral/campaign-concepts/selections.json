@@ -20,5 +20,15 @@
       "skinId": "club",
       "label": "A / Social Club"
     }
+  ],
+  "conceptFeedback": [
+    {
+      "templateId": "campaign-rest",
+      "round": 4,
+      "source": "User message in the creative review task",
+      "feedback": "New direction / 01 is good but needs more art and photography direction.",
+      "action": "Retain the creative and add a reusable photography brief covering the scene, casting, light, composition and source quality.",
+      "skinId": null
+    }
   ]
 }
