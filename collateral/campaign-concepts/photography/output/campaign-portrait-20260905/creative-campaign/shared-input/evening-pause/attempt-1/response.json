@@ -1,0 +1,46 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "inlineData": {
+              "mimeType": "image/jpeg",
+              "savedAsset": {
+                "file": "candidate-1-image-1.jpg",
+                "mimeType": "image/jpeg",
+                "bytes": 2722584,
+                "sha256": "9423f2845bd8a9b07b62db9ae395587be65b0b9b976d12e6effe9b87a916fb42"
+              }
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 368,
+    "candidatesTokenCount": 1388,
+    "totalTokenCount": 1967,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 368
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "thoughtsTokenCount": 211,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-pro-image",
+  "responseId": "t7-caq_DMp7_qtsPs66lqAU",
+  "provenanceNote": "Opaque provider continuation signatures omitted; generated asset hash, model and usage retained."
+}

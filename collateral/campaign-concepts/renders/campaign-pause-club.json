@@ -1,0 +1,16 @@
+{
+  "schema": "playbook-creative-recipe",
+  "version": 1,
+  "templateId": "campaign-pause",
+  "variant": "after",
+  "skinId": "club",
+  "assetId": "evening-pause",
+  "focalPoint": null,
+  "marketId": "us-contact",
+  "content": {
+    "series": "Time well spent",
+    "headline": "Your time.\nYour call.",
+    "copy": "Choose an end time before you play.\nSet a reminder to check in.",
+    "action": "Make room for a pause"
+  }
+}

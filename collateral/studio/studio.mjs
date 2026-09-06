@@ -1,4 +1,5 @@
 import {templates,skins,assets,createRecipe,validateRecipe,renderDocument,marketContext,fields,slotFor} from '../template-system/engine.mjs';
+import {artDirections} from '../template-system/art-direction.mjs';
 import {inspectArtwork} from '../template-system/inspect.mjs';
 import {bundleDocument} from '../template-system/bundle.mjs';
 
@@ -10,6 +11,11 @@ try{const saved=JSON.parse(localStorage.getItem(key));if(saved){recipe=validateR
 catch{ $('save-state').textContent='Use Save recipe to keep a portable copy of your work.'; }
 const params=new URLSearchParams(location.search);
 if(params.get('template')!==recipe.templateId&&templates.some(t=>t.id===params.get('template')))recipe=createRecipe(params.get('template'));
+if(skins.some(s=>s.id===params.get('skin')))recipe.skinId=params.get('skin');
+if(skins.some(s=>s.id===params.get('compare')))compareSkin=params.get('compare');
+if(templates.find(t=>t.id===recipe.templateId).variants?.includes(params.get('variant')))recipe.variant=params.get('variant');
+const linkedAsset=assets.find(a=>a.id===params.get('asset')&&a.slot===slotFor(templates.find(t=>t.id===recipe.templateId)));
+if(linkedAsset&&linkedAsset.id!==recipe.assetId)recipe=validateRecipe({...recipe,assetId:linkedAsset.id,focalPoint:null});
 function options(element,items,value){element.replaceChildren(...items.map(item=>{const option=document.createElement('option');option.value=item.id;option.textContent=item.name||item.title;return option;}));element.value=value;}
 options($('template'),templates,recipe.templateId);
 for(const side of ['a','b'])options($('skin-'+side),skins,side==='a'?recipe.skinId:compareSkin);
@@ -19,12 +25,16 @@ function currentTemplate(){return templates.find(t=>t.id===recipe.templateId);}
 function selectedRecipe(){return {...recipe,skinId:$('export-side').value==='a'?recipe.skinId:compareSkin};}
 function syncControls(){
   const d=currentTemplate(),slot=slotFor(d);
-  $('template').value=d.id;$('variant').value=recipe.variant;$('skin-a').value=recipe.skinId;$('skin-b').value=compareSkin;
+  $('template').value=d.id;options($('variant'),(d.variants||['after','before']).map(id=>({id,name:d.variantLabels?.[id]||(id==='after'?'New concept':'Reference layout')})),recipe.variant);$('variant').disabled=d.variants?.length===1;$('skin-a').value=recipe.skinId;$('skin-b').value=compareSkin;
   $('template-title').textContent=d.title;$('format-note').textContent=`${d.format} · ${d.width||1080} × ${d.height||1350}`;
   const compatible=assets.filter(a=>a.slot===slot);
   options($('asset'),compatible.length?compatible:[{id:'',name:'No image in this template'}],recipe.assetId||'');$('asset').disabled=!slot;
   const asset=assets.find(a=>a.id===recipe.assetId);
-  $('asset-note').textContent=asset?.origin||'Support keeps the focus on the person and the contact.';
+  $('asset-note').textContent=asset?.origin||(d.visual==='probability'?'Programmatic SVG: 16 equal outcomes, one highlighted.':'Support keeps the focus on the person and the contact.');
+  const direction=artDirections[d.artDirection];
+  $('art-direction-note').hidden=!direction;
+  if(direction)$('art-direction-link').href=direction.reviewHref;
+  else $('art-direction-link').removeAttribute('href');
   $('crop-controls').hidden=asset?.type!=='raster';
   if(asset?.type==='raster')for(const [i,axis] of ['x','y'].entries()){$('crop-'+axis).value=(recipe.focalPoint||asset.focalPoint)[i];$('crop-'+axis+'-value').textContent=$('crop-'+axis).value+'%';}
   $('copy-editor').hidden=d.layout==='banner';$('copy-fields').replaceChildren();

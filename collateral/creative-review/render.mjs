@@ -1,3 +1,4 @@
+import {previewScale} from '../template-system/export-quality.mjs';
 import { createRequire } from 'node:module';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -9,7 +10,7 @@ const puppeteer = require('puppeteer');
 const here = dirname(fileURLToPath(import.meta.url));
 const items = JSON.parse(readFileSync(join(here, 'concepts.json')));
 const reports = [];
-const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+const browser = await puppeteer.launch({ headless: 'shell', protocolTimeout: 30000, args: ['--no-sandbox'] });
 try {
   for (const item of items) {
     const page = await browser.newPage(), errors = [];
@@ -17,9 +18,9 @@ try {
     page.on('requestfailed', r => errors.push(`Resource failed: ${r.url()}`));
     await page.setRequestInterception(true);
     page.on('request', r => /^(file:|data:|about:)/.test(r.url()) ? r.continue() : r.abort());
-    await page.setViewport({ width: 1080, height: 1350, deviceScaleFactor: 1 });
+    await page.setViewport({ width: 1080, height: 1350, deviceScaleFactor: previewScale });
     const source = readFileSync(join(here, item.html), 'utf8');
-    await page.goto(pathToFileURL(join(here, 'concepts/')).href);
+    await page.goto(pathToFileURL(join(here, item.html)).href);
     await page.setContent(resolveBrandTokens(source), { waitUntil: 'load' });
     await page.evaluate(async () => {
       await document.fonts.ready;
@@ -72,7 +73,7 @@ try {
     await (await page.$('.social-card')).screenshot({ path: join(here, item.png) });
     const issues = [...new Set([...errors, ...metrics.issues])];
     const sha256 = createHash('sha256').update(readFileSync(join(here, item.png))).digest('hex');
-    reports.push({ id: item.id, ...metrics, issues, sha256 });
+    reports.push({ id: item.id, ...metrics, raster:{scale:previewScale,pixels:[metrics.width*previewScale,metrics.height*previewScale]}, issues, sha256 });
     console.log(`${item.id}: ${issues.length ? issues.join('; ') : 'PASS'}`);
     await page.close();
   }

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 450" role="img" aria-labelledby="rest-map-title rest-map-desc">
+  <title id="rest-map-title">Photography composition for Leave room for the rest</title>
+  <desc id="rest-map-desc">A four-by-five portrait. The upper 35 percent holds quiet architecture for the headline. The middle holds faces and the key gesture. The bottom 24 percent holds low-detail foreground for copy. These guides are not part of the photograph.</desc>
+  <rect width="360" height="450" fill="#183D35"/>
+  <g fill="none" stroke="#78958A" stroke-width="1">
+    <path d="M20 0V450M340 0V450" stroke-dasharray="3 5"/>
+    <path d="M0 157.5H360M0 342H360"/>
+  </g>
+  <g fill="#FAF6EC" font-family="Inter, sans-serif" font-size="18">
+    <text x="28" y="39" fill="#DEEDB2" font-size="12" letter-spacing="1">01 / UPPER 35%</text>
+    <text x="28" y="76">Quiet architecture</text>
+    <text x="28" y="103" font-size="14" fill="#D1DCCF">Headline + brand mark</text>
+    <text x="28" y="191" fill="#DEEDB2" font-size="12" letter-spacing="1">02 / MIDDLE</text>
+    <text x="28" y="225">Faces + key gesture</text>
+    <text x="28" y="252" font-size="14" fill="#D1DCCF">Keep the interaction here</text>
+    <text x="28" y="375" fill="#DEEDB2" font-size="12" letter-spacing="1">03 / LOWER 24%</text>
+    <text x="28" y="407">Low-detail foreground</text>
+    <text x="28" y="432" font-size="14" fill="#D1DCCF">Copy + action + contact</text>
+  </g>
+  <g fill="none" stroke="#DEEDB2" stroke-width="2">
+    <path d="M28 282H126M28 302H87"/>
+    <path d="M274 282H332M314 274L332 282L314 290"/>
+  </g>
+</svg>

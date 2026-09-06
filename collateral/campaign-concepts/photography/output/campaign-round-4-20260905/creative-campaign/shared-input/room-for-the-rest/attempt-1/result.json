@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/campaign-concepts/photography/output/campaign-round-4-20260905/creative-campaign/shared-input/room-for-the-rest/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "3eac44d5fa7d94dfcbd6344207595dfa42b0ea508f0cbf2f569fedf72d421e0c",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-campaign",
+  "concept": "room-for-the-rest",
+  "condition": "shared-input",
+  "startedAt": "2026-09-06T03:23:51.302Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 8711605,
+      "sha256": "2d5595294429c3a7b980ea796f4ec3e3ae49a2d44efa507695a6993366bf87aa"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 442,
+    "candidatesTokenCount": 2195,
+    "totalTokenCount": 2899,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 442
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 2000
+      }
+    ],
+    "thoughtsTokenCount": 262,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 32363,
+  "completedAt": "2026-09-06T03:24:23.666Z"
+}

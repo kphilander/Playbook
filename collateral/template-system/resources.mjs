@@ -5,6 +5,8 @@ import {escapeHTML} from './engine.mjs';
 
 export function loadResources(){
   const brand=loadBrand();
+  const symbol=readFileSync(new URL('../../visual-identity/logo/symbol/symbol-mark-on-dark.svg',import.meta.url),'utf8')
+    .replace('<svg ', '<svg class="presence-symbol" aria-hidden="true" ');
   const logo=readFileSync(new URL('../../visual-identity/logo/secondary/logo-horizontal-mono-dark.svg',import.meta.url),'utf8')
     .replace(/<\?xml[^>]*>/g,'').replace(/fill="#[a-fA-F0-9]+"/g,'fill="currentColor"')
     .replace('<svg ',`<svg class="brand-logo" role="img" aria-label="${escapeHTML(brand.brandTokens()['{{PROGRAM_SHORT_NAME}}'])}" `);
@@ -29,5 +31,5 @@ export function loadResources(){
     'Archivo Black':'../style-alternatives/fonts/archivoblack-OFL.txt'
   };
   const fontLicenses=Object.fromEntries(Object.entries(licenseFiles).map(([name,path])=>[name,readFileSync(new URL(path,import.meta.url),'utf8')]));
-  return {logo,markets,svgs,fontLicenses};
+  return {logo,symbol,markets,svgs,fontLicenses};
 }

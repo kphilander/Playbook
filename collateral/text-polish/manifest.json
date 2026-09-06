@@ -1,0 +1,132 @@
+[
+  {
+    "id": "card-1a-hot-streak",
+    "category": "Cards",
+    "selector": ".social-card"
+  },
+  {
+    "id": "card-1b-due-for-win",
+    "category": "Cards",
+    "selector": ".social-card"
+  },
+  {
+    "id": "card-2b-sports-betting",
+    "category": "Cards",
+    "selector": ".social-card"
+  },
+  {
+    "id": "card-2c-bonus-wagering",
+    "category": "Cards",
+    "selector": ".social-card"
+  },
+  {
+    "id": "story-3a-hot-streak",
+    "category": "Stories",
+    "selector": ".story-card"
+  },
+  {
+    "id": "story-3b-house-edge",
+    "category": "Stories",
+    "selector": ".story-card"
+  },
+  {
+    "id": "story-3c-sports-betting",
+    "category": "Stories",
+    "selector": ".story-card"
+  },
+  {
+    "id": "poster-4a-know-your-game",
+    "category": "Posters",
+    "selector": ".poster"
+  },
+  {
+    "id": "poster-4b-no-fine-print",
+    "category": "Posters",
+    "selector": ".poster"
+  },
+  {
+    "id": "poster-4c-game-iq",
+    "category": "Posters",
+    "selector": ".poster"
+  },
+  {
+    "id": "rack-card-5a",
+    "category": "Print",
+    "selector": ".rack-card"
+  },
+  {
+    "id": "table-tent-5b",
+    "category": "Print",
+    "selector": ".table-tent"
+  },
+  {
+    "id": "email-welcome-7a",
+    "category": "Email",
+    "selector": ".email"
+  },
+  {
+    "id": "email-deposit-7b",
+    "category": "Email",
+    "selector": ".email"
+  },
+  {
+    "id": "email-monthly-7c",
+    "category": "Email",
+    "selector": ".email"
+  },
+  {
+    "id": "email-reactivation-7d",
+    "category": "Email",
+    "selector": ".email"
+  },
+  {
+    "id": "htp-card-baccarat",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-bingo",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-blackjack",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-craps",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-horse-racing",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-lottery",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-roulette",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-slots",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-sports",
+    "category": "How to play",
+    "selector": ".social-card"
+  },
+  {
+    "id": "htp-card-video-poker",
+    "category": "How to play",
+    "selector": ".social-card"
+  }
+]

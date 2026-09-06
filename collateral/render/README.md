@@ -12,6 +12,7 @@ The [September creative review](../creative-review/index.html) covers all 320 re
 | [output-profiles.mjs](output-profiles.mjs) | Named output sizes, print scale, and bleed configuration |
 | [build-comparison.mjs](build-comparison.mjs) | Builds a browsable before/after review sheet from the committed baseline and current PNG previews |
 | [creative-system.css](creative-system.css) | Opt-in creative refinements and bundled Latin fonts; archived concepts remain separate |
+| [text-polish.css](text-polish.css) | Shared, token-driven refinement for 26 core text-led English masters |
 | [layout-system.css](layout-system.css) | Maintained responsive, safe-zone, and format-specific layout rules |
 | [brand-inject.css](brand-inject.css) | Generated brand tokens plus the shared layout system |
 | [build-logos.mjs](build-logos.mjs) | Logo SVG generator |
@@ -21,6 +22,8 @@ The [September creative review](../creative-review/index.html) covers all 320 re
 `lib/generate-inject-css.mjs` appends `layout-system.css` whenever it regenerates `brand-inject.css`, so brand changes do not erase production layout rules.
 
 Rendered collateral follows the PR #111 wordmark treatment: `Playbook` in Inter 700, one weight, one color, and tight tracking. The punched-cover symbol is reserved for favicons, app icons, social avatars, and placements too tight for the wordmark.
+
+The [everyday collateral review](../text-polish/index.html) compares 26 text-led masters before and after a restrained typography and spacing pass. Its rebuild produces 2× current PNGs directly from HTML, preserves frozen baseline images and verifies unchanged wording. Use `npm run build:text-polish` and `npm run check:text-polish`; normal renderer profiles continue to supply format-specific production output.
 
 ## Usage
 

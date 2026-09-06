@@ -1,0 +1,19 @@
+{
+  "schema": "playbook-creative-recipe",
+  "version": 1,
+  "templateId": "campaign-rest-landscape",
+  "variant": "quiet",
+  "skinId": "club",
+  "assetId": "rest-dinner",
+  "focalPoint": [
+    50,
+    85
+  ],
+  "marketId": "us-contact",
+  "content": {
+    "series": "Time well spent",
+    "headline": "Leave room\nfor the rest.",
+    "copy": "Choose a finish time before you play.\nKeep the rest of your night open.",
+    "action": "Plan your next pause"
+  }
+}

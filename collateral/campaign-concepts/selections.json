@@ -1,0 +1,34 @@
+{
+  "schema": "playbook-campaign-selections",
+  "version": 1,
+  "round": 3,
+  "source": "User-saved preference controls, read from the active campaign review page",
+  "reviewUrl": "http://127.0.0.1:8765/collateral/campaign-concepts/index.html",
+  "selections": [
+    {
+      "templateId": "campaign-cinema",
+      "skinId": "club",
+      "label": "A / Social Club"
+    },
+    {
+      "templateId": "campaign-pause",
+      "skinId": "circuit",
+      "label": "B / Circuit"
+    },
+    {
+      "templateId": "campaign-probability",
+      "skinId": "club",
+      "label": "A / Social Club"
+    }
+  ],
+  "conceptFeedback": [
+    {
+      "templateId": "campaign-rest",
+      "round": 4,
+      "source": "User message in the creative review task",
+      "feedback": "New direction / 01 is good but needs more art and photography direction.",
+      "action": "Retain the creative and add a reusable photography brief covering the scene, casting, light, composition and source quality.",
+      "skinId": null
+    }
+  ]
+}

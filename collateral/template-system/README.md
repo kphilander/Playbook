@@ -1,6 +1,6 @@
 # Playbook creative template system
 
-[Open the live studio](../studio/index.html). The platform separates content, composition, brand styling, media and market context. Its first library is the eight message-placement concept families: 16 compositions, each usable with seven CSS skins. The existing preference gallery builds those same masters through this engine.
+[Open the live studio](../studio/index.html). The platform separates content, composition, brand styling, media and market context. The library contains eight message-placement families, [seven campaign concepts](../campaign-concepts/index.html), [three brand expressions](../campaign-concepts/brand-presence/index.html), and a [restrained campaign family](../campaign-concepts/campaign-family/index.html) spanning portrait, story and landscape: 28 compositions across seven CSS skins. The existing preference gallery builds its original masters through this engine.
 
 This implements the main brand book’s [adaptive identity model](../../brand-book/03-visual-identity.md): operator colors and fonts can change while the information hierarchy remains recognizable. Support content uses calm language, familiar type and no game imagery.
 
@@ -9,10 +9,10 @@ This implements the main brand book’s [adaptive identity model](../../brand-bo
 | Layer | Source | Responsibility |
 |---|---|---|
 | Brand configuration | `_brand.yml` → generated tokens and studio resources | Brand colors, base type, generated wordmark, contact numbers and ages |
-| Template catalogue | [catalog.mjs](catalog.mjs) | Eight content defaults, composition IDs, format dimensions and study rationale |
+| Template catalogue | [catalog.mjs](catalog.mjs), [campaigns.mjs](campaigns.mjs) | Content defaults, composition IDs, format dimensions and study rationale |
 | Recipe | Versioned JSON, checked by [engine.mjs](engine.mjs) | Template, composition, skin, text, asset, crop and market profile |
 | Markup | `renderArticle()` in [engine.mjs](engine.mjs) | Live typography, generated vector logo, SVG/photo slots, contact and warning components |
-| Layout | [layouts.css](layouts.css) | Canvas dimensions, spatial hierarchy and format-specific fitting rules |
+| Layout | [layouts.css](layouts.css), [campaigns.css](campaigns.css) | Canvas dimensions, spatial hierarchy, photo reading areas and format-specific fitting rules |
 | Skin | [skins/](skins/) | Semantic colors, fonts, letter spacing, corners, depth and display-font fitting metrics |
 | Media | [assets.mjs](assets.mjs), [assets/](assets/) | SVG sources, AI photo sources, alt text, focal points and provenance |
 | Market context | [resources.mjs](resources.mjs) | Brand-configured contact/age previews and the two researched, fixed scenario profiles |
@@ -86,18 +86,25 @@ To add media:
 
 The Source Sans 3 copyright notice is retained from the vendored font’s metadata, alongside the existing SIL OFL terms. All bundled font notices travel in the portable HTML.
 
-No new generation was needed for this version. Source photos and prompt records are reused, and the new SVGs are code-native assets.
+The original message-placement library reuses existing source photos. The
+new pause campaign adds a portrait generated through the authorized Google
+workflow; see its [prompt, selection and provenance](../campaign-concepts/README.md#photography-provenance-and-selection).
+The pause mark, sixteen-outcome graphic, roulette pocket-count rings and time dial remain programmatic SVG. The latest round adds a 3712 × 4608 portrait for native detail at a 3× crop.
 
 ## Content and market contract
 
-Recipe version 1 accepts `templateId`, `variant`, `skinId`, `assetId`, nullable `[x,y]` crop percentages, `marketId`, and plain-text `series`, `headline`, `copy`, `action`. The renderer escapes text; validation rejects unsupported IDs, profiles, crop values, excessive lengths and missing content. The fixed banner journey keeps its two-surface copy in the renderer for this initial version and does not expose the generic copy editor.
+Recipe version 1 accepts `templateId`, `variant`, `skinId`, `assetId`, nullable `[x,y]` crop percentages, `marketId`, and plain-text `series`, `headline`, `copy`, `action`. The renderer escapes text; validation rejects unsupported IDs, profiles, crop values, excessive lengths and missing content. Campaign templates support only the `after` composition; the studio presents one option for these. The fixed banner journey keeps its two-surface copy in the renderer for this initial version and does not expose the generic copy editor.
 
 Contact/age preview profiles cover the US, Great Britain and Australia. The two specific banner and wagering studies retain their researched scenarios and fixed profile selection. These are not comprehensive jurisdiction modules. Requirements, operator details and content purpose must be assessed independently of styling; see the [source-linked research](../../docs/compliance-banner-research-2026-09-05.md).
 
 Source dimensions are 1080 × 1350 for the social/journey review canvases and 420 × 740 for support. They are fixed-format templates, not a guarantee that arbitrary copy, any font or any language fits. Checks preserve minimum source type sizes instead of silently shrinking or truncating copy. New language/format profiles need their own fitting and visual review. Support’s foreground-contact composition aligns document order with the visible hierarchy.
 
+## Raster export quality
+
+The shared CLI defaults to each format’s preferred density, falling back to 3×. The 9:16 story uses 2× (2160 × 3840) to stay within the chosen photograph’s native detail. Pass `--scale=2`, for example, to override the format default (integers 1–4). Composition dimensions remain CSS pixels. The export manifest records actual PNG pixels and usable source-image density at the current crop, flagging photos that must be enlarged. Live type, the wordmark and SVG diagrams render directly at the requested density. The new round-4 photo has enough native detail for 3× output. Earlier chosen photos retain their original detail limits. [Campaign resolution notes](../campaign-concepts/README.md#resolution-contract) describe the 100 earlier previews re-rendered from source and the preserved historical snapshots.
+
 ## Verification
 
-[The matrix](validation.json) checks 8 families × 2 compositions × 7 skins: **112 combinations**. It proves markup independence and checks bounds, block overlap, clipping, internal fit, fonts/images and solid-surface text contrast. [Browser checks](../studio/browser-validation.json) cover actual CSS-only switching, media/crop changes, content edits, persistence, recipe validation, overflow gating, protected messages, accessible support order, downloads, offline exports and narrow screens.
+[The matrix](validation.json) checks 28 compositions × 7 skins: **196 combinations**. It proves markup independence and checks bounds, block overlap, clipping, internal fit, fonts/images and text contrast. For the campaign photo layouts, contrast uses the minimum shadow opacity over the brightest possible image pixel, and text outside the designated reading areas fails validation. [Browser checks](../studio/browser-validation.json) cover actual CSS-only switching, media/crop changes, content edits, persistence, recipe validation, overflow gating, protected messages, accessible support order, downloads, offline exports and narrow screens.
 
 The existing [preference-gallery checks](../design-preferences/browser-validation.json) continue to protect saved choices and comparison behavior. Visual review is still required: fitting and contrast alone do not establish good art direction or market suitability.

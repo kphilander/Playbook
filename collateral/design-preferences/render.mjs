@@ -1,3 +1,4 @@
+import {previewScale} from '../template-system/export-quality.mjs';
 import {inspectArtwork} from '../template-system/inspect.mjs';
 import { createRequire } from 'node:module';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -9,17 +10,17 @@ const here=dirname(fileURLToPath(import.meta.url));
 const require=createRequire(new URL('../render/package.json',import.meta.url));
 const puppeteer=require('puppeteer');
 const data=JSON.parse(readFileSync(join(here,'manifest.json'),'utf8'));
-const browser=await puppeteer.launch({headless:true,args:['--no-sandbox']});
+const browser=await puppeteer.launch({headless:'shell',protocolTimeout:30000,args:['--no-sandbox']});
 const results=[];
 try{
  for(const item of data.entries){
   const page=await browser.newPage(),errors=[];
-  await page.setViewport({width:item.width,height:item.height,deviceScaleFactor:1});
+  await page.setViewport({width:item.width,height:item.height,deviceScaleFactor:previewScale});
   await page.setRequestInterception(true);
   page.on('request',r=>/^(file:|data:|about:)/.test(r.url())?r.continue():r.abort());
   page.on('requestfailed',r=>errors.push('Resource failed: '+r.url()));
   page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(pathToFileURL(join(here,'masters/')).href);
+  await page.goto(pathToFileURL(join(here,item.html)).href);
   await page.setContent(resolveBrandTokens(readFileSync(join(here,item.html),'utf8'),item.jurisdiction),{waitUntil:'load'});
   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});
   const metrics=await page.evaluate(inspectArtwork,item);
@@ -31,7 +32,7 @@ try{
    const sameCopy=item.kind==='message'?JSON.stringify(baseline?.blockCopy)===JSON.stringify(metrics.blockCopy):baseline?.copy===metrics.copy;
    if(!sameCopy)issues.push('Copy differs from the shared reference');
   }
-  results.push({id:item.id,...metrics,issues,pngSha256});console.log(item.id+': '+(issues.length?issues.join('; '):'PASS'));await page.close();
+  results.push({id:item.id,...metrics,raster:{scale:previewScale,pixels:[metrics.width*previewScale,metrics.height*previewScale]},issues,pngSha256});console.log(item.id+': '+(issues.length?issues.join('; '):'PASS'));await page.close();
  }
 }finally{await browser.close();}
 writeFileSync(join(here,'validation.json'),JSON.stringify(results,null,2)+'\n');

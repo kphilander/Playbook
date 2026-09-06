@@ -12,6 +12,7 @@ import {
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { resolvePrintReviewSpec } from './output-profiles.mjs';
+import { addArtDirectionReview } from './art-direction-review.mjs';
 
 const renderDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(renderDir, '..', '..');
@@ -560,7 +561,7 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
-writeFileSync(outputPath, html);
+writeFileSync(outputPath, addArtDirectionReview(html));
 
 console.log(`Built ${relative(repoRoot, outputPath)}`);
 console.log(`Baseline: ${baseHash} (${baseRef})`);

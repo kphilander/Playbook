@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="../../render/">
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { margin: 0; background: transparent; }
+  .story-card {
+    width: 1080px; height: 1920px;
+    background: var(--pb-gradient-bg, linear-gradient(180deg, var(--pb-color-primary), var(--pb-color-primary-dark)));
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .story-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary))); z-index: 2; }
+  .story-header { padding: 48px 48px 0; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .story-logo { font-family: var(--pb-font-heading); font-size: calc(28px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); font-weight: 700; letter-spacing: -0.018em; }
+
+  .section-label { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-accent); }
+  .story-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 48px; position: relative; z-index: 1; }
+  .eyebrow { font-family: var(--pb-font-heading); font-size: calc(16px * var(--pb-template-text-scale, 1)); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--pb-color-secondary); margin-bottom: 20px; }
+  .headline { font-family: var(--pb-font-heading); font-size: calc(44px * var(--pb-template-text-scale, 1)); font-weight: 800; line-height: 1.2; color: var(--pb-surface-ink, var(--pb-color-white)); margin-bottom: 40px; letter-spacing: -0.02em; }
+  .headline .teal { color: var(--pb-color-secondary); }
+  .odds-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px; }
+  .odds-row { display: flex; align-items: center; justify-content: space-between; background: color-mix(in srgb, var(--pb-surface-ink, #fff) 4%, transparent); border: 1px solid color-mix(in srgb, var(--pb-surface-ink, #fff) 8%, transparent); border-radius: 16px; padding: 24px 28px; }
+  .odds-row .game { font-family: var(--pb-font-heading); font-size: calc(22px * var(--pb-template-text-scale, 1)); font-weight: 600; color: var(--pb-surface-ink, var(--pb-color-white)); }
+  .odds-row .note { font-family: var(--pb-font-body); font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-color-neutral-500); margin-top: 4px; }
+  .odds-row .edge { font-family: var(--pb-font-mono); font-size: calc(36px * var(--pb-template-text-scale, 1)); font-weight: 700; }
+  .odds-row .edge.teal { color: var(--pb-color-secondary); }
+  .odds-row .edge.white { color: var(--pb-surface-ink, var(--pb-color-white)); }
+  .odds-row .edge.orange { color: var(--pb-color-accent); }
+  .context { font-family: var(--pb-font-body); font-size: calc(26px * var(--pb-template-text-scale, 1)); line-height: 1.55; color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); margin-bottom: 40px; }
+  .story-cta { display: block; width: 100%; padding: 24px; background: var(--pb-color-secondary); color: var(--pb-brand-ink, var(--pb-color-primary)); font-family: var(--pb-font-heading); font-weight: 700; font-size: calc(22px * var(--pb-template-text-scale, 1)); text-align: center; border-radius: 16px; text-decoration: none; }
+  .story-footer { background: var(--pb-color-primary-light); padding: 24px 48px; text-align: center; position: relative; z-index: 1; }
+  .footer-helpline { font-family: var(--pb-font-mono); font-weight: 700; font-size: calc(16px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink, var(--pb-color-white)); }
+  .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <link rel="stylesheet" href="creative-system.css">
+  <link rel="stylesheet" href="text-polish.css">
+  <link rel="stylesheet" href="text-surfaces.css">
+</head>
+<body>
+<div class="story-card pb-creative pb-text-polish" data-surface="spotlight" data-layout="two-comparisons">
+  <div class="story-header">
+    <span class="story-logo">Playbook</span>
+    <span class="section-label">Real Odds</span>
+  </div>
+  <div class="story-body">
+    <div class="eyebrow">Did you know?</div>
+    <div class="headline">Same stake.<br>Different math.</div>
+    <div class="odds-list">
+      <div class="odds-row">
+        <div><div class="game">Blackjack</div><div class="note">Favorable rules + basic strategy</div></div>
+        <div class="edge teal">0.5%</div>
+      </div>
+      <div class="odds-row">
+        <div><div class="game">American Roulette</div><div class="note">Most bets; five-number: 7.89%</div></div>
+        <div class="edge orange">5.26%</div>
+      </div>
+    </div>
+    <a href="#" class="story-cta">See the full breakdown</a>
+  </div>
+  <div class="story-footer" data-protected-zone="support-and-legal">
+    <span class="footer-helpline">Free, confidential support 24/7: <span class="support-number">1-800-522-4700</span></span>
+    <span class="footer-legal">You must be 21+ to gamble.</span>
+  </div>
+</div>
+</body>
+</html>

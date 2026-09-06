@@ -19,6 +19,15 @@
     "build:collateral:print-us": "node collateral/render/render-cards.mjs --profile=print-us --locale=en",
     "build:collateral:print-iso": "node collateral/render/render-cards.mjs --profile=print-iso --locale=en",
     "build:comparison": "node collateral/render/build-comparison.mjs",
+    "build:art-direction": "node collateral/render/sync-art-direction-logos.mjs && node collateral/render/render-cards.mjs card-1c-lucky-machine card-2a-house-edge poster-19e-never-due --locale=en && node collateral/render/art-direction-review.mjs",
+    "build:campaign-concepts": "node collateral/studio/build.mjs && node collateral/campaign-concepts/build.mjs",
+    "check:campaign-concepts": "node collateral/campaign-concepts/check.mjs",
+    "build:photo-comparison": "node collateral/campaign-concepts/photo-comparison/build.mjs",
+    "check:photo-comparison": "node collateral/campaign-concepts/photo-comparison/check.mjs",
+    "build:brand-presence": "node collateral/studio/build.mjs && node collateral/campaign-concepts/brand-presence/build.mjs",
+    "check:brand-presence": "node collateral/campaign-concepts/brand-presence/check.mjs",
+    "build:campaign-family": "node collateral/studio/build.mjs && node collateral/campaign-concepts/campaign-family/build.mjs",
+    "check:campaign-family": "node collateral/campaign-concepts/campaign-family/check.mjs",
     "check:collateral": "node collateral/render/render-cards.mjs --check --locale=en",
     "build:widgets": "node widgets/build.mjs",
     "generate:content-api": "node lib/generate-content-api.mjs",
@@ -33,7 +42,11 @@
     "check:design-preferences": "node collateral/design-preferences/check-browser.mjs",
     "build:template-studio": "npm run generate:tokens && node collateral/studio/build.mjs && node collateral/design-preferences/build.mjs && node collateral/design-preferences/render.mjs",
     "check:template-studio": "node collateral/template-system/check.mjs && node collateral/studio/check-browser.mjs",
-    "export:template": "node collateral/template-system/render.mjs"
+    "export:template": "node collateral/template-system/render.mjs",
+    "build:text-polish": "node collateral/text-polish/build.mjs",
+    "check:text-polish": "node collateral/text-polish/check-layouts.mjs && node collateral/text-polish/check-browser.mjs",
+    "build:text-surfaces": "node collateral/text-surfaces/build.mjs",
+    "check:text-surfaces": "node collateral/text-surfaces/check.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"

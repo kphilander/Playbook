@@ -1,0 +1,16 @@
+{
+  "schema": "playbook-creative-recipe",
+  "version": 1,
+  "templateId": "campaign-time",
+  "variant": "after",
+  "skinId": "playbook",
+  "assetId": null,
+  "focalPoint": null,
+  "marketId": "us-contact",
+  "content": {
+    "series": "Your play. Your plan.",
+    "headline": "Time is part\nof the budget.",
+    "copy": "Pick a finish time before you play.\nA reminder can help you keep track.",
+    "action": "Choose when to call it a night"
+  }
+}

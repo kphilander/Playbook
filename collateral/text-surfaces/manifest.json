@@ -1,0 +1,21 @@
+{
+  "templates": [
+    {"id": "card-1a-hot-streak", "name": "Hot streak", "format": "Feed card", "selector": ".social-card"},
+    {"id": "card-1b-due-for-win", "name": "Due for a win", "format": "Feed card", "selector": ".social-card"},
+    {"id": "card-2b-sports-betting", "name": "The whole return", "format": "Feed card", "selector": ".social-card"},
+    {"id": "card-2c-bonus-wagering", "name": "Think you know?", "format": "Feed card", "selector": ".social-card"},
+    {"id": "htp-card-blackjack", "name": "Blackjack", "format": "Game guide", "selector": ".social-card"},
+    {"id": "story-3a-hot-streak", "name": "Hot streak", "format": "Story", "selector": ".story-card"},
+    {"id": "story-3b-house-edge", "name": "Different math", "format": "Story", "selector": ".story-card"},
+    {"id": "story-3c-sports-betting", "name": "What does −110 mean?", "format": "Story", "selector": ".story-card"},
+    {"id": "poster-4a-know-your-game", "name": "Know your game", "format": "Poster", "selector": ".poster"}
+  ],
+  "surfaces": [
+    {"id": "flat", "name": "Current", "tag": "The reference", "description": "Flat navy, a short emerald rule and open fact rows. The current polished design, unchanged."},
+    {"id": "spotlight", "name": "Spotlight", "tag": "Soft atmosphere", "description": "A controlled emerald glow, lighter headlines and a fine frame around the numbers."},
+    {"id": "contour", "name": "Contour", "tag": "Quiet movement", "description": "Wide, precise arcs on navy. Open typography and an emerald line running beside the facts."},
+    {"id": "paper", "name": "Editorial", "tag": "Light & composed", "description": "A pale paper field, navy type and deep emerald data. Fine rules give it an editorial rhythm."},
+    {"id": "emerald", "name": "Emerald", "tag": "Confident color", "description": "The brand green takes the whole canvas. Bold navy headlines and a contrasting field for the facts."},
+    {"id": "signal", "name": "Gridline", "tag": "Graphic & precise", "description": "A faint technical grid, compact bold type and structured data. A sharper, more playful expression."}
+  ]
+}
