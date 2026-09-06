@@ -1,0 +1,10 @@
+{
+  "schema": "playbook-brand-presence-selection",
+  "version": 1,
+  "templateId": "campaign-presence",
+  "variant": "quiet",
+  "label": "A / Restrained",
+  "source": "User-saved preference restored in the Chrome review; A / Restrained was selected and the page displayed Saved preference.",
+  "reviewUrl": "http://127.0.0.1:8765/collateral/campaign-concepts/brand-presence/index.html",
+  "scope": "Brand expression only. The photograph and operator skin are separate choices."
+}

@@ -14,7 +14,7 @@ export const slotFor=d=>d.visual==='photo'?'hero':d.visual==='plan'?'plan':null;
 export function createRecipe(templateId='message-signature',overrides={}){
   const d=templates.find(t=>t.id===templateId);
   if(!d)throw new Error('Unknown template.');
-  return validateRecipe({schema,version,templateId,variant:'after',skinId:d.theme,
+  return validateRecipe({schema,version,templateId,variant:d.defaultVariant||'after',skinId:d.theme,
     assetId:d.defaultAsset||(d.visual==='photo'?'casino-conversation':d.visual==='plan'?'budget-bars':null),
     focalPoint:null,marketId:d.layout==='banner'?'gb-banner':d.layout==='protected'?'au-wagering':'us-contact',
     content:d.layout==='banner'?{}:Object.fromEntries(Object.keys(fields).map(key=>[key,d[key]])),...overrides});

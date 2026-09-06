@@ -10,7 +10,10 @@ Dinner is a fixed comparison input, not a selected photographic favorite.
 | B / Signature | A heavier headline, accent-colored second line, longer rule and tinted upper photograph. | More recognizable at thumbnail size, while retaining the full photographic cover. |
 | C / Bold | A solid accent-colored masthead, oversized dark type and the approved monochrome symbol treatment. | Gives the brand more visual space and covers the upper architecture. The people remain visible below. |
 
-These are review options. None replaces the existing campaign or saved favorites.
+The user selected **A / Restrained**, recorded in [selection.json](selection.json)
+from the saved Chrome review. New recipes for this study start with that
+expression; the other treatments remain available for comparison. This choice
+does not select a photograph or an operator skin.
 The default preview uses Playbook's navy, emerald and Inter. Social Club and
 Circuit previews show the same expressions with different operator colors and
 fonts. The original photograph remains 3712 × 4608; all nine PNGs are
