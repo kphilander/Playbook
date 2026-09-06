@@ -8,9 +8,31 @@ channel: [social-media]
 reading_level: grade-6-8
 ---
 
-# Campaign concepts / round 3
+# Campaign concepts / rounds 3 and 4
 
-[Open the six creative previews](index.html).
+[Open the 18 creative previews](index.html): four new ideas in three skins,
+followed by the three earlier concepts and their saved favorites.
+
+## Round 4 — clearer ideas, sharper artwork
+
+| Concept | Creative decision | Content basis |
+|---|---|---|
+| “Leave room for the rest.” | A new 4K photograph fills the canvas. Warm hospitality and ordinary adult company put gambling within a larger evening. The headline occupies dark architecture above the faces. | Choose a finish time before play. [Session-reminder messages](../../messaging/core-messages.md#session-reminder). No promised product feature or universal session length. |
+| “So close. Same odds.” | Oversized live reel symbols run from edge to edge. A nearly matching result supplies a familiar visual hook; the explanation targets the misconception. | A near miss does not improve the next independent slot spin’s probability. [Slots guide](../../how-to-play/slots.md) and [near-miss message](../../messaging/myth-busting.md#myth-4-near-misses-mean-youre-close). The 7 / 7 / 6 arrangement is illustrative, not a specific game/paytable. |
+| “One extra zero. Different odds.” | Paired SVG rings count 37 and 38 pockets. One and two highlighted pockets introduce the edge comparison. | Straight-up number bets with standard 35:1 profit payouts: house edge = 1 − 36/N, giving 2.70% for N=37 and 5.26% for N=38. [Roulette guide](../../how-to-play/roulette.md). Rings count pockets; they do not depict physical wheel order. |
+| “Time is part of the budget.” | An oversized dial with an open arc and pause symbol gives an everyday planning tool a clear graphic identity. | Choose an end time and use a reminder. The dial is a metaphor, not a progress meter, recommended duration, account control or automatic stop. |
+
+The primary Playbook treatment resolves navy, emerald and type from the main
+brand tokens. Social Club and Circuit show how the same ideas adapt to
+hospitality and more playful digital brands. Every row uses the same article
+markup, text, asset and SVG geometry. The skin only changes CSS.
+
+The voice follows the brand book’s Open and Social pillars: explain an actual
+mechanic, give the viewer a usable action, and make the message worth sharing.
+No decorative generated text, cartoon mascots, boxed photo posters or invented
+regulatory banner requirements are introduced.
+
+## Round 3 — retained preferences
 
 The user prefers the revised illustration and odds cards from the earlier
 review, and the **original full-bleed photo poster**. They rejected the two
@@ -51,7 +73,7 @@ also remain in force.
 
 ## Working templates
 
-The three concepts are registered in the existing
+All seven concepts are registered in the existing
 [template engine](../template-system/engine.mjs), not a separate rendering
 system. [Campaign content](../template-system/campaigns.mjs) supplies defaults;
 [composition CSS](../template-system/campaigns.css) controls placement; the
@@ -63,12 +85,13 @@ and age information remain HTML. The logo uses the generated vector asset.
 “Edit this template” opens the existing studio with the corresponding
 recipe and comparison skins. Content editing, registered media, local recipe
 saving, CSS export and portable HTML export use that shared platform.
-Campaigns currently provide one composition each, at **1080 × 1350**; the
+Campaigns provide one composition each, at **1080 × 1350 CSS pixels**, with
+**3240 × 4050 PNG exports** rendered directly at 3× density. The
 original eight template families retain their reference/new compositions.
 Other formats and languages require their own composition review.
 
 Run `npm run build:campaign-concepts` to refresh studio resources and rebuild
-the six HTML/PNG/recipe previews and this review page. Run
+the 18 HTML/PNG/recipe previews and this review page. Run
 `npm run check:campaign-concepts` for the focused editor, export, preference
 and contrast checks. `npm run check:template-studio` checks the wider system.
 
@@ -77,9 +100,31 @@ Validation checks that live text remains within those areas and calculates
 contrast over the brightest possible photo pixel, rather than the hidden
 background color. Keep those shadow tokens and the gradient stops aligned
 when authoring a new composition. Photo suitability, faces, hands and
-cropping still need visual review. The six supplied combinations have been
+cropping still need visual review. The 18 supplied combinations have been
 rendered and inspected; arbitrary replacement assets and copy are not
 automatically art-directed.
+
+## Resolution contract
+
+Earlier review renderers captured one raster pixel per CSS pixel. Several
+support and interface studies therefore had only 420–720 pixels of width,
+which becomes visibly soft when enlarged or inspected on a dense display.
+The active creative review (30), style alternatives (12), and design
+preferences (52) have been re-rendered at 3× from their unchanged source
+templates. The six earlier campaign treatments receive the same upgrade.
+Historical snapshots in `render/comparison/` retain their original bytes.
+
+The shared [export quality module](../template-system/export-quality.mjs)
+separates composition dimensions from PNG pixels. The CLI defaults to 3× and
+accepts `--scale=1`, `2`, `3`, or `4`. The manifest retains CSS dimensions and
+adds output dimensions, source-image dimensions and usable density at the
+actual crop. Increasing export density improves live text and SVG detail;
+it cannot recover detail absent from a photo. The earlier cinema and pause
+photographs are retained as selected and are identified as upsampled at 3×.
+The new 3712 × 4608 portrait supplies about 3.41× density at its default crop,
+so its 3× export needs no photo enlargement. Inspect the live HTML for
+resolution-independent type and diagrams. Physical print sizes and bleed
+still belong to the existing production print profiles.
 
 Preferences use `playbook-campaign-preferences-v1` in local browser storage.
 Selecting the same choice again clears it. No choice is preselected, and
@@ -92,6 +137,20 @@ copy, operator details and placement requirements remain governed by the
 [existing compliance research](../../docs/compliance-banner-research-2026-09-05.md).
 
 ## Photography provenance and selection
+
+Round 4 uses [this 3712 × 4608 source photograph](photography/output/campaign-round-4-20260905/creative-campaign/shared-input/room-for-the-rest/attempt-1/candidate-1-image-1.jpg).
+It was generated once through the same authorized Google Gemini 3 Pro Image
+workflow, requesting 4K output. The [exact prompt](photography/round-4-request.json)
+and [settings](photography/round-4-settings.json) ask for adult friends on a
+resort terrace, natural optical detail, quiet architecture above the people
+and no baked-in graphics. Selection favors clear faces, realistic clothing
+texture, restrained warm light, architectural negative space and an image
+that reaches every edge. The people are composed as a shared moment on the
+terrace, not a gambling result or winning celebration. No image editing or
+upscaling is applied to the source. [Result and hash](photography/output/campaign-round-4-20260905/creative-campaign/shared-input/room-for-the-rest/attempt-1/result.json)
+and [sanitized response](photography/output/campaign-round-4-20260905/creative-campaign/shared-input/room-for-the-rest/attempt-1/response.json)
+are retained; opaque continuation signatures are omitted. Credentials stay
+inside the generation process.
 
 Cinema reuses the [previously generated casino-conversation photograph and
 its prompt record](../creative-review/photography/README.md). The wider

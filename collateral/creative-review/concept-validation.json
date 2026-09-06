@@ -79,7 +79,14 @@
       }
     ],
     "issues": [],
-    "sha256": "b8fe05ec36dd9d171eed6ba68ac18e579a777f56447f3ddb8f601117c2fefaa8"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "0c3ea8f6484d9728f6be0aef44b44b24b3e70a2bfc5387639ed81dfba682fd1d"
   },
   {
     "id": "pilot-astra-myth",
@@ -141,7 +148,14 @@
       }
     ],
     "issues": [],
-    "sha256": "ac2c05070e6b119a8ec0109180e5c5b9b36c15f67a4666ff52febe5d12e6b674"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "3562d4f1ca36a085c3b1b98d9bb9922b4017727a4ba011ec29290427cc00082b"
   },
   {
     "id": "pilot-astra-wildcard",
@@ -231,7 +245,14 @@
       }
     ],
     "issues": [],
-    "sha256": "6bc24a2e5ebcbd3996f070ec1bab99b8cd525b070249817fc4fbd4f3d54f81ef"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "d198698dc0a715f011fbe0874352fb7c6164ab9f1f0c2ef0e870576afd5c8cf0"
   },
   {
     "id": "pilot-sol-sports",
@@ -301,7 +322,14 @@
       }
     ],
     "issues": [],
-    "sha256": "e8ca6ffaaa5ba0843956c21966603f7612f45655d8ca635213bc1fb5396c42e1"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "8a672ef3fc596ef2f219723f3b5705b5d43e61fdc07d944fb69dcb655e116cc9"
   },
   {
     "id": "pilot-sol-myth",
@@ -371,7 +399,14 @@
       }
     ],
     "issues": [],
-    "sha256": "15a4d1958b5d54998f91fa73f126022322c61c8debf06690b743b941cba78c0b"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "95dc8b410f4e07d30e3dd9caf256c33ee5dd341c9e448620038178bbd411d732"
   },
   {
     "id": "pilot-sol-wildcard",
@@ -449,7 +484,14 @@
       }
     ],
     "issues": [],
-    "sha256": "8727e7c4ca2aeec8ef8655ab477123c343fb936f28b7ead1c2f57862b7bbf162"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "43f3d70ebe9e8fef2c4c1486115d8cf843dace49210d4d0504aed3f5ab3cfc3b"
   },
   {
     "id": "pilot-terra-sports",
@@ -519,7 +561,14 @@
       }
     ],
     "issues": [],
-    "sha256": "689dcd7320607a6eb752f03ff8b0a94f253b2758e05723ab82b4eceecec09712"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "0546497dff514d0387fcc4173b3a7567ec27cb059643730e1b0e19a510b72251"
   },
   {
     "id": "pilot-terra-myth",
@@ -569,7 +618,14 @@
       }
     ],
     "issues": [],
-    "sha256": "d2cb16ebc20f27a2f26115fc26bc6929ec54c9db041f3e8c3df6762249ef116e"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "301641edca7373cebad72b058536b3ce4203e7465be28b30e72bb4435ffc46f4"
   },
   {
     "id": "pilot-terra-wildcard",
@@ -651,7 +707,14 @@
       }
     ],
     "issues": [],
-    "sha256": "26e13f3610d3d144bc5f89393eaeb7ce734ce6a61c9c733973c059cd2c04710f"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "fe480f2ceae215c7c123f70c3bdf0816cf026830d9f6289256fbae2113ee2095"
   },
   {
     "id": "pilot-gpt-53-spark-sports",
@@ -729,7 +792,14 @@
       }
     ],
     "issues": [],
-    "sha256": "0adaa3d38f43212e22d35733fd47065cf8a40efd107f294783b47c354dea0c2c"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "f6867ae19c62eea2901fd4cb0d3c5be48d10197a4039ea6c1e1888333e2dafa1"
   },
   {
     "id": "pilot-gpt-53-spark-myth",
@@ -803,7 +873,14 @@
       }
     ],
     "issues": [],
-    "sha256": "136ebe9b5b4d37ed3c32439506ad57e6ad0575f5c5cf41dd6e1e0e38c3d84a4d"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "7f775fbeeffa681b9b85fc30c2854d33ff92695d3d2392c8a060121f6fab2015"
   },
   {
     "id": "pilot-gpt-53-spark-wildcard",
@@ -897,7 +974,14 @@
       }
     ],
     "issues": [],
-    "sha256": "741b8be67ab8fcf24b4c7f01a92cf10429e9f80c25ace93cef878dcb538774f6"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "c69351cf20ad218a9c70caec7ed6e6a0ea2213e8a24f2e19f1ada61461704f34"
   },
   {
     "id": "pilot-gpt-55-sports",
@@ -947,7 +1031,14 @@
       }
     ],
     "issues": [],
-    "sha256": "f750b74403cef7e7e6f1c555cfb1251aab0ee5d5ea69732a48e1614cefa3dd3b"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "0661ef9be9d7a31c2fa0feae54a2b43d784caa8f164d0fe30242672dcfaf787a"
   },
   {
     "id": "pilot-gpt-55-myth",
@@ -1017,7 +1108,14 @@
       }
     ],
     "issues": [],
-    "sha256": "1bb00d60e71b3adf94f0b0237354f5f265eb854f188080dd513459fb524b39c0"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "db1ff41339d0f4fedee905fcf7f7a462a134b64445650e7bbdcc1daa515e0f26"
   },
   {
     "id": "pilot-gpt-55-wildcard",
@@ -1087,7 +1185,14 @@
       }
     ],
     "issues": [],
-    "sha256": "d1d713601d5a153526755b364d759d67e7629c372bc5f07c3033e96d2314977d"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "0d54d95cc6debb062b2ecde335962715efdfa2118a4d847b024ed72145a8180a"
   },
   {
     "id": "photo-entry-12-sports",
@@ -1141,7 +1246,14 @@
       }
     ],
     "issues": [],
-    "sha256": "1efdfd5903e2ce79cb443be1b1546380e9a0d4f92aec50ec100e8111e491b422"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "db3256d2abb54d67a39abfaa2d0fe4439f7ba679936b83727b2571f81c357f7f"
   },
   {
     "id": "photo-entry-12-myth",
@@ -1195,7 +1307,14 @@
       }
     ],
     "issues": [],
-    "sha256": "a63c335ea28ac3eef7316663e151a8f80d7172a860ece867ce8af60477778619"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "892ad841160193cd54ddc5f4e9543484072a0a83b8dfdd1233a034dc8655b61f"
   },
   {
     "id": "photo-entry-12-wildcard",
@@ -1245,7 +1364,14 @@
       }
     ],
     "issues": [],
-    "sha256": "cde83cf55ac3f9786607445c530ffe933315765ac52e198b4f8a19dac5ef8856"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "7045e2c80d1a4fbe370762a9ed0e45d4518b822814c7ad5ea85a04a7e52b6888"
   },
   {
     "id": "photo-entry-27-sports",
@@ -1307,7 +1433,14 @@
       }
     ],
     "issues": [],
-    "sha256": "e461c22f824a3c22f3797b3278c5374a48df8a919040ef6af1d351c3a7d752f8"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "48dde36d5a8bea5b15753912fd323acb18599420dd546a291dee652ab6489d40"
   },
   {
     "id": "photo-entry-27-myth",
@@ -1361,7 +1494,14 @@
       }
     ],
     "issues": [],
-    "sha256": "4d065b4e9074bdad44cbea2637b745d747025365ea3201126a37b01a88431064"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "3151651d3538f61bb6d956a24012fd2aae41a14d1db4ecc11b4d7a9039ea4e63"
   },
   {
     "id": "photo-entry-27-wildcard",
@@ -1411,7 +1551,14 @@
       }
     ],
     "issues": [],
-    "sha256": "90b605e8bdffa3143c77183487ba6250c29d26ed0564bda15cee7a84d4398f70"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "77fbfb6ef8bfdfd9b6bb8b0dc7f5b2c122f8df3b9f5c49ec6c467fae6e0ba997"
   },
   {
     "id": "photo-entry-43-sports",
@@ -1469,7 +1616,14 @@
       }
     ],
     "issues": [],
-    "sha256": "9f9b7e639c828b8d224aadd7c677d66ba3b473e3a2ce162b1d3390dd3e58f1ec"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "af3b84a671412c15c8b4e33ecf48d0dfd25b1842519fdd7db4f97af04e0d130c"
   },
   {
     "id": "photo-entry-43-myth",
@@ -1519,7 +1673,14 @@
       }
     ],
     "issues": [],
-    "sha256": "364a4c837d455c449718ef36fa8f750ad0de9e272c0120dce6ccc689c7cf5ae2"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "9b01b0e83197fffc3712ec698e5e744eedad0ced55b1cfb1c2056fc0808ef565"
   },
   {
     "id": "photo-entry-43-wildcard",
@@ -1569,7 +1730,14 @@
       }
     ],
     "issues": [],
-    "sha256": "c5c25a40c4822cf4ca7e6651bb9bee1483c878419b7854d545fc0c42d9873df0"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "e11857dfde3afb4932f813184dad7ee30a16a7b5975fea48aa3876329e9f87fd"
   },
   {
     "id": "photo-entry-58-sports",
@@ -1631,7 +1799,14 @@
       }
     ],
     "issues": [],
-    "sha256": "441b90960047901e5c141b16f1287f8bc33cf6c2a136029685c6ed8671e4ce33"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "ae936999e2cc935a685f70f97441c7cabe51438cc13bbe2b15600991d0613535"
   },
   {
     "id": "photo-entry-58-myth",
@@ -1681,7 +1856,14 @@
       }
     ],
     "issues": [],
-    "sha256": "63cfc80b341b8e85f0a2c64d3a490c1b54c7f45ddcdbff4ebd30e37d4c9e03b1"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "54fd3126398243a48e0d580f0037c9b5ae5b0807d6a1c3c11f6f9639a8ebb76b"
   },
   {
     "id": "photo-entry-58-wildcard",
@@ -1731,7 +1913,14 @@
       }
     ],
     "issues": [],
-    "sha256": "d6d1138186755f4e300d5e48b0a8b4e94a3287c116c1d0ae659490671185ce76"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "738065f22de0d1a4bc31fd25cc7a0e5fc45d73c747809163d2f2ae7d035e1372"
   },
   {
     "id": "photo-entry-76-sports",
@@ -1789,7 +1978,14 @@
       }
     ],
     "issues": [],
-    "sha256": "e8f450e86f16bc685fc2de30e43465977098d67f5b4d116760da9f5827f4a4c8"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "42b5863fc87aef54537e11e511facc00d5ce79d4bd07ffb1a38b2bcdda1d8455"
   },
   {
     "id": "photo-entry-76-myth",
@@ -1843,7 +2039,14 @@
       }
     ],
     "issues": [],
-    "sha256": "f1c7f8f306750af13244929bbe915e52da3be4dc60df2718017380e73721a36e"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "67f22cff5468681bb0b2201ced2c7e34aa74609c0859af0af5c17246c60372cb"
   },
   {
     "id": "photo-entry-76-wildcard",
@@ -1893,6 +2096,13 @@
       }
     ],
     "issues": [],
-    "sha256": "d7423022853024eecaddaaa0be6b5268ae825de85ebb7303955799c5ffe47fed"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "sha256": "dd21e58101bac4c2a613c98fec4877a175709bf0a97b48136851eac44b6ae381"
   }
 ]

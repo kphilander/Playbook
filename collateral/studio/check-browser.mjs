@@ -4,20 +4,20 @@ import {join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
-import {createRecipe,validateRecipe,renderArticle} from '../template-system/engine.mjs';
+import {createRecipe,validateRecipe,renderArticle,templates,skins} from '../template-system/engine.mjs';
 import {loadResources} from '../template-system/resources.mjs';
 const require=createRequire(new URL('../render/package.json',import.meta.url)),puppeteer=require('puppeteer');
 const url=process.argv[2]||'http://127.0.0.1:8765/collateral/studio/index.html';
 const checks=[],errors=[],resources=loadResources(),downloads=mkdtempSync(join(tmpdir(),'playbook-studio-'));
 function record(name,pass){checks.push({name,pass:!!pass});assert.ok(pass,name);}
-const browser=await puppeteer.launch({headless:true,args:['--no-sandbox']});
+const browser=await puppeteer.launch({headless:'shell',protocolTimeout:30000,args:['--no-sandbox']});
 const ready=page=>page.waitForFunction(()=>['a','b'].every(s=>document.getElementById('check-'+s).textContent==='Fit, assets and text contrast checked'),{timeout:15000});
 try{
  const page=await browser.newPage();await page.setViewport({width:1440,height:1080});
  page.on('pageerror',error=>errors.push(error.message));page.on('requestfailed',request=>{if(request.failure()?.errorText!=='net::ERR_ABORTED')errors.push(request.url());});
  const cdp=await page.createCDPSession();await cdp.send('Browser.setDownloadBehavior',{behavior:'allow',downloadPath:downloads});
  await page.goto(url,{waitUntil:'networkidle0'});await ready(page);
- record('Eleven shared templates and seven independent skins',await page.$$eval('#template option',o=>o.length)===11&&await page.$$eval('#skin-a option',o=>o.length)===7);
+ record('All registered templates and independent skins are available',await page.$$eval('#template option',o=>o.length)===templates.length&&await page.$$eval('#skin-a option',o=>o.length)===skins.length);
  record('Preview dimensions match the declared format',await page.$eval('#preview-a',f=>f.contentDocument.querySelector('.specimen').offsetWidth)===1080);
  await page.evaluate(()=>{window.originalArticle=document.getElementById('preview-a').contentDocument.querySelector('.specimen');window.originalMarkup=window.originalArticle.outerHTML;});
  await page.select('#skin-a','club');await ready(page);

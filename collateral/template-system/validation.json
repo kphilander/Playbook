@@ -1,5 +1,593 @@
 [
   {
+    "template": "campaign-rest",
+    "variant": "after",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(52, 211, 153) on photo shadow over brightest possible pixel": 7.07
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-rest",
+    "variant": "after",
+    "skin": "atelier",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(52, 211, 153) on photo shadow over brightest possible pixel": 7.07
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-rest",
+    "variant": "after",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 9.27,
+      "rgb(222, 237, 178) on photo shadow over brightest possible pixel": 10.92
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-rest",
+    "variant": "after",
+    "skin": "arcade",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(52, 211, 153) on photo shadow over brightest possible pixel": 7.07
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-rest",
+    "variant": "after",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(218, 250, 115) on photo shadow over brightest possible pixel": 11.59
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-rest",
+    "variant": "after",
+    "skin": "quiet",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(52, 211, 153) on photo shadow over brightest possible pixel": 7.07
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-rest",
+    "variant": "after",
+    "skin": "warm",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(52, 211, 153) on photo shadow over brightest possible pixel": 7.07
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "variant": "after",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(15, 25, 35) on rgb(52, 211, 153)": 9.23,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "variant": "after",
+    "skin": "atelier",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(15, 25, 35) on rgb(52, 211, 153)": 9.23,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "variant": "after",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(24, 61, 53) on rgb(222, 237, 178)": 9.59,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "variant": "after",
+    "skin": "arcade",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(15, 25, 35) on rgb(52, 211, 153)": 9.23,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "variant": "after",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(41, 58, 176) on rgb(218, 250, 115)": 7.7,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "variant": "after",
+    "skin": "quiet",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(15, 25, 35) on rgb(52, 211, 153)": 9.23,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "variant": "after",
+    "skin": "warm",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: 7 7 6 Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(15, 25, 35) on rgb(52, 211, 153)": 9.23,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Myth / Math So close. Same odds. 7 7 6 Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-zero",
+    "variant": "after",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-zero",
+    "variant": "after",
+    "skin": "atelier",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-zero",
+    "variant": "after",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-zero",
+    "variant": "after",
+    "skin": "arcade",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-zero",
+    "variant": "after",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-zero",
+    "variant": "after",
+    "skin": "quiet",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-zero",
+    "variant": "after",
+    "skin": "warm",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-time",
+    "variant": "after",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-time",
+    "variant": "after",
+    "skin": "atelier",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-time",
+    "variant": "after",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-time",
+    "variant": "after",
+    "skin": "arcade",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-time",
+    "variant": "after",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-time",
+    "variant": "after",
+    "skin": "quiet",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+"
+  },
+  {
+    "template": "campaign-time",
+    "variant": "after",
+    "skin": "warm",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+"
+  },
+  {
     "template": "campaign-cinema",
     "variant": "after",
     "skin": "playbook",

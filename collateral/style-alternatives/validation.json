@@ -9,7 +9,14 @@
       "rgb(121, 100, 62) on rgb(243, 239, 231)": 4.94,
       "rgb(101, 95, 85) on rgb(243, 239, 231)": 5.51
     },
-    "pngSha256": "147d77144cdfe7a8e9bc061f19521a20b76524f23953b0d5fdf4230fb4746ba0"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "d3ad1b98bd84eb78a753825100644afa1a5c6bb3c482d6af4d839441c36f31aa"
   },
   {
     "id": "atelier-lifestyle",
@@ -20,7 +27,14 @@
       "rgb(38, 42, 39) on rgb(243, 239, 231)": 12.69,
       "rgb(121, 100, 62) on rgb(243, 239, 231)": 4.94
     },
-    "pngSha256": "7495138357c95021693a0f4eb308b83aa6ffb581f16e5edb52acc2a655080a7a"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "2f1a21395fb30dd14bd2e5db602a1b0e51800fb60244219fa5f0ce472dec9fbe"
   },
   {
     "id": "atelier-support",
@@ -33,7 +47,14 @@
       "rgb(38, 42, 39) on rgb(236, 230, 217)": 11.7,
       "rgb(255, 255, 255) on rgb(94, 76, 44)": 8.25
     },
-    "pngSha256": "e45918ffb2a645753c31d1949f213c5cf6c69428ed002ee25b3abce998308544"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "d881e55fd77e08b72dd3f10cb45f5aabc1c1482a54bd02cc1da8d9234b931792"
   },
   {
     "id": "social-club-odds",
@@ -47,7 +68,14 @@
       "rgb(23, 60, 53) on rgb(223, 237, 173)": 9.72,
       "rgb(23, 60, 53) on rgb(246, 241, 231)": 10.76
     },
-    "pngSha256": "a72ee9474a4fb2f3dd2e5cad6faea0b99fa8bb0710b9a07260fe3a2bad7808f1"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "bcabd038fd73bc75b332de482c769640c63edb3f97d9afd9c04ecdb74f1d28b8"
   },
   {
     "id": "social-club-lifestyle",
@@ -58,7 +86,14 @@
       "rgb(246, 241, 231) on rgb(23, 60, 53)": 10.76,
       "rgb(223, 237, 173) on rgb(23, 60, 53)": 9.72
     },
-    "pngSha256": "45b916b3421be31e1333fa31881bb2bd68c51bbe5223ff535d2f52d33c561954"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "61132407dca3b0a840e4d71c50338ba50662689dc418ef75bc53c89d5cd12946"
   },
   {
     "id": "social-club-support",
@@ -71,7 +106,14 @@
       "rgb(23, 60, 53) on rgb(231, 235, 217)": 9.97,
       "rgb(255, 255, 255) on rgb(23, 60, 53)": 12.11
     },
-    "pngSha256": "99b0e7e35c8be9ba5e84589b7f6831baeffe7683df975e5bc29bbe7400f97d51"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "a842ddcab368c973d1ceae0b7b2f18e0bcb8ae30e58be58a65b0be567c5d0510"
   },
   {
     "id": "circuit-odds",
@@ -87,7 +129,14 @@
       "rgb(240, 237, 248) on rgb(41, 35, 63)": 12.92,
       "rgb(218, 250, 115) on rgb(41, 35, 63)": 12.73
     },
-    "pngSha256": "011fba0748d07601e2e44b44647e67372103bf417356bf4d41aac092eeaf5e34"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "fd23ed518e0bf9a9f767ba0338dc35143c3ddfb54412f9accf4b1bb8d3e94169"
   },
   {
     "id": "circuit-lifestyle",
@@ -99,7 +148,14 @@
       "rgb(182, 164, 244) on rgb(25, 22, 43)": 8.07,
       "rgb(218, 250, 115) on rgb(25, 22, 43)": 15.03
     },
-    "pngSha256": "75bdd4a0a0b0dc2cad4f15e61db40645a397dbe7ec0a52fa369ab21dbc05a0b2"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "6dead5ac44bb21761d2c8baf4ae6b3038bc86c493ca00cf91ea9e2dbbb6e4efc"
   },
   {
     "id": "circuit-support",
@@ -112,7 +168,14 @@
       "rgb(41, 35, 63) on rgb(232, 225, 241)": 11.71,
       "rgb(255, 255, 255) on rgb(73, 53, 120)": 10.18
     },
-    "pngSha256": "89d450badffd5bb63702e36e206d57bc06aefe118b048a80d881837cfdb099b5"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "bdcc34e59b223061d2d1dcdd794e72fe68ad5cdf87b9ea316a2ad5030b0e205e"
   },
   {
     "id": "arcade-odds",
@@ -126,7 +189,14 @@
       "rgb(255, 245, 223) on rgb(39, 61, 203)": 7.41,
       "rgb(32, 39, 68) on rgb(252, 155, 128)": 7.07
     },
-    "pngSha256": "a168a1ad6506631ea75886a93e0d422c351d6b40b5c13edba856f7fae728067d"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "555a5ea3e15f0be5eb1efb0b01dd1d720483762232088f5fd7ca6b598259f460"
   },
   {
     "id": "arcade-lifestyle",
@@ -138,7 +208,14 @@
       "rgb(39, 61, 203) on rgb(255, 245, 223)": 7.41,
       "rgb(255, 245, 223) on rgb(39, 61, 203)": 7.41
     },
-    "pngSha256": "806973ece3f4461aadcd9c54b78da6a5a4daf01981dd99746fa29116b4d64e89"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "591b9379d3be838ffa4c34ce96068e9d64d56cf831ed9bfd422d043f3d1e9414"
   },
   {
     "id": "arcade-support",
@@ -151,6 +228,13 @@
       "rgb(32, 39, 68) on rgb(240, 234, 216)": 12.17,
       "rgb(255, 255, 255) on rgb(39, 61, 203)": 8.03
     },
-    "pngSha256": "878f4bd0837d6fdc965651855283aabb45f98a326b05730336d52023b0a05320"
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "73ea9a46c57f76bc168a23bd4b527481d91d3ec33177b7653dfae4050c57b616"
   }
 ]

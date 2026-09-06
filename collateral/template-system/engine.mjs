@@ -1,5 +1,6 @@
 import {templates} from './catalog.mjs';
 import {assets,skins} from './assets.mjs';
+import {campaignGraphic} from './campaign-graphics.mjs';
 
 export {templates,assets,skins};
 export const schema='playbook-creative-recipe';
@@ -64,7 +65,7 @@ export function renderArticle(input,resources,{assetBase='../template-system/'}=
     const outcomes=2**4;
     const grid=d.visual==='probability'?`<figure class="campaign-outcomes" data-block><svg viewBox="0 0 520 520" role="img" aria-label="One highlighted circle among sixteen equal circles: one all-win outcome in sixteen equally likely combinations.">${Array.from({length:outcomes},(_,i)=>`<circle cx="${65+(i%4)*130}" cy="${65+Math.floor(i/4)*130}" r="50" class="${i===0?'winning':'other'}"/>`).join('')}</svg></figure><div class="campaign-stat" data-block><span>1 in</span><strong>${outcomes}</strong></div>`:'';
     const help=`<footer class="campaign-footer" data-block data-protected-zone="support-and-age"><span>Free support: <a href="tel:${escapeHTML(market.phone.replace(/[^+\d]/g,''))}">${phone}</a></span><span>${age}</span></footer>`;
-    body=photo+head(d.series)+title+pause+grid+`<p class="mc-copy" data-block>${lines(d.copy)}</p>`+action(d.action)+help;
+    body=photo+head(d.series)+title+pause+grid+campaignGraphic(d.visual)+`<p class="mc-copy" data-block>${lines(d.copy)}</p>`+action(d.action)+help;
   }else if(d.layout==='banner'){
     const route=`<section class="mc-route" data-block><span>Free support for any question about gambling</span><strong>${escapeHTML(market.website)} ${arrow}</strong></section>`;
     body=`${head('Your time. Your call.')}<p class="mc-stage-label stage-one" data-block>01 / A compact invitation</p><section class="mc-banner" data-block><h1>Make room<br>for a pause.</h1><div class="mini-action">Explore time tools ${arrow}</div><span class="mini-age">${age}</span></section><div class="mc-journey" data-block>${arrow}<span>Opens your time-tools page</span></div><p class="mc-stage-label stage-two" data-block>02 / The destination</p><section class="mc-destination" data-block><div class="browser-top"><i></i><i></i><i></i><span>Time tools</span></div><h2>Your time.<br>Your call.</h2><p>Set a reminder before you play.<br>Give yourself a moment to check in.</p></section>${route}`;

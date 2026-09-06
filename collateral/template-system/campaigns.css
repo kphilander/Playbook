@@ -45,3 +45,35 @@
 .mc-campaign-probability .campaign-stat span {display:block;font-size:64px;letter-spacing:-.03em;}
 .mc-campaign-probability .campaign-stat strong {display:block;font-size:238px;font-weight:var(--campaign-weight);letter-spacing:-.045em;}
 .mc-campaign-probability .mc-copy {top:1050px;}
+
+/* Round four: a photographic cover, typographic reels, pocket arithmetic,
+   and an oversized time symbol. All live inside the existing skin contract. */
+.message-concept.mc-campaign-rest {--photo-top-end:35%;--photo-bottom-start:76%;--photo-bottom-alpha:.82;}
+.mc-campaign-rest h1 {top:176px;--campaign-heading:130px;}
+.mc-campaign-rest .campaign-shade {background:linear-gradient(rgb(0 0 0 / var(--photo-top-alpha)) 0%,rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),#0000 42%,#0000 63%,rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),#000e 91%);}
+.mc-campaign-nearmiss .campaign-reels {position:absolute;left:0;top:198px;width:1080px;height:535px;}
+.mc-campaign-nearmiss .reel-field {position:relative;height:430px;background:var(--campaign-accent);color:var(--campaign-field);}
+.mc-campaign-nearmiss .reel-field svg {position:absolute;inset:0;width:100%;height:100%;stroke:var(--campaign-field);stroke-width:var(--campaign-outline);}
+.mc-campaign-nearmiss .reel-marker {fill:var(--campaign-field);stroke:none;}
+.mc-campaign-nearmiss .reel-symbols {position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);align-items:center;font:var(--campaign-weight) 420px/.95 var(--display);letter-spacing:-.07em;text-align:center;}
+.mc-campaign-nearmiss .reel-symbols span {padding-right:24px;}
+.mc-campaign-nearmiss .campaign-reels figcaption {position:absolute;left:60px;top:472px;font:400 42px/1.2 var(--body);}
+.mc-campaign-zero h1 {top:176px;--campaign-heading:110px;}
+.mc-campaign-zero .campaign-wheels {position:absolute;left:60px;top:448px;width:960px;display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+.mc-campaign-zero .wheel-study {text-align:center;}
+.mc-campaign-zero .pocket-ring {position:relative;width:320px;height:320px;margin:0 auto;}
+.mc-campaign-zero .pocket-ring svg {width:100%;height:100%;stroke-width:2px;}
+.mc-campaign-zero .number-pocket {fill:none;stroke:var(--campaign-ink);}
+.mc-campaign-zero .zero-pocket {fill:var(--campaign-accent);stroke:var(--campaign-accent);}
+.mc-campaign-zero .zero-symbol {position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:var(--campaign-weight) 156px/1 var(--display);letter-spacing:-.04em;}
+.mc-campaign-zero .wheel-caption {margin-top:15px;font:500 42px/1.15 var(--body);}
+.mc-campaign-zero .wheel-caption span {display:block;font-weight:400;margin-top:6px;}
+.mc-campaign-zero .wheel-edge {display:block;margin-top:16px;font:var(--campaign-weight) 104px/1 var(--display);letter-spacing:-.055em;color:var(--campaign-accent);}
+.mc-campaign-zero .wheel-edge>span {font-size:64px;letter-spacing:-.04em;}
+.mc-campaign-time h1 {top:176px;--campaign-heading:116px;}
+.mc-campaign-time .campaign-dial {position:absolute;top:460px;left:60px;width:960px;height:550px;}
+.mc-campaign-time .campaign-dial svg {width:100%;height:100%;}
+.mc-campaign-time .dial-field {fill:color-mix(in srgb,var(--campaign-ink) 6%,var(--campaign-field));stroke:none;}
+.mc-campaign-time .dial-arc {stroke:var(--campaign-accent);stroke-width:var(--campaign-outline);}
+.mc-campaign-time .dial-tick {stroke:var(--campaign-ink);stroke-width:calc(var(--campaign-outline) * .7 + 1px);stroke-linecap:butt;}
+.mc-campaign-time .dial-pause,.mc-campaign-time .dial-stop {fill:var(--campaign-accent);stroke:none;}

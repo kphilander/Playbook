@@ -11,14 +11,17 @@ const data=JSON.parse(readFileSync(join(here,'manifest.json'),'utf8'));
 const url=process.argv[2]||'http://127.0.0.1:8765/collateral/design-preferences/index.html';
 const checks=[],errors=[];
 const record=(name,pass)=>{checks.push({name,pass:!!pass});assert.ok(pass,name);};
-const browser=await puppeteer.launch({headless:true,args:['--no-sandbox']});
+const browser=await puppeteer.launch({headless:'shell',protocolTimeout:30000,args:['--no-sandbox']});
 try {
   const page=await browser.newPage();
   page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>errors.push(r.url()));
   await page.setViewport({width:1500,height:1100});
   await page.goto(url,{waitUntil:'networkidle0'});
   record('Complete comparison and before/after inventory',await page.$$eval('.comparison-card',e=>e.length)===data.pairs.length && await page.$$eval('.preview img',e=>e.length)===data.pairs.length*2);
-  await page.$$eval('.preview img',async imgs=>{for(const i of imgs)i.loading='eager';await Promise.all(imgs.map(i=>i.decode()));});
+  // Verify loading without forcing every 3× bitmap to decode at once.
+  // The full-size viewer's selected before/after artwork is decoded below.
+  await page.$$eval('.preview img',imgs=>{for(const i of imgs)i.loading='eager';});
+  await page.waitForFunction(()=>[...document.querySelectorAll('.preview img')].every(i=>i.complete&&i.naturalWidth));
   record('All preview images load',await page.$$eval('.preview img',imgs=>imgs.every(i=>i.complete&&i.naturalWidth)));
   await page.screenshot({path:'/tmp/playbook-preferences-desktop.png'});
   for(const category of data.categories){await page.click(`[data-category="${category.id}"]`);record(`Category ${category.name}`,await page.$$eval('.comparison-card',e=>e.length)===data.pairs.filter(p=>p.category===category.id).length);}

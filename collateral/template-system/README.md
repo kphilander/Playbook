@@ -1,6 +1,6 @@
 # Playbook creative template system
 
-[Open the live studio](../studio/index.html). The platform separates content, composition, brand styling, media and market context. The library now contains eight message-placement families plus [three campaign concepts](../campaign-concepts/index.html): 19 compositions, each usable with seven CSS skins. The existing preference gallery builds its original masters through this engine. The new campaign review compares two treatments of each new composition.
+[Open the live studio](../studio/index.html). The platform separates content, composition, brand styling, media and market context. The library now contains eight message-placement families plus [seven campaign concepts](../campaign-concepts/index.html): 23 compositions, each usable with seven CSS skins. The existing preference gallery builds its original masters through this engine. The new campaign review compares three treatments of each round-4 composition and two treatments of the earlier campaigns.
 
 This implements the main brand book’s [adaptive identity model](../../brand-book/03-visual-identity.md): operator colors and fonts can change while the information hierarchy remains recognizable. Support content uses calm language, familiar type and no game imagery.
 
@@ -89,7 +89,7 @@ The Source Sans 3 copyright notice is retained from the vendored font’s metada
 The original message-placement library reuses existing source photos. The
 new pause campaign adds a portrait generated through the authorized Google
 workflow; see its [prompt, selection and provenance](../campaign-concepts/README.md#photography-provenance-and-selection).
-The pause mark and sixteen-outcome graphic remain programmatic SVG.
+The pause mark, sixteen-outcome graphic, roulette pocket-count rings and time dial remain programmatic SVG. The latest round adds a 3712 × 4608 portrait for native detail at a 3× crop.
 
 ## Content and market contract
 
@@ -99,8 +99,12 @@ Contact/age preview profiles cover the US, Great Britain and Australia. The two 
 
 Source dimensions are 1080 × 1350 for the social/journey review canvases and 420 × 740 for support. They are fixed-format templates, not a guarantee that arbitrary copy, any font or any language fits. Checks preserve minimum source type sizes instead of silently shrinking or truncating copy. New language/format profiles need their own fitting and visual review. Support’s foreground-contact composition aligns document order with the visible hierarchy.
 
+## Raster export quality
+
+The shared CLI defaults to 3× PNG output; pass `--scale=2`, for example, to choose another density (integers 1–4). Composition dimensions remain CSS pixels. The export manifest records actual PNG pixels and usable source-image density at the current crop, flagging photos that must be enlarged. Live type, the wordmark and SVG diagrams render directly at the requested density. The new round-4 photo has enough native detail for 3× output. Earlier chosen photos retain their original detail limits. [Campaign resolution notes](../campaign-concepts/README.md#resolution-contract) describe the 100 earlier previews re-rendered from source and the preserved historical snapshots.
+
 ## Verification
 
-[The matrix](validation.json) checks 19 compositions × 7 skins: **133 combinations**. It proves markup independence and checks bounds, block overlap, clipping, internal fit, fonts/images and text contrast. For the campaign photo layouts, contrast uses the minimum shadow opacity over the brightest possible image pixel, and text outside the designated reading areas fails validation. [Browser checks](../studio/browser-validation.json) cover actual CSS-only switching, media/crop changes, content edits, persistence, recipe validation, overflow gating, protected messages, accessible support order, downloads, offline exports and narrow screens.
+[The matrix](validation.json) checks 23 compositions × 7 skins: **161 combinations**. It proves markup independence and checks bounds, block overlap, clipping, internal fit, fonts/images and text contrast. For the campaign photo layouts, contrast uses the minimum shadow opacity over the brightest possible image pixel, and text outside the designated reading areas fails validation. [Browser checks](../studio/browser-validation.json) cover actual CSS-only switching, media/crop changes, content edits, persistence, recipe validation, overflow gating, protected messages, accessible support order, downloads, offline exports and narrow screens.
 
 The existing [preference-gallery checks](../design-preferences/browser-validation.json) continue to protect saved choices and comparison behavior. Visual review is still required: fitting and contrast alone do not establish good art direction or market suitability.

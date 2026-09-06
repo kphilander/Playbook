@@ -1,3 +1,4 @@
+import {previewScale} from '../template-system/export-quality.mjs';
 import { createRequire } from 'node:module';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -8,17 +9,17 @@ const here=dirname(fileURLToPath(import.meta.url));
 const require=createRequire(new URL('../render/package.json',import.meta.url));
 const puppeteer=require('puppeteer');
 const data=JSON.parse(readFileSync(join(here,'manifest.json'),'utf8'));
-const browser=await puppeteer.launch({headless:true,args:['--no-sandbox']});
+const browser=await puppeteer.launch({headless:'shell',protocolTimeout:30000,args:['--no-sandbox']});
 const results=[];
 try{
  for(const item of data.entries){
   const page=await browser.newPage(),errors=[];
-  await page.setViewport({width:item.width,height:item.height,deviceScaleFactor:1});
+  await page.setViewport({width:item.width,height:item.height,deviceScaleFactor:previewScale});
   await page.setRequestInterception(true);
   page.on('request',r=>/^(file:|data:|about:)/.test(r.url())?r.continue():r.abort());
   page.on('requestfailed',r=>errors.push('Resource failed: '+r.url()));
   page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(pathToFileURL(join(here,'masters/')).href);
+  await page.goto(pathToFileURL(join(here,item.html)).href);
   await page.setContent(resolveBrandTokens(readFileSync(join(here,item.html),'utf8')),{waitUntil:'load'});
   await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].map(i=>i.decode()));});
   const metrics=await page.evaluate(kind=>{
@@ -50,7 +51,7 @@ try{
   if(metrics.width!==item.width||metrics.height!==item.height)errors.push('Incorrect dimensions');
   await(await page.$('.specimen')).screenshot({path:join(here,item.png)});
   const issues=[...errors,...metrics.issues];const pngSha256=createHash('sha256').update(readFileSync(join(here,item.png))).digest('hex');
-  results.push({id:item.id,...metrics,issues,pngSha256});console.log(item.id+': '+(issues.length?issues.join('; '):'PASS'));await page.close();
+  results.push({id:item.id,...metrics,raster:{scale:previewScale,pixels:[metrics.width*previewScale,metrics.height*previewScale]},issues,pngSha256});console.log(item.id+': '+(issues.length?issues.join('; '):'PASS'));await page.close();
  }
 }finally{await browser.close();}
 writeFileSync(join(here,'validation.json'),JSON.stringify(results,null,2)+'\n');
