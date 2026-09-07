@@ -46,7 +46,9 @@
     "build:text-polish": "node collateral/text-polish/build.mjs",
     "check:text-polish": "node collateral/text-polish/check-layouts.mjs && node collateral/text-polish/check-browser.mjs",
     "build:text-surfaces": "node collateral/text-surfaces/build.mjs",
-    "check:text-surfaces": "node collateral/text-surfaces/check.mjs"
+    "check:text-surfaces": "node collateral/text-surfaces/check.mjs",
+    "build:brand-trial": "node collateral/brand-trials/gamesense/build.mjs",
+    "check:brand-trial": "node --test collateral/template-system/brand-package.test.mjs && node collateral/brand-trials/gamesense/check.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"

@@ -26,7 +26,7 @@ export function validateRecipe(input){
   if(!d)throw new Error('Unknown template.');
   if(!skins.some(s=>s.id===input.skinId))throw new Error('Choose a registered skin.');
   if(!(d.variants||['before','after']).includes(input.variant))throw new Error('Unknown composition.');
-  const allowedMarkets=d.layout==='banner'?['gb-banner']:d.layout==='protected'?['au-wagering']:['us-contact','gb-contact','au-contact'];
+  const allowedMarkets=d.layout==='banner'?['gb-banner']:d.layout==='protected'?['au-wagering']:['us-contact','gb-contact','au-contact','ca-bc-contact'];
   if(!allowedMarkets.includes(input.marketId))throw new Error('This market profile does not match the template.');
   const slot=slotFor(d),asset=assets.find(a=>a.id===input.assetId);
   if(slot?(!asset||asset.slot!==slot):input.assetId!==null)throw new Error('This image does not fit the template’s media slot.');

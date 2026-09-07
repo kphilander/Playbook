@@ -2,8 +2,8 @@
 // to the trimmed artboard, not a viewport that may include print bleed.
 export function inspectText(selector){
   const root=document.querySelector(selector),box=root.getBoundingClientRect();
-  const footer=root.querySelector('[data-protected-zone="support-and-legal"]');
-  const footerBox=footer.getBoundingClientRect(),lines=[],inkLines=[],issues=[];
+  const footer=root.querySelector('[data-protected-zone],.footer,.legal-strip,.legal-row');
+  const footerBox=footer?.getBoundingClientRect(),lines=[],inkLines=[],issues=[];
   const canvas=document.createElement('canvas');canvas.width=canvas.height=1;
   const ctx=canvas.getContext('2d',{willReadFrequently:true});
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
@@ -27,9 +27,9 @@ export function inspectText(selector){
       const ink={...line,y:line.y+font.fontBoundingBoxAscent-font.actualBoundingBoxAscent,height:font.actualBoundingBoxAscent+font.actualBoundingBoxDescent};
       inkLines.push(ink);
       if(ink.x<0||ink.y<0||ink.x+ink.width>box.width+.5||ink.y+ink.height>box.height+.5)issues.push('Outside trim: '+text);
-      if(!footer.contains(e)&&box.top+ink.y+ink.height>footerBox.top-12)issues.push('Inside support clearance: '+text);
+      if(footer&&!footer.contains(e)&&box.top+ink.y+ink.height>footerBox.top-12)issues.push('Inside support clearance: '+text);
       if(root.matches('.story-card')&&(ink.y<199||ink.y+ink.height>box.height-359))issues.push('Inside story UI zone: '+text);
-      const panel=e.closest('.stat-block,.breakdown,.quiz-question,.odds-row,.money-block,.stat-col');
+      const panel=e.closest('.stat-block,.breakdown,.quiz-question,.odds-row,.money-block,.stat-col,.panel-a,.panel-b');
       if(panel){const p=panel.getBoundingClientRect();if(r.left<p.left-1||r.right>p.right+1||box.top+ink.y<p.top-1||box.top+ink.y+ink.height>p.bottom+1)issues.push('Outside fact panel: '+text);}
     }
   }
@@ -39,7 +39,7 @@ export function inspectText(selector){
     const overlapY=Math.min(a.y+a.height,b.y+b.height)-Math.max(a.y,b.y);
     if(overlapX>2&&overlapY>2)issues.push('Text overlap: '+a.text+' / '+b.text);
   }
-  return {width:box.width,height:box.height,copy:root.innerText.replace(/\s+/g,' ').trim().toLocaleLowerCase('en'),lines,issues:[...new Set(issues)],fontsLoaded:document.fonts.size>=3&&document.fonts.check('600 48px Inter'),tokensLoaded:!!getComputedStyle(root).getPropertyValue('--pb-color-primary').trim()};
+  return {width:box.width,height:box.height,copy:root.innerText.replace(/\s+/g,' ').trim().toLocaleLowerCase('en'),lines,inkLines,issues:[...new Set(issues)],fontsLoaded:document.fonts.size>=3&&document.fonts.check('600 48px Inter'),tokensLoaded:!!getComputedStyle(root).getPropertyValue('--pb-color-primary').trim()};
 }
 
 // Conservative: scan ALL background pixels within each text-line rectangle,

@@ -1,0 +1,49 @@
+/* Opt-in compatibility for imported brand CSS. All color/font roles derive
+   from the incoming tokens. The source brand files remain immutable. */
+.pb-brand-package {
+  --pb-font-data:var(--pb-font-body);
+  --pb-color-neutral-200:color-mix(in srgb,var(--pb-color-white) 78%,var(--pb-color-primary));
+  --pb-on-paper-accent:color-mix(in srgb,var(--pb-color-secondary-dark) 72%,var(--pb-color-primary-dark));
+  font-synthesis:none;
+}
+.pb-brand-package .pb-brand-lockup {display:inline-flex;align-items:center;flex-shrink:0;gap:24px;}
+.pb-brand-package .pb-brand-lockup::after {content:none !important;display:none !important;}
+.pb-brand-package .pb-original-logo[hidden] {display:none !important;}
+.pb-brand-package .pb-replacement-logo {display:block;height:var(--pb-lockup-height,var(--pb-logo-image-height,1.4em));width:auto;object-fit:contain;max-width:100%;flex-shrink:0;}
+.pb-brand-package .presence-brand {--pb-lockup-height:80px;}
+.pb-brand-package :is(.myth-label,.htp-label,.quiz-label,.eyebrow,.section-label,.odds-label,.game,.stat-game,.money-label,.stat-label,.qr-label,.story-cta,.emphasis,.quiz-cta,.poster-cta,.tool-title,.section-heading,.cta-button,.cta-button-outline,.tool-icon,.article-badge) {font-family:var(--pb-font-body) !important;font-weight:600;letter-spacing:0;}
+.pb-brand-package :is(.stat-number,.stat-value,.stat-edge,.edge-pct,.odds-stat,.edge,.money-value,.amount,.number,.value) {font-family:var(--pb-font-data) !important;font-variant-numeric:tabular-nums;font-weight:600 !important;}
+.pb-brand-package[data-surface="signal"] {--pb-font-data:var(--pb-font-mono);}
+.story-card.pb-creative.pb-text-polish.pb-brand-package :is(.edge,.money-value) {font-family:var(--pb-font-data) !important;}
+.pb-brand-package :is(.headline,.myth-statement,.game-name,.hero-headline,.tools-headline,.hero h1) {letter-spacing:-.012em !important;line-height:1.12 !important;}
+.pb-brand-package.pb-text-polish[data-surface="paper"] {--pb-polish-accent:var(--pb-on-paper-accent);}
+.pb-brand-package.pb-text-polish[data-surface="contour"] {--pb-polish-accent:var(--pb-color-secondary-light);}
+.pb-brand-package[data-pb-gradients="off"][data-surface] {background-image:none !important;}
+.pb-brand-package[data-pb-gradients="off"]::before {background-image:none !important;mask-image:none !important;}
+.pb-creative.pb-brand-package > .pb-surface-graphic {position:absolute !important;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+.pb-brand-package .pb-regional-message {font:400 42px/1.2 var(--pb-font-body);color:var(--pb-polish-ink,var(--pb-color-white));margin:0 0 10px;flex-basis:100%;}
+.pb-brand-package .poster-footer {flex-wrap:wrap;}
+.social-card.pb-creative.pb-text-polish.pb-brand-package .card-footer {display:flex !important;flex-direction:column;flex-wrap:nowrap;align-items:flex-start;gap:8px;}
+.social-card.pb-brand-package .pb-regional-message {flex-basis:auto;}
+.pb-brand-package.poster .pb-regional-message {font-size:34px;}
+.pb-brand-package.email .pb-regional-message {font-size:18px;margin-bottom:20px;}
+.pb-brand-package.email .footer-channels a {color:inherit;text-decoration:none;overflow-wrap:anywhere;}
+.pb-brand-package.email .support-box .channels {font-family:var(--pb-font-body);}
+.pb-brand-package.email .support-box .channels a {color:inherit;text-decoration:underline;overflow-wrap:anywhere;}
+.pb-brand-package.email :is(.tool-item h3,.tool-name,.tool-label,.article-title,.article-promo-title,.support-box h3) {font-family:var(--pb-font-body);font-weight:600;}
+.pb-brand-package.email .deposit-amount {font-family:var(--pb-font-data);}
+.pb-brand-package.email .footer-logo {--pb-lockup-height:24px;}
+.pb-brand-package.email :is(.tool-icon,.cta-button-outline,.budget-stat .value.teal) {color:var(--pb-on-paper-accent);border-color:var(--pb-on-paper-accent);}
+.pb-brand-package.rack-card .pb-regional-message,.pb-brand-package.table-tent .pb-regional-message {font-size:24px;line-height:1.35;}
+/* Configured regional copy gets space without reducing support type. */
+.pb-brand-package.mc-presence {--support-font:var(--pb-font-body);}
+.pb-brand-package.mc-presence h1 {letter-spacing:-.015em;line-height:1.08;}
+.pb-brand-package.mc-presence[data-pb-gradients="off"] .campaign-shade {background:rgb(0 0 0 / .6);}
+.pb-brand-package.mc-presence .campaign-footer {flex-wrap:wrap;gap:8px 24px;}
+.pb-brand-package.mc-presence .campaign-footer .pb-regional-message {margin:0;font-size:42px;}
+.pb-brand-package.mc-presence:has(.pb-regional-message) .mc-copy {top:1000px;}
+.pb-brand-package.mc-presence:has(.pb-regional-message) .mc-action {top:1115px;}
+.pb-brand-package.mc-presence[data-format="story"]:has(.pb-regional-message) .mc-copy {top:1350px;}
+.pb-brand-package.mc-presence[data-format="story"]:has(.pb-regional-message) .mc-action {top:1490px;}
+.pb-brand-package.mc-presence[data-format="landscape"]:has(.pb-regional-message) .mc-copy {top:594px;}
+.pb-brand-package.mc-presence[data-format="landscape"]:has(.pb-regional-message) .mc-action {top:840px;}

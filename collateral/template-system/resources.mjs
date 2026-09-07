@@ -3,8 +3,7 @@ import {loadBrand} from '../../lib/brand-config.mjs';
 import {assets} from './assets.mjs';
 import {escapeHTML} from './engine.mjs';
 
-export function loadResources(){
-  const brand=loadBrand();
+export function loadResources(brand=loadBrand()){
   const symbol=readFileSync(new URL('../../visual-identity/logo/symbol/symbol-mark-on-dark.svg',import.meta.url),'utf8')
     .replace('<svg ', '<svg class="presence-symbol" aria-hidden="true" ');
   const logo=readFileSync(new URL('../../visual-identity/logo/secondary/logo-horizontal-mono-dark.svg',import.meta.url),'utf8')
@@ -14,11 +13,12 @@ export function loadResources(){
     'us-contact':{name:'United States · contact and age preview',country:'united-states'},
     'gb-contact':{name:'Great Britain · contact and age preview',country:'united-kingdom'},
     'au-contact':{name:'Australia · contact and age preview',country:'australia'},
+    'ca-bc-contact':{name:'British Columbia · supplied contact and age preview',country:'canada',region:'british-columbia'},
     'gb-banner':{name:'Great Britain · online-banner scenario',country:'united-kingdom',website:'gamcare.org.uk'},
     'au-wagering':{name:'Australia · online-wagering social scenario',country:'australia',website:'gamblinghelponline.org.au'}
   };
   const markets=Object.fromEntries(Object.entries(profiles).map(([id,p])=>{
-    const tokens=brand.brandTokens(p.country);
+    const tokens=brand.brandTokens(p.country,p.region);
     return [id,{...p,phone:tokens['{{HELPLINE_NUMBER}}'],age:tokens['{{MIN_AGE}}']}];
   }));
   const svgs=Object.fromEntries(assets.filter(a=>a.type==='svg').map(a=>[a.id,readFileSync(new URL(a.src,import.meta.url),'utf8')]));
