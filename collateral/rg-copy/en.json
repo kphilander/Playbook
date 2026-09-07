@@ -20,14 +20,14 @@
     "nav.break": "Take a Break",
     "nav.support": "Talk to Someone",
     "hero.quick_question": "Quick question…",
-    "hero.sub_default": "Test what you actually know about the games you play.",
+    "hero.sub_default": "See how odds, payouts, and tools work.",
     "hero.fallback.title_html": "Play on <span>your terms.</span>",
     "hero.fallback.sub": "Every game has math. Every player has choices. Know the odds, use the tools, and decide what works for you.",
     "hero.fallback.cta_see_odds": "See the real odds",
     "hero.fallback.cta_set_limits": "Set your limits",
     "odds.label": "Odds & Transparency",
     "odds.title": "Pick your games. See the real math.",
-    "odds.blurb": "Every casino game has a built-in mathematical edge. Tap the games you play to see how they compare.",
+    "odds.blurb": "Compare illustrative figures, then check the game and bet rules. Results in one session can vary.",
     "odds.empty": "Select a game above to see the odds.",
     "myths.label": "Myths vs. Math",
     "myths.title": "Think you know the game?",
@@ -35,9 +35,9 @@
     "tools.label": "Your Tools",
     "tools.title": "Features that work for you.",
     "tools.blurb": "These aren't restrictions. They're controls — like adjusting settings before you play.",
-    "tools.budget_lock.name": "Budget lock",
+    "tools.budget_lock.name": "Deposit limits",
     "tools.budget_lock.hook": "Set your entertainment spend before you start.",
-    "tools.budget_lock.detail_html": "Decide what you're comfortable spending — daily, weekly, or monthly. Lock it in and it takes effect immediately. Want to lower it? Instant. Want to raise it? There's a cooling-off period so you make that call with a clear head.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
+    "tools.budget_lock.detail_html": "Choose a deposit amount and period. Check when the limit starts, resets, and when changes take effect. A deposit limit may not include cash withdrawals.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
     "tools.session_timer.name": "Session timer",
     "tools.session_timer.hook": "Get a nudge when your chosen time is up.",
     "tools.session_timer.detail_html": "Pick a session length that works for you. When time's up, you get a check-in — not a shutdown, just a moment to decide if you want to keep going. Stay aware without watching the clock.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
@@ -47,7 +47,7 @@
     "tools.safety_net.name": "Safety net",
     "tools.safety_net.hook": "Set a floor. If you hit it, play pauses.",
     "tools.safety_net.detail_html": "Loss limits let you define a maximum you're willing to lose in a session, day, or week. If you hit it, play pauses automatically. You set the number — you're in control.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
-    "tools.reality_check.name": "Reality check",
+    "tools.reality_check.name": "Session updates",
     "tools.reality_check.hook": "Quick updates on time and spend while you play.",
     "tools.reality_check.detail_html": "Periodic pop-ups showing how long you've been playing and your current net position. Quick, non-intrusive, and easy to dismiss. Information, not interruption.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Set up →</a>",
     "tools.budget_planner.name": "Budget planner",
@@ -55,10 +55,10 @@
     "tools.budget_planner.detail_html": "Figure out what entertainment spend fits your finances. Think about it like a night out or a streaming subscription — decide the number before you start, not after.\n<br><a href=\"{{LIMITS_URL}}\" class=\"rg-btn rg-btn-ghost-light rg-btn-small\">Plan your budget →</a>",
     "tools.cta_set_limits": "Set your limits →",
     "break.label": "Your Call",
-    "break.title": "Need some time away? It's one click.",
-    "break.blurb": "If you want a break — for any reason, for any length — you can step away on your terms. No forms. No questions asked.",
+    "break.title": "Time away, on your terms.",
+    "break.blurb": "Explore the available breaks and self-exclusion options. Review the terms before confirming.",
     "break.card_timeframe.title": "Choose your timeframe",
-    "break.card_timeframe.desc": "Options range from a few months to permanent. Pick what feels right. You can always revisit later.",
+    "break.card_timeframe.desc": "Available periods depend on the service. A confirmed exclusion may not be shortened.",
     "break.card_pause.title": "Everything pauses",
     "break.card_pause.desc": "Your account pauses. Marketing stops. No deposits, no bets. A clean break from play while you want it.",
     "break.card_support.title": "You're not alone",
@@ -67,7 +67,7 @@
     "support.label": "Support",
     "support.title": "Here if you need it.",
     "support.blurb": "Free, confidential, 24/7. No reason needed. No crisis required.",
-    "support.normalizer": "Thousands of people reach out every day. It's a normal thing to do.",
+    "support.normalizer": "You can ask a question before deciding what to do next.",
     "support.additional_resources": "Additional resources",
     "support.org.desc": "Professional support and resources for players and families.",
     "support.ga.title": "Gamblers Anonymous",
@@ -97,7 +97,7 @@
   "glossary": {
     "house edge": "The mathematical advantage the casino has over the player, expressed as a percentage. A 5% house edge means the casino expects to keep $5 of every $100 wagered over time.",
     "rtp": "Return to Player — the percentage of wagered money a game returns to players over time. An RTP of 96% means the game returns $96 for every $100 wagered on average.",
-    "rng": "Random Number Generator — software that ensures every spin, hand, or draw is completely independent and random.",
+    "rng": "Random number generator: a system that produces values used to determine a game result. Independence depends on the game’s rules and design.",
     "bankroll": "The amount of money a player has set aside for gambling — like an entertainment budget.",
     "volatility": "How much a game's outcomes swing in the short term. High volatility = bigger wins and losses, less frequent payouts.",
     "expected value": "The mathematical average outcome of a bet if placed infinite times. A negative EV means the house has an edge.",
@@ -124,74 +124,74 @@
     "games": {
       "slots": {
         "facts": [
-          "<strong>Every spin is independent.</strong> The machine has no memory.",
-          "<strong>RTP is set in software</strong> and regulated. Time of day is irrelevant.",
-          "Higher bets = bigger swings, <strong>not better odds.</strong>",
-          "Near misses are not “almost winning.” The result was already decided."
+          "A random number generator decides each spin. <strong>Past results don’t make an independent spin due.</strong> Check the game’s rules and return to player.",
+          "<strong>2–15%</strong> — illustrative house-edge range; varies by game",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "blackjack": {
         "facts": [
-          "<strong>Lowest house edge</strong> of any casino game with basic strategy.",
-          "Basic strategy reduces house edge. <strong>It’s math, not intuition.</strong>",
-          "Card counting is real but yields <strong>a tiny 0.5–1.5% edge</strong> over thousands of hands.",
-          "The dealer follows mandatory rules with <strong>zero discretion.</strong>"
+          "Your decisions matter. <strong>Basic strategy matches your hand to the dealer’s upcard.</strong> The table rules also affect the house edge.",
+          "<strong>≈0.5%</strong> — with basic strategy; under favorable rules",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "roulette": {
         "facts": [
-          "<strong>American roulette (00):</strong> 5.26% house edge.",
-          "<strong>European roulette (single 0):</strong> 2.70% house edge.",
-          "Every spin is independent. The ball doesn’t know where it landed before.",
-          "No number is “due.” <strong>All 37/38 slots are equally likely.</strong>"
+          "An American wheel has 0 and 00. <strong>Most bets share a 5.26% house edge.</strong> The five-number bet is higher: 7.89%.",
+          "<strong>0 + 00</strong> — two zero pockets; on an American wheel",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "sports-betting": {
         "facts": [
-          "The <strong>vig (juice)</strong> is the sportsbook’s margin. Standard: -110 on both sides.",
-          "Knowing the sport helps, but <strong>the line already prices in expertise.</strong>",
-          "Parlays compound the vig per leg. <strong>More legs = worse math.</strong>",
-          "Tipsters show highlights, not losses. <strong>Survivorship bias is real.</strong>"
+          "At −110, a $110 cash bet wins $100 profit. <strong>That price sets the break-even rate.</strong> It doesn’t predict a team’s chance.",
+          "<strong>52.4%</strong> — equal stakes at −110; pushes excluded",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "baccarat": {
         "facts": [
-          "<strong>Banker bet:</strong> 1.06% house edge (best bet in the game).",
-          "<strong>Player bet:</strong> 1.24% house edge.",
-          "<strong>Tie bet:</strong> 14.4% house edge — avoid it.",
-          "Pattern tracking doesn’t change the odds. <strong>Each hand is independent.</strong>"
+          "Banker and Player are bets on two hands. <strong>Banker’s lower edge includes a 5% commission</strong> on winning Banker bets.",
+          "<strong>1.06%</strong> — Banker house edge; with 5% commission",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "video-poker": {
         "facts": [
-          "With optimal strategy, some variants offer <strong>RTP over 99%.</strong>",
-          "<strong>Jacks or Better (9/6)</strong> is the gold standard: 99.54% RTP.",
-          "Unlike slots, <strong>your decisions actually affect the outcome.</strong>",
-          "Always play <strong>max coins</strong> — the Royal Flush bonus requires it."
+          "Look for the game name as well as the paytable. <strong>9/6 means 9 for a full house and 6 for a flush</strong> in Jacks or Better.",
+          "<strong>0.46%</strong> — 9/6 Jacks or Better; optimal play, max-coin royal",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "craps": {
         "facts": [
-          "<strong>Pass/Don’t Pass:</strong> 1.41% house edge (best bets).",
-          "<strong>Odds bet:</strong> 0% house edge — the only fair bet in the casino.",
-          "Proposition bets look exciting but carry <strong>house edges up to 16.7%.</strong>",
-          "Dice are random. <strong>Controlled shooting is a myth.</strong>"
+          "The layout has many bets with different costs. <strong>The Pass line starts with the come-out roll.</strong> Read its rules before placing chips.",
+          "<strong>1.41%</strong> — house edge; on the Pass line",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "lottery": {
         "facts": [
-          "Lotteries have the <strong>highest house edge</strong> of any gambling product.",
-          "Buying 10 tickets multiplies near-zero odds. <strong>10 × near-zero ≈ near-zero.</strong>",
-          "No number combination is more likely than any other. <strong>Randomness doesn’t have favorites.</strong>",
-          "The expected return is typically <strong>$0.40–$0.60 per $1 spent.</strong>"
+          "For a fair 6-from-49 draw, every six-number combination has the same chance. <strong>Birthdays don’t get a bonus.</strong>",
+          "<strong>1 in 14M</strong> — approximately, to match all six; in a 6-from-49 draw",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       },
       "bingo": {
         "facts": [
-          "Odds depend on <strong>how many cards are in play,</strong> not which ones you hold.",
-          "More cards = slightly better odds, but <strong>you’re competing against all players.</strong>",
-          "Numbers are drawn randomly. <strong>No pattern or strategy changes the math.</strong>",
-          "The house takes its cut from the prize pool — typically <strong>5–25%.</strong>"
+          "Your seat doesn’t affect the draw. <strong>The number of cards in play and the prize rules matter.</strong> Check both before buying a card.",
+          "<strong>1 card</strong> — one entry; in that game",
+          "Check the exact rules and payout conditions.",
+          "A budget is a chosen limit, not a spending target."
         ]
       }
     }

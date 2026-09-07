@@ -1,0 +1,240 @@
+[
+  {
+    "id": "atelier-odds",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(38, 42, 39) on rgb(243, 239, 231)": 12.69,
+      "rgb(121, 100, 62) on rgb(243, 239, 231)": 4.94,
+      "rgb(101, 95, 85) on rgb(243, 239, 231)": 5.51
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "d3ad1b98bd84eb78a753825100644afa1a5c6bb3c482d6af4d839441c36f31aa"
+  },
+  {
+    "id": "atelier-lifestyle",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(38, 42, 39) on rgb(243, 239, 231)": 12.69,
+      "rgb(121, 100, 62) on rgb(243, 239, 231)": 4.94
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "2f1a21395fb30dd14bd2e5db602a1b0e51800fb60244219fa5f0ce472dec9fbe"
+  },
+  {
+    "id": "atelier-support",
+    "width": 420,
+    "height": 740,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(38, 42, 39) on rgb(250, 248, 242)": 13.7,
+      "rgb(101, 95, 85) on rgb(250, 248, 242)": 5.95,
+      "rgb(38, 42, 39) on rgb(236, 230, 217)": 11.7,
+      "rgb(255, 255, 255) on rgb(94, 76, 44)": 8.25
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "d881e55fd77e08b72dd3f10cb45f5aabc1c1482a54bd02cc1da8d9234b931792"
+  },
+  {
+    "id": "social-club-odds",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(246, 241, 231) on rgb(23, 60, 53)": 10.76,
+      "rgb(223, 237, 173) on rgb(23, 60, 53)": 9.72,
+      "rgb(209, 220, 207) on rgb(23, 60, 53)": 8.56,
+      "rgb(23, 60, 53) on rgb(223, 237, 173)": 9.72,
+      "rgb(23, 60, 53) on rgb(246, 241, 231)": 10.76
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "bcabd038fd73bc75b332de482c769640c63edb3f97d9afd9c04ecdb74f1d28b8"
+  },
+  {
+    "id": "social-club-lifestyle",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(246, 241, 231) on rgb(23, 60, 53)": 10.76,
+      "rgb(223, 237, 173) on rgb(23, 60, 53)": 9.72
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "61132407dca3b0a840e4d71c50338ba50662689dc418ef75bc53c89d5cd12946"
+  },
+  {
+    "id": "social-club-support",
+    "width": 420,
+    "height": 740,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(23, 60, 53) on rgb(246, 241, 231)": 10.76,
+      "rgb(74, 91, 81) on rgb(246, 241, 231)": 6.42,
+      "rgb(23, 60, 53) on rgb(231, 235, 217)": 9.97,
+      "rgb(255, 255, 255) on rgb(23, 60, 53)": 12.11
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "a842ddcab368c973d1ceae0b7b2f18e0bcb8ae30e58be58a65b0be567c5d0510"
+  },
+  {
+    "id": "circuit-odds",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(240, 237, 248) on rgb(25, 22, 43)": 15.26,
+      "rgb(182, 164, 244) on rgb(25, 22, 43)": 8.07,
+      "rgb(218, 250, 115) on rgb(25, 22, 43)": 15.03,
+      "rgb(192, 184, 208) on rgb(25, 22, 43)": 9.24,
+      "rgb(25, 22, 43) on rgb(218, 250, 115)": 15.03,
+      "rgb(240, 237, 248) on rgb(41, 35, 63)": 12.92,
+      "rgb(218, 250, 115) on rgb(41, 35, 63)": 12.73
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "fd23ed518e0bf9a9f767ba0338dc35143c3ddfb54412f9accf4b1bb8d3e94169"
+  },
+  {
+    "id": "circuit-lifestyle",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(240, 237, 248) on rgb(25, 22, 43)": 15.26,
+      "rgb(182, 164, 244) on rgb(25, 22, 43)": 8.07,
+      "rgb(218, 250, 115) on rgb(25, 22, 43)": 15.03
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "6dead5ac44bb21761d2c8baf4ae6b3038bc86c493ca00cf91ea9e2dbbb6e4efc"
+  },
+  {
+    "id": "circuit-support",
+    "width": 420,
+    "height": 740,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(41, 35, 63) on rgb(245, 242, 251)": 13.49,
+      "rgb(100, 86, 113) on rgb(245, 242, 251)": 6.1,
+      "rgb(41, 35, 63) on rgb(232, 225, 241)": 11.71,
+      "rgb(255, 255, 255) on rgb(73, 53, 120)": 10.18
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "bdcc34e59b223061d2d1dcdd794e72fe68ad5cdf87b9ea316a2ad5030b0e205e"
+  },
+  {
+    "id": "arcade-odds",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(32, 39, 68) on rgb(255, 245, 223)": 13.5,
+      "rgb(39, 61, 203) on rgb(255, 245, 223)": 7.41,
+      "rgb(77, 82, 107) on rgb(255, 245, 223)": 7.09,
+      "rgb(255, 245, 223) on rgb(39, 61, 203)": 7.41,
+      "rgb(32, 39, 68) on rgb(252, 155, 128)": 7.07
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "555a5ea3e15f0be5eb1efb0b01dd1d720483762232088f5fd7ca6b598259f460"
+  },
+  {
+    "id": "arcade-lifestyle",
+    "width": 1080,
+    "height": 1350,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(32, 39, 68) on rgb(255, 245, 223)": 13.5,
+      "rgb(39, 61, 203) on rgb(255, 245, 223)": 7.41,
+      "rgb(255, 245, 223) on rgb(39, 61, 203)": 7.41
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ]
+    },
+    "pngSha256": "591b9379d3be838ffa4c34ce96068e9d64d56cf831ed9bfd422d043f3d1e9414"
+  },
+  {
+    "id": "arcade-support",
+    "width": 420,
+    "height": 740,
+    "issues": [],
+    "contrastPairs": {
+      "rgb(32, 39, 68) on rgb(255, 248, 234)": 13.84,
+      "rgb(81, 85, 106) on rgb(255, 248, 234)": 6.95,
+      "rgb(32, 39, 68) on rgb(240, 234, 216)": 12.17,
+      "rgb(255, 255, 255) on rgb(39, 61, 203)": 8.03
+    },
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        1260,
+        2220
+      ]
+    },
+    "pngSha256": "73ea9a46c57f76bc168a23bd4b527481d91d3ec33177b7653dfae4050c57b616"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-58/shared-input/sports/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-58",
+  "concept": "sports",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T00:52:41.553Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-58",
+    "condition": "shared-input",
+    "concept": "sports",
+    "prompt": "Create a candid editorial 3:4 photo for social media, 2K. Indoor sports bar at warm golden-hour style lighting. Four diverse adults age 25+ sit together on a couch at a game night, laughing and leaning in together while one person points at a sports schedule on a wall TV in the background. No readable on-screen gambling or betting content, no cards, chips, cash, money stacks, logos, or text in the photograph. Natural skin tones, cinematic cinematic lighting, shallow depth of field, moderate motion, social connection visible. Leave breathing room around faces and hands for layout text. No minors, no alcohol, no gambling paraphernalia."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Create a candid editorial 3:4 photo for social media, 2K. Indoor sports bar at warm golden-hour style lighting. Four diverse adults age 25+ sit together on a couch at a game night, laughing and leaning in together while one person points at a sports schedule on a wall TV in the background. No readable on-screen gambling or betting content, no cards, chips, cash, money stacks, logos, or text in the photograph. Natural skin tones, cinematic cinematic lighting, shallow depth of field, moderate motion, social connection visible. Leave breathing room around faces and hands for layout text. No minors, no alcohol, no gambling paraphernalia."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import url('../review.css');
+.scene-review .intro,.scene-review main,.scene-review .review-footer{width:min(1320px,calc(100% - 64px))}
+.scene-review .intro{padding-bottom:30px}
+.scene-review .topline{margin-bottom:42px}
+.scene-review .intro h1{font-size:clamp(46px,6vw,72px)}
+.scene-review .lead{font-size:18px;max-width:690px}
+.scene-comparison{padding-bottom:42px;scroll-margin-top:24px}
+.scene-note{font-size:14px;line-height:1.65;color:#4D574C;min-height:92px;margin:22px 0 16px}
+.source-links{display:flex;justify-content:space-between;gap:16px;font-size:12px}
+.scene-context{border-top:1px solid #C9CEC3;padding:26px 0 40px;display:flex;flex-wrap:wrap;gap:16px 32px;font-size:13px;color:#4D574C}
+.scene-context p{width:100%;max-width:750px;margin:0 0 4px;line-height:1.7}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:700px){.scene-review .intro,.scene-review main,.scene-review .review-footer{width:calc(100% - 36px)}.scene-review .topline{margin-bottom:30px}.scene-note{min-height:0}.scene-review .pair.trio{gap:42px}.scene-review .lead{font-size:17px}}

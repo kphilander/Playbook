@@ -1,0 +1,62 @@
+{
+  "entry-12/sports": {
+    "actualPhotoAlt": "Two adults in contrasting orange and green scarves talk in stadium seats, gesturing with open hands in warm light.",
+    "notes": []
+  },
+  "entry-12/myth": {
+    "actualPhotoAlt": "Two adults smile at each other beside a small birthday cake with one candle on a rooftop table at sunset.",
+    "notes": []
+  },
+  "entry-12/wildcard": {
+    "actualPhotoAlt": "Two adult women talk beside a gaming-machine cabinet in a warmly lit lounge; one gestures while the other rests her hands by the controls.",
+    "notes": ["The photo shows more of the machine's controls than the prompt requested. The card's arithmetic remains in the separate text panel and does not depend on this generated interface."]
+  },
+  "entry-27/sports": {
+    "actualPhotoAlt": "Three adults converse on a sofa beside an unreadable phone, with a blurred television and warm living-room lighting behind them.",
+    "notes": ["The 52.4% break-even rate assumes equal stakes at −110 and excludes pushes. The card states the $110/$100 price but does not explicitly state those assumptions."]
+  },
+  "entry-27/myth": {
+    "actualPhotoAlt": "Three adults smile around a roulette table, one pointing at the felt; the wheel, chips, and generated table numerals are visible in front.",
+    "notes": ["The roulette numerals are readable despite the prompt's request to blur or obscure them. Generated table and wheel details are not reliable evidence of a correct American wheel.", "The 1-in-38 claim uses the conventional fair double-zero American wheel. Naming that variant explicitly would avoid ambiguity before publication."]
+  },
+  "entry-27/wildcard": {
+    "actualPhotoAlt": "Two adults talk in a casino lounge, one looking at a wristwatch while the other holds a phone with a blank screen.",
+    "notes": ["The $600 calculation is total wagering at the stated continuous pace, not $600 of net loss or required starting funds. The card correctly says 'wagered'; an explicit distinction could improve comprehension."]
+  },
+  "entry-43/sports": {
+    "actualPhotoAlt": "Three adults sit at a table overlooking a basketball arena; the middle person makes a small-distance hand gesture while the others listen.",
+    "notes": ["The favorite needs a win by at least seven, and the underdog can lose by six or fewer. The current wording names boundary examples but could be read as exact margins. 'Neither side can tie' should clearly refer to a settled spread bet, not the game's score."]
+  },
+  "entry-43/myth": {
+    "actualPhotoAlt": "Two adults smile beside a blurred slot machine in a warm lounge. A small foreground book displays generated myth-check lettering.",
+    "notes": ["Google added a prominently readable book labelled 'Myth Check: Casino Lore' even though the prompt prohibited text. It is an image-generation departure, retained without regeneration.", "'The machine does not keep score' and the caption's 'does not keep a running tab' can sound like claims about recordkeeping. Independent outcomes do not mean that gaming systems record no activity; the intended lesson is that previous independent results do not make a win due."]
+  },
+  "entry-43/wildcard": {
+    "actualPhotoAlt": "Three adults walk out of an entertainment lounge in evening light, smiling while the middle person checks a wristwatch.",
+    "notes": ["The $600 calculation is total wagering at the stated continuous pace, not $600 of net loss or required starting funds. The card correctly says 'wagered'; an explicit distinction could improve comprehension."]
+  },
+  "entry-58/sports": {
+    "actualPhotoAlt": "Four adults talk and laugh on a sofa under a sports-style display with generated lettering and numbers; clear drinking glasses sit on the table.",
+    "notes": ["The core explanation conflates overround with the share of stakes retained. Two −110 sides imply about 104.76%, or a 4.76 percentage-point overround. With $110 staked on each side, $220 comes in and $210 is paid out, leaving $10/$220 ≈ 4.55%. The source table lists approximately 4.5% vig, not 4.8% kept.", "The 52.4% break-even rate assumes equal stakes at −110 and excludes pushes. These assumptions are not explicit in the card.", "The 'beat it' framing and 'If you rely on emotion, the math wins' warrant voice review: they can turn literacy into a profitability challenge or sound judgmental.", "The photograph contains readable sports-style display text despite the no-text direction. The authored photoAlt says the group is standing, but the generated group is seated."]
+  },
+  "entry-58/myth": {
+    "actualPhotoAlt": "Three adults laugh together in a warm café seating area, with one holding a dark coaster and mugs on the table.",
+    "notes": ["'A slot machine does not track your history' is broader than the supported claim about independent outcomes. Gaming systems can record activity; the intended lesson is that a losing streak does not make the next independent spin due.", "The photograph shows a general café conversation. Whether it adds enough context to this particular slot myth is an open creative-review question."]
+  },
+  "entry-58/wildcard": {
+    "actualPhotoAlt": "Three adults lean over a notebook and calculator at a kitchen table, with coffee mugs and generated handwriting visible.",
+    "notes": ["The long-run $5-per-$100 relationship is an expectation, not a guaranteed personal outcome. 'On average' would make that distinction more explicit; the existing title and session caveat help.", "The caption's 'house edge first, hope second' and the takeaway's 'math, not hope' warrant a tone review against the brand's informed-choice voice.", "Generated writing and calculator numerals appear in the photo. The prompt requested a notepad and calculator without explicitly prohibiting readable paper text, although the shared brief prohibited text in the photograph."]
+  },
+  "entry-76/sports": {
+    "actualPhotoAlt": "Three adults talk behind a sofa in a warm living room, with one holding a phone and a sports broadcast visible on the television.",
+    "notes": ["The 52.4% break-even rate assumes equal stakes at −110 and excludes pushes. Those assumptions are not explicit on the card.", "Broadcast-style graphics remain visible on the television. The original prompt requested no readable text; check the full-resolution image before publication."]
+  },
+  "entry-76/myth": {
+    "actualPhotoAlt": "Four adults chat in a casino lounge with colorful gaming-machine lights in the background.",
+    "notes": ["RNG is not expanded in the player-facing copy. The underlying explanation is supported by the supplied slot guide, but readers unfamiliar with the acronym may miss the point."]
+  },
+  "entry-76/wildcard": {
+    "actualPhotoAlt": "Three adults smile around a kitchen table; one holds a phone upright with a blank screen and another touches a set of keys.",
+    "notes": ["An entertainment budget is a chosen spending boundary, not a predetermined actual session cost. 'Your entertainment budget is the cost of the session' could encourage spending the whole amount or imply that the outcome is fixed.", "The phone faces the camera rather than away from it as requested, although its screen is blank and unreadable."]
+  }
+}

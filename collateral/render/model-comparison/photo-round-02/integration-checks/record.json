@@ -1,0 +1,8 @@
+{
+  "recordedAt": "2026-09-05T00:58:50.406967+00:00",
+  "cause": "Shared layout-system.css supplied 72px inherited padding-top to the absolute-positioned header, moving every wordmark into the headline. This is a coordinator template defect, not participant output.",
+  "repair": "A separate production-fix.css resets card-header padding to zero for every participant. Frozen template and submissions remain untouched. No image calls are repeated.",
+  "validatorCorrection": "Text ranges include font ascent/descent beyond CSS line boxes. Vertical slot checks allow a 0.25em glyph-metric tolerance; line overlap checks between separate regions remain strict.",
+  "preserved": "First three entry-58 HTML/PNG/validation files before the shared integration fix.",
+  "loadWaitCorrection": "Three concurrent Chromium renders timed out waiting for networkidle0 after resources had loaded. The common renderer now waits for the load event, then explicitly awaits fonts and image decoding. This changes readiness detection, not card content or layout; all final entries use the same renderer. Saved photos are reused without new generation."
+}

@@ -1,0 +1,48 @@
+/* Format geometry only. Identity and operator skins remain shared. */
+.message-concept[data-format="story"] {
+  width:1080px;height:1920px;
+  --photo-top-end:39%;--photo-bottom-start:72%;
+  --presence-heading:144px;
+}
+[data-format="story"] .presence-masthead {height:750px;}
+[data-format="story"] .mc-header {top:210px;}
+[data-format="story"] .presence-rule {top:338px;}
+[data-format="story"] h1 {top:378px;}
+[data-format="story"] .mc-copy {top:1390px;}
+[data-format="story"] .mc-action {top:1540px;}
+[data-format="story"] .campaign-footer {bottom:230px;}
+[data-format="story"] .campaign-shade {
+  background:linear-gradient(
+    rgb(0 0 0 / var(--photo-top-alpha)) 0%,
+    rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),
+    rgb(0 0 0 / .48) 44%,rgb(0 0 0 / .27) 49%,
+    rgb(0 0 0 / .17) 57%,rgb(0 0 0 / .22) 63%,
+    rgb(0 0 0 / .42) 68%,
+    rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),
+    rgb(0 0 0 / var(--photo-bottom-alpha)) 100%);
+}
+
+.message-concept[data-format="landscape"] {
+  width:1920px;height:1080px;
+  --photo-top-end:17%;--photo-bottom-start:90%;
+  --presence-heading:132px;
+}
+[data-format="landscape"] .campaign-photo {left:800px;}
+[data-format="landscape"] .campaign-shade {
+  left:800px;
+  background:
+    linear-gradient(to right,var(--campaign-field),transparent 28%),
+    linear-gradient(
+      rgb(0 0 0 / var(--photo-top-alpha)) 0%,
+      rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),
+      rgb(0 0 0 / .30) 29%,rgb(0 0 0 / .12) 47%,
+      rgb(0 0 0 / .12) 64%,rgb(0 0 0 / .28) 78%,
+      rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),
+      rgb(0 0 0 / var(--photo-bottom-alpha)) 100%);
+}
+[data-format="landscape"] .mc-header {top:64px;left:80px;right:80px;}
+[data-format="landscape"] .presence-rule {left:80px;top:198px;}
+[data-format="landscape"] h1 {left:80px;top:236px;width:720px;}
+[data-format="landscape"] .mc-copy {left:80px;right:auto;width:710px;top:594px;text-wrap:balance;}
+[data-format="landscape"] .mc-action {left:80px;right:auto;width:710px;top:860px;}
+[data-format="landscape"] .campaign-footer {left:80px;right:80px;bottom:48px;}

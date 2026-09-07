@@ -82,7 +82,7 @@ Two-sided table tent spec for {{PROGRAM_NAME}}. Placed at gaming tables, bars, a
 | Element | Content |
 |---|---|
 | **Headline** | Your tools. Your limits. Your call. |
-| **Body** | Set your deposit limit, session reminders, and activity alerts — all in your account settings. Takes 10 seconds. |
+| **Body** | Set your deposit limit, session reminders, and activity alerts — all in your account settings. Choose your amount and time frame. |
 | **CTA** | Visit {{CONTENT_HUB_URL}} |
 
 ### Helpline
@@ -185,3 +185,7 @@ Uses the default Side A content (roulette house edge). Best for table game areas
 ---
 
 *Cross-references: [Application Guidelines — Print](../../brand-book/07-application-guidelines.md#print-applications) | [Core Messages](../../messaging/core-messages.md) | [HTML template](../render/table-tent-5b.html)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

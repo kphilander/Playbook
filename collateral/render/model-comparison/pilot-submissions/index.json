@@ -1,0 +1,15 @@
+{
+  "status": "pilot-audit-only",
+  "captured": "2026-09-04",
+  "description": "Snapshots of the two added agents\u2019 first reported completion, after their own revisions and before coordinator feedback. These are not raw first generations or controlled competition entries. Earlier Astra/Sol/Terra first completions were not preserved, so no cross-model first-submission comparison is claimed. Archives are source/PNG audit snapshots, not independently relocated live pages.",
+  "archives": [
+    {
+      "path": "gpt-53-spark-before-coordinator-qa.tar.gz",
+      "sha256": "34ebf43ae702fd15ef52db116420d874d69c7d355e0dff3cf08ca151786ed1cc"
+    },
+    {
+      "path": "gpt-55-before-coordinator-qa.tar.gz",
+      "sha256": "5baef1e55c0a0a90339ca5d7963695684c7ba90732ce46533020ac1d3b157b35"
+    }
+  ]
+}

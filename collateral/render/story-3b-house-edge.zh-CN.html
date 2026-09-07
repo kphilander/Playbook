@@ -43,29 +43,30 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card" data-layout="two-comparisons">
+<div class="story-card pb-creative" data-layout="two-comparisons">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">真实赔率</span>
   </div>
   <div class="story-body">
     <div class="eyebrow">你知道吗？</div>
-    <div class="headline">采用基本策略时，二十一点的庄家优势只有 <span class="teal">0.5%</span></div>
+    <div class="headline">相同金额。<br>不同计算。</div>
     <div class="odds-list">
       <div class="odds-row">
-        <div><div class="game">二十一点</div><div class="note">基本策略</div></div>
+        <div><div class="game">二十一点</div><div class="note">有利规则＋基本策略</div></div>
         <div class="edge teal">0.5%</div>
       </div>
       <div class="odds-row">
-        <div><div class="game">美式轮盘</div><div class="note">双零</div></div>
+        <div><div class="game">美式轮盘</div><div class="note">多数投注；五号码投注为7.89%</div></div>
         <div class="edge orange">5.26%</div>
       </div>
     </div>
     <a href="#" class="story-cta">查看完整对比</a>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
   </div>
 </div>

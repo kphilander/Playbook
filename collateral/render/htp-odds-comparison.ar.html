@@ -43,34 +43,31 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
-  <div class="card-header">
-    <span class="card-logo">Playbook</span>
-    
-  </div>
-  <div class="card-body">
-    <div class="htp-label">معرفة اللعبة</div>
-    <div class="card-title">الاحتمالات في لمحة</div>
-    <table class="odds-table">
-      <thead>
-        <tr><th>اللعبة</th><th>أفضل رهان</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>بلاك جاك (الاستراتيجية الأساسية)</td><td>0.5%</td></tr>
-        <tr><td>باكاراه (المصرفي)</td><td>1.06%</td></tr>
-        <tr><td>الروليت الأوروبي</td><td>2.70%</td></tr>
-        <tr><td>الرهان الرياضي (السعر القياسي)</td><td>4.5%</td></tr>
-        <tr><td>الروليت الأمريكي</td><td>5.26%</td></tr>
-        <tr><td>آلات القمار</td><td>2-15%</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="card-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">نسبة الكازينو = ما يحتفظ به الكازينو مقابل كل 100 د.إ مراهنة مع مرور الوقت</span>
-  </div>
+<div class="social-card pb-creative">
+<div class="card-header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+</div>
+<div class="card-body">
+<div class="htp-label">معرفة اللعبة</div>
+<div class="card-title">المبلغ نفسه.<br/>تكلفة مختلفة.</div>
+<table class="odds-table">
+<thead><tr><th>اللعبة</th><th>ميزة البيت</th></tr></thead>
+<tbody>
+<tr><td>بلاك جاك: قواعد مواتية + استراتيجية أساسية</td><td>≈<bdi dir="ltr">0.5%</bdi></td></tr>
+<tr><td>باكارات: المصرفي، عمولة <bdi dir="ltr">5%</bdi></td><td><bdi dir="ltr">1.06%</bdi></td></tr>
+<tr><td>كرابس: خط المرور</td><td><bdi dir="ltr">1.41%</bdi></td></tr>
+<tr><td>روليت: صفر واحد</td><td><bdi dir="ltr">2.70%</bdi></td></tr>
+</tbody>
+</table>
+<p class="creative-note">أمثلة للتكلفة المتوقعة؛ تختلف حسب القواعد.</p>
+</div>
+<div class="card-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

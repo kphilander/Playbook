@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Small bet. Fast clock. — {{PROGRAM_SHORT_NAME}}</title>
+  <!--
+  content_type: quick-reference
+  pillar: [open, tools]
+  tier: 1
+  tone: confident-informative
+  audience: [general]
+  channel: [social-media]
+  reading_level: grade-6-8
+  Source: how-to-play/slots.md, "Tips for informed play".
+  Arithmetic assumes one $0.50 spin every 3 seconds: 20 spins per minute, $10 wagered per minute, $600 wagered per hour.
+  -->
+  <link rel="stylesheet" href="../../brand-inject.css">
+  <link rel="stylesheet" href="../fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <article class="social-card sol-card wildcard-card" aria-labelledby="wildcard-title">
+    <header class="card-header">
+      <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+      <span class="series-label">Pace check</span>
+    </header>
+    <main class="card-main">
+      <h1 id="wildcard-title">Small bet.<br><em>Fast clock.</em></h1>
+      <p class="lead">Example pace: one spin every 3 seconds.</p>
+      <figure class="pace-board" aria-label="At one 50-cent spin every 3 seconds, 20 spins happen each minute and 10 dollars are wagered each minute.">
+        <div class="pace-step">
+          <strong class="pace-value">$0.50</strong>
+          <span class="pace-label">each spin</span>
+        </div>
+        <span class="pace-arrow" aria-hidden="true">×</span>
+        <div class="pace-step">
+          <strong class="pace-value">20</strong>
+          <span class="pace-label">spins / min</span>
+        </div>
+        <span class="pace-arrow" aria-hidden="true">=</span>
+        <div class="pace-step">
+          <strong class="pace-value">$10</strong>
+          <span class="pace-label">wagered / min</span>
+        </div>
+      </figure>
+      <div class="hour-total" aria-label="Ten dollars wagered per minute times sixty minutes equals 600 dollars wagered per hour.">
+        <span class="hour-copy">$10 × 60 minutes</span>
+        <span class="hour-value"><strong>$600</strong><span>wagered / hour</span></span>
+      </div>
+      <p class="action-line">Pick your pace. Set your budget.</p>
+    </main>
+    <footer class="card-footer" data-protected-zone="support-and-legal">
+      <span class="footer-support">Free support: {{HELPLINE_NUMBER}}</span>
+      <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+    </footer>
+  </article>
+</body>
+</html>

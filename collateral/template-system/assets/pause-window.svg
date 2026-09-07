@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" role="img" aria-label="A pause in an open window, with time continuing around it.">
+  <g fill="none" stroke="currentColor" stroke-width="3">
+    <path d="M0 368h960M80 0v460M880 0v460" opacity=".25"/>
+    <path d="M180 368V230a300 300 0 0 1 600 0v138"/>
+    <path d="M250 368V230a230 230 0 0 1 460 0v138" opacity=".35"/>
+    <circle cx="480" cy="232" r="130"/>
+    <path d="M480 86v16m146 130h-16M480 378v-16m-146-130h16"/>
+    <path d="M480 112a120 120 0 0 1 113 160" stroke-width="9"/>
+  </g>
+  <g fill="currentColor"><rect x="443" y="192" width="24" height="80" rx="3"/><rect x="493" y="192" width="24" height="80" rx="3"/><circle cx="593" cy="272" r="10"/></g>
+</svg>

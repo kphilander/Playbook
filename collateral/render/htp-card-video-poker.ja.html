@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">仕組み</div>
     <div class="game-name">ビデオポーカー</div>
-    <div class="key-fact">手札を残すか捨てるかの判断で数学が変わります。ペイテーブルで確認したいのは2つの数字：<strong>フルハウスとフラッシュの配当</strong>です。9/6が最良です。</div>
+    <div class="key-fact">ゲーム名と配当表を確認しましょう。ジャックス・オア・ベターの9/6は、フルハウス9倍、フラッシュ6倍を示します。</div>
     <div class="stat-block">
       <span class="stat-number">0.46%</span>
-      <span class="stat-unit">フルペイ9/6ジャックス・オア・ベター<br>のハウスエッジ</span>
+      <span class="stat-unit">9/6・最適な選択<br>最大枚数でロイヤル配当適用</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

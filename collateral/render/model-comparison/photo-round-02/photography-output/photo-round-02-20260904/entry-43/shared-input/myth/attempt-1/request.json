@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-43/shared-input/myth/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-43",
+  "concept": "myth",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T01:01:04.597Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-43",
+    "condition": "shared-input",
+    "concept": "myth",
+    "prompt": "Candid editorial lifestyle photograph for an entertainment-literacy myth-check card, portrait 3:4 composition at 2K. Two clearly adult friends aged about 30 to 45, diverse in appearance, stand together in an upscale casino lounge and share a knowing conversational smile; one has an open, relaxed hand near the edge of a generic, heavily out-of-focus slot display while the other responds with an expressive gesture. The people and their conversation are the focus, not the machine. Warm cinematic directional key light, amber highlights, soft navy shadows, natural skin tones, subtle contrast, premium magazine editorial realism, moderate shallow depth of field. Center the pair in a medium portrait with breathing room around faces and hands. The display must show no readable symbols, numbers, screen content, text, brands, logos, watermarks, cash, chips, betting slips, alcohol, minors, distress, or solitary subjects."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Candid editorial lifestyle photograph for an entertainment-literacy myth-check card, portrait 3:4 composition at 2K. Two clearly adult friends aged about 30 to 45, diverse in appearance, stand together in an upscale casino lounge and share a knowing conversational smile; one has an open, relaxed hand near the edge of a generic, heavily out-of-focus slot display while the other responds with an expressive gesture. The people and their conversation are the focus, not the machine. Warm cinematic directional key light, amber highlights, soft navy shadows, natural skin tones, subtle contrast, premium magazine editorial realism, moderate shallow depth of field. Center the pair in a medium portrait with breathing room around faces and hands. The display must show no readable symbols, numbers, screen content, text, brands, logos, watermarks, cash, chips, betting slips, alcohol, minors, distress, or solitary subjects."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

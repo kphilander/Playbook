@@ -40,11 +40,12 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
+<div class="story-card pb-creative">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="story-body">
@@ -52,14 +53,14 @@
     <div class="myth-intro">有些玩家认为：</div>
     <div class="myth-statement">「我正在连胜」</div>
     <div class="divider"></div>
-    <div class="fact-statement">事实上，每一次旋转、每一手牌、每一次掷骰均为<strong>统计上独立</strong>。人的思维容易看到规律，而数字并非如此。</div>
+    <div class="fact-statement">对于独立抽取结果的老虎机，<strong>过去的中奖不会提高下一次中奖概率。</strong></div>
     <div class="stat-block">
       <div class="stat-number">0%</div>
       <div class="stat-label">过往结果影响下一次旋转的概率</div>
     </div>
     <a href="#" class="story-cta">了解运作方式</a>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
   </div>
 </div>

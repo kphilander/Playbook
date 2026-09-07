@@ -42,11 +42,12 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="three-step-math">
+<div class="poster pb-creative" data-layout="three-step-math">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
@@ -66,10 +67,10 @@
         <span class="flow-value">1,000円</span>
       </div>
     </div>
-    <div class="insight">勝者を当てなくても、両方に賭けが集まればマージンが残ります。</div>
+    <div class="insight">例：両側に1.10ずつ、オッズ−110。片方が勝ち、片方が負け、返金はありません。</div>
     <a href="#" class="poster-cta">{{PROGRAM_URL}} で計算を確認</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料・秘密厳守サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

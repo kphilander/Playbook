@@ -177,68 +177,63 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
-
-  <div class="accent-bar"></div>
-
-  <div class="hero">
-    <div class="hero-logo">Playbook</div>
-    <h1>مرحبًا. في ما يلي بعض المعلومات المفيدة.</h1>
-    <p>يوفّر Playbook الحقائق والأدوات والأرقام الفعلية خلف الألعاب. دون شروط مخفية.</p>
-  </div>
-
-  <div class="section-white">
-    <div class="section-heading">ثلاث خطوات. 60 ثانية.</div>
-    <div class="tool-item">
-      <div class="tool-icon">1</div>
-      <div>
-        <strong>ضبط الميزانية</strong>
-        <span>اختيار حد الإيداع، أسبوعيًا أو شهريًا. لا يستغرق الأمر سوى 10 ثوانٍ.</span>
-      </div>
-    </div>
-    <div class="tool-item">
-      <div class="tool-icon">2</div>
-      <div>
-        <strong>ضبط الوتيرة</strong>
-        <span>تذكيرات الجلسة تعزز الوعي دون إزعاج. مجرد تنبيه لحظي.</span>
-      </div>
-    </div>
-    <div class="tool-item">
-      <div class="tool-icon">3</div>
-      <div>
-        <strong>معرفة اللعبة</strong>
-        <span>اختبار الاحتمالات: 7 أسئلة في دقيقتين.</span>
-      </div>
-    </div>
-    <a href="#" class="cta-button">البدء الآن</a>
-  </div>
-
-  <div class="section-gray">
-    <div class="stat-block">
-      <div class="stat-number"><span class="teal">0.5%</span> إلى <span class="orange">15%</span></div>
-      <div class="stat-context">هذا نطاق نسبة الكازينو في ألعاب الكازينو. معرفة النسبة تساعد على اختيار الألعاب وضبط الميزانية.</div>
-    </div>
-    <div style="text-align: center;">
-      <a href="#" class="cta-button">عرض الاحتمالات الحقيقية</a>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
-    <div class="footer-channels">
-      اتصال: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br>
-      رسالة نصية: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br>
+<div class="email pb-creative">
+<div class="accent-bar"></div>
+<div class="hero">
+<div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
+<h1>مرحبًا. في ما يلي بعض المعلومات المفيدة.</h1>
+<p>يوفّر Playbook الحقائق والأدوات والأرقام الفعلية خلف الألعاب. دون شروط مخفية.</p>
+</div>
+<div class="section-white">
+<div class="section-heading">ثلاث خطوات. <bdi dir="ltr">60</bdi> ثانية.</div>
+<div class="tool-item">
+<div class="tool-icon"><bdi dir="ltr">1</bdi></div>
+<div>
+<strong>ضبط الميزانية</strong>
+<span>اختيار حد الإيداع، أسبوعيًا أو شهريًا. لا يستغرق الأمر سوى <bdi dir="ltr">10</bdi> ثوانٍ.</span>
+</div>
+</div>
+<div class="tool-item">
+<div class="tool-icon"><bdi dir="ltr">2</bdi></div>
+<div>
+<strong>ضبط الوتيرة</strong>
+<span>تذكيرات الجلسة تعزز الوعي دون إزعاج. مجرد تنبيه لحظي.</span>
+</div>
+</div>
+<div class="tool-item">
+<div class="tool-icon"><bdi dir="ltr">3</bdi></div>
+<div>
+<strong>معرفة اللعبة</strong>
+<span>اختبار الاحتمالات: <bdi dir="ltr">7</bdi> أسئلة في دقيقتين.</span>
+</div>
+</div>
+<a class="cta-button" href="#">البدء الآن</a>
+</div>
+<div class="section-gray">
+<div class="stat-block">
+<div class="stat-number"><span class="teal"><bdi dir="ltr">0.5%</bdi></span> إلى <span class="orange"><bdi dir="ltr">15%</bdi></span></div>
+<div class="stat-context">هذا نطاق نسبة الكازينو في ألعاب الكازينو. معرفة النسبة تساعد على اختيار الألعاب وضبط الميزانية.</div>
+</div>
+<div style="text-align: center;">
+<a class="cta-button" href="#">عرض الاحتمالات الحقيقية</a>
+</div>
+</div>
+<div class="footer">
+<div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
+<div class="footer-channels">
+      اتصال: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br/>
+      رسالة نصية: <span dir="ltr">{{HELPLINE_NUMBER}}</span><br/>
       الدردشة: {{CHAT_URL}}
     </div>
-    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
-    <div class="footer-unsub">
-      <a href="#">إدارة التفضيلات</a>
-    </div>
-  </div>
-
+<div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+<div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
+<div class="footer-unsub">
+<a href="#">إدارة التفضيلات</a>
+</div>
+</div>
 </div>
 </body>
 </html>

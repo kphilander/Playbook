@@ -1,0 +1,3 @@
+/* One common integration fix, documented in integration-checks/record.json.
+   Neutralize inherited social-header padding; use the frozen template's top:57px. */
+.social-card.photo-concept .card-header { padding:0; }

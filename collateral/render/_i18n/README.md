@@ -1,3 +1,5 @@
+> September 2026: render masters and `../../creative-review/coverage.json` define the current copy and coverage. The map retains historical keys for compatibility; use a complete HTML template when adapting a new item.
+
 # i18n Translation Infrastructure
 
 This directory holds language variants of collateral templates and the translation strings that power them.
@@ -7,7 +9,7 @@ This directory holds language variants of collateral templates and the translati
 ```
 _i18n/
   README.md              — this file
-  strings.yml            — master translation map (source of truth for all translated strings)
+  strings.yml            — translation reference map (HTML masters are authoritative)
   ja/                    — Japanese templates (lang="ja", Noto Sans JP)
   zh-CN/                 — Simplified Chinese templates (lang="zh-Hans", Noto Sans SC)
   ar/                    — Arabic templates (lang="ar" dir="rtl", Noto Sans Arabic)

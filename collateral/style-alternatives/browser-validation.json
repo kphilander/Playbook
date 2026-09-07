@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "name": "Initial four odds directions",
+      "pass": true
+    },
+    {
+      "name": "All previews load",
+      "pass": true
+    },
+    {
+      "name": "Application lifestyle",
+      "pass": true
+    },
+    {
+      "name": "Application support",
+      "pass": true
+    },
+    {
+      "name": "Application odds",
+      "pass": true
+    },
+    {
+      "name": "Compare two directions",
+      "pass": true
+    },
+    {
+      "name": "Comparison URL state",
+      "pass": true
+    },
+    {
+      "name": "Reload restores comparison",
+      "pass": true
+    },
+    {
+      "name": "Enlarged preview",
+      "pass": true
+    },
+    {
+      "name": "Preview matches selected application",
+      "pass": true
+    },
+    {
+      "name": "Escape closes preview",
+      "pass": true
+    },
+    {
+      "name": "Focus restored",
+      "pass": true
+    },
+    {
+      "name": "Show all resets comparison",
+      "pass": true
+    },
+    {
+      "name": "390px layout fits",
+      "pass": true
+    },
+    {
+      "name": "Mobile dialog fits",
+      "pass": true
+    },
+    {
+      "name": "Local specimen inventory",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

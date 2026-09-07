@@ -1,0 +1,176 @@
+{
+  "participant": "entry-43",
+  "productionFiles": [
+    {
+      "file": "render.mjs",
+      "sha256": "7ccd4fda2808a508ed61b6a3f6d642f54f5ede972e05e383ba7d35270cbb6545"
+    },
+    {
+      "file": "production-fix.css",
+      "sha256": "0cf39611743ef004146a2ab46a03e03f46f297de13ecb21063fe2bc9a1d9a87c"
+    },
+    {
+      "file": "common.mjs",
+      "sha256": "609e66e2d5f523c62a67712fa05c023802f822098f65845bc07044d90b658347"
+    }
+  ],
+  "submissionIssues": [],
+  "concepts": [
+    {
+      "id": "sports",
+      "submissionSha256": "fa9a6256ccfe83a9f9dfb2e363b1dc96bfb45d7afbdb2884a8d1e63d34452c4e",
+      "photoStatus": "generated",
+      "photoSha256": "33a4ff735738e7c610db6e7475bd72b7034b28960b3e6f09106dacc4c19800b0",
+      "pngSha256": "36995d7dbaa497a35f7f69b2c2170eef97398920a4b5f1587424a5aebdf70fae",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "A Half Point Ends the Argument",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "At -6.5, the favorite needs a seven-point win. At +6.5, the underdog can lose by six or win. The half point means neither side can tie.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "The .5 is there so the spread has a clear winner.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Sports betting",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "myth",
+      "submissionSha256": "fa9a6256ccfe83a9f9dfb2e363b1dc96bfb45d7afbdb2884a8d1e63d34452c4e",
+      "photoStatus": "generated",
+      "photoSha256": "c74af6beaa561e10ea4c24ff0e8c379a49500cf9b585a2374829d01c3803a8f3",
+      "pngSha256": "929f27bb1f403a7e02ab2c550ec05c5c1bfdd3b572a80107b6a5f80f60d1f801",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "The Slot Keeps No Tab",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Every spin gets a new, independent result. Past losses do not load the next spin, and past wins do not make the next one less likely.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "The next spin starts fresh. The machine does not keep score.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Myth check",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "wildcard",
+      "submissionSha256": "fa9a6256ccfe83a9f9dfb2e363b1dc96bfb45d7afbdb2884a8d1e63d34452c4e",
+      "photoStatus": "generated",
+      "photoSha256": "0e932a73a208c703d7d1de8fecb11752bad5a279f72a66c395efac3420b01d3e",
+      "pngSha256": "f845007179b47651830aefedb8ba107634c76499367161f686359b882d1cdd63",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "The Total Is in the Tempo",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "$0.50 a spin, once every 3 seconds, is $10 a minute. Keep that pace for an hour and you have wagered $600—even on a penny machine.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Check your pace: small bets can add up quickly.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Your play",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+/* September creative refresh. Opted in by production masters; archived
+   model experiments keep their original styles and provenance. */
+@font-face { font-family: Inter; src: url('../../visual-identity/typography/fonts/inter-latin.woff2') format('woff2'); font-weight: 100 900; font-display: block; }
+@font-face { font-family: 'Source Sans 3'; src: url('../../visual-identity/typography/fonts/source-sans-3-latin.woff2') format('woff2'); font-weight: 200 900; font-display: block; }
+@font-face { font-family: 'Source Code Pro'; src: url('../../visual-identity/typography/fonts/source-code-pro-latin.woff2') format('woff2'); font-weight: 200 900; font-display: block; }
+
+.pb-creative { text-rendering: optimizeLegibility; }
+.pb-creative :is(.card-header,.story-header,.poster-header) { flex-shrink: 0; }
+.pb-creative :is(.myth-statement,.headline,.card-title,.htp-title) { text-wrap: balance; }
+.pb-creative .strike { text-decoration: none !important; color: inherit !important; }
+.pb-creative :is(.myth-label,.htp-label,.eyebrow) { text-transform: none !important; letter-spacing: .015em !important; }
+.pb-creative :is(.card-footer,.story-footer) { background: var(--pb-color-primary-dark); }
+.social-card.pb-creative:not(.concept-20) .card-body { min-height: 0; justify-content: center; padding-top: 44px; padding-bottom: 44px; gap: 0; }
+.social-card.pb-creative:not(.concept-20) :is(.myth-statement,.headline,.card-title,.htp-title) { font-size: 76px !important; line-height: 1.08 !important; letter-spacing: -.035em; margin-bottom: 32px; }
+.social-card.pb-creative .myth-statement { padding-inline-start: 28px; border-inline-start: 6px solid var(--pb-color-accent); }
+.social-card.pb-creative :is(.fact-statement,.key-fact) { line-height: 1.3 !important; }
+.social-card.pb-creative .stat-block { border-top: 2px solid var(--pb-color-primary-light); padding-top: 28px; margin-top: 36px; gap: 28px; }
+.social-card.pb-creative .stat-number { font-size: 104px !important; font-weight: 800; letter-spacing: -.04em; }
+.social-card.pb-creative .stat-unit { max-width: 680px; min-width: 0; }
+.social-card.pb-creative:has(.htp-label) .game-name { font-size: 86px !important; line-height: 1.08 !important; margin-bottom: 30px; }
+.social-card.pb-creative:has(.htp-label) .stat-block { flex-direction: column; align-items: flex-start; gap: 18px; }
+.social-card.pb-creative .card-footer { flex-direction: column; align-items: flex-start; gap: 8px; padding: 28px 64px; }
+.social-card.pb-creative .footer-helpline { font-family: var(--pb-font-body); font-weight: 600; }
+.social-card.pb-creative .hero-stat { text-align: start; border-inline-start: 6px solid var(--pb-color-secondary); border-radius: 0; padding: 28px 36px; }
+.social-card.pb-creative .bar-track { flex: 1 1 auto; min-width: 0; width: auto; }
+.social-card.pb-creative .bar-row { display: grid; grid-template-columns: minmax(0,1fr) 240px; align-items: center; gap: 24px; }
+.social-card.pb-creative .bar-track { width: 100%; }
+.social-card.pb-creative .bar-value { flex-shrink: 0; }
+.social-card.pb-creative .odds-table td { border-bottom: 1px solid var(--pb-color-primary-light); }
+.social-card.pb-creative .odds-table { border-collapse: collapse; }
+.pb-creative .creative-note { font: 42px/1.25 var(--pb-font-body); color: var(--pb-color-neutral-200); margin-top: 24px; }
+.social-card.pb-creative:has(.helpline-number) .card-body { padding-top: 60px; }
+.social-card.pb-creative:has(.helpline-number) .headline { color: var(--pb-color-primary); }
+.social-card.pb-creative:has(.helpline-number) .card-footer { background: var(--pb-color-white); color: var(--pb-color-primary); }
+.social-card.pb-creative:has(.helpline-number) .helpline-number { color: var(--pb-color-secondary-dark); }
+
+html:not(:lang(en)) .social-card.pb-creative:not(.concept-20) :is(.myth-statement,.headline,.card-title,.htp-title) { font-size: 66px !important; line-height: 1.22 !important; letter-spacing: 0; }
+html:lang(ar) .social-card.pb-creative .card-footer { gap: 12px; }
+body.pb-profile-social-square .social-card.pb-creative:not(.concept-20) .card-body { padding-top: 20px; padding-bottom: 20px; }
+body.pb-profile-social-square .social-card.pb-creative:not(.concept-20) :is(.myth-statement,.headline,.card-title,.htp-title) { font-size: 64px !important; margin-bottom: 22px; }
+body.pb-profile-social-square .social-card.pb-creative .stat-block { margin-top: 20px; padding-top: 20px; }
+body.pb-profile-social-square .social-card.pb-creative .card-footer { padding-top: 22px; padding-bottom: 22px; }
+
+.story-card.pb-creative :is(.headline,.myth-statement) { font-size: 92px !important; line-height: 1.1 !important; }
+.story-card.pb-creative[data-layout="two-comparisons"] .headline { font-size: 78px !important; }
+.story-card.pb-creative[data-layout="two-comparisons"] .story-body { padding-top: 36px; padding-bottom: 36px; }
+.story-card.pb-creative .money-block { border-top: 3px solid var(--pb-color-secondary); border-radius: 0; }
+.story-card.pb-creative .story-cta { border-radius: 0; }
+.story-card.pb-creative:has(.bar-list) .story-body { padding-top: 32px; padding-bottom: 32px; }
+.story-card.pb-creative:has(.bar-list) .headline { font-size: 78px !important; }
+.story-card.pb-creative:has(.bar-list) .bar-list { margin-bottom: 32px; gap: 30px; }
+
+/* Photography supplies the setting; an opaque text panel carries the fact.
+   No generated game detail or variable image contrast is used as evidence. */
+.poster.pb-creative:has(.poster-photo) .poster-photo { height: 61%; object-position: center 32%; }
+.poster.pb-creative:has(.poster-photo) .photo-scrim { background: linear-gradient(180deg, color-mix(in srgb,var(--pb-color-primary-dark) 75%,transparent), transparent 18%,transparent 49%,var(--pb-color-primary) 61%); }
+.poster.pb-creative:has(.poster-photo) .poster-body { flex: 0 0 auto; margin-top: auto; background: var(--pb-color-primary); padding: 60px 96px !important; }
+.poster.pb-creative:has(.poster-photo) .headline { font-size: 120px; line-height: 1.04; margin-bottom: 28px; text-shadow: none; }
+.poster.pb-creative:has(.poster-photo) .subhead { max-width: 1460px; font-size: 46px !important; margin-bottom: 40px; text-shadow: none; }
+.poster.pb-creative:has(.poster-photo) .eyebrow { color: var(--pb-color-secondary-light); margin-bottom: 24px; text-shadow: none; }
+.poster.pb-creative:has(.poster-photo) .poster-cta { border-radius: 0; padding: 24px 32px; }
+.poster.pb-creative:has(.poster-photo) .poster-footer { background: var(--pb-color-primary-dark); }
+.pb-creative .poster-cta,.pb-creative .story-cta { text-decoration: none; }
+.email.pb-creative .hero { text-align: start; }
+.email.pb-creative :is(.cta-button,.cta-button-outline) { border-radius: 6px; }
+/* White support formats need the darker accessible brand green for contact text. */
+.pb-creative:is(.helpline-card,.sign-restroom,.poster):has(.helpline-number) .helpline-number,
+.sign-restroom.pb-creative .restroom-number { color: var(--pb-color-secondary-dark); }
+/* A tall translated contact block shares the story safe area with the fact. */
+.story-card.pb-creative[data-layout="hero-proof"] .story-body { justify-content: flex-start; padding-top: 100px !important; }
+.story-card.pb-creative[data-layout="hero-proof"] .headline { margin-bottom: 48px; }
+.story-card.pb-creative[data-layout="hero-proof"] .stat-block { margin-bottom: 36px; }
+/* Long translated contact tokens and real URLs must wrap on narrow emails. */
+.email.pb-creative :is(.helpline,.footer-helpline,.channels,.resource-info) { min-width: 0; overflow-wrap: anywhere; }
+.email.pb-creative :is(.helpline,.footer-helpline) span { display: inline-block; max-width: 100%; overflow-wrap: anywhere; white-space: normal; }
+body.pb-profile-social-square .social-card.pb-creative:has(.odds-table) .card-title { font-size: 56px !important; margin-bottom: 16px; }
+body.pb-profile-social-square .social-card.pb-creative:has(.odds-table) .creative-note { margin-top: 14px; }
+.cooldown-screen.pb-creative :is(.helpline-number,.helpline-channels) { min-width: 0; overflow-wrap: anywhere; }
+.cooldown-screen.pb-creative .helpline-number span { display: inline-block; max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+/* Full Arabic day names read clearly as rows on a narrow activity summary. */
+html:lang(ar) .session-summary.pb-creative .chart { display: grid; height: auto; gap: 10px; }
+html:lang(ar) .session-summary.pb-creative .bar-col { display: grid; grid-template-columns: 76px minmax(0,1fr); align-items: center; column-gap: 16px; height: auto; }
+html:lang(ar) .session-summary.pb-creative .bar-label { grid-column: 1; grid-row: 1; margin: 0; }
+html:lang(ar) .session-summary.pb-creative .bar { grid-column: 2; grid-row: 1; height: 12px; max-width: none; }
+html:lang(ar) .session-summary.pb-creative .stats-row { display: block; }
+html:lang(ar) .session-summary.pb-creative .stats-row .sep { padding-inline: 5px; }
+
+/* Core distance posters: the headline and selected proof should fill the
+   format with a useful hierarchy, not float as a small central paragraph. */
+.poster.poster-editorial .poster-body { justify-content: flex-start; padding: 164px 120px 96px !important; }
+.poster.poster-editorial :is(.headline,.myth-statement) { font-size: 154px !important; line-height: 1.04 !important; letter-spacing: -.035em; margin-bottom: 52px; }
+.poster.poster-editorial :is(.eyebrow,.myth-label,.section-label) { font-size: 44px !important; margin-bottom: 40px; }
+.poster.poster-editorial :is(.subhead,.fact-statement) { font-size: 54px !important; line-height: 1.3 !important; max-width: 1480px; margin-bottom: 88px !important; }
+.poster.poster-editorial .stat-col { padding: 64px 48px !important; border-radius: 0; border-top: 6px solid var(--pb-color-secondary); background: var(--pb-color-primary-light); text-align: start; }
+.poster.poster-editorial :is(.stat-game,.edge-game,.stat-label) { font-size: 46px !important; }
+.poster.poster-editorial .stat-edge { font-size: 154px !important; margin-block: 32px; }
+.poster.poster-editorial .stat-note { font-size: 42px !important; color: var(--pb-color-neutral-200); }
+.poster.poster-editorial .stat-grid { max-width: none; margin-bottom: 90px !important; }
+.poster.poster-editorial .qr-row { margin-top: 32px; }
+.poster.poster-editorial :is(.qr-label,.poster-cta,.quiz-cta) { font-size: 46px !important; text-align: start; border-radius: 0; }
+.poster.poster-editorial .edge-row { padding: 52px 48px !important; border-radius: 0; }
+.poster.poster-editorial .edge-pct { font-size: 104px !important; min-width: 320px; }
+.poster.poster-editorial .edge-bar.low { width: 9.5057%; }
+.poster.poster-editorial .edge-bar.high { width: 100%; }
+.poster.poster-editorial .edge-bar { margin-top: 28px; height: 24px; border-radius: 0; }
+.poster.poster-editorial .stat-item { max-width: none; text-align: start; background: var(--pb-color-accent); color: var(--pb-color-primary); padding: 64px; }
+.poster.poster-editorial .stat-number { font-size: 156px !important; color: var(--pb-color-primary); margin-bottom: 32px; }
+.poster.poster-editorial .stat-label { color: var(--pb-color-primary); }
+.poster.poster-editorial .divider { display: none; }
+html:not(:lang(en)) .poster.poster-editorial :is(.headline,.myth-statement) { font-size: 122px !important; line-height: 1.2 !important; letter-spacing: 0; }
+html:not(:lang(en)) .poster.poster-editorial .stat-number { font-size: 130px !important; }

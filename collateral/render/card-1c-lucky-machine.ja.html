@@ -43,25 +43,26 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card" data-layout="single-proof">
+<div class="social-card pb-creative" data-layout="single-proof">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="myth-label">俗説と数学</div>
     <div class="myth-statement">「相性のよい台」も、あなたを覚えてはいません。</div>
-    <div class="fact-statement">すべてのスピンは<strong>乱数発生器</strong>で決まります。台に記憶はなく、直前の結果が次の結果に影響することもありません。</div>
+    <div class="fact-statement">乱数生成器が結果を決めます。<strong>座る場所はゲームの確率を変えません。</strong>ルールと配当表を確認しましょう。</div>
     <div class="stat-row">
       <div class="stat-card">
-        <div class="game">乱数発生器の記憶</div>
-        <div class="edge teal">0</div>
+        <div class="game">座席による確率の優位</div>
+        <div class="edge teal">0%</div>
       </div>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

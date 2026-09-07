@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photography-output/google-photography-setup-v2-20260904/coordinator/connection-check/photo-access-check/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "fa8b779fceef37f43eec0955a28dc86fb0ef7a1c5133342ae727db1fde005409",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "coordinator",
+  "concept": "photo-access-check",
+  "condition": "connection-check",
+  "startedAt": "2026-09-05T00:08:55.475Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 2383783,
+      "sha256": "bf3ea625739689113a73b352abb8b4fe838e00d0c87d8144aa17be2448fc8379"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 137,
+    "candidatesTokenCount": 1362,
+    "totalTokenCount": 1699,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 137
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "thoughtsTokenCount": 200,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 22071,
+  "completedAt": "2026-09-05T00:09:17.546Z"
+}

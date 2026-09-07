@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/campaign-concepts/photography/output/campaign-photo-scenes-20260906/creative-campaign/shared-input/rest-show/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "1c77fd2fc6d643a1cd13a3e7a068f1b37d9a527a6229fa0aaf31e60476e7c938",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-campaign",
+  "concept": "rest-show",
+  "condition": "shared-input",
+  "startedAt": "2026-09-06T20:41:28.109Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 9347024,
+      "sha256": "26e4158aeaf67dfcc77b2fcc7aaa3e120a01032585d10252278cb8f5e53fbbd8"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 652,
+    "candidatesTokenCount": 2276,
+    "totalTokenCount": 3287,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 652
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 2000
+      }
+    ],
+    "thoughtsTokenCount": 359,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 33235,
+  "completedAt": "2026-09-06T20:42:01.344Z"
+}

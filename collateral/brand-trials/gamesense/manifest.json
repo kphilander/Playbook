@@ -1,0 +1,1711 @@
+{
+  "brand": "GameSense",
+  "country": "canada",
+  "region": "british-columbia",
+  "mandatory": "Know your limit, play within it.",
+  "inputHashes": {
+    "yaml": "5c233186290425f3cdd0debe9aec1cdee640a385684705fd9189e71f99a8fae7",
+    "css": "08f096ca7439389112891c45268e80ef0771eb386b69340292da19570030826e"
+  },
+  "items": [
+    {
+      "id": "card-1a-hot-streak--flat",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1a-hot-streak",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-1a-hot-streak--flat.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+      "pngSha256": "4f93d6d99c91443f46c3e98ef6f1235fe4ffca95134390a7c42e99d6edc6db00"
+    },
+    {
+      "id": "card-1a-hot-streak--spotlight",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1a-hot-streak",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-1a-hot-streak--spotlight.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+      "pngSha256": "307f4fa5975bcb0c4880063c4abdb3017b40bc9b08356260484f31b65c5aec34"
+    },
+    {
+      "id": "card-1a-hot-streak--contour",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1a-hot-streak",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-1a-hot-streak--contour.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+      "pngSha256": "8377e7552b3c710a2187870efd95755e97d96ee5123d9b876bb74a0194ab5d59"
+    },
+    {
+      "id": "card-1a-hot-streak--paper",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1a-hot-streak",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-1a-hot-streak--paper.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+      "pngSha256": "b73b5d096d58a8bd3c9912d6ab7f302810835696a1392a2950cc07f3e4d4ba8a"
+    },
+    {
+      "id": "card-1a-hot-streak--emerald",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1a-hot-streak",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-1a-hot-streak--emerald.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+      "pngSha256": "4100180ce5b43f62d2d93a26966b7c0ce4e258be161368788e8e49c4601d8355"
+    },
+    {
+      "id": "card-1a-hot-streak--signal",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1a-hot-streak",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-1a-hot-streak--signal.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+      "pngSha256": "76f63d8750380cee3d31da92d105ab9aae5eed9cfdd9b7e5ea92a98cf340e0d9"
+    },
+    {
+      "id": "card-1b-due-for-win--flat",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1b-due-for-win",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "Due for a win",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-1b-due-for-win--flat.png",
+      "title": "\"I'm due for a win\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+      "pngSha256": "bd3c343ffec1e864bb26367495b7347580aa29f436aecb1b5468a03f2679c2ac"
+    },
+    {
+      "id": "card-1b-due-for-win--spotlight",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1b-due-for-win",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "Due for a win",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-1b-due-for-win--spotlight.png",
+      "title": "\"I'm due for a win\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+      "pngSha256": "e7c92625454618caf1130c4f8b372e5a477c1d18585c002549dc1556564b7a06"
+    },
+    {
+      "id": "card-1b-due-for-win--contour",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1b-due-for-win",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "Due for a win",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-1b-due-for-win--contour.png",
+      "title": "\"I'm due for a win\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+      "pngSha256": "6b36020ce492828142ef00064f174900af023182f410f0ab7fd76bf132790ad8"
+    },
+    {
+      "id": "card-1b-due-for-win--paper",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1b-due-for-win",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "Due for a win",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-1b-due-for-win--paper.png",
+      "title": "\"I'm due for a win\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+      "pngSha256": "9b0cb1511bc4c12598a946af556ac07d6b9047d1d919e40c2cc6ff3c4856914d"
+    },
+    {
+      "id": "card-1b-due-for-win--emerald",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1b-due-for-win",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "Due for a win",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-1b-due-for-win--emerald.png",
+      "title": "\"I'm due for a win\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+      "pngSha256": "94beb68cc966aa8fd2479b1a9173b9bb063cf7ed268238e91217141073ca0fdd"
+    },
+    {
+      "id": "card-1b-due-for-win--signal",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-1b-due-for-win",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "Due for a win",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-1b-due-for-win--signal.png",
+      "title": "\"I'm due for a win\"",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+      "pngSha256": "34d7d6bdbef453ed9d23a46561f116d30026c9114de3d172cf029149aebb991c"
+    },
+    {
+      "id": "card-2b-sports-betting--flat",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2b-sports-betting",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "The whole return",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-2b-sports-betting--flat.png",
+      "title": "−110. Read the whole return.",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+      "pngSha256": "c48ef97a74824fa9ac55ead33f2059ac52e49711549dc8d4d5f49b87deca4fa5"
+    },
+    {
+      "id": "card-2b-sports-betting--spotlight",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2b-sports-betting",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "The whole return",
+      "favorite": true,
+      "previousChoice": "favorite",
+      "before": "../../text-surfaces/renders/card-2b-sports-betting--spotlight.png",
+      "title": "−110. Read the whole return.",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+      "pngSha256": "0f46462aed45e0115a53669a961d08c8b1979a30bc7640ed44979763f6b86c8a"
+    },
+    {
+      "id": "card-2b-sports-betting--contour",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2b-sports-betting",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "The whole return",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-2b-sports-betting--contour.png",
+      "title": "−110. Read the whole return.",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+      "pngSha256": "34568717265d97ac151e073a088426424f645e957a21ae7f3bd89229dc0b02e9"
+    },
+    {
+      "id": "card-2b-sports-betting--paper",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2b-sports-betting",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "The whole return",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-2b-sports-betting--paper.png",
+      "title": "−110. Read the whole return.",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+      "pngSha256": "3bd1e644c7b8dbb5d8e17cfbbe2ce098e3ed6a213f0242a048c99809cb027119"
+    },
+    {
+      "id": "card-2b-sports-betting--emerald",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2b-sports-betting",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "The whole return",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-2b-sports-betting--emerald.png",
+      "title": "−110. Read the whole return.",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+      "pngSha256": "abe88100d903ebae103eb106a005425255c571918dd03270635f9e1768e0105b"
+    },
+    {
+      "id": "card-2b-sports-betting--signal",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2b-sports-betting",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "The whole return",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/card-2b-sports-betting--signal.png",
+      "title": "−110. Read the whole return.",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+      "pngSha256": "a429ac3d57ba2d73527f6e0eb3404840f8455b6381d29bb9bc8c2e446962db0d"
+    },
+    {
+      "id": "card-2c-bonus-wagering--flat",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2c-bonus-wagering",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "Think you know?",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-2c-bonus-wagering--flat.png",
+      "title": "Think you know the odds?",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+      "pngSha256": "6d70984b17835e94c7c4482eaf3d65f97236b92516f79c81190c3dd12a1a6726"
+    },
+    {
+      "id": "card-2c-bonus-wagering--spotlight",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2c-bonus-wagering",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "Think you know?",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-2c-bonus-wagering--spotlight.png",
+      "title": "Think you know the odds?",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+      "pngSha256": "8c7cd41618b62d70ef2a0c142e89ff9e0fe2490d246d8d213c35a9c603df32c1"
+    },
+    {
+      "id": "card-2c-bonus-wagering--contour",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2c-bonus-wagering",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "Think you know?",
+      "favorite": true,
+      "previousChoice": "favorite",
+      "before": "../../text-surfaces/renders/card-2c-bonus-wagering--contour.png",
+      "title": "Think you know the odds?",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+      "pngSha256": "4a5180c4423c86c8a9ecf533ab5997e3d3a9c68b1d3f3c7ff12461ee2c84c34f"
+    },
+    {
+      "id": "card-2c-bonus-wagering--paper",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2c-bonus-wagering",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "Think you know?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/card-2c-bonus-wagering--paper.png",
+      "title": "Think you know the odds?",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+      "pngSha256": "4402845e5c93b570ad07344afc095aef76e1c91578db317e51a067787856b759"
+    },
+    {
+      "id": "card-2c-bonus-wagering--emerald",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2c-bonus-wagering",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "Think you know?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/card-2c-bonus-wagering--emerald.png",
+      "title": "Think you know the odds?",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+      "pngSha256": "4cd68a154f2c92ab9cdcd4fb3c77570bd7448e8f73717a075d1bb797b548f103"
+    },
+    {
+      "id": "card-2c-bonus-wagering--signal",
+      "category": "Cards",
+      "selector": ".social-card",
+      "template": "card-2c-bonus-wagering",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "Think you know?",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/card-2c-bonus-wagering--signal.png",
+      "title": "Think you know the odds?",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+      "pngSha256": "917f3f81f750624cbbb8c3bbe1d8a2d4983a6e6516bd9a969a3549b20e13241e"
+    },
+    {
+      "id": "story-3a-hot-streak--flat",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3a-hot-streak",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/story-3a-hot-streak--flat.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+      "pngSha256": "22759cd8f125f0c1cd78a545b5b07bd5d4dfdce3a3bea611ae468913d57ef0b7"
+    },
+    {
+      "id": "story-3a-hot-streak--spotlight",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3a-hot-streak",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/story-3a-hot-streak--spotlight.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+      "pngSha256": "a4284ef27c53c11dc1701ad68856060aed0bd4d61acc650dfefae56a012429b7"
+    },
+    {
+      "id": "story-3a-hot-streak--contour",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3a-hot-streak",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/story-3a-hot-streak--contour.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+      "pngSha256": "a5e42ec2686a781c17a92671a600044f812e19536ff3825cd8d1735da44dc4d3"
+    },
+    {
+      "id": "story-3a-hot-streak--paper",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3a-hot-streak",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/story-3a-hot-streak--paper.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+      "pngSha256": "2c28a83f9034112290f794e5820862648ac8cceffd5eeaf028700cb41d0b01c2"
+    },
+    {
+      "id": "story-3a-hot-streak--emerald",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3a-hot-streak",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/story-3a-hot-streak--emerald.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+      "pngSha256": "c1ae0569df720ffd99453782c8ab2e3ce0e487d053a49f79351f6b98be65433f"
+    },
+    {
+      "id": "story-3a-hot-streak--signal",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3a-hot-streak",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "Hot streak",
+      "favorite": false,
+      "previousChoice": "pass",
+      "before": "../../text-surfaces/renders/story-3a-hot-streak--signal.png",
+      "title": "\"I'm on a hot streak\"",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+      "pngSha256": "8eecd5d849424802569accd365045db201ac4010895c6b2a0c6de451ace9eadc"
+    },
+    {
+      "id": "story-3b-house-edge--flat",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3b-house-edge",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "Different math",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3b-house-edge--flat.png",
+      "title": "Same stake. Different math.",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+      "pngSha256": "ca44a9feb21bee62b8bc1fe35d0b421352ad99af329b99e8b65d45c19e792984"
+    },
+    {
+      "id": "story-3b-house-edge--spotlight",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3b-house-edge",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "Different math",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3b-house-edge--spotlight.png",
+      "title": "Same stake. Different math.",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+      "pngSha256": "66601d95c0efa69563ab5ee56a803bae8884fe5e346863e2c9ef94c064c2b479"
+    },
+    {
+      "id": "story-3b-house-edge--contour",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3b-house-edge",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "Different math",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3b-house-edge--contour.png",
+      "title": "Same stake. Different math.",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+      "pngSha256": "aae0a2718d959be7917da67c1ae0b39871b085e1ffeea3de48ba657fd72ddf74"
+    },
+    {
+      "id": "story-3b-house-edge--paper",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3b-house-edge",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "Different math",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3b-house-edge--paper.png",
+      "title": "Same stake. Different math.",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+      "pngSha256": "55847cae179bfb247c6d0ea9d7472e31b06f2c19546f73e85444ab8c1c5f96ff"
+    },
+    {
+      "id": "story-3b-house-edge--emerald",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3b-house-edge",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "Different math",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3b-house-edge--emerald.png",
+      "title": "Same stake. Different math.",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+      "pngSha256": "33412b046debb9bf6a21b7ea8eacc4a49d2d0936c018904fdf04ac02f7c8d986"
+    },
+    {
+      "id": "story-3b-house-edge--signal",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3b-house-edge",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "Different math",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3b-house-edge--signal.png",
+      "title": "Same stake. Different math.",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+      "pngSha256": "8ab45c057dab6b3d1a8fb773378f9ebe6e08c779d0f9c42471eee7d9e2b450d8"
+    },
+    {
+      "id": "story-3c-sports-betting--flat",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3c-sports-betting",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "What does −110 mean?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3c-sports-betting--flat.png",
+      "title": "What does -110 mean in sports betting?",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+      "pngSha256": "9ebfafeb967144dd215138c29f6d77b30e17db83487f176b074bca716a03995f"
+    },
+    {
+      "id": "story-3c-sports-betting--spotlight",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3c-sports-betting",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "What does −110 mean?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3c-sports-betting--spotlight.png",
+      "title": "What does -110 mean in sports betting?",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+      "pngSha256": "52b983eb5db886300669e558decb8cd66f233fa458c30370718ccd6075a8d4b6"
+    },
+    {
+      "id": "story-3c-sports-betting--contour",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3c-sports-betting",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "What does −110 mean?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3c-sports-betting--contour.png",
+      "title": "What does -110 mean in sports betting?",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+      "pngSha256": "b8e36dd0bf57590d1b1e0b14eb694456eeb506e3d2a79a8e79c519c80361cbb6"
+    },
+    {
+      "id": "story-3c-sports-betting--paper",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3c-sports-betting",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "What does −110 mean?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3c-sports-betting--paper.png",
+      "title": "What does -110 mean in sports betting?",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+      "pngSha256": "3e2878b110c76348e91068a6603c12abddfc646cb57f63d6df52d305fd8de628"
+    },
+    {
+      "id": "story-3c-sports-betting--emerald",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3c-sports-betting",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "What does −110 mean?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3c-sports-betting--emerald.png",
+      "title": "What does -110 mean in sports betting?",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+      "pngSha256": "909ea8a772b1aedb31f3b382880783e65d33520023bc2bff217fc39b57ea5db0"
+    },
+    {
+      "id": "story-3c-sports-betting--signal",
+      "category": "Stories",
+      "selector": ".story-card",
+      "template": "story-3c-sports-betting",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "What does −110 mean?",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/story-3c-sports-betting--signal.png",
+      "title": "What does -110 mean in sports betting?",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+      "pngSha256": "5e19030087c9abbc842a19939b4b50b40b501805f23fcf69dd9407869784e907"
+    },
+    {
+      "id": "poster-4a-know-your-game--flat",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4a-know-your-game",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "Know your game",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/poster-4a-know-your-game--flat.png",
+      "title": "Know your game. Play on your terms.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+      "pngSha256": "a82a2cbfb7f7b24159c1f26875b43328f6295df23677dde41af8df15406cb12d"
+    },
+    {
+      "id": "poster-4a-know-your-game--spotlight",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4a-know-your-game",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "Know your game",
+      "favorite": true,
+      "previousChoice": "favorite",
+      "before": "../../text-surfaces/renders/poster-4a-know-your-game--spotlight.png",
+      "title": "Know your game. Play on your terms.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+      "pngSha256": "01cc9da90d15a80ea76a0884356b58bc5198588d1651f97984aef4cf5c908398"
+    },
+    {
+      "id": "poster-4a-know-your-game--contour",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4a-know-your-game",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "Know your game",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/poster-4a-know-your-game--contour.png",
+      "title": "Know your game. Play on your terms.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+      "pngSha256": "b5d9131e11a6eaf2ec0cc316e28965cdfc628a78a42b8da953423b1838c8205d"
+    },
+    {
+      "id": "poster-4a-know-your-game--paper",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4a-know-your-game",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "Know your game",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/poster-4a-know-your-game--paper.png",
+      "title": "Know your game. Play on your terms.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+      "pngSha256": "48d6b6eda1d2b8221cf07a7ed248b21c540480d1d9681d177675e766071cbf8e"
+    },
+    {
+      "id": "poster-4a-know-your-game--emerald",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4a-know-your-game",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "Know your game",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/poster-4a-know-your-game--emerald.png",
+      "title": "Know your game. Play on your terms.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+      "pngSha256": "cba0d2dd06a7f99c2751b5c5679308d93b3fa92e42cd35f11b2d077f8150ebb1"
+    },
+    {
+      "id": "poster-4a-know-your-game--signal",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4a-know-your-game",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "Know your game",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/poster-4a-know-your-game--signal.png",
+      "title": "Know your game. Play on your terms.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+      "pngSha256": "767b6c911778347d5efad17bbc59142fb36600d57237e2aee6e1fa90f05e6772"
+    },
+    {
+      "id": "poster-4b-no-fine-print--flat",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4b-no-fine-print",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "poster 4b no fine print",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/poster-4b-no-fine-print.png",
+      "title": "Same stake. Different math.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "818743837c2259fd223e2cdb3698dcab5e1d7d8a00aba2b0a529730cef5925aa",
+      "pngSha256": "0135f86cdad22adcdf174c1233548835528b1bb20e553591c759e16b2a184870"
+    },
+    {
+      "id": "poster-4c-game-iq--flat",
+      "category": "Posters",
+      "selector": ".poster",
+      "template": "poster-4c-game-iq",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "poster 4c game iq",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/poster-4c-game-iq.png",
+      "title": "A losing streak isn’t a countdown.",
+      "dimensions": [
+        1800,
+        2400
+      ],
+      "pixels": [
+        3600,
+        4800
+      ],
+      "sourceSha256": "75a58803ccdb946e2ac601366caa3e7beec1e621a000dea47467cdeb6e817d59",
+      "pngSha256": "9629826655e0262444cd75e8d7e30edb619dc446716be3a3950c26723022b744"
+    },
+    {
+      "id": "rack-card-5a--flat",
+      "category": "Print",
+      "selector": ".rack-card",
+      "template": "rack-card-5a",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "rack card 5a",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/rack-card-5a.png",
+      "title": "Every game has math. Here's yours.",
+      "dimensions": [
+        800,
+        1800
+      ],
+      "pixels": [
+        1600,
+        3600
+      ],
+      "sourceSha256": "a0bc79878723bf57f4be24805dc73f51fcc3fbad386c7a13fc0996a2905752c8",
+      "pngSha256": "72220ed5a0a9198c26dae0cb06edd5cb0538295f2f1dafea25b46e5b46c51397"
+    },
+    {
+      "id": "table-tent-5b--flat",
+      "category": "Print",
+      "selector": ".table-tent",
+      "template": "table-tent-5b",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "table tent 5b",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/table-tent-5b.png",
+      "title": "table tent 5b",
+      "dimensions": [
+        800,
+        2400
+      ],
+      "pixels": [
+        1600,
+        4800
+      ],
+      "sourceSha256": "8091aa0bef9e426c5261c20f7f0a6897c1cf0139d12691c55b92d04190d443af",
+      "pngSha256": "7d0be2adec1a79646d4fbe25092db80a4553f2784b22f8cb86da0eeaa6ed8d4c"
+    },
+    {
+      "id": "email-welcome-7a--flat",
+      "category": "Email",
+      "selector": ".email",
+      "template": "email-welcome-7a",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "email welcome 7a",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/email-welcome-7a.png",
+      "title": "Welcome. A few things worth knowing.",
+      "dimensions": [
+        600,
+        1549
+      ],
+      "pixels": [
+        1200,
+        3096
+      ],
+      "sourceSha256": "d49f52c5691639a40110a1f5b31efc4ed25bdf9492a687957035046678de4d55",
+      "pngSha256": "dbc6be4f6f6ab950c4aa27fae1e95bdc548e872d8e6db35dbbf6b521fb9537da"
+    },
+    {
+      "id": "email-deposit-7b--flat",
+      "category": "Email",
+      "selector": ".email",
+      "template": "email-deposit-7b",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "email deposit 7b",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/email-deposit-7b.png",
+      "title": "Deposit confirmed",
+      "dimensions": [
+        600,
+        1431
+      ],
+      "pixels": [
+        1200,
+        2860
+      ],
+      "sourceSha256": "fff8286aeed74a44effbf538cbcc4fbdaae72e8ff93cd21d6c3808c6f0294522",
+      "pngSha256": "c028199211a2209f4d5f52219b9b616b2f8c59eee7172c122e1186351377635b"
+    },
+    {
+      "id": "email-monthly-7c--flat",
+      "category": "Email",
+      "selector": ".email",
+      "template": "email-monthly-7c",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "email monthly 7c",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/email-monthly-7c.png",
+      "title": "Your January summary",
+      "dimensions": [
+        600,
+        1718
+      ],
+      "pixels": [
+        1200,
+        3436
+      ],
+      "sourceSha256": "c167b8714b8400d5ed479acb91c0e66388d6d807c080325ed83c8f788f024111",
+      "pngSha256": "53110a5ab20f4f5c8d036aa34f6e9382a815644de4548df86b964be23aab36ca"
+    },
+    {
+      "id": "email-reactivation-7d--flat",
+      "category": "Email",
+      "selector": ".email",
+      "template": "email-reactivation-7d",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "email reactivation 7d",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/email-reactivation-7d.png",
+      "title": "Your tools are right where you left them",
+      "dimensions": [
+        600,
+        1638
+      ],
+      "pixels": [
+        1200,
+        3276
+      ],
+      "sourceSha256": "9fda24a5e8f66570eb9861da2d63cac0c805a18358cef39fdde558e82831ff76",
+      "pngSha256": "c255823178cbfe59d7452537ceab3016c8a1d34be980ffc849c35e19ce979c85"
+    },
+    {
+      "id": "htp-card-baccarat--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-baccarat",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "baccarat",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-baccarat.png",
+      "title": "Baccarat",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "71b21174146e7563a7b0b528dfd75a5cb142493022004809b171b41ee374cae8",
+      "pngSha256": "916541a4f349a43cb9f6c9940fa98ced612b9e458e64fe62fa6838f904b4d2dc"
+    },
+    {
+      "id": "htp-card-bingo--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-bingo",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "bingo",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-bingo.png",
+      "title": "Bingo",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "78e2656457015bca1eb4b66c7fce03c8e725021ea7df9c11715f259dd75127a8",
+      "pngSha256": "26147d21044d4aea7d006ba28188a56716e069980450fdf451614a84063600fb"
+    },
+    {
+      "id": "htp-card-blackjack--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-blackjack",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "Blackjack",
+      "favorite": true,
+      "previousChoice": "favorite",
+      "before": "../../text-surfaces/renders/htp-card-blackjack--flat.png",
+      "title": "Blackjack",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+      "pngSha256": "eb7ef2dbc4e05d6fd885b22cf423ab89fe3430b10b29526d27d3892e8be560f5"
+    },
+    {
+      "id": "htp-card-blackjack--spotlight",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-blackjack",
+      "surface": "spotlight",
+      "surfaceName": "Spotlight",
+      "name": "Blackjack",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/htp-card-blackjack--spotlight.png",
+      "title": "Blackjack",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+      "pngSha256": "6b679f6d146c058aa42748e17b036e90ad2c714b4584ff50bd7e0f4549cf0018"
+    },
+    {
+      "id": "htp-card-blackjack--contour",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-blackjack",
+      "surface": "contour",
+      "surfaceName": "Contour",
+      "name": "Blackjack",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/htp-card-blackjack--contour.png",
+      "title": "Blackjack",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+      "pngSha256": "d2f019e842049470461695d0cb658df0bca1624fad70893fd32dbc6e20c24907"
+    },
+    {
+      "id": "htp-card-blackjack--paper",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-blackjack",
+      "surface": "paper",
+      "surfaceName": "Editorial",
+      "name": "Blackjack",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/htp-card-blackjack--paper.png",
+      "title": "Blackjack",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+      "pngSha256": "67efd5b7778728e9a132dc5d4b73f63638808b27c5eda9ce804abfd5d306ae44"
+    },
+    {
+      "id": "htp-card-blackjack--emerald",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-blackjack",
+      "surface": "emerald",
+      "surfaceName": "Emerald",
+      "name": "Blackjack",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../text-surfaces/renders/htp-card-blackjack--emerald.png",
+      "title": "Blackjack",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+      "pngSha256": "567591e99adf6de1f2d784e626f358b23d1e460401be69bf2bebf4ecabbf6ca5"
+    },
+    {
+      "id": "htp-card-blackjack--signal",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-blackjack",
+      "surface": "signal",
+      "surfaceName": "Gridline",
+      "name": "Blackjack",
+      "favorite": false,
+      "previousChoice": "maybe",
+      "before": "../../text-surfaces/renders/htp-card-blackjack--signal.png",
+      "title": "Blackjack",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+      "pngSha256": "a1b183c539f2994e25fea2ad1cf508faad76356a33ff2edae036e9014c34f964"
+    },
+    {
+      "id": "htp-card-craps--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-craps",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "craps",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-craps.png",
+      "title": "Craps",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "19a8024398ead91bce4c11e50c844afe901aa0125cad8da2d14513de1875ae8a",
+      "pngSha256": "631e24018f14b88aa92a94596e90a2848d4dc4744a231fe3f9b894766668a62d"
+    },
+    {
+      "id": "htp-card-horse-racing--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-horse-racing",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "horse racing",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-horse-racing.png",
+      "title": "Horse Racing",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "af093136b1056d9a8706446c05cd1df3fed63ab2038b90ecf847c3c19247cb5c",
+      "pngSha256": "5174059cc402e93f777630beaa32d2945a2cf326f5bf513ebb98677e46ea82fe"
+    },
+    {
+      "id": "htp-card-lottery--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-lottery",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "lottery",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-lottery.png",
+      "title": "Lottery",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "fd1e04a07aac821ba61fe7cbb8fc36171d722474b7a8801d5dcc9820c7c7b979",
+      "pngSha256": "30e368a9c3d66816d00ea296e234df0224dd38e2db04d61690a442c1de581d07"
+    },
+    {
+      "id": "htp-card-roulette--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-roulette",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "roulette",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-roulette.png",
+      "title": "American roulette",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "f95997f2b1206fb7c23118a7b4990aa06c765e3058ceef9212840cb6f350876f",
+      "pngSha256": "f242ac7aee60b2411a726b8ad678b2beb23f595a9cb9d49d79937851396d780c"
+    },
+    {
+      "id": "htp-card-slots--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-slots",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "slots",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-slots.png",
+      "title": "Slots",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "ec1508408e8c6a5c61a217ea77269a4b414a316d43d3a0069df2c5eb1aa687de",
+      "pngSha256": "1b80febbedbe003fe9a48c54746f93c6ed29b7a0414abeff547ee33b41a06a27"
+    },
+    {
+      "id": "htp-card-sports--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-sports",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "sports",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-sports.png",
+      "title": "Sports Betting",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "cdafe03143833a9d9f127ebbacabaf5083339ff7b8419097cc1c996edda3e4c0",
+      "pngSha256": "cf8f19456c9c72ee157386c3281086a807b581e019846c60c4161f56dfb7f7da"
+    },
+    {
+      "id": "htp-card-video-poker--flat",
+      "category": "How to play",
+      "selector": ".social-card",
+      "template": "htp-card-video-poker",
+      "surface": "flat",
+      "surfaceName": "Current",
+      "name": "video poker",
+      "favorite": false,
+      "previousChoice": "unrated",
+      "before": "../../render/htp-card-video-poker.png",
+      "title": "Video Poker",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "8236af8b2b8f87f6f9b0cfff2c6361983964bddb0f05ac4a82db178b493cdd70",
+      "pngSha256": "88ea1210df776522b8efb2bed8a207f2110a141602fe112c99720ff1415ebd89"
+    },
+    {
+      "id": "campaign-portrait",
+      "template": "campaign-presence",
+      "selector": ".specimen",
+      "category": "Photography",
+      "surface": "photo",
+      "surfaceName": "Restrained",
+      "name": "Leave room for the rest · Portrait post",
+      "format": "portrait",
+      "before": "../../campaign-concepts/brand-presence/renders/quiet-playbook.png",
+      "title": "Leave room for the rest.",
+      "dimensions": [
+        1080,
+        1350
+      ],
+      "pixels": [
+        2160,
+        2700
+      ],
+      "sourceSha256": "60cb0c1c7bded074749c90179462cdf453c8828378060162b23013da3cb7894e",
+      "pngSha256": "d4cef235c88134990b3142af7a62e2a7a085231d3b10b6c0f1da2f36b1686f63"
+    },
+    {
+      "id": "campaign-story",
+      "template": "campaign-rest-story",
+      "selector": ".specimen",
+      "category": "Photography",
+      "surface": "photo",
+      "surfaceName": "Restrained",
+      "name": "Leave room for the rest · Vertical story",
+      "format": "story",
+      "before": "../../campaign-concepts/campaign-family/renders/story-playbook.png",
+      "title": "Leave room for the rest.",
+      "dimensions": [
+        1080,
+        1920
+      ],
+      "pixels": [
+        2160,
+        3840
+      ],
+      "sourceSha256": "9b41c325ac538f1ebb9e942f5fd3aa6a286363a8e70c49300f87f00b2bf9f8e2",
+      "pngSha256": "949923df68ea35f836d563bde1f8e7889d0a26329b0c28be72faebdc76e5cb7c"
+    },
+    {
+      "id": "campaign-landscape",
+      "template": "campaign-rest-landscape",
+      "selector": ".specimen",
+      "category": "Photography",
+      "surface": "photo",
+      "surfaceName": "Restrained",
+      "name": "Leave room for the rest · Landscape display",
+      "format": "landscape",
+      "before": "../../campaign-concepts/campaign-family/renders/landscape-playbook.png",
+      "title": "Leave room for the rest.",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sourceSha256": "e2c4e0b7d72a7b650825aef8cdac12a549e4c0c9a31afcca6fe3a2e85582695e",
+      "pngSha256": "4bb6ee93e9c7d33c94d972677e87fd5628e12bbe8ae7d3c93cf9805fcd6ce3e1"
+    }
+  ]
+}

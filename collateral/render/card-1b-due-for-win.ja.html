@@ -39,19 +39,20 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="myth-label">俗説と数学</div>
     <div class="myth-statement"><span class="strike">「そろそろ当たるはず」</span></div>
-    <div class="fact-statement">結果は一回ごとに<strong>完全に独立</strong>しています。台は過去の結果を覚えていません。次のスピンの確率は、いつも同じです。</div>
+    <div class="fact-statement">独立した抽選では、<strong>過去の損失を埋め合わせる仕組みはありません。</strong>次の結果を過去の連敗から予測することはできません。</div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

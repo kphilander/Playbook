@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">运作方式</div>
     <div class="game-name">彩票</div>
-    <div class="key-fact">每一个号码被抽中的<strong>概率完全相同</strong>。选择生日、规律或所谓「幸运号码」均不会改变赔率。</div>
+    <div class="key-fact">公平的49选6开奖中，每组六个号码的机会相同。生日号码没有额外优势。</div>
     <div class="stat-block">
-      <span class="stat-number">45-50%</span>
-      <span class="stat-unit">主要彩票游戏的<br>庄家优势</span>
+      <span class="stat-number">约1/1400万</span>
+      <span class="stat-unit">49选6中<br>六个号码全部匹配的概率</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

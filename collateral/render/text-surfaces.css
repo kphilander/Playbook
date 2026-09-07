@@ -1,0 +1,121 @@
+/* Optional background + type treatments for the text-polish masters.
+   Load after text-polish.css, then set data-surface on the artboard.
+   Flat leaves the current composition untouched.
+   No image assets, inserted copy, scripts or generated token edits. */
+
+.pb-creative.pb-text-polish:where([data-surface]:not([data-surface="flat"])) {
+  --pb-surface-bg: var(--pb-color-primary);
+  --pb-surface-ink: var(--pb-color-white);
+  --pb-surface-ink-muted: var(--pb-color-neutral-200);
+  --pb-polish-ink: var(--pb-surface-ink);
+  --pb-polish-muted: var(--pb-surface-ink-muted);
+  --pb-polish-accent: var(--pb-color-secondary);
+  --pb-polish-rule: color-mix(in srgb, var(--pb-surface-ink) 24%, transparent);
+  background: var(--pb-surface-bg);
+  isolation: isolate;
+}
+.pb-creative.pb-text-polish:where([data-surface]:not([data-surface="flat"]))::before {
+  content: ""; position: absolute; inset: 0; width: auto; height: auto;
+  z-index: 0; pointer-events: none; background: none;
+}
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) > * {position: relative; z-index: 1;}
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) :is(.card-logo,.story-logo,.poster-logo,.headline,.myth-statement,.game-name,.game,.stat-game,.money-value.white,.qr-label,.footer-helpline) {color: var(--pb-surface-ink);}
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) :is(.myth-label,.htp-label,.quiz-label,.eyebrow,.section-label,.fact-statement,.key-fact,.answer,.explanation,.stat-unit,.stat-label,.subhead,.note,.money-label,.money-note,.stat-note,.footer-legal) {color: var(--pb-surface-ink-muted);}
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) :is(.stat-number,.edge.teal,.money-value.green,.stat-edge.teal,.breakdown .amount) {color: var(--pb-polish-accent);}
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) :is(.edge.orange,.money-value.orange,.stat-edge.orange,.emphasis) {color: var(--pb-surface-ink);}
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) :is(.fact-statement,.key-fact,.answer) strong {color: var(--pb-surface-ink);}
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) .quiz-question {color: var(--pb-surface-ink);}
+
+/* 01. The brightest glow is restricted to a dark, token-derived color.
+   It adds depth without putting small type on a bright gradient stop. */
+.pb-creative.pb-text-polish[data-surface="spotlight"] {
+  --pb-surface-bg: var(--pb-color-primary-dark);
+  --pb-glow: color-mix(in srgb, var(--pb-color-secondary) 23%, var(--pb-color-primary-dark));
+  background: radial-gradient(ellipse at 104% 80%, var(--pb-glow), transparent 66%), var(--pb-surface-bg);
+}
+.pb-creative.pb-text-polish[data-surface="spotlight"] :is(.headline,.myth-statement,.game-name) {font-weight: 550; letter-spacing: -.05em;}
+.pb-creative.pb-text-polish[data-surface="spotlight"] :is(.stat-block,.breakdown,.odds-row,.money-block,.stat-col) {
+  border: 2px solid var(--pb-polish-rule); border-radius: 16px;
+  padding: 24px 28px !important; background: color-mix(in srgb, var(--pb-color-primary-dark) 55%, transparent);
+}
+.pb-creative.pb-text-polish[data-surface="spotlight"] :is(.stat-number,.stat-edge) {font-weight: 500; letter-spacing: -.06em;}
+.pb-creative.pb-text-polish[data-surface="spotlight"] .quiz-question {border: 2px solid var(--pb-polish-rule);border-radius:16px;padding:24px 28px;}
+.story-card.pb-creative.pb-text-polish[data-surface="spotlight"] .money-block {padding: 20px 18px !important;}
+
+/* 02. Concentric lines are drawn at the edge of the page, with their own
+   opacity. Foreground text never inherits an opacity or blend mode. */
+.pb-creative.pb-text-polish[data-surface="contour"]::before {
+  background: repeating-radial-gradient(ellipse at 115% 104%, transparent 0 116px, color-mix(in srgb, var(--pb-color-secondary) 13%, transparent) 117px 119px, transparent 120px 160px);
+  mask-image: linear-gradient(120deg, transparent 18%, #000 88%);
+}
+.pb-creative.pb-text-polish[data-surface="contour"] :is(.headline,.myth-statement,.game-name) {font-weight: 600;letter-spacing: -.055em;}
+.pb-creative.pb-text-polish[data-surface="contour"] :is(.stat-block,.breakdown,.odds-row,.money-block,.stat-col) {
+  border: 0; border-inline-start: 4px solid var(--pb-polish-accent);
+  padding: 4px 0 4px 28px !important; background: transparent;
+}
+.pb-creative.pb-text-polish[data-surface="contour"] :is(.stat-number,.stat-edge) {font-weight: 500;}
+.pb-creative.pb-text-polish[data-surface="contour"] :is(.card-header,.story-header)::after {width: 160px;height:2px;}
+
+/* 03. Light editorial stock. The pale ruling sits below the reading area;
+   deep emerald, not bright emerald, is used for text on the light field. */
+.pb-creative.pb-text-polish[data-surface="paper"] {
+  --pb-surface-bg: var(--pb-color-neutral-50, var(--pb-color-white));
+  --pb-surface-ink: var(--pb-color-primary);
+  --pb-surface-ink-muted: var(--pb-color-primary-light);
+  --pb-polish-accent: var(--pb-color-secondary-dark);
+}
+.pb-creative.pb-text-polish[data-surface="paper"]::before {
+  background: repeating-linear-gradient(0deg, transparent 0 70px, color-mix(in srgb, var(--pb-color-primary) 6%, transparent) 71px 72px);
+  mask-image: linear-gradient(0deg, #000, transparent 46%);
+}
+.pb-creative.pb-text-polish[data-surface="paper"] :is(.headline,.myth-statement,.game-name) {font-weight: 550;letter-spacing:-.055em;}
+.pb-creative.pb-text-polish[data-surface="paper"] :is(.stat-block,.breakdown,.odds-row,.money-block,.stat-col) {border-top: 3px solid var(--pb-polish-accent);}
+.pb-creative.pb-text-polish[data-surface="paper"] :is(.stat-number,.stat-edge) {font-weight: 500;}
+.pb-creative.pb-text-polish[data-surface="paper"] :is(.card-header,.story-header)::after {width:100%;max-width:calc(100% - 144px);height:2px;background:var(--pb-polish-rule);}
+.pb-creative.pb-text-polish[data-surface="paper"] .quiz-question {border-block: 2px solid var(--pb-polish-rule);border-inline-start:0;padding:24px 0;}
+
+/* 04. An unmistakably Playbook color field, with one navy fact panel.
+   The geometry is decorative: it encodes no probability or game outcome. */
+.pb-creative.pb-text-polish[data-surface="emerald"] {
+  --pb-surface-bg: var(--pb-color-secondary);
+  --pb-surface-ink: var(--pb-color-primary-dark);
+  --pb-surface-ink-muted: var(--pb-color-primary-dark);
+  --pb-polish-accent: var(--pb-color-primary-dark);
+}
+.pb-creative.pb-text-polish[data-surface="emerald"]::before {
+  background: linear-gradient(135deg, transparent 0 77%, color-mix(in srgb, var(--pb-color-primary) 7%, transparent) 77% 86%, transparent 86%);
+}
+.pb-creative.pb-text-polish[data-surface="emerald"] :is(.headline,.myth-statement,.game-name) {font-weight: 750;letter-spacing: -.06em;}
+.pb-creative.pb-text-polish[data-surface="emerald"] :is(.stat-block,.breakdown,.odds-row,.money-block,.stat-col,.quiz-question) {
+  --pb-surface-ink:var(--pb-color-white); --pb-surface-ink-muted:var(--pb-color-neutral-200);
+  --pb-polish-accent:var(--pb-color-secondary-light);
+  border: 0; background: var(--pb-color-primary-dark); border-radius: 0;
+  padding: 24px 28px !important; color: var(--pb-surface-ink);
+}
+.pb-creative.pb-text-polish[data-surface="emerald"] :is(.breakdown-line,.quiz-question p) {color:var(--pb-surface-ink);}
+.story-card.pb-creative.pb-text-polish[data-surface="emerald"] .money-block {padding: 20px 18px !important;}
+.pb-creative.pb-text-polish[data-surface="emerald"] :is(.card-header,.story-header)::after {width:100px;height:6px;}
+
+/* 05. A graphic grid, firmer display type and tabular, mono facts.
+   The grid is intentionally faint. Its contrast is audited on rasterized
+   backgrounds, including every gradient and rule under each line of copy. */
+.pb-creative.pb-text-polish[data-surface="signal"] {
+  --pb-surface-bg: var(--pb-color-primary-dark);
+  --pb-grid-ink: color-mix(in srgb, var(--pb-color-secondary) 10%, transparent);
+  background: linear-gradient(var(--pb-grid-ink) 1px, transparent 1px), linear-gradient(90deg, var(--pb-grid-ink) 1px, transparent 1px), var(--pb-surface-bg);
+  background-size: 90px 90px;
+}
+.pb-creative.pb-text-polish[data-surface="signal"] :is(.headline,.myth-statement,.game-name) {font-weight: 800;letter-spacing: -.045em;}
+.pb-creative.pb-text-polish[data-surface="signal"] :is(.card-header,.story-header)::after {width: 54px;height:12px;background:var(--pb-color-secondary);box-shadow:66px 0 0 color-mix(in srgb, var(--pb-color-secondary) 35%, var(--pb-color-primary-dark));}
+.pb-creative.pb-text-polish[data-surface="signal"] :is(.stat-block,.breakdown,.odds-row,.money-block,.stat-col) {border:0;border-top:6px solid var(--pb-polish-accent);padding-top:24px !important;}
+.pb-creative.pb-text-polish[data-surface="signal"] :is(.stat-number,.stat-edge,.edge,.money-value,.breakdown .amount) {font-family:var(--pb-font-mono) !important;font-weight:600;letter-spacing:-.055em;}
+.pb-creative.pb-text-polish[data-surface="signal"] .quiz-question {border:0;border-block:4px solid var(--pb-polish-accent);padding:24px 0;}
+
+/* Independent data blocks cannot shrink into text. Related amounts share
+   a baseline even when their labels wrap. Story UI safe zones stay intact. */
+.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) :is(.stat-block,.breakdown,.quiz-question,.odds-list,.breakdown-visual,.stat-grid) {flex-shrink:0;}
+.social-card.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) .breakdown .amount {font-size:64px !important;line-height:1.1 !important;}
+.story-card.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) .money-label {min-height:105px;}
+.story-card.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) .odds-row > :first-child {min-width:0;flex:1;}
+.story-card.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) .odds-row {gap:24px;}
+.story-card.pb-creative.pb-text-polish[data-surface]:not([data-surface="flat"]) .edge {flex-shrink:0;}

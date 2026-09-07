@@ -46,11 +46,12 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card" data-layout="visual-answer">
+<div class="story-card pb-creative" data-layout="visual-answer">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="story-body">
@@ -66,14 +67,14 @@
         <div class="money-value white">10,000円</div>
       </div>
       <div class="money-block">
-        <div class="money-label">価格差</div>
-        <div class="money-value orange">1,000円</div>
-        <div class="money-note">マージン約4.5%</div>
+        <div class="money-label">払い戻し総額</div>
+        <div class="money-value orange">21,000円</div>
+        <div class="money-note">賭け金を含む</div>
       </div>
     </div>
     <a href="#" class="story-cta">オッズの仕組みをもっと知る</a>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>
   </div>
 </div>

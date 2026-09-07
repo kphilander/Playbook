@@ -1,0 +1,32 @@
+@import url('../review.css');
+body{background:#F5F4F0;color:#202820;}
+.intro,main,.review-footer{max-width:1320px;margin-left:auto;margin-right:auto;}
+.intro{padding-top:32px;padding-bottom:24px;}
+.topline{display:flex;align-items:center;justify-content:space-between;font-size:14px;margin-bottom:40px;}
+.topline a{text-decoration:none;}
+.topline span{color:#596154;}
+.intro h1{font-size:64px;line-height:1;letter-spacing:-.055em;margin:0 0 22px;}
+.intro .lead{font-size:23px;line-height:1.4;margin:0 0 8px;}
+.scope{font-size:15px;line-height:1.5;color:#515A4E;}
+.skin-control{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:8px 0 32px;padding:18px 0;border-top:1px solid #CDD1C5;border-bottom:1px solid #CDD1C5;font-size:14px;}
+.skin-control>div{display:flex;gap:6px;}
+.skin-control button{font:inherit;border:1px solid #AEB7A8;border-radius:24px;padding:10px 16px;background:transparent;color:inherit;cursor:pointer;}
+.skin-control button[aria-pressed=true]{background:#202820;color:#FFF;border-color:#202820;}
+#skin-note{margin-left:auto;color:#515A4E;}
+.pair{gap:28px;align-items:start;}
+.pair figure{margin:0;min-width:0;}
+.pair figcaption{margin-bottom:18px;min-height:48px;}
+.pair figcaption strong,.pair figcaption span{display:block;}
+.pair figcaption strong{font-size:17px;margin-bottom:7px;}
+.pair figcaption span{font-size:14px;color:#515A4E;}
+.pair .artwork{display:block;}
+.pair img{display:block;width:100%;height:auto;}
+.description{font-size:15px;line-height:1.55;margin:20px 0 26px;min-height:116px;color:#46513F;}
+.preference{margin:32px 0 45px;}
+.context{display:flex;align-items:start;gap:24px;border-top:1px solid #CDD1C5;padding:24px 0;font-size:14px;line-height:1.5;}
+.context p{max-width:730px;margin:0 auto 0 0;color:#515A4E;}
+.context a{white-space:nowrap;}
+.review-footer{font-size:13px;color:#515A4E;padding:24px 0 32px;}
+@media(max-width:1390px){.intro,main,.review-footer{margin-left:28px;margin-right:28px;}}
+@media(max-width:900px){#skin-note{width:100%;margin-left:0;}.context{flex-wrap:wrap;}.description{min-height:160px;}}
+@media(max-width:700px){.intro,main,.review-footer{margin-left:20px;margin-right:20px;}.intro h1{font-size:48px;}.topline{font-size:12px;gap:12px;margin-bottom:32px;}.pair.trio{grid-template-columns:1fr;gap:40px;}.description{min-height:0;margin-bottom:18px;}.skin-control{gap:12px;}.skin-control>span{width:100%;}.context{gap:16px;}}

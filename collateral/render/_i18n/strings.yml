@@ -9,7 +9,7 @@
 #   ar        (UAE):    authority, communal, understated, contextual, private
 #
 # Rules applied in this file:
-#   1. English source is copied verbatim from the templates — never edited.
+#   1. HTML masters are authoritative. Refresh mapped values when creative changes.
 #   2. Cultural adaptation, not literal translation. Where a literal rendering
 #      would be culturally wrong (e.g., irreverent jokes in zh-CN/ar, direct
 #      second-person "you" in ja-formal), a `note:` field explains what changed.
@@ -44,7 +44,7 @@ strings:
   # ──────────────────────────────────────────────────────────────────────
   common:
 
-    # The Playbook logo is two parts — "Play" set bold, "book" set light/uppercase.
+    # Legacy split-wordmark keys below are retained for compatibility.
     # It is a brand wordmark. Translations render it exactly the same visually;
     # the brand name "Playbook" never translates, it stays Latin.
     brand_logo_play:
@@ -367,13 +367,13 @@ strings:
       ja: ""
       zh-CN: "有些玩家认为："
       ar: "يعتقد بعض اللاعبين:"
-      note: "Macau and UAE introduce the myth as a third-person belief held by 'some players' rather than addressing the reader directly. This is the institutional/communal substitute for the strikethrough device used in English/Japanese. Empty for en/ja since those locales keep the strikethrough."
+      note: "Macau and UAE introduce the myth as a third-person belief held by 'some players' rather than addressing the reader directly. This is the institutional/communal substitute for the strikethrough device used in English/Japanese. The current creative renders the statement without a strikethrough."
     myth:
-      en: '"It''s due to hit"'
-      ja: "「そろそろ当たるはずだ」"
+      en: "A losing streak<br>isn’t a countdown."
+      ja: "<span class=\"strike\">「そろそろ当たるはずだ」</span>"
       zh-CN: "「快该中了」"
       ar: "«حان وقت الفوز»"
-      note: "ja: 「そろそろ当たるはずだ」 — bare はず is fragmentary as a quoted thought; はずだ is the natural sentence-final form. zh-CN: 快该中了 captures the casual player's internal monologue in Macau Cantonese-influenced Mandarin. ar: «حان وقت الفوز» = 'the time for winning has come' — preserves the expectation, formal MSA."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     fact_softener:
       en: ""
       ja: ""
@@ -381,65 +381,65 @@ strings:
       ar: "في الواقع، "
       note: "Macau and UAE prefix the fact statement with a diplomatic softener (事实上 / في الواقع — 'in fact, / in reality,') to avoid direct negation of the myth. Standard institutional Chinese and Arabic public-health convention. Note Chinese full-width comma U+FF0C and Arabic comma U+060C."
     fact:
-      en: "The slot doesn't owe you a win. <strong>Losses don't load the next spin.</strong>"
+      en: "For independent spins, <strong>past losses don’t make the next win closer.</strong>"
       ja: "スロットマシンは、勝ちを保証するものではありません。<strong>過去の負けが次の結果に影響することはありません。</strong>"
-      zh-CN: "老虎机并不欠玩家任何奖金。<strong>过往的损失不会影响下一次旋转。</strong>"
-      ar: "آلة القمار لا تدين لأحد بالفوز. <strong>الخسائر السابقة لا تؤثر على الدورة التالية.</strong>"
-      note: "ja: 保証する (to guarantee) is the institutional/financial verb, more elder-register than 約束する (to promise). zh-CN: uses 玩家 instead of 你, keeping the communal/institutional register. ar: 'لا تدين لأحد' (doesn't owe anyone) instead of 'لك' (you) — communal voice for UAE institutional register; the literal you-address would read as Western RG translation."
+      zh-CN: "事实上，老虎机并不欠玩家任何奖金。<strong>过往的损失不会影响下一次旋转。</strong>"
+      ar: "في الواقع، آلة القمار لا تدين لأحد بالفوز. <strong>الخسائر السابقة لا تؤثر على الدورة التالية.</strong>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_number:
       en: "$0"
       ja: "¥0"
       zh-CN: "澳门币 0"
-      ar: "0 د.إ"
-      note: "Currency symbols localized to native conventions per jurisdiction: Japan → ¥ (universal); Macau → 澳门币 (Chinese-language Macau pataca, MOP$ for international/banking); UAE → د.إ (Arabic dirham abbreviation, AED for ISO/banking). Numerals stay Western Arabic (0-9)."
+      ar: "<bdi dir=\"ltr\">0</bdi> د.إ"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_unit:
-      en: "owed to you<br>for past losses"
+      en: "credit toward a future win<br>from past losses"
       ja: "過去の負けに対する<br>払い戻し"
       zh-CN: "因过往损失<br>应得的金额"
       ar: "مستحق<br>مقابل الخسائر السابقة"
-      note: "ja: 払い戻し (refund) is the natural Japanese financial-institution noun for what's owed back; reads as a single noun phrase paired with the ¥0 numeral. ar: drops 'لك' (to you) for communal voice consistency with the fact statement."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
 
   card-13b-near-win:
     eyebrow: { $ref: "common.section_myth_vs_math" }
     pillar: { $ref: "common.pillar_open" }
     myth:
-      en: '"It was so close!"'
-      ja: "「惜しかった！」"
+      en: "Close on screen.<br>Still a separate spin."
+      ja: "<span class=\"strike\">「惜しかった！」</span>"
       zh-CN: "「就差一点！」"
       ar: "«كان قريبًا جدًا!»"
     fact:
-      en: "A near-win isn't progress. It's just <strong>a loss that looks close.</strong>"
+      en: "A near miss doesn’t build progress. <strong>The next independent spin starts fresh.</strong>"
       ja: "惜しい負けは、勝ちに近づいている証ではありません。それは<strong>近く見えるだけの負け</strong>です。"
-      zh-CN: "差一点的失败并非接近胜利，<strong>其实只是一次看起来接近的损失。</strong>"
-      ar: "الخسارة القريبة ليست تقدمًا. إنها فقط <strong>خسارة تبدو قريبة.</strong>"
-      note: "zh-CN: 其实 (actually/in fact) replaces direct negation, fitting the diplomatic profile."
+      zh-CN: "事实上，差一点的失败并非接近胜利，<strong>其实只是一次看起来接近的损失。</strong>"
+      ar: "في الواقع، الخسارة القريبة ليست تقدمًا. إنها فقط <strong>خسارة تبدو قريبة.</strong>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_number:
       en: "$0"
       ja: "¥0"
-      zh-CN: "MOP$0"
-      ar: "0 د.إ"
-      note: "ar: localized to UAE dirham form د.إ (with Arabic dots and kasra) instead of Latin 'AED'. The native Arabic abbreviation matches how currency is rendered in UAE-facing institutional materials."
+      zh-CN: "澳门币 0"
+      ar: "<bdi dir=\"ltr\">0</bdi> د.إ"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_unit:
-      en: "earned<br>by \"almost\""
+      en: "extra payout for a near miss<br>that wins no prize"
       ja: "「惜しい」で<br>得られるもの"
       zh-CN: "因「差一点」<br>获得的金额"
       ar: "المكتسب<br>من «تقريبًا»"
-      note: "ar: smoothed from the earlier ما يُكسب (what is earned) to المكتسب (the gained) — a more natural MSA nominal form that flows better in the tight stat-unit layout."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
 
   card-13c-picked-right:
     eyebrow: { $ref: "common.section_myth_vs_math" }
     pillar: { $ref: "common.pillar_open" }
     myth:
-      en: '"I picked the right machine"'
-      ja: "「いい台を選んだ」"
+      en: "Check the paytable.<br>Skip the lucky hunch."
+      ja: "<span class=\"strike\">「いい台を選んだ」</span>"
       zh-CN: "「我选对了机器」"
       ar: "«اخترت الآلة المناسبة»"
     fact:
-      en: "All slots are random. <strong>Your pick doesn't change the odds.</strong>"
-      ja: "すべてのスロットは無作為に決まります。<strong>台を選んでも確率は変わりません。</strong>"
-      zh-CN: "所有老虎机均为随机。<strong>事实上，选择机器不会改变赔率。</strong>"
-      ar: "جميع آلات القمار عشوائية. <strong>الاختيار لا يغير الاحتمالات.</strong>"
-      note: "zh-CN: 事实上 (in fact) softens the correction per the diplomatic Macau profile. ar: dropped the second-person possessive ك from اختيارك (your pick) → الاختيار (the pick/choosing) — aligns with the UAE communal-voice rule that forbids second-person pronouns in institutional RG copy."
+      en: "Slots can have different rules and returns. <strong>A machine’s recent results don’t tell you what an independent spin will do.</strong>"
+      ja: "機種によってルールや還元率は異なります。<strong>直近の結果から次の独立した抽選を予測することはできません。</strong>"
+      zh-CN: "不同游戏的规则和返还率可能不同。<strong>最近的结果不能预测下一次独立抽取的结果。</strong>"
+      ar: "قد تختلف القواعد ونسب العائد بين الألعاب. <strong>النتائج الأخيرة لا تتنبأ بالدورة المستقلة التالية.</strong>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_number:
       en: "0%"
       ja: "0%"
@@ -455,47 +455,47 @@ strings:
     eyebrow: { $ref: "common.section_myth_vs_math" }
     pillar: { $ref: "common.pillar_open" }
     myth:
-      en: '"I won big last time"'
-      ja: "「前回は大きく勝った」"
+      en: "Big wins make<br>good stories."
+      ja: "<span class=\"strike\">「前回は大きく勝った」</span>"
       zh-CN: "「上次我赢了不少」"
       ar: "«فزت فوزًا كبيرًا في المرة السابقة»"
     fact:
-      en: "Your brain keeps the wins and <strong>forgets the losses.</strong>"
-      ja: "私たちの記憶は、勝った時のことを覚えていて<strong>負けた時のことを忘れがちです。</strong>"
-      zh-CN: "人的记忆往往保留胜利，<strong>却淡化损失。</strong>"
-      ar: "يحتفظ الذهن بالانتصارات <strong>وينسى الخسائر.</strong>"
-      note: "ja: '私たちの記憶' (our memory) — communal framing, avoids direct 'your brain'. zh-CN: '人的记忆' (people's memory) — same communal shift, avoids 你的大脑."
+      en: "Your activity history tells a fuller one. <strong>Check the wins, losses, and time together.</strong>"
+      ja: "大きな当たりは印象に残ります。<strong>収支と時間をまとめて履歴で確認すると、全体が見えてきます。</strong>"
+      zh-CN: "大额中奖令人印象深刻。<strong>一起查看输赢和时间记录，了解完整情况。</strong>"
+      ar: "الفوز الكبير يعلق في الذاكرة. <strong>راجع الأرباح والخسائر والوقت معًا في سجل نشاطك.</strong>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
 
   card-13e-lucky-shirt:
     eyebrow: { $ref: "common.section_myth_vs_math" }
     pillar: { $ref: "common.pillar_open" }
     myth:
-      en: '"I always win in this shirt"'
-      ja: "「このシャツを着るとよく当たる」"
+      en: "Great shirt.<br>No special odds."
+      ja: "<span class=\"strike\">「このシャツを着るとよく当たる」</span>"
       zh-CN: "「穿这件衣服总是会赢」"
       ar: "«أفوز دائمًا بهذا القميص»"
     fact:
-      en: "Your shirt can't talk to the slot. <strong>Nothing you wear or do changes the odds.</strong>"
-      ja: "服装がスロットに影響を与えることはありません。<strong>身につけるものや行動で確率は変わりません。</strong>"
-      zh-CN: "衣物与老虎机之间并无联系。<strong>穿戴或行为均不会改变赔率。</strong>"
-      ar: "الملابس لا تتواصل مع آلة القمار. <strong>لا ما يُرتدى ولا ما يُفعل يغير الاحتمالات.</strong>"
-      note: "ja: the English joke 'your shirt can't talk to the slot' is dropped — it reads as flippant in Japanese. Replaced with the neutral factual version. ar: (1) dropped second-person possessive ك from ملابسك (your clothes) → الملابس (the clothes) per UAE communal-voice rule. (2) smoothed the second sentence from the earlier passive sequence لا شيء يُرتدى أو يُفعل يغير الاحتمالات into the parallel structure لا ما يُرتدى ولا ما يُفعل — the repeated لا ما yields cleaner MSA parallelism."
+      en: "Wear what you like. <strong>Your clothes don’t change a slot game’s outcomes.</strong>"
+      ja: "好きな服で楽しみましょう。<strong>服装はスロットの結果を変えません。</strong>"
+      zh-CN: "穿自己喜欢的衣服。<strong>服装不会改变老虎机的游戏结果。</strong>"
+      ar: "ارتدِ ما تحب. <strong>ملابسك لا تغير نتائج لعبة السلوتس.</strong>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
 
   card-13f-earned-win:
     eyebrow: { $ref: "common.section_myth_vs_math" }
     pillar: { $ref: "common.pillar_open" }
     myth:
-      en: '"I''ve earned a win"'
-      ja: "「そろそろ勝たせてもらえるはず」"
+      en: "A win has no<br>loyalty points."
+      ja: "<span class=\"strike\">「そろそろ勝たせてもらえるはず」</span>"
       zh-CN: "「我应该赢一次了」"
       ar: "«استحققت الفوز»"
-      note: "ja: 'I've earned a win' doesn't translate literally — the Japanese player's version of this fallacy is closer to 'it's about time I was allowed to win' (そろそろ勝たせてもらえるはず), which also carries the culturally-appropriate passive/contextual voice."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     fact:
-      en: "Losses aren't a down payment on a win. <strong>The math doesn't play favorites.</strong>"
+      en: "Time and money already spent don’t make an independent spin more likely to win. <strong>Check today’s budget before the next bet.</strong>"
       ja: "負けは、将来の勝ちの頭金ではありません。<strong>確率はどなたにも平等です。</strong>"
-      zh-CN: "损失并非胜利的预付款。<strong>概率对每位玩家一视同仁。</strong>"
-      ar: "الخسائر ليست دفعة مقدمة نحو الفوز. <strong>الأرقام لا تحابي أحدًا.</strong>"
-      note: "en 'doesn't play favorites' is idiomatic → 'the odds are equal for everyone' in all three languages, preserving the corrective meaning without the sports metaphor."
+      zh-CN: "事实上，损失并非胜利的预付款。<strong>概率对每位玩家一视同仁。</strong>"
+      ar: "في الواقع، الخسائر ليست دفعة مقدمة نحو الفوز. <strong>الأرقام لا تحابي أحدًا.</strong>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
 
   # ──────────────────────────────────────────────────────────────────────
   # PHASE A — "Every game has math. Here's yours." cross-format showcase
@@ -525,17 +525,17 @@ strings:
       en: "0.5%"
       ja: "0.5%"
       zh-CN: "0.5%"
-      ar: "0.5%"
+      ar: "<bdi dir=\"ltr\">0.5%</bdi>"
     stat_label:
       en: "Blackjack<br>(perfect play)"
       ja: "ブラックジャック<br>（最適戦略時）"
       zh-CN: "二十一点<br>（最佳策略）"
       ar: "بلاك جاك<br>(اللعب الأمثل)"
     body_line:
-      en: "The lowest house edge in the casino."
-      ja: "カジノの中で最も低いハウスエッジです。"
-      zh-CN: "赌场中最低的庄家优势。"
-      ar: "أقل نسبة للكازينو في اللعبة."
+      en: "About 0.5% under favorable rules.<br>Check the table rules first."
+      ja: "有利なルールで基本戦略を使う場合の目安です。テーブルのルールをご確認ください。"
+      zh-CN: "有利规则下使用基本策略的近似值。请先查看牌桌规则。"
+      ar: "قيمة تقريبية بالاستراتيجية الأساسية وفق قواعد ملائمة. راجع قواعد الطاولة أولًا."
 
   story-14b-every-game-roulette:
     headline: { $ref: "common_14.headline_every_game" }
@@ -544,17 +544,17 @@ strings:
       en: "5.26%"
       ja: "5.26%"
       zh-CN: "5.26%"
-      ar: "5.26%"
+      ar: "<bdi dir=\"ltr\">5.26%</bdi>"
     stat_label:
       en: "American roulette"
       ja: "アメリカンルーレット"
       zh-CN: "美式轮盘"
       ar: "الروليت الأمريكي"
     body_line:
-      en: "The house cut stays the same."
-      ja: "ハウスの取り分は変わりません。"
-      zh-CN: "庄家的抽成始终不变。"
-      ar: "نسبة الكازينو تبقى كما هي."
+      en: "Most bets: 5.26% house edge.<br>Five-number bet: 7.89%."
+      ja: "多くのベットの控除率は5.26%。5ナンバーベットは7.89%です。"
+      zh-CN: "多数投注的庄家优势为5.26%，五号码投注为7.89%。"
+      ar: "أفضلية معظم الرهانات <bdi dir=\"ltr\">5.26%</bdi>. رهان الأرقام الخمسة: <bdi dir=\"ltr\">7.89%</bdi>."
 
   poster-14c-every-game-slots:
     headline: { $ref: "common_14.headline_every_game" }
@@ -563,24 +563,24 @@ strings:
       en: "2–15%"
       ja: "2〜15%"
       zh-CN: "2–15%"
-      ar: "2–15%"
-      note: "ja: uses the 〜 (wave dash) which is the Japanese convention for numeric ranges."
+      ar: "<bdi dir=\"ltr\">2–15%</bdi>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_label:
       en: "Slot machines"
       ja: "スロットマシン"
       zh-CN: "老虎机"
       ar: "آلات القمار"
     body_line:
-      en: "The cut is set before you spin. You can't see it."
-      ja: "取り分は回す前に決まっていて、見ることはできません。"
-      zh-CN: "抽成在旋转之前已经设定，玩家无法看到。"
-      ar: "النسبة مُحددة مسبقًا قبل الدوران، ولا يمكن رؤيتها."
+      en: "House edge varies by game.<br>Check its return-to-player information."
+      ja: "控除率はゲームにより異なります。還元率の情報をご確認ください。"
+      zh-CN: "庄家优势因游戏而异。请查看游戏的返还率信息。"
+      ar: "تختلف الأفضلية حسب اللعبة. راجع معلومات نسبة العائد."
     cta:
       en: "Look up your game's cut at {{PROGRAM_URL}}"
       ja: "{{PROGRAM_URL}} でご自身のゲームの取り分をご確認ください"
       zh-CN: "访问 {{PROGRAM_URL}} 查询游戏的抽成"
       ar: "للاطلاع على نسبة اللعبة، يُرجى زيارة {{PROGRAM_URL}}"
-      note: "ar: converted from 2nd-person imperative تحقق من نسبة لعبتك (check your game's cut) to impersonal للاطلاع على نسبة اللعبة، يُرجى زيارة (to view the game's cut, please visit). The UAE communal-voice rule forbids second-person possessive (لعبتك → اللعبة) and direct imperatives; the impersonal modal يُرجى replaces تحقق."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
 
   email-14d-every-game:
     subject: { $ref: "common_14.headline_every_game_flat" }
@@ -640,7 +640,7 @@ strings:
       ja: "{{PROGRAM_URL}} ですべてのゲームの数学をご覧ください"
       zh-CN: "访问 {{PROGRAM_URL}} 查看所有游戏的数据"
       ar: "للاطلاع على حسابات كل لعبة، يُرجى زيارة {{PROGRAM_URL}}"
-      note: "ar: converted from 2nd-person imperative اطلع على (look/see) to impersonal للاطلاع على...، يُرجى زيارة. The UAE communal-voice rule forbids direct imperatives in institutional RG copy; the impersonal modal يُرجى is the standard respectful register."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     footer_support_line: { $ref: "common.helpline_available_any_gambling" }
     manage_preferences: { $ref: "common.cta_manage_preferences" }
 
@@ -663,7 +663,7 @@ strings:
       zh-CN: "老虎机"
       ar: "آلات القمار"
     body_line:
-      en: "Same casino. Different math."
+      en: "Examples: blackjack uses favorable rules; roulette shows most bets."
       ja: "同じカジノでも、数学は異なります。"
       zh-CN: "同一家赌场，数据却各不相同。"
       ar: "الكازينو ذاته. الحسابات تختلف."
@@ -697,10 +697,10 @@ strings:
     eyebrow: { $ref: "common.section_sports_math" }
     pillar: { $ref: "common.pillar_open" }
     headline:
-      en: "The point spread, explained."
-      ja: "ポイントスプレッドとは。"
-      zh-CN: "让分盘，详细解释。"
-      ar: "فارق النقاط، موضّحًا."
+      en: "Winning the game<br>is only half the story."
+      ja: "勝敗と、<br>点差は別です。"
+      zh-CN: "赢得比赛，<br>还要看分差。"
+      ar: "الفوز بالمباراة،<br>وفارق النقاط."
     body_text:
       en: "The spread isn't a guess at who will win. It's how the sportsbook gets bets on both teams."
       ja: "スプレッドは勝者を予想するものではなく、両チームに賭けを集めるための仕組みです。"
@@ -723,10 +723,10 @@ strings:
     eyebrow: { $ref: "common.section_sports_math" }
     pillar: { $ref: "common.pillar_open" }
     headline:
-      en: "Not all bets cost the same."
-      ja: "賭けの種類によって、取り分は違います。"
-      zh-CN: "并非所有投注都等价。"
-      ar: "ليست كل الرهانات متساوية التكلفة."
+      en: "Same stake.<br>Different returns."
+      ja: "同じ賭け金でも、<br>払い戻しは違います。"
+      zh-CN: "相同本金，<br>不同返还。"
+      ar: "الرهان نفسه.<br>عوائد مختلفة."
     bar_moneyline:
       en: "Moneyline"
       ja: "マネーライン"
@@ -770,9 +770,9 @@ strings:
     pillar: { $ref: "common.pillar_open" }
     headline:
       en: "How the sportsbook<br>actually wins."
-      ja: "ブックメーカーが<br>本当に勝つ仕組み。"
-      zh-CN: "体育博彩公司<br>实际上是如何获利的。"
-      ar: "كيف تفوز شركة<br>الرهان فعليًا."
+      ja: "ブックメーカーの<br>利益の仕組み。"
+      zh-CN: "博彩公司如何<br>从盘口中获利。"
+      ar: "كيف يربح<br>موقع المراهنات؟"
     row_side_a:
       en: "Bet on Side A:"
       ja: "Aへの賭け："
@@ -829,7 +829,7 @@ strings:
       ja: "{{PROGRAM_URL}} で計算を確認"
       zh-CN: "访问 {{PROGRAM_URL}} 查看数据"
       ar: "للاطلاع على الحسابات، يُرجى زيارة {{PROGRAM_URL}}"
-      note: "ar: converted from 2nd-person masculine imperative اطلع (look/see) to an impersonal construction للاطلاع على...، يُرجى زيارة (to view..., please visit). The UAE communal-voice rule forbids direct imperatives to the reader in institutional RG copy; the impersonal modal يُرجى is the standard respectful register."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
 
   live-odds-overlay-15d:
     title:
@@ -876,23 +876,23 @@ strings:
       ar: "يعتقد بعض اللاعبين:"
       note: "zh-CN: introduces the myth as a third-person belief per the Macau diplomatic profile — replaces the strikethrough device."
     myth:
-      en: '"I''m on a hot streak"'
-      ja: "「今、流れが来ている」"
+      en: "<span class=\"strike\">\"I'm on a hot streak\"</span>"
+      ja: "<span class=\"strike\">「今、流れが来ている」</span>"
       zh-CN: "「我正在连胜」"
       ar: "«أنا في سلسلة انتصارات»"
     fact_softener:
       zh-CN: "事实上，"
       ar: "في الواقع، "
     fact:
-      en: "Every spin, hand, and roll is <strong>statistically independent</strong>. Your brain sees patterns. The math doesn't."
-      ja: "スピン、ハンド、ロールの一つひとつは<strong>統計的に独立</strong>しています。人は規則性を見出しがちですが、数学にはそのような偏りはありません。"
-      zh-CN: "每一次旋转、每一手牌、每一次掷骰均为<strong>统计上独立</strong>。人的思维容易看到规律，而数字并非如此。"
-      ar: "كل دورة وكل يد وكل رمية <strong>مستقلة إحصائيًا</strong>. الذهن يميل إلى رؤية الأنماط، أما الأرقام فلا."
-      note: "review: 'your brain sees patterns' risks flippant in zh-CN/ar — prefer 'the mind tends to see patterns'. zh-CN: '人的思维' (the mind) replaces direct 'your brain', fitting the communal/institutional register. ja: 'your brain sees patterns' softened to communal '人は…しがちです' (people tend to…) per elder/contextual profile."
+      en: "A run of wins can happen. In an independent slot game, <strong>past wins don’t improve the next spin.</strong>"
+      ja: "独立したスロットの抽選では、<strong>過去の当たりが次の当たりやすさを高めることはありません。</strong>"
+      zh-CN: "对于独立抽取结果的老虎机，<strong>过去的中奖不会提高下一次中奖概率。</strong>"
+      ar: "في دورات السلوتس المستقلة، <strong>الفوز السابق لا يزيد احتمال الفوز في الدورة التالية.</strong>"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_number:
       en: "0%"
     stat_unit:
-      en: "chance past results<br>affect the next spin"
+      en: "boost from a winning streak<br>on an independent spin"
       ja: "過去の結果が次のスピンに<br>影響を与える確率"
       zh-CN: "过往结果影响<br>下一次旋转的概率"
       ar: "احتمال تأثير النتائج السابقة<br>على الدورة التالية"
@@ -905,18 +905,18 @@ strings:
       ar: "يعتقد بعض اللاعبين:"
       note: "zh-CN: third-person myth framing replaces the strikethrough device per the Macau diplomatic profile."
     myth:
-      en: '"I''m due for a win"'
-      ja: "「そろそろ勝ってもよいはず」"
-      zh-CN: "「我应该要赢一次了」"
-      ar: "«حان وقت فوزي»"
+      en: "<span class=\"strike\">\"I'm due for a win\"</span>"
+      ja: "<span class=\"strike\">「そろそろ当たるはず」</span>"
+      zh-CN: "「该轮到我赢了」"
+      ar: "«حان دوري للفوز»"
     fact_softener:
       zh-CN: "事实上，"
       ar: "في الواقع، "
     fact:
-      en: "Each outcome is <strong>completely independent</strong>. The machine doesn't know what happened before. Each spin has the same odds as every other one."
-      ja: "一つひとつの結果は<strong>完全に独立</strong>しています。マシンには過去の記憶がなく、どのスピンも確率は同じです。"
-      zh-CN: "每一次结果均<strong>完全独立</strong>。机器不会记住此前发生的事情，每一次旋转的赔率与其他任何一次完全相同。"
-      ar: "كل نتيجة <strong>مستقلة تمامًا</strong>. الآلة لا تعرف ما حدث سابقًا. لكل دورة الاحتمالات نفسها تمامًا."
+      en: "A losing run doesn’t make a win due. <strong>Independent spins don’t catch up</strong> for earlier losses."
+      ja: "独立した抽選では、<strong>過去の損失を埋め合わせる仕組みはありません。</strong>次の結果を過去の連敗から予測することはできません。"
+      zh-CN: "独立抽取的结果<strong>不会补偿过去的损失。</strong>连续亏损不能预测下一次结果。"
+      ar: "النتائج المستقلة <strong>لا تعوّض الخسائر السابقة.</strong> سلسلة الخسائر لا تتنبأ بالدورة التالية."
     callout_label:
       en: "The gambler's fallacy"
       ja: "ギャンブラーの誤謬"
@@ -973,11 +973,11 @@ strings:
   card-2a-house-edge:
     section_label: { $ref: "common.section_real_odds" }
     headline:
-      en: "Every game has a house edge.<br>Here's what you're actually playing."
-      ja: "すべてのゲームにはハウスエッジがあります。<br>実際に遊んでいるものの中身をご紹介します。"
+      en: "Casino games have different edges.<br>Examples under the stated rules."
+      ja: "ゲームが違えば、ハウスエッジも違う。"
       zh-CN: "每款游戏都有庄家优势。<br>以下是各游戏的实际数据。"
       ar: "لكل لعبة نسبة للكازينو.<br>وفيما يلي التفاصيل."
-      note: "zh-CN: Macau communal voice — second-person 'you' dropped, rewritten as 'below are the actual data for each game'. ar: UAE communal voice forbids second-person verb تُلعب ('you play'); rewritten with impersonal 'below follows the details' framing."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     game_blackjack:
       en: "Blackjack (basic strategy)"
     game_european_roulette:
@@ -1010,10 +1010,10 @@ strings:
   card-2b-sports-betting:
     section_label: { $ref: "common.section_real_odds" }
     headline:
-      en: "What does -110 mean?"
-      ja: "−110とはどういう意味でしょうか。"
-      zh-CN: "−110 是什么意思？"
-      ar: "ماذا يعني ‎-110؟"
+      en: "−110.<br>Read the whole return."
+      ja: "−110。<br>払い戻しの内訳。"
+      zh-CN: "−110。<br>看清返还的组成。"
+      ar: "<bdi dir=\"ltr\">−110</bdi>.<br>تفاصيل العائد."
     bet_110:
       en: "You bet <span class=\"amount\">$110</span>"
       ja: "<span class=\"amount\">11,000円</span>を賭ける"
@@ -1087,10 +1087,10 @@ strings:
       ar: "اختبار الإلمام باللعبة"
     headline:
       en: "Think you know the odds?"
-      ja: "確率をご存じでしょうか。"
-      zh-CN: "了解赔率的实际情况吗？"
-      ar: "هل الاحتمالات معروفة حقًا؟"
-      note: "zh-CN: second-person dropped; rephrased as a neutral question about general knowledge of odds."
+      ja: "確率、本当にわかっていますか？"
+      zh-CN: "你真的了解概率吗？"
+      ar: "هل تعرف الاحتمالات فعلًا؟"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     quiz_question:
       en: "\"A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?\""
       ja: "「スロットマシンが3時間当たりを出していません。次のスピンの確率はどうなるでしょうか。」"
@@ -1150,15 +1150,15 @@ strings:
     section_label: { $ref: "common.section_real_odds" }
     eyebrow:
       en: "Did you know?"
-      ja: "ご存じでしょうか"
-      zh-CN: "相关数据"
-      ar: "هل كان ذلك معروفًا؟"
-      note: "zh-CN: 'did you know' reframed as institutional '相关数据' (related data) — avoids the conversational second-person feel."
+      ja: "知っていましたか？"
+      zh-CN: "你知道吗？"
+      ar: "هل تعلم؟"
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     headline:
-      en: "Blackjack has a <span class=\"teal\">0.5%</span> house edge with basic strategy"
-      ja: "ブラックジャックは、基本戦略で<span class=\"teal\">0.5%</span>のハウスエッジです"
-      zh-CN: "采用基本策略时，二十一点的庄家优势为 <span class=\"teal\">0.5%</span>"
-      ar: "نسبة الكازينو في البلاك جاك <span class=\"teal\">0.5%</span> عند اعتماد الاستراتيجية الأساسية"
+      en: "Same stake.<br>Different math."
+      ja: "同じ賭け金。<br>異なる仕組み。"
+      zh-CN: "相同金额。<br>不同计算。"
+      ar: "المبلغ نفسه.<br>حساب مختلف."
     game_blackjack:
       en: "Blackjack"
     game_blackjack_note:
@@ -1203,9 +1203,9 @@ strings:
       ar: "اختبار يوم الجمعة"
     headline:
       en: "What does -110 mean in sports betting?"
-      ja: "スポーツベッティングでの−110とはどういう意味でしょうか。"
+      ja: "スポーツベッティングの「−110」は何を意味する？"
       zh-CN: "体育博彩中的 −110 是什么意思？"
-      ar: "ماذا يعني ‎-110 في الرهان الرياضي؟"
+      ar: "ماذا يعني سعر ‎<bdi dir=\"ltr\">-110</bdi> في الرهان الرياضي؟"
     money_bet_label:
       en: "You bet"
       ja: "賭け金"
@@ -1252,19 +1252,19 @@ strings:
       ja: "数字を知る"
       zh-CN: "了解数字"
       ar: "معرفة الأرقام"
-      note: "ar: UAE communal voice — imperative 'اعرف' replaced with the verbal noun 'معرفة'."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     headline:
       en: "Know your game.<br>Play on your terms."
       ja: "ゲームを知り、<br>自分のペースで遊ぶ。"
-      zh-CN: "了解游戏。<br>自主掌控。"
-      ar: "معرفة اللعبة.<br>اللعب وفق الشروط الخاصة."
-      note: "zh-CN: 'your game' / 'on your terms' reframed as institutional imperative-free phrases — 了解游戏 (understand the game) / 自主掌控 (self-directed control). ar: UAE communal voice forbids second-person imperatives (اعرف, العب) and second-person suffixes (لعبتك, بشروطك). Rewritten using verbal nouns: 'معرفة اللعبة. اللعب وفق الشروط الخاصة.' (Knowing the game. Playing according to one's own terms.) — no imperatives, no second-person."
+      zh-CN: "了解游戏。<br>按自己的节奏玩。"
+      ar: "اعرف لعبتك.<br>والعب وفق شروطك."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     subhead:
       en: "Every game has a house edge. Here's yours."
-      ja: "すべてのゲームにはハウスエッジがあります。それぞれのエッジをご紹介します。"
-      zh-CN: "每款游戏都有庄家优势。以下是各游戏的数据。"
-      ar: "لكل لعبة نسبة للكازينو. وفيما يلي التفاصيل."
-      note: "ar: UAE communal voice — original 'إليك' (here is for you) replaced with impersonal 'وفيما يلي' (below follows)."
+      ja: "すべてのゲームにはハウスエッジがあります。代表的な数字を比べてみましょう。"
+      zh-CN: "每款游戏都有庄家优势。先看看两个代表性的数字。"
+      ar: "لكل لعبة أفضلية للكازينو. إليك رقمان للمقارنة."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_blackjack_label:
       en: "Blackjack"
     stat_blackjack_note:
@@ -1311,21 +1311,21 @@ strings:
     section_label: { $ref: "common.section_real_odds" }
     eyebrow:
       en: "No fine print"
-      ja: "但し書きはありません"
-      zh-CN: "毫无隐晦"
-      ar: "دون شروط مخفية"
+      ja: "小さな但し書きはなし"
+      zh-CN: "没有隐藏条款"
+      ar: "لا بنود مخفية"
     headline:
-      en: "Every game has a <span class=\"teal\">house edge</span>.<br>Here's yours."
-      ja: "すべてのゲームには<span class=\"teal\">ハウスエッジ</span>があります。<br>実際の数値をご紹介します。"
-      zh-CN: "每款游戏都有<span class=\"teal\">庄家优势</span>。<br>以下为各游戏数据。"
-      ar: "لكل لعبة <span class=\"teal\">نسبة للكازينو</span>.<br>وفيما يلي التفاصيل."
-      note: "ar: UAE communal voice — original 'إليك حسابات لعبتك' used the ك suffix ('here is YOUR game's math'). Replaced with impersonal 'وفيما يلي التفاصيل' (below follows the details)."
+      en: "Same stake.<br>Different math."
+      ja: "同じ賭け額。<br>異なる控除率。"
+      zh-CN: "同样的投注额。<br>不同的庄家优势。"
+      ar: "المبلغ نفسه.<br>حسابات مختلفة."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     subhead:
-      en: "It's the percentage the house keeps over time. Here's how games compare."
-      ja: "長期的にハウスが受け取る割合のことです。ゲームごとの比較をご覧ください。"
-      zh-CN: "即赌场长期保留的比例。以下是各游戏的比较。"
-      ar: "هي النسبة التي يحتفظ بها الكازينو مع مرور الوقت. وفيما يلي مقارنة بين الألعاب."
-      note: "ar: UAE communal voice — 'إليك' replaced with impersonal 'وفيما يلي' (below follows)."
+      en: "House edge is the expected cost over time, as a share of money wagered. Rules and strategy matter."
+      ja: "控除率は、賭けた総額に対する長期的な期待損失の割合です。ルールと戦略で変わります。"
+      zh-CN: "庄家优势是长期预期损失占总投注额的比例。具体数值取决于规则和策略。"
+      ar: "أفضلية الكازينو هي الخسارة المتوقعة على المدى الطويل كنسبة من إجمالي الرهانات. تختلف باختلاف القواعد والاستراتيجية."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     row_blackjack:
       en: "Blackjack (basic strategy)"
     row_craps:
@@ -1402,16 +1402,16 @@ strings:
       zh-CN: "彩票"
       ar: "اليانصيب"
     headline:
-      en: "Know your odds.<br>They're bigger than you think."
-      ja: "確率を知る。<br>思っているより大きな数字です。"
-      zh-CN: "了解真实赔率。<br>数字远超一般印象。"
-      ar: "معرفة الاحتمالات.<br>إنها أكبر مما يظن كثيرون."
-      note: "zh-CN: 'than you think' → '一般印象' (common impression) to avoid second-person address. ar: UAE communal voice — imperative 'اعرف' replaced with the verbal noun 'معرفة'."
+      en: "Six numbers.<br>One exact match."
+      ja: "6つの数字。<br>すべて一致する確率。"
+      zh-CN: "六个号码。<br>全部匹配的概率。"
+      ar: "ستة أرقام.<br>مطابقة كاملة."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     subhead:
-      en: "Every number combination has the exact same chance. No exceptions."
-      ja: "どの数字の組み合わせも確率はまったく同じです。例外はありません。"
-      zh-CN: "每一组号码组合的中奖概率完全相同，并无例外。"
-      ar: "لكل توليفة أرقام الاحتمال نفسه تمامًا. لا استثناءات."
+      en: "In a fair six-from-49 draw, every six-number combination has the same chance."
+      ja: "公平な「49個から6個」の抽選では、どの6個の組み合わせも当選確率は同じです。"
+      zh-CN: "在公平的“49选6”抽奖中，每一组6个数字的中奖概率都相同。"
+      ar: "في سحب عادل لاختيار ستة أرقام من <bdi dir=\"ltr\">49</bdi>، تتساوى فرصة كل مجموعة من ستة أرقام."
     stat_649_label:
       en: "6/49 Jackpot"
       ja: "6/49ジャックポット"
@@ -1474,16 +1474,16 @@ strings:
     eyebrow:
       en: "Bingo"
     headline:
-      en: "Every card has<br>the same chance."
-      ja: "どのカードも<br>確率は同じです。"
+      en: "Lucky seat.<br>Same draw."
+      ja: "座る場所で、<br>抽選は変わりません。"
       zh-CN: "每张卡片的中奖<br>概率完全相同。"
       ar: "لكل بطاقة<br>الفرصة نفسها."
     subhead:
-      en: "Your lucky seat doesn't change the odds. But knowing how prize pools work does."
-      ja: "お気に入りの席で確率が変わることはありません。ただし、賞金プールの仕組みを知ることは役に立ちます。"
+      en: "Sit where you like. Your seat does not change a fair draw. Check the card and prize rules."
+      ja: "好きな席でどうぞ。公平な抽選の結果は、座る場所で変わりません。カードと賞金のルールを確認しましょう。"
       zh-CN: "所谓的幸运座位并不会改变赔率，而了解奖池的运作方式则会。"
       ar: "المقعد لا يغيّر الاحتمالات، لكن فهم آلية تجميع الجوائز يُحدث فرقًا."
-      note: "zh-CN: 'your lucky seat' → '所谓的幸运座位' (so-called lucky seat) to drop second-person."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     stat_seat_label:
       en: "Your Lucky Seat"
       ja: "お気に入りの席"
@@ -2797,10 +2797,10 @@ strings:
       zh-CN: "存款前请注意"
       ar: "قبل الإيداع"
     body:
-      en: "Setting a limit takes 10 seconds — pick your budget and you're set."
+      en: "Choose how much you want to deposit each week. Review the limit before continuing."
       ja: "上限の設定は10秒で完了します。ご予算を選んでいただければ、それで設定完了です。"
       zh-CN: "设定限额仅需十秒钟，选择合适的预算即可完成。"
-      ar: "ضبط الحد لا يستغرق سوى 10 ثوانٍ — اختيار الميزانية يكفي."
+      ar: "ضبط الحد لا يستغرق سوى <bdi dir=\"ltr\">10</bdi> ثوانٍ — اختيار الميزانية يكفي."
     option_50:
       en: "$50/week"
       zh-CN: "每周澳门币 400"
@@ -2931,7 +2931,7 @@ strings:
       ja: "スポーツの結果は予測できません。ご予算の状況をご確認ください。"
       zh-CN: "体育赛事结果难以预测。以下为当前预算状况。"
       ar: "نتائج الأحداث الرياضية غير مؤكدة. وضع الميزانية الراهن أدناه."
-      note: "ar: UAE communal voice — 'إليك' (here is for you) replaced with bare-nominal / impersonal 'أدناه' (below)."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     cta_manage:
       en: "Manage your limits"
       ja: "上限を管理する"
@@ -2949,7 +2949,7 @@ strings:
       ja: "ご利用いただける機能をご紹介します。お役に立つものをお使いください。"
       zh-CN: "以下为可用功能，玩家可按需使用。"
       ar: "ما هو متاح — يمكن استخدام ما يناسب كل لاعب."
-      note: "ar: UAE communal voice — leading 'إليك' (here is for you) dropped; reader-facing framing removed."
+      note: "Aligned to the September 2026 HTML creative revision; review the complete template for context."
     opt1:
       en: "Set a deposit limit"
       ja: "入金上限を設定"
@@ -2989,17 +2989,17 @@ strings:
       zh-CN: "百家乐"
       ar: "باكاراه"
     body:
-      en: "The simplest game on the floor has some of the <strong>best odds in the casino</strong>. Bet Banker. Skip the Tie. That's the whole strategy."
-      ja: "カジノで最もシンプルなゲームの一つでありながら、<strong>カジノ屈指の有利な確率</strong>を持ちます。バンカーに賭け、タイは避ける。戦略はこれだけです。"
-      zh-CN: "赌场中最简单的游戏之一，拥有<strong>较佳的赔率</strong>。投注庄家，避开和局，策略仅此而已。"
-      ar: "أبسط لعبة في الصالة تتضمن بعضًا من <strong>أفضل الاحتمالات في الكازينو</strong>. الرهان على المصرفي. تجنّب التعادل. هذه هي الاستراتيجية بأكملها."
+      en: "Banker and Player are bets on two hands. <strong>Banker’s lower edge includes a 5% commission</strong> on winning Banker bets."
+      ja: "バンカーとプレイヤーは、2つの手札に対するベットです。バンカーの控除率は、的中時の5%手数料を含みます。"
+      zh-CN: "庄和闲是对两手牌的投注。庄注的庄家优势包含获胜时收取的5%佣金。"
+      ar: "البانكر والبلاير رهانان على يدين. أفضلية رهان البانكر هنا تشمل عمولة <bdi dir=\"ltr\">5%</bdi> على رهانات البانكر الفائزة."
     stat_number:
       en: "1.06%"
     stat_unit:
-      en: "house edge<br>on Banker bet"
-      ja: "バンカーベットの<br>ハウスエッジ"
-      zh-CN: "投注庄家的<br>庄家优势"
-      ar: "نسبة الكازينو<br>على رهان المصرفي"
+      en: "Banker house edge<br>with 5% commission"
+      ja: "バンカーベットの控除率<br>勝利時の手数料5%"
+      zh-CN: "庄注的庄家优势<br>获胜佣金为5%"
+      ar: "أفضلية رهان البانكر<br>بعمولة <bdi dir=\"ltr\">5%</bdi>"
 
   htp-card-bingo:
     game:
@@ -3008,15 +3008,15 @@ strings:
       zh-CN: "宾果"
       ar: "البينجو"
     body:
-      en: "Every card has <strong>the same chance of winning</strong>. Off-peak sessions mean fewer players competing for the same prizes."
-      ja: "どのカードも<strong>当たる確率は同じ</strong>です。空いている時間帯のセッションは、同じ賞金を競うプレイヤーが少なくなります。"
+      en: "Your seat doesn’t affect the draw. <strong>The number of cards in play and the prize rules matter.</strong> Check both before buying a card."
+      ja: "座る場所は抽選に影響しません。参加カード数と賞金ルールを、購入前に確認しましょう。"
       zh-CN: "每张卡片<strong>中奖的概率完全相同</strong>。非高峰时段的场次中，参与者较少，争夺相同奖金的人数亦较少。"
       ar: "لكل بطاقة <strong>الفرصة نفسها في الفوز</strong>. الجلسات خارج أوقات الذروة تعني عددًا أقل من البطاقات المنافسة على الجوائز نفسها."
     stat_number:
-      en: "5-25%"
+      en: "1 card"
     stat_unit:
-      en: "house edge range<br>online vs. in-venue"
-      ja: "ハウスエッジの幅<br>オンラインと会場の比較"
+      en: "one entry<br>in that game"
+      ja: "そのゲームへの<br>1口の参加"
       zh-CN: "庄家优势区间<br>线上与场馆对比"
       ar: "نطاق نسبة الكازينو<br>عبر الإنترنت مقابل القاعة"
     legal_18_plus:
@@ -3033,17 +3033,17 @@ strings:
       zh-CN: "二十一点"
       ar: "بلاك جاك"
     body:
-      en: "The best odds in the casino take <strong>20 minutes to learn</strong>. Basic strategy is the mathematically optimal play for every hand."
-      ja: "カジノ屈指の有利な確率は、<strong>20分で身につけられます</strong>。基本戦略は、どのハンドでも数学的に最適な打ち方です。"
-      zh-CN: "赌场中最佳的赔率，<strong>仅需二十分钟即可掌握</strong>。基本策略即为每手牌中数学上最优的打法。"
-      ar: "أفضل الاحتمالات في الكازينو تستلزم <strong>20 دقيقة من التعلّم</strong>. الاستراتيجية الأساسية هي اللعب الأمثل رياضيًا لكل يد."
+      en: "Your decisions matter. <strong>Basic strategy matches your hand to the dealer’s upcard.</strong> The table rules also affect the house edge."
+      ja: "基本戦略は、自分の手札とディーラーの表向きのカードに応じた選択です。テーブルのルールも控除率に影響します。"
+      zh-CN: "基本策略根据你的手牌和庄家的明牌作出选择。牌桌规则也会影响庄家优势。"
+      ar: "الاستراتيجية الأساسية تربط قرارك بأوراقك وورقة الموزّع الظاهرة. قواعد الطاولة تؤثر أيضًا في الأفضلية."
     stat_number:
-      en: "0.5%"
+      en: "≈0.5%"
     stat_unit:
-      en: "house edge with<br>basic strategy"
-      ja: "基本戦略を用いた<br>ハウスエッジ"
-      zh-CN: "采用基本策略的<br>庄家优势"
-      ar: "نسبة الكازينو مع<br>الاستراتيجية الأساسية"
+      en: "with basic strategy<br>under favorable rules"
+      ja: "有利なルールで<br>基本戦略を使う場合"
+      zh-CN: "有利规则下<br>使用基本策略"
+      ar: "بالاستراتيجية الأساسية<br>وفق قواعد ملائمة"
 
   htp-card-craps:
     game:
@@ -3052,15 +3052,15 @@ strings:
       zh-CN: "花旗骰"
       ar: "كرابس"
     body:
-      en: "The table looks complex but <strong>two bets matter</strong>: Pass and Don't Pass. Everything in the center of the layout has a house edge of 9% or worse."
-      ja: "テーブルは複雑に見えますが、<strong>重要なのは2種類の賭け</strong>です。パスとドント・パス。台の中央にある賭けはいずれもハウスエッジが9%以上になります。"
+      en: "The layout has many bets with different costs. <strong>The Pass line starts with the come-out roll.</strong> Read its rules before placing chips."
+      ja: "ベットの種類によって控除率は異なります。パスラインはカムアウトロールから始まります。置く前にルールを確認しましょう。"
       zh-CN: "桌面看似复杂，但<strong>真正重要的仅有两类投注</strong>：Pass 与 Don't Pass。台面中央的所有投注，庄家优势均为 9% 或更高。"
       ar: "تبدو الطاولة معقدة، لكن <strong>رهانين فقط يهمّان</strong>: Pass و Don't Pass. كل ما في وسط الطاولة تبلغ نسبة الكازينو فيه 9% أو أكثر."
     stat_number:
       en: "1.41%"
     stat_unit:
       en: "house edge<br>on the Pass line"
-      ja: "パスラインの<br>ハウスエッジ"
+      ja: "パスラインの<br>控除率"
       zh-CN: "Pass 线的<br>庄家优势"
       ar: "نسبة الكازينو<br>على خط Pass"
 
@@ -3071,17 +3071,17 @@ strings:
       zh-CN: "赛马"
       ar: "سباق الخيل"
     body:
-      en: "In pari-mutuel betting, you're not playing against the house. You're splitting the pool with <strong>other bettors</strong> — after the track takes its cut."
-      ja: "パリミュチュエル方式では、ハウスと対戦するのではなく、<strong>他の購入者と配当を分け合います</strong>。主催者の取り分が差し引かれたあとの金額が対象です。"
-      zh-CN: "在同注分彩制投注中，玩家并非与庄家对赌，而是在扣除赛马场抽成后，与<strong>其他投注者</strong>共享奖池。"
-      ar: "في الرهانات التناسبية، لا يكون اللعب ضد الكازينو. يتقاسم اللاعبون المجموع مع <strong>باقي المراهنين</strong> بعد اقتطاع نسبة المسار."
+      en: "In a pari-mutuel pool, winning bettors share what remains <strong>after the operator’s takeout.</strong> Final odds depend on the pool when betting closes."
+      ja: "パリミュチュエル方式では、投票総額から控除した残りを的中者で分けます。最終オッズは締切時の投票で決まります。"
+      zh-CN: "彩池制先从总投注额中扣除抽成，再由中奖投注分享余额。最终赔率取决于截止时的彩池。"
+      ar: "في الرهان الجماعي، يتقاسم الفائزون ما يتبقى بعد اقتطاع المشغّل. تتحدد الاحتمالات النهائية عند إغلاق الرهان."
     stat_number:
-      en: "15-25%"
+      en: "Pool"
     stat_unit:
-      en: "takeout range<br>depending on bet type"
-      ja: "賭けの種類による<br>控除率の幅"
-      zh-CN: "抽成区间<br>因投注类型而异"
-      ar: "نطاق الاقتطاع<br>حسب نوع الرهان"
+      en: "minus takeout<br>shared among winning bets"
+      ja: "控除後に<br>的中ベットで分配"
+      zh-CN: "扣除抽成后<br>由中奖投注分享"
+      ar: "بعد الاقتطاع<br>يوزع على الرهانات الفائزة"
     legal_18_plus_wager:
       en: "18+ to wager"
       ja: "20歳以上より投票いただけます"
@@ -3096,36 +3096,36 @@ strings:
       zh-CN: "彩票"
       ar: "اليانصيب"
     body:
-      en: "Every number has an <strong>identical chance</strong> of being drawn. Picking birthdays, patterns, or \"lucky\" numbers doesn't change the odds."
-      ja: "どの番号も<strong>当たる確率は同じ</strong>です。誕生日、法則、「幸運の」番号を選んでも、確率は変わりません。"
-      zh-CN: "每一个号码被抽中的<strong>概率完全相同</strong>。选择生日、规律或所谓「幸运号码」均不会改变赔率。"
-      ar: "لكل رقم <strong>احتمال متساوٍ</strong> في الظهور. اختيار أعياد الميلاد أو الأنماط أو «أرقام الحظ» لا يغيّر الاحتمالات."
+      en: "For a fair 6-from-49 draw, every six-number combination has the same chance. <strong>Birthdays don’t get a bonus.</strong>"
+      ja: "公平な6/49抽選では、6つの数字のどの組み合わせも同じ確率です。誕生日を選んでも確率は上がりません。"
+      zh-CN: "公平的49选6开奖中，每组六个号码的机会相同。生日号码没有额外优势。"
+      ar: "في سحب عادل لاختيار <bdi dir=\"ltr\">6</bdi> من <bdi dir=\"ltr\">49</bdi>، لكل مجموعة أرقام الفرصة نفسها. أرقام أعياد الميلاد لا تمنح أفضلية."
     stat_number:
-      en: "45-50%"
+      en: "1 in 14M"
     stat_unit:
-      en: "house edge<br>on major draw games"
-      ja: "主要な抽選ゲームの<br>ハウスエッジ"
-      zh-CN: "主要彩票游戏的<br>庄家优势"
-      ar: "نسبة الكازينو<br>في سحوبات اليانصيب الرئيسية"
+      en: "approximately, to match all six<br>in a 6-from-49 draw"
+      ja: "6/49で<br>6つすべてが一致する確率"
+      zh-CN: "49选6中<br>六个号码全部匹配的概率"
+      ar: "تقريبًا لمطابقة الستة<br>في سحب <bdi dir=\"ltr\">6</bdi> من <bdi dir=\"ltr\">49</bdi>"
 
   htp-card-roulette:
     game:
-      en: "Roulette"
+      en: "American roulette"
       ja: "ルーレット"
       zh-CN: "轮盘"
       ar: "الروليت"
     body:
-      en: "38 slots, 2 green zeros, and <strong>every bet has the same house edge</strong>. Red, black, single number — the math doesn't change."
-      ja: "38個のポケット、緑のゼロが2つ、そして<strong>どの賭けもハウスエッジは同じ</strong>です。赤、黒、単数のどれを選んでも数学は変わりません。"
-      zh-CN: "38 个格、2 个绿色零位，<strong>每一种投注的庄家优势完全相同</strong>。红色、黑色或单号，数字均不变。"
-      ar: "38 خانة، وصفران أخضران، و<strong>لكل رهان نسبة الكازينو نفسها</strong>. الأحمر أو الأسود أو رقم واحد — الأرقام لا تتغير."
+      en: "An American wheel has 0 and 00. <strong>Most bets share a 5.26% house edge.</strong> The five-number bet is higher: 7.89%."
+      ja: "アメリカンルーレットには0と00があります。多くのベットの控除率は5.26%。5ナンバーベットは7.89%です。"
+      zh-CN: "美式轮盘有0和00。多数投注的庄家优势为5.26%，五号码投注则为7.89%。"
+      ar: "تضم العجلة الأمريكية <bdi dir=\"ltr\">0</bdi> و<bdi dir=\"ltr\">00</bdi>. أفضلية معظم الرهانات <bdi dir=\"ltr\">5.26%</bdi>، وترتفع إلى <bdi dir=\"ltr\">7.89%</bdi> في رهان الأرقام الخمسة."
     stat_number:
-      en: "5.26%"
+      en: "0 + 00"
     stat_unit:
-      en: "house edge on<br>every standard bet"
-      ja: "標準的なすべての賭けの<br>ハウスエッジ"
-      zh-CN: "各类标准投注的<br>庄家优势"
-      ar: "نسبة الكازينو على<br>كل رهان قياسي"
+      en: "two zero pockets<br>on an American wheel"
+      ja: "アメリカンルーレットの<br>2つのゼロ"
+      zh-CN: "美式轮盘上的<br>两个零"
+      ar: "خانتان للصفر<br>في العجلة الأمريكية"
 
   htp-card-slots:
     game:
@@ -3134,17 +3134,17 @@ strings:
       zh-CN: "老虎机"
       ar: "آلات القمار"
     body:
-      en: "Every spin is decided by a <strong>random number generator</strong> before the reels even move. No memory. No patterns. No hot streaks."
-      ja: "どのスピンも、リールが回る前に<strong>乱数発生装置</strong>によって決まります。記憶も、規則性も、連勝もありません。"
-      zh-CN: "每一次旋转均由<strong>随机数生成器</strong>于卷轴启动前决定。并无记忆、并无规律、亦无连胜可言。"
-      ar: "كل دورة يقرّرها <strong>مولّد الأرقام العشوائية</strong> قبل تحرّك البكرات. لا ذاكرة. لا أنماط. لا سلاسل حظ."
+      en: "A random number generator decides each spin. <strong>Past results don’t make an independent spin due.</strong> Check the game’s rules and return to player."
+      ja: "過去の結果は、次の独立した抽選が当たる確率を高めません。ゲームのルールと還元率を確認しましょう。"
+      zh-CN: "过去的结果不会提高下一次独立抽取的中奖概率。请查看游戏规则和返还率。"
+      ar: "النتائج السابقة لا تزيد احتمال الفوز في الدورة المستقلة التالية. راجع قواعد اللعبة ونسبة العائد."
     stat_number:
       en: "2–15%"
     stat_unit:
-      en: "house edge range<br>check the paytable"
-      ja: "ハウスエッジの幅<br>ペイテーブルをご確認ください"
-      zh-CN: "庄家优势区间<br>详见赔付表"
-      ar: "نطاق نسبة الكازينو<br>مراجعة جدول الأرباح"
+      en: "illustrative house-edge range<br>varies by game"
+      ja: "控除率の例<br>ゲームにより異なります"
+      zh-CN: "庄家优势范围示例<br>因游戏而异"
+      ar: "نطاق توضيحي لأفضلية الكازينو<br>يختلف حسب اللعبة"
 
   htp-card-sports:
     game:
@@ -3153,17 +3153,17 @@ strings:
       zh-CN: "体育博彩"
       ar: "الرهان الرياضي"
     body:
-      en: "At standard odds, you need to win <strong>more than half</strong> your bets just to break even. The vig is the sportsbook's built-in commission."
-      ja: "標準的なオッズでは、収支を合わせるためだけでも<strong>半分を超える</strong>勝率が必要です。ビグはブックメーカーに組み込まれた手数料です。"
-      zh-CN: "在标准赔率下，玩家须于<strong>逾半数</strong>的投注中获胜方可勉强持平。所谓抽水即博彩公司内建的佣金。"
-      ar: "بالأسعار القياسية، يلزم الفوز بـ<strong>أكثر من نصف</strong> الرهانات لمجرد التعادل. الـvig هي العمولة المُدمجة لشركة الرهان."
+      en: "At −110, a $110 cash bet wins $100 profit. <strong>That price sets the break-even rate.</strong> It doesn’t predict a team’s chance."
+      ja: "オッズ−110では、110ドルの現金ベットが当たると利益は100ドルです。必要な損益分岐勝率は、この価格から決まります。"
+      zh-CN: "赔率−110时，110美元现金投注获胜可获100美元利润。盈亏平衡胜率由这一价格决定。"
+      ar: "عند <bdi dir=\"ltr\">−110</bdi>، رهان نقدي بقيمة <bdi dir=\"ltr\">110</bdi> دولارات يحقق ربحًا قدره <bdi dir=\"ltr\">100</bdi> دولار إذا فاز. هذا السعر يحدد معدل التعادل."
     stat_number:
       en: "52.4%"
     stat_unit:
-      en: "break-even win rate<br>at −110 odds"
-      ja: "−110オッズでの<br>損益分岐の勝率"
-      zh-CN: "−110 赔率下的<br>持平胜率"
-      ar: "نسبة الفوز اللازمة للتعادل<br>عند أسعار ‎-110"
+      en: "equal stakes at −110<br>pushes excluded"
+      ja: "−110で同額ずつ賭ける場合<br>引き分け返金を除く"
+      zh-CN: "每次等额投注，赔率−110<br>不计走盘退款"
+      ar: "رهانات متساوية عند <bdi dir=\"ltr\">−110</bdi><br>باستثناء التعادل المسترد"
 
   htp-card-video-poker:
     game:
@@ -3172,15 +3172,15 @@ strings:
       zh-CN: "视频扑克"
       ar: "بوكر الفيديو"
     body:
-      en: "Your hold/discard decisions change the math. Check two numbers on the paytable: <strong>full house and flush payouts</strong>. 9/6 is the one you want."
-      ja: "手札を残すか捨てるかの判断で数学が変わります。ペイテーブルで確認したいのは2つの数字：<strong>フルハウスとフラッシュの配当</strong>です。9/6が最良です。"
+      en: "Look for the game name as well as the paytable. <strong>9/6 means 9 for a full house and 6 for a flush</strong> in Jacks or Better."
+      ja: "ゲーム名と配当表を確認しましょう。ジャックス・オア・ベターの9/6は、フルハウス9倍、フラッシュ6倍を示します。"
       zh-CN: "保留或弃牌的决策会改变数字。请留意赔付表中的两项数字：<strong>葫芦及同花的赔付</strong>。9/6 为最佳选择。"
       ar: "قرارات الإبقاء أو الاستبدال تغيّر الأرقام. يُنصح بمراجعة رقمين في جدول الأرباح: <strong>عوائد الفول هاوس والفلاش</strong>. 9/6 هي النسبة المطلوبة."
     stat_number:
       en: "0.46%"
     stat_unit:
-      en: "house edge on full-pay<br>9/6 Jacks or Better"
-      ja: "フルペイ9/6ジャックス・オア・ベター<br>のハウスエッジ"
+      en: "9/6 Jacks or Better<br>optimal play, max-coin royal"
+      ja: "9/6・最適な選択<br>最大枚数でロイヤル配当適用"
       zh-CN: "全额赔付 9/6<br>Jacks or Better 的庄家优势"
       ar: "نسبة الكازينو على<br>9/6 Jacks or Better بالعوائد الكاملة"
 
@@ -3188,20 +3188,20 @@ strings:
     section_label: { $ref: "common.section_know_your_game" }
     pillar: { $ref: "common.pillar_open" }
     headline:
-      en: "Odds at a Glance"
-      ja: "確率の一覧"
-      zh-CN: "赔率一览"
-      ar: "الاحتمالات في لمحة"
+      en: "Same stake.<br>Different costs."
+      ja: "控除率の例"
+      zh-CN: "相同金额。<br>不同成本。"
+      ar: "المبلغ نفسه.<br>تكلفة مختلفة."
     col_game:
       en: "Game"
       ja: "ゲーム"
       zh-CN: "游戏"
       ar: "اللعبة"
     col_best:
-      en: "Best bet"
-      ja: "最良の賭け"
-      zh-CN: "最佳投注"
-      ar: "أفضل رهان"
+      en: "House edge"
+      ja: "ハウスエッジ"
+      zh-CN: "庄家优势"
+      ar: "ميزة البيت"
     row_blackjack:
       en: "Blackjack (basic strategy)"
     row_baccarat:

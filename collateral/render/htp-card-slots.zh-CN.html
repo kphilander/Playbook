@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">运作方式</div>
     <div class="game-name">老虎机</div>
-    <div class="key-fact">每一次旋转均由<strong>随机数生成器</strong>于卷轴启动前决定。并无记忆、并无规律、亦无连胜可言。</div>
+    <div class="key-fact">过去的结果不会提高下一次独立抽取的中奖概率。请查看游戏规则和返还率。</div>
     <div class="stat-block">
       <span class="stat-number">2–15%</span>
-      <span class="stat-unit">庄家优势区间<br>详见赔付表</span>
+      <span class="stat-unit">庄家优势范围示例<br>因游戏而异</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

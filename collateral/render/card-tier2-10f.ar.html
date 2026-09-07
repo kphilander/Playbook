@@ -130,33 +130,27 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
-
-  <div class="accent-bar"></div>
-
-  <div class="card-header">
-    <span class="logo">Playbook</span>
-  </div>
-
-  <div class="card-body">
-    <div class="headline">لا يوجد سؤال<br>صغير.</div>
-    <div class="subline">دعم مجاني وسري لأي سؤال يتعلق بالمقامرة.</div>
-
-    <div class="helpline-number"><span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
-    <div class="helpline-channels">اتصال &middot; رسالة &middot; دردشة</div>
-
-    <div class="qr-row">
-      <div class="qr-box">QR</div>
-      <div class="qr-label">امسح للحصول على الدعم</div>
-    </div>
-  </div>
-
-  <div class="card-footer">
-    <div class="footer-text">على مدار الساعة &middot; بدون أحكام &middot; أبدًا</div>
-  </div>
-
+<div class="social-card pb-creative">
+<div class="accent-bar"></div>
+<div class="card-header">
+<span class="logo">{{PROGRAM_SHORT_NAME}}</span>
+</div>
+<div class="card-body">
+<div class="headline">لا يوجد سؤال<br/>صغير.</div>
+<div class="subline">دعم مجاني وسري لأي سؤال يتعلق بالمقامرة.</div>
+<div class="helpline-number"><span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
+<div class="helpline-channels">اتصال · رسالة · دردشة</div>
+<div class="qr-row">
+<div class="qr-box">QR</div>
+<div class="qr-label">امسح للحصول على الدعم</div>
+</div>
+</div>
+<div class="card-footer" data-protected-zone="support-and-legal">
+<div class="footer-text">على مدار الساعة · بدون أحكام · أبدًا</div>
+</div>
 </div>
 </body>
 </html>

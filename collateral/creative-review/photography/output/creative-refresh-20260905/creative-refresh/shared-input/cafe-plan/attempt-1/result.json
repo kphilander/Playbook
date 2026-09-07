@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/cafe-plan/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "bdd50dad78e5b611b11954c4b17e88a77db1f38b24c693e5e58e389ac495968a",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-refresh",
+  "concept": "cafe-plan",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T04:34:22.386Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 3062286,
+      "sha256": "c1d62b64cdf5be9ff93629af726231207d8fba81c27218e8a735d06a13445389"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 310,
+    "candidatesTokenCount": 1343,
+    "totalTokenCount": 1913,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 310
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 1120
+      }
+    ],
+    "thoughtsTokenCount": 260,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 21417,
+  "completedAt": "2026-09-05T04:34:43.804Z"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "draft; freeze before generation",
+  "scale": {"1": "Fails the criterion", "2": "Major weaknesses", "3": "Adequate with weaknesses", "4": "Strong", "5": "Excellent"},
+  "criteria": [
+    {"id": "accuracy", "label": "Factual accuracy", "question": "Are the core claim, definitions, arithmetic, and visible assumptions correct?"},
+    {"id": "clarity", "label": "Player comprehension", "question": "Can the intended reader understand the intended lesson quickly and without specialist vocabulary?"},
+    {"id": "respect", "label": "Respectful RG communication", "question": "Does the content support informed choice without stigma, misleading reassurance, or encouragement to increase gambling?"},
+    {"id": "brief_fit", "label": "Fit to the common brief", "question": "Does the entry satisfy the same audience, format, essential facts, and stated brand requirements?"},
+    {"id": "originality", "label": "Creative quality", "question": "Is the hook and explanatory idea memorable, appropriate, and more than a paraphrase of supplied examples?"},
+    {"id": "action", "label": "Useful takeaway", "question": "Does the reader leave with a concrete, proportionate understanding or action that is supported by the content?"}
+  ],
+  "critical_defects": ["False or materially misleading core claim", "Unsupported promise of a win or predictable session outcome", "Missing assumptions that materially change the numerical claim", "Stigmatizing or inappropriate player-facing message", "Failure to produce a usable entry"],
+  "aggregation": "Report criterion scores and critical defects separately. Do not use a weighted overall winner in the initial demonstration. If a composite or weighting is later selected, freeze it before generation and report its formula.",
+  "judging": "Use opaque IDs, randomized order within matched cases, independent scoring before discussion, identity reveal only after scores are locked, and preserve ties and neither-meets-the-brief judgments."
+}

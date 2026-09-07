@@ -181,14 +181,15 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
+<div class="email pb-creative">
 
   <div class="accent-bar"></div>
 
   <div class="hero">
-    <div class="hero-logo">Playbook</div>
+    <div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
     <h1>ようこそ。知っておきたいことをいくつかご紹介します。</h1>
     <p>Playbookは、事実、ツール、そして遊ぶゲームの背景にある本当の数字をお届けします。但し書きはありません。</p>
   </div>
@@ -237,7 +238,7 @@
       チャット：{{CHAT_URL}}
     </div>
     <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
+    <div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
     <div class="footer-unsub">
       <a href="#">配信設定を管理する</a>
     </div>

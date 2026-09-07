@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">运作方式</div>
     <div class="game-name">体育博彩</div>
-    <div class="key-fact">在标准赔率下，玩家须于<strong>逾半数</strong>的投注中获胜方可勉强持平。所谓抽水即博彩公司内建的佣金。</div>
+    <div class="key-fact">赔率−110时，110美元现金投注获胜可获100美元利润。盈亏平衡胜率由这一价格决定。</div>
     <div class="stat-block">
       <span class="stat-number">52.4%</span>
-      <span class="stat-unit">−110 赔率下的<br>持平胜率</span>
+      <span class="stat-unit">每次等额投注，赔率−110<br>不计走盘退款</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

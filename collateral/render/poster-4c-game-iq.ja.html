@@ -46,27 +46,28 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="single-proof">
+<div class="poster pb-creative poster-editorial" data-layout="single-proof">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
     <div class="myth-label">俗説と数学</div>
-    <div class="myth-statement"><span class="strike">「そろそろ当たるはず」</span></div>
+    <div class="myth-statement">連敗しても、<br>当たりは近づきません。</div>
     <div class="divider"></div>
-    <div class="fact-statement">これは<strong>ギャンブラーの誤謬</strong>です。過去の結果で、次の結果の確率が変わることはありません。</div>
+    <div class="fact-statement">各回が独立したスロットでは、過去の負けで次に当たる確率が上がることはありません。</div>
     <div class="stat-row">
       <div class="stat-item">
-        <div class="stat-number">0%</div>
-        <div class="stat-label">過去のスピンが次の結果に与える影響</div>
+        <div class="stat-number">確率は同じ</div>
+        <div class="stat-label">次の独立したスピンでも</div>
       </div>
     </div>
     <a href="#" class="quiz-cta">ゲームIQクイズに挑戦</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

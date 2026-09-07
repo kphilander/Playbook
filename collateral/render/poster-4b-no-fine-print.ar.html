@@ -53,39 +53,40 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="two-comparisons">
-  <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
-    <span class="section-label">الاحتمالات الحقيقية</span>
-  </div>
-  <div class="poster-body">
-    <div class="eyebrow">لا بنود مخفية</div>
-    <div class="headline">لكل لعبة <span class="teal">أفضلية للكازينو</span>.<br>وهذه هي الأرقام.</div>
-    <div class="subhead">أفضلية الكازينو هي النسبة التي يحتفظ بها في المتوسط مع مرور الوقت.</div>
-    <div class="edge-list">
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
-          <div class="edge-game">بلاك جاك (الاستراتيجية الأساسية)</div>
-          <div class="edge-bar low"></div>
-        </div>
-        <div class="edge-pct teal">0.5%</div>
-      </div>
-      <div class="edge-row">
-        <div class="edge-bar-wrap">
-          <div class="edge-game">الروليت الأمريكي</div>
-          <div class="edge-bar high"></div>
-        </div>
-        <div class="edge-pct orange">5.26%</div>
-      </div>
-    </div>
-    <a href="#" class="poster-cta">قارن بين الألعاب</a>
-  </div>
-  <div class="poster-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
-  </div>
+<div class="poster pb-creative poster-editorial" data-layout="two-comparisons">
+<div class="poster-header">
+<span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
+<span class="section-label">الاحتمالات الحقيقية</span>
+</div>
+<div class="poster-body">
+<div class="eyebrow">لا بنود مخفية</div>
+<div class="headline">المبلغ نفسه.<br>حسابات مختلفة.</div>
+<div class="subhead">أفضلية الكازينو هي الخسارة المتوقعة على المدى الطويل كنسبة من إجمالي الرهانات. تختلف باختلاف القواعد والاستراتيجية.</div>
+<div class="edge-list">
+<div class="edge-row">
+<div class="edge-bar-wrap">
+<div class="edge-game">بلاك جاك (الاستراتيجية الأساسية)</div>
+<div class="edge-bar low"></div>
+</div>
+<div class="edge-pct teal"><bdi dir="ltr">0.5%</bdi></div>
+</div>
+<div class="edge-row">
+<div class="edge-bar-wrap">
+<div class="edge-game">الروليت الأمريكي — معظم الرهانات</div>
+<div class="edge-bar high"></div>
+</div>
+<div class="edge-pct orange"><bdi dir="ltr">5.26%</bdi></div>
+</div>
+</div>
+<a class="poster-cta" href="#">قارن بين الألعاب</a>
+</div>
+<div class="poster-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

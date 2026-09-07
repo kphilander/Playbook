@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/birthday-friends/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "bdd50dad78e5b611b11954c4b17e88a77db1f38b24c693e5e58e389ac495968a",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-refresh",
+  "concept": "birthday-friends",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T04:41:38.689Z",
+  "status": "started",
+  "request": {
+    "participant": "creative-refresh",
+    "condition": "shared-input",
+    "concept": "birthday-friends",
+    "prompt": "Use case: photorealistic-natural. One premium editorial photograph for Playbook entertainment literacy. Two adult friends about 40, a Black man and an East Asian woman, sharing an amused smile at a small birthday gathering on a rooftop in warm golden-hour light. A little birthday cake with a single plain candle is visible near their hands. No drinks, no glasses, no cash, no logos, no text or decorations with type. Candid social warmth, relaxed confident body language, natural skin and hands, gentle navy shadows and amber highlights, no artificial gloss. Wide environmental 4:3 composition, both COMPLETE heads and hair with clear space above them placed along the middle horizontal band of the photograph. Keep the entire faces and candle within the middle 45 percent of image height: this image must support a very wide landscape crop without cutting into either head. Photographer is a little further back to leave breathing room, subjects sit at similar head heights, background rooftop plants softly defocused. No one looks at the camera. Purpose: a birthday can be personally meaningful without changing game odds; do not show any actual game or numbers."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Use case: photorealistic-natural. One premium editorial photograph for Playbook entertainment literacy. Two adult friends about 40, a Black man and an East Asian woman, sharing an amused smile at a small birthday gathering on a rooftop in warm golden-hour light. A little birthday cake with a single plain candle is visible near their hands. No drinks, no glasses, no cash, no logos, no text or decorations with type. Candid social warmth, relaxed confident body language, natural skin and hands, gentle navy shadows and amber highlights, no artificial gloss. Wide environmental 4:3 composition, both COMPLETE heads and hair with clear space above them placed along the middle horizontal band of the photograph. Keep the entire faces and candle within the middle 45 percent of image height: this image must support a very wide landscape crop without cutting into either head. Photographer is a little further back to leave breathing room, subjects sit at similar head heights, background rooftop plants softly defocused. No one looks at the camera. Purpose: a birthday can be personally meaningful without changing game odds; do not show any actual game or numbers."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "4:3",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

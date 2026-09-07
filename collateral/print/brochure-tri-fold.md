@@ -109,7 +109,7 @@ INSIDE (face up):
 
 | Game | House edge |
 |---|---|
-| Blackjack (basic strategy) | 0.5% |
+| Blackjack (basic strategy; favorable rules) | ≈0.5% |
 | Craps (pass/don't pass) | 1.4% |
 | European roulette | 2.7% |
 | American roulette | 5.26% |
@@ -136,7 +136,7 @@ INSIDE (face up):
 
 | Tool | Description |
 |---|---|
-| **Deposit limits** | Set your entertainment budget for the week or month. Takes 10 seconds. Adjust anytime. |
+| **Deposit limits** | Set your entertainment budget for the week or month. Choose your amount and time frame. Check when changes take effect. |
 | **Session reminders** | Get a check-in at the interval you choose. Stay aware without killing the vibe. |
 | **Activity dashboard** | See your play stats — sessions, time, spending. No surprises. Knowledge is a feature. |
 | **Bankroll planner** | Enter your budget, pick your game, and see how far your money can go. |
@@ -157,8 +157,8 @@ INSIDE (face up):
 | **Background** | Navy `#1B2838` |
 | **Pillar badge** | `SHARP` (emerald pill) |
 | **Headline** | Think you know the odds? |
-| **Body** | Take the 2-minute game IQ quiz. Most people get question 3 wrong. |
-| **Sample question** | "A slot machine hasn't paid out in 3 hours. What are the odds on the next spin?" |
+| **Body** | Take the 2-minute game IQ quiz. See what you know, then explore the answers. |
+| **Sample question** | "In an independent slot game, does a losing run make a win more likely?" |
 | **QR code** | Links to quiz page on content hub |
 | **QR label** | Scan to take the quiz |
 | **CTA** | Challenge your friends → {{CONTENT_HUB_URL}} |
@@ -205,3 +205,7 @@ Click the template name to view the full HTML source.
 ---
 
 *Cross-references: [Application Guidelines — Print](../../brand-book/07-application-guidelines.md#print-applications) | [Core Messages](../../messaging/core-messages.md) | [Messaging Framework](../../brand-book/05-messaging-framework.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

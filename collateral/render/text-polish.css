@@ -1,0 +1,130 @@
+/* Opt-in refinement for the core, text-led English masters.
+   Composition stays in the templates; every color and family follows brand tokens. */
+.pb-text-polish {
+  --pb-polish-ink:var(--pb-surface-ink,var(--pb-color-white));
+  --pb-polish-muted:var(--pb-surface-ink-muted,var(--pb-color-neutral-300));
+  --pb-polish-rule:color-mix(in srgb,var(--pb-polish-ink) 24%,transparent);
+  --pb-polish-accent:var(--pb-color-secondary);
+  background:var(--pb-color-primary);font-family:var(--pb-font-body);
+}
+.pb-text-polish::before {height:0;}
+.pb-text-polish :is(.headline,.myth-statement,.game-name,.hero-headline,.tools-headline) {
+  font-weight:650;letter-spacing:-.04em;text-wrap:balance;
+}
+.pb-text-polish :is(.myth-label,.htp-label,.quiz-label,.eyebrow,.section-label,.odds-label) {
+  color:var(--pb-polish-muted);font-weight:500;text-transform:none !important;letter-spacing:0 !important;
+}
+.pb-text-polish :is(.fact-statement,.key-fact,.answer) strong {color:var(--pb-polish-ink);font-weight:600;}
+.pb-text-polish :is(.stat-number,.stat-value,.stat-edge,.odds-stat) {font-variant-numeric:tabular-nums;}
+.pb-text-polish .support-number {font-family:var(--pb-font-mono);font-weight:600;white-space:nowrap;}
+
+/* A common left edge, a short emerald signature and a clear two-level message. */
+.social-card.pb-creative.pb-text-polish .card-header {padding:68px 72px 0;}
+.social-card.pb-creative.pb-text-polish .card-header::after,
+.story-card.pb-creative.pb-text-polish .story-header::after {
+  content:'';position:absolute;left:72px;bottom:-40px;width:100px;height:4px;background:var(--pb-polish-accent);
+}
+.social-card.pb-creative.pb-text-polish .card-body {justify-content:flex-start;padding:112px 72px 52px;}
+.social-card.pb-creative.pb-text-polish :is(.myth-label,.htp-label,.quiz-label) {font-size:42px !important;line-height:1.2;margin-bottom:24px;}
+.social-card.pb-creative.pb-text-polish :is(.headline,.myth-statement,.game-name) {
+  font-size:104px !important;line-height:1.04 !important;letter-spacing:-.045em;margin-bottom:40px;
+}
+.social-card.pb-creative.pb-text-polish .myth-statement {border:0;padding:0;}
+.social-card.pb-creative.pb-text-polish :is(.fact-statement,.key-fact,.answer,.explanation) {font-size:46px !important;line-height:1.35 !important;}
+.social-card.pb-creative.pb-text-polish .stat-block {border-color:var(--pb-polish-rule);margin-top:48px;padding-top:32px;gap:24px;align-items:baseline;}
+.social-card.pb-creative.pb-text-polish .stat-number {font-size:142px !important;font-weight:650;line-height:1;color:var(--pb-polish-accent);letter-spacing:-.05em;}
+.social-card.pb-creative.pb-text-polish .stat-unit {font-family:var(--pb-font-body);font-weight:400;}
+.social-card.pb-creative.pb-text-polish .card-footer {
+  margin-inline:72px;padding:28px 0 40px !important;background:transparent;border-top:2px solid var(--pb-polish-rule);
+}
+.social-card.pb-creative.pb-text-polish .footer-helpline {font-family:var(--pb-font-body);font-weight:400;}
+.social-card.pb-creative.pb-text-polish .breakdown {border-block:2px solid var(--pb-polish-rule);padding:26px 0;margin-bottom:36px;}
+.social-card.pb-creative.pb-text-polish .breakdown-line {display:flex;justify-content:space-between;align-items:baseline;font:46px/1.35 var(--pb-font-body);gap:24px;}
+.social-card.pb-creative.pb-text-polish .breakdown-line+.breakdown-line {margin-top:20px;}
+.social-card.pb-creative.pb-text-polish .breakdown .amount {font:600 80px/1 var(--pb-font-heading);letter-spacing:-.04em;color:var(--pb-polish-accent);}
+.social-card.pb-creative.pb-text-polish .emphasis {color:var(--pb-polish-ink);font-weight:600;}
+.social-card.pb-creative.pb-text-polish .quiz-question {background:transparent;border:0;border-inline-start:4px solid var(--pb-polish-accent);border-radius:0;padding:4px 0 4px 28px;margin-bottom:36px;}
+.social-card.pb-creative.pb-text-polish .quiz-question p {font-family:var(--pb-font-body);font-weight:400;font-style:normal;line-height:1.35;}
+
+/* The square has its own spacing, while keeping the same wording and reading floor. */
+body.pb-profile-social-square .social-card.pb-creative.pb-text-polish .card-header {padding-top:48px;}
+body.pb-profile-social-square .social-card.pb-creative.pb-text-polish .card-header::after {bottom:-24px;}
+body.pb-profile-social-square .social-card.pb-creative.pb-text-polish .card-body {padding-top:60px;padding-bottom:28px;}
+body.pb-profile-social-square .social-card.pb-creative.pb-text-polish :is(.headline,.myth-statement,.game-name) {font-size:82px !important;margin-bottom:28px;}
+body.pb-profile-social-square .social-card.pb-creative.pb-text-polish .stat-block {margin-top:28px;padding-top:24px;}
+body.pb-profile-social-square .social-card.pb-creative.pb-text-polish .stat-number {font-size:108px !important;}
+body.pb-profile-social-square .social-card.pb-creative.pb-text-polish .card-footer {padding-top:22px !important;padding-bottom:28px !important;}
+
+.story-card.pb-creative.pb-text-polish .story-header {padding-inline:72px;}
+.story-card.pb-creative.pb-text-polish .story-body {padding:84px 72px 56px !important;justify-content:flex-start;}
+.story-card.pb-creative.pb-text-polish :is(.headline,.myth-statement) {font-size:104px !important;line-height:1.04 !important;margin-bottom:42px;}
+.story-card.pb-creative.pb-text-polish .divider {background:var(--pb-polish-rule);height:2px;width:100%;margin-bottom:24px;}
+.story-card.pb-creative.pb-text-polish .fact-statement {margin-bottom:28px;}
+.story-card.pb-creative.pb-text-polish .stat-block {background:transparent;border:0;border-top:2px solid var(--pb-polish-rule);border-radius:0;text-align:left;padding:24px 0;margin-top:12px;margin-bottom:24px;}
+.story-card.pb-creative.pb-text-polish .stat-number {font-size:128px;font-weight:650;color:var(--pb-polish-accent);}
+.story-card.pb-creative.pb-text-polish .stat-label {font-family:var(--pb-font-body);font-weight:400;}
+.story-card.pb-creative.pb-text-polish :is(.story-cta,.money-block) {text-align:left;border-radius:0;}
+.story-card.pb-creative.pb-text-polish .story-cta {background:transparent;border-top:2px solid var(--pb-polish-rule);padding:20px 0;color:var(--pb-polish-ink);}
+.story-card.pb-creative.pb-text-polish .story-footer {left:72px;right:72px;margin:0;padding-inline:0;background:transparent;border-top:2px solid var(--pb-polish-rule);border-radius:0;text-align:left;}
+.story-card.pb-creative.pb-text-polish .footer-helpline {font-family:var(--pb-font-body);font-weight:400;}
+.story-card.pb-creative.pb-text-polish :is(.note,.money-note) {color:var(--pb-polish-muted);}
+.story-card.pb-creative.pb-text-polish :is(.odds-row,.money-block) {background:transparent;border:0;border-top:2px solid var(--pb-polish-rule);border-radius:0;padding:24px 0;}
+.story-card.pb-creative.pb-text-polish .edge {font:600 72px/1.1 var(--pb-font-heading) !important;letter-spacing:-.04em;}
+.story-card.pb-creative.pb-text-polish .edge.orange {color:var(--pb-polish-ink);}
+.story-card.pb-creative.pb-text-polish .money-value {font:600 64px/1.1 var(--pb-font-heading) !important;letter-spacing:-.04em;}
+.story-card.pb-creative.pb-text-polish .money-value.orange {color:var(--pb-polish-ink);}
+
+/* Distance posters: lighter display weight, unboxed data and a quiet support line. */
+.poster.pb-text-polish .poster-header {padding:84px 120px 0;}
+.poster.pb-text-polish .poster-body {padding-top:156px !important;}
+.poster.pb-text-polish :is(.headline,.myth-statement) {font-size:164px !important;line-height:1.04 !important;font-weight:650;}
+.poster.pb-text-polish :is(.stat-col,.edge-row) {background:transparent;border:0;border-top:2px solid var(--pb-polish-rule);padding:44px 0 !important;}
+.poster.pb-text-polish .stat-grid {gap:64px;}
+.poster.pb-text-polish .stat-edge {font-family:var(--pb-font-heading);font-weight:650;letter-spacing:-.05em;}
+.poster.pb-text-polish .stat-edge.orange {color:var(--pb-polish-ink);}
+.poster.pb-text-polish .edge-pct {font-weight:500;letter-spacing:-.04em;}
+.poster.pb-text-polish :is(.edge-pct.orange,.edge-pct.white) {color:var(--pb-polish-ink);}
+.poster.pb-text-polish .edge-bar.high {background:var(--pb-polish-ink);}
+.poster.pb-text-polish .stat-item {background:transparent;border-block:2px solid var(--pb-polish-rule);padding:48px 0;}
+.poster.pb-text-polish .stat-item .stat-number {color:var(--pb-polish-accent);font-weight:650;letter-spacing:-.04em;}
+.poster.pb-text-polish .stat-item .stat-label {color:var(--pb-polish-ink);font-family:var(--pb-font-body);font-weight:400;}
+.poster.pb-text-polish :is(.poster-cta,.quiz-cta) {background:transparent;color:var(--pb-polish-ink);border-top:2px solid var(--pb-polish-rule);padding:32px 0;}
+.poster.pb-text-polish .poster-footer {margin-inline:120px;padding-inline:0;background:transparent;border-top:2px solid var(--pb-polish-rule);}
+.poster.pb-text-polish .footer-helpline {font-family:var(--pb-font-body);font-weight:400;}
+
+.rack-card.pb-text-polish .card-hero {padding-top:88px;}
+.rack-card.pb-text-polish .hero-headline {font-size:72px;line-height:1.08;}
+.rack-card.pb-text-polish .stats-section {gap:0;}
+.rack-card.pb-text-polish .stat-row {background:transparent;border:0;border-top:1px solid var(--pb-polish-rule);border-radius:0;padding:28px 0;}
+.rack-card.pb-text-polish .stat-game {text-transform:none;letter-spacing:0;color:var(--pb-polish-muted);}
+.rack-card.pb-text-polish .stat-value {font-size:82px;font-weight:650;letter-spacing:-.045em;}
+.rack-card.pb-text-polish .stat-value.orange {color:var(--pb-polish-ink);}
+.rack-card.pb-text-polish .helpline-strip {margin-inline:56px;padding-inline:0;background:transparent;border-top:1px solid var(--pb-polish-rule);text-align:left;}
+.rack-card.pb-text-polish .legal-strip {background:transparent;text-align:left;}
+.rack-card.pb-text-polish .helpline-text {font-family:var(--pb-font-body);font-weight:400;}
+.rack-card.pb-text-polish :is(.operator-placeholder,.legal-text) {color:var(--pb-polish-muted);}
+.table-tent.pb-text-polish .odds-stat {color:var(--pb-polish-accent);font-weight:650;letter-spacing:-.05em;}
+.table-tent.pb-text-polish .odds-label {text-transform:none;letter-spacing:0;color:var(--pb-polish-muted);}
+.table-tent.pb-text-polish .helpline-block {background:transparent;border:0;border-top:1px solid var(--pb-polish-rule);border-radius:0;padding-inline:0;}
+.table-tent.pb-text-polish :is(.helpline-sub,.legal-text) {color:var(--pb-polish-muted);}
+
+/* Email remains fluid. Local type and simple rules also survive a font fallback. */
+.email.pb-text-polish {background:var(--pb-color-white);}
+.email.pb-text-polish .accent-bar {background:var(--pb-polish-accent);height:3px;}
+.email.pb-text-polish .hero h1 {font-weight:650;font-size:36px;letter-spacing:-.035em;line-height:1.15;text-wrap:balance;margin-bottom:20px;}
+.email.pb-text-polish .hero-logo {margin-bottom:40px;}
+.email.pb-text-polish .section-heading {font-weight:600;letter-spacing:-.02em;}
+.email.pb-text-polish .tool-icon {background:transparent;border-radius:0;color:var(--pb-color-secondary-dark);font-weight:500;}
+.email.pb-text-polish .tool-item {padding-top:20px;border-top:1px solid var(--pb-color-neutral-100);margin-bottom:24px;}
+.email.pb-text-polish .stat-block {text-align:left;padding-block:8px;}
+.email.pb-text-polish .stat-number {font-weight:650;letter-spacing:-.04em;}
+.email.pb-text-polish .stat-number :is(.orange,.teal) {color:var(--pb-color-primary);}
+.email.pb-text-polish .stat-context {max-width:none;margin:0;}
+.email.pb-text-polish .footer {text-align:left;}
+.email.pb-text-polish .footer .footer-legal {color:var(--pb-polish-muted) !important;}
+.email.pb-text-polish :is(.cta-button,.cta-button-outline) {font-weight:600;border-radius:4px;}
+.email.pb-text-polish .cta-button-outline {color:var(--pb-color-secondary-dark);border-color:var(--pb-color-secondary-dark);}
+.email.pb-text-polish .budget-stat .value.teal {color:var(--pb-color-secondary-dark);}
+.email.pb-text-polish .stat-card .number {color:var(--pb-color-primary);font-weight:650;}
+.email.pb-text-polish .article-badge {background:var(--pb-color-neutral-100);color:var(--pb-color-primary);}
+@media(max-width:480px){.email.pb-text-polish .hero h1{font-size:30px;}.email.pb-text-polish .hero-logo{margin-bottom:28px;}}

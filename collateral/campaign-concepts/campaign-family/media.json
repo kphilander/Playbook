@@ -1,0 +1,83 @@
+{
+  "portrait-playbook": {
+    "png": "../brand-presence/renders/quiet-playbook.png?v=ef2091fbf2ee",
+    "pixels": [
+      3240,
+      4050
+    ],
+    "templateId": "campaign-presence",
+    "scale": 3
+  },
+  "portrait-club": {
+    "png": "../brand-presence/renders/quiet-club.png?v=64b369d853ae",
+    "pixels": [
+      3240,
+      4050
+    ],
+    "templateId": "campaign-presence",
+    "scale": 3
+  },
+  "portrait-circuit": {
+    "png": "../brand-presence/renders/quiet-circuit.png?v=ade3174ed482",
+    "pixels": [
+      3240,
+      4050
+    ],
+    "templateId": "campaign-presence",
+    "scale": 3
+  },
+  "story-playbook": {
+    "png": "renders/story-playbook.png?v=33e2c9458790",
+    "pixels": [
+      2160,
+      3840
+    ],
+    "templateId": "campaign-rest-story",
+    "scale": 2
+  },
+  "story-club": {
+    "png": "renders/story-club.png?v=2b875bc84920",
+    "pixels": [
+      2160,
+      3840
+    ],
+    "templateId": "campaign-rest-story",
+    "scale": 2
+  },
+  "story-circuit": {
+    "png": "renders/story-circuit.png?v=aa017775e1f8",
+    "pixels": [
+      2160,
+      3840
+    ],
+    "templateId": "campaign-rest-story",
+    "scale": 2
+  },
+  "landscape-playbook": {
+    "png": "renders/landscape-playbook.png?v=563092548027",
+    "pixels": [
+      5760,
+      3240
+    ],
+    "templateId": "campaign-rest-landscape",
+    "scale": 3
+  },
+  "landscape-club": {
+    "png": "renders/landscape-club.png?v=ef53ebfdcb52",
+    "pixels": [
+      5760,
+      3240
+    ],
+    "templateId": "campaign-rest-landscape",
+    "scale": 3
+  },
+  "landscape-circuit": {
+    "png": "renders/landscape-circuit.png?v=8b4d404567b1",
+    "pixels": [
+      5760,
+      3240
+    ],
+    "templateId": "campaign-rest-landscape",
+    "scale": 3
+  }
+}

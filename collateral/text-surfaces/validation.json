@@ -1,0 +1,1456 @@
+[
+  {
+    "id": "card-1a-hot-streak--flat",
+    "template": "card-1a-hot-streak",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+    "pngSha256": "1765c7f330d809880b1076d41a80b4875c251b0ce0ceb9f8682c5a05ddb200ff",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3,
+        "16,185,129,255": 5.88
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1a-hot-streak--spotlight",
+    "template": "card-1a-hot-streak",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+    "pngSha256": "4233159e873e318b38a9e05bd280a21e7ae1b7ad89dc2161230986e207880217",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.82,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.95,
+        "200,200,216,255": 9.14,
+        "16,185,129,255": 6.82
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1a-hot-streak--contour",
+    "template": "card-1a-hot-streak",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+    "pngSha256": "b421b35b6ee171d96c939efdd02151dee2d04a11c469242d78756ad3b5ad2314",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.51,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.47,
+        "200,200,216,255": 7.73,
+        "16,185,129,255": 5.51
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1a-hot-streak--paper",
+    "template": "card-1a-hot-streak",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+    "pngSha256": "51d84410dce8605931262f5fdc5c399877a6b256ba68a9ecd3215c0b0c632575",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5,
+      "minimumByTextColor": {
+        "27,40,56,255": 12.54,
+        "42,63,86,255": 9.07,
+        "4,120,87,255": 5
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1a-hot-streak--emerald",
+    "template": "card-1a-hot-streak",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+    "pngSha256": "b37ee95a27d51d1eb3a60c0ca8b9c996a33b1d7fc87cfa6caa6030b94f7f3134",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "52,211,153,255": 9.23,
+        "200,200,216,255": 10.74
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1a-hot-streak--signal",
+    "template": "card-1a-hot-streak",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+    "pngSha256": "f92365fc7bbf7440b5469a10138796e8ff4719cce6520e2c061bd7bb0f77cd68",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.19,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97,
+        "16,185,129,255": 5.19
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1b-due-for-win--flat",
+    "template": "card-1b-due-for-win",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+    "pngSha256": "2d9ba1bdb4fd6af7f5915a75eb9afd0ed3d61a05f17e49e24be278f4a1a721fc",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 7.3,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1b-due-for-win--spotlight",
+    "template": "card-1b-due-for-win",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+    "pngSha256": "8eecdac890929b6ddf8a797d3f81c096cb21af26fe780a2cc61cf7c226f76b19",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 9.03,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.95,
+        "200,200,216,255": 9.03
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1b-due-for-win--contour",
+    "template": "card-1b-due-for-win",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+    "pngSha256": "91d38d3c990f91ba1349cf6f7171b919baa2b0c85cbb1ed579519a37061e8df3",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 7.73,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.47,
+        "200,200,216,255": 7.73
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1b-due-for-win--paper",
+    "template": "card-1b-due-for-win",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+    "pngSha256": "bee91809093a4829db267f24e834bb146bdfa4bcaa644f1a1fd72d2b42a4d547",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 9.07,
+      "minimumByTextColor": {
+        "27,40,56,255": 12.54,
+        "42,63,86,255": 9.07
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1b-due-for-win--emerald",
+    "template": "card-1b-due-for-win",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+    "pngSha256": "21655504ba7f5d78072a3334da5a1e0c4acf2d782e81e3490c0f09f045a5101d",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-1b-due-for-win--signal",
+    "template": "card-1b-due-for-win",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+    "pngSha256": "60099090adc5b3c6c8902c5105be70773e29bcac42b85061d1cdf0fa9c29780e",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 7.97,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2b-sports-betting--flat",
+    "template": "card-2b-sports-betting",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+    "pngSha256": "ef854aa72384bc989ef89513e060e0ac3f24dd9d1dd833eaa89838b474aa1b1e",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3,
+        "16,185,129,255": 5.88
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2b-sports-betting--spotlight",
+    "template": "card-2b-sports-betting",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+    "pngSha256": "712601d46676e4a931610cf43dced1a0d22312e1df791b3418b7ea2582053a3f",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.28,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.95,
+        "200,200,216,255": 8.44,
+        "16,185,129,255": 6.28
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2b-sports-betting--contour",
+    "template": "card-2b-sports-betting",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+    "pngSha256": "1304590cf48d64901cd0f80ab6e18160a3a6aa593df0ad49c02d5cf520508a71",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 4.97,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.47,
+        "200,200,216,255": 7.73,
+        "16,185,129,255": 4.97
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2b-sports-betting--paper",
+    "template": "card-2b-sports-betting",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+    "pngSha256": "cfbf64e7d20caf6ee1f313cfb5dc010db8f77c83f0d7f89f5b0e5baff6e5c3e7",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5,
+      "minimumByTextColor": {
+        "27,40,56,255": 12.54,
+        "42,63,86,255": 9.07,
+        "4,120,87,255": 5
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2b-sports-betting--emerald",
+    "template": "card-2b-sports-betting",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+    "pngSha256": "8d85a8f737a5b6261af8be80712a637f3c6c5cfa75fdbfb0eae6078fcfe3a2a2",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "255,255,255,255": 17.74,
+        "52,211,153,255": 9.23
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2b-sports-betting--signal",
+    "template": "card-2b-sports-betting",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+    "pngSha256": "58dfadd509e6e4baa687aa32d4fa627afbc436c69fc782fab4223f2cfc932f86",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.03,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97,
+        "16,185,129,255": 6.03
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2c-bonus-wagering--flat",
+    "template": "card-2c-bonus-wagering",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+    "pngSha256": "2544a6f439fb7b25275f2498024e6ff9b6c42edb4c740ad8edc4d6a914cde902",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 7.3,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2c-bonus-wagering--spotlight",
+    "template": "card-2c-bonus-wagering",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+    "pngSha256": "33cf61c7a5fb702ee718d1f3b97891eb46662592df30ddddd3b5427203cbb698",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 8.24,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.95,
+        "200,200,216,255": 8.24
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2c-bonus-wagering--contour",
+    "template": "card-2c-bonus-wagering",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+    "pngSha256": "9baff8e7b705b4c6466fd4aaddea06b0d3a406a0a9fbee5593e18c20c350f110",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 7.73,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.47,
+        "200,200,216,255": 7.73
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2c-bonus-wagering--paper",
+    "template": "card-2c-bonus-wagering",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+    "pngSha256": "7d38341a99f289bbb8fbc58aedef93fb8541f8850d3a1c95067306bdf3a002a6",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 9.07,
+      "minimumByTextColor": {
+        "27,40,56,255": 12.54,
+        "42,63,86,255": 9.07
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2c-bonus-wagering--emerald",
+    "template": "card-2c-bonus-wagering",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+    "pngSha256": "8e213975f69304a48b420c1e29fa97332343324f2c0fc5f7334267c243d6916e",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "255,255,255,255": 17.74
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "card-2c-bonus-wagering--signal",
+    "template": "card-2c-bonus-wagering",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+    "pngSha256": "d32a0d387f3a3522d3659d89ca5cc16f4eb67af2d4bb71c88572fbe2d68b1da2",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 7.97,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "htp-card-blackjack--flat",
+    "template": "htp-card-blackjack",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+    "pngSha256": "571daf08e189b5bde59e68cfe04e472c86de63fbe59bab4fef01d17555e0b440",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3,
+        "16,185,129,255": 5.88
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "htp-card-blackjack--spotlight",
+    "template": "htp-card-blackjack",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+    "pngSha256": "9952278b05f75a6ac194ad1b80b497f60b50cd6a3bf6d6e7f99228de238d3924",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.59,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.95,
+        "200,200,216,255": 9.03,
+        "16,185,129,255": 6.59
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "htp-card-blackjack--contour",
+    "template": "htp-card-blackjack",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+    "pngSha256": "ec3eecf5484c9e2036096aa509adb9ecfccaf2c85ede2bc74d0b1a1fc92d52ac",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.34,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.47,
+        "200,200,216,255": 7.73,
+        "16,185,129,255": 5.34
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "htp-card-blackjack--paper",
+    "template": "htp-card-blackjack",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+    "pngSha256": "b23650e949fd068e7483003aba40594bc0772b424fe12d215d4815177bf8985a",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 4.92,
+      "minimumByTextColor": {
+        "27,40,56,255": 12.54,
+        "42,63,86,255": 9.07,
+        "4,120,87,255": 4.92
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "htp-card-blackjack--emerald",
+    "template": "htp-card-blackjack",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+    "pngSha256": "9464a697b62d01ea155ff34e71cdf2dba83f4c0dc7e5265db974f0cab069d7c3",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "52,211,153,255": 9.23,
+        "200,200,216,255": 10.74
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "htp-card-blackjack--signal",
+    "template": "htp-card-blackjack",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+    "pngSha256": "16a518f83be4cda81ddbb41f52ffabc04c559e03525181ce16dff69557ca99e1",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.19,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97,
+        "16,185,129,255": 5.19
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3a-hot-streak--flat",
+    "template": "story-3a-hot-streak",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+    "pngSha256": "f7896f3eb922b96f76a048be713d7e04914e779c445a5745715960ab3a1717cc",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3,
+        "16,185,129,255": 5.88
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3a-hot-streak--spotlight",
+    "template": "story-3a-hot-streak",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+    "pngSha256": "409e8ebb1131553bab5a9d4f47741640e1f1f453fdb0e8387aee8276de5463b3",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.83,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.65,
+        "200,200,216,255": 9.14,
+        "16,185,129,255": 6.83
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3a-hot-streak--contour",
+    "template": "story-3a-hot-streak",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+    "pngSha256": "4a654ef6217178c7141bbd3af20d029a9f78146534062127c10e33b7e5ec8150",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.58,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.15,
+        "200,200,216,255": 7.73,
+        "16,185,129,255": 5.58
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3a-hot-streak--paper",
+    "template": "story-3a-hot-streak",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+    "pngSha256": "1ae9b769717c85756d8227bb51b345c82f57c9b51a0fab4d30092522b4e512e4",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.05,
+      "minimumByTextColor": {
+        "27,40,56,255": 13.11,
+        "42,63,86,255": 9.35,
+        "4,120,87,255": 5.05
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3a-hot-streak--emerald",
+    "template": "story-3a-hot-streak",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+    "pngSha256": "ade196da8815bd54ffd6196fdf56385cb9fbc0d0f531a4842436f03a9edabb1d",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "52,211,153,255": 9.23,
+        "200,200,216,255": 10.74
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3a-hot-streak--signal",
+    "template": "story-3a-hot-streak",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+    "pngSha256": "569c86bd75723840a5064cd7930b8d8f44f31e577c8fe68501d35947eec03377",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.19,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97,
+        "16,185,129,255": 5.19
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3b-house-edge--flat",
+    "template": "story-3b-house-edge",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+    "pngSha256": "abdd0ce45c25baa9e1965ad025cd91682ded1c27a41f58946f529d652d08185b",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3,
+        "16,185,129,255": 5.88
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3b-house-edge--spotlight",
+    "template": "story-3b-house-edge",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+    "pngSha256": "96bf1a4650fc4365ddb5d88008e3de40590588ee55da6a60f589bf0d2086a1f5",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.53,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.65,
+        "200,200,216,255": 9.14,
+        "16,185,129,255": 6.53
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3b-house-edge--contour",
+    "template": "story-3b-house-edge",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+    "pngSha256": "7d2c1a0e1ae74c16895837a4dedc2555a187010738df1f5467310dccec252e00",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.15,
+        "200,200,216,255": 7.73,
+        "16,185,129,255": 5.88
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3b-house-edge--paper",
+    "template": "story-3b-house-edge",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+    "pngSha256": "dc266dd3168aae1171a0eb879223dce99483523d77c4a1b2c383abce18021d8a",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.05,
+      "minimumByTextColor": {
+        "27,40,56,255": 13.11,
+        "42,63,86,255": 9.35,
+        "4,120,87,255": 5.05
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3b-house-edge--emerald",
+    "template": "story-3b-house-edge",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+    "pngSha256": "16213ce4a595ed0e3c8a5f2b9cfe942d556c775f9b86bf83995357e853cc049b",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "255,255,255,255": 17.74,
+        "200,200,216,255": 10.74,
+        "52,211,153,255": 9.23
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3b-house-edge--signal",
+    "template": "story-3b-house-edge",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+    "pngSha256": "1ad0a34f78e8cb601d611b70906f44b7500dfdf376a6ad780c9be93d600b5882",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.19,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97,
+        "16,185,129,255": 5.19
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3c-sports-betting--flat",
+    "template": "story-3c-sports-betting",
+    "surface": "flat",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+    "pngSha256": "311ee1b7d48100fa0a75185a6b1d3eaf85556766daa76adf4ec4b56a345bfff8",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3,
+        "16,185,129,255": 5.88
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3c-sports-betting--spotlight",
+    "template": "story-3c-sports-betting",
+    "surface": "spotlight",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+    "pngSha256": "0a50ba22d7713ca65cf32e03a764d6167cbda98505b7538e481e30db71b28df5",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.94,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.65,
+        "200,200,216,255": 9.14,
+        "16,185,129,255": 6.94
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3c-sports-betting--contour",
+    "template": "story-3c-sports-betting",
+    "surface": "contour",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+    "pngSha256": "10f7faf811fa88258e5a60528e6d33bfa881828aa5fe360e799a3b4a061416a0",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.58,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.15,
+        "200,200,216,255": 7.73,
+        "16,185,129,255": 5.58
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3c-sports-betting--paper",
+    "template": "story-3c-sports-betting",
+    "surface": "paper",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+    "pngSha256": "d3cc72110872228a18a9481f8028101a950b2dd379d065aca621ce938ade178e",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.05,
+      "minimumByTextColor": {
+        "27,40,56,255": 13.11,
+        "42,63,86,255": 9.35,
+        "4,120,87,255": 5.05
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3c-sports-betting--emerald",
+    "template": "story-3c-sports-betting",
+    "surface": "emerald",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+    "pngSha256": "0f8e1930079590f9f505b07a7ad4a2ce012dd99761b6ecf7aae687b204338530",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "200,200,216,255": 10.74,
+        "52,211,153,255": 9.23,
+        "255,255,255,255": 17.74
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "story-3c-sports-betting--signal",
+    "template": "story-3c-sports-betting",
+    "surface": "signal",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+    "pngSha256": "f3122c7aff42505f03d3f715249d0846701df97a1ffbbbd52b12a1b9d0d84258",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.03,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97,
+        "16,185,129,255": 6.03
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "poster-4a-know-your-game--flat",
+    "template": "poster-4a-know-your-game",
+    "surface": "flat",
+    "dimensions": [
+      1800,
+      2400
+    ],
+    "pixels": [
+      3600,
+      4800
+    ],
+    "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+    "pngSha256": "6b2346348a952580fbb76dc5a222aa86864a73e1c9bbf6f0d9628fd47817a358",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.88,
+      "minimumByTextColor": {
+        "255,255,255,255": 14.92,
+        "177,182,187,255": 7.3,
+        "16,185,129,255": 5.88,
+        "200,200,216,255": 9.03,
+        "27,40,56,255": 14.92
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "poster-4a-know-your-game--spotlight",
+    "template": "poster-4a-know-your-game",
+    "surface": "spotlight",
+    "dimensions": [
+      1800,
+      2400
+    ],
+    "pixels": [
+      3600,
+      4800
+    ],
+    "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+    "pngSha256": "e133f16354648fc902e5c4aa3cdd9bd6a407a0cf679f041641cb4586f455bd35",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.83,
+      "minimumByTextColor": {
+        "255,255,255,255": 15.1,
+        "200,200,216,255": 8.04,
+        "16,185,129,255": 6.83,
+        "27,40,56,255": 14.92
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "poster-4a-know-your-game--contour",
+    "template": "poster-4a-know-your-game",
+    "surface": "contour",
+    "dimensions": [
+      1800,
+      2400
+    ],
+    "pixels": [
+      3600,
+      4800
+    ],
+    "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+    "pngSha256": "bd686bfaaf7d0feb178ae3a46b16dc9a66f5c595b2859150183b4b1d7df049a7",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.52,
+      "minimumByTextColor": {
+        "255,255,255,255": 12.76,
+        "200,200,216,255": 7.17,
+        "16,185,129,255": 5.52,
+        "27,40,56,255": 14.92
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "poster-4a-know-your-game--paper",
+    "template": "poster-4a-know-your-game",
+    "surface": "paper",
+    "dimensions": [
+      1800,
+      2400
+    ],
+    "pixels": [
+      3600,
+      4800
+    ],
+    "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+    "pngSha256": "d8df2a911db45a4825f5c5659c14a323d3aa55f294cf41a6c23a7901dda2468a",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.05,
+      "minimumByTextColor": {
+        "27,40,56,255": 13.35,
+        "42,63,86,255": 9.94,
+        "4,120,87,255": 5.05
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "poster-4a-know-your-game--emerald",
+    "template": "poster-4a-know-your-game",
+    "surface": "emerald",
+    "dimensions": [
+      1800,
+      2400
+    ],
+    "pixels": [
+      3600,
+      4800
+    ],
+    "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+    "pngSha256": "ddc4e90b70f1d57e2a8c846215fd4dcd866befe711573c632b2710472a2d0dec",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 6.22,
+      "minimumByTextColor": {
+        "15,25,35,255": 6.22,
+        "255,255,255,255": 17.74,
+        "52,211,153,255": 9.23,
+        "200,200,216,255": 10.74,
+        "27,40,56,255": 14.92
+      },
+      "issues": []
+    }
+  },
+  {
+    "id": "poster-4a-know-your-game--signal",
+    "template": "poster-4a-know-your-game",
+    "surface": "signal",
+    "dimensions": [
+      1800,
+      2400
+    ],
+    "pixels": [
+      3600,
+      4800
+    ],
+    "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+    "pngSha256": "baceff60ec66f24dd868ff176e7ba1fe453ce2184749fb3bec1e5b4b8bb53dfd",
+    "copyPreserved": true,
+    "layoutIssues": [],
+    "contrast": {
+      "method": "Every pixel within text-line bounds on a text-free raster of the real CSS background",
+      "minimum": 5.19,
+      "minimumByTextColor": {
+        "255,255,255,255": 13.17,
+        "200,200,216,255": 7.97,
+        "16,185,129,255": 5.19,
+        "27,40,56,255": 14.92
+      },
+      "issues": []
+    }
+  }
+]

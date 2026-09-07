@@ -53,17 +53,18 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="two-comparisons">
+<div class="poster pb-creative poster-editorial" data-layout="two-comparisons">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">本当の確率</span>
   </div>
   <div class="poster-body">
     <div class="eyebrow">小さな但し書きはなし</div>
-    <div class="headline">すべてのゲームには<span class="teal">ハウスエッジ</span>があります。<br>実際の数値をご紹介します。</div>
-    <div class="subhead">長期的にハウスが受け取る割合のことです。ゲームごとの比較をご覧ください。</div>
+    <div class="headline">同じ賭け額。<br>異なる控除率。</div>
+    <div class="subhead">控除率は、賭けた総額に対する長期的な期待損失の割合です。ルールと戦略で変わります。</div>
     <div class="edge-list">
       <div class="edge-row">
         <div class="edge-bar-wrap">
@@ -74,7 +75,7 @@
       </div>
       <div class="edge-row">
         <div class="edge-bar-wrap">
-          <div class="edge-game">アメリカンルーレット</div>
+          <div class="edge-game">アメリカンルーレット（多くの賭け方）</div>
           <div class="edge-bar high"></div>
         </div>
         <div class="edge-pct orange">5.26%</div>
@@ -82,7 +83,7 @@
     </div>
     <a href="#" class="poster-cta">ゲーム別の数字を見る</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

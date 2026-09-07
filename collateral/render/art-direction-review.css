@@ -1,0 +1,27 @@
+/* Scoped review surface. The historical gallery and its filters are intact. */
+#art-direction-review { background: #f1f0eb; color: #222824; padding: 48px max(28px,calc((100vw - 1120px)/2)); font: 16px/1.5 Inter,system-ui,sans-serif; }
+#art-direction-review * { box-sizing: border-box; }
+#art-direction-review .art-review-intro { max-width: 790px; padding-bottom: 48px; }
+#art-direction-review .art-review-kicker { margin: 0 0 12px; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: #525b53; }
+#art-direction-review h1 { margin: 0 0 18px; font-size: clamp(36px,5vw,60px); line-height: 1.05; letter-spacing: -.045em; }
+#art-direction-review h2 { margin: 0 0 8px; font-size: 28px; line-height: 1.15; letter-spacing: -.025em; }
+#art-direction-review p { margin: 0; max-width: 700px; }
+#art-direction-review nav { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; }
+#art-direction-review a { color: inherit; }
+#art-direction-review nav a { text-underline-offset: 5px; min-height: 36px; }
+#art-direction-review a:focus-visible { outline: 3px solid #047857; outline-offset: 6px; }
+#art-direction-review .art-review-study { padding: 36px 0 56px; border-top: 1px solid #bec2b9; scroll-margin-top: 24px; }
+#art-direction-review .art-review-study > header { margin-bottom: 28px; }
+#art-direction-review .art-review-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+#art-direction-review figure { margin: 0; min-width: 0; }
+#art-direction-review figcaption { margin-bottom: 12px; font-size: 14px; font-weight: 600; }
+#art-direction-review figure a { display: block; }
+#art-direction-review img { display: block; width: 100%; height: auto; box-shadow: 0 2px 8px #2228240c; }
+#art-direction-review .art-review-end { color: #525b53; font-size: 14px; }
+@media (max-width: 600px) {
+  #art-direction-review { padding: 32px 20px; }
+  #art-direction-review .art-review-pair { gap: 14px; }
+  #art-direction-review h2 { font-size: 24px; }
+  #art-direction-review figcaption { font-size: 12px; }
+}
+@media print { #art-direction-review .art-review-study { break-inside: avoid; } }

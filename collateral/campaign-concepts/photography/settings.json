@@ -1,0 +1,9 @@
+{
+  "provider": "google-gemini",
+  "runId": "campaign-portrait-20260905",
+  "model": "gemini-3-pro-image",
+  "aspectRatio": "4:5",
+  "imageSize": "2K",
+  "referenceMode": "none",
+  "maxAttemptsPerConcept": 2
+}

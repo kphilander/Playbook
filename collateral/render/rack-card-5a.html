@@ -2,10 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
-  <style>
+        <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { margin: 0; padding: 24px; background: var(--pb-color-primary); }
 
@@ -220,12 +217,14 @@
     }
   </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+  <link rel="stylesheet" href="text-polish.css">
+</head>
 <body>
-  <div class="rack-card">
+  <div class="rack-card pb-creative pb-text-polish">
     <div class="card-header">
       <div class="card-header-left">
-        <span class="card-logo">Playbook</span>
+        <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
         <div class="co-brand-divider"></div>
         <div class="operator-placeholder">Your logo</div>
       </div>
@@ -237,7 +236,7 @@
     </div>
     <div class="stats-section">
       <div class="stat-row">
-        <div class="stat-game">Blackjack (basic strategy)</div>
+        <div class="stat-game">Blackjack (basic strategy; favorable rules)</div>
         <div class="stat-value teal">0.5%</div>
       </div>
       <div class="stat-row">
@@ -245,7 +244,7 @@
         <div class="stat-value white">5.26%</div>
       </div>
       <div class="stat-row">
-        <div class="stat-game">Slots (average)</div>
+        <div class="stat-game">Slots (varies by game)</div>
         <div class="stat-value orange">2&ndash;15%</div>
       </div>
     </div>
@@ -257,7 +256,7 @@
       <span class="qr-label">Scan for the facts</span>
     </div>
     <div class="helpline-strip">
-      <span class="helpline-text">Free, confidential support 24/7: {{HELPLINE_NUMBER}}</span>
+      <span class="helpline-text">Free, confidential support 24/7: <span class="support-number">{{HELPLINE_NUMBER}}</span></span>
     </div>
     <div class="legal-strip">
       <span class="legal-text">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</span>

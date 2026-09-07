@@ -1,7 +1,7 @@
 {
   "meta": {
-    "totalAssets": 212,
-    "generated": "2026-08-01T19:16:14.819Z",
+    "totalAssets": 385,
+    "generated": "2026-09-05T04:46:38.056Z",
     "version": "0.1.0",
     "baseUrl": "/tools/playbook",
     "description": "Complete catalog of Playbook brand assets. All assets are CC0-licensed."
@@ -735,7 +735,7 @@
       ]
     },
     "collateral": {
-      "count": 147,
+      "count": 320,
       "assets": [
         {
           "id": "app-banner-12d.ar",
@@ -743,7 +743,43 @@
           "url": "/tools/playbook/assets/renders/app-banner-12d.ar.png",
           "sourceUrl": "collateral/render/app-banner-12d.ar.png",
           "format": "png",
-          "fileSize": 11728,
+          "fileSize": 10401,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "app-banner-12d.ja",
+          "filename": "app-banner-12d.ja.png",
+          "url": "/tools/playbook/assets/renders/app-banner-12d.ja.png",
+          "sourceUrl": "collateral/render/app-banner-12d.ja.png",
+          "format": "png",
+          "fileSize": 12983,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "app-banner-12d",
+          "filename": "app-banner-12d.png",
+          "url": "/tools/playbook/assets/renders/app-banner-12d.png",
+          "sourceUrl": "collateral/render/app-banner-12d.png",
+          "format": "png",
+          "fileSize": 9383,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "app-banner-12d.zh-CN",
+          "filename": "app-banner-12d.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/app-banner-12d.zh-CN.png",
+          "sourceUrl": "collateral/render/app-banner-12d.zh-CN.png",
+          "format": "png",
+          "fileSize": 12039,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -755,7 +791,43 @@
           "url": "/tools/playbook/assets/renders/betslip-rg-12g.ar.png",
           "sourceUrl": "collateral/render/betslip-rg-12g.ar.png",
           "format": "png",
-          "fileSize": 25148,
+          "fileSize": 26370,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "betslip-rg-12g.ja",
+          "filename": "betslip-rg-12g.ja.png",
+          "url": "/tools/playbook/assets/renders/betslip-rg-12g.ja.png",
+          "sourceUrl": "collateral/render/betslip-rg-12g.ja.png",
+          "format": "png",
+          "fileSize": 31389,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "betslip-rg-12g",
+          "filename": "betslip-rg-12g.png",
+          "url": "/tools/playbook/assets/renders/betslip-rg-12g.png",
+          "sourceUrl": "collateral/render/betslip-rg-12g.png",
+          "format": "png",
+          "fileSize": 24057,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "betslip-rg-12g.zh-CN",
+          "filename": "betslip-rg-12g.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/betslip-rg-12g.zh-CN.png",
+          "sourceUrl": "collateral/render/betslip-rg-12g.zh-CN.png",
+          "format": "png",
+          "fileSize": 26691,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -767,7 +839,24 @@
           "url": "/tools/playbook/assets/renders/brochure-cover-8b.ar.png",
           "sourceUrl": "collateral/render/brochure-cover-8b.ar.png",
           "format": "png",
-          "fileSize": 163311,
+          "fileSize": 225177,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": {
+            "width": 2400,
+            "height": 1000
+          }
+        },
+        {
+          "id": "brochure-cover-8b.ja",
+          "filename": "brochure-cover-8b.ja.png",
+          "url": "/tools/playbook/assets/renders/brochure-cover-8b.ja.png",
+          "sourceUrl": "collateral/render/brochure-cover-8b.ja.png",
+          "format": "png",
+          "fileSize": 288030,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -784,7 +873,24 @@
           "url": "/tools/playbook/assets/renders/brochure-cover-8b.png",
           "sourceUrl": "collateral/render/brochure-cover-8b.png",
           "format": "png",
-          "fileSize": 143446,
+          "fileSize": 186349,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": {
+            "width": 2400,
+            "height": 1000
+          }
+        },
+        {
+          "id": "brochure-cover-8b.zh-CN",
+          "filename": "brochure-cover-8b.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/brochure-cover-8b.zh-CN.png",
+          "sourceUrl": "collateral/render/brochure-cover-8b.zh-CN.png",
+          "format": "png",
+          "fileSize": 221274,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -801,7 +907,24 @@
           "url": "/tools/playbook/assets/renders/brochure-trifold-8a.ar.png",
           "sourceUrl": "collateral/render/brochure-trifold-8a.ar.png",
           "format": "png",
-          "fileSize": 286670,
+          "fileSize": 453468,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": {
+            "width": 2400,
+            "height": 1000
+          }
+        },
+        {
+          "id": "brochure-trifold-8a.ja",
+          "filename": "brochure-trifold-8a.ja.png",
+          "url": "/tools/playbook/assets/renders/brochure-trifold-8a.ja.png",
+          "sourceUrl": "collateral/render/brochure-trifold-8a.ja.png",
+          "format": "png",
+          "fileSize": 636724,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -818,7 +941,7 @@
           "url": "/tools/playbook/assets/renders/brochure-trifold-8a.png",
           "sourceUrl": "collateral/render/brochure-trifold-8a.png",
           "format": "png",
-          "fileSize": 262884,
+          "fileSize": 415401,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -830,12 +953,48 @@
           }
         },
         {
+          "id": "brochure-trifold-8a.zh-CN",
+          "filename": "brochure-trifold-8a.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/brochure-trifold-8a.zh-CN.png",
+          "sourceUrl": "collateral/render/brochure-trifold-8a.zh-CN.png",
+          "format": "png",
+          "fileSize": 471268,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": {
+            "width": 2400,
+            "height": 1000
+          }
+        },
+        {
+          "id": "card-11a-streamer-myth.ja",
+          "filename": "card-11a-streamer-myth.ja.png",
+          "url": "/tools/playbook/assets/renders/card-11a-streamer-myth.ja.png",
+          "sourceUrl": "collateral/render/card-11a-streamer-myth.ja.png",
+          "format": "png",
+          "fileSize": 128070,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
           "id": "card-11a-streamer-myth",
           "filename": "card-11a-streamer-myth.png",
           "url": "/tools/playbook/assets/renders/card-11a-streamer-myth.png",
           "sourceUrl": "collateral/render/card-11a-streamer-myth.png",
           "format": "png",
-          "fileSize": 66340,
+          "fileSize": 87682,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -854,7 +1013,26 @@
           "url": "/tools/playbook/assets/renders/card-11b-lucky-numbers.ar.png",
           "sourceUrl": "collateral/render/card-11b-lucky-numbers.ar.png",
           "format": "png",
-          "fileSize": 84258,
+          "fileSize": 148417,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-11b-lucky-numbers.ja",
+          "filename": "card-11b-lucky-numbers.ja.png",
+          "url": "/tools/playbook/assets/renders/card-11b-lucky-numbers.ja.png",
+          "sourceUrl": "collateral/render/card-11b-lucky-numbers.ja.png",
+          "format": "png",
+          "fileSize": 152978,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -873,7 +1051,26 @@
           "url": "/tools/playbook/assets/renders/card-11b-lucky-numbers.png",
           "sourceUrl": "collateral/render/card-11b-lucky-numbers.png",
           "format": "png",
-          "fileSize": 63386,
+          "fileSize": 112810,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-11b-lucky-numbers.zh-CN",
+          "filename": "card-11b-lucky-numbers.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-11b-lucky-numbers.zh-CN.png",
+          "sourceUrl": "collateral/render/card-11b-lucky-numbers.zh-CN.png",
+          "format": "png",
+          "fileSize": 132860,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -892,7 +1089,64 @@
           "url": "/tools/playbook/assets/renders/card-13a-its-due.ar.png",
           "sourceUrl": "collateral/render/card-13a-its-due.ar.png",
           "format": "png",
-          "fileSize": 70451,
+          "fileSize": 118766,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13a-its-due.ja",
+          "filename": "card-13a-its-due.ja.png",
+          "url": "/tools/playbook/assets/renders/card-13a-its-due.ja.png",
+          "sourceUrl": "collateral/render/card-13a-its-due.ja.png",
+          "format": "png",
+          "fileSize": 134989,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13a-its-due",
+          "filename": "card-13a-its-due.png",
+          "url": "/tools/playbook/assets/renders/card-13a-its-due.png",
+          "sourceUrl": "collateral/render/card-13a-its-due.png",
+          "format": "png",
+          "fileSize": 101237,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13a-its-due.zh-CN",
+          "filename": "card-13a-its-due.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-13a-its-due.zh-CN.png",
+          "sourceUrl": "collateral/render/card-13a-its-due.zh-CN.png",
+          "format": "png",
+          "fileSize": 112920,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -911,7 +1165,64 @@
           "url": "/tools/playbook/assets/renders/card-13b-near-win.ar.png",
           "sourceUrl": "collateral/render/card-13b-near-win.ar.png",
           "format": "png",
-          "fileSize": 65296,
+          "fileSize": 112598,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13b-near-win.ja",
+          "filename": "card-13b-near-win.ja.png",
+          "url": "/tools/playbook/assets/renders/card-13b-near-win.ja.png",
+          "sourceUrl": "collateral/render/card-13b-near-win.ja.png",
+          "format": "png",
+          "fileSize": 118085,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13b-near-win",
+          "filename": "card-13b-near-win.png",
+          "url": "/tools/playbook/assets/renders/card-13b-near-win.png",
+          "sourceUrl": "collateral/render/card-13b-near-win.png",
+          "format": "png",
+          "fileSize": 103695,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13b-near-win.zh-CN",
+          "filename": "card-13b-near-win.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-13b-near-win.zh-CN.png",
+          "sourceUrl": "collateral/render/card-13b-near-win.zh-CN.png",
+          "format": "png",
+          "fileSize": 108601,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -930,7 +1241,64 @@
           "url": "/tools/playbook/assets/renders/card-13c-picked-right.ar.png",
           "sourceUrl": "collateral/render/card-13c-picked-right.ar.png",
           "format": "png",
-          "fileSize": 68158,
+          "fileSize": 109668,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13c-picked-right.ja",
+          "filename": "card-13c-picked-right.ja.png",
+          "url": "/tools/playbook/assets/renders/card-13c-picked-right.ja.png",
+          "sourceUrl": "collateral/render/card-13c-picked-right.ja.png",
+          "format": "png",
+          "fileSize": 115491,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13c-picked-right",
+          "filename": "card-13c-picked-right.png",
+          "url": "/tools/playbook/assets/renders/card-13c-picked-right.png",
+          "sourceUrl": "collateral/render/card-13c-picked-right.png",
+          "format": "png",
+          "fileSize": 94461,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13c-picked-right.zh-CN",
+          "filename": "card-13c-picked-right.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-13c-picked-right.zh-CN.png",
+          "sourceUrl": "collateral/render/card-13c-picked-right.zh-CN.png",
+          "format": "png",
+          "fileSize": 102397,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -949,7 +1317,64 @@
           "url": "/tools/playbook/assets/renders/card-13d-won-big.ar.png",
           "sourceUrl": "collateral/render/card-13d-won-big.ar.png",
           "format": "png",
-          "fileSize": 70313,
+          "fileSize": 116306,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13d-won-big.ja",
+          "filename": "card-13d-won-big.ja.png",
+          "url": "/tools/playbook/assets/renders/card-13d-won-big.ja.png",
+          "sourceUrl": "collateral/render/card-13d-won-big.ja.png",
+          "format": "png",
+          "fileSize": 114090,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13d-won-big",
+          "filename": "card-13d-won-big.png",
+          "url": "/tools/playbook/assets/renders/card-13d-won-big.png",
+          "sourceUrl": "collateral/render/card-13d-won-big.png",
+          "format": "png",
+          "fileSize": 85756,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13d-won-big.zh-CN",
+          "filename": "card-13d-won-big.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-13d-won-big.zh-CN.png",
+          "sourceUrl": "collateral/render/card-13d-won-big.zh-CN.png",
+          "format": "png",
+          "fileSize": 98030,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -968,7 +1393,64 @@
           "url": "/tools/playbook/assets/renders/card-13e-lucky-shirt.ar.png",
           "sourceUrl": "collateral/render/card-13e-lucky-shirt.ar.png",
           "format": "png",
-          "fileSize": 72535,
+          "fileSize": 98000,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13e-lucky-shirt.ja",
+          "filename": "card-13e-lucky-shirt.ja.png",
+          "url": "/tools/playbook/assets/renders/card-13e-lucky-shirt.ja.png",
+          "sourceUrl": "collateral/render/card-13e-lucky-shirt.ja.png",
+          "format": "png",
+          "fileSize": 108452,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13e-lucky-shirt",
+          "filename": "card-13e-lucky-shirt.png",
+          "url": "/tools/playbook/assets/renders/card-13e-lucky-shirt.png",
+          "sourceUrl": "collateral/render/card-13e-lucky-shirt.png",
+          "format": "png",
+          "fileSize": 84850,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13e-lucky-shirt.zh-CN",
+          "filename": "card-13e-lucky-shirt.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-13e-lucky-shirt.zh-CN.png",
+          "sourceUrl": "collateral/render/card-13e-lucky-shirt.zh-CN.png",
+          "format": "png",
+          "fileSize": 100261,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -987,7 +1469,64 @@
           "url": "/tools/playbook/assets/renders/card-13f-earned-win.ar.png",
           "sourceUrl": "collateral/render/card-13f-earned-win.ar.png",
           "format": "png",
-          "fileSize": 63415,
+          "fileSize": 101654,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13f-earned-win.ja",
+          "filename": "card-13f-earned-win.ja.png",
+          "url": "/tools/playbook/assets/renders/card-13f-earned-win.ja.png",
+          "sourceUrl": "collateral/render/card-13f-earned-win.ja.png",
+          "format": "png",
+          "fileSize": 111668,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13f-earned-win",
+          "filename": "card-13f-earned-win.png",
+          "url": "/tools/playbook/assets/renders/card-13f-earned-win.png",
+          "sourceUrl": "collateral/render/card-13f-earned-win.png",
+          "format": "png",
+          "fileSize": 94314,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-13f-earned-win.zh-CN",
+          "filename": "card-13f-earned-win.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-13f-earned-win.zh-CN.png",
+          "sourceUrl": "collateral/render/card-13f-earned-win.zh-CN.png",
+          "format": "png",
+          "fileSize": 95239,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1006,7 +1545,64 @@
           "url": "/tools/playbook/assets/renders/card-14a-every-game-blackjack.ar.png",
           "sourceUrl": "collateral/render/card-14a-every-game-blackjack.ar.png",
           "format": "png",
-          "fileSize": 233439,
+          "fileSize": 285643,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-14a-every-game-blackjack.ja",
+          "filename": "card-14a-every-game-blackjack.ja.png",
+          "url": "/tools/playbook/assets/renders/card-14a-every-game-blackjack.ja.png",
+          "sourceUrl": "collateral/render/card-14a-every-game-blackjack.ja.png",
+          "format": "png",
+          "fileSize": 305930,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-14a-every-game-blackjack",
+          "filename": "card-14a-every-game-blackjack.png",
+          "url": "/tools/playbook/assets/renders/card-14a-every-game-blackjack.png",
+          "sourceUrl": "collateral/render/card-14a-every-game-blackjack.png",
+          "format": "png",
+          "fileSize": 261160,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-14a-every-game-blackjack.zh-CN",
+          "filename": "card-14a-every-game-blackjack.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-14a-every-game-blackjack.zh-CN.png",
+          "sourceUrl": "collateral/render/card-14a-every-game-blackjack.zh-CN.png",
+          "format": "png",
+          "fileSize": 293395,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1025,7 +1621,64 @@
           "url": "/tools/playbook/assets/renders/card-15a-point-spread.ar.png",
           "sourceUrl": "collateral/render/card-15a-point-spread.ar.png",
           "format": "png",
-          "fileSize": 232639,
+          "fileSize": 303088,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-15a-point-spread.ja",
+          "filename": "card-15a-point-spread.ja.png",
+          "url": "/tools/playbook/assets/renders/card-15a-point-spread.ja.png",
+          "sourceUrl": "collateral/render/card-15a-point-spread.ja.png",
+          "format": "png",
+          "fileSize": 304829,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-15a-point-spread",
+          "filename": "card-15a-point-spread.png",
+          "url": "/tools/playbook/assets/renders/card-15a-point-spread.png",
+          "sourceUrl": "collateral/render/card-15a-point-spread.png",
+          "format": "png",
+          "fileSize": 294350,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-15a-point-spread.zh-CN",
+          "filename": "card-15a-point-spread.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-15a-point-spread.zh-CN.png",
+          "sourceUrl": "collateral/render/card-15a-point-spread.zh-CN.png",
+          "format": "png",
+          "fileSize": 307910,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1044,7 +1697,7 @@
           "url": "/tools/playbook/assets/renders/card-16a-online-rigged.ar.png",
           "sourceUrl": "collateral/render/card-16a-online-rigged.ar.png",
           "format": "png",
-          "fileSize": 100095,
+          "fileSize": 173245,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1063,7 +1716,7 @@
           "url": "/tools/playbook/assets/renders/card-16a-online-rigged.ja.png",
           "sourceUrl": "collateral/render/card-16a-online-rigged.ja.png",
           "format": "png",
-          "fileSize": 108062,
+          "fileSize": 189622,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1082,7 +1735,7 @@
           "url": "/tools/playbook/assets/renders/card-16a-online-rigged.png",
           "sourceUrl": "collateral/render/card-16a-online-rigged.png",
           "format": "png",
-          "fileSize": 87835,
+          "fileSize": 161104,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1101,7 +1754,7 @@
           "url": "/tools/playbook/assets/renders/card-16a-online-rigged.zh-CN.png",
           "sourceUrl": "collateral/render/card-16a-online-rigged.zh-CN.png",
           "format": "png",
-          "fileSize": 93308,
+          "fileSize": 172652,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1120,7 +1773,7 @@
           "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.ar.png",
           "sourceUrl": "collateral/render/card-16b-bonus-free-money.ar.png",
           "format": "png",
-          "fileSize": 104490,
+          "fileSize": 190470,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1139,7 +1792,7 @@
           "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.ja.png",
           "sourceUrl": "collateral/render/card-16b-bonus-free-money.ja.png",
           "format": "png",
-          "fileSize": 112805,
+          "fileSize": 177178,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1158,7 +1811,7 @@
           "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.png",
           "sourceUrl": "collateral/render/card-16b-bonus-free-money.png",
           "format": "png",
-          "fileSize": 88952,
+          "fileSize": 158386,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1177,7 +1830,7 @@
           "url": "/tools/playbook/assets/renders/card-16b-bonus-free-money.zh-CN.png",
           "sourceUrl": "collateral/render/card-16b-bonus-free-money.zh-CN.png",
           "format": "png",
-          "fileSize": 110119,
+          "fileSize": 188727,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1196,7 +1849,7 @@
           "url": "/tools/playbook/assets/renders/card-17a-big-game.ar.png",
           "sourceUrl": "collateral/render/card-17a-big-game.ar.png",
           "format": "png",
-          "fileSize": 100255,
+          "fileSize": 152793,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1215,7 +1868,7 @@
           "url": "/tools/playbook/assets/renders/card-17a-big-game.ja.png",
           "sourceUrl": "collateral/render/card-17a-big-game.ja.png",
           "format": "png",
-          "fileSize": 121080,
+          "fileSize": 167764,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1234,7 +1887,7 @@
           "url": "/tools/playbook/assets/renders/card-17a-big-game.png",
           "sourceUrl": "collateral/render/card-17a-big-game.png",
           "format": "png",
-          "fileSize": 96378,
+          "fileSize": 142515,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1253,7 +1906,7 @@
           "url": "/tools/playbook/assets/renders/card-17a-big-game.zh-CN.png",
           "sourceUrl": "collateral/render/card-17a-big-game.zh-CN.png",
           "format": "png",
-          "fileSize": 105983,
+          "fileSize": 150317,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1272,7 +1925,7 @@
           "url": "/tools/playbook/assets/renders/card-18a-fresh-start.ar.png",
           "sourceUrl": "collateral/render/card-18a-fresh-start.ar.png",
           "format": "png",
-          "fileSize": 100695,
+          "fileSize": 127791,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1291,7 +1944,7 @@
           "url": "/tools/playbook/assets/renders/card-18a-fresh-start.ja.png",
           "sourceUrl": "collateral/render/card-18a-fresh-start.ja.png",
           "format": "png",
-          "fileSize": 120348,
+          "fileSize": 144614,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1310,7 +1963,7 @@
           "url": "/tools/playbook/assets/renders/card-18a-fresh-start.png",
           "sourceUrl": "collateral/render/card-18a-fresh-start.png",
           "format": "png",
-          "fileSize": 93111,
+          "fileSize": 133346,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1329,7 +1982,7 @@
           "url": "/tools/playbook/assets/renders/card-18a-fresh-start.zh-CN.png",
           "sourceUrl": "collateral/render/card-18a-fresh-start.zh-CN.png",
           "format": "png",
-          "fileSize": 97583,
+          "fileSize": 129027,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1348,7 +2001,26 @@
           "url": "/tools/playbook/assets/renders/card-1a-hot-streak.ar.png",
           "sourceUrl": "collateral/render/card-1a-hot-streak.ar.png",
           "format": "png",
-          "fileSize": 79784,
+          "fileSize": 127890,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-1a-hot-streak.ja",
+          "filename": "card-1a-hot-streak.ja.png",
+          "url": "/tools/playbook/assets/renders/card-1a-hot-streak.ja.png",
+          "sourceUrl": "collateral/render/card-1a-hot-streak.ja.png",
+          "format": "png",
+          "fileSize": 137751,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1367,7 +2039,26 @@
           "url": "/tools/playbook/assets/renders/card-1a-hot-streak.png",
           "sourceUrl": "collateral/render/card-1a-hot-streak.png",
           "format": "png",
-          "fileSize": 57349,
+          "fileSize": 96177,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-1a-hot-streak.zh-CN",
+          "filename": "card-1a-hot-streak.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-1a-hot-streak.zh-CN.png",
+          "sourceUrl": "collateral/render/card-1a-hot-streak.zh-CN.png",
+          "format": "png",
+          "fileSize": 113012,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1386,7 +2077,26 @@
           "url": "/tools/playbook/assets/renders/card-1b-due-for-win.ar.png",
           "sourceUrl": "collateral/render/card-1b-due-for-win.ar.png",
           "format": "png",
-          "fileSize": 76922,
+          "fileSize": 103966,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-1b-due-for-win.ja",
+          "filename": "card-1b-due-for-win.ja.png",
+          "url": "/tools/playbook/assets/renders/card-1b-due-for-win.ja.png",
+          "sourceUrl": "collateral/render/card-1b-due-for-win.ja.png",
+          "format": "png",
+          "fileSize": 126451,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1405,7 +2115,26 @@
           "url": "/tools/playbook/assets/renders/card-1b-due-for-win.png",
           "sourceUrl": "collateral/render/card-1b-due-for-win.png",
           "format": "png",
-          "fileSize": 62975,
+          "fileSize": 78849,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-1b-due-for-win.zh-CN",
+          "filename": "card-1b-due-for-win.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-1b-due-for-win.zh-CN.png",
+          "sourceUrl": "collateral/render/card-1b-due-for-win.zh-CN.png",
+          "format": "png",
+          "fileSize": 100676,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1424,7 +2153,26 @@
           "url": "/tools/playbook/assets/renders/card-1c-lucky-machine.ar.png",
           "sourceUrl": "collateral/render/card-1c-lucky-machine.ar.png",
           "format": "png",
-          "fileSize": 90911,
+          "fileSize": 127921,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-1c-lucky-machine.ja",
+          "filename": "card-1c-lucky-machine.ja.png",
+          "url": "/tools/playbook/assets/renders/card-1c-lucky-machine.ja.png",
+          "sourceUrl": "collateral/render/card-1c-lucky-machine.ja.png",
+          "format": "png",
+          "fileSize": 149874,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1443,7 +2191,83 @@
           "url": "/tools/playbook/assets/renders/card-1c-lucky-machine.png",
           "sourceUrl": "collateral/render/card-1c-lucky-machine.png",
           "format": "png",
-          "fileSize": 76223,
+          "fileSize": 103669,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-1c-lucky-machine.zh-CN",
+          "filename": "card-1c-lucky-machine.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-1c-lucky-machine.zh-CN.png",
+          "sourceUrl": "collateral/render/card-1c-lucky-machine.zh-CN.png",
+          "format": "png",
+          "fileSize": 119670,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-20a-return-vs-profit",
+          "filename": "card-20a-return-vs-profit.png",
+          "url": "/tools/playbook/assets/renders/card-20a-return-vs-profit.png",
+          "sourceUrl": "collateral/render/card-20a-return-vs-profit.png",
+          "format": "png",
+          "fileSize": 115894,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-20b-pick-your-pause",
+          "filename": "card-20b-pick-your-pause.png",
+          "url": "/tools/playbook/assets/renders/card-20b-pick-your-pause.png",
+          "sourceUrl": "collateral/render/card-20b-pick-your-pause.png",
+          "format": "png",
+          "fileSize": 116568,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-20c-parlay-probability",
+          "filename": "card-20c-parlay-probability.png",
+          "url": "/tools/playbook/assets/renders/card-20c-parlay-probability.png",
+          "sourceUrl": "collateral/render/card-20c-parlay-probability.png",
+          "format": "png",
+          "fileSize": 133846,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1462,7 +2286,26 @@
           "url": "/tools/playbook/assets/renders/card-2a-house-edge.ar.png",
           "sourceUrl": "collateral/render/card-2a-house-edge.ar.png",
           "format": "png",
-          "fileSize": 259384,
+          "fileSize": 315819,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2a-house-edge.ja",
+          "filename": "card-2a-house-edge.ja.png",
+          "url": "/tools/playbook/assets/renders/card-2a-house-edge.ja.png",
+          "sourceUrl": "collateral/render/card-2a-house-edge.ja.png",
+          "format": "png",
+          "fileSize": 306734,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1481,7 +2324,26 @@
           "url": "/tools/playbook/assets/renders/card-2a-house-edge.png",
           "sourceUrl": "collateral/render/card-2a-house-edge.png",
           "format": "png",
-          "fileSize": 99100,
+          "fileSize": 170155,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2a-house-edge.zh-CN",
+          "filename": "card-2a-house-edge.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-2a-house-edge.zh-CN.png",
+          "sourceUrl": "collateral/render/card-2a-house-edge.zh-CN.png",
+          "format": "png",
+          "fileSize": 313537,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1500,7 +2362,26 @@
           "url": "/tools/playbook/assets/renders/card-2b-sports-betting.ar.png",
           "sourceUrl": "collateral/render/card-2b-sports-betting.ar.png",
           "format": "png",
-          "fileSize": 71589,
+          "fileSize": 108129,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2b-sports-betting.ja",
+          "filename": "card-2b-sports-betting.ja.png",
+          "url": "/tools/playbook/assets/renders/card-2b-sports-betting.ja.png",
+          "sourceUrl": "collateral/render/card-2b-sports-betting.ja.png",
+          "format": "png",
+          "fileSize": 125072,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1519,7 +2400,26 @@
           "url": "/tools/playbook/assets/renders/card-2b-sports-betting.png",
           "sourceUrl": "collateral/render/card-2b-sports-betting.png",
           "format": "png",
-          "fileSize": 62423,
+          "fileSize": 83664,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2b-sports-betting.zh-CN",
+          "filename": "card-2b-sports-betting.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-2b-sports-betting.zh-CN.png",
+          "sourceUrl": "collateral/render/card-2b-sports-betting.zh-CN.png",
+          "format": "png",
+          "fileSize": 109020,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1538,7 +2438,26 @@
           "url": "/tools/playbook/assets/renders/card-2c-bonus-wagering.ar.png",
           "sourceUrl": "collateral/render/card-2c-bonus-wagering.ar.png",
           "format": "png",
-          "fileSize": 77837,
+          "fileSize": 126643,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2c-bonus-wagering.ja",
+          "filename": "card-2c-bonus-wagering.ja.png",
+          "url": "/tools/playbook/assets/renders/card-2c-bonus-wagering.ja.png",
+          "sourceUrl": "collateral/render/card-2c-bonus-wagering.ja.png",
+          "format": "png",
+          "fileSize": 137990,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1557,7 +2476,26 @@
           "url": "/tools/playbook/assets/renders/card-2c-bonus-wagering.png",
           "sourceUrl": "collateral/render/card-2c-bonus-wagering.png",
           "format": "png",
-          "fileSize": 65053,
+          "fileSize": 98668,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-2c-bonus-wagering.zh-CN",
+          "filename": "card-2c-bonus-wagering.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-2c-bonus-wagering.zh-CN.png",
+          "sourceUrl": "collateral/render/card-2c-bonus-wagering.zh-CN.png",
+          "format": "png",
+          "fileSize": 121786,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1576,7 +2514,26 @@
           "url": "/tools/playbook/assets/renders/card-tier2-10f.ar.png",
           "sourceUrl": "collateral/render/card-tier2-10f.ar.png",
           "format": "png",
-          "fileSize": 60589,
+          "fileSize": 77327,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-tier2-10f.ja",
+          "filename": "card-tier2-10f.ja.png",
+          "url": "/tools/playbook/assets/renders/card-tier2-10f.ja.png",
+          "sourceUrl": "collateral/render/card-tier2-10f.ja.png",
+          "format": "png",
+          "fileSize": 121941,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1595,7 +2552,26 @@
           "url": "/tools/playbook/assets/renders/card-tier2-10f.png",
           "sourceUrl": "collateral/render/card-tier2-10f.png",
           "format": "png",
-          "fileSize": 54998,
+          "fileSize": 74851,
+          "category": "collateral",
+          "subcategory": "social-cards",
+          "channel": [
+            "instagram",
+            "twitter",
+            "facebook"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "card-tier2-10f.zh-CN",
+          "filename": "card-tier2-10f.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/card-tier2-10f.zh-CN.png",
+          "sourceUrl": "collateral/render/card-tier2-10f.zh-CN.png",
+          "format": "png",
+          "fileSize": 85977,
           "category": "collateral",
           "subcategory": "social-cards",
           "channel": [
@@ -1614,7 +2590,21 @@
           "url": "/tools/playbook/assets/renders/cooldown-10e.ar.png",
           "sourceUrl": "collateral/render/cooldown-10e.ar.png",
           "format": "png",
-          "fileSize": 48601,
+          "fileSize": 45246,
+          "category": "collateral",
+          "subcategory": "tier-2-support",
+          "channel": [
+            "in-app"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "cooldown-10e.ja",
+          "filename": "cooldown-10e.ja.png",
+          "url": "/tools/playbook/assets/renders/cooldown-10e.ja.png",
+          "sourceUrl": "collateral/render/cooldown-10e.ja.png",
+          "format": "png",
+          "fileSize": 49604,
           "category": "collateral",
           "subcategory": "tier-2-support",
           "channel": [
@@ -1628,7 +2618,21 @@
           "url": "/tools/playbook/assets/renders/cooldown-10e.png",
           "sourceUrl": "collateral/render/cooldown-10e.png",
           "format": "png",
-          "fileSize": 39492,
+          "fileSize": 40993,
+          "category": "collateral",
+          "subcategory": "tier-2-support",
+          "channel": [
+            "in-app"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "cooldown-10e.zh-CN",
+          "filename": "cooldown-10e.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/cooldown-10e.zh-CN.png",
+          "sourceUrl": "collateral/render/cooldown-10e.zh-CN.png",
+          "format": "png",
+          "fileSize": 36397,
           "category": "collateral",
           "subcategory": "tier-2-support",
           "channel": [
@@ -1642,7 +2646,43 @@
           "url": "/tools/playbook/assets/renders/deposit-interstitial-12b.ar.png",
           "sourceUrl": "collateral/render/deposit-interstitial-12b.ar.png",
           "format": "png",
-          "fileSize": 42788,
+          "fileSize": 40237,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "deposit-interstitial-12b.ja",
+          "filename": "deposit-interstitial-12b.ja.png",
+          "url": "/tools/playbook/assets/renders/deposit-interstitial-12b.ja.png",
+          "sourceUrl": "collateral/render/deposit-interstitial-12b.ja.png",
+          "format": "png",
+          "fileSize": 45236,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "deposit-interstitial-12b",
+          "filename": "deposit-interstitial-12b.png",
+          "url": "/tools/playbook/assets/renders/deposit-interstitial-12b.png",
+          "sourceUrl": "collateral/render/deposit-interstitial-12b.png",
+          "format": "png",
+          "fileSize": 38393,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "deposit-interstitial-12b.zh-CN",
+          "filename": "deposit-interstitial-12b.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/deposit-interstitial-12b.zh-CN.png",
+          "sourceUrl": "collateral/render/deposit-interstitial-12b.zh-CN.png",
+          "format": "png",
+          "fileSize": 43603,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -1654,7 +2694,52 @@
           "url": "/tools/playbook/assets/renders/display-14e-every-game.ar.png",
           "sourceUrl": "collateral/render/display-14e-every-game.ar.png",
           "format": "png",
-          "fileSize": 360161,
+          "fileSize": 365781,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-14e-every-game.ja",
+          "filename": "display-14e-every-game.ja.png",
+          "url": "/tools/playbook/assets/renders/display-14e-every-game.ja.png",
+          "sourceUrl": "collateral/render/display-14e-every-game.ja.png",
+          "format": "png",
+          "fileSize": 411062,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-14e-every-game",
+          "filename": "display-14e-every-game.png",
+          "url": "/tools/playbook/assets/renders/display-14e-every-game.png",
+          "sourceUrl": "collateral/render/display-14e-every-game.png",
+          "format": "png",
+          "fileSize": 381059,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-14e-every-game.zh-CN",
+          "filename": "display-14e-every-game.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/display-14e-every-game.zh-CN.png",
+          "sourceUrl": "collateral/render/display-14e-every-game.zh-CN.png",
+          "format": "png",
+          "fileSize": 387259,
           "category": "collateral",
           "subcategory": "digital-display",
           "channel": [
@@ -1669,7 +2754,22 @@
           "url": "/tools/playbook/assets/renders/display-landscape-6a.ar.png",
           "sourceUrl": "collateral/render/display-landscape-6a.ar.png",
           "format": "png",
-          "fileSize": 369173,
+          "fileSize": 384404,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-landscape-6a.ja",
+          "filename": "display-landscape-6a.ja.png",
+          "url": "/tools/playbook/assets/renders/display-landscape-6a.ja.png",
+          "sourceUrl": "collateral/render/display-landscape-6a.ja.png",
+          "format": "png",
+          "fileSize": 428635,
           "category": "collateral",
           "subcategory": "digital-display",
           "channel": [
@@ -1684,7 +2784,22 @@
           "url": "/tools/playbook/assets/renders/display-landscape-6a.png",
           "sourceUrl": "collateral/render/display-landscape-6a.png",
           "format": "png",
-          "fileSize": 135314,
+          "fileSize": 161812,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-landscape-6a.zh-CN",
+          "filename": "display-landscape-6a.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/display-landscape-6a.zh-CN.png",
+          "sourceUrl": "collateral/render/display-landscape-6a.zh-CN.png",
+          "format": "png",
+          "fileSize": 411571,
           "category": "collateral",
           "subcategory": "digital-display",
           "channel": [
@@ -1699,7 +2814,22 @@
           "url": "/tools/playbook/assets/renders/display-portrait-6b.ar.png",
           "sourceUrl": "collateral/render/display-portrait-6b.ar.png",
           "format": "png",
-          "fileSize": 177799,
+          "fileSize": 170178,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-portrait-6b.ja",
+          "filename": "display-portrait-6b.ja.png",
+          "url": "/tools/playbook/assets/renders/display-portrait-6b.ja.png",
+          "sourceUrl": "collateral/render/display-portrait-6b.ja.png",
+          "format": "png",
+          "fileSize": 207531,
           "category": "collateral",
           "subcategory": "digital-display",
           "channel": [
@@ -1714,7 +2844,22 @@
           "url": "/tools/playbook/assets/renders/display-portrait-6b.png",
           "sourceUrl": "collateral/render/display-portrait-6b.png",
           "format": "png",
-          "fileSize": 170377,
+          "fileSize": 185037,
+          "category": "collateral",
+          "subcategory": "digital-display",
+          "channel": [
+            "digital-signage",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "display-portrait-6b.zh-CN",
+          "filename": "display-portrait-6b.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/display-portrait-6b.zh-CN.png",
+          "sourceUrl": "collateral/render/display-portrait-6b.zh-CN.png",
+          "format": "png",
+          "fileSize": 193027,
           "category": "collateral",
           "subcategory": "digital-display",
           "channel": [
@@ -1729,7 +2874,58 @@
           "url": "/tools/playbook/assets/renders/email-14d-every-game.ar.png",
           "sourceUrl": "collateral/render/email-14d-every-game.ar.png",
           "format": "png",
-          "fileSize": 98615,
+          "fileSize": 99954,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-14d-every-game.ja",
+          "filename": "email-14d-every-game.ja.png",
+          "url": "/tools/playbook/assets/renders/email-14d-every-game.ja.png",
+          "sourceUrl": "collateral/render/email-14d-every-game.ja.png",
+          "format": "png",
+          "fileSize": 123086,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-14d-every-game",
+          "filename": "email-14d-every-game.png",
+          "url": "/tools/playbook/assets/renders/email-14d-every-game.png",
+          "sourceUrl": "collateral/render/email-14d-every-game.png",
+          "format": "png",
+          "fileSize": 86676,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-14d-every-game.zh-CN",
+          "filename": "email-14d-every-game.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/email-14d-every-game.zh-CN.png",
+          "sourceUrl": "collateral/render/email-14d-every-game.zh-CN.png",
+          "format": "png",
+          "fileSize": 101977,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1746,7 +2942,24 @@
           "url": "/tools/playbook/assets/renders/email-deposit-7b.ar.png",
           "sourceUrl": "collateral/render/email-deposit-7b.ar.png",
           "format": "png",
-          "fileSize": 81872,
+          "fileSize": 84035,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-deposit-7b.ja",
+          "filename": "email-deposit-7b.ja.png",
+          "url": "/tools/playbook/assets/renders/email-deposit-7b.ja.png",
+          "sourceUrl": "collateral/render/email-deposit-7b.ja.png",
+          "format": "png",
+          "fileSize": 108724,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1763,7 +2976,24 @@
           "url": "/tools/playbook/assets/renders/email-deposit-7b.png",
           "sourceUrl": "collateral/render/email-deposit-7b.png",
           "format": "png",
-          "fileSize": 73496,
+          "fileSize": 79209,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-deposit-7b.zh-CN",
+          "filename": "email-deposit-7b.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/email-deposit-7b.zh-CN.png",
+          "sourceUrl": "collateral/render/email-deposit-7b.zh-CN.png",
+          "format": "png",
+          "fileSize": 88903,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1780,7 +3010,24 @@
           "url": "/tools/playbook/assets/renders/email-monthly-7c.ar.png",
           "sourceUrl": "collateral/render/email-monthly-7c.ar.png",
           "format": "png",
-          "fileSize": 99248,
+          "fileSize": 102580,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-monthly-7c.ja",
+          "filename": "email-monthly-7c.ja.png",
+          "url": "/tools/playbook/assets/renders/email-monthly-7c.ja.png",
+          "sourceUrl": "collateral/render/email-monthly-7c.ja.png",
+          "format": "png",
+          "fileSize": 118730,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1797,7 +3044,24 @@
           "url": "/tools/playbook/assets/renders/email-monthly-7c.png",
           "sourceUrl": "collateral/render/email-monthly-7c.png",
           "format": "png",
-          "fileSize": 84770,
+          "fileSize": 85674,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-monthly-7c.zh-CN",
+          "filename": "email-monthly-7c.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/email-monthly-7c.zh-CN.png",
+          "sourceUrl": "collateral/render/email-monthly-7c.zh-CN.png",
+          "format": "png",
+          "fileSize": 109973,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1814,7 +3078,24 @@
           "url": "/tools/playbook/assets/renders/email-reactivation-7d.ar.png",
           "sourceUrl": "collateral/render/email-reactivation-7d.ar.png",
           "format": "png",
-          "fileSize": 105285,
+          "fileSize": 108469,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-reactivation-7d.ja",
+          "filename": "email-reactivation-7d.ja.png",
+          "url": "/tools/playbook/assets/renders/email-reactivation-7d.ja.png",
+          "sourceUrl": "collateral/render/email-reactivation-7d.ja.png",
+          "format": "png",
+          "fileSize": 154831,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1831,7 +3112,24 @@
           "url": "/tools/playbook/assets/renders/email-reactivation-7d.png",
           "sourceUrl": "collateral/render/email-reactivation-7d.png",
           "format": "png",
-          "fileSize": 91374,
+          "fileSize": 92974,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-reactivation-7d.zh-CN",
+          "filename": "email-reactivation-7d.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/email-reactivation-7d.zh-CN.png",
+          "sourceUrl": "collateral/render/email-reactivation-7d.zh-CN.png",
+          "format": "png",
+          "fileSize": 115905,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1848,7 +3146,24 @@
           "url": "/tools/playbook/assets/renders/email-support-10h.ar.png",
           "sourceUrl": "collateral/render/email-support-10h.ar.png",
           "format": "png",
-          "fileSize": 80833,
+          "fileSize": 81307,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-support-10h.ja",
+          "filename": "email-support-10h.ja.png",
+          "url": "/tools/playbook/assets/renders/email-support-10h.ja.png",
+          "sourceUrl": "collateral/render/email-support-10h.ja.png",
+          "format": "png",
+          "fileSize": 111886,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1865,7 +3180,24 @@
           "url": "/tools/playbook/assets/renders/email-support-10h.png",
           "sourceUrl": "collateral/render/email-support-10h.png",
           "format": "png",
-          "fileSize": 71092,
+          "fileSize": 75447,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-support-10h.zh-CN",
+          "filename": "email-support-10h.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/email-support-10h.zh-CN.png",
+          "sourceUrl": "collateral/render/email-support-10h.zh-CN.png",
+          "format": "png",
+          "fileSize": 84677,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1882,7 +3214,24 @@
           "url": "/tools/playbook/assets/renders/email-welcome-7a.ar.png",
           "sourceUrl": "collateral/render/email-welcome-7a.ar.png",
           "format": "png",
-          "fileSize": 108508,
+          "fileSize": 109844,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-welcome-7a.ja",
+          "filename": "email-welcome-7a.ja.png",
+          "url": "/tools/playbook/assets/renders/email-welcome-7a.ja.png",
+          "sourceUrl": "collateral/render/email-welcome-7a.ja.png",
+          "format": "png",
+          "fileSize": 163929,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1899,7 +3248,24 @@
           "url": "/tools/playbook/assets/renders/email-welcome-7a.png",
           "sourceUrl": "collateral/render/email-welcome-7a.png",
           "format": "png",
-          "fileSize": 104853,
+          "fileSize": 110248,
+          "category": "collateral",
+          "subcategory": "email",
+          "channel": [
+            "email"
+          ],
+          "dimensions": {
+            "width": 600,
+            "height": null
+          }
+        },
+        {
+          "id": "email-welcome-7a.zh-CN",
+          "filename": "email-welcome-7a.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/email-welcome-7a.zh-CN.png",
+          "sourceUrl": "collateral/render/email-welcome-7a.zh-CN.png",
+          "format": "png",
+          "fileSize": 124990,
           "category": "collateral",
           "subcategory": "email",
           "channel": [
@@ -1916,7 +3282,22 @@
           "url": "/tools/playbook/assets/renders/helpline-card-5c.ar.png",
           "sourceUrl": "collateral/render/helpline-card-5c.ar.png",
           "format": "png",
-          "fileSize": 38583,
+          "fileSize": 43760,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "helpline-card-5c.ja",
+          "filename": "helpline-card-5c.ja.png",
+          "url": "/tools/playbook/assets/renders/helpline-card-5c.ja.png",
+          "sourceUrl": "collateral/render/helpline-card-5c.ja.png",
+          "format": "png",
+          "fileSize": 52046,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -1931,7 +3312,22 @@
           "url": "/tools/playbook/assets/renders/helpline-card-5c.png",
           "sourceUrl": "collateral/render/helpline-card-5c.png",
           "format": "png",
-          "fileSize": 33826,
+          "fileSize": 43044,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print",
+            "venue"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "helpline-card-5c.zh-CN",
+          "filename": "helpline-card-5c.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/helpline-card-5c.zh-CN.png",
+          "sourceUrl": "collateral/render/helpline-card-5c.zh-CN.png",
+          "format": "png",
+          "fileSize": 37740,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -1946,7 +3342,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-baccarat.ar.png",
           "sourceUrl": "collateral/render/htp-card-baccarat.ar.png",
           "format": "png",
-          "fileSize": 70284,
+          "fileSize": 110024,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-baccarat.ja",
+          "filename": "htp-card-baccarat.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-baccarat.ja.png",
+          "sourceUrl": "collateral/render/htp-card-baccarat.ja.png",
+          "format": "png",
+          "fileSize": 134824,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -1964,7 +3378,43 @@
           "url": "/tools/playbook/assets/renders/htp-card-baccarat.png",
           "sourceUrl": "collateral/render/htp-card-baccarat.png",
           "format": "png",
-          "fileSize": 59151,
+          "fileSize": 104381,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-baccarat.zh-CN",
+          "filename": "htp-card-baccarat.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-card-baccarat.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-card-baccarat.zh-CN.png",
+          "format": "png",
+          "fileSize": 105648,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-bingo.ja",
+          "filename": "htp-card-bingo.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-bingo.ja.png",
+          "sourceUrl": "collateral/render/htp-card-bingo.ja.png",
+          "format": "png",
+          "fileSize": 113237,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -1982,7 +3432,7 @@
           "url": "/tools/playbook/assets/renders/htp-card-bingo.png",
           "sourceUrl": "collateral/render/htp-card-bingo.png",
           "format": "png",
-          "fileSize": 59545,
+          "fileSize": 94526,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2000,7 +3450,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-blackjack.ar.png",
           "sourceUrl": "collateral/render/htp-card-blackjack.ar.png",
           "format": "png",
-          "fileSize": 67825,
+          "fileSize": 116888,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-blackjack.ja",
+          "filename": "htp-card-blackjack.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-blackjack.ja.png",
+          "sourceUrl": "collateral/render/htp-card-blackjack.ja.png",
+          "format": "png",
+          "fileSize": 139339,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2018,7 +3486,43 @@
           "url": "/tools/playbook/assets/renders/htp-card-blackjack.png",
           "sourceUrl": "collateral/render/htp-card-blackjack.png",
           "format": "png",
-          "fileSize": 60391,
+          "fileSize": 110449,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-blackjack.zh-CN",
+          "filename": "htp-card-blackjack.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-card-blackjack.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-card-blackjack.zh-CN.png",
+          "format": "png",
+          "fileSize": 100118,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-craps.ja",
+          "filename": "htp-card-craps.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-craps.ja.png",
+          "sourceUrl": "collateral/render/htp-card-craps.ja.png",
+          "format": "png",
+          "fileSize": 127306,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2036,7 +3540,7 @@
           "url": "/tools/playbook/assets/renders/htp-card-craps.png",
           "sourceUrl": "collateral/render/htp-card-craps.png",
           "format": "png",
-          "fileSize": 61259,
+          "fileSize": 95333,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2054,7 +3558,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-horse-racing.ar.png",
           "sourceUrl": "collateral/render/htp-card-horse-racing.ar.png",
           "format": "png",
-          "fileSize": 67622,
+          "fileSize": 117844,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-horse-racing.ja",
+          "filename": "htp-card-horse-racing.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-horse-racing.ja.png",
+          "sourceUrl": "collateral/render/htp-card-horse-racing.ja.png",
+          "format": "png",
+          "fileSize": 136010,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2072,7 +3594,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-horse-racing.png",
           "sourceUrl": "collateral/render/htp-card-horse-racing.png",
           "format": "png",
-          "fileSize": 62889,
+          "fileSize": 106816,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-horse-racing.zh-CN",
+          "filename": "htp-card-horse-racing.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-card-horse-racing.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-card-horse-racing.zh-CN.png",
+          "format": "png",
+          "fileSize": 111490,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2090,7 +3630,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-lottery.ar.png",
           "sourceUrl": "collateral/render/htp-card-lottery.ar.png",
           "format": "png",
-          "fileSize": 67997,
+          "fileSize": 118645,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-lottery.ja",
+          "filename": "htp-card-lottery.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-lottery.ja.png",
+          "sourceUrl": "collateral/render/htp-card-lottery.ja.png",
+          "format": "png",
+          "fileSize": 133278,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2108,7 +3666,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-lottery.png",
           "sourceUrl": "collateral/render/htp-card-lottery.png",
           "format": "png",
-          "fileSize": 60509,
+          "fileSize": 98406,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-lottery.zh-CN",
+          "filename": "htp-card-lottery.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-card-lottery.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-card-lottery.zh-CN.png",
+          "format": "png",
+          "fileSize": 110243,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2126,7 +3702,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-roulette.ar.png",
           "sourceUrl": "collateral/render/htp-card-roulette.ar.png",
           "format": "png",
-          "fileSize": 66585,
+          "fileSize": 112726,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-roulette.ja",
+          "filename": "htp-card-roulette.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-roulette.ja.png",
+          "sourceUrl": "collateral/render/htp-card-roulette.ja.png",
+          "format": "png",
+          "fileSize": 122042,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2144,7 +3738,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-roulette.png",
           "sourceUrl": "collateral/render/htp-card-roulette.png",
           "format": "png",
-          "fileSize": 61292,
+          "fileSize": 103726,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-roulette.zh-CN",
+          "filename": "htp-card-roulette.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-card-roulette.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-card-roulette.zh-CN.png",
+          "format": "png",
+          "fileSize": 101910,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2162,7 +3774,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-slots.ar.png",
           "sourceUrl": "collateral/render/htp-card-slots.ar.png",
           "format": "png",
-          "fileSize": 64815,
+          "fileSize": 115622,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-slots.ja",
+          "filename": "htp-card-slots.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-slots.ja.png",
+          "sourceUrl": "collateral/render/htp-card-slots.ja.png",
+          "format": "png",
+          "fileSize": 125941,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2180,7 +3810,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-slots.png",
           "sourceUrl": "collateral/render/htp-card-slots.png",
           "format": "png",
-          "fileSize": 56890,
+          "fileSize": 104759,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-slots.zh-CN",
+          "filename": "htp-card-slots.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-card-slots.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-card-slots.zh-CN.png",
+          "format": "png",
+          "fileSize": 107855,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2198,7 +3846,25 @@
           "url": "/tools/playbook/assets/renders/htp-card-sports.ar.png",
           "sourceUrl": "collateral/render/htp-card-sports.ar.png",
           "format": "png",
-          "fileSize": 68609,
+          "fileSize": 120555,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-sports.ja",
+          "filename": "htp-card-sports.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-sports.ja.png",
+          "sourceUrl": "collateral/render/htp-card-sports.ja.png",
+          "format": "png",
+          "fileSize": 152053,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2216,7 +3882,43 @@
           "url": "/tools/playbook/assets/renders/htp-card-sports.png",
           "sourceUrl": "collateral/render/htp-card-sports.png",
           "format": "png",
-          "fileSize": 62764,
+          "fileSize": 106705,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-sports.zh-CN",
+          "filename": "htp-card-sports.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-card-sports.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-card-sports.zh-CN.png",
+          "format": "png",
+          "fileSize": 115404,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-card-video-poker.ja",
+          "filename": "htp-card-video-poker.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-card-video-poker.ja.png",
+          "sourceUrl": "collateral/render/htp-card-video-poker.ja.png",
+          "format": "png",
+          "fileSize": 137461,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2234,7 +3936,7 @@
           "url": "/tools/playbook/assets/renders/htp-card-video-poker.png",
           "sourceUrl": "collateral/render/htp-card-video-poker.png",
           "format": "png",
-          "fileSize": 67181,
+          "fileSize": 104325,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2252,7 +3954,25 @@
           "url": "/tools/playbook/assets/renders/htp-odds-comparison.ar.png",
           "sourceUrl": "collateral/render/htp-odds-comparison.ar.png",
           "format": "png",
-          "fileSize": 83758,
+          "fileSize": 138239,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-odds-comparison.ja",
+          "filename": "htp-odds-comparison.ja.png",
+          "url": "/tools/playbook/assets/renders/htp-odds-comparison.ja.png",
+          "sourceUrl": "collateral/render/htp-odds-comparison.ja.png",
+          "format": "png",
+          "fileSize": 137730,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2270,7 +3990,25 @@
           "url": "/tools/playbook/assets/renders/htp-odds-comparison.png",
           "sourceUrl": "collateral/render/htp-odds-comparison.png",
           "format": "png",
-          "fileSize": 69827,
+          "fileSize": 124733,
+          "category": "collateral",
+          "subcategory": "how-to-play",
+          "channel": [
+            "print",
+            "digital"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1080
+          }
+        },
+        {
+          "id": "htp-odds-comparison.zh-CN",
+          "filename": "htp-odds-comparison.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/htp-odds-comparison.zh-CN.png",
+          "sourceUrl": "collateral/render/htp-odds-comparison.zh-CN.png",
+          "format": "png",
+          "fileSize": 124185,
           "category": "collateral",
           "subcategory": "how-to-play",
           "channel": [
@@ -2288,7 +4026,43 @@
           "url": "/tools/playbook/assets/renders/in-play-overlay-12c.ar.png",
           "sourceUrl": "collateral/render/in-play-overlay-12c.ar.png",
           "format": "png",
-          "fileSize": 19678,
+          "fileSize": 19345,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "in-play-overlay-12c.ja",
+          "filename": "in-play-overlay-12c.ja.png",
+          "url": "/tools/playbook/assets/renders/in-play-overlay-12c.ja.png",
+          "sourceUrl": "collateral/render/in-play-overlay-12c.ja.png",
+          "format": "png",
+          "fileSize": 21939,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "in-play-overlay-12c",
+          "filename": "in-play-overlay-12c.png",
+          "url": "/tools/playbook/assets/renders/in-play-overlay-12c.png",
+          "sourceUrl": "collateral/render/in-play-overlay-12c.png",
+          "format": "png",
+          "fileSize": 16927,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "in-play-overlay-12c.zh-CN",
+          "filename": "in-play-overlay-12c.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/in-play-overlay-12c.zh-CN.png",
+          "sourceUrl": "collateral/render/in-play-overlay-12c.zh-CN.png",
+          "format": "png",
+          "fileSize": 20959,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2300,7 +4074,19 @@
           "url": "/tools/playbook/assets/renders/limit-reached-10d.ar.png",
           "sourceUrl": "collateral/render/limit-reached-10d.ar.png",
           "format": "png",
-          "fileSize": 16645,
+          "fileSize": 16524,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "limit-reached-10d.ja",
+          "filename": "limit-reached-10d.ja.png",
+          "url": "/tools/playbook/assets/renders/limit-reached-10d.ja.png",
+          "sourceUrl": "collateral/render/limit-reached-10d.ja.png",
+          "format": "png",
+          "fileSize": 22130,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2312,7 +4098,19 @@
           "url": "/tools/playbook/assets/renders/limit-reached-10d.png",
           "sourceUrl": "collateral/render/limit-reached-10d.png",
           "format": "png",
-          "fileSize": 16181,
+          "fileSize": 15896,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "limit-reached-10d.zh-CN",
+          "filename": "limit-reached-10d.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/limit-reached-10d.zh-CN.png",
+          "sourceUrl": "collateral/render/limit-reached-10d.zh-CN.png",
+          "format": "png",
+          "fileSize": 16643,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2324,7 +4122,43 @@
           "url": "/tools/playbook/assets/renders/live-odds-overlay-15d.ar.png",
           "sourceUrl": "collateral/render/live-odds-overlay-15d.ar.png",
           "format": "png",
-          "fileSize": 22707,
+          "fileSize": 19565,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "live-odds-overlay-15d.ja",
+          "filename": "live-odds-overlay-15d.ja.png",
+          "url": "/tools/playbook/assets/renders/live-odds-overlay-15d.ja.png",
+          "sourceUrl": "collateral/render/live-odds-overlay-15d.ja.png",
+          "format": "png",
+          "fileSize": 21861,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "live-odds-overlay-15d",
+          "filename": "live-odds-overlay-15d.png",
+          "url": "/tools/playbook/assets/renders/live-odds-overlay-15d.png",
+          "sourceUrl": "collateral/render/live-odds-overlay-15d.png",
+          "format": "png",
+          "fileSize": 15974,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "live-odds-overlay-15d.zh-CN",
+          "filename": "live-odds-overlay-15d.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/live-odds-overlay-15d.zh-CN.png",
+          "sourceUrl": "collateral/render/live-odds-overlay-15d.zh-CN.png",
+          "format": "png",
+          "fileSize": 21156,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2336,7 +4170,43 @@
           "url": "/tools/playbook/assets/renders/mobile-14f-every-game.ar.png",
           "sourceUrl": "collateral/render/mobile-14f-every-game.ar.png",
           "format": "png",
-          "fileSize": 54106,
+          "fileSize": 57230,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-14f-every-game.ja",
+          "filename": "mobile-14f-every-game.ja.png",
+          "url": "/tools/playbook/assets/renders/mobile-14f-every-game.ja.png",
+          "sourceUrl": "collateral/render/mobile-14f-every-game.ja.png",
+          "format": "png",
+          "fileSize": 61249,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-14f-every-game",
+          "filename": "mobile-14f-every-game.png",
+          "url": "/tools/playbook/assets/renders/mobile-14f-every-game.png",
+          "sourceUrl": "collateral/render/mobile-14f-every-game.png",
+          "format": "png",
+          "fileSize": 50373,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-14f-every-game.zh-CN",
+          "filename": "mobile-14f-every-game.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/mobile-14f-every-game.zh-CN.png",
+          "sourceUrl": "collateral/render/mobile-14f-every-game.zh-CN.png",
+          "format": "png",
+          "fileSize": 56826,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2348,7 +4218,43 @@
           "url": "/tools/playbook/assets/renders/mobile-onboarding-12a.ar.png",
           "sourceUrl": "collateral/render/mobile-onboarding-12a.ar.png",
           "format": "png",
-          "fileSize": 46885,
+          "fileSize": 53127,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-onboarding-12a.ja",
+          "filename": "mobile-onboarding-12a.ja.png",
+          "url": "/tools/playbook/assets/renders/mobile-onboarding-12a.ja.png",
+          "sourceUrl": "collateral/render/mobile-onboarding-12a.ja.png",
+          "format": "png",
+          "fileSize": 66794,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-onboarding-12a",
+          "filename": "mobile-onboarding-12a.png",
+          "url": "/tools/playbook/assets/renders/mobile-onboarding-12a.png",
+          "sourceUrl": "collateral/render/mobile-onboarding-12a.png",
+          "format": "png",
+          "fileSize": 45781,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "mobile-onboarding-12a.zh-CN",
+          "filename": "mobile-onboarding-12a.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/mobile-onboarding-12a.zh-CN.png",
+          "sourceUrl": "collateral/render/mobile-onboarding-12a.zh-CN.png",
+          "format": "png",
+          "fileSize": 56051,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2360,7 +4266,7 @@
           "url": "/tools/playbook/assets/renders/og-content-hub.png",
           "sourceUrl": "collateral/render/og-content-hub.png",
           "format": "png",
-          "fileSize": 946813,
+          "fileSize": 946396,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2372,7 +4278,7 @@
           "url": "/tools/playbook/assets/renders/og-rg-page.png",
           "sourceUrl": "collateral/render/og-rg-page.png",
           "format": "png",
-          "fileSize": 937409,
+          "fileSize": 935546,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2384,7 +4290,61 @@
           "url": "/tools/playbook/assets/renders/poster-14c-every-game-slots.ar.png",
           "sourceUrl": "collateral/render/poster-14c-every-game-slots.ar.png",
           "format": "png",
-          "fileSize": 217727,
+          "fileSize": 202224,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-14c-every-game-slots.ja",
+          "filename": "poster-14c-every-game-slots.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-14c-every-game-slots.ja.png",
+          "sourceUrl": "collateral/render/poster-14c-every-game-slots.ja.png",
+          "format": "png",
+          "fileSize": 250921,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-14c-every-game-slots",
+          "filename": "poster-14c-every-game-slots.png",
+          "url": "/tools/playbook/assets/renders/poster-14c-every-game-slots.png",
+          "sourceUrl": "collateral/render/poster-14c-every-game-slots.png",
+          "format": "png",
+          "fileSize": 192871,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-14c-every-game-slots.zh-CN",
+          "filename": "poster-14c-every-game-slots.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/poster-14c-every-game-slots.zh-CN.png",
+          "sourceUrl": "collateral/render/poster-14c-every-game-slots.zh-CN.png",
+          "format": "png",
+          "fileSize": 229588,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2402,7 +4362,61 @@
           "url": "/tools/playbook/assets/renders/poster-15c-how-sportsbook-wins.ar.png",
           "sourceUrl": "collateral/render/poster-15c-how-sportsbook-wins.ar.png",
           "format": "png",
-          "fileSize": 252676,
+          "fileSize": 209114,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-15c-how-sportsbook-wins.ja",
+          "filename": "poster-15c-how-sportsbook-wins.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-15c-how-sportsbook-wins.ja.png",
+          "sourceUrl": "collateral/render/poster-15c-how-sportsbook-wins.ja.png",
+          "format": "png",
+          "fileSize": 241459,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-15c-how-sportsbook-wins",
+          "filename": "poster-15c-how-sportsbook-wins.png",
+          "url": "/tools/playbook/assets/renders/poster-15c-how-sportsbook-wins.png",
+          "sourceUrl": "collateral/render/poster-15c-how-sportsbook-wins.png",
+          "format": "png",
+          "fileSize": 204317,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-15c-how-sportsbook-wins.zh-CN",
+          "filename": "poster-15c-how-sportsbook-wins.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/poster-15c-how-sportsbook-wins.zh-CN.png",
+          "sourceUrl": "collateral/render/poster-15c-how-sportsbook-wins.zh-CN.png",
+          "format": "png",
+          "fileSize": 222243,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2420,7 +4434,7 @@
           "url": "/tools/playbook/assets/renders/poster-19a-every-game-math.png",
           "sourceUrl": "collateral/render/poster-19a-every-game-math.png",
           "format": "png",
-          "fileSize": 4238226,
+          "fileSize": 3481976,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2438,7 +4452,7 @@
           "url": "/tools/playbook/assets/renders/poster-19b-odds-are-public.png",
           "sourceUrl": "collateral/render/poster-19b-odds-are-public.png",
           "format": "png",
-          "fileSize": 4060486,
+          "fileSize": 3003387,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2456,7 +4470,7 @@
           "url": "/tools/playbook/assets/renders/poster-19c-bet-price-tag.png",
           "sourceUrl": "collateral/render/poster-19c-bet-price-tag.png",
           "format": "png",
-          "fileSize": 4064910,
+          "fileSize": 3832507,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2474,7 +4488,7 @@
           "url": "/tools/playbook/assets/renders/poster-19d-game-iq.png",
           "sourceUrl": "collateral/render/poster-19d-game-iq.png",
           "format": "png",
-          "fileSize": 4124751,
+          "fileSize": 3542145,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2492,7 +4506,7 @@
           "url": "/tools/playbook/assets/renders/poster-19e-never-due.png",
           "sourceUrl": "collateral/render/poster-19e-never-due.png",
           "format": "png",
-          "fileSize": 4196279,
+          "fileSize": 3357961,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2510,7 +4524,7 @@
           "url": "/tools/playbook/assets/renders/poster-19f-your-tools.png",
           "sourceUrl": "collateral/render/poster-19f-your-tools.png",
           "format": "png",
-          "fileSize": 3677908,
+          "fileSize": 3044247,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2528,7 +4542,7 @@
           "url": "/tools/playbook/assets/renders/poster-19g-one-decision.png",
           "sourceUrl": "collateral/render/poster-19g-one-decision.png",
           "format": "png",
-          "fileSize": 3959496,
+          "fileSize": 3189978,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2546,7 +4560,25 @@
           "url": "/tools/playbook/assets/renders/poster-19h-time-flies.png",
           "sourceUrl": "collateral/render/poster-19h-time-flies.png",
           "format": "png",
-          "fileSize": 3873808,
+          "fileSize": 3272030,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-19i-lottery-odds",
+          "filename": "poster-19i-lottery-odds.png",
+          "url": "/tools/playbook/assets/renders/poster-19i-lottery-odds.png",
+          "sourceUrl": "collateral/render/poster-19i-lottery-odds.png",
+          "format": "png",
+          "fileSize": 3226970,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2564,7 +4596,25 @@
           "url": "/tools/playbook/assets/renders/poster-4a-know-your-game.ar.png",
           "sourceUrl": "collateral/render/poster-4a-know-your-game.ar.png",
           "format": "png",
-          "fileSize": 245430,
+          "fileSize": 225612,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4a-know-your-game.ja",
+          "filename": "poster-4a-know-your-game.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-4a-know-your-game.ja.png",
+          "sourceUrl": "collateral/render/poster-4a-know-your-game.ja.png",
+          "format": "png",
+          "fileSize": 270202,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2582,7 +4632,25 @@
           "url": "/tools/playbook/assets/renders/poster-4a-know-your-game.png",
           "sourceUrl": "collateral/render/poster-4a-know-your-game.png",
           "format": "png",
-          "fileSize": 212530,
+          "fileSize": 227829,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4a-know-your-game.zh-CN",
+          "filename": "poster-4a-know-your-game.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/poster-4a-know-your-game.zh-CN.png",
+          "sourceUrl": "collateral/render/poster-4a-know-your-game.zh-CN.png",
+          "format": "png",
+          "fileSize": 223950,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2600,7 +4668,25 @@
           "url": "/tools/playbook/assets/renders/poster-4b-no-fine-print.ar.png",
           "sourceUrl": "collateral/render/poster-4b-no-fine-print.ar.png",
           "format": "png",
-          "fileSize": 260092,
+          "fileSize": 260660,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4b-no-fine-print.ja",
+          "filename": "poster-4b-no-fine-print.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-4b-no-fine-print.ja.png",
+          "sourceUrl": "collateral/render/poster-4b-no-fine-print.ja.png",
+          "format": "png",
+          "fileSize": 287654,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2618,7 +4704,25 @@
           "url": "/tools/playbook/assets/renders/poster-4b-no-fine-print.png",
           "sourceUrl": "collateral/render/poster-4b-no-fine-print.png",
           "format": "png",
-          "fileSize": 223640,
+          "fileSize": 248024,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4b-no-fine-print.zh-CN",
+          "filename": "poster-4b-no-fine-print.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/poster-4b-no-fine-print.zh-CN.png",
+          "sourceUrl": "collateral/render/poster-4b-no-fine-print.zh-CN.png",
+          "format": "png",
+          "fileSize": 258927,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2636,7 +4740,25 @@
           "url": "/tools/playbook/assets/renders/poster-4c-game-iq.ar.png",
           "sourceUrl": "collateral/render/poster-4c-game-iq.ar.png",
           "format": "png",
-          "fileSize": 224557,
+          "fileSize": 214489,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4c-game-iq.ja",
+          "filename": "poster-4c-game-iq.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-4c-game-iq.ja.png",
+          "sourceUrl": "collateral/render/poster-4c-game-iq.ja.png",
+          "format": "png",
+          "fileSize": 240006,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2654,7 +4776,25 @@
           "url": "/tools/playbook/assets/renders/poster-4c-game-iq.png",
           "sourceUrl": "collateral/render/poster-4c-game-iq.png",
           "format": "png",
-          "fileSize": 187432,
+          "fileSize": 212282,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4c-game-iq.zh-CN",
+          "filename": "poster-4c-game-iq.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/poster-4c-game-iq.zh-CN.png",
+          "sourceUrl": "collateral/render/poster-4c-game-iq.zh-CN.png",
+          "format": "png",
+          "fileSize": 213312,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2672,7 +4812,25 @@
           "url": "/tools/playbook/assets/renders/poster-4d-lottery-odds.ar.png",
           "sourceUrl": "collateral/render/poster-4d-lottery-odds.ar.png",
           "format": "png",
-          "fileSize": 262465,
+          "fileSize": 221189,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4d-lottery-odds.ja",
+          "filename": "poster-4d-lottery-odds.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-4d-lottery-odds.ja.png",
+          "sourceUrl": "collateral/render/poster-4d-lottery-odds.ja.png",
+          "format": "png",
+          "fileSize": 255835,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2690,7 +4848,43 @@
           "url": "/tools/playbook/assets/renders/poster-4d-lottery-odds.png",
           "sourceUrl": "collateral/render/poster-4d-lottery-odds.png",
           "format": "png",
-          "fileSize": 236543,
+          "fileSize": 209694,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4d-lottery-odds.zh-CN",
+          "filename": "poster-4d-lottery-odds.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/poster-4d-lottery-odds.zh-CN.png",
+          "sourceUrl": "collateral/render/poster-4d-lottery-odds.zh-CN.png",
+          "format": "png",
+          "fileSize": 223253,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-4e-bingo-hall.ja",
+          "filename": "poster-4e-bingo-hall.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-4e-bingo-hall.ja.png",
+          "sourceUrl": "collateral/render/poster-4e-bingo-hall.ja.png",
+          "format": "png",
+          "fileSize": 276569,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2708,7 +4902,7 @@
           "url": "/tools/playbook/assets/renders/poster-4e-bingo-hall.png",
           "sourceUrl": "collateral/render/poster-4e-bingo-hall.png",
           "format": "png",
-          "fileSize": 231501,
+          "fileSize": 208533,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2726,7 +4920,25 @@
           "url": "/tools/playbook/assets/renders/poster-tier2-10g.ar.png",
           "sourceUrl": "collateral/render/poster-tier2-10g.ar.png",
           "format": "png",
-          "fileSize": 152820,
+          "fileSize": 129308,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-tier2-10g.ja",
+          "filename": "poster-tier2-10g.ja.png",
+          "url": "/tools/playbook/assets/renders/poster-tier2-10g.ja.png",
+          "sourceUrl": "collateral/render/poster-tier2-10g.ja.png",
+          "format": "png",
+          "fileSize": 151168,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2744,7 +4956,25 @@
           "url": "/tools/playbook/assets/renders/poster-tier2-10g.png",
           "sourceUrl": "collateral/render/poster-tier2-10g.png",
           "format": "png",
-          "fileSize": 136399,
+          "fileSize": 132484,
+          "category": "collateral",
+          "subcategory": "posters",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": {
+            "width": 1800,
+            "height": 2400
+          }
+        },
+        {
+          "id": "poster-tier2-10g.zh-CN",
+          "filename": "poster-tier2-10g.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/poster-tier2-10g.zh-CN.png",
+          "sourceUrl": "collateral/render/poster-tier2-10g.zh-CN.png",
+          "format": "png",
+          "fileSize": 116426,
           "category": "collateral",
           "subcategory": "posters",
           "channel": [
@@ -2762,7 +4992,43 @@
           "url": "/tools/playbook/assets/renders/push-notification-12e.ar.png",
           "sourceUrl": "collateral/render/push-notification-12e.ar.png",
           "format": "png",
-          "fileSize": 9486,
+          "fileSize": 9989,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "push-notification-12e.ja",
+          "filename": "push-notification-12e.ja.png",
+          "url": "/tools/playbook/assets/renders/push-notification-12e.ja.png",
+          "sourceUrl": "collateral/render/push-notification-12e.ja.png",
+          "format": "png",
+          "fileSize": 15423,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "push-notification-12e",
+          "filename": "push-notification-12e.png",
+          "url": "/tools/playbook/assets/renders/push-notification-12e.png",
+          "sourceUrl": "collateral/render/push-notification-12e.png",
+          "format": "png",
+          "fileSize": 10837,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "push-notification-12e.zh-CN",
+          "filename": "push-notification-12e.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/push-notification-12e.zh-CN.png",
+          "sourceUrl": "collateral/render/push-notification-12e.zh-CN.png",
+          "format": "png",
+          "fileSize": 13011,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2774,7 +5040,21 @@
           "url": "/tools/playbook/assets/renders/rack-card-5a.ar.png",
           "sourceUrl": "collateral/render/rack-card-5a.ar.png",
           "format": "png",
-          "fileSize": 117879,
+          "fileSize": 128058,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "rack-card-5a.ja",
+          "filename": "rack-card-5a.ja.png",
+          "url": "/tools/playbook/assets/renders/rack-card-5a.ja.png",
+          "sourceUrl": "collateral/render/rack-card-5a.ja.png",
+          "format": "png",
+          "fileSize": 161262,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -2788,7 +5068,21 @@
           "url": "/tools/playbook/assets/renders/rack-card-5a.png",
           "sourceUrl": "collateral/render/rack-card-5a.png",
           "format": "png",
-          "fileSize": 105187,
+          "fileSize": 127193,
+          "category": "collateral",
+          "subcategory": "print",
+          "channel": [
+            "print"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "rack-card-5a.zh-CN",
+          "filename": "rack-card-5a.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/rack-card-5a.zh-CN.png",
+          "sourceUrl": "collateral/render/rack-card-5a.zh-CN.png",
+          "format": "png",
+          "fileSize": 142874,
           "category": "collateral",
           "subcategory": "print",
           "channel": [
@@ -2802,7 +5096,19 @@
           "url": "/tools/playbook/assets/renders/self-exclusion-10b.ar.png",
           "sourceUrl": "collateral/render/self-exclusion-10b.ar.png",
           "format": "png",
-          "fileSize": 38255,
+          "fileSize": 39397,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "self-exclusion-10b.ja",
+          "filename": "self-exclusion-10b.ja.png",
+          "url": "/tools/playbook/assets/renders/self-exclusion-10b.ja.png",
+          "sourceUrl": "collateral/render/self-exclusion-10b.ja.png",
+          "format": "png",
+          "fileSize": 46252,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2814,7 +5120,19 @@
           "url": "/tools/playbook/assets/renders/self-exclusion-10b.png",
           "sourceUrl": "collateral/render/self-exclusion-10b.png",
           "format": "png",
-          "fileSize": 34463,
+          "fileSize": 36361,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "self-exclusion-10b.zh-CN",
+          "filename": "self-exclusion-10b.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/self-exclusion-10b.zh-CN.png",
+          "sourceUrl": "collateral/render/self-exclusion-10b.zh-CN.png",
+          "format": "png",
+          "fileSize": 36032,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -2826,7 +5144,21 @@
           "url": "/tools/playbook/assets/renders/session-summary-10c.ar.png",
           "sourceUrl": "collateral/render/session-summary-10c.ar.png",
           "format": "png",
-          "fileSize": 19934,
+          "fileSize": 24874,
+          "category": "collateral",
+          "subcategory": "tier-2-support",
+          "channel": [
+            "in-app"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "session-summary-10c.ja",
+          "filename": "session-summary-10c.ja.png",
+          "url": "/tools/playbook/assets/renders/session-summary-10c.ja.png",
+          "sourceUrl": "collateral/render/session-summary-10c.ja.png",
+          "format": "png",
+          "fileSize": 22122,
           "category": "collateral",
           "subcategory": "tier-2-support",
           "channel": [
@@ -2840,7 +5172,21 @@
           "url": "/tools/playbook/assets/renders/session-summary-10c.png",
           "sourceUrl": "collateral/render/session-summary-10c.png",
           "format": "png",
-          "fileSize": 17332,
+          "fileSize": 20624,
+          "category": "collateral",
+          "subcategory": "tier-2-support",
+          "channel": [
+            "in-app"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "session-summary-10c.zh-CN",
+          "filename": "session-summary-10c.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/session-summary-10c.zh-CN.png",
+          "sourceUrl": "collateral/render/session-summary-10c.zh-CN.png",
+          "format": "png",
+          "fileSize": 21401,
           "category": "collateral",
           "subcategory": "tier-2-support",
           "channel": [
@@ -2854,7 +5200,22 @@
           "url": "/tools/playbook/assets/renders/sign-atm-9b.ar.png",
           "sourceUrl": "collateral/render/sign-atm-9b.ar.png",
           "format": "png",
-          "fileSize": 75988,
+          "fileSize": 65411,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-atm-9b.ja",
+          "filename": "sign-atm-9b.ja.png",
+          "url": "/tools/playbook/assets/renders/sign-atm-9b.ja.png",
+          "sourceUrl": "collateral/render/sign-atm-9b.ja.png",
+          "format": "png",
+          "fileSize": 86653,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2869,7 +5230,22 @@
           "url": "/tools/playbook/assets/renders/sign-atm-9b.png",
           "sourceUrl": "collateral/render/sign-atm-9b.png",
           "format": "png",
-          "fileSize": 66610,
+          "fileSize": 57772,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-atm-9b.zh-CN",
+          "filename": "sign-atm-9b.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/sign-atm-9b.zh-CN.png",
+          "sourceUrl": "collateral/render/sign-atm-9b.zh-CN.png",
+          "format": "png",
+          "fileSize": 61864,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2884,7 +5260,22 @@
           "url": "/tools/playbook/assets/renders/sign-entrance-9a.ar.png",
           "sourceUrl": "collateral/render/sign-entrance-9a.ar.png",
           "format": "png",
-          "fileSize": 91356,
+          "fileSize": 90263,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-entrance-9a.ja",
+          "filename": "sign-entrance-9a.ja.png",
+          "url": "/tools/playbook/assets/renders/sign-entrance-9a.ja.png",
+          "sourceUrl": "collateral/render/sign-entrance-9a.ja.png",
+          "format": "png",
+          "fileSize": 101079,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2899,7 +5290,22 @@
           "url": "/tools/playbook/assets/renders/sign-entrance-9a.png",
           "sourceUrl": "collateral/render/sign-entrance-9a.png",
           "format": "png",
-          "fileSize": 76278,
+          "fileSize": 75211,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-entrance-9a.zh-CN",
+          "filename": "sign-entrance-9a.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/sign-entrance-9a.zh-CN.png",
+          "sourceUrl": "collateral/render/sign-entrance-9a.zh-CN.png",
+          "format": "png",
+          "fileSize": 73804,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2914,7 +5320,22 @@
           "url": "/tools/playbook/assets/renders/sign-floor-9c.ar.png",
           "sourceUrl": "collateral/render/sign-floor-9c.ar.png",
           "format": "png",
-          "fileSize": 69461,
+          "fileSize": 78178,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-floor-9c.ja",
+          "filename": "sign-floor-9c.ja.png",
+          "url": "/tools/playbook/assets/renders/sign-floor-9c.ja.png",
+          "sourceUrl": "collateral/render/sign-floor-9c.ja.png",
+          "format": "png",
+          "fileSize": 99916,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2929,7 +5350,22 @@
           "url": "/tools/playbook/assets/renders/sign-floor-9c.png",
           "sourceUrl": "collateral/render/sign-floor-9c.png",
           "format": "png",
-          "fileSize": 67008,
+          "fileSize": 89253,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-floor-9c.zh-CN",
+          "filename": "sign-floor-9c.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/sign-floor-9c.zh-CN.png",
+          "sourceUrl": "collateral/render/sign-floor-9c.zh-CN.png",
+          "format": "png",
+          "fileSize": 83297,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2944,7 +5380,22 @@
           "url": "/tools/playbook/assets/renders/sign-restroom-9d.ar.png",
           "sourceUrl": "collateral/render/sign-restroom-9d.ar.png",
           "format": "png",
-          "fileSize": 35383,
+          "fileSize": 39173,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-restroom-9d.ja",
+          "filename": "sign-restroom-9d.ja.png",
+          "url": "/tools/playbook/assets/renders/sign-restroom-9d.ja.png",
+          "sourceUrl": "collateral/render/sign-restroom-9d.ja.png",
+          "format": "png",
+          "fileSize": 50219,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2959,7 +5410,22 @@
           "url": "/tools/playbook/assets/renders/sign-restroom-9d.png",
           "sourceUrl": "collateral/render/sign-restroom-9d.png",
           "format": "png",
-          "fileSize": 31675,
+          "fileSize": 47793,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-restroom-9d.zh-CN",
+          "filename": "sign-restroom-9d.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/sign-restroom-9d.zh-CN.png",
+          "sourceUrl": "collateral/render/sign-restroom-9d.zh-CN.png",
+          "format": "png",
+          "fileSize": 40037,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2974,7 +5440,22 @@
           "url": "/tools/playbook/assets/renders/sign-staff-9e.ar.png",
           "sourceUrl": "collateral/render/sign-staff-9e.ar.png",
           "format": "png",
-          "fileSize": 138890,
+          "fileSize": 137180,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-staff-9e.ja",
+          "filename": "sign-staff-9e.ja.png",
+          "url": "/tools/playbook/assets/renders/sign-staff-9e.ja.png",
+          "sourceUrl": "collateral/render/sign-staff-9e.ja.png",
+          "format": "png",
+          "fileSize": 170411,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -2989,7 +5470,22 @@
           "url": "/tools/playbook/assets/renders/sign-staff-9e.png",
           "sourceUrl": "collateral/render/sign-staff-9e.png",
           "format": "png",
-          "fileSize": 111472,
+          "fileSize": 120482,
+          "category": "collateral",
+          "subcategory": "venue-signage",
+          "channel": [
+            "print",
+            "digital-signage"
+          ],
+          "dimensions": null
+        },
+        {
+          "id": "sign-staff-9e.zh-CN",
+          "filename": "sign-staff-9e.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/sign-staff-9e.zh-CN.png",
+          "sourceUrl": "collateral/render/sign-staff-9e.zh-CN.png",
+          "format": "png",
+          "fileSize": 126494,
           "category": "collateral",
           "subcategory": "venue-signage",
           "channel": [
@@ -3004,7 +5500,61 @@
           "url": "/tools/playbook/assets/renders/story-14b-every-game-roulette.ar.png",
           "sourceUrl": "collateral/render/story-14b-every-game-roulette.ar.png",
           "format": "png",
-          "fileSize": 109978,
+          "fileSize": 132119,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-14b-every-game-roulette.ja",
+          "filename": "story-14b-every-game-roulette.ja.png",
+          "url": "/tools/playbook/assets/renders/story-14b-every-game-roulette.ja.png",
+          "sourceUrl": "collateral/render/story-14b-every-game-roulette.ja.png",
+          "format": "png",
+          "fileSize": 153489,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-14b-every-game-roulette",
+          "filename": "story-14b-every-game-roulette.png",
+          "url": "/tools/playbook/assets/renders/story-14b-every-game-roulette.png",
+          "sourceUrl": "collateral/render/story-14b-every-game-roulette.png",
+          "format": "png",
+          "fileSize": 136046,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-14b-every-game-roulette.zh-CN",
+          "filename": "story-14b-every-game-roulette.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/story-14b-every-game-roulette.zh-CN.png",
+          "sourceUrl": "collateral/render/story-14b-every-game-roulette.zh-CN.png",
+          "format": "png",
+          "fileSize": 132189,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3022,7 +5572,61 @@
           "url": "/tools/playbook/assets/renders/story-15b-bet-costs.ar.png",
           "sourceUrl": "collateral/render/story-15b-bet-costs.ar.png",
           "format": "png",
-          "fileSize": 118635,
+          "fileSize": 148337,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-15b-bet-costs.ja",
+          "filename": "story-15b-bet-costs.ja.png",
+          "url": "/tools/playbook/assets/renders/story-15b-bet-costs.ja.png",
+          "sourceUrl": "collateral/render/story-15b-bet-costs.ja.png",
+          "format": "png",
+          "fileSize": 193237,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-15b-bet-costs",
+          "filename": "story-15b-bet-costs.png",
+          "url": "/tools/playbook/assets/renders/story-15b-bet-costs.png",
+          "sourceUrl": "collateral/render/story-15b-bet-costs.png",
+          "format": "png",
+          "fileSize": 137511,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-15b-bet-costs.zh-CN",
+          "filename": "story-15b-bet-costs.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/story-15b-bet-costs.zh-CN.png",
+          "sourceUrl": "collateral/render/story-15b-bet-costs.zh-CN.png",
+          "format": "png",
+          "fileSize": 149888,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3040,7 +5644,25 @@
           "url": "/tools/playbook/assets/renders/story-3a-hot-streak.ar.png",
           "sourceUrl": "collateral/render/story-3a-hot-streak.ar.png",
           "format": "png",
-          "fileSize": 109972,
+          "fileSize": 163605,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3a-hot-streak.ja",
+          "filename": "story-3a-hot-streak.ja.png",
+          "url": "/tools/playbook/assets/renders/story-3a-hot-streak.ja.png",
+          "sourceUrl": "collateral/render/story-3a-hot-streak.ja.png",
+          "format": "png",
+          "fileSize": 174397,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3058,7 +5680,25 @@
           "url": "/tools/playbook/assets/renders/story-3a-hot-streak.png",
           "sourceUrl": "collateral/render/story-3a-hot-streak.png",
           "format": "png",
-          "fileSize": 91989,
+          "fileSize": 143109,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3a-hot-streak.zh-CN",
+          "filename": "story-3a-hot-streak.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/story-3a-hot-streak.zh-CN.png",
+          "sourceUrl": "collateral/render/story-3a-hot-streak.zh-CN.png",
+          "format": "png",
+          "fileSize": 147081,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3076,7 +5716,25 @@
           "url": "/tools/playbook/assets/renders/story-3b-house-edge.ar.png",
           "sourceUrl": "collateral/render/story-3b-house-edge.ar.png",
           "format": "png",
-          "fileSize": 138324,
+          "fileSize": 145764,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3b-house-edge.ja",
+          "filename": "story-3b-house-edge.ja.png",
+          "url": "/tools/playbook/assets/renders/story-3b-house-edge.ja.png",
+          "sourceUrl": "collateral/render/story-3b-house-edge.ja.png",
+          "format": "png",
+          "fileSize": 161405,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3094,7 +5752,25 @@
           "url": "/tools/playbook/assets/renders/story-3b-house-edge.png",
           "sourceUrl": "collateral/render/story-3b-house-edge.png",
           "format": "png",
-          "fileSize": 122607,
+          "fileSize": 147924,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3b-house-edge.zh-CN",
+          "filename": "story-3b-house-edge.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/story-3b-house-edge.zh-CN.png",
+          "sourceUrl": "collateral/render/story-3b-house-edge.zh-CN.png",
+          "format": "png",
+          "fileSize": 130823,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3112,7 +5788,25 @@
           "url": "/tools/playbook/assets/renders/story-3c-sports-betting.ar.png",
           "sourceUrl": "collateral/render/story-3c-sports-betting.ar.png",
           "format": "png",
-          "fileSize": 110190,
+          "fileSize": 146733,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3c-sports-betting.ja",
+          "filename": "story-3c-sports-betting.ja.png",
+          "url": "/tools/playbook/assets/renders/story-3c-sports-betting.ja.png",
+          "sourceUrl": "collateral/render/story-3c-sports-betting.ja.png",
+          "format": "png",
+          "fileSize": 166001,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3130,7 +5824,25 @@
           "url": "/tools/playbook/assets/renders/story-3c-sports-betting.png",
           "sourceUrl": "collateral/render/story-3c-sports-betting.png",
           "format": "png",
-          "fileSize": 100527,
+          "fileSize": 144151,
+          "category": "collateral",
+          "subcategory": "stories",
+          "channel": [
+            "instagram-stories",
+            "tiktok"
+          ],
+          "dimensions": {
+            "width": 1080,
+            "height": 1920
+          }
+        },
+        {
+          "id": "story-3c-sports-betting.zh-CN",
+          "filename": "story-3c-sports-betting.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/story-3c-sports-betting.zh-CN.png",
+          "sourceUrl": "collateral/render/story-3c-sports-betting.zh-CN.png",
+          "format": "png",
+          "fileSize": 140424,
           "category": "collateral",
           "subcategory": "stories",
           "channel": [
@@ -3148,7 +5860,19 @@
           "url": "/tools/playbook/assets/renders/support-page-10a.ar.png",
           "sourceUrl": "collateral/render/support-page-10a.ar.png",
           "format": "png",
-          "fileSize": 96272,
+          "fileSize": 80977,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "support-page-10a.ja",
+          "filename": "support-page-10a.ja.png",
+          "url": "/tools/playbook/assets/renders/support-page-10a.ja.png",
+          "sourceUrl": "collateral/render/support-page-10a.ja.png",
+          "format": "png",
+          "fileSize": 104301,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -3160,7 +5884,19 @@
           "url": "/tools/playbook/assets/renders/support-page-10a.png",
           "sourceUrl": "collateral/render/support-page-10a.png",
           "format": "png",
-          "fileSize": 86665,
+          "fileSize": 85884,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "support-page-10a.zh-CN",
+          "filename": "support-page-10a.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/support-page-10a.zh-CN.png",
+          "sourceUrl": "collateral/render/support-page-10a.zh-CN.png",
+          "format": "png",
+          "fileSize": 71446,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -3172,7 +5908,19 @@
           "url": "/tools/playbook/assets/renders/table-tent-5b.ar.png",
           "sourceUrl": "collateral/render/table-tent-5b.ar.png",
           "format": "png",
-          "fileSize": 99830,
+          "fileSize": 186928,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "table-tent-5b.ja",
+          "filename": "table-tent-5b.ja.png",
+          "url": "/tools/playbook/assets/renders/table-tent-5b.ja.png",
+          "sourceUrl": "collateral/render/table-tent-5b.ja.png",
+          "format": "png",
+          "fileSize": 229091,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -3184,7 +5932,19 @@
           "url": "/tools/playbook/assets/renders/table-tent-5b.png",
           "sourceUrl": "collateral/render/table-tent-5b.png",
           "format": "png",
-          "fileSize": 85747,
+          "fileSize": 168151,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "table-tent-5b.zh-CN",
+          "filename": "table-tent-5b.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/table-tent-5b.zh-CN.png",
+          "sourceUrl": "collateral/render/table-tent-5b.zh-CN.png",
+          "format": "png",
+          "fileSize": 176783,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -3196,7 +5956,43 @@
           "url": "/tools/playbook/assets/renders/web-popup-12h.ar.png",
           "sourceUrl": "collateral/render/web-popup-12h.ar.png",
           "format": "png",
-          "fileSize": 30799,
+          "fileSize": 32412,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "web-popup-12h.ja",
+          "filename": "web-popup-12h.ja.png",
+          "url": "/tools/playbook/assets/renders/web-popup-12h.ja.png",
+          "sourceUrl": "collateral/render/web-popup-12h.ja.png",
+          "format": "png",
+          "fileSize": 49498,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "web-popup-12h",
+          "filename": "web-popup-12h.png",
+          "url": "/tools/playbook/assets/renders/web-popup-12h.png",
+          "sourceUrl": "collateral/render/web-popup-12h.png",
+          "format": "png",
+          "fileSize": 31110,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "web-popup-12h.zh-CN",
+          "filename": "web-popup-12h.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/web-popup-12h.zh-CN.png",
+          "sourceUrl": "collateral/render/web-popup-12h.zh-CN.png",
+          "format": "png",
+          "fileSize": 35536,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],
@@ -3208,7 +6004,43 @@
           "url": "/tools/playbook/assets/renders/withdrawal-confirm-12f.ar.png",
           "sourceUrl": "collateral/render/withdrawal-confirm-12f.ar.png",
           "format": "png",
-          "fileSize": 44122,
+          "fileSize": 40871,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "withdrawal-confirm-12f.ja",
+          "filename": "withdrawal-confirm-12f.ja.png",
+          "url": "/tools/playbook/assets/renders/withdrawal-confirm-12f.ja.png",
+          "sourceUrl": "collateral/render/withdrawal-confirm-12f.ja.png",
+          "format": "png",
+          "fileSize": 41939,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "withdrawal-confirm-12f",
+          "filename": "withdrawal-confirm-12f.png",
+          "url": "/tools/playbook/assets/renders/withdrawal-confirm-12f.png",
+          "sourceUrl": "collateral/render/withdrawal-confirm-12f.png",
+          "format": "png",
+          "fileSize": 42454,
+          "category": "collateral",
+          "subcategory": "other",
+          "channel": [],
+          "dimensions": null
+        },
+        {
+          "id": "withdrawal-confirm-12f.zh-CN",
+          "filename": "withdrawal-confirm-12f.zh-CN.png",
+          "url": "/tools/playbook/assets/renders/withdrawal-confirm-12f.zh-CN.png",
+          "sourceUrl": "collateral/render/withdrawal-confirm-12f.zh-CN.png",
+          "format": "png",
+          "fileSize": 38942,
           "category": "collateral",
           "subcategory": "other",
           "channel": [],

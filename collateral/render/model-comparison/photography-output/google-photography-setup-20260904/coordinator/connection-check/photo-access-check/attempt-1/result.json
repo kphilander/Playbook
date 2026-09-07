@@ -1,0 +1,17 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photography-output/google-photography-setup-20260904/coordinator/connection-check/photo-access-check/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "4d380ef89e0e67f7e8f064c97eb9362c184de73e2c2e298a43e7809261901916",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "coordinator",
+  "concept": "photo-access-check",
+  "condition": "connection-check",
+  "startedAt": "2026-09-05T00:07:41.880Z",
+  "status": "provider-error",
+  "httpStatus": 400,
+  "errorStatus": "INVALID_ARGUMENT",
+  "reasons": [],
+  "elapsedMs": 238,
+  "completedAt": "2026-09-05T00:07:42.118Z"
+}

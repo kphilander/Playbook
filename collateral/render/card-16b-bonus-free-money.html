@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -44,17 +42,18 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="card-pillar">Open</span>
   </div>
   <div class="card-body">
     <div class="myth-label">Myth vs. Math</div>
     <div class="myth-statement"><span class="strike">&#8220;A bonus is free money&#8221;</span></div>
-    <div class="fact-statement">A $100 bonus at 30x wagering means <strong>$3,000 in bets</strong><br>before you can withdraw. Read the multiplier first.</div>
+    <div class="fact-statement">Example: a $100 bonus with a 30× rule on the <strong>bonus alone</strong> needs $3,000 in qualifying bets. Check games and expiry too.</div>
     <div class="bar-viz">
       <div class="bar-row"><div class="bar-track"><div class="bar teal"></div></div><span class="bar-value teal-text">$100</span></div>
       <div class="bar-caption">your bonus</div>
@@ -62,7 +61,7 @@
       <div class="bar-caption">bets required, drawn to scale</div>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

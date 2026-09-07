@@ -1,0 +1,693 @@
+[
+  {
+    "id": "card-1a-hot-streak",
+    "category": "Cards",
+    "title": "\"I'm on a hot streak\"",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "a5b3d3ae42918f619e3f6f39aaa4a13ced574389e080a13267559e37bc96391e",
+    "baselineSourceSha256": "f76debe972411581bbc8ce8e1f3d87ed1fa971335adaad67ceec28d7d3e5555d",
+    "pngSha256": "1765c7f330d809880b1076d41a80b4875c251b0ce0ceb9f8682c5a05ddb200ff",
+    "copyPreserved": true
+  },
+  {
+    "id": "card-1b-due-for-win",
+    "category": "Cards",
+    "title": "\"I'm due for a win\"",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3
+      },
+      "issues": []
+    },
+    "sourceSha256": "590e6736e58b814065551f72ff0ba18dd7bc2e2c2e579f42041df12c73aa2d65",
+    "baselineSourceSha256": "4478f311c6b693c51d5037af6cbd7679fb2f53d296971915e4ac95ef9e9482c8",
+    "pngSha256": "2d9ba1bdb4fd6af7f5915a75eb9afd0ed3d61a05f17e49e24be278f4a1a721fc",
+    "copyPreserved": true
+  },
+  {
+    "id": "card-2b-sports-betting",
+    "category": "Cards",
+    "title": "−110. Read the whole return.",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "bf8f0775ec658eb48a0eed62e866c2ddf1f8ef2b221220d171b88e597f887056",
+    "baselineSourceSha256": "45da31ec22765ba999edf164ae8dce5fd67aad5b8eaeb9e135f5c1e70f03323a",
+    "pngSha256": "ef854aa72384bc989ef89513e060e0ac3f24dd9d1dd833eaa89838b474aa1b1e",
+    "copyPreserved": true
+  },
+  {
+    "id": "card-2c-bonus-wagering",
+    "category": "Cards",
+    "title": "Think you know the odds?",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3
+      },
+      "issues": []
+    },
+    "sourceSha256": "b693c5b822a4d04acf53be64d6c13ac7e24a74101fb9df67eb559e1d2f18748e",
+    "baselineSourceSha256": "9286a77c8bfbc8f5bb4463f0789c4aa2fb74e2122c83c2078ae3fff77aff2837",
+    "pngSha256": "2544a6f439fb7b25275f2498024e6ff9b6c42edb4c740ad8edc4d6a914cde902",
+    "copyPreserved": true
+  },
+  {
+    "id": "story-3a-hot-streak",
+    "category": "Stories",
+    "title": "\"I'm on a hot streak\"",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "ff5abfb892b7b11ccf3840b21c20e001a34b3c3a9ee52993c85ca3524be4d66a",
+    "baselineSourceSha256": "ea8df1789c4af28744408edfc97afe7c329e254386441dc734a876f088c91565",
+    "pngSha256": "f7896f3eb922b96f76a048be713d7e04914e779c445a5745715960ab3a1717cc",
+    "copyPreserved": true
+  },
+  {
+    "id": "story-3b-house-edge",
+    "category": "Stories",
+    "title": "Same stake. Different math.",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "2e0b1a9895c51829c276ea05d1ed1f19bef780ce97473e3af9d178928926f1e5",
+    "baselineSourceSha256": "2462ad4b3f854cdd11d9a6fbb595c61fff2b21a80ae172475034fcb5910bcad8",
+    "pngSha256": "abdd0ce45c25baa9e1965ad025cd91682ded1c27a41f58946f529d652d08185b",
+    "copyPreserved": true
+  },
+  {
+    "id": "story-3c-sports-betting",
+    "category": "Stories",
+    "title": "What does -110 mean in sports betting?",
+    "dimensions": [
+      1080,
+      1920
+    ],
+    "pixels": [
+      2160,
+      3840
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "24d11c34738f391e62bbe364ee31ca6f6afec5c76e5819644281eb6e8561e518",
+    "baselineSourceSha256": "fa4e21b7bc9afab3ba051c3b2ab490055813b8cb1c2b7c03a142294a74d32855",
+    "pngSha256": "311ee1b7d48100fa0a75185a6b1d3eaf85556766daa76adf4ec4b56a345bfff8",
+    "copyPreserved": true
+  },
+  {
+    "id": "poster-4a-know-your-game",
+    "category": "Posters",
+    "title": "Know your game. Play on your terms.",
+    "dimensions": [
+      1848,
+      2448
+    ],
+    "pixels": [
+      3696,
+      4896
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88,
+        "rgb(200, 200, 216) on 27,40,56": 9.03,
+        "rgb(27, 40, 56) on 255,255,255": 14.92
+      },
+      "issues": []
+    },
+    "sourceSha256": "00371ee9eb49e63825a152db4b120e0f3a8e465d1a7a5e09e779a4368c09d356",
+    "baselineSourceSha256": "5a1b1ce93997321454209464071e479d6223e7bdfc50da6d06d198b619e259fd",
+    "pngSha256": "140ec5ad293357d6f80bccfac0101e97cdeea3885d4fbf3be57416f34f15a426",
+    "copyPreserved": true
+  },
+  {
+    "id": "poster-4b-no-fine-print",
+    "category": "Posters",
+    "title": "Same stake. Different math.",
+    "dimensions": [
+      1848,
+      2448
+    ],
+    "pixels": [
+      3696,
+      4896
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "818743837c2259fd223e2cdb3698dcab5e1d7d8a00aba2b0a529730cef5925aa",
+    "baselineSourceSha256": "aef5452838881e8ed20de66675175aeccbb1f276572ce7e322c315dc0370b659",
+    "pngSha256": "1d3d1e718dcba914a01ae129500012b2b4ba4ee4daac536b54efc132887f1448",
+    "copyPreserved": true
+  },
+  {
+    "id": "poster-4c-game-iq",
+    "category": "Posters",
+    "title": "A losing streak isn’t a countdown.",
+    "dimensions": [
+      1848,
+      2448
+    ],
+    "pixels": [
+      3696,
+      4896
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "75a58803ccdb946e2ac601366caa3e7beec1e621a000dea47467cdeb6e817d59",
+    "baselineSourceSha256": "2410dbad4c4dc6926976a653463d9f169e701b23fa88b93fa531b48408ce8de9",
+    "pngSha256": "cee5e971e607f3ff0110b34426cdee4ed0e85cdc278aa8b836e50806763b0caf",
+    "copyPreserved": true
+  },
+  {
+    "id": "rack-card-5a",
+    "category": "Print",
+    "title": "Every game has math. Here's yours.",
+    "dimensions": [
+      848,
+      1848
+    ],
+    "pixels": [
+      1696,
+      3696
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88,
+        "rgb(27, 40, 56) on 255,255,255": 14.92
+      },
+      "issues": []
+    },
+    "sourceSha256": "a0bc79878723bf57f4be24805dc73f51fcc3fbad386c7a13fc0996a2905752c8",
+    "baselineSourceSha256": "202b30e2210da67e1c99592f1f87de58efaa7e7b981d7903dd6b49fe4c4ab358",
+    "pngSha256": "56e89ea61b18f8441c50446c6d97d89d7bef3c4ae892599dea966546aa824d28",
+    "copyPreserved": true
+  },
+  {
+    "id": "table-tent-5b",
+    "category": "Print",
+    "title": "Your tools. Your limits. Your call.",
+    "dimensions": [
+      848,
+      2448
+    ],
+    "pixels": [
+      1696,
+      4896
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88,
+        "rgb(27, 40, 56) on 255,255,255": 14.92
+      },
+      "issues": []
+    },
+    "sourceSha256": "8091aa0bef9e426c5261c20f7f0a6897c1cf0139d12691c55b92d04190d443af",
+    "baselineSourceSha256": "bffe700ee7b308ab0b7195cf6652f94d956a2bb80beee58e9ee70d99f025368c",
+    "pngSha256": "5262706436e8636d48d6dd276f0dfc39f1004c586e6cf823956dc7463103d3c6",
+    "copyPreserved": true
+  },
+  {
+    "id": "email-welcome-7a",
+    "category": "Email",
+    "title": "Welcome. A few things worth knowing.",
+    "dimensions": [
+      600,
+      1510
+    ],
+    "pixels": [
+      1200,
+      3020
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(26, 26, 46) on 255,255,255": 17.06,
+        "rgb(4, 120, 87) on 255,255,255": 5.48,
+        "rgb(61, 61, 92) on 255,255,255": 10.39,
+        "rgb(27, 40, 56) on 16,185,129": 5.88,
+        "rgb(27, 40, 56) on 245,245,250": 13.73,
+        "rgb(61, 61, 92) on 245,245,250": 9.56,
+        "rgb(255, 255, 255) on 15,25,35": 17.74,
+        "rgb(16, 185, 129) on 15,25,35": 6.99,
+        "rgb(177, 182, 187) on 15,25,35": 8.68
+      },
+      "issues": []
+    },
+    "sourceSha256": "d49f52c5691639a40110a1f5b31efc4ed25bdf9492a687957035046678de4d55",
+    "baselineSourceSha256": "7d3054d48a30a534c5b3a22c4cf268085e558b9717c1011a85b4e387620d2a98",
+    "pngSha256": "862815f93a3296cc953292cbab62a9f23bab9f3d72365c991c181921c88b8d02",
+    "copyPreserved": true
+  },
+  {
+    "id": "email-deposit-7b",
+    "category": "Email",
+    "title": "Deposit confirmed",
+    "dimensions": [
+      600,
+      1349
+    ],
+    "pixels": [
+      1200,
+      2696
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(16, 185, 129) on 27,40,56": 5.88,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(26, 26, 46) on 255,255,255": 17.06,
+        "rgb(107, 107, 138) on 245,245,250": 4.72,
+        "rgb(27, 40, 56) on 245,245,250": 13.73,
+        "rgb(4, 120, 87) on 245,245,250": 5.05,
+        "rgb(107, 107, 138) on 255,255,255": 5.13,
+        "rgb(61, 61, 92) on 255,255,255": 10.39,
+        "rgb(27, 40, 56) on 16,185,129": 5.88,
+        "rgb(26, 26, 46) on 245,245,250": 15.7,
+        "rgb(255, 255, 255) on 15,25,35": 17.74,
+        "rgb(16, 185, 129) on 15,25,35": 6.99,
+        "rgb(177, 182, 187) on 15,25,35": 8.68
+      },
+      "issues": []
+    },
+    "sourceSha256": "fff8286aeed74a44effbf538cbcc4fbdaae72e8ff93cd21d6c3808c6f0294522",
+    "baselineSourceSha256": "08aa773f55ea2f5951df90e2436a3afd425d60a4c5a8f2855814f89bb68e571c",
+    "pngSha256": "fb95a28f74f991bb0671cf31cee433c641ca12e8e912a3a1328452ffd10e3f21",
+    "copyPreserved": true
+  },
+  {
+    "id": "email-monthly-7c",
+    "category": "Email",
+    "title": "Your January summary",
+    "dimensions": [
+      600,
+      1608
+    ],
+    "pixels": [
+      1200,
+      3216
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(26, 26, 46) on 255,255,255": 17.06,
+        "rgb(27, 40, 56) on 255,255,255": 14.92,
+        "rgb(107, 107, 138) on 255,255,255": 5.13,
+        "rgb(27, 40, 56) on 16,185,129": 5.88,
+        "rgb(26, 26, 46) on 245,245,250": 15.7,
+        "rgb(61, 61, 92) on 245,245,250": 9.56,
+        "rgb(4, 120, 87) on 245,245,250": 5.05,
+        "rgb(16, 185, 129) on 27,40,56": 5.88,
+        "rgb(255, 255, 255) on 15,25,35": 17.74,
+        "rgb(16, 185, 129) on 15,25,35": 6.99,
+        "rgb(177, 182, 187) on 15,25,35": 8.68
+      },
+      "issues": []
+    },
+    "sourceSha256": "c167b8714b8400d5ed479acb91c0e66388d6d807c080325ed83c8f788f024111",
+    "baselineSourceSha256": "80f3976ecee2808f8e9b2ba11bb48763c9950d4858c2ad7ec1ed699d438f7cdd",
+    "pngSha256": "5b2ee4a73eb97d4cbe916590080e229bbfa78e1ad3febf426b5f1ffb61704151",
+    "copyPreserved": true
+  },
+  {
+    "id": "email-reactivation-7d",
+    "category": "Email",
+    "title": "Your tools are right where you left them",
+    "dimensions": [
+      600,
+      1535
+    ],
+    "pixels": [
+      1200,
+      3070
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(26, 26, 46) on 255,255,255": 17.06,
+        "rgb(26, 26, 46) on 245,245,250": 15.7,
+        "rgb(61, 61, 92) on 245,245,250": 9.56,
+        "rgb(27, 40, 56) on 16,185,129": 5.88,
+        "rgb(16, 185, 129) on 27,40,56": 5.88,
+        "rgb(4, 120, 87) on 245,245,250": 5.05,
+        "rgb(27, 40, 56) on 232,232,240": 12.25,
+        "rgb(107, 107, 138) on 255,255,255": 5.13,
+        "rgb(255, 255, 255) on 15,25,35": 17.74,
+        "rgb(16, 185, 129) on 15,25,35": 6.99,
+        "rgb(177, 182, 187) on 15,25,35": 8.68
+      },
+      "issues": []
+    },
+    "sourceSha256": "9fda24a5e8f66570eb9861da2d63cac0c805a18358cef39fdde558e82831ff76",
+    "baselineSourceSha256": "57b415d5b8c1c8dbfca0b7d69435771a4c3ea663373e8d367584a48ff4add6d3",
+    "pngSha256": "f7a8e83be43f3a843cedc459835a2bce5f0d0e412fde1c85f3d90bdb8588b385",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-baccarat",
+    "category": "How to play",
+    "title": "Baccarat",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "71b21174146e7563a7b0b528dfd75a5cb142493022004809b171b41ee374cae8",
+    "baselineSourceSha256": "0e9cb68be45f981155ccedf39831d24710ec606c3f3ef737055922a137281188",
+    "pngSha256": "fd9f192c4a0016d646c2c5157c2139c93fe62f9366aaaa92c369c30a1dce7f9d",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-bingo",
+    "category": "How to play",
+    "title": "Bingo",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "78e2656457015bca1eb4b66c7fce03c8e725021ea7df9c11715f259dd75127a8",
+    "baselineSourceSha256": "5af378f7ae3be30cbbcf94d7a7bd2b0bc6b9537373be6265e9a3beffe4e8adae",
+    "pngSha256": "29c3ed580f2efbb0a02ee7c75e521cb6206da43f1e63727965849c92971789be",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-blackjack",
+    "category": "How to play",
+    "title": "Blackjack",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "f75dc52cacd3a3904259b3bd8ceba52681afd3bfdb9672d10fda9282b73add92",
+    "baselineSourceSha256": "81df4966ca87bfeabbbede03ebc14124469131eb7db00b46b6338aaccd4ddf58",
+    "pngSha256": "571daf08e189b5bde59e68cfe04e472c86de63fbe59bab4fef01d17555e0b440",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-craps",
+    "category": "How to play",
+    "title": "Craps",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "19a8024398ead91bce4c11e50c844afe901aa0125cad8da2d14513de1875ae8a",
+    "baselineSourceSha256": "803a5d18716cea384f79885203e94c81ae49eda255eb8f04c7c03c3fb33173b5",
+    "pngSha256": "5a6e21a5ef5860847d7ac12a7f23dc50b9326169c92ceca464292e3cae5e3bc0",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-horse-racing",
+    "category": "How to play",
+    "title": "Horse Racing",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "af093136b1056d9a8706446c05cd1df3fed63ab2038b90ecf847c3c19247cb5c",
+    "baselineSourceSha256": "507f8c40ad5d65274d29db3f7d12d40b541c69b9c491032384d8b010d7a22c6f",
+    "pngSha256": "551d589c4aff8ac4b76ccb457d34c6a8fd05ca52e504b0d04249c73dd66e6f8c",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-lottery",
+    "category": "How to play",
+    "title": "Lottery",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "fd1e04a07aac821ba61fe7cbb8fc36171d722474b7a8801d5dcc9820c7c7b979",
+    "baselineSourceSha256": "31a1b87fbdc5260894ba073bdefee9a2af05b410e7d3c29e3c3da56b41fdd15c",
+    "pngSha256": "0588784f5c0ef908b1bd745ff16065d1e4e291fd71448276a76fa798fedaf005",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-roulette",
+    "category": "How to play",
+    "title": "American roulette",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "f95997f2b1206fb7c23118a7b4990aa06c765e3058ceef9212840cb6f350876f",
+    "baselineSourceSha256": "525a7dfc80eb61947115d59b9109c8cd42770fa1928ada0edaea99902742df26",
+    "pngSha256": "26e629acae7bf512ece962911dada100f3df7a9639e6c3ca6a525345520c7045",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-slots",
+    "category": "How to play",
+    "title": "Slots",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "ec1508408e8c6a5c61a217ea77269a4b414a316d43d3a0069df2c5eb1aa687de",
+    "baselineSourceSha256": "a4383c8a238e2525000a870a1acd7ee62341f6953d879ff6a575f435b8204ab9",
+    "pngSha256": "31c91611bcc8f0dfa81353a9900454d9d7969490e614edacab37d93233eea0d4",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-sports",
+    "category": "How to play",
+    "title": "Sports Betting",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "cdafe03143833a9d9f127ebbacabaf5083339ff7b8419097cc1c996edda3e4c0",
+    "baselineSourceSha256": "65fdca55cab50b2adc7d3c348a409f4fdf1ea9f5252726ba0187511ad56ae046",
+    "pngSha256": "5106c99a40371554d70c7df448562897ea239c39f397e62f1e01755fbfd17aad",
+    "copyPreserved": true
+  },
+  {
+    "id": "htp-card-video-poker",
+    "category": "How to play",
+    "title": "Video Poker",
+    "dimensions": [
+      1080,
+      1350
+    ],
+    "pixels": [
+      2160,
+      2700
+    ],
+    "contrast": {
+      "pairs": {
+        "rgb(255, 255, 255) on 27,40,56": 14.92,
+        "rgb(177, 182, 187) on 27,40,56": 7.3,
+        "rgb(16, 185, 129) on 27,40,56": 5.88
+      },
+      "issues": []
+    },
+    "sourceSha256": "8236af8b2b8f87f6f9b0cfff2c6361983964bddb0f05ac4a82db178b493cdd70",
+    "baselineSourceSha256": "fd8db09088a54b56c6d1ba3f9900d8c4ba301dad15ad59c2f8f9dc1edf4a03d6",
+    "pngSha256": "05b6225476fc95e95ae70e9345e166e31020c20b524c5e250209b962c69313f4",
+    "copyPreserved": true
+  }
+]

@@ -46,44 +46,43 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
-  <div class="story-header">
-    <span class="story-logo">Playbook</span>
-    <span class="section-label">شفافية</span>
-  </div>
-  <div class="story-body">
-    <div class="eyebrow">حسابات الرهان الرياضي</div>
-    <div class="headline">ليست كل الرهانات متساوية التكلفة.</div>
-    <div class="bar-list">
-      <div class="bar-row">
-        <div class="bar-label">
-          <span class="bar-name">موني لاين</span>
-          <span class="bar-value teal">3%</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill teal"></div></div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">
-          <span class="bar-name">رهانات خاصة</span>
-          <span class="bar-value white">5&ndash;7%</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill white"></div></div>
-      </div>
-      <div class="bar-row">
-        <div class="bar-label">
-          <span class="bar-name">رهانات متعددة بنفس المباراة</span>
-          <span class="bar-value orange">15&ndash;25%</span>
-        </div>
-        <div class="bar-track"><div class="bar-fill orange"></div></div>
-      </div>
-    </div>
-    <div class="body-text">الرهانات البسيطة تكلفتها أقل. الرهانات المعقدة تكلفتها أكبر.</div>
-  </div>
-  <div class="story-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-  </div>
+<div class="story-card pb-creative">
+<div class="story-header">
+<span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
+<span class="section-label">شفافية</span>
+</div>
+<div class="story-body">
+<div class="eyebrow">حسابات الرهان الرياضي</div>
+<div class="headline">الرهان نفسه.<br/>عوائد مختلفة.</div>
+<div class="bar-list">
+<div class="bar-row">
+<div class="bar-label">
+<span class="bar-name">عند <bdi dir="ltr">−110</bdi></span>
+<span class="bar-value teal">$<bdi dir="ltr">190.91</bdi></span>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">
+<span class="bar-name">عند <bdi dir="ltr">−125</bdi></span>
+<span class="bar-value white">$<bdi dir="ltr">180</bdi></span>
+</div>
+</div>
+<div class="bar-row">
+<div class="bar-label">
+<span class="bar-name">عند <bdi dir="ltr">+100</bdi></span>
+<span class="bar-value orange">$<bdi dir="ltr">200</bdi></span>
+</div>
+</div>
+</div>
+<div class="body-text">مثال: رهان نقدي فائز بقيمة <bdi dir="ltr">100</bdi> دولار. العائد يشمل مبلغ الرهان الأصلي.</div>
+</div>
+<div class="story-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

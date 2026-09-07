@@ -1,0 +1,350 @@
+[
+  {
+    "name": "Review fits 1440px and loads six previews",
+    "pass": true
+  },
+  {
+    "name": "Review fits 800px and loads six previews",
+    "pass": true
+  },
+  {
+    "name": "Review fits 390px and loads six previews",
+    "pass": true
+  },
+  {
+    "name": "Mobile artwork stacks at readable width",
+    "pass": true
+  },
+  {
+    "name": "Review fits 320px and loads six previews",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game selector loads all directions and links its content",
+    "pass": true
+  },
+  {
+    "name": "Previous wraps to the last template",
+    "pass": true
+  },
+  {
+    "name": "Next wraps to the first template",
+    "pass": true
+  },
+  {
+    "name": "Multiple direction choices survive reload",
+    "pass": true
+  },
+  {
+    "name": "Other templates have independent choices",
+    "pass": true
+  },
+  {
+    "name": "A second click clears a saved choice",
+    "pass": true
+  },
+  {
+    "name": "Earlier text-polish preferences are preserved",
+    "pass": true
+  },
+  {
+    "name": "Export includes the saved template and direction",
+    "pass": true
+  },
+  {
+    "name": "Malformed saved data does not break the review",
+    "pass": true
+  },
+  {
+    "name": "An unknown template falls back to the first comparison",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "flat changes colors and heading family through later CSS",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "spotlight changes colors and heading family through later CSS",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "contour changes colors and heading family through later CSS",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "paper changes colors and heading family through later CSS",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "emerald changes colors and heading family through later CSS",
+    "pass": true
+  },
+  {
+    "name": "card-1a-hot-streak--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "signal changes colors and heading family through later CSS",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-1b-due-for-win--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2b-sports-betting--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "card-2c-bonus-wagering--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "htp-card-blackjack--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3a-hot-streak--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3b-house-edge--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "story-3c-sports-betting--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game--flat live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game--spotlight live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game--contour live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game--paper live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game--emerald live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "poster-4a-know-your-game--signal live template, saved render and source agree",
+    "pass": true
+  },
+  {
+    "name": "All six directions have distinct computed styles",
+    "pass": true
+  },
+  {
+    "name": "Every PNG has the specified dimensions and matches its render hash",
+    "pass": true
+  },
+  {
+    "name": "Contrast audit rejects a bright gradient stop beneath text",
+    "pass": true
+  },
+  {
+    "name": "No browser errors",
+    "pass": true
+  }
+]

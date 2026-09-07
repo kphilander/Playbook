@@ -1,0 +1,9 @@
+{
+  "provider": "google-gemini",
+  "runId": "photo-round-02-20260904",
+  "model": "gemini-3-pro-image",
+  "aspectRatio": "3:4",
+  "imageSize": "2K",
+  "referenceMode": "none",
+  "maxAttemptsPerConcept": 1
+}

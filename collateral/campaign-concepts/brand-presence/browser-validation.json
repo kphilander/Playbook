@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "name": "Three sharp covers without horizontal overflow at 1440px",
+      "pass": true
+    },
+    {
+      "name": "Three sharp covers without horizontal overflow at 775px",
+      "pass": true
+    },
+    {
+      "name": "Three sharp covers without horizontal overflow at 390px",
+      "pass": true
+    },
+    {
+      "name": "The club preview updates all artwork, live links and studio links",
+      "pass": true
+    },
+    {
+      "name": "The circuit preview updates all artwork, live links and studio links",
+      "pass": true
+    },
+    {
+      "name": "The playbook preview updates all artwork, live links and studio links",
+      "pass": true
+    },
+    {
+      "name": "The expression choice survives reload",
+      "pass": true
+    },
+    {
+      "name": "Choosing the same expression again clears it",
+      "pass": true
+    },
+    {
+      "name": "Earlier photo preferences remain selected",
+      "pass": true
+    },
+    {
+      "name": "The Restrained link opens the correct expression and photograph",
+      "pass": true
+    },
+    {
+      "name": "The Signature link opens the correct expression and photograph",
+      "pass": true
+    },
+    {
+      "name": "The Bold link opens the correct expression and photograph",
+      "pass": true
+    },
+    {
+      "name": "Changing the operator skin preserves the entire article",
+      "pass": true
+    },
+    {
+      "name": "The studio can change expression independently of the operator skin",
+      "pass": true
+    },
+    {
+      "name": "An opaque foreground masthead passes its actual color contrast",
+      "pass": true
+    },
+    {
+      "name": "Low-contrast type on the masthead is rejected",
+      "pass": true
+    },
+    {
+      "name": "A transparent masthead cannot bypass the photo checks",
+      "pass": true
+    },
+    {
+      "name": "Text outside the solid masthead is rejected",
+      "pass": true
+    },
+    {
+      "name": "No browser errors",
+      "pass": true
+    }
+  ]
+}

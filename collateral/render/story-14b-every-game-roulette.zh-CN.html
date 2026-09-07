@@ -36,22 +36,23 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
+<div class="story-card pb-creative" data-layout="hero-proof">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="story-body">
-    <div class="headline">每款游戏都有数学。<br>以下是各游戏的数据。</div>
+    <div class="headline">轮盘的数字。</div>
     <div class="stat-block">
       <span class="stat-number">5.26%</span>
       <span class="stat-label">美式轮盘</span>
     </div>
-    <div class="body-line">庄家的抽成始终不变。</div>
+    <div class="body-line">多数投注的庄家优势为5.26%，五号码投注为7.89%。</div>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

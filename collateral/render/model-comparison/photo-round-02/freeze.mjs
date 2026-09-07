@@ -1,0 +1,12 @@
+import {mkdirSync,readFileSync,writeFileSync,readdirSync} from 'node:fs';
+import {join} from 'node:path';
+import {here,participant,verifyInputs,sha,json,auditManifest} from './common.mjs';
+const id=process.argv[2];participant(id);verifyInputs();
+const source=join(here,'submissions',id),target=join(here,'first-submissions',id);
+const files=readdirSync(source);const bytes=readFileSync(join(source,'manifest.json'));
+const manifest=JSON.parse(bytes);
+mkdirSync(target,{recursive:true});
+writeFileSync(join(target,'manifest.json'),bytes,{flag:'wx'});
+const record={participant:id,frozenAt:new Date().toISOString(),sha256:sha(bytes),sourceFiles:files,stage:'first completed submission, before photos, renders, or coordinator creative feedback',issues:auditManifest(manifest)};
+writeFileSync(join(target,'record.json'),json(record),{flag:'wx'});
+console.log(json({participant:id,titles:manifest.concepts.map(c=>c.title),...record}));

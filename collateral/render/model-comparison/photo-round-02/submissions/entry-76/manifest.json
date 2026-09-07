@@ -1,0 +1,169 @@
+{
+  "concepts": [
+    {
+      "id": "sports",
+      "category": "sports",
+      "title": "Half Right Still Pays the Book",
+      "body": "At -110, winning half your spread bets is still short. You need about 52.4% just to break even because the vig is baked into the line.",
+      "takeaway": "Check the price before the pick.",
+      "rationale": "This turns a familiar confidence trap into one clean number. A player can understand the sportsbook's margin before treating a 50/50 opinion as enough.",
+      "caption": "Half right sounds fine until the vig shows up. At standard -110 odds, you need about 52.4% just to break even. Check the price before the pick.",
+      "alt": "A Playbook social card for sports betting titled Half Right Still Pays the Book. The body explains that at -110, winning half your spread bets is still short and you need about 52.4% to break even because the vig is baked into the line. The left photo shows adult friends watching sports together. The takeaway says Check the price before the pick.",
+      "photoPrompt": "Candid editorial portrait photograph, 3:4 aspect ratio, 2K. Three clearly adult friends aged 30 to 45 at a warm evening sports watch party in a modern living room, gathered near a sofa with a large out-of-focus game on TV in the background. One person casually holds a phone angled away with only soft screen glow and no readable content, while the others lean in, smiling and discussing the game. Warm cinematic practical lighting, natural skin tones, diverse adults, relaxed social connection, no alcohol, no minors, no logos, no team brands, no readable text, no betting slips, no cash, no watermark. Compose with faces and hands comfortably inside frame and breathing room for a centered 3:4 crop.",
+      "photoAlt": "Three adult friends watching a game together in warm living-room light while one casually holds a phone with no readable screen content.",
+      "photoRationale": "The watch-party scene grounds sports betting in social entertainment while the turned-away phone suggests checking the line without asking the image to prove the 52.4% claim.",
+      "sources": [
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "The 30-second version",
+          "note": "Supports the claim that standard -110 odds require a 52.4% win rate to break even and that the sportsbook's line accounts for available information."
+        },
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "Where the sportsbook makes money",
+          "note": "Explains vig as the sportsbook's built-in commission and states that -110 means betting $110 to win $100."
+        },
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "Break-even win rates",
+          "note": "Lists -110 at a 52.4% break-even rate. Arithmetic: 110 / (110 + 100) = 52.38%, rounded to 52.4%."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "open"
+        ],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": [
+          "sports-bettors",
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "myth",
+      "category": "myth",
+      "title": "Almost Is Just Theater",
+      "body": "A slot near miss feels close, but the RNG already chose the result before the reels moved. The next spin starts fresh; the last display has no vote.",
+      "takeaway": "Near misses do not warm up the next spin.",
+      "rationale": "The hook respects the feeling of a near miss while naming what actually happened. It gives the player a useful rule without mocking the ritual or the reaction.",
+      "caption": "Two symbols and a blank can feel like the game winked at you. It did not. The RNG already picked the result, and the next spin starts fresh.",
+      "alt": "A Playbook myth-check card titled Almost Is Just Theater. The body explains that a slot near miss feels close, but the RNG already chose the result before the reels moved, and the next spin starts fresh. The left photo shows adult friends in a warm casino lounge with blurred slot lights behind them. The takeaway says Near misses do not warm up the next spin.",
+      "photoPrompt": "Candid editorial portrait photograph, 3:4 aspect ratio, 2K. Four clearly adult friends aged 30 or older in an upscale casino lounge, standing together in warm cinematic light with softly blurred slot-machine colors far in the background. The people are the focus: relaxed expressions, one person mid-laugh, another gesturing lightly with open hands as if reacting to a story. Natural skin tones, diverse adults, social energy, no minors, no alcohol, no cash stacks, no chips, no readable screen content, no readable signs, no brands, no watermark. Keep the gambling equipment abstract and out of focus, with breathing room around faces and hands for a centered portrait crop.",
+      "photoAlt": "Four adult friends laughing together in a warmly lit casino lounge with abstract, blurred slot-machine colors in the background.",
+      "photoRationale": "The social casino lounge gives the slot myth relevant context while keeping attention on people, not machines. The blurred background avoids relying on the photo for the RNG or near-miss explanation.",
+      "sources": [
+        {
+          "path": "messaging/myth-busting.md",
+          "section": "Myth 4: Near Misses Mean You're Close",
+          "note": "Supports the claim that a near miss is not almost winning and that the result was decided when the player pressed spin."
+        },
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Playing a spin",
+          "note": "Explains that the RNG generates the result, maps it to symbols, and the reels display an outcome already decided before animation."
+        },
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Tips for informed play",
+          "note": "Supports the takeaway that every spin is independent and past spins have zero effect on the next one."
+        }
+      ],
+      "tags": {
+        "content_type": "myth-bust",
+        "pillar": [
+          "open",
+          "social"
+        ],
+        "tier": 1,
+        "tone": "playful-witty",
+        "audience": [
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    },
+    {
+      "id": "wildcard",
+      "category": "wildcard",
+      "title": "Price the Night First",
+      "body": "Your entertainment budget is the cost of the session, decided before the action starts. Once play gets loud, the best number is the one you already picked.",
+      "takeaway": "Pick the number while the room is quiet.",
+      "rationale": "This keeps the tools message in Tier 1: practical, self-directed, and tied to entertainment value. It focuses on a decision made before the energy of play changes the mood.",
+      "caption": "The cleanest budget decision happens before the room gets loud. Pick the cost of the session first, then let the night be entertainment.",
+      "alt": "A Playbook your-play card titled Price the Night First. The body explains that an entertainment budget is the cost of the session, decided before action starts, and that the best number is the one already picked. The left photo shows adult friends calmly planning a night out at a kitchen table. The takeaway says Pick the number while the room is quiet.",
+      "photoPrompt": "Candid editorial portrait photograph, 3:4 aspect ratio, 2K. Three clearly adult friends aged 25 to 45 gathered around a kitchen table before a night out, warm golden-hour window light, one person holding a phone with the screen turned away and unreadable, another setting down keys, all relaxed and smiling in conversation. The mood is calm, social, and confident, like people making a simple plan together before leaving. Natural skin tones, diverse adults, no minors, no alcohol, no cash, no casino equipment, no readable text, no logos, no brands, no watermark. Compose with clear faces and hands, uncluttered background, and enough breathing room for a centered portrait crop.",
+      "photoAlt": "Three adult friends at a kitchen table in warm light, calmly talking before a night out while one holds an unreadable phone.",
+      "photoRationale": "The before-the-night scene supports the idea of choosing an entertainment budget early, away from the energy of play, while keeping the moment relaxed and social.",
+      "sources": [
+        {
+          "path": "messaging/core-messages.md",
+          "section": "Deposit screen",
+          "note": "Supports entertainment budget framing and player choice: the player picks the number."
+        },
+        {
+          "path": "messaging/core-messages.md",
+          "section": "Tools \u2014 Features that work for you",
+          "note": "Supports framing limits and tools as player-controlled features, especially Your tools. Your limits. Your call."
+        },
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Tips for informed play",
+          "note": "Supports the idea of setting a budget before play starts, because fast play can change the pace of spending."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "tools",
+          "open"
+        ],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": [
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      }
+    }
+  ],
+  "referencesRead": [
+    "collateral/render/model-comparison/photo-round-02/BRIEF.md",
+    "AGENTS.md",
+    ".claude/commands/brand-create.md",
+    "_brand.yml",
+    "_taxonomy.yml",
+    "brand-book/02-brand-personality.md",
+    "brand-book/03-visual-identity.md",
+    "brand-book/04-voice-and-tone.md",
+    "brand-book/05-messaging-framework.md",
+    "messaging/stigma-free-language.md",
+    "messaging/core-messages.md",
+    "messaging/myth-busting.md",
+    "how-to-play/sports-betting.md",
+    "how-to-play/slots.md",
+    "visual-identity/photography/photography.md",
+    "collateral/render/card-15a-point-spread.html",
+    "collateral/render/card-13a-its-due.html",
+    "collateral/render/card-20b-pick-your-pause.html",
+    "collateral/render/concept-20.css",
+    "collateral/render/layout-system.css",
+    "collateral/render/model-comparison/fonts.css",
+    "collateral/render/model-comparison/photo-round-02/template.mjs",
+    "collateral/render/model-comparison/photo-round-02/template.css",
+    "collateral/render/model-comparison/photo-round-02/photography-settings.json"
+  ],
+  "notes": "Photos were not generated or previewed per brief. Card alt text and photoAlt are authored intentions until the coordinator renders and checks the actual images."
+}

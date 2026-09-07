@@ -45,9 +45,9 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 
 | Time | Visual | Voiceover | Text overlay (always visible) |
 |---|---|---|---|
-| 0:00–0:02 | Navy background, numbers animate in | — | **Every game has a house edge.** |
-| 0:02–0:05 | Stats appear: Blackjack 0.5%, Roulette 5.26%, Slots 2–15% | — | **Blackjack: 0.5% / Roulette: 5.26% / Slots: 2–15%** |
-| 0:05–0:09 | Person at table, confident, checking phone | "Knowing the edge helps you pick your games and set your budget." | — |
+| 0:00–0:02 | Navy background, numbers animate in | — | **Your return includes your stake.** |
+| 0:02–0:05 | Receipt adds stake and profit | — | **Return = stake + profit** |
+| 0:05–0:09 | Person at table, confident, checking phone | "Subtract your stake to see your profit." | — |
 | 0:09–0:12 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant — white wordmark on navy bg, min 24px height, 1x clear space) + QR code | "The facts are free." | **Know your game →** / **{{CONTENT_HUB_URL}}** |
 | 0:12–0:15 | Helpline frame | — | **Free, confidential support 24/7: {{HELPLINE_NUMBER}}** |
 
@@ -64,8 +64,8 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 |---|---|---|---|
 | 0:00–0:02 | Navy background, question appears | — | **A slot machine hasn't paid out in 3 hours.** |
 | 0:02–0:05 | Options animate in like a quiz | — | **What are the odds on the next spin?** / A) Higher  B) Lower  C) Same |
-| 0:05–0:08 | Answer reveal: C lights up green | "Same as always. The machine doesn't have a memory." | **Same as always.** |
-| 0:08–0:12 | Score card: "Most people get this wrong. How about you?" | "Take the full quiz." | **Think you know the odds?** |
+| 0:05–0:08 | Answer reveal: C lights up green | "For independent spins, the same odds. Past losses don’t make a win due." | **Same as always.** |
+| 0:08–0:12 | Score card: "See the answer. Then try the full quiz." | "Take the full quiz." | **Think you know the odds?** |
 | 0:12–0:15 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) + QR code + helpline | — | **Take the quiz → {{QUIZ_URL}}** / **Support 24/7: {{HELPLINE_NUMBER}}** |
 
 **Persistent text**: `{{HELPLINE_NUMBER}}` visible in corner from 0:05 onward.
@@ -79,7 +79,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 
 | Time | Visual | Voiceover | Text overlay (always visible) |
 |---|---|---|---|
-| 0:00–0:02 | Phone screen: deposit limit UI | — | **This takes 10 seconds.** |
+| 0:00–0:02 | Phone screen: deposit limit UI | — | **Your amount. Your time frame.** |
 | 0:02–0:05 | Finger taps "Set limit" — confirmation appears | — | **Set your deposit limit. Done.** |
 | 0:05–0:09 | Montage: session reminder, dashboard, quiz | "Deposit limits. Session reminders. Activity dashboard. All built in." | — |
 | 0:09–0:12 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) + "Your tools. Your limits. Your call." | "Your tools. Your call." | **Your tools. Your limits. Your call.** |
@@ -96,7 +96,7 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 
 | Time | Visual | Text overlay |
 |---|---|---|
-| 0:00–0:03 | Numbers animate in on navy bg | **Blackjack: 0.5% / Roulette: 5.26% / Slots: 2–15%** |
+| 0:00–0:03 | Numbers animate in on navy bg | **Return = stake + profit** |
 | 0:03–0:06 | {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) + helpline | **Every game has math. Here's yours.** / **{{HELPLINE_NUMBER}}** |
 
 **No voiceover** — text-only. Works entirely without sound.
@@ -110,8 +110,8 @@ Production-ready scripts for {{PROGRAM_NAME}} YouTube and streaming pre-roll ads
 
 | Time | Visual | Text overlay |
 |---|---|---|
-| 0:00–0:03 | Quiz question on navy bg | **"I'm on a hot streak" — True or False?** |
-| 0:03–0:06 | Answer: FALSE + {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) | **FALSE. Every spin is independent.** / **Take the quiz → {{QUIZ_URL}}** |
+| 0:00–0:03 | Quiz question on navy bg | **Do past slot wins improve an independent spin?** |
+| 0:03–0:06 | Answer: FALSE + {{PROGRAM_NAME}} logo (horizontal B2, reversed variant, min 24px height, 1x clear space) | **No. Past wins don’t boost it.** / **Take the quiz → {{QUIZ_URL}}** |
 
 **No voiceover** — text-only. Works entirely without sound.
 
@@ -148,3 +148,7 @@ For pre-roll ads that support companion banners (YouTube desktop):
 ---
 
 *Cross-references: [Application Guidelines — Digital Pre-Roll](../../brand-book/07-application-guidelines.md#digital-pre-roll) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The live line is already moving - {{PROGRAM_SHORT_NAME}}</title>
+  <!--
+  content_type: quick-reference
+  pillar: [open]
+  tier: 1
+  tone: confident-informative
+  audience: [sports-bettors]
+  channel: [social-media]
+  reading_level: grade-6-8
+  Source: how-to-play/sports-betting.md, "In-play (live betting)" and messaging/myth-busting.md, "Myth 14: In-Play Betting Gives You an Edge".
+  The milliseconds claim describes live odds recalculation, not a player reaction benchmark.
+  -->
+  <link rel="stylesheet" href="../../render/brand-inject.css">
+  <link rel="stylesheet" href="../../render/model-comparison/fonts.css">
+  <link rel="stylesheet" href="../../render/model-comparison/gpt-55/style.css">
+<link rel="stylesheet" href="../pilot-refinements.css"></head>
+<body>
+  <article class="social-card sports-card" aria-labelledby="headline">
+    <header class="card-header">
+      <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+      <span class="series-label">Sports math</span>
+    </header>
+    <main class="card-main">
+      <h1 id="headline">The live line is <em>already moving.</em></h1>
+      <figure class="sports-visual" aria-label="Example live betting board showing odds changing from minus 110 to minus 125 while algorithms refresh in milliseconds">
+        <div class="live-panel" aria-hidden="true">
+          <div class="live-row"><span>Example: before</span><strong>-110</strong></div>
+          <div class="live-row"><span>Example: after</span><strong>-125</strong></div>
+          <div class="live-row"><span>Your tap</span><strong>next</strong></div>
+        </div>
+        <div class="speed-note">
+          <strong>Price</strong>
+          <span>A new price changes the potential return.</span>
+        </div>
+      </figure>
+      <p class="deck dark-copy">Read the current line and return before confirming the bet.</p>
+      <p class="action-line">Check the price before you confirm.
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 24h30"/><path d="M25 12l12 12-12 12"/></svg>
+      </p>
+    </main>
+    <footer class="card-footer" data-protected-zone="support-and-legal">
+      <span>Free support: {{HELPLINE_NUMBER}}</span>
+      <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+    </footer>
+  </article>
+</body>
+</html>

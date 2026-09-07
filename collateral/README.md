@@ -2,6 +2,14 @@
 
 Templates and specifications for every Playbook touchpoint — digital, print, environmental, video/audio, customer service, and interactive content. Each subfolder contains markdown specs that define copy, layout, and design direction. The `render/` folder contains the HTML/PNG build pipeline.
 
+[Open the September creative review](creative-review/index.html) for revised previews, concept comparisons and the reasoning behind the choices.
+
+[Compare the everyday collateral polish](text-polish/index.html): 26 text-led English masters with refined hierarchy, spacing and accessible supporting text, including saved before/after preferences.
+
+[Compare four style alternatives](style-alternatives/index.html): editorial luxury, contemporary hospitality, digital precision and playful confidence. Each includes three finished specimens.
+
+[Open the template studio](studio/index.html) to reskin the eight latest concept families, switch SVG illustrations and AI photos, edit copy, and export reusable HTML, CSS and recipes. The gallery and studio use the same [template system](template-system/README.md).
+
 ## Folders
 
 | Folder | Contents |
@@ -12,7 +20,7 @@ Templates and specifications for every Playbook touchpoint — digital, print, e
 | [video-audio/](video-audio/) | TV spots, radio scripts, digital pre-roll, hold messages |
 | [customer-service/](customer-service/) | Conversation scripts and staff FAQ for frontline teams |
 | [interactive/](interactive/) | Quiz framework for Game IQ and myth-busting quizzes |
-| [render/](render/) | **75 template families / 290 localized renders** + responsive and production export profiles |
+| [render/](render/) | **93 template families / 320 render entries** + responsive and production export profiles |
 
 ## Which size to use
 
@@ -24,3 +32,5 @@ Use the [production size matrix](production-size-matrix.md) before exporting. It
 - **Visual specs** (colors, fonts, icons) reference [`visual-identity/`](../visual-identity/) and the design tokens in `visual-identity/design-tokens.css`.
 - **Jurisdiction-specific adaptations** (mandatory statements, helpline numbers) are in [`jurisdictions/`](../jurisdictions/).
 - **`{{PLACEHOLDER}}` tokens** throughout templates resolve to values from [`_brand.yml`](../_brand.yml) at build time.
+
+[Design preference comparisons](design-preferences/index.html) offer 38 focused before / after pairs across nine design areas, with saved choices, notes and an exportable preference brief.

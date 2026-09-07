@@ -1,0 +1,16 @@
+{
+  "schema": "playbook-creative-recipe",
+  "version": 1,
+  "templateId": "campaign-probability",
+  "variant": "after",
+  "skinId": "circuit",
+  "assetId": null,
+  "focalPoint": null,
+  "marketId": "us-contact",
+  "content": {
+    "series": "Inside the odds",
+    "headline": "More picks.\nSmaller target.",
+    "copy": "Four independent picks, each truly 50/50.\nAll four must win: a 6.25% chance.",
+    "action": "Know what you’re combining"
+  }
+}

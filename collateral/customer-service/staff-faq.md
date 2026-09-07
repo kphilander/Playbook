@@ -41,7 +41,7 @@ Players have access to these features in their account settings:
 
 ### Q2. How does a player set a deposit limit?
 
-They go to account settings → {{PROGRAM_NAME}} tools → deposit limits. They choose daily, weekly, or monthly and enter their amount. It takes about 10 seconds. The limit activates immediately.
+They go to account settings → {{PROGRAM_NAME}} tools → deposit limits. They choose daily, weekly, or monthly and enter their amount. Show the player when the limit activates, resets, and when changes take effect. Use the operator’s actual settings.
 
 ### Q3. Can a player change their deposit limit?
 
@@ -84,13 +84,13 @@ The house edge is the mathematical advantage built into every casino game. It's 
 
 | Game | House edge |
 |---|---|
-| Blackjack (basic strategy) | 0.5% |
+| Blackjack (basic strategy; favorable rules) | ≈0.5% |
 | Craps (pass/don't pass) | 1.4% |
 | Baccarat (banker bet) | 1.06% |
 | European roulette | 2.7% |
 | American roulette | 5.26% |
 | Slots (average) | 2–15% |
-| Sports betting (vig) | ~4.5% |
+| Sports betting | Depends on the price and true probabilities |
 
 Use these numbers when players ask. They're public information.
 
@@ -279,3 +279,7 @@ The Game IQ quiz is in the content hub: {{QUIZ_URL}}. It's 7 questions, takes ab
 ---
 
 *Cross-references: [Voice and Tone — Language Guide](../../brand-book/04-voice-and-tone.md#language-guide) | [Core Messages](../../messaging/core-messages.md) | [Conversation Scripts](conversation-scripts.md) | [Player Segments](../../messaging/player-segments/)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

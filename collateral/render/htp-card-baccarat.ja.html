@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">仕組み</div>
     <div class="game-name">バカラ</div>
-    <div class="key-fact">カジノで最もシンプルなゲームの一つでありながら、<strong>カジノ屈指の有利な確率</strong>を持ちます。バンカーに賭け、タイは避ける。戦略はこれだけです。</div>
+    <div class="key-fact">バンカーとプレイヤーは、2つの手札に対するベットです。バンカーの控除率は、的中時の5%手数料を含みます。</div>
     <div class="stat-block">
       <span class="stat-number">1.06%</span>
-      <span class="stat-unit">バンカーベットの<br>ハウスエッジ</span>
+      <span class="stat-unit">バンカーベットの控除率<br>勝利時の手数料5%</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

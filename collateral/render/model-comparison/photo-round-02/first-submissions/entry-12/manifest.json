@@ -1,0 +1,165 @@
+{
+  "concepts": [
+    {
+      "id": "sports",
+      "category": "sports",
+      "title": "Rival fans. Same total.",
+      "body": "An over/under bet is on both teams' combined score. A 24–21 final makes 45, so over 44.5 wins. Your team's result is a separate story.",
+      "takeaway": "For totals, add both scores. Then compare with the line.",
+      "rationale": "Two people can cheer for different teams and still be watching the same betting total. The hook uses that social contrast to introduce one precise distinction: an over/under bet concerns the combined score. The final-score example makes the distinction usable without odds jargon or a claim about which bet to place.",
+      "caption": "Your team has a rival. The total has two contributors. An over/under bet uses both teams' combined score: a 24–21 final makes 45, so over 44.5 wins. For totals, add the scores before comparing with the line. Share this with your favorite rival fan.",
+      "photoPrompt": "Create one original candid editorial photograph, portrait 3:4 at 2K. Two friends, both visibly in their forties, sit together in outdoor football stadium seats during a quiet break in the action. A South Asian man wears a plain rust-orange scarf over a navy jacket; a white woman wears a plain emerald scarf over a cream jacket. Their different fan colors suggest friendly rivalry without representing any real team. Capture the man turning toward his friend mid-conversation, eyebrows lifted, while she answers with an amused half-smile and a small open-hand gesture. Their shoulders lean comfortably toward each other. This is a conversation between fans, not a victory celebration. Frame both from the waist up at their seated eye level with their faces and complete gesturing hands inside the central 80 percent of the portrait. Keep at least 10 percent breathing room around faces and hands. Soft rows of stadium seating establish the setting; no other people appear. Late-afternoon directional sunlight lights both faces warmly, with natural pores and skin color, gentle amber highlights, navy-tinted shadows and restrained editorial contrast. Both faces should remain sharp, the seats softly blurred. No posed camera smiles. No minors, alcohol, drinks, cash, betting slips, gambling equipment, logos, brands, watermarks, signs, numbers, lettering, screens or any text in the photograph. All typography will be added separately outside the image.",
+      "photoAlt": "Two adult friends in contrasting orange and green scarves share an amused conversation in football stadium seats, lit by warm afternoon sun.",
+      "photoRationale": "The contrasting scarves give the rivalry a human setting, while their easy conversation supplies the shared experience behind 'same total.' A pause in the action avoids implying that either person has won a bet. No scoreboard or generated number is needed to prove the arithmetic.",
+      "sources": [
+        {
+          "path": "how-to-play/sports-betting.md",
+          "section": "Totals (Over/Under)",
+          "note": "Defines a total as the combined score of both teams, independent of which team wins. The invented final score is 24–21: 24 + 21 = 45, and 45 > 44.5. The example uses the final score counted by the market; it makes no claim about an actual event, payout, odds or special settlement rule."
+        },
+        {
+          "path": "visual-identity/photography/photography.md",
+          "section": "Sports / Entertainment",
+          "note": "Supports a focus on adult fans, stadium context, warm light and social interaction rather than athletes or game equipment. The brief raises the minimum depicted age to 25."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "open",
+          "social"
+        ],
+        "tier": 1,
+        "tone": "playful-witty",
+        "audience": [
+          "sports-bettors",
+          "general"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      },
+      "alt": "Intended navy Playbook social card with the program wordmark and category 'Sports betting'. Headline: Rival fans. Same total. A portrait photograph on the left shows: Two adult friends in contrasting orange and green scarves share an amused conversation in football stadium seats, lit by warm afternoon sun. Body on the right: An over/under bet is on both teams' combined score. A 24–21 final makes 45, so over 44.5 wins. Your team's result is a separate story. Green takeaway below: For totals, add both scores. Then compare with the line. A protected footer contains the template-supplied support number and age disclaimer. The photograph is an authored intention pending review of the generated image."
+    },
+    {
+      "id": "myth",
+      "category": "myth",
+      "title": "Sentimental value. Same odds.",
+      "body": "Your birthday can make a roulette number feel special. On a fair European wheel with one zero, each number still has a 1-in-37 chance on every spin.",
+      "takeaway": "A meaningful number isn't a more likely number.",
+      "rationale": "This debunks the lucky-number idea without dismissing why people care about their numbers. 'Sentimental value' acknowledges the real personal connection; 'same odds' supplies the correction. Naming a fair, single-zero European wheel keeps the 1-in-37 claim specific and complete on the card.",
+      "caption": "A number can mean a lot to you. That meaning doesn't change its chance on a roulette wheel. On a fair European wheel with one zero, every number has a 1-in-37 chance on every spin. Birthdays make good memories; they don't make one number more likely. A fact for the birthday group chat.",
+      "photoPrompt": "Create one original candid editorial photograph, portrait 3:4 at 2K. A small birthday moment between two friends at a rooftop dinner table just before sunset. A Black man in his late forties, wearing a plain navy knit shirt, looks up with a surprised, delighted smile at an East Asian woman in her early fifties who has just set a small birthday cake on the table between them. She meets his eyes with a knowing smile, her hands relaxed on the tabletop beside the plate. The cake has one simple unnumbered lit candle and plain cream icing with no writing. The emotional focal point is their eye contact and shared memory, not the cake. Compose a medium seated portrait with both faces, the cake and both pairs of hands fully visible within the central 80 percent of the frame, leaving at least 10 percent breathing room around faces and hands. A softly blurred rooftop railing and evening sky give a little environmental context. Warm golden side light and a discreet warm practical light keep both faces well exposed; natural skin texture, subtle age lines, rich navy shadows and gentle amber highlights. Use moderate depth of field so both friends are sharp. Authentic off-camera expressions, no staged toast or advertising pose. Only these two clearly adult people appear. No minors, alcohol, drinks, cash, gambling equipment, phones, screens, brands, logos, watermarks, decorations with letters or numbers, or any text anywhere in the photograph. This photograph will sit beside copy, with no typography over the image.",
+      "photoAlt": "At a rooftop table in warm sunset light, two adult friends exchange delighted smiles over a small birthday cake with one plain candle.",
+      "photoRationale": "The birthday scene shows what a personal number really represents: a memory and a connection with someone else. That lets the card correct a probability claim without making the sentimental attachment the butt of the joke. The photo provides emotional context; the copy alone establishes the roulette variant and odds.",
+      "sources": [
+        {
+          "path": "messaging/myth-busting.md",
+          "section": "Myth 10: Choosing \"Your\" Numbers Improves Odds",
+          "note": "Explains that personal number selection does not change roulette probability and gives European roulette as 1 in 37. The visible copy explicitly assumes a fair single-zero European wheel with 37 equally likely pockets; it does not extend this denominator to double-zero or other variants."
+        },
+        {
+          "path": "brand-book/02-brand-personality.md",
+          "section": "Witty / Not Preachy",
+          "note": "Directs humor toward misconceptions and keeps respect for the reader. The concept acknowledges the birthday connection while correcting only the odds claim."
+        },
+        {
+          "path": "visual-identity/photography/photography.md",
+          "section": "Social / Group",
+          "note": "Supports small groups, rooftop settings, relaxed candid interaction and shared experiences. The birthday is illustrative human context, not evidence for a statistical claim."
+        }
+      ],
+      "tags": {
+        "content_type": "myth-bust",
+        "pillar": [
+          "open",
+          "social"
+        ],
+        "tier": 1,
+        "tone": "playful-witty",
+        "audience": [
+          "general",
+          "traditional-players"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      },
+      "alt": "Intended navy Playbook social card with the program wordmark and category 'Myth check'. Headline: Sentimental value. Same odds. A portrait photograph on the left shows: At a rooftop table in warm sunset light, two adult friends exchange delighted smiles over a small birthday cake with one plain candle. Body on the right: Your birthday can make a roulette number feel special. On a fair European wheel with one zero, each number still has a 1-in-37 chance on every spin. Green takeaway below: A meaningful number isn't a more likely number. A protected footer contains the template-supplied support number and age disclaimer. The photograph is an authored intention pending review of the generated image."
+    },
+    {
+      "id": "wildcard",
+      "category": "wildcard",
+      "title": "The penny isn't the price.",
+      "body": "A slot with 20 lines at 5 credits per line and 1¢ per credit costs $1 per spin, before any extras. The penny is the credit value.",
+      "takeaway": "Check the total bet per spin before you press spin.",
+      "rationale": "The small denomination on a slot can overshadow the full price of a spin. This concept turns that mismatch into a concise hook, then shows how lines, credits and coin value combine. It is a price-literacy topic distinct from sports totals and lucky-number probability, with a specific check the reader can make.",
+      "caption": "A penny names the credit value. The line bet has more math: 20 lines × 5 credits per line × 1¢ per credit = $1 per spin, before any extras. Those are example settings, not a price for every slot. Check the total bet per spin before you press spin. Save this for a clearer read of the controls.",
+      "photoPrompt": "Create one original candid editorial photograph, portrait 3:4 at 2K. Two adult friends pause together at one slot machine to understand its controls before starting. A Latina woman in her late thirties sits upright in the machine's chair, wearing a plain emerald blouse. A Black woman in her mid-fifties, in a plain navy jacket, sits on an adjacent chair turned toward her. They have relaxed, interested expressions: the first has just glanced back from the machine toward her friend, and the friend responds with a small open-palm gesture. The moment should feel like two capable adults comparing notes, not a lesson or a win celebration. Photograph from beside the machine, facing the women, so only a narrow unmarked side edge of the cabinet is visible at one edge of the frame. Its screen, reels and control panel are entirely outside the view. No rows of gaming equipment or decorative chips. Their interaction is the clear subject, with their complete hands resting near the chair arms and their faces sharp. Frame both from the waist up within the central 80 percent of the portrait and preserve at least 10 percent breathing room around faces and hands. Soft architectural bokeh suggests a modern entertainment lounge. A clear warm overhead practical and soft side fill light both faces naturally; preserve pores, age lines and natural skin color, with rich navy shadows, warm amber highlights and no cold neon cast. Only these two clearly adult people appear. No minors, alcohol, drinks, cash, distress, brands, logos, watermarks, signs, numbers, lettering, readable displays or any text in the photograph. All card typography is added separately outside the image.",
+      "photoAlt": "Two adult women sit beside a slot machine, exchanging a relaxed, interested look while discussing its controls; only the cabinet side is visible in warm lounge light.",
+      "photoRationale": "The pause to understand the controls gives the price check an ordinary social setting. Keeping the interface outside the frame prevents invented machine text from contradicting the arithmetic, and the narrow cabinet edge earns its place by identifying the moment in which checking the total bet is useful.",
+      "sources": [
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Playing a spin",
+          "note": "States that the total bet equals active lines multiplied by the bet per line. This example has 20 active lines and 5 credits bet per line, making 100 credits."
+        },
+        {
+          "path": "how-to-play/slots.md",
+          "section": "Bet types",
+          "note": "Defines coin denomination as the base value of each credit. At $0.01 per credit, 20 × 5 × $0.01 = $1 per spin. All three example settings and the exclusion of extras are visible in the body. The calculation covers this line-based wager, excluding any extra side bet or feature purchase; it does not claim all penny slots cost $1."
+        },
+        {
+          "path": "visual-identity/photography/photography.md",
+          "section": "Game & equipment imagery",
+          "note": "Permits equipment when it provides purposeful gameplay context. The small cabinet edge identifies a controls-checking moment while the people remain the subject; no generated interface establishes the numerical claim."
+        }
+      ],
+      "tags": {
+        "content_type": "quick-reference",
+        "pillar": [
+          "open"
+        ],
+        "tier": 1,
+        "tone": "confident-informative",
+        "audience": [
+          "general",
+          "traditional-players"
+        ],
+        "channel": [
+          "social-media"
+        ],
+        "reading_level": "grade-6-8"
+      },
+      "alt": "Intended navy Playbook social card with the program wordmark and category 'Your play'. Headline: The penny isn't the price. A portrait photograph on the left shows: Two adult women sit beside a slot machine, exchanging a relaxed, interested look while discussing its controls; only the cabinet side is visible in warm lounge light. Body on the right: A slot with 20 lines at 5 credits per line and 1¢ per credit costs $1 per spin, before any extras. The penny is the credit value. Green takeaway below: Check the total bet per spin before you press spin. A protected footer contains the template-supplied support number and age disclaimer. The photograph is an authored intention pending review of the generated image."
+    }
+  ],
+  "referencesRead": [
+    "AGENTS.md",
+    ".claude/commands/brand-create.md",
+    "_brand.yml",
+    "_taxonomy.yml",
+    "brand-book/02-brand-personality.md",
+    "brand-book/03-visual-identity.md",
+    "brand-book/04-voice-and-tone.md",
+    "brand-book/05-messaging-framework.md",
+    "messaging/stigma-free-language.md",
+    "messaging/core-messages.md",
+    "messaging/myth-busting.md",
+    "how-to-play/sports-betting.md",
+    "how-to-play/slots.md",
+    "visual-identity/photography/photography.md",
+    "collateral/render/card-15a-point-spread.html",
+    "collateral/render/card-13a-its-due.html",
+    "collateral/render/card-20b-pick-your-pause.html",
+    "collateral/render/concept-20.css",
+    "collateral/render/layout-system.css",
+    "collateral/render/model-comparison/fonts.css",
+    "collateral/render/model-comparison/photo-round-02/template.mjs",
+    "collateral/render/model-comparison/photo-round-02/template.css",
+    "collateral/render/model-comparison/photo-round-02/photography-settings.json"
+  ],
+  "notes": "Text and photo direction only. All 23 required shared references and the brief were read as text. No images, previews, browser, external research, photography API, renderer, other participants, previous submissions or other models were consulted. No coordinator creative feedback was requested. Photos and alt text describe intended scenes; actual image quality, exact crop, depicted ages, hands and absence of prohibited details remain unverified until the coordinator generates and checks the images. Typography fit is constrained by the shared character limits but has not been rendered. Support and age information are supplied by the frozen template. Numerical examples are illustrative and the claims are limited to the assumptions stated in their visible copy and source notes."
+}

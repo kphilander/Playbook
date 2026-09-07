@@ -1,0 +1,803 @@
+[
+  {
+    "id": "pilot-astra-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/pilot-astra-sports.html",
+    "png": "concepts/pilot-astra-sports.png",
+    "original": "../render/model-comparison/astra/sports.png",
+    "rationale": "Keep the branching money diagram: it makes stake and profit visibly distinct. Specify that a losing bet loses the stake.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "American odds (moneyline)"
+      },
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "The basics"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/astra/sports.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-astra-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/pilot-astra-myth.html",
+    "png": "concepts/pilot-astra-myth.png",
+    "original": "../render/model-comparison/astra/myth.png",
+    "rationale": "Keep the near-miss illustration and broken prediction arrow. Scope the claim to independent slot spins.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 4: Near Misses Mean You're Close"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/astra/myth.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-astra-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/pilot-astra-wildcard.html",
+    "png": "concepts/pilot-astra-wildcard.png",
+    "original": "../render/model-comparison/astra/wildcard.png",
+    "rationale": "Keep the multiplier as the dominant visual. The bonus-only condition and qualifying-wager requirement are already explicit.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 20: A Bonus Is Free Money"
+      },
+      {
+        "path": "messaging/core-messages.md",
+        "section": "Promotional disclaimers"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/astra/wildcard.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-sol-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/pilot-sol-sports.html",
+    "png": "concepts/pilot-sol-sports.png",
+    "original": "../render/model-comparison/sol/sports.png",
+    "rationale": "Keep the five-win/five-loss scoreboard. Label the result as an example rather than inventing a season.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Break-even win rates"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/sol/sports.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-sol-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/pilot-sol-myth.html",
+    "png": "concepts/pilot-sol-myth.png",
+    "original": "../render/model-comparison/sol/myth.png",
+    "rationale": "Expand return to player and retain the money-versus-frequency comparison. Replace the unbounded session claim.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "House edge and RTP"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Question 2"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/sol/myth.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-sol-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/pilot-sol-wildcard.html",
+    "png": "concepts/pilot-sol-wildcard.png",
+    "original": "../render/model-comparison/sol/wildcard.png",
+    "rationale": "Keep the pace arithmetic. Make total wagering versus net loss the closing takeaway.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/sol/wildcard.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-terra-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/pilot-terra-sports.html",
+    "png": "concepts/pilot-terra-sports.png",
+    "original": "../render/model-comparison/terra/sports.png",
+    "rationale": "Keep the three-pick ticket and true 50/50 assumptions. Explicitly frame it as a win-or-lose example.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Parlays"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/terra/sports.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-terra-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/pilot-terra-myth.html",
+    "png": "concepts/pilot-terra-myth.png",
+    "original": "../render/model-comparison/terra/myth.png",
+    "rationale": "Keep the faded past-spin sequence. Remove the false implication that a machine cannot record activity.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 2: Due for a Win"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/terra/myth.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-terra-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/pilot-terra-wildcard.html",
+    "png": "concepts/pilot-terra-wildcard.png",
+    "original": "../render/model-comparison/terra/wildcard.png",
+    "rationale": "Keep the receipt. Label the dollar amount as expected loss; the house edge itself is a percentage.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "What this means for your wallet"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/terra/wildcard.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-gpt-53-spark-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/pilot-gpt-53-spark-sports.html",
+    "png": "concepts/pilot-gpt-53-spark-sports.png",
+    "original": "../render/model-comparison/gpt-53-spark/sports.png",
+    "rationale": "Keep the probability equation. Use an explanatory headline and clarify that one in four is a chance, not a schedule.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Parlays"
+      },
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "The vig in practice"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/gpt-53-spark/sports.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-gpt-53-spark-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/pilot-gpt-53-spark-myth.html",
+    "png": "concepts/pilot-gpt-53-spark-myth.png",
+    "original": "../render/model-comparison/gpt-53-spark/myth.png",
+    "rationale": "Keep the compact history table. Replace recordkeeping claims and a scolding action line.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 1: The Hot Streak"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/gpt-53-spark/myth.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-gpt-53-spark-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/pilot-gpt-53-spark-wildcard.html",
+    "png": "concepts/pilot-gpt-53-spark-wildcard.png",
+    "original": "../render/model-comparison/gpt-53-spark/wildcard.png",
+    "rationale": "Keep the scaling table. State the fixed-settings and paytable assumption, plus session variability.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "House edge and RTP"
+      },
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 6: Higher Bets Improve Your Odds"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/gpt-53-spark/wildcard.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-gpt-55-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/pilot-gpt-55-sports.html",
+    "png": "concepts/pilot-gpt-55-sports.png",
+    "original": "../render/model-comparison/gpt-55/sports.png",
+    "rationale": "Keep the changing-price board. Replace unsupported milliseconds and speed-competition claims with checking the current return.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "In-play (live betting)"
+      },
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 14: In-Play Betting Gives You an Edge"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/gpt-55/sports.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-gpt-55-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/pilot-gpt-55-myth.html",
+    "png": "concepts/pilot-gpt-55-myth.png",
+    "original": "../render/model-comparison/gpt-55/myth.png",
+    "rationale": "Keep the paired stakes and fixed-paytable condition. Use expected loss consistently instead of implying a fixed session cost.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 6: Higher Bets Improve Your Odds"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Bet types"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/gpt-55/myth.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "pilot-gpt-55-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/pilot-gpt-55-wildcard.html",
+    "png": "concepts/pilot-gpt-55-wildcard.png",
+    "original": "../render/model-comparison/gpt-55/wildcard.png",
+    "rationale": "Keep the pace calculation. Replace the decorative closing joke with a specific budget and end-time action.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      },
+      {
+        "path": "messaging/core-messages.md",
+        "section": "Tools — Features that work for you"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/gpt-55/wildcard.html",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger."
+  },
+  {
+    "id": "photo-entry-12-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/photo-entry-12-sports.html",
+    "png": "concepts/photo-entry-12-sports.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-12/sports.png",
+    "rationale": "A bright sports page pairs a larger fan photograph with a navy scoreboard. The calculation gets its own space and the headline supplies the wit. New Google photography replaces the earlier crop; it shows three adult friends laugh together in an arena concourse, with the basketball seating behind them.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Totals (Over/Under)"
+      },
+      {
+        "path": "visual-identity/photography/photography.md",
+        "section": "Sports / Entertainment"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-12/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-12/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+    "title": "Rival fans. Same total.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/sports-friends/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adult friends laugh together in an arena concourse, with the basketball seating behind them.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/sports-friends.json"
+    },
+    "treatment": "sports"
+  },
+  {
+    "id": "photo-entry-12-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/photo-entry-12-myth.html",
+    "png": "concepts/photo-entry-12-myth.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-12/myth.png",
+    "rationale": "A navy headline and orange fact strip pair with a new wide birthday photograph. Both faces remain intact in the crop; the image gives personal meaning a place without implying better odds.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 10: Choosing \"Your\" Numbers Improves Odds"
+      },
+      {
+        "path": "brand-book/02-brand-personality.md",
+        "section": "Witty / Not Preachy"
+      },
+      {
+        "path": "visual-identity/photography/photography.md",
+        "section": "Social / Group"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-12/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-12/shared-input/myth/attempt-1/candidate-1-image-1.jpg",
+    "title": "A birthday isn’t an edge.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "topics": [
+      "roulette",
+      "probability",
+      "numbers"
+    ],
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/birthday-friends/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Two adult friends smile across a small birthday cake on a rooftop in warm evening light.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/birthday-friends.json"
+    },
+    "treatment": "myth"
+  },
+  {
+    "id": "photo-entry-12-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/photo-entry-12-wildcard.html",
+    "png": "concepts/photo-entry-12-wildcard.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-12/wildcard.png",
+    "rationale": "Emerald frames a social photograph and a white calculation strip. The copy makes time and budget feel like choices that belong to the player. New Google photography replaces the earlier crop; it shows two adult friends exchange a smile beside softly blurred slot machines in a warmly lit lounge.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Playing a spin"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Bet types"
+      },
+      {
+        "path": "visual-identity/photography/photography.md",
+        "section": "Game & equipment imagery"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-12/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-12/shared-input/wildcard/attempt-1/candidate-1-image-1.jpg",
+    "title": "The penny isn’t the price.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/slots-social/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Two adult friends exchange a smile beside softly blurred slot machines in a warmly lit lounge.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/slots-social.json"
+    },
+    "treatment": "wildcard"
+  },
+  {
+    "id": "photo-entry-27-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/photo-entry-27-sports.html",
+    "png": "concepts/photo-entry-27-sports.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-27/sports.png",
+    "rationale": "A bright sports page pairs a larger fan photograph with a navy scoreboard. The calculation gets its own space and the headline supplies the wit. Retain the relevant original photograph and recompose it around the people.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Break-even win rates"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-27/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-27/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+    "title": "Half right. Still down.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-27/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adults converse on a sofa beside an unreadable phone, with a blurred television and warm living-room lighting behind them.",
+      "provider": "google-gemini",
+      "status": "Retained from the archived round"
+    },
+    "treatment": "sports"
+  },
+  {
+    "id": "photo-entry-27-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/photo-entry-27-myth.html",
+    "png": "concepts/photo-entry-27-myth.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-27/myth.png",
+    "rationale": "A navy headline and orange fact strip pair with a new wide birthday photograph. Both faces remain intact in the crop; the image gives personal meaning a place without implying better odds.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 10: Choosing \"Your\" Numbers Improves Odds"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-27/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-12/shared-input/myth/attempt-1/candidate-1-image-1.jpg",
+    "title": "A number can’t be overdue.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "topics": [
+      "roulette",
+      "probability",
+      "numbers"
+    ],
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/birthday-friends/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Two adult friends smile across a small birthday cake on a rooftop in warm evening light.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/birthday-friends.json"
+    },
+    "treatment": "myth"
+  },
+  {
+    "id": "photo-entry-27-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/photo-entry-27-wildcard.html",
+    "png": "concepts/photo-entry-27-wildcard.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-27/wildcard.png",
+    "rationale": "Emerald frames a social photograph and a white calculation strip. The copy makes time and budget feel like choices that belong to the player. New Google photography replaces the earlier crop; it shows two adult friends exchange a smile beside softly blurred slot machines in a warmly lit lounge.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-27/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-27/shared-input/wildcard/attempt-1/candidate-1-image-1.jpg",
+    "title": "Small spins add up.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/slots-social/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Two adult friends exchange a smile beside softly blurred slot machines in a warmly lit lounge.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/slots-social.json"
+    },
+    "treatment": "wildcard"
+  },
+  {
+    "id": "photo-entry-43-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/photo-entry-43-sports.html",
+    "png": "concepts/photo-entry-43-sports.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-43/sports.png",
+    "rationale": "A bright sports page pairs a larger fan photograph with a navy scoreboard. The calculation gets its own space and the headline supplies the wit. Retain the relevant original photograph and recompose it around the people.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Point spread"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-43/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-43/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+    "title": "The half point matters.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-43/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adults sit at a table overlooking a basketball arena; the middle person makes a small-distance hand gesture while the others listen.",
+      "provider": "google-gemini",
+      "status": "Retained from the archived round"
+    },
+    "treatment": "sports"
+  },
+  {
+    "id": "photo-entry-43-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/photo-entry-43-myth.html",
+    "png": "concepts/photo-entry-43-myth.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-43/myth.png",
+    "rationale": "A navy headline and wide social photograph lead to an orange fact strip. The hook challenges the myth without making the reader the joke. New Google photography replaces the earlier crop; it shows three adult friends lean into a relaxed conversation in a warmly lit casino lounge.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      },
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 2: Due for a Win"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-43/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-76/shared-input/myth/attempt-1/candidate-1-image-1.jpg",
+    "title": "Losses don’t load the next spin.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/casino-conversation/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adult friends lean into a relaxed conversation in a warmly lit casino lounge.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/casino-conversation.json"
+    },
+    "treatment": "myth"
+  },
+  {
+    "id": "photo-entry-43-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/photo-entry-43-wildcard.html",
+    "png": "concepts/photo-entry-43-wildcard.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-43/wildcard.png",
+    "rationale": "Emerald frames a social photograph and a white calculation strip. The copy makes time and budget feel like choices that belong to the player. New Google photography replaces the earlier crop; it shows two adult friends exchange a smile beside softly blurred slot machines in a warmly lit lounge.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Snippet 3"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-43/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-43/shared-input/wildcard/attempt-1/candidate-1-image-1.jpg",
+    "title": "The total is in the tempo.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/slots-social/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Two adult friends exchange a smile beside softly blurred slot machines in a warmly lit lounge.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/slots-social.json"
+    },
+    "treatment": "wildcard"
+  },
+  {
+    "id": "photo-entry-58-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/photo-entry-58-sports.html",
+    "png": "concepts/photo-entry-58-sports.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-58/sports.png",
+    "rationale": "A bright sports page pairs a larger fan photograph with a navy scoreboard. The calculation gets its own space and the headline supplies the wit. Retain the relevant original photograph and recompose it around the people.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "The 30-second version"
+      },
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "The vig in practice"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-58/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-27/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+    "title": "Two bets. One clear breakdown.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-27/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adults converse on a sofa beside an unreadable phone, with a blurred television and warm living-room lighting behind them.",
+      "provider": "google-gemini",
+      "status": "Retained from the archived round"
+    },
+    "treatment": "sports"
+  },
+  {
+    "id": "photo-entry-58-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/photo-entry-58-myth.html",
+    "png": "concepts/photo-entry-58-myth.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-58/myth.png",
+    "rationale": "A navy headline and wide social photograph lead to an orange fact strip. The hook challenges the myth without making the reader the joke. New Google photography replaces the earlier crop; it shows three adult friends lean into a relaxed conversation in a warmly lit casino lounge.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 2: Due for a Win"
+      },
+      {
+        "path": "messaging/stigma-free-language.md",
+        "section": "Quick reference card"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-58/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-76/shared-input/myth/attempt-1/candidate-1-image-1.jpg",
+    "title": "A losing run isn’t a countdown.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/casino-conversation/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adult friends lean into a relaxed conversation in a warmly lit casino lounge.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/casino-conversation.json"
+    },
+    "treatment": "myth"
+  },
+  {
+    "id": "photo-entry-58-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/photo-entry-58-wildcard.html",
+    "png": "concepts/photo-entry-58-wildcard.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-58/wildcard.png",
+    "rationale": "Emerald frames a social photograph and a white calculation strip. The copy makes time and budget feel like choices that belong to the player. New Google photography replaces the earlier crop; it shows two adult friends share a phone over coffee at a sunlit café table; the screen faces away.",
+    "sources": [
+      {
+        "path": "how-to-play/slots.md",
+        "section": "What this means for your wallet"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "House edge and RTP"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-58/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-76/shared-input/wildcard/attempt-1/candidate-1-image-1.jpg",
+    "title": "A long-run average.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/cafe-plan/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Two adult friends share a phone over coffee at a sunlit café table; the screen faces away.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/cafe-plan.json"
+    },
+    "treatment": "wildcard"
+  },
+  {
+    "id": "photo-entry-76-sports",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "sports",
+    "html": "concepts/photo-entry-76-sports.html",
+    "png": "concepts/photo-entry-76-sports.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-76/sports.png",
+    "rationale": "A bright sports page pairs a larger fan photograph with a navy scoreboard. The calculation gets its own space and the headline supplies the wit. New Google photography replaces the earlier crop; it shows three adult friends laugh together in an arena concourse, with the basketball seating behind them.",
+    "sources": [
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "The 30-second version"
+      },
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Where the sportsbook makes money"
+      },
+      {
+        "path": "how-to-play/sports-betting.md",
+        "section": "Break-even win rates"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-76/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-12/shared-input/sports/attempt-1/candidate-1-image-1.jpg",
+    "title": "The price sets the break-even rate.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/sports-friends/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adult friends laugh together in an arena concourse, with the basketball seating behind them.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/sports-friends.json"
+    },
+    "treatment": "sports"
+  },
+  {
+    "id": "photo-entry-76-myth",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "myth",
+    "html": "concepts/photo-entry-76-myth.html",
+    "png": "concepts/photo-entry-76-myth.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-76/myth.png",
+    "rationale": "A navy headline and wide social photograph lead to an orange fact strip. The hook challenges the myth without making the reader the joke. New Google photography replaces the earlier crop; it shows three adult friends lean into a relaxed conversation in a warmly lit casino lounge.",
+    "sources": [
+      {
+        "path": "messaging/myth-busting.md",
+        "section": "Myth 4: Near Misses Mean You're Close"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Playing a spin"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-76/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-76/shared-input/myth/attempt-1/candidate-1-image-1.jpg",
+    "title": "A near miss isn’t a preview.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/casino-conversation/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Three adult friends lean into a relaxed conversation in a warmly lit casino lounge.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/casino-conversation.json"
+    },
+    "treatment": "myth"
+  },
+  {
+    "id": "photo-entry-76-wildcard",
+    "group": "Concept revision",
+    "locale": "en",
+    "category": "wildcard",
+    "html": "concepts/photo-entry-76-wildcard.html",
+    "png": "concepts/photo-entry-76-wildcard.png",
+    "original": "../render/model-comparison/photo-round-02/rendered/entry-76/wildcard.png",
+    "rationale": "Emerald frames a social photograph and a white calculation strip. The copy makes time and budget feel like choices that belong to the player. New Google photography replaces the earlier crop; it shows two adult friends share a phone over coffee at a sunlit café table; the screen faces away.",
+    "sources": [
+      {
+        "path": "messaging/core-messages.md",
+        "section": "Deposit screen"
+      },
+      {
+        "path": "messaging/core-messages.md",
+        "section": "Tools — Features that work for you"
+      },
+      {
+        "path": "how-to-play/slots.md",
+        "section": "Tips for informed play"
+      }
+    ],
+    "revisionOf": "collateral/render/model-comparison/photo-round-02/first-submissions/entry-76/manifest.json",
+    "photoSource": "collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-76/shared-input/wildcard/attempt-1/candidate-1-image-1.jpg",
+    "title": "Leave room to leave some.",
+    "sourceContext": "Source paths identify the original research trail. The revised claim is governed by the visible assumptions and the September creative review evidence ledger.",
+    "photography": {
+      "path": "collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/cafe-plan/attempt-1/candidate-1-image-1.jpg",
+      "alt": "Two adult friends share a phone over coffee at a sunlit café table; the screen faces away.",
+      "provider": "google-gemini",
+      "status": "Generated for this refresh",
+      "request": "collateral/creative-review/photography/requests/cafe-plan.json"
+    },
+    "treatment": "wildcard"
+  }
+]

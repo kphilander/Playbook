@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><base href="../../render/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=600">
+<title>Welcome to Playbook</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .email {
+    width: 600px;
+    font-family: 'Source Sans 3', Arial, sans-serif;
+    background: var(--pb-color-white);
+    color: var(--pb-color-neutral-900);
+    position: relative;
+  }
+  .accent-bar {
+    height: 4px;
+    background: var(--pb-gradient-bar, linear-gradient(90deg, var(--pb-color-accent), var(--pb-color-secondary)));
+  }
+  .hero {
+    background: var(--pb-color-primary);
+    padding: 48px 56px;
+    text-align: center;
+  }
+  .hero-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(28px * var(--pb-template-text-scale, 1));
+    margin-bottom: 32px;
+    display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+
+    font-weight: 700;
+    letter-spacing: -0.018em;
+  }
+  .hero h1 {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(32px * var(--pb-template-text-scale, 1));
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .hero p {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .section-white {
+    padding: 40px 56px;
+    background: var(--pb-color-white);
+  }
+  .section-gray {
+    padding: 40px 56px;
+    background: var(--pb-color-neutral-50);
+  }
+  .section-heading {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(22px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    margin-bottom: 24px;
+  }
+  .tool-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+  .tool-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 10px;
+    background: #E8FFF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-secondary);
+  }
+  .tool-item strong {
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-900);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .tool-item span {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.5;
+  }
+  .cta-button {
+    display: inline-block;
+    background: var(--pb-color-secondary);
+    color: var(--pb-brand-ink, var(--pb-color-primary));
+    font-family: var(--pb-font-heading);
+    font-weight: 700;
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 24px;
+    letter-spacing: 0.01em;
+  }
+  .stat-block {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .stat-number {
+    font-family: var(--pb-font-heading);
+    font-weight: 800;
+    font-size: calc(48px * var(--pb-template-text-scale, 1));
+    color: var(--pb-brand-ink, var(--pb-color-primary));
+    margin-bottom: 8px;
+  }
+  .stat-number .teal { color: var(--pb-color-secondary); }
+  .stat-number .orange { color: var(--pb-color-accent); }
+  .stat-context {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-700);
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .footer {
+    background: var(--pb-color-primary-dark);
+    padding: 40px 56px;
+    text-align: center;
+  }
+  .footer-support {
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    color: var(--pb-surface-ink, var(--pb-color-white));
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .footer-channels {
+    font-family: var(--pb-font-mono);
+    font-size: calc(18px * var(--pb-template-text-scale, 1));
+    font-weight: 700;
+    color: var(--pb-color-secondary);
+    margin-bottom: 24px;
+    line-height: 1.7;
+  }
+  .footer-legal {
+    font-size: calc(13px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .footer-logo {
+    font-family: var(--pb-font-heading);
+    font-size: calc(16px * var(--pb-template-text-scale, 1));
+    margin-top: 20px;
+    display: inline-block;
+    color: var(--pb-surface-ink, var(--pb-color-white));
+
+    font-weight: 700;
+    letter-spacing: -0.018em;
+  }
+  .footer-unsub {
+    font-size: calc(12px * var(--pb-template-text-scale, 1));
+    color: var(--pb-color-neutral-500);
+    margin-top: 16px;
+  }
+  .footer-unsub a {
+    color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300));
+    text-decoration: underline;
+  }
+</style>
+  <link rel="stylesheet" href="brand-inject.css">
+  <link rel="stylesheet" href="creative-system.css">
+  <link rel="stylesheet" href="text-polish.css">
+</head>
+<body>
+<div class="email pb-creative pb-text-polish">
+
+  <div class="accent-bar"></div>
+
+  <div class="hero">
+    <div class="hero-logo">Playbook</div>
+    <h1>Welcome. A few things worth knowing.</h1>
+    <p>Playbook gives you the facts, the tools, and the real numbers behind the games you play. No fine print.</p>
+  </div>
+
+  <div class="section-white">
+    <div class="section-heading">Three things. 60 seconds.</div>
+    <div class="tool-item">
+      <div class="tool-icon">1</div>
+      <div>
+        <strong>Set your budget</strong>
+        <span>Pick your deposit limit. Weekly, monthly, whatever works. Choose your amount and period.</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">2</div>
+      <div>
+        <strong>Set your pace</strong>
+        <span>Session reminders keep you aware. No buzzkill. Just a check-in.</span>
+      </div>
+    </div>
+    <div class="tool-item">
+      <div class="tool-icon">3</div>
+      <div>
+        <strong>Know your game</strong>
+        <span>Take the odds quiz. 7 questions, 2 minutes. Challenge your friends after.</span>
+      </div>
+    </div>
+    <a href="#" class="cta-button">Get started</a>
+  </div>
+
+  <div class="section-gray">
+    <div class="stat-block">
+      <div class="stat-number"><span class="teal">0.5%</span> to <span class="orange">15%</span></div>
+      <div class="stat-context">Illustrative range across selected casino games. Rules and strategy affect the edge. Knowing the edge helps you pick your games and set your budget.</div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="cta-button">See the real odds</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-support">Free, confidential support — for any question about gambling.</div>
+    <div class="footer-channels">
+      Call 1-800-522-4700<br>
+      Text 1-800-522-4700<br>
+      Chat at www.ncpgambling.org/chat
+    </div>
+    <div class="footer-legal">You must be 21+ to gamble. Powered by Playbook (CC0)</div>
+    <div class="footer-logo">Playbook</div>
+    <div class="footer-unsub">
+      <a href="#">Manage your preferences</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

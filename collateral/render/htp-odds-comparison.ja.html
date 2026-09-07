@@ -43,33 +43,31 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">ゲームを知る</div>
-    <div class="card-title">確率の一覧</div>
+    <div class="card-title">控除率の例</div>
     <table class="odds-table">
-      <thead>
-        <tr><th>ゲーム</th><th>最良の賭け</th></tr>
-      </thead>
+      <thead><tr><th>ゲーム</th><th>控除率</th></tr></thead>
       <tbody>
-        <tr><td>ブラックジャック（基本戦略）</td><td>0.5%</td></tr>
-        <tr><td>バカラ（バンカー）</td><td>1.06%</td></tr>
-        <tr><td>ルーレット（ヨーロピアン）</td><td>2.70%</td></tr>
-        <tr><td>スポーツベッティング（標準ビグ）</td><td>4.5%</td></tr>
-        <tr><td>ルーレット（アメリカン）</td><td>5.26%</td></tr>
-        <tr><td>スロット</td><td>2〜15%</td></tr>
+        <tr><td>ブラックジャック：有利なルール＋基本戦略</td><td>≈0.5%</td></tr>
+        <tr><td>バカラ：バンカー、5%手数料</td><td>1.06%</td></tr>
+        <tr><td>クラップス：パスライン</td><td>1.41%</td></tr>
+        <tr><td>ルーレット：シングルゼロ</td><td>2.70%</td></tr>
       </tbody>
     </table>
+    <p class="creative-note">長期の期待コストの例。ルールで変わります。</p>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
-    <span class="footer-legal">ハウスエッジ＝10,000円を賭けた場合に長期的にハウスが受け取る割合</span>
+    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
 </div>
 </body>

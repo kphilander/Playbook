@@ -1,0 +1,628 @@
+[
+  {
+    "template": "campaign-rest",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": [
+        {
+          "asset": "room-for-the-rest",
+          "sourcePixels": [
+            3712,
+            4608
+          ],
+          "cssPixels": [
+            1080,
+            1350
+          ],
+          "objectFit": "cover",
+          "availableScale": 3.413,
+          "requestedScale": 3,
+          "upsampled": false
+        }
+      ]
+    },
+    "pngSha256": "ce1d66bebe3910d2cd22dabddbbc5655230685163caec7a0b57c56126a8b7e83"
+  },
+  {
+    "template": "campaign-rest",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 5.32
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": [
+        {
+          "asset": "room-for-the-rest",
+          "sourcePixels": [
+            3712,
+            4608
+          ],
+          "cssPixels": [
+            1080,
+            1350
+          ],
+          "objectFit": "cover",
+          "availableScale": 3.413,
+          "requestedScale": 3,
+          "upsampled": false
+        }
+      ]
+    },
+    "pngSha256": "e0b00116868de1546e2033132b005b996519db8dac34049f00855af180e6f6a4"
+  },
+  {
+    "template": "campaign-rest",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Plan your next pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Leave room for the rest.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose a finish time before you play. Keep the rest of your night open."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 5.74
+    },
+    "copy": "Time well spent Leave room for the rest. Choose a finish time before you play. Keep the rest of your night open. Plan your next pause Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": [
+        {
+          "asset": "room-for-the-rest",
+          "sourcePixels": [
+            3712,
+            4608
+          ],
+          "cssPixels": [
+            1080,
+            1350
+          ],
+          "objectFit": "cover",
+          "availableScale": 3.413,
+          "requestedScale": 3,
+          "upsampled": false
+        }
+      ]
+    },
+    "pngSha256": "4d6a400d502c21c8b20e32e3b6380b6ff8688403bc7f98da9844275f0580a301"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Myth / Math So close. Same odds. Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "52a6c9fd5e16d28799bdc8a386ccb5fb5f257593bcba42c6f68c9f7db951c710"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Myth / Math So close. Same odds. Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "08476dc04d23d5e55c042a6c707601f030f31ec92c4186344a3b923199b7af4e"
+  },
+  {
+    "template": "campaign-nearmiss",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: See how a spin works",
+      "FIGURE.campaign-reels: Close-looking result. No prediction.",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: So close. Same odds.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: On independent slot spins, a near miss never makes the next win more likely."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Myth / Math So close. Same odds. Close-looking result. No prediction. On independent slot spins, a near miss never makes the next win more likely. See how a spin works Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "8b25d4c1af265f0084287c440e56dfa38bdbad9456c5551a2ee0b975bdfab63d"
+  },
+  {
+    "template": "campaign-zero",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "696bc4398aa8405addb89f337e95d4e134d94a0cddbf772795b2d18a5088229f"
+  },
+  {
+    "template": "campaign-zero",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "5ef57db7949f13492651f2bfb2d7f5e36683d5983aa4f960cda02e3ba9f4f817"
+  },
+  {
+    "template": "campaign-zero",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Check which wheel you’re playing",
+      "FIGURE.campaign-wheels: 0 European 37 pockets 2.70% 00 American 38 pockets 5.26%",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: One extra zero. Different odds.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: House edge on straight-up number bets. Standard 35:1 profit payout."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Inside the odds One extra zero. Different odds. 0 European 37 pockets 2.70% 00 American 38 pockets 5.26% House edge on straight-up number bets. Standard 35:1 profit payout. Check which wheel you’re playing Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "e84547151b81e8293690ae5d00fa62fa7e69936092dcdd6f3c8f4bf4235fb9b2"
+  },
+  {
+    "template": "campaign-time",
+    "skin": "playbook",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(15, 25, 35)": 17.74,
+      "rgb(52, 211, 153) on rgb(15, 25, 35)": 9.23
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "7c283ce6e8597e55fc0b6d03ede20ab5aecc2ec6d2377523e9be8b39fc03cc32"
+  },
+  {
+    "template": "campaign-time",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "760923b6e62d4a5b7f8239ba78fd9b7eeb88ff04af42ab8def7a48c7a5cca0dc"
+  },
+  {
+    "template": "campaign-time",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Choose when to call it a night",
+      "FIGURE.campaign-dial: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Time is part of the budget.",
+      "HEADER.mc-header: Your play. Your plan.",
+      "P.mc-copy: Pick a finish time before you play. A reminder can help you keep track."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Your play. Your plan. Time is part of the budget. Pick a finish time before you play. A reminder can help you keep track. Choose when to call it a night Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "e3556d03cee0226835fbf6ed43ee7d8e5525386f9dce7e87236b8cb579df12c2"
+  },
+  {
+    "template": "campaign-cinema",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Know how the game works",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Luck doesn’t keep score.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: Past losses don’t make the next independent slot spin more likely to win."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 9.27,
+      "rgb(222, 237, 178) on photo shadow over brightest possible pixel": 9.4
+    },
+    "copy": "Myth / Math Luck doesn’t keep score. Past losses don’t make the next independent slot spin more likely to win. Know how the game works Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": [
+        {
+          "asset": "casino-conversation",
+          "sourcePixels": [
+            2400,
+            1792
+          ],
+          "cssPixels": [
+            1080,
+            940
+          ],
+          "objectFit": "cover",
+          "availableScale": 1.906,
+          "requestedScale": 3,
+          "upsampled": true
+        }
+      ]
+    },
+    "pngSha256": "cdd753e68ccafba4a4324c884e33fada8ecc1fd8d588660d18e2a3a888409db7"
+  },
+  {
+    "template": "campaign-cinema",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Know how the game works",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Luck doesn’t keep score.",
+      "HEADER.mc-header: Myth / Math",
+      "P.mc-copy: Past losses don’t make the next independent slot spin more likely to win."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(218, 250, 115) on photo shadow over brightest possible pixel": 9.98
+    },
+    "copy": "Myth / Math Luck doesn’t keep score. Past losses don’t make the next independent slot spin more likely to win. Know how the game works Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": [
+        {
+          "asset": "casino-conversation",
+          "sourcePixels": [
+            2400,
+            1792
+          ],
+          "cssPixels": [
+            1080,
+            940
+          ],
+          "objectFit": "cover",
+          "availableScale": 1.906,
+          "requestedScale": 3,
+          "upsampled": true
+        }
+      ]
+    },
+    "pngSha256": "b22ada196436673f4c6ea20a26e9a709e70a68224968d8d5a42f223165f305e7"
+  },
+  {
+    "template": "campaign-pause",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Make room for a pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Your time. Your call.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose an end time before you play. Set a reminder to check in."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on photo shadow over brightest possible pixel": 9.27,
+      "rgb(222, 237, 178) on photo shadow over brightest possible pixel": 10.15
+    },
+    "copy": "Time well spent Your time. Your call. Choose an end time before you play. Set a reminder to check in. Make room for a pause Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": [
+        {
+          "asset": "evening-pause",
+          "sourcePixels": [
+            1856,
+            2304
+          ],
+          "cssPixels": [
+            1080,
+            1350
+          ],
+          "objectFit": "cover",
+          "availableScale": 1.707,
+          "requestedScale": 3,
+          "upsampled": true
+        }
+      ]
+    },
+    "pngSha256": "631c3f3206d4c9295482b12d0e43a1d50d089b6f79d2afb2f273cf0953862acd"
+  },
+  {
+    "template": "campaign-pause",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.mc-action: Make room for a pause",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: Your time. Your call.",
+      "HEADER.mc-header: Time well spent",
+      "P.mc-copy: Choose an end time before you play. Set a reminder to check in."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on photo shadow over brightest possible pixel": 10,
+      "rgb(218, 250, 115) on photo shadow over brightest possible pixel": 10.77
+    },
+    "copy": "Time well spent Your time. Your call. Choose an end time before you play. Set a reminder to check in. Make room for a pause Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": [
+        {
+          "asset": "evening-pause",
+          "sourcePixels": [
+            1856,
+            2304
+          ],
+          "cssPixels": [
+            1080,
+            1350
+          ],
+          "objectFit": "cover",
+          "availableScale": 1.707,
+          "requestedScale": 3,
+          "upsampled": true
+        }
+      ]
+    },
+    "pngSha256": "1456941ef5949a5190577212c555754aef574492ff6fbccae08aad6f8b0993e8"
+  },
+  {
+    "template": "campaign-probability",
+    "skin": "club",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.campaign-stat: 1 in 16",
+      "DIV.mc-action: Know what you’re combining",
+      "FIGURE.campaign-outcomes: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: More picks. Smaller target.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: Four independent picks, each truly 50/50. All four must win: a 6.25% chance."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(250, 246, 236) on rgb(24, 61, 53)": 11.07,
+      "rgb(222, 237, 178) on rgb(24, 61, 53)": 9.59
+    },
+    "copy": "Inside the odds More picks. Smaller target. 1 in 16 Four independent picks, each truly 50/50. All four must win: a 6.25% chance. Know what you’re combining Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "59010427378fa91f0a654a8a15a99e6664f1135af014a47ee90450872569d935"
+  },
+  {
+    "template": "campaign-probability",
+    "skin": "circuit",
+    "width": 1080,
+    "height": 1350,
+    "blockCopy": [
+      "DIV.campaign-stat: 1 in 16",
+      "DIV.mc-action: Know what you’re combining",
+      "FIGURE.campaign-outcomes: ",
+      "FOOTER.campaign-footer: Free support: 1-800-522-4700 21+",
+      "H1.: More picks. Smaller target.",
+      "HEADER.mc-header: Inside the odds",
+      "P.mc-copy: Four independent picks, each truly 50/50. All four must win: a 6.25% chance."
+    ],
+    "issues": [],
+    "contrastPairs": {
+      "rgb(255, 255, 255) on rgb(41, 58, 176)": 9.03,
+      "rgb(218, 250, 115) on rgb(41, 58, 176)": 7.7
+    },
+    "copy": "Inside the odds More picks. Smaller target. 1 in 16 Four independent picks, each truly 50/50. All four must win: a 6.25% chance. Know what you’re combining Free support: 1-800-522-4700 21+",
+    "raster": {
+      "scale": 3,
+      "pixels": [
+        3240,
+        4050
+      ],
+      "sources": []
+    },
+    "pngSha256": "2dd54cbc2639ca48e8aa8624d0c72abf9f072aa83ba6dea299b437c81f7317e9"
+  }
+]

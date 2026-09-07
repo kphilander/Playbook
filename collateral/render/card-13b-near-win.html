@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; background: transparent; }
@@ -35,23 +33,24 @@
   .footer-legal { font-size: calc(13px * var(--pb-template-text-scale, 1)); color: var(--pb-surface-ink-muted, var(--pb-color-neutral-300)); font-family: var(--pb-font-body); }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="myth-label">Myth vs. Math</div>
-    <div class="myth-statement"><span class="strike">"It was so close!"</span></div>
-    <div class="fact-statement">A near-win isn't progress. It's just <strong>a loss that looks close.</strong></div>
+    <div class="myth-statement">Close on screen.<br>Still a separate spin.</div>
+    <div class="fact-statement">A near miss doesn’t build progress. <strong>The next independent spin starts fresh.</strong></div>
     <div class="stat-block">
       <span class="stat-number">$0</span>
-      <span class="stat-unit">earned<br>by "almost"</span>
+      <span class="stat-unit">extra payout for a near miss<br>that wins no prize</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">Free support 24/7: {{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

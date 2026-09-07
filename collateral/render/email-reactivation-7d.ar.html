@@ -163,73 +163,67 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="email">
-
-  <div class="accent-bar"></div>
-
-  <div class="hero">
-    <div class="hero-logo">Playbook</div>
-    <h1>الأدوات لا تزال في مكانها</h1>
-    <p>دون أي ضغط. مجرد تحديث سريع بما هو متاح.</p>
-  </div>
-
-  <div class="section-white">
-    <div class="section-heading">مُفعَّل وجاهز</div>
-    <div class="tool-status-item">
-      <div class="status-dot"></div>
-      <div class="tool-name">حد الإيداع</div>
-      <div class="tool-value">200 د.إ/أسبوع</div>
-    </div>
-    <div class="tool-status-item">
-      <div class="status-dot"></div>
-      <div class="tool-name">تذكيرات الجلسة</div>
-      <div class="tool-value">كل 60 دقيقة</div>
-    </div>
-    <div class="tool-status-item">
-      <div class="status-dot"></div>
-      <div class="tool-name">اختبار الإلمام باللعبة</div>
-      <div class="tool-value">أفضل نتيجة: 5/7 — أسئلة جديدة</div>
-    </div>
-    <div style="text-align: center;">
-      <a href="#" class="cta-button">مراجعة الإعدادات</a>
-    </div>
-  </div>
-
-  <div class="section-gray">
-    <div class="support-box">
-      <h3>باب الحوار مفتوح.</h3>
-      <p>الدعم المجاني والسري متاح على مدار الساعة — لأي سؤال يتعلق بالمقامرة. بدون أحكام، أبدًا.</p>
-      <div class="helpline"><span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
-      <div class="channels">رسالة نصية <span dir="ltr">{{HELPLINE_NUMBER}}</span> | دردشة عبر {{CHAT_URL}}</div>
-    </div>
-    <div style="text-align: center;">
-      <a href="#" class="cta-button-outline">الحصول على الدعم</a>
-    </div>
-  </div>
-
-  <div class="section-white">
-    <div class="section-heading">خلال فترة الغياب</div>
-    <div class="article-promo">
-      <div class="article-badge">جديد</div>
-      <div>
-        <div class="article-promo-title">لماذا تكون كل دورة في آلات القمار مستقلة</div>
-        <div class="article-promo-meta">قراءة 3 دقائق</div>
-      </div>
-    </div>
-    <div style="text-align: center;">
-      <a href="#" class="cta-button">قراءة المقال</a>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
-    <div class="footer-channels">اتصال <span dir="ltr">{{HELPLINE_NUMBER}}</span> | رسالة نصية <span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
-    <div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
-    <div class="footer-logo">Playbook</div>
-  </div>
-
+<div class="email pb-creative">
+<div class="accent-bar"></div>
+<div class="hero">
+<div class="hero-logo">{{PROGRAM_SHORT_NAME}}</div>
+<h1>الأدوات لا تزال في مكانها</h1>
+<p>دون أي ضغط. مجرد تحديث سريع بما هو متاح.</p>
+</div>
+<div class="section-white">
+<div class="section-heading">مُفعَّل وجاهز</div>
+<div class="tool-status-item">
+<div class="status-dot"></div>
+<div class="tool-name">حد الإيداع</div>
+<div class="tool-value"><bdi dir="ltr">200</bdi> د.إ/أسبوع</div>
+</div>
+<div class="tool-status-item">
+<div class="status-dot"></div>
+<div class="tool-name">تذكيرات الجلسة</div>
+<div class="tool-value">كل <bdi dir="ltr">60</bdi> دقيقة</div>
+</div>
+<div class="tool-status-item">
+<div class="status-dot"></div>
+<div class="tool-name">اختبار الإلمام باللعبة</div>
+<div class="tool-value">أفضل نتيجة: <bdi dir="ltr">5</bdi>/<bdi dir="ltr">7</bdi> — أسئلة جديدة</div>
+</div>
+<div style="text-align: center;">
+<a class="cta-button" href="#">مراجعة الإعدادات</a>
+</div>
+</div>
+<div class="section-gray">
+<div class="support-box">
+<h3>باب الحوار مفتوح.</h3>
+<p>الدعم المجاني والسري متاح على مدار الساعة — لأي سؤال يتعلق بالمقامرة. بدون أحكام، أبدًا.</p>
+<div class="helpline"><span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
+<div class="channels">رسالة نصية <span dir="ltr">{{HELPLINE_NUMBER}}</span> | دردشة عبر {{CHAT_URL}}</div>
+</div>
+<div style="text-align: center;">
+<a class="cta-button-outline" href="#">الحصول على الدعم</a>
+</div>
+</div>
+<div class="section-white">
+<div class="section-heading">خلال فترة الغياب</div>
+<div class="article-promo">
+<div class="article-badge">جديد</div>
+<div>
+<div class="article-promo-title">لماذا تكون كل دورة في آلات القمار مستقلة</div>
+<div class="article-promo-meta">قراءة <bdi dir="ltr">3</bdi> دقائق</div>
+</div>
+</div>
+<div style="text-align: center;">
+<a class="cta-button" href="#">قراءة المقال</a>
+</div>
+</div>
+<div class="footer">
+<div class="footer-support">دعم مجاني وسري — لأي سؤال يتعلق بالمقامرة.</div>
+<div class="footer-channels">اتصال <span dir="ltr">{{HELPLINE_NUMBER}}</span> | رسالة نصية <span dir="ltr">{{HELPLINE_NUMBER}}</span></div>
+<div class="footer-legal">{{AGE_DISCLAIMER}} {{GENERAL_DISCLAIMER}}</div>
+<div class="footer-logo">{{PROGRAM_SHORT_NAME}}</div>
+</div>
 </div>
 </body>
 </html>

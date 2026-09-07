@@ -7,6 +7,7 @@ Content performance measurement for operators deploying {{PROGRAM_NAME}} content
 | File | Purpose |
 |------|---------|
 | [content-scorecard.md](content-scorecard.md) | Pulse (3 items) and Full (7 items) surveys, delayed recall survey, cultural fit A/B testing, scoring guides, survey templates, and a standard reporting format |
+| [compliance-banner-research-2026-09-05.md](compliance-banner-research-2026-09-05.md) | Working market comparison of compliance messages, RG campaign exceptions and flexible creative treatments; includes source and currency limits |
 
 ## How it works
 

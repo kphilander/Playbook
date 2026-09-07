@@ -1,0 +1,53 @@
+{
+  "source": "Saved feedback read from the background and CSS review in Chrome",
+  "recorded": "2026-09-06",
+  "reviewCommit": "fab294bccd9d93857f438e3d30f806cd2e5c1f49",
+  "storageKey": "playbook-text-surfaces-preferences-v1",
+  "meaning": {
+    "favorite": "Favorite",
+    "maybe": "Maybe",
+    "pass": "Pass",
+    "unrated": "No saved choice; no preference inferred"
+  },
+  "counts": {
+    "favorite": 4,
+    "maybe": 13,
+    "pass": 16,
+    "unrated": 21
+  },
+  "choices": {
+    "card-1a-hot-streak--contour": "maybe",
+    "card-1a-hot-streak--emerald": "pass",
+    "card-1a-hot-streak--flat": "pass",
+    "card-1a-hot-streak--paper": "pass",
+    "card-1a-hot-streak--signal": "pass",
+    "card-1a-hot-streak--spotlight": "maybe",
+    "card-1b-due-for-win--contour": "maybe",
+    "card-1b-due-for-win--emerald": "maybe",
+    "card-1b-due-for-win--flat": "pass",
+    "card-1b-due-for-win--paper": "pass",
+    "card-1b-due-for-win--signal": "pass",
+    "card-1b-due-for-win--spotlight": "maybe",
+    "card-2b-sports-betting--contour": "maybe",
+    "card-2b-sports-betting--emerald": "pass",
+    "card-2b-sports-betting--flat": "maybe",
+    "card-2b-sports-betting--paper": "pass",
+    "card-2b-sports-betting--signal": "pass",
+    "card-2b-sports-betting--spotlight": "favorite",
+    "card-2c-bonus-wagering--contour": "favorite",
+    "card-2c-bonus-wagering--flat": "maybe",
+    "card-2c-bonus-wagering--signal": "maybe",
+    "card-2c-bonus-wagering--spotlight": "maybe",
+    "htp-card-blackjack--flat": "favorite",
+    "htp-card-blackjack--signal": "maybe",
+    "poster-4a-know-your-game--flat": "maybe",
+    "poster-4a-know-your-game--signal": "maybe",
+    "poster-4a-know-your-game--spotlight": "favorite",
+    "story-3a-hot-streak--contour": "pass",
+    "story-3a-hot-streak--emerald": "pass",
+    "story-3a-hot-streak--flat": "pass",
+    "story-3a-hot-streak--paper": "pass",
+    "story-3a-hot-streak--signal": "pass",
+    "story-3a-hot-streak--spotlight": "pass"
+  }
+}

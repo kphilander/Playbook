@@ -41,7 +41,7 @@
 ```
 (Music fades in: upbeat, modern, warm)
 
-VO: Thanks for calling {{OPERATOR_NAME}}. We'll be with you shortly.
+VO: Thanks for calling {{OPERATOR_NAME}}. Thanks for your patience.
 
     While you wait, here are a few things worth knowing about the tools
     and features available to you.
@@ -72,13 +72,14 @@ VO: Did you know every casino game has a house edge?
 
     Here are some real numbers.
 
-    Blackjack, with basic strategy, has a house edge of just half a
-    percent. That's the best odds in the casino.
+    Blackjack’s house edge can be around half a percent with basic
+    strategy under favorable rules. The table rules matter.
 
     (1-second pause)
 
     American roulette? Five point two six percent. That extra zero on the
-    wheel doubles the edge compared to European roulette.
+    wheel increases the edge compared to a standard European wheel.
+    Most American bets have that edge; the five-number bet is higher.
 
     (1-second pause)
 
@@ -112,13 +113,12 @@ VO: While you're waiting, here's a quick look at the tools available
     (2-second pause)
 
     Deposit limits. Set your entertainment budget for the week or month.
-    It takes about ten seconds, and you can adjust it anytime. Think of
-    it as your budget for fun — you pick the number.
+    Choose an amount and a period. Check when it resets and when
+    any change takes effect. A budget is a limit, not a spending target.
 
     (2-second pause)
 
-    Session reminders. Time moves differently when you're playing —
-    that's by design. Set a check-in interval, and we'll give you a
+    Session reminders. Keep your chosen end time in view. Set a check-in interval, and we'll give you a
     nudge. No buzzkill. Just a quick update.
 
     (2-second pause)
@@ -153,13 +153,13 @@ VO: Here's one for you while you wait.
 
     (3-second pause — let them think)
 
-    Same as always. The machine uses a random number generator — it
-    doesn't have a memory, and it doesn't know how long you've been
-    sitting there. Every spin is independent.
+    For independent slot spins, a losing run doesn’t make a win due.
+    The system may record activity, but earlier losses do not improve
+    the next independent result.
 
     (2-second pause)
 
-    Most people get that wrong. There are six more questions like that
+    There’s more to explore. There are six more questions like that
     in our game IQ quiz — and it only takes two minutes.
 
     (1-second pause)
@@ -206,13 +206,12 @@ VO: One more thing while you're on hold.
 
     (2-second pause)
 
-    And if you'd like to pause your account or adjust your limits, you
-    can do that anytime in your account settings. Your tools are always
-    there.
+    If you’d like to pause your account or review your limits,
+    we can explain the options and when they take effect.
 
     (2-second pause)
 
-    We'll be with you shortly. Thanks for your patience.
+    Thanks for your patience. Thanks for your patience.
 
 (Music continues, loops back to intro or Message 1)
 ```
@@ -234,6 +233,8 @@ VO: Thanks for waiting. We're connecting you now.
 ```
 
 ---
+
+Support calls use the warm support message only. Route callers seeking help away from quiz and entertainment messages. Avoid promising a wait time the queue cannot substantiate.
 
 ## Rotation schedule
 
@@ -268,3 +269,7 @@ VO: Thanks for waiting. We're connecting you now.
 ---
 
 *Cross-references: [Voice and Tone](../../brand-book/04-voice-and-tone.md) | [Core Messages](../../messaging/core-messages.md) | [Messaging Framework](../../brand-book/05-messaging-framework.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

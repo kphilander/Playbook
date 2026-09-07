@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "name": "All 19 review images load without horizontal overflow at 1440px",
+      "pass": true
+    },
+    {
+      "name": "All 19 review images load without horizontal overflow at 775px",
+      "pass": true
+    },
+    {
+      "name": "All 19 review images load without horizontal overflow at 390px",
+      "pass": true
+    },
+    {
+      "name": "A campaign preference survives reload",
+      "pass": true
+    },
+    {
+      "name": "Selecting the same preference clears it",
+      "pass": true
+    },
+    {
+      "name": "Review choices do not create studio or older-gallery storage",
+      "pass": true
+    },
+    {
+      "name": "A new Playbook choice and an earlier favorite persist independently",
+      "pass": true
+    },
+    {
+      "name": "Concept link opens the requested two CSS treatments",
+      "pass": true
+    },
+    {
+      "name": "New template exposes only its real composition",
+      "pass": true
+    },
+    {
+      "name": "Campaign CSS swap preserves every article and image node",
+      "pass": true
+    },
+    {
+      "name": "Campaign HTML export is downloaded",
+      "pass": true
+    },
+    {
+      "name": "Portable export includes campaign CSS, the photo, fonts and recipe",
+      "pass": true
+    },
+    {
+      "name": "Offline campaign export fits and passes photo contrast without network",
+      "pass": true
+    },
+    {
+      "name": "An insufficient photo shadow fails contrast checks",
+      "pass": true
+    },
+    {
+      "name": "Moving text into the clear photo area fails validation",
+      "pass": true
+    },
+    {
+      "name": "Probability graphic has exactly 16 outcomes and one selected outcome",
+      "pass": true
+    },
+    {
+      "name": "Roulette diagrams show 37/38 pockets, one/two zeros, and the correct straight-up house edges",
+      "pass": true
+    },
+    {
+      "name": "New full-bleed photograph has native detail for a 3× crop",
+      "pass": true
+    },
+    {
+      "name": "Density inspection identifies source limits in earlier 2K photography",
+      "pass": true
+    },
+    {
+      "name": "Every campaign PNG decodes individually and contains 3240 × 4050 pixels",
+      "pass": true
+    },
+    {
+      "name": "Invalid raster scales are rejected before rendering",
+      "pass": true
+    },
+    {
+      "name": "Recipes reject an unavailable reference composition",
+      "pass": true
+    },
+    {
+      "name": "No browser errors",
+      "pass": true
+    }
+  ]
+}

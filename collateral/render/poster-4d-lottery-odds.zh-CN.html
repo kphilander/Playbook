@@ -49,22 +49,23 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="single-stat">
+<div class="poster pb-creative poster-editorial" data-layout="single-stat">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
     <div class="eyebrow">彩票</div>
-    <div class="headline">中奖概率，<br>比想象中低得多。</div>
-    <div class="subhead">每一组号码组合的中奖概率完全相同，并无例外。</div>
+    <div class="headline">六个号码。<br>全部匹配的概率。</div>
+    <div class="subhead">在公平的“49选6”抽奖中，每一组6个数字的中奖概率都相同。</div>
     <div class="stat-grid">
       <div class="stat-col">
-        <div class="stat-game">超级头奖</div>
-        <div class="stat-edge white">约三亿分之一</div>
-        <div class="stat-note">准确数字：302,575,350 分之一</div>
+        <div class="stat-game">49选6开奖</div>
+        <div class="stat-edge white">约1/1400万</div>
+        <div class="stat-note">精确值为1/13,983,816</div>
       </div>
     </div>
     <div class="qr-row">
@@ -72,7 +73,7 @@
       <div class="qr-label">扫码查看彩票概率指南</div>
     </div>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

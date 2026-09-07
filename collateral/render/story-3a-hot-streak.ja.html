@@ -40,25 +40,26 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="story-card">
+<div class="story-card pb-creative">
   <div class="story-header">
-    <span class="story-logo">Playbook</span>
+    <span class="story-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="story-body">
     <div class="myth-label">今週の俗説</div>
     <div class="myth-statement"><span class="strike">「今、流れが来ている」</span></div>
     <div class="divider"></div>
-    <div class="fact-statement">スピン、ハンド、ロールの一つひとつは<strong>統計的に独立</strong>しています。人は規則性を見出しがちですが、数学にはそのような偏りはありません。</div>
+    <div class="fact-statement">独立したスロットの抽選では、<strong>過去の当たりが次の当たりやすさを高めることはありません。</strong></div>
     <div class="stat-block">
       <div class="stat-number">0%</div>
       <div class="stat-label">過去の結果が次のスピンに影響を与える確率</div>
     </div>
     <a href="#" class="story-cta">仕組みを見る</a>
   </div>
-  <div class="story-footer">
+  <div class="story-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">秘密厳守・24時間無料サポート：{{HELPLINE_NUMBER}}</span>
   </div>
 </div>

@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/creative-review/photography/output/creative-refresh-20260905/creative-refresh/shared-input/sports-friends/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "bdd50dad78e5b611b11954c4b17e88a77db1f38b24c693e5e58e389ac495968a",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-refresh",
+  "concept": "sports-friends",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T04:33:57.994Z",
+  "status": "started",
+  "request": {
+    "participant": "creative-refresh",
+    "condition": "shared-input",
+    "concept": "sports-friends",
+    "prompt": "Use case: photorealistic-natural. Asset type: premium editorial campaign photography for Playbook, an entertainment literacy brand. Create one authentic-looking photograph, no layout, no typography, no graphic overlay. All people clearly adults aged 30–60, candid interaction, relaxed confident energy; nobody posing for the camera. Directional warm key light, exposed faces, natural skin texture, deep navy shadows and subtle amber highlights, unbranded clothing, restrained saturation. Medium environmental shot at eye level, 4:3 landscape. Keep all faces and active hands within the central 75% of the composition, with breathing room around heads. No alcohol, drinking glasses, cash, chip piles, logos, watermarks, readable screens, fake text or prominent game equipment. Avoid exaggerated grins, celebration of money, pointing at camera, theatrical gestures, glossy synthetic skin, awkward hands or repeated faces. Three friends at a basketball arena concourse during a break in the game: a Black woman about 40 in an orange knit top, an East Asian man about 35 in a navy overshirt, and a white woman about 55 with a short silver bob wearing a forest green jacket. They are in a spirited friendly conversation, one glancing toward the arena and another amused by a comment, no phones or drinks in their hands. Frame waist-up, arena seating and warm lights softly visible behind. Shared fan experience, not posed fans cheering on cue."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Use case: photorealistic-natural. Asset type: premium editorial campaign photography for Playbook, an entertainment literacy brand. Create one authentic-looking photograph, no layout, no typography, no graphic overlay. All people clearly adults aged 30–60, candid interaction, relaxed confident energy; nobody posing for the camera. Directional warm key light, exposed faces, natural skin texture, deep navy shadows and subtle amber highlights, unbranded clothing, restrained saturation. Medium environmental shot at eye level, 4:3 landscape. Keep all faces and active hands within the central 75% of the composition, with breathing room around heads. No alcohol, drinking glasses, cash, chip piles, logos, watermarks, readable screens, fake text or prominent game equipment. Avoid exaggerated grins, celebration of money, pointing at camera, theatrical gestures, glossy synthetic skin, awkward hands or repeated faces. Three friends at a basketball arena concourse during a break in the game: a Black woman about 40 in an orange knit top, an East Asian man about 35 in a navy overshirt, and a white woman about 55 with a short silver bob wearing a forest green jacket. They are in a spirited friendly conversation, one glancing toward the arena and another amused by a comment, no phones or drinks in their hands. Frame waist-up, arena seating and warm lights softly visible behind. Shared fan experience, not posed fans cheering on cue."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "4:3",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

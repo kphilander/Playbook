@@ -12,6 +12,7 @@ import {
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { resolvePrintReviewSpec } from './output-profiles.mjs';
+import { addArtDirectionReview } from './art-direction-review.mjs';
 
 const renderDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(renderDir, '..', '..');
@@ -432,7 +433,7 @@ const html = `<!DOCTYPE html>
       <div class="stat"><strong>${newCount}</strong><span>New</span></div>
       <div class="stat"><strong>${removedCount}</strong><span>Removed</span></div>
     </div>
-    <div class="meta">Baseline ${escapeHtml(baseHash)} · ${escapeHtml(baseDate)} &nbsp;|&nbsp; Generated ${escapeHtml(generatedAt)} &nbsp;|&nbsp; <a href="./_gallery.html">Full template gallery</a></div>
+    <div class="meta">Baseline ${escapeHtml(baseHash)} · ${escapeHtml(baseDate)} &nbsp;|&nbsp; Generated ${escapeHtml(generatedAt)} &nbsp;|&nbsp; <a href="../design-preferences/index.html">Choose your preferences across 30 design pairs →</a> &nbsp;|&nbsp; <a href="./_gallery.html">Full template gallery</a></div>
   </header>
 
   <div class="toolbar">
@@ -560,7 +561,7 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
-writeFileSync(outputPath, html);
+writeFileSync(outputPath, addArtDirectionReview(html));
 
 console.log(`Built ${relative(repoRoot, outputPath)}`);
 console.log(`Baseline: ${baseHash} (${baseRef})`);

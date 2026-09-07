@@ -1,6 +1,8 @@
 # Render Pipeline
 
-HTML layout masters, PNG previews, and build scripts for Playbook collateral. The renderer contains 75 English template families and 290 localized render entries across English, Japanese, Simplified Chinese, and Arabic.
+HTML layout masters, PNG previews, and build scripts for Playbook collateral. The renderer contains English template families and localized render entries across English, Japanese, Simplified Chinese, and Arabic. The new 20-series concepts are English social masters.
+
+The [September creative review](../creative-review/index.html) covers all 320 registered render entries and 30 separate concept revisions, with a [decision and evidence ledger](../creative-review/README.md).
 
 ## Source files
 
@@ -9,6 +11,8 @@ HTML layout masters, PNG previews, and build scripts for Playbook collateral. Th
 | [render-cards.mjs](render-cards.mjs) | Puppeteer renderer, filtering, locale selection, and layout checks |
 | [output-profiles.mjs](output-profiles.mjs) | Named output sizes, print scale, and bleed configuration |
 | [build-comparison.mjs](build-comparison.mjs) | Builds a browsable before/after review sheet from the committed baseline and current PNG previews |
+| [creative-system.css](creative-system.css) | Opt-in creative refinements and bundled Latin fonts; archived concepts remain separate |
+| [text-polish.css](text-polish.css) | Shared, token-driven refinement for 26 core text-led English masters |
 | [layout-system.css](layout-system.css) | Maintained responsive, safe-zone, and format-specific layout rules |
 | [brand-inject.css](brand-inject.css) | Generated brand tokens plus the shared layout system |
 | [build-logos.mjs](build-logos.mjs) | Logo SVG generator |
@@ -18,6 +22,8 @@ HTML layout masters, PNG previews, and build scripts for Playbook collateral. Th
 `lib/generate-inject-css.mjs` appends `layout-system.css` whenever it regenerates `brand-inject.css`, so brand changes do not erase production layout rules.
 
 Rendered collateral follows the PR #111 wordmark treatment: `Playbook` in Inter 700, one weight, one color, and tight tracking. The punched-cover symbol is reserved for favicons, app icons, social avatars, and placements too tight for the wordmark.
+
+The [everyday collateral review](../text-polish/index.html) compares 26 text-led masters before and after a restrained typography and spacing pass. Its rebuild produces 2× current PNGs directly from HTML, preserves frozen baseline images and verifies unchanged wording. Use `npm run build:text-polish` and `npm run check:text-polish`; normal renderer profiles continue to supply format-specific production output.
 
 ## Usage
 
@@ -45,6 +51,32 @@ npm run build:comparison
 ```
 
 Filters can be combined with options: `--profile=print-us --locale=en sign-floor`.
+
+## Editorial concepts — series 20
+
+Three new Tier 1 concepts use editable CSS/SVG artwork, bundled local fonts, and the configured brand tokens. Each has a 1080 × 1350 PNG preview and supports the 1080 × 1080 square profile with the same copy and 42px minimum text size.
+
+| Concept | Visual idea | HTML master |
+|---|---|---|
+| Your return isn’t your profit | A receipt separates a $50 total return into a $20 stake and $30 profit. | [20a](card-20a-return-vs-profit.html) |
+| Even a good night has an end time | An emerald clock composition turns choosing an end time into a personal plan. | [20b](card-20b-pick-your-pause.html) |
+| More picks. Smaller target. | A 16-outcome grid shows the chance that four independent 50/50 picks all win. | [20c](card-20c-parlay-probability.html) |
+
+Open the [concept review sheet](concepts-20.html) for a side-by-side preview, or read the [copy, alt text, and source notes](concepts-20.md). Shared art direction is in [concept-20.css](concept-20.css).
+
+```bash
+node collateral/render/render-cards.mjs --locale=en card-20
+node collateral/render/render-cards.mjs --check --profile=social-feed --locale=en card-20
+node collateral/render/render-cards.mjs --check --profile=social-square --locale=en card-20
+```
+
+The HTML masters preserve program-name, helpline, and age placeholders. Dollar amounts and the displayed time are illustrative editorial examples. Localize those examples and retain the probability assumptions when adapting the concepts.
+
+## Model concept comparison
+
+The [model showcase gallery](model-comparison/index.html) presents fifteen concepts: three each from GPT-6 Astra, GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.3 Codex Spark, and GPT-5.5. Each agent received the same brief, brand content, template set, high reasoning request, and output requirements, then authored one sports betting concept, one gambling myth concept, and one topic of its choice. GPT-5.4 was unavailable and is not scored.
+
+Select up to three models and filter by topic, or view the [original three-model sheet](model-comparison/contact-sheet.png) and [Spark / GPT-5.5 sheet](model-comparison/contact-sheet-additions.png). This is a revised, unscored pilot: model-specific QA and unequal image-inspection support prevent a controlled competition claim. [Method and rebuild instructions](model-comparison/README.md), [review notes](model-comparison/REVIEW-NOTES.md), and a [proposed fair-test protocol](model-comparison/competition/PROTOCOL.md) document the limits and next experiment. The showcase uses its own renderer and is not added to the production template registry.
 
 ## Delivery model
 

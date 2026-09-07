@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/render/model-comparison/photo-round-02/photography-output/photo-round-02-20260904/entry-43/shared-input/wildcard/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "b5aa4830a7a29ee4c376735a3ee9b862b845aac9bdb0f9ec0d7ecd69c8221fe0",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "entry-43",
+  "concept": "wildcard",
+  "condition": "shared-input",
+  "startedAt": "2026-09-05T01:01:04.675Z",
+  "status": "started",
+  "request": {
+    "participant": "entry-43",
+    "condition": "shared-input",
+    "concept": "wildcard",
+    "prompt": "Candid editorial lifestyle photograph for an entertainment-literacy social card, portrait 3:4 composition at 2K. Three clearly adult friends aged about 28 to 45, diverse in appearance, leave a stylish sports-and-entertainment lounge together at warm early evening; one casually checks an analog wristwatch while the group keeps talking and laughing. The moment should suggest awareness of time and pace within an enjoyable shared night out, never a warning scene. Warm cinematic golden-hour key light, subtle amber highlights, navy-tinted shadows, natural skin tones, medium shallow depth of field, premium magazine editorial realism. Frame a centered medium portrait with generous breathing room around faces and hands. No readable phone or watch text, screens, signage, logos, brands, watermarks, cash, chips, betting slips, gambling equipment, alcohol, minors, distress, or solitary subjects."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Candid editorial lifestyle photograph for an entertainment-literacy social card, portrait 3:4 composition at 2K. Three clearly adult friends aged about 28 to 45, diverse in appearance, leave a stylish sports-and-entertainment lounge together at warm early evening; one casually checks an analog wristwatch while the group keeps talking and laughing. The moment should suggest awareness of time and pace within an enjoyable shared night out, never a warning scene. Warm cinematic golden-hour key light, subtle amber highlights, navy-tinted shadows, natural skin tones, medium shallow depth of field, premium magazine editorial realism. Frame a centered medium portrait with generous breathing room around faces and hands. No readable phone or watch text, screens, signage, logos, brands, watermarks, cash, chips, betting slips, gambling equipment, alcohol, minors, distress, or solitary subjects."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "3:4",
+        "imageSize": "2K"
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "participant": "entry-27",
+  "productionFiles": [
+    {
+      "file": "render.mjs",
+      "sha256": "7ccd4fda2808a508ed61b6a3f6d642f54f5ede972e05e383ba7d35270cbb6545"
+    },
+    {
+      "file": "production-fix.css",
+      "sha256": "0cf39611743ef004146a2ab46a03e03f46f297de13ecb21063fe2bc9a1d9a87c"
+    },
+    {
+      "file": "common.mjs",
+      "sha256": "609e66e2d5f523c62a67712fa05c023802f822098f65845bc07044d90b658347"
+    }
+  ],
+  "submissionIssues": [],
+  "concepts": [
+    {
+      "id": "sports",
+      "submissionSha256": "bf57e32f5f8d72f4b55374323f173efcb74f4a4c76650bf75df31f64ce69aec3",
+      "photoStatus": "generated",
+      "photoSha256": "a62052aa755584c594d383866964f9d044e94d603a6f8ea241ec15f1ab5a4827",
+      "pngSha256": "ecc7d8e17b0aa1ea033e3f792dae90a15bfa8593dfaa9dc77d2a58bb4e7be38d",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Half Right Doesn't Break Even",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "At standard −110 odds, winning half your bets does not break even. You risk $110 to win $100, so the break-even rate is about 52.4%.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Check the break-even rate before you place the bet.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Sports betting",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "myth",
+      "submissionSha256": "bf57e32f5f8d72f4b55374323f173efcb74f4a4c76650bf75df31f64ce69aec3",
+      "photoStatus": "generated",
+      "photoSha256": "c273ec471ae9b0b496dedc09f74b610ebee689fafed7cc0d587869f7e1f241f7",
+      "pngSha256": "62a4f6fd8fd6cda0daaad693095712f49b5176487ae49ec49c4624b4b6f53c06",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Your Number Didn't Get Luckier",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "On an American roulette wheel, every number has the same 1-in-38 chance on every spin. Past spins—and why you picked the number—do not change it.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Keep the ritual. Know the 1-in-38 math.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Myth check",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "id": "wildcard",
+      "submissionSha256": "bf57e32f5f8d72f4b55374323f173efcb74f4a4c76650bf75df31f64ce69aec3",
+      "photoStatus": "generated",
+      "photoSha256": "6885548a6bea486b5e1938a98d177dfb9a93867dde667586a935a498ffa85d7e",
+      "pngSha256": "c17647d5e77c6ec88c42380d06d4915af34135db25cfa99360544202391f63f2",
+      "width": 1080,
+      "height": 1350,
+      "minFontSize": 42,
+      "photoDimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "texts": [
+        {
+          "text": "Small Spins. Full-Speed Math.",
+          "size": 78,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "At $0.50 a spin every 3 seconds, you make 20 spins a minute. That is $10 wagered per minute, or $600 in an hour if the pace holds.",
+          "size": 46,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Choose your pace and budget before the first spin.",
+          "size": 46,
+          "color": "rgb(52, 211, 153)"
+        },
+        {
+          "text": "Support: 1-800-522-4700",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "You must be 21+ to gamble.",
+          "size": 42,
+          "color": "rgb(200, 200, 216)"
+        },
+        {
+          "text": "Playbook",
+          "size": 52,
+          "color": "rgb(255, 255, 255)"
+        },
+        {
+          "text": "Your play",
+          "size": 42,
+          "color": "rgb(52, 211, 153)"
+        }
+      ],
+      "issues": []
+    }
+  ]
+}

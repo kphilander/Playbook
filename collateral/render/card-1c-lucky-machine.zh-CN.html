@@ -44,26 +44,27 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card" data-layout="single-proof">
+<div class="social-card pb-creative" data-layout="single-proof">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="myth-label">误区与真相</div>
     <div class="myth-intro">有些玩家会想：</div>
     <div class="myth-statement">「这是我的幸运机器」</div>
-    <div class="fact-statement">每一次旋转都由<strong>随机数生成器</strong>决定。机器认不出你，也不会记住上一次的结果。</div>
+    <div class="fact-statement">随机数生成器决定结果。<strong>座位不会改变游戏概率。</strong>请查看规则和赔付表。</div>
     <div class="stat-row">
       <div class="stat-card">
-        <div class="game">随机数生成器的记忆：</div>
-        <div class="edge teal">0</div>
+        <div class="game">座位带来的概率优势</div>
+        <div class="edge teal">0%</div>
       </div>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

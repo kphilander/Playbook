@@ -40,7 +40,7 @@ Copy and layout specs for 6 key mobile screens where {{PROGRAM_NAME}} content in
 | **Step 2 body** | Session reminders keep you aware without killing the vibe. |
 | **Step 2 CTA** | `Set a reminder →` |
 | **Step 3 label** | Know your game |
-| **Step 3 body** | Take the 2-minute odds quiz. Most people get question 3 wrong. |
+| **Step 3 body** | Take the 2-minute odds quiz. See what you know, then explore the answers. |
 | **Step 3 CTA** | `Take the quiz →` |
 | **Skip option** | `Skip for now` (subtle, bottom-left — not hidden, but not primary) |
 
@@ -68,7 +68,7 @@ Copy and layout specs for 6 key mobile screens where {{PROGRAM_NAME}} content in
 | **Deposit limit prompt** | Want to set a weekly deposit limit? |
 | **Option A** | `Yes, set my limit →` (primary, emerald `#10B981`) |
 | **Option B** | `Not right now` (secondary, outlined) |
-| **Confirmation (if set)** | Your deposit limit is set to {{LIMIT_AMOUNT}} per {{PERIOD}}. Adjust it anytime in settings. |
+| **Confirmation (if set)** | Your deposit limit is set to {{LIMIT_AMOUNT}} per {{PERIOD}}. Review change timing in settings. |
 | **Confirmation CTA** | `Start playing →` |
 
 > Ref: Messages [D-1](../../messaging/core-messages.md#deposit-screen), [D-2](../../messaging/core-messages.md#deposit-screen), [T-3](../../messaging/core-messages.md#tools--features-that-work-for-you)
@@ -89,7 +89,7 @@ Copy and layout specs for 6 key mobile screens where {{PROGRAM_NAME}} content in
 
 | Variant | Content |
 |---|---|
-| **Standard** | You've been playing for {{DURATION}}. Most sessions average about 45 minutes. Keep going or take a break? |
+| **Standard** | You’ve been playing for {{DURATION}}. Check your time and budget. Continue or take a break? |
 | **Casual** | Quick check-in: you've been at it for {{DURATION}}. How's it going? |
 | **Witty** | Time flies when you're playing. That's by design. Here's your session update. |
 | **Informational** | Session update: {{DURATION}} so far. You've placed {{BET_COUNT}} bets. Want to set a reminder for next time? |
@@ -231,7 +231,7 @@ Copy for opt-in push notifications. Players must explicitly opt in to each categ
 
 | Notification | Body | Deep link |
 |---|---|---|
-| **Quiz hook** | New quiz question dropped. Think you know the answer? Most people don't. | Quiz |
+| **Quiz hook** | New quiz question dropped. Pick an answer. Get the explanation. | Quiz |
 | **Feature reminder** | Your deposit limit hasn't been updated in a while. Still working for you? | Deposit limits settings |
 
 ### Limit alerts
@@ -274,3 +274,7 @@ These Tier 2 templates show what key mobile touchpoints look like when rendered:
 ---
 
 *Cross-references: [Application Guidelines — Mobile](../../brand-book/07-application-guidelines.md#mobile-app) | [Core Messages](../../messaging/core-messages.md) | [Voice and Tone](../../brand-book/04-voice-and-tone.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

@@ -1,0 +1,45 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "inlineData": {
+              "mimeType": "image/jpeg",
+              "savedAsset": {
+                "file": "candidate-1-image-1.jpg",
+                "mimeType": "image/jpeg",
+                "bytes": 8705086,
+                "sha256": "21b8a89dd0714d1279bca147a6b5f25d6a65860db130b06f6eeb7fd33e019471"
+              }
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 642,
+    "candidatesTokenCount": 2503,
+    "totalTokenCount": 3600,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 642
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 2000
+      }
+    ],
+    "thoughtsTokenCount": 455,
+    "serviceTier": "standard"
+  },
+  "modelVersion": "gemini-3-pro-image",
+  "responseId": "8c-davfHLp_iz7IPuordyAQ"
+}

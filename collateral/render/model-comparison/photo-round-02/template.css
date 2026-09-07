@@ -1,0 +1,17 @@
+/* Shared editorial treatment derived from concept-20.css. No participant CSS. */
+* { box-sizing: border-box; }
+body { margin: 0; }
+.social-card.photo-concept { width:1080px; height:1350px; position:relative; overflow:hidden; background:var(--pb-color-primary); color:var(--pb-color-white); font-family:var(--pb-font-body); }
+.photo-concept::before { content:''; position:absolute; inset:0 0 auto; height:8px; background:var(--pb-gradient-bar); }
+.photo-concept .card-header { position:absolute; top:57px; left:64px; right:64px; display:flex; align-items:baseline; justify-content:space-between; gap:30px; }
+.photo-concept .card-logo { font-family:var(--pb-font-heading); font-size:56px; font-weight:700; letter-spacing:-.018em; line-height:1.1; }
+.photo-concept .category { color:var(--pb-color-secondary-light); font-size:42px; line-height:1.2; }
+.photo-concept h1 { position:absolute; top:156px; left:64px; width:952px; height:174px; margin:0; font-family:var(--pb-font-heading); font-size:78px; font-weight:800; line-height:1.05; letter-spacing:-.045em; }
+.photo-concept .photo-frame { position:absolute; top:360px; left:64px; width:465px; height:620px; margin:0; overflow:hidden; border-radius:18px; background:var(--pb-color-primary-light); }
+.photo-concept .photo-frame img { width:100%; height:100%; object-fit:cover; object-position:center; display:block; }
+.photo-concept .body-copy { position:absolute; top:360px; left:577px; width:439px; height:620px; display:flex; align-items:center; }
+.photo-concept .body-copy p { margin:0; font-size:46px; line-height:1.22; font-weight:400; }
+.photo-concept .takeaway { position:absolute; top:1027px; left:64px; width:952px; height:116px; margin:0; color:var(--pb-color-secondary-light); font-family:var(--pb-font-heading); font-size:46px; font-weight:700; line-height:1.18; letter-spacing:-.025em; }
+.photo-concept .card-footer { position:absolute; top:1173px; left:0; right:0; height:177px; padding:27px 64px; background:var(--pb-color-primary-dark); color:var(--pb-color-neutral-200); border-top:1px solid var(--pb-color-primary-light); }
+.photo-concept .card-footer p { margin:0; font-size:42px; line-height:1.25; }
+.photo-concept .photo-unavailable { display:flex; height:100%; align-items:center; padding:40px; font-size:46px; line-height:1.2; }

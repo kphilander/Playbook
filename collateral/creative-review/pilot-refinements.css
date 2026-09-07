@@ -1,0 +1,7 @@
+/* Revisions preserve the original diagram grammar. Shared refinements do not
+   write into the archived experiments or alter their recorded inputs. */
+.social-card { text-rendering: optimizeLegibility; }
+.social-card h1 { text-wrap: balance; }
+.social-card footer { font-family: var(--pb-font-body); }
+/* Reserve real clearance for the action and the support group. */
+.myth-card .memory-machine { margin-top: 24px; padding-top: 24px; padding-bottom: 24px; }

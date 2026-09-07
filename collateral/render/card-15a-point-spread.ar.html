@@ -37,26 +37,27 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
-  <div class="card-header">
-    <span class="card-logo">Playbook</span>
-    <span class="section-label">شفافية</span>
-  </div>
-  <div class="card-body">
-    <div class="eyebrow">حسابات الرهان الرياضي</div>
-    <div class="headline">فارق النقاط، موضّحًا.</div>
-    <div class="body-text">فارق النقاط ليس تخمينًا للفائز. إنه الطريقة التي تستخدمها شركة الرهان لجذب الرهانات على الفريقين.</div>
-    <div class="hero-stat">
-      <div class="big">11 د.إ</div>
-      <div class="label">للربح بقيمة 10 د.إ من أي جهة</div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
-  </div>
+<div class="social-card pb-creative">
+<div class="card-header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+<span class="section-label">شفافية</span>
+</div>
+<div class="card-body">
+<div class="eyebrow">حسابات الرهان الرياضي</div>
+<div class="headline">الفوز بالمباراة،<br/>وفارق النقاط.</div>
+<div class="body-text">عند فارق <bdi dir="ltr">−6.5</bdi>، يجب أن يفوز الفريق المرشح بفارق <bdi dir="ltr">7</bdi> نقاط أو أكثر ليفوز الرهان.</div>
+<div class="hero-stat">
+<div class="big"><bdi dir="ltr">−6.5</bdi></div>
+<div class="label">الفوز بفارق <bdi dir="ltr">7</bdi> نقاط أو أكثر</div>
+</div>
+</div>
+<div class="card-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

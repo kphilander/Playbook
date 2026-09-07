@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "name": "Three format previews load without overflow at 1440px",
+      "pass": true
+    },
+    {
+      "name": "Three format previews load without overflow at 775px",
+      "pass": true
+    },
+    {
+      "name": "Three format previews load without overflow at 390px",
+      "pass": true
+    },
+    {
+      "name": "All club previews and edit links match their format",
+      "pass": true
+    },
+    {
+      "name": "All circuit previews and edit links match their format",
+      "pass": true
+    },
+    {
+      "name": "All playbook previews and edit links match their format",
+      "pass": true
+    },
+    {
+      "name": "Brand and per-format feedback survive reload",
+      "pass": true
+    },
+    {
+      "name": "Feedback is independent for each brand",
+      "pass": true
+    },
+    {
+      "name": "Selecting the same feedback again clears it",
+      "pass": true
+    },
+    {
+      "name": "Earlier brand-expression preferences remain selected",
+      "pass": true
+    },
+    {
+      "name": "Portrait post opens the correct dimensions, crop and restrained expression",
+      "pass": true
+    },
+    {
+      "name": "Vertical story opens the correct dimensions, crop and restrained expression",
+      "pass": true
+    },
+    {
+      "name": "Landscape display opens the correct dimensions, crop and restrained expression",
+      "pass": true
+    },
+    {
+      "name": "A format can be reskinned without changing its article markup",
+      "pass": true
+    },
+    {
+      "name": "Story content stays inside the intended top and bottom insets",
+      "pass": true
+    },
+    {
+      "name": "Text in the landscape reading column passes its actual solid-background contrast",
+      "pass": true
+    },
+    {
+      "name": "Low-contrast type outside the photo is rejected",
+      "pass": true
+    },
+    {
+      "name": "Moving middle copy into the photo restores the photo reading-area guard",
+      "pass": true
+    },
+    {
+      "name": "All nine PNG links point to the promised output dimensions",
+      "pass": true
+    },
+    {
+      "name": "No browser errors",
+      "pass": true
+    }
+  ]
+}

@@ -4,9 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=420">
 <title>Push Notification — Session Reminder — Tier 1</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=Source+Sans+3:wght@300;400;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body { margin: 0; padding: 0; background: transparent; }
@@ -84,16 +81,17 @@
   }
 </style>
   <link rel="stylesheet" href="brand-inject.css">
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="push-notification">
+<div class="push-notification pb-creative">
 
   <div class="app-icon">
     <span class="app-icon-letter">P</span>
   </div>
 
   <div class="notification-text">
-    <span class="notification-app">Playbook</span>
+    <span class="notification-app">{{PROGRAM_SHORT_NAME}}</span>
     <span class="notification-title">Session reminder</span>
     <span class="notification-body">You've been playing for 1 hour. Your session reminder is here.</span>
   </div>

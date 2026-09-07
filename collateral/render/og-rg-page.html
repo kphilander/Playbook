@@ -5,8 +5,6 @@
 <!-- OG share image for the deployable RG page (collateral/rg-page.html).
      1200x630 per Open Graph spec. Photo: assets/rg-hero-photo.jpg
      (AI-generated, see collateral/assets/SOURCES.md). -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { margin: 0; padding: 0; }
@@ -28,9 +26,10 @@
   .og-url { font-family: 'Source Code Pro', monospace; font-weight: 600; font-size: 24px; color: var(--pb-color-neutral-300); }
 </style>
 <link rel="stylesheet" href="brand-inject.css">
+<link rel="stylesheet" href="creative-system.css">
 </head>
 <body>
-<div class="og-card">
+<div class="og-card pb-creative">
   <img class="og-photo" src="../assets/rg-hero-photo.jpg" alt="">
   <div class="og-scrim"></div>
   <div class="og-content">
@@ -39,7 +38,7 @@
         <rect class="mark-bar" x="14" y="14" width="16" height="36" rx="2"/>
         <polygon class="mark-play" points="34,14 54,32 34,50"/>
       </svg>
-      <span class="og-wordmark">Playbook RG</span>
+      <span class="og-wordmark">{{PROGRAM_SHORT_NAME}}</span>
     </div>
     <div class="og-headline">Play on <span>your terms.</span></div>
     <div class="og-url">{{PROGRAM_URL}}</div>

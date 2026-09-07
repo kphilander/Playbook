@@ -150,47 +150,41 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="deposit-interstitial">
-
-  <div class="accent-bar"></div>
-
-  <div class="header">
-    <span class="card-logo">Playbook</span>
-  </div>
-
-  <div class="content">
-    <h1 class="heading">قبل الإيداع</h1>
-    <p class="body-text">ضبط الحد لا يستغرق سوى 10 ثوانٍ — اختيار الميزانية يكفي.</p>
-
-    <div class="limit-list">
-      <div class="limit-option">
-        <div class="radio-circle"><div class="radio-fill"></div></div>
-        <div class="limit-label">50 د.إ/أسبوع</div>
-      </div>
-      <div class="limit-option selected">
-        <div class="radio-circle"><div class="radio-fill"></div></div>
-        <div class="limit-label">100 د.إ/أسبوع</div>
-      </div>
-      <div class="limit-option">
-        <div class="radio-circle"><div class="radio-fill"></div></div>
-        <div class="limit-label">200 د.إ/أسبوع</div>
-      </div>
-      <div class="limit-option">
-        <div class="radio-circle"><div class="radio-fill"></div></div>
-        <div class="limit-label">قيمة مخصّصة</div>
-      </div>
-    </div>
-
-    <button class="cta-button">ضبط الحد ومتابعة</button>
-    <a class="skip-link">التخطي الآن</a>
-  </div>
-
-  <div class="footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-  </div>
-
+<div class="deposit-interstitial pb-creative">
+<div class="accent-bar"></div>
+<div class="header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+</div>
+<div class="content">
+<h1 class="heading">قبل الإيداع</h1>
+<p class="body-text">ضبط الحد لا يستغرق سوى <bdi dir="ltr">10</bdi> ثوانٍ — اختيار الميزانية يكفي.</p>
+<div class="limit-list">
+<div class="limit-option">
+<div class="radio-circle"><div class="radio-fill"></div></div>
+<div class="limit-label"><bdi dir="ltr">50</bdi> د.إ/أسبوع</div>
+</div>
+<div class="limit-option selected">
+<div class="radio-circle"><div class="radio-fill"></div></div>
+<div class="limit-label"><bdi dir="ltr">100</bdi> د.إ/أسبوع</div>
+</div>
+<div class="limit-option">
+<div class="radio-circle"><div class="radio-fill"></div></div>
+<div class="limit-label"><bdi dir="ltr">200</bdi> د.إ/أسبوع</div>
+</div>
+<div class="limit-option">
+<div class="radio-circle"><div class="radio-fill"></div></div>
+<div class="limit-label">قيمة مخصّصة</div>
+</div>
+</div>
+<button class="cta-button">ضبط الحد ومتابعة</button>
+<a class="skip-link">التخطي الآن</a>
+</div>
+<div class="footer">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+</div>
 </div>
 </body>
 </html>

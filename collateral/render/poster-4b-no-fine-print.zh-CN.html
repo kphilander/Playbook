@@ -53,17 +53,18 @@
       --pb-font-body: 'Inter', 'Noto Sans SC', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster" data-layout="two-comparisons">
+<div class="poster pb-creative poster-editorial" data-layout="two-comparisons">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     <span class="section-label">真实赔率</span>
   </div>
   <div class="poster-body">
     <div class="eyebrow">没有隐藏条款</div>
-    <div class="headline">每款游戏都有<span class="teal">庄家优势</span>。<br>看看数字是多少。</div>
-    <div class="subhead">庄家优势，是赌场长期平均保留的比例。</div>
+    <div class="headline">同样的投注额。<br>不同的庄家优势。</div>
+    <div class="subhead">庄家优势是长期预期损失占总投注额的比例。具体数值取决于规则和策略。</div>
     <div class="edge-list">
       <div class="edge-row">
         <div class="edge-bar-wrap">
@@ -74,7 +75,7 @@
       </div>
       <div class="edge-row">
         <div class="edge-bar-wrap">
-          <div class="edge-game">美式轮盘</div>
+          <div class="edge-game">美式轮盘（多数玩法）</div>
           <div class="edge-bar high"></div>
         </div>
         <div class="edge-pct orange">5.26%</div>
@@ -82,7 +83,7 @@
     </div>
     <a href="#" class="poster-cta">查看完整对比</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24小时免费保密支援：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

@@ -1,0 +1,95 @@
+/* Composition only. Skins supply type, color and graphic weight.
+   Photo shadow stops are tied to the reading areas, not to a brand name. */
+.message-concept[data-template^="campaign-"] {
+  --campaign-field:var(--pb-color-primary-dark);
+  --campaign-ink:var(--pb-color-white);
+  --campaign-accent:var(--pb-color-secondary-light);
+  --campaign-weight:600;
+  --campaign-tracking:-.055em;
+  --campaign-outline:3px;
+  --campaign-heading:118px;
+  --campaign-case:none;
+  --photo-top-alpha:.74;
+  --photo-top-end:12%;
+  --photo-bottom-alpha:.78;
+  --photo-bottom-start:54%;
+  background:var(--campaign-field);
+  color:var(--campaign-ink);
+}
+[data-template^="campaign-"] .campaign-photo {position:absolute;inset:0;margin:0;overflow:hidden;}
+[data-template^="campaign-"] .campaign-photo img {width:100%;height:100%;display:block;object-fit:cover;object-position:var(--media-x,50%) var(--media-y,50%);}
+[data-template^="campaign-"] .campaign-photo svg {width:100%;height:100%;background:var(--campaign-field);color:var(--campaign-accent);}
+[data-template^="campaign-"] .campaign-shade {position:absolute;inset:0;pointer-events:none;}
+[data-template^="campaign-"] .mc-header {top:54px;left:60px;right:60px;font:400 42px/1.2 var(--body);}
+[data-template^="campaign-"] .mc-header>span {color:var(--campaign-ink);}
+[data-template^="campaign-"] .brand-logo {width:255px;}
+[data-template^="campaign-"] h1 {left:60px;width:960px;top:770px;font:var(--campaign-weight) var(--campaign-heading)/1 var(--display);letter-spacing:var(--campaign-tracking);text-transform:var(--campaign-case);}
+[data-template^="campaign-"] .mc-copy {left:60px;right:60px;top:1038px;font:400 42px/1.2 var(--body);}
+[data-template^="campaign-"] .mc-action {top:1174px;left:60px;right:60px;min-height:58px;font:600 42px/1.2 var(--body);color:var(--campaign-accent);}
+[data-template^="campaign-"] .mc-action svg {width:42px;height:42px;}
+[data-template^="campaign-"] .campaign-footer {position:absolute;left:60px;right:60px;bottom:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;font:400 42px/1.15 var(--pb-font-body);}
+[data-template^="campaign-"] .campaign-footer a {font-weight:600;color:inherit;text-decoration:none;white-space:nowrap;}
+.mc-campaign-cinema .campaign-photo img {height:940px;object-position:var(--media-x,50%) var(--media-y,23%);}
+.mc-campaign-cinema .campaign-shade {background:linear-gradient(rgb(0 0 0 / var(--photo-top-alpha)) 0%,rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),#0000 25%,#0000 38%,rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),#000 68%);}
+.message-concept.mc-campaign-cinema {background:#000;}
+.message-concept.mc-campaign-pause {--photo-top-end:39%;--photo-bottom-start:76%;--photo-bottom-alpha:.8;}
+.mc-campaign-pause h1 {top:176px;--campaign-heading:144px;width:860px;}
+.mc-campaign-pause .campaign-shade {background:linear-gradient(rgb(0 0 0 / var(--photo-top-alpha)) 0%,rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),#0000 45%,#0000 61%,rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),#000e 86%,#000e 100%);}
+.mc-campaign-pause .campaign-pause-mark {position:absolute;right:60px;top:210px;width:78px;height:125px;fill:var(--campaign-accent);stroke:none;}
+.mc-campaign-probability h1 {top:174px;--campaign-heading:110px;}
+.mc-campaign-probability .campaign-outcomes {position:absolute;left:60px;top:472px;width:550px;height:550px;stroke-width:var(--campaign-outline);color:var(--campaign-ink);}
+.mc-campaign-probability .campaign-outcomes svg {width:100%;height:100%;stroke-width:inherit;}
+.mc-campaign-probability .campaign-outcomes .winning {fill:var(--campaign-accent);stroke:var(--campaign-accent);}
+.mc-campaign-probability .campaign-outcomes .other {fill:none;stroke:var(--campaign-ink);}
+.mc-campaign-probability .campaign-stat {position:absolute;left:676px;top:565px;width:344px;line-height:1;font-family:var(--display);}
+.mc-campaign-probability .campaign-stat span {display:block;font-size:64px;letter-spacing:-.03em;}
+.mc-campaign-probability .campaign-stat strong {display:block;font-size:238px;font-weight:var(--campaign-weight);letter-spacing:-.045em;}
+.mc-campaign-probability .mc-copy {top:1050px;}
+
+/* Round four: a photographic cover, symbolic reels, pocket arithmetic,
+   and an oversized time symbol. All live inside the existing skin contract. */
+.message-concept.mc-campaign-rest {--photo-top-alpha:.6;--photo-top-end:35%;--photo-bottom-start:76%;--photo-bottom-alpha:.62;}
+.mc-campaign-rest h1 {top:176px;--campaign-heading:130px;}
+.mc-campaign-rest .campaign-shade {
+  /* Ease through the entire photograph instead of two abrupt black shelves.
+     The first/last reading areas never fall below their declared minimum. */
+  background:linear-gradient(
+    rgb(0 0 0 / var(--photo-top-alpha)) 0%,
+    rgb(0 0 0 / var(--photo-top-alpha)) var(--photo-top-end),
+    rgb(0 0 0 / .52) 40%,rgb(0 0 0 / .34) 45%,
+    rgb(0 0 0 / .22) 50%,rgb(0 0 0 / .20) 55%,
+    rgb(0 0 0 / .28) 60%,rgb(0 0 0 / .42) 66%,
+    rgb(0 0 0 / .55) 71%,
+    rgb(0 0 0 / var(--photo-bottom-alpha)) var(--photo-bottom-start),
+    rgb(0 0 0 / var(--photo-bottom-alpha)) 100%);
+}
+.mc-campaign-rest .mc-action {color:var(--campaign-ink);}
+.mc-campaign-rest .mc-action svg {color:var(--campaign-accent);}
+.mc-campaign-nearmiss .campaign-reels {position:absolute;left:0;top:198px;width:1080px;height:535px;}
+.mc-campaign-nearmiss .reel-field {position:relative;height:430px;background:var(--campaign-accent);color:var(--campaign-field);}
+.mc-campaign-nearmiss .reel-dividers {position:absolute;inset:0;width:100%;height:100%;stroke:currentColor;stroke-width:var(--campaign-outline);}
+.mc-campaign-nearmiss .reel-marker {fill:var(--campaign-field);stroke:none;}
+.mc-campaign-nearmiss .reel-symbols {position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);place-items:center;}
+.mc-campaign-nearmiss .reel-symbol {width:260px;height:310px;fill:currentColor;stroke:none;}
+.mc-campaign-nearmiss .reel-stem {fill:none;stroke:currentColor;stroke-width:calc(8px + var(--campaign-outline));stroke-linecap:round;stroke-linejoin:round;}
+.mc-campaign-nearmiss .reel-detail {fill:none;stroke:var(--campaign-accent);stroke-width:calc(4px + var(--campaign-outline) * .5);stroke-linecap:round;}
+.mc-campaign-nearmiss .campaign-reels figcaption {position:absolute;left:60px;top:472px;font:400 42px/1.2 var(--body);}
+.mc-campaign-zero h1 {top:176px;--campaign-heading:110px;}
+.mc-campaign-zero .campaign-wheels {position:absolute;left:60px;top:448px;width:960px;display:grid;grid-template-columns:1fr 1fr;gap:60px;}
+.mc-campaign-zero .wheel-study {text-align:center;}
+.mc-campaign-zero .pocket-ring {position:relative;width:320px;height:320px;margin:0 auto;}
+.mc-campaign-zero .pocket-ring svg {width:100%;height:100%;stroke-width:2px;}
+.mc-campaign-zero .number-pocket {fill:none;stroke:var(--campaign-ink);}
+.mc-campaign-zero .zero-pocket {fill:var(--campaign-accent);stroke:var(--campaign-accent);}
+.mc-campaign-zero .zero-symbol {position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:var(--campaign-weight) 156px/1 var(--display);letter-spacing:-.04em;}
+.mc-campaign-zero .wheel-caption {margin-top:15px;font:500 42px/1.15 var(--body);}
+.mc-campaign-zero .wheel-caption span {display:block;font-weight:400;margin-top:6px;}
+.mc-campaign-zero .wheel-edge {display:block;margin-top:16px;font:var(--campaign-weight) 104px/1 var(--display);letter-spacing:-.055em;color:var(--campaign-accent);}
+.mc-campaign-zero .wheel-edge>span {font-size:64px;letter-spacing:-.04em;}
+.mc-campaign-time h1 {top:176px;--campaign-heading:116px;}
+.mc-campaign-time .campaign-dial {position:absolute;top:460px;left:60px;width:960px;height:550px;}
+.mc-campaign-time .campaign-dial svg {width:100%;height:100%;}
+.mc-campaign-time .dial-field {fill:color-mix(in srgb,var(--campaign-ink) 6%,var(--campaign-field));stroke:none;}
+.mc-campaign-time .dial-arc {stroke:var(--campaign-accent);stroke-width:var(--campaign-outline);}
+.mc-campaign-time .dial-tick {stroke:var(--campaign-ink);stroke-width:calc(var(--campaign-outline) * .7 + 1px);stroke-linecap:butt;}
+.mc-campaign-time .dial-pause,.mc-campaign-time .dial-stop {fill:var(--campaign-accent);stroke:none;}

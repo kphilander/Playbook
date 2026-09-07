@@ -88,22 +88,19 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="push-notification">
-
-  <div class="app-icon">
-    <span class="app-icon-letter">P</span>
-  </div>
-
-  <div class="notification-text">
-    <span class="notification-app">Playbook</span>
-    <span class="notification-title">تذكير الجلسة</span>
-    <span class="notification-body">مرّت ساعة من اللعب. هذا تذكير الجلسة.</span>
-  </div>
-
-  <span class="notification-time">الآن</span>
-
+<div class="push-notification pb-creative">
+<div class="app-icon">
+<span class="app-icon-letter">P</span>
+</div>
+<div class="notification-text">
+<span class="notification-app">{{PROGRAM_SHORT_NAME}}</span>
+<span class="notification-title">تذكير الجلسة</span>
+<span class="notification-body">مرّت ساعة من اللعب. هذا تذكير الجلسة.</span>
+</div>
+<span class="notification-time">الآن</span>
 </div>
 </body>
 </html>

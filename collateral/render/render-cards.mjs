@@ -47,6 +47,10 @@ const OUT_DIR = process.env.RENDER_OUT_DIR || __dirname;
 
 const cards = [
   // Social cards (1080x1350 primary feed canvas)
+  // Editorial concepts (20): receipt math, session planning, parlay probability
+  { html: 'card-20a-return-vs-profit.html', output: 'card-20a-return-vs-profit.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-20b-pick-your-pause.html', output: 'card-20b-pick-your-pause.png', w: 1080, h: 1350, selector: '.social-card' },
+  { html: 'card-20c-parlay-probability.html', output: 'card-20c-parlay-probability.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'card-1a-hot-streak.html', output: 'card-1a-hot-streak.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'card-1b-due-for-win.html', output: 'card-1b-due-for-win.png', w: 1080, h: 1350, selector: '.social-card' },
   { html: 'card-1c-lucky-machine.html', output: 'card-1c-lucky-machine.png', w: 1080, h: 1350, selector: '.social-card' },
@@ -687,6 +691,9 @@ async function render() {
               foldCrossings,
               uncontainedProtected,
               foldZoneOverlaps,
+              orphanedFooters: [...document.querySelectorAll('[data-protected-zone], .footer, .card-footer, .story-footer, .poster-footer')]
+                .filter(node => !root.contains(node) && node.getBoundingClientRect().height > 0)
+                .map(describe),
             };
           }, { selector: card.selector, readabilityFloor: readabilityFloors.get(card.selector) || 0 });
 
@@ -711,6 +718,10 @@ async function render() {
 
           if (metrics.occluded.length > 0) {
             failures.push(`${card.html}: visible text overlaps protected footer: ${metrics.occluded.join('; ')}`);
+          }
+
+          if (metrics.orphanedFooters.length > 0) {
+            failures.push(`${card.html}: footer outside render root: ${metrics.orphanedFooters.join('; ')}`);
           }
 
           if (metrics.foldCrossings.length > 0) {
@@ -796,4 +807,7 @@ async function render() {
   }
 }
 
-render().catch(console.error);
+render().catch(error => {
+  console.error(error);
+  process.exitCode = 1;
+});

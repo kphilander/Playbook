@@ -40,38 +40,39 @@
       --pb-font-body: 'Inter', 'Noto Sans Arabic', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
-  <div class="card-header">
-    <span class="card-logo">Playbook</span>
-    <span class="section-label">الاحتمالات الحقيقية</span>
-  </div>
-  <div class="card-body">
-    <div class="headline">لكل لعبة نسبة للكازينو.<br>وفيما يلي التفاصيل.</div>
-    <div class="odds-grid">
-      <div class="odds-item">
-        <div class="odds-game">بلاك جاك (الاستراتيجية الأساسية)</div>
-        <div class="odds-edge teal">0.5%</div>
-      </div>
-      <div class="odds-item">
-        <div class="odds-game">الروليت الأوروبي</div>
-        <div class="odds-edge white">2.7%</div>
-      </div>
-      <div class="odds-item">
-        <div class="odds-game">الروليت الأمريكي</div>
-        <div class="odds-edge orange">5.26%</div>
-      </div>
-      <div class="odds-item">
-        <div class="odds-game">آلات القمار (المتوسط)</div>
-        <div class="odds-edge white">2-15%</div>
-      </div>
-    </div>
-  </div>
-  <div class="card-footer">
-    <span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
-    <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
-  </div>
+<div class="social-card pb-creative">
+<div class="card-header">
+<span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
+<span class="section-label">الاحتمالات الحقيقية</span>
+</div>
+<div class="card-body">
+<div class="headline">لكل لعبة نسبة للكازينو.<br/>وفيما يلي التفاصيل.</div>
+<div class="odds-grid">
+<div class="odds-item">
+<div class="odds-game">بلاك جاك (الاستراتيجية الأساسية)</div>
+<div class="odds-edge teal"><bdi dir="ltr">0.5%</bdi></div>
+</div>
+<div class="odds-item">
+<div class="odds-game">الروليت الأوروبي</div>
+<div class="odds-edge white"><bdi dir="ltr">2.7%</bdi></div>
+</div>
+<div class="odds-item">
+<div class="odds-game">الروليت الأمريكي</div>
+<div class="odds-edge orange"><bdi dir="ltr">5.26%</bdi></div>
+</div>
+<div class="odds-item">
+<div class="odds-game">آلات القمار (المتوسط)</div>
+<div class="odds-edge white"><bdi dir="ltr">2-15%</bdi></div>
+</div>
+</div>
+</div>
+<div class="card-footer" data-protected-zone="support-and-legal">
+<span class="footer-helpline">دعم مجاني وسري على مدار الساعة: <span dir="ltr">{{HELPLINE_NUMBER}}</span></span>
+<span class="footer-legal">{{AGE_DISCLAIMER}}</span>
+</div>
 </div>
 </body>
 </html>

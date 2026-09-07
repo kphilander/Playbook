@@ -1,0 +1,47 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/campaign-concepts/photography/output/campaign-photo-scenes-20260906/creative-campaign/shared-input/rest-night-out/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "1c77fd2fc6d643a1cd13a3e7a068f1b37d9a527a6229fa0aaf31e60476e7c938",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-campaign",
+  "concept": "rest-night-out",
+  "condition": "shared-input",
+  "startedAt": "2026-09-06T20:41:32.159Z",
+  "status": "generated",
+  "httpStatus": 200,
+  "images": [
+    {
+      "file": "candidate-1-image-1.jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 9139383,
+      "sha256": "fffe0b329c48d70e894d1ddc307f5284825b5f915ae35d87d9a876140e6eeaab"
+    }
+  ],
+  "actualModelVersion": "gemini-3-pro-image",
+  "usage": {
+    "promptTokenCount": 650,
+    "candidatesTokenCount": 2449,
+    "totalTokenCount": 3574,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 650
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "IMAGE",
+        "tokenCount": 2000
+      }
+    ],
+    "thoughtsTokenCount": 475,
+    "serviceTier": "standard"
+  },
+  "finishReasons": [
+    "STOP"
+  ],
+  "elapsedMs": 35855,
+  "completedAt": "2026-09-06T20:42:08.014Z"
+}

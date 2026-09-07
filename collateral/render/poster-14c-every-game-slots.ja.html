@@ -37,11 +37,12 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="poster">
+<div class="poster pb-creative">
   <div class="poster-header">
-    <span class="poster-logo">Playbook</span>
+    <span class="poster-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="poster-body">
@@ -50,10 +51,10 @@
       <span class="stat-number">2〜15%</span>
       <span class="stat-label">スロットマシン</span>
     </div>
-    <div class="body-line">取り分は回す前に決まっていて、見ることはできません。</div>
+    <div class="body-line">控除率はゲームにより異なります。還元率の情報をご確認ください。</div>
     <a href="#" class="poster-cta">{{PROGRAM_URL}} でご自身のゲームの取り分をご確認ください</a>
   </div>
-  <div class="poster-footer">
+  <div class="poster-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料・秘密厳守サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>

@@ -1,0 +1,42 @@
+{
+  "directory": "/Users/ksr/Playbook/collateral/campaign-concepts/photography/output/campaign-round-4-20260905/creative-campaign/shared-input/room-for-the-rest/attempt-1",
+  "attempt": 1,
+  "settingsSha256": "3eac44d5fa7d94dfcbd6344207595dfa42b0ea508f0cbf2f569fedf72d421e0c",
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d",
+  "provider": "google-gemini",
+  "requestedModel": "gemini-3-pro-image",
+  "participant": "creative-campaign",
+  "concept": "room-for-the-rest",
+  "condition": "shared-input",
+  "startedAt": "2026-09-06T03:23:51.302Z",
+  "status": "started",
+  "request": {
+    "participant": "creative-campaign",
+    "condition": "shared-input",
+    "concept": "room-for-the-rest",
+    "prompt": "Use case: photorealistic-natural. A single exceptionally crisp 4K vertical 4:5 editorial photograph for an adult entertainment-literacy campaign, no typography or graphic design baked in. Two adult friends around 40 to 55, a woman with a dark curly bob and olive skin wearing a rich rust-red relaxed blouse, and a Black man with closely cropped hair and a little grey at his temples wearing a casual cream linen shirt, sharing an unposed conversation on a beautiful contemporary resort restaurant terrace at dusk. They have stepped away from a game to enjoy the rest of their evening. No gambling equipment needs to be visible. Quiet confidence, genuine understated amusement, a small candid gesture, not looking at camera. Composition is architectural and deliberate: photograph from several paces away on a 50mm lens, f/5.6, sharp eyes, sharp natural hair, fabric weave and skin texture; neither heavy bokeh nor motion blur. The upper 34 percent is an uninterrupted dark charcoal-green exterior wall beneath a timber roof overhang, softly textured and quiet enough to receive a future large headline. The two people are placed across the middle of the frame, heads between 42 and 56 percent of the image height, fully intact heads and hands, faces separated clearly from background. A softly lit amber stone terrace and one restrained olive tree appear behind them. At lower left a dark table with two simple water tumblers, no alcohol, no food spectacle. The bottom 24 percent is simple dark foreground architecture and table shadow, quiet enough for a future short caption. The composition must reach every edge as a real photograph, with no border, split panel, artificial vignette, card or paper frame. Rich warm light on real skin, restrained forest, cream and terracotta colors. Realistic pores, fine lines, slight asymmetry and believable anatomically correct hands. Precise optical detail throughout both people and nearby architecture, no digital smoothing, dreamy haze, grain overlay, glossy plastic faces, illustrated or painted surfaces. No cash, chips, casino wins, readable signs, logos, screens, watermarks or text. Adult friends, premium hospitality, ordinary clothes rather than formal luxury styling."
+  },
+  "payload": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Use case: photorealistic-natural. A single exceptionally crisp 4K vertical 4:5 editorial photograph for an adult entertainment-literacy campaign, no typography or graphic design baked in. Two adult friends around 40 to 55, a woman with a dark curly bob and olive skin wearing a rich rust-red relaxed blouse, and a Black man with closely cropped hair and a little grey at his temples wearing a casual cream linen shirt, sharing an unposed conversation on a beautiful contemporary resort restaurant terrace at dusk. They have stepped away from a game to enjoy the rest of their evening. No gambling equipment needs to be visible. Quiet confidence, genuine understated amusement, a small candid gesture, not looking at camera. Composition is architectural and deliberate: photograph from several paces away on a 50mm lens, f/5.6, sharp eyes, sharp natural hair, fabric weave and skin texture; neither heavy bokeh nor motion blur. The upper 34 percent is an uninterrupted dark charcoal-green exterior wall beneath a timber roof overhang, softly textured and quiet enough to receive a future large headline. The two people are placed across the middle of the frame, heads between 42 and 56 percent of the image height, fully intact heads and hands, faces separated clearly from background. A softly lit amber stone terrace and one restrained olive tree appear behind them. At lower left a dark table with two simple water tumblers, no alcohol, no food spectacle. The bottom 24 percent is simple dark foreground architecture and table shadow, quiet enough for a future short caption. The composition must reach every edge as a real photograph, with no border, split panel, artificial vignette, card or paper frame. Rich warm light on real skin, restrained forest, cream and terracotta colors. Realistic pores, fine lines, slight asymmetry and believable anatomically correct hands. Precise optical detail throughout both people and nearby architecture, no digital smoothing, dreamy haze, grain overlay, glossy plastic faces, illustrated or painted surfaces. No cash, chips, casino wins, readable signs, logos, screens, watermarks or text. Adult friends, premium hospitality, ordinary clothes rather than formal luxury styling."
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "candidateCount": 1,
+      "responseModalities": [
+        "TEXT",
+        "IMAGE"
+      ],
+      "imageConfig": {
+        "aspectRatio": "4:5",
+        "imageSize": "4K"
+      }
+    }
+  }
+}

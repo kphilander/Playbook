@@ -1,0 +1,10 @@
+{
+  "provider": "google-gemini",
+  "runId": "campaign-round-4-20260905",
+  "model": "gemini-3-pro-image",
+  "aspectRatio": "4:5",
+  "imageSize": "4K",
+  "referenceMode": "none",
+  "maxAttemptsPerConcept": 1,
+  "implementationSha256": "32ebb2ec27b408e237dab8996c508a195fabf215b4600c9d7f494ea9ca03eb3d"
+}

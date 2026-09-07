@@ -52,8 +52,8 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 
 | # | Stat | Context |
 |---|---|---|
-| 1 | **0.5%** | Blackjack house edge — best odds in the casino |
-| 2 | **5.26%** | American roulette house edge — double zero, double edge |
+| 1 | **0.5%** | Blackjack house edge — about 0.5% with basic strategy under favorable rules |
+| 2 | **5.26%** | American roulette house edge — double-zero wheel; most bets |
 | 3 | **2–15%** | Slots house edge — varies by machine and casino |
 
 | Element | Content |
@@ -95,7 +95,7 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 
 | Tool | One-liner |
 |---|---|
-| **Deposit limits** | Set your entertainment budget. Takes 10 seconds. |
+| **Deposit limits** | Set your entertainment budget. Choose your amount and time frame. |
 | **Session reminders** | Stay aware. Set your interval. |
 | **Activity dashboard** | Your play stats at a glance. No surprises. |
 | **Game IQ quiz** | Test your odds knowledge. Challenge your friends. |
@@ -105,7 +105,7 @@ Two-sided rack card spec for {{PROGRAM_NAME}}. Portable quick reference for card
 | Element | Content |
 |---|---|
 | **Headline** | Think you know the odds? |
-| **Body** | 7 questions. 2 minutes. Most people get question 3 wrong. |
+| **Body** | 7 questions. 2 minutes. See what you know, then explore the answers. |
 | **CTA** | Take the quiz → {{QUIZ_URL}} |
 | **QR code** | Links to quiz |
 
@@ -150,7 +150,7 @@ The default rack card uses "Know Your Game" odds literacy content. These variant
 |---|---|
 | **Pillar badge** | `OPEN` (emerald pill) |
 | **Headline** | Your tools. Your limits. Your call. |
-| **Feature 1** | **Deposit limits** — Set your entertainment budget in 10 seconds |
+| **Feature 1** | **Deposit limits** — Choose a deposit amount and period |
 | **Feature 2** | **Session reminders** — Stay aware without killing the vibe |
 | **Feature 3** | **Activity dashboard** — Your play stats, no surprises |
 | **Callout** | All free. All in your account settings. |
@@ -178,13 +178,17 @@ Front-side translation for US Hispanic markets. Back-side structure unchanged �
 | Element | English | Spanish |
 |---|---|---|
 | **Headline** | Every game has math. Here's yours. | Cada juego tiene su matemática. Aquí está la tuya. |
-| **Stat context (blackjack)** | Blackjack house edge — best odds in the casino | Ventaja de la casa en blackjack — las mejores probabilidades del casino |
+| **Stat context (blackjack)** | Blackjack house edge — about 0.5% with basic strategy under favorable rules | Ventaja de la casa en blackjack — con estrategia básica y reglas favorables |
 | **Callout** | Knowing the edge helps you pick your games and set your budget. | Conocer la ventaja te ayuda a elegir tus juegos y fijar tu presupuesto. |
 | **QR label** | Scan for the facts | Escanea para conocer los datos |
 | **Helpline** | Free, confidential support 24/7 | Apoyo gratuito y confidencial 24/7 |
 
-**Translation rules**: Translate meaning, not words. Spanish copy is typically 20-30% longer — adjust font sizes accordingly. Test with native speakers before print. See `brand-book/06-accessibility.md` for full translation guidelines.
+**Translation rules**: Translate meaning, not words. Allow for text expansion by shortening or recomposing; retain the minimum readable text size. Test with native speakers before print. See `brand-book/06-accessibility.md` for full translation guidelines.
 
 ---
 
 *Cross-references: [Application Guidelines — Print](../../brand-book/07-application-guidelines.md#print-applications) | [Core Messages](../../messaging/core-messages.md) | [HTML template](../render/rack-card-5a.html)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

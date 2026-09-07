@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2026-09-05T01:03:14.992075+00:00",
+  "scope": "Coordinator production implementation after the documented common header-spacing fix. Frozen authoring inputs are in inputs.json.",
+  "files": [
+    {
+      "file": "common.mjs",
+      "sha256": "609e66e2d5f523c62a67712fa05c023802f822098f65845bc07044d90b658347"
+    },
+    {
+      "file": "freeze.mjs",
+      "sha256": "6c61d8b71aa2dc834938830a0611616b6196769c59582b01b69a07dd10b105d7"
+    },
+    {
+      "file": "produce.mjs",
+      "sha256": "cbce65b40337cea47383e5c311d4af2793d74e10d93a90977007723b5f4e0fe1"
+    },
+    {
+      "file": "render.mjs",
+      "sha256": "7ccd4fda2808a508ed61b6a3f6d642f54f5ede972e05e383ba7d35270cbb6545"
+    },
+    {
+      "file": "production-fix.css",
+      "sha256": "0cf39611743ef004146a2ab46a03e03f46f297de13ecb21063fe2bc9a1d9a87c"
+    }
+  ]
+}

@@ -103,7 +103,7 @@ These are design specifications, not code. Implementation will vary by platform.
 ### Result screen
 
 - **Bold takeaway** at the top — the key learning point, not the score
-- **Score context** in muted text — framed as comparison ("Here's what most people get wrong"), not as a grade
+- **Score context** in muted text — framed as comparison ("Here’s how the answer works"), not as a grade
 - **Share button** — prominent, positioned for thumb reach
 - **"Explore more" CTA** — links to related content from the same campaign pillar
 - **{{PROGRAM_NAME}} branding** and helpline in the footer
@@ -192,7 +192,7 @@ RESULT SCREEN COPY
 Low (0–2):    [Encouraging message. Never shaming. Normalize the
                misconceptions and point to content.]
 Mid (3–4):    [Acknowledge what they know. Highlight what trips
-               most people up. Link to deeper content.]
+               the player chose incorrectly. Link to the explanation.]
 High (5):     [Celebrate. Invite them to share and challenge friends.]
 
 Related content link:  [URL or content reference]
@@ -211,7 +211,7 @@ A complete 5-question quiz ready for production.
 QUIZ BRIEF
 ================================================================
 
-Quiz title:       "Myth Busters: 5 Things Most Players Get Wrong"
+Quiz title:       "Myth Busters: 5 Questions Worth Asking"
 Campaign pillar:  Myth Busters
 Target segment:   All players (general audience)
 Quiz type:        Multiple choice
@@ -220,103 +220,69 @@ Quiz type:        Multiple choice
 
 QUESTION 1 — The Hot Hand
 ----------
-Stem:         You've won 4 spins in a row on a slot machine.
-              What are the odds on spin 5?
-Option A:     Better than normal — you're on a streak
-Option B:     Worse than normal — you're "due" for a loss
-Option C:     Exactly the same as every other spin ✓
-Option D:     It depends on the machine's payout cycle
-Explanation:  Every spin is generated independently by a random
-              number generator (RNG). The machine has no memory of
-              previous results. Streaks are patterns your brain
-              invents — the math doesn't see them.
-Source:        RNG independence: Gaming Standards Association,
-              GSA Technical Standard 2.1
+Stem:         In an independent slot game, you’ve won four spins in a
+              row. Do those wins improve the chance on spin five?
+Option A:     Yes — winning runs improve the odds
+Option B:     No — past wins do not change that chance ✓
+Option C:     Only after a near miss
+Explanation:  Independent results do not compensate for earlier wins
+              or losses. A streak can happen without predicting the
+              next result. This does not mean systems keep no records.
+Source:       UK Gambling Commission, RTS 7 — Generation of random outcomes
 
 QUESTION 2 — Due Numbers
 ----------
-Stem:         In roulette, number 17 hasn't come up in 60 spins.
-              Is it more likely to appear on the next spin?
-Option A:     Yes — the law of averages means it's overdue
-Option B:     Yes — the wheel adjusts over time
-Option C:     No — each spin is independent and every number
-              has equal odds ✓
-Option D:     It depends on the type of roulette wheel
-Explanation:  This is the gambler's fallacy — the belief that past
-              results affect future probabilities in a random system.
-              On a European wheel, every number has a 1-in-37 chance
-              on every spin, regardless of history. The ball has
-              no memory.
-Source:        Tversky & Kahneman (1971), "Belief in the law of
-              small numbers," Psychological Bulletin
+Stem:         On a fair European single-zero roulette wheel, number 17
+              has not appeared in 60 spins. Is it more likely next?
+Option A:     Yes — it is overdue
+Option B:     No — it still has a 1-in-37 chance ✓
+Option C:     Only if someone bets on it
+Explanation:  There are 37 equally likely pockets in this example.
+              Earlier spins do not change the next spin’s chance.
+Source:       1 / 37; how-to-play/roulette.md
 
-QUESTION 3 — Skill in Slots
+QUESTION 3 — Game Choice
 ----------
-Stem:         What role does player skill play in determining
-              the outcome of a slot machine spin?
-Option A:     Timing your button press can affect the result
-Option B:     Experienced players learn to read the patterns
-Option C:     Choosing the right bet size changes the odds
-Option D:     None — the outcome is determined by the RNG
-              before the reels display ✓
-Explanation:  Modern slot machines determine the result the instant
-              you press the button. The spinning reels are a visual
-              display of a decision already made. No amount of timing,
-              experience, or bet selection changes the underlying
-              probability. The house edge is fixed in the software.
-Source:        Nevada Gaming Control Board, Technical Standards
-              for Gaming Devices (RNG requirements)
+Stem:         Two slot games have different rules and paytables.
+              Must they have the same return to player?
+Option A:     Yes — all slots have the same math
+Option B:     No — check each game’s rules and return information ✓
+Option C:     Only the cabinet color matters
+Explanation:  Games can have different mathematical models. Choosing
+              a game is different from predicting its next independent
+              result using a lucky hunch or its recent history.
+Source:       how-to-play/slots.md — House edge and RTP
 
-QUESTION 4 — House Edge Misunderstanding
+QUESTION 4 — What RTP Measures
 ----------
-Stem:         A slot machine has a 95% return-to-player (RTP).
-              If you put in $100, what should you expect?
-Option A:     You'll get exactly $95 back
-Option B:     You'll probably get $95 back, give or take ✓
-Option C:     You're guaranteed to lose only $5
-Option D:     You'll get $95 back if you play long enough
-Explanation:  A 95% RTP means that over millions of spins, the
-              machine returns 95 cents per dollar wagered on average.
-              In a single session, your results will vary widely —
-              you might win big or lose everything. The 5% house
-              edge is a long-term statistical average, not a
-              per-session guarantee. "Probably $95 back, give or
-              take" is the most accurate framing of what RTP means
-              in practice.
-Source:        UK Gambling Commission, "RTP and Volatility Explained"
+Stem:         What does an advertised 95% return to player describe?
+Option A:     A promise to return $95 from your next $100 deposit
+Option B:     The average share of total wagering returned over time ✓
+Option C:     A promise that 95 of every 100 spins will win
+Explanation:  RTP describes money wagered, including money wagered again.
+              It does not predict your session, your deposit’s return,
+              or how often a spin wins. Individual results can vary.
+Source:       UK Gambling Commission — Return to player; how-to-play/slots.md
 
-QUESTION 5 — Sunk Cost / Chasing Losses
+QUESTION 5 — Budget Check
 ----------
-Stem:         You're down $200 for the session. What's the best
-              strategy to win it back?
-Option A:     Increase your bets to recover faster
-Option B:     Switch to a different game with better odds
-Option C:     Keep playing — you're due for a win soon
-Option D:     There is no strategy — each new bet faces the
-              same house edge regardless of past losses ✓
-Explanation:  This is the sunk cost fallacy. Your previous losses
-              don't change the odds on your next bet. The house
-              edge applies equally whether you're up, down, or
-              even. Chasing losses means placing more bets at a
-              mathematical disadvantage, which on average increases
-              your total loss. The most effective move is to set a
-              loss limit before you play and stick to it.
-Source:        Behavioral economics: Thaler (1980), "Toward a
-              positive theory of consumer choice"
+Stem:         You set a $40 entertainment budget and have spent $25.
+              Do you need to spend the remaining $15?
+Option A:     Yes — that is what the budget is for
+Option B:     No — a budget is a limit, not a spending target ✓
+Option C:     Yes — spending the full budget improves the next result
+Explanation:  Your chosen limit does not require you to keep playing.
+              You can stop with money left. Previous spending does not
+              make a future independent result more likely to win.
+Source:       messaging/core-messages.md — Deposit limits
 
 ================================================================
 
 RESULT SCREEN COPY
 ------------------
-Low (0–2):    "You're not alone — these are the most common
-               misconceptions in gambling. Most players get them
-               wrong. Now you know the facts. Explore the
-               breakdowns below."
-Mid (3–4):    "You know more than most — but a few common myths
-               still caught you. See which ones tripped you up
-               and why."
-High (5):     "Expert level. You see through the myths. Share
-               this quiz and see how your friends do."
+Low (0–2):    "A useful starting point. Explore the explanations below."
+Mid (3–4):    "You’ve got several of these. See how the other answers work."
+High (5):     "Five out of five. Share what you learned with a friend."
 
 Related content link:  {{PROGRAM_NAME}} content hub → Myth Busters
 Share CTA text:        "Think you know the odds? Prove it."
@@ -369,13 +335,13 @@ Quizzes work hardest when they're embedded across the player journey, not siloed
 
 ### Philosophy
 
-There are no fail states. Every score bracket leads to learning. The tone is always encouraging — never shaming, never clinical. Frame results as "here's what most people get wrong" rather than "here's what you got wrong."
+There are no fail states. Every score bracket leads to learning. The tone is always encouraging — never shaming, never clinical. Frame results as "here’s how the answer works" rather than "here's what you got wrong."
 
 ### Score brackets (5-question quiz)
 
 | Score | Label | Result message | Next action |
 |---|---|---|---|
-| 0–2 | — | "You're not alone — these are the most common misconceptions. Most people get them wrong." | Link to explanations for each question they missed |
+| 0–2 | — | "You’ve got a starting point. Explore the explanations and see what you learn." | Link to explanations for each question they missed |
 | 3–4 | — | "You know more than most — here's what trips people up." | Highlight the specific topics they missed, link to deeper content |
 | 5 | — | "Expert level — share this quiz and see how your friends do." | Prominent share CTA, challenge friends |
 
@@ -531,3 +497,7 @@ Track these to measure quiz performance and inform content iteration.
 ---
 
 *Related documents: [Myth-Busting Content Library](../../messaging/myth-busting.md) | [Campaign Briefs](../../messaging/campaigns.md) | [Messaging Framework](../../brand-book/05-messaging-framework.md) | [Accessibility](../../brand-book/06-accessibility.md)*
+
+## Creative decisions — September 2026
+
+Use the refreshed [creative review](../creative-review/README.md) and rendered masters when adapting this material. Keep the game variant and example assumptions beside a statistic. House edge describes expected loss over time; a budget is a chosen limit. Match feature timing and support availability to the configured operator.

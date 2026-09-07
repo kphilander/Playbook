@@ -1,0 +1,238 @@
+{
+  "directions": [
+    {
+      "id": "atelier",
+      "name": "Atelier",
+      "position": "Editorial luxury",
+      "description": "Warm paper, expressive serif type and fine brass rules. The confidence comes from proportion and restraint.",
+      "fit": "Destination casinos, boutique hospitality and premium membership brands.",
+      "type": "Fraunces + Inter",
+      "shape": "Fine rules · generous margins · flat surfaces",
+      "palette": [
+        [
+          "Paper",
+          "#F3EFE7"
+        ],
+        [
+          "Ink",
+          "#262A27"
+        ],
+        [
+          "Brass",
+          "#79643E"
+        ],
+        [
+          "Stone",
+          "#DCD3C2"
+        ]
+      ],
+      "note": "Let the headline breathe. Keep the data in a clear sans serif and use brass sparingly."
+    },
+    {
+      "id": "social-club",
+      "name": "Social Club",
+      "position": "Contemporary hospitality",
+      "description": "Deep forest, warm cream and a fresh chartreuse accent. Rounded forms and human photography make premium feel welcoming.",
+      "fit": "Resort casinos, social gaming and brands that need to feel both polished and approachable.",
+      "type": "Manrope + Inter",
+      "shape": "Soft corners · large photo crops · bold panels",
+      "palette": [
+        [
+          "Forest",
+          "#173C35"
+        ],
+        [
+          "Cream",
+          "#F6F1E7"
+        ],
+        [
+          "Chartreuse",
+          "#DFEDAD"
+        ],
+        [
+          "Clay",
+          "#CE785C"
+        ]
+      ],
+      "note": "The strongest bridge between casino luxury and playful digital brands. Use this when one system needs range."
+    },
+    {
+      "id": "circuit",
+      "name": "Circuit",
+      "position": "Digital precision",
+      "description": "Midnight violet, electric lime and a measured grid. Angular panels give the numbers the feel of a well-designed game interface.",
+      "fit": "Premium game platforms, live studios and adult gaming communities.",
+      "type": "Space Grotesk + Source Code Pro",
+      "shape": "Cut corners · precise rules · restrained glow",
+      "palette": [
+        [
+          "Midnight",
+          "#19162B"
+        ],
+        [
+          "Ice",
+          "#F0EDF8"
+        ],
+        [
+          "Lime",
+          "#DAFA73"
+        ],
+        [
+          "Lavender",
+          "#B6A4F4"
+        ]
+      ],
+      "note": "Keep the energy in the framing. Information stays legible; support screens become light and calm."
+    },
+    {
+      "id": "arcade",
+      "name": "Arcade",
+      "position": "Playful confidence",
+      "description": "Saturated cobalt, warm coral and oversized type. A little tilt and solid shadows make useful information feel collectible.",
+      "fit": "Playful adult game brands, creator campaigns and expressive social channels.",
+      "type": "Archivo Black + Inter",
+      "shape": "Bold outlines · offset shadows · playful geometry",
+      "palette": [
+        [
+          "Cobalt",
+          "#273DCB"
+        ],
+        [
+          "Milk",
+          "#FFF5DF"
+        ],
+        [
+          "Coral",
+          "#FC9B80"
+        ],
+        [
+          "Ink",
+          "#202744"
+        ]
+      ],
+      "note": "Use playfulness to explain something. Drop the tilt, decorative shapes and heavy shadows when someone needs support."
+    }
+  ],
+  "entries": [
+    {
+      "id": "atelier-odds",
+      "direction": "atelier",
+      "kind": "odds",
+      "title": "Atelier — Odds card",
+      "html": "masters/atelier-odds.html",
+      "png": "renders/atelier-odds.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "atelier-lifestyle",
+      "direction": "atelier",
+      "kind": "lifestyle",
+      "title": "Atelier — Lifestyle card",
+      "html": "masters/atelier-lifestyle.html",
+      "png": "renders/atelier-lifestyle.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "atelier-support",
+      "direction": "atelier",
+      "kind": "support",
+      "title": "Atelier — Support panel",
+      "html": "masters/atelier-support.html",
+      "png": "renders/atelier-support.png",
+      "width": 420,
+      "height": 740
+    },
+    {
+      "id": "social-club-odds",
+      "direction": "social-club",
+      "kind": "odds",
+      "title": "Social Club — Odds card",
+      "html": "masters/social-club-odds.html",
+      "png": "renders/social-club-odds.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "social-club-lifestyle",
+      "direction": "social-club",
+      "kind": "lifestyle",
+      "title": "Social Club — Lifestyle card",
+      "html": "masters/social-club-lifestyle.html",
+      "png": "renders/social-club-lifestyle.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "social-club-support",
+      "direction": "social-club",
+      "kind": "support",
+      "title": "Social Club — Support panel",
+      "html": "masters/social-club-support.html",
+      "png": "renders/social-club-support.png",
+      "width": 420,
+      "height": 740
+    },
+    {
+      "id": "circuit-odds",
+      "direction": "circuit",
+      "kind": "odds",
+      "title": "Circuit — Odds card",
+      "html": "masters/circuit-odds.html",
+      "png": "renders/circuit-odds.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "circuit-lifestyle",
+      "direction": "circuit",
+      "kind": "lifestyle",
+      "title": "Circuit — Lifestyle card",
+      "html": "masters/circuit-lifestyle.html",
+      "png": "renders/circuit-lifestyle.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "circuit-support",
+      "direction": "circuit",
+      "kind": "support",
+      "title": "Circuit — Support panel",
+      "html": "masters/circuit-support.html",
+      "png": "renders/circuit-support.png",
+      "width": 420,
+      "height": 740
+    },
+    {
+      "id": "arcade-odds",
+      "direction": "arcade",
+      "kind": "odds",
+      "title": "Arcade — Odds card",
+      "html": "masters/arcade-odds.html",
+      "png": "renders/arcade-odds.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "arcade-lifestyle",
+      "direction": "arcade",
+      "kind": "lifestyle",
+      "title": "Arcade — Lifestyle card",
+      "html": "masters/arcade-lifestyle.html",
+      "png": "renders/arcade-lifestyle.png",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "id": "arcade-support",
+      "direction": "arcade",
+      "kind": "support",
+      "title": "Arcade — Support panel",
+      "html": "masters/arcade-support.html",
+      "png": "renders/arcade-support.png",
+      "width": 420,
+      "height": 740
+    }
+  ]
+}

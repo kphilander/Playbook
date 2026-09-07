@@ -1,0 +1,357 @@
+{
+  "checkedAt": "2026-09-05T01:10:33.399347+00:00",
+  "frozenInputsChecked": 29,
+  "submissions": [
+    {
+      "participant": "entry-12",
+      "sha256": "537390bff68b24dfb5196cbba0af1e128e143a89f853b97cc907fde4792786e7",
+      "frozenAt": "2026-09-05T00:57:13.339Z"
+    },
+    {
+      "participant": "entry-27",
+      "sha256": "bf57e32f5f8d72f4b55374323f173efcb74f4a4c76650bf75df31f64ce69aec3",
+      "frozenAt": "2026-09-05T00:57:30.155Z"
+    },
+    {
+      "participant": "entry-43",
+      "sha256": "fa9a6256ccfe83a9f9dfb2e363b1dc96bfb45d7afbdb2884a8d1e63d34452c4e",
+      "frozenAt": "2026-09-05T01:00:59.989Z"
+    },
+    {
+      "participant": "entry-58",
+      "sha256": "1025c783479b32fc5d23c6fe6d3e75a18eb7c67b66935cbe4a10628f046695fe",
+      "frozenAt": "2026-09-05T00:52:12.509Z"
+    },
+    {
+      "participant": "entry-76",
+      "sha256": "3240776b981de32b96950e1368fadbf1d457e56cad063d3478c31360d4418544",
+      "frozenAt": "2026-09-05T00:57:14.112Z"
+    }
+  ],
+  "cards": [
+    {
+      "participant": "entry-12",
+      "id": "sports",
+      "pngSha256": "69472b567ba8acab17b7ba19e34b97b10d24f5169aba19e6b094d8a89cd23c20",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-12",
+      "id": "myth",
+      "pngSha256": "4cfaf4c83cfe4ba480da009627c65ecfb11fd0d8dee4ff80e0293871f5604c5b",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-12",
+      "id": "wildcard",
+      "pngSha256": "66b743ff761482efdd92a6e6f6d4317e3760d841c35f75bda08ae00edadef8de",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-27",
+      "id": "sports",
+      "pngSha256": "ecc7d8e17b0aa1ea033e3f792dae90a15bfa8593dfaa9dc77d2a58bb4e7be38d",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-27",
+      "id": "myth",
+      "pngSha256": "62a4f6fd8fd6cda0daaad693095712f49b5176487ae49ec49c4624b4b6f53c06",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-27",
+      "id": "wildcard",
+      "pngSha256": "c17647d5e77c6ec88c42380d06d4915af34135db25cfa99360544202391f63f2",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-43",
+      "id": "sports",
+      "pngSha256": "36995d7dbaa497a35f7f69b2c2170eef97398920a4b5f1587424a5aebdf70fae",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-43",
+      "id": "myth",
+      "pngSha256": "929f27bb1f403a7e02ab2c550ec05c5c1bfdd3b572a80107b6a5f80f60d1f801",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-43",
+      "id": "wildcard",
+      "pngSha256": "f845007179b47651830aefedb8ba107634c76499367161f686359b882d1cdd63",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-58",
+      "id": "sports",
+      "pngSha256": "03efe37fffae7882cec21f63ddef1204b7d3f3db7d8ba0f6799ebb7584959c4e",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-58",
+      "id": "myth",
+      "pngSha256": "53c96bae6e4a1ef08d3d1f122bcd8533802bd3b1985ee5875e93059e31b81a3d",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-58",
+      "id": "wildcard",
+      "pngSha256": "aac76ebf5ddf6375e812dc8d85363a793e948f06846d8b124470568e6cdad0ab",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-76",
+      "id": "sports",
+      "pngSha256": "7c87cdaec568ea6c5ac631cc6f8ea58726901f2e51d138a17dd3da6da428057a",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-76",
+      "id": "myth",
+      "pngSha256": "4ce4291cb81dc9d1e13bbad270f6e20f36f9bdffddc26fff0cc34b7418dbe4ae",
+      "minimumTextPx": 42
+    },
+    {
+      "participant": "entry-76",
+      "id": "wildcard",
+      "pngSha256": "1ce8a9f34aaf72ebf0b3e67a11466fa7e2bd057a29c1005f0b00f85451045a61",
+      "minimumTextPx": 42
+    }
+  ],
+  "photos": [
+    {
+      "participant": "entry-12",
+      "id": "sports",
+      "status": "generated",
+      "sha256": "339ede177f15d5f98dfa80d100bc6000999036ddc9772ee33ad1cb34a9ca7a04",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 22989
+    },
+    {
+      "participant": "entry-12",
+      "id": "myth",
+      "status": "generated",
+      "sha256": "169f42fe6a7dce75fd6cd60c4625373ecfd418f37626e1bcee6ec2b5bd637464",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 25017
+    },
+    {
+      "participant": "entry-12",
+      "id": "wildcard",
+      "status": "generated",
+      "sha256": "8514c7a74b7c53f82dd72e2f37576f61c42f1e200b9b0caa209dc539fe49d59e",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 26656
+    },
+    {
+      "participant": "entry-27",
+      "id": "sports",
+      "status": "generated",
+      "sha256": "a62052aa755584c594d383866964f9d044e94d603a6f8ea241ec15f1ab5a4827",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 23431
+    },
+    {
+      "participant": "entry-27",
+      "id": "myth",
+      "status": "generated",
+      "sha256": "c273ec471ae9b0b496dedc09f74b610ebee689fafed7cc0d587869f7e1f241f7",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 23070
+    },
+    {
+      "participant": "entry-27",
+      "id": "wildcard",
+      "status": "generated",
+      "sha256": "6885548a6bea486b5e1938a98d177dfb9a93867dde667586a935a498ffa85d7e",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 28658
+    },
+    {
+      "participant": "entry-43",
+      "id": "sports",
+      "status": "generated",
+      "sha256": "33a4ff735738e7c610db6e7475bd72b7034b28960b3e6f09106dacc4c19800b0",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 23968
+    },
+    {
+      "participant": "entry-43",
+      "id": "myth",
+      "status": "generated",
+      "sha256": "c74af6beaa561e10ea4c24ff0e8c379a49500cf9b585a2374829d01c3803a8f3",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 24193
+    },
+    {
+      "participant": "entry-43",
+      "id": "wildcard",
+      "status": "generated",
+      "sha256": "0e932a73a208c703d7d1de8fecb11752bad5a279f72a66c395efac3420b01d3e",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 25882
+    },
+    {
+      "participant": "entry-58",
+      "id": "sports",
+      "status": "generated",
+      "sha256": "42ffad0a0e888e0cbdc7e148d8b0be4e5247047bbe9fda381b461361d55f6c2b",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 23866
+    },
+    {
+      "participant": "entry-58",
+      "id": "myth",
+      "status": "generated",
+      "sha256": "04c5b6d8bceab904d63a605f723d74f2a069b75745ea2445984506c5b4ce7b35",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 25549
+    },
+    {
+      "participant": "entry-58",
+      "id": "wildcard",
+      "status": "generated",
+      "sha256": "2cad718170327c30791a88b45a8e2126201ac1ac81293241c39ddd46f179e787",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 22886
+    },
+    {
+      "participant": "entry-76",
+      "id": "sports",
+      "status": "generated",
+      "sha256": "02af5e9c1c6f418ce9d42e96efdb073fc364cfcf262db4c5108260c99fef5f96",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 23771
+    },
+    {
+      "participant": "entry-76",
+      "id": "myth",
+      "status": "generated",
+      "sha256": "b83f65043ea63a75021661d62e18209b48008ccb743555202c6bebd198b16b91",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 23372
+    },
+    {
+      "participant": "entry-76",
+      "id": "wildcard",
+      "status": "generated",
+      "sha256": "caa7ae6b8d90249d1983199b1ff8e8deb8488c8f3c452b6af3362ce9c0a45727",
+      "dimensions": {
+        "width": 1792,
+        "height": 2400
+      },
+      "elapsedMs": 22970
+    }
+  ],
+  "counts": {
+    "participants": 5,
+    "concepts": 15,
+    "generatedPhotos": 15,
+    "failedPhotoAttempts": 0,
+    "productionIssues": 0
+  },
+  "textContrast": [
+    {
+      "foreground": "#ffffff",
+      "background": "#1b2838",
+      "ratio": 14.92
+    },
+    {
+      "foreground": "#34d399",
+      "background": "#1b2838",
+      "ratio": 7.76
+    },
+    {
+      "foreground": "#c8c8d8",
+      "background": "#0f1923",
+      "ratio": 10.74
+    }
+  ],
+  "galleryChecks": [
+    "Five selectable participants",
+    "Three-entry default shows nine concepts",
+    "Presentation names start masked",
+    "Maximum three selected entries enforced",
+    "Two-entry comparison shows six concepts",
+    "Model identity reveal updates selected cards",
+    "Category filter preserves selected entries",
+    "Detail dialog includes separate factual-review observation",
+    "Escape closes modal",
+    "At least one selected entry enforced",
+    "All fifteen card PNGs load at 1080 \u00d7 1350",
+    "Desktop page fits viewport",
+    "390px mobile page fits viewport",
+    "Mobile detail fits dialog width",
+    "No browser JavaScript errors"
+  ],
+  "visualInspection": "Coordinator inspected all 15 generated photos, all 15 final cards on coded category sheets, and desktop/mobile gallery captures. Separate observations are in review-observations.json; they are not scores.",
+  "googleUsageTotals": {
+    "promptTokenCount": 2912,
+    "candidatesTokenCount": 19762,
+    "totalTokenCount": 26415,
+    "thoughtsTokenCount": 3741
+  },
+  "googleLatencyMs": {
+    "min": 22886,
+    "max": 28658,
+    "sum": 366278,
+    "note": "Sum of request durations is not wall-clock time; requests overlapped. No concept-model token, runtime, or monetary cost comparison is available."
+  },
+  "limitations": [
+    "No independent judges or scores",
+    "No matched brief-only condition",
+    "Common template integration corrections documented",
+    "No controlled equal-compute budget",
+    "Google image variability",
+    "Original copy and photo departures retained"
+  ],
+  "credentialScan": {
+    "filesChecked": 167,
+    "exactCredentialOccurrences": 0,
+    "method": "Private in-process comparison against the configured Keychain credential; only counts were printed."
+  }
+}

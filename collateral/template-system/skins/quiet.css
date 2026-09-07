@@ -1,0 +1,17 @@
+/* Replace this stylesheet to reskin the same HTML. */
+.message-concept{
+  --body:Inter, sans-serif;
+  --paper:#F5F2FB;
+  --ink:#29233F;
+  --muted:#625371;
+  --accent:#493578;
+  --on-accent:#FFFFFF;
+  --panel:#E8E1F1;
+  --on-panel:#29233F;
+  --panel-accent:#493578;
+  --media-panel:#E8E1F1;
+  --on-media-panel:#29233F;
+  --rule:#9A8AAE;
+  --display:Inter, sans-serif;
+  --weight:700;
+}

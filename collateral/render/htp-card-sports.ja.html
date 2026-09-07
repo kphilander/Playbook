@@ -41,23 +41,24 @@
       --pb-font-body: 'Inter', 'Noto Sans JP', system-ui, sans-serif;
     }
   </style>
-  </head>
+  <link rel="stylesheet" href="creative-system.css">
+</head>
 <body>
-<div class="social-card">
+<div class="social-card pb-creative">
   <div class="card-header">
-    <span class="card-logo">Playbook</span>
+    <span class="card-logo">{{PROGRAM_SHORT_NAME}}</span>
     
   </div>
   <div class="card-body">
     <div class="htp-label">仕組み</div>
     <div class="game-name">スポーツベッティング</div>
-    <div class="key-fact">標準的なオッズでは、収支を合わせるためだけでも<strong>半分を超える</strong>勝率が必要です。ビグはブックメーカーに組み込まれた手数料です。</div>
+    <div class="key-fact">オッズ−110では、110ドルの現金ベットが当たると利益は100ドルです。必要な損益分岐勝率は、この価格から決まります。</div>
     <div class="stat-block">
       <span class="stat-number">52.4%</span>
-      <span class="stat-unit">−110オッズでの<br>損益分岐の勝率</span>
+      <span class="stat-unit">−110で同額ずつ賭ける場合<br>引き分け返金を除く</span>
     </div>
   </div>
-  <div class="card-footer">
+  <div class="card-footer" data-protected-zone="support-and-legal">
     <span class="footer-helpline">24時間無料サポート：{{HELPLINE_NUMBER}}</span>
     <span class="footer-legal">{{AGE_DISCLAIMER}}</span>
   </div>
