@@ -10,6 +10,16 @@ Ask only for information that materially changes the work: the intended output, 
 
 The supported starter tasks are defined in `ai/tasks.json`: adapt a player page, draft a welcome email, and check a draft. These are starting briefs, not promises that an assistant can edit files or access the internet.
 
+## Work in a coding assistant
+
+This repository includes a `playbook` skill for Codex (`.agents/skills/playbook/`) and Claude Code (`.claude/skills/playbook/`). Both entry files use this guide; they do not install tools or enable optional MCP connections. In an opened checkout, invoke `$playbook` in Codex or `/playbook` in Claude Code and describe the task.
+
+Use the operator's existing project when one is supplied. Treat the Playbook checkout as reference material unless the user intends to change it. If starting from scratch, confirm an intended working folder when none is clear; do not create a project in a home directory just because a launch link opened there. Never switch an existing checkout's branch to satisfy a source reference without checking the user's work.
+
+The player-page design gallery lives in the separate `kphilander/PlaybookRG` website repository: `components/adoption/design-preview.tsx`, `lib/adoption/design-gallery.ts`, and `app/adoption/styles/`. Its layout and imagery are design references, not approval of its older preview copy. Use those files only when the chosen design needs them. The `website/` folder in this content repository contains interactive game guides; it is not the design gallery. For a simpler HTML starting point, inspect the public `https://www.playbookrg.com/template/rg-page.html` and its dependencies before adapting it.
+
+Create only the requested output: a player page with editable files and a local preview when building is requested, an email draft or template when requested, or review findings without edits when reviewing. Keep unresolved links, local support details, and approvals visible. Use existing project conventions instead of migrating its stack.
+
 ## Read the right sources
 
 - `_brand.yml`: the source configuration, not automatically the user's approved identity or local service details.
