@@ -8,11 +8,12 @@
       "width": 728,
       "height": 90,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/app-banner-12d.html",
-          "bytes": 290171,
-          "sha256": "ffbcf6deab2492304217564af3cf5d23345373a2e37b224bd6cfe8142fe286bb"
+          "bytes": 290194,
+          "sha256": "ea25c18f19c67a604dede43ebdfd0855a874890ce28dd412b1111e24e5da02b2"
         },
         "text": {
           "path": "artwork/app-banner-12d.txt",
@@ -47,11 +48,12 @@
       "width": 420,
       "height": 302,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/betslip-rg-12g.html",
-          "bytes": 291649,
-          "sha256": "039e3aa12274edd6e0bf7d83cb5f1f9f25afe20c7d1e47c793ff73d454feafef"
+          "bytes": 291672,
+          "sha256": "78d6782b41fc6edff35b336a737daff952d00d96e9659328a28bfe653a7be44a"
         },
         "text": {
           "path": "artwork/betslip-rg-12g.txt",
@@ -98,11 +100,12 @@
       "width": 2200,
       "height": 1700,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/brochure-cover-8b.html",
-          "bytes": 328211,
-          "sha256": "b87774b491d33510bcc5582e22a24d41f8e4c8ea5ff759ebaf71cad8b523c085"
+          "bytes": 328234,
+          "sha256": "7fd15da83e21f6c423ef1a293f226dd1fabfbb985867945c5e4759b542cf6a1b"
         },
         "text": {
           "path": "artwork/brochure-cover-8b.txt",
@@ -144,11 +147,12 @@
       "width": 2200,
       "height": 1700,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/brochure-trifold-8a.html",
-          "bytes": 325337,
-          "sha256": "1ae390f2b14d333c29bd7a118fe74a3281fcb8ac265dafce84247295dc76ce7a"
+          "bytes": 325360,
+          "sha256": "22d47485bd3c8e656132f9167c0b3a1b99df4d91048d4f59917b5a91305c5805"
         },
         "text": {
           "path": "artwork/brochure-trifold-8a.txt",
@@ -196,11 +200,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-11a-streamer-myth.html",
-          "bytes": 290379,
-          "sha256": "6cdb636bc3e583f9d3c67f51e8058e5296c0e95a173e08125d9aa81509ad9b35"
+          "bytes": 290402,
+          "sha256": "c52683d5d31b1c75093fe691896ef9266b117fa6473eca30f6f098b7b22702e7"
         },
         "text": {
           "path": "artwork/card-11a-streamer-myth.txt",
@@ -242,11 +247,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-11b-lucky-numbers.html",
-          "bytes": 290886,
-          "sha256": "54538b454e5f9ac6be4136ff883265d7b987b31573a7c731719b7aacb8a9d565"
+          "bytes": 290909,
+          "sha256": "49af23ae8ad0ebefd92073449387ebd518035548a5b22fe3a6da748f0df4c99f"
         },
         "text": {
           "path": "artwork/card-11b-lucky-numbers.txt",
@@ -288,11 +294,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13a-its-due.html",
-          "bytes": 290514,
-          "sha256": "878fcdfc3d3b4de54766695f57b4e9f14332ef783e51243aa3cdad4dee153295"
+          "bytes": 290537,
+          "sha256": "e0ce138f9c2e4cd460055fff324175496a9d4f4b58f221884c8cb7e1a181a768"
         },
         "text": {
           "path": "artwork/card-13a-its-due.txt",
@@ -341,11 +348,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13b-near-win.html",
-          "bytes": 290508,
-          "sha256": "71bda581da3265c3b39cb0432470090349fe776b25f9921810e337eeffc5d380"
+          "bytes": 290531,
+          "sha256": "85456538f2adb398776ba520795bec284dc53f5e61b5f5c727fa5d5313a3047f"
         },
         "text": {
           "path": "artwork/card-13b-near-win.txt",
@@ -394,11 +402,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13c-picked-right.html",
-          "bytes": 290358,
-          "sha256": "b2f4d92eba561bcf961a4520423e3326b6a224b7fe0516a88af312fabe40646d"
+          "bytes": 290381,
+          "sha256": "3aebb3f28375aab1b747a6d940bb46de3f132dca83e511546ca5d7bb9a0e2951"
         },
         "text": {
           "path": "artwork/card-13c-picked-right.txt",
@@ -453,11 +462,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13d-won-big.html",
-          "bytes": 290355,
-          "sha256": "9ccddb001b5553b4dd20720c63b89b8d146807f9a8717d1a2f45dfcded43aac4"
+          "bytes": 290378,
+          "sha256": "1ba35000814ee75a7a28634d76d4447365d81b6413a18578fa3f3f8f0cf9c704"
         },
         "text": {
           "path": "artwork/card-13d-won-big.txt",
@@ -499,11 +509,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13e-lucky-shirt.html",
-          "bytes": 290335,
-          "sha256": "c399adefc4deeea325cc1e0496deff382a62d7008d817018d731eb0a74a933dc"
+          "bytes": 290358,
+          "sha256": "5400887715e1db6c1762a36cc4098a148819ae5195fd82384e1f4f31c4cbd2a9"
         },
         "text": {
           "path": "artwork/card-13e-lucky-shirt.txt",
@@ -558,11 +569,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13f-earned-win.html",
-          "bytes": 290369,
-          "sha256": "c4d82dd58abf0c8b611bc29b25560b88a07efa745c716ab91340f0dcdf5a61b0"
+          "bytes": 290392,
+          "sha256": "f48a23f6f2566dca6df1ed5414066d3cb69078c9314ab58be287a10ed8301613"
         },
         "text": {
           "path": "artwork/card-13f-earned-win.txt",
@@ -611,11 +623,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-14a-every-game-blackjack.html",
-          "bytes": 290704,
-          "sha256": "ea9cc440c6ca8145ccd425c92a3e7f3c2f7229718a356e7fd9c233275319b31b"
+          "bytes": 290727,
+          "sha256": "5605e2a84bb06b1d1d6f45b7bb54a88cf046e335dad06fa270e02629bfd94a64"
         },
         "text": {
           "path": "artwork/card-14a-every-game-blackjack.txt",
@@ -670,11 +683,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-15a-point-spread.html",
-          "bytes": 290895,
-          "sha256": "8913d191636206146e18b63e737b6622d57c755517a195d060ef31d276199c3b"
+          "bytes": 290918,
+          "sha256": "b9fd2e120274964bd19618546405d5cfb79302e659255ba14143ef80832f7b08"
         },
         "text": {
           "path": "artwork/card-15a-point-spread.txt",
@@ -723,11 +737,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-1a-hot-streak.html",
-          "bytes": 290491,
-          "sha256": "257678dc1b8d2ec78a94fd05926f07a0109036aea1bbb536d2e58d60e7d50c5a"
+          "bytes": 290514,
+          "sha256": "04ca7d004697bbb81f39c3d5f6573b407871acd28d971da2d501869435ac07c7"
         },
         "text": {
           "path": "artwork/card-1a-hot-streak.txt",
@@ -782,11 +797,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-1b-due-for-win.html",
-          "bytes": 290493,
-          "sha256": "2532076ba40b3839dff4cf90d43c6e25907a800fb4f60d45eacc2c603c82a2ae"
+          "bytes": 290516,
+          "sha256": "1bb7045efb4e15d864c9a14761b12d6085c8834f1c5105801f7945e0e8e97e17"
         },
         "text": {
           "path": "artwork/card-1b-due-for-win.txt",
@@ -835,11 +851,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-1c-lucky-machine.html",
-          "bytes": 290358,
-          "sha256": "b2f4d92eba561bcf961a4520423e3326b6a224b7fe0516a88af312fabe40646d"
+          "bytes": 290381,
+          "sha256": "3aebb3f28375aab1b747a6d940bb46de3f132dca83e511546ca5d7bb9a0e2951"
         },
         "text": {
           "path": "artwork/card-1c-lucky-machine.txt",
@@ -894,11 +911,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-2a-house-edge.html",
-          "bytes": 293267,
-          "sha256": "c2770401394fb58713b54a821928401362fc05399ab62561ebc21e775fef537e"
+          "bytes": 293290,
+          "sha256": "755e3888bddca4e1e4e1d0f3d462488f1ef349def6cb206223eaa803750c03ab"
         },
         "text": {
           "path": "artwork/card-2a-house-edge.txt",
@@ -975,11 +993,12 @@
       "width": 1080,
       "height": 1350,
       "style": "spotlight",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-2b-sports-betting.html",
-          "bytes": 292118,
-          "sha256": "5ad2074708d1195a06aed0246a32f60be984dbf3009afbaed94895a44a35f882"
+          "bytes": 292141,
+          "sha256": "e50f78f664b4dd51a198803b83af8155e291078a9f0917529f3744000c990548"
         },
         "text": {
           "path": "artwork/card-2b-sports-betting.txt",
@@ -1045,11 +1064,12 @@
       "width": 1080,
       "height": 1350,
       "style": "contour",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-2c-bonus-wagering.html",
-          "bytes": 290810,
-          "sha256": "107569fb5bc37cfcbdfbb5945c96c5d3f395bd694526beac3f6cb604dc954a33"
+          "bytes": 290833,
+          "sha256": "1fdcc05b195abc508c2231474e7106c2a11e3207bc10a434f5b33a9c39c5ac48"
         },
         "text": {
           "path": "artwork/card-2c-bonus-wagering.txt",
@@ -1098,11 +1118,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/card-tier2-10f.html",
-          "bytes": 291071,
-          "sha256": "dc2ba1c8019baf595ab6b67a1f4801d8a941205c508b3b5585c545d0d1a7bf6d"
+          "bytes": 291081,
+          "sha256": "1cad9c6af21bab75f597e8a830be3859492c08cb859b1fec858201a89206127f"
         },
         "text": {
           "path": "artwork/card-tier2-10f.txt",
@@ -1111,18 +1132,18 @@
         },
         "artwork": {
           "path": "artwork/card-tier2-10f.svg",
-          "bytes": 284335,
-          "sha256": "37d60e7e755a9522305484a828c24de1a87c8db5a5a8f7e61ce4cf5fd4efdc27"
+          "bytes": 284337,
+          "sha256": "1cbd1c764daaf8b79e1ad825c8262d3acf2c3ae74713353dd50cddf6dc68a70d"
         },
         "image": {
           "path": "artwork/card-tier2-10f.png",
-          "bytes": 93076,
-          "sha256": "33761a8e770f833deae37956bf9af0656915977e3f783dee791b43067adef58b"
+          "bytes": 92522,
+          "sha256": "58de0d7c2656fcf90c798345dd923d93ced890f79974eb59d3686ab88c17ed61"
         },
         "preview": {
           "path": "artwork/card-tier2-10f.webp",
-          "bytes": 22172,
-          "sha256": "b0ac260e436a00555f82c2cda9707faedecee2dcbfe4215434ef9f4d21b19221"
+          "bytes": 22360,
+          "sha256": "517662a9cea802d0659d0470d0d042139cae7ed938745efeca405862cc847cbb"
         }
       },
       "referenceNotes": {
@@ -1137,11 +1158,12 @@
       "width": 480,
       "height": 446,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/cooldown-10e.html",
-          "bytes": 291686,
-          "sha256": "d7d1e78ff422ca64c4cdda607a5d8f82aa47d46d291080cc7c09b7e123a5d6c6"
+          "bytes": 291709,
+          "sha256": "84a7b1d5017029788244fc166d41c56883a20af21a945a51ecd21152d24bf47d"
         },
         "text": {
           "path": "artwork/cooldown-10e.txt",
@@ -1151,17 +1173,17 @@
         "artwork": {
           "path": "artwork/cooldown-10e.svg",
           "bytes": 284338,
-          "sha256": "afe37e3e2dcbf6729a5c19539b9d74031062f73e81f42e5d1828cb336aa4d62c"
+          "sha256": "9a98e5d22ed1fbc28e60b66df13687957f096667a8a08b652ba7d44fc1600037"
         },
         "image": {
           "path": "artwork/cooldown-10e.png",
-          "bytes": 34670,
-          "sha256": "c3ed16268b7059ed4d5eb2f16291575296b5eea4eb3db57056638b9c3bb68d37"
+          "bytes": 34098,
+          "sha256": "c8dc9eb6a5dbf0e6ee3296ded2414fe4567ac35f01be38ae0f95f47190ead19b"
         },
         "preview": {
           "path": "artwork/cooldown-10e.webp",
-          "bytes": 22910,
-          "sha256": "3dc684664fa53bb970612d3607e5f50375093910710b2bb92d067824a1e86e4f"
+          "bytes": 23616,
+          "sha256": "28a6372d43d6551dc93f95d7a7a0a64e992064ee18d07662d7ea742762deca7c"
         }
       },
       "referenceNotes": {
@@ -1186,11 +1208,12 @@
       "width": 420,
       "height": 455,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/deposit-interstitial-12b.html",
-          "bytes": 292515,
-          "sha256": "0f8cad606b6fccbb2cd5d48b8dd77b0ec77db048921d9d7b33b826916d4d5387"
+          "bytes": 292538,
+          "sha256": "7be49c47bc46941d4b5892ca968f0e41aac9e9690eb752af71bafce7f90d8354"
         },
         "text": {
           "path": "artwork/deposit-interstitial-12b.txt",
@@ -1242,11 +1265,12 @@
       "width": 1920,
       "height": 1080,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/display-14e-every-game.html",
-          "bytes": 300689,
-          "sha256": "5d0aa780ff0ed7c77755c18d693dd174b2100d88c6f9113d54b27e29d5e84842"
+          "bytes": 300712,
+          "sha256": "01a3b225379f4b2159ebce8696ea2cfa95d6a8c04ce9da725b860b4fadc865e7"
         },
         "text": {
           "path": "artwork/display-14e-every-game.txt",
@@ -1323,11 +1347,12 @@
       "width": 1920,
       "height": 1080,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/display-landscape-6a.html",
-          "bytes": 300689,
-          "sha256": "5d0aa780ff0ed7c77755c18d693dd174b2100d88c6f9113d54b27e29d5e84842"
+          "bytes": 300712,
+          "sha256": "01a3b225379f4b2159ebce8696ea2cfa95d6a8c04ce9da725b860b4fadc865e7"
         },
         "text": {
           "path": "artwork/display-landscape-6a.txt",
@@ -1404,11 +1429,12 @@
       "width": 1080,
       "height": 1920,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/display-portrait-6b.html",
-          "bytes": 301436,
-          "sha256": "d90f45f9d124a86cf9b88d7896cb224b29d267a9f8322506e177a7a464b9509f"
+          "bytes": 301459,
+          "sha256": "d05eb0b5927333edce12c01cd24418fcf44d8dfa94ccd3e1d3bd3530af9ab9bf"
         },
         "text": {
           "path": "artwork/display-portrait-6b.txt",
@@ -1485,11 +1511,12 @@
       "width": 600,
       "height": 919,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/email-14d-every-game.html",
-          "bytes": 296224,
-          "sha256": "f50168aa80049773b89740a6b6018e1687ab3a84a06966155de7a9df15a52c48"
+          "bytes": 296247,
+          "sha256": "68429ab01d727c78932b860cc2bb737d4e7fd415b5efd51d885a3e0377404a51"
         },
         "text": {
           "path": "artwork/email-14d-every-game.txt",
@@ -1605,11 +1632,12 @@
       "width": 600,
       "height": 827,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/email-deposit-7b.html",
-          "bytes": 294420,
-          "sha256": "1e851675ef33f79796ba5b76149deb412ba82a433406361b13628e1f08732dd8"
+          "bytes": 294443,
+          "sha256": "32503d0c55493a65ec58d84e1a0fb53d22a5d5366d0d057ef704e27e1d9f93e5"
         },
         "text": {
           "path": "artwork/email-deposit-7b.txt",
@@ -1667,11 +1695,12 @@
       "width": 600,
       "height": 1129,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/email-monthly-7c.html",
-          "bytes": 296077,
-          "sha256": "baae476e26e8dc16d30465f0221b0aaece2782723d1c953e09033939b5c461ca"
+          "bytes": 296100,
+          "sha256": "ea4ed6c3f7f08ce7b98f99156cf41515b9ab38aaedd4a5724be013b964e8fd86"
         },
         "text": {
           "path": "artwork/email-monthly-7c.txt",
@@ -1681,17 +1710,17 @@
         "artwork": {
           "path": "artwork/email-monthly-7c.svg",
           "bytes": 289083,
-          "sha256": "0d8ab0edbf2a8904cdf248db0ecdab80c4504c6001bdf2639c711aa42a4f73d6"
+          "sha256": "13ddc3465a68d50719e0f8287c18183ef63545e6043b31f7ffed1deaf4634075"
         },
         "image": {
           "path": "artwork/email-monthly-7c.png",
-          "bytes": 95124,
-          "sha256": "f46b30e3195dd8f64be2459b204fc047892790c262d84b4175cc701444f4e293"
+          "bytes": 94297,
+          "sha256": "e9d1a8ed5ed84ad0039298a7652e3d0e61c6f70c6070b5458cd09e50ad835eb0"
         },
         "preview": {
           "path": "artwork/email-monthly-7c.webp",
-          "bytes": 23462,
-          "sha256": "530c13478485978a4a25dec5b5d8e35eb13cba3dd4c4fefebc898ab65de4565e"
+          "bytes": 23692,
+          "sha256": "8cf58b685d1d21a91098d4c1283e063214170c56b38efb3e37cc0df7beb34f33"
         }
       },
       "referenceNotes": {
@@ -1742,11 +1771,12 @@
       "width": 600,
       "height": 823,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/email-reactivation-7d.html",
-          "bytes": 293734,
-          "sha256": "bc6228198680915606714c24e9983ec8b80086ceda2861106ebb26ca3d4dc17d"
+          "bytes": 293757,
+          "sha256": "bba0ed6f11c7e74f1ce355418ce2f7c1fd87a82e17d0090fcc59eec7160c37f4"
         },
         "text": {
           "path": "artwork/email-reactivation-7d.txt",
@@ -1756,17 +1786,17 @@
         "artwork": {
           "path": "artwork/email-reactivation-7d.svg",
           "bytes": 286806,
-          "sha256": "d724d2effe3180e44ecdf74f1b5cf2da7610f89c4e6da40828c6342119947fda"
+          "sha256": "05cdc1474c713e1084c99fbdc69a73326e588c3859e37014f9c0650f3d305945"
         },
         "image": {
           "path": "artwork/email-reactivation-7d.png",
-          "bytes": 70647,
-          "sha256": "863143a54d5bc57b907ed31367111cde54ec580938c6c485258e4e090decb104"
+          "bytes": 69854,
+          "sha256": "c3eb46523da45aa6f6d14ad820680e1a2130b4f97321c9053220f50984018e57"
         },
         "preview": {
           "path": "artwork/email-reactivation-7d.webp",
-          "bytes": 26940,
-          "sha256": "e4f4be4d8d50ee45191bf37d7fbd23786cb378a602b6cff029e6be49b8694b8c"
+          "bytes": 27456,
+          "sha256": "031c56b35d6b4f173a37945f7dbf0da40d6ef9d82580cfd3ee466a05d0ad86ae"
         }
       },
       "referenceNotes": {
@@ -1808,11 +1838,12 @@
       "width": 600,
       "height": 669,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/email-support-10h.html",
-          "bytes": 292745,
-          "sha256": "979580d6ff964c51b32ddc32a66c08db4974b1c96be18be727d4cd028fb28e05"
+          "bytes": 292768,
+          "sha256": "0ce169e316ab5be979e2852023496137de0fe244163d2ce0b8ccd0023a2a3e20"
         },
         "text": {
           "path": "artwork/email-support-10h.txt",
@@ -1822,17 +1853,17 @@
         "artwork": {
           "path": "artwork/email-support-10h.svg",
           "bytes": 285709,
-          "sha256": "1cf1ec570539b959801ebbf95cd2c7b5481373aad2fb3b62ccf467fb68de89eb"
+          "sha256": "a8828262b2b42c7c3bc8942469dea8aeb55696d4eb45083afee2600001c92994"
         },
         "image": {
           "path": "artwork/email-support-10h.png",
-          "bytes": 57264,
-          "sha256": "89530a172b611c27c5c57ec506a8cf5e7959a65d39a1d448f4f8b4b79672a41e"
+          "bytes": 56631,
+          "sha256": "e99f50fd5611eb02e712a5d2c7231025843ed00676739fcb5cdf1a81bef66392"
         },
         "preview": {
           "path": "artwork/email-support-10h.webp",
-          "bytes": 26804,
-          "sha256": "6343bba67907a9887165d54573e7f90b63913f806f8926621983e87ba035bca2"
+          "bytes": 27442,
+          "sha256": "5cf1d818354be5099cae4155b2a7a9f51107aefd281c90972e4c62561f3e9232"
         }
       },
       "referenceNotes": {
@@ -1857,11 +1888,12 @@
       "width": 600,
       "height": 788,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/email-welcome-7a.html",
-          "bytes": 293566,
-          "sha256": "53c3b7b4e9f27792b5e235c0b0260d4b8287b07227b9f3530cd1341da02b7725"
+          "bytes": 293589,
+          "sha256": "8073db5ab393b6427168424644ade8562129a39ebd6c6cf7e52dcf11d85e2a27"
         },
         "text": {
           "path": "artwork/email-welcome-7a.txt",
@@ -1910,11 +1942,12 @@
       "width": 700,
       "height": 400,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/helpline-card-5c.html",
-          "bytes": 290762,
-          "sha256": "9a80868289d7ffb9745775e147e0d35ba06eb3e88718ab08fa6d3fc0cdf901f7"
+          "bytes": 290785,
+          "sha256": "bcbce1171e2cf5cfeeeaf8d8f80420ee2cd739f1b73f12cba0f26de1347ac228"
         },
         "text": {
           "path": "artwork/helpline-card-5c.txt",
@@ -1923,18 +1956,18 @@
         },
         "artwork": {
           "path": "artwork/helpline-card-5c.svg",
-          "bytes": 283859,
-          "sha256": "37b56b86b8c886c4b573eb95f4a501f819a2fe19e5344dab69f1c8dcad1c125a"
+          "bytes": 283861,
+          "sha256": "34c0754b871510d4ec3e35552d2e40e8c6217ed3b2556298bc8d23a1f450f7e9"
         },
         "image": {
           "path": "artwork/helpline-card-5c.png",
-          "bytes": 32950,
-          "sha256": "b8f18fe376ee1bd7f732e97bbd06fbb635a5c5ffe91d013d4fdd8936ca743b33"
+          "bytes": 32377,
+          "sha256": "4d0348e93fa27412aba72969d85b7fb17a71d58cc88bcdff59d752cf0df86ce8"
         },
         "preview": {
           "path": "artwork/helpline-card-5c.webp",
-          "bytes": 13146,
-          "sha256": "a3391a6469dd920530704b09ee5b0a9a7298e28dad5864e9aa243b6fc82928f2"
+          "bytes": 13286,
+          "sha256": "bb78354553ac22fe76675940da93fb87487ab3093c5ff89e95cc3e90511d4449"
         }
       },
       "referenceNotes": {
@@ -1949,11 +1982,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-baccarat.html",
-          "bytes": 290636,
-          "sha256": "536de90abf0534081365ff68a94d7b0dffd7d5a8d7df91026eba98de81ddf5ba"
+          "bytes": 290659,
+          "sha256": "a2a56b980f6f01f17a043a2068d16e8142fabb5a05003b4f5cea73510e47223c"
         },
         "text": {
           "path": "artwork/htp-card-baccarat.txt",
@@ -2002,11 +2036,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-bingo.html",
-          "bytes": 290320,
-          "sha256": "7f6b83dbaca2fd4f98a8fbde98b5f1546ad7af4a7d7f3b18930a749b765fa66e"
+          "bytes": 290343,
+          "sha256": "1d91f3968488585e3a4dc53042f13b37864c63b299ccca9a4f4994370907f1dd"
         },
         "text": {
           "path": "artwork/htp-card-bingo.txt",
@@ -2055,11 +2090,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-blackjack.html",
-          "bytes": 290667,
-          "sha256": "e3150e90cfe44224b2733056c52f3cd9efb47c52b1ac734e38c9ab47130b4ffc"
+          "bytes": 290690,
+          "sha256": "66fe75c9ca01813a1b2b1959889351ee39cdb1faccb8816dc58d96db73cb9074"
         },
         "text": {
           "path": "artwork/htp-card-blackjack.txt",
@@ -2114,11 +2150,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-craps.html",
-          "bytes": 290829,
-          "sha256": "434330b1ac642963fc82c6bef1b2d402a54b2b37b7ab9a1bd3a4090996b37041"
+          "bytes": 290852,
+          "sha256": "336a4d13038be6142ede38c3a2ab5ee27868995c96e1e7295ed06a309856152f"
         },
         "text": {
           "path": "artwork/htp-card-craps.txt",
@@ -2173,11 +2210,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-horse-racing.html",
-          "bytes": 290865,
-          "sha256": "0a72c9d65a0b6754c3b6b514f7b97a5a85ccbe00f8239442521fc5a8eeaaafd3"
+          "bytes": 290888,
+          "sha256": "f7d17d8fb70a475bd8cc337605cb10bb586f1b006c7929cfe1200b33efeda428"
         },
         "text": {
           "path": "artwork/htp-card-horse-racing.txt",
@@ -2226,11 +2264,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-lottery.html",
-          "bytes": 290845,
-          "sha256": "48811e9d7143416b3814bccd6cee35467fd428d994a47515bdba924cf1b60f58"
+          "bytes": 290868,
+          "sha256": "abb15968fa86bbacc91d8b7231414824f8f727121ed2a0f6842568f73458842a"
         },
         "text": {
           "path": "artwork/htp-card-lottery.txt",
@@ -2272,11 +2311,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-roulette.html",
-          "bytes": 290860,
-          "sha256": "15e54e49d5779e4369124c72b8c9c5805ba99480bd84e2ea39bdc75533df552c"
+          "bytes": 290883,
+          "sha256": "2611f264489ff0c14b698b40da1c4bb27a14565b1097efe4cd08913d571bc30c"
         },
         "text": {
           "path": "artwork/htp-card-roulette.txt",
@@ -2325,11 +2365,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-slots.html",
-          "bytes": 290808,
-          "sha256": "db9e4c608d5e18bd0fb0e91bbc076943bdda286cb809138e3b94729036d1a312"
+          "bytes": 290831,
+          "sha256": "5a779e77d30ef02787d936db3c7c60e8573da40255f9468b64cf41dfa29f0972"
         },
         "text": {
           "path": "artwork/htp-card-slots.txt",
@@ -2384,11 +2425,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-sports.html",
-          "bytes": 290858,
-          "sha256": "b020b50eb3505c30ba08d356b8ed23d633298b6a19d8bd613e9c78605458ae8d"
+          "bytes": 290881,
+          "sha256": "cbbb3fd01e5dc79fc0a473f865e272722d3511f846f7793d9ff836cfbcb89266"
         },
         "text": {
           "path": "artwork/htp-card-sports.txt",
@@ -2437,11 +2479,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-video-poker.html",
-          "bytes": 290837,
-          "sha256": "ff76725dd58ed78e7bca347d1b18596ea7e6f9fef8653094a0c3283ccb7a7646"
+          "bytes": 290860,
+          "sha256": "e83f575531acfecb766061b21c78e07f82db03b46244f0f26565214887b80d73"
         },
         "text": {
           "path": "artwork/htp-card-video-poker.txt",
@@ -2496,11 +2539,12 @@
       "width": 1080,
       "height": 1350,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-odds-comparison.html",
-          "bytes": 293267,
-          "sha256": "c2770401394fb58713b54a821928401362fc05399ab62561ebc21e775fef537e"
+          "bytes": 293290,
+          "sha256": "755e3888bddca4e1e4e1d0f3d462488f1ef349def6cb206223eaa803750c03ab"
         },
         "text": {
           "path": "artwork/htp-odds-comparison.txt",
@@ -2577,11 +2621,12 @@
       "width": 420,
       "height": 217,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/in-play-overlay-12c.html",
-          "bytes": 290622,
-          "sha256": "b18f0bc5e3bbaf2dfbb097050d1cf23d88c6787bf16a388814d3e6b3d159c9da"
+          "bytes": 290645,
+          "sha256": "a9d1935a5d686a5b309f61538cd905555b31cbd18a34601382fa9d60a0ea7baf"
         },
         "text": {
           "path": "artwork/in-play-overlay-12c.txt",
@@ -2616,11 +2661,12 @@
       "width": 420,
       "height": 169,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/limit-reached-10d.html",
-          "bytes": 284495,
-          "sha256": "cc53de5a535ae44e60e536329250f22234ef95890257971b8e85c7aa4828ca0c"
+          "bytes": 284518,
+          "sha256": "345dd8ac9e37705557993bcd2f1257f8f06a2f32740b7e12ad03c663bc4019db"
         },
         "text": {
           "path": "artwork/limit-reached-10d.txt",
@@ -2630,17 +2676,17 @@
         "artwork": {
           "path": "artwork/limit-reached-10d.svg",
           "bytes": 282751,
-          "sha256": "acef43e81af2b98b7ce9c96bec8a3cfebe571fafd3f636eb3e65cf9b5299a55b"
+          "sha256": "9276243cf1658be36fa1d5aae1b3f1a993d93d81b32d68a7d2d2eaed517a6ca9"
         },
         "image": {
           "path": "artwork/limit-reached-10d.png",
-          "bytes": 11697,
-          "sha256": "a33585035680591fe65a5f5015c14256c0fbbca27113271ef430ba30e84cc9ac"
+          "bytes": 11632,
+          "sha256": "eb9474a411a18f409516622570d551453bb235119f01231a97d0024bc2d2e799"
         },
         "preview": {
           "path": "artwork/limit-reached-10d.webp",
-          "bytes": 8624,
-          "sha256": "a321c0412d5bef89743f8b62246e9c984b4a63a1652f8f70661f89dff8659a79"
+          "bytes": 8728,
+          "sha256": "2ac6670aa410d9bf4ef06baf61ac220a2868e27c9d097af9f6072e4108c4e7fa"
         }
       },
       "referenceNotes": {
@@ -2655,11 +2701,12 @@
       "width": 420,
       "height": 193,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/live-odds-overlay-15d.html",
-          "bytes": 290438,
-          "sha256": "bc45f120568f82924d07cea6a32cc191b31b670f4e36f437afb2e0a0de762589"
+          "bytes": 290461,
+          "sha256": "58e5b41e64595450c4368d09bbac2afdc4ae341938490828d73d4ca7caf720f9"
         },
         "text": {
           "path": "artwork/live-odds-overlay-15d.txt",
@@ -2694,11 +2741,12 @@
       "width": 420,
       "height": 647,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/mobile-14f-every-game.html",
-          "bytes": 293034,
-          "sha256": "8e673f854ae7083bcf0bff932e45fc92918fb3cc3d7e970ee0eb01e1d1d91719"
+          "bytes": 293057,
+          "sha256": "222fd5b832e8421b3f81f89f88ae6fff791f9d44ce15bbd129bd53c6c2e3fd83"
         },
         "text": {
           "path": "artwork/mobile-14f-every-game.txt",
@@ -2814,11 +2862,12 @@
       "width": 420,
       "height": 457,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/mobile-onboarding-12a.html",
-          "bytes": 292209,
-          "sha256": "6c2472f14ccf2537e8fc6769846563e87507179f5dd36e63681e1127adb58035"
+          "bytes": 292232,
+          "sha256": "c664856e4661bfd602c1bcc06301bd5b939069081b43bde4f82efe8c6374fc01"
         },
         "text": {
           "path": "artwork/mobile-onboarding-12a.txt",
@@ -2867,11 +2916,12 @@
       "width": 1800,
       "height": 2400,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-14c-every-game-slots.html",
-          "bytes": 299378,
-          "sha256": "dd2385b246d8de5c83f06f0a76c7772f22750424df6cabf7322c831ed5c71ef9"
+          "bytes": 299401,
+          "sha256": "82ba8572a55979616e804a709074c6fab1a809e5fe2f4f3d8a2b5414d8c1480e"
         },
         "text": {
           "path": "artwork/poster-14c-every-game-slots.txt",
@@ -2926,11 +2976,12 @@
       "width": 1800,
       "height": 2400,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-15c-how-sportsbook-wins.html",
-          "bytes": 301482,
-          "sha256": "dcfa4de1ff0ab4eb6c2ed04b17f852640a443dcc11b44d75857fb04ec0019e42"
+          "bytes": 301505,
+          "sha256": "50255476722e9c617be1b09ecc9783433272eba7251bde8e26dd1a7cd80b8296"
         },
         "text": {
           "path": "artwork/poster-15c-how-sportsbook-wins.txt",
@@ -2996,11 +3047,12 @@
       "width": 1800,
       "height": 2400,
       "style": "spotlight",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4a-know-your-game.html",
-          "bytes": 302448,
-          "sha256": "0351dbb2f90609818467ba6fa47924a46298cac5bb782a45ac9771115b0dc4de"
+          "bytes": 302471,
+          "sha256": "1cc04512ad832f82998690137cb0c577b4d01f0740151b16b43958006f47c18b"
         },
         "text": {
           "path": "artwork/poster-4a-know-your-game.txt",
@@ -3077,11 +3129,12 @@
       "width": 1800,
       "height": 2400,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4b-no-fine-print.html",
-          "bytes": 302295,
-          "sha256": "cac7ddbff3a707bf9df11d1d75741cb838bb5dea5776dc216ec090706f68700b"
+          "bytes": 302318,
+          "sha256": "63cf9413dd91a589a9cbd1367541856f5e098eb5b476d52199d7eb499c455c05"
         },
         "text": {
           "path": "artwork/poster-4b-no-fine-print.txt",
@@ -3158,11 +3211,12 @@
       "width": 1800,
       "height": 2400,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4c-game-iq.html",
-          "bytes": 298958,
-          "sha256": "faef8089fc91597e6ab5357751f40de26591ca9097df922ead0cd539597bae9b"
+          "bytes": 298981,
+          "sha256": "868f8cf8d99ecca94b590e78e38203856b221ea4c07637eea0947642cbf215ad"
         },
         "text": {
           "path": "artwork/poster-4c-game-iq.txt",
@@ -3211,11 +3265,12 @@
       "width": 1800,
       "height": 2400,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4d-lottery-odds.html",
-          "bytes": 299560,
-          "sha256": "3002ad40a0421deed7e80595d63dedc2f4eea72f88ebde1e75b119990071e5cd"
+          "bytes": 299583,
+          "sha256": "3fd52d3535252bef7e1ed1a16f82d10d869b59a91ae74efd086e50e73bb1f69e"
         },
         "text": {
           "path": "artwork/poster-4d-lottery-odds.txt",
@@ -3257,11 +3312,12 @@
       "width": 1800,
       "height": 2400,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4e-bingo-hall.html",
-          "bytes": 298653,
-          "sha256": "2c55f6b76896c4ee29232e32bc87d74fe92972a9489d1cf51d9e6873b3027127"
+          "bytes": 298676,
+          "sha256": "09e25dbae15378597096509090d12b45dc67174c2de2a6accdd550576dc834e8"
         },
         "text": {
           "path": "artwork/poster-4e-bingo-hall.txt",
@@ -3310,11 +3366,12 @@
       "width": 1800,
       "height": 2400,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/poster-tier2-10g.html",
-          "bytes": 291204,
-          "sha256": "8d9c29e206f76975d7d63458c3a6fcf3a90f50f055cdf6a9b9592f055f32a87d"
+          "bytes": 291228,
+          "sha256": "71ad8faf069b82c001f3775f2f72e3a54edb7d74e100bc192896952ba481b026"
         },
         "text": {
           "path": "artwork/poster-tier2-10g.txt",
@@ -3323,18 +3380,18 @@
         },
         "artwork": {
           "path": "artwork/poster-tier2-10g.svg",
-          "bytes": 284950,
-          "sha256": "e0e9941e23b4cd67ba46eb8a4ea54285bd89a65c4fbd281c477eb53b372d39ad"
+          "bytes": 284952,
+          "sha256": "ab2eb6354ee0b35340d0558b2270d5d3ac8b57d65075a8fd87b38bb420aed23c"
         },
         "image": {
           "path": "artwork/poster-tier2-10g.png",
-          "bytes": 184175,
-          "sha256": "8fdfa7c2befd602270b231d460c6ec1a8eb65f6d32b98a3b6e6102e0e4396275"
+          "bytes": 185326,
+          "sha256": "966e5520967a525a28958eeb44a67432cf81951a455c0bea037ebf65b7076f58"
         },
         "preview": {
           "path": "artwork/poster-tier2-10g.webp",
-          "bytes": 21858,
-          "sha256": "82eb4fc28ee2b370d47d1dd4741fc40c633f597809948a630ab9de0924d97f38"
+          "bytes": 21986,
+          "sha256": "e013db32770076dce557a8ebd75298282c71e129bafa8a87e7c0389c7028f4b6"
         }
       },
       "referenceNotes": {
@@ -3349,11 +3406,12 @@
       "width": 420,
       "height": 120,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/push-notification-12e.html",
-          "bytes": 290092,
-          "sha256": "96a1c5cb6407139f9ec8e622ebe33c085306bd7dc33e9b8c5bad9fcef0f04d85"
+          "bytes": 290115,
+          "sha256": "6e4b0ee7e940d0753454e644ebf1e89ca99a90cc0cfed3b8a6f848137d07ab1a"
         },
         "text": {
           "path": "artwork/push-notification-12e.txt",
@@ -3388,11 +3446,12 @@
       "width": 800,
       "height": 1800,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/rack-card-5a.html",
-          "bytes": 302817,
-          "sha256": "20cffb7ab73ece25fb4df23795febfa50e36999145c9216755b072678392569c"
+          "bytes": 302840,
+          "sha256": "5d60b673bb296bf7e0a31be7d12a4f2929e8102863e91ac1ee7293eefcd59a68"
         },
         "text": {
           "path": "artwork/rack-card-5a.txt",
@@ -3469,11 +3528,12 @@
       "width": 816,
       "height": 1056,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/scorecard-quickref.html",
-          "bytes": 285083,
-          "sha256": "db256732497f8d57db49bafe2cc94b91218fe63c24fed8cf31ca13713d2fc2ae"
+          "bytes": 285106,
+          "sha256": "b2c290c70063118b16e08e4e9bd967baa1b3f8ce2e776e62b413f399ad37f163"
         },
         "text": {
           "path": "artwork/scorecard-quickref.txt",
@@ -3534,11 +3594,12 @@
       "width": 480,
       "height": 556,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/self-exclusion-10b.html",
-          "bytes": 291496,
-          "sha256": "dc2c05080690a8c01cae01246cc355a8ec96e8cd21f67c3273e9288a54c4cb10"
+          "bytes": 291519,
+          "sha256": "16b17f6ac50b9a2f00068de95fe328283c78aa03299554da01affe7fb19516b5"
         },
         "text": {
           "path": "artwork/self-exclusion-10b.txt",
@@ -3548,17 +3609,17 @@
         "artwork": {
           "path": "artwork/self-exclusion-10b.svg",
           "bytes": 284308,
-          "sha256": "40dfa0911b67cb5804635a891e5890eb6cb8017c6ece41a97f10207eab7c186c"
+          "sha256": "006b316e9d17d8f1028896b13e673e70753ae33a0b27149ee0542af353f79a1b"
         },
         "image": {
           "path": "artwork/self-exclusion-10b.png",
-          "bytes": 39587,
-          "sha256": "7d09cc23cc923678eee73b21b061c647d4db6fe055c6a725c71fbb9645e2c34e"
+          "bytes": 39049,
+          "sha256": "194269da76193406e690647c93ec4d810ce71ff1726bbbd6027d1834d282032d"
         },
         "preview": {
           "path": "artwork/self-exclusion-10b.webp",
-          "bytes": 24440,
-          "sha256": "2c5dc74dd1fb4bef0d437ed11f39e7a5d96abaaa2265574f3f04564b25df4a00"
+          "bytes": 25024,
+          "sha256": "bb9ab6d4c2362d050252dbfdbce75886fdc89023b737540915bb1991a472d8f7"
         }
       },
       "referenceNotes": {
@@ -3573,11 +3634,12 @@
       "width": 420,
       "height": 319,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/session-summary-10c.html",
-          "bytes": 292576,
-          "sha256": "d58aa67cb185eb44954de04fa3b0d009419e2232c51179f3ca6354f4b5c36a0a"
+          "bytes": 292599,
+          "sha256": "2a2835d8f35d81c691f6d428120303461c4d06361517c77ee7f73f0624f10628"
         },
         "text": {
           "path": "artwork/session-summary-10c.txt",
@@ -3587,17 +3649,17 @@
         "artwork": {
           "path": "artwork/session-summary-10c.svg",
           "bytes": 285804,
-          "sha256": "f8ea990fe2f383ed4fe04daa091445dcc3566069ac06eea4cac90f8123896919"
+          "sha256": "2ed73b0b85f16deac85146cbe6c1421b8f394620bf8dc380896d58eabad3e62c"
         },
         "image": {
           "path": "artwork/session-summary-10c.png",
-          "bytes": 27816,
-          "sha256": "d190016dd51a3aa3cb19e80c7646285b86c9494d9ceeb5547554d90fca3f31f6"
+          "bytes": 27316,
+          "sha256": "813c72ec10efa3c23b7785f981004cb8f92931b459bca787bc1fc0191e4cbe36"
         },
         "preview": {
           "path": "artwork/session-summary-10c.webp",
-          "bytes": 19364,
-          "sha256": "76838f246c782bd7f8765b8292e5cde2ff2a9c5200b5dab5eb36933dd5067770"
+          "bytes": 19558,
+          "sha256": "edbc7b57b758461d06b88f3e334dd2c631708686d878bf8d46a616528ab1b6e2"
         }
       },
       "referenceNotes": {
@@ -3649,11 +3711,12 @@
       "width": 700,
       "height": 906,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-atm-9b.html",
-          "bytes": 290708,
-          "sha256": "cbc29d0ef7f4775562735eda518470f74bf847cbf42ff0172985eb6229396c69"
+          "bytes": 290731,
+          "sha256": "a2a60804b53904b4ba2dd3552e1a96ced61576e68c44828982118f15be2ff208"
         },
         "text": {
           "path": "artwork/sign-atm-9b.txt",
@@ -3688,11 +3751,12 @@
       "width": 900,
       "height": 1200,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-entrance-9a.html",
-          "bytes": 298689,
-          "sha256": "f440b71f15d35ef9955c154d9021b4c5cbe75431558ef3a46e04b7fedb1c4040"
+          "bytes": 298712,
+          "sha256": "894806e313075277aa0f0fbe9636016a8a82e89e963ef4194ca48dd187801688"
         },
         "text": {
           "path": "artwork/sign-entrance-9a.txt",
@@ -3727,11 +3791,12 @@
       "width": 900,
       "height": 1391,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-floor-9c.html",
-          "bytes": 302385,
-          "sha256": "fbd8fee149db1ac699261254a68cf3baa80942a3dbb772af0b89d012f828e9a0"
+          "bytes": 302408,
+          "sha256": "1fb02db7cd2b6d5e15c91ef68bf2dd2948721214b9e8e79e1797d5176dcea3b4"
         },
         "text": {
           "path": "artwork/sign-floor-9c.txt",
@@ -3808,11 +3873,12 @@
       "width": 550,
       "height": 850,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/sign-restroom-9d.html",
-          "bytes": 290959,
-          "sha256": "686f51550ae06e425debf8a1c09a07e88f36046be9f945d6066b9635878bff0a"
+          "bytes": 290984,
+          "sha256": "2a00f44e6aff5e086025b8e4ce93af434caa7457867acd3e8c3aaebe71ee5e5e"
         },
         "text": {
           "path": "artwork/sign-restroom-9d.txt",
@@ -3821,18 +3887,18 @@
         },
         "artwork": {
           "path": "artwork/sign-restroom-9d.svg",
-          "bytes": 284042,
-          "sha256": "0bf4326f8b446998fb02570fdcb0fc82a6feef0de2c5e61bb7e245152e8faf52"
+          "bytes": 284044,
+          "sha256": "f85e7ff4178693710a2f609ecb1998c05b283fbb2e13d54cd711480389547e42"
         },
         "image": {
           "path": "artwork/sign-restroom-9d.png",
-          "bytes": 41856,
-          "sha256": "ed3db360a77e17aeb2c2eda6f11bd17701f8b4933b5b89cf9cb92d4e905820ce"
+          "bytes": 41286,
+          "sha256": "d5b0cfcdc3c6727e14fff3d0dca575f1c88d137e41dfc9dfee369af453446647"
         },
         "preview": {
           "path": "artwork/sign-restroom-9d.webp",
-          "bytes": 15650,
-          "sha256": "72274b9505b339ecec00e7a6526fab04e655baf58d0d12b8d81f96f392404a57"
+          "bytes": 15838,
+          "sha256": "8c8f739ebe5593cd12445c7fa6099acd53668a434f138cd093a364a69a09023b"
         }
       },
       "referenceNotes": {
@@ -3847,11 +3913,12 @@
       "width": 900,
       "height": 1391,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-staff-9e.html",
-          "bytes": 291931,
-          "sha256": "64a63e8d92eb830c388455ecd21ba575e7803074eab18f14e4d0139de9a10442"
+          "bytes": 291954,
+          "sha256": "34212084415c2b0344d850c6787f2d2e19175d2427c202091dfecd0725edf34c"
         },
         "text": {
           "path": "artwork/sign-staff-9e.txt",
@@ -3908,11 +3975,12 @@
       "width": 1080,
       "height": 1920,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-14b-every-game-roulette.html",
-          "bytes": 298950,
-          "sha256": "7ffe5328e6ca224a2ad3a192a7b8c6fec6b78b2d27b3ef95c5d3eb0586066f07"
+          "bytes": 298973,
+          "sha256": "0c5ea7364e6f5a15fb850293661727d7add379750114412bb9ae51d595a37066"
         },
         "text": {
           "path": "artwork/story-14b-every-game-roulette.txt",
@@ -3961,11 +4029,12 @@
       "width": 1080,
       "height": 1920,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-15b-bet-costs.html",
-          "bytes": 300042,
-          "sha256": "79ef4649fa3c7db6c719eaec1ac37608b194d2f004082ba863e8a684dc7f0132"
+          "bytes": 300065,
+          "sha256": "b3ad8ab7070dc0f0423053ea4bd48aaa8a04f711986b553e35e4168539cdf2e9"
         },
         "text": {
           "path": "artwork/story-15b-bet-costs.txt",
@@ -4031,11 +4100,12 @@
       "width": 1080,
       "height": 1920,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-3a-hot-streak.html",
-          "bytes": 290496,
-          "sha256": "daa54d7930ecbed87490b1b104a63e887e7e035b27f7df56efb83b49d9ec363b"
+          "bytes": 290519,
+          "sha256": "3762deb431f1d973d7d808a3f027e863660f568261a526df577ace92cd436b16"
         },
         "text": {
           "path": "artwork/story-3a-hot-streak.txt",
@@ -4090,11 +4160,12 @@
       "width": 1080,
       "height": 1920,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-3b-house-edge.html",
-          "bytes": 293291,
-          "sha256": "b32d34abfdfe3b32258f95f6edf6d879ba4950b72affb0ac05fe3d167a980584"
+          "bytes": 293314,
+          "sha256": "2059d4d4c37dbafa6c11857f1996a647b43c060cf52c11b23560b109b33fa598"
         },
         "text": {
           "path": "artwork/story-3b-house-edge.txt",
@@ -4171,11 +4242,12 @@
       "width": 1080,
       "height": 1920,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-3c-sports-betting.html",
-          "bytes": 291891,
-          "sha256": "69f79a5727dfd180180db350bce8c14990b51911aad7549178b3476d7cbbd819"
+          "bytes": 291914,
+          "sha256": "cbd55288dadbe44fca24d46262889c11d3c3bc03d81e28036d0f69a8a47f0fd0"
         },
         "text": {
           "path": "artwork/story-3c-sports-betting.txt",
@@ -4241,11 +4313,12 @@
       "width": 800,
       "height": 829,
       "style": "flat",
+      "tier": 2,
       "files": {
         "html": {
           "path": "artwork/support-page-10a.html",
-          "bytes": 291300,
-          "sha256": "4be1becb56ea237d5ee27f7f791c76b587ee7bb897a306ff3b7b36765ea81872"
+          "bytes": 291323,
+          "sha256": "70c30b5f9fab8deb28182838da49892caac7d870a91891cef04f85696caaa143"
         },
         "text": {
           "path": "artwork/support-page-10a.txt",
@@ -4254,18 +4327,18 @@
         },
         "artwork": {
           "path": "artwork/support-page-10a.svg",
-          "bytes": 284607,
-          "sha256": "80b962463b0949f5f3182841c278de732b1219933ef0299b84353f3b22455f22"
+          "bytes": 284609,
+          "sha256": "adbada4abc635f5ab65cc389d6fe8ea1a65e2c09192a1d664e29c394edbb36fe"
         },
         "image": {
           "path": "artwork/support-page-10a.png",
-          "bytes": 69367,
-          "sha256": "d222a6a1bf172a461cbd71252bf6f7766497c14c1e55ba7bcd30b20d364ce611"
+          "bytes": 67937,
+          "sha256": "380ef00064432fc91a864fac2ad42b91813645a835a2bfb5ad88535678ee104c"
         },
         "preview": {
           "path": "artwork/support-page-10a.webp",
-          "bytes": 25070,
-          "sha256": "f2f8c733edbe08db5608cc62cb760ae67870e72213fe8f63984f2a87955ea128"
+          "bytes": 25876,
+          "sha256": "e7103068183ee491e0321abaf4da46c37318f377a61ea548a034d1d021c1379a"
         }
       },
       "referenceNotes": {
@@ -4294,11 +4367,12 @@
       "width": 800,
       "height": 2400,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/table-tent-5b.html",
-          "bytes": 313113,
-          "sha256": "8a3a413badebd5e4791b245494cc19945f8730b918b3848b169c6565d8238c12"
+          "bytes": 313136,
+          "sha256": "24b1759b223f29c28b569fabb299c21114b52ec141489b7211abe816644e77d6"
         },
         "text": {
           "path": "artwork/table-tent-5b.txt",
@@ -4340,11 +4414,12 @@
       "width": 480,
       "height": 528,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/web-popup-12h.html",
-          "bytes": 291745,
-          "sha256": "668cbcaec8e4375c5f3b75ea9545730965e84cec75db8d82292761a081e95d3c"
+          "bytes": 291768,
+          "sha256": "386f712135221815f507a476cd6f29d6790af027d4a6e4a5042b097a922f2dee"
         },
         "text": {
           "path": "artwork/web-popup-12h.txt",
@@ -4379,11 +4454,12 @@
       "width": 420,
       "height": 440,
       "style": "flat",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/withdrawal-confirm-12f.html",
-          "bytes": 292212,
-          "sha256": "b2cafe7cddd8c24ca0a1164dbb2650244720276dc7f712cf930279258f7c501f"
+          "bytes": 292235,
+          "sha256": "7de425b43d2c14c7035f3219cac906eda5fdb0723f0b20a26ebc289dcfe303ce"
         },
         "text": {
           "path": "artwork/withdrawal-confirm-12f.txt",
@@ -4435,11 +4511,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19a-every-game-math.html",
-          "bytes": 4294744,
-          "sha256": "8469f692879f24831f3f2f704841a7f595dde389e22f4bbc8c93cd2541dd4a4e"
+          "bytes": 4294767,
+          "sha256": "8592d197eded367c2d6ed149cbb5a10b5578015916de3e78a1172809a4400d77"
         },
         "text": {
           "path": "artwork/poster-19a-every-game-math.txt",
@@ -4528,11 +4605,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19b-odds-are-public.html",
-          "bytes": 3883801,
-          "sha256": "60e91e6dccdb8342967a9bbc370ecad914e8aeb79a6310ab5402a11a5e7e3d2e"
+          "bytes": 3883824,
+          "sha256": "fcb01d69fd2fff2c0972082c1378dda04dd26d4f81dc67554b21c167c22c004c"
         },
         "text": {
           "path": "artwork/poster-19b-odds-are-public.txt",
@@ -4629,11 +4707,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19c-bet-price-tag.html",
-          "bytes": 1346263,
-          "sha256": "0c99bdd3fb29f30cdf1da08511428b857383f4af7533b8ffcb72485c723720a4"
+          "bytes": 1346286,
+          "sha256": "6c9b5deea503eb623be108647171d8593851f2fcf75aca91dd4c9e755ed6a3ee"
         },
         "text": {
           "path": "artwork/poster-19c-bet-price-tag.txt",
@@ -4729,11 +4808,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19d-game-iq.html",
-          "bytes": 3987023,
-          "sha256": "1b3cfa641d107e5f1c81822482c5bfa3cec8ef3b902b25289def9e95df9a4022"
+          "bytes": 3987046,
+          "sha256": "7bfc8c6374f2e15bdc715bce38c914af3a62edd2198224ce89c77532a109c0bb"
         },
         "text": {
           "path": "artwork/poster-19d-game-iq.txt",
@@ -4822,11 +4902,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19e-never-due.html",
-          "bytes": 3883840,
-          "sha256": "8ab6fc923f95fee063ad22b101d26ff0566acf8d1a155c8f2db70c3fe863845e"
+          "bytes": 3883863,
+          "sha256": "3b848dcf486f5b0df777ba425ae471429b255081f6000fad617c079ed4be8799"
         },
         "text": {
           "path": "artwork/poster-19e-never-due.txt",
@@ -4929,11 +5010,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19f-your-tools.html",
-          "bytes": 3725799,
-          "sha256": "75d0aa9cec7edae7f40c450dea8bbe076652ca99c292e13c35187c03f4eaf25a"
+          "bytes": 3725822,
+          "sha256": "dca4cddf36f898ab78ff9be0e5b2eb40193a174265ecc565ed40a6e6aded8b6c"
         },
         "text": {
           "path": "artwork/poster-19f-your-tools.txt",
@@ -5022,11 +5104,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19g-one-decision.html",
-          "bytes": 4033390,
-          "sha256": "ef0857b0f801a60e667d2de4a2f52796223cce10a96a5a11f30bb462e04b3d7c"
+          "bytes": 4033413,
+          "sha256": "62c3183accd2829c2aed656a22dc9df21fa2495d092d8205bb6b0559ce68bc9e"
         },
         "text": {
           "path": "artwork/poster-19g-one-decision.txt",
@@ -5115,11 +5198,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19h-time-flies.html",
-          "bytes": 3876048,
-          "sha256": "bda8f625987bea21749076e9e25945e6cf8c38ceb5608c0e52f7f6be0501828b"
+          "bytes": 3876071,
+          "sha256": "16f66350b6546c78bcee93a2e474ce7ca28528a454f4b0eec2484526e4f6d999"
         },
         "text": {
           "path": "artwork/poster-19h-time-flies.txt",
@@ -5208,11 +5292,12 @@
       "width": 1800,
       "height": 2400,
       "style": "restrained",
+      "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-19i-lottery-odds.html",
-          "bytes": 527715,
-          "sha256": "0b62170defeb54da87bcb625165c696e4906428fdc8dd756101c997c3bf7cef4"
+          "bytes": 527738,
+          "sha256": "f60f59a0987aa27e2f640a1ae08e3d18b3214d06f2ef8291c5cfc1a38eb7cd7d"
         },
         "text": {
           "path": "artwork/poster-19i-lottery-odds.txt",

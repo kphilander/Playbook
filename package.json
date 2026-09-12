@@ -51,7 +51,8 @@
     "check:brand-trial": "node --test collateral/template-system/brand-package.test.mjs && node collateral/brand-trials/gamesense/check.mjs",
     "check:editorial": "node collateral/editorial/check.mjs",
     "render:editorial": "node collateral/editorial/render.mjs",
-    "check:editorial:browser": "node collateral/editorial/check-browser.mjs"
+    "check:editorial:browser": "node collateral/editorial/check-browser.mjs",
+    "check:editorial:configured": "node collateral/editorial/check-configured.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"
