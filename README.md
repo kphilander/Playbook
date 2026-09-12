@@ -49,6 +49,18 @@ The full provenance, with the inline disclosures attached to each cited paper, i
 
 ## Quick start
 
+### Use your own AI assistant
+
+Connect your assistant once and use the Playbook library across projects. The read-only MCP connector supports browsing the repository, finding files and retrieving source material. [Connection setup](https://www.playbookrg.com/brand/ai/) covers Codex, Claude Code and compatible assistants. The website connector is being reviewed in [PlaybookRG PR #11](https://github.com/kphilander/PlaybookRG/pull/11); a local or PR preview URL is not the live service.
+
+Working directly in a checkout? Use `$playbook` in **Codex** or `/playbook` in **Claude Code**. Both use [the shared AI guide](docs/ai-guide.md). The [starter tasks](ai/tasks.json) are examples, not a restriction to single-page work. Keep implementation in the operator's project when one is supplied.
+
+Keep the guide and source edition with the work. Missing local details stay visible, and drafts still need review before publication. The connector reads public sources; it cannot write to this repository or access an operator's private systems.
+
+Maintainers: run `node ai/check-skill.mjs` to check the two entry files and their shared references. Skill discovery follows [Codex's repository-skill guidance](https://learn.chatgpt.com/docs/build-skills) and [Claude Code's project-skill guidance](https://code.claude.com/docs/en/skills).
+
+### Configure the source
+
 1. **Fork this repository** to your own GitHub account
 2. **Edit [`_brand.yml`](_brand.yml)**: your program name, colors, fonts, helpline numbers, and taglines. This single file drives the entire system.
 3. **Choose your jurisdictions**: keep the modules you operate in (`jurisdictions/united-kingdom/`), delete the rest
