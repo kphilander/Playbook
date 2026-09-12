@@ -1,0 +1,40 @@
+meta:
+  program_name: Fixture Program
+  short_name: Fixture
+  organization: Fixture Operator
+  website: https://operator.example/game-iq/
+  primary_jurisdictions: [united-states]
+color:
+  palette:
+    primary: '#15283B'
+    secondary: '#087D5D'
+    accent: '#FF6B35'
+helplines:
+  default:
+    number: '555-000-0000'
+    hours: Do not use this fallback
+  united-states:
+    national:
+      label: Fixture Support
+      number: '555-010-1234'
+      text_number: '555-010-5678'
+      website: https://support.example/help/
+      chat_url: https://support.example/chat/
+      hours: Daily 8 am–10 pm
+    nevada:
+      label: Nevada Fixture Support
+      number: '555-010-9999'
+      text_number: '555-010-8888'
+      website: https://support.example/nevada/
+      chat_url: https://support.example/nevada/chat/
+      hours: Weekdays 9 am–5 pm
+integration:
+  limits_url: https://operator.example/limits/
+  preferences_url: https://operator.example/preferences/
+  self_exclusion_url: https://operator.example/exclusion/
+legal:
+  minimum_gambling_age:
+    default: 21
+  disclaimers:
+    age: 'For ages {{MIN_AGE}}+.'
+    general: Fixture local notice.

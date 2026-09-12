@@ -1,5 +1,7 @@
 # Render Pipeline
 
+**Current English edition:** [Review the 85 revised collateral pieces](../editorial/index.html), with shorter copy, cleaner layouts and centered photography. [Editable files and handoff notes](../editorial/README.md).
+
 HTML layout masters, PNG previews, and build scripts for Playbook collateral. The renderer contains English template families and localized render entries across English, Japanese, Simplified Chinese, and Arabic. The new 20-series concepts are English social masters.
 
 The [September creative review](../creative-review/index.html) covers all 320 registered render entries and 30 separate concept revisions, with a [decision and evidence ledger](../creative-review/README.md).
