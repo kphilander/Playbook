@@ -1,0 +1,981 @@
+{
+  "edition": "2026-09-12",
+  "intent": "One message, useful context, one clear next step. Remove editorial labels and repeated qualifications from the artwork.",
+  "resources": {
+    "htp-card-baccarat": {
+      "body": "Eight decks. Banker wins pay 0.95:1 after 5% commission; ties return your stake.",
+      "scope": "",
+      "metric": "Banker house edge"
+    },
+    "htp-card-bingo": {
+      "body": "Your seat does not change a fair draw. Check the card price, winning pattern and shared-prize rules.",
+      "scope": "",
+      "value": "",
+      "metric": ""
+    },
+    "htp-card-blackjack": {
+      "body": "A winning 10-unit natural pays 15 units profit at 3:2, or 12 at 6:5. Your stake is returned too.",
+      "scope": "",
+      "metric": "Natural-blackjack payouts"
+    },
+    "card-14a-every-game-blackjack": {
+      "body": "A winning 10-unit natural pays 15 units profit at 3:2, or 12 at 6:5. Your stake is returned too.",
+      "scope": "",
+      "metric": "Natural-blackjack payouts"
+    },
+    "htp-card-craps": {
+      "body": "The Pass line bet resolves on the come-out roll or after a point is set.",
+      "scope": "Per initial wager, through its full resolution. Added odds excluded.",
+      "metric": "Pass line house edge"
+    },
+    "htp-card-horse-racing": {
+      "body": "Winning bets share the pool after takeout. Rates vary by track and bet.",
+      "scope": "Illustration only: 20% takeout, before rounding or other adjustments.",
+      "metric": "800 units remain in this example"
+    },
+    "htp-card-lottery": {
+      "body": "In a fair six-from-49 draw, every six-number combination has the same chance.",
+      "scope": "One combination matching all six; other prize tiers have different odds.",
+      "metric": "Full-match chance"
+    },
+    "card-11b-lucky-numbers": {
+      "body": "In a fair six-from-49 draw, every six-number combination has the same chance.",
+      "scope": "One combination matching all six; other prize tiers have different odds.",
+      "metric": "Full-match chance"
+    },
+    "poster-4d-lottery-odds": {
+      "body": "In a fair six-from-49 draw, every six-number combination has the same chance.",
+      "scope": "One combination matching all six; other prize tiers have different odds.",
+      "metric": "Full-match chance"
+    },
+    "htp-card-roulette": {
+      "body": "38 pockets. Standard payouts. The five-number basket is the exception.",
+      "scope": "The 0–00–1–2–3 basket pays 6:1 and has a 7.89% edge.",
+      "metric": "House edge, excluding the basket"
+    },
+    "story-14b-every-game-roulette": {
+      "body": "38 pockets. Standard payouts. The five-number basket is the exception.",
+      "scope": "The 0–00–1–2–3 basket pays 6:1 and has a 7.89% edge.",
+      "metric": "House edge, excluding the basket"
+    },
+    "table-tent-5b:back-odds": {
+      "body": "38 pockets. Standard payouts. The five-number basket is the exception.",
+      "scope": "The 0–00–1–2–3 basket pays 6:1 and has a 7.89% edge.",
+      "metric": "House edge, excluding the basket"
+    },
+    "htp-card-slots": {
+      "body": "RTP is an average over many plays, not a promise for your session.",
+      "scope": "Illustrative game with 95% theoretical RTP.",
+      "metric": "Example RTP → house edge"
+    },
+    "poster-14c-every-game-slots": {
+      "body": "RTP is an average over many plays, not a promise for your session.",
+      "scope": "Illustrative game with 95% theoretical RTP.",
+      "metric": "Example RTP → house edge"
+    },
+    "htp-card-sports": {
+      "body": "At −110, risk 110 to win 100 profit. A winning bet also returns your stake.",
+      "scope": "Equal stakes; pushes excluded. Break-even rate is not house edge.",
+      "metric": "Break-even win rate"
+    },
+    "htp-card-video-poker": {
+      "body": "Full-pay 9/6 Jacks or Better, with optimal holds and an 800-for-1 royal flush.",
+      "scope": "Other paytables or choices change the return.",
+      "metric": "House edge for this paytable"
+    },
+    "card-15a-point-spread": {
+      "body": "A favorite at −6.5 must win by 7 or more. Winning by 6 loses the spread bet.",
+      "scope": "The spread sets the handicap; the odds set the payout.",
+      "metric": "Win by 7+ to cover"
+    },
+    "htp-odds-comparison": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "card-2a-house-edge": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "story-3b-house-edge": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "display-14e-every-game": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "display-landscape-6a": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "display-portrait-6b": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "poster-4a-know-your-game": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "poster-4b-no-fine-print": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "rack-card-5a": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "sign-floor-9c": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "brochure-trifold-8a:inside-odds": {
+      "body": "House edge: average loss as a share of the initial wager.",
+      "scope": "Rule-specific examples, not a prediction for one session.",
+      "rows": [
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; five-number basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Baccarat · Player",
+          "note": "8 decks; pays 1:1; ties push",
+          "value": "1.24%"
+        }
+      ]
+    },
+    "card-2b-sports-betting": {
+      "body": "A winning cash bet returns your stake plus the profit.",
+      "scope": "At −110, before deductions. A losing bet loses the stake.",
+      "rows": [
+        {
+          "label": "Stake",
+          "note": "",
+          "value": "$110"
+        },
+        {
+          "label": "Profit if you win",
+          "note": "",
+          "value": "$100"
+        },
+        {
+          "label": "Total return",
+          "note": "",
+          "value": "$210"
+        }
+      ]
+    },
+    "story-3c-sports-betting": {
+      "body": "A winning cash bet returns your stake plus the profit.",
+      "scope": "At −110, before deductions. A losing bet loses the stake.",
+      "rows": [
+        {
+          "label": "Stake",
+          "note": "",
+          "value": "$110"
+        },
+        {
+          "label": "Profit if you win",
+          "note": "",
+          "value": "$100"
+        },
+        {
+          "label": "Total return",
+          "note": "",
+          "value": "$210"
+        }
+      ]
+    },
+    "card-11a-streamer-myth": {
+      "body": "One winning clip leaves out the rest. Count every stake and return to see the full result.",
+      "scope": ""
+    },
+    "card-13d-won-big": {
+      "body": "One winning clip leaves out the rest. Count every stake and return to see the full result.",
+      "scope": ""
+    },
+    "card-13a-its-due": {
+      "body": "Past losses do not make the next independent spin more likely to win.",
+      "scope": "Same rules. Same game state."
+    },
+    "card-1b-due-for-win": {
+      "body": "Past losses do not make the next independent spin more likely to win.",
+      "scope": "Same rules. Same game state."
+    },
+    "card-1a-hot-streak": {
+      "body": "Past wins do not improve the odds of the next independent spin.",
+      "scope": "Same rules. Same game state."
+    },
+    "story-3a-hot-streak": {
+      "body": "Past wins do not improve the odds of the next independent spin.",
+      "scope": "Same rules. Same game state."
+    },
+    "card-13b-near-win": {
+      "title": "Close is not a clue.",
+      "body": "A near-looking result does not improve the next independent spin’s odds.",
+      "scope": "Check any feature that carries over between spins."
+    },
+    "card-13c-picked-right": {
+      "title": "Familiar seat. Same odds.",
+      "body": "Being a regular does not improve the odds of an independent spin. Check the game’s actual rules.",
+      "scope": ""
+    },
+    "card-1c-lucky-machine": {
+      "title": "Familiar seat. Same odds.",
+      "body": "Being a regular does not improve the odds of an independent spin. Check the game’s actual rules.",
+      "scope": ""
+    },
+    "card-13e-lucky-shirt": {
+      "title": "Great shirt. Same odds.",
+      "body": "Wear what you like. Your shirt does not change the odds of an independent spin.",
+      "scope": ""
+    },
+    "card-13f-earned-win": {
+      "body": "Time and money already spent do not earn a win on the next independent spin.",
+      "scope": ""
+    },
+    "card-2c-bonus-wagering": {
+      "title": "Is a win due?",
+      "body": "Three hours without a prize. Independent spins, with unchanged rules and game state.",
+      "scope": "No. Past losses do not change the next spin’s odds."
+    },
+    "poster-4c-game-iq": {
+      "title": "Is a win due?",
+      "body": "Three hours without a prize. Independent spins, with unchanged rules and game state.",
+      "scope": "No. Past losses do not change the next spin’s odds."
+    },
+    "brochure-cover-8b:back-question": {
+      "title": "Is a win due?",
+      "body": "Three hours without a prize. Independent spins, with unchanged rules and game state.",
+      "scope": "No. Past losses do not change the next spin’s odds."
+    },
+    "poster-15c-how-sportsbook-wins": {
+      "title": "Where the margin comes from.",
+      "body": "Two opposite $1.10 cash bets at −110: one wins, one loses.",
+      "scope": "Illustration before costs; no push or other adjustment.",
+      "rows": [
+        {
+          "label": "Collected",
+          "note": "Two $1.10 stakes",
+          "value": "$2.20"
+        },
+        {
+          "label": "Winner receives",
+          "note": "Stake + profit",
+          "value": "$2.10"
+        },
+        {
+          "label": "Remainder",
+          "note": "Before costs",
+          "value": "$0.10"
+        }
+      ]
+    },
+    "story-15b-bet-costs": {
+      "body": "Total return on a winning $100 cash bet, including the stake.",
+      "scope": "Before deductions. A losing bet loses the stake.",
+      "rows": [
+        {
+          "label": "At −110",
+          "note": "",
+          "value": "$190.91"
+        },
+        {
+          "label": "At −125",
+          "note": "",
+          "value": "$180.00"
+        },
+        {
+          "label": "At +100",
+          "note": "",
+          "value": "$200.00"
+        }
+      ]
+    },
+    "poster-4e-bingo-hall": {
+      "body": "Where you sit does not change a fair draw. Check your card, the winning pattern and the prize rules.",
+      "scope": ""
+    },
+    "brochure-cover-8b:flap-support": {
+      "title": "Need to talk?",
+      "body": "Ask about your gambling or someone else’s. You do not need to have all the answers.",
+      "scope": ""
+    },
+    "brochure-cover-8b:front-cover": {
+      "body": "Understand the odds. Find your tools. Know where to get support.",
+      "scope": ""
+    },
+    "brochure-trifold-8a:inside-introduction": {
+      "body": "Before a bet, check three things: what it costs, what wins, and what it pays.",
+      "scope": "A mathematical average does not predict your session."
+    },
+    "brochure-trifold-8a:inside-tools": {
+      "title": "Your tools. Your choices.",
+      "body": "Explore the tools available through your service.",
+      "scope": "",
+      "sections": [
+        {
+          "title": "Deposit limits",
+          "body": "Check the amount, period and payments covered."
+        },
+        {
+          "title": "Session reminders",
+          "body": "A prompt to check in; it may not stop play."
+        },
+        {
+          "title": "Activity records",
+          "body": "Compare stakes and returns. Deposits are not losses."
+        },
+        {
+          "title": "Breaks and self-exclusion",
+          "body": "Check duration, coverage and return rules."
+        }
+      ]
+    },
+    "table-tent-5b:front-tools": {
+      "title": "Your tools. Your choices.",
+      "body": "Explore the tools available through your service.",
+      "scope": "",
+      "sections": [
+        {
+          "title": "Deposit limits",
+          "body": "Check the amount, period and payments covered."
+        },
+        {
+          "title": "Session reminders",
+          "body": "A prompt to check in; it may not stop play."
+        },
+        {
+          "title": "Activity records",
+          "body": "Compare stakes and returns. Deposits are not losses."
+        },
+        {
+          "title": "Breaks and self-exclusion",
+          "body": "Check duration, coverage and return rules."
+        }
+      ]
+    },
+    "betslip-rg-12g": {
+      "body": "Check your budget and the bet price.",
+      "scope": "Example: $100 wager budget − $25 staked. Separate from a deposit limit.",
+      "height": 302
+    },
+    "cooldown-10e": {
+      "body": "Example: your 30-day account pause is confirmed.",
+      "scope": "A pause is different from self-exclusion.",
+      "sections": [
+        {
+          "title": "Check the dates",
+          "body": "Confirm the start, end and time zone."
+        },
+        {
+          "title": "Existing bets and funds",
+          "body": "Review the account terms or contact your service."
+        }
+      ],
+      "height": 446
+    },
+    "deposit-interstitial-12b": {
+      "body": "Choose an amount and period that fit your budget. These amounts are examples.",
+      "scope": "Check what counts, the reset time and when changes take effect.",
+      "height": 455
+    },
+    "mobile-onboarding-12a": {
+      "body": "Get to know the tools available in your account.",
+      "scope": "A reminder may not stop play.",
+      "sections": [
+        {
+          "title": "Game information",
+          "body": "Read the rules and payouts."
+        },
+        {
+          "title": "Limits and reminders",
+          "body": "Check what each tool covers and when it takes effect."
+        },
+        {
+          "title": "Activity",
+          "body": "See your stakes, returns and time spent."
+        }
+      ],
+      "height": 457
+    },
+    "self-exclusion-10b": {
+      "body": "Choose from the periods offered by your scheme.",
+      "scope": "Before confirming, review coverage, start date, cancellation and return rules, and access to existing bets and funds.",
+      "height": 556
+    },
+    "session-summary-10c": {
+      "body": "Example: 202 minutes across 4 sessions; 50.5 minutes per session.",
+      "scope": "Seven-day example. An average is not a recommended session length.",
+      "height": 319
+    },
+    "web-popup-12h": {
+      "body": "Review the options available in your account.",
+      "scope": "Check each tool’s terms and effective time.",
+      "height": 528
+    },
+    "withdrawal-confirm-12f": {
+      "body": "Example request: $150. Receipt does not mean payment has arrived.",
+      "scope": "Session net = returns − stakes, excluding deposits, withdrawals, fees and bonuses. A withdrawal is not profit.",
+      "height": 440
+    },
+    "email-welcome-7a": {
+      "body": "A few things to explore before you play.",
+      "scope": "",
+      "sections": [
+        {
+          "title": "Set a deposit limit",
+          "body": "Choose an amount and period. Check what counts, when it resets and when changes take effect."
+        },
+        {
+          "title": "Set a session reminder",
+          "body": "Choose when to check in. A reminder may not stop play."
+        },
+        {
+          "title": "Know your game",
+          "body": "Read the rules and payouts. Try the quiz and explore the answers."
+        }
+      ],
+      "height": 788
+    },
+    "email-deposit-7b": {
+      "title": "Deposit confirmed",
+      "body": "Example: your $50 deposit is confirmed.",
+      "scope": "Weekly gross-deposit example: $20 earlier + $50 now. This is not a net-loss limit.",
+      "sections": [
+        {
+          "title": "Check your limit",
+          "body": "Review the reset time and the rules for changing it."
+        }
+      ],
+      "height": 827
+    },
+    "email-monthly-7c": {
+      "body": "An illustrative report covering four complete weeks.",
+      "scope": "Net = $615 returned − $700 staked. Deposits, withdrawals, fees and bonuses excluded.",
+      "sections": [
+        {
+          "title": "Weekly deposit limits",
+          "body": "Example: $576 deposited against four $200 weekly limits; average use 72%."
+        },
+        {
+          "title": "Session reminders",
+          "body": "Example: 4 reminders at a 60-minute interval."
+        },
+        {
+          "title": "Your next check-in",
+          "body": "Review your current settings. Past averages do not show today’s remaining limit."
+        }
+      ],
+      "height": 1129
+    },
+    "email-reactivation-7d": {
+      "body": "Your tools are there when you need them.",
+      "scope": "A reminder, account pause and self-exclusion work differently. Check their terms.",
+      "sections": [
+        {
+          "title": "Limits and reminders",
+          "body": "Review your amounts, periods and current settings."
+        },
+        {
+          "title": "Game information",
+          "body": "Find the rules and read the quiz explanations."
+        },
+        {
+          "title": "Support",
+          "body": "Ask about your options before deciding what to do next."
+        }
+      ],
+      "height": 823
+    },
+    "email-support-10h": {
+      "body": "You can ask about gambling support before deciding what to do next.",
+      "scope": "",
+      "sections": [
+        {
+          "title": "Talk to someone",
+          "body": "Choose the contact method that suits you."
+        },
+        {
+          "title": "Explore account options",
+          "body": "Review your tools and activity. A pause differs from self-exclusion."
+        }
+      ],
+      "height": 669
+    },
+    "email-14d-every-game": {
+      "body": "House edge is average loss as a share of the stated wager.",
+      "scope": "Rule-specific examples, not a prediction for your session.",
+      "rows": [
+        {
+          "label": "Blackjack",
+          "note": "Table rules and strategy determine the edge.",
+          "value": "—"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Craps · Pass line",
+          "note": "Per initial wager; full resolution; no added odds",
+          "value": "1.41%"
+        },
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Slots · RTP example",
+          "note": "Illustrative 95% theoretical RTP",
+          "value": "95% → 5.00%"
+        }
+      ],
+      "height": 919
+    },
+    "mobile-14f-every-game": {
+      "body": "House edge is average loss as a share of the stated wager.",
+      "scope": "Rule-specific examples, not a prediction for your session.",
+      "rows": [
+        {
+          "label": "Blackjack",
+          "note": "Table rules and strategy determine the edge.",
+          "value": "—"
+        },
+        {
+          "label": "Baccarat · Banker",
+          "note": "8 decks; 5% commission; ties push",
+          "value": "1.06%"
+        },
+        {
+          "label": "Craps · Pass line",
+          "note": "Per initial wager; full resolution; no added odds",
+          "value": "1.41%"
+        },
+        {
+          "label": "Single-zero roulette",
+          "note": "Standard payouts; no zero concession",
+          "value": "2.70%"
+        },
+        {
+          "label": "Double-zero roulette",
+          "note": "Standard payouts; basket excluded",
+          "value": "5.26%"
+        },
+        {
+          "label": "Slots · RTP example",
+          "note": "Illustrative 95% theoretical RTP",
+          "value": "95% → 5.00%"
+        }
+      ],
+      "height": 647
+    },
+    "app-banner-12d": {
+      "body": "",
+      "scope": ""
+    },
+    "in-play-overlay-12c": {
+      "body": "Example: 83 min · $45 staked.",
+      "scope": ""
+    },
+    "limit-reached-10d": {
+      "body": "Check when your limit resets.",
+      "scope": ""
+    },
+    "live-odds-overlay-15d": {
+      "body": "Check the odds, stake and total return before confirming.",
+      "scope": ""
+    },
+    "push-notification-12e": {
+      "body": "Example: 60 minutes. Time to check in.",
+      "scope": ""
+    },
+    "scorecard-quickref": {
+      "body": "Test understanding and the next action. Ratings describe the content, not its effect on gambling harm.",
+      "scope": "Record limitations and changes. There is no universal pass score.",
+      "sections": [
+        {
+          "title": "1. Define",
+          "body": "Name the resource, audience, placement and question. Plan recruitment, consent, sample and decision criteria."
+        },
+        {
+          "title": "2. Ask",
+          "body": "Use recommendation, memorability and open feedback. Test comprehension separately."
+        },
+        {
+          "title": "3. Diagnose",
+          "body": "Rate memorable, engaging, respectful, clear and relevant. Pretest the questions."
+        },
+        {
+          "title": "4. Follow up",
+          "body": "Ask for unprompted recall, then knowledge and optional follow-through. Report response counts."
+        },
+        {
+          "title": "5. Calculate",
+          "body": "NPS = % rating 9–10 minus % rating 0–6. Include 7–8 in the denominator; report missing answers."
+        },
+        {
+          "title": "6. Decide",
+          "body": "Report distributions, uncertainty and negative findings. Fix errors, retest, and avoid unsupported causal claims."
+        }
+      ]
+    },
+    "card-tier2-10f": {
+      "body": "For your gambling or someone else’s. Start with a conversation.",
+      "scope": ""
+    },
+    "poster-tier2-10g": {
+      "body": "For your gambling or someone else’s. Start with a conversation.",
+      "scope": ""
+    },
+    "sign-restroom-9d": {
+      "body": "For your gambling or someone else’s. Start with a conversation.",
+      "scope": ""
+    },
+    "support-page-10a": {
+      "body": "For your gambling or someone else’s. Start with a conversation.",
+      "scope": "",
+      "sections": [
+        {
+          "title": "Self-exclusion",
+          "body": "Ask about duration, coverage and returning to play."
+        },
+        {
+          "title": "Money advice",
+          "body": "Ask about local debt-advice services."
+        },
+        {
+          "title": "Peer support",
+          "body": "Find out about groups near you."
+        }
+      ],
+      "height": 829
+    },
+    "helpline-card-5c": {
+      "body": "",
+      "scope": ""
+    },
+    "sign-atm-9b": {
+      "body": "Choose what you can afford before withdrawing. You can leave it unspent.",
+      "scope": "An online deposit limit may not cover cash gambling."
+    },
+    "sign-entrance-9a": {
+      "body": "Check the rules and payouts. Ask staff where to find tools and support.",
+      "scope": ""
+    },
+    "sign-staff-9e": {
+      "body": "Use your organisation’s current tools, contacts and procedures.",
+      "scope": "Unsure? Find the responsible person or verified source.",
+      "sections": [
+        {
+          "title": "Know the tools",
+          "body": "Explain what limits, reminders and activity records do."
+        },
+        {
+          "title": "Speak plainly",
+          "body": "Use clear language. Do not label or diagnose."
+        },
+        {
+          "title": "Verify contacts",
+          "body": "Check services, hours, channels, costs and privacy."
+        },
+        {
+          "title": "Be discreet",
+          "body": "Offer contact details and follow your support procedures."
+        },
+        {
+          "title": "Show the way",
+          "body": "Point to the current rules and player resources."
+        }
+      ]
+    },
+    "poster-19a-every-game-math": {
+      "body": "Rules, payouts, house edge. Three things to check before you play.",
+      "scope": ""
+    },
+    "poster-19b-odds-are-public": {
+      "body": "See what each result pays. Look up your game’s return-to-player information.",
+      "scope": ""
+    },
+    "poster-19c-bet-price-tag": {
+      "body": "At −110, a winning $110 cash bet returns $210: your stake plus $100 profit.",
+      "scope": "Before deductions. A losing bet loses the stake."
+    },
+    "poster-19d-game-iq": {
+      "body": "Take the Game IQ quiz with a friend. Compare answers and explore the reasons.",
+      "scope": ""
+    },
+    "poster-19e-never-due": {
+      "body": "Past losses do not improve the next independent spin’s odds.",
+      "scope": "Same rules. Same game state."
+    },
+    "poster-19f-your-tools": {
+      "title": "Your amount. Your limit.",
+      "body": "Set a deposit limit. Check what it covers and when it resets.",
+      "scope": ""
+    },
+    "poster-19g-one-decision": {
+      "title": "A limit. Not a target.",
+      "body": "Choose what you can afford to spend. You can leave it unspent.",
+      "scope": ""
+    },
+    "poster-19h-time-flies": {
+      "title": "Choose when to call it a night.",
+      "body": "Set a reminder before you play. Check in when it arrives.",
+      "scope": "A reminder may not stop play."
+    },
+    "poster-19i-lottery-odds": {
+      "body": "In a fair six-from-49 draw, every combination has the same full-match chance: 1 in 13,983,816.",
+      "scope": ""
+    },
+    "brochure-cover-8b": {
+      "scope": "",
+      "panels": true
+    },
+    "brochure-trifold-8a": {
+      "scope": "",
+      "panels": true
+    },
+    "table-tent-5b": {
+      "scope": "",
+      "panels": true
+    }
+  }
+}

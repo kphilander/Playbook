@@ -1,5 +1,7 @@
 # Playbook RG
 
+**Current English edition:** [Review the 85 revised collateral pieces](collateral/editorial/index.html), with shorter copy, cleaner layouts and centered photography. [Editable files and handoff notes](collateral/editorial/README.md).
+
 **Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.** Formally *Playbook RG*; "Playbook" works as shorthand.
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
@@ -53,19 +55,19 @@ The full provenance, with the inline disclosures attached to each cited paper, i
 2. **Edit [`_brand.yml`](_brand.yml)**: your program name, colors, fonts, helpline numbers, and taglines. This single file drives the entire system.
 3. **Choose your jurisdictions**: keep the modules you operate in (`jurisdictions/united-kingdom/`), delete the rest
 4. **Customize messaging**: pick from the tagline system, adapt tone examples, write your own
-5. **Build collateral**: use the HTML templates in `collateral/render/` and markdown specs across all channels
+5. **Build collateral**: use the current English HTML in `collateral/editorial/artwork/` and the channel specifications
 
 ## Preview
 
-A selection of the 75 ready-to-use English templates in the brand system (290 with i18n variants). Each template is available as HTML source and PNG render in `collateral/render/`.
+A selection of the 85 revised English pieces. [Browse the complete edition](collateral/editorial/index.html) for editable HTML, SVG, PNG and copy. Earlier localized variants and alternate production profiles are available in `collateral/render/`.
 
 | | | |
 |---|---|---|
-| ![Social card](collateral/render/card-1a-hot-streak.png) | ![Email template](collateral/render/email-welcome-7a.png) | ![Venue poster](collateral/render/poster-4a-know-your-game.png) |
+| ![Social card](collateral/editorial/artwork/card-1a-hot-streak.png) | ![Email template](collateral/editorial/artwork/email-welcome-7a.png) | ![Venue poster](collateral/editorial/artwork/poster-4a-know-your-game.png) |
 | Social card, myth-buster | Email, welcome series | Poster, Know Your Game |
-| ![Rack card](collateral/render/rack-card-5a.png) | ![Digital display](collateral/render/display-landscape-6a.png) | ![Venue sign](collateral/render/sign-entrance-9a.png) |
+| ![Rack card](collateral/editorial/artwork/rack-card-5a.png) | ![Digital display](collateral/editorial/artwork/display-landscape-6a.png) | ![Venue sign](collateral/editorial/artwork/sign-entrance-9a.png) |
 | Print, rack card | Digital display, landscape | Venue sign, entrance |
-| ![Support page](collateral/render/support-page-10a.png) | ![Helpline poster](collateral/render/poster-tier2-10g.png) | ![Brochure](collateral/render/brochure-trifold-8a.png) |
+| ![Support page](collateral/editorial/artwork/support-page-10a.png) | ![Helpline poster](collateral/editorial/artwork/poster-tier2-10g.png) | ![Brochure](collateral/editorial/artwork/brochure-trifold-8a.png) |
 | Tier 2, support page | Tier 2, helpline poster | Print, brochure inside |
 
 ---
