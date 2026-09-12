@@ -8,7 +8,15 @@ Playbook Brand is an open, adaptable system for player education. Use the user's
 
 Ask only for information that materially changes the work: the intended output, audience, channel, operation, language, and relevant market. Preserve supplied choices. An illustrative example is not an operator's answer. Missing markets, support services, dates, owners, and account capabilities remain unknown.
 
-The supported starter tasks are defined in `ai/tasks.json`: adapt a player page, draft a welcome email, and check a draft. These are starting briefs, not promises that an assistant can edit files or access the internet.
+The tasks in `ai/tasks.json` are optional examples, not the limits of Playbook: adapt a player page, draft a welcome email, or check a draft. Work from the user's actual goal rather than forcing it into one of these choices.
+
+## Use a persistent connection
+
+If the Playbook MCP connection is configured in the user's assistant, use it across tasks and projects. It exposes the public library, not just a prepared brief: browse directories, find files by topic or filename, and read the sources. File finding is path-based, not full-text search. Binary and large assets return source links. No Playbook account, player records, or model API key is needed.
+
+Read `playbook://guide` and browse the library before choosing sources. Reuse returned commit IDs when continuing a read; follow pagination to retrieve the complete file. The connector checks published main on demand, caches checks for up to 15 minutes, and flags an older fallback if GitHub is unavailable. The `published/` feeds are the website's separately revised edition, bundled with its connector release. A connection does not grant write access to Playbook or access to the user's workspace.
+
+Setup is described on [Use with your AI](https://www.playbookrg.com/brand/ai/). Preview connections are not the production service. If the connector is unavailable, use a local checkout or ask for the relevant sources; do not imply a connection was established by copying a URL.
 
 ## Work in a coding assistant
 

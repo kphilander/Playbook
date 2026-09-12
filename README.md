@@ -51,11 +51,11 @@ The full provenance, with the inline disclosures attached to each cited paper, i
 
 ### Use your own AI assistant
 
-Open your working copy in **Codex** and use `$playbook`, or open it in **Claude Code** and use `/playbook`. Describe what you want to make: a player page, a welcome email, or a draft review. The repository includes the skill in each tool's native location; no separate installer is needed.
+Connect your assistant once and use the Playbook library across projects. The read-only MCP connector supports browsing the repository, finding files and retrieving source material. [Connection setup](https://www.playbookrg.com/brand/ai/) covers Codex, Claude Code and compatible assistants. The website connector is being reviewed in [PlaybookRG PR #11](https://github.com/kphilander/PlaybookRG/pull/11); a local or PR preview URL is not the live service.
 
-Both use [the shared AI guide](docs/ai-guide.md) and [starter task definitions](ai/tasks.json). Other assistants can read or upload the same guide. When integrating into an existing operator project, use Playbook as reference material and keep the work in that project.
+Working directly in a checkout? Use `$playbook` in **Codex** or `/playbook` in **Claude Code**. Both use [the shared AI guide](docs/ai-guide.md). The [starter tasks](ai/tasks.json) are examples, not a restriction to single-page work. Keep implementation in the operator's project when one is supplied.
 
-Keep the guide and source edition with the work. Missing local details stay visible, and drafts still need review before publication. There is no hosted Playbook MCP connection in this starter; no credentials or player records are needed.
+Keep the guide and source edition with the work. Missing local details stay visible, and drafts still need review before publication. The connector reads public sources; it cannot write to this repository or access an operator's private systems.
 
 Maintainers: run `node ai/check-skill.mjs` to check the two entry files and their shared references. Skill discovery follows [Codex's repository-skill guidance](https://learn.chatgpt.com/docs/build-skills) and [Claude Code's project-skill guidance](https://code.claude.com/docs/en/skills).
 
