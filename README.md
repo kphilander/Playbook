@@ -49,6 +49,14 @@ The full provenance, with the inline disclosures attached to each cited paper, i
 
 ## Quick start
 
+### Use your own AI assistant
+
+Ask your assistant to read [the shared AI guide](docs/ai-guide.md), then describe what you want to make. Start with a player page, a welcome email, or a draft review. The guide works as a file to read or upload; it does not require a particular model or a Playbook account. [Starter task definitions](ai/tasks.json) keep the handoff consistent across tools.
+
+Keep the guide and source edition with the work. Missing local details stay visible, and drafts still need review before publication. There is no hosted Playbook MCP connection in this starter; no credentials or player records are needed.
+
+### Configure the source
+
 1. **Fork this repository** to your own GitHub account
 2. **Edit [`_brand.yml`](_brand.yml)**: your program name, colors, fonts, helpline numbers, and taglines. This single file drives the entire system.
 3. **Choose your jurisdictions**: keep the modules you operate in (`jurisdictions/united-kingdom/`), delete the rest
