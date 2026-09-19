@@ -431,6 +431,7 @@ helplines:
 
 integration:
   limits_url: "{{LIMITS_URL}}"              # Operator's limit-setting page
+  preferences_url: "{{EMAIL_PREFERENCES_URL}}"  # Email preferences or unsubscribe page
   self_exclusion_url: "{{SELF_EXCLUSION_URL}}"  # Self-exclusion page or external program
   self_exclusion_name: "{{SELF_EXCLUSION_NAME}}" # Program name (e.g., GamStop, GAMBAN)
   support_org_name: "{{SUPPORT_ORG_NAME}}"  # Primary support org (e.g., NCPG, GambleAware)

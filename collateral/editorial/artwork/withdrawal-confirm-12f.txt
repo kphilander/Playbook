@@ -1,0 +1,16 @@
+{{PROGRAM_SHORT_NAME}}
+Interface example
+Withdrawal request received
+Example request: $150. Receipt does not mean payment has arrived.
+Example stakes
+$80.00
+Example returns
+$150.00
+Example session net
++$70.00
+Session net = returns − stakes, excluding deposits, withdrawals, fees and bonuses. A withdrawal is not profit.
+View withdrawal status
+Done
+Template guidance (English)
+Support: {{HELPLINE_NUMBER}}
+Service hours: {{HELPLINE_HOURS}}

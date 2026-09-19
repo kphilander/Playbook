@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Playbook brand system — build pipeline driven by _brand.yml",
+  "description": "Playbook brand system \u2014 build pipeline driven by _brand.yml",
   "license": "CC0-1.0",
   "scripts": {
     "generate": "npm run generate:tokens && npm run generate:tailwind && npm run generate:inject-css",
@@ -48,7 +48,11 @@
     "build:text-surfaces": "node collateral/text-surfaces/build.mjs",
     "check:text-surfaces": "node collateral/text-surfaces/check.mjs",
     "build:brand-trial": "node collateral/brand-trials/gamesense/build.mjs",
-    "check:brand-trial": "node --test collateral/template-system/brand-package.test.mjs && node collateral/brand-trials/gamesense/check.mjs"
+    "check:brand-trial": "node --test collateral/template-system/brand-package.test.mjs && node collateral/brand-trials/gamesense/check.mjs",
+    "check:editorial": "node collateral/editorial/check.mjs",
+    "render:editorial": "node collateral/editorial/render.mjs",
+    "check:editorial:browser": "node collateral/editorial/check-browser.mjs",
+    "check:editorial:configured": "node collateral/editorial/check-configured.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"
