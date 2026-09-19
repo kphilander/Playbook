@@ -52,7 +52,10 @@
     "check:editorial": "node collateral/editorial/check.mjs",
     "render:editorial": "node collateral/editorial/render.mjs",
     "check:editorial:browser": "node collateral/editorial/check-browser.mjs",
-    "check:editorial:configured": "node collateral/editorial/check-configured.mjs"
+    "check:editorial:configured": "node collateral/editorial/check-configured.mjs",
+    "generate:catalog": "node ai/build-catalog.mjs",
+    "check:catalog": "node ai/build-catalog.mjs --check",
+    "test:discovery": "node --test ai/catalog.test.mjs && node ai/check-skill.mjs"
   },
   "dependencies": {
     "js-yaml": "^4.1.1"

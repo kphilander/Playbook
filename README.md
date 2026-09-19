@@ -7,6 +7,12 @@
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](_brand.yml)
 
+## Use Playbook with your AI
+
+Give your assistant this repository URL and the task you want to complete. Start with the [reading guide](docs/ai-guide.md) for direct links to a poster, campaign, game explanation, and website options. The [collection catalog](ai/catalog.json) provides machine-readable paths and edition labels; [llms.txt](llms.txt) is the short orientation.
+
+Everything needed to discover and read the library is available through GitHub and raw file URLs. No installation, account, or MCP connection is required. Use the revised English editorial collection for the pieces it covers; keep older localized editions and website editions explicit. Reading these files does not authorize installation, account access, or publication.
+
 ---
 
 ## What is Playbook?
@@ -51,16 +57,6 @@ The full provenance, with the inline disclosures attached to each cited paper, i
 
 ## Quick start
 
-### Use your own AI assistant
-
-Connect your assistant once and use the Playbook library across projects. The read-only MCP connector supports browsing the repository, finding files and retrieving source material. [Connection setup](https://www.playbookrg.com/brand/ai/) covers Codex, Claude Code and compatible assistants. The website connector is being reviewed in [PlaybookRG PR #11](https://github.com/kphilander/PlaybookRG/pull/11); a local or PR preview URL is not the live service.
-
-Working directly in a checkout? Use `$playbook` in **Codex** or `/playbook` in **Claude Code**. Both use [the shared AI guide](docs/ai-guide.md). The [starter tasks](ai/tasks.json) are examples, not a restriction to single-page work. Keep implementation in the operator's project when one is supplied.
-
-Keep the guide and source edition with the work. Missing local details stay visible, and drafts still need review before publication. The connector reads public sources; it cannot write to this repository or access an operator's private systems.
-
-Maintainers: run `node ai/check-skill.mjs` to check the two entry files and their shared references. Skill discovery follows [Codex's repository-skill guidance](https://learn.chatgpt.com/docs/build-skills) and [Claude Code's project-skill guidance](https://code.claude.com/docs/en/skills).
-
 ### Configure the source
 
 1. **Fork this repository** to your own GitHub account
@@ -86,156 +82,48 @@ A selection of the 85 revised English pieces. [Browse the complete edition](coll
 
 ## Repository structure
 
-```
-Playbook/
-├── _brand.yml                        # White-label configuration engine
-├── README.md                         # You are here
-├── LICENSE                           # CC0 1.0 Universal
-├── TERMS.md                         # Terms of use, indemnification, disclaimers
-├── CONTRIBUTING.md                   # How to contribute
-├── CHANGELOG.md                      # Version history
-│
-├── brand-book/                       # Core brand guidelines (11 chapters)
-│   ├── 00-introduction.md            # Purpose, the engagement gap, two-tier system
-│   ├── 00b-theoretical-foundations.md # Auditable theory of change: how/why Playbook works, citations, logic model, author provenance
-│   ├── 01-brand-foundation.md        # Mission, vision, pillars (Open / Social)
-│   ├── 02-brand-personality.md       # Playbook voice, humor guidelines
-│   ├── 03-visual-identity.md         # Logo, color, typography, icons, photography
-│   ├── 04-voice-and-tone.md          # The confident myth-buster voice
-│   ├── 05-messaging-framework.md     # Tagline system, CTAs, interactive content briefs
-│   ├── 06-accessibility.md           # WCAG 2.1 AA, inclusive design
-│   ├── 07-application-guidelines.md  # Cross-channel rules, co-branding, integration
-│   ├── 08-governance.md              # Stewardship, versioning, measuring adoption
-│   ├── glossary.md                   # Gambling terms for marketing teams
-│   └── 09-cultural-adaptation.md    # Cultural adaptation guide (five spectrums)
-│
-├── visual-identity/                  # Production-ready design assets
-│   ├── design-tokens.css             # CSS custom properties for the full system
-│   ├── logo/                         # 20 SVGs (outlined text, no font deps) + favicon PNG/ICO set
-│   │   ├── primary/                  # Two-tone full-color and on-light (horizontal + stacked)
-│   │   ├── secondary/                # Reversed, mono-white, mono-dark (horizontal + stacked)
-│   │   ├── symbol/                   # Text-free "open book + play" mark (5 variants)
-│   │   ├── favicon/                  # favicon.svg/.ico, PNG sizes, apple-touch, PWA icons
-│   │   └── helpline-badge/           # Dark and light helpline badges
-│   ├── color/                        # Palette and accessibility contrast matrix
-│   ├── typography/                   # Type specimen, CSS, self-hosted font files (woff2)
-│   ├── iconography/                  # 31 SVG icons, style guide, interactive preview
-│   ├── photography/                  # Photo direction and mood board
-│   └── illustration/                 # Illustration style guide
-│
-├── how-to-play/                      # Game education content library
-│   ├── README.md                     # Index and navigation
-│   ├── _game-guide-template.md       # Authoring scaffold for new guides
-│   ├── odds-at-a-glance.md           # Cross-game house edge comparison
-│   ├── slots.md                      # Slots / Electronic Gaming guide
-│   ├── blackjack.md                  # Blackjack guide
-│   ├── roulette.md                   # Roulette guide
-│   ├── sports-betting.md             # Sports Betting guide
-│   ├── baccarat.md                   # Baccarat guide
-│   ├── craps.md                      # Craps guide
-│   ├── video-poker.md                # Video Poker guide
-│   ├── bingo.md                      # Bingo guide
-│   ├── lottery.md                    # Lottery guide
-│   ├── horse-racing.md               # Horse Racing guide
-│   ├── diagrams/                     # SVG diagrams embedded in game guides
-│   └── quick-reference/              # 11 condensed single-card summaries
-│
-├── messaging/                        # Messaging content library
-│   ├── core-messages.md              # 74 tagged messages by touchpoint
-│   ├── tagline-system.md             # Tagline hierarchy and rotation
-│   ├── calls-to-action.md            # CTA library by function
-│   ├── myth-busting.md               # Common gambling myths, debunked
-│   ├── campaigns.md                  # Campaign frameworks
-│   ├── stigma-free-language.md       # Language guide
-│   ├── tone-examples.md              # Voice in action across scenarios
-│   └── player-segments/              # 6 audience-specific profiles
-│       ├── general-players.md
-│       ├── young-adults.md
-│       ├── sports-bettors.md
-│       ├── at-risk-players.md
-│       ├── friends-and-family.md
-│       └── help-seekers.md
-│
-├── collateral/                       # Templates for every touchpoint
-│   ├── digital/                      # Website, mobile app, email, social media specs
-│   ├── print/                        # Brochure, rack card, table tent, helpline card specs
-│   ├── environmental/                # Venue signage and digital display specs
-│   ├── video-audio/                  # TV, radio, pre-roll, and hold message scripts
-│   ├── customer-service/             # Conversation scripts and staff FAQ
-│   ├── interactive/                   # Quiz framework
-│   └── render/                       # 75 HTML templates + PNG renders + build pipeline (290 with i18n)
-│       ├── render-cards.mjs          # Puppeteer manifest (HTML → PNG)
-│       ├── build-logos.mjs           # Logo SVG generator
-│       ├── build-icons.mjs           # Icon SVG generator
-│       ├── build-deck.mjs            # PPTX brand deck builder
-│       ├── htp-*.html/.png           # 5 how-to-play cards (1080×1080)
-│       ├── card-*.html/.png          # 6 social cards (1080×1080)
-│       ├── story-*.html/.png         # 3 stories (1080×1920)
-│       ├── poster-*.html/.png        # 3 posters (1800×2400)
-│       ├── email-*.html/.png         # 4 email templates (600px wide)
-│       ├── brochure-*.html/.png      # 2 brochure panels (2400×1000)
-│       ├── sign-*.html/.png          # 5 venue signs (various sizes)
-│       ├── display-*.html/.png       # 2 digital displays (landscape + portrait)
-│       ├── rack-card-5a.html/.png    # Print: rack card (800×1800)
-│       ├── table-tent-5b.html/.png   # Print: table tent (800×1200)
-│       ├── helpline-card-5c.html/.png # Print: helpline business card (700×400)
-│       └── *-10*.html/.png           # 8 Tier 2 support/crisis templates
-│
-├── jurisdictions/                    # Regulatory compliance modules
-│   ├── README.md                    # How jurisdiction modules work
-│   ├── _template/                   # Templates for new jurisdictions
-│   ├── canada/                      # Canada: BC, Alberta, Ontario
-│   ├── united-states/               # US: Nevada, New Jersey, Pennsylvania, Michigan, Ohio, Massachusetts, California
-│   ├── united-kingdom/              # UK (UKGC)
-│   ├── malta/                       # Malta (MGA)
-│   ├── denmark/                     # Denmark
-│   ├── macau/                       # Macau
-│   └── singapore/                   # Singapore
-│
-├── verticals/                        # Deployment maps by line of business
-│   ├── README.md                    # How vertical playbooks work
-│   ├── casino.md                    # Land-based floors: tables, slots, cage, venue
-│   ├── sportsbook.md                # Retail books and betting apps
-│   ├── online-gaming.md             # iGaming: registration, deposit, lobby, lifecycle
-│   └── lottery.md                   # Draw games, instant tickets, retail network
-│
-├── docs/                             # Player testing protocol and operational documents
-│   ├── README.md                    # Testing overview and navigation
-│   └── content-scorecard.md          # Content performance surveys, scoring, and decision framework
-```
+The [collection catalog](ai/catalog.json) links readable entry files, existing manifests, format examples, and documented edition information. It indexes collections rather than duplicating rendered assets.
+
+| Collection | Start here | Source selection |
+|------------|------------|------------------|
+| Brand configuration and taxonomy | [_brand.yml](_brand.yml), [_taxonomy.yml](_taxonomy.yml) | Configuration examples and content labels; operator values still need verification |
+| Brand foundations and voice | [Brand book](brand-book/README.md) | Voice, visual rules, accessibility, cultural adaptation, and theory of change |
+| Visual identity | [Assets and guidance](visual-identity/README.md) | Logos, icons, tokens, typography, photography; retain asset-specific notices |
+| Player messaging | [Messaging](messaging/README.md) | Messages, campaign briefs, CTAs, myths, and audience profiles |
+| Game education | [How to Play](how-to-play/README.md) | Full guides, quick references, rule assumptions, and references |
+| Current English collateral | [Editorial edition](collateral/editorial/README.md) | Preferred for the English IDs listed in its manifest; editable HTML and text |
+| Channel specifications | [Collateral](collateral/README.md) | Digital, print, environmental, video/audio, support, and interactive briefs |
+| Earlier localized and alternate production files | [Render library](collateral/render/README.md) | Coverage varies; these are not translations of the revised editorial edition |
+| Art-direction studies | [Style alternatives](collateral/style-alternatives/README.md) | Experiments, not preferred resources or publication approval |
+| Regional references | [Jurisdictions](jurisdictions/README.md) | Scoped reference modules; file presence does not establish current compliance |
+| Deployment by business type | [Verticals](verticals/README.md) | Casino, sportsbook, online gaming, and lottery deployment maps |
+| Testing and operational documents | [Docs](docs/README.md) | Content measurement and supporting research with their stated limits |
+| Generated content and assets | [JSON feeds](api/README.md) | Existing manifests and snapshots; check source conditions and recorded metadata |
+| Repository website sources | [Page template](collateral/rg-page.html), [language bundles](collateral/rg-copy/README.md), [brand demos](variants/README.md) | Repository examples, separate from the public website's revised editions |
+| Interactive game guides and widgets | [Interactive app](website/README.md), [widgets](widgets/README.md) | Readable implementation sources, separate from the website design gallery |
 
 ## What's built
 
-| Area | Status | Contents |
-|------|--------|----------|
-| **Brand book** | Complete | 11 chapters covering foundations through cultural adaptation |
-| **Visual identity** | Complete | 15 logo SVGs, 31 icon SVGs, design tokens CSS, typography system with self-hosted fonts, photography and illustration guides |
-| **How to Play** | Complete | 10 game guides (slots, blackjack, roulette, sports betting, baccarat, craps, video poker, bingo, lottery, horse racing), 11 quick-reference cards, odds comparison, how-to-play card templates |
-| **Messaging** | Complete | 74 core messages, tagline system, CTA library, myth-busting, stigma-free language guide, tone examples, 6 player-segment profiles |
-| **Collateral specs** | Complete | 14 markdown specs across digital, print, environmental, video-audio, and customer service |
-| **Collateral renders** | Complete | 75 English HTML/PNG template pairs (290 with i18n variants): social cards, stories, posters, emails, brochures, venue signs, digital displays, print collateral, Tier 2 support/crisis templates, how-to-play cards, and educational SVG diagrams |
-| **White-label config** | Complete | `_brand.yml` with placeholder tokens throughout |
-| **Docs** | Complete | Player testing protocol with Pulse (3-item) and Full (7-item) surveys using NPS and semantic differentials, delayed recall survey, cultural fit A/B testing, scoring guides, standard reporting format, and GitHub issue template for sharing findings |
-| **Jurisdictions** | Complete | 7 countries (Canada, US, UK, Malta, Denmark, Macau, Singapore) with sub-jurisdiction modules, advertising rules, and collateral adaptation guides |
+The collections above contain editable copy, specifications, source assets, generated references, and implementation examples. Use each collection's entry file and manifest for its actual coverage and conditions. Inventory counts and a file's presence are not content approval.
 
 ## What's planned
 
 | Area | Description |
 |------|-------------|
-| **Implementation guides** | Operator adoption resources: quick-start guide, Figma design briefs, launch checklist, and measurement framework for tracking content engagement and adoption metrics. |
-| **Examples** | Worked brand application with a fictional operator showing how to fork, configure `_brand.yml`, and deploy the full system. |
+| **Additional implementation guides** | Further adoption walkthroughs, design briefs, and launch checklists. [Content measurement tools](docs/content-scorecard.md) and the configuration/export notes linked above are already available. |
+| **End-to-end example** | A single worked operator deployment walkthrough. [Brand and locale demonstrations](variants/README.md) are already available as source examples. |
 
 ## How the white-label system works
 
 The [`_brand.yml`](_brand.yml) file is the engine. It holds every customizable value: your program name, color palette, typography, helpline numbers, tagline system, and tone configuration. Throughout the repository, content files use `{{PLACEHOLDER}}` tokens that reference values in this config.
 
-Fork the repo. Edit `_brand.yml`. Your brand identity cascades everywhere.
+Fork the repo, edit `_brand.yml`, and use the relevant build or export process. Committed artwork remains a reference preview until regenerated; changing configuration alone does not update those files.
 
 **The adaptive identity model.** Playbook is *recognizable but adaptive*. The structural patterns (message hierarchy, content architecture, layout principles) stay consistent across operators. The visual surface (colors, fonts, logo) adapts to each operator's brand. A player who encounters Playbook-based content at one platform will intuitively recognize the content structure at another, even though they look different.
 
 ## Rendering collateral
 
-The `collateral/render/` directory contains a Puppeteer-based pipeline that renders HTML templates to PNG:
+For the preferred English pieces, follow the [editorial editing and export notes](collateral/editorial/README.md). The `collateral/render/` directory retains the earlier localized and alternate-production pipeline:
 
 ```bash
 cd collateral/render
@@ -254,13 +142,15 @@ Other build scripts:
 
 Playbook uses a two-tier system:
 
-- **Tier 1 (this repository, 95% of content):** Entertainment literacy. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging: content players seek out. This is what operators co-brand with.
+- **Tier 1:** Entertainment literacy. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging: content players seek out. This is what operators co-brand with.
 
-- **Tier 2 (5%):** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, cooldown screens, session summaries. Warm, direct, appropriately serious. See `visual-identity/tier-2/tier-2-visual-guide.md` for the full visual specification and 8 template renders.
+- **Tier 2:** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, cooldown screens, session summaries. Warm, direct, appropriately serious. See the [Tier 2 visual guide](visual-identity/tier-2/tier-2-visual-guide.md) and the [editorial manifest](collateral/editorial/manifest.json) for support-piece specifications and artwork.
 
 ## License
 
 [CC0 1.0 Universal](LICENSE): public domain. Copy, modify, distribute, and use this work for any purpose, including commercial, without permission or attribution.
+
+Bundled fonts and other third-party material may carry separate notices. Retain the applicable licenses; the library license does not cover hosted products or operator-owned assets.
 
 **Why CC0?** Player education is too important for licensing friction. Every operator should be able to deploy quality content without legal barriers. CC0 means the entire industry can collaborate on one shared standard.
 

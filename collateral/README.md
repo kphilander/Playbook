@@ -12,17 +12,22 @@ Templates and specifications for every Playbook touchpoint — digital, print, e
 
 [Open the template studio](studio/index.html) to reskin the eight latest concept families, switch SVG illustrations and AI photos, edit copy, and export reusable HTML, CSS and recipes. The gallery and studio use the same [template system](template-system/README.md).
 
+## Source selection
+
+Use the [editorial manifest](editorial/manifest.json) for the revised English pieces it covers. Earlier localized files and alternate production profiles in `render/` retain their own copy and conditions. Creative review, text polish, style alternatives, and preference studies are design explorations; saved selections do not establish approval or supersede the editorial edition. See the [AI reading guide](../docs/ai-guide.md) for direct editable examples and citation guidance.
+
 ## Folders
 
 | Folder | Contents |
 |--------|----------|
+| [editorial/](editorial/README.md) | Preferred revised English edition for its covered IDs; HTML, text, reference artwork, and previews |
 | [digital/](digital/) | Email templates, mobile app touchpoints, social media toolkit, website content hub |
 | [print/](print/) | Brochure, rack card, table tent, helpline card specs |
 | [environmental/](environmental/) | Venue signage guide and digital display specs |
 | [video-audio/](video-audio/) | TV spots, radio scripts, digital pre-roll, hold messages |
 | [customer-service/](customer-service/) | Conversation scripts and staff FAQ for frontline teams |
 | [interactive/](interactive/) | Quiz framework for Game IQ and myth-busting quizzes |
-| [render/](render/) | **93 template families / 320 render entries** + responsive and production export profiles |
+| [render/](render/) | Earlier English and localized renders, additional concepts, and responsive/production export profiles |
 
 ## Which size to use
 
