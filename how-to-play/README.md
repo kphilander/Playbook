@@ -19,10 +19,11 @@ The complete game education library for {{PROGRAM_NAME}}. Each guide explains ho
 | Horse Racing | [horse-racing.md](horse-racing.md) | `15–25%` (takeout) | Tipster accuracy, form as guarantee | Intermediate |
 | Video Poker | [video-poker.md](video-poker.md) | `0.5–5%` | [1, 2, 4, 6, 7](../messaging/myth-busting.md) | Intermediate |
 | Baccarat | [baccarat.md](baccarat.md) | `1.06–14.4%` | [7, 8](../messaging/myth-busting.md#table-games) | Beginner |
+| Craps | [craps.md](craps.md) | See guide for bet-specific figures | See guide | Intermediate |
 
 ### Coming soon
 
-Craps, poker, keno, esports betting. Use [`_game-guide-template.md`](_game-guide-template.md) to create new guides.
+Poker, keno, esports betting. Use [`_game-guide-template.md`](_game-guide-template.md) to create new guides.
 
 ---
 
@@ -38,7 +39,7 @@ Side-by-side house edge comparison across all major games: [odds-at-a-glance.md]
 
 ## How to use this
 
-**Writing content hub articles?** → Each full guide is ready to publish as a standalone article. Sections are modular — pull any section independently.
+**Writing content hub articles?** → Use the full guide as an article source. Keep its operator note, rule assumptions, qualifications, and references with any excerpt; verify product-specific details before publication.
 
 **Building social content?** → Pull the social snippets from the bottom of each guide. Pair with `collateral/render/htp-card-*` templates.
 
@@ -54,9 +55,9 @@ Side-by-side house edge comparison across all major games: [odds-at-a-glance.md]
 
 ## Related
 
-- [Myth-busting content library](../messaging/myth-busting.md) — debunks 18 common gambling misconceptions
+- [Myth-busting content library](../messaging/myth-busting.md) — debunks common gambling misconceptions
 - [Gambling glossary](../brand-book/glossary.md) — 100+ terms defined in plain language
 - [Quiz framework](../collateral/interactive/quiz-framework.md) — quiz design specs and UI patterns
-- [Campaign briefs](../messaging/campaigns.md) — 7 ready-to-run campaigns
+- [Campaign briefs](../messaging/campaigns.md) — campaign briefs with channel and audience conditions
 - [Website content hub](../collateral/digital/website-content-hub.md) — article grid and content hub specs
-- [Core messages](../messaging/core-messages.md) — 74 messages by touchpoint
+- [Core messages](../messaging/core-messages.md) — messages by touchpoint

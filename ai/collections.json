@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "configuration",
+      "title": "Configuration and taxonomy",
+      "description": "Identity, placeholders, and the shared vocabulary for source labels.",
+      "path": ".",
+      "entry": "_brand.yml",
+      "selection": "Example configuration is not an operator-approved identity, service, or market selection.",
+      "readFiles": [
+        "_taxonomy.yml",
+        "LICENSE",
+        "TERMS.md"
+      ],
+      "formatExamples": [
+        "_brand.yml"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "configuration"
+    },
+    {
+      "id": "brand-guidance",
+      "title": "Brand guidance",
+      "description": "Foundations, voice, visual rules, accessibility, cultural adaptation, and research context.",
+      "path": "brand-book",
+      "entry": "brand-book/README.md",
+      "selection": "Apply factual and support-language conditions when adapting.",
+      "readFiles": [
+        "brand-book/04-voice-and-tone.md",
+        "brand-book/06-accessibility.md",
+        "brand-book/09-cultural-adaptation.md",
+        "brand-book/00b-theoretical-foundations.md"
+      ],
+      "formatExamples": [
+        "brand-book/04-voice-and-tone.md"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "guidance"
+    },
+    {
+      "id": "visual-identity",
+      "title": "Visual identity",
+      "description": "Logos, icons, design tokens, typography, photography, and illustration guidance.",
+      "path": "visual-identity",
+      "entry": "visual-identity/README.md",
+      "selection": "Read asset-specific notices; bundled fonts are not covered by a blanket CC0 claim. The asset feed is linked under repository-feeds.",
+      "readFiles": [
+        "visual-identity/typography/fonts/OFL.txt",
+        "visual-identity/photography/README.md"
+      ],
+      "formatExamples": [
+        "visual-identity/design-tokens.css",
+        "visual-identity/logo/primary/logo-horizontal-full-color.svg"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "authored-content"
+    },
+    {
+      "id": "messaging",
+      "title": "Messages and campaigns",
+      "description": "Player messages, campaigns, action labels, myths, tone, and audience profiles.",
+      "path": "messaging",
+      "entry": "messaging/README.md",
+      "selection": "Preserve message IDs, conditions, audience, and source qualifications.",
+      "readFiles": [
+        "messaging/core-messages.md",
+        "messaging/campaigns.md",
+        "messaging/calls-to-action.md",
+        "messaging/myth-busting.md",
+        "messaging/player-segments/README.md"
+      ],
+      "formatExamples": [
+        "messaging/campaigns.md"
+      ],
+      "languageSources": [
+        "messaging/campaigns.md"
+      ],
+      "manifests": [],
+      "sourceRole": "authored-content"
+    },
+    {
+      "id": "game-guides",
+      "title": "Game education",
+      "description": "Authored game explanations, quick references, diagrams, and assumptions.",
+      "path": "how-to-play",
+      "entry": "how-to-play/README.md",
+      "selection": "Keep frontmatter, operator notes, rule-specific figures, and references with excerpts.",
+      "readFiles": [
+        "how-to-play/craps.md",
+        "how-to-play/quick-reference/README.md",
+        "how-to-play/odds-at-a-glance.md"
+      ],
+      "formatExamples": [
+        "how-to-play/craps.md"
+      ],
+      "languageSources": [
+        "how-to-play/craps.md"
+      ],
+      "manifests": [],
+      "sourceRole": "authored-content"
+    },
+    {
+      "id": "collateral-specifications",
+      "title": "Collateral specifications",
+      "description": "Channel briefs for digital, print, environmental, audio/video, staff, and interactive content.",
+      "path": "collateral",
+      "entry": "collateral/README.md",
+      "selection": "Specifications describe adaptation requirements; choose artwork using the editorial coverage and production requirements.",
+      "readFiles": [
+        "collateral/digital/social-media-toolkit.md",
+        "collateral/production-size-matrix.md",
+        "collateral/interactive/quiz-framework.md"
+      ],
+      "formatExamples": [
+        "collateral/digital/social-media-toolkit.md"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "guidance"
+    },
+    {
+      "id": "editorial-en",
+      "title": "Revised English collateral",
+      "description": "Preferred revised English edition for the resource IDs in the editorial manifest.",
+      "path": "collateral/editorial",
+      "entry": "collateral/editorial/README.md",
+      "selection": "Preferred for covered English items only. HTML is editable source; TXT is copy; SVG/PNG are reference artwork; WebP is a preview. Configured exports are distinct. Preference is not approval.",
+      "readFiles": [
+        "collateral/editorial/artwork/poster-4a-know-your-game.html",
+        "collateral/editorial/artwork/poster-4a-know-your-game.txt",
+        "collateral/editorial/copy.en.json"
+      ],
+      "formatExamples": [],
+      "languageSources": [
+        "collateral/editorial/manifest.json"
+      ],
+      "manifests": [
+        {
+          "path": "collateral/editorial/manifest.json",
+          "kind": "editorial",
+          "pathsRelativeTo": "collateral/editorial"
+        }
+      ],
+      "sourceRole": "preferred-edition"
+    },
+    {
+      "id": "localized-production",
+      "title": "Earlier localized and alternate production files",
+      "description": "Earlier English and localized collateral, additional concepts, and output profiles.",
+      "path": "collateral/render",
+      "entry": "collateral/render/README.md",
+      "selection": "The editorial edition supersedes only its covered English items. These localized examples are not translations of that revision; coverage varies. Read the production size matrix before choosing a profile.",
+      "readFiles": [
+        "collateral/render/poster-4a-know-your-game.ja.html",
+        "collateral/render/poster-4a-know-your-game.zh-CN.html",
+        "collateral/render/poster-4a-know-your-game.ar.html",
+        "collateral/render/output-profiles.mjs",
+        "collateral/production-size-matrix.md"
+      ],
+      "formatExamples": [
+        "collateral/render/poster-4a-know-your-game.ja.html",
+        "collateral/render/poster-4a-know-your-game.ja.png"
+      ],
+      "languageSources": [
+        "collateral/render/poster-4a-know-your-game.html",
+        "collateral/render/poster-4a-know-your-game.ja.html",
+        "collateral/render/poster-4a-know-your-game.zh-CN.html",
+        "collateral/render/poster-4a-know-your-game.ar.html"
+      ],
+      "manifests": [],
+      "sourceRole": "earlier-and-alternate"
+    },
+    {
+      "id": "design-studies",
+      "title": "Experimental design studies",
+      "description": "Art-direction specimens and related creative, text, and preference explorations.",
+      "path": "collateral",
+      "entry": "collateral/style-alternatives/README.md",
+      "selection": "Experimental: do not treat specimen art, saved preferences, or validation results as a preferred edition or publication approval.",
+      "readFiles": [
+        "collateral/style-alternatives/directions.json",
+        "collateral/text-polish/README.md",
+        "collateral/text-surfaces/README.md",
+        "collateral/design-preferences/README.md",
+        "collateral/campaign-concepts/README.md",
+        "collateral/style-alternatives/fonts/fraunces-OFL.txt"
+      ],
+      "formatExamples": [],
+      "languageSources": [
+        "collateral/style-alternatives/masters/atelier-odds.html"
+      ],
+      "manifests": [
+        {
+          "path": "collateral/style-alternatives/manifest.json",
+          "kind": "style-studies",
+          "pathsRelativeTo": "collateral/style-alternatives"
+        }
+      ],
+      "sourceRole": "experimental"
+    },
+    {
+      "id": "jurisdictions",
+      "title": "Jurisdiction references",
+      "description": "Regional modules, advertising context, and adaptation references.",
+      "path": "jurisdictions",
+      "entry": "jurisdictions/README.md",
+      "selection": "Retain each module’s scope, sources, and dates. Presence is not evidence of current law or compliance.",
+      "readFiles": [],
+      "formatExamples": [
+        "jurisdictions/README.md"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "guidance"
+    },
+    {
+      "id": "verticals",
+      "title": "Business deployment maps",
+      "description": "Casino, sportsbook, online gaming, and lottery deployment context.",
+      "path": "verticals",
+      "entry": "verticals/README.md",
+      "selection": "Adapt to the actual operation and capabilities; do not assume a feature is available.",
+      "readFiles": [
+        "verticals/casino.md",
+        "verticals/sportsbook.md",
+        "verticals/online-gaming.md",
+        "verticals/lottery.md"
+      ],
+      "formatExamples": [
+        "verticals/casino.md"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "guidance"
+    },
+    {
+      "id": "measurement",
+      "title": "Testing and operational references",
+      "description": "Content scorecards, surveys, and scoped supporting research.",
+      "path": "docs",
+      "entry": "docs/README.md",
+      "selection": "Preserve the stated measurement limits; content engagement is not evidence of reduced harm.",
+      "readFiles": [
+        "docs/content-scorecard.md"
+      ],
+      "formatExamples": [
+        "docs/content-scorecard.md"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "guidance"
+    },
+    {
+      "id": "repository-feeds",
+      "title": "Repository JSON snapshots and asset manifest",
+      "description": "Generated content feeds and the existing asset index.",
+      "path": "api",
+      "entry": "api/README.md",
+      "selection": "Generation metadata is not content approval. Use asset sourceUrl paths for repository retrieval; url is a deployment path. Website feeds are a separate edition.",
+      "readFiles": [
+        "api/index.json",
+        "api/messages.json",
+        "api/campaigns.json",
+        "api/myths.json",
+        "api/ctas.json",
+        "api/games/README.md"
+      ],
+      "formatExamples": [
+        "api/messages.json"
+      ],
+      "languageSources": [],
+      "manifests": [
+        {
+          "path": "api/assets.json",
+          "kind": "assets",
+          "pathsRelativeTo": "."
+        }
+      ],
+      "sourceRole": "generated-snapshot"
+    },
+    {
+      "id": "page-template",
+      "title": "Repository player-page template",
+      "description": "Editable HTML player-page example and accompanying language bundles.",
+      "path": "collateral",
+      "entry": "collateral/rg-copy/README.md",
+      "selection": "This repository page and its language bundles are distinct from the public website template and revised website feeds. Placeholder values and service claims need verification.",
+      "readFiles": [
+        "collateral/rg-page.html",
+        "collateral/rg-copy/en.json",
+        "collateral/rg-copy/ja.json",
+        "collateral/rg-copy/zh-CN.json",
+        "collateral/rg-copy/ar.json"
+      ],
+      "formatExamples": [
+        "collateral/rg-page.html",
+        "collateral/rg-copy/en.json"
+      ],
+      "languageSources": [
+        "collateral/rg-copy/en.json",
+        "collateral/rg-copy/ja.json",
+        "collateral/rg-copy/zh-CN.json",
+        "collateral/rg-copy/ar.json"
+      ],
+      "manifests": [],
+      "sourceRole": "implementation"
+    },
+    {
+      "id": "brand-demonstrations",
+      "title": "Brand and locale demonstrations",
+      "description": "Alternative identities and locale configurations showing system flexibility.",
+      "path": "variants",
+      "entry": "variants/README.md",
+      "selection": "Demonstration settings, not a selected operator identity or approved local content.",
+      "readFiles": [
+        "variants/showcase.html",
+        "variants/glow/_brand.yml"
+      ],
+      "formatExamples": [
+        "variants/showcase.html",
+        "variants/glow/_brand.yml",
+        "variants/glow/design-tokens.css"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "demonstration"
+    },
+    {
+      "id": "interactive-games",
+      "title": "Interactive game app",
+      "description": "Source implementation for interactive game explanations.",
+      "path": "website",
+      "entry": "website/README.md",
+      "selection": "This is the interactive game app, not the separate PlaybookRG website design gallery.",
+      "readFiles": [
+        "website/src/app/craps/page.tsx"
+      ],
+      "formatExamples": [
+        "website/src/app/craps/page.tsx"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "implementation"
+    },
+    {
+      "id": "widgets",
+      "title": "Embeddable widgets",
+      "description": "Source and distribution notes for the library’s web components.",
+      "path": "widgets",
+      "entry": "widgets/README.md",
+      "selection": "Inspect dependencies and content assumptions before integration; reading does not authorize installation.",
+      "readFiles": [
+        "widgets/src/README.md",
+        "widgets/src/playbook-odds.js",
+        "widgets/dist/README.md"
+      ],
+      "formatExamples": [
+        "widgets/src/playbook-odds.js"
+      ],
+      "languageSources": [],
+      "manifests": [],
+      "sourceRole": "implementation"
+    }
+  ],
+  "relatedSources": [
+    {
+      "id": "website-repository",
+      "url": "https://github.com/kphilander/PlaybookRG",
+      "description": "Separate source repository for the public website, design gallery, packages, and website content editions."
+    },
+    {
+      "id": "website-packages",
+      "url": "https://www.playbookrg.com/ai/website-catalog.json",
+      "description": "Optional website-building catalog. Inspect its package source locations and edition information; do not silently mix with library sources."
+    },
+    {
+      "id": "website-template",
+      "url": "https://www.playbookrg.com/template/rg-page.html",
+      "description": "Public website HTML template; distinct from collateral/rg-page.html in this repository."
+    },
+    {
+      "id": "website-feeds",
+      "url": "https://www.playbookrg.com/api/index.json",
+      "description": "Separately maintained website content edition, not the repository api/ directory."
+    },
+    {
+      "id": "optional-connection",
+      "url": "https://www.playbookrg.com/ai/",
+      "description": "Optional read-only AI/MCP connection guidance. Not required to read GitHub files."
+    }
+  ]
+}

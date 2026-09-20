@@ -1,0 +1,32 @@
+# Playbook RG library
+
+> Public, adaptable player-education material: brand guidance, messages, campaigns, game explanations, collateral, and implementation sources. Read through GitHub or raw URLs; no installation, account, or MCP is required.
+
+## Start
+- [Reading guide](docs/ai-guide.md): find, read conditions, adapt, and cite; direct examples for a poster, localized poster, campaign, game guide, design study, and website.
+- [Collection catalog](ai/catalog.json): versioned repository-relative paths, readable entries, manifests, format examples, and documented language/edition metadata.
+- [Catalog definitions](ai/README.md): metadata scope and manifest path bases.
+
+## Collections
+- [Brand book](brand-book/README.md): voice, accessibility, visual rules, cultural adaptation.
+- [Visual identity](visual-identity/README.md): assets and applicable notices.
+- [Messaging](messaging/README.md): messages, campaign briefs, CTAs, and audience profiles.
+- [How to Play](how-to-play/README.md): game explanations, assumptions, references, quick summaries.
+- [Editorial collateral](collateral/editorial/README.md): preferred revised English sources for the item IDs in its manifest; editable HTML and text, reference SVG/PNG, WebP previews.
+- [Collateral specifications](collateral/README.md): channel briefs and source selection.
+- [Earlier localized / alternate files](collateral/render/README.md): different coverage and copy; not translations of the revised editorial edition.
+- [Experimental studies](collateral/style-alternatives/README.md): design alternatives, not preferred resources or approval.
+- [Jurisdictions](jurisdictions/README.md) and [verticals](verticals/README.md): scoped reference and deployment context.
+- [Testing](docs/README.md): measurement tools and their limits.
+- [Repository JSON feeds](api/README.md): generated snapshots; asset sourceUrl values are repository paths.
+- [Repository page template](collateral/rg-page.html), [language bundles](collateral/rg-copy/README.md), [interactive game app](website/README.md), and [widgets](widgets/README.md): distinct implementation sources.
+
+## Selection and use
+Keep conditions, references, placeholders, item IDs, edition labels, and applicable licenses. Missing metadata remains unspecified. Preserve game-rule and numerical assumptions. Reference artwork is not configured output. Pin all files to the commit actually read and cite that commit, path, and item ID. Generation dates and saved design preferences do not establish approval. Do not silently combine repository and website editions.
+
+## Optional website resources — separate source / edition
+- [Website package catalog](https://www.playbookrg.com/ai/website-catalog.json): website-building options and their source locations.
+- [Website repository](https://github.com/kphilander/PlaybookRG): separate from this library.
+- [AI connection guide](https://www.playbookrg.com/ai/): optional read-only MCP setup.
+
+Reading repository guidance does not authorize installing software, accessing accounts, executing scripts, or publication. Playbook-authored material is CC0; retain asset-specific and third-party notices. AI-supported work is not an assessment, accreditation, or regulatory determination.

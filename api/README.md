@@ -2,17 +2,23 @@
 
 Static JSON content feeds generated from Playbook's markdown source files. No server required — host these on any CDN or static file server.
 
+## Source selection
+
+These repository feeds are generated snapshots. Their recorded generation date is not a review or approval date. For preferred English collateral, use the [editorial edition](../collateral/editorial/README.md) and its manifest. For all collections, start with the [AI catalog](../ai/catalog.json).
+
+In `assets.json`, `sourceUrl` is a repository-relative file path; `url` is a deployment path, not a GitHub retrieval URL. Counts, where recorded, live in the feed metadata. The public PlaybookRG website has separately revised content feeds; do not silently substitute or combine them with these files.
+
 ## Endpoints
 
-| File | Records | Description |
-|------|---------|-------------|
-| [index.json](index.json) | — | Master catalog with endpoint listing and brand metadata |
-| [messages.json](messages.json) | 67 | Core messages across all pillars (Open, Social, Smart, Aware, Help) |
-| [myths.json](myths.json) | 18 | Myth-busters in 3 formats: social card, article explainer, quiz |
-| [ctas.json](ctas.json) | 50 | Calls to action grouped by section |
-| [campaigns.json](campaigns.json) | 7 | Campaign briefs with schedules, captions, email copy, and KPIs |
-| [assets.json](assets.json) | 96 | Asset manifest (logos, icons, collateral, photography) with URLs and metadata |
-| [games/](games/) | 11 | Individual game guides (slots, blackjack, roulette, etc.) |
+| File | Description |
+|------|-------------|
+| [index.json](index.json) | Endpoint listing and snapshot brand metadata |
+| [messages.json](messages.json) | Core messages with recorded source labels |
+| [myths.json](myths.json) | Myth-busters: social card, article explainer, quiz |
+| [ctas.json](ctas.json) | Calls to action grouped by section |
+| [campaigns.json](campaigns.json) | Campaign briefs with schedules, captions, email copy, and KPIs |
+| [assets.json](assets.json) | Asset manifest with repository paths, deployment URLs, and metadata |
+| [games/README.md](games/README.md) | Individual game-guide feeds |
 
 ## Generating
 
@@ -26,7 +32,7 @@ Both scripts are also included in `npm run build`.
 
 ## Token placeholders
 
-Messages and CTAs may contain `{{PLACEHOLDER}}` tokens (e.g. `{{PROGRAM_NAME}}`, `{{HELPLINE_NUMBER}}`). These map to values in `_brand.yml`. The [Brand Configurator](https://gpconsulting.com/tools/playbook/configurator/) resolves tokens automatically when generating a Content Kit ZIP.
+Messages and CTAs may contain `{{PLACEHOLDER}}` tokens (e.g. `{{PROGRAM_NAME}}`, `{{HELPLINE_NUMBER}}`). These map to values in `_brand.yml`. The optional [website configurator](https://www.playbookrg.com/brand/configurator/) is a separate website tool. Keep its selected sources and output edition explicit.
 
 To resolve tokens programmatically, replace each `{{TOKEN}}` with the corresponding value from your `_brand.yml` config.
 
@@ -45,4 +51,4 @@ Playbook content is designed to help operators meet common responsible gambling 
 
 ## License
 
-CC0-1.0 — public domain. Use freely, no attribution required.
+Playbook-authored content is offered under [CC0-1.0](../LICENSE). Preserve applicable third-party notices, including bundled font licenses; an asset manifest does not override them.

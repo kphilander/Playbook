@@ -56,18 +56,18 @@ game_type:
   - blackjack
   - roulette
   - sports-betting
-  # Documented in odds-at-a-glance but no full guide yet
   - baccarat
   - craps
   - video-poker
-  - poker
   - bingo
   - lottery
+  - horse-racing
+  # Planning vocabulary without a standalone full guide
+  - poker
   - scratch-cards
   # Future market-specific games (no content yet)
   - pachinko
   - mahjong
-  - horse-racing
   - pokies            # Australian term for slots
   - football-pools
   - cricket-betting

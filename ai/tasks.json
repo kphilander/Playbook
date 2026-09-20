@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "tasks": [
+    {
+      "id": "player-page",
+      "label": "Adapt a player page",
+      "description": "Turn a design direction into a useful first page.",
+      "request": "Help me adapt a Playbook player-education page for my operation.",
+      "messageIds": [
+        "O-1",
+        "O-4",
+        "T-1",
+        "H-1"
+      ],
+      "output": [
+        "A proposed page structure and draft copy, with links and tools clearly identified as connected or unresolved.",
+        "An implementation checklist for my team, including local details, accessibility checks, and approvals."
+      ]
+    },
+    {
+      "id": "welcome-email",
+      "label": "Draft a welcome email",
+      "description": "Introduce the program in your own voice.",
+      "request": "Help me draft a Playbook player-education welcome email.",
+      "messageIds": [
+        "OB-1",
+        "OB-3",
+        "T-1",
+        "H-1"
+      ],
+      "output": [
+        "A subject line, preheader, concise email body, and one primary action.",
+        "Source IDs, missing destinations, and audience, consent, and market checks required before use."
+      ]
+    },
+    {
+      "id": "review-draft",
+      "label": "Check a draft",
+      "description": "Find unclear claims and things to confirm.",
+      "request": "Help me check a draft against the supplied Playbook guidance. Ask me for the draft if I have not provided it.",
+      "messageIds": [
+        "O-1",
+        "T-1",
+        "H-1"
+      ],
+      "output": [
+        "Findings grouped into factual accuracy, clarity and voice, accessibility, and local details.",
+        "Suggested edits with source references, unresolved questions, and checks that require a qualified human; no approval score or compliance verdict."
+      ]
+    }
+  ]
+}
