@@ -22,6 +22,8 @@ The 12 Tier 2 support, pause, limit, reflective-summary and reactivation pieces 
 
 These are layout defaults, not copy changes. The generator measures text at the available width before producing HTML and reference images. Operator values still resolve from `_brand.yml`.
 
+On email screens at or below 400px wide, the explanation and action return to the outer alignment so numeric values have room to stay intact. The emerald rule remains. Desktop and print retain the 12% inset.
+
 Exceptions are intentional:
 
 - **Nine photographic pieces:** retain the subject, crop, scrim and photograph-specific reading area. Offset would compete with the image.
