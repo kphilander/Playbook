@@ -1,7 +1,13 @@
 {
   "edition": "2026-09-12",
   "language": "en",
-  "description": "Shorter copy, centered reading groups and restrained full-bleed photography.",
+  "layout": {
+    "name": "Offset",
+    "version": 1,
+    "updated": "2026-09-21",
+    "policy": "offset-layout.json"
+  },
+  "description": "Offset text layouts, calm Tier 2 support, native compact surfaces and restrained full-bleed photography.",
   "resources": {
     "app-banner-12d": {
       "title": "Check the rules and payouts.",
@@ -99,13 +105,13 @@
       "title": "Need to talk?",
       "width": 2200,
       "height": 1700,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/brochure-cover-8b.html",
-          "bytes": 328234,
-          "sha256": "7fd15da83e21f6c423ef1a293f226dd1fabfbb985867945c5e4759b542cf6a1b"
+          "bytes": 329081,
+          "sha256": "eb8728b7e54c0d83b8557b381c966afc20ad3f5eee7de7de091fbbf5dcf0b1e4"
         },
         "text": {
           "path": "artwork/brochure-cover-8b.txt",
@@ -114,18 +120,18 @@
         },
         "artwork": {
           "path": "artwork/brochure-cover-8b.svg",
-          "bytes": 320405,
-          "sha256": "e259c6b1a32a0318a9958a1cd72fa231693b740cfefeb444de099085fe2edd7e"
+          "bytes": 320576,
+          "sha256": "1e43300f29001ef9764935e28a21deb5e2ae4b91758cbc575b4bbaeb459f787e"
         },
         "image": {
           "path": "artwork/brochure-cover-8b.png",
-          "bytes": 183336,
-          "sha256": "41b395143d1b1f369c3612424d72ad5cbc063fce20b23ff3e69be8be1c34ee6d"
+          "bytes": 202286,
+          "sha256": "351d78eff9c80b83d3333e1117792a69063c736a89909fa8221b030202774688"
         },
         "preview": {
           "path": "artwork/brochure-cover-8b.webp",
-          "bytes": 21164,
-          "sha256": "9dcb4ca5f9d37b42254cafd34b59da175ffa3d0d474773bbfaec540fae5f03d4"
+          "bytes": 20752,
+          "sha256": "8c24b31b744b75d939809e5c024b587b853242e03bfaa76a41e02fcf1c57bc97"
         }
       },
       "referenceNotes": {
@@ -140,19 +146,137 @@
           "kind": "Regulator explanation; Great Britain",
           "id": "slotRtp"
         }
+      ],
+      "layout": {
+        "id": "offset",
+        "profile": "narrow",
+        "insetRatio": 0.1,
+        "version": 1
+      },
+      "panels": [
+        {
+          "id": "flap-support",
+          "x": 0,
+          "y": 0,
+          "width": 725,
+          "height": 1700,
+          "rotate": 0,
+          "artworkViewBox": [
+            0,
+            0,
+            1087.5,
+            2550
+          ],
+          "tier": 2,
+          "style": "support",
+          "composition": {
+            "layout": "support",
+            "profile": null,
+            "inset": 0,
+            "detailWidth": 943.5,
+            "contentTop": 1013,
+            "contentBottom": 1433,
+            "actionTop": 1469,
+            "footerTop": 2400,
+            "typeScale": 1.2768999999999997
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/",
+          "sources": []
+        },
+        {
+          "id": "back-question",
+          "x": 725,
+          "y": 0,
+          "width": 737.5,
+          "height": 1700,
+          "rotate": 0,
+          "artworkViewBox": [
+            0,
+            0,
+            1106.25,
+            2550
+          ],
+          "tier": 1,
+          "style": "offset",
+          "composition": {
+            "layout": "offset",
+            "profile": "narrow",
+            "inset": 96,
+            "detailWidth": 866.25,
+            "contentTop": 730,
+            "contentBottom": 1716,
+            "actionTop": 1752,
+            "footerTop": 2400,
+            "typeScale": 1.7
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/slots/",
+          "sources": [
+            {
+              "title": "Gambling Commission: RTP, random and compensated machines",
+              "href": "https://www.gamblingcommission.gov.uk/public-and-players/guide/return-to-player-how-much-gaming-machines-payout",
+              "kind": "Regulator explanation; Great Britain",
+              "id": "slotRtp"
+            }
+          ],
+          "qr": {
+            "href": "https://www.playbookrg.com/brand/content/games/slots/",
+            "label": "Game guide",
+            "x": 922.25,
+            "y": 2430,
+            "size": 112,
+            "quietZone": 4
+          }
+        },
+        {
+          "id": "front-cover",
+          "x": 1462.5,
+          "y": 0,
+          "width": 737.5,
+          "height": 1700,
+          "rotate": 0,
+          "artworkViewBox": [
+            0,
+            0,
+            1106.25,
+            2550
+          ],
+          "tier": 1,
+          "style": "offset",
+          "composition": {
+            "layout": "offset",
+            "profile": "narrow",
+            "inset": 96,
+            "detailWidth": 866.25,
+            "contentTop": 531,
+            "contentBottom": 1915,
+            "actionTop": 1951,
+            "footerTop": 2400,
+            "typeScale": 1.7
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/",
+          "sources": [],
+          "qr": {
+            "href": "https://www.playbookrg.com/brand/content/games/",
+            "label": "Game guide",
+            "x": 922.25,
+            "y": 2430,
+            "size": 112,
+            "quietZone": 4
+          }
+        }
       ]
     },
     "brochure-trifold-8a": {
       "title": "Start with the rules.",
       "width": 2200,
       "height": 1700,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/brochure-trifold-8a.html",
-          "bytes": 325360,
-          "sha256": "22d47485bd3c8e656132f9167c0b3a1b99df4d91048d4f59917b5a91305c5805"
+          "bytes": 326414,
+          "sha256": "e8b98285e202337775c52c01ded6fcba04f2d839b9aa2ccd3e9f6eb79ff044ff"
         },
         "text": {
           "path": "artwork/brochure-trifold-8a.txt",
@@ -161,18 +285,18 @@
         },
         "artwork": {
           "path": "artwork/brochure-trifold-8a.svg",
-          "bytes": 316225,
-          "sha256": "6fbaa03a484fb9b4d19fafc74e4ffede286810529825f1cc2c34c46a71dfd527"
+          "bytes": 316606,
+          "sha256": "b304148bf46d08014e8e7dbba7e3acb70f1d5a16df4b2ea0614f3e9110d34294"
         },
         "image": {
           "path": "artwork/brochure-trifold-8a.png",
-          "bytes": 286650,
-          "sha256": "60b329311bebd6bd7833cb8ab98937c4403257505de4f97e8b4457471c8fb011"
+          "bytes": 285434,
+          "sha256": "a7b2dec2058b103d61e020d9892cacdc49dbe715e944763edb641324e7e84229"
         },
         "preview": {
           "path": "artwork/brochure-trifold-8a.webp",
-          "bytes": 30148,
-          "sha256": "27ef56ba2b0f64eb11ce968402ee2c1c63dedec5384af5078d75f6fa32b05acd"
+          "bytes": 30444,
+          "sha256": "9d7d9ddc787cb8c03fe973df0ce1b20f2e205fef38c3b48d5f8a9180388dc156"
         }
       },
       "referenceNotes": {
@@ -193,19 +317,135 @@
           "kind": "Mathematical analysis",
           "id": "baccarat"
         }
+      ],
+      "layout": {
+        "id": "offset",
+        "profile": "narrow",
+        "insetRatio": 0.1,
+        "version": 1
+      },
+      "panels": [
+        {
+          "id": "inside-introduction",
+          "x": 0,
+          "y": 0,
+          "width": 737.5,
+          "height": 1700,
+          "rotate": 0,
+          "artworkViewBox": [
+            0,
+            0,
+            1106.25,
+            2550
+          ],
+          "tier": 1,
+          "style": "offset",
+          "composition": {
+            "layout": "offset",
+            "profile": "narrow",
+            "inset": 96,
+            "detailWidth": 866.25,
+            "contentTop": 771.5,
+            "contentBottom": 1674.5,
+            "actionTop": 1710.5,
+            "footerTop": 2400,
+            "typeScale": 1.7
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/",
+          "sources": []
+        },
+        {
+          "id": "inside-odds",
+          "x": 737.5,
+          "y": 0,
+          "width": 737.5,
+          "height": 1700,
+          "rotate": 0,
+          "artworkViewBox": [
+            0,
+            0,
+            1106.25,
+            2550
+          ],
+          "tier": 1,
+          "style": "offset",
+          "composition": {
+            "layout": "offset",
+            "profile": "narrow",
+            "inset": 96,
+            "detailWidth": 866.25,
+            "contentTop": 413.89999999999986,
+            "contentBottom": 2032.1000000000001,
+            "actionTop": 2068.1000000000004,
+            "footerTop": 2400,
+            "typeScale": 1.7
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/",
+          "sources": [
+            {
+              "title": "Shackleford: roulette payouts and rule variants",
+              "href": "https://wizardofodds.com/games/roulette/basics/",
+              "kind": "Mathematical analysis",
+              "id": "roulette"
+            },
+            {
+              "title": "Shackleford: eight-deck baccarat analysis",
+              "href": "https://wizardofodds.com/games/baccarat/basics/",
+              "kind": "Mathematical analysis",
+              "id": "baccarat"
+            }
+          ],
+          "qr": {
+            "href": "https://www.playbookrg.com/brand/content/games/",
+            "label": "Game guide",
+            "x": 922.25,
+            "y": 2430,
+            "size": 112,
+            "quietZone": 4
+          }
+        },
+        {
+          "id": "inside-tools",
+          "x": 1475,
+          "y": 0,
+          "width": 725,
+          "height": 1700,
+          "rotate": 0,
+          "artworkViewBox": [
+            0,
+            0,
+            1087.5,
+            2550
+          ],
+          "tier": 1,
+          "style": "offset",
+          "composition": {
+            "layout": "offset",
+            "profile": "narrow",
+            "inset": 94,
+            "detailWidth": 849.5,
+            "contentTop": 431,
+            "contentBottom": 2015,
+            "actionTop": 2051,
+            "footerTop": 2400,
+            "typeScale": 1.7
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/",
+          "sources": []
+        }
       ]
     },
     "card-11a-streamer-myth": {
       "title": "A highlight reel isn’t a balance sheet.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-11a-streamer-myth.html",
-          "bytes": 290402,
-          "sha256": "c52683d5d31b1c75093fe691896ef9266b117fa6473eca30f6f098b7b22702e7"
+          "bytes": 290584,
+          "sha256": "3c8117a19f7ba7d4e6ec98b4217e0865c8a59e31594f2fb42249cdd5df40d15c"
         },
         "text": {
           "path": "artwork/card-11a-streamer-myth.txt",
@@ -214,18 +454,18 @@
         },
         "artwork": {
           "path": "artwork/card-11a-streamer-myth.svg",
-          "bytes": 288342,
-          "sha256": "12762de5aef40a0d968594c15cc33ab2f98c39065b46372500d18c24469828c6"
+          "bytes": 288463,
+          "sha256": "1e3779a9a8a89b2123f8c71f13f4267ed3fdaa114150a9b9f1d48c03a96b0a53"
         },
         "image": {
           "path": "artwork/card-11a-streamer-myth.png",
-          "bytes": 83332,
-          "sha256": "75ec7e6ae732dae13ec60092b1a404857fa124a684f823786770b87123f27413"
+          "bytes": 85716,
+          "sha256": "b4fcf612d36a7686c9f3a526b9585fe7e3f3c41091613f8254554399243d476e"
         },
         "preview": {
           "path": "artwork/card-11a-streamer-myth.webp",
-          "bytes": 20748,
-          "sha256": "0c261156d98e61d0d9fad7284fc1876184786f110d6b0cd3a87cd70d84fa9150"
+          "bytes": 21532,
+          "sha256": "7d4b30d0e6d2539dc1876af50de35e8c757540b98491a79defe30a6824b89ad3"
         }
       },
       "referenceNotes": {
@@ -234,25 +474,35 @@
         "scope": "Use a clearly named period and include losses, costs and time. A selected win does not establish a profitable pattern or promise a future result."
       },
       "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 210,
-        "contentBottom": 1036,
-        "actionTop": 1072,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 160.5,
+        "contentBottom": 1085.5,
+        "actionTop": 1121.5,
         "footerTop": 1200,
-        "typeScale": 1.2276051341890315
+        "typeScale": 1.2394138828620898
       }
     },
     "card-11b-lucky-numbers": {
       "title": "“My numbers are due.”",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-11b-lucky-numbers.html",
-          "bytes": 290909,
-          "sha256": "49af23ae8ad0ebefd92073449387ebd518035548a5b22fe3a6da748f0df4c99f"
+          "bytes": 291089,
+          "sha256": "c841f4021e9cfc7d5177d9034f624374653709294b04882dceb4df879c17f945"
         },
         "text": {
           "path": "artwork/card-11b-lucky-numbers.txt",
@@ -261,18 +511,18 @@
         },
         "artwork": {
           "path": "artwork/card-11b-lucky-numbers.svg",
-          "bytes": 288775,
-          "sha256": "ee9d2b80b5eb1e94a4555db1a8682df41f88631fe9da10f0e7861edb23d01178"
+          "bytes": 288896,
+          "sha256": "4717af0f58a2cf82a444ac553fdc5a47b5e8c18b4bbc77a09c0b7cb0d85153e2"
         },
         "image": {
           "path": "artwork/card-11b-lucky-numbers.png",
-          "bytes": 90667,
-          "sha256": "cafb448a965e668126490ba77e23b90e8b5620fd2dd96812e679277a94a57bae"
+          "bytes": 91875,
+          "sha256": "f7f0d2a8afff66f85a9bd84d56e7d88f8040dfadda9c4e79cf54a65e6f51bdee"
         },
         "preview": {
           "path": "artwork/card-11b-lucky-numbers.webp",
-          "bytes": 22954,
-          "sha256": "190d686584a79ce7f2f83c7d2ba2e929ce55c37f24e2d7d90ec68b00d01da0db"
+          "bytes": 22728,
+          "sha256": "b8de7382218a9687dd8c1d29d251bb4791a6c19ca7461a1e7e5ab3190c0abc9f"
         }
       },
       "referenceNotes": {
@@ -281,10 +531,20 @@
         "scope": "Restore all 49 numbers before each independent draw: past draws do not change the next chance. Within one draw, balls are not replaced. This is not the chance of any prize in every lottery."
       },
       "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 268.5,
-        "contentBottom": 977.5,
-        "actionTop": 1013.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 224.5,
+        "contentBottom": 1021.5,
+        "actionTop": 1057.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -293,13 +553,13 @@
       "title": "A losing streak isn’t a countdown.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13a-its-due.html",
-          "bytes": 290537,
-          "sha256": "e0ce138f9c2e4cd460055fff324175496a9d4f4b58f221884c8cb7e1a181a768"
+          "bytes": 290721,
+          "sha256": "8bb9d9984002f916cb2dd287852176a29fd09b52e2fb341db0459ded4eab8152"
         },
         "text": {
           "path": "artwork/card-13a-its-due.txt",
@@ -308,18 +568,18 @@
         },
         "artwork": {
           "path": "artwork/card-13a-its-due.svg",
-          "bytes": 288404,
-          "sha256": "888c4501dda421c11d8a3faee9dffc8de21ceb7a3801d7e0dea2b86b13de7faa"
+          "bytes": 288529,
+          "sha256": "39aca76ce27f45ae6d814df389b19d316f2a100523134172e22becc1ac04d0cd"
         },
         "image": {
           "path": "artwork/card-13a-its-due.png",
-          "bytes": 85073,
-          "sha256": "053a8bc1f55dae9117d0e776e91bce6528ae46028e09b36564957ce74deff201"
+          "bytes": 87166,
+          "sha256": "0585bf28a621e82b0669af08201881a291af7f63ad7b5f7e76f555e4d7793c6f"
         },
         "preview": {
           "path": "artwork/card-13a-its-due.webp",
-          "bytes": 21324,
-          "sha256": "7816aade2ba2bc6e3c6f643d822b02db23d56c21c77a273bc28f80fae7f8a9f9"
+          "bytes": 21686,
+          "sha256": "04766dd172d0f5ab3e68638a92a38c4a90a7112f9a648249c823da6855f57b41"
         }
       },
       "referenceNotes": {
@@ -335,10 +595,20 @@
           "id": "slotRtp"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 279,
-        "contentBottom": 967,
-        "actionTop": 1003,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 229.5,
+        "contentBottom": 1016.5,
+        "actionTop": 1052.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -347,13 +617,13 @@
       "title": "Close is not a clue.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13b-near-win.html",
-          "bytes": 290531,
-          "sha256": "85456538f2adb398776ba520795bec284dc53f5e61b5f5c727fa5d5313a3047f"
+          "bytes": 290715,
+          "sha256": "9f76ac3e0de8b44030caabc1869abf4c0239f6b8a23c918a292c64afc8f45b84"
         },
         "text": {
           "path": "artwork/card-13b-near-win.txt",
@@ -362,18 +632,18 @@
         },
         "artwork": {
           "path": "artwork/card-13b-near-win.svg",
-          "bytes": 288373,
-          "sha256": "1553001b874b7429176cfd857656f4b94c7cbed00f234ecd5ba0c2981431e603"
+          "bytes": 288528,
+          "sha256": "818b5f3c54e4336fd67dd528f4c33e29d56a89fa167f6045d8335f2d24d503a9"
         },
         "image": {
           "path": "artwork/card-13b-near-win.png",
-          "bytes": 75689,
-          "sha256": "2c5f96297817f01bac0df10c5ad0bad11ae142696b13439f14cfb37c7944a876"
+          "bytes": 78866,
+          "sha256": "26183e8a59f17f767957ad9f94ff8a34e869fa98f6f8b825457b2429bf97413a"
         },
         "preview": {
           "path": "artwork/card-13b-near-win.webp",
-          "bytes": 18350,
-          "sha256": "0f16f49538cffbde651ecb0145f75833d5bec5b41a0a3cec011a63ec36dd06b8"
+          "bytes": 18420,
+          "sha256": "aee4cb29e508be0131363ac6fd292b1315c8233fa8b7779b737ae22fce7abe5d"
         }
       },
       "referenceNotes": {
@@ -389,10 +659,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 353,
-        "contentBottom": 893,
-        "actionTop": 929,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 282.5,
+        "contentBottom": 963.5,
+        "actionTop": 999.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -401,13 +681,13 @@
       "title": "Familiar seat. Same odds.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13c-picked-right.html",
-          "bytes": 290381,
-          "sha256": "3aebb3f28375aab1b747a6d940bb46de3f132dca83e511546ca5d7bb9a0e2951"
+          "bytes": 290555,
+          "sha256": "72866030ff64ea6756580d6add521334d3ecaefb2d8acb141d997b816ae95315"
         },
         "text": {
           "path": "artwork/card-13c-picked-right.txt",
@@ -416,18 +696,18 @@
         },
         "artwork": {
           "path": "artwork/card-13c-picked-right.svg",
-          "bytes": 288271,
-          "sha256": "409ceef974cf24fc5b7a3da226349ddbd914b46109f0111326c65c4258a7a9cb"
+          "bytes": 288379,
+          "sha256": "64ae3493c68a1da4688445099ce71867867251d63212a98e07a967589bbfb8c2"
         },
         "image": {
           "path": "artwork/card-13c-picked-right.png",
-          "bytes": 80778,
-          "sha256": "0f9c675e07c6de18d7e3f8937e92a54a0b63eecfdf962258af2e8260fcfc7d97"
+          "bytes": 81897,
+          "sha256": "ed275042f9525d9144f8790c2644f512c8a560c1219643e7862c4d4013589160"
         },
         "preview": {
           "path": "artwork/card-13c-picked-right.webp",
-          "bytes": 20026,
-          "sha256": "b1918abb5f82ef4b6838f41236bf32b7c01c1e63db75ac01d9629a614fc3c948"
+          "bytes": 20202,
+          "sha256": "33844c22d244b1c743f9531343a59a56f06f8360607ecc8dfea216b564380ac8"
         }
       },
       "referenceNotes": {
@@ -449,10 +729,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 342.5,
-        "contentBottom": 903.5,
-        "actionTop": 939.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 293,
+        "contentBottom": 953,
+        "actionTop": 989,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -461,13 +751,13 @@
       "title": "Big wins make good stories.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13d-won-big.html",
-          "bytes": 290378,
-          "sha256": "1ba35000814ee75a7a28634d76d4447365d81b6413a18578fa3f3f8f0cf9c704"
+          "bytes": 290552,
+          "sha256": "d15819fb0fc6f70e2e3d5e9d267f2c48aa1f1004177e926c5ab892dc5a528f1b"
         },
         "text": {
           "path": "artwork/card-13d-won-big.txt",
@@ -476,18 +766,18 @@
         },
         "artwork": {
           "path": "artwork/card-13d-won-big.svg",
-          "bytes": 288290,
-          "sha256": "3e837327297697269c79101e701f8931a566785407599f32e9c1d8d51445e3d3"
+          "bytes": 288397,
+          "sha256": "e91aed2c6d421c779a5b971c6c34e161cca117166edd95f69f1534d82fb001ef"
         },
         "image": {
           "path": "artwork/card-13d-won-big.png",
-          "bytes": 82316,
-          "sha256": "8fcda92b67fd541b87d40b9b67cbfe49a22868cd1818767e06151ff976f49a30"
+          "bytes": 82825,
+          "sha256": "558985dbf9d486bf51a79d6c8d2239592a1061a011942eeda4344d3f7d1daef4"
         },
         "preview": {
           "path": "artwork/card-13d-won-big.webp",
-          "bytes": 20004,
-          "sha256": "092c851be9977fd044694257fd6d6677674dc6dbd62c3aa51f7d9814e5e37465"
+          "bytes": 19724,
+          "sha256": "f788ff811a94f04953779c48818a8e73d6ad7c9709ac623d0944cdd1c870fb58"
         }
       },
       "referenceNotes": {
@@ -496,10 +786,20 @@
         "scope": "Use a clearly named period and include losses, costs and time. A selected win does not establish a profitable pattern or promise a future result."
       },
       "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 268.5,
-        "contentBottom": 977.5,
-        "actionTop": 1013.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 219,
+        "contentBottom": 1027,
+        "actionTop": 1063,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -508,13 +808,13 @@
       "title": "Great shirt. Same odds.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13e-lucky-shirt.html",
-          "bytes": 290358,
-          "sha256": "5400887715e1db6c1762a36cc4098a148819ae5195fd82384e1f4f31c4cbd2a9"
+          "bytes": 290536,
+          "sha256": "21ec308e9ba76738b89cf9f64a225505293be500a3c084e289065c86c9bbd3eb"
         },
         "text": {
           "path": "artwork/card-13e-lucky-shirt.txt",
@@ -523,18 +823,18 @@
         },
         "artwork": {
           "path": "artwork/card-13e-lucky-shirt.svg",
-          "bytes": 288229,
-          "sha256": "93d63cf127aa27528d5273323674c4adc4618ea88b6ce3c27e3d7ff885a4abff"
+          "bytes": 288314,
+          "sha256": "0c07a3b86f3e8e5ef27637a7dd270059106260ec21da453c1145337f6f507122"
         },
         "image": {
           "path": "artwork/card-13e-lucky-shirt.png",
-          "bytes": 74126,
-          "sha256": "28ec1c463443143edeb21705bd5ce9fdc4350ad0ab2f405f8337447944c574d5"
+          "bytes": 75150,
+          "sha256": "b9903c714bff6fe33fcff7cda0fef2134d7157a9175ca62f57373108e33ffe03"
         },
         "preview": {
           "path": "artwork/card-13e-lucky-shirt.webp",
-          "bytes": 18200,
-          "sha256": "8d80df62d4d453acb77ec3c7d7bd3731b85826b9df5d81f8a7676d762ca5a344"
+          "bytes": 18314,
+          "sha256": "93d1e7ad2555929512bfaaf21fe5b70ce7cf81ff4ce495230935bd101959d493"
         }
       },
       "referenceNotes": {
@@ -556,10 +856,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 342.5,
-        "contentBottom": 903.5,
-        "actionTop": 939.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 324.5,
+        "contentBottom": 921.5,
+        "actionTop": 957.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -568,13 +878,13 @@
       "title": "Past spending does not earn the next win.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-13f-earned-win.html",
-          "bytes": 290392,
-          "sha256": "f48a23f6f2566dca6df1ed5414066d3cb69078c9314ab58be287a10ed8301613"
+          "bytes": 290570,
+          "sha256": "771ecbc431db745cfcd86eb18ae4566975c8587fdc96a34ebeaeebde2bdd9f21"
         },
         "text": {
           "path": "artwork/card-13f-earned-win.txt",
@@ -583,18 +893,18 @@
         },
         "artwork": {
           "path": "artwork/card-13f-earned-win.svg",
-          "bytes": 288320,
-          "sha256": "0cedc89fd76dc8eb308cc881ca44d6c12d9480dace0ff230a70160975be36495"
+          "bytes": 288405,
+          "sha256": "fb374bf9f020e77fa4133d3de86f7328b1cf15b4145acb7300a4fb92600c1955"
         },
         "image": {
           "path": "artwork/card-13f-earned-win.png",
-          "bytes": 89154,
-          "sha256": "16c741b3c04c16d719966401394b7cd2527beebb010db2963359a048fce8a442"
+          "bytes": 89814,
+          "sha256": "bc8ee5bcb8375b8765142ef995ffc51a5843d7a08ab2229891f1941d4adbb11e"
         },
         "preview": {
           "path": "artwork/card-13f-earned-win.webp",
-          "bytes": 22696,
-          "sha256": "d8dd17f3ef6e1c0cdc0c1b96e10bd4b987fc8072bfba53bab0921f34da87c04f"
+          "bytes": 22746,
+          "sha256": "4dcf570e63a8af3f4e09bdcae4a96fb4268ab678cad617fdc87449d9aa917812"
         }
       },
       "referenceNotes": {
@@ -610,10 +920,20 @@
           "id": "slotRtp"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 194.5,
-        "contentBottom": 1051.5,
-        "actionTop": 1087.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 176.5,
+        "contentBottom": 1069.5,
+        "actionTop": 1105.5,
         "footerTop": 1200,
         "typeScale": 1.28
       }
@@ -622,13 +942,13 @@
       "title": "Same game. Different payouts.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-14a-every-game-blackjack.html",
-          "bytes": 290727,
-          "sha256": "5605e2a84bb06b1d1d6f45b7bb54a88cf046e335dad06fa270e02629bfd94a64"
+          "bytes": 290901,
+          "sha256": "d7637dfac700f457eae36a5bc984d604292823372ceefbbc6bfa95ecac018895"
         },
         "text": {
           "path": "artwork/card-14a-every-game-blackjack.txt",
@@ -637,18 +957,18 @@
         },
         "artwork": {
           "path": "artwork/card-14a-every-game-blackjack.svg",
-          "bytes": 288566,
-          "sha256": "a356e328c454dfa493826699f48f77baf66fde2f822476de8b650b35e81cb0f2"
+          "bytes": 288649,
+          "sha256": "9d8a0a6f7003cb7302ed517062f8be0f0bf6035219920e964d1d7528c67c1b73"
         },
         "image": {
           "path": "artwork/card-14a-every-game-blackjack.png",
-          "bytes": 89387,
-          "sha256": "d946f3adbd8e2e29fc6a4e6aefb40f764cea53dd55ce1b99041c8772e147509f"
+          "bytes": 76504,
+          "sha256": "6de70fa588ab6002af15cffd00ed8c3beb58c13dcb8166acc54dac6f85360d56"
         },
         "preview": {
           "path": "artwork/card-14a-every-game-blackjack.webp",
-          "bytes": 22970,
-          "sha256": "6c58bea907e98f79cf998290b38d9cabb2ec49bdf927f8f581f674be7a272e67"
+          "bytes": 18704,
+          "sha256": "21047c63103a34eab2171f20617834199994465d892183e88ea45d7fb2cc3185"
         }
       },
       "referenceNotes": {
@@ -670,25 +990,35 @@
           "id": "blackjackStrategy"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 256,
-        "contentBottom": 990,
-        "actionTop": 1026,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 320,
+        "contentBottom": 926,
+        "actionTop": 962,
         "footerTop": 1200,
-        "typeScale": 1.2768999999999997
+        "typeScale": 1.0145203471552555
       }
     },
     "card-15a-point-spread": {
       "title": "Winning the game is only part of the bet.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-15a-point-spread.html",
-          "bytes": 290918,
-          "sha256": "b9fd2e120274964bd19618546405d5cfb79302e659255ba14143ef80832f7b08"
+          "bytes": 291099,
+          "sha256": "65110cd450390f435eae6307838d897ffe7e483f69445ac375232f3305b22e7a"
         },
         "text": {
           "path": "artwork/card-15a-point-spread.txt",
@@ -697,18 +1027,18 @@
         },
         "artwork": {
           "path": "artwork/card-15a-point-spread.svg",
-          "bytes": 288773,
-          "sha256": "0454b32670894adb4be24b192d93cb85b9b6e2df54a1a6ad7acadc1a5bd2c7b1"
+          "bytes": 288892,
+          "sha256": "11dfa5d05c47c3db864839bb4e85228e672cb5e83bb524bb5183086a8af45729"
         },
         "image": {
           "path": "artwork/card-15a-point-spread.png",
-          "bytes": 89667,
-          "sha256": "11232a067d6677d6ebd395d78134ce550b2ca8f119a2e05ad145fd3875f177f5"
+          "bytes": 92580,
+          "sha256": "dbeca4f61c39396b5ed9f13dad9428a2b0c2eb44e453ca22025d24a2ad695945"
         },
         "preview": {
           "path": "artwork/card-15a-point-spread.webp",
-          "bytes": 22246,
-          "sha256": "b44f472b82cfe08c8bd35c074b6f88a3231f8c33dcdde5f76827113feb434435"
+          "bytes": 22956,
+          "sha256": "daeb81c0b257796f29853dc8cdd6bed54f724a9a3ad737f68f43051c97a8c6f1"
         }
       },
       "referenceNotes": {
@@ -724,25 +1054,35 @@
           "id": "sportsTerms"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 213,
-        "contentBottom": 1033,
-        "actionTop": 1069,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 159,
+        "contentBottom": 1087,
+        "actionTop": 1123,
         "footerTop": 1200,
-        "typeScale": 1.1805507851518557
+        "typeScale": 1.2278434329652723
       }
     },
     "card-1a-hot-streak": {
       "title": "“I’m on a hot streak.”",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-1a-hot-streak.html",
-          "bytes": 290514,
-          "sha256": "04ca7d004697bbb81f39c3d5f6573b407871acd28d971da2d501869435ac07c7"
+          "bytes": 290698,
+          "sha256": "595e3ec9c0c56b3aeb393032005247440d18bb739195c0ddff5ba5882ec72b75"
         },
         "text": {
           "path": "artwork/card-1a-hot-streak.txt",
@@ -751,18 +1091,18 @@
         },
         "artwork": {
           "path": "artwork/card-1a-hot-streak.svg",
-          "bytes": 288345,
-          "sha256": "90f675869f5721eaae3a01f26b604ee5ffc1431fbdbc693ddc769b6d7445cd9b"
+          "bytes": 288470,
+          "sha256": "788f5f909e94a2e49ebba726a4ddc0a3fa9aa694a5d44b0683336f5c4ba6f7cf"
         },
         "image": {
           "path": "artwork/card-1a-hot-streak.png",
-          "bytes": 69544,
-          "sha256": "92c7fe47a343e81b1f170d19ee90fc2d12f1599f244b1a98e850fb120beac855"
+          "bytes": 70844,
+          "sha256": "5996f32678de990c9ceb78d40bf02a92f76e897ad22ce15ffafbc0b3e6d96da2"
         },
         "preview": {
           "path": "artwork/card-1a-hot-streak.webp",
-          "bytes": 16804,
-          "sha256": "0ddd72eeb872cafc7a32db7bacb6d07c89effbe30f966eaedb83d805842258f5"
+          "bytes": 16556,
+          "sha256": "4c13ca4bd04be555a24410af7075fcbdf46460aa2d3c334eec22826c25998563"
         }
       },
       "referenceNotes": {
@@ -784,10 +1124,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 353,
-        "contentBottom": 893,
-        "actionTop": 929,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 303.5,
+        "contentBottom": 942.5,
+        "actionTop": 978.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -796,13 +1146,13 @@
       "title": "“I’m due for a win.”",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-1b-due-for-win.html",
-          "bytes": 290516,
-          "sha256": "1bb7045efb4e15d864c9a14761b12d6085c8834f1c5105801f7945e0e8e97e17"
+          "bytes": 290700,
+          "sha256": "49b53724055439777c94a2d728dcf2ec289b7a0f0f4e1b49b06c9160ec949296"
         },
         "text": {
           "path": "artwork/card-1b-due-for-win.txt",
@@ -811,18 +1161,18 @@
         },
         "artwork": {
           "path": "artwork/card-1b-due-for-win.svg",
-          "bytes": 288353,
-          "sha256": "4792f667f14874febcec086635cad8f05c4119f5e6fa06ed95c7fa1378e070a3"
+          "bytes": 288478,
+          "sha256": "c805dd27d34cb3d7f7bfec9fed90047dabd60d19c4f83da4bf2ab83708a8ebc6"
         },
         "image": {
           "path": "artwork/card-1b-due-for-win.png",
-          "bytes": 68283,
-          "sha256": "cdcfe520c262f984d384ef94af11579df4e94ba8cb22c32e9b1bad044ec314a5"
+          "bytes": 70305,
+          "sha256": "6aaa0e19adf64808ee8b1c9832e80701a409ab6988bf049e8e44e22a284176c2"
         },
         "preview": {
           "path": "artwork/card-1b-due-for-win.webp",
-          "bytes": 16378,
-          "sha256": "216397814930b27446484c6740c85f635684b3c82848116faaac6fa0cd0e2f40"
+          "bytes": 16328,
+          "sha256": "e362099b7a6519d03f28002b37cb85d4aed1626c5399d6ee8fe896607cc6eaad"
         }
       },
       "referenceNotes": {
@@ -838,10 +1188,20 @@
           "id": "slotRtp"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 353,
-        "contentBottom": 893,
-        "actionTop": 929,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 303.5,
+        "contentBottom": 942.5,
+        "actionTop": 978.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -850,13 +1210,13 @@
       "title": "Familiar seat. Same odds.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-1c-lucky-machine.html",
-          "bytes": 290381,
-          "sha256": "3aebb3f28375aab1b747a6d940bb46de3f132dca83e511546ca5d7bb9a0e2951"
+          "bytes": 290555,
+          "sha256": "72866030ff64ea6756580d6add521334d3ecaefb2d8acb141d997b816ae95315"
         },
         "text": {
           "path": "artwork/card-1c-lucky-machine.txt",
@@ -865,18 +1225,18 @@
         },
         "artwork": {
           "path": "artwork/card-1c-lucky-machine.svg",
-          "bytes": 288271,
-          "sha256": "409ceef974cf24fc5b7a3da226349ddbd914b46109f0111326c65c4258a7a9cb"
+          "bytes": 288379,
+          "sha256": "64ae3493c68a1da4688445099ce71867867251d63212a98e07a967589bbfb8c2"
         },
         "image": {
           "path": "artwork/card-1c-lucky-machine.png",
-          "bytes": 80778,
-          "sha256": "0f9c675e07c6de18d7e3f8937e92a54a0b63eecfdf962258af2e8260fcfc7d97"
+          "bytes": 81897,
+          "sha256": "ed275042f9525d9144f8790c2644f512c8a560c1219643e7862c4d4013589160"
         },
         "preview": {
           "path": "artwork/card-1c-lucky-machine.webp",
-          "bytes": 20026,
-          "sha256": "b1918abb5f82ef4b6838f41236bf32b7c01c1e63db75ac01d9629a614fc3c948"
+          "bytes": 20202,
+          "sha256": "33844c22d244b1c743f9531343a59a56f06f8360607ecc8dfea216b564380ac8"
         }
       },
       "referenceNotes": {
@@ -898,10 +1258,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 342.5,
-        "contentBottom": 903.5,
-        "actionTop": 939.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 293,
+        "contentBottom": 953,
+        "actionTop": 989,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -910,13 +1280,13 @@
       "title": "House-edge examples",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-2a-house-edge.html",
-          "bytes": 293290,
-          "sha256": "755e3888bddca4e1e4e1d0f3d462488f1ef349def6cb206223eaa803750c03ab"
+          "bytes": 293359,
+          "sha256": "6dd76b6b4852d9bcc30a553efdec0f7afc0e4651e88c36763fdef5b380c4dcec"
         },
         "text": {
           "path": "artwork/card-2a-house-edge.txt",
@@ -925,18 +1295,18 @@
         },
         "artwork": {
           "path": "artwork/card-2a-house-edge.svg",
-          "bytes": 290939,
-          "sha256": "e17452f2e984b0473e96415870a5ebc7424e43e940cb7bc24b87ffc85969742d"
+          "bytes": 291011,
+          "sha256": "6e60275ee4da6c9eb6c5e0fd7cca1f317fd9ee022f633c3ec7223704b17b134e"
         },
         "image": {
           "path": "artwork/card-2a-house-edge.png",
-          "bytes": 118827,
-          "sha256": "574bdfed6ca04b3b58470035c045add8cdb03d7c7eed0f2ae95e016846ae76fa"
+          "bytes": 106841,
+          "sha256": "05c76e94cf43826cc12854e93e147bcfeacc70cec6d481a6e99899688673da8a"
         },
         "preview": {
           "path": "artwork/card-2a-house-edge.webp",
-          "bytes": 28534,
-          "sha256": "8cf10aa0b3c5591cd60c9d4ed4f6644a8bb292ca67c16aae88ada75202dd853b"
+          "bytes": 24472,
+          "sha256": "bb0ec51b5eb98fce33cc0c5ca2dacca82f282f6e5f5126d668242f519cef97c3"
         }
       },
       "referenceNotes": {
@@ -980,25 +1350,35 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 209.88191176488635,
-        "contentBottom": 1036.1180882351136,
-        "actionTop": 1072.1180882351136,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 288.46593476540755,
+        "contentBottom": 957.5340652345924,
+        "actionTop": 993.5340652345924,
         "footerTop": 1200,
-        "typeScale": 1.0752055481262908
+        "typeScale": 0.9435689231203688
       }
     },
     "card-2b-sports-betting": {
       "title": "−110. Read the whole return.",
       "width": 1080,
       "height": 1350,
-      "style": "spotlight",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-2b-sports-betting.html",
-          "bytes": 292141,
-          "sha256": "e50f78f664b4dd51a198803b83af8155e291078a9f0917529f3744000c990548"
+          "bytes": 292123,
+          "sha256": "2b78326e769ae3f1453caeb7214be66101f5b7032b75f1610703483febc344e4"
         },
         "text": {
           "path": "artwork/card-2b-sports-betting.txt",
@@ -1007,18 +1387,18 @@
         },
         "artwork": {
           "path": "artwork/card-2b-sports-betting.svg",
-          "bytes": 290004,
-          "sha256": "dcf04553008097e12cb86211853f0368c630bf4ec74eda1025a121213169e965"
+          "bytes": 289862,
+          "sha256": "085bf5b4fdf535b6cc79a2acc94b3340044c83beac4f7b7e7aba59eaa2e68957"
         },
         "image": {
           "path": "artwork/card-2b-sports-betting.png",
-          "bytes": 119507,
-          "sha256": "c9349a9a8953d4f41e93cfef1a2809c16d6afa039f6c5b085577fc03166eb338"
+          "bytes": 84457,
+          "sha256": "ffb4f58a443db54f1898e98a8230f86310f755bbea16fb2988f4986fa42f6580"
         },
         "preview": {
           "path": "artwork/card-2b-sports-betting.webp",
-          "bytes": 21038,
-          "sha256": "69feebb15a10189dbdc9517685d585a13a0505caeb3d0418069dd4618582f9c7"
+          "bytes": 20432,
+          "sha256": "749e188683e613d26151541f13b3b0d5799b5d40a50f6b5de7bba3a9f5e09824"
         }
       },
       "referenceNotes": {
@@ -1051,25 +1431,35 @@
           "id": "sportsTerms"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 214.16800020598043,
-        "contentBottom": 1031.8319997940196,
-        "actionTop": 1067.8319997940196,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 193.25936934098587,
+        "contentBottom": 1052.7406306590142,
+        "actionTop": 1088.7406306590142,
         "footerTop": 1200,
-        "typeScale": 1.233894733228415
+        "typeScale": 1.188432116824809
       }
     },
     "card-2c-bonus-wagering": {
       "title": "Is a win due?",
       "width": 1080,
       "height": 1350,
-      "style": "contour",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/card-2c-bonus-wagering.html",
-          "bytes": 290833,
-          "sha256": "1fdcc05b195abc508c2231474e7106c2a11e3207bc10a434f5b33a9c39c5ac48"
+          "bytes": 290710,
+          "sha256": "f6968e9707cfe3919c8f469e0089ceb72a84543e12817437fdde8935f07262c8"
         },
         "text": {
           "path": "artwork/card-2c-bonus-wagering.txt",
@@ -1078,18 +1468,18 @@
         },
         "artwork": {
           "path": "artwork/card-2c-bonus-wagering.svg",
-          "bytes": 289625,
-          "sha256": "1b947275687573b0f6a91915684fc67674dc9222662768feefd9baae652001e9"
+          "bytes": 288526,
+          "sha256": "5ec73c3428c38d9d525b863b82c0df2d11aad437b8d0e35c75131513713ae942"
         },
         "image": {
           "path": "artwork/card-2c-bonus-wagering.png",
-          "bytes": 115606,
-          "sha256": "e034ce2f85acd59e4de06a2238c47514c018939b448bb4c8f8a75fc623667e92"
+          "bytes": 75878,
+          "sha256": "7929ab9999714990f7e5ca9c4974a377f92b73d1dde4b2aa3395965ad3d14401"
         },
         "preview": {
           "path": "artwork/card-2c-bonus-wagering.webp",
-          "bytes": 19042,
-          "sha256": "b868263303079792a5681be176d0aeecb8a69c975f29d0fba7b00d4fdbad6b2d"
+          "bytes": 17488,
+          "sha256": "427758e8370c645eeb6f1b9497c4abf494d1116f1c6a9d6527c7ba97f7aa5247"
         }
       },
       "referenceNotes": {
@@ -1105,10 +1495,20 @@
           "id": "slotRtp"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 395.5,
-        "contentBottom": 850.5,
-        "actionTop": 886.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 325,
+        "contentBottom": 921,
+        "actionTop": 957,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -1117,7 +1517,7 @@
       "title": "You can ask for support.",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -1157,7 +1557,7 @@
       "title": "Your account pause",
       "width": 480,
       "height": 446,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -1206,14 +1606,14 @@
     "deposit-interstitial-12b": {
       "title": "Choose a deposit limit",
       "width": 420,
-      "height": 455,
-      "style": "flat",
+      "height": 465,
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/deposit-interstitial-12b.html",
-          "bytes": 292538,
-          "sha256": "7be49c47bc46941d4b5892ca968f0e41aac9e9690eb752af71bafce7f90d8354"
+          "bytes": 292779,
+          "sha256": "859875a98681fcd39eaab0916303043c5eba6194a715726fd43b8334a0c8f2d5"
         },
         "text": {
           "path": "artwork/deposit-interstitial-12b.txt",
@@ -1222,18 +1622,18 @@
         },
         "artwork": {
           "path": "artwork/deposit-interstitial-12b.svg",
-          "bytes": 285408,
-          "sha256": "b227ddb8de1d652387575c266fb85665a40671e00d6a07fcf4130b2271441cea"
+          "bytes": 285417,
+          "sha256": "808b183d067c0142fefeb6b70fd3be7bda89b07d84131c70d72e89b60b599599"
         },
         "image": {
           "path": "artwork/deposit-interstitial-12b.png",
-          "bytes": 34490,
-          "sha256": "6356b698d47e007ba5a7c7c9cde80c657a1f6420605e990aeca03391a66a0b51"
+          "bytes": 34534,
+          "sha256": "caf152c8e4541e5f84bc2fd31b1685bdb835324582efc1d0d14a6b9257f1775e"
         },
         "preview": {
           "path": "artwork/deposit-interstitial-12b.webp",
-          "bytes": 23866,
-          "sha256": "9b617325015ab4ed4aebdd69fcca9351e4f08735086a494343127bdf270bf0dc"
+          "bytes": 24016,
+          "sha256": "5fcee85cc77c91328acf3dc6a9d0b9c329cff3729fa133d1e5177d5f60fcfdcb"
         }
       },
       "referenceNotes": {
@@ -1258,19 +1658,25 @@
           }
         ]
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "interface",
+        "insetRatio": 0.08,
+        "version": 1
+      }
     },
     "display-14e-every-game": {
       "title": "House-edge examples",
       "width": 1920,
       "height": 1080,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/display-14e-every-game.html",
-          "bytes": 300712,
-          "sha256": "01a3b225379f4b2159ebce8696ea2cfa95d6a8c04ce9da725b860b4fadc865e7"
+          "bytes": 301004,
+          "sha256": "daa72e47ef55563879c519f7e0f37cd7692277396963ffd67cc624ea2635d119"
         },
         "text": {
           "path": "artwork/display-14e-every-game.txt",
@@ -1279,18 +1685,18 @@
         },
         "artwork": {
           "path": "artwork/display-14e-every-game.svg",
-          "bytes": 298714,
-          "sha256": "de790f224596a7d77c760b0979e3c7820e545eb4d5e1118cceb80ad2b152372b"
+          "bytes": 299104,
+          "sha256": "1f4c6751b9c6c1e3b4831b8665fb7bd87f6b0ecf6194236d146879433b88b04e"
         },
         "image": {
           "path": "artwork/display-14e-every-game.png",
-          "bytes": 119030,
-          "sha256": "1404987887f07cff935e98315a7fde5ff5615930a30d02e124b6a2831c887036"
+          "bytes": 126498,
+          "sha256": "b7a24c08a9555401bc2918760b45db2d7c751d655f69c34ddc92b7d58a0a0677"
         },
         "preview": {
           "path": "artwork/display-14e-every-game.webp",
-          "bytes": 18810,
-          "sha256": "25414dffedf559e71aee7c5161b3a15d497c67a7a835a8c02392d5d3aeb0643b"
+          "bytes": 17116,
+          "sha256": "9ea1d8a5690d53f58cedaf130fbf962220f00660d80ac0739fa6b3dedc7f4f9d"
         }
       },
       "referenceNotes": {
@@ -1334,25 +1740,35 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 207.8,
-        "contentBottom": 768.2,
-        "actionTop": 804.2,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 249,
+        "detailWidth": 1527,
+        "contentTop": 195.7493017003831,
+        "contentBottom": 780.2506982996169,
+        "actionTop": 816.2506982996169,
         "footerTop": 930,
-        "typeScale": 1.2
+        "typeScale": 1.109418643726057
       }
     },
     "display-landscape-6a": {
       "title": "House-edge examples",
       "width": 1920,
       "height": 1080,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/display-landscape-6a.html",
-          "bytes": 300712,
-          "sha256": "01a3b225379f4b2159ebce8696ea2cfa95d6a8c04ce9da725b860b4fadc865e7"
+          "bytes": 301004,
+          "sha256": "daa72e47ef55563879c519f7e0f37cd7692277396963ffd67cc624ea2635d119"
         },
         "text": {
           "path": "artwork/display-landscape-6a.txt",
@@ -1361,18 +1777,18 @@
         },
         "artwork": {
           "path": "artwork/display-landscape-6a.svg",
-          "bytes": 298714,
-          "sha256": "de790f224596a7d77c760b0979e3c7820e545eb4d5e1118cceb80ad2b152372b"
+          "bytes": 299104,
+          "sha256": "1f4c6751b9c6c1e3b4831b8665fb7bd87f6b0ecf6194236d146879433b88b04e"
         },
         "image": {
           "path": "artwork/display-landscape-6a.png",
-          "bytes": 119030,
-          "sha256": "1404987887f07cff935e98315a7fde5ff5615930a30d02e124b6a2831c887036"
+          "bytes": 126498,
+          "sha256": "b7a24c08a9555401bc2918760b45db2d7c751d655f69c34ddc92b7d58a0a0677"
         },
         "preview": {
           "path": "artwork/display-landscape-6a.webp",
-          "bytes": 18810,
-          "sha256": "25414dffedf559e71aee7c5161b3a15d497c67a7a835a8c02392d5d3aeb0643b"
+          "bytes": 17116,
+          "sha256": "9ea1d8a5690d53f58cedaf130fbf962220f00660d80ac0739fa6b3dedc7f4f9d"
         }
       },
       "referenceNotes": {
@@ -1416,25 +1832,35 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 207.8,
-        "contentBottom": 768.2,
-        "actionTop": 804.2,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 249,
+        "detailWidth": 1527,
+        "contentTop": 195.7493017003831,
+        "contentBottom": 780.2506982996169,
+        "actionTop": 816.2506982996169,
         "footerTop": 930,
-        "typeScale": 1.2
+        "typeScale": 1.109418643726057
       }
     },
     "display-portrait-6b": {
       "title": "House-edge examples",
       "width": 1080,
       "height": 1920,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/display-portrait-6b.html",
-          "bytes": 301459,
-          "sha256": "d05eb0b5927333edce12c01cd24418fcf44d8dfa94ccd3e1d3bd3530af9ab9bf"
+          "bytes": 301532,
+          "sha256": "569e52c73297f972eebeff2683cb49a197d6ef1d422b3cf7162d27c52620e48b"
         },
         "text": {
           "path": "artwork/display-portrait-6b.txt",
@@ -1443,18 +1869,18 @@
         },
         "artwork": {
           "path": "artwork/display-portrait-6b.svg",
-          "bytes": 299371,
-          "sha256": "03e2afeb9c8ab75489d325282be107ab4250cc0960b95031d518d9b82b285936"
+          "bytes": 299503,
+          "sha256": "206e6cf139fa55fbd5416a4d7ec5fe429f9753b3dbfb77e91317966fff7b03e7"
         },
         "image": {
           "path": "artwork/display-portrait-6b.png",
-          "bytes": 163664,
-          "sha256": "8b9600bb7ae8d90d970c0b93b1bcdeff169bde4a5a4eeb85bcde1fe195f6dba6"
+          "bytes": 155256,
+          "sha256": "aaacab3872559bac2c0d54cac337abfab27d7cdfdc81dfb834524cff0d095174"
         },
         "preview": {
           "path": "artwork/display-portrait-6b.webp",
-          "bytes": 26840,
-          "sha256": "68ecfb7e0607fbdf1b0b5231b2e23ccafd0f86b0e1effbc8e0994728c55e2d0b"
+          "bytes": 24648,
+          "sha256": "43e0c09e3ac116125e04f03fc835fe3fe7399ac4d50240d718e36cdbe309cad6"
         }
       },
       "referenceNotes": {
@@ -1498,25 +1924,35 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 246.1279254547211,
-        "contentBottom": 1569.8720745452788,
-        "actionTop": 1605.8720745452788,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 249.11646863047486,
+        "contentBottom": 1566.8835313695251,
+        "actionTop": 1602.8835313695251,
         "footerTop": 1770,
-        "typeScale": 1.475819028923624
+        "typeScale": 1.3850401291991494
       }
     },
     "email-14d-every-game": {
       "title": "Read the rules behind the number",
       "width": 600,
-      "height": 919,
-      "style": "flat",
+      "height": 955,
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/email-14d-every-game.html",
-          "bytes": 296247,
-          "sha256": "68429ab01d727c78932b860cc2bb737d4e7fd415b5efd51d885a3e0377404a51"
+          "bytes": 296470,
+          "sha256": "5b0c60ff478c4b5eb901133f5d6a2a9d5e204d31265b0bb5157d7cf9fe494db8"
         },
         "text": {
           "path": "artwork/email-14d-every-game.txt",
@@ -1525,18 +1961,18 @@
         },
         "artwork": {
           "path": "artwork/email-14d-every-game.svg",
-          "bytes": 289230,
-          "sha256": "d167262041ba31d070dc7f97633f006215352b879cf64073f7a49b80991b85b4"
+          "bytes": 289206,
+          "sha256": "13124a68c041a9b577bb2b4008392f3051ecf08de9c4db26ca764b6aa050789f"
         },
         "image": {
           "path": "artwork/email-14d-every-game.png",
-          "bytes": 87497,
-          "sha256": "dcf55b093946a2c55fbe0e320c2ae61188584f6fcf33f899b43ede0376416f40"
+          "bytes": 88146,
+          "sha256": "c5ac675079a394dbae1e53a00289b65ea192838d31e2ee0a644b6201748898b3"
         },
         "preview": {
           "path": "artwork/email-14d-every-game.webp",
-          "bytes": 28802,
-          "sha256": "35f762d8b442440ff3ec5f34f6c80c2c1ed665c4aa141eda280d8b65fa6bc2bb"
+          "bytes": 26628,
+          "sha256": "2f7fc76e2b7b451ab5ab50095b525f903edcdbdeb3448de3910ab1e1e1dc0d9e"
         }
       },
       "referenceNotes": {
@@ -1625,19 +2061,25 @@
           "kind": "Remote gambling technical standard; Great Britain",
           "id": "slotRandom"
         }
-      ]
+      ],
+      "layout": {
+        "id": "offset",
+        "profile": "email",
+        "insetRatio": 0.12,
+        "version": 1
+      }
     },
     "email-deposit-7b": {
       "title": "Deposit confirmed",
       "width": 600,
-      "height": 827,
-      "style": "flat",
+      "height": 841,
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/email-deposit-7b.html",
-          "bytes": 294443,
-          "sha256": "32503d0c55493a65ec58d84e1a0fb53d22a5d5366d0d057ef704e27e1d9f93e5"
+          "bytes": 294666,
+          "sha256": "16c90b4bffb19ff7d1623c613b49390e3632af006911d28099436dcde15247f3"
         },
         "text": {
           "path": "artwork/email-deposit-7b.txt",
@@ -1646,18 +2088,18 @@
         },
         "artwork": {
           "path": "artwork/email-deposit-7b.svg",
-          "bytes": 287150,
-          "sha256": "4e844a23d25330d030a27a6306ee7f73739e38ad2f71c0231136e05c7820199b"
+          "bytes": 287223,
+          "sha256": "96a453da1b853e6cfcbb8294d09bd4beb65a59af56ac901300566265e8cde30c"
         },
         "image": {
           "path": "artwork/email-deposit-7b.png",
-          "bytes": 67039,
-          "sha256": "0d9104924fd13439ed7fb1e4390c71d98a8db30c4740fcb42861a0965b3ff16f"
+          "bytes": 67477,
+          "sha256": "d574e65462a31fbda8baed35be0c9d0f6bb487a62145a1e0da876dde74daa5ce"
         },
         "preview": {
           "path": "artwork/email-deposit-7b.webp",
-          "bytes": 25026,
-          "sha256": "f01d2784758b9dfb5148bc28d01827d89b7cb0da241ba090a05d8048acfbe7a9"
+          "bytes": 24242,
+          "sha256": "9842426f76d87d2ce962cc8e34979550dae1010b3904701144deee53f5a9dd21"
         }
       },
       "referenceNotes": {
@@ -1688,13 +2130,19 @@
           }
         ]
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "email",
+        "insetRatio": 0.12,
+        "version": 1
+      }
     },
     "email-monthly-7c": {
       "title": "Your activity summary",
       "width": 600,
       "height": 1129,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -1770,7 +2218,7 @@
       "title": "A reminder of your account tools",
       "width": 600,
       "height": 823,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -1837,7 +2285,7 @@
       "title": "Ways to ask for support",
       "width": 600,
       "height": 669,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -1886,14 +2334,14 @@
     "email-welcome-7a": {
       "title": "Welcome. Get to know your tools.",
       "width": 600,
-      "height": 788,
-      "style": "flat",
+      "height": 823,
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/email-welcome-7a.html",
-          "bytes": 293589,
-          "sha256": "8073db5ab393b6427168424644ade8562129a39ebd6c6cf7e52dcf11d85e2a27"
+          "bytes": 293812,
+          "sha256": "771c9a76c356fb63852f4d8717a745ebbfa4b4d63a19d08633ce793b4c1eddf8"
         },
         "text": {
           "path": "artwork/email-welcome-7a.txt",
@@ -1902,18 +2350,18 @@
         },
         "artwork": {
           "path": "artwork/email-welcome-7a.svg",
-          "bytes": 286616,
-          "sha256": "e3304558ce1db600d32bb64c583fb6544c79db9f2ee18d55f2fb90a10ad068ac"
+          "bytes": 286729,
+          "sha256": "7f5f24630431724f633829a526d0b248cc4c05464efad6614e23bf9c32509e12"
         },
         "image": {
           "path": "artwork/email-welcome-7a.png",
-          "bytes": 70637,
-          "sha256": "d8a81f2b7c7f34c0d75d8ee39f4fd2fea39b40bd0e4e4fd7c840a6970ef6a3f1"
+          "bytes": 71356,
+          "sha256": "7b3e13b3c0b008ff6c71e9862bc34cb3792801a545a21e6c13fab6e14cd01838"
         },
         "preview": {
           "path": "artwork/email-welcome-7a.webp",
-          "bytes": 28210,
-          "sha256": "4193e2589db354d532dd3b6802203d4cdb8544e405976a14dad688bc471c05dc"
+          "bytes": 27438,
+          "sha256": "47f31cc7ab27a74acef2b00f3941d11b14809ebeee12aac43921dd35dac42fce"
         }
       },
       "referenceNotes": {
@@ -1935,13 +2383,19 @@
           }
         ]
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "email",
+        "insetRatio": 0.12,
+        "version": 1
+      }
     },
     "helpline-card-5c": {
       "title": "Ways to ask for support",
       "width": 700,
       "height": 400,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -1981,13 +2435,13 @@
       "title": "Baccarat",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-baccarat.html",
-          "bytes": 290659,
-          "sha256": "a2a56b980f6f01f17a043a2068d16e8142fabb5a05003b4f5cea73510e47223c"
+          "bytes": 290837,
+          "sha256": "b7e2115f0aa633fbc40e88f10d21669bdf6dba52adcc17c30034e050ae38f623"
         },
         "text": {
           "path": "artwork/htp-card-baccarat.txt",
@@ -1996,18 +2450,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-baccarat.svg",
-          "bytes": 288459,
-          "sha256": "b52d123da3aadad075d196980a7ab5984e686218b1e71a1404ddd2227bd77f03"
+          "bytes": 288548,
+          "sha256": "d45a6bd15a9731c7463815a38b7b8edff26eb0f036effa69af78dc566e1bff19"
         },
         "image": {
           "path": "artwork/htp-card-baccarat.png",
-          "bytes": 71873,
-          "sha256": "ca47f6882e880e61816be0769bc426c0f919a3706816212558c4fc46f90d8baa"
+          "bytes": 71916,
+          "sha256": "a7e8e536038086ffd28cf59c571766eb5432c0966c22e9d20dc99dab11919ecf"
         },
         "preview": {
           "path": "artwork/htp-card-baccarat.webp",
-          "bytes": 16766,
-          "sha256": "e035a9988298d42fb9ca3d17d320b4c9f7cceb5383d02a3394edb5be505c6486"
+          "bytes": 16892,
+          "sha256": "87e5385b253bdd79a9d8ade16d8622efcbca80d82602f8bb683453d00b004b78"
         }
       },
       "referenceNotes": {
@@ -2023,10 +2477,20 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 312.5,
-        "contentBottom": 933.5,
-        "actionTop": 969.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 294.5,
+        "contentBottom": 951.5,
+        "actionTop": 987.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -2035,13 +2499,13 @@
       "title": "Bingo",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-bingo.html",
-          "bytes": 290343,
-          "sha256": "1d91f3968488585e3a4dc53042f13b37864c63b299ccca9a4f4994370907f1dd"
+          "bytes": 290517,
+          "sha256": "30cd01a2b128327b95cc5870ff85629da50702f9e2298a43dda1488bba4807c3"
         },
         "text": {
           "path": "artwork/htp-card-bingo.txt",
@@ -2050,18 +2514,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-bingo.svg",
-          "bytes": 288205,
-          "sha256": "e93d3a5f47b648da50a2cc2ef00df811c2f35d84ce344ceb166cec855474e8e4"
+          "bytes": 288312,
+          "sha256": "389646190f1eef784900e9d8c7a758be4252aefd7837358cb7dd4ec80224d8e0"
         },
         "image": {
           "path": "artwork/htp-card-bingo.png",
-          "bytes": 62386,
-          "sha256": "26adad1545c29fb2442ba6e30fac6e05bba34f032a2acdb527dc91b54f3ce4d3"
+          "bytes": 63443,
+          "sha256": "265ce757abeefcb6e87baef542417d608cd30eb9d91e1917da61c0b8d37d27fc"
         },
         "preview": {
           "path": "artwork/htp-card-bingo.webp",
-          "bytes": 14526,
-          "sha256": "ab19788a103486a6774ed66f7b678dc90ddf14deabc7478a6692f8ba0aa8b6a7"
+          "bytes": 14592,
+          "sha256": "50d432dafa11aba35db8fa30aa19c0581e90fdb9474b494c93a022adc07786f5"
         }
       },
       "referenceNotes": {
@@ -2077,10 +2541,20 @@
           "id": "bingo"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 416.5,
-        "contentBottom": 829.5,
-        "actionTop": 865.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 367,
+        "contentBottom": 879,
+        "actionTop": 915,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -2089,13 +2563,13 @@
       "title": "Blackjack",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-blackjack.html",
-          "bytes": 290690,
-          "sha256": "66fe75c9ca01813a1b2b1959889351ee39cdb1faccb8816dc58d96db73cb9074"
+          "bytes": 290865,
+          "sha256": "0e540cd14c1ac8b82cafe770dcef021c194741f4c29b37c80e6b23d463e5f64e"
         },
         "text": {
           "path": "artwork/htp-card-blackjack.txt",
@@ -2104,18 +2578,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-blackjack.svg",
-          "bytes": 288505,
-          "sha256": "44e1ecfd6f273cb2f3a34ea2d0395025d3fa81b9c43b8442bbe79c89f3254082"
+          "bytes": 288644,
+          "sha256": "7e0a9f5c5e4970d5ed2d3f07fa204ef8c4b66330a3d6ce5c7e5474db19a3a28d"
         },
         "image": {
           "path": "artwork/htp-card-blackjack.png",
-          "bytes": 75577,
-          "sha256": "57bfd9faedb81fb93f38f8413592a2c17d085ef34e59fcb08cd4e833b1e390e7"
+          "bytes": 78079,
+          "sha256": "f97feef13ba2f79609c252da439a33f4ebd8bc4ebfe58c54561b2d8dd3caee3b"
         },
         "preview": {
           "path": "artwork/htp-card-blackjack.webp",
-          "bytes": 18290,
-          "sha256": "a0500fb92557d5a29000171075e738d24cbd51e3377595c28d4bac25d4063f61"
+          "bytes": 17994,
+          "sha256": "6a8742c63ff43d14d4ea5f6779da615215514bdc105897829077360b66d3d5fb"
         }
       },
       "referenceNotes": {
@@ -2137,25 +2611,35 @@
           "id": "blackjackStrategy"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 312.5,
-        "contentBottom": 933.5,
-        "actionTop": 969.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 161,
+        "contentBottom": 1085,
+        "actionTop": 1121,
         "footerTop": 1200,
-        "typeScale": 1.2768999999999997
+        "typeScale": 1.28
       }
     },
     "htp-card-craps": {
       "title": "Craps",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-craps.html",
-          "bytes": 290852,
-          "sha256": "336a4d13038be6142ede38c3a2ab5ee27868995c96e1e7295ed06a309856152f"
+          "bytes": 291032,
+          "sha256": "4d27019338f0e41d72ed2672df9ab5eb44fa2fea7f36a98b39090c8cafbd3195"
         },
         "text": {
           "path": "artwork/htp-card-craps.txt",
@@ -2164,18 +2648,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-craps.svg",
-          "bytes": 288685,
-          "sha256": "c4ff42c761f8ff7b2210da0ac8e541bb8d39e67da1544d03435888242ac0f664"
+          "bytes": 288776,
+          "sha256": "2d3fe0eb36dc282fa7335d704f7508716b9fa930f5fb4b87a35ac645085ae40d"
         },
         "image": {
           "path": "artwork/htp-card-craps.png",
-          "bytes": 76168,
-          "sha256": "08d48074721d2d83cd31aca89b05d0c8e033d30c7d2fa69d168c63f525655d00"
+          "bytes": 76344,
+          "sha256": "c5826d99014897e46b25cb0a4dab1d122bc9d5ab1634657f2d0d69d11ef8c106"
         },
         "preview": {
           "path": "artwork/htp-card-craps.webp",
-          "bytes": 17484,
-          "sha256": "0e3f5114ca681dcf8437cd19a0be3bcafd74037d05a08736596932e4cacbd2ed"
+          "bytes": 17270,
+          "sha256": "98ac1d54cec6b225b6427a48b52d0337afb059086c075d4abb4714f4909df8e1"
         }
       },
       "referenceNotes": {
@@ -2197,10 +2681,20 @@
           "id": "crapsRules"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 270.5,
-        "contentBottom": 975.5,
-        "actionTop": 1011.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 252.5,
+        "contentBottom": 993.5,
+        "actionTop": 1029.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -2209,13 +2703,13 @@
       "title": "Horse racing",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-horse-racing.html",
-          "bytes": 290888,
-          "sha256": "f7d17d8fb70a475bd8cc337605cb10bb586f1b006c7929cfe1200b33efeda428"
+          "bytes": 291073,
+          "sha256": "b07c3a382474e2c7530f418b6f0fd9f32572176431ddca6b08e96facf5a72465"
         },
         "text": {
           "path": "artwork/htp-card-horse-racing.txt",
@@ -2224,18 +2718,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-horse-racing.svg",
-          "bytes": 288706,
-          "sha256": "7139bcbc5170b1c257140bf7cb06c81f407859780061c709b35976279dea9222"
+          "bytes": 288840,
+          "sha256": "2f06dc2f7f0f2de93715954de68d9a4525e0f5da8b6b794f05d8616ce8069852"
         },
         "image": {
           "path": "artwork/htp-card-horse-racing.png",
-          "bytes": 87335,
-          "sha256": "353ea8ea4a1d6b6ac68d5909b6508ebb9a8886092fa5b0aaadf0ea73480a5cdf"
+          "bytes": 89484,
+          "sha256": "005fd0fe35c201e254de9338fc3a149a16289740228543ede52dc115c7790985"
         },
         "preview": {
           "path": "artwork/htp-card-horse-racing.webp",
           "bytes": 21148,
-          "sha256": "a39d852509814d8d5a574a247893d5d09564230a67210cb59e1912bf7bad656e"
+          "sha256": "c00e68296b807551494dd220a17a3a5c7004b71e145f4c97152f9e70ff0a1aa6"
         }
       },
       "referenceNotes": {
@@ -2251,25 +2745,35 @@
           "id": "racing"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 300,
-        "contentBottom": 946,
-        "actionTop": 982,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 211.5,
+        "contentBottom": 1034.5,
+        "actionTop": 1070.5,
         "footerTop": 1200,
-        "typeScale": 1.2768999999999997
+        "typeScale": 1.2553943157894734
       }
     },
     "htp-card-lottery": {
       "title": "Lottery",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-lottery.html",
-          "bytes": 290868,
-          "sha256": "abb15968fa86bbacc91d8b7231414824f8f727121ed2a0f6842568f73458842a"
+          "bytes": 291049,
+          "sha256": "555fd66889af8599327be4fb5620755d4ccf50f97cc2433fba784ce419bb5f2b"
         },
         "text": {
           "path": "artwork/htp-card-lottery.txt",
@@ -2278,18 +2782,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-lottery.svg",
-          "bytes": 288696,
-          "sha256": "ff88a5d656c4282dcd9ccf250518241be2892fc2fec9909e895319e1c40b800e"
+          "bytes": 288816,
+          "sha256": "d2ab29c54ba5a38b24648fbb05c7cb391da74a42bb305d2be927874d129e30a2"
         },
         "image": {
           "path": "artwork/htp-card-lottery.png",
-          "bytes": 79047,
-          "sha256": "b07a546f9b574361557c32386fe6da2ca217eab62ac83dd5286bc9409b1b119e"
+          "bytes": 80116,
+          "sha256": "a790de55431e727b39ea74c68d08fa76c9effff509f1c2a5dbe63b80f39a834b"
         },
         "preview": {
           "path": "artwork/htp-card-lottery.webp",
-          "bytes": 18420,
-          "sha256": "aa3420be13b29148f38ab99977d086d55e9021409a7e9ba1f858059c32681a8e"
+          "bytes": 18764,
+          "sha256": "2560efb8970595c801963a458ad514b3c0a79af76b41cc66a079f3b8bce73564"
         }
       },
       "referenceNotes": {
@@ -2298,10 +2802,20 @@
         "scope": "An illustrative 6-from-49 format. This is not the chance of any prize; other lotteries use different rules and number pools."
       },
       "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 325,
-        "contentBottom": 921,
-        "actionTop": 957,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 281,
+        "contentBottom": 965,
+        "actionTop": 1001,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -2310,13 +2824,13 @@
       "title": "Double-zero roulette",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-roulette.html",
-          "bytes": 290883,
-          "sha256": "2611f264489ff0c14b698b40da1c4bb27a14565b1097efe4cd08913d571bc30c"
+          "bytes": 291062,
+          "sha256": "5e2924b9b5c06b8b4d696a9f66ace6779a827ab695ee711d24ad37b83ad3bf46"
         },
         "text": {
           "path": "artwork/htp-card-roulette.txt",
@@ -2325,18 +2839,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-roulette.svg",
-          "bytes": 288705,
-          "sha256": "5ec06c4bfa3dc706f87197bf66c3b6e243dce7d58f3e0ece8071424f518ad13b"
+          "bytes": 288822,
+          "sha256": "eba527fa5765922d4cc17bbe31599a85e33452d10c7e0ed4f0f2dda15a9a35a9"
         },
         "image": {
           "path": "artwork/htp-card-roulette.png",
-          "bytes": 91974,
-          "sha256": "a91b890f2a95558e6184ba539ce49e4f6b3e81c0a5dd777ab9da8e3b249f8419"
+          "bytes": 90294,
+          "sha256": "fdfd8e7df6bb22ab766a34909aa662e55f7889866694148844806a0c8bad7fdc"
         },
         "preview": {
           "path": "artwork/htp-card-roulette.webp",
-          "bytes": 22192,
-          "sha256": "8dc5a61313bbffce85010ee69ef19b42952faa40d84dcb0465974128f76d9f73"
+          "bytes": 21922,
+          "sha256": "f5700887f9a7b03b08c28ebbe9c4556220361713c2e5fe3e004617a228cb47e0"
         }
       },
       "referenceNotes": {
@@ -2352,25 +2866,35 @@
           "id": "roulette"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 235,
-        "contentBottom": 1011,
-        "actionTop": 1047,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 213,
+        "contentBottom": 1033,
+        "actionTop": 1069,
         "footerTop": 1200,
-        "typeScale": 1.2768999999999997
+        "typeScale": 1.228934014051522
       }
     },
     "htp-card-slots": {
       "title": "Slots",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-slots.html",
-          "bytes": 290831,
-          "sha256": "5a779e77d30ef02787d936db3c7c60e8573da40255f9468b64cf41dfa29f0972"
+          "bytes": 291011,
+          "sha256": "dbf2c69474e8657ad69966e45b6d40d7d870ee8bf97a4fe57f155e84fcbae29c"
         },
         "text": {
           "path": "artwork/htp-card-slots.txt",
@@ -2379,18 +2903,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-slots.svg",
-          "bytes": 288651,
-          "sha256": "da470686e4b9a40ebebd5d9ada082a283382728ca2c6f496aa9add43e4dfbd02"
+          "bytes": 288741,
+          "sha256": "b220afd2e9bae460e675818b2ac2c9bba36098d0604aff64d17e3833aa647857"
         },
         "image": {
           "path": "artwork/htp-card-slots.png",
-          "bytes": 82080,
-          "sha256": "a1a5e4e9bac0aa90db69b83acd3663a460958b0e493271fa6d505d02ff8d44bd"
+          "bytes": 82062,
+          "sha256": "3822544756ddc51a787f7d9f012e0b8f570c3eda53808e9718b67769234acc3e"
         },
         "preview": {
           "path": "artwork/htp-card-slots.webp",
-          "bytes": 19068,
-          "sha256": "75b1efa47c30998eca2c78d816feb990182affdd7fd0fdf1e354cc626a62e797"
+          "bytes": 19034,
+          "sha256": "83425105ff2152548d0965c74dc2a60c3f931c915f703b12080763af786a91cc"
         }
       },
       "referenceNotes": {
@@ -2412,10 +2936,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 244,
-        "contentBottom": 1002,
-        "actionTop": 1038,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 226,
+        "contentBottom": 1020,
+        "actionTop": 1056,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -2424,13 +2958,13 @@
       "title": "Sports betting",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-sports.html",
-          "bytes": 290881,
-          "sha256": "cbbb3fd01e5dc79fc0a473f865e272722d3511f846f7793d9ff836cfbcb89266"
+          "bytes": 291061,
+          "sha256": "1d5ecaabb96ff4a538a5dd6579a9df4088fdd5fa931894918b1d44f87f161f30"
         },
         "text": {
           "path": "artwork/htp-card-sports.txt",
@@ -2439,18 +2973,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-sports.svg",
-          "bytes": 288710,
-          "sha256": "4f0d3aa18598cad401ba5204450b315f780d4aac1ac1143cf49a8dfbd516d068"
+          "bytes": 288801,
+          "sha256": "ea27cca66f9d4782d11191520603398b07ea610302e5944ed72fbeff0d9aaac9"
         },
         "image": {
           "path": "artwork/htp-card-sports.png",
-          "bytes": 89305,
-          "sha256": "d9b79d4ba449b72d17ca018535d3e6f896d991ad56f744be903295bc61ae4190"
+          "bytes": 89306,
+          "sha256": "bd37302f4ade9dc38b414eb34aa1497c81f99795e2dfa2a3754763c5f6ab850c"
         },
         "preview": {
           "path": "artwork/htp-card-sports.webp",
-          "bytes": 21884,
-          "sha256": "e81e9136747dbde5eed49ec997ab206de26bdd145d25ca5b5279b6423077bf42"
+          "bytes": 21702,
+          "sha256": "23e7da6fc63808aed1c48b74b279e609e0f724797c992344a1d18e652c96b39e"
         }
       },
       "referenceNotes": {
@@ -2466,10 +3000,20 @@
           "id": "sportsTerms"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 270.5,
-        "contentBottom": 975.5,
-        "actionTop": 1011.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 252.5,
+        "contentBottom": 993.5,
+        "actionTop": 1029.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -2478,13 +3022,13 @@
       "title": "Video poker",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-card-video-poker.html",
-          "bytes": 290860,
-          "sha256": "e83f575531acfecb766061b21c78e07f82db03b46244f0f26565214887b80d73"
+          "bytes": 291041,
+          "sha256": "cadd2cb345d1f1245aca2147bd1c825955b2e02ce08fcdc06747ae3f2855c912"
         },
         "text": {
           "path": "artwork/htp-card-video-poker.txt",
@@ -2493,18 +3037,18 @@
         },
         "artwork": {
           "path": "artwork/htp-card-video-poker.svg",
-          "bytes": 288665,
-          "sha256": "d826c1ace5d9d4ad01d9b7a54019d1c06d52fecf8e75043dcf543d20c8844526"
+          "bytes": 288755,
+          "sha256": "2d5b795e9ff2e4bb77aed0c50cf37752150e9eb927da3ddb02fc9bf3213dfb45"
         },
         "image": {
           "path": "artwork/htp-card-video-poker.png",
-          "bytes": 84967,
-          "sha256": "154627f18bc527bd61b1a1a77c866c2464983c3446d97dcae39cf923ceda08f2"
+          "bytes": 84949,
+          "sha256": "86f48544e76905ca50dab730d6374e82519b5d4fa1489dca0ae2652c3e6d26ee"
         },
         "preview": {
           "path": "artwork/htp-card-video-poker.webp",
-          "bytes": 20338,
-          "sha256": "6311cc94bd53fd5823721487dc5f8ec88b1c24b84e6bf1aa08c5526e6ce04a99"
+          "bytes": 19896,
+          "sha256": "f1d65dc626b26a08208e422c4cd0cb848e67498753a6a923de40f8586a83ec08"
         }
       },
       "referenceNotes": {
@@ -2526,10 +3070,20 @@
           "id": "videoPokerStrategy"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 291.5,
-        "contentBottom": 954.5,
-        "actionTop": 990.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 273.5,
+        "contentBottom": 972.5,
+        "actionTop": 1008.5,
         "footerTop": 1200,
         "typeScale": 1.2768999999999997
       }
@@ -2538,13 +3092,13 @@
       "title": "House-edge examples",
       "width": 1080,
       "height": 1350,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/htp-odds-comparison.html",
-          "bytes": 293290,
-          "sha256": "755e3888bddca4e1e4e1d0f3d462488f1ef349def6cb206223eaa803750c03ab"
+          "bytes": 293359,
+          "sha256": "6dd76b6b4852d9bcc30a553efdec0f7afc0e4651e88c36763fdef5b380c4dcec"
         },
         "text": {
           "path": "artwork/htp-odds-comparison.txt",
@@ -2553,18 +3107,18 @@
         },
         "artwork": {
           "path": "artwork/htp-odds-comparison.svg",
-          "bytes": 290939,
-          "sha256": "e17452f2e984b0473e96415870a5ebc7424e43e940cb7bc24b87ffc85969742d"
+          "bytes": 291011,
+          "sha256": "6e60275ee4da6c9eb6c5e0fd7cca1f317fd9ee022f633c3ec7223704b17b134e"
         },
         "image": {
           "path": "artwork/htp-odds-comparison.png",
-          "bytes": 118827,
-          "sha256": "574bdfed6ca04b3b58470035c045add8cdb03d7c7eed0f2ae95e016846ae76fa"
+          "bytes": 106841,
+          "sha256": "05c76e94cf43826cc12854e93e147bcfeacc70cec6d481a6e99899688673da8a"
         },
         "preview": {
           "path": "artwork/htp-odds-comparison.webp",
-          "bytes": 28534,
-          "sha256": "8cf10aa0b3c5591cd60c9d4ed4f6644a8bb292ca67c16aae88ada75202dd853b"
+          "bytes": 24472,
+          "sha256": "bb0ec51b5eb98fce33cc0c5ca2dacca82f282f6e5f5126d668242f519cef97c3"
         }
       },
       "referenceNotes": {
@@ -2608,12 +3162,22 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 209.88191176488635,
-        "contentBottom": 1036.1180882351136,
-        "actionTop": 1072.1180882351136,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 288.46593476540755,
+        "contentBottom": 957.5340652345924,
+        "actionTop": 993.5340652345924,
         "footerTop": 1200,
-        "typeScale": 1.0752055481262908
+        "typeScale": 0.9435689231203688
       }
     },
     "in-play-overlay-12c": {
@@ -2660,7 +3224,7 @@
       "title": "Weekly deposit limit reached",
       "width": 420,
       "height": 169,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -2860,14 +3424,14 @@
     "mobile-onboarding-12a": {
       "title": "Find your account tools",
       "width": 420,
-      "height": 457,
-      "style": "flat",
+      "height": 467,
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/mobile-onboarding-12a.html",
-          "bytes": 292232,
-          "sha256": "c664856e4661bfd602c1bcc06301bd5b939069081b43bde4f82efe8c6374fc01"
+          "bytes": 292458,
+          "sha256": "0ab9170037b913f66bd99d2eb9c7ea874635c699dbd4889e2783dc3ccaea167e"
         },
         "text": {
           "path": "artwork/mobile-onboarding-12a.txt",
@@ -2876,18 +3440,18 @@
         },
         "artwork": {
           "path": "artwork/mobile-onboarding-12a.svg",
-          "bytes": 285095,
-          "sha256": "d9d5a832f27e13eaae34812a5c064f190d394d1690e4e8b50e3bfba5f3885c4c"
+          "bytes": 285174,
+          "sha256": "54c6281e5c2793b181cd64a6e073bae185ae38839cc2772b66bc118581f83112"
         },
         "image": {
           "path": "artwork/mobile-onboarding-12a.png",
-          "bytes": 35462,
-          "sha256": "ca520dd53cc432245a9f3a66a895759d9de635c507568d16de198e2b44632648"
+          "bytes": 35427,
+          "sha256": "a15e54f4191b6b43e90baef7b72e501a56f19c8e3f854dca44f983112243b622"
         },
         "preview": {
           "path": "artwork/mobile-onboarding-12a.webp",
-          "bytes": 24140,
-          "sha256": "ade3a082228b6903a499e87a232b5318a01cc82a024ea8b81bc5c0c80218a7ec"
+          "bytes": 24522,
+          "sha256": "99d5e2b9b619fa68f081eefc2c8a662ccb6c759b60f33d13900bdae5ac8e93b4"
         }
       },
       "referenceNotes": {
@@ -2909,19 +3473,25 @@
           }
         ]
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "interface",
+        "insetRatio": 0.08,
+        "version": 1
+      }
     },
     "poster-14c-every-game-slots": {
       "title": "Slots",
       "width": 1800,
       "height": 2400,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-14c-every-game-slots.html",
-          "bytes": 299401,
-          "sha256": "82ba8572a55979616e804a709074c6fab1a809e5fe2f4f3d8a2b5414d8c1480e"
+          "bytes": 299772,
+          "sha256": "fc5479dd26ea9605a85e1ec2974a8b0569e9b079b8453214db5813a6bd2fbddd"
         },
         "text": {
           "path": "artwork/poster-14c-every-game-slots.txt",
@@ -2930,18 +3500,18 @@
         },
         "artwork": {
           "path": "artwork/poster-14c-every-game-slots.svg",
-          "bytes": 296879,
-          "sha256": "c0aae3c24cd293ec8bd0f10ef67c73c8830852cb1051767d94773bb9eb572f64"
+          "bytes": 296968,
+          "sha256": "0750ae5947ee20a5529d810ef7803033a15c146accca9c944cfd86f0ad2303bb"
         },
         "image": {
           "path": "artwork/poster-14c-every-game-slots.png",
-          "bytes": 152804,
-          "sha256": "96acc46b7ded16611be2e85de8cc925f066b29fd4d7eeaabddd8b38d525a8027"
+          "bytes": 152357,
+          "sha256": "84d1604791e119cd6c3d7a8a91498c1b28104d29ef35dc5ba8e26c4e6a3ce876"
         },
         "preview": {
           "path": "artwork/poster-14c-every-game-slots.webp",
-          "bytes": 19500,
-          "sha256": "38393a26f64ee5e84e947ee259bbebf83597cb771445f4e2717302c5813430da"
+          "bytes": 19624,
+          "sha256": "856fab1cca688b9abaad9293ad16067e46124501b4305a32f8c7788daeb38000"
         }
       },
       "referenceNotes": {
@@ -2963,10 +3533,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 289,
-        "contentBottom": 1047,
-        "actionTop": 1083,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 271,
+        "contentBottom": 1065,
+        "actionTop": 1101,
         "footerTop": 1290,
         "typeScale": 1.2768999999999997
       }
@@ -2975,13 +3555,13 @@
       "title": "Where the margin comes from.",
       "width": 1800,
       "height": 2400,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-15c-how-sportsbook-wins.html",
-          "bytes": 301505,
-          "sha256": "50255476722e9c617be1b09ecc9783433272eba7251bde8e26dd1a7cd80b8296"
+          "bytes": 302021,
+          "sha256": "3e89ed5812d9045f6756cef1123346320e8cb234649ac39d31d88c2e6c4fd0c0"
         },
         "text": {
           "path": "artwork/poster-15c-how-sportsbook-wins.txt",
@@ -2990,18 +3570,18 @@
         },
         "artwork": {
           "path": "artwork/poster-15c-how-sportsbook-wins.svg",
-          "bytes": 298437,
-          "sha256": "65b0408ffb7925bd7c43c8aba6e2326a3d7187f0ec6a899faa90487f2d2a9ee3"
+          "bytes": 298685,
+          "sha256": "44977b7fe7bbab9466f410523b9a156792e4aa60d1b2d7d5aa725abde4c14267"
         },
         "image": {
           "path": "artwork/poster-15c-how-sportsbook-wins.png",
-          "bytes": 195465,
-          "sha256": "2aac1b2e1e617185bae173322f1a528844b53586b6a2c5a1a3a889fbbc86a04e"
+          "bytes": 194341,
+          "sha256": "2ca913075ce0bc4de55f70302d247eaab6af950cafeac3ec102a7cb0b0c0cabe"
         },
         "preview": {
           "path": "artwork/poster-15c-how-sportsbook-wins.webp",
-          "bytes": 25934,
-          "sha256": "1a4294cd4f85f03f558ac3684a092382e93d8e8f8188bd6b3d26696e306b81d3"
+          "bytes": 25798,
+          "sha256": "0888431dac817691c3cf159c41b1efdccda2571b1688628fb3fc6c0f92f66b5d"
         }
       },
       "referenceNotes": {
@@ -3034,25 +3614,35 @@
           "id": "sportsTerms"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 221.80925000000002,
-        "contentBottom": 1114.19075,
-        "actionTop": 1150.19075,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 197.18822454187932,
+        "contentBottom": 1138.8117754581208,
+        "actionTop": 1174.8117754581208,
         "footerTop": 1290,
-        "typeScale": 1.2768999999999997
+        "typeScale": 1.2416559327128993
       }
     },
     "poster-4a-know-your-game": {
       "title": "Know the rules. Read the numbers.",
       "width": 1800,
       "height": 2400,
-      "style": "spotlight",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4a-know-your-game.html",
-          "bytes": 302471,
-          "sha256": "1cc04512ad832f82998690137cb0c577b4d01f0740151b16b43958006f47c18b"
+          "bytes": 302783,
+          "sha256": "6d30ca3190be523a59d3f5fb9bad6215c5a60c3b068352862d2ce9d8e1b67c99"
         },
         "text": {
           "path": "artwork/poster-4a-know-your-game.txt",
@@ -3061,18 +3651,18 @@
         },
         "artwork": {
           "path": "artwork/poster-4a-know-your-game.svg",
-          "bytes": 299468,
-          "sha256": "028a1efdc76e29011deb05558415b4eae6c7d8057454a0088b1cb0e514bca87e"
+          "bytes": 299436,
+          "sha256": "cb406802ba3a0066cdc07a43ebacef31ca8346cd5231d60221a48b3adf6d2903"
         },
         "image": {
           "path": "artwork/poster-4a-know-your-game.png",
-          "bytes": 306087,
-          "sha256": "6a31076761a489a678cce42917fcafa3565e52f7e093f8c201db406ddd499903"
+          "bytes": 222732,
+          "sha256": "35752f925f3ebde3ab153dc2f67ffadf36fd5f7c71cc926d1fcbe7a92d7142d7"
         },
         "preview": {
           "path": "artwork/poster-4a-know-your-game.webp",
-          "bytes": 31904,
-          "sha256": "f8d5a7a652dd1eb6c208510b2db198a14e3420e45f07e015730fa4c28e7d3571"
+          "bytes": 28484,
+          "sha256": "9ec34edc22e0bdd437c7af741d9d5d2bd3e2e3561f0624e59b41c2d52cc74843"
         }
       },
       "referenceNotes": {
@@ -3116,25 +3706,35 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 212.56000000000006,
-        "contentBottom": 1123.44,
-        "actionTop": 1159.44,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 219.0063109048724,
+        "contentBottom": 1116.9936890951276,
+        "actionTop": 1152.9936890951276,
         "footerTop": 1290,
-        "typeScale": 1.13
+        "typeScale": 1.04538283062645
       }
     },
     "poster-4b-no-fine-print": {
       "title": "Same stake. Different math.",
       "width": 1800,
       "height": 2400,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4b-no-fine-print.html",
-          "bytes": 302318,
-          "sha256": "63cf9413dd91a589a9cbd1367541856f5e098eb5b476d52199d7eb499c455c05"
+          "bytes": 302771,
+          "sha256": "e1a977fbafb83c70adea1973b8cb6947c29dd7e6ca5f61f6fb503ca0d8e91c44"
         },
         "text": {
           "path": "artwork/poster-4b-no-fine-print.txt",
@@ -3143,18 +3743,18 @@
         },
         "artwork": {
           "path": "artwork/poster-4b-no-fine-print.svg",
-          "bytes": 299185,
-          "sha256": "5de374fd385a30223de258871a387fd92b771bf805dc7fea07c7149445d98865"
+          "bytes": 299424,
+          "sha256": "7c73f334028d2579913de1d726abf948e43a3952dff7c33fee2179b440c6e6ad"
         },
         "image": {
           "path": "artwork/poster-4b-no-fine-print.png",
-          "bytes": 230842,
-          "sha256": "819420982e36b39e16253d89ca9a816fd5796b78f4cd225265b91168cd1547b4"
+          "bytes": 216028,
+          "sha256": "239909b545f62e71e05ba936696dfe44fc44d11ab313bb37d45e42edc19e25ff"
         },
         "preview": {
           "path": "artwork/poster-4b-no-fine-print.webp",
-          "bytes": 30388,
-          "sha256": "34c39b29764a7408cd6947393af699bc0f02c3159ef33549cb8d006e1b610f01"
+          "bytes": 27522,
+          "sha256": "d3d9fc12ffb88729c83521f3146cb33ad70b7d103de37c57bb5078812ac32376"
         }
       },
       "referenceNotes": {
@@ -3198,25 +3798,35 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 212.56000000000006,
-        "contentBottom": 1123.44,
-        "actionTop": 1159.44,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 219.0063109048724,
+        "contentBottom": 1116.9936890951276,
+        "actionTop": 1152.9936890951276,
         "footerTop": 1290,
-        "typeScale": 1.13
+        "typeScale": 1.04538283062645
       }
     },
     "poster-4c-game-iq": {
       "title": "Is a win due?",
       "width": 1800,
       "height": 2400,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4c-game-iq.html",
-          "bytes": 298981,
-          "sha256": "868f8cf8d99ecca94b590e78e38203856b221ea4c07637eea0947642cbf215ad"
+          "bytes": 299177,
+          "sha256": "c186013428bf384200a299866e19692339d1bde8729cc1cf9a602f19841509ba"
         },
         "text": {
           "path": "artwork/poster-4c-game-iq.txt",
@@ -3225,18 +3835,18 @@
         },
         "artwork": {
           "path": "artwork/poster-4c-game-iq.svg",
-          "bytes": 296616,
-          "sha256": "a823823a224a62b32c2fdf8d69cdf4c6c2053763eee58daccec9908bfc60a0a1"
+          "bytes": 296754,
+          "sha256": "41ce9860dac55cdcb93613f2997ce0f803f642c226f6b7a396f1eb5aeb085934"
         },
         "image": {
           "path": "artwork/poster-4c-game-iq.png",
-          "bytes": 141221,
-          "sha256": "48eb200457aa74be5c1a8825459a2f5c7009b43ace75a44dcb711899a50b1c89"
+          "bytes": 144301,
+          "sha256": "7e88027044d66a55e20ce8d11bbb8de403b71aabf58cb276decbe4c4060a1d61"
         },
         "preview": {
           "path": "artwork/poster-4c-game-iq.webp",
-          "bytes": 18438,
-          "sha256": "ef95844eb80617b97afc47a5c16ccca7cb757c7b7599ddb6ae2f14de5a803339"
+          "bytes": 18536,
+          "sha256": "68b62957886f46ec32ee8dc6f082188d45d07855ab3fe91ff8ea3bfb51de8d52"
         }
       },
       "referenceNotes": {
@@ -3252,10 +3862,20 @@
           "id": "slotRtp"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 440.5,
-        "contentBottom": 895.5,
-        "actionTop": 931.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 370,
+        "contentBottom": 966,
+        "actionTop": 1002,
         "footerTop": 1290,
         "typeScale": 1.2768999999999997
       }
@@ -3264,13 +3884,13 @@
       "title": "Six numbers. One exact match.",
       "width": 1800,
       "height": 2400,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4d-lottery-odds.html",
-          "bytes": 299583,
-          "sha256": "3fd52d3535252bef7e1ed1a16f82d10d869b59a91ae74efd086e50e73bb1f69e"
+          "bytes": 299926,
+          "sha256": "8da321dcd7d2773dc6d31146e3d42b570a26c400b97e6f267099561023516b47"
         },
         "text": {
           "path": "artwork/poster-4d-lottery-odds.txt",
@@ -3279,18 +3899,18 @@
         },
         "artwork": {
           "path": "artwork/poster-4d-lottery-odds.svg",
-          "bytes": 297122,
-          "sha256": "ceb42f2696d8d2b34b0d7b414098a7c0f86ff9288caa707d7db27e6e73b4d4ff"
+          "bytes": 297244,
+          "sha256": "1a57cc45f48b2f2cee205f14490c0b77d20cddc94411890e71a9eda59f0b45e2"
         },
         "image": {
           "path": "artwork/poster-4d-lottery-odds.png",
-          "bytes": 177721,
-          "sha256": "4b5afb19fb475e09879d00f44622ac29c15c12d0fe45fe0fa1333cc0211f4aab"
+          "bytes": 179763,
+          "sha256": "ac0f706a7cb1d253ce3ed4c85f9da2b9705117bd174f09dae83ce85b5562f659"
         },
         "preview": {
           "path": "artwork/poster-4d-lottery-odds.webp",
-          "bytes": 24174,
-          "sha256": "fea35650603381963bab1ed40a96c2efb49e1d92a6ae3e0db19ad8c47c06d62a"
+          "bytes": 24630,
+          "sha256": "1e572529edef7eaabf391e058981b3f7ffc2c7fcd8a03c6e4d44fd495973ab02"
         }
       },
       "referenceNotes": {
@@ -3299,10 +3919,20 @@
         "scope": "Restore all 49 numbers before each independent draw: past draws do not change the next chance. Within one draw, balls are not replaced. This is not the chance of any prize in every lottery."
       },
       "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 313.5,
-        "contentBottom": 1022.5,
-        "actionTop": 1058.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 269.5,
+        "contentBottom": 1066.5,
+        "actionTop": 1102.5,
         "footerTop": 1290,
         "typeScale": 1.2768999999999997
       }
@@ -3311,13 +3941,13 @@
       "title": "Lucky seat. Same draw.",
       "width": 1800,
       "height": 2400,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/poster-4e-bingo-hall.html",
-          "bytes": 298676,
-          "sha256": "09e25dbae15378597096509090d12b45dc67174c2de2a6accdd550576dc834e8"
+          "bytes": 298886,
+          "sha256": "aedaa3c9ee5f1a2fda50cee7dde20a19879bb71d2f698ee372b854ec84f15d0b"
         },
         "text": {
           "path": "artwork/poster-4e-bingo-hall.txt",
@@ -3326,18 +3956,18 @@
         },
         "artwork": {
           "path": "artwork/poster-4e-bingo-hall.svg",
-          "bytes": 296352,
-          "sha256": "8618ea697d1dd9f816023137c58da333d386869165a612a008a2e7f6a52b297f"
+          "bytes": 296459,
+          "sha256": "bf50c5a60ae07c4cba01c1455abec7966675ffcf2f25ec8cb0fed0ed1a1393b7"
         },
         "image": {
           "path": "artwork/poster-4e-bingo-hall.png",
-          "bytes": 151834,
-          "sha256": "22c5af6009d9c0b66e62cae49c3075bf029708f81c02105c46e6e2403d68f948"
+          "bytes": 155582,
+          "sha256": "b12389b384615be43a921477f0041b55dfa61176d9ad314ec41ec78033397ade"
         },
         "preview": {
           "path": "artwork/poster-4e-bingo-hall.webp",
-          "bytes": 20164,
-          "sha256": "ad9859bd57c75de7321cb02eb39125756288007d94c2fcb78f769caec39039b1"
+          "bytes": 20432,
+          "sha256": "d16b4b4d14c35ca1d641638f3eb7b0557209b46f11100cacc15c5ec2663a30a6"
         }
       },
       "referenceNotes": {
@@ -3353,10 +3983,20 @@
           "id": "bingo"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "campaign",
+        "insetRatio": 0.24,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 387.5,
-        "contentBottom": 948.5,
-        "actionTop": 984.5,
+        "layout": "offset",
+        "profile": "campaign",
+        "inset": 225,
+        "detailWidth": 711,
+        "contentTop": 338,
+        "contentBottom": 998,
+        "actionTop": 1034,
         "footerTop": 1290,
         "typeScale": 1.2768999999999997
       }
@@ -3365,7 +4005,7 @@
       "title": "You can ask for support.",
       "width": 1800,
       "height": 2400,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -3445,13 +4085,13 @@
       "title": "House-edge examples",
       "width": 800,
       "height": 1800,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/rack-card-5a.html",
-          "bytes": 302840,
-          "sha256": "5d60b673bb296bf7e0a31be7d12a4f2929e8102863e91ac1ee7293eefcd59a68"
+          "bytes": 303310,
+          "sha256": "4b79322804a2125ee884dec22e4c1ecd9605b6b4ba519d18a42954eeac5cd2db"
         },
         "text": {
           "path": "artwork/rack-card-5a.txt",
@@ -3460,18 +4100,18 @@
         },
         "artwork": {
           "path": "artwork/rack-card-5a.svg",
-          "bytes": 299256,
-          "sha256": "16c8ab6f39b285d672f89ebf91efd199428673e080e40b3a8a8c6a881ba7edc8"
+          "bytes": 299352,
+          "sha256": "8d65c0bb0b0f6f7e1356209b04bf65394007909e9a375fb6e77478085a576788"
         },
         "image": {
           "path": "artwork/rack-card-5a.png",
-          "bytes": 131786,
-          "sha256": "7b550234237ca902b725f0f49ed648cb7bc537a538bcfac23ad652bf77a1fe0d"
+          "bytes": 130223,
+          "sha256": "b3e165f61490aa88139f2b89aff985f5fb1507d54e193cea31b458aa3d34c93b"
         },
         "preview": {
           "path": "artwork/rack-card-5a.webp",
-          "bytes": 22736,
-          "sha256": "c85d366a8459109c74ecff95990114d77b86084c5e2df6b1649c1260e0e72c97"
+          "bytes": 22368,
+          "sha256": "556c854bf42231fcc3d312199fc32aa2c5cdc7d554ef510ed8c3cafaec836750"
         }
       },
       "referenceNotes": {
@@ -3515,10 +4155,20 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "narrow",
+        "insetRatio": 0.1,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 377.89999999999986,
-        "contentBottom": 1948.1000000000001,
-        "actionTop": 1984.1000000000001,
+        "layout": "offset",
+        "profile": "narrow",
+        "inset": 94,
+        "detailWidth": 842,
+        "contentTop": 353.89999999999986,
+        "contentBottom": 1972.1000000000001,
+        "actionTop": 2008.1000000000001,
         "footerTop": 2280,
         "typeScale": 1.7
       }
@@ -3527,13 +4177,13 @@
       "title": "Plan a content evaluation",
       "width": 816,
       "height": 1056,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/scorecard-quickref.html",
-          "bytes": 285106,
-          "sha256": "b2c290c70063118b16e08e4e9bd967baa1b3f8ce2e776e62b413f399ad37f163"
+          "bytes": 285491,
+          "sha256": "50ada313aa60fb13d2061b9bcd3be2ba8cb3b51e165552989f5ca084e37d49d2"
         },
         "text": {
           "path": "artwork/scorecard-quickref.txt",
@@ -3542,18 +4192,18 @@
         },
         "artwork": {
           "path": "artwork/scorecard-quickref.svg",
-          "bytes": 285594,
-          "sha256": "ff78602333e7293fd8dc7e796daedfa5dde037cb116e690577e2c2c2a1ad7b3d"
+          "bytes": 285710,
+          "sha256": "79460a1fce5dbd2175b929620bd8c17c9bfd114b9047b5e0d5e1d1696f32fff5"
         },
         "image": {
           "path": "artwork/scorecard-quickref.png",
-          "bytes": 115956,
-          "sha256": "587d6388ffb5b40a35ea6e5126f3ede04aa3c8d1c835ee90cd2032bbd327ed28"
+          "bytes": 116710,
+          "sha256": "c076fca77e27754c24f68b93f552080272fcf3397b7c48c3bb489b124f1b7da0"
         },
         "preview": {
           "path": "artwork/scorecard-quickref.webp",
-          "bytes": 36774,
-          "sha256": "2b73cb6798db92bec32cda8e29dbdd6d3697fb955f89def6188048a055d8f43d"
+          "bytes": 36274,
+          "sha256": "79b7bb93b083e34c145e2f2ca2a0441550bc1e17c6aabbafedf16fa25af6a6ae"
         }
       },
       "referenceNotes": {
@@ -3587,13 +4237,19 @@
           }
         ]
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "reference",
+        "insetRatio": 0.08,
+        "version": 1
+      }
     },
     "self-exclusion-10b": {
       "title": "Choose an exclusion period",
       "width": 480,
       "height": 556,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -3633,7 +4289,7 @@
       "title": "Activity over seven days",
       "width": 420,
       "height": 319,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -3710,13 +4366,13 @@
       "title": "Set a cash budget first.",
       "width": 700,
       "height": 906,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-atm-9b.html",
-          "bytes": 290731,
-          "sha256": "a2a60804b53904b4ba2dd3552e1a96ced61576e68c44828982118f15be2ff208"
+          "bytes": 290914,
+          "sha256": "eb13aa525a02fdf603b21e3c2c3ff24f6957e1288fb11b28ea36cf39e55b4f50"
         },
         "text": {
           "path": "artwork/sign-atm-9b.txt",
@@ -3725,18 +4381,18 @@
         },
         "artwork": {
           "path": "artwork/sign-atm-9b.svg",
-          "bytes": 284227,
-          "sha256": "107bde93726c3c5ef15c2358506bf50b9b83a094ce56a12dbbcad070f885e8bb"
+          "bytes": 284332,
+          "sha256": "b1b629069c0f592a5145ee9d11a8eec1ddefd699a9cd4d7f91eb5b51c8b9bfd8"
         },
         "image": {
           "path": "artwork/sign-atm-9b.png",
-          "bytes": 47654,
-          "sha256": "68cf36b2b0c6d59018f62bc1c7b069677c042068dcf593a5e1d0db6994e76fba"
+          "bytes": 47938,
+          "sha256": "6adb0b36908bd9279898d45d4a90a128d75f38990cb7de54a1b687f2c63d2f74"
         },
         "preview": {
           "path": "artwork/sign-atm-9b.webp",
-          "bytes": 16600,
-          "sha256": "05551bb0e630c1028b5fcf24741d620f894cf0dc1c297d87628d7593ca2fe405"
+          "bytes": 16842,
+          "sha256": "410508d3831584e283e73dc134861800c5fc8abefba86a71703f83b2af0de96d"
         }
       },
       "referenceNotes": {
@@ -3744,19 +4400,25 @@
         "body": "Decide what you can afford to spend before withdrawing. You can choose not to withdraw or gamble.",
         "scope": "A cash withdrawal and an online deposit are different transactions. Check which spending your account limit covers; do not assume it covers cash."
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "sign",
+        "insetRatio": 0.14,
+        "version": 1
+      }
     },
     "sign-entrance-9a": {
       "title": "Know the rules before you play.",
       "width": 900,
       "height": 1200,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-entrance-9a.html",
-          "bytes": 298712,
-          "sha256": "894806e313075277aa0f0fbe9636016a8a82e89e963ef4194ca48dd187801688"
+          "bytes": 298892,
+          "sha256": "42c51ac23cb7f31b5e5ab97b0a0e938e3af1d12ed08b72a88bcb0b710404e0ea"
         },
         "text": {
           "path": "artwork/sign-entrance-9a.txt",
@@ -3765,18 +4427,18 @@
         },
         "artwork": {
           "path": "artwork/sign-entrance-9a.svg",
-          "bytes": 291967,
-          "sha256": "080d3db52b39415698e9d401dc2eeef81a1dad5f7239442b0fa7c491a9f4c31c"
+          "bytes": 292072,
+          "sha256": "d453c98e83cff15e85ca4ac83d18d01ac70d20beb2c60d024706288568c2b3cb"
         },
         "image": {
           "path": "artwork/sign-entrance-9a.png",
-          "bytes": 57194,
-          "sha256": "a0cd8efa0c952701fe2503c933f45f6b72b7591b6c278c368e077041d20a4343"
+          "bytes": 57142,
+          "sha256": "9fa4c91d7940e47c132a31c3bb52596ca42513994ea12bf3260b2360968fc649"
         },
         "preview": {
           "path": "artwork/sign-entrance-9a.webp",
-          "bytes": 18268,
-          "sha256": "2bb5be71406056b5ec5059287eded53ebbf4fb42420dc81080625c1b66ced5dd"
+          "bytes": 18470,
+          "sha256": "f4d8f3bf776fd272b2a96f873a80ce7e214457f7eff437990dc9c7f83231f1d1"
         }
       },
       "referenceNotes": {
@@ -3784,19 +4446,25 @@
         "body": "Check the game’s rules, prices and payouts. Find out which limits and reminders are available here.",
         "scope": "Read the game guides below, or ask staff where to find the relevant information."
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "sign",
+        "insetRatio": 0.14,
+        "version": 1
+      }
     },
     "sign-floor-9c": {
       "title": "House-edge examples",
       "width": 900,
       "height": 1391,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-floor-9c.html",
-          "bytes": 302408,
-          "sha256": "1fb02db7cd2b6d5e15c91ef68bf2dd2948721214b9e8e79e1797d5176dcea3b4"
+          "bytes": 302944,
+          "sha256": "e929d6b6360bdcc2ebe4e54de195ce7907119be4faf07094cfaa69e1511ca872"
         },
         "text": {
           "path": "artwork/sign-floor-9c.txt",
@@ -3805,18 +4473,18 @@
         },
         "artwork": {
           "path": "artwork/sign-floor-9c.svg",
-          "bytes": 299263,
-          "sha256": "694bcd9ef983118cca4aeb8d33c9577918ce9372b766e7ca5080cabc77aa4de4"
+          "bytes": 299455,
+          "sha256": "abf4c53543b06ae41bb316641a7dd07ee5432a51eac2a1ededc0501492c488d1"
         },
         "image": {
           "path": "artwork/sign-floor-9c.png",
-          "bytes": 115970,
-          "sha256": "c3a29ac2b5f79149074cfbafe41235e3e66b1e97356ed891594dcf22fcbf7425"
+          "bytes": 113096,
+          "sha256": "d35e5dbc309079ef6540a882051d7c66f787bab93df12a77e7ab450fa8335cb7"
         },
         "preview": {
           "path": "artwork/sign-floor-9c.webp",
-          "bytes": 27400,
-          "sha256": "d6abbb3f1c868e34ac7cf8dbc25a943b42fbe6742f156cbfc1238e6130eb3c0b"
+          "bytes": 26412,
+          "sha256": "2bd9ff5b41c122ee47c07bb3289a1f0ea463676825c1cc17320c37557cca3ef9"
         }
       },
       "referenceNotes": {
@@ -3860,19 +4528,29 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 248.2328000000001,
-        "contentBottom": 1316.9672,
-        "actionTop": 1352.9672,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 233.73471457865242,
+        "contentBottom": 1331.4652854213477,
+        "actionTop": 1367.4652854213477,
         "footerTop": 1519.2,
-        "typeScale": 1.2768999999999997
+        "typeScale": 1.231423697969859
       }
     },
     "sign-restroom-9d": {
       "title": "You can ask for support.",
       "width": 550,
       "height": 850,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -3912,13 +4590,13 @@
       "title": "Five things staff should know",
       "width": 900,
       "height": 1391,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/sign-staff-9e.html",
-          "bytes": 291954,
-          "sha256": "34212084415c2b0344d850c6787f2d2e19175d2427c202091dfecd0725edf34c"
+          "bytes": 292134,
+          "sha256": "2d594cbb68b7e5bacada72aeb63b717e7c551632f0c8d1ded0e19f674d1f1e4f"
         },
         "text": {
           "path": "artwork/sign-staff-9e.txt",
@@ -3927,18 +4605,18 @@
         },
         "artwork": {
           "path": "artwork/sign-staff-9e.svg",
-          "bytes": 286254,
-          "sha256": "f26641391d641984ff74e775a89d2d782abceb8f3444500b6f4d850a644f5e84"
+          "bytes": 286380,
+          "sha256": "a51c1f9d12ccebdcca52203b4b63c51208c0e8d73de2ec598bf23282fe8ad986"
         },
         "image": {
           "path": "artwork/sign-staff-9e.png",
-          "bytes": 112177,
-          "sha256": "7057c9fd501d9d85ae2d9f681e773d226efb693de6d6c181b72ac1f76aad6023"
+          "bytes": 112342,
+          "sha256": "35d6ba30e4bbe5a295076d43b0f7df4fa62863d5e52144a30b30524fbb14ca0e"
         },
         "preview": {
           "path": "artwork/sign-staff-9e.webp",
-          "bytes": 23438,
-          "sha256": "a3043e88ff982ee78e3e9681585fbd232d2776051339c81c4a8a83ee94ef7da9"
+          "bytes": 24018,
+          "sha256": "de4bbd9f717a43ade94e90fa819940e38af43d861664d99635bdba9d846751dc"
         }
       },
       "referenceNotes": {
@@ -3968,19 +4646,25 @@
           }
         ]
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "staff",
+        "insetRatio": 0.08,
+        "version": 1
+      }
     },
     "story-14b-every-game-roulette": {
       "title": "Double-zero roulette",
       "width": 1080,
       "height": 1920,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-14b-every-game-roulette.html",
-          "bytes": 298973,
-          "sha256": "0c5ea7364e6f5a15fb850293661727d7add379750114412bb9ae51d595a37066"
+          "bytes": 299150,
+          "sha256": "06413b135c492d7dc29eb7766b1fe6c9d11b9941dc88b878e6bbfd02527d6c42"
         },
         "text": {
           "path": "artwork/story-14b-every-game-roulette.txt",
@@ -3989,18 +4673,18 @@
         },
         "artwork": {
           "path": "artwork/story-14b-every-game-roulette.svg",
-          "bytes": 297007,
-          "sha256": "c25088c5219c11ab7d4db9ec7ceaaf7635f2f9c876b97cc21bed046a7c95f249"
+          "bytes": 297115,
+          "sha256": "a044e32fc32219f16a657391f28fad085196d5a87604bfb060863a8a09ab20aa"
         },
         "image": {
           "path": "artwork/story-14b-every-game-roulette.png",
-          "bytes": 122838,
-          "sha256": "3b684411558ee8ab6be5289601bec01d1fb370de2a24ffff0158df62a38e488a"
+          "bytes": 122387,
+          "sha256": "b181ca5da7f8fbcc44c30191db04bd76c26ab7ac686335d05fcffaa6e3e0367c"
         },
         "preview": {
           "path": "artwork/story-14b-every-game-roulette.webp",
-          "bytes": 21160,
-          "sha256": "036da5e6d91697d5283294457a8397f6ebac5380726669a2a8c11936e69518e2"
+          "bytes": 20532,
+          "sha256": "d409a8e016ac1bb8c85e888a860b2d297cadfd7130a89ecd845b0196ec41513c"
         }
       },
       "referenceNotes": {
@@ -4016,10 +4700,20 @@
           "id": "roulette"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 333.5,
-        "contentBottom": 1482.5,
-        "actionTop": 1518.5,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 289,
+        "contentBottom": 1527,
+        "actionTop": 1563,
         "footerTop": 1770,
         "typeScale": 1.7
       }
@@ -4028,13 +4722,13 @@
       "title": "Same stake. Different returns.",
       "width": 1080,
       "height": 1920,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-15b-bet-costs.html",
-          "bytes": 300065,
-          "sha256": "b3ad8ab7070dc0f0423053ea4bd48aaa8a04f711986b553e35e4168539cdf2e9"
+          "bytes": 300190,
+          "sha256": "69e91cdc7cf2b65ada93c866c92c0fe7738a06b26a0559beede607bd942f40c1"
         },
         "text": {
           "path": "artwork/story-15b-bet-costs.txt",
@@ -4043,18 +4737,18 @@
         },
         "artwork": {
           "path": "artwork/story-15b-bet-costs.svg",
-          "bytes": 297981,
-          "sha256": "ce126ab2a73b25b63604207b33726e6c56036dfd6ac4b35971501e221775f336"
+          "bytes": 298063,
+          "sha256": "3a7a3d44e73ecd3fba3fd2a43750038b86baabecb14d0f28da86882accf87dd9"
         },
         "image": {
           "path": "artwork/story-15b-bet-costs.png",
-          "bytes": 118822,
-          "sha256": "5de282e9ea18982e695a9c9407aac2903ac832126f5d5248218bbd877745a3cf"
+          "bytes": 116724,
+          "sha256": "9c5f417cd92e858290ae89b67acecd5dc799fa76a01223cf46b3532e5dba4fa9"
         },
         "preview": {
           "path": "artwork/story-15b-bet-costs.webp",
-          "bytes": 20630,
-          "sha256": "2183ba114b58ff922e15e0edffde5cf48cb825537732dfe8fa72f78efea7c67f"
+          "bytes": 19966,
+          "sha256": "0ec4d81fff42247045bc1e1cce92adfaaa7a324be976f090cac14b94c3327ae9"
         }
       },
       "referenceNotes": {
@@ -4087,10 +4781,20 @@
           "id": "sportsTerms"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 291.1,
-        "contentBottom": 1524.9,
-        "actionTop": 1560.9,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 280.6,
+        "contentBottom": 1535.4,
+        "actionTop": 1571.4,
         "footerTop": 1770,
         "typeScale": 1.7
       }
@@ -4099,13 +4803,13 @@
       "title": "“I’m on a hot streak.”",
       "width": 1080,
       "height": 1920,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-3a-hot-streak.html",
-          "bytes": 290519,
-          "sha256": "3762deb431f1d973d7d808a3f027e863660f568261a526df577ace92cd436b16"
+          "bytes": 290697,
+          "sha256": "c77297df3a2f7463f72d53921b2278702b7068676b874a5d4fcd1f130c339c9b"
         },
         "text": {
           "path": "artwork/story-3a-hot-streak.txt",
@@ -4114,18 +4818,18 @@
         },
         "artwork": {
           "path": "artwork/story-3a-hot-streak.svg",
-          "bytes": 288415,
-          "sha256": "1a80df73509f4d21eb4ffd3c5002b7f5cbe197d1afefffd54971df72661bffcd"
+          "bytes": 288503,
+          "sha256": "e99d8bd53c069aa81caf7ef29df280de3e25ab0012b8da2bd8c4e6d05ab9bc86"
         },
         "image": {
           "path": "artwork/story-3a-hot-streak.png",
-          "bytes": 89512,
-          "sha256": "30121ca8e7312196f90c09baacdae6fe583978dce28b664764793cf7d1fa371e"
+          "bytes": 90183,
+          "sha256": "68e6ae17a7de67d85928aeaeae387417cca3185f5c67cce5af16955f70d7769a"
         },
         "preview": {
           "path": "artwork/story-3a-hot-streak.webp",
-          "bytes": 14040,
-          "sha256": "340332e49d1e27cd706c04340022ff21918dc3d49cca431d974d600d0496d812"
+          "bytes": 14418,
+          "sha256": "b1dffb1ec6e238551b384f49929870a6f0cf2bd4534a88ea9480dcfa207890b4"
         }
       },
       "referenceNotes": {
@@ -4147,10 +4851,20 @@
           "id": "slotRandom"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "story",
+        "insetRatio": 0.18,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 409.5,
-        "contentBottom": 1406.5,
-        "actionTop": 1442.5,
+        "layout": "offset",
+        "profile": "story",
+        "inset": 168,
+        "detailWidth": 768,
+        "contentTop": 385.5,
+        "contentBottom": 1430.5,
+        "actionTop": 1466.5,
         "footerTop": 1770,
         "typeScale": 1.7
       }
@@ -4159,13 +4873,13 @@
       "title": "Same stake. Different math.",
       "width": 1080,
       "height": 1920,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-3b-house-edge.html",
-          "bytes": 293314,
-          "sha256": "2059d4d4c37dbafa6c11857f1996a647b43c060cf52c11b23560b109b33fa598"
+          "bytes": 293387,
+          "sha256": "7c4c1a210960c57d12c608d38489fb4b6be750ec4af5ac3d50cc0e281de5776f"
         },
         "text": {
           "path": "artwork/story-3b-house-edge.txt",
@@ -4174,18 +4888,18 @@
         },
         "artwork": {
           "path": "artwork/story-3b-house-edge.svg",
-          "bytes": 291079,
-          "sha256": "e0b39d91a1e53ed0b24327c5e9ac6252b07bbb2246706d7bdf4d9bae7edafbbb"
+          "bytes": 291211,
+          "sha256": "b68aaa9cfcb10a4c864ead105f8cd7b7d13f75079da41f90560748b75c1287d2"
         },
         "image": {
           "path": "artwork/story-3b-house-edge.png",
-          "bytes": 162207,
-          "sha256": "66be17408889d88d374af73967c8a8031bbfd49548f722ea8f61736459a5b243"
+          "bytes": 153673,
+          "sha256": "5f14ab12e602f56ddf0e55e95f998c60bb8476cfb92e0f669e9ffee671f55585"
         },
         "preview": {
           "path": "artwork/story-3b-house-edge.webp",
-          "bytes": 26528,
-          "sha256": "544ed2ef7d369734916330a4278efbe5e7033310c6f02fa0379e33d7c573d00a"
+          "bytes": 24420,
+          "sha256": "e070d63bf207bd63ea03c9f10b8beefa48d3ad6fa7f8eb9f507d4b9a0777791f"
         }
       },
       "referenceNotes": {
@@ -4229,25 +4943,35 @@
           "id": "baccarat"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 246.1279254547211,
-        "contentBottom": 1569.8720745452788,
-        "actionTop": 1605.8720745452788,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 249.11646863047486,
+        "contentBottom": 1566.8835313695251,
+        "actionTop": 1602.8835313695251,
         "footerTop": 1770,
-        "typeScale": 1.475819028923624
+        "typeScale": 1.3850401291991494
       }
     },
     "story-3c-sports-betting": {
       "title": "What does −110 mean?",
       "width": 1080,
       "height": 1920,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/story-3c-sports-betting.html",
-          "bytes": 291914,
-          "sha256": "cbd55288dadbe44fca24d46262889c11d3c3bc03d81e28036d0f69a8a47f0fd0"
+          "bytes": 292039,
+          "sha256": "4d8cfa922151f1a3d8265327036235be34334e35c11ecc429307c1998dda7de9"
         },
         "text": {
           "path": "artwork/story-3c-sports-betting.txt",
@@ -4256,18 +4980,18 @@
         },
         "artwork": {
           "path": "artwork/story-3c-sports-betting.svg",
-          "bytes": 289636,
-          "sha256": "81441747f8b6decf1c8793a59dfc54719518a3d031b5503494ade947f91771c4"
+          "bytes": 289720,
+          "sha256": "5db483762a759bf8a105b2ce34610bc7ce9f7abf7d59375fa08fe0c4b0847aa9"
         },
         "image": {
           "path": "artwork/story-3c-sports-betting.png",
-          "bytes": 112308,
-          "sha256": "3652ad34de71bc1c6fc0110d72049c076a1ac640a19c1273ed91e397d2a1243d"
+          "bytes": 112747,
+          "sha256": "a761505640619b86021e5c4c110a0d8ecd353835c96ade86ba7fc97ce1ab4572"
         },
         "preview": {
           "path": "artwork/story-3c-sports-betting.webp",
-          "bytes": 18344,
-          "sha256": "7f636ab1bcfcd9e36cd1e051eeb0ac79c6ebc6798230a92a14881602942b1566"
+          "bytes": 18688,
+          "sha256": "f4a4575834a6873685187dac4c5b5e184a7ffb5bc5ac15988ace81894d663c90"
         }
       },
       "referenceNotes": {
@@ -4300,10 +5024,20 @@
           "id": "sportsTerms"
         }
       ],
+      "layout": {
+        "id": "offset",
+        "profile": "data",
+        "insetRatio": 0.14,
+        "version": 1
+      },
       "composition": {
-        "contentTop": 317.6,
-        "contentBottom": 1498.4,
-        "actionTop": 1534.4,
+        "layout": "offset",
+        "profile": "data",
+        "inset": 131,
+        "detailWidth": 805,
+        "contentTop": 293.6,
+        "contentBottom": 1522.4,
+        "actionTop": 1558.4,
         "footerTop": 1770,
         "typeScale": 1.7
       }
@@ -4312,7 +5046,7 @@
       "title": "You can ask for support.",
       "width": 800,
       "height": 829,
-      "style": "flat",
+      "style": "support",
       "tier": 2,
       "files": {
         "html": {
@@ -4366,13 +5100,13 @@
       "title": "Double-zero roulette",
       "width": 800,
       "height": 2400,
-      "style": "flat",
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/table-tent-5b.html",
-          "bytes": 313136,
-          "sha256": "24b1759b223f29c28b569fabb299c21114b52ec141489b7211abe816644e77d6"
+          "bytes": 313933,
+          "sha256": "6f0e1a9b944927fa40347ca0cdd60984abd3eb64d7eba8d97c7ab8d35955bae3"
         },
         "text": {
           "path": "artwork/table-tent-5b.txt",
@@ -4381,18 +5115,18 @@
         },
         "artwork": {
           "path": "artwork/table-tent-5b.svg",
-          "bytes": 306122,
-          "sha256": "747d2615278e34832533cfad7600db84e5c5520485eadd7a6da4b9a4a557921e"
+          "bytes": 306428,
+          "sha256": "a2e78077a64711d116bff9b1b06f99452d1d76cdc2da5e7d023e02c5bf231b8c"
         },
         "image": {
           "path": "artwork/table-tent-5b.png",
-          "bytes": 154407,
-          "sha256": "7c60e32610bfb563636af0a11dedb54417225d11421a299fd700aa20f2624f50"
+          "bytes": 157849,
+          "sha256": "b7b882c2decf89c38778d0b576150b0b8c3c8584115104052d2a45d07b99a00a"
         },
         "preview": {
           "path": "artwork/table-tent-5b.webp",
-          "bytes": 16446,
-          "sha256": "8d33fe7ebe60ce4c0a0a49430f79c2dcc91da5d6bbf85c0c2b7c2176522dc41d"
+          "bytes": 16664,
+          "sha256": "e75a1a9ae0793dd27e960dc87ea00152449fd20b049617ea86347b8b1874eb0b"
         }
       },
       "referenceNotes": {
@@ -4407,19 +5141,100 @@
           "kind": "Mathematical analysis",
           "id": "roulette"
         }
+      ],
+      "layout": {
+        "id": "offset",
+        "profile": "narrow",
+        "insetRatio": 0.1,
+        "version": 1
+      },
+      "panels": [
+        {
+          "id": "back-odds",
+          "x": 0,
+          "y": 0,
+          "width": 800,
+          "height": 1200,
+          "rotate": 180,
+          "artworkViewBox": [
+            0,
+            0,
+            1080,
+            1620
+          ],
+          "tier": 1,
+          "style": "offset",
+          "composition": {
+            "layout": "offset",
+            "profile": "narrow",
+            "inset": 94,
+            "detailWidth": 842,
+            "contentTop": 331,
+            "contentBottom": 1185,
+            "actionTop": 1221,
+            "footerTop": 1470,
+            "typeScale": 1.2768999999999997
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/roulette/",
+          "sources": [
+            {
+              "title": "Shackleford: roulette payouts and rule variants",
+              "href": "https://wizardofodds.com/games/roulette/basics/",
+              "kind": "Mathematical analysis",
+              "id": "roulette"
+            }
+          ],
+          "qr": {
+            "href": "https://www.playbookrg.com/brand/content/games/roulette/",
+            "label": "Game guide",
+            "x": 896,
+            "y": 1500,
+            "size": 112,
+            "quietZone": 4
+          }
+        },
+        {
+          "id": "front-tools",
+          "x": 0,
+          "y": 1200,
+          "width": 800,
+          "height": 1200,
+          "rotate": 0,
+          "artworkViewBox": [
+            0,
+            0,
+            1080,
+            1620
+          ],
+          "tier": 1,
+          "style": "offset",
+          "composition": {
+            "layout": "offset",
+            "profile": "narrow",
+            "inset": 94,
+            "detailWidth": 842,
+            "contentTop": 206,
+            "contentBottom": 1310,
+            "actionTop": 1346,
+            "footerTop": 1470,
+            "typeScale": 1.28
+          },
+          "guide": "https://www.playbookrg.com/brand/content/games/",
+          "sources": []
+        }
       ]
     },
     "web-popup-12h": {
       "title": "Your account tools",
       "width": 480,
-      "height": 528,
-      "style": "flat",
+      "height": 539,
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/web-popup-12h.html",
-          "bytes": 291768,
-          "sha256": "386f712135221815f507a476cd6f29d6790af027d4a6e4a5042b097a922f2dee"
+          "bytes": 291994,
+          "sha256": "0df99f1fae22155f98e9f7aa910e41dd2d6f6f4b0f58e3dd213d17eb3a8c95dc"
         },
         "text": {
           "path": "artwork/web-popup-12h.txt",
@@ -4428,18 +5243,18 @@
         },
         "artwork": {
           "path": "artwork/web-popup-12h.svg",
-          "bytes": 284637,
-          "sha256": "b8911466a7e39029d8018563d0c197cad2b2957fb1f9231565285e42504bd4a6"
+          "bytes": 284732,
+          "sha256": "4a2d6cfb084dc10487c7bc720aed2b42af7c091e9b176f306a02e7175df7cb20"
         },
         "image": {
           "path": "artwork/web-popup-12h.png",
-          "bytes": 34534,
-          "sha256": "63c72952ef0728a6c6432ad043c0b68d0e40c50616a999be95a8a67b0d8df459"
+          "bytes": 34852,
+          "sha256": "462e5e4f3657fc347a0b04a2654c7ca7c608f01c055d9db8865fd70b80269178"
         },
         "preview": {
           "path": "artwork/web-popup-12h.webp",
-          "bytes": 22146,
-          "sha256": "927d118518e54612ac414587d82aa1775c3fc5331b2254379c87802e8a39b5e0"
+          "bytes": 21904,
+          "sha256": "634f5473012f160c6c633c2cc2ff6342e15e61b322107fe40e01ae2dd80c9531"
         }
       },
       "referenceNotes": {
@@ -4447,19 +5262,25 @@
         "body": "Use the options your service actually provides. Check their terms before confirming a change.",
         "scope": "A reminder, account pause and self-exclusion have different effects. Check each option’s terms and effective time."
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "interface",
+        "insetRatio": 0.08,
+        "version": 1
+      }
     },
     "withdrawal-confirm-12f": {
       "title": "Withdrawal request received",
       "width": 420,
-      "height": 440,
-      "style": "flat",
+      "height": 482,
+      "style": "offset",
       "tier": 1,
       "files": {
         "html": {
           "path": "artwork/withdrawal-confirm-12f.html",
-          "bytes": 292235,
-          "sha256": "7de425b43d2c14c7035f3219cac906eda5fdb0723f0b20a26ebc289dcfe303ce"
+          "bytes": 292462,
+          "sha256": "68ff1292c22c69bc4cbbc2596e525c2883dae1a8a6dab31f7b0948f32f0aabec"
         },
         "text": {
           "path": "artwork/withdrawal-confirm-12f.txt",
@@ -4468,18 +5289,18 @@
         },
         "artwork": {
           "path": "artwork/withdrawal-confirm-12f.svg",
-          "bytes": 285384,
-          "sha256": "30c157a6f5bc6ee10d673469c85e729aab3b05791d4ee48d76e37e353947abbb"
+          "bytes": 285410,
+          "sha256": "bb46e3771d48631aca4887d6b042e5af5cac57372d84419e888fa3f93547cada"
         },
         "image": {
           "path": "artwork/withdrawal-confirm-12f.png",
-          "bytes": 36596,
-          "sha256": "73c668afce30bb1b5e64cfbdde2be2f88d9d3dae96d937457da11d3a9390b75b"
+          "bytes": 37395,
+          "sha256": "ba82a8705fa16aabc41c44038980c15fb646a82eae98b8d3ff313e086d0bc8e4"
         },
         "preview": {
           "path": "artwork/withdrawal-confirm-12f.webp",
-          "bytes": 26406,
-          "sha256": "eb11e667bba576b3cb9e3b02bd0c6874360f1fca9fd70e149e648bfdcd25fb3d"
+          "bytes": 26310,
+          "sha256": "1928ed0783f918ac77a55d8f151b217df58f703227d32d34a6642b7ed9b8650b"
         }
       },
       "referenceNotes": {
@@ -4504,7 +5325,13 @@
           }
         ]
       },
-      "sources": []
+      "sources": [],
+      "layout": {
+        "id": "offset",
+        "profile": "interface",
+        "insetRatio": 0.08,
+        "version": 1
+      }
     },
     "poster-19a-every-game-math": {
       "title": "Know the game. Then make your call.",

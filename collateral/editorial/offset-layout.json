@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "Offset",
+  "updated": "2026-09-21",
+  "description": "Full-width headline, inset emerald rule, explanation and action on a shared second alignment. Identity and required footer retain the outer alignment.",
+  "profiles": {
+    "campaign": 0.24,
+    "story": 0.18,
+    "data": 0.14,
+    "narrow": 0.10,
+    "email": 0.12,
+    "interface": 0.08,
+    "reference": 0.08,
+    "staff": 0.08,
+    "sign": 0.14
+  },
+  "exceptions": {
+    "photography": "Retain the subject, crop, scrim and photograph-specific reading areas.",
+    "support": "Tier 2 uses a calm white surface and direct contact hierarchy without a campaign inset.",
+    "compact": "Native notifications, banners, compact controls and overlays retain their available reading width.",
+    "localized": "Earlier translations retain their reviewed composition until their separate migration."
+  }
+}

@@ -32,7 +32,7 @@ These examples can all be reached directly from this guide:
 
 ## 2. Read the conditions and choose an edition
 
-**Prefer the revised English editorial collection for the item IDs it covers.** Read [its editing notes](../collateral/editorial/README.md) and the resource's entry in [its manifest](../collateral/editorial/manifest.json). This preference does not make it a translation source for existing localized files, nor approval for publication.
+**Prefer the revised English editorial collection for the item IDs it covers.** Read [its editing notes](../collateral/editorial/README.md) and the resource's entry in [its manifest](../collateral/editorial/manifest.json). Read its [Offset layout policy](../collateral/editorial/offset-layout.json) before adapting a composition: photography, Tier 2 and compact surfaces have explicit exceptions. A mixed brochure can contain a Tier 2 support panel. This preference does not make it a translation source for existing localized files, nor approval for publication.
 
 Earlier English and localized files, additional concepts, and alternate production profiles remain in [the render library](../collateral/render/README.md). Use the [production size matrix](../collateral/production-size-matrix.md) for output requirements. Do not label all of `render/` obsolete: the editorial manifest only supersedes its covered English items. Studies in creative-review, style-alternatives, text-polish, text-surfaces, design-preferences, and brand-trials retain their separate experimental status.
 

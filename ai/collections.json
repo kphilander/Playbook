@@ -125,14 +125,15 @@
     {
       "id": "editorial-en",
       "title": "Revised English collateral",
-      "description": "Preferred revised English edition for the resource IDs in the editorial manifest.",
+      "description": "Current English edition with Offset text layouts and explicit photography, Tier 2 and compact exceptions.",
       "path": "collateral/editorial",
       "entry": "collateral/editorial/README.md",
       "selection": "Preferred for covered English items only. HTML is editable source; TXT is copy; SVG/PNG are reference artwork; WebP is a preview. Configured exports are distinct. Preference is not approval.",
       "readFiles": [
         "collateral/editorial/artwork/poster-4a-know-your-game.html",
         "collateral/editorial/artwork/poster-4a-know-your-game.txt",
-        "collateral/editorial/copy.en.json"
+        "collateral/editorial/copy.en.json",
+        "collateral/editorial/offset-layout.json"
       ],
       "formatExamples": [],
       "languageSources": [
