@@ -1,6 +1,6 @@
 # Playbook RG
 
-**Current English edition:** [Review the 85 revised collateral pieces](collateral/editorial/index.html), with shorter copy, cleaner layouts and centered photography. [Editable files and handoff notes](collateral/editorial/README.md).
+**Current English edition:** [Review the 85 revised collateral pieces](collateral/editorial/index.html), with Offset text layouts, calm Tier 2 support and photograph-specific compositions. [Editable files and handoff notes](collateral/editorial/README.md).
 
 **Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.** Formally *Playbook RG*; "Playbook" works as shorthand.
 

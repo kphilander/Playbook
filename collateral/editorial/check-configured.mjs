@@ -23,7 +23,9 @@ try{
   assert.doesNotMatch(visible,/Add local contact|Add the (?:call|text|chat|support)|QR generated after setup/,slug+' setup label');
   if(source.includes('{{HELPLINE_NUMBER}}'))assert.ok(visible.includes('555-010-1234'),slug+' reads YAML number');
   if(source.includes('{{HELPLINE_HOURS}}'))assert.ok(visible.includes('Daily 8 am–10 pm'),slug+' reads YAML hours');
-  if(r.tier===2)assert.equal(await page.$eval('main',e=>getComputedStyle(e).backgroundColor),'rgb(255, 255, 255)',slug+' Tier 2 white');
+  const supportRegions=await page.$$('[data-resource-tier="2"]');
+  assert.equal(supportRegions.length,(r.tier===2?1:0)+(r.panels||[]).filter(p=>p.tier===2).length,slug+' support regions recorded');
+  for(const region of supportRegions)assert.equal(await region.evaluate(e=>getComputedStyle(e).backgroundColor),'rgb(255, 255, 255)',slug+' Tier 2 region stays white');
   const broken=await page.$$eval('[data-qr-field]',es=>es.filter(e=>!e.querySelector('img[src^="data:image/png;base64,"]')).length);assert.equal(broken,0,slug+' configured QR');
   const layout=await page.evaluate(()=>{
     const root=document.querySelector('main'),bounds=root.getBoundingClientRect(),boxes=[];

@@ -1,6 +1,6 @@
 # Collateral
 
-**Current English edition:** [Review the 85 revised collateral pieces](editorial/index.html), with shorter copy, cleaner layouts and centered photography. [Editable files and handoff notes](editorial/README.md).
+**Current English edition:** [Review the 85 revised collateral pieces](editorial/index.html), with Offset text layouts, calm Tier 2 support and photograph-specific compositions. [Editable files and handoff notes](editorial/README.md).
 
 Templates and specifications for every Playbook touchpoint — digital, print, environmental, video/audio, customer service, and interactive content. Each subfolder contains markdown specs that define copy, layout, and design direction. The `render/` folder contains the HTML/PNG build pipeline.
 
