@@ -4,7 +4,7 @@ Open the [visual review](index.html) to browse the maintained collateral, filter
 
 ## Creative direction
 
-The direction follows the main repository’s [brand personality](../../brand-book/02-brand-personality.md), [voice and tone](../../brand-book/04-voice-and-tone.md), and [photography guide](../../visual-identity/photography/photography.md): confident, witty entertainment literacy, generous with information and respectful of the player’s choices. The organising principle is one useful idea, a visible explanation, and a clear next step. A witty line should reward attention without making the reader the joke. A number should earn its space by explaining something.
+The direction follows the main repository’s [brand personality](../../brand-book/02-brand-personality.md), [voice and tone](../../brand-book/04-voice-and-tone.md), and [photography guide](../../visual-identity/photography/photography.md): confident, witty explanations of how gambling works, generous with information and respectful of the player’s choices. The organising principle is one useful idea, a visible explanation, and a clear next step. A witty line should reward attention without making the reader the joke. A number should earn its space by explaining something.
 
 | Area | Decision and purpose |
 |---|---|

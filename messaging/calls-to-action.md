@@ -36,7 +36,7 @@ Comprehensive CTA reference organized by what you want the player to do. Every C
 
 | Section | CTAs | Primary function |
 |---|---|---|
-| [Entertainment literacy](#entertainment-literacy) | 10 | Drive engagement with educational content |
+| [Everyday play](#everyday-play) | 10 | Drive engagement with educational content |
 | [Tool adoption](#tool-adoption) | 10 | Get players to activate features |
 | [Content engagement](#content-engagement) | 8 | Drive deeper exploration of content |
 | [Social sharing](#social-sharing) | 8 | Turn players into distributors |
@@ -69,7 +69,7 @@ CTAs exist on a spectrum from soft nudge to strong prompt. Match the urgency to 
 
 ---
 
-## Entertainment literacy
+## Everyday play
 
 CTAs that drive players to learn how games actually work.
 

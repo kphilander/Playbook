@@ -1,6 +1,6 @@
 # Tier 2 Visual Identity
 
-The adapted visual system for Playbook support and crisis content. When the brand shifts from entertainment literacy (Tier 1) to support contexts (Tier 2), the visual identity shifts with it — softer palette, warmer typography, and a more direct tone.
+The adapted visual system for Playbook support and crisis content. When the brand shifts from everyday play (Tier 1) to support contexts (Tier 2), the visual identity shifts with it — softer palette, warmer typography, and a more direct tone.
 
 ## Documents
 

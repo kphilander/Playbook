@@ -38,7 +38,7 @@ export default function CTASlide() {
       </p>
 
       <div className="flex-1 flex gap-6 mt-8">
-        <CTAGroup title="Entertainment Literacy" items={ctaLibrary.literacy} accentColor="text-teal" accentBg="bg-teal" />
+        <CTAGroup title="Everyday Play" items={ctaLibrary.everyday} accentColor="text-teal" accentBg="bg-teal" />
         <CTAGroup title="Features" items={ctaLibrary.features} accentColor="text-orange" accentBg="bg-orange" />
         <CTAGroup title="Content" items={ctaLibrary.content} accentColor="text-teal" accentBg="bg-teal" />
         <CTAGroup title="Support" items={ctaLibrary.support} accentColor="text-neutral-300" accentBg="bg-navy-light" isTertiary />

@@ -24,7 +24,7 @@ export default function TitleSlide() {
         </p>
 
         <p className="font-body text-base text-neutral-300 mt-4 text-center max-w-xl">
-          Gambling Entertainment Literacy — A White-Label Brand System
+          One open standard for responsible gambling
         </p>
 
         <p className="font-heading text-sm font-bold text-neutral-500 tracking-[0.2em] uppercase mt-10">

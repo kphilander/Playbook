@@ -180,7 +180,7 @@ prevents misapplication, misexpectation, and wasted effort.
 
 ### Playbook IS:
 
-- **An entertainment literacy content brand.** It creates content about how
+- **A responsible gambling content brand.** It creates content about how
   gambling works -- game mechanics, odds, informed play habits, entertainment
   framing. Content that makes players smarter and more engaged.
 
@@ -278,7 +278,7 @@ Playbook content operates on two tiers. Understanding the distinction is
 essential. Getting it wrong -- applying Tier 1 voice to Tier 2 situations, or
 Tier 2 gravity to Tier 1 content -- undermines both.
 
-### Tier 1: Entertainment Literacy (This Book -- 95% of Content)
+### Tier 1: Everyday Play (This Book -- 95% of Content)
 
 Tier 1 is the vast majority of Playbook content. It's the content most players
 will see, most of the time, in most contexts.
@@ -307,7 +307,7 @@ entertaining -- ideally all three.
 ### Tier 2: Support and Crisis Touchpoints (Separate Guide -- 5% of Content)
 
 Tier 2 is a separate guide, to be developed in a later phase within this same
-repository. It covers the moments when entertainment literacy isn't enough --
+repository. It covers the moments when information about the games isn't enough --
 when a player needs support, wants to take a break, or is reaching out for help.
 
 **What it covers:**
@@ -347,7 +347,7 @@ Three strategic reasons:
    the brand. That association matters if they ever need Tier 2.
 
 2. **Wider audience.** The vast majority of players will only ever interact with
-   Tier 1 content. By investing in entertainment literacy, Playbook reaches the
+   Tier 1 content. By investing in clear player information, Playbook reaches the
    full player base — not just the small percentage who are already seeking
    support.
 

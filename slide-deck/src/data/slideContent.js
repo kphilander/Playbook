@@ -54,7 +54,7 @@ export const twoTiers = {
   tier1: {
     label: 'Tier 1',
     pct: '95%',
-    title: 'Entertainment Literacy',
+    title: 'Everyday Play',
     voice: 'Playbook voice — confident myth-buster',
     items: [
       'Game mechanics & math',
@@ -244,7 +244,7 @@ export const sampleRewrites = [
 ];
 
 export const ctaLibrary = {
-  literacy: ['Take the quiz', 'Test your game IQ', 'See the real odds', 'Read the breakdown'],
+  everyday: ['Take the quiz', 'Test your game IQ', 'See the real odds', 'Read the breakdown'],
   features: ['Set your limits', 'Try the bankroll planner', 'Check your stats', 'Set a session reminder'],
   content: ['Share this', 'Challenge a friend', 'Explore more', 'Get the facts'],
   support: ['Talk to someone — free & confidential', 'Pause your account', 'Find support'],

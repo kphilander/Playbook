@@ -258,7 +258,7 @@ All messages in this file use this tagging system for quick filtering:
 |---|---|---|
 | **Pillar** | Open, Social, Tools, Help | Which brand pillar the message supports |
 | **Tone** | Playful / Witty, Confident / Informative, Warm / Direct, Celebratory | Which register from the [tone spectrum](../brand-book/04-voice-and-tone.md#tone-spectrum) |
-| **Tier** | 1, 2 | Tier 1 = entertainment literacy; Tier 2 = support crossover |
+| **Tier** | 1, 2 | Tier 1 = Everyday play; Tier 2 = support crossover |
 | **Max chars** | Number | Maximum character count including spaces, for channel constraints |
 
 ---

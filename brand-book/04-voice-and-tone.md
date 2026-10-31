@@ -138,9 +138,9 @@ The voice is constant. The tone adapts to four registers:
 
 ### Tier 1 vs. Tier 2 tone
 
-The same brand voice powers both tiers, but the tone shifts significantly. This table captures the key dimensions:
+The same brand voice powers both tiers, but the tone shifts significantly. Tier 1 is called Everyday play, and Tier 2 is called Support and crisis. This table captures the key dimensions:
 
-| Dimension | Tier 1 | Tier 2 |
+| Dimension | Tier 1: Everyday play | Tier 2: Support and crisis |
 |---|---|---|
 | Energy | Confident, energetic, witty | Calm, steady, warm |
 | Humor | Appropriate — cheeky, self-aware | Never — empathy only |
@@ -258,7 +258,7 @@ These are the key language preferences for Tier 1 content. They're configured in
 
 ### Terms to avoid in Tier 1
 
-These terms are appropriate in clinical, regulatory, and Tier 2 contexts. In Tier 1 (entertainment literacy), avoid them:
+These terms are appropriate in clinical, regulatory, and Tier 2 contexts. In Tier 1 (Everyday play), avoid them:
 
 - "Responsible gambling" — use specific actions (e.g. "set a budget," "know the odds")
 - "Smart play" — too generic; name the specific behavior instead

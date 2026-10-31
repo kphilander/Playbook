@@ -14,7 +14,7 @@ This chapter defines the visual system for {{PROGRAM_NAME}} — the logo, colors
 
 ### Logo purpose
 
-The {{PROGRAM_NAME}} logo identifies gambling entertainment literacy content. It signals to players: *"This is where you get smarter about the game."* The logo should feel modern, confident, and premium — like it belongs on a lifestyle brand, not a government pamphlet.
+The {{PROGRAM_NAME}} logo identifies content that explains how gambling works. It signals to players: *"This is where you get smarter about the game."* The logo should feel modern, confident, and premium — like it belongs on a lifestyle brand, not a government pamphlet.
 
 ### Logo design
 
@@ -646,7 +646,7 @@ If it passes all four, ship it.
 
 A curated selection of rendered templates showing the visual identity in action. Click the template name to view the full HTML source. See `collateral/render/` for all 36 templates.
 
-### Tier 1 — Entertainment literacy
+### Tier 1 — Everyday play
 
 | Category | Template | Preview |
 |---|---|---|

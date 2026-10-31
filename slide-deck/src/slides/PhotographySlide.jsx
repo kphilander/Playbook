@@ -26,7 +26,7 @@ export default function PhotographySlide() {
             <div className="relative z-10 flex flex-col justify-between p-8 h-full">
               <div>
                 <span className="font-heading text-xs font-semibold tracking-[0.15em] uppercase text-teal">
-                  Entertainment Literacy
+                  Everyday Play
                 </span>
                 <h3 className="font-heading text-3xl font-bold text-white mt-2 max-w-md leading-snug">
                   Every game has math.<br />Here&apos;s yours.
