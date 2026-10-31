@@ -5,7 +5,7 @@ import { taglineSystem, sampleRewrites, ctaLibrary } from '../data/slideContent'
 import { ArrowRight, Check, X } from 'lucide-react';
 
 const ctaCategories = [
-  { key: 'literacy', label: 'Literacy', color: 'teal', style: 'bg-teal text-navy font-bold' },
+  { key: 'everyday', label: 'Everyday play', color: 'teal', style: 'bg-teal text-navy font-bold' },
   { key: 'features', label: 'Features', color: 'orange', style: 'bg-orange text-white font-bold' },
   { key: 'content', label: 'Content', color: 'teal', style: 'border border-teal text-teal font-bold bg-transparent' },
   { key: 'support', label: 'Support', color: 'orange', style: 'border border-orange/50 text-orange font-medium bg-transparent' },

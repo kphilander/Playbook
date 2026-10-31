@@ -1,6 +1,6 @@
 # Playbook — shared photography concept round
 
-[Open the gallery](index.html). This round contains 15 original concepts from five model agents: one sports betting concept, one gambling myth, and one additional entertainment-literacy concept per model. Every photo was generated through the user's selected Google Gemini API. The earlier [revised pilot](../index.html) remains separate and unchanged.
+[Open the gallery](index.html). This round contains 15 original concepts from five model agents: one sports betting concept, one gambling myth, and one additional Tier 1 concept chosen by each model. Every photo was generated through the user's selected Google Gemini API. The earlier [revised pilot](../index.html) remains separate and unchanged.
 
 ## What is being compared
 

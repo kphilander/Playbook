@@ -123,7 +123,7 @@ The **American Gaming Association (AGA)** publishes a voluntary **Responsible Ga
 
 ### Relationship to {{PROGRAM_NAME}}
 
-{{PROGRAM_NAME}}'s approach aligns with AGA principles by default — entertainment literacy content, transparent odds information, helpline accessibility, and player tools promotion. Operators deploying {{PROGRAM_NAME}} can reference AGA alignment as part of their responsible gaming program.
+{{PROGRAM_NAME}}'s approach aligns with AGA principles by default — everyday play content, transparent odds information, helpline accessibility, and player tools promotion. Operators deploying {{PROGRAM_NAME}} can reference AGA alignment as part of their responsible gaming program.
 
 ---
 

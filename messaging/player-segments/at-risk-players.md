@@ -147,7 +147,7 @@ This segment gets the supportive, practical side of Playbook. Humor is minimal. 
 
 ## Tier considerations
 
-This segment sits at the boundary between Tier 1 (entertainment literacy) and Tier 2 (support). Here's how to navigate it:
+This segment sits at the boundary between Tier 1 (Everyday play) and Tier 2 (support). Here's how to navigate it:
 
 | Principle | How to apply |
 |---|---|

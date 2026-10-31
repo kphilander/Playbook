@@ -102,7 +102,7 @@ function footerStrip(slide) {
     fontSize: 24, fontFace: FONT.head, color: C.teal,
     align: "center",
   });
-  s.addText("Gambling Entertainment Literacy — A White-Label Brand System", {
+  s.addText("One open standard for responsible gambling", {
     x: 1.5, y: 4.1, w: 10.33, h: 0.5,
     fontSize: 16, fontFace: FONT.body, color: C.n300,
     align: "center",
@@ -602,7 +602,7 @@ function footerStrip(slide) {
     x: 1.2, y: 5.2, w: 5, h: 0.3,
     fontSize: 11, fontFace: FONT.head, bold: true, color: C.teal, letterSpacing: 2,
   });
-  s.addText("Tier 1 — 95%  Entertainment Literacy", {
+  s.addText("Tier 1 — 95%  Everyday Play", {
     x: 1.2, y: 5.65, w: 5.5, h: 0.35,
     fontSize: 15, fontFace: FONT.head, bold: true, color: C.white,
   });

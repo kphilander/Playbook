@@ -65,7 +65,7 @@ This contrasts with jurisdictions like Ontario (AGCO Stds 2.03–2.07, which ite
 | Principle | What it means in practice | {{PROGRAM_NAME}} alignment |
 |---|---|---|
 | **Decency** | No sexually explicit content; no content that exploits or degrades | {{PROGRAM_NAME}}'s brand voice is confident and witty, never crude or exploitative |
-| **Dignity** | Gambling presented as entertainment, not desperation; players treated with respect | Core {{PROGRAM_NAME}} principle — "player" not "gambler," entertainment literacy |
+| **Dignity** | Gambling presented as entertainment, not desperation; players treated with respect | Core {{PROGRAM_NAME}} principle — "player" not "gambler," clear information about how games work |
 | **Good taste** | No gratuitous violence, shock value, or content designed primarily to offend | {{PROGRAM_NAME}} content is informational and engaging, never provocative for its own sake |
 | **Honesty** | All claims factual; odds/probabilities accurate; no false or materially misleading impressions | {{PROGRAM_NAME}}'s "Open" pillar is built on transparency and accurate information |
 | **Inoffensiveness** | No content that would offend a reasonable person; no targeting vulnerable populations | {{PROGRAM_NAME}}'s two-tier system inherently respects audience sensitivity |

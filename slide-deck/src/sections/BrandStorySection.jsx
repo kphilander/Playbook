@@ -118,7 +118,7 @@ export default function BrandStorySection() {
           The Approach
         </h3>
         <h2 className="font-heading text-2xl sm:text-3xl font-bold text-white mb-4">
-          Entertainment literacy, not compliance copy.
+          Clear player information instead of compliance copy
         </h2>
         <p className="font-body text-lg text-n300 max-w-2xl leading-relaxed mb-10">
           Playbook treats responsible gambling content like a product — designed, tested, and deployed at the same quality as the games themselves.

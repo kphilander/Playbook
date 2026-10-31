@@ -2,7 +2,9 @@
 
 **Current English edition:** [Review the 85 revised collateral pieces](collateral/editorial/index.html), with Offset text layouts, calm Tier 2 support and photograph-specific compositions. [Editable files and handoff notes](collateral/editorial/README.md).
 
-**Open-source brand guidelines for gambling entertainment literacy. CC0-licensed, white-label, built for operators.** Formally *Playbook RG*; "Playbook" works as shorthand.
+**One open standard for responsible gambling**
+
+Playbook's brand guidelines are open source, CC0-licensed, white-label, and built for operators. Formally *Playbook RG*; "Playbook" works as shorthand.
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](_brand.yml)
@@ -17,7 +19,7 @@ Everything needed to discover and read the library is available through GitHub a
 
 ## What is Playbook?
 
-Playbook is a complete, forkable brand system for gambling entertainment literacy. It gives operators everything they need to build player-facing content that's actually worth engaging with: brand foundations, voice and tone, messaging frameworks, visual identity specs, multi-jurisdiction compliance modules, and ready-to-use collateral templates.
+Playbook is a complete, forkable brand system for responsible gambling. It gives operators everything they need to build player-facing content that's actually worth engaging with: brand foundations, voice and tone, messaging frameworks, visual identity specs, multi-jurisdiction compliance modules, and ready-to-use collateral templates.
 
 Playbook is a **content and media brand**: the educational and awareness layer that helps players understand how gambling actually works. It's anchored in the informed choice model: most people who gamble do so without problems, gambling is entertainment, and players make better decisions when they understand the math, the odds, and the tools available to them.
 
@@ -42,7 +44,7 @@ The full provenance, with the inline disclosures attached to each cited paper, i
 ## Who is this for?
 
 - **Casino operators and iGaming companies** who want player education content their marketing team is proud to co-brand
-- **Sports betting platforms** building entertainment literacy programs that retain informed players
+- **Sports betting platforms** building player information programs that retain informed players
 - **Gambling regulators** looking for a quality baseline they can recommend to licensees
 - **Non-profits and advocacy organizations** creating engaging outreach content
 - **Marketing, product, and design teams** who need specs, copy frameworks, and design briefs for player-facing content
@@ -142,7 +144,7 @@ Other build scripts:
 
 Playbook uses a two-tier system:
 
-- **Tier 1:** Entertainment literacy. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging: content players seek out. This is what operators co-brand with.
+- **Tier 1:** Everyday play. How games work, informed play habits, myth-busting, interactive quizzes, bankroll tips. Confident, witty, engaging: content players seek out. This is what operators co-brand with.
 
 - **Tier 2:** Support and crisis touchpoints. Self-exclusion flows, helpline referrals, cooldown screens, session summaries. Warm, direct, appropriately serious. See the [Tier 2 visual guide](visual-identity/tier-2/tier-2-visual-guide.md) and the [editorial manifest](collateral/editorial/manifest.json) for support-piece specifications and artwork.
 

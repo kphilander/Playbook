@@ -331,7 +331,7 @@ like a revenue source and nothing more.
 
 Gambling harm is a shared problem with many actors. Playbook lives in the
 **operations layer** -- the day-to-day experience of play -- where **Tier 1**
-(entertainment literacy, the "Playbook voice") acts as the **communication
+(everyday play, the "Playbook voice") acts as the **communication
 layer between operators and players**. **Tier 2** (support and crisis, the
 "support voice") extends that same operator-to-player channel into **treatment
 and recovery**, connecting players to help if they ever need it. Playbook is
@@ -340,7 +340,7 @@ researchers, and advocacy groups.
 
 ```
 Entertainment brand          Playbook                    Support services
-(casino, sportsbook)        (entertainment literacy)    (helplines, counseling)
+(casino, sportsbook)        (everyday play)             (helplines, counseling)
 
 "Come play!"            "Know your game."           "We're here when you
                                                      need us."
@@ -351,7 +351,7 @@ Revenue-focused          Player-focused              Health-focused
 
 Playbook is **not** the entertainment brand (it doesn't promote gambling) and
 it's **not** a support service (it doesn't provide clinical treatment). It's the
-**entertainment literacy layer** between the two -- the content that makes
+**everyday play layer** between the two -- the content that makes
 players smarter about the games they already enjoy and connects them to support
 if they ever need it.
 

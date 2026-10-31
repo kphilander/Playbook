@@ -29,7 +29,7 @@ last_updated: 2025-02-25
 
 Person-first language reference for all {{PROGRAM_NAME}} content. 35 terms with preferred alternatives, rationale, and examples in context. This guide ensures that every piece of Playbook messaging respects players, avoids pathologizing, and stays true to the brand voice.
 
-> **Operator note**: Tier 1 content (entertainment literacy) follows these guidelines strictly. Tier 2 content (clinical support, regulatory filings) may use clinical terms where accuracy requires it — but always with person-first framing. When in doubt, use this guide. See [Chapter 4: Voice and Tone](../brand-book/04-voice-and-tone.md#language-guide) for the full language framework.
+> **Operator note**: Tier 1 content (Everyday play) follows these guidelines strictly. Tier 2 content (clinical support, regulatory filings) may use clinical terms where accuracy requires it — but always with person-first framing. When in doubt, use this guide. See [Chapter 4: Voice and Tone](../brand-book/04-voice-and-tone.md#language-guide) for the full language framework.
 
 ---
 
@@ -55,7 +55,7 @@ Person-first language puts the individual before the condition, behavior, or lab
 
 2. **Language shapes perception.** "Gambling addict" reduces a person to a condition. "Person experiencing difficulty with gambling" acknowledges the difficulty without defining the person by it.
 
-3. **Tier 1 doesn't diagnose.** Playbook Tier 1 content is entertainment literacy. It's for everyone. The moment you use clinical or diagnostic language, you've moved into Tier 2 territory — and you've lost most of your audience.
+3. **Tier 1 doesn't diagnose.** Playbook Tier 1 content explains how the games work. It's for everyone. The moment you use clinical or diagnostic language, you've moved into Tier 2 territory — and you've lost most of your audience.
 
 ### Examples
 
@@ -143,7 +143,7 @@ Terms designed to scare rather than inform.
 
 ## Context-dependent terms
 
-Some terms are appropriate in Tier 2 (clinical, regulatory, formal) but wrong in Tier 1 (entertainment literacy, player-facing). Know the boundary.
+Some terms are appropriate in Tier 2 (clinical, regulatory, formal) but wrong in Tier 1 (Everyday play, player-facing). Know the boundary.
 
 | Term | Tier 1 (player-facing) | Tier 2 (clinical/regulatory) |
 |---|---|---|

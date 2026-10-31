@@ -24,7 +24,7 @@ GPT-5.4 was unavailable: the subagent interface rejected its model ID, and a rea
 
 Model IDs and reasoning are requested dispatch overrides, not independent backend snapshot or compute telemetry. The original three and added two ran in separate batches. Identical “high” requests do not establish equal compute, cost, or capabilities.
 
-Each produces English Tier 1 social cards at 1080 × 1350 with editable HTML/CSS and PNG output. The third concept is open choice within entertainment literacy. Attribution appears in the review gallery rather than on the player-facing artwork.
+Each produces English Tier 1 social cards at 1080 × 1350 with editable HTML/CSS and PNG output. The third concept is the agent's choice of another Tier 1 topic. Attribution appears in the review gallery rather than on the player-facing artwork.
 
 ## Common conditions
 

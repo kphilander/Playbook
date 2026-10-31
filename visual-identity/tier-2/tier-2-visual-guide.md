@@ -1,6 +1,6 @@
 # Tier 2 Visual Identity Guide
 
-When Playbook shifts from entertainment literacy to support and crisis contexts, the visual identity shifts with it. The voice chapter calls this "the support voice." This guide defines what that looks like.
+When Playbook shifts from everyday play content to support and crisis contexts, the visual identity shifts with it. The voice chapter calls this "the support voice." This guide defines what that looks like.
 
 > **Operator note**: Tier 2 content represents approximately 5% of total Playbook output but 100% of the moments that matter most. Every pixel in a Tier 2 context should reduce friction and increase clarity. If a player in distress encounters a playful chart, a witty headline, or an entertainment-grade color palette on a support page, the brand has failed them. This guide exists to prevent that.
 
@@ -27,7 +27,7 @@ When Playbook shifts from entertainment literacy to support and crisis contexts,
 
 Tier 1 and Tier 2 share the same brand — same fonts, same logo, same design system. But they use it differently, the way a person uses the same voice at a party and at a hospital. The fundamentals don't change. The register does.
 
-| Dimension | Tier 1 (Entertainment Literacy) | Tier 2 (Support & Crisis) |
+| Dimension | Tier 1 (Everyday Play) | Tier 2 (Support & Crisis) |
 |---|---|---|
 | **Energy** | High — confident, energetic, engaging | Low — calm, steady, unhurried |
 | **Color density** | Full palette — navy, emerald, orange working together | Reduced — navy + white + warm neutrals |

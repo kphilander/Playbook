@@ -126,7 +126,7 @@ Use for: Helpline display across all touchpoints. Always accessible from Tier 1 
 
 ## Level 3: Contextual messages
 
-### Entertainment literacy messages
+### Everyday play messages
 
 *Goal: Help players understand how gambling actually works.*
 
@@ -178,7 +178,7 @@ Use for: Helpline display across all touchpoints. Always accessible from Tier 1 
 
 Calls to action organized by function. These are the buttons, links, and prompts that drive player action.
 
-### Entertainment literacy CTAs
+### Everyday play CTAs
 
 | CTA | Context |
 |---|---|
